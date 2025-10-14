@@ -182,7 +182,6 @@ const setUpPyodideWorker = () => {
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logError('Failed to load packages', undefined, {message});
-        writeConsoleMessage(getErrorMessage(pythonlabI18n.loadFailed()));
         break;
       case 'loading_pyodide':
         directLogsToDevConsole = true;
