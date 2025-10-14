@@ -8,7 +8,7 @@
   "grade_levels": "3,4,5",
   "header": "csc",
   "image": "https://images.code.org/9c56321a4b208541d52bfe0b42c433a5-K-5 Coding with Music.jpg",
-  "cs_topic": "art_and_design,programming",
+  "cs_topic": "art_and_design,music,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
   "description": "This engaging module for grades 3–5 uses music to introduce core computer science concepts—sequencing, functions, and events—through creative lessons featuring real-world professionals from the music and tech industries.",

@@ -303,11 +303,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'end workshop sends exit surveys' do
-    workshop = create(:workshop)
+    workshop = create(:workshop, num_facilitators: 1)
     workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
-    Pd::Workshop.any_instance.expects(:send_facilitator_post_surveys)
+    Pd::WorkshopMailjetMailer.expects(:send_facilitator_post_workshop_survey)
 
     workshop.end!
 
@@ -324,7 +324,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     byo_workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
-    Pd::WorkshopMailer.any_instance.expects(:facilitator_post_workshop)
+    Pd::WorkshopMailjetMailer.expects(:send_facilitator_post_workshop_survey).times(1)
 
     byo_workshop.end!
 
@@ -716,6 +716,50 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
     assert_includes(e.message, 'Failed to send 1 day workshop reminders:')
     assert_includes(e.message, 'teacher enrollment')
+    assert_includes(e.message, 'bad email')
+  end
+
+  test 'does not send regional_partner_workshop_reminder if suppress_reminders? is true' do
+    Pd::WorkshopMailjetMailer.expects(:send_rp_workshop_reminder).never
+
+    regional_partner = create(:regional_partner)
+    program_manager = create(:program_manager, regional_partner: regional_partner)
+    workshop = create(:workshop, organizer: program_manager, suppress_email: true)
+    teacher = create(:teacher)
+    create(:pd_enrollment, workshop: workshop, user: teacher)
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+  end
+
+  test 'sends regional_partner_workshop_reminder if suppress_reminders? is false' do
+    Pd::WorkshopMailjetMailer.expects(:send_rp_workshop_reminder).times(1)
+
+    regional_partner = create(:regional_partner)
+    program_manager = create(:program_manager, regional_partner: regional_partner)
+    workshop = create(:workshop, organizer: program_manager, suppress_email: false)
+    teacher = create(:teacher)
+    create(:pd_enrollment, workshop: workshop, user: teacher)
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+  end
+
+  test 'errors in regional partner reminders in send_reminder_for_upcoming_in_days do not stop batch' do
+    Pd::WorkshopMailjetMailer.stubs(:send_rp_workshop_reminder).raises(RuntimeError, 'regional partner workshop bad email')
+
+    regional_partner = create(:regional_partner)
+    program_manager = create(:program_manager, regional_partner: regional_partner)
+    workshop = create(:workshop, organizer: program_manager, suppress_email: false)
+    teacher = create(:teacher)
+    create(:pd_enrollment, workshop: workshop, user: teacher)
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    e = assert_raises RuntimeError do
+      Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+    end
+    assert_includes(e.message, 'Failed to send 10 day workshop reminders:')
+    assert_includes(e.message, 'regional partner')
     assert_includes(e.message, 'bad email')
   end
 
@@ -1325,8 +1369,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     Pd::WorkshopMailer.any_instance.expects(:facilitator_pre_workshop).
       with(facilitator, workshop)
-    Pd::WorkshopMailer.any_instance.expects(:facilitator_post_workshop).
-      never
+    Pd::WorkshopMailjetMailer.expects(:send_facilitator_post_workshop_survey).never
 
     Pd::Workshop.send_automated_emails
   end

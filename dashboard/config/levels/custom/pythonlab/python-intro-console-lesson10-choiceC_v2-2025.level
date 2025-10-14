@@ -1,0 +1,43 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:21.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Use conditionals to simulate feeding villagers different meals.\r\n\r\n## Do This: \r\n- Change meal effects (e.g., \"The villager shares the bread with others.\").\r\n- Add a new meal option, like \"vegetables\". ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def feed_villager():\n    meal = input(\"What meal will you give the villager? (bread/soup/meat): \").lower()\n\n    if meal == \"bread\":\n        print(\"🍞 The villager smiles and thanks you for the bread.\")\n    elif meal == \"soup\":\n        print(\"🥣 The villager enjoys the warm soup and feels refreshed.\")\n    elif meal == \"meat\":\n        print(\"🍖 The villager gains strength from the hearty meal!\")\n    else:\n        print(\"❌ The villager refuses the unfamiliar meal.\")\n\nfeed_villager()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFSi4aaBiEaakp8IBSnq60mXm1w1Rj4e2pq0O0PCF\ng8UNBLB/C7qioiEoHQhKPj2l1P8axn0aNoejw5N6Wb00FQ7yZjWUkPRNE5Ef\neM3uKz7jkSLRv/WKPMZmCfy9K1ut8IU1pltxp9Ul4zfM2Vfzlb/bfn6pmpxv\ntTWCDLtCpXq0Z5YsFiwd1FyQmXYByQ65oqgEoaNE87CynqOrxPAdTR0g9w3f\n/Tb4wkS9m0pzi5PPa6+ezHk7rXrSYCCO5zCOl2wxABufYWwIXklQ+A1ef+8P\nhDCf8gOwgTv5ek5CczDSvbU+4tjBNX77lqRNH1jAPgO+K+abWeVM+/2+Eafj\nw6cJjiPlsNcsEGi4sUHwQEDglkXVF3qkExITeVgrfqybQNdCbt+mgNr6HCxM\nd6nN8AczlXhmr/V2QqvzHoHHx0fbtB8CQ+2SyoceX556ZUIssM9hdkwqHk+q\n4fBGSBM78w26IQrmnFAv+e+Fb8UV0ImMlO9Nfkr+yrLPup2I1YFnGd/u4fz/\n9PVThegcb7+w+Bfp4rxV2uwfHYMDaJLqEWZ4Gaphe7R3O0Xm12MEvQuFV0Fr\n6C3m9nHmfjBLAIAeqw/X7wZBhdsGN86Qa6TaLraokoaLIBW880E99Bu2tsYM\nsHle/Ila46nn+TVoiDRJHZV5g79XfkT+KHltXnTP5fIFaBopLPaFJxHR1qCQ\nE5TDxZBi0qevuqBqwOyI9BCqeWo20lTslv90DOuKGyb3LcgAUCEHA5e9GiAx\nlyTrnocIaxfec9f4r9I6iBoB7fKMzhQBUy/U/qKtEDDV8c3siOg19QM1E38i\n72QwBxk9XT8xbKYNPuZkv1K3XbI8/k4eS7Drd6BCsZUgbtJQ6N7JnvM9mzdg\nsBnAqUFBpOvPANER8FoOiKGhJoD3GjppxQ044P8xIzCFyRLhFf0ZNEF+ESCS\n4ICw6DLdfWUX2lLmXAQiWNZBDjnjzWXiBuIPEIA7uGcbAT0zfiFLugodyBgX\nL3/4HQglXKLobF+4uS8X31mYSFaAVNVgbGrDmUowrDsTa1mbEoLw20ORmk6y\nKWLIkQoa\n",
+    "display_name": "Food - Difficulty: Easy",
+    "thumbnail_url": "https://images.code.org/f08caa5ddf49789883c97924a786439d-burger.jpg",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:21.416+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson10-choiceC_2025\\\"\"],\"cloned_from\":\"python-intro-console-lesson10-choiceC_2025\"}]"
+}]]></config>
+</Pythonlab>

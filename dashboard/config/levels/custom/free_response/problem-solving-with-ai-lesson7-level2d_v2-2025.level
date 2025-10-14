@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T19:53:01.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Scenario #1:\r\nYou ask AI to generate an evacuation route for your town in case of an extreme weather event. It generates a map that at first glance looks accurate but has incorrect street names and unclear instructions. \r\n\r\nWhat impact could this have if people in your town were to use this map in an emergency?\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:01.415+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson7-level2d_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson7-level2d_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

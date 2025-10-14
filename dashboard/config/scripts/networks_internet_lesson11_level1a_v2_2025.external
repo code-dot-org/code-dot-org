@@ -1,0 +1,22 @@
+name 'networks-internet-lesson11-level1a_v2-2025'
+title 'Careers and Emerging Technologies'
+display_name 'MediSure Health Systems'
+bubble_choice_description 'MediSure Health Systems has seen a surge in phishing attacks targeting doctors, nurses, and administrative staff.'
+thumbnail_url 'https://images.code.org/ec191f59eaf3edbb0ceff5ec6714e66e-image-1740388434804.jpg'
+
+markdown <<MARKDOWN
+# MediSure Health Systems  
+
+## Scenario
+MediSure Health Systems is a leading provider of **telemedicine and electronic health records (EHR) services**, managing thousands of patient records across hospitals and clinics. Recently, the company has seen a surge in **phishing attacks** targeting doctors, nurses, and administrative staff. These cybercriminals disguise themselves as IT support personnel, sending urgent emails that trick employees into revealing their login credentials.  
+
+Once inside the system, attackers can **steal, modify, or sell patient records**, leading to **privacy violations and compliance breaches** under HIPAA regulations. If left unchecked, these threats could result in **ransomware attacks** where patient data is locked until the hospital pays a hefty ransom. The IT team has noticed unusual login attempts outside of working hours but struggles to keep up with the growing volume of security alerts.  
+
+## Key Facts
+- Employees receive **daily phishing emails** mimicking internal IT support.  
+- Some **staff use weak passwords** or **reuse credentials** across multiple systems.  
+- Attackers attempt to access **electronic health records (EHR) and billing systems**.  
+- IT teams struggle to **detect and respond to unauthorized logins** before data is compromised.  
+
+![](https://images.code.org/ec191f59eaf3edbb0ceff5ec6714e66e-image-1740388434804.jpg)
+MARKDOWN

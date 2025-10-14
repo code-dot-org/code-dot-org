@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q7_2025-pilot_v2-2025'
+
+question 'Which of the following strategies can help mitigate AI bias?'
+
+right 'Ensuring training data is more diverse and representative'
+wrong 'Adding more data without filtering or reviewing it'
+wrong 'Letting AI self-correct over time without human intervention'
+wrong 'Ignoring bias since AI is objective by nature'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Understanding Bias
+MARKDOWN

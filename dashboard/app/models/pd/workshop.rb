@@ -493,7 +493,10 @@ class Pd::Workshop < ApplicationRecord
       # processed before the workshop ended.
       next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
       workshop.send_exit_surveys
-      workshop.send_facilitator_post_surveys
+      workshop.facilitators&.each do |facilitator|
+        next unless facilitator.email
+        Pd::WorkshopMailjetMailer.send_facilitator_post_workshop_survey(workshop, facilitator)
+      end
       # using update_attribute to skip validation
       workshop.update_attribute(:processed_at, Time.zone.now)
     end
@@ -535,6 +538,7 @@ class Pd::Workshop < ApplicationRecord
     scheduled_start_in_days(days).each do |workshop|
       next if workshop.suppress_reminders?
 
+      # Send reminder email to workshop enrollees
       workshop.enrollments.each do |enrollment|
         user = enrollment.user
         Pd::WorkshopMailjetMailer.send_teacher_workshop_reminder(enrollment, user, false, days)
@@ -547,6 +551,16 @@ class Pd::Workshop < ApplicationRecord
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
       end
 
+      # Send reminder email to the workshop Regional Partner (if available)
+      if workshop.regional_partner.present?
+        begin
+          Pd::WorkshopMailjetMailer.send_rp_workshop_reminder(workshop, days)
+        rescue => exception
+          errors << "regional partner #{workshop.regional_partner.id} - #{exception.message}"
+        end
+      end
+
+      # Send reminder email to facilitators (if available)
       workshop.facilitators.each do |facilitator|
         next if facilitator == workshop.organizer
         begin
@@ -556,6 +570,7 @@ class Pd::Workshop < ApplicationRecord
         end
       end
 
+      # Send reminder email to the workshop organizer
       begin
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
       rescue => exception
@@ -650,17 +665,6 @@ class Pd::Workshop < ApplicationRecord
       enrollment.update!(survey_sent_at: Time.zone.now)
     rescue => exception
       raise "teacher enrollment #{enrollment.id} - #{exception.message}"
-    end
-  end
-
-  # Send Post-surveys to facilitators of CSD and CSP workshops
-  def send_facilitator_post_surveys
-    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA || course == COURSE_CSF || course == COURSE_BUILD_YOUR_OWN
-      facilitators.each do |facilitator|
-        next unless facilitator.email
-
-        Pd::WorkshopMailer.facilitator_post_workshop(facilitator, self).deliver_now
-      end
     end
   end
 
@@ -981,6 +985,34 @@ class Pd::Workshop < ApplicationRecord
       regional_partner_name: regional_partner&.name,
       organizer: organizer&.slice(:name, :email),
       facilitators: facilitators_info
+    }
+  end
+
+  def relevant_to_user?(user)
+    return false if hidden?
+
+    case participant_group_type
+    when "National"
+      true
+    when "Regional"
+      school = Queries::SchoolInfo.current_school(user)
+      zip = school&.dig(:school_zip)
+      return false if zip.blank?
+
+      zip_codes = regional_partner&.mappings&.pluck(:zip_code)
+      zip_codes&.include?(zip)
+    else
+      false
+    end
+  end
+
+  def summarize_for_pl_catalog
+    {
+      id: id,
+      title: name,
+      sessions: Array(sessions).map {|s| {start: s.start.iso8601}},
+      link: "/professional-learning/workshops/#{id}",
+      is_virtual: virtual?
     }
   end
 end

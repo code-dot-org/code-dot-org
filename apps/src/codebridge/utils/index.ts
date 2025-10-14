@@ -1,3 +1,4 @@
+export * from './aiTutorUtils';
 export * from './analyticsReporterHelper';
 export * from './editableFileType';
 export * from './getUrlForFile';

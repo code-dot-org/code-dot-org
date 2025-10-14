@@ -1,0 +1,59 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-10-08T22:02:13.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "level_data": {
+      "library": "launch2024",
+      "aiCodeGenerate": "true",
+      "aiCodeGenerateAdlib": {
+        "id": "layers",
+        "template": "Please code a music remix that layers {layer1} and {layer2} together.",
+        "options": {
+          "layer1": [
+            "bass",
+            "beats",
+            "vocals",
+            "leads"
+          ],
+          "layer2": [
+            "bass",
+            "beats",
+            "vocals",
+            "leads"
+          ]
+        },
+        "variantCount": 3
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "kenya_grace_strangers"
+    },
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "name_suffix": "_-pl",
+    "long_instructions": "###AI can help layer sounds together.\r\nComplete the prompt below, then generate code",
+    "project_template_level_name": "HoAI_pilot_5_template1_-pl",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-08T22:02:13.687+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music4\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music4\"}]"
+}]]></config>
+  <blocks/>
+</Music>

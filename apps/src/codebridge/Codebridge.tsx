@@ -13,7 +13,8 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
-import {SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {ChatButtonData} from '@cdo/apps/aichat/types';
+import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -42,8 +43,10 @@ type CodebridgeProps = {
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;
-  aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
+  aiTutorContextHelper?: AiTutorContextHelper<object>;
+  aiTutorSystemPromptName?: string;
 };
 
 export const Codebridge = React.memo(
@@ -57,8 +60,10 @@ export const Codebridge = React.memo(
     levelProperties,
     projectPickerSettings,
     hiddenContextCallback,
-    aiTutorSystemPromptSettings,
     aiTutorMultimodalEnabled,
+    aiTutorChatButtonData,
+    aiTutorContextHelper,
+    aiTutorSystemPromptName,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -185,8 +190,10 @@ export const Codebridge = React.memo(
           projectPickerSettings,
           hiddenContextCallback,
           onImageFlagged,
-          aiTutorSystemPromptSettings,
           aiTutorMultimodalEnabled,
+          aiTutorChatButtonData,
+          aiTutorContextHelper,
+          aiTutorSystemPromptName,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

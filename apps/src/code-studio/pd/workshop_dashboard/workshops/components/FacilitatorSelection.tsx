@@ -4,7 +4,7 @@ import {useNavigate, useParams} from 'react-router-dom';
 
 import {Facilitator} from '../types';
 
-import styles from '../workshop.module.scss';
+import styles from '../WorkshopLayout.module.scss';
 
 export const FacilitatorSelection: FC<{
   facilitators?: Facilitator[];

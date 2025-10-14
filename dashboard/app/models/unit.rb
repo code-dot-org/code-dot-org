@@ -635,6 +635,14 @@ class Unit < ApplicationRecord
     get_course_version&.hoc?
   end
 
+  def hoai?
+    get_course_version&.hoai?
+  end
+
+  def hoc_or_hoai?
+    hoc? || hoai?
+  end
+
   def flappy?
     name == 'flappy'
   end
@@ -1212,7 +1220,7 @@ class Unit < ApplicationRecord
   end
 
   def finish_url(unit_group_unit: nil)
-    return hoc_finish_url if hoc?
+    return hoc_finish_url if hoc_or_hoai?
     return csf_finish_url if csf?
     course = unit_group_unit&.unit_group || get_original_unit_group
     if course
@@ -1314,8 +1322,8 @@ class Unit < ApplicationRecord
         student_detail_progress_view: student_detail_progress_view?,
         project_widget_visible: project_widget_visible?,
         project_widget_types: project_widget_types,
-        teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-        student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        teacher_resources: sorted_user_facing_resources(resources),
+        student_resources: sorted_user_facing_resources(student_resources),
         lesson_extras_available: lesson_extras_available,
         hasUnnumberedLessons: has_unnumbered_lessons?,
         has_verified_resources: has_verified_resources?,
@@ -1388,8 +1396,8 @@ class Unit < ApplicationRecord
       unitName: title_for_display(unit_group_unit: unit_group_unit),
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
-      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      teacher_resources: sorted_user_facing_resources(resources),
+      student_resources: sorted_user_facing_resources(student_resources),
       numberedUnits: numbered_units,
       hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: course_version_year,
@@ -1931,5 +1939,9 @@ class Unit < ApplicationRecord
   private def teacher_feedback_enabled?
     initiative = get_course_version&.course_offering&.marketing_initiative
     TEACHER_FEEDBACK_INITIATIVES.include? initiative
+  end
+
+  private def sorted_user_facing_resources(resources)
+    resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown)
   end
 end

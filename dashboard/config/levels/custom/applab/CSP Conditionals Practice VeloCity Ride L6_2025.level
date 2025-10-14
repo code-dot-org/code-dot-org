@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:21:49.000Z",
   "level_num": "custom",
@@ -47,7 +48,7 @@
     },
     "embed": "false",
     "project_template_level_name": "CSP Conditionals Practice VeloCity Ride_template_2025",
-    "long_instructions": "# Make It Your Own\r\n\r\n### ✅ Do This\r\n\r\n- Look through the possible ways you can continue to modify and extend this app. Then pick one or more to work on!\r\n \t\r\n  - ::: details [**🎨 Update the User Experience**]\r\n       - Using a dropdown element for users to select the amount of time that they want to ride the scooter isn't an ideal choice. Can you update the UI and change some of the code to use a slider element instead?\r\n\t      - Here's one idea of how you might try to make it appear:   \r\n          ![](https://images.code.org/807f8265fadb6e0387eba40f159f694c-image-1712239597724.png)\r\n  :::\r\n\r\n\t- ::: details [**🔧 Refactor Your Code**]\r\n\t\t- This program's logic can be written differently. Do you see a way that the same app functionality could be achieved with easier to follow code or with fewer lines of code overall? \r\n\t\t- Rewrite the pricing algorithm! There are only three expressions that are checked in the pricing conditional right now. Can you add one or two additions to the pricing structure?\r\n   :::\r\n\r\n   - ::: details [**✨ Add New Features**]\r\n      - Are there other things beyond stress, happiness, and time that would make the suggestions this app provides more useful?\r\n\t      - Add new elements in Design mode to collect this additional user input\r\n          - Adjust your code to account for this new information in a way that improves the suggestions given\r\n\t      - Write out your own Promo Code table and change the last part of your program code to match your version.\r\n:::\r\n\r\n<hr/>\r\n\r\n### 🧐 Made Changes That Broke Your Program?\r\n\r\n  - ::: details [You can use the \"Version History\" button to backtrack to a previous version of your program.]\r\n\r\n     ![](https://images.code.org/284d35251215ff61a2f2c5ac8370a34a-image-1711579030467.gif)\r\n  :::\r\n\r\n",
+    "long_instructions": "# Make It Your Own\r\n\r\n### ✅ Do This\r\n\r\n- Look through the possible ways you can continue to modify and extend this app. Then pick one or more to work on!\r\n \t\r\n  - ::: details [**🎨 Update the User Experience**]\r\n       - Using a dropdown element for users to select the amount of time that they want to ride the scooter isn't an ideal choice. Can you update the UI and change some of the code to use a slider element instead?\r\n\t      - Here's one idea of how you might try to make it appear:   \r\n          ![](https://images.code.org/807f8265fadb6e0387eba40f159f694c-image-1712239597724.png)\r\n  :::\r\n\r\n\t- ::: details [**🔧 Refactor Your Code**]\r\n\t\t- This program's logic can be written differently. Do you see a way that the same app functionality could be achieved with easier to follow code or with fewer lines of code overall? \r\n\t\t- Rewrite the pricing algorithm! There are only three expressions that are checked in the pricing conditional right now. Can you add one or two additions to the pricing structure? \r\n   :::\r\n\r\n   - ::: details [**✨ Add New Features**]\r\n      - Are there other questions in addition to vehicle, ride length, and day of the week that should be considered in the price of a ride?\r\n\t      - Add new elements in Design mode to collect this additional user input\r\n          - Adjust your code to account for this new information in a way that updates the price\r\n\t      - Write out your own Promo Code table and change the last part of your program code to match your version.\r\n:::\r\n\r\n<hr/>\r\n\r\n### 🧐 Made Changes That Broke Your Program?\r\n\r\n  - ::: details [You can use the \"Version History\" button to backtrack to a previous version of your program.]\r\n\r\n     ![](https://images.code.org/284d35251215ff61a2f2c5ac8370a34a-image-1711579030467.gif)\r\n  :::\r\n\r\n",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -79,8 +80,7 @@
     "name_suffix": "_2025",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:49.313+00:00\",\"changed\":[\"cloned from \\\"CSP Conditionals Practice VeloCity Ride L6\\\"\"],\"cloned_from\":\"CSP Conditionals Practice VeloCity Ride L6\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:49.313+00:00\",\"changed\":[\"cloned from \\\"CSP Conditionals Practice VeloCity Ride L6\\\"\"],\"cloned_from\":\"CSP Conditionals Practice VeloCity Ride L6\"},{\"changed_at\":\"2025-10-07 17:32:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
