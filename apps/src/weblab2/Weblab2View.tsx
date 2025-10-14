@@ -154,8 +154,9 @@ const Weblab2View: React.FC<
         return {
           jsonSchema: aiTutorResponseJsonSchema,
           responseCallback: (response: string) => {
-            console.log('hi from response callback');
-            console.log({response});
+            console.log('🤖: Tutor response (in jsonSchema callback):', {
+              response,
+            });
             // TODO: send code to the appropriate place
             const jsonResponse = JSON.parse(response);
             return jsonResponse.explanation;
