@@ -119,7 +119,10 @@ const DanceView: React.FunctionComponent<{
 
   const aiGenerateMode =
     levelProperties.aiCodeGenerate || queryParams('ai-generate') === 'true';
-  const usingMusicProject = queryParams('music-channel') || aiGenerateMode;
+  const usingMusicProject =
+    queryParams('music-channel') ||
+    aiGenerateMode ||
+    levelProperties.aiCodePreview;
 
   const {theme} = useTheme();
 

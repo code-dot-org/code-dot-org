@@ -39,7 +39,7 @@
     "encrypted_examples": [
 
     ],
-    "ai_code_generate": "true"
+    "ai_code_generate": "false"
   },
   "audit_log": "[{\"changed_at\":\"2025-10-13T23:53:33.651+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dance-create\\\"\"],\"cloned_from\":\"hoai2025-dance-create\"},{\"changed_at\":\"2025-10-13 23:56:40 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
