@@ -11,6 +11,9 @@ import commonI18n from '@cdo/locale';
 
 import {HOME_FOLDER} from './constants';
 
+// List of packages we expect students to have access to in their code.
+const supportedPackages = ['pandas', 'matplotlib', 'numpy'];
+
 /**
  * This method parses an error message from pyodide and makes it more readable and useful
  * for end users.
@@ -19,13 +22,14 @@ import {HOME_FOLDER} from './constants';
  * in main.py. If we find this line, we return the error message starting from this line.
  * If we never find the main error, we return the entire message unaltered.
  *
- * There are exceptions to this rule:
- * If the error message is a ModuleNotFoundError relating to a module
- * that is supported by pyodide but is not installed, we change it to say that the module is not supported in Python Lab.
- * This is because any uninstalled module is purposefully not supported.
- * However, if we are running our system code, that means the module should have been supported but failed to load, so we
- * give the user an appropriate message in that case.
- * If the error message includes a Neighborhood exception, we prepend a user-friendly message to the adjust error message.
+ * There are 2 exceptions to this rule:
+ * 1. If the error message is a ModuleNotFoundError relating to a module
+ * that is supported by pyodide but is not installed, we update it depending on the module and whether we are currently
+ * running system code. If we are running system code, we return a generic "we failed to load a module" message.
+ * If we are running user code and the module is supported by us, we return a message indicating the specific module that failed to load.
+ * Otherwise, the module is not supported by us, and we return a message indicating the module is not supported.
+ *
+ * 2. If the error message includes a Neighborhood exception, we prepend a user-friendly message to the error message.
  * @param errorMessage - the error message from pyodide
  **/
 export function parseErrorMessage(
@@ -37,9 +41,13 @@ export function parseErrorMessage(
     /The module '([^']+)' is included in the Pyodide distribution, but it is not installed./;
   if (importErrorRegex.test(errorMessage)) {
     const [, module] = errorMessage.match(importErrorRegex)!;
-    return isSystemCode
-      ? pythonlabI18n.missingPackageError()
-      : pythonlabI18n.moduleNotSupported({module});
+    if (isSystemCode) {
+      return pythonlabI18n.missingGenericModuleError();
+    } else if (supportedPackages.includes(module)) {
+      return pythonlabI18n.missingModuleError({module});
+    } else {
+      return pythonlabI18n.moduleNotSupported({module});
+    }
   }
   // Look for Neighborhood exception.
   const neighborhoodExceptionType =
