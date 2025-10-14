@@ -73,16 +73,16 @@ Make sure everything works locally using the instructions above.
 cd docker/ci
 ```
 
-Sign in to Docker Hub through the command line; when prompted, enter the password found under "access token for docker cli authentication" in the lastpass docker hub notes field
+Sign in to Docker Hub through the command line; when prompted, enter the value found in the field "Admin API Token" in the 1Password Docker credential for the user `codedotorg`
 
 ```
 docker login -u codedotorg
 ```
 
-Build a full image to your local machine
+Build a full image that will execute on Intel/X86 systems to your local machine
 
 ```
-docker build .
+docker build --platform linux/amd64 .
 ```
 
 **Note:** We are moving to a new naming convention in order to use different docker images for different purposes. What was the `code-dot-org` image will become the `cdo-ci` image. For now, these docs advise publishing both names.

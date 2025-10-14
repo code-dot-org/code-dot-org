@@ -80,7 +80,7 @@ steps:
   - name: unit-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/code-dot-org:1.17
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -190,7 +190,7 @@ steps:
   - name: ui-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/code-dot-org:1.17
     pull: always
     volumes:
       - name: mysql
@@ -271,7 +271,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-ci-tests
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/code-dot-org:1.17
     pull: always
     environment:
       CI_JOB: 'ui_tests'
