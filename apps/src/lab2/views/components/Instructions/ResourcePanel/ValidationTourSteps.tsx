@@ -208,10 +208,6 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
       steps={VALIDATION_TOUR_STEPS}
       onExit={() => {
         setValidationTourEnabled(false);
-      }}
-      onComplete={() => {
-        setValidationTourEnabled(false);
-        // User must complete tour so that they don't see it again.
         trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
       }}
       onChange={nextStepIndex => {

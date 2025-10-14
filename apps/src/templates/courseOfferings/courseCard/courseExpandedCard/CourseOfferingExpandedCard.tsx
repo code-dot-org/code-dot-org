@@ -90,7 +90,7 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
             )}
             {courseOffering.image && <Image src={courseOffering.image} />}
           </div>
-          {relatedCurriculums?.length && (
+          {!!relatedCurriculums?.length && (
             <div className={moduleStyles.additionalDetails}>
               <div>
                 <FontAwesomeV6Icon
