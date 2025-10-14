@@ -14,7 +14,9 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
-bundle install --quiet
+# Install in deployment mode, both to better mirror the test server and to make
+# caching easier.
+bundle install --quiet --deployment
 
 # Disable Pegasus content based on the exit code of the rake task.
 if bundle exec rake ci:sparse_checkout; then

@@ -39,14 +39,9 @@ steps:
         bin/drone/vscode $hostname
         EOF
 
-  # We cache a clone of staging in the `cache-staging-build-artifacts` pipeline
+  # Restore the staging build we created in the `cache-staging-ci-build` pipeline
   - name: get-cached-staging-build
     image: plugins/s3-cache
-    volumes:
-      # Even files cached with absolute paths will be restored into the
-      # workdir; so for this step, we mount the relevant volumes there, too.
-      - name: rbenv
-        path: /drone/src/home/ci/.rbenv
     settings:
       filename: cache-staging-ci-build-without-rbenv.tar.gz
       endpoint: s3://cdo-drone
@@ -87,9 +82,6 @@ steps:
     # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:1.16
     pull: always
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
     environment:
       CI_JOB: 'unit_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/unit_tests.sh
@@ -108,10 +100,6 @@ steps:
       - /entrypoint.sh docker/ci/scripts/unit_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
-
-volumes:
-  - name: rbenv
-    temp: {}
 
 trigger:
   branch:
@@ -156,14 +144,12 @@ steps:
         bin/drone/vscode $hostname
         EOF
 
-  # We cache a clone of staging in the `cache-staging-build-artifacts` pipeline
+  # Restore the staging build we created in the `cache-staging-ci-build` pipeline
   - name: get-cached-staging-build
     image: plugins/s3-cache
     volumes:
       # Even files cached with absolute paths will be restored into the
       # workdir; so for this step, we mount the relevant volumes there, too.
-      - name: rbenv
-        path: /drone/src/home/ci/.rbenv
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
@@ -257,11 +243,11 @@ trigger:
 # subsequent feature branch CI tests as the initial state for the environment.
 #
 # Specifically, we cache:
-# - The entire project directory, including the repository and all generated
-#   build artifacts (minus a few select directories), to reduce the time
-#   needed for the initial git clone and the first build.
+# - The entire project directory, including the repository and all relevant
+#   build artifacts, to reduce the time needed for the initial git clone and
+#   the first build. This should include all installed third-party libraries
+#   (ie, gems and node modules), a built apps package, and compiled assets.
 # - A copy of the MySQL databases, to reduce seed time.
-# - A copy of the ~/.rbenv directory, to reduce bundle install time.
 kind: pipeline
 type: docker
 name: cache-staging-build-artifacts
@@ -285,7 +271,8 @@ steps:
       - git clone --branch $DRONE_SOURCE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
   # Do all the work necessary to run UI tests so we can capture a complete
-  # snapshot of rbenv and the database, but don't actually run the tests.
+  # snapshot of the fully-built project and resulting database, but don't
+  # actually run the tests.
   - name: prepare-ci-tests
     image: codedotorg/code-dot-org:1.16
     pull: always
@@ -327,7 +314,6 @@ steps:
       pull: true
       mount:
         - .
-        - /home/ci/.rbenv
         - /var/lib/mysql
 
 volumes:
@@ -351,6 +337,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 14a2f4af048629ac07839da4d4130ea54a6c6860cdeb76f9c570677823a3924d
+hmac: b1cbe78b8a31f38c2fb3ee463b3c5fd617cb18984e4bca0b65a93828143a013b
 
 ...
