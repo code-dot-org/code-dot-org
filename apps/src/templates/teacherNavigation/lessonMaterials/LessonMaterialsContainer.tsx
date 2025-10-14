@@ -1,4 +1,10 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  BodyTwoText,
+  BodyThreeText,
+} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useState, useMemo, useCallback} from 'react';
@@ -283,6 +289,101 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   };
 
+  const renderLessonSummaryContainer = () => {
+    return (
+      <div className={styles.lessonSummaryContainer}>
+        <div className={styles.lessonSummarySection}>
+          <div className={styles.lessonSummarySectionTitle}>
+            <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
+            <BodyTwoText>{i18n.audioSummary()}</BodyTwoText>
+          </div>
+          {/* <audio controls src="" type="audio/mpeg" /> */}
+          <p>AUDIO PLAYER HERE</p>
+        </div>
+        <div className={styles.lessonSummarySection}>
+          <div className={styles.lessonSummarySectionTitle}>
+            <FontAwesomeV6Icon iconName="lightbulb" iconStyle="solid" />
+            <BodyTwoText>{i18n.teachingTips()}</BodyTwoText>
+          </div>
+          <div className={styles.lessonSummaryInfo}>
+            <div className={styles.lessonSummaryInfoBlock}>
+              <BodyThreeText>{i18n.learningObjective()}</BodyThreeText>
+              <BodyThreeText>
+                Students will use parameters to control the size and placement
+                of shapes, learning that parameters let us give more precise
+                instructions to the computer.
+              </BodyThreeText>
+            </div>
+            <div className={styles.lessonSummaryInfoBlock}>
+              <BodyThreeText>{i18n.keyLessonBeats()}</BodyThreeText>
+              <ol>
+                <li>
+                  <BodyThreeText>
+                    Warm-up brainstorm on “extra details” for rectangles.
+                  </BodyThreeText>
+                </li>
+                <li>
+                  <BodyThreeText>Introduce vocabulary parameter.</BodyThreeText>
+                </li>
+                <li>
+                  <BodyThreeText>
+                    Code Studio activity—test and debug.
+                  </BodyThreeText>
+                </li>
+                <li>
+                  <BodyThreeText>
+                    Wrap-up reflection: other uses for parameters.
+                  </BodyThreeText>
+                </li>
+              </ol>
+            </div>
+            <div className={styles.lessonSummaryInfoBlock}>
+              <BodyThreeText>{i18n.commonMisconceptions()}</BodyThreeText>
+              <ul>
+                <li>
+                  <BodyThreeText>
+                    Students may confuse x/y position with width/height. Use
+                    visuals: draw arrows for position, then outline size
+                    separately.
+                  </BodyThreeText>
+                </li>
+                <li>
+                  <BodyThreeText>Introduce vocabulary parameter.</BodyThreeText>
+                </li>
+                <li>
+                  <BodyThreeText>
+                    Some think order doesn't matter—remind them code runs top to
+                    bottom.
+                  </BodyThreeText>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <Button
+            id="lesson-summary-ask-aita"
+            type="secondary"
+            color="black"
+            className={styles.askAITAButton}
+            text={i18n.questionForAITA()}
+            onClick={() => console.log('ASK TA')}
+          />
+          <div className={styles.horizontalLine} />
+          <div className={styles.personalizationQuizPrompt}>
+            <BodyThreeText>
+              {i18n.wantToSeeDifferentInformation()}
+            </BodyThreeText>
+            <a href="">
+              <BodyThreeText>{i18n.customizeForYourClassroom()}</BodyThreeText>
+            </a>
+          </div>
+        </div>
+        <div className={styles.poweredByAITANote}>
+          <p>the little AI TA icon and message</p>
+        </div>
+      </div>
+    );
+  };
+
   if (
     hasEmptyState &&
     !isLoading &&
@@ -298,18 +399,21 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   }
 
   return (
-    <div className={styles.lessonMaterialsContainer}>
-      {renderHeader()}
-      {isLoading || needsReload ? (
-        <div>
-          <Spinner size={'large'} />
-        </div>
-      ) : (
-        <>
-          {renderTeacherResources()}
-          {renderStudentResources()}
-        </>
-      )}
+    <div className={styles.lessonContainer}>
+      <div className={styles.lessonMaterialsContainer}>
+        {renderHeader()}
+        {isLoading || needsReload ? (
+          <div>
+            <Spinner size={'large'} />
+          </div>
+        ) : (
+          <>
+            {renderTeacherResources()}
+            {renderStudentResources()}
+          </>
+        )}
+      </div>
+      {renderLessonSummaryContainer()}
     </div>
   );
 };
