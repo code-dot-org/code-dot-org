@@ -197,7 +197,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           <>
             {levelProperties.aiDancerGenerateText && (
               <>
-                <div>Please describe the dancer you'd like to create.</div>
+                <div>Describe the dancer you'd like AI to create.</div>
                 <textarea
                   id="generate-description"
                   onChange={evt => {

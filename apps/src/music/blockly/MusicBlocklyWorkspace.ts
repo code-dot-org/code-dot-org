@@ -895,7 +895,6 @@ export default class MusicBlocklyWorkspace {
         .getToolbox()
         ?.setVisible(visible);
 
-      //(this.workspace as GoogleBlockly.WorkspaceSvg).resizeContents();
       Blockly.svgResize(this.workspace as GoogleBlockly.WorkspaceSvg);
     }
   }

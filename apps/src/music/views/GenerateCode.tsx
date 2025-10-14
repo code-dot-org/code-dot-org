@@ -182,7 +182,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         <>
           {!useAdlib && (
             <>
-              <div>Please describe the song you'd like to make.</div>
+              <div>Describe the song you'd like AI to make.</div>
               <textarea
                 id="generate-description"
                 onChange={evt => {
