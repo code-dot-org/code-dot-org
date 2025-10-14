@@ -1,6 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {validateFileName as validateCodebridgeFileName} from '@codebridge/utils';
-import {sendLab2AnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -11,6 +10,7 @@ import {
 } from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';

@@ -1,5 +1,5 @@
 export * from './aiTutorUtils';
-export * from './analyticsReporterHelper';
+export * from '../../lab2/utils/analyticsReporterHelper';
 export * from './editableFileType';
 export * from './getUrlForFile';
 export * from './isDuplicateFileName';

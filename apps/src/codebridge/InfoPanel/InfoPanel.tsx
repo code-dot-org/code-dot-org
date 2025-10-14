@@ -18,11 +18,11 @@ import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/use
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
+import {sendLab2AnalyticsEvent} from '../../lab2/utils/analyticsReporterHelper';
 import {useCodebridgeContext} from '../codebridgeContext';
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {getSystemMessage} from '../Console/MessageHelpers';
 import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
-import {sendLab2AnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import moduleStyles from './styles/info-panel.module.scss';
 

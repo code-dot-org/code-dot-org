@@ -4,7 +4,6 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import {sendLab2AnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -22,6 +21,7 @@ import {
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';

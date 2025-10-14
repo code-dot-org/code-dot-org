@@ -11,7 +11,6 @@ import FocusTrap from 'focus-trap-react';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 
-import {sendLab2AnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
 import useDropdownPosition from '@cdo/apps/lab2/hooks/useDropdownPosition';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -27,6 +26,7 @@ import {
   setAndSaveProjectSources,
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
