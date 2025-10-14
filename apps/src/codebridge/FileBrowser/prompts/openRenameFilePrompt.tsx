@@ -18,7 +18,7 @@ type RenameNewFilePromptArgsType = {
   projectFiles: MultiFileSource['files'];
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
 };
 
 export const openRenameFilePrompt = async ({
@@ -26,7 +26,7 @@ export const openRenameFilePrompt = async ({
   dialogControl,
   renameFile,
   projectFiles,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
   isStartMode,
   validationFile,
 }: RenameNewFilePromptArgsType) => {
@@ -59,5 +59,5 @@ export const openRenameFilePrompt = async ({
 
   const newName = extractUserInput(results);
   renameFile(fileId, newName);
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE);
 };

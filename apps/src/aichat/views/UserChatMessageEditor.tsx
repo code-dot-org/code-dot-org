@@ -23,6 +23,7 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
+  responseCallback?: (response: string) => string;
 
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
@@ -43,6 +44,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatButtons,
   hiddenContextCallback,
   multimodalAvailable,
+  responseCallback,
   levelName,
   hasStarterAssets,
   buildAssetUrl,
@@ -92,6 +94,7 @@ const UserChatMessageEditor: React.FunctionComponent<
               Object.values(userAddedSelectionContext).length > 0
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
+            responseCallback,
           })
         );
       }
@@ -105,6 +108,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       multimodalAvailable,
       chatAssets,
       userAddedSelectionContext,
+      responseCallback,
     ]
   );
 

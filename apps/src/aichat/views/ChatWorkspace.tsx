@@ -52,6 +52,10 @@ interface ChatWorkspaceProps {
   channelId?: string;
   levelName?: string;
   hasStarterAssets?: boolean;
+
+  // Optional callback to process the model's response before it is recorded in chat
+  // history (useful for structured outputs).
+  responseCallback?: (response: string) => string;
 }
 
 /**
@@ -67,6 +71,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   channelId,
   hasStarterAssets = false,
   hideModelChangeMessage = false,
+  responseCallback,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
@@ -288,6 +293,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             chatButtons={chatButtons}
             hiddenContextCallback={hiddenContextCallback}
             multimodalAvailable={multimodalAvailable}
+            responseCallback={responseCallback}
             levelName={levelName}
             hasStarterAssets={hasStarterAssets}
             buildAssetUrl={buildAssetUrl}
