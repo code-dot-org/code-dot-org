@@ -40,8 +40,9 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const [personalizationData, setPersonalizationData] = React.useState<
     Partial<PersonalizationData>
   >({});
-  const [matchedTeachingProfile, setMatchedTeachingProfile] =
-    React.useState('The Innovator');
+  const [matchedTeachingProfile, setMatchedTeachingProfile] = React.useState(
+    TEACHING_STYLES[0].name
+  );
 
   const NEXT = 1;
   const BACK = -1;
@@ -104,25 +105,16 @@ const PersonalizationCollectorContainer: React.FC = () => {
       if (!isSaving) {
         setIsSaving(true);
         try {
-          // Save the data first
           await saveTeachingProfileData(personalizationData);
-
-          console.log('Final Personalization Data:', personalizationData);
-
-          // Call the matching API and wait for the result
           const profileMatch = await matchTeachingProfile(personalizationData);
-          console.log('Teaching Profile Match:', profileMatch);
 
-          // Store the matched profile name
           if (profileMatch?.matchingProfile) {
             setMatchedTeachingProfile(profileMatch.matchingProfile);
           }
 
-          // Only show results after we have the matched profile
           setShowResults(true);
         } catch (error) {
           console.error('Error in final step:', error);
-          // Still show results even if matching fails, using default
           setShowResults(true);
         } finally {
           setIsSaving(false);
@@ -236,7 +228,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
           teachingStyle={
             matchedTeachingProfile
               ? findTeachingStyle(matchedTeachingProfile) ?? TEACHING_STYLES[0]
-              : TEACHING_STYLES[0] // fallback if no match found
+              : TEACHING_STYLES[0]
           }
         />
       ) : (
