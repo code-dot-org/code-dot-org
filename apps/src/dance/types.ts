@@ -39,4 +39,5 @@ export interface DanceLevelProperties extends BlocklyLevelProperties {
   aiDancerGenerateAdlib?: string;
   aiDancerGenerateText?: boolean;
   aiCodeGenerate?: boolean;
+  aiCodePreview?: boolean;
 }
