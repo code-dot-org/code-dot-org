@@ -31,7 +31,7 @@ const MIN_PREVIEW_WIDTH = 320;
 const INITIAL_PREVIEW_WIDTH = 400;
 const INITIAL_PREVIEW_WIDTH_WIDGET = 900;
 const INITIAL_INFO_PANEL_WIDTH_COLLAPSED = 55;
-const INITIAL_PREVIEW_WIDTH_COLLAPSED = 500;
+const INITIAL_PREVIEW_WIDTH_COLLAPSED = 650;
 
 const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
@@ -41,7 +41,6 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
-  console.log('isStandaloneCollapsed', isStandaloneCollapsed);
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const dispatch = useAppDispatch();
 
