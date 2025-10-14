@@ -35,7 +35,13 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       _has_ai_tutor_access?.must_equal false
     end
 
-    it 'returns true if in experiment and section is enabled' do
+    it 'returns true if in pilot teachers enabled section' do
+      _has_ai_tutor_access?.must_equal true
+    end
+
+    it 'returns true if SingleUserExperiment is enabled' do
+      allow(Queries::User::TeacherEnabledExperiments).to receive(:call).with(user).and_return([])
+      allow(SingleUserExperiment).to receive(:enabled?).with(user: user, experiment_name: 'ai-tutor').and_return(true)
       _has_ai_tutor_access?.must_equal true
     end
   end
@@ -49,6 +55,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
 
     it 'returns true if SingleUserExperiment is enabled' do
+      allow(Queries::User::TeacherEnabledExperiments).to receive(:call).with(user).and_return([])
       allow(SingleUserExperiment).to receive(:enabled?).with(user: user, experiment_name: 'ai-tutor').and_return(true)
       _can_enable_ai_tutor?.must_equal true
     end
