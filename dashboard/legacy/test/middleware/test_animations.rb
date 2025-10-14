@@ -493,7 +493,7 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(filename)
 
     # Stub copy_object to give an error
-    BucketHelper.s3.stubs(:copy_object).raises("Test Error")
+    BucketHelper.s3_client.stubs(:copy_object).raises("Test Error")
 
     # Create an animation file
     original_version_id = upload(filename, 'stub-v1-body')

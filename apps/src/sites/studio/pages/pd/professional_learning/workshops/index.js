@@ -15,9 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const userInfoParams = userInfoDataResponseToParams(
     getScriptData('userInfo')
   );
+  const userEnrollmentParams = getScriptData('userEnrollment');
 
   ReactDOM.render(
-    <WorkshopMarketingPage {...workshopInfoParams} {...userInfoParams} />,
+    <WorkshopMarketingPage
+      {...workshopInfoParams}
+      {...userInfoParams}
+      userEnrollment={userEnrollmentParams}
+    />,
     document.getElementById('workshop-container')
   );
 });

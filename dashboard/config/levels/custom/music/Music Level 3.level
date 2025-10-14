@@ -38,9 +38,20 @@
     },
     "instructions_important": "false",
     "long_instructions": "Try everything!",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-04-05 09:03:03 +0000\",\"changed\":[\"published\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-20 17:46:47 +0000\",\"changed\":[],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-05 09:03:03 +0000\",\"changed\":[\"published\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-20 17:46:47 +0000\",\"changed\":[],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 20:18:14 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-09-11 20:19:27 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

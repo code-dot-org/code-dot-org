@@ -1,0 +1,34 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-09-18T17:51:22.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "level_data": {
+      "library": "launch2024",
+      "aiCodeGenerate": true
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "bubble_choice_description": "With the help of generative AI, create the ultimate remix!",
+    "thumbnail_url": "/shared/images/fill-70x70/courses/logo_music.png",
+    "display_name": "Create a song!",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-09-18T17:51:22.247+00:00\",\"changed\":[\"cloned from \\\"New Music AI Project\\\"\"],\"cloned_from\":\"New Music AI Project\"},{\"changed_at\":\"2025-09-18 17:52:09 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

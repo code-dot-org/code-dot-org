@@ -114,6 +114,13 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
 
   # PATCH /api/v1/pd/workshops/1
   def update
+    # Get associated data that could be updated for this workshop before we call workshop.update.
+    # This way, we can track whether it changes after the update or not (this must be done manually
+    # since workshop.previous_changes will not flag changes to this info).
+    pre_update_facilitators = @workshop.facilitators&.map(&:name)&.join(', ')
+    pre_update_course_offerings = @workshop.course_offerings&.map(&:display_name)&.join(', ')
+    pre_update_session_info = @workshop.sessions&.map(&:session_info_for_emails)
+
     adjust_facilitators
     adjust_course_offerings
     adjust_grades
@@ -127,7 +134,18 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
     new_workshop_params = workshop_params(can_update_regional_partner)
 
     if @workshop.update(new_workshop_params)
-      notify if should_notify?
+      general_detail_changes = get_general_detail_changes(pre_update_facilitators, pre_update_course_offerings)
+
+      # Only notify about the session info if it's changed.
+      post_update_session_info = @workshop.sessions&.map(&:session_info_for_emails)
+      sessions_have_changed = pre_update_session_info != post_update_session_info
+      pre_update_session_info_for_email = sessions_have_changed ? pre_update_session_info : []
+      post_update_session_info_for_email = sessions_have_changed ? post_update_session_info : []
+
+      if (!general_detail_changes.empty? || sessions_have_changed) && should_notify?
+        notify(general_detail_changes, sessions_have_changed, pre_update_session_info_for_email, post_update_session_info_for_email)
+      end
+
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
       render json: {errors: @workshop.errors.full_messages}, status: :bad_request
@@ -212,21 +230,70 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       end
   end
 
+  # Returns recent updates to @workshop as an array of hashes tracking each updated field's name, old value, and new value.
+  private def get_general_detail_changes(pre_update_facilitators, pre_update_course_offerings)
+    detail_changes = []
+
+    @workshop.previous_changes.each do |attribute, values|
+      old_value, new_value = values
+
+      case attribute
+      when "course", "subject", "name", "capacity", "description", "notes"
+        detail_changes << {name: attribute.capitalize, old: old_value || "(None)", new: new_value || "(None)"}
+      when "participant_group_type"
+        detail_changes << {name: "Participant group type", old: old_value || "(None)", new: new_value || "(None)"}
+      when "organizer_id"
+        old_organizer = old_value ? User.find(old_value) : nil
+        new_organizer = new_value ? User.find(new_value) : nil
+        old_organizer_info = old_organizer ? "#{old_organizer&.name} (#{old_organizer&.email})" : "(None)"
+        new_organizer_info = new_organizer ? "#{new_organizer&.name} (#{new_organizer&.email})" : "(None)"
+        detail_changes << {name: 'Organizer', old: old_organizer_info, new: new_organizer_info}
+      when "regional_partner_id"
+        old_rp = old_value ? RegionalPartner.find(old_value) : nil
+        new_rp = new_value ? RegionalPartner.find(new_value) : nil
+        old_rp_info = old_rp ? "#{old_rp&.name} (#{old_rp&.contact_email_with_backup})" : "(None)"
+        new_rp_info = new_rp ? "#{new_rp&.name} (#{new_rp&.contact_email_with_backup})" : "(None)"
+        detail_changes << {name: 'Regional Partner', old: old_rp_info, new: new_rp_info}
+      when "properties"
+        if (old_value['grades'] || new_value['grades']) && old_value['grades'] != new_value['grades']
+          detail_changes << {name: 'Grade levels', old: old_value['grades']&.join(', ') || "(None)", new: new_value['grades']&.join(', ') || "(None)"}
+        end
+        if (old_value['fee'] || new_value['fee']) && old_value['fee'] != new_value['fee']
+          detail_changes << {name: 'Cost', old: old_value['fee'] || "0", new: new_value['fee'] || "0"}
+        end
+        if (old_value['prereq'] || new_value['prereq']) && old_value['prereq'] != new_value['prereq']
+          detail_changes << {name: 'Prerequisites', old: old_value['prereq'] || "(None)", new: new_value['prereq'] || "(None)"}
+        end
+      end
+    end
+
+    updated_facilitators = @workshop.facilitators&.map(&:name)&.join(', ')
+    if pre_update_facilitators != updated_facilitators
+      detail_changes << {name: 'Facilitators', old: pre_update_facilitators.empty? ? "(None)" : pre_update_facilitators, new: updated_facilitators.empty? ? "(None)" : updated_facilitators}
+    end
+
+    updated_course_offerings = @workshop.course_offerings&.map(&:display_name)&.join(', ')
+    if pre_update_course_offerings != updated_course_offerings
+      detail_changes << {name: 'Topics', old: pre_update_course_offerings || "(None)", new: updated_course_offerings || "(None)"}
+    end
+
+    detail_changes
+  end
+
   private def should_notify?
     ActiveRecord::Type::Boolean.new.deserialize(params[:notify])
   end
 
-  private def notify
+  private def notify(general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info)
     @workshop.enrollments.each do |enrollment|
-      Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
+      user = enrollment.user
+
+      Pd::WorkshopMailjetMailer.send_teacher_workshop_detail_change_notification(enrollment, user, false, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info)
 
       # Also send to the user's alternate summer email if they entered it in their application and it's
       # for a summer workshop.
-      if enrollment.workshop&.subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
-        alt_summer_email = enrollment.user&.alternate_email
-        if alt_summer_email.present?
-          Pd::WorkshopMailer.detail_change_notification(enrollment, to_email: alt_summer_email).deliver_now
-        end
+      if enrollment.workshop.subject == ::Pd::Workshop::SUBJECT_SUMMER_WORKSHOP && user.alternate_email.present?
+        Pd::WorkshopMailjetMailer.send_teacher_workshop_detail_change_notification(enrollment, user, true, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info)
       end
     end
     @workshop.facilitators.each do |facilitator|

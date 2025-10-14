@@ -652,7 +652,10 @@ export function getSimplifiedStateForFlyout(
 
   // Replace variable ids with names and simplify state for flyout.
   blocksCopy.blocks?.forEach(block => {
-    updateVariableFields(block, serializedVariableMap);
+    updateVariableFields(
+      block as {fields: SerializedFields},
+      serializedVariableMap
+    );
     blocksList.push(simplifyBlockState(block));
   });
 
@@ -686,14 +689,14 @@ function simplifyBlockState(block: JsonBlockConfig) {
   // Recursively check nested blocks.
   if (block.inputs?.block) {
     for (const inputKey in block.inputs) {
-      result.inputs[inputKey].block = simplifyBlockState(
+      result.inputs![inputKey].block = simplifyBlockState(
         block.inputs[inputKey].block
       );
     }
   }
   // Recursively check next block, if present.
   if (block.next?.block) {
-    result.next.block = simplifyBlockState(block.next.block);
+    result.next!.block = simplifyBlockState(block.next.block);
   }
   // Remove unnecessary properties
   delete result.id;

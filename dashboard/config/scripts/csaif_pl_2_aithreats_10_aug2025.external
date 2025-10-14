@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 # Introducing AAA
 
 #### The AAA Tools are a set of tools used in cybersecurity to help systems protect information and manage what users can do. 
-#### AAA stands for **Authentication, Access Control, and Accounting**.
+#### AAA stands for **Authentication, Authorization, and Accounting**.
 
 
 <div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
@@ -19,7 +19,9 @@ markdown <<MARKDOWN
 </div>
 
 <div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
-      <strong>Access Control</strong> are rules a system uses to decide what you’re allowed to do once you’re logged in. 
+      <strong>Authorization</strong> are rules a system uses to decide what you’re allowed to do once you’re logged in. 
+      <br><br>
+      This is done by setting the <i>Access Control</i> type which includes whether you can view, edit, or share certain information..
 </div>
 
 <div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">

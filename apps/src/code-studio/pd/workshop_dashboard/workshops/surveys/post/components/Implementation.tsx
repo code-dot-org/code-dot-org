@@ -1,19 +1,23 @@
 import {Box} from '@mui/material';
+import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
+import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
+import {SurveyQuestions} from '../../../types';
 import {
+  getQuestionDescription,
   isQuestionType,
-  SurveyQuestions,
-} from '../../../../WorkshopFormTemplate/types';
+  prepLikertBreakdown,
+} from '../../../utils';
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FollowUpRequestedCard} from '../../components/FollowUpRequestedCard';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
-import {MultiSelectCard} from '../../components/MultiSelectCard';
 import {ScoreCard} from '../../components/ScoreCard';
-import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
-import {getQuestionDescription} from '../../helpers';
+import {SelectCard} from '../../components/SelectCard';
+import {LIKERT_QUESTION_FOOTER} from '../../constants';
 
-import styles from '../../../workshop.module.scss';
+import styles from '../../../WorkshopLayout.module.scss';
 
 export const Implementation = () => {
   const {surveys} = useWorkshopContext();
@@ -47,10 +51,12 @@ export const Implementation = () => {
     if (!isQuestionType(barriersToImplementation, 'multiSelect')) {
       return [];
     }
-    return Object.entries(barriersToImplementation.results.breakdown)
+    return Object.entries(barriersToImplementation.results.breakdown ?? {})
       .filter(([key]) => key !== 'none')
       .map(([_, value]) => value);
   }, [barriersToImplementation]);
+
+  const followUpRequestedItems = surveys?.follow_up_requested ?? [];
 
   if (!questions) return null;
 
@@ -62,32 +68,42 @@ export const Implementation = () => {
             <ScoreCard
               key={question.question_name}
               title={question.question_short_text ?? question.question_text}
+              longTitle={question.question_text}
               description={getQuestionDescription(question)}
+              questionType={question.question_type}
               footer={LIKERT_QUESTION_FOOTER}
               score={question.results.weighted_score}
               responseCount={question.results.total_responses}
-              minResponseCount={MIN_RESPONSE_COUNT}
+              minResponseCount={MinSurveyResponseCount}
+              breakdown={prepLikertBreakdown(question.results.breakdown)}
             />
           ) : null
         )}
       </Box>
 
-      <Box className={styles.cardRow}>
+      <Box className={classNames(styles.cardRow, styles.scrollContainerRow)}>
         {isQuestionType(barriersToImplementation, 'multiSelect') && (
-          <MultiSelectCard
+          <SelectCard
             title={
               barriersToImplementation.question_short_text ??
               barriersToImplementation.question_text
             }
             description={getQuestionDescription(barriersToImplementation)}
+            totalRespondents={
+              barriersToImplementation.results.total_respondents
+            }
             items={barriersItems}
             barLabel="Teachers"
           />
         )}
         <FollowUpRequestedCard
-          items={[]}
+          items={followUpRequestedItems}
           title="Follow-up requested"
-          description=""
+          description={
+            followUpRequestedItems.length
+              ? `${followUpRequestedItems.length} teachers requested additional support with implementation.`
+              : ''
+          }
         />
       </Box>
 
@@ -98,8 +114,10 @@ export const Implementation = () => {
               otherQuestionsImplementation.question_short_text ??
               otherQuestionsImplementation.question_text
             }
-            items={otherQuestionsImplementation.results.responses}
-            tagText={`${otherQuestionsImplementation.results.total_responses} Submitted`}
+            items={otherQuestionsImplementation.results.responses ?? []}
+            tagText={`${
+              otherQuestionsImplementation.results.total_responses ?? 0
+            } Submitted`}
           />
         )}
       </Box>

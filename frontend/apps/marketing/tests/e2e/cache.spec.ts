@@ -1,21 +1,25 @@
 import {expect} from '@playwright/test';
 
+import {getAllTheThingsPagePath} from './config/path';
 import {test} from './fixtures/base';
 import {AllTheThingsPage} from './pom/all-the-things';
+import {MarketingPage} from './pom/marketing';
 import {getTestStage} from './utils/stage';
 
-test.describe('Caching Tests', () => {
-  test('should cache by default', async ({page, browserName}) => {
-    test.skip(browserName !== 'chromium', 'Only runs in Chromium');
-    test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
+test.describe('Caching Tests', async () => {
+  ['/', await getAllTheThingsPagePath()].forEach(path => {
+    test(`should cache by default - ${path}`, async ({page, browserName}) => {
+      test.skip(browserName !== 'chromium', 'Only runs in Chromium');
+      test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
 
-    const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
-    const response = await allTheThingsPage.goto();
+      const marketingPage = new MarketingPage(page, {locale: 'en-US'});
+      const response = await marketingPage.goto(path);
 
-    const cacheControlHeader = response?.headers()['cache-control'];
-    expect(cacheControlHeader).toMatch(
-      /^s-maxage=900, stale-while-revalidate=\d+$/,
-    );
+      const cacheControlHeader = response?.headers()['cache-control'];
+      expect(cacheControlHeader).toMatch(
+        /^s-maxage=900, stale-while-revalidate=\d+$/,
+      );
+    });
   });
 
   test('should disable cache if draft mode is enabled', async ({

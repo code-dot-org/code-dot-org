@@ -75,9 +75,11 @@
           ]
         },
         {
+          "category": "cohort_profile",
           "type": "radiogroup",
           "name": "cdo_pd_experience",
           "title": "What is your previous experience with Code.org professional learning?",
+          "shortText": "Previous experience with Code.org professional learning",
           "choices": [
             {
               "value": "first",

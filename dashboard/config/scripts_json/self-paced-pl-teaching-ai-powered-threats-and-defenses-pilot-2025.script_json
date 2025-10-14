@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-27 02:54:26 UTC",
+    "serialized_at": "2025-08-28 13:48:59 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -168,6 +168,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_overview_objectives_aug2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -190,6 +193,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cert_aug2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -212,6 +218,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_support_aug2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -234,6 +243,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_module_overview_aug2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -256,6 +268,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_course_overview_aug2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -278,6 +293,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_course_structure_aug2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -300,6 +318,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_resources_aug2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -322,6 +343,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_career_AI_cyber_aug2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -344,6 +368,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_AI_chatbot_overview_cyber_aug2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -366,6 +393,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cyber_overview_aug2025"
+        ],
         "progression": "Cybersecurity Overivew"
       },
       "bonus": false,
@@ -388,6 +418,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cyber_impact_aug2025"
+        ],
         "progression": "Cybersecurity Overivew"
       },
       "bonus": false,
@@ -410,6 +443,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_check_for_understanding_aug2025"
+        ],
         "progression": "Cybersecurity Overivew"
       },
       "bonus": false,
@@ -432,6 +468,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_check_answer_aug2025"
+        ],
         "progression": "Cybersecurity Overivew"
       },
       "bonus": false,
@@ -454,6 +493,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_navigating_module_aug2025"
+        ],
         "progression": "Cybersecurity Overivew"
       },
       "bonus": false,
@@ -476,6 +518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_overview_objectives_02_aug2025"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -498,6 +543,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_02_aug2025"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -520,6 +568,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_03b_aug2025"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -542,6 +593,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_04_aug2025"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -564,6 +618,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_05_aug2025"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -586,6 +643,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson2-level6-pl_aug2025"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -608,6 +668,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson3-level1choice-pl_aug2025"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -630,6 +693,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_06b_aug2025"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -652,6 +718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_07_aug2025"
+        ],
         "progression": "CIA Triad and AAA"
       },
       "bonus": false,
@@ -674,6 +743,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_08_aug2025"
+        ],
         "progression": "CIA Triad and AAA"
       },
       "bonus": false,
@@ -696,6 +768,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_09_aug2025"
+        ],
         "progression": "CIA Triad and AAA"
       },
       "bonus": false,
@@ -718,6 +793,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_10_aug2025"
+        ],
         "progression": "CIA Triad and AAA"
       },
       "bonus": false,
@@ -740,6 +818,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_11_aug2025"
+        ],
         "progression": "CIA Triad and AAA"
       },
       "bonus": false,
@@ -762,6 +843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_12_aug2025"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -784,6 +868,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_13_aug2025"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -806,6 +893,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_14_aug2025"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -833,6 +923,53 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "csaif_pl_2_aithreats_17_aug2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "d77f8df3-7df7-43b6-87e7-cb719a20fa99"
+      },
+      "level_keys": [
+        "csaif_pl_2_aithreats_17_aug2025"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 18,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Encryption"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_aithreats_18_aug2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "d77f8df3-7df7-43b6-87e7-cb719a20fa99"
+      },
+      "level_keys": [
+        "csaif_pl_2_aithreats_18_aug2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 19,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_15_aug2025"
+        ],
+        "progression": "Encryption"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "csaif_pl_2_aithreats_15_aug2025"
         ],
         "lesson.key": "Lesson Exploration",
@@ -845,11 +982,14 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 18,
-      "activity_section_position": 5,
+      "chapter": 34,
+      "position": 20,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_16_aug2025"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -867,11 +1007,14 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 19,
+      "chapter": 35,
+      "position": 21,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_cyber_aug2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -889,11 +1032,14 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 20,
+      "chapter": 36,
+      "position": 22,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_project-description-L2-cyber_aug2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -911,11 +1057,14 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 21,
+      "chapter": 37,
+      "position": 23,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_3-day-project-L3-cyber_aug2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -933,11 +1082,14 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 22,
+      "chapter": 38,
+      "position": 24,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_cyber_aug2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -955,11 +1107,14 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 23,
+      "chapter": 39,
+      "position": 25,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_wrap-up_aug2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -977,11 +1132,14 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 24,
+      "chapter": 40,
+      "position": 26,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_wrap-up_answer_aug2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -999,11 +1157,14 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 25,
+      "chapter": 41,
+      "position": 27,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-cyber_aug2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -1375,6 +1536,30 @@
         "level.key": "csaif_pl_2_aithreats_14_aug2025",
         "script_level.level_keys": [
           "csaif_pl_2_aithreats_14_aug2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "d77f8df3-7df7-43b6-87e7-cb719a20fa99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_aithreats_17_aug2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_aithreats_17_aug2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "d77f8df3-7df7-43b6-87e7-cb719a20fa99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_aithreats_18_aug2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_aithreats_18_aug2025"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",

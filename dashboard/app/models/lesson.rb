@@ -253,8 +253,8 @@ class Lesson < ApplicationRecord
 
   def lesson_feedback_url
     url = "https://studio.code.org/form/teacher_lesson_feedback?survey_data[script_name]=#{script.name}&survey_data[lesson_number]=#{relative_position}&survey_data[lesson_name]=#{CGI.escape(localized_name)}"
-    url += if script.unit_group
-             "&survey_data[course_name]=#{CGI.escape(script.unit_group.localized_title)}&survey_data[unit_name]=#{CGI.escape(script.localized_title)}&survey_data[unit_number]=#{script.unit_group_units&.first&.position}"
+    url += if script.get_original_unit_group
+             "&survey_data[course_name]=#{CGI.escape(script.get_original_unit_group.localized_title)}&survey_data[unit_name]=#{CGI.escape(script.localized_title)}&survey_data[unit_number]=#{script.unit_group_units&.first&.position}"
            else
              "&survey_data[course_name]=#{CGI.escape(script.localized_title)}"
            end
@@ -349,7 +349,7 @@ class Lesson < ApplicationRecord
         end
       end
 
-      if script.hoc?
+      if script.hoc_or_hoai?
         lesson_data[:finishLink] = script.hoc_finish_url
         lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
@@ -838,7 +838,8 @@ class Lesson < ApplicationRecord
   end
 
   def resources_for_lesson_plan(verified_teacher)
-    grouped_resources = resources.sort_by(&:name).map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+    # Filter out resources marked as `embed_only` (i.e. not user-facing)
+    grouped_resources = resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
     if verified_teacher && grouped_resources.key?('Verified Teacher')
       grouped_resources['Teacher'] ||= []
       grouped_resources['Teacher'] += grouped_resources['Verified Teacher']

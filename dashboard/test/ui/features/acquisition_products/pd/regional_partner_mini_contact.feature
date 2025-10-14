@@ -68,29 +68,3 @@ Scenario: Teacher submits inline mini-contact form after adding zip with a regio
   And I press "#submit" using jQuery
   And I wait until element "#regional-partner-mini-contact-thanks-contact-regional-partner" is visible
   And I sign out
-
-
-Scenario: Signed-out user submits pop-up mini-contact form after entering fields
-  Given I have a regional partner named "Reggie Partner" in the zip code "90210"
-
-  # First pop up the mini-contact form for signed-out user, and submit it.
-  And I am on "http://studio.code.org/pd/application/teacher"
-  And I wait until element "#regional-partner-mini-contact-popup-link-container span span" is visible
-  And I press "#regional-partner-mini-contact-popup-link-container span" using jQuery
-  And I wait until element "#regional-partner-mini-contact-form-teacher-application-logged-out" is visible
-  And I press "#submit" using jQuery
-
-  # Wait until we see errors for no ZIP, no email, and no notes.
-  And I wait until element "#regional-partner-mini-contact-error-zip" is visible
-  And element "#regional-partner-mini-contact-error-email" is visible
-  And element "#regional-partner-mini-contact-error-notes" is visible
-
-  # Submit again with a ZIP and an email.
-  Given I scroll the "#zip" element into view
-  And I press keys "90210" for element "#zip"
-  And I press keys "test-email@code.org" for element "#email"
-
-  Given I scroll the "#notes" element into view
-  And I press keys "Sample message for regional partner." for element "#notes"
-  And I press "#submit" using jQuery
-  And I wait until element "#regional-partner-mini-contact-thanks-teacher-application-logged-out" is visible

@@ -30,7 +30,7 @@ const MultipleSectionsAssigner = ({
   scriptId,
   reassignConfirm = () => {},
   isAssigningCourseOnly,
-  isAssigningUnitOnly,
+  isSingleUnitCourse,
   participantAudience,
   onAssignSuccess,
   sectionDirections = i18n.chooseSectionsDirections(),
@@ -47,7 +47,7 @@ const MultipleSectionsAssigner = ({
     let initialSectionsAssigned = [];
     // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
     if (!isAssigningCourseOnly) {
-      if (isAssigningUnitOnly) {
+      if (isSingleUnitCourse) {
         for (let i = 0; i < sections.length; i++) {
           if (courseVersionId === sections[i].courseVersionId) {
             initialSectionsAssigned.push(sections[i]);
@@ -72,7 +72,7 @@ const MultipleSectionsAssigner = ({
     return initialSectionsAssigned;
   }, [
     isAssigningCourseOnly,
-    isAssigningUnitOnly,
+    isSingleUnitCourse,
     sections,
     courseId,
     scriptId,
@@ -125,8 +125,8 @@ const MultipleSectionsAssigner = ({
       );
 
       if (isSectionToBeRemoved) {
-        // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
-        isAssigningCourseOnly || isAssigningUnitOnly
+        // if on COURSE landing page or a SINGLE-UNIT COURSE unit overview, unassign entirely
+        isAssigningCourseOnly || isSingleUnitCourse
           ? unassignSection(initialSectionsAssigned[i].id, '')
           : assignCourseWithoutUnit(initialSectionsAssigned[i]);
       }
@@ -271,7 +271,7 @@ MultipleSectionsAssigner.propTypes = {
   scriptId: PropTypes.number,
   reassignConfirm: PropTypes.func,
   isAssigningCourseOnly: PropTypes.bool.isRequired,
-  isAssigningUnitOnly: PropTypes.bool,
+  isSingleUnitCourse: PropTypes.bool,
   participantAudience: PropTypes.string,
   onAssignSuccess: PropTypes.func,
   sectionDirections: PropTypes.string,

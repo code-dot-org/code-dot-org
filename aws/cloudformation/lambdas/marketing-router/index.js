@@ -781,10 +781,16 @@ const marketingPaths = {
   "/global/india": true,
   "/back-to-school-for-district": true,
   "/india": true,
+  "/global/cuantrix": true,
+  "/news/why-ai-education-is-the-key-to-global-competitiveness": true,
+  "/district-set-up": true,
+  "/impact-report": true,
+  "/about/impact-report": true,
 }
 
 const pathPatterns = [
   /^\/_next\/static\//, // Next.js static assets
+  /^\/_next\/image/,  // Next.js dynamic images, /_next/image*
   /^\/forms\//,         // /forms/*
   /^\/schools\//,       // /schools/*
   /^\/applab\/docs\//,  // /applab/docs/*
@@ -822,6 +828,8 @@ const SUPPORTED_LOCALES = new Set([
   'sq',
   'tl',
   'he',
+  'zh-Hans',
+  'zh-Hant',
 ]);
 
 // Remove the localized portion of paths, if there is a localized portion.
@@ -830,7 +838,7 @@ const SUPPORTED_LOCALES = new Set([
 // 2. /engineering/all-the-things remains unchanged
 function extractPaths(uri) {
   const parts = uri.split('/').filter(Boolean); // Remove empty segments
-  const localeRegex = /^[a-z]{2}(-[A-Z]{2})?$/;
+  const localeRegex = /^[a-z]{2}(?:-(?:[A-Z]{2}|[A-Z][a-z]{3}))?$/;
 
   if (parts.length && localeRegex.test(parts[0]) && SUPPORTED_LOCALES.has(parts[0])) {
     // Has locale, return everything after locale

@@ -3,10 +3,13 @@
 #widget_view.in.collapse
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_view, description: "Enable Widget View"}
   %p
-    If checked, the Python Lab level will be in widget view, i.e., the code editor workspace is hidden.
+    If checked, the level will be in widget view, i.e., the code editor workspace is hidden.
+    - if @level.is_a? Weblab2
+      The view mode toggle is also hidden.
 
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_view_allow_show_code, description: "Enable Show/Hide Code in Widget View"}
-  %p
-    If checked and the above 'Enable Widget View' checkbox is checked, a button will be displayed in the header of the Console (Python Lab) or the Preview (Web Lab 2) that will allow the user to toggle between showing/hiding code editor in read-only mode.
-  %p
-    * Note that if this checkbox is checked and the 'Enable Widget View' checkbox is unchecked, there is no effect on the Python Lab level.
+  - if @level.is_a? Pythonlab
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_view_allow_show_code, description: "Enable Show/Hide Code in Widget View"}
+    %p
+      If checked and the above 'Enable Widget View' checkbox is checked, a button will be displayed in the header of the Console that will allow the user to toggle between showing/hiding code editor in read-only mode.
+    %p
+      * Note that if this checkbox is checked and the 'Enable Widget View' checkbox is unchecked, there is no effect on the level.

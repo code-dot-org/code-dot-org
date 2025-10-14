@@ -2,7 +2,9 @@ name 'OPD-K5 Begin_2023_K5CSConcepts_TextPage'
 skip_dialog true
 markdown <<MARKDOWN
 # Introducing Block-Based Programming 
-<IMG SRC="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJvd25rcnZqa2Q1aGVqeGFqMTB6aGdlNGkwNmtyc2ZsZHUyNWd3byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fyaVEgUF9g8xYLRNau/giphy.gif">.
+<IMG SRC="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJvd25rcnZqa2Q1aGVqeGFqMTB6aGdlNGkwNmtyc2ZsZHUyNWd3byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fyaVEgUF9g8xYLRNau/giphy.gif"
+ alt="A coding block sequence starting with 'when run', followed by arrow blocks: down, right, right, down." style="border-radius:0px; float: left; padding-right: 0px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
 ## What is Block-Based Programming? 
 
 ####**Block-based programming** is like building with digital blocks! Block-based programming simplifies coding for early learners through a visual, **drag-and-drop** interface, eliminating the need for writing exact words or symbols. 

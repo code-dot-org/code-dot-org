@@ -54,7 +54,6 @@
 
 .bubble {
   position: relative;
-  padding: 12px;
   border-radius: 4px;
   animation: slidein 0.5s;
   background-color: var(--background-neutral-secondary);
@@ -62,6 +61,17 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
+
+  /* If there is scrolling content, it will provide horizontal padding.
+     Doing this allows the scrollbar to use that padding area. */
+  &:has(.scrollingContent) {
+    padding: 12px 0;
+  }
+
+  /* If there is no scrolling content, we will provide horizontal padding. */
+  &:not(:has(.scrollingContent)) {
+    padding: 12px;
+  }
 
   h1, h2, h3, h4 {
     color: var(--text-neutral-primary);
@@ -98,6 +108,7 @@
 .ttsContainer {
   display: flex;
   justify-content: flex-end;
+  padding-right: 12px;
 }
 
 .bubbleNoSlide {
@@ -107,6 +118,20 @@
 .buttonInstruction {
   width: 100%;
   height: 32px;
+}
+
+// Ensure the TooltipOverlay wrapper div matches the button width
+// without changing TooltipOverlay's calculated position.
+.buttonInstructionTooltipOverlay { 
+  > div {
+    width: 100%;
+  }
+  
+  // Contained button takes full width.
+  button {
+    width: 100%;
+    height: 32px;
+  }
 }
 
 .markdownText {
@@ -228,14 +253,15 @@
   }
 }
 
-%scrolling-content {
+.scrollingContent {
   flex: 1;
   overflow-y: auto;
   min-height: 70px;
+  padding: 0 12px;
 }
 
-.scrollingContent {
-  @extend %scrolling-content;
+.nonScrollingSubContent {
+  padding: 0 12px;
 }
 
 .bottomComponent {

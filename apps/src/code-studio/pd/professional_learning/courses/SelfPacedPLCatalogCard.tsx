@@ -5,6 +5,7 @@ import {
 } from '@code-dot-org/component-library/button';
 import React from 'react';
 
+import SelfPacedPLCatalogCourseFacilitatedWorkshops from '@cdo/apps/code-studio/pd/professional_learning/courses/SelfPacedPLCatalogCourseFacilitatedWorkshops';
 import CourseOfferingCard from '@cdo/apps/templates/courseOfferings/courseCard/CourseOfferingCard';
 import {CourseOffering} from '@cdo/apps/templates/courseOfferings/types';
 import {defaultImageSrc} from '@cdo/apps/templates/curriculumCatalog/curriculumCatalogConstants';
@@ -16,11 +17,19 @@ interface SelfPacedPLCatalogCardProps {
   updateExpandedCardKey: (key: string) => void;
   courseOffering: CourseOffering;
   isExpanded?: boolean;
+  getRelatedCurriculumsForPLCourse: (
+    course: CourseOffering
+  ) => CourseOffering[];
 }
 
 const SelfPacedPLCatalogCardInitial: React.FunctionComponent<
   SelfPacedPLCatalogCardProps
-> = ({updateExpandedCardKey, isExpanded, courseOffering}) => {
+> = ({
+  updateExpandedCardKey,
+  isExpanded,
+  courseOffering,
+  getRelatedCurriculumsForPLCourse,
+}) => {
   const courseOfferingDurationInHours = courseOffering.duration_in_hours || 0;
 
   const courseOfferingDurationLabel = `${courseOfferingDurationInHours} hour${
@@ -30,6 +39,7 @@ const SelfPacedPLCatalogCardInitial: React.FunctionComponent<
   return (
     <CourseOfferingCard
       isExpanded={isExpanded}
+      getRelatedCurriculums={getRelatedCurriculumsForPLCourse}
       courseOffering={courseOffering}
       isThisCourseForTeachers
       courseDurationLabel={courseOfferingDurationLabel}
@@ -50,9 +60,12 @@ const SelfPacedPLCatalogCardInitial: React.FunctionComponent<
           />
         </>
       }
-      // relatedProposalsHeader="Facilitated workshops"
-      // TODO: Should be updated in scope of [ACQ-3435](https://codedotorg.atlassian.net/browse/ACQ-3435)
-      // relatedProposalsContent=""
+      relatedProposalsHeader="Facilitated workshops"
+      relatedProposalsContent={
+        <SelfPacedPLCatalogCourseFacilitatedWorkshops
+          facilitated_workshops={courseOffering.facilitated_workshops || []}
+        />
+      }
       onCloseExpandedCard={() => updateExpandedCardKey(courseOffering.key)}
       expandedCardActionRowContent={
         <>

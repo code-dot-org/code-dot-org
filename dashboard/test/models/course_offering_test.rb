@@ -27,7 +27,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   setup do
     @unit_group = create(:unit_group, name: 'course-instructed-by-teacher2', family_name: 'family-1', version_year: '1991', published_state: 'stable')
-    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil)
+    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2')
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
     @unit_in_course.reload
     @unit_group.reload
@@ -501,6 +501,84 @@ class CourseOfferingTest < ActiveSupport::TestCase
     self_paced_co = CourseOffering.add_course_offering(self_paced_course)
 
     assert_equal [self_paced_co.key], CourseOffering.self_paced_course_offerings_for_catalog.pluck(:key)
+  end
+
+  test 'self_paced_pl_course_offerings_for_workshops filters only for published self-paced teacher and facilitator course offerings with a header' do
+    # Course offering that doesn't satisfy any of the conditions
+    none_course = create(
+      :single_unit_course,
+      family_name: 'none',
+      version_year: '1991',
+      published_state: 'in_development',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'student'
+    )
+    none_co = CourseOffering.add_course_offering(none_course)
+    none_co.update!(header: nil)
+
+    # Course offering that only satisfies the present 'header' condition
+    course_with_header = create(
+      :single_unit_course,
+      family_name: 'assignable',
+      version_year: '1992',
+      published_state: 'in_development',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'student'
+    )
+    course_with_header_co = CourseOffering.add_course_offering(course_with_header)
+    course_with_header_co.update!(header: 'Header is present')
+
+    # Course offering that only satisfies the 'published' condition
+    published_course = create(
+      :single_unit_course,
+      family_name: 'published',
+      version_year: '1993',
+      published_state: 'stable',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'student'
+    )
+    published_co = CourseOffering.add_course_offering(published_course)
+    published_co.update!(header: nil)
+
+    # Course offering that only satisfies the participant audience condition
+    for_teacher_course = create(
+      :single_unit_course,
+      family_name: 'for-teacher',
+      version_year: '1994',
+      published_state: 'in_development',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'facilitator'
+    )
+    for_teacher_co = CourseOffering.add_course_offering(for_teacher_course)
+    for_teacher_co.update!(header: nil)
+
+    # Course offering that satisfies all conditions and is for teachers
+    self_paced_teacher_course = create(
+      :single_unit_course,
+      family_name: 'all-teacher',
+      version_year: '1998',
+      published_state: 'stable',
+      instructor_audience: 'universal_instructor',
+      instruction_type: 'self_paced',
+      participant_audience: 'teacher'
+    )
+    self_paced_teacher_co = CourseOffering.add_course_offering(self_paced_teacher_course)
+    self_paced_teacher_co.update!(header: 'Header is present')
+
+    # Course offering that satisfies all conditions and is for facilitators
+    self_paced_facilitator_course = create(
+      :single_unit_course,
+      family_name: 'all-facilitator',
+      version_year: '1998',
+      published_state: 'stable',
+      instructor_audience: 'universal_instructor',
+      instruction_type: 'self_paced',
+      participant_audience: 'facilitator'
+    )
+    self_paced_facilitator_co = CourseOffering.add_course_offering(self_paced_facilitator_course)
+    self_paced_facilitator_co.update!(header: 'Header is present')
+
+    assert_equal [self_paced_teacher_co.id, self_paced_facilitator_co.id], CourseOffering.self_paced_pl_course_offerings_for_workshops.pluck(:id)
   end
 
   test 'can_be_assigned? is false if its an unassignable course' do

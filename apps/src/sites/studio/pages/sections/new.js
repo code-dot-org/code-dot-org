@@ -2,9 +2,8 @@ import {Heading1} from '@code-dot-org/component-library/typography';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import DCDO from '@cdo/apps/dcdo';
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
-import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import i18n from '@cdo/locale';
 
@@ -15,11 +14,7 @@ $(document).ready(() => {
   const canEnableAITutor = getScriptData('canEnableAITutor');
   const userCountry = getScriptData('userCountry');
 
-  const defaultRedirectUrl =
-    experiments.isEnabled('teacher-homepage-v2') ||
-    DCDO.get('teacher-homepage-v2', false)
-      ? '/teacher_dashboard/home'
-      : '/home';
+  const defaultRedirectUrl = '/teacher_dashboard/home';
 
   ReactDOM.render(
     <div className={moduleStyles.containerWithMarginTop}>
@@ -33,4 +28,5 @@ $(document).ready(() => {
     </div>,
     document.getElementById('form')
   );
+  displayDifferentiationChat();
 });

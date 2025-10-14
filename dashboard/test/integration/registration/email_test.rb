@@ -58,8 +58,9 @@ module RegistrationsControllerTests
     end
 
     describe "disallowed email domain" do
-      let(:disallowed_domains) {['testdomain.com']}
-      let(:email) {"user@#{disallowed_domains.first}"}
+      let(:domain) {'testdomain.com'}
+      let(:disallowed_domains) {{domain => {provider_exceptions: []}}}
+      let(:email) {"user@#{domain}"}
 
       before do
         stub_const('Policies::Devise::EmailDomains::DISALLOWED_DOMAINS', disallowed_domains)
@@ -77,7 +78,7 @@ module RegistrationsControllerTests
       it "forbids sign up" do
         _(response.status).must_equal 403
         _(response.body).must_match(
-          /Emails from #{Regexp.escape(disallowed_domains.first)} are not allowed to sign up with email and password\. Please use your LMS to sign in\./
+          /Emails from #{Regexp.escape(domain)} are not allowed to sign up with email and password\. Please use your LMS to sign in\./
         )
       end
     end

@@ -72,9 +72,7 @@ Feature: Professional Learning landing page
     Then I click selector "button:contains(Regional Partner Center)"
 
     # Sees Regional Partner Resources section
-    And I wait until element "a:contains(Manage applications)" is visible
-    And the href of selector "a:contains(Manage applications)" contains "/pd/application_dashboard"
-    And element "a:contains(View workshop dashboard)" is visible
+    And I wait until element "a:contains(View workshop dashboard)" is visible
     And the href of selector "a:contains(View workshop dashboard)" contains "/pd/workshop_dashboard"
     And element "a:contains(View playbook)" is visible
     And the href of selector "a:contains(View playbook)" contains "/professional-learning/regional-partner/playbook"

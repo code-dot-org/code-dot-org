@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_08_21_182723) do
+ActiveRecord::Schema.define(version: 2025_10_06_144448) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -51,6 +51,14 @@ ActiveRecord::Schema.define(version: 2025_08_21_182723) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["ai_interaction_type", "ai_interaction_id"], name: "index_ai_interaction_feedbacks_on_ai_interaction"
+  end
+
+  create_table "ai_lesson_summaries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "lesson_id"
+    t.text "lesson_summary"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2307,6 +2315,14 @@ ActiveRecord::Schema.define(version: 2025_08_21_182723) do
     t.index ["user_level_id"], name: "index_teacher_scores_on_user_level_id"
   end
 
+  create_table "teaching_profile_data", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.json "individual_data"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_teaching_profile_data_on_user_id"
+  end
+
   create_table "unit_groups", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.text "properties"
@@ -2684,6 +2700,7 @@ ActiveRecord::Schema.define(version: 2025_08_21_182723) do
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations"
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
+  add_foreign_key "teaching_profile_data", "users"
   add_foreign_key "user_data_retention_statuses", "users"
   add_foreign_key "user_facilitator_infos", "users"
   add_foreign_key "user_geos", "users"

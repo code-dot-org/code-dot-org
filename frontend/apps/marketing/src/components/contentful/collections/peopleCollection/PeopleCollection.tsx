@@ -1,4 +1,3 @@
-import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -6,6 +5,7 @@ import {EntryFields} from 'contentful';
 import {useMemo, useId} from 'react';
 
 import Link from '@/components/contentful/link';
+import {resolveContentfulLink} from '@/contentful/resolveLink';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
@@ -75,18 +75,13 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
     );
   }
 
-  const inMemoryEntities = useInMemoryEntities();
-
   const peopleData = useMemo(() => {
     const data = people.filter(Boolean).map(({fields}) => {
       const {name, image, title, bio, personalLink} = fields;
 
-      const resolvedImage = inMemoryEntities.maybeResolveLink(
-        image,
-      ) as ExperienceAsset;
-      const resolvedPersonalLink = inMemoryEntities.maybeResolveLink(
-        personalLink,
-      ) as LinkEntry;
+      const resolvedImage = resolveContentfulLink<ExperienceAsset>(image);
+      const resolvedPersonalLink =
+        resolveContentfulLink<LinkEntry>(personalLink);
 
       return {
         id: name,

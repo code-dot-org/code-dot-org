@@ -8,6 +8,10 @@ import {connect} from 'react-redux';
 
 import './small-footer-music-overrides.scss';
 
+import {validateBlockCategories} from '@cdo/apps/blockly/utils';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {TestResults} from '@cdo/apps/constants';
 import DCDO from '@cdo/apps/dcdo';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {setIsLoading, setPageError} from '@cdo/apps/lab2/lab2Redux';
@@ -19,12 +23,15 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {saveGeneratedSongMetadata} from '../ai/generate/GenerateCode';
 import AppConfig from '../appConfig';
-import {validateBlockCategories} from '../blockly/blockUtils';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {
@@ -65,6 +72,7 @@ import {
   clearSelectedTriggerId,
   getBlockMode,
   addPlaybackEvents,
+  setCodeToLoad,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
@@ -123,6 +131,11 @@ class UnconnectedMusicView extends React.Component {
     validationState: PropTypes.object,
     canUndo: PropTypes.bool,
     canRedo: PropTypes.bool,
+    codeToLoad: PropTypes.string,
+    scriptName: PropTypes.string,
+    clearCodeToLoad: PropTypes.func,
+    sendAttemptReport: PropTypes.func,
+    isFirstAttempt: PropTypes.bool,
   };
 
   constructor(props) {
@@ -258,6 +271,14 @@ class UnconnectedMusicView extends React.Component {
 
     if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
       this.musicBlocklyWorkspace.setIsReadOnly(this.props.isReadOnlyWorkspace);
+    }
+
+    if (this.props.codeToLoad) {
+      // If there is code to load, load it and reset the codeToLoad state.
+      this.loadCode(JSON.parse(this.props.codeToLoad));
+      this.props.clearCodeToLoad();
+      // Reset the hasEdited state since we just loaded code.
+      this.setState({hasEdited: false});
     }
   }
 
@@ -840,6 +861,19 @@ class UnconnectedMusicView extends React.Component {
     Lab2Registry.getInstance()
       .getProjectManager()
       ?.save(sourcesToSave, forceSave);
+
+    // If we are AI generating, then save metadata for Dance Party.
+    if (
+      AppConfig.getValue('ai-generate') === 'true' ||
+      this.props.levelProperties.levelData.aiCodeGenerate
+    ) {
+      saveGeneratedSongMetadata(
+        Lab2Registry.getInstance().getProjectManager().getChannelId(),
+        this.props.packId,
+        this.props.playbackEvents,
+        this.props.lastMeasure
+      );
+    }
   };
 
   loadCode = code => {
@@ -848,9 +882,23 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = async () => {
+    if (!this.state.hasRun) {
+      const eventName = this.props.levelProperties.isProjectLevel
+        ? EVENTS.PROJECT_ACTIVITY
+        : EVENTS.LEVEL_ACTIVITY;
+      analyticsReporter.sendEvent(eventName, {
+        signedIn: this.props.signInState,
+        unitName: this.props.scriptName,
+        levelId: this.props.levelProperties.id,
+        levelName: this.props.levelProperties.name,
+      });
+    }
     this.setState({
       hasRun: true,
     });
+    if (this.props.isFirstAttempt) {
+      this.props.sendAttemptReport();
+    }
     this.player.stopSong();
     this.playingTriggers = [];
 
@@ -979,6 +1027,9 @@ const MusicView = connect(
     lastMeasure: state.music.lastMeasure,
     canUndo: state.music.canUndo,
     canRedo: state.music.canRedo,
+    codeToLoad: state.music.codeToLoad,
+    scriptName: state.progress.scriptName,
+    isFirstAttempt: getCurrentLevel(state)?.status === LevelStatus.not_tried,
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),
@@ -1014,6 +1065,9 @@ const MusicView = connect(
       dispatch(addOrderedFunctions(data.orderedFunctions));
       dispatch(setLastMeasure(data.lastMeasure));
     },
+    clearCodeToLoad: () => dispatch(setCodeToLoad(undefined)),
+    sendAttemptReport: () =>
+      dispatch(sendProgressReport('music', TestResults.LEVEL_STARTED)),
   })
 )(UnconnectedMusicView);
 

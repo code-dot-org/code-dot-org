@@ -1,0 +1,47 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-09-26T22:04:38.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###BEHIND THE SCENES\n\nHow does AI generate new code that plays music?",
+        "imageUrl": "https://images.code.org/8b6420bcb71cdfde2997b6575a7034c8-behind the scene.gif",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1"
+      },
+      {
+        "text": "AI is technology that can see a large amount of text and code from the internet.",
+        "imageUrl": "https://images.code.org/85951b59bbc4cc06c971712bf91da1d9-llms panel 2.gif",
+        "key": "Generate_dancer_more_details-0bf87b05-fdcb-4acc-b8d2-5455e69d6e87"
+      },
+      {
+        "text": "It sees and learns patterns from the information.\n\nLike which words, symbols, or code pieces usually come next.",
+        "imageUrl": "https://images.code.org/f07aac64ce1d0fcf2e1a3798b39a72bb-llm panel3.gif",
+        "key": "Generate_dancer_more_details-48f5d03d-6aff-4230-bbc0-75fbac278d9c"
+      },
+      {
+        "text": "Then the technology can make guesses about the next word, line, or block of code based on those patterns it learned.",
+        "imageUrl": "https://images.code.org/2df2eadd2ab8d72a58245b7c4454645f-llm panel 4.jpg",
+        "key": "Generate_dancer_more_details-f7defbff-6781-4fcd-ba98-bb4e03422fd5"
+      },
+      {
+        "text": "By repeating this over and over, AI can write whole stories, and even working programs!",
+        "imageUrl": "https://images.code.org/5f07dcd1ddde8a1aefe85b2dc448151d-llm panel 5b.jpg",
+        "key": "Generate_dancer_more_details-1af42de1-d2bc-4653-9e86-16d56ff2ceb3"
+      },
+      {
+        "text": "Now it's your turn to tell AI what kind of code you want! \n\nYou can adjust the prompt, see what it makes and then decide to modify or regenerate the code. ",
+        "imageUrl": "",
+        "key": "Generate_dancer_more_details-90264270-422b-4ad6-86cd-c9c12253b4a6"
+      }
+    ],
+    "name_suffix": "_2"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-09-26T22:04:38.005+00:00\",\"changed\":[\"cloned from \\\"Generate_dancer_more_details\\\"\"],\"cloned_from\":\"Generate_dancer_more_details\"},{\"changed_at\":\"2025-09-29 22:56:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

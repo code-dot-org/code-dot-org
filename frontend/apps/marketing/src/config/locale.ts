@@ -4,7 +4,7 @@ export enum SupportedLocale {
   cs = 'cs',
   de = 'de',
   'es-ES' = 'es-ES',
-  'es-LA' = 'es-LA', // Latin America Spanish
+  'es' = 'es', // Latin America Spanish
   fa = 'fa',
   fr = 'fr',
   hi = 'hi',
@@ -20,20 +20,21 @@ export enum SupportedLocale {
   te = 'te',
   th = 'th',
   tr = 'tr',
-  'zh-CN' = 'zh-CN',
-  'zh-TW' = 'zh-TW',
+  'zh-Hans' = 'zh-Hans',
+  'zh-Hant' = 'zh-Hant',
 }
 
-type LocalizeJsConfig = {
+type SupportedLocaleConfig = {
   value: SupportedLocale;
   text: string;
   isRTL: boolean;
 };
 
-// The following are LocalizeJS language codes and map 1:1. They are replicated here to ensure compatability in SSR.
-export const LOCALIZE_JS_CONFIG_MAP: LocalizeJsConfig[] = [
+// The following are BCP-47 language codes supported by the marketing app.
+// When updating languages here, ensure they are valid BCP 47 codes
+export const SUPPORTED_LOCALES_CONFIG: SupportedLocaleConfig[] = [
   {value: SupportedLocale['en-US'], text: 'English', isRTL: false},
-  {value: SupportedLocale['es-LA'], text: 'Español (LATAM)', isRTL: false},
+  {value: SupportedLocale['es'], text: 'Español (LATAM)', isRTL: false},
   {value: SupportedLocale['es-ES'], text: 'Español (España)', isRTL: false},
   {value: SupportedLocale['ar'], text: 'العربية', isRTL: true},
   {value: SupportedLocale['cs'], text: 'Čeština', isRTL: false},
@@ -53,18 +54,20 @@ export const LOCALIZE_JS_CONFIG_MAP: LocalizeJsConfig[] = [
   {value: SupportedLocale['te'], text: 'తెలుగు', isRTL: false},
   {value: SupportedLocale['th'], text: 'ภาษาไทย', isRTL: false},
   {value: SupportedLocale['tr'], text: 'Türkçe', isRTL: false},
-  {value: SupportedLocale['zh-CN'], text: '简体字', isRTL: false},
-  {value: SupportedLocale['zh-TW'], text: '繁體字', isRTL: false},
+  {value: SupportedLocale['zh-Hans'], text: '简体字', isRTL: false},
+  {value: SupportedLocale['zh-Hant'], text: '繁體字', isRTL: false},
 ];
 
-// Map of supported BCP 47 locale codes to LocalizeJS locale codes
+// Map of application supported BCP 47 locale codes to LocalizeJS locale codes
+// When selecting languages here, ensure they are valid BCP 47 codes
+// LocalizeJS has a variety of language codes but we standardize them to ensure compatability with our systems.
 const LOCALIZEJS_LOCALE: {[locale in SupportedLocale]: string} = {
   'en-US': 'en',
   ar: 'ar',
   cs: 'cs',
   de: 'de',
-  'es-ES': 'es-ES',
-  'es-LA': 'es-MX',
+  'es-ES': 'es', // Localize has es-ES as es
+  es: 'es-LA', // Latin America Spanish is es-LA in Localize
   fa: 'fa',
   fr: 'fr',
   hi: 'hi',
@@ -80,18 +83,18 @@ const LOCALIZEJS_LOCALE: {[locale in SupportedLocale]: string} = {
   te: 'te',
   th: 'th',
   tr: 'tr',
-  'zh-CN': 'zh-CN',
-  'zh-TW': 'zh-TW',
+  'zh-Hans': 'zh-Hans',
+  'zh-Hant': 'zh-TW', // Localize has zh-Hant as zh-TW
 };
 
-// Map of LocalizeJS locale codes to Dashboard (studio.code.org) locale codes
-const DASHBOARD_LOCALE_MAP: Record<SupportedLocale, string | undefined> = {
+// Map of BCP-47 application supported locale codes to Dashboard (studio.code.org) locale codes
+const DASHBOARD_LOCALE_MAP: Record<SupportedLocale, string> = {
   'en-US': 'en-US',
   ar: 'ar-SA',
   cs: 'cs-CZ',
   de: 'de-DE',
   'es-ES': 'es-ES',
-  'es-LA': 'es-MX',
+  es: 'es-MX',
   fa: 'fa-IR',
   fr: 'fr-FR',
   hi: 'hi-IN',
@@ -107,50 +110,57 @@ const DASHBOARD_LOCALE_MAP: Record<SupportedLocale, string | undefined> = {
   te: 'te-IN',
   th: 'th-TH',
   tr: 'tr-TR',
-  'zh-CN': 'zh-CN',
-  'zh-TW': 'zh-TW',
+  'zh-Hans': 'zh-CN',
+  'zh-Hant': 'zh-TW',
 };
 
-const LOCALIZEJS_LOCALE_MAP: Record<string, SupportedLocale | undefined> =
-  Object.fromEntries(
-    Object.entries(DASHBOARD_LOCALE_MAP).map(([key, value]) => [value, key]),
-  );
+const DASHBOARD_LOCALE_TO_SUPPORTED_LOCALE_MAP: Record<
+  string,
+  SupportedLocale
+> = Object.fromEntries(
+  Object.entries(DASHBOARD_LOCALE_MAP).map(([key, value]) => [
+    value,
+    key as SupportedLocale,
+  ]),
+);
 
-export const SUPPORTED_LOCALE_CODES = LOCALIZE_JS_CONFIG_MAP.map(
+export const SUPPORTED_LOCALE_CODES = SUPPORTED_LOCALES_CONFIG.map(
   locale => locale.value,
 );
 export const SUPPORTED_LOCALES_SET = new Set(SUPPORTED_LOCALE_CODES);
 
 export const SUPPORTED_LOCALES_MAP = new Map(
-  LOCALIZE_JS_CONFIG_MAP.map(locale => [locale.value, locale]),
+  SUPPORTED_LOCALES_CONFIG.map(locale => [locale.value, locale]),
 );
 
 /**
  * Returns the LocalizeJS locale code for a given BCP 47 locale code.
- * @param bcp47Code - The BCP 47 locale code to convert.
+ * @param supportedLocale - The BCP 47 supported locale code to convert.
  */
-export function getLocalizeJsLocaleFromBCP47(bcp47Code: string) {
-  return LOCALIZEJS_LOCALE[bcp47Code as SupportedLocale] || 'en';
+export function getLocalizeJsLocaleFromSupportedLocale(
+  supportedLocale: SupportedLocale | string,
+) {
+  return LOCALIZEJS_LOCALE[supportedLocale as SupportedLocale] || 'en';
 }
 
 /**
  * Returns the Dashboard (studio.code.org) locale code for a given LocalizeJS locale code.
- * @param localizeJsLocale - The LocalizeJS locale code to convert.
+ * @param supportedLocale - The marketing app locale code to convert.
  */
-export function getDashboardLocale(localizeJsLocale: SupportedLocale): string {
-  return DASHBOARD_LOCALE_MAP[localizeJsLocale] || 'en-US';
+export function getDashboardLocale(supportedLocale: SupportedLocale): string {
+  return DASHBOARD_LOCALE_MAP[supportedLocale] || 'en-US';
 }
 
 /**
- * Returns the LocalizeJS locale code for a given Dashboard (studio.code.org) locale code.
+ * Returns the BCP-47 marketing app locale code for a given Dashboard (studio.code.org) locale code.
  * @param dashboardLocale - The Dashboard (studio.code.org) locale code to convert.
  */
-export function getLocalizeJsLocaleFromDashboardLocale(
+export function getSupportedLocaleFromDashboardLocale(
   dashboardLocale: string | undefined,
 ): SupportedLocale | undefined {
   if (!dashboardLocale) {
     return undefined;
   }
 
-  return LOCALIZEJS_LOCALE_MAP[dashboardLocale];
+  return DASHBOARD_LOCALE_TO_SUPPORTED_LOCALE_MAP[dashboardLocale];
 }

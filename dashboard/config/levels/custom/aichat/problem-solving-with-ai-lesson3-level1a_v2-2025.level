@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:39.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Sports Journalist - Minimal Context Given\r\n\r\nPractice prompting through the career of a sports journalist by giving a simple, unstructured prompt to see how AI responds without any examples or extra details.\r\n\r\n### Do This:\r\n\r\n1. Try a basic prompt like the one below, or a similar one related to breaking news.\r\n\r\n>Summarize the latest sports news.\r\n\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how much detail the AI includes and how clear or vague the summary is.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a generic AI assistant simulating a vague and unspecific response to a prompt about sports news. Do not mention that you lack real-time data or refer to your training cutoff. If asked to summarize the latest sports news without specific details, respond with a general and high-level summary using broad language. Avoid providing real scores, dates, or names unless they are commonly known or generic.\n\nYour goal is to model what happens when a user gives a minimal, underspecified prompt. Keep your tone professional and neutral.\n\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Sports Journalist",
+    "bubble_choice_description": "Practice prompting through the career of a sports journalist by giving a simple, unstructured prompt to see how AI responds without any examples or extra details.",
+    "thumbnail_url": "https://images.code.org/8a44f2a2a82e9107be8105d9de2139fa-writing.png",
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:39.640+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level1a_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level1a_2025\"}]"
+}]]></config>
+</Aichat>

@@ -17,7 +17,7 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {WorkshopData} from '../../types';
 
-import styles from '../../workshop.module.scss';
+import styles from '../../WorkshopLayout.module.scss';
 
 interface WorkshopStatusSectionProps {
   workshop: WorkshopData;

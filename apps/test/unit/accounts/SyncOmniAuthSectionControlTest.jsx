@@ -1,5 +1,6 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
 import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
@@ -216,7 +217,7 @@ describe('SyncOmniAuthSectionControl', () => {
   });
 
   it('Disables the button when the section is of type LTI and syncEnabled is false', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <SyncOmniAuthSectionControl
         {...defaultProps}
         sectionProvider={SectionLoginType.lti_v1}
@@ -225,5 +226,7 @@ describe('SyncOmniAuthSectionControl', () => {
     );
     const button = wrapper.find(SyncOmniAuthSectionButton);
     expect(button.prop('buttonState')).to.equal(DISABLED);
+
+    expect(wrapper.find(ReactTooltip)).to.have.lengthOf(1);
   });
 });

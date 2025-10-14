@@ -25,6 +25,10 @@ module Api::V1::Pd
       form_version = params[:version]
       workshop_id = params[:workshop_id]
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop_id)
+      user_submission_count = ws_submissions.distinct.count(:user_id)
+      if user_submission_count < Pd::SharedWorkshopConstants::MIN_SURVEY_RESPONSE_COUNT
+        return render json: {error: "There must be at least #{Pd::SharedWorkshopConstants::MIN_SURVEY_RESPONSE_COUNT} responses to generate a report."}, status: :unprocessable_entity
+      end
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       form = ::Foorm::Form.where(name: form_name, version: form_version).first
       foorm_submissions = submission_ids.empty? ?

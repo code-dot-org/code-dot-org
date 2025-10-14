@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:01:15.000Z",
   "level_num": "custom",
@@ -539,10 +540,12 @@
       }
     ],
     "name_suffix": "_v2",
+    "bubble_choice_description": "💡 **Teacher Tip**: For students who struggle with nested functions (functions called inside of other functions), have them step through the code line-by-line to guide them through the sequencing of sounds.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:15.063+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-checkin\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-checkin\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:15.063+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-checkin\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-checkin\"},{\"changed_at\":\"2025-09-02 18:00:12 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

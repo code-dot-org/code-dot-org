@@ -434,15 +434,16 @@ class User < ApplicationRecord
 
   scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
   # Include default Devise modules. Others available are:
-  # :token_authenticatable, :confirmable, :timeoutable
+  # :token_authenticatable, :confirmable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
-    :recoverable, :rememberable, :trackable, :lockable
+    :recoverable, :rememberable, :trackable, :lockable, :timeoutable
 
   # Make sure to include these Concerns after we include the default Devise
   # modules, since it's trying to extend some methods added by those modules
   # that would be overridden by them if we included it before.
   include Devise::Models::ManualSessionExpiration
   include Devise::DatabaseAuthenticationOverrides
+  include Devise::Models::CustomTimeoutable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -507,6 +508,11 @@ class User < ApplicationRecord
       errors.add(:admin, 'must be a teacher') unless teacher?
       errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
     end
+  end
+
+  def friendly_name(ltr = true)
+    return name unless given_name && family_name
+    ltr ? "#{given_name} #{family_name}" : "#{family_name} #{given_name}"
   end
 
   def email
@@ -796,7 +802,7 @@ class User < ApplicationRecord
     return false if sections_as_student.empty?
 
     # Can't hide a unit that isn't part of a course
-    unit_group = unit.try(:unit_group)
+    unit_group = unit.try(:get_original_unit_group)
     return false unless unit_group
 
     get_participant_hidden_ids(unit_group.id, false).include?(unit.id)
@@ -945,10 +951,17 @@ class User < ApplicationRecord
   # a script. We find or create a new UserScript entry, and set assigned_at
   # if not already set.
   # @param script [Unit] The script to assign.
+  # @param unit_group [UnitGroup] The UnitGroup to assign.
   # @return [UserScript] The UserScript, new or existing, with assigned_at set.
-  def assign_script(script)
+  def assign_script(script, unit_group = nil)
+    raise "script is required" unless script
+    unit_group ||= script&.original_unit_group
+    if unit_group&.default_units&.exclude?(script)
+      raise "unit group #{unit_group.name} does not contain unit #{script.name}"
+    end
+
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user: self, script: script).first_or_create
+      user_script = UserScript.find_and_migrate_or_create_by!(user_id: id, unit: script, unit_group: unit_group)
       user_script.update!(assigned_at: Time.now)
       return user_script
     end
@@ -1028,7 +1041,9 @@ class User < ApplicationRecord
 
   def should_see_add_password_form?
     !can_create_personal_login? && # mutually exclusive with personal login UI
-      can_edit_password? && encrypted_password.blank?
+      can_edit_password? && # allowed to edit password (i.e. not sponsored)
+      encrypted_password.blank? && # no password exists
+      !Policies::Lti.restricted_user?(self) # not restricted by their school district
   end
 
   def should_disable_user_type?
@@ -1096,6 +1111,7 @@ class User < ApplicationRecord
   # continue to use our site without losing progress.
   def can_create_personal_login?
     return false unless student?
+    return false if Policies::Lti.restricted_user?(self)
     teacher_managed_account? || (migrated? && oauth_only?)
   end
 
@@ -1242,7 +1258,9 @@ class User < ApplicationRecord
     hoc_level_ids = levels_in_script.map(&:host_level).map(&:id)
 
     unless (channel_level_ids & hoc_level_ids).empty?
-      User.track_script_progress(id, Unit.get_from_cache(script_name).id)
+      unit = Unit.get_from_cache(script_name)
+      User.track_script_progress(id, unit.id)
+      unit_group = unit.get_original_unit_group
 
       # Create user_level entries for the levels associated with channels. In the
       # case of template backed levels, a channel for the template level will result
@@ -1260,7 +1278,7 @@ class User < ApplicationRecord
             new_result: ActivityConstants::BEST_PASS_RESULT,
             submitted: false,
             level_source_id: nil,
-            unit_group: nil
+            unit_group: unit_group
           )
         end
       end
@@ -1743,7 +1761,8 @@ class User < ApplicationRecord
     end
 
     if new_level_completed && script_id
-      User.track_script_progress(user_id, script_id)
+      unit_group ||= script.get_original_unit_group
+      User.track_script_progress(user_id, script_id, unit_group&.id)
     end
 
     if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
@@ -1781,9 +1800,12 @@ class User < ApplicationRecord
 
   # This method is meant to indicate a user has made progress (i.e. made a milestone
   # post on a particular level) in a script
-  def self.track_script_progress(user_id, script_id)
+  def self.track_script_progress(user_id, script_id, unit_group_id = nil)
+    unit = Unit.get_from_cache(script_id)
+    unit_group = unit_group_id ? UnitGroup.get_from_cache(unit_group_id) : nil
+    unit_group ||= unit.get_original_unit_group
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
+      user_script = UserScript.find_and_migrate_or_create_by!(user_id: user_id, unit: unit, unit_group: unit_group)
       time_now = Time.now
 
       user_script.started_at = time_now unless user_script.started_at

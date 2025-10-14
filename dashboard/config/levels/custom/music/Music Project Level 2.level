@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "This level shares a project with the previous level in the progression.",
+    "long_instructions": "This level shares a project with the previous level in the progression.\r\n\r\nThis is a template-backed submittable level with validation.",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
@@ -26,9 +26,30 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "validations": [
+      {
+        "key": "Music Project Level 2_9b072f97-fd3a-496d-966e-1e82ddc3ad7a",
+        "message": "You played one sound!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "Music Project Level 2_add0a56d-b34f-4d66-9159-b386e97cb8c1",
+        "message": "Please play one sound.",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-27T11:43:38.207-05:00\",\"changed\":[\"cloned from \\\"music project 1\\\"\"],\"cloned_from\":\"music project 1\"},{\"changed_at\":\"2025-02-27 11:44:22 -0500\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-02-27 11:46:10 -0500\",\"changed\":[\"name\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-02-27 11:47:40 -0500\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-07-23 18:55:11 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-27T11:43:38.207-05:00\",\"changed\":[\"cloned from \\\"music project 1\\\"\"],\"cloned_from\":\"music project 1\"},{\"changed_at\":\"2025-02-27 11:44:22 -0500\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-02-27 11:46:10 -0500\",\"changed\":[\"name\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-02-27 11:47:40 -0500\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-07-23 18:55:11 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-29 20:04:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

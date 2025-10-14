@@ -1,5 +1,6 @@
-import {SessionFormat} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
 import {WorkshopFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
+import {SessionFormat} from '../workshop_dashboard/workshops/types';
 
 export interface OrganizerInfo {
   name: string;
@@ -132,6 +133,10 @@ export type UserInfoForWorkshop = {
       schoolType?: string;
     };
   } | null;
+};
+
+export type UserWorkshopEnrollment = {
+  code: string;
 };
 
 export const userInfoDataResponseToParams = (

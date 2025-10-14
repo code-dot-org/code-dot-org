@@ -85,7 +85,7 @@
     },
   }
 
-- if current_user.migrated?
+- if current_user.migrated? && !Policies::Lti.restricted_user?(current_user)
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
 

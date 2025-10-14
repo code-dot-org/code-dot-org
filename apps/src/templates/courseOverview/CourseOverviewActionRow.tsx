@@ -95,7 +95,7 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
             assignmentName={title}
             reassignConfirm={() => setConfirmationMessageOpen(true)}
             isAssigningCourseOnly={true}
-            isAssigningUnitOnly={false}
+            isSingleUnitCourse={false}
             participantAudience={participantAudience}
           />
         </div>

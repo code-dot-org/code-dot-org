@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: course_offerings
@@ -32,6 +34,33 @@
 
 class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
+  include Localizable
+
+  ACCEPTABLE_RESOURCE_TYPES = [
+    'Answer Key',
+    'Activity Guide',
+    'Slides',
+    'Exemplar',
+    'Slide Deck',
+    'Rubric'
+  ]
+  DURATION_LABEL_TO_MINUTES_CAP = {
+    lesson: 90,
+    week: 250,
+    month: 950,
+    quarter: 2_500,
+    semester: 5_000,
+    school_year: 525_600,
+  }
+  ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
+  HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
+  KEY_CHAR_RE = /[a-z0-9\-]/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
+  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
+    'K5 Workshops': 'https://code.org/professional-development-workshops',
+    '6-12 Workshops': 'https://code.org/apply',
+  }
 
   has_many :course_versions
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
@@ -42,38 +71,14 @@ class CourseOffering < ApplicationRecord
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validate :grade_levels_format
 
-  KEY_CHAR_RE = /[a-z0-9\-]/
-  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates :key,
     format: {with: KEY_RE,
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."}
 
-  ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
-  MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
-  HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
-  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
-    'K5 Workshops': 'https://code.org/professional-development-workshops',
-    '6-12 Workshops': 'https://code.org/apply',
-  }
   validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_nil: true
 
-  DURATION_LABEL_TO_MINUTES_CAP = {
-    lesson: 90,
-    week: 250,
-    month: 950,
-    quarter: 2500,
-    semester: 5000,
-    school_year: 525600,
-  }
+  self.localizable_attributes = :display_name, :description
 
-  ACCEPTABLE_RESOURCE_TYPES = [
-    'Answer Key',
-    'Activity Guide',
-    'Slides',
-    'Exemplar',
-    'Slide Deck',
-    'Rubric'
-  ]
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a UnitGroup.
   #
@@ -210,12 +215,12 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  def self.professional_learning_and_self_paced_course_offerings
+  def self.self_paced_pl_course_offerings
     all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}
   end
 
-  def self.professional_learning_and_self_paced_course_offerings_basic_info
-    professional_learning_and_self_paced_course_offerings.map do |co|
+  def self.self_paced_pl_course_offerings_basic_info
+    self_paced_pl_course_offerings.map do |co|
       {
         id: co.id,
         key: co.key,
@@ -224,13 +229,25 @@ class CourseOffering < ApplicationRecord
     end
   end
 
-  def self.self_paced_course_offerings_for_catalog
+  def self.self_paced_course_offerings_for_catalog(user = nil, locale = 'en-us')
+    all_course_offerings.filter_map do |co|
+      if co.get_participant_audience == 'teacher' &&
+          co.instruction_type == 'self_paced' &&
+          co.assignable? &&
+          co.any_version_is_in_published_state?
+        co.summarize_for_catalog(locale, user)
+      end
+    end
+  end
+
+  def self.self_paced_pl_course_offerings_for_workshops
+    participant_audiences = ['teacher', 'facilitator']
     all_course_offerings.select do |co|
-      co.get_participant_audience == 'teacher' &&
+      participant_audiences.include?(co.get_participant_audience) &&
         co.instruction_type == 'self_paced' &&
-        co.assignable? &&
+        co.header.present? &&
         co.any_version_is_in_published_state?
-    end.map(&:summarize_for_catalog)
+    end&.map(&:summarize_self_paced_pl)
   end
 
   def summarize_for_unit_selector(unit_ids)
@@ -291,15 +308,6 @@ class CourseOffering < ApplicationRecord
     }
   end
 
-  def localized_display_name
-    localized_name = I18n.t(
-      key,
-      scope: [:data, :course_offerings],
-      default: nil
-    )
-    localized_name || display_name
-  end
-
   def duration_in_minutes
     return nil unless latest_published_version
     co_units = latest_published_version.units
@@ -322,6 +330,18 @@ class CourseOffering < ApplicationRecord
 
     latest_stable_version = UnitGroup.latest_stable_version(key, locale: locale_str)
     !latest_stable_version.nil?
+  end
+
+  def upcoming_facilitated_workshops(user = nil)
+    return [] if pd_workshops.blank?
+
+    facilitated_workshops = pd_workshops.select do |ws|
+      ws.sessions.any? &&
+        ws.sessions.first.start > Time.zone.now &&
+        ws.relevant_to_user?(user)
+    end
+
+    facilitated_workshops.sort_by {|ws| ws.sessions.first.start}
   end
 
   def summarize_for_edit
@@ -348,7 +368,7 @@ class CourseOffering < ApplicationRecord
     }
   end
 
-  def summarize_for_catalog(locale_code = 'en-us')
+  def summarize_for_catalog(locale_code = 'en-us', user = nil)
     {
       key: key,
       display_name: localized_display_name,
@@ -366,13 +386,19 @@ class CourseOffering < ApplicationRecord
       course_id: course_id,
       course_offering_id: id,
       is_translated: translated?(locale_code),
-      description: description,
+      description: localized_description,
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
-      available_resources: get_available_resources(locale_code)
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
+      available_resources: get_available_resources(locale_code),
+      facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog)
     }
+  end
+
+  def self.students_course_offerings_for_catalog
+    assignable_published_for_students_course_offerings.map(&:summarize_for_catalog)
   end
 
   def serialize
@@ -447,6 +473,14 @@ class CourseOffering < ApplicationRecord
 
   def hoc?
     marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
+  end
+
+  def hoai?
+    marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoai
+  end
+
+  def hoc_or_hoai?
+    hoc? || hoai?
   end
 
   def pl_course?

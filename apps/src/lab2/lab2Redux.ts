@@ -93,6 +93,8 @@ export interface LabState {
   permissions: string[];
   // If current user is a teacher of the project owner.
   isTeacherOfProjectOwner: boolean | undefined;
+  // If this lab is in a full screen view.
+  isFullScreenView: boolean | undefined;
 }
 
 const initialState: LabState = {
@@ -111,6 +113,7 @@ const initialState: LabState = {
   overrideValidations: undefined,
   permissions: [],
   isTeacherOfProjectOwner: undefined,
+  isFullScreenView: undefined,
 };
 
 // Thunks
@@ -158,8 +161,6 @@ export const setUpWithLevel = createAsyncThunk<
       .getMetricsReporter()
       .updateProperties({appName: levelProperties.appName});
 
-    const {isProjectLevel, usesProjects} = levelProperties;
-
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
 
     // If we are cached, and there is a user app options path because we are in a script
@@ -176,7 +177,7 @@ export const setUpWithLevel = createAsyncThunk<
       }
     }
 
-    if (!usesProjects) {
+    if (!levelProperties.usesProjects) {
       // If projects are disabled on this level, we can skip loading projects data.
       setProjectAndLevelData(
         {levelProperties},
@@ -216,18 +217,17 @@ export const setUpWithLevel = createAsyncThunk<
     // Create a new project manager. If we have a channel id,
     // default to loading the project for that channel. Otherwise
     // create a project manager for the given level and script id.
-    const projectManager =
-      payload.channelId && isProjectLevel
-        ? ProjectManagerFactory.getProjectManager(
-            payload.channelId,
-            thunkAPI.getState().lab.isShareView
-          )
-        : await ProjectManagerFactory.getProjectManagerForLevel(
-            payload.levelId,
-            payload.userId,
-            payload.scriptId,
-            payload.scriptLevelId
-          );
+    const projectManager = payload.channelId
+      ? ProjectManagerFactory.getProjectManager(
+          payload.channelId,
+          thunkAPI.getState().lab.isShareView
+        )
+      : await ProjectManagerFactory.getProjectManagerForLevel(
+          payload.levelId,
+          payload.userId,
+          payload.scriptId,
+          payload.scriptLevelId
+        );
 
     // Only set the project manager and initiate load
     // if this request hasn't been cancelled.
@@ -356,6 +356,9 @@ const labSlice = createSlice({
     },
     setIsBlockedAbuse(state, action: PayloadAction<boolean>) {
       state.isBlockedAbuse = action.payload;
+    },
+    setIsFullScreenView(state, action: PayloadAction<boolean>) {
+      state.isFullScreenView = action.payload;
     },
   },
   extraReducers: builder => {
@@ -551,6 +554,7 @@ export const {
   setChannel,
   setIsTeacherOfProjectOwner,
   setIsBlockedAbuse,
+  setIsFullScreenView,
 } = labSlice.actions;
 
 export default labSlice.reducer;

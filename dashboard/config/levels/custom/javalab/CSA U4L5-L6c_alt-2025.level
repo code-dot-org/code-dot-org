@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-08-02T22:04:06.000Z",
   "level_num": "custom",
@@ -14,12 +15,25 @@
     "display_name": "Random Colors",
     "bubble_choice_description": "Use `Math.random()` to choose random colors for the shapes drawn in the scene.",
     "thumbnail_url": "https://images.code.org/684ddf5dff6cbfbda7afa4384f451fe9-colored-pencils.png",
-    "encrypted_validation": "qZ818gW5VaNvjUoBM85TBilgJVdtY+ldf353GqMco0Q+Gq7b8qQM0+6Vzwz/\n8Gm0kp/P0AmU6hd05iJwhrpwQenB9yq6NCe5uM/yTxEHNYETg0N5jwWFhxMT\nrZotbh+uhXELQiCTZOc5KTJzR9wrCn9WCc9oHFIdjlbnYN1ekJMn526Jkh0L\np8GEgc/2vMFHQUPAGaq5lMwSdtl5242fTv+lEZjVydBVmchXmWY9PxRsOcnf\nB0UlZJfsRpl3D0Dnki/Ef66dbIGTo9FkJBNIyRQM3T0Mf7mdZ940o8IWqDIn\nq03Z9z5KEYTHaCnKhCbK3jJCu21DrSbafrT3+PxtCGrWrKBZdfmvKJhqA9N6\nWFfZMxlDQZjhWGpaggOdoD2/WC+W8RYWoOeFCYidN07SSiwDPhiuXDWf59iQ\n1Euwu+raWq5DjpVmmEKFH75+b/KdmFIzVIPgYTVIbIRpYuvBbNYSUKrdxWS0\nWg/9kgNaPsuCADXHvwGl7mY/rmihUTfew0bs4Ho7ypKMy3fz/gkr6K54byA/\n2WqSuti4ql6wAMiIqOgtqoGoA12JcKE3pAh6ru8OQ85cB+AVGKMO9NpR80cF\ncKHW8GycmsxGmbyde+2wW4CML15L1Dj5FlGyooRMoEPAgNw/Mbmg7+nvWF/j\n9lk0Ywu4gW1C59985fFTayExtsCIMoS5Fp5NGebYra6PJ1RWqJh+WjysPZBc\nCqfz7c+4Kzbj0qLLpFX8MlXbDQGEKVqXk7/tDc/MGP8vttN7KK4aFMKNziub\nbmnxevqX1AUUFg1UadVNiCQUXskmrRaNQRhqZYPgfLYiFFdnWO+53ps+NaDM\ngIhRvDuMpIga6yLc3Cyhzy44MqJtHsp5k2jYZtXEFAeyX/pBianYxkn6hSAq\n9p3JYCaCEyRFE8ci+uA9fj7kHJXl6gQzM6uhDwjIm0B7IE4X2S054gex3lJp\njzpjZs272jCs5rFI52GlkjoFNhCg49IMEjlfXwrhom8mAU6OLyQW67+aU78s\nhCP61a9oCKfkuYx2TjO2wE2swBLYSqIlCy5AbrxsXsEPwYffCKgTsPUcSFv4\nyQZ8p51gxKWH7Xlx9vVJOlHxm+7kqWemn8thIuMAJBNH17y7kg/XNvfg4Ts3\ncYEX9LVbB5KbSCxm0rfgTyEp94ljXDUnxtRPb3ehGEwCXEGQmS2XSa+ZgmZ7\ngNKYF/7ugN/0yutcr8lyq5OgbHtF5U5puHOhMwT+BIFj/ekJWqIBwK2da4ka\nSze8y3py4vlg5INDRPIADnGHvwsqF3iYjwTca99P0Luez5r2777d3AhXpAr4\n3HnzyPIWj7d7oCFNmvZhPJaMIERD2uO4kSPcFZ0RG40mL/usGXjdN/KkoK0U\n3JKZ/oluO9ylj2ssE+crc8f5d8ZOXjOLc1W2Yi1jX4Re8macFx6uebozMjNw\njOzGtZj+eyeYUQpTQtI1XXlZsVMXqH37uy9uxZSVTmZLUC/qKFlE4Seb7Rr/\nDpDbbR/iYEGBSqwogazzBLo4GyZH2pZEJ1bsxLTo7AHgtT8jin1FK8EvNas1\nWJm3Y9Rz3u54Bq+4nhg=\n",
     "encrypted_exemplar_sources": "otg1bidKgFxAkU1Eeh4g55LowaMsv82eNrnngJpMXXcfX8g0+iRY4CEDd1To\nITkLUi2+QsJlhPDpVEk0PulwTMwSKFdVAbFV64aBcqEHpROiOFS92co7PXT4\nWVoeuzohYvwAeEKUbnS4g2qeGaKHVqqnGlOBvziSmEPhEabTJBJjSfKRv8tE\nS7c1wb/L+k1PV838M2IqO3/VMLowC0Wj9ZBp9x5kQ5KeaJHkg7KXr4sQeRfA\nK4fAhSrF/DNCL+UnhAnSAG282OOABIpxAmK9d/QDW8youCRQOQS3xwRuoJr6\nWFl3BoKTqXMffWt1aVI4vbjOkin2WYuz8n3SmTrgMA1l1tFblHBwGFYEKogm\nhEohFt4tgkRFqJvdyAmYN5MbOY+5yu3efySauqxB/eb1s28bJbB45wmCLh+Y\ntZLXTVxd9gHgt0VOQ2CqnFrf+9tKG36wSK280wgfdwwR//cdx26E16gejit2\nv+0LMguqptXs/VWQ8+zekQBV+yMrkk7pceB+D3yV9MDcBnOLWU83PxjY7ce9\nGvbAKBTolf5rU18k8cTULD0sXcFn6htTTCrYjUbwuljlADcWIwSs4KWPGZsp\ndo44q+DiM796JyYRs0mcD5/2K6tWgUWExjc2lM6BB7wHreB5IjWRpuM8ccMU\nwawrBsZe4h2emA1qjzhhmQZbxlUyjIGVQdI6ltjDB/NyGVMGq5vAysGYXErt\nd+f0hj34KHUK30+va8KAtXrEjTyMvS7YAMVr69be8IEE0rb9uGObLHP/o2L3\nDCUAcnai3cgRafMbdyopjmbHp07gc83Z7NGiOLg5UdJrlH5/F/CbLxej3GEL\ng/MmI6Mk5kriHNNd6kqE56JaLGhvC3hxslX8w9mcK5xgEUS/35bh9+eNFn4t\nf3u90m1AzTNjtnJ65vMBeigkpsjZ+x7gooVvI8lMg8IoDAhSJwABXUL4+hWt\nttaSMV938rou9JilvvKOZbBbMh/Wo9HQa86JOttawz0Pc8pWO3TvOT7i56kS\n0ZIhXXTktcEjfJ8ODTw5OuDMGicLmY2wHe6Yrl7x1fnsDazZPm3jpluBl2g6\nwKV1KmCXuhI6qW++in5L+oqj6DJkTi57ed/XeACWMEfrcScbxLVqocJ9kpvU\n0mHn8UoI9yMgsKAS/VCQH57Wi+N0z/ykr0+UNCUZmlkHmvMY1rmB2b8LKtz6\nLxnwtaaiaHmN4AGYhecqU6+i2ia0Eo3XUhy9LRaq2sembYs3Y+6KsVt8GF0=\n",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "true",
+    "start_sources": {
+      "TheaterRunner.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.Color;\n\npublic class TheaterRunner {\n  public static void main(String[] args) {\n\n    ShapeScene scene = new ShapeScene();\n\n\n\n    Theater.playScenes(scene);\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "ShapeScene.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.Color;\n\npublic class ShapeScene extends Scene {\n\n  /*\n   * Returns a new Color object with random RGB values\n   */\n  public Color makeRandomColor() {\n    // Replace with your code\n    return 0;\n  }\n\n  /*\n   * Draws a shape using the given Color\n   */\n  public void drawShape(Color color) {\n    setFillColor(color);\n    drawRectangle(200, 200, 150, 150);\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:06.591+00:00\",\"changed\":[\"cloned from \\\"CSA U4L5-L6c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L5-L6c_pilot-2025\"},{\"changed_at\":\"2025-05-24 03:29:32 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:30:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:30:55 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:31:27 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:31:39 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:31:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:06.591+00:00\",\"changed\":[\"cloned from \\\"CSA U4L5-L6c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L5-L6c_pilot-2025\"},{\"changed_at\":\"2025-05-24 03:29:32 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:30:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:30:55 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:31:27 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:31:39 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:31:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-09-26 22:55:53 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-26 22:56:16 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-26 22:56:23 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

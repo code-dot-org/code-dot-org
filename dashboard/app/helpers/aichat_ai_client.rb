@@ -2,21 +2,10 @@
 # that is never instantiated directly. The derived classes hold implementation details in required overridden
 # methods. Currently the two implemented APIs (OpenAI and Gemini) are POST based REST APIs.
 class AichatAiClient
-  # Create an instance of the appropriate derived class based on model id.
-  def self.create_instance(model_id, usage_reporter = nil)
-    #TODO make model api mode and this check based on SharedConstants::AICHAT_MODEL_VERSION
-    # For now we just assume it's one of the gemini models if not 'gpt-4o-mini'.
-    if model_id == "gpt-4o-mini"
-      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
-    else
-      return AichatGeminiClient.new(CDO.google_gemini_student_learning_api_key, model_id, usage_reporter)
-    end
-  end
-
   # Call the API (through methods overridden in derived class) and get response text to send back to user.
   # Accept a config hash, request array and optional context array.  These types are defined and documented
   # in `aichat_ai_client_types.rb``.
-  def get_response_text(config, request, context = [])
+  def get_response(config, request, context = [])
     # Assert the parameter types are correct, using RubyTypes.
     AichatRubyTypes.assert_value_is_type(config, AichatAiClientTypes::AiConfig)
     AichatRubyTypes.assert_value_is_type(request, AichatAiClientTypes::AiRequest)
@@ -26,12 +15,16 @@ class AichatAiClient
 
     body = create_body(config, request, context)
 
+    AichatAiClientTypes.validate_json_schema(body)
+
+    read_timeout = DCDO.get('openai_http_read_timeout', SharedConstants::AI_CHAT_READ_TIMEOUTS[config[:clientType]] || 30)
+
     http_response = HTTParty.post(
       url,
       headers: headers,
       body: body.to_json,
       open_timeout: DCDO.get('openai_http_open_timeout', 5),
-      read_timeout: DCDO.get('openai_http_read_timeout', 30)
+      read_timeout: read_timeout
     )
 
     response_body = JSON.parse(http_response.body)
@@ -54,14 +47,9 @@ class AichatAiClient
     response_text
   end
 
-  # TODO - implement structured output
-  # def get_structured_response_json(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
-  # end
-
   attr_accessor :api_key, :model, :usage_reporter
 
-  # Private initializer - all instances should be created with `create_instance` factory.
-  private def initialize(api_key, model, usage_reporter = nil)
+  def initialize(api_key, model, usage_reporter = nil)
     @api_key = api_key
     @model = model
     @usage_reporter = usage_reporter

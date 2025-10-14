@@ -1,0 +1,38 @@
+div.followUpCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (min-width: 900px) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: calc(50% - 0.75rem);
+  }
+
+  div.cardContent {
+    padding: 0;
+    overflow: auto;
+
+    &:last-child {
+      padding: 0;
+    }
+
+    .emailContainer {
+      gap: 0;
+
+      .emailRow {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        border-bottom: 1px solid var(--borders-neutral-primary);
+        padding: 1rem 1.25rem;
+
+        button {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

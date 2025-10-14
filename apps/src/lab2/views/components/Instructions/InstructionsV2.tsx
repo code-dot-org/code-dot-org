@@ -5,6 +5,7 @@ import React from 'react';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import ValidationResults from '@cdo/apps/lab2/views/components/Instructions/ValidationResults';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
@@ -48,9 +49,11 @@ export interface InstructionsProps {
   requireRun?: boolean;
   /** If the navigation area should be hidden. */
   hideNavigation?: boolean;
+  /** If the continue button should be hidden if disabled. */
+  hideContinueIfDisabled?: boolean;
 }
 
-interface ValidationSettings {
+export interface ValidationSettings {
   onValidate: () => void;
   onStopValidation: () => void;
   isValidating: boolean;
@@ -76,16 +79,29 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   AiTutor2ResponseView,
   overrideTheme,
   hideNavigation = false,
+  hideContinueIfDisabled = false,
   ...feedbackProps
 }) => {
+  const hasValidationConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions
+  );
+
   const validationResults = useAppSelector(
     state => state.lab.validationState?.validationResults
   );
+
+  // TODO: When Python Lab uses the resource panel permanently, we can remove all validation
+  // from this component.`
+  const includeValidation =
+    validationSettings !== undefined &&
+    !isUsingResourcePanel(
+      levelProperties.appName,
+      levelProperties.isProjectLevel || false
+    );
   const {longInstructions, predictSettings, offerBrowserTts} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
-  const defaultTheme = useTheme();
-  const theme = overrideTheme || defaultTheme;
+  const {theme: defaultTheme} = useTheme();
 
   // Don't render anything if we don't have any instructions.
   if (longInstructions === undefined) {
@@ -106,10 +122,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         'instructions',
         className
       )}
-      data-theme={theme}
+      data-theme={overrideTheme || defaultTheme}
     >
       <div
         id="instructions-panel"
+        aria-live="polite"
         className={classNames(
           moduleStyles.item,
           vertical && moduleStyles.itemVertical
@@ -132,13 +149,15 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <TextToSpeech text={longInstructions} />
             </div>
           )}
-          {validationSettings && (
-            <ValidationButton
-              onValidate={validationSettings.onValidate}
-              onStopValidation={validationSettings.onStopValidation}
-              isValidating={validationSettings.isValidating}
-              isValidateDisabled={validationSettings.isValidateDisabled}
-            />
+          {includeValidation && hasValidationConditions && (
+            <div className={moduleStyles.nonScrollingSubContent}>
+              <ValidationButton
+                onValidate={validationSettings.onValidate}
+                onStopValidation={validationSettings.onStopValidation}
+                isValidating={validationSettings.isValidating}
+                isValidateDisabled={validationSettings.isValidateDisabled}
+              />
+            </div>
           )}
           {bottomComponent && (
             <div className={moduleStyles.bottomComponent}>
@@ -146,7 +165,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             </div>
           )}
         </div>
-        {validationResults && (
+        {includeValidation && validationResults && (
           <div className={moduleStyles.bubble}>
             <div className={moduleStyles.textContent}>
               <div className={moduleStyles.scrollingContent}>
@@ -174,8 +193,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         {!hideNavigation && (
           <NavigationArea
             {...feedbackProps}
+            overrideTheme={overrideTheme}
             levelProperties={levelProperties}
             handleInstructionsTextClick={handleInstructionsTextClick}
+            hideContinueIfDisabled={hideContinueIfDisabled}
+            styleAsBubble
           />
         )}
       </div>

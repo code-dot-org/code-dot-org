@@ -1,21 +1,24 @@
 import {Box} from '@mui/material';
 import React, {useMemo} from 'react';
 
+import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
+import {SurveyQuestions} from '../../../types';
 import {
+  getQuestionDescription,
   isQuestionType,
-  SurveyQuestions,
-} from '../../../../WorkshopFormTemplate/types';
+  prepLikertBreakdown,
+  prepPromoterBreakdown,
+} from '../../../utils';
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
 import {
   LIKERT_QUESTION_FOOTER,
-  MIN_RESPONSE_COUNT,
   PROMOTER_QUESTION_FOOTER,
 } from '../../constants';
-import {getQuestionDescription} from '../../helpers';
 
-import styles from '../../../workshop.module.scss';
+import styles from '../../../WorkshopLayout.module.scss';
 
 export const Engagement = () => {
   const {surveys} = useWorkshopContext();
@@ -44,11 +47,16 @@ export const Engagement = () => {
               likelyToRecommend.question_short_text ??
               likelyToRecommend.question_text
             }
+            longTitle={likelyToRecommend.question_text}
+            questionType={likelyToRecommend.question_type}
             description={getQuestionDescription(likelyToRecommend)}
             footer={PROMOTER_QUESTION_FOOTER}
             score={likelyToRecommend.results.promoter_percentage}
             responseCount={likelyToRecommend.results.total_responses}
-            minResponseCount={MIN_RESPONSE_COUNT}
+            minResponseCount={MinSurveyResponseCount}
+            breakdown={prepPromoterBreakdown(
+              likelyToRecommend.results.breakdown
+            )}
           />
         )}
         {likertQuestionRow.map(question =>
@@ -56,11 +64,14 @@ export const Engagement = () => {
             <ScoreCard
               key={question.question_name}
               title={question.question_short_text ?? question.question_text}
+              longTitle={question.question_text}
+              questionType={question.question_type}
               description={getQuestionDescription(question)}
               footer={LIKERT_QUESTION_FOOTER}
               score={question.results.weighted_score}
               responseCount={question.results.total_responses}
-              minResponseCount={MIN_RESPONSE_COUNT}
+              minResponseCount={MinSurveyResponseCount}
+              breakdown={prepLikertBreakdown(question.results.breakdown)}
             />
           ) : null
         )}
@@ -74,7 +85,9 @@ export const Engagement = () => {
               otherQuestionsEngagement.question_text
             }
             items={otherQuestionsEngagement.results.responses}
-            tagText={`${otherQuestionsEngagement.results.total_responses} Submitted`}
+            tagText={`${
+              otherQuestionsEngagement.results.total_responses ?? 0
+            } Submitted`}
           />
         )}
       </Box>

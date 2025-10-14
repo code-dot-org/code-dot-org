@@ -36,7 +36,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
   // The resource panel includes settings.
-  const showSettings = !isUsingResourcePanel(
+  const showSettingsAndVersionHistory = !isUsingResourcePanel(
     appName,
     levelProperties.isProjectLevel || false
   );
@@ -95,7 +95,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           color={'black'}
         />
       )}
-      {showSettings && <SettingsButton settings={settings} />}
+      {showSettingsAndVersionHistory && <SettingsButton settings={settings} />}
       {enableMicroBit && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
@@ -106,7 +106,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           color={'black'}
         />
       )}
-      {!isWidgetView && (
+      {!isWidgetView && showSettingsAndVersionHistory && (
         <VersionHistoryButton startSources={startSources} appName={appName} />
       )}
       {/* For now, only python lab supports documentation */}

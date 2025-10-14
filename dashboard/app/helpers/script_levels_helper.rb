@@ -74,9 +74,6 @@ module ScriptLevelsHelper
   end
 
   def can_show_ta_scores_alert?(lesson)
-    puts "checking can show ta scores alert for lesson #{lesson.id}"
-    puts "learning goal: #{LearningGoalTeacherEvaluation.where(teacher_id: current_user.id)}"
-    puts "goal exists: #{LearningGoalTeacherEvaluation.where(teacher_id: current_user.id).where.not(understanding: nil).exists?}"
     return false if LearningGoalTeacherEvaluation.where(teacher_id: current_user.id).where.not(understanding: nil).exists?
     seen_ta_scores_map = current_user&.seen_ta_scores_map || {}
     return false if seen_ta_scores_map.keys.length >= MAX_SHOW_TA_SCORES_ALERT

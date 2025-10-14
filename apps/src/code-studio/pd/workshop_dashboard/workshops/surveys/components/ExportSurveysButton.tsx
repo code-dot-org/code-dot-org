@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import {
@@ -9,11 +10,13 @@ import {useParams} from 'react-router-dom';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import styles from '../../workshop.module.scss';
+import styles from './ExportSurveysButton.module.scss';
+import commonStyles from '../../WorkshopLayout.module.scss';
 
 export const ExportSurveysButton = () => {
   const {workshopId} = useParams<{workshopId: string}>();
   const [formsDialogOpen, setFormsDialogOpen] = useState(false);
+  const [error, setError] = useState('');
 
   const {data: forms, loading} = useFetch<
     {name: string; version: string}[] | null
@@ -23,13 +26,30 @@ export const ExportSurveysButton = () => {
       : ''
   );
 
-  const handleDownload = (form: {name: string; version: string}) => {
-    if (workshopId) {
-      window.open(
-        `/api/v1/pd/workshops/${workshopId}/foorm/csv_survey_report?name=${encodeURIComponent(
-          form.name
-        )}&version=${encodeURIComponent(form.version)}`
-      );
+  const handleClose = () => {
+    setFormsDialogOpen(false);
+    setError('');
+  };
+
+  const handleDownload = async (form: {name: string; version: string}) => {
+    setError('');
+    if (!workshopId) {
+      setError('Workshop not found.');
+      return;
+    }
+    try {
+      const url = `/api/v1/pd/workshops/${workshopId}/foorm/csv_survey_report?name=${encodeURIComponent(
+        form.name
+      )}&version=${encodeURIComponent(form.version)}`;
+      const response = await fetch(url, {method: 'GET'});
+      if (!response.ok) {
+        const error = await response.json();
+        setError(error.error || 'Failed to download the CSV.');
+        return;
+      }
+      window.open(url);
+    } catch (error) {
+      setError('An unknown error occurred. Please try again.');
     }
   };
 
@@ -49,13 +69,13 @@ export const ExportSurveysButton = () => {
       />
       {formsDialogOpen && (
         <CustomDialog
-          className={styles.customDialog}
-          onClose={() => setFormsDialogOpen(false)}
+          className={commonStyles.customDialog}
+          onClose={handleClose}
           aria-labelledby="export-survey-dialog-title"
         >
           <div
             id="dsco-dialog-description"
-            className={styles.customDialogContent}
+            className={commonStyles.customDialogContent}
           >
             <BodyOneText
               id="export-survey-dialog-title"
@@ -93,9 +113,16 @@ export const ExportSurveysButton = () => {
                 })}
               </tbody>
             </table>
+            {error && (
+              <Alert
+                type="danger"
+                text={error}
+                className={commonStyles.customDialogError}
+              />
+            )}
           </div>
           <Button
-            onClick={() => setFormsDialogOpen(false)}
+            onClick={handleClose}
             type="secondary"
             color="gray"
             text="Close"

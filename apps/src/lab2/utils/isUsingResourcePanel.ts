@@ -21,6 +21,8 @@ export function isUsingResourcePanel(
   return (
     appName === 'weblab2' ||
     appName === 'dance' ||
+    appName === 'sketchlab' ||
+    appName === 'music' ||
     experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL)
   );
 }

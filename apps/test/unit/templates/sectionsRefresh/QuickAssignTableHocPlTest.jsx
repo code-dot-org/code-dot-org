@@ -8,27 +8,32 @@ import i18n from '@cdo/locale';
 import {hocCourseOfferings, plCourseOfferings} from './CourseOfferingsTestData';
 
 const DEFAULT_PROPS = {
-  marketingAudience: MARKETING_AUDIENCE.HOC,
   courseOfferings: hocCourseOfferings,
   setSelectedCourseOffering: () => {},
   updateCourse: () => {},
   sectionCourse: {},
 };
 
-const setUp = (overrideProps = {}) => {
-  const props = {...DEFAULT_PROPS, ...overrideProps};
+const setUp = (marketingAudience, overrideProps = {}) => {
+  const props = {...DEFAULT_PROPS, marketingAudience, ...overrideProps};
   return shallow(<QuickAssignTableHocPl {...props} />);
 };
 
 describe('QuickAssignTable', () => {
   it('renders Hour of Code as the first and only table/column header', () => {
-    const wrapper = setUp();
+    const wrapper = setUp(MARKETING_AUDIENCE.HOC);
     expect(wrapper.find('table').length).toBe(3);
     expect(wrapper.contains(i18n.courseOfferingHOC())).toBe(true);
   });
 
+  it('renders Hour of AI as the first and only table/column header', () => {
+    const wrapper = setUp(MARKETING_AUDIENCE.HOAI);
+    expect(wrapper.find('table').length).toBe(3);
+    expect(wrapper.contains(i18n.marketingInitiativeHOAI())).toBe(true);
+  });
+
   it('renders extra two headers in the first and second tables', () => {
-    const wrapper = setUp();
+    const wrapper = setUp(MARKETING_AUDIENCE.HOC);
     expect(wrapper.find('table').length).toBe(3);
     // First header displays in table 0
     expect(wrapper.find('table').at(0).contains('Favorites')).toBe(true);
@@ -39,8 +44,7 @@ describe('QuickAssignTable', () => {
   });
 
   it('renders Professional Learning as the first and only table/column header', () => {
-    const wrapper = setUp({
-      marketingAudience: MARKETING_AUDIENCE.PL,
+    const wrapper = setUp(MARKETING_AUDIENCE.PL, {
       courseOfferings: plCourseOfferings,
     });
     expect(wrapper.find('table').length).toBe(3);
@@ -48,8 +52,7 @@ describe('QuickAssignTable', () => {
   });
 
   it('renders one header in each of the first two columns', () => {
-    const wrapper = setUp({
-      marketingAudience: MARKETING_AUDIENCE.PL,
+    const wrapper = setUp(MARKETING_AUDIENCE.PL, {
       courseOfferings: plCourseOfferings,
     });
     expect(wrapper.find('table').length).toBe(3);

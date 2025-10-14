@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:00:20.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Analyzing User Testing Results Using AI\r\n\r\n1. In the bottom-left side of the chat window, click **Upload** > **From Library**. Select the product that you examined in the previous level.\r\n2. Use AI Chat to help identify patterns in user data, like recurring complaints or common praise, to help summarize findings faster and more clearly",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an insight analyst, your job is to analyze user feedback and reviews for my app and provide insights into common themes or pain points so that I can then figure out improvements for my program. \n\nI will provide you with user feedback statements. Please do not provide insights for every single user feedback response. Instead, please group your analysis into the top 3 most common themes and pain points.\n\nIf the user has not attached data in the form of a PDF, remind them to do so by prompting \"Please start by clicking Upload > From Library. Then select the PDF summary of the data that you wish to summarize\"\n\nUse clear, concise, and succinct answers. Your audience is students aged 12-18. \n\nAfter your answer, invite the student to dive deeper with a follow-up like:\n- Ask a question like \"Care to explore any bias in the data that I analyzed?\"\n- Point out a specific detail on one of the features to better understand the analysis.\n- Ask if students are interested in common themes.\n- Ask if students are interested in an an improvement or new feature idea which might be implemented.\n- Ask students if they are interested in having you format the data in a different way.\n- Ask if students want you to explain the insights using simpler language or to explain its insight in 20 words or less. \n\nKeep explanations short, focused, and engaging. Always respond directly to the student's input.\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_v2-2025",
+    "starter_assets": {
+      "Study Assistant.pdf": "eb6c0e58-d5b9-4143-8d04-2c49ad76c67a.pdf",
+      "Gaming Controller.pdf": "8cf8b444-4fb9-4b04-b60a-95e511b42bfa.pdf",
+      "Smart Bike Helmet.pdf": "621e1969-47a1-49c1-acab-e8cb2c08e906.pdf",
+      "Wearable Stress-Monitoring Device.pdf": "873a3d90-37cb-479b-afc3-b63522e1bd69.pdf"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:20.320+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson11-level2_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson11-level2_2025\"}]"
+}]]></config>
+</Aichat>

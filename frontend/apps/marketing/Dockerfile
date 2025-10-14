@@ -5,15 +5,8 @@
 # Code.org marketing app.                                                         #
 ###################################################################################
 
-FROM ubuntu:20.04 AS base
-
-# install operating system dependencies
-RUN apt-get update && \
-    apt-get install -y curl
-
-# install node, based on instructions at https://github.com/nodesource/distributions#using-ubuntu-1
-RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - && \
-    apt-get install -y nodejs
+# See: docker/frontend/base/Dockerfile
+FROM ghcr.io/code-dot-org/frontend-base:latest AS base
 
 ##############################################################################
 # Source Code Layer                                                          #
@@ -28,9 +21,6 @@ RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - && \
 ##############################################################################
 
 FROM base AS source-code
-
-# Enable corepack
-RUN corepack enable
 
 WORKDIR /app
 

@@ -27,22 +27,20 @@ class CourseVersionTest < ActiveSupport::TestCase
     create(:single_unit_course, :with_course_offering, unit: @in_development_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, version_year: '1991', family_name: 'development2')
 
     @unit_group = create(:unit_group, name: 'course-instructed-by-teacher22', family_name: 'family-12', version_year: '1991', published_state: 'stable')
-    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course22', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil)
+    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course22')
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
     @unit_in_course.reload
     @unit_group.reload
     CourseOffering.add_course_offering(@unit_group)
 
     @pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
-    @pilot_unit = create(:script, pilot_experiment: 'my-experiment')
-    create(:single_unit_course, :with_course_offering, unit: @pilot_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-42', pilot_experiment: 'my-experiment')
+    @pilot_unit = create(:single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-42', pilot_experiment: 'my-experiment').first_unit
 
     @pilot_instructor = create(:facilitator, pilot_experiment: 'my-pl-experiment')
-    @pilot_pl_unit = create(:script, pilot_experiment: 'my-pl-experiment')
-    create(:single_unit_course, :with_course_offering, :pl_course, unit: @pilot_pl_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-52', pilot_experiment: 'my-pl-experiment')
+    @pilot_pl_unit = create(:single_unit_course, :with_course_offering, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-52', pilot_experiment: 'my-pl-experiment').first_unit
 
     @partner = create(:teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment')
-    @partner_unit = create(:script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment')
+    @partner_unit = create(:script, editor_experiment: 'ed-experiment')
     create(:single_unit_course, :with_course_offering, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-112', pilot_experiment: 'my-editor-experiment')
   end
 
