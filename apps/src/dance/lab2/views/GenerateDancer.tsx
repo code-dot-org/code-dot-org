@@ -4,14 +4,15 @@ import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
-import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
@@ -128,9 +129,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const [aiGenerateState, setAiGenerateState] = useState<
     'none' | 'generating' | 'done'
   >('none');
-
-  const [headImageUrl, setHeadImageUrl] = useState<string | undefined>(
-    undefined
+  const [dancerSignature, setDancerSignature] = useState<string | null>(
+    localStorage.getItem('dancer-ai-generate')
   );
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -154,15 +154,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     }
     variantHistory.current = newVariantsHistory;
 
-    const {head} = getGeneratedDancerAssets(adlibOption, choices, variant);
-
-    setHeadImageUrl(head);
-
-    trySetLocalStorage(
-      'dancer-ai-generate',
-      JSON.stringify({adlibOption, choices, variant})
-    );
-
+    const newDancerPayload = JSON.stringify({adlibOption, choices, variant});
+    trySetLocalStorage('dancer-ai-generate', newDancerPayload);
+    setDancerSignature(newDancerPayload);
     const elapsedTime = Date.now() - startTime;
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
@@ -176,6 +170,21 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   }, [generateDancerCache]);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
+
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
+  useEffect(() => {
+    if (!containerRef.current) {
+      return;
+    }
+    const resizeObserver = new ResizeObserver(() => {
+      setContainerHeight(containerRef.current?.clientHeight ?? 0);
+    });
+    resizeObserver.observe(containerRef.current);
+    setContainerHeight(containerRef.current.clientHeight ?? 0);
+    return () => resizeObserver.disconnect();
+  }, []);
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
@@ -239,7 +248,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           </>
         )}
         {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
-        {aiGenerateState === 'done' && (
+        {aiGenerateState === 'done' && isPreviewLoading && 'Loading preview...'}
+        {aiGenerateState === 'done' && !isPreviewLoading && (
           <>
             <div>Here is the dancer that was generated.</div>
 
@@ -280,14 +290,24 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           size="s"
         />
       </Guide>
-
-      <div className={moduleStyles.dancerContainer}>
-        <img
-          alt=""
-          src={
-            aiGenerateState === 'done' ? headImageUrl : dancerEmptyHeadShoulders
-          }
-        />
+      <div className={moduleStyles.dancerContainer} ref={containerRef}>
+        {aiGenerateState === 'generating' || !dancerSignature ? (
+          <img alt="" src={dancerEmptyHeadShoulders} />
+        ) : (
+          <>
+            <DancerCanvas
+              key={dancerSignature || 'none'}
+              size={containerHeight}
+              move="rest"
+              onLoadingChange={setIsPreviewLoading}
+            />
+            {isPreviewLoading && (
+              <div className={moduleStyles.spinnerOverlay}>
+                <Spinner size="large" />
+              </div>
+            )}
+          </>
+        )}
       </div>
     </div>
   );
