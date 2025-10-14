@@ -9,13 +9,14 @@ import {ChatButtonData} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
@@ -131,6 +132,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const levelName = instructionsProps.levelProperties.name;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
+  const dispatch = useAppDispatch();
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -272,7 +274,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             >
               <Button
                 className={styles.collapseButton}
-                onClick={() => setCollapsed(!collapsed)}
+                onClick={() => {
+                  setCollapsed(!collapsed);
+                  dispatch(setIsStandaloneCollapsed(!collapsed));
+                }}
                 isIconOnly={true}
                 icon={{
                   iconName: collapsed
