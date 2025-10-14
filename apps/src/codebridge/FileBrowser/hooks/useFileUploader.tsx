@@ -1,6 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {validateFileName as validateCodebridgeFileName} from '@codebridge/utils';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
+import {sendLab2AnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -64,7 +64,7 @@ export const useFileUploader = (
     (eventName: string, payload: Record<string, string>) => {
       switch (eventName) {
         case analyticsEvents.UPLOAD_FAILED: {
-          sendCodebridgeAnalyticsEvent(
+          sendLab2AnalyticsEvent(
             EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE,
             appName,
             payload
@@ -72,7 +72,7 @@ export const useFileUploader = (
           return;
         }
         case analyticsEvents.UPLOAD_UNACCEPTED_FILE: {
-          sendCodebridgeAnalyticsEvent(
+          sendLab2AnalyticsEvent(
             EVENTS.CODEBRIDGE_UPLOAD_FAILED,
             appName,
             payload

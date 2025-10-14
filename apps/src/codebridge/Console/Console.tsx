@@ -2,7 +2,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import RightButtons from '@codebridge/RightButtons/RightButtons';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils';
+import {sendLab2AnalyticsEvent} from '@codebridge/utils';
 import {FitAddon} from '@xterm/addon-fit';
 import {ImageAddon} from '@xterm/addon-image';
 import {Terminal} from '@xterm/xterm';
@@ -51,7 +51,7 @@ const Console: React.FunctionComponent = () => {
         .getConsoleManager()
         ?.clearTerminalLines();
       if (sendAnalytics) {
-        sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
+        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
       }
     },
     [appName]

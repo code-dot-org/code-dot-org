@@ -11,7 +11,7 @@ import {
   openImportFromBackpackPrompt as globalOpenImportFromBackpackPrompt,
   openSaveToBackpackPrompt as globalOpenSaveToBackpackPrompt,
 } from '@codebridge/FileBrowser/prompts';
-import {sendCodebridgeAnalyticsEvent as globalSendCodebridgeAnalyticsEvent} from '@codebridge/utils';
+import {sendLab2AnalyticsEvent as globalSendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';

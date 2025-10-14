@@ -1,7 +1,7 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {
   getFileNameWithNumberSuffix,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
 } from '@codebridge/utils';
 import React from 'react';
 
@@ -92,7 +92,7 @@ export const openSaveToBackpackPrompt = async ({
             ? EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE
             : EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_RENAME;
       }
-      const successCallback = () => sendCodebridgeAnalyticsEvent(successMetric);
+      const successCallback = () => sendLab2AnalyticsEvent(successMetric);
 
       const fileContents = {
         name: selectedFileName,

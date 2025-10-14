@@ -7,7 +7,7 @@ import {
   getFileNameWithNumberSuffix,
   isDuplicateFileName,
   DuplicateFileError,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
 } from '@codebridge/utils';
 import React from 'react';
 
@@ -65,7 +65,7 @@ export const openImportFromBackpackPrompt = async ({
           codebridgeI18n.closeWindowTryAgain(),
         'Backpack file delete error'
       ),
-      () => sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FROM_BACKPACK)
+      () => sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FROM_BACKPACK)
     );
   };
 
@@ -95,7 +95,7 @@ export const openImportFromBackpackPrompt = async ({
           );
           if (fileId) saveFile(fileId, fileContent);
         }
-        sendCodebridgeAnalyticsEvent(successMetric);
+        sendLab2AnalyticsEvent(successMetric);
       }
     );
   };

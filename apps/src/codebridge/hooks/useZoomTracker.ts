@@ -1,4 +1,4 @@
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
+import {sendLab2AnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import debounce from 'lodash/debounce';
 import {useEffect, useRef} from 'react';
 
@@ -36,7 +36,7 @@ export const useZoomTracker = (appName: string) => {
   useEffect(() => {
     const logZoomChange = (percent: number, direction: 'in' | 'out'): void => {
       const zoomPercent = percent.toString();
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_ZOOM, appName, {
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_ZOOM, appName, {
         zoomPercent: zoomPercent,
         direction,
       });

@@ -1,5 +1,5 @@
 import {LayoutKey, codebridgeLabsWithConsole} from '@codebridge/constants';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
+import {sendLab2AnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -100,7 +100,7 @@ export function useCodebridgeSettings(): Setting[] {
       const reduxAction =
         type === 'Console' ? setConsoleFontSize : setEditorFontSize;
       dispatch(reduxAction(selectedKey));
-      sendCodebridgeAnalyticsEvent(event, appName, {
+      sendLab2AnalyticsEvent(event, appName, {
         fontSize: selectedKey,
       });
     }

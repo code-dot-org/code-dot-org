@@ -8,7 +8,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
  * @param labType - An optional string representing the lab type.
  * @param payload - An optional object containing additional key-value pairs to include in the event payload.
  */
-export function sendCodebridgeAnalyticsEvent(
+export function sendLab2AnalyticsEvent(
   eventName: string,
   labType?: string,
   payload?: Record<string, string>

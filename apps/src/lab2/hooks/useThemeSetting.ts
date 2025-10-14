@@ -1,5 +1,5 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils';
+import {sendLab2AnalyticsEvent} from '@codebridge/utils';
 import {useMemo} from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -35,7 +35,7 @@ const useThemeSetting = (appName: AppName) => {
     if (signInState === SignInState.SignedIn) {
       new UserPreferences().setGlobalTheme(value);
     }
-    sendCodebridgeAnalyticsEvent(EVENTS.LAB2_THEME_CHANGE, appName, {
+    sendLab2AnalyticsEvent(EVENTS.LAB2_THEME_CHANGE, appName, {
       theme: value,
     });
   };

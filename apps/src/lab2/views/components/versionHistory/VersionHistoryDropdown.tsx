@@ -11,7 +11,7 @@ import FocusTrap from 'focus-trap-react';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 
-import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
 import useDropdownPosition from '@cdo/apps/lab2/hooks/useDropdownPosition';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -191,19 +191,15 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (selectedVersion === INITIAL_VERSION_ID) {
-      sendCodebridgeAnalyticsEvent(
-        EVENTS.CODEBRIDGE_VERSION_RESTORED,
-        appName,
-        {isInitialVersion: 'true'}
-      );
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_RESTORED, appName, {
+        isInitialVersion: 'true',
+      });
       closeDropdown();
       confirmStartOver();
     } else if (projectManager && selectedVersion) {
-      sendCodebridgeAnalyticsEvent(
-        EVENTS.CODEBRIDGE_VERSION_RESTORED,
-        appName,
-        {isInitialVersion: 'false'}
-      );
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_RESTORED, appName, {
+        isInitialVersion: 'false',
+      });
       setVersionLoading(true);
       setVersionLoadError(false);
       projectManager
@@ -259,11 +255,9 @@ const VersionHistoryDropdown: React.FunctionComponent<
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
       const isLatest = isLatestVersion(e.target.value);
       if (!isLatest) {
-        sendCodebridgeAnalyticsEvent(
-          EVENTS.CODEBRIDGE_VERSION_VIEWED,
-          appName,
-          {isInitialVersion: viewingInitialVersion.toString()}
-        );
+        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_VIEWED, appName, {
+          isInitialVersion: viewingInitialVersion.toString(),
+        });
       }
       if (viewingInitialVersion) {
         dispatch(previewStartSources({startSources}));

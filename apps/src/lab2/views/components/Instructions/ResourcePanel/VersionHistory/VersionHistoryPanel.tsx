@@ -4,7 +4,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -212,18 +212,14 @@ const VersionHistoryPanel: React.FunctionComponent<
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (selectedVersion === INITIAL_VERSION_ID) {
-      sendCodebridgeAnalyticsEvent(
-        EVENTS.CODEBRIDGE_VERSION_RESTORED,
-        appName,
-        {isInitialVersion: 'true'}
-      );
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_RESTORED, appName, {
+        isInitialVersion: 'true',
+      });
       confirmStartOver();
     } else if (projectManager && selectedVersion) {
-      sendCodebridgeAnalyticsEvent(
-        EVENTS.CODEBRIDGE_VERSION_RESTORED,
-        appName,
-        {isInitialVersion: 'false'}
-      );
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_RESTORED, appName, {
+        isInitialVersion: 'false',
+      });
       setVersionLoading(true);
       setVersionLoadError(false);
       projectManager
@@ -277,11 +273,9 @@ const VersionHistoryPanel: React.FunctionComponent<
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
       const isLatest = isLatestVersion(e.target.value);
       if (!isLatest) {
-        sendCodebridgeAnalyticsEvent(
-          EVENTS.CODEBRIDGE_VERSION_VIEWED,
-          appName,
-          {isInitialVersion: viewingInitialVersion.toString()}
-        );
+        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_VIEWED, appName, {
+          isInitialVersion: viewingInitialVersion.toString(),
+        });
       }
       if (viewingInitialVersion) {
         dispatch(previewStartSources({startSources}));

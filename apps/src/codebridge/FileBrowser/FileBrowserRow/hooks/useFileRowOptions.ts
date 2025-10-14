@@ -5,7 +5,7 @@ import {
   enableUserAddedSelectionContext,
   getFolderPath,
   getPossibleDestinationFoldersForFile,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
 } from '@codebridge/utils';
 import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
@@ -29,7 +29,7 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
  */
 const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
   fileDownload(file.contents, file.name);
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
 };
 
 /**
