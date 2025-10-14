@@ -23,6 +23,12 @@ export abstract class AiTutorContextHelper<T extends object> {
     } = await this.getAiTutorContext();
 
     const hiddenContextString = [
+      ...(userSelection
+        ? [
+            'The student is asking about this part of their current code:',
+            userSelection,
+          ]
+        : []),
       "Here is the student's current code:",
       sourceCode,
       ...(validationContents
@@ -41,12 +47,6 @@ export abstract class AiTutorContextHelper<T extends object> {
         ? [
             'Here is the documentation. (The student can view the documentation by clicking the book icon at the top of the workspace.):',
             documentation,
-          ]
-        : []),
-      ...(userSelection
-        ? [
-            'The student would like to focus on this subset of their current code:',
-            userSelection,
           ]
         : []),
     ].join('\n\n');

@@ -8,11 +8,10 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
-import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
 import {getStore} from '@cdo/apps/redux';
 import BrowserTextToSpeechWrapper from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 
-import ProjectContainer from '../projects/ProjectContainer';
+import MultiProjectContainer from '../projects/MultiProjectContainer';
 
 import RubricFABContainer from './components/rubrics/RubricFABContainer';
 import RubricWrapper from './components/rubrics/RubricWrapper';
@@ -32,11 +31,11 @@ const Lab2: React.FunctionComponent = () => {
               <DialogManager>
                 <MetricsAdapter />
                 <Lab2IdleTimer />
-                <ProjectContainer channelId={getStandaloneProjectId()}>
+                <MultiProjectContainer>
                   <AiChatDisabledProvider>
                     <LabViewsRenderer />
                   </AiChatDisabledProvider>
-                </ProjectContainer>
+                </MultiProjectContainer>
                 <RubricFABContainer />
               </DialogManager>
             </Lab2Wrapper>

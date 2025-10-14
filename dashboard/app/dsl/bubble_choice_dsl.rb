@@ -15,6 +15,13 @@ class BubbleChoiceDSL < ContentDSL
 
   def description(text) @hash[:description] = text end
 
+  def standalone
+    unless @hash[:uses_lab2]
+      raise "BubbleChoice standalone projects are only available with Lab2."
+    end
+    @hash[:is_project_level] = true
+  end
+
   def sublevels
     @hash[:sublevels]
   end

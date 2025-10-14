@@ -843,6 +843,25 @@
       }
     }
   },
+  "Dancelab_setGeneratedDancer": {
+    "text": "generated dancer do {NAME}",
+    "options": {
+      "NAME": {
+        "\"roll\"": "Body Roll",
+        "\"clap_high\"": "Clap High",
+        "\"dab\"": "Dab",
+        "\"double_jam\"": "Double Down",
+        "\"drop\"": "Drop",
+        "\"floss\"": "Floss",
+        "\"fresh\"": "Fresh",
+        "\"clown\"": "Gangnam",
+        "\"kick\"": "Star",
+        "\"this_or_that\"": "This or That",
+        "\"thriller\"": "Zombie",
+        "\"rest\"": "None"
+      }
+    }
+  },
   "Dancelab_setProp": {
     "text": "set {SPRITE} {PROPERTY} to {VAL} ",
     "options": {
@@ -2341,6 +2360,176 @@
   },
   "gamelab_yLocationOf": {
     "text": "y coordinate of {SPRITE}"
+  },
+  "GeneratedDancers_changeMoveEachLR": {
+    "text": "{GROUP} do {MOVE} {DIR} forever",
+    "options": {
+      "GROUP": {
+        "\"": "\"",
+        "s": "s"
+      },
+      "MOVE": {
+        "\"next\"": "(Next)",
+        "\"prev\"": "(Previous)",
+        "\"rand\"": "(Random)",
+        "MOVES.Roll": "Body Roll",
+        "MOVES.ClapHigh": "Clap High",
+        "MOVES.Dab": "Dab",
+        "MOVES.DoubleJam": "Double Down",
+        "MOVES.Drop": "Drop",
+        "MOVES.Floss": "Floss",
+        "MOVES.Fresh": "Fresh",
+        "MOVES.Clown": "Gangnam",
+        "MOVES.Kick": "Star",
+        "MOVES.ThisOrThat": "This or That",
+        "MOVES.Thriller": "Zombie",
+        "MOVES.Rest": "None"
+      },
+      "DIR": {
+        "-1": "←",
+        "1": "→"
+      }
+    }
+  },
+  "GeneratedDancers_changePropEachBy": {
+    "text": "change {GROUP} {PROPERTY} by {VAL}",
+    "options": {
+      "GROUP": {
+        "\"": "\"",
+        "s": "s"
+      },
+      "PROPERTY": {
+        "\"scale\"": "size",
+        "\"width\"": "width",
+        "\"height\"": "height",
+        "\"rotation\"": "rotation",
+        "\"x\"": "horizontal position",
+        "\"y\"": "vertical position"
+      }
+    }
+  },
+  "GeneratedDancers_makeAnonymousDanceSprite": {
+    "text": "make a new {COSTUME} at {LOCATION}",
+    "options": {
+      "COSTUME": {
+        "\"": "\""
+      },
+      "LOCATION": {
+        "{x: 200, y: 100}": "top",
+        "{x: 200, y: 300}": "bottom",
+        "{x: 100, y: 200}": "left",
+        "{x: 300, y: 200}": "right",
+        "{x: 200, y: 200}": "center",
+        "{x: 100, y: 100}": "top left",
+        "{x: 300, y: 100}": "top right",
+        "{x: 100, y: 300}": "bottom left",
+        "{x: 300, y: 300}": "bottom right",
+        "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "random"
+      }
+    }
+  },
+  "GeneratedDancers_makeNewDanceSpriteGroup": {
+    "text": "make {N} new {COSTUME}\n in a {LAYOUT}",
+    "options": {
+      "N": {
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10",
+        "11": "11",
+        "12": "12",
+        "13": "13",
+        "14": "14",
+        "15": "15",
+        "16": "16",
+        "17": "17",
+        "18": "18",
+        "19": "19",
+        "20": "20",
+        "21": "21",
+        "22": "22",
+        "23": "23",
+        "24": "24",
+        "25": "25",
+        "26": "26",
+        "27": "27",
+        "28": "28",
+        "29": "29",
+        "30": "30",
+        "31": "31",
+        "32": "32",
+        "33": "33",
+        "34": "34",
+        "35": "35",
+        "36": "36",
+        "37": "37",
+        "38": "38",
+        "39": "39",
+        "40": "40"
+      },
+      "COSTUME": {
+        "\"": "\""
+      },
+      "LAYOUT": {
+        "\"border\"": "border",
+        "\"inner\"": "inside square",
+        "\"diamond\"": "diamond",
+        "\"circle\"": "circle",
+        "\"grid\"": "grid",
+        "\"top\"": "top row",
+        "\"row\"": "row",
+        "\"bottom\"": "bottom row",
+        "\"left\"": "left column",
+        "\"column\"": "column",
+        "\"right\"": "right column",
+        "\"x\"": "criss-cross",
+        "\"plus\"": "plus",
+        "\"spiral\"": "spiral",
+        "\"infinity\"": "infinite line",
+        "\"random\"": "random"
+      }
+    }
+  },
+  "GeneratedDancers_setPropEach": {
+    "text": "set {GROUP} {PROPERTY} to {VAL}",
+    "options": {
+      "GROUP": {
+        "\"": "\"",
+        "s": "s"
+      },
+      "PROPERTY": {
+        "\"scale\"": "size",
+        "\"width\"": "width",
+        "\"height\"": "height",
+        "\"rotation\"": "rotation",
+        "\"x\"": "horizontal position",
+        "\"y\"": "vertical position",
+        "\"tint\"": "tint"
+      }
+    }
+  },
+  "GeneratedDancers_setPropRandomEach": {
+    "text": "randomize {GROUP} {PROPERTY}",
+    "options": {
+      "GROUP": {
+        "\"": "\"",
+        "s": "s"
+      },
+      "PROPERTY": {
+        "\"scale\"": "size",
+        "\"width\"": "width",
+        "\"height\"": "height",
+        "\"rotation\"": "rotation",
+        "\"x\"": "horizontal position",
+        "\"y\"": "vertical position",
+        "\"tint\"": "tint"
+      }
+    }
   },
   "Mikelab_addBehaviorSimple": {
     "text": "sprite {SPRITE} begins {BEHAVIOR}"

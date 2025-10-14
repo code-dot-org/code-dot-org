@@ -756,7 +756,8 @@ module LevelsHelper
 
   def lab2_options
     raise ArgumentError.new("#{@level} is not a Lab2 level") unless @level.uses_lab2?
-    app_options = {channel: view_options[:channel], level_id: @level.id}
+    app_options = {level_id: @level.id}
+    app_options[:channel] = view_options[:channel] if @level.try(:is_project_level)
     level_options = level_view_options(@level.id)
     # Add edit_blocks to app_options if it exists in level_options
     if level_options[:edit_blocks]

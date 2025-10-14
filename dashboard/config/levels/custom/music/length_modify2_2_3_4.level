@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-10-01T22:45:29.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "#### AI started the remix. Now you get to take control!\r\n\r\n1. **Try changing a sound.**\r\n2. You can make other changes if you want to. \r\n3. When you are happy with your remix, press **Continue**.\r\n\r\n---\r\n\r\n***Up next: start coding your dance party.***\r\n\r\n",
+    "long_instructions": "#### AI started the remix. Now you get to take control!\r\n\r\n1. **Try changing a few sounds.**\r\n2. You can make other changes if you want to. \r\n3. When you are happy with your remix, press **Continue**.\r\n\r\n---\r\n\r\n***Up next: start coding your dance party.***\r\n\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -68,8 +69,7 @@
     "thumbnail_url": "https://images.code.org/dec7f10131962bf7a646aa26d4f4f9a3-botmusic.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-01T22:45:29.853+00:00\",\"changed\":[\"cloned from \\\"length_modify2_2_3\\\"\"],\"cloned_from\":\"length_modify2_2_3\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-01T22:45:29.853+00:00\",\"changed\":[\"cloned from \\\"length_modify2_2_3\\\"\"],\"cloned_from\":\"length_modify2_2_3\"},{\"changed_at\":\"2025-10-03 04:51:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

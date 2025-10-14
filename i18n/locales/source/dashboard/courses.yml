@@ -636,7 +636,7 @@ en:
           description_teacher: "##### **Participants will:**\n\n-   ##### Prepare to teach CS Discoveries.\n-   ##### Practice key concepts in the CS Discoveries curriculum.\n-   ##### Grow in their understanding of equitable CS education.\n-   ##### Develop empathy for the student experience.\n-   ##### Become a part of a network of teachers who are doing similar work."
           version_title: '2024'
         vpl-csa-2024:
-          title: CSA Virtual Professional Learning '24-'25
+          title: CSA Virtual Professional Learning
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -3805,7 +3805,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: "'25-'26"
         lori-sandbox-2025:
           title: lori-sandbox-2025
           description_short: ''
@@ -5362,7 +5362,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: "'25-'26"
+          version_title: ''
         csp3-research-mxghyt:
           title: CSP Unit 3 - Intro to Programming (subgoals)
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
@@ -5401,6 +5401,30 @@ en:
           version_title: ''
         artificial-intelligence-foundations-v2-2025:
           title: artificial-intelligence-foundations-v2-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-pilot2-course:
+          title: hoai-dance-pilot2-course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-pilot3:
+          title: hoai-dance-pilot3
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-pilot4:
+          title: hoai-dance-pilot4
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        dani-test:
+          title: dani-test
           description_short: ''
           description_student: ''
           description_teacher: ''
