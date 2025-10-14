@@ -23642,3 +23642,17 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        hoai-dance-5:
+          lessons:
+            lesson-1:
+              name: Pilot 5
+          lesson_groups: {}
+          name: hoai-dance-5
+          title: hoai-dance-5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-hoai-pl-unit:
+          lessons: {}
+          lesson_groups: {}

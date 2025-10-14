@@ -556,7 +556,6 @@ const EVENTS = {
     'User changed font size on codebridge editor',
   CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE:
     'User changed font size on codebridge console',
-  CODEBRIDGE_THEME_CHANGE: 'User changed theme on codebridge',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
@@ -619,6 +618,7 @@ const EVENTS = {
 
   // Lab2
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
+  LAB2_THEME_CHANGE: 'User changed theme',
 
   // AI Teaching Assistant - Differentiation
 };
