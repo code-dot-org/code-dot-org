@@ -1,5 +1,5 @@
-@import '../../../mixins.scss';
+@use '../../../mixins.scss' as mixins;
 
 .centerHeaderContent {
-  @include center-header-content(true);
+  @include mixins.center-header-content(true);
 }
