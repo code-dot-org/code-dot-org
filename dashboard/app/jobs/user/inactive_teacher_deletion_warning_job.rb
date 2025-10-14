@@ -60,8 +60,10 @@ class User
     end
 
     private def mark_warning_email_sent(teacher_id)
-      user_data_retention_status = ::User::DataRetentionStatus.find_or_initialize_by(user_id: teacher_id)
-      user_data_retention_status.update!(deletion_warning_email_sent_at: Time.current)
+      ActiveRecord::Base.connected_to(role: :writing) do
+        user_data_retention_status = ::User::DataRetentionStatus.find_or_initialize_by(user_id: teacher_id)
+        user_data_retention_status.update!(deletion_warning_email_sent_at: Time.current)
+      end
     end
   end
 end
