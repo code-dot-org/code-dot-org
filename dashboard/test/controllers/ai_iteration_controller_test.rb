@@ -29,10 +29,10 @@ class AiIterationControllerTest < ActionController::TestCase
   method: :get,
   response: :forbidden
 
-  # Levelbuilder cannot access the tools page
+  # Levelbuilder can access the tools page
   test_user_gets_response_for :tools,
-  name: "levelbuilder_no_access_test",
+  name: "levelbuilder_access_test",
   user: :levelbuilder,
   method: :get,
-  response: :forbidden
+  response: :success
 end
