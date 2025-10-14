@@ -183,8 +183,8 @@ async function patchInput(id: number) {
 async function loadPackages() {
   const loadErrors: string[] = [];
   // We explicitly load all dependencies of the packages we want to be available to users,
-  // matplotlib and numpy, as well as our custom packages. We explicitly load dependencies
-  // so that on retry if the top-level package was loaded successfully but a dependency
+  // matplotlib and numpy, as well as our custom packages. We do this so that on retry
+  // if the top-level package was loaded successfully, but a dependency
   // failed, we will stil try to reload the dependency.
   await pyodide.loadPackage(
     [

@@ -162,10 +162,6 @@ const setUpPyodideWorker = () => {
         break;
       case 'system_error':
         getStore().dispatch(setHasError(true));
-        console.log({
-          parsedErrorMessage: parseErrorMessage(message, true),
-          message,
-        });
         writeConsoleMessage(
           getSystemError(parseErrorMessage(message, true), appName)
         );
