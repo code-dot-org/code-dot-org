@@ -50,9 +50,10 @@ module User::AiAccessible
   end
 
   def can_access_ai_tutor?(client_type)
-    # If the request is coming from AiTutor, trust the client to decide
-    # if it can access AiTutor. This allows easy testing of AiTutor using a url param.
-    client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
+    # If the request is coming from AiTutor or FlowLab, trust the client to decide
+    # if it can access the chat backend. This allows easy testing of AiTutor using a url param.
+    client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ||
+      client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
   end
 
   private def ai_tutor_feature_globally_disabled?

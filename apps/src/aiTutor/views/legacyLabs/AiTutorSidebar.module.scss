@@ -1,0 +1,60 @@
+.ai-tutor-sidebar {
+  width: 45px;
+  position: absolute;
+  right: 0;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: aqua;
+
+    .bot-icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bot-icon {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+  }
+}
+
+// AiTutorSidebarSuggestedPrompts styles
+.ai-tutor-suggested-prompt-item {
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 0;
+  border-bottom: 2px solid lightgrey;
+
+  .icon-code {
+    color: var(--text-success-primary-fixed);
+  }
+
+  .icon-lightbulb {
+    color: var(--text-warning-primary-fixed);
+  }
+
+  .icon-book {
+    color: var(--text-info-primary-fixed);
+  }
+
+  .icon-brain {
+    color: purple;
+  }
+
+  .icon-bug {
+    color: red;
+  }
+
+  .icon-star {
+    color: goldenrod;
+  }
+}

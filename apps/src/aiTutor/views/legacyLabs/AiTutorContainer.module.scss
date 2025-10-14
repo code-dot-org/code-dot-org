@@ -1,0 +1,34 @@
+$header-height: 31px;
+$bot-icon-size: $header-height - 5px;
+
+.container {
+  width: 325px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: $header-height;
+
+  .header {
+    width: 100%;
+    height: $header-height;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    button {
+      position: absolute;
+      right: 0;
+    }
+
+    .mini-bot-icon {
+      width: $bot-icon-size;
+      height: $bot-icon-size;
+      object-fit: contain;
+    }
+
+    .header-text {
+      font-weight: 500;
+    }
+  }
+}

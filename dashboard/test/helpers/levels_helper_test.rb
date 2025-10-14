@@ -1071,7 +1071,7 @@ class LevelsHelperTest < ActionView::TestCase
       "<script src=\"/assets/js/blockly.js\"></script>" \
       "<script src=\"/assets/js/en_us/blockly_locale.js\"></script>" \
       "<script src=\"/assets/js/en_us/maze_locale.js\"></script>" \
-      "<script src=\"/assets/js/maze.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;#{CDO.studio_url('/blockly/&quot', CDO.default_scheme)};,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>" \
+      "<script src=\"/assets/js/maze.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>" \
       "<script src=\"/assets/js/embedBlocks.js\"></script>"
 
     unstub(:request)
@@ -1130,12 +1130,9 @@ class LevelsHelperTest < ActionView::TestCase
   test "lab2_options generates options for Lab2 levels" do
     @level = create(:music)
 
-    channel = 'channel123'
-    view_options(channel: channel)
     level_view_options(@level.id, share: true)
 
     options = lab2_options
-    assert_equal channel, options["channel"]
     assert_equal @level.id, options["levelId"]
     assert_equal true, options["share"]
 

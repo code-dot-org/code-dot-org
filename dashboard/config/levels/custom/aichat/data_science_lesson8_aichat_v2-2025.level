@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:08:26.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Ask AI for Cleaning Tips\r\n\r\nUse AI Chat to clean a messy data entry and compare its approach to yours.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Ask AI Chat:\r\n   - *How would you clean this messy pizza topping entry: \"don’t like pepperonni but i'll eat peproni if itz there\"?*\r\n   - *Should this entry be deleted or changed? Why?*\r\n2. Review AI Chat’s answer.\r\n3. Compare it to your own decision and your partner's.\r\n\r\n\r\nWant AI Chat to review your work?\r\n\r\n::: details [**Here's how to download your dataset as a PDF**]\r\n![](https://images.code.org/4997fb44a36f4e902f3ce8fe5808605f-image-1744828202871.29.44 PM.png)\r\n:::\r\n\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful AI assistant trained to support students with cleaning messy data entries. Students are working with survey responses about pizza preferences, and they may ask how to clean unclear or informal responses.\n\nWhen students ask how to clean an entry, you should:\n1. Suggest a cleaned version that preserves the original meaning.\n2. Explain your reasoning briefly and clearly.\n3. If asked whether to delete or keep the entry, provide a respectful and thoughtful recommendation.\n4. Avoid making assumptions that go beyond the text. If something is unclear, say so.\n\nKeep your tone friendly, respectful, and student-appropriate. Be very concise and avoid jargon.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "Pizza Topping Survey Data.pdf": "80960f7a-f37e-4049-b579-ad3bd19330fa.pdf"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:26.284+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson8_aichat_2025\\\"\"],\"cloned_from\":\"data_science_lesson8_aichat_2025\"}]"
+}]]></config>
+</Aichat>

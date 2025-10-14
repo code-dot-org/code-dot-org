@@ -1,5 +1,5 @@
-@use '../../layout/variables.scss' as variables;
-@use '../../../../../mixins.scss' as mixins;
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+@use '@cdo/apps/mixins.scss' as mixins;
 
 .resourcePanel {
   display: flex;
@@ -48,6 +48,17 @@
         height: 100%;
         width: 1px;
         background-color: var(--background-neutral-primary);
+      }
+
+      // Add a border to the start of the selected tab.
+      &::before {
+        content: '';
+        position: absolute;
+        inset-inline-start: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--borders-brand-teal-primary);
       }
     }
 
@@ -126,4 +137,10 @@
       pointer-events: none;
     }
   }
+}
+
+.navigationFooter {
+  padding: 10px;
+  background-color: var(--background-neutral-secondary);
+  border-top: variables.$default-border;
 }

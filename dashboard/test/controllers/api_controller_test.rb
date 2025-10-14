@@ -1852,7 +1852,7 @@ class ApiControllerTest < ActionController::TestCase
   describe '#unit_summary' do
     let!(:user) {create(:teacher)}
     let(:course) {create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
-    let(:unit) {create(:unit, :with_levels, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:unit) {create(:unit, :with_levels)}
     let!(:unit_name) {unit.name}
     let(:unit_position) {1}
     let!(:unit_group_unit) {create(:unit_group_unit, unit_group: course, script: unit, position: unit_position)}

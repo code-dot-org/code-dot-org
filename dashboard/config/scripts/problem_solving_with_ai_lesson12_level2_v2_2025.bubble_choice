@@ -1,0 +1,9 @@
+name 'problem-solving-with-ai-lesson12-level2_v2-2025'
+display_name 'AI In The Community'
+description 'Use AI Chat to help you summarize and pull out key info from the articles on your topic.'
+
+sublevels
+level 'problem-solving-with-ai-lesson12-level2a_v2-2025'
+level 'problem-solving-with-ai-lesson12-level2b_v2-2025'
+level 'problem-solving-with-ai-lesson12-level2c_v2-2025'
+level 'problem-solving-with-ai-lesson12-level2d_v2-2025'

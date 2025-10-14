@@ -1,9 +1,9 @@
 {
   "key": "teaching-ai-powered-theats-and-defenses",
-  "display_name": "teaching-ai-powered-theats-and-defenses",
+  "display_name": "Teaching AI-Powered Threats and Defenses [PL Pilot]",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
+  "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
   "grade_levels": null,
   "header": null,
@@ -12,10 +12,12 @@
   "school_subject": null,
   "device_compatibility": null,
   "description": null,
-  "professional_learning_program": null,
+  "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_key": null,
+  "self_paced_pl_course_offering_key": "teaching-ai-powered-theats-and-defenses",
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

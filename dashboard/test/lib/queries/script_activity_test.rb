@@ -25,7 +25,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal a.script, Queries::ScriptActivity.primary_student_unit(@user)
 
     unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    course_script = create(:script, published_state: nil)
+    course_script = create(:script)
     create(:unit_group_unit, unit_group: unit_group, script: course_script, position: 1)
     course_script.reload
     create(:user_script, user: @user, started_at: Time.now - 12.hours, script: course_script)
@@ -63,7 +63,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal a.script, Queries::ScriptActivity.primary_pl_unit(teacher)
 
     unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    course_script = create(:script, published_state: nil)
+    course_script = create(:script)
     create(:unit_group_unit, unit_group: unit_group, script: course_script, position: 1)
     course_script.reload
     create(:user_script, user: teacher, started_at: Time.now - 12.hours, script: course_script)

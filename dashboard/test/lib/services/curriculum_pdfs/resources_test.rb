@@ -71,9 +71,11 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
     lesson = create(:lesson, script: script)
     resource = create(:resource, url: "test.pdf", include_in_pdf: false)
     verified_teacher_resource = create(:resource, url: "verified-teacher-test.pdf", include_in_pdf: true, audience: 'Verified Teacher')
+    embed_only_resource = create(:resource, url: "embed-only-test.pdf", include_in_pdf: true, embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
 
     lesson.resources << resource
     lesson.resources << verified_teacher_resource
+    lesson.resources << embed_only_resource
     lesson_group.lessons << lesson
     script.reload
     FileUtils.stubs(:cp)

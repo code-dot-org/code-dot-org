@@ -107,9 +107,6 @@ const theme = createTheme({
     strong: {
       fontWeight: 600,
     },
-    extraStrong: {
-      fontWeight: 700,
-    },
     em: {
       fontStyle: 'italic',
     },

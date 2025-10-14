@@ -9,7 +9,7 @@ module CertificatesHelper
   end
 
   def certificate_image_url_for(name)
-    ApplicationController.helpers.image_url("certificates/#{name}", host: CDO.studio_url('', CDO.default_scheme))
+    CDO.studio_url("blockly/media/certificates/#{name}", CDO.default_scheme)
   end
 
   def certificate_image_url(name, course, donor)

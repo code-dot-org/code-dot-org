@@ -1,8 +1,10 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Image from '@code-dot-org/component-library/image';
+import Link from '@code-dot-org/component-library/link';
 import {
   Heading3,
+  BodyTwoText,
   BodyThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
@@ -15,6 +17,7 @@ import moduleStyles from './courseOfferingExpandedCard.module.scss';
 
 interface CourseOfferingExpandedCardProps {
   courseOffering: CourseOffering;
+  getRelatedCurriculums: (course: CourseOffering) => CourseOffering[];
   onClose: () => void;
   actionRowContent?: React.ReactNode;
   translatedGradeRange: [string, string];
@@ -28,15 +31,17 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
   CourseOfferingExpandedCardProps
 > = ({
   courseOffering,
+  getRelatedCurriculums,
   onClose,
   actionRowContent,
   isThisCourseForTeachers,
   courseDurationLabel,
   translatedGradeRange,
   translatedSubjectsAndTopicsTitlesArray,
-  // relatedProposalsContent,
-  // relatedProposalsHeader,
+  relatedProposalsContent,
+  relatedProposalsHeader,
 }) => {
+  const relatedCurriculums = getRelatedCurriculums(courseOffering);
   return (
     <div className={moduleStyles.courseOfferingExpandedCardContainer}>
       <div className={moduleStyles.arrowContainer} />
@@ -85,34 +90,41 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
             )}
             {courseOffering.image && <Image src={courseOffering.image} />}
           </div>
-          {/*TODO: Bring and refactor this functionality back in scope of
-                 https://codedotorg.atlassian.net/browse/ACQ-3467*/}
-          {/*{courseOffering.available_resources &&*/}
-          {/*  !!Object.keys(courseOffering.available_resources).length && (*/}
-          {/*    <div className={moduleStyles.additionalDetails}>*/}
-          {/*      <div>*/}
-          {/*        <FontAwesomeV6Icon*/}
-          {/*          iconName="book-open-cover"*/}
-          {/*          iconStyle="solid"*/}
-          {/*        />*/}
-          {/*        <BodyThreeText noMargin>*/}
-          {/*          <StrongText>Associated Curriculum:</StrongText>*/}
-          {/*        </BodyThreeText>*/}
-          {/*        {Object.keys(courseOffering.available_resources).length &&*/}
-          {/*          Object.keys(courseOffering.available_resources).map(key => (*/}
-          {/*            <Link*/}
-          {/*              key={key}*/}
-          {/*              href={*/}
-          {/*                courseOffering.available_resources*/}
-          {/*                  ? courseOffering.available_resources[key]*/}
-          {/*                  : '#'*/}
-          {/*              }*/}
-          {/*              text={key}*/}
-          {/*            />*/}
-          {/*          ))}*/}
-          {/*      </div>*/}
-          {/*    </div>*/}
-          {/*  )}*/}
+          {relatedCurriculums?.length && (
+            <div className={moduleStyles.additionalDetails}>
+              <div>
+                <FontAwesomeV6Icon
+                  iconName="book-open-cover"
+                  iconStyle="solid"
+                />
+                <BodyThreeText noMargin>
+                  <StrongText>Associated Curriculum:</StrongText>
+                </BodyThreeText>
+                {relatedCurriculums.map(
+                  ({display_name, course_version_path}, index) => (
+                    <React.Fragment key={display_name}>
+                      <Link
+                        size="s"
+                        key={display_name}
+                        href={course_version_path}
+                        text={display_name}
+                      />
+                      {index < relatedCurriculums.length - 1 && (
+                        <BodyThreeText
+                          className={
+                            moduleStyles.associatedCurriculumsSeparator
+                          }
+                          noMargin
+                        >
+                          •
+                        </BodyThreeText>
+                      )}
+                    </React.Fragment>
+                  )
+                )}
+              </div>
+            </div>
+          )}
 
           {actionRowContent && (
             <div className={moduleStyles.actionRowContent}>
@@ -121,20 +133,20 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
           )}
         </div>
         <div className={moduleStyles.right}>
-          {/*{relatedProposalsContent && (*/}
-          {/*  <>*/}
-          {/*    <div className={moduleStyles.top}>*/}
-          {/*      {relatedProposalsHeader && (*/}
-          {/*        <BodyTwoText>*/}
-          {/*          <StrongText>{relatedProposalsHeader}</StrongText>*/}
-          {/*        </BodyTwoText>*/}
-          {/*      )}*/}
-          {/*    </div>*/}
-          {/*    <div className={moduleStyles.related}>*/}
-          {/*      {relatedProposalsContent}*/}
-          {/*    </div>*/}
-          {/*  </>*/}
-          {/*)}*/}
+          {relatedProposalsContent && (
+            <>
+              <div className={moduleStyles.top}>
+                {relatedProposalsHeader && (
+                  <BodyTwoText noMargin>
+                    <StrongText>{relatedProposalsHeader}</StrongText>
+                  </BodyTwoText>
+                )}
+              </div>
+              <div className={moduleStyles.related}>
+                {relatedProposalsContent}
+              </div>
+            </>
+          )}
 
           <CloseButton
             aria-label="Close expanded card"

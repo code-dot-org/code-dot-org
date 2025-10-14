@@ -1,7 +1,5 @@
 import React from 'react';
 
-import dancePartyActivityAiEditionImg from '@cdo/static/dance/hoc/dance-party-activity-ai-edition.png';
-
 import TwoColumnActionBlock from './TwoColumnActionBlock';
 
 export default {
@@ -14,7 +12,9 @@ export const Basic = () => (
     heading={'Heading goes here'}
     subHeading={'Subheading goes here'}
     description={'Description goes here'}
-    imageUrl={dancePartyActivityAiEditionImg}
+    imageUrl={
+      'https://code.org/images/dance-hoc/dance-party-activity-ai-edition.png'
+    }
     buttons={[
       {
         id: 'your_school_professional_learning',
@@ -37,7 +37,9 @@ export const ExtraButtonText = () => (
     heading={'Heading goes here'}
     subHeading={'Subheading goes here'}
     description={'Description goes here'}
-    imageUrl={dancePartyActivityAiEditionImg}
+    imageUrl={
+      'https://code.org/images/dance-hoc/dance-party-activity-ai-edition.png'
+    }
     buttons={[
       {
         id: 'your_school_professional_learning',

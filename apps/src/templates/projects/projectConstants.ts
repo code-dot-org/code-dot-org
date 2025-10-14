@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 import {Channel} from '@cdo/apps/lab2/types';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import musicNoteProjectCardImage from '@cdo/static/music/music-note-project-card.png';
 import pythonlabProjectCardImage from '@cdo/static/pythonlab/pythonlab-project-card.png';
 
@@ -82,6 +81,8 @@ export const PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE: {
 export const PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE: {
   [projectType: string]: string;
 } = {
-  music: studio('/shared/images/courses/logo_music.png'),
-  pythonlab: studio('/shared/images/courses/logo_pythonlab.png'),
+  music: '/shared/images/fill-70x70/courses/logo_music.png',
+  pythonlab: '/shared/images/fill-70x70/courses/logo_pythonlab.png',
+  // Temporary placeholder
+  music_dance_ai: '/blockly/media/dance/placeholder.png',
 };

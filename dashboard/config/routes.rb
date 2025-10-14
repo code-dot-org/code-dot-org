@@ -1,7 +1,8 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
-  mount Marketing::Engine => '/marketing'
+  draw :marketing
+
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
@@ -87,6 +88,7 @@ Dashboard::Application.routes.draw do
     end
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
+    patch '/api/v1/user_scripts/course/:course_id/unit/:script_id', to: 'api/v1/user_scripts#update'
 
     get '/download/:product', to: 'hoc_download#index'
 
@@ -735,11 +737,11 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
-    post '/lti/v1/integrations', to: 'lti_v1#create_integration'
-    get '/lti/v1/integrations', to: 'lti_v1#new_integration'
     post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+
     namespace :lti do
       namespace :v1 do
+        resources :integrations, only: [:new, :create]
         resource :feedback, controller: :feedback, only: %i[create show]
         controller :dynamic_registration do
           get 'dynamic_registration', action: :new_registration
@@ -1303,6 +1305,7 @@ Dashboard::Application.routes.draw do
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]
+    resource :teaching_profile_data, only: [:show, :create, :update]
 
     resources :aidiff_threads, only: [:create, :index, :show] do
       collection do

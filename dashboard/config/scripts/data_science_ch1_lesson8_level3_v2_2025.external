@@ -1,0 +1,24 @@
+name 'data-science-ch1-lesson8-level3_v2-2025'
+title 'Check for Understanding'
+
+
+markdown <<MARKDOWN
+#Check for Understanding
+
+Open the following dataset and make a copy:
+
+<a href="https://docs.google.com/spreadsheets/d/1L8eYtlivLjxu3VY6oA1_e9LsI9hHDv3Lh9TT4tyOXUs/edit?usp=drivesdk" target="_blank">Google Sheets - Pizza Choice</a>
+
+1. For each response (one per row), decide if you want to:
+    - Keep it the same
+    - Delete it
+    - Change it
+
+2. Put your cleaned data response in the second column.
+
+3. After cleaning a few entries, use AI Chat on the next level to check your work.
+
+4. When you finish cleaning your dataset, graph it!
+
+![Data set showing pizza topping preferences](https://images.code.org/65b4896361351607f1789eb12ffc6e34-image-1744834320019.11.30 PM.png)
+MARKDOWN

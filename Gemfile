@@ -374,7 +374,7 @@ gem 'rack-cors', '~> 2.0.1'
 # older versions depend on http-parser which breaks some developer builds.
 gem 'http', '~> 5.0'
 
-gem 'statsig', '~> 1.33'
+gem 'statsig', '~> 2.5.5'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'

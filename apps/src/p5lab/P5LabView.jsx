@@ -140,7 +140,8 @@ class P5LabView extends React.Component {
     const hideBackgrounds = !this.props.isBackground && this.props.isBlockly;
     const hideCostumes = this.props.isBackground && this.props.isBlockly;
     const channelId = this.getChannelId();
-
+    // If we have a scriptId we can infer that we are in a curriculum level.
+    const inLevel = !!window.appOptions.scriptId;
     return (
       <div style={codeModeStyle}>
         <div
@@ -188,7 +189,10 @@ class P5LabView extends React.Component {
           />
         )}
         <VisualizationResizeBar />
-        <InstructionsWithWorkspace>
+        <InstructionsWithWorkspace
+          labType={this.props.labType.toLowerCase()}
+          inLevel={inLevel}
+        >
           <CodeWorkspace withSettingsCog={!this.props.isBlockly} />
           <ModalFunctionEditor />
         </InstructionsWithWorkspace>
