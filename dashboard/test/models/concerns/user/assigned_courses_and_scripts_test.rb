@@ -592,12 +592,12 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       end
     end
 
-    describe '#recent_student_courses_and_units' do
-      subject(:recent_student_courses_and_units) {student.recent_student_courses_and_units}
+    describe '#recent_student_courses' do
+      subject(:recent_student_courses) {student.recent_student_courses}
 
       it 'returns both courses and scripts' do
-        _(recent_student_courses_and_units.length).must_equal 1
-        course_data = recent_student_courses_and_units.first
+        _(recent_student_courses.length).must_equal 1
+        course_data = recent_student_courses.first
 
         _(course_data[:name]).must_equal 'csd'
         _(course_data[:title]).must_equal 'Computer Science Discoveries'

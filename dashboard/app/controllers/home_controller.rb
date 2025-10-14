@@ -140,7 +140,7 @@ class HomeController < ApplicationController
     @show_school_info_interstitial = params[:showSchoolInfoInterstitial]
     @show_section_creation_celebration_dialog = params[:showSectionCreationDialog]
 
-    @homepage_data[:courses] = current_user.recent_student_courses_and_units
+    @homepage_data[:courses] = current_user.recent_student_courses
 
     @homepage_data[:hasFeedback] = TeacherFeedback.has_feedback?(current_user.id)
 

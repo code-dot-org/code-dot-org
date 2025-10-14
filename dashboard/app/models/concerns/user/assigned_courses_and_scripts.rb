@@ -171,7 +171,7 @@ module User::AssignedCoursesAndScripts
 
   # Return a collection of courses for the user.
   # @return [Array{CourseData}] an array of hashes of course data
-  def recent_student_courses_and_units
+  def recent_student_courses
     courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
   end
 
