@@ -12,6 +12,8 @@ import {
   AnalyticsProperties,
 } from '../types';
 
+import UploadButton, {UploadButtonProps} from './assets/UploadButton';
+
 import moduleStyles from './UserChatMessageEditor.module.scss';
 
 interface UserChatMessageEditorProps {
@@ -21,6 +23,12 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
+
+  /** UploadButton props */
+  uploadDisabled?: UploadButtonProps['isDisabled'];
+  levelName?: UploadButtonProps['levelName'];
+  buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
+  hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
 }
 
 /**
@@ -35,6 +43,10 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatButtons,
   hiddenContextCallback,
   multimodalAvailable,
+  levelName,
+  hasStarterAssets,
+  buildAssetUrl,
+  uploadDisabled,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
@@ -118,7 +130,18 @@ const UserChatMessageEditor: React.FunctionComponent<
         disabled={disabled}
         editorContainerClassName={editorContainerClassName}
         ref={inputRef}
-      />
+      >
+        {multimodalAvailable && buildAssetUrl && levelName && (
+          <div className={moduleStyles.buttonRow}>
+            <UploadButton
+              isDisabled={!!uploadDisabled}
+              levelName={levelName}
+              hasStarterAssets={hasStarterAssets}
+              buildAssetUrl={buildAssetUrl}
+            />
+          </div>
+        )}
+      </UserMessageEditor>
     </>
   );
 };

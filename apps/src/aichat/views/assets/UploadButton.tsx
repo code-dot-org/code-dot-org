@@ -25,7 +25,7 @@ import {
 } from '../../redux';
 import {AssetSource, ChatAsset} from '../../types';
 
-interface UploadButtonProps {
+export interface UploadButtonProps {
   isDisabled: boolean;
   levelName: string;
   buildAssetUrl: (asset: ChatAsset) => string;
@@ -173,7 +173,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
   };
 
   const commonProps = {
-    size: 's',
+    size: 'xs',
     disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
   } as const;
 
