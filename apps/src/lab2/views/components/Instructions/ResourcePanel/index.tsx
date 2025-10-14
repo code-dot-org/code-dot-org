@@ -113,7 +113,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 }) => {
   const {theme} = useTheme();
   const {showRubric} = useRubric();
-  const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
+  const [currentTab, setCurrentTab] = useState<Tabs | null>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
@@ -233,6 +233,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   ]);
 
   useEffect(() => {
+    if (currentTab === null) {
+      return;
+    }
     if (!(currentTab in availableTabs)) {
       // If the current tab is no longer available, switch to the first available tab.
       setCurrentTab(getTypedKeys(availableTabs)[0] || Tabs.Instructions);
@@ -275,6 +278,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               <Button
                 className={styles.collapseButton}
                 onClick={() => {
+                  // If currently collapsed, we'll show the first tab when panel is expanded.
+                  if (collapsed) {
+                    setCurrentTab(getTypedKeys(availableTabs)[0]);
+                  } else {
+                    // If currently expanded, we'll hide the panel and no tab will be selected.
+                    setCurrentTab(null);
+                  }
                   setCollapsed(!collapsed);
                   dispatch(setIsStandaloneCollapsed(!collapsed));
                 }}
@@ -322,6 +332,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                         : undefined,
                     }}
                     aria-label={tabInfo[tab].title}
+                    disabled={collapsed}
                   />
                 </div>
               </WithTooltip>
@@ -359,7 +370,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           </WithTooltip>
         </div>
       </div>
-      {!collapsed && (
+      {!collapsed && currentTab && (
         <div className={styles.panels}>
           <PanelContainer
             id={currentTab}
