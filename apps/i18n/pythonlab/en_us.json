@@ -6,7 +6,6 @@
   "consoleOnly": "Console only",
   "consoleOnlyDescription": "A project that outputs to the console.",
   "inputFailed": "We're sorry, input is unavailable at this time. Input may not work in a private or incognito window. If you are in a standard browser window, please try refreshing the page. If the issue persists, contact support@code.org.",
-  "loadFailed": "We're sorry, we hit an issue setting up Python Lab, and you may see errors. Please try refreshing the page. If the issue persists, contact support@code.org.",
   "missingGenericModuleError": "We're sorry, we hit an issue loading a module. You may see issues running your code. Please try refreshing the page. If the issue persists, contact support@code.org.",
   "missingModuleError": "We're sorry, we hit an issue loading {module}. You may see issues running your code. Please try refreshing the page. If the issue persists, contact support@code.org.",
   "noCode": "You have no code to run.",
