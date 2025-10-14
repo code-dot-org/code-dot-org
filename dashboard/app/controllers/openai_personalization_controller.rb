@@ -2,8 +2,6 @@ require 'json'
 
 class OpenaiPersonalizationController < ApplicationController
   authorize_resource class: false
-  # Need to modify this... modify abilities.rb?
-  skip_authorization_check only: [:match_teaching_profile]
 
   # POST /openai/match_teaching_profile
   def match_teaching_profile
