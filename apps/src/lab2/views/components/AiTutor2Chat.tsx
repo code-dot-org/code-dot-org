@@ -3,7 +3,11 @@ import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesom
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
-import {ChatButtonClickHandler, ChatButtonData} from '@cdo/apps/aichat/types';
+import {
+  ChatButtonClickHandler,
+  ChatButtonData,
+  ResponseSchemaSettings,
+} from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
 import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
@@ -25,6 +29,7 @@ interface AiTutor2ChatProps {
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPromptName?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -35,9 +40,11 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPromptName,
+  aiTutorResponseSchemaSettings,
 }) => {
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPromptName,
+    aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
   });
 
   const chatButtons = useMemo(() => {
@@ -86,6 +93,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         levelName={levelName}
         channelId={channelId}
         hideModelChangeMessage={true}
+        responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
       />
     </div>
   );

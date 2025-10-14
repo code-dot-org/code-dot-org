@@ -491,6 +491,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   (levelProperties.levelData as MusicLevelData | undefined)
                     ?.allowChangeStartingPlayheadPosition
                 }
+                danceMove={
+                  // URL parameter allows overriding the level setting for testing.
+                  AppConfig.getValue('danceMove')?.toString() ||
+                  (levelProperties.levelData as MusicLevelData | undefined)
+                    ?.danceMove
+                }
                 isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
               />
             </PanelContainer>

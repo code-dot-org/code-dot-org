@@ -50,24 +50,25 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
     color: 'strong',
     buttons: [
       {
-        label: weblab2I18n.desktop(),
-        value: PreviewViewMode.DESKTOP,
-        iconLeft: {
+        icon: {
           iconName: 'desktop',
           iconStyle: 'solid',
+          title: weblab2I18n.desktop(),
         },
+        value: PreviewViewMode.DESKTOP,
       },
       {
-        label: weblab2I18n.mobile(),
-        value: PreviewViewMode.MOBILE,
-        iconLeft: {
+        icon: {
           iconName: 'mobile',
           iconStyle: 'solid',
+          title: weblab2I18n.mobile(),
         },
+        value: PreviewViewMode.MOBILE,
       },
     ],
     size: 'xs',
     selectedButtonValue: previewViewMode,
+    type: 'iconOnly',
     onChange: previewViewMode =>
       setPreviewViewMode(previewViewMode as PreviewViewMode),
   };
