@@ -1,6 +1,9 @@
 // CloudFront Functions handler to normalize Accept-Language header for optimized caching.
-<% require 'cdo/i18n' %>
-var tags = <%= Cdo::I18n.available_languages.map {|lang| [lang[:locale_s].downcase, lang[:code_s].downcase]}.flatten.uniq.to_json %>;
+<%
+  require 'cdo/languages'
+  require_relative '../../pegasus/helpers/pegasus_languages'
+-%>
+var tags = <%= PegasusLanguages.table.select(:locale_s, :code_s).map {|x| x.values.values}.flatten.uniq.map(&:downcase).to_json %>;
 var defaultTag = 'en';
 
 function handler(event) {
