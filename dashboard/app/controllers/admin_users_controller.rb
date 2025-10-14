@@ -49,6 +49,7 @@ class AdminUsersController < ApplicationController
     user = User.from_identifier(user_id)
 
     if user
+      log_admin_action("assume_identity", {effective_user_id: user.id})
       bypass_sign_in user
       # Set cookie to indicate assumed identity
       session[:assumed_identity] = true
@@ -378,5 +379,10 @@ class AdminUsersController < ApplicationController
       @target_user = User.from_identifier(user_identifier)
       flash[:alert] = 'User not found' unless @target_user
     end
+  end
+
+  private def log_admin_action(event, attributes = {})
+    log_payload =  {event: event, namespace: 'admin', request_id: request.request_id, authenticated_user_id: current_user.id}.merge(attributes)
+    CDO.log.warn log_payload.to_json
   end
 end
