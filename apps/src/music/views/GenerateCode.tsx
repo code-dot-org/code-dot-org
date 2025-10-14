@@ -231,8 +231,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
           <div className={styles.buttonRow}>
             <Button
-              ariaLabel={"No. Let's try again"}
-              text={"No. Let's try again"}
+              ariaLabel={"No. Let's try again."}
+              text={"No. Let's try again."}
               type="primary"
               color="black"
               size="s"
