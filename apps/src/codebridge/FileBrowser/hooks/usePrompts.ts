@@ -11,7 +11,6 @@ import {
   openImportFromBackpackPrompt as globalOpenImportFromBackpackPrompt,
   openSaveToBackpackPrompt as globalOpenSaveToBackpackPrompt,
 } from '@codebridge/FileBrowser/prompts';
-import {sendLab2AnalyticsEvent as globalSendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -30,6 +29,7 @@ import {
   saveFileThunk,
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {FolderId, MultiFileSource} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent as globalSendCodebridgeAnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 

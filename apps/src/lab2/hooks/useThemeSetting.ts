@@ -1,9 +1,9 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
-import {sendLab2AnalyticsEvent} from '@codebridge/utils';
 import {useMemo} from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {AppName} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
