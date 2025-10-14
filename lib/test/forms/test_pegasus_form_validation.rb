@@ -89,7 +89,7 @@ class PegasusFormValidationTest < Minitest::Test
 
   def test_email_address
     assert_equal 'person@example.net', FormValidationMethods.email_address('person@example.net')
-    assert_equal 'downcased@andstripped.net', FormValidationMethods.email_address('  DownCased@AndStripped.net  ')
+    assert_equal 'downcased@andstripped.net', FormValidationMethods.email_address('  DOwnCased@AndStripped.net  ')
     assert_equal FIELD_ERROR, FormValidationMethods.email_address(FIELD_ERROR)
 
     assert_field_error(
