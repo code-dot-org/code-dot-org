@@ -2,7 +2,7 @@ import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 /**
- * Sends an Codebridge analytics event to the analytics reporter.
+ * Sends an analytics event to the analytics reporter.
  *
  * @param eventName - The name of the event to send.
  * @param labType - An optional string representing the lab type.
