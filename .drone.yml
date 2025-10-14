@@ -276,6 +276,17 @@ name: cache-staging-build
 clone:
   disable: true
 
+services:
+  - name: ci-tests-mysql
+    image: mysql
+    ports:
+      - 8080
+    environment:
+      # TODO: GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_USER: readonly
+      MYSQL_PASSWORD: ''
+
 steps:
   - name: clone
     image: bitnamilegacy/git
@@ -305,7 +316,7 @@ steps:
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
-      - mysqldump --all-databases > all_databases.sql
+      - mysqldump -uroot --all-databases > all_databases.sql
       # Generate baseline file count for validation
       - touch .cached-staging-build-file-count
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
