@@ -114,6 +114,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -256,43 +257,72 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         />
       )}
       <div className={styles.sidebar}>
-        <nav id={resourcePanelTabsElementId} className={styles.tabs}>
-          {getTypedKeys(availableTabs).map(tab => (
+        <div className={styles.topSection}>
+          <div className={styles.collapseButtonContainer}>
             <WithTooltip
               tooltipProps={{
-                text: tabInfo[tab].title,
-                tooltipId: `tooltip-${tab}`,
+                text: collapsed ? 'Expand' : 'Collapse',
+                tooltipId: 'tooltip-collapse',
                 direction: 'onRight',
                 size: 'xs',
                 'data-theme': theme,
               }}
               hideDelayMs={hideTooltipDelayMs}
               hideOnFirstLeave={true}
-              key={`tooltip-${tab}`}
             >
-              <div id={`resource-panel-tab-${tab}`}>
-                <Button
-                  className={classNames(
-                    styles.tabButton,
-                    tab === currentTab && styles.selected
-                  )}
-                  onClick={() => setCurrentTab(tab)}
-                  key={tab}
-                  color={'gray'}
-                  type={'tertiary'}
-                  isIconOnly={true}
-                  icon={{
-                    iconName: tabInfo[tab].icon,
-                    iconFamily: kitIcons.has(tabInfo[tab].icon)
-                      ? 'kit'
-                      : undefined,
-                  }}
-                  aria-label={tabInfo[tab].title}
-                />
-              </div>
+              <Button
+                className={styles.collapseButton}
+                onClick={() => setCollapsed(!collapsed)}
+                isIconOnly={true}
+                icon={{
+                  iconName: collapsed
+                    ? 'arrow-right-from-line'
+                    : 'arrow-left-from-line',
+                }}
+                color={'gray'}
+                type={'tertiary'}
+                aria-label={collapsed ? 'Expand' : 'Collapse'}
+              />
             </WithTooltip>
-          ))}
-        </nav>
+          </div>
+          <nav id={resourcePanelTabsElementId} className={styles.tabs}>
+            {getTypedKeys(availableTabs).map(tab => (
+              <WithTooltip
+                tooltipProps={{
+                  text: tabInfo[tab].title,
+                  tooltipId: `tooltip-${tab}`,
+                  direction: 'onRight',
+                  size: 'xs',
+                  'data-theme': theme,
+                }}
+                hideDelayMs={hideTooltipDelayMs}
+                hideOnFirstLeave={true}
+                key={`tooltip-${tab}`}
+              >
+                <div id={`resource-panel-tab-${tab}`}>
+                  <Button
+                    className={classNames(
+                      styles.tabButton,
+                      tab === currentTab && styles.selected
+                    )}
+                    onClick={() => setCurrentTab(tab)}
+                    key={tab}
+                    color={'gray'}
+                    type={'tertiary'}
+                    isIconOnly={true}
+                    icon={{
+                      iconName: tabInfo[tab].icon,
+                      iconFamily: kitIcons.has(tabInfo[tab].icon)
+                        ? 'kit'
+                        : undefined,
+                    }}
+                    aria-label={tabInfo[tab].title}
+                  />
+                </div>
+              </WithTooltip>
+            ))}
+          </nav>
+        </div>
         <div
           id={resourcePanelLinksElementId}
           className={classNames(styles.bottomTabs)}
@@ -324,47 +354,50 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           </WithTooltip>
         </div>
       </div>
-      <div className={styles.panels}>
-        <PanelContainer
-          id={currentTab}
-          headerContent={tabInfo[currentTab].title}
-          headerClassName={headerClassName}
-          rightHeaderContent={
-            currentTab === Tabs.AiTutor ? (
-              <AiChatHeaderButtons />
-            ) : (
-              rightHeaderContent
-            )
-          }
-        >
-          <div className={styles.tabContentContainer}>
-            {getTypedKeys(availableTabs).map(tab => (
-              <div
-                key={tab}
-                className={classNames(
-                  styles.tabContent,
-                  tab !== currentTab && styles.tabContentHidden
-                )}
-              >
-                {availableTabs[tab]}
-              </div>
-            ))}
-          </div>
-          {(hideInstructionsNavigation || currentTab !== Tabs.Instructions) && (
-            <NavigationArea
-              {...instructionsProps}
-              styleAsBubble={styleNavigationAsBubble}
-              className={styles.navigationFooter}
-            />
-          )}
-          {isSettingsOpen && (
-            <SettingsPanel
-              settings={settings || []}
-              closePanel={() => setIsSettingsOpen(false)}
-            />
-          )}
-        </PanelContainer>
-      </div>
+      {!collapsed && (
+        <div className={styles.panels}>
+          <PanelContainer
+            id={currentTab}
+            headerContent={tabInfo[currentTab].title}
+            headerClassName={headerClassName}
+            rightHeaderContent={
+              currentTab === Tabs.AiTutor ? (
+                <AiChatHeaderButtons />
+              ) : (
+                rightHeaderContent
+              )
+            }
+          >
+            <div className={styles.tabContentContainer}>
+              {getTypedKeys(availableTabs).map(tab => (
+                <div
+                  key={tab}
+                  className={classNames(
+                    styles.tabContent,
+                    tab !== currentTab && styles.tabContentHidden
+                  )}
+                >
+                  {availableTabs[tab]}
+                </div>
+              ))}
+            </div>
+            {(hideInstructionsNavigation ||
+              currentTab !== Tabs.Instructions) && (
+              <NavigationArea
+                {...instructionsProps}
+                styleAsBubble={styleNavigationAsBubble}
+                className={styles.navigationFooter}
+              />
+            )}
+            {isSettingsOpen && (
+              <SettingsPanel
+                settings={settings || []}
+                closePanel={() => setIsSettingsOpen(false)}
+              />
+            )}
+          </PanelContainer>
+        </div>
+      )}
     </div>
   );
 };
