@@ -4,7 +4,6 @@ module OpenaiPersonalizationHelper
   MODEL = SharedConstants::PERSONALIZATION_MODEL_VERSION
 
   def self.match_teaching_profile(teaching_profile_data)
-    # Handle test environment
     if Rails.env.test?
       dummy_response = {
         "matchingProfile" => "The Lead Learner",
@@ -14,21 +13,13 @@ module OpenaiPersonalizationHelper
       return {status: :ok, json: json_response}
     end
 
-    # Create the system prompt with teaching profiles and user instructions
     system_prompt = create_teaching_profile_system_prompt
 
-    # Format the teacher's responses into a user message
     user_message = format_teaching_profile_data(teaching_profile_data)
 
     messages = prepend_system_prompt(system_prompt, [{role: "user", content: user_message}])
 
-    puts "user_message"
-    puts user_message
-    puts "messages"
-    puts messages
-
     begin
-      #. I think the line below is where things are going sideways
       response = client.request_evaluation(messages)
       response_body = JSON.parse(response.body)
       response_body = response_body['choices'][0]['message'] if response.code == 200
@@ -159,7 +150,6 @@ module OpenaiPersonalizationHelper
   end
 
   def self.client
-    # this is the line that I cahanged.
     PersonalizationOpenaiHelper::Client.new(API_KEY, MODEL)
   end
 
