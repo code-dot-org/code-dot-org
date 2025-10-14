@@ -402,13 +402,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
 
     # Transfer sections and destroy new user if takeover is possible
-    if allows_section_takeover(oauth_user)
-      return unless move_sections_and_destroy_source_user(
-        source_user: oauth_user,
-        destination_user: lookup_user,
-        takeover_type: 'silent',
-        provider: provider,
+    if allows_section_takeover(oauth_user) && !move_sections_and_destroy_source_user(
+      source_user: oauth_user,
+      destination_user: lookup_user,
+      takeover_type: 'silent',
+      provider: provider,
       )
+      return
     end
 
     begin
