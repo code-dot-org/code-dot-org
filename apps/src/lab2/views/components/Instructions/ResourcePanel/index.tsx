@@ -3,7 +3,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useState, useCallback} from 'react';
+import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
@@ -119,6 +119,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const [currentTab, setCurrentTab] = useState<Tabs | null>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
+  const hasAutoCollapsedNoTabs = useRef(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -237,6 +238,20 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     selectedVersion,
     levelId,
   ]);
+
+  useEffect(() => {
+    // Auto-collapse on initial mount if on a standalone project and there are no available tabs.
+    // Only run this once to allow user to toggle the panel.
+    if (
+      !hasAutoCollapsedNoTabs.current &&
+      isProjectLevel &&
+      Object.keys(availableTabs).length === 0
+    ) {
+      setCollapsed(true);
+      dispatch(setIsStandaloneCollapsed(true));
+      hasAutoCollapsedNoTabs.current = true;
+    }
+  }, [isProjectLevel, availableTabs, dispatch]);
 
   useEffect(() => {
     if (currentTab === null) {
