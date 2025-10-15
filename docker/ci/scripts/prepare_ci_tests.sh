@@ -80,6 +80,12 @@ set -x
 bundle exec rake install
 # catch any code loader errors before starting any rails environment
 bundle exec rake lint:zeitwerk
-bundle exec rake build
 
-bundle exec rake ci:seed_ui_test
+# Run tasks in parallel
+bundle exec rake build & pid1=$!
+bundle exec rake ci:seed_ui_test & pid2=$!
+
+# Wait for all tasks and fail if any fail
+wait $pid1 || exit 1
+wait $pid2 || exit 1
+echo "Build and seed complete."
