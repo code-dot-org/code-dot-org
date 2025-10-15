@@ -5,16 +5,16 @@ import React, {useCallback} from 'react';
 
 import {submitChatContents} from '@cdo/apps/aichat/redux';
 import {AnalyticsProperties} from '@cdo/apps/aichat/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {useAiTutorModelParameters} from '../../hooks/useAiTutorModelParameters';
 import {AiTutorSuggestedPrompt} from '../../suggestedPrompts';
+import {AnalyticsData} from '../../types';
 
 import styles from './AiTutorSidebar.module.scss';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {AnalyticsData} from '../../types';
 
 interface AiTutorSidebarSuggestedPromptsProps {
   className?: string;
@@ -63,7 +63,13 @@ const AiTutorSidebarSuggestedPrompts: React.FC<
         })
       );
     },
-    [toggleAiChat, hiddenContextCallback, dispatch, modelParameters]
+    [
+      toggleAiChat,
+      hiddenContextCallback,
+      dispatch,
+      modelParameters,
+      analyticsData,
+    ]
   );
 
   return (
