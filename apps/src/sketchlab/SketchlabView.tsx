@@ -1,5 +1,9 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
-import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {
+  ExcalidrawElement,
+  Theme as ExcalidrawTheme,
+} from '@excalidraw/excalidraw/types/element/types';
 import {
   AppState,
   BinaryFiles,
@@ -9,6 +13,7 @@ import {
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
@@ -37,11 +42,16 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
-  const {currentSources, updateSources} = useSources<SketchlabSources>();
+  const {currentSources, updateSources, setReinitializationHandler} =
+    useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
+
+  const {theme} = useTheme();
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  // We remount (ie, reset) Excalidraw any time we observe
+  // sources being initialized (eg, when level changes, teacher views a student's project, etc).
+  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
     levelProperties.id,
@@ -122,25 +132,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, []);
 
-  // This effect runs on each source change,
-  // but the full remount (via key change) is only intended when
-  // Excalidraw state diverges from the saved source state.
-  // This happens when a user switches levels, or a teachers switches
-  // between viewing different students on the same level.
   useEffect(() => {
-    // Note that we do not compare appState, as Excalidraw tracks a lot of app state properties
-    // that we do not store to S3.
-    const excalidrawApi = excalidrawApiRef.current;
-    if (
-      excalidrawApi &&
-      (JSON.stringify(excalidrawApi.getSceneElements()) !==
-        JSON.stringify(currentSources.source.elements) ||
-        JSON.stringify(excalidrawApi.getFiles()) !==
-          JSON.stringify(currentSources.source.files))
-    ) {
-      setExcalidrawMountKey(key => key + 1);
-    }
-  }, [currentSources.source]);
+    setReinitializationHandler(() => setExcalidrawMountKey(key => key + 1));
+  }, [setReinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -162,6 +156,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           isRunning={false}
           hasRun={hasRun}
           hasEdited={false}
+          settings={[useThemeSetting('sketchlab')]}
         />
       </div>
       <ResizeBar
@@ -180,6 +175,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             onChange={debouncedSerializeAndSaveWorkspace}
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
+            theme={theme.toLowerCase() as ExcalidrawTheme}
           />
           {WorkspaceAlert}
         </PanelContainer>

@@ -2,8 +2,8 @@
 free_play_level_urls = {
   'blockly' => {
     'Dance Party' => 'http://studio.code.org/courses/dance/units/1/lessons/1/levels/13?noautoplay=true&no_redirect=true',
-    'Artist' => 'http://studio.code.org/courses/20-hour/units/1/lessons/5/levels/10?noautoplay=true&no_redirect=true',
-    'Bounce' => 'http://studio.code.org/courses/course3/units/1/lessons/15/levels/10?noautoplay=true&no_redirect=true',
+    'Artist' => 'http://studio.code.org/courses/artist/units/1/lessons/1/levels/10?noautoplay=true&no_redirect=true',
+    'Bounce' => 'http://studio.code.org/courses/sports/units/1/lessons/1/levels/8?noautoplay=true&no_redirect=true',
     'Flappy' => 'http://studio.code.org/flappy/10?noautoplay=true&no_redirect=true',
     'Sprite Lab' => 'http://studio.code.org/courses/coursee-2019/units/1/lessons/9/levels/6?noautoplay=true&no_redirect=true'
   },

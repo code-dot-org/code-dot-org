@@ -20,7 +20,7 @@ class Middlewares::RedisSessionStoreTest < ActiveSupport::TestCase
   end
 
   describe '#delete_session' do
-    subject(:delete_session) {redis_session_store.delete_session(request, session_id, {})}
+    subject(:delete_session) {redis_session_store.delete_session(request, session_id, session.options)}
 
     let(:session_data) {{deleted: false}}
     let(:session_options) {{renew: false}}
@@ -37,6 +37,24 @@ class Middlewares::RedisSessionStoreTest < ActiveSupport::TestCase
 
     it 'sets session :renew option' do
       _ {delete_session}.must_change -> {request.session.options[:renew]}, from: false, to: true
+    end
+
+    context 'when session is skipped' do
+      let(:session_options) {{skip: true}}
+
+      it 'does not store session as deleted' do
+        _ {delete_session}.must_change -> {redis_session_store.send(:get_session_with_fallback, session_id)},
+                                       from: {deleted: false},
+                                       to: nil
+      end
+
+      it 'does not delete request session :deleted flag' do
+        _ {delete_session}.wont_change -> {request.session['deleted']}
+      end
+
+      it 'does not set session :renew option' do
+        _ {delete_session}.wont_change -> {request.session.options[:renew]}
+      end
     end
   end
 

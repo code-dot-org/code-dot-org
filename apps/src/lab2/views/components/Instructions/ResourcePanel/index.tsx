@@ -5,7 +5,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {ChatButtonData} from '@cdo/apps/aichat/types';
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -88,6 +88,7 @@ type ResourcePanelProps = InstructionsProps & {
   isValidationTourEnabled?: boolean;
   isOnboardingTourEnabled?: boolean;
   aiTutorSystemPromptName?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 };
 
 /**
@@ -109,6 +110,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   isValidationTourEnabled,
   isOnboardingTourEnabled,
   aiTutorSystemPromptName,
+  aiTutorResponseSchemaSettings,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -183,6 +185,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           channelId={channelId}
           aiTutorChatButtonData={aiTutorChatButtonData}
           aiTutorSystemPromptName={aiTutorSystemPromptName}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
       );
     }
@@ -223,14 +226,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
-    aiTutorSystemPromptName,
+    hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,
     aiTutorChatButtonData,
+    aiTutorSystemPromptName,
+    aiTutorResponseSchemaSettings,
     selectedVersion,
     levelId,
-    hideInstructionsNavigation,
   ]);
 
   useEffect(() => {

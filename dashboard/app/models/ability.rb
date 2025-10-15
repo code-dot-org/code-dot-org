@@ -171,6 +171,7 @@ class Ability
 
       can :evaluate, :openai_evaluate
       can :evaluate_section, :openai_evaluate
+      can :match_teaching_profile, :openai_personalization
 
       # all signed in users can access the aichat_request and aichat_events endpoints
       # additional permission logic lives in the controllers themselves
