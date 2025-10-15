@@ -116,9 +116,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 }) => {
   const {theme} = useTheme();
   const {showRubric} = useRubric();
-  const [currentTab, setCurrentTab] = useState<Tabs | null>(Tabs.Instructions);
+  const [currentTab, setCurrentTab] = useState<Tabs | null>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [collapsed, setCollapsed] = useState(false);
   const hasAutoCollapsedNoTabs = useRef(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
@@ -128,6 +127,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
+  const isStandAloneCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
 
   const levelId = instructionsProps.levelProperties.id;
   const hasValidationConditions = useAppSelector(
@@ -247,7 +249,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       isProjectLevel &&
       Object.keys(availableTabs).length === 0
     ) {
-      setCollapsed(true);
       dispatch(setIsStandaloneCollapsed(true));
       hasAutoCollapsedNoTabs.current = true;
     }
@@ -259,7 +260,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
     if (!(currentTab in availableTabs)) {
       // If the current tab is no longer available, switch to the first available tab.
-      setCurrentTab(getTypedKeys(availableTabs)[0] || Tabs.Instructions);
+      setCurrentTab(getTypedKeys(availableTabs)[0]);
     }
   }, [currentTab, availableTabs]);
 
@@ -271,26 +272,45 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const onClickTab = useCallback(
     (tab: Tabs) => {
       setCurrentTab(tab);
-      if (collapsed) {
-        setCollapsed(!collapsed);
+      if (isStandAloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [collapsed, dispatch]
+    [dispatch, isStandAloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
-    if (collapsed) {
-      setCurrentTab(getTypedKeys(availableTabs)[0]);
-      setCollapsed(!collapsed);
-      dispatch(setIsStandaloneCollapsed(false));
-      if (!isSettingsOpen) {
+    // For standalone projects, we need to handle the resource panel collapsing and expanding in conjunction
+    // with togglingthe settings panel.
+    // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
+    if (isProjectLevel) {
+      if (isStandAloneCollapsed) {
+        // If the resource panel is collapsed, we'll expand it and select the first tab and open the settings panel.
         setIsSettingsOpen(true);
+        setCurrentTab(getTypedKeys(availableTabs)[0]);
+        dispatch(setIsStandaloneCollapsed(false));
+      } else {
+        // If the resource panel is expanded and there are no tabs, then clicking the settings button
+        // collapses the resource panel and essentially closes or hides the settings panel.
+        if (Object.keys(availableTabs).length === 0) {
+          dispatch(setIsStandaloneCollapsed(true));
+        } else {
+          // If the resource panel is expanded and there are tabs, then clicking the settings button
+          // toggles the settings panel.
+          setIsSettingsOpen(!isSettingsOpen);
+        }
       }
     } else {
+      // If not a standalone project, just toggle the settings panel.
       setIsSettingsOpen(!isSettingsOpen);
     }
-  }, [collapsed, dispatch, availableTabs, isSettingsOpen]);
+  }, [
+    dispatch,
+    availableTabs,
+    isSettingsOpen,
+    isStandAloneCollapsed,
+    isProjectLevel,
+  ]);
 
   return (
     <div
@@ -309,10 +329,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       <div className={styles.sidebar}>
         <div className={styles.topSection}>
           <div className={styles.collapseButtonContainer}>
-            {isProjectLevel && (
+            {/*
+              For standalone projects with at least one tab, we display the collapse/expand.
+              We hide this button for standalone projects with no tabs, but the bottom buttons
+              will still be available for users to access the settings panel, etc.
+            */}
+            {isProjectLevel && Object.keys(availableTabs).length > 0 && (
               <WithTooltip
                 tooltipProps={{
-                  text: collapsed ? lab2I18n.expand() : lab2I18n.collapse(),
+                  text: isStandAloneCollapsed
+                    ? lab2I18n.expand()
+                    : lab2I18n.collapse(),
                   tooltipId: 'tooltip-collapse',
                   direction: 'onRight',
                   size: 'xs',
@@ -325,25 +352,26 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   className={styles.resourcePanelButton}
                   onClick={() => {
                     // If currently collapsed, we'll show the first tab when panel is expanded.
-                    if (collapsed) {
+                    if (isStandAloneCollapsed) {
                       setCurrentTab(getTypedKeys(availableTabs)[0]);
                     } else {
                       // If currently expanded, we'll hide the panel and no tab will be selected.
                       setCurrentTab(null);
                     }
-                    setCollapsed(!collapsed);
-                    dispatch(setIsStandaloneCollapsed(!collapsed));
+                    dispatch(setIsStandaloneCollapsed(!isStandAloneCollapsed));
                   }}
                   isIconOnly={true}
                   icon={{
-                    iconName: collapsed
+                    iconName: isStandAloneCollapsed
                       ? 'arrow-right-from-line'
                       : 'arrow-left-from-line',
                   }}
                   color={'gray'}
                   type={'tertiary'}
                   aria-label={
-                    collapsed ? lab2I18n.expand() : lab2I18n.collapse()
+                    isStandAloneCollapsed
+                      ? lab2I18n.expand()
+                      : lab2I18n.collapse()
                   }
                 />
               </WithTooltip>
@@ -418,11 +446,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           </WithTooltip>
         </div>
       </div>
-      {!collapsed && currentTab && (
+      {!isStandAloneCollapsed && (
         <div className={styles.panels}>
           <PanelContainer
-            id={currentTab}
-            headerContent={tabInfo[currentTab].title}
+            id={currentTab || 'resource-panel'}
+            headerContent={(currentTab && tabInfo[currentTab].title) || ''}
             headerClassName={headerClassName}
             rightHeaderContent={
               currentTab === Tabs.AiTutor ? (
@@ -456,7 +484,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             {isSettingsOpen && (
               <SettingsPanel
                 settings={settings || []}
-                closePanel={() => setIsSettingsOpen(false)}
+                closePanel={() => {
+                  setIsSettingsOpen(false);
+                  // If the resource panel is expanded and there are no tabs, then clicking the settings button
+                  // collapses the resource panel and essentially closes or hides the settings panel.
+                  // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
+                  if (
+                    isProjectLevel &&
+                    Object.keys(availableTabs).length === 0 &&
+                    !isStandAloneCollapsed
+                  ) {
+                    dispatch(setIsStandaloneCollapsed(true));
+                  }
+                }}
               />
             )}
           </PanelContainer>
