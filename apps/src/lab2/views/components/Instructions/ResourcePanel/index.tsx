@@ -132,6 +132,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const levelName = instructionsProps.levelProperties.name;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
+  const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const dispatch = useAppDispatch();
 
   // Tooltip should disappear quickly.
@@ -264,41 +265,43 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       <div className={styles.sidebar}>
         <div className={styles.topSection}>
           <div className={styles.collapseButtonContainer}>
-            <WithTooltip
-              tooltipProps={{
-                text: collapsed ? 'Expand' : 'Collapse',
-                tooltipId: 'tooltip-collapse',
-                direction: 'onRight',
-                size: 'xs',
-                'data-theme': theme,
-              }}
-              hideDelayMs={hideTooltipDelayMs}
-              hideOnFirstLeave={true}
-            >
-              <Button
-                className={styles.collapseButton}
-                onClick={() => {
-                  // If currently collapsed, we'll show the first tab when panel is expanded.
-                  if (collapsed) {
-                    setCurrentTab(getTypedKeys(availableTabs)[0]);
-                  } else {
-                    // If currently expanded, we'll hide the panel and no tab will be selected.
-                    setCurrentTab(null);
-                  }
-                  setCollapsed(!collapsed);
-                  dispatch(setIsStandaloneCollapsed(!collapsed));
+            {isProjectLevel && (
+              <WithTooltip
+                tooltipProps={{
+                  text: collapsed ? 'Expand' : 'Collapse',
+                  tooltipId: 'tooltip-collapse',
+                  direction: 'onRight',
+                  size: 'xs',
+                  'data-theme': theme,
                 }}
-                isIconOnly={true}
-                icon={{
-                  iconName: collapsed
-                    ? 'arrow-right-from-line'
-                    : 'arrow-left-from-line',
-                }}
-                color={'gray'}
-                type={'tertiary'}
-                aria-label={collapsed ? 'Expand' : 'Collapse'}
-              />
-            </WithTooltip>
+                hideDelayMs={hideTooltipDelayMs}
+                hideOnFirstLeave={true}
+              >
+                <Button
+                  className={styles.collapseButton}
+                  onClick={() => {
+                    // If currently collapsed, we'll show the first tab when panel is expanded.
+                    if (collapsed) {
+                      setCurrentTab(getTypedKeys(availableTabs)[0]);
+                    } else {
+                      // If currently expanded, we'll hide the panel and no tab will be selected.
+                      setCurrentTab(null);
+                    }
+                    setCollapsed(!collapsed);
+                    dispatch(setIsStandaloneCollapsed(!collapsed));
+                  }}
+                  isIconOnly={true}
+                  icon={{
+                    iconName: collapsed
+                      ? 'arrow-right-from-line'
+                      : 'arrow-left-from-line',
+                  }}
+                  color={'gray'}
+                  type={'tertiary'}
+                  aria-label={collapsed ? 'Expand' : 'Collapse'}
+                />
+              </WithTooltip>
+            )}
           </div>
           <nav id={resourcePanelTabsElementId} className={styles.tabs}>
             {getTypedKeys(availableTabs).map(tab => (
@@ -366,6 +369,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               color={'gray'}
               type={'tertiary'}
               aria-label={commonI18n.settings()}
+              disabled={collapsed}
             />
           </WithTooltip>
         </div>

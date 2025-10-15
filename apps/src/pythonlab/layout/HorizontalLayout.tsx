@@ -51,7 +51,6 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
-  console.log('isStandaloneCollapsed', isStandaloneCollapsed);
   const infoPanelInitialWidth = isStandaloneCollapsed
     ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
     : INITIAL_INFO_PANEL_WIDTH;
