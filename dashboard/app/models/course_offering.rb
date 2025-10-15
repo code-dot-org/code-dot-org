@@ -230,14 +230,14 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.self_paced_course_offerings_for_catalog(user = nil, locale = 'en-us')
-    offerings = all_course_offerings.select do |co|
-      co.get_participant_audience == 'teacher' &&
-        co.instruction_type == 'self_paced' &&
-        co.assignable? &&
-        co.any_version_is_in_published_state?
+    all_course_offerings.filter_map do |co|
+      if co.get_participant_audience == 'teacher' &&
+          co.instruction_type == 'self_paced' &&
+          co.assignable? &&
+          co.any_version_is_in_published_state?
+        co.summarize_for_catalog(locale, user)
+      end
     end
-
-    offerings.map {|co| co.summarize_for_catalog(locale, user)}
   end
 
   def self.self_paced_pl_course_offerings_for_workshops

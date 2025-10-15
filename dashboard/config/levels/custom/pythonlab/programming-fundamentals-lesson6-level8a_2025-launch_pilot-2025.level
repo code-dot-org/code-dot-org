@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:34.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're writing a program that gives your friend three compliments in a row, but the same message is repeated over and over. That's not very efficient! Instead of copying and pasting the same code, you'll define a function and call it multiple times.\r\n\r\n1. Look at the repeated lines of code that print the same compliment.\r\n\r\n2. Create a function called `give_compliment()` that prints the compliment once.\r\n\r\n3. Replace the repeated code by calling your new function **three times**.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nPay close attention to indentation, and use the UMPIRE strategy:\r\n\r\n* **U**nderstand: What's the goal? Why is the repeated code a problem?\r\n\r\n* **M**ake a plan: What will go in the function?\r\n\r\n* **P**roduce: Define the function and replace the repeated lines.\r\n\r\n* **I**nspect: Run it -- does it still give three compliments?\r\n\r\n* **E**xplain: How did using a function improve the code?",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "display_name": "Too Many Compliments",
+    "bubble_choice_description": "You're writing a program that gives your friend three compliments in a row, but the same message is repeated over and over. That's not very efficient! Instead of copying and pasting the same code, you'll define a function and call it multiple times.",
+    "thumbnail_url": "https://images.code.org/d9b300b3a84cf10d96142e452c61c229-compliments.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Write the give_compliment() function that prints the compliment once\n\n\n\n\n\n# TODO - Replace the repeated code by calling your new function\nprint(\"You're doing great!\")\nprint(\"You're doing great!\")\nprint(\"You're doing great!\")\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzsepV/XskT1QPKi07xu9Mik2qiY0uaKd\nqAipxtXetZYkCLEsGNR6wJFcBCC7T5tcJa5Ia5EhLEFVUKXSffssSqvcCGME\nSqws4rVvXUS2hdm2P/JspCMOFRIDrvnjMBdP8B4s243IY1EgwC8p27AK4bvo\njffJha3VTT2IQDCC1/T1zbom8oxzKg4+g7Ypyk0g62ajVRAHP4WQ3XJpC9WL\nhFNPmi5IR0EN4ZorNJHmFN7EK7UL9JDYamDkAPnaQr73pM4WjJ9JwQFjQBIX\na8KzVpJj7EZz1xrWgJIv2G9RvY4ONeWAonf6DeBeT4ctsPI77uTmOMo7boOI\nu6CZqP6Ld6dk2Gk1d64WIRpBvWG7D+dAhRfnzwu5I1xYF+Fg5SiaVZdIPyzm\n0ZY55PLVL5qKmySq1KVaDvthq5hJF9Bt7/ZEJOZNCxonJ/m3J1Qv5gi7IQ==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n# Try importing the student's function\ntry:\n    from main import give_compliment\n    function_exists = True\nexcept ImportError:\n    function_exists = False\n\nclass TestGiveComplimentFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_give_compliment_function_runs(self):\n        \"\"\"give_compliment() should exist and be callable\"\"\"\n        if not function_exists:\n            self.fail(\"Make sure you define a function called give_compliment()!\")\n\n    def test_three_compliments_given(self):\n        \"\"\"Three compliments should be printed\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertEqual(\n            len(printed_messages),\n            3,\n            \"Make sure you call your give_compliment() function three times to print three compliments!\"\n        )\n\n        all_contain_compliment = all(\n            \"great\" in line.lower() or \"good\" in line.lower() or \"awesome\" in line.lower() for line in printed_messages\n        )\n\n        self.assertTrue(\n            all_contain_compliment,\n            \"Each message should be a compliment! Make sure your give_compliment() function prints something positive.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:34.128+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level8a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level8a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

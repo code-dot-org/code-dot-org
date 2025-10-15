@@ -1,0 +1,80 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-10-14T23:09:53.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "level_data": {
+      "library": "launch2024",
+      "aiCodeGenerate": "true",
+      "aiCodeGenerateText": "true",
+      "aiCodeGenerateAdlib": {
+        "id": "length",
+        "template": "Please code a music remix that layers {type1}, {type2}, and {type3} together, around {length} measures long.",
+        "options": {
+          "type1": [
+            "bass",
+            "leads",
+            "beats",
+            "vocals"
+          ],
+          "type2": [
+            "bass",
+            "leads",
+            "beats",
+            "vocals"
+          ],
+          "type3": [
+            "bass",
+            "leads",
+            "beats",
+            "vocals"
+          ],
+          "length": [
+            "10",
+            "15",
+            "20"
+          ]
+        },
+        "variantCount": 3
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "HoAI_pilot_5_template2",
+    "display_name": "Regenerate the music",
+    "thumbnail_url": "https://images.code.org/18f4fa0ac2cc0deb0e478e38dd2a85e4-botmusic.jpg",
+    "name_suffix": "_4",
+    "long_instructions": "####Remix a song for the party!\r\nUse AI to help get started with the code.",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14T23:09:53.896+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_gen_song\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_gen_song\"},{\"changed_at\":\"2025-10-14 23:11:43 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

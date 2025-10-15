@@ -30,11 +30,11 @@ const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
 const DEFAULT_HEAD_W = 1024;
 const DEFAULT_HEAD_H = 1024;
 
-const ASSETS_FOLDER = 'basic2';
-const TEST_GENERATED_DANCER = 'basic-frog-baseball-cap-00';
+const DEFAULT_PATH = 'default';
+const DEFAULT_DANCER = 'default';
 
-const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}.png`;
-const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}-metadata.json`;
+const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${DEFAULT_PATH}/${DEFAULT_DANCER}.png`;
+const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${DEFAULT_PATH}/${DEFAULT_DANCER}-metadata.json`;
 
 export const getConfigValue = (name: string) =>
   queryParams(name) as string | undefined;
