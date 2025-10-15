@@ -8,7 +8,7 @@
   "properties": {
     "level_data": {
       "library": "launch2024",
-      "dancerMove": "dab",
+      "danceMove": "dab",
       "aiCodeGenerate": "true",
       "aiCodeGenerateAdlib": {
         "id": "length",
