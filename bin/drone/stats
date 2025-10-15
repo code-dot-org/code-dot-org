@@ -74,74 +74,6 @@ def main(options)
 end
 
 # ============================================================================
-# TOTAL BUILD TIME METHODS
-# ============================================================================
-
-def collect_total_build_time_data(options)
-  builds_data = []
-  oldest_build_seen = Time.now
-  drone_page_num = 1
-
-  while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
-    raise "Exceeded hardcoded max drone API page limit (#{MAX_DRONE_PAGE_NUM})" if drone_page_num > MAX_DRONE_PAGE_NUM
-
-    builds = drone_api_get("builds?page=#{drone_page_num}").
-      select {|build| options[:only_successful] ? build[:status] == "success" : true}.
-      select {|build| options[:event] ? build[:event] == options[:event] : true}
-
-    new_builds = builds.map do |build|
-      next if build[:finished].zero? || build[:started].zero? || build[:created].zero?
-      {
-        number: build[:number],
-        event: build[:event],
-        status: build[:status],
-        created: build[:created],
-        started: build[:started],
-        finished: build[:finished],
-        date: Time.at(build[:finished]),
-        queue_time_minutes: ((build[:started] - build[:created]) / 60.0).round(2),
-        run_time_minutes: ((build[:finished] - build[:started]) / 60.0).round(2),
-        total_time_minutes: ((build[:finished] - build[:created]) / 60.0).round(2)
-      }
-    end.compact
-
-    unless new_builds.empty?
-      oldest_build_seen = new_builds.map {|b| b[:date]}.min
-      new_builds.select! {|b| b[:date] >= OLDEST_BUILD_OF_INTEREST}
-      builds_data += new_builds
-    end
-
-    print("#{TERMINAL_CLEAR_LINE}Processed builds back to #{oldest_build_seen}") if $stdout.tty?
-    drone_page_num += 1
-  end
-  puts(TERMINAL_CLEAR_LINE) if $stdout.tty?
-
-  raise "No builds found matching the specified criteria" if builds_data.empty?
-  builds_data
-end
-
-def write_total_build_time_stats_table(builds_data, options)
-  options_filtered = options.reject {|key, value| OPTIONS_NOT_TO_OUTPUT_TO_TABLE.include?(key) || value.nil?}.inspect.tr('"', "'")
-
-  stats_for = lambda do |metric_name, data_selector|
-    data = builds_data.map(&data_selector).compact
-    {
-      metric_type: metric_name,
-      **descriptive_statistics(data, units: "minutes", round: 2),
-      options: options_filtered,
-    }
-  end
-
-  build_time_stats = [
-    stats_for.call("queue_time", ->(build) {build[:queue_time_minutes]}),
-    stats_for.call("run_time", ->(build) {build[:run_time_minutes]}),
-    stats_for.call("total_time", ->(build) {build[:total_time_minutes]}),
-  ]
-
-  write_stats_table("drone-total-build-time-stats.tsv", build_time_stats)
-end
-
-# ============================================================================
 # STAGE-SPECIFIC METHODS
 # ============================================================================
 
@@ -215,6 +147,74 @@ def compute_stage_stats_for(all_build_stages, options, units: nil, round: nil, &
   all_build_stages.group_by {|stage| stage[:name]}.map do |stage_name, subset_of_stages|
     stats_for.call(stage_name, subset_of_stages)
   end
+end
+
+# ============================================================================
+# TOTAL BUILD TIME METHODS
+# ============================================================================
+
+def collect_total_build_time_data(options)
+  builds_data = []
+  oldest_build_seen = Time.now
+  drone_page_num = 1
+
+  while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
+    raise "Exceeded hardcoded max drone API page limit (#{MAX_DRONE_PAGE_NUM})" if drone_page_num > MAX_DRONE_PAGE_NUM
+
+    builds = drone_api_get("builds?page=#{drone_page_num}").
+      select {|build| options[:only_successful] ? build[:status] == "success" : true}.
+      select {|build| options[:event] ? build[:event] == options[:event] : true}
+
+    new_builds = builds.map do |build|
+      next if build[:finished].zero? || build[:started].zero? || build[:created].zero?
+      {
+        number: build[:number],
+        event: build[:event],
+        status: build[:status],
+        created: build[:created],
+        started: build[:started],
+        finished: build[:finished],
+        date: Time.at(build[:finished]),
+        queue_time_minutes: ((build[:started] - build[:created]) / 60.0).round(2),
+        run_time_minutes: ((build[:finished] - build[:started]) / 60.0).round(2),
+        total_time_minutes: ((build[:finished] - build[:created]) / 60.0).round(2)
+      }
+    end.compact
+
+    unless new_builds.empty?
+      oldest_build_seen = new_builds.map {|b| b[:date]}.min
+      new_builds.select! {|b| b[:date] >= OLDEST_BUILD_OF_INTEREST}
+      builds_data += new_builds
+    end
+
+    print("#{TERMINAL_CLEAR_LINE}Processed builds back to #{oldest_build_seen}") if $stdout.tty?
+    drone_page_num += 1
+  end
+  puts(TERMINAL_CLEAR_LINE) if $stdout.tty?
+
+  raise "No builds found matching the specified criteria" if builds_data.empty?
+  builds_data
+end
+
+def write_total_build_time_stats_table(builds_data, options)
+  options_filtered = options.reject {|key, value| OPTIONS_NOT_TO_OUTPUT_TO_TABLE.include?(key) || value.nil?}.inspect.tr('"', "'")
+
+  stats_for = lambda do |metric_name, data_selector|
+    data = builds_data.map(&data_selector).compact
+    {
+      metric_type: metric_name,
+      **descriptive_statistics(data, units: "minutes", round: 2),
+      options: options_filtered,
+    }
+  end
+
+  build_time_stats = [
+    stats_for.call("queue_time", ->(build) {build[:queue_time_minutes]}),
+    stats_for.call("run_time", ->(build) {build[:run_time_minutes]}),
+    stats_for.call("total_time", ->(build) {build[:total_time_minutes]}),
+  ]
+
+  write_stats_table("drone-total-build-time-stats.tsv", build_time_stats)
 end
 
 # ============================================================================
