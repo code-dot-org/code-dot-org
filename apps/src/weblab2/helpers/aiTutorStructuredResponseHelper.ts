@@ -34,21 +34,22 @@ const getExplanationJsonSchema = (
           type: 'object',
           properties: {
             language: {type: 'string'},
-            sourceCode: {type: 'string'},
+            sourceCode: {
+              type: 'string',
+              description: isCopyCodeMode
+                ? 'Well formatted `html` and/or `css`. These can be full code files.'
+                : 'Well formatted html or css code snippets. These should not be full code files.',
+            },
             filename: {type: 'string'},
           },
           required: ['language', 'sourceCode', 'filename'],
           additionalProperties: false,
-          description: isCopyCodeMode
-            ? 'Runnable `html` and/or `css` fences'
-            : 'Runnable html or css code snippets. These should not be full code files.',
         },
       },
     },
-    required: ['tutorMode', 'goal', 'nextSteps', 'furtherSupport'],
+    required: ['tutorMode', 'goal', 'nextSteps', 'furtherSupport', 'code'],
     additionalProperties: false,
-    description:
-      "Answer to the student's question. All string responses should be formatted in markdown.",
+    description: 'All string responses should be formatted in markdown.',
   };
 };
 
@@ -96,7 +97,8 @@ export const formatExplanationResponse = (response: any): string => {
     formattedResponse += `**Code**\n\n`;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     response.code.forEach((code: any) => {
-      formattedResponse += `Filename: ${code.filename}\n\`\`\`${code.sourceCode}\n\`\`\`\n\n`;
+      console.log({code});
+      formattedResponse += `Filename: ${code.filename}\n\`\`\`\n${code.sourceCode}\n\`\`\`\n\n`;
     });
   }
   if (response.nextSteps) {
@@ -108,5 +110,6 @@ export const formatExplanationResponse = (response: any): string => {
   if (response.questions) {
     formattedResponse += `**Questions**\n\n${response.questions}\n\n`;
   }
+  console.log({formattedResponse});
   return formattedResponse;
 };

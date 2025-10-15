@@ -146,6 +146,7 @@ const Weblab2View: React.FC<
           },
         };
       } else {
+        console.log({copyCodeJsonSchema});
         return {
           jsonSchema: copyCodeJsonSchema,
           responseCallback: (response: string) => {
