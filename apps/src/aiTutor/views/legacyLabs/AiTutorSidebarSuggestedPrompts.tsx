@@ -12,12 +12,16 @@ import {useAiTutorModelParameters} from '../../hooks/useAiTutorModelParameters';
 import {AiTutorSuggestedPrompt} from '../../suggestedPrompts';
 
 import styles from './AiTutorSidebar.module.scss';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {AnalyticsData} from '../../types';
 
 interface AiTutorSidebarSuggestedPromptsProps {
   className?: string;
   suggestedPrompts?: Array<AiTutorSuggestedPrompt>;
   hiddenContextCallback: () => Promise<string>;
   toggleAiChat: () => void;
+  analyticsData: AnalyticsData;
 }
 
 const AiTutorSidebarSuggestedPrompts: React.FC<
@@ -27,6 +31,7 @@ const AiTutorSidebarSuggestedPrompts: React.FC<
   toggleAiChat,
   className = '',
   suggestedPrompts = [],
+  analyticsData,
 }) => {
   const dispatch = useAppDispatch();
   const {modelParameters} = useAiTutorModelParameters();
@@ -36,6 +41,15 @@ const AiTutorSidebarSuggestedPrompts: React.FC<
       if (!modelParameters) {
         return;
       }
+
+      analyticsReporter.sendEvent(EVENTS.AI_TUTOR_SIDEBAR_CLICK, {
+        prompt: analyticsProperties?.cannedPrompt,
+        labType: analyticsData.labType,
+        levelId: analyticsData.levelId,
+        unitId: analyticsData.unitId,
+        channelId: analyticsData.channelId,
+        url: analyticsData.location,
+      });
 
       toggleAiChat();
       const hiddenContext = await hiddenContextCallback?.();

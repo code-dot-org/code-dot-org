@@ -8,17 +8,20 @@ import {AiTutorSuggestedPrompt, defaultPrompts} from '../../suggestedPrompts';
 import AiTutorSidebarSuggestedPrompts from './AiTutorSidebarSuggestedPrompts';
 
 import styles from './AiTutorSidebar.module.scss';
+import {AnalyticsData} from '../../types';
 
 interface AiTutorSidebarProps {
   toggleAiChat: () => void;
   suggestedPrompts?: Array<AiTutorSuggestedPrompt>;
   hiddenContextCallback: () => Promise<string>;
+  analyticsData: AnalyticsData;
 }
 
 const AiTutorSidebar: React.FC<AiTutorSidebarProps> = ({
   toggleAiChat,
   suggestedPrompts = defaultPrompts,
   hiddenContextCallback,
+  analyticsData,
 }) => {
   return (
     <div className={styles['ai-tutor-sidebar']}>
@@ -42,6 +45,7 @@ const AiTutorSidebar: React.FC<AiTutorSidebarProps> = ({
           suggestedPrompts={suggestedPrompts}
           hiddenContextCallback={hiddenContextCallback}
           toggleAiChat={toggleAiChat}
+          analyticsData={analyticsData}
         />
       </div>
     </div>

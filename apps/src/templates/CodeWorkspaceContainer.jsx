@@ -18,13 +18,15 @@ class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
     children: PropTypes.node,
     style: PropTypes.object,
-    labType: PropTypes.string,
-    inLevel: PropTypes.bool,
 
     // Provided by redux
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
+    labType: PropTypes.string,
+    levelId: PropTypes.string,
+    unitId: PropTypes.string,
+    channelId: PropTypes.string,
   };
 
   state = {
@@ -54,8 +56,18 @@ class CodeWorkspaceContainer extends React.Component {
     const showAiTutor =
       AiTutorLabs.includes(this.props.labType) &&
       experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
-    const {hidden, isRtl, noVisualization, children, style, inLevel} =
-      this.props;
+    const {
+      hidden,
+      isRtl,
+      noVisualization,
+      children,
+      style,
+      levelId,
+      unitId,
+      channelId,
+      labType,
+    } = this.props;
+
     const mainStyle = {
       ...styles.main,
       ...(noVisualization && styles.noVisualization),
@@ -81,8 +93,10 @@ class CodeWorkspaceContainer extends React.Component {
           <AiTutorContainer
             toggleAiChat={this.toggleAiChat}
             aiChatOpen={this.state.aiChatOpen}
-            inLevel={inLevel}
-            labType={this.props.labType}
+            labType={labType}
+            unitId={unitId}
+            levelId={levelId}
+            channelId={channelId}
           />
         )}
       </div>
@@ -98,6 +112,10 @@ export default connect(
       !state.pageConstants.visualizationInWorkspace,
     isRtl: state.isRtl,
     noVisualization: state.pageConstants.noVisualization,
+    levelId: state.pageConstants.serverLevelId,
+    unitId: state.pageConstants.serverScriptId,
+    channelId: state.pageConstants.channelId,
+    labType: state.pageConstants.appType,
   }),
   undefined,
   null,

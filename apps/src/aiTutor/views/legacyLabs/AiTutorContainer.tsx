@@ -30,7 +30,11 @@ export const AiTutorContainer: FC<{
   aiChatOpen: boolean;
   inLevel: boolean;
   labType: string;
-}> = ({toggleAiChat, aiChatOpen, inLevel, labType}) => {
+  channelId: string;
+  levelId: string;
+  unitId: string;
+}> = ({toggleAiChat, aiChatOpen, labType, levelId, unitId, channelId}) => {
+  const inLevel = !!unitId;
   const allPrompts = inLevel
     ? [...levelPrompts, ...defaultPrompts]
     : [...standaloneProjectPrompts, ...defaultPrompts];
@@ -43,6 +47,14 @@ export const AiTutorContainer: FC<{
     aiTutorHelper.setAiTutorContext({source: code ?? ''});
     const callback = aiTutorHelper.getHiddenContextCallback();
     return callback();
+  };
+
+  const analyticsData = {
+    labType: labType,
+    channelId: channelId,
+    location: window.location.href,
+    levelId: levelId,
+    unitId: unitId,
   };
 
   return (
@@ -82,6 +94,7 @@ export const AiTutorContainer: FC<{
           toggleAiChat={toggleAiChat}
           suggestedPrompts={allPrompts}
           hiddenContextCallback={getHiddenContext}
+          analyticsData={analyticsData}
         />
       )}
     </>
