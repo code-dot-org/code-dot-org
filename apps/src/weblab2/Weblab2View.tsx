@@ -6,11 +6,13 @@ import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import experiments from '@cdo/apps/util/experiments';
 
+import {JsonObjectSchema, ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
@@ -44,6 +46,28 @@ const defaultConfig: ConfigType = {
     share: ShareView,
     fullScreen: FullScreenView,
   },
+};
+
+const aiTutorResponseJsonSchema: JsonObjectSchema = {
+  type: 'object',
+  properties: {
+    code: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          language: {type: 'string'},
+          sourceCode: {type: 'string'},
+          filename: {type: 'string'},
+        },
+        required: ['language', 'sourceCode', 'filename'],
+        additionalProperties: false,
+      },
+    },
+    explanation: {type: 'string'},
+  },
+  required: ['code', 'explanation'],
+  additionalProperties: false,
 };
 
 const defaultSource: MultiFileSource = {
@@ -120,6 +144,27 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
+  const aiTutorResponseSchemaSettings: ResponseSchemaSettings | undefined =
+    useMemo(() => {
+      if (
+        experiments.isEnabledAllowingQueryString(
+          experiments.WEBLAB2_ACCEPT_REJECT
+        )
+      ) {
+        return {
+          jsonSchema: aiTutorResponseJsonSchema,
+          responseCallback: (response: string) => {
+            console.log('🤖: Tutor response (in jsonSchema callback):', {
+              response,
+            });
+            // TODO: send code to the appropriate place
+            const jsonResponse = JSON.parse(response);
+            return jsonResponse.explanation;
+          },
+        };
+      }
+    }, []);
+
   return (
     <div className={moduleStyles.weblab2Container}>
       {hasSource && (
@@ -135,6 +180,7 @@ const Weblab2View: React.FC<
           aiTutorSystemPromptName={getPromptNameFromMode(
             levelProperties.aiTutorMode
           )}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
       )}
     </div>

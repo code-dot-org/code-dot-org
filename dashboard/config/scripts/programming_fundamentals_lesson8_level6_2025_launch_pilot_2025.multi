@@ -1,0 +1,11 @@
+name 'programming-fundamentals-lesson8-level6_2025-launch_pilot-2025'
+title 'Check Your Understanding'
+
+question 'What are two things that must be true for a `while` loop to work correctly in Python?'
+
+wrong 'The loop must include at least three lines of code and use the keyword `repeat`.'
+right 'The loop must use the `while` keyword with a Boolean condition and indent the code you want to repeat.'
+wrong 'The loop must have a condition that ends with a semicolon and use all capital letters.'
+wrong 'The loop must only include one command and use a variable that increases by one each time.'
+
+allow_multiple_attempts false

@@ -1,0 +1,58 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-14T21:23:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Homepage</title>\n</head>\n<body>\n  <header>\n    <h1>Welcome to My Website</h1>\n    <nav>\n      <a href=\"index.html\">Home</a> |\n      <a href=\"contact.html\">Contact</a>\n    </nav>\n  </header>\n\n  <main>\n    <section>\n      <h2>About Us</h2>\n      <p>We are a small team dedicated to building simple, elegant web experiences using modern web technologies.</p>\n    </section>\n\n    <section>\n      <h2>Our Services</h2>\n      <ul>\n        <li>Web Design</li>\n        <li>Web Development</li>\n        <li>Consulting</li>\n      </ul>\n    </section>\n\n    <section>\n      <h2>Latest News</h2>\n      <p>Check out our latest updates and projects on our blog. We regularly post about technology and design trends.</p>\n    </section>\n  </main>\n\n  <footer>\n    <p>&copy; 2025 My Website. All rights reserved.</p>\n  </footer>\n</body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "contact.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Contact Us</title>\n</head>\n<body>\n  <header>\n    <h1>Contact Us</h1>\n    <nav>\n      <a href=\"index.html\">Home</a> |\n      <a href=\"contact.html\">Contact</a>\n    </nav>\n  </header>\n\n  <main>\n    <section>\n      <h2>Get in Touch</h2>\n      <p>We’d love to hear from you! Please use the form below to send us a message.</p>\n      <form action=\"#\" method=\"post\">\n        <label for=\"name\">Name:</label><br>\n        <input type=\"text\" id=\"name\" name=\"name\"><br><br>\n\n        <label for=\"email\">Email:</label><br>\n        <input type=\"email\" id=\"email\" name=\"email\"><br><br>\n\n        <label for=\"message\">Message:</label><br>\n        <textarea id=\"message\" name=\"message\" rows=\"5\" cols=\"30\"></textarea><br><br>\n\n        <input type=\"submit\" value=\"Send Message\">\n      </form>\n    </section>\n\n    <section>\n      <h2>Our Location</h2>\n      <p>123 Main Street<br>\n      Hometown, USA 12345</p>\n    </section>\n  </main>\n\n  <footer>\n    <p>&copy; 2025 My Website. All rights reserved.</p>\n  </footer>\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "long_instructions": "#Apply a Consistent Style to Both Web Pages\r\n\r\nYour goal is to style both HTML pages by generating and linking a CSS file based on your chosen mood board.\r\n\r\n:::details [*Don't have your own mood board? You can use one of the following:*]\r\n- [Mood Board 1](https://drive.google.com/file/d/1PYPqmPa3DQM7E1hPEwebuHzvzd-zOEqT/view?usp=drive_link)\r\n- [Mood Board 2](https://drive.google.com/file/d/1VcVcmozSAq9OPIhcIQWpNAebk5SOuMbC/view?usp=drive_link)\r\n:::\r\n\r\n:::details [Helpful Steps]\r\n1. Use AI to generate the CSS File\r\n2. Save and Link the Stylesheet\r\n3. Preview Your Work\r\n4. Save as Version 1\r\n:::"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14 21:23:52 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 21:58:19 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:03:51 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:08:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:12:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:16:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:56:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

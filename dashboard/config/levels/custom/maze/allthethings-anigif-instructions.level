@@ -1,7 +1,8 @@
 <Maze>
   <config><![CDATA[{
+  "published": true,
   "game_id": 25,
-  "created_at": "2019-11-07T19:07:11.000Z",
+  "created_at": "2019-11-11T22:28:42.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
@@ -28,7 +29,6 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "parent_level_id": 18661,
-    "preload_asset_list": null,
     "encrypted": "false",
     "instructions_important": "false",
     "mini_rubric": "false",
@@ -37,12 +37,13 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_type_hints": "false",
+    "shape_shift": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade2_CaringForNewPet_0_1\",\r\n  \"callout_text\": \"After snapping all the blocks together, press \\\"Run\\\" to start your program.\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"grade2_CaringForNewPet_0_1\",\r\n  \"callout_text\": \"Click here to see the code for the program you're making\",\r\n  \"element_id\": \"#show-code-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom right\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "maze_data": null,
-    "shape_shift": "false"
+    "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-11-07 14:07:28 -0500\",\"changed\":[\"notes\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-11-07 14:07:28 -0500\",\"changed\":[\"notes\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2025-10-14 17:58:32 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 18:09:54 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"callout_json\",\"maze_data\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 18:12:09 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"callout_json\",\"maze_data\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 18:13:03 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"callout_json\",\"maze_data\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 18:15:22 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"callout_json\",\"maze_data\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 18:19:45 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"callout_json\",\"maze_data\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

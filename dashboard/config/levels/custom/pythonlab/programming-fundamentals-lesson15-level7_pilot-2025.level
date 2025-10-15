@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:48:05.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Functions with Parameters\r\n\r\nCreate a function with a parameter to streamline repetitive actions. In this example, the character is planting beanstalks to grow a magical garden. \r\n\r\n###Do This: \r\nTurn the existing code into a function called plant_garden(item).\r\n- Use `item` as a parameter inside the function.\r\n- Change the code so it says `print(\"Dash plants \"+ item +\".\")` every time Dash plants something.\r\n- Call the function with at least two different plant names (\"garlic bulb\", \"beanstalk\", etc.).\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def plant_garden(): # Use a parameter in this function\n    print(\"Dash plants beanstalk\") # Change every instance of \"beanstalk\" to the parameter name\n    print(\"Dash moves to the next spot.\")\n    print(\"Dash plants beanstalk\")\n    print(\"Dash moves to the next spot.\")\n    print(\"Dash plants beanstalk\")\n    print(\"Dash moves to the next spot.\")\n    print(\"Dash plants beanstalk\")\n    print(\"Dash moves to the next spot.\")\n\n# Call your function here\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzuj4wvKl/PYXtA1u/nVF1aH+PiG+QcWx\nt4Kz0GTg8y/twu2sS6dFQ1BVQk/7yjpNXawheE69p6lm9wvQwA5zXHKKZP9w\nV+BD5qcVvi1FQHP5WbWjMi8SZam9nhLd5Kv4yBGtIuBnkhag5McqmGixoBl7\nxaf7Dl/NBubMRTEAK2alhjl30cApUUbH5V2reqs/ArB7Cne2/IDO8JDZaOEk\nnyr3zwuieuQtx8vwvmymSU2cS1OAzx/7ovz2eqQRP2RVOTZETf4kzfNW96PL\nL0GIzen4Gfucwkl9yOZQiEdI8q8o68F7vccslfWy+Cgku7Z4X9FNA2hWtCSv\ns2u6keem7stnpN1cRlLfxuR/OVVZV2RRh2ozxBLxUfysf358QIqNkbf2JJa3\ngwKZj4EB1YXGyON8SPOb067t3t1z4l4NXWMcpjxuuRmcHiCVh9TAfgud2kzL\nZJwbYtPAzERtcYGX0arms865VdP+coNG0ia5FZ5nJkMDrmMmXTu4cYmTqWnv\noXujsz2FEwQtptICtjguLA8V92QTZph8wsLuL9Rd+GuXxHhDQRFmsYFZxYnu\nlW7D+SYRhYsnSfvhXeJFrx4OinwFATxDOKcUXfaF2rwIeBnPS12PvpL3A7ip\nA5yliDtDHusuaCIQ44NCawBWXrFZZcX2Ag6noJ1/EoJQQHZ2xjNl7/j3zmCl\nRMGMs1+vXFV3QHmb5ulk7+QPsWcQ5lcX/Og=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nimport re\n\nclass TestPlantGardenFunction(unittest.TestCase):\n\n    def test_add_parameter(self):\n        \"\"\"Check if the function 'plant_garden' has a parameter.\"\"\"\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Check for function definition with at least one parameter\n            function_pattern = re.search(r'def\\s+plant_garden\\s*\\(\\s*([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\)\\s*:', content)\n\n            if not function_pattern:\n                self.fail(\"You haven't added a parameter to the 'plant_garden' function. Please update the function definition to include one.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n    def test_call_function_with_argument(self):\n        \"\"\"Check if 'plant_garden' is called with an argument.\"\"\"\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Look for any call to plant_garden() with an argument inside parentheses\n            function_call_pattern = re.search(r'plant_garden\\s*\\(\\s*[\"\\'][a-zA-Z0-9_\\s]+[\"\\']\\s*\\)', content)\n\n            if not function_call_pattern:\n                self.fail(\"You haven't called the 'plant_garden' function with an argument. Make sure to pass an item name when calling the function.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:05.723+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson15-level7_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson15-level7_2025\"}]"
+}]]></config>
+</Pythonlab>
