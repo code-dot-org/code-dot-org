@@ -3,7 +3,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState, useCallback} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
@@ -253,6 +253,26 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
+  const onClickTab = useCallback(
+    (tab: Tabs) => {
+      setCurrentTab(tab);
+      if (collapsed) {
+        setCollapsed(!collapsed);
+        dispatch(setIsStandaloneCollapsed(false));
+      }
+    },
+    [collapsed, dispatch]
+  );
+
+  const onClickSettingsButton = useCallback(() => {
+    setIsSettingsOpen(!isSettingsOpen);
+    if (collapsed) {
+      setCurrentTab(getTypedKeys(availableTabs)[0]);
+      setCollapsed(!collapsed);
+      dispatch(setIsStandaloneCollapsed(false));
+    }
+  }, [collapsed, dispatch, availableTabs, isSettingsOpen]);
+
   return (
     <div
       id={resourcePanelInstructionsElementId}
@@ -330,7 +350,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                       styles.tabButton,
                       tab === currentTab && styles.selected
                     )}
-                    onClick={() => setCurrentTab(tab)}
+                    onClick={() => onClickTab(tab)}
                     key={tab}
                     color={'gray'}
                     type={'tertiary'}
@@ -342,7 +362,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                         : undefined,
                     }}
                     aria-label={tabInfo[tab].title}
-                    disabled={collapsed}
                   />
                 </div>
               </WithTooltip>
@@ -369,15 +388,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             <div>
               <Button
                 className={styles.bottomButton}
-                onClick={() => {
-                  setIsSettingsOpen(!isSettingsOpen);
-                }}
+                onClick={() => onClickSettingsButton()}
                 isIconOnly={true}
                 icon={{iconName: 'gear'}}
                 color={'gray'}
                 type={'tertiary'}
                 aria-label={commonI18n.settings()}
-                disabled={collapsed}
               />
             </div>
           </WithTooltip>
