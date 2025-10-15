@@ -11,6 +11,7 @@ import _ from 'lodash';
 import React, {useState, useMemo, useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
+import {EXT_COMPONENT_OPEN_FAB_EVENT} from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -79,6 +80,13 @@ const createDisplayName = (
       lessonName: lessonName,
     });
   }
+};
+
+const handleLessonSummaryAskAITAClick = () => {
+  const openAITAEvent = new Event(EXT_COMPONENT_OPEN_FAB_EVENT, {
+    bubbles: true,
+  });
+  document.dispatchEvent(openAITAEvent);
 };
 
 interface LessonMaterialsContainerProps {
@@ -384,7 +392,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             color="black"
             className={styles.askAITAButton}
             text={i18n.questionForAITA()}
-            onClick={() => console.log('ASK TA')}
+            onClick={handleLessonSummaryAskAITAClick}
           />
           {!hasCompletedPersonalizationQuiz && (
             <div className={styles.personalizationQuizSection}>
