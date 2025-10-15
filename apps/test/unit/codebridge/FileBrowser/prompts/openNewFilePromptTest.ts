@@ -22,7 +22,7 @@ const getNewFileMock = (parentId: FolderId): [ProjectFile, NewFileFunction] => {
 
 describe('openNewFilePrompt', function () {
   it('can successfully add a new file to root w/o validation file', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const newFileName = 'valid_file.txt';
     const folderId = DEFAULT_FOLDER_ID;
 
@@ -33,7 +33,7 @@ describe('openNewFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
     });
@@ -45,7 +45,7 @@ describe('openNewFilePrompt', function () {
   });
 
   it('can successfully implicitly add a new file to root w/o validation file', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const newFileName = 'valid_file.txt';
     const folderId = DEFAULT_FOLDER_ID;
 
@@ -55,7 +55,7 @@ describe('openNewFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
     });
@@ -67,7 +67,7 @@ describe('openNewFilePrompt', function () {
   });
 
   it('can successfully add a new file to a subfolder  w/o validation file', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const newFileName = 'valid_file.txt';
     const folderId = '1';
 
@@ -78,7 +78,7 @@ describe('openNewFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
     });
@@ -90,7 +90,7 @@ describe('openNewFilePrompt', function () {
   });
 
   it('can successfully add a new file to root w/ validation file', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const newFileName = 'valid_file.txt';
     const folderId = DEFAULT_FOLDER_ID;
 
@@ -101,7 +101,7 @@ describe('openNewFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile,
     });
@@ -113,7 +113,7 @@ describe('openNewFilePrompt', function () {
   });
 
   it('can refuse to add an invalid file', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const newFileName = 'invalid_file';
     const folderId = DEFAULT_FOLDER_ID;
 
@@ -124,7 +124,7 @@ describe('openNewFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
     });

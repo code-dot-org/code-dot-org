@@ -82,6 +82,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   hideContinueIfDisabled = false,
   ...feedbackProps
 }) => {
+  const hasValidationConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions
+  );
+
   const validationResults = useAppSelector(
     state => state.lab.validationState?.validationResults
   );
@@ -145,7 +149,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <TextToSpeech text={longInstructions} />
             </div>
           )}
-          {includeValidation && (
+          {includeValidation && hasValidationConditions && (
             <div className={moduleStyles.nonScrollingSubContent}>
               <ValidationButton
                 onValidate={validationSettings.onValidate}

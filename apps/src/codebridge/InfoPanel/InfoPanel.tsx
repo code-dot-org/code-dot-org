@@ -18,11 +18,11 @@ import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/use
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
+import {sendLab2AnalyticsEvent} from '../../lab2/utils/analyticsReporterHelper';
 import {useCodebridgeContext} from '../codebridgeContext';
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {getSystemMessage} from '../Console/MessageHelpers';
 import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
-import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import moduleStyles from './styles/info-panel.module.scss';
 
@@ -60,6 +60,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorSystemPromptName,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
+    aiTutorResponseSchemaSettings,
   } = useCodebridgeContext();
   const {
     mapReference,
@@ -151,7 +152,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     if (panel !== currentPanel) {
       setCurrentPanel(panel);
       setCurrentPanelName(panelNames[panel]);
-      sendCodebridgeAnalyticsEvent(panelEventNames[panel], appName);
+      sendLab2AnalyticsEvent(panelEventNames[panel], appName);
     }
     setIsDropdownOpen(false);
   };
@@ -159,7 +160,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const handleValidate = () => {
     if (onRun) {
       dispatch(setIsValidating(true));
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK, appName);
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK, appName);
       logUserLevelInteraction({
         levelId: levelId,
         scriptId: scriptId,
@@ -218,6 +219,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           isValidationTourEnabled={appName === 'pythonlab'}
           isOnboardingTourEnabled={true}
           aiTutorSystemPromptName={aiTutorSystemPromptName}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
       </div>
     );

@@ -1,3 +1,4 @@
+export * from './analyticsReporterHelper';
 export * from './getDeferredPromise';
 export * from './LifecycleNotifier';
 export * from './notifyLevelChange';

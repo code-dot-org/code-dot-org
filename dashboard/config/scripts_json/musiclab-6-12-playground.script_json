@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-02 21:20:00 UTC",
+    "serialized_at": "2025-10-08 16:09:18 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -446,6 +446,21 @@
       },
       "seeding_key": {
         "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "Pilot 5",
+      "name": "Pilot 5",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot 5",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "musiclab-6-12-playground"
       }
@@ -1447,6 +1462,18 @@
       "seeding_key": {
         "lesson_activity.key": "5d6cde28-db16-4800-8ecc-ee76207d374b",
         "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "ee530178-9f94-4fda-b3d6-d10f0f686a68",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee530178-9f94-4fda-b3d6-d10f0f686a68",
+        "lesson.key": "Pilot 5",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "musiclab-6-12-playground"
       }
@@ -4235,6 +4262,28 @@
       "seeding_key": {
         "activity_section.key": "f096395c-49e9-4327-90ee-d1bfa0e364d7",
         "lesson_activity.key": "5d6cde28-db16-4800-8ecc-ee76207d374b"
+      }
+    },
+    {
+      "key": "aeae3f7e-2077-4a53-9605-b5dd971ce6ca",
+      "position": 1,
+      "properties": {
+        "progression_name": "We care about these"
+      },
+      "seeding_key": {
+        "activity_section.key": "aeae3f7e-2077-4a53-9605-b5dd971ce6ca",
+        "lesson_activity.key": "ee530178-9f94-4fda-b3d6-d10f0f686a68"
+      }
+    },
+    {
+      "key": "5d4ac10d-ae7c-4546-9e8c-4b5a344b0880",
+      "position": 2,
+      "properties": {
+        "progression_name": "These work"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d4ac10d-ae7c-4546-9e8c-4b5a344b0880",
+        "lesson_activity.key": "ee530178-9f94-4fda-b3d6-d10f0f686a68"
       }
     }
   ],
@@ -8570,6 +8619,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-predict_v2_v3"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -8592,6 +8644,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-panel_v2_v3"
+        ],
         "progression": "Play Sequential"
       },
       "bonus": false,
@@ -8614,6 +8669,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-1_v2_v3"
+        ],
         "progression": "Play Sequential"
       },
       "bonus": false,
@@ -8636,6 +8694,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-2_v2_v3"
+        ],
         "progression": "Play Sequential"
       },
       "bonus": false,
@@ -8658,6 +8719,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-practice-formative_v2_v3"
+        ],
         "progression": "Check-in"
       },
       "bonus": false,
@@ -8680,6 +8744,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-rest-predict_v2_v3"
+        ],
         "progression": "Rests"
       },
       "bonus": false,
@@ -8702,6 +8769,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-rest-panel_v2_v3"
+        ],
         "progression": "Rests"
       },
       "bonus": false,
@@ -8724,6 +8794,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-rest-1_v2_v3"
+        ],
         "progression": "Rests"
       },
       "bonus": false,
@@ -8746,6 +8819,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-artist-choice_v2_v3"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8768,6 +8844,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequencing-practice-evaluative_v2_v3"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8790,6 +8869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-choice_v2_v3"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -8804,6 +8886,138 @@
       },
       "level_keys": [
         "test-music-lab-sequences-practice-choice_v2_v3"
+      ]
+    },
+    {
+      "chapter": 185,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "We care about these"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI_pilot_5_music4_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "aeae3f7e-2077-4a53-9605-b5dd971ce6ca"
+      },
+      "level_keys": [
+        "HoAI_pilot_5_music4_dantest"
+      ]
+    },
+    {
+      "chapter": 186,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "We care about these"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI_pilot_5_music_modify_together_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "aeae3f7e-2077-4a53-9605-b5dd971ce6ca"
+      },
+      "level_keys": [
+        "HoAI_pilot_5_music_modify_together_dantest"
+      ]
+    },
+    {
+      "chapter": 187,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "We care about these"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI_pilot_5_music6_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "aeae3f7e-2077-4a53-9605-b5dd971ce6ca"
+      },
+      "level_keys": [
+        "HoAI_pilot_5_music6_dantest"
+      ]
+    },
+    {
+      "chapter": 188,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "We care about these"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI_pilot_5_music_modify_song_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "aeae3f7e-2077-4a53-9605-b5dd971ce6ca"
+      },
+      "level_keys": [
+        "HoAI_pilot_5_music_modify_song_dantest"
+      ]
+    },
+    {
+      "chapter": 189,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "These work"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "length_prompt_2_3_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "5d4ac10d-ae7c-4546-9e8c-4b5a344b0880"
+      },
+      "level_keys": [
+        "length_prompt_2_3_dantest"
+      ]
+    },
+    {
+      "chapter": 190,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "These work"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "length_modify2_2_3_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "5d4ac10d-ae7c-4546-9e8c-4b5a344b0880"
+      },
+      "level_keys": [
+        "length_modify2_2_3_dantest"
       ]
     }
   ],
@@ -11014,6 +11228,78 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "1dac5f0c-7d10-44b7-9b51-b17123559075"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI_pilot_5_music4_dantest",
+        "script_level.level_keys": [
+          "HoAI_pilot_5_music4_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "aeae3f7e-2077-4a53-9605-b5dd971ce6ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI_pilot_5_music_modify_together_dantest",
+        "script_level.level_keys": [
+          "HoAI_pilot_5_music_modify_together_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "aeae3f7e-2077-4a53-9605-b5dd971ce6ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI_pilot_5_music6_dantest",
+        "script_level.level_keys": [
+          "HoAI_pilot_5_music6_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "aeae3f7e-2077-4a53-9605-b5dd971ce6ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI_pilot_5_music_modify_song_dantest",
+        "script_level.level_keys": [
+          "HoAI_pilot_5_music_modify_song_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "aeae3f7e-2077-4a53-9605-b5dd971ce6ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "length_prompt_2_3_dantest",
+        "script_level.level_keys": [
+          "length_prompt_2_3_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "5d4ac10d-ae7c-4546-9e8c-4b5a344b0880"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "length_modify2_2_3_dantest",
+        "script_level.level_keys": [
+          "length_modify2_2_3_dantest"
+        ],
+        "lesson.key": "Pilot 5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "5d4ac10d-ae7c-4546-9e8c-4b5a344b0880"
       }
     }
   ],

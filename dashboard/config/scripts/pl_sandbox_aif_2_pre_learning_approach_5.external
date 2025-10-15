@@ -15,8 +15,8 @@ markdown <<MARKDOWN
 
   <!-- Block 1 -->
   <div style="flex: 1; min-width: 250px; background-color: #f9f9f9; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <div style="font-size: 2rem; margin-bottom: 10px;">📈</div>
-    <h3 style="margin: 0 0 10px 0;"><b>Stay Ahead of Job Shifts</b></h3>
+    <div style="font-size: 2rem; margin-bottom: 10px;text-align: center;">📈</div>
+    <h3 style="margin: 0 0 10px 0; text-align: center;"><b>Stay Ahead of Job Shifts</b></h3>
     <ul style="margin: 0; padding-left: 20px; font-size: 14pt; line-height: 1.5;">
       <li>AI skill demand is surging <em><a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/aijb-2025-united-states-analysis.pdf?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(PwC)</a></em></li>
       <li>170M new jobs vs. 92M displaced <em><a href="https://blog.theinterviewguys.com/the-state-of-ai-in-the-workplace-in-2025/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(The Interview Guys)</a></em></li>
@@ -26,8 +26,8 @@ markdown <<MARKDOWN
 
   <!-- Block 2 -->
   <div style="flex: 1; min-width: 250px; background-color: #f9f9f9; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <div style="font-size: 2rem; margin-bottom: 10px;">💡</div>
-    <h3 style="margin: 0 0 10px 0;"><b>Gain an Edge</b></h3>
+    <div style="font-size: 2rem; margin-bottom: 10px;text-align: center;">💡</div>
+    <h3 style="margin: 0 0 10px 0; text-align: center;"><b>Gain an Edge</b></h3>
     <ul style="margin: 0; padding-left: 20px; font-size: 14pt; line-height: 1.5;">
       <li>Jobs exposed to AI evolving 66% faster</li>
       <li>AI-skilled workers earn 56% wage premium <em><a href="https://blog.theinterviewguys.com/the-state-of-ai-in-the-workplace-in-2025/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(The Interview Guys)</a></em></li>
@@ -36,8 +36,8 @@ markdown <<MARKDOWN
 
   <!-- Block 3 -->
   <div style="flex: 1; min-width: 250px; background-color: #f9f9f9; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <div style="font-size: 2rem; margin-bottom: 10px;">🧩</div>
-    <h3 style="margin: 0 0 10px 0;"><b>Build Core Skills</b></h3>
+    <div style="font-size: 2rem; margin-bottom: 10px; text-align: center;">🧩</div>
+    <h3 style="margin: 0 0 10px 0; text-align: center;"><b>Build Core Skills</b></h3>
     <ul style="margin: 0; padding-left: 20px; font-size: 14pt; line-height: 1.5;">
       <li>Computational thinking = universal tool <em><a href="https://learn.microsoft.com/en-us/training/modules/computational-thinking-importance-education/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(Microsoft Learn+)</a></em></li>
       <li>Problem-solving & adaptability across fields <em><a href="https://stemeducationjournal.springeropen.com/articles/10.1186/s40594-024-00510-6?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(SpringerOpen)</a></em></li>

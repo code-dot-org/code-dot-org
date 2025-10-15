@@ -11,7 +11,7 @@
   margin: 0;
   box-sizing: border-box;
   color: white;
-  background-color: rgba(26 11 76 / 0.6);
+  background-color: #55146a;
   border: none;
   resize: vertical;
   border-radius: 10px;
@@ -19,6 +19,13 @@
   &Small {
     font-size: 14px;
   }
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
 }
 
 .navigationButton {

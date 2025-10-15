@@ -3811,12 +3811,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/keyboard-navigation@npm:3.0.1":
-  version: 3.0.1
-  resolution: "@blockly/keyboard-navigation@npm:3.0.1"
+"@blockly/keyboard-navigation@npm:3.0.3":
+  version: 3.0.3
+  resolution: "@blockly/keyboard-navigation@npm:3.0.3"
   peerDependencies:
     blockly: ^12.3.0
-  checksum: 10/daf79c093e969496749d3dda14c5783fef07c9c351dd614bdf6b5c56cb6cf2a686d36a4efb140ab1cf5f0750023828555355a46f31ec116d5b21dcd39e102cd9
+  checksum: 10/b95f4a9db5c72af7874f4b8e4fd609fcf4feecaa6b5d9da89d98b00c2f2cc474c153e73be5ab45ca9b399f35c261c22430103b1fa53e9a4490fc45a98badc19b
   languageName: node
   linkType: hard
 
@@ -3905,10 +3905,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/dance-party@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@code-dot-org/dance-party@npm:2.0.0"
-  checksum: 10/3c9f1bade0d4e7b859794de2227655c3d2c67d7ffc6c66376840de4dfa1ee6d79a1481ca85039704f4ce83a924b2918b2362253d62de5f5cf8b22a461ee63a99
+"@code-dot-org/dance-party@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@code-dot-org/dance-party@npm:2.0.1"
+  checksum: 10/21ff06d2f25193b4a73003f65de5e8a502de8be2382c673b7cc3de2c5a5e71c047c65482f4e64cb302bf99cdadc3ab9ff81abcb7e5e252d8b62dc7ce486045c7
   languageName: node
   linkType: hard
 
@@ -11030,7 +11030,7 @@ __metadata:
     "@blockly/field-bitmap": "npm:^6.0.0"
     "@blockly/field-colour": "npm:^6.0.0"
     "@blockly/field-grid-dropdown": "npm:^6.0.0"
-    "@blockly/keyboard-navigation": "npm:3.0.1"
+    "@blockly/keyboard-navigation": "npm:3.0.3"
     "@blockly/plugin-cross-tab-copy-paste": "npm:^8.0.1"
     "@blockly/plugin-scroll-options": "npm:^7.0.0"
     "@blockly/theme-dark": "npm:^8.0.0"
@@ -11041,7 +11041,7 @@ __metadata:
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/"
     "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/"
     "@code-dot-org/craft": "npm:0.2.2"
-    "@code-dot-org/dance-party": "npm:2.0.0"
+    "@code-dot-org/dance-party": "npm:2.0.1"
     "@code-dot-org/fonts": "portal:../frontend/packages/fonts/"
     "@code-dot-org/johnny-five": "npm:2.1.0-cdo.3"
     "@code-dot-org/js-interpreter": "npm:1.3.13"

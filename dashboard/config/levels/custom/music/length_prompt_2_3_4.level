@@ -31,7 +31,7 @@
     "use_secondary_finish_button": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "predict_settings": {
       "isPredictLevel": false
     },
@@ -46,7 +46,7 @@
     "long_instructions": "####Remix a song for the party!\r\nUse AI to get started with the code.",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-01T22:45:29.390+00:00\",\"changed\":[\"cloned from \\\"length_prompt_2_3\\\"\"],\"cloned_from\":\"length_prompt_2_3\"},{\"changed_at\":\"2025-10-03 04:49:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-03 04:49:58 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-03 04:57:11 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-03 04:58:30 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-01T22:45:29.390+00:00\",\"changed\":[\"cloned from \\\"length_prompt_2_3\\\"\"],\"cloned_from\":\"length_prompt_2_3\"},{\"changed_at\":\"2025-10-03 04:49:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-03 04:49:58 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-03 04:57:11 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-03 04:58:30 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-07 05:21:27 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
