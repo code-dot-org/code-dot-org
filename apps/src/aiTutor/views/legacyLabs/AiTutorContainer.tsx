@@ -3,7 +3,7 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
-import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
+import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
@@ -71,7 +71,7 @@ export const AiTutorContainer: FC<{
             color="black"
           />
         </div>
-        <AiTutor2Chat
+        <AiTutorChat
           hiddenContextCallback={getHiddenContext}
           aiTutorChatButtonData={allPrompts}
           channelId={lab?.channel}

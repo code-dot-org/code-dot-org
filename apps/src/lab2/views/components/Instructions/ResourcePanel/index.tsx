@@ -10,7 +10,7 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
-import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
+import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -174,7 +174,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       shouldShowAiTutor(appName, levelProperties.aiTutorAvailable)
     ) {
       tabMap[Tabs.AiTutor] = (
-        <AiTutor2Chat
+        <AiTutorChat
           hiddenContextCallback={hiddenContextCallback}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           levelName={levelName}

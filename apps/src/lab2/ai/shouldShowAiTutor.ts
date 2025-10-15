@@ -13,6 +13,6 @@ export const shouldShowAiTutor = (
   return (
     APPS_ALWAYS_USING_AI_TUTOR.includes(appName) ||
     aiTutorAvailable ||
-    queryParams('show-ai-tutor2') === 'true'
+    queryParams('show-ai-Tutor') === 'true'
   );
 };
