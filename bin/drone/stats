@@ -102,10 +102,11 @@ while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
       }
     end.compact
 
-    raise "No new builds found" if new_builds.empty?
-    oldest_build_seen = new_builds.map {|b| b[:date]}.min
-    new_builds.select! {|b| b[:date] >= OLDEST_BUILD_OF_INTEREST}
-    builds_data += new_builds
+    unless new_builds.empty?
+      oldest_build_seen = new_builds.map {|b| b[:date]}.min
+      new_builds.select! {|b| b[:date] >= OLDEST_BUILD_OF_INTEREST}
+      builds_data += new_builds
+    end
   else
     # For stage-level analysis, use existing logic
     build_nums = builds.map {|build| build[:number]}
@@ -124,16 +125,24 @@ while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
       end
     end.compact
 
-    raise "No new build stages found, is --only-stages set correctly?" if new_build_stages.empty?
-    oldest_build_seen = new_build_stages.map {|s| s[:date]}.min
-    new_build_stages.select! {|s| s[:date] >= OLDEST_BUILD_OF_INTEREST}
-    build_stages += new_build_stages
+    unless new_build_stages.empty?
+      oldest_build_seen = new_build_stages.map {|s| s[:date]}.min
+      new_build_stages.select! {|s| s[:date] >= OLDEST_BUILD_OF_INTEREST}
+      build_stages += new_build_stages
+    end
   end
 
   print("#{TERMINAL_CLEAR_LINE}Processed builds back to #{oldest_build_seen}") if $stdout.tty?
   drone_page_num += 1
 end
 puts(TERMINAL_CLEAR_LINE) if $stdout.tty?
+
+# Check if we found any data
+if options[:total_build_time]
+  raise "No builds found matching the specified criteria" if builds_data.empty?
+else
+  raise "No build stages found matching the specified criteria" if build_stages.empty?
+end
 
 def descriptive_statistics(data, units: nil, round: nil)
   raise "All values must be numeric" unless data.all?(Numeric)
