@@ -1,4 +1,4 @@
-@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as v;
 @import '../../../mixins.scss';
 @import '../mixins.scss';
 
@@ -18,7 +18,7 @@ $preview-image-size: 48px;
 }
 
 %preview {
-  border-radius: 4px;
+  border-radius: v.$default-border-radius;
   position: relative;
 }
 
@@ -66,11 +66,11 @@ $preview-image-size: 48px;
     display: flex;
     width: $preview-image-size;
     height: $preview-image-size;
-    border-radius: 4px 0 0 4px;
+    border-radius: v.$default-border-radius 0 0 v.$default-border-radius;
     background-color: var(--background-brand-teal-primary);
 
     html[dir='rtl'] & {
-      border-radius: 0 4px 4px 0;
+      border-radius: 0 v.$default-border-radius v.$default-border-radius 0;
     }
 
     i {
@@ -87,14 +87,14 @@ $preview-image-size: 48px;
     color: var(--text-neutral-primary);
     background: var(--background-neutral-primary);
     padding: 0.22rem 0.5rem;
-    border: variables.$default-border;
+    border: v.$default-border;
     border-inline-start: 0;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 v.$default-border-radius v.$default-border-radius 0;
     line-height: 1.5;
     text-align: initial;
 
     html[dir='rtl'] & {
-      border-radius: 4px 0 0 4px;
+      border-radius: v.$default-border-radius 0 0 v.$default-border-radius;
     }
 
     strong {
@@ -112,7 +112,7 @@ $preview-image-size: 48px;
   img {
     height: $preview-image-size;
     width: auto;
-    border-radius: 0.25rem;
+    border-radius: v.$default-border-radius;
   }
 }
 
