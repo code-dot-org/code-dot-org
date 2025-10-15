@@ -461,20 +461,15 @@ class HomeControllerTest < ActionController::TestCase
   test "home page topCourse uses correct unit_group when UserScript has different unit_group than script original_unit_group" do
     student = create(:student)
 
-    # Create two unit groups for the same script
-    original_unit_group = create(:unit_group, name: 'original-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    different_unit_group = create(:unit_group, name: 'different-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    script = create(:script, :with_levels, original_unit_group: original_unit_group)
-
-    # Add the script to both unit groups
-    create(:unit_group_unit, unit_group: original_unit_group, script: script, position: 1)
-    create(:unit_group_unit, unit_group: different_unit_group, script: script, position: 2)
-    script.reload
+    # Create two unit groups for the same unit
+    unit = create(:script, :with_levels)
+    create(:single_unit_course, :stable, unit: unit)
+    other_unit_group = create(:single_unit_course, :stable)
+    create(:unit_group_unit, unit_group: other_unit_group, script: unit, position: 2)
 
     # Create a user_script with the different unit_group (not the original)
     # Use the UserScript.find_and_migrate_or_create_by! method to ensure unit_group is set properly
-    user_script = UserScript.find_and_migrate_or_create_by!(user_id: student.id, unit: script, unit_group: different_unit_group)
+    user_script = UserScript.find_and_migrate_or_create_by!(user_id: student.id, unit: unit, unit_group: other_unit_group)
     user_script.update!(started_at: Time.now)
 
     sign_in student
@@ -484,9 +479,9 @@ class HomeControllerTest < ActionController::TestCase
     refute_nil assigns(:homepage_data)[:topCourse]
     top_course = assigns(:homepage_data)[:topCourse]
 
-    # Verify the links use the different_unit_group, not the original_unit_group
-    assert_equal "/courses/different-course/units/2", top_course[:linkToOverview]
-    assert_equal "/courses/different-course/units/2/next", top_course[:linkToLesson]
+    # Verify the links use the other_unit_group, not the original_unit_group
+    assert_equal "/courses/#{other_unit_group.name}/units/2", top_course[:linkToOverview]
+    assert_equal "/courses/#{other_unit_group.name}/units/2/next", top_course[:linkToLesson]
   end
 
   test "home page courses data comes from courses_as_participant" do

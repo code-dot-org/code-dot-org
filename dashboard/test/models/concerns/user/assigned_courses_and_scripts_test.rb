@@ -55,7 +55,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       end
     end
 
-    context 'when the user has progress in a standalone unit' do
+    context 'when the user has progress in a single-unit course' do
       let(:user) {create(:student)}
       let(:course) {create(:single_unit_course, :stable)}
       let(:unit) {course.first_unit}
