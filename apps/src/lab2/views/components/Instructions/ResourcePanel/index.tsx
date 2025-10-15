@@ -410,14 +410,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 </div>
               ))}
             </div>
-            {(hideInstructionsNavigation ||
-              currentTab !== Tabs.Instructions) && (
-              <NavigationArea
-                {...instructionsProps}
-                styleAsBubble={styleNavigationAsBubble}
-                className={styles.navigationFooter}
-              />
-            )}
+            {(hideInstructionsNavigation || currentTab !== Tabs.Instructions) &&
+              !isProjectLevel && (
+                <NavigationArea
+                  {...instructionsProps}
+                  styleAsBubble={styleNavigationAsBubble}
+                  className={styles.navigationFooter}
+                />
+              )}
             {isSettingsOpen && (
               <SettingsPanel
                 settings={settings || []}
