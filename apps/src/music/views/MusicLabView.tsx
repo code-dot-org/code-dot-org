@@ -24,8 +24,8 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
-import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -307,15 +307,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     return <MusicPlayView setPlaying={setPlaying} />;
   }
 
-  const headerContent = (
-    <div className={moduleStyles.centerHeaderContent}>
-      <div className={moduleStyles.centerHeaderContentText}>
-        {musicI18n.panelHeaderWorkspace()}
-      </div>
-      {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
-    </div>
-  );
-
   return (
     <div
       id="music-lab"
@@ -387,7 +378,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
           <PanelContainer
             id="workspace-panel"
-            headerContent={headerContent}
+            headerContent={<WorkspaceHeader />}
             hideHeaders={hideHeaders}
             rightHeaderContent={
               <HeaderButtons

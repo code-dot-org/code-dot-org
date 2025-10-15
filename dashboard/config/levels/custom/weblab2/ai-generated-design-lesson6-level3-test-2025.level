@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-14T21:27:04.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "project_template_level_name": "ai-generated-design-lesson6-level2&3template-test-2025",
+    "long_instructions": "#Refine Your Page with Detailed Styling Adjustments\r\n\r\nYour goal is to fine-tune specific elements of your webpage so every detail aligns with your brand’s look and feel.\r\n\r\n:::details [Helpful Steps]\r\n1. Make Specific Refinement Prompts. \r\nUse targeted prompts to give the AI clear styling instructions, such as:\r\n   * “Style the main heading with font [X].”\r\n   * “Change the button background to our secondary color and add a hover effect.”\r\n   * “Make the footer text smaller and light gray.”\r\n2. Apply and Review Changes\r\n4. Save as Version 3\r\n:::"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14T21:27:04.286+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level2-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level2-test-2025\"},{\"changed_at\":\"2025-10-14 21:27:10 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 22:43:09 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:48:00 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 23:56:32 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Weblab2>
