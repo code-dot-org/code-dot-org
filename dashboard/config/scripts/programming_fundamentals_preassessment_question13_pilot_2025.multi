@@ -1,0 +1,17 @@
+name 'programming-fundamentals-preassessment-question13_pilot-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 13'
+
+wrong 'How long an algorithm takes to run'
+wrong 'Whether an algorithm is written in Python or Java'
+wrong 'If an algorithm uses variables correctly'
+right 'If an algorithm is biased against certain groups of people'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following is an ethical concern when designing algorithms?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Algorithms IRL
+MARKDOWN

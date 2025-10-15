@@ -111,6 +111,11 @@ GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
     },
     {
       iconFamily: 'kit',
+      iconName: 'ai-locked',
+      title: 'ai-locked-kit',
+    },
+    {
+      iconFamily: 'kit',
       iconName: 'clever',
       title: 'clever-kit',
     },
