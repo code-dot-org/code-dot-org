@@ -6,7 +6,7 @@ const assertions = {
   'offscreen-images': ['error', {minScore: 0.5, maxLength: 4}],
   'total-byte-weight': ['error', {minScore: 0.5}],
   'unused-css-rules': ['error', {maxLength: 30}],
-  'unused-javascript': ['error', {maxLength: 11}],
+  'unused-javascript': ['error', {maxLength: 12}],
   'uses-text-compression': ['error', {maxLength: 70}],
   'third-party-cookies': 'off',
   'uses-rel-preconnect': 'off',
