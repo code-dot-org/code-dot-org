@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:30.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're tracking your score during game night. The program already prints your score, but you want to compare it to your friend's and calculate the difference.\r\n\r\n1. Inside the function, create a new variable called `rival_score` and assign it a number (for example, `31`).\r\n\r\n   Be sure everything inside the function is indented the same amount.\r\n\r\n2. Create another variable called `score_difference` and calculate the difference between your score and your rival's score.\r\n\r\n3. Add a `print()` line that uses the `score_difference` variable to show how far ahead or behind you are.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAll the lines inside a function must be indented the same amount. This tells Python what belongs to the function.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "display_name": "Game Night Scoreboard",
+    "bubble_choice_description": "You're tracking your score during game night. The program already prints your score, but you want to compare it to your friend's and calculate the difference.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def game_score():\n  # Prints the scores and the difference\n  my_score = 38\n  print(\"Your score is\", my_score)\n  # TODO - Add a rival_score\n  \n  # TODO - Calculate the difference\n  \n  # TODO - Print the result\n    \n\ngame_score()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzhbi8yxdbD0rqVztte2iRGeTsA6c4tzQ\n+8gABWwp9H1e0SfhxQND/3ODz8Q7pMeKIGAeqGEs9meep8aIauY4Prg/6tN5\nub7nSiPsNWainSQKT2nf/RMBroqmVgyG1D3K+hpncFGPePkGeDXk3Crio7kn\nijBLpBXNVTuxZU5Ms7jysS3OKxKBcuZYwlQc6vSmPfLxscfMj7bec8gAhUW8\nsZ/erhr4SGBceSDSDrYO6eyIakR1sqlYHEFty+F1waPeT8wwDAOLnHbRQxoC\nzE8mtj0SuxvZv16Njsd7DB5E4jK9dcrz/VZfc+sH4qq2edG1v+pthr2CkCz9\nUQiwae/4NQ/rHAtm4SoosdlzYJVIsORQCMeA7v4hdC4pO05GnNexlArdGJXH\n/4PQE2hMadtGon1yiFFI9HCqjGTUQVUXeg/8NM1+WAgi4EGJqa/C4u6KGtvC\nvaBP9r8JPeGWhUwR171jbM+verLvhWV9YB9I3MWlOm3FpmAv5WZnd00NP5nT\nYO8u91XB/JJms8iY1ELpiJOSOccZaWS6+rI2wTUHdJH4\n",
+    "thumbnail_url": "https://images.code.org/3365aa1195e66c5ef3c739a913dd4abb-board-game.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import re\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestGameScoreFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_score_difference_printed(self):\n        \"\"\"game_score() should print the score and the difference\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertGreaterEqual(\n            len(printed_messages),\n            2,\n            \"Make sure your game_score() function prints both your score and the score difference!\"\n        )\n\n        # Look for at least one reasonable number (not assuming exact values)\n        number_found = False\n        for line in printed_messages:\n            numbers = re.findall(r'-?\\d+\\.?\\d*', line)  # Allow negative differences too\n            for num in numbers:\n                value = float(num)\n                if value != 38:  # Ignore the original score itself\n                    number_found = True\n                    break\n            if number_found:\n                break\n\n        self.assertTrue(\n            number_found,\n            \"Make sure your calculation prints the score difference between you and your rival!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:30.990+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level5d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level5d_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

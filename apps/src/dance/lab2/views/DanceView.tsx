@@ -119,7 +119,10 @@ const DanceView: React.FunctionComponent<{
 
   const aiGenerateMode =
     levelProperties.aiCodeGenerate || queryParams('ai-generate') === 'true';
-  const usingMusicProject = queryParams('music-channel') || aiGenerateMode;
+  const usingMusicProject =
+    queryParams('music-channel') ||
+    aiGenerateMode ||
+    levelProperties.aiCodePreview;
 
   const {theme} = useTheme();
 
@@ -397,17 +400,20 @@ const DanceView: React.FunctionComponent<{
   useEffect(() => {
     if (usingMusicProject) {
       musicProjectPlayer.current = new ProjectPlayer();
+
+      // Use the default music if the level specifies.
+      // Otherwise use the specific channel if provided.
+      // Otherwise just pass a dummy string as we expect to find a music
+      // project in local storage.
+      const channelId = levelProperties.aiCodePreview
+        ? 'default-music'
+        : (queryParams('music-channel') as string) || 'local-storage';
+
       musicProjectPlayer.current
-        .loadProject(
-          // Use the specific channel if provided. Otherwise
-          // just pass a dummy string as we expect to find a music
-          // project in local storage.
-          (queryParams('music-channel') as string) || 'local-storage',
-          aiGenerateMode
-        )
+        .loadProject(channelId, aiGenerateMode)
         .then(() => setLoadedMusicProject(true));
     }
-  }, [usingMusicProject, aiGenerateMode]);
+  }, [usingMusicProject, aiGenerateMode, levelProperties.aiCodePreview]);
 
   // Set up the ProgramExecutor
   useEffect(() => {

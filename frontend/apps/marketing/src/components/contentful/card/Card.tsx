@@ -3,6 +3,7 @@ import CardMui from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
 import {HTMLAttributes, useMemo} from 'react';
 
@@ -11,6 +12,7 @@ import Overline from '@/components/contentful/overline';
 import NextImage from '@/components/nextImage/NextImage';
 import {useStatsigLogger} from '@/providers/statsig/client';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
+import theme from '@/themes/csforall';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
@@ -38,11 +40,14 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   eventMetadata?: Record<string, string>;
   /** Card custom className */
   className?: string;
+  /** Card chips */
+  chipLabels?: string[];
 }
 
 const Card: React.FC<CardProps> = ({
   id,
   title,
+  chipLabels,
   description,
   imageSrc,
   imageHeight,
@@ -88,20 +93,33 @@ const Card: React.FC<CardProps> = ({
     if (imageHeight) {
       return `${imageHeight}px`;
     }
-    return '300px';
+    return '245px';
   }, [imageHeight]);
 
   return (
-    <CardMui className={className} raised={false}>
+    <CardMui
+      className={className}
+      raised={false}
+      sx={{
+        border: `1px solid ${theme.palette.common.black}`,
+        boxShadow: 'none',
+        borderRadius: '12px',
+        minWidth: 275,
+      }}
+    >
       {imageSource && (
         <CardMedia
-          sx={{height: setImageHeight, position: 'relative'}}
+          sx={{
+            height: setImageHeight,
+            position: 'relative',
+            backgroundColor: theme.palette.common.black,
+          }}
           component={'div'}
         >
           <NextImage
             alt={title || ''}
             src={imageSource}
-            style={{objectFit: 'cover'}}
+            style={{objectFit: 'contain'}}
           />
         </CardMedia>
       )}
@@ -111,10 +129,19 @@ const Card: React.FC<CardProps> = ({
             {overline}
           </Overline>
         )}
-        <Typography variant="h5" component="h3" gutterBottom>
+        <Typography variant="h6" component="h3" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="body3">{description}</Typography>
+        {chipLabels && chipLabels.length > 0 && (
+          <div
+            style={{marginBottom: 8, display: 'flex', gap: 4, flexWrap: 'wrap'}}
+          >
+            {chipLabels.map((label, idx) => (
+              <Chip key={idx} label={label} size="small" />
+            ))}
+          </div>
+        )}
+        <Typography variant="body4">{description}</Typography>
       </CardContent>
       <CardActions disableSpacing>
         {primaryButton?.fields && (

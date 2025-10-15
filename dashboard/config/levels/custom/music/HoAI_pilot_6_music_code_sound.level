@@ -184,6 +184,7 @@
     "level_data": {
       "validationTimeout": 6,
       "library": "launch2024",
+      "dancerMove": "rest",
       "packId": "default",
       "startSources": {
         "blocks": {
@@ -236,7 +237,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-10T13:17:45.799+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music2\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music2\"},{\"changed_at\":\"2025-10-10 19:28:42 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-10T13:17:45.799+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music2\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music2\"},{\"changed_at\":\"2025-10-10 19:28:42 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 00:43:21 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

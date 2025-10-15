@@ -5,7 +5,6 @@ class Api::V1::UserScriptsController < ApplicationController
   # Use `course` and `unit` (singular) to differentiate from other routes which typically use
   # plurals to refer to course_name and unit_position.
   # PATCH /api/v1/user_scripts/course/:course_id/unit/:script_id
-  # PATCH /user_scripts/:script_id (deprecated)
   def update
     if @user_script.update(params.permit(:version_warning_dismissed))
       head :no_content
@@ -17,11 +16,10 @@ class Api::V1::UserScriptsController < ApplicationController
   private def set_user_script
     script_id = params.require(:script_id)
     unit = Unit.get_from_cache(script_id)
-    # TODO: remove script-only route. Once '/api/v1/user_scripts/:script_id' is removed from
-    # routes.rb, require :course_id here and remove the presence check.
-    unit_group = UnitGroup.get_from_cache(params[:course_id]) if params[:course_id].present?
+    course_id = params.require(:course_id)
+    unit_group = UnitGroup.get_from_cache(course_id)
 
-    unless unit
+    unless unit && unit_group
       head :not_found
       return
     end

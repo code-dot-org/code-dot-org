@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-10-10T13:18:42.000Z",
   "level_num": "custom",
@@ -7,7 +8,9 @@
   "properties": {
     "level_data": {
       "library": "launch2024",
+      "dancerMove": "floss",
       "aiCodeGenerate": "true",
+      "aiCodeGenerateExtraPrompt": "Always nest play blocks inside play together. Use only two to three play togethers and do not use repeat.",
       "aiCodeGenerateAdlib": {
         "id": "layers",
         "template": "Please code a music remix that layers {layer1} and {layer2} together.",
@@ -29,7 +32,14 @@
       },
       "toolbox": {
         "blocks": {
-        }
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
       },
       "allowChangeStartingPlayheadPosition": true,
       "packId": "kenya_grace_strangers"
@@ -52,8 +62,7 @@
     "project_template_level_name": "HoAI_pilot_5_template1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-10T13:18:42.436+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music4\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music4\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-10T13:18:42.436+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music4\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music4\"},{\"changed_at\":\"2025-10-14 22:08:23 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:15:38 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:16:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:25:28 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:28:03 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-15 00:45:42 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

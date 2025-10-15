@@ -110,6 +110,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           onKeyDown={handleKeyDown}
           value={value}
           name={'url-input'}
+          aria-label={weblab2I18n.addressBar()}
           size={'s'}
           className={moduleStyles.urlBarInput}
         />

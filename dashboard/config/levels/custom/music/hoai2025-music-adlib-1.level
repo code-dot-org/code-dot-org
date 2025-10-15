@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 70,
-  "created_at": "2025-09-17T09:36:01.000Z",
+  "created_at": "2025-09-10T22:40:23.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -21,7 +21,8 @@
           ]
         },
         "variantCount": 3
-      }
+      },
+      "aiCodeGenerateExtraPrompt": "Choose drums, then bass."
     },
     "encrypted": "false",
     "offer_browser_tts": "false",
@@ -36,9 +37,10 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "long_instructions": "### Use AI",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-08 04:53:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 04:54:30 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-08 04:53:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 04:54:30 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 19:24:18 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 19:27:31 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 19:27:59 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
