@@ -8,14 +8,6 @@ const LABS_WITHOUT_INSTRUCTIONS = [
 
 const STANDALONE_PROJECTS_WITH_RESOURCE_PANEL = ['pythonlab', 'weblab2'];
 
-const LABS_USING_RESOURCE_PANEL = [
-  'dance',
-  'music',
-  'pythonlab',
-  'sketchlab',
-  'weblab2',
-];
-
 // TODO: Once all lab2 labs are using this version of instructions, this function may be better named
 // "isUsingInstructions", as the resource panel will be the instructions panel. Some labs do not use
 // instructions, such as Panels, we will need to keep this function to determine if the copyright/language
