@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-14T20:32:27.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#What is it?\n\nIndustry is changing - engineers now have these tools built into their platform ",
+        "imageUrl": "",
+        "key": "undefined-1cc01415-69b7-43b1-b47f-22f4e2abfbc5"
+      },
+      {
+        "text": "# Knows about you: \n- Level instructions\n- Your code\n- Errors you are running into \n- Documentation \n",
+        "imageUrl": "",
+        "key": "undefined-aecf9110-f8f6-4372-912a-593cee5fdc90"
+      },
+      {
+        "text": "# What can it help me do?\n- Clarify instructions\n- Debug code, clean up code \n- Explore documentation\n- Give hints and examples\n",
+        "imageUrl": "",
+        "key": "undefined-e1cc32a2-9453-41c5-a96a-568778481214"
+      },
+      {
+        "text": "# Where the tool is\n- 2 versions - one for legacy lab and one for lab 2\n- *Tess to create a gif*\n",
+        "imageUrl": "",
+        "key": "undefined-11161af7-e809-43a4-b88a-f95f8091894a"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14 20:32:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

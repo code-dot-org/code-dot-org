@@ -1,0 +1,394 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:47:10.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\n1. Import your `custom.py` into your project.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* <a href=\"https://studio.code.org/projects/pythonlab/9dJ8tm4IBBuPZGDmBsrCLljUC2VI-79EgkHn6b-r8KQ/view\" target=\"_blank\">***here***</a> *and paste it into a new file in your project.*\r\n\r\n2. In `custom.py`, write the `take_or_move()` function. Inside this function, write an `if/else` statement:\r\n\r\n   * If the `Painter` `is_on_bucket()`, call `take_all_paint()` to collect the paint.\r\n   \r\n   * Else, call `this_painter.move()`to continue forward.\r\n\r\n3. Save `custom.py` to your Backpack.\r\n\r\n4. In `main.py`, import your `take_or_move()` function. Create a `Painter` and call your function while your `Painter` `can_move()`\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/0ce1ef5228c882ee64d09335d0f2bd87-choiceA.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nUse `this_painter.is_on_bucket()`to check if the `Painter` is on a paint bucket. Then decide what to do using `if` and `else`.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 4,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 6,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 3,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n# TODO - Import your functions from custom\n\n\n# TODO - Create a Painter and use your functions!\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/0ce1ef5228c882ee64d09335d0f2bd87-choiceA.gif",
+    "encrypted_exemplar_sources": "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\nC9sS7UmN+JV3r+qkc52+uQ==\n",
+    "display_name": "Stop and Scoop",
+    "bubble_choice_description": "The `Painter` is cruising down the street, but it doesn't know when to stop for paint! Help the `Painter` make smart decisions by writing a function that checks if it's on a paint bucket. If it is, it should take the paint; if not, it should keep moving.",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestTakeOrMove(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and cache the results\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        if not cls.log.painter_logs:\n            cls.painter = None\n        else:\n            cls.painter = cls.log.painter_logs[0]\n\n    def setUp(self):\n        if self.painter is None:\n            self.skipTest(\"No Painter object was created. Make sure to create a Painter in your code.\")\n\n    def test_checks_if_on_bucket(self):\n        \"\"\"Painter calls is_on_bucket() at least once\"\"\"\n        self.assertGreater(\n            self.painter.action_count(\"IS_ON_BUCKET\"),\n            0,\n            \"The Painter never checked if it was on a bucket. Make sure you're calling is_on_bucket() in your take_or_move() function.\"\n        )\n\n    def test_final_position_is_correct(self):\n        \"\"\"Painter ends at (7, 0) after collecting and moving\"\"\"\n        self.assertEqual(\n            (self.painter.ending_position.x, self.painter.ending_position.y),\n            (7, 0),\n            \"The Painter didn't stop at (7, 0). Make sure they keep moving until they can’t anymore.\"\n        )\n\n    def test_painter_collected_all_paint(self):\n        \"\"\"Painter ends with exactly 13 units of paint\"\"\"\n        self.assertEqual(\n            self.painter.ending_paint_count,\n            13,\n            \"The Painter should end with 13 units of paint. Make sure you're checking for buckets and taking paint correctly in take_or_move().\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:47:10.527+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson12-level5a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson12-level5a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

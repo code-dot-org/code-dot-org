@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-10-10T13:20:04.000Z",
   "level_num": "custom",
@@ -7,6 +8,7 @@
   "properties": {
     "level_data": {
       "library": "launch2024",
+      "dancerMove": "dab",
       "aiCodeGenerate": "true",
       "aiCodeGenerateAdlib": {
         "id": "length",
@@ -40,7 +42,15 @@
       },
       "toolbox": {
         "blocks": {
-        }
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
       },
       "allowChangeStartingPlayheadPosition": true
     },
@@ -61,11 +71,10 @@
     "display_name": "Regenerate the music",
     "thumbnail_url": "https://images.code.org/18f4fa0ac2cc0deb0e478e38dd2a85e4-botmusic.jpg",
     "name_suffix": "_4",
-    "long_instructions": "####Remix a song for the party!\r\nUse AI to help get started with the code.",
+    "long_instructions": "####Code a remix for the party!\r\nUse AI to help you get started with code.",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-10T13:20:04.464+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music6\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music6\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-10T13:20:04.464+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music6\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music6\"},{\"changed_at\":\"2025-10-14 22:11:57 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:31:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-15 00:46:02 +0000\",\"changed\":[\"level_data\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

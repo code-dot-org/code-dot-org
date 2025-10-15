@@ -1,0 +1,9 @@
+name 'ai-generated-design-lesson7-level3-test-2025'
+display_name 'Persona and Problem Statement Creation'
+description 'Choose one of the design challenges and work with AI to create a persona and a problem statement.'
+
+sublevels
+level 'ai-generated-design-lesson7-level3a-test-2025'
+level 'ai-generated-design-lesson7-level3b-test-2025'
+level 'ai-generated-design-lesson7-level3c-test-2025'
+level 'ai-generated-design-lesson7-level3d-test-2025'

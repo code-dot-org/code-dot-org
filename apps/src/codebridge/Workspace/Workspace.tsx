@@ -13,10 +13,9 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {setRestoredOldVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import i18n from '@cdo/apps/pythonlab/locale';
-import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import commonI18n from '@cdo/locale';
 
 import HeaderButtons from './HeaderButtons';
 
@@ -55,15 +54,6 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
     state => state.codebridgeWorkspace.showFileBrowser
   );
   const dispatch = useAppDispatch();
-
-  const headerContent = (
-    <div className={moduleStyles.centerHeaderContent}>
-      <div className={moduleStyles.centerHeaderContentText}>
-        {commonI18n.workspaceHeaderShort()}
-      </div>
-      {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
-    </div>
-  );
 
   const closeRestoredVersionBanner = () => {
     dispatch(setRestoredOldVersion(false));
@@ -109,7 +99,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       <PanelContainer
         id="editor-workspace"
         hideHeaders={hideHeaders}
-        headerContent={headerContent}
+        headerContent={<WorkspaceHeader />}
         rightHeaderContent={<HeaderButtons />}
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
