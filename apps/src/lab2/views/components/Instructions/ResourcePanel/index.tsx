@@ -265,11 +265,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
 
   const onClickSettingsButton = useCallback(() => {
-    setIsSettingsOpen(!isSettingsOpen);
     if (collapsed) {
       setCurrentTab(getTypedKeys(availableTabs)[0]);
       setCollapsed(!collapsed);
       dispatch(setIsStandaloneCollapsed(false));
+      if (!isSettingsOpen) {
+        setIsSettingsOpen(true);
+      }
+    } else {
+      setIsSettingsOpen(!isSettingsOpen);
     }
   }, [collapsed, dispatch, availableTabs, isSettingsOpen]);
 
