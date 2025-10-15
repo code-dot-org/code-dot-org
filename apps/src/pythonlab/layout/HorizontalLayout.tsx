@@ -3,7 +3,7 @@ import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -19,6 +19,7 @@ import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.s
 
 const MIN_RIGHT_PANEL_WIDTH = 300;
 const MIN_LEFT_PANEL_WIDTH = 150;
+const MIN_LEFT_PANEL_WIDTH_COLLAPSED = 55;
 const MIN_OUTPUT_HEIGHT = 120;
 const MIN_EDITOR_HEIGHT = 200;
 const INITIAL_INFO_PANEL_WIDTH = experiments.isEnabledAllowingQueryString(
@@ -26,6 +27,7 @@ const INITIAL_INFO_PANEL_WIDTH = experiments.isEnabledAllowingQueryString(
 )
   ? 330
   : 300;
+const INITIAL_INFO_PANEL_WIDTH_COLLAPSED = 55;
 const INITIAL_OUTPUT_HEIGHT = 300;
 const INITIAL_OUTPUT_HEIGHT_WIDGET = 800;
 
@@ -46,6 +48,18 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     (levelProperties.aiTutorAvailable ||
       queryParams('show-ai-tutor2') === 'true');
 
+  const isStandaloneCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
+  console.log('isStandaloneCollapsed', isStandaloneCollapsed);
+  const infoPanelInitialWidth = isStandaloneCollapsed
+    ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
+    : INITIAL_INFO_PANEL_WIDTH;
+
+  const infoPanelMinWidth = isStandaloneCollapsed
+    ? MIN_LEFT_PANEL_WIDTH_COLLAPSED
+    : MIN_LEFT_PANEL_WIDTH;
+
   const {
     leftPanelWidth,
     rightPanelWidth,
@@ -55,13 +69,14 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     leftPanelDragging,
     rightBottomPanelSeparatorProps,
     rightBottomPanelDragging,
+    setLeftPanelSize,
     setRightBottomPanelSize,
     rightmostPanelWidth,
     panelClassName,
   } = useHorizontalLayout({
     leftPanel: {
-      initialWidth: INITIAL_INFO_PANEL_WIDTH,
-      minWidth: MIN_LEFT_PANEL_WIDTH,
+      initialWidth: infoPanelInitialWidth,
+      minWidth: infoPanelMinWidth,
       name: 'instructions',
     },
     rightTopPanel: {
@@ -81,6 +96,14 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     heightOffset: 0,
     showingRightmostPanel: showAiTutor2,
   });
+
+  useEffect(() => {
+    setLeftPanelSize(
+      isStandaloneCollapsed
+        ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
+        : INITIAL_INFO_PANEL_WIDTH
+    );
+  }, [isStandaloneCollapsed, setLeftPanelSize]);
 
   return (
     <div
