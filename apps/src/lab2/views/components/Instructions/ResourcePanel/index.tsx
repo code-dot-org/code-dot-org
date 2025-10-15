@@ -127,7 +127,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
-  const isStandAloneCollapsed = useAppSelector(
+  const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
 
@@ -272,11 +272,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const onClickTab = useCallback(
     (tab: Tabs) => {
       setCurrentTab(tab);
-      if (isStandAloneCollapsed) {
+      if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [dispatch, isStandAloneCollapsed]
+    [dispatch, isStandaloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
@@ -284,7 +284,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // with togglingthe settings panel.
     // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
     if (isProjectLevel) {
-      if (isStandAloneCollapsed) {
+      if (isStandaloneCollapsed) {
         // If the resource panel is collapsed, we'll expand it and select the first tab and open the settings panel.
         setIsSettingsOpen(true);
         setCurrentTab(getTypedKeys(availableTabs)[0]);
@@ -308,7 +308,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     dispatch,
     availableTabs,
     isSettingsOpen,
-    isStandAloneCollapsed,
+    isStandaloneCollapsed,
     isProjectLevel,
   ]);
 
@@ -337,7 +337,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             {isProjectLevel && Object.keys(availableTabs).length > 0 && (
               <WithTooltip
                 tooltipProps={{
-                  text: isStandAloneCollapsed
+                  text: isStandaloneCollapsed
                     ? lab2I18n.expand()
                     : lab2I18n.collapse(),
                   tooltipId: 'tooltip-collapse',
@@ -352,24 +352,24 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   className={styles.resourcePanelButton}
                   onClick={() => {
                     // If currently collapsed, we'll show the first tab when panel is expanded.
-                    if (isStandAloneCollapsed) {
+                    if (isStandaloneCollapsed) {
                       setCurrentTab(getTypedKeys(availableTabs)[0]);
                     } else {
                       // If currently expanded, we'll hide the panel and no tab will be selected.
                       setCurrentTab(null);
                     }
-                    dispatch(setIsStandaloneCollapsed(!isStandAloneCollapsed));
+                    dispatch(setIsStandaloneCollapsed(!isStandaloneCollapsed));
                   }}
                   isIconOnly={true}
                   icon={{
-                    iconName: isStandAloneCollapsed
+                    iconName: isStandaloneCollapsed
                       ? 'arrow-right-from-line'
                       : 'arrow-left-from-line',
                   }}
                   color={'gray'}
                   type={'tertiary'}
                   aria-label={
-                    isStandAloneCollapsed
+                    isStandaloneCollapsed
                       ? lab2I18n.expand()
                       : lab2I18n.collapse()
                   }
@@ -446,7 +446,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           </WithTooltip>
         </div>
       </div>
-      {!isStandAloneCollapsed && (
+      {!isStandaloneCollapsed && (
         <div className={styles.panels}>
           <PanelContainer
             id={currentTab || 'resource-panel'}
@@ -492,7 +492,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   if (
                     isProjectLevel &&
                     Object.keys(availableTabs).length === 0 &&
-                    !isStandAloneCollapsed
+                    !isStandaloneCollapsed
                   ) {
                     dispatch(setIsStandaloneCollapsed(true));
                   }
