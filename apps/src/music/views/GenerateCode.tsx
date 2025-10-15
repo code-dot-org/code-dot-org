@@ -71,26 +71,19 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   // Use legacy adlib ID, adlib object, or new adlib ID.
   const useAdlib =
-    !useText && adlib && typeof adlib === 'string'
+    !useText &&
+    (adlib && typeof adlib === 'string'
       ? adlibs[adlib]
       : adlib
       ? adlib
       : adlibOption
       ? adlibs[adlibOption]
-      : undefined;
+      : undefined);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     dispatch(setAiGenerateState('none'));
     setPromptText(adlibOption ? '' : useText ? '' : DefaultPrompt);
   });
-
-  useEffect(() => {
-    setToolboxVisibility(
-      ['none', 'editing', 'edited', 'listeningAfterEdit'].includes(
-        aiGenerateState
-      )
-    );
-  }, [aiGenerateState, setToolboxVisibility]);
 
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));
