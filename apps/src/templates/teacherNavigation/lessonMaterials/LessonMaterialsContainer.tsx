@@ -4,6 +4,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {
   BodyTwoText,
   BodyThreeText,
+  BodyFourText,
 } from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -17,10 +18,12 @@ import {
   getSelectedUnitId,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+// import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
+import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 
 import UnitSelectorV2 from '../../UnitSelectorV2';
 
@@ -80,10 +83,14 @@ const createDisplayName = (
 
 interface LessonMaterialsContainerProps {
   showNoCurriculumAssigned: boolean;
+  showAITALessonSummary: boolean;
+  hasCompletedPersonalizationQuiz: boolean;
 }
 
 const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   showNoCurriculumAssigned,
+  hasCompletedPersonalizationQuiz,
+  showAITALessonSummary,
 }) => {
   const [lessonMaterials, setLessonMaterials] =
     useState<LessonMaterialsData | null>(null);
@@ -297,8 +304,20 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
             <BodyTwoText>{i18n.audioSummary()}</BodyTwoText>
           </div>
-          {/* <audio controls src="" type="audio/mpeg" /> */}
-          <p>AUDIO PLAYER HERE</p>
+          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+          <audio
+            id="lesson-summary-audio"
+            src="https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3"
+            preload="auto"
+            controls
+          />
+          {/* <InlineAudio
+            assetUrl={
+              'https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3'
+            }
+            message={''}
+            isRoundedVolumeIcon
+          /> */}
         </div>
         <div className={styles.lessonSummarySection}>
           <div className={styles.lessonSummarySectionTitle}>
@@ -367,18 +386,25 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             text={i18n.questionForAITA()}
             onClick={() => console.log('ASK TA')}
           />
-          <div className={styles.horizontalLine} />
-          <div className={styles.personalizationQuizPrompt}>
-            <BodyThreeText>
-              {i18n.wantToSeeDifferentInformation()}
-            </BodyThreeText>
-            <a href="">
-              <BodyThreeText>{i18n.customizeForYourClassroom()}</BodyThreeText>
-            </a>
-          </div>
+          {!hasCompletedPersonalizationQuiz && (
+            <div className={styles.personalizationQuizSection}>
+              <div className={styles.horizontalLine} />
+              <div className={styles.personalizationQuizPrompt}>
+                <BodyThreeText>
+                  {i18n.wantToSeeDifferentInformation()}
+                </BodyThreeText>
+                <a href="">
+                  <BodyThreeText>
+                    {i18n.customizeForYourClassroom()}
+                  </BodyThreeText>
+                </a>
+              </div>
+            </div>
+          )}
         </div>
         <div className={styles.poweredByAITANote}>
-          <p>the little AI TA icon and message</p>
+          <img src={AIBotTAIcon} alt="" />
+          <BodyFourText>{i18n.poweredByAITA()}</BodyFourText>
         </div>
       </div>
     );
@@ -413,7 +439,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           </>
         )}
       </div>
-      {renderLessonSummaryContainer()}
+      {showAITALessonSummary && renderLessonSummaryContainer()}
     </div>
   );
 };

@@ -38,6 +38,7 @@ const {
   localeCode,
   hasSeenStandardsReportInfo,
   canEnableAITutor,
+  showAITALessonSummary,
   sectionOrder,
   providers,
 } = scriptData;
@@ -93,6 +94,7 @@ $(document).ready(function () {
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
           canEnableAITutor={canEnableAITutor}
+          showAITALessonSummary={showAITALessonSummary}
         />
       )}
     </Provider>,

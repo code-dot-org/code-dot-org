@@ -185,6 +185,16 @@
   font-size: 14px;
 }
 
+.personalizationQuizSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
 .horizontalLine {
   height: 1px;
   background-color: var(--neutral-gray-30);
@@ -207,6 +217,16 @@
 .poweredByAITANote {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  img {
+    height: 25px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .skeletonDropdown {

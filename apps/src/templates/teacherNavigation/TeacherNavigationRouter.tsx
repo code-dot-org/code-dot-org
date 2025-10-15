@@ -77,6 +77,7 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
   canEnableAITutor: boolean;
+  showAITALessonSummary: boolean;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -86,6 +87,7 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
   canEnableAITutor,
+  showAITALessonSummary,
 }) => {
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -267,6 +269,8 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                     !selectedSection.courseVersionName &&
                     !selectedSection.courseOfferingId
                   }
+                  showAITALessonSummary={showAITALessonSummary}
+                  hasCompletedPersonalizationQuiz={false}
                 />
               }
             />
@@ -356,6 +360,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       providerName,
       anyStudentHasProgress,
       showAITutorTab,
+      showAITALessonSummary,
       selectedSection,
       studioUrlPrefix,
     ]
