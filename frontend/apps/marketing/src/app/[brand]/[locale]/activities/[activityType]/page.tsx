@@ -1,4 +1,3 @@
-import Box from '@mui/material/Box';
 import {Results, search} from '@orama/orama';
 import {persist} from '@orama/plugin-data-persistence';
 import {Metadata} from 'next';
@@ -142,20 +141,11 @@ export default async function ActivitiesPage({
     <main>
       <ActivitiesHero activityType={activityType as ActivityType} />
       <Suspense>
-        <Box
-          sx={{
-            maxWidth: 1200,
-            mx: 'auto',
-            px: {xs: 2, md: 4},
-            pb: {xs: 2, md: 8},
-          }}
-        >
-          <ActivityCatalog
-            serializedOramaDb={await getSerializedOramaDatabase()}
-            activities={await getAllActivities()}
-            facets={await getSearchFacets()}
-          />
-        </Box>
+        <ActivityCatalog
+          serializedOramaDb={await getSerializedOramaDatabase()}
+          activities={await getAllActivities()}
+          facets={await getSearchFacets()}
+        />
       </Suspense>
     </main>
   );
