@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nChoose a topic you care about — like music, soccer, fashion, games, school, or anything that interests you. You're going to create a small program using everything you've learned so far.\r\n\r\n1. Pick a topic that you're excited about.\r\n\r\n2. Create **three variables**, one for each data type:\r\n\r\n   * `int` (number)\r\n   \r\n   * `string` (text)\r\n   \r\n   * `bool` (true/false)\r\n\r\n3. Use at least **one operation** to **create a new value** and **store it in a variable**.\r\n\r\n4. Write **print statements** to show what your program remembers or does.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nStart small, then build! Test your code a little at a time — you can always add more once it's working.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Create three variables below — one of each data type\n\n\n# Use at least one operation\n\n\n# Print out your variables in fun or useful ways\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "name_suffix": "_pilot-2025",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import ast\nimport io\nimport runpy\nimport builtins\nfrom contextlib import redirect_stdout\nfrom unittest import TestCase\n\nMAIN_FILE = \"main.py\"\n\n\nclass TestFreeChoiceProgram(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Load output and variables\"\"\"\n        cls.stdout_lines = []\n        cls.ns = None\n\n        # Parse source to AST for structural checks (no import/subprocess needed)\n        with open(MAIN_FILE, \"r\", encoding=\"utf-8\") as f:\n            cls.source = f.read()\n        cls.tree = ast.parse(cls.source, filename=MAIN_FILE)\n\n        # Prevent blocking if students used input()\n        original_input = getattr(builtins, \"input\", None)\n        buf = io.StringIO()\n        try:\n            builtins.input = (lambda *args, **kwargs: \"\")\n            with redirect_stdout(buf):\n                # Execute main.py as a script (no import), capture its globals and stdout\n                cls.ns = runpy.run_path(MAIN_FILE, run_name=\"__main__\")\n        except SystemExit:\n            # Allow scripts that call exit() to continue\n            pass\n        except Exception:\n            # If execution fails, leave ns as None; tests below will surface the original messages\n            cls.ns = None\n        finally:\n            cls.stdout_lines = [line.strip() for line in buf.getvalue().splitlines() if line.strip()]\n            if original_input is not None:\n                builtins.input = original_input\n\n    def test_variables_created(self):\n        \"\"\"Create at least int, str, and bool variables\"\"\"\n        # Mirror original behavior/message on import failure\n        if self.ns is None:\n            self.fail(\"Something went wrong importing your program. Double-check your code!\")\n\n        has_int = False\n        has_str = False\n        has_bool = False\n\n        for var_name, var in self.ns.items():\n            if var_name.startswith(\"_\"):\n                continue\n            # Order matters: bool is a subclass of int\n            if isinstance(var, bool):\n                has_bool = True\n            elif isinstance(var, int):\n                has_int = True\n            elif isinstance(var, str):\n                has_str = True\n\n        self.assertTrue(has_int, \"Make sure you create at least one int variable!\")\n        self.assertTrue(has_str, \"Make sure you create at least one string variable!\")\n        self.assertTrue(has_bool, \"Make sure you create at least one bool variable!\")\n\n    def test_operation_used(self):\n        \"\"\"At least one operation should be used in the code\"\"\"\n        # Mirror original behavior/message on import failure\n        if self.ns is None:\n            self.fail(\"Something went wrong importing your program.\")\n\n        # Require that a numeric operation is actually USED to create/store a new value.\n        # Accept Assign or AugAssign with numeric ops: +, -, *, /, //, %, **\n        numeric_ops = (ast.Add, ast.Sub, ast.Mult, ast.Div, ast.FloorDiv, ast.Mod, ast.Pow)\n\n        def has_numeric_operation_assignment(tree: ast.AST) -> bool:\n            for node in ast.walk(tree):\n                # x = a + b, x = -y  (ensure it's *assigned*)\n                if isinstance(node, ast.Assign):\n                    val = node.value\n                    if isinstance(val, ast.BinOp) and isinstance(val.op, numeric_ops):\n                        return True\n                    if isinstance(val, ast.UnaryOp) and isinstance(val.op, (ast.UAdd, ast.USub)):\n                        return True\n                # x += 1, y *= 2, etc.\n                if isinstance(node, ast.AugAssign) and isinstance(node.op, numeric_ops):\n                    return True\n            return False\n\n        self.assertTrue(\n            has_numeric_operation_assignment(self.tree),\n            \"Make sure you use some math operation (+, -, *, /) to create a new value!\"\n        )\n\n    def test_printed_output(self):\n        \"\"\"Use print() at least once\"\"\"\n        printed_lines = self.stdout_lines\n        self.assertGreaterEqual(\n            len(printed_lines),\n            1,\n            \"Make sure you print something to show your variables or results!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWVmnvTtZt0hc86OHiY5vszHWzegGt9tp8ppR2sK\nKU1cuKbnGxNCTo6XuoPX/8CLHkkleE7O19pcPNOFw72saViG7Rz8KxaK4nEB\nOPcaO2VL2V0vKUwbVyBb9sY2dpmgMmdTpg+Bg0TpI83zW+hnCW4MkQS+0hw+\niX5HiAUdby+0HO4XiMSgg6q4GGeoudUu1oQitHb8YOlOrjY5C/oRNvt0cwvq\nIMTZU9h2ZPJIxHCJQ0WH/Obq7irfqsC41RyiTyiFbvxSJL+xyP9AJYGD+T5u\nxgu/RcfJ6P3QJXF2h/tadeod1cpur2d2l7DAeWpRTkBE9nTa4oFi6XFUe5oG\nFtJ0pzq+/YuSZ0Pxh7wOCH0M7oMjzYK39gTBQW4PV/yFC0eb0qTJZCEliF4v\ngI0yxKoSHThCQ3hgk0VN3PZk5O7nYULYinTnzu1ibpiltqHLR52YckINfovr\ny9LVVha2mhagSnNCIM8xc4zAKRrXO8Ha3R2HmGtgFSBubhCG1ZBDNkRsW98t\nbXwFhicSdv2My9k4Yk8DXTr6jrVyp/evm80iV3nM2qUXUV1BeVFMoaW6Bhek\nr9BhxtybSXF2Kg5Lajm3/UARbF/1MY/1rFMQjqpmAV09NRE4m+t7sxpceK3b\nX1E7eDsIu+v+s2gDrCmW0WXAS63UQtu55TCDLdxlWy06yGrZrQiZgBQcwy0h\nFxtmZ4ZC4lzqKoAN2nKq/LjhzyPVYE+nc0UvjFHny7hOU+V5T3rAgifWgkO8\nTlBARpJ5VwG1+c72FSR4GQZs1qYACGjO4VLWSeM2mhcquDMGXR+gYRbYfF0i\n/R7SiLSUcFUiyw==\n",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:19.136+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level9_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level9_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

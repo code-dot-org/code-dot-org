@@ -1,0 +1,394 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:45.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nLet's take this one step at a time! Click the arrow to expand the step when you're ready.\r\n\r\n:::details [<span style=\"font-size:1.3em;\">1. Import <code>custom.py</code> from your Backpack</span>]\r\nImport `custom.py` into your project so you can use your `turn_right()` function -- and add new functions too!\r\n\r\n   <details>\r\n   \t\t<summary>How do I import from my Backpack?</summary>\r\n        <img src=\"https://images.code.org/4179baede41d67d2a0eb6a4e58209428-image-1744826414428.png\" />\r\n   </details>\r\n\r\n&nbsp;\r\n:::\r\n\r\n<span></span>\r\n\r\n:::details [<span style=\"font-size:1.3em;\">2. Define the <code>take\\_four\\_paint()</code> function</span>]\r\nIn `custom.py`, define the `take_four_paint(this_painter)` to make the `Painter` collect four units of paint.\r\n\r\n&nbsp;\r\n:::\r\n\r\n<span></span>\r\n\r\n:::details [<span style=\"font-size:1.3em;\">3. Define the <code>paint\\_four\\_spaces()</code> function</span>]\r\nIn `custom.py`, define the `paint_four_spaces(this_painter, color)` function to make the `Painter` paint and move forward four times using the color you chose.\r\n\r\n&nbsp;\r\n:::\r\n\r\n<span></span>\r\n\r\n:::details [<span style=\"font-size:1.3em;\">4. Save <code>custom.py</code> to your Backpack</span>]\r\nSave `custom.py` to your **Backpack** so you can reuse your new functions later!\r\n\r\n   <details>\r\n   \t\t<summary>How do I save files to my Backpack?</summary>\r\n        <img src=\"https://images.code.org/5d21b631aa68d348a70dec9024a8f086-image-1744817649137.png\" />\r\n   </details>\r\n\r\n&nbsp;\r\n:::\r\n\r\n<span></span>\r\n\r\n:::details [<span style=\"font-size:1.3em;\">5. Import your functions</span>]\r\nIn `main.py`, import your functions using this format:\r\n\r\n```\r\nfrom custom import function_name, function_name, function_name\r\n```\r\n\r\n&nbsp;\r\n:::\r\n\r\n<span></span>\r\n\r\n:::details [<span style=\"font-size:1.3em;\">6. Use your functions to paint each row</span>]\r\nIn your main program, call both functions to paint a row, reposition for the next row, and repeat until all rows inside the wall are painted.\r\n\r\n&nbsp;\r\n:::\r\n\r\n<span></span>\r\n\r\n![](https://images.code.org/b2fd027c2f1e85a3c69cfc3a8b0d4cba-choiceA.gif)\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "display_name": "Fill the Courtyard",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 82
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 85
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 78
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 4,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 88
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 78
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 4,
+          "assetId": 303
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 1,
+          "value": 4,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 4,
+          "assetId": 303
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 85
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 87
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "bubble_choice_description": "The `Painter` needs to paint each row of the courtyard between the walls. Write two functions in `custom.py` -- one to collect paint, and one to paint each row -- and reuse them to paint the whole space.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n# TODO - Import turn_right, take_four_paint, paint_four_spaces from custom\n\n\n\n# TODO - Use your functions to paint each row!\n\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "thumbnail_url": "https://images.code.org/b2fd027c2f1e85a3c69cfc3a8b0d4cba-choiceA.gif",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestPainterPaintRectangle(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get Painter log and actions\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        if not cls.log.painter_logs:\n            cls.painter = None\n            cls.actions = []\n        else:\n            cls.painter = cls.log.painter_logs[0]\n            cls.actions = [action.neighborhood_action_type for action in cls.painter.get_events()]\n\n    def setUp(self):\n        if self.painter is None:\n            self.skipTest(\"You need to create a Painter before you can move, turn, or paint.\")\n\n    def test_final_position(self):\n        \"\"\"Painter ends at (2, 5)\"\"\"\n        self.assertEqual(\n            (self.painter.ending_position.x, self.painter.ending_position.y),\n            (2, 5),\n            \"The Painter didn't stop at (2, 5). Make sure you repositioned correctly between each row.\"\n        )\n\n    def test_correct_spaces_are_painted(self):\n        \"\"\"Painter paints the expected spaces\"\"\"\n        final = self.log.final_output\n        expected_output = [[False for _ in range(len(final[0]))] for _ in range(len(final))]\n\n        painted_spaces = [\n            (2, 2), (3, 2), (4, 2), (5, 2),\n            (2, 3), (3, 3), (4, 3), (5, 3),\n            (2, 4), (3, 4), (4, 4), (5, 4),\n            (2, 5), (3, 5), (4, 5), (5, 5)\n        ]\n\n        for x, y in painted_spaces:\n            expected_output[y][x] = True\n\n        self.assertTrue(\n            self.log.final_output_contains_paint(expected_output),\n            \"Not all expected spaces were painted. Make sure the Painter paints four spaces each row and repositions correctly.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:45.752+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level11a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level11a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

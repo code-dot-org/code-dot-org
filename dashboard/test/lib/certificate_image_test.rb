@@ -67,7 +67,7 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_image hoc_certificate_image_with_too_long_name, 1754, 1235, 'JPEG'
     unspecified_course_image = CertificateImage.create_course_certificate_image('Robot Tester', nil)
     assert_image unspecified_course_image, 1754, 1235, 'JPEG'
-    blank_named_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', nil, 'Course 1')
+    blank_named_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'Course 1')
     assert_image blank_named_certificate_image, 1754, 1240, 'PNG'
     twenty_hour_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', '20-hour')
     assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
@@ -75,17 +75,11 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_image accelerated_certificate_image, 1754, 1240, 'JPEG'
 
     # Create course certificates with nil and empty values
-    nil_name_course_certificate_image = CertificateImage.create_course_certificate_image(nil, 'course1', 'sponsor', 'Course 1')
-    assert_image nil_name_course_certificate_image, 1754, 1240, 'PNG'
-    nil_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', nil, 'Course 1')
+    nil_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'Course 1')
     assert_image nil_sponsor_course_certificate_image, 1754, 1240, 'PNG'
-    nil_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'sponsor', nil)
-    assert_image nil_title_course_certificate_image, 1754, 1240, 'PNG'
-    empty_name_course_certificate_image = CertificateImage.create_course_certificate_image('', 'course1', 'sponsor', 'Course 1')
+    empty_name_course_certificate_image = CertificateImage.create_course_certificate_image('', 'course1', 'Course 1')
     assert_image empty_name_course_certificate_image, 1754, 1240, 'PNG'
-    empty_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', '', 'Course 1')
-    assert_image empty_sponsor_course_certificate_image, 1754, 1240, 'PNG'
-    empty_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'sponsor', '')
+    empty_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', '')
     assert_image empty_title_course_certificate_image, 1754, 1240, 'PNG'
 
     # Entered name "à Test Namé" on /congrats/course1

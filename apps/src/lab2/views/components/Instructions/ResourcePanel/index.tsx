@@ -3,10 +3,9 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import {Steps} from 'intro.js-react';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -17,31 +16,28 @@ import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRu
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import {
+  resourcePanelInstructionsElementId,
+  resourcePanelTabsElementId,
+  resourcePanelLinksElementId,
+} from './constants';
 import CopyrightButton from './CopyrightButton';
+import OnboardingTourSteps from './OnboardingTourSteps';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
-import {INITIAL_STEP, STEPS} from './resourcePanelTourHelpers';
 import SettingsPanel from './SettingsPanel';
+import {Tabs} from './types';
 import ValidationPanel from './ValidationPanel';
+import ValidationTourSteps from './ValidationTourSteps';
 import {VersionHistoryPanel} from './VersionHistory';
 import './resource-panel-introjs.scss';
 
 import styles from './styles.module.scss';
-
-enum Tabs {
-  Instructions = 'instructions',
-  AiTutor = 'aiTutor',
-  TeachersOnly = 'teachersOnly',
-  StudentRubric = 'studentRubric',
-  VersionHistory = 'versionHistory',
-  Validation = 'validation',
-}
 
 export interface Setting {
   id: string;
@@ -84,15 +80,15 @@ type ResourcePanelProps = InstructionsProps & {
   includeFooterSpacing?: boolean;
   settings?: Setting[];
   versionHistoryProps?: VersionHistoryProps;
-  aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
   /** If the navigation area in the footer should be styled as a "bubble", like instructions content. */
   styleNavigationAsBubble?: boolean;
+  isValidationTourEnabled?: boolean;
+  isOnboardingTourEnabled?: boolean;
+  aiTutorSystemPromptName?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 };
-
-const PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
-  'pythonlabResourcePanelOnboardingTourSeen';
 
 /**
  * Display various instructional resources for the level as tabs.
@@ -105,12 +101,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   includeFooterSpacing = true,
   settings,
   versionHistoryProps,
-  aiTutorSystemPromptSettings,
   aiTutorMultimodalEnabled,
   aiTutorChatButtonData,
   // Default hideNavigation to true since most labs pin the navigation area to bottom.
   hideNavigation: hideInstructionsNavigation = true,
   styleNavigationAsBubble = false,
+  isValidationTourEnabled,
+  isOnboardingTourEnabled,
+  aiTutorSystemPromptName,
+  aiTutorResponseSchemaSettings,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -133,11 +132,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const levelName = instructionsProps.levelProperties.name;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
-  const isPythonLab = appName === 'pythonlab';
-  const pythonLabOnboardingTourSeen = tryGetLocalStorage(
-    PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
-    'no'
-  );
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -182,11 +176,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = (
         <AiTutor2Chat
           hiddenContextCallback={hiddenContextCallback}
-          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           levelName={levelName}
           channelId={channelId}
           aiTutorChatButtonData={aiTutorChatButtonData}
+          aiTutorSystemPromptName={aiTutorSystemPromptName}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
       );
     }
@@ -227,14 +222,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
-    aiTutorSystemPromptSettings,
+    hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,
     aiTutorChatButtonData,
+    aiTutorSystemPromptName,
+    aiTutorResponseSchemaSettings,
     selectedVersion,
     levelId,
-    hideInstructionsNavigation,
   ]);
 
   useEffect(() => {
@@ -251,33 +247,20 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   return (
     <div
-      id="resource-panel-instructions"
+      id={resourcePanelInstructionsElementId}
       className={classNames(styles.resourcePanel, className)}
     >
-      <Steps
-        enabled={isPythonLab && pythonLabOnboardingTourSeen !== 'yes'}
-        initialStep={INITIAL_STEP}
-        steps={STEPS}
-        onExit={() => {
-          trySetLocalStorage(
-            PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
-            'yes'
-          );
-        }}
-        options={{
-          scrollToElement: false,
-          exitOnOverlayClick: false,
-          hidePrev: true,
-          nextLabel: commonI18n.next(),
-          prevLabel: commonI18n.back(),
-          doneLabel: commonI18n.done(),
-          showBullets: false,
-          showStepNumbers: true,
-        }}
-      />
-
+      {isOnboardingTourEnabled && <OnboardingTourSteps />}
+      {isValidationTourEnabled && (
+        <ValidationTourSteps
+          hasValidationConditions={hasValidationConditions}
+          validationSettings={instructionsProps.validationSettings}
+          setCurrentTab={setCurrentTab}
+          onValidate={instructionsProps.validationSettings?.onValidate}
+        />
+      )}
       <div className={styles.sidebar}>
-        <nav id="resource-panel-tabs" className={styles.tabs}>
+        <nav id={resourcePanelTabsElementId} className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
             <WithTooltip
               tooltipProps={{
@@ -291,29 +274,31 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               hideOnFirstLeave={true}
               key={`tooltip-${tab}`}
             >
-              <Button
-                className={classNames(
-                  styles.tabButton,
-                  tab === currentTab && styles.selected
-                )}
-                onClick={() => setCurrentTab(tab)}
-                key={tab}
-                color={'gray'}
-                type={'tertiary'}
-                isIconOnly={true}
-                icon={{
-                  iconName: tabInfo[tab].icon,
-                  iconFamily: kitIcons.has(tabInfo[tab].icon)
-                    ? 'kit'
-                    : undefined,
-                }}
-                aria-label={tabInfo[tab].title}
-              />
+              <div id={`resource-panel-tab-${tab}`}>
+                <Button
+                  className={classNames(
+                    styles.tabButton,
+                    tab === currentTab && styles.selected
+                  )}
+                  onClick={() => setCurrentTab(tab)}
+                  key={tab}
+                  color={'gray'}
+                  type={'tertiary'}
+                  isIconOnly={true}
+                  icon={{
+                    iconName: tabInfo[tab].icon,
+                    iconFamily: kitIcons.has(tabInfo[tab].icon)
+                      ? 'kit'
+                      : undefined,
+                  }}
+                  aria-label={tabInfo[tab].title}
+                />
+              </div>
             </WithTooltip>
           ))}
         </nav>
         <div
-          id="resource-panel-links"
+          id={resourcePanelLinksElementId}
           className={classNames(styles.bottomTabs)}
         >
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />

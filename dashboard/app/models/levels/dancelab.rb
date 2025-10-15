@@ -34,6 +34,7 @@ class Dancelab < GamelabJr
     exemplar_sources
     generate_dancer_mode
     ai_code_generate
+    ai_dancer_generate_adlib
   )
 
   def self.skins
@@ -62,6 +63,10 @@ class Dancelab < GamelabJr
   end
 
   def common_blocks(type)
+  end
+
+  def project_type
+    return game&.app
   end
 
   # Used by levelbuilders to set a default song on a Dance Party level.

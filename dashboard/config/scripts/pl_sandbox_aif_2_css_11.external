@@ -1,0 +1,75 @@
+name 'pl_sandbox_aif_2_CSS_11'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is CSS?
+
+#### CSS **(Cascading Style Sheets)** is the language that controls the look and feel of a webpage.
+
+#### If **HTM**L is the structure, **CSS** is the design—it handles colors, fonts, spacing, and layout.
+
+## Key things CSS does:
+- #### Changes colors, fonts, and text sizes
+- #### Controls spacing (margins, padding, alignment)
+- #### Adds borders, backgrounds, and styles
+- #### Defines layout (how sections of a page are arranged)
+
+## Sample Code with CSS 
+#### As you look at the code, notice the same HTML code from the previous letter at the bottom. You will see CSS toward the top. 
+
+ <div style="text-align: center;">
+    <img src="https://images.code.org/3cd11a584f7e2e0be8f7083510af714e-image-1759351495873.png" 
+         alt="sample code of a simple website with CSS "
+         style="width:650px; border-radius:15px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+  </div>
+  
+  <div style="clear:both;"></div>
+  <br>
+  
+
+  
+   <div style="text-align: center;">
+    <img src="https://images.code.org/3a38cb68b9c5e2cb3ef9484cf309e4dd-image-1759351536812.png" 
+         alt="sample output of website"
+         style="width:650px; border-radius:15px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+  </div>
+
+## CSS Selectors
+
+#### HTML uses tags (inside angle brackets < >) to describe the structure of a page.
+
+#### CSS doesn’t really use “tags” in the same way. Instead, it uses selectors to target HTML tags, classes, or IDs and apply styles to them.
+
+## What's the Difference? 
+
+#### While **HTML tags** tell the browser what the content is (heading, paragraph, image), **CSS selectors** tell the browser how that content should look (color, size, position).
+
+> #### **So you might say to students:**
+> #### “HTML is like the nouns (things on the page), and CSS is like the adjectives (how those things look). HTML tags create the structure, while CSS selectors style those tags.”
+
+#### Take a look at the CSS selectors from the sample code above to see how they style the page.
+
+<div style="text-align: left;">
+    <img src="https://images.code.org/e9ab8c116a9da07f066eb6c6819f9365-image-1759502312090.png" 
+         alt="h1 { ... } → Styles all <h1> headings on the page.
+color: blue; → Makes the heading text blue.
+font-family: Arial, sans-serif; → Uses Arial as the font.
+text-align: center; → Centers the heading."
+         style="width:800px; display:block; margin-bottom:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+    
+    <img src="https://images.code.org/8200ffec989a2fa3a74a4e3caefee776-image-1759351935661.png" 
+         alt="
+p { ... } → Styles all <p> paragraphs.
+color: gray; → Makes paragraph text gray.
+font-size: 16px; → Sets paragraph text to 16 pixels."
+         style="width:800px; display:block; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+  </div>
+
+
+## Next up
+
+#### Let's take a look to see how JavaScript makes the pages interactive!
+
+
+MARKDOWN

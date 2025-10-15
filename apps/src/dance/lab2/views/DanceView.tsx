@@ -18,6 +18,7 @@ import {
   getToolboxDefinition,
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
+import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
@@ -58,6 +59,8 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
 import {registerReducers} from '@cdo/apps/redux';
@@ -102,6 +105,8 @@ const DanceView: React.FunctionComponent<{
   const hasRun = useAppSelector(state => state.dance.hasRun);
   const hasEdited = useAppSelector(state => state.dance.hasEdited);
   const isLoading = useAppSelector(state => state.dance.isLoading);
+  const signedIn = useAppSelector(state => state.currentUser.signInState);
+  const scriptName = useAppSelector(state => state.progress.scriptName);
 
   const {currentSources, updateSources, showStartOverDialog} =
     useSources<DanceProjectSources>();
@@ -114,7 +119,10 @@ const DanceView: React.FunctionComponent<{
 
   const aiGenerateMode =
     levelProperties.aiCodeGenerate || queryParams('ai-generate') === 'true';
-  const usingMusicProject = queryParams('music-channel') || aiGenerateMode;
+  const usingMusicProject =
+    queryParams('music-channel') ||
+    aiGenerateMode ||
+    levelProperties.aiCodePreview;
 
   const {theme} = useTheme();
 
@@ -200,6 +208,19 @@ const DanceView: React.FunctionComponent<{
   );
 
   const runProgram = useCallback(async () => {
+    if (!hasRun) {
+      const eventName = levelProperties.isProjectLevel
+        ? EVENTS.PROJECT_ACTIVITY
+        : EVENTS.LEVEL_ACTIVITY;
+
+      analyticsReporter.sendEvent(eventName, {
+        signedIn: signedIn,
+        unitName: scriptName,
+        levelId: levelProperties.id,
+        levelName: levelProperties.name,
+      });
+    }
+
     if (!programExecutor.current || !metadataToUse) {
       return;
     }
@@ -216,7 +237,17 @@ const DanceView: React.FunctionComponent<{
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
     saveBlocks(true);
-  }, [programExecutor, metadataToUse, saveBlocks, dispatch]);
+  }, [
+    hasRun,
+    metadataToUse,
+    dispatch,
+    saveBlocks,
+    levelProperties.isProjectLevel,
+    levelProperties.id,
+    levelProperties.name,
+    signedIn,
+    scriptName,
+  ]);
 
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
@@ -369,17 +400,20 @@ const DanceView: React.FunctionComponent<{
   useEffect(() => {
     if (usingMusicProject) {
       musicProjectPlayer.current = new ProjectPlayer();
+
+      // Use the default music if the level specifies.
+      // Otherwise use the specific channel if provided.
+      // Otherwise just pass a dummy string as we expect to find a music
+      // project in local storage.
+      const channelId = levelProperties.aiCodePreview
+        ? 'default-music'
+        : (queryParams('music-channel') as string) || 'local-storage';
+
       musicProjectPlayer.current
-        .loadProject(
-          // Use the specific channel if provided. Otherwise
-          // just pass a dummy string as we expect to find a music
-          // project in local storage.
-          (queryParams('music-channel') as string) || 'local-storage',
-          aiGenerateMode
-        )
+        .loadProject(channelId, aiGenerateMode)
         .then(() => setLoadedMusicProject(true));
     }
-  }, [usingMusicProject, aiGenerateMode]);
+  }, [usingMusicProject, aiGenerateMode, levelProperties.aiCodePreview]);
 
   // Set up the ProgramExecutor
   useEffect(() => {
@@ -481,6 +515,14 @@ const DanceView: React.FunctionComponent<{
             moduleStyles.visualizationArea,
             aiGenerateMode && moduleStyles.jumbo
           )}
+          leftHeaderContent={
+            <BackToParentProject
+              text="Go to Hub"
+              iconLeft={{iconName: 'home'}}
+              type="secondary"
+              size="s"
+            />
+          }
         >
           <div className={moduleStyles.visualizationColumn}>
             {!usingMusicProject && currentSources.selectedSong && (

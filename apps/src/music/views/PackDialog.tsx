@@ -310,7 +310,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
                 ariaLabel={musicI18n.skip()}
                 text={musicI18n.skip()}
                 type="secondary"
-                color="purple"
+                color="black"
                 size="s"
                 onClick={setPackToDefault}
               />

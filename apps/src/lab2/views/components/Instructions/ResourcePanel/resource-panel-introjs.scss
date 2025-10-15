@@ -122,6 +122,15 @@
       border: none;
       box-shadow: none;
     }
+    &:disabled,
+    &[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+      background-color: #d4dae1;
+      color: #fff;
+      text-shadow: none;
+    }
   }
   
   .introjs-hidden {

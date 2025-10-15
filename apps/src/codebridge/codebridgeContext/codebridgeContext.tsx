@@ -1,6 +1,6 @@
 import React, {createContext, useContext} from 'react';
 
-import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
@@ -30,10 +30,11 @@ export type CodebridgeContextType = {
     fileType: string,
     uploadFunction: () => Promise<void>
   ) => void;
-  aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorContextHelper?: AiTutorContextHelper<object>;
+  aiTutorSystemPromptName?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

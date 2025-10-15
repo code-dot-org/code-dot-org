@@ -1,23 +1,26 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
-import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {
+  ExcalidrawElement,
+  Theme as ExcalidrawTheme,
+} from '@excalidraw/excalidraw/types/element/types';
 import {
   AppState,
   BinaryFiles,
   ExcalidrawImperativeAPI,
+  ExcalidrawInitialDataState,
 } from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
+import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {
-  LabProps,
-  LevelProperties,
-  ProjectSources,
-  SketchlabSource,
-} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
@@ -32,15 +35,38 @@ const INITIAL_WORKSPACE_WIDTH = 800;
 
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
+interface SketchlabSources extends ProjectSources {
+  source: ExcalidrawInitialDataState;
+}
+
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
-  const [excalidrawApi, setExcalidrawApi] =
-    useState<ExcalidrawImperativeAPI | null>();
-  const {currentSources, updateSources} = useSources<ProjectSources>();
+  const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
+  const {currentSources, updateSources, setReinitializationHandler} =
+    useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  const {theme} = useTheme();
+
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  // We remount (ie, reset) Excalidraw any time we observe
+  // sources being initialized (eg, when level changes, teacher views a student's project, etc).
+  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
+
+  const WorkspaceAlert = useLevelEditMode<LevelProperties>(
+    levelProperties.id,
+    !!levelProperties.projectTemplateLevelName,
+    useCallback(
+      mode => {
+        return {
+          [mode === 'start' ? 'start_sources' : 'exemplar_sources']:
+            currentSources,
+        };
+      },
+      [currentSources]
+    )
+  );
 
   const {
     leftPanelWidth,
@@ -80,6 +106,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializeAsJSON(elements, state, files, 'local')
         );
 
+        const excalidrawApi = excalidrawApiRef.current;
         if (excalidrawApi) {
           // serializeAsJSON exports an extremely limited set of properties from appState,
           // and excludes the chosen scroll position (scrollX/Y) and zoom,
@@ -95,7 +122,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         updateSources({source: serializedData});
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources, excalidrawApi]
+    [updateSources]
   );
 
   useEffect(() => {
@@ -105,6 +132,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       }
     };
   }, []);
+
+  useEffect(() => {
+    setReinitializationHandler(() => setExcalidrawMountKey(key => key + 1));
+  }, [setReinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -126,6 +157,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           isRunning={false}
           hasRun={hasRun}
           hasEdited={false}
+          settings={[useThemeSetting('sketchlab')]}
         />
       </div>
       <ResizeBar
@@ -137,13 +169,16 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         <PanelContainer
           id="workspace"
           className={panelClassName}
-          headerContent="Workspace"
+          headerContent={<WorkspaceHeader />}
         >
           <Excalidraw
-            initialData={currentSources.source as SketchlabSource}
+            initialData={currentSources.source}
             onChange={debouncedSerializeAndSaveWorkspace}
-            excalidrawAPI={api => setExcalidrawApi(api)}
+            excalidrawAPI={api => (excalidrawApiRef.current = api)}
+            key={excalidrawMountKey}
+            theme={theme.toLowerCase() as ExcalidrawTheme}
           />
+          {WorkspaceAlert}
         </PanelContainer>
       </div>
     </div>

@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-10-14T18:15:14.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Mood Board Design\r\n\r\n##Do This\r\n1. Pick one fictional brand or event:\r\n   - Student Café: a warm, creative hangout\r\n   - Art Festival: a vibrant, expressive showcase\r\n   - Eco-Friendly Store: a sustainable lifestyle brand\r\n2. Chat with the AI about how to design a mood board that captures your chosen brand’s vibe.\r\n3. Ask about colors, fonts, imagery, and style words that match your brand’s personality.\r\n4. Share your ideas, upload images, and get feedback or refinements from the AI.\r\n5. Record your mood board choices in your activity guide. Make sure to include:\r\n   - At least 2 colors\r\n   - 1 font style\r\n   - 1 image idea\r\n   - At least 2+ style words\r\n   - (Optional) a logo, icon, or texture if it fits your concept",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a supportive design coach helping students create mood boards for fictional brands.\nEach student will choose one of three options: Student Café, Art Festival, or Eco-Friendly Store.\n\nYour job is to guide brainstorming and refinement—not to make decisions for them.\n\nFocus areas:\n1. Colors that match the brand’s intended mood or tone.\n2. Fonts or typography styles that fit the brand’s vibe.\n3. Images or visual ideas that communicate the feeling of the brand.\n4. Style words that describe the brand’s personality (e.g., bold, calm, playful, minimalist).\n5. (Optional) Logos, icons, or background textures that tie the look together.\n\nGuidelines:\n- Ask open-ended questions like:\n  • “What emotions should your brand make people feel?”\n  • “Would brighter or softer colors fit that mood better?”\n  • “What kind of typography would express that feeling?”\n- Offer short examples only when students seem stuck.\n- Encourage them to explain *why* a choice fits their brand.\n- Remind them to record their final decisions in their Mood Board Guide.\n- Keep your tone friendly, curious, and collaborative.\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Chat with AI about designing a mood board.",
+    "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png",
+    "display_name": "AI Chat"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:15:14.641+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1b-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1b-test-2025\"},{\"changed_at\":\"2025-10-14 18:15:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 19:26:53 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 19:29:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 19:32:45 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

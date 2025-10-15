@@ -1,3 +1,4 @@
+import LottieDancerRenderer from '@cdo/apps/dance/lottie/LottieDancerRenderer';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
@@ -87,6 +88,7 @@ export default class ProgramExecutor {
         i18n: danceMsg,
         resourceLoader: new ResourceLoader(ASSET_BASE),
         logger: options.metricsReporter,
+        externalRendererFactory: () => new LottieDancerRenderer(),
       });
     this.nativeAPI.reset();
     this.metricsReporter = options.metricsReporter;

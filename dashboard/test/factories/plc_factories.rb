@@ -12,6 +12,18 @@ FactoryBot.define do
     unit_name {"MyString"}
     unit_description {"MyString"}
     unit_order {1}
+
+    # Simulates production behavior by setting script.professional_learning_course to the name of
+    # the associated plc_course's unit_group. This trait is optional because it has the side effect
+    # of running the generate_plc_objects callback on the associated unit, which overwrites some
+    # factory-provided fields on the plc objects that some tests rely on.
+    trait :with_course_name do
+      after(:build) do |course_unit|
+        if course_unit.script.professional_learning_course.blank?
+          course_unit.script.update!(professional_learning_course: course_unit.plc_course.unit_group.name)
+        end
+      end
+    end
   end
 
   factory :plc_enrollment_module_assignment, class: 'Plc::EnrollmentModuleAssignment' do

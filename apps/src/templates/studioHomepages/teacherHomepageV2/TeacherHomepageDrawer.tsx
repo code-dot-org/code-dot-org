@@ -20,6 +20,7 @@ import i18n from '@cdo/locale';
 import SchoolDataInputs from '../../SchoolDataInputs';
 
 import drawerConfirmationImage from './images/drawer-confirmation-image.png';
+import NpsSurveyContainer from './NpsSurveyContainer';
 import {SchoolInfo} from './TeacherHomepageConstants';
 
 import styles from './teacherHomepage.module.scss';
@@ -31,6 +32,8 @@ interface TeacherHomepageDrawerProps {
   schoolInfoInterstitialOpenInitially: boolean;
   schoolInfoConfirmationOpenInitially: boolean;
   afeOpenInitially: boolean;
+  npsOpenInitially: boolean;
+  npsProps: string;
   onCloseCallback: () => void;
 }
 
@@ -39,29 +42,37 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   schoolInfoInterstitialOpenInitially,
   schoolInfoConfirmationOpenInitially,
   afeOpenInitially,
+  npsOpenInitially,
+  npsProps,
   onCloseCallback,
 }) => {
   const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
     React.useState(schoolInfoInterstitialOpenInitially);
   const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
     React.useState(schoolInfoConfirmationOpenInitially);
+  const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
+    React.useState(false);
   const [success, setSuccess] = React.useState(false);
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
   const [AFEParticipate, setAFEParticipate] = React.useState(false);
-  const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
-    React.useState(false);
+  const [NPSOpen, setNPSOpen] = React.useState(npsOpenInitially);
+  const [NPSSuccess, setNPSSuccess] = React.useState(false);
 
   const isOpen = React.useMemo<boolean>(
     () =>
       schoolInfoInterstitialOpen ||
       schoolInfoConfirmationOpen ||
       success ||
-      AFEDrawerOpen,
+      AFEDrawerOpen ||
+      NPSOpen ||
+      NPSSuccess,
     [
       schoolInfoInterstitialOpen,
       schoolInfoConfirmationOpen,
       success,
       AFEDrawerOpen,
+      NPSOpen,
+      NPSSuccess,
     ]
   );
 
@@ -78,6 +89,11 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const existingSchoolName =
     existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
 
+  const NpsSurveyComplete = () => {
+    setNPSOpen(false);
+    setNPSSuccess(true);
+  };
+
   const headerText: () => string = () => {
     if (schoolInfoInterstitialOpen) {
       return i18n.censusHeading();
@@ -87,6 +103,10 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       return i18n.thankYouForUpdatingYourSchool();
     } else if (AFEDrawerOpen) {
       return i18n.afeDrawerHeader();
+    } else if (NPSOpen) {
+      return i18n.helpUsImprove();
+    } else if (NPSSuccess) {
+      return i18n.NPSSuccessHeader();
     }
   };
 
@@ -101,6 +121,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       return i18n.schoolInfoDrawerSuccess();
     } else if (AFEDrawerOpen) {
       return i18n.afeBannerParagraph();
+    } else if (NPSSuccess) {
+      return i18n.NPSSuccessBody();
     }
   };
 
@@ -118,7 +140,18 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
         </div>
       );
-    } else if (schoolInfoConfirmationOpen || success || AFEDrawerOpen) {
+    } else if (NPSOpen) {
+      return (
+        <div className={styles.drawerContent}>
+          {!!npsProps && (
+            <NpsSurveyContainer
+              NPSProps={npsProps}
+              onCompleteCallback={NpsSurveyComplete}
+            />
+          )}
+        </div>
+      );
+    } else {
       return null;
     }
   };
@@ -308,7 +341,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         {
           'Content-Type': 'application/json',
         }
-      ).catch(error => console.log(error));
+      ).catch(error => console.error(error));
 
       // redirect to form on amazon-future-engineer page if user accepted
       if (AFEParticipate) {
@@ -319,6 +352,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     setSchoolInfoConfirmationOpen(false);
     setSuccess(false);
     setAFEDrawerOpen(false);
+    setNPSOpen(false);
+    setNPSSuccess(false);
     onCloseCallback();
   };
 
@@ -339,7 +374,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         />
       </div>
       <div className={styles.drawerText}>
-        {success && (
+        {(success || NPSSuccess) && (
           <img
             className={styles.drawerImage}
             src={drawerConfirmationImage}
