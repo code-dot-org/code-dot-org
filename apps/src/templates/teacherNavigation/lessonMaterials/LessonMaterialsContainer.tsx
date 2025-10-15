@@ -401,7 +401,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                 <BodyThreeText>
                   {i18n.wantToSeeDifferentInformation()}
                 </BodyThreeText>
-                <a href="">
+                <a href="/users/personalization_information">
                   <BodyThreeText>
                     {i18n.customizeForYourClassroom()}
                   </BodyThreeText>
