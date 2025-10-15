@@ -99,6 +99,11 @@
     @include mixins.focus-styles(var(--borders-brand-teal-primary), -2px);
   }
 
+  // Remove the ::after pseudo-element when sidebar is collapsed
+  &.collapsed .tabButton.tabButton.selected::after {
+    content: none;
+  }
+
   .bottomTabs {
     display: flex;
     flex-direction: column;

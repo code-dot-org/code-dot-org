@@ -116,7 +116,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 }) => {
   const {theme} = useTheme();
   const {showRubric} = useRubric();
-  const [currentTab, setCurrentTab] = useState<Tabs | null>(null);
+  const [currentTab, setCurrentTab] = useState<Tabs | undefined>(undefined);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const hasAutoCollapsedNoTabs = useRef(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
@@ -255,7 +255,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [isProjectLevel, availableTabs, dispatch]);
 
   useEffect(() => {
-    if (currentTab === null) {
+    if (currentTab === undefined) {
       return;
     }
     if (!(currentTab in availableTabs)) {
@@ -281,17 +281,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   const onClickSettingsButton = useCallback(() => {
     // For standalone projects, we need to handle the resource panel collapsing and expanding in conjunction
-    // with togglingthe settings panel.
+    // with toggling the settings panel.
     // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
     if (isProjectLevel) {
       if (isStandaloneCollapsed) {
-        // If the resource panel is collapsed, we'll expand it and select the first tab and open the settings panel.
+        // If the resource panel is collapsed, we'll expand it and then open the settings panel.
         setIsSettingsOpen(true);
-        setCurrentTab(getTypedKeys(availableTabs)[0]);
         dispatch(setIsStandaloneCollapsed(false));
       } else {
         // If the resource panel is expanded and there are no tabs, then clicking the settings button
-        // collapses the resource panel and essentially closes or hides the settings panel.
+        // collapses the resource panel and hides, i.e., closes, the settings panel.
         if (Object.keys(availableTabs).length === 0) {
           dispatch(setIsStandaloneCollapsed(true));
         } else {
@@ -326,7 +325,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           onValidate={instructionsProps.validationSettings?.onValidate}
         />
       )}
-      <div className={styles.sidebar}>
+      <div
+        className={classNames(
+          styles.sidebar,
+          isStandaloneCollapsed && styles.collapsed
+        )}
+      >
         <div className={styles.topSection}>
           <div className={styles.collapseButtonContainer}>
             {/*
@@ -350,16 +354,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               >
                 <Button
                   className={styles.resourcePanelButton}
-                  onClick={() => {
-                    // If currently collapsed, we'll show the first tab when panel is expanded.
-                    if (isStandaloneCollapsed) {
-                      setCurrentTab(getTypedKeys(availableTabs)[0]);
-                    } else {
-                      // If currently expanded, we'll hide the panel and no tab will be selected.
-                      setCurrentTab(null);
-                    }
-                    dispatch(setIsStandaloneCollapsed(!isStandaloneCollapsed));
-                  }}
+                  onClick={() =>
+                    dispatch(setIsStandaloneCollapsed(!isStandaloneCollapsed))
+                  }
                   isIconOnly={true}
                   icon={{
                     iconName: isStandaloneCollapsed
