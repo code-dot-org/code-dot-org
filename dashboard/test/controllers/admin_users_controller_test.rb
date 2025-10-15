@@ -47,6 +47,9 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity" do
     sign_in @admin
 
+    log_payload =  {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, effective_user_id: @not_admin.id}
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
     post :assume_identity, params: {user_id: @not_admin.id}
     assert_redirected_to '/'
 
@@ -56,6 +59,9 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity by username" do
     sign_in @admin
 
+    log_payload =  {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, effective_user_id: @not_admin.id}
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
     post :assume_identity, params: {user_id: "  " + @not_admin.username + "  "}
     assert_redirected_to '/'
 
@@ -64,6 +70,9 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test "should assume_identity by email" do
     sign_in @admin
+
+    log_payload =  {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, effective_user_id: @not_admin.id}
+    CDO.log.expects(:warn).with(log_payload.to_json)
 
     post :assume_identity, params: {user_id: @not_admin.email}
     assert_redirected_to '/'
