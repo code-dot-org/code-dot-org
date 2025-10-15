@@ -6,6 +6,8 @@ const LABS_WITHOUT_INSTRUCTIONS = [
   'standalone_video',
 ];
 
+const STANDALONE_PROJECTS_WITH_RESOURCE_PANEL = ['weblab2', 'pythonlab'];
+
 // Web Lab 2 and Lab2 Dance use the resource panel by default, otherwise we defer to the experiment flag.
 // TODO: Once all lab2 labs are using this version of instructions, this function may be better named
 // "isUsingInstructions", as the resource panel will be the instructions panel. Some labs do not use
@@ -15,13 +17,15 @@ export function isUsingResourcePanel(
   appName: string,
   isProjectLevel: boolean
 ): boolean {
-  if (isProjectLevel && (appName === 'weblab2' || appName === 'pythonlab')) {
-    return true;
-  }
-  if (isProjectLevel || LABS_WITHOUT_INSTRUCTIONS.includes(appName)) {
+  if (
+    (isProjectLevel &&
+      !STANDALONE_PROJECTS_WITH_RESOURCE_PANEL.includes(appName)) ||
+    LABS_WITHOUT_INSTRUCTIONS.includes(appName)
+  ) {
     return false;
   }
   return (
+    appName === 'pythonlab' ||
     appName === 'weblab2' ||
     appName === 'dance' ||
     appName === 'sketchlab' ||
