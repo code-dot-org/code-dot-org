@@ -995,12 +995,14 @@ class Pd::Workshop < ApplicationRecord
     when "National"
       true
     when "Regional"
-      school = Queries::SchoolInfo.current_school(user)
-      zip = school&.dig(:school_zip)
+      zip = user&.school_info&.school&.zip || user&.school_info&.zip
       return false if zip.blank?
 
+      normalized_zip = zip.to_s.rjust(5, '0')
+
       zip_codes = regional_partner&.mappings&.pluck(:zip_code)
-      zip_codes&.include?(zip)
+
+      zip_codes&.include?(normalized_zip)
     else
       false
     end
