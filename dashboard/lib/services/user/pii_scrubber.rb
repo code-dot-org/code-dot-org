@@ -18,7 +18,7 @@ module Services
     class PiiScrubber < Services::Base
       attr_reader :user, :email
 
-      REDACTED_EMAIL_STRING = 'redacted'
+      REDACTED_STRING = 'redacted'
       EMAIL_REGEX = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i
 
       def initialize(user:)
@@ -80,7 +80,7 @@ module Services
         user.full_address = nil
         user.current_sign_in_ip = nil
         user.last_sign_in_ip = nil
-        user.data_transfer_agreement_request_ip = nil
+        user.data_transfer_agreement_request_ip = REDACTED_STRING
         user.user_geos.each(&:clear_user_geo)
 
         # PD data
@@ -127,7 +127,7 @@ module Services
         user.simple_survey_submissions.each do |sss|
           foorm_submission = sss.foorm_submission
           if foorm_submission.present?
-            foorm_submission.update!(answers: foorm_submission.answers.gsub(EMAIL_REGEX, REDACTED_EMAIL_STRING))
+            foorm_submission.update!(answers: foorm_submission.answers.gsub(EMAIL_REGEX, REDACTED_STRING))
           end
         end
       end
