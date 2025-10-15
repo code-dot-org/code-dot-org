@@ -22,7 +22,8 @@ const getAnswerJsonSchema = (isCopyCodeMode: boolean): JsonObjectSchema => {
       },
       assumptions: {
         type: 'string',
-        description: 'Explicit design choices you made from the wireframe',
+        description:
+          'Explicit design choices you made from the wireframe. Format as bullets.',
       },
       code: {
         type: 'array',
@@ -44,20 +45,21 @@ const getAnswerJsonSchema = (isCopyCodeMode: boolean): JsonObjectSchema => {
       explanation: {
         type: 'string',
         description:
-          "Explanation of the code or plain-text answer to the student's question",
+          "1 paragraph or less explanation of the code or plain-text answer to the student's question. Use markdown.",
       },
       nextSteps: {
         type: 'string',
         description:
-          '1-2 bullets of concrete action(s) for student to achieve goal.',
+          '1-2 concrete action(s) for student to achieve goal. Format as bullets',
       },
       furtherSupport: {
         type: 'string',
-        description: '1–2 questions or 1–2 micro-hints',
+        description: '1–2 questions or 1–2 micro-hints. Format as bullets.',
       },
       questions: {
         type: 'string',
-        description: 'short list to confirm ambiguous details',
+        description:
+          'short list to confirm ambiguous details. Format as bullets.',
       },
     },
     required: [
@@ -127,7 +129,7 @@ export const formatExplanationResponse = (response: any): string => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     response.code.forEach((code: any) => {
       console.log({code});
-      formattedResponse += `Filename: ${code.filename}\n\`\`\`\n${code.sourceCode}\n\`\`\`\n\n`;
+      formattedResponse += `\`${code.filename}\`\n\`\`\`\n${code.sourceCode}\n\`\`\`\n\n`;
     });
   }
   if (response.explanation) {
