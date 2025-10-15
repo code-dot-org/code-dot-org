@@ -28,7 +28,7 @@
     = render partial: 'layouts/implicit_new_user_terms_interstitial'
   - if Policies::Ai.ai_differentiation_enabled?(current_user)
     %div#ai-differentiation-fab-mount-point
-  - if current_user.levelbuilder? && request.fullpath.include? 'home'
+  - if current_user.levelbuilder? && request.url.include?('home')
     = render layout: 'shared/extra_links' do
       %li= link_to 'Videos', videos_path
       %li= link_to 'Images', '/images/new'
