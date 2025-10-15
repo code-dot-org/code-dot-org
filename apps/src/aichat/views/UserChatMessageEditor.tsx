@@ -138,7 +138,7 @@ const UserChatMessageEditor: React.FunctionComponent<
         {multimodalAvailable && buildAssetUrl && levelName && (
           <div className={moduleStyles.buttonRow}>
             <UploadButton
-              isDisabled={!!uploadDisabled}
+              isDisabled={!!uploadDisabled || disabled}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
