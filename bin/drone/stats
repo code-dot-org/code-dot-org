@@ -196,22 +196,35 @@ end
 def filter_builds_by_stages(builds, options)
   build_nums = builds.map {|build| build[:number]}
 
-  filtered_build_nums = Parallel.map(build_nums, in_threads: 32) do |build_num|
+  results = Parallel.map(build_nums, in_threads: 32) do |build_num|
     build_info = drone_api_get("builds/#{build_num}")
     stage_names = build_info[:stages].map {|stage| stage[:name]}
 
     # Check if all stages in this build are in the allowed list
     all_stages_allowed = stage_names.all? {|name| options[:only_stages].include?(name)}
 
-    if options[:verbose] && !all_stages_allowed
+    if all_stages_allowed
+      {allowed: true, build_num: build_num}
+    else
       unexpected_stages = stage_names - options[:only_stages]
-      puts "Skipping build ##{build_num} with unexpected stages: #{unexpected_stages.join(', ')}"
+      {allowed: false, build_num: build_num, unexpected_stages: unexpected_stages}
     end
+  end
 
-    all_stages_allowed ? build_num : nil
-  end.compact
+  # Print skipped builds after parallel processing completes to avoid interfering with progress output
+  if options[:verbose]
+    skipped = results.select {|r| !r[:allowed]}
+    unless skipped.empty?
+      print(TERMINAL_CLEAR_LINE) if $stdout.tty?
+      messages = skipped.map do |skip_info|
+        "Skipping build ##{skip_info[:build_num]} with unexpected stages: #{skip_info[:unexpected_stages].join(', ')}"
+      end
+      puts messages.join("\n")
+    end
+  end
 
   # Filter original builds list to only include those that passed the stage check
+  filtered_build_nums = results.select {|r| r[:allowed]}.map {|r| r[:build_num]}
   builds.select {|build| filtered_build_nums.include?(build[:number])}
 end
 
