@@ -25,24 +25,6 @@
     border-bottom: variables.$default-border;
   }
 
-  // Doubling class name to increase specificity and override default button styles.
-  .collapseButton.collapseButton {
-    height: 2rem;
-    width: 2rem;
-    min-width: 2rem;
-
-    i {
-      font-size: 14px;
-      color: var(--text-neutral-quaternary);
-    }
-
-    &:hover i {
-      color: var(--text-neutral-tertiary);
-    }
-
-    @include mixins.focus-styles(var(--borders-brand-teal-primary), -2px);
-  }
-
   .tabs {
     margin-top: 0;
     display: flex;
@@ -106,11 +88,6 @@
       }
     }
 
-    &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
     // Override default active state borders to prevent jumping when clicking a tab
     &:active {
       border-bottom: variables.$default-border !important;
@@ -131,7 +108,7 @@
   }
 
   // Doubling class name to increase specificity and override default button styles.
-  .bottomButton.bottomButton {
+  .resourcePanelButton.resourcePanelButton {
     height: 2rem;
     width: 2rem;
     min-width: 2rem;

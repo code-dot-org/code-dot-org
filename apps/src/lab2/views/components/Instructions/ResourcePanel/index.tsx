@@ -307,7 +307,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 hideOnFirstLeave={true}
               >
                 <Button
-                  className={styles.collapseButton}
+                  className={styles.resourcePanelButton}
                   onClick={() => {
                     // If currently collapsed, we'll show the first tab when panel is expanded.
                     if (collapsed) {
@@ -391,7 +391,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           >
             <div>
               <Button
-                className={styles.bottomButton}
+                className={styles.resourcePanelButton}
                 onClick={() => onClickSettingsButton()}
                 isIconOnly={true}
                 icon={{iconName: 'gear'}}
