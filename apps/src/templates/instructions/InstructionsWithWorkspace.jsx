@@ -20,8 +20,6 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     children: PropTypes.node,
     instructionsStyle: PropTypes.object,
     workspaceStyle: PropTypes.object,
-    labType: PropTypes.string,
-    inLevel: PropTypes.bool,
 
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
