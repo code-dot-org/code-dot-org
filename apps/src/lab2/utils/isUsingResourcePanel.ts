@@ -1,5 +1,3 @@
-import experiments from '@cdo/apps/util/experiments';
-
 const LABS_WITHOUT_INSTRUCTIONS = [
   'bubble_choice',
   'panels',
@@ -16,15 +14,14 @@ export function isUsingResourcePanel(
   appName: string,
   isProjectLevel: boolean
 ): boolean {
+  // Remove this first check once we migrate music lab standalone project to use the resource panel.
   if (
-    (isProjectLevel &&
-      !STANDALONE_PROJECTS_WITH_RESOURCE_PANEL.includes(appName)) ||
-    LABS_WITHOUT_INSTRUCTIONS.includes(appName)
-  ) {
+    isProjectLevel &&
+    !STANDALONE_PROJECTS_WITH_RESOURCE_PANEL.includes(appName)
+  )
+    return false;
+  if (LABS_WITHOUT_INSTRUCTIONS.includes(appName)) {
     return false;
   }
-  return (
-    LABS_USING_RESOURCE_PANEL.includes(appName) ||
-    experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL)
-  );
+  return true;
 }
