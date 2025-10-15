@@ -81,6 +81,11 @@ $default-spacing: 2px;
     flex-direction: column;
     height: 100%;
     width: calc(3.5rem + 20%);
+    transition: width 0.2s ease-in-out;
+  }
+
+  &.instructionsCollapsed {
+    width: 2rem;
   }
 }
 
