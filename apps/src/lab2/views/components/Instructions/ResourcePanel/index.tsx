@@ -8,6 +8,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -272,7 +273,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             {isProjectLevel && (
               <WithTooltip
                 tooltipProps={{
-                  text: collapsed ? 'Expand' : 'Collapse',
+                  text: collapsed ? lab2I18n.expand() : lab2I18n.collapse(),
                   tooltipId: 'tooltip-collapse',
                   direction: 'onRight',
                   size: 'xs',
@@ -302,7 +303,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   }}
                   color={'gray'}
                   type={'tertiary'}
-                  aria-label={collapsed ? 'Expand' : 'Collapse'}
+                  aria-label={
+                    collapsed ? lab2I18n.expand() : lab2I18n.collapse()
+                  }
                 />
               </WithTooltip>
             )}
