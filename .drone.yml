@@ -39,7 +39,7 @@ steps:
         bin/drone/vscode $hostname
         EOF
 
-  # Restore the staging build we created in the `cache-staging-ci-build` pipeline
+  # Restore the staging build we created in the `cache-staging-build` pipeline
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
@@ -61,7 +61,7 @@ steps:
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
+      - "[ -d .git ] || (echo 'WARNING: get-cached-staging-build failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (=the PR)
@@ -84,7 +84,7 @@ steps:
     pull: always
     environment:
       CI_JOB: 'unit_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/unit_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
@@ -144,7 +144,7 @@ steps:
         bin/drone/vscode $hostname
         EOF
 
-  # Restore the staging build we created in the `cache-staging-ci-build` pipeline
+  # Restore the staging build we created in the `cache-staging-build` pipeline
   - name: get-cached-staging-build
     image: plugins/s3-cache
     volumes:
@@ -171,7 +171,7 @@ steps:
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
+      - "[ -d .git ] || (echo 'get-cached-staging-build failed: checkout will be SLOW and LFS $$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (the PR's branch).
@@ -198,7 +198,7 @@ steps:
         path: /var/lib/mysql
     environment:
       CI_JOB: 'ui_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/ui_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
@@ -250,7 +250,7 @@ trigger:
 # - A copy of the MySQL databases, to reduce seed time.
 kind: pipeline
 type: docker
-name: cache-staging-build-artifacts
+name: cache-staging-build
 
 clone:
   disable: true

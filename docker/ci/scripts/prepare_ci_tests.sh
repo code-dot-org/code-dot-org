@@ -16,7 +16,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 
 # Install in deployment mode, both to better mirror the test server and to make
 # caching easier.
-bundle config set deployment true
+bundle config set --local deployment 'true'
 bundle install --quiet
 
 # Disable Pegasus content based on the exit code of the rake task.
