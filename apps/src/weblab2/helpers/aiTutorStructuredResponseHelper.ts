@@ -1,12 +1,21 @@
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 
-const getExplanationJsonSchema = (
-  isCopyCodeMode: boolean
-): JsonObjectSchema => {
+const getAnswerJsonSchema = (isCopyCodeMode: boolean): JsonObjectSchema => {
   return {
     type: 'object',
     properties: {
-      tutorMode: {type: 'string', enum: ['Build HTML', 'Build CSS']},
+      tutorMode: {
+        type: 'string',
+        enum: [
+          'Build HTML',
+          'Build CSS',
+          'Ask',
+          'Hint',
+          'Debug',
+          'Explain',
+          'Refuse',
+        ],
+      },
       goal: {
         type: 'string',
         description: 'What we are achieving this turn, limit to 1 line of text',
@@ -14,6 +23,28 @@ const getExplanationJsonSchema = (
       assumptions: {
         type: 'string',
         description: 'Explicit design choices you made from the wireframe',
+      },
+      code: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            language: {type: 'string'},
+            sourceCode: {
+              type: 'string',
+            },
+            filename: {type: 'string'},
+          },
+          required: ['language', 'sourceCode', 'filename'],
+          additionalProperties: false,
+        },
+        description:
+          '`html` and/or `css` fences. When providing modifications to student code, provide the entire contents of the file. The list can be empty.',
+      },
+      explanation: {
+        type: 'string',
+        description:
+          "Explanation of the code or plain-text answer to the student's question",
       },
       nextSteps: {
         type: 'string',
@@ -28,37 +59,35 @@ const getExplanationJsonSchema = (
         type: 'string',
         description: 'short list to confirm ambiguous details',
       },
-      code: {
-        type: 'array',
-        items: {
-          type: 'object',
-          properties: {
-            language: {type: 'string'},
-            sourceCode: {
-              type: 'string',
-              description: isCopyCodeMode
-                ? 'Well formatted `html` and/or `css`. These can be full code files.'
-                : 'Well formatted html or css code snippets. These should not be full code files.',
-            },
-            filename: {type: 'string'},
-          },
-          required: ['language', 'sourceCode', 'filename'],
-          additionalProperties: false,
-        },
-      },
     },
-    required: ['tutorMode', 'goal', 'nextSteps', 'furtherSupport', 'code'],
+    required: [
+      'tutorMode',
+      'goal',
+      'nextSteps',
+      'furtherSupport',
+      'code',
+      'explanation',
+    ],
+    propertyOrdering: [
+      'tutorMode',
+      'goal',
+      'assumptions',
+      'code',
+      'explanation',
+      'nextSteps',
+      'furtherSupport',
+      'questions',
+    ],
     additionalProperties: false,
-    description: 'All string responses should be formatted in markdown.',
   };
 };
 
 export const copyCodeJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {
-    explanation: getExplanationJsonSchema(true),
+    answer: getAnswerJsonSchema(true),
   },
-  required: ['explanation'],
+  required: ['answer'],
   additionalProperties: false,
 };
 
@@ -93,7 +122,7 @@ export const formatExplanationResponse = (response: any): string => {
   if (response.assumptions) {
     formattedResponse += `**Assumptions**\n\n${response.assumptions}\n\n`;
   }
-  if (response.code) {
+  if (response.code && response.code.length > 0) {
     formattedResponse += `**Code**\n\n`;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     response.code.forEach((code: any) => {
@@ -101,8 +130,11 @@ export const formatExplanationResponse = (response: any): string => {
       formattedResponse += `Filename: ${code.filename}\n\`\`\`\n${code.sourceCode}\n\`\`\`\n\n`;
     });
   }
+  if (response.explanation) {
+    formattedResponse += `**Explanation**\n\n${response.explanation}\n\n`;
+  }
   if (response.nextSteps) {
-    formattedResponse += `**Next Steps**\n${response.nextSteps}\n\n`;
+    formattedResponse += `**Next Steps**\n\n${response.nextSteps}\n\n`;
   }
   if (response.furtherSupport) {
     formattedResponse += `**Further Support**\n\n${response.furtherSupport}\n\n`;

@@ -134,6 +134,7 @@ module AichatAiClientTypes
     :required, string[],
     :description, Optional(string),
     :additionalProperties, boolean(false),
+    :propertyOrdering, Optional(string[])
   )
 
   JsonArraySchema_ = ForwardRef()

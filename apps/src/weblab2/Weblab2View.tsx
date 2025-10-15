@@ -21,8 +21,8 @@ import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {getPromptNameFromMode} from './helpers/aiTutorHelper';
 import {
   acceptRejectJsonSchema,
-  copyCodeJsonSchema,
   formatExplanationResponse,
+  copyCodeJsonSchema,
 } from './helpers/aiTutorStructuredResponseHelper';
 import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
@@ -154,7 +154,7 @@ const Weblab2View: React.FC<
             console.log('🤖: Tutor response (in jsonSchema callback):', {
               jsonResponse,
             });
-            return formatExplanationResponse(jsonResponse.explanation);
+            return formatExplanationResponse(jsonResponse.answer);
           },
         };
       }
