@@ -23,7 +23,7 @@ const ActivityCollection: React.FC<ActivityCollectionProps> = ({
   activities,
 }) => {
   const data = activities.map(activity => {
-    const {title, shortDescription, image, primaryLinkRef, tutorialID} =
+    const {title, shortDescription, image, primaryLinkRef, tutorialID, topic} =
       activity;
 
     return {
@@ -44,6 +44,7 @@ const ActivityCollection: React.FC<ActivityCollectionProps> = ({
               cardId: tutorialID,
               cardTitle: title,
             }}
+            chipLabels={[...topic]}
           />
         </Box>
       ),
@@ -51,10 +52,10 @@ const ActivityCollection: React.FC<ActivityCollectionProps> = ({
   });
 
   return (
-    <Grid container spacing={4}>
+    <Grid container spacing={3}>
       {data.length > 0 ? (
         data.map(card => (
-          <Grid key={card.key} size={{xs: 12, md: 6, lg: 4}}>
+          <Grid key={card.key} size={{xs: 12, sm: 12, md: 6, lg: 4, xl: 3}}>
             {card.item}
           </Grid>
         ))

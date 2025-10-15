@@ -20,6 +20,7 @@ import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
@@ -42,13 +43,16 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
-  const {currentSources, updateSources} = useSources<SketchlabSources>();
+  const {currentSources, updateSources, setReinitializationHandler} =
+    useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
   const {theme} = useTheme();
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  // We remount (ie, reset) Excalidraw any time we observe
+  // sources being initialized (eg, when level changes, teacher views a student's project, etc).
+  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
     levelProperties.id,
@@ -129,25 +133,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, []);
 
-  // This effect runs on each source change,
-  // but the full remount (via key change) is only intended when
-  // Excalidraw state diverges from the saved source state.
-  // This happens when a user switches levels, or a teachers switches
-  // between viewing different students on the same level.
   useEffect(() => {
-    // Note that we do not compare appState, as Excalidraw tracks a lot of app state properties
-    // that we do not store to S3.
-    const excalidrawApi = excalidrawApiRef.current;
-    if (
-      excalidrawApi &&
-      (JSON.stringify(excalidrawApi.getSceneElements()) !==
-        JSON.stringify(currentSources.source.elements) ||
-        JSON.stringify(excalidrawApi.getFiles()) !==
-          JSON.stringify(currentSources.source.files))
-    ) {
-      setExcalidrawMountKey(key => key + 1);
-    }
-  }, [currentSources.source]);
+    setReinitializationHandler(() => setExcalidrawMountKey(key => key + 1));
+  }, [setReinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -181,7 +169,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         <PanelContainer
           id="workspace"
           className={panelClassName}
-          headerContent="Workspace"
+          headerContent={<WorkspaceHeader />}
         >
           <Excalidraw
             initialData={currentSources.source}

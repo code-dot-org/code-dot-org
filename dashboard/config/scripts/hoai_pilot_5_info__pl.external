@@ -1,0 +1,47 @@
+name 'HoAI_pilot_5_info_-pl'
+title 'Review'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="background:#ffffff; border-left:8px solid #7A3FF0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; display:flex; gap:16px; font-family:Arial, sans-serif; color:#222;">
+  <div style="flex:0 0 150px; background:#ece8ff; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#7A3FF0; font-weight:bold;">
+    Image
+  </div>
+  <div>
+    <p style="font-size:16px; line-height:1.6;">
+      Artificial Intelligence (AI) is a broad term for systems that can learn patterns from data and use those patterns to make predictions, generate new content, or solve problems.
+    </p>
+  </div>
+</div>
+
+<div style="background:#ffffff; border-left:8px solid #00a3a3; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; font-family:Arial, sans-serif; color:#222;">
+  <p style="font-size:16px; line-height:1.6;">
+    You already interact with AI every day — even if you don’t call it that. Examples include autocorrect or predictive text that finishes your sentences, music or video recommendations on platforms like Spotify, Netflix, or YouTube, and voice assistants like Siri or Alexa that recognize speech and respond.
+  </p>
+</div>
+
+<div style="background:#ffffff; border-left:8px solid #7A3FF0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; font-family:Arial, sans-serif; color:#222;">
+  <p style="font-size:16px; line-height:1.6;">
+    Most of what we call AI today isn’t thinking or reasoning — it’s recognizing patterns at scale. AI models are trained on huge datasets (millions or even billions of examples) and use math to find relationships between inputs and outputs.
+  </p>
+</div>
+
+<div style="background:#ffffff; border-left:8px solid #00a3a3; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; display:flex; gap:16px; font-family:Arial, sans-serif; color:#222;">
+  <div style="flex:0 0 150px; background:#dff6f6; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#007777; font-weight:bold;">
+    Image
+  </div>
+  <div>
+    <p style="font-size:16px; line-height:1.6;">
+      When you type a prompt or ask a question, AI doesn’t “understand” like a person would — it compares your input to what it’s seen before and generates something that statistically fits. Think of it as a super-fast pattern matcher, not a mind with understanding.
+    </p>
+  </div>
+</div>
+
+<div style="background:#ffffff; border-left:8px solid #7A3FF0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; font-family:Arial, sans-serif; color:#222;">
+  <p style="font-size:16px; line-height:1.6;">
+    AI “learns” through repetition and adjustment. During training, it makes predictions, measures how wrong it was, and updates its internal settings (called parameters) to make better predictions next time. Once trained, it can generalize — creating new answers, images, or ideas based on patterns it’s already learned.
+  </p>
+</div>
+MARKDOWN
+
+"First, team up with AI to create your own star dancer. Next, remix a track to set the vibe. Finally, code an original dance routine to bring your dancer and music to life!"

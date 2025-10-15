@@ -10,7 +10,6 @@ import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWit
 import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getBaseAssetUrl} from '../appConfig';
@@ -62,6 +61,7 @@ interface HeaderButtonsProps {
   clearCode: () => void;
   allowPackSelection: boolean;
   skipUrl: string | undefined;
+  showSettings: boolean;
   hideChaff: () => void;
 }
 
@@ -74,6 +74,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   clearCode,
   allowPackSelection,
   skipUrl,
+  showSettings,
   hideChaff,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
@@ -181,11 +182,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
         </>
       )}
       {/* Settings Button */}
-      {!experiments.isEnabledAllowingQueryString(
-        experiments.LAB2_RESOURCE_PANEL
-      ) ? (
-        <SettingsButton settings={settings} />
-      ) : null}
+      {showSettings && <SettingsButton settings={settings} />}
       {!readOnlyWorkspace && (
         <>
           {/* Undo Button */}
