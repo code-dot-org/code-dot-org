@@ -50,16 +50,17 @@ const getAnswerJsonSchema = (isCopyCodeMode: boolean): JsonObjectSchema => {
       nextSteps: {
         type: 'string',
         description:
-          '1-2 concrete action(s) for student to achieve goal. Format as bullets',
+          '1-2 concrete action(s) for student to achieve goal. Format as markdown bullets',
       },
       furtherSupport: {
         type: 'string',
-        description: '1–2 questions or 1–2 micro-hints. Format as bullets.',
+        description:
+          '1–2 questions or 1–2 micro-hints. Format as markdown bullets.',
       },
       questions: {
         type: 'string',
         description:
-          'short list to confirm ambiguous details. Format as bullets.',
+          'short list to confirm ambiguous details. Format as markdown bullets.',
       },
     },
     required: [
