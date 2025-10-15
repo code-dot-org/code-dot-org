@@ -127,6 +127,7 @@ module AichatAiClientTypes
   #   required: string[];
   #   description?: string;
   #   additionalProperties: boolean;
+  #   propertyOrdering?: string[];
   # }
   JsonObjectSchema = Interface(
     :type, string('object'),

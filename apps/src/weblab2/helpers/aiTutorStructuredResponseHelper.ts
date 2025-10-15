@@ -116,6 +116,7 @@ export const acceptRejectJsonSchema: JsonObjectSchema = {
   additionalProperties: false,
 };
 
+// Parsed json comes in as 'any'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatExplanationResponse = (response: any): string => {
   let formattedResponse = '';
@@ -127,6 +128,7 @@ export const formatExplanationResponse = (response: any): string => {
   }
   if (response.code && response.code.length > 0) {
     formattedResponse += `**Code**\n\n`;
+    // Parsed json comes in as 'any'
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     response.code.forEach((code: any) => {
       formattedResponse += `\`${code.filename}\`\n\`\`\`\n${code.sourceCode}\n\`\`\`\n\n`;
