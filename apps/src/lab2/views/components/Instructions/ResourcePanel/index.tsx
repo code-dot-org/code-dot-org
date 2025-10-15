@@ -359,18 +359,20 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             hideDelayMs={hideTooltipDelayMs}
             hideOnFirstLeave={true}
           >
-            <Button
-              className={styles.bottomButton}
-              onClick={() => {
-                setIsSettingsOpen(!isSettingsOpen);
-              }}
-              isIconOnly={true}
-              icon={{iconName: 'gear'}}
-              color={'gray'}
-              type={'tertiary'}
-              aria-label={commonI18n.settings()}
-              disabled={collapsed}
-            />
+            <div>
+              <Button
+                className={styles.bottomButton}
+                onClick={() => {
+                  setIsSettingsOpen(!isSettingsOpen);
+                }}
+                isIconOnly={true}
+                icon={{iconName: 'gear'}}
+                color={'gray'}
+                type={'tertiary'}
+                aria-label={commonI18n.settings()}
+                disabled={collapsed}
+              />
+            </div>
           </WithTooltip>
         </div>
       </div>

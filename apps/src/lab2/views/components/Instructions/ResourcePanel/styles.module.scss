@@ -105,6 +105,11 @@
       }
     }
 
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
     // Override default active state borders to prevent jumping when clicking a tab
     &:active {
       border-bottom: variables.$default-border !important;
