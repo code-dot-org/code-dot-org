@@ -43,14 +43,6 @@ end.parse!
 OLDEST_BUILD_OF_INTEREST = options[:ago].ago
 MAX_DRONE_PAGE_NUM = 200
 
-# Check for incompatible options
-if options[:total_build_time] && options[:only_stages]
-  puts "Error: --only-stages cannot be used with --total-build-time"
-  puts "The --total-build-time option calculates total build duration, not individual stage durations."
-  puts "Remove either --only-stages or --total-build-time and try again."
-  exit 1
-end
-
 # ============================================================================
 # MAIN
 # ============================================================================
@@ -165,6 +157,11 @@ def collect_total_build_time_data(options)
       select {|build| options[:only_successful] ? build[:status] == "success" : true}.
       select {|build| options[:event] ? build[:event] == options[:event] : true}
 
+    # If --only-stages is specified, we need to fetch build details to filter by stages
+    if options[:only_stages]
+      builds = filter_builds_by_stages(builds, options)
+    end
+
     new_builds = builds.map do |build|
       next if build[:finished].zero? || build[:started].zero? || build[:created].zero?
       {
@@ -194,6 +191,28 @@ def collect_total_build_time_data(options)
 
   raise "No builds found matching the specified criteria" if builds_data.empty?
   builds_data
+end
+
+def filter_builds_by_stages(builds, options)
+  build_nums = builds.map {|build| build[:number]}
+
+  filtered_build_nums = Parallel.map(build_nums, in_threads: 32) do |build_num|
+    build_info = drone_api_get("builds/#{build_num}")
+    stage_names = build_info[:stages].map {|stage| stage[:name]}
+
+    # Check if all stages in this build are in the allowed list
+    all_stages_allowed = stage_names.all? {|name| options[:only_stages].include?(name)}
+
+    if options[:verbose] && !all_stages_allowed
+      unexpected_stages = stage_names - options[:only_stages]
+      puts "Skipping build ##{build_num} with unexpected stages: #{unexpected_stages.join(', ')}"
+    end
+
+    all_stages_allowed ? build_num : nil
+  end.compact
+
+  # Filter original builds list to only include those that passed the stage check
+  builds.select {|build| filtered_build_nums.include?(build[:number])}
 end
 
 def write_total_build_time_stats_table(builds_data, options)
