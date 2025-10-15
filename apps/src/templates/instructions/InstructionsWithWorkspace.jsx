@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
+import experiments from '../../util/experiments';
 import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
 
 import TopInstructions from './TopInstructions';
@@ -30,6 +32,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   state = {
     windowWidth: undefined,
     windowHeight: undefined,
+    aiChatOpen: true,
   };
 
   setCodeWorkspaceContainerRef = element => {
@@ -86,6 +89,10 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     setInstructionsMaxHeightAvailable(maxInstructionsHeight);
   };
 
+  toggleAiChat = () => {
+    this.setState(prevState => ({aiChatOpen: !prevState.aiChatOpen}));
+  };
+
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
   }
@@ -98,15 +105,43 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     const {instructionsStyle, workspaceStyle, instructionsHeight, children} =
       this.props;
 
+    const AiTutorLabs = ['applab', 'gamelab', 'weblab'];
+    const showAiTutor =
+      AiTutorLabs.includes(this.props.labType) &&
+      experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
+
+    const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
+    const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
+    const right = showAiTutor
+      ? this.state.aiChatOpen
+        ? chatContainerSpace
+        : sidebarSpace
+      : 0;
+
     return (
       <span>
-        <TopInstructions mainStyle={instructionsStyle} />
+        <TopInstructions
+          mainStyle={{
+            ...instructionsStyle,
+            right,
+          }}
+        />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
-          style={{...workspaceStyle, top: instructionsHeight}}
+          style={{
+            ...workspaceStyle,
+            top: instructionsHeight,
+            right,
+          }}
         >
           {children}
         </CodeWorkspaceContainer>
+        {showAiTutor && (
+          <AiTutorContainer
+            toggleAiChat={this.toggleAiChat}
+            aiChatOpen={this.state.aiChatOpen}
+          />
+        )}
       </span>
     );
   }
