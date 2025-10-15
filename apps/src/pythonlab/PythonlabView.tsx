@@ -109,7 +109,8 @@ const PythonlabView: React.FunctionComponent<
   const isAiTutorEnabled = useMemo(() => {
     return (
       levelProperties.aiTutorAvailable ||
-      queryParams('show-ai-Tutor') === 'true'
+      queryParams('show-ai-tutor2') === 'true' ||
+      queryParams('show-ai-tutor') === 'true'
     );
   }, [levelProperties.aiTutorAvailable]);
 

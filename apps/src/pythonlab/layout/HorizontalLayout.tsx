@@ -39,13 +39,14 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   );
   const {hiddenContextCallback, levelProperties} = useCodebridgeContext();
 
-  // AI Tutor 2 is shown in the resource panel if enabled.
+  // AI Tutor is shown in the resource panel if enabled.
   const showAiTutor =
     !experiments.isEnabledAllowingQueryString(
       experiments.LAB2_RESOURCE_PANEL
     ) &&
     (levelProperties.aiTutorAvailable ||
-      queryParams('show-ai-Tutor') === 'true');
+      queryParams('show-ai-tutor2') === 'true' ||
+      queryParams('show-ai-tutor') === 'true');
 
   const {
     leftPanelWidth,

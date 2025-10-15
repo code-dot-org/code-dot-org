@@ -20,7 +20,7 @@ import moduleStylesShrink from '../AiTutorResponseShrink.module.scss';
  * 
  * Usage looks like:
  * 
- *   const isAiTutorHintEnabled = queryParams('show-ai-Tutor-hint') === 'true';
+ *   const isAiTutorHintEnabled = queryParams('show-ai-tutor-hint') === 'true';
  *   const [askAiTutor, AiTutorResponse] = useAiTutor(
      isAiTutorHintEnabled,
      'hint'
