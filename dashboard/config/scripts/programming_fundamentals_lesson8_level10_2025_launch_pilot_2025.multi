@@ -1,0 +1,20 @@
+name 'programming-fundamentals-lesson8-level10_2025-launch_pilot-2025'
+title 'Check Your Understanding'
+
+wrong 'The `Painter` will move and paint each tile until it reaches a wall.'
+wrong 'The `Painter` will paint the starting tile once, then stop.'
+wrong 'The `Painter` will keep painting the same tile over and over.'
+right 'The `Painter` will paint each tile, but it won\'t move forward and may crash.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A student writes the following loop to move the `Painter` forward and paint each tile until the `Painter` reaches a wall:
+
+```
+while painter.can_move():
+   painter.paint("blue")
+```
+
+What will happen when this code runs?
+MARKDOWN

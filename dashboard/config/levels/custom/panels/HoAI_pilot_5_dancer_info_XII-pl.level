@@ -1,0 +1,49 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-14T17:18:51.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###BEHIND THE SCENES\nWhat *is* AI, Really?",
+        "imageUrl": "",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "**Artificial Intelligence** (AI) is a broad term for systems that can learn patterns from data and use those patterns to make predictions, generate new content, or solve problems.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_-pl-26827f86-0270-42eb-8cc8-075cc731eae3",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "You already interact with AI every day — even if you don’t call it that. Examples include:\n* Autocorrect or predictive text that finishes your sentences.\n* Music or video recommendations on Spotify, Netflix, or YouTube.\n* Photo filters and face recognition that detect features or add effects.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_XII-pl-6d9d7e1e-72e2-400c-a363-7990c8236d6a"
+      },
+      {
+        "text": "Most of what we call AI today isn’t thinking or reasoning — it’s recognizing patterns at scale.\n\nAI models are trained on massive datasets (millions or even billions of examples) and use mathematics to find relationships between inputs and outputs.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_-pl-bfb56243-e440-4e17-92d5-3c7d4cfdd275"
+      },
+      {
+        "text": "When you type a prompt, AI doesn’t “know” what it means — it compares your words to what it’s seen before and generates something that statistically fits.\n\nThink of it as a super-fast pattern matcher, not a mind with understanding.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_-pl-61bcf404-e424-4df1-a858-bffad1b4d484"
+      },
+      {
+        "text": "AI “learns” through repetition and adjustment. During training, it makes predictions, measures how wrong it was, and updates its internal settings (called parameters) to make better predictions next time.\n\nOnce trained, it can generalize — creating new answers, images, or ideas based on patterns it’s already learned.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_-pl-a0504e03-ae45-4898-83db-b0c7a3b5e7af"
+      }
+    ],
+    "name_suffix": "_-pl"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14T17:18:51.774+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_dancer_info_-pl\\\"\"],\"cloned_from\":\"HoAI_pilot_5_dancer_info_-pl\"},{\"changed_at\":\"2025-10-14 17:37:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-14 17:55:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-14 17:55:24 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+}]]></config>
+</Panels>

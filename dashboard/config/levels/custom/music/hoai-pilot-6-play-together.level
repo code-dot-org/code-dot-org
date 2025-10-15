@@ -57,6 +57,7 @@
       }
     ],
     "level_data": {
+      "dancerMove": "roll",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -172,7 +173,7 @@
     "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-10T12:59:10.430+00:00\",\"changed\":[\"cloned from \\\"coding-with-music-play-together\\\"\"],\"cloned_from\":\"coding-with-music-play-together\"},{\"changed_at\":\"2025-10-10 19:21:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-10T12:59:10.430+00:00\",\"changed\":[\"cloned from \\\"coding-with-music-play-together\\\"\"],\"cloned_from\":\"coding-with-music-play-together\"},{\"changed_at\":\"2025-10-10 19:21:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 00:44:20 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

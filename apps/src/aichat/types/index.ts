@@ -4,6 +4,7 @@ export * from './chatComponents';
 export * from './chatEvents';
 export * from './customizations';
 export * from './levelProperties';
+export * from './structuredOutput';
 export * from './systemPrompt';
 export * from './toxicity';
 export * from './userAddedSelectionContext';

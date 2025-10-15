@@ -68,7 +68,8 @@ export const computeEventMeasures = (events: PlaybackEvent[]) => {
 export const generateSongAi = async (
   contextText: string,
   packId: string,
-  promptText: string
+  promptText: string,
+  promptTextExtra?: string
 ) => {
   const library = MusicLibrary.getInstance();
   const sounds =
@@ -102,7 +103,8 @@ export const generateSongAi = async (
     'Here is the context: \n\n' +
       GenerateContext(contextText, sounds, drumSounds) +
       '\n\n And here is the request: \n\n' +
-      promptText
+      promptText +
+      (promptTextExtra ? '\n\n' + promptTextExtra : '')
   );
 
   if (result.length > 1 && result[1].status === AiInteractionStatus.OK) {

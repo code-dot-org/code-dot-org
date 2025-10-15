@@ -152,4 +152,10 @@
       border-left: 3px $light_primary_500 solid;
     }
   }
+  .dancerCanvasContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
 }

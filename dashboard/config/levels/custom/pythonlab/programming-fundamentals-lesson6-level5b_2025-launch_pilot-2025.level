@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:30.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're writing a birthday message generator for your friends. Right now, the function only says \"Happy Birthday!\", but you want to personalize it a little more. Add a second message to make it extra special.\r\n\r\n1. Look at the `birthday_message()` function. It prints a basic birthday greeting.\r\n\r\n2. Add another `print()` line with something fun or thoughtful, like a wish, emoji, or a message of celebration.\r\n\r\n3. Run the function to make sure it prints both lines.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAll the lines inside a function must be indented the same amount. This tells Python what belongs to the function.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "display_name": "Birthday Message Upgrade",
+    "bubble_choice_description": "You're writing a birthday message generator for your friends. Right now, the function only says \"Happy Birthday!\", but you want to personalize it a little more. Add a second message to make it extra special.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def birthday_message():\n  # Prints a birthday message\n  print(\"Happy Birthday!\")\n  # TODO - Add another line to make the message more fun\n  \n\nbirthday_message()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzg5XUlDXm4Pqxd1nKsRn2Q0q8puOQ4+3\nxR07KgbjqC4W/p0TKvktHnyF6l9AOoCEJQNlhcpDbXeA3dp+sHf8pG6VlUgg\n90kcmDjcZ8/Ou3eSgQ4FULdWZhvUtJQcIX3yRzH+7VL30S6ZgDk8XLJFo74y\n0m1ueuMp72eqxLcBk/SshiUDh9xA40HWIlNtW0me9iJpMtYU14sXGbEcAH2q\nyLjFml00h1OrdMVV/wvh/YLZaAKq1t0X1OIWBQD5dUNZMXD3mD112gpwQ+5+\natXaqnEHOjNxgI+UTOSP7l9hb2z4I2ZjU9DTt7Upu0xgKcLx8gQRvQ+dPg+H\niMEDVKgVdhyzPYxf3NqG0hdc6EYC/0FopWlIwnmyuB6AesdACvs2vQ==\n",
+    "thumbnail_url": "https://images.code.org/190560b635c267a7e2f21342e783d340-party-hat.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestBirthdayMessageFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_two_messages_printed(self):\n        \"\"\"birthday_message() should print two lines\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertGreaterEqual(\n            len(printed_messages),\n            2,\n            \"Make sure your birthday_message() function prints two lines: a greeting and an extra fun or thoughtful message!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:30.580+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level5b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level5b_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

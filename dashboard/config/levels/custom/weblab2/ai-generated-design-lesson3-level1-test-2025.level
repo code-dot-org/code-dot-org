@@ -1,0 +1,91 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-10-14T17:12:02.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This\r\n\r\nHover over the different sections of the webpage to locate:\r\n- Nav (Navigation) Bar\r\n- Hero section\r\n- Cards\r\n- Footer\r\n\r\nLabel these four features in your activity guide. Then choose one to describe in detail.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Reusable Cups & Water Bottles</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n</head>\n<body>\n  <!-- Nav Bar -->\n  <header class=\"site-nav hover-label\" data-label=\"Nav Bar\">\n    <div class=\"container nav-inner\">\n      <a class=\"logo\" href=\"#\">ReUse</a>\n      <nav aria-label=\"Primary\">\n        <ul class=\"nav-list\">\n          <li><a href=\"#hero\">Home</a></li>\n          <li><a href=\"#cards\">Products</a></li>\n          <li><a href=\"#footer\">Contact</a></li>\n        </ul>\n      </nav>\n    </div>\n  </header>\n\n  <main>\n    <!-- Hero -->\n    <section id=\"hero\" class=\"hero hover-label\" data-label=\"Hero\">\n      <div class=\"container hero-inner\">\n        <h1>Choose Reusable</h1>\n        <p>Swap single-use plastics for durable cups and bottles that look great and last.</p>\n        <a class=\"btn\" href=\"#cards\">Explore Containers</a>\n      </div>\n    </section>\n\n    <!-- Cards Section -->\n    <section id=\"cards\" class=\"cards-section hover-label\" data-label=\"Cards\">\n      <div class=\"container\">\n        <h2 class=\"section-title\">Featured Containers</h2>\n\n        <div class=\"cards-grid\">\n          <!-- Card 1 -->\n          <article class=\"card\">\n            <img src=\"stainless_steel_bottle.jpg\" alt=\"Stainless steel reusable water bottle\" class=\"card-media\">\n            <div class=\"card-body\">\n              <h3>Stainless Steel Bottle</h3>\n              <p>Double-wall insulated, keeps drinks cold for 24h.</p>\n              <button class=\"text-link\" type=\"button\">Learn more →</button>\n            </div>\n          </article>\n\n          <!-- Card 2 -->\n          <article class=\"card\">\n            <img src=\"glass_tumbler.jpg\" alt=\"Reusable glass tumbler with silicone sleeve\" class=\"card-media\">\n            <div class=\"card-body\">\n              <h3>Glass Tumbler</h3>\n              <p>Borosilicate glass with silicone sleeve and bamboo lid.</p>\n              <button class=\"text-link\" type=\"button\">Learn more →</button>\n            </div>\n          </article>\n\n          <!-- Card 3 -->\n          <article class=\"card\">\n            <img src=\"collapsible_cup.jpg\" alt=\"Collapsible silicone cup for on-the-go use\" class=\"card-media\">\n            <div class=\"card-body\">\n              <h3>Collapsible Cup</h3>\n              <p>Pocket-friendly silicone cup for coffee on the go.</p>\n              <button class=\"text-link\" type=\"button\">Learn more →</button>\n            </div>\n          </article>\n        </div>\n      </div>\n    </section>\n  </main>\n\n  <!-- Footer -->\n  <footer id=\"footer\" class=\"site-footer hover-label\" data-label=\"Footer\">\n    <div class=\"container footer-inner\">\n      <p>© <span id=\"year\"></span> ReUse Co. Choose better. Choose reusable.</p>\n    </div>\n  </footer>\n\n  <script>\n    document.getElementById('year').textContent = new Date().getFullYear();\n  </script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "styles.css",
+          "language": "css",
+          "contents": "/* ===== Base / Theme ===== */\n:root{\n  --bg: #ffffff;\n  --card: #f9f9f9;\n  --muted: #555;\n  --accent: #6dd3ff;\n  --accent-2: #9bffb8;\n  --text: #111;\n  --border: #ddd;\n  --radius: 16px;\n  --shadow: 0 4px 12px rgba(0,0,0,.08);\n}\n\n*{ box-sizing: border-box; }\nbody{\n  margin:0;\n  font-family: system-ui, sans-serif;\n  color: var(--text);\n  background: var(--bg);\n}\n\n.container{\n  width:min(1100px, 90%);\n  margin-inline:auto;\n}\n\n/* ===== Centered Hover Label (no overlay) ===== */\n.hover-label {\n  position: relative;\n}\n\n.hover-label::after {\n  content: attr(data-label);\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%) scale(0.9);\n  background: linear-gradient(180deg, #faff00, #d6ff6b);\n  color: #000;\n  font-weight: 800;\n  font-size: 1.8rem;\n  padding: 1rem 2rem;\n  border-radius: 1rem;\n  box-shadow: 0 4px 20px rgba(0,0,0,0.2);\n  opacity: 0;\n  transition: opacity 0.25s ease, transform 0.25s ease;\n  z-index: 10;\n  pointer-events: none;\n}\n\n.hover-label:hover::after {\n  opacity: 1;\n  transform: translate(-50%, -50%) scale(1);\n}\n\n/* ===== Nav Bar ===== */\n.site-nav{\n  position: sticky;\n  top: 0;\n  z-index: 20;\n  background: #fff;\n  border-bottom: 1px solid var(--border);\n}\n.nav-inner{\n  display:flex;\n  align-items:center;\n  justify-content:space-between;\n  padding: 1rem 0;\n}\n.logo{ color: var(--text); text-decoration:none; font-weight:bold; font-size:1.2rem; }\n.nav-list{ list-style:none; display:flex; gap:1rem; margin:0; padding:0; }\n.nav-list a{ color: var(--muted); text-decoration:none; }\n.nav-list a:hover{ color: var(--text); }\n\n/* ===== Hero ===== */\n.hero{\n  padding: 4rem 0;\n  text-align:center;\n  background: linear-gradient(160deg, rgba(109,211,255,.15), rgba(155,255,184,.15));\n}\n.hero h1{ font-size:2.5rem; margin:0; }\n.hero p{ color: var(--muted); max-width:600px; margin:1rem auto; }\n.btn{\n  background: linear-gradient(90deg, var(--accent), var(--accent-2));\n  color:#001b22; font-weight:700;\n  padding:.8rem 1.2rem; border:none; border-radius:999px;\n}\n\n/* ===== Cards ===== */\n.cards-section{ padding: 3rem 0; background: #fff; }\n.cards-grid{\n  display:grid;\n  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));\n  gap:1rem;\n}\n.card{\n  background: var(--card);\n  border:1px solid var(--border);\n  border-radius:var(--radius);\n  overflow:hidden;\n  box-shadow: var(--shadow);\n  transition:transform .2s;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.card:hover{ transform:translateY(-2px); }\n\n/* Centered and responsive images */\n.card-media {\n  width: 100%;\n  height: 200px;\n  object-fit: contain;\n  object-position: center;\n  display: block;\n  background-color: #ffffff; /* white background behind images */\n}\n\n/* Card content */\n.card-body{ padding:1rem; text-align: center; }\n.card h3{ margin:0 0 .5rem; }\n.card p{ margin:0 0 .5rem; color: var(--muted); }\n.text-link{\n  background:none;\n  border:none;\n  color: var(--accent);\n  font-weight:700;\n  cursor:pointer;\n}\n.text-link:hover{ text-decoration: underline; }\n\n/* ===== Footer ===== */\n.site-footer{ padding:2rem 0; text-align:center; color: var(--muted); border-top:1px solid var(--border); background: #fff; }\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "glass_tumbler.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-test-2025/uuid/b3d12f14-34a1-432b-b509-cb4ae20415f1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "collapsible_cup.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-test-2025/uuid/b574e9bc-1849-4020-97c1-9a01891e8859.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "stainless_steel_bottle.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-test-2025/uuid/53989aec-880b-492a-b9f5-6f200dc1e7ae.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14 17:13:26 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 17:21:38 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 17:25:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 17:29:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 17:30:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 17:38:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 17:38:51 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 17:41:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 17:44:56 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 17:58:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>
