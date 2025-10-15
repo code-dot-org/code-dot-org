@@ -58,19 +58,21 @@ module Middlewares
     # allowing concurrent requests to identify that the session is being deleted and prevent its restoration.
     #
     # @see https://github.com/redis-store/redis-rack/blob/v3.0.0/lib/rack/session/redis.rb#L54
-    def delete_session(req, sid, ...)
+    def delete_session(req, sid, options)
       super
     ensure
-      write_session(req, sid, {deleted: true}, ex: 60) # marks the session as deleted for 60 seconds
-      req.session.delete('deleted') # prevents commiting the "deleted" flag to the renewed session
-      # By default, a deleted session should be renewed, which involves generating a new session ID and cookie for it.
-      # However, since the deleted session is being overwritten with the "deleted" flag, it will bypass the renewal step.
-      # Therefore, we need to manually set the :renew option to force the session to be renewed.
-      # See:
-      # - https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L217-L218
-      # - https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L377-L380
-      # - https://github.com/redis-store/redis-rack/blob/v3.0.0/lib/rack/session/redis.rb#L60
-      req.session.options[:renew] = true
+      unless options[:skip]
+        write_session(req, sid, {deleted: true}, ex: 60) # marks the session as deleted for 60 seconds
+        req.session.delete('deleted') # prevents commiting the "deleted" flag to the renewed session
+        # By default, a deleted session should be renewed, which involves generating a new session ID and cookie for it.
+        # However, since the deleted session is being overwritten with the "deleted" flag, it will bypass the renewal step.
+        # Therefore, we need to manually set the :renew option to force the session to be renewed.
+        # See:
+        # - https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L217-L218
+        # - https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L377-L380
+        # - https://github.com/redis-store/redis-rack/blob/v3.0.0/lib/rack/session/redis.rb#L60
+        options[:renew] = true
+      end
     end
 
     # Overrides +Rack::Session::Abstract::Persisted#commit_session?+ to skip

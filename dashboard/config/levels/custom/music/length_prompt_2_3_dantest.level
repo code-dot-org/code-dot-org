@@ -1,0 +1,70 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-10-08T16:08:35.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "level_data": {
+      "library": "launch2024",
+      "aiCodeGenerate": "true",
+      "aiCodeGenerateAdlib": {
+        "id": "length",
+        "template": "Please code a song that layers {type1}, {type2}, and {type3} together, around {length} measures long.",
+        "options": {
+          "type1": [
+            "bass",
+            "leads",
+            "beats",
+            "vocals"
+          ],
+          "type2": [
+            "bass",
+            "leads",
+            "beats",
+            "vocals"
+          ],
+          "type3": [
+            "bass",
+            "leads",
+            "beats",
+            "vocals"
+          ],
+          "length": [
+            "10",
+            "15",
+            "20"
+          ]
+        },
+        "variantCount": 3
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "length_template_2_3",
+    "display_name": "Regenerate the music",
+    "thumbnail_url": "https://images.code.org/18f4fa0ac2cc0deb0e478e38dd2a85e4-botmusic.jpg",
+    "name_suffix": "_3",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-08T16:08:35.345+00:00\",\"changed\":[\"cloned from \\\"length_prompt_2_3\\\"\"],\"cloned_from\":\"length_prompt_2_3\"},{\"changed_at\":\"2025-10-08 16:08:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

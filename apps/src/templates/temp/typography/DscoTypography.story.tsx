@@ -1,6 +1,5 @@
 import Typography, {
   StrongText,
-  ExtraStrongText,
   EmText,
   BodyOneText,
   BodyTwoText,
@@ -93,9 +92,6 @@ export const AllTypographyElements: Story = {
       <Typography semanticTag="strong" visualAppearance="strong">
         This is a Typography Component. (strong)
       </Typography>
-      <Typography semanticTag="strong" visualAppearance="extra-strong">
-        This is a Typography Component. (extra-strong)
-      </Typography>
       <Typography semanticTag="figcaption" visualAppearance="figcaption">
         This is a Typography Component. (figcaption)
       </Typography>
@@ -168,9 +164,6 @@ export const OtherTexts: Story = {
     <>
       <EmText>This is a Typography Component. (em)</EmText>
       <StrongText>This is a Typography Component. (strong)</StrongText>
-      <ExtraStrongText>
-        This is a Typography Component. (extra-strong)
-      </ExtraStrongText>
       <Figcaption>This is a Typography Component. (figcaption)</Figcaption>
     </>
   ),
@@ -226,27 +219,15 @@ export const RichTextExamples: Story = {
         <StrongText>This is a body-two strong text</StrongText>
       </BodyTwoText>
       <BodyTwoText>
-        <ExtraStrongText>This is a body-two extra-strong text</ExtraStrongText>
-      </BodyTwoText>
-      <BodyTwoText>
         <StrongText>
           <EmText>This is a body-two strong em text</EmText>
         </StrongText>
       </BodyTwoText>
-      <BodyTwoText>
-        <ExtraStrongText>
-          <EmText>This is a body-two extra-strong em text</EmText>
-        </ExtraStrongText>
-      </BodyTwoText>
       <EmText>This is an em text</EmText>
       <StrongText>This is a strong text</StrongText>
-      <ExtraStrongText>This is an extra-strong text</ExtraStrongText>
       <EmText>
         <StrongText>This is a strong em text</StrongText>
       </EmText>
-      <ExtraStrongText>
-        <EmText>This is an extra-strong em text</EmText>
-      </ExtraStrongText>
     </>
   ),
 };

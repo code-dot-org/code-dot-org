@@ -39,6 +39,7 @@ class AppLabView extends React.Component {
     ]).isRequired,
     isRtl: PropTypes.bool,
     widgetMode: PropTypes.bool,
+    inLevel: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -57,6 +58,7 @@ class AppLabView extends React.Component {
       hasDesignMode,
       hasDataMode,
       handleVersionHistory,
+      inLevel,
     } = this.props;
 
     const codeWorkspaceVisible = ApplabInterfaceMode.CODE === interfaceMode;
@@ -85,6 +87,8 @@ class AppLabView extends React.Component {
         <InstructionsWithWorkspace
           workspaceStyle={instructionWorkspaceStyle}
           instructionsStyle={instructionWorkspaceStyle}
+          labType="applab"
+          inLevel={inLevel}
         >
           <CodeWorkspace
             withSettingsCog
@@ -107,6 +111,7 @@ export default connect(state => ({
   interfaceMode: state.interfaceMode,
   isRtl: state.isRtl,
   widgetMode: state.pageConstants.widgetMode,
+  inLevel: !!state.pageConstants.serverScriptId,
 }))(AppLabView);
 
 const styles = {

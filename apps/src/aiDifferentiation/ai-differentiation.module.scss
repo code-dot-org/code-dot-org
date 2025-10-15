@@ -205,15 +205,14 @@ $fab-height: 48;
 
   &Footer {
     display: flex;
-    padding: 6px;
+    padding: 1rem 1.25rem 0.875rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
     border-top: 2px solid $neutral_gray10;
 
     &Buttons {
-      margin-inline-start: 10px;
-      margin-bottom: 10px;
+      margin-block: 0.625rem 0.25rem;
       display: flex;
       flex-direction: row;
       align-items: flex-start;

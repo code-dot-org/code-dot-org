@@ -82,6 +82,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   hideContinueIfDisabled = false,
   ...feedbackProps
 }) => {
+  const hasValidationConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions
+  );
+
   const validationResults = useAppSelector(
     state => state.lab.validationState?.validationResults
   );
@@ -122,6 +126,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     >
       <div
         id="instructions-panel"
+        aria-live="polite"
         className={classNames(
           moduleStyles.item,
           vertical && moduleStyles.itemVertical
@@ -144,13 +149,15 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <TextToSpeech text={longInstructions} />
             </div>
           )}
-          {includeValidation && (
-            <ValidationButton
-              onValidate={validationSettings.onValidate}
-              onStopValidation={validationSettings.onStopValidation}
-              isValidating={validationSettings.isValidating}
-              isValidateDisabled={validationSettings.isValidateDisabled}
-            />
+          {includeValidation && hasValidationConditions && (
+            <div className={moduleStyles.nonScrollingSubContent}>
+              <ValidationButton
+                onValidate={validationSettings.onValidate}
+                onStopValidation={validationSettings.onStopValidation}
+                isValidating={validationSettings.isValidating}
+                isValidateDisabled={validationSettings.isValidateDisabled}
+              />
+            </div>
           )}
           {bottomComponent && (
             <div className={moduleStyles.bottomComponent}>

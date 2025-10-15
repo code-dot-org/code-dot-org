@@ -21,7 +21,13 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {editableFileType, viewableImageFileType} from '../utils';
+import {
+  editableFileType,
+  enableUserAddedSelectionContext,
+  viewableImageFileType,
+} from '../utils';
+
+import {getAddToAiTutorField} from './addToAiTutorField';
 
 import moduleStyles from './styles/editor.module.scss';
 
@@ -48,8 +54,17 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   );
 
   const editorConfigExtensions = useMemo(() => {
+    const extensions: Extension[] = [];
+    if (
+      file?.name &&
+      enableUserAddedSelectionContext(levelProperties.appName, file?.url)
+    ) {
+      const addToAiTutorField = getAddToAiTutorField(file.name, dispatch);
+      extensions.push(addToAiTutorField);
+    }
+
     if (file?.language && langMapping[file.language]) {
-      const extensions: Extension[] = [langMapping[file.language]];
+      extensions.push(langMapping[file.language]);
       if (file.language === 'js') {
         // eslint configuration
         const config = {
@@ -74,12 +89,16 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
           })
         );
       }
-
-      return extensions;
-    } else {
-      return [];
     }
-  }, [file?.language, langMapping]);
+    return extensions;
+  }, [
+    dispatch,
+    file?.language,
+    file?.name,
+    file?.url,
+    langMapping,
+    levelProperties.appName,
+  ]);
 
   if (file?.url && viewableImageFileType(file.language)) {
     return (

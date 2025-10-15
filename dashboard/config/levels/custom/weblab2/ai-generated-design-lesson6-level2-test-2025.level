@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-14T21:26:28.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "long_instructions": "#Style Your Webpage to Match Your Brand Identity\r\n\r\nYour goal is to apply your brand’s colors and fonts to create a consistent, professional look across the entire page.\r\n\r\n\r\n:::details [*Don't have your own brand kit? You can use one of the following:*]\r\n- [Brand Kit 1](https://drive.google.com/file/d/1zP5Qf3FTBcnnlwH0029n1oq86OuGTRjG/view?usp=drive_link)\r\n- [Brand Kit 2](https://drive.google.com/file/d/1cXAC7aI2MidOgGQpDN71p19ybpG4JXV8/view?usp=drive_link)\r\n:::\r\n\r\n:::details [Helpful Steps]\r\n1. Generate the Initial Style\r\n2. Refine the Design\r\n3. Preview Your Work\r\n4. Save as Version 1\r\n:::",
+    "project_template_level_name": "ai-generated-design-lesson6-level2&3template-test-2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14T21:26:28.683+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level1-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level1-test-2025\"},{\"changed_at\":\"2025-10-14 21:26:36 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 22:22:44 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:37:39 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:42:13 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:42:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:42:50 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:55:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Weblab2>

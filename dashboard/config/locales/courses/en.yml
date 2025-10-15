@@ -6347,3 +6347,57 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        hoai-dance-pilot3:
+          title: hoai-dance-pilot3
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-pilot4:
+          title: hoai-dance-pilot4
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        dani-test:
+          title: dani-test
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        pilot5:
+          title: pilot5
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-5:
+          title: hoai-dance-5
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-hoai-pl:
+          title: sandbox-hoai-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-pilot-6:
+          title: hoai-pilot-6
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        artificial-intelligence-foundations-semester2-2025:
+          title: "[PILOT] AI Foundations Semester 2"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"
+        foundations-of-ai-programming-tutor-pilot-2025:
+          title: foundations-of-ai-programming-tutor-pilot-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

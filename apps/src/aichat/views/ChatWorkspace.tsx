@@ -2,11 +2,8 @@ import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesom
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo} from 'react';
 
-import {
-  isModelUpdate,
-  SystemPromptSettings,
-  WorkspaceTeacherViewTab,
-} from '@cdo/apps/aichat/types';
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
+import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -40,7 +37,6 @@ import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
 import UserAddedSelectionContextPreview from './assets/UserAddedSelectionContextPreview';
 import ChatEventsList from './ChatEventsList';
-import ChatModeDropdown from './ChatModeDropdown';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
@@ -58,8 +54,9 @@ interface ChatWorkspaceProps {
   levelName?: string;
   hasStarterAssets?: boolean;
 
-  // Options for changing system prompt (used in Web Lab 2)
-  systemPromptSettings?: SystemPromptSettings;
+  // Optional callback to process the model's response before it is recorded in chat
+  // history (useful for structured outputs).
+  responseCallback?: (response: string) => string;
 }
 
 /**
@@ -74,9 +71,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   levelName,
   channelId,
   hasStarterAssets = false,
-  systemPromptSettings,
   hideModelChangeMessage = false,
+  responseCallback,
 }) => {
+  const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
       'Multimodal support requires level name and channel ID. Multimodal features will not be available.'
@@ -270,6 +268,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
+  const uploadDisabled = !canChatWithModel || !!selectedStudent || chatDisabled;
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {selectedStudent ? (
@@ -286,10 +286,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
         <UserAddedSelectionContextPreview />
-        <ChatModeDropdown
-          className={moduleStyles.modeDropdown}
-          systemPromptSettings={systemPromptSettings}
-        />
         {canChatWithModel && (
           <UserChatMessageEditor
             clientType={clientType}
@@ -298,18 +294,19 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             chatButtons={chatButtons}
             hiddenContextCallback={hiddenContextCallback}
             multimodalAvailable={multimodalAvailable}
+            responseCallback={responseCallback}
           />
         )}
-        <div className={moduleStyles.buttonRow}>
-          {multimodalAvailable && (
+        {multimodalAvailable && (
+          <div className={moduleStyles.buttonRow}>
             <UploadButton
-              isDisabled={!canChatWithModel || !!selectedStudent}
+              isDisabled={uploadDisabled}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -54,9 +54,11 @@ class ExpiredDeletedAccountPiiScrubber
   def call
     reset_metrics
 
-    total_size = accounts_to_scrub.size
-    if total_size > limit
-      raise SafetyConstraintViolation, "Too many accounts to scrub: #{total_size} exceeds limit of #{limit}"
+    ActiveRecord::Base.connected_to(role: :reporting) do
+      total_size = accounts_to_scrub.size
+      if total_size > limit
+        raise SafetyConstraintViolation, "Too many accounts to scrub: #{total_size} exceeds limit of #{limit}"
+      end
     end
 
     # Process individual batches in a loop to avoid issues with find_each, which imposes

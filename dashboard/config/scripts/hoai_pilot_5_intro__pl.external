@@ -1,0 +1,14 @@
+name 'HoAI_pilot_5_intro_-pl'
+title 'Review'
+description 'description here'
+
+markdown <<MARKDOWN
+  <h1 style="text-align: center;">Mix and Move with AI! </h1>
+<h2 style="text-align: center;">Use AI to help you set up the ultimate party.</h2>
+<h3 style="text-align: center;">Generate a new dancer, a music remix and fresh moves.</h3>
+
+
+![](https://images.code.org/9f64b81644560da1f2b7e510801712da-image-1759904531209.png)
+MARKDOWN
+
+"First, team up with AI to create your own star dancer. Next, remix a track to set the vibe. Finally, code an original dance routine to bring your dancer and music to life!"
