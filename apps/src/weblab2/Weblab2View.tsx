@@ -145,8 +145,11 @@ const Weblab2View: React.FC<
             return jsonResponse.explanation;
           },
         };
-      } else {
-        console.log({copyCodeJsonSchema});
+      } else if (
+        experiments.isEnabledAllowingQueryString(
+          experiments.WEBLAB2_STRUCTURED_OUTPUT
+        )
+      ) {
         return {
           jsonSchema: copyCodeJsonSchema,
           responseCallback: (response: string) => {

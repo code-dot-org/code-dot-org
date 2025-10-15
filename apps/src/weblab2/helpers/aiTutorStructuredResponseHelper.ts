@@ -129,7 +129,6 @@ export const formatExplanationResponse = (response: any): string => {
     formattedResponse += `**Code**\n\n`;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     response.code.forEach((code: any) => {
-      console.log({code});
       formattedResponse += `\`${code.filename}\`\n\`\`\`\n${code.sourceCode}\n\`\`\`\n\n`;
     });
   }
@@ -145,6 +144,5 @@ export const formatExplanationResponse = (response: any): string => {
   if (response.questions) {
     formattedResponse += `**Questions**\n\n${response.questions}\n\n`;
   }
-  console.log({formattedResponse});
   return formattedResponse;
 };
