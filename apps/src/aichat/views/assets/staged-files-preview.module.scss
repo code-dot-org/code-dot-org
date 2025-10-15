@@ -108,6 +108,7 @@ $preview-image-size: 48px;
 .preview-image {
   @extend %preview;
   padding: 0;
+  background: var(--background-neutral-tertiary);
 
   img {
     height: $preview-image-size;
