@@ -25,6 +25,7 @@
     border-bottom: variables.$default-border;
   }
 
+  // Doubling class name to increase specificity and override default button styles.
   .collapseButton.collapseButton {
     height: 2rem;
     width: 2rem;

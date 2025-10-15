@@ -19,9 +19,7 @@ const INITIAL_OUTPUT_WIDTH = 400;
 const INITIAL_INFO_PANEL_WIDTH_COLLAPSED = 55;
 const INITIAL_OUTPUT_WIDTH_COLLAPSED = 600;
 
-const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
-  isProjectLevel,
-}) => {
+const VerticalLayout: React.FunctionComponent<LayoutProps> = () => {
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
@@ -79,13 +77,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   }, [setLeftPanelSize, isStandaloneCollapsed]);
 
   return (
-    <div
-      className={
-        isProjectLevel
-          ? moduleStyles.containerWithFooter
-          : moduleStyles.defaultContainer
-      }
-    >
+    <div className={moduleStyles.defaultContainer}>
       <div className={moduleStyles.layoutContainer}>
         <InfoPanel
           style={{width: leftPanelWidth}}
@@ -112,8 +104,6 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           setOutputWidth={setRightPanelSize}
         />
       </div>
-
-      {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>
   );
 };

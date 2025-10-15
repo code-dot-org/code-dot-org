@@ -22,7 +22,6 @@ const INITIAL_OUTPUT_HEIGHT = 300;
 const INITIAL_OUTPUT_HEIGHT_WIDGET = 800;
 
 const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
-  isProjectLevel,
   isWidgetView,
 }) => {
   const widgetViewShowCode = useAppSelector(
@@ -84,13 +83,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   }, [isStandaloneCollapsed, setLeftPanelSize]);
 
   return (
-    <div
-      className={
-        isProjectLevel
-          ? moduleStyles.containerWithFooter
-          : moduleStyles.defaultContainer
-      }
-    >
+    <div className={moduleStyles.defaultContainer}>
       <div className={moduleStyles.layoutContainer}>
         <InfoPanel
           style={{width: leftPanelWidth}}
@@ -128,7 +121,6 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
           />
         </div>
       </div>
-      {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>
   );
 };
