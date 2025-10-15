@@ -31,7 +31,7 @@ services:
       - yarncache:/home/ci/.cache
       - gcloud_config:/home/ci/.config/gcloud
     environment:
-      CI_JOB: 'unit_tests'
+      CI_JOB: 'ui_tests'
     env_file:
       - env.list
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
