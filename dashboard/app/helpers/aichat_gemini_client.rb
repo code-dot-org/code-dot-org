@@ -45,7 +45,8 @@ class AichatGeminiClient < AichatAiClient
         temperature: config[:temperature],
         responseMimeType: response_mime_type,
         responseJsonSchema: response_json_schema,
-        # Set thinking budget to 0 to disable "thinking".
+        # Thinking budget documentation: https://ai.google.dev/gemini-api/docs/thinking#set-budget
+        # Set to 1000 to give it some thinking tokens but still keep requests from timing out.
         thinkingConfig: {
           thinkingBudget: 1000
         }
