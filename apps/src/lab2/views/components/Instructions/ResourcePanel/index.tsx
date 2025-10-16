@@ -357,7 +357,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               We hide this button for standalone projects with no tabs, but the bottom buttons
               will still be available for users to access the settings panel, etc.
             */}
-            {isProjectLevel && Object.keys(availableTabs).length > 0 && (
+            {isProjectLevel && !hasNoTabs && (
               <WithTooltip
                 tooltipProps={{
                   text: isStandaloneCollapsed
