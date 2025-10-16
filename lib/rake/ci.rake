@@ -121,6 +121,9 @@ namespace :ci do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
+      parallel_count = use_saucelabs ? 16 : 8
+      ChatClient.log "Running UI tests with parallel count: #{parallel_count}"
+
       # Use --local to configure the UI tests to run against localhost and
       # use --config to override the local webdriver so SauceLabs is used
       # instead.
@@ -129,7 +132,7 @@ namespace :ci do
           "--local " \
           "--ci " \
           "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
-          "--parallel #{use_saucelabs ? 16 : 8} " \
+          "--parallel #{parallel_count} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
           "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
