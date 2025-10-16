@@ -3,6 +3,9 @@
   "script_names": [
     "fancygeometry-pilot"
   ],
+  "original_script_names": [
+    "fancygeometry-pilot"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

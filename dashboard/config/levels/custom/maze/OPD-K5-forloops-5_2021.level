@@ -21,7 +21,7 @@
     "ideal": "9",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[{\"localization_key\":\"courseF_bee_for4_1\",\"callout_text\":\"You will find the `for` loop in here!\",\"element_id\":\"[id=':3.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-2.label']\",\"localization_key\":\"courseF_bee_for4_1\",\"callout_text\":\"You will find the `for` loop in here!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
+    "callout_json": "[{\"localization_key\":\"courseF_bee_for4_1\",\"callout_text\":\"You will find the `for` loop in here!\",\"element_id\":\"[id=':3.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-3.label']\",\"localization_key\":\"courseF_bee_for4_1\",\"callout_text\":\"You will find the `for` loop in here!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

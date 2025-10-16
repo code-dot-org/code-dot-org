@@ -16,5 +16,6 @@
   "video": null,
   "published_date": "2025-01-27 06:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": null
 }

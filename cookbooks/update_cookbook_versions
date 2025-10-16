@@ -34,5 +34,7 @@ Chef::Config.chef_repo_path = Chef::Config.find_chef_repo_path(__dir__)
 Chef::LocalMode.with_server_connectivity do
   require 'chef/server_api'
   cookbooks = Chef::ServerAPI.new(Chef::Config[:chef_server_url]).get('/cookbooks')
-  cookbooks.each_key {|path| update_metadata path}
+  cookbooks.each_key do |path|
+    update_metadata(path) if path.start_with?('cdo-')
+  end
 end

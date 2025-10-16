@@ -1,0 +1,28 @@
+name 'ea-fac-csaif_pl_if-while-L9_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Understanding if vs. while and How They Work Together  
+
+#### Throughout this lesson, we've explored the key differences between if statements and while loops.
+
+- #### `if` statements check a condition once and execute the code if it's true.
+- #### `while` loops continue running as long as the condition remains true, making them useful for repeating actions.
+
+#### These two structures often work together in a program. For example, an `if` statement can check a condition inside a `while` loop to decide when to stop or when to adjust behavior.
+
+## Example: Working Together
+
+#### Imagine a Painter that keeps moving forward and painting until it runs out of paint. The while loop makes sure it has paint, and an if statement checks when it should stop:
+
+<img src="https://images.code.org/a6a6c77908b803c398b0d3dadb954d5f-image-1741636712323.png" alt="code with a while and if statement" width="350px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+
+
+
+
+
+MARKDOWN

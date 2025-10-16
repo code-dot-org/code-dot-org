@@ -85,7 +85,9 @@ const AccountType: React.FunctionComponent<{
           : '/users/sign_up/finish_student_account';
       navigateToHref(studio(finishSignupUrl));
     } else {
-      navigateToHref(studio('/users/sign_up/login_type'));
+      navigateToHref(
+        studio(`/users/sign_up/login_type?user_type=${accountType}`)
+      );
     }
   };
 

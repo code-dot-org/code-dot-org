@@ -33,7 +33,7 @@ markdown <<MARKDOWN
                 <img src="https://images.code.org/4c3ef8ef7dc7363dc0b8ed512ab3836a-image-1727209826025.png" alt="my_score=575" width="100%">
             </td>
             <td width="67%" style="font-size:14pt;">
-            When we want to create a variable, we write the <b>name</b> we want to use for the information we store.
+            When we want to create a variable, we write the <b>name</b> we want to use for the information we store. <br> <br>We use <b>snake_case,</b> a naming convention where all letters are lowercase and connected with an underscore.
             </td>
         </tr>
         <tr>
@@ -71,6 +71,6 @@ markdown <<MARKDOWN
 ##Let's try creating variables in Python Lab! 
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ The upcoming coding levels are from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+    ➡️ The upcoming coding levels are from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/aif2-2025/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
 </p>
 MARKDOWN

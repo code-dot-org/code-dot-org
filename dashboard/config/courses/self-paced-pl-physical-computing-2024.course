@@ -4,6 +4,10 @@
     "self-paced-pl-physical-computing1-2024",
     "self-paced-pl-physical-computing2-2024"
   ],
+  "original_script_names": [
+    "self-paced-pl-physical-computing1-2024",
+    "self-paced-pl-physical-computing2-2024"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

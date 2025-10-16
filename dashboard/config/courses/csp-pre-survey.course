@@ -3,6 +3,9 @@
   "script_names": [
     "csp-pre-survey"
   ],
+  "original_script_names": [
+    "csp-pre-survey"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -1,0 +1,59 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+// Testimonial common color
+.testimonial {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4rem 1.5rem;
+  margin: 0;
+
+  > * {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  blockquote {
+    margin-bottom: 2rem;
+
+    .testimonialQuoteIcon {
+      @include mixins.icon-dimensions(1.91rem, 1);
+      vertical-align: text-top;
+
+      &:first-child {
+        margin-inline-end: 0.5rem;
+      }
+
+      &:last-child {
+        margin-inline-start: 0.5rem;
+      }
+    }
+  }
+}
+
+// Testimonial background styles
+.testimonial-background {
+  &-dark {
+    background-color: var(--background-neutral-black-fixed);
+
+    .testimonialQuoteIcon {
+      color: var(--text-brand-teal-primary-fixed);
+    }
+  }
+
+  &-primary {
+    background-color: var(--brand-teal-50);
+  }
+}
+
+// Testimonial RTL direction styles
+[dir='rtl'] {
+  .testimonialQuoteIcon {
+    transform: scaleX(-1);
+  }
+}

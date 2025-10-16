@@ -7,7 +7,7 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
   end
 
   test 'PDF paths (and urls) are versioned' do
-    script = create(:script, seeded_from: Time.at(123_456_789))
+    script = create(:script, :in_single_unit_course, seeded_from: Time.at(123_456_789))
     lesson = create(:lesson, script: script)
     original_pathname = Services::CurriculumPdfs.get_lesson_plan_pathname(lesson)
     unmodified_pathname = Services::CurriculumPdfs.get_lesson_plan_pathname(lesson)
@@ -19,7 +19,7 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
   end
 
   test 'urls are escaped' do
-    script = create(:script, name: "test-escapes-script", seeded_from: Time.at(0))
+    script = create(:script, :in_single_unit_course, name: "test-escapes-script", seeded_from: Time.at(0))
     lesson = create(:lesson, script: script, name: "Some!name_with?special/characters")
     Services::CurriculumPdfs.expects(:lesson_plan_pdf_exists_for?).with(lesson, student_facing: false).returns(true)
     assert_equal Pathname.new("test-escapes-script/19700101000000/teacher-lesson-plans/Some-name_with-special-characters.pdf"),
@@ -29,7 +29,7 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
   end
 
   test 'pathnames are differentiated by audience' do
-    script = create(:script, name: "test-pathnames-script", seeded_from: Time.at(0))
+    script = create(:script, :in_single_unit_course, name: "test-pathnames-script", seeded_from: Time.at(0))
     lesson = create(:lesson, script: script, name: "test-pathnames-lesson")
     assert_equal Pathname.new("test-pathnames-script/19700101000000/teacher-lesson-plans/test-pathnames-lesson.pdf"),
       Services::CurriculumPdfs.get_lesson_plan_pathname(lesson)
@@ -38,7 +38,7 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
   end
 
   test 'Lesson PDFs are generated into the given directory' do
-    script = create(:script, seeded_from: Time.now)
+    script = create(:script, :in_single_unit_course, seeded_from: Time.now)
     lesson = create(:lesson, script: script)
     Dir.mktmpdir('curriculum_pdfs_test') do |tmpdir|
       assert Dir.glob(File.join(tmpdir, '**/*.pdf')).empty?
@@ -51,7 +51,7 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
   end
 
   test 'Student Lesson PDFs are generated into the given directory' do
-    script = create(:script, seeded_from: Time.now)
+    script = create(:script, :in_single_unit_course, seeded_from: Time.now)
     lesson = create(:lesson, script: script)
     Dir.mktmpdir('curriculum_pdfs_test') do |tmpdir|
       assert Dir.glob(File.join(tmpdir, '**/*.pdf')).empty?

@@ -28,9 +28,21 @@ async function loadPyodideAndPackages() {
     env: {
       HOME: `/${HOME_FOLDER}/`,
     },
+    // Remove all JS globals so Python can’t call browser APIs (like fetch) unless we
+    // explicitly add them.
+    jsglobals: {},
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
   pyodide.setStderr(getStreamHandlerOptions('syserr'));
+  // Freeze the module object and its properties
+  Object.freeze(pythonlabInputModule);
+  Object.defineProperty(pythonlabInputModule.getInput, 'constructor', {
+    writable: false,
+    configurable: false,
+    enumerable: false,
+  });
+  Object.freeze(pythonlabInputModule.getInput);
+
   pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
 
   // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
@@ -99,7 +111,9 @@ onmessage = async event => {
   }
   try {
     writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
+    postMessage({type: 'loading_packages'});
     await importPackagesFromFiles(sourceToWrite, pyodide);
+    postMessage({type: 'loaded_packages'});
     await patchInput(id);
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
@@ -130,7 +144,11 @@ onmessage = async event => {
   // https://pyodide.org/en/stable/usage/api/js-api.html#pyodide.ffi.PyProxy.toJs
   const resultsObject = results?.toJs();
   try {
-    postMessage({type: 'run_complete', message: resultsObject, id});
+    postMessage({
+      type: 'run_complete',
+      message: JSON.stringify(resultsObject),
+      id,
+    });
   } catch (e) {
     // Likely we hit a DataCloneError trying to send the resultsObject.
     // In this case, don't try to send the results object, as if it can't be
@@ -170,7 +188,7 @@ async function loadPackages() {
       'matplotlib',
       // These are custom packages that we have built. They are defined in the
       // python/pythonlab/ folder in the codebase.
-      `/blockly/js/pyodide/${version}/unittest_runner-0.2.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/neighborhood-0.4.0-py3-none-any.whl`,
     ],

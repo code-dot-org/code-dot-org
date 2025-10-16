@@ -11,19 +11,21 @@ Consider the following method, which implements a recursive binary search that r
 
 ```
 public static int bSearch(ArrayList<Integer> myList, int low, int high, int target) {
-  int mid = (high + low) / 2;
+  if (low > high) {
+    return -1;
+  }
+
+  int mid = (low + high) / 2;
 
   if (target < myList.get(mid)) {
-    return binarySearch(myList, low, mid - 1, target);
+    return bSearch(myList, low, mid - 1, target);
   }
   else if (target > myList.get(mid)) {
-    return binarySearch(myList, mid + 1, high, target);
+    return bSearch(myList, mid + 1, high, target);
   }
-  else if (myList.get(mid).equals(target)) {
+  else { // Equals
     return mid;
   }
-
-  return -1;
 }
 ```
 
@@ -42,23 +44,16 @@ Let's analyze the code to understand why:
 
 1. The method `bSearch` is called with the `ArrayList` `myList`, `low = 0`, `high = 9`, and `target = 55`.
 
-2. The variable `mid` is calculated as `(high + low) / 2`, which gives `(9 + 0) / 2 = 4`.
+2. The variable `mid` is calculated as `(low + high) / 2`, which gives `(0 + 9) / 2 = 4`.
 
-3. The first conditional statement checks if `target` is less than `myList.get(mid)`. In this case, `target` is `55` and `myList.get(mid)` is `3`. Since `55` is greater than `3`, the first conditional statement is not satisfied.
+3. The value at index 4 is `3`. Since `55 > 3`, the method recurses to the right half of `low = 5`, `high = 9`.
 
-4. The second conditional statement checks if `target` is greater than `myList.get(mid)`. In this case, `target` is `55` and `myList.get(mid)` is `3`. Since `55` is greater than `3`, the second conditional statement is satisfied.
+4. In the next call, `mid = (5 + 9) / 2 = 7`. The value at index 7 is `13`. Since `55 > 13`, recurse again with `low = 8`, `high = 9`.
 
-5. The second conditional statement makes a recursive call to `bSearch` with updated values: `myList`, `low = mid + 1`, `high = 9`, and `target = 55`.
+5. Next, `mid = (8 + 9) / 2 = 8`. The value at index 8 is `21`. Since `55 > 21`, recurse with `low = 9`, `high = 9`
 
-6. In the recursive call, the variable `mid` is calculated as `(high + low) / 2`, which gives `(9 + 5) / 2 = 7`.
+6. Now, `mid = (9 + 9) / 2 = 9`. The value at index 9 is `34`. Since `55 > 34`, recurse with `low = 10`, `high = 9`
 
-7. The first conditional statement is not satisfied, as `target` is still greater than `myList.get(mid)`.
+7. Now `low > high`, so the base case is reached, and the method returns `-1`. 
 
-8. The second conditional statement is not satisfied, as `target` is still greater than `myList.get(mid)`.
-
-9. The third conditional statement checks if `myList.get(mid)` equals `target`. In this case, `myList.get(mid)` is `13` and `target` is `55`. Since they are not equal, the third conditional statement is not satisfied.
-
-10. Since none of the conditional statements in the recursive call are satisfied, the method returns `-1`.
-
-Therefore, the value returned by the call `bSearch(inputList, 0, 9, 55)` is `-1`, indicating that the target value of `55` is not found in the `ArrayList` `inputList` between the elements at indices `0` and `9`.
 MARKDOWN

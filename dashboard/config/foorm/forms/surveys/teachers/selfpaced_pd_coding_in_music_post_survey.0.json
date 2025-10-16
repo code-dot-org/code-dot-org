@@ -1,0 +1,221 @@
+{
+  "title": "Teaching {module}: Post-module survey",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "variable_panel",
+          "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
+          "visible": "false",
+          "elements": [
+            {
+              "type": "text",
+              "name": "module",
+              "startWithNewLine": false,
+              "defaultValueExpression": "{module_name}",
+              "readOnly": true
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "intro",
+          "html": "<h1>Teaching {module} Self-paced Online Professional Learning</h1><h3><strong>Post-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Teaching {module}: Post-Module Survey</h2>"
+        },
+        {
+          "type": "html",
+          "name": "section1_goals",
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your experience with the Teaching {module} self-paced professional learning module.</span></p>\n"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "better_understanding_concepts"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_coding_music",
+          "visibleIf": "{module} = 'Coding in Music'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in exploring computer science concepts through music.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident",
+          "natalia_comment": "EDITED TO INCLUDE THE LEARNING OBJECTIVE(S) OF THE CURRICULUM: DONE"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_6_10_programming_music",
+          "visibleIf": "{module} = 'Programming in Music Lab for grades 6-10'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in exploring programming concepts through music.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident",
+          "natalia_comment": "EDITED TO INCLUDE THE LEARNING OBJECTIVE(S) OF THE CURRICULUM: DONE"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_6_10_music_terminology",
+          "visibleIf": "{module} = 'Programming in Music Lab for grades 6-10'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in learning and understanding the relevant musical terminology.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident",
+          "natalia_comment": "EDITED TO INCLUDE THE LEARNING OBJECTIVE(S) OF THE CURRICULUM: DONE"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "know_what_students_learn",
+          "natalia_comment": "INCLUDE ONLY if module is about one CURRICULUM (instead of one unit, if so use know_what_studentslearn_module instead)"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "comfort_ability_to_teach"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "plan_ongoing_assessment",
+          "natalia_comment": "INCLUDE ONLY if applicable per curriculum content"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "familiar_student_programming_environments"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "plan_to_teach",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "barriers_implementation_teaching_cs",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
+        },
+        {
+          "type": "matrix",
+          "name": "module_supported_learning",
+          "title": "How did each of the following support your learning?",
+          "description": "Rate how helpful was each option from Not helpful (1) to Very helpful (7).",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1 - Not"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7 - Very"
+            }
+          ],
+          "rows": [
+            {
+              "value": "reading",
+              "text": "Reading a page that contained text and images about a topic."
+            },
+            {
+              "value": "task_in_platform",
+              "text": "Trying a task or activity in the Code.org platform."
+            },
+            {
+              "value": "making_a_plan_for_teaching",
+              "text": "Making a plan for teaching {module}."
+            },
+            {
+              "value": "reflections",
+              "text": "Writing reflections on experiences and teaching practices."
+            },
+            {
+              "value": "video_content",
+              "text": "Engaging with video content."
+            }
+          ]
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "module_navigation"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "how_long_to_complete_module"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "nps_self_paced_pd"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "pl_to_support_growth_teacher_cs"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "self_paced_pl_other_feedback"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "permission_to_quote"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "focus_group_panel"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "thank_you_heading"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

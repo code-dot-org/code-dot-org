@@ -1,0 +1,2090 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-csd-unit4-1-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - CSD",
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "tts": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-16 20:08:33 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-csd-unit4-1-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to The Design Process",
+      "name": "Introduction to The Design Process",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to code.org's Design Process unit.\n* Preview the first week of the Design Process unit content.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Design Process unit.\n* Preview the first week of the Design Process unit content.\n\n**Suggested time:** 15 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025"
+      }
+    },
+    {
+      "key": "Use a Paper Prototype",
+      "name": "Use a Paper Prototype",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n* Review the first end-of-chapter project for Chapter 1.\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n* Review the first end-of-chapter project for Chapter 1.\n\n**Suggested time:** 35 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025"
+      }
+    },
+    {
+      "key": "Build a Digital Prototype in App Lab",
+      "name": "Build a Digital Prototype in App Lab",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Use design mode in App Lab to create a digital prototype.\n*  Create events that detect and respond to user input.\n\n**Suggested time:** 50 minutes",
+        "student_overview": "**You will:**\n\n* Use design mode in App Lab to create a digital prototype.\n*  Create events that detect and respond to user input.\n\n**Suggested time:** 50 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025"
+      }
+    },
+    {
+      "key": "Unit Wrap Up",
+      "name": "Unit Wrap Up",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**You will:**\n\n* Explore the end-of-chapter project.\n* Wrap up your learning.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Explore the end-of-chapter project.\n* Wrap up your learning.\n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "70030156-ff3d-444f-8063-895f98c7e881",
+      "position": 1,
+      "properties": {
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "70030156-ff3d-444f-8063-895f98c7e881",
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025"
+      }
+    },
+    {
+      "key": "521ebb26-d522-4124-bba8-798a19cfd0f1",
+      "position": 1,
+      "properties": {
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "521ebb26-d522-4124-bba8-798a19cfd0f1",
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025"
+      }
+    },
+    {
+      "key": "1cc51a2c-2eba-4dd1-9490-a5594b7ad419",
+      "position": 1,
+      "properties": {
+        "duration": 50
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1cc51a2c-2eba-4dd1-9490-a5594b7ad419",
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025"
+      }
+    },
+    {
+      "key": "087adf3d-a49f-4625-89dc-1c54ba5dbac3",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "087adf3d-a49f-4625-89dc-1c54ba5dbac3",
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "3c3439e1-b254-46cd-8d3c-0ed1428c6203",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c3439e1-b254-46cd-8d3c-0ed1428c6203",
+        "lesson_activity.key": "70030156-ff3d-444f-8063-895f98c7e881"
+      }
+    },
+    {
+      "key": "127fc0c5-cf2f-4802-8270-40fa1466e899",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "127fc0c5-cf2f-4802-8270-40fa1466e899",
+        "lesson_activity.key": "70030156-ff3d-444f-8063-895f98c7e881"
+      }
+    },
+    {
+      "key": "2d0fdb49-3847-4e83-afc5-1615c3422293",
+      "position": 3,
+      "properties": {
+        "progression_name": "Learning tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d0fdb49-3847-4e83-afc5-1615c3422293",
+        "lesson_activity.key": "70030156-ff3d-444f-8063-895f98c7e881"
+      }
+    },
+    {
+      "key": "d1955a80-132c-49f2-8cc1-24bcc99ddd09",
+      "position": 4,
+      "properties": {
+        "progression_name": "Explore the first week of curriculum"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1955a80-132c-49f2-8cc1-24bcc99ddd09",
+        "lesson_activity.key": "70030156-ff3d-444f-8063-895f98c7e881"
+      }
+    },
+    {
+      "key": "8b85836c-dbc5-4916-b4a6-46d495d01ee5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b85836c-dbc5-4916-b4a6-46d495d01ee5",
+        "lesson_activity.key": "521ebb26-d522-4124-bba8-798a19cfd0f1"
+      }
+    },
+    {
+      "key": "5d47514c-aab2-436f-bbfc-b16ace689d79",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is a Paper Prototype?"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d47514c-aab2-436f-bbfc-b16ace689d79",
+        "lesson_activity.key": "521ebb26-d522-4124-bba8-798a19cfd0f1"
+      }
+    },
+    {
+      "key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Use a Paper Prototype to Test an App"
+      },
+      "seeding_key": {
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f",
+        "lesson_activity.key": "521ebb26-d522-4124-bba8-798a19cfd0f1"
+      }
+    },
+    {
+      "key": "1e177f03-f59a-49f4-b3f3-8bf333444088",
+      "position": 4,
+      "properties": {
+        "progression_name": "Chapter 1 Project - Paper Prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e177f03-f59a-49f4-b3f3-8bf333444088",
+        "lesson_activity.key": "521ebb26-d522-4124-bba8-798a19cfd0f1"
+      }
+    },
+    {
+      "key": "d0a5f974-8e8c-4d1c-91a2-5301230af7b7",
+      "position": 5,
+      "properties": {
+        "progression_name": "Section Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0a5f974-8e8c-4d1c-91a2-5301230af7b7",
+        "lesson_activity.key": "521ebb26-d522-4124-bba8-798a19cfd0f1"
+      }
+    },
+    {
+      "key": "849cac88-c2b2-4f6c-8d87-a1c0eee7f446",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "849cac88-c2b2-4f6c-8d87-a1c0eee7f446",
+        "lesson_activity.key": "1cc51a2c-2eba-4dd1-9490-a5594b7ad419"
+      }
+    },
+    {
+      "key": "cca759f2-5b1c-4df9-842c-6dcc014479f9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Preparing to Build a Digital Prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9",
+        "lesson_activity.key": "1cc51a2c-2eba-4dd1-9490-a5594b7ad419"
+      }
+    },
+    {
+      "key": "46726306-509d-49cf-86e0-a05f585d4cd4",
+      "position": 3,
+      "properties": {
+        "progression_name": "Design a Digital Prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4",
+        "lesson_activity.key": "1cc51a2c-2eba-4dd1-9490-a5594b7ad419"
+      }
+    },
+    {
+      "key": "e0cbe78a-7d47-4618-9a79-4c0d94369726",
+      "position": 4,
+      "properties": {
+        "progression_name": "Add Events to Your Digital Prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726",
+        "lesson_activity.key": "1cc51a2c-2eba-4dd1-9490-a5594b7ad419"
+      }
+    },
+    {
+      "key": "9e2c0e8b-b870-46e3-8b56-11d8608945d0",
+      "position": 5,
+      "properties": {
+        "progression_name": "Section Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e2c0e8b-b870-46e3-8b56-11d8608945d0",
+        "lesson_activity.key": "1cc51a2c-2eba-4dd1-9490-a5594b7ad419"
+      }
+    },
+    {
+      "key": "0407c8da-9e22-4d3a-bd7a-3a6f1a5b1547",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "0407c8da-9e22-4d3a-bd7a-3a6f1a5b1547",
+        "lesson_activity.key": "087adf3d-a49f-4625-89dc-1c54ba5dbac3"
+      }
+    },
+    {
+      "key": "d408374a-4bbb-4f1f-bff7-c8e2e023c9ee",
+      "position": 2,
+      "properties": {
+        "progression_name": "End-of-Unit Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "d408374a-4bbb-4f1f-bff7-c8e2e023c9ee",
+        "lesson_activity.key": "087adf3d-a49f-4625-89dc-1c54ba5dbac3"
+      }
+    },
+    {
+      "key": "2169fc74-fc1b-4207-976e-685770ac6b33",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "2169fc74-fc1b-4207-976e-685770ac6b33",
+        "lesson_activity.key": "087adf3d-a49f-4625-89dc-1c54ba5dbac3"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U4_self-paced-4_25_2025"
+        ],
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U4_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "3c3439e1-b254-46cd-8d3c-0ed1428c6203"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-U4_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit4_25_2025"
+        ],
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "3c3439e1-b254-46cd-8d3c-0ed1428c6203"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit4_25_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U4SelfPaced-Lesson1Cert_CSD-PL-24_may2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "3c3439e1-b254-46cd-8d3c-0ed1428c6203"
+      },
+      "level_keys": [
+        "CSD-U4SelfPaced-Lesson1Cert_CSD-PL-24_may2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "3c3439e1-b254-46cd-8d3c-0ed1428c6203"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2_self-paced-4_25_2025"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "127fc0c5-cf2f-4802-8270-40fa1466e899"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U4_self-paced-4_25_2025"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U4_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "127fc0c5-cf2f-4802-8270-40fa1466e899"
+      },
+      "level_keys": [
+        "VPL-CI-LessonTypes-U4_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-Project Overview_self-paced-unit4_25_2025"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Project Overview_self-paced-unit4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "127fc0c5-cf2f-4802-8270-40fa1466e899"
+      },
+      "level_keys": [
+        "VPL-CSD-Project Overview_self-paced-unit4_25_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3_self-paced-4_25_2025"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "127fc0c5-cf2f-4802-8270-40fa1466e899"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U4_self-paced-4_25_2025"
+        ],
+        "progression": "Learning tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U4_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "2d0fdb49-3847-4e83-afc5-1615c3422293"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_tools-U4_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U4L5_self-paced-4_25_2025"
+        ],
+        "progression": "Explore the first week of curriculum"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U4L5_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "d1955a80-132c-49f2-8cc1-24bcc99ddd09"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-U4L5_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson2-overview_self-paced-4_25_2025"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson2-overview_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "8b85836c-dbc5-4916-b4a6-46d495d01ee5"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod4-lesson2-overview_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-PrototypeExamples_self-paced-4_25_2025"
+        ],
+        "progression": "What is a Paper Prototype?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-PrototypeExamples_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "5d47514c-aab2-436f-bbfc-b16ace689d79"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-mod4-PrototypeExamples_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-CSDPL_mod4-prototype-C4U_self-paced-unit4_25_2025"
+        ],
+        "progression": "What is a Paper Prototype?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-CSDPL_mod4-prototype-C4U_self-paced-unit4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "5d47514c-aab2-436f-bbfc-b16ace689d79"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-CSDPL_mod4-prototype-C4U_self-paced-unit4_25_2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototypeOverview_self-paced-4_25_2025"
+        ],
+        "progression": "Use a Paper Prototype to Test an App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototypeOverview_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-mod4-prototypeOverview_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-computer_self-paced-4_25_2025"
+        ],
+        "progression": "Use a Paper Prototype to Test an App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-computer_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-mod4-prototype-computer_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-testing_self-paced-4_25_2025"
+        ],
+        "progression": "Use a Paper Prototype to Test an App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-testing_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-mod4-prototype-testing_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_25_2025"
+        ],
+        "progression": "Use a Paper Prototype to Test an App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_25_2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-imporvements_self-paced-4_25_2025"
+        ],
+        "progression": "Use a Paper Prototype to Test an App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-imporvements_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-mod4-prototype-imporvements_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-Unit4SelfPaced_Lesson-7_25_2025"
+        ],
+        "progression": "Chapter 1 Project - Paper Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Unit4SelfPaced_Lesson-7_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "1e177f03-f59a-49f4-b3f3-8bf333444088"
+      },
+      "level_keys": [
+        "VPL-CSD-Unit4SelfPaced_Lesson-7_25_2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-U4SelfPaced_Project Video_25_2025"
+        ],
+        "progression": "Chapter 1 Project - Paper Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U4SelfPaced_Project Video_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "1e177f03-f59a-49f4-b3f3-8bf333444088"
+      },
+      "level_keys": [
+        "VPL-CSD-U4SelfPaced_Project Video_25_2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-U4SelfPaced-Chapter1Matching_25_2025"
+        ],
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U4SelfPaced-Chapter1Matching_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "d0a5f974-8e8c-4d1c-91a2-5301230af7b7"
+      },
+      "level_keys": [
+        "VPL-CSD-U4SelfPaced-Chapter1Matching_25_2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD_U4SelfPaced_Lesson2WrapUp_25_2025"
+        ],
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD_U4SelfPaced_Lesson2WrapUp_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "d0a5f974-8e8c-4d1c-91a2-5301230af7b7"
+      },
+      "level_keys": [
+        "VPL-CSD_U4SelfPaced_Lesson2WrapUp_25_2025"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview_self-paced-4_25_2025"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "849cac88-c2b2-4f6c-8d87-a1c0eee7f446"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned_self-paced-4__2025"
+        ],
+        "progression": "Preparing to Build a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned_self-paced-4__2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned_self-paced-4__2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-testi_self-pa_2025"
+        ],
+        "progression": "Preparing to Build a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-testi_self-pa_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-testi_self-pa_2025"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd-explore ui-2_25_2025"
+        ],
+        "progression": "Preparing to Build a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd-explore ui-2_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-csd-explore ui-2_25_2025"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-uiElements-c4u-matching_self-paced-4_25_2025"
+        ],
+        "progression": "Preparing to Build a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-uiElements-c4u-matching_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-uiElements-c4u-matching_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-Namin_self-pa_2025"
+        ],
+        "progression": "Preparing to Build a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-Namin_self-pa_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-Namin_self-pa_2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-track_self-pa_2025"
+        ],
+        "progression": "Preparing to Build a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-track_self-pa_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-track_self-pa_2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_25_2025"
+        ],
+        "progression": "Design a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_25_2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_25_2025"
+        ],
+        "progression": "Design a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_25_2025"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_25_2025"
+        ],
+        "progression": "Design a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_25_2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_25_2025"
+        ],
+        "progression": "Design a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_25_2025"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_25_2025"
+        ],
+        "progression": "Design a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_25_2025"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 13,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_25_2025"
+        ],
+        "progression": "Design a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_25_2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 14,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_25_2025"
+        ],
+        "progression": "Design a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_25_2025"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Events Video_25_2025"
+        ],
+        "progression": "Add Events to Your Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Events Video_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Events Video_25_2025"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 16,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_25_2025"
+        ],
+        "progression": "Add Events to Your Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_25_2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 17,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_25_2025"
+        ],
+        "progression": "Add Events to Your Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_25_2025"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 18,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_25_2025"
+        ],
+        "progression": "Add Events to Your Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_25_2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 19,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_25_2025"
+        ],
+        "progression": "Add Events to Your Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_25_2025"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD_U4SelfPaced_Lesson3WrapUp_25_2025"
+        ],
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD_U4SelfPaced_Lesson3WrapUp_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "9e2c0e8b-b870-46e3-8b56-11d8608945d0"
+      },
+      "level_keys": [
+        "VPL-CSD_U4SelfPaced_Lesson3WrapUp_25_2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview--U4L5_self-paced-4_25_2025"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview--U4L5_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "0407c8da-9e22-4d3a-bd7a-3a6f1a5b1547"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview--U4L5_self-paced-4_25_2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-C2-Chapter2-ProjectOverview-U4L5C2_self-paced-4_2025"
+        ],
+        "progression": "End-of-Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-C2-Chapter2-ProjectOverview-U4L5C2_self-paced-4_2025"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "d408374a-4bbb-4f1f-bff7-c8e2e023c9ee"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-C2-Chapter2-ProjectOverview-U4L5C2_self-paced-4_2025"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-U4SelfPaced_EndofUnitProjectVideo_25_2025"
+        ],
+        "progression": "End-of-Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U4SelfPaced_EndofUnitProjectVideo_25_2025"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "d408374a-4bbb-4f1f-bff7-c8e2e023c9ee"
+      },
+      "level_keys": [
+        "VPL-CSD-U4SelfPaced_EndofUnitProjectVideo_25_2025"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_self-paced-4_25_2025"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "2169fc74-fc1b-4207-976e-685770ac6b33"
+      },
+      "level_keys": [
+        "-VPL-CSD-PILOT-summer22-navigation_self-paced-4_25_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-U4_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U4_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "3c3439e1-b254-46cd-8d3c-0ed1428c6203"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "3c3439e1-b254-46cd-8d3c-0ed1428c6203"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U4SelfPaced-Lesson1Cert_CSD-PL-24_may2025",
+        "script_level.level_keys": [
+          "CSD-U4SelfPaced-Lesson1Cert_CSD-PL-24_may2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "3c3439e1-b254-46cd-8d3c-0ed1428c6203"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "3c3439e1-b254-46cd-8d3c-0ed1428c6203"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "127fc0c5-cf2f-4802-8270-40fa1466e899"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CI-LessonTypes-U4_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U4_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "127fc0c5-cf2f-4802-8270-40fa1466e899"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Project Overview_self-paced-unit4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-Project Overview_self-paced-unit4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "127fc0c5-cf2f-4802-8270-40fa1466e899"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "127fc0c5-cf2f-4802-8270-40fa1466e899"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_tools-U4_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U4_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "2d0fdb49-3847-4e83-afc5-1615c3422293"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-U4L5_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U4L5_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Introduction to The Design Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "d1955a80-132c-49f2-8cc1-24bcc99ddd09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod4-lesson2-overview_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson2-overview_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "8b85836c-dbc5-4916-b4a6-46d495d01ee5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-mod4-PrototypeExamples_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-PrototypeExamples_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "5d47514c-aab2-436f-bbfc-b16ace689d79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-CSDPL_mod4-prototype-C4U_self-paced-unit4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-CSDPL_mod4-prototype-C4U_self-paced-unit4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "5d47514c-aab2-436f-bbfc-b16ace689d79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-mod4-prototypeOverview_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototypeOverview_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-mod4-prototype-computer_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-computer_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-mod4-prototype-testing_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-testing_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-mod4-prototype-imporvements_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-imporvements_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "54928ba1-1567-401a-a6f1-54b3ee2bf95f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Unit4SelfPaced_Lesson-7_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-Unit4SelfPaced_Lesson-7_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "1e177f03-f59a-49f4-b3f3-8bf333444088"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U4SelfPaced_Project Video_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-U4SelfPaced_Project Video_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "1e177f03-f59a-49f4-b3f3-8bf333444088"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U4SelfPaced-Chapter1Matching_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-U4SelfPaced-Chapter1Matching_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "d0a5f974-8e8c-4d1c-91a2-5301230af7b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD_U4SelfPaced_Lesson2WrapUp_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD_U4SelfPaced_Lesson2WrapUp_25_2025"
+        ],
+        "lesson.key": "Use a Paper Prototype",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "d0a5f974-8e8c-4d1c-91a2-5301230af7b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "849cac88-c2b2-4f6c-8d87-a1c0eee7f446"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned_self-paced-4__2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned_self-paced-4__2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-testi_self-pa_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-testi_self-pa_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-csd-explore ui-2_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd-explore ui-2_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-uiElements-c4u-matching_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-uiElements-c4u-matching_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-Namin_self-pa_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-Namin_self-pa_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-track_self-pa_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-track_self-pa_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "cca759f2-5b1c-4df9-842c-6dcc014479f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "46726306-509d-49cf-86e0-a05f585d4cd4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Events Video_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Events Video_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "e0cbe78a-7d47-4618-9a79-4c0d94369726"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD_U4SelfPaced_Lesson3WrapUp_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD_U4SelfPaced_Lesson3WrapUp_25_2025"
+        ],
+        "lesson.key": "Build a Digital Prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "9e2c0e8b-b870-46e3-8b56-11d8608945d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview--U4L5_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview--U4L5_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "0407c8da-9e22-4d3a-bd7a-3a6f1a5b1547"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-C2-Chapter2-ProjectOverview-U4L5C2_self-paced-4_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-C2-Chapter2-ProjectOverview-U4L5C2_self-paced-4_2025"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "d408374a-4bbb-4f1f-bff7-c8e2e023c9ee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U4SelfPaced_EndofUnitProjectVideo_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-U4SelfPaced_EndofUnitProjectVideo_25_2025"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "d408374a-4bbb-4f1f-bff7-c8e2e023c9ee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "-VPL-CSD-PILOT-summer22-navigation_self-paced-4_25_2025",
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_self-paced-4_25_2025"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit4-1-2025",
+        "activity_section.key": "2169fc74-fc1b-4207-976e-685770ac6b33"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

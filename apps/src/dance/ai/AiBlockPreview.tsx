@@ -32,7 +32,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
     workspaceRef.current = Blockly.createEmbeddedWorkspace(
       blockPreviewContainerRef.current,
       blocks,
-      {rtl: isRtl}
+      {rtl: isRtl, theme: Blockly.getMainWorkspace().getTheme()}
     );
 
     return () => {

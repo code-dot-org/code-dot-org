@@ -49,19 +49,26 @@ const TEST_WORKSHOP_SESSIONS = [
     id: 1,
     start: '2025-01-23 09:00:00',
     end: '2025-01-23 14:00:00',
+    is_local: false,
   },
   {
     id: 2,
     start: '2025-01-24 09:00:00',
     end: '2025-01-24 14:00:00',
+    is_local: false,
   },
 ];
+
+const EXPECTED_DESCRIPTION_AND_NOTES =
+  'example.zoom.com\n\nAttendee notes:\nPark in the back\n\nDescription:\nReally great workshop';
+
+const EXPECTED_OUTLOOK_DESCRIPTION_AND_NOTES =
+  EXPECTED_DESCRIPTION_AND_NOTES.replace(/\n/g, '<br>');
 
 const DEFAULT_PROPS = {
   lastWorkshopSurveyUrl: 'url',
   lastWorkshopSurveyCourse: 'CS Fundamentals',
   showDeeperLearning: true,
-  currentYearApplicationId: 2024,
   hasEnrorolledInWorkshop: true,
   plCoursesStarted: selfPacedCourseConstants,
   userPermissions: [],
@@ -73,17 +80,21 @@ const DEFAULT_PROPS = {
 };
 
 describe('LandingPage', () => {
+  let fetchStub;
   let store;
   let defaultCreateObjectURL;
   let blobContentPromise;
   let workshopTitle = 'New Workshop';
-  let workshopLocation = '123 Main St';
 
   beforeAll(() => {
     defaultCreateObjectURL = window.URL.createObjectURL;
   });
 
   beforeEach(() => {
+    fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve([TEST_WORKSHOP]),
+    });
     let mockCreateObjectUrl = jest.fn().mockImplementation(blob => {
       blobContentPromise = new Promise(res => {
         const fileReader = new FileReader();
@@ -114,12 +125,11 @@ describe('LandingPage', () => {
     );
   }
 
-  it('page shows a getting started banner for a new teacher without an existing application, upcoming workshop, self-paced courses, or pl course', () => {
+  it('page shows a getting started banner for a new teacher without an upcoming workshop, self-paced courses, or pl course', async () => {
     renderDefault({
       lastWorkshopSurveyUrl: null,
       lastWorkshopSurveyCourse: null,
       deeperLearningCourseData: null,
-      currentYearApplicationId: null,
       hasEnrolledInWorkshop: false,
       plCoursesStarted: [],
     });
@@ -152,11 +162,6 @@ describe('LandingPage', () => {
   });
 
   it('page shows upcoming workshops, self-paced courses, and plc enrollments but no survey banner if no pending survey exists', async () => {
-    const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
-      ok: true,
-      json: () => Promise.resolve([TEST_WORKSHOP]),
-    });
-
     renderDefault({
       lastWorkshopSurveyUrl: null,
       lastWorkshopSurveyCourse: null,
@@ -406,7 +411,6 @@ describe('LandingPage', () => {
     fireEvent.click(screen.getByText(i18n.plLandingTabRPCenter()));
 
     // Regional Partner resource center
-    screen.getByText(i18n.plSectionsRegionalPartnerApplicationTitle());
     screen.getByText(i18n.plSectionsWorkshopTitle());
     screen.getByText(i18n.plSectionsRegionalPartnerPlaybookTitle());
 
@@ -499,10 +503,8 @@ describe('LandingPage', () => {
 
   it('enroll success dialog shows buttons with links to add session to calendar for workshops with one session', () => {
     const workshopCourse = 'TEST COURSE';
-    const workshopLocation = 'Seattle, WA';
     const workshopSession = TEST_WORKSHOP_SESSIONS[0];
     sessionStorage.setItem('workshopCourse', workshopCourse);
-    sessionStorage.setItem('workshopLocation', workshopLocation);
     sessionStorage.setItem(
       'sessionTimeInfo',
       JSON.stringify([workshopSession])
@@ -519,8 +521,7 @@ describe('LandingPage', () => {
     // Add to Apple calendar button has expected download .ics file link
     const expectedAppleCalendarDownloadLink = buildAppleCalendarLink(
       [workshopSession],
-      workshopCourse,
-      workshopLocation
+      workshopCourse
     );
     fireEvent.click(
       screen.getByLabelText(
@@ -539,8 +540,7 @@ describe('LandingPage', () => {
     // Add to Google calendar button has expected link to add event to calendar
     const expectedGoogleCalendarLink = buildGoogleCalendarLink(
       workshopSession,
-      workshopCourse,
-      workshopLocation
+      workshopCourse
     );
     fireEvent.click(
       screen.getByLabelText(
@@ -559,8 +559,7 @@ describe('LandingPage', () => {
     // Add to Outlook calendar button has expected link to add event to calendar
     const expectedOutlookCalendarLink = buildOutlookCalendarLink(
       workshopSession,
-      workshopCourse,
-      workshopLocation
+      workshopCourse
     );
     fireEvent.click(
       screen.getByLabelText(
@@ -586,9 +585,7 @@ describe('LandingPage', () => {
 
   it('enroll success dialog shows buttons that open dialog to add multiple sessions to calendar for workshops with multiple sessions', () => {
     const workshopCourse = 'TEST COURSE';
-    const workshopLocation = 'Seattle, WA';
     sessionStorage.setItem('workshopCourse', workshopCourse);
-    sessionStorage.setItem('workshopLocation', workshopLocation);
     sessionStorage.setItem(
       'sessionTimeInfo',
       JSON.stringify(TEST_WORKSHOP_SESSIONS)
@@ -609,8 +606,7 @@ describe('LandingPage', () => {
     // Apple calendar button is link to download .ics file with multiple sessions
     const expectedAppleCalendarDownloadLink = buildAppleCalendarLink(
       TEST_WORKSHOP_SESSIONS,
-      workshopCourse,
-      workshopLocation
+      workshopCourse
     );
     fireEvent.click(
       screen.getByLabelText(
@@ -638,8 +634,7 @@ describe('LandingPage', () => {
     googleCalendarButtonLinks.forEach((googleCalendarButton, index) => {
       const expectedGoogleButtonLink = buildGoogleCalendarLink(
         TEST_WORKSHOP_SESSIONS[index],
-        workshopCourse,
-        workshopLocation
+        workshopCourse
       );
       fireEvent.click(googleCalendarButton);
       expect(window.open).toHaveBeenCalledWith(
@@ -667,8 +662,7 @@ describe('LandingPage', () => {
     outlookCalendarButtonLinks.forEach((outlookCalendarButton, index) => {
       const expectedOutlookButtonLink = buildOutlookCalendarLink(
         TEST_WORKSHOP_SESSIONS[index],
-        workshopCourse,
-        workshopLocation
+        workshopCourse
       );
       fireEvent.click(outlookCalendarButton);
       expect(window.open).toHaveBeenCalledWith(
@@ -692,57 +686,142 @@ describe('LandingPage', () => {
   });
 
   describe('buildGoogleCalendarLink', () => {
-    test('creates link with UTC datetime when session is not local', () => {
+    it('creates link with UTC datetime when session is not local', () => {
       const session = {
         start: '2025-02-11T16:00:00Z', // 9 AM MST
         end: '2025-02-12T00:00:00Z', // 5 PM MST
         is_local: false,
       };
 
-      const result = buildGoogleCalendarLink(
-        session,
-        workshopTitle,
-        workshopLocation
-      );
+      const result = buildGoogleCalendarLink(session, workshopTitle);
 
       expect(result).toContain(
         `dates=${encodeURIComponent('20250211T160000Z/20250212T000000Z')}`
       );
     });
 
-    test('creates a link with local time for legacy sessions', () => {
+    it('creates a link with local time for legacy sessions', () => {
       const session = {
         start: '2025-02-11T09:00:00Z',
         end: '2025-02-11T17:00:00Z',
         is_local: true,
       };
 
-      const result = buildGoogleCalendarLink(
-        session,
-        workshopTitle,
-        workshopLocation
-      );
+      const result = buildGoogleCalendarLink(session, workshopTitle);
 
       // datetime params do not have trailing 'Z' indicating user's local time
       expect(result).toContain(
         `dates=${encodeURIComponent('20250211T090000/20250211T170000')}`
       );
     });
+
+    it('creates a link with notes and description', () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        meeting_link: 'example.zoom.com',
+        session_format: 'virtual',
+        description: 'Really great workshop',
+        notes: 'Park in the back',
+      };
+
+      const result = buildGoogleCalendarLink(session, workshopTitle);
+
+      expect(result).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          details: EXPECTED_DESCRIPTION_AND_NOTES,
+        }).toString()
+      );
+    });
+
+    it('creates a link with meeting link for virtual sessions', () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        meeting_link: 'example.zoom.com',
+        session_format: 'virtual',
+      };
+
+      const result = buildGoogleCalendarLink(session, workshopTitle);
+
+      expect(result).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          location: 'Virtual meeting: example.zoom.com',
+        }).toString()
+      );
+      expect(result).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          details: 'example.zoom.com',
+        }).toString()
+      );
+    });
+
+    it('creates a link with full location info for in person sessions', () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        location_name: 'The ritz carlton',
+        location_address: '123 Main St, Denver, CO, 12345',
+        session_format: 'in_person',
+      };
+
+      const result = buildGoogleCalendarLink(session, workshopTitle);
+
+      expect(result).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          location: 'The ritz carlton, 123 Main St, Denver, CO, 12345',
+        }).toString()
+      );
+    });
+
+    it('creates a link with partial location info for in person sessions', () => {
+      const session1 = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        location_address: '123 Main St, Denver, CO, 12345',
+        session_format: 'in_person',
+      };
+
+      const result1 = buildGoogleCalendarLink(session1, workshopTitle);
+
+      expect(result1).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          location: '123 Main St, Denver, CO, 12345',
+        }).toString()
+      );
+
+      const session2 = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        location_name: 'The ritz carlton',
+        session_format: 'in_person',
+      };
+
+      const result2 = buildGoogleCalendarLink(session2, workshopTitle);
+
+      expect(result2).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          location: 'The ritz carlton',
+        }).toString()
+      );
+    });
   });
 
   describe('buildOutlookCalendarLink', () => {
-    test('creates link with UTC datetime when session is not local', () => {
+    it('creates link with UTC datetime when session is not local', () => {
       const session = {
         start: '2025-02-11T16:00:00Z',
         end: '2025-02-12T00:00:00Z',
         is_local: false,
       };
 
-      const link = buildOutlookCalendarLink(
-        session,
-        workshopTitle,
-        workshopLocation
-      );
+      const link = buildOutlookCalendarLink(session, workshopTitle);
 
       expect(link).toContain(
         `startdt=${encodeURIComponent('2025-02-11T16:00:00Z')}`
@@ -752,18 +831,14 @@ describe('LandingPage', () => {
       );
     });
 
-    test('creates a link with local time for legacy sessions', () => {
+    it('creates a link with local time for legacy sessions', () => {
       const session = {
         start: '2025-02-11T09:00:00Z',
         end: '2025-02-11T17:00:00Z',
         is_local: true,
       };
 
-      const link = buildOutlookCalendarLink(
-        session,
-        workshopTitle,
-        workshopLocation
-      );
+      const link = buildOutlookCalendarLink(session, workshopTitle);
 
       // datetime params do not have trailing 'Z' indicating user's local time
       expect(link).toContain(
@@ -771,6 +846,103 @@ describe('LandingPage', () => {
       );
       expect(link).toContain(
         `enddt=${encodeURIComponent('2025-02-11T17:00:00')}`
+      );
+    });
+
+    it('creates a link with notes and description', () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        meeting_link: 'example.zoom.com',
+        session_format: 'virtual',
+        description: 'Really great workshop',
+        notes: 'Park in the back',
+      };
+
+      const result = buildOutlookCalendarLink(session, workshopTitle);
+
+      expect(result).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          body: EXPECTED_OUTLOOK_DESCRIPTION_AND_NOTES,
+        }).toString()
+      );
+    });
+
+    it('creates a link with meeting link for virtual sessions', () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        meeting_link: 'example.zoom.com',
+        session_format: 'virtual',
+      };
+
+      const result = buildOutlookCalendarLink(session, workshopTitle);
+
+      expect(result).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          location: 'Virtual meeting: example.zoom.com',
+        }).toString()
+      );
+      expect(result).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          body: 'example.zoom.com',
+        }).toString()
+      );
+    });
+
+    it('creates a link with full location info for in person sessions', () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        location_name: 'The ritz carlton',
+        location_address: '123 Main St, Denver, CO, 12345',
+        session_format: 'in_person',
+      };
+
+      const result = buildOutlookCalendarLink(session, workshopTitle);
+
+      expect(result).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          location: 'The ritz carlton, 123 Main St, Denver, CO, 12345',
+        }).toString()
+      );
+    });
+
+    it('creates a link with partial location info for in person sessions', () => {
+      const session1 = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        location_address: '123 Main St, Denver, CO, 12345',
+        session_format: 'in_person',
+      };
+
+      const result1 = buildOutlookCalendarLink(session1, workshopTitle);
+
+      expect(result1).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          location: '123 Main St, Denver, CO, 12345',
+        }).toString()
+      );
+
+      const session2 = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        location_name: 'The ritz carlton',
+        session_format: 'in_person',
+      };
+
+      const result2 = buildOutlookCalendarLink(session2, workshopTitle);
+
+      expect(result2).toContain(
+        // URLSearchParams uses + to encode spaces but encodeURIComponent uses %20
+        new URLSearchParams({
+          location: 'The ritz carlton',
+        }).toString()
       );
     });
   });
@@ -790,7 +962,7 @@ describe('LandingPage', () => {
     ];
 
     it('should generate a valid ics file content for sessions with time zones', async () => {
-      buildAppleCalendarLink(workshopSessions, workshopTitle, workshopLocation);
+      buildAppleCalendarLink(workshopSessions, workshopTitle);
 
       // wait for blob content to be read
       const icsFileContent = await blobContentPromise;
@@ -804,7 +976,6 @@ describe('LandingPage', () => {
       expect(icsFileContent).toContain('DTSTART:20250212T160000Z');
       expect(icsFileContent).toContain('DTEND:20250213T000000Z');
       expect(icsFileContent).toContain('SUMMARY:New Workshop');
-      expect(icsFileContent).toContain('LOCATION:123 Main St');
       expect(icsFileContent).toContain('END:VCALENDAR');
     });
 
@@ -817,7 +988,7 @@ describe('LandingPage', () => {
         },
       ];
 
-      buildAppleCalendarLink(legacySessions, workshopTitle, workshopLocation);
+      buildAppleCalendarLink(legacySessions, workshopTitle);
 
       const icsFileContent = await blobContentPromise;
       expect(icsFileContent).toContain('BEGIN:VCALENDAR');
@@ -828,8 +999,80 @@ describe('LandingPage', () => {
       expect(icsFileContent).toContain('DTSTART:20250211T090000');
       expect(icsFileContent).toContain('DTEND:20250211T170000');
       expect(icsFileContent).toContain('SUMMARY:New Workshop');
-      expect(icsFileContent).toContain('LOCATION:123 Main St');
       expect(icsFileContent).toContain('END:VCALENDAR');
+    });
+
+    it('creates a link with notes and description', async () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        meeting_link: 'example.zoom.com',
+        session_format: 'virtual',
+        description: 'Really great workshop',
+        notes: 'Park in the back',
+      };
+
+      buildAppleCalendarLink([session], workshopTitle);
+      const icsFileContent = await blobContentPromise;
+      expect(icsFileContent).toContain(EXPECTED_DESCRIPTION_AND_NOTES);
+    });
+
+    it('creates a link with meeting link for virtual sessions', async () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        meeting_link: 'example.zoom.com',
+        session_format: 'virtual',
+      };
+
+      buildAppleCalendarLink([session], workshopTitle);
+      const icsFileContent = await blobContentPromise;
+      expect(icsFileContent).toContain(
+        'LOCATION:Virtual meeting: example.zoom.com'
+      );
+      expect(icsFileContent).toContain('DESCRIPTION:example.zoom.com');
+    });
+
+    it('creates a link with full location info for in person sessions', async () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        location_name: 'The ritz carlton',
+        location_address: '123 Main St, Denver, CO, 12345',
+        session_format: 'in_person',
+      };
+
+      buildAppleCalendarLink([session], workshopTitle);
+      const icsFileContent = await blobContentPromise;
+      expect(icsFileContent).toContain(
+        'LOCATION:The ritz carlton, 123 Main St, Denver, CO, 12345'
+      );
+    });
+
+    it('creates a link with partial location info for in person sessions', async () => {
+      const session1 = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        location_address: '123 Main St, Denver, CO, 12345',
+        session_format: 'in_person',
+      };
+
+      buildAppleCalendarLink([session1], workshopTitle);
+      let icsFileContent = await blobContentPromise;
+      expect(icsFileContent).toContain(
+        'LOCATION:123 Main St, Denver, CO, 12345'
+      );
+
+      const session2 = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        location_name: 'The ritz carlton',
+        session_format: 'in_person',
+      };
+
+      buildAppleCalendarLink([session2], workshopTitle);
+      icsFileContent = await blobContentPromise;
+      expect(icsFileContent).toContain('LOCATION:The ritz carlton');
     });
   });
 
@@ -977,7 +1220,6 @@ describe('LandingPage', () => {
 
     describe('hideMyPLBanner', () => {
       let props = {
-        currentYearApplicationId: null,
         hasEnrorolledInWorkshop: false,
         plCoursesStarted: [],
       };

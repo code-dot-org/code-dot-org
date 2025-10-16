@@ -15,6 +15,7 @@ def run_validation_tests(file_pattern):
           - 'result': The outcome, which is one of the following:
             'PASS', 'FAIL', 'ERROR', 'SKIP', 'EXPECTED_FAILURE', 'UNEXPECTED_SUCCESS'.
   """
+  patch_test_case()
   result = run_tests(file_pattern, ValidationTestResult)
   return result.simplified_results
 
@@ -34,3 +35,11 @@ def run_tests(file_pattern, resultclass):
   test_suite = loader.discover('.', file_pattern)
   runner = unittest.TextTestRunner(verbosity=2, resultclass=resultclass)
   return runner.run(test_suite)
+
+def patch_test_case():
+  # Setting longMessage to False makes it so only the custom message is printed,
+  # rather than the standard failure message plus the custom message.
+  # The standard failure message is confusing for students, as it refers to a test file
+  # that they cannot see.
+  # Documentation: https://docs.python.org/3/library/unittest.html#unittest.TestCase.longMessage
+  unittest.TestCase.longMessage = False

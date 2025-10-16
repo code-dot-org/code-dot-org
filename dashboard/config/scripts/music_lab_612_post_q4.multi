@@ -1,0 +1,24 @@
+name 'music-lab-612-post-q4'
+
+question 'Which is Derek\'s code that matches his timeline?'
+height '200'
+wrong '![](https://images.code.org/b55f8a43b792b6e196f90f30fd2fef54-image-1750548851822.png)'
+wrong '![](https://images.code.org/c5ee7eab9246fe5418542775e797b49f-image-1750548848442.png)'
+wrong '![](https://images.code.org/0a6f7f81411c3adce7f5a3f58283b1d0-image-1750548844975.png)'
+right '![](https://images.code.org/d7d3b9132c9f96ae469860c18da4e248-image-1750548840394.png)'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Loops
+
+Skill: Design songs with sections that repeat using loop blocks
+
+Appears in Lesson: Loops - Synthesis
+MARKDOWN
+
+markdown <<MARKDOWN
+Derek used loops to line up all of the sounds he wanted so they end at the same time. This is Derek\'s timeline:
+
+![](https://images.code.org/0f46e4299976b664ceb3931cf176d426-image-1750548836835.png)
+MARKDOWN

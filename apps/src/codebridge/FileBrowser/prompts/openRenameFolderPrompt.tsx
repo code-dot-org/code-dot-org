@@ -16,7 +16,7 @@ type RenameNewFilePromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   renameFolder: RenameFolderFunction;
   projectFolders: MultiFileSource['folders'];
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
 };
 
 export const openRenameFolderPrompt = async ({
@@ -24,7 +24,7 @@ export const openRenameFolderPrompt = async ({
   dialogControl,
   renameFolder,
   projectFolders,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
 }: RenameNewFilePromptArgsType) => {
   const folder = projectFolders[folderId];
   const results = await dialogControl?.showDialog({
@@ -50,5 +50,5 @@ export const openRenameFolderPrompt = async ({
 
   const newName = extractUserInput(results);
   renameFolder(folderId, newName);
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FOLDER);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FOLDER);
 };

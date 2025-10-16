@@ -18,7 +18,7 @@ export const START_SOURCES = 'start_sources';
 export const TOOLBOX_BLOCKS = 'toolbox_blocks';
 export const EDIT_EXEMPLAR = 'edit_exemplar';
 
-export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab'];
+export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab', 'weblab2'];
 
 // Text-based labs that are currently supported by lab2.
 export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
@@ -35,3 +35,13 @@ export enum WARNING_BANNER_MESSAGES {
 
 // Default height of the predict question free response text area.
 export const PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT = 50;
+
+export enum FontSize {
+  Tiny = 10,
+  Small = 13, // Default font size
+  Medium = 17,
+  Large = 22,
+  Huge = 27,
+}
+
+export const INITIAL_VERSION_ID = 'initial-version';

@@ -161,7 +161,7 @@ class SoundCache {
   }
 
   private async refreshSignedCookies(): Promise<void> {
-    const response = await fetchSignedCookies();
+    const response = await fetchSignedCookies(true);
     if (response.ok) {
       this.hasLoadedSignedCookies = true;
     } else {

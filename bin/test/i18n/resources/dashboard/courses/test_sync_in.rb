@@ -5,7 +5,7 @@ describe I18n::Resources::Dashboard::Courses::SyncIn do
   let(:described_class) {I18n::Resources::Dashboard::Courses::SyncIn}
   let(:described_instance) {described_class.new}
 
-  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/courses.en.yml')}
+  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/courses/en.yml')}
   let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/dashboard/courses.yml')}
   let(:i18n_backup_file_path) {CDO.dir('i18n/locales/original/dashboard/courses.yml')}
 

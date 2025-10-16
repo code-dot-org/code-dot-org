@@ -22,7 +22,7 @@ const STUDENTS: ServerStudent[] = [
     name: 'bobby',
     user_type: 'STUDENT',
     secret_picture_name: '',
-    secret_picture_path: '',
+    secret_picture_url: '',
     secret_words: '',
     sectionId: 1,
     sharing_disabled: true,
@@ -33,7 +33,7 @@ const STUDENTS: ServerStudent[] = [
     name: 'daria',
     user_type: 'STUDENT',
     secret_picture_name: '',
-    secret_picture_path: '',
+    secret_picture_url: '',
     secret_words: '',
     sectionId: 1,
     sharing_disabled: true,
@@ -52,6 +52,7 @@ const PROGRESS: InitProgressPayload = {
   unitTitle: '',
   unitDescription: '',
   unitStudentDescription: '',
+  unitHasUnnumberedLessons: false,
   courseId: 1,
   courseVersionId: 1,
   isLessonExtras: false,
@@ -63,6 +64,7 @@ const PROGRESS: InitProgressPayload = {
   },
   isFullProgress: false,
   currentPageNumber: 1,
+  courseName: 'csd',
 };
 
 const UNIT_SUMMARY = {

@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-08-19T14:41:11.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Scenario 2",
+    "long_instructions": "*Review the scenario below and use the AI Chat to learn more in-depth about this threat:*\r\n\r\n## Scenario 2\r\n\r\nA large hospital network’s IT department notices unusual activity late at night. \r\n\r\nWhen doctors arrive in the morning, they can’t access patient records, lab results, or appointment systems. \r\n\r\nAll hospital monitors display the same note: \r\n“Your files have been encrypted. Pay $5 million in Bitcoin within 72 hours or all data will be lost.”\r\n\r\n---\r\n\r\n## Chat with an Expert: Digital Forensics Analyst\r\n\r\nA **digital forensics analyst** investigates cyber incidents by collecting and analyzing digital evidence to uncover how an attack happened and who was responsible.\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession. Keep your responses to maximum 3 bullet points or maximum one paragraph. \n\nYou are a digital forensics analyst specializing in investigating ransomware attacks and other cybercrimes. Your job is to uncover how attacks happened, what systems were affected, and who may be responsible.\n\nYou work on:\nAnalyzing infected devices and networks to trace the origin and impact of ransomware.\nRecovering encrypted data and preserving digital evidence for legal investigations.\nUsing specialized software tools to examine logs, file metadata, and attack patterns.\nCollaborating with incident response teams, law enforcement, and cybersecurity professionals.\n\nWhen asked, explain:\nHow ransomware spreads and locks up digital files.\nWhat steps you take to investigate and trace a ransomware attack.\nHow you gather digital evidence without damaging it.\nWhy your work is important in helping people and organizations recover from cyberattacks.\n\nYou may also discuss challenges like staying ahead of constantly evolving malware, working under time pressure, and balancing technical work with investigative thinking.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/7f7c45f9618af548e64b467692217094-image-1752764777618.05.51 AM.png",
+    "name_suffix": "_2025",
+    "submittable": "false",
+    "bubble_choice_description": "A hospital suddenly can't access its patient records. They must pay up or risking losing access forever.",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-19T14:41:11.969+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson2-level6b\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson2-level6b\"},{\"changed_at\":\"2025-08-19 14:41:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

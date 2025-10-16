@@ -232,6 +232,7 @@ interface SoundsPanelProps {
   showSoundFilters: boolean;
   defaultMode: Mode;
   sortUnrestrictedPacksByType: boolean;
+  onClose: () => void;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
 }
@@ -243,6 +244,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   showSoundFilters,
   defaultMode,
   sortUnrestrictedPacksByType,
+  onClose,
   onSelect,
   onPreview,
 }) => {
@@ -347,6 +349,12 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     filterButton => availableSoundTypes[filterButton.value]
   );
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Escape') {
+      onClose();
+    }
+  };
+
   return (
     <FocusLock>
       <div
@@ -354,6 +362,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         className={classNames(styles.soundsPanel)}
         aria-modal
         role="dialog"
+        onKeyDown={handleKeyDown}
       >
         {showSoundFilters && (
           <div
@@ -405,7 +414,13 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
               })}
             </div>
           )}
-          <div id="sounds-panel-right" className={styles.rightColumn}>
+          <div
+            id="sounds-panel-right"
+            className={styles.rightColumn}
+            tabIndex={0}
+            role="tabpanel"
+            aria-label={'Sounds Panel, ' + selectedFolder.name}
+          >
             {rightColumnSoundEntries.map((soundEntry, soundIndex) => {
               return (
                 <SoundsPanelRow

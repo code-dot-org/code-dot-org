@@ -9,7 +9,6 @@
   .create_button, .display_name, .pairing_name {
     max-width: 120px;
     display: inline-block;
-    float: left;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -23,48 +22,41 @@
   .user_menu_arrow_up,
   .create_menu_arrow_down,
   .create_menu_arrow_up {
-    font-size: 1.5rem;
-    margin-top: -4px;
-    .rtl & {
-      float: left;
-    }
-    html[dir='rtl'] & {
-      float: left;
-    }
-  }
-
-  .user_menu_arrow_up,
-  .create_menu_arrow_up {
-    margin-top: -2px;
+    font-size: 0.875rem;
+    margin-inline-start: 5px;
   }
 
   .user_options, .create_options {
-    top: 50px;
+    top: 46px;
   }
 
   .help_contents {
-    top: 58px;
+    top: 54px;
   }
 
   .user_options, .create_options, .help_contents {
+    z-index: 100001;
     position: absolute;
-    right: 0px;
+    inset-inline-end: 0px;
     background-color: $white;
-    border: 1px solid $charcoal;
+    border: 1px solid $light_gray_200;
+    border-radius: 0.25rem;
+    text-align: initial;
+    padding: 0;
+    min-width: 228px;
+    max-width: 300px;
+    padding: 0.375rem;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 
     a {
-      color: $charcoal !important;
-
-      $transition: background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
-      transition: $transition;
-      -moz-transition: $transition;
-      -webkit-transition: $transition;
-      -o-transition: $transition;
+      color: $light_black !important;
+      transition: background-color 0.2s ease-in-out;
     }
 
     a:hover {
       background-color: $lightest_gray;
       text-decoration: none;
+      border-radius: 4px;
     }
   }
 }
@@ -73,10 +65,7 @@
   padding: 7px 14px;
 
   .user_options {
-    z-index: 100001;
-    text-align: left;
-    white-space: nowrap;
-    padding: 0;
+
     &[dir = 'rtl']  a {
       text-align: right;
     }
@@ -93,10 +82,7 @@
       display: block;
       padding: 10px;
       @include main-font-semi-bold;
-    }
-
-    a + a {
-      border-top: 1px solid $charcoal;
+      font-weight: 500;
     }
 
     &.hide-responsive-menu {
@@ -139,11 +125,7 @@
   }
 
   .help_contents {
-    z-index: 100001;
-    text-align: left;
-    white-space: nowrap;
-    padding: 0;
-    right: 0;
+
     &[dir = 'rtl']  a {
       text-align: right;
       left: 0;
@@ -157,10 +139,8 @@
       display: block;
       padding: 10px;
       @include main-font-semi-bold;
-    }
-
-    a + a {
-      border-top: 1px solid $charcoal;
+      font-weight: 500;
+      text-decoration: none;
     }
   }
 
@@ -176,34 +156,33 @@
 
 .create_menu {
   .create_options {
-    width: max-content;
-    z-index: 10000;
-    border-bottom: 0;
+    inset-inline-end: unset;
+    inset-inline-start: 0px;
     a {
       @include main-font-semi-bold;
-      min-width: 240px;
       font-size: 14px;
-      border-bottom: 1px solid $charcoal;
       box-sizing: content-box;
-      white-space: nowrap;
       cursor: pointer;
+      margin: 0;
+      padding: 0.375rem;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      gap: 0.625rem;
     }
     img {
-      height: 70px;
-      width: 70px;
+      height: 40px;
+      width: 40px;
+      border-radius: 4px;
     }
     .project_link_box {
-      display: block;
-
-      .project_link {
-        display: inline-block;
-        padding: 0 10px 0 4px;
-        line-height: 67px;
-      }
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
     }
+    .text,
     #view_all_projects {
-      height: 70px;
-      padding-left: 10px;
+      color: $light_black;
     }
   }
 

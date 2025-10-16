@@ -1,9 +1,12 @@
-import {findFiles, findSubFolders} from '@codebridge/codebridgeContext';
 import {DeleteFolderFunction} from '@codebridge/codebridgeContext/types';
 import {ProjectFolder} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  findFiles,
+  findSubFolders,
+} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {DialogType, DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
@@ -11,7 +14,7 @@ type OpenConfirmDeleteFileArgsType = {
   folder: ProjectFolder;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   deleteFolder: DeleteFolderFunction;
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
   projectFiles: MultiFileSource['files'];
   projectFolders: MultiFileSource['folders'];
 };
@@ -22,7 +25,7 @@ export const openConfirmDeleteFolder = async ({
   folder,
   dialogControl,
   deleteFolder,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
   projectFiles,
   projectFolders,
 }: OpenConfirmDeleteFileArgsType) => {
@@ -69,6 +72,6 @@ export const openConfirmDeleteFolder = async ({
 
   if (results.type === 'confirm') {
     deleteFolder(folder.id);
-    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FOLDER);
+    sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FOLDER);
   }
 };

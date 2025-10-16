@@ -6,12 +6,7 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import {
-  PublishedState,
-  InstructionType,
-  InstructorAudience,
-  ParticipantAudience,
-} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import createResourcesReducer, {
   initResources,
 } from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
@@ -74,17 +69,11 @@ describe('UnitEditor', () => {
       locales: [],
       name: 'test-unit',
       unitFamilies: [],
-      versionYearOptions: [],
-      initialFamilyName: '',
-      initialVersionYear: '',
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
       initialPublishedState: PublishedState.in_development,
-      initialUnitPublishedState: null,
-      initialInstructionType: InstructionType.teacher_led,
-      initialInstructorAudience: InstructorAudience.teacher,
-      initialParticipantAudience: ParticipantAudience.student,
+      initialHideWithinCourse: false,
       initialSupportedLocales: [],
       initialTopicTags: [],
       hasCourse: false,
@@ -199,11 +188,11 @@ describe('UnitEditor', () => {
       assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 0);
     });
 
-    it('clicking hide unit checkbox updates unit published state', () => {
+    it('clicking hide unit checkbox updates checkbox state', () => {
       const wrapper = createWrapper({
         hasCourse: true,
-        initialPublishedState: 'pilot',
-        initialUnitPublishedState: 'in_development',
+        initialPublishedState: 'stable',
+        initialHideWithinCourse: true,
       });
       assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 1);
       assert.equal(
@@ -223,14 +212,9 @@ describe('UnitEditor', () => {
         initialCourseVersionId: 1,
       });
 
-      // To update based on the list of topic tags
-      expect(wrapper.find('input').length).to.equal(29);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(16);
-      expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(6);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(10);
       expect(wrapper.find('SaveBar').length).to.equal(1);
-      expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
+      expect(wrapper.find('CourseTypeEditor').length).to.equal(0);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
     });
@@ -281,7 +265,7 @@ describe('UnitEditor', () => {
 
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
       const wrapper = createWrapper({
-        initialPublishedState: 'stable',
+        allowMajorCurriculumChanges: false,
         isMigrated: true,
         initialUseLegacyLessonPlans: false,
       });
@@ -296,8 +280,7 @@ describe('UnitEditor', () => {
 
     it('allows changing student facing lesson plan checkbox when allowed to make major curriculum changes to hidden unit', () => {
       const wrapper = createWrapper({
-        initialPublishedState: 'stable',
-        initialUnitPublishedState: 'in_development',
+        allowMajorCurriculumChanges: true,
         isMigrated: true,
         initialUseLegacyLessonPlans: false,
       });
@@ -389,7 +372,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -427,7 +410,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -462,7 +445,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -543,123 +526,12 @@ describe('UnitEditor', () => {
             'Error Saving: Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
           )
       ).to.be.true;
-      $.ajax.restore();
-    });
-
-    it('shows error when published state is pilot but no pilot experiment given', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        publishedState: PublishedState.pilot,
-        pilotExperiment: '',
-      });
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Please provide a pilot experiment in order to save with published state as pilot.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
-    });
-
-    it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({
-        isMissingRequiredDeviceCompatibilities: true,
-        hasCourse: true,
-      });
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        publishedState: PublishedState.preview,
-        courseOfferingDeviceCompatibilities: null,
-      });
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Please set all device compatibilities in order to save with published state as preview or stable.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
-    });
-
-    it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({
-        isMissingRequiredDeviceCompatibilities: true,
-        hasCourse: true,
-      });
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        publishedState: PublishedState.stable,
-        courseOfferingDeviceCompatibilities:
-          '{"computer":"","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-      });
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Please set all device compatibilities in order to save with published state as preview or stable.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
-          )
-      ).to.be.true;
 
       $.ajax.restore();
     });
 
     it('saves successfully if unit is not a course and only version year is set', () => {
-      const wrapper = createWrapper({initialIsCourse: false});
+      const wrapper = createWrapper();
 
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
@@ -684,7 +556,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -701,153 +573,6 @@ describe('UnitEditor', () => {
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
       server.restore();
-    });
-
-    it('shows error when version year is set but family name is not', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({initialIsCourse: true});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        versionYear: '1991',
-        familyName: '',
-      });
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Please set both version year and family name.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Please set both version year and family name.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
-    });
-
-    it('shows error when moving standalone unit out of in development if not supplied all standalone unit information', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({publishedState: 'beta'});
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Standalone units that are not in development must be a standalone unit with family name and version year.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Standalone units that are not in development must be a standalone unit with family name and version year.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
-    });
-
-    it('saves successfully when moving standalone unit out of in development if professional learning course', () => {
-      sinon.stub(window, 'confirm').callsFake(() => true);
-      const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        publishedState: 'beta',
-        deeperLearningCourse: 'new-pl-course',
-      });
-
-      let returnData = {scriptPath: '/s/test-unit'};
-      let server = sinon.fakeServer.create();
-      server.respondWith('PUT', `/s/1`, [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify(returnData),
-      ]);
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-      expect(unitEditor.state().isSaving).to.equal(true);
-
-      clock = sinon.useFakeTimers(new Date('2020-12-01'));
-      const expectedLastSaved = Date.now();
-      server.respond();
-      clock.tick(50);
-
-      unitEditor.update();
-      expect(utils.navigateToHref).to.not.have.been.called;
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().lastSaved).to.equal(expectedLastSaved);
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
-      //check that last saved message is showing
-      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
-      server.restore();
-      window.confirm.restore();
-    });
-
-    it('shows error when family name is set but version year is not', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({initialIsCourse: true});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        versionYear: '',
-        familyName: 'new-family-name',
-      });
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Please set both version year and family name.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Please set both version year and family name.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
     });
 
     it('can save and close', () => {
@@ -870,7 +595,7 @@ describe('UnitEditor', () => {
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -901,7 +626,7 @@ describe('UnitEditor', () => {
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 

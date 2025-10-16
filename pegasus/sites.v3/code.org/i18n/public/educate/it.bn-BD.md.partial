@@ -17,7 +17,7 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
-জুলাই 2024 থেকে শুরু করে আমরা ব্রাউজার এবং অপারেটিং সিস্টেমের জন্য প্রয়োজনীয় ন্যূনতম সংস্করণগুলি আপডেট করব। যদিও পুরানো সংস্করণগুলি এখনও কাজ করতে পারে, আমরা পুরানো সংস্করণগুলিতে বাগ সংশোধনের জন্য অনুরোধগুলি সমর্থন করতে অক্ষম হব।
+প্রতি বছর আমরা ব্রাউজার এবং অপারেটিং সিস্টেমের জন্য প্রয়োজনীয় ন্যূনতম সংস্করণ আপডেট করব। যদিও পুরানো সংস্করণগুলি এখনও কাজ করতে পারে, আমরা পুরানো সংস্করণগুলিতে বাগ সংশোধনের জন্য অনুরোধগুলি সমর্থন করতে অক্ষম হব।
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ theme: responsive
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          ব্রাউজার জুলাই '24
         </th>
         <tr>
           <td>ক্রোম 103.x</td>
@@ -71,28 +49,6 @@ theme: responsive
           প্লাটফর্ম
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          প্ল্যাটফর্ম জুলাই '24
-        </th>
-        <tr>
           <td>ম্যাকোস 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ theme: responsive
         </tr>
         <tr>
           <td>অ্যান্ড্রয়েড 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          ব্রাউজার জুলাই '25
+        </th>
+        <tr>
+          <td>ক্রোম 109</td>
+        </tr>
+        <tr>
+          <td>সাফারি 16.6</td>
+        </tr>
+        <tr>
+          <td>মোবাইল সাফারি 16</td>
+        </tr>
+        <tr>
+          <td>এজ 128</td>
+        </tr>
+        <tr>
+          <td>ফায়ারফক্স 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          প্ল্যাটফর্ম জুলাই '25
+        </th>
+        <tr>
+          <td>ম্যাকোস 10.15</td>
+        </tr>
+        <tr>
+          <td>আইওএস 16.x</td>
+        </tr>
+        <tr>
+          <td>উইন্ডোজ 10</td>
+        </tr>
+        <tr>
+          <td>অ্যান্ড্রয়েড 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -147,7 +148,6 @@ theme: responsive
 ### Can you play this video?
 
 আপনি Code.org এর অনলাইন কোর্স শুরু করার আগে, নিচের ভিডিওর জন্য প্লেব্যাক পরীক্ষা করুন যাতে আপনি যেতে ভাল কিনা তা নিশ্চিত করুন।
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

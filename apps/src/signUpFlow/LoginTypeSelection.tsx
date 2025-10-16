@@ -50,7 +50,8 @@ const getUserType = () => {
 
 const LoginTypeSelection: React.FunctionComponent<{
   isSignedOut: boolean;
-}> = ({isSignedOut}) => {
+  passwordMinLength: number;
+}> = ({isSignedOut, passwordMinLength}) => {
   const [userType, setUserType] = useState(getUserType());
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
@@ -136,7 +137,7 @@ const LoginTypeSelection: React.FunctionComponent<{
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
-    if (event.target.value.length >= 6) {
+    if (event.target.value.length >= passwordMinLength) {
       setPasswordIcon(CHECK_ICON);
       setPasswordIconClass(style.teal);
     } else {
@@ -174,6 +175,7 @@ const LoginTypeSelection: React.FunctionComponent<{
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: userType,
       },
     };
     try {
@@ -185,10 +187,18 @@ const LoginTypeSelection: React.FunctionComponent<{
         },
         body: JSON.stringify(submitLoginTypeParams),
       });
-      // We are currently only intentionally surfacing errors for duplicate emails
       if (!response.ok) {
-        setEmailErrorMessage(i18n.duplicate_email_error_message());
-        setShowEmailError(true);
+        // Handle disallowed email domains. We return a 403 status code from the server
+        // in this case.
+        if (response.status === 403) {
+          const res = await response.json();
+          setEmailErrorMessage(res.error);
+          setShowEmailError(true);
+        } else {
+          // We are currently only intentionally surfacing errors for duplicate emails
+          setEmailErrorMessage(i18n.duplicate_email_error_message());
+          setShowEmailError(true);
+        }
         return;
       }
       navigateToHref(finishAccountUrl);
@@ -368,7 +378,9 @@ const LoginTypeSelection: React.FunctionComponent<{
                   className={passwordIconClass}
                   iconName={passwordIcon}
                 />
-                <BodyThreeText>{locale.minimum_six_chars()}</BodyThreeText>
+                <BodyThreeText>
+                  {locale.minimum_num_chars({minChars: passwordMinLength})}
+                </BodyThreeText>
               </div>
             </div>
             <div>

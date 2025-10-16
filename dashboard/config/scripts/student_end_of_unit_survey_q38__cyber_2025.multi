@@ -1,0 +1,17 @@
+name 'student-end-of-unit-survey-q38_-cyber_2025'
+
+question 'After this unit, I am interested in learning more about CS, AI, and related topics than I was before.'
+
+right 'Strongly agree'
+right 'Agree'
+right 'Slightly agree'
+right 'Neither'
+right 'Slightly disagree'
+right 'Disagree'
+right 'Strongly disagree'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

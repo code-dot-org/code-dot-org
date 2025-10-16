@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q8_2025-pilot_2025'
+
+question ‘Which of the following best describes Authentication in cybersecurity?’
+
+wrong ‘Rules determining what resources you can access’
+wrong ‘Tracking user activities to identify suspicious behavior’
+right ‘Verifying that users are who they claim to be’
+wrong ‘Restricting access based on a user\’s role’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Authentication, Authorization, and Access Controls
+MARKDOWN

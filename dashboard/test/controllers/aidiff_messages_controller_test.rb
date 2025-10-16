@@ -9,17 +9,17 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     @message = create(:aidiff_message, aidiff_thread: @teacher_thread)
     @message_not_teacher = create(:aidiff_message)
     @teacher_sans_experiment = create(:teacher)
-    create :single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation'
+    create(:single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation')
   end
 
   test "submit feedback returns forbidden if not a teacher" do
-    student = create :student
-    create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    create(:follower, student_user: student, user: @teacher)
 
     sign_in student
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message.id,
+      id: @message.id,
       approval: true,
       flagged: false
     }
@@ -31,7 +31,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     sign_in @teacher_sans_experiment
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message.id,
+      id: @message.id,
       approval: true,
       flagged: false
     }
@@ -43,7 +43,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     sign_in @teacher
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message_not_teacher.id,
+      id: @message_not_teacher.id,
       approval: true,
       flagged: false
     }
@@ -55,7 +55,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     sign_in @teacher
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message.id,
+      id: @message.id,
       approval: true,
       flagged: false
     }
@@ -69,7 +69,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     sign_in @teacher
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message.id,
+      id: @message.id,
       approval: true,
       flagged: false
     }
@@ -81,7 +81,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     feedback_id = @message.aidiff_message_feedback.id
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message.id,
+      id: @message.id,
       approval: false,
       flagged: true
     }

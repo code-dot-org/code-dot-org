@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react-webpack5';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '../index';
 
@@ -91,6 +91,36 @@ GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
   components: [
     {
       iconFamily: 'kit',
+      iconName: 'ai-bot-regular',
+      title: 'ai-bot-regular-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-bot-solid',
+      title: 'ai-bot-solid-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-head-regular',
+      title: 'ai-head-regular-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-head-solid',
+      title: 'ai-head-solid-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-locked',
+      title: 'ai-locked-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'clever',
+      title: 'clever-kit',
+    },
+    {
+      iconFamily: 'kit',
       iconName: 'click-to-continue-down',
       title: 'click-to-continue-down-kit',
     },
@@ -106,28 +136,18 @@ GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
     },
     {
       iconFamily: 'kit',
-      iconName: 'ai-bot-solid',
-      title: 'ai-bot-solid-kit',
+      iconName: 'duotone-solid-message-question-circle-exclamation',
+      title: 'duotone-solid-message-question-circle-exclamation-kit',
     },
     {
       iconFamily: 'kit',
-      iconName: 'ai-bot-regular',
-      title: 'ai-bot-regular-kit',
+      iconName: 'solid-bars-magnifying-glass',
+      title: 'solid-bars-magnifying-glass-kit',
     },
     {
       iconFamily: 'kit',
-      iconName: 'text-speech-pause',
-      title: 'text-speech-pause-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'text-speech',
-      title: 'text-speech',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'solid-thumbtack-slash',
-      title: 'solid-thumbtack-slash-kit',
+      iconName: 'solid-flask-sparkle',
+      title: 'solid-flask-sparkle-kit',
     },
     {
       iconFamily: 'kit',
@@ -136,8 +156,23 @@ GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
     },
     {
       iconFamily: 'kit',
-      iconName: 'clever',
-      title: 'clever-kit',
+      iconName: 'solid-pen-sparkle',
+      title: 'solid-pen-sparkle-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'solid-thumbtack-slash',
+      title: 'solid-thumbtack-slash-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'text-speech',
+      title: 'text-speech-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'text-speech-pause',
+      title: 'text-speech-pause-kit',
     },
   ],
 };

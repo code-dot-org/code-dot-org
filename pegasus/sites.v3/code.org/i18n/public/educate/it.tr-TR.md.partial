@@ -17,7 +17,7 @@ theme: responsive
 
 ## En az desteklenen Tarayıcılar ve Platformlar
 
-Temmuz 2024'ten itibaren tarayıcılar ve işletim sistemleri için gereken minimum sürümleri güncelleyeceğiz. Eski sürümler hala çalışabilirken, eski sürümlerde hata düzeltmeleri taleplerini destekleyemeyeceğiz.
+Her yıl tarayıcılar ve işletim sistemleri için gereken minimum sürümleri güncelleyeceğiz. Eski sürümler hala çalışabilirken, eski sürümlerde hata düzeltmeleri taleplerini destekleyemeyeceğiz.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ Temmuz 2024'ten itibaren tarayıcılar ve işletim sistemleri için gereken mini
       <table>
         <th>
           Tarayıcı
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Tarayıcı Temmuz '24
         </th>
         <tr>
           <td>Krom 103.x</td>
@@ -71,28 +49,6 @@ Temmuz 2024'ten itibaren tarayıcılar ve işletim sistemleri için gereken mini
           Platform
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          Platform Temmuz '24
-        </th>
-        <tr>
           <td>macOS 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ Temmuz 2024'ten itibaren tarayıcılar ve işletim sistemleri için gereken mini
         </tr>
         <tr>
           <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Tarayıcı Temmuz '25
+        </th>
+        <tr>
+          <td>Krom 109</td>
+        </tr>
+        <tr>
+          <td>Safari 16.6</td>
+        </tr>
+        <tr>
+          <td>Mobil Safari 16</td>
+        </tr>
+        <tr>
+          <td>Kenar 128</td>
+        </tr>
+        <tr>
+          <td>Firefox 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform Temmuz '25
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 16.x</td>
+        </tr>
+        <tr>
+          <td>Windows 10</td>
+        </tr>
+        <tr>
+          <td>Android 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -147,7 +148,6 @@ Code.org ce [online eğitim platformlarına](https://studio.code.org) video yük
 ### Bu videoyu oynatabilir misiniz?
 
 Code.org'un online kurslarına başlamadan önce, hazır olduğunuzdan emin olmak için aşağıdaki videoyu oynatmayı test edin.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-03-12T20:41:24.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "####Fill in the following mad-libs:\r\n\r\n#####- Thank ________.\r\n#####- He dipped his french fries in ________.\r\n#####- The smallest planet in our solar system is ________.\r\n\r\n",
+    "long_instructions": "**Fill in the following mad-libs:**\r\n\r\n- Thank ________.\r\n- He dipped his french fries in ________.\r\n- The smallest planet in our solar system is ________.\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -15,10 +16,11 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "teacher_markdown": "Students will likely use common phrases or personal knowledge to answer these questions. \"Thank You\" will likely be a common answer to the first mad-lib. The second answer may vary depending on the region you live in or the cultural background of your students - ketchup is a common US condiment to serve with french fries, but some countries use mayonnaise or vinegar while others may use hot sauce. If this comes up, emphasize how prior experiences inform our answers here. For the last question, students may say Pluto is the smallest planet, while others may say Pluto is no longer a planet and instead Mercury is the smallest planet. This debate is key to the learning outcome on the next slide.",
+    "stay_on_level_after_submit": "true"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:41:24.516+00:00\",\"changed\":[\"cloned from \\\"genai-lesson10-warmup-lv1\\\"\"],\"cloned_from\":\"genai-lesson10-warmup-lv1\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:41:24.516+00:00\",\"changed\":[\"cloned from \\\"genai-lesson10-warmup-lv1\\\"\"],\"cloned_from\":\"genai-lesson10-warmup-lv1\"},{\"changed_at\":\"2025-04-24 17:24:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

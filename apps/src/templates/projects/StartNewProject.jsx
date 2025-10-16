@@ -40,7 +40,13 @@ const GAMES_AND_EVENTS_PROJECT_TYPES = [
 
 const PLAYLAB_PROJECT_TYPES = ['playlab', 'infinity', 'gumball', 'iceage'];
 
-const ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'weblab', 'starwars'];
+const ADVANCED_PROJECT_TYPES = [
+  'applab',
+  'gamelab',
+  'weblab',
+  'starwars',
+  'pythonlab',
+];
 
 const PREREADER_PROJECT_TYPES = ['playlab_k1', 'artist_k1'];
 
@@ -165,7 +171,7 @@ export class StartNewProject extends React.Component {
 
     return (
       <div>
-        {defaultProjectTypes.length && (
+        {!!defaultProjectTypes.length && (
           <>
             <h4 className="new-project-heading" style={styles.headingStartNew}>
               {i18n.projectStartNew()}
@@ -174,7 +180,7 @@ export class StartNewProject extends React.Component {
           </>
         )}
 
-        {fullListProjectButtonsData.length && (
+        {!!fullListProjectButtonsData.length && (
           <>
             <Button
               id="uitest-view-full-list"

@@ -36,7 +36,7 @@
     "authored_hints": "[]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "callout_json": "[{\"localization_key\":\"courseF_bee_functions_1_2018_1\",\"callout_text\":\"You can find your variables under here!\",\"element_id\":\"[id=':5.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-4.label']\",\"localization_key\":\"courseF_bee_functions_1_2018_1\",\"callout_text\":\"You can find your variables under here!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
+    "callout_json": "[{\"localization_key\":\"courseF_bee_functions_1_2018_1\",\"callout_text\":\"You can find your variables under here!\",\"element_id\":\"[id=':5.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-5.label']\",\"localization_key\":\"courseF_bee_functions_1_2018_1\",\"callout_text\":\"You can find your variables under here!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "name_suffix": "_2021",

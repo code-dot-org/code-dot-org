@@ -69,6 +69,7 @@ class UnitOverview extends React.Component {
     // redux provided
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
+    scriptPath: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
@@ -125,6 +126,7 @@ class UnitOverview extends React.Component {
       studentResources,
       scriptId,
       scriptName,
+      scriptPath,
       viewAs,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
@@ -148,7 +150,9 @@ class UnitOverview extends React.Component {
       completedLessonNumber,
       courseOfferingId,
       courseVersionId,
+      courseId,
       isProfessionalLearningCourse,
+      isSingleUnitCourse,
       publishedState,
       participantAudience,
       showAiAssessmentsAnnouncement,
@@ -170,10 +174,9 @@ class UnitOverview extends React.Component {
         <div>
           {!this.props.isSingleUnitCourse && this.props.courseLink && (
             <div className="unit-breadcrumb" style={styles.navArea}>
-              <a
-                href={this.props.courseLink}
-                style={styles.navLink}
-              >{`< ${this.props.courseTitle}`}</a>
+              <a href={this.props.courseLink} style={styles.navLink}>
+                {`< ${this.props.courseTitle}`}
+              </a>
             </div>
           )}
           {displayRedirectDialog && (
@@ -192,6 +195,7 @@ class UnitOverview extends React.Component {
             showHiddenUnitWarning={isHiddenUnit}
             versions={versions}
             courseName={courseName}
+            courseId={courseId}
             userId={userId}
           >
             <UnitOverviewActionRow
@@ -200,6 +204,8 @@ class UnitOverview extends React.Component {
               viewAs={viewAs}
               showAssignButton={showAssignButton}
               courseOfferingId={courseOfferingId}
+              isSingleUnitCourse={isSingleUnitCourse}
+              currentCourseId={courseId}
               scriptId={scriptId}
               participantAudience={participantAudience}
               scriptOverviewPdfUrl={scriptOverviewPdfUrl}
@@ -221,7 +227,6 @@ class UnitOverview extends React.Component {
           <UnitOverviewTopRow
             teacherResources={teacherResources}
             studentResources={studentResources}
-            showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}
             showCalendar={showCalendar}
             weeklyInstructionalMinutes={weeklyInstructionalMinutes}
@@ -229,13 +234,12 @@ class UnitOverview extends React.Component {
             isMigrated={isMigrated}
             scriptOverviewPdfUrl={scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
             isProfessionalLearningCourse={isProfessionalLearningCourse}
             courseLink={this.props.courseLink}
             publishedState={publishedState}
             participantAudience={participantAudience}
             isUnitWithLevels={unitHasLevels}
+            scriptPath={scriptPath}
           />
         </div>
         <ProgressTable minimal={false} />

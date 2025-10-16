@@ -1,7 +1,0 @@
-#incubator-container
-
-- content_for(:head) do
-  %script{src: webpack_asset_path('js/incubator/index.js')}
-
-- if Policies::Ai.ai_differentiation_enabled?(current_user)
-  %div#ai-differentiation-fab-mount-point

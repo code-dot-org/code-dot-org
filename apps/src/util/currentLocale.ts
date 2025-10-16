@@ -1,5 +1,5 @@
-import {get} from 'js-cookie';
+import localization from '@cdo/apps/localization';
 
-import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
-
-export default () => get('language_') || DefaultLocale;
+export default () => {
+  return localization.locale;
+};

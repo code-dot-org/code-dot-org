@@ -51,6 +51,7 @@
         = render partial: 'levels/editors/pythonlab', locals: {f: f} if @level.is_a? Pythonlab
         = render partial: 'levels/editors/panels', locals: {f: f} if @level.is_a? Panels
         = render partial: 'levels/editors/weblab2', locals: {f: f} if @level.is_a? Weblab2
+        = render partial: 'levels/editors/sketchlab', locals: {f: f} if @level.is_a? Sketchlab
         -# Widgets
         = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
         = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
@@ -92,7 +93,7 @@
                 - parent_level.script_levels.each do |script_level|
                   %li
                     - position = parent_level.sublevel_position(@level)
-                    = f.submit build_script_level_path(script_level, {sublevel_position: position}), {:class=> 'publishLevel', :name => "redirect", :style => "font-family: monospace; margin-bottom: 10px"}
+                    = f.submit build_script_level_path(script_level, sublevel_position: position), {:class=> 'publishLevel', :name => "redirect", :style => "font-family: monospace; margin-bottom: 10px"}
 
     %pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
     :javascript

@@ -23,7 +23,7 @@ class BucketHelperTest < Minitest::Test
     )
     mock_s3 = mock
     mock_s3.expects(:list_object_versions).returns(fake_object_versions_response)
-    bucket_helper.s3 = mock_s3
+    bucket_helper.stubs(:s3).returns(mock_s3)
 
     mock_where = mock
     mock_where.expects(:first).returns({comment: 'Comment'}).once
@@ -36,12 +36,6 @@ class BucketHelperTest < Minitest::Test
 
     version_list = bucket_helper.list_versions('base64', 'main.json', with_comments: true)
     assert_equal [{versionId: '1234', lastModified: '0', comment: 'Comment', isLatest: false}], version_list
-
-    # s3 is a class attribute of BucketHelper and needs to be reset
-    # The linter doesn't love this so we have to disable this check here.
-    # rubocop:disable Lint/UselessSetterCall
-    bucket_helper.s3 = nil
-    # rubocop:enable Lint/UselessSetterCall
   end
 
   def test_omits_comments_if_specified_and_none_exist
@@ -56,7 +50,7 @@ class BucketHelperTest < Minitest::Test
     )
     mock_s3 = mock
     mock_s3.expects(:list_object_versions).returns(fake_object_versions_response)
-    bucket_helper.s3 = mock_s3
+    bucket_helper.stubs(:s3).returns(mock_s3)
 
     mock_where = mock
     mock_where.expects(:first).returns({comment: nil}).once
@@ -69,11 +63,5 @@ class BucketHelperTest < Minitest::Test
 
     version_list = bucket_helper.list_versions('base64', 'main.json', with_comments: true)
     assert_equal [{versionId: '1234', lastModified: '0', isLatest: false}], version_list
-
-    # s3 is a class attribute of BucketHelper and needs to be reset
-    # The linter doesn't love this so we have to disable this check here.
-    # rubocop:disable Lint/UselessSetterCall
-    bucket_helper.s3 = nil
-    # rubocop:enable Lint/UselessSetterCall
   end
 end

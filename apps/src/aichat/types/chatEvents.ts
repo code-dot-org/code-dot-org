@@ -3,8 +3,9 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {ChatAsset} from './assets';
-import {AiCustomizations} from './customizations';
+import {ModelParameters} from './customizations';
 import {FeedbackValue} from './toxicity';
+import {UserAddedSelectionContextItem} from './userAddedSelectionContext';
 
 export type ChatEventDescriptionKey = 'CLEAR_CHAT' | 'LOAD_LEVEL';
 
@@ -17,10 +18,12 @@ interface BaseChatEvent {
 /** Base type for all chat messages */
 interface BaseChatMessage extends BaseChatEvent {
   chatMessageText: string;
+  hiddenContext?: string;
   /** Asset file names to optionally send with text content */
   assets?: ChatAsset[];
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
+  userAddedSelectionContext?: UserAddedSelectionContextItem[];
 }
 
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */
@@ -62,8 +65,8 @@ export interface UserActionEvent extends BaseChatEvent {
 export interface ModelUpdate extends BaseChatEvent {
   /** ID used for removing from this event from the student's chat workspace. */
   removeId: number;
-  updatedField: keyof AiCustomizations;
-  updatedValue: AiCustomizations[keyof AiCustomizations];
+  updatedField: keyof ModelParameters;
+  updatedValue: ModelParameters[keyof ModelParameters];
 }
 
 /** Any other general type of notification in the chat workspace. */

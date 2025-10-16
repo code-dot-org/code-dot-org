@@ -12,7 +12,7 @@
     "csa_view_mode": "console",
     "start_sources": {
       "TeacherRunner.java": {
-        "text": "public class TeacherRunner {\n  public static void main(String[] args) {\n\n    int[][] augustGrades = { {85, 90, 78}, {92, 87, 80}, {76, 89, 97} };\n\n    Teacher msHamilton = new Teacher(augustGrades);\n\n    int currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    msHamilton.setGrade(1, 1, 100);\n\n    currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    System.out.println(\"\\nPrint First Row:\");\n    System.out.println(msHamilton.getStudentGrades(0));\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n\n\n    \n    \n  }\n}",
+        "text": "public class TeacherRunner {\n  public static void main(String[] args) {\n\n    int[][] augustGrades = { {85, 90, 78}, \n                             {92, 87, 80}, \n                             {76, 89, 97} };\n\n    Teacher msHamilton = new Teacher(augustGrades);\n\n    int currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    msHamilton.setGrade(1, 1, 100);\n\n    currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */",
         "isVisible": true,
         "tabOrder": 0
       },
@@ -26,6 +26,6 @@
     "ai_tutor_available": true
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:36.085+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-2D Arrays PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-2D Arrays PBT_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:36.085+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-2D Arrays PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-2D Arrays PBT_pilot-2025\"},{\"changed_at\":\"2025-05-22 18:01:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

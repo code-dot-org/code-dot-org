@@ -1,44 +1,79 @@
-import {
-  Heading5,
-  OverlineOneText,
-} from '@code-dot-org/component-library/typography';
+import {Button} from '@code-dot-org/component-library/button';
+import {Heading5} from '@code-dot-org/component-library/typography';
+import {useSortable} from '@dnd-kit/sortable';
+import {CSS} from '@dnd-kit/utilities';
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import i18n from '@cdo/locale';
 
-import {SectionCardBody} from './SectionCardBody';
-import {SectionOptionsDropdown} from './SectionOptionsDropdown';
+import JoinLinkCopyButton from './JoinLink/JoinLinkCopyButton';
+import SectionAvatar from './sectionAvatars/SectionAvatar';
+import SectionCardBody from './SectionCardBody';
+import SectionOptionsDropdown from './SectionOptionsDropdown';
 
 import styles from './teacherHomepage.module.scss';
 
 interface SectionCardProps {
+  studioUrlPrefix: string;
   section: Section;
   onDeleteClickCallback: (sectionId: number) => void;
+  id: number;
 }
 
 export const SectionCard: React.FC<SectionCardProps> = ({
+  studioUrlPrefix,
   section,
   onDeleteClickCallback,
+  id,
 }) => {
+  const {attributes, listeners, setNodeRef, transform, transition, isDragging} =
+    useSortable({id});
+
+  const style = {
+    transform: CSS.Translate.toString(transform),
+    transition,
+    zIndex: isDragging ? 1 : undefined,
+  };
+
   return (
-    <div className={styles.sectionCardWrapper}>
+    <li
+      className={styles.sectionCardWrapper}
+      ref={setNodeRef}
+      style={{cursor: isDragging ? 'grabbing' : 'inherit', ...style}}
+      aria-labelledby={`section-card-title-${section.id}`}
+    >
       <div className={styles.sectionCardHeader}>
         <div className={styles.sectionCardHeaderLeft}>
+          {!section.hidden && (
+            <Button
+              {...attributes}
+              {...listeners}
+              onClick={() => {}} // Uses attributes and listeners to make the button draggable
+              isIconOnly
+              icon={{iconName: 'grip-vertical'}}
+              color="gray"
+              size="s"
+              aria-label={i18n.dragSection()}
+              type="tertiary"
+            />
+          )}
+          <SectionAvatar
+            color={section.avatar_color || 0}
+            emoji={section.avatar_emoji || 0}
+            size={'s'}
+          />
           <div className={styles.sectionCardHeaderText}>
-            <Heading5>{section.name}</Heading5>
-          </div>
-          <div className={styles.sectionCardCode}>
-            <OverlineOneText>
-              {i18n.classCode()}
-              <a
-                href={`/join/${section.code}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {section.code}
-              </a>
-            </OverlineOneText>
+            <Heading5 id={`section-card-title-${section.id}`}>
+              {section.name}
+            </Heading5>
+            <JoinLinkCopyButton
+              loginType={section.loginType}
+              sectionCode={section.code}
+              sectionId={section.id}
+              studioUrlPrefix={studioUrlPrefix}
+              hidden={section.hidden}
+            />
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
@@ -49,6 +84,6 @@ export const SectionCard: React.FC<SectionCardProps> = ({
         </div>
       </div>
       {!section.hidden && <SectionCardBody section={section} />}
-    </div>
+    </li>
   );
 };

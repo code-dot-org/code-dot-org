@@ -3,6 +3,9 @@
   "script_names": [
     "dance-extras-gallery"
   ],
+  "original_script_names": [
+    "dance-extras-gallery"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -1,0 +1,61 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:02.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Choice B\r\n\r\nFind the example music player that says \"Choice B\" below these instructions. Press the Play button on the player to hear the song.\r\n\r\nRefer to your activity guide to see if it would work for any client's needs.\r\n\r\nOnce you're done, press Continue to return back to your choices and pick a different song.",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "lady_gaga_born_this_way",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Choice B"
+    },
+    "display_name": "Choice B",
+    "thumbnail_url": "https://images.code.org/3df2816cd7dfa12f7911ee52f3e04138-Screenshot 2025-04-02 at 7.44.05 AM.png",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8lL\nW/SyrxeYBOE22MW62zzXxl7ZWtb3HROyH4RPTHsAcBBPo4PK1usYOsBDZKBO\nSB45w5QfTSl1PV+PTL2tu7L/zOMVsZ+3oATtBDd7H5bIlKixaN0iRSXfBQfO\nUP3iAZsT8Eyuhbmx+/+7bQ0+D5ozC1BLzE/l6Sxl0cp7JVy55SPCJdw6h7Bg\nd/njIZRIfi3d9idOshlrAC6ywpX3Trm1rN5zTdtJ4db9FiezMC1XoHxNl8Ki\nkcQTINQ8zy5UpuRleQvp6UneqwXkztl2IPqEZKse+MGocK1pk403RPhzUQDu\n69LOmEpH79WX2VKoIk7akfoezeQmmNdl8Q3f+/xnaKGkbR6aBMYPDeuZIAzk\nH9lmWfdhq1Ul06HKNVzcML7YjXu1X2X4cFleQT559YADtAExU6Z8vKbQIuif\nyHX3eqHthTuT0IU9jLpDT930Sp252vdnChHnEgDfpEURmLuQyRq51ZmF1Rtu\nxqsDF8l4xJQM+ef/bj6xYx353/qLIbOO9M99NRBZPtRf8U+6pVL2aoqL/Hu0\nsjdYh7kQtXJMjmw1dFBO9kkzUVUro/WzlsjNzPa2LUOu1YEbX5PjSSolSKcq\nLt0NBR9fX3FUPuTSNcO3upb4gnD6Np0c9NGRc2UfyqvV60bdwpuPmDuVkqdS\nQ1tKJvglzl0FiFjgXvb8f5AxceS93P1eAFbW5XAMZ61UgSYWW5Gx3lDf4hDD\nrzxCScsbwFPRD1f+3DO/nwP3BR7v61e4AMxfRF+GDjsSacMlY2N4QcPAdzBo\n3I/IS0laSMmHSpv5A/nOiz3JTRHQ4702CvqOpnjry+8XgMXrRD7F6XjQ2Qb4\n0LUnprPt2SeTPxPAm+bjGNA1X/jvediGZ2afB1Qsx0dLMOTgk9sRMBAE5K2+\n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\nK0eGkw1hX7JKQfEhyw0Hjyto+HzF7/6ASNleRd8YfxO/t4k1vCcDxT1qY2ov\nxwGyyq2VV2L4qMG29eLteeYsLX1bwSR5jzMOTpkJDf8PowiVoMxxD3nHd1DC\nEWNr2r5C43hXdZ7pQnzlGMauFrnvrMnSntM6slJiio39t1Svu2livUgCPpqB\nfwiYdHbMaEdSx5ZRpn/xjfb7z7+QCPExTYMlvbkmygpIaQL6jLx9c7Aui0q7\n968VBJTOB7ocbyvfvz5LOmMR/fcYwC6kPRCF+9f8cxbnyZHFKcPw/TLROgJK\n8rXSyQI/jr+fNTaSqe1ufBmC/nPQUOErwbnyjMfqkz7kI+C7alUstY5b2tgz\nwO1I+SiAq9gduC9v/ezYEzXvxEjZjAsUDBtqyew/vtmDZ8dLL+3/yR7m2IrH\nsv8UBPsR5D5qjxJp345m/l1BIdn1mNq5XgTVuid6kRgOPtY1dbBlZXeY3j+G\nVqOihjv8I/v1NXEZGlPZwq8z5OtF0cJOVZt+cTqM7VHHDXjZrciM85UFTBTF\n2+urLgsZz6Vd1diaP21T9OGZDp8HyoeuAAFFgA/OeiWY2qSh4MAVkWEjl84J\nUg3WQjas4jHtZ01fv1fxnS8Ah9SmOoCJoCR378uXPtvgGiK/iG8xlIufqvNK\nkh3lcVF3C2KLLiGLCiUnCgmlc9tySfzJZFDBrTNhIqB2TzsfKr5+DrfqSYNY\nKhPTkiU0nFL7W+6R+bfAi0G26XboEF9tR5L3LOTgrIuQKh2m67srS1LHRpf+\nwvEuODIazMHSsVLHyIkY219CPQ73IuFGqlVmlO/TDamiihd0wqCe8SCtxyJ8\nLNP0daRsdeyaj/CmL1TruXyvlzpnbu/4c07jVEEJZJf+Gl/rWSaIFrfwzTUZ\nuEaAUGrSnsDAZGA6FDD512TN9tLvods6PH8iip8061kppkblGzRhUTismsTL\nJP3M1NpIdZrHcECYyTjkNSRnin5Hu8N2IiD00xfO5JLIEyGgZ8TEkhXtutES\nFkA67ICQWsnvx9+uoCdGF0PrY+51TJJ5Vgeg0hanqiTrZuRL83XKymPSPhXj\nE9RoHtLC8dxPprR1LYDGE/YCdOgJrdMJuS3VMRzsvNXhIektYa+6VAhU4Jgy\nZWFiP1VQAycE39NAqEai6uAe6DYmB+0Kn8Q+6wjKs8TCfBEphqxoBAh8ehTT\n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\n",
+    "bubble_choice_description": "Click this option to hear a song with an **\"ambient synth remix of Lady Gaga\"** from your Song Portfolio. After listening to the song, you can decide if it would meet the needs of one of your clients",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:02.742+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-b\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,0 +1,36 @@
+name 'gen-ai-student-level-L8'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ✅ Lesson Recap: Attention Is All You Need
+
+#### After this lesson, you can 
+
+* #### Explain how embeddings and neural networks are used in the attention process
+* #### Construct examples of words and sentences that require context clues to understand fully
+
+## **Key Terms**
+
+* #### **Attention** - A process that updates the meaning of each word by using the context from the other words in the input
+
+## Resources
+
+### **Videos**
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<!-- Video for https://www.youtube.com/watch?v=2RdK6k45koY -->
+<!-- Youtube code 2RdK6k45koY --->
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://i.ytimg.com/vi/2RdK6k45koY/1.jpg" alt="Thumbnail image for youtube video Generative AI: Attention" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=2RdK6k45koY" target="_blank">Generative AI: Attention</a></b>
+  </p>
+</div>
+
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

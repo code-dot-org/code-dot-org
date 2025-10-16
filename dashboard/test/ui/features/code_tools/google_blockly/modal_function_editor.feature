@@ -2,7 +2,7 @@
 Feature: Modal Function Editor
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/lessons/36/levels/3?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/36/levels/3?noautoplay=true"
   And I wait for the lab page to fully load
   And I wait for 3 seconds
   And I wait until I don't see selector "#p5_loading"
@@ -11,9 +11,9 @@ Background:
   And element "#resetButton" is hidden
 
 Scenario: Can create a function
-  Then element "#blockly-9" is visible
+  Then element "#blockly-a" is visible
   And element "#modalFunctionEditor" is not visible
-  And I press "blockly-9"
+  And I press "blockly-a"
   And the open flyout has 1 blocks
   And I click toolbox block with selector ".blocklyFlyoutButton"
   # Open modal function editor
@@ -21,7 +21,7 @@ Scenario: Can create a function
   # Close editor
   And I press "closeModalFunctionEditor"
   # Now the function should be in the toolbox, along with the original function from start code
-  Then I press "blockly-9"
+  Then I press "blockly-a"
   And the open flyout has 2 blocks
 
 Scenario: Can edit a function
@@ -29,7 +29,7 @@ Scenario: Can edit a function
   Then I click block field that is number 1 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Open Sprites flyout
-  And I press "blockly-d"
+  And I press "blockly-f"
   # Drag new sprite block to top of function
   And I drag block number 2 to offset "40, 100"
   # Close function
@@ -48,5 +48,5 @@ Scenario: Can close the editor using the ESC key
   Then I click block field that is number 1 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Close editor
-  Then I press keys ":escape" for element "body"
+  Then I press keys ":escape"
   And element "#modalFunctionEditor" is not visible

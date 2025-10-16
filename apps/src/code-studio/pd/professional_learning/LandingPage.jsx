@@ -29,12 +29,18 @@ import {
 import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
+import teacherImg from '@cdo/static/misc/teacher-540x300.png';
+import plAdminsPageImg from '@cdo/static/professional-learning/admins-page-pl-448x280.png';
+import plBannerBooksWithBackgroundImg from '@cdo/static/professional-learning/banner-books-with-background-540x300.png';
+import plPageEducatorSupportImg from '@cdo/static/professional-learning/pl-page-educator-support.png';
+import plSuperheroGirlCropImg from '@cdo/static/professional-learning/pl-superhero-girl-crop-540x300.png';
 
 import {
   COURSE_CSF,
   COURSE_CSD,
   COURSE_CSP,
   COURSE_CSA,
+  COURSE_AIF,
 } from '../workshop_dashboard/workshopConstants';
 import WorkshopEnrollmentCelebrationDialog from '../workshop_enrollment/WorkshopEnrollmentCelebrationDialog';
 
@@ -101,7 +107,6 @@ function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
   showDeeperLearning,
-  currentYearApplicationId,
   hasEnrolledInWorkshop,
   plCoursesStarted,
   userPermissions,
@@ -136,8 +141,6 @@ function LandingPage({
   // - In the case of Build Your Own workshops, it will state the workshop's name.
   // - In the case of any other type of workshop, it will state the workshop's course.
   const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] =
-    useState('');
-  const [enrollSuccessWorkshopLocation, setEnrollSuccessWorkshopLocation] =
     useState('');
   const [
     enrollSuccessWorkshopSessionInfo,
@@ -208,7 +211,7 @@ function LandingPage({
         setLoadingWorkshopsAsFacilitator(true);
         try {
           const response = await fetch(
-            '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page',
+            'professional-learning/workshops_as_facilitator_for_pl_page',
             {
               method: 'GET',
               headers: {
@@ -237,7 +240,7 @@ function LandingPage({
         try {
           setLoadingWorkshopsAsOrganizer(true);
           const response = await fetch(
-            '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page',
+            'professional-learning/workshops_as_organizer_for_pl_page',
             {
               method: 'GET',
               headers: {
@@ -266,7 +269,7 @@ function LandingPage({
         setLoadingWorkshopsAsProgramManager(true);
         try {
           const response = await fetch(
-            '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page',
+            'professional-learning/workshops_as_program_manager_for_pl_page',
             {
               method: 'GET',
               headers: {
@@ -301,22 +304,23 @@ function LandingPage({
     }
 
     const workshopName = sessionStorage.getItem('workshopName', null);
-    setEnrollSuccessWorkshopLocation(
-      sessionStorage.getItem('workshopLocation', null)
-    );
     setEnrollSuccessWorkshopSessionInfo(
       JSON.parse(sessionStorage.getItem('sessionTimeInfo', null)) ?? []
     );
 
     analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
       'regional partner': sessionStorage.getItem('rpName', null),
+      'workshop id': sessionStorage.getItem('workshopId', null),
       'workshop course': workshopCourse,
       'workshop subject': sessionStorage.getItem('workshopSubject', null),
+      'workshop format': sessionStorage.getItem('workshopFormat', null),
     });
     [
+      'workshopId',
       'workshopCourse',
       'workshopSubject',
       'workshopName',
+      'workshopFormat',
       'sessionTimeInfo',
       'rpName',
     ].forEach(sessionKey => sessionStorage.removeItem(sessionKey));
@@ -328,7 +332,7 @@ function LandingPage({
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
-      imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
+      imageUrl={teacherImg}
       subHeading={i18n.plLandingSubheading()}
       description={i18n.plLandingDescription({
         course: lastWorkshopSurveyCourse,
@@ -349,16 +353,12 @@ function LandingPage({
   // - else, render either nothing or an announcement banner
   const RenderBanner = () => {
     const showGettingStartedBanner =
-      !currentYearApplicationId &&
-      !hasEnrolledInWorkshop &&
-      plCoursesStarted?.length === 0;
+      !hasEnrolledInWorkshop && plCoursesStarted?.length === 0;
 
     if (showGettingStartedBanner) {
       return (
         <TwoColumnActionBlock
-          imageUrl={pegasus(
-            '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
-          )}
+          imageUrl={plSuperheroGirlCropImg}
           heading={i18n.plLandingGettingStartedHeading()}
           subHeading={i18n.plLandingGettingStartedSubHeading()}
           description={i18n.plLandingGettingStartedDescription()}
@@ -376,9 +376,7 @@ function LandingPage({
       // TODO(ACQ-1998): Remove this block after the 2024 curriculum launch
       return (
         <TwoColumnActionBlock
-          imageUrl={pegasus(
-            '/images/fill-540x300/professional-learning/banner-books-with-background.png'
-          )}
+          imageUrl={plBannerBooksWithBackgroundImg}
           subHeading={i18n.plLandingCurriculumLaunchBannerSubHeading()}
           description={i18n.plLandingCurriculumLaunchBannerDescription()}
           buttons={[
@@ -408,13 +406,13 @@ function LandingPage({
     if (!hideMyPLStaticRecommendedPLMidHighBlock) {
       actionBlocks.push({
         overline: i18n.plLandingStaticPLMidHighOverline(),
-        imageUrl: pegasus('/images/pl-page-educator-support.png'),
+        imageUrl: plPageEducatorSupportImg,
         heading: i18n.plLandingStaticPLMidHighHeading(),
         description: i18n.plLandingStaticPLMidHighDesc(),
         buttons: [
           {
             color: 'purple',
-            url: pegasus('/educate/professional-learning/middle-high'),
+            url: '/professional-learning/workshops',
             text: i18n.plLandingStaticPLMidHighButton(),
           },
         ],
@@ -424,7 +422,7 @@ function LandingPage({
     if (!hideMyPLStaticRecommendedPLSelfPacedBlock) {
       actionBlocks.push({
         overline: i18n.plLandingStaticPLSelfPacedOverline(),
-        imageUrl: pegasus('/images/fill-448x280/admins-page-pl.png'),
+        imageUrl: plAdminsPageImg,
         heading: i18n.plLandingStaticPLSelfPacedHeading(),
         description: i18n.plLandingStaticPLSelfPacedDesc(),
         buttons: [
@@ -498,6 +496,12 @@ function LandingPage({
         urlSlug: 'computer-science-a',
       });
     }
+    if (coursesAsFacilitator.includes(COURSE_AIF)) {
+      landingPageCourses.push({
+        name: 'AIF',
+        urlSlug: 'ai-fundamentals',
+      });
+    }
     landingPageCourses.forEach(course => {
       allResources.push({
         headingText: i18n.plSectionsFacilitatorResourcesTitle({
@@ -541,12 +545,6 @@ function LandingPage({
   const RenderRegionalPartnerResources = () => {
     const resources = [
       {
-        headingText: i18n.plSectionsRegionalPartnerApplicationTitle(),
-        descriptionText: i18n.plSectionsRegionalPartnerApplicationDesc(),
-        buttonText: i18n.plSectionsRegionalPartnerApplicationButton(),
-        buttonUrl: '/pd/application_dashboard',
-      },
-      {
         headingText: i18n.plSectionsWorkshopTitle(),
         descriptionText: i18n.plSectionsWorkshopDesc(),
         buttonText: i18n.plSectionsWorkshopButton(),
@@ -556,7 +554,7 @@ function LandingPage({
         headingText: i18n.plSectionsRegionalPartnerPlaybookTitle(),
         descriptionText: i18n.plSectionsRegionalPartnerPlaybookDesc(),
         buttonText: i18n.plSectionsRegionalPartnerPlaybookButton(),
-        buttonUrl: pegasus('/educate/regional-partner/playbook'),
+        buttonUrl: '/professional-learning/regional-partner/playbook',
       },
     ];
     return (
@@ -582,7 +580,6 @@ function LandingPage({
           enrollSuccessWorkshopTitle && (
             <WorkshopEnrollmentCelebrationDialog
               workshopTitle={enrollSuccessWorkshopTitle}
-              workshopLocation={enrollSuccessWorkshopLocation}
               workshopSessionInfo={enrollSuccessWorkshopSessionInfo}
               onClose={() => setEnrollSuccessWorkshopTitle('')}
             />
@@ -730,13 +727,12 @@ LandingPage.propTypes = {
   lastWorkshopSurveyUrl: PropTypes.string,
   lastWorkshopSurveyCourse: PropTypes.string,
   showDeeperLearning: PropTypes.bool,
-  currentYearApplicationId: PropTypes.number,
   hasEnrolledInWorkshop: PropTypes.bool,
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),
-  joinedStudentSections: shapes.sections,
-  joinedPlSections: shapes.sections,
+  joinedStudentSections: shapes.participantSections,
+  joinedPlSections: shapes.participantSections,
   coursesAsFacilitator: PropTypes.arrayOf(PropTypes.string),
   plSectionIds: PropTypes.arrayOf(PropTypes.number),
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),

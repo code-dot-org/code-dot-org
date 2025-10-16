@@ -82,19 +82,39 @@ class ReportAbuseController < ApplicationController
     return head :unauthorized unless can?(:destroy_abuse, nil)
 
     begin
-      value = Projects.new(get_storage_id).reset_abuse(params[:channel_id])
+      channel_id = params[:channel_id]
+      value = Projects.new(get_storage_id).reset_abuse(channel_id)
+      update_file_abuse_score('assets', channel_id, 0)
+      update_file_abuse_score('files', channel_id, 0)
+      update_file_abuse_score('libraries', channel_id, 0)
+      update_file_abuse_score('sources', channel_id, 0)
+      update_file_abuse_score('animations', channel_id, 0)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
     end
     render json: {abuse_score: value}
   end
 
-  # PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=:abuse_score
-  def update_file_abuse
-    return head :unauthorized unless can?(:update_file_abuse, nil)
+  # POST /v3/channels/:channel_id/abuse/image
+  # Update the project abuse score as a result of image moderation.
+  # If type is 'flag', then abuse score is incremented by 15 which will reach the abuse threshold.
+  # If type is 'unflag', then abuse score is decremented by 15.
+  # Otherwise, returns a 400 Bad Request error.
+  # params are: :type
+  def update_abuse_image_moderation
+    return head :unauthorized unless current_user
+    type = params[:type]
 
-    value = update_file_abuse_score(params[:endpoint], params[:encrypted_channel_id], params[:abuse_score])
+    unless ['flag', 'unflag'].include?(type)
+      return render json: {error: "Invalid type parameter. Must be 'flag' or 'unflag'."}, status: :bad_request
+    end
 
+    amount = type == 'flag' ? 15 : -15
+    begin
+      value = Projects.new(get_storage_id).increment_abuse(params[:channel_id], amount, current_user&.project_validator?)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      raise ActionController::BadRequest.new, "Bad channel_id"
+    end
     render json: {abuse_score: value}
   end
 

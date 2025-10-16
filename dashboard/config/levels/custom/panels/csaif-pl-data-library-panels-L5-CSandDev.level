@@ -26,7 +26,7 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "## Analyzing the Data \nUse the caret tab (🔽) in the popularity rating column to sort the data from highest to lowest—this will help you quickly find the top-rated books.",
+        "text": "## Analyzing the Data \nUse the filter tab in the popularity rating column to sort the data from highest to lowest—this will help you quickly find the top-rated books.",
         "imageUrl": "https://images.code.org/a1d78a16f28bb436c4b26560901cdffb-panel slides (6).png",
         "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
         "layout": "text-top-left",
@@ -40,13 +40,13 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "## Up Next\nAs you proceed to the next level, feel free to work through as much or as little of the activity as you like.\n\nRemeber to use the <a href=\"https://docs.google.com/document/d/1XzYTHgCSkDFogdTEkddYqgm6heBQ2s-pYSlcNkJNZYs/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\">Activity Guide</a> to guide you through the lesson.",
+        "text": "## Up Next\nAs you proceed to the next level, feel free to work through as much or as little of the activity as you like.\n\nRemember to use the <a href=\"https://docs.google.com/document/d/1XzYTHgCSkDFogdTEkddYqgm6heBQ2s-pYSlcNkJNZYs/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\">Activity Guide</a> to guide you through the lesson.",
         "imageUrl": "https://images.code.org/05dd3491e441404703e71d6d33ce4d90-panel slides (8).png",
         "key": "csaif-pl-data-library-panels-L5-CSandDev-061a3301-6515-4f18-9963-040f193637c5",
         "layout": "text-top-left"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-19T19:27:30.180+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-hardware-panels-L4-1-CSandDev\\\"\"],\"cloned_from\":\"csaif-pl-hardware-panels-L4-1-CSandDev\"},{\"changed_at\":\"2025-03-21 15:12:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-19T19:27:30.180+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-hardware-panels-L4-1-CSandDev\\\"\"],\"cloned_from\":\"csaif-pl-hardware-panels-L4-1-CSandDev\"},{\"changed_at\":\"2025-03-21 15:12:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-03 15:36:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-03 15:42:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

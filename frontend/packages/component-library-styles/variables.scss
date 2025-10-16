@@ -4,3 +4,15 @@ $form-field-width: 18.75rem;
 
 // Border radius
 $regular-border-radius: 0.25rem;
+
+// z-index values
+// These values match Bootstrap's z-index values
+// See: https://getbootstrap.com/docs/5.0/layout/z-index/
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-modal-backdrop: 1040;
+$zindex-offcanvas: 1050;
+$zindex-modal: 1060;
+$zindex-popover: 1070;
+$zindex-tooltip: 1080;

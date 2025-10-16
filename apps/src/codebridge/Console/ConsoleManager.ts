@@ -9,9 +9,7 @@ export default class ConsoleManager {
   private inputBuffer: string;
   // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
   private lastLineIsPartial: boolean;
-
-  private IMAGE_WIDTH = 600;
-  private IMAGE_HEIGHT = 600;
+  private terminalLinesListeners: ((lines: string[]) => void)[] = [];
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;
@@ -41,6 +39,7 @@ export default class ConsoleManager {
     this.terminalLines = [];
     this.terminal.clear();
     this.lastLineIsPartial = false;
+    this.executeTerminalLinesListeners();
   }
 
   public getTerminalLines() {
@@ -58,28 +57,6 @@ export default class ConsoleManager {
     this.terminal.write(message);
     this.terminal.scrollToBottom();
     this.terminal.focus();
-  }
-
-  public writeSystemMessage(message: string, appName?: string) {
-    this.writeConsoleMessage(this.getSystemMessage(message, appName));
-  }
-
-  public writeErrorMessage(message: string) {
-    // This colors the message red in the terminal
-    // Reference for color codes: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
-    this.writeConsoleMessage(`\x1b[38;5;203m${message}\x1b[0m`);
-  }
-
-  public writeSystemError(message: string, appName: string) {
-    this.writeErrorMessage(this.getSystemMessage(message, appName));
-  }
-
-  public writeImage(base64Image: string) {
-    const dataSize = atob(base64Image).length;
-    // This is a special sequence that tells the terminal to display an image
-    // See documentation here: https://iterm2.com/documentation-images.html
-    const imageString = `\x1b]1337;File=inline=1;size=${dataSize};width=${this.IMAGE_WIDTH}px;height=${this.IMAGE_HEIGHT}px:${base64Image}\x1b\\`;
-    this.appendTerminalLine(imageString);
   }
 
   public appendToInputBuffer(data: string) {
@@ -103,6 +80,22 @@ export default class ConsoleManager {
     this.inputBuffer = '';
   }
 
+  public addTerminalLinesListener(listener: (lines: string[]) => void) {
+    this.terminalLinesListeners.push(listener);
+  }
+
+  public removeTerminalLinesListener(listener: (lines: string[]) => void) {
+    this.terminalLinesListeners = this.terminalLinesListeners.filter(
+      l => l !== listener
+    );
+  }
+
+  private executeTerminalLinesListeners() {
+    this.terminalLinesListeners.forEach(listener =>
+      listener(this.terminalLines)
+    );
+  }
+
   private appendTerminalLine(line: string) {
     this.updateTerminalLines(line);
     this.lastLineIsPartial = false;
@@ -111,16 +104,12 @@ export default class ConsoleManager {
     this.terminal.focus();
   }
 
-  private getSystemMessage(message: string, appName?: string) {
-    const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
-    return `${systemMessagePrefix}${message}`;
-  }
-
   private updateTerminalLines(message: string) {
     if (this.lastLineIsPartial && this.terminalLines.length > 0) {
       this.terminalLines[this.terminalLines.length - 1] += message;
     } else {
       this.terminalLines.push(message);
     }
+    this.executeTerminalLinesListeners();
   }
 }

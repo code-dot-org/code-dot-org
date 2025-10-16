@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2024-01-12T21:32:49.000Z",
+  "created_at": "2025-06-11T18:57:19.000Z",
   "level_num": "custom",
   "user_id": 832,
   "properties": {
@@ -62,6 +62,7 @@
     "start_blocks": "// Create and assign values to your variables\r\n\r\n// Add your event handlers\r\n\r\n",
     "name_suffix": "_2024",
     "ai_enabled": "false",
+    "skill_keys": "[\"variables_declare\",\"variables_name\",\"variables_name_meaning\",\"variables_assignment_operator\"]",
     "preload_asset_list": null
   },
   "published": true,

@@ -5,8 +5,12 @@ import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
 import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
+import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 
-$(document).ready(initPage);
+$(document).ready(() => {
+  prepareBlocklyForEmbeddingAllEnvironments();
+  initPage();
+});
 
 function initPage() {
   const script = document.querySelector('script[data-courses-rollup]');

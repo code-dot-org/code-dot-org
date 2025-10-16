@@ -1,11 +1,14 @@
-@import 'color.scss';
 .previewContainer {
-  background-color: $light_black;
+  background-color: var(--background-neutral-primary);
 }
 
 .previewHeader {
   height: 40px;
   min-height: 40px;
+
+  & > div {
+    height: 40px;
+  }
 }
 
 .miniAppContainer {

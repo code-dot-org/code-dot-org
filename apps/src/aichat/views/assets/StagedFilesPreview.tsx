@@ -1,12 +1,17 @@
 import Alert, {type AlertProps} from '@code-dot-org/component-library/alert';
 import React from 'react';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {MAX_FILE_SIZE_MB, MAX_NUM_FILES} from '../../constants';
 import aichatI18n from '../../locale';
-import {clearStagedFilesAlert, removeStagedFile} from '../../redux';
-import {getAssetUrl} from '../../utils';
+import {
+  clearStagedFilesAlert,
+  removeStagedFile,
+  stagedFileUploadFinished,
+} from '../../redux';
+import {ChatAsset} from '../../types';
 
 import FilePreview from './FilePreview';
 
@@ -24,11 +29,15 @@ const alerts = {
   ] as const,
 } satisfies {[key: string]: [string, AlertProps['type']]};
 
-const StagedFilesPreview: React.FC = () => {
+interface StagedFilesPreviewProps {
+  buildAssetUrl: (asset: ChatAsset) => string;
+}
+
+const StagedFilesPreview: React.FC<StagedFilesPreviewProps> = ({
+  buildAssetUrl,
+}) => {
   const dispatch = useAppDispatch();
   const stagedFiles = useAppSelector(state => state.aichat.stagedFiles);
-  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
-  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
 
   const [alertMessage, style] = useAppSelector(state => {
     if (!state.aichat.stagedFilesAlert) {
@@ -51,10 +60,20 @@ const StagedFilesPreview: React.FC = () => {
             <FilePreview
               key={key}
               type={filename.endsWith('.pdf') ? 'pdf' : 'image'}
-              url={getAssetUrl(asset, currentChannelId, levelName)}
+              url={`${buildAssetUrl(asset)}?t=${key}`}
               filename={filename}
               isUploading={status === 'uploading'}
               onRemove={() => dispatch(removeStagedFile(key))}
+              onLoadError={() => {
+                dispatch(
+                  stagedFileUploadFinished({key, status: 'uploadFailed'})
+                );
+                Lab2Registry.getInstance()
+                  .getMetricsReporter()
+                  .logError('Error loading staged file', undefined, {
+                    asset,
+                  });
+              }}
             />
           );
         })}

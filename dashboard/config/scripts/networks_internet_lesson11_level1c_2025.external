@@ -1,6 +1,8 @@
 name 'networks-internet-lesson11-level1c_2025'
 title 'NovaTech Robotics'
-description 'description here'
+display_name 'NovaTech Robotics'
+bubble_choice_description 'NovaTech Robotics still uses default factory-set usernames and passwords, making them easy to compromise.'
+thumbnail_url 'https://images.code.org/0089ba64d923e3d314933f6514f88208-image-1740388484737.jpg'
 
 markdown <<MARKDOWN
 # NovaTech Robotics  

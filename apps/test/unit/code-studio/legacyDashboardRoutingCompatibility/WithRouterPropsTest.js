@@ -40,7 +40,7 @@ describe('WithRouterProps', () => {
   };
   const mockSearchParams = new URLSearchParams({key: 'value'});
   const mockRouteConfigs = [
-    {path: '/test-route', breadcrumbs: 'Test Breadcrumb'},
+    {path: 'test-route', breadcrumbs: 'Test Breadcrumb'},
   ];
 
   beforeEach(() => {
@@ -68,6 +68,99 @@ describe('WithRouterProps', () => {
     // https://codedotorg.atlassian.net/browse/ACQ-3128
     expect(screen.getByText(/routes:/)).toHaveTextContent(
       JSON.stringify([{}, {breadcrumbs: 'Test Breadcrumb'}])
+    );
+  });
+
+  it('handles nested routeConfigs and returns child breadcrumbs', () => {
+    const nestedRouteConfigs = [
+      {
+        path: 'parent',
+        breadcrumbs: 'Parent',
+        childRoutes: [
+          {
+            path: 'child',
+            breadcrumbs: 'Child',
+          },
+        ],
+      },
+    ];
+    useLocation.mockReturnValue({
+      pathname: '/parent/child',
+      search: '?nested=true',
+    });
+    matchPath.mockImplementation(
+      (path, pathname) =>
+        pathname === '/parent/child' && path === '/parent/child'
+    );
+    useSearchParams.mockReturnValue([new URLSearchParams({nested: 'true'})]);
+
+    render(
+      <WithRouterProps
+        component={TestComponent}
+        routeConfigs={nestedRouteConfigs}
+      />
+    );
+    expect(screen.getByText(/routes:/)).toHaveTextContent(
+      JSON.stringify([{}, {breadcrumbs: 'Child'}])
+    );
+  });
+
+  it('returns undefined breadcrumbs if no match in nested routeConfigs', () => {
+    const nestedRouteConfigs = [
+      {
+        path: 'parent',
+        breadcrumbs: 'Parent',
+        childRoutes: [
+          {
+            path: 'child',
+            breadcrumbs: 'Child',
+          },
+        ],
+      },
+    ];
+    useLocation.mockReturnValue({
+      pathname: '/parent/unknown',
+      search: '?nested=false',
+    });
+    matchPath.mockImplementation((path, pathname) => false);
+    useSearchParams.mockReturnValue([new URLSearchParams({nested: 'false'})]);
+
+    render(
+      <WithRouterProps
+        component={TestComponent}
+        routeConfigs={nestedRouteConfigs}
+      />
+    );
+    expect(screen.getByText(/routes:/)).toHaveTextContent(
+      JSON.stringify([{}, {breadcrumbs: undefined}])
+    );
+  });
+
+  it('normalizes multiple slashes in route path and matches breadcrumbs', () => {
+    const multiSlashRouteConfigs = [
+      {
+        path: '//parent//child',
+        breadcrumbs: 'MultiSlash',
+      },
+    ];
+    useLocation.mockReturnValue({
+      pathname: '/parent/child',
+      search: '?multi=true',
+    });
+    matchPath.mockImplementation(
+      (path, pathname) =>
+        path === '/parent/child' && pathname === '/parent/child'
+    );
+    useSearchParams.mockReturnValue([new URLSearchParams({multi: 'true'})]);
+
+    render(
+      <WithRouterProps
+        component={TestComponent}
+        routeConfigs={multiSlashRouteConfigs}
+      />
+    );
+    expect(screen.getByText(/routes:/)).toHaveTextContent(
+      JSON.stringify([{}, {breadcrumbs: 'MultiSlash'}])
     );
   });
 });

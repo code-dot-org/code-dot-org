@@ -7,6 +7,7 @@ module RegistrationsControllerTests
   #
   class EmailTest < ActionDispatch::IntegrationTest
     include OmniauthCallbacksControllerTests::Utils
+    include Minitest::RSpecMocks
 
     setup do
       stub_firehose
@@ -19,7 +20,8 @@ module RegistrationsControllerTests
         user: {
           email: email,
           password: 'mypassword',
-          password_confirmation: 'mypassword'
+          password_confirmation: 'mypassword',
+          user_type: User::TYPE_STUDENT,
         }
       }
       assert PartialRegistration.in_progress? session
@@ -40,7 +42,8 @@ module RegistrationsControllerTests
         user: {
           email: email,
           password: 'mypassword',
-          password_confirmation: 'mypassword'
+          password_confirmation: 'mypassword',
+          user_type: User::TYPE_TEACHER
         }
       }
       assert PartialRegistration.in_progress? session
@@ -52,6 +55,32 @@ module RegistrationsControllerTests
       assert_equal email, created_user.email
     ensure
       created_user&.destroy!
+    end
+
+    describe "disallowed email domain" do
+      let(:domain) {'testdomain.com'}
+      let(:disallowed_domains) {{domain => {provider_exceptions: []}}}
+      let(:email) {"user@#{domain}"}
+
+      before do
+        stub_const('Policies::Devise::EmailDomains::DISALLOWED_DOMAINS', disallowed_domains)
+
+        post '/users/begin_sign_up', params: {
+          user: {
+            email: email,
+            password: 'mypassword',
+            password_confirmation: 'mypassword',
+            user_type: User::TYPE_STUDENT
+          }
+        }
+      end
+
+      it "forbids sign up" do
+        _(response.status).must_equal 403
+        _(response.body).must_match(
+          /Emails from #{Regexp.escape(domain)} are not allowed to sign up with email and password\. Please use your LMS to sign in\./
+        )
+      end
     end
 
     private def finish_email_sign_up(user_type, email)

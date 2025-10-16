@@ -14,6 +14,8 @@ const tooltipText = {
   challenge: 'Show students the Challenge dialog when viewing this level.',
   instructor_in_training:
     'Allow participant in a professional learning course to view certain instructor features.',
+  show_ai_analysis:
+    'Show AI analysis of student responses on the level summary page.',
 };
 
 const optionText = {
@@ -21,6 +23,7 @@ const optionText = {
   assessment: 'Assessment',
   challenge: 'Challenge',
   instructor_in_training: 'Instructor In Training',
+  show_ai_analysis: 'Show AI Analysis',
 };
 
 const disabledBonusTooltipText =
@@ -75,7 +78,12 @@ class LevelTokenDetails extends Component {
     Object.keys(tooltipText).forEach(option => {
       tooltipIds[option] = _.uniqueId();
     });
-    const scriptLevelOptions = ['bonus', 'assessment', 'challenge'];
+    const scriptLevelOptions = [
+      'bonus',
+      'assessment',
+      'challenge',
+      'show_ai_analysis',
+    ];
 
     if (this.props.isProfessionalLearningCourse) {
       scriptLevelOptions.push('instructor_in_training');

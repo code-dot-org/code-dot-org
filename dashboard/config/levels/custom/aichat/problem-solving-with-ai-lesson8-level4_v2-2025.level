@@ -1,0 +1,58 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:53:03.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Reference\r\n\r\nUse AI Chat to help design a new building. \r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response. \r\n\r\n>You are an architect planning a building downtown. Figure out how many shops can fit on the ground floor of the new building, which is the size of a football field.\r\n\r\n2. Add a **reference** to your prompt by:\r\n    - Uploading a blueprint of the building from the Library\r\n    - Finding your own reference to upload\r\n3. Revise your prompt to AI Chat by adding in **Reference**. Press **Send** and read AI Chat's response. \r\n4. Find and complete the section in your Unit Guide called \"Reference\". \r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Not sure what reference to add?**]\r\nTry copy and pasting the following revised prompt into AI Chat: \r\n>You are an architect planning a building downtown. Look at the blueprint attached and figure out how many shops can fit on the ground floor of the new building, which is the size of a football field.\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "If you are provided an attached blueprint, first examine the image. Then, use the geometrical formula for rectangles, triangles, and circles, as needed, to calculate the areas of various smaller shapes that make up the larger blueprint. Sum up the square footage that you observe, based on the shapes present in the blueprint.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
+    "display_name": "Hospital Triage Nurse",
+    "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png",
+    "starter_assets": {
+      "blueprint_1.png": "80e31cd5-17c5-41a3-9558-5463f264f6fd.png",
+      "blueprint_2.png": "50fd1423-c5dd-48e0-b68f-f1db484a21d2.png",
+      "blueprint_3.png": "79e51c90-060f-42be-866b-469407d7a04f.png",
+      "blueprint_4.png": "60770973-3cc3-45f9-9784-51b493207428.png"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:03.812+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level4_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level4_2025\"}]"
+}]]></config>
+</Aichat>

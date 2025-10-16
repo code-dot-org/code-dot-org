@@ -5,12 +5,17 @@ import {
   ChatEvent,
   FieldVisibilities,
   PendingChatMessage,
+  SaveError,
   SaveType,
   ServerChatEvent,
   ViewMode,
+  AiChatClientType,
+  WorkspaceTeacherViewTab,
+  UserAddedSelectionContext,
 } from '../types';
 
 export interface AichatState {
+  clientType?: AiChatClientType;
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
   chatEventsPast: ChatEvent[];
@@ -44,4 +49,17 @@ export interface AichatState {
     | 'fileLimitExceeded'
     | 'sizeLimitExceeded'
     | undefined;
+  // If the user has a sent a message on this level
+  hasSentMessage: boolean;
+  // If starting customizations have been set on this level
+  hasSetStartingCustomizations: boolean;
+  // If the user has updated customizations on this level
+  hasUpdatedCustomizations: boolean;
+  // Error message to display if a save fails
+  saveError: SaveError | undefined;
+  // If the model customizations were just reset to the default level values.
+  showResetMessage: boolean;
+  // The tab selected when a teacher is viewing a student's chat history.
+  chatWorkspaceSelectedTab: WorkspaceTeacherViewTab | null;
+  userAddedSelectionContext: UserAddedSelectionContext;
 }

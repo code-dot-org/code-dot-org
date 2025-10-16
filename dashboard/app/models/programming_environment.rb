@@ -111,6 +111,7 @@ class ProgrammingEnvironment < ApplicationRecord
 
   def summarize_for_show
     {
+      name: name,
       title: title,
       description: localize_description,
       projectUrl: project_url,

@@ -1,0 +1,9 @@
+name 'networks-internet-lesson11-level1_v2-2025'
+display_name 'Company Case Studies'
+description 'Pick one of the companies below and analyze the security scenario for that company. Identify and categorize possible vulnerabilities and analyze the impacts of each.'
+
+sublevels
+level 'networks-internet-lesson11-level1a_v2-2025'
+level 'networks-internet-lesson11-level1b_v2-2025'
+level 'networks-internet-lesson11-level1c_v2-2025'
+level 'networks-internet-lesson11-level1d_v2-2025'

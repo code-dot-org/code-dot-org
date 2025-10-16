@@ -18,7 +18,7 @@ describe('StudentLessonOverview', () => {
       lesson: {
         unit: {
           displayName: 'Unit 1',
-          link: '/s/unit-1',
+          link: '/courses/course/units/1',
           lessonGroups: [
             {
               key: 'lg-1',
@@ -46,7 +46,8 @@ describe('StudentLessonOverview', () => {
         id: 1,
         key: 'lesson-1',
         position: 1,
-        displayName: 'Lesson 1',
+        displayName: 'Lesson One Name',
+        title: 'Lesson One Title',
         overview: 'Lesson Overview',
         resources: [
           {
@@ -90,13 +91,13 @@ describe('StudentLessonOverview', () => {
   it('renders default props', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const navLink = wrapper.find('a').at(0);
-    expect(navLink.props().href).toContain('/s/unit-1');
+    expect(navLink.props().href).toContain('/courses/course/units/1');
     expect(navLink.contains('< Unit 1')).toBe(true);
 
     expect(wrapper.find('LessonNavigationDropdown').length).toBe(1);
 
     // Lesson Name
-    expect(wrapper.contains('Lesson 1: Lesson 1')).toBe(true);
+    expect(wrapper.contains('Lesson One Title')).toBe(true);
 
     const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
     expect(enhancedSafeMarkdowns.at(0).props().markdown).toContain(
@@ -198,7 +199,7 @@ describe('StudentLessonOverview', () => {
       <StudentLessonOverview {...defaultProps} lessonLevels={lessonLevels} />
     );
     expect(wrapper.find('#level-section').length).toEqual(1);
-    expect(wrapper.text()).toContain('Lesson 1');
+    expect(wrapper.text()).toContain('Lesson One Title');
   });
 
   it('Does not render levels if no levels present', () => {

@@ -1,0 +1,75 @@
+name 'csaif_pl_inter_wrap-up_02_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Check for Understanding: Answer
+
+<table style="width: 100%; border-collapse: separate; border-spacing: 20px; font-family: Arial, sans-serif;">
+  <tr>
+    <td style="width: 30%; background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; vertical-align: middle; border-radius: 10px;">
+      Threat
+    </td>
+    <td style="width: 65%; background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; vertical-align: middle; border-radius: 10px;">
+      Something that could damage or break into a system (e.g., malware, scam, breach)
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      Vulnerability
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      A weakness that makes a system easier to attack (e.g., outdated software)
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      Anomaly
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      Something unusual in network activity that may be a sign of a threat
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      Phishing
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      A fake message (email, text) trying to trick someone into giving personal info
+    </td>
+  </tr>
+    <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      Breach
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      When unauthorized people get access to secure data
+    </td>
+  </tr>
+    <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      False Positive
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      When AI flags something as a threat—but it is actually safe
+    </td>
+  </tr>
+      <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      AI Bias
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      When an AI system makes unfair decisions based on incomplete or skewed data
+    </td>
+  </tr>
+    <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      Mitigation
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      An action or tool that reduces the risk of a threat
+    </td>
+  </tr>
+  
+</table>
+MARKDOWN

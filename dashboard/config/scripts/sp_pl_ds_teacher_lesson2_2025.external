@@ -5,32 +5,54 @@ description 'description here'
 markdown <<MARKDOWN
 # Making Sense of Data 
 
+<img src="https://images.code.org/80ecbee7c4dfb3f1c882ad81b5013b21-image-1744644828568.png" alt="Image CS Discoveries students" width="275px" style="border-radius:10px; float:right; margin: 0 0 10px 40px;">
+
 #### After using the Three Reads strategy, students will analyze a larger dataset to answer the question: *How much pizza should we order for a school party?*
+
 #### This dataset includes survey responses from hundreds of students, and they'll learn **how data scientists use computers to handle large, complex data sets**.
 
+#### They will us the AI Chat Lab to assist with their data analysis. 
 
-
-<hr style="clear:both">
-
-<img src="https://images.code.org/7dd4694227e30be4aad877c24ecaba9f-image-1724268144095.png" style="float: left; height: 175px; clear: both; margin: 0 30px 20px 0;">
-
-<div style="background-color: #dccbea; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.2px 10px 1px 10px;">
-
-
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="font-size: 16px; line-height: 1.5; margin-left: 10px; margin-right: 30px;">These beginning lessons have a lot of vocabulary. To save my time, and increase engagement, I can invite students to come up and add the definitions to our anchor chart or word wall.
-</p>
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-</p>
-</div>
-
-  <div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 
-#### The first two lessons students gain a foundational understanding of what data is and how to read it on spreadsheets. Students will build on this knowledge as they continue the journey through data science.
+## How AI Helps Us Understand Data
 
-## Let's continue to data ethics!
+<div style="display: flex; gap: 40px; align-items: flex-start; font-size: 16pt;">
+
+<!-- Left Column: AI Tool Capabilities -->
+<div style="border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; box-shadow: 2px 2px 6px rgba(0,0,0,0.15); padding: 20px; background-color: #f9fafa; max-width: 400px;">
+    <strong>AI data analytics tools can:</strong>
+    <ul style="padding-left: 20px; margin-top: 10px; font-size: 16pt;">
+      <li>Analyze large datasets in seconds</li><br>
+      <li>Spot patterns, trends, and outliers</li><br>
+      <li>Summarize data and make predictions</li>
+    </ul>
+  </div>
+
+  <!-- Right Column: YouTube Use Case Examples -->
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 400px;">
+
+<div style="display: flex; gap: 15px; align-items: flex-start;">
+      <img src="https://images.code.org/edd3d3876661789bc7b940ae57131ea6-image-1744644404677.png" alt="Spreadsheet icon" style="width: 40px; height: 40px;">
+      <div style="font-size: 16pt;">YouTube tracks what millions of viewers watch, like, and search.</div>
+    </div>
+
+<div style="display: flex; gap: 15px; align-items: flex-start;">
+      <img src="https://img.icons8.com/office/40/combo-chart.png" alt="Chart icon" style="width: 40px; height: 40px;">
+      <div style="font-size: 16pt;">AI spots trends like: “People who watch vlogs also like travel videos.”</div>
+    </div>
+
+<div style="display: flex; gap: 15px; align-items: flex-start;">
+      <img src="https://img.icons8.com/office/40/youtube-play.png" alt="YouTube icon" style="width: 40px; height: 40px;">
+      <div style="font-size: 16pt;">AI predicts videos you’ll probably enjoy next.</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+## Let's practice Analyzing Data with AI!
 MARKDOWN

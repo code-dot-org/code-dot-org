@@ -6,11 +6,13 @@
     "properties": {
       "content_area": "other",
       "curriculum_umbrella": "Other",
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:26 UTC",
+    "serialized_at": "2025-10-01 18:37:47 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -200,6 +202,51 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Lesson 10 - Data Visualization",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "EscA.I.pe Room",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Sketch Lab Levels",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -374,6 +421,54 @@
       "seeding_key": {
         "lesson_activity.key": "632c27e9-770e-4f98-87b8-bc219c9ac415",
         "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "3ff7f875-07cb-4086-a618-1d9fb75b00d4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ff7f875-07cb-4086-a618-1d9fb75b00d4",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "704b1c3b-93a2-4b6c-afb5-ea289b4c8ed7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "704b1c3b-93a2-4b6c-afb5-ea289b4c8ed7",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "1e7639d7-0108-42dd-a357-87860bc19a74",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e7639d7-0108-42dd-a357-87860bc19a74",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "3af229ae-9678-4db3-90dd-5e140db74b5b",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3af229ae-9678-4db3-90dd-5e140db74b5b",
+        "lesson.key": "lesson-14",
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
@@ -728,6 +823,102 @@
       "seeding_key": {
         "activity_section.key": "c96fe760-3d6f-468f-a5a4-2f8e6e87a6a1",
         "lesson_activity.key": "632c27e9-770e-4f98-87b8-bc219c9ac415"
+      }
+    },
+    {
+      "key": "f0a85285-51fa-418f-8b36-26853206bb61",
+      "position": 1,
+      "properties": {
+        "progression_name": "Histogram Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0a85285-51fa-418f-8b36-26853206bb61",
+        "lesson_activity.key": "3ff7f875-07cb-4086-a618-1d9fb75b00d4"
+      }
+    },
+    {
+      "key": "c905aa38-c3e2-4f56-91cb-11eddfeaa0c1",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c905aa38-c3e2-4f56-91cb-11eddfeaa0c1",
+        "lesson_activity.key": "3ff7f875-07cb-4086-a618-1d9fb75b00d4"
+      }
+    },
+    {
+      "key": "bb14c8ff-8409-4e2b-bc11-9d22a1a6391a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Scatter Plot Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb14c8ff-8409-4e2b-bc11-9d22a1a6391a",
+        "lesson_activity.key": "3ff7f875-07cb-4086-a618-1d9fb75b00d4"
+      }
+    },
+    {
+      "key": "3b7a7dbc-a4c1-424e-988a-a7b0809c2eca",
+      "position": 4,
+      "properties": {
+        "progression_name": "Formulas Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b7a7dbc-a4c1-424e-988a-a7b0809c2eca",
+        "lesson_activity.key": "3ff7f875-07cb-4086-a618-1d9fb75b00d4"
+      }
+    },
+    {
+      "key": "c261d286-8780-4385-8a7e-402a34a2aa33",
+      "position": 5,
+      "properties": {
+        "progression_name": "Formulas"
+      },
+      "seeding_key": {
+        "activity_section.key": "c261d286-8780-4385-8a7e-402a34a2aa33",
+        "lesson_activity.key": "3ff7f875-07cb-4086-a618-1d9fb75b00d4"
+      }
+    },
+    {
+      "key": "0cb1f6ff-a37e-44a6-8130-fdd70841f280",
+      "position": 1,
+      "properties": {
+        "progression_name": "Artist Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "0cb1f6ff-a37e-44a6-8130-fdd70841f280",
+        "lesson_activity.key": "704b1c3b-93a2-4b6c-afb5-ea289b4c8ed7"
+      }
+    },
+    {
+      "key": "16a94d5a-bc21-48f7-897f-0e4069a2b59d",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "16a94d5a-bc21-48f7-897f-0e4069a2b59d",
+        "lesson_activity.key": "704b1c3b-93a2-4b6c-afb5-ea289b4c8ed7"
+      }
+    },
+    {
+      "key": "5f2c6283-f239-481b-832c-cb7e69e1b668",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5f2c6283-f239-481b-832c-cb7e69e1b668",
+        "lesson_activity.key": "1e7639d7-0108-42dd-a357-87860bc19a74"
+      }
+    },
+    {
+      "key": "8d1af895-266c-40bd-ab2d-9281df526af6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sketch Lab 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d1af895-266c-40bd-ab2d-9281df526af6",
+        "lesson_activity.key": "3af229ae-9678-4db3-90dd-5e140db74b5b"
       }
     }
   ],
@@ -2303,6 +2494,203 @@
       "level_keys": [
         "emma-test-python-lab-level"
       ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emma-histogram-panel-data-science-lesson7-_2025_launch"
+        ],
+        "progression": "Histogram Panel"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-histogram-panel-data-science-lesson7-_2025_launch"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f0a85285-51fa-418f-8b36-26853206bb61"
+      },
+      "level_keys": [
+        "emma-histogram-panel-data-science-lesson7-_2025_launch"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emma-scatter-plot-panel-data-science-lesson7-_2025_launch"
+        ],
+        "progression": "Scatter Plot Panel"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-scatter-plot-panel-data-science-lesson7-_2025_launch"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "bb14c8ff-8409-4e2b-bc11-9d22a1a6391a"
+      },
+      "level_keys": [
+        "emma-scatter-plot-panel-data-science-lesson7-_2025_launch"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emma-panel-data-science-lesson7-level1_2025_launch"
+        ],
+        "progression": "Formulas Panel"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-panel-data-science-lesson7-level1_2025_launch"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "3b7a7dbc-a4c1-424e-988a-a7b0809c2eca"
+      },
+      "level_keys": [
+        "emma-panel-data-science-lesson7-level1_2025_launch"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emma-data-science-ch1-lesson10-level7_2025"
+        ],
+        "progression": "Formulas"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-data-science-ch1-lesson10-level7_2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c261d286-8780-4385-8a7e-402a34a2aa33"
+      },
+      "level_keys": [
+        "emma-data-science-ch1-lesson10-level7_2025"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emma2-data-science-ch1-lesson10-level7_2025"
+        ],
+        "progression": "Formulas"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma2-data-science-ch1-lesson10-level7_2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c261d286-8780-4385-8a7e-402a34a2aa33"
+      },
+      "level_keys": [
+        "emma2-data-science-ch1-lesson10-level7_2025"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emma3-data-science-ch1-lesson10-level7_2025"
+        ],
+        "progression": "Formulas"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma3-data-science-ch1-lesson10-level7_2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c261d286-8780-4385-8a7e-402a34a2aa33"
+      },
+      "level_keys": [
+        "emma3-data-science-ch1-lesson10-level7_2025"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emmas-test-escape-room-ai"
+        ],
+        "progression": "Artist Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emmas-test-escape-room-ai"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "0cb1f6ff-a37e-44a6-8130-fdd70841f280"
+      },
+      "level_keys": [
+        "emmas-test-escape-room-ai"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sketch Lab 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-sketch-lab-1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "8d1af895-266c-40bd-ab2d-9281df526af6"
+      },
+      "level_keys": [
+        "emma-test-sketch-lab-1"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3072,6 +3460,102 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground",
         "activity_section.key": "c96fe760-3d6f-468f-a5a4-2f8e6e87a6a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-histogram-panel-data-science-lesson7-_2025_launch",
+        "script_level.level_keys": [
+          "emma-histogram-panel-data-science-lesson7-_2025_launch"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f0a85285-51fa-418f-8b36-26853206bb61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-scatter-plot-panel-data-science-lesson7-_2025_launch",
+        "script_level.level_keys": [
+          "emma-scatter-plot-panel-data-science-lesson7-_2025_launch"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "bb14c8ff-8409-4e2b-bc11-9d22a1a6391a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-panel-data-science-lesson7-level1_2025_launch",
+        "script_level.level_keys": [
+          "emma-panel-data-science-lesson7-level1_2025_launch"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "3b7a7dbc-a4c1-424e-988a-a7b0809c2eca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-data-science-ch1-lesson10-level7_2025",
+        "script_level.level_keys": [
+          "emma-data-science-ch1-lesson10-level7_2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c261d286-8780-4385-8a7e-402a34a2aa33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma2-data-science-ch1-lesson10-level7_2025",
+        "script_level.level_keys": [
+          "emma2-data-science-ch1-lesson10-level7_2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c261d286-8780-4385-8a7e-402a34a2aa33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma3-data-science-ch1-lesson10-level7_2025",
+        "script_level.level_keys": [
+          "emma3-data-science-ch1-lesson10-level7_2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c261d286-8780-4385-8a7e-402a34a2aa33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emmas-test-escape-room-ai",
+        "script_level.level_keys": [
+          "emmas-test-escape-room-ai"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "0cb1f6ff-a37e-44a6-8130-fdd70841f280"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-sketch-lab-1",
+        "script_level.level_keys": [
+          "emma-test-sketch-lab-1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "8d1af895-266c-40bd-ab2d-9281df526af6"
       }
     }
   ],

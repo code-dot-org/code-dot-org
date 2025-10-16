@@ -22,5 +22,6 @@ Scenario: Eyes test for oceans certificate on bulk print page
 
   When I wait until I am on "http://studio.code.org/print_certificates/batch"
   And I wait until element ".hide-print" is visible
-  And I see no difference for "bulk print page"
+  # This page doesn't render any icons, so we don't need to wait for Font Awesome to load.
+  And I see no difference for "bulk print page" without waiting for Font Awesome to load
   And I close my eyes

@@ -17,11 +17,7 @@ import Notification, {
 import styleConstants from '@cdo/apps/styleConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import {
-  assignmentCourseVersionShape,
-  sectionForDropdownShape,
-} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import color from '@cdo/apps/util/color';
 import {
   onDismissRedirectDialog,
@@ -34,7 +30,6 @@ import i18n from '@cdo/locale';
 import SafeMarkdown from '../SafeMarkdown';
 
 import CourseOverviewActionRow from './CourseOverviewActionRow';
-import CourseOverviewTopRow from './CourseOverviewTopRow';
 import CourseScript from './CourseScript';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 
@@ -48,12 +43,6 @@ class CourseOverview extends Component {
     courseVersionId: PropTypes.number,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
-    sectionsInfo: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-      })
-    ).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -70,7 +59,6 @@ class CourseOverview extends Component {
     participantAudience: PropTypes.string,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
   };
 
@@ -115,12 +103,13 @@ class CourseOverview extends Component {
     // Because there is no user_course table, store the fact that the version
     // dialog has been dismissed on the first user_script in the course.
     const firstScriptId = this.props.scripts[0].id;
+    const courseId = this.props.id;
 
     // Fire and forget. If this fails, we'll have another chance to
     // succeed the next time the warning is dismissed.
     $.ajax({
       method: 'PATCH',
-      url: `/api/v1/user_scripts/${firstScriptId}`,
+      url: `/api/v1/user_scripts/course/${courseId}/unit/${firstScriptId}`,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({version_warning_dismissed: true}),
@@ -144,8 +133,6 @@ class CourseOverview extends Component {
       courseVersionId,
       descriptionStudent,
       descriptionTeacher,
-      sectionsInfo,
-      sectionsForDropdown,
       teacherResources,
       studentResources,
       viewAs,
@@ -233,25 +220,13 @@ class CourseOverview extends Component {
               : descriptionTeacher
           }
         />
-        <div>
-          <CourseOverviewTopRow
-            sectionsInfo={sectionsInfo}
-            sectionsForDropdown={sectionsForDropdown}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
-            id={id}
-            courseName={title}
-            showAssignButton={showAssignButton}
-            isInstructor={viewAs === ViewType.Instructor}
-            participantAudience={participantAudience}
-          />
-        </div>
         {scripts.map((script, index) => (
           <CourseScript
             key={index}
             title={script.title}
             name={script.name}
             id={script.id}
+            path={script.scriptPath}
             description={script.description}
             assignedSectionId={script.assigned_section_id}
             courseId={id}
@@ -297,12 +272,6 @@ const styles = {
 
 export const UnconnectedCourseOverview = CourseOverview;
 export default connect((state, ownProps) => ({
-  sectionsForDropdown: sectionsForDropdown(
-    state.teacherSections,
-    ownProps.courseOfferingId,
-    ownProps.courseVersionId,
-    null
-  ),
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,

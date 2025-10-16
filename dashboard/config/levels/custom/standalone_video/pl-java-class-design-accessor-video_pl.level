@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-07-18T15:19:20.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csa_accessor_methods",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "## Accessor Methods \r\n\r\n#### An **accessor method** lets you get or \"access\" the value that is **currently assigned to a variable.**\r\n\r\n#### For a deeper dive into accessor methods, watch the video below. "
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-07-18T15:19:20.458+00:00\",\"changed\":[\"cloned from \\\"pl-java-class-design-accessor-video\\\"\"],\"cloned_from\":\"pl-java-class-design-accessor-video\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

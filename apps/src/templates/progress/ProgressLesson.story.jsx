@@ -40,6 +40,7 @@ const defaultProps = {
   lockableAuthorizedLoaded: true,
   hiddenForStudents: false,
   lockStatusLoaded: true,
+  unitHasUnnumberedLessons: false,
 };
 
 const initialState = {

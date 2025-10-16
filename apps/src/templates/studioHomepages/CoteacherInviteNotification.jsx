@@ -25,6 +25,8 @@ const CoteacherInviteNotification = ({
   asyncLoadSectionData,
   coteacherInvite,
   coteacherInviteForPl,
+  // This prop is used to allow asyncLoadSectionData to be run in a way that might remove data
+  destructiveLoad = false,
 }) => {
   const invite = useMemo(() => {
     if (!!coteacherInviteForPl && isForPl) {
@@ -39,7 +41,7 @@ const CoteacherInviteNotification = ({
     HttpClient.put(api, '', true)
       .then(() => {
         asyncLoadCoteacherInvite();
-        asyncLoadSectionData();
+        asyncLoadSectionData(null, destructiveLoad);
       })
       .catch(err => console.error(err));
   };
@@ -118,6 +120,7 @@ CoteacherInviteNotification.propTypes = {
   asyncLoadSectionData: PropTypes.func.isRequired,
   coteacherInvite: PropTypes.object,
   coteacherInviteForPl: PropTypes.object,
+  destructiveLoad: PropTypes.bool,
 };
 
 // The Notification object uses styles instead of className for legacy reasons.

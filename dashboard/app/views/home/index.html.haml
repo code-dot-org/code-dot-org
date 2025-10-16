@@ -11,6 +11,9 @@
 - if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
   - current_user.update_user_tos_version_accept()
   = render partial: 'layouts/implicit_new_user_terms_interstitial'
+- elsif Queries::UserSchoolInfo.affected_by_missing_nces_schools?(current_user)
+  -# TODO: ACQ-3300 remove when school info has been updated for affected users
+  = render partial: 'layouts/school_info_interstitial', locals: {affected_by_missing_school_data: true}
 - elsif InitialSectionCreationInterstitialHelper.show?(current_user, request.gdpr?)
   = render partial: 'layouts/initial_section_creation_interstitial'
 - elsif @show_section_creation_celebration_dialog
@@ -20,7 +23,7 @@
   = render partial: 'layouts/school_info_confirmation_dialog'
 - elsif SchoolInfoInterstitialHelper.show?(current_user) || @force_school_info_interstitial
   - SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
-  = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
+  = render partial: 'layouts/school_info_interstitial', locals: {affected_by_missing_school_data: false}
 
 - if current_user
   = render partial: 'home/homepage'

@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:48:15.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Combine random numbers with a loop to gather ingredients dynamically.\r\n\r\n## Do This: \r\n- Run the code to see how ingredients are gathered using dice rolls.\r\n- Modify the code to stop rolling once you have at least 15 ingredients.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import random\n\ningredients = 0\nrolls = 0\n\n# Keep rolling the dice until you collect 10 ingredients\nwhile ingredients < 10:\n    dice_roll = random.randint(1, 6)\n    ingredients += dice_roll\n    rolls += 1\n    print(\"You rolled a\", dice_roll, \"and now have\", ingredients, \"ingredients.\")\n\nprint(\"It took\", rolls, \"rolls to collect 10 ingredients!\")\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\n\nclass TestIngredientCollection(unittest.TestCase):\n\n    def test_modify_ingredient_goal(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Check if the while loop condition is updated to `ingredients < 15`\n            if 'while ingredients < 15' not in content:\n                self.fail(\n                    \"The while loop condition has not been updated to `ingredients < 15`. \"\n                    \"Please change the loop condition to stop rolling once you have at least 15 ingredients.\"\n                )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWGIY/ZrAXtyOB9uL563fB2CeYUHsCowFfREC6Jt\n7I8mJPJwO2e3tZlmhfOVYqGnrsiJe4kD8WeBo2LVTk4o21rxZjTUQRjLk9ak\nwpBJQlFe0GO46YrkqBG/U5JjXneF3ft5I+DgIG7VZNp0qBipZ0Jj5e1DMfyi\norto4tARAF6GKmIWg9zdaUWe5tcPZ4GnxzAVxffm/Nf958vv0uUtN1CDBb1z\nMSZ7HwlRhzE9l1OL5py/UOEnqnJSQlIzf5/0x6689bG0UmcvHNitkzNW4rXT\nTFe6uwCMj0SxVL135Mk+woatl5/OgcqJ3qM2eoj0suqnNR4lMv4rqvFCfIGL\nuVLs57z5xsAkJVU9rlZnQLjwK+nhPR328HdQyfmtS4Jhx7bdwGe8s04VzY+b\nidQxtaxkK2LglotXRnoOqSAjiAc7YvQZ2WYkpsWelCUxOHERY4OdNYLyghKS\nKjZi9kqS94GOsaLnUdm2XmJsLQ/fgC3d4NZJLsH5XaoEEgv7c6fpr8FWP54u\nEZTJ9dLCdee2ZknXgD0GP7r94BHhyx4hUQMNCydWQqkKW2jRgmkOUe+LCwae\nTorXsbT3LeSthER85NtYy+qU/fbCkDw/DrnS3mVNzSBZxzgWNq1w8MVb/YXq\np26jFYLNF/t0ZK9k+MPmZn40G0lVZQqUtRbz2snWiig64iYBcPILYyyx6rjZ\nH+WsJ6NewSRV48SPeXEVyaW5r9U=\n",
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:15.510+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson17-level9_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson17-level9_2025\"}]"
+}]]></config>
+</Pythonlab>

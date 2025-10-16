@@ -7,14 +7,17 @@
   "marketing_initiative": null,
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "self_paced",
-  "image": null,
+  "image": "https://images.code.org/f74cd1b064fac03ad366bdf9dbfaca60-action-block-coding-with-ai.avif",
   "cs_topic": "artificial_intelligence",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"\",\"chromebook\":\"\",\"tablet\":\"\",\"mobile\":\"\",\"no_device\":\"\"}",
-  "description": null,
+  "description": "This self-paced professional learning module prepares teachers to guide students through Code.org's Coding with AI unit, where students leverage LLMs to write more powerful code while exploring ethical considerations and responsible AI use.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2024-05-31 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

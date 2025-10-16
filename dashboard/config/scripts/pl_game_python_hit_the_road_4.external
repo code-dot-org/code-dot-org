@@ -1,0 +1,39 @@
+name 'pl-game-python-hit-the-road-4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/3c479c5e8bd456ba964f552c379f54aa-image-1749144931019.png" alt="Fueling up at the Coffee Shop banner with icon store front image" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+<!-- Welcome Section -->
+<div style="margin: 10px auto; width: 100%; line-height: 1.6; font-size: 14pt; color: #333;">
+    <h2>Welcome to the Neighborhood!</h2>
+    <p style = "font-size: 14pt">
+       You are about to embark on a playful journey through the neighborhood—where every corner holds a new coding challenge and each stop brings you closer to classroom-ready confidence.
+<br><br>From the bustling café to the community library and city park, you’ll explore Python fundamentals while collecting tools, strategies, and a few sweet surprises along the way.
+    </p>
+    </div>
+
+
+<div style="display: flex; align-items: flex-start; margin-top: 30px;">
+  <div style="flex: 2; padding: 20px; background-color: #f5f5f5; border-radius: 8px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h2 style="margin-top: 0; ">☕ For this task, you will:</h2>
+    <ul style="font-size: 14pt; margin-top: 0; padding-left: 20px;">
+      <li>Get an overview of the module.</li>
+      <li>Preview the features of Python Lab.</li>
+      <li>Explore badges and certificates for this module.</li>    </ul>
+  </div>
+  <div style="flex: 1; padding-left: 20px;">
+    <img src="https://images.code.org/dd159abc5806a68c54977f6be7f639e9-image-1749145355743.png" alt="a to go cup of coffee and two pink donuts" style="max-width: 90%; height: auto; border-radius: 5px;" />
+  </div>
+</div>
+
+---
+
+
+#### **Suggested Total Time:** 90 minutes
+#### **Lesson One Suggested Time:** 10 minutes
+
+
+MARKDOWN

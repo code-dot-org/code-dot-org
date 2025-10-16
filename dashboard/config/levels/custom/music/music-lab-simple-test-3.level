@@ -1,0 +1,88 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-04-04T00:00:09.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2"
+          ]
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true
+    },
+    "long_instructions": "dan test 3",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "music-lab-simple-test-3_952458ba-6ded-4461-a3e2-67e146e039e2",
+        "message": "You did it!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-lab-simple-test-3_3a578597-be93-454c-989a-85a240dcf6c2",
+        "message": "Something else!",
+        "next": false,
+        "conditions": [
+
+        ]
+      },
+      {
+        "key": "music-lab-simple-test-3_6af0c31d-b0c2-4e41-8936-bb70b8517a3a",
+        "message": "Play a sound!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-04T00:00:09.493+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-testlibrary1\\\"\"],\"cloned_from\":\"music-lab-simple-testlibrary1\"},{\"changed_at\":\"2025-04-04 00:00:42 +0000\",\"changed\":[\"offer_browser_tts\",\"hide_share_and_remix\",\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-04 00:01:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-04 00:02:13 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-04 00:02:41 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-04 00:02:58 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-04 00:03:42 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-04 00:04:17 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-04 12:12:40 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

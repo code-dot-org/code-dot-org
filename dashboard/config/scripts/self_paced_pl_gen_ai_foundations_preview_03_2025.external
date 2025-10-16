@@ -1,0 +1,25 @@
+name 'self-paced-pl-gen-ai-foundations-preview-03_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Embeddings
+
+<img src="https://images.code.org/7c8ab6af5c54c7bc979a13c8830907c6-Screenshot 2025-05-27 at 4.26.50 PM.png" alt="table showing embedding numbers connecting various words (i.e. tiger, puppy, man, teacher) to other words/ideas (i.e. canine, human, plural)" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 20px 20px 20px">
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word; margin-right: 390px;">
+  <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">
+    📖 <strong>Embedding:</strong> A set of numbers used to represent a word in a language model. They are used to represent the discrete meaning of words.
+  </p>
+</div>
+
+#### Language models use **embeddings** to represent the meaning of words. Words with similar meanings have embeddings that are “close” to each other numerically even though they don’t look similar in language. This lets models figure out how words are related by using math.
+
+#### Embeddings don't need to be identical to be useful. Similarity in position across these numeric representations signals that two words or ideas share related meanings. 
+
+#### Embeddings allow language models to do more than just store meanings. They use them for tasks like finding related ideas, making predictions, or understanding user intent.
+
+<br>
+<br>
+
+MARKDOWN

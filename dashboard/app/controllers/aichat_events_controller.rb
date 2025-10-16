@@ -1,13 +1,26 @@
 class AichatEventsController < ApplicationController
   authorize_resource class: false
 
-  # params are newChatEvent: ChatEvent, aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat_events/log_chat_event
+  # ----------------------------------
+  # params are:
+  #   newChatEvent: ChatEvent
+  #   aichatContext: {
+  #     clientType: AiChatClientType;
+  #     currentLevelId: number | null;
+  #     scriptId: number | null;
+  #     channelId: string | undefined;
+  #  }
+
   def log_chat_event
     begin
       params.require([:newChatEvent, :aichatContext])
     rescue ActionController::ParameterMissing
       return render status: :bad_request, json: {}
+    end
+
+    unless can_log_aichat_events?(params[:aichatContext][:clientType])
+      return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
     context = params[:aichatContext]
@@ -101,8 +114,12 @@ class AichatEventsController < ApplicationController
     render status: :ok, json: {}
   end
 
+  private def can_log_aichat_events?(client_type)
+    current_user.has_aichat_access? || current_user.trust_chat_client?(client_type)
+  end
+
   private def can_view_chat_history?(user_id)
-    User.find_by_id(user_id)&.student_of?(current_user) || current_user.id == user_id
+    current_user.id == user_id || User.find_by_id(user_id)&.student_of?(current_user)
   end
 
   private def can_submit_feedback?(user_id)

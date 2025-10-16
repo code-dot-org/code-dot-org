@@ -3,7 +3,7 @@ class ParentMailerPreview < ActionMailer::Preview
   include FactoryBot::Syntax::Methods
 
   def parent_email_added_to_student_account_preview
-    student = build :student
+    student = build(:student)
     ParentMailer.parent_email_added_to_student_account('fake_email@fake.com', student)
   end
 

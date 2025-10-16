@@ -1,0 +1,19 @@
+name 'music-coding-intro-seq-match_launch_1'
+title '<i class="fa-solid fa-magnifying-glass"></i><i class="fa-sharp fa-solid fa-eyes"></i> Show What You Know!'
+description 'Move the timeline example to the code that matches. **Teacher Note**: This is Lesson 1, Level 10 from the curriculum.'
+
+height '210'
+width '200'
+
+question '![](https://images.code.org/89c1fe17255dfeed9b85e14091d647fc-image-1744408989681.jpg)'
+answer '![](https://images.code.org/61f943424e71983f868c3556222c15ae-image-1744409015707.jpg)'
+
+question '![](https://images.code.org/28c3a2ed50ad1c13f32e704297ed7947-image-1744409036991.jpg)'
+answer '![](https://images.code.org/5758629ad8755fefa915e45a192e0653-image-1744409052820.jpg)'
+
+question '![](https://images.code.org/530fab05fb9c0859ceb259250204820a-image-1744409070150.jpg)'
+answer '![](https://images.code.org/e5b30c27d33886fb8bed122242f974cc-image-1744409082892.jpg)'
+allow_multiple_attempts true
+
+
+

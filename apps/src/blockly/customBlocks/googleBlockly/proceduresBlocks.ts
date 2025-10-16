@@ -183,8 +183,8 @@ GoogleBlockly.Extensions.register(
       flyoutToggleButton,
       renderingInFunctionEditor
     );
-    // Open mini-toolbox by default
-    flyoutToggleButton.setIcon(false);
+    // Open mini-toolbox by default unless the workspace is read-only.
+    flyoutToggleButton.setIcon(this.workspace.options.readOnly);
   }
 );
 
@@ -432,7 +432,7 @@ export function flyoutCategory(
 const getNewFunctionButtonWithCallback = (
   workspace: GoogleBlockly.WorkspaceSvg
 ) => {
-  const callbackKey = 'newProcedureCallback';
+  const callbackkey = 'newProcedureCallback';
   const callback = () => {
     workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(
@@ -440,12 +440,12 @@ const getNewFunctionButtonWithCallback = (
     );
   };
 
-  workspace.registerButtonCallback(callbackKey, callback);
+  workspace.registerButtonCallback(callbackkey, callback);
 
   return {
     kind: 'button',
     text: commonI18n.createBlocklyFunction(),
-    callbackKey,
+    callbackkey,
   };
 };
 

@@ -2,10 +2,11 @@
 #
 # Table name: course_scripts
 #
-#  id        :integer          not null, primary key
-#  course_id :integer          not null
-#  script_id :integer          not null
-#  position  :integer          not null
+#  id          :integer          not null, primary key
+#  course_id   :integer          not null
+#  script_id   :integer          not null
+#  position    :integer          not null
+#  unit_prefix :string(255)
 #
 # Indexes
 #
@@ -39,5 +40,9 @@ class UnitGroupUnit < ApplicationRecord
     course.default_unit_group_units.find do |ugu|
       ugu.position == unit_position
     end
+  end
+
+  def cached_unit_group
+    UnitGroup.get_from_cache(course_id)
   end
 end

@@ -18,6 +18,7 @@ export type GenericDropdownProps = Pick<GenericDialogProps, 'title'> & {
   confirmText?: string;
   neutralText?: string;
   handleNeutral?: () => void;
+  neutralDestructive?: boolean;
 };
 
 type GenericDropdownBodyProps = {
@@ -58,6 +59,7 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
   dropdownLabel,
   confirmText,
   neutralText,
+  neutralDestructive,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
 
@@ -81,7 +83,13 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
     },
     cancel: {callback: () => handleCancel?.()},
     ...(neutralText
-      ? {neutral: {text: neutralText, callback: () => handleNeutral?.()}}
+      ? {
+          neutral: {
+            text: neutralText,
+            callback: () => handleNeutral?.(),
+            destructive: neutralDestructive,
+          },
+        }
       : {}),
   };
 

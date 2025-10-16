@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react-webpack5';
 
 import Alert, {AlertProps} from '../index';
 
@@ -111,6 +111,11 @@ GroupOfTypesOfAlerts.args = {
     {
       text: 'Gray Alert',
       type: 'gray',
+      size: 'm',
+    },
+    {
+      text: 'Aqua Alert',
+      type: 'aqua',
       size: 'm',
     },
   ],

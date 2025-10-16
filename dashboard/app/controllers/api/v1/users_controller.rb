@@ -1,9 +1,28 @@
 require 'cdo/firehose'
 
 class Api::V1::UsersController < Api::V1::JSONApiController
-  before_action :load_user
+  before_action :allow_cdo_cors, only: %i[signed_in get_donor_teacher_banner_details]
+  before_action :prevent_caching, only: %i[signed_in]
+  before_action :load_user, only: %i[
+    get_school_name
+    get_contact_details
+    get_using_text_mode
+    get_display_theme
+    get_mute_music
+    get_donor_teacher_banner_details
+    get_tos_version
+    post_using_text_mode
+    post_mute_music
+    update_display_theme
+    accept_data_transfer_agreement
+    postpone_census_banner
+    dismiss_census_banner
+    dismiss_donor_teacher_banner
+    dismiss_parent_email_banner
+    set_standards_report_info_to_seen
+    verify_captcha
+  ]
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :cached_page_auth_redirect, :post_show_progress_table_v2, :post_ai_rubrics_disabled, :post_ai_differentiation_enabled, :post_has_seen_ai_assessments_announcement, :post_date_progress_table_invitation_last_delayed, :post_has_seen_progress_table_v2_invitation, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access, :set_seen_ta_scores, :post_has_completed_ai_differentiation_welcome]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
@@ -12,6 +31,13 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       raise CanCan::AccessDenied
     end
     @user = current_user
+  end
+
+  # GET /api/v1/users/signed_in
+  def signed_in
+    render json: {
+      is_signed_in: user_signed_in?,
+    }
   end
 
   # GET /api/v1/users/current
@@ -37,6 +63,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         progress_table_v2_closed_beta: current_user.progress_table_v2_closed_beta?,
         ai_tutor_access_denied: !!current_user.ai_tutor_access_denied,
         has_seen_progress_table_v2_invitation: current_user.has_seen_progress_table_v2_invitation?,
+        has_seen_homepage_welcome: current_user.has_seen_homepage_welcome?,
         date_progress_table_invitation_last_delayed: current_user.date_progress_table_invitation_last_delayed,
         child_account_compliance_state: current_user.cap_status,
         country_code: helpers.country_code(current_user, request),
@@ -48,6 +75,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         ai_differentiation_enabled: !current_user.ai_differentiation_toggled_off?,
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
         educator_role: current_user.educator_role,
+        sharing_disabled: current_user.sharing_disabled,
       }
     else
       render json: {
@@ -84,7 +112,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     render json: {
       user_name: current_user&.name,
       email: current_user&.email,
-      zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip,
+      zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip&.to_s&.rjust(5, '0'),
     }
   end
 
@@ -134,6 +162,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         teacher_second_name: current_user.second_name,
         teacher_email: current_user.email,
         nces_school_id: teachers_school&.id,
+        school_name: teachers_school&.name&.titleize,
         school_address_1: teachers_school&.address_line1,
         school_address_2: teachers_school&.address_line2,
         school_address_3: teachers_school&.address_line3,
@@ -198,14 +227,27 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_show_progress_table_v2
     return head :unauthorized unless current_user
 
-    show_v2_arg = !!params[:show_progress_table_v2].try(:to_bool)
-    current_user.show_progress_table_v2 = show_v2_arg
+    if params[:show_progress_table_v2] != 'legacy' && params[:show_progress_table_v2] != 'v2'
+      return head :bad_request
+    end
 
-    if show_v2_arg
+    current_user.show_progress_table_v2 = params[:show_progress_table_v2]
+
+    if params[:show_progress_table_v2] == 'v2'
       current_user.progress_table_v2_timestamp = DateTime.now
     else
       current_user.progress_table_v1_timestamp = DateTime.now
     end
+    current_user.save!
+
+    head :no_content
+  end
+
+  # POST /api/v1/users/has_seen_homepage_welcome
+  def post_has_seen_homepage_welcome
+    return head :unauthorized unless current_user
+
+    current_user.has_seen_homepage_welcome = !!params[:has_seen_homepage_welcome].try(:to_bool)
     current_user.save!
 
     head :no_content

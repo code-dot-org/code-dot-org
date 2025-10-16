@@ -1,10 +1,12 @@
 import Modal from '@code-dot-org/component-library/modal';
+import _ from 'lodash';
 import React from 'react';
-import {useBlocker} from 'react-router-dom';
+import {useBlocker, useParams} from 'react-router-dom';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+import LoadingSectionsSetUpContainer from '../sectionsRefresh/LoadingSectionsSetUpContainer';
 import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
@@ -22,6 +24,17 @@ const DashboardSectionSettings: React.FunctionComponent<
 > = ({redirectUrl}) => {
   const selectedSection = useAppSelector(selectedSectionSelector);
   const [isEditInProgress, setIsEditInProgress] = React.useState(false);
+  const {isLoadingSectionData, needsReload} = useAppSelector(
+    state => state.teacherSections
+  );
+  const urlSectionId = useParams().sectionId;
+  const isLoading = React.useMemo(
+    () =>
+      isLoadingSectionData ||
+      needsReload ||
+      _.toNumber(urlSectionId) !== selectedSection.id,
+    [isLoadingSectionData, needsReload, urlSectionId, selectedSection.id]
+  );
 
   const blocker = useBlocker(
     ({currentLocation, nextLocation}) =>
@@ -41,12 +54,16 @@ const DashboardSectionSettings: React.FunctionComponent<
 
   return (
     <div>
-      <SectionsSetUpContainer
-        isUsersFirstSection={false}
-        sectionToBeEdited={selectedSection}
-        defaultRedirectUrl={redirectUrl}
-        setIsEditInProgress={setIsEditInProgress}
-      />
+      {isLoading ? (
+        <LoadingSectionsSetUpContainer defaultRedirectUrl={redirectUrl} />
+      ) : (
+        <SectionsSetUpContainer
+          isUsersFirstSection={false}
+          sectionToBeEdited={selectedSection}
+          defaultRedirectUrl={redirectUrl}
+          setIsEditInProgress={setIsEditInProgress}
+        />
+      )}
       {blocker.state === 'blocked' && (
         <Modal
           title={i18n.saveBlockerModalTitle()}

@@ -10,11 +10,11 @@ import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
-import {MazeCell} from '@cdo/apps/lab2/types';
+import {MazeCell, MultiFileSource} from '@cdo/apps/lab2/types';
 import skins from '@cdo/apps/maze/skins';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
 import {scaleMiniApp} from '../Workspace/outputHelpers';
@@ -29,12 +29,11 @@ interface NeighborhoodPreviewProps {
 const NeighborhoodPreview: React.FunctionComponent<
   NeighborhoodPreviewProps
 > = ({handleScaling}) => {
-  const {source, config, levelProperties} = useCodebridgeContext();
-  const serializedMaze = findFile(
-    source,
-    MAZE_FILE_NAME,
-    DEFAULT_FOLDER_ID
-  )?.contents;
+  const {config, levelProperties} = useCodebridgeContext();
+  const serializedMaze = useAppSelector(state => {
+    const source = state.lab2Project.projectSources?.source as MultiFileSource;
+    return findFile(source, MAZE_FILE_NAME, DEFAULT_FOLDER_ID)?.contents;
+  });
   const dispatch = useAppDispatch();
   const isVertical = config.activeLayout === 'vertical';
   const containerRef = useRef<HTMLDivElement>(null);
@@ -61,17 +60,26 @@ const NeighborhoodPreview: React.FunctionComponent<
   }, [throttledScaleNeighborhood, handleScaling]);
 
   const neighborhood = useMemo(() => {
+    // We can't store consoleManager in a variable for reuse because
+    // it may not exist on neighborhood creation.
+    const onOutputMessage = (message: string) =>
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeConsoleMessage(message);
+    const onNewlineMessage = () =>
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeConsoleMessage('');
+    const onPartialLineMessage = (message: string) =>
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writePartialLine(message);
+
     const neighborhoodRef = new Neighborhood(
-      message =>
-        CodebridgeRegistry.getInstance()
-          .getConsoleManager()
-          ?.writeConsoleMessage(message),
-      () =>
-        CodebridgeRegistry.getInstance()
-          .getConsoleManager()
-          ?.writeConsoleMessage(''),
+      onOutputMessage,
+      onNewlineMessage,
       isRunning => dispatch(setIsRunning(isRunning)),
-      '[PYTHON LAB]'
+      onPartialLineMessage
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
     return neighborhoodRef;
@@ -92,9 +100,14 @@ const NeighborhoodPreview: React.FunctionComponent<
       return;
     }
 
-    const mazeContents = serializedMaze
-      ? (JSON.parse(serializedMaze) as MazeCell[][])
-      : undefined;
+    let mazeContents: MazeCell[][] | undefined;
+    if (serializedMaze) {
+      try {
+        mazeContents = JSON.parse(serializedMaze) as MazeCell[][];
+      } catch (error) {
+        console.error('Failed to parse serialized maze:', error);
+      }
+    }
 
     // Combine the serialized maze from the project with the level properties.
     const parsedLevelProperties = mazeContents
@@ -125,7 +138,7 @@ const NeighborhoodPreview: React.FunctionComponent<
 
   return (
     <div ref={containerRef} className={moduleStyles.miniAppContainer}>
-      <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
+      <NeighborhoodVisualization useProtectedDiv={false} />
     </div>
   );
 };

@@ -3,6 +3,9 @@
   "script_names": [
     "music-accessibility"
   ],
+  "original_script_names": [
+    "music-accessibility"
+  ],
   "published_state": "beta",
   "instruction_type": "self_paced",
   "participant_audience": "student",

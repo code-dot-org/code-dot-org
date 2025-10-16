@@ -1,0 +1,382 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:59:48.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": false,
+      "sortUnrestrictedPacksByType": false,
+      "packId": "tinashe_gravity",
+      "sounds": {
+        "tinashe_gravity": [
+          "vocals_adlib_1",
+          "vocals_adlib_2",
+          "vocals_adlib_3",
+          "vocals_adlib_4",
+          "vocals_adlib_5",
+          "vocals_adlib_6",
+          "vocals_adlib_7"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip",
+          "guitar_fit",
+          "guitar_pocket",
+          "horns",
+          "piano_chords",
+          "piano_clout",
+          "piano_fresh",
+          "piano_round",
+          "piano_slice",
+          "piano_warble",
+          "string_burst",
+          "synth_brass",
+          "synth_whistle"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins"
+        ]
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try reading the requirements again!",
+      "validationMode": "type"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpGDOr2pRvuThrKHiF83RBxffRjZGUbCuYiTJ6RrwnILQ\nAs1SJALhFns9xCPSAqf92HYlO+09t2yvPGQl7CxQ1ca1oYyxjS2iYINVt6i/\niBevViMPk7812kRkUFgfEt35oFARcbmBowi7UD9fb/yyO9LJRbzyc7jsGbkA\npZlB+tu6TlnMlzgFraM7BC/maqqM420VGOzm02/rbiV716/WentRA/s+N3a3\nUH5f2s62d/dOUOwtlLIJ8GHwuKvA/v0AVxgLXC+BG8CryLOiBD9RhijTnMpU\nDJlaNMvyfCHw8+g+dLIyBm9d5swqZt02AJgEgmlo8C0Z5/4TkuJY2l4XrRe3\nfhVMJVc7DJvV6h5HhSNMwetkyEM6J0Z+rd4d9WtsQqAkmuThLSKsE+fsVPW6\n+vYpIub36xXotpNdDiXc6FcyQQiJd8gMvPQsNzEzBUf3EAJRuWvX/Zqd5sfZ\nWSqGV2Mru7hLvWJ481TyhDGSe1TZUAbI4NTuCyPotRrwvQKDj7GUf21OPFXb\n6q3J2Q1xlZHfMZFnRpqgPRACvjdmnoZ/3nWF/To4dyhybnn+Nlp+tKTmBpzt\nyhvdNup1R7M/4Fx9qoJUPJB2nkt3bePG9osS38xGRnMrRzNkxsNibiqVIy/O\nOxyg5IcW7PoZ9+FUOlT/P/av5DjUe/oFhae6OSBwtDi+p3mEfLXeiv6xCNHI\nlZFNBRYC+sFBaOoILUAv1ZtWnm20sXzn4EckUAX6xbXv4hNWsvTsmZkO+/VE\ng8QJIBHb6Siu9eVO7q/Jka6J/zfD3WJLwX+2BLe3MQ7xYOxYEgf7o2t14zBU\nU+8tuzYHp9mGIdbQcD5NJH7eiK1Prg3D/P+IafZtomYY+7elqPgHOFW8cAI2\nLC5EDe5nlDEqcy8sNRu3UoAVsrSpcLqhItBUM480T2fA/VdE88Ep176Wl0jR\nbGyzNRzCEPyFRZpYrce/bzZxVr4f3IqNcMbI8DhhDhi2CleamDXa77s9T+aJ\n3eJDShilbM8X/VK2sMAv/LhcVpkPPJNJL3SQFok+5PxdjLDsLnzlCaQnXgrp\naDVZFCKiwyK/ufc2aw+yR2sfYVXXTU0Z63vjVIhWv2OdIGUtHX5IFMy1Rv6H\nPCsu8/76j2o4jmuuCJRWP6wC5ojfuw0C6SeWuPXV4sl7Oz2NDkGGQoZJVCuB\nGrGMcP/U0DbqMUV6WxT+9FOpi5cIW/Fvsis5y584iud25B38xUFCZnW3T1z0\nkaU2/gqEcdu5rVGKn/OKbDa1qAnLv3Zx+F8JzvZSDPqQcwZlzGVNI21FMbyX\nExoXakdtMPSh+6PNrUnny2NWw0DgOsOkyLLIiFfy\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Gravity Ad-libs",
+    "long_instructions": "### Gravity\r\n\r\n**Define:** You've been asked to create a new loop using the Ad Lib vocal tracks from *Gravity* by Tinashe. Your job is to design a short musical idea that repeats, combining vocals with beats, bass, and leads from other song packs.\r\n\r\n**Prepare:** Choose one Ad Lib vocal track from *Gravity*. Then explore other song packs to find a beat, bass, and lead that sound good with your chosen vocal. Test out different combinations until you find one you like. Listen to the example below for what this could sound like!\r\n\r\n**Try:** Build your track using the code blocks. Once you have a combination you like, loop the entire section so it repeats 3 times.\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Listen to your song and iterate until it sounds the way you want it to. In order to complete this level, your remix must include:\r\n\r\n- 1 Ad Lib vocal track from *Gravity*\r\n- 1 beat, 1 bass, and 1 lead from other song packs\r\n- A looped section that repeats 3 times",
+    "bubble_choice_description": "Create a loop using the Ad Lib vocal tracks from \"Gravity\" by Tinashe.",
+    "validations": [
+      {
+        "key": "music-lab-loops-practice-practice-5_1c850068-4096-48e6-ac0b-dd76a35c6134",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ✅ 4 unique tracks played together\n- ✅ At least 1 vocal track, bass, beat, and lead track\n- ✅ Tracks have multiple lengths\n- ✅ A nested loop that repeats at least 3 times",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          },
+          {
+            "name": "played_different_length_sounds",
+            "value": 3
+          },
+          {
+            "name": "played_anything_in_same_nested_loop",
+            "value": 9
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-5_4b13bf4c-1643-4792-a3e2-976832c5434e",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ✅ 4 unique tracks played together\n- ✅ At least 1 vocal track, bass, beat, and lead track\n- ✅ Tracks have multiple lengths\n- ❌ A nested loop that repeats at least 3 times",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 4
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          },
+          {
+            "name": "played_different_length_sounds",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-5_0ba0310e-524f-496b-b23d-60d2b895ee44",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ❌ 4 unique tracks played together\n- ✅ At least 1 vocal track, bass, beat, and lead track\n- ✅ Tracks have multiple lengths\n- ❌ A nested loop that repeats at least 3 times",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          },
+          {
+            "name": "played_different_length_sounds",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-5_8a10719e-7097-4fcc-b6f6-bc07935c1bdf",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ✅ 4 unique tracks played together\n- ❌ At least 1 vocal track, bass, beat, and lead track\n- ✅ Tracks have multiple lengths\n- ❌ A nested loop that repeats at least 3 times",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 4
+          },
+          {
+            "name": "played_different_length_sounds",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-5_48487013-b0f9-48ca-a57d-90154f551e3f",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ✅ 4 unique tracks played together\n- ✅ At least 1 vocal track, bass, beat, and lead track\n- ❌ Tracks have multiple lengths\n- ❌ A nested loop that repeats at least 3 times",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together",
+            "value": 4
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-5_115146d2-386d-4f45-b2dd-590cdc2acf67",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ❌ 4 unique tracks played together\n- ❌ At least 1 vocal track, bass, beat, and lead track\n- ✅ Tracks have multiple lengths\n- ❌ A nested loop that repeats at least 3 times",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_length_sounds",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-5_b9e8f19c-c8fb-457c-a045-725198dd9b58",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ❌ 4 unique tracks played together\n- ✅ At least 1 vocal track, bass, beat, and lead track\n- ❌ Tracks have multiple lengths\n- ❌ A nested loop that repeats at least 3 times",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-5_1e8d8a78-92ee-4e02-b4fd-f2dcf2f94106",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ✅ 4 unique tracks played together\n- ❌ At least 1 vocal track, bass, beat, and lead track\n- ❌ Tracks have multiple lengths\n- ❌ A nested loop that repeats at least 3 times",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-3_20ff3c19-7fb4-486b-85c4-dea4d5ec1f83",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ❌ 4 unique tracks played together\n- ❌ At least 1 vocal track, bass, beat, and lead track\n- ❌ Tracks have multiple lengths\n- ❌ A nested loop that repeats at least 3 times",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/tinashe_gravity/tinashe_gravity.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:48.243+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-practice-5\\\"\"],\"cloned_from\":\"music-lab-loops-practice-practice-5\"},{\"changed_at\":\"2025-06-12 16:09:20 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 16:10:35 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 21:20:51 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-24 21:30:35 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 16:58:30 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

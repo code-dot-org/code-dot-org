@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 70,
-  "created_at": "2024-10-22T23:17:18.000Z",
+  "created_at": "2024-11-04T07:38:07.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
@@ -24,7 +24,8 @@
             "play_sound_at_current_location_simple2",
             "play_pattern_ai_at_current_location_simple2",
             "play_chord_at_current_location_simple2",
-            "play_rest_at_current_location_simple2"
+            "play_rest_at_current_location_simple2",
+            "play_tune_at_current_location_simple2"
           ],
           "Control": [
             "triggered_at_simple2",
@@ -48,9 +49,16 @@
     "name_suffix": "_final",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:18.751+00:00\",\"changed\":[\"cloned from \\\"music-ai-freeplay_1\\\"\"],\"cloned_from\":\"music-ai-freeplay_1\"},{\"changed_at\":\"2024-10-22 23:51:34 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-29 19:00:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 21:06:46 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-11-08 00:03:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-04 22:09:07 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-22T23:17:18.751+00:00\",\"changed\":[\"cloned from \\\"music-ai-freeplay_1\\\"\"],\"cloned_from\":\"music-ai-freeplay_1\"},{\"changed_at\":\"2024-10-22 23:51:34 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-29 19:00:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 21:06:46 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-11-08 00:03:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-04 22:09:07 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-05-20 07:40:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

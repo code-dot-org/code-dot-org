@@ -1,0 +1,6 @@
+{
+  "key": "conditionals_combine_boolean_expressions",
+  "concept": "conditional",
+  "description": "Use logical operators to combine Boolean expressions and manage complex program decisions",
+  "evaluation_criteria": "Does the student make use of logical operator(s) in order to add efficiency or precision when creating a conditional statement?"
+}

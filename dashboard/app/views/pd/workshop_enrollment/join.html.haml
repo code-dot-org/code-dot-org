@@ -1,0 +1,7 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%script{src: webpack_asset_path('js/pd/workshop_enrollment/join.js'), data: @script_data}
+
+#join-workshop-container
+  -# populated by React

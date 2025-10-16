@@ -45,6 +45,7 @@ export const PROJECT_TYPE_MAP = {
   story: i18n.projectTypeStory(),
   time_capsule: i18n.projectTypeTimeCapsule(),
   transformers: i18n.projectTypeTransformers(),
+  music_dance_ai: 'Music Dance AI Mashup',
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {
@@ -73,4 +74,5 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   thebadguys: i18n.projectTypeThebadguys(),
   spritelab: i18n.projectTypeSpriteLab(),
   music: i18n.projectTypeMusic(),
+  pythonlab: i18n.projectTypePythonlab(),
 };

@@ -1,12 +1,8 @@
-import {
-  BodyThreeText,
-  EmText,
-} from '@code-dot-org/component-library/typography';
+import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import Select from 'react-select';
 
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -28,6 +24,10 @@ function SectionSelector({
 }) {
   const handleSelectChange = event => {
     const newSectionId = event.value;
+
+    if (newSectionId === selectedSectionId) {
+      return;
+    }
 
     if (logToFirehose) {
       logToFirehose();
@@ -51,38 +51,41 @@ function SectionSelector({
     return null;
   }
 
+  const selectedSection = sections.find(
+    section => section.id === selectedSectionId
+  );
+
   return (
-    <Select
-      clearable={false}
-      searchable={false}
+    <CustomDropdown
       className={classnames(style.sectionSelector, 'uitest-sectionselect')}
       name="sections"
-      aria-label={i18n.selectSection()}
-      value={selectedSectionId || NO_SELECTED_SECTION_VALUE}
-      onChange={handleSelectChange}
-      options={(!selectedSectionId
-        ? [
-            {
-              value: NO_SELECTED_SECTION_VALUE,
-              label: (
-                <BodyThreeText className={style.submitStatusText}>
-                  <EmText>{i18n.selectSectionOption()}</EmText>
-                </BodyThreeText>
-              ),
-            },
-          ]
-        : []
-      ).concat(
-        sections.map(({id, name}) => ({
-          value: id,
-          label: (
-            <BodyThreeText className={style.submitStatusText}>
-              {name}
-            </BodyThreeText>
-          ),
-        }))
-      )}
-    />
+      size="s"
+      styleAsFormField={true}
+      selectedValueText={
+        selectedSectionId ? selectedSection.name : i18n.selectSectionOption()
+      }
+    >
+      <ul>
+        {!selectedSectionId && (
+          <li className={style.unselectableDropdownOption} key="select-section">
+            <div className={style.dropdownOption}>
+              <span>{i18n.selectSectionOption()}</span>
+            </div>
+          </li>
+        )}
+        {sections.map(({id, name}) => (
+          <li>
+            <button
+              className={style.dropdownOption}
+              type="button"
+              onClick={() => handleSelectChange({value: id})}
+            >
+              <span>{name}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </CustomDropdown>
   );
 }
 

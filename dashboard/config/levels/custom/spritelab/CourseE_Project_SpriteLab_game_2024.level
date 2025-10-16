@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-09-16T17:01:59.000Z",
   "level_num": "custom",
@@ -69,13 +68,11 @@
     "hint_prompt_attempts_threshold": "1",
     "standalone_app_name": "game_design",
     "enable_big_playspace": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-09-16T17:01:59.459+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab_2024\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab_2024\"},{\"changed_at\":\"2024-09-16 17:04:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"display_name\",\"soft_buttons\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:05:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:06:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:07:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"block_pools\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:07:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 18:12:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 18:12:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 18:15:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 18:44:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 18:49:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-09-16T17:01:59.459+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab_2024\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab_2024\"},{\"changed_at\":\"2024-09-16 17:04:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"display_name\",\"soft_buttons\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:05:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:06:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:07:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"block_pools\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:07:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 18:12:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 18:12:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 18:15:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 18:44:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 18:49:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-08 17:39:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1097,6 +1094,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
+        <variables>
+          <variable id="4G@+$,+^LOQNNFoQqNng">j</variable>
+          <variable id=")Pa,HXq,*ldV(Nb!aKEn">i</variable>
+        </variables>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs" id="j*(*?aLtlx_?UrK#U7Bw">
             <field name="IMG">"cave"</field>
@@ -1322,6 +1323,38 @@
                 <field name="NUM">3</field>
               </block>
             </value>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="gamelab_showVariable" id="wIw0D89wPApL)7`z}(tw">
+            <field name="VAR" id="4G@+$,+^LOQNNFoQqNng">j</field>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker" id="!gAkZ5YG|^(lC3#^k=m%">
+                <field name="LOCATION">{"x":224,"y":184}</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_hideVariable" id="pD/T;,P@C*S8+PEjI1WY">
+            <field name="VAR" id=")Pa,HXq,*ldV(Nb!aKEn">i</field>
+          </block>
+          <block type="variables_set" id="*s.%RS]U!jm+OL7_:[%U">
+            <field name="VAR" id="4G@+$,+^LOQNNFoQqNng">j</field>
+            <value name="VALUE">
+              <block type="math_number" id="aeJq0x@BTEB/^.`mEZ4}">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+          <block type="math_change" id="6wFCC+:B*D;]`.Ig#P@Z">
+            <field name="VAR" id="4G@+$,+^LOQNNFoQqNng">j</field>
+            <value name="DELTA">
+              <shadow type="math_number" id="2Gs*Ju5(9v4,O0.~W12V">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="variables_get" id="-;o$5L%M%onSGR1p,ABC">
+            <field name="VAR" id="4G@+$,+^LOQNNFoQqNng">j</field>
           </block>
         </category>
         <category name="Behaviors" custom="Behavior">

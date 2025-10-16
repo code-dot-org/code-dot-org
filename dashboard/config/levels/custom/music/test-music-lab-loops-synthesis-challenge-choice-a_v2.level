@@ -1,0 +1,227 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:05.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2",
+            "triggered_at_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "default"
+    },
+    "long_instructions": "### Call & Response\r\n\r\n**Define:** Live performers often react to each other in real time, like jazz musicians improvising or DJs remixing on the spot. In this challenge, you'll practice improvisation by performing live and responding to the music as it plays.\r\n\r\n**Prepare:** Plan your backing track with a beat and bass track. You'll also need a trigger with a loop that plays between 2-5 times. After you press the trigger, you'll need to change the music in the trigger so that it sounds different everytime you play it!\r\n\r\n![](https://images.code.org/9f3397b903800c84dd9f9b88c4ad5a0d-image-1750876022983.png)\r\n\r\n**Try:** Play your song, then press your trigger. After the loop ends, modify it! This could include swapping sounds, adjusting the loop length, or adding effects. Modify your code in real-time as the backing track plays!\r\n\r\n**Reflect:** Think about your performance. Did the loop change each time? Were the changes interesting and unexpected? In order to complete this level, your remix must include:\r\n\r\n- A backing track with a beat and bass track\r\n- A trigger that contains a loop that plays between 2–5 times\r\n- A live performance that includes changes to the code after the trigger plays\r\n\r\n(Optional): Have a partner add their own trigger to the code! React to each other's music by modifying your code in response.",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Call & Response",
+    "bubble_choice_description": "In live music, performers often respond to each other in the moment. In this level, you'll practice improvisation and timing by interacting with your music in real-time.",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-a_0d483c9d-8ad1-460a-95ec-7c12a59c9029",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You Did It!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:1"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:3"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:2"
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 1
+          },
+          {
+            "name": "played_sound_triggered_multiple_times",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-a_1865ae32-0c4a-427b-994a-8b7836e9a83f",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot heard your trigger! Now change the code and press it again!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:1"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:3"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:2"
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-a_aaa3caa2-7356-4b9a-9bda-5cbffc0def72",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and waiting for your trigger...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:1"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:3"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-a_8df6290f-f1ce-4df0-8539-e380c229400a",
+        "message": "Looks like you've got your backing loop - now try creating your smaller loop inside the \"1\" trigger!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-a_616533eb-3e4b-4c23-a9e7-f7fdd5cd8765",
+        "message": "Not sure where to start? Create your backing beat loop with a beat and bass first!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF51XtgyGkH81lESNpLSv\nXETJf3Sh7UrtLOyGqQu3NfaNUd9e7jjGdMrL98bLhXMxW/ZY9His3sB3xpLx\nm6hQ2OnekCEgBgSeA0iVdhUnjeDNPb2mLORUSv4PZKdof90hXQ+57v0IITSz\nGZEdsoqHUyCk/4nOEguvwPP4CjDoZ3cEZBHLaB430c+a6Rs2XfdkLxs4VuMv\nZrtaRtS5ajVME2gNdxODStGXUsO9DbRMHUsSF28tpxaP8Bbd/iX3vRKvYeSR\n34AzQg4ralHoJVKBfiQKdgZE7HN9l4nvsg8QDNS7qalatg7YFYcupvfx270/\ny1oS+gNWAeir0MmrwWHE8a+yGEgccPWz0t1OsK+O8kcZNYt+IERHUSfZNEok\nq3A59iL/DvWkV6gPm0y3h9RnW67N9/NrUNR3aFgLl7VRcdPfNSriFLWYndmW\nrEZfMC955E12VHWZ80OJcys0ej9Z65TyWGbd9md25NM2Pmgmup4TQyItIVGO\nBjbmw4/6HAuF9lXQryrBgo4ZG8dUuFWixkmndhllqEOWTFZjceHyXPhz4XZD\ntr86EHo+FQFbAnqwgvWmb3XEhmfoY5x8yr0d9/arMwyY6IgzvkztbYtcpAol\nN2epdQC1EivypsJe8B4Xy6ZQftMc+plSYOpbFFYgmYweQCVQI3TspP/+AQ0L\nbLmCsbjZnrRaSh+728gupRMl8/5nbVW4hI6YdoeHSqFl28UK0yjelh88gADo\n60dQB5NKhFyHMUTMcS4I3uCv92mRwi/DVPLwU9T15B7LGOyvtUmfN8auF+/e\naFIsfcwOlxD+oV0KHCfoA4bqTGIOJqTByrjD2tsprslnaTo7Zldzau2YB5nt\nWi3f9edWSgfB0mlEW3+z3SWdEs+T3hlvo0UjK6nzl0Vs9kRa1YVqMsk/KPW+\nq9cftzrT/BPe+G2DJUPtR/mGdfovvdE4n9YDZqRgfmKDfA+EGgEB4EfeVHn0\nuFrD2qO/4YNR5v21coitwuEZeXPb87TVxsdj7tEf+8Q4SY5ExMfI5aJvwA8P\n3MILLof0ohUzvj7IFHWlj2Rv4R1p7aVvaY2ynBlL+xM+C7Isk8+VPtSHWeuU\n4jhVQ65872erDciqnpPTeRQBIH+jJoNoWFkAvtDrWiUzXbmW+x2NP3eUB1N/\n7Yfip5Rlwv6GJz/3uj+tqfI4Uohe1aW+e2zwV+R33nb8dMF3kXv6yiNl4cQb\neewgFO9dWFHLogLMREFh+wcLdDW41OE8KN2/L8GNHLDw+oWmAJ9yWFjxyS2P\nm2xdMPT2t5h1XQhog/5XGtYfvqeCQfURakRaj3QbigoaMF8RbFJBDvJmmBSv\nwDD9nCAwJiyPtNVGtZV7mOom5g9aHPWVus6rHq8Fsbv6pkcMKcCDJ4ld7EbO\nVE11Rv5R3W+4FlBY/u6hVqXpJHWj1CiNH+rpWkBAVIIRfkWWjk8ojU7rbs3N\nG0R1lFxYM2bRIcwOOmoCAu1ZUoZcs8FjsfQlrzayJBM0/7l/4KzSJYlS41/E\niOQo+A3pniUlk0GjB+VFFXq+hWyKuI930OvWy9Lk1PwFDeDVPjN05KX3Bs+Y\nsDRLt55jReL21TbSfyHcnLjzm2ISjDXKpW39Ide3+uZvLYWoGOvqTN4YlYl/\nBza59/UQ8YSzVbhsn/xAnxYGOWdYH/PWGe5DcnCiQqH6NDEV7LX30Aw5NdJq\nPqbYaEEKfUQcSRfZCfWKXH1BveYA6VfHeIjen6QJJVRTTi+KAOjSsGzJP7JG\n77tub40j0N+AodHG/4J/8wzT7bMQnY8Ag0rf4LkSFMDXu1uBPvOMCFBkU7vJ\n0+43JqCj4BBzEFDq+D8dZ5Ajqx4ooHdNCkvqSgs=\n",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/electro/electro.png",
+    "submittable": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:05.594+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-a\"},{\"changed_at\":\"2025-06-12 20:41:15 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 18:20:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 18:27:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 22:08:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-09 22:38:19 +0000\",\"changed\":[\"display_name\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

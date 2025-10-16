@@ -1,19 +1,20 @@
 import classNames from 'classnames';
-import {useCallback, memo, AriaAttributes} from 'react';
+import {useCallback, AriaAttributes} from 'react';
 
 import {ButtonProps} from '@/button';
-import {
-  DropdownProviderWrapper,
-  useDropdownContext,
-} from '@/common/contexts/DropdownContext';
+import {useDropdownContext} from '@/common/contexts/DropdownContext';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+import CustomDropdown, {
+  CustomDropdownMenuPlacement,
+  CustomDropdownMenuVerticalPlacement,
+  CustomDropdownOption,
+} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
-export interface ActionDropdownOption extends _CustomDropdownOption {
+export interface ActionDropdownOption extends CustomDropdownOption {
   onClick: () => void;
   isOptionDestructive?: boolean;
   icon: FontAwesomeV6IconProps;
@@ -28,7 +29,9 @@ export interface ActionDropdownProps extends AriaAttributes {
   /** ActionDropdown size */
   size?: ComponentSizeXSToL;
   /** ActionDropdown Menu placement */
-  menuPlacement?: 'left' | 'right';
+  menuPlacement?: CustomDropdownMenuPlacement;
+  /** ActionDropdown menu vertical placement */
+  menuVerticalPlacement?: CustomDropdownMenuVerticalPlacement;
   /** ActionDropdown disabled state */
   disabled?: boolean;
   /** ActionDropdown label
@@ -40,6 +43,19 @@ export interface ActionDropdownProps extends AriaAttributes {
   triggerButtonProps?: ButtonProps;
 }
 
+/**
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see ./__tests__/ActionDropdown.test.tsx)
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Action Dropdown Component.
+ * Used to render dropdowns with a menu/list of different actions.
+ */
 const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   name,
   className,
@@ -47,6 +63,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   options,
   disabled = false,
   menuPlacement = 'left',
+  menuVerticalPlacement = 'bottom',
   size = 'm',
   triggerButtonProps,
   ...rest
@@ -69,74 +86,54 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
       labelText={labelText}
       disabled={disabled}
       menuPlacement={menuPlacement}
+      menuVerticalPlacement={menuVerticalPlacement}
       size={size}
       {...rest}
       useDSCOButtonAsTrigger
       triggerButtonProps={triggerButtonProps}
     >
-      <div className={moduleStyles.dropdownMenuContainer}>
-        <ul>
-          {options.map(option => {
-            const {
-              value,
-              label,
-              onClick,
-              isOptionDisabled,
-              isOptionDestructive,
-              icon: {
-                iconName,
-                iconStyle,
-                title: iconTitle,
-                className: iconClassName,
-              },
-            } = option;
-            return (
-              <li key={value}>
-                <button
-                  className={classNames(
-                    moduleStyles.dropdownMenuItem,
-                    isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
-                    isOptionDestructive &&
-                      moduleStyles.destructiveDropdownMenuItem,
-                  )}
-                  disabled={isOptionDisabled || disabled}
-                  type="button"
-                  onClick={() => onOptionClick(onClick)}
-                >
-                  <FontAwesomeV6Icon
-                    iconName={iconName}
-                    iconStyle={iconStyle}
-                    title={iconTitle}
-                    className={iconClassName}
-                  />
-                  <span>{label}</span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <ul>
+        {options.map(option => {
+          const {
+            value,
+            label,
+            onClick,
+            isOptionDisabled,
+            isOptionDestructive,
+            icon: {
+              iconName,
+              iconStyle,
+              title: iconTitle,
+              className: iconClassName,
+            },
+          } = option;
+          return (
+            <li key={value}>
+              <button
+                className={classNames(
+                  moduleStyles.dropdownMenuItem,
+                  isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
+                  isOptionDestructive &&
+                    moduleStyles.destructiveDropdownMenuItem,
+                )}
+                disabled={isOptionDisabled || disabled}
+                type="button"
+                onClick={() => onOptionClick(onClick)}
+              >
+                <FontAwesomeV6Icon
+                  iconName={iconName}
+                  iconStyle={iconStyle}
+                  title={iconTitle}
+                  className={iconClassName}
+                />
+                <span>{label}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
     </CustomDropdown>
   );
 };
 
-/**
- * ### Production-ready Checklist:
- * * (✔) implementation of component approved by design team;
- * * (✔) has storybook, covered with stories and documentation;
- * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see ./__tests__/ActionDropdown.test.tsx)
- * * (?) passes accessibility checks;
- *
- * ###  Status: ```Ready for dev```
- *
- * Design System: Action Dropdown Component.
- * Used to render dropdowns with a menu/list of different actions.
- */
-const WrappedActionDropdown = (props: ActionDropdownProps) => (
-  <DropdownProviderWrapper>
-    <ActionDropdown {...props} />
-  </DropdownProviderWrapper>
-);
-
-export default memo(WrappedActionDropdown);
+export default ActionDropdown;

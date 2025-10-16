@@ -6,8 +6,8 @@ class LevelSourceTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @user = create :user
-    @level = create :level
+    @user = create(:user)
+    @level = create(:level)
     @level_source = create(:level_source, level_id: @level.id, data: 'data')
   end
 

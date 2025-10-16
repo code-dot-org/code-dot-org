@@ -1,0 +1,128 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-06-27T21:54:19.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Building Tension\r\n\r\n**Define:** You're designing a song for a video game boss fight. The music needs to feel repetitive to build tension, but include surprising changes to keep the player alert and on edge.\r\n\r\n**Prepare:** Plan a strong 4- or 8-measure loop that drives the energy of the song. Choose smaller loops (like a effects or bass) to nest inside and repeat at different intervals. Listen to the example below to hear what this could sound like!\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\n**Musical Suggestions:**\r\n\r\n- *“Born This Way” – Lady Gaga* (powerful structure perfect for this kind of track)\r\n- *“Espresso” – Sabrina Carpenter* (sharp rhythm and energy)\r\n- *“I Like to Move It” – will.i.am* (loop-ready with natural drop points)\r\n\r\n</div>\r\n\r\n**Try:** Create your main loop and nest at least one smaller loop inside it. Repeat the full pattern, but break it up at least twice using intentional changes, like an added sound or a new effect.\r\n\r\n**Reflect:** Does your track feel like it could play during a high-stakes moment in a game? Were your changes surprising enough to break the tension without losing the rhythm? In order to complete this level, your remix must include:\r\n\r\n- At least one nested loop\r\n- At least 2 rests\r\n- At least 5 unique sounds\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "validationTimeout": 1
+    },
+    "display_name": "Building Tension",
+    "encrypted_exemplar_sources": "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\n02LTJaOyrTpM/5HQpyte4xc36Fo=\n",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example",
+      "validationMode": "type",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "You’re designing a track for a video game boss fight. The music needs to feel repetitive to build tension, but include surprising changes to keep the player alert and on edge.",
+    "validations": [
+      {
+        "key": "music-lab-loops-practice-challenge-c_v2_0e8f855e-1f31-4ff8-9cc8-f28769a29fea",
+        "message": "You did it!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_nested_loop",
+            "value": 1
+          },
+          {
+            "name": "played_different_sounds",
+            "value": 5
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-challenge-c_v2_f267f8d9-2949-455a-871b-7cfabfdb44c7",
+        "message": "DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:5"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:2"
+          }
+        ],
+        "comment": "All of the necessary blocks are in the workspace, so now start listening to the actual song..."
+      },
+      {
+        "key": "music-lab-loops-practice-challenge-c_v2_fc587745-355b-4480-aa14-64b42ba3b392",
+        "message": "Make sure you have enough play, rest, and repeat blocks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/acoustic_arcade/acoustic_arcade.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-06-27T21:54:19.906+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-a_v2\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-a_v2\"},{\"changed_at\":\"2025-06-27 22:02:55 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"exemplar_settings\",\"predict_settings\",\"bubble_choice_description\",\"validations\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 22:03:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 22:04:06 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 22:09:38 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 22:10:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 16:53:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,0 +1,10 @@
+name 'exploring_generative_ai_L1_2_ethical_checkpoint_a'
+title 'Ethical Checkpoint'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+level 'exploring_generative_ai_l1_2_q1'
+level 'exploring_generative_ai_l1_2_q2'
+level 'exploring_generative_ai_l1_2_q3'

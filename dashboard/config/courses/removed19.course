@@ -3,6 +3,9 @@
   "script_names": [
     "removed19"
   ],
+  "original_script_names": [
+    "removed19"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

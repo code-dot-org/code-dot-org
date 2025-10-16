@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-05-29T11:51:08.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##  🔍Teacher Tip\r\nCheck out the **system prompt** for this chatbot.\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">➡️ This Level is from Lesson 3. You can find more details in the full <a href='https://levelbuilder-studio.code.org/courses/exploring-gen-ai-2025/units/2/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n---\r\n\r\n## Driving Chatbot\r\n\r\n### Do This\r\n\r\n1) **Predict:** What do you notice? What do you wonder? How do you expect the chatbot to respond?\r\n2) **Investigate:** Test the chatbot with at least 4 different messages\r\n3) **Reflect:** What worked like you expected? What surprised you?\r\n\r\nOnce you're finished, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the requirements to get a driving permit?\r\n* What happens if you run a red light?\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "You are a chatbot built to help people understand how to drive in Arizona. \n\nUse metaphors or analogies to explain concepts as often as possible. \n\nUse a friendly, warm tone. \n\nDo not answer any questions that are not related to driving in Arizona. If asked a question that is not about driving in Arizona, just repeat your purpose.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ],
+      "multimodalEnabled": false
+    },
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-29T11:51:08.958+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-customizing_08\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-customizing_08\"}]"
+}]]></config>
+</Aichat>

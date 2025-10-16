@@ -1,4 +1,3 @@
-@use '@code-dot-org/component-library-styles/colors.scss';
 @use '@code-dot-org/component-library-styles/variables' as variables;
 
 $mobileBreakpoint: 1024px;
@@ -47,6 +46,7 @@ $mobileBreakpoint: 1024px;
 }
 
 figure.tabGroupModelTabImageContainer {
+  // Image in Tab Group Model Tab have fixed width and height. These value are taken from DSCO Figma design.
   width: 28.6699rem;
   height: 18.7234rem;
   aspect-ratio: auto;
@@ -90,6 +90,7 @@ figure.tabGroupModelTabImageContainer {
 }
 
 figure.tabGroupAccordionItemImage {
+  // Image in Tab Group Model Tab have fixed width and height. These value are taken from DSCO Figma design.
   height: 13.2246rem;
   aspect-ratio: auto;
   background: var(--background-neutral-tertiary);

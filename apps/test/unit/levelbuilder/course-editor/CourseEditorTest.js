@@ -41,7 +41,7 @@ describe('CourseEditor', () => {
     initialUnitsInCourse: ['CSP Unit 1', 'CSP Unit 2'],
     unitNames: ['Unit Not Part of Course'],
     initialHasVerifiedResources: false,
-    initialHasNumberedUnits: false,
+    initialNumberedUnits: null,
     courseFamilies: ['CSP', 'CSD', 'CSF'],
     versionYearOptions: ['2017', '2018', '2019'],
     initialAnnouncements: [],

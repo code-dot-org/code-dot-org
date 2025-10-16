@@ -1,4 +1,7 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  default as FontAwesomeV6Icon,
+  kitIcons,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
@@ -15,6 +18,7 @@ interface SidebarOptionProps {
   isSelected: boolean;
   sectionId?: number;
   courseVersionName?: string;
+  unitPosition?: number;
   unitName: string | null;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
 }
@@ -23,6 +27,7 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
   isSelected,
   sectionId,
   courseVersionName,
+  unitPosition,
   unitName,
   pathKey,
 }) => {
@@ -38,6 +43,7 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       to={generatePath(LABELED_TEACHER_NAVIGATION_PATHS[pathKey].absoluteUrl, {
         sectionId: sectionId,
         courseVersionName: courseVersionName,
+        unitPosition: unitPosition,
         unitName: unitName,
       })}
       className={classNames(styles.sidebarOption, {
@@ -49,6 +55,11 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
         <FontAwesomeV6Icon
           className={styles.optionIcon}
           iconName={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon || ''}
+          iconFamily={
+            kitIcons.has(LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon || '')
+              ? 'kit'
+              : undefined
+          }
         />
       </div>
       <BodyTwoText

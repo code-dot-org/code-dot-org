@@ -1,0 +1,9 @@
+name 'self-paced-CSDMusicLab-L1-leveltypes'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Level Types
+
+#### Note for pilot teachers: This level is under construction for now.
+MARKDOWN

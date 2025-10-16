@@ -1,18 +1,52 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, fireEvent} from '@testing-library/react';
 
 import Facade from '../Facade';
 
-describe('Facade Component', () => {
-  it('renders the component correctly', () => {
-    const {container} = render(<Facade alt={'Facade'} />);
+describe('Facade', () => {
+  const mockOnClick = jest.fn();
+  const defaultProps = {
+    label: 'Play Video',
+    posterThumbnail: 'thumbnail.jpg',
+    onClick: mockOnClick,
+  };
 
-    expect(container).toBeEmptyDOMElement();
+  it('renders the Facade component with the correct label and poster thumbnail', () => {
+    render(<Facade {...defaultProps} />);
+
+    expect(screen.getByAltText(defaultProps.label)).toBeInTheDocument();
+    expect(screen.getByAltText(defaultProps.label)).toHaveAttribute(
+      'src',
+      defaultProps.posterThumbnail,
+    );
+    expect(
+      screen.getByRole('button', {name: defaultProps.label}),
+    ).toBeInTheDocument();
   });
 
-  it('displays poster that is lazily loaded', () => {
-    render(<Facade alt={'Facade'} posterThumbnail="mock.png" />);
-    const poster = screen.getByAltText('Facade');
-    expect(poster).toHaveAttribute('loading', 'lazy');
-    expect(poster).toBeVisible();
+  it('calls the onClick handler when the FacadeBackground is clicked', () => {
+    render(<Facade {...defaultProps} />);
+
+    const facadeBackground = screen.getByAltText(defaultProps.label);
+    fireEvent.click(facadeBackground);
+
+    expect(mockOnClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('calls the onClick handler when the PlayButton is clicked', () => {
+    render(<Facade {...defaultProps} />);
+
+    const playButton = screen.getByRole('button', {name: defaultProps.label});
+    fireEvent.click(playButton);
+
+    expect(mockOnClick).toHaveBeenCalledTimes(2);
+  });
+
+  it('renders with the correct class name', () => {
+    render(<Facade {...defaultProps} />);
+
+    const facadeElement = screen
+      .getByAltText(defaultProps.label)
+      .closest('div');
+    expect(facadeElement).toHaveClass('facade');
   });
 });

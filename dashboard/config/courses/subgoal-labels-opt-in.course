@@ -3,6 +3,9 @@
   "script_names": [
     "subgoal-labels-opt-in"
   ],
+  "original_script_names": [
+    "subgoal-labels-opt-in"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

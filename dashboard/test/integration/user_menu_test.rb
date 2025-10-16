@@ -27,7 +27,7 @@ class UserMenuTest < ActionDispatch::IntegrationTest
   end
 
   test 'student does not see links to teacher dashboard' do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get '/home'
@@ -44,7 +44,7 @@ class UserMenuTest < ActionDispatch::IntegrationTest
   end
 
   test 'should show sign out link for signed in user' do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get '/home'

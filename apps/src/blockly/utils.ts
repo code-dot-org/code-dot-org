@@ -3,13 +3,28 @@ import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 
-import {DARK_THEME_SUFFIX, Themes, BLOCK_TYPES} from './constants';
-import {ExtendedBlock} from './types';
+import UserPreferences from '../lib/util/UserPreferences';
+import {shrinkBlockSpaceContainer} from '../templates/instructions/utils';
+
+import {
+  DARK_THEME_SUFFIX,
+  Themes,
+  BLOCK_TYPES,
+  BLOCKLY_THEME,
+} from './constants';
+import {
+  BlocklyWrapperType,
+  ExtendedBlock,
+  JsonBlockConfig,
+  WorkspaceSerialization,
+} from './types';
 
 type xmlAttribute = string | null;
 type InputTuple = [string, string, number];
@@ -336,7 +351,7 @@ export function disableOrphanBlocks(eventWorkspace: GoogleBlockly.Workspace) {
   // its call blocks.
   eventWorkspace.getTopBlocks().forEach(block => {
     if (block.type === BLOCK_TYPES.procedureCall) {
-      block.setEnabled(false);
+      block.setDisabledReason(true, 'ORPHANED');
     }
     updateBlockEnabled(block);
   });
@@ -351,16 +366,154 @@ export function updateBlockEnabled(block: GoogleBlockly.Block) {
     if (parent && parent.isEnabled()) {
       const children = block.getDescendants(false);
       for (let i = 0, child; (child = children[i]); i++) {
-        child.setEnabled(true);
+        child.setDisabledReason(false, 'ORPHANED');
       }
     } else if (block.outputConnection || block.previousConnection) {
       let currentBlock: GoogleBlockly.Block | null = block;
       do {
-        currentBlock.setEnabled(false);
+        currentBlock.setDisabledReason(true, 'ORPHANED');
         currentBlock = currentBlock.getNextBlock();
       } while (currentBlock);
     }
   } finally {
     Blockly.Events.setRecordUndo(initialUndoFlag);
+  }
+}
+
+/**
+ * Sets the theme for the workspace and re-renders blocks if the font size changed.
+ *
+ * @param {GoogleBlockly.Workspace} workspace - The Blockly workspace to set the theme for.
+ * @param {GoogleBlockly.Theme} theme - The theme to apply to the workspace.
+ */
+export function setThemeAndRenderBlocks(
+  workspace: GoogleBlockly.WorkspaceSvg,
+  theme: GoogleBlockly.Theme,
+  previousTheme?: GoogleBlockly.Theme
+) {
+  if (theme && workspace?.rendered) {
+    // Update the main workspace's flyout if it exists.
+    if (workspace.getFlyout()) {
+      setThemeAndRenderBlocks(
+        workspace.getFlyout()!.getWorkspace(),
+        theme,
+        previousTheme
+      );
+    }
+    workspace.setTheme(theme);
+    // Re-render blocks if the font size changed.
+    // Once https://github.com/google/blockly/issues/7782 is resolved,
+    // we should be able to remove this.
+    if (theme.fontStyle?.size !== previousTheme?.fontStyle?.size) {
+      workspace.getAllBlocks().map(block => {
+        block.markDirty();
+        block.render();
+      });
+      // If this is an embedded workspace, we resize its container to avoid cropping or excess padding.
+      if (Blockly.embeddedWorkspaces.includes(workspace.id)) {
+        shrinkBlockSpaceContainer(workspace, true);
+      }
+      // Adjust the width of the vertical flyout if it exists.
+      if (workspace.getFlyout()) {
+        workspace.getFlyout()!.reflow();
+      }
+    }
+  }
+}
+
+export function setWorkspaceTheme(
+  workspace: GoogleBlockly.WorkspaceSvg,
+  name: string
+) {
+  // Save the theme to user preferences, falling back to localStorage for signed-out users.
+  new UserPreferences().setBlocklyTheme(name, () =>
+    localStorage.setItem(BLOCKLY_THEME, name)
+  );
+
+  const currentTheme = workspace.getTheme();
+  const themeName = name + (isDarkTheme(currentTheme) ? DARK_THEME_SUFFIX : '');
+  setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
+  const analyticsData = Blockly.analyticsData;
+  analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
+    setting: EVENTS.BLOCKLY_SETTING_THEME,
+    value: name,
+    ...analyticsData,
+  });
+}
+
+export function setAllWorkspacesTheme(
+  newTheme: GoogleBlockly.Theme,
+  previousTheme: GoogleBlockly.Theme | undefined
+) {
+  Blockly.Workspace.getAll().forEach(baseWorkspace => {
+    // Headless workspaces do not have the ability to set the theme.
+    const workspace = baseWorkspace as GoogleBlockly.WorkspaceSvg;
+    setThemeAndRenderBlocks(workspace, newTheme, previousTheme);
+  });
+}
+
+/**
+ * Adds a warning to blocks that are not positioned under a static category block,
+ * except when there are no categories at all. If warnings are ignored, we will
+ * still save the blocks into a "DEFAULT" category.
+ */
+export function validateBlockCategories(workspace: GoogleBlockly.WorkspaceSvg) {
+  const topBlocks = workspace.getTopBlocks(true);
+
+  const noCategoryBlocks =
+    !workspace.getBlocksByType(BLOCK_TYPES.category).length &&
+    !workspace.getBlocksByType(BLOCK_TYPES.categoryDynamic).length;
+
+  let currentCategoryBlock: GoogleBlockly.BlockSvg | null = null;
+  let warningText = 'This block is not positioned under a category.';
+
+  topBlocks.forEach(block => {
+    // If there are no categories, remove all warnings.
+    if (noCategoryBlocks) {
+      block.setWarningText(null);
+      return;
+    }
+    if (block.type === BLOCK_TYPES.category) {
+      // Update the current category to this block
+      currentCategoryBlock = block;
+    } else if (block.type === BLOCK_TYPES.categoryDynamic) {
+      // Reset the current category since dynamic categories can't include static blocks
+      currentCategoryBlock = null;
+      warningText = 'Auto-populated categories cannot include static blocks.';
+    } else {
+      // All non-category blocks
+      if (!currentCategoryBlock) {
+        // No static category block above this block
+        block.setWarningText(warningText);
+      } else {
+        // Valid placement under a static category block
+        block.setWarningText(null);
+      }
+    }
+  });
+}
+
+export function applyBlockIdOverrides(
+  workspaceJson: WorkspaceSerialization,
+  overrides: BlocklyWrapperType['blockIdOverrides']
+) {
+  function walkBlocks(block: JsonBlockConfig) {
+    if (block.id && overrides[block.id]) {
+      block.id = overrides[block.id];
+    }
+    if (block.next?.block) {
+      walkBlocks(block.next.block);
+    }
+    if (block.inputs) {
+      for (const stmt of Object.values(block.inputs)) {
+        if (stmt?.block) {
+          walkBlocks(stmt.block);
+        }
+      }
+    }
+  }
+
+  if (Array.isArray(workspaceJson.blocks?.blocks)) {
+    workspaceJson.blocks.blocks.forEach(walkBlocks);
   }
 }

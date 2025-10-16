@@ -1,6 +1,6 @@
 import {createContext, useContext, useState, ReactNode} from 'react';
 
-type Theme = 'Light' | 'Dark';
+export type Theme = 'Light' | 'Dark';
 
 interface ThemeContextProps {
   /** Theme value */
@@ -10,6 +10,9 @@ interface ThemeContextProps {
   /** In case we'll have more than 2 themes - we'll be able to update theme value via this callback */
   setTheme: (theme: Theme) => void;
 }
+
+/** Same as `ThemeContextProps` but where all properties are optional.  For `useTheme(true)` */
+type OptionalThemeContextProps = Partial<ThemeContextProps>;
 
 /**
  * Handles multiple themes logic.
@@ -21,20 +24,49 @@ interface ThemeContextProps {
  */
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
-/** Provides code with values of ThemeContext inside of React component.
- * Please note that in order to work correctly - it requires component you're working in to be wrapped by ThemeProvider
- * anywhere on higher level
+/**
+ * Provides code with values of `ThemeContext` inside of a React component.
+ *
+ * Default behavior: by default `isThemeOptional` is set to `false`, which means `useTheme` requires
+ * the component you're working in to be wrapped by `ThemeProvider` anywhere on a higher level.  If
+ * your component is not wrapped in a `ThemeProvider`, `useTheme` will throw an error.
+ *
+ * Usage example (default use):
+ *    const {theme, toggleTheme} = useTheme();
+ *
+ * Advanced: setting `isThemeOptional` to `true` changes this default behavior and does not
+ * require the component you're working in to be wrapped by a `ThemeProvider`. This is useful for
+ * parent components that need to pass the theme to a component rendered in a portal (e.g. `Tooltip`)
+ * but where the parent isn't always rendered in a provider (e.g. aiComponentLibrary's `CopyButton`).
+ *
+ * Note: if `isThemeOptional` is `true` and no theme is provided, `theme` will result in a value of
+ * `undefined`. In this case `toggleTheme` or `setTheme` will also be undefined if `theme` is
+ * `undefined`, so you must account for this in your code.
  *
  * Usage example:
- *    const {theme, toggleTheme} = useTheme();
+ *    const {theme, toggleTheme} = useTheme(true);
+ *    const handleClick = () => {
+ *      if(toggleTheme){
+ *        toggleTheme()
+ *      }
+ *    };
+ *
  * */
-export const useTheme = () => {
+export function useTheme(isThemeOptional: true): OptionalThemeContextProps;
+export function useTheme(isThemeOptional?: false): ThemeContextProps;
+export function useTheme(
+  isThemeOptional = false,
+): ThemeContextProps | OptionalThemeContextProps {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    if (isThemeOptional) {
+      return {};
+    } else {
+      throw new Error('useTheme must be used within a ThemeProvider');
+    }
   }
   return context;
-};
+}
 
 /**
  * Provides code with theme context. Can be used on the higher level (e.g. React app entry point)

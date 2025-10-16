@@ -1,0 +1,14 @@
+name 'test-music-lab-intro-choice_v2'
+display_name 'Find the best match'
+description 'Read the client stories on your Activity Guide. Explore each of the options below. Choose which prototype best matches the client need in your Activity Guide.'
+
+sublevels
+level 'test-music-lab-intro-choice-a_v2'
+level 'test-music-lab-intro-choice-b_v2'
+level 'test-music-lab-intro-choice-c_v2'
+level 'test-music-lab-intro-choice-d_v2'
+level 'test-music-lab-intro-choice-e_v2'
+level 'test-music-lab-intro-choice-f_v2'
+level 'test-music-lab-intro-choice-g_v2'
+level 'test-music-lab-intro-choice-h_v2'
+uses_lab2

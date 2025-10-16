@@ -7,13 +7,12 @@
       "content_area": "other",
       "curriculum_umbrella": "Other",
       "hideable_lessons": true,
-      "is_migrated": true,
-      "pilot_experiment": "haikubot-pilot"
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:17 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2025-03-28 09:28:48 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,

@@ -1,7 +1,7 @@
 Feature: Contextual Hints
 
 Scenario: Blocks render in contextual hints
-  Given I am on "http://studio.code.org/s/allthethings/lessons/6/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
   And I wait to see "#lightbulb"
 
@@ -17,7 +17,7 @@ Scenario: Blocks render in contextual hints
   And I see jquery selector .csf-top-instructions .block-space
 
 Scenario: Contextual hints in level without Authored Hints
-  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/6?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/6?noautoplay=true"
   And I wait for the lab page to fully load
 
   Then element "#lightbulb" does not exist

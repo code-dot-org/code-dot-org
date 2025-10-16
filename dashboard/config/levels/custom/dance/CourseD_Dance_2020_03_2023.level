@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2023-03-14T20:37:44.000Z",
   "level_num": "custom",
@@ -47,13 +48,13 @@
     "soft_buttons": [
       "leftButton",
       "rightButton",
-      "downButton",
-      "upButton"
+      "upButton",
+      "downButton"
     ],
     "callout_json": "[]",
     "name_suffix": "_2023",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**How do I pass this level?**\\n\\n* Both dancers must perform a move.\\n* You must press the arrow keys.\\n\\n*This level ends after 6 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db214b72586f856ff48c7422cf8982ea/Dance_2019_03.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"**Optional Challenge**\\n* Make a dancer respond to the left and right arrow keys.\",\"hint_id\":\"challenges\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c0f595e2bee92408c44b691e630d6eaa/Dance_2019_03.mp3\"}]",
-    "default_song": "highhopes_panicatthedisco",
+    "default_song": "dancemonkey_tonesandi",
     "long_instructions": "It's time for a dance-off! Program each dancer to move when you press different keys. Choose your favorite move for each dancer or set it to `(Random)` for something totally unpredictable!",
     "short_instructions": "It's time for a dance-off! Program each dancer to move when you press different keys. Choose your favorite move for each dancer or set it to \"(Random)\" for something totally unpredictable! ",
     "encrypted": "false",
@@ -63,9 +64,8 @@
     "validation_enabled": "false",
     "hide_pause_button": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:37:44.493+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_032022\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_032022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:37:44.493+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_032022\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_032022\"},{\"changed_at\":\"2025-04-15 16:51:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"soft_buttons\",\"default_song\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "events": 3

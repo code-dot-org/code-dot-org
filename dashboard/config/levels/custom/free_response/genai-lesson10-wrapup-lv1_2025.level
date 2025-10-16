@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-03-12T20:41:26.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Wrap Up",
-    "long_instructions": "####A friend said “I love using LLMs to help me with my homework. I asked it to help me write my history paper - it came up with all these interesting sources and information I had never heard of before”. \r\n####**What would you say to this person?**\r\n",
+    "long_instructions": "#### AI Auditing is a career that focuses on ensuring AI models operate fairly and accurately, especially for the people they will impact.\r\n\r\n#### Are there aspects of this career you would like to see in your own future career? Why or why not?\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -15,10 +16,11 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "teacher_markdown": "This is a personal reflective prompt for students, which they may not want to share out and instead can just keep in their written responses. This prompt emphasizes that there are careers in AI and machine learning that focus on the \"human\" side of AI, trying to make sure AI systems work fairly and efficiently for everyone. For example, you could share how Dr Raji's work with the Gender Shades project led to changes in facial recognition models that improved the standards and accuracy to benefit those most impacted. Encourage students to see themselves in a career like this involving artificial intelligence.",
+    "stay_on_level_after_submit": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:41:26.019+00:00\",\"changed\":[\"cloned from \\\"genai-lesson10-wrapup-lv1\\\"\"],\"cloned_from\":\"genai-lesson10-wrapup-lv1\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:41:26.019+00:00\",\"changed\":[\"cloned from \\\"genai-lesson10-wrapup-lv1\\\"\"],\"cloned_from\":\"genai-lesson10-wrapup-lv1\"},{\"changed_at\":\"2025-05-20 20:30:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

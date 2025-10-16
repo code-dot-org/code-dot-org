@@ -9,12 +9,13 @@ import aichatI18n from '@cdo/apps/aichat/locale';
 import styles from './staged-files-preview.module.scss';
 
 const FilePreview: React.FC<{
-  type: 'pdf' | 'image';
+  type: 'pdf' | 'image' | 'text';
   filename: string;
-  url: string;
+  url?: string;
   isUploading?: boolean;
   onRemove?: () => void;
-}> = ({type, filename, url, isUploading, onRemove}) => {
+  onLoadError?: () => void;
+}> = ({type, filename, url, isUploading, onRemove, onLoadError}) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
@@ -28,19 +29,27 @@ const FilePreview: React.FC<{
       setImageLoaded(true);
     };
 
+    const handleError = () => {
+      setImageLoaded(true);
+      onLoadError?.();
+    };
+
     if (imageElement.complete) {
       handleLoad();
     } else {
       imageElement.addEventListener('load', handleLoad);
+      imageElement.addEventListener('error', handleError);
     }
 
     return () => {
       imageElement.removeEventListener('load', handleLoad);
+      imageElement.removeEventListener('error', handleError);
     };
-  }, []);
+  }, [url, onLoadError]);
+  const previewType = type === 'image' ? 'image' : 'file';
 
   return (
-    <div className={styles[`preview-${type}`]} title={filename}>
+    <div className={styles[`preview-${previewType}`]} title={filename}>
       {onRemove ? (
         isUploading || (type === 'image' && !imageLoaded) ? (
           <FontAwesomeV6Icon
@@ -76,21 +85,25 @@ const FilePreview: React.FC<{
         <div
           className={!imageLoaded ? styles['preview-image-loading'] : undefined}
         >
-          <img
-            alt=""
-            src={url}
-            ref={imageRef}
-            className={(!imageLoaded && styles.hide) || undefined}
-          />
+          {!isUploading && (
+            <img
+              alt=""
+              src={url}
+              ref={imageRef}
+              className={(!imageLoaded && styles.hide) || undefined}
+            />
+          )}
         </div>
       ) : (
         <>
           <div className={styles.fileIcon}>
-            <FontAwesomeV6Icon iconName="file" />
+            <FontAwesomeV6Icon
+              iconName={type === 'pdf' ? 'file-pdf' : 'file'}
+            />
           </div>
           <div className={styles.filenameContainer}>
             <StrongText>{filename}</StrongText>
-            <span>PDF</span>
+            {type === 'pdf' && <span>PDF</span>}
           </div>
         </>
       )}

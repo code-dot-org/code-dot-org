@@ -1,0 +1,23 @@
+name 'ai-powered-threats-defenses-lesson8-level1d_2025-pilot'
+
+display_name 'Omar M.'
+bubble_choice_description 'A security-conscious student from Minneapolis who keeps his online life private. Some tools were bought from Toronto during a sketchy login—would Omar really do that?'
+thumbnail_url 'https://images.code.org/33dcf3d41e5ddeb76754f0d6b827b429-image-1753989745927.png'
+
+markdown <<MARKDOWN
+#Omar M.
+
+**Read about Omar and investigate the audit logs. Can you find any evidence of fraud?**
+
+Your teacher should provide you with an activity guide and Omar's audit logs. However, if you would like a digital version of the activity guide, [click here](https://docs.google.com/document/d/1idByIUpqHOTgApWUPuuS4z4w3LHHP9zGh-Uo_VXbKGM/edit?usp=sharing). If you would like a digital version of Omar's audit logs, [Click here](https://docs.google.com/document/d/1yGNSBj9MVcrx32Ifl1BJFc8YlnxsGOkw2E20aPWRAMY/edit?usp=sharing).
+
+
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+  <img src="https://images.code.org/3d932b1aaf49381360bbb4d72c812f10-image-1754594902600.png" 
+       style="width: 300px; border: 2px solid black;">
+  <img src="https://images.code.org/ad9d23492685f457bc5d0b6df227dfc0-image-1754595349744.png" 
+       style="width: 300px; border: 2px solid black;">
+</div>
+
+
+MARKDOWN

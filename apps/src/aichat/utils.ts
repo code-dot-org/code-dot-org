@@ -31,11 +31,17 @@ export function getAssetUrl(
   channelId?: string,
   levelName?: string
 ) {
-  if (asset.source === 'project') {
+  if (asset.source === 'project' && channelId) {
     return `/v3/assets/${channelId}/${encodeURIComponent(asset.filename)}`;
-  } else {
+  }
+
+  if (asset.source === 'level' && levelName) {
     return `/level_starter_assets/${levelName}/${encodeURIComponent(
       asset.filename
     )}`;
   }
+
+  throw new Error(
+    'Either channel ID or level name must be provided for asset URL generation.'
+  );
 }

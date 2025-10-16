@@ -20,7 +20,7 @@
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
-    "./index.css": "./dist/index.css",
+    "./brands/*": "./dist/brands/*",
     "./locales/*": "./dist/locales/*",
     "./FontLoader": {
       "types": {
@@ -82,6 +82,7 @@
     "@fontsource/noto-sans-myanmar": "^5.1.1",
     "@fontsource/noto-sans-sc": "^5.1.1",
     "@fontsource/noto-sans-tc": "^5.1.1",
+    "@fontsource/roboto-mono": "^5.2.6",
     "eslint": "^9.16.0",
     "prettier": "3.4.2",
     "react": "^18.3.1",

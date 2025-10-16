@@ -7,8 +7,8 @@ import {
   processIndividualBlock,
   removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
-import experiments from '@cdo/apps/util/experiments';
 
 import * as blockUtils from '../../block_utils';
 import {parseElement as parseXmlElement} from '../../xml';
@@ -22,6 +22,7 @@ import {
   ToolboxType,
 } from '../constants';
 import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import cdoDark from '../themes/cdoDark';
 import cdoTheme from '../themes/cdoTheme';
 import {
   BlockColor,
@@ -148,7 +149,10 @@ function loadHiddenDefinitionBlocksToWorkspace(
  */
 function prepareSourcesForWorkspaces(source: string, embedded: boolean) {
   const parsedSource = parseSource(source, embedded);
-  const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
+  const procedureTypesToHide = [];
+  if (!embedded) {
+    procedureTypesToHide.push(BLOCK_TYPES.behaviorDefinition);
+  }
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
   }
@@ -196,7 +200,7 @@ export function moveHiddenBlocks(
   procedureTypesToHide: string[] = []
 ) {
   if (procedureTypesToHide.length === 0 || !hasBlocks(source)) {
-    return {mainSource: {}, hiddenDefinitionSource: {}};
+    return {mainSource: source, hiddenDefinitionSource: {}};
   }
 
   const mainSource = _.cloneDeep(source);
@@ -391,51 +395,46 @@ export function getField(type: string) {
 }
 
 /**
- * Returns a theme object, based on the presence of an option in the browser's localStorage.
- * @param {?Theme} themeOption
- * @returns {?Blockly.Field}
+ * Returns a theme object, based on user preferences, localStorage, and the current theme.
+ *
+ * @param {Theme} currentTheme - A fallback theme provided by the caller.
+ * @returns {Promise<GoogleBlockly.Theme>} A resolved Blockly theme object.
  */
-export function getUserTheme(themeOption: GoogleBlockly.Theme | undefined) {
+export async function getUserTheme(
+  currentTheme: GoogleBlockly.Theme | undefined
+): Promise<GoogleBlockly.Theme> {
   if (Blockly.isJigsaw) {
     // Jigsaw uses its own custom theme with an extra large font size.
     // Blocks use hard-coded colors instead of styles, so switching
     // palettes is not possible.
     return Blockly.themes.jigsaw;
   }
-  // Today we only store the theme's base name in localStorage, which never includes 'dark'.
-  // Until March, 2024 we stored the full theme name, so we need to convert it now.
-  // getBaseName strips the 'dark' suffix from a theme name, if present.
-  const localStorageThemeBaseName = getBaseName(localStorage.blocklyTheme);
 
-  // For labs that use dark mode by default, ensure we are returning a dark theme.
-  if (themeOption?.name.endsWith(DARK_THEME_SUFFIX)) {
-    return localStorageThemeBaseName
-      ? Blockly.themes[
-          (localStorageThemeBaseName + DARK_THEME_SUFFIX) as Themes
-        ]
-      : themeOption;
-  } else {
-    // For all other labs, return a light mode theme.
-    return (
-      Blockly.themes[localStorageThemeBaseName as Themes] ||
-      themeOption ||
-      cdoTheme
-    );
+  const userPrefs = new UserPreferences();
+  const themePreference = await userPrefs.getBlocklyTheme(() =>
+    // Fallback to localStorage if user preferences are not available (e.g. signed-out users).
+    // Today we only store the theme's base name in localStorage, which never includes 'dark'.
+    // Until March, 2024 we stored the full theme name, so we need to convert it now.
+    // getBaseName strips the 'dark' suffix from a theme name, if present.
+    getBaseName(localStorage.blocklyTheme)
+  );
+
+  if (!themePreference) {
+    // The user has not indicated a preference, so we use the lab theme or a safe default.
+    return currentTheme || getDefaultTheme();
   }
+
+  // The base theme name is the name of the theme, always without the 'dark' suffix.
+  // If the user is in dark mode, we append the 'dark' suffix to the base theme name.
+  const fullThemeName =
+    themePreference + (Blockly.isDarkTheme ? DARK_THEME_SUFFIX : '');
+  const userTheme = Blockly.themes[fullThemeName as Themes];
+  return userTheme || currentTheme || getDefaultTheme();
 }
 
-/**
- * Returns a cursor type, based on the presence of an option in the browser's localStorage.
- * @param {string} type
- * @returns {string} one of 'default', 'basic', or 'line'
- */
-export function getUserCursorType() {
-  const defaultCursorType = experiments.isEnabled(
-    experiments.KEYBOARD_NAVIGATION
-  )
-    ? 'line'
-    : 'default';
-  return localStorage.blocklyCursor || defaultCursorType;
+// Returns the default theme based on Blockly.isDarkTheme.
+export function getDefaultTheme() {
+  return Blockly.isDarkTheme ? cdoDark : cdoTheme;
 }
 
 /**
@@ -653,7 +652,10 @@ export function getSimplifiedStateForFlyout(
 
   // Replace variable ids with names and simplify state for flyout.
   blocksCopy.blocks?.forEach(block => {
-    updateVariableFields(block, serializedVariableMap);
+    updateVariableFields(
+      block as {fields: SerializedFields},
+      serializedVariableMap
+    );
     blocksList.push(simplifyBlockState(block));
   });
 
@@ -687,14 +689,14 @@ function simplifyBlockState(block: JsonBlockConfig) {
   // Recursively check nested blocks.
   if (block.inputs?.block) {
     for (const inputKey in block.inputs) {
-      result.inputs[inputKey].block = simplifyBlockState(
+      result.inputs![inputKey].block = simplifyBlockState(
         block.inputs[inputKey].block
       );
     }
   }
   // Recursively check next block, if present.
   if (block.next?.block) {
-    result.next.block = simplifyBlockState(block.next.block);
+    result.next!.block = simplifyBlockState(block.next.block);
   }
   // Remove unnecessary properties
   delete result.id;

@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:43.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -75,15 +79,11 @@
     "bubble_choice_description": "Debug why the sprite is not moving even though we update its position in the draw loop.",
     "libraries_enabled": "false",
     "start_blocks": "var blender = createSprite(200,200);\r\nblender.setAnimation(\"blender\");\r\nbackground(\"lightyellow\");\r\ndrawSprites();\r\nfunction draw() {\r\n  blender.x = randomNumber(195,205);\r\n  blender.y = randomNumber(195,205);\r\n}\r\n",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"392458fc-1457-45dd-8c57-e466fecb7544\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"392458fc-1457-45dd-8c57-e466fecb7544\": {\r\n      \"name\": \"blender\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/RyJYRPyX336xINHfnjjje20ezyEHSsNV/category_generic_items/blender.png\",\r\n      \"frameSize\": {\r\n        \"x\": 89,\r\n        \"y\": 136\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"RyJYRPyX336xINHfnjjje20ezyEHSsNV\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"392458fc-1457-45dd-8c57-e466fecb7544\"\n  ],\n  \"propsByKey\": {\n    \"392458fc-1457-45dd-8c57-e466fecb7544\": {\n      \"name\": \"blender\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/RyJYRPyX336xINHfnjjje20ezyEHSsNV/category_generic_items/blender.png\",\n      \"frameSize\": {\n        \"x\": 89,\n        \"y\": 136\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"RyJYRPyX336xINHfnjjje20ezyEHSsNV\"\n    }\n  }\n}",
     "thumbnail_url": "https://images.code.org/a9a93b8180805008ce574e5ca107af2b-image-1588270245992.png",
     "encrypted_examples": "YrdcE9iS/lXCWIRVzql6XOSn/rMPSVT1z5hs3ZFyrFpLd28r54y0b1pW4ILN\ndtqlHdqr+mGvGdGUE+45s+JD8g==\n",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:43.000Z",
-  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:43.397+00:00\",\"changed\":[\"cloned from \\\"CSD games draw debug not moving_2021\\\"\"],\"cloned_from\":\"CSD games draw debug not moving_2021\"}]"

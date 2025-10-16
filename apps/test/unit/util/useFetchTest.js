@@ -120,4 +120,46 @@ describe('useFetch', () => {
     expect(data).toBeNull();
     expect(error).toBeNull();
   });
+
+  it('returns a refetch function', async () => {
+    const expectedData = {name: 'Joe', age: 10};
+    fetchSpy.mockReturnValue(
+      Promise.resolve({ok: true, json: () => expectedData})
+    );
+
+    await act(async () => {
+      mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
+    });
+    await processEventLoop();
+
+    const {refetch} = useFetchReturnValue.current;
+    expect(typeof refetch).toBe('function');
+  });
+
+  it('refetch triggers a new fetch request', async () => {
+    const initialData = {name: 'Joe', age: 10};
+    const refetchData = {name: 'Jane', age: 20};
+
+    fetchSpy
+      .mockReturnValueOnce(Promise.resolve({ok: true, json: () => initialData}))
+      .mockReturnValueOnce(
+        Promise.resolve({ok: true, json: () => refetchData})
+      );
+
+    await act(async () => {
+      mount(<UseFetchHarness url={'/api/users'} options={{}} deps={[]} />);
+    });
+    await processEventLoop();
+
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    expect(useFetchReturnValue.current.data).toBe(initialData);
+
+    await act(async () => {
+      useFetchReturnValue.current.refetch();
+    });
+    await processEventLoop();
+
+    expect(fetchSpy).toHaveBeenCalledTimes(2);
+    expect(useFetchReturnValue.current.data).toBe(refetchData);
+  });
 });

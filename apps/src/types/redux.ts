@@ -1,7 +1,6 @@
 import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
 import {AichatState} from '@cdo/apps/aichat/redux';
-import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
@@ -12,6 +11,7 @@ import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';
 import {JavalabViewState} from '@cdo/apps/javalab/redux/viewRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {Lab2ProjectState} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {Lab2ViewState} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {PredictLevelState} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {Lab2SystemState} from '@cdo/apps/lab2/redux/systemRedux';
 import {MazeState} from '@cdo/apps/maze/redux';
@@ -22,6 +22,7 @@ import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {Weblab2State} from '@cdo/apps/weblab2/redux';
 
 import {DanceState} from '../dance/danceRedux';
 import {BlocklyState} from '../redux/blockly';
@@ -33,7 +34,6 @@ import {BlocklyState} from '../redux/blockly';
 // with registerReducers.
 export interface RootState {
   manageStudents: ManageStudentsState;
-  aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
   calendar: CalendarState;
@@ -48,6 +48,7 @@ export interface RootState {
   lab: LabState;
   lab2Project: Lab2ProjectState;
   lab2System: Lab2SystemState;
+  lab2View: Lab2ViewState;
   layout: LayoutState;
   locales: LocaleState;
   mapbox: MapboxState;
@@ -58,6 +59,7 @@ export interface RootState {
   teacherPanel: TeacherPanelState;
   teacherRubric: TeacherRubricState;
   teacherSections: TeacherSectionState;
+  weblab2: Weblab2State;
 }
 
 // Temporary type definition for the result of
@@ -72,7 +74,7 @@ export interface Student {
   gender?: string;
   genderTeacherInput?: string;
   secretWords: string;
-  secretPicturePath: string;
+  secretPictureUrl: string;
   loginType: string;
   sectionId?: number;
   sharingDisabled: boolean;

@@ -5,15 +5,8 @@
 # Code.org marketing app.                                                         #
 ###################################################################################
 
-FROM ubuntu:20.04 AS base
-
-# install operating system dependencies
-RUN apt-get update && \
-    apt-get install -y curl
-
-# install node, based on instructions at https://github.com/nodesource/distributions#using-ubuntu-1
-RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - && \
-    apt-get install -y nodejs
+# See: docker/frontend/base/Dockerfile
+FROM ghcr.io/code-dot-org/frontend-base:latest AS base
 
 ##############################################################################
 # Source Code Layer                                                          #
@@ -29,13 +22,10 @@ RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - && \
 
 FROM base AS source-code
 
-# Enable corepack
-RUN corepack enable
-
 WORKDIR /app
 
 COPY . .
- 
+
 # Generate a partial monorepo with a pruned lockfile for a target workspace.
 # See: https://turbo.build/repo/docs/reference/prune
 RUN yarn dlx turbo prune @code-dot-org/marketing --docker
@@ -51,6 +41,16 @@ RUN yarn dlx turbo prune @code-dot-org/marketing --docker
 
 FROM base AS builder
 
+# Enable Turborepo
+ARG TURBO_TEAM
+ENV TURBO_TEAM=$TURBO_TEAM
+
+ARG TURBO_TOKEN
+ENV TURBO_TOKEN=$TURBO_TOKEN
+
+ARG TURBO_API
+ENV TURBO_API=$TURBO_API
+
 # Enable corepack
 RUN corepack enable
 
@@ -61,7 +61,6 @@ COPY --link --from=source-code /app/out/json/ .
 RUN yarn install
 
 # Build the project
-COPY --link --from=source-code /app/.turbo .turbo
 COPY --link --from=source-code /app/out/full/ .
 RUN yarn turbo run build
 
@@ -77,6 +76,14 @@ RUN yarn turbo run build
 
 FROM base AS runner
 WORKDIR /app
+
+# When deploying Next.js behind a downstream proxy (e.g. a load-balancer like AWS ELB/ALB), it's important to configure
+# Next's underlying HTTP server with keep-alive timeouts that are larger than the downstream proxy's timeouts.
+# Otherwise, once a keep-alive timeout is reached for a given TCP connection, Node.js will immediately terminate that
+# connection without notifying the downstream proxy. This results in a proxy error whenever it attempts to reuse a
+# connection that Node.js has already terminated.
+# See: https://nextjs.org/docs/app/api-reference/cli/next#configuring-a-timeout-for-downstream-proxies
+ENV KEEP_ALIVE_TIMEOUT 70000
 
 # Don't run production as root
 RUN addgroup --system --gid 1001 nodejs

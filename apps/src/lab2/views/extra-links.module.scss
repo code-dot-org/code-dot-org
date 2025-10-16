@@ -10,6 +10,12 @@ button.extraLinksButton {
   z-index: 1000;
 }
 
+button.buttonRightOfFooter {
+  position: fixed;
+  left: 160px;
+  bottom: 10px;
+}
+
 .errorMessage {
   color: $red;
 }

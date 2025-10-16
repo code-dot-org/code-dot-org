@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {ImgHTMLAttributes} from 'react';
+import {ImgHTMLAttributes, JSX} from 'react';
 
 import moduleStyles from './image.module.scss';
 
@@ -13,12 +13,16 @@ export interface ImageProps
   loading?: 'eager' | 'lazy';
   /** Image decoration */
   decoration?: 'none' | 'border' | 'shadow';
+  /** Has rounded corners */
+  hasRoundedCorners?: boolean;
   /** Custom className */
   className?: string;
   /** Image onLoad callback */
   onLoad?: () => void;
   /** Image onError callback */
   onError?: () => void;
+  /** Custom image component to replace the default <img> element */
+  ImageComponent?: JSX.ElementType;
 }
 
 /**
@@ -39,34 +43,39 @@ const Image: React.FC<ImageProps> = ({
   altText = '',
   loading = 'lazy',
   decoration = 'none',
+  hasRoundedCorners = true,
   style,
   className,
   onLoad,
   onError,
+  ImageComponent = 'img',
   ...ImageHTMLAttributes
-}) => (
-  <figure
-    className={classNames(
-      moduleStyles.figureContainer,
-      {
-        [moduleStyles['figure-hasBorder']]: decoration === 'border',
-        [moduleStyles['figure-hasBoxShadow']]: decoration === 'shadow',
-      },
-      className,
-    )}
-    // Only use inline styles if there's no way to add custom className with needed styles.
-    style={style}
-  >
-    <img
-      className={classNames(moduleStyles.image)}
-      alt={altText}
-      loading={loading}
-      src={src}
-      onLoad={onLoad}
-      onError={onError}
-      {...ImageHTMLAttributes}
-    />
-  </figure>
-);
+}) => {
+  return (
+    <figure
+      className={classNames(
+        moduleStyles.figureContainer,
+        {
+          [moduleStyles['figure-hasBorder']]: decoration === 'border',
+          [moduleStyles['figure-hasBoxShadow']]: decoration === 'shadow',
+          [moduleStyles['figure-hasRoundedCorners']]: hasRoundedCorners,
+        },
+        className,
+      )}
+      // Only use inline styles if there's no way to add custom className with needed styles.
+      style={style}
+    >
+      <ImageComponent
+        className={classNames(moduleStyles.image)}
+        alt={altText}
+        loading={loading}
+        src={src}
+        onLoad={onLoad}
+        onError={onError}
+        {...ImageHTMLAttributes}
+      />
+    </figure>
+  );
+};
 
 export default Image;

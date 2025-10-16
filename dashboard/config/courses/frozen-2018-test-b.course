@@ -3,6 +3,9 @@
   "script_names": [
     "frozen-2018-test-b"
   ],
+  "original_script_names": [
+    "frozen-2018-test-b"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -31,7 +31,7 @@
       "visibilities": {
         "selectedModelId": "hidden",
         "temperature": "hidden",
-        "systemPrompt": "editable",
+        "systemPrompt": "hidden",
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
@@ -42,6 +42,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-24T03:36:01.741+00:00\",\"changed\":[\"cloned from \\\"test-computer-systems-lesson11-level2a\\\"\"],\"cloned_from\":\"test-computer-systems-lesson11-level2a\"},{\"changed_at\":\"2025-02-24 03:38:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-24T03:36:01.741+00:00\",\"changed\":[\"cloned from \\\"test-computer-systems-lesson11-level2a\\\"\"],\"cloned_from\":\"test-computer-systems-lesson11-level2a\"},{\"changed_at\":\"2025-02-24 03:38:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-02 16:28:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

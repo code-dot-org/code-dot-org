@@ -65,7 +65,7 @@ describe('StudentSelector', () => {
         <StudentSelector {...defaultProps} />
       </Provider>
     );
-    const dropdown = screen.getByLabelText('Select a student');
+    const dropdown = screen.getByRole('button', {name: 'Select a student'});
     await user.click(dropdown);
     await user.click(screen.getByText('Student 2 FamNameA'));
     expect(sendEventSpy).toHaveBeenCalledWith(

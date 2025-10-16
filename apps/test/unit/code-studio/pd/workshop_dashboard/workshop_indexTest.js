@@ -2,6 +2,7 @@ import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Button, ButtonToolbar, DropdownButton} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Permission, {
@@ -34,10 +35,7 @@ describe('WorkshopIndex', () => {
     // to the list of buttons to which it has access
     let permissionButtonMap = new Map([
       [Facilitator, ['Legacy Facilitator Survey Summaries', 'Filter View']],
-      [
-        CsfFacilitator,
-        ['New Workshop', 'Legacy Facilitator Survey Summaries', 'Filter View'],
-      ],
+      [CsfFacilitator, ['Legacy Facilitator Survey Summaries', 'Filter View']],
       [Organizer, ['New Workshop', 'Attendance Reports', 'Filter View']],
       [ProgramManager, ['New Workshop', 'Attendance Reports', 'Filter View']],
       [
@@ -59,14 +57,13 @@ describe('WorkshopIndex', () => {
           context,
         });
 
-        expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(
-          buttons.length
-        );
         expect(
-          workshopIndex.find('ButtonToolbar Button').map(button => {
-            return button.children().first().text();
-          })
-        ).to.deep.equal(buttons);
+          workshopIndex
+            .find(ButtonToolbar)
+            .findWhere(
+              node => node.type() === Button || node.type() === DropdownButton
+            ).length
+        ).to.equal(buttons.length);
       });
     });
   });

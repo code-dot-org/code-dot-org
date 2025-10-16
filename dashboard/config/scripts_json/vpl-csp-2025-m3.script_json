@@ -1,0 +1,440 @@
+{
+  "script": {
+    "name": "vpl-csp-2025-m3",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSP",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-03-31 23:21:27 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csp-2025-m3"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Module 3: Tools and Structure in Unit 5 - Data",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e6c24719-3827-4c95-91ea-3c3bf787b725",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6c24719-3827-4c95-91ea-3c3bf787b725",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "4b3bbd9a-3f86-442a-8753-b1ca4cfba88c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 3 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b3bbd9a-3f86-442a-8753-b1ca4cfba88c",
+        "lesson_activity.key": "e6c24719-3827-4c95-91ea-3c3bf787b725"
+      }
+    },
+    {
+      "key": "6317fc57-9c35-4187-b15e-a355e3b20b8b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Overview of Unit 5 - Data (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "6317fc57-9c35-4187-b15e-a355e3b20b8b",
+        "lesson_activity.key": "e6c24719-3827-4c95-91ea-3c3bf787b725"
+      }
+    },
+    {
+      "key": "4a5c0eef-7afa-4b82-bd91-db21dcdc6292",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using the NYT Resource (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a5c0eef-7afa-4b82-bd91-db21dcdc6292",
+        "lesson_activity.key": "e6c24719-3827-4c95-91ea-3c3bf787b725"
+      }
+    },
+    {
+      "key": "31979dc2-115d-4fca-8d93-e1df7844fc2a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using the Data Visualizer Tool (~45 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "31979dc2-115d-4fca-8d93-e1df7844fc2a",
+        "lesson_activity.key": "e6c24719-3827-4c95-91ea-3c3bf787b725"
+      }
+    },
+    {
+      "key": "55b792b3-5114-4d36-b787-bf8cf0253ff3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Module 3 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "55b792b3-5114-4d36-b787-bf8cf0253ff3",
+        "lesson_activity.key": "e6c24719-3827-4c95-91ea-3c3bf787b725"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 3 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL Module 3 - Workshop Overview_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "4b3bbd9a-3f86-442a-8753-b1ca4cfba88c"
+      },
+      "level_keys": [
+        "CSP-PL Module 3 - Workshop Overview_2023_Data_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Unit 5 - Data (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M3 - Unit 5 Overview_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "6317fc57-9c35-4187-b15e-a355e3b20b8b"
+      },
+      "level_keys": [
+        "CSP-PL M3 - Unit 5 Overview_2023_Data_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using the NYT Resource (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M3 - Google Trends_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "4a5c0eef-7afa-4b82-bd91-db21dcdc6292"
+      },
+      "level_keys": [
+        "CSP-PL M3 - Google Trends_2023_Data_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using the Data Visualizer Tool (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M3 - Data Viz 1_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "31979dc2-115d-4fca-8d93-e1df7844fc2a"
+      },
+      "level_keys": [
+        "CSP-PL M3 - Data Viz 1_2023_Data_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using the Data Visualizer Tool (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M3 - Data Viz 2_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "31979dc2-115d-4fca-8d93-e1df7844fc2a"
+      },
+      "level_keys": [
+        "CSP-PL M3 - Data Viz 2_2023_Data_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Using the Data Visualizer Tool (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M3 - Data Viz 3_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "31979dc2-115d-4fca-8d93-e1df7844fc2a"
+      },
+      "level_keys": [
+        "CSP-PL M3 - Data Viz 3_2023_Data_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Using the Data Visualizer Tool (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M3 - Data Viz 4_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "31979dc2-115d-4fca-8d93-e1df7844fc2a"
+      },
+      "level_keys": [
+        "CSP-PL M3 - Data Viz 4_2023_Data_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 3 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 3 Wrap Up_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "55b792b3-5114-4d36-b787-bf8cf0253ff3"
+      },
+      "level_keys": [
+        "CSP - Module 3 Wrap Up_2023_Data_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL Module 3 - Workshop Overview_2023_Data_2025",
+        "script_level.level_keys": [
+          "CSP-PL Module 3 - Workshop Overview_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "4b3bbd9a-3f86-442a-8753-b1ca4cfba88c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M3 - Unit 5 Overview_2023_Data_2025",
+        "script_level.level_keys": [
+          "CSP-PL M3 - Unit 5 Overview_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "6317fc57-9c35-4187-b15e-a355e3b20b8b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M3 - Google Trends_2023_Data_2025",
+        "script_level.level_keys": [
+          "CSP-PL M3 - Google Trends_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "4a5c0eef-7afa-4b82-bd91-db21dcdc6292"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M3 - Data Viz 1_2023_Data_2025",
+        "script_level.level_keys": [
+          "CSP-PL M3 - Data Viz 1_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "31979dc2-115d-4fca-8d93-e1df7844fc2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M3 - Data Viz 2_2023_Data_2025",
+        "script_level.level_keys": [
+          "CSP-PL M3 - Data Viz 2_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "31979dc2-115d-4fca-8d93-e1df7844fc2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M3 - Data Viz 3_2023_Data_2025",
+        "script_level.level_keys": [
+          "CSP-PL M3 - Data Viz 3_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "31979dc2-115d-4fca-8d93-e1df7844fc2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M3 - Data Viz 4_2023_Data_2025",
+        "script_level.level_keys": [
+          "CSP-PL M3 - Data Viz 4_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "31979dc2-115d-4fca-8d93-e1df7844fc2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 3 Wrap Up_2023_Data_2025",
+        "script_level.level_keys": [
+          "CSP - Module 3 Wrap Up_2023_Data_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m3",
+        "activity_section.key": "55b792b3-5114-4d36-b787-bf8cf0253ff3"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

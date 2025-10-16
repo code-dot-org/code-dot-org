@@ -3,7 +3,10 @@
   "script_names": [
     "k5-onlinepd-2023"
   ],
-  "published_state": "stable",
+  "original_script_names": [
+    "k5-onlinepd-2023"
+  ],
+  "published_state": "deprecated",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

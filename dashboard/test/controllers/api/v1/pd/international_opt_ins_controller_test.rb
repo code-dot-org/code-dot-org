@@ -18,7 +18,7 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
 
   self.use_transactional_test_case = true
   setup_all do
-    @teacher = create :teacher
+    @teacher = create(:teacher)
   end
 
   test 'create creates a new international opt-in and verifies the teacher' do
@@ -55,7 +55,7 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
   end
 
   test 'students can not create a new international opt-in' do
-    student = create :student
+    student = create(:student)
     sign_in student
     Api::V1::Pd::InternationalOptInsController.any_instance.stubs(:current_user).returns(student)
 

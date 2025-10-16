@@ -71,10 +71,6 @@ module AichatSagemakerHelper
     )
   end
 
-  def self.can_request_aichat_chat_completion?
-    DCDO.get("aichat_chat_completion", true)
-  end
-
   def self.get_endpoint_name(model_id)
     "#{model_id}-#{rack_env?(:production) ? 'production' : 'test'}"
   end

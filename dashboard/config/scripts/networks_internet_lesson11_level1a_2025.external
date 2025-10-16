@@ -1,6 +1,8 @@
 name 'networks-internet-lesson11-level1a_2025'
 title 'Careers and Emerging Technologies'
-description 'description here'
+display_name 'MediSure Health Systems'
+bubble_choice_description 'MediSure Health Systems has seen a surge in phishing attacks targeting doctors, nurses, and administrative staff.'
+thumbnail_url 'https://images.code.org/ec191f59eaf3edbb0ceff5ec6714e66e-image-1740388434804.jpg'
 
 markdown <<MARKDOWN
 # MediSure Health Systems  

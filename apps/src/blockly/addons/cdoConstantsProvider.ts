@@ -2,20 +2,13 @@ import * as GoogleBlockly from 'blockly/core';
 
 import {customConnectionBlockTypes} from './cdoConstants';
 
-// TODO: Remove after the resolution of https://github.com/google/blockly/issues/8621
-interface PuzzleTab {
-  type: number;
-  width: number;
-  height: number;
-  pathDown: string;
-  pathUp: string;
-}
-
 export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   .ConstantProvider {
-  private RECT_INPUT_OUTPUT: PuzzleTab | undefined;
-  private TRI_INPUT_OUTPUT: PuzzleTab | undefined;
-  private ROUND_INPUT_OUTPUT: PuzzleTab | undefined;
+  private RECT_INPUT_OUTPUT: GoogleBlockly.blockRendering.PuzzleTab | undefined;
+  private TRI_INPUT_OUTPUT: GoogleBlockly.blockRendering.PuzzleTab | undefined;
+  private ROUND_INPUT_OUTPUT:
+    | GoogleBlockly.blockRendering.PuzzleTab
+    | undefined;
 
   // Override the shapes constant to include the custom shapes.
   override SHAPES = {

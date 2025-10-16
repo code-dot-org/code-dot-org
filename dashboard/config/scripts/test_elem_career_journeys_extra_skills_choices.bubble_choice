@@ -3,6 +3,9 @@ display_name 'More Skills!'
 description 'Level up your Sprite Lab skills. Choose one to practice.'
 
 sublevels
-
+level 'test-elem-career-journeys-sizes'
+level 'test-elem-career-journeys-behaviors'
+level 'test-elem-career-journeys-sounds'
+level 'test-elem-career-journeys-add-text'
 
 

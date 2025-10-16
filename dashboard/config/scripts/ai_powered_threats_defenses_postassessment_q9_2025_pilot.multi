@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q9_2025-pilot'
+
+question ‘An example of “Something You Have” in authentication is:’
+
+wrong ‘A fingerprint scan’
+wrong ‘A password’
+wrong ‘A PIN code’
+right ‘A hardware security key’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8: AAA and AI
+MARKDOWN

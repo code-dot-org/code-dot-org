@@ -100,11 +100,11 @@ const cssEntrypointsByLocale = createLocaleCSSConfig(
 );
 
 /**
- * The default fonts for Code.org as an entrypoint
+ * The default fonts for various brands as an entrypoint
  */
 const defaultCSSEntrypoints = createLocaleCSSConfig(
-  ['./src/index.scss'],
-  'dist',
+  ['./src/brands/**/index.scss'],
+  'dist/brands',
 );
 
 export default defineConfig([

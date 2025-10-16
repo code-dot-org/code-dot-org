@@ -1,0 +1,39 @@
+name 'ea-fac-csaif_pl_software-L11-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Software and Operating Systems
+
+#### Software and hardware are like a team. The **hardware performs** the physical tasks — like displaying images on the screen, printing a document, or saving files on a hard drive.
+
+#### The **software** that decides what to display, print, or save and how to do it.
+
+
+<img src="https://images.code.org/3378f9afce385d56deb8bb6e38a41455-image-1742394518945.png" alt="diagram of the componets of a computer - hardware: input, outptu, storage, and internal and software: system software, application software, and utlity software" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
+
+## Computer Software 
+
+#### **Software** is a set of instructions that tells a computer what to do. It’s like the thoughts or instructions of a computer, controlling how it runs and what tasks it performs. 
+
+## Types of Software
+
+- #### **System Software**-Manages hardware and software, enables basic functionality.
+- #### **Application Software**- Helps users perform specific tasks.
+- #### **Utility Software**- Maintains, optimizes, and secures the system.
+
+
+<br>
+
+
+
+<img src="https://images.code.org/5ee5ee363d83b7a2882235524c86b13d-image-1742394326783.png" alt="diagram of software: system software, application software, and utlity software with examples of icons of each" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+
+
+
+
+
+MARKDOWN

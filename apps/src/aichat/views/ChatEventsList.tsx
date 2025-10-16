@@ -2,18 +2,21 @@ import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import aichatI18n from '../locale';
-import {ChatEvent} from '../types';
+import {ChatAsset, ChatEvent} from '../types';
 
+import {ChatDisabled} from './ChatDisabled';
 import ChatEventView from './ChatEventView';
+import WaitingAnimation from './WaitingAnimation';
 
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatEventsListProps {
   events: ChatEvent[];
   isTeacherView?: boolean;
+  buildAssetUrl?: (asset: ChatAsset) => string;
 }
 
 /**
@@ -22,7 +25,9 @@ interface ChatEventsListProps {
 const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
+  buildAssetUrl,
 }) => {
+  const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
@@ -100,14 +105,21 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       )}
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
-        {events.map(event => (
-          <ChatEventView
-            event={event}
-            key={event.timestamp}
-            isTeacherView={isTeacherView}
-          />
-        ))}
-        <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+        {chatDisabled ? (
+          <ChatDisabled message={chatDisabledMessage} />
+        ) : (
+          <>
+            {events.map(event => (
+              <ChatEventView
+                event={event}
+                key={event.timestamp}
+                isTeacherView={isTeacherView}
+                buildAssetUrl={buildAssetUrl}
+              />
+            ))}
+            <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+          </>
+        )}
       </div>
       {showScrollToBottom && (
         <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
@@ -124,21 +136,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       )}
     </div>
   );
-};
-
-const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
-  shouldDisplay,
-}) => {
-  if (shouldDisplay) {
-    return (
-      <img
-        src="/blockly/media/aichat/typing-animation.gif"
-        alt={aichatI18n.chatEventDescriptions_waitForResponse()}
-        className={moduleStyles.waitingForResponse}
-      />
-    );
-  }
-  return null;
 };
 
 export default ChatEventsList;

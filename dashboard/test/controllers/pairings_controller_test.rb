@@ -4,7 +4,7 @@ class PairingsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @user = create :user
+    @user = create(:user)
     sign_in @user
   end
 

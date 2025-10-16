@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Data Story Discussions 
 
-## Wrapping Up Lesson 7
+## Wrapping Up Lesson 6
 
 
 #### Encourage students to think beyond the obvious attributes for the cards, as there are often multiple possibilities. For those struggling to generate ideas, consider exploring:
@@ -26,6 +26,11 @@ markdown <<MARKDOWN
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "><strong>Teacher Tip:</strong> <b><i>Extension Activity:</i></b> Have students create a card themselves in Google Slides. They could use an AI art generator, if they have access to one, to create a cover image for the card, similar to how Spotify’s cards are laid out. <br> Printing these and hanging them on the wall could make an engaging anchor chart to reinforce how data can be used to tell interesting and insightful stories about people.
 </p>
 </div>
+
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/aif6-2025/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
 
 
 MARKDOWN

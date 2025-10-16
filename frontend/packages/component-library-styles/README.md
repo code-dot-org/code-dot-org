@@ -22,7 +22,6 @@ typography styles, and more to ensure visual consistency and a unified design la
 - [Best Practices](#best-practices)
 - [Theming](#theming)
 - [Testing](#testing)
-- [Updating FontAwesome Files](#updating-fontawesome-files)
 - [Contributing](#contributing)
 - [FAQ / Troubleshooting](#faq--troubleshooting)
 - [Changelog](#changelog)
@@ -54,8 +53,9 @@ yarn link @code-dot-org/component-library-styles
 To use it in your project:
 
 ```scss
-@import '@code-dot-org/component-library-styles/colors.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 ```
 
 ## Development
@@ -233,10 +233,10 @@ palette and ensure a unified visual language across all Code.org components.
 
 ### Fonts
 
-The `fonts.scss` file defines the fonts used throughout the Code.org design system.  
+The `fonts.scss` file defines the fonts used throughout the Code.org design system.
 We use a combination of **Figtree** and **Noto Sans** fonts to maintain a consistent look and feel across the platform.
 
-We provide font definitions, weights, and mixins to simplify applying consistent font styles across components.  
+We provide font definitions, weights, and mixins to simplify applying consistent font styles across components.
 All fonts are available globally through CSS variables and SCSS mixins.
 
 ---
@@ -309,9 +309,6 @@ All fonts are available globally through CSS variables and SCSS mixins.
 You can override or extend font styles by combining mixins and custom properties:
 
 ```scss
-@use '@code-dot-org/component-library-styles/colors.scss';
-@use '@code-dot-org/component-library-styles/font.scss';
-
 .customHeader {
   @include main-font-semi-bold;
   font-size: 24px;
@@ -347,27 +344,7 @@ We use **Font Awesome** for icons, loaded from the Code.org CDN.
 
 #### ✅ Best Practices for Font Awesome:
 
-- ✅ Use CDN links provided in `fonts.scss`.
 - ⛔️ Avoid loading Font Awesome directly from npm to prevent conflicts with existing styles.
-
-### Font Awesome
-
-The `font-awesome.scss` file defines the CDN links and setup for **Font Awesome Pro** icons used across the Code.org
-sites.  
-We rely on the **Font Awesome Pro Kit** to provide a consistent set of icons that can be accessed globally via
-CSS imports.
-
-Once you connect font-awesome.scss to your project, you can use Font Awesome icons directly in your components by simply setting the needed classNames.
-
-Font Awesome allows us to include a wide variety of icon types such as:
-
-- **Solid** – Common action-based icons.
-- **Brands** – Logos of major brands.
-- **Regular** – Outlined icons.
-- **Duotone** – Dual-color icons.
-- **Custom Icons** – Custom icons specific to Code.org.
-
----
 
 #### ✅ Example:
 
@@ -405,14 +382,6 @@ const Example = () => (
 );
 ```
 
----
-
-#### 🔄 Updating Font Awesome Files
-
-To update Font Awesome files in `font.scss`, see [Updating FontAwesome Files](#updating-fontawesome-files) section.
-
----
-
 #### ✅ Best Practices for Font Awesome:
 
 - ✅ Use the **CDN links** for faster loading and caching.
@@ -439,7 +408,7 @@ const Example = () => (
 
 ### Typography
 
-The `typography.module.scss` file defines the typography styles used throughout the Code.org design system.  
+The `typography.module.scss` file defines the typography styles used throughout the Code.org design system.
 It includes mixins and utility classes for consistent heading, paragraph, and label styles. You can also find some
 additional documentation in [typography.module.scss](./typography.module.scss) file itslef.
 
@@ -500,12 +469,11 @@ h1 {
 
 #### ✅ Additional Typography Mixins
 
-| Mixin          | Description     |
-| -------------- | --------------- |
-| `strong`       | Bold text       |
-| `extra-strong` | Extra bold text |
-| `em`           | Italic text     |
-| `figcaption`   | Caption text    |
+| Mixin        | Description  |
+| ------------ | ------------ |
+| `strong`     | Bold text    |
+| `em`         | Italic text  |
+| `figcaption` | Caption text |
 
 ---
 
@@ -544,7 +512,7 @@ We also provide utility classes that you can apply directly in the markup:
 
 ### Variables
 
-The `variables.scss` file defines the **shared design system variables** used across the Code.org frontend.  
+The `variables.scss` file defines the **shared design system variables** used across the Code.org frontend.
 These variables cover consistent sizing, spacing, border radius, and other common design properties.
 
 Variables in this file are intended to be used **consistently** across the design system components to ensure a
@@ -597,7 +565,7 @@ With time there'll be more variables added to this file, so make sure to check i
 
 The `mixins.scss` file defines reusable patterns and logic to simplify consistent styling across Code.org components.
 
-Mixins help avoid repetition and keep the SCSS code clean and organized.  
+Mixins help avoid repetition and keep the SCSS code clean and organized.
 They allow you to define a set of styles that can be reused throughout your project.
 
 ---
@@ -681,43 +649,13 @@ yarn lint:fix
 yarn prettier:fix
 ```
 
-## Updating FontAwesome Files
-
-If you are looking to update the FontAwesome files in `font.scss`, you'll need to do the following:
-
-1. **Download css and webfont files from FontAwesome.**
-   Sign in with our shared dev account, find our "Code.org Kit", then click "Download Web Files" from the "Self-Host on the Web" option.
-   This should produce a download of a superset of files you'll need to upload to S3 (we only use the css and webfont directories).
-2. **Use "Host Yourself - Webfonts" instructions** [here](https://fontawesome.com/docs/web/setup/host-yourself/webfonts).
-   Supplement with the "Version 4 Compatibility" instructions listed there as well. [link](https://fontawesome.com/docs/web/setup/host-yourself/webfonts#version-4-compatibility)
-3. Once you've downloaded the kit, **updated relative paths**
-   for font files listed in CSS to be absolute paths to URLs storing font files, and uploaded them to a S3 bucket where we can access them.
-   I've timestamped the folder location in S3 such that a developer can upload an updated set of files without affecting production.
-4. **Updated CORS configuration on `cdo-dsco` bucket**
-   to allow fetching of these files across code.org, studio.code.org, and hourofcode.com.
-   More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
-
-At time of writing, these files were referenced in the following places:
-
-**Hard coded strings**
-
-- Applab Exporter: apps/src/applab/Exporter.js
-- hourofcode.com: pegasus/sites.v3/hourofcode.com/styles/030-font-awesome-min.css
-- shared: shared/css/font.scss (shared strings defined here)
-
-**Usages of shared strings**
-
-- pegasus: pegasus/sites.v3/code.org/public/css/font-awesome.min.scss
-- dashboard: dashboard/app/stylesheets/application.scss
-
 ## Contributing
 
 For information on how to contribute to this package, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## FAQ / Troubleshooting
 
-- **Why aren't my styles being applied?**  
-  Ensure the component imports `colors.scss` and `typography.scss`.  
+- **Why aren't my styles being applied?**
   Check for conflicting styles or CSS specificity issues. You may need to add additional selectors to the element you'd like to style.
 
 ## Changelog

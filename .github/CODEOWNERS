@@ -37,3 +37,13 @@
 
 # Should be Consulted on changes to
 .drone.yml                      @code-dot-org/infrastructure
+
+
+#####################
+# component-library #
+#####################
+
+# Should Approve changes to:
+/frontend/packages/component-library-styles/             @code-dot-org/component-library-engineering-reviewers
+/frontend/packages/component-library/                    @code-dot-org/component-library-engineering-reviewers 
+/frontend/packages/fonts/                                @code-dot-org/component-library-engineering-reviewers 

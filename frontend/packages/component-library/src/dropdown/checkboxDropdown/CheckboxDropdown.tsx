@@ -1,20 +1,23 @@
-import {AriaAttributes, memo} from 'react';
+import {AriaAttributes} from 'react';
 
 import Button, {buttonColors} from '@/button';
 import Checkbox from '@/checkbox';
 import {dropdownColors} from '@/common/constants';
-import {DropdownProviderWrapper} from '@/common/contexts/DropdownContext';
 import {
   ComponentSizeXSToL,
   DropdownColor,
   DropdownFormFieldRelatedProps,
 } from '@/common/types';
 
-import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+import CustomDropdown, {
+  CustomDropdownMenuPlacement,
+  CustomDropdownMenuVerticalPlacement,
+  CustomDropdownOption,
+} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
-export type CheckboxDropdownOption = _CustomDropdownOption;
+export type CheckboxDropdownOption = CustomDropdownOption;
 
 interface BaseCheckboxDropdownProps
   extends DropdownFormFieldRelatedProps,
@@ -43,6 +46,10 @@ interface BaseCheckboxDropdownProps
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  /** CheckboxDropdown menu placement */
+  menuPlacement?: CustomDropdownMenuPlacement;
+  /** CheckboxDropdown menu vertical placement */
+  menuVerticalPlacement?: CustomDropdownMenuVerticalPlacement;
 }
 
 interface CheckboxDropdownWithoutControlProps
@@ -70,6 +77,19 @@ export type CheckboxDropdownProps =
   | CheckboxDropdownWithoutControlProps
   | CheckboxDropdownWithControlsProps;
 
+/**
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see ./__tests__/CheckboxDropdown.test.jsx)
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Checkbox Dropdown Component.
+ * Used to render checkbox (multiple choice) dropdowns.
+ */
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
   className,
@@ -86,6 +106,8 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   helperIcon,
   errorMessage,
   styleAsFormField = false,
+  menuPlacement = 'left',
+  menuVerticalPlacement = 'bottom',
   ...rest
 }) => {
   return (
@@ -106,64 +128,45 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       selectedValueText={checkedOptions
         ?.map(str => allOptions.find(opt => opt.value === str)?.label)
         .join(', ')}
+      menuPlacement={menuPlacement}
+      menuVerticalPlacement={menuVerticalPlacement}
       {...rest}
     >
-      <div className={moduleStyles.dropdownMenuContainer}>
-        <ul>
-          {allOptions.map(({value, label, isOptionDisabled}) => (
-            <li key={value}>
-              <Checkbox
-                checked={checkedOptions.includes(value)}
-                disabled={disabled || isOptionDisabled}
-                onChange={onChange}
-                size={size}
-                name={value}
-                value={value}
-                label={label}
-              />
-            </li>
-          ))}
-        </ul>
-        {!rest.hideControls && (
-          <div className={moduleStyles.bottomButtonsContainer}>
-            <Button
-              type="tertiary"
-              color={buttonColors.purple}
-              text={rest.selectAllText}
-              onClick={rest.onSelectAll}
+      <ul>
+        {allOptions.map(({value, label, isOptionDisabled}) => (
+          <li key={value}>
+            <Checkbox
+              checked={checkedOptions.includes(value)}
+              disabled={disabled || isOptionDisabled}
+              onChange={onChange}
               size={size}
+              name={value}
+              value={value}
+              label={label}
             />
-            <Button
-              type="tertiary"
-              color={buttonColors.purple}
-              text={rest.clearAllText}
-              onClick={rest.onClearAll}
-              size={size}
-            />
-          </div>
-        )}
-      </div>
+          </li>
+        ))}
+      </ul>
+      {!rest.hideControls && (
+        <div className={moduleStyles.bottomButtonsContainer}>
+          <Button
+            type="tertiary"
+            color={buttonColors.black}
+            text={rest.selectAllText}
+            onClick={rest.onSelectAll}
+            size={size}
+          />
+          <Button
+            type="tertiary"
+            color={buttonColors.black}
+            text={rest.clearAllText}
+            onClick={rest.onClearAll}
+            size={size}
+          />
+        </div>
+      )}
     </CustomDropdown>
   );
 };
 
-/**
- * ### Production-ready Checklist:
- * * (✔) implementation of component approved by design team;
- * * (✔) has storybook, covered with stories and documentation;
- * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see ./__tests__/CheckboxDropdown.test.jsx)
- * * (?) passes accessibility checks;
- *
- * ###  Status: ```Ready for dev```
- *
- * Design System: Checkbox Dropdown Component.
- * Used to render checkbox (multiple choice) dropdowns.
- */
-const WrappedCheckboxDropdown = (props: CheckboxDropdownProps) => (
-  <DropdownProviderWrapper>
-    <CheckboxDropdown {...props} />
-  </DropdownProviderWrapper>
-);
-
-export default memo(WrappedCheckboxDropdown);
+export default CheckboxDropdown;

@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2025-03-12T20:56:33.000Z",
   "level_num": "custom",
@@ -29,7 +30,7 @@
     "instructions_important": "false",
     "display_name": "Challenge: String Variables",
     "hide_share_and_remix": "false",
-    "start_blocks": "var color1 = \"crimson\";\r\nvar color2 = \"coral\";\r\nvar color3 = \"gold\";\r\nvar color4 = \"azure\";\r\nfill(color1);\r\nregularPolygon(200, 200, 5, 200);\r\nfill(color2);\r\nregularPolygon(200, 200, 6, 150);\r\nfill(color3);\r\nregularPolygon(200, 200, 7, 100);\r\nfill(color4);\r\nellipse(200, 200, 100, 100);\r\n",
+    "start_blocks": "var color1 = \"crimson\";\r\nvar color2 = \"coral\";\r\nvar color3 = \"gold\";\r\nvar color4 = \"azure\";\r\nfill(color1);\r\nregularPolygon(200, 200, 5, 200);\r\nfill(color2);\r\nregularPolygon(200, 200, 6, 160);\r\nfill(color3);\r\nregularPolygon(200, 200, 7, 130);\r\nfill(color4);\r\nregularPolygon(200, 200, 8, 110);\r\nfill(color1);\r\nregularPolygon(200, 200, 9, 90);\r\nfill(color2);\r\nregularPolygon(200, 200, 10, 70);\r\nfill(color3);\r\nregularPolygon(200, 200, 11, 50);\r\nfill(color4);\r\nellipse(200, 200, 45, 45);\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -79,9 +80,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:56:33.483+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables String Challenge_2024\\\"\"],\"cloned_from\":\"CSD U3 Variables String Challenge_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:56:33.483+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables String Challenge_2024\\\"\"],\"cloned_from\":\"CSD U3 Variables String Challenge_2024\"},{\"changed_at\":\"2025-05-20 17:16:01 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

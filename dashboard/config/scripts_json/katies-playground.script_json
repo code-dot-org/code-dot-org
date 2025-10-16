@@ -6,11 +6,13 @@
     "properties": {
       "content_area": "other",
       "curriculum_umbrella": "Other",
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:27 UTC",
+    "serialized_at": "2025-10-08 14:34:09 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -264,7 +266,7 @@
     },
     {
       "key": "lesson-16",
-      "name": "Career Journeys",
+      "name": "Career Journeys A",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -273,6 +275,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Career Journeys B",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -577,6 +594,18 @@
       "seeding_key": {
         "lesson_activity.key": "b5c448b6-5538-4ca1-b793-783de12274a0",
         "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "438a6419-4e85-47d0-b3b1-55757d4b07f4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "438a6419-4e85-47d0-b3b1-55757d4b07f4",
+        "lesson.key": "lesson-17",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -1314,13 +1343,58 @@
       }
     },
     {
-      "key": "21c6011c-be26-4e4c-a3e4-bf17276f6732",
+      "key": "8c485723-5891-4651-92a8-8d41dfe83aec",
       "position": 1,
       "properties": {
+        "progression_name": "Career Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec",
+        "lesson_activity.key": "b5c448b6-5538-4ca1-b793-783de12274a0"
+      }
+    },
+    {
+      "key": "21c6011c-be26-4e4c-a3e4-bf17276f6732",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732",
         "lesson_activity.key": "b5c448b6-5538-4ca1-b793-783de12274a0"
+      }
+    },
+    {
+      "key": "c6169d46-2fec-4ee4-8c29-79c80b37561d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6169d46-2fec-4ee4-8c29-79c80b37561d",
+        "lesson_activity.key": "b5c448b6-5538-4ca1-b793-783de12274a0"
+      }
+    },
+    {
+      "key": "039a4de0-07e0-4062-85e1-d4ed86a3acfe",
+      "position": 1,
+      "properties": {
+        "progression_name": "Career Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "039a4de0-07e0-4062-85e1-d4ed86a3acfe",
+        "lesson_activity.key": "438a6419-4e85-47d0-b3b1-55757d4b07f4"
+      }
+    },
+    {
+      "key": "94e8975e-a474-4778-ae5e-bb40c2b119b7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Build Your Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7",
+        "lesson_activity.key": "438a6419-4e85-47d0-b3b1-55757d4b07f4"
       }
     }
   ],
@@ -3892,6 +3966,72 @@
     },
     {
       "chapter": 106,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "fix seq assessment"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "fix seq assessment"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "fix seq assessment"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 15,
+      "activity_section_position": 15,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI_pilot_5_template1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "HoAI_pilot_5_template1"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 16,
+      "activity_section_position": 16,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI_pilot_5_template2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "HoAI_pilot_5_template2"
+      ]
+    },
+    {
+      "chapter": 109,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3915,7 +4055,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3939,7 +4079,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 111,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3963,7 +4103,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 112,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3987,7 +4127,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 113,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4011,7 +4151,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 114,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4035,7 +4175,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 115,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -4059,7 +4199,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 116,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -4083,14 +4223,15 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 117,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "test-elem-career-journeys-video"
-        ]
+        ],
+        "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
@@ -4100,21 +4241,22 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
       },
       "level_keys": [
         "test-elem-career-journeys-video"
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 118,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "test-elem-career-journeys-video-choices"
-        ]
+        ],
+        "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
@@ -4124,21 +4266,22 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
       },
       "level_keys": [
         "test-elem-career-journeys-video-choices"
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 119,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "test-elem-career-journeys-panel-choices"
-        ]
+        ],
+        "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
@@ -4148,18 +4291,22 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
       },
       "level_keys": [
         "test-elem-career-journeys-panel-choices"
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 120,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-example-choices"
+        ],
+        "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
@@ -4169,50 +4316,52 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
       },
       "level_keys": [
         "test-elem-career-journeys-example-choices"
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 121,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "test-elem-career-journeys-example-choices"
-        ]
+          "test-elem-career-journeys-video-choice4"
+        ],
+        "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-elem-career-journeys-example-choices"
+          "test-elem-career-journeys-video-choice4"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
       },
       "level_keys": [
-        "test-elem-career-journeys-example-choices"
+        "test-elem-career-journeys-video-choice4"
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 122,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "test-elem-career-journeys-basic-skills-choices"
-        ]
+          "test-elem-career-journeys-sprite-location"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-elem-career-journeys-basic-skills-choices"
+          "test-elem-career-journeys-sprite-location"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
@@ -4220,18 +4369,69 @@
         "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
       },
       "level_keys": [
-        "test-elem-career-journeys-basic-skills-choices"
+        "test-elem-career-journeys-sprite-location"
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 123,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-backgrounds"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-backgrounds"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-backgrounds"
+      ]
+    },
+    {
+      "chapter": 124,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-event-say"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-event-say"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-event-say"
+      ]
+    },
+    {
+      "chapter": 125,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "test-elem-career-journeys-extra-skills-choices"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -4248,14 +4448,15 @@
       ]
     },
     {
-      "chapter": 121,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 126,
+      "position": 10,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "test-elem-career-journeys-planning"
-        ]
+        ],
+        "progression": "Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -4265,21 +4466,22 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "c6169d46-2fec-4ee4-8c29-79c80b37561d"
       },
       "level_keys": [
         "test-elem-career-journeys-planning"
       ]
     },
     {
-      "chapter": 121,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 127,
+      "position": 11,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "test-elem-career-journeys-project"
-        ]
+        ],
+        "progression": "Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -4289,10 +4491,310 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "c6169d46-2fec-4ee4-8c29-79c80b37561d"
       },
       "level_keys": [
         "test-elem-career-journeys-project"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Version A Survey"
+        ],
+        "progression": "Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Version A Survey"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "c6169d46-2fec-4ee4-8c29-79c80b37561d"
+      },
+      "level_keys": [
+        "Version A Survey"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-video"
+        ],
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-video"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "039a4de0-07e0-4062-85e1-d4ed86a3acfe"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-video"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-panels"
+        ],
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-panels"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "039a4de0-07e0-4062-85e1-d4ed86a3acfe"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-panels"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-videos"
+        ],
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-videos"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "039a4de0-07e0-4062-85e1-d4ed86a3acfe"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-videos"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-projects"
+        ],
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-projects"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "039a4de0-07e0-4062-85e1-d4ed86a3acfe"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-projects"
+      ]
+    },
+    {
+      "chapter": 133,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-plan"
+        ],
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-plan"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-plan"
+      ]
+    },
+    {
+      "chapter": 134,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-sprite-location"
+        ],
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-sprite-location"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-sprite-location"
+      ]
+    },
+    {
+      "chapter": 135,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-backgrounds"
+        ],
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-backgrounds"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-backgrounds"
+      ]
+    },
+    {
+      "chapter": 136,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-event-say"
+        ],
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-event-say"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-event-say"
+      ]
+    },
+    {
+      "chapter": 137,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-extra-skills"
+        ],
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-extra-skills"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-extra-skills"
+      ]
+    },
+    {
+      "chapter": 138,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-share"
+        ],
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-share"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-share"
+      ]
+    },
+    {
+      "chapter": 139,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Version B Survey"
+        ],
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Version B Survey"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      },
+      "level_keys": [
+        "Version B Survey"
       ]
     }
   ],
@@ -5559,6 +6061,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "fix seq assessment",
+        "script_level.level_keys": [
+          "fix seq assessment"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI_pilot_5_template1",
+        "script_level.level_keys": [
+          "HoAI_pilot_5_template1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI_pilot_5_template2",
+        "script_level.level_keys": [
+          "HoAI_pilot_5_template2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "chatbot_one",
         "script_level.level_keys": [
           "chatbot_one"
@@ -5662,7 +6200,7 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
       }
     },
     {
@@ -5674,7 +6212,7 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
       }
     },
     {
@@ -5686,7 +6224,7 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
       }
     },
     {
@@ -5698,14 +6236,50 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-video-choice4",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-video-choice4"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-sprite-location",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-sprite-location"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
         "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-elem-career-journeys-basic-skills-choices",
+        "level.key": "test-elem-career-journeys-backgrounds",
         "script_level.level_keys": [
-          "test-elem-career-journeys-basic-skills-choices"
+          "test-elem-career-journeys-backgrounds"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-event-say",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-event-say"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
@@ -5734,7 +6308,7 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "c6169d46-2fec-4ee4-8c29-79c80b37561d"
       }
     },
     {
@@ -5746,7 +6320,151 @@
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+        "activity_section.key": "c6169d46-2fec-4ee4-8c29-79c80b37561d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Version A Survey",
+        "script_level.level_keys": [
+          "Version A Survey"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "c6169d46-2fec-4ee4-8c29-79c80b37561d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-video",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-video"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "039a4de0-07e0-4062-85e1-d4ed86a3acfe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-panels",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-panels"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "039a4de0-07e0-4062-85e1-d4ed86a3acfe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-videos",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-videos"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "039a4de0-07e0-4062-85e1-d4ed86a3acfe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-projects",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-projects"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "039a4de0-07e0-4062-85e1-d4ed86a3acfe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-plan",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-plan"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-sprite-location",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-sprite-location"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-backgrounds",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-backgrounds"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-event-say",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-event-say"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-extra-skills",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-extra-skills"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-share",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-share"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Version B Survey",
+        "script_level.level_keys": [
+          "Version B Survey"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
       }
     }
   ],

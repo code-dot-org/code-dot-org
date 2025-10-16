@@ -3,6 +3,9 @@
   "script_names": [
     "csc-pilot-fa2022-particles"
   ],
+  "original_script_names": [
+    "csc-pilot-fa2022-particles"
+  ],
   "published_state": "sunsetting",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

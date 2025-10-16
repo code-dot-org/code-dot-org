@@ -11,7 +11,7 @@ const HAMBURGER_OPTION_IDS = [
   'educate_entries',
   'districts',
   'stats',
-  'help-us',
+  'donate',
   'about_entries',
   'legal_entries',
 ];

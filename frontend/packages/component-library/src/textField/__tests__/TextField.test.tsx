@@ -8,7 +8,7 @@ import TextField, {TextFieldProps} from './../index';
 describe('Design System - TextField', () => {
   const renderTextField = (props: Partial<TextFieldProps>) => {
     const Wrapper: React.FC = () => {
-      const [value, setValue] = useState<string>(
+      const [value, setValue] = useState<TextFieldProps['value']>(
         props.value || 'test-textfield',
       );
       const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

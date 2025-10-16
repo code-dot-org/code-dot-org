@@ -1,0 +1,27 @@
+name 'ML-Panel Levels_1_1_2025'
+skip_dialog true
+markdown <<MARKDOWN
+# Panel Levels
+
+
+![A digital educational screen from Code.org titled 'Lesson 1: Songwriter's Toolbox'. The screen shows colorful sound waves and vertical bars on a black background, with a text box that reads 'Songwriters layer sounds together to build energy in music.'](https://images.code.org/007b184208b716a525b201adad71ad49-image-1738883132928.05.28 PM.png)
+
+
+## What Are Panel Levels? 
+
+#### Panel levels frontload concepts and information before students practice. Like a slide deck, there are images and descriptions to help students. 
+
+## How to use Panel Levels: 
+#### **Teacher Tip:** You can model how to use panels so that students can use them as learning tools independently through the remainder of the module. 
+
+
+##Accessibility
+
+![Close-up of an educational screen showing a text box that reads 'Songwriters layer sounds together to build energy in music.' Below the text is a colorful soundwave graphic, and a large blue arrow points upward to the text.](https://images.code.org/20a566323f34020b0ed245acdadae9fe-image-1738883899105.18.12 PM.png)
+#### Clicking on the speaker icon in the bottom corner of the text box will enable text-to-speech.
+ 
+
+
+
+
+MARKDOWN

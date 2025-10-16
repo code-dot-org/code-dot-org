@@ -1,0 +1,770 @@
+{
+  "script": {
+    "name": "virtual-pl-csa-summer-day5-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSA",
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "tts": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-09 19:06:07 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "virtual-pl-csa-summer-day5-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part I"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part I"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Workshop Opener",
+      "name": "Workshop Opener",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is an opportunity to describe the theme of the day as well as wrap up loose ends from the prior day. \n\n**Objectives**\n* Participants know the theme for the day\n\n**Suggested Time:** 10 minutes\n",
+        "student_overview": "**You will**\n* Know the theme for the day"
+      },
+      "seeding_key": {
+        "lesson.key": "Workshop Opener",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Asynchronous Debrief",
+      "name": "Asynchronous Debrief",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break.\n\n**Objectives**\n* Participants gain experience looking at authentic student work\n* Participants know how to consider code efficiency as they look at student work \n\n**Suggested Time:** 15 minutes\n",
+        "student_overview": "**You will**\n* Gain experience looking at authentic student work\n* Know how to consider code efficiency as they look at student work. "
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Debrief",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Introduction to Unit 3",
+      "name": "Introduction to Unit 3",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is intended to provide participants with a high level overview of Unit 3.  \n\n**Objectives**\n* Participants understand what new content is introduced in Unit 3. \n\n**Suggested Time:** 20 minutes\n",
+        "student_overview": "**You will**\n* Understand what new content is introduced in Unit 3. "
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Unit 3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Practice Using Arrays",
+      "name": "Practice Using Arrays",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**Purpose:**\nIn this session, participants will revisit some syntax around arrays and for loops that they learned about in the pre-work.  Although doing the pre-work is helpful to participants in this session, we still go over the basic syntax so all participants can engage.  It is possible to shorten this session if everyone in your workshop has done the pre-work.  The second portion of this session introduces participants to Coding Bat and allows them to practice using arrays in programming problems. \n\n**Objectives**\n* Participants are able to initialize an array.\n* Participants are able to access and modify elements in an array.\n* Participants are able to use for loops to traverse an array.\n* Participants can develop algorithms to solve problems using an array. \n\n**Suggested Time:** 75 minutes\n",
+        "student_overview": "**You will**\n* Be able to initialize an array.\n* Learn how to access and modify elements in an array.\n* Be able to use for loops to traverse an array.\n* Develop algorithms to solve problems using an array. "
+      },
+      "seeding_key": {
+        "lesson.key": "Practice Using Arrays",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Completing the Audit and AP Central",
+      "name": "Completing the Audit and AP Central",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nFor some teachers, completing the audit can be a source of stress.  Completing the audit helps participants access the content on the College Board website.\n\n**Objectives**\n* Participants can explain how the pre-approved provider syllabus meets the curricular requirements and how to submit it for course authorization\n\n**Suggested Time:** 15 minutes\n",
+        "student_overview": "**You will**\n* Explain how the pre-approved provider syllabus meets the curricular requirements and how to submit it for course authorization"
+      },
+      "seeding_key": {
+        "lesson.key": "Completing the Audit and AP Central",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "High-level Overview of the Year",
+      "name": "High-level Overview of the Year",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**Purpose:**\nThis is intended to give participants context for planning their year after lunch.  We want participants to understand what aspects of the PL program are in place for the upcoming year as well as what the full curriculum looks like in their classrooms. \n\n**Objectives**\n* Participants can describe how the content builds on itself between units\n* Participants understand the structure of the PL program\n\n**Suggested Time:** 20 minutes\n",
+        "student_overview": "**You will**\n* Describe how the content builds on itself between units.\n* Understand the structure of the PL program"
+      },
+      "seeding_key": {
+        "lesson.key": "High-level Overview of the Year",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Transition to Asynchronous",
+      "name": "Transition to Asynchronous",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives**\n* Participants are prepared to complete asynchronous activities on their own.\n",
+        "student_overview": "  **You will**\n* Be prepared to complete asynchronous activities on their own."
+      },
+      "seeding_key": {
+        "lesson.key": "Transition to Asynchronous",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Asynchronous Part 1",
+      "name": "Asynchronous Part 1",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Asyncronous Debrief",
+      "name": "Asynchronous Debrief",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break.\n\n**Objectives**\n* Participants have a plan for how they will use resources in their classroom\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will**\n* Create a plan for how you will use resources in their classroom."
+      },
+      "seeding_key": {
+        "lesson.key": "Asyncronous Debrief",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "High-level Overview: Enhanced For Loops",
+      "name": "High-level Overview: Enhanced For Loops",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**Purpose:**\nTo help prepare participants for understanding later content in Unit 3, this session introduces participants to reading files in Java Lab. \n\n**Objectives**\n* Participants will be able to describe why and how data is used in Unit 3\n* Participants understand how to read data from a text file in Java Lab\n* Participants know how to use enhanced for loops\n\n**Suggested Time:** 55 minutes\n",
+        "student_overview": "**You will**\n* Be able to describe why and how data is used in Unit 3. \n* Understand how to read data from a text file in Java Lab.\n* Know how to use enhanced for loops. "
+      },
+      "seeding_key": {
+        "lesson.key": "High-level Overview: Enhanced For Loops",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Lead Learner: Planning Your Role in the Classroom",
+      "name": "Lead Learner: Planning Your Role in the Classroom",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "overview": "**Purpose:**\nThis is our opportunity to be very clear on the role of the teacher in this course.  We know some participants will have experience with the idea of being the “lead learner”.  We want to clarify what this term might mean and help teachers get in the mindset of “being a CSA teacher.”\n\n**Objectives**\n* Participants know their role before, during and after a lesson  \n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will**\n* Know your role before, during and after a lesson  "
+      },
+      "seeding_key": {
+        "lesson.key": "Lead Learner: Planning Your Role in the Classroom",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Closing Ceremonies",
+      "name": "Closing Ceremonies",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "**Purpose:**\nCelebrate the week. Answer remaining questions. Take final survey\n\n**Objectives**\n* Answer any remaining questions\n* Understand when the next workshop is\n* Take final survey\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will**\n* Clarify any remaining questions\n* Understand when the next workshop is\n* Take final survey"
+      },
+      "seeding_key": {
+        "lesson.key": "Closing Ceremonies",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Asynchronous Part 2",
+      "name": "Asynchronous Part 2",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "b9a1444a-5fb7-4a80-8598-725dff9ece11",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9a1444a-5fb7-4a80-8598-725dff9ece11",
+        "lesson.key": "Workshop Opener",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "bdd797ec-6af6-4f37-85a7-fd227992ce49",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bdd797ec-6af6-4f37-85a7-fd227992ce49",
+        "lesson.key": "Asynchronous Debrief",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "d5fb0b4b-5342-4c3d-8b91-cd40467e2775",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d5fb0b4b-5342-4c3d-8b91-cd40467e2775",
+        "lesson.key": "Introduction to Unit 3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "9f9d6aa8-b829-42fb-bbb3-a702638b6d08",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f9d6aa8-b829-42fb-bbb3-a702638b6d08",
+        "lesson.key": "Practice Using Arrays",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "fe96e9e7-1e7b-45d8-976a-08bd968b9f47",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe96e9e7-1e7b-45d8-976a-08bd968b9f47",
+        "lesson.key": "Completing the Audit and AP Central",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "bb10bf2d-2c60-43b5-bebf-c14a5bba91c7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb10bf2d-2c60-43b5-bebf-c14a5bba91c7",
+        "lesson.key": "High-level Overview of the Year",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "3c7cb639-d923-4571-9573-d08a2e2fe6ee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3c7cb639-d923-4571-9573-d08a2e2fe6ee",
+        "lesson.key": "Transition to Asynchronous",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "9b8b3cdc-4caa-4c37-8d25-e2ccf0eb7721",
+      "position": 1,
+      "properties": {
+        "duration": 45
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b8b3cdc-4caa-4c37-8d25-e2ccf0eb7721",
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "6b28d912-e4ac-4f7d-996f-498465d28eb9",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b28d912-e4ac-4f7d-996f-498465d28eb9",
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "84da880e-7e34-470b-9f9b-583f3ebef71e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "84da880e-7e34-470b-9f9b-583f3ebef71e",
+        "lesson.key": "Asyncronous Debrief",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "62179d8b-7e2c-4db0-aaa0-763ffd986de4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "62179d8b-7e2c-4db0-aaa0-763ffd986de4",
+        "lesson.key": "High-level Overview: Enhanced For Loops",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "fb13314e-ef50-4b15-818d-e609ed13ea27",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb13314e-ef50-4b15-818d-e609ed13ea27",
+        "lesson.key": "Lead Learner: Planning Your Role in the Classroom",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "key": "3d900bfe-e881-4563-a99f-b53b5edf0593",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d900bfe-e881-4563-a99f-b53b5edf0593",
+        "lesson.key": "Closing Ceremonies",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "b1722f00-19d6-43a3-aaf0-5f01088117a1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b1722f00-19d6-43a3-aaf0-5f01088117a1",
+        "lesson_activity.key": "b9a1444a-5fb7-4a80-8598-725dff9ece11"
+      }
+    },
+    {
+      "key": "ed3a78c8-220c-4d3c-832f-b7f41f9d4997",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ed3a78c8-220c-4d3c-832f-b7f41f9d4997",
+        "lesson_activity.key": "bdd797ec-6af6-4f37-85a7-fd227992ce49"
+      }
+    },
+    {
+      "key": "bca5b6b5-42e3-4014-8d8a-dcc2a0b397ac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bca5b6b5-42e3-4014-8d8a-dcc2a0b397ac",
+        "lesson_activity.key": "d5fb0b4b-5342-4c3d-8b91-cd40467e2775"
+      }
+    },
+    {
+      "key": "0841f75f-c536-427c-a691-f52fbab02607",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0841f75f-c536-427c-a691-f52fbab02607",
+        "lesson_activity.key": "9f9d6aa8-b829-42fb-bbb3-a702638b6d08"
+      }
+    },
+    {
+      "key": "95892914-f7a4-46bd-80c0-ca0116fad374",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "95892914-f7a4-46bd-80c0-ca0116fad374",
+        "lesson_activity.key": "fe96e9e7-1e7b-45d8-976a-08bd968b9f47"
+      }
+    },
+    {
+      "key": "f55e89ec-86af-4d8e-a6a6-d573c47f75bc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f55e89ec-86af-4d8e-a6a6-d573c47f75bc",
+        "lesson_activity.key": "bb10bf2d-2c60-43b5-bebf-c14a5bba91c7"
+      }
+    },
+    {
+      "key": "c6d8d63d-add6-4694-9937-65b0db65ffe9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c6d8d63d-add6-4694-9937-65b0db65ffe9",
+        "lesson_activity.key": "3c7cb639-d923-4571-9573-d08a2e2fe6ee"
+      }
+    },
+    {
+      "key": "8197c4da-a11e-4063-8f85-fa69c2e97743",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8197c4da-a11e-4063-8f85-fa69c2e97743",
+        "lesson_activity.key": "9b8b3cdc-4caa-4c37-8d25-e2ccf0eb7721"
+      }
+    },
+    {
+      "key": "8897c037-3a5a-4a1e-bfec-06db7b83a546",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "8897c037-3a5a-4a1e-bfec-06db7b83a546",
+        "lesson_activity.key": "6b28d912-e4ac-4f7d-996f-498465d28eb9"
+      }
+    },
+    {
+      "key": "d8423e7a-7088-4c13-bc79-1f27258efa1e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d8423e7a-7088-4c13-bc79-1f27258efa1e",
+        "lesson_activity.key": "84da880e-7e34-470b-9f9b-583f3ebef71e"
+      }
+    },
+    {
+      "key": "0abe7535-7f5b-49f0-b410-e6c479f0c3bf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0abe7535-7f5b-49f0-b410-e6c479f0c3bf",
+        "lesson_activity.key": "62179d8b-7e2c-4db0-aaa0-763ffd986de4"
+      }
+    },
+    {
+      "key": "e103c2e6-8507-42eb-9634-a005e9c3c459",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e103c2e6-8507-42eb-9634-a005e9c3c459",
+        "lesson_activity.key": "fb13314e-ef50-4b15-818d-e609ed13ea27"
+      }
+    },
+    {
+      "key": "c34adbda-8af5-4251-bde0-8f1c925ba3cd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c34adbda-8af5-4251-bde0-8f1c925ba3cd",
+        "lesson_activity.key": "3d900bfe-e881-4563-a99f-b53b5edf0593"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day5-async1intro_2025"
+        ],
+        "progression": "Asynchronous Part 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day5-async1intro_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day5-2025",
+        "activity_section.key": "8897c037-3a5a-4a1e-bfec-06db7b83a546"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day5-async1intro_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day5_async1planning_2025"
+        ],
+        "progression": "Asynchronous Part 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day5_async1planning_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day5-2025",
+        "activity_section.key": "8897c037-3a5a-4a1e-bfec-06db7b83a546"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day5_async1planning_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day5_async1nextSteps_2025"
+        ],
+        "progression": "Asynchronous Part 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day5_async1nextSteps_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day5-2025",
+        "activity_section.key": "8897c037-3a5a-4a1e-bfec-06db7b83a546"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day5_async1nextSteps_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day5-async1intro_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day5-async1intro_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day5-2025",
+        "activity_section.key": "8897c037-3a5a-4a1e-bfec-06db7b83a546"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day5_async1planning_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day5_async1planning_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day5-2025",
+        "activity_section.key": "8897c037-3a5a-4a1e-bfec-06db7b83a546"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day5_async1nextSteps_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day5_async1nextSteps_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day5-2025",
+        "activity_section.key": "8897c037-3a5a-4a1e-bfec-06db7b83a546"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "2025 Virtual CSA Summer Workshop - Day 5 Agenda",
+      "url": "https://docs.google.com/document/d/1w4osbpdRXafXkWrq6apMAH0XLZ1hmxDkfYHh4GOQG_Q/edit?usp=drive_link",
+      "key": "2025_virtual_csa_summer_workshop_-_day_5_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csa_summer_workshop_-_day_5_agenda"
+      }
+    },
+    {
+      "name": "2025 Virtual CSA Summer Workshop - Day 5 Slides",
+      "url": "https://docs.google.com/presentation/d/1CXwzI5xRAX27JZeGHlUC9BRTtfHBR79REHtFg3AnQXg/edit?usp=drive_link",
+      "key": "2025_virtual_csa_summer_workshop_-_day_5_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csa_summer_workshop_-_day_5_slides"
+      }
+    }
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csa_summer_workshop_-_day_5_agenda",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csa_summer_workshop_-_day_5_slides",
+        "script.name": "virtual-pl-csa-summer-day5-2025"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

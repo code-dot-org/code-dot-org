@@ -50,6 +50,11 @@ class HttpCache
   # Header which lets a client request a response format.
   ACCEPT_HEADER = %w(Accept).freeze
   ALLOWLISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER + ACCEPT_HEADER
+  S3_FORWARD_HEADERS = %w(
+    Access-Control-Request-Headers
+    Access-Control-Request-Method
+    Origin
+  ).freeze
 
   DEFAULT_COOKIES = [
     # Language drop-down selection.
@@ -61,54 +66,21 @@ class HttpCache
   ].freeze
 
   # A list of script levels that should not be cached, even though they are
-  # in a cacheable script
-  # TODO TEACH-1634 support the /courses/ path
+  # in a cacheable script. prediction levels are not cacheable.
   UNCACHED_UNIT_LEVEL_PATHS = [
-    '/s/dance-2019/lessons/1/levels/10',
-    '/s/dance-ai-2023/lessons/1/levels/10',
-    '/s/poem-art-2021/lessons/1/levels/9',
-    '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
-    '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
-    '/s/hello-world-food-2021/lessons/1/levels/11',
-    '/s/hello-world-animals-2021/lessons/1/levels/11',
-    '/s/hello-world-retro-2021/lessons/1/levels/11',
-    '/s/hello-world-emoji-2021/lessons/1/levels/11',
-    '/s/hello-world-space-2022/lessons/1/levels/11',
-    '/s/hello-world-soccer-2022/lessons/1/levels/11',
-    '/s/outbreak/lessons/1/levels/10'
+    '/courses/dance-ai-2023/units/1/lessons/1/levels/10',
   ]
 
   # A map from script name to script level URL pattern.
   CACHED_UNITS_MAP = %w(
     aquatic
-    starwars
-    starwarsblocks
-    mc
-    frozen
-    minecraft
-    hero
-    sports
-    basketball
-    dance-2019
     dance-ai-2023
-    oceans
-    poem-art-2021
-    hello-world-food-2021
-    hello-world-animals-2021
-    hello-world-retro-2021
-    hello-world-emoji-2021
-    hello-world-space-2022
-    hello-world-soccer-2022
+    mc
     music-jam-2024
-    outbreak
   ).map do |script_name|
-    # Most scripts use the default route pattern.
-    [script_name, "/s/#{script_name}/lessons/*"]
-  end.to_h.merge(
-    # Add the "special case" routes here.
-    'hourofcode' => '/hoc/*',
-    'flappy' => '/flappy/*'
-  ).freeze
+    # Assume all cached units are in single unit courses.
+    [script_name, "/courses/#{script_name}/units/1/lessons/*"]
+  end.to_h.freeze
 
   def self.cached_scripts
     CACHED_UNITS_MAP.keys
@@ -169,15 +141,31 @@ class HttpCache
       'sign_up_user_type',
     ].concat(default_cookies)
 
-    {
+    http_config = {
       pegasus: {
         behaviors: [
+          # NextJS assets path for the marketing app
+          {
+            path: '/_next/static/*',
+            proxy: 'marketing',
+            headers: [],
+            cookies: default_cookies,
+            include_marketing_router_lambda: true,
+          },
+          # NextJS dynamic image api
+          {
+            path: '/_next/image',
+            proxy: 'marketing',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: 'none',
+            include_marketing_router_lambda: true,
+          },
           {
             # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
             #
             path: '/assets/*',
             proxy: 'cdo-assets',
-            headers: [],
+            headers: S3_FORWARD_HEADERS,
             cookies: 'none'
           },
           {
@@ -229,13 +217,15 @@ class HttpCache
             ),
             query: false,
             headers: ALLOWLISTED_HEADERS,
-            cookies: default_cookies
-          }
+            cookies: default_cookies,
+            include_marketing_router_lambda: true,
+          },
         ],
         # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.
         default: {
           headers: LANGUAGE_HEADER + COUNTRY_HEADER,
-          cookies: default_cookies
+          cookies: default_cookies,
+          include_marketing_router_lambda: true,
         }
       },
       dashboard: {
@@ -245,13 +235,13 @@ class HttpCache
             #
             path: '/assets/*',
             proxy: 'cdo-assets',
-            headers: [],
+            headers: S3_FORWARD_HEADERS,
             cookies: 'none'
           },
           {
             path: '/restricted/*',
             proxy: 'cdo-restricted',
-            headers: [],
+            headers: S3_FORWARD_HEADERS,
             cookies: 'none',
             trusted_signer: true,
           },
@@ -351,6 +341,27 @@ class HttpCache
         }
       }
     }
+
+    if defined?(HocLegacy::Engine)
+      http_config.deep_merge!(
+        dashboard: {
+          behaviors: [
+            {
+              path: "#{HocLegacy::API_ROOT_PATH}*",
+              headers: ALLOWLISTED_HEADERS,
+              cookies: allowlisted_cookies,
+            },
+            {
+              path: '/v2/certificate',
+              headers: ALLOWLISTED_HEADERS,
+              cookies: allowlisted_cookies,
+            },
+          ],
+        },
+      )
+    end
+
+    http_config
   end
 
   def self.uncached_script_level_path?(script_level_path)

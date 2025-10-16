@@ -1,4 +1,5 @@
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
+import {PythonValidationResult} from '@cdo/apps/pythonlab/types';
 
 export default class PythonValidationTracker {
   private validationResults: ValidationResult[] | undefined = undefined;
@@ -20,18 +21,28 @@ export default class PythonValidationTracker {
     return this.validationResults;
   }
 
-  setValidationResults(results: Map<string, string>[]) {
+  setValidationResults(results: PythonValidationResult[]) {
     if (results) {
       this.validationResults = results.map(result => ({
-        message: result.get('name') || 'unknown',
-        result: result.get('result') as ValidationResult['result'],
+        message: result.name || 'unknown',
+        result: result.result as ValidationResult['result'],
       }));
     } else {
       this.validationResults = undefined;
     }
   }
 
-  reset() {
-    this.validationResults = undefined;
+  reset(isChangingLevels: boolean = false) {
+    if (isChangingLevels) {
+      this.validationResults = undefined;
+    } else {
+      // If we are not changing levels, keep the test names but set all results to pending.
+      // This lets us show the user the test names in the table while the tests are running.
+      // Since tests are defined on the level, they can't change in a single page load.
+      this.validationResults = this.validationResults?.map(result => ({
+        message: result.message,
+        result: 'PENDING',
+      }));
+    }
   }
 }

@@ -4,14 +4,16 @@ class AichatEventsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @authorized_teacher1 = create :authorized_teacher
-    @authorized_teacher2 = create :authorized_teacher
-    unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
-    @section = create :section, user: @authorized_teacher1, unit_group: unit_group
+    @authorized_teacher1 = create(:authorized_teacher)
+    @authorized_teacher2 = create(:authorized_teacher)
+    @unauthorized_student = create(:student)
+    @unauthorized_teacher = create(:teacher)
+    unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
+    @section = create(:section, user: @authorized_teacher1, unit_group: unit_group)
     @authorized_student1 = create(:follower, section: @section).student_user
 
     @level = create(:level)
-    @script = create(:script)
+    @script = create(:script, :in_single_unit_course)
 
     @valid_student1_chat_message1 = {role: 'user', chatMessageText: 'hello from authorized student 1 - message 1', status: 'ok', timestamp: Time.now.to_i}
     valid_student1_chat_message2 = {role: 'user', chatMessageText: 'hello from authorized student 1 - message 2', status: 'ok', timestamp: Time.now.to_i}
@@ -24,7 +26,8 @@ class AichatEventsControllerTest < ActionController::TestCase
       aichatContext: {
         currentLevelId: @level.id,
         scriptId: @script.id,
-        channelId: "test"
+        channelId: "test",
+        clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]
       }
     }
 
@@ -39,24 +42,34 @@ class AichatEventsControllerTest < ActionController::TestCase
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
-  users = [:student, :teacher]
-  [
-    :log_chat_event,
-    :submit_teacher_feedback,
-    [:chat_history, :get]
-  ].each do |action, method = :post|
-    users.each do |user|
-      test_user_gets_response_for action,
-        name: "#{user}_no_access_#{action}_test",
-        user: user,
-        method: method,
-        response: :forbidden
-    end
-  end
-
   # *****
   # log_chat_event tests
   # *****
+
+  test 'log_chat_event returns forbidden if user is not signed in' do
+    post :log_chat_event, params: {}, as: :json
+    assert_response :forbidden
+  end
+
+  test 'teachers without access to log_chat_event get forbidden response' do
+    sign_in(@unauthorized_teacher)
+    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
+    assert_response :forbidden
+  end
+
+  test 'students without access to log_chat_event get forbidden response' do
+    sign_in(@unauthorized_student)
+    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
+    assert_response :forbidden
+  end
+
+  test 'unauthorized users can access log_chat_event from ai tutor levels' do
+    sign_in(@unauthorized_student)
+    ai_tutor_client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
+    params_with_ai_tutor_client_type = @valid_params_log_chat_event.merge(aichatContext: @valid_params_log_chat_event[:aichatContext].merge(clientType: ai_tutor_client_type))
+    post :log_chat_event, params: params_with_ai_tutor_client_type, as: :json
+    assert_response :success
+  end
 
   test 'authorized teacher has access to log_chat_event' do
     sign_in(@authorized_teacher1)
@@ -93,7 +106,8 @@ class AichatEventsControllerTest < ActionController::TestCase
 
     # need a valid requestId for foreign key constraint
     model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys
-    request = create(:aichat_request,
+    request = create(
+      :aichat_request,
       user_id: @authorized_student1.id,
       model_customizations: model_customizations.to_json,
       stored_messages: [].to_json,
@@ -115,6 +129,11 @@ class AichatEventsControllerTest < ActionController::TestCase
   # *****
   # chat_history tests
   # *****
+
+  test 'chat_history returns forbidden if user is not signed in' do
+    get :chat_history, params: {}, as: :json
+    assert_response :forbidden
+  end
 
   test 'Bad request if required params are not included for chat_history' do
     sign_in(@authorized_teacher1)
@@ -168,6 +187,11 @@ class AichatEventsControllerTest < ActionController::TestCase
   # *****
   # submit_teacher_feedback tests
   # *****
+
+  test 'submit_teacher_feedback returns forbidden if user is not signed in' do
+    post :submit_teacher_feedback, params: {}, as: :json
+    assert_response :forbidden
+  end
 
   test 'submit_teacher_feedback returns bad request if eventId is missing' do
     sign_in(@authorized_teacher1)

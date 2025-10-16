@@ -1,112 +1,216 @@
-import {
-  CodebridgeContextProvider,
-  sourceReducer,
-  SOURCE_REDUCER_ACTIONS,
-  useSourceUtilities,
-} from '@codebridge/codebridgeContext';
-import {useReducerWithCallback} from '@codebridge/hooks';
+import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
+import {useFlaggedImage, useZoomTracker} from '@codebridge/hooks';
+import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
-  SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
   SendConsoleInputFunction,
   CodebridgeLevelProperties,
+  ProjectPickerSettings,
+  LayoutProps,
 } from '@codebridge/types';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useReducer, useRef} from 'react';
+import React, {useEffect, useMemo} from 'react';
 
-import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {ProjectSources} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
+
 import './styles/codebridge.scss';
 
+const RUN_BUTTON_ID = '#uitest-codebridge-run';
+const EDITOR_ID = '#uitest-codebridge-editor';
+const CONSOLE_CLASS = '.xterm-helper-textarea';
+
 type CodebridgeProps = {
-  source: MultiFileSource;
   config: ConfigType;
-  setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
   startSources: ProjectSources;
   onRun?: OnRunFunction;
   onStop?: () => void;
-  projectVersion: number;
-  labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
+  projectPickerSettings?: ProjectPickerSettings;
+  hiddenContextCallback?: () => Promise<string>;
+  aiTutorMultimodalEnabled?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
+  aiTutorContextHelper?: AiTutorContextHelper<object>;
+  aiTutorSystemPromptName?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 };
 
 export const Codebridge = React.memo(
   ({
-    source,
     config,
-    setProject,
     setConfig,
     startSources,
     onRun,
     onStop,
-    projectVersion,
-    labConfig,
     sendConsoleInput,
     levelProperties,
+    projectPickerSettings,
+    hiddenContextCallback,
+    aiTutorMultimodalEnabled,
+    aiTutorChatButtonData,
+    aiTutorContextHelper,
+    aiTutorSystemPromptName,
+    aiTutorResponseSchemaSettings,
   }: CodebridgeProps) => {
-    const reducerWithCallback = useReducerWithCallback(
-      sourceReducer,
-      (source: MultiFileSource) => setProject({source, labConfig}),
-      new Set(SOURCE_REDUCER_ACTIONS.REPLACE_SOURCE)
-    );
-    const [internalSource, dispatch] = useReducer(reducerWithCallback, source);
     const isShareView = useAppSelector(state => state.lab.isShareView);
+    const isWidgetView = !!levelProperties.widgetView;
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const appName = levelProperties.appName;
+    const isFullScreenView = useAppSelector(
+      state => state.lab.isFullScreenView
+    );
 
-    const sourceUtilities = useSourceUtilities(dispatch);
-
-    const currentProjectVersion = useRef(projectVersion);
+    // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
+    // which are preceded by Control (Windows/Linux) or Command (macOS).
+    // Runs on mount (see empty dependency list).
     useEffect(() => {
-      if (projectVersion !== currentProjectVersion.current) {
-        sourceUtilities.replaceSource(source);
-        currentProjectVersion.current = projectVersion;
-      }
-    }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Check if Control (Windows/Linux) or Command (macOS) is pressed
+        const isControlOrCommand = event.ctrlKey || event.metaKey;
+        const editorElement = document.querySelector(EDITOR_ID);
+        const runButton = document.querySelector(RUN_BUTTON_ID);
+        const consoleElement = document.querySelector(CONSOLE_CLASS);
+        if (isControlOrCommand) {
+          switch (event.key) {
+            case '1':
+              if (editorElement) {
+                (editorElement as HTMLElement).focus();
+                // Also simulate 'Enter' to actually enter the editor
+                const enterKeyEvent = new KeyboardEvent('keydown', {
+                  key: 'Enter',
+                  keyCode: 13,
+                  bubbles: true,
+                });
+                editorElement.dispatchEvent(enterKeyEvent);
+              }
+              event.preventDefault();
+              break;
+            case '2':
+              if (runButton) {
+                (runButton as HTMLElement).click();
+              }
+              event.preventDefault();
+              break;
+            case '3':
+              if (consoleElement) {
+                (consoleElement as HTMLElement).focus();
+              }
+              event.preventDefault();
+              break;
+            default:
+              break;
+          }
+        }
+      };
 
-    const innerLayout = useMemo(() => {
+      // Attach the event listener
+      document.addEventListener('keydown', handleKeyDown);
+
+      // Cleanup the event listener on unmount
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    }, []);
+
+    const InnerLayout = useMemo((): React.FunctionComponent<LayoutProps> => {
       if (isShareView && config.layoutComponents.share) {
         return config.layoutComponents.share;
       }
+      if (isWidgetView && config.layoutComponents.widget && !isStartMode) {
+        return config.layoutComponents.widget;
+      }
+      if (isFullScreenView && config.layoutComponents.fullScreen) {
+        return config.layoutComponents.fullScreen;
+      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
-        currentLayout = 'horizontal';
+        currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
       }
-      return config.layoutComponents[currentLayout];
-    }, [config.activeLayout, config.layoutComponents, isShareView]);
-
-    const appName = levelProperties.appName;
+      // Since 'horizontal' is an optional layout (not all labs have it),
+      // we need to add a fallback to 'vertical' to avoid type errors.
+      return (
+        config.layoutComponents[currentLayout] ||
+        config.layoutComponents.vertical
+      );
+    }, [
+      appName,
+      config.activeLayout,
+      config.layoutComponents,
+      isFullScreenView,
+      isShareView,
+      isStartMode,
+      isWidgetView,
+    ]);
 
     const backpackApi = useMemo(
       () => new BackpackClientApi(appName, null),
       [appName]
     );
 
+    // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
+    useZoomTracker(appName);
+
+    const dispatch = useAppDispatch();
+
+    // Set view code to false if level is switched for any levels in widget view.
+    useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+      dispatch(setWidgetViewShowCode(false));
+    });
+
+    const {
+      flaggedImageData,
+      onImageFlagged,
+      handleAcceptFlaggedImage,
+      handleCancelFlaggedImage,
+    } = useFlaggedImage();
+
     return (
       <CodebridgeContextProvider
         value={{
-          source: internalSource,
           config,
-          setProject,
           setConfig,
           startSources,
           onRun,
           onStop,
-          ...sourceUtilities,
-          labConfig,
           sendConsoleInput,
           levelProperties,
+          projectPickerSettings,
+          hiddenContextCallback,
+          onImageFlagged,
+          aiTutorMultimodalEnabled,
+          aiTutorChatButtonData,
+          aiTutorContextHelper,
+          aiTutorSystemPromptName,
+          aiTutorResponseSchemaSettings,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
-            {innerLayout}
+            {flaggedImageData && (
+              <FlaggedImageModal
+                onAccept={handleAcceptFlaggedImage}
+                onCancel={handleCancelFlaggedImage}
+              />
+            )}
+            <InnerLayout
+              isProjectLevel={levelProperties.isProjectLevel}
+              isWidgetView={levelProperties.widgetView}
+            />
           </div>
         </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>

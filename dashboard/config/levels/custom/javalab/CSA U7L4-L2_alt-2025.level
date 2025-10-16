@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-08-02T22:27:35.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Change the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">filterByDiet()</code> method to be a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> method instead of a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method. Do you still get the same error? Why would we not want this method to be <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code>?",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Change the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">recipesToString()</code> method to be a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> method instead of a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method. Do you still get the same error? Why would we not want this method to be <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code>?",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -19,11 +20,13 @@
       }
     },
     "project_template_level_name": "CSA U7L4-L1 Private PBT_alt-2025",
-    "teacher_markdown": "Students no longer get the error when the `filterByDiet()` method is `public`. Students should notice that this method is intended to be a helper method for the `getRecommendedRecipes()` method, so other classes should use this method instead of the `filterByDiet()` method.",
+    "teacher_markdown": "Students no longer get the error when the `recipesToString()` method is `public`. Students should notice that this method is intended to be a helper method for the `getRecommendedVegetarianRecipes()` and `getRecommendedMeatRecipes()` methods, so other classes should use these methods instead of the `recipesToString()` method.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": true,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:27:35.534+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L4-L2_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:27:35.534+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L4-L2_pilot-2025\"},{\"changed_at\":\"2025-08-20 17:57:05 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-20 18:01:57 +0000\",\"changed\":[\"teacher_markdown\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Javalab>

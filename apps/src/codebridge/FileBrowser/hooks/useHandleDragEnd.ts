@@ -1,7 +1,8 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {DragType} from '@codebridge/FileBrowser/types';
 import {
   validateFileName as globalValidateFileName,
-  validateFolderName,
+  validateFolderMove,
 } from '@codebridge/utils';
 import {DragOverEvent} from '@dnd-kit/core';
 import {useMemo} from 'react';
@@ -9,9 +10,13 @@ import {useMemo} from 'react';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  moveFileThunk,
+  moveFolderThunk,
+} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
-
-import {DragType} from '../types';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
  * Handles the drag end event for the file browser, performing file/folder movement and validation.
@@ -19,8 +24,11 @@ import {DragType} from '../types';
  * @returns A function that handles the DragOverEvent from `@dnd-kit/core`.
  */
 export const useHandleDragEnd = () => {
-  const {source, moveFile, moveFolder, levelProperties} =
-    useCodebridgeContext();
+  const {levelProperties} = useCodebridgeContext();
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source as MultiFileSource
+  );
+  const dispatch = useAppDispatch();
 
   const dialogControl = useDialogControl();
   const validationFile = levelProperties.validationFile;
@@ -40,18 +48,25 @@ export const useHandleDragEnd = () => {
           return;
         }
         if (e.active.data.current?.type === DragType.FOLDER) {
-          const validationError = validateFolderName({
-            folderName: source.folders[e.active.data.current.id].name,
-            parentId: e.over.id as string,
-            projectFolders: source.folders,
-          });
+          const folderId = e.active.data.current.id as string;
+          const validationError = validateFolderMove(
+            source.folders[folderId].name,
+            e.over.id as string,
+            source.folders,
+            folderId
+          );
           if (validationError) {
             dialogControl?.showDialog({
               type: DialogType.GenericAlert,
               title: validationError,
             });
           } else {
-            moveFolder(e.active.data.current.id as string, e.over.id as string);
+            dispatch(
+              moveFolderThunk({
+                folderId: e.active.data.current.id as string,
+                parentId: e.over.id as string,
+              })
+            );
           }
         } else if (e.active.data.current?.type === DragType.FILE) {
           const validationError = validateFileName({
@@ -64,18 +79,16 @@ export const useHandleDragEnd = () => {
               title: validationError,
             });
           } else {
-            moveFile(e.active.data.current.id as string, e.over.id as string);
+            dispatch(
+              moveFileThunk({
+                fileId: e.active.data.current.id as string,
+                folderId: e.over.id as string,
+              })
+            );
           }
         }
       }
     },
-    [
-      dialogControl,
-      moveFile,
-      moveFolder,
-      source.files,
-      source.folders,
-      validateFileName,
-    ]
+    [dialogControl, dispatch, source.files, source.folders, validateFileName]
   );
 };

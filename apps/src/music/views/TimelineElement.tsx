@@ -2,6 +2,8 @@ import classNames from 'classnames';
 import React from 'react';
 import {useDispatch} from 'react-redux';
 
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {isChordEvent} from '../player/interfaces/ChordEvent';
 import {isInstrumentEvent} from '../player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
@@ -9,13 +11,14 @@ import {isSoundEvent} from '../player/interfaces/SoundEvent';
 import {selectBlockId} from '../redux/musicRedux';
 import SoundStyle from '../utils/SoundStyle';
 
-import {useMusicSelector} from './types';
-
 import moduleStyles from './timeline.module.scss';
+
+export const TimelineElementClass = 'timeline-element';
 
 interface TimelineElementProps {
   eventData: PlaybackEvent;
   barWidth: number;
+  onKeyDown: (event: React.KeyboardEvent<HTMLButtonElement>) => void;
   height: number;
   top: number;
   left: number;
@@ -27,28 +30,28 @@ interface TimelineElementProps {
 const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
   eventData,
   barWidth,
+  onKeyDown,
   height,
   top,
   left,
 }) => {
-  const isPlaying = useMusicSelector(state => state.music.isPlaying);
-  const selectedBlockId = useMusicSelector(
-    state => state.music.selectedBlockId
-  );
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const selectedBlockId = useAppSelector(state => state.music.selectedBlockId);
   const dispatch = useDispatch();
-  const currentPlayheadPosition = useMusicSelector(
-    state => state.music.currentPlayheadPosition
-  );
   const isInsideRandom = eventData.skipContext?.insideRandom;
   const isSkipSound = isPlaying && eventData.skipContext?.skipSound;
   const isThinBorder = height <= 4;
 
-  const isCurrentlyPlaying =
-    isPlaying &&
-    !isSkipSound &&
-    currentPlayheadPosition !== 0 &&
-    currentPlayheadPosition >= eventData.when &&
-    currentPlayheadPosition < eventData.when + eventData.length;
+  const isCurrentlyPlaying = useAppSelector(state => {
+    const currentPlayheadPosition = state.music.currentPlayheadPosition;
+    return (
+      isPlaying &&
+      !isSkipSound &&
+      currentPlayheadPosition !== 0 &&
+      currentPlayheadPosition >= eventData.when &&
+      currentPlayheadPosition < eventData.when + eventData.length
+    );
+  });
 
   const isBlockSelected = eventData.blockId === selectedBlockId;
 
@@ -65,10 +68,12 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
 
   return (
     <button
+      tabIndex={-1}
       type="button"
+      onKeyDown={onKeyDown}
       aria-label={friendlyLabel}
       className={classNames(
-        'timeline-element',
+        TimelineElementClass,
         moduleStyles.timelineElement,
         SoundStyle[soundType]?.classNameBackground,
         SoundStyle[soundType]?.classNameBorder,

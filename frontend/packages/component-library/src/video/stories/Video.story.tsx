@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect, userEvent} from '@storybook/test';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect, userEvent} from 'storybook/test';
 
 import Video from '../index';
 
@@ -16,6 +16,7 @@ export const DefaultVideo: Story = {
   args: {
     videoTitle: "What Most Schools Don't Teach",
     youTubeId: 'nKIu9yen5nc',
+    isYouTubeCookieAllowed: true,
   },
   parameters: {
     eyes: {
@@ -44,6 +45,10 @@ export const VideoWithCaption: Story = {
     videoTitle: "What Most Schools Don't Teach",
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
+    isYouTubeCookieAllowed: true,
+  },
+  decorators: Story => {
+    return <Story />;
   },
   play: async ({canvasElement, args}) => {
     const canvas = within(canvasElement);
@@ -67,6 +72,7 @@ export const VideoWithFallback: Story = {
       'https://videos.code.org/social/what-most-schools-dont-teach.mp4',
     youTubeId: 'nKIu9yen5nc',
     showCaption: false,
+    isYouTubeCookieAllowed: true,
   },
   parameters: {
     docs: {
@@ -103,6 +109,7 @@ export const VideoWithCaptionAndFallback: Story = {
       'https://videos.code.org/social/what-most-schools-dont-teach.mp4',
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
+    isYouTubeCookieAllowed: true,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -114,5 +121,29 @@ export const VideoWithCaptionAndFallback: Story = {
 
     // check if download button is visible
     await expect(download).toBeVisible();
+  },
+};
+
+export const VideoCookieBlocked: Story = {
+  args: {
+    videoTitle: "What Most Schools Don't Teach",
+    youTubeId: 'nKIu9yen5nc',
+    showCaption: true,
+    isYouTubeCookieAllowed: false,
+  },
+  play: async ({canvasElement, args}) => {
+    const canvas = within(canvasElement);
+
+    const playButton = await canvas.findByLabelText(
+      `Play video ${args.videoTitle}`,
+    );
+    await expect(playButton).toBeVisible();
+    await userEvent.click(playButton);
+
+    expect(
+      canvas.getByText(
+        'Please enable "Functional Cookies" and refresh the page to play this video.',
+      ),
+    );
   },
 };

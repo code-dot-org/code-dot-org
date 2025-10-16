@@ -1,7 +1,7 @@
 import imageFile from '@public/images/image-component.png';
-import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
 import {useState} from 'react';
+import {within, expect} from 'storybook/test';
 
 import Image, {ImageProps} from '../index';
 
@@ -125,6 +125,33 @@ export const ImageWithShadow: Story = {
 
     // check if image has box shadow
     await expect(figure).toHaveStyle(`box-shadow: ${expectedBoxShadow};`);
+  },
+};
+
+export const ImageWithoutRoundedCorners: Story = {
+  ...SingleTemplate,
+  args: {
+    src: imageFile,
+    altText: 'Teacher helping student',
+    hasRoundedCorners: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Remove rounded corners on an image if needed, will most likely need to be set to `false` on logos.',
+      },
+    },
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const image = await canvas.findByAltText('Teacher helping student');
+    const expectedRoundedCorners = '0';
+
+    // check if image has box shadow
+    await expect(image).toHaveStyle(
+      `border-radius: ${expectedRoundedCorners};`,
+    );
   },
 };
 

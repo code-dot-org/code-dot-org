@@ -5,6 +5,9 @@ theme: responsive_full_width
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 
+-# FontAwesome icons
+- icon_sparkles = "fa-solid fa-sparkles"
+
 %section.hero-banner-basic.bg-neutral-dark
   .wrapper.grid-container.justify-space-between.align-items-center.gap-4
     .text-wrapper
@@ -12,16 +15,46 @@ theme: responsive_full_width
         =hoc_s("ai_ta_page.heading")
       %p.white
         =hoc_s("ai_ta_page.desc")
+      .content-footer
+      %a.link-button{href: "https://studio.code.org/home"}
+        = hoc_s("ai_ta_page.button")
     %figure
-      %img{src: "/images/ai/page/teaching-assistant/ai-ta-banner-winner.png", alt: "", style: "width: 100%; margin-block-start: -2rem; margin-inline-start: -2rem;"}
+      %img{src: "/images/ai/page/teaching-assistant/ai-ta-best-of-stem-2024.png", alt: "", style: "width: 100%; margin-block-start: -2rem; margin-inline-start: -2rem;"}
 
 %section.bg-neutral-light
   .wrapper
-    = view :"ai_teaching_assistant/ai_ta_get_started"
+    = view :"ai_teaching_assistant/ai_ta_summary"
+
+%section.bg-neutral-dark
+  .wrapper.centered
+    .flex-container.justify-center.align-items-center.gap-2.wrap
+      .flex-container.flex-direction-row.justify-center.align-items-center{style: "gap: 10px;"}
+        %h2.white.no-margin-bottom=hoc_s("ai_ta_page.suggestions.header_01")
+        %i{class: "#{icon_sparkles}", style: "color: #3CFFF7; font-size: 24px;"}
+        %h2.white.no-margin-bottom=hoc_s("ai_ta_page.suggestions.header_02")
+        %i{class: "#{icon_sparkles}", style: "color: #3CFFF7; font-size: 24px;"}
+        %h2.white.no-margin-bottom=hoc_s("ai_ta_page.suggestions.header_03")
+      %figure
+        %img{src: "/images/ai/page/teaching-assistant/ai-ta-suggestions.gif", alt: "", style: "width: 100%;"}
 
 %section.no-padding-bottom
   .wrapper
     .flex-container.justify-space-between.align-items-center.gap-2.wrap
+      .text-wrapper.col-47
+        %h2=hoc_s("ai_ta_page.customized_support.heading")
+        %p=hoc_s("ai_ta_page.customized_support.desc")
+        %ul
+          %li=hoc_s("ai_ta_page.customized_support.list_01", markdown: :inline)
+          %li=hoc_s("ai_ta_page.customized_support.list_02", markdown: :inline)
+          %li=hoc_s("ai_ta_page.customized_support.list_03", markdown: :inline)
+      %figure.col-47
+        %img{src: "/images/ai/page/teaching-assistant/ai-ta-chat-graphic.png", alt: "", style: "width: 100%;"}
+
+%section.no-padding-bottom
+  .wrapper
+    .flex-container.justify-space-between.align-items-center.gap-2.wrap
+      %figure.col-47
+        %img{src: "/images/ai/page/teaching-assistant/ai-ta-assessments-launch-graphic.png", alt: "", style: "width: 100%;"}
       .text-wrapper.col-47
         %h2=hoc_s("ai_ta_page.assessment_power.heading")
         %p=hoc_s("ai_ta_page.assessment_power.desc")
@@ -29,21 +62,18 @@ theme: responsive_full_width
           %li=hoc_s("ai_ta_page.assessment_power.list_01", markdown: :inline)
           %li=hoc_s("ai_ta_page.assessment_power.list_02", markdown: :inline)
           %li=hoc_s("ai_ta_page.assessment_power.list_03", markdown: :inline)
-      %figure.col-47
-        %img.rounded-corners{src: "/images/ai/page/teaching-assistant/ai-ta-assessment-example.png", alt: "", style: "width: 100%;"}
 
 %section
   .wrapper
-    = view :section_basic_image_text, image_url: "/images/ai/page/teaching-assistant/ai-ta-focus-example.png", heading: hoc_s("ai_ta_page.focus.heading"), desc: hoc_s("ai_ta_page.focus.desc"), wrap_reverse: false, url: nil, urlText: nil
+    = view :section_basic_image_text, image_url: "/images/ai/page/teaching-assistant/ai-ta-evidence-graphic.png", heading: hoc_s("ai_ta_page.focus.heading"), desc: hoc_s("ai_ta_page.focus.desc"), wrap_reverse: true, url: nil, urlText: nil
+
+%section.bg-neutral-light
+  .wrapper
+    = view :"ai_teaching_assistant/ai_ta_get_started"
 
 %section.bg-neutral-dark
   .wrapper.centered
     = view :"ai_teaching_assistant/ai_ta_in_the_news"
-
-%section.bg-neutral-light
-  .wrapper.centered
-    %h2=hoc_s("ai_ta_page.resources.heading")
-    = view :"ai_teaching_assistant/ai_ta_editorial_cards"
 
 %section#ai-signup-form
   .wrapper
@@ -56,9 +86,9 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper.centered
-    %h2=hoc_s("coding_with_ai_page.resources.heading")
-    %p=hoc_s("coding_with_ai_page.resources.desc")
-    = view :"ai_pages_shared/ai_pages_resources", white_bg: true
+    %h2=hoc_s("ai_ta_page.resources.heading")
+    = view :"ai_teaching_assistant/ai_ta_editorial_cards"
+
 
 %section
   .wrapper.centered

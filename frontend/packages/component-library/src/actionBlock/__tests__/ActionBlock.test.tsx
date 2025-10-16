@@ -1,7 +1,39 @@
 import {render, screen} from '@testing-library/react';
-
 import '@testing-library/jest-dom';
-import ActionBlock, {FullWidthActionBlock, ActionBlockProps} from '../index';
+import {ReactPlayerProps} from 'react-player';
+import ReactPlayer from 'react-player/file';
+
+import Video from '@/video';
+
+import ActionBlock, {ActionBlockProps} from '../index';
+
+ReactPlayer.canPlay = jest.fn();
+
+jest.mock('react-player/youtube', () => ({
+  __esModule: true,
+  default: ({light, playIcon, onError}: ReactPlayerProps) => (
+    <div>
+      YouTube Player
+      {light}
+      {playIcon}
+      <button onClick={onError}>Trigger Error</button>
+    </div>
+  ),
+  canPlay: jest.fn(),
+}));
+
+jest.mock('react-player/file', () => ({
+  __esModule: true,
+  default: ({light, playIcon, onError}: ReactPlayerProps) => (
+    <div>
+      Fallback Player
+      {light}
+      {playIcon}
+      <button onClick={onError}>Trigger Error</button>
+    </div>
+  ),
+  canPlay: jest.fn(),
+}));
 
 describe('ActionBlock', () => {
   const defaultProps: ActionBlockProps = {
@@ -16,6 +48,7 @@ describe('ActionBlock', () => {
       ariaLabel: 'Primary Button aria label',
     },
   };
+
   const secondaryButtonProps = {
     secondaryButton: {
       text: 'Secondary Button',
@@ -34,7 +67,9 @@ describe('ActionBlock', () => {
   });
 
   it('renders an image', () => {
-    render(<ActionBlock {...defaultProps} image="image.png" />);
+    render(
+      <ActionBlock {...defaultProps} image={{src: 'image.png', alt: ''}} />,
+    );
 
     expect(screen.getByAltText('')).toHaveAttribute('src', 'image.png');
   });
@@ -43,6 +78,12 @@ describe('ActionBlock', () => {
     render(<ActionBlock {...defaultProps} overline="Overline Text" />);
 
     expect(screen.getByText('Overline Text')).toBeInTheDocument();
+  });
+
+  it('renders a tag', () => {
+    render(<ActionBlock {...defaultProps} tag="New" />);
+
+    expect(screen.getByText('New')).toBeInTheDocument();
   });
 
   it('renders detail', () => {
@@ -78,87 +119,53 @@ describe('ActionBlock', () => {
     expect(secondaryButton).toBeInTheDocument();
     expect(secondaryButton).toHaveAttribute('href', 'https://hourofcode.com');
   });
-});
 
-describe('FullWidthActionBlock', () => {
-  const defaultProps: ActionBlockProps = {
-    title: 'Full width action block title',
-    description: 'This is the full width action block description.',
-  };
-
-  const primaryButtonProps = {
-    primaryButton: {
-      text: 'Full Width Primary Button',
-      href: 'https://google.com',
-      ariaLabel: 'Full Width Primary Button aria label',
-    },
-  };
-  const secondaryButtonProps = {
-    secondaryButton: {
-      text: 'Full Width Secondary Button',
-      href: 'https://apple.com',
-      ariaLabel: 'Full Width Secondary Button aria label',
-    },
-  };
-
-  it('renders the title and description', () => {
-    render(<FullWidthActionBlock {...defaultProps} />);
-
-    expect(
-      screen.getByText('Full width action block title'),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('This is the full width action block description.'),
-    ).toBeInTheDocument();
-  });
-
-  it('renders an image', () => {
-    render(<FullWidthActionBlock {...defaultProps} image="image2.png" />);
-
-    expect(screen.getByAltText('')).toHaveAttribute('src', 'image2.png');
-  });
-
-  it('renders an overline', () => {
-    render(
-      <ActionBlock {...defaultProps} overline="Full Width Overline Text" />,
-    );
-
-    expect(screen.getByText('Full Width Overline Text')).toBeInTheDocument();
-  });
-
-  it('renders detail', () => {
-    render(
-      <FullWidthActionBlock
-        {...defaultProps}
-        details={{label: 'Duration', description: '1 week'}}
-      />,
-    );
-
-    expect(screen.getByText('Duration:')).toBeInTheDocument();
-    expect(screen.getByText('1 week')).toBeInTheDocument();
-  });
-
-  it('renders buttons', () => {
-    render(
-      <FullWidthActionBlock
-        {...defaultProps}
-        {...primaryButtonProps}
-        {...secondaryButtonProps}
-      />,
-    );
+  it('does not render buttons when the primary button is not provided', () => {
+    render(<ActionBlock {...defaultProps} primaryButton={undefined} />);
 
     // check for primary button
-    const primaryButton = screen.getByLabelText(
-      'Full Width Primary Button aria label',
-    );
-    expect(primaryButton).toBeInTheDocument();
-    expect(primaryButton).toHaveAttribute('href', 'https://google.com');
+    const primaryButton = screen.queryByLabelText('Primary Button aria label');
+    expect(primaryButton).not.toBeInTheDocument();
 
     // check for secondary button
-    const secondaryButton = screen.getByLabelText(
-      'Full Width Secondary Button aria label',
+    const secondaryButton = screen.queryByLabelText(
+      'Secondary Button aria label',
     );
-    expect(secondaryButton).toBeInTheDocument();
-    expect(secondaryButton).toHaveAttribute('href', 'https://apple.com');
+    expect(secondaryButton).not.toBeInTheDocument();
+  });
+
+  it('renders video component when video prop and VideoComponent are provided', () => {
+    render(
+      <ActionBlock
+        {...defaultProps}
+        VideoComponent={Video}
+        video={{
+          youTubeId: 'abc123',
+          videoTitle: 'Sample Video Title',
+          isYouTubeCookieAllowed: true,
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByLabelText('Play video Sample Video Title'),
+    ).toBeInTheDocument();
+  });
+
+  it('shows fallback message if video is provided but VideoComponent is missing', () => {
+    render(
+      <ActionBlock
+        {...defaultProps}
+        video={{
+          youTubeId: 'abc123',
+          videoTitle: 'Fallback',
+          isYouTubeCookieAllowed: true,
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByText(/VideoComponent is not provided/i),
+    ).toBeInTheDocument();
   });
 });

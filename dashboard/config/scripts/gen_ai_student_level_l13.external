@@ -1,0 +1,66 @@
+name 'gen-ai-student-level-L13'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ✅ Lesson Recap: Project: Demystifying Generative AI
+
+#### After this lesson, you can 
+
+* #### Identify and address misconceptions about generative AI
+* #### Create artifacts that explain generative AI concepts in a clear and engaging manner
+
+## Resources
+
+### **Activity Guides**
+
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1FIZimuU8V2PcfDur9nVmpCRTqPIHZg47oyxYM1RZGu4" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1FIZimuU8V2PcfDur9nVmpCRTqPIHZg47oyxYM1RZGu4/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 1</a><br>
+  </p>
+</div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1VwMG12vIehflz8t___XTTB2QvQYIsRmeuPXNiPQ7TWU" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1VwMG12vIehflz8t___XTTB2QvQYIsRmeuPXNiPQ7TWU/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 2</a><br>
+  </p>
+</div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1FmgWivspL9ZwHACa7D9UcLEUUMgKSwMZaPrSl7OeFcs" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1FmgWivspL9ZwHACa7D9UcLEUUMgKSwMZaPrSl7OeFcs/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 3</a><br>
+  </p>
+</div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1ky3Wz5sqZQwDfoHRxl-gUWC6qVElR7lQVnp4w8NQp_I" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1ky3Wz5sqZQwDfoHRxl-gUWC6qVElR7lQVnp4w8NQp_I/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 4</a><br>
+  </p>
+</div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1jp7Fs7A-vsOtlxuZfOFNNWNKNA3TCTGRwd8M10YLIfo" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1jp7Fs7A-vsOtlxuZfOFNNWNKNA3TCTGRwd8M10YLIfo/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Project - Demystifying AI</a><br>
+  </p>
+</div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=17KY7ewQfVZY9qApboAJpxzi9QRpVs6TOSas-MzMRGGU" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/17KY7ewQfVZY9qApboAJpxzi9QRpVs6TOSas-MzMRGGU/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Project Guide - Demystifying AI</a><br>
+  </p>
+</div>
+
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -32,26 +32,18 @@ export type SideBarItem = {
 };
 
 export type ConfigType = {
-  activeLeftNav: string;
-  sideBar: SideBarItem[];
-  instructions?: string;
-  Instructions?: () => JSX.Element;
   defaultTheme?: EditorTheme;
-  leftNav: LeftNavElement[];
-  gridLayout?: string;
-  gridLayoutRows?: string;
-  gridLayoutColumns?: string;
   editableFileTypes: string[];
-  previewFileTypes?: string[];
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
   activeLayout?: LayoutKey;
-  showFileBrowser: boolean;
   validMimeTypes?: string[];
   layoutComponents: {
-    horizontal: React.ReactNode;
-    vertical: React.ReactNode;
-    share?: React.ReactNode;
+    horizontal?: React.FunctionComponent<LayoutProps>;
+    vertical: React.FunctionComponent<LayoutProps>;
+    share?: React.FunctionComponent<LayoutProps>;
+    widget?: React.FunctionComponent<LayoutProps>;
+    fullScreen?: React.FunctionComponent<LayoutProps>;
   };
 };
 
@@ -79,6 +71,8 @@ export interface CodebridgeLevelProperties extends LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
+  widgetView?: boolean;
+  widgetViewAllowShowCode?: boolean;
 }
 
 // Python Lab specific property
@@ -86,4 +80,20 @@ export interface MazeCell {
   tileType: number;
   value: number;
   assetId: number;
+}
+
+export interface LayoutProps {
+  isProjectLevel?: boolean;
+  isWidgetView?: boolean;
+}
+
+export interface ProjectPickerSettings {
+  currentType: string;
+  showProjectTypePicker: () => void;
+}
+
+export enum RunType {
+  RUN,
+  TEST, // User-written tests
+  VALIDATION, // Levelbuilder-written tests
 }

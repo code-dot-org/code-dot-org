@@ -161,6 +161,7 @@ class ProgrammingExpression < ApplicationRecord
   def summarize_for_lesson_edit
     {
       id: id,
+      blockName: block_name,
       category: category,
       color: get_color,
       key: key,
@@ -334,7 +335,6 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def get_blocks
-    return unless block_name
     return unless programming_environment.block_pool_name
     Block.for(programming_environment.block_pool_name)
   end

@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 # Meet the Painter 
 
 
-#### In the Neighborhood IDE, the object you will work with is from **The Painter** class. 
+#### In the Neighborhood IDE, the object you will work with the **The Painter** object.
 
 #### Remember, objects have attributes and methods. 
 
@@ -34,6 +34,7 @@ markdown <<MARKDOWN
                 <ul style="list-style-type: none; padding: 0; text-align: center; margin: 10px 0;">
                     <li style="font-size: 12pt; line-height: 1.5;">move()</li>
                     <li style="font-size: 12pt; line-height: 1.5;">turn_left()</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">take_paint()</li>
                     <li style="font-size: 12pt; line-height: 1.5;">paint(color)</li>
                 </ul>
             </div>
@@ -57,13 +58,19 @@ markdown <<MARKDOWN
 
 ## Getting Started with Objects
 
+#### In simple terms, there are two steps to get starting with objects. 
+- #### 1. Create the object with a variable name. This is called **instantiating** an object.
+- #### 2. Tell the object what to do using methods.
+
+#### See what this looks like in code: 
+
 <table border="1" width="100%" cellpadding="10">
         <tr>
             <td width="33%">
                 <img src="https://images.code.org/7d0849ab4adda8a45784b7b4fd541339-image-1741277550544.png" alt="painter = Painter()" width="130%">
             </td>
             <td width="67%" style="font-size:14pt;">
-            First, <b>instantiate</b> the object by creating a new instance of the <code>Painter</code> class. <br><br> This is done by assigning the <code> Painter()</code> object to a variable.<br> <i>Here, the variable name is painter, but you can use any name.</i> 
+            First, <b>instantiate</b> the object by creating a new instance of the <code>Painter</code> class. <br><br> This is done by assigning the <code> Painter()</code> object to a variable.<br> <i>Here, the variable name is <span style="color:red;">painter</span>, but you can use any name.</i> 
             </td>
         </tr>
         <tr>

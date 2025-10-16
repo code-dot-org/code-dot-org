@@ -1,5 +1,4 @@
-@use '@code-dot-org/component-library-styles/colors';
-@import '@code-dot-org/component-library-styles/mixins.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 // Button common styles
 .button,
@@ -57,6 +56,10 @@ a.button {
   &[aria-disabled='true'] {
     cursor: not-allowed;
     border-color: var(--borders-neutral-disabled);
+
+    &.button-tertiary {
+      border-color: transparent;
+    }
   }
 }
 
@@ -65,7 +68,7 @@ a.button {
 a.button-primary {
   &.button-purple {
     background-color: var(--background-brand-purple-primary);
-    color: var(--text-neutral-inverse);
+    color: var(--text-neutral-white-fixed);
 
     &:hover,
     &.button-withForcedHover {
@@ -231,6 +234,7 @@ a.button-secondary {
   }
 
   &.button-destructive {
+    background-color: var(--background-neutral-primary);
     border: 1px solid var(--borders-error-primary);
     color: var(--text-error-primary);
 
@@ -370,8 +374,8 @@ a.button-l {
   gap: 0.5rem;
 
   span {
-    @include button-one-text;
-    margin: 1px 0 0;
+    @include mixins.button-one-text;
+    margin: 0;
   }
 
   i {
@@ -392,8 +396,8 @@ a.button-m {
   gap: 0.5rem;
 
   span {
-    @include button-two-text;
-    margin: 1px 0 0;
+    @include mixins.button-two-text;
+    margin: 0;
   }
 
   i {
@@ -414,8 +418,8 @@ a.button-s {
   gap: 0.5rem;
 
   span {
-    @include button-three-text;
-    margin: 1px 0 0;
+    @include mixins.button-three-text;
+    margin: 0;
   }
 
   i {
@@ -436,8 +440,8 @@ a.button-xs {
   gap: 0.25rem;
 
   span {
-    @include button-four-text;
-    margin: 1px 0 0;
+    @include mixins.button-four-text;
+    margin: 0;
   }
 
   i {

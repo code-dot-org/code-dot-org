@@ -3,7 +3,7 @@
 
 %table
   %tr
-    %td.heading= 'Date'.pluralize(@workshop.sessions.length) + ':'
+    %td.heading= 'Session'.pluralize(@workshop.sessions.length) + ':'
     %td
       - @workshop.sessions.each do |session|
         - if @workshop.subject == Pd::Workshop::SUBJECT_CSA_CAPSTONE
@@ -11,15 +11,13 @@
         - else
           = session.start_date_with_start_and_end_times_us_format
         %br
-  - unless @workshop.location_name.blank? || (@workshop.virtual? && @workshop.subject != Pd::Workshop::SUBJECT_CSA_CAPSTONE)
-    %tr
-      %td.heading
-        Location:
-      %td
-        = @workshop.location_name
-        - if @workshop.location_address.present?
-          %br
-          = @workshop.location_address
+        - if session.session_format == 'virtual' && session.meeting_link
+          Virtual meeting:
+          = link_to session.meeting_link, session.meeting_link
+        - else
+          = session.formatted_location_details
+        %br
+        %br
   %tr
     %td.heading
       Organizer:

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:21:02.000Z",
   "level_num": "custom",
@@ -21,10 +22,10 @@
     "instructions_important": "false",
     "long_instructions": "# Do This\r\n\r\n* Run the app to see how it works\r\n* Debug this program to use the correct sound and text when the user clicks each animal",
     "submittable": "false",
-    "start_blocks": "//Play a moo sound when the user clicks the cow\nonEvent(\"cowImage\", \"click\", function( ) {\n  playSound(\"sound://category_animals/moo.mp3\");\n  setProperty(\"animalText\", \"text\", \"Cow\");\n});\n\n//Play a rooster sound when the user clicks the rooster\nonEvent(\"roosterIamge\", \"click\", function( ) {\n  playSound(\"sound://category_animals/pig.mp3\");\n  setProperty(\"appName\", \"text\", \"Pig\");\n});\n\n//Play a pig sound when the user clicks the pig\nonEvent(\"pigImage\", \"click\", function( ) {\n  playSound(\"sound://category_animals/rooster.mp3\");\n  setProperty(\"animalText\", \"text\", \"Rooster\");\n});",
+    "start_blocks": "//Play a moo sound when the user clicks the cow\r\nonEvent(\"cowImage\", \"click\", function( ) {\r\n  playSound(\"sound://category_animals/moo.mp3\");\r\n  setProperty(\"animalText\", \"text\", \"Cow\");\r\n});\r\n\r\n//Play a rooster sound when the user clicks the rooster\r\nonEvent(\"roosterIamge\", \"click\", function( ) {\r\n  playSound(\"sound://category_animals/pig.mp3\");\r\n  setProperty(\"appName\", \"text\", \"Pig\");\r\n});\r\n\r\n//Play a pig sound when the user clicks the pig\r\nonEvent(\"pigImage\", \"click\", function( ) {\r\n  playSound(\"sound://category_animals/rooster.mp3\");\r\n  setProperty(\"animalText\", \"text\", \"Rooster\");\r\n});",
     "never_autoplay_video": "true",
     "slider_speed": "1.0",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
@@ -56,9 +57,8 @@
     "thumbnail_url": "https://images.code.org/74fcc9b00d2379075795548412708b17-image-1647323646701.52.05 PM.png",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:02.961+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 3_2024\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 3_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:02.961+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 3_2024\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 3_2024\"},{\"changed_at\":\"2025-08-04 21:29:37 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

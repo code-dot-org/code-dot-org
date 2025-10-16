@@ -20,10 +20,11 @@ const CourseRow = ({
   current_lesson_name,
   percent_completed,
   finish_url,
+  path,
 }) => (
   <tr>
     <td>
-      <Link href={studio(`/s/${name}`)} size="s" type="secondary">
+      <Link href={path} size="s" type="secondary">
         {title}
       </Link>
     </td>
@@ -56,7 +57,7 @@ const CourseRow = ({
         {percent_completed < 100 && (
           <LinkButton
             color={'purple'}
-            href={studio(`/s/${name}`)}
+            href={path}
             size="s"
             text={i18n.selfPacedPlContinueCourse()}
           />
@@ -85,6 +86,7 @@ CourseRow.propTypes = {
   current_lesson_name: PropTypes.string.isRequired,
   percent_completed: PropTypes.number.isRequired,
   finish_url: PropTypes.string,
+  path: PropTypes.string,
 };
 
 export default function SelfPacedProgressTable({plCoursesStarted}) {
@@ -108,6 +110,7 @@ export default function SelfPacedProgressTable({plCoursesStarted}) {
               current_lesson_name={course.current_lesson_name}
               percent_completed={course.percent_completed}
               finish_url={course.finish_url}
+              path={course.path}
             />
           ))}
         </tbody>

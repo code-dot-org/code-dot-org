@@ -34,6 +34,8 @@ class Level < ApplicationRecord
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
+  has_many :levels_skills
+  has_many :skills, through: :levels_skills
   belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
   belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
@@ -44,7 +46,7 @@ class Level < ApplicationRecord
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 
-  validates_length_of :name, within: 1..70
+  validates :name, length: {within: 1..70}
   validate :reject_illegal_chars
 
   # Together, these validations prevent collisions between level keys, including
@@ -52,8 +54,8 @@ class Level < ApplicationRecord
   # custom levels, DSLDefined levels, and deprecated blockly levels. For more
   # context on these categories and level keys, see:
   # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
-  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
-  validates_uniqueness_of :level_num, case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+  validates :name, uniqueness: {case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}}
+  validates :level_num, uniqueness: {case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}}
 
   validate :validate_game, on: [:create, :update]
 
@@ -99,6 +101,8 @@ class Level < ApplicationRecord
     use_secondary_finish_button
     skip_url
     stay_on_level_after_submit
+    skill_keys
+    additional_ai_evaluation_instructions
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -163,12 +167,6 @@ class Level < ApplicationRecord
 
   def finishable?
     !unplugged?
-  end
-
-  # This does not include DSL levels which also use teacher markdown
-  # but access it in a different way
-  def include_teacher_only_markdown_editor?
-    uses_droplet? || is_a?(Blockly) || is_a?(ExternalLink) || is_a?(Weblab) || is_a?(CurriculumReference) || is_a?(StandaloneVideo)
   end
 
   def enable_scrolling?
@@ -241,9 +239,7 @@ class Level < ApplicationRecord
         hash['notes'] = Encryption.decrypt_object(encrypted_notes)
       end
     rescue Encryption::KeyMissingError
-      # developers and adhoc environments must be able to seed levels without properties_encryption_key
-      non_ci_test = rack_env == :test && !CDO.ci && !CDO.chef_managed
-      raise unless rack_env?(:development) || rack_env?(:adhoc) || non_ci_test
+      raise if rack_env?(:production)
       puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash
@@ -301,7 +297,7 @@ class Level < ApplicationRecord
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
   # lesson extras page
-  def summarize_as_bonus
+  def summarize_as_bonus(unit_group_unit: nil)
     {}
   end
 
@@ -339,6 +335,7 @@ class Level < ApplicationRecord
     'PublicKeyCryptography', # widget
     'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
+    'Sketchlab', # no ideal solution
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
     'TextMatch', # dsl defined, covered in dsl
@@ -402,7 +399,7 @@ class Level < ApplicationRecord
   def channel_backed?
     return false if try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
-    dance_party_free_play = is_a?(Dancelab) && try(:free_play?)
+    dance_party_free_play = is_a?(Dancelab) && (try(:free_play?) || try(:uses_lab2?))
     project_template_level || free_response_upload || game.channel_backed? || dance_party_free_play
   end
 
@@ -497,7 +494,7 @@ class Level < ApplicationRecord
   # Programming levels are levels where students write code.
   # These are the lab types that support programming used in 6-12th grade curriculum.
   def upper_grades_programming_level?
-    %w(Applab Gamelab Javalab Pythonlab Weblab).include?(type)
+    %w(Applab Gamelab Javalab Pythonlab Weblab Music).include?(type)
   end
 
   # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
@@ -559,7 +556,7 @@ class Level < ApplicationRecord
     }
   end
 
-  def summary_for_lesson_plans
+  def summary_for_lesson_plans(unit_group_unit: nil)
     summary = summarize
 
     %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference
@@ -573,7 +570,7 @@ class Level < ApplicationRecord
     end
 
     unless contained_levels.empty?
-      summary[:contained_levels] = contained_levels.map(&:summary_for_lesson_plans)
+      summary[:contained_levels] = contained_levels.map {|l| l.summary_for_lesson_plans(unit_group_unit: unit_group_unit)}
     end
 
     summary
@@ -832,6 +829,10 @@ class Level < ApplicationRecord
     script_levels.map(&:script).any?(&:hint_prompt_enabled?)
   end
 
+  def grade_levels
+    script_levels.map {|script_level| script_level.script&.get_course_version&.course_offering&.grade_levels}.flatten.compact.uniq.join(', ')
+  end
+
   # Define search filter fields
   def self.search_options
     {
@@ -877,12 +878,21 @@ class Level < ApplicationRecord
     }
   end
 
+  def summarize_for_sublevel_edit
+    {
+      name: name,
+      id: id,
+      properties: properties,
+      isDslDefined: is_a?(DSLDefined)
+    }
+  end
+
   # Summarize the properties for a lab2 level.
   # Called by ScriptLevelsController.level_properties.
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:name] = name
@@ -893,10 +903,12 @@ class Level < ApplicationRecord
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
-    properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user) if script_level
+    properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user, unit_group_unit: unit_group_unit) if script_level
     properties_camelized[:baseAssetUrl] = Blockly.base_url
     properties_camelized[:isAssessment] = script_level&.assessment
-    properties_camelized[:progressionType] = script_level&.primm_progression_type
+    properties_camelized[:enableBlocklyKeyboardNavigation] = script&.enable_blockly_keyboard_navigation
+    # Enable browser TTS if the script has TTS enabled, or if the level itself has it enabled.
+    properties_camelized[:offerBrowserTts] = offer_browser_tts || script&.tts
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
@@ -911,7 +923,7 @@ class Level < ApplicationRecord
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
     properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
     if script_level
-      properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil)
+      properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil, unit_group_unit: unit_group_unit)
     end
     is_verified_instructor = current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER)
     if is_verified_instructor || try(:exemplar_settings)
@@ -924,6 +936,18 @@ class Level < ApplicationRecord
       # Users who are not verified teachers or levelbuilders should not be able to see predict level solutions
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
+    end
+
+    # If there is a rubric for this lesson, show the rubric if it is evaluated on this level, or if the evaluation level shares the same
+    # project template level as this level.
+    rubric_level_id = script_level&.lesson&.rubric&.level_id
+    if rubric_level_id
+      if rubric_level_id == id
+        properties_camelized[:showRubric] = true
+      else
+        rubric_template_level = Level.find(rubric_level_id)&.try(:project_template_level)
+        properties_camelized[:showRubric] = rubric_template_level && rubric_template_level == try(:project_template_level)
+      end
     end
     properties_camelized
   end
@@ -983,6 +1007,51 @@ class Level < ApplicationRecord
       # Remove any multiple choice settings if this is a free response question.
       predict_settings.delete("multipleChoiceOptions")
     end
+  end
+
+  def summarize_for_levels_skills
+    {
+      level_id: id,
+      level_name: name,
+      unit_names: unit_names,
+      skills: skill_identifiers,
+    }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
+  end
+
+  # This method returns the names of all units that this level is part of.
+  # For contained levels, we also include the names of the units that
+  # the parent levels are part of.
+  # This is used to filter levels by unit for display on /skills.
+  def unit_names
+    unit_names = script_levels.map {|sl| sl.script.name}
+    parent_levels.each do |parent_level|
+      unit_names += parent_level.script_levels.map {|sl| sl.script.name}
+    end
+    unit_names.uniq.sort
+  end
+
+  def skill_identifiers
+    skills.map {|skill| {id: skill.id, key: skill.key}}
+  end
+
+  def remove_skill_key(skill_key)
+    leftover_skill_keys = JSON.parse(skill_keys)&.delete_if {|sk| sk == skill_key} if skill_keys
+    properties['skill_keys'] = leftover_skill_keys.empty? ? nil : leftover_skill_keys.to_json
+    save!
+  end
+
+  def add_skill_key(skill_key)
+    properties['skill_keys'] = if skill_keys && JSON.parse(skill_keys).is_a?(Array)
+                                 JSON.parse(skill_keys).push(skill_key).uniq.to_json
+                               else
+                                 [skill_key].to_json
+                               end
+    save!
+  end
+
+  def uses_theme_preference?
+    # Only python lab and web lab 2 set and use the theme preference in UserPreferences right now.
+    is_a?(Pythonlab) || is_a?(Weblab2)
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

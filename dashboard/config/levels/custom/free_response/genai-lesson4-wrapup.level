@@ -7,7 +7,7 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "title": "Warm Up",
+    "title": "Wrap Up",
     "long_instructions": "#### Imagine you have a friend who isn't taking this class and they say \"Chatbots are so magical - they know all these words that I've never seen before. How do they even do it? They must be way smarter than me\". \r\n\r\n#### What would you say in response?",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -15,9 +15,10 @@
     "optional": "false",
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-26T20:08:15.239+00:00\",\"changed\":[\"cloned from \\\"genai-lesson2-warmup-lv1\\\"\"],\"cloned_from\":\"genai-lesson2-warmup-lv1\"},{\"changed_at\":\"2024-09-26 20:09:14 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-09-26T20:08:15.239+00:00\",\"changed\":[\"cloned from \\\"genai-lesson2-warmup-lv1\\\"\"],\"cloned_from\":\"genai-lesson2-warmup-lv1\"},{\"changed_at\":\"2024-09-26 20:09:14 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-12 20:57:31 +0000\",\"changed\":[\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

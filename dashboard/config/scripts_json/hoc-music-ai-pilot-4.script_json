@@ -6,13 +6,13 @@
     "properties": {
       "content_area": "other",
       "curriculum_umbrella": "Other",
-      "is_migrated": true,
-      "pilot_experiment": "hoc-music-ai-pilot-4"
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:36 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2025-10-01 22:39:06 UTC",
+    "hide_within_course": false,
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,

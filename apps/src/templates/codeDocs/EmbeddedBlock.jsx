@@ -2,24 +2,14 @@ import {Link} from '@dsco_/link';
 import PropTypes from 'prop-types';
 import React, {useRef, useEffect} from 'react';
 
-import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
-import {parseElement} from '@cdo/apps/xml';
+import {embedBlocklyBlock} from '../utils/embeddedBlocklyRenderUtils';
 
 export default function EmbeddedBlock({blockName, link, ariaLabel}) {
   const blockRef = useRef();
 
   useEffect(() => {
     if (blockName && blockRef.current) {
-      const blocksDom = parseElement(`<block type='${blockName}' />`);
-      const blockSpace = Blockly.createEmbeddedWorkspace(
-        blockRef.current,
-        blocksDom,
-        {
-          noScrolling: true,
-          inline: true,
-        }
-      );
-      shrinkBlockSpaceContainer(blockSpace, true);
+      embedBlocklyBlock(blockRef.current, blockName);
     }
   }, [blockName, blockRef]);
 

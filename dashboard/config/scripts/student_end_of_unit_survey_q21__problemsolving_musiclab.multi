@@ -1,0 +1,17 @@
+name 'student-end-of-unit-survey-q21_-problemsolving_musiclab'
+
+question 'The work and projects I did in this unit allowed me to express myself creatively.'
+
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Neither'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

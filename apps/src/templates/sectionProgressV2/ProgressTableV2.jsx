@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {
+  getSelectedCourseId,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
@@ -34,6 +38,8 @@ function ProgressTableV2({
   expandedLessonIds,
   isSkeleton,
   unitId,
+  courseId,
+  unitPosition,
   levelProgressByStudent,
   isLoadingSectionData,
 }) {
@@ -51,9 +57,17 @@ function ProgressTableV2({
 
   React.useEffect(() => {
     if (!isSkeleton && filteredStudents.length !== students.length) {
-      loadUnitProgress(unitId, sectionId);
+      loadUnitProgress(unitId, sectionId, courseId, unitPosition);
     }
-  }, [filteredStudents, students, unitId, sectionId, isSkeleton]);
+  }, [
+    filteredStudents,
+    students,
+    unitId,
+    sectionId,
+    isSkeleton,
+    courseId,
+    unitPosition,
+  ]);
 
   const sortedStudents = React.useMemo(() => {
     if (isSkeleton && filteredStudents.length === 0) {
@@ -171,6 +185,8 @@ ProgressTableV2.propTypes = {
   expandedLessonIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   isSkeleton: PropTypes.bool,
   unitId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   levelProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLevelProgressType)
   ),
@@ -183,6 +199,8 @@ export default connect(state => ({
   students: state.teacherSections.selectedStudents,
   unitData: getCurrentUnitData(state),
   unitId: state.unitSelection.scriptId,
+  courseId: getSelectedCourseId(state),
+  unitPosition: getSelectedUnitPosition(state),
   levelProgressByStudent:
     state.sectionProgress.studentLevelProgressByUnit[
       state.unitSelection.scriptId

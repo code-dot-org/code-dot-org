@@ -79,6 +79,7 @@ function RubricFloatingActionButton({
   aiEnabled,
   sectionId,
   canShowTaScoresAlert,
+  reloadOnStudentChange = true,
 }) {
   const sessionStorageKey = 'RubricFabOpenStateKey';
 
@@ -284,6 +285,7 @@ function RubricFloatingActionButton({
           open={isOpen}
           closeRubric={handleClick}
           sectionId={sectionId}
+          reloadOnStudentChange={reloadOnStudentChange}
         />
       </ErrorBoundary>
     </div>
@@ -298,6 +300,7 @@ RubricFloatingActionButton.propTypes = {
   aiEnabled: PropTypes.bool,
   sectionId: PropTypes.number,
   canShowTaScoresAlert: PropTypes.bool,
+  reloadOnStudentChange: PropTypes.bool,
 };
 
 export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;

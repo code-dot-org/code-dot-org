@@ -1,0 +1,30 @@
+name 'Music_lab_share_restart_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Restart and Share Buttons
+
+#### The final levels of each lesson give students the opportunity to create their own song through coding. Consider introducing these two helpful buttons ahead of time to support their success.
+
+## Restart Button 
+<div style="text-align: center; margin: 20px auto;">
+    <img src="https://images.code.org/fa6c45697d12b74e66c0cb961b928c0b-image-1746040917290.gif" alt="clicking the restart button in music lab to choose a new song" style="width: 70%; border-radius: 10px;">
+</div>
+
+#### If Student wants to choose a new song, they can click on the icon next to the song name. 
+
+
+## Share Button 
+
+<div style="text-align: center; margin: 20px auto;">
+    <img src="https://images.code.org/ae3751abeac70a307cd8a74a5214b05b-image-1746040156241.gif" alt="clicking the share button in music lab" style="width: 70%; border-radius: 10px;">
+</div>
+
+#### If students want to share their work with others, they can click the share button for a link and QR code. 
+
+<div style="clear:both"/>
+
+
+
+MARKDOWN

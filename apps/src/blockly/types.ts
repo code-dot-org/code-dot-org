@@ -3,6 +3,7 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {FieldColour} from '@blockly/field-colour';
+import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -25,6 +26,7 @@ import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {
   BLOCK_TYPES,
   BlocklyVersion,
+  BlockStyles,
   Themes,
   WORKSPACE_EVENTS,
 } from './constants';
@@ -48,6 +50,7 @@ export interface BlockConfig {
 export interface arg {
   customInput: string;
   name: string;
+  options?: [string, string][];
 }
 
 export interface SerializedFields {
@@ -82,12 +85,9 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   selected: GoogleBlockly.BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;
-  readOnly: boolean;
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;
-  getNewCursor: (type: string) => GoogleBlockly.Cursor;
-  LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
   mainWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
@@ -97,8 +97,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     ObservableParameterModel
   >;
   themes: {[key in Themes]: GoogleBlockly.Theme};
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  navigationController: any; // Navigation Controller is not typed by Blockly
   BlockSpace: {
     EVENTS: typeof WORKSPACE_EVENTS;
     onMainBlockSpaceCreated: (callback: () => void) => void;
@@ -141,6 +139,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   SNAP_RADIUS: number;
   Variables: ExtendedVariables;
   hasLoadedBlocks: boolean;
+  showBlockHelp: boolean;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -185,6 +184,10 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   ) => string;
   blockIdOverrides: {
     [originalBlockId: string]: string;
+  };
+  KeyboardNavigation?: typeof KeyboardNavigation;
+  shortcutBackups: {
+    [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
   };
 }
 
@@ -271,6 +274,7 @@ export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   setEnableToolbox: () => void;
   traceOn: () => void;
   isReadOnly: () => boolean;
+  cleanUp: (includeImmovableBlocks?: boolean) => void;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {
@@ -298,6 +302,8 @@ export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
   showUnusedBlocks: boolean | undefined;
   analyticsData: AnalyticsData;
   isJigsaw: boolean;
+  enableKeyboardNavigation: boolean;
+  showBlockHelp: boolean;
 }
 
 export interface ExtendedWorkspace extends GoogleBlockly.Workspace {
@@ -356,10 +362,12 @@ export interface JsonBlockConfig {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraState?: any;
   type: string;
-  fields: {[key: string]: {name: string; type: string; id?: string}};
-  inputs: {[key: string]: {block: JsonBlockConfig}};
-  next: {block: JsonBlockConfig};
-  kind: string;
+  fields?: {
+    [key: string]: {name: string; type: string; id?: string} | string | number;
+  };
+  inputs?: {[key: string]: {block: JsonBlockConfig}};
+  next?: {block: JsonBlockConfig};
+  kind?: string;
 }
 
 export interface Collider {
@@ -477,16 +485,45 @@ export type PointerMetadataMap = {
 
 export type BlockColor = [number, number, number];
 
+export type GeneratorFunction = (
+  block: GoogleBlockly.Block,
+  generator: GoogleBlockly.CodeGenerator
+) => string | [string, number] | null;
+
 export type JavascriptGeneratorType = typeof javascriptGenerator;
 export interface ExtendedJavascriptGenerator
   extends ExtendedCodeGenerator,
     JavascriptGeneratorType {
   nameDB_: GoogleBlockly.Names | undefined;
-  forBlock: Record<
-    string,
-    (
-      block: GoogleBlockly.Block,
-      generator: GoogleBlockly.CodeGenerator
-    ) => string | [string, number] | null
-  >;
+  forBlock: Record<string, GeneratorFunction>;
+}
+
+export interface BlockJson<BlockType extends string = string> {
+  type: BlockType;
+  [key: `message${number}`]: string;
+  [key: `args${number}`]: ArgumentJson[];
+  style?: BlockStyles;
+  inputsInline?: boolean;
+  previousStatement?: string | string[] | null;
+  nextStatement?: string | string[] | null;
+  output?: string | string[] | null;
+  tooltip?: string;
+  helpUrl?: string;
+}
+
+// Add more field/input definitions as needed
+type ArgumentJson = FieldJson | FieldInput | FieldDropdown;
+
+interface FieldJson {
+  type: string;
+  name: string;
+}
+
+interface FieldInput extends FieldJson {
+  type: 'field_input';
+}
+
+interface FieldDropdown extends FieldJson {
+  type: 'field_dropdown';
+  options: [string, string][];
 }

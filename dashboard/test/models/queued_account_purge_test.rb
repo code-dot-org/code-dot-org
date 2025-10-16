@@ -8,7 +8,7 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
   end
 
   test "resolve! purges the user account" do
-    qap = create :queued_account_purge
+    qap = create(:queued_account_purge)
     user = qap.user
 
     AccountPurger.any_instance.expects(:purge_data_for_account).with(user).once
@@ -16,7 +16,7 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
   end
 
   test "resolve! purges the user account when user is already soft-deleted" do
-    qap = create :queued_account_purge
+    qap = create(:queued_account_purge)
     user = qap.user
     user.destroy
     qap.reload
@@ -28,7 +28,7 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
   test "resolve! deletes the QueuedAccountPurge" do
     AccountPurger.any_instance.stubs(:purge_data_for_account)
 
-    qap = create :queued_account_purge
+    qap = create(:queued_account_purge)
     refute_nil QueuedAccountPurge.find_by_id(qap.id)
 
     qap.resolve!
@@ -38,7 +38,7 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
   test "resolve! does not delete the QueuedAccountPurge if purging the user fails" do
     AccountPurger.any_instance.stubs(:purge_data_for_account).raises('Test failure')
 
-    qap = create :queued_account_purge
+    qap = create(:queued_account_purge)
     refute_nil QueuedAccountPurge.find_by_id(qap.id)
 
     assert_raises RuntimeError do
@@ -48,15 +48,15 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
   end
 
   test "needing_manual_review normally includes everything" do
-    q1 = create :queued_account_purge
-    q2 = create :queued_account_purge
+    q1 = create(:queued_account_purge)
+    q2 = create(:queued_account_purge)
     assert_includes QueuedAccountPurge.needing_manual_review, q1
     assert_includes QueuedAccountPurge.needing_manual_review, q2
   end
 
   test "needing_manual_review omits Net::ReadTimeout" do
-    q1 = create :queued_account_purge
-    q2 = create :queued_account_purge, reason_for_review: 'Net::ReadTimeout'
+    q1 = create(:queued_account_purge)
+    q2 = create(:queued_account_purge, reason_for_review: 'Net::ReadTimeout')
     assert_includes QueuedAccountPurge.needing_manual_review, q1
     refute_includes QueuedAccountPurge.needing_manual_review, q2
   end

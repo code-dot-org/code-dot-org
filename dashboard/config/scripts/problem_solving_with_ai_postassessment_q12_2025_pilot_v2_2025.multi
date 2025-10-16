@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q12_2025-pilot_v2-2025'
+
+question 'Why is it valuable for humans and AI to work together on creative tasks?'
+
+wrong 'It makes content completely original with no flaws.'
+wrong 'AI handles all the work so humans can avoid thinking.'
+right 'AI brings speed and pattern recognition, while humans bring meaning and creativity.'
+wrong 'Humans only need AI to approve their ideas.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Remixing, Creativity, and Originality
+MARKDOWN

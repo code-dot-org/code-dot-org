@@ -1,5 +1,6 @@
 @import 'color.scss';
 @import './aichat-common.module.scss';
+@import '../../mixins.scss';
 
 //200px is a value got from visual comparison (screen collapses when columns width is smaller than 196.7px,
 // we use x8 factor for design system, so used the closes x8 factor here, which is 200px).
@@ -21,7 +22,7 @@ $column-min-width: 200px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  background: $light_gray_50;
+  background: var(--background-neutral-primary);
 
   .instructionsArea {
     width: 30%;
@@ -53,19 +54,15 @@ $column-min-width: 200px;
   overflow: auto;
 }
 
-.startOverButton {
-  margin-right: 5px;
-}
-
 .panelContainer {
-  border: 1px $light_gray_200 solid;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: $border-radius;
   box-sizing: border-box;
-  background: $white;
 }
 
 .panelHeader {
   border-radius: $border-radius $border-radius 0 0;
+  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
 .instructions {
@@ -74,7 +71,5 @@ $column-min-width: 200px;
 }
 
 .workspaceHeaderContent {
-  display: flex;
-  justify-content: center;
-  gap: 4px;
+  @include center-header-content(false);
 }

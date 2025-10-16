@@ -9,14 +9,12 @@ describe('CourseVersionPublishingEditor', () => {
     updatePilotExperiment,
     updateFamilyName,
     updatePublishedState,
-    updateVersionYear,
-    updateIsCourse;
+    updateVersionYear;
 
   beforeEach(() => {
     updatePilotExperiment = jest.fn();
     updateFamilyName = jest.fn();
     updateVersionYear = jest.fn();
-    updateIsCourse = jest.fn();
     updatePublishedState = jest.fn();
     defaultProps = {
       pilotExperiment: null,
@@ -25,7 +23,6 @@ describe('CourseVersionPublishingEditor', () => {
       updatePilotExperiment,
       updateFamilyName,
       updateVersionYear,
-      updateIsCourse,
       updatePublishedState,
       families: ['family1', 'family2', 'family3'],
       versionYearOptions: ['1990', '1991', '1992'],
@@ -277,27 +274,16 @@ describe('CourseVersionPublishingEditor', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor
         {...defaultProps}
-        showIsCourseSelector
-        isCourse
         preventCourseVersionChange
       />
     );
-    expect(wrapper.find('.isCourseCheckbox').props().disabled).toBe(true);
     expect(wrapper.find('.familyNameSelector').props().disabled).toBe(true);
     expect(wrapper.find('.versionYearSelector').props().disabled).toBe(true);
   });
 
-  it('hides family name and version year selectors if isCourse is false', () => {
+  it('shows family name and version year selectors', () => {
     const wrapper = shallow(
-      <CourseVersionPublishingEditor {...defaultProps} isCourse={false} />
-    );
-    expect(wrapper.find('.familyNameSelector').length).toBe(0);
-    expect(wrapper.find('.versionYearSelector').length).toBe(0);
-  });
-
-  it('shows family name and version year selectors when isCourse is true', () => {
-    const wrapper = shallow(
-      <CourseVersionPublishingEditor {...defaultProps} isCourse />
+      <CourseVersionPublishingEditor {...defaultProps} />
     );
     expect(wrapper.find('.familyNameSelector').length).toBe(1);
     expect(wrapper.find('.versionYearSelector').length).toBe(1);
@@ -305,7 +291,7 @@ describe('CourseVersionPublishingEditor', () => {
 
   it('disables family name selector if inputting new family name', () => {
     const wrapper = shallow(
-      <CourseVersionPublishingEditor {...defaultProps} isCourse />
+      <CourseVersionPublishingEditor {...defaultProps} />
     );
     wrapper
       .instance()

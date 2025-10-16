@@ -2,7 +2,25 @@
 
 Automated UI tests for the dashboard.
 
-## Setup
+## CI/CD Testing
+
+### Drone (CI) Tests
+
+The UI tests run as part of our continuous integration tooling, via Drone whenever you create a pull request into the "staging" branch. In this scenario, tests are only run against Chrome, per [browsers_to_run in "ci.rake"](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/rake/ci.rake#L182).
+
+To run tests against other browsers in CI, you can apply tags to commit messages.
+
+* `git commit -m "just a normal change"`
+* `git commit -m "fixing bug with firefox [skip chrome][test firefox]"`
+* `git commit -m "updating browsers.json [test all browsers]"`
+
+Review all supported tags in [ci.rake](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/rake/ci.rake#L13)
+
+### DTT (CD) Tests
+
+The UI tests run as part of our deployment during the Deploy To Test (DTT). In this scenario, the full suite of tests is run against all browsers configured in "browsers.json"
+
+## Local Setup
 
 ### On your machine: Chrome webdriver
 

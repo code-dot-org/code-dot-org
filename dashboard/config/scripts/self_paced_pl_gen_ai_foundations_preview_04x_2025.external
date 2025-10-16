@@ -1,0 +1,40 @@
+name 'self-paced-pl-gen-ai-foundations-preview-04x_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+
+# Balancing Perspectives
+
+#### This unit uses two fictional personas to help students examine AI from multiple angles: AI Hype Person and AI Skeptic.
+
+#### Each lesson starts with how each one might react to the topic. Their contrasting views encourage students to think critically and form their own opinions.
+
+<p style="text-align:center">
+<img src="https://images.code.org/6298cf229223e05a2a8d3c8b70d69298-Screenshot 2025-05-14 at 12.01.03 PM.png" style="border: 2px solid black; border-radius: 8px; width: 70%" alt="quotes froma an AI hype person and AI skeptic">
+</p>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; clear: both;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Use the AI personas to spark discussion by framing each lesson around their contrasting views. Assign their roles in group work or debates to explore different perspectives. Let students respond to the personas’ misconceptions, and allow the personas’ views to evolve as student understanding deepens.
+</p>
+</div>
+
+<br>
+
+<div style="display: flex; align-items: left; margin:20px 0px 30px 0px">
+
+<a href="https://forum.code.org/t/student-logins-reflection/40539" target="_blank" rel="noopener noreferrer">
+<img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" style="width: auto; height: 100px;"  alt="A browser with two text boxes, both including an avatar and lines of text."></a>
+
+<div style="background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Post to the Code.org Forum</b></p>
+
+<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Review and reflect on the various responses from the last level through the lens of <i>balancing perspectives</i> of an AI Hype Person and AI Skeptic. Click on the icon to the left to direct to our forum post.
+</p>
+
+
+</div></div>
+
+MARKDOWN

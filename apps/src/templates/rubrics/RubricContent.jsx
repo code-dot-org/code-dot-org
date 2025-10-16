@@ -51,6 +51,7 @@ export default function RubricContent({
   feedbackAdded,
   setFeedbackAdded,
   sectionId,
+  reloadOnStudentChange = true,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
@@ -74,19 +75,14 @@ export default function RubricContent({
     >
       {infoText && <InfoAlert text={infoText} />}
       <div className={style.studentInfoGroup}>
-        <Heading3>
-          {i18n.lessonNumbered({
-            lessonNumber: lesson?.position,
-            lessonName: lesson?.name,
-          })}
-        </Heading3>
+        <Heading3>{lesson?.title}</Heading3>
 
         <div className={style.selectors}>
           <SectionSelector reloadOnChange={true} />
           <StudentSelector
             styleName={style.studentSelector}
             selectedUserId={studentLevelInfo ? studentLevelInfo.user_id : null}
-            reloadOnChange={true}
+            reloadOnChange={reloadOnStudentChange}
             sectionId={sectionId}
             reportingData={reportingData}
           />
@@ -164,6 +160,7 @@ RubricContent.propTypes = {
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
   sectionId: PropTypes.number,
+  reloadOnStudentChange: PropTypes.bool,
 };
 
 export const InfoAlert = ({text, dismissable}) => {

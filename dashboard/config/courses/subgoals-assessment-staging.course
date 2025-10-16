@@ -3,6 +3,9 @@
   "script_names": [
     "subgoals-assessment-staging"
   ],
+  "original_script_names": [
+    "subgoals-assessment-staging"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

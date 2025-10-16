@@ -9,7 +9,6 @@ module I18n
 
         FILE_NAME = 'blocks.json'.freeze
         FILE_PATH = File.join(DIR_NAME, FILE_NAME).freeze
-
         I18N_SOURCE_FILE_PATH = File.join(I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
 
         # Pull in various fields for custom blocks from .json files and save them to blocks/en.json

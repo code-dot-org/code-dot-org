@@ -20,6 +20,14 @@ ANIMATION_DEFAULT_MANIFEST_JSON = 'animation-manifests/manifests/defaultSprites.
 class AnimationLibraryApi < Sinatra::Base
   helpers do
     load(CDO.dir('shared', 'middleware', 'helpers', 'core.rb'))
+    load(CDO.dir('dashboard', 'legacy', 'middleware', 'helpers', 'auth_helpers.rb'))
+
+    # Verify that the user has levelbuilder privileges
+    def authenticate_animation_library_request!
+      unless has_permission?('levelbuilder')
+        forbidden("You must be a level builder to modify animation library resources\n")
+      end
+    end
   end
 
   #
@@ -68,6 +76,8 @@ class AnimationLibraryApi < Sinatra::Base
   #
   post %r{/api/v1/animation-library/level_animations/(.+)} do |animation_name|
     dont_cache
+    authenticate_animation_library_request!
+
     if request.content_type == 'image/png' || request.content_type == 'application/json'
       body = request.body
       key = "level_animations/#{animation_name}"
@@ -84,6 +94,8 @@ class AnimationLibraryApi < Sinatra::Base
   #
   post %r{/api/v1/animation-library/spritelab/([^/]+)/(.+)} do |category, animation_name|
     dont_cache
+    authenticate_animation_library_request!
+
     if request.content_type == 'image/png' || request.content_type == 'application/json'
       body = request.body
       key = "spritelab/#{category}/#{animation_name}"
@@ -193,6 +205,8 @@ class AnimationLibraryApi < Sinatra::Base
   # Update default sprite JSON in S3 for the given environment
   post %r{/api/v1/animation-library/default-spritelab-metadata/(levelbuilder|production)} do |env|
     dont_cache
+    authenticate_animation_library_request!
+
     if request.content_type == 'application/json'
       body = request.body.string
       case env

@@ -12,6 +12,7 @@ import _ from 'lodash';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 import notifyLevelChange from '@cdo/apps/lab2/utils/notifyLevelChange';
 import {
   processServerStudentProgress,
@@ -63,9 +64,7 @@ export interface ProgressState {
   unitTitle: string | null;
   courseId: number | null;
   isLessonExtras: boolean;
-  unitProgress: {
-    [key: number]: UnitProgress;
-  };
+  unitProgress: {[key: number]: UnitProgress};
   unitProgressHasLoaded: boolean;
   levelResults: LevelResults;
   focusAreaLessonIds: number[];
@@ -83,14 +82,17 @@ export interface ProgressState {
   courseVersionId: number | undefined;
   unitDescription: string | undefined;
   unitStudentDescription: string | undefined;
+  unitHasUnnumberedLessons: boolean;
   changeFocusAreaPath: string | undefined;
   unitCompleted: boolean | undefined;
+  courseName: string | null;
 }
 
 export interface MilestoneReport extends OptionalMilestoneData {
   app: string;
   result: boolean;
   testResult: number;
+  timeSinceLastMilestone?: number;
 }
 
 interface OptionalMilestoneData {
@@ -146,8 +148,10 @@ const initialState: ProgressState = {
   courseVersionId: undefined,
   unitDescription: undefined,
   unitStudentDescription: undefined,
+  unitHasUnnumberedLessons: false,
   changeFocusAreaPath: undefined,
   unitCompleted: undefined,
+  courseName: null,
 };
 
 const progressSlice = createSlice({
@@ -176,12 +180,15 @@ const progressSlice = createSlice({
       state.unitTitle = action.payload.unitTitle;
       state.unitDescription = action.payload.unitDescription;
       state.unitStudentDescription = action.payload.unitStudentDescription;
+      state.unitHasUnnumberedLessons = action.payload.unitHasUnnumberedLessons;
       state.courseId = action.payload.courseId;
+      Lab2ProgressTimer.getInstance().resetMilestoneTimer();
       state.courseVersionId = action.payload.courseVersionId;
       state.currentLessonId = currentLessonId;
       state.hasFullProgress = action.payload.isFullProgress;
       state.isLessonExtras = action.payload.isLessonExtras;
       state.currentPageNumber = action.payload.currentPageNumber;
+      state.courseName = action.payload.courseName;
     },
     setCurrentLevelId(state, action: PayloadAction<string>) {
       state.currentLevelId = action.payload;
@@ -338,6 +345,7 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
       // Notify the Lab2 system that the level is changing.
       notifyLevelChange(currentLevel.id, levelId);
       dispatch(setCurrentLevelId(levelId));
+      Lab2ProgressTimer.getInstance().resetMilestoneTimer();
     } else {
       if (currentLevel?.usesLab2) {
         // If we are switching from a lab2 level but can't change the level without reloading,
@@ -458,9 +466,16 @@ function sendReportHelper(
     result: true,
     testResult: result,
     ...extraData,
+    timeSinceLastMilestone:
+      Lab2ProgressTimer.getInstance().getTimeSinceLastMilestone(),
   };
 
-  return fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+  const courseId = state.courseId;
+  const url = courseId
+    ? `/milestone/${userId}/${scriptLevelId}/${levelId}?course_id=${courseId}`
+    : `/milestone/${userId}/${scriptLevelId}/${levelId}`;
+
+  return fetch(url, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
@@ -477,6 +492,10 @@ function sendReportHelper(
       if (currentLevel.parentLevelId) {
         dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
       }
+
+      // After we log the reported time we should update the start time of the milestone
+      // otherwise if we don't leave the page we are compounding the total time
+      Lab2ProgressTimer.getInstance().resetMilestoneTimer();
     }
   });
 }

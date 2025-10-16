@@ -3,6 +3,9 @@
   "script_names": [
     "Hour of Code"
   ],
+  "original_script_names": [
+    "Hour of Code"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

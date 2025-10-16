@@ -98,7 +98,7 @@ module Cdo
             sleep 0.1
             while (line = log_file.gets)
               lines << line
-              if line.strip.end_with?(SC_START_MESSAGE)
+              if line.strip.include?(SC_START_MESSAGE)
                 return :success, lines
               end
             end

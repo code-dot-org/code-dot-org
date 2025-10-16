@@ -14,6 +14,7 @@ export interface PartialAppOptions {
   isEditingExemplar: boolean;
   isViewingExemplar: boolean;
   publicCaching: boolean;
+  theme?: string;
 }
 
 /**
@@ -75,6 +76,14 @@ export function getAppOptionsViewingExemplar(): boolean | undefined {
     return appOptions.isViewingExemplar;
   }
 }
+
+export function getAppOptionsTheme(): string | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.theme;
+  }
+}
+
 /**
  * Returns if the lab should presented in a share/play-only view,
  * if present in App Options. Only used in standalone project levels.
@@ -137,7 +146,10 @@ export function getActiveFileForSource(source: MultiFileSource) {
 
   // Get the first active file, if no active file then the first open file,
   // or undefined if no files are open.
-  return visibleFiles.find(f => f.active) || visibleFiles.find(f => f.open);
+  return (
+    visibleFiles.find(f => f.active) ||
+    visibleFiles.find(f => source.openFiles?.includes(f.id))
+  );
 }
 
 /**

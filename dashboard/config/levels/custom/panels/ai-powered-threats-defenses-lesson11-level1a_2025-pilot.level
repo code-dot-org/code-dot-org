@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-08-19T19:30:03.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Riley\nRiley is a high school student who loves art and graphic design. They use a tablet daily to access class materials, submit assignments, and stay organized. \n\nRiley has a tremor condition that affects fine motor control, especially when tapping or swiping on touchscreens.",
+        "imageUrl": "https://images.code.org/07dfee33e97fdaae087ff25c444f9d98-Screenshot 2025-08-05 131714.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-6ea9678a-ce7e-41b9-abb2-d878eb87ac30",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "##Pattern Unlock on Tablet\n\nRiley uses a pattern unlock to get into their school tablet. It’s meant to be a quick, secure way to access their device, but Riley has to try several times before it works. They often feel rushed or anxious when unlocking in front of others.",
+        "imageUrl": "https://images.code.org/1c2e87f5c3589c7d416b1319fe282549-riley1.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##Two-Factor Authentication (2FA) Code Entry\n\nTo access their student portal, Riley has to enter a 10-digit code sent to their phone. This extra layer of protection is important, but entering the code accurately takes effort — especially when under pressure or using one hand.",
+        "imageUrl": "https://images.code.org/427355d9d3efb8a730e2958dce343fa7-Screenshot 2025-08-14 124955.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##Gesture Unlock\n\nRiley’s tablet uses a gesture-based unlock system that doesn’t have a PIN or backup option. They have trouble drawing the shape accurately, and it’s easy for someone nearby to see and copy it.",
+        "imageUrl": "https://images.code.org/0487ee42c34e9189426d2a366ae624ad-Screenshot 2025-08-14 132625.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "display_name": "Riley",
+    "thumbnail_url": "https://images.code.org/f8c24c0e09b8271583a39a26dad471cb-Screenshot 2025-08-05 145035.png",
+    "bubble_choice_description": "An art-loving student who uses a tablet for everything—from sketching to schoolwork. Riley has a tremor that makes touch-based security features tricky to use."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-19T19:30:03.834+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson11-level1a\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson11-level1a\"},{\"changed_at\":\"2025-08-19 19:30:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

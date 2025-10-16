@@ -1,0 +1,92 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-08-15T18:44:36.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Hammer Time\r\n\r\nFollow MC Hammer's **algorithm** to recreate parts of Can't Touch This\r\n\r\n1) First you need to stop... because it's hammer time.\r\n2) Then play the main loop with the big beat **twice**\r\n3) Then it's time to Break it Down... because you Can't Touch This\r\n4) Then do the Breakdown tracks **twice**\r\n5) End it strong by saying I Told Ya!\r\n\r\nFollow the **algorithm** to recreate this song! It should sound like the example below!\r\n\r\n![](https://images.code.org/5397c925f43256b6b674873e14427f4f-image-1749506942263.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "stop_hammer_time",
+          "cant_touch_this",
+          "i_told_ya",
+          "break_it_down",
+          "beat",
+          "main_loop",
+          "bass_breakdown",
+          "breakdown_oohs",
+          "synth"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "mc_hammer_u_cant_touch_this",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundsPanelInSoundsMode": true,
+      "showSoundFilters": true,
+      "sortUnrestrictedPacksByType": true
+    },
+    "display_name": "Hammer Time",
+    "encrypted_exemplar_sources": "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\nniOHCG5F+4McOX5x+Q562vM=\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-c_ddafd1af-a716-4d59-81d2-a00080c0232d",
+        "message": "auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Can't Touch This"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Follow MC Hammer's **algorithm** to recreate Hammer Time.",
+    "name_suffix": "_bash",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/mc_hammer_u_cant_touch_this/mc_hammer_u_cant_touch_this.jpg",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:36.235+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-challenge-e_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-challenge-e_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

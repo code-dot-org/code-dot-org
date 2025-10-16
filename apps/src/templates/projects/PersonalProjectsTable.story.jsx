@@ -3,7 +3,6 @@ import {Provider} from 'react-redux';
 
 import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import frozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
-import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 import {stubFakePersonalProjectData} from './generateFakeProjects';
@@ -13,9 +12,7 @@ export default {
 };
 
 const Template = args => (
-  <Provider
-    store={reduxStore({publishDialog, deleteDialog, frozenProjectInfoDialog})}
-  >
+  <Provider store={reduxStore({deleteDialog, frozenProjectInfoDialog})}>
     <PersonalProjectsTable {...args} />
   </Provider>
 );

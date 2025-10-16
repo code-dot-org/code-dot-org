@@ -1,0 +1,8 @@
+name 'test-music-lab-sequences-synthesize-recap-choice-panels_v2'
+display_name 'Skill Review'
+description 'Take a moment to review key concepts before continuing to the check-in'
+
+sublevels
+level 'test-music-lab-sequences-practice-play-sequential-panel_v2'
+level 'test-music-lab-sequences-practice-rest-panel_v2'
+uses_lab2

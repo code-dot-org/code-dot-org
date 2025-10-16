@@ -1,0 +1,25 @@
+name 'music-lab-612-post-q1'
+
+question '**Which of the code options here should Jessie add so the one measure drum sounds layer correctly and finish together?**'
+height '200'
+
+wrong '![](https://images.code.org/84b443c70863b2682df600ff507d74b2-image-1750875611599.png)'
+wrong '![](https://images.code.org/e1f782f5e48a9b9cb1b397e04ca80a25-image-1750875609505.png)s'
+wrong '![](https://images.code.org/8f1dfe65d7b7da79fce1fb44b7378476-image-1750875607182.png)'
+right '![](https://images.code.org/fbaddd8e00d0de20cde7f119f2a615e9-image-1750875603993.png)'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Sequencing
+
+Skill: Use the play together and play sequential blocks together to create layered tracks with different measure counts
+
+Appears in the lesson: Sequencing - Practice
+MARKDOWN
+
+markdown <<MARKDOWN
+Jessie wants to add drum sounds to his song. The drum he choose is one measure long. Here is Jessie\'s code so far:
+
+<img src="https://images.code.org/8057e4f298a63cd50196745ea4cdb1c7-image-1750875521754.png" height="200">
+MARKDOWN

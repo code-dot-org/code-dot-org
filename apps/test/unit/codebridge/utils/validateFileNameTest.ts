@@ -102,5 +102,37 @@ describe('validateFileName', function () {
         fileName: duplicateSupportFileName,
       })
     );
+
+    const validFileTypes = ['py', 'csv', 'txt'];
+    const validFileTypesString = validFileTypes.join(', ');
+    // Invalid file type returns error string.
+    expect(
+      validateFileName({
+        fileName: 'test.js',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+      })
+    ).toEqual(
+      `${codebridgeI18n.invalidFileType({
+        fileType: 'js',
+      })} ${codebridgeI18n.validFileTypesInfo({
+        validFileTypes: validFileTypesString,
+      })}`
+    );
+
+    // Valid file name/type has no return.
+    expect(
+      validateFileName({
+        fileName: 'test.csv',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+      })
+    ).toBeUndefined();
   });
 });

@@ -148,7 +148,6 @@ CurriculumCatalogCard.propTypes = {
   courseId: PropTypes.number,
   courseOfferingId: PropTypes.number,
   scriptId: PropTypes.number,
-  isStandAloneUnit: PropTypes.bool,
   onAssignSuccess: PropTypes.func,
   deviceCompatibility: PropTypes.string,
   description: PropTypes.string,
@@ -250,7 +249,7 @@ const CustomizableCurriculumCatalogCard = ({
           sections={sectionsForDropdown}
           participantAudience="student"
           onAssignSuccess={onAssignSuccess}
-          isAssigningCourse={!!courseId}
+          isAssigningCourseOnly={!!courseId}
           courseId={courseId}
           sectionDirections={i18n.chooseSectionsDirectionsOnCatalog()}
           {...props}
@@ -449,7 +448,6 @@ CustomizableCurriculumCatalogCard.propTypes = {
   courseId: PropTypes.number,
   courseOfferingId: PropTypes.number,
   scriptId: PropTypes.number,
-  isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,

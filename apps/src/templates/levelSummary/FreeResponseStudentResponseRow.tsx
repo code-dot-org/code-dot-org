@@ -1,29 +1,37 @@
 import Tags from '@code-dot-org/component-library/tags';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useState} from 'react';
 
+import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {
-  StudentAnswer,
-  StudentWorkEvaluation,
-} from '@cdo/apps/aiEvaluation/evaluationApi';
+  FeedbackData,
+  logAiInteractionFeedback as logUserFeedbackOnStudentEvaluation,
+} from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
+import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import AiEvaluationFeedbackModal from './AiEvaluationFeedbackModal';
 import {FEEDBACK_TYPE} from './AiFeedbackType';
+import FeedbackToggle from './FeedbackToggle';
 
 import styles from './summary.module.scss';
 
 type FreeResponseStudentResponseRowProps = {
-  studentResponse: StudentAnswer | null;
   studentWorkEvaluation: StudentWorkEvaluation;
 };
 
 const FreeResponseStudentResponseRow: React.FC<
   FreeResponseStudentResponseRowProps
-> = ({studentResponse, studentWorkEvaluation}) => {
+> = ({studentWorkEvaluation}) => {
+  const [feedbackModalOpen, setFeedbackModalOpen] = useState<boolean>(false);
+  const [feedbackData, setFeedbackData] = useState<FeedbackData | null>(null);
+
   // used to create the tag for the response
   const analysisTag = () => {
     if (
-      studentWorkEvaluation.aiEvaluation === 'great' ||
-      studentWorkEvaluation.aiEvaluation === 'ok'
+      studentWorkEvaluation?.aiEvaluation ===
+        StudentWorkEvaluationStatus.ALL_COMPLETE_CORRECT ||
+      studentWorkEvaluation?.aiEvaluation ===
+        StudentWorkEvaluationStatus.PARTIAL_COMPLETE_CORRECT
     ) {
       return (
         <Tags
@@ -39,28 +47,34 @@ const FreeResponseStudentResponseRow: React.FC<
             },
           ]}
           size="m"
-          className={styles.proficientTag}
+          className={styles.proficientStudentTag}
         />
       );
-    } else if (studentWorkEvaluation.aiEvaluation === 'needs revision') {
+    } else if (
+      studentWorkEvaluation?.aiEvaluation ===
+      StudentWorkEvaluationStatus.INCOMPLETE_INCORRECT
+    ) {
       return (
         <Tags
           tagsList={[
             {
-              label: FEEDBACK_TYPE.NEEDS_REVIEW.label,
+              label: FEEDBACK_TYPE.NOT_PROFICIENT.label,
               icon: {
-                iconName: FEEDBACK_TYPE.NEEDS_REVIEW.icon,
+                iconName: FEEDBACK_TYPE.NOT_PROFICIENT.icon,
                 iconStyle: 'solid',
-                title: 'check',
+                title: 'exclamation point',
                 placement: 'left',
               },
             },
           ]}
           size="m"
-          className={styles.needsReviewTag}
+          className={styles.needsReviewStudentTag}
         />
       );
-    } else if (studentWorkEvaluation.aiEvaluation === 'No attempt') {
+    } else if (
+      studentWorkEvaluation?.aiReasoning ===
+      StudentWorkEvaluationStatus.NO_ATTEMPT
+    ) {
       return (
         <Tags
           tagsList={[
@@ -69,7 +83,7 @@ const FreeResponseStudentResponseRow: React.FC<
               icon: {
                 iconName: FEEDBACK_TYPE.NO_ATTEMPT.icon,
                 iconStyle: 'solid',
-                title: 'check',
+                title: 'dash',
                 placement: 'left',
               },
             },
@@ -78,21 +92,100 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.noAttemptTag}
         />
       );
+    } else if (
+      studentWorkEvaluation?.aiReasoning ===
+        StudentWorkEvaluationStatus.STUDENT_PROFANITY ||
+      studentWorkEvaluation?.aiReasoning ===
+        StudentWorkEvaluationStatus.STUDENT_PII
+    ) {
+      return (
+        <Tags
+          tagsList={[
+            {
+              label: FEEDBACK_TYPE.FLAGGED.label,
+              icon: {
+                iconName: FEEDBACK_TYPE.FLAGGED.icon,
+                iconStyle: 'solid',
+                title: 'flag',
+                placement: 'left',
+              },
+            },
+          ]}
+          size="m"
+          className={styles.flaggedTag}
+        />
+      );
     }
+  };
+
+  const handleFeedbackClick = async (thumbsUp: boolean) => {
+    const feedbackDataGenerated = {
+      aiInteractionType: 'UserLevelEvaluation',
+      aiInteractionId: studentWorkEvaluation.id,
+      thumbsUp,
+      levelId: studentWorkEvaluation.levelId,
+      scriptId: studentWorkEvaluation.unitId,
+    };
+    setFeedbackData(feedbackDataGenerated);
+
+    if (!thumbsUp) {
+      setFeedbackModalOpen(true);
+    } else {
+      logUserFeedbackOnStudentEvaluation(feedbackDataGenerated);
+    }
+  };
+
+  const getReasoningText = () => {
+    if (
+      studentWorkEvaluation?.aiReasoning ===
+      StudentWorkEvaluationStatus.NO_ATTEMPT
+    ) {
+      return `The student's response was blank.`;
+    } else if (
+      studentWorkEvaluation?.aiReasoning ===
+      StudentWorkEvaluationStatus.STUDENT_PROFANITY
+    ) {
+      return 'The response contains profanity and could not be evaluated.';
+    } else if (
+      studentWorkEvaluation?.aiReasoning ===
+      StudentWorkEvaluationStatus.STUDENT_PII
+    ) {
+      return 'The response could not be evaluated because it contains personal information that is not safe for your student to share.';
+    }
+    return studentWorkEvaluation?.aiReasoning || '';
   };
 
   return (
     <div className={styles.rowContainer}>
       <BodyThreeText className={styles.aiAnalysisNameColumn}>
-        <strong>{studentResponse?.studentDisplayName}</strong>
+        <strong>{studentWorkEvaluation?.studentDisplayName}</strong>
       </BodyThreeText>
       <BodyThreeText className={styles.aiAnalysisResponseColumn}>
-        {studentResponse?.studentWork}
+        {typeof studentWorkEvaluation?.studentWork === 'string'
+          ? studentWorkEvaluation.studentWork
+          : ''}
       </BodyThreeText>
       <div className={styles.aiAnalysisTagColumn}>{analysisTag()}</div>
-      <BodyThreeText
-        className={styles.aiAnalysisReasoningColumn}
-      >{`${studentWorkEvaluation.aiEvaluation}. ${studentWorkEvaluation.aiReasoning}`}</BodyThreeText>
+      <BodyThreeText className={styles.aiAnalysisReasoningColumn}>
+        {getReasoningText()}
+      </BodyThreeText>
+      <div>
+        <FeedbackToggle
+          onThumbsUpClick={() => handleFeedbackClick(true)}
+          onThumbsDownClick={() => handleFeedbackClick(false)}
+          size="xs"
+          color="gray"
+        />
+      </div>
+      {feedbackModalOpen && feedbackData && (
+        <AiEvaluationFeedbackModal
+          feedbackData={feedbackData}
+          forStudentAiInteractionFeedback={true}
+          closeModalHandler={() => {
+            setFeedbackModalOpen(false);
+          }}
+        />
+      )}
     </div>
   );
 };

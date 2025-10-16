@@ -1,0 +1,362 @@
+{
+  "script": {
+    "name": "vpl-csa-2025-m8",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSA",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-04-01 04:01:55 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csa-2025-m8"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Module 8 post-work: Preparing students for the AP CSA Exam",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e650076d-510e-47ae-b52d-a8e8967d56f0",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e650076d-510e-47ae-b52d-a8e8967d56f0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "50b76a2b-4750-48c5-82af-4e4741502b6e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Preparing to support students (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "50b76a2b-4750-48c5-82af-4e4741502b6e",
+        "lesson_activity.key": "e650076d-510e-47ae-b52d-a8e8967d56f0"
+      }
+    },
+    {
+      "key": "6f499ce3-ab9b-4ca5-82ee-0839821d6aa6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Preparing to support students (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f499ce3-ab9b-4ca5-82ee-0839821d6aa6",
+        "lesson_activity.key": "e650076d-510e-47ae-b52d-a8e8967d56f0"
+      }
+    },
+    {
+      "key": "0127adf0-dd1b-49c1-b448-a3ea0f36dbe8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "0127adf0-dd1b-49c1-b448-a3ea0f36dbe8",
+        "lesson_activity.key": "e650076d-510e-47ae-b52d-a8e8967d56f0"
+      }
+    },
+    {
+      "key": "4816677e-3088-4bd7-b7f8-d5ef6afa26ea",
+      "position": 4,
+      "properties": {
+        "progression_name": "Module 8 Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "4816677e-3088-4bd7-b7f8-d5ef6afa26ea",
+        "lesson_activity.key": "e650076d-510e-47ae-b52d-a8e8967d56f0"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing to support students (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-overviews_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "50b76a2b-4750-48c5-82af-4e4741502b6e"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-overviews_-f_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing to support students (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-feelings-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "6f499ce3-ab9b-4ca5-82ee-0839821d6aa6"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-feelings-reflection_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-what-you-expect-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "0127adf0-dd1b-49c1-b448-a3ea0f36dbe8"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-what-you-expect-reflection_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-ap-exam-breakdown_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "0127adf0-dd1b-49c1-b448-a3ea0f36dbe8"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-ap-exam-breakdown_-f_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-administering-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "0127adf0-dd1b-49c1-b448-a3ea0f36dbe8"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-administering-reflection_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 8 Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-wrap-up_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "4816677e-3088-4bd7-b7f8-d5ef6afa26ea"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-wrap-up_-f_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-overviews_-f_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-overviews_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "50b76a2b-4750-48c5-82af-4e4741502b6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-feelings-reflection_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-feelings-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "6f499ce3-ab9b-4ca5-82ee-0839821d6aa6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-what-you-expect-reflection_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-what-you-expect-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "0127adf0-dd1b-49c1-b448-a3ea0f36dbe8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-ap-exam-breakdown_-f_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-ap-exam-breakdown_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "0127adf0-dd1b-49c1-b448-a3ea0f36dbe8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-administering-reflection_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-administering-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "0127adf0-dd1b-49c1-b448-a3ea0f36dbe8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-wrap-up_-f_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-wrap-up_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m8",
+        "activity_section.key": "4816677e-3088-4bd7-b7f8-d5ef6afa26ea"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

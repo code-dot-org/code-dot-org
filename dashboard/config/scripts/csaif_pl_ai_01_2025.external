@@ -1,0 +1,27 @@
+name 'csaif_pl_ai_01_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Chat Lab
+
+#### The AI you and your students will use throughout this Unit and the Foundations of AI course is a chatbot called **AI Chat Lab**. Like with all chatbots, you interact with AI Chat Lab using prompts.
+
+<br>
+
+<img src="https://images.code.org/4fdd0f05f507d43b70c1665874ac2d18-Screenshot 2024-10-17 at 10.27.22 AM.png" alt="chatbot lab level" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
+
+<br>
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt</strong> is a question, instruction, scenario, or statement provided by the user to guide the AI's response.</p>
+</div>
+
+#### AI selects words for its response based on probability. While there is much more going on, in general, generative AI tends to choose the most likely next word, which often mirrors our own prediction of the most-likely next word.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Probability</strong> is the likelihood that a specific outcome might occur.</p>
+</div>
+
+
+MARKDOWN

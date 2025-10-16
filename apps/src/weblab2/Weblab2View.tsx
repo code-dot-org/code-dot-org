@@ -1,166 +1,188 @@
-// Making sure that css is first so that it is imported for other classes.
-// This might not be necessary.
-import './styles/Weblab2View.css';
-
 import {Codebridge} from '@codebridge/Codebridge';
-import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
+import {DEFAULT_START_HTML_FILE} from '@codebridge/FilePreview/constants';
+import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
+import {javascript} from '@codemirror/lang-javascript';
+import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
+import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import experiments from '@cdo/apps/util/experiments';
 
+import {JsonObjectSchema, ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
+import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
-import HorizontalLayout from './layout/HorizontalLayout';
+import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
+import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
+import {getPromptNameFromMode} from './helpers/aiTutorHelper';
+import FullScreenView from './layout/FullScreenView';
+import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
+import {setViewMode} from './redux';
+import {Weblab2LevelProperties, ViewMode} from './types';
 
-const weblabLangMapping: {[key: string]: LanguageSupport} = {
+import moduleStyles from './styles/weblab2-view.module.scss';
+
+const aiTutorHelper = new AiTutorWebLab2ContextHelper();
+
+const weblab2LangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
+  js: javascript(),
+  md: markdown(),
 };
 
 const defaultConfig: ConfigType = {
-  activeLeftNav: 'Files',
-  languageMapping: weblabLangMapping,
-  editableFileTypes: ['html', 'css'],
-  leftNav: [
-    {
-      icon: 'fa-square-check',
-      component: 'Instructions',
-    },
-    {
-      icon: 'fa-file',
-      component: 'Files',
-    },
-    {
-      icon: 'fa-solid fa-magnifying-glass',
-      component: 'Search',
-    },
-  ],
-  sideBar: [
-    {
-      icon: 'fa-circle-question',
-      label: 'Help',
-      action: () => window.alert('Help is not currently implemented'),
-    },
-    {
-      icon: 'fa-folder',
-      label: 'Files',
-      action: () => window.alert('You are already on the file browser'),
-    },
-  ],
+  languageMapping: weblab2LangMapping,
+  editableFileTypes: WEBLAB2_EDITABLE_FILE_TYPES,
   activeLayout: 'vertical',
-  showFileBrowser: true,
   layoutComponents: {
-    vertical: <VerticalLayout />,
-    horizontal: <HorizontalLayout />,
+    vertical: VerticalLayout,
+    widget: VerticalLayout,
+    share: ShareView,
+    fullScreen: FullScreenView,
   },
 };
 
-const defaultSource: MultiFileSource = {
-  // folders: {},
-  folders: {
-    '1': {id: '1', name: 'foo', parentId: '0'},
-    '2': {id: '2', name: 'bar', parentId: '1'},
-    '3': {id: '3', name: 'baz', parentId: '0'},
-    '4': {id: '4', name: 'f1', parentId: '1'},
-    '5': {id: '5', name: 'f2', parentId: '1'},
-    '6': {id: '6', name: 'b1', parentId: '2'},
+const aiTutorResponseJsonSchema: JsonObjectSchema = {
+  type: 'object',
+  properties: {
+    code: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          language: {type: 'string'},
+          sourceCode: {type: 'string'},
+          filename: {type: 'string'},
+        },
+        required: ['language', 'sourceCode', 'filename'],
+        additionalProperties: false,
+      },
+    },
+    explanation: {type: 'string'},
   },
+  required: ['code', 'explanation'],
+  additionalProperties: false,
+};
 
+const defaultSource: MultiFileSource = {
+  folders: {},
   files: {
     '1': {
       id: '1',
-      name: 'index.html',
+      name: DEFAULT_START_HTML_FILE,
       language: 'html',
-      contents: `<!DOCTYPE html><html>
-  <link rel="stylesheet" href="styles.css"/>
+      contents: `<!DOCTYPE html>
+<html>
   <body>
     Content goes here!
-    <div class="foo">[DEFAULT] Foo class!</div>
   </body>
 </html>
-`,
-      open: true,
+  `,
       active: true,
       folderId: '0',
     },
-    '2': {
-      id: '2',
-      name: 'styles.css',
-      language: 'css',
-      contents: '.foo { color : red}',
-      open: true,
-      folderId: '0',
-    },
-    '3': {
-      id: '3',
-      name: 'page.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a separate html page</body></html>',
-      open: false,
-      folderId: '0',
-    },
-    '4': {
-      id: '4',
-      name: 'test4.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '2',
-    },
-    '5': {
-      id: '5',
-      name: 'test5.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '4',
-    },
-    '6': {
-      id: '6',
-      name: 'test6-1.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '1',
-    },
   },
+  openFiles: ['1'],
 };
 
 const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View: React.FC<
-  LabProps<CodebridgeLevelProperties, ProjectSources>
+  LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setProject, startSources, projectVersion} = useSource(
+
+  const source = useAppSelector(
+    state =>
+      state.lab2Project.projectSources?.source as MultiFileSource | undefined
+  );
+  const userAddedSelectionContext = useAppSelector(
+    state => state.aichat.userAddedSelectionContext
+  );
+
+  const {startSources} = useSource(
     defaultProject,
     levelProperties,
     initialSources
   );
 
+  const hasSource = useAppSelector(
+    state => !!state.lab2Project.projectSources?.source
+  );
+
+  // Note: this causes Web Lab 2 to re-render when sources change.
+  // Unfortunately, the way AI tutor is set up right now requires passing in a context
+  // rather than a callback for the context. In the future, we should consider refactoring AI
+  // Tutor so we don't have to re-render the entire lab when sources change (this is also the case for Python Lab).
+  useEffect(() => {
+    aiTutorHelper.setAiTutorContext({
+      source,
+      longInstructions: levelProperties.longInstructions,
+      selection: userAddedSelectionContext,
+    });
+  }, [source, levelProperties.longInstructions, userAddedSelectionContext]);
+
+  // Since there's no run button in Weblab2, set it to true by default
+  // to enable the Submit button on edit on submittable levels.
+  // Set back to false on unmount in case we switch to a different level type.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(setHasRun(true));
+
+    return () => {
+      dispatch(setHasRun(false));
+    };
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
+  }, [dispatch, levelProperties?.initialViewMode]);
+
+  const aiTutorResponseSchemaSettings: ResponseSchemaSettings | undefined =
+    useMemo(() => {
+      if (
+        experiments.isEnabledAllowingQueryString(
+          experiments.WEBLAB2_ACCEPT_REJECT
+        )
+      ) {
+        return {
+          jsonSchema: aiTutorResponseJsonSchema,
+          responseCallback: (response: string) => {
+            console.log('🤖: Tutor response (in jsonSchema callback):', {
+              response,
+            });
+            // TODO: send code to the appropriate place
+            const jsonResponse = JSON.parse(response);
+            return jsonResponse.explanation;
+          },
+        };
+      }
+    }, []);
+
   return (
-    <div className="app-wrapper">
-      <div className="app-ide">
-        {source && (
-          <Codebridge
-            source={source}
-            config={config}
-            setProject={setProject}
-            setConfig={setConfig}
-            startSources={startSources}
-            projectVersion={projectVersion}
-            levelProperties={levelProperties}
-          />
-        )}
-      </div>
+    <div className={moduleStyles.weblab2Container}>
+      {hasSource && (
+        <Codebridge
+          config={config}
+          setConfig={setConfig}
+          startSources={startSources}
+          levelProperties={levelProperties}
+          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+          aiTutorMultimodalEnabled={true}
+          aiTutorChatButtonData={[]}
+          aiTutorContextHelper={aiTutorHelper}
+          aiTutorSystemPromptName={getPromptNameFromMode(
+            levelProperties.aiTutorMode
+          )}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+        />
+      )}
     </div>
   );
 };

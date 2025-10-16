@@ -1,4 +1,3 @@
-@use '@code-dot-org/component-library-styles/colors.scss';
 @use '@code-dot-org/component-library-styles/typography.module.scss';
 @use '@code-dot-org/component-library-styles/variables.scss' as variables;
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
@@ -12,10 +11,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 56.25%; // This maintains a 16:9 aspect ratio
+    aspect-ratio: 16 / 9; // Default aspect ratio for videos
     border: 1px solid var(--background-neutral-tertiary);
     border-radius: variables.$regular-border-radius;
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: block;
 
     iframe,
@@ -29,6 +28,10 @@
       width: 100%;
       height: 100%;
       border: 0;
+    }
+
+    .cookieConsentButton {
+      margin-top: 1.5rem;
     }
   }
 }
@@ -70,8 +73,16 @@
   align-items: start;
   gap: 1rem;
 
+  figcaption {
+    margin-bottom: 0;
+  }
+
   .download {
     margin-top: 0.25rem;
+
+    @media (max-width: 640px) {
+      display: none;
+    }
   }
 
   // Align the download button to the right
@@ -119,10 +130,25 @@ $playButtonIconSize: 64px;
 
   .playButton {
     font-size: 2rem;
-    color: var(--text-brand-purple-primary);
+    color: var(--brand-purple-50);
     // Since the play button is the same in RTL, use margin-left
     // instead of margin-inline-start which changes based on direction.
     // This keeps the play button visually centered.
     margin-left: 4px;
   }
+}
+
+// Facade Styles
+.facade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

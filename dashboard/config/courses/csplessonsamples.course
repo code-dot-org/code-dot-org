@@ -3,6 +3,9 @@
   "script_names": [
     "CSPLessonSamples"
   ],
+  "original_script_names": [
+    "CSPLessonSamples"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

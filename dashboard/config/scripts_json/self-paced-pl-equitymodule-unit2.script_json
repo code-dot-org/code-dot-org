@@ -2,15 +2,19 @@
   "script": {
     "name": "self-paced-pl-equitymodule-unit2",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
+      "content_area": "skills_focused_self_paced_pl",
+      "curriculum_umbrella": "Self-paced PL - Pedagogy special topics",
       "is_migrated": true,
       "pilot_experiment": "equitycomputersciencemoduleplpilot",
+      "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-24 19:49:50 UTC",
+    "serialized_at": "2025-04-01 21:26:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -698,31 +702,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "self-paced-equity-U2L1-pedagogyexamples"
-        ],
-        "progression": "Asset-Based Pedagogy"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-equity-U2L1-pedagogyexamples"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-equitymodule-unit2",
-        "activity_section.key": "60a4d677-0588-4c0c-ac24-d7cdaaa494d8"
-      },
-      "level_keys": [
-        "self-paced-equity-U2L1-pedagogyexamples"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 10,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "self-paced-equity-U2L1-scenarios"
         ],
         "progression": "Asset-Based Pedagogy"
@@ -742,8 +721,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 11,
+      "chapter": 18,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -767,8 +746,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 12,
+      "chapter": 19,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -792,8 +771,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 13,
+      "chapter": 20,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -817,8 +796,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 14,
+      "chapter": 21,
+      "position": 13,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -842,8 +821,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 15,
+      "chapter": 22,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -867,8 +846,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 16,
+      "chapter": 23,
+      "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -892,7 +871,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -917,7 +896,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -942,7 +921,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -967,7 +946,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -992,34 +971,9 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-equity-U2L2-implicitbias"
-        ],
-        "progression": "Implicit Bias"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-equity-U2L2-implicitbias"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-equitymodule-unit2",
-        "activity_section.key": "1640512f-a6f0-4cf4-b623-b825b57ee7ae"
-      },
-      "level_keys": [
-        "self-paced-equity-U2L2-implicitbias"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 6,
-      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1042,9 +996,9 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1067,8 +1021,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 8,
+      "chapter": 30,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1092,8 +1046,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 9,
+      "chapter": 31,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1117,8 +1071,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 10,
+      "chapter": 32,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1142,8 +1096,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 11,
+      "chapter": 33,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1167,7 +1121,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1192,7 +1146,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1217,7 +1171,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1242,7 +1196,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1267,7 +1221,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1292,7 +1246,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -1317,7 +1271,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1342,7 +1296,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -1562,18 +1516,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-equity-U2L1-pedagogyexamples",
-        "script_level.level_keys": [
-          "self-paced-equity-U2L1-pedagogyexamples"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-equitymodule-unit2",
-        "activity_section.key": "60a4d677-0588-4c0c-ac24-d7cdaaa494d8"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "self-paced-equity-U2L1-scenarios",
         "script_level.level_keys": [
           "self-paced-equity-U2L1-scenarios"
@@ -1697,18 +1639,6 @@
         "level.key": "self-paced-equity-U2L2-keytermspt2",
         "script_level.level_keys": [
           "self-paced-equity-U2L2-keytermspt2"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-equitymodule-unit2",
-        "activity_section.key": "1640512f-a6f0-4cf4-b623-b825b57ee7ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-equity-U2L2-implicitbias",
-        "script_level.level_keys": [
-          "self-paced-equity-U2L2-implicitbias"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

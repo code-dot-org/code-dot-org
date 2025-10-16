@@ -1,3 +1,4 @@
+@use './layout/variables.scss' as variables;
 @import 'color.scss';
 
 .panelContainer {
@@ -8,45 +9,29 @@
   position: relative;
 
   .panelContainerHeader {
-    height: 30px;
+    height: 2.5rem;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     position: relative;
     gap: 20px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-inline: 0.5rem;
     flex-shrink: 0;
-
-    &Dark {
-      background-color: $light_gray_900;
-      color: $light_white;
-    }
-
-    &Light {
-      background-color: $neutral_gray10;
-      color: $light_black;
-      border-bottom: 1px $light_gray_200 solid;
-    }
+    background-color: var(--background-neutral-primary);
+    color: var(--text-neutral-quaternary);
+    border-bottom: variables.$default-border;
 
     &Item {
       display: flex;
       align-items: center;
       z-index: 1;
       margin: 0;
-      font-size: 13px;
+      font-size: 0.75rem; // 12px
+      color: var(--text-neutral-quaternary);
 
       &Text {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-
-        &Dark {
-          color: $light_white;
-        }
-
-        &Light {
-          color: $light_black;
-        }
       }
 
       &Center {

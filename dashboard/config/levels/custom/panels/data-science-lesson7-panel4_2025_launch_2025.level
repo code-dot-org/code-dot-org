@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-04-14T23:15:32.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Creating a Donut Pie Chart\n- Switch to the **Customize** tab\n- Click **Pie chart**\n- From the **Donut hole** dropdown select a **Percentage**",
+        "imageUrl": "https://images.code.org/43bf592e165314bc4a249b255350071d-donut.gif",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-top-left",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Changing the Color\n- Open the **Pie slice** toggle\n- Select a **color**",
+        "imageUrl": "https://images.code.org/3fbfc2ab3ffeb10c00710f4991f9eb29-slice color.gif",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Spotlight a Slice\n- Open the **Pie slice** toggle\n- Select a **Distance from Center** ",
+        "imageUrl": "https://images.code.org/192467a727bf6c8e8a34367204d73d7d-distance.gif",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-top-left",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Adding Percentages\n- Open the **Pie chart** toggle\n- Click **Slice label**\n- Choose **Percentage** from the dropdown",
+        "imageUrl": "https://images.code.org/0b0bd77054f595ccddc4a18f52e83caf-percent.gif",
+        "key": "data-science-lesson7-panel4_2025_launch-b6991819-3bba-4249-8068-5119c7298e2a",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:32.062+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-panel4_2025_launch\\\"\"],\"cloned_from\":\"data-science-lesson7-panel4_2025_launch\"}]"
+}]]></config>
+</Panels>

@@ -5,7 +5,10 @@ import {
   BodyThreeText,
   Heading5,
   OverlineTwoText,
+  StrongText,
 } from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import _ from 'lodash';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -15,13 +18,15 @@ import styles from './teacherHomepage.module.scss';
 export interface TeacherPromoInfo {
   id: string;
   announcementType: string;
-  backgroundColor: string; //TODO(lfm) add background color
+  backgroundColor: string;
   buttonLabel: string;
   buttonTarget: string;
   title: string;
   description: string;
-  image: string;
+  image: string | null;
   isClosable: boolean;
+  partnerLogo: string | null;
+  isExternal: boolean;
 }
 
 interface TeacherPromoAdditionalProps {
@@ -44,19 +49,28 @@ const getIconType = (announcementText: string): string => {
 
 type TeacherPromoProps = TeacherPromoInfo & TeacherPromoAdditionalProps;
 
-export const TeacherPromo: React.FC<TeacherPromoProps> = ({
+const TeacherPromo: React.FC<TeacherPromoProps> = ({
   id,
   announcementType,
+  backgroundColor,
   title,
   description,
   buttonLabel,
   buttonTarget,
   image,
   isClosable,
+  partnerLogo,
+  isExternal,
   onClose,
 }) => {
   return (
-    <div className={styles.promotion} key={id}>
+    <li
+      className={classNames(
+        styles.promotion,
+        styles[`promotion-${_.lowerCase(backgroundColor)}`]
+      )}
+      key={id}
+    >
       {isClosable && (
         <CloseButton
           className={styles.closeButton}
@@ -69,17 +83,31 @@ export const TeacherPromo: React.FC<TeacherPromoProps> = ({
         {announcementType}
       </OverlineTwoText>
       <Heading5 className={styles.promotionTitle}>{title}</Heading5>
-      <img src={image} alt={title} className={styles.promotionImage} />
+      {image && (
+        <img src={image} alt={title} className={styles.promotionImage} />
+      )}
       <BodyThreeText>{description}</BodyThreeText>
+      {partnerLogo && (
+        <BodyThreeText className={styles.promotionPartnerLogo}>
+          <StrongText>{i18n.partnershipWith()}</StrongText>
+          <img
+            src={partnerLogo}
+            alt="Partner Logo"
+            className={styles.partnerLogo}
+          />
+        </BodyThreeText>
+      )}
       <LinkButton
         href={buttonTarget}
         color="black"
         text={buttonLabel}
-        iconRight={{iconName: 'up-right-from-square'}}
+        iconRight={isExternal ? {iconName: 'up-right-from-square'} : undefined}
         type="secondary"
         size="s"
         className={styles.promotionButton}
       />
-    </div>
+    </li>
   );
 };
+
+export default TeacherPromo;

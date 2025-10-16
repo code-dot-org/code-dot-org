@@ -1,0 +1,8 @@
+name 'music-coding-intro-songwriter-videos_1'
+display_name 'Career Exploration'
+description 'Learn how these singer songwriters use computer science in their career! **Teacher Note**: This is Lesson 1, Level 11 from the curriculum.'
+
+sublevels
+level 'music-coding-intro-songwriter-shakira-video_1'
+level 'music-coding-intro-songwriter-aloe-blacc-video_1'
+level 'music-coding-intro-songwriter-rosa-linn-video_1'

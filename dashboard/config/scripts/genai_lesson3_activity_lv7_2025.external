@@ -1,0 +1,21 @@
+name 'genai-lesson3-activity-lv7_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Identifying Bias
+
+## Overview
+
+#### Our new job is to identify potential sources of bias in these resources.
+
+<!-- Quote 1 (image left, bubble right) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+  <img src="https://images.code.org/70dbfd82d3d34330f9e017ac146aafe7-image-1746467601345.png" alt="Teacher avatar" style="width: 70px; border-radius: 20%;">
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 20px 0;">
+  UNESCO is an organization founded in 1945 focused on different worldwide cultures. I found articles and recipes curated by UNESCO from around the world. This is a very diverse dataset we should add to RecipeBot's training data!
+  </div>
+</div>
+
+## Discuss
+MARKDOWN

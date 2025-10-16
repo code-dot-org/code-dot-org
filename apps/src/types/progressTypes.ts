@@ -133,12 +133,14 @@ export interface InitProgressPayload {
   unitTitle: string | null;
   unitDescription: string | undefined;
   unitStudentDescription: string | undefined;
+  unitHasUnnumberedLessons: boolean;
   courseId: number | null;
   courseVersionId: number | undefined;
   isLessonExtras: boolean;
   peerReviewLessonInfo: PeerReviewLessonInfo | null;
   isFullProgress: boolean;
   currentPageNumber: number;
+  courseName: string | null;
 }
 
 // LevelResults is a map of levelId -> TestResult. TestResult is a number.

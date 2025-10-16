@@ -48,7 +48,8 @@ module Curriculum
         CSP: 'CSP',
         CSA: 'CSA',
         HOC: 'HOC',
-        foundations_of_cs: 'Foundations of CS and AI',
+        HOAI: 'HOAI',
+        foundations_of_cs: 'AIF',
         foundations_of_programming: 'Foundations of Programming',
         CSC_K_5: 'CSC K-5',
         CSC_6_8: 'CSC 6-8',
@@ -66,7 +67,7 @@ module Curriculum
         CSD_self_paced_pl: 'Self-paced PL - CSD',
         CSF_self_paced_pl: 'Self-paced PL - CSF',
         CSC_k_5_self_paced_pl: 'Self-paced PL - CSC K-5',
-        foundations_of_cs_selfpaced_pl: 'Self-paced PL - Foundations of CS and AI',
+        foundations_of_cs_selfpaced_pl: 'Self-paced PL - AIF',
         ai_for_teachers_selfpaced_pl: 'Self-paced PL - AI for teachers',
         special_topics_curriculum_selfpaced_pl_k_5: 'Self-paced PL - K-5 special topics',
         special_topics_curriculum_selfpaced_pl_6_8: 'Self-paced PL - 6-8 special topics',
@@ -144,11 +145,13 @@ module Curriculum
     COURSE_OFFERING_MARKETING_INITIATIVES = OpenStruct.new(
       {
         hoc: 'HOC',
+        hoai: 'HOAI',
         csc: 'CSC',
         csf: 'CSF',
         csa: 'CSA',
         csp: 'CSP',
-        csd: 'CSD'
+        csd: 'CSD',
+        aif: 'AIF'
       }
     )
 
@@ -161,7 +164,9 @@ module Curriculum
       data
       digital_literacy
       games_and_animations
+      hardware
       internet
+      music
       physical_computing
       web_design
       programming
@@ -200,6 +205,14 @@ module Curriculum
         student: ['student'],
         teacher: ['student', 'teacher'],
         facilitator: ['student', 'teacher', 'facilitator']
+      }
+    ).freeze
+
+    NUMBERED_UNITS_TYPE = OpenStruct.new(
+      {
+        none: nil,
+        auto: "auto",
+        custom: "custom"
       }
     ).freeze
   end

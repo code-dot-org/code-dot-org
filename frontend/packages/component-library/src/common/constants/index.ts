@@ -3,6 +3,7 @@
  */
 
 import {ComponentSizeXSToL, DropdownColor} from '@/common/types';
+import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import {VisualAppearance} from '@/typography';
 
 /**
@@ -21,4 +22,9 @@ export const dropdownColors: {[key in DropdownColor]: DropdownColor} = {
   white: 'white',
   black: 'black',
   gray: 'gray',
+};
+
+export const externalLinkIconProps: FontAwesomeV6IconProps = {
+  iconName: 'up-right-from-square',
+  iconStyle: 'solid',
 };

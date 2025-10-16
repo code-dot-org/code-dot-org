@@ -3,13 +3,15 @@
   "script_names": [
     "self-paced-pl-getting-started-2024"
   ],
+  "original_script_names": [
+    "self-paced-pl-getting-started-2024"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "getting-started",
-    "has_numbered_units": true,
     "version_year": "2025"
   },
   "resources": [

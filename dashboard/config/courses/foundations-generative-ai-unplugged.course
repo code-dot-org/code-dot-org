@@ -1,0 +1,24 @@
+{
+  "name": "foundations-generative-ai-unplugged",
+  "script_names": [
+    "foundations-generative-ai-unplugged"
+  ],
+  "original_script_names": [
+    "foundations-generative-ai-unplugged"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "foundations-generative-ai-unplugged",
+    "has_verified_resources": true,
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -1,0 +1,33 @@
+name 'ea-fac-csaif_pl-analyzedatea-L4-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Analyzing Data 
+
+#### Analyzing data is a crucial step in making sense of information and drawing meaningful insights. Computers use various techniques to organize and interpret data efficiently. 
+
+---
+
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <h2>Ways to Analyze Data:</h2>
+  <ul style = "font-size:14pt;">
+     <li><strong>Sorting</strong> – Organizing data in a specific order<br> (e.g., sorting names alphabetically, ranking scores)</li><br>
+    <li><strong>Filtering</strong> – Selecting only relevant data based on conditions<br> (e.g., showing only sales over MARKDOWN00, finding students with A grades)</li><br>
+    <li><strong>Grouping</strong> – Categorizing similar data points together<br> (e.g., grouping sales by region, organizing students by grade level)</li><br>
+    <li><strong>Comparing</strong> – Examining relationships between data points<br> (e.g., comparing monthly sales, analyzing test scores across schools)</li><br>
+    <li><strong>Aggregating</strong> – Summarizing data into key metrics <br>(e.g., calculating averages, finding total revenue, counting customer transactions)</li>
+</ul>
+</div>
+
+
+
+#### In the next activity, you will practice analyzing data with a spreadsheet.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 8. You can find more details in the full <a href='https://studio.code.org/s/csad-pilot-content-2024/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+MARKDOWN

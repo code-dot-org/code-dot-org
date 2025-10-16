@@ -3,6 +3,9 @@
   "script_names": [
     "curriculum-sandbox-levels"
   ],
+  "original_script_names": [
+    "curriculum-sandbox-levels"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -8,6 +8,14 @@
     "csd5-2019",
     "csd6-2019"
   ],
+  "original_script_names": [
+    "csd1-2019",
+    "csd2-2019",
+    "csd3-2019",
+    "csd4-2019",
+    "csd5-2019",
+    "csd6-2019"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

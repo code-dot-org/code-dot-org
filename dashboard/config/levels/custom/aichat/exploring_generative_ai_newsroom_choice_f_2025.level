@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-05-29T11:50:33.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Make a Quiz",
+    "long_instructions": "## Make a Quiz\r\n\r\n**Before You Start:**\r\n\r\nMake sure you have filled in the **K** and **W** columns of your KWL chart for this task.\r\n\r\n**Do:**\r\n\r\nAsk AI to make a quiz on a topic like a school subject, pop culture, or anything you're curious about.\r\n\r\n**Try:**\r\n\r\nAsk for multiple-choice vs. true/false questions, or try making it \"easy\" or \"challenging.\"\r\n\r\n**Check:**\r\n\r\nAre the questions clear and fair? Do the answers make sense?\r\n\r\n**After You Try It:**\r\n\r\n1. Fill in the **L** column of your KWL chart\r\n2. Press **Continue** to return to the task menu\r\n",
+    "bubble_choice_description": "Ask AI to create a short Buzzfeed-style quiz.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/ffd347896e0b1deccb9f7d299056298b-checklist (1).png",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-29T11:50:33.099+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_f\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_f\"}]"
+}]]></config>
+</Aichat>

@@ -1,0 +1,844 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-08-15T18:45:35.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#### Paris\r\nThis remix of Paris builds a calm, steady groove using simple loops and clear layers. Listen to how the beats and bass repeat in patterns, while the vocals and effects add detail without taking over. The project is broken into functions like vocals, beat, bass, and effect to keep everything organized and easy to adjust.\r\n\r\n> I wanted this remix to feel smooth and really put together. I used functions to keep everything organized, like `bass`, `beat`, and `effect`, so I could layer sounds without it getting messy. I brought in the background vocals more often than in the original to give it a fuller sound without making it too loud. It ended up sounding kind of clean and balanced, which is what I was going for.",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "level_data": {
+      "library": "launch2024",
+      "packId": "chainsmokers_paris",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "E~-|?dIE^b1AuzinScxq",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "procedures_callnoreturn",
+                        "id": "kxX/:,M}jW3$s*vgmxjY",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "name": "vocals"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "Gw7)?SONpizD61J7Akb`",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "name": "beat"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": "7]C+On#Xh4ejA]LjbCrc",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "name": "bass"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "procedures_callnoreturn",
+                                    "id": "@}HyOh7K=*+E!3tmjZCt",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "name": "effect"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "procedures_defnoreturn",
+              "x": 769,
+              "y": 10,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "{CM86TcYi3!|)H2(vSp8",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "vocals"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "k/;+8lB:)[?ZO5eI]uWW",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "MK#hiK^s*iJqc_b(RSY!",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_paris/vocals_lets_show_them_backup"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "9CzZ?6up7+MN7.loMuw)",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_paris/vocals_ahh"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "play_sounds_sequential",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_rest_at_current_location_simple2",
+                                        "id": "play_rest_at_current_location_simple2",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "9ASl5_1ht^)-fv0lph[Z",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "chainsmokers_paris/vocals_lets_show_them"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "wQe[qnB9CxN{HMN?~A2H",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "chainsmokers_paris/vocals_verse_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "^+Pk$Hr~[hkX1%*EtK)J",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "chainsmokers_paris/vocals_verse_2"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "Q1?8SEfJNFR{hul/+Ew@",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "chainsmokers_paris/vocals_if_we_go"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_together",
+                                    "id": "play_sounds_together",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sounds_sequential",
+                                          "id": "T8_oLWG:q;g5LJp9KJ:A",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "K}N%#,?$28/~v!|@,-oz",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "chainsmokers_paris/vocals_theyll_say_you"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "qky:^1?@eI~^X-o/4`BT",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "chainsmokers_paris/vocals_well_get_away"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sounds_sequential",
+                                              "id": "};6n;,-wBb@Q#gh|]p[f",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "inputs": {
+                                                "code": {
+                                                  "block": {
+                                                    "type": "play_rest_at_current_location_simple2",
+                                                    "id": "GLVu`5TCyvo#kLH8sr6*",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "JI84YZ/-d|4Qu!!JXpXf",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "chainsmokers_paris/vocals_lets_show_them_backup"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "X.I1=+U9DGGP|o0gZl:l",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "chainsmokers_paris/vocals_ahh"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "WDs1+$h_*53J7J]qoC1u",
+              "x": 490,
+              "y": 10,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "mivVAl.Sp+?)xzkzmKSg",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "beat"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_sequential",
+                    "id": "z=hixObGDm|^+ecHvTc%",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": "set_effect_at_current_location_simple2",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                            "effects_value": "<field name=\"effects_value\">low</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_paris/drums_small"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "9dpqslfsV#(whWzy|p`5",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_paris/drums_fill"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_sequential",
+                        "id": ".Zu^FPi.]%|)F5Gc~-t@",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_rest_at_current_location_simple2",
+                              "id": "=p{`!TIz1*tZS;|yz~aX",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "rest_duration": "<field name=\"rest_duration\">1</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "set_effect_at_current_location_simple2",
+                                  "id": "N6i@7vn{CCo!=iX8@y],",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "fields": {
+                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                    "effects_value": "<field name=\"effects_value\">normal</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "repeat_simple2",
+                                      "id": "1$sqrTDW(OnFzxu|06Jy",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "times": 4
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sounds_together",
+                                            "id": "An[L[?STTbic8W9S4~]6",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "inputs": {
+                                              "code": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "pt!n|l!O-NB}QF-5Vqs5",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "hiphop/relaxed_alternate_beat"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "1!9ZnBDeLX(n~((6ozTd",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "hiphop/drum_beat_lofi"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "repeat_simple2",
+                                          "id": ",ruGB_kgH(7@zKQ!d#BP",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "times": 3
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "@;E-uThEb5~=HOA`2#/%",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "hiphop/drum_beat_trap"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "!cIh.;F{d06T!.|yx_9!",
+              "x": 210,
+              "y": 10,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "~1JSQi4y@aclmwjs7xkB",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "bass"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_sequential",
+                    "id": "@Obi5;mS?k/mvN2XvIj]",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "repeat_simple2",
+                          "id": "jux0-3R}y`,`YU@J%Vmb",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "times": 2
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_rest_at_current_location_simple2",
+                                "id": "{FyDCUQ8((:BfWk]WV.)",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "rest_duration": "<field name=\"rest_duration\">2</field>"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "4_HoklyBBQT{14:{WC(,",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 7
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "qh(+6[Et:#~?gVwZ^%Mf",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "hiphop/bass_sub_jumpsuit"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "oUa3NJhf(WzM*nZ*gtKU",
+              "x": 210,
+              "y": 270,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "t15s2`ixf;Fnowd,#j0-",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "effect"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_sequential",
+                    "id": "s{d`vyMdrC%Rq_xA$$c-",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_rest_at_current_location_simple2",
+                          "id": "~+9qUAkQ!iq1;l56oTCd",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "rest_duration": "<field name=\"rest_duration\">3</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_rest_at_current_location_simple2",
+                              "id": "s3.Um-IwKz]`X2NmiS$,",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "rest_duration": "<field name=\"rest_duration\">1</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_rest_at_current_location_simple2",
+                                  "id": "T+0k?xTFX@C%*2[@;u%5",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "repeat_simple2",
+                                      "id": "repeat_simple2",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "times": 8
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "=8cM=ng$`^YiE~[*!@CC",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "electro/crackle"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "{CM86TcYi3!|)H2(vSp8",
+            "name": "vocals",
+            "returnTypes": null
+          },
+          {
+            "id": "mivVAl.Sp+?)xzkzmKSg",
+            "name": "beat",
+            "returnTypes": null
+          },
+          {
+            "id": "~1JSQi4y@aclmwjs7xkB",
+            "name": "bass",
+            "returnTypes": null
+          },
+          {
+            "id": "t15s2`ixf;Fnowd,#j0-",
+            "name": "effect",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Paris",
+    "bubble_choice_description": "A Lo-fi ambient remix of Paris",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/chainsmokers_paris/chainsmokers_paris.jpg",
+    "submittable": "false",
+    "validations": [
+      {
+        "key": "music-lab-genre-example-6_bac676d3-2b04-4fdc-aff2-420d2c6aa2ee",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 10
+          }
+        ]
+      }
+    ],
+    "name_suffix": "_bash",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:45:35.017+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-6\\\"\"],\"cloned_from\":\"music-lab-genre-example-6\"}]"
+}]]></config>
+  <blocks/>
+</Music>

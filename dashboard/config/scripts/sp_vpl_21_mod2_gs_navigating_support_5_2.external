@@ -19,7 +19,7 @@ markdown <<MARKDOWN
 ## Types of Teacher Support
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-  <summary style="font-size: 18px; font-weight: bold;"><b>Help and Support</b></summary>
+  <summary style="font-size: 18px; ;"><b>Help and Support</b></summary>
 
   <div style="overflow: hidden; margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <img src="https://images.code.org/dd52d495bfb1fa9a2dfce96f30a5c4fa-image-1714074491246.46.49 PM.png" 
@@ -37,7 +37,7 @@ markdown <<MARKDOWN
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-  <summary style="font-size: 18px; font-weight: bold;"><b>Report a Problem</b></summary>
+  <summary style="font-size: 18px; "><b>Report a Problem</b></summary>
 
   <div style="overflow: hidden;"> <!-- This contains the floated image -->
     <img src="https://images.code.org/8cae4f863bce90d84996ca3aef456b2a-image-1714074493887.46.57 PM.png" 
@@ -54,7 +54,7 @@ markdown <<MARKDOWN
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-  <summary style="font-size: 18px; font-weight: bold;"><b>Teacher Forum</b></summary>
+  <summary style="font-size: 18px; "><b>Teacher Forum</b></summary>
 
   <div style="overflow: hidden; margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <img src="https://images.code.org/b104506d7faea4c934c79e0650e0212f-image-1714074495989.47.09 PM.png" 

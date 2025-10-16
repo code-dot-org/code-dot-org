@@ -46,6 +46,7 @@ $text-horizontal-padding: 2.6cqw;
   top: 0;
   left: 0;
   flex-direction: column;
+  background-color: var(--background-neutral-lab);
 
   .panel {
     margin: 0 auto;
@@ -94,9 +95,12 @@ $text-horizontal-padding: 2.6cqw;
 
       h1, h2, h3, h4 {
         margin: 0 0 1cqw 0;
-        font-family: $barlowSemiCondensed-semibold;
         font-size: 3cqw;
         line-height: 1.2em;
+
+        &, em, strong {
+          font-family: $barlowSemiCondensed-semibold;
+        }
       }
 
       p {
@@ -164,6 +168,14 @@ $text-horizontal-padding: 2.6cqw;
         bottom: $text-offset-y;
         right: $text-offset-x;
       }
+
+      .ttsContainer {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        right: 7px;
+        bottom: 7px;
+      }
     }
   }
 
@@ -194,21 +206,12 @@ $text-horizontal-padding: 2.6cqw;
     .bubble {
       margin: 0 7px;
 
-      &CurrentDark {
-        color: $neutral_light;
+      &Current {
+        color: var(--text-neutral-primary);
       }
 
-      &CurrentLight {
-        color: $neutral_dark70;
-      }
-
-      &NotCurrentDark {
-        color: $neutral_dark70;
-        cursor: pointer;
-      }
-
-      &NotCurrentLight {
-        color: $neutral_dark30;
+      &NotCurrent {
+        color: var(--text-neutral-placeholder);
         cursor: pointer;
       }
     }

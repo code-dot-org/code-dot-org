@@ -292,7 +292,16 @@ class ApiController < ApplicationController
 
   def show_courses_with_progress
     section = load_section
-    render json: CourseVersion.courses_for_unit_selector(section.participant_unit_ids)
+    unit_ids = section.participant_unit_ids
+    # Always include the Units assigned to the Section.
+    if section.course_id
+      unit_group = UnitGroup.get_from_cache(section.course_id)
+    elsif section.script_id
+      # Some older Sections only have a script_id defined.
+      unit_group = Unit.get_from_cache(section.script_id)&.get_original_unit_group
+    end
+    unit_ids.concat(unit_group.default_units.pluck(:id)).uniq! if unit_group
+    render json: CourseVersion.courses_for_unit_selector(unit_ids, current_user)
   end
 
   use_reader_connection_for_route(:section_level_progress)
@@ -311,7 +320,12 @@ class ApiController < ApplicationController
     page = [params[:page].to_i, 1].max
     per = params[:per].to_i || 50
 
-    paged_students = section.students.page(page).per(per)
+    # Occassionaly, students will be double-added to a section. When this happens, errors can
+    # occur when we get the progress for the student twice.  We saw two issues that were caused by
+    # having duplicate students in a section AND the number of students being a multiple of the page amount
+    # Deduplicating students ensures all data for all students is pulled.
+    deduplicated_students = section.students.distinct
+    paged_students = deduplicated_students.page(page).per(per)
     # As designed, if there are 50 students, the client will ask for both
     # page 1 and page 2, even though page 2 is out of range. However, it should
     # never ask for page 3
@@ -400,9 +414,24 @@ class ApiController < ApplicationController
   end
 
   def script_structure
-    script = Unit.get_from_cache(params[:script])
-    overview_path = CDO.studio_url(script_path(script))
-    summary = script.summarize(true, current_user, true)
+    context = nil
+    if params[:script]
+      context = Queries::Courses.get_course_context(params[:script])
+    else
+      course_name = params[:course_name]
+      unit_position = params[:unit_position]
+      context = Queries::Courses.get_unit_context(course_name, unit_position)
+    end
+    return render json: {error: 'Unit not found'}, status: :bad_request unless context
+    unit = context[:unit]
+    unit_group = context[:unit_group]
+    ugu = context[:unit_group_unit]
+    return render json: {error: 'Unit not found'}, status: :bad_request unless unit
+    overview_path = CDO.studio_url(script_path(unit))
+    if Policies::Courses.modularity_enabled? && ugu
+      overview_path = CDO.studio_url(course_unit_path(unit_group, ugu.position))
+    end
+    summary = unit.summarize(true, current_user, true, unit_group_unit: ugu)
     summary[:path] = overview_path
     render json: summary
   end
@@ -415,8 +444,10 @@ class ApiController < ApplicationController
 
   def lesson_materials
     unit_id = params[:unit_id]
-    script = Unit.get_from_cache(unit_id)
-    render json: script.summarize_for_lesson_materials_view(current_user)
+    context = Queries::Courses.get_course_context(unit_id)
+    unit = context[:unit]
+    return render json: {error: "Can't find Unit id=#{unit_id}"}, status: :bad_request unless unit
+    render json: unit.summarize_for_lesson_materials_view(current_user, unit_group_unit: context[:unit_group_unit])
   end
 
   def course_summary
@@ -442,19 +473,42 @@ class ApiController < ApplicationController
 
   def unit_summary
     unit_name = params[:unit_name]
-    unit = Unit.get_from_cache(unit_name)
+    unit_position = params[:unit_position]
+    course_name = params[:course_name]
+    unless unit_name || (unit_position && course_name)
+      return render json: {error: 'Must specify either unit_name or unit_position and course_name'}, status: :bad_request
+    end
 
-    redirect_unit_url = unit.redirect_to_unit_url(current_user, locale: request.locale)
+    if unit_name
+      context = Queries::Courses.get_course_context(unit_name)
+      unit = context[:unit]
+      unit_group = context[:unit_group]
+      unit_group_unit = context[:unit_group_unit]
+      course_name = unit_group&.name
+      unit_position = unit_group_unit&.position
+    else
+      course_name = params[:course_name]
+      unit_position = params[:unit_position]&.to_i
+      context = Queries::Courses.get_unit_context(course_name, unit_position)
+      return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless context
+      unit = context[:unit]
+      unit_group = context[:unit_group]
+      unit_group_unit = context[:unit_group_unit]
+    end
+    return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless unit
+
+    redirect_unit_url = unit.redirect_to_unit_url(current_user, unit_group: unit_group, locale: request.locale)
 
     additional_script_data = {
       is_instructor: unit.can_be_instructor?(current_user),
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Unit.locale_english_name_map[request.locale],
       locale_code: request.locale,
-      course_link: unit.course_link(params[:section_id]),
-      course_title: unit.course_title || I18n.t('view_all_units'),
-      course_name: unit.unit_group&.name,
+      course_link: unit_group&.link(section_id: params[:section_id]),
+      course_title: unit_group&.localized_title || I18n.t('view_all_units'),
+      course_name: course_name,
       redirect_unit_url: redirect_unit_url,
+      unit_position: unit_position,
     }
 
     if unit.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: unit.plc_course_unit.plc_course)
@@ -462,7 +516,7 @@ class ApiController < ApplicationController
     end
 
     render json: {
-      unitData: unit.summarize(true, current_user, false, request.locale).merge(additional_script_data),
+      unitData: unit.summarize(true, current_user, false, request.locale, unit_group_unit: unit_group_unit).merge(additional_script_data),
       plcBreadcrumb: plc_breadcrumb
     }
   end
@@ -557,12 +611,16 @@ class ApiController < ApplicationController
     script_level = Unit.cache_find_script_level params[:script_level_id].to_i
     level = Unit.cache_find_level params[:level_id].to_i
     section_id = params[:section_id].present? ? params[:section_id].to_i : nil
+    # TODO: TEACH-1866 pass in `unit_group_unit`
     render json: script_level.get_example_solutions(level, current_user, section_id)
   end
 
   def section_text_responses
     section = load_section
     script = load_script(section)
+    # TODO: TEACH-2042 default to original unit group unit if the unit is not part of the assigned course
+    # If unit_group_unit is nil, it returns the /s/ url instead of the correct /courses/ url
+    unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group.id == section.course_id}
 
     text_response_levels = script.text_response_levels
 
@@ -579,7 +637,7 @@ class ApiController < ApplicationController
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
-          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
+          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id, unit_group_unit: unit_group_unit)
         }
       end
     end.flatten

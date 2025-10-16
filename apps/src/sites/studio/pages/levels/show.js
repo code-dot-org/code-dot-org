@@ -3,8 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloatingActionButton';
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -16,7 +15,9 @@ import instructions, {
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(initPage);
 
@@ -49,38 +50,37 @@ function initPage() {
     );
   }
 
-  if (hasScriptData('script[data-aitutordata]')) {
-    const aiTutorData = getScriptData('aitutordata');
-    const {
-      levelId,
-      type,
-      hasValidation,
-      aiTutorAvailable,
-      isAssessment,
-      progressionType,
-    } = aiTutorData;
-    const level = {
-      id: levelId,
-      type,
-      hasValidation,
-      aiTutorAvailable,
-      isAssessment,
-      progressionType,
+  // AI Differentiation FAB to be shown only if rubric FAB is not.
+  const renderAiDiffButton = () => {
+    const reportingData = {
+      unitName: config.script_name,
+      courseName: config.course_name,
+      levelName: config.level_name,
     };
-    getStore().dispatch(setLevel(level));
-    getStore().dispatch(setScriptId(aiTutorData.scriptId));
-    const aiTutorFabMountPoint = document.getElementById(
-      'ai-tutor-fab-mount-point'
+    const differentiationContext = {type: AiDiffContext.LEVEL};
+    if (hasScriptData('script[data-aiDiffData]')) {
+      const aiDiffData = getScriptData('aiDiffData');
+      const {levelId, scriptId} = aiDiffData;
+      differentiationContext.levelId = levelId;
+      differentiationContext.unitId = scriptId;
+    }
+
+    const aiDiffFabMountPoint = document.getElementById(
+      'ai-differentiation-fab-mount-point'
     );
-    if (aiTutorFabMountPoint) {
+    if (aiDiffFabMountPoint && experiments.isEnabled('ai-diff-levels')) {
       ReactDOM.render(
         <Provider store={getStore()}>
-          <AITutorFloatingActionButton />
+          <AiDiffFloatingActionButton
+            context={differentiationContext}
+            scriptId={reportingData.unitName}
+            scriptName={reportingData.unitName}
+          />
         </Provider>,
-        aiTutorFabMountPoint
+        aiDiffFabMountPoint
       );
     }
-  }
+  };
 
   if (hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');
@@ -124,6 +124,10 @@ function initPage() {
         </Provider>,
         rubricFabMountPoint
       );
+    } else {
+      renderAiDiffButton();
     }
+  } else {
+    renderAiDiffButton();
   }
 }

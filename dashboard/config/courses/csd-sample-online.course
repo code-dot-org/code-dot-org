@@ -3,6 +3,9 @@
   "script_names": [
     "csd-sample-online"
   ],
+  "original_script_names": [
+    "csd-sample-online"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

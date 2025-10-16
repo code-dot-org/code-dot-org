@@ -23,10 +23,19 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
  */
 
 export enum InstructionsPosition {
-  TOP = 'TOP',
   LEFT = 'LEFT',
   RIGHT = 'RIGHT',
 }
+
+type AiGenerateState =
+  | 'none'
+  | 'generating'
+  | 'generated'
+  | 'listening'
+  | 'listened'
+  | 'editing'
+  | 'edited'
+  | 'listeningAfterEdit';
 
 export interface MusicState {
   /** Current pack ID, if a specific restricted pack from the current music library is selected */
@@ -61,10 +70,8 @@ export interface MusicState {
   soundLoadingProgress: number;
   /** The 1-based playhead position to start playback from, scaled to measures */
   startingPlayheadPosition: number;
-  undoStatus: {
-    canUndo: boolean;
-    canRedo: boolean;
-  };
+  canUndo: boolean;
+  canRedo: boolean;
   /** A callout that's currently being shown.  The index lets the same callout be
    * reshown multiple times in a row.
    */
@@ -79,6 +86,11 @@ export interface MusicState {
   loopEnd: number;
   key: Key;
   bpm: number;
+
+  // Some code to load.  Reset to undefined when the code is loaded.
+  codeToLoad?: string;
+  // Status of AI generation.
+  aiGenerateState: AiGenerateState;
 }
 
 const initialState: MusicState = {
@@ -99,10 +111,8 @@ const initialState: MusicState = {
   // This is to prevent the progress bar from showing if there are no sounds to load initially.
   soundLoadingProgress: 1,
   startingPlayheadPosition: 1,
-  undoStatus: {
-    canUndo: false,
-    canRedo: false,
-  },
+  canUndo: false,
+  canRedo: false,
   currentCallout: {
     id: undefined,
     index: 0,
@@ -112,6 +122,8 @@ const initialState: MusicState = {
   loopEnd: 5,
   key: DEFAULT_KEY,
   bpm: DEFAULT_BPM,
+  codeToLoad: undefined,
+  aiGenerateState: 'none',
 };
 
 const musicSlice = createSlice({
@@ -199,14 +211,8 @@ const musicSlice = createSlice({
     setLastMeasure: (state, action: PayloadAction<number>) => {
       state.lastMeasure = action.payload;
     },
-    updateLastMeasure: (state, action: PayloadAction<number>) => {
-      state.lastMeasure = Math.max(state.lastMeasure, action.payload);
-    },
-    addOrderedFunctions: (
-      state,
-      action: PayloadAction<{orderedFunctions: FunctionEvents[]}>
-    ) => {
-      state.orderedFunctions.push(...action.payload.orderedFunctions);
+    addOrderedFunctions: (state, action: PayloadAction<FunctionEvents[]>) => {
+      state.orderedFunctions.push(...action.payload);
     },
     setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
       state.soundLoadingProgress = action.payload;
@@ -230,7 +236,8 @@ const musicSlice = createSlice({
       state,
       action: PayloadAction<{canUndo: boolean; canRedo: boolean}>
     ) => {
-      state.undoStatus = action.payload;
+      state.canUndo = action.payload.canUndo;
+      state.canRedo = action.payload.canRedo;
     },
     showCallout: (state, action: PayloadAction<string>) => {
       state.currentCallout.id = action.payload;
@@ -265,6 +272,17 @@ const musicSlice = createSlice({
       }
 
       state.bpm = bpm;
+    },
+    // Some code to load.
+    setCodeToLoad: (state, action: PayloadAction<string | undefined>) => {
+      if (action.payload === undefined || action.payload === '') {
+        state.codeToLoad = undefined;
+      } else {
+        state.codeToLoad = action.payload;
+      }
+    },
+    setAiGenerateState: (state, action: PayloadAction<AiGenerateState>) => {
+      state.aiGenerateState = action.payload;
     },
   },
 });
@@ -332,7 +350,6 @@ export const {
   clearOrderedFunctions,
   addPlaybackEvents,
   setLastMeasure,
-  updateLastMeasure,
   addOrderedFunctions,
   setSoundLoadingProgress,
   setStartingPlayheadPosition,
@@ -346,4 +363,6 @@ export const {
   setLoopEnd,
   setKey,
   setBpm,
+  setCodeToLoad,
+  setAiGenerateState,
 } = musicSlice.actions;

@@ -1,0 +1,237 @@
+{
+  "className": "",
+  "logos": [
+    {
+      "metadata": {"tags": [], "concepts": []},
+      "sys": {
+        "space": {
+          "sys": {"type": "Link", "linkType": "Space", "id": "90t6bu6vlf76"}
+        },
+        "id": "5nnUZ6lpANuWWjP570Cr1y",
+        "type": "Entry",
+        "createdAt": "2025-07-02T22:44:50.938Z",
+        "updatedAt": "2025-07-23T18:10:13.598Z",
+        "environment": {
+          "sys": {"id": "master", "type": "Link", "linkType": "Environment"}
+        },
+        "publishedVersion": 22,
+        "revision": 11,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "organization"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "❌ [ENG] Amazon TEST",
+        "logoImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "7ojmgHRZ58dXVrwArsB87Q"
+          }
+        },
+        "primaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "6dKwFBFEBdFlARthWp3NPS"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {"tags": [], "concepts": []},
+      "sys": {
+        "space": {
+          "sys": {"type": "Link", "linkType": "Space", "id": "90t6bu6vlf76"}
+        },
+        "id": "M63pYe4MTJL67EQeHpsuX",
+        "type": "Entry",
+        "createdAt": "2025-07-02T22:44:50.836Z",
+        "updatedAt": "2025-07-23T18:10:13.558Z",
+        "environment": {
+          "sys": {"id": "master", "type": "Link", "linkType": "Environment"}
+        },
+        "publishedVersion": 22,
+        "revision": 11,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "organization"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "❌ [ENG] Microsoft TEST",
+        "logoImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "5PQ3scGgrxZeBGJ4M3oXde"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {"tags": [], "concepts": []},
+      "sys": {
+        "space": {
+          "sys": {"type": "Link", "linkType": "Space", "id": "90t6bu6vlf76"}
+        },
+        "id": "7lymk9QTo4TbYsOJeuPisD",
+        "type": "Entry",
+        "createdAt": "2025-07-02T22:44:50.736Z",
+        "updatedAt": "2025-07-23T18:10:13.519Z",
+        "environment": {
+          "sys": {"id": "master", "type": "Link", "linkType": "Environment"}
+        },
+        "publishedVersion": 24,
+        "revision": 11,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "organization"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "❌ [ENG] Microsoft Square TEST",
+        "logoImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "7aCApN8gyhhPHTvHOMItSN"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {"tags": [], "concepts": []},
+      "sys": {
+        "space": {
+          "sys": {"type": "Link", "linkType": "Space", "id": "90t6bu6vlf76"}
+        },
+        "id": "4CuRZhyG9C7gAzo0fnR5xR",
+        "type": "Entry",
+        "createdAt": "2025-07-02T22:44:50.594Z",
+        "updatedAt": "2025-07-23T18:10:13.475Z",
+        "environment": {
+          "sys": {"id": "master", "type": "Link", "linkType": "Environment"}
+        },
+        "publishedVersion": 22,
+        "revision": 11,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "organization"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "❌ [ENG] Clever TEST",
+        "logoImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2BrqKCCWUw4Ns8lf1BeXuA"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {"tags": [], "concepts": []},
+      "sys": {
+        "space": {
+          "sys": {"type": "Link", "linkType": "Space", "id": "90t6bu6vlf76"}
+        },
+        "id": "5kOYMQKGJG6wtv3uHGQdTJ",
+        "type": "Entry",
+        "createdAt": "2025-07-02T22:44:50.553Z",
+        "updatedAt": "2025-07-23T18:10:13.431Z",
+        "environment": {
+          "sys": {"id": "master", "type": "Link", "linkType": "Environment"}
+        },
+        "publishedVersion": 22,
+        "revision": 11,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "organization"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "❌ [ENG] Schoology TEST",
+        "logoImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6SvP2wibIZUufai9LgLaS2"
+          }
+        },
+        "primaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3UaLznScxJz5Y3eN1mlKMY"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {"tags": [], "concepts": []},
+      "sys": {
+        "space": {
+          "sys": {"type": "Link", "linkType": "Space", "id": "90t6bu6vlf76"}
+        },
+        "id": "1td81MiIkTqJl6hYb8PVc7",
+        "type": "Entry",
+        "createdAt": "2025-07-02T22:44:50.511Z",
+        "updatedAt": "2025-07-23T18:10:13.388Z",
+        "environment": {
+          "sys": {"id": "master", "type": "Link", "linkType": "Environment"}
+        },
+        "publishedVersion": 22,
+        "revision": 11,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "organization"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "❌ [ENG] Google Classroom TEST",
+        "logoImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "5j9YYfi7OAiT8hR2ZKsWdX"
+          }
+        },
+        "primaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "4shm3jYrTHk9uBKkgQMQf6"
+          }
+        }
+      }
+    }
+  ],
+  "sortOrder": "manual"
+}

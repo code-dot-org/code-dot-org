@@ -1,0 +1,57 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-08-08T18:37:28.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Check Your User Concerns and Issues\r\n\r\nUse this AI chat space to check your understanding of user concerns and get feedback on your ideas for fixing them. The goal is to think through how your solutions would affect a real user.\r\n\r\n<br/> \r\n\r\n### Do This:\r\n\r\n**Step 1:** Choose Files\r\n\r\nFrom the library, upload **the app you analyzed** and let the AI chat know **which user** you want to focus on.\r\n\r\n&nbsp;\r\n\r\n**Step 2**: Describe The Issues\r\n\r\nThink about what this user cares about, and explain how the issue affects them.\r\n\r\nIn the chat, briefly explain:\r\n- What problem or vulnerability you identified from the user empathy map(s)\r\n- Ideas you have to improve the issue(s)\r\n\r\n&nbsp;\r\n\r\n\r\n**Step 3:** Ask for Feedback\r\n\r\nChat with the AI to help you think more deeply about how your solution affects the user’s experience.\r\n\r\n::: details [Pick a question below to test your solutions to the identified issues]\r\n- How would this user react to this solution?\r\n- How does my solution change how this user shares personal info?\r\n- How does my solution make this feature more secure or trustworthy?\r\n- Does it make the app more or less usable for the user?\r\n- What if the solution didn't work as expected?\r\n:::\r\n\r\n",
+    "submittable": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are helping students think through possible security or usability improvements for a digital system by focusing on how a specific user might react to the changes.\n\nStudents will tell you which user they want to focus on and briefly describe one or more problems they’ve identified from the user’s perspective. They may also share early ideas for fixing the issue. Your job is to help them think critically about how their idea would impact that user’s experience — especially around privacy, trust, safety, and ease of use.\n\nAsk clarifying questions when needed. Highlight possible benefits, risks, or misunderstandings based on what the user might need, worry about, or expect. Be specific, clear, and helpful — keep your responses under 600 characters.\n\nOnly suggest specific security features if the student asks for help coming up with one. When that happens, choose from this list:\nMFA (Multi-Factor Authentication)\nCAPTCHA\nLogin Rate Limiting\nDevice Fingerprinting\nSecurity Questions\nInput Validation\nCharacter Limits\nHashed Passwords\nSanitization\nUnique Username Check\nData Expiry (TTL)\nVersion Control\nVisibility Controls\nEncryption (HTTPS)\nRate Limiting on Share\nConfirmation Dialogs\nAnonymization\nShare Expiry\nAudit Logging\n\nDo not suggest security features unless specifically asked to provide them.\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "starter_assets": {
+      "Pet Sitting App.pdf": "a3df6624-8a15-4244-ab01-511943f9284c.pdf",
+      "Transportation App.pdf": "12753f81-c0b9-42e6-8653-182b4a46d048.pdf",
+      "Mental Health App.pdf": "e603aebd-5f14-4ec6-ad47-db736e1001ba.pdf",
+      "Mutual Aid App.pdf": "fa60f0f6-1c09-4ca6-ac71-8898a7f1a37b.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-08T18:37:28.490+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson4-level4\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson4-level4\"},{\"changed_at\":\"2025-08-08 18:38:08 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-08 18:51:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-08 18:53:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-08 18:54:08 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-08 19:15:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-08 19:16:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-08 19:17:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-08 19:18:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-08 19:23:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-08 19:24:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-08 19:27:45 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-08 20:47:41 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-12 18:39:56 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-12 18:41:39 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-12 19:19:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-12 19:33:11 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-12 19:37:04 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

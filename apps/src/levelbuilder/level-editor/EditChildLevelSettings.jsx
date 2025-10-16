@@ -1,6 +1,7 @@
 // This component will be used to edit the settings of any child levels
 // The component will take in the following props:
 // Child levels: an array of objects representing the child levels
+import Link from '@code-dot-org/component-library/link';
 import PropTypes from 'prop-types';
 import React, {useState, useCallback} from 'react';
 
@@ -93,6 +94,39 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
       });
   }
 
+  const uiForEditingSublevelData = (childLevel, index) => (
+    <div>
+      <div className={styles.fieldRow}>
+        <label>Display Name</label>
+        <input
+          type="text"
+          value={childLevel.properties.display_name}
+          onChange={e => handleDisplayNameChange(index, e.target.value)}
+        />
+      </div>
+      <BubbleChoiceDescriptionEditor
+        description={childLevel.properties.bubble_choice_description || ''}
+        index={index}
+        handleDescriptionChange={handleDescriptionChange}
+      />
+      <div className={styles.fieldRow}>
+        <label>Thumbnail URL</label>
+        <ImageInput
+          updateImageUrl={newImageUrl =>
+            handleThumbnailUrlChange(index, newImageUrl)
+          }
+          initialImageUrl={childLevel.properties.thumbnail_url || ''}
+          showPreview
+        />
+      </div>
+      <button type="button" onClick={() => handleSave(index)}>
+        Save
+      </button>
+    </div>
+  );
+
+  const levelEditorUrl = childLevelId => `/levels/${childLevelId}/edit`;
+
   return (
     <>
       <div>
@@ -106,38 +140,22 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
               <hr />
               <CollapsibleSection headerContent={childLevel.name}>
                 <div>
-                  <div className={styles.fieldRow}>
-                    <label>Display Name</label>
-                    <input
-                      type="text"
-                      value={childLevel.properties.display_name}
-                      onChange={e =>
-                        handleDisplayNameChange(index, e.target.value)
-                      }
-                    />
-                  </div>
-                  <BubbleChoiceDescriptionEditor
-                    description={
-                      childLevel.properties.bubble_choice_description || ''
-                    }
-                    index={index}
-                    handleDescriptionChange={handleDescriptionChange}
-                  />
-                  <div className={styles.fieldRow}>
-                    <label>Thumbnail URL</label>
-                    <ImageInput
-                      updateImageUrl={newImageUrl =>
-                        handleThumbnailUrlChange(index, newImageUrl)
-                      }
-                      initialImageUrl={
-                        childLevel.properties.thumbnail_url || ''
-                      }
-                      showPreview
-                    />
-                  </div>
-                  <button type="button" onClick={() => handleSave(index)}>
-                    Save
-                  </button>
+                  {childLevel.isDslDefined && (
+                    <div className={styles.warningMessage}>
+                      Note: This level is a DSL level. To make changes to the
+                      title, description, or thumbnail, you must edit the DSL
+                      level directly. You can do that at
+                      <Link
+                        text={'the level edit page'}
+                        href={levelEditorUrl(childLevel.id)}
+                        openInNewTab={true}
+                        external={true}
+                        size="s"
+                      />
+                    </div>
+                  )}
+                  {!childLevel.isDslDefined &&
+                    uiForEditingSublevelData(childLevel, index)}
                 </div>
               </CollapsibleSection>
             </div>

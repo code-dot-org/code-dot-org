@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-14T22:16:33.000Z",
   "level_num": "custom",
@@ -410,10 +411,44 @@
     "display_name": "Call Me Maybe",
     "long_instructions": "You've been given the vocals for a song, but no backing tracks! Create a function for each part of the vocals and add unique backing tracks to each section, then call all of the functions to create your song. You can use tracks from the original song, or find your own unique style! \r\n\r\nWhen you're finished, your code should look similar to this:\r\n\r\n![](https://images.code.org/5b9ea6223e507c03eff4cef75ef3daa4-image-1742271918560.png)",
     "bubble_choice_description": "Create unique backing tracks for each vocal section of the song using functions to keep things organized",
+    "validations": [
+      {
+        "key": "music-lab-functions-challengeB_adde128d-ac44-4cc9-9890-0863f2a31ae7",
+        "message": "You did it!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-challengeB_3469b232-005e-4850-9744-e37b40456db0",
+        "message": "DJ Robot is listening to your song to make sure you call your functions…",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_defnoreturn:4"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-challengeB_e2ef9390-f6a0-48f7-bff2-6d04e751f57b",
+        "message": "Make your 4 functions, then call them!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-14T22:16:33.291+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-challengeA\\\"\"],\"cloned_from\":\"music-lab-functions-challengeA\"},{\"changed_at\":\"2025-03-14 22:16:35 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:27:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:27:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:30:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-14T22:16:33.291+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-challengeA\\\"\"],\"cloned_from\":\"music-lab-functions-challengeA\"},{\"changed_at\":\"2025-03-14 22:16:35 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:27:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:27:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:30:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-19 02:42:58 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-19 02:44:10 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

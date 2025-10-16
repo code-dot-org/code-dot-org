@@ -9,25 +9,39 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useEffect, useMemo, useRef} from 'react';
 
-import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
+import {
+  navigateToLevelId,
+  setCurrentLevelId,
+} from '@cdo/apps/code-studio/progressRedux';
 import {levelById} from '@cdo/apps/code-studio/progressReduxSelectors';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {LabProps, BubbleChoiceLevelData} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  BubbleChoiceLevelData,
+  BubbleChoiceSublevel,
+} from '@cdo/apps/lab2/types';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import {getCurrentLesson} from '../code-studio/progressReduxSelectors';
+import notifyLevelChange from '../lab2/utils/notifyLevelChange';
 import {commonI18n} from '../types/locale';
 
 import styles from './BubbleChoice.module.scss';
 
 const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
+  // The image has a 4:3 aspect ratio.
+  const imageAspectRatio = 4 / 3;
+
+  // The aspect ratio of each sublevel button.  It has an image above a text area,
+  // each with the same aspect ratio.
+  const aspectRatio = imageAspectRatio / 2;
+
+  // The gap (in pixels) between each sublevel button.
+  const gap = 15;
+
   const dispatch = useAppDispatch();
-  const background = useAppSelector(
-    state => getCurrentLesson(state)?.background || null
-  );
-  const backgroundSuffix = capitalizeFirstLetter(background || 'dark');
   const levelBubbleChoice = levelProperties.levelData as BubbleChoiceLevelData;
   const sublevelsStatus = useAppSelector(state =>
     levelBubbleChoice.sublevels.map(
@@ -36,8 +50,11 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
           state.progress,
           state.progress.currentLessonId,
           sublevel.level_id
-        ).status
+        )?.status || LevelStatus.not_tried
     )
+  );
+  const currentLessonId = useAppSelector(
+    state => state.progress.currentLessonId
   );
 
   const [containerWidth, setContainerWidth] = React.useState(0);
@@ -75,7 +92,7 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
 
   // Go through the candidates and find which will deliver the largest sublevel buttons, given
   // the current size of the container.
-  const [numRows, numColumns] = useMemo(() => {
+  const [numRows, numColumns, imageWidth] = useMemo(() => {
     let bestSize = -1;
     let bestNumRows = -1;
     for (const [
@@ -83,8 +100,10 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
       candidateLayoutColumns,
     ] of candidateLayouts.entries()) {
       const size = Math.min(
-        containerWidth / candidateLayoutColumns,
-        containerHeight / candidateLayoutRows
+        (containerWidth - (candidateLayoutColumns - 1) * gap) /
+          candidateLayoutColumns,
+        ((containerHeight - (candidateLayoutRows - 1) * gap) * aspectRatio) /
+          candidateLayoutRows
       );
       if (size > bestSize) {
         bestSize = size;
@@ -93,8 +112,10 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
     }
     const numRows = bestNumRows;
     const numColumns = candidateLayouts.get(bestNumRows);
-    return [numRows, numColumns];
-  }, [candidateLayouts, containerHeight, containerWidth]);
+    return [numRows, numColumns, bestSize];
+  }, [aspectRatio, candidateLayouts, containerHeight, containerWidth]);
+
+  const imageHeight = imageWidth / imageAspectRatio;
 
   const sublevelToProgressBubbleLevel = (index: number) => {
     const sublevel = levelBubbleChoice.sublevels[index];
@@ -106,56 +127,97 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
     return level;
   };
 
+  const navigateToSublevel = (sublevel: BubbleChoiceSublevel) => {
+    if (currentLessonId) {
+      dispatch(navigateToLevelId(sublevel.level_id));
+    } else if (levelProperties.isProjectLevel) {
+      // For BubbleChoice project levels, set the level ID in redux, and let the
+      // MultiProjectContainer handle switching projects. The standard progress redux
+      // system does not work for project levels since there is no progress, lesson, etc.
+      dispatch(setCurrentLevelId(sublevel.level_id));
+      // TODO: This is a dupe of code in navigateToLevelId(). Can we consolidate?
+      notifyLevelChange(String(levelProperties.id), sublevel.level_id);
+      // TODO: Handle browser navigation.
+    } else {
+      window.location.href = sublevel.url;
+    }
+  };
+
   return (
     <div id="bubble-choice" className={styles.bubbleChoiceContainer}>
       <div>
         {levelBubbleChoice.displayName && (
-          <Heading4 className={styles[`heading${backgroundSuffix}`]}>
+          <Heading4 className={styles.heading}>
             {levelBubbleChoice.displayName}
           </Heading4>
         )}
         {levelBubbleChoice.description && (
-          <div className={styles[`text${backgroundSuffix}`]}>
-            {levelBubbleChoice.description}
+          <div className={styles.text}>
+            <EnhancedSafeMarkdown markdown={levelBubbleChoice.description} />
           </div>
         )}
       </div>
-      <div
-        className={styles.sublevelsContainer}
-        style={{
-          gridTemplateColumns: `repeat(${numColumns}, minmax(0,1fr))`,
-          gridTemplateRows: `repeat(${numRows}, minmax(0,1fr))`,
-        }}
-        ref={containerRef}
-      >
-        {levelBubbleChoice.sublevels.map((sublevel, index) => (
-          <button
-            type="button"
-            key={index}
-            className={classNames(
-              styles.sublevelButton,
-              styles[`sublevelButton${backgroundSuffix}`]
-            )}
-            onClick={() => dispatch(navigateToLevelId(sublevel.level_id))}
-          >
-            <div className={styles.sublevelImageContainer}>
-              <img
-                alt=""
-                src={sublevel.thumbnail_url}
-                className={styles.sublevelImage}
-              />
-            </div>
-            <div className={styles.sublevelText}>
-              <ProgressBubble
-                level={sublevelToProgressBubbleLevel(index)}
-                disabled={true}
-                hideToolTips={true}
-                smallBubble={true}
-              />
-              {sublevel.display_name}
-            </div>
-          </button>
-        ))}
+      <div className={styles.subLevelsOuterContainer} ref={containerRef}>
+        <div
+          className={styles.sublevelsContainer}
+          style={{
+            gridTemplateColumns: `repeat(${numColumns}, minmax(0,1fr))`,
+            gridTemplateRows: `repeat(${numRows}, minmax(0,1fr))`,
+            gap: `${gap}px`,
+          }}
+        >
+          {levelBubbleChoice.sublevels.map((sublevel, index) => (
+            <button
+              type="button"
+              key={index}
+              className={classNames(
+                'uitest-bubble-choice',
+                styles.sublevelButton
+              )}
+              style={{
+                width: imageWidth,
+                height: imageWidth / aspectRatio,
+              }}
+              onClick={() => navigateToSublevel(sublevel)}
+            >
+              <div
+                className={styles.sublevelImageContainer}
+                style={{width: imageWidth, height: imageHeight}}
+              >
+                <img
+                  alt=""
+                  src={sublevel.thumbnail_url}
+                  className={styles.sublevelImage}
+                />
+                <div className={styles.sublevelProgressBubbleContainer}>
+                  <ProgressBubble
+                    level={sublevelToProgressBubbleLevel(index)}
+                    disabled={true}
+                    hideToolTips={true}
+                    smallBubble={true}
+                  />
+                </div>
+              </div>
+              <div className={styles.sublevelTextContainer}>
+                <Heading4
+                  className={classNames(
+                    styles.heading,
+                    styles.sublevelTextHeading
+                  )}
+                >
+                  {sublevel.display_name}
+                </Heading4>
+
+                {sublevel.description && (
+                  <EnhancedSafeMarkdown
+                    markdown={sublevel.description}
+                    className={styles.sublevelDescriptionMarkdown}
+                  />
+                )}
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
       <div className={styles.buttonRow}>
         <Button

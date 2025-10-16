@@ -1,0 +1,25 @@
+name 'music-lab-612-post-q5'
+
+question 'Which code correctly creates a function for the effect and calls it so the song still sounds the same?'
+width '300'
+height '300'
+wrong '![](https://images.code.org/2c453d5fc3ac315d0762a52a3a866473-functions-post-P-answer-D.png)'
+wrong '![](https://images.code.org/264123da04bdf4781d7309a50c9a2a35-functions-post-P-answer-c.png)'
+wrong '![](https://images.code.org/262eb56d0206034ee61d05673e971737-functions-post-P-answer-B.png)'
+right '![](https://images.code.org/d9f10f3091a9d9da784fa37f0d0c77b5-functions-post-P-answer-A.png)'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Functions
+
+Skill: Use a function multiple times in a song, such as repeating a chorus
+
+Appears in Lesson: Functions - Explore
+MARKDOWN
+
+markdown <<MARKDOWN
+Artem has discovered a really fun effect to use with the `Do Do Do` chorus, but it makes the code complex and harder to understand. He wants to use a function to organize and simplify his code.
+
+![](https://images.code.org/04c6082059376d4b9b277603c24009ae-functions-post-P-question.png)
+MARKDOWN

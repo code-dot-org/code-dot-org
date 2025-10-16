@@ -17,7 +17,7 @@ interface SectionCardBodyProps {
   section: Section;
 }
 
-export const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
+const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
   return (
     <div className={styles.sectionCardBody}>
       <div className={styles.sectionCardBodyLeft}>
@@ -28,7 +28,7 @@ export const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             buttonText={i18n.assignACourseButton()}
             icon={'book-open-cover'}
             sectionId={section.id}
-            path={TEACHER_NAVIGATION_PATHS.settings}
+            path={'/catalog'}
           />
         )}
       </div>
@@ -38,6 +38,7 @@ export const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             buttonText={i18n.viewProgressButton()}
             icon={'chart-line'}
             sectionId={section.id}
+            sectionName={section.name}
             path={TEACHER_NAVIGATION_PATHS.progress}
           />
         ) : section.studentCount > 0 && !section.courseId ? (
@@ -66,6 +67,7 @@ export const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             buttonText={i18n.viewLessonMaterialsButton()}
             icon={'folder-open'}
             sectionId={section.id}
+            sectionName={section.name}
             path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
           />
         )}
@@ -73,3 +75,5 @@ export const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
     </div>
   );
 };
+
+export default SectionCardBody;

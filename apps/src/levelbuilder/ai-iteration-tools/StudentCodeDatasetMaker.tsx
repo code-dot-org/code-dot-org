@@ -4,30 +4,58 @@ import TextField from '@code-dot-org/component-library/textField';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
+import {
+  AIResponse,
+  evaluateStudentWorkOverall,
+  evaluateStudentWorkSkills,
+  StudentAnswer,
+} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+
 import {fetchStudentCodeSamples} from './StudentWorkSamplesApi';
 
-interface StudentCodeSample {
-  projectId: string;
-  studentCode: string | undefined;
-  codeVersion?: string;
-  userId: number | undefined;
-  aiEvaluation?: string;
-  aiReasoning?: string;
-  evaluationCriteria?: string;
-}
+type EvaluatedCodeSample =
+  | OverallEvaluatedCodeSample
+  | SkillsEvaluatedCodeSample;
+
+type OverallEvaluatedCodeSample = StudentAnswer & AIResponse;
+
+type SkillsEvaluatedCodeSample = StudentAnswer & {
+  [key in `skill-${string}${
+    | 'evaluationCriteria'
+    | 'aiEvaluation'
+    | 'aiReasoning'}`]?: string;
+};
 
 const StudentCodeDatasetMaker: React.FC = () => {
   const [datasetName, setDatasetName] = useState<string>('');
   const [levelId, setLevelId] = useState<string>('');
   const [unitId, setUnitId] = useState<string>('');
-  const [numSamples, setNumSamples] = useState<string>('25');
-  const [includeAiEvaluations, setIncludeAiEvaluations] =
-    useState<boolean>(false);
+  const [evaluateSkills, setEvaluateSkills] = useState<boolean>(false);
+  const [studentIds, setStudentIds] = useState<string>('');
   const [pending, setPending] = useState<boolean>(false);
-  const [fetchedSamples, setFetchedSamples] = useState<StudentCodeSample[]>([]);
+  const [fetchedSamples, setFetchedSamples] = useState<StudentAnswer[]>([]);
+  const [evaluationPending, setEvaluationPending] = useState<boolean>(false);
+  const [evaluatedSamples, setEvaluatedSamples] = useState<
+    EvaluatedCodeSample[]
+  >([]);
 
   const downloadCSV = () => {
-    const csv = Papa.unparse(fetchedSamples);
+    const processedSamples = evaluatedSamples.map(sample => {
+      let studentWorkString = sample.studentWork;
+      if (
+        typeof sample.studentWork === 'object' &&
+        sample.studentWork !== null
+      ) {
+        studentWorkString = Object.entries(sample.studentWork)
+          .map(([filename, contents]) => `${filename}:\n${contents}`)
+          .join('\n\n');
+      }
+      return {
+        ...sample,
+        studentWork: studentWorkString,
+      };
+    });
+    const csv = Papa.unparse(processedSamples);
     const csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
     const csvURL = window.URL.createObjectURL(csvData);
     const tempLink = document.createElement('a');
@@ -39,14 +67,78 @@ const StudentCodeDatasetMaker: React.FC = () => {
   const getStudentCodeSamples = async () => {
     setPending(true);
     const studentWorkRequest = {
-      includeAiEvaluations: includeAiEvaluations,
-      numSamples: Number(numSamples),
+      studentIds: studentIds.split(','),
       unitId: Number(unitId),
       levelId: Number(levelId),
     };
     const codeSamples = await fetchStudentCodeSamples(studentWorkRequest);
-    setFetchedSamples(codeSamples as unknown as StudentCodeSample[]);
+    if (codeSamples?.length === 0) {
+      alert('No samples found for the given parameters.');
+    } else {
+      const fetchedCodeSamples = codeSamples as unknown as StudentAnswer[];
+      const filteredCodeSamples = fetchedCodeSamples.filter(
+        item => item !== null
+      );
+      setFetchedSamples(filteredCodeSamples);
+    }
     setPending(false);
+  };
+
+  const getAIEvaluations = async () => {
+    setEvaluationPending(true);
+    const responsePromises = fetchedSamples.map(async studentResponse => {
+      const studentWorkToEvaluate = {
+        studentId: studentResponse.studentId,
+        studentDisplayName: studentResponse.studentDisplayName,
+        studentWork: studentResponse.studentWork,
+      };
+      return evaluateStudentCode(studentWorkToEvaluate as StudentAnswer);
+    });
+    await Promise.allSettled(responsePromises);
+    setEvaluationPending(false);
+  };
+
+  const evaluateStudentCode = async (studentAnswer: StudentAnswer) => {
+    let aiResponse;
+    if (evaluateSkills) {
+      aiResponse = await evaluateStudentWorkSkills(
+        studentAnswer,
+        parseInt(levelId),
+        parseInt(unitId)
+      );
+    } else {
+      aiResponse = await evaluateStudentWorkOverall(
+        studentAnswer,
+        parseInt(levelId),
+        parseInt(unitId)
+      );
+    }
+
+    let evaluation: EvaluatedCodeSample;
+
+    if (aiResponse.skillEvaluations) {
+      evaluation = {
+        ...studentAnswer,
+      };
+      for (let i = 0; i < aiResponse.skillEvaluations.length; i++) {
+        const skillEvaluation = aiResponse.skillEvaluations[i];
+        const skillKey = skillEvaluation.skillKey;
+        evaluation[`skill-${skillKey}-evaluationCriteria`] =
+          skillEvaluation.evaluationCriteria;
+        evaluation[`skill-${skillKey}-aiEvaluation`] =
+          skillEvaluation.aiEvaluation;
+        evaluation[`skill-${skillKey}-aiReasoning`] =
+          skillEvaluation.aiReasoning;
+      }
+    } else {
+      evaluation = {
+        ...studentAnswer,
+        evaluationCriteria: aiResponse.evaluationCriteria,
+        aiEvaluation: aiResponse.aiEvaluation,
+        aiReasoning: aiResponse.aiReasoning,
+      };
+    }
+    setEvaluatedSamples(prevSamples => [...prevSamples, evaluation]);
   };
 
   return (
@@ -68,17 +160,11 @@ const StudentCodeDatasetMaker: React.FC = () => {
         />
         <br />
         <br />
-        <Checkbox
-          name="include AI evaluations"
-          label="Include AI evaluations"
-          onChange={() => setIncludeAiEvaluations(!includeAiEvaluations)}
-          checked={includeAiEvaluations}
-        />
         <TextField
-          name="Number of Samples"
-          label="How many samples of student work do you want?"
-          onChange={e => setNumSamples(e.target.value)}
-          value={numSamples}
+          name="Student Ids"
+          label="Student Ids (comma separated)"
+          onChange={e => setStudentIds(e.target.value)}
+          value={studentIds}
         />
         <br />
         <br />
@@ -102,11 +188,29 @@ const StudentCodeDatasetMaker: React.FC = () => {
           />
         </div>
         <br />
+        <Checkbox
+          label={'Evaluate skills (if any) associated with the level'}
+          name={'evaluateSkills'}
+          checked={evaluateSkills}
+          size="s"
+          onChange={e => setEvaluateSkills(e.target.checked)}
+        />
+        <br />
+        <br />
+        <div>
+          <Button
+            text="Evaluate Student Code Samples"
+            onClick={getAIEvaluations}
+            disabled={fetchedSamples.length === 0}
+            isPending={evaluationPending}
+          />
+        </div>
+        <br />
         <div>
           <Button
             text="Download CSV"
             onClick={downloadCSV}
-            disabled={fetchedSamples.length === 0}
+            disabled={evaluatedSamples.length === 0}
           />
         </div>
       </div>

@@ -25,7 +25,8 @@ export type ComponentPlacementDirection =
   | 'onTop'
   | 'onRight'
   | 'onBottom'
-  | 'onLeft';
+  | 'onLeft'
+  | 'none';
 
 export interface DropdownFormFieldRelatedProps {
   /** Dropdown helper message */

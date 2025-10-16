@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-05-31T03:01:19.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Reflect",
+    "long_instructions": "Remix artists experiment with songs to re-imagine what they could sound like. This requires looking at songs from a new perspective or a different angle, focusing on specific aspects of a song as a way to unlock creativity. Programmers do this too using the skill of **abstraction**.\r\n\r\nAre there aspects of being a remix artist or programmer that you would like to see in your own career?",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "name_suffix": "_v2"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:19.131+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-reflect1\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-reflect1\"},{\"changed_at\":\"2025-07-02 02:33:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

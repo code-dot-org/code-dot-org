@@ -11,6 +11,7 @@ import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.m
 function UnitSelector({
   sectionId,
   scriptId,
+  courseVersionId,
   onChange,
   coursesWithProgress,
   asyncLoadCoursesWithProgress,
@@ -36,7 +37,16 @@ function UnitSelector({
       />
     </div>
   );
+  const onSelectUnit = e => {
+    const value = e.target.value;
+    const [newCourseVersionId, newUnitId] = value.includes('-')
+      ? value.split('-').map(id => parseInt(id))
+      : [undefined, parseInt(value)];
+    onChange(newUnitId, newCourseVersionId);
+  };
 
+  const selectedValue =
+    scriptId && courseVersionId ? `${courseVersionId}-${scriptId}` : undefined;
   return isLoadingSectionData ||
     isLoadingCourses ||
     !coursesWithProgress ||
@@ -45,15 +55,15 @@ function UnitSelector({
   ) : (
     <div>
       <select
-        value={scriptId || undefined}
-        onChange={event => onChange(parseInt(event.target.value))}
+        value={selectedValue}
+        onChange={onSelectUnit}
         className={styles.dropdown}
         id="uitest-course-dropdown"
       >
         {coursesWithProgress.map((version, index) => (
           <optgroup key={index} label={version.display_name}>
             {version.units.map(unit => (
-              <option key={unit.id} value={unit.id}>
+              <option key={unit.id} value={`${version.id}-${unit.id}`}>
                 {unit.name}
               </option>
             ))}
@@ -67,6 +77,7 @@ function UnitSelector({
 UnitSelector.propTypes = {
   coursesWithProgress: PropTypes.array.isRequired,
   scriptId: PropTypes.number,
+  courseVersionId: PropTypes.number,
   sectionId: PropTypes.number,
   onChange: PropTypes.func.isRequired,
   asyncLoadCoursesWithProgress: PropTypes.func.isRequired,

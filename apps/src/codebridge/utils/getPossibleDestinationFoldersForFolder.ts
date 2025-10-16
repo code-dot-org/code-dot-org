@@ -3,7 +3,7 @@ import {ProjectFolder} from '@codebridge/types';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
-import {validateFolderName} from './validateFolderName';
+import {validateFolderMove} from './validateFolderMove';
 
 type GetPossibleDestinationFoldersForFolderArgs = {
   folder: ProjectFolder;
@@ -31,11 +31,5 @@ export const getPossibleDestinationFoldersForFolder = ({
   [{id: DEFAULT_FOLDER_ID}, ...Object.values(projectFolders)].filter(
     f =>
       f.id !== folder.id &&
-      !Boolean(
-        validateFolderName({
-          folderName: folder.name,
-          parentId: f.id,
-          projectFolders,
-        })
-      )
+      !Boolean(validateFolderMove(folder.name, f.id, projectFolders, folder.id))
   );

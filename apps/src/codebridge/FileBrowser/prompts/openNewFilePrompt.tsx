@@ -17,9 +17,10 @@ type OpenNewFilePromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   newFile: NewFileFunction;
   projectFiles: MultiFileSource['files'];
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
+  validFileTypes?: string[];
 };
 
 export const openNewFilePrompt = async ({
@@ -27,9 +28,10 @@ export const openNewFilePrompt = async ({
   dialogControl,
   newFile,
   projectFiles,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
   isStartMode,
   validationFile,
+  validFileTypes,
 }: OpenNewFilePromptArgsType) => {
   const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
@@ -41,6 +43,7 @@ export const openNewFilePrompt = async ({
         projectFiles,
         isStartMode,
         validationFile,
+        validFileTypes,
       }),
   });
   if (results.type !== 'confirm') {
@@ -53,5 +56,5 @@ export const openNewFilePrompt = async ({
     folderId,
   });
 
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE);
 };

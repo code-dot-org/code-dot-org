@@ -1,6 +1,15 @@
 require 'test_helper'
 
 class CertificateImageTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
+  setup_all do
+    create_csf_unit 'course1'
+    create_csf_unit 'course2'
+    create_csf_unit 'course3'
+    create_csf_unit 'course4'
+  end
+
   def test_special_template_courses
     assert CertificateImage.prefilled_title_course?('hourofcode') # 2014
     assert CertificateImage.prefilled_title_course?('flappy')
@@ -34,7 +43,7 @@ class CertificateImageTest < ActiveSupport::TestCase
   end
 
   def test_pl_course_template
-    course_version = create :course_version, :with_unit
+    course_version = create(:course_version, :with_single_unit_course)
     course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
     assert_equal 'self_paced_pl_certificate.png', CertificateImage.certificate_template_for(course_version.name)
   end
@@ -58,7 +67,7 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_image hoc_certificate_image_with_too_long_name, 1754, 1235, 'JPEG'
     unspecified_course_image = CertificateImage.create_course_certificate_image('Robot Tester', nil)
     assert_image unspecified_course_image, 1754, 1235, 'JPEG'
-    blank_named_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', nil, 'Course 1')
+    blank_named_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'Course 1')
     assert_image blank_named_certificate_image, 1754, 1240, 'PNG'
     twenty_hour_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', '20-hour')
     assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
@@ -66,17 +75,11 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_image accelerated_certificate_image, 1754, 1240, 'JPEG'
 
     # Create course certificates with nil and empty values
-    nil_name_course_certificate_image = CertificateImage.create_course_certificate_image(nil, 'course1', 'sponsor', 'Course 1')
-    assert_image nil_name_course_certificate_image, 1754, 1240, 'PNG'
-    nil_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', nil, 'Course 1')
+    nil_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'Course 1')
     assert_image nil_sponsor_course_certificate_image, 1754, 1240, 'PNG'
-    nil_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'sponsor', nil)
-    assert_image nil_title_course_certificate_image, 1754, 1240, 'PNG'
-    empty_name_course_certificate_image = CertificateImage.create_course_certificate_image('', 'course1', 'sponsor', 'Course 1')
+    empty_name_course_certificate_image = CertificateImage.create_course_certificate_image('', 'course1', 'Course 1')
     assert_image empty_name_course_certificate_image, 1754, 1240, 'PNG'
-    empty_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', '', 'Course 1')
-    assert_image empty_sponsor_course_certificate_image, 1754, 1240, 'PNG'
-    empty_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'sponsor', '')
+    empty_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', '')
     assert_image empty_title_course_certificate_image, 1754, 1240, 'PNG'
 
     # Entered name "à Test Namé" on /congrats/course1
@@ -93,7 +96,7 @@ class CertificateImageTest < ActiveSupport::TestCase
   end
 
   def test_pl_certificate_image_generation
-    course_version = create :course_version, :with_unit
+    course_version = create(:course_version, :with_single_unit_course)
     course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
     pl_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', course_version.name)
     assert_image pl_certificate_image, 2526, 1786, 'PNG'
@@ -117,19 +120,22 @@ class CertificateImageTest < ActiveSupport::TestCase
   end
 
   def test_hoc_course
-    coursea = create :script, name: "coursea-2021", is_course: true
-    create :course_version, content_root: coursea
+    coursea = create(:script, name: "coursea-2021")
+    coursea_course = create(:single_unit_course, unit: coursea, name: "coursea-2021", family_name: 'coursea', version_year: '2021')
+    create(:course_version, content_root: coursea_course)
 
-    csp = create :unit_group, name: 'csp-2021'
-    create :course_version, content_root: csp
+    csp = create(:unit_group, name: 'csp-2021')
+    create(:course_version, content_root: csp)
 
-    hello = create :script, name: 'hello', is_course: true
-    cv = create :course_version, content_root: hello
-    create :course_offering, course_versions: [cv], key: 'hello', marketing_initiative: 'HOC'
+    hello = create(:script, name: 'hello')
+    hello_course = create(:single_unit_course, unit: hello)
+    cv = create(:course_version, content_root: hello_course)
+    create(:course_offering, course_versions: [cv], key: 'hello', marketing_initiative: 'HOC')
 
-    other = create :script, name: 'other', is_course: true
-    cv = create :course_version, content_root: other
-    create :course_offering, course_versions: [cv], key: 'other', marketing_initiative: 'CSF'
+    other = create(:script, name: 'other')
+    other_course = create(:single_unit_course, unit: other)
+    cv = create(:course_version, content_root: other_course)
+    create(:course_offering, course_versions: [cv], key: 'other', marketing_initiative: 'CSF')
 
     assert CertificateImage.hoc_course?('flappy')
     assert CertificateImage.hoc_course?('music-jam-2024')
@@ -139,7 +145,6 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert CertificateImage.hoc_course?('kodable')
     assert CertificateImage.hoc_course?('hello')
 
-    # course1 is created by dashboard test fixtures
     refute CertificateImage.hoc_course?('course1')
     refute CertificateImage.hoc_course?('coursea-2021')
     refute CertificateImage.hoc_course?('csp-2021')
@@ -152,5 +157,12 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert info_line.match(/#{width}x/)
     assert info_line.match(/x#{height}/)
     image&.destroy!
+  end
+
+  private def create_csf_unit(name)
+    unit = create(:unit, name: name)
+    unit_group = create(:single_unit_course, :stable, unit: unit, name: name)
+    CourseOffering.add_course_offering(unit_group)
+    unit
   end
 end

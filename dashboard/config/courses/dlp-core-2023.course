@@ -3,6 +3,9 @@
   "script_names": [
     "dlp-core-2023"
   ],
+  "original_script_names": [
+    "dlp-core-2023"
+  ],
   "published_state": "in_development",
   "instruction_type": "self_paced",
   "participant_audience": "facilitator",

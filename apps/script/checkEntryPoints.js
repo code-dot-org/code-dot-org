@@ -41,6 +41,9 @@
 const chalk = require('chalk');
 const child_process = require('child_process');
 
+const {PEGASUS_ENTRIES} = require('../webpackEntryPoints');
+const hasPegasusContent = process.env.HAS_PEGASUS_CONTENT !== 'false';
+
 const SILENCED = [
   // app types loaded conditionally from _apps_dependencies.html.haml
   'ailab',
@@ -92,7 +95,10 @@ const SILENCED = [
   'googleblockly',
   'brambleHost',
   'levelbuilder',
-];
+
+  // needed to initialize the locales before all other app code loads
+  'localization',
+].concat(hasPegasusContent ? [] : Object.keys(PEGASUS_ENTRIES));
 const SITES_CONFIG = {
   studio: {
     entryPrefix: '',

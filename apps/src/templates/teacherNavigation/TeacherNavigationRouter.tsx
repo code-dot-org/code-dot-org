@@ -11,10 +11,12 @@ import {
   useLocation,
   generatePath,
   useParams,
+  ScrollRestoration,
 } from 'react-router-dom';
 
-import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
+import AITutorAccessControls from '@cdo/apps/aiTutor/views/teacherDashboard/AITutorAccessControls';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
+import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {sectionDoesNotHaveNewData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -25,8 +27,9 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import {TeacherHomepage} from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
+import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
+import SkillsDashboard from '../teacherDashboard/skillsDashboard/SkillsDashboard';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import {
   sectionProviderName,
@@ -73,7 +76,7 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
-  showAITutorTab: boolean;
+  canEnableAITutor: boolean;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -82,7 +85,7 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
-  showAITutorTab,
+  canEnableAITutor,
 }) => {
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -94,13 +97,14 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     [selectedSection]
   );
 
-  const sectionHasAITutor = React.useMemo(
-    () =>
-      selectedSection
-        ? selectedSection.courseVersionName?.includes('csa') ||
-          selectedSection.courseVersionName?.includes('aitutor')
-        : false,
-    [selectedSection]
+  // TODO-AITUTOR: Ideally we want to check if the section has any units with Unit.has_ai_tutor_level?
+  // but I'm not sure how to plumb that information through to here.
+  // for ai tutor pilot, I think we are OK with showing the tutor tab for any section for teachers in the pilot.
+  const sectionHasAITutor = !!selectedSection;
+
+  const showAITutorTab = React.useMemo(
+    () => canEnableAITutor && sectionHasAITutor,
+    [canEnableAITutor, sectionHasAITutor]
   );
 
   const studentCount = useAppSelector(
@@ -126,7 +130,8 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div>
-                <TeacherHomepage />
+                <TeacherHomepage studioUrlPrefix={studioUrlPrefix} />
+                <ScrollRestoration />
               </div>
             </>
           }
@@ -140,6 +145,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               />
               <div className={styles.pageAndSidebar}>
                 <TeacherNavigationBar showAITutorTab={showAITutorTab} />
+                <ScrollRestoration />
                 <Outlet />
               </div>
             </>
@@ -222,9 +228,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                     <GlobalEditionWrapper
                       component={SectionProgressSelector}
                       componentId="SectionProgressSelector"
-                      props={{
-                        isInV1Navigaton: false,
-                      }}
+                      props={{}}
                     />
                   }
                 />
@@ -271,6 +275,10 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               element={<UnitCalendar />}
             />
             <Route
+              path={TEACHER_NAVIGATION_PATHS.nestedUnitOverview}
+              element={<TeacherUnitOverview />}
+            />
+            <Route
               path={TEACHER_NAVIGATION_PATHS.courseOverview}
               element={
                 <ElementOrEmptyPage
@@ -313,15 +321,15 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               }
             />
             <Route
-              path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
+              path={TEACHER_NAVIGATION_PATHS.aiTutor}
               element={
-                showAITutorTab && sectionHasAITutor ? (
+                showAITutorTab ? (
                   <ElementOrEmptyPage
                     showNoStudents={studentCount === 0}
                     showNoCurriculumAssigned={false}
-                    element={applyV1TeacherDashboardWidth(
-                      <TutorTab sectionId={sectionId || 0} />
-                    )}
+                    element={
+                      <AITutorAccessControls sectionId={sectionId || 0} />
+                    }
                   />
                 ) : (
                   <Navigate
@@ -331,6 +339,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 )
               }
             />
+            {DCDO.get('skills-dashboard', false) && (
+              <Route
+                path={TEACHER_NAVIGATION_PATHS.skills}
+                element={<SkillsDashboard />}
+              />
+            )}
           </Route>
         </Route>
       </Route>
@@ -344,7 +358,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       showAITutorTab,
       selectedSection,
       studioUrlPrefix,
-      sectionHasAITutor,
     ]
   );
 

@@ -1,0 +1,9 @@
+name 'ai-powered-threats-defenses-lesson12-level1_2025-pilot'
+display_name 'Exploring App Vulnerabilities'
+description 'Choose ONE of the four apps below. Then complete the questions in your Activity Guide.'
+
+sublevels
+level 'ai-powered-threats-defenses-lesson12-level1a_2025-pilot'
+level 'ai-powered-threats-defenses-lesson12-level1b_2025-pilot'
+level 'ai-powered-threats-defenses-lesson12-level1c_2025-pilot'
+level 'ai-powered-threats-defenses-lesson12-level1d_2025-pilot'

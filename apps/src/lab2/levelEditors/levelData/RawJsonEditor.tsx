@@ -41,16 +41,6 @@ const RawJsonEditor: React.FunctionComponent<RawJsonEditorProps> = ({
 
   return (
     <div className={moduleStyles.section}>
-      {editing ? (
-        <textarea
-          name={fieldName}
-          value={currentValueString}
-          onChange={event => setCurrentValueString(event.target.value)}
-          className={moduleStyles.textarea}
-        />
-      ) : (
-        <p className={moduleStyles.renderedJson}>{currentValueString}</p>
-      )}
       <div className={moduleStyles.row}>
         <Button
           text={editing ? 'Done' : 'Edit'}
@@ -78,6 +68,16 @@ const RawJsonEditor: React.FunctionComponent<RawJsonEditorProps> = ({
           />
         )}
       </div>
+      {editing ? (
+        <textarea
+          name={fieldName}
+          value={currentValueString}
+          onChange={event => setCurrentValueString(event.target.value)}
+          className={moduleStyles.textarea}
+        />
+      ) : (
+        <p className={moduleStyles.renderedJson}>{currentValueString}</p>
+      )}
     </div>
   );
 };

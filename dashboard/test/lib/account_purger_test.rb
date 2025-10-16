@@ -12,7 +12,7 @@ class AccountPurgerTest < ActiveSupport::TestCase
     PurgedAccountLog.any_instance.stubs(:upload)
 
     # Example accounts
-    @student = create :student
+    @student = create(:student)
   end
 
   test 'can construct with no arguments - all defaults' do

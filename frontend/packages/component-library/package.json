@@ -42,6 +42,14 @@
       "import": "./dist/esm/actionBlock/index.mjs",
       "require": "./dist/cjs/actionBlock/index.js"
     },
+    "./actionBlock/fullWidthActionBlock": {
+      "types": {
+        "import": "./dist/esm/actionBlock/fullWidthActionBlock/index.d.ts",
+        "require": "./dist/cjs/actionBlock/fullWidthActionBlock/index.d.ts"
+      },
+      "import": "./dist/esm/actionBlock/fullWidthActionBlock/index.mjs",
+      "require": "./dist/cjs/actionBlock/fullWidthActionBlock/index.js"
+    },
     "./alert": {
       "types": {
         "import": "./dist/esm/alert/index.d.ts",
@@ -100,6 +108,38 @@
       "import": "./dist/esm/closeButton/index.mjs",
       "require": "./dist/cjs/closeButton/index.js"
     },
+    "./cms/editorialCard": {
+      "types": {
+        "import": "./dist/esm/cms/editorialCard/index.d.ts",
+        "require": "./dist/cjs/cms/editorialCard/index.d.ts"
+      },
+      "import": "./dist/esm/cms/editorialCard/index.mjs",
+      "require": "./dist/cjs/cms/editorialCard/index.js"
+    },
+    "./cms/footer": {
+      "types": {
+        "import": "./dist/esm/cms/footer/index.d.ts",
+        "require": "./dist/cjs/cms/footer/index.d.ts"
+      },
+      "import": "./dist/esm/cms/footer/index.mjs",
+      "require": "./dist/cjs/cms/footer/index.js"
+    },
+    "./cms/header": {
+      "types": {
+        "import": "./dist/esm/cms/header/index.d.ts",
+        "require": "./dist/cjs/cms/header/index.d.ts"
+      },
+      "import": "./dist/esm/cms/header/index.mjs",
+      "require": "./dist/cjs/cms/header/index.js"
+    },
+    "./cms/heroBanner": {
+      "types": {
+        "import": "./dist/esm/cms/heroBanner/index.d.ts",
+        "require": "./dist/cjs/cms/heroBanner/index.d.ts"
+      },
+      "import": "./dist/esm/cms/heroBanner/index.mjs",
+      "require": "./dist/cjs/cms/heroBanner/index.js"
+    },
     "./cms/iconHighlight": {
       "types": {
         "import": "./dist/esm/cms/iconHighlight/index.d.ts",
@@ -125,6 +165,30 @@
       "require": "./dist/cjs/cms/section/index.js"
     },
     "./cms/section/index.css": "./dist/esm/cms/section/index.css",
+    "./cms/skinnyBanner": {
+      "types": {
+        "import": "./dist/esm/cms/skinnyBanner/index.d.ts",
+        "require": "./dist/cjs/cms/skinnyBanner/index.d.ts"
+      },
+      "import": "./dist/esm/cms/skinnyBanner/index.mjs",
+      "require": "./dist/cjs/cms/skinnyBanner/index.js"
+    },
+    "./cms/snapshot": {
+      "types": {
+        "import": "./dist/esm/cms/snapshot/index.d.ts",
+        "require": "./dist/cjs/cms/snapshot/index.d.ts"
+      },
+      "import": "./dist/esm/cms/snapshot/index.mjs",
+      "require": "./dist/cjs/cms/snapshot/index.js"
+    },
+    "./cms/spacer": {
+      "types": {
+        "import": "./dist/esm/cms/spacer/index.d.ts",
+        "require": "./dist/cjs/cms/spacer/index.d.ts"
+      },
+      "import": "./dist/esm/cms/spacer/index.mjs",
+      "require": "./dist/cjs/cms/spacer/index.js"
+    },
     "./cms/tabGroup": {
       "types": {
         "import": "./dist/esm/cms/tabGroup/index.d.ts",
@@ -132,6 +196,14 @@
       },
       "import": "./dist/esm/cms/tabGroup/index.mjs",
       "require": "./dist/cjs/cms/tabGroup/index.js"
+    },
+    "./cms/testimonial": {
+      "types": {
+        "import": "./dist/esm/cms/testimonial/index.d.ts",
+        "require": "./dist/cjs/cms/testimonial/index.d.ts"
+      },
+      "import": "./dist/esm/cms/testimonial/index.mjs",
+      "require": "./dist/cjs/cms/testimonial/index.js"
     },
     "./common/constants": {
       "types": {
@@ -240,11 +312,19 @@
     },
     "./formFieldWrapper": {
       "types": {
-        "import": "./dist/esm/formFieldWrapper/index.d.mts",
+        "import": "./dist/esm/formFieldWrapper/index.d.ts",
         "require": "./dist/cjs/formFieldWrapper/index.d.ts"
       },
       "import": "./dist/esm/formFieldWrapper/index.mjs",
       "require": "./dist/cjs/formFieldWrapper/index.js"
+    },
+    "./heroBanner": {
+      "types": {
+        "import": "./dist/esm/heroBanner/index.d.ts",
+        "require": "./dist/cjs/heroBanner/index.d.ts"
+      },
+      "import": "./dist/esm/heroBanner/index.mjs",
+      "require": "./dist/cjs/heroBanner/index.js"
     },
     "./image": {
       "types": {
@@ -404,9 +484,10 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "dompurify": "^3.2.4",
+    "@mui/material": "^7.3.2",
     "lodash": "^4.17.21",
-    "react-player": "^3.0.0-canary.4"
+    "react-player": "^3.0.0-canary.4",
+    "react-schemaorg": "^2.0.0"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
@@ -431,7 +512,7 @@
     "eslint": "^9.15.0",
     "eslint-plugin-jest": "^28.9.0",
     "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-storybook": "^0.11.1",
+    "eslint-plugin-storybook": "^9.0.18",
     "glob": "^11.0.0",
     "globals": "^15.12.0",
     "identity-obj-proxy": "^3.0.0",
@@ -444,6 +525,7 @@
     "react-dom": "^18.3.1",
     "release-it": "^18.1.2",
     "rimraf": "^6.0.1",
+    "schema-dts": "^1.1.5",
     "stylelint": "^16.14.1",
     "swiper": "^11.0.5",
     "tsc-alias": "^1.8.11",
@@ -453,7 +535,6 @@
   },
   "peerDependencies": {
     "classnames": "^2.5.1",
-    "dompurify": "^3.2.4",
     "react": ">=16",
     "react-dom": ">=16",
     "swiper": "^11.0.5"

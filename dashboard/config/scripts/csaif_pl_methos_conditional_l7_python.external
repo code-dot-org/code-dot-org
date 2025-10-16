@@ -9,6 +9,7 @@ markdown <<MARKDOWN
 
 #### These methods help determine movement, paint status, and direction, allowing the Painter to make decisions before taking action.
 
+#### Notice these boolean statements can be evaluated as **true** or **false**.
 
 <table border="1" cellspacing="0" cellpadding="5">
     <tr>
@@ -43,5 +44,5 @@ markdown <<MARKDOWN
 
 
 
-##Let's try creating Conditional Statements! 
+##Let's continue! 
 MARKDOWN

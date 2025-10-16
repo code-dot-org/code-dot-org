@@ -20,6 +20,18 @@ describe('Image Component', () => {
     expect(figure.className).toMatch(/figure-hasBoxShadow/);
   });
 
+  it('applies rounded corners class', () => {
+    render(
+      <Image
+        src="test.jpg"
+        altText="Has rounded corners"
+        hasRoundedCorners={true}
+      />,
+    );
+    const figure = screen.getByRole('figure');
+    expect(figure.className).toMatch(/figure-hasRoundedCorners/);
+  });
+
   it('renders Image with provided className styles', () => {
     const className = 'customClass';
     const cssSelector = `figure.${className}`;
@@ -82,5 +94,18 @@ describe('Image Component', () => {
     render(<Image src="test.jpg" altText="Eager load" loading="eager" />);
     const img = screen.getByRole('img');
     expect(img).toHaveAttribute('loading', 'eager');
+  });
+
+  it('renders with a custom ImageComponent if provided', () => {
+    // Simulate a custom ImageComponent prop
+    const CustomImg = (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
+      <img alt="abc" data-testid="custom-img" {...props} />
+    );
+
+    render(
+      <Image src="test.jpg" altText="Custom" ImageComponent={CustomImg} />,
+    );
+    // If ImageComponent is supported, this should pass
+    expect(screen.getByTestId('custom-img')).toBeInTheDocument();
   });
 });

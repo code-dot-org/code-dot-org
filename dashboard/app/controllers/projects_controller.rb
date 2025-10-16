@@ -186,6 +186,12 @@ class ProjectsController < ApplicationController
     },
     transformers: {
       name: 'New Transformers Project'
+    },
+    weblab2: {
+      name: 'New Web Lab 2 Project',
+    },
+    music_dance_ai: {
+      name: "New Music Dance AI Project"
     }
     # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze
@@ -313,10 +319,29 @@ class ProjectsController < ApplicationController
 
   def create_new
     return if redirect_under_13_without_tos_teacher(@level)
+    project_data = initial_data
+
+    # Bubble Choice standalone project types allow multiple sub-projects to be associated with one parent project.
+    # Create new projects for each sublevel
+    if @level.is_a?(BubbleChoice)
+      project_data[:subprojects] =  @level.sublevels.map do |sublevel|
+        {
+          level_id: sublevel.id,
+          project_id: ChannelToken.create_channel(
+            request.ip,
+            Projects.new(get_storage_id),
+            data: {hidden: true},
+            level: sublevel.host_level,
+            standalone: false
+          )
+        }
+      end
+    end
+
     channel = ChannelToken.create_channel(
       request.ip,
       Projects.new(get_storage_id),
-      data: initial_data,
+      data: project_data,
       type: params[:key]
     )
     redirect_to(
@@ -453,6 +478,14 @@ class ProjectsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
+    if @level.uses_theme_preference?
+      user_theme = current_user ? UserPreference.find_by(user_id: current_user.id)&.theme : nil
+      theme_preference = user_theme['global'] if user_theme
+      if theme_preference
+        @body_classes = "background-#{theme_preference&.downcase}"
+      end
+    end
+
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
@@ -555,16 +588,7 @@ class ProjectsController < ApplicationController
     begin
       storage_id, _ = storage_decrypt_channel_id(channel_id)
       Projects.new(storage_id).publish(channel_id, project_type, current_user)
-    rescue Projects::PublishError => exception
-      Honeybadger.notify(
-        exception.message,
-        context: {
-          message: "Project publish failed - user unexpectedly bypassed submission_status restriction in the share dialog and project submit authorization restrictions and attempted to publish project."
-        }
-      )
-      return render(status: :forbidden, json: {error: exception.message})
     end
-    # TODO: Store submission_description in our database.
     # Send ZenDesk ticket with user/project info and submission description.
     send_project_submission(current_user.name || '', current_user.username || '', project_type, channel_id, submission_description)
   end

@@ -5,7 +5,7 @@ describe I18n::Resources::Dashboard::DeviseContent::SyncIn do
   let(:described_class) {I18n::Resources::Dashboard::DeviseContent::SyncIn}
   let(:described_instance) {described_class.new}
 
-  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/devise.en.yml')}
+  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/devise/en.yml')}
   let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/dashboard/devise.yml')}
 
   around do |test|

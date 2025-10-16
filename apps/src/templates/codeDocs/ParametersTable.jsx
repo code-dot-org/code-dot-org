@@ -24,6 +24,7 @@ export default function ParametersTable({
   parameters,
   programmingEnvironmentLanguage,
   isSmallWindow,
+  isBlockly,
 }) {
   const descriptionFormatter = description => {
     if (description) {
@@ -38,7 +39,8 @@ export default function ParametersTable({
     }
   };
 
-  const hideRequiredColumn = programmingEnvironmentLanguage === 'java';
+  const hideRequiredColumn =
+    programmingEnvironmentLanguage === 'java' || isBlockly;
   let cellStyle = tableLayoutStyles.cell;
   if (isSmallWindow) {
     cellStyle = {...cellStyle, ...styles.smallCell};
@@ -134,6 +136,7 @@ ParametersTable.propTypes = {
   parameters: PropTypes.arrayOf(PropTypes.object),
   programmingEnvironmentLanguage: PropTypes.string,
   isSmallWindow: PropTypes.bool,
+  isBlockly: PropTypes.bool,
 };
 
 const styles = {

@@ -1,29 +1,16 @@
 name 'csp-9-exam1-parallel-data2022_2025'
 editor_experiment ''
-wrong 'Data analysis involving two or more columns of data'
-wrong 'Data analysis involving both string and numeric data'
-right 'Data analysis involving large datasets'
-wrong 'Data analysis that could result in two or more different types of visualizations'
-
-
-
-
+wrong 'The computer cannot be trained to recognize images without internet access'
+wrong 'The students labeled too many images as `not fish`'
+right 'The training data did not include enough examples of different kinds of sea creatures'
+wrong 'The computer randomly chooses labels once trained'
 
 markdown <<MARKDOWN
-In which of the following situations would parallel systems MOST likely be used to help analyze data?
-
+A class is using a program that identifies images of fish in order to clean trash from a digital ocean. After students train the model using images labeled as “fish” or “not fish,” the model begins misclassifying certain sea creatures. What is the most likely cause of this error?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-**Explanation:** Since parallel systems are easily scalable, they lend themselves to handing data sets too big to be processed on one computer.
-
- [Lesson 5 - Big, Open, and Crowdsourced Data](https://studio.code.org/s/csp9-2022/lessons/5) included a synthesis of all the topics from the jigsaw activity in the wrap up.
-
-::: details [**Essential Knowledge Connected To This Question**]
-
-
-* DAT-2.C: Identify the challenges associated with processing data.
-:::
+**Explanation:** The accuracy of a machine learning model depends on the quality and diversity of its training data. If certain types of sea creatures were missing from the training set, the model will not be able to recognize them later
 MARKDOWN
 
 allow_multiple_attempts true

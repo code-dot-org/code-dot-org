@@ -1,7 +1,10 @@
+import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
 import i18n from '@cdo/locale';
 
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
+import {GENERATED_DANCER} from '../constants';
+import {resolveDancerAssets} from '../lottie/LottieDancerUtils';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -75,6 +78,32 @@ const customInputTypes = {
       return block.getFieldValue(arg.name);
     },
   },
+  dancerPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const options = inputConfig.options.map(option => {
+        let name = option;
+        // Options may be JSON-encoded strings (ex. "/"BEAR/"") or simple strings (ex. "sprites").
+        // Blockly needs the full option for code generation, but we just want the name for the head image URL.
+        try {
+          name = JSON.parse(name);
+        } catch {}
+        if (name === GENERATED_DANCER) {
+          const {headUrl} = resolveDancerAssets({sourceTag: 'blockly'});
+          return [headUrl, option];
+        }
+        return [`/blockly/media/skins/dance/${name.toLowerCase()}.png`, option];
+      });
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldImageDropdown(options, 40, 40),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      return block.getFieldValue(arg.name);
+    },
+  },
 };
 
 export default {
@@ -84,7 +113,7 @@ export default {
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 
-    const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
+    const behaviorEditor = (Blockly.behaviorEditor = new FunctionEditor(
       {
         FUNCTION_HEADER: i18n.behaviorEditorHeader(),
         FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),

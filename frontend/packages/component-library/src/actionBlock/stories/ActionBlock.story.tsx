@@ -1,10 +1,12 @@
 import image1 from '@public/images/action-block-01.png';
 import image2 from '@public/images/action-block-02.png';
 import image3 from '@public/images/action-block-03.png';
-import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect} from 'storybook/test';
 
-import ActionBlock, {FullWidthActionBlock, ActionBlockProps} from '../index';
+import Video from '@/video';
+
+import ActionBlock, {ActionBlockProps} from '../index';
 
 export default {
   title: 'DesignSystem/Action Block',
@@ -37,7 +39,7 @@ const DESCRIPTION_LONG =
 const defaultArgs: ActionBlockProps = {
   title: 'Action block title',
   description: DESCRIPTION,
-  image: image1,
+  image: {src: image1},
   overline: 'Overline Text',
   background: 'primary',
   primaryButton: {
@@ -69,7 +71,7 @@ export const DefaultActionBlocks: Story = {
         }}
       >
         <ActionBlock {...args} />
-        <ActionBlock {...args} image={image2} />
+        <ActionBlock {...args} image={{src: image2}} />
       </div>
     );
   },
@@ -121,37 +123,41 @@ export const DefaultActionBlocks: Story = {
   },
 };
 
-export const DefaultFullWidthActionBlock: Story = {
+export const WithTag: Story = {
   args: {
     ...defaultArgs,
+    tag: 'New',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Shows a "New" tag.',
+      },
+    },
   },
   render: args => {
-    return <FullWidthActionBlock {...args} />;
+    return (
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
+        }}
+      >
+        <ActionBlock {...args} />
+        <ActionBlock {...args} image={{src: image2}} />
+      </div>
+    );
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const title = await canvas.findByText('Action block title');
-    const description = await canvas.findByText(DESCRIPTION);
-    const overline = await canvas.findByText('Overline Text');
-    const image = await canvas.findByAltText('');
-    const primaryButton = await canvas.findByLabelText(
-      'Primary Button aria label',
-    );
-    const secondaryButton = await canvas.findByLabelText(
-      'Secondary Button aria label',
-    );
+    const newTags = await canvas.findAllByText('New');
 
-    // check if image is visible
-    await expect(image).toBeVisible();
-
-    // check if text content is visible
-    await expect(title).toBeVisible();
-    await expect(description).toBeVisible();
-    await expect(overline).toBeVisible();
-
-    // check if buttons are visible
-    await expect(primaryButton).toBeVisible();
-    await expect(secondaryButton).toBeVisible();
+    // check if New tag is visible
+    await expect(newTags).toHaveLength(2);
+    for (const tag of newTags) {
+      await expect(tag).toBeVisible();
+    }
   },
 };
 
@@ -182,7 +188,7 @@ export const WithDetail: Story = {
         />
         <ActionBlock
           {...args}
-          image={image2}
+          image={{src: image2}}
           details={{label: 'Duration', description: '2 weeks'}}
         />
       </div>
@@ -220,7 +226,7 @@ export const WithoutSecondaryButton: Story = {
         }}
       >
         <ActionBlock {...args} />
-        <ActionBlock {...args} image={image2} />
+        <ActionBlock {...args} image={{src: image2}} />
       </div>
     );
   },
@@ -263,16 +269,23 @@ export const WithSecondaryBackground: Story = {
         style={{
           backgroundColor: 'var(--background-neutral-secondary)',
           padding: '2rem',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
         }}
       >
-        <FullWidthActionBlock {...args} />
+        <ActionBlock {...args} overline={'Overline One'} />
+        <ActionBlock {...args} />
       </div>
     );
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const image = await canvas.findByRole('figure');
-    const actionBlock = image.closest('div');
+    const titles = await canvas.findAllByText('Action block title');
+    const title = titles[0];
+    const textWrapper = title.parentElement;
+    const actionBlock = textWrapper?.parentElement;
+
     const expectedBackgroundColor = window
       .getComputedStyle(document.body)
       .getPropertyValue('--background-neutral-primary');
@@ -280,6 +293,33 @@ export const WithSecondaryBackground: Story = {
     // check if background color is white
     await expect(actionBlock).toHaveStyle(
       `background-color: ${expectedBackgroundColor};`,
+    );
+  },
+};
+
+export const WithVideo: Story = {
+  args: {
+    ...defaultArgs,
+    title: 'Watch Our Mission',
+    description: 'See how we’re making an impact.',
+    video: {
+      videoTitle: 'What Most Schools Don’t Teach',
+      youTubeId: 'nKIu9yen5nc',
+      isYouTubeCookieAllowed: true,
+    },
+    VideoComponent: Video,
+  },
+  render: args => {
+    return (
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
+        }}
+      >
+        <ActionBlock {...args} />
+      </div>
     );
   },
 };
@@ -292,7 +332,7 @@ export const ThreeAcross: Story = {
     docs: {
       description: {
         story:
-          'If there are more than six action blocks in a section use a carousel.',
+          'Carousels are recommended for sections with 4+ action blocks, but up to six can be displayed simultaneously.',
       },
     },
   },
@@ -306,8 +346,16 @@ export const ThreeAcross: Story = {
         }}
       >
         <ActionBlock {...args} />
-        <ActionBlock {...args} image={image2} description={DESCRIPTION_LONG} />
-        <ActionBlock {...args} image={image3} description={DESCRIPTION_MED} />
+        <ActionBlock
+          {...args}
+          image={{src: image2}}
+          description={DESCRIPTION_LONG}
+        />
+        <ActionBlock
+          {...args}
+          image={{src: image3}}
+          description={DESCRIPTION_MED}
+        />
       </div>
     );
   },

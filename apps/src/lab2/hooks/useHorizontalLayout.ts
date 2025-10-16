@@ -2,12 +2,14 @@ import {throttle} from 'lodash';
 import {useCallback, useEffect, useMemo, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
-import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
+import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {
   ColumnPanelConfig,
   RowPanelConfig,
 } from '@cdo/apps/lab2/views/components/layout/types';
+
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 // The top Y coordinate of the panel. This is the height of the main page header.
 const PANEL_TOP_COORDINATE = 50;
@@ -18,6 +20,8 @@ interface UseHorizontalLayoutProps {
   rightBottomPanel: RowPanelConfig;
   minRightPanelWidth: number;
   appName: string;
+  heightOffset?: number;
+  showingRightmostPanel?: boolean;
 }
 /**
  * Hook that manages the layout of a lab with 3 resizable panels.
@@ -33,7 +37,9 @@ export const useHorizontalLayout = ({
   rightTopPanel,
   rightBottomPanel,
   minRightPanelWidth,
+  showingRightmostPanel,
   appName,
+  heightOffset = 0,
 }: UseHorizontalLayoutProps) => {
   const [rightPanelWidth, setRightPanelWidth] = useState<number | undefined>(
     undefined
@@ -47,6 +53,7 @@ export const useHorizontalLayout = ({
   const [rightBottomPanelHeight, setrightBottomPanelHeight] = useState<
     number | undefined
   >(rightBottomPanel.initialHeight);
+  const rightmostPanelWidth = 300;
 
   const {
     position: rawLeftPanelWidth,
@@ -82,7 +89,10 @@ export const useHorizontalLayout = ({
 
   const adjustRightPanelWidth = useCallback(() => {
     const newRightPanelWidth = Math.max(
-      window.innerWidth - rawLeftPanelWidth - RESIZE_BAR_SIZE_PX,
+      window.innerWidth -
+        rawLeftPanelWidth -
+        RESIZE_BAR_SIZE_PX -
+        (showingRightmostPanel ? rightmostPanelWidth : 0),
       minRightPanelWidth
     );
     setRightPanelWidth(newRightPanelWidth);
@@ -94,7 +104,12 @@ export const useHorizontalLayout = ({
       leftPanel.minWidth
     );
     setLeftPanelWidth(newLeftPanelWidth);
-  }, [leftPanel.minWidth, minRightPanelWidth, rawLeftPanelWidth]);
+  }, [
+    leftPanel.minWidth,
+    minRightPanelWidth,
+    rawLeftPanelWidth,
+    showingRightmostPanel,
+  ]);
 
   const throttledAdjustRightPanelWidth = useMemo(
     () => throttle(adjustRightPanelWidth, 30),
@@ -106,6 +121,7 @@ export const useHorizontalLayout = ({
       window.innerHeight -
         rawRightBottomPanelHeight -
         RESIZE_BAR_SIZE_PX -
+        heightOffset -
         PANEL_TOP_COORDINATE,
       rightTopPanel.minHeight
     );
@@ -116,12 +132,14 @@ export const useHorizontalLayout = ({
         window.innerHeight -
           newRightTopPanelHeight -
           RESIZE_BAR_SIZE_PX -
+          heightOffset -
           PANEL_TOP_COORDINATE
       ),
       rightBottomPanel.minHeight
     );
     setrightBottomPanelHeight(newRightBottomPanelHeight);
   }, [
+    heightOffset,
     rawRightBottomPanelHeight,
     rightBottomPanel.minHeight,
     rightTopPanel.minHeight,
@@ -149,6 +167,14 @@ export const useHorizontalLayout = ({
     throttledAdjustWorkspaceHeight();
   }, [throttledAdjustWorkspaceHeight]);
 
+  const panelClassName = useMemo(() => {
+    if (leftPanelDragging || rightBottomPanelDragging) {
+      return moduleStyles.resizingPanel;
+    } else {
+      return undefined;
+    }
+  }, [leftPanelDragging, rightBottomPanelDragging]);
+
   useEffect(() => {
     // Flexbox can handle adjusting the widths of the panel to fit the screen, but some
     // panels needs an accurate width in order to resize appropriately (for example, output panels
@@ -168,5 +194,7 @@ export const useHorizontalLayout = ({
     rightBottomPanelDragging,
     setLeftPanelSize,
     setRightBottomPanelSize,
+    rightmostPanelWidth,
+    panelClassName,
   };
 };

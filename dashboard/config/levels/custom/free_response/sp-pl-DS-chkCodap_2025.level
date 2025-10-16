@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check for Understanding",
-    "long_instructions": "####Reflecting on your experience with CODAP:\r\n \r\n- #### What has been the most interesting feature or tool you've learned to use so far?\r\n- #### How did the resulting visualizations help you gain new insights into the data?\r\n- #### How might you apply this in your classroom to enhance your students' understanding of the data?\r\n\r\n\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📝 Share in the forum!\r\n</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n####Participating in the <a href=\"https://forum.code.org/t/about-the-cs-ai-foundations-category/40251?u=plteam\" target=\"_blank\">Data Science Self-Paced PL Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Computer Science learner community. Please share your response to this reflection in the forum and take the time to read and respond to other educators' posts.\r\n\r\n### <a href=\"https://forum.code.org/t/reflecting-on-your-experience-with-codap/40257?u=plteam\" target=\"_blank\">Direct Link to this Forum Topic</a>\r\n\r\n\r\n</p></div>\r\n</details>\r\n",
+    "long_instructions": "####Reflecting on your experience with using **Google Sheets** for Data Visualization:\r\n \r\n- #### What has been the most interesting feature or tool you've learned to use so far?\r\n- #### How did the resulting visualizations help you gain new insights into the data?\r\n- #### How might you apply this in your classroom to enhance your students' understanding of the data?\r\n\r\n\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org/t/teaching-insights-from-data-and-ai-pl-reflection-google-sheets/41002?u=amanda.dennard1\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Share your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n\r\n\r\n</div>",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -15,10 +15,11 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "false"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-19T18:31:04.936+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-chkCodap\\\"\"],\"cloned_from\":\"sp-pl-DS-chkCodap\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-02-19T18:31:04.936+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-chkCodap\\\"\"],\"cloned_from\":\"sp-pl-DS-chkCodap\"},{\"changed_at\":\"2025-05-29 18:02:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-29 20:11:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

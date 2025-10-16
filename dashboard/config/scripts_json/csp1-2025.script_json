@@ -4,9 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "0c1d4a6d-db0a-4524-b19a-e4da191d64c6",
+          "notice": "Free 1:1 CSP Tutoring Available!",
+          "details": "Do you work at a Title 1 school? Your students qualify for free, 24/7 online tutoring in AP Computer Science Principles (CSP) and AP Computer Science A (CSA) through our non-profit partner, UPchieve!",
+          "link": "https://app.upchieve.org/sign-up/teacher/eligibility?utm_source=code&utm_medium=banner&utm_campaign=teacher_account",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Create an account"
+        }
+      ],
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -14,11 +27,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-11 18:19:31 UTC",
+    "serialized_at": "2025-08-25 18:19:47 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -29,50 +44,35 @@
   },
   "lesson_groups": [
     {
-      "key": "cspSurvey",
+      "key": "csp_unit1_2020",
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Survey"
+        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "cspSurvey",
+        "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2025"
       }
     },
     {
-      "key": "csp_unit1_2020",
+      "key": "lessonGroup-3",
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Unit 1: Digital Information"
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "lesson_group.key": "csp_unit1_2020",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csp1-2025"
       }
     }
   ],
   "lessons": [
     {
-      "key": "CS Principles Pre-survey",
-      "name": "CS Principles Pre-survey",
-      "absolute_position": 1,
-      "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "CS Principles Pre-survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csp1-2025"
-      }
-    },
-    {
       "key": "Welcome to CSP",
-      "name": "Welcome to CSP",
-      "absolute_position": 2,
+      "name": "Lesson 1: Welcome to CSP",
+      "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -91,8 +91,8 @@
     },
     {
       "key": "Representing Information",
-      "name": "Representing Information",
-      "absolute_position": 3,
+      "name": "Lesson 2: Representing Information",
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -111,8 +111,8 @@
     },
     {
       "key": "Circle Square Patterns",
-      "name": "Circle Square Patterns",
-      "absolute_position": 4,
+      "name": "Lesson 3: Circle Square Patterns",
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -131,8 +131,8 @@
     },
     {
       "key": "Binary Numbers",
-      "name": "Binary Numbers",
-      "absolute_position": 5,
+      "name": "Lesson 4: Binary Numbers",
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -151,8 +151,8 @@
     },
     {
       "key": "Overflow and Rounding",
-      "name": "Overflow and Rounding",
-      "absolute_position": 6,
+      "name": "Lesson 5: Overflow and Rounding",
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -171,8 +171,8 @@
     },
     {
       "key": "Representing Text",
-      "name": "Representing Text",
-      "absolute_position": 7,
+      "name": "Lesson 6: Representing Text",
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -191,8 +191,8 @@
     },
     {
       "key": "Black and White Images",
-      "name": "Black and White Images",
-      "absolute_position": 8,
+      "name": "Lesson 7: Black and White Images",
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -210,8 +210,8 @@
     },
     {
       "key": "Color Images",
-      "name": "Color Images",
-      "absolute_position": 9,
+      "name": "Lesson 8: Color Images",
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -229,8 +229,8 @@
     },
     {
       "key": "Lossless Compression",
-      "name": "Lossless Compression",
-      "absolute_position": 10,
+      "name": "Lesson 9: Lossless Compression",
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
@@ -248,8 +248,8 @@
     },
     {
       "key": "Lossy Compression",
-      "name": "Lossy Compression",
-      "absolute_position": 11,
+      "name": "Lesson 10: Lossy Compression",
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
@@ -267,8 +267,8 @@
     },
     {
       "key": "Intellectual Property",
-      "name": "Intellectual Property",
-      "absolute_position": 12,
+      "name": "Lesson 11: Intellectual Property",
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
@@ -287,8 +287,8 @@
     },
     {
       "key": "Project Digital Information Dilemmas",
-      "name": "Project Digital Information Dilemmas",
-      "absolute_position": 13,
+      "name": "Lesson 12: Project - Digital Information Dilemmas",
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
@@ -308,8 +308,8 @@
     },
     {
       "key": "Assessment Day",
-      "name": "Assessment Day",
-      "absolute_position": 14,
+      "name": "Lesson 13: Assessment Day",
+      "absolute_position": 13,
       "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 13,
@@ -325,22 +325,24 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2025"
       }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp1-2025"
+      }
     }
   ],
   "lesson_activities": [
-    {
-      "key": "e43ac8d6-b6aa-40e8-8e0e-1076102ae835",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e43ac8d6-b6aa-40e8-8e0e-1076102ae835",
-        "lesson.key": "CS Principles Pre-survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csp1-2025"
-      }
-    },
     {
       "key": "1c3558ef-580e-4a55-a27d-18eddc334749",
       "position": 1,
@@ -884,19 +886,21 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2025"
       }
-    }
-  ],
-  "activity_sections": [
+    },
     {
-      "key": "34dd46d0-a6c4-41e1-9685-c80473ac771f",
+      "key": "75ca4873-5915-4af2-a6d1-76290d2f83b3",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "34dd46d0-a6c4-41e1-9685-c80473ac771f",
-        "lesson_activity.key": "e43ac8d6-b6aa-40e8-8e0e-1076102ae835"
+        "lesson_activity.key": "75ca4873-5915-4af2-a6d1-76290d2f83b3",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp1-2025"
       }
-    },
+    }
+  ],
+  "activity_sections": [
     {
       "key": "da160af7-cd02-4831-ab49-7370ca869429",
       "position": 1,
@@ -918,7 +922,7 @@
       "key": "d66fa24a-c9c6-4813-ac38-760983c67e7b",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Ensure you are registered on Code Studio as a \"verified\" teacher account\n\n* Anyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Principles teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n\n[pull-right]\n\n![](https://images.code.org/0989bbfe1f2ee63670754387f9e3b523-pre-survey-screencap.png)\n\n[/pull-right]\n\n* To check if you have access:\n\n\t1. Navigate to the [Unit 1 overview page](https://studio.code.org/s/csp1)\n\t2. Do you see the CS Principles Pre-course Survey at the top of the unit overview page?\n\t3. If not, you need to verify your teacher account. Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take 5-7 business days to become a verified teacher, so please do this step early!\n\n* If you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n**Do This:** Create a class section on Code Studio.\n\n[pull-right]\n\n![](https://images.code.org/7faaa833d7aea4ddbd943ed1f2bd0ed0-sec-setup 1.png)\n\n\n[/pull-right]\n\n* You can either...\n\n\t* Go to the [r how_to_videos/csp/2025] for a video walkthrough of these steps and more on navigating your Code.org account.\n\n\t  Or...\n\n\t* Follow these steps to create a section:\n\n\t\t1. Navigate to the [My Dashboard](https://studio.code.org/home)\n\t\t2. Click 'New section' under 'Classroom Sections'\n\t\t3. Choose 'Email Logins' \n\t\t\t* If logged on through Google you can choose to sync to your Google Classroom.\n\t\t4. Give your section a name, and choose the most appropriate grade level of students in your class\n\t\t5. Set the course to be \"CS Principles\"\n\t\t6. Set the unit to be \"Unit 1: Digital Information\"\n\t\t7. *If you're NOT using Google Classroom:* Once the section is created, click the name of the section to show the unique \"join link\" for your section.\n",
+        "description": "**Do This:** Ensure you are registered on Code Studio as a \"verified\" teacher account\n\n* Anyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Principles teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. \n* If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n* If not, you need to verify your teacher account. Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take 5-7 business days to become a verified teacher, so please do this step early!\n\n**Do This:** Create a class section on Code Studio.\n\n![](https://images.code.org/7faaa833d7aea4ddbd943ed1f2bd0ed0-sec-setup 1.png)\n\n\n* You can either...\n\n\t* Go to the [r how_to_videos/csp/2025] for a video walkthrough of these steps and more on navigating your Code.org account.\n\n\t  Or...\n\n\t* Follow these steps to create a section:\n\n\t\t1. Navigate to the [My Dashboard](https://studio.code.org/home)\n\t\t2. Click 'New section' under 'Classroom Sections'\n\t\t3. Choose 'Email Logins' \n\t\t\t* If logged on through Google you can choose to sync to your Google Classroom.\n\t\t4. Give your section a name, and choose the most appropriate grade level of students in your class\n\t\t5. Set the course to be \"CS Principles\"\n\t\t6. Set the unit to be \"Unit 1: Digital Information\"\n\t\t7. *If you're NOT using Google Classroom:* Once the section is created, click the name of the section to show the unique \"join link\" for your section.\n",
         "name": "Before your first class\r"
       },
       "seeding_key": {
@@ -953,7 +957,7 @@
       "key": "5be698c2-e2da-41f7-9628-759322818051",
       "position": 5,
       "properties": {
-        "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to take the CSP Pre-Course survey",
+        "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.",
         "tips": [
           {
             "type": "teachingTip",
@@ -970,7 +974,7 @@
       "key": "629c7286-8015-438c-8c5e-b69c52793147",
       "position": 1,
       "properties": {
-        "description": "- Welcome to Computer Science Principles! This year we’re going to learn a lot about computer science, but before we begin, we want to learn a little bit about you and your thoughts on computer science in general. Let's take the CSP Pre-Course Survey.",
+        "description": "- Welcome to Computer Science Principles! This year we’re going to learn a lot about computer science, but before we begin, we want to learn a little bit about you and your thoughts on computer science in general.",
         "name": "Teacher Message\r",
         "remarks": true
       },
@@ -980,26 +984,8 @@
       }
     },
     {
-      "key": "61969684-b756-4391-b4bb-4babfe461fc1",
-      "position": 2,
-      "properties": {
-        "description": "**Do This:** Students can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how_to_administer_a_locked_assessment/csp/2025] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \r\n\r\n<img src=\"https://curriculum.code.org/media/uploads/presurvey.png\" style=\"width:400px\">",
-        "name": "Important! Have your students take the CSP Pre-Course Survey!\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**\"Why do the pre-course survey?\"**\n\n* A major goal of CS Principles is to broaden participation in computer science.  \n* It is *crucial* therefore to have insight into students' attitidues and beliefs about computer science *before* the course so that we can measure the amount of change that occured *after* the course is over.\n\n* Please note that this survey is **anonymous for students**\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\n   \nPlease help by having your students contribute to this vital dataset.  Their voices make the difference!\n\n**How much time does it take?**\n\n* The survey is roughly 40 quick response items. We expect it to take 5-10 minutes to complete.   You might consider administering it on an admin day at school, or as an early homework.\n* Because it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\n\nThank you!\n\n-- The Code.org Team\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "61969684-b756-4391-b4bb-4babfe461fc1",
-        "lesson_activity.key": "58794bff-3986-4826-8e53-1aab53a82d19"
-      }
-    },
-    {
       "key": "11e12c28-0d84-42ee-ab4f-dfad6b4be782",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "One thing that makes this class unique is that you have to invent solutions to problems and create things all the time, both alone and with others. Everyone has a unique and creative perspective they bring to the table.\r\n    \r\nLet’s start by seeing how creative we can be right now!",
         "name": "Topic Brainstorm\r",
@@ -1012,7 +998,7 @@
     },
     {
       "key": "eb846378-c787-40a2-974a-63fe2d14f54a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "**Do This:** Take out a journal or a piece of paper."
       },
@@ -1023,7 +1009,7 @@
     },
     {
       "key": "ace85fed-5755-4d69-becb-5ab2f286d05b",
-      "position": 5,
+      "position": 4,
       "properties": {
         "tips": [
           {
@@ -1039,7 +1025,7 @@
     },
     {
       "key": "c251fa8a-239a-4ad6-8550-8823d6c69285",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** What’s something that you know a lot about? Something that you could teach somebody?\""
       },
@@ -1050,7 +1036,7 @@
     },
     {
       "key": "b3bf8a5a-1b31-4729-b6de-33f149647433",
-      "position": 7,
+      "position": 6,
       "properties": {
         "tips": [
           {
@@ -1066,7 +1052,7 @@
     },
     {
       "key": "e4b98ea9-71d1-4858-af10-3f9ac8178d58",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": " **Discuss:** With a partner or a small group:\r\n\r"
       },
@@ -1077,7 +1063,7 @@
     },
     {
       "key": "776b324a-bd41-47d6-ac90-5df93db1e15e",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "* introduce yourself\r\n* explain the thing you know a lot about\r\n* tell the group something interesting about that topic"
       },
@@ -1890,7 +1876,7 @@
       "key": "e604772c-64f4-4355-bfea-086736a34a1b",
       "position": 10,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop.\n\n\n",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop. \n\n**Note**: _There is an optional half-page activity guide with this chart that you can provide to students, if desired._\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2862,7 +2848,13 @@
       "key": "48566844-c45e-441d-aec0-259987e43aba",
       "position": 7,
       "properties": {
-        "description": "**Circulate:** Help students understand how this widget works so they can successfully compress text. Make note of students who have found successful strategies so they can be highlighted in the upcoming discussion."
+        "description": "**Circulate:** Help students understand how this widget works so they can successfully compress text. Make note of students who have found successful strategies so they can be highlighted in the upcoming discussion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In order to use the widget, students should look for repeated patterns of text in the Compression pane on the left side. Type each repeated pattern on its own line in the Dictionary pane on the right hand side. Each line in the dictionary will have an associated symbol. This symbol will be used to represent the repeated pattern within the original text. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "48566844-c45e-441d-aec0-259987e43aba",
@@ -3098,7 +3090,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Video:** Students should have seen these definitions in the video at the end of yesterday’s class. However, it could be worthwhile to replay part of the video here as well to reinforce that vocabulary - specifically, just the section where Aloe Bloc discusses lossy & lossless compression.\n\n\n"
+            "markdown": "**Video:** Students should have seen these definitions in the video at the end of yesterday’s class. However, it could be worthwhile to replay part of the video here as well to reinforce that vocabulary - specifically, just the section where Aloe Bloc discusses lossy & lossless compression.\n\n**Note**: If you have students that are unable to see the effect of lossy compression on the visual images in this lesson, you might consider sharing this brief video that documents [audio sampling](https://youtu.be/hRhVb6iRArg?si=wERAwpEswow74bMn) and how the sound degrades when less samples are taken and the corresponding file size is compressed.\n"
           }
         ]
       },
@@ -3897,7 +3889,7 @@
       "key": "a10f751f-1718-42ac-974e-3753be092475",
       "position": 13,
       "properties": {
-        "progression_name": "End-of-Unit Survey"
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "a10f751f-1718-42ac-974e-3753be092475",
@@ -3944,6 +3936,28 @@
         "activity_section.key": "2a316006-98d6-4318-b337-69df87f779dd",
         "lesson_activity.key": "b9f60a19-b791-4033-b8a3-9d6c8a14909b"
       }
+    },
+    {
+      "key": "60f09b4d-fa39-4a26-a97f-80fdfa228756",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "60f09b4d-fa39-4a26-a97f-80fdfa228756",
+        "lesson_activity.key": "75ca4873-5915-4af2-a6d1-76290d2f83b3"
+      }
+    },
+    {
+      "key": "b7309296-6795-4bf6-b6e1-f51bd2b9c98a",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7309296-6795-4bf6-b6e1-f51bd2b9c98a",
+        "lesson_activity.key": "75ca4873-5915-4af2-a6d1-76290d2f83b3"
+      }
     }
   ],
   "script_levels": [
@@ -3953,27 +3967,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_21_222022_2025"
+        "level_keys": [
+          "csp_socialBelonging_control_2025"
         ],
-        "lesson.key": "CS Principles Pre-survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csp1-2025",
-        "activity_section.key": "34dd46d0-a6c4-41e1-9685-c80473ac771f"
-      },
-      "level_keys": [
-        "csp-pre-survey-levelgroup_21_222022_2025"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3991,11 +3987,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 CFU Sending Complex Messages_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4013,11 +4012,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U1L4 CYU3_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4035,11 +4037,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Binary 4bit to 8bit CFU 2023_2025"
+        ],
         "progression": "Check for Understanding - Flippy Do"
       },
       "bonus": false,
@@ -4057,11 +4062,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU adding bits_2025"
+        ],
         "progression": "Check for Understanding - Flippy Do"
       },
       "bonus": false,
@@ -4079,11 +4087,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU how many bits_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4101,11 +4112,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU bin dec similarities_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4123,11 +4137,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Binary Odometer_2025"
+        ],
         "progression": "Widget: Binary Odometer"
       },
       "bonus": false,
@@ -4145,11 +4162,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU beyond odometer_2025"
+        ],
         "progression": "Check For Understanding - Overflow"
       },
       "bonus": false,
@@ -4167,11 +4187,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU representing fractions_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4189,11 +4212,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Reflection Multiple Representations CSP_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4211,11 +4237,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2025"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4233,11 +4262,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2025"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4255,11 +4287,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2025"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -4277,11 +4312,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2025"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -4299,11 +4337,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4321,11 +4362,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2025"
+        ],
         "progression": "Sampling an Analog Image: Challenge C"
       },
       "bonus": false,
@@ -4343,11 +4387,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU pixel data2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4365,11 +4412,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU Sampling_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4387,11 +4437,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 RGB2022_2025"
+        ],
         "progression": "RGB Color"
       },
       "bonus": false,
@@ -4409,11 +4462,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 1_2025"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4431,11 +4487,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 More Shades of Color2022_2025"
+        ],
         "progression": "More Shades of Color"
       },
       "bonus": false,
@@ -4453,11 +4512,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 2_2025"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4475,11 +4537,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 3_2025"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4497,11 +4562,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Sampling Widget_2025"
+        ],
         "progression": "Color Sampling Widget"
       },
       "bonus": false,
@@ -4519,11 +4587,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 4_2025"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4541,11 +4612,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Multiple Choice analog vs digital2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4563,11 +4637,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 9,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 CFU Sampling_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4585,11 +4662,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 Widget: Text Compression_2025"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -4607,11 +4687,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4629,11 +4712,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CFU Compression for Email_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4651,11 +4737,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v1_2025"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4673,11 +4762,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v2_2025"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4695,11 +4787,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4717,11 +4812,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice Creative Commons2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4739,11 +4837,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Copyright_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4761,11 +4862,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 CFU Digital Representation_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4783,11 +4887,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 CSP CFU digital information_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4805,17 +4912,20 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "progression": "End-of-Unit Survey"
+        "level_keys": [
+          "student-eou-survey_linked_page-csp1_2025"
+        ],
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp1_2025"
+          "student-eou-survey_linked_page-csp1_2025"
         ],
         "lesson.key": "Project Digital Information Dilemmas",
         "lesson_group.key": "csp_unit1_2020",
@@ -4823,15 +4933,18 @@
         "activity_section.key": "a10f751f-1718-42ac-974e-3753be092475"
       },
       "level_keys": [
-        "Student End of Unit Survey_csp1_2025"
+        "student-eou-survey_linked_page-csp1_2025"
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 AP-Style Assessment 2022_2025"
+        ],
         "progression": "Unit 1 Exam"
       },
       "bonus": false,
@@ -4847,21 +4960,34 @@
       "level_keys": [
         "CSP Unit 1 AP-Style Assessment 2022_2025"
       ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csp1survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csp1survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp1-2025",
+        "activity_section.key": "60f09b4d-fa39-4a26-a97f-80fdfa228756"
+      },
+      "level_keys": [
+        "student-eou-survey_csp1survey-2025"
+      ]
     }
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "csp-pre-survey-levelgroup_21_222022_2025",
-        "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_21_222022_2025"
-        ],
-        "lesson.key": "CS Principles Pre-survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csp1-2025",
-        "activity_section.key": "34dd46d0-a6c4-41e1-9685-c80473ac771f"
-      }
-    },
     {
       "seeding_key": {
         "level.key": "csp_socialBelonging_control_2025",
@@ -5320,9 +5446,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csp1_2025",
+        "level.key": "student-eou-survey_linked_page-csp1_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp1_2025"
+          "student-eou-survey_linked_page-csp1_2025"
         ],
         "lesson.key": "Project Digital Information Dilemmas",
         "lesson_group.key": "csp_unit1_2020",
@@ -5340,6 +5466,18 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2025",
         "activity_section.key": "bb224a88-73ad-4afc-9858-cfdaae63f7ee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csp1survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csp1survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp1-2025",
+        "activity_section.key": "60f09b4d-fa39-4a26-a97f-80fdfa228756"
       }
     }
   ],
@@ -5416,11 +5554,10 @@
     },
     {
       "name": "B&W Pixelation Tutorial",
-      "url": "https://youtu.be/rJOa5Q5a1WM",
+      "url": "https://youtu.be/pIc3mrw5e_I",
       "key": "b_w_pixelation_tutorial",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/pixelation_bw.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -5449,6 +5586,18 @@
       },
       "seeding_key": {
         "resource.key": "black_and_white_images"
+      }
+    },
+    {
+      "name": "Candy Store Challenge (Optional)",
+      "url": "https://docs.google.com/document/d/1MNGrjqkyILwFGGPcXf0NOEdoowAnVOJSg8X1eZkIm3U/",
+      "key": "candy_store_challenge_optional_",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "candy_store_challenge_optional_"
       }
     },
     {
@@ -6171,6 +6320,12 @@
       "seeding_key": {
         "lesson.key": "Lossy Compression",
         "resource.key": "lossy_compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "resource.key": "candy_store_challenge_optional_"
       }
     },
     {

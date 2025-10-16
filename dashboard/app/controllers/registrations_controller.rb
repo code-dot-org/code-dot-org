@@ -5,9 +5,12 @@ require_relative '../../../shared/middleware/helpers/experiments'
 require 'metrics/events'
 require 'policies/lti'
 require 'queries/lti'
+require 'policies/devise/email_domains'
 
 class RegistrationsController < Devise::RegistrationsController
   before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
+  before_action :assign_country_code, only: [:begin_sign_up, :login_type, :finish_student_account, :finish_teacher_account, :edit]
+  before_action :assign_redirect_url, only: [:finish_teacher_account, :finish_student_account]
 
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
@@ -34,7 +37,15 @@ class RegistrationsController < Devise::RegistrationsController
   # Submit step 1 of the signup process for creating an email/password account.
   #
   def begin_sign_up
+    domain = params[:user][:email].split('@')[1] if params[:user][:email].present?
+    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.key?(domain)
+      render json: {
+        error: I18n.t('devise.registrations.disallowed_domain', domain: domain)
+      }, status: :forbidden
+      return
+    end
     @user = User.new(begin_sign_up_params)
+    @user.country_code = @country_code
     @user.validate_for_finish_sign_up
 
     if @user.errors.blank?
@@ -59,6 +70,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def login_type
     @is_signed_out = current_user.nil?
+    @user_type = params[:user_type]
     view_options(full_width: true, responsive_content: true)
     render 'login_type'
   end
@@ -77,8 +89,6 @@ class RegistrationsController < Devise::RegistrationsController
     @age_options = [{value: '', text: ''}] + User::AGE_DROPDOWN_OPTIONS.map do |age|
       {value: age.to_s, text: age.to_s}
     end
-    location = Geocoder.search(request.ip).try(:first)
-    @country_code = location&.country_code.to_s.upcase
     @us_ip = ['US', 'RD'].include?(@country_code)
     @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
       {value: code, text: name}
@@ -91,8 +101,6 @@ class RegistrationsController < Devise::RegistrationsController
   # Get /users/sign_up/finish_teacher_account
   #
   def finish_teacher_account
-    location = Geocoder.search(request.ip).try(:first)
-    @country_code = location&.country_code.to_s.upcase
     @us_ip = ['US', 'RD'].include?(@country_code)
 
     render 'finish_teacher_account'
@@ -179,6 +187,13 @@ class RegistrationsController < Devise::RegistrationsController
       PartialRegistration.delete session
       if Policies::Lti.lti? current_user
         current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
+        if session[:lti_deployment_id] && current_user.lti_user_identities.any?
+          deployment = LtiDeployment.find_by(id: session[:lti_deployment_id])
+          lti_identity = current_user.lti_user_identities.find_by(lti_integration_id: deployment.lti_integration_id)
+          if deployment && lti_identity && !deployment.lti_user_identities.exists?(lti_identity.id)
+            deployment.lti_user_identities << lti_identity
+          end
+        end
         lms_name = Queries::Lti.get_lms_name_from_user(current_user)
         metadata = {
           'user_type' => current_user.user_type,
@@ -284,7 +299,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def begin_sign_up_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :user_type)
   end
 
   # Set age, us_state and gender for the current user if empty - skips CSRF verification because this can be called
@@ -310,7 +325,7 @@ class RegistrationsController < Devise::RegistrationsController
     user_params[:hashed_email] = User.hash_email(user_params[:email]) if user_params[:email].present?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
-    successfully_updated = current_user.upgrade_to_personal_login(upgrade_params)
+    successfully_updated = Services::User::UpgradeToPersonalLogin.call(user: current_user, params: upgrade_params)
     has_email = current_user.parent_email.blank? && current_user.hashed_email.present?
     success_message_kind = has_email ? :personal_login_created_email : :personal_login_created_username
 
@@ -376,10 +391,11 @@ class RegistrationsController < Devise::RegistrationsController
         if forbidden_change?(current_user, params)
           false
         else
-          current_user.set_user_type(
-            set_user_type_params[:user_type],
-            set_user_type_params[:email],
-            email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
+          Services::User::UserTypeSetter.call(
+            user: current_user,
+            user_type: set_user_type_params[:user_type],
+            email: set_user_type_params[:email],
+            email_preference: email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
           )
         end
       else
@@ -432,8 +448,6 @@ class RegistrationsController < Devise::RegistrationsController
     @permission_status = current_user.cap_status
 
     # Get the request location
-    location = Geocoder.search(request.ip).try(:first)
-    @country_code = location&.country_code.to_s.upcase
     @is_usa = Policies::User.in_usa?(@country_code)
 
     # A student is underage if they reside in a state with a CAP policy and are in the affected age range.
@@ -451,6 +465,14 @@ class RegistrationsController < Devise::RegistrationsController
       @pending_email = permission_request&.parent_email
       @request_date = permission_request&.updated_at || Date.new
     end
+  end
+
+  #
+  # GET /users/personalization_information
+  #
+  def personalization_information
+    # Add in once data is ready
+    # @teacher_context = current_user.teacher_context || TeacherContext.new
   end
 
   private def update_user_email
@@ -545,6 +567,9 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(
       :parent_email,
       :username,
+      :given_name,
+      :family_name,
+      :educator_role,
       :password,
       :encrypted_password,
       :current_password,
@@ -564,6 +589,9 @@ class RegistrationsController < Devise::RegistrationsController
       :user_provided_us_state,
       :ai_rubrics_disabled,
       :lti_roster_sync_enabled,
+      facilitator_info_attributes: [
+        :bio,
+      ],
       school_info_attributes: [
         :country,
         :school_type,
@@ -656,8 +684,14 @@ class RegistrationsController < Devise::RegistrationsController
 
   private def us_ip?
     # Get the request location
-    location = Geocoder.search(request.ip).try(:first)
-    country_code = location&.country_code.to_s.upcase
-    ['US', 'RD'].include?(country_code)
+    ['US', 'RD'].include?(request.country_code)
+  end
+
+  private def assign_country_code
+    @country_code = request.country_code
+  end
+
+  private def assign_redirect_url
+    @redirect_url = session[:user_return_to] || @redirect_url
   end
 end

@@ -1,0 +1,11 @@
+name 'test-music-lab-sequences-practice-artist-choice_v2'
+display_name 'Practice'
+description 'Choose at least 2 options below to practice!'
+
+sublevels
+level 'test-music-lab-sequences-practice-artist-choice-a_v2'
+level 'test-music-lab-sequences-practice-artist-choice-b_v2'
+level 'test-music-lab-sequences-practice-artist-choice-c_v2'
+level 'test-music-lab-sequences-practice-artist-choice-d_v2'
+level 'test-music-lab-sequences-practice-artist-choice-e_v2'
+uses_lab2

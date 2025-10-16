@@ -24,6 +24,12 @@
   }
 }
 
+#workshop-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // Apply the latest bootstrap styles only to the workshop-container div so it
 // doesn't conflict with the footer and header that are still using
 // Bootstrap 2.2.3
@@ -93,6 +99,19 @@
   form.form-inline {
     display: inline-block;
     padding: 0 2px;
+  }
+
+  .newWorkshopButton.btn.btn-primary {
+    background-color: $brand_secondary_default;
+    + ul {
+      i {
+        margin-right: 1rem;
+        width: 0.5rem;
+      }
+      a {
+        background-image: none;
+      }
+    }
   }
 
   /* stylelint-disable max-line-length */

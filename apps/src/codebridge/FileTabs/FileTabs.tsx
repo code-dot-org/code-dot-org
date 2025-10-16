@@ -1,5 +1,8 @@
-import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {getOpenFiles} from '@codebridge/utils';
+import {
+  dragAndDropKeyboardCodes,
+  sortableKeyboardCoordinatesWithTab,
+} from '@codebridge/utils/dragAndDropUtils';
 import {
   DndContext,
   DragEndEvent,
@@ -19,9 +22,17 @@ import {
   arrayMove,
   horizontalListSortingStrategy,
   SortableContext,
-  sortableKeyboardCoordinates,
 } from '@dnd-kit/sortable';
 import React, {useState} from 'react';
+
+import i18n from '@cdo/apps/codebridge/locale';
+import {
+  closeFileThunk,
+  rearrangeFilesThunk,
+  setActiveFileThunk,
+} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import FileTab from './FileTab';
 import Sortable from './Sortable';
@@ -29,9 +40,11 @@ import Sortable from './Sortable';
 import moduleStyles from './styles/fileTabs.module.scss';
 
 export const FileTabs = React.memo(() => {
-  const {source, rearrangeFiles, setActiveFile} = useCodebridgeContext();
-
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source as MultiFileSource
+  );
   const files = getOpenFiles(source);
+  const dispatch = useAppDispatch();
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -40,7 +53,8 @@ export const FileTabs = React.memo(() => {
       },
     }),
     useSensor(KeyboardSensor, {
-      coordinateGetter: sortableKeyboardCoordinates,
+      coordinateGetter: sortableKeyboardCoordinatesWithTab,
+      keyboardCodes: dragAndDropKeyboardCodes,
     })
   );
   const [draggingFileId, setDraggingFileId] = useState<string | null>(null);
@@ -53,16 +67,35 @@ export const FileTabs = React.memo(() => {
       const oldIndex = files.indexOf(files.find(f => f.id === active.id)!);
       const newIndex = files.indexOf(files.find(f => f.id === over!.id)!);
 
-      rearrangeFiles(arrayMove(files, oldIndex, newIndex).map(file => file.id));
+      dispatch(
+        rearrangeFilesThunk(
+          arrayMove(files, oldIndex, newIndex).map(file => file.id)
+        )
+      );
     }
   }
+
+  function handleDragCancel() {
+    setDraggingFileId(null);
+  }
+
   function handleDragStart(event: DragStartEvent) {
     // Handle drag start only if the file is in the list of open files.
     // This can get called when the close button is clicked, and we want to ignore
     // it in this case.
-    if (source.files[event.active.id as string].open) {
+    if (source.openFiles?.includes(event.active.id as string)) {
       setDraggingFileId(event.active.id as string);
-      setActiveFile(event.active.id as string);
+      dispatch(setActiveFileThunk(event.active.id as string));
+    }
+  }
+
+  function handleTabActivation(event: React.KeyboardEvent, fileId: string) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      // We don't stop event propagation here because we want the close button to work.
+      dispatch(setActiveFileThunk(fileId));
+    }
+    if (event.key === 'Backspace' || event.key === 'Delete') {
+      dispatch(closeFileThunk(fileId));
     }
   }
 
@@ -71,13 +104,24 @@ export const FileTabs = React.memo(() => {
       <DndContext
         onDragEnd={handleDragEnd}
         onDragStart={handleDragStart}
+        onDragCancel={handleDragCancel}
         sensors={sensors}
         collisionDetection={closestCenter}
         modifiers={[restrictToParentElement, restrictToHorizontalAxis]}
+        accessibility={{
+          screenReaderInstructions: {
+            draggable: i18n.dragAndDropInstructionsTabs(),
+          },
+        }}
       >
         <SortableContext items={files} strategy={horizontalListSortingStrategy}>
           {files.map(f => (
-            <Sortable id={f.id} key={f.id} isDragging={f.id === draggingFileId}>
+            <Sortable
+              id={f.id}
+              key={f.id}
+              isDragging={f.id === draggingFileId}
+              onKeyDown={event => handleTabActivation(event, f.id)}
+            >
               <FileTab file={f} />
             </Sortable>
           ))}

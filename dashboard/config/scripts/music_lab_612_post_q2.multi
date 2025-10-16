@@ -1,0 +1,24 @@
+name 'music-lab-612-post-q2'
+ 
+question '**Which code should Jenna use so the vocals play at a higher volume than the backup instruments?**'
+height '300'
+width '200'
+wrong '![](https://images.code.org/4f78d0ae97b0275aa20f935c80230d7b-image-1750876920680.png)'
+wrong '![](https://images.code.org/ab1f6520edc0223255f2f6f21cea14f3-image-1750876923884.png)'
+right 'https://images.code.org/1cc8e783a482294fa34cfc2992942f74-image-1750446302081.png'
+wrong 'https://images.code.org/d27b988cc9a354db2066cf7ac2bc2eac-image-1750446307172.png'
+
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Sequencing
+
+Skill: Modify the volume, delay, or filter settings for a song by correctly sequencing effect blocks
+
+Appears in Lesson: Sequencing - Synthesis
+MARKDOWN
+
+markdown <<MARKDOWN
+Jenna loves the sound of Rosa Linn\'s vocals and plans to emphasize verse vocals louder than the instrumental music. 
+MARKDOWN

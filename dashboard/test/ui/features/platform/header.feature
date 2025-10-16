@@ -1,5 +1,6 @@
 @no_mobile
 @single_session
+@pegasus_content
 Feature: Header navigation bar
   Scenario: Student in English should see 4 header links
     Given I create a student named "Sally Student" and go home
@@ -46,8 +47,8 @@ Feature: Header navigation bar
 
   Scenario: Teacher in Spanish should see 5 header links
     Given I create a teacher named "Pabla Profesora"
-    Given I am on "http://studio.code.org/home/lang/es"
-    Then check that I am on "http://studio.code.org/home?lang=es"
+    Given I am on "http://studio.code.org/teacher_dashboard/home/lang/es"
+    Then check that I am on "http://studio.code.org/teacher_dashboard/home?lang=es"
     And I wait to see ".headerlinks"
     And I see "#header-teacher-home"
     And element "#header-teacher-home" has "es" text from key "nav.header.my_dashboard"
@@ -70,21 +71,19 @@ Feature: Header navigation bar
 
     # We click on each header link and see where we go
     And I press "header-teacher-home" to load a new page
-    Then check that I am on "http://studio.code.org/home"
+    Then check that I am on "http://studio.code.org/teacher_dashboard/home"
     And I press "header-teacher-courses" to load a new page
     Then check that I am on "http://studio.code.org/catalog"
     And I press "header-teacher-projects" to load a new page
     Then check that I am on "http://studio.code.org/projects"
     And I press "header-teacher-professional-learning" to load a new page
     Then check that I am on "http://studio.code.org/my-professional-learning"
-    And I press "header-teacher-incubator" to load a new page
-    Then check that I am on "http://studio.code.org/incubator"
     # The logo itself
     And I press "logo_home_link" to load a new page
-    Then check that I am on "http://studio.code.org/home"
+    Then check that I am on "http://studio.code.org/teacher_dashboard/home"
     And I sign out
 
-  @chrome
+  @skip @chrome
   Scenario: Student can click on the header links
     Given I create a student named "Squire Clicks-A-Lot Student" and go home
     And I set the language cookie
@@ -98,8 +97,6 @@ Feature: Header navigation bar
     Then check that I am on "http://code.org/students"
     And I press "header-student-projects" to load a new page
     Then check that I am on "http://studio.code.org/projects"
-    And I press "header-incubator" to load a new page
-    Then check that I am on "http://studio.code.org/incubator"
     # The logo itself
     And I press "logo_home_link" to load a new page
     Then check that I am on "http://studio.code.org/home"

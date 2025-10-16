@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-08-02T22:13:31.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the possible colors for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">paint()</code> method. What colors can you use? Try changing the colors in the program to some of the available colors.",
+    "long_instructions": "## Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:**  \r\nLook at the possible colors for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">paint()</code> method in the **Documentation** tab.  \r\nTry using **at least three different colors** in the program—named colors like `\"red\"` or `\"blue\"`, or hex colors like `\"#FF69B4\"`.\r\n\r\n👥 **Discuss with a partner:**  \r\nHow does the argument you provide to the `paint()` method change what happens in the program? What do you think would happen if you used a color that wasn’t in the documentation?",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "true",
@@ -359,9 +360,11 @@
     ],
     "teacher_markdown": "There are several colors in the `Painter` class documentation that students can use to paint with. Students should change some of the `\"white\"` values to a different color to experiment with different colors.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:13:31.987+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5 Investigate-3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L5 Investigate-3_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:13:31.987+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5 Investigate-3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L5 Investigate-3_pilot-2025\"},{\"changed_at\":\"2025-04-21 08:02:24 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"ai_tutor_available\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>

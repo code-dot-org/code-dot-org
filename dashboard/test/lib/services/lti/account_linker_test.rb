@@ -2,14 +2,14 @@ require 'test_helper'
 
 class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
   setup do
-    @user = create :teacher
+    @user = create(:teacher)
     @session = {}
-    @lti_integration = create :lti_integration
+    @lti_integration = create(:lti_integration)
   end
 
   test 'reassigns an auth option from a partial registration to an existing user' do
-    partial_lti_teacher = create :teacher
-    ao = create :lti_authentication_option
+    partial_lti_teacher = create(:teacher)
+    ao = create(:lti_authentication_option)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
@@ -24,8 +24,8 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
   end
 
   test 'reassigns an lti user identity from a roster-synced user to an existing user' do
-    roster_synced_teacher = create :teacher
-    ao = create :lti_authentication_option
+    roster_synced_teacher = create(:teacher)
+    ao = create(:lti_authentication_option)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
@@ -43,8 +43,8 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
   end
 
   test 'sets the lti_roster_sync_enabled and lms_landing_opted_out properties on the user' do
-    partial_lti_teacher = create :teacher
-    ao = create :lti_authentication_option
+    partial_lti_teacher = create(:teacher)
+    ao = create(:lti_authentication_option)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
@@ -57,8 +57,8 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
   end
 
   test 'verify the user if they are a teacher' do
-    partial_lti_teacher = create :teacher
-    ao = create :lti_authentication_option
+    partial_lti_teacher = create(:teacher)
+    ao = create(:lti_authentication_option)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
@@ -70,13 +70,13 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
   end
 
   test 'do not verify the user if they are a student' do
-    new_student = create :student
-    existing_student = create :student
-    lti_course = create :lti_course, lti_integration: @lti_integration
-    lti_section = create :lti_section, lti_course: lti_course
+    new_student = create(:student)
+    existing_student = create(:student)
+    lti_course = create(:lti_course, lti_integration: @lti_integration)
+    lti_section = create(:lti_section, lti_course: lti_course)
     lti_section.section.students << new_student
 
-    ao = create :lti_authentication_option
+    ao = create(:lti_authentication_option)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
@@ -90,8 +90,8 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
 
   test 'migrates the user' do
     @user.update(provider: nil)
-    partial_lti_teacher = create :teacher
-    ao = create :lti_authentication_option
+    partial_lti_teacher = create(:teacher)
+    ao = create(:lti_authentication_option)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
@@ -103,13 +103,13 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
   end
 
   test 'Swaps the existing user into the defunct user\'s sections' do
-    new_student = create :student
-    existing_student = create :student
-    lti_course = create :lti_course, lti_integration: @lti_integration
-    lti_section = create :lti_section, lti_course: lti_course
+    new_student = create(:student)
+    existing_student = create(:student)
+    lti_course = create(:lti_course, lti_integration: @lti_integration)
+    lti_section = create(:lti_section, lti_course: lti_course)
     lti_section.section.students << new_student
 
-    ao = create :lti_authentication_option
+    ao = create(:lti_authentication_option)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
@@ -126,13 +126,13 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
   end
 
   test 'Swaps the existing user in as a co-teacher' do
-    new_teacher = create :teacher
-    existing_teacher = create :teacher
-    lti_course = create :lti_course, lti_integration: @lti_integration
-    lti_section = create :lti_section, lti_course: lti_course
+    new_teacher = create(:teacher)
+    existing_teacher = create(:teacher)
+    lti_course = create(:lti_course, lti_integration: @lti_integration)
+    lti_section = create(:lti_section, lti_course: lti_course)
     lti_section.section.add_instructor(new_teacher)
 
-    ao = create :lti_authentication_option
+    ao = create(:lti_authentication_option)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
@@ -149,14 +149,14 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
   end
 
   test 'Swaps the existing user in as a section owner' do
-    new_teacher = create :teacher
-    existing_teacher = create :teacher
-    lti_course = create :lti_course, lti_integration: @lti_integration
-    lti_section = create :lti_section, lti_course: lti_course
+    new_teacher = create(:teacher)
+    existing_teacher = create(:teacher)
+    lti_course = create(:lti_course, lti_integration: @lti_integration)
+    lti_section = create(:lti_section, lti_course: lti_course)
     lti_section.section.add_instructor(new_teacher)
     lti_section.section.update(user_id: new_teacher.id)
 
-    ao = create :lti_authentication_option
+    ao = create(:lti_authentication_option)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)

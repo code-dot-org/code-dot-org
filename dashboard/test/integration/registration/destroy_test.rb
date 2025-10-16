@@ -8,17 +8,17 @@ module RegistrationsControllerTests
     setup do
       @password = 'mypassword'
 
-      @teacher = create :teacher, password: @password
-      @section = create :section, user: @teacher
+      @teacher = create(:teacher, password: @password)
+      @section = create(:section, user: @teacher)
 
-      @word_section_teacher = create :teacher, password: @password
-      word_section = create :section, user: @word_section_teacher, login_type: Section::LOGIN_TYPE_WORD
-      @word_section_student = create :student, encrypted_password: nil, provider: 'sponsored'
+      @word_section_teacher = create(:teacher, password: @password)
+      word_section = create(:section, user: @word_section_teacher, login_type: Section::LOGIN_TYPE_WORD)
+      @word_section_student = create(:student, encrypted_password: nil, provider: 'sponsored')
       create(:follower, student_user: @word_section_student, section: word_section)
     end
 
     test "returns bad request if user cannot delete own account" do
-      user = create :user
+      user = create(:user)
       user.stubs(:can_delete_own_account?).returns(false)
       sign_in user
       assert_does_not_destroy(User) do
@@ -28,7 +28,7 @@ module RegistrationsControllerTests
     end
 
     test "returns bad request if password is required and not provided" do
-      user = create :user, password: 'password'
+      user = create(:user, password: 'password')
       sign_in user
       assert_does_not_destroy(User) do
         delete '/users'
@@ -37,7 +37,7 @@ module RegistrationsControllerTests
     end
 
     test "returns bad request if password is required and incorrect" do
-      user = create :user, password: 'password'
+      user = create(:user, password: 'password')
       sign_in user
       assert_does_not_destroy(User) do
         delete '/users', params: {password_confirmation: 'notmypassword'}
@@ -46,7 +46,7 @@ module RegistrationsControllerTests
     end
 
     test "destroys the user if password is required and correct" do
-      user = create :user, password: 'password'
+      user = create(:user, password: 'password')
       sign_in user
       assert_destroys(User) do
         delete '/users', params: {password_confirmation: 'password'}
@@ -57,7 +57,7 @@ module RegistrationsControllerTests
     end
 
     test "destroys the user if password is not required" do
-      user = create :user, :with_google_authentication_option
+      user = create(:user, :with_google_authentication_option)
       user.update_attribute(:encrypted_password, nil)
       user.reload
       sign_in user
@@ -79,7 +79,7 @@ module RegistrationsControllerTests
     end
 
     test "destroying teacher does not destroy another teacher in their section" do
-      another_teacher = create :teacher
+      another_teacher = create(:teacher)
       @section.students << another_teacher
       sign_in @teacher
 
@@ -105,7 +105,7 @@ module RegistrationsControllerTests
     end
 
     test "destroying teacher does not destroy student in another section" do
-      another_section = create :section
+      another_section = create(:section)
       another_section.students << @word_section_student
       sign_in @word_section_teacher
 
@@ -118,7 +118,7 @@ module RegistrationsControllerTests
     end
 
     test "destroying student does not destroy any other accounts" do
-      student = create :student, password: 'mypassword'
+      student = create(:student, password: 'mypassword')
       sign_in student
 
       assert_destroys(User) do
@@ -162,7 +162,7 @@ module RegistrationsControllerTests
     end
 
     test "does not send email when teacher destroyed if teacher has no email" do
-      user = create :teacher, :without_email, password: 'apassword'
+      user = create(:teacher, :without_email, password: 'apassword')
       refute user.valid?
       sign_in user
 

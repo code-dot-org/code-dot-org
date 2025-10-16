@@ -1,0 +1,42 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2025-05-21T19:32:51.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Draw the images in the **Asset Manager** in your scene.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method to draw each image separately.\r\n\r\nYou can choose where you want to draw the images and the size of the images.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>, instantiate an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene</code> object with the, and call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method.\r\n\r\n⚠️ **Don't forget!** Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Theater.playScenes(yourSceneObject)</code> method to play the scene.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Scene</code> class in the <strong>Documentation</strong> tab ⬆️ for help with drawing images in a scene.\r\n</div>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 How can I animate the images?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n\t\t<p>Try using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> or <code style=\"background-color: #ececec; color: black; font-weight: bold;\">clear()</code> methods to turn your scene into an animation!</p>\r\n\r\n* Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> method after drawing each image or after drawing a set of images.\r\n\r\n* Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">clear()</code> method to clear the scene before drawing another image if you don't want the previous image to still display in the scene.\r\n    </div>\r\n</details>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "TheaterRunner.java": {
+        "text": "import org.code.theater.*;\n\npublic class TheaterRunner {\n  public static void main(String[] args) {\n\n    String sport1 = \"basketball.jpg\";\n    String sport2 = \"baseball.jpg\";\n    String sport3 = \"football.jpg\";\n    String sport4 = \"soccer.jpg\";\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Instantiate an ImageScene object, then call the drawScene() method.\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    \n    \n  }\n}\n",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "ImageScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Represents a scene of images\n */\npublic class ImageScene extends Scene {\n\n  private String sport1;\n  private String sport2;\n  private String sport3;\n  private String sport4;\n\n  /*\n   * Initializes the scene with each image name\n   */\n  public ImageScene(String sport1, String sport2, String sport3, String sport4) {\n    this.sport1 = sport1;\n    this.sport2 = sport2;\n    this.sport3 = sport3;\n    this.sport4 = sport4;\n  }\n\n  /*\n   * Draws each image in the scene\n   */\n  public void drawScene() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Draw each image in the scene. You choose where you want to draw the \n     *    images and the size of the images.\n     * -----------------------------------------------------------------------------\n     */\n\n\n    \n  }\n}\n",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "display_name": "Draw Sports Images",
+    "bubble_choice_description": "Draw the sports images in your scene.",
+    "thumbnail_url": "https://images.code.org/3e4eecdcc337a3e5dce5d227e4641400-basketball.png",
+    "starter_assets": {
+      "basketball.jpg": "0aba5308-046b-4d3c-bcbf-cc66081cdd73.jpg",
+      "baseball.jpg": "e1bf8cf2-eb66-4f82-ac64-40c08f02a082.jpg",
+      "football.jpg": "9e42aaa9-2e5b-461c-aa1b-5867367412c5.jpg",
+      "soccer.jpg": "2d6a2394-ab81-4a34-b172-84f9371e90dc.jpg"
+    },
+    "encrypted_exemplar_sources": "Q1PxmLgiasYA0VmeXomMQm8rxQrn3nRO03FnOhEzENXR7mkXlKNLB5lMS+B9\nkU9n5t/yK5XKeHSKNC2ShZItlBhvSsPOFj06pNmGLegHY5CJuJPIxC8DjGoB\nJi+B8KQJZRZBqr0todNXpZrk0jdEgm6V/SqtbUC0eGrQGNVu+02JoeEd47Du\nLwV3qW05SQzrJXyEb97Vrycvnk/tCGecnQB5+braYXqHXpe8durGorq/QgdX\nV24fe+NO/dXe9bM/fIMXM5dkhJvYYb/t7k0bKx33BfUat9KDVs/TNO141dtw\neAidibL5QuwW9S3akXuIHl6jxIy68QudvNxuFw43QxakRkn6Ry8MYbJ7+I7q\ni7VrAHdUZh/tAhaeoAYwWBrLH9wRS8JcCMBB162yypnAux/7OFP8xkCL0XYH\n5EPPhEXoCHXj8qcuuODZ/WIQDAVhQGsZ2ggX5mAlo38aybEFrghn8rDNhuk/\nB4Q7RaGYZOwSO2KdmQIL+yAL3UtX9lUExmq8nNO/L1YyUX9/zEoSGz2YQmTw\n+xEr85u6BsPuiaF2+xMWSYoL4WbHKYmKIOCRBzcrrsOPhEs7xQY5rVpROpvc\nvgOEupLB1QUEEbNMhDqfBcV3uOl4V4X7GDTSeGJ6oW+ctGtIFrDMPQURBm46\nyT9DLq1sRUwov7qsEJvjKz3WPJGnPP4PrKIEFc98M5aNI9FYlnqOTiCSQbR3\nDSPe8FbF6CoNrs+x8adVyMO38Y2H07y+41gOXKjcw3qrFAxDH1jn5B+63qd9\nid5d6TJnlV3u0rGDKuXhtZezRnqp2i9Ve0XbaxErz67EskF8inARfo/iFg1L\nqIJwBscYAIRO4Lf+YzGGmB21sWN3To7Usvg6xw2SyHch0TONtGpOq5C+KJ+t\nAlE8TEf0LRS3Xf3S/6i1b+B8qKO39ABz+G/Auy9Ni9eVTp6yPaxGZzO3QLKQ\n1O6cUnN2s5GqYWKVDGEdpL/aF5tyjTTh5o1TZoL0eIspDmaxqQ8TBdFGW4oL\n7u8ngPxZrL7G9wMQLfCQposZoQ2DDAeRDvo9s4kLQMi03Dze+Qs0XwUHKrdv\nx0kzWGdS0JVrhb5yb/Tnye1B4yWvNv13iRQ4Q0CSZsMaGkvVmlbK5EM+9oQ/\n2ijVPjwh5C7EZ8fPHTrn6cblhhwSaPZA6GHi85aQtVMLK9MG5DQSyEbkoBFl\n8Nc6a8ycjfOU0x2GhdnIKVgmmF9L1yErip+aFsxJqd014mjiNL9szey0jUVq\nNHq6KrE+QKBaTfnciaiElSB5VN+4PXd1BtLShOVlWoQ/reekjWUlU81LhIAU\nGWEHTkNqN1P3DT7bYlCxilJ9j3B5GUN5rs/d0vJEPb+sBp53b6YDU7vL3C6n\nlD9rYjXM8EeaUmNUDcCNuQ8VjJZeCKJKXLr1iYTKgbOpyI9VgNBMr1lk54Gi\nAxLT0WaYfBSSLJ4AQ2/TWT5h6UDcqU2S6xWFS7mEHXU4vsw1lhGFzyFkKpro\nbIJ1sBo7sz3x3w0zVFY3sbwJBm8eBCLJSUj1L0lKPDIb2bgWiCRmCsMQQ+dm\nOhcjmSlWpEa5PH4LL58NNqv6TxDZV/rgmaLqoSBVeIOCtVbDrgiGdsL5EnZA\n39GNrR2tjJTIeonnumk4zNdRnIAONnQ0NZfqWDW6S72uD14CWfgjDz+zdWka\ns+7xl1Czfc+4hc4WEOYDKq9m/ClHnOui2xyypeEr6Un3iEnz95K0NorlN8KZ\nlvpYu6ILZg77hfF94Ia43vlWBaET6+ViFEwTJfp6uSOSpGQvzMytaALO3SHa\nytX8k7GRSC2sMPHWXeTI3dc1dphVRqwD0+3BQuRp/RQNjSMWQ+xR6FafJAgL\nph6p/P4IqgaWpI6vmixZUDU0l15JfhFjIH92tPBzSZaO0p6vsDwSG286Phgy\nFHd1509p5YTixEbG2AxaiHMNlbBuXa3NeovmZg9dXh80o/9dmQVCRF2tylRz\nyNbfQUMBd9TxCZAJ11j0VH9A9AqJ7Xir8Besn2ctZD2wcRRhX0iC+63Xz5Bq\nX+16OewhHxKszk2utJ5OX6ghzweHYKId0nsjHBmgF6jY8gFozsscCkaImaBG\nwYLtod5rVaFuVXGkvMbnH1ljmHrXnY9WVK2do2vFzNiGVw3RD3+PyaNm7W35\nimofyswA9gheuyBXPx6gZmC7LnMsk8VudNLUDpllINH8F5W+sy67ynIMxnEw\nFIwK5wWKLW86CY80N0HTilBd0CJHaFkWaKqmmkvt74iiH5p70Hl7HGVeTv66\nMPu9S3xjKbTGisUtguakNiFv2UlaHX64bfnx7KLdajWjfuFaFA0aXpVAty0R\nv4So6wo=\n",
+    "name_suffix": "_-csa-alt_2025",
+    "ai_tutor_available": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-21T19:32:51.414+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L4b_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U4L1-L4b_pilot_oo2025\"},{\"changed_at\":\"2025-05-23 18:09:23 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-23 18:10:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-23 18:11:26 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

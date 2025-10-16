@@ -6,6 +6,12 @@
     "focus-on-data3-2024",
     "focus-on-data-post-survey-2024"
   ],
+  "original_script_names": [
+    "focus-on-data1-2024",
+    "focus-on-data2-2024",
+    "focus-on-data3-2024",
+    "focus-on-data-post-survey-2024"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

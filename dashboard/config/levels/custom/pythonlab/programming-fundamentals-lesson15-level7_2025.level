@@ -20,7 +20,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "def plant_garden(): # Use a parameter in this function\n    print(\"Dash plants beanstalk\") # Change every instance of \"beanstalk\" to the parameter name\n    print(\"Dash moves to the next spot.\")\n    print(\"Dash plants beanstalk\")\n    print(\"Dash moves to the next spot.\")\n    pprint(\"Dash plants beanstalk\")\n    print(\"Dash moves to the next spot.\")\n    pprint(\"Dash plants beanstalk\")\n    print(\"Dash moves to the next spot.\")\n\n# Call your function here\n",
+          "contents": "def plant_garden(): # Use a parameter in this function\n    print(\"Dash plants beanstalk\") # Change every instance of \"beanstalk\" to the parameter name\n    print(\"Dash moves to the next spot.\")\n    print(\"Dash plants beanstalk\")\n    print(\"Dash moves to the next spot.\")\n    print(\"Dash plants beanstalk\")\n    print(\"Dash moves to the next spot.\")\n    print(\"Dash plants beanstalk\")\n    print(\"Dash moves to the next spot.\")\n\n# Call your function here\n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -46,6 +46,6 @@
     "name_suffix": "_2025"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-22T01:57:52.761+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson15-level7-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson15-level7-2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:57:52.761+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson15-level7-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson15-level7-2024\"},{\"changed_at\":\"2025-04-22 21:33:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,0 +1,44 @@
+.settingsPanel {
+  border-top: 1px solid var(--borders-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  background: var(--background-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.headerText {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.settingsList {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  width: 100%;
+
+  > div,
+  select {
+    width: 100%;
+  }
+}
+
+.languageForm {
+  width: 100%;
+}

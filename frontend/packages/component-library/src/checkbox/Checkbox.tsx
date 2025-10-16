@@ -1,5 +1,11 @@
 import classnames from 'classnames';
-import {useRef, useEffect, ChangeEvent, HTMLAttributes} from 'react';
+import {
+  useRef,
+  useEffect,
+  ReactNode,
+  ChangeEvent,
+  InputHTMLAttributes,
+} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
@@ -7,7 +13,8 @@ import Typography from '@/typography';
 
 import moduleStyles from './checkbox.module.scss';
 
-export interface CheckboxProps extends HTMLAttributes<HTMLInputElement> {
+export interface CheckboxProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   /** Checkbox checked state */
   checked: boolean;
   /** Checkbox onChange handler*/
@@ -20,7 +27,7 @@ export interface CheckboxProps extends HTMLAttributes<HTMLInputElement> {
   /** The value attribute specifies the value of an input element. */
   value?: string;
   /** Checkbox label */
-  label?: string;
+  label?: string | ReactNode;
   /** Is checkbox disabled */
   disabled?: boolean;
   /** Is checkbox indeterminate */

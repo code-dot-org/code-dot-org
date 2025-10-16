@@ -3,6 +3,9 @@
   "script_names": [
     "csa-software-engineering"
   ],
+  "original_script_names": [
+    "csa-software-engineering"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -2,13 +2,42 @@ import {type Page} from '@playwright/test';
 
 import {loadFonts, FONT_FAMILY_NAMES} from '@code-dot-org/fonts';
 
+export interface MarketingPageOptions {
+  locale?: string;
+  isPreview?: boolean;
+}
+
 export class MarketingPage {
   readonly locale: string | undefined;
+  readonly isPreview: boolean;
   readonly page: Page;
 
-  constructor(page: Page, locale?: string) {
+  constructor(page: Page, options?: MarketingPageOptions) {
     this.page = page;
-    this.locale = locale;
+    this.locale = options?.locale;
+    this.isPreview = options?.isPreview ?? false;
+  }
+
+  async enableDraftMode(token: string, slug: string) {
+    return await this.page.goto(
+      `${this.getBaseUrl()}/api/draft?token=${token}&slug=${slug}&locale=${this.locale}`,
+    );
+  }
+
+  getBaseDomain() {
+    const domain = process.env.APPLICATION_BASE_ADDRESS;
+
+    if (!domain) {
+      console.warn(
+        'No domain specified, defaulting to code.marketing-sites.localhost!',
+      );
+
+      return this.isPreview
+        ? 'preview-code.marketing-sites.localhost:3001'
+        : 'code.marketing-sites.localhost:3001';
+    }
+
+    return this.isPreview ? `preview-${domain}` : domain;
   }
 
   getBaseUrl() {
@@ -24,12 +53,18 @@ export class MarketingPage {
       default:
       case 'localhost':
       case 'pr':
-        return 'http://localhost:3001';
+        return `http://${this.getBaseDomain()}`;
       case 'test':
-        return 'https://dev.marketing.dev-code.org';
       case 'production':
-        return 'https://code.org';
+        return `https://${this.getBaseDomain()}`;
     }
+  }
+
+  getCookieDomain() {
+    const baseDomain = this.getBaseDomain();
+
+    // Remove the port number if it exists, e.g. "localhost:3001" becomes "localhost"
+    return baseDomain.replace(/:\d+$/, '');
   }
 
   getBasePath() {
@@ -41,9 +76,11 @@ export class MarketingPage {
   }
 
   async goto(subPath: string) {
-    await this.page.goto(`${this.getBasePath()}${subPath}`);
+    const response = await this.page.goto(`${this.getBasePath()}${subPath}`);
 
     await this.loadFonts();
+
+    return response;
   }
 
   async loadFonts() {
@@ -58,5 +95,27 @@ export class MarketingPage {
       },
       {fn: loadFonts.toString(), fonts: FONT_FAMILY_NAMES},
     );
+  }
+
+  async getMetatag(name: string) {
+    return this.page.locator(`meta[name="${name}"]`)?.getAttribute('content');
+  }
+
+  async getOpenGraph(name: string) {
+    return this.page
+      .locator(`meta[property="og:${name}"]`)
+      ?.getAttribute('content');
+  }
+
+  get pageTitle() {
+    return this.page.title();
+  }
+
+  get description() {
+    return this.getMetatag('description');
+  }
+
+  get robots() {
+    return this.getMetatag('robots');
   }
 }

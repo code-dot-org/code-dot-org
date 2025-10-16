@@ -19,6 +19,7 @@ import {ValidationError} from '../responseValidators';
 import {Channel, ProjectAndSources, ProjectSources} from '../types';
 
 import {ChannelsStore} from './ChannelsStore';
+import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
 import {SourcesStore} from './SourcesStore';
 
 const {reload} = require('@cdo/apps/utils');
@@ -53,14 +54,26 @@ export default class ProjectManager {
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
   private forceReloading: boolean;
+  private isShareView: boolean | undefined;
+  private thumbnailUrl: string | undefined;
+  private thumbnailPngBlob: Blob | undefined;
+  private currentVersionHasComment: boolean = false;
 
-  constructor(
-    sourcesStore: SourcesStore,
-    channelsStore: ChannelsStore,
-    channelId: string,
-    reduceChannelUpdates: boolean,
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
-  ) {
+  constructor({
+    sourcesStore,
+    channelsStore,
+    channelId,
+    reduceChannelUpdates,
+    isShareView = false,
+    metricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+  }: {
+    sourcesStore: SourcesStore;
+    channelsStore: ChannelsStore;
+    channelId: string;
+    reduceChannelUpdates: boolean;
+    isShareView?: boolean;
+    metricsReporter?: LabMetricsReporter;
+  }) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
@@ -68,6 +81,7 @@ export default class ProjectManager {
     this.initialSaveComplete = false;
     this.forceReloading = false;
     this.metricsReporter = metricsReporter;
+    this.isShareView = isShareView;
   }
 
   getChannelId(): string {
@@ -91,8 +105,20 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
+    await this.initializeCurrentVersionCommentState();
     const abuseScore = await this.channelsStore.getAbuseScore(channel);
-    return {sources, channel, abuseScore};
+    const sharingDisabled = await this.channelsStore.getSharingDisabled(
+      channel
+    );
+    const isTeacherOfProjectOwner =
+      await this.channelsStore.getIsTeacherOfProjectOwner(channel);
+    return {
+      sources,
+      channel,
+      abuseScore,
+      sharingDisabled,
+      isTeacherOfProjectOwner,
+    };
   }
 
   // Restore the given version of the project. This will call restore on the sources store
@@ -292,8 +318,11 @@ export default class ProjectManager {
     this.publishHelper(false);
   }
 
-  async getVersionList() {
-    return await this.sourcesStore.getVersionList(this.channelId);
+  async getVersionList(includeComments: boolean = false) {
+    return await this.sourcesStore.getVersionList(
+      this.channelId,
+      includeComments
+    );
   }
 
   addSaveSuccessListener(listener: (channel: Channel) => void) {
@@ -312,12 +341,85 @@ export default class ProjectManager {
     this.saveStartListeners.push(listener);
   }
 
+  getCurrentVersionId(): string | null {
+    return this.sourcesStore.getCurrentVersionId();
+  }
+
+  /**
+   * Check if the current version has a comment associated with it.
+   * This is used to determine if we should force a new version during autosave
+   * to prevent overwriting a version that has a comment.
+   * @returns boolean true if current version has a comment
+   */
+  getCurrentVersionHasComment(): boolean {
+    return this.currentVersionHasComment;
+  }
+
+  /**
+   * Set whether the current version has a comment.
+   * @param hasComment whether the current version has a comment
+   */
+  setCurrentVersionHasComment(hasComment: boolean): void {
+    this.currentVersionHasComment = hasComment;
+  }
+
+  /**
+   * Initialize the comment state by checking if the current version has a comment.
+   */
+  private async initializeCurrentVersionCommentState(): Promise<void> {
+    const currentVersionId = this.getCurrentVersionId();
+    if (!currentVersionId) {
+      this.setCurrentVersionHasComment(false);
+      return;
+    }
+
+    try {
+      const versionList = await this.getVersionList(true); // include comments
+      const currentVersion = versionList.find(
+        v => v.versionId === currentVersionId
+      );
+      const hasComment = !!currentVersion?.comment?.trim();
+      this.setCurrentVersionHasComment(hasComment);
+    } catch (error) {
+      // If we can't fetch version list, assume no comment.
+      this.metricsReporter.logWarning(
+        `Failed to initialize comment state because we couldn't fetch the version list: ${error}`
+      );
+      this.setCurrentVersionHasComment(false);
+    }
+  }
+
   isForceReloading(): boolean {
     return this.forceReloading;
   }
 
   setLastSource(lastSource: ProjectSources) {
     this.lastSource = JSON.stringify(lastSource);
+  }
+
+  getShouldCaptureThumbnail() {
+    return this.channelId && this.lastChannel?.isOwner && !this.isShareView;
+  }
+
+  setThumbnail(pngBlob: Blob) {
+    this.thumbnailPngBlob = pngBlob;
+    this.thumbnailUrl = getProjectThumbnailUrl(this.channelId);
+  }
+
+  /**
+   * Uploads a thumbnail image to the thumbnail path via the files API.
+   */
+  async saveThumbnail() {
+    if (this.thumbnailUrl && this.thumbnailPngBlob) {
+      try {
+        updateProjectThumbnail(this.channelId, this.thumbnailPngBlob);
+      } catch (e) {
+        this.metricsReporter.logWarning('Failed to save thumbnail.');
+        return;
+      }
+    } else {
+      return Promise.resolve();
+    }
   }
 
   /**
@@ -366,8 +468,12 @@ export default class ProjectManager {
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,
-          forceNewVersion
+          forceNewVersion || this.getCurrentVersionHasComment() // Force new version if the last saved version has a comment and sources have changed.
         );
+        if (this.thumbnailPngBlob) {
+          await this.saveThumbnail();
+          this.thumbnailPngBlob = undefined;
+        }
       } catch (error) {
         let errorToReport: Error;
         if (error instanceof Error) {
@@ -379,6 +485,13 @@ export default class ProjectManager {
         return;
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
+
+      // If we created a new version (not replacing existing), then we reset the new version to not yet have a comment.
+      // If the user manually saves the version, then the comment is added after the project is saved.
+      // See SaveVersionPanel.tsx.
+      if (forceNewVersion || this.getCurrentVersionHasComment()) {
+        this.setCurrentVersionHasComment(false);
+      }
     }
 
     // Normally, reduceChannelUpdates is false and we update the channel
@@ -403,6 +516,13 @@ export default class ProjectManager {
         this.channelToSave = {
           ...this.channelToSave,
           labConfig: this.sourcesToSave?.labConfig,
+        };
+      }
+
+      if (this.thumbnailUrl && !this.lastChannel?.thumbnailUrl) {
+        this.channelToSave = {
+          ...this.channelToSave,
+          thumbnailUrl: this.thumbnailUrl,
         };
       }
 

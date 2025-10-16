@@ -26,7 +26,7 @@ import {isProductionEnvironment} from '../utils';
 import {
   getUserID,
   getUserType,
-  findOrCreateStableId,
+  getStableId,
   formatUserId,
 } from './statsigHelpers';
 
@@ -38,7 +38,7 @@ class StatsigSessionReplay {
     // stable_id is set as a cookie in application_controller.rb. However in a
     // the rare case we are running outside of the application layout,
     // set stable_id as a cookie here if it doesn't exist.
-    this.stable_id = findOrCreateStableId();
+    this.stable_id = getStableId();
     let user = {
       customIDs: {stableID: this.stable_id},
       custom: {},

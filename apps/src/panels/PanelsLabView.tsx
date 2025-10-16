@@ -16,10 +16,7 @@ import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {sendSuccessReport} from '../code-studio/progressRedux';
-import {
-  getCurrentLevel,
-  getCurrentLesson,
-} from '../code-studio/progressReduxSelectors';
+import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
 import {queryParams} from '../code-studio/utils';
 import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
 import {LabProps} from '../lab2/types';
@@ -29,8 +26,6 @@ import useWindowSize from '../util/hooks/useWindowSize';
 
 import PanelsView from './PanelsView';
 import {PanelsLevelProperties} from './types';
-
-const appName = 'panels';
 
 // Temporary solution for sending analytics for Hour of Code 2024.
 // We are also temporarily sending panel analytics for the Elementary Music Lab Pilot
@@ -75,23 +70,12 @@ const updateAnalyticsProperty = (key: string, value: string) => {
   identify(identifyEvent);
 };
 
-const PanelsLabView: React.FunctionComponent<LabProps> = () => {
+const PanelsLabView: React.FunctionComponent<
+  LabProps<PanelsLevelProperties>
+> = ({levelProperties}) => {
   const dispatch = useAppDispatch();
 
-  const panels = useAppSelector(
-    state =>
-      (state.lab.levelProperties as PanelsLevelProperties | undefined)?.panels
-  );
-  const currentAppName = useAppSelector(
-    state => state.lab.levelProperties?.appName
-  );
-  const background = useAppSelector(
-    state => getCurrentLesson(state)?.background || null
-  );
-  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
-  const offerBrowserTts =
-    useAppSelector(state => state.lab.levelProperties?.offerBrowserTts) ||
-    queryParams('show-tts') === 'true';
+  const {panels, appName, skipUrl, offerBrowserTts} = levelProperties;
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   const dialogControl = useDialogControl();
@@ -107,7 +91,7 @@ const PanelsLabView: React.FunctionComponent<LabProps> = () => {
         dispatch(continueOrFinishLesson());
       }
     },
-    [dispatch]
+    [dispatch, appName]
   );
 
   const onSkip = useCallback(() => {
@@ -174,19 +158,18 @@ const PanelsLabView: React.FunctionComponent<LabProps> = () => {
 
   const [windowWidth, windowHeight] = useWindowSize();
 
-  if (!panels || currentAppName !== appName) {
+  if (!panels) {
     return <div />;
   }
 
   return (
     <PanelsView
       panels={panels}
-      background={background}
       onContinue={onContinue}
       onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}
       targetHeight={windowHeight}
-      offerBrowserTts={offerBrowserTts}
+      offerBrowserTts={offerBrowserTts || queryParams('show-tts') === 'true'}
       levelId={currentLevelId}
       onChangePanel={onChangePanel}
       onClickContinue={onClickContinue}

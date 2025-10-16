@@ -1,21 +1,21 @@
 {
   "ar-SA": {
-    "/docs/applab.json": "d32dad9c8246e4c648a94311cf65f710",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "c19cefae5d9278f7e2a6e967723a1653",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "0ceeaa0a2f9f5048228b09375da6c460",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "0ceeaa0a2f9f5048228b09375da6c460"
   },
   "az-AZ": {
-    "/docs/applab.json": "b3d8a33ba0a1d67427b711d74da8c4f5",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "40781347e6ba470a35a485e3fd163f13",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "2e3089c86b2e64539c88d1c3fa9285b7",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "2e3089c86b2e64539c88d1c3fa9285b7"
   },
   "bg-BG": {
-    "/docs/applab.json": "01949f8ded24d00acb2ebaa54045ce65",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "08c9fdc0c08ce7bd6a165d7ff9493b3c",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "d7c0188317c5dbb422adab319742b3b3",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "d7c0188317c5dbb422adab319742b3b3"
   },
   "bn-BD": {
     "/docs/applab.json": "cc17a8a9d9b46ae03d9c67ded2f54c39",
@@ -24,16 +24,16 @@
     "/docs/weblab.json": "cc17a8a9d9b46ae03d9c67ded2f54c39"
   },
   "bs-BA": {
-    "/docs/applab.json": "3f6909578180dbebe4c8f94a0267f989",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "25c638198117cb653acfd6393977bb48",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "e670eb1adab267fab4c8f557b43fe4a9",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "e670eb1adab267fab4c8f557b43fe4a9"
   },
   "ca-ES": {
-    "/docs/applab.json": "801dd8a01d7742e1a7bed6921d9c92e7",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "d215de6723ab8b768e4e242b322c5868",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "50bccf98d5b7ab228058feb8a5b014ee",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "50bccf98d5b7ab228058feb8a5b014ee"
   },
   "co-CO": {
     "/docs/applab.json": "a88615b495ca04bd3cbc5a2957a00132",
@@ -42,64 +42,64 @@
     "/docs/weblab.json": "a88615b495ca04bd3cbc5a2957a00132"
   },
   "cs-CZ": {
-    "/docs/applab.json": "e59e38dbabf035bd4f0f5a57d0ced12c",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "9063df2be5b302a08c11f8aa178ff1ca",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "f470cdcc9df4b98ea02e640fdec997cc",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "f470cdcc9df4b98ea02e640fdec997cc"
   },
   "da-DK": {
-    "/docs/applab.json": "744e40348675483f11e12786b35b9adb",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "0193d6082346a6eba09a822d5f453ce1",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "e6ef88ccf22099da60ee5f81a8527110",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "e6ef88ccf22099da60ee5f81a8527110"
   },
   "de-DE": {
-    "/docs/applab.json": "5872ede1e51a435293963c4385ada468",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "07db3f61791452b60f09c2f45681c23e",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "cddbaeb480a0e2b56384c11edac8df93",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "cddbaeb480a0e2b56384c11edac8df93"
   },
   "dv-MV": {
-    "/docs/applab.json": "637e36ead2e1fc6d89b6b8e459558dda",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "eb59c732b1960cfa4754c86121a8fa9f",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "b48f8a2eea95270966f93b884b88b159",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "b48f8a2eea95270966f93b884b88b159"
   },
   "el-GR": {
-    "/docs/applab.json": "450de1fad00e4d9e2696a1e2512d0d7d",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "d0e4761b6525334f427b767bcbcd9402",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "e60c35fd2bacca7ce56f3809cf29ecce",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "e60c35fd2bacca7ce56f3809cf29ecce"
   },
   "en-GB": {
-    "/docs/applab.json": "7d78d2993f3ac92f41fc169020c7d502",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "41031f056beb15b17735105f55e1a70c",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "3f697a0fbc8271176a45562da92f8d02",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "3f697a0fbc8271176a45562da92f8d02"
   },
   "es-ES": {
-    "/docs/applab.json": "e29155badf1f28131c120e7be1cf778f",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "ea165de6cefb0467d8dae55c0009a29e",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "a35e7b2aeab7e136416f2345cbcecd84",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "a35e7b2aeab7e136416f2345cbcecd84"
   },
   "es-MX": {
-    "/docs/applab.json": "2e320f603e76a5789ebea3f66c475902",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "61733abdbf4442b6ffbd52272b5fb013",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "4467681240949ad57e1177656d27ceaa",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "4467681240949ad57e1177656d27ceaa"
   },
   "et-EE": {
-    "/docs/applab.json": "3b14325c9fe91ff60aa3a531b140ebc8",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "a076be80dcf3e468c657b490cefe1e62",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "0f953ffc4af86c42cffa31a1aaa77e22",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "0f953ffc4af86c42cffa31a1aaa77e22"
   },
   "eu-ES": {
-    "/docs/applab.json": "6b22f88064fe9346c317bab17a1e1a15",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "bec192d501a5b678862452d80f2a4e7d",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "0026d813fe24d030d28eb97e1f4921ab",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "0026d813fe24d030d28eb97e1f4921ab"
   },
   "fa-AF": {
     "/docs/applab.json": "ce107bad0dba25c532075900ad586400",
@@ -108,136 +108,136 @@
     "/docs/weblab.json": "ce107bad0dba25c532075900ad586400"
   },
   "fa-IR": {
-    "/docs/applab.json": "3e57f3cc2d0af3ede47543948cdd378e",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "b46593ead70d39317e2b6656b9b77221",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "c23e8998ab3e8010f2b1d4937e166ae0",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "c23e8998ab3e8010f2b1d4937e166ae0"
   },
   "fi-FI": {
-    "/docs/applab.json": "08f7b87e64a5d4448f1d5b1796319e47",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "32005b2087bf6d084e19e4b87b0b68d5",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "3b080e89007bc4d6a28662985ac1dba2",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "3b080e89007bc4d6a28662985ac1dba2"
   },
   "fil-PH": {
-    "/docs/applab.json": "71b291c0b8d7a9d12584052d22b0c2e7",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "71b291c0b8d7a9d12584052d22b0c2e7",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "b69e94b793cef795745a7f35aed05a14",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "b69e94b793cef795745a7f35aed05a14"
   },
   "fr-FR": {
-    "/docs/applab.json": "5f8225f59e1be198877857316e7cd709",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "5f8225f59e1be198877857316e7cd709",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "ed050581ea112b832a6d310514b9568f",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "ed050581ea112b832a6d310514b9568f"
   },
   "ga-IE": {
-    "/docs/applab.json": "70060b5a5612c826145b3d838cd4b429",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "70060b5a5612c826145b3d838cd4b429",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "fb25704fc2c955ac89951d40d20e4827",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "fb25704fc2c955ac89951d40d20e4827"
   },
   "gl-ES": {
-    "/docs/applab.json": "a4f6c144db7b59855028b15176fcf9fb",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "51c65d692587d77d2b514ee475cd8446",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "c668f271a17e1a4e425f4b4ff9c12969",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "c668f271a17e1a4e425f4b4ff9c12969"
   },
   "haw-HI": {
-    "/docs/applab.json": "861c90b84fca3627cbe7e5007986a55a",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "43e17ccb5810b03c268d4aa57dda65a6",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "fd1e629d291eefe7b3fa09f895b77dc0",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "fd1e629d291eefe7b3fa09f895b77dc0"
   },
   "he-IL": {
-    "/docs/applab.json": "d7b8cf0f558f77ce6da1e71a8b342164",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "0871bd2ecd3a1f536d58a6aca2e037b0",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "4f3414b9031bad4495b127c2370c005d",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "4f3414b9031bad4495b127c2370c005d"
   },
   "hi-IN": {
-    "/docs/applab.json": "8ff01d1fd08688e7d93df66cce855aaa",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "8ff01d1fd08688e7d93df66cce855aaa",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "fb556dd2e59d38e03d98f294aab1685e",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "fb556dd2e59d38e03d98f294aab1685e"
   },
   "hr-HR": {
-    "/docs/applab.json": "946c9da43312bbeab3187f878c0eab21",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "e4f2a4fc6fdac088dd2452c0e2febf02",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "ca30d1dcaaed7359d98f7d7cbeabd28a",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "ca30d1dcaaed7359d98f7d7cbeabd28a"
   },
   "hu-HU": {
-    "/docs/applab.json": "ea5990ebe19e98838884b9fab384d785",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "8743f9f4f422fd721f69bd9c0d870cf9",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "f1834206cb22468d74854347b8a870ac",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "f1834206cb22468d74854347b8a870ac"
   },
   "hy-AM": {
-    "/docs/applab.json": "05f3cbcb8bcee72956d3d46861dc305b",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "648da812d06899d8ce92df15ecaf6384",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "aac69c1490b90b9f2d4820232b8197a9",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "aac69c1490b90b9f2d4820232b8197a9"
   },
   "id-ID": {
-    "/docs/applab.json": "7006ca0507cba5a4293f46e36f448172",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "b21b795e6884031911aa121c4eef9b4c",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "7259cbf64cde647fdbe91bae86612f47",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "7259cbf64cde647fdbe91bae86612f47"
   },
   "is-IS": {
-    "/docs/applab.json": "a81029353df36765326f61c263bff61c",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "1a7e241e27e7995b66d420c374336aa2",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "9c9295f7d3276dd6ac01762710547b11",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "9c9295f7d3276dd6ac01762710547b11"
   },
   "it-IT": {
-    "/docs/applab.json": "4f87509e452197b094b5c9928b09a7cc",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "4f87509e452197b094b5c9928b09a7cc",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "62e9a50c370855b1f85bfde9b8c68ce0",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "62e9a50c370855b1f85bfde9b8c68ce0"
   },
   "ja-JP": {
-    "/docs/applab.json": "188b799d8e94521039b687331100aaea",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "bb2828fbbf49adaa15797ee25d083d1c",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "1b2d5215328fa43c666cb4d20a8ac323",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "1b2d5215328fa43c666cb4d20a8ac323"
   },
   "ka-GE": {
-    "/docs/applab.json": "41148ff36e216dacb0088a6a0417c744",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "6ecc4ecf9714da92540d0cd3fe81388a",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "0bf0eeb6505f84b7d5920305103160df",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "0bf0eeb6505f84b7d5920305103160df"
   },
   "kk-KZ": {
-    "/docs/applab.json": "8cc6ee9d44b9dd3c0a770d044d8fe541",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "8cc6ee9d44b9dd3c0a770d044d8fe541",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "2e3e2d7f0fb03a50ce92045d997209f0",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "2e3e2d7f0fb03a50ce92045d997209f0"
   },
   "kn-IN": {
-    "/docs/applab.json": "8a693ae0f55778f5f6be133ec7cbea21",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "8a693ae0f55778f5f6be133ec7cbea21",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "7d6a23a52ce1cfcd8cd2c3f12d9c813f",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "0d6f660822eb894485e764f5904cdf85"
   },
   "km-KH": {
-    "/docs/applab.json": "c65dba3b9911556918cc5cf8635bffc6",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "37afde71547bdea163029b7e051483cb",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "f0c8e622b8a1ca459cc222d1930a90b6",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "f0c8e622b8a1ca459cc222d1930a90b6"
   },
   "ko-KR": {
-    "/docs/applab.json": "79e14d4ef894e74ebc89d1020edd6e49",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "ccdfab477558a66eb7eef089fc37c7cb",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "90f20082e44ea388013489b79b06885a",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "90f20082e44ea388013489b79b06885a"
   },
   "ku-IQ": {
-    "/docs/applab.json": "16122c626d35dd5d6b57dfc635a38d40",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "acab102178b4dfb5e64c1c54ae7b82d0",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "dd7fbdeaed377e41eb5beb96ec3901b8",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "dd7fbdeaed377e41eb5beb96ec3901b8"
   },
   "ky-KG": {
     "/docs/applab.json": "11307424bf6e2c1c3d9efdf3a8fb2b83",
@@ -246,88 +246,88 @@
     "/docs/weblab.json": "11307424bf6e2c1c3d9efdf3a8fb2b83"
   },
   "lt-LT": {
-    "/docs/applab.json": "23d5951e43ac69cc3d5f5dba0a6af7da",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "08928a634d27d9704bd0ea021eba9ce0",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "b5f930297c75ee466b896bd9d13412c8",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "b5f930297c75ee466b896bd9d13412c8"
   },
   "lv-LV": {
-    "/docs/applab.json": "52a8ee9efd0e3f39bd10a50297c1e9c5",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "3d6149863d99fbca7a58101932de721f",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "68e9ab92008a3f8ff950a4ed888f7f74",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "68e9ab92008a3f8ff950a4ed888f7f74"
   },
   "mi-NZ": {
-    "/docs/applab.json": "99db32bddc2d548c9b74477b2f4bdd89",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "9b9f66d3e9f99d2ff4a5908f98ab6e70",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "2573159d081bfb7457bc5d4dbc769e36",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "2573159d081bfb7457bc5d4dbc769e36"
   },
   "mk-MK": {
-    "/docs/applab.json": "3a4d6ee2b2da8ec1d97d73a1d84e98c0",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "4d9470f54657c1d1748fc188f3c66558",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "c9319ae04b7d74310bb68a928874fd1f",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "c9319ae04b7d74310bb68a928874fd1f"
   },
   "mn-MN": {
-    "/docs/applab.json": "e548f4f20d46104f76c43148be087003",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "e5a59adb8415a2b9f8337e44537e069c",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "662b4e6bb12f3e2fd132c944f12f31f4",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "662b4e6bb12f3e2fd132c944f12f31f4"
   },
   "mr-IN": {
-    "/docs/applab.json": "d5f858cf683891eafa0b7892b48cfad6",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "d5f858cf683891eafa0b7892b48cfad6",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "ef1cf17904d685739dd570d9de272fa5",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "ef1cf17904d685739dd570d9de272fa5"
   },
   "ms-MY": {
-    "/docs/applab.json": "9aae98b819b9d1d07c504822bb29bb1b",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "c7bf9baff7335b9efd78f96213c8b026",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "8179410d10e6afc9a029cdd73453cc57",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "8179410d10e6afc9a029cdd73453cc57"
   },
   "mt-MT": {
-    "/docs/applab.json": "c03e7bfb775fbb63b3bf40582367867f",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "54f48c7d1f921ee2ce710a004ea40902",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "ac79e6b9c6bacb66c5c6cf125834cba6",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "ac79e6b9c6bacb66c5c6cf125834cba6"
   },
   "my-MM": {
-    "/docs/applab.json": "bee084751175e245eafdf85f8b9891f8",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "07e69f35a1e384586d224347cb0bf20f",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "71fffaeee7d673a6e005e633290d50a6",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "71fffaeee7d673a6e005e633290d50a6"
   },
   "ne-NP": {
-    "/docs/applab.json": "a858d780925fac96ca7df8ec3125331b",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "b603df59a9fd2720edbb9e30d37ce6be",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "99547e8c6b3f45f2c2d9edfeaf338c20",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "99547e8c6b3f45f2c2d9edfeaf338c20"
   },
   "nl-NL": {
-    "/docs/applab.json": "42d7cce39b60988731f10ede95244de5",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "71df6870e6fc0f26211a936d315179ee",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "6e52213b33e247d5c6f72fa39e58f205",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "6e52213b33e247d5c6f72fa39e58f205"
   },
   "nn-NO": {
-    "/docs/applab.json": "132469d222300a49e2d9a8179335e6aa",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "0d88fbc7451d0425bd4cf65426b5cad9",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "366167e32122745ebea9c7acbc949e47",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "366167e32122745ebea9c7acbc949e47"
   },
   "no-NO": {
-    "/docs/applab.json": "9834e09e1552f23275051be0ace22cb4",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "429b05fed259fa13c332ff4ebd14e1a3",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "108b165d741ed507d614fd4c4a8ecccd",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "108b165d741ed507d614fd4c4a8ecccd"
   },
   "pl-PL": {
-    "/docs/applab.json": "900020e80bc9e5d341aea3e4fb192dd2",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "2ac4e66f66aaac32756ee5acaf60c55b",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "8eaec1c21ea1fb5b75daf7086cfe8d90",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "8eaec1c21ea1fb5b75daf7086cfe8d90"
   },
   "ps-AF": {
     "/docs/applab.json": "3cc89da073fa07e2f1f176809f5efe42",
@@ -336,88 +336,88 @@
     "/docs/weblab.json": "3cc89da073fa07e2f1f176809f5efe42"
   },
   "pt-BR": {
-    "/docs/applab.json": "ffeef81d8dd49d56aa7cf65a7690da5a",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "048e41641ae7313fdba68f30ebbc8794",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "6424862e8326da3d7d9589c53c57136c",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "6424862e8326da3d7d9589c53c57136c"
   },
   "pt-PT": {
-    "/docs/applab.json": "eae012baf6e3bf4f943e8e025d54d94d",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "b921d39e77611e07812219d43b7cb861",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "993adb09de36bdbb79928ba19432867f",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "993adb09de36bdbb79928ba19432867f"
   },
   "ro-RO": {
-    "/docs/applab.json": "3e39d4e0f51dc75b8d55a227dadb4e5b",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "3e39d4e0f51dc75b8d55a227dadb4e5b",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "c7e881c91ba250b27fcdca1807ea1248",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "c7e881c91ba250b27fcdca1807ea1248"
   },
   "ru-RU": {
-    "/docs/applab.json": "97d354392f32f0d7d6255f17e3f73871",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "619c795449b8ccf9e7b994d11e3b69ef",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "de7c1cd39fefbb11f9d4859fede3f563",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "de7c1cd39fefbb11f9d4859fede3f563"
   },
   "se-FI": {
-    "/docs/applab.json": "34f51375395a21ea60264bc2659d295d",
-    "/docs/gamelab.json": "c558ef2e703a4824ac392c4768fda3ee",
-    "/docs/programming_environments.json": "f1382ade12a4736dfbae561477c50932",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "b2abff099eed79f7ebcacb401593003b",
+    "/docs/gamelab.json": "9b5738b3df16ae8cf2409b26eb9216a5",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "22c0ce22aa4d242bd1c254cbf40d0fe1"
   },
   "sm-WS": {
-    "/docs/applab.json": "5c0ff37a62621c84578ff7fb2a22ec09",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "9fc0ccf5c1dce2d8523aacde96e3c4d4",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "f7bc7b9c32ec472bc7d2d7d1bb159d57",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "f7bc7b9c32ec472bc7d2d7d1bb159d57"
   },
   "si-LK": {
-    "/docs/applab.json": "a52b6e18a373f2be0e730f61bd440225",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "a141abd5c0e9c405c8aa8126c9b0c51c",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "2218531f2f229ef958271d2a2325b605",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "2218531f2f229ef958271d2a2325b605"
   },
   "sk-SK": {
-    "/docs/applab.json": "b6e131b5c5fb67554ff94335c0e112fa",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "248872cdcf3b2c9b3ec5ac8199e504a6",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "85709383ed6103cba72758f2138856ba",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "85709383ed6103cba72758f2138856ba"
   },
   "sl-SI": {
-    "/docs/applab.json": "8da954e619a5a974ee984a8d38d75888",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "7ccb805edb53f50dbfe919e2a3aa0d28",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "2e5c0a5c4628c7877ca972c3c13295e3",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "2e5c0a5c4628c7877ca972c3c13295e3"
   },
   "sq-AL": {
-    "/docs/applab.json": "36975d07f44db2da0487cc3c8252269c",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "8a5ce8ce7a90e5126c76b1b71aab3089",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "b3f042fc5203e4860dc76a3d1b521263",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "b3f042fc5203e4860dc76a3d1b521263"
   },
   "sr-SP": {
-    "/docs/applab.json": "2eb924b2e474a5bc0e41b6c20fdd4c17",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "33a729caa8ebc3d9cedf1c260dccbb5a",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "2cfe349d44c411728f613c0447f58184",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "2cfe349d44c411728f613c0447f58184"
   },
   "sv-SE": {
-    "/docs/applab.json": "d5814bb5961637433dae3dbc80f43319",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "13daf99a9a3ddbb5e855db160f72d54c",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "5cd17252fe784b2ccee048f141d9014f",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "5cd17252fe784b2ccee048f141d9014f"
   },
   "ta-IN": {
-    "/docs/applab.json": "3c003b0c6631e4aef23b781673cdc731",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "174344b5029ed76c21c12c0caf2905a3",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "c670ad5f64ad0d5d7ae8fe653f99fc97",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "c670ad5f64ad0d5d7ae8fe653f99fc97"
   },
   "te-IN": {
-    "/docs/applab.json": "f0f0368ad285e909c665924431eb5160",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "1d564ff7bf5305b9eb53ae14bfc5f16a",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "4841efc121f6233089ba11d0ba603f9c",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "4841efc121f6233089ba11d0ba603f9c"
   },
   "tg-TJ": {
     "/docs/applab.json": "c0cc91e5afbdfb48cf4dd6fe64ced2b2",
@@ -426,52 +426,52 @@
     "/docs/weblab.json": "c0cc91e5afbdfb48cf4dd6fe64ced2b2"
   },
   "th-TH": {
-    "/docs/applab.json": "03d977cdd564ad0b5afdf363f465bbc8",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "ec8dfe1110e37de9cffa17863d02cb72",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "bf91938cd9e656cc86bbbcacb1c67cec",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "bf91938cd9e656cc86bbbcacb1c67cec"
   },
   "tr-TR": {
-    "/docs/applab.json": "e83408df27054d753e724d861e4323e5",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "42137329eab6b12e1eb4c321b77fb30f",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "40eb66148438e7e05c2af7645250d305",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "40eb66148438e7e05c2af7645250d305"
   },
   "uk-UA": {
-    "/docs/applab.json": "8e416bb4b162f48bb01e01276eac17e0",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "42c9b599bae84eb62f8d525869a1f8c6",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "3a4e36ec7c2a4794cd50d36293a22b48",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "3a4e36ec7c2a4794cd50d36293a22b48"
   },
   "ur-PK": {
-    "/docs/applab.json": "16aff72a20a4468720de28def852a6ac",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "93c9ab0d911168dce385e3da909b6907",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "cb73bb90fe982c0a4d87e8d1c66d4d1e",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "cb73bb90fe982c0a4d87e8d1c66d4d1e"
   },
   "uz-UZ": {
-    "/docs/applab.json": "16e707b4728be17e27f392fffd482262",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "9f2a78466490f214139d944eb274c8b5",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "351c15243af2a1d4cfde87bbdf893e30",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "e3370de3b8a4349eb66d1d225630256a"
   },
   "vi-VN": {
-    "/docs/applab.json": "79460f2dab90f5b3176705305fbb46df",
-    "/docs/gamelab.json": "83cc2163de36a4c5c77fd156198dee2a",
-    "/docs/programming_environments.json": "dc2d93204f29ac9de6f0152924bd45fb",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "90cbcd7b40c5f56bb16137d03e23e189",
+    "/docs/gamelab.json": "ff8492bdd11ed6d0162d1ec34503ec88",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "ff8492bdd11ed6d0162d1ec34503ec88"
   },
   "zh-CN": {
-    "/docs/applab.json": "cd7d8d0a771ccf30984657964c23beaa",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "7631de07c4421c587cde263426e03e16",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "242d31cc448a5da0d0ce4a5ec9439a84",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "242d31cc448a5da0d0ce4a5ec9439a84"
   },
   "zh-TW": {
-    "/docs/applab.json": "5b468f34736c91861b1cdb7786d4020e",
-    "/docs/gamelab.json": "1154710f1d38f90a332cada0d4e620ec",
-    "/docs/programming_environments.json": "358b7e6254e1304e20488d1314777190",
-    "/docs/weblab.json": "19241fa21d90ee0654fe08677e22aeba"
+    "/docs/applab.json": "0534f152037563d8c26c47178d254dda",
+    "/docs/gamelab.json": "60f3ae13061df806fd08c7375349692e",
+    "/docs/programming_environments.json": "49485f1dca174465c5eee1f46163c8ba",
+    "/docs/weblab.json": "60f3ae13061df806fd08c7375349692e"
   },
   "zu-ZA": {
     "/docs/applab.json": "5cd1bf320bcf872fe184862f084b0aa0",

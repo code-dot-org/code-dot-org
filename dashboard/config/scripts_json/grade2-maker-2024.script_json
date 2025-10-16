@@ -7,23 +7,21 @@
       "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
       "topic_tags": [
         "maker"
       ],
       "tts": true,
-      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "grade2-maker",
-    "serialized_at": "2025-01-09 16:26:28 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-04-03 01:06:38 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "grade2-maker-2024"
     }

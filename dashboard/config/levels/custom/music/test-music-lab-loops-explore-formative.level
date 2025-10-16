@@ -221,7 +221,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:34:49.077+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-formative\\\"\"],\"cloned_from\":\"music-lab-loops-explore-formative\"},{\"changed_at\":\"2025-03-12 20:37:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-28 03:42:21 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 03:42:44 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:34:49.077+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-formative\\\"\"],\"cloned_from\":\"music-lab-loops-explore-formative\"},{\"changed_at\":\"2025-03-12 20:37:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-28 03:42:21 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 03:42:44 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 21:39:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

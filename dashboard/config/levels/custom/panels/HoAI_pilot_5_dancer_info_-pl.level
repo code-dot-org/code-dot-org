@@ -1,0 +1,54 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-08T22:02:11.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###BEHIND THE SCENES\nHow does AI make **new images using words** you choose?",
+        "imageUrl": "",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "AI image models, like DALL·E or Stable Diffusion, are trained by looking at millions of images paired with captions.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_-pl-26827f86-0270-42eb-8cc8-075cc731eae3",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "During training, the model first learns how to add noise – it practices turning clear images into random noise, step by step.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_-pl-bfb56243-e440-4e17-92d5-3c7d4cfdd275"
+      },
+      {
+        "text": "Then, it learns the reverse: how to start with noise and reconstruct an image that matches a given prompt.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_-pl-61bcf404-e424-4df1-a858-bffad1b4d484"
+      },
+      {
+        "text": "When you give the model a prompt (like “a dog wearing sunglasses”), it starts with static noise and gradually removes it, filling in details based on what it learned from training data.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_-pl-a0504e03-ae45-4898-83db-b0c7a3b5e7af"
+      },
+      {
+        "text": "The process is probabilistic—so the same prompt can lead to different results.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_-pl-2249cccb-c046-47d5-b512-43310f17c2de"
+      },
+      {
+        "text": "This is why we talk about AI “creating” rather than “copying.” It generates something new by combining patterns it learned, not by pulling up an existing picture.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_dancer_info_-pl-62851744-2fe8-4c68-ae1c-e769644dee39"
+      }
+    ],
+    "name_suffix": "_-pl"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-08T22:02:11.961+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_dancer_info\\\"\"],\"cloned_from\":\"HoAI_pilot_5_dancer_info\"},{\"changed_at\":\"2025-10-08 22:26:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+}]]></config>
+</Panels>

@@ -24,4 +24,11 @@ export type MessageType =
   | 'system_error'
   | 'loading_pyodide'
   | 'loaded_pyodide'
-  | 'load_failed';
+  | 'load_failed'
+  | 'loading_packages'
+  | 'loaded_packages';
+
+export interface PythonValidationResult {
+  name: string;
+  result: string;
+}

@@ -1,0 +1,188 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:01:17.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "benson_boone_beautiful_things",
+      "sounds": {
+        "benson_boone_beautiful_things": [
+          "vocals_verse_1A",
+          "vocals_verse_1B",
+          "vocals_verse_1C",
+          "vocals_verse_1D",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_prechorus_3",
+          "vocals_prechorus_4",
+          "vocals_small_chorus_1",
+          "vocals_small_chorus_2",
+          "vocals_small_chorus_3",
+          "vocals_big_chorus_1",
+          "vocals_big_chorus_2",
+          "vocals_big_chorus_3",
+          "vocals_chorus_tag"
+        ],
+        "electro": [
+          "alien",
+          "boom_impact",
+          "crackle",
+          "spring_lift",
+          "whua",
+          "whua_short",
+          "wormhole"
+        ],
+        "groove": [
+          "blart",
+          "crash_reverse",
+          "laser",
+          "sidechain_crash",
+          "reverse_blip",
+          "strings",
+          "strings_short"
+        ],
+        "indie": [
+          "crash_build",
+          "crunch",
+          "hey",
+          "hey_short",
+          "scratch",
+          "rustle",
+          "swipe",
+          "swipe_short"
+        ],
+        "pop": [
+          "blip",
+          "clap",
+          "clap_short",
+          "clunk",
+          "phase_elevator",
+          "rainstick",
+          "swoosh"
+        ],
+        "hiphop": [
+          "brass",
+          "brass_short",
+          "dark_sweep_crash",
+          "dive",
+          "kick_impact",
+          "bubble",
+          "vibraslap"
+        ],
+        "rock": [
+          "crash",
+          "feedback",
+          "gong",
+          "pick_scrape",
+          "stomp",
+          "stomp_short",
+          "trashy_crash"
+        ],
+        "acoustic_arcade": [
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ]
+      },
+      "showSoundsPanelInSoundsMode": true,
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "display_name": "Beautiful Things",
+    "long_instructions": "### Beautiful Things\r\n\r\n**Define:** *Beautiful Things* by Benson Boone has lyrics that express longing and desire, but the sound feels distorted and emotional thanks to the use of effects. Your challenge is to create a remix that captures this mood using only vocal tracks and effects.\r\n\r\n**Prepare:** Listen to the vocal tracks and choose three that reflect the tortured desire emotions of the song. Plan how you'll use loops and effects to create a sound that feels intense, layered, or even a little distorted. Listen to the example below to hear what this could sound like.\r\n\r\n**Try:** Use at least three different vocal tracks. Add effects to shape their sound and use at least one loop to repeat a section that builds the emotional impact. Adjust the timing and effects until you capture the mood you're going for.\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Does your remix express the emotion in the lyrics? How did your use of effects and loops change the feeling of the song? In order to complete this level, your remix must include:\r\n\r\n- At least 3 different vocal tracks\r\n- At least 1 loop\r\n- At least 1 effect",
+    "bubble_choice_description": "This song has lyrics that are full of longing and desire, but also sound tortured and distorted through the use of effects. Create a remix of the song that emphasizes these qualities",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/benson_boone_beautiful_things/benson_boone_beautiful_things.jpg",
+    "validations": [
+      {
+        "key": "music-lab-functions-synthesis-practiceA_37ae9bc9-4fd7-4e0d-8ef9-a2204c28938c",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "used_effect"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-practiceA_c14f7188-21cf-4342-a045-72d6ca19f16c",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- **3 different vocal tracks**\n- at least **one loop**\n- at least **one effect**",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:17.167+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-practiceA\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-practiceA\"},{\"changed_at\":\"2025-06-25 20:33:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 16:41:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

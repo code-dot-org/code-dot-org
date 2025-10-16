@@ -3,6 +3,9 @@
   "script_names": [
     "gen-ai-humanities"
   ],
+  "original_script_names": [
+    "gen-ai-humanities"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

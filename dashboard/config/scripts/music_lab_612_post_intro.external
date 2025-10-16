@@ -1,0 +1,9 @@
+name 'music-lab-612-post-intro'
+title 'Problem Solving with AI Pre-Assessment'
+markdown <<MARKDOWN
+Now that you've completed the unit, this assessment will measure your understanding of key coding with music concepts.
+
+- Read each question carefully and **apply what you've learned** to choose the best answer.
+- Some questions involve **code snippets**! Make sure to analyze them before selecting your response.
+- This assessment is an opportunity to **show your growth**, so take your time and do your best!
+MARKDOWN

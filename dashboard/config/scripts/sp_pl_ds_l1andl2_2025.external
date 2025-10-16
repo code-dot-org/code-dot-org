@@ -6,32 +6,29 @@ markdown <<MARKDOWN
 # Data, Data, Data
 
 
-#### In Lessons 2 and 3, students explore the foundational role of data in our everyday lives and how it can be used to make informed decisions, starting with a simple exercise of identifying data in a pizza party scenario and progressing to hands-on work with real datasets to solve practical problems. 
+#### Data is all around us. It’s in the number of steps you take each day, the songs you stream, and even the toppings people choose on their pizza.
+
+#### At its core, data is any organized form of information—numbers, words, images, or categories—that helps us describe the world in a structured way. We often think of data as something technical, but it's simply a way to capture details about people, places, and things.
 
 ---
+<img src="https://images.code.org/b5e2a67a75681390f709e468c050cbd3-image-1724268380001.png" alt="data symbols icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
-## Lesson 2: Introduction to Data Science 
+## Data Science
 
-<img src="https://images.code.org/26266fb4b5ea855ad8166b356fca74d2-image-1724268314954.png" alt="pizza icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 10px 40px;">
+#### **Data science** is what happens when we take that information and try to make sense of it. It's the process of asking questions, searching for patterns, and drawing conclusions based on evidence.
+
+#### Whether you're deciding how many pizzas to order for a party or figuring out which movie genre is most popular in your class, you're doing a form of data science. It’s not just about analyzing numbers—it’s about using information to solve problems and make informed choices.
 
 
-#### This survey lesson introduces students to the basics of data science. 
-#### They begin with a pre-assessment, identifying data in a class pizza party image, then learn about a **data scientist**, whom they’ll role-play in class discussions.
-
-### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>*.</b>
-
- #### **A link to each lesson plan will be provided as it is reviewed. Feel free to explore as much or as little as you like, but it's recommended to focus on the Objectives, Agenda, and Activities for each.*
 
 <div style="clear:both;"></div>
 
-## Lesson 3: Making Sense of Data 
-<img src="https://images.code.org/b5e2a67a75681390f709e468c050cbd3-image-1724268380001.png" alt="data symbols icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+## Data and Your Students 
 
-#### Students analyze a spreadsheet using the **Three Reads routine** to explore a dataset on pizza choices, then use it to answer questions for planning a school event.
-
+#### When students begin learning about data science, they start by recognizing data in everyday situations. From there, they learn how to read and interpret real datasets, ask questions, and make decisions based on what they find. These early experiences help them build a foundation for thinking critically with data.
 
 
-### <b>Check out the entire lesson plan  <a href="LINK" target="blank" rel="noopener noreferrer">here</a>.</b>
+
 
 <div style="clear:both;"></div>
 <br><br>
@@ -40,7 +37,16 @@ markdown <<MARKDOWN
 > - #### **data** - any form of organized information, such as words, numbers, pictures, etc.
 > - #### **data science** - making meaning from data
 
-#### In the next few levels, we will dive deeper into the activity from **Lesson 3**. 
+## Up Next 
 
+#### Let's explore an activity from **Lesson 2** where students analyze a spreadsheet using the **Three Reads** routine to explore a dataset on pizza choices, then use it to answer questions for planning a school event.
+
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 2. You can find more details in the full <a href='https://studio.code.org/s/aif6-2025/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+ #### *A link to each lesson plan will be provided as it is reviewed. Feel free to explore as much or as little as you like, but it's recommended to focus on the Objectives, Agenda, and Activities for each.*
 
 MARKDOWN

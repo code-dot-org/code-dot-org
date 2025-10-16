@@ -12,6 +12,7 @@ import TimelineElement from './TimelineElement';
 const TimelineSampleEvents = ({
   paddingOffset,
   barWidth,
+  onKeyDown,
   getEventHeight,
   getEventVerticalSpace,
 }) => {
@@ -45,6 +46,7 @@ const TimelineSampleEvents = ({
           key={index}
           eventData={eventData}
           barWidth={barWidth}
+          onKeyDown={onKeyDown}
           height={eventHeight - eventVerticalSpace}
           top={32 + getVerticalOffsetForEventId(eventData.id)}
           left={paddingOffset + barWidth * (eventData.when - 1)}
@@ -58,6 +60,7 @@ const TimelineSampleEvents = ({
 TimelineSampleEvents.propTypes = {
   paddingOffset: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
+  onKeyDown: PropTypes.func.isRequired,
   getEventHeight: PropTypes.func.isRequired,
   getEventVerticalSpace: PropTypes.func.isRequired,
 };

@@ -1,22 +1,26 @@
-import styles from './video.module.scss';
+import FacadeBackground from '@/video/FacadeBackground';
+import PlayButton from '@/video/PlayButton';
 
-export interface FacadeProps {
-  /** Facade poster thumbnail */
-  posterThumbnail?: string;
-  /** Facade alt text */
-  alt: string;
-}
+import moduleStyles from './video.module.scss';
 
-const Facade = ({posterThumbnail, alt}: FacadeProps) => {
+const Facade = ({
+  label,
+  posterThumbnail,
+  onClick,
+}: {
+  label: string;
+  posterThumbnail: string;
+  onClick: () => void;
+}) => {
   return (
-    posterThumbnail && (
-      <img
-        className={styles.posterImage}
-        src={posterThumbnail}
-        loading={'lazy'}
-        alt={alt}
+    <div className={moduleStyles.facade}>
+      <FacadeBackground
+        posterThumbnail={posterThumbnail}
+        alt={label}
+        onClick={onClick}
       />
-    )
+      <PlayButton label={label} onClick={onClick} />
+    </div>
   );
 };
 

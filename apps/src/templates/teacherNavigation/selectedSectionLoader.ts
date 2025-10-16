@@ -1,7 +1,7 @@
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {
@@ -62,10 +62,11 @@ export const setSelectedSectionData = (sectionData: any) => {
   getStore().dispatch(
     setStudentsForCurrentSection(sectionData.id, sectionData.students)
   );
-  // Default the scriptId to the script assigned to the section
-  const defaultScriptId = sectionData.script ? sectionData.script.id : null;
-  if (defaultScriptId) {
-    getStore().dispatch(setScriptId(defaultScriptId));
+  // Default Unit assigned to the section
+  const defaultUnitId = sectionData.script ? sectionData.script.id : null;
+  const defaultCourseVersionId = sectionData.course_version_id;
+  if (defaultUnitId) {
+    getStore().dispatch(setUnit(defaultUnitId, defaultCourseVersionId));
   }
 
   if (!sectionData.sharing_disabled && sectionData.script.project_sharing) {

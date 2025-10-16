@@ -5,15 +5,14 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {
+  ChatAsset,
   type ChatMessage as ChatMessageType,
   isCompletedChatMessage,
   isServerChatEvent,
 } from '../types';
-import {getAssetUrl} from '../utils';
 
 import FilePreview from './assets/FilePreview';
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
@@ -24,16 +23,19 @@ import styles from './chatWorkspace.module.scss';
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
   isChatHistoryView: boolean;
+  buildAssetUrl?: (asset: ChatAsset) => string;
 }
 
 const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   chatMessage,
   isChatHistoryView,
+  buildAssetUrl,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
-  const {status, role, chatMessageText, assets} = chatMessage;
-  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
-  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
+  const {status, role, chatMessageText, assets, userAddedSelectionContext} =
+    chatMessage;
+  const hasAssets = assets && buildAssetUrl;
+  const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -89,31 +91,36 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   }
 
   let header;
-  if (!isAssistant && assets && currentChannelId) {
+  if (!isAssistant && (hasAssets || hasUserAddedSelectionContext)) {
     header = (
       <div className={styles.assetCol}>
-        {assets.map(asset => {
-          const filename = asset.filename;
-          const url = getAssetUrl(asset, currentChannelId, levelName);
-          return (
-            <button
-              type="button"
-              className={styles.assetButton}
-              onClick={() => window.open(url, '_blank')}
-            >
-              {filename.endsWith('.pdf') ? (
-                <FilePreview type="pdf" filename={filename} url={url} />
-              ) : (
-                <img
-                  key={filename}
-                  alt=""
-                  className={styles.imagePreview}
-                  src={url}
-                />
-              )}
-            </button>
-          );
-        })}
+        {hasAssets &&
+          assets.map(asset => {
+            const filename = asset.filename;
+            const url = buildAssetUrl(asset);
+            return (
+              <button
+                key={filename}
+                type="button"
+                className={styles.assetButton}
+                onClick={() => window.open(url, '_blank')}
+              >
+                {filename.endsWith('.pdf') ? (
+                  <FilePreview type="pdf" filename={filename} url={url} />
+                ) : (
+                  <img alt="" className={styles.imagePreview} src={url} />
+                )}
+              </button>
+            );
+          })}
+        {hasUserAddedSelectionContext &&
+          userAddedSelectionContext.map(contextItem => (
+            <FilePreview
+              key={contextItem.displayName}
+              type="text"
+              filename={contextItem.displayName}
+            />
+          ))}
       </div>
     );
   }
@@ -155,6 +162,8 @@ function getChatMessageDisplayText(
       return commonI18n.aiChatTooPersonalUserMessage();
     case Status.USER_INPUT_TOO_LARGE:
       return commonI18n.aiChatUserInputTooLargeMessage();
+    case Status.MODEL_TIMEOUT:
+      return commonI18n.aiChatTimeout();
     case Status.ERROR:
       return commonI18n.aiChatResponseError();
     default:
@@ -166,7 +175,8 @@ function getMessageStyle(status: ValueOf<typeof Status>, role: Role) {
   if (
     status === Status.PROFANITY_VIOLATION ||
     status === Status.USER_INPUT_TOO_LARGE ||
-    (role === Role.ASSISTANT && status === Status.ERROR)
+    (role === Role.ASSISTANT &&
+      (status === Status.ERROR || status === Status.MODEL_TIMEOUT))
   ) {
     return 'danger';
   }

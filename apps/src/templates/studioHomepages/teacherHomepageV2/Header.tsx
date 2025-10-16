@@ -4,10 +4,13 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Heading4} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import AddSectionDialog from '../../teacherDashboard/AddSectionDialog';
+import RosterDialog from '../../teacherDashboard/RosterDialog';
 import {beginEditingSection} from '../../teacherDashboard/teacherSectionsRedux';
 
 import {ArchiveAllModal} from './ArchiveAllModal';
@@ -29,8 +32,24 @@ export const Header: React.FC<HeaderProps> = ({
   const [archiveAllModalOpen, setArchiveAllModalOpen] =
     React.useState<boolean>(false);
 
+  React.useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.get('openAddSectionDialog') === 'true') {
+      dispatch(beginEditingSection());
+    }
+  }, [dispatch]);
+
+  const onSectionCreateButtonClick = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_SETUP_STARTED,
+      {},
+      PLATFORMS.BOTH
+    );
+    dispatch(beginEditingSection());
+  };
+
   return (
-    <div>
+    <div id="teacher-home-header">
       <Heading4>{i18n.classSections()}</Heading4>
       <div className={styles.headerButtonRow}>
         <SegmentedButtons
@@ -40,10 +59,12 @@ export const Header: React.FC<HeaderProps> = ({
           selectedButtonValue={selectedArchiveToggle}
           buttons={[
             {
+              id: 'ui-test-teaching',
               label: i18n.teaching(),
               value: 'teaching',
             },
             {
+              id: 'ui-test-archived',
               label: i18n.archived(),
               value: 'archived',
             },
@@ -54,7 +75,7 @@ export const Header: React.FC<HeaderProps> = ({
           <Button
             iconLeft={{iconName: 'plus', iconStyle: 'solid'}}
             text={i18n.newClassSection()}
-            onClick={() => dispatch(beginEditingSection())}
+            onClick={onSectionCreateButtonClick}
             size="s"
             className={styles.createSectionButton}
           />
@@ -85,6 +106,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
       <AddSectionDialog />
+      <RosterDialog />
     </div>
   );
 };

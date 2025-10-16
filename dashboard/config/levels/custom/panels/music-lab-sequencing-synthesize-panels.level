@@ -10,13 +10,13 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "### This is Henny",
+        "text": "### Record Producer\n\nThis is Henny. He's a record producer",
         "imageUrl": "https://images.code.org/4df9a2d18f4f132f4e3f4520e1198440-henny0.png",
         "key": "test-music-lab-loops-sythesize-project-panels-25e9b5d9-07a8-4064-9fb2-75fa8d2262e3",
         "layout": "text-bottom-left"
       },
       {
-        "text": "### He is a Record Producer\n",
+        "text": "### Record Producer\n\nHe's worked with artists like Jay-Z, Kendrick Lamar, and the Black Eyed Peas",
         "imageUrl": "https://images.code.org/a88129e144aed6a6178f02a211842de8-henny1.png",
         "key": "test-music-lab-loops-sythesize-project-panels-0b5eb9b2-25d6-472d-9f49-a3c50f1a0b1a",
         "fadeInOverPrevious": true,
@@ -39,7 +39,7 @@
         "typing": true
       },
       {
-        "text": "### Henny contributes to a song by adding Effects to individual tracks",
+        "text": "### Record Producer\n\nHenny contributes to a song by adding Effects to individual tracks",
         "imageUrl": "https://images.code.org/ae7d384783a186472ba910c43206e6e2-henny4.png",
         "key": "test-music-lab-loops-sythesize-project-panels-0e55f57b-3524-4334-b2fc-6cc466c0e847",
         "layout": "text-bottom-center",
@@ -47,7 +47,7 @@
         "typing": false
       },
       {
-        "text": "### In this lesson, we're going to add Effects to our songs in Music Lab!",
+        "text": "### Record Producer\n\nIn this lesson, we're going to add Effects to our songs in Music Lab!",
         "imageUrl": "https://images.code.org/1d9484804795b6793199833abe685b67-effects2.gif",
         "key": "test-music-lab-loops-sythesize-project-panels-177676fb-e459-49fb-9aa9-4dbc047d67f3",
         "layout": "text-top-right",
@@ -64,6 +64,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-24T18:48:58.742+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-project-panels\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-project-panels\"},{\"changed_at\":\"2025-03-24 20:00:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 20:01:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 20:01:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 20:02:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-24T18:48:58.742+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-project-panels\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-project-panels\"},{\"changed_at\":\"2025-03-24 20:00:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 20:01:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 20:01:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 20:02:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-02 16:44:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

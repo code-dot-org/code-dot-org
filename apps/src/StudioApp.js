@@ -83,6 +83,7 @@ import {
 import * as shareWarnings from './shareWarnings';
 import Sounds from './Sounds';
 import ChallengeDialog from './templates/ChallengeDialog';
+import SettingsModal from './templates/Settings';
 import VersionHistory from './templates/VersionHistory';
 import color from './util/color';
 import KeyHandler from './util/KeyHandler';
@@ -582,28 +583,8 @@ StudioApp.prototype.init = function (config) {
     );
   }
 
+  this.initSettingsUI();
   this.initVersionHistoryUI(config);
-
-  if (this.isUsingBlockly() && Blockly.contractEditor) {
-    Blockly.contractEditor.registerTestsFailedOnCloseHandler(
-      function () {
-        this.feedback_.showSimpleDialog({
-          headerText: undefined,
-          bodyText: msg.examplesFailedOnClose(),
-          cancelText: msg.ignore(),
-          confirmText: msg.tryAgain(),
-          onConfirm: null,
-          onCancel: function () {
-            Blockly.contractEditor.hideIfOpen();
-          },
-        });
-
-        // return true to indicate to blockly-core that we'll own closing the
-        // contract editor
-        return true;
-      }.bind(this)
-    );
-  }
 
   if (config.legacyShareStyle && config.hideSource) {
     this.setupLegacyShareView();
@@ -752,6 +733,19 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
   }
 };
 
+StudioApp.prototype.getSettingsHandler = function () {
+  return () => {
+    const contentDiv = document.createElement('div');
+    const dialog = this.createModalDialog({
+      contentDiv: contentDiv,
+      id: 'settings-modal',
+    });
+
+    ReactDOM.render(React.createElement(SettingsModal), contentDiv);
+    dialog.show();
+  };
+};
+
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
   return () => {
     var contentDiv = document.createElement('div');
@@ -781,6 +775,13 @@ StudioApp.prototype.initTimeSpent = function () {
     this.silentlyReport.bind(this),
     1000
   );
+};
+
+StudioApp.prototype.initSettingsUI = function () {
+  const settingsButton = document.getElementById('settings-header');
+  if (settingsButton) {
+    dom.addClickTouchEvent(settingsButton, this.getSettingsHandler());
+  }
 };
 
 StudioApp.prototype.initVersionHistoryUI = function (config) {
@@ -1276,6 +1277,7 @@ StudioApp.prototype.inject = function (div, options) {
   }
 
   options.levelBlockIds = utils.findExplicitlySetBlockIds(window.appOptions);
+  options.showBlockHelp = experiments.isEnabled(experiments.BLOCKLY_DOCS);
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -2177,7 +2179,12 @@ StudioApp.prototype.configureDom = function (config) {
     if (!runButtonWasClicked) {
       analyticsReporter.sendEvent(
         eventName,
-        {signedIn: config.isSignedIn},
+        {
+          signedIn: config.isSignedIn,
+          unitName: config.scriptName,
+          levelId: config.serverLevelId,
+          levelName: config.level.name,
+        },
         PLATFORMS.BOTH
       );
       runButtonWasClicked = true;
@@ -2895,21 +2902,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.openFunctionDefinition_ = function (config) {
-  if (Blockly.contractEditor) {
-    Blockly.contractEditor.autoOpenWithLevelConfiguration({
-      autoOpenFunction: config.level.openFunctionDefinition,
-      contractCollapse: config.level.contractCollapse,
-      contractHighlight: config.level.contractHighlight,
-      examplesCollapse: config.level.examplesCollapse,
-      examplesHighlight: config.level.examplesHighlight,
-      definitionCollapse: config.level.definitionCollapse,
-      definitionHighlight: config.level.definitionHighlight,
-    });
-  } else {
-    Blockly.functionEditor.autoOpenFunction(
-      config.level.openFunctionDefinition
-    );
-  }
+  Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
 };
 
 /**

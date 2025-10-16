@@ -1,0 +1,13 @@
+name 'programming-fundamentals-lesson1-level2-choice_2025'
+display_name 'Careers in Computing'
+description 'Choose a career category to explore career ideas for different skills and interests.'
+
+
+sublevels
+level 'programming-fundamentals-lesson1-level2a_2025'
+level 'programming-fundamentals-lesson1-level2b_2025'
+level 'programming-fundamentals-lesson1-level2c_2025'
+
+markdown <<MARKDOWN
+
+MARKDOWN

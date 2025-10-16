@@ -18,7 +18,10 @@
 #
 #  index_user_level_interactions_on_level_id  (level_id)
 #  index_user_level_interactions_on_user_id   (user_id)
-#
+
+# Logs for user interactions with levels, such as clicking the run or finish buttons.
+# This contains additional information than just completion status or attempts.
+# These interactions are used to improve insights into student learning.
 class UserLevelInteraction < ApplicationRecord
   belongs_to :user
   belongs_to :level

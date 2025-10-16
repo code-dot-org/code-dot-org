@@ -10,7 +10,6 @@ import {
   useLocation,
 } from 'react-router-dom';
 
-import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
@@ -29,6 +28,17 @@ import {
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
+
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  put: jest.fn(() => Promise.resolve({})),
+  post: jest.fn(() =>
+    Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({}),
+    })
+  ),
+  fetchJson: jest.fn(() => Promise.resolve({})),
+}));
 
 const LocationElement = () => {
   const location = useLocation();
@@ -51,6 +61,7 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2024',
       unitName: null,
+      participantType: 'student',
     },
     {
       id: 12,
@@ -58,6 +69,7 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2023',
       unitName: null,
+      participantType: 'student',
     },
     {
       id: 13,
@@ -65,6 +77,8 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd3-2022',
+      unitPosition: 1,
+      participantType: 'student',
     },
     {
       id: 14,
@@ -72,6 +86,8 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd6-2022',
+      unitPosition: 6,
+      participantType: 'student',
     },
     {
       id: 15,
@@ -79,6 +95,7 @@ describe('TeacherNavigationBar', () => {
       hidden: true,
       courseVersionName: 'csd-2022',
       unitName: null,
+      participantType: 'student',
     },
     {
       id: 16,
@@ -86,6 +103,8 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csa-2022',
       unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
     },
   ];
   const serverSections = sections.map(serverSectionFromSection);
@@ -97,19 +116,21 @@ describe('TeacherNavigationBar', () => {
   const renderDefault = (
     selectedSectionId = 11,
     selectedRoute = null,
-    showAITutorTab = false
+    showAITutorTab = false,
+    aiDiffEnabled = true
   ) => {
     store = getStore();
     registerReducers({
       teacherSections,
       currentUser,
     });
-    store.dispatch(setSections(serverSections));
+    store.dispatch(setSections(serverSections, true, [12, 13, 14, 11]));
     store.dispatch(
       setInitialData({
         id: 1,
         name: 'test_user',
         has_completed_ai_differentiation_welcome: true,
+        ai_differentiation_enabled: aiDiffEnabled,
       })
     );
 
@@ -192,10 +213,12 @@ describe('TeacherNavigationBar', () => {
 
   beforeEach(() => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
+    localStorage.clear();
   });
 
   afterEach(() => {
     jest.restoreAllMocks();
+    localStorage.clear();
   });
 
   test('renders correctly with visible sections', async () => {
@@ -203,8 +226,11 @@ describe('TeacherNavigationBar', () => {
 
     await screen.findByText(i18n.classSections());
     screen.getByRole('combobox');
-    screen.getByText('Period 1');
-    screen.getByText('Period 2');
+    const p1 = await screen.findByText('Period 1');
+    const p2 = screen.getByText('Period 2');
+    expect(p1.compareDocumentPosition(p2)).toBe(
+      Node.DOCUMENT_POSITION_PRECEDING
+    );
     screen.getByText('Period 3');
     expect(screen.queryByText('hidden')).toBeNull();
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('11');
@@ -292,24 +318,22 @@ describe('TeacherNavigationBar', () => {
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
   });
 
-  test('AI Tutor tab diplayed when teacher has access, is in correct section, and DCDO flag is set', async () => {
-    DCDO.set('ai-tutor-teacher-nav-v2', true);
+  test('AI Tutor tab diplayed when teacher has access', async () => {
     renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
     await screen.findByText('Course Content');
 
     screen.getByText('AI Tutor');
   });
 
-  test('AI Tutor tab not diplayed when DCDO flag is false', async () => {
-    DCDO.set('ai-tutor-teacher-nav-v2', false);
-    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+  test('AI Tutor tab not diplayed when teacher does not have access', async () => {
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, false);
     await screen.findByText('Course Content');
 
     expect(screen.queryByText('AI Tutor')).toBeNull();
   });
 
   test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {
-    // mock experiment is enabled
+    // mock experiment is disabled
     experiments.isEnabled = jest.fn(() => false);
     renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
 
@@ -318,8 +342,25 @@ describe('TeacherNavigationBar', () => {
     ).toBeNull();
   });
 
+  test('does not render AiDiffFloatingActionButton component when user pref is not enabled', async () => {
+    // mock experiment is enabled
+    experiments.isEnabled = jest.fn(() => true);
+    // mock user preference disabled
+    renderDefault(
+      13,
+      `/teacher_dashboard/sections/13/unit/csd3-2022`,
+      false,
+      false
+    );
+
+    expect(
+      screen.queryByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
+    ).toBeNull();
+  });
+
   test('renders AiDiffFloatingActionButton component', async () => {
     // mock experiment is enabled
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
     experiments.isEnabled = jest.fn(() => true);
     renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
 

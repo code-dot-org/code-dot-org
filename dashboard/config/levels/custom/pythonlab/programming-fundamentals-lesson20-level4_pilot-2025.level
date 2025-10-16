@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:48:28.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do this:\r\nBuild on what you started in the last level\r\n- Change what happens if the player has the key.\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print(\"A statue speaks: 'I will open the door if you can answer my question.'\")\nanswer = input(\"What comes once in a minute, twice in a moment, but never in a thousand years? \").lower()\n\nif answer == \"m\":\n    print(\"✅ The statue nods, and the door creaks open.\")\n    has_key = input(\"Do you have the golden key? (yes/no) \").lower()\n    if has_key == \"yes\":\n        print(\"🔑 The key glows! A hidden passage appears!\") # Change what happens if the play has the key\n    else:\n        print(\"You proceed through the regular entrance.\")\nelse:\n    print(\"❌ Incorrect! The statue remains silent.\")\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\n\nclass TestKeyMessageModification(unittest.TestCase):\n\n    def test_modify_key_message(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Ensure that the original print statement has been modified\n            if \"print(\\\"🔑 The key glows! A hidden passage appears!\\\")\" in content:\n                self.fail(\n                    \"The message for when the player has the key has not been modified. \"\n                    \"Please change this print statement to something new.\"\n                )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:28.070+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson20-level4_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson20-level4_2025\"}]"
+}]]></config>
+</Pythonlab>

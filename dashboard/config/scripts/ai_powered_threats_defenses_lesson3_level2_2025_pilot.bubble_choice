@@ -1,0 +1,10 @@
+name 'ai-powered-threats-defenses-lesson3-level2_2025-pilot'
+display_name 'Phishing Attacks'
+description 'Choose the same user persona from Level 1 and look through messages sent to them to try to determine which ones you would trust and which might be phishing attacks.'
+
+sublevels
+level 'ai-powered-threats-defenses-lesson3-level2a_2025-pilot'
+level 'ai-powered-threats-defenses-lesson3-level2b_2025-pilot'
+level 'ai-powered-threats-defenses-lesson3-level2c_2025-pilot'
+level 'ai-powered-threats-defenses-lesson3-level2d_2025-pilot'
+

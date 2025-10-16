@@ -1,10 +1,7 @@
 import {
   closeBrackets,
   closeBracketsKeymap,
-  startCompletion,
-  closeCompletion,
   acceptCompletion,
-  moveCompletionSelection,
 } from '@codemirror/autocomplete';
 import {
   defaultKeymap,
@@ -14,7 +11,6 @@ import {
 } from '@codemirror/commands';
 import {
   indentOnInput,
-  foldGutter,
   foldKeymap,
   defaultHighlightStyle,
   bracketMatching,
@@ -31,18 +27,9 @@ import {
   rectangularSelection,
 } from '@codemirror/view';
 
-// These are the almost same as the default keybindings for autocomplete,
-// except that we changed acceptCompletion to use Tab instead of Enter.
-const autocompleteKeybindings = [
-  {key: 'Ctrl-Space', run: startCompletion},
-  {mac: 'Alt-`', run: startCompletion},
-  {key: 'Escape', run: closeCompletion},
-  {key: 'ArrowDown', run: moveCompletionSelection(true)},
-  {key: 'ArrowUp', run: moveCompletionSelection(false)},
-  {key: 'PageDown', run: moveCompletionSelection(true, 'page')},
-  {key: 'PageUp', run: moveCompletionSelection(false, 'page')},
-  {key: 'Tab', run: acceptCompletion},
-];
+// We use default keybindings for autocomplete, but we add 'Tab' to also accept completion.
+// 'Enter' accepts completion by default: https://github.com/codemirror/autocomplete/blob/ab0a89942b237bbc13735604b018d10c0101b5ea/src/index.ts#L39-L48
+const autocompleteKeybindings = [{key: 'Tab', run: acceptCompletion}];
 
 // Extensions for codemirror. Based on @codemirror/basic-setup, with javascript-specific
 // extensions removed (lint, autocomplete). This is the base configuration for all codemirror
@@ -51,7 +38,6 @@ const editorConfig = [
   lineNumbers(),
   highlightSpecialChars(),
   history(),
-  foldGutter(),
   drawSelection(),
   EditorState.allowMultipleSelections.of(true),
   indentOnInput(),

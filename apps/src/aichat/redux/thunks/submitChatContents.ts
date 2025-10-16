@@ -3,6 +3,7 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 import {
   clearChatMessagePending,
   clearStagedFiles,
+  clearUserAddedSelectionContext,
   setChatMessagePending,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -23,6 +24,10 @@ import {
   PendingChatMessage,
   CompletedChatMessage,
   ChatAsset,
+  ModelParameters,
+  AiChatClientType,
+  AnalyticsProperties,
+  UserAddedSelectionContextItem,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
@@ -36,18 +41,39 @@ import {sendAnalytics} from './sendAnalytics';
 export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (
-    newUserMessageInput: {text: string; assets?: ChatAsset[]},
+    newUserMessageInput: {
+      text: string;
+      modelParameters: ModelParameters;
+      clientType: AiChatClientType;
+      hiddenContext?: string;
+      assets?: ChatAsset[];
+      analyticsProperties?: AnalyticsProperties;
+      userAddedSelectionContext?: UserAddedSelectionContextItem[];
+      responseCallback?: (response: string) => string;
+    },
     thunkAPI
   ) => {
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
-    const {savedAiCustomizations: aiCustomizations, chatEventsCurrent} =
-      state.aichat;
+    const chatEventsCurrent = state.aichat.chatEventsCurrent;
+    const {
+      text,
+      hiddenContext,
+      assets,
+      modelParameters,
+      clientType,
+      analyticsProperties,
+      userAddedSelectionContext,
+      responseCallback,
+    } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
     thunkAPI.dispatch(clearStagedFiles());
+    // Clear any user added context if present.
+    thunkAPI.dispatch(clearUserAddedSelectionContext());
 
     const aichatContext: AichatContext = {
+      clientType,
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
@@ -56,8 +82,10 @@ export const submitChatContents = createAsyncThunk(
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: newUserMessageInput.text,
-      assets: newUserMessageInput.assets,
+      chatMessageText: text,
+      hiddenContext,
+      assets,
+      userAddedSelectionContext,
       timestamp: Date.now(),
     };
     dispatch(setChatMessagePending(newUserMessage));
@@ -73,12 +101,23 @@ export const submitChatContents = createAsyncThunk(
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
-        aiCustomizations,
+        modelParameters,
         aichatContext
       );
+
+      const fileCount = newUserMessage.assets?.length || 0;
+      const fileCountPdf =
+        newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
+          .length || 0;
+      const fileCountImage = fileCount - fileCountPdf;
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
           levelPath: window.location.pathname,
+          fileCount,
+          fileCountImage,
+          fileCountPdf,
+          clientType,
+          ...analyticsProperties,
         })
       );
     } catch (error) {
@@ -91,7 +130,7 @@ export const submitChatContents = createAsyncThunk(
       .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
         {
           name: 'ModelId',
-          value: aiCustomizations.selectedModelId,
+          value: modelParameters.selectedModelId,
         },
       ]);
 
@@ -101,6 +140,9 @@ export const submitChatContents = createAsyncThunk(
     // A teacher will view that the level is now in progress.
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
+      if (responseCallback && message.role === Role.ASSISTANT) {
+        message.chatMessageText = responseCallback(message.chatMessageText);
+      }
       dispatch(addChatEvent(message));
     });
   }

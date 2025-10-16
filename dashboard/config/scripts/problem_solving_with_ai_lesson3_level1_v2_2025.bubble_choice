@@ -1,0 +1,8 @@
+name 'problem-solving-with-ai-lesson3-level1_v2-2025'
+display_name 'Minimal Context Given'
+description 'Choose one career to explore how providing minimal context affects AI responses.'
+
+sublevels
+level 'problem-solving-with-ai-lesson3-level1a_v2-2025'
+level 'problem-solving-with-ai-lesson3-level1b_v2-2025'
+level 'problem-solving-with-ai-lesson3-level1c_v2-2025'

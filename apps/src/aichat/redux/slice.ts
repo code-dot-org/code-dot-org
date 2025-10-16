@@ -22,6 +22,10 @@ import {
   isCompletedChatMessage,
   PendingChatMessage,
   ChatAsset,
+  SaveError,
+  AiChatClientType,
+  WorkspaceTeacherViewTab,
+  UserAddedSelectionContextItem,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -32,6 +36,7 @@ import {validateModelId} from '../views/modelCustomization/utils';
 import {AichatState} from './state';
 
 const initialState: AichatState = {
+  clientType: undefined,
   chatEventsPast: [],
   chatEventsCurrent: [],
   chatMessagePending: undefined,
@@ -47,6 +52,13 @@ const initialState: AichatState = {
   userHasAichatAccess: false,
   stagedFiles: [],
   stagedFilesAlert: undefined,
+  hasSentMessage: false,
+  hasUpdatedCustomizations: false,
+  saveError: undefined,
+  showResetMessage: false,
+  hasSetStartingCustomizations: false,
+  chatWorkspaceSelectedTab: null,
+  userAddedSelectionContext: {},
 };
 
 const aichatSlice = createSlice({
@@ -97,6 +109,10 @@ const aichatSlice = createSlice({
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
     },
+
+    setClientType(state, action: PayloadAction<AiChatClientType>) {
+      state.clientType = action.payload;
+    },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
         action.payload,
@@ -130,6 +146,7 @@ const aichatSlice = createSlice({
       action: PayloadAction<PendingChatMessage>
     ) => {
       state.chatMessagePending = action.payload;
+      state.hasSentMessage = true;
     },
     clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
@@ -188,6 +205,14 @@ const aichatSlice = createSlice({
       state.currentAiCustomizations = reconciledAiCustomizations;
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+
+      // Reset sent message and updated customizations flags
+      state.hasSentMessage = false;
+      state.hasUpdatedCustomizations = false;
+      state.hasSetStartingCustomizations = true;
+    },
+    clearHasSetStartingCustomizations: state => {
+      state.hasSetStartingCustomizations = false;
     },
     resetToDefaultAiCustomizations: (
       state,
@@ -206,16 +231,17 @@ const aichatSlice = createSlice({
         ),
       };
 
-      state.savedAiCustomizations = defaultAiCustomizations;
       state.currentAiCustomizations = defaultAiCustomizations;
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+      state.showResetMessage = true;
     },
     setSavedAiCustomizations: (
       state,
       action: PayloadAction<AiCustomizations>
     ) => {
       state.savedAiCustomizations = action.payload;
+      state.hasUpdatedCustomizations = true;
     },
     setAiCustomizationProperty: <T extends keyof AiCustomizations>(
       state: AichatState,
@@ -230,25 +256,30 @@ const aichatSlice = createSlice({
         [property]: value,
       };
       state.currentAiCustomizations = updatedAiCustomizations;
+      // Clear save error and reset message, if any.
+      state.saveError = undefined;
+      state.showResetMessage = false;
     },
-    setModelCardProperty: (
-      state,
+    setModelCardProperty: <T extends keyof ModelCardInfo>(
+      state: AichatState,
       action: PayloadAction<{
-        property: keyof ModelCardInfo;
-        value: ModelCardInfo[typeof property];
+        property: T;
+        value: ModelCardInfo[T];
       }>
     ) => {
       const {property, value} = action.payload;
-
       const updatedModelCardInfo: ModelCardInfo = {
         ...state.currentAiCustomizations.modelCardInfo,
         [property]: value,
       };
       state.currentAiCustomizations.modelCardInfo = updatedModelCardInfo;
+      state.showResetMessage = false;
     },
     startSave(state, action: PayloadAction<SaveType>) {
       state.saveInProgress = true;
       state.currentSaveType = action.payload;
+      // Clear save error, if any.
+      state.saveError = undefined;
     },
     endSave(state) {
       state.saveInProgress = false;
@@ -298,6 +329,32 @@ const aichatSlice = createSlice({
       state.stagedFiles = [];
       state.stagedFilesAlert = undefined;
     },
+    setSaveError(state, action: PayloadAction<SaveError | undefined>) {
+      state.saveError = action.payload;
+    },
+    setChatWorkspaceSelectedTab(
+      state,
+      action: PayloadAction<WorkspaceTeacherViewTab | null>
+    ) {
+      state.chatWorkspaceSelectedTab = action.payload;
+    },
+    addItemToUserAddedSelectionContext(
+      state,
+      action: PayloadAction<UserAddedSelectionContextItem>
+    ) {
+      state.userAddedSelectionContext[action.payload.displayName] =
+        action.payload;
+    },
+    removeItemFromUserAddedSelectionContext(
+      state,
+      action: PayloadAction<string>
+    ) {
+      state.userAddedSelectionContext[action.payload] &&
+        delete state.userAddedSelectionContext[action.payload];
+    },
+    clearUserAddedSelectionContext(state) {
+      state.userAddedSelectionContext = {};
+    },
   },
 });
 
@@ -346,6 +403,7 @@ export const {
   setStudentChatHistory,
   setOwnChatHistory,
   setUserHasAichatAccess,
+  setClientType,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
@@ -353,4 +411,10 @@ export const {
   clearStagedFiles,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
+  setSaveError,
+  clearHasSetStartingCustomizations,
+  setChatWorkspaceSelectedTab,
+  addItemToUserAddedSelectionContext,
+  removeItemFromUserAddedSelectionContext,
+  clearUserAddedSelectionContext,
 } = aichatSlice.actions;

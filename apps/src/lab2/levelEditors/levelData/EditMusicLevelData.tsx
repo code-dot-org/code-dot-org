@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {BodyFourText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
@@ -12,6 +13,7 @@ import {
   DEFAULT_BPM,
   DEFAULT_LIBRARY,
   DEFAULT_PACK,
+  DEFAULT_VALIDATION_TIMEOUT,
 } from '@cdo/apps/music/constants';
 import MusicRegistry from '@cdo/apps/music/MusicRegistry';
 import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
@@ -25,10 +27,32 @@ import RawJsonEditor from './RawJsonEditor';
 
 import moduleStyles from './edit-music-level-data.module.scss';
 
-const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024', 'curriculum2024'];
+const VALID_LIBRARIES = [
+  DEFAULT_LIBRARY,
+  'launch2024',
+  'launch2024-preview',
+  'curriculum2024',
+];
 const RECOMMENDED_LIBRARY = 'launch2024';
 
 const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
+
+const NO_DANCER_MOVE = 'none';
+const SUPPORTED_DANCE_MOVES = [
+  {value: NO_DANCER_MOVE, text: '(no dancer)'},
+  {value: 'rest', text: 'None (Rest)'},
+  {value: 'roll', text: 'Body Roll'},
+  {value: 'clap_high', text: 'Clap High'},
+  {value: 'dab', text: 'Dab'},
+  {value: 'double_jam', text: 'Double Down'},
+  {value: 'drop', text: 'Drop'},
+  {value: 'floss', text: 'Floss'},
+  {value: 'fresh', text: 'Fresh'},
+  {value: 'clown', text: 'Gangnam'},
+  {value: 'kick', text: 'Star'},
+  {value: 'this_or_that', text: 'This or That'},
+  {value: 'thriller', text: 'Zombie'},
+];
 
 interface EditMusicLevelDataProps {
   initialLevelData: MusicLevelData;
@@ -103,7 +127,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
   const restrictedPackKeys =
     (restrictedPackOptions || []).map(pack => pack.value) || [];
   return (
-    <div>
+    <ThemeProvider>
       <input
         type="hidden"
         id="level_level_data"
@@ -121,10 +145,10 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               instead!
             </li>
             <li>
-              The curriculum2024 library is currently just a staging ground for
-              sounds that we want to test out in scripts not intended for full
-              launch. Once those sounds are finalized, they will be put into the
-              launch2024 library in the appropriate form.
+              The launch2024-preview and curriculum2024 libraries are just
+              staging grounds for sounds that we want to test out in scripts not
+              intended for full launch. Once those sounds are finalized, they
+              will be put into the launch2024 library in the appropriate form.
             </li>
           </ul>
           <div>
@@ -283,6 +307,58 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             }}
             size="s"
           />
+          <div className={moduleStyles.inputRow}>
+            <label htmlFor="validationTimeout" className={moduleStyles.label}>
+              Validation Timeout:
+            </label>
+            <BodyFourText className={moduleStyles.helperText}>
+              This value determines when (in measures) non-success validation
+              messages should start appearing. If the timeout is reached or the
+              last measure has completed, messages will be shown.
+            </BodyFourText>
+
+            <input
+              type="number"
+              id="validationTimeout"
+              name="validationTimeout"
+              value={levelData.validationTimeout}
+              placeholder={DEFAULT_VALIDATION_TIMEOUT.toString()}
+              min={1}
+              onChange={event => {
+                const parsedValue = parseInt(event.target.value);
+                setLevelData({
+                  ...levelData,
+                  validationTimeout: !isNaN(parsedValue)
+                    ? parsedValue
+                    : undefined,
+                });
+              }}
+              className={moduleStyles.input}
+            />
+          </div>
+          <div className={moduleStyles.inputRow}>
+            <label htmlFor="danceMove" className={moduleStyles.label}>
+              Hour of AI Settings:
+            </label>
+            <BodyFourText className={moduleStyles.helperText}>
+              If a dance move is set, the selected dance move will be used to
+              animate an AI generated Lottie Dancer over the timeline.
+            </BodyFourText>
+            <SimpleDropdown
+              labelText="Dance Move"
+              name="danceMove"
+              size="s"
+              items={SUPPORTED_DANCE_MOVES}
+              selectedValue={levelData.danceMove}
+              onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                let danceMove: string | undefined = event.target.value;
+                if (danceMove === NO_DANCER_MOVE) {
+                  danceMove = undefined;
+                }
+                setLevelData({...levelData, danceMove});
+              }}
+            />
+          </div>
         </div>
       </CollapsibleSection>
       <hr />
@@ -386,7 +462,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
           />
         </div>
       </CollapsibleSection>
-    </div>
+    </ThemeProvider>
   );
 };
 

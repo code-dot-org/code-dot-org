@@ -1,8 +1,11 @@
 import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
-import {TeacherPromo, TeacherPromoInfo} from './TeacherPromo';
+import PermanentPromotions from './PermanentPromotions';
+import {SkeletonTeacherPromo} from './SkeletonTeacherPromo';
+import TeacherPromo, {TeacherPromoInfo} from './TeacherPromo';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -20,8 +23,10 @@ interface ServerPromotion {
   description: string;
   button_label: string;
   button_target: string;
-  image: string;
+  image?: string;
   is_closable: boolean;
+  partner_logo?: string;
+  is_external?: boolean;
 }
 
 const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
@@ -32,44 +37,89 @@ const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
   description: serverPromotion.description,
   buttonLabel: serverPromotion.button_label,
   buttonTarget: serverPromotion.button_target,
-  image: serverPromotion.image,
+  image: serverPromotion.image || null,
   isClosable: serverPromotion.is_closable,
+  partnerLogo: serverPromotion.partner_logo || null,
+  isExternal: serverPromotion.is_external || false,
 });
 
-export const TeacherPromotions: React.FC = () => {
-  const [promotions, setPromotions] = React.useState<TeacherPromoInfo[]>([]);
+const TEACHER_PROMOTION_LOCAL_STORAGE_KEY = 'teacherPromotionClosed';
+
+const TeacherPromotions: React.FC = () => {
+  const [unfilteredPromotions, setUnfilteredPromotions] = React.useState<
+    TeacherPromoInfo[]
+  >([]);
 
   const [isLoading, setIsLoading] = React.useState(true);
+
+  const [closedPromotions, setClosedPromotions] = React.useState<string[]>(
+    () => {
+      const stringPromotions = tryGetLocalStorage(
+        TEACHER_PROMOTION_LOCAL_STORAGE_KEY,
+        '[]'
+      );
+      return (JSON.parse(stringPromotions) as string[]) || [];
+    }
+  );
 
   React.useEffect(() => {
     HttpClient.fetchJson<ServerPromotion[]>(TEACHER_PROMOTION_URL)
       .then(response => response?.value)
       .then(data => {
-        setPromotions(data.map(serverPromotionConverter));
+        setUnfilteredPromotions(data.map(serverPromotionConverter));
         setIsLoading(false);
       })
       .catch(error => {
         console.error('Error retrieving marketing promotions', {error});
         setIsLoading(false);
       });
-  }, []);
+  }, [closedPromotions]);
+
+  const promotions = React.useMemo<TeacherPromoInfo[]>(
+    () =>
+      unfilteredPromotions.filter(
+        promotion => !closedPromotions.includes(promotion.id)
+      ),
+    [unfilteredPromotions, closedPromotions]
+  );
 
   const closePromotionCallback = React.useCallback(
     (id: string) => {
-      setPromotions(promotions.filter(promotion => promotion.id !== id));
+      setClosedPromotions([...closedPromotions, id]);
 
-      // TODO(lfm): Send a POST request to the server to mark the promotion as closed
+      // We don't want the promotions cookie to store old promotions.
+      // So only save the promotions that are currently active and have been closed.
+      const newClosedPromotions =
+        promotions.length > 0
+          ? closedPromotions.filter(promotion =>
+              promotions.map(p => p.id).includes(promotion)
+            )
+          : closedPromotions;
+      newClosedPromotions.push(id);
+      trySetLocalStorage(
+        TEACHER_PROMOTION_LOCAL_STORAGE_KEY,
+        JSON.stringify(newClosedPromotions)
+      );
     },
-    [promotions]
+    [promotions, closedPromotions]
   );
 
   return (
-    <div className={styles.promotions}>
-      {isLoading && <div>Loading...</div>}
-      {/* TODO(lfm): Add a skeleton here */}
-      {promotions.map((promotion, ind) => (
-        <TeacherPromo {...promotion} onClose={closePromotionCallback} />
-      ))}
-    </div>
+    <ul className={styles.promotions}>
+      {isLoading ? (
+        <SkeletonTeacherPromo />
+      ) : (
+        promotions.map(promotion => (
+          <TeacherPromo
+            {...promotion}
+            onClose={closePromotionCallback}
+            key={promotion.id}
+          />
+        ))
+      )}
+      <PermanentPromotions />
+    </ul>
   );
 };
+
+export default TeacherPromotions;

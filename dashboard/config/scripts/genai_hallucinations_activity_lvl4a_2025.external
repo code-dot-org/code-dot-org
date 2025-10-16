@@ -1,0 +1,17 @@
+name 'genai-hallucinations-activity-lvl4a_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pause!
+
+<div style="text-align: center; margin: 20px auto;">
+    <img src="https://images.code.org/15136ef8c4449462d2a6e44402a6bd24-image-1746554976673.png" alt="ADD ALT TEXT" style="width: 30%; border-radius: 10px;">
+</div>
+
+#### Your teacher should be leading a discussion based on your answers! 
+
+#### They'll let you know when it's time to move on!
+
+
+MARKDOWN

@@ -4,7 +4,7 @@ class DataDocsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup_all do
-    @levelbuilder = create :levelbuilder
+    @levelbuilder = create(:levelbuilder)
 
     @test_params = {
       key: 'new_doc',
@@ -12,8 +12,8 @@ class DataDocsControllerTest < ActionController::TestCase
       content: 'This doc contains things.'
     }.freeze
 
-    @data_doc = create :data_doc, key: @test_params[:key]
-    @levelbuild_destroy_doc = create :data_doc, key: 'levelbuild_destroy_doc'
+    @data_doc = create(:data_doc, key: @test_params[:key])
+    @levelbuild_destroy_doc = create(:data_doc, key: 'levelbuild_destroy_doc')
   end
 
   test_user_gets_response_for :index, user: nil, response: :success
@@ -74,7 +74,7 @@ class DataDocsControllerTest < ActionController::TestCase
   test 'data doc is updated through update route' do
     sign_in @levelbuilder
     new_key = 'doc_key'
-    editable_data_doc = create :data_doc, {key: new_key, name: 'Doc name', content: 'Doc content.'}
+    editable_data_doc = create(:data_doc, {key: new_key, name: 'Doc name', content: 'Doc content.'})
 
     get :edit, params: {key: new_key}
     edited_name = 'New doc name'
@@ -110,7 +110,7 @@ class DataDocsControllerTest < ActionController::TestCase
 
   test 'data doc is deleted through destroy route' do
     sign_in @levelbuilder
-    data_doc_to_delete = create :data_doc, key: 'doc_to_delete'
+    data_doc_to_delete = create(:data_doc, key: 'doc_to_delete')
 
     post :destroy, params: {
       key: data_doc_to_delete.key

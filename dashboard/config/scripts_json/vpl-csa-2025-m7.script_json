@@ -1,0 +1,509 @@
+{
+  "script": {
+    "name": "vpl-csa-2025-m7",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSA",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-04-01 03:54:14 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csa-2025-m7"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Module 7 post-work: The Unit 7 project",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "12ae7cef-8abf-44ed-8000-1d30b56afad9",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12ae7cef-8abf-44ed-8000-1d30b56afad9",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "74a524ea-cad3-48d6-bab2-d4750f18f5c1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 7 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "74a524ea-cad3-48d6-bab2-d4750f18f5c1",
+        "lesson_activity.key": "12ae7cef-8abf-44ed-8000-1d30b56afad9"
+      }
+    },
+    {
+      "key": "38076ced-f433-4a6b-8311-d5f03fc2a5a9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Project Management"
+      },
+      "seeding_key": {
+        "activity_section.key": "38076ced-f433-4a6b-8311-d5f03fc2a5a9",
+        "lesson_activity.key": "12ae7cef-8abf-44ed-8000-1d30b56afad9"
+      }
+    },
+    {
+      "key": "65a07002-aeaa-43cc-ab47-8fd39d75482e",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Unit 7 Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "65a07002-aeaa-43cc-ab47-8fd39d75482e",
+        "lesson_activity.key": "12ae7cef-8abf-44ed-8000-1d30b56afad9"
+      }
+    },
+    {
+      "key": "f2eca25b-fb0c-4b27-bd00-e04c645b635d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Building Project Management Skills"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2eca25b-fb0c-4b27-bd00-e04c645b635d",
+        "lesson_activity.key": "12ae7cef-8abf-44ed-8000-1d30b56afad9"
+      }
+    },
+    {
+      "key": "0e46cc21-93d9-457d-8f8b-620c078d4b48",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e46cc21-93d9-457d-8f8b-620c078d4b48",
+        "lesson_activity.key": "12ae7cef-8abf-44ed-8000-1d30b56afad9"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 7 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-overview_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "74a524ea-cad3-48d6-bab2-d4750f18f5c1"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-overview_-f_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Management"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-what-is-pm-video_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "38076ced-f433-4a6b-8311-d5f03fc2a5a9"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-what-is-pm-video_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Management"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "38076ced-f433-4a6b-8311-d5f03fc2a5a9"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-text_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "65a07002-aeaa-43cc-ab47-8fd39d75482e"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-unit-7-project-text_-f_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-clone-projects-level_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "65a07002-aeaa-43cc-ab47-8fd39d75482e"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-clone-projects-level_-f_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-structure-2022-text_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "65a07002-aeaa-43cc-ab47-8fd39d75482e"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-unit-7-project-structure-2022-text_-f_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-project-planning-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "65a07002-aeaa-43cc-ab47-8fd39d75482e"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-project-planning-reflection_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Project Management Skills"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-vocabulary-of-pm-video_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "f2eca25b-fb0c-4b27-bd00-e04c645b635d"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-vocabulary-of-pm-video_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Project Management Skills"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-putting-it-all-together-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "f2eca25b-fb0c-4b27-bd00-e04c645b635d"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-putting-it-all-together-reflection_2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-wrap-up_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "0e46cc21-93d9-457d-8f8b-620c078d4b48"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-wrap-up_-f_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-overview_-f_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-overview_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "74a524ea-cad3-48d6-bab2-d4750f18f5c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-what-is-pm-video_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-what-is-pm-video_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "38076ced-f433-4a6b-8311-d5f03fc2a5a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "38076ced-f433-4a6b-8311-d5f03fc2a5a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-unit-7-project-text_-f_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-text_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "65a07002-aeaa-43cc-ab47-8fd39d75482e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-clone-projects-level_-f_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-clone-projects-level_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "65a07002-aeaa-43cc-ab47-8fd39d75482e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-unit-7-project-structure-2022-text_-f_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-structure-2022-text_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "65a07002-aeaa-43cc-ab47-8fd39d75482e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-project-planning-reflection_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-project-planning-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "65a07002-aeaa-43cc-ab47-8fd39d75482e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-vocabulary-of-pm-video_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-vocabulary-of-pm-video_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "f2eca25b-fb0c-4b27-bd00-e04c645b635d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-putting-it-all-together-reflection_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-putting-it-all-together-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "f2eca25b-fb0c-4b27-bd00-e04c645b635d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-wrap-up_-f_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-wrap-up_-f_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m7",
+        "activity_section.key": "0e46cc21-93d9-457d-8f8b-620c078d4b48"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

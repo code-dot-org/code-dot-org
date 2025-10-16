@@ -1,5 +1,7 @@
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
+import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
+import classNames from 'classnames';
 import React from 'react';
 
 import VerticalOutput from '@cdo/apps/codebridge/Workspace/VerticalOutput';
@@ -14,7 +16,9 @@ const MIN_EDITOR_WIDTH = 300;
 const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_OUTPUT_WIDTH = 400;
 
-const VerticalLayout: React.FunctionComponent = () => {
+const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
+  isProjectLevel,
+}) => {
   const {
     leftPanelWidth,
     middlePanelWidth,
@@ -24,10 +28,11 @@ const VerticalLayout: React.FunctionComponent = () => {
     rightPanelSeparatorProps,
     rightPanelDragging,
     setRightPanelSize,
+    panelClassName,
   } = useVerticalLayout({
     leftPanel: {
-      initialWidth: INITIAL_INFO_PANEL_WIDTH,
-      minWidth: MIN_INFO_PANEL_WIDTH,
+      initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
+      minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
       name: 'instructions',
     },
     middlePanel: {
@@ -43,30 +48,44 @@ const VerticalLayout: React.FunctionComponent = () => {
   });
 
   return (
-    <div className={moduleStyles.layoutContainer}>
-      <InfoPanel
-        style={{width: leftPanelWidth}}
-        className={moduleStyles.flexShrink0}
-      />
-      <ResizeBar
-        isVertical={true}
-        separatorProps={leftPanelSeparatorProps}
-        isDragging={leftPanelDragging}
-      />
-      <Workspace
-        style={{width: middlePanelWidth}}
-        className={moduleStyles.shrinkAndGrow}
-      />
-      <ResizeBar
-        isVertical={true}
-        separatorProps={rightPanelSeparatorProps}
-        isDragging={rightPanelDragging}
-      />
-      <VerticalOutput
-        width={rightPanelWidth || INITIAL_OUTPUT_WIDTH}
-        className={moduleStyles.shrinkAndGrow}
-        setOutputWidth={setRightPanelSize}
-      />
+    <div
+      className={
+        isProjectLevel
+          ? moduleStyles.containerWithFooter
+          : moduleStyles.defaultContainer
+      }
+    >
+      <div className={moduleStyles.layoutContainer}>
+        {!isProjectLevel && (
+          <>
+            <InfoPanel
+              style={{width: leftPanelWidth}}
+              className={classNames(moduleStyles.flexShrink0, panelClassName)}
+            />
+            <ResizeBar
+              isVertical={true}
+              separatorProps={leftPanelSeparatorProps}
+              isDragging={leftPanelDragging}
+            />
+          </>
+        )}
+        <Workspace
+          style={{width: middlePanelWidth}}
+          className={classNames(moduleStyles.shrinkAndGrow, panelClassName)}
+        />
+        <ResizeBar
+          isVertical={true}
+          separatorProps={rightPanelSeparatorProps}
+          isDragging={rightPanelDragging}
+        />
+        <VerticalOutput
+          width={rightPanelWidth || INITIAL_OUTPUT_WIDTH}
+          className={classNames(moduleStyles.shrinkAndGrow, panelClassName)}
+          setOutputWidth={setRightPanelSize}
+        />
+      </div>
+
+      {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>
   );
 };

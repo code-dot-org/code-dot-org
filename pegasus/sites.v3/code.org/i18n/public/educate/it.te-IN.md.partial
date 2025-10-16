@@ -17,7 +17,7 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
-జూలై 2024 లో ప్రారంభించి, బ్రౌజర్లు మరియు ఆపరేటింగ్ సిస్టమ్లకు అవసరమైన కనీస సంస్కరణలను మేము అప్డేట్ చేస్తాము. పాత సంస్కరణలు ఇంకా పనిచేయకపోయినా, పాత వెర్షన్లలో బగ్ పరిష్కారాల కోసం అభ్యర్థనలకు మేము మద్దతు ఇవ్వలేకపోతాము.
+ప్రతి సంవత్సరం మేము బ్రౌజర్లు మరియు ఆపరేటింగ్ సిస్టమ్లకు అవసరమైన కనీస సంస్కరణలను అప్డేట్ చేస్తాము. పాత సంస్కరణలు ఇంకా పనిచేయకపోయినా, పాత వెర్షన్లలో బగ్ పరిష్కారాల కోసం అభ్యర్థనలకు మేము మద్దతు ఇవ్వలేకపోతాము.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ theme: responsive
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          బ్రౌజర్ జూలై '24
         </th>
         <tr>
           <td>క్రోమ్ 103. ఎక్స్</td>
@@ -71,28 +49,6 @@ theme: responsive
           ప్లాట్ఫాం
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          వేదిక జూలై '24
-        </th>
-        <tr>
           <td>మాకోస్ 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ theme: responsive
         </tr>
         <tr>
           <td>ఆండ్రాయిడ్ 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          బ్రౌజర్ జూలై '25
+        </th>
+        <tr>
+          <td>క్రోమ్ 109</td>
+        </tr>
+        <tr>
+          <td>సఫారి 16.6</td>
+        </tr>
+        <tr>
+          <td>మొబైల్ సఫారి 16</td>
+        </tr>
+        <tr>
+          <td>ఎడ్జ్ 128</td>
+        </tr>
+        <tr>
+          <td>ఫైర్ఫాక్స్ 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          ప్లాట్ఫాం జూలై '25
+        </th>
+        <tr>
+          <td>మాకోస్ 10.15</td>
+        </tr>
+        <tr>
+          <td>ఐఓఎస్ 16.x</td>
+        </tr>
+        <tr>
+          <td>విండోస్ 10</td>
+        </tr>
+        <tr>
+          <td>ఆండ్రాయిడ్ 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -147,7 +148,6 @@ K-5 కోర్సులు (కంప్యూటర్ సైన్స్ ఫ
 ### Can you play this video?
 
 మీరు Code.org యొక్క ఆన్లైన్ కోర్సులు ప్రారంభించడానికి ముందు, మీరు వెళ్ళడానికి మంచి ఉన్నామని నిర్ధారించుకోవడానికి క్రింద వీడియో కోసం ప్లేబ్యాక్ పరీక్షించండి.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

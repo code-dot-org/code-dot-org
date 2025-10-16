@@ -33,9 +33,9 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/bfc983fe6ea794003f89fd20dc521083-image-1736464360709.12.37 PM.png" alt="A student with a head covering smiles in a classroom." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0px 20px 20px 20px;">
 
 * #### Incorporating strategies and activities to support teachers in connecting with and validating students from diverse backgrounds.
-* #### Supporting teachers' authentic connections with their students by learning about their personal interests and strengths and supporting their growth.
+* #### Supporting teachers' authentic connections with their students by learning about their personal interests and strengths, and supporting their growth.
 * #### Showing students representations of themselves in the CS industry to help them see what is possible.
-* #### Providing students the time and space to work through problems and explore new concepts.
+* #### Providing students time and space to work through problems and explore new concepts.
 * #### Developing students' skills in the problem-solving process to encourage persistence, effort, and engagement.
 
 
@@ -60,7 +60,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
 
-#### Students are introduced to debugging - the process of finding and removing errors in code - in <a href="https://studio.code.org/s/csd2-2024/lessons/3" target="blank" rel="noopener noreferrer">Unit 2 - Web Development, Lesson 3 - Headings and Lists</a>. Student watch a <a href="https://www.youtube.com/watch?v=auv10y-dN4s" target="blank" rel="noopener noreferrer">"How to Debug" video</a> and are encouraged to refer to the <a href="https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit?tab=t.0#" target="blank" rel="noopener noreferrer">Student Guide to Debugging</a>. In the lesson, teachers receive the following guidance to help students with debugging:
+#### Students are introduced to debugging - the process of finding and removing errors in code - in <a href="https://studio.code.org/s/csd2-2024/lessons/3" target="blank" rel="noopener noreferrer">Unit 2 - Web Development, Lesson 3 - Headings and Lists</a>. Students watch a <a href="https://www.youtube.com/watch?v=auv10y-dN4s" target="blank" rel="noopener noreferrer">"How to Debug" video</a> and are encouraged to refer to the <a href="https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit?tab=t.0#" target="blank" rel="noopener noreferrer">Student Guide to Debugging</a>. In the lesson, teachers receive the following guidance to help students with debugging:
 
 #### <i>**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. To counter this, we recommend **normalizing bugs and mistakes as something that happens to everyone** - it’s just part of the process. </i>
 
@@ -77,7 +77,7 @@ markdown <<MARKDOWN
 
 #### In CS Principles Unit 7 - Parameters, Return, and Libraries, the end-of-unit project, <a href="https://studio.code.org/s/csp7-2024/lessons/8" target="blank" rel="noopener noreferrer">Make a Library</a>, prompts students to curate a library of **functions** that they can use in their own code. Functions are a named group of programming instructions. 
 
-#### Once students make their libraries, they can publish them to a class repository of student libraries. From there, other students can download their libraries of code, use them to code, and give feedback. Students are able to see their contributions as useful to other students and become an active member of the learning community.
+#### Once students make their libraries, they can publish them to a class repository of student libraries. From there, other students can download their libraries of code, use them to code, and give feedback. Students are able to see their contributions as useful to other students and become active members of the learning community.
 
 </p></div>
 </details>

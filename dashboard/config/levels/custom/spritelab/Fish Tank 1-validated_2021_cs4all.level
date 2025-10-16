@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-01-31T18:32:48.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -37,7 +41,7 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"4918e344-e72c-497c-9668-a505281d0cf7\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"4918e344-e72c-497c-9668-a505281d0cf7\": {\r\n      \"name\": \"tropicalfish_04_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/nymJ0xt9QPE.HuR6qX3X4KBoH32ICAGz/category_animals/tropicalfish_04.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 324\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"nymJ0xt9QPE.HuR6qX3X4KBoH32ICAGz\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"4918e344-e72c-497c-9668-a505281d0cf7\"\n  ],\n  \"propsByKey\": {\n    \"4918e344-e72c-497c-9668-a505281d0cf7\": {\n      \"name\": \"tropicalfish_04_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/nymJ0xt9QPE.HuR6qX3X4KBoH32ICAGz/category_animals/tropicalfish_04.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 324\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"nymJ0xt9QPE.HuR6qX3X4KBoH32ICAGz\",\n      \"categories\": [\n        \"animals\"\n      ]\n    }\n  }\n}",
     "hide_custom_blocks": "true",
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
@@ -63,10 +67,6 @@
     "instructions_icon": "crab",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 64,
-  "created_at": "2022-01-31T18:32:48.000Z",
-  "user_id": 182,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-01-31T18:32:48.670+00:00\",\"changed\":[\"cloned from \\\"Fish Tank 1-validated_2021\\\"\"],\"cloned_from\":\"Fish Tank 1-validated_2021\"},{\"changed_at\":\"2022-01-31 18:45:41 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-01-31 18:47:27 +0000\",\"changed\":[\"start_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-01-31 18:48:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-01-31 18:49:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",

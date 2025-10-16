@@ -4,9 +4,9 @@ module Pd::Foorm
   class FoormParserTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
     setup_all do
-      @daily_survey_day_0 = create :foorm_form_summer_pre_survey
-      @daily_survey_day_5 = create :foorm_form_summer_post_survey
-      @csf_survey = create :foorm_form_csf_intro_post_survey
+      @daily_survey_day_0 = create(:foorm_form_summer_pre_survey)
+      @daily_survey_day_5 = create(:foorm_form_summer_post_survey)
+      @csf_survey = create(:foorm_form_csf_intro_post_survey)
     end
 
     teardown_all do
@@ -189,6 +189,98 @@ module Pd::Foorm
       refute_empty facilitator_questions
       assert_equal 'facilitator_effectiveness', facilitator_questions.keys[0]
       assert_equal 'k5_facilitator_did_well', facilitator_questions.keys[1]
+    end
+
+    test 'parse_forms_preserving_categories returns expected structure for a form with categorized questions' do
+      panel_form_data = {
+        pages: [
+          name: 'sample',
+          elements: [
+            {
+              type: "checkbox",
+              name: "question1",
+              title: "Choose items",
+              category: "cat1",
+              choices: [
+                {value: "item1", text: "Item1", category: "catA"},
+                {value: "item2", text: "Item2", category: "catB"}
+              ]
+            },
+            {
+              type: "rating",
+              name: "question2",
+              title: "Rate this",
+              category: "cat2",
+              rateMin: 1,
+              rateMax: 3,
+              minRateDescription: "Low",
+              maxRateDescription: "High"
+            },
+            {
+              type: "matrix",
+              name: "question3",
+              title: "Matrix Q",
+              category: "cat3",
+              columns: [
+                {value: "col1", text: "Col1"},
+                {value: "col2", text: "Col2"}
+              ],
+              rows: [
+                {value: "row1", text: "Row1", category: "rowCat1"},
+                {value: "row2", text: "Row2"}
+              ]
+            }
+          ]
+        ]
+      }.to_json
+      form = Foorm::Form.create(name: 'sample', version: 0, questions: panel_form_data)
+      parsed = FoormParser.parse_forms_preserving_categories([form])
+      general = parsed[:general]['sample.0']
+      assert_equal 'Choose items', general['question1'][:title]
+      assert_equal 'cat1', general['question1'][:category]
+      assert_equal({"item1"=>"Item1", "item2"=>"Item2"}, general['question1'][:choices])
+      # The choices hash does not store category info directly; matrix_rows does for matrix rows
+      assert_equal 'Rate this', general['question2'][:title]
+      assert_equal 'cat2', general['question2'][:category]
+      assert_equal({"1"=>"1 - Low", "2"=>"2", "3"=>"3 - High"}, general['question2'][:choices])
+      assert_equal 'Matrix Q', general['question3'][:title]
+      assert_equal 'cat3', general['question3'][:category]
+      assert_equal({"col1"=>"Col1", "col2"=>"Col2"}, general['question3'][:columns])
+      assert_equal({"row1"=>"Row1", "row2"=>"Row2"}, general['question3'][:rows])
+      assert_equal 'rowCat1', general['question3'][:matrix_rows]['row1'][:category]
+    end
+
+    test 'parse_forms_preserving_categories handles facilitator panel' do
+      facilitator_form_data = {
+        pages: [
+          name: 'sample',
+          elements: [
+            {
+              type: "panel",
+              name: "facilitators",
+              elements: [
+                {
+                  type: "radiogroup",
+                  name: "fac_q1",
+                  title: "Facilitator Q1",
+                  category: "fac_cat1",
+                  choices: [
+                    {value: "yes", text: "Yes"},
+                    {value: "no", text: "No"}
+                  ]
+                }
+              ]
+            }
+          ]
+        ]
+      }.to_json
+      form = Foorm::Form.create(name: 'sample', version: 1, questions: facilitator_form_data)
+      parsed = FoormParser.parse_forms_preserving_categories([form])
+      facilitator = parsed[:facilitator]['sample.1']
+      assert facilitator.key?('fac_q1')
+      assert_equal 'Facilitator Q1', facilitator['fac_q1'][:title]
+      assert_equal 'fac_cat1', facilitator['fac_q1'][:category]
+      assert_equal({"yes"=>"Yes", "no"=>"No"}, facilitator['fac_q1'][:choices])
     end
   end
 end

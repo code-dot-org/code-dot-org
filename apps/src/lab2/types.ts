@@ -7,11 +7,12 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
+import {Theme} from '@code-dot-org/component-library/common/contexts';
+import type * as GoogleBlockly from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
-import {Theme} from '@cdo/apps/lab2/views/ThemeWrapper';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
 
@@ -39,6 +40,8 @@ export interface Channel {
   hidden?: boolean;
   thumbnailUrl?: string;
   frozen?: boolean;
+  // Certain project types (like bubble choice standalone projects) can have subprojects.
+  subprojects?: {level_id: number; project_id: string}[];
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.
@@ -53,14 +56,16 @@ export interface ProjectAndSources {
   sources?: ProjectSources;
   channel: Channel;
   abuseScore?: number;
+  sharingDisabled?: boolean;
+  isTeacherOfProjectOwner?: boolean;
 }
 
 /// ------ SOURCES ------ ///
 
 // Represents the structure of the full project sources object (i.e. the main.json file)
 export interface ProjectSources {
-  // Source code can either be a string or a nested JSON object (for multi-file).
-  source: string | MultiFileSource;
+  // Source code can either be a string, Blockly JSON, or a nested JSON object (for multi-file).
+  source: string | Source;
   // Optional lab-specific configuration for this project
   labConfig?: LabConfig;
   // Add other properties (animations, html, etc) as needed.
@@ -68,7 +73,6 @@ export interface ProjectSources {
 
 export type LabConfig = {[key: string]: {[key: string]: string}};
 
-// We will eventually make this a union type to include other source types.
 export type Source = BlocklySource | MultiFileSource;
 
 export interface SaveSourceOptions {
@@ -84,28 +88,8 @@ export interface UpdateSourceOptions extends SaveSourceOptions {
 
 // -- BLOCKLY -- //
 
-export interface BlocklySource {
-  blocks: {
-    languageVersion: number;
-    blocks: BlocklyBlock[];
-  };
-  variables: BlocklyVariable[];
-}
-
-export interface BlocklyBlock {
-  type: string;
-  id: string;
-  x: number;
-  y: number;
-  next: {
-    block: BlocklyBlock;
-  };
-}
-
-export interface BlocklyVariable {
-  name: string;
-  id: string;
-}
+// Blockly JSON is currently typed as a generic object
+export type BlocklySource = {[key: string]: unknown};
 
 // -- MULTI-FILE -- //
 
@@ -128,10 +112,11 @@ export interface ProjectFile {
   name: string;
   language: string;
   contents: string;
-  open?: boolean;
   active?: boolean;
   folderId: string;
   type?: ProjectFileType;
+  url?: string;
+  flagged?: boolean;
 }
 
 /**
@@ -144,6 +129,10 @@ export interface ProjectFile {
  *  deleted or renamed.
  * System Support: Files that are used for running code and for share/remix, but are hidden from the user.
  *  For example, the serialized maze for a neighborhood level.
+ *
+ *  NOTE: we have some logic that assumes that if a file has been assigned one of these types,
+ *  that it was uploaded by a levelbuilder. If that changes, we should update the logic that decides whether to
+ *  delete a file from S3 in multiFileSourceEditUtils.
  */
 export enum ProjectFileType {
   STARTER = 'starter',
@@ -179,10 +168,10 @@ export interface LevelProperties {
   edit_blocks?: string;
   isK1?: boolean;
   skin?: string;
-  toolboxBlocks?: string;
-  startSources?: MultiFileSource;
-  templateSources?: MultiFileSource;
-  sharedBlocks?: BlockDefinition[];
+  // Dance stores the full main.json source structure (ProjectSources) in start/template/exemplar sources,
+  // while PythonLab/Weblab2 stores just the source code (MultiFileSource). TODO: Can we reconcile these?
+  startSources?: ProjectSources | MultiFileSource;
+  templateSources?: ProjectSources | MultiFileSource;
   validations?: Validation[];
   baseAssetUrl?: string;
   // An optional URL that allows the user to skip the progression.
@@ -195,12 +184,13 @@ export interface LevelProperties {
   helpVideos?: VideoData[];
   // Exemplars
   exampleSolutions?: string[];
-  exemplarSources?: Source;
+  exemplarSources?: ProjectSources | MultiFileSource;
   exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   submittable?: boolean;
+  disableEditRunForSubmission?: boolean;
   finishUrl?: string;
   finishDialog?: string;
   offerBrowserTts?: boolean;
@@ -211,11 +201,21 @@ export interface LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
+  widgetView?: boolean;
+  widgetViewAllowShowCode?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
-  progressionType?: string;
   type?: string;
+  starterAssets?: {[key: string]: string};
+  showRubric?: boolean;
+  customHelperLibrary?: string;
+  validationCode?: string;
+}
+
+export interface BlocklyLevelProperties extends LevelProperties {
+  toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  sharedBlocks?: BlockDefinition[];
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -243,8 +243,10 @@ export interface BubbleChoiceLevelData {
 // Bubble Choice specific property
 export interface BubbleChoiceSublevel {
   display_name: string;
+  description?: string;
   level_id: string;
   thumbnail_url: string;
+  url: string;
 }
 
 // Addtional fields for videos that are linked as references in the
@@ -258,13 +260,9 @@ interface VideoData extends VideoLevelData {
 
 // Exemplar settings for a level.
 export interface ExemplarSettings {
-  // Validation settings (always expected)
   validationEnabled: boolean;
   validationSuccessMessage: string;
   validationFailureMessage: string;
-  // Player settings (optional, only used for Music)
-  playerEnabled?: boolean;
-  playerTitle?: string;
 }
 
 // Python Lab specific property
@@ -283,11 +281,9 @@ export interface Lab2EntryPoint {
    */
   view: LazyExoticComponent<ComponentType<LabProps>>;
   /**
-   * Display theme for this lab. This will likely be configured by user
-   * preferences eventually, but for now this is fixed for each lab. Defaults
-   * to the default theme if not specified.
+   * An array of themes that the lab supports.
    */
-  theme?: Theme;
+  themes: Theme[];
 }
 
 export type LevelData =
@@ -336,9 +332,11 @@ export interface Condition {
   value?: string | number;
 }
 
+type ValueType = 'string' | 'number';
+type ConditionValueType = `${ValueType}:${ValueType}` | ValueType;
 export interface ConditionType {
   name: string;
-  valueType?: 'string' | 'number' | 'array';
+  valueType?: ConditionValueType;
   description: string;
   valueOptions?: string[];
 }
@@ -350,14 +348,10 @@ export interface Validation {
   callout?: string;
   next: boolean;
   key: string;
+  comment?: string;
 }
 
 /// ------ MISC ------ ///
-
-export enum ProjectManagerStorageType {
-  LOCAL = 'LOCAL',
-  REMOTE = 'REMOTE',
-}
 
 export interface ExtraLinksLevelData {
   links: {[key: string]: {text: string; url: string; access_key?: string}[]};
@@ -386,6 +380,7 @@ export interface ProjectVersion {
   versionId: string;
   lastModified: string;
   isLatest: boolean;
+  comment?: string;
 }
 
 export interface ScriptLevelPathLink {

@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q9_2025-pilot_2025'
+
+question ‘Which situation would most likely be flagged as high risk in an adaptive authentication system?’
+
+wrong ‘Logging in from a usual device during school hours’
+wrong ‘Using a saved password to open a homework document’
+right ‘Logging in from a new location late at night’
+wrong ‘Downloading a file from a trusted site’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8: AAA and AI
+MARKDOWN

@@ -7,10 +7,7 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Lab2Registry from '../../lab2/Lab2Registry';
-import {
-  RemoteSourcesStore,
-  SourcesStore,
-} from '../../lab2/projects/SourcesStore';
+import {SourcesStore} from '../../lab2/projects/SourcesStore';
 import {Channel} from '../../lab2/types';
 import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -18,8 +15,6 @@ import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {BlockMode} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
-import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
-import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 
 import moduleStyles from './MiniMusicPlayer.module.scss';
 
@@ -39,11 +34,8 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const workspaceRef = useRef<MusicBlocklyWorkspace>(
     new MusicBlocklyWorkspace()
   );
-  const simple2SequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
-  const advancedSequencerRef = useRef<AdvancedSequencer>(
-    new AdvancedSequencer()
-  );
-  const sourcesStoreRef = useRef<SourcesStore>(new RemoteSourcesStore());
+
+  const sourcesStoreRef = useRef<SourcesStore>(new SourcesStore());
   const analyticsReporter = useRef<AnalyticsReporter>(new AnalyticsReporter());
   const [isLoading, setIsLoading] = useState(true);
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
@@ -82,12 +74,6 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
       installFunctionBlocks(blockMode);
 
-      // Determine which sequencer reference to use based on blockMode
-      const sequencerRef =
-        blockMode === BlockMode.ADVANCED
-          ? advancedSequencerRef
-          : simple2SequencerRef;
-
       playerRef.current?.stopSong();
 
       // If there is a pack ID, give the player its BPM and key.
@@ -108,23 +94,17 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       );
 
       // Compile song
-      workspaceRef.current.compileSong(
-        {Sequencer: sequencerRef.current},
-        blockMode
-      );
+      workspaceRef.current.compileSong(blockMode);
 
       // Execute compiled song
       // Sequence out all possible trigger events to preload sounds if necessary.
-      sequencerRef.current.clear();
-      workspaceRef.current.executeAllTriggers();
-      const allTriggerEvents = sequencerRef.current.getPlaybackEvents();
+      const allTriggerEvents = workspaceRef.current.executeAllTriggers();
 
-      sequencerRef.current.clear();
-      workspaceRef.current.executeCompiledSong();
+      const {playbackEvents} = workspaceRef.current.executeCompiledSong();
 
       // Preload sounds in player
       await playerRef.current?.preloadSounds(
-        [...allTriggerEvents, ...sequencerRef.current.getPlaybackEvents()],
+        [...allTriggerEvents, ...playbackEvents],
         (loadTimeMs, soundsLoaded) => {
           if (soundsLoaded > 0) {
             Lab2Registry.getInstance()
@@ -141,7 +121,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       );
 
       // Play sounds
-      playerRef.current?.playSong(sequencerRef.current.getPlaybackEvents());
+      playerRef.current?.playSong(playbackEvents);
       setCurrentProjectId(project.id);
 
       // Report analytics on play button.

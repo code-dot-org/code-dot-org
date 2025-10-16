@@ -20,7 +20,7 @@ markdown <<MARKDOWN
 
 ## Implementing Debugging
 
-<img src="https://images.code.org/777a7b74cb2c3607d956c0c672d04f6f-image-1679964913802.png" alt="Image of octopus with glasses, pen, journal, and ink" style="float: right; padding-center:; height: 400px;">
+<img src="https://images.code.org/777a7b74cb2c3607d956c0c672d04f6f-image-1679964913802.png" alt="Octopus with glasses, pen, journal, and ink" style="float: right; padding-center:; height: 400px;">
 
 ### General Steps for Debugging
 
@@ -39,13 +39,13 @@ markdown <<MARKDOWN
 
 #### Use **guiding prompts**
 
-* 	<i>What is your code doing?
+* #### 	<i>What is your code doing?
     
-* 	What do you want the code to do?
+* #### 	What do you want the code to do?
     
-*	Where do you think there's a bug in your code? 
+* #### 	Where do you think there's a bug in your code? 
     
-*    Why?</i>
+* ####  Why?</i>
 
 #### Watch the  <a href= "https://www.youtube.com/watch?v=auv10y-dN4s" target="blank" rel="noopener noreferrer"> How to Debug Video </a> to learn more. 
 

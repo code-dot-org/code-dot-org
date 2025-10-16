@@ -4,9 +4,7 @@ import markdownToTxt from 'markdown-to-txt';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import Typist from 'react-typist';
 
-import {capitalizeFirstLetter} from '@cdo/apps/blockly/utils';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
-import {LessonBackground} from '@cdo/apps/types/progressTypes';
 
 import {queryParams} from '../code-studio/utils';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
@@ -32,7 +30,6 @@ const childrenAreaHeight = 70;
 
 interface PanelsProps {
   panels: Panel[];
-  background: LessonBackground;
   onContinue: (nextUrl?: string) => void;
   onSkip?: () => void;
   targetWidth: number;
@@ -57,7 +54,6 @@ interface PanelsProps {
  */
 const PanelsView: React.FunctionComponent<PanelsProps> = ({
   panels,
-  background,
   onContinue,
   onSkip,
   targetWidth,
@@ -167,8 +163,6 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     return null;
   }
 
-  const backgroundSuffix = capitalizeFirstLetter(background || 'dark');
-
   const previousPanel =
     panel.fadeInOverPrevious &&
     previousPanelIndex !== undefined &&
@@ -240,7 +234,12 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
               textLayoutClass
             )}
           >
-            {offerBrowserTts && <TextToSpeech text={panel.text} />}
+            {offerBrowserTts && (
+              // Override the theme since the text container is always white.
+              <div className={styles.ttsContainer} data-theme="Light">
+                <TextToSpeech text={panel.text} />
+              </div>
+            )}
             {showTyping ? (
               <div>
                 <div className={styles.invisiblePlaceholder}>{plainText}</div>
@@ -290,11 +289,24 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
                     'icon',
                     styles.bubble,
                     index === currentPanelIndex
-                      ? styles[`bubbleCurrent${backgroundSuffix}`]
-                      : styles[`bubbleNotCurrent${backgroundSuffix}`]
+                      ? styles.bubbleCurrent
+                      : styles.bubbleNotCurrent
                   )}
                   title={undefined}
                   icon="circle"
+                  tabIndex={0}
+                  aria-label={
+                    commonI18n.panel() +
+                    (index + 1) +
+                    (index === currentPanelIndex ? commonI18n.selected() : '')
+                  }
+                  onKeyDown={(event: React.KeyboardEvent) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      handleBubbleClick(index);
+                      event.preventDefault();
+                    }
+                  }}
+                  role="button"
                   onClick={() => handleBubbleClick(index)}
                 />
               );

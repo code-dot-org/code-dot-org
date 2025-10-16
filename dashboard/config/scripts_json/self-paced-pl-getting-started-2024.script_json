@@ -7,14 +7,13 @@
       "content_area": "skills_focused_self_paced_pl",
       "curriculum_umbrella": "Self-paced PL - Pedagogy special topics",
       "is_migrated": true,
-      "topic_tags": [
-        "ai"
-      ],
+      "tts": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-27 15:17:38 UTC",
+    "serialized_at": "2025-06-17 21:28:40 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -185,6 +184,7 @@
       "key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd",
       "position": 1,
       "properties": {
+        "progression_name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd",
@@ -192,9 +192,21 @@
       }
     },
     {
+      "key": "adffc7cf-cf1c-4a54-aa06-47c55078a048",
+      "position": 2,
+      "properties": {
+        "progression_name": "Getting Started"
+      },
+      "seeding_key": {
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048",
+        "lesson_activity.key": "1b8ce259-924b-45f8-a743-6084ba5b6e6c"
+      }
+    },
+    {
       "key": "513e048e-d6a0-41a9-bc9d-e4bb15558ef7",
       "position": 1,
       "properties": {
+        "progression_name": "Basic Features"
       },
       "seeding_key": {
         "activity_section.key": "513e048e-d6a0-41a9-bc9d-e4bb15558ef7",
@@ -202,9 +214,21 @@
       }
     },
     {
+      "key": "7702d57e-76cd-4a56-ba22-e7ebcae9a7a5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Creating a Classroom Section"
+      },
+      "seeding_key": {
+        "activity_section.key": "7702d57e-76cd-4a56-ba22-e7ebcae9a7a5",
+        "lesson_activity.key": "aa1d7751-e001-40e7-85bf-a0c54e124072"
+      }
+    },
+    {
       "key": "7041b1a2-fc23-43e7-b094-064f17e09cfb",
       "position": 1,
       "properties": {
+        "progression_name": "The Student Experience"
       },
       "seeding_key": {
         "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb",
@@ -212,9 +236,32 @@
       }
     },
     {
+      "key": "2770fe82-fd98-4704-b791-8794fd1870cb",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student & Teacher Views"
+      },
+      "seeding_key": {
+        "activity_section.key": "2770fe82-fd98-4704-b791-8794fd1870cb",
+        "lesson_activity.key": "86b3a7e4-73bb-4245-8b56-dd5525f6668a"
+      }
+    },
+    {
+      "key": "ec71feac-cc89-4bc3-bd42-bc71a83fb122",
+      "position": 3,
+      "properties": {
+        "progression_name": "Progress, Feedback, & Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec71feac-cc89-4bc3-bd42-bc71a83fb122",
+        "lesson_activity.key": "86b3a7e4-73bb-4245-8b56-dd5525f6668a"
+      }
+    },
+    {
       "key": "8df8fffd-1f20-41b0-bee4-545194a5b274",
       "position": 1,
       "properties": {
+        "progression_name": "Lesson Plans"
       },
       "seeding_key": {
         "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274",
@@ -222,9 +269,32 @@
       }
     },
     {
+      "key": "3621bc48-acf0-436d-94e7-2e1ca82751f6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Assessment & Grading"
+      },
+      "seeding_key": {
+        "activity_section.key": "3621bc48-acf0-436d-94e7-2e1ca82751f6",
+        "lesson_activity.key": "c7568a4a-4822-47ac-b3f4-50b127a7ab08"
+      }
+    },
+    {
+      "key": "153e1221-5f1d-4b8d-9c72-4cbbb8cbd1b6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Teacher Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "153e1221-5f1d-4b8d-9c72-4cbbb8cbd1b6",
+        "lesson_activity.key": "c7568a4a-4822-47ac-b3f4-50b127a7ab08"
+      }
+    },
+    {
       "key": "290a51f5-c87b-4cf4-b89f-d4698d532776",
       "position": 1,
       "properties": {
+        "progression_name": "Teacher Support"
       },
       "seeding_key": {
         "activity_section.key": "290a51f5-c87b-4cf4-b89f-d4698d532776",
@@ -241,7 +311,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod1-Overview-Welcome_Getting_Started_1_1"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -265,7 +336,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod1-GS-welcome-vid_1_1"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -289,7 +361,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod1-GS-Overview-Welcome_ModuleOverview_1_3"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -308,12 +381,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS-Task-VerifiedTeacher_1_4"
-        ]
+        ],
+        "progression": "Getting Started"
       },
       "bonus": false,
       "seeding_key": {
@@ -323,7 +397,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd"
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048"
       },
       "level_keys": [
         "SP-VPL-21-mod2-GS-Task-VerifiedTeacher_1_4"
@@ -332,12 +406,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "1SP-VPL-24-GS-mod1-Certificate_1_5"
-        ]
+        ],
+        "progression": "Getting Started"
       },
       "bonus": false,
       "seeding_key": {
@@ -347,7 +422,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd"
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048"
       },
       "level_keys": [
         "1SP-VPL-24-GS-mod1-Certificate_1_5"
@@ -356,12 +431,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod1-GS-CSisFoundational_1_6"
-        ]
+        ],
+        "progression": "Getting Started"
       },
       "bonus": false,
       "seeding_key": {
@@ -371,7 +447,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd"
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048"
       },
       "level_keys": [
         "SP-VPL-21-mod1-GS-CSisFoundational_1_6"
@@ -380,12 +456,13 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod1-GS-Advice-TipVid_1_7"
-        ]
+        ],
+        "progression": "Getting Started"
       },
       "bonus": false,
       "seeding_key": {
@@ -395,7 +472,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd"
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048"
       },
       "level_keys": [
         "SP-VPL-21-mod1-GS-Advice-TipVid_1_7"
@@ -404,12 +481,13 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS-JoinTheTeacherCommunity_1_8"
-        ]
+        ],
+        "progression": "Getting Started"
       },
       "bonus": false,
       "seeding_key": {
@@ -419,7 +497,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd"
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048"
       },
       "level_keys": [
         "SP-VPL-21-mod2-GS-JoinTheTeacherCommunity_1_8"
@@ -433,7 +511,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS-Overview-WebsiteNavigation_2_1"
-        ]
+        ],
+        "progression": "Basic Features"
       },
       "bonus": false,
       "seeding_key": {
@@ -457,7 +536,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS-tour-vid_2_2"
-        ]
+        ],
+        "progression": "Basic Features"
       },
       "bonus": false,
       "seeding_key": {
@@ -481,7 +561,8 @@
       "properties": {
         "level_keys": [
           "GSself-paced-GS-U2L3-basic_features_ref"
-        ]
+        ],
+        "progression": "Basic Features"
       },
       "bonus": false,
       "seeding_key": {
@@ -500,12 +581,13 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_ClassSection-vid_2_4"
-        ]
+        ],
+        "progression": "Creating a Classroom Section"
       },
       "bonus": false,
       "seeding_key": {
@@ -515,7 +597,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "513e048e-d6a0-41a9-bc9d-e4bb15558ef7"
+        "activity_section.key": "7702d57e-76cd-4a56-ba22-e7ebcae9a7a5"
       },
       "level_keys": [
         "SP-VPL-21-mod2-GS_ClassSection-vid_2_4"
@@ -524,12 +606,13 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "1GSself-paced-GS_U2L5"
-        ]
+        ],
+        "progression": "Creating a Classroom Section"
       },
       "bonus": false,
       "seeding_key": {
@@ -539,7 +622,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "513e048e-d6a0-41a9-bc9d-e4bb15558ef7"
+        "activity_section.key": "7702d57e-76cd-4a56-ba22-e7ebcae9a7a5"
       },
       "level_keys": [
         "1GSself-paced-GS_U2L5"
@@ -548,12 +631,13 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_tour-vid_2_6_LMS"
-        ]
+        ],
+        "progression": "Creating a Classroom Section"
       },
       "bonus": false,
       "seeding_key": {
@@ -563,7 +647,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "513e048e-d6a0-41a9-bc9d-e4bb15558ef7"
+        "activity_section.key": "7702d57e-76cd-4a56-ba22-e7ebcae9a7a5"
       },
       "level_keys": [
         "SP-VPL-21-mod2-GS_tour-vid_2_6_LMS"
@@ -572,12 +656,13 @@
     {
       "chapter": 15,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_Task-ClassSection_physical-computing_2_7"
-        ]
+        ],
+        "progression": "Creating a Classroom Section"
       },
       "bonus": false,
       "seeding_key": {
@@ -587,7 +672,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "513e048e-d6a0-41a9-bc9d-e4bb15558ef7"
+        "activity_section.key": "7702d57e-76cd-4a56-ba22-e7ebcae9a7a5"
       },
       "level_keys": [
         "SP-VPL-21-mod2-GS_Task-ClassSection_physical-computing_2_7"
@@ -601,7 +686,8 @@
       "properties": {
         "level_keys": [
           "PLSP-VPL-21-GS_mod2-TeachersInClassrooms_3_1"
-        ]
+        ],
+        "progression": "The Student Experience"
       },
       "bonus": false,
       "seeding_key": {
@@ -625,7 +711,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_StudentExperience-vid_3_2"
-        ]
+        ],
+        "progression": "The Student Experience"
       },
       "bonus": false,
       "seeding_key": {
@@ -644,12 +731,13 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_Task-StudentView_3_3"
-        ]
+        ],
+        "progression": "Student & Teacher Views"
       },
       "bonus": false,
       "seeding_key": {
@@ -659,7 +747,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb"
+        "activity_section.key": "2770fe82-fd98-4704-b791-8794fd1870cb"
       },
       "level_keys": [
         "SP-VPL-21-mod2-GS_Task-StudentView_3_3"
@@ -668,12 +756,13 @@
     {
       "chapter": 19,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "1SP-VPL-21-mod2-GS_Task-StudentView_3_4"
-        ]
+        ],
+        "progression": "Student & Teacher Views"
       },
       "bonus": false,
       "seeding_key": {
@@ -683,7 +772,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb"
+        "activity_section.key": "2770fe82-fd98-4704-b791-8794fd1870cb"
       },
       "level_keys": [
         "1SP-VPL-21-mod2-GS_Task-StudentView_3_4"
@@ -692,12 +781,13 @@
     {
       "chapter": 20,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_ProgessAndFeedback-vid_3_5"
-        ]
+        ],
+        "progression": "Progress, Feedback, & Assessment"
       },
       "bonus": false,
       "seeding_key": {
@@ -707,7 +797,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb"
+        "activity_section.key": "ec71feac-cc89-4bc3-bd42-bc71a83fb122"
       },
       "level_keys": [
         "SP-VPL-21-mod2-GS_ProgessAndFeedback-vid_3_5"
@@ -716,12 +806,13 @@
     {
       "chapter": 21,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_progress-c4u_3_6"
-        ]
+        ],
+        "progression": "Progress, Feedback, & Assessment"
       },
       "bonus": false,
       "seeding_key": {
@@ -731,7 +822,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb"
+        "activity_section.key": "ec71feac-cc89-4bc3-bd42-bc71a83fb122"
       },
       "level_keys": [
         "SP-VPL-21-mod2-GS_progress-c4u_3_6"
@@ -740,12 +831,13 @@
     {
       "chapter": 22,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-GS_mod2-feedback-c4u_3_7"
-        ]
+        ],
+        "progression": "Progress, Feedback, & Assessment"
       },
       "bonus": false,
       "seeding_key": {
@@ -755,7 +847,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb"
+        "activity_section.key": "ec71feac-cc89-4bc3-bd42-bc71a83fb122"
       },
       "level_keys": [
         "SP-VPL-21-GS_mod2-feedback-c4u_3_7"
@@ -769,7 +861,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS-TeachersInClassrooms_4_1"
-        ]
+        ],
+        "progression": "Lesson Plans"
       },
       "bonus": false,
       "seeding_key": {
@@ -793,7 +886,8 @@
       "properties": {
         "level_keys": [
           "1SP-VPL-21-mod2-GS_NavigatingLessonPlans_4_2"
-        ]
+        ],
+        "progression": "Lesson Plans"
       },
       "bonus": false,
       "seeding_key": {
@@ -817,7 +911,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_ExploreLessonPlan_4_3"
-        ]
+        ],
+        "progression": "Lesson Plans"
       },
       "bonus": false,
       "seeding_key": {
@@ -841,7 +936,8 @@
       "properties": {
         "level_keys": [
           "getting-started-teacher-lesson_planning_4_4"
-        ]
+        ],
+        "progression": "Lesson Plans"
       },
       "bonus": false,
       "seeding_key": {
@@ -860,12 +956,13 @@
     {
       "chapter": 27,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "getting-started-guide-to-assessment_4_5"
-        ]
+        ],
+        "progression": "Assessment & Grading"
       },
       "bonus": false,
       "seeding_key": {
@@ -875,7 +972,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274"
+        "activity_section.key": "3621bc48-acf0-436d-94e7-2e1ca82751f6"
       },
       "level_keys": [
         "getting-started-guide-to-assessment_4_5"
@@ -884,12 +981,13 @@
     {
       "chapter": 28,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "getting-started-types-of-assessments_4_6"
-        ]
+        ],
+        "progression": "Assessment & Grading"
       },
       "bonus": false,
       "seeding_key": {
@@ -899,7 +997,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274"
+        "activity_section.key": "3621bc48-acf0-436d-94e7-2e1ca82751f6"
       },
       "level_keys": [
         "getting-started-types-of-assessments_4_6"
@@ -908,12 +1006,13 @@
     {
       "chapter": 29,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLSP-VPL-21-mod2-GS_TeachersInClassrooms_4_7"
-        ]
+        ],
+        "progression": "Teacher Resources"
       },
       "bonus": false,
       "seeding_key": {
@@ -923,7 +1022,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274"
+        "activity_section.key": "153e1221-5f1d-4b8d-9c72-4cbbb8cbd1b6"
       },
       "level_keys": [
         "PLSP-VPL-21-mod2-GS_TeachersInClassrooms_4_7"
@@ -932,12 +1031,13 @@
     {
       "chapter": 30,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_UnitCalendar_4_8"
-        ]
+        ],
+        "progression": "Teacher Resources"
       },
       "bonus": false,
       "seeding_key": {
@@ -947,7 +1047,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274"
+        "activity_section.key": "153e1221-5f1d-4b8d-9c72-4cbbb8cbd1b6"
       },
       "level_keys": [
         "SP-VPL-21-mod2-GS_UnitCalendar_4_8"
@@ -956,12 +1056,13 @@
     {
       "chapter": 31,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Getting-Started_MultipleChoice_4_9"
-        ]
+        ],
+        "progression": "Teacher Resources"
       },
       "bonus": false,
       "seeding_key": {
@@ -971,7 +1072,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274"
+        "activity_section.key": "153e1221-5f1d-4b8d-9c72-4cbbb8cbd1b6"
       },
       "level_keys": [
         "Getting-Started_MultipleChoice_4_9"
@@ -985,7 +1086,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_TaskResources_5_1"
-        ]
+        ],
+        "progression": "Teacher Support"
       },
       "bonus": false,
       "seeding_key": {
@@ -1009,7 +1111,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_navigating support_5_2"
-        ]
+        ],
+        "progression": "Teacher Support"
       },
       "bonus": false,
       "seeding_key": {
@@ -1033,7 +1136,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_ReportAProblem_5_3"
-        ]
+        ],
+        "progression": "Teacher Support"
       },
       "bonus": false,
       "seeding_key": {
@@ -1057,7 +1161,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod2-GS_Support-c4u_5_4"
-        ]
+        ],
+        "progression": "Teacher Support"
       },
       "bonus": false,
       "seeding_key": {
@@ -1081,7 +1186,8 @@
       "properties": {
         "level_keys": [
           "GSSP-PL-GS_UnitStructure-w-lessons_5_5"
-        ]
+        ],
+        "progression": "Teacher Support"
       },
       "bonus": false,
       "seeding_key": {
@@ -1144,7 +1250,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd"
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048"
       }
     },
     {
@@ -1156,7 +1262,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd"
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048"
       }
     },
     {
@@ -1168,7 +1274,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd"
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048"
       }
     },
     {
@@ -1180,7 +1286,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd"
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048"
       }
     },
     {
@@ -1192,7 +1298,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "42ec74e4-9e85-40c1-8e2d-5bf7d30d88bd"
+        "activity_section.key": "adffc7cf-cf1c-4a54-aa06-47c55078a048"
       }
     },
     {
@@ -1240,7 +1346,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "513e048e-d6a0-41a9-bc9d-e4bb15558ef7"
+        "activity_section.key": "7702d57e-76cd-4a56-ba22-e7ebcae9a7a5"
       }
     },
     {
@@ -1252,7 +1358,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "513e048e-d6a0-41a9-bc9d-e4bb15558ef7"
+        "activity_section.key": "7702d57e-76cd-4a56-ba22-e7ebcae9a7a5"
       }
     },
     {
@@ -1264,7 +1370,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "513e048e-d6a0-41a9-bc9d-e4bb15558ef7"
+        "activity_section.key": "7702d57e-76cd-4a56-ba22-e7ebcae9a7a5"
       }
     },
     {
@@ -1276,7 +1382,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "513e048e-d6a0-41a9-bc9d-e4bb15558ef7"
+        "activity_section.key": "7702d57e-76cd-4a56-ba22-e7ebcae9a7a5"
       }
     },
     {
@@ -1312,7 +1418,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb"
+        "activity_section.key": "2770fe82-fd98-4704-b791-8794fd1870cb"
       }
     },
     {
@@ -1324,7 +1430,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb"
+        "activity_section.key": "2770fe82-fd98-4704-b791-8794fd1870cb"
       }
     },
     {
@@ -1336,7 +1442,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb"
+        "activity_section.key": "ec71feac-cc89-4bc3-bd42-bc71a83fb122"
       }
     },
     {
@@ -1348,7 +1454,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb"
+        "activity_section.key": "ec71feac-cc89-4bc3-bd42-bc71a83fb122"
       }
     },
     {
@@ -1360,7 +1466,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "7041b1a2-fc23-43e7-b094-064f17e09cfb"
+        "activity_section.key": "ec71feac-cc89-4bc3-bd42-bc71a83fb122"
       }
     },
     {
@@ -1420,7 +1526,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274"
+        "activity_section.key": "3621bc48-acf0-436d-94e7-2e1ca82751f6"
       }
     },
     {
@@ -1432,7 +1538,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274"
+        "activity_section.key": "3621bc48-acf0-436d-94e7-2e1ca82751f6"
       }
     },
     {
@@ -1444,7 +1550,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274"
+        "activity_section.key": "153e1221-5f1d-4b8d-9c72-4cbbb8cbd1b6"
       }
     },
     {
@@ -1456,7 +1562,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274"
+        "activity_section.key": "153e1221-5f1d-4b8d-9c72-4cbbb8cbd1b6"
       }
     },
     {
@@ -1468,7 +1574,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-getting-started-2024",
-        "activity_section.key": "8df8fffd-1f20-41b0-bee4-545194a5b274"
+        "activity_section.key": "153e1221-5f1d-4b8d-9c72-4cbbb8cbd1b6"
       }
     },
     {

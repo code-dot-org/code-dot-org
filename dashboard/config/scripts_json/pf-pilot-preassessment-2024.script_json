@@ -5,19 +5,22 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "pilot_experiment": "programming-fundamentals-2025-pilot",
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-28 21:57:53 UTC",
+    "serialized_at": "2025-04-23 18:16:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

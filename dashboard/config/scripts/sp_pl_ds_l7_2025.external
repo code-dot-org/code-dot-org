@@ -3,34 +3,44 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Data Visualization with CODAP
+# Data Visualization with Google Sheets
 
+#### Data isn't always easy to understand when it's sitting in a spreadsheet full of numbers. That’s where data visualization comes in. 
 
+#### **Visualization** is the process of turning data into **graphs or charts** that help reveal patterns, relationships, or differences more clearly. A well-designed graph can make complex information easier to interpret at a glance.
 
+<img src="https://images.code.org/c3323b50d1b27f06c72d626c1f28d368-image-1724349560850.png" alt="graph icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
-## Lesson 8 - Intro to Data Visualization
+## Data Visualization
 
-<img src="https://images.code.org/c3323b50d1b27f06c72d626c1f28d368-image-1724349560850.png" alt="graph icon" width="220px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+#### Different types of charts are useful for different kinds of data.
+- #### A **bar chart** helps compare quantities across categories.
+- #### A **pie chart** is great for showing parts of a whole.
 
-#### In this lesson, students use **CODAP** to create basic data visualizations—bar charts, dot plots, and scatter plots—and discuss their applications. They'll also learn how to filter data in **CODAP.**
-
-### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+#### Another important tool is the **filter**, which lets you focus on a specific portion of your data. Instead of scrolling through everything, you can quickly narrow it down to just what you need.
 
 <div style="clear:both;"></div>
 
 <br>
 
+---
+## Students and Data Visualization
+
+#### When students explore data in Google Sheets, they practice using these visual tools to ask and answer questions. By creating their own charts and filtering data, they learn how visualization can bring clarity, insight, and storytelling power to a dataset.
+
+
 > #### **Key Concepts:**
 > - #### **data visualization:** a graphical representation of information and data
-> - #### **dot plot:** a graph where each data point is represented by a dot along an axis
 > - #### **bar chart:** a graph that uses rectangular bars to represent frequency or count
-> - #### **scatter plot:** a graph that uses dots to represent the values of two different variables
+> - #### A **pie chart** is great for showing parts of a whole.
 > - #### **filter:** a tool or process used to select specific data points from a larger set based on certain criteria or conditions
 
+<br>
 
 
 
-## Let’s practice visualizing Data in **CODAP**! 
+
+## Let’s practice visualizing Data in **Google Sheets**! 
 
 
 MARKDOWN

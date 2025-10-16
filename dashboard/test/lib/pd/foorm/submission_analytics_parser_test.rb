@@ -2,11 +2,11 @@ require 'test_helper'
 
 module Pd::Foorm
   class SubmissionAnalyticsParserTest < ActiveSupport::TestCase
-    setup_all {@form = create :foorm_form_csf_intro_post_survey}
+    setup_all {@form = create(:foorm_form_csf_intro_post_survey)}
     teardown_all {@form.delete}
 
     test 'reshape_submission formats matrix question response as expected' do
-      submission = create :csf_intro_post_foorm_submission, :answers_low
+      submission = create(:csf_intro_post_foorm_submission, :answers_low)
       reshaped_submission = SubmissionAnalyticsParser.reshape_submission(submission)
 
       assert_includes reshaped_submission, {
@@ -19,7 +19,7 @@ module Pd::Foorm
     end
 
     test 'reshape_submission formats matrix question response as expected for facilitator question' do
-      submission = create :csf_intro_post_facilitator_foorm_submission, :answers_high
+      submission = create(:csf_intro_post_facilitator_foorm_submission, :answers_high)
       reshaped_submission = SubmissionAnalyticsParser.reshape_submission(submission)
 
       assert_includes reshaped_submission, {
@@ -32,7 +32,7 @@ module Pd::Foorm
     end
 
     test 'reshape_submission formats comment question response as expected' do
-      submission = create :csf_intro_post_foorm_submission, :answers_low
+      submission = create(:csf_intro_post_foorm_submission, :answers_low)
       reshaped_submission = SubmissionAnalyticsParser.reshape_submission(submission)
 
       assert_includes reshaped_submission, {
@@ -43,8 +43,8 @@ module Pd::Foorm
     end
 
     test 'reshape_submission formats rating question response as expected' do
-      form_with_rating_question = create :foorm_form, :with_rating_question
-      submission = create :basic_foorm_submission, :with_rating_answer, form_name: form_with_rating_question.name
+      form_with_rating_question = create(:foorm_form, :with_rating_question)
+      submission = create(:basic_foorm_submission, :with_rating_answer, form_name: form_with_rating_question.name)
       reshaped_submission = SubmissionAnalyticsParser.reshape_submission(submission)
 
       assert_includes reshaped_submission, {
@@ -56,7 +56,7 @@ module Pd::Foorm
     end
 
     test 'reshape_submission formats single select question response as expected' do
-      submission = create :csf_intro_post_foorm_submission, :answers_low
+      submission = create(:csf_intro_post_foorm_submission, :answers_low)
       reshaped_submission = SubmissionAnalyticsParser.reshape_submission(submission)
 
       assert_includes reshaped_submission, {
@@ -68,10 +68,11 @@ module Pd::Foorm
     end
 
     test 'reshape_submission formats multi select question response as expected' do
-      form_with_multi_select_question = create :foorm_form, :with_multi_select_question
-      submission = create :basic_foorm_submission,
+      form_with_multi_select_question = create(:foorm_form, :with_multi_select_question)
+      submission = create(:basic_foorm_submission,
         :with_multi_select_answer,
         form_name: form_with_multi_select_question.name
+)
 
       reshaped_submission = SubmissionAnalyticsParser.reshape_submission(submission)
 

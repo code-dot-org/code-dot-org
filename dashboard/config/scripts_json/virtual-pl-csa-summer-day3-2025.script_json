@@ -1,0 +1,795 @@
+{
+  "script": {
+    "name": "virtual-pl-csa-summer-day3-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSA",
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-09 19:05:46 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "virtual-pl-csa-summer-day3-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part I"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part I"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction",
+      "name": "Introduction",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is an opportunity to describe the theme of the day as well as wrap up loose ends from the prior day. \n\n\n**Objectives**\n\n* Participants know the theme for the day\n\n**Suggested Time:** 15 minutes\n",
+        "student_overview": "**You will**\n\n* Know the theme for the day"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "Asynchronous Debrief",
+      "name": "Asynchronous Debrief",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**Purpose:**\nParticipants have a chance to reflect on FRQs and how they will approach them with their classes\n\n\n**Objectives**\n\n* Participants can identify what role they play in creating an inclusive CS classroom. \n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will**\n\n* Identify what role they play in creating an inclusive CS classroom. "
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Debrief",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "Model Lesson: U2L2",
+      "name": "Model Lesson: U2L2",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nWhile we have used methods to modify attributes in Unit 1, this is participants’ first time focusing on the attributes part of a class.  \n\n\n**Objectives**\n\n*Content objectives:*\n* Participants can declare instance variables to represent attributes of an object\n* Differentiate between public and private access\n\n* Refactor code to create class hierarchies with shared attributes\n\n*Pedagogy objective:*\n\n* Participants have a plan for how they will use predict levels in their classrooms to support students.\n\n**Suggested Time:** 60 minutes\n",
+        "student_overview": "\n**You will**\n\n* Declare instance variables to represent attributes of an object\n* Differentiate between public and private access\n\n* Refactor code to create class hierarchies with shared attributes\n\n* Create a plan for how they will use predict levels in their classrooms to support students."
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson: U2L2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "Model Lesson: U2L3",
+      "name": "Model Lesson: U2L3",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**Purpose:**\nParticipants build on their knowledge of instance variables to explore how to assign values to the instance variable when an object is created. Participants will practice writing no-argument constructors. \n\n\n**Objectives**\n\n*Content objectives:*\n\n* Write a class with instance variables and a constructor\n* Write a no-argument constructor to assign default values to the instance variables\n\n\n*Pedagogy objective:*\n\n* Participants have a plan for how they will use predict levels in their classrooms to support students. \n\n**Suggested Time:** 60 minutes \n",
+        "student_overview": "**You will**\n\n* Write a class with instance variables and a constructor\n* Write a no-argument constructor to assign default values to the instance variables. \n\n* Participants have a plan for how they will use predict levels in their classrooms to support students. "
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson: U2L3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "Transisition to Asynchronous",
+      "name": "Transisition to Asynchronous",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:** \nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives**\n* Participants are prepared to complete asynchronous activities on their own.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Transisition to Asynchronous",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "Asynchronous Part 1",
+      "name": "Asynchronous Part 1",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Asynchronous Debrief",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break\n\n\n**Objectives**\n* Participants gain experience looking at authentic student work\n* Participants know how to consider code efficiency as they look at student work. \n\n**Suggested Time:** 35 minutes ",
+        "student_overview": "**You will**\n* Gain experience looking at authentic student work\n* Know how to consider code efficiency as they look at student "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "Looking at Student Work ",
+      "name": "Looking at Student Work ",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "**Purpose:**\nWe know that looking at student work informally in class or formally though assessment is part of a teacher’s role through the year.  In this session, participants will look at authentic student work from the Unit 1 project to better understand a student’s strengths and challenges.  Looking at student work in a workshop is intended to help teachers take an inquiry stance to teaching.  This is not intended to be evaluative of the student in any sense.  But rather, this is an opportunity for teachers to take a look at student work and ask themselves what this work tells them about a student and their future learning. \n\n\n**Objectives**\n* Participants gain experience looking at authentic student work\n* Participants know how to consider code efficiency as they look at student work. \n\n**Suggested Time:** 65 minutes ",
+        "student_overview": "\n**You will**\n* Gain experience looking at authentic student work\n* Know how to consider code efficiency as they look at student work. "
+      },
+      "seeding_key": {
+        "lesson.key": "Looking at Student Work ",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "Introduction to Assessments",
+      "name": "Introduction to Assessments",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**Purpose:**\nThis is intended to be part informational and part “working meeting”.  Participants typically are concerned about what their gradebooks will look like for a given course.  While Code.org doesn’t give any direct guidance on this topic, we do want to make clear what different resources are available while planning for implementing the course. \n\n**Objectives**\n* Participants know where we have integrated AP Classroom resources, specifically the practice questions, personal progress checks and use of the question bank into your curriculum.\n* Participants are aware of training materials for AP Classroom asynchronous training modules.\n* Participants know how to use formative assessment data (either from AP Classroom or from provider activities) to remediate student learning.\n\n**Suggested Time:** 15 minutes \n",
+        "student_overview": "**You will**\n* Know where we have integrated AP Classroom resources, specifically the practice questions, personal progress checks and use of the question bank into your curriculum.\n* Be aware of training materials for AP Classroom asynchronous training modules.\n* Know how to use formative assessment data (either from AP Classroom or from provider activities) to remediate student learning."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Assessments",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "Asynchronous Part 2",
+      "name": "Asynchronous Part 2",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "18a5c45a-565e-4ed0-b980-bb3c0cc01d64",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18a5c45a-565e-4ed0-b980-bb3c0cc01d64",
+        "lesson.key": "Introduction",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "359c6076-316a-4f14-9888-549baff0fb66",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "359c6076-316a-4f14-9888-549baff0fb66",
+        "lesson.key": "Asynchronous Debrief",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "685cbaa7-1c6e-4b2b-b65e-95b0c5d3924a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "685cbaa7-1c6e-4b2b-b65e-95b0c5d3924a",
+        "lesson.key": "Model Lesson: U2L2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "b137d557-905c-4a59-a989-93ba27c9403c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b137d557-905c-4a59-a989-93ba27c9403c",
+        "lesson.key": "Model Lesson: U2L3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "0871ac97-52b5-46b6-b9ef-5ef79664b279",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0871ac97-52b5-46b6-b9ef-5ef79664b279",
+        "lesson.key": "Transisition to Asynchronous",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "65374c06-3c4d-471a-bda6-4a5754dda309",
+      "position": 1,
+      "properties": {
+        "duration": 65
+      },
+      "seeding_key": {
+        "lesson_activity.key": "65374c06-3c4d-471a-bda6-4a5754dda309",
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "076d86e9-e11e-4283-a9ee-2e255db8dbb8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "076d86e9-e11e-4283-a9ee-2e255db8dbb8",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "b9bbff94-668a-47fc-9d51-e2c4a5ab400c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9bbff94-668a-47fc-9d51-e2c4a5ab400c",
+        "lesson.key": "Looking at Student Work ",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "fcf0444f-bfef-4024-8397-296f1d411209",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fcf0444f-bfef-4024-8397-296f1d411209",
+        "lesson.key": "Introduction to Assessments",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    },
+    {
+      "key": "aa3460e3-76fa-456e-9846-3fa8b0c11ef7",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa3460e3-76fa-456e-9846-3fa8b0c11ef7",
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "28a9cb9b-abca-4bb9-85a1-ba882dbb1616",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "28a9cb9b-abca-4bb9-85a1-ba882dbb1616",
+        "lesson_activity.key": "18a5c45a-565e-4ed0-b980-bb3c0cc01d64"
+      }
+    },
+    {
+      "key": "8f83c1e8-fb0a-4907-b412-284d8a0d3844",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8f83c1e8-fb0a-4907-b412-284d8a0d3844",
+        "lesson_activity.key": "359c6076-316a-4f14-9888-549baff0fb66"
+      }
+    },
+    {
+      "key": "888b28d9-088d-4fa6-a2e0-1c5493d4a253",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "888b28d9-088d-4fa6-a2e0-1c5493d4a253",
+        "lesson_activity.key": "685cbaa7-1c6e-4b2b-b65e-95b0c5d3924a"
+      }
+    },
+    {
+      "key": "f15a8404-52ea-41ea-bbf4-8d66aabc695a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f15a8404-52ea-41ea-bbf4-8d66aabc695a",
+        "lesson_activity.key": "b137d557-905c-4a59-a989-93ba27c9403c"
+      }
+    },
+    {
+      "key": "0d6e6d34-2255-4e3a-a90c-e79c5ccaaf6d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0d6e6d34-2255-4e3a-a90c-e79c5ccaaf6d",
+        "lesson_activity.key": "0871ac97-52b5-46b6-b9ef-5ef79664b279"
+      }
+    },
+    {
+      "key": "9bcad365-8fbb-41a2-942c-8e4fecdc449f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "9bcad365-8fbb-41a2-942c-8e4fecdc449f",
+        "lesson_activity.key": "65374c06-3c4d-471a-bda6-4a5754dda309"
+      }
+    },
+    {
+      "key": "95067875-68bf-4444-bbc7-aeb1b86f4629",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson Investigation Jigsaw"
+      },
+      "seeding_key": {
+        "activity_section.key": "95067875-68bf-4444-bbc7-aeb1b86f4629",
+        "lesson_activity.key": "65374c06-3c4d-471a-bda6-4a5754dda309"
+      }
+    },
+    {
+      "key": "a1767a42-e7d6-4e0a-9492-e1c12fe1c067",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a1767a42-e7d6-4e0a-9492-e1c12fe1c067",
+        "lesson_activity.key": "076d86e9-e11e-4283-a9ee-2e255db8dbb8"
+      }
+    },
+    {
+      "key": "e5fc3f7f-8440-41bf-aba8-7ac6edab5c8f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e5fc3f7f-8440-41bf-aba8-7ac6edab5c8f",
+        "lesson_activity.key": "b9bbff94-668a-47fc-9d51-e2c4a5ab400c"
+      }
+    },
+    {
+      "key": "b78cb880-11d8-493b-a7c1-0f2f88a2e84d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b78cb880-11d8-493b-a7c1-0f2f88a2e84d",
+        "lesson_activity.key": "fcf0444f-bfef-4024-8397-296f1d411209"
+      }
+    },
+    {
+      "key": "673fcb42-c54c-482f-83dc-ad75b8b171d5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "673fcb42-c54c-482f-83dc-ad75b8b171d5",
+        "lesson_activity.key": "aa3460e3-76fa-456e-9846-3fa8b0c11ef7"
+      }
+    },
+    {
+      "key": "0adc54d3-c13a-4a38-aff1-1e073cdc31f2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Module 3 Wrap Up "
+      },
+      "seeding_key": {
+        "activity_section.key": "0adc54d3-c13a-4a38-aff1-1e073cdc31f2",
+        "lesson_activity.key": "aa3460e3-76fa-456e-9846-3fa8b0c11ef7"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3-async1intro_2025"
+        ],
+        "progression": "Introduction to Asynchronous Part 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3-async1intro_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "9bcad365-8fbb-41a2-942c-8e4fecdc449f"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day3-async1intro_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async1jigsaw1_2025"
+        ],
+        "progression": "Lesson Investigation Jigsaw"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3_async1jigsaw1_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "95067875-68bf-4444-bbc7-aeb1b86f4629"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day3_async1jigsaw1_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async1jigsaw2_2025"
+        ],
+        "progression": "Lesson Investigation Jigsaw"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3_async1jigsaw2_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "95067875-68bf-4444-bbc7-aeb1b86f4629"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day3_async1jigsaw2_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3-async2intro_2025"
+        ],
+        "progression": "Asynchronous Part 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3-async2intro_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "673fcb42-c54c-482f-83dc-ad75b8b171d5"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day3-async2intro_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async2industry_2025"
+        ],
+        "progression": "Asynchronous Part 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3_async2industry_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "673fcb42-c54c-482f-83dc-ad75b8b171d5"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day3_async2industry_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async2buildassess_2025"
+        ],
+        "progression": "Asynchronous Part 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3_async2buildassess_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "673fcb42-c54c-482f-83dc-ad75b8b171d5"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day3_async2buildassess_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async2wrapup_2025"
+        ],
+        "progression": "Module 3 Wrap Up "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3_async2wrapup_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "0adc54d3-c13a-4a38-aff1-1e073cdc31f2"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day3_async2wrapup_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day3-async1intro_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3-async1intro_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "9bcad365-8fbb-41a2-942c-8e4fecdc449f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day3_async1jigsaw1_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3_async1jigsaw1_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "95067875-68bf-4444-bbc7-aeb1b86f4629"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day3_async1jigsaw2_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3_async1jigsaw2_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "95067875-68bf-4444-bbc7-aeb1b86f4629"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day3-async2intro_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3-async2intro_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "673fcb42-c54c-482f-83dc-ad75b8b171d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day3_async2industry_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3_async2industry_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "673fcb42-c54c-482f-83dc-ad75b8b171d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day3_async2buildassess_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3_async2buildassess_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "673fcb42-c54c-482f-83dc-ad75b8b171d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day3_async2wrapup_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day3_async2wrapup_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day3-2025",
+        "activity_section.key": "0adc54d3-c13a-4a38-aff1-1e073cdc31f2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

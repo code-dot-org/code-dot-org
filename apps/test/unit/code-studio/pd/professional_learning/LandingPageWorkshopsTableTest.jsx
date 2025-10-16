@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import moment from 'moment';
@@ -71,7 +72,7 @@ describe('LandingPageWorkshopsTable', () => {
 
     // We expect there to be a table with 4 rows in the body, three of which have two buttons
     expect(workshopsTable.find('tbody tr')).to.have.length(4);
-    expect(workshopsTable.find('tbody tr Button')).to.have.length(8);
+    expect(workshopsTable.find('tbody tr').find(Button)).to.have.length(8);
     expect(workshopsTable.state('showCancelModal')).to.be.false;
     expect(workshopsTable.state('enrollmentCodeToCancel')).to.equal(undefined);
 
@@ -79,9 +80,10 @@ describe('LandingPageWorkshopsTable', () => {
     workshopsTable
       .find('tbody tr')
       .at(0)
-      .find('Button')
+      .find(Button)
       .last()
-      .simulate('click');
+      .props()
+      .onClick?.({preventDefault() {}});
     expect(workshopsTable.state('showCancelModal')).to.be.true;
     expect(workshopsTable.state('enrollmentCodeToCancel')).to.equal('code1');
   });
@@ -95,7 +97,7 @@ describe('LandingPageWorkshopsTable', () => {
     workshopsTable
       .find('tbody tr')
       .at(2)
-      .find('Button')
+      .find(Button)
       .first()
       .simulate('click');
 
@@ -116,7 +118,7 @@ describe('LandingPageWorkshopsTable', () => {
     const printCertificateButton = workshopsTable
       .find('tbody tr')
       .at(3)
-      .find('Button')
+      .find(Button)
       .first();
 
     expect(printCertificateButton.prop('disabled')).to.be.true;
@@ -130,7 +132,7 @@ describe('LandingPageWorkshopsTable', () => {
     workshopsTable
       .find('tbody tr')
       .at(0)
-      .find('Button')
+      .find(Button)
       .first()
       .simulate('click');
 
@@ -163,7 +165,7 @@ describe('LandingPageWorkshopsTable', () => {
     const preWorkshopSurveyButton = workshopsTable
       .find('tbody tr')
       .at(0)
-      .find('Button')
+      .find(Button)
       .first();
 
     expect(preWorkshopSurveyButton.props().disabled).to.be.true;

@@ -1,0 +1,10 @@
+name 'ai-powered-threats-defenses-lesson3-level4_2025-pilot'
+display_name 'Breach Reports'
+description 'Choose the same user persona from Level 1 and investigate a breach report created after a password attack.'
+
+sublevels
+level 'ai-powered-threats-defenses-lesson3-level4a_2025-pilot'
+level 'ai-powered-threats-defenses-lesson3-level4b_2025-pilot'
+level 'ai-powered-threats-defenses-lesson3-level4c_2025-pilot'
+level 'ai-powered-threats-defenses-lesson3-level4d_2025-pilot'
+

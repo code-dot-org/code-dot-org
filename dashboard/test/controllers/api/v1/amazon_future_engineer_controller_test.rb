@@ -97,7 +97,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
 
     Timecop.freeze do
       # Create the teacher more than five minutes before we submit
-      teacher = create :teacher
+      teacher = create(:teacher)
       Timecop.travel(5.minutes)
 
       sign_in teacher
@@ -116,7 +116,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
 
     Timecop.freeze do
       # Create the teacher less than five minutes before we submit
-      teacher = create :teacher
+      teacher = create(:teacher)
       Timecop.travel(5.minutes - 1.second)
 
       sign_in teacher
@@ -156,7 +156,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   end
 
   test 'sends school name and district name as found by NCES id' do
-    school = create :school
+    school = create(:school)
 
     actual_args = capture_csta_args_for_request(
       valid_params.merge(
@@ -186,7 +186,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   test 'sends address info from our records if teacher signs up for CSTA Plus or Marketing Kit' do
     # This scenario reflects what happens when a teacher signs up for CSTA Plus or the AFE
     # Inspirational Marketing Kit, so we pull their school address information using the nces id.
-    school = create :school
+    school = create(:school)
 
     actual_args = capture_csta_args_for_request(
       valid_params.

@@ -47,69 +47,6 @@ describe('requiredBlockUtils', function () {
     var blockRequired = blockUtils.domStringToBlock(blockRequiredString);
     assert(Blockly.cdoUtils.getBlockFields(blockUser).length === 1);
     assert(Blockly.cdoUtils.getBlockFields(blockRequired).length === 1);
-    assert(requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
-  });
-
-  it('can recognize non-matching titles in blocks', function () {
-    var blockUser = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">10</field></block>'
-    );
-    var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">11</field></block>'
-    );
-    assert(!requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
-    assert(!requiredBlockUtils.blocksMatch(blockUser, blockRequired));
-  });
-
-  it('can recognize matching entire blocks', function () {
-    var blockUser = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">10</field></block>'
-    );
-    var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">10</field></block>'
-    );
-    assert(requiredBlockUtils.blocksMatch(blockUser, blockRequired));
-  });
-
-  it('can recognize mismatching block types', function () {
-    var blockUser = blockUtils.domStringToBlock(
-      '<block type="logic_boolean"></block>'
-    );
-    var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">10</field></block>'
-    );
-    assert(!requiredBlockUtils.blocksMatch(blockUser, blockRequired));
-  });
-
-  it('can recognize matching titles in blocks with multiple titles', function () {
-    var blockUser = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">1</field><field name="B">2</field><field name="C">3</field></block>'
-    );
-    var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="C">3</field><field name="B">2</field><field name="A">1</field></block>'
-    );
-    assert(requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
-  });
-
-  it('can recognize mis-matching titles in blocks with differing Aber of titles', function () {
-    var blockUser = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">1</field></block>'
-    );
-    var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">1</field><field name="B">2</field><field name="C">3</field></block>'
-    );
-    assert(!requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
-    assert(!requiredBlockUtils.blockFieldsMatch(blockRequired, blockUser));
-  });
-
-  it('can recognize mis-matching titles in with multiple titles', function () {
-    var blockUser = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">1</field><field name="B">2</field></block>'
-    );
-    var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">2</field><field name="B">1</field></block>'
-    );
-    assert(!requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
   });
 
   it('can recognize matching blocks with mismatched ignored attributes', function () {

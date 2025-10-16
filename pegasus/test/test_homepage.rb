@@ -7,6 +7,7 @@ require 'active_support/hash_with_indifferent_access'
 class HomepageTest < Minitest::Test
   describe 'Homepage' do
     before do
+      skip unless CDO.has_pegasus_content
       @request = Rack::Request.new({})
     end
 

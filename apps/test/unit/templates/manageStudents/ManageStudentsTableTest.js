@@ -29,7 +29,6 @@ import manageStudents, {
   TransferStatus,
   TransferType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import ManageStudentsTable, {
   UnconnectedManageStudentsTable,
   sortRows,
@@ -342,8 +341,10 @@ describe('ManageStudentsTable', () => {
     });
 
     it('renders correctly if loginType is picture', () => {
+      const store = getStore();
+      store.dispatch(setLoginType(SectionLoginType.picture));
       const wrapper = mount(
-        <Provider store={getStore()}>
+        <Provider store={store}>
           <ManageStudentsTable />
         </Provider>
       );
@@ -358,7 +359,7 @@ describe('ManageStudentsTable', () => {
       expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
         SectionLoginType.picture
       );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
+      expect(wrapper.containsMatchingElement('#uitest-no-section-code')).to.be
         .false;
     });
 
@@ -387,7 +388,7 @@ describe('ManageStudentsTable', () => {
       expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
         SectionLoginType.word
       );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
+      expect(wrapper.containsMatchingElement('#uitest-no-section-code')).to.be
         .false;
     });
 
@@ -414,7 +415,7 @@ describe('ManageStudentsTable', () => {
       expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
         SectionLoginType.email
       );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
+      expect(wrapper.containsMatchingElement('#uitest-no-section-code')).to.be
         .false;
     });
 
@@ -486,52 +487,6 @@ describe('ManageStudentsTable', () => {
       );
     });
 
-    it('opens dialog correctly for Google Classroom sections', () => {
-      const googleSection = {
-        ...fakeSection,
-        loginType: SectionLoginType.google_classroom,
-      };
-      getStore().dispatch(setLoginType(SectionLoginType.google_classroom));
-      getStore().dispatch(setSections([googleSection]));
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <ManageStudentsTable section={googleSection} />
-        </Provider>
-      );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
-        .true;
-      expect(
-        wrapper.find('NoSectionCodeDialog').props().typeClassroom
-      ).to.equal(SectionLoginType.google_classroom);
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.false;
-      const mainTable = wrapper.find('ManageStudentsTable');
-      mainTable.setState({showSectionCodeDialog: true});
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.true;
-    });
-
-    it('opens dialog correctly for Clever sections', () => {
-      const cleverSection = {
-        ...fakeSection,
-        loginType: SectionLoginType.clever,
-      };
-      getStore().dispatch(setLoginType(SectionLoginType.clever));
-      getStore().dispatch(setSections([cleverSection]));
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <ManageStudentsTable section={cleverSection} />
-        </Provider>
-      );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
-        .true;
-      expect(
-        wrapper.find('NoSectionCodeDialog').props().typeClassroom
-      ).to.equal(SectionLoginType.clever);
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.false;
-      const mainTable = wrapper.find('ManageStudentsTable');
-      mainTable.setState({showSectionCodeDialog: true});
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.equal(true);
-    });
-
     describe('The full section notification', () => {
       const wordSection = {...fakeSection, loginType: SectionLoginType.word};
       const wordStudent = {...fakeStudent, loginType: SectionLoginType.word};
@@ -556,7 +511,7 @@ describe('ManageStudentsTable', () => {
             name: 'new student',
             age: 17,
             gender: 'f',
-            secretPicturePath: '/wizard.jpg',
+            secretPictureUrl: '/wizard.jpg',
             loginType: 'picture',
             isEditing: false,
           };

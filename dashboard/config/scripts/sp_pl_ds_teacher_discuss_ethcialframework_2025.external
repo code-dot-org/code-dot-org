@@ -37,7 +37,25 @@ markdown <<MARKDOWN
 
 
 
+---
+
+## Cleaning Data with AI 
+
+<div style="background-color: #dccbea; border-radius: 20px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); padding: 20px; display: flex; align-items: center; font-size: 16pt;">
+  <img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" 
+       alt="Image of AI bot and a model card" 
+       style="border-radius: 20px; height: 75px; margin-right: 20px;">
+  <div>
+     In this lesson, students will have a chance to compare how AI cleans and analyzes messy data with the AI Chatbot.
+  </div>
+</div>
+
+
+<div style="clear:both;"></div>
+
 ## Let's continue to more data visualization! 
+
+
 
 
 MARKDOWN

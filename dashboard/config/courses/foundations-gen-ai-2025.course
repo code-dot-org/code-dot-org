@@ -1,0 +1,56 @@
+{
+  "name": "foundations-gen-ai-2025",
+  "script_names": [
+    "exploring-gen-ai1-2025"
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "foundations-gen-ai",
+    "has_verified_resources": true,
+    "version_year": "2025"
+  },
+  "resources": [
+    {
+      "name": "All Resources",
+      "url": "/courses/foundations-gen-ai-2025/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/foundations-gen-ai-2025/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/foundations-gen-ai-2025/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
+}

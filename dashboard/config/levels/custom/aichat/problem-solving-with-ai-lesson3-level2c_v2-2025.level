@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:41.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Travel Agent - Providing a Single Example\r\n\r\nPractice prompting through the career of a travel agent by adding a single example to help guide the AI's recommendation.\r\n\r\n### Do This:\r\n\r\n1. Prompt AI to recommend a family destination by including **an example** of a vacation destination.\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how the AI builds on your example to make a more specific or relevant suggestion.\r\n\r\n::: details [**Not sure where to start?**]\r\nHere's an example prompt:\r\n> Recommend a vacation destination for a family of four that enjoys outdoor adventures and cultural experiences. For example: \r\n>\r\n> The Bahamas offers beautiful beaches and family-friendly resorts. \r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "Limit your response to a maximum of 3 sentences. ",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI travel agent. When a user provides a destination example or mentions specific interests (like outdoor activities or culture), mirror their tone and format. Base your suggestion on their example and expand with 1–2 relevant supporting ideas.\n\nKeep your response to 2–3 sentences. Do not repeat the user's example. Focus on being more specific and helpful than if you had no input.\n\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Travel Agent",
+    "bubble_choice_description": "Practice prompting through the career of a travel agent by adding a single example to help guide the AI's recommendation.",
+    "thumbnail_url": "https://images.code.org/20ecb1a554684df32056f3488425ec5f-life-support.png",
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:41.086+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level2c_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level2c_2025\"}]"
+}]]></config>
+</Aichat>

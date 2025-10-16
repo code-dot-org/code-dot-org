@@ -42,10 +42,12 @@ module LevelsHelper
     end
   end
 
-  def build_script_level_path(script_level, params = {}, course_name: nil, unit_position: nil)
+  def build_script_level_path(script_level, unit_group_unit: nil, **params)
     params ||= {}
-    # if course_name is not defined, then this is a deprecated /s/ URL
-    return build_script_level_path_deprecated(script_level, params) unless course_name && unit_position
+    unit_group = unit_group_unit.try(:unit_group)
+    unit_position = unit_group_unit.try(:position)
+    # if unit_group_unit is not defined, then this is a deprecated /s/ URL
+    return build_script_level_path_deprecated(script_level, params) unless unit_group_unit && Policies::Courses.modularity_enabled?
     # /courses/.../units/...
     if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
@@ -53,26 +55,26 @@ module LevelsHelper
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
       if script_level.lesson.numbered_lesson?
-        puzzle_page_course_unit_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
+        puzzle_page_course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
       else
-        puzzle_page_course_unit_lockable_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
+        puzzle_page_course_unit_lockable_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
       end
     elsif params[:sublevel_position]
-      sublevel_course_unit_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params[:sublevel_position])
+      sublevel_course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:sublevel_position])
       # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
       # not include the '/lockable/' piece added in this elsif case
     elsif !script_level.lesson.numbered_lesson?
-      course_unit_lockable_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params)
+      course_unit_lockable_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params)
     elsif script_level.bonus
       query_params = params.merge(level_name: script_level.level.name)
-      course_unit_lesson_extras_path(course_name, unit_position, script_level.lesson, query_params)
+      course_unit_lesson_extras_path(unit_group, unit_position, script_level.lesson, query_params)
     else
-      course_unit_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params)
+      course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params)
     end
   end
 
-  def build_script_level_url(script_level, params = {})
-    url_from_path(build_script_level_path(script_level, params))
+  def build_script_level_url(script_level, unit_group_unit: nil, **params)
+    url_from_path(build_script_level_path(script_level, unit_group_unit: unit_group_unit, **params))
   end
 
   def url_from_path(path, scheme = '')
@@ -310,7 +312,7 @@ module LevelsHelper
       view_options(
         lesson_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,
-        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @lesson),
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @lesson, unit_group_unit: @unit_group_unit),
         current_script_level_url: @script_level.path,
       )
     end
@@ -397,7 +399,7 @@ module LevelsHelper
     end
 
     if @level && @script_level
-      @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section&.id)
+      @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section&.id, unit_group_unit: @unit_group_unit)
     end
 
     if @script_level && current_user
@@ -754,7 +756,8 @@ module LevelsHelper
 
   def lab2_options
     raise ArgumentError.new("#{@level} is not a Lab2 level") unless @level.uses_lab2?
-    app_options = {channel: view_options[:channel], level_id: @level.id}
+    app_options = {level_id: @level.id}
+    app_options[:channel] = view_options[:channel] if @level.try(:is_project_level)
     level_options = level_view_options(@level.id)
     # Add edit_blocks to app_options if it exists in level_options
     if level_options[:edit_blocks]
@@ -767,6 +770,12 @@ module LevelsHelper
     end
     app_options[:share] = level_options[:share] if level_options[:share]
     app_options[:public_caching] = @public_caching
+    if @script_level&.lesson
+      app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
+    elsif @level.uses_theme_preference? && current_user
+      theme_preference = UserPreference.find_by(user_id: current_user.id)&.theme
+      app_options[:theme] = (theme_preference && theme_preference['global']) || 'dark'
+    end
     app_options.camelize_keys
   end
 
@@ -927,11 +936,10 @@ module LevelsHelper
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
-  # If this is a restricted level (i.e., applab), the user is under 13, and the
-  # user has no teacher that has accepted our (August 2016) terms of service,
-  # redirect with a flash alert.
-  # Also redirect if the user is pairing with a user who would receive a
-  # redirect.
+  # If this is a restricted level (i.e., applab, gamelab, weblab, or pythonlab),
+  # the user is under 13, and the user has no teacher that has accepted our (August 2016)
+  # terms of service, redirect with a flash alert.
+  # Also redirect if the user is pairing with a user who would receive a redirect.
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
     error_message = under_13_without_tos_teacher?(level)
@@ -956,7 +964,7 @@ module LevelsHelper
 
   def under_13_without_tos_teacher?(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
-    return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
+    return false unless [Game.applab, Game.gamelab, Game.weblab, Game.pythonlab].include?(level.game)
 
     if current_user&.under_13? && current_user.terms_version.nil?
       if current_user.teachers.any?
@@ -1046,5 +1054,49 @@ module LevelsHelper
     else
       nil
     end
+  end
+
+  # Returns student code for a given level
+  def get_student_code(user_id, level, unit_id, code_version = nil)
+    s3 = AWS::S3.create_client
+    bucket = CDO.sources_s3_bucket
+    base_dir = CDO.sources_s3_directory
+
+    storage_id = storage_id_for_user_id(user_id)
+    # For project-template-backed levels, we need to use the channel_token for the associated project template level.
+    level_id_for_channel_token = level.project_template_level ? level.project_template_level.id : level.id
+    channel_token = ChannelToken.where(storage_id: storage_id, level_id: level_id_for_channel_token, script_id: unit_id).last
+    if channel_token
+      storage_app_id = channel_token.storage_app_id
+      channel_id = storage_encrypt_channel_id(storage_id, storage_app_id)
+      s3_filename = "#{base_dir}/#{storage_id}/#{storage_app_id}/main.json"
+      s3_args = {bucket: bucket, key: s3_filename}
+      s3_args[:version_id] = code_version if code_version
+      begin
+        body = s3.get_object(s3_args)[:body].read
+      rescue => exception
+        Honeybadger.notify(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
+        return
+      end
+      student_code = nil
+      if body
+        parsed = JSON.parse(body)
+        source = parsed['source']
+        if source.is_a?(Hash) && source['files']
+          # Transform files hash into {filename => contents}
+          student_code = {}
+          source['files'].each do |_, file_obj|
+            student_code[file_obj['name']] = file_obj['contents']
+          end
+        else
+          student_code = source
+        end
+      end
+    end
+    {
+      project_id: channel_id,
+      code_version: code_version,
+      student_code: student_code,
+    }
   end
 end

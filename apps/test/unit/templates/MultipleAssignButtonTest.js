@@ -19,7 +19,7 @@ describe('MultipleAssignButtonTest', () => {
     updateHiddenScript: updateHiddenScript,
     testingFunction: testingFunction,
     sectionsForDropdown: fakeTeacherSectionsForDropdown,
-    isAssigningCourse: false,
+    isAssigningCourseOnly: false,
   };
   const setUp = (overrideProps = {}) => {
     const props = {...defaultProps, ...overrideProps};
@@ -33,19 +33,19 @@ describe('MultipleAssignButtonTest', () => {
     wrapper.find('Button').simulate('click');
     expect(
       wrapper.find('Connect(MultipleSectionsAssigner)').first().props()
-        .isAssigningCourse
+        .isAssigningCourseOnly
     ).toBe(false);
     expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).toBe(true);
   });
 
   it('renders a MultipleSectionsAssigner when clicked on course page', () => {
-    const wrapper = setUp({isAssigningCourse: true});
+    const wrapper = setUp({isAssigningCourseOnly: true});
     expect(wrapper.find('.uitest-assign-button')).toBeDefined();
     expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).toBe(false);
     wrapper.find('Button').simulate('click');
     expect(
       wrapper.find('Connect(MultipleSectionsAssigner)').first().props()
-        .isAssigningCourse
+        .isAssigningCourseOnly
     ).toBe(true);
     expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).toBe(true);
   });

@@ -20,7 +20,7 @@
         "layout": "text-bottom-left"
       },
       {
-        "text": "**Resize Handle:**  Drag up or down to make the code area or console bigger, depending on what you want to focus on.\n\n**Layout Window:** Change how the panels are arranged so it’s easier for you to work the way you like.\n\n## What's Next?\nYou will learn about variable types and then try some coding in Python lab. ",
+        "text": "**Resize Handle:**  Drag up or down to make the code area or console bigger, depending on what you want to focus on.\n\n**Layout Window:** Change how the panels are arranged so it’s easier for you to work the way you like.\n\n## Let's try a print statement in Python!\n ",
         "imageUrl": "https://images.code.org/909f56584d19be899b4e045733a86e42-pythonLab (5).png",
         "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
         "layout": "text-bottom-left"
@@ -29,6 +29,6 @@
     "name_suffix": "_2024",
     "offer_browser_tts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-04T17:40:23.049+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-pythonLab_tour\\\"\"],\"cloned_from\":\"sp-pl-DS-pythonLab_tour\"},{\"changed_at\":\"2025-03-04 18:41:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-05 15:18:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 20:40:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-27 14:51:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-27 15:07:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-04T17:40:23.049+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-pythonLab_tour\\\"\"],\"cloned_from\":\"sp-pl-DS-pythonLab_tour\"},{\"changed_at\":\"2025-03-04 18:41:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-05 15:18:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 20:40:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-27 14:51:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-27 15:07:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-21 20:20:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

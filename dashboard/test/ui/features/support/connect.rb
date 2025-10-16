@@ -17,6 +17,16 @@ def single_session?
   $browser_config['mobile'] || $single_session
 end
 
+# Should we run the tests using the local Selenium webdriver rather than on
+# Saucelabs?
+#
+# Used not only to modify the behavior of `get_browser` but also to avoid
+# unnecessarily applying various Saucelabs-specific accommodations throughout
+# the codebase. We expect TEST_LOCAL to be set by `runner.rb`.
+def test_local?
+  return ENV['TEST_LOCAL'] == 'true'
+end
+
 def saucelabs_browser(test_run_name, http_client: nil)
   raise 'Please define CDO.saucelabs_username' if CDO.saucelabs_username.blank?
   raise 'Please define CDO.saucelabs_authkey'  if CDO.saucelabs_authkey.blank?
@@ -67,7 +77,7 @@ end
 def get_browser(test_run_name)
   browser = nil
   $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
-  if ENV['TEST_LOCAL'] == 'true'
+  if test_local?
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   else
@@ -158,7 +168,7 @@ After do |scenario|
 end
 
 def context(str)
-  unless ENV['TEST_LOCAL'] == 'true'
+  unless test_local?
     $browser&.execute_script("sauce:context=#{str}")
   end
 rescue => exception

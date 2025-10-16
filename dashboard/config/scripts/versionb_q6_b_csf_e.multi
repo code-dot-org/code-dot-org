@@ -1,0 +1,8 @@
+name 'VersionB q6_b_csf-e'
+question 'I learned about some careers I did not already know about!'
+right '😍 Yes, definitely!'
+right '👍 Yes.'
+right '🫤 Not really.'
+right '👎 No.'
+right '🤔 I do not know.'
+allow_multiple_attempts true

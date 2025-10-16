@@ -4,12 +4,13 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   freeze_time
 
   setup do
-    @workshop = create :workshop, num_sessions: 2
+    @workshop = build(:workshop, num_sessions: 2, course: Pd::SharedWorkshopConstants::COURSE_CSF)
+    @workshop.save(validate: false)
     @workshop.start!
   end
 
   test 'format no attendance' do
-    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true
+    teacher = create(:pd_workshop_participant, workshop: @workshop, enrolled: true)
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
     first_name, last_name = teacher.name.split(' ', 2)
@@ -28,8 +29,12 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   end
 
   test 'format partial attendance' do
-    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true,
+    teacher = create(
+      :pd_workshop_participant,
+      workshop: @workshop,
+      enrolled: true,
       attended: [@workshop.sessions[0]]
+    )
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
     first_name, last_name = teacher.name.split(' ', 2)
@@ -48,7 +53,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   end
 
   test 'format full attendance' do
-    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
+    teacher = create(:pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true)
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
     first_name, last_name = teacher.name.split(' ', 2)
@@ -67,7 +72,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   end
 
   test 'handle_no_user' do
-    rogue_enrollment = create :pd_enrollment, workshop: @workshop
+    rogue_enrollment = create(:pd_enrollment, workshop: @workshop)
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
     expected = {
@@ -85,7 +90,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   end
 
   test 'deleted user that attended shows as attended' do
-    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
+    teacher = create(:pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true)
     teacher.destroy!
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
@@ -105,7 +110,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   end
 
   test 'deleted user that did not attend shows as not attended' do
-    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: false
+    teacher = create(:pd_workshop_participant, workshop: @workshop, enrolled: true, attended: false)
     teacher.destroy!
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
@@ -125,8 +130,9 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   end
 
   test 'cdo scholarship column' do
-    workshop = create :workshop, num_sessions: 1, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
-    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    workshop = build(:workshop, num_sessions: 1, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF)
+    workshop.save(validate: false)
+    enrollment = create(:pd_enrollment, :from_user, workshop: workshop)
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_CDO)
     assert_equal Pd::ScholarshipInfoConstants::YES_CDO, enrollment.scholarship_status
 
@@ -145,8 +151,9 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   end
 
   test 'other scholarship column' do
-    workshop = create :workshop, num_sessions: 1, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
-    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    workshop = build(:workshop, num_sessions: 1, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF)
+    workshop.save(validate: false)
+    enrollment = create(:pd_enrollment, :from_user, workshop: workshop)
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
 
@@ -165,7 +172,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   end
 
   test 'extract school and teacher info when they present' do
-    enrollment = create :pd_enrollment, role: 'Classroom Teacher', grades_teaching: ['Grade 6-8']
+    enrollment = create(:pd_enrollment, role: 'Classroom Teacher', grades_teaching: ['Grade 6-8'])
     expected = {
       district_name: enrollment.school_info.school_district.name,
       school: enrollment.school_info.school.name,

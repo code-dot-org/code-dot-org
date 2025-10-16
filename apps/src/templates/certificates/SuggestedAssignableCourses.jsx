@@ -58,7 +58,6 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
         course_id,
         course_offering_id,
         script_id,
-        is_standalone_unit,
         is_translated,
         //Expanded Card Props
         device_compatibility,
@@ -87,7 +86,6 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
           courseId={course_id}
           courseOfferingId={course_offering_id}
           scriptId={script_id}
-          isStandAloneUnit={is_standalone_unit}
           onAssignSuccess={() => setAssignSuccess(true)}
           deviceCompatibility={device_compatibility}
           description={description}

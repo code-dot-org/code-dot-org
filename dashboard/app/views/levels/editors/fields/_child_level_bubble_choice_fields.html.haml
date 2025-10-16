@@ -6,4 +6,4 @@
 
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_child_level_bubble_choice_fields.js'),
-        data: {childlevels: @level.sublevels.to_json}}
+        data: {childlevels: @level.sublevels.map(&:summarize_for_sublevel_edit).to_json}}

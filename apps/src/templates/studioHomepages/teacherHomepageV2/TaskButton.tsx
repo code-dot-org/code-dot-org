@@ -1,8 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {TEACHER_NAVIGATION_SECTIONS_URL} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
 import styles from './teacherHomepage.module.scss';
@@ -11,6 +13,7 @@ interface TaskButtonProps {
   buttonText: string;
   icon: string;
   sectionId: number;
+  sectionName: string;
   path: string;
 }
 
@@ -26,17 +29,28 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
   buttonText,
   icon,
   sectionId,
+  sectionName,
   path,
 }) => {
-  const navigate = useNavigate();
+  const sendEvent = () => {
+    const navEvent =
+      path === 'progress'
+        ? EVENTS.SECTION_CARD_VIEW_PROGRESS_CLICKED
+        : path === 'materials'
+        ? EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED
+        : EVENTS.SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED;
+    analyticsReporter.sendEvent(navEvent, {}, PLATFORMS.BOTH);
+  };
 
   return (
-    <button
-      type={'button'}
+    <NavLink
+      id={`task-button-${buttonText.replaceAll(
+        ' ',
+        '-'
+      )}-${sectionName.replaceAll(' ', '-')}`}
       className={styles.taskButtons}
-      onClick={() =>
-        navigate(`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`)
-      }
+      onClick={sendEvent}
+      to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`}
     >
       <div className={styles.taskButtonLeft}>
         <FontAwesomeV6Icon
@@ -51,6 +65,6 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
         iconName={'arrow-right'}
         iconStyle={'solid'}
       />
-    </button>
+    </NavLink>
   );
 };

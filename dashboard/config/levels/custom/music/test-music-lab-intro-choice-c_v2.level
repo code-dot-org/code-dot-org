@@ -1,0 +1,61 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:02.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Choice C\r\n\r\nFind the example music player that says \"Choice C\" below these instructions. Press the Play button on the player to hear the song.\r\n\r\nRefer to your activity guide to see if it would work for any client's needs.\r\n\r\nOnce you're done, press Continue to return back to your choices and pick a different song.",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "lady_gaga_born_this_way",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Choice C"
+    },
+    "display_name": "Choice C",
+    "thumbnail_url": "https://images.code.org/5eae9fd9cc2c8f31d93c1504b0b333be-Screenshot 2025-04-02 at 7.43.31 AM.png",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorfdNX0XI+ugKqhUPjzC3tg5m43BNbrSts3m5RVXs/zYRk\nl5Ck0bkpIZHJGaPgPLRXu55x3zYskYYV/zY9uteu5Ix9Dx4fIT2fXfdG7T0H\nt1koPioClW29oWV0lh835QddwaCxo5C1fljuOu7T64g6vB8M4gvMjSMQoJVo\nFCqXDsCn3TRNGAChkBn8WrMGUvNqNAefXcQfFbTljMet+bQ6meZSLlmCSpnj\nimaRLufkvSBqlePi0VkxBIF2SsgTTc0V6jvcS/A6RvE8nLY1Gvp5v/gPOQUc\nKEuDNBxcLxP4uLQBWMP7eU1a+NRMNql/l9z1fdG5BwLALVbqBvLkxIQTFW7e\nRgcQJlztvXcj9M55oxqrXYJ/YCSgce6GcxqVS4QasI5WvvW79I8/uKDLMMEy\nMz6IxILV9kmCmtOjoxIB1wOtK3cYJMYeYKf1FldMUVzj9MmCmjBNreO/9XSY\nDuvF8lrl7LaovRsO3IAYAOwW/82IcgGxgLj+xLIAvlEAEL++bzMiWQfxn1qF\nnNZxG7KgXRlanDmXa2aJilwJZtxl0VmTSUwkYBOEVLblqV5pcoiRnx73Pfgx\nMftygmliJMjZOHrlirL80wNwhCbzT0kft4zrK/L/RJ+gzLwDKpComdsBil61\nOrpO6KaTxWjl8311GpXNEFChPPeOSuRZkyuZTVS5SShrlwtR2JKnsWiCdeWy\n1E3+APhWjkWYq7w+U+6YK80w9ivRAIl0Tj46ZKAQOsBQv3xaCUPd9a3gbqiU\n3vrdCl5pveE4bH6d8bjdxQoI8psNL4YwoAvw6TOEGDUq4E3/zEIxhJ9CuNTO\nqkacDsDD0S1BTxb0MhgsTHD4yJTXxMiQmgfrAP2iSnpJTC/h8YU54IPmLTIZ\n5HSw4o2ODF6JYXn5/DeSzZGfTytMgfdcPGr7kd01WcAbSJTsrSn7mIK2AwfO\nm5n/iq0ImICftcOZbjYOYzBq6ZFaDqU8pJn6yxRw76aR3pWOKEqUaW+SIVFX\n69Y+X/aDS9TTMX6hDlgc0SAfd1971sqZaPlf/44j91TQjBXAJJexA7VXEnHe\njwx8QZAzWsrvSvJ0YIBnkpSHGzV/2bzGsYfXuUrBg5UKeUDlGekHT0+3N1xz\n4C5F9DQUQwYFNLKfz7d5PyHJtbtPz0ZpPoMD/pvEpinAx3W9YRqca8EBjwJa\nPCpb1RYe2QiXfyw7uX/7qWYIJGVlS9El6UN+BPNBYFQXYbL0mRVYQ+qkuJZj\nrUEaUMoFBk+fYVlwyVZ0nutoXJAKS+kXFvO+VQ2awWT48OfloNgnJQiMpSfc\nNTgyzsEn6wno7moL/OcQvqS5G89mShBpJ6Zah0+I/2QP9HP9q7uKNph1gaRX\nu509pFMY2lMOxVz/W2G4c/yx265eZN0SlKFRKjsT8Est2+I8qYyNwMeobI8M\n4/WnMtmNC57BvOXFWI2kmyEh8ckjirD3GUhDPcYkZmqTBhOlyRVVxvyjEspk\nnmtcufC7efqv5SPl2Fehkwo/pz3uYJtGAh4wl46xqPegrjEn/QkDA2pe6nZX\neDPhB1KwagImMegF+8xi5R49MSixqtgvoWnrmhLYEL5VKhZUOGbXIKlmonK0\ngZhztZUdnjrqKv5C9Q2IV/zLu9t3ZFfh0EpqBeQQiDja/KGzMQI/kZvmIrDH\n8IEFfhzck/vfzULvTqwI2O9XsCy2pgI8dfBAa6WgM38Fgs3asUfFMaPdgciA\nDPoSxcAB1zIoIPj5VIZgqRHMhdY3lm9dmdSTK3FQDpR0rNR4iy52UvsYqHM2\n+/Jbqlnyq+Ope7VekaccykXAHwswH4byinX07dakePGEunvEWhEwWcRtaLVJ\n054vkwak6Y/Dt+UlLzluZ6vVhIJsvBMP0pB567cqWSlkbmhMNJAXsFpt/+H6\nLEQu9NvTLl+RJBGIkX79y7qeyyY3rskK3BajNbJ1BpSQddfrwybOIEVfMQ0F\nW1r3nNSxWNczKRiCqUG+RfNkzdcaIeNP8Icp59dhAZdyHaffsp/w2KgkThG+\nCGxVneayUUcOoeYxV0iVLyWkoJngIFkb/Np7KcZxdwhUIAU3B88vKJK8sK7r\n9zJ8BsH0TbNBLvJyz9zF74HCrtDl2K3733AG6ppA44oHhemFnseNJUZc0w/T\nUd6F4nOHNuzaGU2vv9ix/CYJF3sqgzz6RGslaAO/zuYcIettrEAdJglNPa9C\n/E8xQ2+DWDxTmM4j87n5XqbyDNBspFarJhNc7xXS0HEeXRAJXz7ytYQ676+g\nnpdBf5l4mAsveu8yvfiSLl60WxRTyqHgRnUHMwTa57quAzwKpo8TA+VpjTsD\nQev6iJqwW7lHxjT1R6h2UZSHPBSeP/7sGbi1Do+f2bYqA4jzzIpZ2Cpn/Fp6\nOL8KB6AM6G5gbxCI4jgGoAK9OJ3NsejOJGabSPn7PbBwFIKjT0HbsA8yiuW/\nsCKP0spH/PtUf4NpylKCf++GFQuS2L5+Fzq3tVq3ga4TgewOLuMyzVfmBYTg\nf2hyZ3FqRHpe/evCDFETAWdBlj1Z+SQ0o2KXI6p/PzIF2bpQC4+UoP4dXPge\n0KVrVJtI6RDyCJGNAFyNVhg/w2bbF/APjiaX32Sm9jzrAgORoIba5h1a04rg\nBFMnIT+oj273UwEHfhDLYEQ96oJHinTgSPHm9mQFWsgSsb7OYF2JGBASRXWM\n34mdiyhNbboMKVpbfwwBmle6b9HHlWQ23fczminPAnHo3xYNIR3gi+fHQT5o\nsT7YrtMKNRTgz/7hs0hp+jMcI8p7TqU7M5kNbcfoEBfKbNuQ/yun+eYaLlzY\nE1vOLCeJUb0dfk15LfDI+fLiK3mxKzfQ5YWUy2BjSFoLW+DUUb5LypVmcpgC\ndCxGxZs+7sboxUjouLMDe3oaHULIS/WArH2DPavxlio6zVDqeaaclDEBHG2H\nCZfLlvMRoyWuena8fHk7HKIKbATllPEwDYmgCbif3R4Tv8wNGASC52MCFQb5\n5bppqPlsKOlSDLQCTKLCbcpIGFweDljaYNK9mnIOz4+b0TlNqvnvB6EE5bRl\no2a4+4PILt2Xws9tE/PEG9O0JROzkNncAlQMAvQHlGwS4AeiMX3qGxVchcZp\nrgaqVO10BRjTd7UZst831/GUm0z1TtW/CcUjtSYKX9+pnl8TzzK6rc6KvAGR\nVboZPoHdL0Gk/K07b5z8JBOsaOx60eTbHoO6qNOa8+nqKv7ot88K5g+eNmsJ\n3GSfUMKKF0Taf8/VPuek9poV2cSsYr/ZPiqZaLGHx4pMkRav3Vo1HS88slZn\n7dX5N6NJpwk4TlpJZcdgXxr60HHnQTGO209Mi33eTKno0QolBUvJcKXjk9dH\nOICd+7c5zAvyLhqhSSRtrcpFMvXMleArmdHGueuOl9lVh1ixKhAli5PTn3pr\nZ275rrZ0L0JEZHKibEFZaOgepHIrbSOdchcAVpsnXuqxCyedxh4kLLMDBhWv\n/BKPaB5CTQEzWhK6sAOG9fI3OavCmYj3vbcz2bY78qEDxhbDYzYExFB6yPf4\nkQlGlm6XGueOmIJVqKdhIFGJ3u9X1jS+CzNt3UkNVc4o7rEK6uhX/VdSGXsM\ndKIN7N1Z85MExD/ntY8fabQRFyy8FsTG0eKWl1793cTilFrGPTc1pTJKOLZ7\nl3eBrUFHMPGL23m+B+7UpWzfA6/8tpC9XxShJamM5zCsGlh/42ec/A9cWIPD\nrO2NKbadGhdFcQ0xpc9evIi05ZYAVrjRhsO6/wp5GAOyfqj3pfXnLabpGB1A\nq1hZpSYvFlMrYXy5TRkKd4zqasa00wPXNmdQ6F66gfrGWpvwDxs9Jy08jFtL\ntoXugDkdvJsyVTT4dhTqtczqt1rceG5yKH6DjSkE+tulYf3y4VVlQwlwpb7L\ndvxFioqqdVyIYLMT6QQ40XzuKTr++H52G1b0zRC8BceyfpWZsRb/Tup2YquX\nuhraSj3TMQXkAfMAlrpmjWN2Zt1G/jndV3o92bNOUFMNAShLbtVk+kpsf0IT\nWU0+m1KG2E7/0q5WxiGIMRJEexYtyFMTMfN0j10ixCxdSt2wNor1HtDc3LKB\nWKCNIJGkvNUPJwt5X7EppqwEZPgnUpBp6zScO0Ajq5exqLWOGo+REw==\n",
+    "bubble_choice_description": "Click this option to hear a song with a **\"triphop vocals-led remix of Lady Gaga\"** from your Song Portfolio. After listening to the song, you can decide if it would meet the needs of one of your clients",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:02.977+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-c\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-c\"}]"
+}]]></config>
+  <blocks/>
+</Music>

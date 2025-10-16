@@ -1,0 +1,239 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-04-28T18:19:13.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "level_data": {
+      "validationTimeout": 3,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_sequential",
+                  "id": "play_sounds_sequential",
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "sound",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "katy_perry_firework/vocals_verse_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": ",iO,}!)8?-7,%V6?FEgX",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "katy_perry_firework/vocals_verse_2"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "1-Ei]LvnK[!2P%7EFJ0m",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "katy_perry_firework/vocals_verse_3"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "d%u3:;^5jI+|4aG_CYAP",
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "fields": {
+                                      "sound": "katy_perry_firework/vocals_verse_4"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "Trigger1",
+              "x": 230,
+              "y": 50,
+              "deletable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "Trigger2",
+              "x": 230,
+              "y": 150,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger2</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "Trigger3",
+              "x": 230,
+              "y": 270,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger3</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "sounds": {
+        "katy_perry_firework": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_chorus_1"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_hands",
+          "drum_beat_conga",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble"
+        ]
+      },
+      "packId": "katy_perry_firework",
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "drum-toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "acoustic_arcade/drum_beat_hands"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-volume\"></i> Trigger the drums!\r\n1. [Connect](#clickable=flyout-up-id:sound---id:Trigger1) one sound block to each three of the trigger events.\r\n2. Choose a different drum for each event.\r\n2. Press [Run](#clickable=run-button) to start the vocals.\r\n3. Then, press the [<code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">1</code>](#clickable=trigger-button-1) , [<code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">2</code>](#clickable=trigger-button-2) or [<code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">3</code>](#clickable=trigger-button-1) button to play the drums.\r\n\r\n\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint for step 1](#clickable=flyout-up-id:drum-toolbox---id:Trigger1)\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint for step 4](#clickable=trigger-button-1)",
+    "validations": [
+      {
+        "key": "music-coding-intro-event-sound_1f86fd90-3a5e-4101-a29a-1a64d1e53962",
+        "message": "Nice work. You made your own trigger event and it sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_triggered_multiple_times",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-2events-sound_launch_46912d88-a14a-4f58-a3b0-8d164676c2e6",
+        "message": "You've pressed the trigger button 1 but there are not yet sounds connected to the event in the workspace.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 1
+          }
+        ],
+        "callout": "flyout-up-id:drum-toolbox---id:Trigger1"
+      },
+      {
+        "key": "music-coding-intro-2events-sound_launch_d081cfaa-74d6-4314-b62a-581cc8dcf918",
+        "message": "You've pressed the trigger button 2 but there are not yet sounds connected to the event in the workspace.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 2
+          }
+        ],
+        "callout": "flyout-up-id:drum-toolbox---id:Trigger2"
+      },
+      {
+        "key": "music-coding-intro-2events-sound_launch_56b150e2-4937-4de1-8231-438db4ed043f",
+        "message": "You've pressed the trigger button 3 but there are not yet sounds connected to the event in the workspace.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 3
+          }
+        ],
+        "callout": "flyout-up-id:drum-toolbox---id:Trigger3"
+      },
+      {
+        "key": "music-coding-intro-2events-sound_launch_38d9fa24-e195-4443-87cb-92bc96495fdc",
+        "message": "You haven't triggered any sounds yet! Add a sound to each event in the workspace.",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "flyout-up-id:drum-toolbox---id:Trigger1"
+      }
+    ],
+    "name_suffix": "_1",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:13.219+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-2events-sound_launch\\\"\"],\"cloned_from\":\"music-coding-intro-2events-sound_launch\"}]"
+}]]></config>
+  <blocks/>
+</Music>

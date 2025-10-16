@@ -52,6 +52,10 @@ class LevelLoader
 
       # Load level properties from disk and build a collection of levels that
       # have changed.
+      # TODO(5-20-25): load_custom_level calls the database for each level.
+      #   Instead, we should load all levels in a single query and then pass the appropriate level
+      #   into load_custom_level for additional logic and creation of new levels.
+      #   Something like: Level.eager_load(levels_child_levels: :child_level).where(name: level_file_names)
       changed_levels = level_file_paths.
         filter_map {|path| Services::LevelFiles.load_custom_level(path, level_md5s_by_name)}.
         select(&:changed?)
@@ -98,8 +102,7 @@ class LevelLoader
       # experience of any individual level could add an after_save callback
       # which modifies the DB and which they expect to get run only on
       # levelbuilder. so, just run the callbacks we're sure we need instead.
-      Level.setup_child_levels_for(changed_levels, ParentLevelsChildLevel::CONTAINED)
-      Level.setup_child_levels_for(changed_levels, ParentLevelsChildLevel::PROJECT_TEMPLATE)
+      Level.setup_child_levels_for(changed_levels, [ParentLevelsChildLevel::CONTAINED, ParentLevelsChildLevel::PROJECT_TEMPLATE])
     end
   end
 

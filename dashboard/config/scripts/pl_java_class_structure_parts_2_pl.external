@@ -1,0 +1,32 @@
+name 'pl-java-class-structure-parts-2_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is a Class?
+
+<img src="https://images.code.org/54779c275bd9a1b93b37f7b622dcf9e8-image-1747666707784.png" alt="digram of a class indicating the name of the class, attributes, and behaviors" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+#### Think of a class like a **blueprint** or **template**. Just like an architect designs a house blueprint that can be used to build many houses, a class in Java is a blueprint for creating objects. 
+
+#### It defines the **attributes** (characteristics or variables) and **behaviors** (methods) that every object of that type will have.
+
+
+>#### A **class** in Java is a user-defined data type that contains **instance variables** (also called attributes) and **methods** (functions that define behavior).
+>#### It serves as a blueprint for creating objects, which are **instances of the class**.
+
+## Class Structure 
+
+#### Take a look at the code for the Book class below. As you work through this lesson, you will go through each of these parts. For now, just notice the components that make up a class.
+
+<img 
+  src="https://images.code.org/2d40744860c1eeff73cdd91cff0e47de-image-1747426903005.png" 
+  alt="a sample of a class in java with instance variables, constructors, and methods" 
+  width="650px" 
+  style="display: block; margin-left: auto; margin-right: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+
+
+## Let's get started with Java files! 
+
+
+MARKDOWN

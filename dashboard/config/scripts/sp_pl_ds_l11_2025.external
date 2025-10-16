@@ -5,23 +5,70 @@ description 'description here'
 markdown <<MARKDOWN
 # Crafting Stories Project Overview 
 
-#### The chapter culminates with a data project and assessment.  
-#### The project is designed to take multiple days. 
+<img src="https://images.code.org/10a9908d2caf6a6fed5b9255df213a3b-image-1724434686077.png" alt="codap logo" width="220px"   style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### The unit culminates with a data project and assessment.  
+
+#### In this project, students will be a data scientist tasked with answering questions and telling a data story. 
+
+#### The will go through the Data Cycle: choose a dataset, ask RSAIR questions, clean and/or filter the data, create visualizations to help you analyze, answer, and possibly even develop more questions, and build a story around the data, thinking about the ethical concerns at every step.
+
+
+<div style="clear:both;"></div>
 
 ---
 
-<img src="https://images.code.org/10a9908d2caf6a6fed5b9255df213a3b-image-1724434686077.png" alt="codap logo" width="220px"   style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+## Project Calendar
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
 
-- #### **Day 1** - pick dataset, go through three reads, form RSAIR question, select data questions
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 1
+    </p>
+    
+    <p style="font-size: 14px">
+	Students pick a dataset, go through three reads, form RSAIR question, and select data questions.
+    </p>
+    
+</div>
 
-- #### **Day 2&3** - make decisions with your data (clean, summarize attributes, apply formulas), create visualizations and identify insights to help answer data questions 
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 2 & 3
+    </p>
+    
+    <p style="font-size: 14px">
+	Students make decisions with their data (clean, summarize attributes, apply formulas), create visualizations and identify insights to help answer data questions .
+    </p>
+    
+</div>
 
-- #### **Day 4**- write a data story, reflect on the data cycle process, reflect on ethical considerations 
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 4
+    </p>
+    
+    <p style="font-size: 14px">
+	Students write a data story, reflect on the data cycle process, and reflect on ethical considerations.
+    </p>
+
+</div>
+</div>
 
 
-### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+
+### <b>Students use a <a href="https://docs.google.com/document/d/1wIqaBJxxyYquYiuWS2-CYN2zpSWA6mqI2j3S4cKHbvE/edit?usp=sharing" rel="noopener noreferrer">Project Guide</a>. to help plan their projects.</b>
 
 <div style="clear:both;"></div>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 11. You can find more details in the full <a href='https://studio.code.org/s/aif6-2025/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+
+
 
 
 

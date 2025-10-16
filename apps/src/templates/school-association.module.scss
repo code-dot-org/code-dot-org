@@ -41,6 +41,15 @@
     margin-block: 0.4375rem 0;
     color: $light_negative_500;
   }
+
+  .schoolsList {
+    position: relative;
+    i {
+      position: absolute;
+      right: -22px;
+      top: 38px;
+    }
+  }
 }
 
 .headerContainer {

@@ -44,4 +44,8 @@ class Policies::ActiveRecordRolesTest < ActiveSupport::TestCase
     ActiveRecord::Base.stubs(:configurations).returns(test_config)
     assert_equal Policies::ActiveRecordRoles.get_reading_role_name, :secondary
   end
+
+  test 'get_reporting_role_name' do
+    assert_equal Policies::ActiveRecordRoles.get_reporting_role_name, :primary_reporting
+  end
 end

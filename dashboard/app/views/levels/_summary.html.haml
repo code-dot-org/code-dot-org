@@ -10,6 +10,7 @@
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   left_align = local_assigns[:left_align]
   level_id = @level.id
+  show_ai_analysis = @script_level&.show_ai_analysis
 
   responses = @responses&.map do |response_group|
     filtered_responses = response_group.map do |response|
@@ -17,7 +18,8 @@
         user_id: response.user_id,
         text: response.level_source&.data,
         student_display_name: response.user&.name,
-        student_family_name: response.user&.family_name
+        student_family_name: response.user&.family_name,
+        updated_at: response.updated_at
       }
     end
     filtered_responses.filter { |r| !!r[:text] } # Remove empty responses.
@@ -43,6 +45,7 @@
     in_level_group: in_level_group,
     last_attempt: last_attempt,
     left_align: left_align,
+    show_ai_analysis: show_ai_analysis,
     responses: responses,
     answer_is_visible: answer_is_visible,
     teacher_markdown: teacher_markdown,

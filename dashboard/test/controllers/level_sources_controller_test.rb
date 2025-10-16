@@ -106,9 +106,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "generate image for artist in s3" do
-    artist_level = create :level, game: create(:game, app: Game::ARTIST)
-    level_source = create :level_source, level: artist_level
-    level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
+    artist_level = create(:level, game: create(:game, app: Game::ARTIST))
+    level_source = create(:level_source, level: artist_level)
+    level_source_image = create(:level_source_image, level_source: level_source, image: 'S3')
 
     get :generate_image, params: {id: level_source.id}
 
@@ -116,9 +116,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "original image for artist in s3" do
-    artist_level = create :level, game: create(:game, app: Game::ARTIST)
-    level_source = create :level_source, level: artist_level
-    level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
+    artist_level = create(:level, game: create(:game, app: Game::ARTIST))
+    level_source = create(:level_source, level: artist_level)
+    level_source_image = create(:level_source_image, level_source: level_source, image: 'S3')
 
     get :original_image, params: {id: level_source.id}
 
@@ -126,9 +126,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "generate image for playlab in s3" do
-    playlab_level = create :level, game: create(:game, app: Game::PLAYLAB)
-    level_source = create :level_source, level: playlab_level
-    level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
+    playlab_level = create(:level, game: create(:game, app: Game::PLAYLAB))
+    level_source = create(:level_source, level: playlab_level)
+    level_source_image = create(:level_source_image, level_source: level_source, image: 'S3')
 
     get :generate_image, params: {id: level_source.id}
 
@@ -136,9 +136,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "generate image 404 for hidden level_sources" do
-    artist_level = create :level, game: create(:game, app: Game::PLAYLAB)
-    level_source = create :level_source, level: artist_level, hidden: true
-    create :level_source_image, level_source: level_source
+    artist_level = create(:level, game: create(:game, app: Game::PLAYLAB))
+    level_source = create(:level_source, level: artist_level, hidden: true)
+    create(:level_source_image, level_source: level_source)
 
     assert_raises(ActiveRecord::RecordNotFound) do
       get :generate_image, params: {id: level_source.id}
@@ -146,9 +146,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "cache headers for generate image" do
-    level = create :level, game: create(:game, app: Game::PLAYLAB)
-    level_source = create :level_source, level: level
-    create :level_source_image, level_source: level_source
+    level = create(:level, game: create(:game, app: Game::PLAYLAB))
+    level_source = create(:level_source, level: level)
+    create(:level_source_image, level_source: level_source)
 
     get :generate_image, params: {id: level_source.id}
 
@@ -156,9 +156,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "cache headers for original image" do
-    level = create :level, game: create(:game, app: Game::PLAYLAB)
-    level_source = create :level_source, level: level
-    create :level_source_image, level_source: level_source
+    level = create(:level, game: create(:game, app: Game::PLAYLAB))
+    level_source = create(:level_source, level: level)
+    create(:level_source_image, level_source: level_source)
 
     get :original_image, params: {id: level_source.id}
 

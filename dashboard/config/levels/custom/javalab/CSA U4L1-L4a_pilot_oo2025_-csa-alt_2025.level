@@ -1,0 +1,46 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2025-05-21T19:32:51.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Draw the images in the **Asset Manager** in your scene.\r\n\r\n✅ <strong>TO DO #1:</strong> In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method to draw multiple images in the scene. You can choose which images to draw, where to draw them, and the size of each image.\r\n\r\n✅ <strong>TO DO #2:</strong> In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>, instantiate an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene</code> object and call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method.\r\n\r\n⚠️ <strong>Don't forget!</strong> Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Theater.playScenes(yourSceneObject)</code> method to play the scene.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Scene</code> class in the <strong>Documentation</strong> tab ⬆️ for help with drawing images in a scene.\r\n</div>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 How can I animate the images?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n        <p>Try using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> or <code style=\"background-color: #ececec; color: black; font-weight: bold;\">clear()</code> methods to turn your scene into an animation!</p>\r\n\r\n        <ul>\r\n        <li>Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> method after drawing each image or after drawing a set of images.</li>\r\n\r\n        <li>Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">clear()</code> method to clear the scene before drawing another image if you don't want the previous image to still display in the scene.</li>\r\n        </ul>\r\n    </div>\r\n</details>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "TheaterRunner.java": {
+        "text": "import org.code.theater.*;\n\npublic class TheaterRunner {\n  public static void main(String[] args) {\n\n    String emoji1 = \"laughing.png\";\n    String emoji2 = \"smiling.png\";\n    String emoji3 = \"surprised.png\";\n    String emoji4 = \"cool.png\";\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Instantiate an ImageScene object, then call the drawScene() method.\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n\n    \n    \n    \n  }\n}\n",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "ImageScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Represents a scene of images\n */\npublic class ImageScene extends Scene {\n\n  // The image filenames to display in the scene\n  private String image1;\n  private String image2;\n  private String image3;\n  private String image4;\n\n  /*\n   * Initializes each image to the specified filename\n   */\n  public ImageScene(String img1, String img2, String img3, String img4) {\n    this.image1 = img1;\n    this.image2 = img2;\n    this.image3 = img3;\n    this.image4 = img4;\n  }\n\n  /*\n   * Draws each image in the scene\n   */\n  public void drawScene() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Draw each image in the scene using drawImage(). You choose where\n     * you want to draw the images and the size of the images.\n     * -----------------------------------------------------------------------------\n     */\n\n\n    \n  }\n\n}\n",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "display_name": "Draw Emoji Images",
+    "bubble_choice_description": "Draw the emoji images in your scene.",
+    "thumbnail_url": "https://images.code.org/8aab9f65ce9e11545eb041c52e9de04c-cool.png",
+    "starter_assets": {
+      "pizza.png": "849a94b6-3543-45cd-96c0-5458289f5a50.png",
+      "burger.png": "035fb68c-42a6-496e-9372-8f78789123f3.png",
+      "sushi.png": "bef4596a-4064-4574-9635-760fcc7d0759.png",
+      "curry.png": "1d78713e-8e09-40ad-9edf-285f012418bb.png",
+      "laughing.png": "cc71b36f-861b-4f3f-ab93-7fd06dd52837.png",
+      "smiling.png": "58daa98f-703a-4a90-8924-2b67f9e208e9.png",
+      "surprised.png": "762533c8-e3da-4f4c-8886-fb50a12e5a97.png",
+      "cool.png": "7dfe3d94-b0a0-4587-a703-ae6b7b8abd9d.png"
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_-csa-alt_2025",
+    "ai_tutor_available": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-21T19:32:51.225+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L4a_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U4L1-L4a_pilot_oo2025\"},{\"changed_at\":\"2025-05-23 18:15:44 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-23 18:17:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-23 18:17:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-23 18:18:11 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2024-06-26T17:31:20.000Z",
   "level_num": "custom",
@@ -49,7 +50,7 @@
     ],
     "name_suffix": "_PL",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**How do I pass this level?**\\n\\n* Just press the \\\"Finish\\\" button!\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c6c3bc2f9a1203067d672832e8874d59/Dance_2019_09.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"**Need some ideas?**\\n\\n* Repeatedly change a dancer's size to make it grow.\\n* Repeatedly change a dancer's rotation to make it spin.\\n\\n*You can also use negative numbers to create an opposite effect!*\",\"hint_id\":\"repeat_every_ideas\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2b18c408ece2ac2f98b20c1ed5a911e0/Dance_2019_09.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"**Optional Challenge**\\n* You can also use this new event block to cycle through a list of dance moves by setting the move to `(Random)`, `(Next)`, or `(Previous)`.\\n<xml><block type=\\\"Dancelab_changeMoveEachLR\\\">\\n    <title name=\\\"GROUP\\\">???</title>\\n    <title name=\\\"MOVE\\\">\\\"rand\\\"</title>\\n    <title name=\\\"DIR\\\">-1</title>\\n  </block></xml>\",\"hint_id\":\"next_previous\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bdbafe8a9d15e0bc0384f3032e7a647f/Dance_2019_09.mp3\"}]",
-    "default_song": "starships_nickiminaj",
+    "default_song": "wenospeakamericano_yolandabecool",
     "long_instructions": "This **new block** is a special kind of event that is triggered over and over.\r\n\r\n<xml><block type=\"Dancelab_everySeconds\"><title name=\"N\">2</title><title name=\"UNIT\">\"measures\"</title></block></xml>\r\n\r\nBy placing the other new blocks in your toolbox inside the repeat block you can repeatedly change dancers' properties over time. Be creative and have fun!\r\n\r\n*When you are done press the Finish button.*",
     "short_instructions": "Be creative with these new blocks!",
     "encrypted": "false",
@@ -67,9 +68,8 @@
     "validation_enabled": "false",
     "hide_pause_button": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-06-26T17:31:20.744+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_09_grade5\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_09_grade5\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-26T17:31:20.744+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_09_grade5\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_09_grade5\"},{\"changed_at\":\"2025-04-15 17:24:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_song\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1,

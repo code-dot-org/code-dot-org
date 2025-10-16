@@ -14,11 +14,12 @@
     "skip_sound": true,
     "video_full_width": true,
     "name_suffix": "_launch",
-    "display_name": "Shakira, singer songwriter",
-    "thumbnail_url": "https://images.code.org/14472bb059d18b312a6ddabeb1bcb561-shakira.jpg"
+    "display_name": "Shakira",
+    "thumbnail_url": "https://images.code.org/14472bb059d18b312a6ddabeb1bcb561-shakira.jpg",
+    "bubble_choice_description": "Singer and songwriter"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T20:11:39.816+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-video-hold_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-video-hold_launch\"},{\"changed_at\":\"2025-03-18 20:12:22 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-18 20:34:51 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-18T20:11:39.816+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-video-hold_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-video-hold_launch\"},{\"changed_at\":\"2025-03-18 20:12:22 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-18 20:34:51 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 15:45:45 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

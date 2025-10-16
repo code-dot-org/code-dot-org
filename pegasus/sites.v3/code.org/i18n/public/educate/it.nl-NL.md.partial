@@ -17,7 +17,7 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
-Vanaf juli 2024 updaten we de minimale versies die vereist zijn voor browsers en besturingssystemen. Hoewel de oude versies mogelijk nog steeds werken, kunnen we verzoeken om bugfixes in de oudere versies niet ondersteunen.
+Elk jaar updaten we de minimale versies die vereist zijn voor browsers en besturingssystemen. Hoewel de oude versies mogelijk nog steeds werken, kunnen we verzoeken om bugfixes in de oudere versies niet ondersteunen.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ Vanaf juli 2024 updaten we de minimale versies die vereist zijn voor browsers en
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Browser juli '24
         </th>
         <tr>
           <td>Chroom 103.x</td>
@@ -71,28 +49,6 @@ Vanaf juli 2024 updaten we de minimale versies die vereist zijn voor browsers en
           Platform
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          Platform juli '24
-        </th>
-        <tr>
           <td>macOS 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ Vanaf juli 2024 updaten we de minimale versies die vereist zijn voor browsers en
         </tr>
         <tr>
           <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser juli '25
+        </th>
+        <tr>
+          <td>Chroom 109</td>
+        </tr>
+        <tr>
+          <td>Safari 16.6</td>
+        </tr>
+        <tr>
+          <td>Safari 16 voor mobiel gebruik</td>
+        </tr>
+        <tr>
+          <td>Rand 128</td>
+        </tr>
+        <tr>
+          <td>Firefox 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform juli '25
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 16.x</td>
+        </tr>
+        <tr>
+          <td>Windows 10</td>
+        </tr>
+        <tr>
+          <td>Android 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -147,7 +148,6 @@ We gebruiken [YouTube](https://www.youtube.com) om video's in te sluiten in Code
 ### Can you play this video?
 
 Voordat je begint met de online cursussen van Code.org, moet je de weergave van de onderstaande video testen om er zeker van te zijn dat je klaar bent om te beginnen.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

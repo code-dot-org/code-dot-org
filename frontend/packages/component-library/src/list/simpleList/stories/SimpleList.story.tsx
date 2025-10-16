@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect} from 'storybook/test';
 
 import SimpleList, {SimpleListProps} from '..';
 
@@ -362,5 +362,20 @@ export const Weight: Story = {
         expect(listItemIcon).toHaveStyle(`font-weight: ${iconWeight};`);
       });
     });
+  },
+};
+
+export const WithMultilineItem: Story = {
+  args: {
+    style: {maxWidth: '20em'},
+    items: [
+      {key: 'item-a', label: 'Item A'},
+      {
+        key: 'item-b',
+        label:
+          'Extremely, exceptionally, extraordinarily, immensely prolonged Item B',
+      },
+      {key: 'item-c', label: 'Item C'},
+    ],
   },
 };

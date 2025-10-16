@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Task: Post an Introduction on the Teacher Forum
-## The Code.org Forum is a great place to learn more about our curricula and platform.  Start by introducing yourself to the community!
+#### The Code.org Forum is a great place to learn more about our curricula and platform.  Start by introducing yourself to the community!
 
 
 <div style="display: flex; align-items: left; margin:20px 0px 30px 0px">

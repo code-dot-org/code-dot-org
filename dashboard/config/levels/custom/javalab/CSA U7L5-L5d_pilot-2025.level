@@ -25,7 +25,7 @@
         "tabOrder": 0
       },
       "Ride.java": {
-        "text": "/*\n * Represents a Ride\n */\npublic class Ride {\n  public static final double FARE_PER_MILE = 2.0;         // $2 / mile\n  public static final double FARE_EXTRA_PASSENGER = 5.0;  // $5 for extra passenger\n  public static final double FARE_PEAK = 1.5;             // 1.5x for peak\n  private double distance;         // distance\n  private boolean peakHour;        // is it peak hour\n  private boolean extraPassenger;  // is there an extra passenger\n  \n  public Ride(double distance, boolean peakHour, boolean extraPassenger) {\n    this.distance = distance;\n    this.peakHour = peakHour;\n    this.extraPassenger = extraPassenger;\n  }\n\n  /* ----------------------------------- TO DO -----------------------------------\n   * ✅ Write the getFare() method to return the ride's fare. The method\n   * should call the private method calculateFare().\n   * -----------------------------------------------------------------------------\n   */\n\n  /*\n   * Returns the fare: distance * fare. If there is an extra passenger,\n   * add to fare. If it's peak hour, multiply fare.\n   */\n  private double calculateFare() {\n    double fare = FARE_PER_MILE * distance;\n    if (extraPassenger){\n      fare += FARE_EXTRA_PASSENGER;\n    }\n    if (peakHour) {\n      fare *= 1.5;\n    }\n    return fare;\n  }\n}\n",
+        "text": "/*\n * Represents a Ride\n */\npublic class Ride {\n  public static final double FARE_PER_MILE = 2.0;         // $2 / mile\n  public static final double FARE_EXTRA_PASSENGER = 5.0;  // $5 for extra passenger\n  public static final double FARE_PEAK = 1.5;             // 1.5x for peak\n  private double distance;         // distance\n  private boolean peakHour;        // is it peak hour\n  private boolean extraPassenger;  // is there an extra passenger\n  \n  public Ride(double distance, boolean peakHour, boolean extraPassenger) {\n    this.distance = distance;\n    this.peakHour = peakHour;\n    this.extraPassenger = extraPassenger;\n  }\n\n  /* ----------------------------------- TO DO -----------------------------------\n   * ✅ Write the getFare() method to return the ride's fare. The method\n   * should call the private method calculateFare().\n   * -----------------------------------------------------------------------------\n   */\n\n  /*\n   * Returns the fare: distance * fare. If there is an extra passenger,\n   * add to fare. If it's peak hour, multiply fare.\n   */\n  private double calculateFare() {\n    double fare = FARE_PER_MILE * distance;\n    if (extraPassenger){\n      fare += FARE_EXTRA_PASSENGER;\n    }\n    if (peakHour) {\n      fare *= FARE_PEAK;\n    }\n    return fare;\n  }\n}\n",
         "isVisible": true,
         "tabOrder": 1
       },
@@ -40,6 +40,6 @@
     "ai_tutor_available": true
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-02T21:41:09.705+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L5d_2025\\\"\"],\"cloned_from\":\"CSA U7L5-L5d_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-02T21:41:09.705+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L5d_2025\\\"\"],\"cloned_from\":\"CSA U7L5-L5d_2025\"},{\"changed_at\":\"2025-04-04 21:31:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -1,0 +1,2187 @@
+{
+  "script": {
+    "name": "digital-literacy-common-sense-media-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "AIF",
+      "has_verified_resources": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-21 19:26:22 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "digital-literacy-common-sense-media-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Who's Looking at Your Digital Footprint?"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "What You Send in \"That Moment When...\"",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**How can we act with empathy and positivity when we're online?**\n\nWe've all faced thorny situations where what we say or do could potentially harm or hurt someone. Being honest is important, but is there such a thing as being too honest? Sometimes, innocent -- but insensitive -- comments or actions can easily escalate to digital drama or even cyberbullying. Help students recognize and navigate these types of situations that happen online.",
+        "student_overview": "**How can we act with empathy and positivity when we're online?**\n\nWe've all faced thorny situations where what we say or do could potentially harm or hurt someone. Being honest is important, but is there such a thing as being too honest? Sometimes, innocent -- but insensitive -- comments or actions can easily escalate to digital drama or even cyberbullying. Help students recognize and navigate these types of situations that happen online."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Clicks for Cash",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**How does internet advertising contribute to the spread of disinformation?**\n\nWell-crafted headlines benefit everyone. They help readers digest information and publishers sell news stories. But what if the headline is misleading? What if it's crafted just to get clicks or even to spread disinformation? \"Clickbait\" headlines may benefit advertisers and publishers, but they don't benefit readers. Help students recognize and analyze clickbait when they see it.",
+        "student_overview": "**How does internet advertising contribute to the spread of disinformation?**\n\nWell-crafted headlines benefit everyone. They help readers digest information and publishers sell news stories. But what if the headline is misleading? What if it's crafted just to get clicks or even to spread disinformation? \"Clickbait\" headlines may benefit advertisers and publishers, but they don't benefit readers. Help students recognize and analyze clickbait when they see it."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Risk Check for New Tech",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**What privacy risks do new technologies present, and how do we decide if they're worth it?**\n\nNew tech, like location services and smart devices, helps make our lives easier and opens opportunities that didn't exist before. But these innovations also come with a cost -- especially to our privacy. Help students consider the benefits and drawbacks of these new technologies -- and decide whether they're ultimately worth it.",
+        "student_overview": "**What privacy risks do new technologies present, and how do we decide if they're worth it?**\n\nNew tech, like location services and smart devices, helps make our lives easier and opens opportunities that didn't exist before. But these innovations also come with a cost -- especially to our privacy. Help students consider the benefits and drawbacks of these new technologies -- and decide whether they're ultimately worth it."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Who's Looking at Your Digital Footprint?",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**How can information you post online affect your future opportunities?**\n\nOur digital footprints can have a powerful impact on our future. This can be a scary thought, given that what's in our digital footprint isn't always in our control. Teach students that digital footprints are an opportunity to showcase their best selves and craft a footprint that leads to future success.",
+        "preparation": "- Use the Resource Notes on the [r _key_future_tracks/idaho-digital-literacy/2025] to review the resources beforehand.",
+        "student_overview": "**How can information you post online affect your future opportunities?**\n\nOur digital footprints can have a powerful impact on our future. This can be a scary thought, given that what's in our digital footprint isn't always in our control. Teach students that digital footprints are an opportunity to showcase their best selves and craft a footprint that leads to future success."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "The Big Data Dilemma",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**What are the benefits and drawbacks of online tracking?**\n\nMany of us are aware that we're being tracked when we go online. It's one of the ways our favorite websites and apps know how to recommend content just for us. But how much information are companies actually collecting? And what are they doing with it? Digging into the details can help us make smart decisions about our online privacy and how to protect it.",
+        "preparation": "Use the Resource Notes on the [r _key_both_sides_of_the_track/idaho-digital-literacy/2025] to review the resources beforehand. ",
+        "student_overview": "**What are the benefits and drawbacks of online tracking?**\n\nMany of us are aware that we're being tracked when we go online. It's one of the ways our favorite websites and apps know how to recommend content just for us. But how much information are companies actually collecting? And what are they doing with it? Digging into the details can help us make smart decisions about our online privacy and how to protect it."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Hoaxes and Fakes",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**How can you avoid being fooled by fake videos and other information online?**\n\nWe know not to believe everything we hear, but what about what we see? Advancements in computer-generated graphics, facial recognition, and video production have led to a world of viral videos that are often difficult to identify as fake. Help your students learn to read what they see on the web \"laterally\" by showing them how to get off the page, check credibility, and find corroboration.",
+        "preparation": "\n- This lesson is an introduction to lateral reading for your students.  For more information on lateral reading, we recommend these resources:\n\n  - [Lateral Reading: Reading Less and Learning More When Evaluating Digital Information.](https://poseidon01.ssrn.com/delivery.php?ID=840017005024119072096097108124115069035015009020000075110100091096006021074122003010028032100126054048009107103117082077123080055044090011064099015014120122094073026090054017013011117012070109013001005086113001104120108105096077121107014010025085016104&EXT=pdf) Sam Wineberg & Sarah McGrew, Stanford History Education Group, Sept 2017\n\n  - [Want to Be a Better Online Sleuth? Learn to Read Webpages Like a Fact-Checker.](https://www.poynter.org/fact-checking/2017/want-to-be-a-better-online-sleuth-learn-to-read-webpages-like-a-fact-checker/) Daniel Funke, Poynter, 10/16/2017\n\n  - [Web Literacy for Fact-Checkers - Four Moves.](https://webliteracy.pressbooks.com/chapter/four-strategies/) Mike Caulfield (Washington State University), 2017\n\n- This lesson includes several YouTube videos. You will need to confirm that they are accessible for students and not blocked by your school or district's filter. If they are blocked, you may want to show them whole-class using a projector or look for alternate resources.",
+        "student_overview": "**How can you avoid being fooled by fake videos and other information online?**\n\nWe know not to believe everything we hear, but what about what we see? Advancements in computer-generated graphics, facial recognition, and video production have led to a world of viral videos that are often difficult to identify as fake. Help your students learn to read what they see on the web \"laterally\" by showing them how to get off the page, check credibility, and find corroboration."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "Lesson 11: Intellectual Property",
+      "name": "Intellectual Property",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students are asked to reflect on who owns their creative works from this class, such as their pixel images, before reading an article describing how ownership can become complicated as analog works become digital artifacts. After reading the article, students watch several videos explaining copyright and introducing them to the Creative Commons. Students then re-read the article answering three questions about the benefits, harms, and impacts of current copyright policy. Students use their new understanding of copyright to form an opinion about current copyright policies and create a small poster justifying their opinion with a quote from the article. This lesson is also a scaffold to the larger project that begins after this lesson which includes several tasks that are also a part of this lesson such as, annotating an article, answering questions, and forming an opinion using the article as evidence.",
+        "preparation": "\n* Print out [r article_-_fortnite_stealing_dance_moves/idaho-digital-literacy/2025] with highlighters ready to mark the text. If you are unable to print copies, see the Teaching Tip below.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1VqeD3PZyFnUXeUFjbY-z-fkz0XWmy5AqdXk-kRpgQzs/edit?usp=sharing)",
+        "student_overview": "Learn about how people can own digital information and the ways they can share access to their creative digital works.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "2e2a2562-2b37-4831-b22b-ed642e42972c",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2e2a2562-2b37-4831-b22b-ed642e42972c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "0a78921c-575e-4e24-94db-f466a38757b0",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a78921c-575e-4e24-94db-f466a38757b0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "1d0bf4b5-6acb-4941-a585-c3a4be1508ae",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d0bf4b5-6acb-4941-a585-c3a4be1508ae",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "d2192527-7dd4-48eb-b735-7cd3a5f6b0c1",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d2192527-7dd4-48eb-b735-7cd3a5f6b0c1",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "e733521e-6bc9-45a0-95b0-d8b53e838a99",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e733521e-6bc9-45a0-95b0-d8b53e838a99",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "e93b1aea-0e5f-42ed-b015-3216bf5c2f08",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e93b1aea-0e5f-42ed-b015-3216bf5c2f08",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "6fb29679-2efb-4c31-88ee-686fba636e2e",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6fb29679-2efb-4c31-88ee-686fba636e2e",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "e4a49ab5-e718-4119-aa07-e9da0bbb9a63",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e4a49ab5-e718-4119-aa07-e9da0bbb9a63",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "e8beaf94-d8aa-43e1-9a8d-301c759fb130",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8beaf94-d8aa-43e1-9a8d-301c759fb130",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "9de97bb6-b993-467d-aa2d-338dee18d202",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9de97bb6-b993-467d-aa2d-338dee18d202",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "57e53c71-a034-49d8-922a-95d99bbd58c1",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "57e53c71-a034-49d8-922a-95d99bbd58c1",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "e5748ae9-c3ed-47ec-8554-d5457f7f0271",
+      "position": 3,
+      "properties": {
+        "duration": 20,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e5748ae9-c3ed-47ec-8554-d5457f7f0271",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "7f42fece-35e5-4641-a832-d7e7ae39155d",
+      "position": 1,
+      "properties": {
+        "duration": 20,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f42fece-35e5-4641-a832-d7e7ae39155d",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "709c858a-0d54-4c57-bfa6-b7b4adf44f6c",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "709c858a-0d54-4c57-bfa6-b7b4adf44f6c",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "62a5a62d-23cd-4aba-a3dd-4fcac8a7d604",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "62a5a62d-23cd-4aba-a3dd-4fcac8a7d604",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "8eff3f9b-ad1b-4105-9143-e8221d62257e",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8eff3f9b-ad1b-4105-9143-e8221d62257e",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "b083a5bb-0bab-408b-b242-188b5406ab97",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b083a5bb-0bab-408b-b242-188b5406ab97",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "f7109f41-0811-42fd-b00e-d4c3e8ab1bcf",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7109f41-0811-42fd-b00e-d4c3e8ab1bcf",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "80adffa1-e6b4-45c8-90ba-2c1a41717b0f",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80adffa1-e6b4-45c8-90ba-2c1a41717b0f",
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9",
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    },
+    {
+      "key": "1bcbceda-7934-4923-bf89-abc892178235",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1bcbceda-7934-4923-bf89-abc892178235",
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "3ef3b8a9-5a05-4ecf-83a1-5fff442456df",
+      "position": 1,
+      "properties": {
+        "description": "1. Say: Imagine a good friend of yours posts a selfie on social media, and he's got a brand-new look that you're just not loving. How do you respond? Would you \"like\" the post anyway? Would you ignore it? Would you make fun of him?\n\n   Invite students to respond and explain what they would do and why. For those who say they'd ignore it, follow up by asking: What if he asked you your opinion directly? How honest would you be?\n\n2. Explain that this is an example of a digital dilemma, which is a situation in digital life where it's not always clear what's best to do. (Slide 4) Sometimes, these situations have the potential to cause someone's feelings to be hurt. This type of situation is not uncommon online. And it can be tough to know what to do. How you respond can affect both someone else's feelings and what people think about you. \n\n3. Tell students they are going to watch a short video that shows an example of a digital dilemma. Show the video \"The Accidental Bully - a public service announcement about cyber bullying\" and have students consider the discussion question \"What makes this a digital dilemma?\" as they watch. (Slide 5)\n\n4. Invite students to share out their responses to the question.\n\n   Explain that it was a dilemma because even though Vicky may not have intended to hurt Jacob when she shared his note with a friend, she (and others) caused him a lot of embarrassment and pain, enough that he transferred schools.",
+        "name": "What We Intend"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ef3b8a9-5a05-4ecf-83a1-5fff442456df",
+        "lesson_activity.key": "2e2a2562-2b37-4831-b22b-ed642e42972c"
+      }
+    },
+    {
+      "key": "cb287a07-3615-402b-ad61-2055c5244ee8",
+      "position": 1,
+      "properties": {
+        "description": "1. Say: The things you do or say online can have unintended consequences. Comments and posts can hurt people's feelings, and things can escalate quickly.\n\n2. Project Slide 6 and explain that when you encounter a digital dilemma, you can use the Feelings & Options steps to navigate the situation. This helps you think about what you can say or do to prevent the situation from escalating. Have students read aloud the questions associated with each step.\n\n3. Distribute the [r embarrassing_story/idaho-digital-literacy/2025] handout. Tell students they're going to use the Feelings & Options steps to explore how to handle a digital dilemma. \n\n   Feelings & Options is a thinking routine that supports social skills and thoughtful decision-making for digital dilemmas. [**Learn more**](https://www.commonsense.org/education/digital-citizenship/digital-dilemmas) about teaching with digital dilemmas and thinking routines. \n\n   Have students complete the worksheet in pairs.\n\n4. Arrange students into groups of four (each pair partners with another pair), and have them share their responses. Then invite each group to summarize their responses to the Feelings & Options steps. \n\n   Use the [r _key_embarrassing_story/idaho-digital-literacy/2025] for guidance.\n\n5. Direct students to Part 2 of the [r embarrassing_story/idaho-digital-literacy/2025] handout and ask them to discuss the \"Complicate\" questions in groups. Have groups share how the additional context might (or might not) change their perspective.",
+        "name": "Feelings & Options"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb287a07-3615-402b-ad61-2055c5244ee8",
+        "lesson_activity.key": "0a78921c-575e-4e24-94db-f466a38757b0"
+      }
+    },
+    {
+      "key": "50fedafb-92ca-4dab-a86c-499faf1651cc",
+      "position": 1,
+      "properties": {
+        "description": "1. Say: Sometimes situations can be more complicated than they first seem. When dealing with digital dilemmas, it is important to keep in mind any additional context and how that might change the right course of action.\n\n2. Invite students to give a thumbs up, thumbs down, or thumbs sideways to the following statements:\n\n   * My perspective changed after hearing someone else's view.\n   * Since dilemmas don't have a right or wrong answer, it's important to listen to all sides of the issue. \n   * I learned strategies that will help me when I encounter a digital dilemma.\n\n3. Assign the [r lesson_quiz/idaho-digital-literacy/2025]. ",
+        "name": "Dealing with Dilemmas"
+      },
+      "seeding_key": {
+        "activity_section.key": "50fedafb-92ca-4dab-a86c-499faf1651cc",
+        "lesson_activity.key": "1d0bf4b5-6acb-4941-a585-c3a4be1508ae"
+      }
+    },
+    {
+      "key": "72da1ffc-6a35-437d-905e-1d4b9955c909",
+      "position": 1,
+      "properties": {
+        "description": "1.\nProject three images of advertisements and ask: What do these images have in common? (Slide 4)\n\nInvite students to share out. Explain that they all show examples of advertisements.\n\n2.\nAsk: What is an advertisement? Who usually makes them?\n\nInvite students to respond. Clarify that an advertisement is a message that promotes a product, service, opportunity, or event using television, the internet, billboards, or other public spaces. Advertisements are usually created by paid advertisers, which are people or companies who are hired to create advertisements for companies that want to promote their products or services to increase their sales. (Slide 5) \n\nExplain that advertisers also have to pay to put their ads in places where people will see them. The price depends on how many people will end up seeing the ad. Ad space in a newspaper, with small circulation, can be cheap. But television ad space during the Super Bowl, when millions of people are watching, can be really, really expensive (CBS charged $5.25 million for just one 30-second spot in 2019!).\n\n3.\nSay: One place that ads have become really common is the internet. Where do you typically see ads on the internet?\n\nInvite students to respond. They may identify pop-ups, emails, the space next to articles on websites, and their social media feed. Explain that whenever you see an ad on a website, the publisher of that website has been paid by the advertiser to place it there. The publisher is the person or company that created the website and controls its content. (Slide 6).\n\n4.\nAsk: How do you think publishers set the price for ad space? If it's usually based on how many people will see the ad, how do they figure that out?\n\nInvite students to share their ideas. Explain that there are two common ways that it is calculated:\n\nClicks: The advertiser pays every time someone clicks the ad.\nImpressions: The advertiser pays every time someone sees the ad (i.e., views the page with the ad).\n5.\nReview the process from when companies hire an advertiser to when a publisher gets paid based on clicks or impressions. (Slide 7) \n\nSay: In today's lesson, we're going to talk about one of these ways that publishers get paid: clicks. This is a common way for publishers to make money, but it has led to all kinds of consequences, both intended and not.",
+        "name": "Consider: Clicks For Cash"
+      },
+      "seeding_key": {
+        "activity_section.key": "72da1ffc-6a35-437d-905e-1d4b9955c909",
+        "lesson_activity.key": "d2192527-7dd4-48eb-b735-7cd3a5f6b0c1"
+      }
+    },
+    {
+      "key": "6b205a50-e4a6-414d-a280-4150983718b7",
+      "position": 1,
+      "properties": {
+        "description": "Explain that some websites and news pages publish clickbait  to generate money. Define clickbait as an image or headline that tries to get you to click on it, usually for advertising purposes. (Slide 8) When you follow a link that is clickbait, you might be taken to another site where you will be shown even more ads.\n\nIf the clickbait is really compelling, you might even share it on social media or with other people, which will get more people to come to the site. This makes money for the publishers, but it can also create big problems when it comes to news and information.\n\n2.\nShow the video How Do Fake News Sites Make Money? by  BBC News (Slide 9). \n\nAsk: According to the video, how do fake news sites make money?  Sample responses:\n\nFake news outlets rely on the ability to attract visitors. They charge other sites, companies, or products who want to advertise on their site. \nThey publish a story with false content and a catchy or interesting headline. They post the story on social media or other websites to bring people to their site.  \nEvery time a visitor clicks on an ad on their site, fake news websites make money. More clicks equal more profit for the advertiser and the publisher.\n3.\nTell students that fake news websites can help spread disinformation, which is false or inaccurate information intended to deceive. (Slide 10) \n\nAsk: Why do you think the spread of disinformation might be a problem?\n\nInvite students to respond. Clarify that disinformation can have several negative effects:\n\nIt can lead people to make uninformed decisions (political elections, health decisions, etc.).\nIt can lead to more disagreement and divisiveness between people.\nIt can lead to injustices if it prevents people from holding the government or other institutions accountable for their actions.",
+        "duration": "10",
+        "name": "All About The Money?"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b205a50-e4a6-414d-a280-4150983718b7",
+        "lesson_activity.key": "e733521e-6bc9-45a0-95b0-d8b53e838a99"
+      }
+    },
+    {
+      "key": "f42ea202-dd5f-4546-b3ca-a6174e2ff4d2",
+      "position": 2,
+      "properties": {
+        "description": "1.\nDistribute the [r whose_fake_news/idaho-digital-literacy/2025] Student Handout.\n\nInvite a student to read aloud the dilemma in Part 1.\n\n2.\nExplain that in Part 2, the class will be using the steps of Take a Stand to consider the question at the end of the dilemma.\n\nTake a Stand is a thinking routine for exploring perspectives on dilemmas about community and civic life. Learn more about teaching with digital dilemmas and thinking routines. \n\n3.\nShow the steps of Take a Stand (Slide 11) and facilitate the class discussion and activity. Have students follow along and take notes on their handout.\n\nNote: Use the [r _key_whose_fake_news/idaho-digital-literacy/2025] for guidance and suggestions for an enriching discussion. (This activity will take the majority of time in this step!)\n\n4.\nAfter students have completed the four steps, say: The aim of this activity was not to lead us to a \"right\" answer. Rather, the goal was to slow our reactions down, take time to listen to different perspectives, and be reflective about our stance on this dilemma.\n\nExplain that listening to others' perspectives can also help us discover shared beliefs or values, even when we disagree on how to resolve specific issues (if possible, give an example that surfaced during the discussion -- e.g., two students who had different stances but were both thinking about people's rights). Understanding how and why we don't see eye to eye can support greater mutual understanding and more productive dialogue about how to resolve issues in our society and world. \n\n5.\nOptional: If time permits, have students discuss one or more of the questions in Part 3 of the handout.",
+        "duration": "20",
+        "name": "Whose Fake News"
+      },
+      "seeding_key": {
+        "activity_section.key": "f42ea202-dd5f-4546-b3ca-a6174e2ff4d2",
+        "lesson_activity.key": "e733521e-6bc9-45a0-95b0-d8b53e838a99"
+      }
+    },
+    {
+      "key": "211bc968-e855-410d-acdf-dee507e78801",
+      "position": 1,
+      "properties": {
+        "description": "1.\nSay: Based on the conversation we had today about online advertisements and fake news websites, who do you think should be responsible for preventing the spread of disinformation?\n\n2.\nInvite students to share their thoughts. Highlight how their answers show a wide range of perspectives and opinions.\n\n3.\nHave students complete the [r lesson_quiz_-_clicks_for_cash/idaho-digital-literacy/2025]",
+        "name": "Disinformation Infestation"
+      },
+      "seeding_key": {
+        "activity_section.key": "211bc968-e855-410d-acdf-dee507e78801",
+        "lesson_activity.key": "e93b1aea-0e5f-42ed-b015-3216bf5c2f08"
+      }
+    },
+    {
+      "key": "2cfe9592-19e2-4b41-a57e-9b607f4e6f8b",
+      "position": 1,
+      "properties": {
+        "description": "1.\nAsk: How many of you have or know of someone who has a device that you can unlock with your face? What type of device is it? \n\nInvite students to respond and share out examples (e.g., phone, tablet).\n\n2.\nExplain that these devices use facial recognition technology. Define facial recognition as a type of AI technology that can use a digital image of a face to identify a person. (Slide 4)\n\n3.\nSay: We are going to watch a video that talks about the benefits and risks of facial recognition technology. As you watch, capture notes on any key points that stand out or any questions that come up.\n\nShow **Is Facial Recognition Invading Your Privacy?**, an Above the Noise video by KQED Education. (Slide 5)\n\n4.\nInvite students to share out. Capture the benefits and risks that students identify about facial recognition technology (Slide 6):\n\nBenefits\n- You can use it for fun things like Snapchat or Instagram filters.\n- It makes unlocking your phone more convenient.\n- It could be a useful tool to help protect people.\n\nRisks\n- It could be used against people who disagree with the government.\n- Companies can use it for targeted advertising. \n- A company or the government could use it to follow you anywhere you go.",
+        "name": "Consider: Facial Recognition"
+      },
+      "seeding_key": {
+        "activity_section.key": "2cfe9592-19e2-4b41-a57e-9b607f4e6f8b",
+        "lesson_activity.key": "6fb29679-2efb-4c31-88ee-686fba636e2e"
+      }
+    },
+    {
+      "key": "3b2d65c5-558d-4c71-b2c4-8973534937b3",
+      "position": 1,
+      "properties": {
+        "description": "1.\nSay: Balancing the benefits and potential risks of new technologies like facial recognition can be tricky. Whether a technology is useful or risky depends on the context: who is using it, how it is being used, why it is being used, and how privacy is affected for people involved.\n\n2.\nDistribute the [r lunch_lines_dilemma/idaho-digital-literacy/2025] Student Handout. \n\nExplain to students that they will be using the steps of Take a Stand to consider whether the benefits of new technologies outweigh their potential privacy risks.\n\nTake a Stand is a thinking routine for exploring perspectives on dilemmas about community and civic life. Learn more about teaching with digital dilemmas and thinking routines. \n\n3.\nInvite a student to read the dilemma in Part 1 of the handout. Then show the steps of Take a Stand (Slide 7) and facilitate a class discussion following the steps in Part 2. Have students follow along and take notes on their handout.\n\nNote: Use the [r _key_lunch_lines_dilemma/idaho-digital-literacy/2025] for guidance and suggestions for an enriching discussion. (This activity will take the majority of time in this step!)\n\n4.\nAfter leading students through Part 2, say: The aim of this activity was not to lead us to a \"right\" answer. Rather, the goal was to slow our reactions down, take time to listen to different perspectives, and be reflective about our stances on this dilemma. \n\nExplain that listening to others' perspectives can also help us discover shared beliefs or values, even when we disagree on how to resolve specific issues (if possible, give an example that surfaced during the discussion -- e.g., two students who had different stances but were both thinking about their privacy rights). Understanding how and why we don't see eye to eye can support greater mutual understanding and more productive dialogue about how to resolve issues in our society and world. ",
+        "name": "Take A Stand"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b2d65c5-558d-4c71-b2c4-8973534937b3",
+        "lesson_activity.key": "e4a49ab5-e718-4119-aa07-e9da0bbb9a63"
+      }
+    },
+    {
+      "key": "a37999e3-c3a5-4f11-9217-925f404b0869",
+      "position": 1,
+      "properties": {
+        "description": "\n15 mins.\n1.\nArrange students in groups of four and have them discuss one of the questions in Part 3 of the handout. You can either assign a question to each group or have them choose.\n\nIf time permits, call on groups to share if and how the question they discussed impacted whether they would or wouldn't recommend using the particular technology. Emphasize that whether a technology is useful or risky depends a lot on the context, the benefits, and peoples' comfortability with the potential privacy risks.\n\n2.\nDirect students to Part 4 of the Student Handout and allow students two or three minutes to respond.\n\n3.\nHave students complete the [r lesson_quiz_-_risk_check_for_new_tech/idaho-digital-literacy/2025]. ",
+        "name": "Your Privacy Line"
+      },
+      "seeding_key": {
+        "activity_section.key": "a37999e3-c3a5-4f11-9217-925f404b0869",
+        "lesson_activity.key": "e8beaf94-d8aa-43e1-9a8d-301c759fb130"
+      }
+    },
+    {
+      "key": "f680b8d9-3dce-4993-9270-d86993256a9c",
+      "position": 1,
+      "properties": {
+        "description": "\nBefore the lesson: This lesson involves students choosing from a list of online resources, which they will use to explore and analyze the lesson topic. Use the Resource Notes on the [r _key_future_tracks/idaho-digital-literacy/2025] to review the resources beforehand. You may want to suggest particular resources over others for particular students, or watch a resource together as a class. You will also need to confirm that all resources are accessible and not blocked by your school or district's filter.\n\n1.\nAsk: Have you ever Googled yourself? What type of information comes up?\n\nHave students who have done it share out what they found. Explain that this is all part of their digital footprint, which is all the information online about a person either posted by that person or others, intentionally or unintentionally. (Slide 4) \n\n2.\nExplain some of the key aspects of a digital footprint:\n\nIt's growing. Your footprint expands as your information is copied and passed on, making it more searchable and viewable to a large invisible audience.\nIt's not just up to you. When other people -- like your friends, companies, or groups you belong to -- track, post, or share information about you, it becomes part of your footprint.\nIt's permanent. Because it is archived in a variety of ways and passed on by others, it doesn't ever go away. (Slide 5)\n3.\nExplain that it also can have an impact on your real life. Show the video \"Harvard withdraws acceptances over social media messages\" and have students consider the below discussion questions as they watch. (Slide 6) \n\nWhy did Harvard rescind the students' admission? What was their reasoning?\nDo you agree with their decision? Why or why not?\nExplain that rescinded means taken away or canceled. (Slide 7)\n\n4.\nInvite students to share out their responses. The students' admission was rescinded because they made offensive posts on social media, and Harvard decided they didn't meet the moral character requirements to be allowed in. Students may argue in support of the decision (hate speech shouldn't be tolerated) or against it (it's a violation of freedom of speech).\n\n5.\nRefer back to the comments that the newscasters make at the end of the video and explain that although there may be arguments for and against Harvard's decision, Harvard is a private institution and has the right to allow or not allow students in based on their digital footprint. The same is true for many employers who are private companies or organizations, and who have the right to make hiring and firing decisions based on someone's online activity.",
+        "name": "Admission Rescinded"
+      },
+      "seeding_key": {
+        "activity_section.key": "f680b8d9-3dce-4993-9270-d86993256a9c",
+        "lesson_activity.key": "9de97bb6-b993-467d-aa2d-338dee18d202"
+      }
+    },
+    {
+      "key": "bffa77dd-c726-4264-9802-67a48d000ecc",
+      "position": 1,
+      "properties": {
+        "description": "1.\nExplain that although you just looked at a very public example of how your digital footprint can work against you, it can also work for you, and can help you get admitted to a school or hired by an employer. Although not everything in our footprint is under our control, there are steps you can take to make your footprint a help rather than a hindrance.\n\n2.\nDistribute the [r future_tracks/idaho-digital-literacy/2025] Student Handout and read the directions aloud. (Slide 8) Explain that Resources 2 and 3 address a common strategy for creating a positive footprint, called personal branding, which is the practice of marketing yourself to the public using social media, a personal website, advertisements, or other non-digital tools. (Slide 9) This is also often described as being a social media \"influencer.\" The resources show both the benefits and drawbacks to this particular approach.\n\n3.\nAllow students 15 minutes to work in groups to complete the activity.\n\n4.\nInvite groups to share out their notes, and capture new ideas. Use the [r _key_future_tracks/idaho-digital-literacy/2025] to help guide discussion. (Slide 10) Highlight any specific takeaways that you want students to capture, and allow them a couple of minutes to add to their notes.",
+        "name": "Positive and Negative Footprints"
+      },
+      "seeding_key": {
+        "activity_section.key": "bffa77dd-c726-4264-9802-67a48d000ecc",
+        "lesson_activity.key": "57e53c71-a034-49d8-922a-95d99bbd58c1"
+      }
+    },
+    {
+      "key": "a3b75750-fb26-4e54-9e32-da59872127f1",
+      "position": 1,
+      "properties": {
+        "description": "1.\nPoint students to Part 2 of the Future Tracks Student Handout and read the directions to Step 1 aloud. (Slide 11) Read the vignette aloud or have students read it independently.\n\n2.\nInvite students to share out their ideas about how the vignette shows someone's digital footprint impacting future opportunities.\n\n3.\nPoint students to Step 2 on the [r future_tracks/idaho-digital-literacy/2025] Student Handout and read the directions aloud. (Slide 12) Allow students the remaining time to brainstorm and begin writing their vignettes. If students need more time, consider allowing them to finish the vignette for homework or in a future class period. \n\nOnce all students have finished, have students share their vignettes digitally or in pairs or small groups.\n\n4.\nHave students complete the [r lesson_quiz_-_who_s_looking_at_your_digital_footprint_/idaho-digital-literacy/2025]. ",
+        "name": "Footprint Snapshot"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3b75750-fb26-4e54-9e32-da59872127f1",
+        "lesson_activity.key": "e5748ae9-c3ed-47ec-8554-d5457f7f0271"
+      }
+    },
+    {
+      "key": "5295d75c-d72b-4f91-8caf-81a136c5de66",
+      "position": 1,
+      "properties": {
+        "description": "Before the lesson: This lesson involves students choosing from a list of online resources, which they will use to explore and analyze the lesson topic. Use the Resource Notes on the [r _key_both_sides_of_the_track/idaho-digital-literacy/2025]\n to review the resources beforehand. You may want to suggest particular resources over others for particular students, or you may want to watch a resource together as a class. You will also need to confirm that all resources are accessible and not blocked by your school or district's filter.\n\n1.\nAsk: What kinds of information about yourself do you share online?\n\nInvite students to respond. Possible student responses:\n\nName and other personal information (when they sign up for apps or websites)\nLikes and dislikes, images of themselves, and other information (when they post on social media)\n2.\nAsk: Who do you share this information with? Who sees it?\n\nStudents may say their friends and families, or anyone who sees their posts. Follow up by asking: What about the people and companies that own the apps or websites you post on?\n\nInvite students to respond. Explain that companies collect the information they share, and also much more. Companies like Facebook, Snapchat, Google, and others also track and collect location, browsing habits, searches, purchases, and so on.\n\n3.\nExplain that when companies do this, it is called online tracking, which means apps, websites, or third parties collecting information about your online activity (other sites you visit, links you click, how long you stay, etc.). (Slide 4) A third party is a company other than the company that owns the website or app you are using. (Slide 5)\n\nTell students they are going to watch a video that shows how this works. As they watch, they should listen for all the examples of online tracking. Show the video \"Hot on Your Trail.\" (Slide 6) Note that students may feel overwhelmed by the number of ways that companies and the government are tracking them. It may be helpful to explain that some of the examples in the video are exaggerated. They show what could possibly be tracked, rather than what actually is being tracked.\n\n4.\nInvite students to share out the examples. There are many examples in the video, but key ones to note include:\n\nLiz uses Google and Gmail, which means Google can track her email activity, IP address, contact list, searches, where she goes when she uses Google Maps, and much more.\nLiz's service providers (internet, cell phone, etc.) also track her behavior and sell it to advertisers (sites she visits, places she goes, etc.).\nAdvertisers target her with advertisements based on data they've received from Google, her service providers, and many other sites that she's visited, especially her social media, which tracks and sells her likes, her posts, and who she interacts with. This is called targeted advertising. (Slide 7) \nOne way that sites track you is using cookies, which are small text files stored on a computer that keep track of what a person does on a website. (Slide 8)\nSome places also use cameras and facial recognition technology to track her when she visits.\n5.\nSay: So one way that companies use your data is to target you with advertising. What are some other ways that companies might use the data that they collect about you?\n\nInvite students to respond. Explain that companies also use the data they collect to provide you with personalized content, which is online information that has been tailored to you by websites and apps based on data that has been collected about you. (Slide 9) For example, Netflix recommends movies and shows for you to watch based on what you've previously watched and what you've \"liked.\" Spotify does something similar with music.\n\n6.\nAsk: What do you think of tracking and targeting? Do you think it is OK for companies to collect information about you?\n\nOpinions will vary. Explain that they will explore some additional resources on this topic and take a position on it.",
+        "name": "The Dataset"
+      },
+      "seeding_key": {
+        "activity_section.key": "5295d75c-d72b-4f91-8caf-81a136c5de66",
+        "lesson_activity.key": "7f42fece-35e5-4641-a832-d7e7ae39155d"
+      }
+    },
+    {
+      "key": "7622fc8e-973b-4ee2-afde-375597f1d2c4",
+      "position": 1,
+      "properties": {
+        "description": "1.\nDistribute the [r both_sides_of_the_track/idaho-digital-literacy/2025] Student Handout and have students read the directions silently. (Slide 10)\n\n2.\nExplain that these resources cover the benefits and drawbacks of online tracking for companies, as well as for the people who use their sites and apps.  For example, a company like Amazon might track user behavior on its site, so that it can advertise products that people are more likely to be interested in. Depending on how you feel about targeted advertising, you might see this as either a benefit or a drawback. Depending on how you react, it might end up being a benefit or drawback to Amazon.\n\n3.\nAllow students 15 minutes to work in pairs or small groups to review two of the resources and complete the notes tracker.\n\n4.\nInvite students to share out what they identified as the best way forward and why. (Slide 11) Use the [r _key_both_sides_of_the_track/idaho-digital-literacy/2025] to help guide discussion. Highlight any specific takeaways that you want students to capture and allow them a couple of minutes to add to their notes.",
+        "name": "Tracking Benefits and Drawbacks"
+      },
+      "seeding_key": {
+        "activity_section.key": "7622fc8e-973b-4ee2-afde-375597f1d2c4",
+        "lesson_activity.key": "709c858a-0d54-4c57-bfa6-b7b4adf44f6c"
+      }
+    },
+    {
+      "key": "10009e1e-82fe-415f-a062-56ba9ad87ea6",
+      "position": 1,
+      "properties": {
+        "description": "1.\nPoint students to Part 2 of the [r both_sides_of_the_track/idaho-digital-literacy/2025]  Student Handout. Have students work independently or collaboratively to complete the two examples.\n\n2.\nHave students share out their examples in groups or as a class.\n\n3.\nHave students complete the [r lesson_quiz_-_the_big_data_dilemma/idaho-digital-literacy/2025]. ",
+        "name": "For or Against?"
+      },
+      "seeding_key": {
+        "activity_section.key": "10009e1e-82fe-415f-a062-56ba9ad87ea6",
+        "lesson_activity.key": "62a5a62d-23cd-4aba-a3dd-4fcac8a7d604"
+      }
+    },
+    {
+      "key": "c1cd08ff-8264-4410-9dca-9f672ac5be4f",
+      "position": 1,
+      "properties": {
+        "description": "\n**Note to teachers:** This lesson is an introduction to lateral reading for your students.  For more information on lateral reading, we recommend these resources:\n\n- [Lateral Reading: Reading Less and Learning More When Evaluating Digital Information.](https://poseidon01.ssrn.com/delivery.php?ID=840017005024119072096097108124115069035015009020000075110100091096006021074122003010028032100126054048009107103117082077123080055044090011064099015014120122094073026090054017013011117012070109013001005086113001104120108105096077121107014010025085016104&EXT=pdf) Sam Wineberg & Sarah McGrew, Stanford History Education Group, Sept 2017\n\n- [Want to Be a Better Online Sleuth? Learn to Read Webpages Like a Fact-Checker.](https://www.poynter.org/fact-checking/2017/want-to-be-a-better-online-sleuth-learn-to-read-webpages-like-a-fact-checker/) Daniel Funke, Poynter, 10/16/2017\n\n- [Web Literacy for Fact-Checkers - Four Moves.](https://webliteracy.pressbooks.com/chapter/four-strategies/) Mike Caulfield (Washington State University), 2017\n\nBefore the lesson: This lesson includes several YouTube videos. You will need to confirm that they are accessible for students and not blocked by your school or district's filter. If they are blocked, you may want to show them whole-class using a projector or look for alternate resources."
+      },
+      "seeding_key": {
+        "activity_section.key": "c1cd08ff-8264-4410-9dca-9f672ac5be4f",
+        "lesson_activity.key": "8eff3f9b-ad1b-4105-9143-e8221d62257e"
+      }
+    },
+    {
+      "key": "f6c05f36-e8f2-4620-a222-0436e59cfb85",
+      "position": 2,
+      "properties": {
+        "description": "1.\nAsk: I don't usually do this in class, but did you ever see the amazing story of the pig who saved a baby goat from drowning? \n\nSee if students are familiar with this story. (If they are and know the backstory, play it off as if the video is real!) \n\n2.\nShow the video \"Pig Rescues Baby Goat\" (30 sec.). (Slide 4) \n\nAsk: Wow, that is amazing, right? How does this story make you feel? \n\nStudents might say happy, warm and fuzzy, amazed, etc. \n\n3.\nTell students: Next, I want to show you how that amazing story was captured on video! Let's take a look. \n\nShow the video \"Nathan For You - Petting Zoo Hero\" (2:00). (Slide 5) You might see some students reacting to the fact that the first video is fake. \n\nAsk: How do you feel now knowing this video is fake? \n\nStudents may say they feel embarrassed or deceived. \n\n4.\nSay: As you can see, the comedian Nathan Fielder shows how easy it is to make a fake video that could potentially go viral. This video is an example of disinformation, which is \"false information that is spread, with intent to deceive\". (Slide 6)\n\nExplain to learners that misinformation is false information that is spread, regardless of intent to mislead. (Slide 6)\n\nSo for example, if you shared this video or other information that is false, even if you don't intend to deceive anyone, you are sharing misinformation. Social media and the internet make it easy to share disinformation and misinformation.\n\nSay: Though the video we watched is an example of disinformation, it is just meant to be funny and to make people laugh. However, what if it was something more serious, like a fake news story or false information about an important event, like a natural disaster or a pandemic? What ramifications might that have?\n\nInvite learners to share their responses. \n\nExplain that disinformation and misinformation can have big consequences. It can:\n\n- increase tension and anger between groups of people.\n- damage individuals' or groups' reputations.\n- affect the outcomes of elections.",
+        "name": "Pig Rescues Baby Goat!"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6c05f36-e8f2-4620-a222-0436e59cfb85",
+        "lesson_activity.key": "8eff3f9b-ad1b-4105-9143-e8221d62257e"
+      }
+    },
+    {
+      "key": "2dca1ce8-1f9e-4429-bb92-4e64d8cc4c54",
+      "position": 1,
+      "properties": {
+        "description": "1.\nSay: There's so much information out there, and we're consuming it so fast. It's easy to get duped. Today we're going to practice a strategy that will help you tell misinformation from credible information, whether it's fake videos or other questionable information you encounter. \n\nDivide students in pairs or in groups of three to five. Distribute the [r reading_laterally_for_accuracy/idaho-digital-literacy/2025] Student Handout and have students read the directions for Part 1. (Slide 7)\n\n2.\nAllow students 15 minutes to watch the excerpt of [\"Crash Course: Check Yourself with Lateral Reading\"](https://www.youtube.com/watch?v=GoQG6Tin-1E&feature=youtu.be) (1:15-9:15) and answer the video questions.\n\n3.\nInvite groups to share out the key takeaways with the class. (Slide 8) If time allows, have students share out answers to each of the video questions. Use the [r _key_reading_laterally_for_accuracy/idaho-digital-literacy/2025] to help guide discussion. Define lateral reading as a method of determining online credibility of a source in which you open multiple tabs to search for other information to validate the site's claims. (Slide 9)\n\nHighlight any other specific takeaways that you want students to capture and allow them a couple of minutes to add to their notes. Consider mentioning one idea not included in the excerpt: that Green recommends Wikipedia as a useful resource as a jumping-off point (10:22). (For more on using Wikipedia, see [John Green's other CrashCourse video](https://www.youtube.com/watch?time_continue=1&v=ih4dY9i9JKE).) ",
+        "name": "From Vertical to Lateral Reading"
+      },
+      "seeding_key": {
+        "activity_section.key": "2dca1ce8-1f9e-4429-bb92-4e64d8cc4c54",
+        "lesson_activity.key": "b083a5bb-0bab-408b-b242-188b5406ab97"
+      }
+    },
+    {
+      "key": "273ee072-ccbf-4746-b52b-5ee066248a84",
+      "position": 1,
+      "properties": {
+        "description": "\n15 mins.\n1.\nHave students read the directions for Part 2, \"Hoax or Real?\" in the [r reading_laterally_for_accuracy/idaho-digital-literacy/2025] Student Handout. (Slide 10) Define corroboration as additional source(s) that confirm or support the claims of a news story, article, or piece of information. (Slide 11)\n\n2.\nAllow students 10 minutes to complete the activity individually or with others.\n\n3.\nHave students share out their answers in groups or as a class.  Encourage them to refer to the evidence they found that either validated or debunked. Bonus questions to ask:\n\nWho created the video?  \nWhy was the video created? \n4.\nHave students complete the [r lesson_quiz_-_hoaxes_and_fakes/idaho-digital-literacy/2025]. ",
+        "name": "Hoax or Real?"
+      },
+      "seeding_key": {
+        "activity_section.key": "273ee072-ccbf-4746-b52b-5ee066248a84",
+        "lesson_activity.key": "f7109f41-0811-42fd-b00e-d4c3e8ab1bcf"
+      }
+    },
+    {
+      "key": "2e114733-c02a-4943-8e23-1b657a914797",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each. How would you feel in this situation?*\n\n**Discussion Goal:** This discussion doesn’t need to come to a definite conclusion - it should generate more questions than answers. You can complicate this discussion by asking: \n\n* What if the owner gives you credit for the drawing on the T-shirt - does that make it more or less okay? \n* If we use the pixelation widget, then our image is just a binary number that’s been transformed into an image - can we really ‘own’ a number?\n* What if, instead of this happening a week later, it happened 20 years later. Does that change anything?"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e114733-c02a-4943-8e23-1b657a914797",
+        "lesson_activity.key": "80adffa1-e6b4-45c8-90ba-2c1a41717b0f"
+      }
+    },
+    {
+      "key": "b3b7979b-1b98-4aee-bb2a-686507b78b73",
+      "position": 2,
+      "properties": {
+        "description": "When you create materials on the computer, you own them - they are your \"Intellectual Property\". Using materials created by someone else and trying to pass them off as your own is plagiarism when you don't have the creator's permissions. There may even be legal consequences for using these materials! \r\n\r\nHowever, we can see from our discussion that it can be complicated when we talk about ownership of digital information. Today we are going to explore these issues.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b3b7979b-1b98-4aee-bb2a-686507b78b73",
+        "lesson_activity.key": "80adffa1-e6b4-45c8-90ba-2c1a41717b0f"
+      }
+    },
+    {
+      "key": "a68cc7e3-6b6d-46f8-8930-833cc50dddf9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** \n[r article_-_fortnite_stealing_dance_moves/idaho-digital-literacy/2025]",
+        "duration": "10",
+        "name": "Activity Part 1: Read the Article",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**To Print or Not To Print?** This lesson is written assuming that you have printed out the article and have it physically available for students to write on, even though it is also possible to have students interact with this text digitally. If students read the article digitally, it is most important that they still follow the active reading strategies outlined in this lesson - highlighting the text, writing in the margins, and summarizing. This may require some additional time & instruction to teach students your preferred digital annotation tools and may require some additional adjustments to some of the later annotation strategies in this lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a68cc7e3-6b6d-46f8-8930-833cc50dddf9",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "8e3008d1-d294-46dd-b906-a566e255eaa1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Students read the article. After they are finished reading they should mark up the text with the following:\n\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In order to complete the following lesson and project independently, students may need support with the processes of \n* Annotating an article\n* Answering questions\n* Forming an opinion using the article as evidence \n\nIt is especially important that students use marking the text strategies to help them comprehend and synthesize the information from their article, because they will need to do this in the next lesson as well. \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8e3008d1-d294-46dd-b906-a566e255eaa1",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "63cb49e4-43ae-40b6-bf49-d7dd977f4272",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "63cb49e4-43ae-40b6-bf49-d7dd977f4272",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "1d6b5aa3-8f8e-400d-b2b7-8a75eda5d098",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** This article brings up issues around copyright. Based on what you’ve read and your own experiences, what questions do you have about copyright?"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d6b5aa3-8f8e-400d-b2b7-8a75eda5d098",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "30924af1-ced2-41ff-9adc-fda39e63c133",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Today’s central question: Are our current copyright policies helping society or hurting society?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may find that a topic about digital copyright is in the news when you are teaching this lesson.  It may be appropriate and relevant to use those news events in addition to, or instead of, the article in this lesson plan.  Any article you use should:\n\n* Discuss the complexities of owning and sharing digital information \n* Explore who benefits or is harmed by policies around copyright\n \nIf you find current news stories that also cover these points, you may want to consider using those articles here. This is also a good opportunity to visit the [forum](https://forum.code.org/c/csp) to share with other teachers the articles you found.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "30924af1-ced2-41ff-9adc-fda39e63c133",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "bbd1ac98-efb4-4c54-a9ac-8b68d999248d",
+      "position": 6,
+      "properties": {
+        "description": "Before we can really discuss this question, we need some additional background information. We are going to watch three videos. Our goal is to better understand the rules of copyright, and to better understand when we can reuse or remix something.",
+        "duration": "10",
+        "name": "Activity Part 2: Copyright Overview",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bbd1ac98-efb4-4c54-a9ac-8b68d999248d",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "1ade3bbb-7a9a-47d9-baf6-1b3e52c8b41f",
+      "position": 7,
+      "properties": {
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Video #1: [Copyright Overview](https://www.youtube.com/watch?v=GPNWvU_IphU) (2 minutes)\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Video #2: [Copyright in Practice](https://www.youtube.com/watch?v=ITASCSxnBqw) (4 minutes)\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Video #3: [Creative Commons Copyright](https://www.youtube.com/watch?v=wC-m23T7cPM) (3 minutes)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The videos in this section are sourced from the [Copyright & Creativity for Ethical Digital Citizens Curriculum](https://www.copyrightandcreativity.org/high-school/). Credit to the Internet Education Foundation and iKeepSafe for these videos.\n\nVideos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1ade3bbb-7a9a-47d9-baf6-1b3e52c8b41f",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "047bcdb0-9451-4164-bf9f-fadb8099e0ee",
+      "position": 8,
+      "properties": {
+        "description": "Now that we better understand the rules & controls of copyright, we're going to re-read this article to see if we can determine if current copyright policies are helping or hurting society",
+        "duration": "10",
+        "name": "Activity Part 3: Article Re-read",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "047bcdb0-9451-4164-bf9f-fadb8099e0ee",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "c480f4d6-09a0-4e2b-8aa9-7a1310ee2338",
+      "position": 9,
+      "properties": {
+        "description": "**Display** the central question again: Are our current copyright policies helping society or hurting society?"
+      },
+      "seeding_key": {
+        "activity_section.key": "c480f4d6-09a0-4e2b-8aa9-7a1310ee2338",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "866db70e-609e-40af-ad38-ec501e546485",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students re-read the article in order to answer these questions:"
+      },
+      "seeding_key": {
+        "activity_section.key": "866db70e-609e-40af-ad38-ec501e546485",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "9175d2f8-1d2d-47b2-815e-1bd47947425c",
+      "position": 11,
+      "properties": {
+        "description": "* What was digitized?\n* What was the goal or purpose of digitizing this thing?\n* Is someone benefiting from this situation? If so, who?\n* Is someone being harmed in this situation? If so, who?\n* Are these impacts intended or unintended? How do you know?\n\nStudents should continue to annotate the article by adding the following symbols:\n\n* Add a + next to sentences that show benefit\n* Add a - next to sentences that show harm\n* Add a face next to sentences that show impact\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Share some of the sentences you annotated. Did everyone identify the same areas?*\n\n**Discussion Goal:** This discussion continues to generate questions and spark student curiosity based on the article. Ultimately we will present students with a focused question to continue the lesson, but this lets students voice their ideas and concerns with the class. It can be helpful to keep these questions & concerns in mind as the lesson continues and return to them when you can.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Activity Repetition:** This aspect of the lesson - reading an article and looking at these questions - is repeated in tomorrow’s lesson as well. Students are presented with a different set of articles to examine and must also identify benefits, harms, and impacts. Having them complete this same task today acts as a scaffold to prepare students to read an article with purpose. As you circulate and work with students, offer reading tips and strategies that will help them complete this similar task independently tomorrow.\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9175d2f8-1d2d-47b2-815e-1bd47947425c",
+        "lesson_activity.key": "14bdee21-0191-4041-896d-0fbdb0ce1bb9"
+      }
+    },
+    {
+      "key": "61e5cc8f-a9f9-4d9e-b67c-4a0aafb28978",
+      "position": 1,
+      "properties": {
+        "description": "You need to take a stand on today’s question, using this article to help support your position. We will do this by creating a position poster so we can see how everyone feels about Copyright based on this article.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "61e5cc8f-a9f9-4d9e-b67c-4a0aafb28978",
+        "lesson_activity.key": "1bcbceda-7934-4923-bf89-abc892178235"
+      }
+    },
+    {
+      "key": "c48a56c5-5a28-41fc-8e93-d3319e650815",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:**"
+      },
+      "seeding_key": {
+        "activity_section.key": "c48a56c5-5a28-41fc-8e93-d3319e650815",
+        "lesson_activity.key": "1bcbceda-7934-4923-bf89-abc892178235"
+      }
+    },
+    {
+      "key": "86c535f6-d797-473f-89fc-7c7a7f65f583",
+      "position": 3,
+      "properties": {
+        "description": "* Distribute paper to each student. Have students fold the paper in half.\n* In the top section, complete this sentence stem: “I think copyright can [help / hurt] society because \\_\\_\\_\\_\\_\\_\\_\\_”\n* In the bottom section, provide a quote from the text that helps justify the sentence you wrote in the top\n\n**Circulate:** Check in with students and encourage them to use one of their highlighted sentences as evidence for their opinion. As students finish, they hang them in a public space edge-to-edge like a quilt to form a larger tapestry of opinions about copyright with evidence. This class artifact can hang in the classroom as a reference for the next few lessons."
+      },
+      "seeding_key": {
+        "activity_section.key": "86c535f6-d797-473f-89fc-7c7a7f65f583",
+        "lesson_activity.key": "1bcbceda-7934-4923-bf89-abc892178235"
+      }
+    },
+    {
+      "key": "76359b25-b525-41b8-9a02-f304c132d4ec",
+      "position": 4,
+      "properties": {
+        "description": "Today we learned about Creative Commons, a license that allows you to freely use materials created by others. There are a few other licenses that you may have heard about that also allow access:\n\n* Open Source: programs that are made freely available and may be redistributed and modified.\n* Open Access: online research output free of restrictions to access and use\n\nYou do have options when you want to ethically use others' materials! Because of these licenses, we have access to a wide variety of digital materials. \n\nTo close, when you use these materials, always make sure to cite where you found your sources. Citations come in many forms - it could be a link, or a description of where you found the source. There are formal versions of citations recommended by various organizations, but generally the most important thing to remember when citing a source is to provide as much information as possible about the materials you are using.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Creating the Artifact:** This is another aspect of the lesson that will be repeated in tomorrow’s project - students will create an artifact that will be displayed for their peers to see, and this artifact must also include references to the text they read. Displaying the artifacts from today’s lesson acts as a model for what students will be expected to do independently in tomorrow’s lesson.\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "76359b25-b525-41b8-9a02-f304c132d4ec",
+        "lesson_activity.key": "1bcbceda-7934-4923-bf89-abc892178235"
+      }
+    },
+    {
+      "key": "fe51a088-61d8-497b-b26d-57051b6921a0",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe51a088-61d8-497b-b26d-57051b6921a0",
+        "lesson_activity.key": "1bcbceda-7934-4923-bf89-abc892178235"
+      }
+    },
+    {
+      "key": "9498749d-4966-4faa-83f6-075d839f4376",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** How is a Creative Commons license different from a regular copyright?\n\n**Question:** Now that we understand Copyright, what would need to change in order for the scenario from the warm-up to be okay? As a reminder, here was the scenario from the warm-up: \n\n_Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each._",
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "9498749d-4966-4faa-83f6-075d839f4376",
+        "lesson_activity.key": "1bcbceda-7934-4923-bf89-abc892178235"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Multiple Choice Creative Commons2022_-digital-literacy_2025"
+        ],
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025",
+        "activity_section.key": "9498749d-4966-4faa-83f6-075d839f4376"
+      },
+      "level_keys": [
+        "U1L11 Multiple Choice Creative Commons2022_-digital-literacy_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L12 CFU Copyright_-digital-literacy_2025"
+        ],
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025",
+        "activity_section.key": "9498749d-4966-4faa-83f6-075d839f4376"
+      },
+      "level_keys": [
+        "U1L12 CFU Copyright_-digital-literacy_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Multiple Choice Creative Commons2022_-digital-literacy_2025",
+        "script_level.level_keys": [
+          "U1L11 Multiple Choice Creative Commons2022_-digital-literacy_2025"
+        ],
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025",
+        "activity_section.key": "9498749d-4966-4faa-83f6-075d839f4376"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L12 CFU Copyright_-digital-literacy_2025",
+        "script_level.level_keys": [
+          "U1L12 CFU Copyright_-digital-literacy_2025"
+        ],
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "digital-literacy-common-sense-media-2025",
+        "activity_section.key": "9498749d-4966-4faa-83f6-075d839f4376"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[KEY] Both Sides of the Track",
+      "url": "https://drive.google.com/open?id=1icNDsIgXr1yUt4KmBhLx7Z1b0MhtEOzssN_MA4jXRfY",
+      "key": "_key_both_sides_of_the_track",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_both_sides_of_the_track"
+      }
+    },
+    {
+      "name": "[KEY] Embarrassing Story",
+      "url": "https://docs.google.com/document/d/1SZt_8uYxTX0AChBh3b5Z4Aw5T66t3KKcOxk--9ACFcw/edit?usp=sharing",
+      "key": "_key_embarrassing_story",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_embarrassing_story"
+      }
+    },
+    {
+      "name": "[KEY] Future Tracks",
+      "url": "https://drive.google.com/open?id=1M_lVZbtM55T1kJ1I54EXmrapUzLFk7P8yzptbJYlkWI",
+      "key": "_key_future_tracks",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_future_tracks"
+      }
+    },
+    {
+      "name": "[KEY] Lunch Lines Dilemma",
+      "url": "https://docs.google.com/document/d/1FRFzrtK56CA_TX4cRhmkE8XO3O2leNXT6KBiV8Go690/edit?usp=sharing",
+      "key": "_key_lunch_lines_dilemma",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_lunch_lines_dilemma"
+      }
+    },
+    {
+      "name": "[KEY] Reading Laterally for Accuracy",
+      "url": "https://drive.google.com/open?id=137TchIR6VLK4iF6sIE_lS0hrnXIzlBwY6-xvLongaiM",
+      "key": "_key_reading_laterally_for_accuracy",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_reading_laterally_for_accuracy"
+      }
+    },
+    {
+      "name": "[KEY] Whose Fake News",
+      "url": "https://docs.google.com/document/d/1buNt5afQh1MOUZGLPygdVdEp_oc_saSdc5qGdjXX-1Y/edit?usp=sharing",
+      "key": "_key_whose_fake_news",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_whose_fake_news"
+      }
+    },
+    {
+      "name": "Article - Fortnite Stealing Dance Moves",
+      "url": "https://drive.google.com/file/d/1RshIPOF9Sm9AYPLehNouZus4rkRDWX-7/view?usp=sharing",
+      "key": "article_-_fortnite_stealing_dance_moves",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "article_-_fortnite_stealing_dance_moves"
+      }
+    },
+    {
+      "name": "Both Sides of the Track",
+      "url": "https://drive.google.com/open?id=1LLpjZTMg8jO_D2LXCU4u0W8Vrk_bXjiLQue9jcoCZSs",
+      "key": "both_sides_of_the_track",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "both_sides_of_the_track"
+      }
+    },
+    {
+      "name": "Clicks For Cash",
+      "url": "https://docs.google.com/presentation/d/149SN-l3c5IG2_sohNkktLGtmhI7dgLJ2x4AuGMPbfgk/edit?usp=sharing",
+      "key": "clicks_for_cash",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "clicks_for_cash"
+      }
+    },
+    {
+      "name": "Copyright in Practice",
+      "url": "https://youtu.be/ITASCSxnBqw",
+      "key": "copyright_in_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "copyright_in_practice"
+      }
+    },
+    {
+      "name": "Copyright Overview",
+      "url": "https://youtu.be/GPNWvU_IphU",
+      "key": "copyright_overview",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "copyright_overview"
+      }
+    },
+    {
+      "name": "Creative Commons Copyright",
+      "url": "https://youtu.be/wC-m23T7cPM",
+      "key": "creative_commons_copyright",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creative_commons_copyright"
+      }
+    },
+    {
+      "name": "Embarrassing Story",
+      "url": "https://docs.google.com/document/d/1kfqafqp22IAxRgdSkEh_PaPa93VUBIO8trI6lxAo6TM/edit?usp=sharing",
+      "key": "embarrassing_story",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "embarrassing_story"
+      }
+    },
+    {
+      "name": "Future Tracks",
+      "url": "https://drive.google.com/open?id=1B6RcpiqJFFKHFl9sv4cLK1-lhgEIwIjf2JaFNg-AGiA",
+      "key": "future_tracks",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "future_tracks"
+      }
+    },
+    {
+      "name": "Hoaxes and Fakes",
+      "url": "https://drive.google.com/open?id=1MGSK49bpGqmRsPegB7Ugw4wtmypsOgvm8CO4p5bUnDw",
+      "key": "hoaxes_and_fakes",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "hoaxes_and_fakes"
+      }
+    },
+    {
+      "name": "Intellectual Property",
+      "url": "https://docs.google.com/presentation/d/16pHsBIjXC_9T5nDtOlp8s46eN-Rto7NLWIfaYqLlWC4/template/preview",
+      "key": "intellectual_property",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intellectual_property"
+      }
+    },
+    {
+      "name": "Lesson Quiz",
+      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/what-you-send-in-that-moment-when-lesson-quiz",
+      "key": "lesson_quiz",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_quiz"
+      }
+    },
+    {
+      "name": "Lesson Quiz - Clicks For Cash",
+      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/clicks-for-cash-lesson-quiz",
+      "key": "lesson_quiz_-_clicks_for_cash",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_quiz_-_clicks_for_cash"
+      }
+    },
+    {
+      "name": "Lesson Quiz - Hoaxes and Fakes",
+      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/hoaxes-and-fakes-lesson-quiz",
+      "key": "lesson_quiz_-_hoaxes_and_fakes",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_quiz_-_hoaxes_and_fakes"
+      }
+    },
+    {
+      "name": "Lesson Quiz - Risk Check for New Tech",
+      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/risk-check-for-new-tech-lesson-quiz",
+      "key": "lesson_quiz_-_risk_check_for_new_tech",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_quiz_-_risk_check_for_new_tech"
+      }
+    },
+    {
+      "name": "Lesson Quiz - The Big Data Dilemma",
+      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-big-data-dilemma-lesson-quiz",
+      "key": "lesson_quiz_-_the_big_data_dilemma",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_quiz_-_the_big_data_dilemma"
+      }
+    },
+    {
+      "name": "Lesson Quiz - Who's Looking At Your Digital Footprint?",
+      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/whos-looking-at-your-digital-footprint-lesson-quiz",
+      "key": "lesson_quiz_-_who_s_looking_at_your_digital_footprint_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_quiz_-_who_s_looking_at_your_digital_footprint_"
+      }
+    },
+    {
+      "name": "Lunch Lines Dilemma",
+      "url": "https://docs.google.com/document/d/1dAd1B-NlKW0YuH2Olt2zef1D6cOb5ZGKkaX0ee1SiBI/edit?usp=sharing",
+      "key": "lunch_lines_dilemma",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "lunch_lines_dilemma"
+      }
+    },
+    {
+      "name": "Reading Laterally for Accuracy",
+      "url": "https://drive.google.com/open?id=1OYSPGKD6Hxx9FmSp6jK6rQ2JskiIXgZqeystt_6srnw",
+      "key": "reading_laterally_for_accuracy",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reading_laterally_for_accuracy"
+      }
+    },
+    {
+      "name": "Risk Check for New Tech",
+      "url": "https://docs.google.com/presentation/d/1tch8SCHEjCO9ggx5NarQ_yITjgH0ucRTYGUkyVFfWcU/edit?usp=sharing",
+      "key": "risk_check_for_new_tech",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "risk_check_for_new_tech"
+      }
+    },
+    {
+      "name": "The Big Data Dilemma",
+      "url": "https://drive.google.com/open?id=1_65d-QugBlR_UzrilFAXlm2o282VZRBqn1gE_7Amw4E",
+      "key": "the_big_data_dilemma",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_big_data_dilemma"
+      }
+    },
+    {
+      "name": "What You Send in \"That Moment When ... \"",
+      "url": "https://docs.google.com/presentation/d/1ZzTePQlDNV8k1yhpqcovnukPuWQt6YQroXuXZyQjsD0/edit?usp=sharing",
+      "key": "what_you_send_in_that_moment_when_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "what_you_send_in_that_moment_when_"
+      }
+    },
+    {
+      "name": "Who's Looking at Your Digital Footprint?",
+      "url": "https://drive.google.com/open?id=1N1UUrJvwZc1c4HTOobVkvAtS3qtXUMk7e8aFKeazUJg",
+      "key": "who_s_looking_at_your_digital_footprint_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "who_s_looking_at_your_digital_footprint_"
+      }
+    },
+    {
+      "name": "Whose Fake News",
+      "url": "https://docs.google.com/document/d/1A88ogcTfd9hSbglgsShLxSWigrQ_6u75RSvth7eGXn4/edit?usp=sharing",
+      "key": "whose_fake_news",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "whose_fake_news"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "resource.key": "article_-_fortnite_stealing_dance_moves"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "resource.key": "copyright_in_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "resource.key": "copyright_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "resource.key": "creative_commons_copyright"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "resource.key": "intellectual_property"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_embarrassing_story"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "embarrassing_story"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "lesson_quiz"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "what_you_send_in_that_moment_when_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_whose_fake_news"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "clicks_for_cash"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "lesson_quiz_-_clicks_for_cash"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "whose_fake_news"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_lunch_lines_dilemma"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "lesson_quiz_-_risk_check_for_new_tech"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "lunch_lines_dilemma"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "risk_check_for_new_tech"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_future_tracks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "future_tracks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "lesson_quiz_-_who_s_looking_at_your_digital_footprint_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "who_s_looking_at_your_digital_footprint_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_both_sides_of_the_track"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "both_sides_of_the_track"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "lesson_quiz_-_the_big_data_dilemma"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "the_big_data_dilemma"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_reading_laterally_for_accuracy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "hoaxes_and_fakes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "lesson_quiz_-_hoaxes_and_fakes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "reading_laterally_for_accuracy"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "advertisement_csm",
+      "word": "Advertisement",
+      "definition": "a message that promotes a product, service, opportunity, or event using television, the internet, billboards, or other public spaces",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "advertisement_csm"
+      }
+    },
+    {
+      "key": "advertiser_csm",
+      "word": "Advertiser",
+      "definition": "a person or company who is hired to create advertisements",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "advertiser_csm"
+      }
+    },
+    {
+      "key": "clickbait_csm",
+      "word": "Clickbait",
+      "definition": "an image or headline that tries to get you to click on it, usually for advertising purposes",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "clickbait_csm"
+      }
+    },
+    {
+      "key": "cookies_csm",
+      "word": "Cookies",
+      "definition": "small text files stored on a computer that keep track of what a person does on a website",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "cookies_csm"
+      }
+    },
+    {
+      "key": "corroboration_csm",
+      "word": "Corroboration",
+      "definition": "additional source(s) that confirm or support the claims of a news story, article or piece of information",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "corroboration_csm"
+      }
+    },
+    {
+      "key": "creative_commons",
+      "word": "Creative Commons",
+      "definition": "A collection of public copyright licenses that enable the free distribution of an otherwise copyrighted work, used when an author wants to give people the right to share, use, and build upon a work that they have created",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "creative_commons"
+      }
+    },
+    {
+      "key": "digital_dilemma",
+      "word": "digital dilemma",
+      "definition": "a situation in digital life where it's not always clear what's best to do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "digital_dilemma"
+      }
+    },
+    {
+      "key": "digital_footprint_csm",
+      "word": "Digital Footprint",
+      "definition": "all the information online about a person either posted by that person or others, intentionally or unintentionally",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "digital_footprint_csm"
+      }
+    },
+    {
+      "key": "disinformation_csm",
+      "word": "Disinformation",
+      "definition": "false or inaccurate information intended to deceive",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "disinformation_csm"
+      }
+    },
+    {
+      "key": "facial_recognition_csm",
+      "word": "Facial Recognition",
+      "definition": "a type of AI technology that can use a digital image of a face to identify a person",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "facial_recognition_csm"
+      }
+    },
+    {
+      "key": "intellectual_property",
+      "word": "Intellectual Property",
+      "definition": "A work or invention that is the result of creativity, such as a piece of writing or a design, to which one has rights and for which one may apply for a patent, copyright, trademark, etc.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "intellectual_property"
+      }
+    },
+    {
+      "key": "lateral_reading_csm",
+      "word": "Lateral Reading",
+      "definition": "a method of determining credibility of online information in which you open multiple tabs to search for other information to validate the site’s claims",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "lateral_reading_csm"
+      }
+    },
+    {
+      "key": "misinformation_csm",
+      "word": "Misinformation",
+      "definition": "false or inaccurate information, especially that which is intended to deceive",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "misinformation_csm"
+      }
+    },
+    {
+      "key": "online_tracking_csm",
+      "word": "Online Tracking",
+      "definition": "apps, websites, or third parties collecting information about your online activity (other sites you visit, links you click, how long you stay, etc.)",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "online_tracking_csm"
+      }
+    },
+    {
+      "key": "personal_branding_csm",
+      "word": "Personal Branding",
+      "definition": "the practice of marketing yourself to the public using social media, a personal website, advertisements, or other non-digital tools",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "personal_branding_csm"
+      }
+    },
+    {
+      "key": "personalized_content_csm",
+      "word": "Personalized Content",
+      "definition": "information that a website or app shows you based on what they think you want to see",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "personalized_content_csm"
+      }
+    },
+    {
+      "key": "publisher_website_csm",
+      "word": "Publisher (website)",
+      "definition": "the person or company who created the website and its contents",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "publisher_website_csm"
+      }
+    },
+    {
+      "key": "rescinded_csm",
+      "word": "Rescinded",
+      "definition": "to take away or cancel",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "rescinded_csm"
+      }
+    },
+    {
+      "key": "targeted_advertising_csm",
+      "word": "Targeted Advertising",
+      "definition": "advertisements that are shown to you based on information that has been collected about you (location, browsing history, interests, age, etc.)",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "targeted_advertising_csm"
+      }
+    },
+    {
+      "key": "third_party_csm",
+      "word": "Third-party",
+      "definition": "a company other than the company that owns the website or app you are using",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "third_party_csm"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "vocabulary.key": "creative_commons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "vocabulary.key": "intellectual_property"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "digital_dilemma"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "advertisement_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "advertiser_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "clickbait_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "disinformation_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "publisher_website_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "facial_recognition_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "digital_footprint_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "personal_branding_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "rescinded_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "cookies_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "online_tracking_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "personalized_content_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "targeted_advertising_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "third_party_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "corroboration_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "disinformation_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "lateral_reading_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "misinformation_csm"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "047bb8b3-1013-44d2-a30f-8b30a2540462",
+      "properties": {
+        "description": "Learn that they have a public presence online called a digital footprint."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "047bb8b3-1013-44d2-a30f-8b30a2540462"
+      }
+    },
+    {
+      "key": "0d0b6e13-f427-4d95-b984-705f21c60bfb",
+      "properties": {
+        "description": " Identify the benefits and drawbacks of online tracking to both companies and users."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "0d0b6e13-f427-4d95-b984-705f21c60bfb"
+      }
+    },
+    {
+      "key": "102b5581-238d-455a-bbee-76fd4c62a935",
+      "properties": {
+        "description": "Learn how to use lateral reading as a strategy to verify the accuracy of information online."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "102b5581-238d-455a-bbee-76fd4c62a935"
+      }
+    },
+    {
+      "key": "10f02043-a3be-4643-bef4-5c7436254c53",
+      "properties": {
+        "description": "Use the Take a Stand thinking routine to consider both the benefits and the risks of new technologies."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "10f02043-a3be-4643-bef4-5c7436254c53"
+      }
+    },
+    {
+      "key": "122a4cd2-2d13-4dfe-932d-c42cc6e2596f",
+      "properties": {
+        "description": "Identify important benefits and privacy risks that new technologies present."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "122a4cd2-2d13-4dfe-932d-c42cc6e2596f"
+      }
+    },
+    {
+      "key": "1d5417b7-628e-424f-ba35-0f171022f443",
+      "properties": {
+        "description": "Describe how clickbait can contribute to the spread of fake news and disinformation."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "1d5417b7-628e-424f-ba35-0f171022f443"
+      }
+    },
+    {
+      "key": "3c5e0ff6-8a5e-41ff-b26c-e13d835a30fb",
+      "properties": {
+        "description": "Decide whether or not the benefits of new technologies outweigh their privacy risks."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "3c5e0ff6-8a5e-41ff-b26c-e13d835a30fb"
+      }
+    },
+    {
+      "key": "45db538a-5894-456a-b07f-4c8a21e55937",
+      "properties": {
+        "description": "Identify examples of online behaviors that may hurt, embarrass, or offend others."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "45db538a-5894-456a-b07f-4c8a21e55937"
+      }
+    },
+    {
+      "key": "51d6d214-2f3a-4b5c-a17f-61366ec8a2f7",
+      "properties": {
+        "description": "Define online tracking and describe how companies use it."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "51d6d214-2f3a-4b5c-a17f-61366ec8a2f7"
+      }
+    },
+    {
+      "key": "7d6263e4-ef94-4451-8d90-29496cc38bf7",
+      "properties": {
+        "description": "Analyze specific examples of online tracking and take a position for or against them."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "7d6263e4-ef94-4451-8d90-29496cc38bf7"
+      }
+    },
+    {
+      "key": "a0c9f294-b8ac-42b4-96a3-50b7a6196ae8",
+      "properties": {
+        "description": "Use the Take a Stand thinking routine to consider different perspectives about whose responsibility it is to fight fake news and disinformation."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "a0c9f294-b8ac-42b4-96a3-50b7a6196ae8"
+      }
+    },
+    {
+      "key": "afd8cc9a-f54c-4ee4-9ed3-58b631513af6",
+      "properties": {
+        "description": "Use the Feelings & Options thinking routine to analyze and respond to a digital dilemma."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "afd8cc9a-f54c-4ee4-9ed3-58b631513af6"
+      }
+    },
+    {
+      "key": "c57e8bab-731d-4855-99ea-df359bb504bb",
+      "properties": {
+        "description": "Describe how advertisers and publishers make money through online advertising."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "c57e8bab-731d-4855-99ea-df359bb504bb"
+      }
+    },
+    {
+      "key": "cdd76c81-e08f-456c-b771-715717d33cbe",
+      "properties": {
+        "description": "Define \"misinformation\" and explore the consequences of spreading misinformation online."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "cdd76c81-e08f-456c-b771-715717d33cbe"
+      }
+    },
+    {
+      "key": "d4d063d2-b9ec-4221-80e0-6ba11def20b1",
+      "properties": {
+        "description": "Apply lateral reading to examples of questionable videos to determine their accuracy."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "d4d063d2-b9ec-4221-80e0-6ba11def20b1"
+      }
+    },
+    {
+      "key": "dad9eccc-894d-4da1-8f90-36fadd84bcc9",
+      "properties": {
+        "description": "Explain how copyright and Creative Commons Licenses can be applied to digital works of creativity"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "objective.key": "dad9eccc-894d-4da1-8f90-36fadd84bcc9"
+      }
+    },
+    {
+      "key": "e706cded-c855-4a64-ac5c-172f5e6dfd83",
+      "properties": {
+        "description": "Recognize that any information they post online can help or hurt their future opportunities (college admission, employment, etc.)."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "e706cded-c855-4a64-ac5c-172f5e6dfd83"
+      }
+    },
+    {
+      "key": "e7e54bdb-2409-48bc-91e5-b928c7940672",
+      "properties": {
+        "description": "Argue if current copyright laws are helping or harming society using evidence from an article"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "objective.key": "e7e54bdb-2409-48bc-91e5-b928c7940672"
+      }
+    },
+    {
+      "key": "efad24ae-025a-4129-88ba-c87d4eef4fff",
+      "properties": {
+        "description": "Create a vignette that shows how a positive digital footprint can help someone take advantage of an opportunity."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "efad24ae-025a-4129-88ba-c87d4eef4fff"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Intellectual Property",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-28"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

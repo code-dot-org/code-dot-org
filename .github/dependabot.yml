@@ -170,7 +170,6 @@ updates:
     directories: 
     - "/apps/eslint"
     - "/bin/i18n"
-    - "/tools/scripts/brokenLinkChecker"
     schedule:
       interval: "weekly"
       day: "sunday"

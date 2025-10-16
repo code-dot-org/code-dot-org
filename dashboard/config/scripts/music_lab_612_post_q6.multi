@@ -1,0 +1,22 @@
+name 'music-lab-612-post-q6'
+
+question 'Which code below represents this song?'
+
+wrong '![](https://images.code.org/5b3af28c475594a41fdffda6a64505dd-functions-post-S-answer-B.png)'
+wrong '![](https://images.code.org/c67938bba95a2b8875b84e552f427615-functions-post-S-answer-C.png)'
+wrong '![](https://images.code.org/95f063dcd298b2b27fca8442d813d8c8-functions-post-S-answer-D.png)'
+right '![](https://images.code.org/93f234e92733759cb9341d7d420cd523-functions-post-S-answer-A.png)'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Functions
+
+Skill: Design songs with sections that can be abstracted to functions to make the code reusable, easier to understand, or more organized.
+
+Appears in Lesson: Functions - Practice
+MARKDOWN
+
+markdown <<MARKDOWN
+Beth is working on a remix of a song: "First there's an instrumental intro that continues in the background. Then there are the first two verses, then the chorus, and then the last verses"
+MARKDOWN

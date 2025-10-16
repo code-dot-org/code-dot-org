@@ -25,6 +25,8 @@
 require 'cdo/code_generation'
 
 class Pd::Session < ApplicationRecord
+  include Pd::UrlValidator
+
   # creates a hash like {in_person: 0, virtual: 1}
   enum session_format: Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.to_h {|f| [f[:value], f[:enum_value]]}
 
@@ -41,20 +43,20 @@ class Pd::Session < ApplicationRecord
   def starts_and_ends_on_the_same_day
     return unless start && self.end
     unless start_time.to_date == end_time.to_date
-      errors.add(:end, 'must occur on the same day as the start.')
+      errors.add(:end, 'must occur on the same day as the start')
     end
   end
 
   def starts_before_ends
     return unless start && self.end
     unless start < self.end
-      errors.add(:end, 'must occur after the start.')
+      errors.add(:end, 'must occur after the start')
     end
   end
 
   def valid_meeting_link_format
-    unless valid_url?(meeting_link)
-      errors.add(:meeting_link, "is not a valid URL")
+    unless self.class.valid_url?(meeting_link)
+      errors.add(:meeting_link, "is not valid or is missing http or https")
     end
   end
 
@@ -86,13 +88,41 @@ class Pd::Session < ApplicationRecord
     "#{formatted_date}, #{formatted_start}-#{formatted_end} #{tz_abbreviation}".strip
   end
 
+  def formatted_location_details
+    if in_person?
+      location_parts = [location_name.presence, location_address.presence].compact
+      location_parts.any? ? location_parts.join(', ') : "N/A"
+    else
+      meeting_link ? "Virtual meeting: #{meeting_link}" : "N/A"
+    end
+  end
+
   def session_info_for_calendar
     {
       id: id,
       start: start_time.utc.iso8601,
       end: end_time.utc.iso8601,
-      is_local: workshop.time_zone.blank?
+      is_local: local?,
+      location_name: location_name,
+      location_address: location_address,
+      meeting_link: meeting_link,
+      session_format: session_format,
+      description: workshop.description,
+      notes: workshop.notes,
     }
+  end
+
+  def session_info_for_emails
+    {
+      datetime: start_date_with_start_and_end_times_us_format,
+      format: session_format,
+      meeting_link: meeting_link || '',
+      location: formatted_location_details
+    }
+  end
+
+  def local?
+    workshop.time_zone.blank?
   end
 
   def start_date_us_format
@@ -145,13 +175,6 @@ class Pd::Session < ApplicationRecord
 
   def too_soon_for_link?
     workshop.started_at.nil? || start - 48.hours > Time.zone.now
-  end
-
-  def valid_url?(url)
-    uri = URI.parse(url)
-    uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
-  rescue URI::InvalidURIError
-    false
   end
 
   private def unused_random_code

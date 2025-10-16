@@ -3,6 +3,9 @@
   "script_names": [
     "k5-onlinepd-2020"
   ],
+  "original_script_names": [
+    "k5-onlinepd-2020"
+  ],
   "published_state": "beta",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
