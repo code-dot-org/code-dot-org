@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:14.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're designing a school planner app that tracks how much time a student spends studying two subjects. The app calculates total study time and compares the two.\r\n\r\n1. Two variables are already set up: `math_minutes` and `science_minutes`\r\n\r\n2. Use math operations to:\r\n\r\n   * Add the study times together\r\n   \r\n   * Subtract one from the other\r\n   \r\n   * Multiply the times\r\n   \r\n   * Divide one by the other\r\n\r\n3. Use `print()` statements to show each result.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use `+`, `-`, `*`, and `/` to do math with numbers in Python — just like on a calculator!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Study Time Calculator",
+    "bubble_choice_description": "You're designing a school planner app that tracks how much time a student spends studying two subjects. The app calculates total study time and compares the two.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program does math with study time\n\nmath_minutes = 45\nscience_minutes = 30\n\n# Add the stats and print the result\n\n\n\n# Subtract the stats and print the result\n\n\n\n# Multiply the stats and print the result\n\n\n\n# Divide the stats and print the result\n\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/d956845cfa41cc17c429b7754215297a-study.png",
+    "name_suffix": "_pilot-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzkKnWVVCfKkysG/PsXdMim9jHywh0AJY\n4tOaofYO1RRPCWcp7zulw6CJfDNmbL40RkByUBglJwd1cbmdeyjk4QCZf9Js\nIY3cN9gyQrS3V4h9juOirdlsrZvzpNbZElUXIr68rN1+xjQBgMqjA4mNhyGu\n/OF2pZ8HLGMChHwK4NWtP82/njP+S/NnrBLnSgxrkHsTWHDoEJgPhQMwtdor\nQFIIg+vCbfnNIGVaj+gMK1fDD/OOxEMqmic4tzU9q35Eby11GC3XqaGo5Mma\npajvJlWYU6iwG9OShBZ5mQeoGhDWJ6qBZK1Pz3KZ8TBdU9KMI3nWH9Ms/+0h\nihUQewIn/hQHsOKXyGszCpABnZrpxJzVD4tjfVJMke+3gVa0OHvq4P7wFWso\nWU6GwJKuRVGBRAhEWcmMtmVmBbY8xCRSYoGpawWa5dKInPAtzYAzgCdvgpdp\nKa7TYQj6YiNI8nYhSw/K1JRBFRfUdG87my789SQ9SQCMNpVM+yEBGvs1m0u3\nI4n6fWQVyyT+yU9YzDuWDUgjVAgUloQnvM2NnVIQ+LnzqNNR1wQa66huHpNc\nLb98ugGBzQMgped/Mh419MwJKGY9zEWitSwH0bl+wnSjGI+xXtedN3biBci0\n1wP7W+PECg==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestStudyTimeMath(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n        cls.parsed_outputs = []\n        for line in cls.log:\n            line = line.strip()\n            if line:\n                try:\n                    cls.parsed_outputs.append(float(line))\n                except ValueError:\n                    continue\n\n    def test_addition(self):\n        \"\"\"Addition result should be correct (45 + 30)\"\"\"\n        expected_addition = 75\n        self.assertIn(\n            expected_addition,\n            self.parsed_outputs,\n            \"Make sure you add 45 + 30 correctly and print the result!\"\n        )\n\n    def test_subtraction(self):\n        \"\"\"Subtraction result should be correct (45 - 30)\"\"\"\n        expected_subtraction = 15\n        self.assertIn(\n            expected_subtraction,\n            self.parsed_outputs,\n            \"Make sure you subtract 45 - 30 correctly and print the result!\"\n        )\n\n    def test_multiplication(self):\n        \"\"\"Multiplication result should be correct (45 * 30)\"\"\"\n        expected_multiplication = 1350\n        self.assertIn(\n            expected_multiplication,\n            self.parsed_outputs,\n            \"Make sure you multiply 45 * 30 correctly and print the result!\"\n        )\n\n    def test_division(self):\n        \"\"\"Division result should be approximately correct (45 / 30)\"\"\"\n        expected_division = 45 / 30  # = 1.5\n        division_matches = any(abs(num - expected_division) < 0.01 for num in self.parsed_outputs)\n        self.assertTrue(\n            division_matches,\n            \"Make sure you divide 45 / 30 correctly and print the result! (Small rounding differences are okay.)\"\n        )\n\n    def test_number_of_outputs(self):\n        \"\"\"Exactly four outputs should be printed\"\"\"\n        self.assertEqual(\n            len(self.parsed_outputs),\n            4,\n            \"Make sure you print four results: addition, subtraction, multiplication, and division.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:14.777+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level5c_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level5c_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:48:11.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Do This: \r\nThere is a bug in this code. \r\n- **Investigate**: Run the program and observe the output. Use the debug print statements to identify what is missing or incorrect.\r\n- **Modify**: Fix the function call by ensuring it provides both required parameters (name and age).\r\n- **Document Results**: Explain how the debug print statements helped you identify the issue.\r\n\r\nHints: \r\n- Check the number of arguments provided in the function call.\r\n- Ensure all required parameters are included.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def greet_user(name, age, color):\n    print(\"DEBUG: name = \" + name)  \n    print(\"DEBUG: age = \" + str(age)) \n    print() # Add another print statement to check for favorite color\n    print(\"Hello, \" + name + \"! You are \" + str(age) + \" years old. Your favorite color is \" + color + \".\")  \n\n\n# Call the function\ngreet_user(\"Miles\", 7, ) # Add the missing parameter",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzo5omZsJyChU3Gk9qoExHzVPAVJnaPRT\nNA3ZVi+kp6RHThJ0kY+duobY+MDSZQOBSE4uP083PpnTgSrCAczycsqH5Dal\nHzdVGjRNE4ce3eno9yEjoHIRdzHYrIGrUQ1yYe20ArXxO6532IxI3IeLvOaC\na4whkvHrU5y0Q11ncUFPI9cGUZjcdJK3xST5PGcxg9WRnqgApGwVVuxIUv3Y\n+u+F5sXuEwgYUCwBYHfsqj/cPz3AVSnBMPhwyArBNdopvcP0+dRN/mcETjLG\nU+K+h5P2VxsrHEheQT+QYUFOW3g0g49yIAKETA53tqCHtg1v1cVTbVDWUYW+\nXXvKcIXM2+GH06RAmSnywUGBtnTLzkEzNZrBcE+vXKAb054XiHEKoZ6BEwC0\nH1QIU+rqCGiDz7QyyVeJObYpzsrQ+8cTps4ThnmU98INUlql1JzEI34zYU1N\ntyksfcQnrdP4KP+vr0MxQ8Dz7meNDN2isE/ir51/pJsgj1aEvl1LVvCIgA3l\nFFyRhdI8Chf7ZzULMNDn/743z/+qGYLTHDRVNOgaaUquhlKO5CkxX2CwEkBK\nF15GBfeFOwRN/GioutXzGtUNXpJKc8WHhUA8jVaRC+63nWyJBUugtduVpaWx\naW2lr0LaeA==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestGreetUserColor(unittest.TestCase):\n\n    def test_function_call_has_color_argument(self):\n        \"\"\"Add a color to the parameter in the function call.\"\"\"\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Parse the file into an AST (Abstract Syntax Tree)\n            tree = ast.parse(content)\n\n            # Look for function call to `greet_user`\n            function_calls = [\n                node for node in ast.walk(tree)\n                if isinstance(node, ast.Call) and\n                isinstance(node.func, ast.Name) and node.func.id == \"greet_user\"\n            ]\n\n            if not function_calls:\n                self.fail(\"The function `greet_user()` was not called in `main.py`. Ensure it is properly used.\")\n\n            for call in function_calls:\n                # Ensure the function call has at least 3 arguments (name, age, color)\n                if len(call.args) < 3:\n                    self.fail(\n                        \"The function `greet_user()` is missing the third parameter. \"\n                        \"Please pass a color as the third argument.\"\n                    )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n    def test_third_print_statement_not_empty(self):\n        \"\"\"Add a statement that checks for the user's favorite color.\"\"\"\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Parse the file into an AST (Abstract Syntax Tree)\n            tree = ast.parse(content)\n\n            # Find all print statements\n            print_statements = [\n                node for node in ast.walk(tree)\n                if isinstance(node, ast.Expr) and isinstance(node.value, ast.Call) and\n                isinstance(node.value.func, ast.Name) and node.value.func.id == \"print\"\n            ]\n\n            if len(print_statements) < 3:\n                self.fail(\n                    \"The third `print()` statement is missing. \"\n                    \"Please add a statement that checks for the user's favorite color.\"\n                )\n\n            # Ensure the third print statement is not empty\n            third_print = print_statements[2]  # Get the third print statement\n            if not third_print.value.args:\n                self.fail(\n                    \"The third `print()` statement is empty. \"\n                    \"Please ensure it prints something related to the user's favorite color.\"\n                )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:11.281+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson16-level7_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson16-level7_2025\"}]"
+}]]></config>
+</Pythonlab>

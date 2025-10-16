@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-15T04:30:44.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Scenario: Simple design challenge (e.g., “Design a better way for students to keep track of homework assignments.”",
+        "imageUrl": "",
+        "key": "undefined-b8e93e67-06ce-4df3-9e14-eac51dfd50ca"
+      },
+      {
+        "text": "Fictional user quote: Example from “The Organized Athlete” - “I have practice right after school, so I need to see all my assignments on my phone during lunch. If I forget, it's too late.”",
+        "imageUrl": "",
+        "key": "undefined-b425644a-5615-4d4f-ae70-21ea56e46dcc"
+      },
+      {
+        "text": "AI support example: Screenshot of prompt + AI suggestion for persona details.",
+        "imageUrl": "",
+        "key": "undefined-71ae662f-45a6-4495-95ca-e38b0f375bc6"
+      },
+      {
+        "text": "Final Persona Result: Name, photo, demographics, goals, frustrations.",
+        "imageUrl": "",
+        "key": "undefined-246fb82f-eda2-45ea-b109-3bcd3dea5af8"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-15 04:30:52 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

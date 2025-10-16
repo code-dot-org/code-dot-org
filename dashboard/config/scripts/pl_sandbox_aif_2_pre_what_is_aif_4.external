@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# What is AI Foundations (Semester 2)
+# What is AI Foundations (Semester 2)?
 
 #### AI Foundations Semester 2 empowers students to become intentional designers who work with AI to solve problems, express ideas, and build interactive systems they understand and control. 
 
@@ -47,7 +47,7 @@ markdown <<MARKDOWN
         <img src="https://images.code.org/49515d0eaaf89498e72681012b9af838-image-1759253584312.png" alt="Icon of arrows and code segments" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
         <div style="flex: 1; background: #007683; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
             <h3 style="color: white; margin: 0;"> <b>Unit 4: Iterating with AI</b></h3>
-            <p style = "font-size: 14pt;color: white; margin-top: 10px;">In this unit, students learn how iteration and loops enable programs to process collections of data and create interactive features such as filters and views<br><br> </p>
+            <p style = "font-size: 14pt;color: white; margin-top: 10px;">In this unit, students learn how iteration and loops enable programs to process collections of data and create interactive features such as filters and views.<br><br> </p>
         </div>
     </div>
     
@@ -78,13 +78,10 @@ markdown <<MARKDOWN
 
 #### Students practice computational thinking, human-centered design, and AI literacy as they design projects like brand websites, dialogue apps, and recommendation systems.
 
-<img src="https://images.code.org/5cd1fcb5f6ec0e2e414f0a29a1581af1-image-1759254423492.png" alt="pie chart divided into thirds labeled: AI literacy, human-centered design, and computational thinking" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+<img src="https://images.code.org/7479360e2d350345b2156ad0a54ca15b-image-1760467409776.png" alt="pie chart divided into thirds labeled: AI literacy, human-centered design, and computational thinking" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
 #### By the end, students build a capstone project and leave prepared to design AI-powered technologies with clarity, confidence, and care.
 
-
-
-
-
+![]()
 MARKDOWN
