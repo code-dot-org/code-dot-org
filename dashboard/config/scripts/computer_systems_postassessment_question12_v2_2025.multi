@@ -1,0 +1,17 @@
+name 'computer-systems-postassessment-question12_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 12'
+
+wrong 'Managing hardware and software'
+wrong 'Controlling memory and processes'
+wrong 'Providing a user interface'
+right 'Designing and manufacturing computer hardware'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following is **NOT** a function of an operating system?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Software and Operating Systems
+MARKDOWN

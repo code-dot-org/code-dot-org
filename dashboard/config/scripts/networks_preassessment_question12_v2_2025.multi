@@ -1,0 +1,17 @@
+name 'networks-preassessment-question12_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 12'
+
+wrong 'To allow Internet Service Providers (ISPs) to block websites'
+right 'To ensure that all Internet traffic is treated equally'
+wrong 'To slow down websites with large amounts of traffic'
+wrong 'To restrict access to social media platforms'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the purpose of net neutrality?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson x
+MARKDOWN

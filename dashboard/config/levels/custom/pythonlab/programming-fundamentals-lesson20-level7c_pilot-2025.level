@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:48:31.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Unlocking the Door\r\nBased on this flowchart logic, add to the start code to complete the program. \r\n- If the player has a key, unlock the door.\r\n- If not, ask \"Do you want to search for the key?\"\r\n    - \"yes\" → \"You find the key!\"\r\n    - \"no\" → \"You remain trapped.\"",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def unlock_door():\n    has_key = input(\"Do you have the golden key? (yes/no) \").lower()\n\n    if has_key == \"yes\":\n       # Add the success message here\n\n    else:\n        search = input(\"Would you like to search for the key? (yes/no) \").lower()\n        # Add nested conditional statement here\n\n\nunlock_door()\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nznvOC2TG9r4bSp6ZqY21sEaB5+p/Dqfo\nm7om3UugRxNOPIe9L0hSbCvN8M3k6cNWVIzwcIrvfsh/SvtY8GfPbZP8I9zM\nHfyBY5LSbGvxdwFUGcB3G9Btbf9EXr7tOyk4jBPqE+iGwxCcqYtyGqsQOkn2\nqGwrDmYqUaffY4Vx1XDBeeHUSbmlCb54Hg2QNRJHSGqIaAPvwdB3Q4W0yi7O\nT5b7jpXdAlRdWa+VrMiLP20IfjngT7YxocjF+U0ZDRMBJheAis6t8jXP41/d\nWZf/auWfqmrZcBgZURUFbSAgQvdwK2xgKy0HHnyirjLr6ujrsHakvZ4ujyuD\nEpIN9HclJ35OjI8P3U6YP46beG+lGYFltPBjfJ3cpZgNgZ+mEddGjFu4L3BQ\nfu0L4zoq3AKAoOmy4VANYc4o3hiwx0WmvT3SkZhgLgvcoAif5o0MWmu82alC\nB2OSrNUnX/xSFBhyoWkSSFAeDSN4muk82UrPz0dnhH0fBw7HGK1bJmhuR/DH\nTrq5oNSg4dGkH2Y3o40K6PU138CYIkCLTz4v0Hluco0zJHS/6z2evaMIZ3rt\nilYd161tTfS1xI1rP92QkKw2L+lAJFkpqeqnf5H2eYtpZh659RrHHrErkLD4\ngfkkUyZcbqlsUQ8MJRy2lK0nI6K0NEnaw90hxZXSvoHinqK6OXH693lQIUvk\nMuiTaHfEcQewbas/4AHRsbIIi6CdE7hHST/v662+M8b96jnhMcrnIG3UhtUx\nan42pfCVbRMO/G66lq2/IDXeD9y+lncPmqxxziRVYKVC542Mf/VEDzjnLWR9\n6kKDbMbnOGUyn4VjDIPdFD7MSjQclWRN+on1kd3oVL7azTnCTLcl7jq5sov9\nxtW+pfhLgq5HP7yR+Jz/BGc+eA==\n",
+    "display_name": "Add print & conditionals",
+    "thumbnail_url": "https://images.code.org/42381bdc59953df7744cf23307830fc0-python-key.avif",
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestUnlockDoor(unittest.TestCase):\n\n    def test_print_message_after_has_key(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Parse the file into an AST (Abstract Syntax Tree)\n            tree = ast.parse(content)\n\n            # Locate the `unlock_door` function\n            for node in ast.walk(tree):\n                if isinstance(node, ast.FunctionDef) and node.name == \"unlock_door\":\n                    for stmt in node.body:\n                        # Check for the if-statement (if has_key == \"yes\")\n                        if isinstance(stmt, ast.If) and isinstance(stmt.test, ast.Compare):\n                            if hasattr(stmt.test.left, \"id\") and stmt.test.left.id == \"has_key\":\n                                # Ensure there's a print statement inside this if block\n                                if not any(isinstance(s, ast.Expr) and isinstance(s.value, ast.Call) and isinstance(s.value.func, ast.Name) and s.value.func.id == \"print\" for s in stmt.body):\n                                    self.fail(\n                                        \"Missing a print statement inside `if has_key == \\\"yes\\\"`. \"\n                                        \"Please add a success message after the condition.\"\n                                    )\n\n                        # Check for the else-statement\n                        if isinstance(stmt, ast.If) and stmt.orelse:\n                            for else_stmt in stmt.orelse:\n                                if isinstance(else_stmt, ast.Assign) and hasattr(else_stmt.targets[0], \"id\") and else_stmt.targets[0].id == \"search\":\n                                    # Ensure there's a nested if-else under `search = input(...)`\n                                    if not any(isinstance(nested_stmt, ast.If) for nested_stmt in stmt.orelse):\n                                        self.fail(\n                                            \"The `else` block is missing a nested conditional. \"\n                                            \"Please add an if-statement to check if the player wants to search for the key.\"\n                                        )\n                    return  # Test passes if both checks pass\n\n            self.fail(\"Could not find the required `if` statement and nested conditional inside `unlock_door()`.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:31.149+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson20-level7c_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson20-level7c_2025\"}]"
+}]]></config>
+</Pythonlab>

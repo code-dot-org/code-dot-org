@@ -30,5 +30,67 @@ $card-width: 309px;
       padding-block-end: 1rem;
     }
 
+    .noFacilitatedWorkshopsCard {
+      display: flex;
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8125rem;
+      flex: 0;
+      border-radius: 0.25rem;
+      background-color: var(--background-neutral-primary);
+
+      figure {
+        height: 3.125rem;
+        width: 7.4375rem;
+        object-fit: fill;
+      }
+
+      a {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .facilitatedWorkshopCard {
+      display: flex;
+      padding: 0.875rem 1rem 1rem 1rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      align-self: stretch;
+      border-radius: 0.25rem;
+      border: 1px solid var(--borders-neutral-primary);
+      background: var(--background-neutral-primary);
+
+      .facilitatedWorkshopTags {
+        margin-top: 0.625rem;
+
+        i {
+          color: var(--text-brand-teal-primary)
+        }
+      }
+
+      .facilitatedWorkshopLearnMoreButton {
+        width: 100%;
+      }
+    }
+
+    .findMoreWorkshopsCard {
+      display: flex;
+      padding: 0.875rem 1rem 1rem 1rem;
+      justify-content: center;
+      border-radius: 0.25rem;
+      border: 1px solid var(--borders-neutral-primary, #D4DAE1);
+      background: var(--background-neutral-primary, #FFF);
+      gap: 0.5rem;
+      align-self: stretch;
+
+      figure {
+        width: 2.4375rem;
+        height: 2.75rem;
+        object-fit: fill;
+      }
+    }
   }
 }

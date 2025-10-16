@@ -64,6 +64,7 @@ class DCDOBase < DynamicConfigBase
       'aif-launch': DCDO.get('aif-launch', false),
       'skills-dashboard': DCDO.get('skills-dashboard', false),
       'teacher-homepage-welcome': DCDO.get('teacher-homepage-welcome', false),
+      'blockly-keyboard-navigation': DCDO.get('blockly-keyboard-navigation', false),
     }
   end
 end

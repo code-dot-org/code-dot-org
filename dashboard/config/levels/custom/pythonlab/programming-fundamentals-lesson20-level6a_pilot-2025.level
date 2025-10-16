@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:48:29.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do this:\r\nThere is a bug in this code. \r\n- Read the code carefully and press Run. \r\n- Use the console's error message to hunt for the bug. \r\n- Fix the syntactical bug. \r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "riddle = input(\"I speak without a mouth and hear without ears. What am I? \").lower()\n\nif riddle == \"echo\"\n    print(\"🔊 Correct! The walls whisper back your voice.\")\nelse:\n    print(\"❌ Incorrect! Try again.\")\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "display_name": "Simple syntax bug",
+    "thumbnail_url": "https://images.code.org/5af8dc28868b855953420c3c96928ebf-python-echo.jpg",
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:29.328+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson20-level6a_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson20-level6a_2025\"}]"
+}]]></config>
+</Pythonlab>

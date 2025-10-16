@@ -18,6 +18,7 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
@@ -782,6 +783,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       Blockly.Xml.domToText(xml),
       includeHiddenDefinitions
     );
+
     // Loop through all the parent blocks and remove vertical translation value
     // This makes the output more condensed and readable, while preserving
     // horizontal translation values for RTL rendering.
@@ -919,9 +921,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options.enableKeyboardNavigation ||
       experiments.isEnabledAllowingQueryString(
         experiments.BLOCKLY_KEYBOARD_NAVIGATION
-      )
+      ) ||
+      DCDO.get('blockly-keyboard-navigation', false)
     ) {
-      initializeKeyboardNavigation(workspace);
+      initializeKeyboardNavigation(
+        workspace,
+        blocklyWrapper.isDarkTheme || false
+      );
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an

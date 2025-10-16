@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:53:26.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI Makes a Future Prediction\r\n\r\nPrompt AI Chat to develop a future prediction.\r\n\r\n### Do This:\r\n\r\n<details open>\r\n<summary><strong>Step 1</strong></summary>\r\nCreate a prompt that will get AI Chat to make a prediction about the future of your topic. Remember to include:\r\n\r\n- Task\r\n- Context\r\n- Format\r\n- Reference (any artifacts you collected)\r\n- Tone\r\n</details>\r\n\r\n::: details [**Step 2**]\r\nConsider the following questions:\r\n- Does AI's prediction feel believable? Why or why not?\r\n- What supporting evidence or perspectives could strengthen this prediction?\r\n- What ethical concerns, if any, does this prediction raise?\r\n:::\r\n\r\n::: details [**Step 3**]\r\nRefine your initial prompt to increase accuracy and reduce bias. Make sure to:\r\n- Use the tips below to help you. \r\n- Remember to add all of your saved artifacts again.\r\n- Send your prompt to AI Chat and read its response.\r\n\r\n---\r\n**Tips for Better Results**\r\n- Ask the AI to predict based on current trends, research, or diverse perspectives.\r\n- Don't just accept the first answer - challenge it or ask for alternatives.\r\n- Want to make it more inclusive? Ask: _\"How might this affect different communities?\"_\r\n:::\r\n\r\n::: details [**Step 4**]\r\nRepeat this process several times until you are satisfied with AI's prediction.\r\n:::\r\n\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are helping a student create and refine a future prediction in a topic of their choice. Start by giving a response that includes a prediction that is somewhat unrealistic, overly optimistic, or missing key perspectives. Do not mention that it is inaccurate — allow the student to evaluate and improve it.\n\nKeep your responses concise unless the student asks for more detail. Wait for the student to guide the direction, tone, or specificity. Do not automatically adjust tone, fix errors, or include ethical framing unless prompted.\n\nEncourage the student to give more context or ask clarifying questions to improve your output. The goal is for the student to take responsibility for identifying gaps and refining the prediction over time.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use AI Chat to do some market research for your product or app. ",
+    "display_name": "Marketing Research Chat",
+    "thumbnail_url": "https://images.code.org/0c2e3bb0e1a6a1b4ee36a79baa8f9df5-analytics.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:26.723+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson13-level1_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson13-level1_2025\"}]"
+}]]></config>
+</Aichat>

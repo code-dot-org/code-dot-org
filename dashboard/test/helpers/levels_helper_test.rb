@@ -1130,12 +1130,9 @@ class LevelsHelperTest < ActionView::TestCase
   test "lab2_options generates options for Lab2 levels" do
     @level = create(:music)
 
-    channel = 'channel123'
-    view_options(channel: channel)
     level_view_options(@level.id, share: true)
 
     options = lab2_options
-    assert_equal channel, options["channel"]
     assert_equal @level.id, options["levelId"]
     assert_equal true, options["share"]
 

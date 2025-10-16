@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're watching your friend perform in a talent show, and you want to show your support . . . through Python applause! You already have a function that claps once. Use it to give your friend a big round of applause.\r\n\r\n1. Read the function `clap()`\r\n\r\n2. Call the `clap()` function **three times** to simuate a round of applause.\r\n\r\n3. Make sure your code prints all three claps.\r\n\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can reuse the same function by calling it more than once. That's the power of functions!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def clap():\n  # Print a hand-clapping emoji\n  print(\"👏\")\n\n# TODO - Call the clap() function three times to give a round of applause!\n\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzgEAdg6DuuVPhq1mYhWjFFhOB94A42tP\nf1NRvpXeTeIZpvNA6yQ+pns/ulJlrAMo2Xwi6n3Vu1hKLWH2NCKCPKRaLw1V\nFw8VpdQW4a0ppalrG+aTmtC6sLXoLGXraR1howxH6eMKmYTqKOzye0xoxGc3\nzIXkOdl5VOo/S38WkoQPDEOvq7yPepETuRVyPdQznM2Yo9XI5/1+aADM8CAe\nuvCWokFKM1mzmU9ISSzZ4C+J7KwLlzHfy7qzDGjqLrRckOXmF6GHnRoIC2g+\nz/VvDrCfjvjIyeWSRVJRX6/qpJfp3WQH8qVgUpMFv2F4RGxk9w==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestClapFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_three_claps_printed(self):\n        \"\"\"clap() should be called three times to print three claps\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertEqual(\n            len(printed_messages),\n            3,\n            \"Make sure you call the clap() function three times to give a full round of applause!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:29.612+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level3_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level3_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

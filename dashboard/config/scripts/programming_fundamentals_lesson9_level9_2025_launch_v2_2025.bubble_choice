@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson9-level9_2025-launch_v2-2025'
+display_name 'Decisions with the Painter'
+description 'Choose **ONE** scenario and write and use functions that combine `while` loops and `if` statements to help the `Painter` move, make decisions, and complete a task.'
+
+sublevels
+level 'programming-fundamentals-lesson9-level9d_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson9-level9a_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson9-level9b_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson9-level9c_2025-launch_v2-2025'

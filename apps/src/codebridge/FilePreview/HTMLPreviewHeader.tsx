@@ -3,6 +3,7 @@ import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
+import classNames from 'classnames';
 import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -49,30 +50,36 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
     color: 'strong',
     buttons: [
       {
-        label: weblab2I18n.desktop(),
-        value: PreviewViewMode.DESKTOP,
-        iconLeft: {
+        icon: {
           iconName: 'desktop',
           iconStyle: 'solid',
+          title: weblab2I18n.desktop(),
         },
+        value: PreviewViewMode.DESKTOP,
       },
       {
-        label: weblab2I18n.mobile(),
-        value: PreviewViewMode.MOBILE,
-        iconLeft: {
+        icon: {
           iconName: 'mobile',
           iconStyle: 'solid',
+          title: weblab2I18n.mobile(),
         },
+        value: PreviewViewMode.MOBILE,
       },
     ],
     size: 'xs',
     selectedButtonValue: previewViewMode,
+    type: 'iconOnly',
     onChange: previewViewMode =>
       setPreviewViewMode(previewViewMode as PreviewViewMode),
   };
 
   return (
-    <div className={moduleStyles.previewHeaderContainer}>
+    <div
+      className={classNames(
+        moduleStyles.previewHeaderContainer,
+        isFullScreenView && moduleStyles.fullScreenPreviewHeaderContainer
+      )}
+    >
       <div className={moduleStyles.urlBarContent}>
         <div className={moduleStyles.navButtonsWrapper}>
           <Button
@@ -103,6 +110,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           onKeyDown={handleKeyDown}
           value={value}
           name={'url-input'}
+          aria-label={weblab2I18n.addressBar()}
           size={'s'}
           className={moduleStyles.urlBarInput}
         />

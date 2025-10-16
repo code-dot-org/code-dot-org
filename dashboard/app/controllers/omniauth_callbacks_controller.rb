@@ -402,24 +402,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
 
     # Transfer sections and destroy new user if takeover is possible
-    if allows_section_takeover(oauth_user)
-      # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
-      if oauth_user.id == lookup_user.id
-        # Duplicate params only because this log is temporary
-        firehose_params = {
-          source_user: oauth_user,
-          destination_user: lookup_user,
-          type: 'silent-self',
-          provider: provider,
-        }
-        log_self_takeover_investigation_to_firehose(firehose_params)
-      end
-      return unless move_sections_and_destroy_source_user(
-        source_user: oauth_user,
-        destination_user: lookup_user,
-        takeover_type: 'silent',
-        provider: provider,
+    if allows_section_takeover(oauth_user) && !move_sections_and_destroy_source_user(
+      source_user: oauth_user,
+      destination_user: lookup_user,
+      takeover_type: 'silent',
+      provider: provider,
       )
+      return
     end
 
     begin
@@ -495,7 +484,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # Are we trying to connect a new OAuth provider?
   private def connecting_new_provider?
-    current_user && auth_params.fetch("action", nil) == "connect"
+    current_user && auth_params&.fetch("action", nil) == "connect"
   end
 
   # Should we try to add a new OAuth provider?

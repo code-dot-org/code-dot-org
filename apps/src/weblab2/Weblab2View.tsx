@@ -8,20 +8,22 @@ import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {SystemPromptOption} from '@cdo/apps/aichat/types';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import experiments from '@cdo/apps/util/experiments';
 
+import {ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
+import {getPromptNameFromMode} from './helpers/aiTutorHelper';
 import {
-  DEFAULT_AI_TUTOR_MODE,
-  getPromptNameFromMode,
-  getPromptOptionsFromModes,
-} from './helpers/aiTutorHelper';
+  acceptRejectJsonSchema,
+  formatExplanationResponse,
+  copyCodeJsonSchema,
+} from './helpers/aiTutorStructuredResponseHelper';
 import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -83,16 +85,9 @@ const Weblab2View: React.FC<
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
-  const [aiTutorSystemPromptName, setAiTutorSystemPromptName] =
-    useState<string>(() => {
-      const availableModes = levelProperties.availableAiTutorModes;
-      return getPromptNameFromMode(
-        availableModes ? availableModes[0] : undefined
-      );
-    });
-  const [systemPromptOptions, setSystemPromptOptions] = useState<
-    SystemPromptOption[] | undefined
-  >(undefined);
+  const userAddedSelectionContext = useAppSelector(
+    state => state.aichat.userAddedSelectionContext
+  );
 
   const {startSources} = useSource(
     defaultProject,
@@ -104,29 +99,6 @@ const Weblab2View: React.FC<
     state => !!state.lab2Project.projectSources?.source
   );
 
-  // Set up AI Tutor system prompt options based on available modes in level properties.
-  useEffect(() => {
-    const availableModes = levelProperties.availableAiTutorModes || [
-      DEFAULT_AI_TUTOR_MODE,
-    ];
-    const systemPromptName = getPromptNameFromMode(
-      availableModes ? availableModes[0] : undefined
-    );
-    setAiTutorSystemPromptName(systemPromptName);
-    setSystemPromptOptions(getPromptOptionsFromModes(availableModes));
-  }, [levelProperties.availableAiTutorModes]);
-
-  const aiTutorSystemPromptSettings = useMemo(() => {
-    if (!systemPromptOptions || !aiTutorSystemPromptName) {
-      return undefined;
-    }
-    return {
-      systemPromptOptions,
-      selectedSystemPromptName: aiTutorSystemPromptName,
-      onSystemPromptChange: setAiTutorSystemPromptName,
-    };
-  }, [aiTutorSystemPromptName, systemPromptOptions]);
-
   // Note: this causes Web Lab 2 to re-render when sources change.
   // Unfortunately, the way AI tutor is set up right now requires passing in a context
   // rather than a callback for the context. In the future, we should consider refactoring AI
@@ -135,8 +107,9 @@ const Weblab2View: React.FC<
     aiTutorHelper.setAiTutorContext({
       source,
       longInstructions: levelProperties.longInstructions,
+      selection: userAddedSelectionContext,
     });
-  }, [source, levelProperties.longInstructions]);
+  }, [source, levelProperties.longInstructions, userAddedSelectionContext]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -154,6 +127,42 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
+  const aiTutorResponseSchemaSettings: ResponseSchemaSettings | undefined =
+    useMemo(() => {
+      if (
+        experiments.isEnabledAllowingQueryString(
+          experiments.WEBLAB2_ACCEPT_REJECT
+        )
+      ) {
+        return {
+          jsonSchema: acceptRejectJsonSchema,
+          responseCallback: (response: string) => {
+            const jsonResponse = JSON.parse(response);
+            console.log('🤖: Tutor response (in jsonSchema callback):', {
+              jsonResponse,
+            });
+            // TODO: send code to the appropriate place
+            return jsonResponse.explanation;
+          },
+        };
+      } else if (
+        experiments.isEnabledAllowingQueryString(
+          experiments.WEBLAB2_STRUCTURED_OUTPUT
+        )
+      ) {
+        return {
+          jsonSchema: copyCodeJsonSchema,
+          responseCallback: (response: string) => {
+            const jsonResponse = JSON.parse(response);
+            console.log('🤖: Tutor response (in jsonSchema callback):', {
+              jsonResponse,
+            });
+            return formatExplanationResponse(jsonResponse.answer);
+          },
+        };
+      }
+    }, []);
+
   return (
     <div className={moduleStyles.weblab2Container}>
       {hasSource && (
@@ -163,9 +172,13 @@ const Weblab2View: React.FC<
           startSources={startSources}
           levelProperties={levelProperties}
           hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
-          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={true}
           aiTutorChatButtonData={[]}
+          aiTutorContextHelper={aiTutorHelper}
+          aiTutorSystemPromptName={getPromptNameFromMode(
+            levelProperties.aiTutorMode
+          )}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
       )}
     </div>

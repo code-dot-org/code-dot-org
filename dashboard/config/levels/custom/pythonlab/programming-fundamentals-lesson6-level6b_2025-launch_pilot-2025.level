@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:31.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're building a program to remind people of small actions they can take each day to reduce their carbon footprint. You already have two functions: one reminds them to turn off unused lights, and the other encourages using reusable water bottles. Now you'll create a function that combines both reminders into a single daily message.\r\n\r\n1. Read the two functions: `turn_off_lights()` and `use_reusable_bottle()`.\r\n\r\n2. Write a new function called `daily_reminder()` that **calls both of the existing functions in order**.\r\n\r\n3. After you define `daily_reminder()`, call it to show your final message.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nFunctions can call other functions—just make sure the ones you're calling are defined first!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "display_name": "Climate Action Checklist",
+    "bubble_choice_description": "You're building a program to remind people of small actions they can take each day to reduce their carbon footprint. You already have two functions: one reminds them to turn off unused lights, and the other encourages using reusable water bottles. Now you'll create a function that combines both reminders into a single daily message.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def turn_off_lights():\n  # Prints a message to turn off the lights\n  print(\"Don't forget to turn off the lights when you leave a room.\")\n\ndef use_reusable_bottle():\n  # Prints a reminder message to bring a reusable water bottle\n  print(\"Bring a reusable water bottle instead of buying plastic ones.\")\n\n# TODO - Write the daily_reminder() function\n\n\n\n# TODO - Call the daily_reminder() function\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzsX54qCfPTdZlARx+fNd/qP1tKV3zLUM\nPpYMLF3X+HmYSzab2u+MBYc9FXnJ79j4LRuhDQjanPu+uRm6utgGG+FHp+CF\nHrirJqnyodkl9JpMSZTSF7RLk6XC9M0OH0qTBrAoCBW5l7tSz0IpwvNOS9AI\nBPsumSF7ZjhmMXDvhN3hNH394ZjBcQqttkfpegyi0vQU80SEP3VyRR0hZueP\nGNMlTln2D41teYMjHX0JaGC31xSis0w9yPHZK+6S7Kf7SxiUPTz9zRxhubn3\nXzLTivie1m7ldnUmjYlXUHdkdcj9zZyfMZrJR+jGAyPEFDXmouZSeE0mSlNN\ngtHnGVPQs2JI3E1iwlPndiMLAl4gRNv/sgUAA2cEW/rhlczDBTHuVtl7rD2z\nFOxQjX9UvLs90Odr8tdWoYem013MhfDTrpxx5DDfgYJjvzwc6WybVrrXkmXO\n6ms/R2ygPOUCYfvKky8QJTY3t0MO8FNU9nTELAcLCsIUHt9ECksLlRVzIxO4\nEsW4LYZYs2VTze0Z7FbVLhP0sXp4E09p6ucKcm7YqxzQTOZlj1mshIuUvf90\nQeYQT6lo2v2pElNnwNJU9DaORyXxrX2O+o+7VwpQAkzAZa4keQng48JrxkeL\nGuZeDiglD2a9qdNkxSqx9L6N/GKBCYEieZxQyuzYYAACrQBpDZon0p1MWSa+\nmW6b+kiO7YHNCJkz72YTHoFRr8Ht3C7r2QxrvaxOZ0auxjAY4FDk02Yz\n",
+    "thumbnail_url": "https://images.code.org/b52a4d9f5a2bd1b28b25428639389b24-carbon_footprint.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestDailyReminderFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_both_reminders_printed(self):\n        \"\"\"daily_reminder() should call both reminder functions\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertGreaterEqual(\n            len(printed_messages),\n            2,\n            \"Make sure your daily_reminder() function calls both turn_off_lights() and use_reusable_bottle()!\"\n        )\n\n        lights_reminder = any(\"light\" in line.lower() for line in printed_messages)\n        bottle_reminder = any(\"bottle\" in line.lower() for line in printed_messages)\n\n        self.assertTrue(\n            lights_reminder,\n            \"It looks like the lights reminder was missing. Make sure you call turn_off_lights() inside daily_reminder().\"\n        )\n\n        self.assertTrue(\n            bottle_reminder,\n            \"It looks like the water bottle reminder was missing. Make sure you call use_reusable_bottle() inside daily_reminder().\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:31.949+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level6b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level6b_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

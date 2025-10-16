@@ -22,18 +22,34 @@ module ProxyHelper
     url = URI.parse(location)
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
-    unless allowed_ip_address?(url.host)
+
+    # SECURITY FIX: Resolve hostname to IP address once and validate it to prevent DNS race condition
+    # This prevents an attacker from changing DNS between validation and actual request
+    resolved_ip_address = resolve_and_validate_ip_address(url.host)
+    unless resolved_ip_address
       render_error_response 400, "Target IP address is restricted"
       return
     end
+
     unless allowed_hostname?(url, allowed_hostname_suffixes)
       render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames. " \
           "The list of allowed hostname suffixes is: #{allowed_hostname_suffixes.join(', ')}. " \
           "If you wish to access a URL which is not currently allowed, please email support@code.org."
       return
     end
+
+    # SECURITY FIX: Use hostname for connection (required for SSL) but with custom DNS resolution
+    # to prevent race condition. We override the socket creation to use our pre-resolved IP.
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
+
+    # Override DNS resolution to use our cached IP address
+    # This prevents the race condition while still allowing SSL to work properly
+    http.instance_variable_set(:@ipaddr, resolved_ip_address)
+    def http.conn_address
+      @ipaddr
+    end
+
     path = url.path.empty? ? '/' : url.path
     query = url.query || ''
 
@@ -106,8 +122,22 @@ module ProxyHelper
       return 200, location
     end
 
+    # SECURITY FIX: Resolve and validate IP address to prevent DNS race condition
+    resolved_ip_address = resolve_and_validate_ip_address(url.host)
+    unless resolved_ip_address
+      return 400, "Target IP address is restricted"
+    end
+
+    # SECURITY FIX: Use hostname for connection (required for SSL) but with custom DNS resolution
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
+
+    # Override DNS resolution to use our cached IP address
+    http.instance_variable_set(:@ipaddr, resolved_ip_address)
+    def http.conn_address
+      @ipaddr
+    end
+
     path = url.path.empty? ? '/' : url.path
     query = url.query || ''
 
@@ -150,6 +180,17 @@ module ProxyHelper
   private def render_error_response(status, text)
     prevent_caching
     render plain: text, status: status
+  end
+
+  # SECURITY FIX: Resolve hostname to IP address and validate it's allowed
+  # This prevents DNS race condition by resolving once and caching the result
+  private def resolve_and_validate_ip_address(hostname)
+    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
+    if public_ip_address?(host_ip_address) || host_ip_address == ProxyHelper.dashboard_ip_address
+      host_ip_address.to_s
+    else
+      nil
+    end
   end
 
   # Do not permit proxying to a server on our own private network, unless it is our own dashboard IP Address (we

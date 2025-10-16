@@ -19,6 +19,7 @@ export interface UserMessageEditorProps {
   /** Custom className for editor container */
   editorContainerClassName?: string;
   customPlaceholder?: string;
+  children?: React.ReactNode;
 }
 
 const UserMessageEditor = React.forwardRef<
@@ -32,11 +33,15 @@ const UserMessageEditor = React.forwardRef<
       editorContainerClassName,
       customPlaceholder,
       showSubmitLabel = false,
+      children,
     },
     externalInputRef
   ) => {
     const internalInputRef = useRef<HTMLTextAreaElement | null>(null);
     const [userMessage, setUserMessage] = useState<string>('');
+    // Track focus state on textarea to apply focus styles to container since
+    // :focus-visible doesn't work on divs and :has() is not supported in Firefox.
+    const [focused, setFocused] = useState(false);
 
     const userMessageIsEmpty = useMemo(() => {
       return userMessage.trim() === '';
@@ -67,12 +72,13 @@ const UserMessageEditor = React.forwardRef<
         internalInputRef.current.scrollHeight + 2 + 'px'; // Add a couple of pixels to avoid scrollbars.
     }, [userMessage]);
 
-    const icon = {iconName: 'paper-plane'};
+    const icon = {iconName: 'arrow-up'};
 
     return (
       <div
         className={classnames(
           moduleStyles.editorContainer,
+          focused && moduleStyles.focused,
           editorContainerClassName
         )}
       >
@@ -98,13 +104,17 @@ const UserMessageEditor = React.forwardRef<
           onKeyDown={e => handleKeyPress(e, userMessage)}
           maxLength={MAX_MESSAGE_LENGTH}
           rows={1}
+          aria-label={commonI18n.aiUserMessagePlaceholder()}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
         />
-
-        <div className={moduleStyles.endSingleItemContainer}>
+        <div className={moduleStyles.chatActionsContainer}>
+          {children}
           <Button
             aria-label={commonI18n.submit()}
             id="uitest-chat-submit"
             isIconOnly={!showSubmitLabel}
+            size="xs"
             onClick={() => handleSubmit(userMessage)}
             disabled={disabled || !userMessage || userMessageIsEmpty}
             text={showSubmitLabel ? commonI18n.submit() : undefined}

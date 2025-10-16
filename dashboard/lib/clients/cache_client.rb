@@ -1,4 +1,4 @@
-class CacheClient
+class Clients::CacheClient
   def initialize(namespace)
     raise ArgumentError unless namespace
     @namespace = namespace
