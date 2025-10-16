@@ -2,6 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {FC} from 'react';
+import {useSelector} from 'react-redux';
 
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
@@ -12,13 +13,12 @@ import {
   levelPrompts,
   standaloneProjectPrompts,
 } from '../../suggestedPrompts';
+import {LegacyLabsState} from '../../types';
 
 import {AiTutorLegacyLabContextHelper} from './aiTutorContextHelper';
 import AiTutorSidebar from './AiTutorSidebar';
 
 import styles from './AiTutorContainer.module.scss';
-import {useSelector} from 'react-redux';
-import {LegacyLabsState} from '../../types';
 
 const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
@@ -30,19 +30,18 @@ interface CommonLab {
 export const AiTutorContainer: FC<{
   toggleAiChat: () => void;
   aiChatOpen: boolean;
-  inLevel: boolean;
-  labType: string;
-  channelId: string;
-  levelId: string;
-  unitId: string;
-}> = ({toggleAiChat, aiChatOpen, labType, levelId, unitId, channelId}) => {
-  const inLevel = !!unitId;
+}> = ({toggleAiChat, aiChatOpen}) => {
+  const labState = useSelector(
+    (state: {pageConstants: LegacyLabsState}) => state.pageConstants
+  );
+
+  const inLevel = !!labState.serverScriptId;
   const allPrompts = inLevel
     ? [...levelPrompts, ...defaultPrompts]
     : [...standaloneProjectPrompts, ...defaultPrompts];
 
   const lab: CommonLab | undefined =
-    labType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
+    labState.appType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
 
   const getHiddenContext = async () => {
     const code = await lab?.getCode?.();
@@ -50,10 +49,6 @@ export const AiTutorContainer: FC<{
     const callback = aiTutorHelper.getHiddenContextCallback();
     return callback();
   };
-
-  const labState = useSelector(
-    (state: {pageConstants: LegacyLabsState}) => state.pageConstants
-  );
 
   const analyticsData = {
     labType: labState.appType,

@@ -24,9 +24,9 @@ import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Weblab2State} from '@cdo/apps/weblab2/redux';
 
+import {LegacyLabsState} from '../aiTutor/types';
 import {DanceState} from '../dance/danceRedux';
 import {BlocklyState} from '../redux/blockly';
-import {LegacyLabsState} from '../aiTutor/types';
 
 // The type for our global redux store. This is incomplete until we type every slice
 // of our redux store. When converting a slice to typescript, add it to this object
