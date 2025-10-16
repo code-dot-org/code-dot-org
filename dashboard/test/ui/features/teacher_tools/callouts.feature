@@ -14,7 +14,7 @@ Feature: Callouts
   Examples:
     | url                                                                                                           | callout_id | text                                                                                                    | close_target      |
     | http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1  | 0          | After snapping all the blocks together, press "Run" to start your program.                              | #runButton        |
-    | http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1  | 1          | Click here to see the code for the program you're making.                                               | #show-code-header |
+    | http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1  | 1          | Click here to see the code for the program you're making                                                | #show-code-header |
     | http://studio.code.org/hoc/1?noautoplay=true                                                                  | 1          | Hit "Run" to try your program                                                                           | #runButton        |
     | http://studio.code.org/hoc/1?noautoplay=true                                                                  | 0          | Drag a "move" block and snap it below the other block                                                   | [data-id='moveForward']    |
     | http://studio.code.org/hoc/9?noautoplay=true                                                                  | 0          | Blocks that are grey can't be deleted. Can you solve the puzzle anyway?                                 | g                 |
@@ -54,10 +54,10 @@ Feature: Callouts
     And callout "0" is hidden
 
   Scenario: Only showing seen callouts once
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1"
+    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true"
     And I wait for the lab page to fully load
     And callout "0" exists
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1"
+    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true"
     And I wait for the lab page to fully load
     And callout "0" does not exist
 
