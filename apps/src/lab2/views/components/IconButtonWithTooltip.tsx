@@ -1,4 +1,5 @@
 import Button, {ButtonProps} from '@code-dot-org/component-library/button';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {
   TooltipProps,
   WithTooltip,
@@ -56,6 +57,11 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
         },
         [onClick, containerRef]
       );
+
+      // Get the theme, if available. If not within a `ThemeProvider`,
+      // theme will be `undefined` which will then be ignored by `Tooltip`.
+      const {theme} = useTheme(true);
+
       return (
         <WithTooltip
           tooltipProps={{
@@ -65,6 +71,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
             direction: tooltipDirection,
             hideTail: hideTooltipTail,
             className: className,
+            'data-theme': theme,
           }}
         >
           <Button
