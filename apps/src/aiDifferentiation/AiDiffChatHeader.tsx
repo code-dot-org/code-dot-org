@@ -1,4 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import {
   BodyThreeText,
   StrongText,
@@ -35,13 +36,43 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
       </div>
       {!disableEndButtons && (
         <div className={style.chatHeaderButtons}>
-          <Button
-            color="gray"
+          <ActionDropdown
             size="s"
-            type="secondary"
-            iconLeft={{iconName: 'sparkles'}}
-            onClick={onSuggestPrompts}
-            text={commonI18n.aiDifferentiation_suggest_prompt()}
+            triggerButtonProps={{
+              size: 's',
+              color: 'gray',
+              type: 'secondary',
+              text: commonI18n.aiDifferentiation_suggest_prompt(),
+              iconLeft: {iconName: 'sparkles'},
+            }}
+            labelText={commonI18n.aiDifferentiation_suggest_prompt()}
+            name="aiDiffChatHeaderDropdown"
+            options={[
+              {
+                value: 'getStarted',
+                label: 'Get Started',
+                icon: {iconName: 'rocket-launch'},
+                onClick: onSuggestPrompts,
+              },
+              {
+                value: 'ideate',
+                label: 'Ideate',
+                icon: {iconName: 'spinner-scale'},
+                onClick: onSuggestPrompts,
+              },
+              {
+                value: 'create',
+                label: 'Create',
+                icon: {iconName: 'file-pen'},
+                onClick: onSuggestPrompts,
+              },
+              {
+                value: 'apPrep',
+                label: 'Ap Prep',
+                icon: {iconName: 'laptop-code'},
+                onClick: onSuggestPrompts,
+              },
+            ]}
           />
           <PDFDownloadLink
             document={<AiDiffPdf messages={messages} />}
