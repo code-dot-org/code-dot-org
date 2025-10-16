@@ -262,18 +262,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isTemporarilyReadOnly,
   ]);
 
+  const hasNoTabs = useMemo(() => {
+    return Object.keys(availableTabs).length === 0;
+  }, [availableTabs]);
+
   useEffect(() => {
     // Auto-collapse on initial mount if on a standalone project and there are no available tabs.
     // Only run this once to allow user to toggle the panel.
-    if (
-      !hasAutoCollapsedNoTabs.current &&
-      isProjectLevel &&
-      Object.keys(availableTabs).length === 0
-    ) {
+    if (!hasAutoCollapsedNoTabs.current && isProjectLevel && hasNoTabs) {
       dispatch(setIsStandaloneCollapsed(true));
       hasAutoCollapsedNoTabs.current = true;
     }
-  }, [isProjectLevel, availableTabs, dispatch]);
+  }, [isProjectLevel, hasNoTabs, dispatch]);
 
   useEffect(() => {
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
@@ -494,11 +494,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   // If the resource panel is expanded and there are no tabs, then clicking the settings button
                   // collapses the resource panel and essentially closes or hides the settings panel.
                   // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
-                  if (
-                    isProjectLevel &&
-                    Object.keys(availableTabs).length === 0 &&
-                    !isStandaloneCollapsed
-                  ) {
+                  if (isProjectLevel && hasNoTabs && !isStandaloneCollapsed) {
                     dispatch(setIsStandaloneCollapsed(true));
                   }
                 }}
