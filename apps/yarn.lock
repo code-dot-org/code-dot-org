@@ -11148,6 +11148,8 @@ __metadata:
     dapjs: "npm:^2.3.0"
     dedent: "npm:^1.5.1"
     details-element-polyfill: "https://github.com/javan/details-element-polyfill"
+    echarts: "npm:^5.6.0"
+    echarts-for-react: "npm:^3.0.2"
     ejs: "npm:^3.1.10"
     enzyme: "npm:^3.9.0"
     eslint: "npm:^8.56.0"
@@ -14297,6 +14299,29 @@ canvg@gabelerner/canvg:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 10/9b1d3e1baefeaf7d70799db8774149cef33b97183a6addceeba0cf6b85ba23ee2686f302f14482006df32df75d32b17c509c143a3689627929e4a8efaf483952
+  languageName: node
+  linkType: hard
+
+"echarts-for-react@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "echarts-for-react@npm:3.0.2"
+  dependencies:
+    fast-deep-equal: "npm:^3.1.3"
+    size-sensor: "npm:^1.0.1"
+  peerDependencies:
+    echarts: ^3.0.0 || ^4.0.0 || ^5.0.0
+    react: ^15.0.0 || >=16.0.0
+  checksum: 10/be9107e7c174fd8105d12e15c1ae4bbb828c4ca9a66ef99eec1660fc0c5db92e652f69a81c5c11c2b7b826b13ae79260569a6d74aea965ae4f31f0b4d18462e9
+  languageName: node
+  linkType: hard
+
+"echarts@npm:^5.6.0":
+  version: 5.6.0
+  resolution: "echarts@npm:5.6.0"
+  dependencies:
+    tslib: "npm:2.3.0"
+    zrender: "npm:5.6.1"
+  checksum: 10/e73344abb777fd8401c0b89a5d83b65c7a81a11540e2047d51f4aae9419baf4dc2524a5d9561f9ca0fe8d6b432c58b7a1d518f2a4338041046506db8257a1332
   languageName: node
   linkType: hard
 
@@ -27809,6 +27834,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"size-sensor@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "size-sensor@npm:1.0.2"
+  checksum: 10/de7050178ae9afee3388eb9191af0902b30ef83c26e8c9d9c203e1b560e270b947d978e4f56d211802112d09ef296931fa612f69155a483900f3b4717a0750d7
+  languageName: node
+  linkType: hard
+
 "slash@npm:^3.0.0":
   version: 3.0.0
   resolution: "slash@npm:3.0.0"
@@ -29674,6 +29706,13 @@ canvg@gabelerner/canvg:
     minimist: "npm:^1.2.6"
     strip-bom: "npm:^3.0.0"
   checksum: 10/5e55cc2fb6b800eb72011522e10edefccb45b1f9af055681a51354c9b597d1390c6fa9cc356b8c7529f195ac8a90a78190d563159f3a1eed10e01bbd4d01a8ab
+  languageName: node
+  linkType: hard
+
+"tslib@npm:2.3.0":
+  version: 2.3.0
+  resolution: "tslib@npm:2.3.0"
+  checksum: 10/9c55c9abd5ecd94e5fd37573db27e26933fb6c33506431403fb4627dcb8aa9a45b772afa6d05dd2c25dc1de22a213193251e6303742f3bcdc179e523a9295bfd
   languageName: node
   linkType: hard
 
@@ -32007,6 +32046,15 @@ canvg@gabelerner/canvg:
   version: 2.0.1
   resolution: "yoga-layout@npm:2.0.1"
   checksum: 10/f8f6bb2219b6225105f57d88001eeb0909b7e205a6f8e6acae79ef09f1233da4210bc5185c0997f2f0ab42bc21d9fb723c90d2b0b05d078ba542a3a2f0ae6e92
+  languageName: node
+  linkType: hard
+
+"zrender@npm:5.6.1":
+  version: 5.6.1
+  resolution: "zrender@npm:5.6.1"
+  dependencies:
+    tslib: "npm:2.3.0"
+  checksum: 10/25dfd476be243f051614f131675855d184eb05e8b9a39dc41146a3a553a17aad5ceba77e166d525be9c4adc2bb237c56dfdfb3456667940bbeddb05eef3deac7
   languageName: node
   linkType: hard
 

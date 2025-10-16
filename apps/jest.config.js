@@ -23,7 +23,7 @@ const jestAliases = {
  * Imports the application level aliases from webpack
  */
 Object.entries(APPLICATION_ALIASES).forEach(([alias, localPath]) => {
-  jestAliases[`${alias}/(.*)`] = `${localPath}/$1`;
+  jestAliases[`^${alias}/(.*)`] = `${localPath}/$1`;
 });
 
 /**

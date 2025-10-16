@@ -44,6 +44,8 @@ async function wait() {
   }
 }
 
+jest.mock('@cdo/apps/templates/rubrics/Chart');
+
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   post: jest.fn().mockResolvedValue({
     json: jest.fn().mockReturnValue({}),

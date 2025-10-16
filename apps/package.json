@@ -266,6 +266,8 @@
     "codemirror-spell-checker": "^1.1.2",
     "dapjs": "^2.3.0",
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
+    "echarts": "^5.6.0",
+    "echarts-for-react": "^3.0.2",
     "ejs": "^3.1.10",
     "eslint-linter-browserify": "^9.31.0",
     "fast-memoize": "2.0.2",

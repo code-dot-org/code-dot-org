@@ -40,6 +40,7 @@ const defaultRubric = {
   },
   learningGoals: [
     {
+      id: 1,
       key: 'story-learning-goal-1',
       learningGoal: 'Coding Proficiency',
       aiEnabled: false,
@@ -67,6 +68,7 @@ const defaultRubric = {
       ],
     },
     {
+      id: 2,
       key: 'story-learning-goal-2',
       learningGoal: 'Testing',
       aiEnabled: true,
