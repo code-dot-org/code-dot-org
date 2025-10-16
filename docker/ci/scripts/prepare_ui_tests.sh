@@ -21,7 +21,7 @@ cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
-dashboard_workers: 5
+dashboard_workers: 8
 disable_all_eyes_running: true
 ignore_eyes_mismatches: true
 localize_apps: true
