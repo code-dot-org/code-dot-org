@@ -1,4 +1,4 @@
-@use '../../lab2/views/components/layout/variables.scss' as v;
+@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import 'color.scss';
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
@@ -105,7 +105,7 @@ $tabs-default-spacing: 4px;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.625rem;
-  border-top: v.$default-border;
+  border-top: variables.$default-border;
   background: var(--background-neutral-secondary);
 }
 
@@ -122,7 +122,7 @@ $tabs-default-spacing: 4px;
 
 .imagePreview {
   max-height: 48px;
-  border-radius: v.$default-border-radius;
+  border-radius: variables.$default-border-radius;
   width: auto;
   height: auto;
   opacity: 1;
@@ -132,7 +132,7 @@ $tabs-default-spacing: 4px;
   @include remove-button-styles;
   align-self: end;
   font-size: 13px;
-  border-radius: v.$default-border-radius;
+  border-radius: variables.$default-border-radius;
   line-height: 1;
 
   @include focus-styles;
