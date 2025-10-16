@@ -260,11 +260,31 @@ class ClassSubmission < Form
       fl.push distance_query.as(:distance)
     end
 
-    docs = query.select(
+    # DEBUG: Capture and log the SQL query before execution
+    full_query = query.select(
       *fl,
       Forms.json('processed_data.location_p').as(:location_p),
       :id
-    ).limit(rows).to_a
+    ).limit(rows)
+
+    # Log the actual SQL to debug file
+    begin
+      File.open('/home/ubuntu/dave_debug.log', 'a') do |f|
+        f.puts "="*80
+        f.puts Time.now.to_s
+        f.puts "Params: #{params.inspect}"
+        f.puts "\nGenerated SQL:"
+        f.puts full_query.sql
+        f.puts "="*80
+        f.puts ""
+      end
+    rescue
+      # Ignore logging errors
+    end
+
+    # Execute the query
+    docs = full_query.to_a
+
     docs.each do |doc|
       doc[:school_level_ss] = JSON.parse(doc[:school_level_ss])
       doc[:class_languages_all_ss] = JSON.parse(doc[:class_languages_all_ss])
