@@ -118,13 +118,6 @@ $tabs-default-spacing: 4px;
   flex-direction: row;
   justify-content: flex-end;
   gap: 0.375rem;
-
-  & > button.assetButton {
-    border-radius: v.$default-border-radius;
-    line-height: 1;
-
-    @include focus-styles;
-  }
 }
 
 .imagePreview {
@@ -139,4 +132,8 @@ $tabs-default-spacing: 4px;
   @include remove-button-styles;
   align-self: end;
   font-size: 13px;
+  border-radius: v.$default-border-radius;
+  line-height: 1;
+
+  @include focus-styles;
 }
