@@ -1,0 +1,52 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-08T22:29:27.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###BEHIND THE SCENES\nMusic & Dance with AI doesn’t connect to a live AI model.",
+        "imageUrl": "",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1"
+      },
+      {
+        "text": "It uses **cached** (pre-generated) results—outputs created ahead of time and stored for the activity.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_musicX_-pl-3d352fd8-59b0-4867-bad6-e47083a5073f"
+      },
+      {
+        "text": "**Performance & Reliability** Running live AI in every classroom worldwide could cause slowdowns, inconsistent results, or high costs. Cached results keep the activity smooth and predictable.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_musicX_-pl-0b729ffc-a25b-4cdc-bf08-6309d3facb1a"
+      },
+      {
+        "text": "**Equity & Access** Pre-generated outputs ensure that all students, even in schools with older devices or limited internet, have the same quality experience.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_musicX_-pl-2ae07053-0ae4-4aa3-a1f6-7abe1ca0da98"
+      },
+      {
+        "text": "**Safety & Consistency** Live AI can produce unexpected or inappropriate results. By curating cached outputs, we can guarantee content that is classroom-safe, engaging, and still surprising.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_musicX_-pl-fd82b31e-3118-4478-bcd3-4ed9b43f0cdd"
+      },
+      {
+        "text": "Even though the system isn’t generating outputs on the spot, it was designed carefully to feel like AI  by aligning with two principles:\n* Non-Determinism – Students don’t all see the same results. The system draws from many pre-generated options to mimic the variety of real AI.\n* Creative Ownership – Students still guide the process through their own prompts and choices, so they feel like co-creators with the AI rather than passive users.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_musicX_-pl-10cc4ecc-d304-4a35-a0a8-bde1921384b0"
+      },
+      {
+        "text": "This is a great moment to reflect on the balance between authenticity and safety in designing AI learning experiences. Students get the “magic” of AI creation while you get the confidence of knowing the activity will work smoothly in your classroom.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_musicX_-pl-6bf95495-1008-4861-93be-90c3db835d3a"
+      }
+    ],
+    "name_suffix": "_-pl"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-08T22:29:27.690+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music5_-pl\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music5_-pl\"},{\"changed_at\":\"2025-10-08 22:31:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+}]]></config>
+</Panels>

@@ -88,9 +88,6 @@ export const AllTypographyElements: Story = {
       <MuiTypography gutterBottom variant="strong">
         This is a Typography Component. (strong)
       </MuiTypography>
-      <MuiTypography gutterBottom variant="extraStrong">
-        This is a Typography Component. (extra-strong)
-      </MuiTypography>
       <MuiTypography gutterBottom component="figcaption" variant="figcaption">
         This is a Typography Component. (figcaption)
       </MuiTypography>
@@ -185,9 +182,6 @@ export const OtherTexts: Story = {
       <MuiTypography gutterBottom variant="strong">
         <strong>This is a Typography Component. (strong)</strong>
       </MuiTypography>
-      <MuiTypography gutterBottom variant="extraStrong">
-        This is a Typography Component. (extra-strong)
-      </MuiTypography>
       <MuiTypography gutterBottom component="figcaption" variant="figcaption">
         This is a Typography Component. (figcaption)
       </MuiTypography>
@@ -245,16 +239,8 @@ export const RichTextExamples: Story = {
         <strong>This is a body-two strong text</strong>
       </MuiTypography>
       <MuiTypography gutterBottom variant="body2">
-        <strong>This is a body-two extra-strong text</strong>
-      </MuiTypography>
-      <MuiTypography gutterBottom variant="body2">
         <strong>
           <em>This is a body-two strong em text</em>
-        </strong>
-      </MuiTypography>
-      <MuiTypography gutterBottom variant="body2">
-        <strong>
-          <em>This is a body-two extra-strong em text</em>
         </strong>
       </MuiTypography>
       <MuiTypography gutterBottom variant="em">
@@ -263,14 +249,8 @@ export const RichTextExamples: Story = {
       <MuiTypography gutterBottom variant="strong">
         This is a strong text
       </MuiTypography>
-      <MuiTypography gutterBottom variant="extraStrong">
-        This is an extra-strong text
-      </MuiTypography>
-      <MuiTypography gutterBottom variant="strong">
-        <em>This is a strong em text</em>
-      </MuiTypography>
-      <MuiTypography gutterBottom variant="extraStrong">
-        <em>This is an extra-strong em text</em>
+      <MuiTypography gutterBottom variant="em">
+        <strong>This is a strong em text</strong>
       </MuiTypography>
     </>
   ),

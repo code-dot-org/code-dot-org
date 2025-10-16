@@ -49,6 +49,7 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
+      responseCallback?: (response: string) => string;
     },
     thunkAPI
   ) => {
@@ -63,6 +64,7 @@ export const submitChatContents = createAsyncThunk(
       clientType,
       analyticsProperties,
       userAddedSelectionContext,
+      responseCallback,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -138,6 +140,9 @@ export const submitChatContents = createAsyncThunk(
     // A teacher will view that the level is now in progress.
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
+      if (responseCallback && message.role === Role.ASSISTANT) {
+        message.chatMessageText = responseCallback(message.chatMessageText);
+      }
       dispatch(addChatEvent(message));
     });
   }

@@ -34,6 +34,7 @@ class BubbleChoice < DSLDefined
     display_name
     description
     uses_lab2
+    is_project_level
   )
 
   ALPHABET = ('a'..'z').to_a

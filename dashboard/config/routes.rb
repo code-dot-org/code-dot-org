@@ -87,7 +87,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
+    patch '/api/v1/user_scripts/course/:course_id/unit/:script_id', to: 'api/v1/user_scripts#update'
 
     get '/download/:product', to: 'hoc_download#index'
 
@@ -736,11 +736,11 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
-    post '/lti/v1/integrations', to: 'lti_v1#create_integration'
-    get '/lti/v1/integrations', to: 'lti_v1#new_integration'
     post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+
     namespace :lti do
       namespace :v1 do
+        resources :integrations, only: [:new, :create]
         resource :feedback, controller: :feedback, only: %i[create show]
         controller :dynamic_registration do
           get 'dynamic_registration', action: :new_registration
@@ -1292,6 +1292,7 @@ Dashboard::Application.routes.draw do
 
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
+    post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'

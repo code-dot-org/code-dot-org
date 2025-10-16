@@ -9,6 +9,7 @@ import {
 } from './ai/generate/GenerateCode';
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
 import {setUpBlocklyForMusicLab} from './blockly/setup';
+import {defaultMetadata} from './DefaultMusic';
 import MusicLibrary from './player/MusicLibrary';
 import MusicPlayer from './player/MusicPlayer';
 import {MusicLabConfig} from './types';
@@ -35,7 +36,14 @@ class ProjectPlayer {
     this.eventMeasures = null;
     this.workspace.initHeadless();
 
-    this.currentMetadata = await this.loadMetadata(channelId, useLocalStorage);
+    if (channelId === 'default-music') {
+      this.currentMetadata = defaultMetadata;
+    } else {
+      this.currentMetadata = await this.loadMetadata(
+        channelId,
+        useLocalStorage
+      );
+    }
     const {libraryName, packId, playbackEvents} = this.currentMetadata;
 
     let library = MusicLibrary.getInstance();

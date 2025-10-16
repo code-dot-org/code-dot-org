@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
@@ -29,6 +28,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -83,7 +83,7 @@ $(document).ready(function () {
     setSelectedSectionData(selectedSection);
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       {sections.length === 0 ? (
         // If a teacher has no sections, we will send them directly to the homepage to bypass

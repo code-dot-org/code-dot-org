@@ -3,7 +3,6 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
 import {MiniApps} from '@codebridge/constants';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -19,6 +18,7 @@ import {
   setHasError,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
@@ -74,7 +74,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName, {
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName, {
         levelPath,
       });
       logUserLevelInteraction({

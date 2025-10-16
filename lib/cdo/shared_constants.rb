@@ -738,6 +738,7 @@ module SharedConstants
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   AI_EVALUATION_TYPES = {
     SINGLE_STUDENT: 'single_student',
@@ -877,6 +878,12 @@ module SharedConstants
     {value: "parent", label: "Parent", category: 'other'},
     {value: "other", label: "Other", category: 'other'}
   ].freeze
+
+  RESOURCE_EMBEDDABILITY_OPTIONS = {
+    EMBED_AND_RESOURCE_DROPDOWN: {value: "embed_and_resource_dropdown", label: "AI TA knowledge base and resource dropdown"},
+    EMBED_ONLY: {value: "embed_only", label: "AI TA knowledge base only"},
+    RESOURCE_DROPDOWN_ONLY: {value: "resource_dropdown_only", label: "Resource dropdown only"}
+  }.freeze
 
   AI_DIFF_CONTEXT = {
     LESSON: "lesson",

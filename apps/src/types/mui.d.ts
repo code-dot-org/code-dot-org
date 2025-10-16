@@ -12,7 +12,6 @@ declare module '@mui/material/styles' {
     overline3: React.CSSProperties;
     figcaption: React.CSSProperties;
     strong: React.CSSProperties;
-    extraStrong: React.CSSProperties;
     em: React.CSSProperties;
   }
 
@@ -24,7 +23,6 @@ declare module '@mui/material/styles' {
     overline3?: React.CSSProperties;
     figcaption?: React.CSSProperties;
     strong?: React.CSSProperties;
-    extraStrong?: React.CSSProperties;
     em?: React.CSSProperties;
   }
 }
@@ -40,7 +38,6 @@ declare module '@mui/material/Typography' {
     caption: false; // disable the default caption
     figcaption: true; // add figcaption variant to match DSCO naming pattern
     strong: true;
-    extraStrong: true;
     em: true;
   }
 }

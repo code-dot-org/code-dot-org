@@ -1,0 +1,24 @@
+{
+  "name": "foundations-of-ai-programming-tutor-pilot-2025",
+  "script_names": [
+    "aif2-tutor-pilot-2025"
+  ],
+  "original_script_names": [
+    "aif2-tutor-pilot-2025"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "foundations-of-ai-programming-tutor-pilot",
+    "numbered_units": "auto",
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

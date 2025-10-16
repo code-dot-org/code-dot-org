@@ -257,6 +257,6 @@ export const getAddParameterButtonWithCallback = (
   return {
     kind: 'button',
     text: '+',
-    callbackKey: addParameterCallbackKey,
+    callbackkey: addParameterCallbackKey,
   };
 };
