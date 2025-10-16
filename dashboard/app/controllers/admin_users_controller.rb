@@ -49,7 +49,7 @@ class AdminUsersController < ApplicationController
     user = User.from_identifier(user_id)
 
     if user
-      log_admin_action("assume_identity", {effective_user_id: user.id})
+      log_admin_action("assume_identity", {affected_user_id: user.id})
       bypass_sign_in user
       # Set cookie to indicate assumed identity
       session[:assumed_identity] = true
@@ -64,7 +64,7 @@ class AdminUsersController < ApplicationController
     user = User.find_by_id(params.require(:user_id))
     if user
       user.destroy
-      log_admin_action("delete_user", {deleted_user_id: user.id})
+      log_admin_action("delete_user", {affected_user_id: user.id})
       flash[:alert] = "User (ID: #{params[:user_id]}) Deleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or deleted"
@@ -76,7 +76,7 @@ class AdminUsersController < ApplicationController
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
       user.undestroy
-      log_admin_action("undelete_user", {undeleted_user_id: user.id})
+      log_admin_action("undelete_user", {affected_user_id: user.id})
       flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
@@ -290,6 +290,7 @@ class AdminUsersController < ApplicationController
     if permission.present? && emails.present?
       failed_emails = []
       succeeded_emails = []
+      succeeded_ids = []
       emails.split.each do |email|
         user = restricted_users.find_by(email: email)
         unless user.try(:teacher?)
@@ -298,9 +299,10 @@ class AdminUsersController < ApplicationController
         end
         user.permission = permission
         succeeded_emails.push(email)
+        succeeded_ids.push(user.id)
       end
       unless succeeded_emails.empty?
-        log_admin_action("bulk_grant_permission", {affected_user_emails: succeeded_emails, permission: permission})
+        log_admin_action("bulk_grant_permission", {affected_user_ids: succeeded_ids, permission: permission})
         flash[:notice] = "#{permission.titleize} Permission added for #{succeeded_emails.length} User#{succeeded_emails.length == 1 ? '' : 's'}"
       end
       unless failed_emails.empty?
