@@ -17,6 +17,8 @@ import {AiTutorLegacyLabContextHelper} from './aiTutorContextHelper';
 import AiTutorSidebar from './AiTutorSidebar';
 
 import styles from './AiTutorContainer.module.scss';
+import {useSelector} from 'react-redux';
+import {LegacyLabsState} from '../../types';
 
 const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
@@ -49,12 +51,16 @@ export const AiTutorContainer: FC<{
     return callback();
   };
 
+  const labState = useSelector(
+    (state: {pageConstants: LegacyLabsState}) => state.pageConstants
+  );
+
   const analyticsData = {
-    labType: labType,
-    channelId: channelId,
+    labType: labState.appType,
+    channelId: labState.channelId,
     location: window.location.href,
-    levelId: levelId,
-    unitId: unitId,
+    levelId: labState.serverLevelId,
+    unitId: labState.serverScriptId,
   };
 
   return (
