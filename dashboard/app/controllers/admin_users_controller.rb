@@ -49,7 +49,7 @@ class AdminUsersController < ApplicationController
     user = User.from_identifier(user_id)
 
     if user
-      log_admin_action("assume_identity", {affected_user_id: user.id})
+      log_admin_action("assume_identity", user.id)
       bypass_sign_in user
       # Set cookie to indicate assumed identity
       session[:assumed_identity] = true
@@ -64,7 +64,7 @@ class AdminUsersController < ApplicationController
     user = User.find_by_id(params.require(:user_id))
     if user
       user.destroy
-      log_admin_action("delete_user", {affected_user_id: user.id})
+      log_admin_action("delete_user", user.id)
       flash[:alert] = "User (ID: #{params[:user_id]}) Deleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or deleted"
@@ -76,7 +76,7 @@ class AdminUsersController < ApplicationController
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
       user.undestroy
-      log_admin_action("undelete_user", {affected_user_id: user.id})
+      log_admin_action("undelete_user", user.id)
       flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
@@ -190,7 +190,7 @@ class AdminUsersController < ApplicationController
     script_id = params[:script_id]
 
     User.delete_progress_for_unit(user_id: user_id, script_id: script_id)
-    log_admin_action("delete_progress", {affected_user_id: user_id, script_id: script_id, reason: params[:reason]})
+    log_admin_action("delete_progress", user_id, {script_id: script_id, reason: params[:reason]})
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
   end
@@ -270,7 +270,7 @@ class AdminUsersController < ApplicationController
       return
     end
     @user.permission = params[:permission]
-    log_admin_action("grant_permission", {affected_user_id: user_id, permission: params[:permission]})
+    log_admin_action("grant_permission", user_id, {permission: params[:permission]})
     redirect_to permissions_form_path(search_term: user_id)
   end
 
@@ -279,7 +279,7 @@ class AdminUsersController < ApplicationController
     @user = restricted_users.find_by(id: user_id)
     permission = params[:permission]
     if @user.try(:delete_permission, permission)
-      log_admin_action("revoke_permission", {affected_user_id: user_id, permission: permission})
+      log_admin_action("revoke_permission", user_id, {permission: permission})
     end
     redirect_to permissions_form_path(search_term: user_id)
   end
@@ -290,7 +290,6 @@ class AdminUsersController < ApplicationController
     if permission.present? && emails.present?
       failed_emails = []
       succeeded_emails = []
-      succeeded_ids = []
       emails.split.each do |email|
         user = restricted_users.find_by(email: email)
         unless user.try(:teacher?)
@@ -298,11 +297,10 @@ class AdminUsersController < ApplicationController
           next
         end
         user.permission = permission
+        log_admin_action("bulk_grant_permission", user.id, {permission: permission})
         succeeded_emails.push(email)
-        succeeded_ids.push(user.id)
       end
       unless succeeded_emails.empty?
-        log_admin_action("bulk_grant_permission", {affected_user_ids: succeeded_ids, permission: permission})
         flash[:notice] = "#{permission.titleize} Permission added for #{succeeded_emails.length} User#{succeeded_emails.length == 1 ? '' : 's'}"
       end
       unless failed_emails.empty?
@@ -376,8 +374,8 @@ class AdminUsersController < ApplicationController
     end
   end
 
-  private def log_admin_action(event, attributes = {})
-    log_payload =  {event: event, namespace: 'admin', request_id: request.request_id, authenticated_user_id: current_user.id}.merge(attributes)
+  private def log_admin_action(event, affected_user_id = nil, attributes = {})
+    log_payload =  {event: event, namespace: 'admin', request_id: request.request_id, authenticated_user_id: current_user.id, affected_user_id: affected_user_id}.merge(attributes)
     CDO.log.warn log_payload.to_json
   end
 end
