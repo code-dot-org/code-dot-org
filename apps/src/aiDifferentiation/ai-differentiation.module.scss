@@ -74,6 +74,14 @@ $fab-height: 48;
 
     .chatHeaderTitle {
       flex: 1 0 0;
+      max-width: 180px;
+
+      p {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
     .chatHeaderButtons {
