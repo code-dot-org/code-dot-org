@@ -47,7 +47,7 @@ class AichatGeminiClient < AichatAiClient
         responseJsonSchema: response_json_schema,
         # Set thinking budget to 0 to disable "thinking".
         thinkingConfig: {
-          thinkingBudget: 0
+          thinkingBudget: 1000
         }
       }.compact, # Use compact to remove null responseMimeType / responseJsonSchema
       system_instruction: {
