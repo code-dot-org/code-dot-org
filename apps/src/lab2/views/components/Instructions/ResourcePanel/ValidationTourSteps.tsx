@@ -14,6 +14,13 @@ import {
 import {Tabs} from './types';
 import {VALIDATION_TOUR_STEPS} from './validationTourHelpers';
 
+// Check if tour should be disabled (e.g., during UI tests) before any rendering.
+// This runs when the module is first imported so localStorage is set early.
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('noIntrojs') === 'true') {
+  trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
+}
+
 interface ValidationTourStepsProps {
   hasValidationConditions: boolean;
   validationSettings: ValidationSettings | undefined;
