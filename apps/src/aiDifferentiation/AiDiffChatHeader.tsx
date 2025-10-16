@@ -43,10 +43,11 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
               color: 'gray',
               type: 'secondary',
               text: commonI18n.aiDifferentiation_suggest_prompt(),
-              iconLeft: {iconName: 'sparkles'},
+              iconLeft: {iconName: 'solid-pen-sparkle', iconFamily: 'kit'},
             }}
             labelText={commonI18n.aiDifferentiation_suggest_prompt()}
             name="aiDiffChatHeaderDropdown"
+            menuPlacement="right"
             options={[
               {
                 value: 'getStarted',
