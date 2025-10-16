@@ -10,7 +10,7 @@ export type SegmentButtonType = 'withLabel' | 'iconOnly' | 'number';
 export interface SegmentedButtonModel {
   /** Button Label */
   label?: string;
-  /** Aria label */
+  /** Aria label for icon only buttons without labels */
   ariaLabel?: string;
   /** Is button disabled */
   disabled?: boolean;
