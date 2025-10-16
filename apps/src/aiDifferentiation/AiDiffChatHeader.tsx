@@ -59,30 +59,6 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
           </PDFDownloadLink>
         </div>
       )}
-      <div className={style.chatHeaderButtons}>
-        <Button
-          color="gray"
-          size="s"
-          type="secondary"
-          iconLeft={{iconName: 'sparkles'}}
-          onClick={onSuggestPrompts}
-          text={commonI18n.aiDifferentiation_suggest_prompt()}
-        />
-        <PDFDownloadLink
-          document={<AiDiffPdf messages={messages} />}
-          fileName="ai_differentiation_chat.pdf"
-        >
-          <Button
-            color="gray"
-            size="s"
-            type="secondary"
-            isIconOnly
-            icon={{iconName: 'download'}}
-            onClick={() => {}}
-            aria-label={commonI18n.aiDifferentiation_download_pdf()}
-          />
-        </PDFDownloadLink>
-      </div>
     </div>
   );
 };
