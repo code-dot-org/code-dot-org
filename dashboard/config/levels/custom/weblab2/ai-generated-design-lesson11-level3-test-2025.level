@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-15T18:44:07.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "ai-generated-design-lesson11-template-test-2025",
+    "long_instructions": "##QA Mindset\r\n###Step 2: Refine\r\n- Write targeted fixes (_e.g., “Place nav at top with links labeled Home, About, Contact”_).\r\n- Apply POUR checklist from Lesson 9 to ensure accessibility.\r\n- Save **Version 2**\r\n\r\n###Step 3: Debug\r\n- For persistent issues, apply Debugging Checklist strategies:\r\n    - Rephrase prompt\r\n    - Break task into smaller prompts\r\n    - Revert to earlier version\r\n\r\n###Step 4: Iterate\r\n- Continue to work on at least two pages (Homepage + About)",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-15 18:44:10 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 18:50:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

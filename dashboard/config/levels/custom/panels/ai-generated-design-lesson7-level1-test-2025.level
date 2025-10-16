@@ -10,27 +10,31 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "Scenario: Simple design challenge (e.g., “Design a better way for students to keep track of homework assignments.”",
-        "imageUrl": "",
-        "key": "undefined-b8e93e67-06ce-4df3-9e14-eac51dfd50ca"
+        "text": "#Do This:\n\n**Every app starts with understanding the people who will use it.**\n\nWith your partner, discuss what a user who needs this app might want or need.\n- *What frustrations might they have?*\n- *What would make this app useful for them?*",
+        "imageUrl": "https://images.code.org/058196490148fcd8886badb844b389ca-Screenshot 2025-10-15 101552.png",
+        "key": "undefined-b8e93e67-06ce-4df3-9e14-eac51dfd50ca",
+        "layout": "text-bottom-left"
       },
       {
-        "text": "Fictional user quote: Example from “The Organized Athlete” - “I have practice right after school, so I need to see all my assignments on my phone during lunch. If I forget, it's too late.”",
-        "imageUrl": "",
-        "key": "undefined-b425644a-5615-4d4f-ae70-21ea56e46dcc"
+        "text": "# Do This:\n\n**Discuss** with your partner and **record evidence vs. inference** in your activity guide T-Chart.\n- *Example:*\n   - _**Evidence** = Alex uses a phone at lunch_\n   - _**Inference** = Alex needs quick access offline_",
+        "imageUrl": "https://images.code.org/657a2fb765c52dab5568dfea40197663-Screenshot 2025-10-15 103952.png",
+        "key": "undefined-b425644a-5615-4d4f-ae70-21ea56e46dcc",
+        "layout": "text-bottom-left"
       },
       {
-        "text": "AI support example: Screenshot of prompt + AI suggestion for persona details.",
-        "imageUrl": "",
-        "key": "undefined-71ae662f-45a6-4495-95ca-e38b0f375bc6"
+        "text": "# Use AI to Build Persona Details\n\nAI can help you think through your user's goals, frustrations, and daily context - but **you** stay in charge of what feels realistic.",
+        "imageUrl": "https://images.code.org/154e852b73c4947958b8ce90440a8370-panel3.gif",
+        "key": "undefined-71ae662f-45a6-4495-95ca-e38b0f375bc6",
+        "layout": "text-bottom-right"
       },
       {
-        "text": "Final Persona Result: Name, photo, demographics, goals, frustrations.",
-        "imageUrl": "",
-        "key": "undefined-246fb82f-eda2-45ea-b109-3bcd3dea5af8"
+        "text": "# Use AI to Help Create a Problem Statement\n\n* Discuss with your partner how this statement connects to Alex’s needs.\n* What makes it focused on a need, not a solution?\n* Then, write your own problem statement in your Activity Guide.",
+        "imageUrl": "https://images.code.org/32721c622e65f70d00622e892e6d8252-Screenshot 2025-10-15 132453.png",
+        "key": "undefined-246fb82f-eda2-45ea-b109-3bcd3dea5af8",
+        "layout": "text-top-left"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-15 04:30:52 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-15 04:30:52 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 15:42:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 16:09:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 17:39:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 17:40:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 20:06:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 20:10:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 20:12:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 20:23:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 20:25:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 20:25:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 20:28:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 20:32:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
