@@ -194,6 +194,10 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   };
 
   if (useResourcePanel) {
+    // Check if tours should be disabled (e.g., during UI tests)
+    const urlParams = new URLSearchParams(window.location.search);
+    const disableTours = urlParams.get('noIntrojs') === 'true';
+
     return (
       <div style={style} className={className}>
         <ResourcePanel
@@ -216,8 +220,8 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           versionHistoryProps={{startSources}}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           aiTutorChatButtonData={aiTutorChatButtonData}
-          isValidationTourEnabled={appName === 'pythonlab'}
-          isOnboardingTourEnabled={true}
+          isValidationTourEnabled={!disableTours && appName === 'pythonlab'}
+          isOnboardingTourEnabled={!disableTours}
           aiTutorSystemPromptName={aiTutorSystemPromptName}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
