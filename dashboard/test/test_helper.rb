@@ -16,6 +16,8 @@ reporters = [CowReporter.new]
 if CI::Utils.ci_job_ui_tests?
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/dashboard")
 end
+# Add ProfileReporter when PROFILE_TESTS is set
+reporters << ProfileReporter.new if ENV['PROFILE_TESTS']
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 
