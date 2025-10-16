@@ -1,0 +1,32 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-16T03:12:35.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\n<br/> 1. Upload an image or screenshot of your site map, **or** paste your written outline.\r\n\r\n<br/> 2. Prompt AI to generate the **HTML for your full site**, starting with the Home page and including all pages shown in your site map.\r\n\r\n\r\n**Optional Prompt:**\r\n\r\n> Use my site map to create the HTML for my full website. Start with the Home page and include a navigation bar that links to all sections. Each section should have its own page with simple placeholder text or headings for now.\r\n\r\n<br/> 3. Check that all pages connect and match your site map. If something is missing or unclear, update your prompt and try again.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "produce",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-16 03:19:33 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 03:20:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

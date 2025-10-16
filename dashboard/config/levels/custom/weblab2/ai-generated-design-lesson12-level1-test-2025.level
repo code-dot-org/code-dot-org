@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-15T20:50:57.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "ai-generated-design-lesson11-template-test-2025",
+    "long_instructions": "## Webpage Responsiveness\r\n\r\n###Step 1: Test for responsiveness\r\n- Resize the browser window to simulate a smaller screen or tablet.\r\n- Then toggle between **Desktop** and **Mobile** on the top right.\r\n- Log issues using the Responsiveness Checklist.\r\n\r\n###Step 2: Debug\r\n- Pick 1–2 logged issues.\r\n- Use AI to fix these issues.\r\n- Save the updated version, e.g. **V3 - fixed cards layout for mobile**\r\n\r\n###Step 3: Iterate\r\n- Continue to work on at least two pages making them responsive to different screen sizes.\r\n\r\n:::details [Not sure how to prompt AI?]\r\nTry modifying these examples:\r\n- *“Make the navigation collapse into a hamburger menu on small screens.”*\r\n- *“Stack the sidebar below main content when screen width < 768px.”*\r\n:::",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-15T20:50:57.619+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson11-level3-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson11-level3-test-2025\"},{\"changed_at\":\"2025-10-15 20:51:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 21:04:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>
