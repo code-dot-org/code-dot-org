@@ -6,6 +6,7 @@ import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
 import AiDiffSidebar from './AiDiffSidebar';
+import {defaultThreadTitle} from './constants';
 import AiDiffNotificationList from './notifications/AiDiffNotificationList';
 import {
   ChatItem,
@@ -24,8 +25,6 @@ interface AiDiffWorkSpaceProps {
   curriculumCourses?: string[];
   unreadNotificationCount: number;
 }
-
-const defaultThreadTitle = 'Unnamed chat';
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   context,
@@ -134,6 +133,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           threadFetchCallback={fetchThreads}
           threadMessages={threadMessages}
           threadTitle={threadTitle}
+          setThreadTitle={setThreadTitle}
           key={keyId}
           threadId={threadId}
           setThreadId={setThreadId}

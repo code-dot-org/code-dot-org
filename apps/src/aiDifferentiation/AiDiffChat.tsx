@@ -44,6 +44,7 @@ import {
   SUGGESTED_PROMPTS_FOR_SELECTION,
 } from './AiDiffPredefinedPrompts';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
+import {defaultThreadTitle} from './constants';
 import {ChatItem, ChatPrompt, Context, SuggestPromptsType} from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -84,6 +85,7 @@ interface AiDiffChatProps {
   context: Context;
   threadMessages?: ChatItem[];
   threadTitle?: string;
+  setThreadTitle?: Dispatch<SetStateAction<string>>;
   scriptName?: string;
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
@@ -100,7 +102,8 @@ interface AiDiffChatProps {
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
   threadMessages = [],
-  threadTitle = 'Unnamed chat',
+  threadTitle = defaultThreadTitle,
+  setThreadTitle,
   scriptName,
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
@@ -253,14 +256,28 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         status: Status.OK,
       };
 
+      if (
+        setThreadTitle &&
+        (!threadTitle || threadTitle === defaultThreadTitle)
+      ) {
+        setThreadTitle(message.slice(0, 100));
+      }
+
       setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
       getAIResponse(message, false, null);
     },
-    [setMessageHistory, getAIResponse]
+    [threadTitle, getAIResponse, setThreadTitle]
   );
 
   const onPromptSelect = React.useCallback(
     (prompt: ChatPrompt) => {
+      if (
+        setThreadTitle &&
+        (!threadTitle || threadTitle === defaultThreadTitle)
+      ) {
+        setThreadTitle(prompt.label);
+      }
+
       if (prompt.response !== undefined) {
         setMessageHistory(prevMessages => [
           ...prevMessages,
@@ -281,7 +298,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         getAIResponse(prompt.prompt, true, prompt.label);
       }
     },
-    [getAIResponse, setMessageHistory]
+    [getAIResponse, setThreadTitle, threadTitle]
   );
 
   React.useEffect(() => {
