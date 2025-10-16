@@ -10,27 +10,30 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "#What is it?\n\nIndustry is changing - engineers now have these tools built into their platform ",
-        "imageUrl": "",
-        "key": "undefined-1cc01415-69b7-43b1-b47f-22f4e2abfbc5"
+        "text": "#What is it?\n\nThe computer science industry is changing! \n\nAI tools are part of every developer’s toolkit — and now they’re part of yours.\n\nThe AI Tutor is here to help you figure things out — kind of like a built-in mentor that understands what you’re working on.",
+        "imageUrl": "https://images.code.org/1a3a64be6251cc1c84226f5b62290dd3-Screenshot 2025-10-15 161135.png",
+        "key": "undefined-1cc01415-69b7-43b1-b47f-22f4e2abfbc5",
+        "layout": "text-bottom-left"
       },
       {
-        "text": "# Knows about you: \n- Level instructions\n- Your code\n- Errors you are running into \n- Documentation \n",
-        "imageUrl": "",
-        "key": "undefined-aecf9110-f8f6-4372-912a-593cee5fdc90"
+        "text": "# What the tool knows about you:\n\nThe AI tool doesn’t “know” you like a person — it only sees:\n* Your code in this lab\n* Errors or output messages\n* The instructions you’re working on\n* Documentation and examples from the course\n\nThat’s it! It uses that information to give you hints and explanations that match where you are in the lesson.\n",
+        "imageUrl": "https://images.code.org/6a6fefe73cac79a88b2d72513bc6c389-Screenshot 2025-10-15 163913.png",
+        "key": "undefined-aecf9110-f8f6-4372-912a-593cee5fdc90",
+        "layout": "text-top-left"
       },
       {
-        "text": "# What can it help me do?\n- Clarify instructions\n- Debug code, clean up code \n- Explore documentation\n- Give hints and examples\n",
-        "imageUrl": "",
-        "key": "undefined-e1cc32a2-9453-41c5-a96a-568778481214"
+        "text": "# What can it help me do?\n\nThink of the AI Tutor as your **first stop** when you need a hand:\n* **Clarify instructions:** ask it to explain what the challenge wants.\n* **Debug code:** get help finding and fixing errors.\n* **Clean up code:** make your code easier to read.\n* **Explore documentation:** see examples and commands in action.\n* **Get hints and examples:** learn from sample solutions.\n\nTry **asking the AI first** — then check with your teacher if you’re still stuck.\n",
+        "imageUrl": "https://images.code.org/ec4c5497c1391b80998882cf549d9757-Screenshot 2025-10-15 162506.png",
+        "key": "undefined-e1cc32a2-9453-41c5-a96a-568778481214",
+        "layout": "text-top-left"
       },
       {
-        "text": "# Where the tool is\n- 2 versions - one for legacy lab and one for lab 2\n- *Tess to create a gif*\n",
+        "text": "# Where can I find the tool?\n\nIn the Python Lab, look to the right side of your screen and you’ll see the AI Tutor tab \n\nFrom there, type your question or ask for help on your code.\n\nYou can keep the Tutor open while you test and run your programs.\n",
         "imageUrl": "",
         "key": "undefined-11161af7-e809-43a4-b88a-f95f8091894a"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-14 20:32:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14 20:32:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 22:39:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 22:50:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 22:59:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 23:05:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 23:05:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 23:11:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 23:26:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 23:39:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

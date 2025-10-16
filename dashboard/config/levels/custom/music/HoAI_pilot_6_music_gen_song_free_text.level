@@ -10,6 +10,7 @@
       "library": "launch2024",
       "aiCodeGenerate": "true",
       "aiCodeGenerateText": "true",
+      "dancerMove": "dab",
       "aiCodeGenerateAdlib": {
         "id": "length",
         "template": "Please code a music remix that layers {type1}, {type2}, and {type3} together, around {length} measures long.",
@@ -74,7 +75,7 @@
     "long_instructions": "####Remix a song for the party!\r\nUse AI to help get started with the code.",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-14T23:09:53.896+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_gen_song\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_gen_song\"},{\"changed_at\":\"2025-10-14 23:11:43 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T23:09:53.896+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_gen_song\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_gen_song\"},{\"changed_at\":\"2025-10-14 23:11:43 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-15 16:57:02 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

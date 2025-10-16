@@ -12,8 +12,8 @@
     "disable_edit_run_for_submission": "false",
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
-        "temperature": 0.5,
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -31,20 +31,24 @@
         }
       },
       "visibilities": {
-        "selectedModelId": "readonly",
-        "temperature": "editable",
-        "systemPrompt": "editable",
-        "retrievalContexts": "editable",
-        "modelCardInfo": "editable"
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
-      "hidePresentationPanel": false,
+      "levelSystemPrompt": "Assist students with the following tasks:\n- Create a fictional product.\n- Create a sample user persona\n- Build a mini brand kit with:\n\t- 3–5 color swatches\n\t- A font pair (heading + body text)\n\t- 1–2 descriptive style words (e.g., sleek, bold, approachable)\n- Connect your design choices for your fictional product back to the sample user persona.\n\nSample products (model):\n- Spark Smoothie Bar (on-campus smoothies)\n- Momentum (sports-training app)\n- SnapStudy (study timer + focus sounds)\n- Kindling (YA book subscription)\n\nSample Persona(model):\n- Who she is: Varsity winger + part-time barista. Ten-minute passing periods are her whole window.\nHabits & prefs: Saves favorite orders; lactose-sensitive; lives in Notes and Reminders; cracked iPhone screen.\nNeeds: Speed, price clarity, and simple choices that don’t derail her day.\n\nWhen users prompt the AI, ask them if they want a fictional product or a persona. If so, generate a new one and provide it for the user. \n\nIf they ask for help with colors, fonts, style words, or the connection between the style kit and the user persona, do not give direct answers. Ask them probing questions, assist with one example, if pressed, but do not complete the whole task for the user. \n",
+      "hidePresentationPanel": true,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01"
+        "gpt-4o-mini"
       ],
-      "multimodalEnabled": false
-    }
+      "multimodalEnabled": true
+    },
+    "display_name": "AI Chat ",
+    "long_instructions": "##Create a Mini Brand Kit\r\n\r\nUse AI to assist you with the following:\r\n- Create a fictional product.\r\n- Create a sample user persona\r\n- Build a mini brand kit with:\r\n\t- 3–5 color swatches\r\n\t- A font pair (heading + body text)\r\n\t- 1–2 descriptive style words (e.g., sleek, bold, approachable)\r\n- Connect your design choices for your fictional product back to the sample user persona.\r\n\r\n\r\n",
+    "bubble_choice_description": "Use AI to chat through your ideas for the brand kit.",
+    "thumbnail_url": "https://images.code.org/cc00aad3ebc4bddcb48a0fcaf007f292-aiChat.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-14 19:09:38 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14 19:09:38 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 13:24:00 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 13:58:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 13:59:09 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 13:59:37 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 14:06:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
