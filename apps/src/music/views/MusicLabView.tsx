@@ -389,7 +389,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 clearCode={clearCode}
                 allowPackSelection={allowPackSelection}
                 skipUrl={skipUrl}
-                showSettings={!showInstructions}
                 hideChaff={hideChaff}
               />
             }

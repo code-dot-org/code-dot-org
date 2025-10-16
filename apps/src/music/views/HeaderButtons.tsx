@@ -4,10 +4,8 @@ import Typography from '@code-dot-org/component-library/typography';
 import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
-import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -61,7 +59,6 @@ interface HeaderButtonsProps {
   clearCode: () => void;
   allowPackSelection: boolean;
   skipUrl: string | undefined;
-  showSettings: boolean;
   hideChaff: () => void;
 }
 
@@ -74,7 +71,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   clearCode,
   allowPackSelection,
   skipUrl,
-  showSettings,
   hideChaff,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
@@ -143,8 +139,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [dialogControl, skipUrl]);
 
-  const settings = useBlocklySettings();
-
   return (
     <div className={moduleStyles.container} ref={containerRef} tabIndex={-1}>
       {/* Show static pack info; clickable Start Over button */}
@@ -181,8 +175,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           </button>
         </>
       )}
-      {/* Settings Button */}
-      {showSettings && <SettingsButton settings={settings} />}
       {!readOnlyWorkspace && (
         <>
           {/* Undo Button */}
