@@ -13,6 +13,7 @@ import {
   WARNING_BANNER_MESSAGES,
 } from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import useTimelineDancer from '@cdo/apps/lab2/hooks/useTimelineDancer';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {
   getAppOptionsEditBlocks,
@@ -24,6 +25,7 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -151,6 +153,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
+
+  const {dancerMeasurePosition, danceMove, dancerSize} = useTimelineDancer({
+    isPlaying,
+    levelProperties,
+  });
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -491,16 +498,17 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               headerContent={musicI18n.panelHeaderTimeline()}
               hideHeaders={hideHeaders}
             >
+              <div className={moduleStyles.dancerCanvasContainer}>
+                <DancerCanvas
+                  size={dancerSize}
+                  measurePosition={dancerMeasurePosition}
+                  move={danceMove}
+                />
+              </div>
               <Timeline
                 allowChangeStartingPlayheadPosition={
                   (levelProperties.levelData as MusicLevelData | undefined)
                     ?.allowChangeStartingPlayheadPosition
-                }
-                danceMove={
-                  // URL parameter allows overriding the level setting for testing.
-                  AppConfig.getValue('danceMove')?.toString() ||
-                  (levelProperties.levelData as MusicLevelData | undefined)
-                    ?.danceMove
                 }
                 isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
               />
