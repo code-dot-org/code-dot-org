@@ -42,7 +42,7 @@ export interface InstructionsProps {
   /** If the instructions panel should always have a dark background, regardless of theme */
   fixedDarkBackground?: boolean;
   /** Component to use for AI Tutor responses, if any. */
-  AiTutor2ResponseView?: React.ReactNode;
+  AiTutorResponseView?: React.ReactNode;
   overrideTheme?: Theme;
   /** If the lab requires the user to click run in order to continue.
    * Only applies to non-validated levels. */
@@ -76,7 +76,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   bottomComponent,
   validationSettings,
   fixedDarkBackground,
-  AiTutor2ResponseView,
+  AiTutorResponseView,
   overrideTheme,
   hideNavigation = false,
   hideContinueIfDisabled = false,
@@ -174,7 +174,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             </div>
           </div>
         )}
-        {AiTutor2ResponseView && AiTutor2ResponseView}
+        {AiTutorResponseView && AiTutorResponseView}
         {isPredictLevel && (
           <>
             <InstructorsOnly>

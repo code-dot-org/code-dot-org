@@ -34,7 +34,6 @@ import {
 import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
-import UploadButton from './assets/UploadButton';
 import UserAddedSelectionContextPreview from './assets/UserAddedSelectionContextPreview';
 import ChatEventsList from './ChatEventsList';
 import UserChatMessageEditor from './UserChatMessageEditor';
@@ -295,17 +294,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             hiddenContextCallback={hiddenContextCallback}
             multimodalAvailable={multimodalAvailable}
             responseCallback={responseCallback}
+            levelName={levelName}
+            hasStarterAssets={hasStarterAssets}
+            buildAssetUrl={buildAssetUrl}
+            uploadDisabled={uploadDisabled}
           />
-        )}
-        {multimodalAvailable && (
-          <div className={moduleStyles.buttonRow}>
-            <UploadButton
-              isDisabled={uploadDisabled}
-              levelName={levelName}
-              hasStarterAssets={hasStarterAssets}
-              buildAssetUrl={buildAssetUrl}
-            />
-          </div>
         )}
       </div>
     </div>

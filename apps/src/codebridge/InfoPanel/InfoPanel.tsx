@@ -54,7 +54,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     levelProperties,
     onRun,
     onStop,
-    AiTutor2ResponseView,
+    AiTutorResponseView,
     hiddenContextCallback,
     startSources,
     aiTutorSystemPromptName,
@@ -206,7 +206,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
             isValidating,
             isValidateDisabled: !hasLoadedEnvironment || isRunning,
           }}
-          AiTutor2ResponseView={AiTutor2ResponseView}
+          AiTutorResponseView={AiTutorResponseView}
           className={moduleStyles.instructionsContainer}
           headerClassName={moduleStyles.infoPanelHeader}
           levelProperties={levelProperties}
@@ -263,7 +263,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
               isValidating,
               isValidateDisabled: !hasLoadedEnvironment || isRunning,
             }}
-            AiTutor2ResponseView={AiTutor2ResponseView}
+            AiTutorResponseView={AiTutorResponseView}
             className={moduleStyles.instructionsContainer}
             levelProperties={levelProperties}
             requireRun={appName === 'pythonlab'}
