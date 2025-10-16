@@ -66,6 +66,8 @@ experiments.LAB2_INSTRUCTIONS_V2 = 'lab2-instructions-v2';
 experiments.LAB2_RESOURCE_PANEL = 'lab2-resource-panel';
 // Show AI Tutor in legacy labs
 experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
+// Use accept/reject code flow in Web Lab 2
+experiments.WEBLAB2_ACCEPT_REJECT = 'weblab2-accept-reject';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
