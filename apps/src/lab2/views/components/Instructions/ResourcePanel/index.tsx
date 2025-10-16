@@ -158,6 +158,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
 
+  const isTemporarilyReadOnly = isReadOnly && (isRunning || isValidating);
+
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
@@ -226,6 +228,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           startSources={versionHistoryProps.startSources}
           appName={levelProperties.appName}
           levelId={levelId}
+          disabled={isTemporarilyReadOnly}
         />
       );
     }
@@ -258,6 +261,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorResponseSchemaSettings,
     selectedVersion,
     levelId,
+    isTemporarilyReadOnly,
   ]);
 
   useEffect(() => {
