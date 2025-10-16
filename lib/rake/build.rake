@@ -131,7 +131,7 @@ namespace :build do
         # that may arise when that best practice is not followed.
         unless rack_env?(:development)
           ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
-          RakeUtils.system_stream_output 'bundle', 'exec', bin_dir('restart-active-job-workers')
+          Cdo::ActiveJobBackend.restart_workers
         end
       end
 
