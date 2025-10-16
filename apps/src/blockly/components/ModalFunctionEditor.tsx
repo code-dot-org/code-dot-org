@@ -29,6 +29,7 @@ export default function ModalFunctionEditor() {
       id={MODAL_EDITOR_ID}
       className={classNames(
         'modalFunctionEditorContainer',
+        'notranslate',
         moduleStyles.container
       )}
     >
