@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
+puts "requiring rails environment"
+start_time = Time.now
 require_relative '../deployment'
+puts "required rails environment in #{(Time.now - start_time).round(1)} seconds"
 require 'cdo/active_job_backend'
 
 # (Re)start dashboard workers with a rolling deploy.
