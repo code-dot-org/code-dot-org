@@ -281,10 +281,7 @@ Resources:
 
 <% if load_balancer -%>
   # ---------------------------------------------
-  # Load Balancers
-  #
-  # TODO
-  # - hourofcode.com and csedweek.org load balancers should be added to this template.
+  # Load Balancer (shared by code.org, studio.code.org, and hourofcode.com)
   # ---------------------------------------------
 <% raise "LoadBalancer name [#{stack_name}] cannot be longer than 32 characters" if stack_name.length > 32 -%>
 
@@ -292,7 +289,7 @@ Resources:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
       Name: !Ref AWS::StackName
-      SecurityGroups: [!ImportValue VPC-ELBSecurityGroup]
+      SecurityGroups: [!ImportValue VPC-ALBSecurityGroup]
       Subnets: <%= public_subnets.to_json %>
       LoadBalancerAttributes:
         - Key: deletion_protection.enabled
@@ -305,17 +302,6 @@ Resources:
           Value: !Sub ${AWS::StackName}-alb-access-logs
         - Key: waf.fail_open.enabled
           Value: true
-
-  HTTPListener:
-    Type: AWS::ElasticLoadBalancingV2::Listener
-    Properties:
-      LoadBalancerArn: !Ref ALB
-      Port: 80
-      Protocol: HTTP
-      DefaultActions:
-      - Type: forward
-        TargetGroupArn: !Ref ALBTargetGroup
-
   HTTPSListener:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
