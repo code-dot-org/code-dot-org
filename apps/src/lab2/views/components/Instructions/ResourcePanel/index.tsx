@@ -278,19 +278,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [isProjectLevel, availableTabs, dispatch]);
 
   useEffect(() => {
-    // Initialize currentTab to the first available tab if it's undefined
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
-      const firstTab = getTypedKeys(availableTabs)[0];
-      setCurrentTab(firstTab);
-      return;
-    }
-
-    if (currentTab === undefined) {
-      return;
-    }
-
-    if (!(currentTab in availableTabs)) {
-      // If the current tab is no longer available, switch to the first available tab.
+      setCurrentTab(getTypedKeys(availableTabs)[0]);
+    } else if (currentTab && !(currentTab in availableTabs)) {
       setCurrentTab(getTypedKeys(availableTabs)[0]);
     }
   }, [currentTab, availableTabs]);
@@ -314,33 +304,22 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // For standalone projects, we need to handle the resource panel collapsing and expanding in conjunction
     // with toggling the settings panel.
     // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
-    if (isProjectLevel) {
-      if (isStandaloneCollapsed) {
-        // If the resource panel is collapsed, we'll expand it and then open the settings panel.
-        setIsSettingsOpen(true);
-        dispatch(setIsStandaloneCollapsed(false));
-      } else {
-        // If the resource panel is expanded and there are no tabs, then clicking the settings button
-        // collapses the resource panel and hides, i.e., closes, the settings panel.
-        if (Object.keys(availableTabs).length === 0) {
-          dispatch(setIsStandaloneCollapsed(true));
-        } else {
-          // If the resource panel is expanded and there are tabs, then clicking the settings button
-          // toggles the settings panel.
-          setIsSettingsOpen(!isSettingsOpen);
-        }
-      }
+    if (isStandaloneCollapsed) {
+      // If the resource panel is collapsed, we'll expand it and then open the settings panel.
+      setIsSettingsOpen(true);
+      dispatch(setIsStandaloneCollapsed(false));
     } else {
-      // If not a standalone project, just toggle the settings panel.
-      setIsSettingsOpen(!isSettingsOpen);
+      // If the resource panel is expanded and there are no tabs, then clicking the settings button
+      // collapses the resource panel and hides, i.e., closes, the settings panel.
+      if (Object.keys(availableTabs).length === 0) {
+        dispatch(setIsStandaloneCollapsed(true));
+      } else {
+        // If the resource panel is expanded and there are tabs, then clicking the settings button
+        // toggles the settings panel.
+        setIsSettingsOpen(!isSettingsOpen);
+      }
     }
-  }, [
-    dispatch,
-    availableTabs,
-    isSettingsOpen,
-    isStandaloneCollapsed,
-    isProjectLevel,
-  ]);
+  }, [dispatch, availableTabs, isSettingsOpen, isStandaloneCollapsed]);
 
   return (
     <div
