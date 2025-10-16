@@ -25,6 +25,8 @@ interface AiDiffWorkSpaceProps {
   unreadNotificationCount: number;
 }
 
+const defaultThreadTitle = 'Unnamed chat';
+
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   context,
   scriptName,
@@ -34,7 +36,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const [threads, setThreads] = useState<ChatThread[]>();
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
   const [threadId, setThreadId] = useState<number>(0);
-  const [threadTitle, setThreadTitle] = useState<string>('');
+  const [threadTitle, setThreadTitle] = useState<string>(defaultThreadTitle);
   const [keyId, setKeyId] = useState<number>(0);
   const [initialThreadPrompt, setInitialThreadPrompt] =
     useState<ChatPrompt | null>(null);
@@ -78,7 +80,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
       if (thread === 0) {
         setThreadMessages([]);
         setThreadId(thread);
-        setThreadTitle('Unnamed chat');
+        setThreadTitle(defaultThreadTitle);
         // changing the keyId resets the component state.
         // if key is already 0 (i.e. starting a new thread from a new thread)
         // then we need to alternate to a different key value to reset state
