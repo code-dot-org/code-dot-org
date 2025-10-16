@@ -747,7 +747,15 @@ export function updateLocale(rtl: boolean) {
     } else {
       newBlockText = localization.translate(oldBlockText, ['blockly-block']);
     }
-    blockDefinition.config.blockText = newBlockText;
+
+    // Unfreeze the block definition to add the new translation strings
+    Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName] = {
+      ...blockDefinition,
+      config: {
+        ...blockDefinition.config,
+        blockText: newBlockText,
+      },
+    };
   }
 
   const blockDefinitions = Object.values(
