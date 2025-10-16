@@ -20,9 +20,14 @@ import styles from './AiTutorContainer.module.scss';
 
 const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
+interface Level {
+  longInstructions?: string;
+}
+
 interface CommonLab {
   getCode?: () => Promise<string | undefined>;
   channel?: string;
+  level?: Level;
 }
 
 export const AiTutorContainer: FC<{
@@ -39,8 +44,9 @@ export const AiTutorContainer: FC<{
     labType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
 
   const getHiddenContext = async () => {
-    const code = await lab?.getCode?.();
-    aiTutorHelper.setAiTutorContext({source: code ?? ''});
+    const sourceCode = await lab?.getCode?.();
+    const longInstructions = lab?.level?.longInstructions;
+    aiTutorHelper.setAiTutorContext({sourceCode, longInstructions});
     const callback = aiTutorHelper.getHiddenContextCallback();
     return callback();
   };
