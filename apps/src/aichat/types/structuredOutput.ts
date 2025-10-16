@@ -10,6 +10,7 @@ export interface JsonObjectSchema {
   required: string[];
   description?: string;
   additionalProperties: boolean;
+  // propertyOrdering is only used by Gemini.
   propertyOrdering?: string[];
 }
 
