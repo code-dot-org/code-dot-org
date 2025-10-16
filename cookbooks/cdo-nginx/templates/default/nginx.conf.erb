@@ -85,7 +85,6 @@ http {
       proxy_set_header Host $http_host;
     }
   }
-
   server {
     listen <%= node['cdo-apps']['pegasus']['port'] %> default deferred;
     server_name pegasus_proxy;
