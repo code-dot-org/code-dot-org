@@ -260,6 +260,7 @@ class ClassSubmission < Form
       fl.push distance_query.as(:distance)
     end
 
+    
     # DEBUG: Capture and log the SQL query before execution
     full_query = query.select(
       *fl,
