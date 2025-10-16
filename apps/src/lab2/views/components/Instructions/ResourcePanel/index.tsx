@@ -126,6 +126,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isRunning = instructionsProps.isRunning;
+  const isValidating =
+    instructionsProps.validationSettings?.isValidating || false;
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
@@ -199,8 +202,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // a student's project (in which case they can view old versions, but not restore them).
     // We never show the version history tab in widget view, as widget view is always read-only
     // and therefore can never have version history.
+    // Note: We ignore the temporary read-only state caused by running/validating code when a user clicks on 'Run' or 'Validate' buttons.
+    const isPermanentlyReadOnly = isReadOnly && !isRunning && !isValidating;
     const versionHistoryHidden =
-      (isReadOnly && !isViewingOldVersion && !viewAsUserId) || isWidgetView;
+      (isPermanentlyReadOnly && !isViewingOldVersion && !viewAsUserId) ||
+      isWidgetView;
     if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
         <VersionHistoryPanel
@@ -225,6 +231,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     hiddenContextCallback,
     appName,
     isReadOnly,
+    isRunning,
+    isValidating,
     isViewingOldVersion,
     viewAsUserId,
     isWidgetView,
@@ -255,9 +263,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [isProjectLevel, availableTabs, dispatch]);
 
   useEffect(() => {
+    // Initialize currentTab to the first available tab if it's undefined
+    if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
+      const firstTab = getTypedKeys(availableTabs)[0];
+      setCurrentTab(firstTab);
+      return;
+    }
+
     if (currentTab === undefined) {
       return;
     }
+
     if (!(currentTab in availableTabs)) {
       // If the current tab is no longer available, switch to the first available tab.
       setCurrentTab(getTypedKeys(availableTabs)[0]);
