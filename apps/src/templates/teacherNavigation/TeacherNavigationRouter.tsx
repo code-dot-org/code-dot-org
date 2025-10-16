@@ -271,11 +271,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                     !selectedSection.courseVersionName &&
                     !selectedSection.courseOfferingId
                   }
-                  showAITALessonSummary={showAITALessonSummary}
-                  hasCompletedPersonalizationQuiz={
-                    hasCompletedPersonalizationQuiz
-                  }
-                  audioSummaryTranscript={[]}
                 />
               }
             />
@@ -365,8 +360,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       providerName,
       anyStudentHasProgress,
       showAITutorTab,
-      showAITALessonSummary,
-      hasCompletedPersonalizationQuiz,
       selectedSection,
       studioUrlPrefix,
     ]

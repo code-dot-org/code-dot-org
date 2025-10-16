@@ -29,7 +29,7 @@ import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 import UnitSelectorV2 from '../../UnitSelectorV2';
 
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
-import {Lesson, AudioSummaryTranscriptLine} from './LessonMaterialTypes';
+import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
@@ -91,16 +91,10 @@ const handleLessonSummaryAskAITAClick = () => {
 
 interface LessonMaterialsContainerProps {
   showNoCurriculumAssigned: boolean;
-  showAITALessonSummary: boolean;
-  hasCompletedPersonalizationQuiz: boolean;
-  audioSummaryTranscript?: AudioSummaryTranscriptLine[];
 }
 
 const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   showNoCurriculumAssigned,
-  showAITALessonSummary,
-  hasCompletedPersonalizationQuiz,
-  audioSummaryTranscript,
 }) => {
   const [lessonMaterials, setLessonMaterials] =
     useState<LessonMaterialsData | null>(null);
@@ -113,6 +107,18 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const needsReload = useAppSelector(
     state => state.teacherSections.needsReload
+  );
+
+  const showAITALessonSummary = useAppSelector(
+    state => state.currentUser.showAITALessonSummary
+  );
+
+  const hasCompletedPersonalizationQuiz = useAppSelector(
+    state => state.currentUser.hasCompletedPersonalizationQuiz
+  );
+
+  const audioSummaryTranscript = useAppSelector(
+    state => state.currentUser.audioSummaryTranscript
   );
 
   const selectedUnitId = useSelector(getSelectedUnitId);

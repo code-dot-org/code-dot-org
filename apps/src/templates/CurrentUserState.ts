@@ -1,4 +1,5 @@
 /** TODO: Merge these with currentUserRedux when it has been updated to TypeScript/redux-toolkit **/
+import {AudioSummaryTranscriptLine} from './teacherNavigation/lessonMaterials/LessonMaterialTypes';
 
 enum CourseRole {
   Unknown = 'Unknown',
@@ -35,6 +36,9 @@ export interface CurrentUserState {
   isLti: boolean;
   aiDifferentiationEnabled: boolean;
   hasCompletedAiDifferentiationWelcome: boolean;
+  showAITALessonSummary: boolean;
+  hasCompletedPersonalizationQuiz: boolean;
+  audioSummaryTranscript: AudioSummaryTranscriptLine[];
   userSharingDisabled: boolean;
   hasSeenHomepageWelcome: boolean;
   inUSA: boolean;

@@ -13,6 +13,9 @@ import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo,
+  setShowAITALessonSummary,
+  setHasCompletedPersonalizationQuiz,
+  setAudioSummaryTranscript,
 } from '@cdo/apps/templates/currentUserRedux';
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -68,6 +71,11 @@ $(document).ready(function () {
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
+  store.dispatch(setShowAITALessonSummary(showAITALessonSummary));
+  store.dispatch(
+    setHasCompletedPersonalizationQuiz(hasCompletedPersonalizationQuiz)
+  );
+  store.dispatch(setAudioSummaryTranscript([]));
   store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setAuthProviders(providers));
@@ -95,8 +103,6 @@ $(document).ready(function () {
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
           canEnableAITutor={canEnableAITutor}
-          showAITALessonSummary={showAITALessonSummary}
-          hasCompletedPersonalizationQuiz={hasCompletedPersonalizationQuiz}
         />
       )}
     </Provider>,
