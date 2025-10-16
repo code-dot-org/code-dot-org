@@ -39,6 +39,7 @@ const {
   hasSeenStandardsReportInfo,
   canEnableAITutor,
   showAITALessonSummary,
+  hasCompletedPersonalizationQuiz,
   sectionOrder,
   providers,
 } = scriptData;
@@ -95,6 +96,7 @@ $(document).ready(function () {
           studioUrlPrefix={scriptData.studioUrlPrefix}
           canEnableAITutor={canEnableAITutor}
           showAITALessonSummary={showAITALessonSummary}
+          hasCompletedPersonalizationQuiz={hasCompletedPersonalizationQuiz}
         />
       )}
     </Provider>,

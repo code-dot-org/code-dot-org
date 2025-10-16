@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
@@ -19,7 +20,6 @@ import {
   getSelectedUnitId,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-// import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -29,7 +29,7 @@ import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 import UnitSelectorV2 from '../../UnitSelectorV2';
 
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
-import {Lesson} from './LessonMaterialTypes';
+import {Lesson, AudioSummaryTranscriptLine} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
@@ -93,16 +93,21 @@ interface LessonMaterialsContainerProps {
   showNoCurriculumAssigned: boolean;
   showAITALessonSummary: boolean;
   hasCompletedPersonalizationQuiz: boolean;
+  audioSummaryTranscript?: AudioSummaryTranscriptLine[];
 }
 
 const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   showNoCurriculumAssigned,
-  hasCompletedPersonalizationQuiz,
   showAITALessonSummary,
+  hasCompletedPersonalizationQuiz,
+  audioSummaryTranscript,
 }) => {
   const [lessonMaterials, setLessonMaterials] =
     useState<LessonMaterialsData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [showTranscriptDialog, setShowTranscriptDialog] = useState(false);
+  const [finishedListeningToSummary, setFinishedListeningToSummary] =
+    useState(false);
 
   const selectedSection = useAppSelector(selectedSectionSelector);
 
@@ -306,115 +311,158 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const renderLessonSummaryContainer = () => {
     return (
-      <div className={styles.lessonSummaryContainer}>
-        <div className={styles.lessonSummarySection}>
-          <div className={styles.lessonSummarySectionTitle}>
-            <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
-            <BodyTwoText>{i18n.audioSummary()}</BodyTwoText>
-          </div>
-          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-          <audio
-            id="lesson-summary-audio"
-            src="https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3"
-            preload="auto"
-            controls
-          />
-          {/* <InlineAudio
-            assetUrl={
-              'https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3'
+      <>
+        {showTranscriptDialog && audioSummaryTranscript && (
+          <Dialog
+            title={i18n.audioTranscript()}
+            primaryButtonProps={{
+              text: i18n.closeDialog(),
+              onClick: () => setShowTranscriptDialog(false),
+            }}
+            onClose={() => setShowTranscriptDialog(false)}
+            closeLabel={i18n.closeTranscript()}
+            customContent={
+              <div className={styles.transcriptDialogContent}>
+                {audioSummaryTranscript.map(({timeStamp, text}) => (
+                  <div
+                    key={`transcript-line-${timeStamp}`}
+                    className={styles.transcriptLine}
+                  >
+                    <BodyTwoText className={styles.transcriptLineTimeStamp}>
+                      {timeStamp}
+                    </BodyTwoText>
+                    <BodyTwoText>{text}</BodyTwoText>
+                  </div>
+                ))}
+              </div>
             }
-            message={''}
-            isRoundedVolumeIcon
-          /> */}
-        </div>
-        <div className={styles.lessonSummarySection}>
-          <div className={styles.lessonSummarySectionTitle}>
-            <FontAwesomeV6Icon iconName="lightbulb" iconStyle="solid" />
-            <BodyTwoText>{i18n.teachingTips()}</BodyTwoText>
-          </div>
-          <div className={styles.lessonSummaryInfo}>
-            <div className={styles.lessonSummaryInfoBlock}>
-              <BodyThreeText>{i18n.learningObjective()}</BodyThreeText>
-              <BodyThreeText>
-                Students will use parameters to control the size and placement
-                of shapes, learning that parameters let us give more precise
-                instructions to the computer.
-              </BodyThreeText>
-            </div>
-            <div className={styles.lessonSummaryInfoBlock}>
-              <BodyThreeText>{i18n.keyLessonBeats()}</BodyThreeText>
-              <ol>
-                <li>
-                  <BodyThreeText>
-                    Warm-up brainstorm on “extra details” for rectangles.
-                  </BodyThreeText>
-                </li>
-                <li>
-                  <BodyThreeText>Introduce vocabulary parameter.</BodyThreeText>
-                </li>
-                <li>
-                  <BodyThreeText>
-                    Code Studio activity—test and debug.
-                  </BodyThreeText>
-                </li>
-                <li>
-                  <BodyThreeText>
-                    Wrap-up reflection: other uses for parameters.
-                  </BodyThreeText>
-                </li>
-              </ol>
-            </div>
-            <div className={styles.lessonSummaryInfoBlock}>
-              <BodyThreeText>{i18n.commonMisconceptions()}</BodyThreeText>
-              <ul>
-                <li>
-                  <BodyThreeText>
-                    Students may confuse x/y position with width/height. Use
-                    visuals: draw arrows for position, then outline size
-                    separately.
-                  </BodyThreeText>
-                </li>
-                <li>
-                  <BodyThreeText>Introduce vocabulary parameter.</BodyThreeText>
-                </li>
-                <li>
-                  <BodyThreeText>
-                    Some think order doesn't matter—remind them code runs top to
-                    bottom.
-                  </BodyThreeText>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <Button
-            id="lesson-summary-ask-aita"
-            type="secondary"
-            color="black"
-            className={styles.askAITAButton}
-            text={i18n.questionForAITA()}
-            onClick={handleLessonSummaryAskAITAClick}
+            className={styles.transcriptDialog}
           />
-          {!hasCompletedPersonalizationQuiz && (
-            <div className={styles.personalizationQuizSection}>
-              <div className={styles.horizontalLine} />
-              <div className={styles.personalizationQuizPrompt}>
+        )}
+        <div className={styles.lessonSummaryContainer}>
+          <div className={styles.lessonSummarySection}>
+            <div className={styles.lessonSummarySectionHeader}>
+              <div className={styles.lessonSummarySectionTitle}>
+                <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
+                <BodyTwoText>{i18n.audioSummary()}</BodyTwoText>
+              </div>
+              <Button
+                type="secondary"
+                size="xs"
+                color="black"
+                className={styles.openTranscriptButton}
+                text={i18n.transcript()}
+                onClick={() => setShowTranscriptDialog(true)}
+              />
+            </div>
+            <div className={styles.audioPlayerContainer}>
+              {/* We're including our own custom time-stamped transcript dialog, so no need for media caption. */}
+              {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+              <audio
+                id="lesson-summary-audio"
+                src="https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3"
+                preload="auto"
+                controls
+                onEnded={() => setFinishedListeningToSummary(true)}
+                className={styles.audioPlayer}
+              />
+              {finishedListeningToSummary && (
+                <FontAwesomeV6Icon iconName="circle-check" iconStyle="solid" />
+              )}
+            </div>
+          </div>
+          <div className={styles.lessonSummarySection}>
+            <div className={styles.lessonSummarySectionTitle}>
+              <FontAwesomeV6Icon iconName="lightbulb" iconStyle="solid" />
+              <BodyTwoText>{i18n.teachingTips()}</BodyTwoText>
+            </div>
+            <div className={styles.lessonSummaryInfo}>
+              <div className={styles.lessonSummaryInfoBlock}>
+                <BodyThreeText>{i18n.learningObjective()}</BodyThreeText>
                 <BodyThreeText>
-                  {i18n.wantToSeeDifferentInformation()}
+                  Students will use parameters to control the size and placement
+                  of shapes, learning that parameters let us give more precise
+                  instructions to the computer.
                 </BodyThreeText>
-                <a href="/users/personalization_information">
-                  <BodyThreeText>
-                    {i18n.customizeForYourClassroom()}
-                  </BodyThreeText>
-                </a>
+              </div>
+              <div className={styles.lessonSummaryInfoBlock}>
+                <BodyThreeText>{i18n.keyLessonBeats()}</BodyThreeText>
+                <ol>
+                  <li>
+                    <BodyThreeText>
+                      Warm-up brainstorm on “extra details” for rectangles.
+                    </BodyThreeText>
+                  </li>
+                  <li>
+                    <BodyThreeText>
+                      Introduce vocabulary parameter.
+                    </BodyThreeText>
+                  </li>
+                  <li>
+                    <BodyThreeText>
+                      Code Studio activity—test and debug.
+                    </BodyThreeText>
+                  </li>
+                  <li>
+                    <BodyThreeText>
+                      Wrap-up reflection: other uses for parameters.
+                    </BodyThreeText>
+                  </li>
+                </ol>
+              </div>
+              <div className={styles.lessonSummaryInfoBlock}>
+                <BodyThreeText>{i18n.commonMisconceptions()}</BodyThreeText>
+                <ul>
+                  <li>
+                    <BodyThreeText>
+                      Students may confuse x/y position with width/height. Use
+                      visuals: draw arrows for position, then outline size
+                      separately.
+                    </BodyThreeText>
+                  </li>
+                  <li>
+                    <BodyThreeText>
+                      Introduce vocabulary parameter.
+                    </BodyThreeText>
+                  </li>
+                  <li>
+                    <BodyThreeText>
+                      Some think order doesn't matter—remind them code runs top
+                      to bottom.
+                    </BodyThreeText>
+                  </li>
+                </ul>
               </div>
             </div>
-          )}
+            <Button
+              type="secondary"
+              color="black"
+              className={styles.askAITAButton}
+              text={i18n.questionForAITA()}
+              onClick={handleLessonSummaryAskAITAClick}
+            />
+            {!hasCompletedPersonalizationQuiz && (
+              <div className={styles.personalizationQuizSection}>
+                <div className={styles.horizontalLine} />
+                <div className={styles.personalizationQuizPrompt}>
+                  <BodyThreeText>
+                    {i18n.wantToSeeDifferentInformation()}
+                  </BodyThreeText>
+                  <a href="/users/personalization_information">
+                    <BodyThreeText>
+                      {i18n.customizeForYourClassroom()}
+                    </BodyThreeText>
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
+          <div className={styles.poweredByAITANote}>
+            <img src={AIBotTAIcon} alt="" />
+            <BodyFourText>{i18n.poweredByAITA()}</BodyFourText>
+          </div>
         </div>
-        <div className={styles.poweredByAITANote}>
-          <img src={AIBotTAIcon} alt="" />
-          <BodyFourText>{i18n.poweredByAITA()}</BodyFourText>
-        </div>
-      </div>
+      </>
     );
   };
 

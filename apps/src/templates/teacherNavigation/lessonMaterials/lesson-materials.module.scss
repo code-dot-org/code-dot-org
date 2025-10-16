@@ -149,10 +149,17 @@
   }
 }
 
+.lessonSummarySectionHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .lessonSummarySectionTitle {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   gap: 0.5rem;
 
   i {
@@ -163,6 +170,84 @@
     font-weight: 600;
     margin-bottom: 0;
   }
+}
+
+.openTranscriptButton {
+  border: none !important;
+
+  span {
+    color: var(--text-neutral-tertiary);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
+.transcriptDialog {
+  max-width: 736px;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+
+  > div:first-of-type {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  > div:last-of-type {
+    align-self: flex-end;
+  }
+}
+
+.transcriptDialogContent {
+  max-height: 15rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--borders-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.transcriptLine {
+  display: flex;
+  flex-direction: row;
+  gap: 0.875rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .transcriptLineTimeStamp {
+    color: var(--text-neutral-tertiary);
+  }
+}
+
+.audioPlayerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  i {
+    margin-top: 1px;
+    color: var(--background-success-primary);
+  }
+}
+
+.audioPlayer {
+  width: 90%;
+  height: 2rem;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: var(--background-neutral-true-base);
+}
+
+audio::-webkit-media-controls-current-time-display {
+  font-size: 12px;
+  color: var(--text-neutral-black-fixed);
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  font-size: 12px;
+  color: var(--text-neutral-black-fixed);
 }
 
 .lessonSummaryInfo {
