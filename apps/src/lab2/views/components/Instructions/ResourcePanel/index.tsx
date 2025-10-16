@@ -18,6 +18,7 @@ import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRu
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
@@ -25,6 +26,8 @@ import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
 import {
+  RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+  VALIDATION_TOUR_SEEN,
   resourcePanelInstructionsElementId,
   resourcePanelTabsElementId,
   resourcePanelLinksElementId,
@@ -40,6 +43,14 @@ import {VersionHistoryPanel} from './VersionHistory';
 import './resource-panel-introjs.scss';
 
 import styles from './styles.module.scss';
+
+// Check if tours should be disabled (e.g., during UI tests) before any rendering.
+// This runs when the module is first imported so localStorage is set early.
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('noIntrojs') === 'true') {
+  trySetLocalStorage(RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN, 'yes');
+  trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
+}
 
 export interface Setting {
   id: string;
