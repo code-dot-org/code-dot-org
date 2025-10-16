@@ -140,6 +140,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isRunning = instructionsProps.isRunning;
   const isValidating =
     instructionsProps.validationSettings?.isValidating || false;
+
+  // Assign the permanent read-only state once at mount time, before any temporary state changes.
+  const isPermanentlyReadOnlyRef = useRef<boolean | null>(null);
+  if (isPermanentlyReadOnlyRef.current === null) {
+    isPermanentlyReadOnlyRef.current =
+      isReadOnly && !isRunning && !isValidating;
+  }
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
@@ -158,7 +165,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
 
-  const isTemporarilyReadOnly = isReadOnly && (isRunning || isValidating);
+  // Temporary read-only occurs when running/validating in a workspace that wasn't permanently read-only at mount.
+  const isTemporarilyReadOnly =
+    !isPermanentlyReadOnlyRef.current &&
+    isReadOnly &&
+    (isRunning || isValidating);
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -215,10 +226,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // a student's project (in which case they can view old versions, but not restore them).
     // We never show the version history tab in widget view, as widget view is always read-only
     // and therefore can never have version history.
-    // Note: We ignore the temporary read-only state caused by running/validating code when a user clicks on 'Run' or 'Validate' buttons.
-    const isPermanentlyReadOnly = isReadOnly && !isRunning && !isValidating;
+    // Note: We use the permanent read-only state captured at mount time to determine tab visibility.
     const versionHistoryHidden =
-      (isPermanentlyReadOnly && !isViewingOldVersion && !viewAsUserId) ||
+      (isPermanentlyReadOnlyRef.current &&
+        !isViewingOldVersion &&
+        !viewAsUserId) ||
       isWidgetView;
     if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
@@ -244,9 +256,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isUserTeacher,
     hiddenContextCallback,
     appName,
-    isReadOnly,
-    isRunning,
-    isValidating,
     isViewingOldVersion,
     viewAsUserId,
     isWidgetView,
