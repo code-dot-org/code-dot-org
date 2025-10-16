@@ -18,9 +18,9 @@ const systemPrompts = {
   hint: "You are responding to a query about programming.  Target the reading age of an American 7th grader.  Use the Socratic method to guide the student to the answer, but do not give them the answer directly.  Just focus on the biggest single issue you find.  Use plain English in the answer.  I don't want multiple steps, points, or questions.  Just one statement (not expressed as a question) that helps the student to make progress.",
 };
 
-export type AiTutor2MessageType = 'hint';
+export type AiTutorMessageType = 'hint';
 
-export default class AiTutor2Manager {
+export default class AiTutorManager {
   private currentLevelId: string | null;
   private scriptId: number | undefined;
   private channelId: string | undefined;
@@ -38,10 +38,10 @@ export default class AiTutor2Manager {
     this.channelId = channelId;
   }
 
-  async askAiTutor2(
+  async askAiTutor(
     message: string,
     hiddenContext: string,
-    type: AiTutor2MessageType
+    type: AiTutorMessageType
   ) {
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,

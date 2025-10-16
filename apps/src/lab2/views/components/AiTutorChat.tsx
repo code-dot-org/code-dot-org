@@ -14,7 +14,7 @@ import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import moduleStyles from './AiTutor2Chat.module.scss';
+import moduleStyles from './AiTutorChat.module.scss';
 
 // Some pre-canned chat buttons.
 const defaultChatButtonData: ChatButtonData[] = [
@@ -22,7 +22,7 @@ const defaultChatButtonData: ChatButtonData[] = [
   ...defaultPrompts,
 ] as const;
 
-interface AiTutor2ChatProps {
+interface AiTutorChatProps {
   hiddenContextCallback: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
   levelName?: string;
@@ -33,7 +33,7 @@ interface AiTutor2ChatProps {
 }
 
 // A free chat with lab-supplied context added to each question.
-const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
+const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   hiddenContextCallback,
   aiTutorMultimodalEnabled = false,
   levelName,
@@ -99,4 +99,4 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   );
 };
 
-export default AiTutor2Chat;
+export default AiTutorChat;

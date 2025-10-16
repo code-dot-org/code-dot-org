@@ -7615,6 +7615,48 @@
       "level_keys": [
         "allthethings sketchlab 2"
       ]
+    },
+    {
+      "chapter": 222,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthethings sketchlab 3"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
+      },
+      "level_keys": [
+        "allthethings sketchlab 3"
+      ]
+    },
+    {
+      "chapter": 223,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthethings sketchlab 4"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
+      },
+      "level_keys": [
+        "allthethings sketchlab 4"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -10413,6 +10455,30 @@
         "level.key": "allthethings sketchlab 2",
         "script_level.level_keys": [
           "allthethings sketchlab 2"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "allthethings sketchlab 3",
+        "script_level.level_keys": [
+          "allthethings sketchlab 3"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "allthethings sketchlab 4",
+        "script_level.level_keys": [
+          "allthethings sketchlab 4"
         ],
         "lesson.key": "lesson-57",
         "lesson_group.key": "",
