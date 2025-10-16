@@ -41,9 +41,10 @@ import {
   APCSP_DUMMY_EXAM,
   DEBUG_THIS_CODE,
   IMPROVE_THIS_CODE,
+  SUGGESTED_PROMPTS_FOR_SELECTION,
 } from './AiDiffPredefinedPrompts';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
-import {ChatItem, ChatPrompt, Context} from './types';
+import {ChatItem, ChatPrompt, Context, SuggestPromptsType} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -122,8 +123,6 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   }, [context, scriptName]);
 
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
-
-  const [suggestionPage, setSuggestionPage] = useState(0);
 
   const [localThreadId, setLocalThreadId] = useState(threadId);
 
@@ -305,16 +304,20 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     setInitialThreadPrompt,
   ]);
 
-  const onSuggestPrompts = () => {
-    const nextPage = (suggestionPage + 1) % SUGGESTED_PROMPTS.length;
+  const onSuggestPrompts = (promptType: Exclude<SuggestPromptsType, null>) => {
+    const aiInitialSuggestionsMessage = {
+      role: Role.ASSISTANT,
+      chatMessageText:
+        SUGGESTED_PROMPTS_FOR_SELECTION[promptType].initialMessage,
+      status: Status.OK,
+    };
     const newSuggestions =
-      context.type === AiDiffContext.GENERAL
-        ? GENERAL_SUGGESTED_PROMPTS
-        : SUGGESTED_PROMPTS[nextPage];
-    setSuggestionPage(nextPage);
+      SUGGESTED_PROMPTS_FOR_SELECTION[promptType].suggestedPrompts;
+
     setMessageHistory(prevMessages => [
       ...prevMessages,
-      newSuggestions.concat(additionalPrompts),
+      aiInitialSuggestionsMessage,
+      newSuggestions,
     ]);
   };
 

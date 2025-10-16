@@ -10,12 +10,12 @@ import React from 'react';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import AiDiffPdf from './AiDiffPdf';
-import {ChatItem} from './types';
+import {ChatItem, SuggestPromptsType} from './types';
 
 import style from './ai-differentiation.module.scss';
 
 interface AiDiffChatHeaderProps {
-  onSuggestPrompts: () => void;
+  onSuggestPrompts: (promptType: Exclude<SuggestPromptsType, null>) => void;
   messages: ChatItem[];
   threadTitle?: string;
   disableEndButtons: boolean;
@@ -50,28 +50,28 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
             menuPlacement="right"
             options={[
               {
-                value: 'getStarted',
+                value: 'support',
                 label: 'Get Started',
                 icon: {iconName: 'rocket-launch'},
-                onClick: onSuggestPrompts,
+                onClick: () => onSuggestPrompts('support'),
               },
               {
-                value: 'ideate',
+                value: 'plan',
                 label: 'Ideate',
                 icon: {iconName: 'spinner-scale'},
-                onClick: onSuggestPrompts,
+                onClick: () => onSuggestPrompts('plan'),
               },
               {
                 value: 'create',
                 label: 'Create',
                 icon: {iconName: 'file-pen'},
-                onClick: onSuggestPrompts,
+                onClick: () => onSuggestPrompts('create'),
               },
               {
-                value: 'apPrep',
+                value: 'apcsp',
                 label: 'Ap Prep',
                 icon: {iconName: 'laptop-code'},
-                onClick: onSuggestPrompts,
+                onClick: () => onSuggestPrompts('apcsp'),
               },
             ]}
           />
