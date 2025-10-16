@@ -64,6 +64,7 @@ class AdminUsersController < ApplicationController
     user = User.find_by_id(params.require(:user_id))
     if user
       user.destroy
+      log_admin_action("delete_user", {deleted_user_id: user.id})
       flash[:alert] = "User (ID: #{params[:user_id]}) Deleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or deleted"
@@ -75,6 +76,7 @@ class AdminUsersController < ApplicationController
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
       user.undestroy
+      log_admin_action("undelete_user", {undeleted_user_id: user.id})
       flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
@@ -187,21 +189,8 @@ class AdminUsersController < ApplicationController
     user_id = params[:user_id]
     script_id = params[:script_id]
 
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'reset-progress',
-        event: 'admin-delete-progress',
-        user_id: user_id,
-        script_id: script_id,
-        data_json: {
-          signed_in_user: current_user.username,
-          reason: params[:reason]
-        }.to_json
-      }
-    )
-
     User.delete_progress_for_unit(user_id: user_id, script_id: script_id)
+    log_admin_action("delete_progress", {affected_user_id: user_id, script_id: script_id, reason: params[:reason]})
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
   end
@@ -281,6 +270,7 @@ class AdminUsersController < ApplicationController
       return
     end
     @user.permission = params[:permission]
+    log_admin_action("grant_permission", {affected_user_id: user_id, permission: params[:permission]})
     redirect_to permissions_form_path(search_term: user_id)
   end
 
@@ -288,7 +278,9 @@ class AdminUsersController < ApplicationController
     user_id = params[:user_id]
     @user = restricted_users.find_by(id: user_id)
     permission = params[:permission]
-    @user.try(:delete_permission, permission)
+    if @user.try(:delete_permission, permission)
+      log_admin_action("revoke_permission", {affected_user_id: user_id, permission: permission})
+    end
     redirect_to permissions_form_path(search_term: user_id)
   end
 
@@ -308,6 +300,7 @@ class AdminUsersController < ApplicationController
         succeeded_emails.push(email)
       end
       unless succeeded_emails.empty?
+        log_admin_action("bulk_grant_permission", {affected_user_emails: succeeded_emails, permission: permission})
         flash[:notice] = "#{permission.titleize} Permission added for #{succeeded_emails.length} User#{succeeded_emails.length == 1 ? '' : 's'}"
       end
       unless failed_emails.empty?
