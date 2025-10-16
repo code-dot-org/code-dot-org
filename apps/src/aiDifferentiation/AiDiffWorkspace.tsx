@@ -34,6 +34,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const [threads, setThreads] = useState<ChatThread[]>();
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
   const [threadId, setThreadId] = useState<number>(0);
+  const [threadTitle, setThreadTitle] = useState<string>('');
   const [keyId, setKeyId] = useState<number>(0);
   const [initialThreadPrompt, setInitialThreadPrompt] =
     useState<ChatPrompt | null>(null);
@@ -77,6 +78,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
       if (thread === 0) {
         setThreadMessages([]);
         setThreadId(thread);
+        setThreadTitle('Unnamed chat');
         // changing the keyId resets the component state.
         // if key is already 0 (i.e. starting a new thread from a new thread)
         // then we need to alternate to a different key value to reset state
@@ -90,6 +92,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         asyncFetchThreadMessages(thread).then(response => {
           setThreadMessages(response.messages);
           setThreadId(thread);
+          setThreadTitle(response.title);
           setKeyId(thread);
         });
       }
@@ -128,6 +131,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           curriculumCourses={curriculumCourses}
           threadFetchCallback={fetchThreads}
           threadMessages={threadMessages}
+          threadTitle={threadTitle}
           key={keyId}
           threadId={threadId}
           setThreadId={setThreadId}

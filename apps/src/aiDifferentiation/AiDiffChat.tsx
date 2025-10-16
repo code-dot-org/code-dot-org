@@ -20,6 +20,7 @@ import HttpClient from '../util/HttpClient';
 
 import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
 import AiDiffChatFooter from './AiDiffChatFooter';
+import AiDiffChatHeader from './AiDiffChatHeader';
 import {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
@@ -81,6 +82,7 @@ const AIDIFF_CHAT_COMPLETION = 'chat_completion';
 interface AiDiffChatProps {
   context: Context;
   threadMessages?: ChatItem[];
+  threadTitle?: string;
   scriptName?: string;
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
@@ -97,6 +99,7 @@ interface AiDiffChatProps {
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
   threadMessages = [],
+  threadTitle = 'Unnamed chat',
   scriptName,
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
@@ -325,6 +328,12 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
   return (
     <div className={style.chatContainer}>
+      <AiDiffChatHeader
+        onSuggestPrompts={onSuggestPrompts}
+        messages={messageHistory}
+        threadTitle={threadTitle}
+        disableEndButtons={disableEndButtons}
+      />
       <div className={style.chatContent}>
         {messageHistory.map((item: ChatItem, id: number) =>
           Array.isArray(item) ? (
@@ -366,10 +375,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       </div>
       <AiDiffChatFooter
         onSubmit={onMessageSend}
-        onSuggestPrompts={onSuggestPrompts}
-        messages={messageHistory}
         waiting={isWaitingForResponse}
-        disableEndButtons={disableEndButtons}
         userMessageEditorRef={userMessageEditorRef}
       />
     </div>
