@@ -262,18 +262,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isTemporarilyReadOnly,
   ]);
 
-  const hasNoTabs = useMemo(() => {
-    return Object.keys(availableTabs).length === 0;
+  const hasTabs = useMemo(() => {
+    return Object.keys(availableTabs).length > 0;
   }, [availableTabs]);
 
   useEffect(() => {
     // Auto-collapse on initial mount if on a standalone project and there are no available tabs.
     // Only run this once to allow user to toggle the panel.
-    if (!hasAutoCollapsedNoTabs.current && isProjectLevel && hasNoTabs) {
+    if (!hasAutoCollapsedNoTabs.current && isProjectLevel && !hasTabs) {
       dispatch(setIsStandaloneCollapsed(true));
       hasAutoCollapsedNoTabs.current = true;
     }
-  }, [isProjectLevel, hasNoTabs, dispatch]);
+  }, [isProjectLevel, hasTabs, dispatch]);
 
   useEffect(() => {
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
@@ -300,24 +300,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   const onClickSettingsButton = useCallback(() => {
     // For standalone projects, we need to handle the resource panel collapsing and expanding in conjunction
-    // with toggling the settings panel.
-    // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
-    if (isStandaloneCollapsed) {
-      // If the resource panel is collapsed, we'll expand it and then open the settings panel.
-      setIsSettingsOpen(true);
-      dispatch(setIsStandaloneCollapsed(false));
-    } else {
-      // If the resource panel is expanded and there are no tabs, then clicking the settings button
-      // collapses the resource panel and hides, i.e., closes, the settings panel.
-      if (Object.keys(availableTabs).length === 0) {
-        dispatch(setIsStandaloneCollapsed(true));
+    // with toggling the settings panel when there is at least one tab.
+    if (hasTabs) {
+      if (isStandaloneCollapsed) {
+        dispatch(setIsStandaloneCollapsed(false));
+        setIsSettingsOpen(true);
       } else {
-        // If the resource panel is expanded and there are tabs, then clicking the settings button
-        // toggles the settings panel.
         setIsSettingsOpen(!isSettingsOpen);
       }
     }
-  }, [dispatch, availableTabs, isSettingsOpen, isStandaloneCollapsed]);
+  }, [dispatch, hasTabs, isSettingsOpen, isStandaloneCollapsed]);
 
   return (
     <div
@@ -346,7 +338,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               We hide this button for standalone projects with no tabs, but the bottom buttons
               will still be available for users to access the settings panel, etc.
             */}
-            {isProjectLevel && !hasNoTabs && (
+            {isProjectLevel && hasTabs && (
               <WithTooltip
                 tooltipProps={{
                   text: isStandaloneCollapsed
@@ -494,7 +486,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   // If the resource panel is expanded and there are no tabs, then clicking the settings button
                   // collapses the resource panel and essentially closes or hides the settings panel.
                   // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
-                  if (isProjectLevel && hasNoTabs && !isStandaloneCollapsed) {
+                  if (isProjectLevel && !hasTabs && !isStandaloneCollapsed) {
                     dispatch(setIsStandaloneCollapsed(true));
                   }
                 }}
