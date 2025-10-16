@@ -29,7 +29,12 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
-const INITIAL_INFO_PANEL_WIDTH = 400;
+// This initial width is derived from the following:
+// The narrowest screen we see in GA with 1% usage is 1024px.
+// The version of Excalidraw we're using switches into a mobile mode at 730px.
+// So, we want to make sure the initial workspace is over 730px.
+// 1024 - 290 - 1px for resize bar = 734px.
+const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
