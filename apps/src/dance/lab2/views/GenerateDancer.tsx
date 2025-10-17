@@ -249,7 +249,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           </>
         )}
         {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
-        {aiGenerateState === 'done' && (
+        {aiGenerateState === 'done' && isPreviewLoading && 'Loading preview...'}
+        {aiGenerateState === 'done' && !isPreviewLoading && (
           <>
             <div>Here is the dancer that was generated.</div>
 

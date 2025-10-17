@@ -128,9 +128,9 @@ $icon-overlay-padding-right: 8px;
   margin-inline-start: $bot-container-size + $icon-message-gap;
 }
 
-
 .footerWithOverlay {
-  margin-inline-start: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;
+  margin-inline-start: $bot-container-size + $icon-message-gap +
+    $icon-overlay-padding-right;
 }
 
 .botIcon {

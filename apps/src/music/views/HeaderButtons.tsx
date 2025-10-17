@@ -59,6 +59,7 @@ interface HeaderButtonsProps {
   clearCode: () => void;
   allowPackSelection: boolean;
   skipUrl: string | undefined;
+  showSettings: boolean;
   hideChaff: () => void;
 }
 
@@ -71,6 +72,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   clearCode,
   allowPackSelection,
   skipUrl,
+  showSettings,
   hideChaff,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
