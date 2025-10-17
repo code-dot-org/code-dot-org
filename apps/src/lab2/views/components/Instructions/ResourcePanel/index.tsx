@@ -528,12 +528,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   settings={settings || []}
                   closePanel={() => {
                     setIsSettingsOpen(false);
-                    // If the resource panel is expanded and there are no tabs, then clicking the settings button
-                    // collapses the resource panel and essentially closes or hides the settings panel.
-                    // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
-                    if (!hasTabs && !isStandaloneCollapsed) {
-                      dispatch(setIsStandaloneCollapsed(true));
-                    }
                   }}
                 />
               )}
