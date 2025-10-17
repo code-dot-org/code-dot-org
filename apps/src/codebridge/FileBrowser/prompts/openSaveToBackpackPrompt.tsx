@@ -1,14 +1,12 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {
-  getFileNameWithNumberSuffix,
-  sendCodebridgeAnalyticsEvent,
-} from '@codebridge/utils';
+import {getFileNameWithNumberSuffix} from '@codebridge/utils';
 import React from 'react';
 
 import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectFile} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
   DialogType,
   DialogControlInterface,
@@ -92,7 +90,7 @@ export const openSaveToBackpackPrompt = async ({
             ? EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE
             : EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_RENAME;
       }
-      const successCallback = () => sendCodebridgeAnalyticsEvent(successMetric);
+      const successCallback = () => sendLab2AnalyticsEvent(successMetric);
 
       const fileContents = {
         name: selectedFileName,

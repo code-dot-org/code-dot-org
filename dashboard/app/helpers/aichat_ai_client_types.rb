@@ -126,6 +126,7 @@ module AichatAiClientTypes
   #   // have a way to check w/ RubyTypes so an additional check is required.
   #   required: string[];
   #   description?: string;
+  #   additionalProperties: boolean;
   # }
   JsonObjectSchema = Interface(
     :type, string('object'),

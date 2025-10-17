@@ -3,13 +3,13 @@ import {
   TooltipProps,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -57,7 +57,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         type: DialogType.Skip,
         handleConfirm: () => {
           if (skipUrl) {
-            sendCodebridgeAnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName);
+            sendLab2AnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName);
             window.location.href = skipUrl;
           }
         },

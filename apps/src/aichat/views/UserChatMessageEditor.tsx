@@ -21,6 +21,7 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
+  responseCallback?: (response: string) => string;
 }
 
 /**
@@ -35,6 +36,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatButtons,
   hiddenContextCallback,
   multimodalAvailable,
+  responseCallback,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
@@ -80,6 +82,7 @@ const UserChatMessageEditor: React.FunctionComponent<
               Object.values(userAddedSelectionContext).length > 0
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
+            responseCallback,
           })
         );
       }
@@ -93,6 +96,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       multimodalAvailable,
       chatAssets,
       userAddedSelectionContext,
+      responseCallback,
     ]
   );
 

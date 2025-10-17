@@ -33,6 +33,7 @@ export const baseModelParameters: ModelParameters = {
 
 interface UseAiTutorModelParametersOptions {
   aiTutorSystemPromptName?: string;
+  aiTutorJsonSchema?: object;
 }
 
 export const useAiTutorModelParameters = (
@@ -99,12 +100,16 @@ export const useAiTutorModelParameters = (
     if (!systemPrompt) {
       return undefined;
     }
+    let result = {...baseModelParameters, systemPrompt} as ModelParameters;
+    if (options?.aiTutorJsonSchema) {
+      result = {
+        ...result,
+        responseJsonSchema: options.aiTutorJsonSchema,
+      };
+    }
 
-    return {
-      ...baseModelParameters,
-      systemPrompt,
-    } as ModelParameters;
-  }, [systemPrompt]);
+    return result;
+  }, [options?.aiTutorJsonSchema, systemPrompt]);
 
   return {
     modelParameters,

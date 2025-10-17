@@ -58,24 +58,7 @@ const FacetDrawer = ({isOpen, onClose, ...props}: FacetDrawerProps) => {
           pb: 2,
         }}
       >
-        <Box
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: {
-              xs: '1fr',
-              sm: 'repeat(2, minmax(0, 1fr))',
-            },
-            columnGap: 2,
-            rowGap: 3,
-            '& .MuiFormControl-root': {
-              width: '100%',
-              m: 0,
-              pb: 1,
-              boxSizing: 'border-box',
-              '&:not(:last-of-type)': {mb: 0, mr: 0},
-            },
-          }}
-        >
+        <Box>
           <FacetBar {...props} isInDrawer />
         </Box>
       </Box>
