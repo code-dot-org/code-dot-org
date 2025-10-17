@@ -115,12 +115,14 @@ $tabs-default-spacing: 4px;
 
 .assetCol {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0.375rem;
 }
 
 .imagePreview {
-  max-height: 120px;
+  max-height: 48px;
+  border-radius: variables.$default-border-radius;
   width: auto;
   height: auto;
   opacity: 1;
@@ -130,4 +132,8 @@ $tabs-default-spacing: 4px;
   @include remove-button-styles;
   align-self: end;
   font-size: 13px;
+  border-radius: variables.$default-border-radius;
+  line-height: 1;
+
+  @include focus-styles;
 }

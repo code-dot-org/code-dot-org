@@ -12,13 +12,18 @@ import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import experiments from '@cdo/apps/util/experiments';
 
-import {JsonObjectSchema, ResponseSchemaSettings} from '../aichat/types';
+import {ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {getPromptNameFromMode} from './helpers/aiTutorHelper';
+import {
+  acceptRejectJsonSchema,
+  formatExplanationResponse,
+  copyCodeJsonSchema,
+} from './helpers/aiTutorStructuredResponseHelper';
 import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -46,28 +51,6 @@ const defaultConfig: ConfigType = {
     share: ShareView,
     fullScreen: FullScreenView,
   },
-};
-
-const aiTutorResponseJsonSchema: JsonObjectSchema = {
-  type: 'object',
-  properties: {
-    code: {
-      type: 'array',
-      items: {
-        type: 'object',
-        properties: {
-          language: {type: 'string'},
-          sourceCode: {type: 'string'},
-          filename: {type: 'string'},
-        },
-        required: ['language', 'sourceCode', 'filename'],
-        additionalProperties: false,
-      },
-    },
-    explanation: {type: 'string'},
-  },
-  required: ['code', 'explanation'],
-  additionalProperties: false,
 };
 
 const defaultSource: MultiFileSource = {
@@ -152,14 +135,29 @@ const Weblab2View: React.FC<
         )
       ) {
         return {
-          jsonSchema: aiTutorResponseJsonSchema,
+          jsonSchema: acceptRejectJsonSchema,
           responseCallback: (response: string) => {
+            const jsonResponse = JSON.parse(response);
             console.log('🤖: Tutor response (in jsonSchema callback):', {
-              response,
+              jsonResponse,
             });
             // TODO: send code to the appropriate place
-            const jsonResponse = JSON.parse(response);
             return jsonResponse.explanation;
+          },
+        };
+      } else if (
+        experiments.isEnabledAllowingQueryString(
+          experiments.WEBLAB2_STRUCTURED_OUTPUT
+        )
+      ) {
+        return {
+          jsonSchema: copyCodeJsonSchema,
+          responseCallback: (response: string) => {
+            const jsonResponse = JSON.parse(response);
+            console.log('🤖: Tutor response (in jsonSchema callback):', {
+              jsonResponse,
+            });
+            return formatExplanationResponse(jsonResponse.answer);
           },
         };
       }
