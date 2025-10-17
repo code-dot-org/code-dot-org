@@ -10,7 +10,7 @@ type OpenConfirmDeleteFileArgsType = {
   file: ProjectFile;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   deleteFile: DeleteFileFunction;
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
   cleanupValidationFile: () => void;
 };
 
@@ -20,7 +20,7 @@ export const openConfirmDeleteFile = async ({
   file,
   dialogControl,
   deleteFile,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
   cleanupValidationFile,
 }: OpenConfirmDeleteFileArgsType) => {
   const results = await dialogControl?.showDialog({
@@ -38,6 +38,6 @@ export const openConfirmDeleteFile = async ({
       cleanupValidationFile();
     }
     deleteFile({fileId: file.id});
-    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE);
+    sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE);
   }
 };

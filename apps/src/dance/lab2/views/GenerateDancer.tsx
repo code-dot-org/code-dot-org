@@ -4,13 +4,15 @@ import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
-import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
+import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
@@ -101,7 +103,7 @@ const adlibs: AdlibsType = {
 
 interface DancerGenerateProps {
   adlibOption: string;
-  levelProperties: LevelProperties;
+  levelProperties: DanceLevelProperties;
 }
 
 // This UI takes over the entire lab area and allows the user to generate a dancer using
@@ -110,6 +112,7 @@ interface DancerGenerateProps {
 // storage.
 const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   adlibOption,
+  levelProperties,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -119,20 +122,20 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setTheme('Dark');
   }, [setTheme]);
 
-  const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
+  const [promptText, setPromptText] = useState<string>('');
   const [choices, setChoices] = useState<string[] | undefined>(undefined);
   const variantHistory = useRef<number[]>([]);
 
   const [aiGenerateState, setAiGenerateState] = useState<
     'none' | 'generating' | 'done'
   >('none');
-
-  const [headImageUrl, setHeadImageUrl] = useState<string | undefined>(
-    undefined
+  const [dancerSignature, setDancerSignature] = useState<string | null>(
+    localStorage.getItem('dancer-ai-generate')
   );
 
-  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('none');
+    setPromptText('');
     variantHistory.current = [];
   });
 
@@ -151,15 +154,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     }
     variantHistory.current = newVariantsHistory;
 
-    const {head} = getGeneratedDancerAssets(adlibOption, choices, variant);
-
-    setHeadImageUrl(head);
-
-    trySetLocalStorage(
-      'dancer-ai-generate',
-      JSON.stringify({adlibOption, choices, variant})
-    );
-
+    const newDancerPayload = JSON.stringify({adlibOption, choices, variant});
+    trySetLocalStorage('dancer-ai-generate', newDancerPayload);
+    setDancerSignature(newDancerPayload);
     const elapsedTime = Date.now() - startTime;
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
@@ -172,37 +169,87 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setAiGenerateState('done');
   }, [generateDancerCache]);
 
+  const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
+
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
+  useEffect(() => {
+    if (!containerRef.current) {
+      return;
+    }
+    const resizeObserver = new ResizeObserver(() => {
+      setContainerHeight(containerRef.current?.clientHeight ?? 0);
+    });
+    resizeObserver.observe(containerRef.current);
+    setContainerHeight(containerRef.current.clientHeight ?? 0);
+    return () => resizeObserver.disconnect();
+  }, []);
+
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
-      <Guide id="generate-panel">
+      <Guide id="generate-panel" glowSpeed={glowSpeed}>
         <Heading5 className={moduleStyles.heading}> Use AI</Heading5>
         {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
-          <div className={moduleStyles.textArea}>{adlibText}</div>
+          <div className={moduleStyles.textArea}>{promptText}</div>
         )}
         {aiGenerateState === 'none' && (
           <>
-            <Adlib
-              adlib={adlibs[adlibOption]}
-              onChange={(adlibText, choices) => {
-                setAdlibText(adlibText);
-                setChoices(choices);
-                variantHistory.current = [];
-              }}
-              className={moduleStyles.textArea}
-            />
-            <Button
-              ariaLabel={'Generate dancer'}
-              text={'Generate dancer'}
-              type="primary"
-              color="black"
-              size="s"
-              iconLeft={{iconName: 'sparkles'}}
-              onClick={generateDancer}
-            />
+            {levelProperties.aiDancerGenerateText && (
+              <>
+                <div>Describe the dancer you'd like AI to create.</div>
+                <textarea
+                  id="generate-description"
+                  onChange={evt => {
+                    setPromptText(evt.target.value);
+                  }}
+                  value={promptText}
+                  rows={4}
+                  className={moduleStyles.textArea}
+                />
+                <Button
+                  ariaLabel={'Continue'}
+                  text={'Continue'}
+                  type="primary"
+                  color="black"
+                  size="s"
+                  iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+                  onClick={() => {
+                    dispatch(continueOrFinishLesson());
+                    analyticsReporter.sendEvent('hoai2025-dancer-prompt', {
+                      promptText,
+                    });
+                  }}
+                />
+              </>
+            )}
+            {!levelProperties.aiDancerGenerateText && (
+              <>
+                <Adlib
+                  adlib={adlibs[adlibOption]}
+                  onChange={(promptText, choices) => {
+                    setPromptText(promptText);
+                    setChoices(choices);
+                    variantHistory.current = [];
+                  }}
+                  className={moduleStyles.textArea}
+                />
+                <Button
+                  ariaLabel={'Generate dancer'}
+                  text={'Generate dancer'}
+                  type="primary"
+                  color="black"
+                  size="s"
+                  iconLeft={{iconName: 'sparkles'}}
+                  onClick={generateDancer}
+                />
+              </>
+            )}
           </>
         )}
         {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
-        {aiGenerateState === 'done' && (
+        {aiGenerateState === 'done' && isPreviewLoading && 'Loading preview...'}
+        {aiGenerateState === 'done' && !isPreviewLoading && (
           <>
             <div>Here is the dancer that was generated.</div>
 
@@ -243,14 +290,24 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           size="s"
         />
       </Guide>
-
-      <div className={moduleStyles.dancerContainer}>
-        <img
-          alt=""
-          src={
-            aiGenerateState === 'done' ? headImageUrl : dancerEmptyHeadShoulders
-          }
-        />
+      <div className={moduleStyles.dancerContainer} ref={containerRef}>
+        {aiGenerateState === 'generating' || !dancerSignature ? (
+          <img alt="" src={dancerEmptyHeadShoulders} />
+        ) : (
+          <>
+            <DancerCanvas
+              key={dancerSignature || 'none'}
+              size={containerHeight}
+              move="rest"
+              onLoadingChange={setIsPreviewLoading}
+            />
+            {isPreviewLoading && (
+              <div className={moduleStyles.spinnerOverlay}>
+                <Spinner size="large" />
+              </div>
+            )}
+          </>
+        )}
       </div>
     </div>
   );

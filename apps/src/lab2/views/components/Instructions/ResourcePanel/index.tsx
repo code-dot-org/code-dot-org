@@ -5,12 +5,12 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {ChatButtonData} from '@cdo/apps/aichat/types';
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
-import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
+import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -87,6 +87,7 @@ type ResourcePanelProps = InstructionsProps & {
   isValidationTourEnabled?: boolean;
   isOnboardingTourEnabled?: boolean;
   aiTutorSystemPromptName?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 };
 
 /**
@@ -108,6 +109,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   isValidationTourEnabled,
   isOnboardingTourEnabled,
   aiTutorSystemPromptName,
+  aiTutorResponseSchemaSettings,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -172,13 +174,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       shouldShowAiTutor(appName, levelProperties.aiTutorAvailable)
     ) {
       tabMap[Tabs.AiTutor] = (
-        <AiTutor2Chat
+        <AiTutorChat
           hiddenContextCallback={hiddenContextCallback}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           levelName={levelName}
           channelId={channelId}
           aiTutorChatButtonData={aiTutorChatButtonData}
           aiTutorSystemPromptName={aiTutorSystemPromptName}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
       );
     }
@@ -219,14 +222,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
-    aiTutorSystemPromptName,
+    hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,
     aiTutorChatButtonData,
+    aiTutorSystemPromptName,
+    aiTutorResponseSchemaSettings,
     selectedVersion,
     levelId,
-    hideInstructionsNavigation,
   ]);
 
   useEffect(() => {
