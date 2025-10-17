@@ -311,6 +311,7 @@ Resources:
             CloudWatchMetricsEnabled: true
             MetricName: AWS-AWSManagedRulesBotControlRuleSet
             SampledRequestsEnabled: true
+        # Protection against Linux-specific Local File Inclusion attacks
         - Name: AWS-AWSManagedRulesLinuxRuleSet
           Priority: 9
           OverrideAction:
@@ -333,6 +334,7 @@ Resources:
             CloudWatchMetricsEnabled: true
             MetricName: AWS-AWSManagedRulesLinuxRuleSet
             SampledRequestsEnabled: true
+        # Protection against requests with known malicious inputs
         - Name: AWS-AWSManagedRulesKnownBadInputsRuleSet
           Priority: 10
           OverrideAction:
@@ -379,6 +381,8 @@ Resources:
             CloudWatchMetricsEnabled: true
             MetricName: AWS-AWSManagedRulesKnownBadInputsRuleSet
             SampledRequestsEnabled: true
+        # Rate based rules don't work well for us because schools and school districts often have multiple users
+        # simultaneously visiting our sites from a single source IP address, so these Limits are set fairly high.
         - Name: GlobalRateBasedRule
           Priority: 11
           Action:
@@ -568,6 +572,7 @@ Resources:
             CloudWatchMetricsEnabled: true
             MetricName: AWS-AWSManagedRulesCommonRuleSet
             SampledRequestsEnabled: true
+        # Marketing Sites don't have a relational database, but anyone probing SQL injection is likely malicious.
         - Name: AWS-AWSManagedRulesSQLiRuleSet
           Priority: 18
           OverrideAction:
