@@ -120,6 +120,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isFloatingSettingsOpen, setIsFloatingSettingsOpen] = useState(false);
   const hasAutoCollapsedNoTabs = useRef(false);
+  const settingsButtonRef = useRef<HTMLDivElement>(null);
+  const [floatingPanelElement, setFloatingPanelElement] =
+    useState<HTMLDivElement | null>(null);
+  const [floatingPanelPosition, setFloatingPanelPosition] = useState<{
+    top: number;
+    left: number;
+  } | null>(null);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -289,6 +296,28 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
+  useEffect(() => {
+    // Calculate floating panel position when it opens.
+    if (
+      isFloatingSettingsOpen &&
+      !hasTabs &&
+      settingsButtonRef.current &&
+      floatingPanelElement
+    ) {
+      const padding = 20;
+      const buttonRect = settingsButtonRef.current.getBoundingClientRect();
+      const floatingPanelHeight = floatingPanelElement.offsetHeight;
+
+      // Position relative to settings button.
+      // Align to the right of button plus padding.
+      const left = buttonRect.right + padding;
+      // Align to the bottom of button taking into account the height of the settings panel.
+      const top = buttonRect.bottom - floatingPanelHeight;
+
+      setFloatingPanelPosition({left, top});
+    }
+  }, [isFloatingSettingsOpen, hasTabs, floatingPanelElement]);
+
   const onClickTab = useCallback(
     (tab: Tabs) => {
       setCurrentTab(tab);
@@ -441,7 +470,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               hideDelayMs={hideTooltipDelayMs}
               hideOnFirstLeave={true}
             >
-              <div>
+              <div ref={settingsButtonRef}>
                 <Button
                   className={styles.resourcePanelButton}
                   onClick={() => onClickSettingsButton()}
@@ -510,7 +539,22 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         )}
       </div>
       {isFloatingSettingsOpen && !hasTabs && (
-        <div className={styles.floatingSettingsPanelContainer}>
+        <div
+          className={styles.floatingSettingsPanelContainer}
+          id="floating-settings-panel"
+          // When first rendered, set the floating settings panel's position offscreen.
+          // When the position is calculated, set the position to the calculated position.
+          // This ensures that the panel doesn't appear in an unexpected position when it is first rendered.
+          style={{
+            left: floatingPanelPosition
+              ? `${floatingPanelPosition.left}px`
+              : '-9999px',
+            top: floatingPanelPosition
+              ? `${floatingPanelPosition.top}px`
+              : '-9999px',
+          }}
+          ref={setFloatingPanelElement}
+        >
           <SettingsPanel
             settings={settings || []}
             closePanel={() => {

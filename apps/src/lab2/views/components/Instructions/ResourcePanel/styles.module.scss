@@ -165,9 +165,7 @@
 }
 
 .floatingSettingsPanelContainer {
-  position: absolute;
-  left: 66px;
-  bottom: 12px;
+  position: fixed;
   width: 260px;
   border: 1px solid var(--borders-neutral-primary);
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.07), 0 4px 7px 0 rgb(0 0 0 / 0.07);
