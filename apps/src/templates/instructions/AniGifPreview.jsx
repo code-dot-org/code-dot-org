@@ -8,20 +8,34 @@ import {openDialog} from '../../redux/instructionsDialog';
 class ImagePreviewUnwrapped extends React.Component {
   static propTypes = {
     url: PropTypes.string.isRequired,
+    alt: PropTypes.string,
     showInstructionsDialog: PropTypes.func.isRequired,
     noVisualization: PropTypes.bool.isRequired,
   };
 
+  handleKeyDown = e => {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Space') {
+      e.preventDefault();
+      this.props.showInstructionsDialog();
+    }
+  };
+
   render() {
+    const {url, alt, showInstructionsDialog, noVisualization} = this.props;
     return (
       <div id="ani-gif-preview-wrapper" style={styles.wrapper}>
         <div
           id="ani-gif-preview"
+          role="button"
+          tabIndex={0}
+          aria-label={alt || undefined}
+          aria-hidden={alt ? undefined : 'true'}
           style={[
-            styles.aniGifPreview(this.props.url),
-            this.props.noVisualization && styles.bigPreview,
+            styles.aniGifPreview(url),
+            noVisualization && styles.bigPreview,
           ]}
-          onClick={this.props.showInstructionsDialog}
+          onClick={showInstructionsDialog}
+          onKeyDown={this.handleKeyDown}
         />
       </div>
     );
