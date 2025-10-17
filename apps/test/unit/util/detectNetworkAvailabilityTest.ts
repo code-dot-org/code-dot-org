@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import DCDO from '@cdo/apps/dcdo';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 
@@ -10,6 +11,10 @@ jest.mock('@cdo/apps/dcdo', () => ({
 jest.mock('@cdo/apps/metrics/StatsigReporter', () => ({
   __esModule: true,
   default: {sendEvent: jest.fn()},
+}));
+jest.mock('@cdo/apps/metrics/MetricsReporter', () => ({
+  __esModule: true,
+  default: {publishMetric: jest.fn()},
 }));
 
 describe('detectNetworkAvailability', () => {
@@ -79,42 +84,128 @@ describe('detectNetworkAvailability', () => {
     expect(statsigReporter.sendEvent).not.toHaveBeenCalled();
   });
 
-  it('sends available event on image load (jsdom)', () => {
+  it('sends available event on image load', () => {
     (DCDO.get as jest.Mock).mockReturnValue({
       url: 'http://code.org',
       sampleRate: 100,
+      backend: 'statsig',
     });
     detectNetworkAvailability(1);
     imageInstance.onload && imageInstance.onload({} as Event);
     expect(statsigReporter.sendEvent).toHaveBeenCalledWith(
       'Remote Network Availability Check',
-      {network: 'available'}
+      {network: 'available', endpoint: 'http://code.org'}
     );
   });
 
-  it('sends error event on image error (jsdom)', () => {
+  it('sends available event on image load (cloudwatch backend)', () => {
     (DCDO.get as jest.Mock).mockReturnValue({
       url: 'http://code.org',
+      sampleRate: 100,
+      backend: 'cloudwatch',
+    });
+    detectNetworkAvailability(1);
+    imageInstance.onload && imageInstance.onload({} as Event);
+    expect(MetricsReporter.publishMetric).toHaveBeenCalledWith(
+      'Remote Network Availability Check',
+      1,
+      'Count',
+      expect.arrayContaining([
+        expect.objectContaining({name: 'networkStatus', value: 'available'}),
+        expect.objectContaining({name: 'endpoint', value: 'http://code.org'}),
+      ])
+    );
+  });
+
+  it('sends available event on image load (both backends)', () => {
+    (DCDO.get as jest.Mock).mockReturnValue({
+      url: 'http://code.org',
+      sampleRate: 100,
+      backend: 'both',
+    });
+    detectNetworkAvailability(1);
+    imageInstance.onload && imageInstance.onload({} as Event);
+    expect(statsigReporter.sendEvent).toHaveBeenCalledWith(
+      'Remote Network Availability Check',
+      expect.objectContaining({
+        network: 'available',
+        endpoint: 'http://code.org',
+      })
+    );
+    expect(MetricsReporter.publishMetric).toHaveBeenCalledWith(
+      'Remote Network Availability Check',
+      1,
+      'Count',
+      expect.arrayContaining([
+        expect.objectContaining({name: 'networkStatus', value: 'available'}),
+        expect.objectContaining({name: 'endpoint', value: 'http://code.org'}),
+      ])
+    );
+  });
+
+  it('sends error event on image error', () => {
+    (DCDO.get as jest.Mock).mockReturnValue({
+      url: 'http://code.org',
+      backend: 'both',
       sampleRate: 100,
     });
     detectNetworkAvailability(2);
     imageInstance.onerror && imageInstance.onerror({} as Event);
     expect(statsigReporter.sendEvent).toHaveBeenCalledWith(
       'Remote Network Availability Check',
-      {network: 'error'}
+      {network: 'error', endpoint: 'http://code.org'}
     );
   });
 
-  it('sends abort event on image abort (jsdom)', () => {
+  it('sends error event on image error (cloudwatch backend)', () => {
     (DCDO.get as jest.Mock).mockReturnValue({
       url: 'http://code.org',
+      sampleRate: 100,
+      backend: 'cloudwatch',
+    });
+    detectNetworkAvailability(2);
+    imageInstance.onerror && imageInstance.onerror({} as Event);
+    expect(MetricsReporter.publishMetric).toHaveBeenCalledWith(
+      'Remote Network Availability Check',
+      1,
+      'Count',
+      expect.arrayContaining([
+        expect.objectContaining({name: 'networkStatus', value: 'error'}),
+        expect.objectContaining({name: 'endpoint', value: 'http://code.org'}),
+      ])
+    );
+  });
+
+  it('sends abort event on image abort', () => {
+    (DCDO.get as jest.Mock).mockReturnValue({
+      url: 'http://code.org',
+      backend: 'both',
       sampleRate: 100,
     });
     detectNetworkAvailability(3);
     imageInstance.onabort && imageInstance.onabort(new UIEvent('abort'));
     expect(statsigReporter.sendEvent).toHaveBeenCalledWith(
       'Remote Network Availability Check',
-      {network: 'abort'}
+      {network: 'abort', endpoint: 'http://code.org'}
+    );
+  });
+
+  it('sends abort event on image abort (cloudwatch backend)', () => {
+    (DCDO.get as jest.Mock).mockReturnValue({
+      url: 'http://code.org',
+      sampleRate: 100,
+      backend: 'cloudwatch',
+    });
+    detectNetworkAvailability(3);
+    imageInstance.onabort && imageInstance.onabort(new UIEvent('abort'));
+    expect(MetricsReporter.publishMetric).toHaveBeenCalledWith(
+      'Remote Network Availability Check',
+      1,
+      'Count',
+      expect.arrayContaining([
+        expect.objectContaining({name: 'networkStatus', value: 'abort'}),
+        expect.objectContaining({name: 'endpoint', value: 'http://code.org'}),
+      ])
     );
   });
 
