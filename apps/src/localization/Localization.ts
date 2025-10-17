@@ -154,10 +154,6 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
           }
         });
 
-        this.Localize?.on?.('updatedDictionary', data => {
-          console.log('updatedDictionary', data);
-        });
-
         this.Localize?.on?.('dictionaryAdded', locale => {
           // Call our own 'change' event, again, to reflect new dictionary data
           this.localeLoaded[locale] = true;
