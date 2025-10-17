@@ -70,7 +70,7 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
               },
               {
                 value: 'apcsp',
-                label: 'Ap Prep',
+                label: 'AP Prep',
                 icon: {iconName: 'laptop-code'},
                 onClick: () => onSuggestPrompts('apcsp'),
               },
