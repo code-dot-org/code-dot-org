@@ -1,0 +1,9 @@
+name 'ai-generated-design-lesson6-level4-test-2025'
+display_name 'CSS Challenge'
+description 'Choose one of the styling challenges.'
+
+sublevels
+level 'ai-generated-design-lesson6-level4a-test-2025'
+level 'ai-generated-design-lesson6-level4b-test-2025'
+level 'ai-generated-design-lesson6-level4c-test-2025'
+level 'ai-generated-design-lesson6-level4d-test-2025'

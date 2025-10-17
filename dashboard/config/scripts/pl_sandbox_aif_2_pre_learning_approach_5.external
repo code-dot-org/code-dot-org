@@ -46,6 +46,7 @@ markdown <<MARKDOWN
 
 </div>
 
+---
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 40px 20px; border-radius: 12px; margin: 30px 0;">
 
@@ -59,31 +60,25 @@ markdown <<MARKDOWN
 
   <!-- Right Column: Image -->
   <div style="flex: 1; min-width: 280px; padding: 20px; text-align: center;">
-    <img src="https://images.code.org/8ac3a6b47a0a84b47216e84b6b1a1d4a-image-illustration.png" 
-         alt="Students collaborating with AI illustration" 
+    <img src="https://images.code.org/ebcaa9b81434d0211c62db984045d977-image-1760467654220.png" 
+         alt="Students collaborating with AI on computers with teacher guiding behind" 
          style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
   </div>
 
 </div>
 
-<div style="text-align: center; margin: 40px 0; padding: 20px;">
+---
 
-  <!-- Centered Statement -->
-  <p style="font-size: 1.25rem; line-height: 1.6; max-width: 800px; margin: 0 auto 30px auto; font-weight: 500;">
-    Learning in this way—through coding, designing, evaluating, and creating with AI—builds adaptability, creativity, critical thinking, values-based judgment, and real-world readiness.
-  </p>
+<div style="text-align: center; margin: 40px 0; padding: 20px;">
 
   <!-- CTA Highlight Box -->
   <div style="display: inline-block; background-color: #f0f8ff; border: 2px solid #007acc; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
     <p style="font-size: 1.2rem; font-weight: bold; margin: 0; line-height: 1.5; color: #003366;">
-      “Given the pace of change in labor markets and the rising importance of AI, there’s no more urgent or relevant approach to education for the future.”
+      Learning in this way—through coding, designing, evaluating, and creating with AI—builds adaptability, creativity, critical thinking, values-based judgment, and real-world readiness.
     </p>
   </div>
 
 </div>
 
-
-
-
-
+![]()
 MARKDOWN

@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:31.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're setting up to livestream an event. Two things need to happen before you can go live: your webcam needs to turn on, and your streaming software needs to launch. Luckily, you've already written functions for both. Now, you'll write a third function that brings them together in the right order.\r\n\r\n1. Review the two existing functions: `activate_camera()` and `open_streaming_tool()`\r\n\r\n2. Write a new function called `prepare_stream()` that **calls both functions in order**.\r\n\r\n3. After defining `prepare_stream()`, call it to run your full setup.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nFunctions can call other functions—just make sure the ones you're calling are defined first!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def activate_camera():\n  # Prints a message that the camera is on\n  print(\"Camera is now on.\")\n\ndef open_streaming_tool():\n  # Prints a message that the streaming tool is ready\n  print(\"Streaming tool is ready.\")\n\n# TODO: Write the prepare_stream() function\n\n\n\n# TODO: Call the prepare_stream() function\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzgrY+Tve2W56tleJZg9LUfV0iuS0mi7V\nLN9pr24h9+kUYToiWoIIW/9YGvVi0a63xwGLKv1pxIlXBADXLavBaYju4OBR\n65JBx6RrijTB52AE7bo8/7xPBkCs5BmG+RWsuH4Hvjl7SohCzmN1chiLgiMZ\nd/ZcX1HyoUE9u5Sm//mbc9vY9dM+IlBw9VCvABElLaI0C0eXo6+AKai3VTzC\nrG1NmboPfTxc/zZkImvBvuvaI+oT/TeQB0wl2Ry9ZLhBCQCdY4tmMB4cYY4s\n7cwUaSOk8abrN2HAYOSOPqwpmCN1R0mbc/+ArErF71MObM6h/AQIE6yXSSo4\n5s8RN1DH5ED+ywifykpiGghzbu5Zoh5GzS3LE6jwN34nriL8QmD1yZhlEozS\n+NKIMBL70lfCeYG24+DDe3DFSkZtZrsFqffjUIbWzBsjyluAbHb3Tu2hZ2i2\nn5Au+zOm3IKoXk3amXVWXopaYSoDc/VB5SZY0YBa9CG4tyyqKZO+vGYamlQY\nWWhh+ctVlgHnetBka0iXlWsOnc9pYbZGqOs65QKlQSRSlD7uqhlcle/nukI0\n7Si2cZkiK2/C1xjbmIPA85+S1ZpHZ3GQpQ76MFEX2VuAqiiX\n",
+    "display_name": "Get Ready to Stream",
+    "bubble_choice_description": "You're setting up to livestream an event. Two things need to happen before you can go live: your webcam needs to turn on, and your streaming software needs to launch. Luckily, you've already written functions for both. Now, you'll write a third function that brings them together in the right order.",
+    "thumbnail_url": "https://images.code.org/99e0d3435cf5556d63f7ef4088426c07-stream.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestPrepareStreamFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_camera_and_streaming_tool_started(self):\n        \"\"\"prepare_stream() should call both setup functions\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertGreaterEqual(\n            len(printed_messages),\n            2,\n            \"Make sure your prepare_stream() function calls both activate_camera() and open_streaming_tool()!\"\n        )\n\n        camera_started = any(\"Camera is now on\" in line for line in printed_messages)\n        streaming_tool_ready = any(\"Streaming tool is ready\" in line for line in printed_messages)\n\n        self.assertTrue(\n            camera_started,\n            \"It looks like activate_camera() wasn't called. Make sure your prepare_stream() function calls activate_camera().\"\n        )\n\n        self.assertTrue(\n            streaming_tool_ready,\n            \"It looks like open_streaming_tool() wasn't called. Make sure your prepare_stream() function calls open_streaming_tool().\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:31.742+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level6a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level6a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

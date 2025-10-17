@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:32.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're helping program an emergency response robot for your school. The robot already has functions to sound an alarm and lock the doors, but now it needs an upgrade. You'll create a full emergency protocol that calls multiple safety steps in the right order, including a new function to secure the server room.\r\n\r\n1. Three safety functions are already defined for you:\r\n\r\n   * `sound_alarm()`\r\n   \r\n   * `lock_doors()`\r\n   \r\n   * `secure_server_room()`\r\n\r\n2. Write a new function called `emergency_protocol()` that:\r\n\r\n   * Calls `sound_alarm()` **twice** at the start (to make sure everyone hears it)\r\n   \r\n   * Then calls `lock_doors()`\r\n   \r\n   * Then calls `secure_server_room()`\r\n\r\n3. After defining `emergency_protocol()`, call it to run the full safety sequence.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nFunctions can call other functions—just make sure the ones you're calling are defined first!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "display_name": "Emergency Protocol",
+    "bubble_choice_description": "You're helping program an emergency response robot for your school. The robot already has functions to sound an alarm and lock the doors, but now it needs an upgrade. You'll create a full emergency protocol that calls multiple safety steps in the right order, including a new function to secure the server room.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def sound_alarm():\n  # Prints a message to notify that the alarm is sounding\n  print(\"🔊 Alarm sounding! Please evacuate.\")\n\ndef lock_doors():\n  # Prints a message to notify that the doors are locked\n  print(\"🔒 All doors are now locked.\")\n\ndef secure_server_room():\n  # Prints a message to notify that the server room is secured\n  print(\"🖥️ Server room secured.\")\n\n# TODO - Write the emergency_protocol() function\n\n\n\n# TODO - Call the emergency_protocol() function\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzorHuI95fPGnkJcqkqctUsCfgLgkYLZn\ne7Wsm8p/yhTysqLG3A+0odXN15e5nOmzXG0AplSNOfYzz2J/LOboQAoXyq7I\n1N+UzetbwLAPkdUbhLFfZ27eCNkyUucaE90UhitbruMKKEpAiWbfLSeYcmKC\nNAYkV/eR3/E2MCUw0W6iGDJlj+adMBRJ9v1QWmXO1vhjGbF9y8UctdLy/ou9\nrlJksj/twXlMqruerTF1XBfhwHg69m9YXCTiIHsmCO9bSbBmy1dehvmrvOt4\nVFZNUX+LCx4N+Te8LaOdSB0g/+n4nnTRAaZ97g7ADbwHrnomzsR5NiUFevR4\nGOERmUsK2gCI7zKw7aNkfXMhA1v2BZNQCWyg+Znr8A1vs7+8GL7FL3QA9aWf\n4EkMuFbez9/35CHEJEB74qbhi/PSMH2TQYUorkUuWptCEHu03x2QzJPSCFo2\nobV28KaNcZoQJOBaLk+6aEwZ6MFLZVq4GFx1bLqkYoxl+FHrY4pmhVSP9Mps\nQeVoFhc8liOgfDngY99zPR679VvkpRhKBDlVuk7KG8qgWvLdVz10jsdXM0cH\nLwOd3wYwlKmRxQyr/vvLroAmFSeBe4k9P41LVH6ek2h/MfSCt4isaWFbjoWJ\nL+5+Ez2y+Aok+9/h6YRaRpVy/2+Orn9mKXefVDI9RQJgpmBj6FOHfujSDHJa\nBVbiDvkyipLVe9jD0tytOtaGelROGTFh+ZMhE/6Ws0z+ark4gynG3miZUkh8\n6jdooWWJb8F6+BzIoC/fCxFOdUSckr/T4hFe4pcNao/Z2EpnFhyZOHddaZ5o\no8jsXzxBa/cpOfEzVYQAdPU9mmjjY5jeIjP9qA5i5F3sxwyELJboObJFEXQc\nel89jZ3Qd8ZIf5rKqKizxxURpA==\n",
+    "thumbnail_url": "https://images.code.org/dee90c65b26f99d73e55059c4ec926e5-emergency.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestEmergencyProtocolFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_full_emergency_sequence(self):\n        \"\"\"emergency_protocol() should call all safety functions in order\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertGreaterEqual(\n            len(printed_messages),\n            4,\n            \"Make sure your emergency_protocol() function calls sound_alarm() twice, then lock_doors(), then secure_server_room().\"\n        )\n\n        alarm_count = sum(1 for line in printed_messages if \"alarm\" in line.lower())\n        doors_locked = any(\"lock\" in line.lower() for line in printed_messages)\n        server_secured = any(\"server\" in line.lower() for line in printed_messages)\n\n        self.assertGreaterEqual(\n            alarm_count,\n            2,\n            \"Make sure sound_alarm() is called twice at the beginning of emergency_protocol().\"\n        )\n\n        self.assertTrue(\n            doors_locked,\n            \"It looks like lock_doors() wasn't called. Make sure you call it after sounding the alarms.\"\n        )\n\n        self.assertTrue(\n            server_secured,\n            \"It looks like secure_server_room() wasn't called. Make sure you call it at the end of emergency_protocol().\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:32.148+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level6c_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level6c_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>
