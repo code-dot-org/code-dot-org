@@ -43,6 +43,7 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
               color: 'gray',
               type: 'secondary',
               text: commonI18n.aiDifferentiation_suggest_prompt(),
+              'aria-label': commonI18n.aiDifferentiation_suggest_prompt(),
               iconLeft: {iconName: 'solid-pen-sparkle', iconFamily: 'kit'},
             }}
             labelText={commonI18n.aiDifferentiation_suggest_prompt()}
