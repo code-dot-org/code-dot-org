@@ -123,8 +123,8 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
   // View instrumentGrid/index.tsx for an example of this component in use.
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     const container = containerRef.current;
-    const firstFocusable = focusableChildren.find(child => child);
     if (!container) return;
+    const firstFocusable = focusableChildren.find(child => child);
 
     switch (event.key) {
       case 'Enter':
