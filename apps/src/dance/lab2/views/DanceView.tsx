@@ -19,6 +19,7 @@ import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {
   applyBlockIdOverrides,
+  updateLocale,
   validateBlockCategories,
 } from '@cdo/apps/blockly/utils';
 import {
@@ -66,6 +67,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
+import localization from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
@@ -399,6 +401,11 @@ const DanceView: React.FunctionComponent<{
     if (toolbox?.contents?.length === 0) {
       toolbox = undefined;
     }
+
+    // Ensure that Blockly localizes when the locale changes
+    localization.on('change', info => {
+      updateLocale(localization.rtl);
+    });
 
     workspace.current = Blockly.inject(blocklyDiv, {
       toolbox,

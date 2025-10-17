@@ -2,6 +2,7 @@ import LottieDancerRenderer from '@cdo/apps/dance/lottie/LottieDancerRenderer';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import localization from '@cdo/apps/localization';
 
 import {ASSET_BASE} from '../constants';
 import * as danceMsg from '../locale';
@@ -65,6 +66,23 @@ export default class ProgramExecutor {
     this.onEventsChanged = options.onEventsChanged;
     this.stopSound = options.stopSound;
     this.onSoundEnded = options.onSoundEnded;
+
+    // Localize
+    const msg = Object.entries(
+      danceMsg as {
+        [key: string]: (...args: string[]) => string;
+      }
+    ).reduce(
+      (acc, [key, msgFunction]) => {
+        acc[key] = (...args: string[]) =>
+          localization.translate(msgFunction(...args));
+        return acc;
+      },
+      {} as {
+        [key: string]: (...args: string[]) => string;
+      }
+    );
+
     this.nativeAPI =
       nativeAPI ||
       new DanceParty({
@@ -85,7 +103,7 @@ export default class ProgramExecutor {
         },
         spriteConfig: new Function('World', options.customHelperLibrary || ''),
         container: options.container,
-        i18n: danceMsg,
+        i18n: msg,
         resourceLoader: new ResourceLoader(ASSET_BASE),
         logger: options.metricsReporter,
         externalRendererFactory: () => new LottieDancerRenderer(),
