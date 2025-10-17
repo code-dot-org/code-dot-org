@@ -31,6 +31,7 @@ const donor_prefixes = [
   '/courses/elementaryai-2024',
   '/courses/3-5gamedesign-2024',
   '/courses/elem-game-design-2024',
+  '/courses/hoai-pilot-6',
 ];
 
 const aif_prefixes = [
@@ -57,6 +58,7 @@ const live = [
   '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
   '/courses/artificial-intelligence-foundations-2025/',
+  '/courses/hoai-pilot-6',
 ];
 
 const experiments =

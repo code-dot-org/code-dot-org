@@ -537,7 +537,7 @@ export interface ExtendedJavascriptGenerator
 
 export interface BlockJson<BlockType extends string = string> {
   type: BlockType;
-  [key: `message${number}`]: string;
+  [key: `message${number}`]: string | undefined;
   [key: `args${number}`]: ArgumentJson[];
   style?: BlockStyles;
   inputsInline?: boolean;
