@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:48:24.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "###Example 1: \"The Enchanted Forest Adventure\"\r\n\r\n**Narrative:** The player is a brave adventurer navigating an enchanted forest to find a hidden treasure. They face magical creatures, make choices about which path to take, and solve riddles to progress.\r\n\r\n**Key Features:**\r\n- Asks three questions \r\n- Uses conditionals for different outcomes based on choices\r\n- Includes user input and simple branching narrative",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def start_game():\n    print(\"Welcome to the Enchanted Forest Adventure!\")\n    name = input(\"What's your name, adventurer? \")\n    print(f\"Greetings, {name}! Your quest begins now.\")\n    \n    path = input(\"Do you choose the left path or the right path? (left/right) \").lower()\n    if path == \"left\":\n        print(\"You encounter a friendly elf who gives you a magical key.\")\n    elif path == \"right\":\n        print(\"A wild troll blocks your way! You have to run back.\")\n    else:\n        print(\"Hmm... that's not an option. Try again.\")\n\n    action = input(\"Do you fight the dragon or sneak past it? (fight/sneak) \").lower()\n    if action == \"fight\":\n        print(\"You bravely fight the dragon and win with the magical key's help!\")\n    elif action == \"sneak\":\n        print(\"You sneak past the dragon quietly and find a hidden treasure.\")\n    else:\n        print(\"Hmm... that's not an option. Try again.\")\n\n    print(\"🎉 Congratulations! You've won the game! 🎉\")\n\nstart_game()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "display_name": "Fantasy Theme",
+    "thumbnail_url": "https://images.code.org/c00fbca56a063c5cdc869bffe0e2ebe6-forest.webp",
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:24.308+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson19-level1a_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson19-level1a_2025\"}]"
+}]]></config>
+</Pythonlab>

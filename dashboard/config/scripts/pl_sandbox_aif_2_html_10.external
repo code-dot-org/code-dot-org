@@ -43,6 +43,6 @@ The **img*** tag shows the picture (in this case, puppy.jpg), with the text “A
 
 #### HTML doesn’t control colors or style—that’s what **CSS** is for. Instead, it answers the question: “What is on the page?”
 
-#### Next, let's see how **CSS** layers in!
+## Next, let's see how **CSS** layers in!
 
 MARKDOWN

@@ -20,6 +20,7 @@ import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
@@ -168,7 +169,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         <PanelContainer
           id="workspace"
           className={panelClassName}
-          headerContent="Workspace"
+          headerContent={<WorkspaceHeader />}
         >
           <Excalidraw
             initialData={currentSources.source}

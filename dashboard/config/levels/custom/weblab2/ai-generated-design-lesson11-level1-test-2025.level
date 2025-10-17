@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-15T17:55:06.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Designer Mindset\r\n###Step 1: Generate\r\n- Upload your wireframe from Lesson 10. Prompt AI with structured recipe:\r\n\t- “_Generate HTML for a page with [header], [nav bar items], [main content area], [footer]._”\r\n- Compare AI output to wireframe.\r\n- Use Revision Checklist to record matches/mismatches (_in Activity Guide_).\r\n- Save as **Version 1**\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "project_template_level_name": "ai-generated-design-lesson11-template-test-2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-15 18:42:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 18:47:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>
