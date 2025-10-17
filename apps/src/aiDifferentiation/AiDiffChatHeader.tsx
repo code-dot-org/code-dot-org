@@ -15,7 +15,7 @@ import {ChatItem, SuggestPromptsType} from './types';
 import style from './ai-differentiation.module.scss';
 
 interface AiDiffChatHeaderProps {
-  onSuggestPrompts: (promptType: Exclude<SuggestPromptsType, null>) => void;
+  onSuggestPrompts: (promptType: SuggestPromptsType) => void;
   messages: ChatItem[];
   threadTitle?: string;
   disableEndButtons: boolean;
