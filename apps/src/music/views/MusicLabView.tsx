@@ -159,13 +159,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     }
   }, [progressManager, validator, appName]);
 
-  // Resize Blockly workspace when collapse state changes.
-  useEffect(() => {
-    if (blocklyWorkspace) {
-      blocklyWorkspace.resizeBlockly();
-    }
-  }, [isStandaloneCollapsed, blocklyWorkspace]);
-
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {

@@ -123,3 +123,7 @@ $default-spacing: 2px;
 .centerHeaderContent {
   @include center-header-content(true);
 }
+
+:global([role="tooltip"]) {
+  z-index: 100;
+}
