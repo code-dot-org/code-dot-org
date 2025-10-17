@@ -10,7 +10,6 @@ import {LanguageInfo} from '@cdo/apps/localization/Localization';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import styles from './settings-panel.module.scss';
-
 interface SettingsPanelProps {
   settings: Setting[];
   closePanel: () => void;
