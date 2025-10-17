@@ -77,8 +77,6 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
   canEnableAITutor: boolean;
-  showAITALessonSummary: boolean;
-  hasCompletedPersonalizationQuiz: boolean;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -88,8 +86,6 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
   canEnableAITutor,
-  showAITALessonSummary,
-  hasCompletedPersonalizationQuiz,
 }) => {
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
