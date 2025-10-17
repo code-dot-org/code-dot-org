@@ -1,3 +1,6 @@
+puts "Loading application.rb..."
+start_time = Time.now
+
 require File.expand_path('../../../deployment', __FILE__)
 require 'cdo/poste'
 require 'rails/all'
@@ -258,3 +261,5 @@ module Dashboard
     end
   end
 end
+
+puts "Loaded application.rb in #{(Time.now - start_time).to_i} seconds."
