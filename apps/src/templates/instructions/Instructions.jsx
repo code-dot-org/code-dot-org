@@ -69,7 +69,7 @@ export default class Instructions extends React.Component {
         )}
         {inputOutputTable && <InputOutputTable data={inputOutputTable} />}
         {imgURL && !inTopPane && <ExampleImage src={imgURL} alt={imgAlt} />}
-        {imgURL && inTopPane && <AniGifPreview />}
+        {imgURL && inTopPane && <AniGifPreview alt={imgAlt} />}
         {authoredHints}
       </div>
     );
