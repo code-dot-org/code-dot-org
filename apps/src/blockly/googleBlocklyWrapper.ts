@@ -1070,11 +1070,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       blocklyWrapper.functionEditor.init(options);
     }
 
-    const blocklySvgElement = document.querySelector('.blocklySvg');
-    if (blocklySvgElement) {
-      blocklySvgElement.setAttribute('tabindex', '-1');
-    }
-
     // Set up variable localization
     initializeVariableLocalization(workspace);
 
