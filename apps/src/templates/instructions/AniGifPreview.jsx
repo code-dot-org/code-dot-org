@@ -14,7 +14,7 @@ class ImagePreviewUnwrapped extends React.Component {
   };
 
   handleKeyDown = e => {
-    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Space') {
+    if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       this.props.showInstructionsDialog();
     }
