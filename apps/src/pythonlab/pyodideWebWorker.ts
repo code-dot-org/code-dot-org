@@ -185,13 +185,13 @@ async function loadPackages() {
   // We explicitly load all dependencies of the packages we want to be available to users,
   // matplotlib and numpy, as well as our custom packages. We do this so that on retry
   // if the top-level package was loaded successfully, but a dependency
-  // failed, we will stil try to reload the dependency.
+  // failed, we will still try to reload the dependency.
   await pyodide.loadPackage(
     [
       // Main packages
       'matplotlib',
       'numpy',
-      // Depencencies of main packages
+      // Dependencies of main packages
       'contourpy',
       'cycler',
       'fonttools',
