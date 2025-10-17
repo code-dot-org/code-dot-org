@@ -60,4 +60,4 @@ Scenario: Teacher views student chat history and interacts with student model
   And I wait until element "#uitest-chat-submit" is enabled
   And I click selector "#uitest-chat-submit"
   Then I wait until element "[aria-label='AI bot chat message']" is visible
-  And element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(240, 242, 245)"
+  And element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(235, 255, 254)"
