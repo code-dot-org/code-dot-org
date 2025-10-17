@@ -13,6 +13,7 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -90,6 +91,7 @@ type ResourcePanelProps = InstructionsProps & {
   isOnboardingTourEnabled?: boolean;
   aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  documentationUrl?: string;
 };
 
 /**
@@ -112,6 +114,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   isOnboardingTourEnabled,
   aiTutorSystemPromptName,
   aiTutorResponseSchemaSettings,
+  documentationUrl,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -351,6 +354,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setIsFloatingSettingsOpen,
   ]);
 
+  const onClickDocumentation = useCallback(() => {
+    window.open(documentationUrl, '_blank');
+  }, [documentationUrl]);
+
   return (
     <>
       <div
@@ -457,6 +464,21 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             id={resourcePanelLinksElementId}
             className={classNames(styles.bottomTabs)}
           >
+            {documentationUrl && (
+              <IconButtonWithTooltip
+                id="documentation"
+                label={commonI18n.documentation()}
+                icon={{iconName: 'book', iconStyle: 'solid'}}
+                type="tertiary"
+                color="black"
+                buttonSize="xs"
+                tooltipSize="xs"
+                tooltipDirection="onBottom"
+                hideTooltipTail={true}
+                onClick={onClickDocumentation}
+              />
+            )}
+
             <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
             <CopyrightButton theme={theme} />
             <WithTooltip
