@@ -163,3 +163,14 @@
   background-color: var(--background-neutral-secondary);
   border-top: variables.$default-border;
 }
+
+.floatingSettingsPanelContainer {
+  position: absolute;
+  left: 66px;
+  bottom: 12px;
+  width: 260px;
+  border: 1px solid var(--borders-neutral-primary);
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.07), 0 4px 7px 0 rgb(0 0 0 / 0.07);
+  border-radius: 5px;
+  z-index: 1000;
+}
