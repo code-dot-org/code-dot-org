@@ -6,11 +6,9 @@ const docsCache: Map<string, Promise<string>> = new Map();
 
 // Fetch serialized JSON docs from programmingClassesController to use in tutor's context
 export const tryFetchDocsForClass = async (programmingClassKey: string) => {
-  if (docsCache.has(programmingClassKey)) {
-    return await docsCache.get(programmingClassKey);
+  if (!docsCache.has(programmingClassKey)) {
+    docsCache.set(programmingClassKey, fetchDocsForClass(programmingClassKey));
   }
-
-  docsCache.set(programmingClassKey, fetchDocsForClass(programmingClassKey));
 
   return await docsCache.get(programmingClassKey);
 };
