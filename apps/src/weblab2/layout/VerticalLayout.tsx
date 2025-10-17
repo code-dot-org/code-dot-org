@@ -30,23 +30,29 @@ const MIN_EDITOR_WIDTH = 300;
 const MIN_PREVIEW_WIDTH = 320;
 const INITIAL_PREVIEW_WIDTH = 400;
 const INITIAL_PREVIEW_WIDTH_WIDGET = 900;
+const INITIAL_INFO_PANEL_WIDTH_COLLAPSED = 55;
+const INITIAL_PREVIEW_WIDTH_COLLAPSED = 650;
 
 const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
-  isProjectLevel,
   isWidgetView,
 }) => {
   const viewMode = useAppSelector(state => state.weblab2.viewMode);
+  const isStandaloneCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const dispatch = useAppDispatch();
 
-  const infoPanelInitialWidth = isProjectLevel
-    ? 0
+  const infoPanelInitialWidth = isStandaloneCollapsed
+    ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
     : isWidgetView
     ? INITIAL_INFO_PANEL_WIDTH_WIDGET
     : INITIAL_INFO_PANEL_WIDTH;
 
   const editorMinWidth = isWidgetView ? 0 : MIN_EDITOR_WIDTH;
-  const previewInitialWidth = isWidgetView
+  const previewInitialWidth = isStandaloneCollapsed
+    ? INITIAL_PREVIEW_WIDTH_COLLAPSED
+    : isWidgetView
     ? INITIAL_PREVIEW_WIDTH_WIDGET
     : INITIAL_PREVIEW_WIDTH;
 
@@ -63,7 +69,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     panelClassName,
   } = useVerticalLayout({
     leftPanel: {
-      minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
+      minWidth: MIN_INFO_PANEL_WIDTH,
       initialWidth: infoPanelInitialWidth,
       name: 'instructions',
     },
@@ -113,44 +119,37 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
 
   useEffect(() => {
     setRightPanelSize(
-      isWidgetView ? INITIAL_PREVIEW_WIDTH_WIDGET : INITIAL_PREVIEW_WIDTH
+      isStandaloneCollapsed
+        ? INITIAL_PREVIEW_WIDTH_COLLAPSED
+        : isWidgetView
+        ? INITIAL_PREVIEW_WIDTH_WIDGET
+        : INITIAL_PREVIEW_WIDTH
     );
-  }, [setRightPanelSize, isWidgetView]);
+  }, [setRightPanelSize, isWidgetView, isStandaloneCollapsed]);
 
   useEffect(() => {
-    if (!isProjectLevel) {
-      setLeftPanelSize(
-        isWidgetView
-          ? INITIAL_INFO_PANEL_WIDTH_WIDGET
-          : INITIAL_INFO_PANEL_WIDTH
-      );
-    } else {
-      setLeftPanelSize(0);
-    }
-  }, [isProjectLevel, setLeftPanelSize, isWidgetView]);
+    setLeftPanelSize(
+      isStandaloneCollapsed
+        ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
+        : isWidgetView
+        ? INITIAL_INFO_PANEL_WIDTH_WIDGET
+        : INITIAL_INFO_PANEL_WIDTH
+    );
+  }, [setLeftPanelSize, isWidgetView, isStandaloneCollapsed]);
 
   return (
-    <div
-      className={
-        isProjectLevel
-          ? lab2Styles.containerWithFooter
-          : lab2Styles.defaultContainer
-      }
-    >
+    <div className={lab2Styles.defaultContainer}>
       <div className={lab2Styles.layoutContainer}>
-        {!isProjectLevel && (
-          <>
-            <InfoPanel
-              style={{width: leftPanelWidth}}
-              className={classNames(lab2Styles.flexShrink0, panelClassName)}
-            />
-            <ResizeBar
-              isVertical={true}
-              separatorProps={leftPanelSeparatorProps}
-              isDragging={leftPanelDragging}
-            />
-          </>
-        )}
+        <InfoPanel
+          style={{width: leftPanelWidth}}
+          className={classNames(lab2Styles.flexShrink0, panelClassName)}
+        />
+        <ResizeBar
+          isVertical={true}
+          separatorProps={leftPanelSeparatorProps}
+          isDragging={leftPanelDragging}
+        />
+
         <div
           className={classNames(
             lab2Styles.flexColumn,
@@ -208,7 +207,6 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           </div>
         </div>
       </div>
-      {isProjectLevel && <div className={lab2Styles.footerArea} />}
     </div>
   );
 };

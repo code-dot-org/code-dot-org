@@ -19,6 +19,7 @@ module Services
       attr_reader :user, :email
 
       REDACTED_STRING = 'redacted'
+      REDACTED_EMAIL_STRING = 'redacted@code.org'
       EMAIL_REGEX = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i
 
       def initialize(user:)
@@ -64,7 +65,7 @@ module Services
         if email.present? && ::User.find_by_email(email).blank?
           EmailPreference.where(email: email).destroy_all
           Census::CensusSubmission.where(submitter_email_address: email).find_each do |cs|
-            cs.update!(submitter_email_address: nil, submitter_name: nil)
+            cs.update!(submitter_email_address: REDACTED_EMAIL_STRING, submitter_name: REDACTED_STRING)
           end
         end
 
@@ -127,7 +128,7 @@ module Services
         user.simple_survey_submissions.each do |sss|
           foorm_submission = sss.foorm_submission
           if foorm_submission.present?
-            foorm_submission.update!(answers: foorm_submission.answers.gsub(EMAIL_REGEX, REDACTED_STRING))
+            foorm_submission.update!(answers: foorm_submission.answers.gsub(EMAIL_REGEX, REDACTED_EMAIL_STRING))
           end
         end
       end
