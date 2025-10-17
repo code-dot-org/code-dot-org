@@ -148,14 +148,22 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
     if (selectedStudent) {
       dispatch(
-        fetchUserChatHistory({userId: selectedStudent.id, isOwnHistory: false})
+        fetchUserChatHistory({
+          userId: selectedStudent.id,
+          isOwnHistory: false,
+          channelId,
+        })
       );
     } else {
       dispatch(
-        fetchUserChatHistory({userId: currentUserId, isOwnHistory: true})
+        fetchUserChatHistory({
+          userId: currentUserId,
+          isOwnHistory: true,
+          channelId,
+        })
       );
     }
-  }, [dispatch, currentUserId, currentLevelId, selectedStudent]);
+  }, [dispatch, currentUserId, currentLevelId, selectedStudent, channelId]);
 
   useEffect(() => {
     dispatch(setClientType(clientType));

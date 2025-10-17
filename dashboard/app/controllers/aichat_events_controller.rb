@@ -52,24 +52,35 @@ class AichatEventsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  # params are userId: number, levelId: number, scriptId: number
+  # params are userId: number, levelId: number, scriptId: number, channelId: string
   # GET /aichat_events/chat_history
   def chat_history
     # Request all chat events for a user at a given level/script.
     begin
-      params.require([:userId, :levelId, :scriptId])
+      params.require([:userId])
+      unless (params[:scriptId].present? && params[:levelId].present?) || params[:channelId].present?
+        raise ActionController::ParameterMissing, 'Either both scriptId and levelId, or channelId must be provided'
+      end
     rescue ActionController::ParameterMissing
       return render status: :bad_request, json: {}
     end
 
     script_id = params[:scriptId]
+    channel_id = params[:channelId]
     level_id = params[:levelId]
     user_id = params[:userId].to_i
     unless can_view_chat_history?(user_id)
       return render(status: :forbidden, json: {error: "Access denied for chat history."})
     end
 
-    aichat_events = AichatEvent.where(user_id: user_id, level_id: level_id, script_id: script_id).order(:created_at).map do |event|
+    aichat_events = AichatEvent.none
+    if script_id.present? && level_id.present?
+      aichat_events = AichatEvent.where(user_id: user_id, script_id: script_id, level_id: level_id)
+    elsif channel_id.present?
+      _, project_id = storage_decrypt_channel_id(channel_id)
+      aichat_events = AichatEvent.where(user_id: user_id, project_id: project_id)
+    end
+    aichat_events = aichat_events.order(:created_at).map do |event|
       chat_event = event[:aichat_event].is_a?(String) ? JSON.parse(event[:aichat_event]) : event[:aichat_event]
       {
         id: event.id,
