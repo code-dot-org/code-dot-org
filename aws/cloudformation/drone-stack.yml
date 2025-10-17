@@ -388,7 +388,7 @@ Resources:
               Value: 50
             -
               Name: DRONE_AMAZON_TAGS
-              Value: cost-center:ci
+              Value: environment:ci
             # END: Settings for the EC2 Instances that Drone Autoscaler provisions.
 
             # BEGIN: Settings for the Drone Runner ("worker"/"agent") executing on the EC2 Instances provisioned by Autoscaler.
