@@ -1,5 +1,6 @@
 import {tryFetchDocsForClass} from '@cdo/apps/aiTutor/docContextApi';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
+import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
@@ -12,26 +13,26 @@ interface AiTutorPythonLabParams {
   miniAppName: string | undefined;
 }
 export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
-  private params?: AiTutorPythonLabParams;
-  private docsPromise?: Promise<string | undefined>;
+  private documentationPromise?: Promise<string | undefined>;
   private cachedDocs?: string | undefined;
+  private params?: AiTutorPythonLabParams;
 
   override setAiTutorContext(params: AiTutorPythonLabParams): void {
     this.params = params;
     if (
       this.params.miniAppName &&
       this.params.miniAppName === 'neighborhood' &&
-      !this.docsPromise
+      !this.documentationPromise
     ) {
-      this.docsPromise = tryFetchDocsForClass('painter');
+      this.documentationPromise = tryFetchDocsForClass('painter');
       // Cache the result once resolved
-      this.docsPromise.then(docs => {
+      this.documentationPromise.then(docs => {
         this.cachedDocs = docs;
       });
     }
   }
 
-  protected override async getAiTutorContext() {
+  protected override async getAiTutorContext(): Promise<AiTutorContext> {
     if (!this.params) return {};
 
     const {source, validationFile, longInstructions} = this.params;
@@ -61,7 +62,7 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
       PythonValidationTracker.getInstance().getValidationResults()
     );
 
-    const documentation = this.cachedDocs ?? (await this.docsPromise);
+    const documentation = this.cachedDocs ?? (await this.documentationPromise);
 
     return {
       sourceCode,

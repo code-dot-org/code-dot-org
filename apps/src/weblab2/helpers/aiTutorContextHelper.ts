@@ -1,5 +1,6 @@
 import {UserAddedSelectionContext} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
+import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
 interface AiTutorWebLab2Params {
@@ -15,7 +16,7 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
     this.params = params;
   }
 
-  protected override getAiTutorContext() {
+  protected override getAiTutorContext(): AiTutorContext {
     if (!this.params) return {};
 
     const {source, longInstructions, selection} = this.params;
