@@ -351,6 +351,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setIsFloatingSettingsOpen,
   ]);
 
+  const headerContent = useMemo(() => {
+    if (currentTab) {
+      if (tabInfo[currentTab].title) {
+        return tabInfo[currentTab].title;
+      } else {
+        // If current tab doesn't have title, default is Instructions.
+        return commonI18n.instructions();
+      }
+    }
+    // If no current tab, return empty string.
+    return '';
+  }, [currentTab]);
+
   return (
     <>
       <div
@@ -488,7 +501,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           <div className={styles.panels}>
             <PanelContainer
               id={currentTab || 'resource-panel'}
-              headerContent={(currentTab && tabInfo[currentTab].title) || ''}
+              headerContent={headerContent}
               headerClassName={headerClassName}
               rightHeaderContent={
                 currentTab === Tabs.AiTutor ? (
