@@ -1,6 +1,5 @@
 import {tryFetchDocsForClass} from '@cdo/apps/aiTutor/docContextApi';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
-import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
@@ -13,21 +12,29 @@ interface AiTutorPythonLabParams {
   miniAppName: string | undefined;
 }
 export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
-  private aiTutorContext: AiTutorContext = {};
   private params?: AiTutorPythonLabParams;
-
-  protected override getAiTutorContext(): AiTutorContext {
-    return this.aiTutorContext;
-  }
+  private docsPromise?: Promise<string | undefined>;
+  private cachedDocs?: string | undefined;
 
   override setAiTutorContext(params: AiTutorPythonLabParams): void {
     this.params = params;
+    if (
+      this.params.miniAppName &&
+      this.params.miniAppName === 'neighborhood' &&
+      !this.docsPromise
+    ) {
+      this.docsPromise = tryFetchDocsForClass('painter');
+      // Cache the result once resolved
+      this.docsPromise.then(docs => {
+        this.cachedDocs = docs;
+      });
+    }
   }
 
-  protected override async formatAiTutorContext() {
-    if (!this.params) return;
+  protected override async getAiTutorContext() {
+    if (!this.params) return {};
 
-    const {source, validationFile, longInstructions, miniAppName} = this.params;
+    const {source, validationFile, longInstructions} = this.params;
     const sourceCode = source
       ? Object.values(source.files)
           .filter(
@@ -54,12 +61,9 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
       PythonValidationTracker.getInstance().getValidationResults()
     );
 
-    const documentation =
-      miniAppName === 'neighborhood'
-        ? await tryFetchDocsForClass('painter')
-        : undefined;
+    const documentation = this.cachedDocs ?? (await this.docsPromise);
 
-    this.aiTutorContext = {
+    return {
       sourceCode,
       validationContents,
       validationResults,

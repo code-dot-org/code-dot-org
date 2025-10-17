@@ -1,6 +1,5 @@
 import {UserAddedSelectionContext} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
-import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
 interface AiTutorWebLab2Params {
@@ -10,19 +9,14 @@ interface AiTutorWebLab2Params {
 }
 
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
-  private aiTutorContext: AiTutorContext = {};
   private params?: AiTutorWebLab2Params;
-
-  protected override getAiTutorContext(): AiTutorContext {
-    return this.aiTutorContext;
-  }
 
   override setAiTutorContext(params: AiTutorWebLab2Params): void {
     this.params = params;
   }
 
-  protected override formatAiTutorContext() {
-    if (!this.params) return;
+  protected override getAiTutorContext() {
+    if (!this.params) return {};
 
     const {source, longInstructions, selection} = this.params;
     const sourceCode = source
@@ -53,7 +47,7 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
             .join('\n\n')
         : undefined;
 
-    this.aiTutorContext = {
+    return {
       sourceCode,
       longInstructions,
       userSelection,
