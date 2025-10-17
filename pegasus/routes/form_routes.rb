@@ -1,15 +1,3 @@
-get '/forms/uploads/*' do |uri|
-  cache_file = cache_dir('fetch', request.site, request.path_info)
-  unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
-    FileUtils.mkdir_p File.dirname(cache_file)
-    File.write(cache_file, AWS::S3.download_from_bucket('cdo-form-uploads', uri))
-  end
-  pass unless File.file?(cache_file)
-
-  cache_control :public, :must_revalidate, max_age: settings.static_max_age
-  send_file(cache_file)
-end
-
 post '/forms/:kind' do |kind|
   halt 403 if settings.read_only
   begin

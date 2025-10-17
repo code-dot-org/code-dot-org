@@ -2205,9 +2205,27 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:3"
-        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:2"
+        ],
+        "lesson.key": "Jigsaw",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "758f6dfd-efa4-4432-bdab-61708582e703"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
       },
       "bonus": false,
       "seeding_key": {
@@ -2224,7 +2242,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2248,7 +2266,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2272,7 +2290,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2296,7 +2314,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2320,7 +2338,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2344,7 +2362,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2369,7 +2387,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -2393,7 +2411,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2417,7 +2435,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2441,7 +2459,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2465,7 +2483,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2489,7 +2507,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2513,7 +2531,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2537,7 +2555,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -2561,7 +2579,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -2585,7 +2603,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -2609,7 +2627,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2633,7 +2651,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2657,7 +2675,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2681,7 +2699,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2705,7 +2723,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2729,7 +2747,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2753,7 +2771,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2777,7 +2795,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2801,7 +2819,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2825,7 +2843,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2849,7 +2867,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2873,7 +2891,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2897,7 +2915,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2921,7 +2939,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2945,7 +2963,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2969,7 +2987,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2993,7 +3011,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3017,7 +3035,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3041,7 +3059,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3065,7 +3083,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3089,7 +3107,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3113,7 +3131,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -3137,7 +3155,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3161,7 +3179,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7597,9 +7615,63 @@
       "level_keys": [
         "allthethings sketchlab 2"
       ]
+    },
+    {
+      "chapter": 222,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthethings sketchlab 3"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
+      },
+      "level_keys": [
+        "allthethings sketchlab 3"
+      ]
+    },
+    {
+      "chapter": 223,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthethings sketchlab 4"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
+      },
+      "level_keys": [
+        "allthethings sketchlab 4"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:2",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:2"
+        ],
+        "lesson.key": "Jigsaw",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "758f6dfd-efa4-4432-bdab-61708582e703"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "blockly:Jigsaw:3",
@@ -10383,6 +10455,30 @@
         "level.key": "allthethings sketchlab 2",
         "script_level.level_keys": [
           "allthethings sketchlab 2"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "allthethings sketchlab 3",
+        "script_level.level_keys": [
+          "allthethings sketchlab 3"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "allthethings sketchlab 4",
+        "script_level.level_keys": [
+          "allthethings sketchlab 4"
         ],
         "lesson.key": "lesson-57",
         "lesson_group.key": "",

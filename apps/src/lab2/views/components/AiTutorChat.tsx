@@ -3,14 +3,18 @@ import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesom
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
-import {ChatButtonClickHandler, ChatButtonData} from '@cdo/apps/aichat/types';
+import {
+  ChatButtonClickHandler,
+  ChatButtonData,
+  ResponseSchemaSettings,
+} from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
 import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import moduleStyles from './AiTutor2Chat.module.scss';
+import moduleStyles from './AiTutorChat.module.scss';
 
 // Some pre-canned chat buttons.
 const defaultChatButtonData: ChatButtonData[] = [
@@ -18,26 +22,29 @@ const defaultChatButtonData: ChatButtonData[] = [
   ...defaultPrompts,
 ] as const;
 
-interface AiTutor2ChatProps {
+interface AiTutorChatProps {
   hiddenContextCallback: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
   levelName?: string;
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPromptName?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 }
 
 // A free chat with lab-supplied context added to each question.
-const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
+const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   hiddenContextCallback,
   aiTutorMultimodalEnabled = false,
   levelName,
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPromptName,
+  aiTutorResponseSchemaSettings,
 }) => {
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPromptName,
+    aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
   });
 
   const chatButtons = useMemo(() => {
@@ -86,9 +93,10 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         levelName={levelName}
         channelId={channelId}
         hideModelChangeMessage={true}
+        responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
       />
     </div>
   );
 };
 
-export default AiTutor2Chat;
+export default AiTutorChat;

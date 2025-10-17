@@ -184,7 +184,7 @@
     "level_data": {
       "validationTimeout": 6,
       "library": "launch2024",
-      "dancerMove": "rest",
+      "danceMove": "rest",
       "packId": "default",
       "startSources": {
         "blocks": {

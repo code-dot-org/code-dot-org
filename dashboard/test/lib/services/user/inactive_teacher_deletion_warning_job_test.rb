@@ -100,7 +100,8 @@ class User::InactiveTeacherDeletionWarningJobTest < ActiveJob::TestCase
   end
 
   describe '#inactive_teachers' do
-    let(:inactive_teachers) {described_class.new.send(:inactive_teachers)}
+    subject(:described_instance) {described_class.new}
+    let(:inactive_teachers) {described_instance.send(:inactive_teachers)}
     let(:inactive_since) {42.months.ago}
     it 'returns inactive users who have not been sent deletion warning email' do
       expected_user = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status))
@@ -117,6 +118,12 @@ class User::InactiveTeacherDeletionWarningJobTest < ActiveJob::TestCase
       expected_user = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status))
       expected_user.user_data_retention_status.update!(deletion_warning_email_sent_at: 40.months.ago)
       _(inactive_teachers).wont_include expected_user
+    end
+
+    it 'does not include accounts from processed_teacher_ids' do
+      user = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status))
+      described_instance.processed_teacher_ids << user.id
+      _(inactive_teachers).wont_include user
     end
   end
 end

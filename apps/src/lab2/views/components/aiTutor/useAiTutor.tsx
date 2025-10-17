@@ -4,13 +4,13 @@ import {WaitingAnimation} from '@cdo/apps/aichat/views/WaitingAnimation';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
-import AiTutor2Manager, {
-  AiTutor2MessageType,
-} from '@cdo/apps/lab2/ai/AiTutor2Manager';
+import AiTutorManager, {
+  AiTutorMessageType,
+} from '@cdo/apps/lab2/ai/AiTutorManager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import moduleStylesFixed from '../AiTutor2ResponseFixed.module.scss';
-import moduleStylesShrink from '../AiTutor2ResponseShrink.module.scss';
+import moduleStylesFixed from '../AiTutorResponseFixed.module.scss';
+import moduleStylesShrink from '../AiTutorResponseShrink.module.scss';
 
 /** 
  * We aren't currently using this but keeping this code around for now in case we want to put
@@ -20,18 +20,18 @@ import moduleStylesShrink from '../AiTutor2ResponseShrink.module.scss';
  * 
  * Usage looks like:
  * 
- *   const isAiTutor2HintEnabled = queryParams('show-ai-tutor2-hint') === 'true';
- *   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
-     isAiTutor2HintEnabled,
+ *   const isAiTutorHintEnabled = queryParams('show-ai-tutor-hint') === 'true';
+ *   const [askAiTutor, AiTutorResponse] = useAiTutor(
+     isAiTutorHintEnabled,
      'hint'
    );
  
  * 
  */
 
-export function useAiTutor2(
+export function useAiTutor(
   isEnabled: boolean,
-  type: AiTutor2MessageType,
+  type: AiTutorMessageType,
   shrink = false
 ) {
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
@@ -39,9 +39,9 @@ export function useAiTutor2(
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const [loading, setLoading] = useState<boolean>();
 
-  const managerRef = useRef<AiTutor2Manager | null>(
+  const managerRef = useRef<AiTutorManager | null>(
     isEnabled
-      ? new AiTutor2Manager(aiTutorModelId, currentLevelId, scriptId, channelId)
+      ? new AiTutorManager(aiTutorModelId, currentLevelId, scriptId, channelId)
       : null
   );
 
@@ -53,13 +53,13 @@ export function useAiTutor2(
     }
 
     console.log(
-      '🤖: creating AiTutor2Manager',
+      '🤖: creating AiTutorManager',
       currentLevelId,
       scriptId,
       channelId,
       aiTutorModelId
     );
-    managerRef.current = new AiTutor2Manager(
+    managerRef.current = new AiTutorManager(
       aiTutorModelId,
       currentLevelId,
       scriptId,
@@ -70,7 +70,7 @@ export function useAiTutor2(
 
   const [response, setResponse] = useState<string>();
 
-  const askAiTutor2 = useCallback(
+  const askAiTutor = useCallback(
     async (question: string, questionExtra: string) => {
       if (!isEnabled) {
         return;
@@ -79,7 +79,7 @@ export function useAiTutor2(
       console.log('🤖: starting chat request', question);
 
       setLoading(true);
-      const response = await managerRef.current?.askAiTutor2(
+      const response = await managerRef.current?.askAiTutor(
         question,
         questionExtra,
         type
@@ -92,7 +92,7 @@ export function useAiTutor2(
     [isEnabled, type]
   );
 
-  const AiTutor2Response = loading ? (
+  const AiTutorResponse = loading ? (
     <WaitingAnimation
       shouldDisplay={true}
       className={moduleStylesShrink.waitingAnimation}
@@ -105,5 +105,5 @@ export function useAiTutor2(
     />
   ) : null;
 
-  return [askAiTutor2, AiTutor2Response] as const;
+  return [askAiTutor, AiTutorResponse] as const;
 }
