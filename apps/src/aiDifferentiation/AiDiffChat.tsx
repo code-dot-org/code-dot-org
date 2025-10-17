@@ -321,7 +321,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     setInitialThreadPrompt,
   ]);
 
-  const onSuggestPrompts = (promptType: Exclude<SuggestPromptsType, null>) => {
+  const onSuggestPrompts = (promptType: SuggestPromptsType) => {
     const aiInitialSuggestionsMessage = {
       role: Role.ASSISTANT,
       chatMessageText:
