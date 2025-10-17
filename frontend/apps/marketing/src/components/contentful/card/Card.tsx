@@ -26,6 +26,8 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   imageSrc?: string;
   /** Height of the image */
   imageHeight?: string;
+  /** Image object fit */
+  imageObjectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
   /** Card overline */
   overline?: string;
   /** Primary button props */
@@ -51,6 +53,7 @@ const Card: React.FC<CardProps> = ({
   description,
   imageSrc,
   imageHeight,
+  imageObjectFit = 'cover',
   overline,
   primaryButton,
   secondaryButton,
@@ -119,7 +122,7 @@ const Card: React.FC<CardProps> = ({
           <NextImage
             alt={title || ''}
             src={imageSource}
-            style={{objectFit: 'contain'}}
+            style={{objectFit: imageObjectFit}}
           />
         </CardMedia>
       )}
