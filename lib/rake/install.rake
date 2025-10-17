@@ -47,7 +47,7 @@ namespace :install do
         if ENV['CI']
           if ENV['CI_JOB'] == 'unit_tests'
             # Prepare for dashboard unit tests to run.
-            RakeUtils.rake 'db:create db:test:prepare'
+            RakeUtils.rake_stream_output 'db:create db:test:prepare'
           elsif ENV['CI_JOB'] == 'ui_tests'
             # If we don't already have a database that's been restored from a
             # cache, prepare one from scratch by creating the database and loading
@@ -69,7 +69,7 @@ namespace :install do
     if RakeUtils.local_environment?
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
-        RakeUtils.rake 'pegasus:setup_db'
+        RakeUtils.rake_stream_output 'pegasus:setup_db'
       end
     end
   end

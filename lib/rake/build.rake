@@ -141,9 +141,9 @@ namespace :build do
         raise "do not optimize rails assets without optimized webpack assets" unless CDO.optimize_webpack_assets
 
         ChatClient.log 'Cleaning <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:clean'
+        RakeUtils.rake_stream_output 'assets:clean'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:precompile', '--quiet'
+        RakeUtils.rake_stream_output 'assets:precompile', '--quiet'
       end
 
       ChatClient.log 'Restarting <b>dashboard</b> web server.'
