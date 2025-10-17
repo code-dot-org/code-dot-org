@@ -1,52 +1,43 @@
-import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect} from 'react';
 
-import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
-import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const MIN_RIGHT_PANEL_WIDTH = 300;
 const MIN_LEFT_PANEL_WIDTH = 150;
+const MIN_LEFT_PANEL_WIDTH_COLLAPSED = 55;
 const MIN_OUTPUT_HEIGHT = 120;
 const MIN_EDITOR_HEIGHT = 200;
-const INITIAL_INFO_PANEL_WIDTH = experiments.isEnabledAllowingQueryString(
-  experiments.LAB2_RESOURCE_PANEL
-)
-  ? 330
-  : 300;
+const INITIAL_INFO_PANEL_WIDTH = 330;
+const INITIAL_INFO_PANEL_WIDTH_COLLAPSED = 55;
 const INITIAL_OUTPUT_HEIGHT = 300;
 const INITIAL_OUTPUT_HEIGHT_WIDGET = 800;
-const PROJECT_FOOTER_HEIGHT = 56;
 
 const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
-  isProjectLevel,
   isWidgetView,
 }) => {
   const widgetViewShowCode = useAppSelector(
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
-  const {hiddenContextCallback, levelProperties} = useCodebridgeContext();
 
-  // AI Tutor is shown in the resource panel if enabled.
-  const showAiTutor =
-    !experiments.isEnabledAllowingQueryString(
-      experiments.LAB2_RESOURCE_PANEL
-    ) &&
-    (levelProperties.aiTutorAvailable ||
-      queryParams('show-ai-tutor2') === 'true' ||
-      queryParams('show-ai-tutor') === 'true');
+  const isStandaloneCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
+  const infoPanelInitialWidth = isStandaloneCollapsed
+    ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
+    : INITIAL_INFO_PANEL_WIDTH;
+
+  const infoPanelMinWidth = isStandaloneCollapsed
+    ? MIN_LEFT_PANEL_WIDTH_COLLAPSED
+    : MIN_LEFT_PANEL_WIDTH;
 
   const {
     leftPanelWidth,
@@ -57,13 +48,13 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     leftPanelDragging,
     rightBottomPanelSeparatorProps,
     rightBottomPanelDragging,
+    setLeftPanelSize,
     setRightBottomPanelSize,
-    rightmostPanelWidth,
     panelClassName,
   } = useHorizontalLayout({
     leftPanel: {
-      initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
-      minWidth: isProjectLevel ? 0 : MIN_LEFT_PANEL_WIDTH,
+      initialWidth: infoPanelInitialWidth,
+      minWidth: infoPanelMinWidth,
       name: 'instructions',
     },
     rightTopPanel: {
@@ -80,32 +71,30 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     },
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
     appName: 'pythonlab',
-    heightOffset: isProjectLevel ? PROJECT_FOOTER_HEIGHT : 0,
-    showingRightmostPanel: showAiTutor,
+    heightOffset: 0,
   });
 
+  useEffect(() => {
+    setLeftPanelSize(
+      isStandaloneCollapsed
+        ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
+        : INITIAL_INFO_PANEL_WIDTH
+    );
+  }, [isStandaloneCollapsed, setLeftPanelSize]);
+
   return (
-    <div
-      className={
-        isProjectLevel
-          ? moduleStyles.containerWithFooter
-          : moduleStyles.defaultContainer
-      }
-    >
+    <div className={moduleStyles.defaultContainer}>
       <div className={moduleStyles.layoutContainer}>
-        {!isProjectLevel && (
-          <>
-            <InfoPanel
-              style={{width: leftPanelWidth}}
-              className={classNames(moduleStyles.flexShrink0, panelClassName)}
-            />
-            <ResizeBar
-              isVertical={true}
-              separatorProps={leftPanelSeparatorProps}
-              isDragging={leftPanelDragging}
-            />
-          </>
-        )}
+        <InfoPanel
+          style={{width: leftPanelWidth}}
+          className={classNames(moduleStyles.flexShrink0, panelClassName)}
+        />
+        <ResizeBar
+          isVertical={true}
+          separatorProps={leftPanelSeparatorProps}
+          isDragging={leftPanelDragging}
+        />
+
         <div
           className={moduleStyles.flexColumn}
           style={{width: rightPanelWidth}}
@@ -131,22 +120,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             className={panelClassName}
           />
         </div>
-        {showAiTutor && hiddenContextCallback && (
-          <div style={{width: rightmostPanelWidth}}>
-            <PanelContainer
-              id="aiTutor"
-              headerContent="AI Tutor"
-              className={moduleStyles.rightmostColumn}
-              rightHeaderContent={<AiChatHeaderButtons />}
-            >
-              <div className={moduleStyles.inside}>
-                <AiTutorChat hiddenContextCallback={hiddenContextCallback} />
-              </div>
-            </PanelContainer>
-          </div>
-        )}
       </div>
-      {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>
   );
 };
