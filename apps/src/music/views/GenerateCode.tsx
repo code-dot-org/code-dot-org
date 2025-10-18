@@ -137,6 +137,15 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   }, [aiGenerateState, currentPlayheadPosition, dispatch, isPlaying]);
 
   useEffect(() => {
+    // If the user goes back to none or forward to editing, stop playback.
+    if (['none', 'editing'].includes(aiGenerateState)) {
+      if (isPlaying) {
+        setPlaying(false);
+      }
+    }
+  }, [aiGenerateState, dispatch, hasEdited, isPlaying, setPlaying]);
+
+  useEffect(() => {
     if (aiGenerateState === 'editing' && hasEdited) {
       dispatch(setAiGenerateState('edited'));
     }
@@ -229,6 +238,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {aiGenerateState === 'generating' ? 'Generating code...' : ''}
+
+      {aiGenerateState === 'generated' ? '...' : ''}
 
       {aiGenerateState === 'listening' && <div>Let's have a listen...</div>}
 
