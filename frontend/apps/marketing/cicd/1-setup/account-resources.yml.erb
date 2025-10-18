@@ -110,7 +110,7 @@ Resources:
                           # All assets are served from `/_next/static` and HTML pages are never served from this path.
                           - RegexString: '\\/_next\\/static'
                           # Just to be safe, exclude paths where the file extension is a non-HTML resource.
-                          - RegexString: '\\.(acc|avi|css|gif|ico|jpe?g|js|json|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?|xml)$'
+                          - RegexString: '\\.(acc|avi|css|gif|ico|jpe?g|js|json|mp[34]|ogg|otf|pdf|png|tiff?|ttf|txt|webm|webp|woff2?|xml)$'
               RuleActionOverrides:
                 - Name: ChallengeAllDuringEvent
                   ActionToUse:
@@ -203,7 +203,6 @@ Resources:
             CloudWatchMetricsEnabled: true
             MetricName: AWS-AWSManagedRulesAmazonIpReputationList
             SampledRequestsEnabled: true
-
         - Name: AWS-AWSManagedRulesAnonymousIpList
           Priority: 7
           OverrideAction:
@@ -222,94 +221,6 @@ Resources:
           VisibilityConfig:
             CloudWatchMetricsEnabled: true
             MetricName: AWS-AWSManagedRulesAnonymousIpList
-            SampledRequestsEnabled: true
-        - Name: AWS-AWSManagedRulesBotControlRuleSet
-          Priority: 8
-          OverrideAction:
-            None: {}
-          Statement:
-            ManagedRuleGroupStatement:
-              VendorName: AWS
-              Name: AWSManagedRulesBotControlRuleSet
-              ManagedRuleGroupConfigs:
-                - AWSManagedRulesBotControlRuleSet:
-                    InspectionLevel: COMMON
-              RuleActionOverrides:
-                - Name: CategoryAdvertising
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategoryArchiver
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategoryContentFetcher
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategoryEmailClient
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategoryHttpLibrary
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategoryLinkChecker
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategoryMiscellaneous
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategoryMonitoring
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategoryScrapingFramework
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategorySearchEngine
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategorySecurity
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategorySeo
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategorySocialMedia
-                  ActionToUse:
-                    Challenge: {}
-                - Name: CategoryAI
-                  ActionToUse:
-                    Challenge: {}
-                - Name: SignalAutomatedBrowser
-                  ActionToUse:
-                    Challenge: {}
-                - Name: SignalKnownBotDataCenter
-                  ActionToUse:
-                    Challenge: {}
-                - Name: SignalNonBrowserUserAgent
-                  ActionToUse:
-                    Challenge: {}
-                - Name: TGT_VolumetricIpTokenAbsent
-                  ActionToUse:
-                    Challenge: {}
-                - Name: TGT_VolumetricSession
-                  ActionToUse:
-                    Challenge: {}
-                - Name: TGT_SignalAutomatedBrowser
-                  ActionToUse:
-                    Challenge: {}
-                - Name: TGT_SignalBrowserInconsistency
-                  ActionToUse:
-                    Challenge: {}
-                - Name: TGT_TokenReuseIp
-                  ActionToUse:
-                    Challenge: {}
-                - Name: TGT_ML_CoordinatedActivityMedium
-                  ActionToUse:
-                    Challenge: {}
-                - Name: TGT_ML_CoordinatedActivityHigh
-                  ActionToUse:
-                    Challenge: {}
-          VisibilityConfig:
-            CloudWatchMetricsEnabled: true
-            MetricName: AWS-AWSManagedRulesBotControlRuleSet
             SampledRequestsEnabled: true
         # Protection against Linux-specific Local File Inclusion attacks
         - Name: AWS-AWSManagedRulesLinuxRuleSet
