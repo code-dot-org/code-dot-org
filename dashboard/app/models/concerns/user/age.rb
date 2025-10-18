@@ -65,7 +65,8 @@ module User::Age
     return unless birthday
 
     tz = normalize_timezone(timezone)
-    born = birthday.in_time_zone(tz).to_date
+    # Birthday is a Date and needs to be set to ActiveSupport::TimeWithZone before switching to the provided timezone.
+    born = birthday.in_time_zone('UTC').in_time_zone(tz).to_date
     today = tz.today
 
     user_age = today.year - born.year
