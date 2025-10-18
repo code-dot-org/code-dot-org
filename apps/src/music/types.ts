@@ -36,6 +36,7 @@ export interface MusicLevelData extends ProjectLevelData {
   aiCodeGenerateExtraPrompt?: string;
   // Dance move to show when playing music.
   danceMove?: string;
+  guideMode?: string;
 }
 
 export type ExemplarValidationMode = 'default' | 'type';

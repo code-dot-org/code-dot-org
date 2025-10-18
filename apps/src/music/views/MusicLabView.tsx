@@ -22,6 +22,7 @@ import {
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
+import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
@@ -114,11 +115,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   );
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
-  const showGenerateCode =
-    AppConfig.getValue('ai-generate') === 'true' ||
-    (levelProperties.levelData as MusicLevelData).aiCodeGenerate;
+  const guideMode = (levelProperties.levelData as MusicLevelData).guideMode;
   const showInstructions =
-    useAppSelector(state => state.music.showInstructions) && !showGenerateCode;
+    useAppSelector(state => state.music.showInstructions) && !guideMode;
   const instructionsPosition = useAppSelector(
     state => state.music.instructionsPosition
   );
@@ -316,7 +315,15 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       )}
     >
       {allowPackSelection && <PackDialog player={player} />}
-      {showGenerateCode && (
+      {guideMode === 'instructions' && (
+        <GuideInstructions
+          levelProperties={levelProperties}
+          isRunning={isPlaying}
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+        />
+      )}
+      {guideMode === 'aiCodeGenerate' && (
         <GenerateCode
           adlibOption={aiCodeGenerateAdlibOption}
           adlib={aiCodeGenerateAdlib}
