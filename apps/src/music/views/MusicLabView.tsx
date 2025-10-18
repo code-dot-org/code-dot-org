@@ -316,6 +316,18 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       )}
     >
       {allowPackSelection && <PackDialog player={player} />}
+      {showGenerateCode && (
+        <GenerateCode
+          adlibOption={aiCodeGenerateAdlibOption}
+          adlib={aiCodeGenerateAdlib}
+          levelProperties={levelProperties}
+          setPlaying={setPlaying}
+          hasEdited={hasEdited}
+          setToolboxVisibility={visible =>
+            blocklyWorkspace.setToolboxVisibility(visible)
+          }
+        />
+      )}
       <div
         id="work-area"
         className={classNames(moduleStyles.workArea, {
@@ -363,19 +375,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         )}
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
-          {showGenerateCode && (
-            <GenerateCode
-              adlibOption={aiCodeGenerateAdlibOption}
-              adlib={aiCodeGenerateAdlib}
-              levelProperties={levelProperties}
-              setPlaying={setPlaying}
-              hasEdited={hasEdited}
-              setToolboxVisibility={visible =>
-                blocklyWorkspace.setToolboxVisibility(visible)
-              }
-            />
-          )}
-
           <PanelContainer
             id="workspace-panel"
             headerContent={<WorkspaceHeader />}
