@@ -54,6 +54,7 @@ import {
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
@@ -117,12 +118,9 @@ const DanceView: React.FunctionComponent<{
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
   const [generatedAiDance, setGeneratedAiDance] = useState(false);
 
-  const aiGenerateMode =
-    levelProperties.aiCodeGenerate || queryParams('ai-generate') === 'true';
+  const guideMode = levelProperties.guideMode;
   const usingMusicProject =
-    queryParams('music-channel') ||
-    aiGenerateMode ||
-    levelProperties.aiCodePreview;
+    guideMode && ['aiCodeGenerate', 'instructions'].includes(guideMode);
 
   const {theme} = useTheme();
 
@@ -342,14 +340,14 @@ const DanceView: React.FunctionComponent<{
       : levelProperties.toolboxDefinition;
 
     workspace.current = Blockly.inject(blocklyDiv, {
-      toolbox: aiGenerateMode ? undefined : toolbox,
+      toolbox,
       theme: theme === 'Dark' ? cdoDark : cdoTheme,
       readOnly: readonlyWorkspace,
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyOptions);
 
     return () => workspace.current?.dispose();
-  }, [dispatch, readonlyWorkspace, levelProperties, aiGenerateMode, theme]);
+  }, [dispatch, readonlyWorkspace, levelProperties, theme]);
 
   useEffect(() => {
     if (!workspace.current) {
@@ -405,15 +403,16 @@ const DanceView: React.FunctionComponent<{
       // Otherwise use the specific channel if provided.
       // Otherwise just pass a dummy string as we expect to find a music
       // project in local storage.
-      const channelId = levelProperties.aiCodePreview
-        ? 'default-music'
-        : (queryParams('music-channel') as string) || 'local-storage';
+      const channelId =
+        guideMode === 'instructions'
+          ? 'default-music'
+          : (queryParams('music-channel') as string) || 'local-storage';
 
       musicProjectPlayer.current
-        .loadProject(channelId, aiGenerateMode)
+        .loadProject(channelId, guideMode === 'aiCodeGenerate')
         .then(() => setLoadedMusicProject(true));
     }
-  }, [usingMusicProject, aiGenerateMode, levelProperties.aiCodePreview]);
+  }, [usingMusicProject, guideMode]);
 
   // Set up the ProgramExecutor
   useEffect(() => {
@@ -494,7 +493,7 @@ const DanceView: React.FunctionComponent<{
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
       {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
-      {!aiGenerateMode && (
+      {!guideMode && (
         <ResourcePanel
           isRunning={isRunning}
           hasRun={hasRun}
@@ -513,7 +512,7 @@ const DanceView: React.FunctionComponent<{
           headerClassName={moduleStyles.panelHeader}
           className={classNames(
             moduleStyles.visualizationArea,
-            aiGenerateMode && moduleStyles.jumbo
+            guideMode && moduleStyles.jumbo
           )}
           leftHeaderContent={
             <BackToParentProject
@@ -590,7 +589,16 @@ const DanceView: React.FunctionComponent<{
         {WorkspaceAlert}
         <div id={BLOCKLY_DIV_ID} />
       </PanelContainer>
-      {aiGenerateMode && (
+      {guideMode === 'instructions' && (
+        <GuideInstructions
+          isRunning={isRunning}
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+          levelProperties={levelProperties}
+          width="narrow"
+        />
+      )}
+      {guideMode === 'aiCodeGenerate' && (
         <Guide id="generate-panel" width="narrow">
           {
             <>
@@ -618,8 +626,7 @@ const DanceView: React.FunctionComponent<{
 
 export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
   <SourcesContainer {...props} defaultSources={defaultSources}>
-    {queryParams('ai-generate-dancer') === 'true' ||
-    props.levelProperties.generateDancerMode ? (
+    {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
       <GenerateDancer
         adlibOption={
           (queryParams('ai-generate-adlib') as string) ||

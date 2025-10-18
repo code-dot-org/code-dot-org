@@ -7,6 +7,7 @@ import Instructions from '@cdo/apps/lab2/views/components/Instructions/Instructi
 import styles from './GuideInstructions.module.scss';
 
 interface GuideInstructionsProps {
+  width?: 'narrow' | 'normal';
   levelProperties: LevelProperties;
   isRunning: boolean;
   hasRun: boolean;
@@ -14,13 +15,14 @@ interface GuideInstructionsProps {
 }
 
 const GuideInstructions: React.FunctionComponent<GuideInstructionsProps> = ({
+  width,
   levelProperties,
   isRunning,
   hasRun,
   hasEdited,
 }) => {
   return (
-    <Guide id="guide-instructions" modal={false}>
+    <Guide id="guide-instructions" modal={false} width={width}>
       <Instructions
         levelProperties={levelProperties}
         isRunning={isRunning}
