@@ -73,8 +73,7 @@
         "next": true,
         "conditions": [
           {
-            "name": "pass",
-            "value": "true"
+            "name": "pass"
           }
         ]
       },
@@ -84,8 +83,7 @@
         "next": false,
         "conditions": [
           {
-            "name": "dance-fail",
-            "value": "true"
+            "name": "dance-fail"
           }
         ]
       }
