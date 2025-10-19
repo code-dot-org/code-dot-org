@@ -303,8 +303,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     return <MusicPlayView setPlaying={setPlaying} />;
   }
 
-  const docUrl = Blockly.showBlockHelp ? '/docs/ide/music' : undefined;
-
   return (
     <div
       id="music-lab"
@@ -356,7 +354,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             hideContinueIfDisabled={true}
             hideNavigation={false}
             styleNavigationAsBubble={true}
-            documentationUrl={docUrl}
           />
         </div>
 

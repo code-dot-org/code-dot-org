@@ -122,6 +122,10 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [hideChaff, dialogControl, analyticsReporter, clearCode]);
 
+  const onClickDocumentation = useCallback(() => {
+    window.open('/docs/ide/music', '_blank');
+  }, []);
+
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog({
@@ -203,6 +207,22 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
             onClick={() => onClickUndoRedo('redo')}
             containerRef={containerRef}
           />
+          {/* Documentation Button */}
+          {Blockly.showBlockHelp && (
+            <IconButtonWithTooltip
+              id="documentation"
+              label={musicI18n.documentation()}
+              icon={{iconName: 'book', iconStyle: 'solid'}}
+              type="tertiary"
+              color="black"
+              buttonSize="xs"
+              tooltipSize="xs"
+              tooltipDirection="onBottom"
+              hideTooltipTail={true}
+              onClick={onClickDocumentation}
+              containerRef={containerRef}
+            />
+          )}
         </>
       )}
       {/* Skip to Project Button */}

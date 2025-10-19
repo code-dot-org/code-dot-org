@@ -1,4 +1,8 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import {
+  TooltipProps,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -9,6 +13,7 @@ import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {currentLocation} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -24,6 +29,16 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
+
+  const documentationTooltipProps: TooltipProps = {
+    text: commonI18n.documentation(),
+    direction: 'onBottom',
+    tooltipId: 'documentation-tooltip',
+    size: 'xs',
+    hideTail: true,
+  };
+
+  const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;
 
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
@@ -78,6 +93,21 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           text={codebridgeI18n.sendToMicroBit()}
           color={'black'}
         />
+      )}
+      {/* For now, only python lab supports documentation */}
+      {appName === 'pythonlab' && (
+        <WithTooltip tooltipProps={documentationTooltipProps}>
+          <LinkButton
+            isIconOnly
+            icon={{iconStyle: 'solid', iconName: 'book'}}
+            href={documentationUrl}
+            size={'xs'}
+            type={'tertiary'}
+            target="_blank"
+            color={'black'}
+            aria-label={commonI18n.documentation()}
+          />
+        </WithTooltip>
       )}
       {skipUrl && (
         <Button
