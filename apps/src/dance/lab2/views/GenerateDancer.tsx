@@ -1,6 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
@@ -112,7 +111,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const variantHistory = useRef<number[]>([]);
 
   const [aiGenerateState, setAiGenerateState] = useState<
-    'none' | 'generating' | 'done'
+    'none' | 'generating' | 'reviewing' | 'done'
   >('none');
   const [dancerSignature, setDancerSignature] = useState<string | null>(
     localStorage.getItem('dancer-ai-generate')
@@ -151,7 +150,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
     await generateDancerCache();
-    setAiGenerateState('done');
+    setAiGenerateState('reviewing');
   }, [generateDancerCache]);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
@@ -174,8 +173,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
       <Guide id="generate-panel" glowSpeed={glowSpeed}>
-        <Heading5 className={moduleStyles.heading}> Use AI</Heading5>
-        {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
+        {(aiGenerateState === 'generating' ||
+          aiGenerateState === 'reviewing') && (
           <div className={moduleStyles.textArea}>{promptText}</div>
         )}
         {aiGenerateState === 'none' && (
@@ -232,30 +231,42 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             )}
           </>
         )}
+
         {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
-        {aiGenerateState === 'done' && isPreviewLoading && 'Loading preview...'}
-        {aiGenerateState === 'done' && !isPreviewLoading && (
+
+        {aiGenerateState === 'reviewing' &&
+          isPreviewLoading &&
+          'Loading preview...'}
+
+        {aiGenerateState === 'reviewing' && !isPreviewLoading && (
           <>
-            <div>Here is the dancer that was generated.</div>
+            <div>Here is the dancer that was generated. Do you like it?</div>
 
-            <Button
-              ariaLabel={'Generate again'}
-              text={'Generate again'}
-              type="primary"
-              color="black"
-              size="s"
-              iconLeft={{iconName: 'sparkles'}}
-              onClick={generateDancer}
-            />
+            <div className={moduleStyles.buttonRow}>
+              <Button
+                ariaLabel={"No. Let's try again."}
+                text={"No. Let's try again."}
+                type="primary"
+                color="black"
+                size="s"
+                onClick={() => setAiGenerateState('none')}
+              />
 
-            <Button
-              ariaLabel={'Adjust prompt'}
-              text={'Adjust prompt'}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => setAiGenerateState('none')}
-            />
+              <Button
+                ariaLabel={"Yes. Let's continue."}
+                text={"Yes. Let's continue."}
+                type="primary"
+                color="black"
+                size="s"
+                onClick={() => setAiGenerateState('done')}
+              />
+            </div>
+          </>
+        )}
+
+        {aiGenerateState === 'done' && (
+          <>
+            <div>Great! Let's continue.</div>
 
             <Button
               ariaLabel={'Continue'}
@@ -268,6 +279,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             />
           </>
         )}
+
         <BackToParentProject
           text="Go to Hub"
           iconLeft={{iconName: 'home'}}
