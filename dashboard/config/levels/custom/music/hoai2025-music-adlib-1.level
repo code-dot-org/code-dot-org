@@ -14,10 +14,10 @@
         "template": "Please make a song with {sounds} sounds in order.",
         "options": {
           "sounds": [
-            "2",
-            "3",
-            "4",
-            "5"
+            {"id": "2", "text": "2"},
+            {"id": "3", "text": "3"},
+            {"id": "4", "text": "4"},
+            {"id": "5", "text": "5"}
           ]
         },
         "variantCount": 3

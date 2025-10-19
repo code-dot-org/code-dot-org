@@ -672,7 +672,6 @@ export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
     {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
       <GenerateDancer
         adlibOption={
-          (queryParams('ai-generate-adlib') as string) ||
           props.levelProperties.aiDancerGenerateAdlib ||
           'adjective-animal-attire'
         }

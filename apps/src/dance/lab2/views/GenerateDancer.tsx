@@ -21,19 +21,16 @@ import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-should
 import moduleStyles from './generate-dancer.module.scss';
 
 const adlibs: AdlibsType = {
-  basic: {
-    template:
-      'Please generate a dancer.  It should look like a {animal} with {appearance}.',
-    options: {
-      animal: ['frog', 'moose'],
-      appearance: ['hair', 'glasses'],
-    },
-    variantCount: 2,
-  },
   'animal-02': {
-    template: 'Please generate a dancer.  It should look like a {animal}.',
+    template: 'Please generate a dancer.  It should look like {animal}.',
     options: {
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
     },
     variantCount: 5,
   },
@@ -41,63 +38,51 @@ const adlibs: AdlibsType = {
     template:
       'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
     options: {
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
-      attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
+      animal: [
+        {id: 'wolf', text: 'wolf'},
+        {id: 'moose', text: 'moose'},
+        {id: 'frog', text: 'frog'},
+        {id: 'tiger', text: 'tiger'},
+        {id: 'panda', text: 'panda'},
+      ],
+      attire: [
+        {id: 'headscarf', text: 'headscarf'},
+        {id: 'sunglasses', text: 'sunglasses'},
+        {id: 'headphones', text: 'headphones'},
+        {id: 'crown', text: 'crown'},
+        {id: 'beanie', text: 'beanie'},
+      ],
     },
     variantCount: 5,
   },
   'adjective-animal-attire-02': {
     template:
-      'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
+      'Please generate a dancer.  It should look like {animal} with {adjective} style, wearing {attire}.',
     options: {
-      adjective: ['basic', 'emo', 'sporty', 'streetwear', 'fancy', 'preppy'],
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
-      attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
+      adjective: [
+        {id: 'basic', text: 'a basic'},
+        {id: 'emo', text: 'an emo'},
+        {id: 'sporty', text: 'a sporty'},
+        {id: 'streetwear', text: 'a streetwear'},
+        {id: 'fancy', text: 'a fancy'},
+        {id: 'preppy', text: 'a preppy'},
+      ],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
+      attire: [
+        {id: 'headscarf', text: 'a headscarf'},
+        {id: 'sunglasses', text: 'sunglasses'},
+        {id: 'headphones', text: 'headphones'},
+        {id: 'crown', text: 'a crown'},
+        {id: 'beanie', text: 'a beanie'},
+      ],
     },
     variantCount: 5,
-  },
-  // Earlier adlibs which will be removed soon:
-  animal: {
-    template: 'Please generate a dancer.  It should look like a {animal}.',
-    options: {
-      animal: ['frog', 'moose', 'wolf'],
-    },
-    variantCount: 3,
-  },
-  'animal-attire': {
-    template:
-      'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
-    options: {
-      animal: ['frog', 'moose', 'wolf'],
-      attire: [
-        'headphones',
-        'sunglasses',
-        'crown',
-        'headscarf',
-        'baseball-cap',
-        'beanie',
-        'headband',
-      ],
-    },
-    variantCount: 3,
-  },
-  'adjective-animal-attire': {
-    template:
-      'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
-    options: {
-      adjective: ['basic', 'goth'],
-      animal: ['frog', 'moose', 'wolf'],
-      attire: [
-        'headphones',
-        'sunglasses',
-        'crown',
-        'headscarf',
-        'baseball-cap',
-        'beanie',
-        'headband',
-      ],
-    },
-    variantCount: 3,
   },
 };
 

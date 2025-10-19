@@ -6,7 +6,7 @@ import styles from './Adlib.module.scss';
 
 export type AdlibType = {
   template: string;
-  options: {[key: string]: string[]};
+  options: {[key: string]: {id: string; text: string}[]};
   variantCount: number;
 };
 
@@ -36,7 +36,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
   useEffect(() => {
     const initialOptions: {[key: string]: string} = {};
     Object.keys(options).forEach(key => {
-      initialOptions[key] = sample(options[key]) || '';
+      initialOptions[key] = sample(options[key])?.id || '';
     });
     setAdlibOptions(initialOptions);
   }, [options]);
@@ -77,8 +77,8 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
             }}
           >
             {options[key].map(option => (
-              <option key={option} value={option}>
-                {option}
+              <option key={option.id} value={option.id}>
+                {option.text}
               </option>
             ))}
           </select>
