@@ -33,13 +33,12 @@
     "hide_pause_button": "false",
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
-    "generate_dancer_mode": "true",
+    "guideMode": "aiDancerGenerate",
     "ai_dancer_generate_adlib": "adjective-animal-attire-02",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "ai_code_generate": "false"
+    ]
   },
   "audit_log": "[{\"changed_at\":\"2025-09-10 22:43:07 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 01:30:53 +0000\",\"changed\":[\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-07 00:36:00 +0000\",\"changed\":[\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {

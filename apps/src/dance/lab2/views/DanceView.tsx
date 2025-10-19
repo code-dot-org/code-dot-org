@@ -3,7 +3,14 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {BlocklyOptions, Events, WorkspaceSvg} from 'blockly/core';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/addons/cdoUtils';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
@@ -47,12 +54,13 @@ import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {
   getAppOptionsEditBlocks,
   getIsShareView,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
+import {Condition, BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -75,6 +83,7 @@ import danceI18n from '../locale';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
+import DanceValidator from './DanceValidator';
 import GenerateDancer from './GenerateDancer';
 
 import moduleStyles from './dance-view.module.scss';
@@ -123,6 +132,10 @@ const DanceView: React.FunctionComponent<{
     guideMode && ['aiCodeGenerate', 'instructions'].includes(guideMode);
 
   const {theme} = useTheme();
+
+  const progressManager = useContext(ProgressManagerContext);
+
+  const currentCondition = useRef<Condition | undefined>(undefined);
 
   const metadataToUse: SongMetadata | undefined = useMemo(() => {
     if (!musicProjectPlayer.current || !loadedMusicProject) {
@@ -235,11 +248,14 @@ const DanceView: React.FunctionComponent<{
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
     saveBlocks(true);
+
+    progressManager?.resetValidation();
   }, [
     hasRun,
     metadataToUse,
     dispatch,
     saveBlocks,
+    progressManager,
     levelProperties.isProjectLevel,
     levelProperties.id,
     levelProperties.name,
@@ -258,8 +274,15 @@ const DanceView: React.FunctionComponent<{
       resetProgram();
       // TODO: Handle puzzle complete.
       console.log(`onPuzzleComplete! pass?: ${result} message: ${message}`);
+      if (result) {
+        currentCondition.current = {name: 'pass'};
+      } else {
+        currentCondition.current = {name: message};
+      }
+
+      progressManager?.updateProgress();
     },
-    [resetProgram]
+    [progressManager, resetProgram]
   );
 
   const onEventsChanged = () => {
@@ -487,6 +510,26 @@ const DanceView: React.FunctionComponent<{
     levelProperties.sharedBlocks,
     usingMusicProject,
   ]);
+
+  // Create dance validator.
+  const danceValidator = useMemo(
+    () =>
+      new DanceValidator(() => {
+        return currentCondition.current;
+      }),
+    [currentCondition]
+  );
+
+  // Pass dance validator to Progress Manager.
+  useEffect(() => {
+    if (
+      guideMode === 'instructions' &&
+      progressManager &&
+      levelProperties.appName === 'dance'
+    ) {
+      progressManager.setValidator(danceValidator);
+    }
+  }, [progressManager, levelProperties.appName, danceValidator, guideMode]);
 
   const settings = useBlocklySettings();
 
