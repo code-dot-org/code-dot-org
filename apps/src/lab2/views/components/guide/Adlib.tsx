@@ -45,7 +45,10 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
   const filledAdlibText = useMemo(() => {
     let output = template;
     Object.keys(options).forEach(key => {
-      output = output.replace(`{${key}}`, adlibOptions[key]);
+      output = output.replace(
+        `{${key}}`,
+        options[key].find(option => option.id === adlibOptions[key])?.text || ''
+      );
     });
     return output;
   }, [adlibOptions, options, template]);
