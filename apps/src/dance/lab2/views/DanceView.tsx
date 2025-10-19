@@ -149,7 +149,7 @@ const DanceView: React.FunctionComponent<{
       delay: '0',
       duration: 0, // Unused
       file: '', // Unused
-      title: 'My A.I. Remix', // TODO: what should this be?
+      title: 'My AI Remix', // TODO: what should this be?
       peaks: {},
     };
   }, [currentSongMetadata, loadedMusicProject]);
