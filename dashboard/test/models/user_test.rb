@@ -1374,42 +1374,6 @@ class UserTest < ActiveSupport::TestCase
     assert teacher.can_edit_email?
   end
 
-  test 'can change own user type as a student with a password' do
-    student = create(:student)
-    refute_empty student.encrypted_password
-    assert student.can_change_own_user_type?
-  end
-
-  test 'can change own user type as an oauth student' do
-    student = create(:student, :google_sso_provider)
-    assert student.can_change_own_user_type?
-  end
-
-  test 'can change own user type as a teacher with a password' do
-    teacher = create(:teacher)
-    refute_empty teacher.encrypted_password
-    assert teacher.can_change_own_user_type?
-  end
-
-  test 'can change own user type as an oauth teacher' do
-    teacher = create(:teacher,
-      encrypted_password: nil,
-      provider: 'facebook',
-      uid: '1111111'
-)
-    assert teacher.can_change_own_user_type?
-  end
-
-  test 'cannot change own user type as a student with a picture or secret words' do
-    student = create(:student_in_picture_section)
-    refute student.can_change_own_user_type?
-  end
-
-  test 'cannot change own user type as a student in a section' do
-    student = create(:follower).student_user
-    refute student.can_change_own_user_type?
-  end
-
   test 'sections_instructed omits deleted sections' do
     section = create(:section)
     teacher = section.teacher
@@ -4542,6 +4506,73 @@ class UserTest < ActiveSupport::TestCase
 
       it 'does not have access' do
         _(student.student_can_access_ai_chat?).must_equal false
+      end
+    end
+  end
+
+  describe '#can_change_own_user_type?' do
+    subject(:can_change_own_user_type?) {user.can_change_own_user_type?}
+
+    context 'when user is a student' do
+      context 'when user has a personal account' do
+        context 'with password' do
+          let(:user) {create(:student)}
+
+          it 'can change own user type regardless of age' do
+            _can_change_own_user_type?.must_equal true
+          end
+        end
+
+        context 'when user is sponsored (cannot edit email)' do
+          let(:user) {create(:student, :sponsored)}
+
+          it 'cannot change own user type' do
+            expect(Policies::User).not_to receive(:personal_account?)
+            _can_change_own_user_type?.must_equal false
+          end
+        end
+      end
+
+      context 'when user has a school-owned account' do
+        context 'when age is < 21' do
+          let(:user) {create(:student, :in_google_section, birthday: 18.years.ago)}
+
+          it 'cannot change own user type' do
+            expect(Policies::User).to receive(:personal_account?).with(user).and_return(false)
+            _can_change_own_user_type?.must_equal false
+          end
+        end
+
+        context 'when age is >= 21' do
+          let(:user) {create(:student, :in_google_section, birthday: 21.years.ago)}
+
+          it 'can change own user type' do
+            expect(Policies::User).to receive(:personal_account?).with(user).and_return(false)
+            _can_change_own_user_type?.must_equal true
+          end
+        end
+      end
+    end
+
+    context 'when user is a teacher' do
+      context 'with no sections' do
+        let(:user) {create(:teacher)}
+
+        it 'can change own user type' do
+          _can_change_own_user_type?.must_equal true
+        end
+      end
+
+      context 'with sections' do
+        let(:user) {create(:teacher)}
+
+        before do
+          create(:section, user: user)
+        end
+
+        it 'cannot change own user type' do
+          _can_change_own_user_type?.must_equal false
+        end
       end
     end
   end
