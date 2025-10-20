@@ -23,6 +23,8 @@ const DOCUMENTATION_INTRO = 'Here is the documentation:';
  * consistency.
  */
 export abstract class AiTutorContextHelper<AiTutorParams extends object> {
+  protected additionalContext: string = '';
+
   protected abstract getAiTutorContext(): MaybePromise<AiTutorContext>;
 
   protected abstract setAiTutorContext(params: AiTutorParams): void;
@@ -50,6 +52,7 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
         : '',
       longInstructions ? `${INSTRUCTIONS_INTRO} ${longInstructions}` : '',
       documentation ? `${DOCUMENTATION_INTRO} ${documentation}` : '',
+      this.additionalContext,
     ]
       .filter(Boolean)
       .join('\n\n');

@@ -4,6 +4,7 @@ import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
+import {PYTHONLAB_TUTOR_ADDITIONAL_CONTEXT} from '../constants';
 import PythonValidationTracker from '../progress/PythonValidationTracker';
 
 interface AiTutorPythonLabParams {
@@ -15,6 +16,8 @@ interface AiTutorPythonLabParams {
 export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
   private documentationPromise?: Promise<string | undefined>;
   private params?: AiTutorPythonLabParams;
+  protected override additionalContext: string =
+    PYTHONLAB_TUTOR_ADDITIONAL_CONTEXT;
 
   override setAiTutorContext(params: AiTutorPythonLabParams): void {
     this.params = params;
