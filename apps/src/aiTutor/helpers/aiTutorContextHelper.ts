@@ -17,6 +17,8 @@ const INSTRUCTIONS_INTRO = 'Here are the instructions:';
 
 const DOCUMENTATION_INTRO = 'Here is the documentation:';
 
+const codeBlockify = (str: string): string => `\`\`\`\n${str}\n\`\`\``;
+
 /*
  * Abstract base class used to provide lab specific context to AI Tutor.  Each lab will inherit from and
  * extend this class, but conversion to a system prompt string should be kept here for coordination and
@@ -42,10 +44,12 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
 
     const hiddenContextString = [
       userSelection ? `${USER_SELECTION_INTRO} ${userSelection}` : '',
-      sourceCode ? `${SOURCE_CODE_INTRO} ${sourceCode}` : '',
-      hiddenSourceCode ? `${HIDDEN_SOURCE_CODE_INTRO} ${hiddenSourceCode}` : '',
+      sourceCode ? `${SOURCE_CODE_INTRO} ${codeBlockify(sourceCode)}` : '',
+      hiddenSourceCode
+        ? `${HIDDEN_SOURCE_CODE_INTRO} ${codeBlockify(hiddenSourceCode)}`
+        : '',
       validationContents
-        ? `${VALIDATION_CONTENTS_INTRO} ${validationContents}`
+        ? `${VALIDATION_CONTENTS_INTRO} ${codeBlockify(validationContents)}`
         : '',
       validationResults
         ? `${VALIDATION_RESULTS_INTRO} ${validationResults}`
