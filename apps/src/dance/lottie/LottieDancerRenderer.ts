@@ -36,15 +36,15 @@ import {
   fetchJson,
   normalizePalette,
   applyColorMapping,
-  fetchHeadImageInfo,
-  findHeadPrecompLayerDeep,
+  fetchDataUrl,
+  findPrecompLayerDeep,
   getAssetById,
-  hideVectorHeadInComp,
-  ensureHeadImageAsset,
-  insertHeadImageLayer,
+  ensureImageAsset,
   loadCanvasAnimation,
   resolveDancerAssets,
   getConfigValue,
+  insertImageLayer,
+  hideLayersByTypeAndCaptureKs,
 } from './LottieDancerUtils';
 
 const TEST_BASE_DANCER = 'duck';
@@ -69,8 +69,9 @@ export default class LottieDancerRenderer {
    **/
   private compW?: number;
   private compH?: number;
-  private headUrl: string | null;
-  private metadataUrl: string | null;
+  private headUrl: string;
+  private metadataUrl: string;
+  private bodyUrl?: string;
 
   constructor() {
     const skeletonParam = getConfigValue('skeleton')?.toLowerCase();
@@ -78,9 +79,12 @@ export default class LottieDancerRenderer {
     this.headScale = 0.5;
     this.cachedAnimationData = {};
 
-    const {headUrl, metadataUrl} = resolveDancerAssets({sourceTag: 'canvas'});
+    const {headUrl, metadataUrl, bodyUrl} = resolveDancerAssets({
+      sourceTag: 'canvas',
+    });
     this.headUrl = headUrl;
     this.metadataUrl = metadataUrl;
+    this.bodyUrl = bodyUrl;
   }
   /**
    * The caller provides a CanvasRenderingContext2D to paint into.
@@ -199,30 +203,64 @@ export default class LottieDancerRenderer {
     }
 
     // Recolor assets based on hard-coded accessory-name rules.
-    applyColorMapping(animData, palette);
+    applyColorMapping(animData, palette, this.skeletonName);
 
-    // Replace vector head with an image, when head.png is available.
-    const headInfo = await fetchHeadImageInfo(this.headUrl);
-    if (headInfo) {
-      const headPre = findHeadPrecompLayerDeep(animData);
-      if (headPre?.refId) {
-        const headComp = getAssetById(animData, headPre.refId);
+    // Replace vector head with an image, if one can be loaded.
+    const headDataUrl = await fetchDataUrl(this.headUrl);
+    if (headDataUrl) {
+      const headRegex = /\b(head)\b/i;
+      const headPrecomp = findPrecompLayerDeep(animData, headRegex);
+      if (headPrecomp?.refId) {
+        const headComp = getAssetById(animData, headPrecomp.refId);
         if (headComp && Array.isArray(headComp.layers)) {
-          const {insertIndex, headKs} = hideVectorHeadInComp(headComp);
-          const assetId = ensureHeadImageAsset(
+          const {insertIndex, ks: headKs} =
+            hideLayersByTypeAndCaptureKs(headComp);
+          const assetId = ensureImageAsset(
             animData,
-            headInfo.dataUrl,
-            headInfo.width,
-            headInfo.height
+            headDataUrl,
+            'img_head_custom'
           );
-          insertHeadImageLayer(
+          insertImageLayer(
             headComp,
             insertIndex,
             assetId,
-            headInfo.width,
-            headInfo.height,
+            headKs,
+            'Head Image',
+            500,
+            500,
             this.headScale,
-            headKs
+            {bm: 0, hd: false}
+          );
+        }
+      }
+    }
+
+    // Replace vector body with an image, if one can be loaded.
+    const bodyDataUrl = await fetchDataUrl(this.bodyUrl);
+    if (bodyDataUrl) {
+      const bodyRegex = /\b(body)\b/i;
+      const bodyPrecomp = findPrecompLayerDeep(animData, bodyRegex);
+      if (bodyPrecomp?.refId) {
+        const bodyComp = getAssetById(animData, bodyPrecomp.refId);
+        if (bodyComp && Array.isArray(bodyComp.layers)) {
+          const {insertIndex, ks: bodyKs} =
+            hideLayersByTypeAndCaptureKs(bodyComp);
+          const imgAssetId = ensureImageAsset(
+            animData,
+            bodyDataUrl,
+            'img_body_custom'
+          );
+
+          insertImageLayer(
+            bodyComp,
+            insertIndex,
+            imgAssetId,
+            bodyKs,
+            'Body Image',
+            400,
+            400,
+            1,
+            {hasMask: false}
           );
         }
       }

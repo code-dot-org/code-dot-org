@@ -17,6 +17,8 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-shoulders.png';
 
+import {getConfigValue} from '../../lottie/LottieDancerUtils';
+
 import moduleStyles from './generate-dancer.module.scss';
 
 const adlibs: AdlibsType = {
@@ -185,6 +187,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     return () => resizeObserver.disconnect();
   }, []);
 
+  // We artificially increase the 'generating' time so that the image doesn't appear
+  // too soon.
   const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
 
   return (
@@ -296,7 +300,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           <DancerCanvas
             key={dancerMetadata || 'none'}
             size={containerHeight}
-            move="rest"
+            move={getConfigValue('danceMove') || 'rest'}
             onLoadingChange={setIsPreviewLoading}
           />
         </div>
