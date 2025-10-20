@@ -22,17 +22,24 @@ const UserAddedSelectionContextPreview: React.FunctionComponent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        {Object.keys(userAddedSelectionContext).map(displayName => (
-          <FilePreview
-            key={displayName}
-            type={'text'}
-            filename={displayName}
-            isUploading={false}
-            onRemove={() =>
-              dispatch(removeItemFromUserAddedSelectionContext(displayName))
-            }
-          />
-        ))}
+        {Object.entries(userAddedSelectionContext).map(
+          ([displayName, contextItem]) => (
+            <FilePreview
+              key={displayName}
+              type={'text'}
+              filename={contextItem.filename}
+              fileDetail={
+                contextItem.lineReference
+                  ? `(${contextItem.lineReference.start}-${contextItem.lineReference.end})`
+                  : undefined
+              }
+              isUploading={false}
+              onRemove={() =>
+                dispatch(removeItemFromUserAddedSelectionContext(displayName))
+              }
+            />
+          )
+        )}
       </div>
     </div>
   );

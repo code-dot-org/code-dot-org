@@ -11,11 +11,20 @@ import styles from './staged-files-preview.module.scss';
 const FilePreview: React.FC<{
   type: 'pdf' | 'image' | 'text';
   filename: string;
+  fileDetail?: string | number;
   url?: string;
   isUploading?: boolean;
   onRemove?: () => void;
   onLoadError?: () => void;
-}> = ({type, filename, url, isUploading, onRemove, onLoadError}) => {
+}> = ({
+  type,
+  filename,
+  fileDetail,
+  url,
+  isUploading,
+  onRemove,
+  onLoadError,
+}) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
@@ -110,9 +119,10 @@ const FilePreview: React.FC<{
             <StrongText>{filename}</StrongText>
             {type === 'pdf' && <span>PDF</span>}
             {type === 'text' && (
-              <span>
+              <span className={styles.fileDetail}>
                 {filename.split('.').length > 1
-                  ? filename.split('.').pop()?.toUpperCase()
+                  ? filename.split('.').pop()?.toUpperCase() +
+                    (fileDetail ? ` ${fileDetail}` : '')
                   : 'TEXT'}
               </span>
             )}

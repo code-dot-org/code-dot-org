@@ -118,7 +118,12 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
             <FilePreview
               key={contextItem.displayName}
               type="text"
-              filename={contextItem.displayName}
+              filename={contextItem.filename}
+              fileDetail={
+                contextItem.lineReference
+                  ? `(${contextItem.lineReference.start}-${contextItem.lineReference.end})`
+                  : undefined
+              }
             />
           ))}
       </div>
