@@ -145,7 +145,7 @@ var CONFIGS = {
     // This is required when move pegman animation is set
     movePegmanAnimationFrameNumber: 9,
     hittingWallAnimation: 'wall.gif',
-    approachingGoalAnimation: 'close_goal.png',
+    approachingGoalAnimation: 'close_goal_new.png',
     pegmanHeight: 68,
     pegmanWidth: 51,
     pegmanYOffset: -14,
