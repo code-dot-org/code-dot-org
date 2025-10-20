@@ -12,8 +12,22 @@
   flex-direction: column;
   justify-content: space-between;
 
+  .topSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .collapseButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    border-bottom: variables.$default-border;
+  }
+
   .tabs {
-    margin-top: 2.5rem;
+    width: 3.5rem;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     border-top: variables.$default-border;
@@ -85,6 +99,11 @@
     @include mixins.focus-styles(var(--borders-brand-teal-primary), -2px);
   }
 
+  // Remove the ::after pseudo-element when sidebar is collapsed
+  &.collapsed .tabButton.tabButton.selected::after {
+    content: none;
+  }
+
   .bottomTabs {
     display: flex;
     flex-direction: column;
@@ -95,7 +114,7 @@
   }
 
   // Doubling class name to increase specificity and override default button styles.
-  .bottomButton.bottomButton {
+  .resourcePanelButton.resourcePanelButton {
     height: 2rem;
     width: 2rem;
     min-width: 2rem;

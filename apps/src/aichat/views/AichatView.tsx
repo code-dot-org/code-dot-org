@@ -17,15 +17,12 @@ import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
-import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
@@ -322,51 +319,21 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
           {viewMode === ViewMode.EDIT && (
             <>
               <div className={moduleStyles.instructionsArea}>
-                {experiments.isEnabledAllowingQueryString(
-                  experiments.LAB2_RESOURCE_PANEL
-                ) ? (
-                  <ResourcePanel
-                    className={moduleStyles.panelContainer}
-                    headerClassName={moduleStyles.panelHeader}
-                    /** AI Chat doesn't have a traditional "run" state, so this is always false. */
-                    isRunning={false}
-                    hasRun={hasSentMessage}
-                    hasEdited={hasUpdatedCustomizations}
-                    levelProperties={levelProperties}
-                    rightHeaderContent={renderInstructionsHeaderRight(
-                      isUserTeacher,
-                      () => {
-                        dispatch(
-                          setShowModalType(ModalTypes.TEACHER_ONBOARDING)
-                        );
-                      }
-                    )}
-                  />
-                ) : (
-                  <PanelContainer
-                    id="aichat-instructions-panel"
-                    headerContent={commonI18n.instructions()}
-                    className={moduleStyles.panelContainer}
-                    headerClassName={moduleStyles.panelHeader}
-                    rightHeaderContent={renderInstructionsHeaderRight(
-                      isUserTeacher,
-                      () => {
-                        dispatch(
-                          setShowModalType(ModalTypes.TEACHER_ONBOARDING)
-                        );
-                      }
-                    )}
-                  >
-                    <InstructionsV2
-                      className={moduleStyles.instructions}
-                      /** AI Chat doesn't have a traditional "run" state, so this is always false. */
-                      isRunning={false}
-                      hasRun={hasSentMessage}
-                      hasEdited={hasUpdatedCustomizations}
-                      levelProperties={levelProperties}
-                    />
-                  </PanelContainer>
-                )}
+                <ResourcePanel
+                  className={moduleStyles.panelContainer}
+                  headerClassName={moduleStyles.panelHeader}
+                  /** AI Chat doesn't have a traditional "run" state, so this is always false. */
+                  isRunning={false}
+                  hasRun={hasSentMessage}
+                  hasEdited={hasUpdatedCustomizations}
+                  levelProperties={levelProperties}
+                  rightHeaderContent={renderInstructionsHeaderRight(
+                    isUserTeacher,
+                    () => {
+                      dispatch(setShowModalType(ModalTypes.TEACHER_ONBOARDING));
+                    }
+                  )}
+                />
               </div>
               {!allFieldsHidden && (
                 <div className={moduleStyles.customizationArea}>

@@ -7,6 +7,13 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN} from './constants';
 import {STEPS, INITIAL_STEP} from './resourcePanelTourHelpers';
 
+// Check if tour should be disabled (e.g., during UI tests) before any rendering.
+// This runs when the module is first imported so localStorage is set early.
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('noIntrojs') === 'true') {
+  trySetLocalStorage(RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN, 'yes');
+}
+
 // Note that this introjs flow includes a step that highlights the navigation button which is always visible
 // at the bottom of the resource panel (whether it's enabled or not).
 // Some labs do not always show the navigation button so this tour is not appropriate for all labs.

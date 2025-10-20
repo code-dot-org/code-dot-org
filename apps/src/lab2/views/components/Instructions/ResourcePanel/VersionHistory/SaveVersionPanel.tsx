@@ -15,12 +15,14 @@ interface SaveVersionPanelProps {
   projectSources: ProjectSources | undefined;
   onSuccess: () => void;
   versionLoading: boolean;
+  disabled?: boolean;
 }
 
 const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
   projectSources,
   onSuccess,
   versionLoading,
+  disabled = false,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
   const channelId = useAppSelector(state => state.lab.channel?.id);
@@ -92,6 +94,7 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
             onChange={e => setCommitDescription(e.target.value)}
             value={commitDescription}
             className={moduleStyles.textArea}
+            disabled={disabled}
           />
         </div>
         <Button
@@ -100,7 +103,9 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
           className={moduleStyles.versionButton}
           text={lab2I18n.saveVersion()}
           onClick={onSaveVersion}
-          disabled={versionLoading || commitDescription.trim() === ''}
+          disabled={
+            disabled || versionLoading || commitDescription.trim() === ''
+          }
         />
       </div>
     </div>
