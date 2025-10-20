@@ -98,12 +98,24 @@ const FilePreview: React.FC<{
         <>
           <div className={styles.fileIcon}>
             <FontAwesomeV6Icon
-              iconName={type === 'pdf' ? 'file-pdf' : 'file'}
+              iconName={
+                {
+                  pdf: 'file-pdf',
+                  text: 'file-code',
+                }[type] || 'file'
+              }
             />
           </div>
           <div className={styles.filenameContainer}>
             <StrongText>{filename}</StrongText>
             {type === 'pdf' && <span>PDF</span>}
+            {type === 'text' && (
+              <span>
+                {filename.split('.').length > 1
+                  ? filename.split('.').pop()?.toUpperCase()
+                  : 'TEXT'}
+              </span>
+            )}
           </div>
         </>
       )}
