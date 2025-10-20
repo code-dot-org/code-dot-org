@@ -30,7 +30,7 @@ var CONFIGS = {
   bee: {
     obstacleAnimation: '',
     obstacleIdle: 'obstacle.png',
-    redFlower: 'redFlower.png',
+    redFlower: 'purpleFlower.png',
     purpleFlower: 'purpleFlower.png',
     honey: 'honey.png',
     cloud: 'cloud.png',
@@ -117,7 +117,7 @@ var CONFIGS = {
   },
 
   pvz: {
-    goalIdle: 'goalIdle.gif',
+    goalIdle: 'goal.gif',
     obstacleIdle: 'obstacleIdle.gif',
 
     goalAnimation: 'goal.gif',
