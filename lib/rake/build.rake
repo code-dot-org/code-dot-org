@@ -129,7 +129,7 @@ namespace :build do
         #
         # The sequencing described here is the best for mitigating any issues
         # that may arise when that best practice is not followed.
-        unless rack_env?(:development)
+        unless rack_env?(:development) || ENV['CI_JOB'] == 'unit'
           ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
           RakeUtils.system_stream_output 'bundle', 'exec', bin_dir('restart-active-job-workers')
         end
