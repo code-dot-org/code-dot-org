@@ -721,14 +721,14 @@ function createWebpackConfig({
           ],
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,
-          proxy: [
-            {
-              context: ['**'],
-              target: 'http://localhost-studio.code.org:3000',
-              changeOrigin: false,
-              logLevel: 'debug',
-            },
-          ],
+          // proxy: [
+          //   {
+          //     context: ['**'],
+          //     target: 'http://localhost-studio.code.org:3000',
+          //     changeOrigin: false,
+          //     logLevel: 'debug',
+          //   },
+          // ],
           host: '0.0.0.0',
           hot: envConstants.HOT,
           liveReload: envConstants.HOT,
