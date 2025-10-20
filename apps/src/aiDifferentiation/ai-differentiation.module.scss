@@ -200,7 +200,7 @@ $fab-height: 48;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 20px;
+    gap: 1rem;
   }
 
   &Footer {
@@ -228,7 +228,7 @@ $fab-height: 48;
 }
 
 .message-user {
-  margin-left: 48px;
+  margin-inline-start: 48px;
 }
 
 .messageFeedback {
@@ -237,7 +237,7 @@ $fab-height: 48;
     align-items: center;
     gap: 8px;
     align-self: stretch;
-    color: $light-gray-600;
+    color: var(--text-neutral-quaternary);
   }
   &Left {
     display: flex;
@@ -251,13 +251,13 @@ $fab-height: 48;
     flex: 1 0 0;
   }
   &Button i {
-    color: $light-gray-600;
+    color: var(--text-neutral-quaternary);
   }
   &Confirm i {
-    color: $light_affirmative_500;
+    color: var(--text-success-primary);
   }
   &Negative i {
-    color: $light_negative_500;
+    color: var(--text-error-primary);
   }
 }
 

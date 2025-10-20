@@ -1,12 +1,11 @@
-import experiments from '@cdo/apps/util/experiments';
-
 const LABS_WITHOUT_INSTRUCTIONS = [
   'bubble_choice',
   'panels',
   'standalone_video',
 ];
 
-// Web Lab 2 and Lab2 Dance use the resource panel by default, otherwise we defer to the experiment flag.
+const STANDALONE_PROJECTS_WITH_RESOURCE_PANEL = ['pythonlab', 'weblab2'];
+
 // TODO: Once all lab2 labs are using this version of instructions, this function may be better named
 // "isUsingInstructions", as the resource panel will be the instructions panel. Some labs do not use
 // instructions, such as Panels, we will need to keep this function to determine if the copyright/language
@@ -15,14 +14,14 @@ export function isUsingResourcePanel(
   appName: string,
   isProjectLevel: boolean
 ): boolean {
-  if (isProjectLevel || LABS_WITHOUT_INSTRUCTIONS.includes(appName)) {
+  // Remove this first check once we migrate music lab standalone project to use the resource panel.
+  if (
+    isProjectLevel &&
+    !STANDALONE_PROJECTS_WITH_RESOURCE_PANEL.includes(appName)
+  )
+    return false;
+  if (LABS_WITHOUT_INSTRUCTIONS.includes(appName)) {
     return false;
   }
-  return (
-    appName === 'weblab2' ||
-    appName === 'dance' ||
-    appName === 'sketchlab' ||
-    appName === 'music' ||
-    experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL)
-  );
+  return true;
 }

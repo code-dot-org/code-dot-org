@@ -11,7 +11,6 @@ import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
@@ -113,7 +112,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const [aiGenerateState, setAiGenerateState] = useState<
     'none' | 'generating' | 'reviewing' | 'done'
   >('none');
-  const [dancerSignature, setDancerSignature] = useState<string | null>(
+  const [dancerMetadata, setDancerMetadata] = useState<string | null>(
     localStorage.getItem('dancer-ai-generate')
   );
 
@@ -138,9 +137,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     }
     variantHistory.current = newVariantsHistory;
 
-    const newDancerPayload = JSON.stringify({adlibOption, choices, variant});
-    trySetLocalStorage('dancer-ai-generate', newDancerPayload);
-    setDancerSignature(newDancerPayload);
+    const newDancerMetadata = JSON.stringify({adlibOption, choices, variant});
+    trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
+    setDancerMetadata(newDancerMetadata);
     const elapsedTime = Date.now() - startTime;
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
@@ -169,6 +168,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setContainerHeight(containerRef.current.clientHeight ?? 0);
     return () => resizeObserver.disconnect();
   }, []);
+
+  const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
@@ -234,11 +235,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
         {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
 
-        {aiGenerateState === 'reviewing' &&
-          isPreviewLoading &&
-          'Loading preview...'}
-
-        {aiGenerateState === 'reviewing' && !isPreviewLoading && (
+        {aiGenerateState === 'reviewing' && (
           <>
             <div>Here is the dancer that was generated. Do you like it?</div>
 
@@ -288,23 +285,15 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
         />
       </Guide>
       <div className={moduleStyles.dancerContainer} ref={containerRef}>
-        {aiGenerateState === 'generating' || !dancerSignature ? (
-          <img alt="" src={dancerEmptyHeadShoulders} />
-        ) : (
-          <>
-            <DancerCanvas
-              key={dancerSignature || 'none'}
-              size={containerHeight}
-              move="rest"
-              onLoadingChange={setIsPreviewLoading}
-            />
-            {isPreviewLoading && (
-              <div className={moduleStyles.spinnerOverlay}>
-                <Spinner size="large" />
-              </div>
-            )}
-          </>
-        )}
+        <div>
+          {showPlaceholder && <img alt="" src={dancerEmptyHeadShoulders} />}
+          <DancerCanvas
+            key={dancerMetadata || 'none'}
+            size={containerHeight}
+            move="rest"
+            onLoadingChange={setIsPreviewLoading}
+          />
+        </div>
       </div>
     </div>
   );
