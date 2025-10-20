@@ -1,8 +1,0 @@
-name 'CSA U6L7-L3_2022'
-display_name 'Analyzing Text'
-description 'Use standard algorithms you have written before to analyze text.'
-
-sublevels
-level 'CSA U6L7-L3a_2022'
-level 'CSA U6L7-L3b_2022'
-level 'CSA U6L7-L3c_2022'

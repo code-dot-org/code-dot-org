@@ -1,9 +1,0 @@
-name 'CSA U2L7-L7 Practice_pilot-2025'
-display_name 'Practice: The Food Truck'
-description 'Import your `Dessert` subclass and write accessor methods for its instance variables.'
-
-sublevels
-level 'CSA U2L7-L7a_pilot-2025'
-level 'CSA U2L7-L7b_pilot-2025'
-level 'CSA U2L7-L7c_pilot-2025'
-level 'CSA U2L7-L7d_pilot-2025'

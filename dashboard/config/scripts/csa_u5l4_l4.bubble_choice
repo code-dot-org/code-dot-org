@@ -1,8 +1,0 @@
-name 'CSA U5L4-L4'
-display_name 'Keep a Color'
-description 'Keep only red, green, or blue color values in an image.'
-
-sublevels
-level 'CSA U5L4-L4a'
-level 'CSA U5L4-L4b'
-level 'CSA U5L4-L4c'

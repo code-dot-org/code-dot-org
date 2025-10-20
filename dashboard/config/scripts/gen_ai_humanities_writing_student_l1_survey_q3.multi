@@ -1,8 +1,0 @@
-name 'Gen AI Humanities - Writing - Student L1 Survey - Q3'
-question 'I plan to keep using AI tools when allowed to assist me with my writing process.'
-right 'Strongly disagree'
-right 'Disagree'
-right 'Neutral'
-right 'Agree'
-right 'Strongly agree'
-allow_multiple_attempts true

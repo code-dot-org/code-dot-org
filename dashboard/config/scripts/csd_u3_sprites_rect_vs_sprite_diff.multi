@@ -1,8 +1,0 @@
-name 'CSD U3 - sprites - rect vs sprite diff'
-question 'What is the difference for the x and y values of sprites and rectangles?'
-wrong 'There is no difference. They have the same x and y values'
-right 'The x and y value are the center of a sprite and in the upper left corner of a rectangle'
-wrong 'The x and y value are the center of a sprite and in the upper right corner of a rectangle'
-wrong 'The x and y value are the center of a rectangle and in the upper left corner of a sprite'
-
-allow_multiple_attempts true

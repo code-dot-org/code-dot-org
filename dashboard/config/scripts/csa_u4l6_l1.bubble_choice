@@ -1,7 +1,0 @@
-name 'CSA U4L6-L1'
-display_name 'Predict the Output'
-description 'Predict the output of each of these programs.'
-
-sublevels
-level 'CSA U4L6-L1a'
-level 'CSA U4L6-L1b'

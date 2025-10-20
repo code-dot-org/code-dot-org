@@ -1,9 +1,0 @@
-name 'CSA Post-Survey q49_2025'
-question 'Made my own choices about assignments and projects.'
-
-right 'Never'
-right 'A few classes'
-right 'About half the class sessions'
-right 'Many class sessions'
-right 'Once or more per class session'
-allow_multiple_attempts true

@@ -1,8 +1,0 @@
-name 'CSD web conditionals practice choice_2024'
-display_name 'Conditionals Practice'
-description 'Practice using booleans and conditionals with these activities.'
-
-sublevels
-level 'CSD U3 Boolean Modify_2024'
-level 'CSD games conditionals bowl_2024'
-level 'CSD games conditionals practice spaceship_2024'

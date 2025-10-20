@@ -1,8 +1,0 @@
-{
-  "key": "randomNumber",
-  "name": "randomNumber",
-  "category": "Math",
-  "category_key": "math",
-  "content": "Please see: [`randomNumber(min, max)`(#ffb74d)](/docs/gamelab/randomNumber_min_max/)",
-  "short_description": "see randomNumber(min, max)"
-}

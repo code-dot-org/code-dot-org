@@ -1,9 +1,0 @@
-name 'express_EOC2022'
-display_name 'End of Course Project'
-description 'You have reached the end of Course E! Choose a project to create.'
-
-sublevels
-level 'CourseE_Project_SpriteLab2022'
-level 'CourseD_EOC_dance2022'
-level 'Course F: Artist Project2022'
-level 'Course E: Frozen Project2022'

@@ -1,8 +1,0 @@
-name 'how-often-journal_2024'
-question 'Gave me the opportunity to write my thoughts down in a journal, or on paper.'
-right 'Never'
-right 'Rarely (a few times a year)'
-right 'Sometimes (once or twice a month)'
-right 'Often (once or twice a week)'
-right 'Almost every lesson'
-allow_multiple_attempts true

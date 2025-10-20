@@ -1,8 +1,0 @@
-name 'courseB_external_MRF'
-title 'title'
-description 'description here'
-markdown <<MARKDOWN
-# Programming Unplugged: My Robotic Friends
-
-<iframe width="630" height="470" src="https://www.youtube.com/embed/xaW3PAzHxCU" frameborder="0" allowfullscreen></iframe>
-MARKDOWN

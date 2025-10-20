@@ -1,9 +1,0 @@
-name 'CSA U7L2-L3v2_2022'
-display_name 'Using Object References as Parameters'
-description 'Write methods with object references as parameters using the console or The Theater.'
-
-sublevels
-level 'CSA U7L2-L3a_2022'
-level 'CSA U7L2-L3b_2022'
-level 'CSA U7L2-L3c_2022'
-level 'CSA U7L2-L3d_2022'

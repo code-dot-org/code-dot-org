@@ -1,9 +1,0 @@
-name 'CSA U1L18-L1 Exemplar'
-display_name 'Asphalt Art Project'
-description 'Choose the grid size you want to use for your project.'
-
-sublevels
-level 'CSA U1L18-L1a Exemplar'
-level 'CSA U1L18-L1d Exemplar'
-level 'CSA U1L18-L1b Exemplar'
-level 'CSA U1L18-L1c Exemplar'

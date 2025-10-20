@@ -1,9 +1,0 @@
-name 'CSA U7L4-L6_2023'
-display_name 'Practice: Private Methods'
-description 'Practice writing and using `private` methods in The Theater.'
-
-sublevels
-level 'CSA U7L4-L6a_2023'
-level 'CSA U7L4-L6b_2023'
-level 'CSA U7L4-L6c_2023'
-level 'CSA U7L4-L6d_2023'

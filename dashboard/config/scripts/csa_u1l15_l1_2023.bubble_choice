@@ -1,9 +1,0 @@
-name 'CSA U1L15-L1_2023'
-display_name 'Practice: Creating Murals'
-description 'Create a subclass of the `PainterPlus` class to paint a mural in The Neighborhood using the concepts and skills you have learned in this unit.'
-
-sublevels
-level 'CSA U1L15-L1a_2023'
-level 'CSA U1L15-L1b_2023'
-level 'CSA U1L15-L1c_2023'
-level 'CSA U1L15-L1d_2023'

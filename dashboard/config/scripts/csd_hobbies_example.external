@@ -1,9 +1,0 @@
-name 'CSD Hobbies Example'
-href 'path/to/html/in/asset/folder'
-markdown <<MARKDOWN
-# Example Hobbies Page
-
-On the next level you are going to work on creating your own Hobbies Page. This is an example of the type of page you are working to create. Come back to this level for reference as needed while creating your page.
-
-<iframe src="https://thimbleprojects.org/danimcavoy/100054" width="960px" height="1200px" />
-MARKDOWN

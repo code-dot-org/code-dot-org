@@ -1,8 +1,0 @@
-name 'Prepare for your presentation_2018_2019'
-title 'Prepare for yur presentation'
-href 'path/to/html/in/asset/folder'
-markdown <<MARKDOWN
-# Project Presentations
-
-Time to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.
-MARKDOWN

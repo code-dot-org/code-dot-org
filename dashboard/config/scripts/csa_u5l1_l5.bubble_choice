@@ -1,8 +1,0 @@
-name 'CSA U5L1-L5'
-display_name 'Updating Values in 2D Arrays'
-description 'Help the owner update inventory and prices for each food truck!'
-
-sublevels
-level 'CSA U5L1-L5a'
-level 'CSA U5L1-L5b'
-level 'CSA U5L1-L5c'

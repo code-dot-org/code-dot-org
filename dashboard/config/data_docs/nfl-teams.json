@@ -1,5 +1,0 @@
-{
-  "key": "nfl-teams",
-  "name": "NFL Teams",
-  "content": "Description: data about all current NFL teams, as of the 2019-20 season.\r\n\r\nSource: [Pro-Football-Reference](https://www.pro-football-reference.com/)\r\n\r\nColumns:\r\n\r\n * Conference (string): whether the team is in the AFC or NFC conference\r\n* Division (string): what division the team is in, such as North or East\r\n* Team (string): name of the team\r\n* City (string): city and state the team is located in\r\n * Stadium (string): name of the stadium the team plays home games in\r\n* Capacity (numerical): how many seats the arena holds for attendees\r\n* Head coach (string): name of the current head coach of the team\r\n * Image (link): a link to an image of the team's logo\r\n\r\n\r\n\r\n\r\n"
-}

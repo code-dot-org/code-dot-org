@@ -1,5 +1,0 @@
-{
-  "key": "us-gas-prices",
-  "name": "US Gas Prices",
-  "content": "Description: Data about average regular gasoline prices within the US, including overall US average, plus 10 major cities. Data spans May 2003 through March 2022. Will be updated every few months.\r\n\r\nSource: [US Energy Information Association](https://www.eia.gov/dnav/pet/pet_pri_gnd_a_epmr_pte_dpgal_w.htm)\r\n\r\nColumns:\r\n\r\n* Date (string): week for which the gasoline price was recorded\r\n* US Average (numerical): average price in USD for 1 gallon of gasoline in the US\r\n* Boston, Chicago, Cleveland, Denver, Houston, Los Angeles, Miami, New York City, San Francisco, and Seattle (all numerical): average price in USD for 1 gallon of gasoline within that given city"
-}

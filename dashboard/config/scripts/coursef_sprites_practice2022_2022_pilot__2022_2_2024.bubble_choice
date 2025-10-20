@@ -1,9 +1,0 @@
-name 'courseF_sprites_practice2022_2022_pilot_-2022-2_2024'
-display_name 'Sprites Practice'
-description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with sprites and behaviors!'
-
-sublevels
-level 'courseF_sprites_desert_2024'
-level 'courseF_place_fruit_2024'
-level 'courseF_sprites_ship_2024'
-level 'courseF_sprites_clouds_2024'

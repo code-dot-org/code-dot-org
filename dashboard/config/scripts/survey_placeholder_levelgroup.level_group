@@ -1,8 +1,0 @@
-name 'survey_placeholder_levelgroup'
-title 'CS Principles Student Pre-Course Survey Coming Soon'
-submittable 'true'
-anonymous 'true'
-
-page
-text 'CSP 2021 Precourse Placeholder'
-

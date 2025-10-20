@@ -1,9 +1,0 @@
-name 'CSA U6L9-L4 CR_pilot-2022'
-display_name 'Code Review: String Algorithms'
-description 'Request a code review from your peers.'
-
-sublevels
-level 'CSA U6L9-L4a CR_pilot-2022'
-level 'CSA U6L9-L4b CR_pilot-2022'
-level 'CSA U6L9-L4c CR_pilot-2022'
-level 'CSA U6L9-L4d CR_pilot-2022'

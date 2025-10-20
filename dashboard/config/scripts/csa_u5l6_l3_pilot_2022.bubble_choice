@@ -1,9 +1,0 @@
-name 'CSA U5L6-L3_pilot-2022'
-display_name 'Creating Image Filters'
-description 'Create new image filters using the `Image` and `Pixel` classes in The Theater.'
-
-sublevels
-level 'CSA U5L6-L3a_pilot-2022'
-level 'CSA U5L6-L3b_pilot-2022'
-level 'CSA U5L6-L3c_pilot-2022'
-level 'CSA U5L6-L3d_pilot-2022'

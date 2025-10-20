@@ -1,7 +1,0 @@
-name 'ever-learned-cs'
-question 'Have you ever learned any computer science <em>in school</em> before?'
-right 'Yes, I took a class'
-right 'Yes, some activities, but not a full class'
-right 'Not sure'
-right 'Definitely not'
-allow_multiple_attempts true

@@ -1,5 +1,0 @@
-{
-  "key": "baseball-teams",
-  "name": "Baseball Teams",
-  "content": "Description: list of US baseball teams between 1901-2019\r\n\r\n[Source](http://www.seanlahman.com/baseball-archive/statistics/)\r\n\r\nProcessing: deleted all of the data before 1900, removed some unnecessary columns, and removed some rows in which there was a lot of blank cells\r\n\r\nColumns:\r\n\r\n* Year (numerical): year that each team existed\r\n* Rank (numerical): ranking of the top ten teams each year\r\n* Home Games (numerical): number of home games that each team played in that year\r\n* Team Name (string): name of the team\r\n* Baseball Field (string): name of the home field for each team\r\n* Team ID (string): three letter team ID"
-}

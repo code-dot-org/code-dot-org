@@ -1,9 +1,0 @@
-name 'csc_ecosystems_multiple_choice_child_3'
-question 'Which of the following is most true about a balanced ecosystem? '
-wrong 'Fish should eat all the algae so the algae never grows back. ', feedback: 'Incorrect.'
-wrong 'Humans should catch all of the fish in the ocean for food. ', feedback: 'Incorrect.'
-right 'Humans should catch some of the fish and fish should eat some of the algae, so there is always enough food for each creature.', feedback: 'Correct!'
-wrong 'Fish should eat all the coral so the algae can grow faster.', feedback: 'Incorrect.'
-
-
-allow_multiple_attempts false

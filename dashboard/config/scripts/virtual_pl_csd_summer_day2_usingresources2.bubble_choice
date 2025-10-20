@@ -1,8 +1,0 @@
-name 'virtual-pl-csd-summer-day2-UsingResources2'
-display_name 'Explore Resources in Web Lab and Game Lab'
-description '## Click on one of the options below to explore resources in Web Lab and Game Lab. 
-#### When you are finished you will return to this screen and have the option to either explore a new level or click finish to continue on to the next activity.'
-
-sublevels
-level 'SP-VPL-21-mod4-CSD U2 Heading Demo_2022'
-level 'SP-VPL-21-mod4-CSD U3 Drawing Squares to Corners_2022'

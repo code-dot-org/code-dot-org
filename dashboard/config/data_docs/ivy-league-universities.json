@@ -1,5 +1,0 @@
-{
-  "key": "ivy-league-universities",
-  "name": "Ivy League Universities",
-  "content": "Description: data about the eight Ivy League universities in the United States.\r\n\r\n[Wikpedia Source](https://en.wikipedia.org/wiki/Ivy_League) and second [source](https://www.thecrimson.com/column/around-the-ivies/article/2019/11/22/football-HY-ATI-2019/)\r\n\r\nColumns:\r\n\r\n * Institution (string): Name of the university\r\n * Location (string): City and state where the university is located\r\n * Athletic nickname (string): Name of the school's athletic team name, such as the Bears or Tigers\r\n * Undergraduates in 2018 (numerical): how many undergraduates were enrolled at the university in 2018\r\n * Postgraduates in 2018 (numerical): how many postgraduates were enrolled at the university in 2018\r\n * Endowment in 2018 (numerical): how much money was given to the school in endowments, in 2018\r\n * Academic staff (numerical): how many people were employed as staff or faculty, in 2018\r\n * Year founded (numerical): what year the university was founded in\r\n * Original name (string): the original name of the university when it was founded\r\n\r\n\r\n\r\n"
-}

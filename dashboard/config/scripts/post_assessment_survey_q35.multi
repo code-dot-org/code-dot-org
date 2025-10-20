@@ -1,9 +1,0 @@
-name 'post-assessment survey q35'
-question 'If you DID take the CS Principles AP exam, how do you think you did? I feel like...'
-right '...I got most of the questions right'
-right '...I got a lot of questions right, but some wrong'
-right '...I got about half right and half wrong'
-right '...I only got a few right'
-right '...I didn\'t get any questions right'
-right 'I did not take the CS Principles AP Exam'
-allow_multiple_attempts true

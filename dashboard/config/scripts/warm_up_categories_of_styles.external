@@ -1,5 +1,0 @@
-name 'Warm Up: Categories of Styles'
-href 'path/to/html/in/asset/folder'
-markdown <<MARKDOWN
-<iframe src="https://thimbleprojects.org/danimcavoy/109428/" width="960px" height="1200px" />
-MARKDOWN

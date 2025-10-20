@@ -1,9 +1,0 @@
-name 'CSA U2L2-L5_2024'
-display_name 'Practice: Writing a Class'
-description 'Declare instance variables in a class and write a no-argument constructor to assign default values to the instance variables.'
-
-sublevels
-level 'CSA U2L2-L5a_2024'
-level 'CSA U2L2-L5b_2024'
-level 'CSA U2L2-L5c_2024'
-level 'CSA U2L2-L5d_2024'

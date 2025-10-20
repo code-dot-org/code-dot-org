@@ -1,8 +1,0 @@
-name 'cv-studentsurvey-midmodule-q4'
-question 'How confident do you feel about applying what you\'ve learned in the unit to new problems or projects?'
-right 'Very confident'
-right 'Somewhat confident'
-right 'Neutral'
-right 'Somewhat unconfident'
-right 'Very unconfident'
-allow_multiple_attempts true

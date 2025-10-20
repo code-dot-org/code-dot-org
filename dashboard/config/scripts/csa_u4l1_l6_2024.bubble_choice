@@ -1,9 +1,0 @@
-name 'CSA U4L1-L6_2024'
-display_name 'Playing Sounds'
-description 'Create a scene that plays sounds and play your scene in The Theater.'
-
-sublevels
-level 'CSA U4L1-L6a_2024'
-level 'CSA U4L1-L6b_2024'
-level 'CSA U4L1-L6c_2024'
-level 'CSA U4L1-L6d_2024'

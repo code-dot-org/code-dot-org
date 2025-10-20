@@ -1,9 +1,0 @@
-name 'SP-VPL-21-mod2-dashboard-c4u'
-title 'title of the assessment here'
-submittable 'true'
-anonymous 'false'
-
-page
-level 'SP-VPL-21-mod2-progress-c4u'
-level 'SP-VPL-21-mod2-feedback-c4u'
-

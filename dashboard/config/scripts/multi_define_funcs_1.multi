@@ -1,8 +1,0 @@
-name 'Multi Define Funcs 1'
-title 'g(y) = y + 3'
-question 'What is the name of this function?'
-right 'g'
-wrong 'y'
-wrong '3'
-
-allow_multiple_attempts true

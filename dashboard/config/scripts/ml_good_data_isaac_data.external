@@ -1,9 +1,0 @@
-name 'ml-good data-isaac data'
-title 'Introduction to Machine Learning'
-description ''
-
-markdown <<MARKDOWN
-![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
-
-## [Click Here](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) to create a copy of Isaac's data
-MARKDOWN

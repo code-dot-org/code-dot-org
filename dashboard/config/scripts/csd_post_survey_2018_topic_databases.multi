@@ -1,8 +1,0 @@
-name 'csd-post-survey-2018-topic-databases'
-question 'Databases'
-layout 'wrap'
-right 'Yes'
-right 'No'
-right 'Not sure what this is'
-
-allow_multiple_attempts true

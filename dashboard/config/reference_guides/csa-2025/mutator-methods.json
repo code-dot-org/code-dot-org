@@ -1,9 +1,0 @@
-{
-  "key": "mutator-methods",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "methods",
-  "display_name": "Mutator Methods",
-  "content": "## What is an mutator method?\n\nAn **mutator method** changes the value assigned to an instance variable\n\nFor example, the `public`(#e7e8ea) **mutator method** `setTitle`(#e7e8ea) allows other classes to modify the current value of the `private`(#e7e8ea) **instance variable** `title`(#e7e8ea).\n\n```\npublic class Song {\n  private String title;\n\n  public void setTitle(String newTitle) {\n    title = newTitle;\n  }\n}\n```\n\nThe method is `public`(#e7e8ea) so it can be accessed from outside of the class. The return type is `void`(#e7e8ea) since it\ndoesn't return a value. The name of the method is typically `set`(#e7e8ea) followed by the name of the instance variable. We specify a parameter that matches the type of the instance variable.\n\n",
-  "position": 4
-}

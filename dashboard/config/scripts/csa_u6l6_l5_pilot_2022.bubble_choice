@@ -1,9 +1,0 @@
-name 'CSA U6L6-L5_pilot-2022'
-display_name 'Stop Word Removal'
-description 'Stop word removal is a common technique used in natural language processing. Use the `remove()` method in the `ArrayList` class to remove stop words in various scenarios.'
-
-sublevels
-level 'CSA U6L6-L5a_pilot-2022'
-level 'CSA U6L6-L5b_pilot-2022'
-level 'CSA U6L6-L5c_pilot-2022'
-level 'CSA U6L6-L5d_pilot-2022'

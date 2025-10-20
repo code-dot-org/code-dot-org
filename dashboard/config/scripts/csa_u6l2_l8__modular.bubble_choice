@@ -1,9 +1,0 @@
-name 'CSA U6L2-L8_-modular'
-display_name 'Practice: String Methods'
-description 'Practice using the `indexOf()` and `substring()` methods to work with `String` objects.'
-
-sublevels
-level 'CSA U6L2-L8a_-modular'
-level 'CSA U6L2-L8b_-modular'
-level 'CSA U6L2-L8c_-modular'
-level 'CSA U6L2-L8d_-modular'

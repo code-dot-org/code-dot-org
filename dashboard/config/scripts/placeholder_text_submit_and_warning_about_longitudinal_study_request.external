@@ -1,9 +1,0 @@
-name 'placeholder text: submit and warning about longitudinal study request'
-
-markdown <<MARKDOWN
-## Longitudinal study request
-
-TEXT HERE
-
-WARNING: Hit submit and then read.
-MARKDOWN

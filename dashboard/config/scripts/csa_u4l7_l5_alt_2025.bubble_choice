@@ -1,9 +1,0 @@
-name 'CSA U4L7-L5_alt-2025'
-display_name 'Practice: Nested if Statements'
-description 'Use nested `if` statements in The Theater to create a visualization or animation.'
-
-sublevels
-level 'CSA U4L7-L5a_alt-2025'
-level 'CSA U4L7-L5b_alt-2025'
-level 'CSA U4L7-L5c_alt-2025'
-level 'CSA U4L7-L5d_alt-2025'

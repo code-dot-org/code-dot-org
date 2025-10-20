@@ -1,7 +1,0 @@
-name 'post-assessment survey heading2'
-
-markdown <<MARKDOWN
-## Next we want to know what you think about *computer science*.
-
-**How much do you agree or disagree with the following statements?**
-MARKDOWN

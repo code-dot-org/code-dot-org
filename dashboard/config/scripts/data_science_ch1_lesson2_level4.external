@@ -1,7 +1,0 @@
-name 'data-science-ch1-lesson2-level4'
-title 'Pizza Slice Data Set'
-
-markdown <<MARKDOWN
-#Pizza Slice Data Set
-##[Link to: Pizza Slice Data Set](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FDP0IizAF33xrAPz2yucB%2Ffile.json)
-MARKDOWN

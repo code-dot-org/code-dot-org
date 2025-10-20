@@ -1,9 +1,0 @@
-name 'PLPLOPD-K5 Begin_2023_K5CSConcepts_TextPage'
-skip_dialog true
-markdown <<MARKDOWN
-# Welcome to CSF 
-## You will learn: 
-### how to use block based coding, how to teach dragging and dropping, unplugged lessons, Sequencing, loops, events 
-
-
-MARKDOWN

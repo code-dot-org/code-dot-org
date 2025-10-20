@@ -1,9 +1,0 @@
-name 'CSA U4L6-L5 CR_2022'
-display_name 'Code Review: Manipulating Sounds'
-description 'Request a code review from your peers.'
-
-sublevels
-level 'CSA U4L6-L5a CR_2022'
-level 'CSA U4L6-L5b CR_2022'
-level 'CSA U4L6-L5c CR_2022'
-level 'CSA U4L6-L5d CR_2022'

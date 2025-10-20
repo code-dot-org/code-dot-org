@@ -1,8 +1,0 @@
-name 'U3 - Conditionals - Translating Flowcharts - Else'
-markdown <<MARKDOWN
-# Translating Flowcharts: Else 
-
-| Component | Code |
-| --- | --- |
-| <img src="https://images.code.org/9d05dec5582e13242f8ee41826f95f47-image-1446521472672.png" style="width: 350px; float: right"> | The true answer is taken care of by the if statment. <br> The action inside the if statement will only run when <br> the boolean expression is true. When you want a false answer<br> you need another conditional. An **else statement** will <br> cover the case where the answer is false. <br> <img src="https://images.code.org/937a5de6657e761d528bba3a45d378c2-image-1446521590755.33.00 PM.png" style="width: 350px; float: left; border: solid 1px black">
-MARKDOWN

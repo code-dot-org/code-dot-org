@@ -1,7 +1,0 @@
-name 'ml-club app-choice parent'
-display_name 'Customize Your App'
-
-sublevels
-level 'ml-club app-choice accessible'
-level 'ml-club app-choice features'
-level 'ml-club app-choice if-statements'

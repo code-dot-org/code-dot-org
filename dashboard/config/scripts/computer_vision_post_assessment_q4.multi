@@ -1,9 +1,0 @@
-name 'Computer-Vision-Post-Assessment-Q4'
-title 'Computer Vision Post-Assessment'
-
-question 'Examine how an edge detection algorithm might be employed with computer vision systems'
-wrong 'An edge detection algorithm enhances image resolution, making finer details visible for better analysis'
-wrong 'An edge detection algorithm is primarily used for tracking color changes across an image'
-wrong 'An edge detection algorithm improves image compression by reducing the file size of images'
-right 'An edge detection algorithm can identify object boundaries in images, aiding in object recognition and scene understanding'
-allow_multiple_attempts false

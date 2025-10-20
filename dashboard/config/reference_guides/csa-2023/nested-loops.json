@@ -1,9 +1,0 @@
-{
-  "key": "nested-loops",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "control-structures",
-  "display_name": "Nested Loops",
-  "content": "A **nested loop** is a loop nested inside of another loop. Use **nested loops** to traverse through a 2D array. \n\n```\nint[][] numbers = { {0, 1, 2}, {3, 4, 5}, {6, 7, 8} };\n\nfor (int row = 0; row < numbers.length; row++) {\n   for (int col = 0; col < numbers[0].length; col++) {\n      System.out.print(numbers[row][col] + \" \");\n   }\n\n   System.out.println();\n}\n```\n\n**Output:**\n\n0 1 2\n\n3 4 5\n\n6 7 8 ",
-  "position": 8
-}

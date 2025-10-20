@@ -1,9 +1,0 @@
-// Style rules associated with the device rotation overlay
-
-#rotateContainer {
-  display: none;
-
-  @media screen and (orientation: portrait) and (max-device-width: 900px) {
-    display: block;
-  }
-}

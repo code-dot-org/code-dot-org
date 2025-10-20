@@ -1,9 +1,0 @@
-name 'CSA U8L7-L6_2025'
-display_name 'Practice: Traversing Multiple Lists'
-description 'Implement standard algorithms to traverse multiple lists'
-
-sublevels
-level 'CSA U8L7-L6a_2025'
-level 'CSA U8L7-L6b_2025'
-level 'CSA U8L7-L6c_2025'
-level 'CSA U8L7-L6d_2025'

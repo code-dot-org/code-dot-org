@@ -1,5 +1,0 @@
-name 'Example Brand Book'
-href 'path/to/html/in/asset/folder'
-markdown <<MARKDOWN
-<iframe src="https://issuu.com/logobr/docs/brandbook_nikefootball" width="960px" height="1200px" />
-MARKDOWN

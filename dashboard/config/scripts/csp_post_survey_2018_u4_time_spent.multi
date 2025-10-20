@@ -1,9 +1,0 @@
-name 'csp-post-survey-2018-U4-time-spent'
-question 'I think the amount of time we spent on this unit was...'
-
-right 'way too much.'
-right 'a bit too much.'
-right 'about right.'
-right 'a bit too little.'
-right 'way too little.'
-allow_multiple_attempts true

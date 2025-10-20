@@ -1,5 +1,0 @@
-name 'csp-post-survey-AP-register-2021'
-question "Did you register to take the CS Principles AP Exam?"
-right 'Yes'
-right 'No'
-allow_multiple_attempts true

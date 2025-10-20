@@ -1,9 +1,0 @@
-name 'cv-studentsurvey-premodule-q4'
-question 'How do you prefer to learn new topics? (**Choose no more than two.**)'
-right 'Watching videos'
-right 'Reading text (books, articles, websites)'
-right 'Hands-on projects and experiments'
-right 'Group discussions and collaborations'
-type 'multi2'
-
-allow_multiple_attempts true

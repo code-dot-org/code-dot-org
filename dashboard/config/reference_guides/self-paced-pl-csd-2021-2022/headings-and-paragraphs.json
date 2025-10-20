@@ -1,9 +1,0 @@
-{
-  "key": "headings-and-paragraphs",
-  "course_version_key": "2022",
-  "course_offering_key": "self-paced-pl-csd-2021",
-  "parent_reference_guide_key": "html",
-  "display_name": "Headings and Paragraphs",
-  "content": "Almost all pages that you create will have headings and paragraphs.\n\n## Headings\n\nHeadings are the different sized section titles throughout a web page. Headings add structure to your web page by breaking it up so its easier for a user to read.\n\n## Making Headings\n\nThere are six different heading tags: `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` and `<h6>`. The most common type of heading is `<h1>`.  To use it, you put the text you want to display inside between the opening tag (`<h1>`) and closing tag (`</h1>`).\n\nThe code for a heading will look like `<h1>My Heading Text</h1>`.\n\n## Size of Headings\n\nThere are different sized headings which are marked by the number next to the h in the heading tag. They go from `<h1>` to `<h6>`.\n\n<table markdown=1>\n<thead>\n<tr>\n<th>Example</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\n\n```\n<h1>Shoulders</h1>\n<h2>Knees</h2>\n<h3>Toes</h3>\n```\n\n</td>\n<td><img src=\"https://images.code.org/4f252e3dce84a14e1bfdab373d3edbad-image-1473432674187.50.43 AM.png\" style=\"width: 200px;\"></td>\n</tr>\n</tbody>\n</table>\n\n## Paragraphs\n\nParagraphs group together sets of sentences and put some space between that group of text and the next group of text.\n\n## Making Paragraphs\n\nParagraphs are marked by opening(`<p>`) and closing(`</p>`) tags. To create more than one paragraph you will want multiple sets of opening and closing `<p>` tags. For example\n\n```\n<p>\n\tThis is a paragraph.\n</p>\n<p>\n\tThis is another paragraph.\n</p>\n```\n\n**W3 Schools Links**\n\n* [&lt;h1&gt; - &lt;h6&gt;](https://www.w3schools.com/tags/tag_hn.asp)\n* [&lt;p&gt;](https://www.w3schools.com/tags/tag_p.asp)",
-  "position": 1
-}

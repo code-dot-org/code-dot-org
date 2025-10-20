@@ -1,9 +1,0 @@
-name 'courseB_multi_maze_seq10_predict1'
-question 'Look at the program below. What will happen when you click "Run"?'
-wrong 'The bird will get to the pig.', feedback: 'Incorrect. The bird runs into the TNT with his first move.'
-right 'The bird will run into the TNT right away.', feedback: 'Correct!'
-wrong 'The bird will not move at all.', feedback: 'Incorrect. The bird runs into the TNT with his first move.'
-wrong 'I don\'t know.', feedback: 'The bird runs into the TNT with his first move.'
-
-
-allow_multiple_attempts false

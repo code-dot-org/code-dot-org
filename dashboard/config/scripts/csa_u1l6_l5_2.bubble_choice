@@ -1,8 +1,0 @@
-name 'CSA U1L6-L5 2'
-display_name 'Using Your Toolbox'
-description 'Choose a challenge to practice calling methods, writing constructors, and using control structures.'
-
-sublevels
-level 'CSA U1L6-L5a-2'
-level 'CSA U1L6-L5b-2'
-level 'CSA U1L6-L5c-2'

@@ -1,9 +1,0 @@
-name 'CSA U4L3-L3_pilot-2022'
-display_name 'Using Nested if Statements'
-description 'Use nested `if` statements to solve problems in The Neighborhood or The Theater.'
-
-sublevels
-level 'CSA U4L3-L3a_pilot-2022'
-level 'CSA U4L3-L3b_pilot-2022'
-level 'CSA U4L3-L3c_pilot-2022'
-level 'CSA U4L3-L3d_pilot-2022'

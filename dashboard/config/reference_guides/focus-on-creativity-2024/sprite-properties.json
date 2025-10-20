@@ -1,9 +1,0 @@
-{
-  "key": "sprite-properties",
-  "course_version_key": "2024",
-  "course_offering_key": "focus-on-creativity",
-  "parent_reference_guide_key": "sprites",
-  "display_name": "Sprite Properties",
-  "content": "If you think of a _sprite_ as a collection of values that represents an object in the real world, then the _properties_ of a sprite are like variables that hold all of those values. Some of the most common sprite properties include:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/sprite.x.png)\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/sprite.y.png)\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/sprite.rotation.png)\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/sprite.scale.png)\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/sprite.visible.png)\n\n## Dot Notation\n\nNotice that all of the examples above follow a common pattern of **sprite label . sprite property**. We call this format _dot notation_. The first part will _always_ be unique to the sprite that you want to modify, and the second part will _always_ be one of the properties common to all sprites.\n\n## Reading and Writing Properties\n\nSprite properties, like variables, are values that sometimes we want to just read, and sometimes that we want to write to. When you drag out a sprite property it will take out a different form depending on whether you are _reading_ its value, or _writing_ it.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/property-assignment.png)\n\nIn the first image above the [`sprite.x`(#f78183)](/docs/gamelab/x/) block is being dragged into a place where it is being read, so it keeps it's normal form.\n\nIn the second image, the [`sprite.y`(#f78183)](/docs/gamelab/y/) block is being dragged onto a new line where it will be written to, so it's changed into the form `sprite.y = ___`.",
-  "position": 0
-}

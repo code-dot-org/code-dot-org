@@ -1,8 +1,0 @@
-name 'self-paced-pl-ai-101-mod2-llms_02_2024'
-title 'Check for Understanding: Large Language Models'
-description ''
-question 'Large Language Models (LLMs) are a type of AI designed to understand and generate human-like text based on vast amounts of training data.'
-
-right 'True'
-wrong  'False'
-allow_multiple_attempts true

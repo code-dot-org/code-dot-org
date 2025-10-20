@@ -1,9 +1,0 @@
-name 'CSA U3L5-L5_2022'
-display_name 'Using Enhanced For Loops'
-description 'Use an enhanced `for` loop with a 1D array to print values, find the sum of all elements, or find the average of all elements.'
-
-sublevels
-level 'CSA U3L5-L5a_2022'
-level 'CSA U3L5-L5b_2022'
-level 'CSA U3L5-L5c_2022'
-level 'CSA U3L5-L5d_2022'

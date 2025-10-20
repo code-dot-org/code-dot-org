@@ -1,3 +1,0 @@
-#!/bin/sh
-exec < /dev/tty
-ruby tools/hooks/requirements_changed.rb merge ORIG_HEAD HEAD

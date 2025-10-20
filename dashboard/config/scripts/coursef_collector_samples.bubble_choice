@@ -1,9 +1,0 @@
-name 'courseF_collector_samples'
-display_name 'Exploration - Sample Programs'
-description 'You will be creating a collector game. Before you start, explore the example projects below. Press \"Finish\" when you are ready to start planning your own program.'
-
-sublevels
-level 'courseF_apps_collector_move'
-level 'courseF_apps_collector_drive'
-level 'courseF_apps_collector_drag'
-level 'courseF_apps_collector_move2'

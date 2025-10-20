@@ -1,5 +1,0 @@
-{
-  "key": "american-sign-language",
-  "name": "American Sign Language Alphabet",
-  "content": "Description: images showing the American Sign Language sign / gesture for each A-Z letter in the English alphabet.\r\n\r\nColumns:\r\n\r\n* Letter (string): an A-Z letter\r\n* Image (string): link to an image showing the sign or gesture representing that A-Z letter"
-}

@@ -1,8 +1,0 @@
-name 'VPL-CSD-PILOT-S22-AYW-M2-ModelingPromptingChoice'
-display_name 'Practice: Modeling vs. Prompting'
-description 'In the synchronous portion of this module, you focused on the question, "What one to two skills or habits would you want to teach your student?" when reviewing a sample program. Open your choice of program one more time, and review the student code to ask yourself, "What would I model? And what would I attempt to debug through prompting?"'
-
-sublevels
-level 'VPL-CSD-PILOT-S22-AYW-M2-WebDevSample'
-level 'VPL-CSD-PILOT-S22-AYW-M2-AnimationsGamesSample'
-level 'VPL-CSD-PILOT-S22-AYW-M2-PhysCompSample'

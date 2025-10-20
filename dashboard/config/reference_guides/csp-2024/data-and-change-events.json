@@ -1,9 +1,0 @@
-{
-  "key": "data-and-change-events",
-  "course_version_key": "2024",
-  "course_offering_key": "csp",
-  "parent_reference_guide_key": "maker-toolkit",
-  "display_name": "Data and Change Events",
-  "content": "When using sensors for input it's more common to continually collect input and watch for changes than to only check when the user clicks a button or otherwise interacts. To allow for this kind of behavior, the sensors have some special events that get run continually.\n\n\n\n## The Data Event\n\n![data event](https://cdo-curriculum.s3.amazonaws.com/media/uploads/data_event_MLzY2I1.png)\n\nThe \"data\" event runs every time data is received from the board, which happens constantly while your program is running. When you set up an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) handler to watch for the \"data\" event, your code will trigger every 50 milliseconds.\n\nNote that while a \"data\" event must be attached to specific sensor, you can check for updated values from multiple sensors (or do anything else you'd like constantly repeated) in the event handler.\n\n## The Change Event\n\n![change event](https://cdo-curriculum.s3.amazonaws.com/media/uploads/change_event.png)\n\nSimilar to \"data\", the \"change\" event will fire repeatedly, allowing you to take continual input from the sensors. _Unlike_ the \"data\" event, \"change\" will only fire if the sensor value has changed enough. Each sensor has a default _threshold_ which determines how much change is enough to trigger a \"change\" event (by default the threshold for all sensors is 1).\n\nBecause the \"change\" event responds directly to changes in input (as opposed to continually polling) it can be a useful way to ensure that your app isn't wasting time responding to the same input over and over again. This also means that you probably want a separate \"change\" event handler for each sensor that you are using.",
-  "position": 12
-}

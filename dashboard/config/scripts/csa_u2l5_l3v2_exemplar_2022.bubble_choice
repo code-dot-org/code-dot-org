@@ -1,9 +1,0 @@
-name 'CSA U2L5-L3v2 Exemplar_2022'
-display_name 'Getting User Input'
-description 'level description here'
-
-sublevels
-level 'CSA U2L5-L2a Exemplar_2022'
-level 'CSA U2L5-L2b Exemplar_2022'
-level 'CSA U2L5-L2c Exemplar_2022'
-level 'CSA U2L5-L2d Exemplar_2022'

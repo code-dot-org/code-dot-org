@@ -1,8 +1,0 @@
-name 'courseF_variables_samples2022_2022_pilot'
-display_name 'Exploration - Sample Programs'
-description 'You will be creating either a greeting card, a chatbot, or a blank space story. Before you start, explore the example projects below to see what you are interested in creating. Press \"Finish\" when you are ready to start planning your own program.'
-
-sublevels
-level 'courseF_editable_card_2022_pilot'
-level 'courseF_editable_chatbot_2022_pilot'
-level 'courseF_editable_madlib_2022_pilot'

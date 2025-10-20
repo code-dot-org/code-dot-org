@@ -1,9 +1,0 @@
-name 'CSA U3L7-L4_pilot-2022'
-display_name 'Using Polymorphism'
-description 'Create 1D arrays to store objects and access the subclass versions of methods.'
-
-sublevels
-level 'CSA U3L7-L4a_pilot-2022'
-level 'CSA U3L7-L4b_pilot-2022'
-level 'CSA U3L7-L4c_pilot-2022'
-level 'CSA U3L7-L4d_pilot-2022'

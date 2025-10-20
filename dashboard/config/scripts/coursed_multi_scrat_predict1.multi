@@ -1,7 +1,0 @@
-name 'courseD_multi_scrat_predict1'
-question 'This code uses a new block. What do you think will happen when you press "Run"?'
-wrong 'Nothing. Scrat will not move at all.', feedback: 'Incorrect. Putting the \'move forward\' block inside the \'repeat\' block will cause Scrat to move forward three times.'
-right 'Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!', feedback: 'Correct!'
-wrong 'Scrat will move forward, then turn and crash.', feedback: 'Incorrect. Putting the \'move forward\' block inside the \'repeat\' block will cause Scrat to move forward three times.'
-wrong 'I don\'t know.', feedback: 'Putting the \'move forward\' block inside the \'repeat\' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!'
-allow_multiple_attempts false

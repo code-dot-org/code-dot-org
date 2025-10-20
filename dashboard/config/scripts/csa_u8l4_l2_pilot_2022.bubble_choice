@@ -1,9 +1,0 @@
-name 'CSA U8L4-L2_pilot-2022'
-display_name 'Recursive Binary Search'
-description 'Use the recursive binary search to find a specific number or object.'
-
-sublevels
-level 'CSA U8L4-L2a_pilot-2022'
-level 'CSA U8L4-L2b_pilot-2022'
-level 'CSA U8L4-L2c_pilot-2022'
-level 'CSA U8L4-L2d_pilot-2022'

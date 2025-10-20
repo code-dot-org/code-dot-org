@@ -1,9 +1,0 @@
-name 'CSD games collisions practice choice_validation-test'
-display_name 'Collisions Practice'
-description 'Practice using the new collisions blocks.'
-
-sublevels
-level 'CSD U3 collisions types_validation-test'
-level 'CSD U3 collisions types2_validation-test'
-level 'CSD U3 collisions types3_validation-test'
-level 'CSD U3 collisions types4_validation-test'

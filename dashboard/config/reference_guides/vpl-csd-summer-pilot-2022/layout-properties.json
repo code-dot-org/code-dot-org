@@ -1,9 +1,0 @@
-{
-  "key": "layout-properties",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csd-summer-pilot",
-  "parent_reference_guide_key": "css",
-  "display_name": "Layout Properties",
-  "content": "There are many properties that help set the styles of your web pages.\r\n\r\n| Property | Description | W3 Schools Link|\r\n|---|---|---|\r\n|`background-color`|Sets the background color of the element|[W3 Schools](https://www.w3schools.com/css/css_background.asp)|\r\n|`border-color`|Sets the color of the border|[W3 Schools](https://www.w3schools.com/css/css_border.asp)|\r\n|`border-width`|Changes the border width of an element|[W3 Schools](https://www.w3schools.com/css/css_border.asp)|\r\n|`border-style`|Changes the style of border|[W3 Schools](https://www.w3schools.com/css/css_border.asp)|\r\n|`width`|Sets the width of an element|[W3 Schools](https://www.w3schools.com/css/css_dimension.asp)|\r\n|`height`|Sets the height of an element|[W3 Schools](https://www.w3schools.com/css/css_dimension.asp)|\r\n|`float`|Floats an element to one side of the page|[W3 Schools](https://www.w3schools.com/css/css_float.asp)|\r\n|`margin`|Generates space around an element|[W3 Schools](https://www.w3schools.com/css/css_margin.asp)|",
-  "position": 3
-}

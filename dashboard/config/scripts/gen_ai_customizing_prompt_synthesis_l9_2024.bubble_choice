@@ -1,9 +1,0 @@
-name 'gen-ai-customizing-prompt-synthesis-L9_2024'
-display_name 'Practice'
-description 'Choose two levels to complete - one using chain of reasoning, and one using examples.'
-
-sublevels
-level 'gen-ai-customizing-prompt-synthesis-L9A_2024'
-level 'gen-ai-customizing-prompt-synthesis-L9B_2024'
-level 'gen-ai-customizing-prompt-synthesis-L9C_2024'
-level 'gen-ai-customizing-prompt-synthesis-L9D_2024'

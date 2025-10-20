@@ -1,9 +1,0 @@
-name 'CSA-SE-L3-L1_2025'
-display_name 'Copilot as a Dev Tool'
-description 'Choose one of the following programs to use Copilot as a tool to help build, improve, or fix a program.'
-
-sublevels
-level 'CSA-SE-L3-L1a_2025'
-level 'CSA-SE-L3-L1b_2025'
-level 'CSA-SE-L3-L1c_2025'
-level 'CSA-SE-L3-L1d_2025'

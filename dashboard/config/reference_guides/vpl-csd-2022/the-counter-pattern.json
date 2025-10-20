@@ -1,9 +1,0 @@
-{
-  "key": "the-counter-pattern",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csd",
-  "parent_reference_guide_key": "app-lab",
-  "display_name": "The Counter Pattern",
-  "content": "In Game Lab we relied on the _counter pattern_ to continually update sprite properties and create animations. While the elements in App Lab don't have the same kinds of properties that sprites do, we can still apply the counter pattern to create some simple animations.\n\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56%20PM.png)\n\nLike the draw loop in Game Lab, \"data\" events run a single block of code over and over again. Because these events run code repeatedly, you can use the counter pattern inside a \"data\" event to bring some simple movement to your program. You've been using the data event to track the accelerometer itself, but in order to make more complex programs you're going to have to update additional values outside of the accelerometer. \n\n## Moving Design Elements with the Counter Pattern\n\n<img src=\"https://curriculum.code.org/media/uploads/anchor.gif\" style=\"float: right; width: 300px; margin-left: 20px;\">\n<img src=\"https://curriculum.code.org/media/uploads/counter_pattern.png\" style=\"max-width: 500px;\">\n\nThe above code uses the counter pattern in a \"data\" event to move a design element down the screen. In order to make our code more readable, we've saved the current \"y\" value position of \"anchor\" to a variable before using it in the counter pattern, but you could also write the pattern as:\n\n`setProperty(\"anchor\", \"y\", getProperty(\"anchor\", \"y\") + 1);`\n\n",
-  "position": 5
-}

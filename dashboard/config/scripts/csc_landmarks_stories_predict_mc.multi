@@ -1,9 +1,0 @@
-name 'csc_landmarks_stories_predict_mc'
-question '**Read this example code carefully. Predict what the code will do by selecting one of the options below.**'
-wrong 'When the tour guide touches Sam, the tour guide will say **I live in Nebraska**.', feedback: 'Incorrect.'
-wrong 'When the tour guide touches Sam, a new **Statue of Liberty sprite** appears.', feedback: 'Incorrect.'
-wrong 'When the tour guide touches Sam, **100 museum sprites** will pop. ', feedback: 'Incorrect.'
-right 'When the tour guide touches Sam, the **background will change.**', feedback: 'Correct!'
-
-
-allow_multiple_attempts false

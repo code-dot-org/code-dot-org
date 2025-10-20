@@ -1,8 +1,0 @@
-name 'CSA U4L5-L1'
-title 'Check for Understanding'
-
-question 'Which of the following generates a random number between 5 and 10, inclusive?'
-wrong '(int)(Math.random() * 10) + 5'
-wrong '(int)(Math.random() * 5) + 10'
-right '(int)(Math.random() * 6) + 5'
-allow_multiple_attempts true

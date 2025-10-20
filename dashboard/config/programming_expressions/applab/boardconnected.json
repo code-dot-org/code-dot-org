@@ -1,8 +1,0 @@
-{
-  "key": "boardConnected",
-  "name": "boardConnected",
-  "category": "Maker",
-  "category_key": "maker",
-  "short_description": "App Lab - boardConnected",
-  "syntax": "boardConnected();"
-}

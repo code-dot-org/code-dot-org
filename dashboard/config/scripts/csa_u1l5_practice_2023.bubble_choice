@@ -1,9 +1,0 @@
-name 'CSA U1L5 Practice_2023'
-display_name 'Practice: Moving and Painting'
-description 'Use the methods in the `Painter` class to navigate and paint in The Neighborhood.'
-
-sublevels
-level 'CSA U1L5 Practice A_2023'
-level 'CSA U1L5 Practice B_2023'
-level 'CSA U1L5 Practice C_2023'
-level 'CSA U1L5 Practice D_2023'

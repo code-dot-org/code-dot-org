@@ -1,8 +1,0 @@
-name 'courseF_EOC_examples2022_2022_pilot_-2022-2_2024'
-display_name 'End of Course Project'
-description 'You have reached the end of Course F! Choose a project to explore.'
-
-sublevels
-level 'CourseF_Project_SpriteLab_cupcake_examples_2024'
-level 'CourseF_Project_SpriteLab_examples_2024'
-level 'CourseF_Project_SpriteLab_chatbot_examples_2024'

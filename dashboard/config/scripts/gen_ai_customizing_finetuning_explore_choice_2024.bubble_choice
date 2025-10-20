@@ -1,9 +1,0 @@
-name 'gen-ai-customizing-finetuning-explore-choice_2024'
-display_name 'Investigate'
-description 'Choose 1-2 levels to investigate!'
-
-sublevels
-level 'gen-ai-customizing-finetuning-explore-arithmo_2024'
-level 'gen-ai-customizing-finetuning-explore-karen_2024'
-level 'gen-ai-customizing-finetuning-explore-pirate_2024'
-level 'gen-ai-customizing-finetuning-explore-biomistral_2024'

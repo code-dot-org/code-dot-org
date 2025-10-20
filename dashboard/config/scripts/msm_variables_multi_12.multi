@@ -1,7 +1,0 @@
-name 'msm variables multi 12'
-title '(define (f x) (*x 17))'
-question 'What is the name of the variable?'
-wrong 'f'
-right 'x'
-wrong '17'
-allow_multiple_attempts true

@@ -1,9 +1,0 @@
-name 'CSD U6 - Color LEDs - Chal_2023a_2024'
-display_name 'Challenge Levels'
-
-sublevels
-level 'CSD U6 - Color LEDs - ChalA_2024'
-level 'CSD U6 - Color LEDs - CA_2024'
-level 'CSD U6 - Color LEDs - ChalC_2024'
-level 'CSD U6 - Color LEDs - ChalD_2024'
-level 'CSD U6 - Color LEDs - ChalG_2024'

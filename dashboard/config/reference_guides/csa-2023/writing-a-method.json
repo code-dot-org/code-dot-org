@@ -1,9 +1,0 @@
-{
-  "key": "writing-a-method",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "methods",
-  "display_name": "Writing a Method",
-  "content": "## What is a method?\n\nA **method** is a reusable block of code that can be called in a program to complete a certain task.\n\n## How do I write a method?\n\nA method is written in a class using the following syntax:\n\n```\npublic returnType methodName() {\n   // code to execute\n}\n```\n\nBe sure to replace `returnType`(#e7e8ea) with the return type for the method (for example, `void`(#e7e8ea)) and `methodName`(#e7e8ea) with the name of the method you are writing.\n\nWe use curly braces ( `{ }`(#e7e8ea) ) to indicate the start and end of the body of a method. The statements written inside the curly braces ( `{ }`(#e7e8ea) ) are executed when the method is called.",
-  "position": 1
-}

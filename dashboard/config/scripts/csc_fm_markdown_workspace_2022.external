@@ -1,7 +1,0 @@
-name 'csc_fm_markdown_workspace_2022'
-title 'Making Counters'
-
-
-markdown <<MARKDOWN
-#This is your coding workspace
-MARKDOWN

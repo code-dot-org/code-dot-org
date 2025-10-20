@@ -1,8 +1,0 @@
-- @page_title = t('teacher_feedback')
-- feedback_data = {}
-- feedback_data[:all_feedbacks_by_level] = @feedbacks_by_level
-
-#feedback-container
-
-- content_for(:head) do
-  %script{src: webpack_asset_path('js/teacher_feedbacks/index.js'), data: {feedback: feedback_data.to_json}}

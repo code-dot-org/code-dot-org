@@ -1,5 +1,0 @@
-{
-  "key": "board-games",
-  "name": "Board Games",
-  "content": "Description: data about 5000 popular board games.\r\n\r\nSource: [Kaggle](https://www.kaggle.com/mrpantherson/board-game-data)\r\n\r\nColumns:\r\n\r\n* Name (string): title of the board game\r\n* Minimum players (numerical): how many players are required to play the game\r\n* Maximum players (numerical): the limit of players that can play one round of the game\r\n* Average game time (numerical): Average time in minutes it takes to complete one round of the game\r\n* Year released (numerical): what year the game was originally released to the public\r\n* Mechanics (string): list of examples of mechanics used in the game, such as dice-rolling, hand management, card drafting, or cooperative play\r\n* Category (string): genre of the board game, such as medieval, adventure, or economic\r\n* Designer (string): name(s) of the designer(s) of the game\r\n* More info URL (string): a link to more info about the game"
-}

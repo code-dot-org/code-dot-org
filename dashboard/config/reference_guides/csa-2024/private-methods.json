@@ -1,9 +1,0 @@
-{
-  "key": "private-methods",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "methods",
-  "display_name": "Private Methods",
-  "content": "## What is a private method?\n\nA **private method** is only accessible from within the class.\n\n```\nprivate void giveDiscount()\n```\n",
-  "position": 9
-}

@@ -1,6 +1,0 @@
-name 'intro-pulse-survey-q2_csd2_2024pilot'
-question 'What prior experiences have you had with Web Development?'
-right 'This is the first I am learning about Web Development'
-right 'I have done smaller Web Development activities (for example: an hour of code), but this is my first longer class'
-right 'I have already taken classes or done longer online tutorials on Web Development'
-allow_multiple_attempts true

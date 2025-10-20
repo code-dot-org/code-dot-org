@@ -1,9 +1,0 @@
-{
-  "key": "variables",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csd-summer-pilot",
-  "parent_reference_guide_key": "javascript",
-  "display_name": "Variables",
-  "content": "A variable lets you store a single value in your computer's memory with a descriptive name. Using variables lets you easily refer to the same value many times in your program or save a number that you'd like to refer to later.\n\n## Creating Variables\n\n![](https://images.code.org/0688015631dab105e698fad8f0c04df1-image-1491866109652.13.54 PM.png)\n\nThe command `var` will create a new variable with the label that you give it. This variable has the label `size`.\n\n## Assigning Values\n\n![](https://images.code.org/38b3aaec6f68ba5ff1db232864f14be6-image-1491866203013.14.14 PM.png)\n\nThe assignment operator `=` will assign a new value to your variable. This command assigned 100 to the variable `size`. The variable must always be on the left side. You would read this command as \"size gets 100\" since size is getting a new value of 100. Any old values it might have been assigned are lost forever.\n\n## Using a Value\n\n![](https://images.code.org/7dfc69132ca6ffade590c5ab787bf7c9-image-1491866329997.14.49 PM.png)\n\nIn order to use a variable's value, place its label in the spot in your code you want to use it. This command uses the value in `size` to set the width and height of the ellipse.\n\n## Initializing\n\n![](https://images.code.org/2b18f693944e59345ee1f4e65dab1b40-image-1491866560120.22.26 PM.png)\n\nUsually you'll want to give a variable its first (or \"initial\") value right away. You can initialize a variable in a single command by combining the `var` and `=` commands.\n\nAfter you initialize a variable you don't need to use the `var` command to assign a new value. Just use the `=` as normal.\n\n![](https://images.code.org/7e1b4e26549234e8fd4caadb68d4815e-image-1491867896796.36.18 PM.png)",
-  "position": 6
-}

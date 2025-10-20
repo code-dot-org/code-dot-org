@@ -1,5 +1,0 @@
-{
-  "key": "paralympic-games",
-  "name": "Paralympics Medal Count All-Time",
-  "content": "Description: Total medal win counts of countries around the world, in the Summer and Winter Paralympic Games\r\n\r\n[Source](https://en.wikipedia.org)\r\n\r\nColumns:\r\n\r\n* Country (string): name of a country or region, with 3-letter code), of a Paralympic game participant\r\n* Summer Paralympic Games Medal Wins (numerical): how many medals a given country has won in the Summer Paralympic Games\r\n* Winter Paralympic Games Medal Wins (numerical): how many medals a given country has won in the Winter Paralympic Games\r\n* Combined Total Paralympic Games Medal Wins (numerical): how many medals a given country has won in both the Winter and Summer Paralympic Games\r\n\r\n"
-}

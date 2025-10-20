@@ -1,5 +1,0 @@
-{
-  "key": "most-followed-instagram-accounts",
-  "name": "Most Followed Instagram Accounts",
-  "content": "Description: rankings, descriptions, and follower counts of the top 50 most-followed Instagram accounts\r\n\r\nSource: [Trackalytics](https://www.trackalytics.com/the-most-followed-instagram-profiles/page/1/)\r\n\r\nColumns:\r\n\r\n * Rank (numerical): The account's rank 1-50 in terms of follower count\r\n * Username (string): username of the account\r\n * Owner (string): Name of the owner or brand that manages the account\r\n * Followers in millions (numerical): how many followers in millions that account has\r\n * Profession/Activity (string): what field that account owner is in, such as entertainment or politics\r\n * Country/Region (string): what country that owner or brand originates from\r\n\r\n\r\n\r\n\r\n"
-}

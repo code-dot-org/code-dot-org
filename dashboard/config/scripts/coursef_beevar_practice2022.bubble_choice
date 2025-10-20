@@ -1,8 +1,0 @@
-name 'courseF_beeVar_practice2022'
-display_name 'Bee Practice'
-description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with variables and the bee!'
-
-sublevels
-level 'courseF_bee_variables_5b2022'
-level 'courseF_bee_variables_6c2022'
-level 'courseF_bee_variables_7a2022'

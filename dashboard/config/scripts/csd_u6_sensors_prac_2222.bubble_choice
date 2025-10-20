@@ -1,8 +1,0 @@
-name 'CSD U6 - Sensors - Prac_2222'
-display_name 'Practice Levels'
-
-sublevels
-level 'CSD U6 - Sensors - PA_2222'
-level 'CSD U6 - Sensors - PB_2222'
-level 'CSD U6 - Sensors - PC_2222'
-level 'CSD U6 - Sensors - PD_2222'

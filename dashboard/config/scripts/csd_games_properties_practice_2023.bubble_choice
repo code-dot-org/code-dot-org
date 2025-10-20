@@ -1,8 +1,0 @@
-name 'CSD Games Properties practice_2023'
-display_name 'Sprite Properties'
-description 'Try out the sprite properties you have learned here'
-
-sublevels
-level 'CSD Games bubble choice properties scale_2023'
-level 'CSD Games bubble choice properties rotation_2023'
-level 'CSD Games bubble choice properties scale and rotation_2023'

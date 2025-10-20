@@ -1,9 +1,0 @@
-name 'CSA U8L8-L3v2_2022'
-display_name 'Traversing Multiple Lists'
-description 'Implement standard algorithms to traverse multiple lists using the console or The Theater.'
-
-sublevels
-level 'CSA U8L8-L3a_2022'
-level 'CSA U8L8-L3b_2022'
-level 'CSA U8L8-L3c_2022'
-level 'CSA U8L8-L3d_2022'

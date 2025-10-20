@@ -1,8 +1,0 @@
-name 'gen-ai-humanities-research-part2-instructions'
-
-
-markdown <<MARKDOWN
-Research the quotes and their authors, verify (or dispute) the historical claims, and answer the scientific questions below! Chatbots say things based on what words and sentences probably come next. This means that sometimes, the chatbot will state things as facts that are not true – like misattribution of quotes or providing information that is not factual. Just as you did with the search engine - **VERIFY!!!**
-
-Don't forget to use your AI Chatbot Prompting Guide to help you interact with the AI.
-MARKDOWN

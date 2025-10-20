@@ -1,9 +1,0 @@
-name 'PL U7 Param Return Practice Choice Levels_2023'
-display_name 'Practice with Parameters and Returns'
-description '<span style="color:red"><i>Note: This is the same level as U7L3 - Level 5 in the CS Principles Curriculum. Just like your students, you may choose to complete one or all of these levels. When you are done, click "Finish" to advance to the next level.</i></span>'
-
-sublevels
-level 'U7 Param Return Practice Part 5_2023'
-level 'U7 Param Return Practice Console Choice B_2023'
-level 'U7 Param Return Practice Console Choice C_2023'
-level 'U7 Param Return Practice Console Choice D_2023'

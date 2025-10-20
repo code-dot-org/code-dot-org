@@ -1,9 +1,0 @@
-name 'CSA U1L2-L4_pilot-2025'
-display_name 'Practice: Syntax Errors'
-description 'Find and fix the syntax errors in the program.'
-
-sublevels
-level 'CSA U1L2-L4a_pilot-2025'
-level 'CSA U1L2-L4b_pilot-2025'
-level 'CSA U1L2-L4c_pilot-2025'
-level 'CSA U1L2-L4d_pilot-2025'

@@ -1,9 +1,0 @@
-name 'CSA U2L2-L3_2024'
-display_name 'Skill Building: Writing a Constructor'
-description 'Write a no-argument constructor in a class to assign values to the instance variables.'
-
-sublevels
-level 'CSA U2L2-L3a_2024'
-level 'CSA U2L2-L3b_2024'
-level 'CSA U2L2-L3c_2024'
-level 'CSA U2L2-L3d_2024'

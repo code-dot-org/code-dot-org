@@ -1,8 +1,0 @@
-name 'CSA U7L4-L2'
-display_name 'Writing Overloaded Methods'
-description 'Practice writing overloaded methods using the console, The Neighborhood, or The Theater.'
-
-sublevels
-level 'CSA U7L4-L2a'
-level 'CSA U7L4-L2b'
-level 'CSA U7L4-L2c'

@@ -1,7 +1,0 @@
-name 'rbo-test1'
-
-markdown <<MARKDOWN
-# hi, this is a test
-jkljkljkl
-
-MARKDOWN

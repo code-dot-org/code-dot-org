@@ -1,9 +1,0 @@
-name 'game_development_debug_choices_course-e'
-display_name 'These games do not work!'
-description 'Choose a game to fix.'
-
-sublevels
-level 'game_development_try_it_course-e'
-level 'game_development_environ_course-e'
-level 'game_development_player_course-e'
-level 'game_development_platform_course-e'

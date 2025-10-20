@@ -1,8 +1,0 @@
-name 'csc_landmarks_stories_predict_mc2'
-question '**Debugging Challenge! 🪲 Look carefully at this code that is not working as expected. The programmer wants Sam, the sprite with glasses, to say: “I live on the beach…”  Where is the bug?** '
-right 'The sprite in the **say block** is Julia, not Sam.', feedback: 'Correct!'
-wrong 'The **event block** is using the wrong costumes.', feedback: 'Incorrect.'
-wrong 'The program is missing a **set background** block.', feedback: 'Incorrect.'
-wrong 'The prorgram is missing a **sound** block.', feedback: 'Incorrect.'
-
-allow_multiple_attempts false

@@ -1,5 +1,0 @@
-{
-  "key": "tate-museum-artworks",
-  "name": "Tate Museum Artworks",
-  "content": "Description: a selection of artwork at the Tate Museum in London, England\r\n\r\nSource: [Tate](https://www.tate.org.uk/art)\r\n\r\nProcessing: dataset was downloaded from Tate Museum, certain columns were removed and renamed, several thousand rows were removed to keep dataset within the 5,000 row limit\r\n\r\nColumns\r\n\r\n* Artwork ID (numerical): id number for the artwork\r\n* Artist Last Name (string): last name of the artist who created the artwork\r\n* Artist First Name (string): first name of the artist who created the artwork\r\n* Artist ID (numerical): id number for the artist\r\n* Artwork Title (string): title of the artwork\r\n* Medium (string): medium of the artwork\r\n* Year Created (numerical): year that artwork was created\r\n* Acquisition (string): description of how the museum acquired this artwork\r\n* Acquisition Year (numerical): the year the museum acquired this artwork\r\n* Webpage (string): webpage of the Tate Museum describing the artwork "
-}

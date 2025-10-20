@@ -1,8 +1,0 @@
-name 'Computer-Vision-Post-Assessment-Q5'
-title 'Computer Vision Post-Assessment'
-question 'Describe the way that pixels are represented in digital images'
-wrong 'Pixels are small dots in an image, each holding a single value representing the intensity of light at that point'
-right 'Pixels are the smallest units of a digital image, represented as individual points with specific color values defined by combinations of red, green, and blue (RGB)'
-wrong 'Pixels are clusters of multiple points, each representing a different section of an image'
-wrong 'Pixels are lines of data that form the edges of shapes within an image'
-allow_multiple_attempts false

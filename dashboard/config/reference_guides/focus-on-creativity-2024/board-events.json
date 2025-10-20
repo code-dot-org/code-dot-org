@@ -1,9 +1,0 @@
-{
-  "key": "board-events",
-  "course_version_key": "2024",
-  "course_offering_key": "focus-on-creativity",
-  "parent_reference_guide_key": "maker-toolkit",
-  "display_name": "Board Events",
-  "content": "The [`onEvent`(#fff176)](/docs/applab/onEvent/) block helps your app know when something happens, like when someone clicks a button or moves the mouse. The Circuit Playground has a similar block called [`onBoardEvent()`(#f78183)](/docs/ide/applab/expressions/onBoardEvent) that watches for things happening on the board.\n\nIn Event-Driven programming, remember that:\n\n- **People make events happen** - Events happen when someone uses the buttons, switches, or other parts on the board.\n- **Events make code run** - When an event happens, it can make a certain function work.\n\n## onBoardEvent\n\nThe [`onBoardEvent()`(#f78183)](/docs/ide/applab/expressions/onBoardEvent) block is a special kind of function called an Event Listener. It makes it easy to set up event handling with just one command. Here's an example with labels:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/onBoardEvent_diagram.png)\n\n1) When the left button, `buttonL`, is clicked, the word \"click\" will appear on the screen. We use the variable `buttonL` (without quotation marks), which is different from onEvent that uses a string to name a design element.\n\n2) This function doesn't have a name, and it's called a callback function. It's a bit strange because you don't use it directly in your code. Instead, the system calls the callback function when the event you chose happens. Callback functions are used a lot in event-driven programming.\n\n## Button Events\n\n⚠️ A word of caution! The Circuit Playground and micro:bit buttons may look similar, but their names are slightly different:\n\n- The **Circuit Playground** buttons are named `buttonL` and `buttonR`\n- The **BBC micro:bit** buttons are named `buttonA` and `buttonB`",
-  "position": 12
-}

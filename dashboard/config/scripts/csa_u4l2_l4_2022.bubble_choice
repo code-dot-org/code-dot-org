@@ -1,9 +1,0 @@
-name 'CSA U4L2-L4_2022'
-display_name 'Overriding the equals() Method'
-description 'Override and use the `equals()` method to check if two objects are equivalent.'
-
-sublevels
-level 'CSA U4L2-L4a_2022'
-level 'CSA U4L2-L4b_2022'
-level 'CSA U4L2-L4c_2022'
-level 'CSA U4L2-L4d_2022'

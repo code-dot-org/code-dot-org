@@ -1,9 +1,0 @@
-{
-  "key": "data-and-change-events",
-  "course_version_key": "2024",
-  "course_offering_key": "web-development",
-  "parent_reference_guide_key": "maker-toolkit",
-  "display_name": "Data and Change Events",
-  "content": "When using sensors, it's more common to keep checking for changes all the time instead of only checking when someone clicks a button. There are special events for this that keep running.\n\n## The Data Event\n\n![data event](https://cdo-curriculum.s3.amazonaws.com/media/uploads/data_event_MLzY2I1.png)\n\nThe \"data\" event happens every time your program gets information from the board. This happens all the time while your program is working. When you set up an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) handler for the \"data\" event, your code will run every 50 milliseconds.\n\nRemember, even though the \"data\" event is connected to a specific sensor, you can check for new information from many sensors in the event handler.\n\n## The Change Event\n\n![change event](https://cdo-curriculum.s3.amazonaws.com/media/uploads/change_event.png)\n\nLike the \"data\" event, the \"change\" event keeps happening, letting you get information from sensors all the time. But, the \"change\" event only happens if the sensor value changes enough. Each sensor has a default amount of change needed to trigger a \"change\" event (usually, the amount is 1).\n\nThe \"change\" event is useful because it only reacts to new input and doesn't waste time repeating the same input. This means you'll probably want a separate \"change\" event",
-  "position": 13
-}

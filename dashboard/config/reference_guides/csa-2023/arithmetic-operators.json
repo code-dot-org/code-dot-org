@@ -1,9 +1,0 @@
-{
-  "key": "arithmetic-operators",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "operators",
-  "display_name": "Arithmetic Operators",
-  "content": "Different arithmetic operations can be used with `int`(#e7e8ea) and `double`(#e7e8ea) data types.\n\n- `+`(#e7e8ea) addition\n- `-`(#e7e8ea) subtraction\n- `*`(#e7e8ea) multiplication\n- `/`(#e7e8ea) division\n- `%`(#e7e8ea) modulo (gets the remainder)\n\nDividing two `int`(#e7e8ea) values will result in an `int`(#e7e8ea) value. The decimal portion is truncated, or cut off from the end.\n\n```\nint x = 8;\nint y = 3;\nint z = x / y;\n```\nThe value of z is `2`(#e7e8ea).\n\n",
-  "position": 2
-}

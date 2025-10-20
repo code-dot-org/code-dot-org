@@ -1,5 +1,0 @@
-{
-  "key": "us-national-parks",
-  "name": "US National Parks",
-  "content": "Description: data about all National Parks in the US.\r\n\r\n[Source](https://www.nps.gov/aboutus/national-park-system.htm)\r\n\r\nColumns:\r\n\r\n* Name (string): official name of that national park\r\n* Image (link): a link to an image taken within that national park\r\n* Location (string): what state(s) that national park is in\r\n* Date established (date): what date that park opened to the public\r\n* Area (numerical): that park's area in acres, and in square kilometers\r\n* Recreation visitors in 2019 (numerical): how many people visited that park in 2019\r\n* Description (string): a brief description of that national park's features"
-}

@@ -1,8 +1,0 @@
-- content_for(:head) do
-  = stylesheet_link_tag 'css/pd', media: 'all'
-
-%p
-  != I18n.t('pd.not_teacher.body_markdown', user_settings: '/users/edit', markdown: true)
-
-%p
-  != I18n.t('pd.not_teacher.more_markdown', pl_overview: CDO.code_org_url('/educate/professional-learning'), markdown: true)

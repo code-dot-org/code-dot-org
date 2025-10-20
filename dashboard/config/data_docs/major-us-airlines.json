@@ -1,5 +1,0 @@
-{
-  "key": "major-us-airlines",
-  "name": "Major US Airlines",
-  "content": "Description: data about various major US airlines, including charter, commercial, and cargo airlines and their hubs.\r\n\r\n[Source](https://web.archive.org/web/20161128070750/http://airwaysnews.com/)\r\n\r\nColumns:\r\n\r\n * Airline type (string): what sort of business the airline deals in mostly, such as cargo or commercial\r\n * Airline name (string): the official name of the airline\r\n* IATA code (string): that airline's code as designated by the International Air Transport Association\r\n* ICAO code (string): that airline's code as designated by the International Civil Aviation Organization\r\n* Callsign (string): that airline's call sign as normally spoken during airband radio transmissions\r\n* Main hubs (string): what city or cities that airline is primarily based in\r\n* Founded (numerical): what year that airline began service\r\n* Notes (string): Any other info about the airline, such as its previous operational names\r\n\r\n\r\n"
-}

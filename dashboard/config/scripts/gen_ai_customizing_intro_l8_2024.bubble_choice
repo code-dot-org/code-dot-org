@@ -1,8 +1,0 @@
-name 'gen-ai-customizing-intro-L8_2024'
-display_name 'You Try!'
-description 'Choose at least 2 levels to try'
-
-sublevels
-level 'gen-ai-customizing-intro-L8A_2024'
-level 'gen-ai-customizing-intro-L8B_2024'
-level 'gen-ai-customizing-intro-L8C_2024'

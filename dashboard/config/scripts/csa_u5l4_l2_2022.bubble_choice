@@ -1,9 +1,0 @@
-name 'CSA U5L4-L2_2022'
-display_name 'Reversing 2D Arrays'
-description 'Implement your algorithm to reverse 2D arrays using the console or The Theater.'
-
-sublevels
-level 'CSA U5L4-L2a_2022'
-level 'CSA U5L4-L2b_2022'
-level 'CSA U5L4-L2c_2022'
-level 'CSA U5L4-L2d_2022'

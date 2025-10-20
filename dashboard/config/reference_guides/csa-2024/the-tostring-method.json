@@ -1,9 +1,0 @@
-{
-  "key": "the-tostring-method",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "method-overriding",
-  "display_name": "The toString() Method",
-  "content": "The `toString()`(#e7e8ea) method in the `Object`(#e7e8ea) class returns a `String`(#e7e8ea) that consists of the name of the class, the @ symbol, and the hash code of the object.\n\nThe `toString()`(#e7e8ea) method is automatically called when an object reference is passed to a print statement or when an object reference is concatenated with a `String`(#e7e8ea).\n\nWe can override the `toString()`(#e7e8ea) method in our classes to provide more useful information about the state of our objects.\n```\n public String toString() {\n   return topping + \" pizza\";\n}\n```\n",
-  "position": 1
-}

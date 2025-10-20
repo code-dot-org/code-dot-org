@@ -1,5 +1,0 @@
-{
-  "key": "us-workers-with-disabilities",
-  "name": "US Workers with Disabilities",
-  "content": "Description: data about various job types in the US, and amounts of workers of those jobs with various disabilities in the US, per 2017. \r\n\r\n[Source](https://www.census.gov/data/tables/2017/demo/disability/acs-17.html)\r\n\r\nColumns:\r\n\r\n* Job type (string): description of given job\r\n* Total workers in the US (numerical): how many workers of that job have a disability\r\n* Percent of workers with Ambulatory difficulty (numerical): percentage of disabled workers with an Ambulatory disability (workers polled can have more than 1 disability)\r\n* Percent of workers with Cognitive difficulty (numerical): percentage of disabled workers with a cognitive disability\r\n* Percent of workers with Vision difficulty (numerical): percentage of disabled workers with a Vision disability\r\n* Percent of workers with independent living difficulty (numerical): percentage of disabled workers with an independent living disability\r\n* Percent of workers with self care difficulty (numerical): percentage of disabled workers with a self care disability"
-}

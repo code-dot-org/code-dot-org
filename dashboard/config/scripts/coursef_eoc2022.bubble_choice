@@ -1,7 +1,0 @@
-name 'courseF_EOC2022'
-display_name 'End of Course Project'
-description 'You have reached the end of Course F! Choose a project to create.'
-
-sublevels
-level 'CourseF_Project_SpriteLab2022'
-level 'Course F: Artist Project2022'

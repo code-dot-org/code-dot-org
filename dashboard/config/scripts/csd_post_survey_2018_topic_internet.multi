@@ -1,8 +1,0 @@
-name 'csd-post-survey-2018-topic-internet'
-question 'Networking and the Internet'
-layout 'wrap'
-right 'Yes'
-right 'No'
-right 'Not sure what this is'
-
-allow_multiple_attempts true

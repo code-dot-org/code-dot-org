@@ -1,7 +1,0 @@
-name 'CSD Recipe Stop'
-href 'path/to/html/in/asset/folder'
-markdown <<MARKDOWN
-# Stop
-
-Go back and continue to work on your hobbies page until your teacher tells you its time to move on. Try adding more hobbies and information to your page.
-MARKDOWN

@@ -1,6 +1,0 @@
-name 'gen-ai-levelgroup-test1-L11'
-submittable 'false'
-
-page
-level 'gen-ai-response-test1-L11A'  # FreeResponse
-level 'gen-ai-response-test1-L11B'         # FreeResponse

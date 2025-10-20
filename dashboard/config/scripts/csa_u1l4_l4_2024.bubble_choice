@@ -1,9 +1,0 @@
-name 'CSA U1L4-L4_2024'
-display_name 'Practice: Painter Class Methods'
-description 'Use the methods in the `Painter` class to navigate around The Neighborhood.'
-
-sublevels
-level 'CSA U1L4-L4a_2024'
-level 'CSA U1L4-L4b_2024'
-level 'CSA U1L4-L4c_2024'
-level 'CSA U1L4-L4d_2024'

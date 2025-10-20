@@ -1,5 +1,0 @@
-{
-  "key": "ultra-trail-races",
-  "name": "Ultra Trail Races",
-  "content": "Description: Data on the over 1000 ultra trail races globally.\n\nSource: [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-10-26/readme.md)\n\nColumns:\n\n* event (string): Name of the event\n* race (string): Name of the specific race\n* city (string): Name of the city where the race happens\n* country (string): Name of the country where the race happens\n* distance (numerical): Total distance of the race in kilometers(km)\n* elevation_gain (numerical): Total elevation gain in meters(m)\n* elevation_loss (numerical): Total elevation loss in meters(m)\n* aid_stations (numerical): Count of aid stations for the entire race"
-}

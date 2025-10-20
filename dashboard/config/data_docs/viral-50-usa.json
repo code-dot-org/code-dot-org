@@ -1,5 +1,0 @@
-{
-  "key": "viral-50-usa",
-  "name": "Viral 50 USA",
-  "content": "Description: viral 50 songs in the USA on spotify, data is updated everyday\r\n\r\nSource: [Spotify](https://spotifycharts.com/viral/us/daily/latest)\r\n\r\nProcessing: downloaded .csv from spotify\r\n\r\nColumns:\r\n\r\n* Track Name (string): name of the song\r\n* Artist (string): name of the artist of the song\r\n* Position (numerical): ranking number of the song"
-}

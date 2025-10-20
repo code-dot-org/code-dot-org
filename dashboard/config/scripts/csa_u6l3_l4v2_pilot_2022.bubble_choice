@@ -1,9 +1,0 @@
-name 'CSA U6L3-L4v2_pilot-2022'
-display_name 'Using ArrayLists'
-description 'Create an `ArrayList` to store values of different types.'
-
-sublevels
-level 'CSA U6L3-L4a_pilot-2022'
-level 'CSA U6L3-L4b_pilot-2022'
-level 'CSA U6L3-L4c_pilot-2022'
-level 'CSA U6L3-L4d_pilot-2022'

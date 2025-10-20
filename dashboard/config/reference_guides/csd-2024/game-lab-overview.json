@@ -1,9 +1,0 @@
-{
-  "key": "game-lab-overview",
-  "course_version_key": "2024",
-  "course_offering_key": "csd",
-  "parent_reference_guide_key": "game-lab",
-  "display_name": "Overview",
-  "content": "Game Lab is a tool built with [JavaScript](./javascript-overview) that can be used to create art, games, and animations. Read more about Game Lab's commands in the [Game Lab documentation](https://studio.code.org/docs/gamelab/).",
-  "position": -1
-}

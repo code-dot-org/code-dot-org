@@ -1,8 +1,0 @@
-name 'CSD games velocity practice choice_2023'
-display_name 'Velocity Practice'
-description 'Practice using the velocity blocks with these activities.'
-
-sublevels
-level 'CSD U3 abstraction velocityY control_2023'
-level 'CSD games velocity bee_2023'
-level 'CSD U3L18 - PracC_2023'

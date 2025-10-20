@@ -1,9 +1,0 @@
-{
-  "key": "instantiating-objects",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "classes-and-objects",
-  "display_name": "Instantiating Objects",
-  "content": "An object is a copy of the class and is often referred to as an instance of a class. Creating an object is called instantiation and is done using the `new`(#e7e8ea) keyword.\n\n```\nStudent laura = new Student();\n```\n\nWhen an object is created, it gets its own copy of the instance variables, which are assigned values based on the constructor that is called.\n\n## Can you show me an example?\n\nConsider the following `Person`(#e7e8ea) class:\n\n```\npublic class Person {\n  private String name;\n  private int age;\n\n  public Person(String newName, int newAge) {\n    name = newName;\n    age = newAge;\n  }\n}\n```\n\nThe `Person`(#e7e8ea) class has instance variables for the name of a person and their age. The constructor assigns values to these instance variables when a `Person`(#e7e8ea) object is created. In the `main`(#e7e8ea) method, we can create as many `Person`(#e7e8ea) objects as we want.\n\n```\nPerson kacie = new Person(\"Kacie\", 16);\nPerson jason = new Person(\"Jason\", 18);\n```\n\nThe `kacie`(#e7e8ea) object assigns `\"Kacie\"`(#e7e8ea) to its instance variable `name`(#e7e8ea) and `16`(#e7e8ea) to its instance variable `age`(#e7e8ea). The `jason`(#e7e8ea) object assigns `\"Jason\"`(#e7e8ea) to its instance variable `name`(#e7e8ea) and `18`(#e7e8ea) to its instance variable `age`(#e7e8ea).",
-  "position": 2
-}

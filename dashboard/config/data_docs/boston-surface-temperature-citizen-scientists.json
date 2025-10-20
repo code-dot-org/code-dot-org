@@ -1,5 +1,0 @@
-{
-  "key": "boston-surface-temperature-citizen-scientists",
-  "name": "Boston Surface Temperature - Citizen Scientists",
-  "content": "Description: Data on the surface temperature in Boston, taken by citizen scientists, from 2017-2021.\n\nSource: [Adapted Lesson](https://drive.google.com/drive/folders/1KGf0rPXR_gK2EW3adA9uF18eQsvWYqgB?usp=sharing) via [GLOBE](https://www.globe.gov/)\n\n[Educator-Facing Datasheet](https://docs.google.com/document/d/1RLQstrtKNLAZ3bw3afjz-UF0NmK9gA_FlYIzCd5jtBc/edit?usp=sharing)\n\nColumns:\n\n* ORGANIZATION (string): Name of the organization taking and submitting the measurements\n* SITE (string): Name of the site where the measurements were taken\n* LONGITUDE (numerical): Longitude for measurements\n* LATITUDE (string): Latitude for measurements\n* DATE (string): Date in month/day/year format when the measurements were taken\n* AVERAGE SURFACE TEMPERATURE (degrees C) (numerical): The average temperature measured by citizen scientists at the site on the date, in degrees celsius.\n* NUMBER OF SAMPLES TAKEN (numerical): The number of temperature measurements taken at the site on that date"
-}

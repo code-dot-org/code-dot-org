@@ -1,9 +1,0 @@
-name 'CSA U2L5-L7 Practice'
-display_name 'Practice: The Food Truck'
-description 'Import your `Dessert` subclass and write no-argument and parameterized constructors to assign values to their instance variables.'
-
-sublevels
-level 'CSA U2L5-L7a_2023'
-level 'CSA U2L5-L7b_2023'
-level 'CSA U2L5-L7c_2023'
-level 'CSA U2L5-L7d_2023'

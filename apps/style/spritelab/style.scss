@@ -1,8 +1,0 @@
-@import "../gamelab/style.scss";
-
-button {
-  &.arrow:disabled,
-  &#pauseButton:disabled {
-    pointer-events: none;
-  }
-}

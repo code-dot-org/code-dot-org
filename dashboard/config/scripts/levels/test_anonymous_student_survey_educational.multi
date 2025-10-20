@@ -1,8 +1,0 @@
-name 'test anonymous student survey educational'
-
-question 'Do you think computer science is educational?'
-right 'Yes'
-right 'No'
-right 'Maybe'
-
-allow_multiple_attempts true

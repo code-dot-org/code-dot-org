@@ -1,9 +1,0 @@
-name 'CSA U2L3-L4_2023'
-display_name 'Practice: Multiple Parameterized Constructors'
-description 'Write multiple parameterized constructors in a class to provide multiple options to instantiate objects.'
-
-sublevels
-level 'CSA U2L3-L4a_2023'
-level 'CSA U2L3-L4b_2023'
-level 'CSA U2L3-L4c_2023'
-level 'CSA U2L3-L4d_2023'

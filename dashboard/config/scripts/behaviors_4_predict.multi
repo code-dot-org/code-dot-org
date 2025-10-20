@@ -1,7 +1,0 @@
-name 'behaviors 4 predict'
-question 'Make a prediction. Which way will the satellite move towards the galaxy?'
-wrong 'Left then down', feedback: 'Incorrect.'
-right 'Diagonally', feedback: 'Correct!'
-wrong 'Zig zag', feedback: 'Incorrect. '
-wrong 'Down, then left', feedback: 'Incorrect'
-allow_multiple_attempts false

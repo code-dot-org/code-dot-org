@@ -1,9 +1,0 @@
-name 'CSA U3L10-L3_pilot-2022'
-display_name 'Finding Duplicates'
-description 'Check if a 1D array contains duplicate values.'
-
-sublevels
-level 'CSA U3L10-L3a_pilot-2022'
-level 'CSA U3L10-L3b_pilot-2022'
-level 'CSA U3L10-L3c_pilot-2022'
-level 'CSA U3L10-L3d_pilot-2022'

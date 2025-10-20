@@ -1,5 +1,0 @@
-{
-  "key": "bike-and-walk-commutes",
-  "name": "Bike and Walk Commutes",
-  "content": "Description: Data on bicycling and walking to work in the United States: 2008-2012.\r\n\r\n[Source](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-11-05) and second [source](https://www.census.gov/library/publications/2014/acs/acs-25.html?#)\r\n\r\nColumns:\r\n\r\n * city (string): City name\r\n * state Enrollment (string): State name\r\n * city_size (string): City Size (Small = 20K to 99,999, Medium = 100K to 199,999, Large = >= 200K)\r\n * mode (string): Mode of transport, either walk or bike\r\n * n (numerical): Number of individuals\r\n * percent (numerical): Percent of total individuals\r\n * moe (numerical): Margin of Error (percent)\r\n * state_abb (string): Abbreviated state name\r\n * state_region (string): ACS State Region\r\n\r\n\r\n\r\n"
-}

@@ -1,8 +1,0 @@
-name 'k5_ai_data_survey_level_q2'
-question 'My favorite pizza topping is...'
-right 'Cheese'
-right 'Pepperoni'
-right 'Sausage'
-right 'Veggies'
-right 'Something else'
-allow_multiple_attempts true

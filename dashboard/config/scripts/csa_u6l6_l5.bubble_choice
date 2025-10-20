@@ -1,8 +1,0 @@
-name 'CSA U6L6-L5'
-display_name 'Stop Word Removal'
-description 'Stop word removal is a common technique used in natural language processing.'
-
-sublevels
-level 'CSA U6L6-L5a'
-level 'CSA U6L6-L5b'
-level 'CSA U6L6-L5c'

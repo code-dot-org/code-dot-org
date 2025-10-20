@@ -1,9 +1,0 @@
-name 'CSD games collisions challenge choice_validation-test'
-display_name 'Collision Challenges'
-description 'Try out these new blocks and challenges with collisions.'
-
-sublevels
-level 'CSD U3 collisions debug_validation-test'
-level 'CSD U3 collisions setCollider_validation-test'
-level 'CSD U3 collisions bounciness_validation-test'
-level 'CSD U3 L18 Freeplay_validation-test'

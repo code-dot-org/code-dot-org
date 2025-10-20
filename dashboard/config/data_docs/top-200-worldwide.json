@@ -1,5 +1,0 @@
-{
-  "key": "top-200-worldwide",
-  "name": "Top 200 Worldwide",
-  "content": "##This data set is no longer being supported and will be removed from App Lab on December 1, 2021##\n\nDescription: top 200 songs worldwide on spotify, data is updated everyday\n\nSource: [Spotify](https://spotifycharts.com/regional/)\n\nProcessing: downloaded .csv from spotify\n\nColumns:\n\n* Track Name (string): name of the song\n* Artist (string): name of the artist of the song\n* Position (numerical): ranking number of the song\n* Streams (numerical): number of times the song has been streamed\n* URL (string): link to the song on spotify"
-}

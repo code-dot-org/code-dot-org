@@ -1,5 +1,0 @@
-{
-  "key": "busiest-airports",
-  "name": "Busiest Airports",
-  "content": "Description: Top 50 busiest worldwide airports, yearly (2010-2016) \r\n\r\nSource: [Kaggle](https://www.kaggle.com/jonahmary17/airports)\r\n\r\nProcessing: Cleaned the original .csv by removing the 1st column (irrelevant ID numbers, does not correlate to any other useful data or relations on the table)\r\n\r\nColumns:\r\n\r\n* Rank (numerical): what rank an airport had for a given year, 1-50\r\n* Year (numerical): what year an airport was a top 50 busiest airport\r\n* Airport (string): Full name of an airport\r\n* Code (string):Three-letter codes representing that airport\r\n* Location (string): the city and state, or region an airport is in\r\n* Country (string): the country worldwide an airport is in \r\n* Total passengers (numerical): how many passengers visited that airport in one year"
-}

@@ -1,7 +1,0 @@
-name 'CSA U2L8-L5v2_pilot-2022'
-display_name 'Using a Sentinel Value'
-description 'Use the `Scanner` class to modify values for a dessert or calculate the total price after a discount.'
-
-sublevels
-level 'CSA U2L8-L5a_pilot-2022'
-level 'CSA U2L8-L5b_pilot-2022'

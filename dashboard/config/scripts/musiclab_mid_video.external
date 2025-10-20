@@ -1,7 +1,0 @@
-name 'musiclab_mid_video'
-title 'Mid-Activity Placeholder for Video'
-description 'A video will go here'
-
-markdown <<MARKDOWN
-This activity is in progress, so a cool video will eventually go here! You can just go to the next level for now.
-MARKDOWN

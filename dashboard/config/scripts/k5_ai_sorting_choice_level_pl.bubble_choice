@@ -1,9 +1,0 @@
-name 'k5_ai_sorting_choice_level_pl'
-display_name 'Pick a level to sort!'
-description '####Pick a level and sort the items on screen. Then, find a partner who will act as the computer. Your partner will have to guess how you sorted your items.'
-
-sublevels
-level 'sorting_items_free_play_pl'
-level 'sorting_items_free_play_2_pl'
-level 'sorting_items_free_play_3_pl'
-level 'sorting_items_free_play_4_pl'

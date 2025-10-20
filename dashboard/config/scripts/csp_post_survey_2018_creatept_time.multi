@@ -1,9 +1,0 @@
-name 'csp-post-survey-2018-CreatePT-time'
-question 'I think the amount of time I got to spend working on this Performance Task in class was...'
-
-right 'way too much.'
-right 'a bit too much.'
-right 'about right.'
-right 'a bit too little.'
-right 'way too little.'
-allow_multiple_attempts true

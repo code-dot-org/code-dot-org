@@ -1,8 +1,0 @@
-name 'csp-post-survey-2018-topic-ai'
-question 'Artificial Intelligence and Machine Learning'
-layout 'wrap'
-right 'Yes'
-right 'No'
-right 'Not sure what this is'
-
-allow_multiple_attempts true

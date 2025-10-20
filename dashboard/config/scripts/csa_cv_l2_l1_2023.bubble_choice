@@ -1,8 +1,0 @@
-name 'CSA-CV-L2-L1_2023'
-display_name 'Select a Program'
-description 'We\'re going to be training a model that can be used in an existing Java program! Before you train the model, you\'re going to first pick the existing Java program that you will work on.'
-
-sublevels
-level 'CSA-CV-L2-L1a_2023'
-level 'CSA-CV-L2-L1b_2023'
-level 'CSA-CV-L2-L1c_2023'

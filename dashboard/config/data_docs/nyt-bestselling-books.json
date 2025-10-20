@@ -1,5 +1,0 @@
-{
-  "key": "nyt-bestselling-books",
-  "name": "New York Times Bestselling Books, 2011-2018",
-  "content": "Description: list of all books on the New York Times Bestseller list, 2011-2018.\r\n\r\nSource: [Kaggle](https://www.kaggle.com/abdullahsahin/new-york-times-bestsellers-from-2011-to-2018/data)\r\n\r\nColumns:\r\n\r\n * Publisher (string): name of the company that published the book\r\n * Author (string): name of the author of the book\r\n* Primary ISBN10 (string): a number / text string of the International Standard Book Number for that book\r\n * Date (date): date the book entered the best seller list\r\n* Title (string): title of the book\r\n* Weeks on list (numerical): how many weeks the book was on the list\r\n\r\n\r\n\r\n\r\n"
-}

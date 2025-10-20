@@ -1,8 +1,0 @@
-name 'CSD web keyboard challenge choice_2022'
-display_name 'Keyboard Input Challenges'
-description 'Try out these new blocks and challenges with keyboard input.'
-
-sublevels
-level 'CSD U3 - complex - key up and down_2022'
-level 'CSD U3 Direction Animations_2022'
-level 'CSD U3 L12 Freeplay_2022'

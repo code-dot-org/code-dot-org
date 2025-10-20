@@ -1,5 +1,0 @@
-{
-  "key": "video-game-reviews",
-  "name": "Video Game Reviews from IGN",
-  "content": "Description: data about video game reviews published by IGN.com, including info on platforms, genre, review score, and release dates.\r\n\r\n[Source](https://bootstrapworld.org/materials/fall2021/en-us/courses/data-science/lessons/choosing-your-dataset/index.shtml#Datasets)\r\n\r\nColumns:\r\n\r\n* Title (string): name of video game reviewed\r\n* Playstation, Xbox, Nintendo, PC (all strings): true or false value on whether or not that title was released on one of those platforms\r\n* Other (string): true or false value on whether that title was released on a platform other than Playstation, Xbox, Nintendo, and PC\r\n* Score (numerical): score value as provided in IGN.com review\r\n* Genre (string): genre of that game title, such as Sports or Action-RPG\r\n* Editors Choice (string): whether or not that title was given the Editor's Choice distinction\r\n* Release Year (string): what year that game was released in\r\n* Release month (numerical): 1-12 value on what month that game was released in"
-}

@@ -1,9 +1,0 @@
-name 'CSA U4L7-L5_pilot-2022'
-display_name 'Solving Problems with the Math Class'
-description 'Use methods in the `Math` class to solve various problems.'
-
-sublevels
-level 'CSA U4L7-L5a_pilot-2022'
-level 'CSA U4L7-L5b_pilot-2022'
-level 'CSA U4L7-L5c_pilot-2022'
-level 'CSA U4L7-L5d_pilot-2022'

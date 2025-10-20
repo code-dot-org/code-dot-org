@@ -1,9 +1,0 @@
-name 'CSA U1L4-L4_2022'
-display_name 'Moving and Painting'
-description 'Use the `move()`, `turnLeft()`, `paint()` and `takePaint()` methods to paint each square in the path to the traffic cone.'
-
-sublevels
-level 'CSA U1L4-L4a_2022'
-level 'CSA U1L4-L4b_2022'
-level 'CSA U1L4-L4c_2022'
-level 'CSA U1L4-L4d_2022'

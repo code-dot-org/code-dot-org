@@ -1,9 +1,0 @@
-name 'CSP Binary Conversion CFU'
-title 'Flippy Do Practice'
-description 'Use your Flippy Do to help you answer the following question'
-question 'How would you represent the number 26 in binary?'
-wrong '0011 0011'
-right '0001 1010'
-wrong '0001 0010'
-wrong '0001 1110'
-allow_multiple_attempts true

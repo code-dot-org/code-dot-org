@@ -1,9 +1,0 @@
-{
-  "key": "importing-screens",
-  "course_version_key": "2022",
-  "course_offering_key": "self-paced-pl-csd-2021",
-  "parent_reference_guide_key": "design-mode",
-  "display_name": "Importing Screens",
-  "content": "App Lab allows you to import screens from another app! From the screens dropdown above the app area, select \"Import Screen\" and follow the instructions (you'll need the sharing code from the app you're importing screens from).\n\n![](https://images.code.org/9ca7398a9b7403dc39ec6a6b2d2b8a5e-image-1477346132059.png)\n\n# Watch Out for Conflicts!\n\nTo protect against ID conflict errors (using the same ID for multiple elements) App Lab will prevent you from importing screens that use element IDs that are already in your app. A few things to check for when importing:\n\n* The screen(s) you are importing need to have unique IDs that aren't already used by screens in the app\n\t* If you try to import a screen with an ID that already exists, you'll be given the option of replacing your existing screen with the new one.\n    \n<img src=\"https://images.code.org/d5d197be3a75eeb624e3a1312ab786ce-image-1477346707529.49.02.png\" style=\"max-width: 300px;\">\n\n* The IDs used in the imported screen aren't already used in your app\n\n<img src=\"https://images.code.org/affd44c38c108ae5e3693d3187ea67e0-image-1477346796569.48.10.png\" style=\"max-width: 300px;\">",
-  "position": 1
-}

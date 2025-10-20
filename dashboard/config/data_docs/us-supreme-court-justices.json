@@ -1,5 +1,0 @@
-{
-  "key": "us-supreme-court-justices",
-  "name": "US Supreme Court Justices",
-  "content": "Description: information about all US Supreme Court Justices throughout history\r\n\r\nSource: [SupremeCourt.gov](https://www.supremecourt.gov/)\r\n\r\nColumns:\r\n\r\n* Justice number (numerical): what number of justice that person was. For example, a Justice number = 1 means they were the first justice ever confirmed\r\n* Image (string): a link to an image of the justice\r\n* Justice (string): name of the justice\r\n* Year of birth (numerical): what year that justice was born in\r\n* State (string): what US state that justice originated from\r\n* Position (string): what position that justice held on the Supreme Court, either associate justice or chief justice\r\n* Succeeded (string): who on the supreme court that justice had replaced by their confirmation\r\n* Date confirmed (date): the calendar date that justice was confirmed\r\n* Tenure length (string): how many days or years that justice served for\r\n* Nominated by (string): name of the US President that had nominated them "
-}

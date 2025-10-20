@@ -1,7 +1,0 @@
-name 'CTF Trivia Levels 22'
-title 'CTF Trivia Challenges'
-description 'Try your hand at Cybersecurity trivia!'
-
-sublevels
-level 'CTF_Trivia_1'
-level 'CTF_Trivia_2'

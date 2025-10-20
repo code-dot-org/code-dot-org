@@ -1,9 +1,0 @@
-name 'codingwithai-lesson4-juicemindquiz'
-
-markdown <<MARKDOWN
-## Check for Understanding
-
-Go to <a href="https://play.juicemind.com/join" target="_blank">JuiceMind</a>, and enter the game pin provided by your teacher.
-
-[![](https://images.code.org/29a9578c54dfa193482daf02b994c225-image-1719412135873.png)](https://play.juicemind.com/join)
-MARKDOWN

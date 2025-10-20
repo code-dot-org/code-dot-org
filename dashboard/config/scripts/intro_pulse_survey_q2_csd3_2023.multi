@@ -1,6 +1,0 @@
-name 'intro-pulse-survey-q2_csd3_2023'
-question 'What prior experiences have you had with creating Interactive Animation & Games?'
-right 'This is the first I am learning about creating Interactive Animation & Games'
-right 'I have done smaller creating Interactive Animation & Games activities (for example: an hour of code), but this is my first longer class'
-right 'I have already taken classes or done longer online tutorials on creating Interactive Animation & Games'
-allow_multiple_attempts true

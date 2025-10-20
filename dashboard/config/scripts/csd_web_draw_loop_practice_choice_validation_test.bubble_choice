@@ -1,8 +1,0 @@
-name 'CSD web draw loop practice choice_validation-test'
-display_name 'Practice'
-description 'Try out using the draw loop with these activities.'
-
-sublevels
-level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_validation-test'
-level 'CSD games draw debug blurry_validation-test'
-level 'CSD games draw debug not moving_validation-test'

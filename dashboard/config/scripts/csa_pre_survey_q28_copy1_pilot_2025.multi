@@ -1,6 +1,0 @@
-name 'CSA Pre-Survey q28_copy1_pilot-2025'
-question 'Did a counselor or advisor at school encourage you to take this class?'
-
-right 'Yes'
-right 'No'
-allow_multiple_attempts true

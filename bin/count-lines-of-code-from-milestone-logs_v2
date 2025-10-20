@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../deployment'
-require 'cdo/analytics/milestone_parser'
-
-puts MilestoneParser.count

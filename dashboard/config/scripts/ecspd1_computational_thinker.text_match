@@ -1,8 +1,0 @@
-name 'ECSPD1 computational thinker'
-skip_sound true
-skip_dialogue true
-markdown <<MARKDOWN
-# Reflecting on the ECS Curriculum?
-
-After reviewing the initial units of the course, what are a few of the curricular goals of Exploring Computer Science that stood out to you?
-MARKDOWN

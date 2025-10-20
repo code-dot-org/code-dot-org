@@ -1,9 +1,0 @@
-name 'CSA Post-Survey q53_2024'
-question 'Conducted a code review to give and receive feedback on assignments and projects.'
-
-right 'Never'
-right 'A few classes'
-right 'About half the class sessions'
-right 'Many class sessions'
-right 'Once or more per class session'
-allow_multiple_attempts true

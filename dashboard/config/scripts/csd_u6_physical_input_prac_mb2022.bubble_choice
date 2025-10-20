@@ -1,8 +1,0 @@
-name 'CSD U6 - Physical Input - Prac_mb2022'
-display_name 'Practice Levels'
-
-sublevels
-level 'CSD U6 - Physical Input - PB_mb2022'
-#level 'CSD U6 - Physical Input - PC_mb2022'
-level 'CSD U6 - Physical Input - PA_mb2022'
-level 'CSD U6 - Physical Input - PD_mb2022'

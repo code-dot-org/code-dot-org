@@ -1,5 +1,0 @@
-{
-  "key": "volcano-eruptions",
-  "name": "Volcano Eruptions",
-  "content": "Description: volcano eruptions during the last 10,000 years\r\n\r\n[Source](https://volcano.si.edu/list_volcano_holocene.cfm)\r\n\r\nProcessing: several rows on the original .csv that had incomplete were deleted\r\n\r\nColumns:\r\n\r\n* Volcano Name (string): full name of the volcano\r\n* Country (string): country where the volcano is located\r\n* Type (string): type of the volcano \r\n* Last known eruption (string): date of the last known eruption\r\n* Region (string): region where the volcano is located\r\n* Latitude (numerical): latitude where the volcano is located\r\n* Longitude(numerical): longitude where the volcano is located\r\n* Elevation (numerical): elevation is meters of the volcano\r\n* Dominant Rock Type (string): rock type of the volcano\r\n* Tectonic Setting (string): tectonic setting of the volcano"
-}

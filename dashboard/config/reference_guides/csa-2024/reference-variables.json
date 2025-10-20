@@ -1,9 +1,0 @@
-{
-  "key": "reference-variables",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "variables",
-  "display_name": "Reference Variables",
-  "content": "## What is a variable?\n\nA **variable** is used to name, store, and reference different types of data.\n\n## What is a reference data type?\n\nA **reference variable** is a variable whose value refers to the location of an object in memory.\n\n## How do I create a reference variable?\n\nWhen declaring a reference variable, the name of the class is used as the type of the variable.\n\nIn this example, `amy`(#e7e8ea) is a reference variable that is of type `Student`(#e7e8ea).\n\n```\nStudent amy;\n```",
-  "position": 2
-}

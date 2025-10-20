@@ -1,9 +1,0 @@
-name 'CSA U3L6-L5_pilot-2022'
-display_name 'Using Constants'
-description 'Use a constant to declare and initialize a constant value for different scenarios.'
-
-sublevels
-level 'CSA U3L6-L5a_pilot-2022'
-level 'CSA U3L6-L5b_pilot-2022'
-level 'CSA U3L6-L5c_pilot-2022'
-level 'CSA U3L6-L5d_pilot-2022'

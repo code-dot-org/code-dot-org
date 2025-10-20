@@ -1,8 +1,0 @@
-name 'CSA U5L4-L1 Exemplar'
-display_name 'Remove Color'
-description 'Remove either red, green, or blue color values from an image.'
-
-sublevels
-level 'CSA U5L4-L1a Exemplar'
-level 'CSA U5L4-L1b Exemplar'
-level 'CSA U5L4-L1c Exemplar'

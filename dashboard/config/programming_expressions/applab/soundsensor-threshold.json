@@ -1,9 +1,0 @@
-{
-  "key": "soundSensor.threshold",
-  "name": "soundSensor.threshold",
-  "category": "Circuit",
-  "category_key": "circuit",
-  "content": "This block is part of the [`soundSensor`(#f78183)](/docs/applab/soundSensor/) object\r\n\r\nBy default a sensor's \"change\" event fires every time the sensor value changes at all, even by one. The light and sound sensors are constantly fluctuating, so you probably want the \"change\" event to be a little less responsive. The `threshold` property allows you to set how much a sensor should change before considering it a \"change\" event - so setting `soundSensor.threshold = 100` would cause the sound sensor's \"change\" event only to trigger if its value increased or decreased by at least 100.",
-  "short_description": "This block is part of the soundSensor object",
-  "syntax": "soundSensor.threshold = someNumber"
-}

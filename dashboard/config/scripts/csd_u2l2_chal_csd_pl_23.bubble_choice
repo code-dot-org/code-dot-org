@@ -1,9 +1,0 @@
-name 'CSD U2L2 - Chal_CSD-PL-23'
-display_name 'Challenge Levels'
-description 'Try out what you\'ve learned on one or more of the following activities.'
-
-sublevels
-level 'CSD U2L2 - ChalB_CSD-PL-23'
-level 'CSD U2L2 - ChalC_CSD-PL-23'
-level 'CSD U2L2 - ChalD_CSD-PL-23'
-level 'CSD U2L2 - ChalE_CSD-PL-23'

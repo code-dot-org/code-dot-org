@@ -1,9 +1,0 @@
-name 'CSD games functions practice choice_2022'
-display_name 'Functions Practice'
-description 'Practice using functions and learn more about what makes them so useful.'
-
-sublevels
-level 'CSD U3 Functions Call Draw Loop_2022'
-level 'CSD U3 Functions Reset Sprite_2022'
-level 'CSD U3 Functions Randomize Sprite_2022'
-level 'CSD U3 Functions Create Function_2022'

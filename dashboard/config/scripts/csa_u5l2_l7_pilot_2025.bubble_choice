@@ -1,9 +1,0 @@
-name 'CSA U5L2-L7_pilot-2025'
-display_name 'Practice: Creating and Using 2D Arrays'
-description 'Practice creating 2D arrays and accessing and modifying their elements.'
-
-sublevels
-level 'CSA U5L2-L7a_pilot-2025'
-level 'CSA U5L2-L7b_pilot-2025'
-level 'CSA U5L2-L7c_pilot-2025'
-level 'CSA U5L2-L7d_pilot-2025'

@@ -1,9 +1,0 @@
-{
-  "key": "the-equals-method",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "method-overriding",
-  "display_name": "The equals() Method",
-  "content": "The `Object`(#e7e8ea) class has an `equals()`(#e7e8ea) method. This method only returns `true`(#e7e8ea) if two reference variables are aliases (object1 == object2).\n\nTo compare specific attributes of an object, we can override the `equals()`(#e7e8ea) method.\n\n```\npublic boolean equals(Object other) {\n  boolean result;\n\n  if (other == null) {\n    result = false;\n  }\n  else {\n    Painter otherPainter = (Painter) other;\n    result = xLocation == otherPainter.xLocation;\n  }\n\n  return result;\n}\n```\n\n\nThe `equals()`(#e7e8ea) method should be used when comparing `String`(#e7e8ea) objects.",
-  "position": 2
-}

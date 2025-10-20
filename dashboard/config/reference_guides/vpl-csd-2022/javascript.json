@@ -1,9 +1,0 @@
-{
-  "key": "javascript",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csd",
-  "parent_reference_guide_key": null,
-  "display_name": "JavaScript",
-  "content": "JavaScript is a programming language used all over the internet, and as the core programming language in many of Code.org's tools and curricula, such as [App Lab](/concepts/app-lab/), [Game Lab](/concepts/game-lab/), and the [Maker Toolkit](/concepts/maker-toolkit/).",
-  "position": 3
-}

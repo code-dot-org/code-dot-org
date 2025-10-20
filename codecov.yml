@@ -1,6 +1,0 @@
-comment: off
-coverage:
-  range: 50..80
-  status:
-    project: off
-    patch: off

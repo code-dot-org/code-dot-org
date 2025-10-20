@@ -1,5 +1,0 @@
-name 'Eval Contracts D'
-title 'Rotate Contract'
-content1 'Write a contract for the rotate function'
-content2 'Eval Contracts C.solution_blocks, 350'
-answer 'rotate|Image|Number|Image'

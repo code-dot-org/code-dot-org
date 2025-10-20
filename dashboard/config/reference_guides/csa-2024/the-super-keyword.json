@@ -1,9 +1,0 @@
-{
-  "key": "the-super-keyword",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "writing-a-class",
-  "display_name": "The super Keyword",
-  "content": "## What is the `super`(#e7e8ea) keyword?\n\nThe `super`(#e7e8ea) keyword refers to the superclass.\n\n\n\nWe can use the `super`(#e7e8ea) keyword to access the superclass constructor. When a subclass constructor uses the `super`(#e7e8ea) keyword to pass values to the superclass constructor, it allows the values to be assigned to the instance variables that are declared in the superclass since the subclass cannot directly access these.\n\nIn the `Dog`(#e7e8ea) constructor, the line `super(name);`(#e7e8ea) calls the superclass `Pet`(#e7e8ea)'s constructor.\n\n```\npublic class Pet {\n  private String name;\n \n  public Pet(String name) {\n    this.name = name;\n  }\n}\n\npublic class Dog extends Pet {\n  private int dogYears;\n \n  public Dog(String name, int dogYears) {\n    super(name);\n    this.dogYears = dogYears;\n  }\n}\n\n```\n\nIf a subclass doesn't include `super`(#e7e8ea) as the first line in its constructor, Java will automatically add a `super()`(#e7e8ea) call without parameters as the first line in a constructor. \n\n\n## When else can I use `super`(#e7e8ea)?\n\nWe can use `super`(#e7e8ea) call overridden superclass methods.\n\nIn `Cat`(#e7e8ea), the line `super.speak();`(#e7e8ea) calls the superclass `Pet`(#e7e8ea)'s `speak`(#e7e8ea) method.\n\n```\npublic class Animal {\n  public void speak() {\n      System.out.println(\"Animal sound.\");\n   }\n}\n\npublic class Cat extends Animal {\n  public void speak() {\n      super.speak();\n      System.out.println(\"Meow!\");\n   }\n}\n```\n\nThe calling `speak()`(#e7e8ea) on a `Cat`(#e7e8ea) object would output:\n```\nAnimal sound.\nMeow!\n```",
-  "position": 5
-}

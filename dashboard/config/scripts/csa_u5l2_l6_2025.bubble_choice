@@ -1,9 +1,0 @@
-name 'CSA U5L2-L6_2025'
-display_name 'Practice: 2D Array Elements'
-description 'Practice accessing and modifying elements in a 2D array.'
-
-sublevels
-level 'CSA U5L2-L6a_2025'
-level 'CSA U5L2-L6b_2025'
-level 'CSA U5L2-L6c_2025'
-level 'CSA U5L2-L6d_2025'

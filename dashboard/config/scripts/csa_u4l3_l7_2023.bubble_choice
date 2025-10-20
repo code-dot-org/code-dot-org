@@ -1,9 +1,0 @@
-name 'CSA U4L3-L7_2023'
-display_name 'Practice: Using Math.sqrt()'
-description 'Various industries have formulas that require finding the square root of a value to get information. Use the `Math.sqrt()` method to create programs for some of these common scenarios!'
-
-sublevels
-level 'CSA U4L3-L7a_2023'
-level 'CSA U4L3-L7b_2023'
-level 'CSA U4L3-L7c_2023'
-level 'CSA U4L3-L7d_2023'

@@ -1,9 +1,0 @@
-name 'CSD Games variables practice_csd-vpl-23'
-display_name 'Variables Practice'
-description 'Choose from the following activities to practice using variables.'
-
-sublevels
-level 'CSD U3 Variables change circle size_csd-vpl-23'
-level 'CSD U3 Variables names_csd-vpl-23'
-level 'CSD U3 Variables unused_csd-vpl-23'
-level 'CSD U3 Variables forbidden names_csd-vpl-23'

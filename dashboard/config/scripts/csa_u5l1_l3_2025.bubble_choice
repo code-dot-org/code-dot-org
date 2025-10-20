@@ -1,9 +1,0 @@
-name 'CSA U5L1-L3_2025'
-display_name 'Skill Building: Creating 2D Arrays'
-description 'Practice declaring and initializing 2D arrays using the `new` keyword.'
-
-sublevels
-level 'CSA U5L1-L3a_2025'
-level 'CSA U5L1-L3b_2025'
-level 'CSA U5L1-L3c_2025'
-level 'CSA U5L1-L3d_2025'

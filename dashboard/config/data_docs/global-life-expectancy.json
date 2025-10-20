@@ -1,5 +1,0 @@
-{
-  "key": "global-life-expectancy",
-  "name": "Global Life Expectancy",
-  "content": "Description: Data on average life expectancy of residents of various countries worldwide, by different years of recorded data.\r\n\r\n[Source](https://github.com/rfordatascience/tidytuesday/tree/master/data/2018/2018-07-03)\r\n\r\nColumns\r\n\r\n* Year (number): year of recorded data\r\n* Country (string): given country of the world data was recorded in\r\n* Code (string): abbreviation of country code, such as AFG for Afghanistan\r\n* life expectancy (numerical): average age at time of death of a resident of that given country, in that given year"
-}

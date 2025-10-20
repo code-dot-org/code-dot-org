@@ -1,8 +1,0 @@
-name 'cv-studentsurvey-postmodule-q3'
-question 'How well did the module prepare you to apply computer vision concepts to real-world problems?'
-right 'Very well'
-right 'Well'
-right 'Neutral'
-right 'Not very well'
-right 'Not at all'
-allow_multiple_attempts true

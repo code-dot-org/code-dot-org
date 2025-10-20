@@ -1,5 +1,0 @@
-{
-  "key": "words",
-  "name": "Words",
-  "content": "Description: most frequently used words in the English language\n\n[Source](https://www.wordfrequency.info/)\n\nProcessing: removed several rows from the original .csv that weren't appropriate for a school setting\n\nColumns:\n\n* Word (string): English word\n* Part of Speech (string): part of speech of the word such as noun, article\n* Per Million Words (numerical): how frequently the word appears in a million words\n* Length (numerical): number of characters in the word"
-}

@@ -1,9 +1,0 @@
-name 'CSA U5L8-L4_pilot-2025'
-display_name 'Practice: Manipulating Images'
-description 'Create new image filters using the `Image` and `Pixel` classes in The Theater.'
-
-sublevels
-level 'CSA U5L8-L4a_pilot-2025'
-level 'CSA U5L8-L4b_pilot-2025'
-level 'CSA U5L8-L4c_pilot-2025'
-level 'CSA U5L8-L4d_pilot-2025'

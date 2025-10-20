@@ -1,9 +1,0 @@
-{
-  "key": "parameterized-constructors",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "writing-a-class",
-  "display_name": "Parameterized Constructors",
-  "content": "## What is a parameterized constructor?\n\nA **parameterized constructor** is a constructor that has a specific number of arguments to be passed to assign values to an object's instance variables\n\nFor example,\n\n```\npublic class Song {\n  private String title;\n  private int numMins;\n\n  public Song(String aTitle, int minsLength) {\n    title = aTitle;\n    numMins = minsLength;\n  }\n}\n```\n\nThis parameterized constructor for the `Song`(#e7e8ea) class assigns the **formal parameter** `aTitle`(#e7e8ea) to the **instance variable** `title`(#e7e8ea) and `minsLength`(#e7e8ea) to `numMins`(#e7e8ea) when a `Song`(#e7e8ea) object is created.\n\n## How do I use a parameterized constructor?\n\nWhen we instantiate an object, we are calling the constructor.\n\nFor example,\n\n```\nSong favSong = new Song(\"Blinding Lights\", 3);\n```\n\nThe `Song()`(#e7e8ea) portion of this code calls the parameterized constructor in the `Song`(#e7e8ea) class. Now `favSong`(#e7e8ea) has its own copy of the instance variables `title`(#e7e8ea) and `numMins`(#e7e8ea) that are assigned the values `\"Blinding Lights\"`(#e7e8ea) and `3`(#e7e8ea).",
-  "position": 3
-}

@@ -1,6 +1,0 @@
-name 'post-assessment survey heading3'
-markdown <<MARKDOWN
-## Next we want to know what you think about *your computer science class*.
-
-**How much do you agree or disagree with the following statements?**
-MARKDOWN

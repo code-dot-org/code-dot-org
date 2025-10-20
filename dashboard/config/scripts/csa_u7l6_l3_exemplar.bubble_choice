@@ -1,8 +1,0 @@
-name 'CSA U7L6-L3 Exemplar'
-display_name 'Overriding Methods'
-description 'Practice overriding methods using the console, The Neighborhood, or The Theater.'
-
-sublevels
-level 'CSA U7L6-L3a Exemplar'
-level 'CSA U7L6-L3b Exemplar'
-level 'CSA U7L6-L3c Exemplar'

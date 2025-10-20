@@ -1,6 +1,0 @@
-:ruby
-  row = DB[:hoc_activity].where(session:File.basename(request.path_info)).first
-  raise Sinatra::NotFound unless row
-  params = {name: row[:name].to_s.strip, course: row[:tutorial]}
-  encoded_params = Base64.urlsafe_encode64(params.to_json)
-  redirect CDO.studio_url("/certificates/#{encoded_params}", CDO.default_scheme)

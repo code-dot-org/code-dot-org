@@ -1,5 +1,0 @@
-{
-  "key": "presidents",
-  "name": "US Presidents",
-  "content": "Description: data about all the Presidents of the United States.\n\n[Source](https://www.whitehouse.gov/about-the-white-house/presidents/ )\n\nColumns:\n\n* Presidency (numerical): which sequential number of presidencies that person had occupied, 1-45\n* President (string): name of the president\n* Took office (numerical): what year that president took office\n* Left office (numerical): what year that president left office\n* Party (numerical): what political party that president was affiliated with\n* Portrait (numerical): a link to a portrait image of that president\n* Home state (string): what US state that president is from"
-}

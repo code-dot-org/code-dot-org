@@ -1,9 +1,0 @@
-name 'PL Summer CSD U3 - Interactive Card - ExampleChoice_2023'
-display_name 'Your Interactive Card'
-description 'In the next few levels, you\'ll be completing your own interactive card. Here are some examples to give you some ideas.'
-
-sublevels
-level 'CSD U3 - Interactive Card - Example1_2023'
-level 'CSD U3 - Interactive Card - Example2_2023'
-level 'CSD U3 - Interactive Card - Example3_2023'
-level 'CSD U3 - Interactive Card - Example4_2023'

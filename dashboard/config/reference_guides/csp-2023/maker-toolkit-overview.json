@@ -1,9 +1,0 @@
-{
-  "key": "maker-toolkit-overview",
-  "course_version_key": "2023",
-  "course_offering_key": "csp",
-  "parent_reference_guide_key": "maker-toolkit",
-  "display_name": "Overview",
-  "content": "The Maker Toolkit is a tool built with [JavaScript](/concepts/javascript/) that allows you to write programs that communicate with the [Adafruit Circuit Playground](https://learn.adafruit.com/introducing-circuit-playground/overview). Read more about the Maker Toolkits's commands in the [App Lab documentation](/applab/).",
-  "position": -1
-}

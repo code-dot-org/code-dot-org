@@ -1,9 +1,0 @@
-name 'CSA U4L1-L4_2024'
-display_name 'Practice: Drawing Images'
-description 'Create a scene that draws images and play your scene in The Theater.'
-
-sublevels
-level 'CSA U4L1-L4a_2024'
-level 'CSA U4L1-L4b_2024'
-level 'CSA U4L1-L4c_2024'
-level 'CSA U4L1-L4d_2024'

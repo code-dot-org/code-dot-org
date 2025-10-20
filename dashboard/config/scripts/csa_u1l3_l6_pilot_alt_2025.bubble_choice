@@ -1,9 +1,0 @@
-name 'CSA U1L3-L6_pilot_alt-2025'
-display_name 'Practice: Painter Objects'
-description 'Instantiate `Painter` objects to complete the programs in The Neighborhood.'
-
-sublevels
-level 'CSA U1L3-L6a_alt-2025'
-level 'CSA U1L3-L6b_alt-2025'
-level 'CSA U1L3-L6c_alt-2025'
-level 'CSA U1L3-L6d_alt-2025'

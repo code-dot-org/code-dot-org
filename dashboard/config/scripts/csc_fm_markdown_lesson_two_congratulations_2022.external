@@ -1,9 +1,0 @@
-name 'csc_fm_markdown_lesson_two_congratulations_2022'
-title 'Making Counters'
-
-
-markdown <<MARKDOWN
-#You completed Lesson Two!
-
-Congratulations you built your own multiplication function machine! It represents inputs and outputs with ice cream. You can count on it always calculating correctly. 
-MARKDOWN

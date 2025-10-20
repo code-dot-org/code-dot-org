@@ -1,8 +1,0 @@
-name 'csd-post-survey-unit6-preamble'
-title 'title'
-description 'description here'
-markdown <<MARKDOWN
-# Unit 6: Physical Computing
-
-![](https://images.code.org/e4e1ae8eab06b4912d116be4f2ffe903-image-1526919230902.png)
-MARKDOWN

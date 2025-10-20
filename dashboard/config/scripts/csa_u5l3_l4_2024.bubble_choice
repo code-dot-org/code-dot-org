@@ -1,9 +1,0 @@
-name 'CSA U5L3-L4_2024'
-display_name 'Practice: Traversing 2D Arrays'
-description 'Traverse a 2D array in row-major order and find the average of all the values or of each row.'
-
-sublevels
-level 'CSA U5L3-L4a_2024'
-level 'CSA U5L3-L4b_2024'
-level 'CSA U5L3-L4c_2024'
-level 'CSA U5L3-L4d_2024'

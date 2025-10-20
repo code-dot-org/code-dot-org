@@ -1,6 +1,0 @@
-name 'intro-pulse-survey-q2_csd5_pl_2024'
-question 'What prior experiences have you had with Using & Representing Data?'
-right 'This is the first I am learning about Using & Representing Data'
-right 'I have done smaller Using & Representing Data activities (for example: an hour of code), but this is my first longer class'
-right 'I have already taken classes or done longer online tutorials on Using & Representing Data'
-allow_multiple_attempts true

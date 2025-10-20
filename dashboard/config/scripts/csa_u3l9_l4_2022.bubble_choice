@@ -1,9 +1,0 @@
-name 'CSA U3L9-L4_2022'
-display_name 'Reversing a 1D Array'
-description 'Reverse 1D arrays for various scenarios.'
-
-sublevels
-level 'CSA U3L9-L4a_2022'
-level 'CSA U3L9-L4b_2022'
-level 'CSA U3L9-L4c_2022'
-level 'CSA U3L9-L4d_2022'

@@ -1,9 +1,0 @@
-name 'CSD games collisions practice choice_2024'
-display_name 'Collisions Practice'
-description 'Practice using the new collisions blocks.'
-
-sublevels
-level 'CSD U3 collisions types_2024'
-level 'CSD U3 collisions types2_2024'
-level 'CSD U3 collisions types3_2024'
-level 'CSD U3 collisions types4_2024'

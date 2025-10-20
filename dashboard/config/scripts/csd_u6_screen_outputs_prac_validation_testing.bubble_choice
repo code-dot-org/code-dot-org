@@ -1,8 +1,0 @@
-name 'CSD U6 - Screen Outputs - Prac_validation-testing'
-display_name 'Practice Levels'
-
-sublevels
-level 'CSD U6 - Screen Outputs - PracA_validation-testing'
-level 'CSD U6 - Screen Outputs - PracB_validation-testing'
-level 'CSD U6 - Screen Outputs - PracC_validation-testing'
-level 'CSD U6 - Screen Outputs - PracD_validation-testing'

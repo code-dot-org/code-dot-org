@@ -1,5 +1,0 @@
-name 'Eval Contracts 4 B'
-title 'Scale Contract'
-content1 'Write a contract for the scale function'
-content2 'Eval Contracts 4.solution_blocks, 350'
-answer 'scale|Image|Number|Image'

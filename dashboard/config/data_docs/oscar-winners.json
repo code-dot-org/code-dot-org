@@ -1,5 +1,0 @@
-{
-  "key": "oscar-winners",
-  "name": "Oscar Winners",
-  "content": "Description: all Oscar winners from 1975-2015\r\n\r\nSource: [Kaggle](https://www.kaggle.com/theacademy/academy-awards)\r\n\r\nProcessing: removed some columns in the original .csv and renamed some for clarity\r\n\r\nColumns:\r\n\r\n* Year (numerical): year of the Oscar award\r\n* Category (string): name of the category that the nominee won in\r\n* Nominee (string): name of that performer or movie that won the award\r\n"
-}

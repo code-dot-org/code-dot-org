@@ -1,9 +1,0 @@
-name 'PL U7 Param Return Practice_Level 1_2024'
-display_name 'Parameters and Return Practice, Part 1'
-description 'Choose one of the apps below in order to practice the steps involved in its development. There is a sequence of six levels associated with this Practice activity. Once you choose the app that you want to develop, please select the same app on all of the following levels. If you want to change apps, please start back at level 1 in order to follow the development sequence.
-
-Note: This is the same level as U7L2 - Level 1 in the CS Principles Curriculum.'
-
-sublevels
-level 'U7_L03_Parameters and Return Practice_Choice_1-1_2024'
-level 'U7_L03_Parameters and Return Practice_Choice_2-1_2024'

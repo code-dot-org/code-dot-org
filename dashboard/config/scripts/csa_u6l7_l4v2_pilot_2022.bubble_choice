@@ -1,9 +1,0 @@
-name 'CSA U6L7-L4v2_pilot-2022'
-display_name 'Keywords and Parts-of-Speech'
-description 'Use methods in the `String` class and `ArrayList`s to implement keyword extraction and parts-of-speech tagging techniques.'
-
-sublevels
-level 'CSA U6L7-L4a_pilot-2022'
-level 'CSA U6L7-L4b_pilot-2022'
-level 'CSA U6L7-L4c_pilot-2022'
-level 'CSA U6L7-L4d_pilot-2022'

@@ -1,9 +1,0 @@
-name 'CSD U2L13 - Challenge_2024'
-display_name 'Challenge Levels'
-description 'Expand your Flexbox skills with these challenges.'
-
-sublevels
-level 'CSD U2L13 challenge_1'
-level 'CSD U2L13 challenge_2'
-level 'CSD U2L13 challenge_3'
-level 'CSD web flex2 freeplay_2024'

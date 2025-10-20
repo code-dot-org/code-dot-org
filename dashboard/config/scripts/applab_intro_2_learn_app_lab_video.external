@@ -1,8 +1,0 @@
-name 'AppLab Intro 2 - Learn App Lab Video'
-markdown <<MARKDOWN
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xlbRL5eOgkI?rel=0&start=168" frameborder="0" allowfullscreen></iframe>
-
-Nice job changing your first screen. Now watch a bit of this video to learn a little bit more about how App Lab works. You'll be using these skills to keep building your adventure!
-
-## Start at 2:48 and stop at 6:07
-MARKDOWN

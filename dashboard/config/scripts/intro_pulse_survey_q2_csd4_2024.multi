@@ -1,6 +1,0 @@
-name 'intro-pulse-survey-q2_csd4_2024'
-question 'What prior experiences have you had with the Design Process and Design Thinking?'
-right 'This is the first I am learning about the Design Process and Design Thinking'
-right 'I have done smaller the Design Process and Design Thinking activities (for example: an hour of code), but this is my first longer class'
-right 'I have already taken classes or done longer online tutorials on the Design Process and Design Thinking'
-allow_multiple_attempts true

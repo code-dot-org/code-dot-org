@@ -1,9 +1,0 @@
-{
-  "key": "object-references-as-parameters",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "classes-and-objects",
-  "display_name": "Object References as Parameters",
-  "content": "When we have an object reference as a parameter, the value that is passed is a copy of the reference to the object, not the object itself. On the other hand, when we have a primitive as a parameter, a copy of the value is passed.\n\nSince a copy of the reference is passed when an object reference is used as a parameter, any changes made to the object by the method or constructor impact the original object.\n\nFor example, in the `main`(#e7e8ea) method, we create a new `Pet`(#e7e8ea) object `myPet`(#e7e8ea) and pass it as a parameter to the `celebrateBirthday`(#e7e8ea) method. Any changes made in the `celebrateBirthday`(#e7e8ea) method impacts the original `myPet`(#e7e8ea) object, as we can see in the output.\n\n```\npublic class Runner {\n  public static void main(String[] args) {\n    Pet myPet = new Pet();\n\n    celebrateBirthday(myPet);\n\n    System.out.println(\"myPet age: \" + myPet.getAge());\n  }\n\n  public static void celebrateBirthday(Pet p) {\n    p.setAge(p.getAge() + 1);\n\n    System.out.println(\"p age: \" + p.getAge());\n  }\n}\n\npublic class Pet {\n  private int age;\n\n  public int getAge() {\n    return age;\n  }\n  \n  public void setAge(int newAge) {\n    age = newAge;\n  }\n}\n```\n\nThis code outputs\n```\np age: 1\nmyPet age: 1\n```",
-  "position": 5
-}

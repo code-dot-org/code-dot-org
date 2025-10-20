@@ -1,9 +1,0 @@
-name 'CSD U3 abstraction intro'
-title 'title'
-description 'description here'
-href 'path/to/html/in/asset/folder'
-markdown <<MARKDOWN
-# First page in abstraction
-
-Students will have done an unplugged activity introducing them to the idea of abstraction, specifically how propoerties such as speed/velocity are created from the building blocks of position.
-MARKDOWN

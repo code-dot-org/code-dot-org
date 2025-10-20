@@ -1,7 +1,0 @@
-name 'csc_animal_adaptations_predict'
-question 'Click the "edit" button to see how the `mystery behavior` works. Study the code inside, then make a prediction.'
-wrong 'The sprite will spin.', feedback: 'Incorrect. The sprite will grow.'
-right 'The sprite will grow.', feedback: 'Correct!'
-wrong 'The sprite will move.', feedback: 'Incorrect. The sprite will grow.'
-wrong 'The sprite will change colors.', feedback: 'Incorrect. The sprite will grow.'
-allow_multiple_attempts false

@@ -1,8 +1,0 @@
-name 'k5_ai_data_survey_level_q4_ai'
-question 'My favorite color is...'
-right 'Purple'
-right 'Blue'
-right 'Pink'
-right 'Orange'
-right 'Something else'
-allow_multiple_attempts true

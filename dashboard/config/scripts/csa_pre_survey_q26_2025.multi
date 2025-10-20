@@ -1,6 +1,0 @@
-name 'CSA Pre-Survey q26_2025'
-question 'Did a family member, such as a parent, sibling, or cousin, encourage you to take this class?'
-
-right 'Yes'
-right 'No'
-allow_multiple_attempts true

@@ -1,9 +1,0 @@
-name 'CSP U4L4 Submit Choice_2023'
-display_name 'Make Project'
-description 'Pick which app you will build.'
-
-sublevels
-level 'U4 L04 Variables Make Project Submit_2023'
-level 'U4 L04 Variables Make Project Submit Budget Tracker_2023'
-level 'U4 L04 Variables Make Project Submit Emoji Quiz_2023'
-

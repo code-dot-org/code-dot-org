@@ -1,8 +1,0 @@
-name 'cv-studentsurvey-premodule-q2'
-question 'How would you rate your current interest in computer vision?'
-right 'Very interested'
-right 'Somewhat interested'
-right 'Neutral'
-right 'Not very interested'
-right 'Not interested at all'
-allow_multiple_attempts true

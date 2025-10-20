@@ -1,9 +1,0 @@
-{
-  "key": "nested-conditional-statements",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "control-structures",
-  "display_name": "Nested Conditional Statements",
-  "content": "A **nested conditional statement** is a conditional statement nested inside of another conditional statement.\n\n```\nint num = 10;\nif (num > 9) {\n  if (num < 15) {\n    System.out.println(\"Both true!\");\n  }\n}\n```",
-  "position": 4
-}

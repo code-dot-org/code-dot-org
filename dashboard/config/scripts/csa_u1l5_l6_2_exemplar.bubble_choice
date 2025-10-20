@@ -1,8 +1,0 @@
-name 'CSA U1L5-L6 2 Exemplar'
-display_name 'The Efficient Painter'
-description 'Help the Painter paint The Neighborhood as efficiently as possible!'
-
-sublevels
-level 'CSA U1L5-L6a-1 Exemplar'
-level 'CSA U1L5-L6b-1 Exemplar'
-level 'CSA U1L5-L6c-1 Exemplar'

@@ -1,7 +1,0 @@
-name 'msm variables multi 13'
-title '/script_assets/msm/define_f.png, 300'
-question 'What should f(1) produce?'
-wrong 'x'
-wrong '117'
-right '17'
-allow_multiple_attempts true

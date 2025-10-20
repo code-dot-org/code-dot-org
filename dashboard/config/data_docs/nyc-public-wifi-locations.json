@@ -1,5 +1,0 @@
-{
-  "key": "nyc-public-wifi-locations",
-  "name": "NYC Public Wifi Locations",
-  "content": "Description: location of all the public wifi location spots in New York City\r\n\r\nSource: [Kaggle](https://www.kaggle.com/new-york-city/nyc-public-wifi)\r\n\r\nProcessing: trimmed down the original .csv data by removing unnecessary columns and renaming some for clarity\r\n\r\nColumns:\r\n\r\n* Provider (string): name of the internet provider offering internet service at that WiFi spot\r\n* Location (string): street address of that WiFi spot\r\n* Latitude (numerical): geographical latitude of that wifi spot\r\n* Longitude (numerical): geographical longitude of that wifi spot\r\n* Access Location (string): description of where one can access wifi, such as “outdoor kiosk”, “indoor”, “outdoor”\r\n* Borough (string): New York City borough (distict) where the wifi spot is located\r\n* Neighborhood (string): neighborhood within NYC borough (district) that wifi spot is located\r\n* Postal Code (numerical): zip code of the wifi spot\r\n\r\n\r\n\r\n"
-}

@@ -1,8 +1,0 @@
-name 'plc csp1 netsim setup'
-css 'unplugged'
-markdown <<MARKDOWN
-# Experiment with the Internet Simulator
-The best way to become more comfortable with this new tool is by playing around with it! On the next level you're going to see the most basic verson of the Internet Simulator, which we use in Unit 1 Lesson 3. In order to test it out, you can open two widows side-by-side and experiement with sending and receieving bits (as shown below).
-
-<img src=“https://images.code.org/4480012d78d2b92c537edeab550236f2-image-1462409309045.gif”>
-MARKDOWN

@@ -1,8 +1,0 @@
-name 'gray_csc_ecosystems_survival_choice_2023'
-display_name 'Survival in Groups!'
-description 'Practice your skills! Choose a project that models aquatic animals in groups to practice your coding skills.'
-
-sublevels
-level 'csc_ecosystems_survival_choice_dolphins_2023'
-level 'csc_ecosystems_survival_choice_sharks_2023'
-level 'csc_ecosystems_survival_choice_fishschool_2023'

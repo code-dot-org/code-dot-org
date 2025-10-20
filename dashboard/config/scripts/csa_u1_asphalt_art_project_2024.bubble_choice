@@ -1,9 +1,0 @@
-name 'CSA U1 Asphalt Art Project_2024'
-display_name 'Asphalt Art Project'
-description 'Choose a grid and develop your Asphalt Art Project.'
-
-sublevels
-level 'CSA U1 Asphalt Art Project 8x8_2024'
-level 'CSA U1 Asphalt Art Project 12x12_2024'
-level 'CSA U1 Asphalt Art Project 16x16_2024'
-level 'CSA U1 Asphalt Art Project 32x32_2024'

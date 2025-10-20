@@ -1,9 +1,0 @@
-{
-  "key": "shapes-and-parameters",
-  "course_version_key": "2022",
-  "course_offering_key": "self-paced-pl-csp-2021",
-  "parent_reference_guide_key": "game-lab",
-  "display_name": "Shapes and Parameters",
-  "content": "Some blocks in Game Lab have inputs, or **parameters**, that aren't used every time.\r\n\r\n## Rect\r\n\r\nWhen you first used the `rect` block, it always created a square with sides of length 50.  It had two inputs that you could use to specify its x and y coordinates.  `rect` also has two more **optional parameters**.  These parameters are used to specify its width and height.  You can use the arrows on the right hand side of the block to show or hide these optional parameters.\r\n\r\n## Ellipse\r\n\r\nEllipse also has optional parameters for its width and height after the x and y parameters.  You can show or hide these optional parameters with the arrow on the right hand side of the block, just like with the `rect` block.\r\n",
-  "position": 1
-}

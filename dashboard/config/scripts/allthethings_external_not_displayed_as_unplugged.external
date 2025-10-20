@@ -1,9 +1,0 @@
-name 'allthethings_external_not_displayed_as_unplugged'
-title 'title'
-description 'description here'
-
-markdown <<MARKDOWN
-<h2>
-This external level should not be displayed as unplugged.
-</h2>
-MARKDOWN

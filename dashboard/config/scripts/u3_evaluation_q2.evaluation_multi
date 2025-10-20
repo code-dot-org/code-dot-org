@@ -1,6 +1,0 @@
-name 'U3 evaluation q2'
-question 'How comfortable are you discussing the relationship between human and computer languages?'
-answer 'Very comfortable'
-answer 'Not comfortable', weight: 1, lesson_name: ‘Lessons 1 - 3: Algorithms'
-
-allow_multiple_attempts true

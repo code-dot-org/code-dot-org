@@ -1,8 +1,0 @@
-name 'F-O-Data_Student End of Unit Survey - Q1_csd1_2023'
-question 'Thinking about what I learned in this unit, I feel like I understand...'
-right 'all of the concepts '
-right 'most of the concepts, but not all of them'
-right 'about half of the concepts, but not all of them'
-right 'some of the concepts, but not most of them'
-right 'very few or none of the concepts'
-allow_multiple_attempts true

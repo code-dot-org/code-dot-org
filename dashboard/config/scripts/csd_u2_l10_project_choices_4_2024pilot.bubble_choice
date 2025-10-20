@@ -1,9 +1,0 @@
-name 'CSD U2 L10 Project Choices-4_2024pilot'
-display_name 'Mini-Project Choices'
-description 'Choose your user to review the page!'
-
-sublevels
-level 'CSD web CSS project HTML-4_2024pilot'
-level 'CSD L10_Savannah-4_2024pilot'
-level 'CSD L10_Sofia-4_2024pilot'
-level 'CSD L10_Pedro-4_2024pilot'

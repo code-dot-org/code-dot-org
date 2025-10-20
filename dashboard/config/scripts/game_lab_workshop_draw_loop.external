@@ -1,9 +1,0 @@
-name 'Game Lab Workshop: Draw Loop'
-display_name 'The Draw Loop'
-markdown <<MARKDOWN
-# The Draw Loop
-
-## The _Draw Loop_ is a core element of how programs are Structured in Game Lab
-
-![](https://images.code.org/2baffc607a393de168458be7c84fd347-image-1488229097936.png)
-MARKDOWN

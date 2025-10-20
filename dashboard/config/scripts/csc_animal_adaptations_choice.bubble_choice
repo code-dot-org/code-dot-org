@@ -1,8 +1,0 @@
-name 'csc_animal_adaptations_choice'
-display_name 'Code your own animal adaptation!'
-description 'Choose from the scenarios below and use your own creative code to model a new & unique animal adaptation! You can pick multiple options and do more than one!'
-
-sublevels
-level 'csc_animal_adaptations_choice1'
-level 'csc_animal_adaptations_choice2'
-level 'csc_animal_adaptations_choice3'

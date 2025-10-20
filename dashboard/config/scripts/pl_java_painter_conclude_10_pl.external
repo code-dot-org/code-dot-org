@@ -1,9 +1,0 @@
-name 'pl-java-painter-conclude-10_pl'
-title 'title'
-description 'description here'
-
-markdown <<MARKDOWN
-#Congratulations! You are finished with Lesson 2.
-
-
-MARKDOWN

@@ -1,6 +1,0 @@
-name 'intro-pulse-survey-q2_csd6_2023'
-question 'What prior experiences have you had creating Apps with Devices?'
-right 'This is the first I am learning how to create Apps with Devices'
-right 'I have done smaller activities Creating Apps with Devices (for example: an hour of code), but this is my first longer class'
-right 'I have already taken classes or done longer online tutorials on Creating Apps with Devices'
-allow_multiple_attempts true

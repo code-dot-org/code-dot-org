@@ -1,8 +1,0 @@
-{
-  "key": "analogRead",
-  "name": "analogRead()",
-  "category": "Maker",
-  "category_key": "maker",
-  "short_description": "Maker Toolkit - analogRead()",
-  "syntax": "analogRead(pin)"
-}

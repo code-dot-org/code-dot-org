@@ -1,9 +1,0 @@
-{
-  "key": "instance-variables",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "writing-a-class",
-  "display_name": "Instance Variables",
-  "content": "## What is an instance variable?\n\nEvery object that is created gets its own copy of the **instance variables** that are declared in the class.\n\nInstance variables often have a \"has-a\" relationship with an object. For example, a `Student`(#e7e8ea) has-a `name`(#e7e8ea). Another way to think of it is that instance variables are the nouns and adjectives that describe the characteristics of an object.\n\n## How many instance variables can a class have?\n\nAs many as you need!\n\n## How do values get assigned to instance variables?\n\nValues for the instance variables are assigned in a **constructor**, which is used to set the initial state of an object. An object's state is represented in the values assigned to the instance variables.",
-  "position": 1
-}

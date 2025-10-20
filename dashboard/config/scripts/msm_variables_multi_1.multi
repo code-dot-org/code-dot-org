@@ -1,9 +1,0 @@
-name 'msm variables multi 1'
-title 'x = 15  
-a = 2  
-b = 6'
-question 'What is the value of x?'
-wrong 'a function'
-right '15'
-wrong 'x'
-allow_multiple_attempts true

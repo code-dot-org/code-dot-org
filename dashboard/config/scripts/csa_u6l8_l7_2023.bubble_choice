@@ -1,9 +1,0 @@
-name 'CSA U6L8-L7_2023'
-display_name 'Practice: Removing Elements'
-description 'Practice using the `remove()` method in the `ArrayList` class to remove elements from an `ArrayList`.'
-
-sublevels
-level 'CSA U6L8-L7a_2023'
-level 'CSA U6L8-L7b_2023'
-level 'CSA U6L8-L7c_2023'
-level 'CSA U6L8-L7d_2023'

@@ -1,5 +1,0 @@
-{
-  "key": "us-household-income",
-  "name": "US Household Income",
-  "content": "Description: Data about average and median incomes of US homeowners with characteristic breakdown, per 2017-2018\r\n\r\nSource: [Census.gov](http://www.census.gov)\r\n\r\nColumns:\r\n\r\n* Characteristic of homeowner (string): demographic for a given homeowners, such as 15 to 24 years old, or Married couple\r\n* 2017 Average Income (numerical): average income of a given demographic of homeowners in 2017, in USD\r\n* 2017 Median Income (numerical): median income of a given demographic of homeowners in 2017, in USD\r\n* 2018 Average Income (numerical): average income of a given demographic of homeowners in 2018, in USD\r\n* 2018 Median Income (numerical): median income of a given demographic of homeowners in 2018, in USD\r\n* Percent change in real median income (numerical): positive or negative difference amount, in percentage between 2017-2018\r\n"
-}

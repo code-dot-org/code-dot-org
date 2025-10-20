@@ -1,9 +1,0 @@
-name 'msm variables multi 5'
-title '/script_assets/msm/define_xpq.png, 600'
-question 'What is the value of (p - x)?'
-wrong 'q'
-wrong '3'
-right '5'
-
-
-allow_multiple_attempts true

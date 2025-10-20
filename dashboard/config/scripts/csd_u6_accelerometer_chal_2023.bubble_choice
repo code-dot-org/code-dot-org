@@ -1,8 +1,0 @@
-name 'CSD U6 - Accelerometer - Chal_2023'
-display_name 'Challenge Levels'
-
-sublevels
-level 'CSD U6 - Accelerometer - CA_2023'
-level 'CSD U6 - Accelerometer - ChalA_2023'
-level 'CSD U6 - Accelerometer - ChalC_2023'
-level 'CSD U6 - Accelerometer - ChalG_2023'

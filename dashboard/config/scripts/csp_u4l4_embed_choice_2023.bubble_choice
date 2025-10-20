@@ -1,9 +1,0 @@
-name 'CSP U4L4 Embed Choice_2023'
-display_name 'Make Project'
-description 'Pick which app you would like to build in the next level. Check out as many as you want!'
-
-sublevels
-level 'U4 L04 Variables Make Project_2023'
-level 'U4 L04 Variables Make Project Choice B_2023'
-level 'U4 L04 Variables Make Project Choice C_2023'
-

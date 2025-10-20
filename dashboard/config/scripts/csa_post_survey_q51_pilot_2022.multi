@@ -1,9 +1,0 @@
-name 'CSA Post-Survey q51_pilot-2022'
-question 'Tried something even though I thought I might fail.'
-
-right 'Never'
-right 'A few classes'
-right 'About half the class sessions'
-right 'Many class sessions'
-right 'Once or more per class session'
-allow_multiple_attempts true

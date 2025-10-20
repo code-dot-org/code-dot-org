@@ -1,9 +1,0 @@
-name 'msm variables multi 8'
-title 'f(x) = x + 3'
-question 'What is the name of the variable?'
-wrong 'f'
-right 'x'
-wrong '3'
-
-
-allow_multiple_attempts true

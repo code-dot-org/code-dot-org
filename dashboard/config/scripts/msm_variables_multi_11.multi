@@ -1,7 +1,0 @@
-name 'msm variables multi 11'
-title '/script_assets/msm/define_f.png, 300'
-question 'What is the name of the parameter?'
-wrong 'f'
-right 'x'
-wrong '17'
-allow_multiple_attempts true

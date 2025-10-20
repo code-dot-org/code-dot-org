@@ -1,5 +1,0 @@
-{
-  "key": "endangered-species-canada",
-  "name": "Endangered Species of Canada",
-  "content": "Description: A list of Canada's endangered mammals, birds, reptiles, amphibians, fish, arthropods and mollusks.\r\n\r\n[Source](https://en.wikipedia.org/wiki/List_of_Wildlife_Species_at_Risk_(Canada))\r\n\r\nColumns:\r\n\r\n* Scientific name (string): the scientific names of the animals. \r\n* Common name (string): the common name and relative locations of the animals. \r\n* Class (string): the classifications (mammal, bird, reptile etc.) of the animals. \r\n* Conservation status (string): the status of the animal (extirpated, endangered, threatened, of special concern)"
-}

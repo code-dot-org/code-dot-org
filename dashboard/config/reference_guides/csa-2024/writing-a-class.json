@@ -1,9 +1,0 @@
-{
-  "key": "writing-a-class",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "classes-and-objects",
-  "display_name": "Writing a Class",
-  "content": "## What is a class?\n\nA class is a programmer-defined blueprint from which objects are created. Classes provide the general structure of an object that describes how an object can behave and what information it contains. For example, all students have an ID, name, and list of classes they take.\n\nAn instance is the object itself. For example, a `Student`(#e7e8ea) object called `kacie`(#e7e8ea) has an ID of `27`(#e7e8ea), a name of `\"Kacie\"`(#e7e8ea), and their list of classes contains `\"Computer Science\"`(#e7e8ea), `\"History\"`(#e7e8ea), and `\"Visual Arts\"`(#e7e8ea).\n\nA Java program must have at least one class. The name of the class must be the same as the name of the file. For example, the `Student`(#e7e8ea) class below must be in a file named `Student.java`(#e7e8ea).\n\n```\npublic class Student {\n\n   // instance variables, constructors, and methods\n\n}\n```",
-  "position": 1
-}

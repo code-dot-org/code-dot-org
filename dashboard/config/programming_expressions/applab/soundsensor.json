@@ -1,8 +1,0 @@
-{
-  "key": "soundSensor",
-  "name": "soundSensor",
-  "category": "Circuit",
-  "category_key": "circuit",
-  "content": "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/cp_sensors.png\" alt=\"sensors\" style=\"float: right; margin: 20px; width: 300px;\">\n\n[`soundSensor`(#f78183)](/docs/applab/soundSensor/), [`lightSensor`(#f78183)](/docs/applab/lightSensor/), and [`tempSensor`(#f78183)](/docs/applab/tempSensor/) are objects representing the analog sensors on the Circuit Playground. Internally [`soundSensor`(#f78183)](/docs/applab/soundSensor/) is connected to the analog pin A4, [`lightSensor`(#f78183)](/docs/applab/lightSensor/) is connected to analog pin A5, and [`tempSensor`(#f78183)](/docs/applab/tempSensor/) is connected to analog pin A0.\n\n### Properties and Methods\n\n* [`soundSensor.value`(#f78183)](/docs/applab/soundSensor.value/) - A number that representing the current input value of the sensor. By default this will range from 0-1023, but that range can be overridden with [`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/)\n* [`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/) - A method that allows you to change the range of numbers read in by a sensor.\n* [`tempSensor.F`(#f78183)](/docs/applab/tempSensor.F/) and [`tempSensor.C`(#f78183)](/docs/applab/tempSensor.C/) - Special properties for the [`tempSensor`(#f78183)](/docs/applab/tempSensor/) which convert the raw input value to either Fahrenheit or Celsius.\n\n### Events\n\n* \"change\" - Fired any time the input value of the specified sensor changes \n* \"data\" - Fired every 100 milliseconds.",
-  "syntax": "soundSensor"
-}

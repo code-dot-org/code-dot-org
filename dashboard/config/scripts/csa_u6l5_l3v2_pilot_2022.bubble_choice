@@ -1,9 +1,0 @@
-name 'CSA U6L5-L3v2_pilot-2022'
-display_name 'ArrayList Algorithms'
-description 'Use standard algorithms to get information about data stored in an `ArrayList`.'
-
-sublevels
-level 'CSA U6L5-L3a_pilot-2022'
-level 'CSA U6L5-L3b_pilot-2022'
-level 'CSA U6L5-L3c_pilot-2022'
-level 'CSA U6L5-L3d_pilot-2022'

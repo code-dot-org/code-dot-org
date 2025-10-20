@@ -1,8 +1,0 @@
-name 'grade1_story_spottedBugs'
-title 'The Spotted Bugs'
-description 'The spotted bugs are so much less trouble than the unspotted ones!'
-markdown <<MARKDOWN
-<img src="https://s-media-cache-ak0.pinimg.com/736x/5a/af/1d/5aaf1d4f4db5f2f248c2a10e98706e30.jpg" />
-
-Activity: Find the bugs and spot them
-MARKDOWN

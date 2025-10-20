@@ -1,9 +1,0 @@
-name 'CSA U1L7-L5_pilot_alt-2025'
-display_name 'Practice: PainterPlus Methods'
-description 'Write a new method in the `PainterPlus` class and use it in The Neighborhood.'
-
-sublevels
-level 'CSA U1L7-L5a_alt-2025'
-level 'CSA U1L7-L5b_alt-2025'
-level 'CSA U1L7-L5c_alt-2025'
-level 'CSA U1L7-L5d_alt-2025'

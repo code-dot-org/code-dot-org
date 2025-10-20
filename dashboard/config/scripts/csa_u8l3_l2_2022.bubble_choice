@@ -1,9 +1,0 @@
-name 'CSA U8L3-L2_2022'
-display_name 'Implement the Binary Search'
-description 'Use the binary search to find a specific number, text, or to play a guessing game.'
-
-sublevels
-level 'CSA U8L3-L2a_2022'
-level 'CSA U8L3-L2b_2022'
-level 'CSA U8L3-L2c_2022'
-level 'CSA U8L3-L2d_2022'

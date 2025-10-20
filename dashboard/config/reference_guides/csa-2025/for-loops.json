@@ -1,9 +1,0 @@
-{
-  "key": "for-loops",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "control-structures",
-  "display_name": "For Loops",
-  "content": "A `for`(#e7e8ea) loop allows you to repeat blocks of code for a specified duration. You can have a block of code repeat a specific number of times or repeat until a specified condition is met. The `for`(#e7e8ea) loop syntax has **three key components:**\n\n- `initialExpression:` This part of the loop syntax initializes the variable that will be used to determine how many times the loop is executed. The `initialExpression` part is only executed once.\n\n- `condition:` This is the condition for determining whether or not to execute the code in the body of the loop (similar to an `if`(#e7e8ea) statement condition). If `condition` evaluates to `true`(#e7e8ea), the body of the `for`(#e7e8ea) loop executes.\n\n- `updateExpression:` This part of the expression updates the variable initialized in the `initialExpression`. The `condition` is then evaluated again to see if the condition is still `true`(#e7e8ea) with the updated value of the variable.\n\n![](https://images.code.org/5093d32dba305b86d2c5bb460700f628-Screen Shot 2022-05-16 at 2.02.18 PM.png)\n\n## Examples\n### Performing a Set Number of Actions\n```\nfor(int count = 0; count < 5; count++) {\n   System.out.println(count);\n}\n```\n\n**Output:**\n\n0\n\n1\n\n2\n\n3\n\n4\n\n### Traversing an Array\nA `for`(#e7e8ea) loop can be used to traverse arrays and `ArrayList`(#e7e8ea)s. \n\n```\nint[] numbers = { 1, 2, 3, 4 };\n\nfor(int index =0; index < numbers.length(); index++) {\n   System.out.println(numbers[index]);\n}\n```\n\n**Output:**\n\n1\n\n2\n\n3\n\n4\n\n## Syntax\n```\nfor (initialExpression; condition; updateExpression) {\n   // body of code\n}\n```",
-  "position": 6
-}

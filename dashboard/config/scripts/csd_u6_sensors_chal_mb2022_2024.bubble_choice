@@ -1,9 +1,0 @@
-name 'CSD U6 - Sensors - Chal_mb2022_2024'
-display_name 'Challenge Levels'
-
-sublevels
-level 'CSD U6 - Sensors - CA_2024'
-level 'CSD U6 - Sensors - CB_2024'
-level 'CSD U6 - Sensors - ChalE_2024'
-level 'CSD U6 - Sensors - ChalD_2024'
-level 'CSD U6 - Sensors - ChalG_2024'

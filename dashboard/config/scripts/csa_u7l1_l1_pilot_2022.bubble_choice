@@ -1,9 +1,0 @@
-name 'CSA U7L1-L1_pilot-2022'
-display_name 'Creative Coding with The Theater Project Examples'
-description 'Examples of the Creative Coding with The Theater Project'
-
-sublevels
-level 'CSA U7L1-L1a_pilot-2022'
-level 'CSA U7L1-L1b_pilot-2022'
-level 'CSA U7L1-L1c_pilot-2022'
-level 'CSA U7L1-L1d_pilot-2022'

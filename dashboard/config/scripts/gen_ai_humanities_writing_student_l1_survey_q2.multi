@@ -1,8 +1,0 @@
-name 'Gen AI Humanities - Writing - Student L1 Survey - Q2'
-question 'I feel confident using an AI tool to help me brainstorm, draft, or revise an essay.'
-right 'Strongly disagree'
-right 'Disagree'
-right 'Neutral'
-right 'Agree'
-right 'Strongly agree'
-allow_multiple_attempts true

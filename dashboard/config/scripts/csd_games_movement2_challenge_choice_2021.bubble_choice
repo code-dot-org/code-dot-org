@@ -1,8 +1,0 @@
-name 'CSD games movement2 challenge choice_2021'
-display_name 'Complex Sprite Movement Challenges'
-description 'Try out these new blocks and challenges with velocity and the counter pattern.'
-
-sublevels
-level 'CSD U3 complex sprite movement practice parabola_2021'
-level 'CSD U3 complex sprite movement practice deceleration_2021'
-level 'CSD U3 L17 Freeplay_2021'

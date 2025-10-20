@@ -1,5 +1,0 @@
-{
-  "key": "nba-teams",
-  "name": "NBA Teams",
-  "content": "Description: data about all current NBA teams, as of the 2019-20 season.\r\n\r\nSource: [Basketball-Reference](https://www.basketball-reference.com/)\r\n\r\nColumns:\r\n\r\n * Conference (string): whether the team is in the Eastern or Western NBA conference\r\n* Division (string): what division the team is in, such as Southwest or Atlantic\r\n* Team (string): name of the team\r\n* Location (string): city and state the team is located in\r\n * Arena (string): name of the arena the team plays home games in\r\n* Arena capacity (numerical): how many seats the arena holds for attendees\r\n* Year joined to the NBA (numerical): what year that team officially joined the NBA\r\n * Championship wins (numerical): how many NBA titles this team has won\r\n * Image (link): a link to an image of the team's logo\r\n\r\n\r\n\r\n\r\n"
-}

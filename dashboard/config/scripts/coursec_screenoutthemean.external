@@ -1,9 +1,0 @@
-name 'courseC_screenoutthemean'
-title 'title'
-description 'description here'
-
-markdown <<MARKDOWN
-# Screen Out the Mean
-## What can you do when someone is mean to you online?
-<iframe width="560" height="315" src="https://www.youtube.com/embed/peDosNN7l3w?ecver=1" frameborder="0" allowfullscreen></iframe>
-MARKDOWN

@@ -1,7 +1,0 @@
-{
-  "category": "Poetry - Text",
-  "config": {
-    "func": "animateText",
-    "blockText": "animate text"
-  }
-}

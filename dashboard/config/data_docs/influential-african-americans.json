@@ -1,5 +1,0 @@
-{
-  "key": "influential-african-americans",
-  "name": "100 Influential African Americans (Age 25-45)",
-  "content": "Description: This dataset was created by hand from TheRoot.com, which publishes a list every year ranking the top 100 most influential African-Americans between ages 25-45. This dataset is the 2019 edition.\r\n\r\n[Source](https://interactives.theroot.com/root-100-2019/)\r\n\r\nColumns:\r\n\r\n* Rank (numerical): ranking 1-100 for each recipient\r\n* Name (string): full name of each recipient\r\n* Profession (string): profession(s) of each recipient\r\n* Sector (string): sector of the recipient’s contribution\r\n* Age (numerical): age of the recipient\r\n* Influence (numerical): influence of the recipient determined by their reach and substance\r\n* Reach (numerical): number of people the recipients touches through media, including their social media followers\r\n* Twitter Followers (numerical): number of twitter followers of each recipient, if the recipient doesn’t have a twitter the cell has a value of 0\r\n* Picture: url of a picture of the recipient \r\n"
-}

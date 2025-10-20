@@ -1,9 +1,0 @@
-name 'ml-good data-kim survey_2024'
-title 'Introduction to Machine Learning'
-description ''
-
-markdown <<MARKDOWN
-![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
-
-## [Click Here](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) to take Kim's survey
-MARKDOWN

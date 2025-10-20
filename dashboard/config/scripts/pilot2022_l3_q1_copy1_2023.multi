@@ -1,8 +1,0 @@
-name 'pilot2022_l3_q1_copy1_2023'
-question 'This lesson was very fun!'
-right '😍 Yes, definitely!'
-right '👍 Yes.'
-right '🫤 Not really.'
-right '👎 No.'
-right '🤔 I do not know.'
-allow_multiple_attempts true

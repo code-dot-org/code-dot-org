@@ -1,2 +1,0 @@
-class AbortFormError < StandardError
-end

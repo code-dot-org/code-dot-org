@@ -1,9 +1,0 @@
-name 'CSA Post-Survey q47_pilot-2025'
-question 'Gave me the opportunity to write my thoughts down in a journal or on paper.'
-
-right 'Never'
-right 'A few classes'
-right 'About half the class sessions'
-right 'Many class sessions'
-right 'Once or more per class session'
-allow_multiple_attempts true

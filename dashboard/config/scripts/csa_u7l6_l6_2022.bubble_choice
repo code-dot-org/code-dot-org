@@ -1,8 +1,0 @@
-name 'CSA U7L6-L6_2022'
-display_name 'Sentinel Values'
-description 'Practice using sentinel values using the console, The Neighborhood, or The Theater.'
-
-sublevels
-level 'CSA U7L6-L6a_2022'
-level 'CSA U7L6-L6b_2022'
-level 'CSA U7L6-L6c_2022'

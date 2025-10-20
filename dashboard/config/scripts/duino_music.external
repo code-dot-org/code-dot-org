@@ -1,9 +1,0 @@
-name 'duino music'
-title 'duino music'
-markdown <<MARKDOWN
-### Making Music
-
-[Auduino](https://code.google.com/p/tinkerit/wiki/Auduino) (note the spelling) is an Arudino based synthesizer program that makes it super easy to create electronic music. We're going to wire up the basic Audino synthesizer and then you will get to explore expanding the types of inputs used to generate the music. Wire up this circuit and then in the next stage we'll upload a starter sketch for it.
-
-<iframe frameborder='0' style="width: 100%; height: 450px;" marginheight='0' marginwidth='0' scrolling='no' src='https://123d.circuits.io/circuits/1238033/embed#breadboard'></iframe>
-MARKDOWN

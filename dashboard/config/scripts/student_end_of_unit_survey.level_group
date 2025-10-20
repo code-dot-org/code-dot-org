@@ -1,7 +1,0 @@
-name 'Student End of Unit Survey'
-title 'End-Of-Unit Survey!'
-submittable 'true'
-anonymous 'true'
-
-page
-text 'Student End of Unit Survey - Intro+TeacherMD'

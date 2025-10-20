@@ -1,5 +1,0 @@
-{
-  "key": "wnba-teams",
-  "name": "WNBA Teams",
-  "content": "Description: data about all current WNBA teams, as of the 2019-20 season.\r\n\r\nSource: [Basketball-Reference](https://www.basketball-reference.com/wnba/)\r\n\r\nColumns:\r\n\r\n * Conference (string): whether the team is in the Eastern or Western conference\r\n* Team (string): name of the team\r\n* City (string): city and state the team is located in\r\n * Arena (string): name of the arena the team plays home games in\r\n* Capacity (numerical): how many seats the arena holds for attendees\r\n* Joined (numerical): what year the team joined the WNBA\r\n* Head coach (string): name of the current head coach of the team\r\n * Image (link): a link to an image of the team's logo\r\n"
-}

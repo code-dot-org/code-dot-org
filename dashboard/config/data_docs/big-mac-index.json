@@ -1,5 +1,0 @@
-{
-  "key": "big-mac-index",
-  "name": "Big Mac Index",
-  "content": "Description: data from February 2022 about the prices of a Big Mac and currency exchange rates in countries across the world: [The Big Mac Index](https://www.economist.com/big-mac-index)\r\n\r\nSource: [The Economist](https://github.com/TheEconomist/big-mac-data)\r\n\r\nColumns:\r\n\r\n* Name (string): country name\r\n* Currency Code (string): three-character [currency code](https://www.iso.org/iso-4217-currency-codes.html)\r\n* Local Price (numerical): the price of a Big Mac in the local currency\r\n* Dollar Exchange (numerical): the exchange rate in local currency units per dollar \r\n* Dollar Price (numerical): the price of a Big Mac in dollars\r\n"
-}

@@ -1,8 +1,0 @@
-name 'courseAB_EOC2022'
-display_name 'End of Course Project'
-description 'You have reached the last lesson! Choose a project to create.'
-
-sublevels
-level 'courseA_EOC_artist_22022'
-level 'courseA_EOC_artist_12022'
-level 'courseA_EOC_artist_32022'

@@ -1,5 +1,0 @@
-{
-  "key": "internet-usage",
-  "name": "Internet Usage and Access Worldwide",
-  "content": "Description: Information about internet access and usage in various regions worldwide.\r\n\r\n[Source](https://datacatalog.worldbank.org/individuals-using-internet-population)\r\n\r\nColumns:\r\n\r\n* Country or Region (string): name of a country or region in which internet access is available or unavailable\r\n* Individuals using the Internet by percentage (numerical): what percentage of that country's population use the internet\r\n* Secure internet servers per million people (numerical): how many secure internet servers are available in that country, per 1 million residents"
-}

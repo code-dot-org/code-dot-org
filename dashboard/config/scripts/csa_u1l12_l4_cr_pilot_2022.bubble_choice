@@ -1,9 +1,0 @@
-name 'CSA U1L12-L4 CR_pilot-2022'
-display_name 'More PainterPlus Methods'
-description 'Request a code review from your peers. When giving feedback, be sure to choose the level that your peer completed.'
-
-sublevels
-level 'CSA U1L12-L4a_pilot-2022'
-level 'CSA U1L12-L4b_pilot-2022'
-level 'CSA U1L12-L4c_pilot-2022'
-level 'CSA U1L12-L4d_pilot-2022'

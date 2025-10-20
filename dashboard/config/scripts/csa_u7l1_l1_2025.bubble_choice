@@ -1,9 +1,0 @@
-name 'CSA U7L1-L1_2025'
-display_name 'Creative Coding with The Theater Example Projects'
-description 'Examples of the Creative Coding with The Theater Project'
-
-sublevels
-level 'CSA U7L1-L1a_2025'
-level 'CSA U7L1-L1b_2025'
-level 'CSA U7L1-L1c_2025'
-level 'CSA U7L1-L1d_2025'

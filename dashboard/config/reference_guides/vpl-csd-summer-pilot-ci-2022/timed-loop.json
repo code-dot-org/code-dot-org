@@ -1,9 +1,0 @@
-{
-  "key": "timed-loop",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csd-summer-pilot-ci",
-  "parent_reference_guide_key": "javascript",
-  "display_name": "Timed Loop",
-  "content": "The `for loop` is a really useful structure for repeating something many times quickly, or iterating over a list of things, but it doesn't do much good if you want to repeat something more slowly. For cases when you want to control how quickly the repetition happens, you'll want a **Timed Loop**.\n\n<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/timedLoop.png\" alt=\"timedLoop\" class=\"center\" style=\"width: 600px; margin: 25px auto;\">\n\n### The Structure of a Timed Loop\n\nA _Timed Loop_ is actually composed of two blocks:\n\n* The `timedLoop()` block, which takes two inputs:\n\t* The _ms_ input determines how many milliseconds to wait before repeating the loop. The default value is 1000 milliseconds, or 1 second.\n\t* The _callback_ input is the function that will be run each time the loop repeats.\n\n* The `stopTimedLoop()` block which stops _all_ timed loops that are running.\n\n[clearfix]\n\n[/clearfix]\n\n\n### How it Works\n\n<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/timedloop_diagram.png\" alt=\"timedLoop diagram\" class=\"center\">\n\n[diagram_nums]\n\n1. This whole block is the Timed Loop\n2. Number of milliseconds to wait after each repetition of the loop. 1000 milliseconds = 1 second.\n2. The green section is our _callback function_ - the code that we run each time the loop repeats.\n4. The `stopTimedLoop()` block tells all running _Timed Loops_ to stop running. Note that when `stopTimedLoop()` is called, the timed loop won't necessarily quit immediately, it just won't repeat next time.\n\n[/diagram_nums]\n",
-  "position": 4
-}

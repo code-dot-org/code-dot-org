@@ -1,6 +1,0 @@
-name 'grade4_unplugged_FunkyFunctions'
-title 'Funky Functions'
-description 'Illustrate the power of functions'
-markdown <<MARKDOWN
-This activity will be similar to getting loopy, but instead of making a dance routine, students will create functions as choreographed exercise moves that they can teach to the class.  The instructor will then select a combination of "functions" to call to make a custom classroom warm-up.
-MARKDOWN

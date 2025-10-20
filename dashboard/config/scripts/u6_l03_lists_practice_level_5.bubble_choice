@@ -1,8 +1,0 @@
-name 'U6_L03_Lists Practice_Level 5'
-display_name 'Lists Practice, Part 5'
-description 'Choose one of the apps below in order to practice the steps involved in its development. There is a sequence of five levels associated with this Practice activity. This is the final level involved in the development of your app. If you want to change apps, please start back at level 1 in order to follow the development sequence.'
-
-sublevels
-level 'U6_L03_Lists Practice_Choice_1-5'
-level 'U6_L03_Lists Practice_Choice_2-5'
-level 'U6_L03_Lists Practice_Choice_3-5'

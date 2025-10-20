@@ -1,9 +1,0 @@
-{
-  "key": "drawing-shapes",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csp",
-  "parent_reference_guide_key": "game-lab",
-  "display_name": "Drawing Shapes",
-  "content": "There are lots of different options for drawing in Game Lab.  You've already seen three blocks: `rect`, `ellipse`, and `fill`.  They will let you make circles and squares of different colors.\r\n\r\n## Rect\r\n\r\nThe `rect` block will plot a square at the x and y coordinates it is given.  The x and y coordinates tell it where the top left corner of the square goes in the display area.\r\n\r\n## Ellipse\r\n\r\nThe `ellipse` block will plot a circle at the x and y coordinates it is given.  The x and y coordinates tell it where the center of the circle goes in the display area.\r\n\r\n## Coordinates in Game Lab\r\n\r\nIn order to plot things on the screen in Game Lab, you will need to use x and y coordinates.  The x coordinate tells how far something is from the left side of the display area.   The y coordinate tells how far something is from the top of the display area.\r\n\r\n## Fill\r\n\r\nThe `fill` block changes the color that Game Lab uses to color in the shapes you draw.  Once you use the `fill` block, all the new shapes you draw will be filled in with that color, until you use the `fill` block to change the color again.\r\n\r\n## Colors in Game Lab\r\n\r\nGame Lab understands most common color names, such as \"red\", \"green\", and \"brown\".  It also understands all the HTML Color names listed at [HTML Color Names - W3Schools](https://www.w3schools.com/colors/colors_names.asp).\r\n",
-  "position": 0
-}

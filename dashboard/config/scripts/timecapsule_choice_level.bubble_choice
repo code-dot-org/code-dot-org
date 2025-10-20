@@ -1,9 +1,0 @@
-name 'timecapsule_choice_level'
-display_name 'Customize A Time Capsule Poem!'
-description 'Practice your skills! Choose a time capsule poem and practice your coding skills.'
-
-sublevels
-level 'timecapsule_dropdown_2023'
-level 'timecapsule_dropdown_2_2023'
-level 'timecapsule_dropdown_3_2023'
-level 'timecapsule_dropdown_4_2023'

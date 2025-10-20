@@ -1,9 +1,0 @@
-{
-  "key": "microbit-overview",
-  "course_version_key": "2024",
-  "course_offering_key": "focus-on-creativity",
-  "parent_reference_guide_key": "microbit-parent",
-  "display_name": "micro:bit Overview",
-  "content": "The BBC micro:bit is a pocket-sized computer that introduces you to how software and hardware work together. Before digging too deep however, let's start with the basics.\n\n## The Light Emitting Diode (LED) Display\n\nWhen a computer only needs to communicate simple information, often a blinky light is the quickest and easiest way to do so. LEDs, or Light Emitting Diodes, are small, low power, and easy to use devices for communicating with light. Take a look at the micro:bit image to the right.\n\n<img src=\"https://images.code.org/211f377fb4e4c1addb2cc33d53bca6f6-Micro_bit Overview.png\" style=\"width: 400px; float: right;\" />\n\n1. The **USB connector** allows you to plug the micro:bit in. Plugging it in lets you communicate with the board in App Lab, but it also provides electricity to the board so that it can do things like turn on the LED Display.\n2. The **single yellow LED** can't be controlled through code, but lets you know if the board is getting electricity. If this LED is off, don't expect anything on your board to work. The LED flashes when you are downloading a program to the micro:bit.\n3. The **reset button** allows you to to restart your micro:bit programs.\n4. The **battery socket** allows you to power your micro:bit from the battery pack instead of a computer. This is really useful if you want to take the micro:bit outside, wear it or play games with it. It can run for a long time using just two AAA batteries. \n\n## Plug It In\n\nPlug your board into your computer using a USB cable, and notice how the single yellow LED responds and how the LED Display responds. How might you use the LED Display to communicate useful information to a user?\n\n",
-  "position": 1
-}

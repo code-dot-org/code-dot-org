@@ -1,9 +1,0 @@
-{
-  "key": "arrays",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csp",
-  "parent_reference_guide_key": "javascript",
-  "display_name": "Arrays",
-  "content": "An _array_ is a group of values that are stored in a particular order. Usually these values are all of the same type (like all numbers, all text, or even all sprites), but in JavaScript, arrays can also hold different types of elements.  You can use arrays to create a list of things that you store into a single variable.\n\n## Creating and Using Arrays\n\nArrays look like lists inside square brackets.  Each value in the array should be separated out with commas.\n\n`[1,5,7,2]`\n\nEvery time you create an array, you’ll need to store it into a variable right away so that you can access the values later.  Because this is so important, the block to create an array automatically stores the array into a variable.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/arrays_3FdJGsk.png)\n\nYou can access a value inside your array by using its index number.  The index numbers start from 0 and count up until they get to the end of the array.  For example, in the above array, “a” is at index 0, “b” is at index 1, and “c” is at index 2.\n\n\n",
-  "position": 8
-}

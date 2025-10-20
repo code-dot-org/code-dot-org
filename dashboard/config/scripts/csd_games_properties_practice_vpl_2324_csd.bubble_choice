@@ -1,8 +1,0 @@
-name 'CSD Games Properties practice_vpl-2324-csd'
-display_name 'Sprite Properties'
-description 'Try out the sprite properties you have learned here'
-
-sublevels
-level 'CSD Games bubble choice properties scale_vpl-2324-csd'
-level 'CSD Games bubble choice properties rotation_vpl-2324-csd'
-level 'CSD Games bubble choice properties scale and rotation_vpl-2324-csd'

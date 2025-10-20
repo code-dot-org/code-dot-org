@@ -1,9 +1,0 @@
-{
-  "key": "velocity",
-  "course_version_key": "2023",
-  "course_offering_key": "csp",
-  "parent_reference_guide_key": "sprites",
-  "display_name": "Velocity",
-  "content": "The velocity blocks ([`sprite.velocityX`(#f78183)](/docs/gamelab/velocityX/) and [`sprite.velocityY`(#f78183)](/docs/gamelab/velocityY/)), tell sprites how fast to move in a particular direction, just as the counter pattern did before.  By hiding the counter pattern code inside a block, you can build even more complex programs.\n\n# Movement with Velocity\n\nThe code that uses the counter pattern is on the left, and the code that uses the velocity blocks is on the right.\n\n<img src=\"https://curriculum.code.org/media/uploads/counter_code.png\" style=\"float: left;\">\n<img src=\"https://curriculum.code.org/media/uploads/velocity.png\" style=\"width: 350px; float: right;\">\n\n[clear]\n\nWith [`sprite.velocityX`(#f78183)](/docs/gamelab/velocityX/) and [`sprite.velocityY`(#f78183)](/docs/gamelab/velocityY/), you can set the sprites' velocities when you first create them, but both programs will make the sprites move as in the picture below.\n\n[/clear]\n\n<img src=\"https://curriculum.code.org/media/uploads/counter_pattern.gif\" style=\"float: left;\">\n\n",
-  "position": 3
-}

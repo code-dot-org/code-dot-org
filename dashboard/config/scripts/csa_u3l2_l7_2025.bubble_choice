@@ -1,9 +1,0 @@
-name 'CSA U3L2-L7_2025'
-display_name 'Practice: Creating 1D Arrays'
-description 'Access and modify the values stored in a 1D array.'
-
-sublevels
-level 'CSA U3L2-L7a_2025'
-level 'CSA U3L2-L7b_2025'
-level 'CSA U3L2-L7c_2025'
-level 'CSA U3L2-L7d_2025'

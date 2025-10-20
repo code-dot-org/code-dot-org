@@ -1,5 +1,0 @@
-{
-  "key": "bechdel-test",
-  "name": "Bechdel Test",
-  "content": "Description: Data on the movies released from 1970-2013 and how they fared on the [Bechdel Test](https://en.wikipedia.org/wiki/Bechdel_test).\n\nSource: [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-09/readme.md)\n\nAccompanying Article: [FiveThirtyEight](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/) \n\nColumns:\n\n* year (string): the year the movie was released\n* title (string): title of the movie\n* test result (string): whether the movie passes or fails the [Bechdel Test](https://en.wikipedia.org/wiki/Bechdel_test)\n* budget (numerical): the total budget used to make the movie, in dollars\n* domgross (numerical): the amount of money the movie grossed domestically in the year it was released, in dollars\n* intgross (numerical): the amount of money the movie grossed internationally in the year it was released, in dollars\n* plot(string): a summary of the plot of the movie\n* rated (string): the rating of the movie\n* poster (string): a url for an image of the movie's poster"
-}

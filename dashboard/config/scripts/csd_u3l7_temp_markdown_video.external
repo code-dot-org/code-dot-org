@@ -1,7 +1,0 @@
-name 'CSD U3L7 - Temp Markdown Video'
-title 'title'
-description 'description here'
-
-markdown <<MARKDOWN
-# [Watch This Video (Click Here)](https://www.kapwing.com/videos/6351b7da32b8aa0070e676c7)
-MARKDOWN

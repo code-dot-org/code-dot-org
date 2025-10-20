@@ -1,8 +1,0 @@
-name 'csd-post-survey-text-this-cs-class_csa-2022'
-markdown <<MARKDOWN
-### This Computer Science Class
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-
-MARKDOWN
