@@ -75,6 +75,5 @@ export const PYTHONLAB_EDITABLE_FILE_TYPES = ['py', 'csv', 'txt'];
 
 export const PYTHONLAB_SUPPORTED_FILE_TYPES = PYTHONLAB_EDITABLE_FILE_TYPES;
 
-export const PYTHONLAB_TUTOR_ADDITIONAL_CONTEXT = [
-  'The student can view the documentation by clicking the book icon at the top of the workspace.',
-].join('\n\n');
+export const PYTHONLAB_TUTOR_ADDITIONAL_CONTEXT =
+  'The student can view the documentation by clicking the book icon at the top of the workspace.';
