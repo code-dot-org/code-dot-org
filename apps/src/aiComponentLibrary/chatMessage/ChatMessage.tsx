@@ -89,13 +89,15 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             />
           </div>
         </div>
-        <div
-          className={
-            isTA ? moduleStyles.footerWithOverlay : moduleStyles.footer
-          }
-        >
-          {footer}
-        </div>
+        {footer && (
+          <div
+            className={
+              isTA ? moduleStyles.footerWithOverlay : moduleStyles.footer
+            }
+          >
+            {footer}
+          </div>
+        )}
       </div>
     </div>
   );

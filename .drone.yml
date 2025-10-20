@@ -31,7 +31,7 @@ steps:
         cat <<EOF
 
         Running on hostname: $hostname
-        
+
         To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
         bin/drone/shell $hostname
 
@@ -142,7 +142,6 @@ trigger:
   branch:
     exclude:
       - "production"
-      - "test"
       - "levelbuilder"
   event:
     - pull_request
@@ -173,7 +172,7 @@ steps:
         cat <<EOF
 
         Running on hostname: $hostname
-        
+
         To "ssh" into this drone instance, wait until the 'ui-tests' step starts and run:
         bin/drone/shell $hostname
 
@@ -287,7 +286,6 @@ trigger:
   branch:
     exclude:
       - "production"
-      - "test"
       - "levelbuilder"
   event:
     - pull_request
@@ -378,6 +376,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: f91f1b63a5d39a1dc5e56c1e86b7a8c1b06535d3e7b234f942462d344dd04d09
+hmac: 738b8a924f22e0e86e4de6465941c2923ce58e37ca8be1eeff294c5657f33285
 
 ...
