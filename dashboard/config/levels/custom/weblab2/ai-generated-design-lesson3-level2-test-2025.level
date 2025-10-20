@@ -1,13 +1,12 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2025-10-14T17:30:22.000Z",
   "level_num": "custom",
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "1. **Prompt and Refine**  \r\n   Ask AI to recreate your chosen feature from Level 1. If it’s off, ask for a fix.\r\n   &nbsp\r\n   \r\n   - _Example Initial Prompt_: “Create a nav bar with a logo left and 3 links right.”\r\n   - _Example Revision Prompt_: “Add more spacing between the links.”\r\n\r\n2. **Save Version 1 (v1)**  \r\n   When it looks right, open Version History and describe your changes with a short message. For example, *“v1 – working nav bar.”* Then click Save version.\r\n   - :::details [**Show Me How**]\r\n   ![](https://images.code.org/f7f0c57a1ef627b02e94c09014cfe128-image-1760477045364.gif)\r\n   :::\r\n\r\n:::details [**(Optional) Break It On Purpose**]\r\n   Try a risky prompt (e.g., “Rebuild layout with CSS Grid everywhere”).  \r\n   Observe what breaks, then **Revert** to your saved v1.\r\n:::\r\n\r\n",
+    "long_instructions": "1. **Prompt and Refine**  \r\n   Ask AI to recreate your chosen feature from Level 1. If it’s off, ask for a fix.\r\n   &nbsp\r\n   \r\n   - _Example Initial Prompt_: “Create a nav bar with a logo left and 3 links right.”\r\n   - _Example Revision Prompt_: “Add more spacing between the links.”\r\n\r\n2. **Save Version 1 (v1)**  \r\n   When it looks right, open Version History and describe your changes with a short message. For example, *“v1 – working nav bar.”* Then click Save version.\r\n\r\n:::details [**Show Me How**]\r\n   ![](https://images.code.org/f7f0c57a1ef627b02e94c09014cfe128-image-1760477045364.gif)\r\n:::\r\n\r\n:::details [**(Optional) Break It On Purpose**]\r\n   Try a risky prompt (e.g., “Rebuild layout with CSS Grid everywhere”).  \r\n   Observe what breaks, then **Revert** to your saved v1.\r\n:::\r\n\r\n",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
@@ -34,7 +33,7 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!--\nAsk AI to rebuild your chosen feature,\nrefine if needed,\nthen save your working version as “v1 – working feature.”\n-->\n<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
           "active": true,
           "folderId": "0"
         }
@@ -44,6 +43,7 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-14 17:37:20 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 17:38:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:01:39 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:13:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:15:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:18:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:33:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:34:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:43:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 21:26:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14 17:37:20 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 17:38:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:01:39 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:13:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:15:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:18:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:33:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:34:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 18:43:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 21:26:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-15 16:29:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 17:36:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

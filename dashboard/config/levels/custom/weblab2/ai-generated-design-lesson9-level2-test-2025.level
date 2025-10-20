@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-15T17:01:32.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "ai-generated-design-lesson8-level4-template-test-2025",
+    "long_instructions": "##Apply Accessibility Principles to Your Own App\r\n- Choose one of the following **personas with an accessibility constraint**:\r\n    - **User A**: Low vision → may struggle with color contrast.\r\n    - **User B**: Motor difficulty → may need larger buttons or simplified navigation.\r\n    - **User C**: Screen reader use → needs alt text and semantic headings.\r\n- Inspect your own app/page using **POUR framework** to identify at least 2–3 accessibility issues.\r\n- Use the **Accessibility Prompt Builder** (in your Activity Guide) to draft AI prompts for fixes.\r\n- Document issues identified and the AI prompts drafted to fix them and save to **Backpack**\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-15 17:48:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

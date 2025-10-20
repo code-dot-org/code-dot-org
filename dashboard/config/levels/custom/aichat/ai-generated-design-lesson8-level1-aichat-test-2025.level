@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-10-15T23:49:01.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful design coach. Guide the student to plan their own site map. Ask simple questions, give short tips, and help them think about pages, sections, and user flow. Don’t make the full map for them. Help them build it step by step.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "long_instructions": "\r\n## Do This:\r\n\r\n<br/>1. **Pick a scenario for your site map:**\r\n\r\n   * **Adopt-A-Pet** - a shelter web app for finding pets to adopt\r\n   * **School Shop** - a marketplace to buy, sell, or trade school supplies\r\n   * **City Explorer** - a web app to discover local events and places\r\n   * **Eco Challenge Tracker** - a web app to track habits and join eco challenges\r\n\r\n\r\n\r\n<br/>2. **Outline a site map that at least includes:**\r\n\r\n   * A Homepage\r\n   * At least 3 main sections\r\n   * At least 2 levels of hierarchy\r\n\r\n   Write a quick list before using AI.\r\n\r\n\r\n\r\n<br/> 3. **Prompt AI Chat for feedback.**\r\n   Paste your outline, your selected scenario, and ask:\r\n\r\n   > Here's my site map for [insert selected scenario]. How can I make it clearer or better organized?\r\n",
+    "display_name": "Co-Create with AI",
+    "bubble_choice_description": "Work with AI to plan your site map. Outline your homepage, sections, and subpages, then refine your structure with feedback.",
+    "thumbnail_url": "https://images.code.org/679534403b6d1cf8df1207f05f4153e9-Pasted Graphic 16.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-15 23:55:25 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:22:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:25:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:26:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:27:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:27:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:29:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:30:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:33:35 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:35:08 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:39:13 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:40:13 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 00:44:01 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

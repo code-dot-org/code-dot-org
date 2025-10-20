@@ -3,6 +3,9 @@ title 'Review'
 description 'description here'
 
 markdown <<MARKDOWN
+<h1 style="text-align: center;">BEHIND THE SCENES</h1>
+<h2 style="text-align: center;">What is AI, Really?</h2>
+
 <div style="background:#ffffff; border-left:8px solid #7A3FF0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; display:flex; gap:16px; font-family:Arial, sans-serif; color:#222;">
   <div style="flex:0 0 150px; background:#ece8ff; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#7A3FF0; font-weight:bold;">
     Image

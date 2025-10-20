@@ -394,3 +394,9 @@ gem 'rubyzip'
 Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
   gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '**/engines/*/*.gemspec'
 end
+
+# OpenSSL 3.6 broke Ruby's OpenSSL bindings, see: https://github.com/ruby/openssl/issues/949
+# By using the openssl gem, we can pick up the fixes without needing to upgrade Ruby.
+# This gem line can be removed once we upgrade to Ruby 3.4 >= 3.4.8, or Ruby 3.3 >= 3.3.10 or Ruby 3.2 >= 3.2.10
+# which will include the openssl fix by default, see: https://github.com/ruby/openssl/issues/949#issuecomment-3388132260
+gem 'openssl', '>= 3.3.1'

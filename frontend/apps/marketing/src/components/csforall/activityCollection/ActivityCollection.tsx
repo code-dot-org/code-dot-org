@@ -38,6 +38,7 @@ const ActivityCollection: React.FC<ActivityCollectionProps> = ({
             description={shortDescription}
             primaryButton={primaryLinkRef && JSON.parse(primaryLinkRef)}
             imageSrc={image}
+            imageObjectFit={'contain'}
             primaryButtonEventName={EVENT.CARD_PRIMARY_BUTTON_CLICKED}
             secondaryButtonEventName={EVENT.CARD_SECONDARY_BUTTON_CLICKED}
             eventMetadata={{

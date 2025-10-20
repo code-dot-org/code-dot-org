@@ -222,6 +222,15 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
+  timed_task_with_logging :dashboard_cdo_contentful_engine_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_cdo_contentful_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
   timed_task_with_logging :shared_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
@@ -264,6 +273,7 @@ namespace :test do
     :dashboard_ci,
     :dashboard_legacy_ci,
     :dashboard_hoc_legacy_engine_ci,
+    :dashboard_cdo_contentful_engine_ci,
     :lib_ci,
     :bin_ci,
     :ui_live
@@ -277,6 +287,16 @@ namespace :test do
   desc 'Runs dashboard legacy tests.'
   timed_task_with_logging :dashboard_legacy do
     TestRunUtils.run_dashboard_legacy_tests
+  end
+
+  desc 'Runs dashboard cdo_contentful engine tests.'
+  timed_task_with_logging :dashboard_cdo_contentful_engine do
+    TestRunUtils.run_dashboard_cdo_contentful_engine_tests
+  end
+
+  desc 'Runs dashboard hoc_legacy engine tests.'
+  timed_task_with_logging :dashboard_hoc_legacy_engine do
+    TestRunUtils.run_dashboard_hoc_legacy_engine_tests
   end
 
   desc 'Runs pegasus tests.'

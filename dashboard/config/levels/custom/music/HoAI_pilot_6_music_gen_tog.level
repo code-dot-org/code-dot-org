@@ -8,7 +8,7 @@
   "properties": {
     "level_data": {
       "library": "launch2024",
-      "dancerMove": "floss",
+      "danceMove": "floss",
       "aiCodeGenerate": "true",
       "aiCodeGenerateExtraPrompt": "Always nest play blocks inside play together. Use only two to three play togethers and do not use repeat.",
       "aiCodeGenerateAdlib": {

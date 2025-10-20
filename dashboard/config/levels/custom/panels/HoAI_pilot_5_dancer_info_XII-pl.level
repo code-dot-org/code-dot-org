@@ -16,34 +16,34 @@
         "layout": "text-top-right"
       },
       {
-        "text": "**Artificial Intelligence** (AI) is a broad term for systems that can learn patterns from data and use those patterns to make predictions, generate new content, or solve problems.",
-        "imageUrl": "",
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">\n    <strong>Artificial Intelligence</strong> (AI) is a broad term for systems that can learn patterns from data and use those patterns to make predictions, generate new content, or solve problems.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/c3d9c26580b74f564be05cfe718ce18e-Screenshot 2025-10-15 at 2.48.42 PM.png",
         "key": "HoAI_pilot_5_dancer_info_-pl-26827f86-0270-42eb-8cc8-075cc731eae3",
         "layout": "text-top-right"
       },
       {
-        "text": "You already interact with AI every day — even if you don’t call it that. Examples include:\n* Autocorrect or predictive text that finishes your sentences.\n* Music or video recommendations on Spotify, Netflix, or YouTube.\n* Photo filters and face recognition that detect features or add effects.",
-        "imageUrl": "",
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">\n    You already interact with AI every day — even if you don’t call it that. Examples include:\n* Autocorrect or predictive text that finishes your sentences.\n* Music or video recommendations on Spotify, Netflix, or YouTube.\n* Voice assistants like Siri or Alexa that recognize speech and respond.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/c3d9c26580b74f564be05cfe718ce18e-Screenshot 2025-10-15 at 2.48.42 PM.png",
         "key": "HoAI_pilot_5_dancer_info_XII-pl-6d9d7e1e-72e2-400c-a363-7990c8236d6a"
       },
       {
-        "text": "Most of what we call AI today isn’t thinking or reasoning — it’s recognizing patterns at scale.\n\nAI models are trained on massive datasets (millions or even billions of examples) and use mathematics to find relationships between inputs and outputs.",
-        "imageUrl": "",
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">\n    Most of what we call AI today isn’t thinking or reasoning — it’s recognizing patterns at scale. AI models are trained on huge datasets (millions or even billions of examples) and use math to find relationships between inputs and outputs.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/c3d9c26580b74f564be05cfe718ce18e-Screenshot 2025-10-15 at 2.48.42 PM.png",
         "key": "HoAI_pilot_5_dancer_info_-pl-bfb56243-e440-4e17-92d5-3c7d4cfdd275"
       },
       {
-        "text": "When you type a prompt, AI doesn’t “know” what it means — it compares your words to what it’s seen before and generates something that statistically fits.\n\nThink of it as a super-fast pattern matcher, not a mind with understanding.",
-        "imageUrl": "",
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">\n    When you type a prompt or ask a question, AI doesn’t “understand” like a person would — it compares your input to what it’s seen before and generates something that statistically fits. Think of it as a super-fast pattern matcher, not a mind with understanding.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/c3d9c26580b74f564be05cfe718ce18e-Screenshot 2025-10-15 at 2.48.42 PM.png",
         "key": "HoAI_pilot_5_dancer_info_-pl-61bcf404-e424-4df1-a858-bffad1b4d484"
       },
       {
-        "text": "AI “learns” through repetition and adjustment. During training, it makes predictions, measures how wrong it was, and updates its internal settings (called parameters) to make better predictions next time.\n\nOnce trained, it can generalize — creating new answers, images, or ideas based on patterns it’s already learned.",
-        "imageUrl": "",
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">\n    AI “learns” through repetition and adjustment. During training, it makes predictions, measures how wrong it was, and updates its internal settings (called parameters) to make better predictions next time. Once trained, it can generalize — creating new answers, images, or ideas based on patterns it’s already learned.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/c3d9c26580b74f564be05cfe718ce18e-Screenshot 2025-10-15 at 2.48.42 PM.png",
         "key": "HoAI_pilot_5_dancer_info_-pl-a0504e03-ae45-4898-83db-b0c7a3b5e7af"
       }
     ],
     "name_suffix": "_-pl"
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-14T17:18:51.774+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_dancer_info_-pl\\\"\"],\"cloned_from\":\"HoAI_pilot_5_dancer_info_-pl\"},{\"changed_at\":\"2025-10-14 17:37:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-14 17:55:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-14 17:55:24 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T17:18:51.774+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_dancer_info_-pl\\\"\"],\"cloned_from\":\"HoAI_pilot_5_dancer_info_-pl\"},{\"changed_at\":\"2025-10-14 17:37:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-14 17:55:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-14 17:55:24 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-15 18:41:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-15 18:47:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-10-15 18:50:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Panels>
