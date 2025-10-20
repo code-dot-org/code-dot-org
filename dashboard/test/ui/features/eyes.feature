@@ -6,7 +6,7 @@ Background:
 
 Scenario:
   When I open my eyes to test "multi"
-  Given I am on "http://studio.code.org/courses/course1/units/1/lessons/2/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1?noautoplay=true"
   And The header is finished animating
   Then element ".submitButton" is visible
   And I see no difference for "level load"
@@ -14,7 +14,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "match"
-  Given I am on "http://studio.code.org/courses/course1/units/1/lessons/14/levels/13?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/11/levels/1?noautoplay=true"
   And The header is finished animating
   Then element ".submitButton" is visible
   And I see no difference for "level load"
@@ -22,7 +22,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "text-only match"
-  Given I am on "http://studio.code.org/courses/course3/units/1/lessons/10/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/11/levels/2?noautoplay=true"
   And The header is finished animating
   Then element ".submitButton" is visible
   And I see no difference for "level load"
