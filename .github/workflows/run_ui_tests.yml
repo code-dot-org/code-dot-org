@@ -51,7 +51,7 @@ jobs:
             build_i18n: false
             localize_apps: true
             dashboard_enable_pegasus: true
-            dashboard_workers: 6
+            dashboard_workers: 8
             skip_seed_all: true
             no_https_store: true
             override_dashboard: \"localhost-studio.code.org\"
