@@ -15,7 +15,10 @@ import {
   standaloneProjectPrompts,
 } from '../../suggestedPrompts';
 
-import {AiTutorLegacyLabContextHelper} from './aiTutorContextHelper';
+import {
+  AiTutorLegacyLabContextHelper,
+  AiTutorLegacyLabParams,
+} from './aiTutorContextHelper';
 import AiTutorSidebar from './AiTutorSidebar';
 
 import styles from './AiTutorContainer.module.scss';
@@ -24,12 +27,14 @@ const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
 interface Level {
   longInstructions?: string;
+  hideSource?: boolean;
 }
 
 interface CommonLab {
   getCode?: () => Promise<string | undefined>;
   channel?: string;
   level?: Level;
+  hideSource?: boolean;
 }
 
 export const AiTutorContainer: FC<{
@@ -50,8 +55,16 @@ export const AiTutorContainer: FC<{
 
   const getHiddenContext = async () => {
     const sourceCode = await lab?.getCode?.();
-    const longInstructions = lab?.level?.longInstructions;
-    aiTutorHelper.setAiTutorContext({sourceCode, longInstructions});
+    const hideSource = lab?.hideSource ?? lab?.level?.hideSource ?? false;
+    const params: AiTutorLegacyLabParams = {
+      longInstructions: lab?.level?.longInstructions,
+    };
+    if (hideSource) {
+      params.hiddenSourceCode = sourceCode;
+    } else {
+      params.sourceCode = sourceCode;
+    }
+    aiTutorHelper.setAiTutorContext(params);
     const callback = aiTutorHelper.getHiddenContextCallback();
     return callback();
   };

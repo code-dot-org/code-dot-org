@@ -13,6 +13,7 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
   private async getHiddenContextString(): Promise<string> {
     const {
       sourceCode,
+      hiddenSourceCode,
       validationContents,
       validationResults,
       longInstructions,
