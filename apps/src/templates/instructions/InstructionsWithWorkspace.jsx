@@ -20,8 +20,6 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     children: PropTypes.node,
     instructionsStyle: PropTypes.object,
     workspaceStyle: PropTypes.object,
-    labType: PropTypes.string,
-    inLevel: PropTypes.bool,
 
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
@@ -97,14 +95,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
-    const {
-      instructionsStyle,
-      workspaceStyle,
-      instructionsHeight,
-      labType,
-      children,
-      inLevel,
-    } = this.props;
+    const {instructionsStyle, workspaceStyle, instructionsHeight, children} =
+      this.props;
 
     return (
       <span>
@@ -112,8 +104,6 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
           style={{...workspaceStyle, top: instructionsHeight}}
-          labType={labType}
-          inLevel={inLevel}
         >
           {children}
         </CodeWorkspaceContainer>
