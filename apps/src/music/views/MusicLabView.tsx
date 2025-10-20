@@ -1,6 +1,6 @@
 import {javascript} from '@codemirror/lang-javascript';
 import classNames from 'classnames';
-import React, {memo, useCallback, useContext, useEffect} from 'react';
+import React, {memo, useCallback, useContext, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
@@ -13,6 +13,7 @@ import {
   WARNING_BANNER_MESSAGES,
 } from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import useTimelineDancer from '@cdo/apps/lab2/hooks/useTimelineDancer';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {
   getAppOptionsEditBlocks,
@@ -25,6 +26,7 @@ import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -151,6 +153,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
+  const timelineAreaRef = useRef<HTMLDivElement | null>(null);
+  const {dancerMeasurePosition, danceMove, dancerSize} = useTimelineDancer({
+    isPlaying,
+    levelProperties,
+    timelineAreaRef,
+  });
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -471,22 +479,24 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             dir="ltr"
             id="timeline-area"
             className={moduleStyles.timelineArea}
+            ref={timelineAreaRef}
           >
             <PanelContainer
               id="timeline-panel"
               headerContent={musicI18n.panelHeaderTimeline()}
               hideHeaders={hideHeaders}
             >
+              <div className={moduleStyles.dancerCanvasContainer}>
+                <DancerCanvas
+                  size={dancerSize}
+                  measurePosition={dancerMeasurePosition}
+                  move={danceMove}
+                />
+              </div>
               <Timeline
                 allowChangeStartingPlayheadPosition={
                   (levelProperties.levelData as MusicLevelData | undefined)
                     ?.allowChangeStartingPlayheadPosition
-                }
-                danceMove={
-                  // URL parameter allows overriding the level setting for testing.
-                  AppConfig.getValue('danceMove')?.toString() ||
-                  (levelProperties.levelData as MusicLevelData | undefined)
-                    ?.danceMove
                 }
                 isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
               />

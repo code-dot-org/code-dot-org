@@ -4,10 +4,10 @@
 // We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
 // These are very small changes so this can likely be removed with no issues.
 /* eslint-disable import/order */
-import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 /* eslint-enable import/order */
 
+import HeroBanner from '@code-dot-org/component-library/heroBanner';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
@@ -24,7 +24,7 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
-import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
+import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.svg';
 import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
 
 import {curriculumDataShape} from './curriculumCatalogConstants';
@@ -287,12 +287,17 @@ const CurriculumCatalog = ({
 
   return (
     <>
-      <HeaderBanner
-        headingText={i18n.curriculumCatalogHeaderTitle()}
-        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        backgroundUrl={CourseCatalogBannerBackground}
-        imageUrl={CourseCatalogIllustration01}
+      <HeroBanner
+        className={style.curriculumCatalogHeroBanner}
+        data-theme="Dark"
+        heading={i18n.curriculumCatalogHeaderTitle()}
+        subHeading={i18n.curriculumCatalogHeaderSubtitle()}
+        imageProps={{src: CourseCatalogIllustration01}}
+        backgroundImageUrl={CourseCatalogBannerBackground}
+        withWideText
+        hideImageOnSmallScreen
       />
+
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageCenter}>
           <div className={style.assignSuccessMessageContainer}>
