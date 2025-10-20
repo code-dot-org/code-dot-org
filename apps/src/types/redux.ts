@@ -26,6 +26,7 @@ import {Weblab2State} from '@cdo/apps/weblab2/redux';
 
 import {DanceState} from '../dance/danceRedux';
 import {BlocklyState} from '../redux/blockly';
+import {LegacyLabsState} from '../redux/legacyLabs';
 
 // The type for our global redux store. This is incomplete until we type every slice
 // of our redux store. When converting a slice to typescript, add it to this object
@@ -54,6 +55,7 @@ export interface RootState {
   mapbox: MapboxState;
   maze: MazeState;
   music: MusicState;
+  pageConstants: LegacyLabsState;
   predictLevel: PredictLevelState;
   progress: ProgressState;
   teacherPanel: TeacherPanelState;
