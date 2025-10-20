@@ -5,6 +5,7 @@ import React, {FC} from 'react';
 import {useSelector} from 'react-redux';
 
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
+import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
@@ -18,7 +19,6 @@ import {AiTutorLegacyLabContextHelper} from './aiTutorContextHelper';
 import AiTutorSidebar from './AiTutorSidebar';
 
 import styles from './AiTutorContainer.module.scss';
-import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 
 const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
