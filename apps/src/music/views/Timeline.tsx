@@ -10,7 +10,6 @@ import React, {
 import {useDispatch, useSelector} from 'react-redux';
 
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import appConfig from '../appConfig';
@@ -41,7 +40,6 @@ const extraMeasures = 8;
 
 interface TimelineProps {
   allowChangeStartingPlayheadPosition?: boolean;
-  danceMove?: string;
   isPredictLevel?: boolean;
 }
 
@@ -50,7 +48,6 @@ interface TimelineProps {
  */
 const Timeline: React.FunctionComponent<TimelineProps> = ({
   allowChangeStartingPlayheadPosition,
-  danceMove,
   isPredictLevel,
 }) => {
   const isPlaying = useMusicSelector(state => state.music.isPlaying);
@@ -330,13 +327,6 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
         </div>
       </div>
       {loopEnabled && <LoopMarkers loopStart={loopStart} loopEnd={loopEnd} />}
-      <div className={moduleStyles.dancerCanvasContainer}>
-        <DancerCanvas
-          size={availableHeight}
-          measurePosition={positionToUse}
-          move={danceMove}
-        />
-      </div>
     </div>
   );
 };
