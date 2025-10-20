@@ -1,5 +1,22 @@
 import {AiTutorContext, MaybePromise} from '../types';
 
+const USER_SELECTION_INTRO =
+  'The student is asking about this part of their current code:';
+
+const SOURCE_CODE_INTRO = "Here is the student's current code:";
+
+const HIDDEN_SOURCE_CODE_INTRO =
+  'Here is the hidden source code used to run this lesson. The student cannot view or modify this code so do not reference it in your response:';
+
+const VALIDATION_CONTENTS_INTRO = 'Here is the validation code:';
+
+const VALIDATION_RESULTS_INTRO =
+  'Here are the validation test names along with their results, in JSON:';
+
+const INSTRUCTIONS_INTRO = 'Here are the instructions:';
+
+const DOCUMENTATION_INTRO = 'Here is the documentation:';
+
 /*
  * Abstract base class used to provide lab specific context to AI Tutor.  Each lab will inherit from and
  * extend this class, but conversion to a system prompt string should be kept here for coordination and
@@ -22,33 +39,20 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
     } = await this.getAiTutorContext();
 
     const hiddenContextString = [
-      ...(userSelection
-        ? [
-            'The student is asking about this part of their current code:',
-            userSelection,
-          ]
-        : []),
-      "Here is the student's current code:",
-      sourceCode,
-      ...(validationContents
-        ? ['Here is the validation code:', `\`\`\`${validationContents}\`\`\``]
-        : []),
-      ...(validationResults
-        ? [
-            'Here are the validation test names along with their results, in JSON:',
-            validationResults,
-          ]
-        : []),
-      ...(longInstructions
-        ? ['Here are the instructions:', longInstructions]
-        : []),
-      ...(documentation
-        ? [
-            'Here is the documentation. (The student can view the documentation by clicking the book icon at the top of the workspace.):',
-            documentation,
-          ]
-        : []),
-    ].join('\n\n');
+      userSelection ? `${USER_SELECTION_INTRO} ${userSelection}` : '',
+      sourceCode ? `${SOURCE_CODE_INTRO} ${sourceCode}` : '',
+      hiddenSourceCode ? `${HIDDEN_SOURCE_CODE_INTRO} ${hiddenSourceCode}` : '',
+      validationContents
+        ? `${VALIDATION_CONTENTS_INTRO} ${validationContents}`
+        : '',
+      validationResults
+        ? `${VALIDATION_RESULTS_INTRO} ${validationResults}`
+        : '',
+      longInstructions ? `${INSTRUCTIONS_INTRO} ${longInstructions}` : '',
+      documentation ? `${DOCUMENTATION_INTRO} ${documentation}` : '',
+    ]
+      .filter(Boolean)
+      .join('\n\n');
 
     // TODO: This log is a bit chatty, but useful while we're working on this feature.
     // remove once tutor context is more stable, or if it gets annoying.
