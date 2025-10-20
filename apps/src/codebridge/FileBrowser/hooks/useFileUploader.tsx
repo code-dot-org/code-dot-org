@@ -1,6 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {validateFileName as validateCodebridgeFileName} from '@codebridge/utils';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -11,6 +10,7 @@ import {
 } from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -64,7 +64,7 @@ export const useFileUploader = (
     (eventName: string, payload: Record<string, string>) => {
       switch (eventName) {
         case analyticsEvents.UPLOAD_FAILED: {
-          sendCodebridgeAnalyticsEvent(
+          sendLab2AnalyticsEvent(
             EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE,
             appName,
             payload
@@ -72,7 +72,7 @@ export const useFileUploader = (
           return;
         }
         case analyticsEvents.UPLOAD_UNACCEPTED_FILE: {
-          sendCodebridgeAnalyticsEvent(
+          sendLab2AnalyticsEvent(
             EVENTS.CODEBRIDGE_UPLOAD_FAILED,
             appName,
             payload

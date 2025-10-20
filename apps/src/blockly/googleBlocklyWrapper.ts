@@ -18,6 +18,7 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
@@ -920,7 +921,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options.enableKeyboardNavigation ||
       experiments.isEnabledAllowingQueryString(
         experiments.BLOCKLY_KEYBOARD_NAVIGATION
-      )
+      ) ||
+      DCDO.get('blockly-keyboard-navigation', false)
     ) {
       initializeKeyboardNavigation(
         workspace,

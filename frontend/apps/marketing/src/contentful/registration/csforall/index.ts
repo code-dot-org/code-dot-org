@@ -4,6 +4,9 @@ import Button, {
 import Card, {
   CardContentfulComponentDefinition,
 } from '@/components/contentful/card';
+import ActivityCarousel, {
+  ActivityCarouselContentfulComponentDefinition,
+} from '@/components/contentful/carousels/activityCarousel';
 import CardCollection, {
   CardCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/cardCollection';
@@ -55,6 +58,10 @@ import Video, {
 
 const contentfulRegistration = {
   componentRegistrations: [
+    {
+      component: ActivityCarousel,
+      definition: ActivityCarouselContentfulComponentDefinition,
+    },
     {
       component: AdoptionMap,
       definition: AdoptionMapContentfulComponentDefinition,

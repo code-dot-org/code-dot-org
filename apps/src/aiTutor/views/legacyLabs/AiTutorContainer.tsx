@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import React, {FC} from 'react';
 import {useSelector} from 'react-redux';
 
-import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
+import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
@@ -22,9 +22,14 @@ import styles from './AiTutorContainer.module.scss';
 
 const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
+interface Level {
+  longInstructions?: string;
+}
+
 interface CommonLab {
   getCode?: () => Promise<string | undefined>;
   channel?: string;
+  level?: Level;
 }
 
 export const AiTutorContainer: FC<{
@@ -44,8 +49,9 @@ export const AiTutorContainer: FC<{
     labState.appType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
 
   const getHiddenContext = async () => {
-    const code = await lab?.getCode?.();
-    aiTutorHelper.setAiTutorContext({source: code ?? ''});
+    const sourceCode = await lab?.getCode?.();
+    const longInstructions = lab?.level?.longInstructions;
+    aiTutorHelper.setAiTutorContext({sourceCode, longInstructions});
     const callback = aiTutorHelper.getHiddenContextCallback();
     return callback();
   };
@@ -84,7 +90,7 @@ export const AiTutorContainer: FC<{
             color="black"
           />
         </div>
-        <AiTutor2Chat
+        <AiTutorChat
           hiddenContextCallback={getHiddenContext}
           aiTutorChatButtonData={allPrompts}
           channelId={lab?.channel}

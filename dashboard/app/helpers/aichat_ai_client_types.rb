@@ -126,6 +126,9 @@ module AichatAiClientTypes
   #   // have a way to check w/ RubyTypes so an additional check is required.
   #   required: string[];
   #   description?: string;
+  #   additionalProperties: boolean;
+  #   // propertyOrdering is only used by Gemini.
+  #   propertyOrdering?: string[];
   # }
   JsonObjectSchema = Interface(
     :type, string('object'),
@@ -133,6 +136,7 @@ module AichatAiClientTypes
     :required, string[],
     :description, Optional(string),
     :additionalProperties, boolean(false),
+    :propertyOrdering, Optional(string[])
   )
 
   JsonArraySchema_ = ForwardRef()

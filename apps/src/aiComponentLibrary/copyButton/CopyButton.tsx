@@ -37,15 +37,14 @@ const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
           setShowCopyConfirmation(true);
           setTimeout(() => setShowCopyConfirmation(false), CONFIRM_TIMEOUT_MS);
         }}
-        color="white"
+        color="gray"
         size="xs"
         isIconOnly
         icon={{
-          iconStyle: 'regular',
+          iconStyle: 'solid',
           iconName: 'copy',
         }}
-        type="primary"
-        className={style['copy-button']}
+        type="tertiary"
       />
     </WithTooltip>
   );
