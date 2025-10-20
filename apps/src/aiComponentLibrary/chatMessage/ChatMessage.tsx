@@ -89,7 +89,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 openExternalLinksInNewTab
               />
             ) : (
-              text
+              <p>{text}</p>
             )}
           </div>
         </div>
