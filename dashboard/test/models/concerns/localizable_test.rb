@@ -40,29 +40,26 @@ class LocalizableTest < ActiveSupport::TestCase
   let(:described_instance) {described_model_class.new(display_name: 'Test Display', description: 'Test Description', key: 'described_key')}
 
   before do
-    # Reset I18n locale to default
     I18n.locale = I18n.default_locale
-
-    # Clear any existing translations
-    I18n.backend.reload!
-
-    # Setup test translations
-    I18n.backend.store_translations(
-      :es, {
-        data: {
-          described_models: {
-            described_key: {
-              display_name: 'Nombre de Prueba',
-              description: 'Descripción de Prueba'
-            },
-            another_key: {
-              display_name: 'Otro Nombre',
-              description: 'Otra Descripción'
+    @@translations_setup ||= begin
+      I18n.backend.store_translations(
+        :es, {
+          data: {
+            described_models: {
+              described_key: {
+                display_name: 'Nombre de Prueba',
+                description: 'Descripción de Prueba'
+              },
+              another_key: {
+                display_name: 'Otro Nombre',
+                description: 'Otra Descripción'
+              }
             }
           }
         }
-      }
-    )
+      )
+      true
+    end
   end
 
   describe 'class methods' do
