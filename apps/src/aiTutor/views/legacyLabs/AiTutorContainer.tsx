@@ -13,12 +13,12 @@ import {
   levelPrompts,
   standaloneProjectPrompts,
 } from '../../suggestedPrompts';
-import {LegacyLabsState} from '../../types';
 
 import {AiTutorLegacyLabContextHelper} from './aiTutorContextHelper';
 import AiTutorSidebar from './AiTutorSidebar';
 
 import styles from './AiTutorContainer.module.scss';
+import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 
 const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
