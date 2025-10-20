@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {AI_TUTOR_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
+
 import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
 import experiments from '../../util/experiments';
@@ -26,6 +28,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
+    labType: PropTypes.string,
   };
 
   // only used so that we can rerender when resized
@@ -102,12 +105,16 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
-    const {instructionsStyle, workspaceStyle, instructionsHeight, children} =
-      this.props;
+    const {
+      instructionsStyle,
+      workspaceStyle,
+      instructionsHeight,
+      labType,
+      children,
+    } = this.props;
 
-    const AiTutorLabs = ['applab', 'gamelab', 'weblab'];
     const showAiTutor =
-      AiTutorLabs.includes(this.props.labType) &&
+      AI_TUTOR_LABS.includes(labType) &&
       experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
@@ -150,6 +157,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 export default connect(
   state => ({
     instructionsHeight: state.instructions.renderedHeight,
+    labType: state.pageConstants.appType,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {
