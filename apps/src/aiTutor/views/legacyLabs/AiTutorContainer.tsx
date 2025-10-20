@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import React, {FC} from 'react';
 import {useSelector} from 'react-redux';
 
-import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
+import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
