@@ -5,6 +5,24 @@ require 'test_helper'
 class LocalizableTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
+  # Setup translations once when the test class loads
+  I18n.backend.store_translations(
+    :es, {
+      data: {
+        described_models: {
+          described_key: {
+            display_name: 'Nombre de Prueba',
+            description: 'Descripción de Prueba'
+          },
+          another_key: {
+            display_name: 'Otro Nombre',
+            description: 'Otra Descripción'
+          }
+        }
+      }
+    }
+  )
+
   # Create a test model that includes the Localizable concern
   let(:described_model_class) do
     Class.new do
@@ -41,25 +59,6 @@ class LocalizableTest < ActiveSupport::TestCase
 
   before do
     I18n.locale = I18n.default_locale
-    @@translations_setup ||= begin
-      I18n.backend.store_translations(
-        :es, {
-          data: {
-            described_models: {
-              described_key: {
-                display_name: 'Nombre de Prueba',
-                description: 'Descripción de Prueba'
-              },
-              another_key: {
-                display_name: 'Otro Nombre',
-                description: 'Otra Descripción'
-              }
-            }
-          }
-        }
-      )
-      true
-    end
   end
 
   describe 'class methods' do
