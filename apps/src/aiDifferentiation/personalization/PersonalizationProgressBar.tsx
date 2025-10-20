@@ -9,9 +9,9 @@ import style from './personalization-information.module.scss';
 
 type PersonalizationProgressBarProps = {
   /** Current question number */
-  currentQuestionNumber?: number;
+  currentQuestionNumber: number;
   /** Total number of questions */
-  totalQuestionsNumber?: number;
+  totalQuestionsNumber: number;
 };
 
 const PersonalizationProgressBar: React.FC<PersonalizationProgressBarProps> = ({
@@ -19,7 +19,7 @@ const PersonalizationProgressBar: React.FC<PersonalizationProgressBarProps> = ({
   totalQuestionsNumber,
 }) => {
   const progressValue = +(
-    (currentQuestionNumber! / totalQuestionsNumber!) *
+    (currentQuestionNumber / totalQuestionsNumber) *
     100
   ).toFixed(0);
 
@@ -38,8 +38,6 @@ const PersonalizationProgressBar: React.FC<PersonalizationProgressBarProps> = ({
           sx={{
             height: '0.75rem',
             background: 'var(--background-neutral-quinary, #C6CED6)',
-            color: 'red',
-            fill: 'red',
             borderRadius: '6.25rem',
             [`& .${linearProgressClasses.bar}`]: {
               borderRadius: '6.25rem',
