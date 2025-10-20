@@ -9,6 +9,7 @@ import {LevelProperties} from '../types';
 type UseTimelineDancerArgs = {
   isPlaying: boolean;
   levelProperties: LevelProperties;
+  timelineAreaRef: React.RefObject<HTMLElement | null>;
 };
 
 type UseTimelineDancerResult = {
@@ -20,6 +21,7 @@ type UseTimelineDancerResult = {
 export default function useTimelineDancer({
   isPlaying,
   levelProperties,
+  timelineAreaRef,
 }: UseTimelineDancerArgs): UseTimelineDancerResult {
   const currentPlayheadPosition = useAppSelector(
     state => state.music.currentPlayheadPosition
@@ -39,16 +41,18 @@ export default function useTimelineDancer({
   const [dancerSize, setDancerSize] = useState(0);
 
   useEffect(() => {
-    const el = document.getElementById('timeline-area');
-    if (!el) return;
+    const timelineArea = timelineAreaRef.current;
+    if (!timelineArea) return;
 
-    const update = () => setDancerSize(el.getBoundingClientRect().height || 0);
-    update();
+    const updateDancerSize = () =>
+      setDancerSize(timelineArea.getBoundingClientRect().height || 0);
+    updateDancerSize();
 
-    const ro = new ResizeObserver(update);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
+    const resizeObserver = new ResizeObserver(updateDancerSize);
+    resizeObserver.observe(timelineArea);
+
+    return () => resizeObserver.disconnect();
+  }, [timelineAreaRef]);
 
   return {dancerMeasurePosition, danceMove, dancerSize};
 }

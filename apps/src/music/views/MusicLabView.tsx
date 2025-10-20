@@ -1,6 +1,6 @@
 import {javascript} from '@codemirror/lang-javascript';
 import classNames from 'classnames';
-import React, {memo, useCallback, useContext, useEffect} from 'react';
+import React, {memo, useCallback, useContext, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
@@ -153,10 +153,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
-
+  const timelineAreaRef = useRef<HTMLDivElement | null>(null);
   const {dancerMeasurePosition, danceMove, dancerSize} = useTimelineDancer({
     isPlaying,
     levelProperties,
+    timelineAreaRef,
   });
 
   // Pass music validator to Progress Manager
@@ -484,6 +485,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             dir="ltr"
             id="timeline-area"
             className={moduleStyles.timelineArea}
+            ref={timelineAreaRef}
           >
             <PanelContainer
               id="timeline-panel"
