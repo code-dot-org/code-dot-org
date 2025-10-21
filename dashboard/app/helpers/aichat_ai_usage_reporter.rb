@@ -49,13 +49,13 @@ class AichatAiUsageReporter
     ].map do |key, value|
       {
         metric_name: "AichatRequest.#{key}",
-        modelId: @model_id,
         value: value,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: [
           {name: 'Environment', value: CDO.rack_env},
           {name: 'Multimodal', value: is_multimodal.to_s},
+          {name: 'ModelId', value: @model_id},
         ]
       }
     end
