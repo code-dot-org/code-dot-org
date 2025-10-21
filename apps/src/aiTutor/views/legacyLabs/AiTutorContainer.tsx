@@ -2,11 +2,11 @@ import Button from '@code-dot-org/component-library/button';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {FC} from 'react';
+import {useSelector} from 'react-redux';
 
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {
@@ -36,7 +36,7 @@ export const AiTutorContainer: FC<{
   toggleAiChat: () => void;
   aiChatOpen: boolean;
 }> = ({toggleAiChat, aiChatOpen}) => {
-  const labState = useAppSelector(
+  const labState = useSelector(
     (state: {pageConstants: LegacyLabsState}) => state.pageConstants
   );
 
