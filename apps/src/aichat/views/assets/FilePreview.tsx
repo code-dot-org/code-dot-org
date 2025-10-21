@@ -123,9 +123,15 @@ const FilePreview: React.FC<{
           <div className={styles.filenameContainer}>
             <StrongText>{filename}</StrongText>
             <span className={styles.fileDetail}>
-              {type === 'pdf' && 'PDF'}
-              {type === 'text' && getFileExtension(filename).toUpperCase()}
-              {fileDetail && ` ${fileDetail}`}
+              {[
+                type === 'pdf' ? 'PDF' : null,
+                type === 'text'
+                  ? getFileExtension(filename).toUpperCase()
+                  : null,
+                fileDetail ? fileDetail : null,
+              ]
+                .filter(Boolean)
+                .join(' ')}
             </span>
           </div>
         </>
