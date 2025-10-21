@@ -129,7 +129,7 @@ namespace :ci do
           "--local " \
           "--ci " \
           "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
-          "--parallel 22 " \
+          "--parallel 26 " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
           "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
@@ -143,7 +143,7 @@ namespace :ci do
             "--config Chrome,iPhone " \
             "--local " \
             "--ci " \
-            "--parallel 22 " \
+            "--parallel 26 " \
             "--retry_count 1 " \
             "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
             "--with-status-page " \
