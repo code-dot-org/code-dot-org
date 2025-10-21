@@ -7,6 +7,7 @@ import {AI_TUTOR_LABS} from './constants';
 export interface AiTutorLegacyLabParams {
   sourceCode?: string;
   hiddenSourceCode?: string;
+  readOnlySourceCode?: string;
   longInstructions?: string;
   labType?: string;
 }
@@ -21,6 +22,7 @@ export class AiTutorLegacyLabContextHelper extends AiTutorContextHelper<AiTutorL
   setAiTutorContext({
     sourceCode,
     hiddenSourceCode,
+    readOnlySourceCode,
     longInstructions,
     labType,
   }: AiTutorLegacyLabParams) {
@@ -28,6 +30,7 @@ export class AiTutorLegacyLabContextHelper extends AiTutorContextHelper<AiTutorL
     this.aiTutorContext = {
       sourceCode,
       hiddenSourceCode,
+      readOnlySourceCode,
       longInstructions,
     };
   }

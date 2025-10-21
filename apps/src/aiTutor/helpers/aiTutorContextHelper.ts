@@ -8,6 +8,9 @@ const SOURCE_CODE_INTRO = "Here is the student's current code:";
 const HIDDEN_SOURCE_CODE_INTRO =
   'Here is the hidden source code used to run this lesson. The student cannot view or modify this code so do not reference it in your response:';
 
+const READ_ONLY_SOURCE_CODE_INTRO =
+  'Here is the source code used to run this lesson. The student can view the code but cannot modify it:';
+
 const VALIDATION_CONTENTS_INTRO = 'Here is the validation code:';
 
 const VALIDATION_RESULTS_INTRO =
@@ -36,6 +39,7 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
     const {
       sourceCode,
       hiddenSourceCode,
+      readOnlySourceCode,
       validationContents,
       validationResults,
       longInstructions,
@@ -45,12 +49,13 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
 
     const hiddenContextString = [
       userSelection ? `${USER_SELECTION_INTRO} ${userSelection}` : '',
-      sourceCode ? `${SOURCE_CODE_INTRO} ${codeBlockify(sourceCode)}` : '',
-      hiddenSourceCode
-        ? `${HIDDEN_SOURCE_CODE_INTRO} ${codeBlockify(hiddenSourceCode)}`
+      sourceCode ? `${SOURCE_CODE_INTRO} ${sourceCode}` : '',
+      hiddenSourceCode ? `${HIDDEN_SOURCE_CODE_INTRO} ${hiddenSourceCode}` : '',
+      readOnlySourceCode
+        ? `${READ_ONLY_SOURCE_CODE_INTRO} ${readOnlySourceCode}`
         : '',
       validationContents
-        ? `${VALIDATION_CONTENTS_INTRO} ${codeBlockify(validationContents)}`
+        ? `${VALIDATION_CONTENTS_INTRO} ${validationContents}`
         : '',
       validationResults
         ? `${VALIDATION_RESULTS_INTRO} ${validationResults}`

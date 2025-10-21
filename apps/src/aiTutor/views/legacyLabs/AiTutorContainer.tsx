@@ -54,14 +54,19 @@ export const AiTutorContainer: FC<{
     labState.appType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
 
   const getHiddenContext = async () => {
-    const sourceCode = await lab?.getCode?.();
-    const hideSource = lab?.hideSource ?? lab?.level?.hideSource ?? false;
     const params: AiTutorLegacyLabParams = {
       longInstructions: lab?.level?.longInstructions,
       labType: labState.appType,
     };
+
+    const sourceCode = await lab?.getCode?.();
+    const hideSource = lab?.hideSource ?? lab?.level?.hideSource ?? false;
+    const readOnly = labState.isReadOnlyWorkspace;
+
     if (hideSource) {
       params.hiddenSourceCode = sourceCode;
+    } else if (readOnly) {
+      params.readOnlySourceCode = sourceCode;
     } else {
       params.sourceCode = sourceCode;
     }
