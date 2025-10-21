@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2025-10-17T21:25:06.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "link_title": "End-of-Lesson Survey ",
+    "url": "https://forms.gle/JJvYRhnUECoF4Kf17",
+    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End-of-Lesson Survey](https://forms.gle/JJvYRhnUECoF4Kf17).",
+    "long_instructions": "#### Please take a moment to respond to this short survey. \r\n\r\nCode.org takes your privacy seriously. Your responses will be kept **anonymous**."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-17T21:25:06.867+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson4-pilot-survey_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson4-pilot-survey_2025\"},{\"changed_at\":\"2025-10-17 21:25:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</ExternalLink>
