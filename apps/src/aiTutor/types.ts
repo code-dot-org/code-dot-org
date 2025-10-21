@@ -26,3 +26,5 @@ export interface AnalyticsData {
   levelId?: number;
   unitId?: number;
 }
+
+export type MaybePromise<T> = T | Promise<T>;
