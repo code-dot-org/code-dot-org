@@ -174,6 +174,7 @@ export type ResolvedDancerAssets = {
   headUrl: string;
   metadataUrl: string;
   bodyUrl?: string;
+  bodyMetadataUrl?: string;
 };
 
 export type ResolveDancerAssetsOpts = {
@@ -186,4 +187,7 @@ export type LocalStoragePayload = {
   adlibOption: string;
   choices: string[];
   variant: number | string;
+  bodyVariant?: number;
 } | null;
+
+export type RGB = [number, number, number];

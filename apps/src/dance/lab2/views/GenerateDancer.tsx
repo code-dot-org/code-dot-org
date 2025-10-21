@@ -102,6 +102,8 @@ const adlibs: AdlibsType = {
   },
 };
 
+const bodyVariantCount = 1;
+
 interface DancerGenerateProps {
   adlibOption: string;
   levelProperties: DanceLevelProperties;
@@ -145,8 +147,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
     // Avoid showing a variant if it was shown recently.
     let variant = undefined;
+    let bodyVariant = 0;
     do {
       variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
+      bodyVariant = getRandomInt(0, bodyVariantCount);
     } while (variantHistory.current.includes(variant));
     const newVariantsHistory = [...variantHistory.current, variant];
     // Keep the array length at a maximum of 3
@@ -155,7 +159,12 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     }
     variantHistory.current = newVariantsHistory;
 
-    const newDancerMetadata = JSON.stringify({adlibOption, choices, variant});
+    const newDancerMetadata = JSON.stringify({
+      adlibOption,
+      choices,
+      variant,
+      bodyVariant,
+    });
     trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
     setDancerMetadata(newDancerMetadata);
     const elapsedTime = Date.now() - startTime;

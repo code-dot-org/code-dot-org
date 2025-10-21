@@ -22,6 +22,7 @@ import {
   ResolveDancerAssetsOpts,
   ResolvedDancerAssets,
   RGBA,
+  RGB,
 } from './LottieDancerTypes';
 
 const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
@@ -33,6 +34,8 @@ const DEFAULT_DANCER = 'default';
 
 const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${DEFAULT_PATH}/${DEFAULT_DANCER}.png`;
 const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${DEFAULT_PATH}/${DEFAULT_DANCER}-metadata.json`;
+const DEFAULT_BODY_URL = `${BASE_HOST}/dancers/bodies/default.png`;
+const DEFAULT_BODY_METADATA_URL = `${BASE_HOST}/dancers/bodies/default.json`;
 
 // Accessory-name mapping used to recolor vector content in the Lottie JSON.
 const BASE_ACCESSORY_MAP = {
@@ -71,19 +74,30 @@ export const getConfigValue = (name: string) =>
   queryParams(name) as string | undefined;
 
 // Given information about a generated dancer, this returns the URL for the head image.
-export function getGeneratedDancerAssets(
+function getGeneratedDancerAssets(
   adlibOption: string,
   choices: string[] | undefined,
-  variant: number
+  variant: number,
+  bodyVariant: number | null
 ) {
   const joinedChoices = choices?.join('-');
-  const cacheFilePath = `${BASE_HOST}/dancer/${adlibOption}/${joinedChoices}-${variant
+  const dancerPath = `${BASE_HOST}/dancer/${adlibOption}/${joinedChoices}-${variant
     .toString()
     .padStart(2, '0')}`;
-  const head = `${cacheFilePath}.png`;
-  const metadata = `${cacheFilePath}-metadata.json`;
-
-  return {head, metadata};
+  const head = `${dancerPath}.png`;
+  const metadata = `${dancerPath}-metadata.json`;
+  const adjectiveIndex = adlibOption.split('-').indexOf('adjective');
+  const bodyPath = `${BASE_HOST}/dancers/bodies/`;
+  let body = `${bodyPath}default.png`;
+  let bodyMetadata = `${bodyPath}default.json`;
+  if (adjectiveIndex >= 0 && choices && choices[adjectiveIndex]) {
+    const adlibBody = `${choices[adjectiveIndex]}-${bodyVariant
+      ?.toString()
+      .padStart(2, '0')}`;
+    body = `${bodyPath}${adlibBody}.png`;
+    bodyMetadata = `${bodyPath}${adlibBody}.json`;
+  }
+  return {head, metadata, body, bodyMetadata};
 }
 
 // Example: .../dancers/input/DUCK/duck_roll.json
@@ -144,7 +158,6 @@ export function applyColorMapping(
     tertiaryLeg?: Set<string>;
   } = getAccessoryMap(skeletonName);
 
-  console.log({accessoryMap});
   const normalize = (s?: string) =>
     (s || '').toLowerCase().replace(/[_-]+/g, ' ').trim();
 
@@ -173,7 +186,6 @@ export function applyColorMapping(
     accessoryMap.tertiaryLeg || [],
     tokenToRx
   );
-  console.log({SECONDARY_ARM_RXS, TERTIARY_ARM_RXS, TERTIARY_LEG_RXS});
   const anyMatch = (str: string | undefined, rxs: RegExp[]) =>
     !!str && rxs.some(rx => rx.test(str));
 
@@ -334,9 +346,9 @@ export function findPrecompLayerDeep(
     }
 
     for (let i = 0; i < pre.layers.length; i++) {
-      const layer = pre.layers[i] as LottieLayer;
+      const layer = pre.layers[i];
       if (layer && layer.ty === 0 && nameRx.test(layer.nm || '')) {
-        const precompLayer = layer as LottiePrecompLayer;
+        const precompLayer = layer;
         return {
           containerAsset: pre,
           layers: pre.layers,
@@ -356,7 +368,7 @@ export function getAssetById(
   id: string
 ): LottieAssetPrecomp | null {
   return (animationData.assets || []).find(
-    a => a && a.id === id
+    animationAsset => animationAsset && animationAsset.id === id
   ) as LottieAssetPrecomp | null;
 }
 
@@ -369,16 +381,16 @@ export function hideLayersByTypeAndCaptureKs(
   let captured: LottieLayerCommon['ks'] | null = null;
 
   for (let i = 0; i < layers.length; i++) {
-    const L = layers[i] as LottieLayer;
-    if (!L) continue;
+    const currentLayer = layers[i];
+    if (!currentLayer) continue;
 
-    if (typesToHide.includes(L.ty)) {
+    if (typesToHide.includes(currentLayer.ty)) {
       // Standardize on the hidden flag (no timing tweaks)
-      L.hd = true;
+      currentLayer.hd = true;
 
       // Deep clone the first available ks
-      if (!captured && L.ks) {
-        captured = JSON.parse(JSON.stringify(L.ks));
+      if (!captured && currentLayer.ks) {
+        captured = JSON.parse(JSON.stringify(currentLayer.ks));
       }
 
       if (firstHiddenIndex < 0) firstHiddenIndex = i;
@@ -471,7 +483,6 @@ export function insertImageLayer(
     ip: 0,
     op: 9999,
     st: 0,
-    // defaults that cover both existing variants; can be overridden
     bm: 0,
     hd: false,
     hasMask: false,
@@ -491,7 +502,7 @@ export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
 }
 
 /**
- * Resolves the generated dancer assets (head PNG + metadata JSON) and optional body PNG.
+ * Resolves the generated dancer assets (head PNG + metadata JSON) and optional body PNG and metadata JSON.
  * Source of truth order:
  *   1) URL params (?path=...&dancer=...) use exactly that dancer and/or (?body=...) for body
  *   2) localStorage('dancer-ai-generate') with {adlibOption, choices[], variant}
@@ -499,9 +510,11 @@ export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
  * The renderer will not replace the body unless a bodyUrl is returned here.
  * TODO: Use channel ID instead of local storage.
  */
-export function resolveDancerAssets(
-  opts: ResolveDancerAssetsOpts = {}
-): ResolvedDancerAssets {
+export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
+  urls: ResolvedDancerAssets;
+} {
+  // Source tags are need for the head image URL only. It prevents a CORS error
+  // that results when we load the same image URL in different contexts (dancer canvas and Blockly field).
   const {sourceTag = 'default'} = opts;
   const srcSuffix = `?src=${encodeURIComponent(sourceTag)}`;
 
@@ -509,10 +522,13 @@ export function resolveDancerAssets(
   const urls: ResolvedDancerAssets = {
     headUrl: `${DEFAULT_HEAD_URL}${srcSuffix}`,
     metadataUrl: DEFAULT_METADATA_URL,
+    bodyUrl: DEFAULT_BODY_URL,
+    bodyMetadataUrl: DEFAULT_BODY_METADATA_URL,
   };
 
   // 2) Generated dancer from localStorage
   let localStorageOptions: LocalStoragePayload = null;
+  let bodyVariant: number | null = null;
   try {
     const raw = localStorage.getItem('dancer-ai-generate');
     localStorageOptions = raw ? (JSON.parse(raw) as LocalStoragePayload) : null;
@@ -524,7 +540,7 @@ export function resolveDancerAssets(
     const choices = Array.isArray(localStorageOptions?.choices)
       ? (localStorageOptions!.choices as string[])
       : null;
-
+    bodyVariant = localStorageOptions?.bodyVariant ?? null;
     const variant = localStorageOptions?.variant;
 
     if (
@@ -533,9 +549,16 @@ export function resolveDancerAssets(
       choices.length > 0 &&
       typeof variant === 'number'
     ) {
-      const assets = getGeneratedDancerAssets(adlibOption, choices, variant);
+      const assets = getGeneratedDancerAssets(
+        adlibOption,
+        choices,
+        variant,
+        bodyVariant
+      );
       urls.headUrl = `${assets.head}${srcSuffix}`;
       urls.metadataUrl = assets.metadata;
+      urls.bodyUrl = assets.body;
+      urls.bodyMetadataUrl = assets.bodyMetadata;
     }
   }
 
@@ -549,11 +572,188 @@ export function resolveDancerAssets(
     urls.headUrl = `${headPrefix}.png${srcSuffix}`;
     urls.metadataUrl = `${headPrefix}-metadata.json`;
   }
-  // Bodies are currently only specified by URL param, not generated dancer.
   if (bodyParam) {
     const bodyPrefix = `${BASE_HOST}/dancers/bodies/`;
     urls.bodyUrl = `${bodyPrefix}${bodyParam}.png`;
+    urls.bodyMetadataUrl = `${bodyPrefix}${bodyParam}.json`;
+  }
+  console.log('Resolved dancer assets:', urls);
+  return {urls};
+}
+
+export function hexFromRgba(rgba: RGBA | null | undefined): string {
+  if (!rgba) return '000000';
+  const [r, g, b] = rgba;
+  const to255 = (x: number) => Math.max(0, Math.min(255, Math.round(x * 255)));
+  return [to255(r), to255(g), to255(b)]
+    .map(v => v.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+function rgbDistanceSq(a: RGB, b: RGB): number {
+  const deltaRed = a[0] - b[0];
+  const deltaGreen = a[1] - b[1];
+  const deltaBlue = a[2] - b[2];
+  return deltaRed * deltaRed + deltaGreen * deltaGreen + deltaBlue * deltaBlue;
+}
+
+function lerp(a: number, b: number, t: number) {
+  return a + (b - a) * t;
+}
+
+function lerpRgb(a: RGB, b: RGB, t: number): RGB {
+  return [lerp(a[0], b[0], t), lerp(a[1], b[1], t), lerp(a[2], b[2], t)];
+}
+
+function rgbaToRgb255(rgba: RGBA): RGB {
+  return [
+    Math.round((rgba[0] || 0) * 255),
+    Math.round((rgba[1] || 0) * 255),
+    Math.round((rgba[2] || 0) * 255),
+  ];
+}
+
+export type BodyRecolorOptions = {
+  basePrimary?: RGB;
+  baseSecondary?: RGB;
+  baseTertiary?: RGB;
+
+  /** Pixels within this distance (in RGB^2) snap to the target exactly. */
+  innerThresholdSq?: number;
+
+  /** Pixels within this max distance blend toward the target. */
+  hardThresholdSq?: number;
+
+  /**
+   * Optional: increase tolerance at semi-transparent edges.
+   * Effective hard threshold = hardThresholdSq * (1 + (1 - alpha) * edgeAlphaBoostMultiplier).
+   * (alpha is 0..1)
+   */
+  edgeAlphaBoostMultiplier?: number;
+};
+
+const DEFAULT_BODY_RECOLOR_OPTS: Required<BodyRecolorOptions> = {
+  basePrimary: [51, 255, 33], // neon green
+  baseSecondary: [128, 128, 128], // mid gray
+  baseTertiary: [76, 76, 76], // dark gray
+
+  // Snap band: ~10 units/channel → 10^2 = 100
+  innerThresholdSq: 100,
+
+  // Soft band (AA): allow up to ~60 units total delta → 60^2 = 3600
+  hardThresholdSq: 3600,
+
+  // Edge boost: add up to +200% tolerance at fully transparent edge pixels
+  edgeAlphaBoostMultiplier: 2.0,
+};
+
+/**
+ * Recolors the 3 zones of the body PNG to palette.primary/secondary/tertiary.
+ * Returns a data URL that is fed into ensureImageAsset().
+ *
+ * Strategy:
+ *  - Per pixel, find nearest of the 3 base colors. If distance <= threshold,
+ *    blend toward the target palette color with a softness that preserves AA edges.
+ *  - Alpha is preserved. Non-matched pixels are left unchanged.
+ */
+export async function recolorBodyDataUrl(
+  srcDataUrl: string,
+  palette: Palette,
+  opts?: BodyRecolorOptions
+): Promise<string> {
+  const recolorOptions = {...DEFAULT_BODY_RECOLOR_OPTS, ...(opts || {})};
+
+  if (!palette?.primary || !palette?.secondary || !palette?.tertiary) {
+    return srcDataUrl;
   }
 
-  return urls;
+  const img = await createImageBitmap(await (await fetch(srcDataUrl)).blob());
+  const w = img.width || DEFAULT_IMAGE_SIZE;
+  const h = img.height || DEFAULT_IMAGE_SIZE;
+
+  const offscreenCanvas = new OffscreenCanvas(w, h);
+  offscreenCanvas.width = w;
+  offscreenCanvas.height = h;
+
+  const ctx = offscreenCanvas.getContext('2d', {
+    willReadFrequently: true,
+  })!;
+  ctx.drawImage(img, 0, 0);
+  const imgData = ctx.getImageData(0, 0, w, h);
+  const data = imgData.data;
+
+  const tgtPrimary: RGB = rgbaToRgb255(palette.primary);
+  const tgtSecondary: RGB = rgbaToRgb255(palette.secondary);
+  const tgtTertiary: RGB = rgbaToRgb255(palette.tertiary);
+
+  const bases: Array<{base: RGB; target: RGB | null}> = [
+    {base: recolorOptions.basePrimary, target: tgtPrimary},
+    {base: recolorOptions.baseSecondary, target: tgtSecondary},
+    {base: recolorOptions.baseTertiary, target: tgtTertiary},
+  ];
+
+  for (let i = 0; i < data.length; i += 4) {
+    const r = data[i],
+      g = data[i + 1],
+      b = data[i + 2];
+    const a255 = data[i + 3];
+    if (a255 === 0) continue;
+
+    // nearest base
+    let best = 0,
+      bestDist = Infinity;
+    for (let j = 0; j < bases.length; j++) {
+      const d = rgbDistanceSq(bases[j].base, [r, g, b]);
+      if (d < bestDist) {
+        bestDist = d;
+        best = j;
+      }
+    }
+
+    const mapping = bases[best];
+    if (!mapping.target) continue;
+
+    // Edge-aware tolerance
+    const alpha = a255 / 255;
+    const hardSq =
+      recolorOptions.hardThresholdSq *
+      (1 + (1 - alpha) * recolorOptions.edgeAlphaBoostMultiplier);
+
+    if (bestDist <= recolorOptions.innerThresholdSq) {
+      // snap: exact target
+      data[i] = mapping.target[0];
+      data[i + 1] = mapping.target[1];
+      data[i + 2] = mapping.target[2];
+      continue;
+    }
+    if (bestDist <= hardSq) {
+      // blend within soft band (keeps AA smooth)
+      const t = 1 - bestDist / hardSq;
+      const [nr, ng, nb] = lerpRgb([r, g, b], mapping.target, t);
+      data[i] = nr | 0;
+      data[i + 1] = ng | 0;
+      data[i + 2] = nb | 0;
+      continue;
+    }
+  }
+
+  ctx.putImageData(imgData, 0, 0);
+  const blob = await offscreenCanvas.convertToBlob({
+    type: 'image/png',
+  });
+  return await new Promise<string>(res => {
+    const fr = new FileReader();
+    fr.onload = () => res(fr.result as string);
+    fr.readAsDataURL(blob);
+  });
+}
+
+const recolorCache = new Map<string, string>();
+
+export function getCachedRecoloredBody(key: string): string | null {
+  return recolorCache.get(key) || null;
+}
+
+export function setCachedRecoloredBody(key: string, dataUrl: string): void {
+  recolorCache.set(key, dataUrl);
 }

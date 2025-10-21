@@ -45,9 +45,13 @@ import {
   getConfigValue,
   insertImageLayer,
   hideLayersByTypeAndCaptureKs,
+  recolorBodyDataUrl,
+  setCachedRecoloredBody,
+  getCachedRecoloredBody,
+  hexFromRgba,
 } from './LottieDancerUtils';
 
-const TEST_BASE_DANCER = 'duck';
+const TEST_SKELETON = 'duck';
 
 export default class LottieDancerRenderer {
   // Injected by DanceParty's GeneratedDancer
@@ -58,8 +62,8 @@ export default class LottieDancerRenderer {
 
   // Values pulled from appConfig/localStorage
   private readonly headScale: number;
-  private readonly skeletonName: string;
   private cachedAnimationData: {[key: string]: LottieJSON} = {};
+  private skeletonNamePromise?: Promise<string>;
 
   /**
    * In Lottie/After Effects, a composition is a timeline that groups layers.
@@ -72,19 +76,19 @@ export default class LottieDancerRenderer {
   private headUrl: string;
   private metadataUrl: string;
   private bodyUrl?: string;
+  private bodyMetadataUrl?: string;
 
   constructor() {
-    const skeletonParam = getConfigValue('skeleton')?.toLowerCase();
-    this.skeletonName = skeletonParam || TEST_BASE_DANCER;
     this.headScale = 0.5;
     this.cachedAnimationData = {};
 
-    const {headUrl, metadataUrl, bodyUrl} = resolveDancerAssets({
+    const {urls} = resolveDancerAssets({
       sourceTag: 'canvas',
     });
-    this.headUrl = headUrl;
-    this.metadataUrl = metadataUrl;
-    this.bodyUrl = bodyUrl;
+    this.headUrl = urls.headUrl;
+    this.metadataUrl = urls.metadataUrl;
+    this.bodyUrl = urls.bodyUrl;
+    this.bodyMetadataUrl = urls.bodyMetadataUrl;
   }
   /**
    * The caller provides a CanvasRenderingContext2D to paint into.
@@ -182,16 +186,45 @@ export default class LottieDancerRenderer {
   }
 
   /**
+   * Resolve skeleton name once with precedence:
+   * 1) URL param
+   * 2) bodyMetadataUrl JSON: { "skeletonName": "..." }
+   * 3) Default (TEST_SKELETON)
+   */
+  private async getSkeletonName(): Promise<string> {
+    if (this.skeletonNamePromise) {
+      return this.skeletonNamePromise;
+    }
+    const skeletonParam = getConfigValue('skeleton')?.toLowerCase();
+    this.skeletonNamePromise = (async () => {
+      if (!skeletonParam && this.bodyMetadataUrl) {
+        try {
+          const bodyMetaData = await fetchJson<{skeletonName?: string}>(
+            this.bodyMetadataUrl
+          );
+          const skeletonNameFromJson = bodyMetaData?.skeletonName;
+          if (typeof skeletonNameFromJson === 'string') {
+            return skeletonNameFromJson.trim().toLowerCase();
+          }
+        } catch {}
+      }
+      return skeletonParam || TEST_SKELETON;
+    })();
+    return this.skeletonNamePromise;
+  }
+
+  /**
    * Load, recolor, inject head, and memoize a move's Lottie JSON.
    * Returns the cached/transformed JSON if already present.
    */
   private async loadAndTransformMove(danceMove: string): Promise<LottieJSON> {
+    const skeletonName = await this.getSkeletonName();
     const danceMoveLowerCase = String(danceMove).toLowerCase();
     if (this.cachedAnimationData[danceMoveLowerCase]) {
       return this.cachedAnimationData[danceMoveLowerCase];
     }
 
-    const jsonUrl = resolveAnimationUrl(this.skeletonName, danceMoveLowerCase);
+    const jsonUrl = resolveAnimationUrl(skeletonName, danceMoveLowerCase);
 
     const animData = await fetchJson<LottieJSON>(jsonUrl);
 
@@ -203,7 +236,7 @@ export default class LottieDancerRenderer {
     }
 
     // Recolor assets based on hard-coded accessory-name rules.
-    applyColorMapping(animData, palette, this.skeletonName);
+    applyColorMapping(animData, palette, skeletonName);
 
     // Replace vector head with an image, if one can be loaded.
     const headDataUrl = await fetchDataUrl(this.headUrl);
@@ -245,9 +278,27 @@ export default class LottieDancerRenderer {
         if (bodyComp && Array.isArray(bodyComp.layers)) {
           const {insertIndex, ks: bodyKs} =
             hideLayersByTypeAndCaptureKs(bodyComp);
+
+          // Cache key uses palette hexes so repeated moves reuse the same bitmap.
+          const pHex = hexFromRgba(palette?.primary);
+          const sHex = hexFromRgba(palette?.secondary);
+          const tHex = hexFromRgba(palette?.tertiary);
+          const recolorKey = `${this.bodyUrl}|${pHex}|${sHex}|${tHex}`;
+
+          let recolored = getCachedRecoloredBody(recolorKey);
+          if (!recolored) {
+            try {
+              recolored = await recolorBodyDataUrl(bodyDataUrl, palette!);
+              setCachedRecoloredBody(recolorKey, recolored);
+            } catch {
+              // Fallback: if recolor fails, use original
+              recolored = bodyDataUrl;
+            }
+          }
+
           const imgAssetId = ensureImageAsset(
             animData,
-            bodyDataUrl,
+            recolored,
             'img_body_custom'
           );
 
@@ -265,6 +316,7 @@ export default class LottieDancerRenderer {
         }
       }
     }
+
     // Memoize transformed Lottie JSON per move (in-memory cache) so subsequent setSource calls skip recolor/head work.
     // This is useful if the same dance move is used later in a song, or if there are multiple generated dancers using the same move.
     this.cachedAnimationData[danceMoveLowerCase] = animData;
