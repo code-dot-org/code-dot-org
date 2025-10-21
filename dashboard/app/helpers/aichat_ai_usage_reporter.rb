@@ -121,7 +121,7 @@ class AichatAiUsageReporter
 
     pdfs_count = message_parts.count {|part| part[:type] == 'file' && part[:content][:mimeType] == 'application/pdf'}
 
-    # Currently we don't have a shared (between frontend and backd) list of image mime types
+    # Currently we don't have a shared (between frontend and backend) list of image mime types
     # so for now, we just assume if not a pdf, then it's an image
     images_count = total_files_count - pdfs_count
 
