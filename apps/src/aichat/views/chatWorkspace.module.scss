@@ -117,6 +117,7 @@ $tabs-default-spacing: 4px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 0.375rem;
 }
 
