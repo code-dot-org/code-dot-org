@@ -31,6 +31,16 @@ module CookieHelpers
     encryptor.decrypt_and_verify(message)
   end
 
+  def add_cookie(key, value)
+    current_host = URI(@browser.current_url.to_s).host
+    current_domain = current_host && PublicSuffix.parse(current_host).domain
+
+    cookie = {name: key, value: value, path: '/'}
+    cookie[:domain] = ".#{current_domain}" if current_domain # sets the cookie for the top-level domain
+
+    @browser.manage.add_cookie(cookie)
+  end
+
   # It's safer to retrieve a cookie from the list of all cookies
   # because `#cookie_named` may raise `Selenium::WebDriver::Error::UnknownMethodError` during mobile testing.
   def get_cookie(key)

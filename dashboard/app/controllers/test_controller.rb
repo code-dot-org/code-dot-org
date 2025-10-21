@@ -497,4 +497,26 @@ class TestController < ApplicationController
         get('dcdo_mocking_test'),
     }
   end
+
+  # Endpoint for testing HTTP stubbing.
+  # @see /dashboard/test/ui/features/http_stubbing.feature
+  def get_http_stubs
+    response1 = begin
+      JSON.parse Net::HTTP.get(URI('https://request1?param=test'))
+    rescue SocketError
+      'real'
+    end
+    response2 = begin
+      JSON.parse Net::HTTP.post(URI('https://request2?param=test'), 'fake_params').body
+    rescue SocketError
+      'real'
+    end
+    response3 = begin
+      JSON.parse Net::HTTP.get(URI('https://request3?param=test'))
+    rescue SocketError
+      'real'
+    end
+
+    render json: {response1:, response2:, response3:}
+  end
 end

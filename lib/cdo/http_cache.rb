@@ -124,6 +124,12 @@ class HttpCache
     require 'cdo/rack/global_edition'
     default_cookies << Rack::GlobalEdition::REGION_KEY
 
+    # Enables HTTP request stubbing with VCR and WebMock, using cookie data for configuration. See: Rack::HttpStub
+    if CDO.http_stub_enabled
+      require 'cdo/rack/http_stub'
+      default_cookies << Rack::HttpStub::COOKIE_KEY
+    end
+
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [
       'hour_of_code',

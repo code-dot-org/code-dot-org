@@ -25,13 +25,7 @@ module DashboardHelpers
     dcdo_cookie_value = JSON.parse(get_cookie(Rack::CookieDCDO::KEY).try(:[], :value).presence || '{}')
     dcdo_cookie_value[key] = value
 
-    current_host = URI(@browser.current_url.to_s).host
-    current_domain = current_host && PublicSuffix.parse(current_host).domain
-
-    dcdo_cookie = {name: Rack::CookieDCDO::KEY, value: dcdo_cookie_value.to_json, path: '/'}
-    dcdo_cookie[:domain] = ".#{current_domain}" if current_domain # sets the cookie for the top-level domain
-
-    @browser.manage.add_cookie(dcdo_cookie)
+    add_cookie(Rack::CookieDCDO::KEY, dcdo_cookie_value.to_json)
   rescue Selenium::WebDriver::Error::InvalidCookieDomainError
     warn red("WARNING: First, navigate the page for which domain you want to mock the DCDO `#{key}`")
     raise

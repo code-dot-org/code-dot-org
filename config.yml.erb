@@ -327,6 +327,9 @@ gatekeeper_table_name: gatekeeper_<%=env%>
 # Allows DCDO settings via cookies. See: `Rack::CookieDCDO`
 use_cookie_dcdo: false
 
+# Enables stubbing HTTP requests using VCR and WebMock based on cookie data. See: `Rack::HttpStub`
+http_stub_enabled: false
+
 # Allows Geolocation to be altered via cookies.
 # See: 'lib/cdo/rack/geolocation_override.rb'
 # and: 'dashboard/test/ui/features/xteam/gdpr_dialog.feature'

@@ -56,6 +56,12 @@ module Dashboard
     require 'cdo/rack/global_edition'
     config.middleware.insert_before Rack::Cors, Rack::GlobalEdition
 
+    if CDO.http_stub_enabled
+      # Enables HTTP request stubbing with VCR and WebMock, using cookie data for configuration.
+      require 'cdo/rack/http_stub'
+      config.middleware.insert_before Rack::Cors, Rack::HttpStub, fixtures_dir: root.join('test/ui/http_stubs').to_s
+    end
+
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.

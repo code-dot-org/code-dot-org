@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://request1/?param=test
+    body:
+      encoding: US-ASCII
+      string: ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type: application/json
+    body:
+      encoding: UTF-8
+      string: '"VCR"'
+  recorded_at: Wed, 21 Oct 2025 00:00:00 GMT
+- request:
+    method: post
+    uri: https://request2/?param=test
+    body:
+      encoding: UTF-8
+      string: fake_params
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type: application/json
+    body:
+      encoding: UTF-8
+      string: '"VCR"'
+  recorded_at: Wed, 21 Oct 2025 00:00:01 GMT
+- request:
+    method: get
+    uri: https://request3/?param=test
+    body:
+      encoding: US-ASCII
+      string: ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type: application/json
+    body:
+      encoding: UTF-8
+      string: '"VCR"'
+  recorded_at: Wed, 21 Oct 2025 00:00:02 GMT
+recorded_with: VCR 6.2.0
+...
