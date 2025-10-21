@@ -12,35 +12,8 @@ NODE_OPTIONS="--max-old-space-size=${MEM_PER_TEST_PROCESS_MB}"
 PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS=95
 
 function linuxNumProcs() {
-  local nprocs=$(nproc)
-
-  # Use MemAvailable when available, otherwise fall back to MemFree
-  if grep -q MemAvailable /proc/meminfo; then
-    local mem_metric=MemAvailable
-  else
-    local mem_metric=MemFree
-  fi
-
-  # Don't run more processes than can fit in free memory.
-  local mem_available_mb=$(
-    awk "/${mem_metric}/ {printf \"%d\", \$2 / 1024}" /proc/meminfo
-  )
-  local mem_you_can_use_mb=$(( mem_available_mb * PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS / 100 ))
-  local mem_procs=$(( mem_you_can_use_mb / MEM_PER_TEST_PROCESS_MB ))
-  local procs=$(( ${mem_procs} < ${nprocs} ? ${mem_procs} : ${nprocs} ))
-
-  if ((procs == 0)); then
-    local free_kb=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
-    procs=1
-  fi
-
-  echo "Memory debug info (Linux):" >&2
-  echo "  ${mem_metric}: ${mem_available_mb} MB" >&2
-  echo "  Memory to use (${PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS}%): ${mem_you_can_use_mb} MB" >&2
-  echo "  MEM_PER_TEST_PROCESS_MB: ${MEM_PER_TEST_PROCESS_MB} MB" >&2
-  echo "  Memory-based procs: ${mem_procs}" >&2
-  echo "  CPU count (nproc): ${nprocs}" >&2
-  echo "  Final procs: ${procs}" >&2
+  local procs=14
+  echo "  Hard-coded procs: ${procs}" >&2
   echo >&2
 
   echo $procs
