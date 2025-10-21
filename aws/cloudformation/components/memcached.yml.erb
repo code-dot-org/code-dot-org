@@ -4,18 +4,7 @@
     Properties:
       Description: Geocoder Cache Subnet Group
       SubnetIds: <%= subnets.to_json %>
-  GeocoderGroup:
-    Type: AWS::ElastiCache::ReplicationGroup
-    Properties:
-      ReplicationGroupDescription: <%="Geocoder Replication Group (#{stack_name})" %>
-      NumCacheClusters: 3
-<%  if cache_node_type.include? 'cache.t2' -%>
-      AutomaticFailoverEnabled: false
-<%  end-%>
-      Engine: redis
-      CacheNodeType: <%= cache_node_type %>
-      SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
-      CacheSubnetGroupName: !Ref GeocoderSubnetGroup
+
   MemcachedParameterGroup:
     Type: AWS::ElastiCache::ParameterGroup
     Properties:

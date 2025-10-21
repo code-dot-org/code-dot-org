@@ -8,7 +8,7 @@ import {
   setEditorFontSize,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
-import {Setting} from '@cdo/apps/lab2/views/components/Settings/SettingsDropdown';
+import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/types';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
