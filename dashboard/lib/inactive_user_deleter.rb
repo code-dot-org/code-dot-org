@@ -52,18 +52,24 @@ class InactiveUserDeleter
   def call
     reset_metrics
 
-    total_size = inactive_users.size
-    if total_size > limit
-      raise SafetyConstraintViolation, "Too many accounts to delete: #{total_size} exceeds limit of #{limit}"
+    ActiveRecord::Base.connected_to(role: :reporting) do
+      total_size = inactive_users.size
+      if total_size > limit
+        raise SafetyConstraintViolation, "Too many accounts to delete: #{total_size} exceeds limit of #{limit}"
+      end
     end
 
     # Process individual batches in a loop to avoid issues with find_each, which imposes
     # an order by id, causing an inefficient scan on the id index. Order does not matter
     # for this operation, so we can use a simple limit approach.
     loop do
-      account_batch = inactive_users.limit(BATCH_SIZE)
+      account_batch = ActiveRecord::Base.connected_to(role: :reporting) do
+        inactive_users.limit(BATCH_SIZE).to_a
+      end
       account_batch.each do |user|
-        delete_user(user)
+        ActiveRecord::Base.connected_to(role: :writing) do
+          delete_user(user)
+        end
         self.num_accounts_deleted += 1
       rescue StandardError => exception
         self.num_errors += 1
@@ -87,9 +93,7 @@ class InactiveUserDeleter
   end
 
   def inactive_users
-    ActiveRecord::Base.connected_to(role: :reporting) do
-      Queries::User::Inactive.call(inactive_since: inactive_since).where.not(id: processed_user_ids)
-    end
+    Queries::User::Inactive.call(inactive_since: inactive_since).where.not(id: processed_user_ids)
   end
 
   def summary
