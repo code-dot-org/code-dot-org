@@ -57,7 +57,6 @@ export const submitChatContents = createAsyncThunk(
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
     const chatEventsCurrent = state.aichat.chatEventsCurrent;
-    console.log({chatEventsCurrent});
     const {
       text,
       hiddenContext,

@@ -152,7 +152,6 @@ module AichatAiHelper
         parts: format_message_parts(stored_message, encrypted_channel_id, level_name)
       )
     end
-    puts context
 
     return config, request, context
   end
