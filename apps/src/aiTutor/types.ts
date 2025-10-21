@@ -20,9 +20,9 @@ export interface AiTutorContext {
 }
 
 export interface AnalyticsData {
-  labType: string;
+  labType?: string;
   channelId?: string;
   location: string;
-  levelId?: string;
-  unitId?: string;
+  levelId?: number;
+  unitId?: number;
 }
