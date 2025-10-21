@@ -82,11 +82,15 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 : commonI18n.aiChatMessageUser()
             }
           >
-            <SafeMarkdown
-              markdown={text}
-              rehypeMap={rehypeMap}
-              openExternalLinksInNewTab
-            />
+            {role === Role.ASSISTANT ? (
+              <SafeMarkdown
+                markdown={text}
+                rehypeMap={rehypeMap}
+                openExternalLinksInNewTab
+              />
+            ) : (
+              <p>{text}</p>
+            )}
           </div>
         </div>
         {footer && (
