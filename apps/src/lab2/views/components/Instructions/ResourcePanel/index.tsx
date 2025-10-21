@@ -451,39 +451,28 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 label={commonI18n.documentation()}
                 icon={{iconName: 'book', iconStyle: 'solid'}}
                 type="tertiary"
-                color="black"
-                buttonSize="xs"
+                color="gray"
                 tooltipSize="xs"
-                tooltipDirection="onBottom"
-                hideTooltipTail={true}
+                tooltipDirection="onRight"
                 onClick={onClickDocumentation}
+                theme={theme}
               />
             )}
             <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
             <CopyrightButton theme={theme} />
-            <WithTooltip
-              tooltipProps={{
-                text: commonI18n.settings(),
-                tooltipId: 'tooltip-settings',
-                direction: 'onRight',
-                size: 'xs',
-                'data-theme': theme,
-              }}
-              hideDelayMs={hideTooltipDelayMs}
-              hideOnFirstLeave={true}
-            >
-              <div ref={settingsButtonRef}>
-                <Button
-                  className={styles.resourcePanelButton}
-                  onClick={() => onClickSettingsButton()}
-                  isIconOnly={true}
-                  icon={{iconName: 'gear'}}
-                  color={'gray'}
-                  type={'tertiary'}
-                  aria-label={commonI18n.settings()}
-                />
-              </div>
-            </WithTooltip>
+            <div ref={settingsButtonRef}>
+              <IconButtonWithTooltip
+                id="settings"
+                label={commonI18n.settings()}
+                icon={{iconName: 'gear'}}
+                type="tertiary"
+                color="gray"
+                tooltipSize="xs"
+                tooltipDirection="onRight"
+                onClick={onClickSettingsButton}
+                theme={theme}
+              />
+            </div>
           </div>
         </div>
         {!isStandaloneCollapsed && (

@@ -1,4 +1,5 @@
 import Button, {ButtonProps} from '@code-dot-org/component-library/button';
+import {Theme} from '@code-dot-org/component-library/common/contexts';
 import {
   TooltipProps,
   WithTooltip,
@@ -11,14 +12,15 @@ interface IconButtonWithTooltipProps {
   icon: ButtonProps['icon'];
   type: ButtonProps['type'];
   color: ButtonProps['color'];
-  buttonSize: ButtonProps['size'];
+  buttonSize?: ButtonProps['size'];
   tooltipSize: TooltipProps['size'];
   tooltipDirection: TooltipProps['direction'];
-  hideTooltipTail: TooltipProps['hideTail'];
+  hideTooltipTail?: TooltipProps['hideTail'];
   disabled?: boolean;
   onClick: () => void;
   containerRef?: React.RefObject<HTMLDivElement>;
   className?: string;
+  theme?: Theme;
 }
 
 const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps> =
@@ -37,6 +39,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
       onClick,
       containerRef,
       className,
+      theme,
     }) => {
       const handleClick = useCallback(
         (
@@ -65,6 +68,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
             direction: tooltipDirection,
             hideTail: hideTooltipTail,
             className: className,
+            'data-theme': theme,
           }}
         >
           <Button
