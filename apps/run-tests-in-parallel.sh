@@ -9,7 +9,7 @@ set -e
 
 MEM_PER_TEST_PROCESS_MB=$(node -e "console.log(require('./Gruntfile').MEM_PER_TEST_PROCESS_MB)" 2>/dev/null)
 NODE_OPTIONS="--max-old-space-size=${MEM_PER_TEST_PROCESS_MB}"
-PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS=80
+PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS=95
 
 function linuxNumProcs() {
   local nprocs=$(nproc)
