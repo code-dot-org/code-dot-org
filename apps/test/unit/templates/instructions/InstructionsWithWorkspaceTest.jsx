@@ -27,7 +27,6 @@ describe('InstructionsWithWorkspace', () => {
     expect(wrapper.state()).toEqual({
       windowWidth: undefined,
       windowHeight: undefined,
-      aiChatOpen: true,
     });
   });
 
