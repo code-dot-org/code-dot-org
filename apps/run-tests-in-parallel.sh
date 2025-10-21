@@ -91,16 +91,16 @@ PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 # Each line in this SCRIPT block will be run as a parallel test job
 # If any line fails, the whole block will fail and exit early
 # ${PARALLEL} <<SCRIPT || (echo && echo && echo "One of the parallel test jobs FAILED, exiting early." && echo && exit 1)
-time yarn lint
-time npx karma start --testType=unit --port=9876
-time npx karma start --testType=storybook --port=9877
-time npx karma start --testType=integration --levelType='turtle' --port=9879
-time npx karma start --testType=integration --levelType='maze' --port=9880
-time npx karma start --testType=integration --levelType='gamelab' --port=9881
-time npx karma start --testType=integration --levelType='craft' --port=9882
-time npx karma start --testType=integration --levelType='applab1' --port=9883
-time npx karma start --testType=integration --levelType='applab2' --port=9884
-time npx karma start --testType=integration --levelType='studio' --port=9885
+time yarn lint > /dev/null 2>&1
+time npx karma start --testType=unit --port=9876 > /dev/null 2>&1
+time npx karma start --testType=storybook --port=9877 > /dev/null 2>&1
+time npx karma start --testType=integration --levelType='turtle' --port=9879 > /dev/null 2>&1
+time npx karma start --testType=integration --levelType='maze' --port=9880 > /dev/null 2>&1
+time npx karma start --testType=integration --levelType='gamelab' --port=9881 > /dev/null 2>&1
+time npx karma start --testType=integration --levelType='craft' --port=9882 > /dev/null 2>&1
+time npx karma start --testType=integration --levelType='applab1' --port=9883 > /dev/null 2>&1
+time npx karma start --testType=integration --levelType='applab2' --port=9884 > /dev/null 2>&1
+time npx karma start --testType=integration --levelType='studio' --port=9885 > /dev/null 2>&1
 # SCRIPT
 
 echo && echo
