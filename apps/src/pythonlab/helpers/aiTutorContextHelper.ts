@@ -50,12 +50,14 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
               prefix = `${file.name} is not visible to the student: \n`;
             }
 
-            return `${prefix}filename: ${file.name}\n\`\`\`${file.contents}\`\`\``;
+            return `${prefix}filename: ${file.name}\n${this.codeBlock(
+              file.contents
+            )}`;
           })
           .join('\n\n')
       : undefined;
 
-    const validationContents = validationFile?.contents;
+    const validationContents = this.codeBlock(validationFile?.contents);
 
     const validationResults = JSON.stringify(
       PythonValidationTracker.getInstance().getValidationResults()
