@@ -40,6 +40,7 @@ const aif_prefixes = [
   '/courses/artificial-intelligence-foundations-2025',
   '/courses/teaching-ai-foundations-2025',
   '/courses/oceans',
+  '/courses/how-ai-works-2023',
 ];
 
 const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
