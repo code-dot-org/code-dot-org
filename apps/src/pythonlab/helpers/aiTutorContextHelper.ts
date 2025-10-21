@@ -14,7 +14,6 @@ interface AiTutorPythonLabParams {
 }
 export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
   private documentationPromise?: Promise<string | undefined>;
-  private cachedDocs?: string | undefined;
   private params?: AiTutorPythonLabParams;
 
   override setAiTutorContext(params: AiTutorPythonLabParams): void {
@@ -25,10 +24,6 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
       !this.documentationPromise
     ) {
       this.documentationPromise = tryFetchDocsForClass('painter');
-      // Cache the result once resolved
-      this.documentationPromise.then(docs => {
-        this.cachedDocs = docs;
-      });
     }
   }
 
@@ -62,7 +57,7 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
       PythonValidationTracker.getInstance().getValidationResults()
     );
 
-    const documentation = this.cachedDocs ?? (await this.documentationPromise);
+    const documentation = await this.documentationPromise;
 
     return {
       sourceCode,
