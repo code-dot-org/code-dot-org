@@ -17,7 +17,8 @@ const INSTRUCTIONS_INTRO = 'Here are the instructions:';
 
 const DOCUMENTATION_INTRO = 'Here is the documentation:';
 
-const codeBlockify = (str: string): string => `\`\`\`\n${str}\n\`\`\``;
+const DOCUMENTATION_LOCATION_INTRO =
+  'Here is where the student can find the documentation:';
 
 /*
  * Abstract base class used to provide lab specific context to AI Tutor.  Each lab will inherit from and
@@ -25,7 +26,7 @@ const codeBlockify = (str: string): string => `\`\`\`\n${str}\n\`\`\``;
  * consistency.
  */
 export abstract class AiTutorContextHelper<AiTutorParams extends object> {
-  protected additionalContext: string = '';
+  protected documentationLocation: string = '';
 
   protected abstract getAiTutorContext(): MaybePromise<AiTutorContext>;
 
@@ -56,7 +57,9 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
         : '',
       longInstructions ? `${INSTRUCTIONS_INTRO} ${longInstructions}` : '',
       documentation ? `${DOCUMENTATION_INTRO} ${documentation}` : '',
-      this.additionalContext,
+      this.documentationLocation
+        ? `${DOCUMENTATION_LOCATION_INTRO} ${this.documentationLocation}`
+        : '',
     ]
       .filter(Boolean)
       .join('\n\n');

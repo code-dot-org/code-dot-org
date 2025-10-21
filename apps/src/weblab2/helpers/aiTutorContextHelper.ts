@@ -3,8 +3,6 @@ import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelp
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
-import {WEBLAB2_TUTOR_ADDITIONAL_CONTEXT} from '../constants';
-
 interface AiTutorWebLab2Params {
   source: MultiFileSource | undefined;
   longInstructions: string | undefined;
@@ -15,8 +13,6 @@ const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['txt', 'csv', 'md'];
 
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
   private params?: AiTutorWebLab2Params;
-  protected override additionalContext: string =
-    WEBLAB2_TUTOR_ADDITIONAL_CONTEXT;
 
   override setAiTutorContext(params: AiTutorWebLab2Params): void {
     this.params = params;

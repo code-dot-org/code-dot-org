@@ -17,6 +17,7 @@ export interface AiTutorContext {
   validationResults?: string;
   longInstructions?: string;
   documentation?: string;
+  documentationLocation?: string;
   userSelection?: string;
 }
 

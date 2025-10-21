@@ -58,6 +58,7 @@ export const AiTutorContainer: FC<{
     const hideSource = lab?.hideSource ?? lab?.level?.hideSource ?? false;
     const params: AiTutorLegacyLabParams = {
       longInstructions: lab?.level?.longInstructions,
+      labType: labState.appType,
     };
     if (hideSource) {
       params.hiddenSourceCode = sourceCode;
