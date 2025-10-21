@@ -17,11 +17,11 @@ const csd_prefixes = [
 ];
 
 const csf_prefixes = [
-  '/courses/k5-unplugged/units/1',
+  '/courses/k5-unplugged',
   '/courses/express-2024',
   '/courses/pre-express-2024',
-  '/courses/k5-onlinepd-2024/units/1',
-  '/courses/teaching-csf-2025/units/1',
+  '/courses/k5-onlinepd-2024',
+  '/courses/teaching-csf-2025',
 ];
 
 const donor_prefixes = [
@@ -39,6 +39,7 @@ const donor_prefixes = [
 const aif_prefixes = [
   '/courses/artificial-intelligence-foundations-2025',
   '/courses/teaching-ai-foundations-2025',
+  '/courses/oceans',
 ];
 
 const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
@@ -57,6 +58,7 @@ const live = [
   '/courses/foundations-gen-ai-2025',
   '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
+  '/courses/artificial-intelligence-foundations-2025/',
   '/courses/artificial-intelligence-foundations-2025/units/2',
   '/courses/artificial-intelligence-foundations-2025/units/5',
 ];
