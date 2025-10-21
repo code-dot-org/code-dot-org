@@ -1,5 +1,5 @@
 #!/bin/bash
-# This is the implementation of `yarn test`. It runs all the tests 
+# This is the implementation of `yarn test`. It runs all the tests
 # (just like `npx karma start`) would, but it splits them into parallel jobs.
 #
 # If you want to add a new levelType or testType to `yarn test`, add an
@@ -32,7 +32,16 @@ function linuxNumProcs() {
   if ((procs == 0)); then
     local free_kb=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
     procs=1
-  fi 
+  fi
+
+  echo "Memory debug info (Linux):" >&2
+  echo "  ${mem_metric}: ${mem_available_mb} MB" >&2
+  echo "  Memory to use (${PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS}%): ${mem_you_can_use_mb} MB" >&2
+  echo "  MEM_PER_TEST_PROCESS_MB: ${MEM_PER_TEST_PROCESS_MB} MB" >&2
+  echo "  Memory-based procs: ${mem_procs}" >&2
+  echo "  CPU count (nproc): ${nprocs}" >&2
+  echo "  Final procs: ${procs}" >&2
+  echo >&2
 
   echo $procs
 }
@@ -48,14 +57,25 @@ function macMemAvailableMB() {
 }
 
 function macNumProcs() {
-  local mem_you_can_use=$(( $(macMemAvailableMB) * PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS / 100 ))
+  local mem_available_mb=$(macMemAvailableMB)
+  local mem_you_can_use=$(( mem_available_mb * PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS / 100 ))
   local mem_procs=$(( mem_you_can_use / MEM_PER_TEST_PROCESS_MB ))
-  local procs=$(( ${mem_procs} < $(nproc) ? ${mem_procs} : $(nproc) ))
+  local nprocs=$(nproc)
+  local procs=$(( ${mem_procs} < ${nprocs} ? ${mem_procs} : ${nprocs} ))
 
   # Run at least two copies in parallel
   if ((procs <= 2)); then
     procs=2
   fi
+
+  echo "Memory debug info (macOS):" >&2
+  echo "  MemAvailable (free+inactive+speculative): ${mem_available_mb} MB" >&2
+  echo "  Memory to use (${PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS}%): ${mem_you_can_use} MB" >&2
+  echo "  MEM_PER_TEST_PROCESS_MB: ${MEM_PER_TEST_PROCESS_MB} MB" >&2
+  echo "  Memory-based procs: ${mem_procs}" >&2
+  echo "  CPU count (nproc): ${nprocs}" >&2
+  echo "  Final procs (min 2): ${procs}" >&2
+  echo >&2
 
   echo $procs
 }
