@@ -20,11 +20,11 @@ export interface AiTutorContext {
 }
 
 export interface AnalyticsData {
-  labType?: string;
+  labType: string;
   channelId?: string;
   location: string;
-  levelId?: number;
-  unitId?: number;
+  levelId?: string;
+  unitId?: string;
 }
 
 export type MaybePromise<T> = T | Promise<T>;
