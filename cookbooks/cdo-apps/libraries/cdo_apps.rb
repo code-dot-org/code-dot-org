@@ -105,7 +105,7 @@ module CdoApps
         log_dir: log_dir
     end
 
-    if node['cdo-newrelic']
+    if node['cdo-newrelic'] && CDO.newrelic_logging
       template "#{app_root}/config/newrelic.yml" do
         source 'newrelic.yml.erb'
         user user
