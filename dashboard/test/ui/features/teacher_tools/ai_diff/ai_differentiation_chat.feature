@@ -95,6 +95,7 @@ Feature: Send and receive messages in the AI differentiation chat
 
     # Clicking "suggest prompts" gives another set of prompts
     And I click selector "button:contains(Suggest prompts)"
+    And I click selector "button:contains(Create)"
     And I click selector "input[value='Write a lesson hook']" once I see it
     And I wait until I see 2 of jquery selector p:contains(Lorem ipsum)
 
