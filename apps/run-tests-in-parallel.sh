@@ -70,7 +70,8 @@ echo
 
 echo && echo "Starting jest with ${PROCS}x workers:"
 
-npx jest --silent --maxWorkers ${PROCS}
+echo "running jest"
+time npx jest --silent --maxWorkers ${PROCS} > /dev/null 2>&1
 
 echo && echo "Pre-webpacking karma tests before running them:"
 
@@ -91,15 +92,26 @@ PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 # Each line in this SCRIPT block will be run as a parallel test job
 # If any line fails, the whole block will fail and exit early
 # ${PARALLEL} <<SCRIPT || (echo && echo && echo "One of the parallel test jobs FAILED, exiting early." && echo && exit 1)
+
+echo "\nrunning yarn lint"
 time yarn lint > /dev/null 2>&1
+echo "\nrunning unit tests"
 time npx karma start --testType=unit --port=9876 > /dev/null 2>&1
+echo "\nrunning storybook tests"
 time npx karma start --testType=storybook --port=9877 > /dev/null 2>&1
+echo "\nrunning integration tests - turtle"
 time npx karma start --testType=integration --levelType='turtle' --port=9879 > /dev/null 2>&1
+echo "\nrunning integration tests - maze"
 time npx karma start --testType=integration --levelType='maze' --port=9880 > /dev/null 2>&1
+echo "\nrunning integration tests - gamelab"
 time npx karma start --testType=integration --levelType='gamelab' --port=9881 > /dev/null 2>&1
+echo "\nrunning integration tests - craft"
 time npx karma start --testType=integration --levelType='craft' --port=9882 > /dev/null 2>&1
+echo "\nrunning integration tests - applab1"
 time npx karma start --testType=integration --levelType='applab1' --port=9883 > /dev/null 2>&1
+echo "\nrunning integration tests - applab2"
 time npx karma start --testType=integration --levelType='applab2' --port=9884 > /dev/null 2>&1
+echo "\nrunning integration tests - studio"
 time npx karma start --testType=integration --levelType='studio' --port=9885 > /dev/null 2>&1
 # SCRIPT
 
