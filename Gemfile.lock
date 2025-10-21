@@ -94,7 +94,7 @@ PATH
   specs:
     cdo_contentful (0.1.0)
       contentful (~> 2.18)
-      rails (~> 6.1.7)
+      rails (~> 7.0.8)
       zeitwerk (~> 2.6.7)
     hoc_legacy (0.0.0)
 
