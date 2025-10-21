@@ -46,9 +46,9 @@ class AichatGeminiClient < AichatAiClient
         responseMimeType: response_mime_type,
         responseJsonSchema: response_json_schema,
         # Thinking budget documentation: https://ai.google.dev/gemini-api/docs/thinking#set-budget
-        # Set to 1000 to give it some thinking tokens but still keep requests from timing out.
+        # Set to 2000 to give it some thinking tokens but still keep requests from timing out.
         thinkingConfig: {
-          thinkingBudget: 1000
+          thinkingBudget: 2000
         }
       }.compact, # Use compact to remove null responseMimeType / responseJsonSchema
       system_instruction: {
