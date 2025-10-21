@@ -7,10 +7,16 @@ import {
 import {Condition} from '@cdo/apps/lab2/types';
 
 export default class DanceValidator extends Validator {
-  constructor(
-    private readonly getCurrentCondition: () => Condition | undefined
-  ) {
+  private currentCondition: Condition | undefined;
+
+  constructor() {
     super();
+
+    this.currentCondition = undefined;
+  }
+
+  setCurrentCondition(currentCondition: Condition | undefined) {
+    this.currentCondition = currentCondition;
   }
 
   shouldCheckConditions() {
@@ -26,7 +32,7 @@ export default class DanceValidator extends Validator {
   }
 
   conditionsMet(conditions: Condition[]): boolean {
-    return this.getCurrentCondition()?.name === conditions[0].name;
+    return this.currentCondition?.name === conditions[0].name;
   }
 
   clear() {}

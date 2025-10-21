@@ -60,7 +60,7 @@ import {
   getIsShareView,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {Condition, BlocklySource, LabProps} from '@cdo/apps/lab2/types';
+import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -134,8 +134,6 @@ const DanceView: React.FunctionComponent<{
   const {theme} = useTheme();
 
   const progressManager = useContext(ProgressManagerContext);
-
-  const currentCondition = useRef<Condition | undefined>(undefined);
 
   const metadataToUse: SongMetadata | undefined = useMemo(() => {
     if (!musicProjectPlayer.current || !loadedMusicProject) {
@@ -275,9 +273,9 @@ const DanceView: React.FunctionComponent<{
       // TODO: Handle puzzle complete.
       console.log(`onPuzzleComplete! pass?: ${result} message: ${message}`);
       if (result) {
-        currentCondition.current = {name: 'pass'};
+        danceValidator.current.setCurrentCondition({name: 'pass'});
       } else {
-        currentCondition.current = {name: message};
+        danceValidator.current.setCurrentCondition({name: message});
       }
 
       progressManager?.updateProgress();
@@ -512,24 +510,14 @@ const DanceView: React.FunctionComponent<{
   ]);
 
   // Create dance validator.
-  const danceValidator = useMemo(
-    () =>
-      new DanceValidator(() => {
-        return currentCondition.current;
-      }),
-    [currentCondition]
-  );
+  const danceValidator = useRef(new DanceValidator());
 
   // Pass dance validator to Progress Manager.
   useEffect(() => {
-    if (
-      guideMode === 'instructions' &&
-      progressManager &&
-      levelProperties.appName === 'dance'
-    ) {
-      progressManager.setValidator(danceValidator);
+    if (guideMode === 'instructions' && progressManager) {
+      progressManager.setValidator(danceValidator.current);
     }
-  }, [progressManager, levelProperties.appName, danceValidator, guideMode]);
+  }, [progressManager, levelProperties.appName, guideMode]);
 
   const settings = useBlocklySettings();
 
