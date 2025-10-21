@@ -1,8 +1,8 @@
 <% cache_node_type = rack_env?(:production) ? 'cache.r5.large' : 'cache.t2.micro' -%>
-  MemcachedSubnetGroup:
+  GeocoderSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
-      Description: Memcached Subnet Group
+      Description: Geocoder Cache Subnet Group
       SubnetIds: <%= subnets.to_json %>
 
   MemcachedParameterGroup:
@@ -17,7 +17,7 @@
     Properties:
       CacheNodeType: <%= cache_node_type %>
       CacheParameterGroupName: !Ref MemcachedParameterGroup
-      CacheSubnetGroupName: !Ref MemcachedSubnetGroup
+      CacheSubnetGroupName: !Ref GeocoderSubnetGroup
       ClusterName: <%=stack_name[0..19]%> # Max 20 chars
       Engine: memcached
       EngineVersion: 1.4
