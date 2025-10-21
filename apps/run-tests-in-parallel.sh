@@ -70,7 +70,7 @@ echo
 
 echo && echo "Starting jest with ${PROCS}x workers:"
 
-echo "running jest"
+echo "timing and running jest" >&2
 time npx jest --silent --maxWorkers ${PROCS} > /dev/null 2>&1
 
 echo && echo "Pre-webpacking karma tests before running them:"
@@ -93,25 +93,25 @@ PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 # If any line fails, the whole block will fail and exit early
 # ${PARALLEL} <<SCRIPT || (echo && echo && echo "One of the parallel test jobs FAILED, exiting early." && echo && exit 1)
 
-echo "\nrunning yarn lint"
+echo "timing and running yarn lint" >&2
 time yarn lint > /dev/null 2>&1
-echo "\nrunning unit tests"
+echo "timing and running unit tests" >&2
 time npx karma start --testType=unit --port=9876 > /dev/null 2>&1
-echo "\nrunning storybook tests"
+echo "timing and running storybook tests" >&2
 time npx karma start --testType=storybook --port=9877 > /dev/null 2>&1
-echo "\nrunning integration tests - turtle"
+echo "timing and running integration tests - turtle" >&2
 time npx karma start --testType=integration --levelType='turtle' --port=9879 > /dev/null 2>&1
-echo "\nrunning integration tests - maze"
+echo "timing and running integration tests - maze" >&2
 time npx karma start --testType=integration --levelType='maze' --port=9880 > /dev/null 2>&1
-echo "\nrunning integration tests - gamelab"
+echo "timing and running integration tests - gamelab" >&2
 time npx karma start --testType=integration --levelType='gamelab' --port=9881 > /dev/null 2>&1
-echo "\nrunning integration tests - craft"
+echo "timing and running integration tests - craft" >&2
 time npx karma start --testType=integration --levelType='craft' --port=9882 > /dev/null 2>&1
-echo "\nrunning integration tests - applab1"
+echo "timing and running integration tests - applab1" >&2
 time npx karma start --testType=integration --levelType='applab1' --port=9883 > /dev/null 2>&1
-echo "\nrunning integration tests - applab2"
+echo "timing and running integration tests - applab2" >&2
 time npx karma start --testType=integration --levelType='applab2' --port=9884 > /dev/null 2>&1
-echo "\nrunning integration tests - studio"
+echo "timing and running integration tests - studio" >&2
 time npx karma start --testType=integration --levelType='studio' --port=9885 > /dev/null 2>&1
 # SCRIPT
 
