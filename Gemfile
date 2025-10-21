@@ -71,7 +71,7 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate', '~> 3.1.1'
+  gem 'annotaterb', '~> 4.19'
   gem 'aws-google', '~> 0.2.3'
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
