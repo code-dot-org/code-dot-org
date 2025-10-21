@@ -469,10 +469,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           <div className={styles.panels}>
             <PanelContainer
               id={currentTab || 'resource-panel'}
-              headerContent={
-                (currentTab && tabInfo[currentTab].title) ||
-                commonI18n.instructions()
-              }
+              headerContent={currentTab && tabInfo[currentTab].title}
               headerClassName={headerClassName}
               rightHeaderContent={
                 currentTab === Tabs.AiTutor ? (
