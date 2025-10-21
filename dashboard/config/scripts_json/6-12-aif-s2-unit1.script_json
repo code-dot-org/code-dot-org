@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-15 04:49:58 UTC",
+    "serialized_at": "2025-10-16 03:31:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -349,6 +349,66 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit1"
       }
+    },
+    {
+      "key": "55999b45-51b5-48e1-8208-fd8bedb83e08",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "55999b45-51b5-48e1-8208-fd8bedb83e08",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1"
+      }
+    },
+    {
+      "key": "0739575f-8ce3-4a56-8ef3-d1d0436c8ff4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0739575f-8ce3-4a56-8ef3-d1d0436c8ff4",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1"
+      }
+    },
+    {
+      "key": "f34f35d3-c0af-4155-9723-37378f8cf3e5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f34f35d3-c0af-4155-9723-37378f8cf3e5",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1"
+      }
+    },
+    {
+      "key": "b312b504-b360-4566-974f-f1468732cbf2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b312b504-b360-4566-974f-f1468732cbf2",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1"
+      }
+    },
+    {
+      "key": "bf1ea6a0-18f4-4944-9f33-4a613df7602f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf1ea6a0-18f4-4944-9f33-4a613df7602f",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1"
+      }
     }
   ],
   "activity_sections": [
@@ -580,7 +640,7 @@
       "key": "4ebdd7fd-664c-4e96-825e-7be90507a1fb",
       "position": 2,
       "properties": {
-        "progression_name": "Create a User Persona with AI"
+        "progression_name": "User Personas and Problem Statements"
       },
       "seeding_key": {
         "activity_section.key": "4ebdd7fd-664c-4e96-825e-7be90507a1fb",
@@ -596,6 +656,138 @@
       "seeding_key": {
         "activity_section.key": "0963052c-c6c5-47a8-b827-cc52ab37fef2",
         "lesson_activity.key": "34c64441-ea31-4d1f-a39e-513659ceba63"
+      }
+    },
+    {
+      "key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Create a Site Map"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e",
+        "lesson_activity.key": "55999b45-51b5-48e1-8208-fd8bedb83e08"
+      }
+    },
+    {
+      "key": "516e6f09-0a99-4010-b88a-afef117b3a31",
+      "position": 2,
+      "properties": {
+        "progression_name": "Trace a User Flow"
+      },
+      "seeding_key": {
+        "activity_section.key": "516e6f09-0a99-4010-b88a-afef117b3a31",
+        "lesson_activity.key": "55999b45-51b5-48e1-8208-fd8bedb83e08"
+      }
+    },
+    {
+      "key": "f611be07-284a-46c2-9d08-622f35b833a9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explain Your Design"
+      },
+      "seeding_key": {
+        "activity_section.key": "f611be07-284a-46c2-9d08-622f35b833a9",
+        "lesson_activity.key": "55999b45-51b5-48e1-8208-fd8bedb83e08"
+      }
+    },
+    {
+      "key": "3fe3c0fb-4a93-4af4-ae9d-09f17f546336",
+      "position": 4,
+      "properties": {
+        "progression_name": "Build Your Web App with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fe3c0fb-4a93-4af4-ae9d-09f17f546336",
+        "lesson_activity.key": "55999b45-51b5-48e1-8208-fd8bedb83e08"
+      }
+    },
+    {
+      "key": "20c1833b-8a7f-4528-a892-da33e72bb287",
+      "position": 1,
+      "properties": {
+        "progression_name": "Spot & Fix Accessibility Issues"
+      },
+      "seeding_key": {
+        "activity_section.key": "20c1833b-8a7f-4528-a892-da33e72bb287",
+        "lesson_activity.key": "0739575f-8ce3-4a56-8ef3-d1d0436c8ff4"
+      }
+    },
+    {
+      "key": "6f7c1f85-4a03-4bea-9ec0-e387831c175a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Apply Accessibility Principles to Your Own App"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f7c1f85-4a03-4bea-9ec0-e387831c175a",
+        "lesson_activity.key": "0739575f-8ce3-4a56-8ef3-d1d0436c8ff4"
+      }
+    },
+    {
+      "key": "e8111cf3-26f6-4d69-b436-25372476a9ba",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check for Understanding: Accessibility"
+      },
+      "seeding_key": {
+        "activity_section.key": "e8111cf3-26f6-4d69-b436-25372476a9ba",
+        "lesson_activity.key": "0739575f-8ce3-4a56-8ef3-d1d0436c8ff4"
+      }
+    },
+    {
+      "key": "cda03805-b149-49fd-9d72-0159bfc57944",
+      "position": 1,
+      "properties": {
+        "progression_name": "Wireframe an App Idea"
+      },
+      "seeding_key": {
+        "activity_section.key": "cda03805-b149-49fd-9d72-0159bfc57944",
+        "lesson_activity.key": "f34f35d3-c0af-4155-9723-37378f8cf3e5"
+      }
+    },
+    {
+      "key": "f3494c5d-da7f-4b8c-9c6d-909527aa1b69",
+      "position": 1,
+      "properties": {
+        "progression_name": "Generate → Refine → Debug → Iterate"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3494c5d-da7f-4b8c-9c6d-909527aa1b69",
+        "lesson_activity.key": "b312b504-b360-4566-974f-f1468732cbf2"
+      }
+    },
+    {
+      "key": "45ea3efc-7e21-4550-be3e-c55f190c4808",
+      "position": 2,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "45ea3efc-7e21-4550-be3e-c55f190c4808",
+        "lesson_activity.key": "b312b504-b360-4566-974f-f1468732cbf2"
+      }
+    },
+    {
+      "key": "3f484213-dd27-46f7-a385-cf6d7fd2fbfd",
+      "position": 1,
+      "properties": {
+        "progression_name": "Webpage Responsiveness"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f484213-dd27-46f7-a385-cf6d7fd2fbfd",
+        "lesson_activity.key": "bf1ea6a0-18f4-4944-9f33-4a613df7602f"
+      }
+    },
+    {
+      "key": "65bb796c-970d-4e62-919c-5039e52e0b84",
+      "position": 2,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "65bb796c-970d-4e62-919c-5039e52e0b84",
+        "lesson_activity.key": "bf1ea6a0-18f4-4944-9f33-4a613df7602f"
       }
     }
   ],
@@ -933,28 +1125,6 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Apply a stylesheet"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level3-test-2025"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "0e0d3db0-7f0b-47c9-8277-6b119b87ad06"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level3-test-2025"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -975,12 +1145,12 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create a User Persona with AI"
+        "progression": "User Personas and Problem Statements"
       },
       "bonus": false,
       "seeding_key": {
@@ -997,7 +1167,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1019,25 +1189,289 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 3,
-      "activity_section_position": 2,
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create a User Persona and Problem Statement"
+        "progression": "Create a Site Map"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson7-level3-test-2025"
+          "ai-generated-design-lesson8-level1-test-2025"
         ],
-        "lesson.key": "lesson-7",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "0963052c-c6c5-47a8-b827-cc52ab37fef2"
+        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e"
       },
       "level_keys": [
-        "ai-generated-design-lesson7-level3-test-2025"
+        "ai-generated-design-lesson8-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Trace a User Flow"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level2-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "516e6f09-0a99-4010-b88a-afef117b3a31"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson8-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explain Your Design"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level3-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "f611be07-284a-46c2-9d08-622f35b833a9"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson8-level3-test-2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Web App with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-weblab-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "3fe3c0fb-4a93-4af4-ae9d-09f17f546336"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson8-weblab-test-2025"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Spot & Fix Accessibility Issues"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level1-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "20c1833b-8a7f-4528-a892-da33e72bb287"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson9-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Apply Accessibility Principles to Your Own App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level2-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "6f7c1f85-4a03-4bea-9ec0-e387831c175a"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson9-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding: Accessibility"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level3-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "e8111cf3-26f6-4d69-b436-25372476a9ba"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson9-level3-test-2025"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wireframe an App Idea"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson10-level1-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "cda03805-b149-49fd-9d72-0159bfc57944"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson10-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Generate → Refine → Debug → Iterate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level1-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "f3494c5d-da7f-4b8c-9c6d-909527aa1b69"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson11-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Generate → Refine → Debug → Iterate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level3-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "f3494c5d-da7f-4b8c-9c6d-909527aa1b69"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson11-level3-test-2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level2-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "45ea3efc-7e21-4550-be3e-c55f190c4808"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson11-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Webpage Responsiveness"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson12-level1-test-2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "3f484213-dd27-46f7-a385-cf6d7fd2fbfd"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson12-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson12-level2-test-2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "65bb796c-970d-4e62-919c-5039e52e0b84"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson12-level2-test-2025"
       ]
     }
   ],
@@ -1224,18 +1658,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level3-test-2025",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level3-test-2025"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "0e0d3db0-7f0b-47c9-8277-6b119b87ad06"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-generated-design-lesson6-level4-test-2025",
         "script_level.level_keys": [
           "ai-generated-design-lesson6-level4-test-2025"
@@ -1272,14 +1694,158 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson7-level3-test-2025",
+        "level.key": "ai-generated-design-lesson8-level1-test-2025",
         "script_level.level_keys": [
-          "ai-generated-design-lesson7-level3-test-2025"
+          "ai-generated-design-lesson8-level1-test-2025"
         ],
-        "lesson.key": "lesson-7",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "0963052c-c6c5-47a8-b827-cc52ab37fef2"
+        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson8-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level2-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "516e6f09-0a99-4010-b88a-afef117b3a31"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson8-level3-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level3-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "f611be07-284a-46c2-9d08-622f35b833a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson8-weblab-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-weblab-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "3fe3c0fb-4a93-4af4-ae9d-09f17f546336"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson9-level1-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level1-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "20c1833b-8a7f-4528-a892-da33e72bb287"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson9-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level2-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "6f7c1f85-4a03-4bea-9ec0-e387831c175a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson9-level3-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level3-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "e8111cf3-26f6-4d69-b436-25372476a9ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson10-level1-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson10-level1-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "cda03805-b149-49fd-9d72-0159bfc57944"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson11-level1-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level1-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "f3494c5d-da7f-4b8c-9c6d-909527aa1b69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson11-level3-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level3-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "f3494c5d-da7f-4b8c-9c6d-909527aa1b69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson11-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level2-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "45ea3efc-7e21-4550-be3e-c55f190c4808"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson12-level1-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson12-level1-test-2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "3f484213-dd27-46f7-a385-cf6d7fd2fbfd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson12-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson12-level2-test-2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "65bb796c-970d-4e62-919c-5039e52e0b84"
       }
     }
   ],

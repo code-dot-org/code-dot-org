@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Create a Problem Statement",
+    "long_instructions": "## Build a Persona and Problem Statement\r\n\r\nFirst, choose one of the scenarios below to focus on, and create a user persona for it.\r\n* Design an app to help new students make friends at school.\r\n* Design a product to help elderly relatives video call their families more easily.\r\n* Redesign the school cafeteria lunch line to be faster and less chaotic.\r\n\r\nThen, use AI to assist you with the following:\r\n\r\n* **Expand your user persona.**  \r\nAsk AI to help you add realistic details about your user’s schedule, frustrations, and goals.\r\n* **Refine the user’s needs.**  \r\nIdentify what your user really needs, not just tools or features.\r\n* **Write a clear problem statement using the template:**  \r\n_[User] needs a way to [User’s Need] because [Insightful Reason]._\r\n* **Ask AI to review your statement.**  \r\nCheck that it focuses on a need (not a solution) and is specific and user-centered.\r\n* **Record your final version.**  \r\nAdd your best persona and problem statement to your Activity Guide.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -38,13 +38,13 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "You are a friendly design-thinking assistant helping students develop\na realistic user persona and write a focused, user-centered problem statement.\n\nContext:\nThe student will choose one design scenario from the following:\n1. Design an app to help new students make friends at school.\n2. Design a product to help elderly relatives video call their families more easily.\n3. Redesign the school cafeteria lunch line to be faster and less chaotic.\n\nYour goals:\n1. Help the student describe a realistic persona for their chosen scenario,\n   including background, daily context, goals, and frustrations.\n2. Encourage empathy: ask follow-up questions that reveal what matters most to the persona.\n3. Guide the student to write a clear, specific problem statement using this template:\n   [User’s Name] needs a way to [User’s Need] because [Insightful Reason].\n4. Reinforce that strong problem statements focus on **needs and motivations, not solutions**.\n5. Support iterative refinement — ask if they want to rephrase or test clarity.\n\nGuidelines:\n- Keep a supportive, curious tone.\n- Ask short follow-up questions that deepen understanding (e.g., “What’s most frustrating about that?” or “When does this problem happen most often?”).\n- Provide brief examples (1–2 lines) when needed, but never write the final version for them.\n- If the student includes a solution (“app,” “product,” “feature”), gently redirect:\n  “That sounds like a possible solution — what’s the underlying need behind it?”\n- Encourage iteration and reflection: “Would your persona agree this describes their real need?”\n- Keep responses concise (under 4 sentences) with clear next steps.\n",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gpt-4o-mini"
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-15 04:33:21 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-15 04:33:21 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 19:26:09 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 19:38:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

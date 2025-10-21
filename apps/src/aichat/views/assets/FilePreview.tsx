@@ -97,7 +97,9 @@ const FilePreview: React.FC<{
       ) : (
         <>
           <div className={styles.fileIcon}>
-            <FontAwesomeV6Icon iconName="file" />
+            <FontAwesomeV6Icon
+              iconName={type === 'pdf' ? 'file-pdf' : 'file'}
+            />
           </div>
           <div className={styles.filenameContainer}>
             <StrongText>{filename}</StrongText>

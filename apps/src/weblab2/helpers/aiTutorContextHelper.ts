@@ -10,17 +10,16 @@ interface AiTutorWebLab2Params {
 }
 
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
-  private aiTutorContext: AiTutorContext = {};
+  private params?: AiTutorWebLab2Params;
 
-  protected getAiTutorContext(): AiTutorContext {
-    return this.aiTutorContext;
+  override setAiTutorContext(params: AiTutorWebLab2Params): void {
+    this.params = params;
   }
 
-  setAiTutorContext({
-    source,
-    longInstructions,
-    selection,
-  }: AiTutorWebLab2Params) {
+  protected override getAiTutorContext(): AiTutorContext {
+    if (!this.params) return {};
+
+    const {source, longInstructions, selection} = this.params;
     const sourceCode = source
       ? Object.values(source.files)
           .filter(
@@ -49,7 +48,7 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
             .join('\n\n')
         : undefined;
 
-    this.aiTutorContext = {
+    return {
       sourceCode,
       longInstructions,
       userSelection,
