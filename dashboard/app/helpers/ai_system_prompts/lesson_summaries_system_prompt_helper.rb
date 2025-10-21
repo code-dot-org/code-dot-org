@@ -24,7 +24,7 @@ tips: additional strategies or ideas to help with teaching the lesson"
 
   def self.get_lesson_materials(lesson_id)
     lesson = Lesson.find(lesson_id)
-    lesson_materials = lesson.summarize_for_lesson_show(User.find_by_email('mark.teacher@code.org'), true)
+    lesson_materials = lesson.summarize_for_lesson_show(current_user, true)
     @lesson_plan = {}
     @lesson_plan[:name] = lesson.name
     @lesson_plan[:overview] = lesson_materials[:overview]
