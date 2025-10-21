@@ -55,9 +55,10 @@ module AiLessonSummariesHelper
             schema: {
               type: "object",
               properties: {
-                evaluationCriteria: {type: "string"},
-                aiEvaluation: {type: "string"},
-                aiReasoning: {type: "string"},
+                learning_objective: {type: "string"},
+                lesson_beats: {type: "string"},
+                misconceptions: {type: "string"},
+                tips: {type: "string"}
               },
             }
           }
