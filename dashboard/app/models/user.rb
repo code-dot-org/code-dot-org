@@ -1507,6 +1507,18 @@ class User < ApplicationRecord
     CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
   end
 
+  def self.delete_progress_for_all_units(user_id:)
+    raise "User id required" unless user_id
+
+    user_storage_id = storage_id_for_user_id(user_id)
+
+    UserScript.where(user_id: user_id).destroy_all
+    UserLevel.where(user_id: user_id).destroy_all
+    ChannelToken.where(storage_id: user_storage_id).destroy_all unless user_storage_id.nil?
+    TeacherFeedback.where(student_id: user_id).destroy_all
+    CodeReview.where(user_id: user_id).destroy_all
+  end
+
   def self.find_or_create_facilitator(params, invited_by_user)
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
