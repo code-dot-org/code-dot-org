@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {AI_TUTOR_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
+
+import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
+import experiments from '../../util/experiments';
 import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
 
 import TopInstructions from './TopInstructions';
@@ -20,18 +24,18 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     children: PropTypes.node,
     instructionsStyle: PropTypes.object,
     workspaceStyle: PropTypes.object,
-    labType: PropTypes.string,
-    inLevel: PropTypes.bool,
 
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
+    labType: PropTypes.string,
   };
 
   // only used so that we can rerender when resized
   state = {
     windowWidth: undefined,
     windowHeight: undefined,
+    aiChatOpen: true,
   };
 
   setCodeWorkspaceContainerRef = element => {
@@ -88,6 +92,10 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     setInstructionsMaxHeightAvailable(maxInstructionsHeight);
   };
 
+  toggleAiChat = () => {
+    this.setState(prevState => ({aiChatOpen: !prevState.aiChatOpen}));
+  };
+
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
   }
@@ -103,20 +111,44 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       instructionsHeight,
       labType,
       children,
-      inLevel,
     } = this.props;
+
+    const showAiTutor =
+      AI_TUTOR_LABS.includes(labType) &&
+      experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
+
+    const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
+    const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
+    const right = showAiTutor
+      ? this.state.aiChatOpen
+        ? chatContainerSpace
+        : sidebarSpace
+      : 0;
 
     return (
       <span>
-        <TopInstructions mainStyle={instructionsStyle} />
+        <TopInstructions
+          mainStyle={{
+            ...instructionsStyle,
+            right,
+          }}
+        />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
-          style={{...workspaceStyle, top: instructionsHeight}}
-          labType={labType}
-          inLevel={inLevel}
+          style={{
+            ...workspaceStyle,
+            top: instructionsHeight,
+            right,
+          }}
         >
           {children}
         </CodeWorkspaceContainer>
+        {showAiTutor && (
+          <AiTutorContainer
+            toggleAiChat={this.toggleAiChat}
+            aiChatOpen={this.state.aiChatOpen}
+          />
+        )}
       </span>
     );
   }
@@ -125,6 +157,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 export default connect(
   state => ({
     instructionsHeight: state.instructions.renderedHeight,
+    labType: state.pageConstants.appType,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {

@@ -44,7 +44,6 @@ import {
   getBlockMode,
   InstructionsPosition,
   setCurrentPlayheadPosition,
-  setShowInstructions,
   showCallout,
 } from '../redux/musicRedux';
 import {MusicExemplarSettings, MusicLevelData} from '../types';
@@ -118,8 +117,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
   const guideMode = (levelProperties.levelData as MusicLevelData).guideMode;
-  const showInstructions =
-    useAppSelector(state => state.music.showInstructions) && !guideMode;
   const instructionsPosition = useAppSelector(
     state => state.music.instructionsPosition
   );
@@ -152,6 +149,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
+  const isStandaloneCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
   const timelineAreaRef = useRef<HTMLDivElement | null>(null);
   const {dancerMeasurePosition, danceMove, dancerSize} = useTimelineDancer({
     isPlaying,
@@ -165,10 +165,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       progressManager.setValidator(validator);
     }
   }, [progressManager, validator, appName]);
-
-  useEffect(() => {
-    dispatch(setShowInstructions(!!levelProperties.longInstructions));
-  }, [dispatch, levelProperties.longInstructions]);
 
   useEffect(() => {
     if (isStartMode) {
@@ -352,42 +348,41 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             instructionsPosition === InstructionsPosition.RIGHT,
         })}
       >
-        {showInstructions && (
-          <div
-            id="instructions-area"
-            className={classNames(
-              moduleStyles.instructionsArea,
-              moduleStyles.instructionsSide
-            )}
-          >
-            <ResourcePanel
-              isRunning={isPlaying}
-              handleInstructionsTextClick={onInstructionsTextClick}
-              bottomComponent={
-                exemplarPlayerInsideInstructions &&
-                showExemplarPlayer && (
-                  <ExemplarPlayerView
-                    playbackEvents={exemplarPlaybackEvents}
-                    title={exemplarSettings.playerTitle!}
-                    player={player}
-                    insideInstructions={exemplarPlayerInsideInstructions}
-                  />
-                )
-              }
-              hasRun={hasRun}
-              hasEdited={hasEdited}
-              fixedDarkBackground={true}
-              overrideTheme={'Light'}
-              includeFooterSpacing={false}
-              levelProperties={levelProperties}
-              headerClassName={moduleStyles.headerWithBorder}
-              settings={settings}
-              hideContinueIfDisabled={true}
-              hideNavigation={false}
-              styleNavigationAsBubble={true}
-            />
-          </div>
-        )}
+        <div
+          id="instructions-area"
+          className={classNames(
+            moduleStyles.instructionsArea,
+            moduleStyles.instructionsSide,
+            isStandaloneCollapsed && moduleStyles.instructionsCollapsed
+          )}
+        >
+          <ResourcePanel
+            isRunning={isPlaying}
+            handleInstructionsTextClick={onInstructionsTextClick}
+            bottomComponent={
+              exemplarPlayerInsideInstructions &&
+              showExemplarPlayer && (
+                <ExemplarPlayerView
+                  playbackEvents={exemplarPlaybackEvents}
+                  title={exemplarSettings.playerTitle!}
+                  player={player}
+                  insideInstructions={exemplarPlayerInsideInstructions}
+                />
+              )
+            }
+            hasRun={hasRun}
+            hasEdited={hasEdited}
+            fixedDarkBackground={true}
+            overrideTheme={'Light'}
+            includeFooterSpacing={false}
+            levelProperties={levelProperties}
+            headerClassName={moduleStyles.headerWithBorder}
+            settings={settings}
+            hideContinueIfDisabled={true}
+            hideNavigation={false}
+            styleNavigationAsBubble={true}
+          />
+        </div>
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
           <PanelContainer
@@ -401,7 +396,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 clearCode={clearCode}
                 allowPackSelection={allowPackSelection}
                 skipUrl={skipUrl}
-                showSettings={!showInstructions}
                 hideChaff={hideChaff}
               />
             }

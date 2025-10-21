@@ -253,7 +253,6 @@ WebLab.prototype.init = function (config) {
         onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
         onToggleInspector={this.onToggleInspector.bind(this)}
         onMount={() => this.onMount(config)}
-        inLevel={!!config.serverScriptId}
       />
     </Provider>,
     document.getElementById(config.containerId)

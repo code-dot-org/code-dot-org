@@ -4,7 +4,9 @@ import classNames from 'classnames';
 import React, {FC} from 'react';
 
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
+import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {
@@ -33,15 +35,18 @@ interface CommonLab {
 export const AiTutorContainer: FC<{
   toggleAiChat: () => void;
   aiChatOpen: boolean;
-  inLevel: boolean;
-  labType: string;
-}> = ({toggleAiChat, aiChatOpen, inLevel, labType}) => {
+}> = ({toggleAiChat, aiChatOpen}) => {
+  const labState = useAppSelector(
+    (state: {pageConstants: LegacyLabsState}) => state.pageConstants
+  );
+
+  const inLevel = !!labState.serverScriptId;
   const allPrompts = inLevel
     ? [...levelPrompts, ...defaultPrompts]
     : [...standaloneProjectPrompts, ...defaultPrompts];
 
   const lab: CommonLab | undefined =
-    labType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
+    labState.appType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
 
   const getHiddenContext = async () => {
     const sourceCode = await lab?.getCode?.();
@@ -49,6 +54,14 @@ export const AiTutorContainer: FC<{
     aiTutorHelper.setAiTutorContext({sourceCode, longInstructions});
     const callback = aiTutorHelper.getHiddenContextCallback();
     return callback();
+  };
+
+  const analyticsData = {
+    labType: labState.appType,
+    channelId: labState.channelId,
+    location: window.location.href,
+    levelId: labState.serverLevelId,
+    unitId: labState.serverScriptId,
   };
 
   return (
@@ -88,6 +101,7 @@ export const AiTutorContainer: FC<{
           toggleAiChat={toggleAiChat}
           suggestedPrompts={allPrompts}
           hiddenContextCallback={getHiddenContext}
+          analyticsData={analyticsData}
         />
       )}
     </>

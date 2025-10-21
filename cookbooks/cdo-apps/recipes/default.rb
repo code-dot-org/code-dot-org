@@ -129,8 +129,8 @@ include_recipe node['cdo-apps']['nginx_enabled'] ?
 include_recipe 'cdo-apps::chef_credentials'
 include_recipe 'cdo-apps::crontab'
 
-node.default['cdo-apps']['local_redis'] = !node['cdo-secrets']['redis_primary']
-include_recipe 'cdo-redis' if node['cdo-apps']['local_redis']
+# Only include a local redis server if no external redis_url was provided.
+include_recipe 'cdo-redis' unless node['cdo-secrets']['redis_url']
 
 # only the i18n server needs the i18n recipe
 include_recipe 'cdo-i18n' if node.name == 'i18n'

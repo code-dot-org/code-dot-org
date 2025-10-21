@@ -1,18 +1,16 @@
-import {AiTutorContext} from '../types';
+import {AiTutorContext, MaybePromise} from '../types';
 
 /*
  * Abstract base class used to provide lab specific context to AI Tutor.  Each lab will inherit from and
  * extend this class, but conversion to a system prompt string should be kept here for coordination and
  * consistency.
  */
-export abstract class AiTutorContextHelper<T extends object> {
-  protected abstract getAiTutorContext():
-    | Promise<AiTutorContext>
-    | AiTutorContext;
+export abstract class AiTutorContextHelper<AiTutorParams extends object> {
+  protected abstract getAiTutorContext(): MaybePromise<AiTutorContext>;
 
-  protected abstract setAiTutorContext(params: T): void;
+  protected abstract setAiTutorContext(params: AiTutorParams): void;
 
-  private async getHiddenContextString() {
+  private async getHiddenContextString(): Promise<string> {
     const {
       sourceCode,
       validationContents,

@@ -691,16 +691,23 @@ describe('AiDiffChat', () => {
       name: i18n.aiDifferentiation_suggest_prompt(),
     });
     fireEvent.click(suggest_prompt);
+    const getStartedButton = screen.getByRole('button', {
+      name: /Get Started/i,
+    });
+    fireEvent.click(getStartedButton);
     expect(screen.getAllByRole('checkbox')).toHaveLength(10);
     // Check the last new prompt is from the second set.
     expect(screen.getAllByRole('checkbox').pop()).toHaveAccessibleName(
-      'Real world connection'
+      'Get help using Code.org'
     );
     fireEvent.click(suggest_prompt);
+    const createButton = screen.getByRole('button', {name: /Create/i});
+    fireEvent.click(createButton);
+
     expect(screen.getAllByRole('checkbox')).toHaveLength(15);
     // Check the last new prompt is from the first set.
     expect(screen.getAllByRole('checkbox').pop()).toHaveAccessibleName(
-      'Write an exit ticket'
+      'Write a lesson hook'
     );
   });
 });
