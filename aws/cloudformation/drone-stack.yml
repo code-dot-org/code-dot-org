@@ -403,8 +403,17 @@ Resources:
               Value: "true"
             -
               Name: DRONE_REAPER_INTERVAL
-              Value: "1h"
+              Value: "5m"
             # END: Reaper configuration
+
+            # BEGIN: Pinger configuration - detects unhealthy workers
+            -
+              Name: DRONE_PINGER_ENABLED
+              Value: "true"
+            -
+              Name: DRONE_PINGER_INTERVAL
+              Value: "5m"
+            # END: Pinger configuration
 
   DroneAutoscalerEcsService:
     Type: AWS::ECS::Service
