@@ -12,7 +12,7 @@ NODE_OPTIONS="--max-old-space-size=${MEM_PER_TEST_PROCESS_MB}"
 PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS=95
 
 function linuxNumProcs() {
-  local procs=14
+  local procs=12
   echo "  Hard-coded procs: ${procs}" >&2
   echo >&2
 
