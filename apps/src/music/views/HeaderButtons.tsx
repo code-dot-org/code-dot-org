@@ -4,13 +4,10 @@ import Typography from '@code-dot-org/component-library/typography';
 import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
-import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getBaseAssetUrl} from '../appConfig';
@@ -142,8 +139,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [dialogControl, skipUrl]);
 
-  const settings = useBlocklySettings();
-
   return (
     <div className={moduleStyles.container} ref={containerRef} tabIndex={-1}>
       {/* Show static pack info; clickable Start Over button */}
@@ -180,12 +175,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           </button>
         </>
       )}
-      {/* Settings Button */}
-      {!experiments.isEnabledAllowingQueryString(
-        experiments.LAB2_RESOURCE_PANEL
-      ) ? (
-        <SettingsButton settings={settings} />
-      ) : null}
       {!readOnlyWorkspace && (
         <>
           {/* Undo Button */}
@@ -218,22 +207,20 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
             onClick={() => onClickUndoRedo('redo')}
             containerRef={containerRef}
           />
-          {/* Documentation Button */}
-          {Blockly.showBlockHelp && (
-            <IconButtonWithTooltip
-              id="documentation"
-              label={musicI18n.documentation()}
-              icon={{iconName: 'book', iconStyle: 'solid'}}
-              type="tertiary"
-              color="black"
-              buttonSize="xs"
-              tooltipSize="xs"
-              tooltipDirection="onBottom"
-              hideTooltipTail={true}
-              onClick={onClickDocumentation}
-              containerRef={containerRef}
-            />
-          )}
+          {/* Documentation Button - TODO: Remove and add to resoource panel. */}
+          <IconButtonWithTooltip
+            id="documentation"
+            label={musicI18n.documentation()}
+            icon={{iconName: 'book', iconStyle: 'solid'}}
+            type="tertiary"
+            color="black"
+            buttonSize="xs"
+            tooltipSize="xs"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
+            onClick={onClickDocumentation}
+            containerRef={containerRef}
+          />
         </>
       )}
       {/* Skip to Project Button */}

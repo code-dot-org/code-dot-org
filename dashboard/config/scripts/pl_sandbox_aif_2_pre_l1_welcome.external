@@ -12,14 +12,14 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach AI Foundations (Semester 2) course— a curriculum where students code alongside AI to build real-world interactive projects.
+#### This professional learning module prepares you to teach **AI Foundations** (Semester 2) course— a curriculum where students code alongside AI to build real-world interactive projects.
 
 ___
 
 <div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
-  <img src="https://images.code.org/8e7227d109471dbc27897577943895b1-image-1744063906640.04.48%E2%80%AFPM.png" style="border-radius: 5pt; width: 32%;">
-  <img src="https://images.code.org/5f29fc424c02eede282a4b09cd16835d-image-1744063906639.04.07%E2%80%AFPM.png" style="border-radius: 5pt; width: 32%;">
-  <img src="https://images.code.org/5f3188d66d020c6edff10c622c1915d8-image-1744063906638.10.49%E2%80%AFPM.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/36211eedb3698751fa5523b4dde93351-image-1760467094025.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/7f813b0aec7d472e470f94eb91471aa1-image-1760466945803.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/ddb463a06ccc88f5d7390a1f841a0f31-image-1760467013014.png" style="border-radius: 5pt; width: 32%;">
 </div>
 
 ___
@@ -54,5 +54,4 @@ ___
  
 
 
-![]()
 MARKDOWN

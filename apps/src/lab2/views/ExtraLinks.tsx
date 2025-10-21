@@ -16,7 +16,6 @@ interface ExtraLinksProps {
 // then display a modal with the link data.
 const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   levelId,
-  positionRightOfFooter,
 }: ExtraLinksProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const {isExtraLinksLoading, levelLinkData, projectLinkData} =
@@ -31,11 +30,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
       <Button
         onClick={() => setIsModalOpen(true)}
         text={'Extra Links'}
-        className={
-          positionRightOfFooter
-            ? moduleStyles.buttonRightOfFooter
-            : moduleStyles.extraLinksButton
-        }
+        className={moduleStyles.extraLinksButton}
         size={'s'}
         id={'uitest-extra-links-button'}
       />

@@ -253,11 +253,6 @@ export const GoalsAnswer: React.FC<GoalsAnswerProps> = ({
           />
         </div>
       )}
-
-      {/* Debug info - remove this later */}
-      <div style={{marginTop: '10px', fontSize: '12px', color: '#666'}}>
-        Selected goals: {selectedGoals.join(', ')}
-      </div>
     </div>
   );
 };
@@ -318,12 +313,6 @@ export const SupportAnswer: React.FC<SupportAnswerProps> = ({
           />
         </div>
       )}
-
-      {/* Debug info - remove this later */}
-      <div style={{marginTop: '10px', fontSize: '12px', color: '#666'}}>
-        Selected supports: {selectedSupports.join(', ')}
-        {otherSupportText && <div>Other text: "{otherSupportText}"</div>}
-      </div>
     </div>
   );
 };

@@ -19,6 +19,7 @@ export interface UserMessageEditorProps {
   /** Custom className for editor container */
   editorContainerClassName?: string;
   customPlaceholder?: string;
+  children?: React.ReactNode;
 }
 
 const UserMessageEditor = React.forwardRef<
@@ -32,6 +33,7 @@ const UserMessageEditor = React.forwardRef<
       editorContainerClassName,
       customPlaceholder,
       showSubmitLabel = false,
+      children,
     },
     externalInputRef
   ) => {
@@ -107,6 +109,7 @@ const UserMessageEditor = React.forwardRef<
           onBlur={() => setFocused(false)}
         />
         <div className={moduleStyles.chatActionsContainer}>
+          {children}
           <Button
             aria-label={commonI18n.submit()}
             id="uitest-chat-submit"

@@ -10281,6 +10281,8 @@ en:
               name: Widget Playground
             lesson-11:
               name: AI-Powered Threats and Defenses Removed Levels
+            lesson-12:
+              name: AI Tutor - Python Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -10294,6 +10296,8 @@ en:
               display_name: PL Stuff
             lessonGroup-7:
               display_name: Python
+            lessonGroup-8:
+              display_name: AI Tutor
           name: angelina-playground
           title: Angelina's Place To Do Stuff
           description_audience: ''
@@ -25684,3 +25688,56 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        aif2-tutor-pilot-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+            lessonGroup-6:
+              display_name: Alternate Level Progressions (Console Only)
+          title: Foundations of AI Programming
+          description: |-
+            This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_2) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            This unit introduces students to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, students write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. They analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering students to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+
+            &nbsp;
+          description_short: ''
+          description_audience: ''

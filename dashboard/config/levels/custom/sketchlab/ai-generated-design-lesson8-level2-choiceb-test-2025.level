@@ -1,0 +1,17 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2025-10-16T01:45:17.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Adopt-A-Pet",
+    "long_instructions": "## **Do This**\r\n\r\n<br/> 1. **Choose a key user task.**\r\nThink about something a visitor might do on a pet adoption web app, such as:\r\n\r\n* Browse pets by type or age\r\n* Learn about the adoption process\r\n* Contact the shelter for more information\r\n\r\n<br/> 2. **Trace the path.**\r\nOn your site map, show the pages a user would move through to complete that task.\r\n\r\n* Use **arrows or labels** to mark each click or page change.\r\n* Or write out the steps as a short list (e.g., *Home → Pets → Dog Profiles → Adoption Info*).\r\n\r\n<br/> 3. **Peer-test it.**\r\nPair up with another student:\r\n\r\n* One person plays the **user**, describing what they'd click.\r\n* The other follows along on the site map.\r\n* Notice where the user gets lost or repeats steps.\r\n\r\n",
+    "bubble_choice_description": "Use your site map to explore how people interact with a pet adoption web app.",
+    "thumbnail_url": "https://images.code.org/e8ed3fef945ce839056a7b176519c278-Pasted Graphic 12.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-16T01:45:17.556+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level2-sketchlab-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level2-sketchlab-test-2025\"},{\"changed_at\":\"2025-10-16 01:47:09 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 02:05:02 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Sketchlab>

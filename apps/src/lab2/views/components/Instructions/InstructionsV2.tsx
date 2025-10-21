@@ -5,17 +5,13 @@ import React from 'react';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
-import ValidationResults from '@cdo/apps/lab2/views/components/Instructions/ValidationResults';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import NavigationArea from './NavigationArea';
 import PredictQuestion from './PredictQuestion';
 import PredictQuestionRunPrompt from './PredictQuestionRunPrompt';
 import PredictSummary from './PredictSummary';
-import ValidationButton from './ValidationButton';
 
 import moduleStyles from './instructions.module.scss';
 
@@ -42,7 +38,7 @@ export interface InstructionsProps {
   /** If the instructions panel should always have a dark background, regardless of theme */
   fixedDarkBackground?: boolean;
   /** Component to use for AI Tutor responses, if any. */
-  AiTutor2ResponseView?: React.ReactNode;
+  AiTutorResponseView?: React.ReactNode;
   overrideTheme?: Theme;
   /** If the lab requires the user to click run in order to continue.
    * Only applies to non-validated levels. */
@@ -76,28 +72,12 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   bottomComponent,
   validationSettings,
   fixedDarkBackground,
-  AiTutor2ResponseView,
+  AiTutorResponseView,
   overrideTheme,
   hideNavigation = false,
   hideContinueIfDisabled = false,
   ...feedbackProps
 }) => {
-  const hasValidationConditions = useAppSelector(
-    state => state.lab.validationState?.hasConditions
-  );
-
-  const validationResults = useAppSelector(
-    state => state.lab.validationState?.validationResults
-  );
-
-  // TODO: When Python Lab uses the resource panel permanently, we can remove all validation
-  // from this component.`
-  const includeValidation =
-    validationSettings !== undefined &&
-    !isUsingResourcePanel(
-      levelProperties.appName,
-      levelProperties.isProjectLevel || false
-    );
   const {longInstructions, predictSettings, offerBrowserTts} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
@@ -149,32 +129,13 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <TextToSpeech text={longInstructions} />
             </div>
           )}
-          {includeValidation && hasValidationConditions && (
-            <div className={moduleStyles.nonScrollingSubContent}>
-              <ValidationButton
-                onValidate={validationSettings.onValidate}
-                onStopValidation={validationSettings.onStopValidation}
-                isValidating={validationSettings.isValidating}
-                isValidateDisabled={validationSettings.isValidateDisabled}
-              />
-            </div>
-          )}
           {bottomComponent && (
             <div className={moduleStyles.bottomComponent}>
               {bottomComponent}
             </div>
           )}
         </div>
-        {includeValidation && validationResults && (
-          <div className={moduleStyles.bubble}>
-            <div className={moduleStyles.textContent}>
-              <div className={moduleStyles.scrollingContent}>
-                <ValidationResults />
-              </div>
-            </div>
-          </div>
-        )}
-        {AiTutor2ResponseView && AiTutor2ResponseView}
+        {AiTutorResponseView && AiTutorResponseView}
         {isPredictLevel && (
           <>
             <InstructorsOnly>

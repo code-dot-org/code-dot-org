@@ -10,30 +10,29 @@ module User::AiAccessible
 
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
 
-  # TODO-AITUTOR: It looks like the only utility UserPermission::AI_TUTOR_ACCESS
-  # gives us at the moment is the ability for teachers to use AI Tutor on a level
-  # without impersonating a student. We could let teachers
-  # in the pilot use AI Tutor without a separate user permission.
-  def has_ai_tutor_access?
-    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    permission?(UserPermission::AI_TUTOR_ACCESS) || in_ai_tutor_experiment_with_enabled_section?
+  # Chat apis trust the client to decide if it can access chat features
+  # This allows us the flexibility to do things like turn on the tutor UI
+  # with a url param, or experiment with new lab types with low friction.
+  def trust_chat_client?(client_type)
+    return true if client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
+    return true if client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
+    false
   end
 
-  # TODO-AITUTOR: Decide if we need a different experiment
+  # This was originally meant to be used to inform the UI of when to set Tutor to "sleeping"
+  # on a level that would otherwise show Tutor. It is currently unused while the
+  # permissions features for tutor and ai chat features in general are being shaped.
+  def has_ai_tutor_access?
+    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
+    in_ai_tutor_pilot? || in_ai_tutor_enabled_section_with_pilot_teacher?
+  end
+
   def can_enable_ai_tutor?
-    !ai_tutor_feature_globally_disabled? && (permission?(UserPermission::AI_TUTOR_ACCESS) ||
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
+    !ai_tutor_feature_globally_disabled? && in_ai_tutor_pilot?
   end
 
   def can_use_ai_iteration_tools?
-    permission?(UserPermission::AI_TUTOR_ACCESS) && levelbuilder?
-  end
-
-  # TODO-AITUTOR: Remove this method when cleaning up tutor code.
-  def can_view_student_ai_chat_messages?
-    ai_tutor_courses = ['programming-fundamentals-aitutor-2024']
-    (sections.any?(&:assigned_csa?) || sections.any? {|s| ai_tutor_courses.include?(s.unit_group&.name)}) &&
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+    levelbuilder?
   end
 
   def teacher_can_access_ai_chat?
@@ -49,19 +48,16 @@ module User::AiAccessible
     teacher_can_access_ai_chat? || student_can_access_ai_chat?
   end
 
-  def can_access_ai_tutor?(client_type)
-    # If the request is coming from AiTutor or FlowLab, trust the client to decide
-    # if it can access the chat backend. This allows easy testing of AiTutor using a url param.
-    client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ||
-      client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
-  end
-
   private def ai_tutor_feature_globally_disabled?
     DCDO.get('ai-tutor-disabled', false)
   end
 
-  private def in_ai_tutor_experiment_with_enabled_section?
+  private def in_ai_tutor_enabled_section_with_pilot_teacher?
     Queries::User::TeacherEnabledExperiments.call(self).include?(AI_TUTOR_EXPERIMENT_NAME) &&
       sections_as_student.any?(&:ai_tutor_enabled)
+  end
+
+  private def in_ai_tutor_pilot?
+    SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 end
