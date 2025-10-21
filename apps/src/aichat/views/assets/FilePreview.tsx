@@ -57,6 +57,11 @@ const FilePreview: React.FC<{
   }, [url, onLoadError]);
   const previewType = type === 'image' ? 'image' : 'file';
 
+  const getFileExtension = (filename: string): string => {
+    const extension = filename.split('.').pop();
+    return filename.includes('.') && extension ? extension : 'TEXT';
+  };
+
   return (
     <div className={styles[`preview-${previewType}`]} title={filename}>
       {onRemove ? (
@@ -120,10 +125,8 @@ const FilePreview: React.FC<{
             {type === 'pdf' && <span>PDF</span>}
             {type === 'text' && (
               <span className={styles.fileDetail}>
-                {filename.split('.').length > 1
-                  ? filename.split('.').pop()?.toUpperCase() +
-                    (fileDetail ? ` ${fileDetail}` : '')
-                  : 'TEXT'}
+                {getFileExtension(filename).toUpperCase()}
+                {fileDetail && ` ${fileDetail}`}
               </span>
             )}
           </div>
