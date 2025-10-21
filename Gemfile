@@ -34,6 +34,10 @@ gem 'rails-controller-testing', '~> 1.0.5'
 # Ref: https://github.com/rails/sprockets/blob/main/UPGRADING.md#manifestjs
 gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
 
+# Rails depends on zeitwerk ~>2.3, but cpath support added in 2.6.9 plays a bit
+# nicer with some of our more convoluted model names (eg, LevelsScriptLevel).
+gem 'zeitwerk', '~> 2.6.9'
+
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
