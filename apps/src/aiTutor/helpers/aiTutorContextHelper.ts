@@ -17,16 +17,16 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
       validationResults,
       longInstructions,
       documentation,
-      userSelection,
+      //userSelection,
     } = await this.getAiTutorContext();
 
     const hiddenContextString = [
-      ...(userSelection
-        ? [
-            'The student is asking about this part of their current code:',
-            userSelection,
-          ]
-        : []),
+      // ...(userSelection
+      //   ? [
+      //       'The student is asking about this part of their current code:',
+      //       userSelection,
+      //     ]
+      //   : []),
       "Here is the student's current code:",
       sourceCode,
       ...(validationContents
@@ -55,7 +55,19 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
     return hiddenContextString;
   }
 
+  private async getMessageContextString(): Promise<string> {
+    const {userSelection} = await this.getAiTutorContext();
+    if (userSelection) {
+      return `The student is asking about this part of their current code:\n\n${userSelection}`;
+    }
+    return '';
+  }
+
   getHiddenContextCallback() {
     return this.getHiddenContextString.bind(this);
+  }
+
+  getMessageContextCallback() {
+    return this.getMessageContextString.bind(this);
   }
 }

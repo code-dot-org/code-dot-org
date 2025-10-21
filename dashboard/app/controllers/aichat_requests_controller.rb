@@ -48,6 +48,7 @@ class AichatRequestsController < ApplicationController
 
     # Filter out non-OK messages (e.g. errors).
     messages_for_model = params[:storedMessages].select {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]}
+    puts messages_for_model
     context = params[:aichatContext]
 
     # Add client type to model parameters.

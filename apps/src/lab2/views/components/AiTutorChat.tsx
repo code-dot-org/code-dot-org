@@ -24,6 +24,7 @@ const defaultChatButtonData: ChatButtonData[] = [
 
 interface AiTutorChatProps {
   hiddenContextCallback: () => Promise<string>;
+  messageContextCallback?: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
   levelName?: string;
   channelId?: string;
@@ -35,6 +36,7 @@ interface AiTutorChatProps {
 // A free chat with lab-supplied context added to each question.
 const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   hiddenContextCallback,
+  messageContextCallback,
   aiTutorMultimodalEnabled = false,
   levelName,
   channelId,
@@ -89,6 +91,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         modelParameters={modelParameters}
         chatButtons={chatButtons}
         hiddenContextCallback={hiddenContextCallback}
+        messageContextCallback={messageContextCallback}
         multimodalEnabled={aiTutorMultimodalEnabled}
         levelName={levelName}
         channelId={channelId}
