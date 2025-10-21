@@ -22,7 +22,7 @@ class Pd::WorkshopMailjetMailer
   def self.send_teacher_workshop_detail_change_notification(enrollment, user, use_alternate_email, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info)
     email = use_alternate_email ? user.alternate_email : user.email
     name = user.given_name || user.name
-    email_vars = build_workshop_detail_change_email_vars(workshop, name, email, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info, enrollment)
+    email_vars = build_workshop_detail_change_email_vars(enrollment.workshop, name, email, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info, enrollment)
 
     retryable_send_email('teacher_workshop_detail_change_notification', email, user.friendly_name, email_vars)
   end
