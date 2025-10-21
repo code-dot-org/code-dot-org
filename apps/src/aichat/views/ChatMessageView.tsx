@@ -1,5 +1,6 @@
 import React, {memo, useState} from 'react';
 
+import {getLineReferenceText} from '@cdo/apps/aichat/utils';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
@@ -121,7 +122,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
               filename={contextItem.filename}
               fileDetail={
                 contextItem.lineReference
-                  ? `(${contextItem.lineReference.start}-${contextItem.lineReference.end})`
+                  ? getLineReferenceText(contextItem.lineReference)
                   : undefined
               }
             />

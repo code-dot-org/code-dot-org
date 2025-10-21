@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {removeItemFromUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
+import {getLineReferenceText} from '@cdo/apps/aichat/utils';
 import FilePreview from '@cdo/apps/aichat/views/assets/FilePreview';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -30,7 +31,7 @@ const UserAddedSelectionContextPreview: React.FunctionComponent = () => {
               filename={contextItem.filename}
               fileDetail={
                 contextItem.lineReference
-                  ? `(${contextItem.lineReference.start}-${contextItem.lineReference.end})`
+                  ? getLineReferenceText(contextItem.lineReference)
                   : undefined
               }
               isUploading={false}
