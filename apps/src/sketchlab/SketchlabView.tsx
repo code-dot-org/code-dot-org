@@ -8,7 +8,6 @@ import {
   AppState,
   BinaryFiles,
   ExcalidrawImperativeAPI,
-  ExcalidrawInitialDataState,
 } from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
@@ -16,7 +15,12 @@ import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  LevelProperties,
+  ProjectSources,
+  ExcalidrawSourceWithExternalFiles,
+} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -41,7 +45,7 @@ const INITIAL_WORKSPACE_WIDTH = 800;
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
 interface SketchlabSources extends ProjectSources {
-  source: ExcalidrawInitialDataState;
+  source: ExcalidrawSourceWithExternalFiles;
 }
 
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({

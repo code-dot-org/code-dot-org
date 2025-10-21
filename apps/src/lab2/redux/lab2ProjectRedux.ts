@@ -43,7 +43,7 @@ const projectSlice = createSlice({
   initialState,
   reducers: {
     setProjectSource(state, action: PayloadAction<ProjectSources | undefined>) {
-      state.projectSources = action.payload;
+      state.projectSources = action.payload as any;
     },
     setSource(state, action: PayloadAction<MultiFileSource>) {
       state.projectSources = {
@@ -55,7 +55,7 @@ const projectSlice = createSlice({
       state,
       action: PayloadAction<ProjectSources | undefined>
     ) {
-      state.projectSources = action.payload;
+      state.projectSources = action.payload as any;
       state.viewingOldVersion = true;
     },
     setViewingOldVersion(state, action: PayloadAction<boolean>) {

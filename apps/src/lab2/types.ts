@@ -8,6 +8,8 @@
 // The library data should definitely live elsewhere.
 
 import {Theme} from '@code-dot-org/component-library/common/contexts';
+import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {ExcalidrawInitialDataState} from '@excalidraw/excalidraw/types/types';
 import type * as GoogleBlockly from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
@@ -73,7 +75,10 @@ export interface ProjectSources {
 
 export type LabConfig = {[key: string]: {[key: string]: string}};
 
-export type Source = BlocklySource | MultiFileSource;
+export type Source =
+  | BlocklySource
+  | MultiFileSource
+  | ExcalidrawSourceWithExternalFiles;
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -90,6 +95,13 @@ export interface UpdateSourceOptions extends SaveSourceOptions {
 
 // Blockly JSON is currently typed as a generic object
 export type BlocklySource = {[key: string]: unknown};
+
+// -- SKETCH LAB -- //
+export interface ExcalidrawSourceWithExternalFiles
+  extends ExcalidrawInitialDataState {
+  externalFiles?: Record<FileId, ProjectFile>;
+  elements?: ExcalidrawElement[] | null; // for mutability for Redux?
+}
 
 // -- MULTI-FILE -- //
 
