@@ -63,7 +63,6 @@ $icon-overlay-padding-right: 8px;
   background-color: var(--background-neutral-secondary);
   border-end-start-radius: $message-border-radius;
   border-end-end-radius: 0;
-  overflow-wrap: break-word;
   word-break: break-word;
 }
 
@@ -73,7 +72,6 @@ $icon-overlay-padding-right: 8px;
   border-end-start-radius: 0;
   border-end-end-radius: $message-border-radius;
   overflow-x: auto;
-  overflow-wrap: break-word;
   word-break: break-word;
 }
 
