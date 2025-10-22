@@ -33,7 +33,7 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Template!\n  </body>\n</html>\n  ",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Your content here!\n  </body>\n</html>\n  ",
           "active": true,
           "folderId": "0"
         }
@@ -44,6 +44,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-15 16:42:29 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-15 16:42:29 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 13:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 16:51:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 16:52:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
