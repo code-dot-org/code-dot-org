@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Explore documentation\r\n\r\n## Do This:\r\n- Use AI to Explore documentation .... ",
+    "long_instructions": "# Explore Documentation\r\n\r\nYour code can already print a message ... but what else can `print()` do?\r\n\r\nCan you make it show two messages on one line? Add a blank line? Show numbers and text together? \r\n\r\n# Try It (with AI Tutor)\r\n\r\nUse the AI Tutor to **explore the documentation for the `print()` command.**\r\n\r\nYou can click the \"Show documentation\" button or ask questions like:\r\n* _What does the `print()` function do in Python?_\r\n* _What are some examples of `print()` with different arguments?_\r\n\r\n***Tip: Copy an example from the Tutor and try it in your code to see what happens!***",
     "ai_tutor_available": "true",
     "offer_browser_tts": "false",
     "submittable": "false",
@@ -18,8 +18,27 @@
     "widget_view_allow_show_code": "false",
     "predict_settings": {
       "isPredictLevel": false
+    },
+    "teacher_markdown": "This level is not about memorizing arguments; it’s about learning to look up and experiment.\r\n\r\nEmphasize that programmers rarely remember everything — they use documentation and AI tools.\r\n\r\nEncourage students to describe one new thing they learned about `print()` from the Tutor.",
+    "additional_ai_evaluation_instructions": "The goal of this level is for students to practice using the AI Tutor to explore documentation and examples. \r\nIf the student's code runs and demonstrates a new use of the `print()` function learned from documentation, \r\nconsider it correct even if formatting or punctuation is not perfect. \r\nPrioritize whether the student applied new knowledge from the AI Tutor rather than how advanced the code is.\r\n",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print(\"Hello world!\")\n\nprint(123)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-14T20:37:06.967+00:00\",\"changed\":[\"cloned from \\\"ai-tutor-foundations-of-ai-programming-L3-2025\\\"\"],\"cloned_from\":\"ai-tutor-foundations-of-ai-programming-L3-2025\"},{\"changed_at\":\"2025-10-14 20:37:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T20:37:06.967+00:00\",\"changed\":[\"cloned from \\\"ai-tutor-foundations-of-ai-programming-L3-2025\\\"\"],\"cloned_from\":\"ai-tutor-foundations-of-ai-programming-L3-2025\"},{\"changed_at\":\"2025-10-14 20:37:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 01:30:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 01:32:26 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 01:33:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 01:35:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 01:44:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

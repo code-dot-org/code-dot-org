@@ -82,20 +82,26 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 : commonI18n.aiChatMessageUser()
             }
           >
-            <SafeMarkdown
-              markdown={text}
-              rehypeMap={rehypeMap}
-              openExternalLinksInNewTab
-            />
+            {role === Role.ASSISTANT ? (
+              <SafeMarkdown
+                markdown={text}
+                rehypeMap={rehypeMap}
+                openExternalLinksInNewTab
+              />
+            ) : (
+              <p>{text}</p>
+            )}
           </div>
         </div>
-        <div
-          className={
-            isTA ? moduleStyles.footerWithOverlay : moduleStyles.footer
-          }
-        >
-          {footer}
-        </div>
+        {footer && (
+          <div
+            className={
+              isTA ? moduleStyles.footerWithOverlay : moduleStyles.footer
+            }
+          >
+            {footer}
+          </div>
+        )}
       </div>
     </div>
   );

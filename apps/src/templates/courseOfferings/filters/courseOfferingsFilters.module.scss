@@ -6,7 +6,7 @@ $catalog-filters-z-index: 10;
   padding-inline: 2rem;
   padding-block-start: 1.5rem;
   padding-block-end: 1.875rem;
-  background-color: white;
+  background-color: var(--background-neutral-secondary);
   z-index: $catalog-filters-z-index;
 }
 

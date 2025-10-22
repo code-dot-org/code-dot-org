@@ -1,0 +1,97 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-16T17:36:12.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "guide",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": true,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 300,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "## Do This:\r\n\r\n\r\n1. Click each button on the web app and watch what changes on the screen. Record your observations in your Activity Guide.\r\n\r\n2. Open the JavaScript file `script.js`.\r\n\r\n3. In your Activity Guide, map *at least three* of the buttons you tested to its:\r\n\r\n   * **selector** (what's being listened to),\r\n   * **handler** (what runs on click),\r\n   * **DOM update** (what changes on screen).\r\n\r\n4. Ask AI about anything unfamiliar. Use these frames (edit to fit):\r\n\r\n   * \"What does `addEventListener('click')` do?\"\r\n\r\n   * \"What does `textContent` change in this app?\"\r\n\r\n   * \"What does `style.display = 'block'` do?\"\r\n\r\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Plant Care Helper</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n</head>\n<body>\n  <h1>Plant Care Helper</h1>\n\n  <div class=\"buttonMenu\">\n    <button id=\"buttonWater\">Water Plant</button>\n    <button id=\"buttonSun\">Add Sunlight</button>\n    <button id=\"buttonFertilizer\">Add Fertilizer</button>\n    <button id=\"buttonSoil\">Check Soil</button>\n    <button id=\"buttonFact\">Plant Fact</button>\n  </div>\n\n  <div id=\"stage\">\n    <img\n      id=\"plantNormal\"\n      src=\"plant-normal.png\"\n      alt=\"A small plant in a terracotta pot.\"\n    >\n    <img\n      id=\"plantSunny\"\n      src=\"plant-sunny.png\"\n      alt=\"A small plant basking in sunlight.\"\n      hidden\n    >\n    <img\n      id=\"sprout\"\n      src=\"sprout.png\"\n      alt=\"A new sprout with two bright green leaves.\"\n      hidden\n    >\n  </div>\n\n  <div id=\"output\">\n    Click a button to see what changes here.\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "styles.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, Helvetica, sans-serif;\n  background-color: #f5f9f6;\n  color: #1f2937;\n  text-align: center;\n  padding: 20px;\n}\n\nh1 {\n  color: #14532d;\n  margin-bottom: 16px;\n}\n\n.buttonMenu {\n  margin-bottom: 20px;\n}\n\nbutton {\n  display: inline-block;\n  margin: 4px;\n  padding: 10px 14px;\n  border: 1px solid #a7f3d0;\n  border-radius: 8px;\n  background-color: #d1fae5;\n  color: #064e3b;\n  cursor: pointer;\n  font-weight: 600;\n}\n\n#stage {\n  margin: 20px auto;\n}\n\n\n/* Show only the normal plant on page load */\n#plantNormal {\n  display: block;\n}\n\n/* Hide the sunny plant and sprout initially */\n#plantSunny {\n  display: none;\n}\n\n#sprout {\n  display: none;\n}\n\n/* Shared image styles */\n#stage img {\n  width: 180px;\n  height: auto;\n  margin: 0 auto;\n}\n\n/* Output box */\n#output {\n  display: block;\n  margin: 20px auto;\n  max-width: 500px;\n  min-height: 80px;\n  padding: 12px;\n  border: 2px solid #bbf7d0;\n  border-radius: 10px;\n  background-color: #ffffff;\n  color: #14532d;\n  font-size: 1rem;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Water Button\ndocument.getElementById(\"buttonWater\").addEventListener(\"click\", function () {\n  \n  document.getElementById(\"plantNormal\").style.display = \"block\";\n  document.getElementById(\"plantSunny\").style.display = \"none\";\n  document.getElementById(\"sprout\").style.display = \"none\";\n  \n  document.getElementById(\"output\").textContent = \"You watered the plant. It looks refreshed!\";\n  document.getElementById(\"output\").style.backgroundColor = \"#e0f2fe\";\n  document.getElementById(\"output\").style.borderColor = \"#93c5fd\";\n});\n\n\n// Sun Button\ndocument.getElementById(\"buttonSun\").addEventListener(\"click\", function () {\n  document.getElementById(\"plantNormal\").style.display = \"none\";\n  document.getElementById(\"plantSunny\").style.display = \"block\";\n  document.getElementById(\"sprout\").style.display = \"none\";\n  \n  document.getElementById(\"output\").textContent = \"Sunshine added. The plant is soaking it up!\";\n  document.getElementById(\"output\").style.backgroundColor = \"#ffffff\";\n  document.getElementById(\"output\").style.borderColor = \"#bbf7d0\";\n});\n\n\n// Fertilizer Button\ndocument.getElementById(\"buttonFertilizer\").addEventListener(\"click\", function () {\n  document.getElementById(\"plantNormal\").style.display = \"none\";\n  document.getElementById(\"plantSunny\").style.display = \"none\";\n  document.getElementById(\"sprout\").style.display = \"block\";\n  \n  document.getElementById(\"output\").textContent = \"Nutrients added. A new sprout appears!\";\n  document.getElementById(\"output\").style.backgroundColor = \"#ffffff\";\n  document.getElementById(\"output\").style.borderColor = \"#bbf7d0\";\n});\n\n\n// Soil Button\ndocument.getElementById(\"buttonSoil\").addEventListener(\"click\", function () {\n  document.getElementById(\"output\").textContent = \"Soil check: Moist and healthy.\";\n  document.getElementById(\"output\").style.backgroundColor = \"#ede9d5\";\n  document.getElementById(\"output\").style.borderColor = \"#92400e\";\n});\n\n\n// Fact Button\ndocument.getElementById(\"buttonFact\").addEventListener(\"click\", function () {\n  document.getElementById(\"output\").textContent = \"Plant fact: Most houseplants prefer bright, indirect light and consistent watering.\";\n  document.getElementById(\"output\").style.backgroundColor = \"#f0fdf4\";\n  document.getElementById(\"output\").style.borderColor = \"#86efac\";\n});\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "plant-sunny.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level1-test-2025/uuid/9b284a61-a02e-44e3-a7f2-f4cfbe59b63c.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "plant-normal.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level1-test-2025/uuid/9531cfb9-becc-4432-9f8c-4afab5980f3c.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "sprout.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level1-test-2025/uuid/7b09e969-8301-464c-83f1-13e4e074d008.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-16 17:55:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 17:57:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 17:57:52 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 17:59:29 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 18:03:33 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 18:04:43 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 18:05:17 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 18:05:39 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 18:05:54 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 18:49:05 +0000\",\"changed\":[\"widget_view\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 18:49:57 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 18:51:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 19:02:52 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 19:03:53 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 19:07:54 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 19:59:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 19:59:32 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 20:05:49 +0000\",\"changed\":[\"disable_edit_run_for_submission\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 20:06:11 +0000\",\"changed\":[\"disable_edit_run_for_submission\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 20:37:14 +0000\",\"changed\":[\"widget_view\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 20:42:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 20:49:59 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 20:59:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 21:19:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 21:36:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 21:48:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 21:54:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 22:11:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 22:16:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 23:37:34 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 23:37:37 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-16 23:41:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-17 00:05:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-17 00:20:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-17 00:26:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-17 00:27:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-17 00:45:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-17 00:46:08 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-17 00:46:14 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>
