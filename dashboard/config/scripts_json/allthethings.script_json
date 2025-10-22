@@ -637,12 +637,27 @@
       }
     },
     {
-      "key": "Externals Optionally Displayed as Unplugged",
-      "name": "Externals Optionally Displayed as Unplugged",
+      "key": "lesson-58",
+      "name": "Unplugged",
       "absolute_position": 41,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 39,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-58",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "Externals Optionally Displayed as Unplugged",
+      "name": "Externals Optionally Displayed as Unplugged",
+      "absolute_position": 42,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 40,
       "properties": {
         "unplugged": true
       },
@@ -655,10 +670,10 @@
     {
       "key": "Bubble Choice",
       "name": "Bubble Choice",
-      "absolute_position": 42,
+      "absolute_position": 43,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 40,
+      "relative_position": 41,
       "properties": {
       },
       "seeding_key": {
@@ -670,10 +685,10 @@
     {
       "key": "Contained Levels",
       "name": "Contained Levels",
-      "absolute_position": 43,
+      "absolute_position": 44,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 41,
+      "relative_position": 42,
       "properties": {
       },
       "seeding_key": {
@@ -685,10 +700,10 @@
     {
       "key": "ML Fish",
       "name": "ML Fish",
-      "absolute_position": 44,
+      "absolute_position": 45,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 42,
+      "relative_position": 43,
       "properties": {
       },
       "seeding_key": {
@@ -700,10 +715,10 @@
     {
       "key": "AI Lab",
       "name": "AI Lab",
-      "absolute_position": 45,
+      "absolute_position": 46,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 43,
+      "relative_position": 44,
       "properties": {
       },
       "seeding_key": {
@@ -715,10 +730,10 @@
     {
       "key": "Java Lab",
       "name": "Java Lab",
-      "absolute_position": 46,
+      "absolute_position": 47,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 44,
+      "relative_position": 45,
       "properties": {
       },
       "seeding_key": {
@@ -730,7 +745,7 @@
     {
       "key": "lesson-47",
       "name": "Example CSP Assessment",
-      "absolute_position": 47,
+      "absolute_position": 48,
       "lockable": true,
       "has_lesson_plan": false,
       "relative_position": 3,
@@ -746,10 +761,10 @@
     {
       "key": "lesson-48",
       "name": "Poetry",
-      "absolute_position": 48,
+      "absolute_position": 49,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 45,
+      "relative_position": 46,
       "properties": {
       },
       "seeding_key": {
@@ -761,10 +776,10 @@
     {
       "key": "lesson-49",
       "name": "Music",
-      "absolute_position": 49,
+      "absolute_position": 50,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 46,
+      "relative_position": 47,
       "properties": {
       },
       "seeding_key": {
@@ -776,10 +791,10 @@
     {
       "key": "lesson-50",
       "name": "AI Chat",
-      "absolute_position": 50,
+      "absolute_position": 51,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 47,
+      "relative_position": 48,
       "properties": {
       },
       "seeding_key": {
@@ -791,10 +806,10 @@
     {
       "key": "lesson-51",
       "name": "AI Rubrics",
-      "absolute_position": 51,
+      "absolute_position": 52,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 48,
+      "relative_position": 49,
       "properties": {
       },
       "seeding_key": {
@@ -806,10 +821,10 @@
     {
       "key": "lesson-52",
       "name": "Dance Lab2",
-      "absolute_position": 52,
+      "absolute_position": 53,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 49,
+      "relative_position": 50,
       "properties": {
       },
       "seeding_key": {
@@ -821,10 +836,10 @@
     {
       "key": "lesson-53",
       "name": "Python Lab",
-      "absolute_position": 53,
+      "absolute_position": 54,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 50,
+      "relative_position": 51,
       "properties": {
       },
       "seeding_key": {
@@ -836,10 +851,10 @@
     {
       "key": "lesson-54",
       "name": "Web Lab 2",
-      "absolute_position": 54,
+      "absolute_position": 55,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 51,
+      "relative_position": 52,
       "properties": {
       },
       "seeding_key": {
@@ -851,10 +866,10 @@
     {
       "key": "lesson-55",
       "name": "Lab2 Showcase",
-      "absolute_position": 55,
+      "absolute_position": 56,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 52,
+      "relative_position": 53,
       "properties": {
       },
       "seeding_key": {
@@ -866,10 +881,10 @@
     {
       "key": "lesson-56",
       "name": "Activity Guide Levelgroup",
-      "absolute_position": 56,
+      "absolute_position": 57,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 53,
+      "relative_position": 54,
       "properties": {
       },
       "seeding_key": {
@@ -881,10 +896,10 @@
     {
       "key": "lesson-57",
       "name": "Sketch Lab",
-      "absolute_position": 57,
+      "absolute_position": 58,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 54,
+      "relative_position": 55,
       "properties": {
       },
       "seeding_key": {
@@ -1411,6 +1426,18 @@
       "seeding_key": {
         "lesson_activity.key": "1e3407f1-bf0f-4393-986c-7f140fd16efd",
         "lesson.key": "Pluralsight Test",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "faa4b30f-ce29-4d64-955c-af894d305d79",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "faa4b30f-ce29-4d64-955c-af894d305d79",
+        "lesson.key": "lesson-58",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
@@ -2025,6 +2052,16 @@
       "seeding_key": {
         "activity_section.key": "c0f33e58-dda2-4bc6-918a-1b04436a221a",
         "lesson_activity.key": "1e3407f1-bf0f-4393-986c-7f140fd16efd"
+      }
+    },
+    {
+      "key": "41ebab32-1582-4971-b5f2-2d410bbe53d1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "41ebab32-1582-4971-b5f2-2d410bbe53d1",
+        "lesson_activity.key": "faa4b30f-ce29-4d64-955c-af894d305d79"
       }
     },
     {
@@ -9395,6 +9432,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "c0f33e58-dda2-4bc6-918a-1b04436a221a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csf_safety_in_my_online_neighborhood2022_2025",
+        "script_level.level_keys": [
+          "csf_safety_in_my_online_neighborhood2022_2025"
+        ],
+        "lesson.key": "lesson-58",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "41ebab32-1582-4971-b5f2-2d410bbe53d1"
       }
     },
     {
