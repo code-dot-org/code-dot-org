@@ -189,5 +189,3 @@ export type LocalStoragePayload = {
   variant: number | string;
   bodyVariant?: number;
 } | null;
-
-export type RGB = [number, number, number];

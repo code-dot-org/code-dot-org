@@ -45,10 +45,9 @@ import {
   getConfigValue,
   insertImageLayer,
   hideLayersByTypeAndCaptureKs,
-  recolorBodyDataUrl,
-  setCachedRecoloredBody,
-  getCachedRecoloredBody,
-  hexFromRgba,
+  fetchText,
+  recolorBodySvgString,
+  svgStringToDataUrl,
 } from './LottieDancerUtils';
 
 const TEST_SKELETON = 'duck';
@@ -204,6 +203,9 @@ export default class LottieDancerRenderer {
           );
           const skeletonNameFromJson = bodyMetaData?.skeletonName;
           if (typeof skeletonNameFromJson === 'string') {
+            console.log(
+              `Resolved skeleton name "${skeletonNameFromJson}" from body metadata JSON.`
+            );
             return skeletonNameFromJson.trim().toLowerCase();
           }
         } catch {}
@@ -268,51 +270,55 @@ export default class LottieDancerRenderer {
       }
     }
 
-    // Replace vector body with an image, if one can be loaded.
-    const bodyDataUrl = await fetchDataUrl(this.bodyUrl);
-    if (bodyDataUrl) {
+    // Replace vector body with an image only if an SVG is successfully fetched and recolored.
+    if (this.bodyUrl && palette) {
+      console.log(this.bodyUrl);
       const bodyRegex = /\b(body)\b/i;
       const bodyPrecomp = findPrecompLayerDeep(animData, bodyRegex);
       if (bodyPrecomp?.refId) {
         const bodyComp = getAssetById(animData, bodyPrecomp.refId);
+
         if (bodyComp && Array.isArray(bodyComp.layers)) {
-          const {insertIndex, ks: bodyKs} =
-            hideLayersByTypeAndCaptureKs(bodyComp);
+          /**
+           * Body assets are expected to be SVGs. The renderer fetches the SVG markup
+           * and performs pre-raster recoloring. The original vector body shapes are
+           * preserved unless the SVG is fetched and processed successfully.
+           */
+          let finalBodyDataUrl: string | null = null;
 
-          // Cache key uses palette hexes so repeated moves reuse the same bitmap.
-          const pHex = hexFromRgba(palette?.primary);
-          const sHex = hexFromRgba(palette?.secondary);
-          const tHex = hexFromRgba(palette?.tertiary);
-          const recolorKey = `${this.bodyUrl}|${pHex}|${sHex}|${tHex}`;
-
-          let recolored = getCachedRecoloredBody(recolorKey);
-          if (!recolored) {
-            try {
-              recolored = await recolorBodyDataUrl(bodyDataUrl, palette!);
-              setCachedRecoloredBody(recolorKey, recolored);
-            } catch {
-              // Fallback: if recolor fails, use original
-              recolored = bodyDataUrl;
-            }
+          try {
+            const svgText = await fetchText(this.bodyUrl);
+            const recoloredSvg = recolorBodySvgString(svgText!, palette);
+            finalBodyDataUrl = svgStringToDataUrl(recoloredSvg);
+          } catch {
+            finalBodyDataUrl = null;
           }
 
-          const imgAssetId = ensureImageAsset(
-            animData,
-            recolored,
-            'img_body_custom'
-          );
+          // Perform replacement only on success; otherwise preserve original shapes
+          if (finalBodyDataUrl) {
+            // Hide existing vector/solid layers and capture a transform to reuse
+            const {insertIndex, ks: bodyKs} =
+              hideLayersByTypeAndCaptureKs(bodyComp);
 
-          insertImageLayer(
-            bodyComp,
-            insertIndex,
-            imgAssetId,
-            bodyKs,
-            'Body Image',
-            400,
-            400,
-            1,
-            {hasMask: false}
-          );
+            const imgAssetId = ensureImageAsset(
+              animData,
+              finalBodyDataUrl,
+              'img_body_custom'
+            );
+
+            insertImageLayer(
+              bodyComp,
+              insertIndex,
+              imgAssetId,
+              bodyKs,
+              'Body Image',
+              400,
+              400,
+              1,
+              {hasMask: false}
+            );
+          }
+          // If finalBodyDataUrl is null, do nothing: original vector body remains.
         }
       }
     }

@@ -22,12 +22,15 @@ import {
   ResolveDancerAssetsOpts,
   ResolvedDancerAssets,
   RGBA,
-  RGB,
 } from './LottieDancerTypes';
 
 const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
 
 const DEFAULT_IMAGE_SIZE = 1024;
+
+const PRIMARY_TOKEN = '#33FF21';
+const SECONDARY_TOKEN = '#808080';
+const TERTIARY_TOKEN = '#4C4C4C';
 
 const DEFAULT_PATH = 'default';
 const DEFAULT_DANCER = 'default';
@@ -94,7 +97,7 @@ function getGeneratedDancerAssets(
     const adlibBody = `${choices[adjectiveIndex]}-${bodyVariant
       ?.toString()
       .padStart(2, '0')}`;
-    body = `${bodyPath}${adlibBody}.png`;
+    body = `${bodyPath}${adlibBody}.svg`;
     bodyMetadata = `${bodyPath}${adlibBody}.json`;
   }
   return {head, metadata, body, bodyMetadata};
@@ -574,186 +577,114 @@ export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
   }
   if (bodyParam) {
     const bodyPrefix = `${BASE_HOST}/dancers/bodies/`;
-    urls.bodyUrl = `${bodyPrefix}${bodyParam}.png`;
+    urls.bodyUrl = `${bodyPrefix}${bodyParam}.svg`;
     urls.bodyMetadataUrl = `${bodyPrefix}${bodyParam}.json`;
   }
-  console.log('Resolved dancer assets:', urls);
   return {urls};
 }
 
-export function hexFromRgba(rgba: RGBA | null | undefined): string {
-  if (!rgba) return '000000';
-  const [r, g, b] = rgba;
-  const to255 = (x: number) => Math.max(0, Math.min(255, Math.round(x * 255)));
-  return [to255(r), to255(g), to255(b)]
-    .map(v => v.toString(16).padStart(2, '0'))
-    .join('');
+/**
+ * Fetches a text resource and returns its content as a string.
+ * Returns null if the request fails or the response is not OK.
+ * Used to load SVG markup for pre-raster recoloring.
+ */
+export async function fetchText(url?: string): Promise<string | null> {
+  if (!url) return null;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    return await res.text();
+  } catch {
+    return null;
+  }
 }
-
-function rgbDistanceSq(a: RGB, b: RGB): number {
-  const deltaRed = a[0] - b[0];
-  const deltaGreen = a[1] - b[1];
-  const deltaBlue = a[2] - b[2];
-  return deltaRed * deltaRed + deltaGreen * deltaGreen + deltaBlue * deltaBlue;
-}
-
-function lerp(a: number, b: number, t: number) {
-  return a + (b - a) * t;
-}
-
-function lerpRgb(a: RGB, b: RGB, t: number): RGB {
-  return [lerp(a[0], b[0], t), lerp(a[1], b[1], t), lerp(a[2], b[2], t)];
-}
-
-function rgbaToRgb255(rgba: RGBA): RGB {
-  return [
-    Math.round((rgba[0] || 0) * 255),
-    Math.round((rgba[1] || 0) * 255),
-    Math.round((rgba[2] || 0) * 255),
-  ];
-}
-
-export type BodyRecolorOptions = {
-  basePrimary?: RGB;
-  baseSecondary?: RGB;
-  baseTertiary?: RGB;
-
-  /** Pixels within this distance (in RGB^2) snap to the target exactly. */
-  innerThresholdSq?: number;
-
-  /** Pixels within this max distance blend toward the target. */
-  hardThresholdSq?: number;
-
-  /**
-   * Optional: increase tolerance at semi-transparent edges.
-   * Effective hard threshold = hardThresholdSq * (1 + (1 - alpha) * edgeAlphaBoostMultiplier).
-   * (alpha is 0..1)
-   */
-  edgeAlphaBoostMultiplier?: number;
-};
-
-const DEFAULT_BODY_RECOLOR_OPTS: Required<BodyRecolorOptions> = {
-  basePrimary: [51, 255, 33], // neon green
-  baseSecondary: [128, 128, 128], // mid gray
-  baseTertiary: [76, 76, 76], // dark gray
-
-  // Snap band: ~10 units/channel → 10^2 = 100
-  innerThresholdSq: 100,
-
-  // Soft band (AA): allow up to ~60 units total delta → 60^2 = 3600
-  hardThresholdSq: 3600,
-
-  // Edge boost: add up to +200% tolerance at fully transparent edge pixels
-  edgeAlphaBoostMultiplier: 2.0,
-};
 
 /**
- * Recolors the 3 zones of the body PNG to palette.primary/secondary/tertiary.
- * Returns a data URL that is fed into ensureImageAsset().
- *
- * Strategy:
- *  - Per pixel, find nearest of the 3 base colors. If distance <= threshold,
- *    blend toward the target palette color with a softness that preserves AA edges.
- *  - Alpha is preserved. Non-matched pixels are left unchanged.
+ * Converts an SVG string into a base64-encoded data URL suitable for use in a
+ * Lottie image asset. Base64 encoding ensures that reserved characters such as
+ * “<”, “>”, or “#” do not corrupt the URL.
  */
-export async function recolorBodyDataUrl(
-  srcDataUrl: string,
-  palette: Palette,
-  opts?: BodyRecolorOptions
-): Promise<string> {
-  const recolorOptions = {...DEFAULT_BODY_RECOLOR_OPTS, ...(opts || {})};
+export function svgStringToDataUrl(svg: string): string {
+  const base64 =
+    typeof btoa === 'function'
+      ? btoa(unescape(encodeURIComponent(svg)))
+      : Buffer.from(svg, 'utf8').toString('base64');
+  return `data:image/svg+xml;base64,${base64}`;
+}
 
-  if (!palette?.primary || !palette?.secondary || !palette?.tertiary) {
-    return srcDataUrl;
-  }
+/** Converts an [r,g,b,a] array with values in 0–1 into a #RRGGBB string. */
+function toHexFromRgba(rgba: RGBA | null | undefined): string | null {
+  if (!rgba) return null;
+  const [r, g, b] = rgba.map(v => Math.round((v || 0) * 255));
+  const toHex = (v: number) => v.toString(16).padStart(2, '0');
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
 
-  const img = await createImageBitmap(await (await fetch(srcDataUrl)).blob());
-  const w = img.width || DEFAULT_IMAGE_SIZE;
-  const h = img.height || DEFAULT_IMAGE_SIZE;
+/** Extracts a #RRGGBB fill value from an inline style string, if present. */
+function getInlineFillFromStyle(style: string | null): string | null {
+  if (!style) return null;
+  const m = style.match(/fill\s*:\s*(#[0-9a-fA-F]{6})\b/);
+  return m ? m[1] : null;
+}
 
-  const offscreenCanvas = new OffscreenCanvas(w, h);
-  offscreenCanvas.width = w;
-  offscreenCanvas.height = h;
+/**
+ * Performs in-place recoloring of an SVG markup string.
+ * Only shapes whose fill or inline-style fill exactly matches one of the
+ * standardized tokens are updated to the palette colors.
+ */
+export function recolorBodySvgString(
+  svgText: string,
+  palette: Palette | null
+): string {
+  if (!palette) return svgText;
 
-  const ctx = offscreenCanvas.getContext('2d', {
-    willReadFrequently: true,
-  })!;
-  ctx.drawImage(img, 0, 0);
-  const imgData = ctx.getImageData(0, 0, w, h);
-  const data = imgData.data;
+  const primaryHex = toHexFromRgba(palette.primary);
+  const secondaryHex = toHexFromRgba(palette.secondary ?? palette.primary);
+  const tertiaryHex = toHexFromRgba(
+    palette.tertiary ?? palette.secondary ?? palette.primary
+  );
 
-  const tgtPrimary: RGB = rgbaToRgb255(palette.primary);
-  const tgtSecondary: RGB = rgbaToRgb255(palette.secondary);
-  const tgtTertiary: RGB = rgbaToRgb255(palette.tertiary);
+  /** Maps canonical source tokens (lowercased) to palette colors. */
+  const tokenToTarget = new Map<string, string>();
+  if (primaryHex) tokenToTarget.set(PRIMARY_TOKEN.toLowerCase(), primaryHex);
+  if (secondaryHex)
+    tokenToTarget.set(SECONDARY_TOKEN.toLowerCase(), secondaryHex);
+  if (tertiaryHex) tokenToTarget.set(TERTIARY_TOKEN.toLowerCase(), tertiaryHex);
 
-  const bases: Array<{base: RGB; target: RGB | null}> = [
-    {base: recolorOptions.basePrimary, target: tgtPrimary},
-    {base: recolorOptions.baseSecondary, target: tgtSecondary},
-    {base: recolorOptions.baseTertiary, target: tgtTertiary},
-  ];
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(svgText, 'image/svg+xml');
 
-  for (let i = 0; i < data.length; i += 4) {
-    const r = data[i],
-      g = data[i + 1],
-      b = data[i + 2];
-    const a255 = data[i + 3];
-    if (a255 === 0) continue;
+  /** Query all standard vector shape elements that can have fill attributes. */
+  const nodes = doc.querySelectorAll<SVGElement>(
+    'path,rect,circle,ellipse,polygon,polyline,line'
+  );
 
-    // nearest base
-    let best = 0,
-      bestDist = Infinity;
-    for (let j = 0; j < bases.length; j++) {
-      const d = rgbDistanceSq(bases[j].base, [r, g, b]);
-      if (d < bestDist) {
-        bestDist = d;
-        best = j;
+  nodes.forEach(node => {
+    // Attribute-level fill
+    const attrFill = node.getAttribute('fill');
+    if (attrFill && /^#[0-9a-fA-F]{6}$/.test(attrFill)) {
+      const key = attrFill.toLowerCase();
+      const target = tokenToTarget.get(key);
+      if (target) {
+        node.setAttribute('fill', target);
+        return;
       }
     }
 
-    const mapping = bases[best];
-    if (!mapping.target) continue;
-
-    // Edge-aware tolerance
-    const alpha = a255 / 255;
-    const hardSq =
-      recolorOptions.hardThresholdSq *
-      (1 + (1 - alpha) * recolorOptions.edgeAlphaBoostMultiplier);
-
-    if (bestDist <= recolorOptions.innerThresholdSq) {
-      // snap: exact target
-      data[i] = mapping.target[0];
-      data[i + 1] = mapping.target[1];
-      data[i + 2] = mapping.target[2];
-      continue;
+    // Inline style fill
+    const styleFill = getInlineFillFromStyle(node.getAttribute('style'));
+    if (styleFill) {
+      const key = styleFill.toLowerCase();
+      const target = tokenToTarget.get(key);
+      if (target) {
+        const style = node.getAttribute('style')!;
+        node.setAttribute(
+          'style',
+          style.replace(/fill\s*:\s*#[0-9a-fA-F]{6}/, `fill:${target}`)
+        );
+      }
     }
-    if (bestDist <= hardSq) {
-      // blend within soft band (keeps AA smooth)
-      const t = 1 - bestDist / hardSq;
-      const [nr, ng, nb] = lerpRgb([r, g, b], mapping.target, t);
-      data[i] = nr | 0;
-      data[i + 1] = ng | 0;
-      data[i + 2] = nb | 0;
-      continue;
-    }
-  }
-
-  ctx.putImageData(imgData, 0, 0);
-  const blob = await offscreenCanvas.convertToBlob({
-    type: 'image/png',
   });
-  return await new Promise<string>(res => {
-    const fr = new FileReader();
-    fr.onload = () => res(fr.result as string);
-    fr.readAsDataURL(blob);
-  });
-}
 
-const recolorCache = new Map<string, string>();
-
-export function getCachedRecoloredBody(key: string): string | null {
-  return recolorCache.get(key) || null;
-}
-
-export function setCachedRecoloredBody(key: string, dataUrl: string): void {
-  recolorCache.set(key, dataUrl);
+  return new XMLSerializer().serializeToString(doc.documentElement);
 }

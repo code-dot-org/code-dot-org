@@ -102,7 +102,7 @@ const adlibs: AdlibsType = {
   },
 };
 
-const bodyVariantCount = 1;
+const bodyVariantCount = 4;
 
 interface DancerGenerateProps {
   adlibOption: string;
@@ -150,7 +150,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     let bodyVariant = 0;
     do {
       variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
-      bodyVariant = getRandomInt(0, bodyVariantCount);
+      bodyVariant = getRandomInt(0, bodyVariantCount - 1);
     } while (variantHistory.current.includes(variant));
     const newVariantsHistory = [...variantHistory.current, variant];
     // Keep the array length at a maximum of 3
