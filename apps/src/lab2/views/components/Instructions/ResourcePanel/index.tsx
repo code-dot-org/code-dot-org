@@ -441,6 +441,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             id={resourcePanelLinksElementId}
             className={classNames(styles.bottomTabs)}
           >
+            <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
             {documentationUrl && (
               <IconButtonWithTooltip
                 id="documentation"
@@ -455,7 +456,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 buttonSize="s"
               />
             )}
-            <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
             <CopyrightButton theme={theme} />
             <div ref={settingsButtonRef}>
               <IconButtonWithTooltip

@@ -110,6 +110,10 @@
     align-items: center;
     gap: 6px;
     padding: 8px 0;
+
+    & > div[data-theme='Light'] {
+      margin-bottom: -0.4rem;
+    }
   }
 
   // Doubling class name to increase specificity and override default button styles.
