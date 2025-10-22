@@ -2,14 +2,13 @@ import classNames from 'classnames';
 import React from 'react';
 import {useDispatch} from 'react-redux';
 
+import {isChordEvent} from '@cdo/apps/music/player/interfaces/ChordEvent';
+import {isInstrumentEvent} from '@cdo/apps/music/player/interfaces/InstrumentEvent';
+import {PlaybackEvent} from '@cdo/apps/music/player/interfaces/PlaybackEvent';
+import {isSoundEvent} from '@cdo/apps/music/player/interfaces/SoundEvent';
+import {selectBlockId} from '@cdo/apps/music/redux/musicRedux';
+import SoundStyle from '@cdo/apps/music/utils/SoundStyle';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {isChordEvent} from '../player/interfaces/ChordEvent';
-import {isInstrumentEvent} from '../player/interfaces/InstrumentEvent';
-import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {isSoundEvent} from '../player/interfaces/SoundEvent';
-import {selectBlockId} from '../redux/musicRedux';
-import SoundStyle from '../utils/SoundStyle';
 
 import moduleStyles from './timeline.module.scss';
 
