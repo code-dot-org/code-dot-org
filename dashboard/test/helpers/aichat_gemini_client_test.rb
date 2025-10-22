@@ -122,7 +122,7 @@ class AichatGeminiClientTest < AichatAiClientTest
       [
         {role: 'user', parts: [{text: 'hello from user'}]},
         {role: 'model', parts: [{text: 'assistant response'}]},
-        {role: 'user', parts: [{text: "new message from user\nmessage context text"}]}
+        {role: 'user', parts: [{text: "new message from user\n\nmessage context text"}]}
       ]
     end
 

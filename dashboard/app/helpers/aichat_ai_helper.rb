@@ -15,7 +15,7 @@ module AichatAiHelper
 
   def self.format_message_parts(message, encrypted_channel_id, level_name)
     content = message['chatMessageText']
-    content += "\n" + message['messageContext'] if message['messageContext']
+    content += "\n\n" + message['messageContext'] if message['messageContext']
     parts = [
       AichatAiClientTypes::TextMessagePart.new(
         type: 'text',
