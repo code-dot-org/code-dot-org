@@ -55,6 +55,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   const {theme} = useTheme();
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  const channelId =
+    useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
+
   // We remount (ie, reset) Excalidraw any time we observe
   // sources being initialized (eg, when level changes, teacher views a student's project, etc).
   const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
@@ -93,6 +96,44 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     appName: 'sketchlab',
   });
 
+  async function uploadBase64ToUrl(
+    dataUrl: string,
+    uploadUrl: string,
+    options?: {
+      filename?: string;
+      mimeType?: string;
+      additionalHeaders?: Record<string, string>;
+    }
+  ): Promise<Response> {
+    // Fetch the data URL to get a Blob (handles all decoding automatically)
+    const response = await fetch(dataUrl);
+    const blob = await response.blob();
+
+    // Create a File object from the Blob
+    const file = new File([blob], options?.filename || 'upload', {
+      type: options?.mimeType || blob.type,
+    });
+
+    // Create FormData and append the file
+    const formData = new FormData();
+    formData.append('files[]', file);
+
+    // Make the upload request
+    const uploadResponse = await fetch(uploadUrl, {
+      method: 'PUT',
+      headers: options?.additionalHeaders || {},
+      body: formData,
+    });
+
+    if (!uploadResponse.ok) {
+      throw new Error(
+        `Upload failed: ${uploadResponse.status} ${uploadResponse.statusText}`
+      );
+    }
+
+    return uploadResponse;
+  }
+
   // Excalidraw runs its onChange every time the cursor moves,
   // so we debounce actually serializing the workspace to stringified JSON.
   const debouncedSerializeAndSaveWorkspace = useCallback(
@@ -110,6 +151,30 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         const serializedData = JSON.parse(
           serializeAsJSON(elements, state, files, 'local')
         );
+
+        // On upload:
+        // Check if files are different (maybe length is sufficient?)
+        // If they are, figure out what the new file is.
+        // Take base64 encoding and post to S3.
+        // On success, store to externalFiles.
+
+        // Note: does this every half second thing work in this context?
+        const savedFileIds = Object.keys(currentSources.source.files || {});
+        const excalidrawFileIds = Object.keys(serializedData.files || {});
+        const difference = excalidrawFileIds.filter(
+          id => !savedFileIds.includes(id)
+        );
+
+        // // Probably need actual comparison of keys
+        // Check that image hasn't been uploaded previously.
+        if (difference.length) {
+          const fileId = difference[0];
+          const newFile = serializedData.files[difference[0]];
+          uploadBase64ToUrl(
+            newFile.dataURL,
+            `/v3/assets/${channelId}/${fileId}.jpg`
+          );
+        }
 
         const excalidrawApi = excalidrawApiRef.current;
         if (excalidrawApi) {
