@@ -151,7 +151,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   const teacherSections = Object.values(
     useAppSelector(state => state.teacherSections.sections)
   );
-  const teacherHasSections = teacherSections && teacherSections.length > 0;
+  const teacherHasSections = teacherSections.length > 0;
   const teacherHasSectionWithCurriculum = !!teacherSections.find(
     section => section.courseId !== null
   );
