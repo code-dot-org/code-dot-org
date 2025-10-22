@@ -124,14 +124,18 @@ namespace :ci do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
+      ChatClient.log("container_features: #{container_features.length}, eyes_features: #{eyes_features.length}, container_eyes_features: #{container_eyes_features.length}")
+      ChatClient.log("UI Test Browsers: #{ui_test_browsers.join(',')}")
       # Use --local to configure the UI tests to run against localhost and
       # use --config to override the local webdriver so SauceLabs is used
       # instead.
+      eyes_flag = test_eyes? ? '--eyes_and_ui' : ''
       RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+          "#{eyes_flag} " \
           "--feature #{container_features.join(',')} " \
           "--local " \
           "--ci " \
-          "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
+          "--config Chrome " \
           "--parallel #{PARALLEL_COUNT} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
@@ -139,19 +143,6 @@ namespace :ci do
           "--output-synopsis " \
           "--with-status-page " \
           "--html"
-      if test_eyes?
-        RakeUtils.system_stream_output "bundle exec ./runner.rb " \
-            "--eyes " \
-            "--feature #{container_eyes_features.join(',')} " \
-            "--config Chrome,iPhone " \
-            "--local " \
-            "--ci " \
-            "--parallel #{PARALLEL_COUNT} " \
-            "--retry_count 1 " \
-            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
-            "--with-status-page " \
-            "--html"
-      end
     end
     close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
