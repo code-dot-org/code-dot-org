@@ -452,6 +452,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 tooltipDirection="onRight"
                 href={documentationUrl}
                 theme={theme}
+                buttonSize="s"
               />
             )}
             <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
@@ -467,6 +468,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 tooltipDirection="onRight"
                 onClick={onClickSettingsButton}
                 theme={theme}
+                buttonSize="s"
               />
             </div>
           </div>
