@@ -98,11 +98,24 @@
     @include mixins.focus-styles(var(--borders-brand-teal-primary), -2px);
   }
 
-  // Remove the ::after pseudo-element when sidebar is collapsed
-  &.collapsed .tabButton.tabButton.selected::after {
-    content: none;
-  }
+  // Remove the ::before and ::after pseudo-elements when sidebar is collapsed
+  &.collapsed .tabButton.tabButton {
+    background-color: var(--background-neutral-primary);
 
+    &.selected {
+      border-inline-end: variables.$default-border;
+      transition: none;
+
+      i {
+        color: var(--text-neutral-quaternary);
+      }
+
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
   .bottomTabs {
     display: flex;
     flex-direction: column;
