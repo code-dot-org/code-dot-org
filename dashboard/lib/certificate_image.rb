@@ -322,7 +322,7 @@ class CertificateImage
       when ScriptConstants::MINECRAFT_AI_NAME
         'MC_Hour_Of_Code_Certificate_Generation_Ai.png'
       when ScriptConstants::MINECRAFT_SHOW_NAME
-        'MC_Hour_Of_Code_Certificate_Show.png'
+        'MC_Hour_Of_AI_Certificate.png'
       else
         'MC_Hour_Of_Code_Certificate.png'
       end
