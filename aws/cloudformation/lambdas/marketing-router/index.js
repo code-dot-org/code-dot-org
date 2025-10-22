@@ -786,6 +786,7 @@ const marketingPaths = {
   "/district-set-up": true,
   "/impact-report": true,
   "/about/impact-report": true,
+  "/news/fetc-2025": true,
 }
 
 const pathPatterns = [
