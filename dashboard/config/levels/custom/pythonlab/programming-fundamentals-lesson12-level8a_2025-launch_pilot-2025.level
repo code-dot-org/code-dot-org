@@ -1,0 +1,578 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:47:12.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\n1. Import your `custom.py` into your project.\r\n\r\n2. In `custom.py`, write the `paint_or_turn(this_painter, color)` function. Inside your function:\r\n\r\n   * Write a `while` loop that runs while the `Painter` `is_facing_east()`\r\n   \r\n   * If the `Painter` `has_paint()`, paint the space and then move forward\r\n   \r\n   * Else, call your `turn_right(this_painter)` function\r\n\r\n3. Save `custom.py` to your Backpack.\r\n\r\n4. In `main.py`, import the functions you need and collect the paint and paint in The Neighborhood.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/6d30c7e89f38fcd0e3b926e7ae6d71ac-choiceA.gif)",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 3,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 2,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n# TODO - Import the functions you need from custom\n\n\n# TODO - Create a Painter and use your functions!\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "thumbnail_url": "https://images.code.org/6d30c7e89f38fcd0e3b926e7ae6d71ac-choiceA.gif",
+    "display_name": "Paint or Pivot",
+    "bubble_choice_description": "The `Painter` is making its way through The Neighborhood and wants to leave a trail behind, but only when it has paint! If the `Painter` runs out, it needs to turn right to find the next paint bucket. Write a function that helps the `Painter` decide what to do each time its facing east.",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestPaintOrTurn(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and cache the results\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        if not cls.log.painter_logs:\n            cls.painter = None\n        else:\n            cls.painter = cls.log.painter_logs[0]\n\n    def setUp(self):\n        if self.painter is None:\n            self.skipTest(\"No Painter was created. Make sure to create a Painter in your code.\")\n\n    def test_final_position_is_correct(self):\n        \"\"\"Painter ends at (6, 1) after painting and turning\"\"\"\n        self.assertEqual(\n            (self.painter.ending_position.x, self.painter.ending_position.y),\n            (6, 1),\n            \"The Painter didn't stop at (6, 1). Make sure your paint_or_turn() function turns the Painter when it runs out of paint.\"\n        )\n\n    def test_expected_spaces_are_painted(self):\n        \"\"\"Painter paints (1,0), (2,0), (3,0), (4,1), and (5,1)\"\"\"\n        final = self.log.final_output\n        expected_output = [[False for _ in range(len(final[0]))] for _ in range(len(final))]\n        expected_output[0][1] = True  # (1, 0)\n        expected_output[0][2] = True  # (2, 0)\n        expected_output[0][3] = True  # (3, 0)\n        expected_output[1][4] = True  # (4, 1)\n        expected_output[1][5] = True  # (5, 1)\n\n        self.assertTrue(\n            self.log.final_output_contains_paint(expected_output),\n            \"The expected spaces weren't all painted. Make sure your function paints when it has paint and turns otherwise.\"\n        )\n\n    def test_turns_right_when_out_of_paint(self):\n        \"\"\"Painter turns right when it can't paint anymore\"\"\"\n        self.assertGreaterEqual(\n            self.painter.action_count(\"TURN_LEFT\"),\n            3,\n            \"The Painter didn't turn right after running out of paint. Make sure to call turn_right() when paint runs out.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:47:12.133+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson12-level8a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson12-level8a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

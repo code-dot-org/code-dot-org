@@ -106,10 +106,11 @@ const PythonlabView: React.FunctionComponent<
   );
 
   const hasSource = !!source;
-  const isAiTutor2Enabled = useMemo(() => {
+  const isAiTutorEnabled = useMemo(() => {
     return (
       levelProperties.aiTutorAvailable ||
-      queryParams('show-ai-tutor2') === 'true'
+      queryParams('show-ai-tutor2') === 'true' ||
+      queryParams('show-ai-tutor') === 'true'
     );
   }, [levelProperties.aiTutorAvailable]);
 
@@ -188,7 +189,7 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    if (isAiTutor2Enabled) {
+    if (isAiTutorEnabled) {
       aiTutorHelper.setAiTutorContext({
         source,
         miniAppName,
@@ -201,7 +202,7 @@ const PythonlabView: React.FunctionComponent<
     source,
     validationFile,
     miniAppName,
-    isAiTutor2Enabled,
+    isAiTutorEnabled,
   ]);
 
   const onRun = async (

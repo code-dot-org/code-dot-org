@@ -1,6 +1,6 @@
 import {javascript} from '@codemirror/lang-javascript';
 import classNames from 'classnames';
-import React, {memo, useCallback, useContext, useEffect} from 'react';
+import React, {memo, useCallback, useContext, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
@@ -13,6 +13,7 @@ import {
   WARNING_BANNER_MESSAGES,
 } from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import useTimelineDancer from '@cdo/apps/lab2/hooks/useTimelineDancer';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {
   getAppOptionsEditBlocks,
@@ -22,10 +23,12 @@ import {
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
+import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
-import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -41,7 +44,6 @@ import {
   getBlockMode,
   InstructionsPosition,
   setCurrentPlayheadPosition,
-  setShowInstructions,
   showCallout,
 } from '../redux/musicRedux';
 import {MusicExemplarSettings, MusicLevelData} from '../types';
@@ -114,11 +116,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   );
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
-  const showGenerateCode =
-    AppConfig.getValue('ai-generate') === 'true' ||
-    (levelProperties.levelData as MusicLevelData).aiCodeGenerate;
-  const showInstructions =
-    useAppSelector(state => state.music.showInstructions) && !showGenerateCode;
+  const guideMode = (levelProperties.levelData as MusicLevelData).guideMode;
   const instructionsPosition = useAppSelector(
     state => state.music.instructionsPosition
   );
@@ -151,6 +149,15 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
+  const isStandaloneCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
+  const timelineAreaRef = useRef<HTMLDivElement | null>(null);
+  const {dancerMeasurePosition, danceMove, dancerSize} = useTimelineDancer({
+    isPlaying,
+    levelProperties,
+    timelineAreaRef,
+  });
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -158,10 +165,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       progressManager.setValidator(validator);
     }
   }, [progressManager, validator, appName]);
-
-  useEffect(() => {
-    dispatch(setShowInstructions(!!levelProperties.longInstructions));
-  }, [dispatch, levelProperties.longInstructions]);
 
   useEffect(() => {
     if (isStartMode) {
@@ -307,15 +310,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     return <MusicPlayView setPlaying={setPlaying} />;
   }
 
-  const headerContent = (
-    <div className={moduleStyles.centerHeaderContent}>
-      <div className={moduleStyles.centerHeaderContentText}>
-        {musicI18n.panelHeaderWorkspace()}
-      </div>
-      {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
-    </div>
-  );
-
   return (
     <div
       id="music-lab"
@@ -325,6 +319,26 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       )}
     >
       {allowPackSelection && <PackDialog player={player} />}
+      {guideMode === 'instructions' && (
+        <GuideInstructions
+          levelProperties={levelProperties}
+          isRunning={isPlaying}
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+        />
+      )}
+      {guideMode === 'aiCodeGenerate' && (
+        <GenerateCode
+          adlibOption={aiCodeGenerateAdlibOption}
+          adlib={aiCodeGenerateAdlib}
+          levelProperties={levelProperties}
+          setPlaying={setPlaying}
+          hasEdited={hasEdited}
+          setToolboxVisibility={visible =>
+            blocklyWorkspace.setToolboxVisibility(visible)
+          }
+        />
+      )}
       <div
         id="work-area"
         className={classNames(moduleStyles.workArea, {
@@ -334,12 +348,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             instructionsPosition === InstructionsPosition.RIGHT,
         })}
       >
-        {showInstructions && (
+        {!guideMode && (
           <div
             id="instructions-area"
             className={classNames(
               moduleStyles.instructionsArea,
-              moduleStyles.instructionsSide
+              moduleStyles.instructionsSide,
+              isStandaloneCollapsed && moduleStyles.instructionsCollapsed
             )}
           >
             <ResourcePanel
@@ -367,27 +382,15 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               hideContinueIfDisabled={true}
               hideNavigation={false}
               styleNavigationAsBubble={true}
+              documentationUrl={'/docs/ide/music'}
             />
           </div>
         )}
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
-          {showGenerateCode && (
-            <GenerateCode
-              adlibOption={aiCodeGenerateAdlibOption}
-              adlib={aiCodeGenerateAdlib}
-              levelProperties={levelProperties}
-              setPlaying={setPlaying}
-              hasEdited={hasEdited}
-              setToolboxVisibility={visible =>
-                blocklyWorkspace.setToolboxVisibility(visible)
-              }
-            />
-          )}
-
           <PanelContainer
             id="workspace-panel"
-            headerContent={headerContent}
+            headerContent={<WorkspaceHeader />}
             hideHeaders={hideHeaders}
             rightHeaderContent={
               <HeaderButtons
@@ -485,22 +488,24 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             dir="ltr"
             id="timeline-area"
             className={moduleStyles.timelineArea}
+            ref={timelineAreaRef}
           >
             <PanelContainer
               id="timeline-panel"
               headerContent={musicI18n.panelHeaderTimeline()}
               hideHeaders={hideHeaders}
             >
+              <div className={moduleStyles.dancerCanvasContainer}>
+                <DancerCanvas
+                  size={dancerSize}
+                  measurePosition={dancerMeasurePosition}
+                  move={danceMove}
+                />
+              </div>
               <Timeline
                 allowChangeStartingPlayheadPosition={
                   (levelProperties.levelData as MusicLevelData | undefined)
                     ?.allowChangeStartingPlayheadPosition
-                }
-                danceMove={
-                  // URL parameter allows overriding the level setting for testing.
-                  AppConfig.getValue('danceMove')?.toString() ||
-                  (levelProperties.levelData as MusicLevelData | undefined)
-                    ?.danceMove
                 }
                 isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
               />

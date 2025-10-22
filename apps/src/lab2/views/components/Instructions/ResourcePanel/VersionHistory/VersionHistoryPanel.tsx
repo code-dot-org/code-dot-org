@@ -39,11 +39,19 @@ interface VersionHistoryPanelProps {
   setSelectedVersion: (version: string) => void;
   appName: string;
   levelId: number;
+  disabled?: boolean;
 }
 
 const VersionHistoryPanel: React.FunctionComponent<
   VersionHistoryPanelProps
-> = ({selectedVersion, setSelectedVersion, startSources, appName, levelId}) => {
+> = ({
+  selectedVersion,
+  setSelectedVersion,
+  startSources,
+  appName,
+  levelId,
+  disabled = false,
+}) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   const [listLoaded, setListLoaded] = useState(false);
   const [listLoading, setListLoading] = useState(false);
@@ -340,6 +348,7 @@ const VersionHistoryPanel: React.FunctionComponent<
                 isLatest={version.isLatest}
                 isSelected={selectedVersion === version.versionId}
                 onChange={onVersionChange}
+                disabled={disabled}
               />
             ))}
             <VersionHistoryRow
@@ -348,6 +357,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               isLatest={latestVersion === INITIAL_VERSION_ID}
               isSelected={selectedVersion === INITIAL_VERSION_ID}
               onChange={onVersionChange}
+              disabled={disabled}
             />
           </div>
           <div className={moduleStyles.listFooter}>
@@ -375,7 +385,9 @@ const VersionHistoryPanel: React.FunctionComponent<
               text={commonI18n.cancel()}
               size={'s'}
               onClick={handleCancel}
-              disabled={versionLoading || latestVersion === selectedVersion}
+              disabled={
+                disabled || versionLoading || latestVersion === selectedVersion
+              }
               className={moduleStyles.versionButton}
               type={'secondary'}
               color="gray"
@@ -385,7 +397,11 @@ const VersionHistoryPanel: React.FunctionComponent<
                 text={commonI18n.restore()}
                 size={'s'}
                 onClick={restoreSelectedVersion}
-                disabled={versionLoading || latestVersion === selectedVersion}
+                disabled={
+                  disabled ||
+                  versionLoading ||
+                  latestVersion === selectedVersion
+                }
                 className={moduleStyles.versionButton}
                 type={'primary'}
               />
@@ -398,6 +414,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           projectSources={projectSources}
           onSuccess={() => successfulProjectResetCleanUp(true)}
           versionLoading={versionLoading}
+          disabled={disabled}
         />
       )}
     </div>

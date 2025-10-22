@@ -52,6 +52,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const packId = useAppSelector(state => state.music.packId) || '';
   const aiGenerateState = useAppSelector(state => state.music.aiGenerateState);
   const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const currentPlayheadPosition = useAppSelector(
+    state => state.music.currentPlayheadPosition
+  );
 
   const useCache = appConfig.getValue('ai-generate-cache') === 'true';
   const showFullContext =
@@ -71,26 +74,19 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   // Use legacy adlib ID, adlib object, or new adlib ID.
   const useAdlib =
-    !useText && adlib && typeof adlib === 'string'
+    !useText &&
+    (adlib && typeof adlib === 'string'
       ? adlibs[adlib]
       : adlib
       ? adlib
       : adlibOption
       ? adlibs[adlibOption]
-      : undefined;
+      : undefined);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     dispatch(setAiGenerateState('none'));
     setPromptText(adlibOption ? '' : useText ? '' : DefaultPrompt);
   });
-
-  useEffect(() => {
-    setToolboxVisibility(
-      ['none', 'editing', 'edited', 'listeningAfterEdit'].includes(
-        aiGenerateState
-      )
-    );
-  }, [aiGenerateState, setToolboxVisibility]);
 
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));
@@ -132,10 +128,22 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   }, [aiGenerateState, dispatch, isPlaying]);
 
   useEffect(() => {
-    if (aiGenerateState === 'listening' && !isPlaying) {
+    if (
+      aiGenerateState === 'listening' &&
+      (!isPlaying || currentPlayheadPosition >= 5)
+    ) {
       dispatch(setAiGenerateState('listened'));
     }
-  }, [aiGenerateState, dispatch, isPlaying]);
+  }, [aiGenerateState, currentPlayheadPosition, dispatch, isPlaying]);
+
+  useEffect(() => {
+    // If the user goes back to none or forward to editing, stop playback.
+    if (['none', 'editing'].includes(aiGenerateState)) {
+      if (isPlaying) {
+        setPlaying(false);
+      }
+    }
+  }, [aiGenerateState, dispatch, hasEdited, isPlaying, setPlaying]);
 
   useEffect(() => {
     if (aiGenerateState === 'editing' && hasEdited) {
@@ -151,12 +159,20 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
+  const modal = [
+    'none',
+    'generating',
+    'generated',
+    'listening',
+    'listened',
+  ].includes(aiGenerateState);
+
   if (!packId) {
     return null;
   }
 
   return (
-    <Guide id="generate-panel" glowSpeed={glowSpeed}>
+    <Guide id="generate-panel" glowSpeed={glowSpeed} modal={modal}>
       {aiGenerateState === 'none' && levelProperties.longInstructions && (
         <MainInstructionsContent
           instructionsText={levelProperties.longInstructions}
@@ -222,6 +238,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {aiGenerateState === 'generating' ? 'Generating code...' : ''}
+
+      {aiGenerateState === 'generated' ? '...' : ''}
 
       {aiGenerateState === 'listening' && <div>Let's have a listen...</div>}
 

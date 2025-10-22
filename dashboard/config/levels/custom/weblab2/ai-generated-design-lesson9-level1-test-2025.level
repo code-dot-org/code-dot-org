@@ -1,0 +1,104 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-10-15T15:09:07.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Accessibility Issues\r\n- Inspect the page and **identify 2–3 accessibility issues**.\r\n    - Use **POUR framework** from your Activity Guide to categorize issues.\r\n    - Example: *Low-contrast text → Perceivable issue.*\r\n- Use the **Accessibility Prompt Builder** (“mad libs” style templates in your Activity Guide) to write AI prompts that propose fixes.\r\n    - Example template: *“Ensure all text has a color contrast ratio of at least 4.5:1 against its background.”*\r\n- Run the prompt in the AI.\r\n- Save your prompts to **Backpack** as artifacts.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "guide",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "2": {
+          "id": "2",
+          "name": "styles.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 14px;\n  color: #222;\n}\n\n.site {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\n\n.header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px 16px;\n  background: #f0f0f0;\n}\n\n.title {\n  font-weight: 700;\n}\n\n.nav-link {\n  color: #6b6bb8; /* Low-ish contrast on light gray */\n  text-decoration: underline;\n  padding: 2px 4px; /* Tiny tap target */\n  font-size: 12px;\n}\n\n/* Intentionally remove visible focus outline (bad) */\n.nav-link:focus,\n.tiny-btn:focus,\n.input:focus,\n.primary:focus {\n  outline: none;\n  box-shadow: none;\n}\n\n.hero {\n  padding: 16px;\n  background: #f5f5f5; /* Light gray background */\n}\n\n.hero-img {\n  width: 100%;\n  height: 180px;\n  object-fit: cover;\n  display: block;\n}\n\n.muted {\n  color: #b5b5b5; /* Low contrast on #f5f5f5 background */\n}\n\n.tiny-btn {\n  font-size: 10px; /* Too small */\n  padding: 2px 6px; /* Too small click target */\n}\n\n.content {\n  padding: 16px;\n}\n\n.section {\n  margin-bottom: 24px;\n}\n\n/* Styled like a heading but not semantic (still a div) */\n.section-title {\n  font-weight: 700;\n  font-size: 18px;\n  margin-bottom: 8px;\n}\n\n.input {\n  padding: 6px 8px;\n  font-size: 12px; /* Small text */\n  width: 240px;\n  margin-right: 8px;\n}\n\n.primary {\n  background: #005fcc;\n  color: white;\n  border: none;\n  padding: 6px 10px;\n  font-size: 12px;\n  cursor: pointer;\n}\n\n.footer {\n  margin-top: auto;\n  padding: 12px 16px;\n  background: #f0f0f0;\n}\n\n/* Product cards (simple layout, keeps intentional a11y issues) */\n.cards {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));\n  gap: 12px;\n  margin-top: 8px;\n}\n\n.card {\n  background: #ffffff;\n  border: 1px solid #e0e0e0;\n  padding: 12px;\n}\n\n.card-img {\n  width: 100%;\n  height: 140px;\n  object-fit: cover;\n  display: block;\n}\n\n/* Styled like a heading but still not semantic */\n.card-title {\n  font-weight: 700;\n  font-size: 16px;\n  margin: 8px 0;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "umbrella1.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson9-level1-test-2025/uuid/6b920e16-98b6-4809-9fa4-15a591af9c5a.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "umbrella3.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson9-level1-test-2025/uuid/bdfe63fc-2999-42e3-9e0a-6e6e261a5276.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "umbrella2.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson9-level1-test-2025/uuid/71c02b20-5e3f-4bfb-aa9b-40a8ee43c7ce.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "umbrellaHeader.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson9-level1-test-2025/uuid/315999c9-028b-42cc-985f-2f0d039614d3.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Umbrella Shop</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n  <div class=\"site\">\n    <div class=\"header\">\n      <div class=\"title\">RainReady Umbrellas</div>\n      <a href=\"#\" class=\"nav-link\">Click here</a>\n    </div>\n\n    <div class=\"hero\">\n      <img src=\"umbrellaHeader.png\" class=\"hero-img\">\n      <p class=\"muted\">Stay dry in style with our lightweight, wind-tested umbrellas.</p>\n      <button class=\"tiny-btn\">Shop</button>\n    </div>\n\n    <div class=\"content\">\n      <div class=\"section\">\n        <div class=\"section-title\">Products</div>\n        <p>\n          Discover durable classics and ultra-compact travel umbrellas. Limited colors available today.\n        </p>\n        <div class=\"cards\">\n          <div class=\"card\">\n            <img src=\"umbrella1.png\" class=\"card-img\">\n            <div class=\"card-title\">Classic Umbrella</div>\n            <p>Sturdy steel frame with ergonomic handle.</p>\n            <button class=\"tiny-btn\">Add</button>\n          </div>\n          <div class=\"card\">\n            <img src=\"umbrella2.png\" class=\"card-img\">\n            <div class=\"card-title\">Travel Mini</div>\n            <p>Pocket-size design for on-the-go coverage.</p>\n            <button class=\"tiny-btn\">Add</button>\n          </div>\n          <div class=\"card\">\n            <img src=\"umbrella3.png\" class=\"card-img\">\n            <div class=\"card-title\">WindGuard Pro</div>\n            <p>Reinforced canopy built for gusty days.</p>\n            <button class=\"tiny-btn\">Add</button>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"section\">\n        <div class=\"section-title\">Order</div>\n        <input type=\"text\" class=\"input\" placeholder=\"Your name\">\n        <button class=\"primary\">Buy Now</button>\n      </div>\n    </div>\n\n    <div class=\"footer\">\n      <div>© 2025 RainReady Co</div>\n    </div>\n  </div>\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "7",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    "level_system_prompt": "You will create accessibility solutions based on the issues that users have identified. Guide users to make specific updates to either HTML or CSS to fix the identified issue. ",
+    "encrypted_exemplar_sources": "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\nNrjCDKrMOTLozUUlNs+J\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-15 15:10:14 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 15:10:18 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 15:11:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 15:13:24 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 15:15:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

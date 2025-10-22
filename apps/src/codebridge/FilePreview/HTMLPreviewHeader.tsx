@@ -50,6 +50,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
     color: 'strong',
     buttons: [
       {
+        ariaLabel: weblab2I18n.desktopView(),
         icon: {
           iconName: 'desktop',
           iconStyle: 'solid',
@@ -58,6 +59,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         value: PreviewViewMode.DESKTOP,
       },
       {
+        ariaLabel: weblab2I18n.mobileView(),
         icon: {
           iconName: 'mobile',
           iconStyle: 'solid',
@@ -110,6 +112,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           onKeyDown={handleKeyDown}
           value={value}
           name={'url-input'}
+          aria-label={weblab2I18n.addressBar()}
           size={'s'}
           className={moduleStyles.urlBarInput}
         />

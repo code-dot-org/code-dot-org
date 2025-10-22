@@ -34,7 +34,6 @@ import {
 import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
-import UploadButton from './assets/UploadButton';
 import UserAddedSelectionContextPreview from './assets/UserAddedSelectionContextPreview';
 import ChatEventsList from './ChatEventsList';
 import UserChatMessageEditor from './UserChatMessageEditor';
@@ -149,14 +148,22 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
     if (selectedStudent) {
       dispatch(
-        fetchUserChatHistory({userId: selectedStudent.id, isOwnHistory: false})
+        fetchUserChatHistory({
+          userId: selectedStudent.id,
+          isOwnHistory: false,
+          channelId,
+        })
       );
     } else {
       dispatch(
-        fetchUserChatHistory({userId: currentUserId, isOwnHistory: true})
+        fetchUserChatHistory({
+          userId: currentUserId,
+          isOwnHistory: true,
+          channelId,
+        })
       );
     }
-  }, [dispatch, currentUserId, currentLevelId, selectedStudent]);
+  }, [dispatch, currentUserId, currentLevelId, selectedStudent, channelId]);
 
   useEffect(() => {
     dispatch(setClientType(clientType));
@@ -295,17 +302,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             hiddenContextCallback={hiddenContextCallback}
             multimodalAvailable={multimodalAvailable}
             responseCallback={responseCallback}
+            levelName={levelName}
+            hasStarterAssets={hasStarterAssets}
+            buildAssetUrl={buildAssetUrl}
+            uploadDisabled={uploadDisabled}
           />
-        )}
-        {multimodalAvailable && (
-          <div className={moduleStyles.buttonRow}>
-            <UploadButton
-              isDisabled={uploadDisabled}
-              levelName={levelName}
-              hasStarterAssets={hasStarterAssets}
-              buildAssetUrl={buildAssetUrl}
-            />
-          </div>
         )}
       </div>
     </div>

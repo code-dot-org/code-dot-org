@@ -663,6 +663,7 @@ GEM
       time
       uri
     open_uri_redirections (0.2.1)
+    openssl (3.3.1)
     orm_adapter (0.5.0)
     os (1.1.4)
     ostruct (0.6.0)
@@ -1096,6 +1097,7 @@ DEPENDENCIES
   omniauth-microsoft_v2_auth!
   omniauth-rails_csrf_protection (~> 1.0.2)
   open_uri_redirections
+  openssl (>= 3.3.1)
   os
   parallel
   parallel_tests
