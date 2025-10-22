@@ -20,27 +20,20 @@ class Pd::WorkshopMailjetMailer
   end
 
   def self.send_teacher_workshop_detail_change_notification(enrollment, user, use_alternate_email, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info)
-    workshop = enrollment.workshop
-    organizer = workshop.organizer
-    regional_partner = workshop.regional_partner
     email = use_alternate_email ? user.alternate_email : user.email
-    email_vars = {
-      email_to: email,
-      name: user.given_name || user.name,
-      workshop_name: workshop_name_with_fallback(workshop),
-      cancel_registration_link: CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel", CDO.default_scheme),
-      facilitator_name: workshop_facilitator_names(workshop),
-      rp_email: contact_email_with_fallback(regional_partner&.contact_email_with_backup),
-      rp_name: contact_name_with_fallback(regional_partner&.name),
-      organizer_email: contact_email_with_fallback(organizer&.email),
-      organizer_name: contact_name_with_fallback(organizer&.name),
-      detail_changes: general_detail_changes,
-      sessions_have_changed: sessions_have_changed,
-      pre_update_session_info: pre_update_session_info,
-      post_update_session_info: post_update_session_info
-    }
+    name = user.given_name || user.name
+    email_vars = build_workshop_detail_change_email_vars(enrollment.workshop, name, email, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info, enrollment)
 
     retryable_send_email('teacher_workshop_detail_change_notification', email, user.friendly_name, email_vars)
+  end
+
+  def self.send_rp_workshop_detail_change_notification(workshop, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info)
+    rp = workshop.regional_partner
+    rp_email = contact_email_with_fallback(rp&.contact_email_with_backup)
+    rp_name = contact_name_with_fallback(rp&.name)
+    email_vars = build_workshop_detail_change_email_vars(workshop, rp_name, rp_email, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info)
+
+    retryable_send_email('regional_partner_workshop_detail_change_notification', rp_email, rp_name, email_vars)
   end
 
   def self.send_teacher_post_workshop_survey(enrollment, user, use_alternate_email)
@@ -126,6 +119,27 @@ class Pd::WorkshopMailjetMailer
       workshop_subjects: workshop.course_offerings.present? ? workshop.course_offerings.map(&:display_name)&.join(', ') : workshop.subject,
       workshop_name: workshop_name_with_fallback(workshop),
       num_days: days
+    }
+  end
+
+  private_class_method def self.build_workshop_detail_change_email_vars(workshop, name, email, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info, enrollment = nil)
+    organizer = workshop.organizer
+    regional_partner = workshop.regional_partner
+
+    {
+      email_to: email,
+      name: name,
+      workshop_name: workshop_name_with_fallback(workshop),
+      cancel_registration_link: enrollment&.code ? CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel", CDO.default_scheme) : '',
+      facilitator_name: workshop_facilitator_names(workshop),
+      rp_email: contact_email_with_fallback(regional_partner&.contact_email_with_backup),
+      rp_name: contact_name_with_fallback(regional_partner&.name),
+      organizer_email: contact_email_with_fallback(organizer&.email),
+      organizer_name: contact_name_with_fallback(organizer&.name),
+      detail_changes: general_detail_changes,
+      sessions_have_changed: sessions_have_changed,
+      pre_update_session_info: pre_update_session_info,
+      post_update_session_info: post_update_session_info
     }
   end
 end
