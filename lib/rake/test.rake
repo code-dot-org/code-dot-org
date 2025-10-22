@@ -106,6 +106,8 @@ namespace :test do
         ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
         # Parallel tests don't seem to run more quickly over 16 processes.
+        ChatClient.log "Detected #{RakeUtils.nproc} processors."
+        CDO.log.info "CDO.log.info is also working"
         ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
 
         # Hash of all seed-data and -config content
@@ -176,7 +178,7 @@ namespace :test do
 
         cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
         if seed_data.equal?(cloned_data)
-          CDO.log.info 'Test data not modified'
+          ChatClient.log 'Test data not modified'
         else
           seed_2_file = Tempfile.new(['db_seed', '.sql'])
           File.write(seed_2_file, cloned_data)
@@ -186,7 +188,7 @@ namespace :test do
           # Clone single DB across all databases
           require 'parallel_tests'
           procs = ParallelTests.determine_number_of_processes(nil)
-          CDO.log.info "Test data modified, cloning across #{procs} databases..."
+          ChatClient.log "Test data modified, cloning across #{procs} databases..."
           databases = Array.new(procs) {|i| "#{database}#{i + 1}"}
           databases.each do |db|
             recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
