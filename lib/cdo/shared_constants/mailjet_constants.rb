@@ -65,6 +65,15 @@ module MailjetConstants
       from_address: 'noreply@code.org',
       from_name: 'Code.org',
     },
+    regional_partner_workshop_detail_change_notification: {
+      template_id: {
+        production: {
+          default: 7_249_336,
+        }
+      },
+      from_address: 'noreply@code.org',
+      from_name: 'Code.org',
+    },
     teacher_post_workshop_survey: {
       template_id: {
         production: {

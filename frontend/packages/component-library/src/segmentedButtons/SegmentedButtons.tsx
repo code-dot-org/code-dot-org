@@ -62,11 +62,21 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
       )}
     >
       {buttons.map(
-        ({label, disabled, iconLeft, iconRight, icon, value, id}) => (
+        ({
+          label,
+          ariaLabel,
+          disabled,
+          iconLeft,
+          iconRight,
+          icon,
+          value,
+          id,
+        }) => (
           <SegmentedButton
             key={label}
             selected={selectedButtonValue === value}
             label={label}
+            ariaLabel={ariaLabel}
             onChange={onChange}
             disabled={disabled}
             iconLeft={iconLeft}

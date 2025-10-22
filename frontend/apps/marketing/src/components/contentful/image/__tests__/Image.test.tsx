@@ -2,10 +2,29 @@ import {render, screen} from '@testing-library/react';
 
 import Image from '../Image';
 
-jest.mock('@/selectors/contentful/getImage', () => ({
-  getAbsoluteImageUrl: (src: string) =>
-    src ? `https://cdn.example.com/${src}` : undefined,
-}));
+jest.mock('@/selectors/contentful/getImage', () => {
+  return {
+    getAbsoluteImageUrl: (src: string) =>
+      src ? `https://cdn.example.com/${src}` : undefined,
+    getImageEntityFromImageUrl: (src: string) => {
+      if (src === 'https://cdn.example.com/with-entity.jpg') {
+        return {
+          fields: {
+            file: {
+              details: {
+                image: {
+                  height: 123,
+                  width: 456,
+                },
+              },
+            },
+          },
+        };
+      }
+      return undefined;
+    },
+  };
+});
 
 describe('Image Component', () => {
   it('renders Image component', () => {
@@ -61,5 +80,29 @@ describe('Image Component', () => {
     render(<Image src="test.jpg" altText="Lazy load" />);
     const img = screen.getByRole('img');
     expect(img).toHaveAttribute('loading', 'lazy');
+  });
+
+  it('renders NextImage when image entity has dimensions', () => {
+    render(<Image src="with-entity.jpg" altText="NextImage" />);
+    const nextImg = screen.getByAltText('NextImage');
+    expect(nextImg).toHaveAttribute('height', '123');
+    expect(nextImg).toHaveAttribute('width', '456');
+    expect(nextImg).toHaveAttribute(
+      'src',
+      '/_next/image?url=https%3A%2F%2Fcdn.example.com%2Fwith-entity.jpg&w=1080&q=75',
+    );
+  });
+
+  it('renders fallback img when image entity is missing', () => {
+    render(<Image src="no-entity.jpg" altText="RawImage" />);
+    const img = screen.getByRole('img');
+    expect(img).not.toHaveAttribute('height', '123');
+    expect(img).not.toHaveAttribute('width', '456');
+    expect(img).toHaveAttribute('src', 'https://cdn.example.com/no-entity.jpg');
+  });
+
+  it('renders placeholder text if src is missing', () => {
+    render(<Image src="" altText="Missing" />);
+    expect(screen.getByText(/Image placeholder/i)).toBeInTheDocument();
   });
 });
