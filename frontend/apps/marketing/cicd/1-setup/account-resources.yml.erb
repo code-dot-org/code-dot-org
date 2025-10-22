@@ -181,14 +181,69 @@ Resources:
             CloudWatchMetricsEnabled: true
             MetricName: GeoRule
             SampledRequestsEnabled: true
-        - Name: AWS-AWSManagedRulesAmazonIpReputationList
+        # Label GET requests to HTML content to Scope Down Managed Rules CHALLENGE Action
+        # This label is used by subsequent managed rules to only challenge HTML requests,
+        # preventing challenges on API calls and static assets which would break functionality
+        - Name: LabelHTMLRequests
           Priority: 6
+          Action:
+            Count: {}  # Just add label, don't block
+          Statement:
+            AndStatement:
+              Statements:
+                - ByteMatchStatement:
+                    SearchString: GET
+                    FieldToMatch:
+                      Method: {}
+                    TextTransformations:
+                      - Priority: 0
+                        Type: NONE
+                    PositionalConstraint: EXACTLY
+                - NotStatement:
+                    Statement:
+                      OrStatement:
+                        Statements:
+                          - ByteMatchStatement:
+                              SearchString: /api/
+                              FieldToMatch:
+                                UriPath: {}
+                              TextTransformations:
+                                - Priority: 0
+                                  Type: NONE
+                              PositionalConstraint: CONTAINS
+                          - ByteMatchStatement:
+                              SearchString: /_next/static
+                              FieldToMatch:
+                                UriPath: {}
+                              TextTransformations:
+                                - Priority: 0
+                                  Type: NONE
+                              PositionalConstraint: CONTAINS
+                          - RegexMatchStatement:
+                              RegexString: '\\.(acc|avi|css|gif|ico|jpe?g|js|json|mp[34]|ogg|otf|pdf|png|tiff?|ttf|txt|webm|webp|woff2?|xml)$'
+                              FieldToMatch:
+                                UriPath: {}
+                              TextTransformations:
+                                - Priority: 0
+                                  Type: NONE
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: LabelHTMLRequests
+            SampledRequestsEnabled: true
+          RuleLabels:
+            - Name: HTMLContent
+        - Name: AWS-AWSManagedRulesAmazonIpReputationList
+          Priority: 7
           OverrideAction:
             None: {}
           Statement:
             ManagedRuleGroupStatement:
               VendorName: AWS
               Name: AWSManagedRulesAmazonIpReputationList
+              ScopeDownStatement:
+                LabelMatchStatement:
+                  Scope: LABEL
+                  Key: awswaf:marketing-sites:LabelHTMLRequests:HTMLContent
               RuleActionOverrides:
                 - Name: AWSManagedReconnaissanceList
                   ActionToUse:
@@ -204,13 +259,17 @@ Resources:
             MetricName: AWS-AWSManagedRulesAmazonIpReputationList
             SampledRequestsEnabled: true
         - Name: AWS-AWSManagedRulesAnonymousIpList
-          Priority: 7
+          Priority: 8
           OverrideAction:
             None: {}
           Statement:
             ManagedRuleGroupStatement:
               VendorName: AWS
               Name: AWSManagedRulesAnonymousIpList
+              ScopeDownStatement:
+                LabelMatchStatement:
+                  Scope: LABEL
+                  Key: awswaf:marketing-sites:LabelHTMLRequests:HTMLContent
               RuleActionOverrides:
                 - Name: AnonymousIPList
                   ActionToUse:
@@ -231,6 +290,10 @@ Resources:
             ManagedRuleGroupStatement:
               VendorName: AWS
               Name: AWSManagedRulesLinuxRuleSet
+              ScopeDownStatement:
+                LabelMatchStatement:
+                  Scope: LABEL
+                  Key: awswaf:marketing-sites:LabelHTMLRequests:HTMLContent
               RuleActionOverrides:
                 - Name: LFI_URIPATH
                   ActionToUse:
@@ -254,6 +317,10 @@ Resources:
             ManagedRuleGroupStatement:
               VendorName: AWS
               Name: AWSManagedRulesKnownBadInputsRuleSet
+              ScopeDownStatement:
+                LabelMatchStatement:
+                  Scope: LABEL
+                  Key: awswaf:marketing-sites:LabelHTMLRequests:HTMLContent
               RuleActionOverrides:
                 - Name: JavaDeserializationRCE_BODY
                   ActionToUse:
@@ -270,6 +337,7 @@ Resources:
                 - Name: Host_localhost_HEADER
                   ActionToUse:
                     Challenge: {}
+               # TODO: This will never run because we're only scoping this Managed Rule to HTTP GET for HTML content.
                 - Name: PROPFIND_METHOD
                   ActionToUse:
                     Challenge: {}
