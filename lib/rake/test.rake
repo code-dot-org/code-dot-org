@@ -182,8 +182,9 @@ namespace :test do
         else
           seed_2_file = Tempfile.new(['db_seed', '.sql'])
           File.write(seed_2_file, cloned_data)
-          puts "Diff:\n"
-          puts `diff #{seed_file.path} #{seed_2_file.path}`
+          # Diff output suppressed to avoid verbose CI logs
+          # puts "Diff:\n"
+          # puts `diff #{seed_file.path} #{seed_2_file.path}`
 
           # Clone single DB across all databases
           require 'parallel_tests'
