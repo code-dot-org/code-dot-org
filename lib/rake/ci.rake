@@ -131,11 +131,9 @@ namespace :ci do
           "--feature #{container_features.join(',')} " \
           "--local " \
           "--ci " \
-          "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
           "--parallel #{PARALLEL_COUNT} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
-          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
           "--output-synopsis " \
           "--with-status-page " \
           "--html"
