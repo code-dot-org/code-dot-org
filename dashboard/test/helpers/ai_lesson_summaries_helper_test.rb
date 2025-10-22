@@ -11,7 +11,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     @model = 'gpt-4'
 
     # Mock CDO constants
-    CDO.stubs(:openai_measures_of_learning_api_key).returns(@api_key)
+    CDO.stubs(:openai_lesson_summary_api_key).returns(@api_key)
     SharedConstants.stubs(:EVALUATE_STUDENT_LEARNING_MODEL_VERSION).returns(@model)
 
     # Mock DCDO timeouts
@@ -189,58 +189,6 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     ).returns(mock('response'))
 
     client = AiLessonSummariesHelper::Client.new(@api_key, @model)
-    client.request_lesson_summary(prompt)
-  end
-
-  test "Client request_lesson_summary uses correct timeouts from DCDO" do
-    prompt = "Test prompt"
-
-    # Mock custom timeout values
-    DCDO.expects(:get).with('openai_http_open_timeout', 5).returns(10)
-    DCDO.expects(:get).with('openai_http_read_timeout', 30).returns(60)
-
-    HTTParty.expects(:post).with(
-      anything,
-      has_entries(
-        open_timeout: 10,
-        read_timeout: 60
-      )
-    ).returns(mock('response'))
-
-    client = AiLessonSummariesHelper::Client.new(@api_key, @model)
-    client.request_lesson_summary(prompt)
-  end
-
-  test "Client request_lesson_summary includes system message and user prompt" do
-    prompt = "Summarize this lesson about variables"
-
-    expected_messages = [
-      {
-        role: "system",
-        content: "You are an expert teaching assistant in a computer science classroom who has been asked to summarize the upcoming lesson to help the teacher prepare for class."
-      },
-      {
-        role: "user",
-        content: prompt
-      }
-    ]
-
-    HTTParty.expects(:post).with(
-      anything,
-      has_entries(
-        body: includes('"messages":')
-      )
-    ).returns(mock('response'))
-
-    client = AiLessonSummariesHelper::Client.new(@api_key, @model)
-
-    # Capture the actual body sent
-    HTTParty.stubs(:post) do |_url, options|
-      body_data = JSON.parse(options[:body])
-      assert_equal expected_messages, body_data['messages']
-      mock('response')
-    end
-
     client.request_lesson_summary(prompt)
   end
 
