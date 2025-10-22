@@ -143,12 +143,10 @@ namespace :ci do
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
             "--eyes " \
             "--feature #{container_eyes_features.join(',')} " \
-            "--config Chrome,iPhone " \
             "--local " \
             "--ci " \
             "--parallel #{PARALLEL_COUNT} " \
             "--retry_count 1 " \
-            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
             "--with-status-page " \
             "--html"
       end
