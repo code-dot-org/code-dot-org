@@ -164,16 +164,16 @@ namespace :test do
           RakeUtils.rake_stream_output 'db:create db:test:prepare'
           ENV.delete 'TEST_ENV_NUMBER'
           # Store new DB contents
-          `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
-          gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
+          # `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
+          # gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
 
-          s3_client.put_object(
-            bucket: bucket_name,
-            key: s3_key,
-            body: gzip_data,
-            acl: 'public-read'
-          )
-          CDO.log.info "Uploaded seed data to #{s3_key}"
+          # s3_client.put_object(
+          #   bucket: bucket_name,
+          #   key: s3_key,
+          #   body: gzip_data,
+          #   acl: 'public-read'
+          # )
+          # CDO.log.info "Uploaded seed data to #{s3_key}"
         end
 
         cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
