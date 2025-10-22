@@ -1,0 +1,17 @@
+name 'programming-fundamentals-postassessment-question15_pilot-2025'
+title 'Programming Fundamentals Post-Assessment: Question 15'
+
+wrong 'Algorithmic fairness'
+wrong 'Privacy and data security'
+right 'Trade-offs between safety and harm reduction'
+wrong 'AI\'s ability to drive better than humans'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A self-driving car is programmed to avoid pedestrians at all costs. However, this decision increases the risk of crashing into another vehicle. What ethical dilemma is being faced?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Algorithms IRL
+MARKDOWN

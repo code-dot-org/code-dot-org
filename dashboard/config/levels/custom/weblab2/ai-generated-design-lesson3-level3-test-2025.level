@@ -1,0 +1,49 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-14T18:13:40.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "1. **Create a New Feature**\r\n\r\nDraw a card from the deck and prompt AI to create that feature. Re-prompt AI as needed.\r\n\r\n2. **Save with a Comment**\r\n\r\nWhen the feature looks good, navigate to the Version History tab. Describe your changes and click \"Save version\".\r\n\r\n3. **Revert as Needed**  \r\n\r\nAfter 5 minutes, or when prompted by your teacher, revert to the most recent version you saved with a description.\r\n\r\n:::details [**Why go back to an old version?**]\r\nSometimes new code breaks things that used to work. In that case, developers “revert” — they go back to a previous version that worked correctly. It’s important to save your changes with short, clear messages, so you can easily find and restore the right version later.\r\n:::",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:13:40.413+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level2-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level2-test-2025\"},{\"changed_at\":\"2025-10-14 18:14:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 18:37:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 18:43:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 18:45:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -18,3 +18,13 @@ export interface AiTutorContext {
   documentation?: string;
   userSelection?: string;
 }
+
+export interface AnalyticsData {
+  labType: string;
+  channelId?: string;
+  location: string;
+  levelId?: string;
+  unitId?: string;
+}
+
+export type MaybePromise<T> = T | Promise<T>;

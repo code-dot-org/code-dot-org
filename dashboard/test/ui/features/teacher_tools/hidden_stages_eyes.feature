@@ -2,17 +2,17 @@
 Feature: Hidden Stages
 
 @properties_encryption_key
-Scenario: Hidden Stages
+Scenario: Hidden Stages - lesson 2 hidden
   When I open my eyes to test "hidden stages"
   Given I create an authorized teacher-associated student named "bobby"
   Then I sign in as "Teacher_bobby"
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   And I wait to see ".uitest-togglehidden"
   Then I click selector ".uitest-togglehidden:eq(1) div:contains('Hidden')"
-  And I see no difference for "teacher overview with hidden stage"
+  And I see no difference for "teacher overview with hidden lesson 2"
   Then I sign in as "bobby"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
-  And I see no difference for "student overview with hidden stage"
+  And I see no difference for "student overview with hidden lesson 2"
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/2"
-  And I see no difference for "student lesson on hidden stage"
+  And I see no difference for "student lesson on hidden lesson 2"
   And I close my eyes

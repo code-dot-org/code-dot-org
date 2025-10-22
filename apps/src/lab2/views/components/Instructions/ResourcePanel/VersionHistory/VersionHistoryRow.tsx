@@ -18,6 +18,7 @@ interface VersionHistoryRowProps {
   isSelected: boolean;
   comment?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
 }
 
 const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
@@ -27,6 +28,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   isSelected,
   comment,
   onChange,
+  disabled = false,
 }) => {
   if (isLatest) {
     label = commonI18n.currentVersion();
@@ -64,6 +66,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             checked={isSelected}
             ariaLabel={ariaLabel}
             textThickness={isBoldtype ? 'thick' : 'thin'}
+            disabled={disabled}
           />
           {ariaLabel === lab2I18n.autosavedVersion() && (
             <WithTooltip

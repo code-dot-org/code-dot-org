@@ -11,7 +11,6 @@ import {
   openImportFromBackpackPrompt as globalOpenImportFromBackpackPrompt,
   openSaveToBackpackPrompt as globalOpenSaveToBackpackPrompt,
 } from '@codebridge/FileBrowser/prompts';
-import {sendCodebridgeAnalyticsEvent as globalSendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -30,6 +29,7 @@ import {
   saveFileThunk,
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {FolderId, MultiFileSource} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent as globalSendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -56,8 +56,8 @@ export const usePrompts = () => {
     state => state.lab2Project.projectSources?.source as MultiFileSource
   );
 
-  const sendCodebridgeAnalyticsEvent = useCallback(
-    (event: string) => globalSendCodebridgeAnalyticsEvent(event, appName),
+  const sendLab2AnalyticsEvent = useCallback(
+    (event: string) => globalSendLab2AnalyticsEvent(event, appName),
     [appName]
   );
 
@@ -100,7 +100,7 @@ export const usePrompts = () => {
   const openConfirmDeleteFile = usePartialApply(globalOpenConfirmDeleteFile, {
     dialogControl,
     deleteFile,
-    sendCodebridgeAnalyticsEvent,
+    sendLab2AnalyticsEvent,
     cleanupValidationFile,
   } satisfies PAFunctionArgs<typeof globalOpenConfirmDeleteFile>);
 
@@ -109,7 +109,7 @@ export const usePrompts = () => {
     {
       dialogControl,
       deleteFolder,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       projectFiles: source.files,
       projectFolders: source.folders,
     } satisfies PAFunctionArgs<typeof globalOpenConfirmDeleteFolder>
@@ -119,14 +119,14 @@ export const usePrompts = () => {
     dialogControl,
     newFolder,
     projectFolders: source.folders,
-    sendCodebridgeAnalyticsEvent,
+    sendLab2AnalyticsEvent,
   } satisfies PAFunctionArgs<typeof globalOpenNewFolderPrompt>);
 
   const openNewFilePrompt = usePartialApply(globalOpenNewFilePrompt, {
     dialogControl,
     newFile,
     projectFiles: source.files,
-    sendCodebridgeAnalyticsEvent,
+    sendLab2AnalyticsEvent,
     isStartMode,
     validationFile,
   } satisfies PAFunctionArgs<typeof globalOpenNewFilePrompt>);
@@ -136,7 +136,7 @@ export const usePrompts = () => {
     moveFile,
     projectFiles: source.files,
     projectFolders: source.folders,
-    sendCodebridgeAnalyticsEvent,
+    sendLab2AnalyticsEvent,
     isStartMode,
     validationFile,
   } satisfies PAFunctionArgs<typeof globalOpenMoveFilePrompt>);
@@ -145,14 +145,14 @@ export const usePrompts = () => {
     dialogControl,
     moveFolder,
     projectFolders: source.folders,
-    sendCodebridgeAnalyticsEvent,
+    sendLab2AnalyticsEvent,
   } satisfies PAFunctionArgs<typeof globalOpenMoveFolderPrompt>);
 
   const openRenameFilePrompt = usePartialApply(globalOpenRenameFilePrompt, {
     dialogControl,
     renameFile,
     projectFiles: source.files,
-    sendCodebridgeAnalyticsEvent,
+    sendLab2AnalyticsEvent,
     isStartMode,
     validationFile,
   } satisfies PAFunctionArgs<typeof globalOpenRenameFilePrompt>);
@@ -161,7 +161,7 @@ export const usePrompts = () => {
     dialogControl,
     renameFolder,
     projectFolders: source.folders,
-    sendCodebridgeAnalyticsEvent,
+    sendLab2AnalyticsEvent,
   } satisfies PAFunctionArgs<typeof globalOpenRenameFolderPrompt>);
 
   const openImportFromBackpackPrompt = usePartialApply(

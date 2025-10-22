@@ -58,19 +58,21 @@ module Middlewares
     # allowing concurrent requests to identify that the session is being deleted and prevent its restoration.
     #
     # @see https://github.com/redis-store/redis-rack/blob/v3.0.0/lib/rack/session/redis.rb#L54
-    def delete_session(req, sid, ...)
+    def delete_session(req, sid, options)
       super
     ensure
-      write_session(req, sid, {deleted: true}, ex: 60) # marks the session as deleted for 60 seconds
-      req.session.delete('deleted') # prevents commiting the "deleted" flag to the renewed session
-      # By default, a deleted session should be renewed, which involves generating a new session ID and cookie for it.
-      # However, since the deleted session is being overwritten with the "deleted" flag, it will bypass the renewal step.
-      # Therefore, we need to manually set the :renew option to force the session to be renewed.
-      # See:
-      # - https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L217-L218
-      # - https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L377-L380
-      # - https://github.com/redis-store/redis-rack/blob/v3.0.0/lib/rack/session/redis.rb#L60
-      req.session.options[:renew] = true
+      unless options[:skip]
+        write_session(req, sid, {deleted: true}, ex: 60) # marks the session as deleted for 60 seconds
+        req.session.delete('deleted') # prevents commiting the "deleted" flag to the renewed session
+        # By default, a deleted session should be renewed, which involves generating a new session ID and cookie for it.
+        # However, since the deleted session is being overwritten with the "deleted" flag, it will bypass the renewal step.
+        # Therefore, we need to manually set the :renew option to force the session to be renewed.
+        # See:
+        # - https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L217-L218
+        # - https://github.com/rack/rack/blob/v2.2.9/lib/rack/session/abstract/id.rb#L377-L380
+        # - https://github.com/redis-store/redis-rack/blob/v3.0.0/lib/rack/session/redis.rb#L60
+        options[:renew] = true
+      end
     end
 
     # Overrides +Rack::Session::Abstract::Persisted#commit_session?+ to skip
@@ -90,7 +92,50 @@ module Middlewares
     end
   end
 
+  # SESSION_STORE_MIGRATION_DELETE_ME
+  # We are migrating from session_store to redis. Its the same definitions, but with a new
+  # name to reflect that multiple dashboard features will be using the same instance.
+  #
+  # We expect the migration to be complete after November 2025, at which point we can remove this module
+  module MigrateFromOldSessionStoreServer
+    def initialize(*args, **kwargs, &blk)
+      @old_session_store_server = Redis.new(url: CDO.old_session_store_server)
+      super
+    end
+
+    # Checks if there is an existing session in CDO.old_session_store_server, and if
+    # there is, migrates it to our new Redis server before proceeding as normal.
+    def migrate_session_to_new_redis(session_redis_key)
+      # Check for existing session data in CDO.old_session_store_server, we use dump/restore
+      # rather than get/set to 100% preserve the binary serialized format.
+      session_data = @old_session_store_server.dump(session_redis_key)
+      return unless session_data
+
+      # Copy the TTL from CDO.old_session_store_server too:
+      ttl_ms = @old_session_store_server.pttl(session_redis_key)
+      ttl_ms = CDO.dashboard_session_ttl_days.in_milliseconds if ttl_ms < 0
+
+      # Write the session data to our new Redis server:
+      with {|c| c.restore("session:#{session_redis_key}", ttl_ms, session_data, replace: true)}
+
+      Rails.logger.info("Migrated session #{session_redis_key} from Redis instance CDO.old_session_store_server to CDO.redis_url")
+    rescue => exception
+      Rails.logger.error("Error migrating session #{session_redis_key} from Redis instance CDO.old_session_store_server to CDO.redis_url: #{exception.message}")
+    ensure
+      # Delete the session data from CDO.old_session_store_server, even if there was an error,
+      # to prevent repeatedly trying (and failing) to migrate the same session. Worst case,
+      # this user will have to login again.
+      @old_session_store_server.del(session_redis_key)
+    end
+
+    def find_session(req, sid)
+      migrate_session_to_new_redis(sid.private_id) if sid&.private_id
+      super
+    end
+  end
+
   class RedisSessionStore < ActionDispatch::Session::RedisStore
+    prepend MigrateFromOldSessionStoreServer if CDO.old_session_store_server
     prepend UnnecessarySessionWritePrevention
     prepend DeletedSessionPreservation
   end

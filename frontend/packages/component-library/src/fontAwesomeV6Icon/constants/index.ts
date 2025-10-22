@@ -11,6 +11,7 @@ export const kitIcons = new Set([
   'ai-bot-solid',
   'ai-head-regular',
   'ai-head-solid',
+  'ai-locked',
   'clever',
   'click-to-continue-down',
   'click-to-continue-up',

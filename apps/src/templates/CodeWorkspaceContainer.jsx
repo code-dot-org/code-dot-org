@@ -18,13 +18,12 @@ class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
     children: PropTypes.node,
     style: PropTypes.object,
-    labType: PropTypes.string,
-    inLevel: PropTypes.bool,
 
     // Provided by redux
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
+    labType: PropTypes.string,
   };
 
   state = {
@@ -50,12 +49,14 @@ class CodeWorkspaceContainer extends React.Component {
   };
 
   render() {
+    const {hidden, isRtl, noVisualization, children, style, labType} =
+      this.props;
+
     const AiTutorLabs = ['applab', 'gamelab', 'weblab'];
     const showAiTutor =
-      AiTutorLabs.includes(this.props.labType) &&
+      AiTutorLabs.includes(labType) &&
       experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
-    const {hidden, isRtl, noVisualization, children, style, inLevel} =
-      this.props;
+
     const mainStyle = {
       ...styles.main,
       ...(noVisualization && styles.noVisualization),
@@ -81,7 +82,6 @@ class CodeWorkspaceContainer extends React.Component {
           <AiTutorContainer
             toggleAiChat={this.toggleAiChat}
             aiChatOpen={this.state.aiChatOpen}
-            inLevel={inLevel}
           />
         )}
       </div>
@@ -97,6 +97,7 @@ export default connect(
       !state.pageConstants.visualizationInWorkspace,
     isRtl: state.isRtl,
     noVisualization: state.pageConstants.noVisualization,
+    labType: state.pageConstants.appType,
   }),
   undefined,
   null,

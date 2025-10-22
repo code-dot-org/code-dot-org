@@ -18,7 +18,7 @@ const getDeleteFolderMock = (): [ProjectFolder, DeleteFolderFunction] => {
 
 describe('openConfirmDeleteFolder', function () {
   it('can successfully delete a Folder', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const folderId = '4';
 
     const [deleteFolderData, deleteFolderDataMock] = getDeleteFolderMock();
@@ -27,7 +27,7 @@ describe('openConfirmDeleteFolder', function () {
       folder: testProject.folders[folderId],
       dialogControl: getDialogAlertMock('confirm'),
       deleteFolder: deleteFolderDataMock,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       projectFiles: testProject.files,
       projectFolders: testProject.folders,
     });
@@ -38,7 +38,7 @@ describe('openConfirmDeleteFolder', function () {
   });
 
   it('can cancel deleting a folder', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const folderId = '1';
 
     const [deleteFolderData, deleteFolderDataMock] = getDeleteFolderMock();
@@ -47,7 +47,7 @@ describe('openConfirmDeleteFolder', function () {
       folder: testProject.folders[folderId],
       dialogControl: getDialogAlertMock('cancel'),
       deleteFolder: deleteFolderDataMock,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       projectFiles: testProject.files,
       projectFolders: testProject.folders,
     });

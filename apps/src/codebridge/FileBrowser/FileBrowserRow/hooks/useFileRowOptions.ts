@@ -5,7 +5,6 @@ import {
   enableUserAddedSelectionContext,
   getFolderPath,
   getPossibleDestinationFoldersForFile,
-  sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
@@ -15,6 +14,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -29,7 +29,7 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
  */
 const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
   fileDownload(file.contents, file.name);
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
 };
 
 /**
