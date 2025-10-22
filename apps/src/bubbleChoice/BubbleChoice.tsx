@@ -194,7 +194,7 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
                     level={sublevelToProgressBubbleLevel(index)}
                     disabled={true}
                     hideToolTips={true}
-                    smallBubble={levelBubbleChoice?.hideLetters}
+                    smallBubble={levelBubbleChoice.hideLetters}
                   />
                 </div>
               </div>
