@@ -109,6 +109,8 @@ Resources:
                           - RegexString: '\\/api\\/'
                           # All assets are served from `/_next/static` and HTML pages are never served from this path.
                           - RegexString: '\\/_next\\/static'
+                          # The `/_next/image` endpoint proxies images from the Contentful webservice.
+                          - RegexString: '\\/_next\\/image'
                           # Just to be safe, exclude paths where the file extension is a non-HTML resource.
                           - RegexString: '\\.(acc|avi|css|gif|ico|jpe?g|js|json|mp[34]|ogg|otf|pdf|png|tiff?|ttf|txt|webm|webp|woff2?|xml)$'
               RuleActionOverrides:
@@ -203,6 +205,7 @@ Resources:
                     Statement:
                       OrStatement:
                         Statements:
+                          # `/api` endpoints typically serve JSON.
                           - ByteMatchStatement:
                               SearchString: /api/
                               FieldToMatch:
@@ -211,6 +214,7 @@ Resources:
                                 - Priority: 0
                                   Type: NONE
                               PositionalConstraint: CONTAINS
+                          # All assets are served from `/_next/static` and HTML pages are never served from this path.
                           - ByteMatchStatement:
                               SearchString: /_next/static
                               FieldToMatch:
@@ -219,6 +223,16 @@ Resources:
                                 - Priority: 0
                                   Type: NONE
                               PositionalConstraint: CONTAINS
+                          # The `/_next/image` endpoint proxies images from the Contentful webservice.
+                          - ByteMatchStatement:
+                              SearchString: /_next/image
+                              FieldToMatch:
+                                UriPath: {}
+                              TextTransformations:
+                                - Priority: 0
+                                  Type: NONE
+                              PositionalConstraint: CONTAINS
+                          # Just to be safe, exclude paths where the file extension is a non-HTML resource.
                           - RegexMatchStatement:
                               RegexString: '\\.(acc|avi|css|gif|ico|jpe?g|js|json|mp[34]|ogg|otf|pdf|png|tiff?|ttf|txt|webm|webp|woff2?|xml)$'
                               FieldToMatch:
