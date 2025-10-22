@@ -38,7 +38,6 @@
     "thumbnail_url": "https://images.code.org/90809738968188ec7c50d9f4b58a391a-redo Dance.jpg",
     "project_template_level_name": "pilot_generate_dancer_template_3_4",
     "name_suffix": "_4",
-    "ai_code_generate": "false",
     "bubble_choice_description": "Return to generate a different dancer. ",
     "preload_asset_list": null
   },
