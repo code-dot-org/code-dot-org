@@ -6,7 +6,6 @@ import type {
   LocalizeOptions,
   LocalizeSetLanguageData,
 } from '@cdo/apps/localization/Localize';
-import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 
@@ -131,12 +130,6 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
     this.localeLoaded = {
       en: true,
     };
-
-    // Only allow when enableExperiments=localizejs has been set
-    // or localizejs=1 is specified in the URL
-    if (!experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
-      return;
-    }
 
     this.loader = new Promise(resolve => {
       window.LocalizeLoader?.then(loadedLocalize => {

@@ -211,7 +211,7 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
     // Localization class.
     window.LocalizeLoader = new Promise((resolve, reject) => {
       script.onload = () => {
-        // Optional: Handle script load event
+        // Load the localize widget
         loadLocalize();
         resolve(window.Localize);
       };
@@ -220,6 +220,7 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
         reject();
       };
     });
+
     document.head.appendChild(script);
   }
 }
