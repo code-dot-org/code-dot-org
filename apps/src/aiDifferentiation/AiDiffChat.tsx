@@ -63,7 +63,7 @@ interface AiDiffChatProps {
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
   suggestedPrompts?: ChatPrompt[];
-  disableEndButtons?: boolean;
+  hideChatHeader?: boolean;
   curriculumCourses?: string[];
   threadFetchCallback?: () => void;
   threadId?: number;
@@ -83,7 +83,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   suggestedPrompts = context.type === AiDiffContext.GENERAL
     ? SUGGESTED_PROMPTS_FOR_SELECTION['support'].suggestedPrompts
     : SUGGESTED_PROMPTS,
-  disableEndButtons = false,
+  hideChatHeader = false,
   curriculumCourses = [],
   threadFetchCallback = () => {},
   threadId = 0,
@@ -321,12 +321,13 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
   return (
     <div className={style.chatContainer}>
-      <AiDiffChatHeader
-        onSuggestPrompts={onSuggestPrompts}
-        messages={messageHistory}
-        threadTitle={threadTitle}
-        disableEndButtons={disableEndButtons}
-      />
+      {!hideChatHeader && (
+        <AiDiffChatHeader
+          onSuggestPrompts={onSuggestPrompts}
+          messages={messageHistory}
+          threadTitle={threadTitle}
+        />
+      )}
       <div className={style.chatContent}>
         {messageHistory.map((item: ChatItem, id: number) =>
           Array.isArray(item) ? (
