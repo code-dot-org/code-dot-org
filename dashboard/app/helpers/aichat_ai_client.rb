@@ -107,7 +107,7 @@ class AichatAiClient
     File.extname(filename) == '.pdf'
   end
 
-  # Get message text, including any hidden and/or message context
+  # Get message text, including any hidden context
   private def get_message_text(message)
     text = message['chatMessageText']
     text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
