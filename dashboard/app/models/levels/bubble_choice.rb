@@ -35,7 +35,7 @@ class BubbleChoice < DSLDefined
     description
     uses_lab2
     is_project_level
-    show_letters_lab2
+    hide_letters_lab2
   )
 
   ALPHABET = ('a'..'z').to_a
@@ -45,11 +45,12 @@ class BubbleChoice < DSLDefined
       name '#{DEFAULT_LEVEL_NAME}'
       display_name 'level display_name here'
       description 'level description here'
-      show_letters_lab2
 
       sublevels
       level 'level1'
       level 'level2'
+
+      uses_lab2
     RUBY
   end
 
@@ -81,8 +82,8 @@ class BubbleChoice < DSLDefined
     uses_lab2
   end
 
-  def show_letters_lab2?
-    !!show_letters_lab2
+  def hide_letters_lab2?
+    !!hide_letters_lab2
   end
 
   def enable_scrolling?
@@ -103,7 +104,7 @@ class BubbleChoice < DSLDefined
       sublevels: summary[:sublevels],
       displayName: summary[:display_name],
       description: summary[:description],
-      showLetters: summary[:show_letters_lab2],
+      hideLetters: summary[:hide_letters_lab2],
     }
 
     # Overwrite the incorrect finish URL with the actual next URL.
@@ -129,7 +130,7 @@ class BubbleChoice < DSLDefined
         type: type,
         teacher_markdown: teacher_markdown,
         sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize, unit_group_unit: unit_group_unit),
-        show_letters_lab2: show_letters_lab2?,
+        hide_letters_lab2: hide_letters_lab2?,
       }
 
       if script_level

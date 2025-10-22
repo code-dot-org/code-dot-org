@@ -238,7 +238,7 @@ export interface BubbleChoiceLevelData {
   displayName: string;
   description: string;
   sublevels: BubbleChoiceSublevel[];
-  showLetters?: boolean;
+  hideLetters?: boolean;
 }
 
 // Bubble Choice specific property
