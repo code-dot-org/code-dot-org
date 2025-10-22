@@ -214,6 +214,7 @@ class AichatGeminiClientTest < AichatAiClientTest
           assert_equal subject, @response_text
         end
       end
+
       context 'when body is well formed with hidden and message context and request succeeds' do
         let(:new_message) {@new_message_with_hidden_and_message_context}
         let(:level) {@level_with_level_system_prompt}
