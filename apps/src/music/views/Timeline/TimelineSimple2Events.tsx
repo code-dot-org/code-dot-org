@@ -1,14 +1,14 @@
 import React, {useCallback, useMemo, memo} from 'react';
 
-import AppConfig from '../appConfig';
-import {BlockTypes} from '../blockly/blockTypes';
-import {collectBlockIdsRecursively} from '../blockly/blockUtils';
-import {MAX_FUNCTION_BOUNDS_RENDER_DEPTH} from '../constants';
-import {FunctionEvents} from '../player/interfaces/FunctionEvents';
-import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import AppConfig from '@cdo/apps/music/appConfig';
+import {BlockTypes} from '@cdo/apps/music/blockly/blockTypes';
+import {collectBlockIdsRecursively} from '@cdo/apps/music/blockly/blockUtils';
+import {MAX_FUNCTION_BOUNDS_RENDER_DEPTH} from '@cdo/apps/music/constants';
+import {FunctionEvents} from '@cdo/apps/music/player/interfaces/FunctionEvents';
+import {PlaybackEvent} from '@cdo/apps/music/player/interfaces/PlaybackEvent';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TimelineElement from './TimelineElement';
-import {useMusicSelector} from './types';
 
 const timelineLayoutParam = AppConfig.getValue('timeline-layout');
 
@@ -199,7 +199,7 @@ const TimelineSimple2Events: React.FunctionComponent<
   getEventHeight,
   getEventVerticalSpace,
 }) => {
-  const soundEventsOriginal = useMusicSelector(
+  const soundEventsOriginal = useAppSelector(
     state => state.music.playbackEvents
   );
 
@@ -216,7 +216,7 @@ const TimelineSimple2Events: React.FunctionComponent<
     soundEvents = getOrderedByWhenSoundEvents(soundEventsOriginal);
   }
 
-  const orderedFunctions = useMusicSelector(
+  const orderedFunctions = useAppSelector(
     state => state.music.orderedFunctions
   );
 
