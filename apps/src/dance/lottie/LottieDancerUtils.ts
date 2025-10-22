@@ -112,8 +112,13 @@ export function resolveAnimationUrl(
 }
 
 export async function fetchJson<T>(url: string): Promise<T> {
-  const {value} = await HttpClient.fetchJson<T>(url);
-  return value;
+  try {
+    const {value} = await HttpClient.fetchJson<T>(url);
+    return value;
+  } catch (e) {
+    console.warn(`Error fetching JSON from ${url}:`, e);
+    throw e;
+  }
 }
 
 // Metadata keeps colors in hex; we convert to normalized RGBA [0..1].
@@ -320,7 +325,8 @@ export async function fetchDataUrl(url?: string): Promise<string | null> {
       fileReader.onload = () => resolve(fileReader.result as string);
       fileReader.readAsDataURL(blob);
     });
-  } catch {
+  } catch (e) {
+    console.log(`Failed to fetch data URL for image at ${url}:`, e);
     return null;
   }
 }
@@ -589,10 +595,14 @@ export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
  * Used to load SVG markup for pre-raster recoloring.
  */
 export async function fetchText(url?: string): Promise<string | null> {
-  if (!url) return null;
+  if (!url) {
+    return null;
+  }
   try {
     const res = await fetch(url);
-    if (!res.ok) return null;
+    if (!res.ok) {
+      return null;
+    }
     return await res.text();
   } catch {
     return null;

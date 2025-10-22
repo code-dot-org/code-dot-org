@@ -288,9 +288,16 @@ export default class LottieDancerRenderer {
 
           try {
             const svgText = await fetchText(this.bodyUrl);
-            const recoloredSvg = recolorBodySvgString(svgText!, palette);
+            if (!svgText) {
+              throw new Error(
+                `Failed to fetch body SVG: empty response for URL ${this.bodyUrl}.
+                Using unmodified vector body from ${skeletonName} Lottie JSON`
+              );
+            }
+            const recoloredSvg = recolorBodySvgString(svgText, palette);
             finalBodyDataUrl = svgStringToDataUrl(recoloredSvg);
-          } catch {
+          } catch (e) {
+            console.warn('Error processing body SVG:', e);
             finalBodyDataUrl = null;
           }
 
