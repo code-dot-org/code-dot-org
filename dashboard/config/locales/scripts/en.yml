@@ -25639,8 +25639,18 @@ en:
           description: ''
           student_description: ''
         ai-generated-design-pilot-2025:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Unit Vocabulary
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project and Assessment
+            lessonGroup-5:
+              display_name: Vocabulary
           name: ai-generated-design-pilot-2025
           title: AI-Generated Design
           description_audience: ''

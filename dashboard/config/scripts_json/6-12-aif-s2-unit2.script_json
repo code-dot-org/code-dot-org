@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-17 21:29:15 UTC",
+    "serialized_at": "2025-10-22 00:39:15 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -733,7 +733,7 @@
       "key": "f5323100-0814-4820-9411-4a924229d48b",
       "position": 1,
       "properties": {
-        "progression_name": "Explore \"Customize a Cake\" Flowchart"
+        "progression_name": "Explore a Flowchart"
       },
       "seeding_key": {
         "activity_section.key": "f5323100-0814-4820-9411-4a924229d48b",
@@ -744,10 +744,42 @@
       "key": "9a49f926-0bc6-421c-972f-1874d48f1b63",
       "position": 2,
       "properties": {
-        "progression_name": "Practice with a Markdown File"
+        "progression_name": "Practice Defining a Function"
       },
       "seeding_key": {
         "activity_section.key": "9a49f926-0bc6-421c-972f-1874d48f1b63",
+        "lesson_activity.key": "5c337982-9894-44a4-aeb1-4812ee78dd8a"
+      }
+    },
+    {
+      "key": "ceeb2649-0675-4fed-af00-7b2a8ec63992",
+      "position": 3,
+      "properties": {
+        "progression_name": "Code a Parameterized Function"
+      },
+      "seeding_key": {
+        "activity_section.key": "ceeb2649-0675-4fed-af00-7b2a8ec63992",
+        "lesson_activity.key": "5c337982-9894-44a4-aeb1-4812ee78dd8a"
+      }
+    },
+    {
+      "key": "f83a8e57-afe7-4d10-b530-37acd9cdfd49",
+      "position": 4,
+      "properties": {
+        "progression_name": "Choice Level: Functions with Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "f83a8e57-afe7-4d10-b530-37acd9cdfd49",
+        "lesson_activity.key": "5c337982-9894-44a4-aeb1-4812ee78dd8a"
+      }
+    },
+    {
+      "key": "00739781-d2d1-42ea-8d22-cf485602e28a",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "00739781-d2d1-42ea-8d22-cf485602e28a",
         "lesson_activity.key": "5c337982-9894-44a4-aeb1-4812ee78dd8a"
       }
     },
@@ -1471,7 +1503,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore \"Customize a Cake\" Flowchart"
+        "progression": "Explore a Flowchart"
       },
       "bonus": false,
       "seeding_key": {
@@ -1493,7 +1525,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice with a Markdown File"
+        "progression": "Practice Defining a Function"
       },
       "bonus": false,
       "seeding_key": {
@@ -1515,6 +1547,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Code a Parameterized Function"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level2-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "ceeb2649-0675-4fed-af00-7b2a8ec63992"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson6-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice Level: Functions with Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "f83a8e57-afe7-4d10-b530-37acd9cdfd49"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson6-level4-test-2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -1532,7 +1608,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1554,7 +1630,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1576,7 +1652,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1598,7 +1674,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1620,7 +1696,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1642,7 +1718,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1664,7 +1740,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1686,7 +1762,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2019,6 +2095,30 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit2",
         "activity_section.key": "9a49f926-0bc6-421c-972f-1874d48f1b63"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level2-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "ceeb2649-0675-4fed-af00-7b2a8ec63992"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level4-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "f83a8e57-afe7-4d10-b530-37acd9cdfd49"
       }
     },
     {
