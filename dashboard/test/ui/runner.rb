@@ -61,12 +61,12 @@ def main(options)
   ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{start_time}"
 
   open_log_files
-  configure_for_eyes if eyes?
+  configure_for_eyes if $options.run_eyes_tests
   report_tests_starting
   run_status_page_url = generate_status_page(start_time) if options.with_status_page
 
-  run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
-    run_feature browser, feature, options
+  run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature, is_eyes_run|
+    run_feature browser, feature, is_eyes_run, options
   rescue => exception
     ChatClient.log "Exception: #{exception.message}", color: 'red'
     raise
@@ -114,6 +114,7 @@ def parse_options
     options.parallel_limit = 1
     options.abort_when_failures_exceed = Float::INFINITY
     options.priority = '99'
+    options.run_ui_tests = true
 
     # start supporting some basic command line filtering of which browsers we run against
     opt_parser = OptionParser.new do |opts|
@@ -186,6 +187,11 @@ def parse_options
       end
       opts.on("-e", "--eyes", "Run only Applitools eyes tests") do
         options.run_eyes_tests = true
+        options.run_ui_tests = nil
+      end
+      opts.on("--eyes_and_ui", "Run both eyes and UI tests") do
+        options.run_eyes_tests = true
+        options.run_ui_tests = true
       end
       opts.on("-a", "--auto_retry", "Retry tests that fail once") do
         options.auto_retry = true
@@ -368,33 +374,54 @@ end
 #
 # Produce a list of browser-feature combinations to run, with combinations will
 # be skipped due to test tags already filtered out.
-# @return [Array[Array[browser:Hash, feature:String]]]
+# @return [Array[Array[browser:Hash, feature:String, is_eyes_run:Boolean]]]
 # Example result:
 # [
 #   [
 #     { 'browser': 'chrome', 'name': 'ChromeDriver', 'browserName': 'chrome', 'version': 'latest' },
-#     'features/bee.feature'
+#     'features/bee.feature',
+#     false  # is_eyes_run
 #   ],
 #   ...
 # ]
 #
 def browser_features
-  ($browsers.product features_to_run).filter_map do |browser, feature|
+  result = []
+
+  # When both run_ui_tests and run_eyes_tests are true, we run each feature twice
+  run_ui = $options.run_ui_tests
+  run_eyes = $options.run_eyes_tests
+
+  ($browsers.product features_to_run).each do |browser, feature|
     full_feature_path = File.expand_path(feature)
     relative_feature_path = Pathname.new(full_feature_path).relative_path_from(UI_TEST_DIR).to_s
-    arguments = cucumber_arguments_for_browser(browser, $options)
-    scenario_count = ParallelTests::Cucumber::Scenarios.all([full_feature_path], test_options: arguments).length
-    next if scenario_count.zero?
-    [browser, relative_feature_path]
+
+    # If running UI tests, add a UI run entry
+    if run_ui
+      arguments = cucumber_arguments_for_browser(browser, $options, false)
+      scenario_count = ParallelTests::Cucumber::Scenarios.all([full_feature_path], test_options: arguments).length
+      result << [browser, relative_feature_path, false] if scenario_count > 0
+    end
+
+    # If running eyes tests, add an eyes run entry
+    if run_eyes
+      arguments = cucumber_arguments_for_browser(browser, $options, true)
+      scenario_count = ParallelTests::Cucumber::Scenarios.all([full_feature_path], test_options: arguments).length
+      result << [browser, relative_feature_path, true] if scenario_count > 0
+    end
   end
+
+  result
 end
 
 def test_type
-  eyes? ? 'Eyes' : 'UI'
-end
-
-def eyes?
-  $options.run_eyes_tests
+  if $options.run_eyes_tests && $options.run_ui_tests
+    'Combined'
+  elsif $options.run_eyes_tests
+    'Eyes'
+  else
+    'UI'
+  end
 end
 
 def configure_for_eyes
@@ -407,13 +434,13 @@ def configure_for_eyes
 end
 
 def applitools_batch_url
-  return nil unless eyes?
+  return nil unless $options.run_eyes_tests
   "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV.fetch('BATCH_ID', nil)}&hideBatchList=true"
 end
 
 def report_tests_starting
   ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
-  if eyes?
+  if $options.run_eyes_tests
     ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV.fetch('BATCH_NAME', nil)}</a>."
   end
 end
@@ -515,10 +542,10 @@ def generate_status_page(suite_start_time)
   return run_status_page_url
 end
 
-def test_run_identifier(browser, feature)
+def test_run_identifier(browser, feature, is_eyes_run = nil)
   feature_name = feature.gsub(/.*features\//, '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
-  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
+  "#{browser_name}_#{feature_name}" + (is_eyes_run ? '_eyes' : '')
 end
 
 def browser_name_or_unknown(browser)
@@ -550,11 +577,23 @@ end
 def browser_feature_generator
   return $browser_feature_generator if $browser_feature_generator
 
-  # Sort by estimated duration (longest at end of array, will get run first)
-  browser_features_left = browser_features.sort! do |browser_feature_a, browser_feature_b|
-    estimate_b = estimate_for_test(test_run_identifier(*browser_feature_b)) || Float::INFINITY
-    estimate_a = estimate_for_test(test_run_identifier(*browser_feature_a)) || Float::INFINITY
-    estimate_a <=> estimate_b
+  # Sort with UI runs first (is_eyes_run == false), then eyes runs (is_eyes_run == true)
+  # Within each group, sort by estimated duration (longest at end of array, will get run first)
+  browser_features_left = browser_features.sort! do |a, b|
+    browser_a, feature_a, is_eyes_a = a
+    browser_b, feature_b, is_eyes_b = b
+
+    # First, sort by type: Eyes tests (true) at beginning, UI tests (false) at end
+    # Since we .pop from the end, UI tests will be run first
+    type_comparison = (is_eyes_b ? 1 : 0) <=> (is_eyes_a ? 1 : 0)
+    if type_comparison == 0
+      # Within same type, sort by estimated duration (longest at end)
+      estimate_b = estimate_for_test(test_run_identifier(browser_b, feature_b, is_eyes_b)) || Float::INFINITY
+      estimate_a = estimate_for_test(test_run_identifier(browser_a, feature_a, is_eyes_a)) || Float::INFINITY
+      estimate_a <=> estimate_b
+    else
+      type_comparison
+    end
   end
 
   $browser_feature_generator = lambda do
@@ -676,14 +715,14 @@ def skip_tag(tag)
   " -t 'not #{tag}'"
 end
 
-def cucumber_arguments_for_browser(browser, options)
+def cucumber_arguments_for_browser(browser, options, is_eyes_run = nil)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += skip_tag('@skip')
 
   # If --eyes is specified, only run scenarios with the corresponding eyes tag.
   # Otherwise, do not call tag(), allowing any scenarios to run which are not
   # skipped via skip_tag(). See `cucumber --help` for more info.
-  if eyes?
+  if is_eyes_run
     arguments +=
       if browser['appium:mobile']
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
@@ -751,9 +790,9 @@ def to_percent(number, n_sig_digits)
   "#{percent.round(-(Math.log10(percent).ceil - n_sig_digits))}%"
 end
 
-def run_feature(browser, feature, options)
+def run_feature(browser, feature, is_eyes_run, options)
   browser_name = browser_name_or_unknown(browser)
-  test_run_string = test_run_identifier(browser, feature)
+  test_run_string = test_run_identifier(browser, feature, is_eyes_run)
   log_prefix = "[#{feature.gsub(/.*features\//, '').gsub('.feature', '')}] "
 
   if options.browser && browser['browser'] && options.browser.casecmp(browser['browser']) != 0
@@ -797,7 +836,7 @@ def run_feature(browser, feature, options)
   FileUtils.rm rerun_file, force: true
 
   reruns = 0
-  arguments = cucumber_arguments_for_browser(browser, options)
+  arguments = cucumber_arguments_for_browser(browser, options, is_eyes_run)
   arguments += cucumber_arguments_for_feature(options, test_run_string, max_reruns)
   cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, browser_name_or_unknown(browser), arguments, log_prefix)
   feature_succeeded = cucumber_succeeded && eyes_succeeded
@@ -907,7 +946,7 @@ def run_feature(browser, feature, options)
       Check the excluded @tags in the cucumber command line above and in the #{feature} file:
         - Do the feature or scenario tags exclude #{browser_name}?
     EOS
-    unless eyes?
+    unless $options.run_eyes_tests
       skip_warning += "  - Are you trying to run --eyes tests?\n"
     end
     unless options.dashboard_db_access
