@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-14 00:37:11 UTC",
+    "serialized_at": "2025-10-21 18:22:50 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -20,31 +20,155 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Pre-Assessment"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ai-generated-design-pilot-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-pilot-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Project and Assessment"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-pilot-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Vocabulary"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "ai-generated-design-pilot-2025"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Unit Vocabulary",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-generated-design-pilot-2025"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "f8f66938-b37a-492e-b284-ad8efa1e00bd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f8f66938-b37a-492e-b284-ad8efa1e00bd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-generated-design-pilot-2025"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "168cf773-6406-4b1d-ad8a-770be20e15bb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "168cf773-6406-4b1d-ad8a-770be20e15bb",
+        "lesson_activity.key": "f8f66938-b37a-492e-b284-ad8efa1e00bd"
+      }
+    },
+    {
+      "key": "1511c2ce-b4d7-4fe6-a9e2-332800498299",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1511c2ce-b4d7-4fe6-a9e2-332800498299",
+        "lesson_activity.key": "f8f66938-b37a-492e-b284-ad8efa1e00bd"
+      }
+    },
+    {
+      "key": "7ddd5b4e-4e7a-4e2e-9ddf-0f77153983c2",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ddd5b4e-4e7a-4e2e-9ddf-0f77153983c2",
+        "lesson_activity.key": "f8f66938-b37a-492e-b284-ad8efa1e00bd"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-vocabulary-levelgroup-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-generated-design-pilot-2025",
+        "activity_section.key": "7ddd5b4e-4e7a-4e2e-9ddf-0f77153983c2"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-vocabulary-levelgroup-test-2025"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-vocabulary-levelgroup-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-vocabulary-levelgroup-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-generated-design-pilot-2025",
+        "activity_section.key": "7ddd5b4e-4e7a-4e2e-9ddf-0f77153983c2"
+      }
+    }
   ],
   "resources": [
 
