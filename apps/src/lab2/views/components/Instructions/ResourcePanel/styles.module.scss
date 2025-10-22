@@ -22,6 +22,12 @@
     justify-content: center;
     align-items: center;
     height: 2.5rem;
+
+    html[dir='rtl'] & {
+      i {
+        transform: rotate(180deg);
+      }
+    }
   }
 
   .tabs {
