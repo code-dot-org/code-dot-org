@@ -33,7 +33,7 @@
     "hide_pause_button": "false",
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
-    "ai_code_generate": "true",
+    "guide_mode": "aiCodeGenerate",
     "display_name": "Generate the dance",
     "thumbnail_url": "https://images.code.org/9e3856a2b19fc54bf068f1878ffb2fae-moves.jpg",
     "name_suffix": "_4",
