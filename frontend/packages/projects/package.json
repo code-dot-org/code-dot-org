@@ -25,18 +25,12 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": {
-        "import": "./dist/esm/index.d.ts",
-        "require": "./dist/cjs/index.d.js"
-      },
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
     "./redux": {
-      "types": {
-        "import": "./dist/esm/redux/index.d.ts",
-        "require": "./dist/cjs/redux/index.d.js"
-      },
+      "types": "./dist/types/redux/index.d.ts",
       "import": "./dist/esm/redux/index.mjs",
       "require": "./dist/cjs/redux/index.js"
     }

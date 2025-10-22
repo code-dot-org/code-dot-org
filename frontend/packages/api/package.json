@@ -25,50 +25,32 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": {
-        "import": "./dist/esm/index.d.ts",
-        "require": "./dist/cjs/index.d.js"
-      },
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
     "./channels": {
-      "types": {
-        "import": "./dist/esm/channels/index.d.ts",
-        "require": "./dist/cjs/channels/index.d.js"
-      },
+      "types": "./dist/types/channels/index.d.ts",
       "import": "./dist/esm/channels/index.mjs",
       "require": "./dist/cjs/channels/index.js"
     },
     "./files": {
-      "types": {
-        "import": "./dist/esm/files/index.d.ts",
-        "require": "./dist/cjs/files/index.d.js"
-      },
+      "types": "./dist/types/files/index.d.ts",
       "import": "./dist/esm/files/index.mjs",
       "require": "./dist/cjs/files/index.js"
     },
     "./projects": {
-      "types": {
-        "import": "./dist/esm/projects/index.d.ts",
-        "require": "./dist/cjs/projects/index.d.js"
-      },
+      "types": "./dist/types/projects/index.d.ts",
       "import": "./dist/esm/projects/index.mjs",
       "require": "./dist/cjs/projects/index.js"
     },
     "./sources": {
-      "types": {
-        "import": "./dist/esm/sources/index.d.ts",
-        "require": "./dist/cjs/sources/index.d.js"
-      },
+      "types": "./dist/types/sources/index.d.ts",
       "import": "./dist/esm/sources/index.mjs",
       "require": "./dist/cjs/sources/index.js"
     },
     "./userLevels": {
-      "types": {
-        "import": "./dist/esm/userLevels/index.d.ts",
-        "require": "./dist/cjs/userLevels/index.d.js"
-      },
+      "types": "./dist/types/userLevels/index.d.ts",
       "import": "./dist/esm/userLevels/index.mjs",
       "require": "./dist/cjs/userLevels/index.js"
     }

@@ -18,6 +18,7 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "types": "./dist/types/index.d.ts",
   "main": "src/index.ts",
   "files": [
     "dist"
@@ -103,11 +104,13 @@
   "clean-package": "./clean-package.config.cjs",
   "dependencies": {
     "@code-dot-org/api": "workspace:*",
+    "@code-dot-org/localization": "workspace:*",
     "@newrelic/browser-agent": "^1.294.0",
     "@statsig/js-client": "^3.20.2",
     "@statsig/session-replay": "^3.20.2",
     "@statsig/web-analytics": "^3.20.2",
     "@types/new-relic-browser": "^1.230.5",
+    "aws-sdk": "^2.1692.0",
     "js-cookie": "^3.0.5",
     "query-string": "^9.2.2"
   }

@@ -23,21 +23,21 @@ export async function getPredictResponse(
 }
 
 export async function resetPredictLevelProgress(
-  currentLevelId: string | null,
-  scriptId: number | null
+  currentLevelId?: number,
+  scriptId?: number
 ) {
   return await HttpClient.post(
     '/delete_predict_level_progress',
     JSON.stringify({
-      script_id: scriptId,
-      level_id: currentLevelId,
+      script_id: scriptId || null,
+      level_id: currentLevelId !== undefined ? currentLevelId.toString() : null,
     }),
     true,
     {'Content-Type': 'application/json'}
   );
 }
 
-export async function getSectionSummary(sectionId: number, levelId: string) {
+export async function getSectionSummary(sectionId: number, levelId: number) {
   try {
     return await HttpClient.fetchJson<{
       response_count: number;

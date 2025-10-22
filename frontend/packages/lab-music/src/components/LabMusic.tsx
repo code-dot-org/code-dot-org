@@ -69,7 +69,7 @@ const LabMusic: React.FunctionComponent<LabMusicProps> = ({
           levelData.subData?.startBlocks ||
           DefaultStartBlocks
         }
-        customBlocks={blocks}
+        blocks={blocks}
         toolboxBlocks={toolboxBlocks}
         theme={DefaultTheme}
         renderer={ThrasosRenderer}

@@ -25,18 +25,12 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": {
-        "import": "./dist/esm/index.d.ts",
-        "require": "./dist/cjs/index.d.js"
-      },
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
     "./textToSpeech": {
-      "types": {
-        "import": "./dist/esm/textToSpeech/index.d.ts",
-        "require": "./dist/cjs/textToSpeech/index.d.js"
-      },
+      "types": "./dist/types/textToSpeech/index.d.ts",
       "import": "./dist/esm/textToSpeech/index.mjs",
       "require": "./dist/cjs/textToSpeech/index.js"
     }

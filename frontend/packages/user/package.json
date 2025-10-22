@@ -25,34 +25,22 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": {
-        "import": "./dist/esm/index.d.ts",
-        "require": "./dist/cjs/index.d.js"
-      },
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
     "./contexts": {
-      "types": {
-        "import": "./dist/esm/contexts/index.d.ts",
-        "require": "./dist/cjs/contexts/index.d.js"
-      },
+      "types": "./dist/types/contexts/index.d.ts",
       "import": "./dist/esm/contexts/index.mjs",
       "require": "./dist/cjs/contexts/index.js"
     },
     "./redux": {
-      "types": {
-        "import": "./dist/esm/redux/index.d.ts",
-        "require": "./dist/cjs/redux/index.d.js"
-      },
+      "types": "./dist/types/redux/index.d.ts",
       "import": "./dist/esm/redux/index.mjs",
       "require": "./dist/cjs/redux/index.js"
     },
     "./redux/currentUserSlice": {
-      "types": {
-        "import": "./dist/esm/redux/currentUserSlice.d.ts",
-        "require": "./dist/cjs/redux/currentUserSlice.d.js"
-      }
+      "types": "./dist/types/redux/currentUserSlice.d.ts"
     }
   },
   "scripts": {

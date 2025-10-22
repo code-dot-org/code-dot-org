@@ -25,60 +25,36 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": {
-        "import": "./dist/esm/index.d.ts",
-        "require": "./dist/cjs/index.d.js"
-      },
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
     "./dialogs": {
-      "types": {
-        "import": "./dist/esm/dialogs/index.d.ts",
-        "require": "./dist/cjs/dialogs/index.d.js"
-      },
+      "types": "./dist/types/dialogs/index.d.ts",
       "import": "./dist/esm/dialogs/index.mjs",
       "require": "./dist/cjs/dialogs/index.js"
     },
     "./contexts": {
-      "types": {
-        "import": "./dist/esm/contexts/index.d.ts",
-        "require": "./dist/cjs/contexts/index.d.js"
-      },
+      "types": "./dist/types/contexts/index.d.ts",
       "import": "./dist/esm/contexts/index.mjs",
       "require": "./dist/cjs/contexts/index.js"
     },
     "./redux": {
-      "types": {
-        "import": "./dist/esm/redux/index.d.ts",
-        "require": "./dist/cjs/redux/index.d.js"
-      },
+      "types": "./dist/types/redux/index.d.ts",
       "import": "./dist/esm/redux/index.mjs",
       "require": "./dist/cjs/redux/index.js"
     },
     "./redux/labSlice": {
-      "types": {
-        "import": "./dist/esm/redux/labSlice.d.ts",
-        "require": "./dist/cjs/redux/labSlice.d.js"
-      }
+      "types": "./dist/types/redux/labSlice.d.ts"
     },
     "./redux/labSystemSlice": {
-      "types": {
-        "import": "./dist/esm/redux/labSystemSlice.d.ts",
-        "require": "./dist/cjs/redux/labSystemSlice.d.js"
-      }
+      "types": "./dist/types/redux/labSystemSlice.d.ts"
     },
     "./redux/labProjectSlice": {
-      "types": {
-        "import": "./dist/esm/redux/labProjectSlice.d.ts",
-        "require": "./dist/cjs/redux/labProjectSlice.d.js"
-      }
+      "types": "./dist/types/redux/labProjectSlice.d.ts"
     },
     "./redux/predictLevelSlice": {
-      "types": {
-        "import": "./dist/esm/redux/predictLevelSlice.d.ts",
-        "require": "./dist/cjs/redux/predictLevelSlice.d.js"
-      }
+      "types": "./dist/types/redux/predictLevelSlice.d.ts"
     }
   },
   "scripts": {
@@ -116,6 +92,7 @@
     "@code-dot-org/projects": "workspace:*",
     "@code-dot-org/redux": "workspace:*",
     "@code-dot-org/user": "workspace:*",
+    "@code-dot-org/teacher-dashboard": "workspace:*",
     "@reduxjs/toolkit": "^2.8.2",
     "focus-trap-react": "^11.0.4",
     "lodash": "^4.17.21",

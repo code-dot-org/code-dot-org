@@ -23,8 +23,8 @@ import {currentUserActions} from '@code-dot-org/user/redux';
 
 import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
-import {LevelPropertiesValidator} from '../responseValidators';
 import type {RootState, AppDispatch} from '../redux/store';
+import {LevelPropertiesValidator} from '../responseValidators';
 import type {LevelProperties, PartialUserAppOptions} from '../types';
 import {queryParams, updateQueryParam} from '../utils/queryParams';
 

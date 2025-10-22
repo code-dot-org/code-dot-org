@@ -25,26 +25,17 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": {
-        "import": "./dist/esm/index.d.ts",
-        "require": "./dist/cjs/index.d.js"
-      },
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
     "./providers": {
-      "types": {
-        "import": "./dist/esm/providers/index.d.ts",
-        "require": "./dist/cjs/providers/index.d.js"
-      },
+      "types": "./dist/types/providers/index.d.ts",
       "import": "./dist/esm/providers/index.mjs",
       "require": "./dist/cjs/providers/index.js"
     },
     "./reduxSlice": {
-      "types": {
-        "import": "./dist/esm/reduxSlice.d.ts",
-        "require": "./dist/cjs/reduxSlice.d.js"
-      }
+      "types": "./dist/types/reduxSlice.d.ts"
     }
   },
   "scripts": {

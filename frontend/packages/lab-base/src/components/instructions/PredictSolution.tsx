@@ -1,0 +1,67 @@
+import {
+  BodyThreeText,
+  Heading1,
+} from '@code-dot-org/component-library/typography';
+import React from 'react';
+
+import {
+  LevelPredictSettings,
+  PredictQuestionType,
+} from '../../levelEditors/types';
+
+import moduleStyles from './predict.module.scss';
+
+// Component that displays the solution to a predict question.
+// The backend will only send the solution if the user has permission to see it.
+interface PredictSolutionProps {
+  predictSettings: LevelPredictSettings | undefined;
+}
+
+export const PredictSolution: React.FunctionComponent<PredictSolutionProps> = ({
+  predictSettings,
+}) => {
+  if (!predictSettings?.solution) {
+    return null;
+  }
+
+  const getFormattedSolution = () => {
+    if (!predictSettings?.solution) {
+      return null;
+    }
+    let solutionToDisplay: JSX.Element = (
+      <span>{predictSettings.solution}</span>
+    );
+    if (predictSettings.questionType === PredictQuestionType.MultipleChoice) {
+      const solutions = predictSettings.solution.split(',');
+      const formattedSolutions: JSX.Element[] = [];
+      for (const solution of solutions) {
+        const index = predictSettings.multipleChoiceOptions?.indexOf(solution);
+        if (index !== undefined && index !== -1) {
+          // Insert at index so the solutions show up in the same order as the options.
+          formattedSolutions[index] = (
+            <span key={index}>
+              <span className={moduleStyles.multipleChoiceLetter}>
+                {String.fromCharCode(65 + index)}.
+              </span>
+              <span className={moduleStyles.multipleChoiceLabel}>
+                {solution}
+              </span>
+              <br />
+            </span>
+          );
+        }
+      }
+      solutionToDisplay = <>{formattedSolutions}</>;
+    }
+    return solutionToDisplay;
+  };
+
+  return (
+    <div className={moduleStyles.predictSolutionContainer}>
+      <Heading1 visualAppearance="heading-sm">Answer</Heading1>
+      <BodyThreeText>{getFormattedSolution()}</BodyThreeText>
+    </div>
+  );
+};
+
+export default PredictSolution;

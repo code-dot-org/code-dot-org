@@ -16,3 +16,5 @@ be enabled per-session.
 ## New Relic Metrics
 
 ## Dashboard Metrics API
+
+## AWS Firehose

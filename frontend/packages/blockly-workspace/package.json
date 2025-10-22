@@ -25,154 +25,97 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": {
-        "import": "./dist/esm/index.d.ts",
-        "require": "./dist/cjs/index.d.js"
-      },
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
     "./xml": {
-      "types": {
-        "import": "./dist/esm/xml/index.d.ts",
-        "require": "./dist/cjs/xml/index.d.js"
-      },
+      "types": "./dist/types/xml/index.d.ts",
       "import": "./dist/esm/xml/index.mjs",
       "require": "./dist/cjs/xml/index.js"
     },
     "./utils": {
-      "types": {
-        "import": "./dist/esm/utils/index.d.ts",
-        "require": "./dist/cjs/utils/index.d.js"
-      },
+      "types": "./dist/types/utils/index.d.ts",
       "import": "./dist/esm/utils/index.mjs",
       "require": "./dist/cjs/utils/index.js"
     },
     "./events": {
-      "types": {
-        "import": "./dist/esm/events/index.d.ts",
-        "require": "./dist/cjs/events/index.d.js"
-      },
+      "types": "./dist/types/events/index.d.ts",
       "import": "./dist/esm/events/index.mjs",
       "require": "./dist/cjs/events/index.js"
     },
     "./contexts": {
-      "types": {
-        "import": "./dist/esm/contexts/index.d.ts",
-        "require": "./dist/cjs/contexts/index.d.js"
-      },
+      "types": "./dist/types/contexts/index.d.ts",
       "import": "./dist/esm/contexts/index.mjs",
       "require": "./dist/cjs/contexts/index.js"
     },
     "./renderers": {
-      "types": {
-        "import": "./dist/esm/renderers/index.d.ts",
-        "require": "./dist/cjs/renderers/index.d.js"
-      },
+      "types": "./dist/types/renderers/index.d.ts",
       "import": "./dist/esm/renderers/index.mjs",
       "require": "./dist/cjs/renderers/index.js"
     },
     "./renderers/thrasos": {
-      "types": {
-        "import": "./dist/esm/renderers/thrasos/index.d.ts",
-        "require": "./dist/cjs/renderers/thrasos/index.d.js"
-      },
+      "types": "./dist/types/renderers/thrasos/index.d.ts",
       "import": "./dist/esm/renderers/thrasos/index.mjs",
       "require": "./dist/cjs/renderers/thrasos/index.js"
     },
     "./themes": {
-      "types": {
-        "import": "./dist/esm/themes/index.d.ts",
-        "require": "./dist/cjs/themes/index.d.js"
-      },
+      "types": "./dist/types/themes/index.d.ts",
       "import": "./dist/esm/themes/index.mjs",
       "require": "./dist/cjs/themes/index.js"
     },
     "./themes/default": {
-      "types": {
-        "import": "./dist/esm/themes/default/index.d.ts",
-        "require": "./dist/cjs/themes/default/index.d.js"
-      },
+      "types": "./dist/types/themes/default/index.d.ts",
       "import": "./dist/esm/themes/default/index.mjs",
       "require": "./dist/cjs/themes/default/index.js"
     },
     "./plugins": {
-      "types": {
-        "import": "./dist/esm/plugins/index.d.ts",
-        "require": "./dist/cjs/plugins/index.d.js"
-      },
+      "types": "./dist/types/plugins/index.d.ts",
       "import": "./dist/esm/plugins/index.mjs",
       "require": "./dist/cjs/plugins/index.js"
     },
     "./plugins/toolboxTrashcan": {
-      "types": {
-        "import": "./dist/esm/plugins/toolboxTrashcan/index.d.ts",
-        "require": "./dist/cjs/plugins/toolboxTrashcan/index.d.js"
-      },
+      "types": "./dist/types/plugins/toolboxTrashcan/index.d.ts",
       "import": "./dist/esm/plugins/toolboxTrashcan/index.mjs",
       "require": "./dist/cjs/plugins/toolboxTrashcan/index.js"
     },
     "./plugins/sharableProcedures": {
-      "types": {
-        "import": "./dist/esm/plugins/sharableProcedures/index.d.ts",
-        "require": "./dist/cjs/plugins/sharableProcedures/index.d.js"
-      },
+      "types": "./dist/types/plugins/sharableProcedures/index.d.ts",
       "import": "./dist/esm/plugins/sharableProcedures/index.mjs",
       "require": "./dist/cjs/plugins/sharableProcedures/index.js"
     },
     "./plugins/blockLimits": {
-      "types": {
-        "import": "./dist/esm/plugins/blockLimits/index.d.ts",
-        "require": "./dist/cjs/plugins/blockLimits/index.d.js"
-      },
+      "types": "./dist/types/plugins/blockLimits/index.d.ts",
       "import": "./dist/esm/plugins/blockLimits/index.mjs",
       "require": "./dist/cjs/plugins/blockLimits/index.js"
     },
     "./plugins/inputs": {
-      "types": {
-        "import": "./dist/esm/plugins/inputs/index.d.ts",
-        "require": "./dist/cjs/plugins/inputs/index.d.js"
-      },
+      "types": "./dist/types/plugins/inputs/index.d.ts",
       "import": "./dist/esm/plugins/inputs/index.mjs",
       "require": "./dist/cjs/plugins/inputs/index.js"
     },
     "./plugins/inputs/rectangle": {
-      "types": {
-        "import": "./dist/esm/plugins/inputs/rectangle/index.d.ts",
-        "require": "./dist/cjs/plugins/inputs/rectangle/index.d.js"
-      },
+      "types": "./dist/types/plugins/inputs/rectangle/index.d.ts",
       "import": "./dist/esm/plugins/inputs/rectangle/index.mjs",
       "require": "./dist/cjs/plugins/inputs/rectangle/index.js"
     },
     "./plugins/inputs/round": {
-      "types": {
-        "import": "./dist/esm/plugins/inputs/round/index.d.ts",
-        "require": "./dist/cjs/plugins/inputs/round/index.d.js"
-      },
+      "types": "./dist/types/plugins/inputs/round/index.d.ts",
       "import": "./dist/esm/plugins/inputs/round/index.mjs",
       "require": "./dist/cjs/plugins/inputs/round/index.js"
     },
     "./plugins/inputs/triangle": {
-      "types": {
-        "import": "./dist/esm/plugins/inputs/triangle/index.d.ts",
-        "require": "./dist/cjs/plugins/inputs/triangle/index.d.js"
-      },
+      "types": "./dist/types/plugins/inputs/triangle/index.d.ts",
       "import": "./dist/esm/plugins/inputs/triangle/index.mjs",
       "require": "./dist/cjs/plugins/inputs/triangle/index.js"
     },
     "./plugins/fields/fieldButton": {
-      "types": {
-        "import": "./dist/esm/plugins/fields/fieldButton/index.d.ts",
-        "require": "./dist/cjs/plugins/fields/fieldButton/index.d.js"
-      },
+      "types": "./dist/types/plugins/fields/fieldButton/index.d.ts",
       "import": "./dist/esm/plugins/fields/fieldButton/index.mjs",
       "require": "./dist/cjs/plugins/fields/fieldButton/index.js"
     },
     "./plugins/fields/fieldColour": {
-      "types": {
-        "import": "./dist/esm/plugins/fields/fieldColour/index.d.ts",
-        "require": "./dist/cjs/plugins/fields/fieldColour/index.d.js"
-      },
+      "types": "./dist/types/plugins/fields/fieldColour/index.d.ts",
       "import": "./dist/esm/plugins/fields/fieldColour/index.mjs",
       "require": "./dist/cjs/plugins/fields/fieldColour/index.js"
     }

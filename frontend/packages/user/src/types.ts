@@ -1,3 +1,9 @@
+export enum OAuthSectionType {
+  GoogleClassroom = 'google_classroom',
+  Clever = 'clever',
+  MicrosoftClassroom = 'microsoft_classroom',
+}
+
 export enum SignInState {
   Unknown = 'Unknown',
   SignedIn = 'SignedIn',

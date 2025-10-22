@@ -2,7 +2,6 @@ import {
   AUTHENTICITY_TOKEN_HEADER,
   getAuthenticityToken,
 } from './authenticityTokenStore';
-
 import type {GetResponse, ResponseValidator} from './types';
 
 // Narrow the type of an error to NetworkError

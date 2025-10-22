@@ -16,6 +16,7 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "sideEffects": false,
+  "types": "./dist/types/index.d.ts",
   "main": "src/index.ts",
   "files": [
     "dist"

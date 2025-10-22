@@ -25,170 +25,112 @@
   "exports": {
     "./package.json": "./package.json",
     "./activitySections": {
-      "types": {
-        "import": "./dist/esm/activitySections/index.d.ts",
-        "require": "./dist/cjs/activitySections/index.d.js"
-      },
+      "types": "./dist/types/activitySections/index.d.ts",
       "import": "./dist/esm/activitySections/index.mjs",
       "require": "./dist/cjs/activitySections/index.js"
     },
     "./learningGoalEvidenceLevels": {
-      "types": {
-        "import": "./dist/esm/learningGoalEvidenceLevels/index.d.ts",
-        "require": "./dist/cjs/learningGoalEvidenceLevels/index.d.js"
-      },
+      "types": "./dist/types/learningGoalEvidenceLevels/index.d.ts",
       "import": "./dist/esm/learningGoalEvidenceLevels/index.mjs",
       "require": "./dist/cjs/learningGoalEvidenceLevels/index.js"
     },
     "./learningGoals": {
-      "types": {
-        "import": "./dist/esm/learningGoals/index.d.ts",
-        "require": "./dist/cjs/learningGoals/index.d.js"
-      },
+      "types": "./dist/types/learningGoals/index.d.ts",
       "import": "./dist/esm/learningGoals/index.mjs",
       "require": "./dist/cjs/learningGoals/index.js"
     },
     "./lessonActivities": {
-      "types": {
-        "import": "./dist/esm/lessonActivities/index.d.ts",
-        "require": "./dist/cjs/lessonActivities/index.d.js"
-      },
+      "types": "./dist/types/lessonActivities/index.d.ts",
       "import": "./dist/esm/lessonActivities/index.mjs",
       "require": "./dist/cjs/lessonActivities/index.js"
     },
     "./lessonGroups": {
-      "types": {
-        "import": "./dist/esm/lessonGroups/index.d.ts",
-        "require": "./dist/cjs/lessonGroups/index.d.js"
-      },
+      "types": "./dist/types/lessonGroups/index.d.ts",
       "import": "./dist/esm/lessonGroups/index.mjs",
       "require": "./dist/cjs/lessonGroups/index.js"
     },
     "./lessonLevels": {
-      "types": {
-        "import": "./dist/esm/lessonLevels/index.d.ts",
-        "require": "./dist/cjs/lessonLevels/index.d.js"
-      },
+      "types": "./dist/types/lessonLevels/index.d.ts",
       "import": "./dist/esm/lessonLevels/index.mjs",
       "require": "./dist/cjs/lessonLevels/index.js"
     },
     "./lessons": {
-      "types": {
-        "import": "./dist/esm/lessons/index.d.ts",
-        "require": "./dist/cjs/lessons/index.d.js"
-      },
+      "types": "./dist/types/lessons/index.d.ts",
       "import": "./dist/esm/lessons/index.mjs",
       "require": "./dist/cjs/lessons/index.js"
     },
     "./lessonsOpportunityStandards": {
-      "types": {
-        "import": "./dist/esm/lessonsOpportunityStandards/index.d.ts",
-        "require": "./dist/cjs/lessonsOpportunityStandards/index.d.js"
-      },
+      "types": "./dist/types/lessonsOpportunityStandards/index.d.ts",
       "import": "./dist/esm/lessonsOpportunityStandards/index.mjs",
       "require": "./dist/cjs/lessonsOpportunityStandards/index.js"
     },
     "./lessonsProgrammingExpressions": {
-      "types": {
-        "import": "./dist/esm/lessonsProgrammingExpressions/index.d.ts",
-        "require": "./dist/cjs/lessonsProgrammingExpressions/index.d.js"
-      },
+      "types": "./dist/types/lessonsProgrammingExpressions/index.d.ts",
       "import": "./dist/esm/lessonsProgrammingExpressions/index.mjs",
       "require": "./dist/cjs/lessonsProgrammingExpressions/index.js"
     },
     "./lessonsResources": {
-      "types": {
-        "import": "./dist/esm/lessonsResources/index.d.ts",
-        "require": "./dist/cjs/lessonsResources/index.d.js"
-      },
+      "types": "./dist/types/lessonsResources/index.d.ts",
       "import": "./dist/esm/lessonsResources/index.mjs",
       "require": "./dist/cjs/lessonsResources/index.js"
     },
     "./lessonsStandards": {
-      "types": {
-        "import": "./dist/esm/lessonsStandards/index.d.ts",
-        "require": "./dist/cjs/lessonsStandards/index.d.js"
-      },
+      "types": "./dist/types/lessonsStandards/index.d.ts",
       "import": "./dist/esm/lessonsStandards/index.mjs",
       "require": "./dist/cjs/lessonsStandards/index.js"
     },
     "./lessonsVocabularies": {
-      "types": {
-        "import": "./dist/esm/lessonsVocabularies/index.d.ts",
-        "require": "./dist/cjs/lessonsVocabularies/index.d.js"
-      },
+      "types": "./dist/types/lessonsVocabularies/index.d.ts",
       "import": "./dist/esm/lessonsVocabularies/index.mjs",
       "require": "./dist/cjs/lessonsVocabularies/index.js"
     },
     "./levelScriptLevels": {
-      "types": {
-        "import": "./dist/esm/levelScriptLevels/index.d.ts",
-        "require": "./dist/cjs/levelScriptLevels/index.d.js"
-      },
+      "types": "./dist/types/levelScriptLevels/index.d.ts",
       "import": "./dist/esm/levelScriptLevels/index.mjs",
       "require": "./dist/cjs/levelScriptLevels/index.js"
     },
     "./levels": {
-      "types": {
-        "import": "./dist/esm/levels/index.d.ts",
-        "require": "./dist/cjs/levels/index.d.js"
-      },
+      "types": "./dist/types/levels/index.d.ts",
       "import": "./dist/esm/levels/index.mjs",
       "require": "./dist/cjs/levels/index.js"
     },
     "./objectives": {
-      "types": {
-        "import": "./dist/esm/objectives/index.d.ts",
-        "require": "./dist/cjs/objectives/index.d.js"
-      },
+      "types": "./dist/types/objectives/index.d.ts",
       "import": "./dist/esm/objectives/index.mjs",
       "require": "./dist/cjs/objectives/index.js"
     },
     "./resources": {
-      "types": {
-        "import": "./dist/esm/resources/index.d.ts",
-        "require": "./dist/cjs/resources/index.d.js"
-      },
+      "types": "./dist/types/resources/index.d.ts",
       "import": "./dist/esm/resources/index.mjs",
       "require": "./dist/cjs/resources/index.js"
     },
     "./rubrics": {
-      "types": {
-        "import": "./dist/esm/rubrics/index.d.ts",
-        "require": "./dist/cjs/rubrics/index.d.js"
-      },
+      "types": "./dist/types/rubrics/index.d.ts",
       "import": "./dist/esm/rubrics/index.mjs",
       "require": "./dist/cjs/rubrics/index.js"
     },
     "./scriptLevels": {
-      "types": {
-        "import": "./dist/esm/scriptLevels/index.d.ts",
-        "require": "./dist/cjs/scriptLevels/index.d.js"
-      },
+      "types": "./dist/types/scriptLevels/index.d.ts",
       "import": "./dist/esm/scriptLevels/index.mjs",
       "require": "./dist/cjs/scriptLevels/index.js"
     },
     "./scriptsResources": {
-      "types": {
-        "import": "./dist/esm/scriptsResources/index.d.ts",
-        "require": "./dist/cjs/scriptsResources/index.d.js"
-      },
+      "types": "./dist/types/scriptsResources/index.d.ts",
       "import": "./dist/esm/scriptsResources/index.mjs",
       "require": "./dist/cjs/scriptsResources/index.js"
     },
+    "./sections": {
+      "types": "./dist/types/sections/index.d.ts",
+      "import": "./dist/esm/sections/index.mjs",
+      "require": "./dist/cjs/sections/index.js"
+    },
     "./units": {
-      "types": {
-        "import": "./dist/esm/units/index.d.ts",
-        "require": "./dist/cjs/units/index.d.js"
-      },
+      "types": "./dist/types/units/index.d.ts",
       "import": "./dist/esm/units/index.mjs",
       "require": "./dist/cjs/units/index.js"
     },
     "./vocabularies": {
-      "types": {
-        "import": "./dist/esm/vocabularies/index.d.ts",
-        "require": "./dist/cjs/vocabularies/index.d.js"
-      },
+      "types": "./dist/types/vocabularies/index.d.ts",
       "import": "./dist/esm/vocabularies/index.mjs",
       "require": "./dist/cjs/vocabularies/index.js"
     }

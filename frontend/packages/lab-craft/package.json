@@ -26,18 +26,12 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": {
-        "import": "./dist/esm/index.d.ts",
-        "require": "./dist/cjs/index.d.js"
-      },
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
     "./parser": {
-      "types": {
-        "import": "./dist/esm/parser/index.d.ts",
-        "require": "./dist/cjs/parser/index.d.js"
-      },
+      "types": "./dist/types/parser/index.d.ts",
       "import": "./dist/esm/parser/index.mjs",
       "require": "./dist/cjs/parser/index.js"
     }
