@@ -119,26 +119,23 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
     const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
-    const right = showAiTutor
-      ? this.state.aiChatOpen
-        ? chatContainerSpace
-        : sidebarSpace
-      : 0;
+    const tutorSpace = this.state.aiChatOpen
+      ? chatContainerSpace
+      : sidebarSpace;
+
+    if (showAiTutor) {
+      instructionsStyle.right = tutorSpace;
+      workspaceStyle.right = tutorSpace;
+    }
 
     return (
       <span>
-        <TopInstructions
-          mainStyle={{
-            ...instructionsStyle,
-            right,
-          }}
-        />
+        <TopInstructions mainStyle={instructionsStyle} />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
           style={{
             ...workspaceStyle,
             top: instructionsHeight,
-            right,
           }}
         >
           {children}
