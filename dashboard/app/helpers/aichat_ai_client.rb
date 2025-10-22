@@ -110,7 +110,6 @@ class AichatAiClient
   # Get message text, including any hidden and/or message context
   private def get_message_text(message)
     text = message['chatMessageText']
-    text = text + "\n" + message['messageContext'] if message['messageContext']
     text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
     text
   end
