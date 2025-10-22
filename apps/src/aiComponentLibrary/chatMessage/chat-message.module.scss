@@ -20,6 +20,14 @@ $icon-overlay-padding-right: 8px;
   border-start-end-radius: $message-border-radius;
 }
 
+// Prevent code blocks from overflowing their container
+@mixin wrap-code {
+  code {
+    word-break: break-word;
+    white-space: unset;
+  }
+}
+
 %markdown-styles {
   h1 {
     @include heading-xxl;
@@ -64,6 +72,8 @@ $icon-overlay-padding-right: 8px;
   border-end-start-radius: $message-border-radius;
   border-end-end-radius: 0;
   word-break: break-word;
+
+  @include wrap-code;
 }
 
 .message-assistant {
@@ -73,6 +83,8 @@ $icon-overlay-padding-right: 8px;
   border-end-end-radius: $message-border-radius;
   overflow-x: auto;
   word-break: break-word;
+
+  @include wrap-code;
 }
 
 %message-container {
