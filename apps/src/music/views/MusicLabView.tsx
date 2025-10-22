@@ -382,6 +382,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               hideContinueIfDisabled={true}
               hideNavigation={false}
               styleNavigationAsBubble={true}
+              documentationUrl={'/docs/ide/music'}
             />
           </div>
         )}
