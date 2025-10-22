@@ -51,61 +51,46 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
       target = '_blank',
     }) => {
       const handleClick = useCallback(
-        (
-          e:
-            | React.MouseEvent<HTMLButtonElement, MouseEvent>
-            | React.MouseEvent<HTMLAnchorElement, MouseEvent>
-        ) => {
-          if (!onClick) return;
-          onClick();
+        (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+          onClick?.();
           // Adding this to prevent focus from jumping to the next button
           // and showing its tooltip when a button is disabled after click.
           // This moves focus to the container div instead.
           setTimeout(() => {
-            if (containerRef?.current) {
-              containerRef.current.focus();
-            }
+            containerRef?.current?.focus();
           }, 0);
         },
         [onClick, containerRef]
       );
+
+      // Common props shared between Button and LinkButton.
+      const commonButtonProps = {
+        id: `${id}-button`,
+        ariaLabel: label,
+        type,
+        color,
+        size: buttonSize,
+        isIconOnly: true,
+        icon,
+        disabled,
+      };
+
+      const tooltipProps = {
+        tooltipId: `${id}-tooltip`,
+        text: label,
+        size: tooltipSize,
+        direction: tooltipDirection,
+        hideTail: hideTooltipTail,
+        className,
+        'data-theme': theme,
+      };
+
       return (
-        <WithTooltip
-          tooltipProps={{
-            tooltipId: `${id}-tooltip`,
-            text: label,
-            size: tooltipSize,
-            direction: tooltipDirection,
-            hideTail: hideTooltipTail,
-            className: className,
-            'data-theme': theme,
-          }}
-        >
+        <WithTooltip tooltipProps={tooltipProps}>
           {href ? (
-            <LinkButton
-              id={`${id}-button`}
-              ariaLabel={label}
-              href={href}
-              target={target}
-              type={type}
-              color={color}
-              size={buttonSize}
-              isIconOnly
-              icon={icon}
-              disabled={disabled}
-            />
+            <LinkButton {...commonButtonProps} href={href} target={target} />
           ) : (
-            <Button
-              id={`${id}-button`}
-              ariaLabel={label}
-              type={type}
-              color={color}
-              size={buttonSize}
-              isIconOnly
-              icon={icon}
-              disabled={disabled}
-              onClick={handleClick}
-            />
+            <Button {...commonButtonProps} onClick={handleClick} />
           )}
         </WithTooltip>
       );
