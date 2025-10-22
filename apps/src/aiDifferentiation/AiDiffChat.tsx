@@ -68,16 +68,8 @@ const getDefaultSuggestedPrompts = (
         ({label}) => {
           // Hide some new thread default prompts based on teacher's sections
           if (
-            label === GET_STARTED_PROMPT.label &&
-            teacherHasSections &&
-            teacherHasSectionWithCurriculum &&
-            teacherHasSectionWithStudents
-          ) {
-            return false;
-          }
-
-          if (
-            label === CREATE_SECTION_PROMPT.label &&
+            (label === GET_STARTED_PROMPT.label ||
+              label === CREATE_SECTION_PROMPT.label) &&
             teacherHasSections &&
             teacherHasSectionWithCurriculum &&
             teacherHasSectionWithStudents
