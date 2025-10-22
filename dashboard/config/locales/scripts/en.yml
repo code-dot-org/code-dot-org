@@ -410,6 +410,8 @@ en:
               name: Activity Guide Levelgroup
             lesson-57:
               name: Sketch Lab
+            lesson-58:
+              name: Unplugged
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -25256,10 +25258,12 @@ en:
           description: ''
           student_description: ''
         pl-sandbox-aif-sem-2-unit-1:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Introduction to WebApps
           lesson_groups: {}
           name: pl-sandbox-aif-sem-2-unit-1
-          title: ''
+          title: Teaching Introduction to WebApps Unit 1
           description_audience: ''
           description_short: ''
           description: ''
@@ -25741,3 +25745,25 @@ en:
             &nbsp;
           description_short: ''
           description_audience: ''
+        aif-all-the-things:
+          lessons:
+            lesson-1:
+              name: Web Lab 2 - Mode Exploration
+            lesson-2:
+              name: Sketch Lab - Wireframe Assets
+          lesson_groups: {}
+          name: aif-all-the-things
+          title: All the AIF Things!
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hour-of-ai-pilot-7:
+          lessons: {}
+          lesson_groups: {}
+          name: hour-of-ai-pilot-7
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
