@@ -104,7 +104,7 @@
     @include mixins.focus-styles(var(--borders-brand-teal-primary), -2px);
   }
 
-  // Remove the ::before and ::after pseudo-elements when sidebar is collapsed
+  // Styles applied when the sidebar is collapsed
   &.collapsed .tabButton.tabButton {
     background-color: var(--background-neutral-primary);
     transition: none;
@@ -130,6 +130,9 @@
     gap: 6px;
     padding: 8px 0;
 
+    // Adding this to remove extra space between elements
+    // from the empty div this creates in the DOM. This
+    // is added by the CopyrightDialog component.
     & > div[data-theme='Light'] {
       margin-bottom: -0.4rem;
     }
