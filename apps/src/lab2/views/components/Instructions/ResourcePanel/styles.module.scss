@@ -107,10 +107,10 @@
   // Remove the ::before and ::after pseudo-elements when sidebar is collapsed
   &.collapsed .tabButton.tabButton {
     background-color: var(--background-neutral-primary);
+    transition: none;
 
     &.selected {
       border-inline-end: variables.$default-border;
-      transition: none;
 
       i {
         color: var(--text-neutral-quaternary);
