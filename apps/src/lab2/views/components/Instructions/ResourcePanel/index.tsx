@@ -335,10 +335,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setIsFloatingSettingsOpen,
   ]);
 
-  const onClickDocumentation = useCallback(() => {
-    window.open(documentationUrl, '_blank');
-  }, [documentationUrl]);
-
   return (
     <>
       <div
@@ -454,7 +450,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 color="gray"
                 tooltipSize="xs"
                 tooltipDirection="onRight"
-                onClick={onClickDocumentation}
+                href={documentationUrl}
                 theme={theme}
               />
             )}
