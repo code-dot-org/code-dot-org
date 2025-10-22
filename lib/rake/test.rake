@@ -164,7 +164,7 @@ namespace :test do
           RakeUtils.rake_stream_output 'db:create db:test:prepare'
           ENV.delete 'TEST_ENV_NUMBER'
           # Store new DB contents
-          # `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
+          `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
           # gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
 
           # s3_client.put_object(
