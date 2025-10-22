@@ -31,7 +31,8 @@ class Policies::Lti
 
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
   TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
-                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor']
+                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
+                           'Teacher']
 ).freeze
   STAFF_ROLES = Set.new(
     [
@@ -52,6 +53,7 @@ class Policies::Lti
   LTI_NRPS_CLAIM = "https://purl.imsglobal.org/spec/lti-nrps/claim/namesroleservice".freeze
   LTI_PLATFORM_CONFIGURATION = "https://purl.imsglobal.org/spec/lti-platform-configuration".freeze
   CANVAS_ACCOUNT_NAME = "https://canvas.instructure.com/lti/account_name".freeze
+  CLASSLINK_ROLE_KEY = 'classLink_role'.freeze
 
   # Prioritized lists for looking up a user's name from custom LTI variable claims.
   TEACHER_NAME_KEYS = [:name, :display_name, :full_name, :family_name, :given_name].freeze
@@ -85,6 +87,14 @@ class Policies::Lti
       auth_redirect_url: 'https://lti-service.svc.schoology.com/lti-service/authorize-redirect'.freeze,
       jwks_url: 'https://lti-service.svc.schoology.com/lti-service/.well-known/jwks'.freeze,
       access_token_url: 'https://lti-service.svc.schoology.com/lti-service/access-token'.freeze,
+    },
+    # https://launchpad.classlink.com/.well-known/openid-configuration
+    classlink: {
+      name: 'ClassLink'.freeze,
+      issuer: "https://launchpad.classlink.com".freeze,
+      auth_redirect_url: "https://launchpad.classlink.com/oauth2/v2/auth".freeze,
+      jwks_url: "https://launchpad.classlink.com/oauth2/v2/jwks".freeze,
+      access_token_url: "https://launchpad.classlink.com/oauth2/v2/token".freeze,
     },
   }
 
@@ -133,6 +143,10 @@ class Policies::Lti
   MAX_COURSE_MEMBERSHIP = 650
 
   def self.get_account_type(roles)
+    # ClassLink includes a non-standard role as a string instead of an array of strings
+    if roles.is_a?(String)
+      return STAFF_ROLES.include?(roles) ? User::TYPE_TEACHER : User::TYPE_STUDENT
+    end
     roles.each do |role|
       return User::TYPE_TEACHER if STAFF_ROLES.include? role
     end

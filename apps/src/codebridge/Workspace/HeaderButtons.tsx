@@ -8,10 +8,7 @@ import React, {useCallback} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
-import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
-import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -20,26 +17,18 @@ import {currentLocation} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
-import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 
 import moduleStyles from './workspace.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
-  const {startSources, levelProperties, projectPickerSettings} =
-    useCodebridgeContext();
+  const {levelProperties, projectPickerSettings} = useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
-  const isWidgetView = levelProperties.widgetView;
-  const settings = useCodebridgeSettings();
+
   const dialogControl = useDialogControl();
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
-  // The resource panel includes settings.
-  const showSettingsAndVersionHistory = !isUsingResourcePanel(
-    appName,
-    levelProperties.isProjectLevel || false
-  );
 
   const documentationTooltipProps: TooltipProps = {
     text: commonI18n.documentation(),
@@ -95,7 +84,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           color={'black'}
         />
       )}
-      {showSettingsAndVersionHistory && <SettingsButton settings={settings} />}
       {enableMicroBit && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
@@ -105,9 +93,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           text={codebridgeI18n.sendToMicroBit()}
           color={'black'}
         />
-      )}
-      {!isWidgetView && showSettingsAndVersionHistory && (
-        <VersionHistoryButton startSources={startSources} appName={appName} />
       )}
       {/* For now, only python lab supports documentation */}
       {appName === 'pythonlab' && (
