@@ -18,10 +18,8 @@ $icon-overlay-padding-right: 8px;
   gap: 0.5rem;
   border-start-start-radius: $message-border-radius;
   border-start-end-radius: $message-border-radius;
-}
+  word-break: break-word;
 
-// Prevent code blocks from overflowing their container
-@mixin wrap-code {
   code {
     word-break: break-word;
     white-space: unset;
@@ -71,9 +69,6 @@ $icon-overlay-padding-right: 8px;
   background-color: var(--background-neutral-secondary);
   border-end-start-radius: $message-border-radius;
   border-end-end-radius: 0;
-  word-break: break-word;
-
-  @include wrap-code;
 }
 
 .message-assistant {
@@ -82,9 +77,6 @@ $icon-overlay-padding-right: 8px;
   border-end-start-radius: 0;
   border-end-end-radius: $message-border-radius;
   overflow-x: auto;
-  word-break: break-word;
-
-  @include wrap-code;
 }
 
 %message-container {
