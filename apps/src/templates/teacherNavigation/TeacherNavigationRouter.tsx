@@ -99,7 +99,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
 
   // TODO-AITUTOR: Ideally we want to check if the section has any units with Unit.has_ai_tutor_level?
   // but I'm not sure how to plumb that information through to here.
-  // for ai tutor2 pilot, I think we are OK with showing the tutor tab for any section for teachers in the pilot.
+  // for ai tutor pilot, I think we are OK with showing the tutor tab for any section for teachers in the pilot.
   const sectionHasAITutor = !!selectedSection;
 
   const showAITutorTab = React.useMemo(

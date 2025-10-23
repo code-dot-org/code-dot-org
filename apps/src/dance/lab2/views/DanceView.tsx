@@ -3,7 +3,14 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {BlocklyOptions, Events, WorkspaceSvg} from 'blockly/core';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/addons/cdoUtils';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
@@ -47,6 +54,7 @@ import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {
   getAppOptionsEditBlocks,
   getIsShareView,
@@ -54,6 +62,7 @@ import {
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
@@ -74,6 +83,7 @@ import danceI18n from '../locale';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
+import DanceValidator from './DanceValidator';
 import GenerateDancer from './GenerateDancer';
 
 import moduleStyles from './dance-view.module.scss';
@@ -117,11 +127,13 @@ const DanceView: React.FunctionComponent<{
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
   const [generatedAiDance, setGeneratedAiDance] = useState(false);
 
-  const aiGenerateMode =
-    levelProperties.aiCodeGenerate || queryParams('ai-generate') === 'true';
-  const usingMusicProject = queryParams('music-channel') || aiGenerateMode;
+  const guideMode = levelProperties.guideMode;
+  const usingMusicProject =
+    guideMode && ['aiCodeGenerate', 'instructions'].includes(guideMode);
 
   const {theme} = useTheme();
+
+  const progressManager = useContext(ProgressManagerContext);
 
   const metadataToUse: SongMetadata | undefined = useMemo(() => {
     if (!musicProjectPlayer.current || !loadedMusicProject) {
@@ -135,7 +147,7 @@ const DanceView: React.FunctionComponent<{
       delay: '0',
       duration: 0, // Unused
       file: '', // Unused
-      title: 'My A.I. Remix', // TODO: what should this be?
+      title: 'My AI Remix', // TODO: what should this be?
       peaks: {},
     };
   }, [currentSongMetadata, loadedMusicProject]);
@@ -234,11 +246,14 @@ const DanceView: React.FunctionComponent<{
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
     saveBlocks(true);
+
+    progressManager?.resetValidation();
   }, [
     hasRun,
     metadataToUse,
     dispatch,
     saveBlocks,
+    progressManager,
     levelProperties.isProjectLevel,
     levelProperties.id,
     levelProperties.name,
@@ -257,8 +272,15 @@ const DanceView: React.FunctionComponent<{
       resetProgram();
       // TODO: Handle puzzle complete.
       console.log(`onPuzzleComplete! pass?: ${result} message: ${message}`);
+      if (result) {
+        danceValidator.current.setCurrentCondition({name: 'pass'});
+      } else {
+        danceValidator.current.setCurrentCondition({name: message});
+      }
+
+      progressManager?.updateProgress();
     },
-    [resetProgram]
+    [progressManager, resetProgram]
   );
 
   const onEventsChanged = () => {
@@ -274,14 +296,6 @@ const DanceView: React.FunctionComponent<{
         e.type === Blockly.Events.BLOCK_MOVE
       ) {
         validateBlockCategories(workspace.current);
-      }
-
-      if (e.type === Events.FINISHED_LOADING) {
-        // Ensure all blocks have valid, non-overlapping positions on the workspace.
-        Blockly.Events.disable();
-        workspace.current?.cleanUp();
-        Blockly.Events.enable();
-        return;
       }
 
       if (e.type !== Events.BLOCK_DRAG && e.type !== Events.BLOCK_CHANGE) {
@@ -347,14 +361,14 @@ const DanceView: React.FunctionComponent<{
       : levelProperties.toolboxDefinition;
 
     workspace.current = Blockly.inject(blocklyDiv, {
-      toolbox: aiGenerateMode ? undefined : toolbox,
+      toolbox,
       theme: theme === 'Dark' ? cdoDark : cdoTheme,
       readOnly: readonlyWorkspace,
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyOptions);
 
     return () => workspace.current?.dispose();
-  }, [dispatch, readonlyWorkspace, levelProperties, aiGenerateMode, theme]);
+  }, [dispatch, readonlyWorkspace, levelProperties, theme]);
 
   useEffect(() => {
     if (!workspace.current) {
@@ -405,17 +419,21 @@ const DanceView: React.FunctionComponent<{
   useEffect(() => {
     if (usingMusicProject) {
       musicProjectPlayer.current = new ProjectPlayer();
+
+      // Use the default music if the level specifies.
+      // Otherwise use the specific channel if provided.
+      // Otherwise just pass a dummy string as we expect to find a music
+      // project in local storage.
+      const channelId =
+        guideMode === 'instructions'
+          ? 'default-music'
+          : (queryParams('music-channel') as string) || 'local-storage';
+
       musicProjectPlayer.current
-        .loadProject(
-          // Use the specific channel if provided. Otherwise
-          // just pass a dummy string as we expect to find a music
-          // project in local storage.
-          (queryParams('music-channel') as string) || 'local-storage',
-          aiGenerateMode
-        )
+        .loadProject(channelId, guideMode === 'aiCodeGenerate')
         .then(() => setLoadedMusicProject(true));
     }
-  }, [usingMusicProject, aiGenerateMode]);
+  }, [usingMusicProject, guideMode]);
 
   // Set up the ProgramExecutor
   useEffect(() => {
@@ -491,12 +509,22 @@ const DanceView: React.FunctionComponent<{
     usingMusicProject,
   ]);
 
+  // Create dance validator.
+  const danceValidator = useRef(new DanceValidator());
+
+  // Pass dance validator to Progress Manager.
+  useEffect(() => {
+    if (guideMode === 'instructions' && progressManager) {
+      progressManager.setValidator(danceValidator.current);
+    }
+  }, [progressManager, levelProperties.appName, guideMode]);
+
   const settings = useBlocklySettings();
 
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
       {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
-      {!aiGenerateMode && (
+      {!guideMode && (
         <ResourcePanel
           isRunning={isRunning}
           hasRun={hasRun}
@@ -515,7 +543,7 @@ const DanceView: React.FunctionComponent<{
           headerClassName={moduleStyles.panelHeader}
           className={classNames(
             moduleStyles.visualizationArea,
-            aiGenerateMode && moduleStyles.jumbo
+            guideMode && moduleStyles.jumbo
           )}
           leftHeaderContent={
             <BackToParentProject
@@ -592,7 +620,16 @@ const DanceView: React.FunctionComponent<{
         {WorkspaceAlert}
         <div id={BLOCKLY_DIV_ID} />
       </PanelContainer>
-      {aiGenerateMode && (
+      {guideMode === 'instructions' && (
+        <GuideInstructions
+          isRunning={isRunning}
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+          levelProperties={levelProperties}
+          width="narrow"
+        />
+      )}
+      {guideMode === 'aiCodeGenerate' && (
         <Guide id="generate-panel" width="narrow">
           {
             <>
@@ -620,11 +657,9 @@ const DanceView: React.FunctionComponent<{
 
 export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
   <SourcesContainer {...props} defaultSources={defaultSources}>
-    {queryParams('ai-generate-dancer') === 'true' ||
-    props.levelProperties.generateDancerMode ? (
+    {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
       <GenerateDancer
         adlibOption={
-          (queryParams('ai-generate-adlib') as string) ||
           props.levelProperties.aiDancerGenerateAdlib ||
           'adjective-animal-attire'
         }

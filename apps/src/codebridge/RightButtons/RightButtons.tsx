@@ -8,13 +8,10 @@ import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
-import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
-import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 
 import moduleStyles from './right-buttons.module.scss';
 
@@ -35,7 +32,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   consoleManager,
 }) => {
   const {levelProperties} = useCodebridgeContext();
-  const {appName, isProjectLevel} = levelProperties;
+  const {appName} = levelProperties;
   const isWidgetView = levelProperties.widgetView;
   const widgetViewAllowShowCode = levelProperties.widgetViewAllowShowCode;
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
@@ -44,12 +41,6 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   const dispatch = useAppDispatch();
   const widgetViewShowCode = useAppSelector(
     state => state.codebridgeWorkspace.widgetViewShowCode
-  );
-  const settings = useCodebridgeSettings();
-
-  const usingResourcePanel = isUsingResourcePanel(
-    appName,
-    isProjectLevel || false
   );
 
   useEffect(() => {
@@ -101,9 +92,6 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
             color={'black'}
           />
         </WithTooltip>
-      )}
-      {isWidgetView && !widgetViewShowCode && !usingResourcePanel && (
-        <SettingsButton settings={settings} />
       )}
     </div>
   );

@@ -2,7 +2,8 @@ import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelp
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 
 interface AiTutorLegacyLabParams {
-  source: string | undefined;
+  sourceCode?: string;
+  longInstructions?: string;
 }
 
 export class AiTutorLegacyLabContextHelper extends AiTutorContextHelper<AiTutorLegacyLabParams> {
@@ -12,9 +13,10 @@ export class AiTutorLegacyLabContextHelper extends AiTutorContextHelper<AiTutorL
     return this.aiTutorContext;
   }
 
-  setAiTutorContext({source}: AiTutorLegacyLabParams) {
+  setAiTutorContext({sourceCode, longInstructions}: AiTutorLegacyLabParams) {
     this.aiTutorContext = {
-      sourceCode: source,
+      sourceCode,
+      longInstructions,
     };
   }
 }

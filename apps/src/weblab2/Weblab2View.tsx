@@ -6,17 +6,24 @@ import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import experiments from '@cdo/apps/util/experiments';
 
+import {ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {getPromptNameFromMode} from './helpers/aiTutorHelper';
+import {
+  acceptRejectJsonSchema,
+  formatExplanationResponse,
+  copyCodeJsonSchema,
+} from './helpers/aiTutorStructuredResponseHelper';
 import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -120,6 +127,42 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
+  const aiTutorResponseSchemaSettings: ResponseSchemaSettings | undefined =
+    useMemo(() => {
+      if (
+        experiments.isEnabledAllowingQueryString(
+          experiments.WEBLAB2_ACCEPT_REJECT
+        )
+      ) {
+        return {
+          jsonSchema: acceptRejectJsonSchema,
+          responseCallback: (response: string) => {
+            const jsonResponse = JSON.parse(response);
+            console.log('🤖: Tutor response (in jsonSchema callback):', {
+              jsonResponse,
+            });
+            // TODO: send code to the appropriate place
+            return jsonResponse.explanation;
+          },
+        };
+      } else if (
+        experiments.isEnabledAllowingQueryString(
+          experiments.WEBLAB2_STRUCTURED_OUTPUT
+        )
+      ) {
+        return {
+          jsonSchema: copyCodeJsonSchema,
+          responseCallback: (response: string) => {
+            const jsonResponse = JSON.parse(response);
+            console.log('🤖: Tutor response (in jsonSchema callback):', {
+              jsonResponse,
+            });
+            return formatExplanationResponse(jsonResponse.answer);
+          },
+        };
+      }
+    }, []);
+
   return (
     <div className={moduleStyles.weblab2Container}>
       {hasSource && (
@@ -135,6 +178,7 @@ const Weblab2View: React.FC<
           aiTutorSystemPromptName={getPromptNameFromMode(
             levelProperties.aiTutorMode
           )}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
       )}
     </div>

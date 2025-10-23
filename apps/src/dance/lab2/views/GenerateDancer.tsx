@@ -1,16 +1,16 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
-import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
+import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
@@ -19,89 +19,74 @@ import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-should
 import moduleStyles from './generate-dancer.module.scss';
 
 const adlibs: AdlibsType = {
-  basic: {
-    template:
-      'Please generate a dancer.  It should look like a {animal} with {appearance}.',
-    options: {
-      animal: ['frog', 'moose'],
-      appearance: ['hair', 'glasses'],
-    },
-    variantCount: 2,
-  },
   'animal-02': {
-    template: 'Please generate a dancer.  It should look like a {animal}.',
+    template: 'Please generate a dancer.  It should look like {animal}.',
     options: {
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
     },
     variantCount: 5,
   },
   'animal-attire-02': {
     template:
-      'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
+      'Please generate a dancer.  It should look like {animal} wearing {attire}.',
     options: {
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
-      attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
+      attire: [
+        {id: 'headscarf', text: 'a headscarf'},
+        {id: 'sunglasses', text: 'sunglasses'},
+        {id: 'headphones', text: 'headphones'},
+        {id: 'crown', text: 'a crown'},
+        {id: 'beanie', text: 'a beanie'},
+      ],
     },
     variantCount: 5,
   },
   'adjective-animal-attire-02': {
     template:
-      'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
+      'Please generate a dancer.  It should look like {animal} with {adjective} style, wearing {attire}.',
     options: {
-      adjective: ['basic', 'emo', 'sporty', 'streetwear', 'fancy', 'preppy'],
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
-      attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
+      adjective: [
+        {id: 'basic', text: 'a basic'},
+        {id: 'emo', text: 'an emo'},
+        {id: 'sporty', text: 'a sporty'},
+        {id: 'streetwear', text: 'a streetwear'},
+        {id: 'fancy', text: 'a fancy'},
+        {id: 'preppy', text: 'a preppy'},
+      ],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
+      attire: [
+        {id: 'headscarf', text: 'a headscarf'},
+        {id: 'sunglasses', text: 'sunglasses'},
+        {id: 'headphones', text: 'headphones'},
+        {id: 'crown', text: 'a crown'},
+        {id: 'beanie', text: 'a beanie'},
+      ],
     },
     variantCount: 5,
-  },
-  // Earlier adlibs which will be removed soon:
-  animal: {
-    template: 'Please generate a dancer.  It should look like a {animal}.',
-    options: {
-      animal: ['frog', 'moose', 'wolf'],
-    },
-    variantCount: 3,
-  },
-  'animal-attire': {
-    template:
-      'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
-    options: {
-      animal: ['frog', 'moose', 'wolf'],
-      attire: [
-        'headphones',
-        'sunglasses',
-        'crown',
-        'headscarf',
-        'baseball-cap',
-        'beanie',
-        'headband',
-      ],
-    },
-    variantCount: 3,
-  },
-  'adjective-animal-attire': {
-    template:
-      'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
-    options: {
-      adjective: ['basic', 'goth'],
-      animal: ['frog', 'moose', 'wolf'],
-      attire: [
-        'headphones',
-        'sunglasses',
-        'crown',
-        'headscarf',
-        'baseball-cap',
-        'beanie',
-        'headband',
-      ],
-    },
-    variantCount: 3,
   },
 };
 
 interface DancerGenerateProps {
   adlibOption: string;
-  levelProperties: LevelProperties;
+  levelProperties: DanceLevelProperties;
 }
 
 // This UI takes over the entire lab area and allows the user to generate a dancer using
@@ -110,6 +95,7 @@ interface DancerGenerateProps {
 // storage.
 const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   adlibOption,
+  levelProperties,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -119,20 +105,20 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setTheme('Dark');
   }, [setTheme]);
 
-  const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
+  const [promptText, setPromptText] = useState<string>('');
   const [choices, setChoices] = useState<string[] | undefined>(undefined);
   const variantHistory = useRef<number[]>([]);
 
   const [aiGenerateState, setAiGenerateState] = useState<
-    'none' | 'generating' | 'done'
+    'none' | 'generating' | 'reviewing' | 'done'
   >('none');
-
-  const [headImageUrl, setHeadImageUrl] = useState<string | undefined>(
-    undefined
+  const [dancerMetadata, setDancerMetadata] = useState<string | null>(
+    localStorage.getItem('dancer-ai-generate')
   );
 
-  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('none');
+    setPromptText('');
     variantHistory.current = [];
   });
 
@@ -151,15 +137,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     }
     variantHistory.current = newVariantsHistory;
 
-    const {head} = getGeneratedDancerAssets(adlibOption, choices, variant);
-
-    setHeadImageUrl(head);
-
-    trySetLocalStorage(
-      'dancer-ai-generate',
-      JSON.stringify({adlibOption, choices, variant})
-    );
-
+    const newDancerMetadata = JSON.stringify({adlibOption, choices, variant});
+    trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
+    setDancerMetadata(newDancerMetadata);
     const elapsedTime = Date.now() - startTime;
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
@@ -169,61 +149,121 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
     await generateDancerCache();
-    setAiGenerateState('done');
+    setAiGenerateState('reviewing');
   }, [generateDancerCache]);
+
+  const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
+
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
+  useEffect(() => {
+    if (!containerRef.current) {
+      return;
+    }
+    const resizeObserver = new ResizeObserver(() => {
+      setContainerHeight(containerRef.current?.clientHeight ?? 0);
+    });
+    resizeObserver.observe(containerRef.current);
+    setContainerHeight(containerRef.current.clientHeight ?? 0);
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
-      <Guide id="generate-panel">
-        <Heading5 className={moduleStyles.heading}> Use AI</Heading5>
-        {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
-          <div className={moduleStyles.textArea}>{adlibText}</div>
+      <Guide id="generate-panel" glowSpeed={glowSpeed}>
+        {(aiGenerateState === 'generating' ||
+          aiGenerateState === 'reviewing') && (
+          <div className={moduleStyles.textArea}>{promptText}</div>
         )}
         {aiGenerateState === 'none' && (
           <>
-            <Adlib
-              adlib={adlibs[adlibOption]}
-              onChange={(adlibText, choices) => {
-                setAdlibText(adlibText);
-                setChoices(choices);
-                variantHistory.current = [];
-              }}
-              className={moduleStyles.textArea}
-            />
-            <Button
-              ariaLabel={'Generate dancer'}
-              text={'Generate dancer'}
-              type="primary"
-              color="black"
-              size="s"
-              iconLeft={{iconName: 'sparkles'}}
-              onClick={generateDancer}
-            />
+            {levelProperties.aiDancerGenerateText && (
+              <>
+                <div>Describe the dancer you'd like AI to create.</div>
+                <textarea
+                  id="generate-description"
+                  onChange={evt => {
+                    setPromptText(evt.target.value);
+                  }}
+                  value={promptText}
+                  rows={4}
+                  className={moduleStyles.textArea}
+                />
+                <Button
+                  ariaLabel={'Continue'}
+                  text={'Continue'}
+                  type="primary"
+                  color="black"
+                  size="s"
+                  iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+                  onClick={() => {
+                    dispatch(continueOrFinishLesson());
+                    analyticsReporter.sendEvent('hoai2025-dancer-prompt', {
+                      promptText,
+                    });
+                  }}
+                />
+              </>
+            )}
+            {!levelProperties.aiDancerGenerateText && (
+              <>
+                <Adlib
+                  adlib={adlibs[adlibOption]}
+                  onChange={(promptText, choices) => {
+                    setPromptText(promptText);
+                    setChoices(choices);
+                    variantHistory.current = [];
+                  }}
+                  className={moduleStyles.textArea}
+                />
+                <Button
+                  ariaLabel={'Generate dancer'}
+                  text={'Generate dancer'}
+                  type="primary"
+                  color="black"
+                  size="s"
+                  iconLeft={{iconName: 'sparkles'}}
+                  onClick={generateDancer}
+                />
+              </>
+            )}
           </>
         )}
+
         {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
+
+        {aiGenerateState === 'reviewing' && (
+          <>
+            <div>Here is the dancer that was generated. Do you like it?</div>
+
+            <div className={moduleStyles.buttonRow}>
+              <Button
+                ariaLabel={"No. Let's try again."}
+                text={"No. Let's try again."}
+                type="primary"
+                color="black"
+                size="s"
+                onClick={() => setAiGenerateState('none')}
+              />
+
+              <Button
+                ariaLabel={"Yes. Let's continue."}
+                text={"Yes. Let's continue."}
+                type="primary"
+                color="black"
+                size="s"
+                onClick={() => setAiGenerateState('done')}
+              />
+            </div>
+          </>
+        )}
+
         {aiGenerateState === 'done' && (
           <>
-            <div>Here is the dancer that was generated.</div>
-
-            <Button
-              ariaLabel={'Generate again'}
-              text={'Generate again'}
-              type="primary"
-              color="black"
-              size="s"
-              iconLeft={{iconName: 'sparkles'}}
-              onClick={generateDancer}
-            />
-
-            <Button
-              ariaLabel={'Adjust prompt'}
-              text={'Adjust prompt'}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => setAiGenerateState('none')}
-            />
+            <div>Great! Let's continue.</div>
 
             <Button
               ariaLabel={'Continue'}
@@ -236,6 +276,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             />
           </>
         )}
+
         <BackToParentProject
           text="Go to Hub"
           iconLeft={{iconName: 'home'}}
@@ -243,14 +284,16 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           size="s"
         />
       </Guide>
-
-      <div className={moduleStyles.dancerContainer}>
-        <img
-          alt=""
-          src={
-            aiGenerateState === 'done' ? headImageUrl : dancerEmptyHeadShoulders
-          }
-        />
+      <div className={moduleStyles.dancerContainer} ref={containerRef}>
+        <div>
+          {showPlaceholder && <img alt="" src={dancerEmptyHeadShoulders} />}
+          <DancerCanvas
+            key={dancerMetadata || 'none'}
+            size={containerHeight}
+            move="rest"
+            onLoadingChange={setIsPreviewLoading}
+          />
+        </div>
       </div>
     </div>
   );

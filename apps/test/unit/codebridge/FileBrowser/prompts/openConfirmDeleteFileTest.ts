@@ -27,7 +27,7 @@ const getCleaupValidationMock = (): [{called: boolean}, () => void] => {
 
 describe('openConfirmDeleteFile', function () {
   it('can successfully delete a file', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '4';
 
     const [deleteFileData, deleteFileDataMock] = getDeleteFileMock();
@@ -38,7 +38,7 @@ describe('openConfirmDeleteFile', function () {
       file: testProject.files[fileId],
       dialogControl: getDialogAlertMock('confirm'),
       deleteFile: deleteFileDataMock,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       cleanupValidationFile,
     });
 
@@ -49,7 +49,7 @@ describe('openConfirmDeleteFile', function () {
   });
 
   it('can successfully delete a validation file', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '7';
 
     const [deleteFileData, deleteFileDataMock] = getDeleteFileMock();
@@ -60,7 +60,7 @@ describe('openConfirmDeleteFile', function () {
       file: testProject.files[fileId],
       dialogControl: getDialogAlertMock('confirm'),
       deleteFile: deleteFileDataMock,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       cleanupValidationFile,
     });
 
@@ -71,7 +71,7 @@ describe('openConfirmDeleteFile', function () {
   });
 
   it('can cancel deleting a file', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '1';
 
     const [deleteFileData, deleteFileDataMock] = getDeleteFileMock();
@@ -82,7 +82,7 @@ describe('openConfirmDeleteFile', function () {
       file: testProject.files[fileId],
       dialogControl: getDialogAlertMock('cancel'),
       deleteFile: deleteFileDataMock,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       cleanupValidationFile,
     });
 

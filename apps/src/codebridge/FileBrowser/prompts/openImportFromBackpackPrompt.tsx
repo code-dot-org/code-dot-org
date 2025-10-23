@@ -7,7 +7,6 @@ import {
   getFileNameWithNumberSuffix,
   isDuplicateFileName,
   DuplicateFileError,
-  sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import React from 'react';
 
@@ -15,6 +14,7 @@ import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErr
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
   DialogType,
   DialogControlInterface,
@@ -65,7 +65,7 @@ export const openImportFromBackpackPrompt = async ({
           codebridgeI18n.closeWindowTryAgain(),
         'Backpack file delete error'
       ),
-      () => sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FROM_BACKPACK)
+      () => sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FROM_BACKPACK)
     );
   };
 
@@ -95,7 +95,7 @@ export const openImportFromBackpackPrompt = async ({
           );
           if (fileId) saveFile(fileId, fileContent);
         }
-        sendCodebridgeAnalyticsEvent(successMetric);
+        sendLab2AnalyticsEvent(successMetric);
       }
     );
   };

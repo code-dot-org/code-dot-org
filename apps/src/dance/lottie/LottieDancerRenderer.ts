@@ -142,10 +142,6 @@ export default class LottieDancerRenderer {
     this.anim.goToAndStop(frame, true);
   }
 
-  getTotalFrames(): number | null {
-    return this.totalFrames;
-  }
-
   resize(): void {
     if (!this.anim) return;
     // DanceParty's GeneratedDancer may recreate the graphics; update renderer references.

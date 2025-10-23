@@ -3,8 +3,10 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
-import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
+import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
+import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {
@@ -20,22 +22,46 @@ import styles from './AiTutorContainer.module.scss';
 
 const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
+interface Level {
+  longInstructions?: string;
+}
+
+interface CommonLab {
+  getCode?: () => Promise<string | undefined>;
+  channel?: string;
+  level?: Level;
+}
+
 export const AiTutorContainer: FC<{
   toggleAiChat: () => void;
   aiChatOpen: boolean;
-  inLevel: boolean;
-}> = ({toggleAiChat, aiChatOpen, inLevel}) => {
+}> = ({toggleAiChat, aiChatOpen}) => {
+  const labState = useAppSelector(
+    (state: {pageConstants: LegacyLabsState}) => state.pageConstants
+  );
+
+  const inLevel = !!labState.serverScriptId;
   const allPrompts = inLevel
     ? [...levelPrompts, ...defaultPrompts]
     : [...standaloneProjectPrompts, ...defaultPrompts];
 
-  const {config} = studioApp();
+  const lab: CommonLab | undefined =
+    labState.appType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
 
   const getHiddenContext = async () => {
-    const code = config?.getCode();
-    aiTutorHelper.setAiTutorContext({source: code});
+    const sourceCode = await lab?.getCode?.();
+    const longInstructions = lab?.level?.longInstructions;
+    aiTutorHelper.setAiTutorContext({sourceCode, longInstructions});
     const callback = aiTutorHelper.getHiddenContextCallback();
     return callback();
+  };
+
+  const analyticsData = {
+    labType: labState.appType,
+    channelId: labState.channelId,
+    location: window.location.href,
+    levelId: labState.serverLevelId,
+    unitId: labState.serverScriptId,
   };
 
   return (
@@ -64,10 +90,10 @@ export const AiTutorContainer: FC<{
             color="black"
           />
         </div>
-        <AiTutor2Chat
+        <AiTutorChat
           hiddenContextCallback={getHiddenContext}
           aiTutorChatButtonData={allPrompts}
-          channelId={config?.channel}
+          channelId={lab?.channel}
         />
       </div>
       {!aiChatOpen && (
@@ -75,6 +101,7 @@ export const AiTutorContainer: FC<{
           toggleAiChat={toggleAiChat}
           suggestedPrompts={allPrompts}
           hiddenContextCallback={getHiddenContext}
+          analyticsData={analyticsData}
         />
       )}
     </>
