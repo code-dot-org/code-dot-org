@@ -1,0 +1,407 @@
+{
+  "script": {
+    "name": "aif-all-the-things",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-10-22 16:16:33 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "aif-all-the-things"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Web Lab 2 - Mode Exploration",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Sketch Lab Resources",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "bdea151e-2c22-459b-bea3-873423249f8f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bdea151e-2c22-459b-bea3-873423249f8f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "60063706-f99d-4c32-9f0e-c26f6e79d635",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "60063706-f99d-4c32-9f0e-c26f6e79d635",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "8d5a0792-03d2-4088-a54e-1d73d4fa31ce",
+      "position": 1,
+      "properties": {
+        "progression_name": "Mode: Suggest"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d5a0792-03d2-4088-a54e-1d73d4fa31ce",
+        "lesson_activity.key": "bdea151e-2c22-459b-bea3-873423249f8f"
+      }
+    },
+    {
+      "key": "4442cc68-11c5-4f11-9050-af328a4be3d1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Mode: Outline"
+      },
+      "seeding_key": {
+        "activity_section.key": "4442cc68-11c5-4f11-9050-af328a4be3d1",
+        "lesson_activity.key": "bdea151e-2c22-459b-bea3-873423249f8f"
+      }
+    },
+    {
+      "key": "51a0a16c-a5ba-4c2e-b91f-15d902fd83df",
+      "position": 3,
+      "properties": {
+        "progression_name": "Mode: Guide"
+      },
+      "seeding_key": {
+        "activity_section.key": "51a0a16c-a5ba-4c2e-b91f-15d902fd83df",
+        "lesson_activity.key": "bdea151e-2c22-459b-bea3-873423249f8f"
+      }
+    },
+    {
+      "key": "b48a2b64-9fd9-49a0-baaf-0c8320f1f0af",
+      "position": 4,
+      "properties": {
+        "progression_name": "Mode: Produce"
+      },
+      "seeding_key": {
+        "activity_section.key": "b48a2b64-9fd9-49a0-baaf-0c8320f1f0af",
+        "lesson_activity.key": "bdea151e-2c22-459b-bea3-873423249f8f"
+      }
+    },
+    {
+      "key": "30171db6-56b1-4228-9fd1-4ad1fab336e3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Wireframe Assets"
+      },
+      "seeding_key": {
+        "activity_section.key": "30171db6-56b1-4228-9fd1-4ad1fab336e3",
+        "lesson_activity.key": "60063706-f99d-4c32-9f0e-c26f6e79d635"
+      }
+    },
+    {
+      "key": "b0a81abb-8ec9-4204-bbe8-ffa8ef9182fe",
+      "position": 2,
+      "properties": {
+        "progression_name": "Flowchart Assets"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0a81abb-8ec9-4204-bbe8-ffa8ef9182fe",
+        "lesson_activity.key": "60063706-f99d-4c32-9f0e-c26f6e79d635"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mode: Suggest"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-suggest"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "8d5a0792-03d2-4088-a54e-1d73d4fa31ce"
+      },
+      "level_keys": [
+        "all-the-aif-things-web-lab-tutor-mode-suggest"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mode: Outline"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-outline"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "4442cc68-11c5-4f11-9050-af328a4be3d1"
+      },
+      "level_keys": [
+        "all-the-aif-things-web-lab-tutor-mode-outline"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mode: Guide"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-guide"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "51a0a16c-a5ba-4c2e-b91f-15d902fd83df"
+      },
+      "level_keys": [
+        "all-the-aif-things-web-lab-tutor-mode-guide"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mode: Produce"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-produce"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "b48a2b64-9fd9-49a0-baaf-0c8320f1f0af"
+      },
+      "level_keys": [
+        "all-the-aif-things-web-lab-tutor-mode-produce"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wireframe Assets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-sketch-lab-wireframe-assets"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "30171db6-56b1-4228-9fd1-4ad1fab336e3"
+      },
+      "level_keys": [
+        "all-the-aif-things-sketch-lab-wireframe-assets"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Flowchart Assets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-sketch-lab-flowchart-assets"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "b0a81abb-8ec9-4204-bbe8-ffa8ef9182fe"
+      },
+      "level_keys": [
+        "all-the-aif-things-sketch-lab-flowchart-assets"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-web-lab-tutor-mode-suggest",
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-suggest"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "8d5a0792-03d2-4088-a54e-1d73d4fa31ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-web-lab-tutor-mode-outline",
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-outline"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "4442cc68-11c5-4f11-9050-af328a4be3d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-web-lab-tutor-mode-guide",
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-guide"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "51a0a16c-a5ba-4c2e-b91f-15d902fd83df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-web-lab-tutor-mode-produce",
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-produce"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "b48a2b64-9fd9-49a0-baaf-0c8320f1f0af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-sketch-lab-wireframe-assets",
+        "script_level.level_keys": [
+          "all-the-aif-things-sketch-lab-wireframe-assets"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "30171db6-56b1-4228-9fd1-4ad1fab336e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-sketch-lab-flowchart-assets",
+        "script_level.level_keys": [
+          "all-the-aif-things-sketch-lab-flowchart-assets"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "b0a81abb-8ec9-4204-bbe8-ffa8ef9182fe"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
