@@ -11,6 +11,8 @@ markdown <<MARKDOWN
 
 #### Over six units, students learn to code in JavaScript alongside AI, creating dynamic applications that integrate HTML, CSS, and AI-driven features.
 
+#### Each unit builds on the next and units must be completed in order. 
+
 <div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
 
   
@@ -35,9 +37,9 @@ markdown <<MARKDOWN
     <div style="display: flex; align-items: center; gap: 15px;">
         <img src="https://images.code.org/a5d9781f189beba428c676a7455cc7bb-image-1759252922718.png" alt="Icon of computer screen with bar chart and pie chart" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
         <div style="flex: 1; background: #0093a4; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-            <h3><b>Unit 3: Building Data-Driven Decisions </b></h3>
+            <h3 style="color: white; margin: 0;"><b>Unit 3: Building Data-Driven Decisions </b></h3>
         
-         <p style = "font-size: 14pt">  In this unit, students move from coding single interactions to building web apps that manage collections of information.
+         <p style = "font-size: 14pt; color: white; margin-top: 10px;">  In this unit, students move from coding single interactions to building web apps that manage collections of information.
 <br></p>
         </div>
     </div>

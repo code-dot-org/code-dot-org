@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Map and Wireframe Site\r\n\r\n**Plan at least 3–4 pages (e.g., Home, About, Article, Events).**\r\n\r\n**Sketch quick wireframes for Homepage + one other page.**",
+    "long_instructions": "#Wireframing Chatbot\r\n\r\nUse this bot to plan your website’s structure and layout. It will guide you in describing what goes on each page and help you prepare to sketch wireframes on paper.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>I want to plan out my website pages, but I’m not sure what to put on each one. Can you help me organize my ideas for the Home, About, and Article pages?\r\n\r\n>Can you help me describe what my Homepage and one other page might look like in words so I can sketch them later?\r\n:::",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -49,6 +49,6 @@
     "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png",
     "display_name": "AI Chat"
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-21T18:31:50.515+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1b-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1b-test-2025\"},{\"changed_at\":\"2025-10-21 18:34:27 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-21T18:31:50.515+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1b-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1b-test-2025\"},{\"changed_at\":\"2025-10-21 18:34:27 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-22 21:41:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

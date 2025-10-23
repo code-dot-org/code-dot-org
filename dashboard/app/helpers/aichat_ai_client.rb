@@ -37,10 +37,7 @@ class AichatAiClient
 
     response_time = Time.now - start_time
 
-    # Disable metrics temporarily for gemini until reporter is customized for gemini.
-    if is_a?(AichatOpenaiResponsesClient)
-      usage_reporter&.report_usage_and_throttling_metrics(usage, config, request, context, response_time)
-    end
+    usage_reporter&.report_usage_and_throttling_metrics(usage, config, request, context, response_time)
 
     raise StandardError.new("Unexpected response from AI API: #{http_response.body}") unless response_text
 

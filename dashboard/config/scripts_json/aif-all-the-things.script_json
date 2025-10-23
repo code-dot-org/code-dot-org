@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-20 17:14:02 UTC",
+    "serialized_at": "2025-10-22 16:16:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -49,7 +49,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Sketch Lab - Wireframe Assets",
+      "name": "Sketch Lab Resources",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -142,6 +142,17 @@
       },
       "seeding_key": {
         "activity_section.key": "30171db6-56b1-4228-9fd1-4ad1fab336e3",
+        "lesson_activity.key": "60063706-f99d-4c32-9f0e-c26f6e79d635"
+      }
+    },
+    {
+      "key": "b0a81abb-8ec9-4204-bbe8-ffa8ef9182fe",
+      "position": 2,
+      "properties": {
+        "progression_name": "Flowchart Assets"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0a81abb-8ec9-4204-bbe8-ffa8ef9182fe",
         "lesson_activity.key": "60063706-f99d-4c32-9f0e-c26f6e79d635"
       }
     }
@@ -256,6 +267,28 @@
       "level_keys": [
         "all-the-aif-things-sketch-lab-wireframe-assets"
       ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Flowchart Assets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-sketch-lab-flowchart-assets"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "b0a81abb-8ec9-4204-bbe8-ffa8ef9182fe"
+      },
+      "level_keys": [
+        "all-the-aif-things-sketch-lab-flowchart-assets"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -317,6 +350,18 @@
         "lesson_group.key": "",
         "script.name": "aif-all-the-things",
         "activity_section.key": "30171db6-56b1-4228-9fd1-4ad1fab336e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-sketch-lab-flowchart-assets",
+        "script_level.level_keys": [
+          "all-the-aif-things-sketch-lab-flowchart-assets"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "b0a81abb-8ec9-4204-bbe8-ffa8ef9182fe"
       }
     }
   ],
