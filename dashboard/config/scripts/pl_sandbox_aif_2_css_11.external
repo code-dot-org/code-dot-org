@@ -43,6 +43,10 @@ markdown <<MARKDOWN
 
 ## What's the Difference? 
 
+<img src="https://images.code.org/b26d1b354a67f5c6f94c3efbb7c38dcc-image-1759349763132.png" alt="HtML layout example" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+#### Compare the HTML only site on the right to the one with CSS above. What do you notice?
+
 #### While **HTML tags** tell the browser what the content is (heading, paragraph, image), **CSS selectors** tell the browser how that content should look (color, size, position).
 
 > #### **So you might say to students:**

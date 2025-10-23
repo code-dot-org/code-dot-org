@@ -119,6 +119,9 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         isOnboardingTourEnabled={true}
         aiTutorSystemPromptName={aiTutorSystemPromptName}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+        documentationUrl={
+          appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.
+        }
       />
     </div>
   );
