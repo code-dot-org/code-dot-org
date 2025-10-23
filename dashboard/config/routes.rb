@@ -3,6 +3,8 @@
 Dashboard::Application.routes.draw do
   draw :marketing
 
+  get "app", to: "app#index"
+
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 

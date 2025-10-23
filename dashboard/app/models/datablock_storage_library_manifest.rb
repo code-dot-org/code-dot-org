@@ -11,7 +11,7 @@
 # Indexes
 #
 #  index_datablock_storage_library_manifest_on_singleton_guard  (singleton_guard) UNIQUE
-
+#
 class DatablockStorageLibraryManifest < ApplicationRecord
   # A one-row table storing a singleton JSON `library_manifest`` that
   # describes all Data Library datasets and categories, example data:

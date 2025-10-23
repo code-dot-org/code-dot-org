@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 require 'optparse'
 require 'fileutils'
-require 'open3'
 require 'erb'
 require 'json'
+require 'aws-sdk-cloudformation'
+require 'aws-sdk-s3'
+require 'aws-sdk-sts'
 
 # Load the MarketingSites::Configuration module
 require_relative '../config'
@@ -15,7 +17,8 @@ options = {
   region_stack_name: 'marketing-sites-region-resources',
   region_template_file: 'region-resources.yml.erb',
   # https://github.blog/changelog/2022-01-13-github-actions-update-on-oidc-based-deployments-to-aws/
-  github_intermediate_cert_thumbprints: '6938fd4d98bab03faadb97b34396831e3780aea1,1c58a3a8518e8759bf075b76b750d4f2df264fcd'
+  github_intermediate_cert_thumbprints: '6938fd4d98bab03faadb97b34396831e3780aea1,1c58a3a8518e8759bf075b76b750d4f2df264fcd',
+  template_s3_bucket: nil # Required
 }
 
 opt_parser = OptionParser.new do |opts|
@@ -58,13 +61,13 @@ opt_parser = OptionParser.new do |opts|
   end
 
   opts.on(
-    '--role-arn ARN',
+    '--cloudformation-role-arn ARN',
     String,
-    "IAM Role ARN to use for CloudFormation stack creation/updates",
+    "IAM Role ARN that CloudFormation should use to create/update Stacks",
     "Format: arn:aws:iam::<account-id>:role/<role-name>",
     "(Optional - if not provided, uses default AWS credentials)"
   ) do |arn|
-    options[:role_arn] = arn
+    options[:cloudformation_role_arn] = arn
   end
 
   opts.on(
@@ -85,29 +88,59 @@ opt_parser = OptionParser.new do |opts|
     options[:region_template_file] = file
   end
 
+  opts.on(
+    '--template-bucket BUCKET',
+    String,
+    "S3 bucket name for storing CloudFormation templates (REQUIRED)"
+  ) do |bucket|
+    options[:template_s3_bucket] = bucket
+  end
+
   opts.on('-h', '--help', 'Show this help message') do
     puts opts
     puts "\nExamples:"
     puts "  # Setup Marketing Sites Global Resources in the current AWS Account and Region Resources in the default region (us-east-1)"
-    puts "  ./setup.rb"
+    puts "  ./setup.rb --template-bucket cf-templates-1a2b3c4d5e6f-us-east-1"
     puts ""
     puts "  # Setup Marketing Sites Global Resources in the current AWS Account and Region Resources in in a specific region (us-west-2)"
-    puts "  ./setup.rb --region us-west-2"
+    puts "  # Fine to keep it simple and always place templates in a bucket that's in us-east-1"
+    puts "  ./setup.rb --region us-west-2 --template-bucket cf-templates-1a2b3c4d5e6f-us-east-1"
     exit
   end
 end
 
-def execute_command(command, description)
-  puts "#{description}..."
-  stdout, stderr, status = Open3.capture3(command)
+# Initialize AWS clients
+def get_aws_clients(region)
+  config = {region: region}
+  {
+    s3: Aws::S3::Client.new(config),
+    cloudformation: Aws::CloudFormation::Client.new(config),
+    sts: Aws::STS::Client.new(config)
+  }
+end
 
-  if status.success?
-    puts "Success: #{description}"
-    puts stdout unless stdout.empty?
-    return stdout
-  else
-    puts "Error: #{description} failed"
-    puts stderr
+def upload_template_to_s3(template_file, bucket_name, s3_client)
+  file_size = File.size(template_file)
+  timestamp = Time.now.strftime("%Y%m%d-%H%M%S")
+  stack_name = File.basename(template_file, ".*")
+  s3_key = "marketing-sites-templates/#{stack_name}-#{timestamp}.yml"
+
+  puts "Uploading template to S3 (#{file_size} bytes): s3://#{bucket_name}/#{s3_key}"
+
+  begin
+    s3_client.put_object(
+      bucket: bucket_name,
+      key: s3_key,
+      body: File.read(template_file),
+      content_type: 'application/x-yaml'
+    )
+
+    # Return the S3 URL
+    s3_url = "https://#{bucket_name}.s3.#{s3_client.config.region}.amazonaws.com/#{s3_key}"
+    puts "Success: Template uploaded to #{s3_url}"
+    return s3_url
+  rescue Aws::S3::Errors::ServiceError => exception
+    puts "Error uploading template to S3: #{exception.message}"
     exit 1
   end
 end
@@ -130,7 +163,8 @@ def process_template(template_file, output_file, binding_object)
     result = renderer.result(binding_object)
     File.write(output_path, result)
 
-    puts "Template processed successfully: #{output_path}"
+    file_size = File.size(output_path)
+    puts "Template processed successfully: #{output_path} (#{file_size} bytes)"
     return output_path
   rescue => exception
     puts "Exception processing template: #{exception.message}"
@@ -138,91 +172,172 @@ def process_template(template_file, output_file, binding_object)
   end
 end
 
-def deploy_stack(stack_name:, template_file:, parameters: {}, region:, role_arn: nil, tags: {}, capabilities: [])
-  temp_dir = File.join(Dir.pwd, 'tmp')
-  FileUtils.mkdir_p(temp_dir)
-  parameter_path = nil  # Initialize to nil
+def stack_exists?(stack_name, cloudformation_client)
+  response = cloudformation_client.describe_stacks(stack_name: stack_name)
+  stack = response.stacks.first
+  # Check if stack exists and is not in a deleted state
+  return stack && !['DELETE_COMPLETE'].include?(stack.stack_status)
+rescue Aws::CloudFormation::Errors::ValidationError => exception
+  # Stack doesn't exist
+  return false if exception.message.include?('does not exist')
+  raise exception
+rescue Aws::CloudFormation::Errors::ServiceError => exception
+  puts "Error checking stack existence: #{exception.message}"
+  return false
+end
 
-  # Build the AWS CLI command
-  command_parts = [
-    "aws cloudformation deploy",
-    "--stack-name #{stack_name}",
-    "--template-file #{template_file}",
-    "--region #{region}"
-  ]
+def deploy_stack(stack_name:, template_file:, parameters: {}, region:, cloudformation_role_arn: nil, tags: {}, capabilities: [], template_s3_bucket:, clients:)
+  s3_client = clients[:s3]
+  cf_client = clients[:cloudformation]
 
-  # Add capabilities if any are specified
-  unless capabilities.empty?
-    command_parts << "--capabilities #{capabilities.join(' ')}"
-  end
+  # Always upload template to S3
+  template_url = upload_template_to_s3(template_file, template_s3_bucket, s3_client)
 
-  command_parts << "--role-arn #{role_arn}" if role_arn
+  # Check if stack exists to determine create vs update
+  stack_exists = stack_exists?(stack_name, cf_client)
+  operation = stack_exists ? :update : :create
 
-  # Add parameters if any
-  unless parameters.empty?
-    param_file = "parameters_#{stack_name}_#{Time.now.to_i}.json"
-    parameter_path = File.join(temp_dir, param_file)
-    parameter_content = parameters.map {|k, v| {"ParameterKey" => k, "ParameterValue" => v.to_s}}
-    File.write(parameter_path, JSON.pretty_generate(parameter_content))
-    command_parts << "--parameter-overrides file://#{parameter_path}"
-  end
+  puts "Stack #{stack_exists ? 'exists' : 'does not exist'}, using #{operation}_stack"
 
-  # Add tags only if there are any
-  unless tags.empty?
-    tag_string = tags.map {|k, v| "#{k}=#{v}"}.join(" ")
-    command_parts << "--tags #{tag_string}"
-  end
+  # Prepare parameters for CloudFormation
+  cf_parameters = parameters.map {|k, v| {parameter_key: k, parameter_value: v.to_s}}
+  cf_tags = tags.map {|k, v| {key: k, value: v.to_s}}
 
-  command = command_parts.join(" \\\n    ")
+  # Build the CloudFormation request
+  request_params = {
+    stack_name: stack_name,
+    template_url: template_url,
+    parameters: cf_parameters,
+    tags: cf_tags,
+    capabilities: capabilities,
+    role_arn: cloudformation_role_arn
+  }.compact # Remove optional parameters like `role_arn` if not provided.
 
   begin
-    execute_command(command, "Deploying stack '#{stack_name}' in region '#{region}'")
-  ensure
-    # Clean up the parameter file if it was created
-    if parameter_path && File.exist?(parameter_path)
-      FileUtils.rm_f(parameter_path)
+    if operation == :create
+      puts "Creating stack '#{stack_name}' in region '#{region}'"
+      cf_client.create_stack(request_params)
+    else
+      puts "Updating stack '#{stack_name}' in region '#{region}'"
+      cf_client.update_stack(request_params)
     end
+
+    # Wait for stack operation to complete
+    wait_for_stack_completion(stack_name, operation, cf_client)
+  rescue Aws::CloudFormation::Errors::ValidationError => exception
+    if exception.message.include?('No updates are to be performed')
+      puts "No changes detected for stack '#{stack_name}'"
+      return
+    else
+      puts "CloudFormation validation error: #{exception.message}"
+      exit 1
+    end
+  rescue Aws::CloudFormation::Errors::ServiceError => exception
+    puts "CloudFormation service error: #{exception.message}"
+    exit 1
   end
 end
 
-def get_stack_outputs(stack_name, region)
-  command = <<~CMD
-    aws cloudformation describe-stacks \\
-        --stack-name #{stack_name} \\
-        --region #{region} \\
-        --query "Stacks[0].Outputs" \\
-        --output json
-  CMD
-
-  output = execute_command(command, "Getting outputs from stack '#{stack_name}'")
-
-  # Handle case where output might be nil or empty
-  return [] if output.nil? || output.strip.empty?
+def wait_for_stack_completion(stack_name, operation, cf_client)
+  puts "Waiting for stack #{operation} to complete..."
 
   begin
-    parsed_output = JSON.parse(output.strip)
-    # Handle case where Outputs is null in CloudFormation
-    return [] if parsed_output.nil?
-    return parsed_output
-  rescue JSON::ParserError => exception
-    puts "Warning: Could not parse stack outputs as JSON: #{exception.message}"
-    puts "Raw output: #{output}"
-    return []
+    if operation == :create
+      cf_client.wait_until(:stack_create_complete, stack_name: stack_name) do |w|
+        w.max_attempts = 120  # 120 * 30 seconds = 1 hour max wait time
+        w.delay = 30          # Check every 30 seconds
+      end
+    else
+      cf_client.wait_until(:stack_update_complete, stack_name: stack_name) do |w|
+        w.max_attempts = 120  # 120 * 30 seconds = 1 hour max wait time
+        w.delay = 30          # Check every 30 seconds
+      end
+    end
+    puts "Success: Stack #{operation} completed"
+  rescue Aws::Waiters::Errors::WaiterFailed => exception
+    puts "Error: Stack #{operation} failed or timed out: #{exception.message}"
+
+    # Get the stack events to help with debugging
+    begin
+      puts "\nRecent stack events:"
+      events = cf_client.describe_stack_events(stack_name: stack_name).stack_events
+      events.first(10).each do |event|
+        puts "  #{event.timestamp} - #{event.logical_resource_id} - #{event.resource_status} - #{event.resource_status_reason}"
+      end
+    rescue => event_error
+      puts "Could not retrieve stack events: #{event_error.message}"
+    end
+
+    exit 1
   end
 end
 
-def validate_template(template_file, region)
-  command = <<~CMD
-    aws cloudformation validate-template \\
-        --template-body file://#{template_file} \\
-        --region #{region}
-  CMD
+def get_stack_outputs(stack_name, cf_client)
+  response = cf_client.describe_stacks(stack_name: stack_name)
+  stack = response.stacks.first
 
-  execute_command(command, "Validating CloudFormation template")
+  return [] unless stack&.outputs
+
+  # Convert to hash format similar to CLI output
+  stack.outputs.map do |output|
+    {
+      'OutputKey' => output.output_key,
+      'OutputValue' => output.output_value,
+      'Description' => output.description
+    }
+  end
+rescue Aws::CloudFormation::Errors::ServiceError => exception
+  puts "Warning: Could not retrieve stack outputs: #{exception.message}"
+  return []
+end
+
+def print_stack_outputs(stack_name, cf_client, region = nil)
+  outputs = get_stack_outputs(stack_name, cf_client)
+
+  if outputs.empty?
+    puts "No outputs found for #{stack_name} stack."
+    return
+  end
+
+  puts "\n#{stack_name.tr('-', ' ').split.map(&:capitalize).join(' ')} Stack Outputs:"
+  outputs.each do |output|
+    puts "  #{output['OutputKey']}: #{output['OutputValue']}"
+    puts "    Description: #{output['Description']}" if output['Description']
+  end
+rescue => exception
+  puts "Warning: Could not retrieve stack outputs: #{exception.message}"
+end
+
+def validate_template(template_file, template_s3_bucket, clients)
+  s3_client = clients[:s3]
+  cf_client = clients[:cloudformation]
+
+  # Upload to S3 and validate via URL
+  template_url = upload_template_to_s3(template_file, template_s3_bucket, s3_client)
+
+  begin
+    puts "Validating CloudFormation template..."
+    response = cf_client.validate_template(template_url: template_url)
+    puts "Success: Template validation passed"
+
+    # Optionally show template details
+    if response.parameters && !response.parameters.empty?
+      puts "Template parameters: #{response.parameters.map(&:parameter_key).join(', ')}"
+    end
+  rescue Aws::CloudFormation::Errors::ValidationError => exception
+    puts "Template validation failed: #{exception.message}"
+    exit 1
+  rescue Aws::CloudFormation::Errors::ServiceError => exception
+    puts "Error validating template: #{exception.message}"
+    exit 1
+  end
 end
 
 def deploy_account_resources(options)
   puts "\n🏢 === Deploying Global Resources (Once per AWS Account) in #{options[:region]} ==="
+
+  # Initialize AWS clients for us-east-1 (global resources always go there).
+  clients = get_aws_clients('us-east-1')
 
   puts "\n=== Step 1: Processing Account-Level Template ==="
   processed_template_path = process_template(
@@ -232,7 +347,7 @@ def deploy_account_resources(options)
   )
 
   puts "\n=== Step 2: Validating Account-Level Template ==="
-  validate_template(processed_template_path, options[:region])
+  validate_template(processed_template_path, options[:template_s3_bucket], clients)
 
   puts "\n=== Step 3: Deploying Account-Level Stack in US East 1 ==="
   parameters = {
@@ -244,31 +359,22 @@ def deploy_account_resources(options)
     stack_name: options[:account_stack_name],
     template_file: processed_template_path,
     parameters: parameters,
-    region: options[:region],
-    role_arn: options[:role_arn],
-    capabilities: ["CAPABILITY_IAM", "CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"]
+    region: 'us-east-1',
+    cloudformation_role_arn: options[:cloudformation_role_arn],
+    capabilities: ["CAPABILITY_IAM", "CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"],
+    template_s3_bucket: options[:template_s3_bucket],
+    clients: clients
   )
 
   puts "\n=== Step 4: Account-Level Deployment Results ==="
-  begin
-    outputs = get_stack_outputs(options[:account_stack_name], options[:region])
-
-    if outputs.empty?
-      puts "No outputs found for account-level stack."
-    else
-      puts "\nAccount-Level Stack Outputs:"
-      outputs.each do |output|
-        puts "  #{output['OutputKey']}: #{output['OutputValue']}"
-        puts "    Description: #{output['Description']}" if output['Description']
-      end
-    end
-  rescue => exception
-    puts "Warning: Could not retrieve account-level stack outputs: #{exception.message}"
-  end
+  print_stack_outputs(options[:account_stack_name], clients[:cloudformation])
 end
 
 def deploy_region_resources(options)
   puts "\n🌐 === Deploying Region-Level Resources (Region: #{options[:region]}) ==="
+
+  # Initialize AWS clients for the specified region
+  clients = get_aws_clients(options[:region])
 
   puts "\n=== Step 1: Processing Region-Level Template ==="
   processed_template_path = process_template(
@@ -278,7 +384,7 @@ def deploy_region_resources(options)
   )
 
   puts "\n=== Step 2: Validating Region-Level Template ==="
-  validate_template(processed_template_path, options[:region])
+  validate_template(processed_template_path, options[:template_s3_bucket], clients)
 
   puts "\n=== Step 3: Deploying Region-Level Stack ==="
   parameters = {}
@@ -298,36 +404,13 @@ def deploy_region_resources(options)
     template_file: processed_template_path,
     parameters: parameters,
     region: options[:region],
-    role_arn: options[:role_arn]
+    cloudformation_role_arn: options[:cloudformation_role_arn],
+    template_s3_bucket: options[:template_s3_bucket],
+    clients: clients
   )
 
   puts "\n=== Step 4: Region-Level Deployment Results ==="
-  begin
-    outputs = get_stack_outputs(options[:region_stack_name], options[:region])
-
-    if outputs.empty?
-      puts "No outputs found for region-level stack."
-    else
-      puts "\nRegion-Level Stack Outputs:"
-      outputs.each do |output|
-        puts "  #{output['OutputKey']}: #{output['OutputValue']}"
-        puts "    Description: #{output['Description']}" if output['Description']
-      end
-
-      # Show which AZs were used
-      az_output = outputs.find {|o| o['OutputKey'] == 'AvailabilityZones'}
-      if az_output
-        puts "\n✓ Infrastructure deployed across Availability Zones: #{az_output['OutputValue']}"
-      else
-        # Fallback to showing configured AZs if output not found
-        region_config = MarketingSites::Configuration::REGIONS[options[:region].to_sym]
-        selected_azs = region_config[:selected_availability_zones]
-        puts "\n✓ Infrastructure deployed across Availability Zones: #{selected_azs.join(', ')}"
-      end
-    end
-  rescue => exception
-    puts "Warning: Could not retrieve region-level stack outputs: #{exception.message}"
-  end
+  print_stack_outputs(options[:region_stack_name], clients[:cloudformation], options[:region])
 end
 
 begin
@@ -335,6 +418,7 @@ begin
 
   missing_params = []
   missing_params << "region" unless options[:region]
+  missing_params << "template-bucket" unless options[:template_s3_bucket]
 
   unless missing_params.empty?
     puts "Error: Missing required parameters: #{missing_params.join(', ')}"
@@ -357,6 +441,7 @@ begin
       deploy_account_resources(options.merge(region: 'us-east-1')) # Always deploy Global resources to US East 1
     rescue => exception
       puts "❌ Account-level resources deployment failed: #{exception.message}"
+      puts "Backtrace: #{exception.backtrace.first(5).join("\n")}"
       exit 1
     end
 

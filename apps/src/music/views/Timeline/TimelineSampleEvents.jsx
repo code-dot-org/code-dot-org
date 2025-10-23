@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {useRef} from 'react';
-import {useSelector} from 'react-redux';
 
 import UniqueSounds from '@cdo/apps/music/utils/UniqueSounds';
 
+import {useTimelineContext} from './TimelineContext';
 import TimelineElement from './TimelineElement';
 
 /**
@@ -16,7 +16,7 @@ const TimelineSampleEvents = ({
   getEventHeight,
   getEventVerticalSpace,
 }) => {
-  const soundEvents = useSelector(state => state.music.playbackEvents);
+  const {playbackEvents: soundEvents} = useTimelineContext();
 
   const uniqueSoundsRef = useRef(new UniqueSounds());
   // Let's cache the value of getUniqueSounds() so that the various helpers
