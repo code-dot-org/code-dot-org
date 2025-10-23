@@ -3,6 +3,7 @@
   height: 100%;
   background-color: var(--background-neutral-primary);
   overflow: hidden;
+  cursor: text;
 
   .aiTutorTooltip {
     border-radius: 6px;
@@ -21,7 +22,7 @@
 
 .noOpenFilesContainer {
   width: 100%;
-  height: 100%;    
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

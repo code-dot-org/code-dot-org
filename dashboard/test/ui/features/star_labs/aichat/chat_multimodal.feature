@@ -17,7 +17,7 @@ Feature: Multimodal chat using gpt-4o-mini as base model in AI Chat Lab
     And I wait until element "#uitest-chat-submit" is enabled
     And I click selector "#uitest-chat-submit"
     And I wait until element "[aria-label='AI bot chat message']" is visible
-    Then element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(224, 248, 249)"
+    Then element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(235, 255, 254)"
 
 # PDF input
   Scenario: Making PDF chat request gets appropriate response

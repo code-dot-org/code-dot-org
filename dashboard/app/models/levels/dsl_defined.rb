@@ -242,7 +242,3 @@ class DSLDefined < Level
     FileUtils.rm_f(file_path)
   end
 end
-
-# The following capitalization variant is needed so that annotate_models
-# is able to find the model class.
-DslDefined = DSLDefined

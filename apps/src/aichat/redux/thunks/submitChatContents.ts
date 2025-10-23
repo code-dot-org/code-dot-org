@@ -18,6 +18,7 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
+import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
   isCompletedChatMessage,
@@ -78,6 +79,8 @@ export const submitChatContents = createAsyncThunk(
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
+    const userAddedSelectionContextPrompt =
+      formatUserAddedSelectionContextForPrompt(userAddedSelectionContext);
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
@@ -87,6 +90,7 @@ export const submitChatContents = createAsyncThunk(
       assets,
       userAddedSelectionContext,
       timestamp: Date.now(),
+      userAddedSelectionContextPrompt,
     };
     dispatch(setChatMessagePending(newUserMessage));
 

@@ -47,6 +47,8 @@ export type ChatThread = {
 
 export type ChatItem = ChatTextMessage | ChatPrompt[];
 
+export type SuggestPromptsType = 'plan' | 'create' | 'support' | 'apcsp';
+
 export type Context = {
   type: (typeof AiDiffContext)[keyof typeof AiDiffContext];
   levelId?: number;

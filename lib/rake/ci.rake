@@ -64,7 +64,8 @@ SKIP_PEGASUS_CONTENT = 'skip pegasus content'.freeze
 # that fail. This flag ensures all tests will use SauceLabs for all runs.
 SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 
-PARALLEL_COUNT = 16
+# Maximum parallel browsers to use for UI and eyes tests
+PARALLEL_COUNT = 24
 
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'

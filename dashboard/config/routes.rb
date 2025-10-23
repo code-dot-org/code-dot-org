@@ -3,6 +3,8 @@
 Dashboard::Application.routes.draw do
   draw :marketing
 
+  get "app", to: "app#index"
+
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
@@ -737,6 +739,7 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+    get '/lti/v1/integrations', to: redirect('/lti/v1/integrations/new')
 
     namespace :lti do
       namespace :v1 do

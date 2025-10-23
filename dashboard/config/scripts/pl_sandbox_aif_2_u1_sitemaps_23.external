@@ -1,0 +1,32 @@
+name 'pl_sandbox_aif_2_U1-sitemaps-23'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Site Maps
+
+#### A **sitemap** shows how webpages are organized and connected. It helps us see the big picture of how users move through a site. 
+ 
+
+<img src="https://images.code.org/3c891d019252e0106b3979e97851f3be-image-1761147296181.png" alt="design process graph of the cycle" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+---
+
+
+## 💼Career Connection: UX Designer
+
+<img src="https://images.code.org/9731158db44349372b96a62c34b7e031-image-1760992932803.png" 
+     alt="icon of a person working on the UX of a website" 
+     style="width: 10%; border-radius: 5px; margin: 0px 20px 20px 10px; float: left;">
+
+#### A **User Experience (UX) Designer** ensures a website is usable, enjoyable, and accessible for its intended users.
+
+#### They research user needs, test designs, and create layouts that improve how people interact with websites and apps.
+
+---
+
+#### Your students will create a sitemap and trace user flow using sketch lab  and then use AI to build a quick app based on their flow. 
+
+
+MARKDOWN
