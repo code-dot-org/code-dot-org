@@ -7,6 +7,7 @@ import i18n from '@cdo/locale';
 
 import canvas from '../../../assets/canvas.svg';
 import schoology from '../../../assets/schoology.svg';
+import classlink from '../../../assets/classlink.png';
 import {LtiProviderContext} from '../context';
 
 import styles from '../../../../link-account.module.scss';
@@ -22,6 +23,8 @@ const LtiWelcomeBanner = () => {
         return canvas;
       case 'schoology':
         return schoology;
+      case 'classlink':
+        return classlink;
       default:
         return undefined;
     }
