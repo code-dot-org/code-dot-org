@@ -31,4 +31,8 @@ $bot-icon-size: $header-height - 5px;
       font-weight: 500;
     }
   }
+
+  &.displayNone {
+    display: none;
+  }
 }

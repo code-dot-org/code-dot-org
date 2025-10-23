@@ -98,6 +98,7 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.channel = config.channel;
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
   this.disallowedHtmlTags = config.disallowedHtmlTags;
@@ -252,7 +253,6 @@ WebLab.prototype.init = function (config) {
         onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
         onToggleInspector={this.onToggleInspector.bind(this)}
         onMount={() => this.onMount(config)}
-        inLevel={!!config.serverScriptId}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -715,6 +715,14 @@ WebLab.prototype.onBrambleReady = function () {
   }
 
   this.syncBrambleFiles();
+};
+
+WebLab.prototype.getCode = function () {
+  if (!this.brambleHost?.getConcatenatedCodeString) {
+    console.error('[WebLab] getConcatenatedCodeString unavailable');
+    return Promise.resolve('');
+  }
+  return this.brambleHost.getConcatenatedCodeString();
 };
 
 WebLab.prototype.brambleApi = function () {

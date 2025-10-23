@@ -28,8 +28,6 @@ export const HTMLPreview: React.FC = () => {
   const iframeHeightClass = useMemo(() => {
     if (pageAction === 'share' || isFullScreenView) {
       return moduleStyles.fullScreenPreviewIframeHeight;
-    } else if (pageAction === 'edit' || pageAction === 'view') {
-      return moduleStyles.projectViewPreviewIframeHeight;
     }
     return moduleStyles.levelViewPreviewIframeHeight;
   }, [pageAction, isFullScreenView]);

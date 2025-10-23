@@ -1276,6 +1276,9 @@
     "display_name": "Minecraft: Hero's Journey",
     "description": "Build and explore with Minecraft! Players write code that instructs the Agent to execute their commands and overcome in-game obstacles. "
   },
+  "hoai-dance-5": {
+    "display_name": "hoai-dance-5"
+  },
   "hoai-dance-pilot1": {
     "display_name": "hoai-dance-pilot1"
   },
@@ -1645,6 +1648,9 @@
   "pilot-pl-teaching-k5-music-lab": {
     "display_name": "pilot-pl-teaching-k5-music-lab"
   },
+  "pilot5": {
+    "display_name": "pilot5"
+  },
   "pixelation": {
     "display_name": "Pixelation",
     "description": "Encode images with bits and bytes! Type out the binary yourself to create your own pixel masterpiece."
@@ -1766,6 +1772,9 @@
   },
   "sandbox-data-science-pl": {
     "display_name": "sandbox-data-science-pl"
+  },
+  "sandbox-hoai-pl": {
+    "display_name": "sandbox-hoai-pl"
   },
   "sandbox-java-pl": {
     "display_name": "sandbox-java-pl"

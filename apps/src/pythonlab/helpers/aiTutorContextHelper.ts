@@ -3,6 +3,7 @@ import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelp
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 import PythonValidationTracker from '../progress/PythonValidationTracker';
 
@@ -14,21 +15,26 @@ interface AiTutorPythonLabParams {
 }
 export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
   private documentationPromise?: Promise<string | undefined>;
-  private aiTutorContext: AiTutorContext = {};
+  private params?: AiTutorPythonLabParams;
+  protected override documentationLocation: string = studio(
+    '/docs/ide/pythonlab'
+  );
 
-  protected async getAiTutorContext(): Promise<AiTutorContext> {
-    return {
-      ...this.aiTutorContext,
-      documentation: await this.documentationPromise,
-    };
+  override setAiTutorContext(params: AiTutorPythonLabParams): void {
+    this.params = params;
+    if (
+      this.params.miniAppName &&
+      this.params.miniAppName === 'neighborhood' &&
+      !this.documentationPromise
+    ) {
+      this.documentationPromise = tryFetchDocsForClass('painter');
+    }
   }
 
-  setAiTutorContext({
-    source,
-    validationFile,
-    longInstructions,
-    miniAppName,
-  }: AiTutorPythonLabParams) {
+  protected override async getAiTutorContext(): Promise<AiTutorContext> {
+    if (!this.params) return {};
+
+    const {source, validationFile, longInstructions} = this.params;
     const sourceCode = source
       ? Object.values(source.files)
           .filter(
@@ -44,27 +50,27 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
               prefix = `${file.name} is not visible to the student: \n`;
             }
 
-            return `${prefix}filename: ${file.name}\n\`\`\`${file.contents}\`\`\``;
+            return `${prefix}filename: ${file.name}\n${this.codeBlock(
+              file.contents
+            )}`;
           })
           .join('\n\n')
       : undefined;
 
-    const validationContents = validationFile?.contents;
+    const validationContents = this.codeBlock(validationFile?.contents);
 
     const validationResults = JSON.stringify(
       PythonValidationTracker.getInstance().getValidationResults()
     );
 
-    this.documentationPromise =
-      miniAppName === 'neighborhood'
-        ? tryFetchDocsForClass('painter')
-        : undefined;
+    const documentation = await this.documentationPromise;
 
-    this.aiTutorContext = {
+    return {
       sourceCode,
       validationContents,
       validationResults,
       longInstructions,
+      documentation,
     };
   }
 }

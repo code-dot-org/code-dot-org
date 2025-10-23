@@ -106,8 +106,8 @@ const AiDiffBotMessageFooter: React.FC<Props> = ({message, reportingData}) => {
             size="xs"
             isIconOnly
             icon={{
-              iconStyle: 'regular',
-              iconName: pdfTimeout ? 'check' : 'file-export',
+              iconStyle: 'solid',
+              iconName: pdfTimeout ? 'check' : 'download',
             }}
             type="primary"
             className={

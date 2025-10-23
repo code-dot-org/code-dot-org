@@ -60,12 +60,12 @@ experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
 experiments.MODULARITY = 'modularity';
 // LocalizeJS
 experiments.LOCALIZEJS = 'localizejs';
-// Use the new lab2 instructions panel
-experiments.LAB2_INSTRUCTIONS_V2 = 'lab2-instructions-v2';
-// Use the new lab2 tabbed resource panel
-experiments.LAB2_RESOURCE_PANEL = 'lab2-resource-panel';
 // Show AI Tutor in legacy labs
 experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
+// Use accept/reject code flow in Web Lab 2
+experiments.WEBLAB2_ACCEPT_REJECT = 'weblab2-accept-reject';
+// Use structured output in web lab 2 (still using copy code flow)
+experiments.WEBLAB2_STRUCTURED_OUTPUT = 'weblab2-structured-output';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

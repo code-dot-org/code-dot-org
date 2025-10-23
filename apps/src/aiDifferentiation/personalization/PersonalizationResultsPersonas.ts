@@ -40,6 +40,11 @@ export const TEACHING_STYLES = [
       i18n.teachingStyleBridgeBuilderSuperpower2(),
       i18n.teachingStyleBridgeBuilderSuperpower3(),
     ],
+    howAiHelps: [
+      i18n.teachingStyleBridgeBuilderAiHelp1(),
+      i18n.teachingStyleBridgeBuilderAiHelp2(),
+      i18n.teachingStyleBridgeBuilderAiHelp3(),
+    ],
   },
   {
     name: i18n.teachingStyleStorytellerName(),
@@ -49,6 +54,11 @@ export const TEACHING_STYLES = [
       i18n.teachingStyleStorytellerSuperpower1(),
       i18n.teachingStyleStorytellerSuperpower2(),
       i18n.teachingStyleStorytellerSuperpower3(),
+    ],
+    howAiHelps: [
+      i18n.teachingStyleStorytellerAiHelp1(),
+      i18n.teachingStyleStorytellerAiHelp2(),
+      i18n.teachingStyleStorytellerAiHelp3(),
     ],
   },
   {
@@ -60,6 +70,11 @@ export const TEACHING_STYLES = [
       i18n.teachingStyleCommunityArchitectSuperpower2(),
       i18n.teachingStyleCommunityArchitectSuperpower3(),
     ],
+    howAiHelps: [
+      i18n.teachingStyleCommunityArchitectAiHelp1(),
+      i18n.teachingStyleCommunityArchitectAiHelp2(),
+      i18n.teachingStyleCommunityArchitectAiHelp3(),
+    ],
   },
   {
     name: i18n.teachingStyleLeadLearnerName(),
@@ -69,6 +84,11 @@ export const TEACHING_STYLES = [
       i18n.teachingStyleLeadLearnerSuperpower1(),
       i18n.teachingStyleLeadLearnerSuperpower2(),
       i18n.teachingStyleLeadLearnerSuperpower3(),
+    ],
+    howAiHelps: [
+      i18n.teachingStyleLeadLearnerAiHelp1(),
+      i18n.teachingStyleLeadLearnerAiHelp2(),
+      i18n.teachingStyleLeadLearnerAiHelp3(),
     ],
   },
 ];

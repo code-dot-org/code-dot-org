@@ -87,7 +87,6 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
     patch '/api/v1/user_scripts/course/:course_id/unit/:script_id', to: 'api/v1/user_scripts#update'
 
     get '/download/:product', to: 'hoc_download#index'
@@ -738,6 +737,7 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+    get '/lti/v1/integrations', to: redirect('/lti/v1/integrations/new')
 
     namespace :lti do
       namespace :v1 do
@@ -1293,6 +1293,7 @@ Dashboard::Application.routes.draw do
 
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
+    post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'

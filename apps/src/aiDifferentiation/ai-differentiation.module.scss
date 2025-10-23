@@ -62,6 +62,36 @@ $fab-height: 48;
   flex-direction: column;
   height: 100%;
   flex: 1 1 0;
+
+  .chatHeader {
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 0.75rem;
+    align-self: stretch;
+    border-bottom: 1px solid var(--borders-neutral-primary, #D4DAE1);
+    background: var(--background-neutral-primary, #FFF);
+
+    .chatHeaderTitle {
+      flex: 1 0 0;
+      max-width: 180px;
+
+      p {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .chatHeaderButtons {
+      display: flex;
+      width: 15.2188rem;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
 }
 
 .hiddenAiDiffPanel {
@@ -200,7 +230,7 @@ $fab-height: 48;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 20px;
+    gap: 1rem;
   }
 
   &Footer {
@@ -210,14 +240,6 @@ $fab-height: 48;
     align-items: flex-start;
     gap: 2px;
     border-top: 2px solid $neutral_gray10;
-
-    &Buttons {
-      margin-block: 0.625rem 0.25rem;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 12px;
-    }
   }
 }
 
@@ -228,7 +250,7 @@ $fab-height: 48;
 }
 
 .message-user {
-  margin-left: 48px;
+  margin-inline-start: 48px;
 }
 
 .messageFeedback {
@@ -237,7 +259,7 @@ $fab-height: 48;
     align-items: center;
     gap: 8px;
     align-self: stretch;
-    color: $light-gray-600;
+    color: var(--text-neutral-quaternary);
   }
   &Left {
     display: flex;
@@ -251,13 +273,13 @@ $fab-height: 48;
     flex: 1 0 0;
   }
   &Button i {
-    color: $light-gray-600;
+    color: var(--text-neutral-quaternary);
   }
   &Confirm i {
-    color: $light_affirmative_500;
+    color: var(--text-success-primary);
   }
   &Negative i {
-    color: $light_negative_500;
+    color: var(--text-error-primary);
   }
 }
 
