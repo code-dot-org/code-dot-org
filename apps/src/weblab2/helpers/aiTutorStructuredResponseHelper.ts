@@ -16,10 +16,6 @@ const getAnswerJsonSchema = (isCopyCodeMode: boolean): JsonObjectSchema => {
           'Refuse',
         ],
       },
-      goal: {
-        type: 'string',
-        description: 'What we are achieving this turn, limit to 1 line of text',
-      },
       assumptions: {
         type: 'string',
         description:
@@ -40,7 +36,7 @@ const getAnswerJsonSchema = (isCopyCodeMode: boolean): JsonObjectSchema => {
           additionalProperties: false,
         },
         description:
-          '`html` and/or `css` fences. When providing modifications to student code, provide the entire contents of the file. The list can be empty.',
+          '`html` and/or `css` fences. When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation.',
       },
       explanation: {
         type: 'string',
@@ -52,33 +48,19 @@ const getAnswerJsonSchema = (isCopyCodeMode: boolean): JsonObjectSchema => {
         description:
           '1-2 concrete action(s) for student to achieve goal. Format as markdown bullets',
       },
-      furtherSupport: {
-        type: 'string',
-        description:
-          '1–2 questions or 1–2 micro-hints. Format as markdown bullets.',
-      },
       questions: {
         type: 'string',
         description:
           'short list to confirm ambiguous details. Format as markdown bullets.',
       },
     },
-    required: [
-      'tutorMode',
-      'goal',
-      'nextSteps',
-      'furtherSupport',
-      'code',
-      'explanation',
-    ],
+    required: ['tutorMode', 'nextSteps', 'code', 'explanation'],
     propertyOrdering: [
       'tutorMode',
-      'goal',
       'assumptions',
       'code',
       'explanation',
       'nextSteps',
-      'furtherSupport',
       'questions',
     ],
     additionalProperties: false,
@@ -120,9 +102,6 @@ export const acceptRejectJsonSchema: JsonObjectSchema = {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatExplanationResponse = (response: any): string => {
   let formattedResponse = '';
-  if (response.goal) {
-    formattedResponse += `**Goal**\n\n${response.goal}\n\n`;
-  }
   if (response.assumptions) {
     formattedResponse += `**Assumptions**\n\n${response.assumptions}\n\n`;
   }
@@ -139,9 +118,6 @@ export const formatExplanationResponse = (response: any): string => {
   }
   if (response.nextSteps) {
     formattedResponse += `**Next Steps**\n\n${response.nextSteps}\n\n`;
-  }
-  if (response.furtherSupport) {
-    formattedResponse += `**Further Support**\n\n${response.furtherSupport}\n\n`;
   }
   if (response.questions) {
     formattedResponse += `**Questions**\n\n${response.questions}\n\n`;
