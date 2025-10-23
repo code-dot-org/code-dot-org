@@ -86,6 +86,10 @@ $default-spacing: 2px;
     flex-direction: column;
     height: 100%;
     width: calc(3.5rem + 20%);
+
+    &.instructionsCollapsed {
+      width: 3.5rem;
+    }
   }
 }
 
@@ -122,4 +126,8 @@ $default-spacing: 2px;
 
 .centerHeaderContent {
   @include center-header-content(true);
+}
+
+:global([role="tooltip"]) {
+  z-index: 100;
 }

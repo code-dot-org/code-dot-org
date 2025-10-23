@@ -1,6 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
@@ -22,83 +21,68 @@ import {getConfigValue} from '../../lottie/LottieDancerUtils';
 import moduleStyles from './generate-dancer.module.scss';
 
 const adlibs: AdlibsType = {
-  basic: {
-    template:
-      'Please generate a dancer.  It should look like a {animal} with {appearance}.',
-    options: {
-      animal: ['frog', 'moose'],
-      appearance: ['hair', 'glasses'],
-    },
-    variantCount: 2,
-  },
   'animal-02': {
-    template: 'Please generate a dancer.  It should look like a {animal}.',
+    template: 'Please generate a dancer.  It should look like {animal}.',
     options: {
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
     },
     variantCount: 5,
   },
   'animal-attire-02': {
     template:
-      'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
+      'Please generate a dancer.  It should look like {animal} wearing {attire}.',
     options: {
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
-      attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
+      attire: [
+        {id: 'headscarf', text: 'a headscarf'},
+        {id: 'sunglasses', text: 'sunglasses'},
+        {id: 'headphones', text: 'headphones'},
+        {id: 'crown', text: 'a crown'},
+        {id: 'beanie', text: 'a beanie'},
+      ],
     },
     variantCount: 5,
   },
   'adjective-animal-attire-02': {
     template:
-      'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
+      'Please generate a dancer.  It should look like {animal} with {adjective} style, wearing {attire}.',
     options: {
-      adjective: ['basic', 'emo', 'sporty', 'streetwear', 'fancy', 'preppy'],
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
-      attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
+      adjective: [
+        {id: 'basic', text: 'a basic'},
+        {id: 'emo', text: 'an emo'},
+        {id: 'sporty', text: 'a sporty'},
+        {id: 'streetwear', text: 'a streetwear'},
+        {id: 'fancy', text: 'a fancy'},
+        {id: 'preppy', text: 'a preppy'},
+      ],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
+      attire: [
+        {id: 'headscarf', text: 'a headscarf'},
+        {id: 'sunglasses', text: 'sunglasses'},
+        {id: 'headphones', text: 'headphones'},
+        {id: 'crown', text: 'a crown'},
+        {id: 'beanie', text: 'a beanie'},
+      ],
     },
     variantCount: 5,
-  },
-  // Earlier adlibs which will be removed soon:
-  animal: {
-    template: 'Please generate a dancer.  It should look like a {animal}.',
-    options: {
-      animal: ['frog', 'moose', 'wolf'],
-    },
-    variantCount: 3,
-  },
-  'animal-attire': {
-    template:
-      'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
-    options: {
-      animal: ['frog', 'moose', 'wolf'],
-      attire: [
-        'headphones',
-        'sunglasses',
-        'crown',
-        'headscarf',
-        'baseball-cap',
-        'beanie',
-        'headband',
-      ],
-    },
-    variantCount: 3,
-  },
-  'adjective-animal-attire': {
-    template:
-      'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
-    options: {
-      adjective: ['basic', 'goth'],
-      animal: ['frog', 'moose', 'wolf'],
-      attire: [
-        'headphones',
-        'sunglasses',
-        'crown',
-        'headscarf',
-        'baseball-cap',
-        'beanie',
-        'headband',
-      ],
-    },
-    variantCount: 3,
   },
 };
 
@@ -130,7 +114,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const variantHistory = useRef<number[]>([]);
 
   const [aiGenerateState, setAiGenerateState] = useState<
-    'none' | 'generating' | 'done'
+    'none' | 'generating' | 'reviewing' | 'done'
   >('none');
   const [dancerMetadata, setDancerMetadata] = useState<string | null>(
     localStorage.getItem('dancer-ai-generate')
@@ -176,7 +160,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
     await generateDancerCache();
-    setAiGenerateState('done');
+    setAiGenerateState('reviewing');
   }, [generateDancerCache]);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
@@ -203,8 +187,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
       <Guide id="generate-panel" glowSpeed={glowSpeed}>
-        <Heading5 className={moduleStyles.heading}> Use AI</Heading5>
-        {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
+        {(aiGenerateState === 'generating' ||
+          aiGenerateState === 'reviewing') && (
           <div className={moduleStyles.textArea}>{promptText}</div>
         )}
         {aiGenerateState === 'none' && (
@@ -261,29 +245,38 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             )}
           </>
         )}
+
         {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
+
+        {aiGenerateState === 'reviewing' && (
+          <>
+            <div>Here is the dancer that was generated. Do you like it?</div>
+
+            <div className={moduleStyles.buttonRow}>
+              <Button
+                ariaLabel={"No. Let's try again."}
+                text={"No. Let's try again."}
+                type="primary"
+                color="black"
+                size="s"
+                onClick={() => setAiGenerateState('none')}
+              />
+
+              <Button
+                ariaLabel={"Yes. Let's continue."}
+                text={"Yes. Let's continue."}
+                type="primary"
+                color="black"
+                size="s"
+                onClick={() => setAiGenerateState('done')}
+              />
+            </div>
+          </>
+        )}
+
         {aiGenerateState === 'done' && (
           <>
-            <div>Here is the dancer that was generated.</div>
-
-            <Button
-              ariaLabel={'Generate again'}
-              text={'Generate again'}
-              type="primary"
-              color="black"
-              size="s"
-              iconLeft={{iconName: 'sparkles'}}
-              onClick={generateDancer}
-            />
-
-            <Button
-              ariaLabel={'Adjust prompt'}
-              text={'Adjust prompt'}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => setAiGenerateState('none')}
-            />
+            <div>Great! Let's continue.</div>
 
             <Button
               ariaLabel={'Continue'}
@@ -296,6 +289,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             />
           </>
         )}
+
         <BackToParentProject
           text="Go to Hub"
           iconLeft={{iconName: 'home'}}
