@@ -441,6 +441,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             id={resourcePanelLinksElementId}
             className={classNames(styles.bottomTabs)}
           >
+            <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
             {documentationUrl && (
               <IconButtonWithTooltip
                 id="documentation"
@@ -452,9 +453,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 tooltipDirection="onRight"
                 href={documentationUrl}
                 theme={theme}
+                buttonSize="s"
               />
             )}
-            <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
             <CopyrightButton theme={theme} />
             <div ref={settingsButtonRef}>
               <IconButtonWithTooltip
@@ -467,6 +468,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 tooltipDirection="onRight"
                 onClick={onClickSettingsButton}
                 theme={theme}
+                buttonSize="s"
               />
             </div>
           </div>
@@ -493,6 +495,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                       styles.tabContent,
                       tab !== currentTab && styles.tabContentHidden
                     )}
+                    ref={el => {
+                      if (el) {
+                        el.inert = tab !== currentTab;
+                      }
+                    }}
                   >
                     {availableTabs[tab]}
                   </div>
