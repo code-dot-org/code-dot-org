@@ -284,20 +284,6 @@ steps:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
 
-  # Optional optimization to reduce the size of the cache file we're about to
-  # generate. We manually delete a few large directories created by the build
-  # process which are not necessary to actually run the tests; local caches,
-  # logs, node_modules, etc.
-  - name: sanitize-cache
-    image: codedotorg/code-dot-org:1.16
-    commands:
-      - rm -r ./.venv/ # 214M
-      - rm -r ./apps/.yarn/ # 358M
-      - rm -r ./dashboard/tmp/ # 494M
-      - rm -r ./frontend/node_modules/ # 1.9G (!!!)
-      - rm -r ./frontend/.yarn/ # necessary to remove node_modules
-      - rm -r ./frontend/*/*/node_modules/ # ~115M
-
   - name: cache-staging-ci-build
     image: plugins/s3-cache
     volumes:
@@ -326,6 +312,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 2e4a361ba6611ac39c6db9fc3f7a6dae80a0e657e494a5cfc150aa6953543fb8
+hmac: 017c2f750c43c36090a68e67662a4f86d4aee137f83b7be90da61181e79d8c35
 
 ...

@@ -2,5 +2,7 @@ source 'https://rubygems.org'
 
 ruby '~> 3.1.0'
 
-gem 'aws-sdk-ec2', '~> 1.0'
+gem 'aws-sdk-cloudformation', '~> 1.0'
+gem 'aws-sdk-s3', '~> 1.0'
+gem 'aws-sdk-sts', '~> 1.0'
 gem 'nokogiri', '~> 1.18'
