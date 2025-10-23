@@ -8,7 +8,9 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
@@ -74,6 +76,7 @@ describe('AiDiffContainer', () => {
         has_completed_ai_differentiation_welcome: hasCompletedAiDiffWelcome,
       })
     );
+    store.dispatch(setSections([]));
 
     render(
       <Provider store={store}>
