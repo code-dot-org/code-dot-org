@@ -27,7 +27,7 @@ import {
   ModelParameters,
   AiChatClientType,
   AnalyticsProperties,
-  UserAddedSelectionContextItem,
+  UserAddedSelectionItem,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
@@ -48,7 +48,7 @@ export const submitChatContents = createAsyncThunk(
       hiddenContext?: string;
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
-      userAddedSelectionContext?: UserAddedSelectionContextItem[];
+      userAddedSelectionContextArray?: UserAddedSelectionItem[];
       responseCallback?: (response: string) => string;
     },
     thunkAPI
@@ -63,7 +63,7 @@ export const submitChatContents = createAsyncThunk(
       modelParameters,
       clientType,
       analyticsProperties,
-      userAddedSelectionContext,
+      userAddedSelectionContextArray,
       responseCallback,
     } = newUserMessageInput;
 
@@ -85,7 +85,7 @@ export const submitChatContents = createAsyncThunk(
       chatMessageText: text,
       hiddenContext,
       assets,
-      userAddedSelectionContext,
+      userAddedSelectionContextArray,
       timestamp: Date.now(),
     };
     dispatch(setChatMessagePending(newUserMessage));

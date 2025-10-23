@@ -1,10 +1,10 @@
-export interface UserAddedSelectionContextItem {
+export interface UserAddedSelectionItem {
   sourceCode: string;
   filename: string;
   lineReference?: {start: number; end: number};
   displayName: string;
 }
 
-export type UserAddedSelectionContext = {
-  [key: string]: UserAddedSelectionContextItem;
+export type DisplayNameToUserAddedSelection = {
+  [key: string]: UserAddedSelectionItem;
 };

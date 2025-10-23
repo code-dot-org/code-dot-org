@@ -25,7 +25,7 @@ import {
   SaveError,
   AiChatClientType,
   WorkspaceTeacherViewTab,
-  UserAddedSelectionContextItem,
+  UserAddedSelectionItem,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -58,7 +58,7 @@ const initialState: AichatState = {
   showResetMessage: false,
   hasSetStartingCustomizations: false,
   chatWorkspaceSelectedTab: null,
-  userAddedSelectionContext: {},
+  displayNameToUserAddedSelection: {},
 };
 
 const aichatSlice = createSlice({
@@ -340,20 +340,20 @@ const aichatSlice = createSlice({
     },
     addItemToUserAddedSelectionContext(
       state,
-      action: PayloadAction<UserAddedSelectionContextItem>
+      action: PayloadAction<UserAddedSelectionItem>
     ) {
-      state.userAddedSelectionContext[action.payload.displayName] =
+      state.displayNameToUserAddedSelection[action.payload.displayName] =
         action.payload;
     },
     removeItemFromUserAddedSelectionContext(
       state,
       action: PayloadAction<string>
     ) {
-      state.userAddedSelectionContext[action.payload] &&
-        delete state.userAddedSelectionContext[action.payload];
+      state.displayNameToUserAddedSelection[action.payload] &&
+        delete state.displayNameToUserAddedSelection[action.payload];
     },
     clearUserAddedSelectionContext(state) {
-      state.userAddedSelectionContext = {};
+      state.displayNameToUserAddedSelection = {};
     },
   },
 });

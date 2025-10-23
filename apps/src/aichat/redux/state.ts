@@ -11,7 +11,7 @@ import {
   ViewMode,
   AiChatClientType,
   WorkspaceTeacherViewTab,
-  UserAddedSelectionContext,
+  DisplayNameToUserAddedSelection,
 } from '../types';
 
 export interface AichatState {
@@ -61,5 +61,5 @@ export interface AichatState {
   showResetMessage: boolean;
   // The tab selected when a teacher is viewing a student's chat history.
   chatWorkspaceSelectedTab: WorkspaceTeacherViewTab | null;
-  userAddedSelectionContext: UserAddedSelectionContext;
+  displayNameToUserAddedSelection: DisplayNameToUserAddedSelection;
 }
