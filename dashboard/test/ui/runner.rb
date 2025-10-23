@@ -61,7 +61,7 @@ def main(options)
   ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{start_time}"
 
   open_log_files
-  configure_for_eyes if $options.run_eyes_tests
+  configure_for_eyes if $options.run_eyes_tests && !CDO.disable_all_eyes_running
   report_tests_starting
   run_status_page_url = generate_status_page(start_time) if options.with_status_page
 
@@ -434,13 +434,13 @@ def configure_for_eyes
 end
 
 def applitools_batch_url
-  return nil unless $options.run_eyes_tests
+  return nil unless $options.run_eyes_tests && !CDO.disable_all_eyes_running
   "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV.fetch('BATCH_ID', nil)}&hideBatchList=true"
 end
 
 def report_tests_starting
   ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
-  if $options.run_eyes_tests
+  if $options.run_eyes_tests && !CDO.disable_all_eyes_running
     ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV.fetch('BATCH_NAME', nil)}</a>."
   end
 end
