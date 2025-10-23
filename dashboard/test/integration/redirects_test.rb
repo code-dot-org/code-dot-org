@@ -158,10 +158,15 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   end
 
   test 'redirects weblab code studio share link to codeprojects' do
-    # This route is defined based on the value of `CDO.dashboard_hostname` at
-    # initialization time, so we must undo the stub that test_helper adds at
-    # runtime for this to resolve.
-    CDO.unstub(:override_dashboard)
+    # This route is defined based on the value of `CDO.dashboard_hostname`,
+    # which we alter in our test runs by stubbing out `CDO.override_dashboard`.
+    # We could theoretically unstub that value to attempt to mirror the
+    # configuration at the time we load the routes, but we also reload routes
+    # in other tests (see HoneybadgerTest in particular), so there's no
+    # guarantee which version will be loaded when this test executes.
+    #
+    # We must therefore reload the routes ourselves.
+    Rails.application.reload_routes!
 
     get "http://#{CDO.dashboard_hostname}/projects/weblab/abcdef"
     assert_redirected_to "http://#{CDO.codeprojects_hostname}/abcdef/"

@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-21T16:45:05.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Versioning\n\n**Versioning** is  the general idea of saving a \"working” state of a project so you can safely return to it if a future change causes problems.",
+        "imageUrl": "https://images.code.org/4244254e9f655a6063da54815a86b108-Pasted Graphic 14 2.png",
+        "key": "ai-generated-design-lesson3-vocab-panel-versioning-test-2025-8a06019a-aa4c-4074-b3de-2ab0a5dd3a46",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-21 16:47:35 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-22 14:01:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

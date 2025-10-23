@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-17 21:29:15 UTC",
+    "serialized_at": "2025-10-22 16:43:01 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -733,7 +733,7 @@
       "key": "f5323100-0814-4820-9411-4a924229d48b",
       "position": 1,
       "properties": {
-        "progression_name": "Explore \"Customize a Cake\" Flowchart"
+        "progression_name": "Explore a Flowchart"
       },
       "seeding_key": {
         "activity_section.key": "f5323100-0814-4820-9411-4a924229d48b",
@@ -744,10 +744,42 @@
       "key": "9a49f926-0bc6-421c-972f-1874d48f1b63",
       "position": 2,
       "properties": {
-        "progression_name": "Practice with a Markdown File"
+        "progression_name": "Defining a Function with Parameters"
       },
       "seeding_key": {
         "activity_section.key": "9a49f926-0bc6-421c-972f-1874d48f1b63",
+        "lesson_activity.key": "5c337982-9894-44a4-aeb1-4812ee78dd8a"
+      }
+    },
+    {
+      "key": "ceeb2649-0675-4fed-af00-7b2a8ec63992",
+      "position": 3,
+      "properties": {
+        "progression_name": "Trace the User Flow"
+      },
+      "seeding_key": {
+        "activity_section.key": "ceeb2649-0675-4fed-af00-7b2a8ec63992",
+        "lesson_activity.key": "5c337982-9894-44a4-aeb1-4812ee78dd8a"
+      }
+    },
+    {
+      "key": "f83a8e57-afe7-4d10-b530-37acd9cdfd49",
+      "position": 4,
+      "properties": {
+        "progression_name": "Choice Level: Functions with Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "f83a8e57-afe7-4d10-b530-37acd9cdfd49",
+        "lesson_activity.key": "5c337982-9894-44a4-aeb1-4812ee78dd8a"
+      }
+    },
+    {
+      "key": "00739781-d2d1-42ea-8d22-cf485602e28a",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "00739781-d2d1-42ea-8d22-cf485602e28a",
         "lesson_activity.key": "5c337982-9894-44a4-aeb1-4812ee78dd8a"
       }
     },
@@ -810,9 +842,32 @@
       "key": "e85072aa-06b9-41c9-8d77-ee478019227c",
       "position": 1,
       "properties": {
+        "progression_name": "From Mini-Flowchart to Nested If/Else"
       },
       "seeding_key": {
         "activity_section.key": "e85072aa-06b9-41c9-8d77-ee478019227c",
+        "lesson_activity.key": "cbb13877-700f-4ac0-a1bb-dcd15fd3a979"
+      }
+    },
+    {
+      "key": "025d5809-eb77-4b56-a9b0-09774085dd99",
+      "position": 2,
+      "properties": {
+        "progression_name": "Plan in Sketch Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "025d5809-eb77-4b56-a9b0-09774085dd99",
+        "lesson_activity.key": "cbb13877-700f-4ac0-a1bb-dcd15fd3a979"
+      }
+    },
+    {
+      "key": "d7772771-2e51-4b2e-8081-3d7e61193452",
+      "position": 3,
+      "properties": {
+        "progression_name": "Code & Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7772771-2e51-4b2e-8081-3d7e61193452",
         "lesson_activity.key": "cbb13877-700f-4ac0-a1bb-dcd15fd3a979"
       }
     },
@@ -831,9 +886,32 @@
       "key": "e37ee11b-42b1-4540-8bda-b7260fad3791",
       "position": 1,
       "properties": {
+        "progression_name": "Checkboxes --> AND / OR"
       },
       "seeding_key": {
         "activity_section.key": "e37ee11b-42b1-4540-8bda-b7260fad3791",
+        "lesson_activity.key": "fae635c0-e09a-46f7-89d1-fdbf7038fb5b"
+      }
+    },
+    {
+      "key": "e98ca1fd-69fe-4ef2-9ae3-08b750ebadc8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Logic Table to Sketch Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "e98ca1fd-69fe-4ef2-9ae3-08b750ebadc8",
+        "lesson_activity.key": "fae635c0-e09a-46f7-89d1-fdbf7038fb5b"
+      }
+    },
+    {
+      "key": "2d903e05-c362-41b0-bdf8-174dec56903b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Code Your Rule"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d903e05-c362-41b0-bdf8-174dec56903b",
         "lesson_activity.key": "fae635c0-e09a-46f7-89d1-fdbf7038fb5b"
       }
     },
@@ -852,9 +930,32 @@
       "key": "5eefe258-bed9-4d3b-81a7-18dbd60c5543",
       "position": 1,
       "properties": {
+        "progression_name": "Toggle Thinking"
       },
       "seeding_key": {
         "activity_section.key": "5eefe258-bed9-4d3b-81a7-18dbd60c5543",
+        "lesson_activity.key": "011b829c-5783-444d-8a60-14be62c2036b"
+      }
+    },
+    {
+      "key": "efa45325-c8a9-40a8-a8ac-38f897672981",
+      "position": 2,
+      "properties": {
+        "progression_name": "Code a Toggle with NOT"
+      },
+      "seeding_key": {
+        "activity_section.key": "efa45325-c8a9-40a8-a8ac-38f897672981",
+        "lesson_activity.key": "011b829c-5783-444d-8a60-14be62c2036b"
+      }
+    },
+    {
+      "key": "c31a57b8-89ac-4477-a9f5-b85c8392f69a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Complex Rules with ! + && + ||"
+      },
+      "seeding_key": {
+        "activity_section.key": "c31a57b8-89ac-4477-a9f5-b85c8392f69a",
         "lesson_activity.key": "011b829c-5783-444d-8a60-14be62c2036b"
       }
     },
@@ -1471,7 +1572,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore \"Customize a Cake\" Flowchart"
+        "progression": "Explore a Flowchart"
       },
       "bonus": false,
       "seeding_key": {
@@ -1493,7 +1594,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice with a Markdown File"
+        "progression": "Defining a Function with Parameters"
       },
       "bonus": false,
       "seeding_key": {
@@ -1515,6 +1616,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Trace the User Flow"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level2-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "ceeb2649-0675-4fed-af00-7b2a8ec63992"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson6-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice Level: Functions with Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "f83a8e57-afe7-4d10-b530-37acd9cdfd49"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson6-level4-test-2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -1532,7 +1677,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1554,7 +1699,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1576,7 +1721,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1598,7 +1743,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1620,8 +1765,74 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "From Mini-Flowchart to Nested If/Else"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson8-level1-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "e85072aa-06b9-41c9-8d77-ee478019227c"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson8-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Plan in Sketch Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson8-level2-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "025d5809-eb77-4b56-a9b0-09774085dd99"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson8-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code & Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson8-level3-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "d7772771-2e51-4b2e-8081-3d7e61193452"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson8-level3-test-2025"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1642,8 +1853,74 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 38,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Checkboxes --> AND / OR"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson9-level1-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "e37ee11b-42b1-4540-8bda-b7260fad3791"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson9-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Logic Table to Sketch Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson9-level2-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "e98ca1fd-69fe-4ef2-9ae3-08b750ebadc8"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson9-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Your Rule"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson9-level3-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "2d903e05-c362-41b0-bdf8-174dec56903b"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson9-level3-test-2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1664,8 +1941,74 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 42,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Toggle Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level1-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "5eefe258-bed9-4d3b-81a7-18dbd60c5543"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson10-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code a Toggle with NOT"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "efa45325-c8a9-40a8-a8ac-38f897672981"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Complex Rules with ! + && + ||"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level3-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "c31a57b8-89ac-4477-a9f5-b85c8392f69a"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson10-level3-test-2025"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1686,7 +2029,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2023,6 +2366,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level2-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "ceeb2649-0675-4fed-af00-7b2a8ec63992"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level4-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "f83a8e57-afe7-4d10-b530-37acd9cdfd49"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-and-algorithmic-decisions-lesson6-pilot-survey_2025",
         "script_level.level_keys": [
           "ai-and-algorithmic-decisions-lesson6-pilot-survey_2025"
@@ -2083,6 +2450,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson8-level1-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson8-level1-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "e85072aa-06b9-41c9-8d77-ee478019227c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson8-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson8-level2-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "025d5809-eb77-4b56-a9b0-09774085dd99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson8-level3-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson8-level3-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "d7772771-2e51-4b2e-8081-3d7e61193452"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-and-algorithmic-decisions-lesson8-pilot-survey_2025",
         "script_level.level_keys": [
           "ai-and-algorithmic-decisions-lesson8-pilot-survey_2025"
@@ -2095,6 +2498,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson9-level1-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson9-level1-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "e37ee11b-42b1-4540-8bda-b7260fad3791"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson9-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson9-level2-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "e98ca1fd-69fe-4ef2-9ae3-08b750ebadc8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson9-level3-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson9-level3-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "2d903e05-c362-41b0-bdf8-174dec56903b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-and-algorithmic-decisions-lesson9-pilot-survey_2025",
         "script_level.level_keys": [
           "ai-and-algorithmic-decisions-lesson9-pilot-survey_2025"
@@ -2103,6 +2542,42 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit2",
         "activity_section.key": "83450682-26a2-45f2-add7-5a233a605d36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson10-level1-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level1-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "5eefe258-bed9-4d3b-81a7-18dbd60c5543"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson10-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "efa45325-c8a9-40a8-a8ac-38f897672981"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson10-level3-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level3-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "c31a57b8-89ac-4477-a9f5-b85c8392f69a"
       }
     },
     {

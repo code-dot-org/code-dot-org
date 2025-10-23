@@ -188,6 +188,7 @@ module AichatAiHelper
     json_schema = aichat_model_customizations['responseJsonSchema']
 
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
+
     client = create_ai_client_instance(client_type, model_id, usage_reporter)
 
     config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type, json_schema)
