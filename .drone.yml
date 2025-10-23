@@ -43,7 +43,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-unoptimized-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -152,7 +152,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-unoptimized-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -284,27 +284,13 @@ steps:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
 
-  # Optional optimization to reduce the size of the cache file we're about to
-  # generate. We manually delete a few large directories created by the build
-  # process which are not necessary to actually run the tests; local caches,
-  # logs, node_modules, etc.
-  - name: sanitize-cache
-    image: codedotorg/code-dot-org:1.16
-    commands:
-      - rm -r ./.venv/ # 214M
-      - rm -r ./apps/.yarn/ # 358M
-      - rm -r ./dashboard/tmp/ # 494M
-      - rm -r ./frontend/node_modules/ # 1.9G (!!!)
-      - rm -r ./frontend/.yarn/ # necessary to remove node_modules
-      - rm -r ./frontend/*/*/node_modules/ # ~115M
-
   - name: cache-staging-ci-build
     image: plugins/s3-cache
     volumes:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-unoptimized-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
