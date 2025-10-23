@@ -10,11 +10,13 @@ shared_redis: &shared_redis
   adapter: redis
   url: <%= CDO.redis_url %>
 
-
 adhoc:
   <<: *shared_redis
 
 levelbuilder:
+  <<: *shared_redis
+
+staging:
   <<: *shared_redis
 
 production:
