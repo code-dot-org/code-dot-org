@@ -115,6 +115,59 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     assert_equal expected_summary, summary
   end
 
+  test 'summarize_for_lab2_properties' do
+    create(:level, name: 'level for bubble choice')
+    input_dsl = <<~DSL
+      name 'bubble choice 1'
+      display_name 'Choose a Bubble'
+      description 'Choose the level you want to complete.'
+
+      sublevels
+      level 'level for bubble choice'
+
+      uses_lab2
+    DSL
+    bubble_choice = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
+    script = create(:script, :in_single_unit_course)
+
+    expected_summary = bubble_choice.summarize
+    expected_summary[:sublevels].each do |sublevel|
+      sublevel.delete(:status)
+    end
+    expected_summary[:levelData] = {
+      sublevels: expected_summary[:sublevels],
+      displayName: 'Choose a Bubble',
+      description: 'Choose the level you want to complete.',
+      hideLetters: false,
+    }
+
+    summary = bubble_choice.summarize_for_lab2_properties(script)
+
+    assert_equal expected_summary[:levelData], summary[:levelData]
+    assert_equal expected_summary[:redirect_url], summary[:finishUrl]
+  end
+
+  test 'summarize_for_lab2_properties with letters hidden' do
+    create(:level, name: 'level for bubble choice')
+    input_dsl = <<~DSL
+      name 'bubble choice 1'
+      display_name 'Choose a Bubble'
+      description 'Choose the level you want to complete.'
+
+      sublevels
+      level 'level for bubble choice'
+
+      uses_lab2
+      hide_letters_lab2
+    DSL
+    bubble_choice = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
+    script = create(:script, :in_single_unit_course)
+
+    summary = bubble_choice.summarize_for_lab2_properties(script)
+
+    assert summary[:levelData][:hideLetters]
+  end
+
   test 'summarize with translations' do
     # Create and save translations to I18n backend
     level_translated_display_name = 'translated BubbleChoice display name'

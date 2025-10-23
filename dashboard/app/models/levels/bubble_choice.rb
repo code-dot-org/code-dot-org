@@ -104,7 +104,7 @@ class BubbleChoice < DSLDefined
       sublevels: summary[:sublevels],
       displayName: summary[:display_name],
       description: summary[:description],
-      hideLetters: summary[:hide_letters_lab2],
+      hideLetters: hide_letters_lab2?,
     }
 
     # Overwrite the incorrect finish URL with the actual next URL.
@@ -130,7 +130,6 @@ class BubbleChoice < DSLDefined
         type: type,
         teacher_markdown: teacher_markdown,
         sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize, unit_group_unit: unit_group_unit),
-        hide_letters_lab2: hide_letters_lab2?,
       }
 
       if script_level
