@@ -114,11 +114,6 @@ namespace :ci do
     Dir.chdir('dashboard') do
       RakeUtils.exec_in_background 'RAILS_ENV=test bundle exec puma -e test'
     end
-    ui_test_browsers = browsers_to_run
-    use_saucelabs = !ui_test_browsers.empty?
-    if use_saucelabs || test_eyes?
-      Cdo::SauceConnect.start_sauce_connect(daemonize: true)
-    end
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
