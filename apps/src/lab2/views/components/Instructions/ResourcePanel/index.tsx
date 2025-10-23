@@ -493,6 +493,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                       styles.tabContent,
                       tab !== currentTab && styles.tabContentHidden
                     )}
+                    ref={el => {
+                      if (el) {
+                        el.inert = tab !== currentTab;
+                      }
+                    }}
                   >
                     {availableTabs[tab]}
                   </div>
