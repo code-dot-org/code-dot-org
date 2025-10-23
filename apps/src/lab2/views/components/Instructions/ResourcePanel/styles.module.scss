@@ -107,7 +107,11 @@
   // Styles applied when the sidebar is collapsed
   &.collapsed .tabButton.tabButton {
     background-color: var(--background-neutral-primary);
-    transition: none;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--background-neutral-secondary);
+    }
 
     &.selected {
       // Adding this border to match the border on non-selected tabs when collapsed
