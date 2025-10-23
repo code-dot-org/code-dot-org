@@ -29,10 +29,6 @@ import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 /* eslint-disable import/order*/
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-// VERY VERY temporary hack to make chatter/index.html.erb as simple/thin as possible
-import * as ActionCable from '@rails/actioncable';
-window.ActionCable = ActionCable;
-
 const store = getStore();
 store.dispatch(setRtlFromDOM());
 // Shim window.console to be safe in IE

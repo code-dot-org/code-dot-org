@@ -8,12 +8,14 @@
   <input type="submit" value="Send">
 </form>
 
-<script>
+<script type="module">
+  import * as ActionCable from "https://esm.sh/@rails/actioncable@8.0.201";
+
   console.log('loading chatter.js, v3');
 
   // ActionCable is currently imported globally in code-studio.js, not a good look, but
   // reduces file count for a simple-as-possible demo
-  const consumer = window.ActionCable.createConsumer();
+  const consumer = ActionCable.createConsumer();
 
   const chatter = consumer.subscriptions.create('ChatterChannel', {
     connected() {
