@@ -22,7 +22,6 @@ interface UserChatMessageEditorProps {
   editorContainerClassName?: string;
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
-  messageContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
   responseCallback?: (response: string) => string;
 
@@ -44,7 +43,6 @@ const UserChatMessageEditor: React.FunctionComponent<
   editorContainerClassName,
   chatButtons,
   hiddenContextCallback,
-  messageContextCallback,
   multimodalAvailable,
   responseCallback,
   levelName,

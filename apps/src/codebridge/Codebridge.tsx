@@ -43,7 +43,6 @@ type CodebridgeProps = {
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;
-  messageContextCallback?: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorContextHelper?: AiTutorContextHelper<object>;
@@ -62,7 +61,6 @@ export const Codebridge = React.memo(
     levelProperties,
     projectPickerSettings,
     hiddenContextCallback,
-    messageContextCallback,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorContextHelper,
@@ -193,7 +191,6 @@ export const Codebridge = React.memo(
           levelProperties,
           projectPickerSettings,
           hiddenContextCallback,
-          messageContextCallback,
           onImageFlagged,
           aiTutorMultimodalEnabled,
           aiTutorChatButtonData,

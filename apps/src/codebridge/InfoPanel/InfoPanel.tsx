@@ -34,7 +34,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     onStop,
     AiTutorResponseView,
     hiddenContextCallback,
-    messageContextCallback,
     startSources,
     aiTutorSystemPromptName,
     aiTutorMultimodalEnabled,
@@ -112,7 +111,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         levelProperties={levelProperties}
         requireRun={appName === 'pythonlab'}
         hiddenContextCallback={hiddenContextCallback}
-        messageContextCallback={messageContextCallback}
         settings={settings}
         versionHistoryProps={{startSources}}
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}

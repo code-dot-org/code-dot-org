@@ -48,24 +48,9 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
     return hiddenContextString;
   }
 
-  private async getMessageContextString(): Promise<string> {
-    const {userSelection} = await this.getAiTutorContext();
-    if (userSelection) {
-      return `The student is asking about this part of their current code:\n\n${userSelection}`;
-    }
-    return '';
-  }
-
   // Hidden context is additional context provided to AI tutor that is not
   // visible to the student and is not stored as part of the chat history.
   getHiddenContextCallback() {
     return this.getHiddenContextString.bind(this);
-  }
-
-  // Message context is additional context provided to AI tutor that is
-  // visible to the student (for example, a snippet of code the student added),
-  // that is included in the chat history.
-  getMessageContextCallback() {
-    return this.getMessageContextString.bind(this);
   }
 }

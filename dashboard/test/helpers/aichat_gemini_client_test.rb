@@ -118,11 +118,11 @@ class AichatGeminiClientTest < AichatAiClientTest
       ]
     end
 
-    let(:contents_with_hidden_and_message_context_and_level_system_prompt) do
+    let(:contents_with_hidden_and_selection_context_and_level_system_prompt) do
       [
         {role: 'user', parts: [{text: 'hello from user'}]},
         {role: 'model', parts: [{text: 'assistant response'}]},
-        {role: 'user', parts: [{text: "new message from user\n\nmessage context text"}]}
+        {role: 'user', parts: [{text: "new message from user\n\nuser added seleection context text"}]}
       ]
     end
 
@@ -215,14 +215,14 @@ class AichatGeminiClientTest < AichatAiClientTest
         end
       end
 
-      context 'when body is well formed with hidden and message context and request succeeds' do
-        let(:new_message) {@new_message_with_hidden_and_message_context}
+      context 'when body is well formed with hidden and selection context and request succeeds' do
+        let(:new_message) {@new_message_with_hidden_and_selection_context}
         let(:level) {@level_with_level_system_prompt}
 
         let(:request_body) do
           request_body_without_contents.merge(
             {
-              contents: contents_with_hidden_and_message_context_and_level_system_prompt,
+              contents: contents_with_hidden_and_selection_context_and_level_system_prompt,
               system_instruction: system_instruction_with_hidden_context_and_level_system_prompt
             }.deep_stringify_keys
           )
