@@ -58,7 +58,7 @@ const initialState: AichatState = {
   showResetMessage: false,
   hasSetStartingCustomizations: false,
   chatWorkspaceSelectedTab: null,
-  displayNameToUserAddedSelection: {},
+  displayNameToUserAddedSelectionItem: {},
 };
 
 const aichatSlice = createSlice({
@@ -342,18 +342,18 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<UserAddedSelectionItem>
     ) {
-      state.displayNameToUserAddedSelection[action.payload.displayName] =
+      state.displayNameToUserAddedSelectionItem[action.payload.displayName] =
         action.payload;
     },
     removeItemFromUserAddedSelectionContext(
       state,
       action: PayloadAction<string>
     ) {
-      state.displayNameToUserAddedSelection[action.payload] &&
-        delete state.displayNameToUserAddedSelection[action.payload];
+      state.displayNameToUserAddedSelectionItem[action.payload] &&
+        delete state.displayNameToUserAddedSelectionItem[action.payload];
     },
     clearUserAddedSelectionContext(state) {
-      state.displayNameToUserAddedSelection = {};
+      state.displayNameToUserAddedSelectionItem = {};
     },
   },
 });

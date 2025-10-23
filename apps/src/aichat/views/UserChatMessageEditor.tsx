@@ -62,8 +62,8 @@ const UserChatMessageEditor: React.FunctionComponent<
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
   );
-  const displayNameToUserAddedSelection = useAppSelector(
-    state => state.aichat.displayNameToUserAddedSelection
+  const displayNameToUserAddedSelectionItem = useAppSelector(
+    state => state.aichat.displayNameToUserAddedSelectionItem
   );
   const dispatch = useAppDispatch();
 
@@ -91,8 +91,8 @@ const UserChatMessageEditor: React.FunctionComponent<
                 ? chatAssets
                 : undefined,
             userAddedSelectionContextArray:
-              Object.values(displayNameToUserAddedSelection).length > 0
-                ? Object.values(displayNameToUserAddedSelection)
+              Object.values(displayNameToUserAddedSelectionItem).length > 0
+                ? Object.values(displayNameToUserAddedSelectionItem)
                 : undefined,
             responseCallback,
           })
@@ -107,7 +107,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       clientType,
       multimodalAvailable,
       chatAssets,
-      displayNameToUserAddedSelection,
+      displayNameToUserAddedSelectionItem,
       responseCallback,
     ]
   );

@@ -24,7 +24,7 @@ let mockState: {aichat: Partial<AichatState>} = {
     chatMessagePending: undefined,
     saveInProgress: false,
     stagedFiles: [],
-    displayNameToUserAddedSelection: {},
+    displayNameToUserAddedSelectionItem: {},
   },
 };
 
@@ -58,7 +58,7 @@ describe('UserChatMessageEditor', () => {
         chatMessagePending: undefined,
         saveInProgress: false,
         stagedFiles: [],
-        displayNameToUserAddedSelection: {},
+        displayNameToUserAddedSelectionItem: {},
       },
     };
   });

@@ -5,6 +5,6 @@ export interface UserAddedSelectionItem {
   displayName: string;
 }
 
-export type DisplayNameToUserAddedSelection = {
+export type DisplayNameToUserAddedSelectionItem = {
   [key: string]: UserAddedSelectionItem;
 };

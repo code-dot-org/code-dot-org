@@ -8,14 +8,14 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import styles from './staged-files-preview.module.scss';
 
 const UserAddedSelectionContextPreview: React.FunctionComponent = () => {
-  const displayNameToUserAddedSelection = useAppSelector(
-    state => state.aichat.displayNameToUserAddedSelection
+  const displayNameToUserAddedSelectionItem = useAppSelector(
+    state => state.aichat.displayNameToUserAddedSelectionItem
   );
   const dispatch = useAppDispatch();
 
   if (
-    !displayNameToUserAddedSelection ||
-    Object.keys(displayNameToUserAddedSelection).length === 0
+    !displayNameToUserAddedSelectionItem ||
+    Object.keys(displayNameToUserAddedSelectionItem).length === 0
   ) {
     return null;
   }
@@ -23,7 +23,7 @@ const UserAddedSelectionContextPreview: React.FunctionComponent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        {Object.entries(displayNameToUserAddedSelection).map(
+        {Object.entries(displayNameToUserAddedSelectionItem).map(
           ([displayName, contextItem]) => (
             <FilePreview
               key={displayName}
