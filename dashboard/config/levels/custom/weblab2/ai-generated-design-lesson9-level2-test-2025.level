@@ -14,7 +14,7 @@
     "disable_edit_run_for_submission": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
-    "ai_tutor_mode": "suggest",
+    "ai_tutor_mode": "guide",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -28,6 +28,6 @@
       "codeEditableAfterSubmit": false
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-15 17:48:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-15 17:48:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 13:54:41 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

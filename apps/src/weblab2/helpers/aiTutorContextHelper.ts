@@ -9,6 +9,8 @@ interface AiTutorWebLab2Params {
   selection: UserAddedSelectionContext;
 }
 
+const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['txt', 'csv', 'md'];
+
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
   private params?: AiTutorWebLab2Params;
 
@@ -25,7 +27,8 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
           .filter(
             file =>
               file.type !== ProjectFileType.VALIDATION &&
-              file.type !== ProjectFileType.SYSTEM_SUPPORT
+              file.type !== ProjectFileType.SYSTEM_SUPPORT &&
+              !LANGUAGES_TO_EXCLUDE_FROM_CONTEXT.includes(file.language)
           )
           .map(file => `filename: ${file.name}\n\`\`\`${file.contents}\`\`\``)
           .join('\n\n')
@@ -42,7 +45,7 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
                     : `lines ${context.lineReference.start} - ${context.lineReference.end}`;
                 return `snippet of file ${context.filename}, ${lineString}\nContents of snippet:\n\`\`\`${context.sourceCode}\`\`\``;
               } else {
-                return `entirety of file ${context.filename}\nContents of file:\n\`\`\`${context.sourceCode}}\`\`\``;
+                return `entirety of file ${context.filename}\nContents of file:\n\`\`\`${context.sourceCode}\`\`\``;
               }
             })
             .join('\n\n')
