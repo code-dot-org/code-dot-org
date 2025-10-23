@@ -1,8 +1,5 @@
 import {AiTutorContext, MaybePromise} from '../types';
 
-const USER_SELECTION_INTRO =
-  'The student is asking about this part of their current code:';
-
 const SOURCE_CODE_INTRO = "Here is the student's current code:";
 
 const HIDDEN_SOURCE_CODE_INTRO =
@@ -44,11 +41,9 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
       validationResults,
       longInstructions,
       documentation,
-      userSelection,
     } = await this.getAiTutorContext();
 
     const hiddenContextString = [
-      userSelection ? `${USER_SELECTION_INTRO} ${userSelection}` : '',
       sourceCode ? `${SOURCE_CODE_INTRO} ${sourceCode}` : '',
       hiddenSourceCode ? `${HIDDEN_SOURCE_CODE_INTRO} ${hiddenSourceCode}` : '',
       readOnlySourceCode
@@ -75,6 +70,8 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
     return hiddenContextString;
   }
 
+  // Hidden context is additional context provided to AI tutor that is not
+  // visible to the student and is not stored as part of the chat history.
   getHiddenContextCallback() {
     return this.getHiddenContextString.bind(this);
   }
