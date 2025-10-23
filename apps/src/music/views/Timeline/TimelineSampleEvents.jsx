@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useRef} from 'react';
 import {useSelector} from 'react-redux';
 
-import UniqueSounds from '../utils/UniqueSounds';
+import UniqueSounds from '@cdo/apps/music/utils/UniqueSounds';
 
 import TimelineElement from './TimelineElement';
 

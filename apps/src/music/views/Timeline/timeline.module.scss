@@ -1,6 +1,6 @@
-@use '../../lab2/views/components/layout/variables.scss' as variables;
+@use '../../../lab2/views/components/layout/variables.scss' as variables;
 @import 'color.scss';
-@import './music-view.module.scss';
+@import '../music-view.module.scss';
 
 .timeline {
   border-radius: $default-border-radius;
@@ -151,11 +151,5 @@
     &Loop {
       border-left: 3px $light_primary_500 solid;
     }
-  }
-  .dancerCanvasContainer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
   }
 }

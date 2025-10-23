@@ -10,23 +10,21 @@ import React, {
 import {useDispatch, useSelector} from 'react-redux';
 
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import appConfig from '../appConfig';
-import {BlockMode, MIN_NUM_MEASURES} from '../constants';
-import musicI18n from '../locale';
+import appConfig from '@cdo/apps/music/appConfig';
+import {BlockMode, MIN_NUM_MEASURES} from '@cdo/apps/music/constants';
+import musicI18n from '@cdo/apps/music/locale';
 import {
   clearSelectedBlockId,
   getBlockMode,
   setStartingPlayheadPosition,
-} from '../redux/musicRedux';
+} from '@cdo/apps/music/redux/musicRedux';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import usePlaybackUpdate from './hooks/usePlaybackUpdate';
+import usePlaybackUpdate from '../hooks/usePlaybackUpdate';
+
 import {TimelineElementClass} from './TimelineElement';
 import TimelineSampleEvents from './TimelineSampleEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
-import {useMusicSelector} from './types';
 
 import moduleStyles from './timeline.module.scss';
 
@@ -41,7 +39,6 @@ const extraMeasures = 8;
 
 interface TimelineProps {
   allowChangeStartingPlayheadPosition?: boolean;
-  danceMove?: string;
   isPredictLevel?: boolean;
 }
 
@@ -50,17 +47,16 @@ interface TimelineProps {
  */
 const Timeline: React.FunctionComponent<TimelineProps> = ({
   allowChangeStartingPlayheadPosition,
-  danceMove,
   isPredictLevel,
 }) => {
-  const isPlaying = useMusicSelector(state => state.music.isPlaying);
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
 
   const blockMode = useSelector(getBlockMode);
   const dispatch = useDispatch();
-  const currentPlayheadPosition = useMusicSelector(
+  const currentPlayheadPosition = useAppSelector(
     state => state.music.currentPlayheadPosition
   );
-  const startingPlayheadPosition = useMusicSelector(
+  const startingPlayheadPosition = useAppSelector(
     state => state.music.startingPlayheadPosition
   );
 
@@ -72,11 +68,11 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
   const measuresToDisplay =
     Math.max(
       MIN_NUM_MEASURES,
-      useMusicSelector(state => state.music.lastMeasure)
+      useAppSelector(state => state.music.lastMeasure)
     ) + extraMeasures;
-  const loopEnabled = useMusicSelector(state => state.music.loopEnabled);
-  const loopStart = useMusicSelector(state => state.music.loopStart);
-  const loopEnd = useMusicSelector(state => state.music.loopEnd);
+  const loopEnabled = useAppSelector(state => state.music.loopEnabled);
+  const loopStart = useAppSelector(state => state.music.loopStart);
+  const loopEnd = useAppSelector(state => state.music.loopEnd);
   const playheadRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
 
@@ -330,13 +326,6 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
         </div>
       </div>
       {loopEnabled && <LoopMarkers loopStart={loopStart} loopEnd={loopEnd} />}
-      <div className={moduleStyles.dancerCanvasContainer}>
-        <DancerCanvas
-          size={availableHeight}
-          measurePosition={positionToUse}
-          move={danceMove}
-        />
-      </div>
     </div>
   );
 };

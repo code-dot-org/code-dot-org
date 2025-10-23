@@ -33,8 +33,7 @@
     "hide_pause_button": "false",
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
-    "ai_code_generate": "true",
-    "generate_dancer_mode": "false",
+    "guide_mode": "aiCodeGenerate",
     "preload_asset_list": null,
     "encrypted_examples": [
 
