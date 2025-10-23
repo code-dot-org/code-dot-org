@@ -7,7 +7,7 @@ module HocLegacy
     CACHE_TTL = 1.hour.freeze
 
     before_action :assign_tutorial, only: %i[begin begin_pixel finish finish_pixel]
-    before_action :require_tutorial, only: %i[show begin begin_pixel finish finish_pixel]
+    before_action :require_tutorial, only: %i[show begin begin_pixel finish_pixel]
 
     after_action :disable_caching, only: %i[begin begin_pixel finish_current finish finish_pixel]
 
@@ -32,7 +32,7 @@ module HocLegacy
 
     # GET /api/hour/finish
     def finish_current
-      session_row = TutorialCompleter.call(controller: self) if activity_tracking_enabled?
+      session_row = TutorialCompleter.call(controller: self) if activity_tracking_enabled? && @tutorial
       redirect_to_congrats_page(session_row:)
     end
 
