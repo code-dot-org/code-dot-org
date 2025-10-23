@@ -37,7 +37,7 @@ const DEFAULT_DANCER = 'default';
 
 const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${DEFAULT_PATH}/${DEFAULT_DANCER}.png`;
 const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${DEFAULT_PATH}/${DEFAULT_DANCER}-metadata.json`;
-const DEFAULT_BODY_URL = `${BASE_HOST}/dancers/bodies/default.png`;
+const DEFAULT_BODY_URL = `${BASE_HOST}/dancers/bodies/default.svg`;
 const DEFAULT_BODY_METADATA_URL = `${BASE_HOST}/dancers/bodies/default.json`;
 
 // Accessory-name mapping used to recolor vector content in the Lottie JSON.
@@ -91,7 +91,7 @@ function getGeneratedDancerAssets(
   const metadata = `${dancerPath}-metadata.json`;
   const adjectiveIndex = adlibOption.split('-').indexOf('adjective');
   const bodyPath = `${BASE_HOST}/dancers/bodies/`;
-  let body = `${bodyPath}default.png`;
+  let body = `${bodyPath}default.svg`;
   let bodyMetadata = `${bodyPath}default.json`;
   if (adjectiveIndex >= 0 && choices && choices[adjectiveIndex]) {
     const adlibBody = `${choices[adjectiveIndex]}-${bodyVariant
@@ -697,4 +697,8 @@ export function recolorBodySvgString(
   });
 
   return new XMLSerializer().serializeToString(doc.documentElement);
+}
+
+export function getSkeletonMetadataUrl(skeletonName: string): string {
+  return `${BASE_HOST}/dancers/input/palettes/${skeletonName}-metadata.json`;
 }

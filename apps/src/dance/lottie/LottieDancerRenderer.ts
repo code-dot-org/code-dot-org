@@ -48,6 +48,7 @@ import {
   fetchText,
   recolorBodySvgString,
   svgStringToDataUrl,
+  getSkeletonMetadataUrl,
 } from './LottieDancerUtils';
 
 const TEST_SKELETON = 'duck';
@@ -198,10 +199,10 @@ export default class LottieDancerRenderer {
     this.skeletonNamePromise = (async () => {
       if (!skeletonParam && this.bodyMetadataUrl) {
         try {
-          const bodyMetaData = await fetchJson<{skeletonName?: string}>(
+          const bodyMetaData = await fetchJson<{skeleton?: string}>(
             this.bodyMetadataUrl
           );
-          const skeletonNameFromJson = bodyMetaData?.skeletonName;
+          const skeletonNameFromJson = bodyMetaData?.skeleton;
           if (typeof skeletonNameFromJson === 'string') {
             console.log(
               `Resolved skeleton name "${skeletonNameFromJson}" from body metadata JSON.`
@@ -229,12 +230,38 @@ export default class LottieDancerRenderer {
     const jsonUrl = resolveAnimationUrl(skeletonName, danceMoveLowerCase);
 
     const animData = await fetchJson<LottieJSON>(jsonUrl);
+    const shorten = (url?: string) =>
+      url?.match(/generate\/([^?]+)/)?.[1] || url;
+
+    console.log('Creating Lottie Dancer with:', {
+      dance: shorten(jsonUrl),
+      headDataUrl: shorten(this.headUrl),
+      metadataUrl: shorten(this.metadataUrl),
+      bodyUrl: shorten(this.bodyUrl),
+      bodyMetadataUrl: shorten(this.bodyMetadataUrl),
+    });
 
     // Fetch palette metadata if we have a URL for it.
     let palette: Palette | null = null;
     if (this.metadataUrl) {
-      const metadataJson = await fetchJson<DancerMetadata>(this.metadataUrl);
-      palette = normalizePalette(metadataJson);
+      // Ideally we fetch dancer-specific metadata first. This accompanies the head PNG.
+      try {
+        const metadataJson = await fetchJson<DancerMetadata>(this.metadataUrl);
+        palette = normalizePalette(metadataJson);
+      } catch (e) {
+        // If that fails, try to fetch a default palette based on skeleton name.
+        try {
+          const skeletonMetaJson = await fetchJson<DancerMetadata>(
+            getSkeletonMetadataUrl(skeletonName)
+          );
+          palette = normalizePalette(skeletonMetaJson);
+        } catch {
+          // Ignore failures; palette remains null which means no recoloring.
+          console.warn(
+            `Metadata not found at ${this.metadataUrl} - skipping palette recolor.`
+          );
+        }
+      }
     }
 
     // Recolor assets based on hard-coded accessory-name rules.
@@ -271,8 +298,7 @@ export default class LottieDancerRenderer {
     }
 
     // Replace vector body with an image only if an SVG is successfully fetched and recolored.
-    if (this.bodyUrl && palette) {
-      console.log(this.bodyUrl);
+    if (this.bodyUrl) {
       const bodyRegex = /\b(body)\b/i;
       const bodyPrecomp = findPrecompLayerDeep(animData, bodyRegex);
       if (bodyPrecomp?.refId) {

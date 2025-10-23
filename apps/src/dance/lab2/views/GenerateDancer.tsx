@@ -102,7 +102,7 @@ const adlibs: AdlibsType = {
   },
 };
 
-const bodyVariantCount = 4;
+const bodyVariantCount = 5;
 
 interface DancerGenerateProps {
   adlibOption: string;
