@@ -61,7 +61,7 @@ def main(options)
   ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{start_time}"
 
   open_log_files
-  configure_for_eyes if $options.run_eyes_tests && !CDO.disable_all_eyes_running
+  configure_for_eyes if eyes_status_page?
   report_tests_starting
   run_status_page_url = generate_status_page(start_time) if options.with_status_page
 
@@ -388,23 +388,21 @@ end
 def browser_features
   result = []
 
-  # When both run_ui_tests and run_eyes_tests are true, we run each feature twice
-  run_ui = $options.run_ui_tests
-  run_eyes = $options.run_eyes_tests
+  # When both run_ui_tests and run_eyes_tests are true, we parse each feature file twice
 
   ($browsers.product features_to_run).each do |browser, feature|
     full_feature_path = File.expand_path(feature)
     relative_feature_path = Pathname.new(full_feature_path).relative_path_from(UI_TEST_DIR).to_s
 
     # If running UI tests, add a UI run entry
-    if run_ui
+    if $options.run_ui_tests
       arguments = cucumber_arguments_for_browser(browser, $options, false)
       scenario_count = ParallelTests::Cucumber::Scenarios.all([full_feature_path], test_options: arguments).length
       result << [browser, relative_feature_path, false] if scenario_count > 0
     end
 
     # If running eyes tests, add an eyes run entry
-    if run_eyes
+    if $options.run_eyes_tests
       arguments = cucumber_arguments_for_browser(browser, $options, true)
       scenario_count = ParallelTests::Cucumber::Scenarios.all([full_feature_path], test_options: arguments).length
       result << [browser, relative_feature_path, true] if scenario_count > 0
@@ -424,6 +422,10 @@ def test_type
   end
 end
 
+def eyes_status_page?
+  $options.run_eyes_tests && !CDO.disable_all_eyes_running
+end
+
 def configure_for_eyes
   # Generate a batch ID, unique to this test run.
   # Each Eyes instance will use the same one so that tests from this
@@ -434,13 +436,13 @@ def configure_for_eyes
 end
 
 def applitools_batch_url
-  return nil unless $options.run_eyes_tests && !CDO.disable_all_eyes_running
+  return nil unless eyes_status_page?
   "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV.fetch('BATCH_ID', nil)}&hideBatchList=true"
 end
 
 def report_tests_starting
   ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
-  if $options.run_eyes_tests && !CDO.disable_all_eyes_running
+  if eyes_status_page?
     ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV.fetch('BATCH_NAME', nil)}</a>."
   end
 end
