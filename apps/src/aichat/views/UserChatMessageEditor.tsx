@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useRef} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
+import {createAiTutorUserSelections} from '@cdo/apps/aiTutor/helpers/createAiTutorUserSelections';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {submitChatContents} from '../redux';
@@ -90,10 +91,9 @@ const UserChatMessageEditor: React.FunctionComponent<
               multimodalAvailable && chatAssets.length > 0
                 ? chatAssets
                 : undefined,
-            userAddedSelectionContextArray:
-              Object.values(displayNameToUserAddedSelectionItem).length > 0
-                ? Object.values(displayNameToUserAddedSelectionItem)
-                : undefined,
+            userAddedSelections: createAiTutorUserSelections(
+              displayNameToUserAddedSelectionItem
+            ),
             responseCallback,
           })
         );

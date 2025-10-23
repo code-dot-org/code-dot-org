@@ -8,3 +8,8 @@ export interface UserAddedSelectionItem {
 export type DisplayNameToUserAddedSelectionItem = {
   [key: string]: UserAddedSelectionItem;
 };
+
+export type UserAddedSelections = {
+  messageText: string;
+  items: UserAddedSelectionItem[];
+};
