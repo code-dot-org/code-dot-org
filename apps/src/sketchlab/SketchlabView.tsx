@@ -63,7 +63,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
 
   const onClickStartOver = useCallback(() => {
-    showStartOverDialog('text');
+    showStartOverDialog('custom', commonI18n.startOverGeneric());
   }, [showStartOverDialog]);
 
   const {theme} = useTheme();
