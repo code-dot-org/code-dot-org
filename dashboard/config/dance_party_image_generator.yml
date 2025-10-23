@@ -1,0 +1,16 @@
+default: &default
+  animals: ["frog"]
+  attire: ["headphones"]
+  adjectives: ["basic"]
+  repeats_per_combo: 1
+  namespace: "media/musiclab/generate/dancer/ruby_test"
+  bucket: "cdo-curriculum"
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

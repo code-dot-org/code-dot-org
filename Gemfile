@@ -394,6 +394,9 @@ gem "webrick", "~> 1.9"
 
 gem 'rubyzip'
 
+gem 'chunky_png', '~> 1.4'
+gem 'ruby-openai', '~> 6.5'
+
 # Automatically include all rails engines
 Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
   gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '**/engines/*/*.gemspec'

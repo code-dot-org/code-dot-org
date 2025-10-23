@@ -1,6 +1,7 @@
 module DancePartyImageGenerator
   class ImageGenerator
     DEFAULTS = {width: 1024, height: 1024, model: "gpt-image-1", background: "transparent", retries: 5}.freeze
+    PATHS = Storage::S3Storage::Storage
 
     def initialize(openai:, storage:, prompt_builder:, palette_extractor:, logger: Rails.logger, **opts)
       @openai = openai
@@ -17,8 +18,8 @@ module DancePartyImageGenerator
 
     private def generate_one(item, dest)
       base     = Naming.base_name(item)
-      png_key  = Storage.path_for(dest: dest, base: base, ext: ".png")
-      json_key = Storage.path_for(dest: dest, base: base, ext: "-metadata.json")
+      png_key  = PATHS.path_for(dest: dest, base: base, ext: ".png")
+      json_key = PATHS.path_for(dest: dest, base: base, ext: "-metadata.json")
 
       if AWS::S3.exists_in_bucket(@storage.bucket, @storage.full_key(png_key)) &&
           AWS::S3.exists_in_bucket(@storage.bucket, @storage.full_key(json_key))
