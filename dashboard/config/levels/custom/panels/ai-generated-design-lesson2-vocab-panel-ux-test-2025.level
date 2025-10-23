@@ -11,12 +11,12 @@
     "panels": [
       {
         "text": "# User Experience\n\n**User Experience (UX)** is the overall experience a person has when interacting with a product, system, or service. Good UX means the product is easy to use, efficient, and enjoyable.\n",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/227977e4993401f582aebfe331c0ac51-clipboard-image-1761138387 (1).png",
         "key": "ai-generated-design-lesson2-vocab-panel-ux-test-2025-d283d8d8-1690-43f7-8f80-b84146166342",
-        "layout": "text-top-center"
+        "layout": "text-bottom-right"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-21 15:29:31 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-21 15:29:31 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-22 13:07:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Panels>
