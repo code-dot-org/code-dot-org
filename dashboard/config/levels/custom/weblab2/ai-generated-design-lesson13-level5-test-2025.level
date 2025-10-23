@@ -25,8 +25,9 @@
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
-    "long_instructions": "##Mode: Suggest\r\n\r\n**Use Case**: This is a sample level to utilize in order to use the AI Chat to generate pages using different modes."
+    "long_instructions": "##Mode: Suggest\r\n\r\n**Use Case**: This is a sample level to utilize in order to use the AI Chat to generate pages using different modes.",
+    "project_template_level_name": "ai-generated-design-lesson13-weblab-template-test-2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-21T18:39:47.711+00:00\",\"changed\":[\"cloned from \\\"all-the-aif-things-web-lab-tutor-mode-suggest\\\"\"],\"cloned_from\":\"all-the-aif-things-web-lab-tutor-mode-suggest\"},{\"changed_at\":\"2025-10-21 18:39:50 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-21 20:57:05 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-21T18:39:47.711+00:00\",\"changed\":[\"cloned from \\\"all-the-aif-things-web-lab-tutor-mode-suggest\\\"\"],\"cloned_from\":\"all-the-aif-things-web-lab-tutor-mode-suggest\"},{\"changed_at\":\"2025-10-21 18:39:50 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-21 20:57:05 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-22 15:45:17 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Weblab2>
