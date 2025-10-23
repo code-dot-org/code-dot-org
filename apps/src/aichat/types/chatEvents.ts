@@ -19,12 +19,12 @@ interface BaseChatEvent {
 interface BaseChatMessage extends BaseChatEvent {
   chatMessageText: string;
   hiddenContext?: string;
-  messageContext?: string;
   /** Asset file names to optionally send with text content */
   assets?: ChatAsset[];
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
   userAddedSelectionContext?: UserAddedSelectionContextItem[];
+  userAddedSelectionContextPrompt?: string;
 }
 
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */

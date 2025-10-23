@@ -81,7 +81,6 @@ const UserChatMessageEditor: React.FunctionComponent<
     async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
       if (!disabled) {
         const hiddenContext = await hiddenContextCallback?.();
-        const messageContext = await messageContextCallback?.();
         dispatch(
           submitChatContents({
             text: userMessage,
@@ -98,14 +97,12 @@ const UserChatMessageEditor: React.FunctionComponent<
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
             responseCallback,
-            messageContext,
           })
         );
       }
     },
     [
       disabled,
-      messageContextCallback,
       hiddenContextCallback,
       dispatch,
       modelParameters,
