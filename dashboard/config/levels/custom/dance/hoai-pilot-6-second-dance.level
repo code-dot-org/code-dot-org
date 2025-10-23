@@ -11,6 +11,28 @@
     "helper_libraries": [
       "DanceLab"
     ],
+    "validations": [
+      {
+        "key": "dance-pass",
+        "message": "That looks great!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "pass"
+          }
+        ]
+      },
+      {
+        "key": "dance-fail",
+        "message": "Make sure you add a dancer.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "dance-fail"
+          }
+        ]
+      }
+    ],
     "hide_animation_mode": "true",
     "show_type_hints": "true",
     "use_modal_function_editor": "false",
@@ -59,7 +81,7 @@
     "tts_short_instructions_override": "Connect the `make a new` block and then `dancers do` block into the workspace, and connect them inside the setup block.",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "validation_code": "/*\r\n\r\n//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"danceAiFeedbackNeedNewDancer\");\r\n  }\r\n}\r\n\r\n//go through all sprites\r\nvar madeSpriteDance = false;\r\nsprites.forEach(function(sprite, index) {\r\n  var currentAnimation=sprite.getAnimationLabel();\r\n  if (currentAnimation !== undefined && currentAnimation !== 'anim0') {\r\n      madeSpriteDance = true;\r\n  }\r\n});\r\n\r\nif (nativeAPI.getTime(\"measures\") > 5) {\r\n  var hasChangeMoveEachLR = nativeAPI.getUserBlockTypes().indexOf('Dancelab_changeMoveEachLR') > -1;\r\n  if (madeSpriteDance) {\r\n    nativeAPI.pass();\r\n  } else if (hasChangeMoveEachLR) {\r\n\tvar spritesCalledToChangeMove = World.spriteGroupsCalledToChangeMove;\r\n    var existingSprites = World.spriteStyles;\r\n    console.log(World.spriteGroupsCalledToChangeMove);\r\n    console.log(World.spriteStyles);\r\n    var hasWrongSequence = false;\r\n    for (var i = 0; i < spritesCalledToChangeMove.length; i++) {\r\n      var calledSprite = spritesCalledToChangeMove[i];\r\n      if (existingSprites.includes(calledSprite)) {\r\n        hasWrongSequence = true;\r\n      }\r\n    }\r\n    if (hasWrongSequence) {\r\n\t\tconsole.log('Incorrect sequence');\r\n      \tnativeAPI.fail(\"danceAiFeedbackSequence\");\r\n    } else {\r\n      \tconsole.log('You have a `do dance move` block but the wrong dancer is selected.');\r\n  \t\tnativeAPI.fail(\"danceAiFeedbackMatchDancer\");\r\n    }\r\n  } else {\r\n    nativeAPI.fail(\"danceAiFeedbackNewMove\");\r\n  }\r\n}\r\n\r\n*/",
+    "validation_code": "if (nativeAPI.getTime(\"measures\") >= 4.5) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"dance-fail\");\r\n  } else {\r\n    nativeAPI.pass();\r\n  }\r\n}",
     "song_selection": [
       "asitwas_harrystyles",
       "bornthisway_ladygaga",
@@ -71,9 +93,7 @@
     ],
     "encrypted_examples": "QcyE1JnIa2c7fdVSHVOkbatQQV4OdsWG9/WbEyZMlHVc9qqXh0SPTAxAdr7o\nYoaj2AvdWdpsweQIUzGmgIErkA==\n",
     "uses_lab2": "true",
-    "generate_dancer_mode": "false",
-    "ai_code_generate": "false",
-    "ai_code_preview": "true",
+    "guide_mode": "instructions",
     "toolbox_definition": {
       "contents": [
         {
