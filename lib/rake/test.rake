@@ -108,7 +108,7 @@ namespace :test do
         # Parallel tests don't seem to run more quickly over 16 processes.
         ChatClient.log "Detected #{RakeUtils.nproc} processors."
         CDO.log.info "CDO.log.info is also working"
-        ENV['PARALLEL_TEST_PROCESSORS'] = '7'
+        ENV['PARALLEL_TEST_PROCESSORS'] = '9'
 
         # Hash of all seed-data and -config content
         #
