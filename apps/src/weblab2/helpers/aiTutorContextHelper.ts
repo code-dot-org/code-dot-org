@@ -9,26 +9,30 @@ interface AiTutorWebLab2Params {
   selection: UserAddedSelectionContext;
 }
 
-export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
-  private aiTutorContext: AiTutorContext = {};
+const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['txt', 'csv', 'md'];
 
-  protected getAiTutorContext(): AiTutorContext {
-    return this.aiTutorContext;
+export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
+  private params?: AiTutorWebLab2Params;
+
+  override setAiTutorContext(params: AiTutorWebLab2Params): void {
+    this.params = params;
   }
 
-  setAiTutorContext({
-    source,
-    longInstructions,
-    selection,
-  }: AiTutorWebLab2Params) {
+  protected override getAiTutorContext(): AiTutorContext {
+    if (!this.params) return {};
+
+    const {source, longInstructions, selection} = this.params;
     const sourceCode = source
       ? Object.values(source.files)
           .filter(
             file =>
               file.type !== ProjectFileType.VALIDATION &&
-              file.type !== ProjectFileType.SYSTEM_SUPPORT
+              file.type !== ProjectFileType.SYSTEM_SUPPORT &&
+              !LANGUAGES_TO_EXCLUDE_FROM_CONTEXT.includes(file.language)
           )
-          .map(file => `filename: ${file.name}\n\`\`\`${file.contents}\`\`\``)
+          .map(
+            file => `filename: ${file.name}\n${this.codeBlock(file.contents)}`
+          )
           .join('\n\n')
       : undefined;
 
@@ -41,15 +45,21 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
                   context.lineReference.start === context.lineReference.end
                     ? `line ${context.lineReference.start}`
                     : `lines ${context.lineReference.start} - ${context.lineReference.end}`;
-                return `snippet of file ${context.filename}, ${lineString}\nContents of snippet:\n\`\`\`${context.sourceCode}\`\`\``;
+                return `snippet of file ${
+                  context.filename
+                }, ${lineString}\nContents of snippet:\n${this.codeBlock(
+                  context.sourceCode
+                )}`;
               } else {
-                return `entirety of file ${context.filename}\nContents of file:\n\`\`\`${context.sourceCode}}\`\`\``;
+                return `entirety of file ${
+                  context.filename
+                }\nContents of file:\n${this.codeBlock(context.sourceCode)}`;
               }
             })
             .join('\n\n')
         : undefined;
 
-    this.aiTutorContext = {
+    return {
       sourceCode,
       longInstructions,
       userSelection,

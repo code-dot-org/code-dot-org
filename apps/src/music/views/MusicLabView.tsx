@@ -23,6 +23,7 @@ import {
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
+import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
@@ -43,7 +44,6 @@ import {
   getBlockMode,
   InstructionsPosition,
   setCurrentPlayheadPosition,
-  setShowInstructions,
   showCallout,
 } from '../redux/musicRedux';
 import {MusicExemplarSettings, MusicLevelData} from '../types';
@@ -116,11 +116,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   );
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
-  const showGenerateCode =
-    AppConfig.getValue('ai-generate') === 'true' ||
-    (levelProperties.levelData as MusicLevelData).aiCodeGenerate;
-  const showInstructions =
-    useAppSelector(state => state.music.showInstructions) && !showGenerateCode;
+  const guideMode = (levelProperties.levelData as MusicLevelData).guideMode;
   const instructionsPosition = useAppSelector(
     state => state.music.instructionsPosition
   );
@@ -153,6 +149,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
+  const isStandaloneCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
   const timelineAreaRef = useRef<HTMLDivElement | null>(null);
   const {dancerMeasurePosition, danceMove, dancerSize} = useTimelineDancer({
     isPlaying,
@@ -166,10 +165,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       progressManager.setValidator(validator);
     }
   }, [progressManager, validator, appName]);
-
-  useEffect(() => {
-    dispatch(setShowInstructions(!!levelProperties.longInstructions));
-  }, [dispatch, levelProperties.longInstructions]);
 
   useEffect(() => {
     if (isStartMode) {
@@ -324,6 +319,26 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       )}
     >
       {allowPackSelection && <PackDialog player={player} />}
+      {guideMode === 'instructions' && (
+        <GuideInstructions
+          levelProperties={levelProperties}
+          isRunning={isPlaying}
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+        />
+      )}
+      {guideMode === 'aiCodeGenerate' && (
+        <GenerateCode
+          adlibOption={aiCodeGenerateAdlibOption}
+          adlib={aiCodeGenerateAdlib}
+          levelProperties={levelProperties}
+          setPlaying={setPlaying}
+          hasEdited={hasEdited}
+          setToolboxVisibility={visible =>
+            blocklyWorkspace.setToolboxVisibility(visible)
+          }
+        />
+      )}
       <div
         id="work-area"
         className={classNames(moduleStyles.workArea, {
@@ -333,12 +348,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             instructionsPosition === InstructionsPosition.RIGHT,
         })}
       >
-        {showInstructions && (
+        {!guideMode && (
           <div
             id="instructions-area"
             className={classNames(
               moduleStyles.instructionsArea,
-              moduleStyles.instructionsSide
+              moduleStyles.instructionsSide,
+              isStandaloneCollapsed && moduleStyles.instructionsCollapsed
             )}
           >
             <ResourcePanel
@@ -366,24 +382,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               hideContinueIfDisabled={true}
               hideNavigation={false}
               styleNavigationAsBubble={true}
+              documentationUrl={'/docs/ide/music'}
             />
           </div>
         )}
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
-          {showGenerateCode && (
-            <GenerateCode
-              adlibOption={aiCodeGenerateAdlibOption}
-              adlib={aiCodeGenerateAdlib}
-              levelProperties={levelProperties}
-              setPlaying={setPlaying}
-              hasEdited={hasEdited}
-              setToolboxVisibility={visible =>
-                blocklyWorkspace.setToolboxVisibility(visible)
-              }
-            />
-          )}
-
           <PanelContainer
             id="workspace-panel"
             headerContent={<WorkspaceHeader />}
@@ -395,7 +399,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 clearCode={clearCode}
                 allowPackSelection={allowPackSelection}
                 skipUrl={skipUrl}
-                showSettings={!showInstructions}
                 hideChaff={hideChaff}
               />
             }

@@ -63,7 +63,9 @@ module Lti
       # Displays the onboarding portal for creating a new LTI Integration
       def new
         @form_data = {}
-        @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.map do |key, value|
+        @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.filter_map do |key, value|
+          # TODO: Remove this special case when ClassLink support is ready
+          next if key == :classlink && !DCDO.get('classlink_lms_enabled', false)
           {platform: key, name: value[:name]}
         end
 

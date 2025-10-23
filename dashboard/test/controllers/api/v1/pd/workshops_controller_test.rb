@@ -633,6 +633,13 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
       workshop.sessions.map(&:session_info_for_emails),
       expected_post_update_session_info
     ).times(5)
+    Pd::WorkshopMailjetMailer.expects(:send_rp_workshop_detail_change_notification).with(
+      workshop,
+      [{name: 'Description', old: 'A really cool workshop', new: workshop_params[:description]}],
+      true,
+      workshop.sessions.map(&:session_info_for_emails),
+      expected_post_update_session_info
+    )
 
     put :update, params: {
       id: workshop.id,
@@ -652,6 +659,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     create(:pd_enrollment, application_id: application.id, user: teacher, workshop: workshop)
 
     Pd::WorkshopMailjetMailer.expects(:send_teacher_workshop_detail_change_notification).times(2)
+    Pd::WorkshopMailjetMailer.expects(:send_rp_workshop_detail_change_notification).times(1)
 
     params = workshop_params.merge(course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, virtual: true, funding_type: nil)
 
@@ -670,6 +678,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
       create(:pd_enrollment, workshop: @workshop)
     end
     Pd::WorkshopMailjetMailer.expects(:send_teacher_workshop_detail_change_notification).never
+    Pd::WorkshopMailjetMailer.expects(:send_rp_workshop_detail_change_notification).never
 
     put :update, params: {
       id: @workshop.id,
