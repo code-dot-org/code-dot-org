@@ -40,7 +40,7 @@ const getAnswerJsonSchema = (isCopyCodeMode: boolean): JsonObjectSchema => {
           additionalProperties: false,
         },
         description:
-          '`html` and/or `css` fences. When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation. The student will need to copy and paste this code into their Files Area.',
+          '`html` and/or `css` fences. When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation. The student will need to copy and paste this code into their project.',
       },
       explanation: {
         type: 'string',
