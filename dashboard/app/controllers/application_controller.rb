@@ -418,7 +418,9 @@ class ApplicationController < ActionController::Base
   # Creates a statsig stable id for use of signed-out user tracking.
   # This cookie is used by the Statsig SDK for both JS and Ruby.
   protected def initialize_statsig_stable_id
-    cookies[:statsig_stable_id] ||= {value: SecureRandom.uuid, domain: :all, path: '/'}
+    existing_stable_id = cookies[:statsig_stable_id]
+    session[:statsig_stable_id] = existing_stable_id if existing_stable_id.present?
+    session[:statsig_stable_id] ||= SecureRandom.uuid
   end
 
   private def pairing_still_enabled

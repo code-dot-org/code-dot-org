@@ -50,7 +50,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
           expect(Metrics::Events).to have_received(:log_event).with(
             event_name: 'Global Edition Region Selected',
-            request: anything,
+            session: anything,
             metadata: {
               region: ge_region,
               locale: ge_region_locale,
@@ -193,7 +193,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
           expect(Metrics::Events).not_to have_received(:log_event).with(
             event_name: 'Global Edition Region Selected',
-            request: anything,
+            session: anything,
             metadata: anything,
           )
 
@@ -214,7 +214,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
             expect(Metrics::Events).to have_received(:log_event).with(
               event_name: 'Global Edition Region Selected',
-              request: anything,
+              session: anything,
               metadata: {
                 region: nil,
                 locale: locale,
