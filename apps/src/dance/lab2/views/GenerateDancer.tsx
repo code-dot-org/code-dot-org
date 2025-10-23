@@ -20,6 +20,8 @@ import {getConfigValue} from '../../lottie/LottieDancerUtils';
 
 import moduleStyles from './generate-dancer.module.scss';
 
+const BODY_VARIANT_COUNT = 5;
+
 const adlibs: AdlibsType = {
   'animal-02': {
     template: 'Please generate a dancer.  It should look like {animal}.',
@@ -86,8 +88,6 @@ const adlibs: AdlibsType = {
   },
 };
 
-const bodyVariantCount = 5;
-
 interface DancerGenerateProps {
   adlibOption: string;
   levelProperties: DanceLevelProperties;
@@ -134,7 +134,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     let bodyVariant = 0;
     do {
       variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
-      bodyVariant = getRandomInt(0, bodyVariantCount - 1);
+      bodyVariant = getRandomInt(0, BODY_VARIANT_COUNT - 1);
     } while (variantHistory.current.includes(variant));
     const newVariantsHistory = [...variantHistory.current, variant];
     // Keep the array length at a maximum of 3

@@ -28,10 +28,6 @@ const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
 
 const DEFAULT_IMAGE_SIZE = 1024;
 
-const PRIMARY_TOKEN = '#33FF21';
-const SECONDARY_TOKEN = '#808080';
-const TERTIARY_TOKEN = '#4C4C4C';
-
 const DEFAULT_PATH = 'default';
 const DEFAULT_DANCER = 'default';
 
@@ -40,6 +36,11 @@ const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${DEFAULT_PATH}/${DEFAULT_DANC
 const DEFAULT_BODY_URL = `${BASE_HOST}/dancers/bodies/default.svg`;
 const DEFAULT_BODY_METADATA_URL = `${BASE_HOST}/dancers/bodies/default.json`;
 
+// Expected colors to replace in body SVGs.
+const BODY_SVG_PRIMARY = '#33FF21';
+const BODY_SVG_SECONDARY = '#808080';
+const BODY_SVG_TERTIARY = '#4C4C4C';
+
 // Accessory-name mapping used to recolor vector content in the Lottie JSON.
 const BASE_ACCESSORY_MAP = {
   secondaryArm: new Set(['bracelet', 'shirt']),
@@ -47,12 +48,15 @@ const BASE_ACCESSORY_MAP = {
   tertiaryLeg: new Set(['cuff']),
 };
 
-// The cat's bracelets are part of the 'shirt low' layers. The body-color arts are
+// The cat's bracelets are part of the 'shirt low' layers. The body-color arm parts are
 // incorrectly labeled as 'cuff' layers, so we exclude those from tertiary.
 const CAT_ACCESSORY_MAP = {
   secondaryArm: new Set(['shirt']),
 };
 
+// The unicorn's accessories use the same labels on both arms and legs. Creating two
+// unique sets allows us to assign different colors to arm vs. leg accessories, giving
+// the impression shirts and pants with different colors.
 const UNICORN_ACCESSORY_MAP = {
   secondaryArm: new Set(['cuff', 'shirt']),
   tertiaryLeg: new Set(['cuff', 'shirt']),
@@ -656,10 +660,11 @@ export function recolorBodySvgString(
 
   /** Maps canonical source tokens (lowercased) to palette colors. */
   const tokenToTarget = new Map<string, string>();
-  if (primaryHex) tokenToTarget.set(PRIMARY_TOKEN.toLowerCase(), primaryHex);
+  if (primaryHex) tokenToTarget.set(BODY_SVG_PRIMARY.toLowerCase(), primaryHex);
   if (secondaryHex)
-    tokenToTarget.set(SECONDARY_TOKEN.toLowerCase(), secondaryHex);
-  if (tertiaryHex) tokenToTarget.set(TERTIARY_TOKEN.toLowerCase(), tertiaryHex);
+    tokenToTarget.set(BODY_SVG_SECONDARY.toLowerCase(), secondaryHex);
+  if (tertiaryHex)
+    tokenToTarget.set(BODY_SVG_TERTIARY.toLowerCase(), tertiaryHex);
 
   const parser = new DOMParser();
   const doc = parser.parseFromString(svgText, 'image/svg+xml');
