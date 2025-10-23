@@ -1,6 +1,5 @@
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import experiments from '@cdo/apps/util/experiments';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
 export const DEFAULT_AI_TUTOR_MODE = 'suggest';
@@ -20,14 +19,7 @@ export const getPromptNameFromMode = (mode: string | undefined) => {
   if (mode && Object.keys(MODE_MAP).includes(mode)) {
     suffix = mode;
   }
-  if (
-    experiments.isEnabledAllowingQueryString(
-      experiments.WEBLAB2_STRUCTURED_OUTPUT
-    ) ||
-    experiments.isEnabledAllowingQueryString(experiments.WEBLAB2_ACCEPT_REJECT)
-  ) {
-    suffix += '-structured';
-  }
+  suffix += '-structured';
   return `${prefix}${suffix}`;
 };
 
