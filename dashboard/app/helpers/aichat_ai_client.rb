@@ -107,13 +107,6 @@ class AichatAiClient
     File.extname(filename) == '.pdf'
   end
 
-  # Get message text, including any hidden context
-  private def get_message_text(message)
-    text = message['chatMessageText']
-    text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
-    text
-  end
-
   private def raise_not_implemented_error
     raise NotImplementedError, "This method must be implemented in the derived class"
   end
