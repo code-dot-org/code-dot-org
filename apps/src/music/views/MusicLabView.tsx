@@ -277,7 +277,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     () => progressManager?.resetValidation(),
     [progressManager]
   );
-  usePlaybackUpdate(doPlaybackUpdate, resetValidation);
+  usePlaybackUpdate(isPlaying, doPlaybackUpdate, resetValidation);
 
   const onInstructionsTextClick = useCallback(
     (id: string) => {
