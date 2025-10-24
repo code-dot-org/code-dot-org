@@ -3,7 +3,6 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -111,7 +110,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const variantHistory = useRef<number[]>([]);
 
   const [aiGenerateState, setAiGenerateState] = useState<
-    'none' | 'generating' | 'reviewing' | 'done'
+    'none' | 'generating' | 'reviewing'
   >('none');
   const [dancerMetadata, setDancerMetadata] = useState<string | null>(
     localStorage.getItem('dancer-ai-generate')
@@ -150,7 +149,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
     await generateDancerCache();
-    setAiGenerateState('none');
+    setAiGenerateState('reviewing');
   }, [generateDancerCache]);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
@@ -171,9 +170,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   }, []);
 
   const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
-
-  const aiGenerateButtonAtBottom =
-    queryParams('ai-generate-button-at-bottom') === 'true';
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
@@ -223,20 +219,19 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                     setChoices(choices);
                     variantHistory.current = [];
                   }}
-                >
-                  {!aiGenerateButtonAtBottom && (
-                    <Button
-                      ariaLabel={'Generate dancer'}
-                      text={'Generate dancer'}
-                      type="primary"
-                      color="black"
-                      size="s"
-                      iconLeft={{iconName: 'sparkles'}}
-                      onClick={generateDancer}
-                      className={moduleStyles.buttonWide}
-                    />
-                  )}
-                </Adlib>
+                />
+                <div className={moduleStyles.buttonRow}>
+                  <Button
+                    ariaLabel={'Generate dancer'}
+                    text={'Generate dancer'}
+                    type="primary"
+                    color="black"
+                    size="s"
+                    iconLeft={{iconName: 'sparkles'}}
+                    onClick={generateDancer}
+                    className={moduleStyles.buttonWide}
+                  />
+                </div>
               </>
             )}
           </>
@@ -254,6 +249,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 color="black"
                 size="s"
                 onClick={() => setAiGenerateState('none')}
+                className={moduleStyles.buttonWide}
               />
 
               <Button
@@ -262,38 +258,11 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 type="primary"
                 color="black"
                 size="s"
-                onClick={() => setAiGenerateState('done')}
+                onClick={() => dispatch(continueOrFinishLesson())}
+                className={moduleStyles.buttonWide}
               />
             </div>
           </>
-        )}
-        {aiGenerateState === 'none' && (
-          <div className={moduleStyles.buttonRow}>
-            {aiGenerateButtonAtBottom && (
-              <Button
-                ariaLabel={'Generate dancer'}
-                text={'Generate dancer'}
-                type="primary"
-                color="black"
-                size="s"
-                iconLeft={{iconName: 'sparkles'}}
-                onClick={generateDancer}
-                className={moduleStyles.buttonWide}
-              />
-            )}
-            <Button
-              ariaLabel={'Continue'}
-              text={'Continue'}
-              type="primary"
-              color="black"
-              size="s"
-              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-              onClick={() => dispatch(continueOrFinishLesson())}
-              className={
-                aiGenerateButtonAtBottom ? moduleStyles.buttonWide : undefined
-              }
-            />
-          </div>
         )}
         <BackToParentProject
           text="Go to Hub"

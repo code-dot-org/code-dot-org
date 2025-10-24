@@ -3,22 +3,22 @@
 }
 
 .textArea {
-  font-size: 20px;
-  line-height: 1.5;
   width: 100%;
-  height: 40%;
-  padding: 10px 20px;
-  margin: 0;
+  height: 100%;
   box-sizing: border-box;
-  color: white;
-  background-color: #55146a;
-  border: none;
-  resize: vertical;
+  gap: 12px;
+  background: var(--neutral-base-black);
   border-radius: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  font-size: 14px;
+  padding: 16px;
+}
 
-  &Small {
-    font-size: 14px;
-  }
+.buttonWide {
+  flex: 1;
 }
 
 .buttonRow {

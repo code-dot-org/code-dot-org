@@ -1,5 +1,4 @@
 import {Button} from '@code-dot-org/component-library/button';
-import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -186,7 +185,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           onChange={evt => setContextText(evt.target.value)}
           value={contextText}
           rows={6}
-          className={classNames(styles.textArea, styles.textAreaSmall)}
+          className={styles.textArea}
         />
       )}
 
@@ -255,6 +254,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               color="black"
               size="s"
               onClick={() => dispatch(setAiGenerateState('none'))}
+              className={styles.buttonWide}
             />
 
             <Button
@@ -264,6 +264,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               color="black"
               size="s"
               onClick={() => dispatch(setAiGenerateState('editing'))}
+              className={styles.buttonWide}
             />
           </div>
         </>
