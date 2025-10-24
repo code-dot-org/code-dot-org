@@ -6,12 +6,12 @@ import {ImagePreview} from '@cdo/apps/templates/instructions/AniGifPreview';
 import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ImagePreview', () => {
-  it('contains aria-label when alt prop is present', () => {
+  it('contains aria-label with click instructions when alt prop is present', () => {
     const onClickCallback = () => {};
     const wrapper = shallow(
       <ImagePreview
         url="example.gif"
-        alt="this is alt text"
+        alt="This is alt text"
         showInstructionsDialog={onClickCallback}
         noVisualization={false}
       />
@@ -33,13 +33,13 @@ describe('ImagePreview', () => {
           }}
           role="button"
           tabIndex={0}
-          aria-label="this is alt text"
+          aria-label="Click or press Enter to view larger image. This is alt text"
         />
       </div>
     );
   });
 
-  it('contains aria-hidden when alt prop is not present', () => {
+  it('contains aria-label with click instructions only when alt prop is not present', () => {
     const onClickCallback = () => {};
     const wrapper = shallow(
       <ImagePreview
@@ -65,7 +65,7 @@ describe('ImagePreview', () => {
           }}
           role="button"
           tabIndex={0}
-          aria-hidden="true"
+          aria-label="Click or press Enter to view larger image"
         />
       </div>
     );

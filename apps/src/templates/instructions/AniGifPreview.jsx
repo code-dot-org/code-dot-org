@@ -13,23 +13,33 @@ class ImagePreviewUnwrapped extends React.Component {
     noVisualization: PropTypes.bool.isRequired,
   };
 
+  static defaultProps = {
+    alt: '',
+  };
+
   handleKeyDown = e => {
     if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
+      if (e.key === ' ') {
+        e.preventDefault();
+      }
       this.props.showInstructionsDialog();
     }
   };
 
   render() {
     const {url, alt, showInstructionsDialog, noVisualization} = this.props;
+    let ariaLabel = 'Click or press Enter to view larger image';
+    if (alt) {
+      ariaLabel = `${ariaLabel}. ${alt}`;
+    }
+
     return (
       <div id="ani-gif-preview-wrapper" style={styles.wrapper}>
         <div
           id="ani-gif-preview"
           role="button"
           tabIndex={0}
-          aria-label={alt || undefined}
-          aria-hidden={alt ? undefined : 'true'}
+          aria-label={ariaLabel}
           style={[
             styles.aniGifPreview(url),
             noVisualization && styles.bigPreview,
