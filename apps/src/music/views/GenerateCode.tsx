@@ -172,7 +172,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   }
 
   return (
-    <Guide id="generate-panel" glowSpeed={glowSpeed} modal={modal}>
+    <Guide id="generate-panel" modal={modal}>
       {aiGenerateState === 'none' && levelProperties.longInstructions && (
         <MainInstructionsContent
           instructionsText={levelProperties.longInstructions}
@@ -213,11 +213,11 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           {useAdlib && (
             <Adlib
               adlib={useAdlib}
+              glowSpeed={glowSpeed}
               onChange={(text, choices) => {
                 setPromptText(text);
                 setChoices(choices);
               }}
-              className={styles.textArea}
             />
           )}
           <Button

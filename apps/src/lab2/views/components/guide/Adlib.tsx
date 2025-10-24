@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import {sample} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 import reactStringReplace from 'react-string-replace';
@@ -15,9 +16,10 @@ export type AdlibsType = {
 };
 
 interface AdlibProps {
+  children?: React.ReactNode;
   adlib: AdlibType;
+  glowSpeed?: 'normal' | 'fast';
   onChange: (value: string, choices: string[]) => void;
-  className?: string;
 }
 
 // This component takes a template string with placeholders in {curly braces}
@@ -25,9 +27,10 @@ interface AdlibProps {
 // dropdowns to select the options.  When the selected options change, it calls
 // onChange with the filled-in text.
 const Adlib: React.FunctionComponent<AdlibProps> = ({
+  children,
   adlib,
+  glowSpeed,
   onChange,
-  className,
 }) => {
   const [adlibOptions, setAdlibOptions] = useState<{[key: string]: string}>({});
   const {template, options} = adlib;
@@ -97,7 +100,23 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     onChange(filledAdlibText, choices);
   }, [adlibOptions, choices, filledAdlibText, onChange]);
 
-  return <div className={className}>{adlibHtml}</div>;
+  return (
+    <div
+      className={classNames(
+        styles.adlib,
+        glowSpeed === 'fast'
+          ? styles.adlibFastGlowSpeed
+          : glowSpeed === 'normal'
+          ? styles.adlibNormalGlowSpeed
+          : undefined
+      )}
+    >
+      <div className={styles.adlibInner}>
+        <div>{adlibHtml}</div>
+        {children}
+      </div>
+    </div>
+  );
 };
 
 export default Adlib;
