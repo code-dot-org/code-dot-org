@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-23 00:14:22 UTC",
+    "serialized_at": "2025-10-23 22:27:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -982,8 +982,19 @@
       }
     },
     {
-      "key": "0e0d3db0-7f0b-47c9-8277-6b119b87ad06",
+      "key": "b64e2fbe-7fa5-49fc-aca0-2bd66ade025e",
       "position": 1,
+      "properties": {
+        "progression_name": "\"How To\" Guides"
+      },
+      "seeding_key": {
+        "activity_section.key": "b64e2fbe-7fa5-49fc-aca0-2bd66ade025e",
+        "lesson_activity.key": "376c3c83-c1b5-4496-bca2-8ea0352271bb"
+      }
+    },
+    {
+      "key": "0e0d3db0-7f0b-47c9-8277-6b119b87ad06",
+      "position": 2,
       "properties": {
         "progression_name": "Apply a style sheet"
       },
@@ -994,7 +1005,7 @@
     },
     {
       "key": "b7c776bc-1c59-4ebc-a5a0-5b3b61cc468d",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Vocab: Style Sheet"
       },
@@ -1005,7 +1016,7 @@
     },
     {
       "key": "911ed371-aeea-4856-91fc-f33ffc766880",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Style Challenge"
       },
@@ -1057,13 +1068,13 @@
       }
     },
     {
-      "key": "1d04ca58-c58b-413b-8ac3-db6cc7b7a0e2",
+      "key": "1dc10b7e-fe6f-459d-baa1-a0916b75eb6d",
       "position": 3,
       "properties": {
-        "progression_name": "Vocab: Problem Statement"
+        "progression_name": "User Persona Analysis: Alex"
       },
       "seeding_key": {
-        "activity_section.key": "1d04ca58-c58b-413b-8ac3-db6cc7b7a0e2",
+        "activity_section.key": "1dc10b7e-fe6f-459d-baa1-a0916b75eb6d",
         "lesson_activity.key": "34c64441-ea31-4d1f-a39e-513659ceba63"
       }
     },
@@ -1079,6 +1090,17 @@
       }
     },
     {
+      "key": "1d04ca58-c58b-413b-8ac3-db6cc7b7a0e2",
+      "position": 5,
+      "properties": {
+        "progression_name": "Vocab: Problem Statement"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d04ca58-c58b-413b-8ac3-db6cc7b7a0e2",
+        "lesson_activity.key": "34c64441-ea31-4d1f-a39e-513659ceba63"
+      }
+    },
+    {
       "key": "0aaf310e-3a93-4c44-a459-bc00d6db2460",
       "position": 1,
       "properties": {
@@ -1090,24 +1112,24 @@
       }
     },
     {
-      "key": "c240f622-6e6a-4d03-bc00-c2ebb7c259ee",
+      "key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e",
       "position": 1,
+      "properties": {
+        "progression_name": "Create a Site Map & User Flow"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e",
+        "lesson_activity.key": "55999b45-51b5-48e1-8208-fd8bedb83e08"
+      }
+    },
+    {
+      "key": "c240f622-6e6a-4d03-bc00-c2ebb7c259ee",
+      "position": 2,
       "properties": {
         "progression_name": "Vocab: Site Map"
       },
       "seeding_key": {
         "activity_section.key": "c240f622-6e6a-4d03-bc00-c2ebb7c259ee",
-        "lesson_activity.key": "55999b45-51b5-48e1-8208-fd8bedb83e08"
-      }
-    },
-    {
-      "key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e",
-      "position": 2,
-      "properties": {
-        "progression_name": "Create a Site Map"
-      },
-      "seeding_key": {
-        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e",
         "lesson_activity.key": "55999b45-51b5-48e1-8208-fd8bedb83e08"
       }
     },
@@ -1222,24 +1244,24 @@
       }
     },
     {
-      "key": "0fb0d08d-4ed6-4678-a7ee-380a7f6f1751",
-      "position": 1,
-      "properties": {
-        "progression_name": "Vocab: Wireframe"
-      },
-      "seeding_key": {
-        "activity_section.key": "0fb0d08d-4ed6-4678-a7ee-380a7f6f1751",
-        "lesson_activity.key": "f34f35d3-c0af-4155-9723-37378f8cf3e5"
-      }
-    },
-    {
       "key": "cda03805-b149-49fd-9d72-0159bfc57944",
-      "position": 2,
+      "position": 1,
       "properties": {
         "progression_name": "Wireframe an App Idea"
       },
       "seeding_key": {
         "activity_section.key": "cda03805-b149-49fd-9d72-0159bfc57944",
+        "lesson_activity.key": "f34f35d3-c0af-4155-9723-37378f8cf3e5"
+      }
+    },
+    {
+      "key": "0fb0d08d-4ed6-4678-a7ee-380a7f6f1751",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Wireframe"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fb0d08d-4ed6-4678-a7ee-380a7f6f1751",
         "lesson_activity.key": "f34f35d3-c0af-4155-9723-37378f8cf3e5"
       }
     },
@@ -1335,7 +1357,7 @@
       "key": "25d0a3e4-f576-4b4e-a94c-07db9eddbd8d",
       "position": 1,
       "properties": {
-        "progression_name": "Project Support Hub"
+        "progression_name": "Milestone 1: Define Your Magazine"
       },
       "seeding_key": {
         "activity_section.key": "25d0a3e4-f576-4b4e-a94c-07db9eddbd8d",
@@ -1346,7 +1368,7 @@
       "key": "09f64865-7771-4cf6-b515-4934aee205db",
       "position": 2,
       "properties": {
-        "progression_name": "Generate"
+        "progression_name": "Milestone 2: Build Your First Draft"
       },
       "seeding_key": {
         "activity_section.key": "09f64865-7771-4cf6-b515-4934aee205db",
@@ -1357,7 +1379,7 @@
       "key": "73e56618-99d2-4481-b4ab-16f75e60285f",
       "position": 3,
       "properties": {
-        "progression_name": "Refine and Expand"
+        "progression_name": "Milestone 3: Refine and Align"
       },
       "seeding_key": {
         "activity_section.key": "73e56618-99d2-4481-b4ab-16f75e60285f",
@@ -1368,7 +1390,7 @@
       "key": "6d2c4c1a-ebdf-4b77-8bcb-fb2abb518170",
       "position": 4,
       "properties": {
-        "progression_name": "Test, Debug, and Showcase"
+        "progression_name": "Milestone 4: Test and Finalize"
       },
       "seeding_key": {
         "activity_section.key": "6d2c4c1a-ebdf-4b77-8bcb-fb2abb518170",
@@ -1455,6 +1477,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-vocab-panel-html-test-2025"
+        ],
         "progression": "Vocab: HTML"
       },
       "bonus": false,
@@ -1477,6 +1502,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-vocab-frq-html-test-2025"
+        ],
         "progression": "Vocab: HTML"
       },
       "bonus": false,
@@ -1499,6 +1527,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-vocab-panel-css-test-2025"
+        ],
         "progression": "Vocab: CSS"
       },
       "bonus": false,
@@ -1521,6 +1552,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-vocab-frq-css-test-2025"
+        ],
         "progression": "Vocab: CSS"
       },
       "bonus": false,
@@ -1568,6 +1602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -1590,6 +1627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-vocab-panel-ux-test-2025"
+        ],
         "progression": "Vocab: User Experience"
       },
       "bonus": false,
@@ -1612,6 +1652,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-vocab-frq-ux-test-2025"
+        ],
         "progression": "Vocab: User Experience"
       },
       "bonus": false,
@@ -1634,6 +1677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-vocab-panel-userprofile-test-2025"
+        ],
         "progression": "Vocab: User Profile"
       },
       "bonus": false,
@@ -1656,6 +1702,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-vocab-frq-userprofile-test-2025"
+        ],
         "progression": "Vocab: User Profile"
       },
       "bonus": false,
@@ -1678,6 +1727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-vocab-panel-hcd-test-2025"
+        ],
         "progression": "Vocab: Human-Centered Design"
       },
       "bonus": false,
@@ -1700,6 +1752,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-vocab-frq-hcd-test-2025"
+        ],
         "progression": "Vocab: Human-Centered Design"
       },
       "bonus": false,
@@ -1747,6 +1802,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -1769,6 +1827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level1-panels-test-2025"
+        ],
         "progression": "Webpage Features"
       },
       "bonus": false,
@@ -1816,6 +1877,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level2-test-2025"
+        ],
         "progression": "Webpage Features"
       },
       "bonus": false,
@@ -1838,6 +1902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-vocab-panel-promptengineering-test-2025"
+        ],
         "progression": "Vocab: Prompt Engineering"
       },
       "bonus": false,
@@ -1860,6 +1927,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-vocab-frq-promptengineering-test-2025"
+        ],
         "progression": "Vocab: Prompt Engineering"
       },
       "bonus": false,
@@ -1882,6 +1952,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-vocab-panel-versioning-test-2025"
+        ],
         "progression": "Vocab: Versioning"
       },
       "bonus": false,
@@ -1904,6 +1977,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-vocab-frq-versioning-test-2025"
+        ],
         "progression": "Vocab: Versioning"
       },
       "bonus": false,
@@ -1951,6 +2027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -1998,6 +2077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-vocab-panel-moodboarding-test-2025"
+        ],
         "progression": "Vocab: Mood boarding"
       },
       "bonus": false,
@@ -2020,6 +2102,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-vocab-frq-moodboarding-test-2025"
+        ],
         "progression": "Vocab: Mood boarding"
       },
       "bonus": false,
@@ -2042,6 +2127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2114,6 +2202,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-vocab-panel-brandkit-test-2025"
+        ],
         "progression": "Vocab: Brand Kit"
       },
       "bonus": false,
@@ -2136,6 +2227,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-vocab-frq-brandkit-test-2025"
+        ],
         "progression": "Vocab: Brand Kit"
       },
       "bonus": false,
@@ -2183,6 +2277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2202,6 +2299,72 @@
     {
       "chapter": 36,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "\"How To\" Guides"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-onboarding-image-context-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "b64e2fbe-7fa5-49fc-aca0-2bd66ade025e"
+      },
+      "level_keys": [
+        "ai-generated-design-onboarding-image-context-test-2025"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "\"How To\" Guides"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-onboarding-highlight-context-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "b64e2fbe-7fa5-49fc-aca0-2bd66ade025e"
+      },
+      "level_keys": [
+        "ai-generated-design-onboarding-highlight-context-test-2025"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "\"How To\" Guides"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-onboarding-prompt-backpack-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "b64e2fbe-7fa5-49fc-aca0-2bd66ade025e"
+      },
+      "level_keys": [
+        "ai-generated-design-onboarding-prompt-backpack-test-2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2225,8 +2388,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 2,
+      "chapter": 40,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2250,11 +2413,14 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 3,
+      "chapter": 41,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-vocab-panel-stylesheet-test-2025"
+        ],
         "progression": "Vocab: Style Sheet"
       },
       "bonus": false,
@@ -2272,11 +2438,14 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 4,
+      "chapter": 42,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-vocab-frq-stylesheet-test-2025"
+        ],
         "progression": "Vocab: Style Sheet"
       },
       "bonus": false,
@@ -2294,8 +2463,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 5,
+      "chapter": 43,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2319,11 +2488,14 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 6,
+      "chapter": 44,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2341,7 +2513,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2366,52 +2538,30 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Problem Statement"
+        "progression": "User Persona Analysis: Alex"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson7-vocab-panel-problemstatement-test-2025"
+          "ai-generated-design-lesson7-level1a-test-2025"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "1d04ca58-c58b-413b-8ac3-db6cc7b7a0e2"
+        "activity_section.key": "1dc10b7e-fe6f-459d-baa1-a0916b75eb6d"
       },
       "level_keys": [
-        "ai-generated-design-lesson7-vocab-panel-problemstatement-test-2025"
+        "ai-generated-design-lesson7-level1a-test-2025"
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Problem Statement"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson7-vocab-frq-problemstatement-test-2025"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "1d04ca58-c58b-413b-8ac3-db6cc7b7a0e2"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson7-vocab-frq-problemstatement-test-2025"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2435,11 +2585,64 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 5,
+      "chapter": 48,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-vocab-panel-problemstatement-test-2025"
+        ],
+        "progression": "Vocab: Problem Statement"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson7-vocab-panel-problemstatement-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "1d04ca58-c58b-413b-8ac3-db6cc7b7a0e2"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson7-vocab-panel-problemstatement-test-2025"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-vocab-frq-problemstatement-test-2025"
+        ],
+        "progression": "Vocab: Problem Statement"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson7-vocab-frq-problemstatement-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "1d04ca58-c58b-413b-8ac3-db6cc7b7a0e2"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson7-vocab-frq-problemstatement-test-2025"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2457,11 +2660,61 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level1-test-2025"
+        ],
+        "progression": "Create a Site Map & User Flow"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level1-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson8-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Site Map & User Flow"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level2-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson8-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-vocab-panel-sitemap-test-2025"
+        ],
         "progression": "Vocab: Site Map"
       },
       "bonus": false,
@@ -2479,11 +2732,14 @@
       ]
     },
     {
-      "chapter": 48,
-      "position": 2,
+      "chapter": 54,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-vocab-frq-sitemap-test-2025"
+        ],
         "progression": "Vocab: Site Map"
       },
       "bonus": false,
@@ -2501,36 +2757,14 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 3,
+      "chapter": 55,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "ai-generated-design-lesson8-level1-test-2025"
+          "ai-generated-design-lesson8-vocab-panel-userflow-test-2025"
         ],
-        "progression": "Create a Site Map"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson8-level1-test-2025"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson8-level1-test-2025"
-      ]
-    },
-    {
-      "chapter": 50,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Vocab: User Flow"
       },
       "bonus": false,
@@ -2548,11 +2782,14 @@
       ]
     },
     {
-      "chapter": 51,
-      "position": 5,
+      "chapter": 56,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-vocab-frq-userflow-test-2025"
+        ],
         "progression": "Vocab: User Flow"
       },
       "bonus": false,
@@ -2570,32 +2807,7 @@
       ]
     },
     {
-      "chapter": 52,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson8-level2-test-2025"
-        ],
-        "progression": "Trace a User Flow"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson8-level2-test-2025"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "516e6f09-0a99-4010-b88a-afef117b3a31"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson8-level2-test-2025"
-      ]
-    },
-    {
-      "chapter": 53,
+      "chapter": 57,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2620,7 +2832,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 58,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2645,11 +2857,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 59,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2667,11 +2882,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-vocab-panel-POUR-test-2025"
+        ],
         "progression": "Vocab: POUR Principles"
       },
       "bonus": false,
@@ -2689,11 +2907,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-vocab-frq-POUR-test-2025"
+        ],
         "progression": "Vocab: POUR Principles"
       },
       "bonus": false,
@@ -2711,7 +2932,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2736,7 +2957,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2761,7 +2982,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 64,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -2786,11 +3007,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 65,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2808,52 +3032,8 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 66,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Wireframe"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-vocab-panel-wireframe-test-2025"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "0fb0d08d-4ed6-4678-a7ee-380a7f6f1751"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson10-vocab-panel-wireframe-test-2025"
-      ]
-    },
-    {
-      "chapter": 63,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Wireframe"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-vocab-frq-wireframe-test-2025"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "0fb0d08d-4ed6-4678-a7ee-380a7f6f1751"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson10-vocab-frq-wireframe-test-2025"
-      ]
-    },
-    {
-      "chapter": 64,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2877,11 +3057,64 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson10-vocab-panel-wireframe-test-2025"
+        ],
+        "progression": "Vocab: Wireframe"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson10-vocab-panel-wireframe-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "0fb0d08d-4ed6-4678-a7ee-380a7f6f1751"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson10-vocab-panel-wireframe-test-2025"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson10-vocab-frq-wireframe-test-2025"
+        ],
+        "progression": "Vocab: Wireframe"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson10-vocab-frq-wireframe-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "0fb0d08d-4ed6-4678-a7ee-380a7f6f1751"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson10-vocab-frq-wireframe-test-2025"
+      ]
+    },
+    {
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson10-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2899,7 +3132,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2924,7 +3157,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2949,7 +3182,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2974,11 +3207,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson11-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2996,11 +3232,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-vocab-panel-responsiveness-test-2025"
+        ],
         "progression": "Vocab: Responsiveness"
       },
       "bonus": false,
@@ -3018,11 +3257,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-vocab-frq-responsiveness-test-2025"
+        ],
         "progression": "Vocab: Responsiveness"
       },
       "bonus": false,
@@ -3040,7 +3282,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3065,7 +3307,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3090,11 +3332,14 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3112,12 +3357,15 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Project Support Hub"
+        "level_keys": [
+          "ai-generated-design-lesson13-chatbotChoice-test-2025"
+        ],
+        "progression": "Milestone 1: Define Your Magazine"
       },
       "bonus": false,
       "seeding_key": {
@@ -3134,12 +3382,15 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 80,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Generate"
+        "level_keys": [
+          "ai-generated-design-lesson13-level4-test-2025"
+        ],
+        "progression": "Milestone 2: Build Your First Draft"
       },
       "bonus": false,
       "seeding_key": {
@@ -3156,12 +3407,15 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 81,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Refine and Expand"
+        "level_keys": [
+          "ai-generated-design-lesson13-level5-test-2025"
+        ],
+        "progression": "Milestone 3: Refine and Align"
       },
       "bonus": false,
       "seeding_key": {
@@ -3178,12 +3432,15 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 82,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Test, Debug, and Showcase"
+        "level_keys": [
+          "ai-generated-design-lesson13-level6-test-2025"
+        ],
+        "progression": "Milestone 4: Test and Finalize"
       },
       "bonus": false,
       "seeding_key": {
@@ -3200,11 +3457,14 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 83,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3222,11 +3482,14 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-level1-test-2025"
+        ],
         "progression": "Critique a Site"
       },
       "bonus": false,
@@ -3667,6 +3930,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-generated-design-onboarding-image-context-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-onboarding-image-context-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "b64e2fbe-7fa5-49fc-aca0-2bd66ade025e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-onboarding-highlight-context-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-onboarding-highlight-context-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "b64e2fbe-7fa5-49fc-aca0-2bd66ade025e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-onboarding-prompt-backpack-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-onboarding-prompt-backpack-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "b64e2fbe-7fa5-49fc-aca0-2bd66ade025e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-generated-design-lesson6-level1-test-2025",
         "script_level.level_keys": [
           "ai-generated-design-lesson6-level1-test-2025"
@@ -3751,6 +4050,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-generated-design-lesson7-level1a-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson7-level1a-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "1dc10b7e-fe6f-459d-baa1-a0916b75eb6d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson7-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson7-level2-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "0963052c-c6c5-47a8-b827-cc52ab37fef2"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-generated-design-lesson7-vocab-panel-problemstatement-test-2025",
         "script_level.level_keys": [
           "ai-generated-design-lesson7-vocab-panel-problemstatement-test-2025"
@@ -3775,18 +4098,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson7-level2-test-2025",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson7-level2-test-2025"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "0963052c-c6c5-47a8-b827-cc52ab37fef2"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-generated-design-lesson7-pilot-survey_2025",
         "script_level.level_keys": [
           "ai-generated-design-lesson7-pilot-survey_2025"
@@ -3795,6 +4106,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aif-s2-unit1",
         "activity_section.key": "0aaf310e-3a93-4c44-a459-bc00d6db2460"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson8-level1-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level1-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson8-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level2-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e"
       }
     },
     {
@@ -3823,18 +4158,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson8-level1-test-2025",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson8-level1-test-2025"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "4b24ee34-31e1-4e1c-ba2f-a739f20cf73e"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-generated-design-lesson8-vocab-panel-userflow-test-2025",
         "script_level.level_keys": [
           "ai-generated-design-lesson8-vocab-panel-userflow-test-2025"
@@ -3855,18 +4178,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aif-s2-unit1",
         "activity_section.key": "2e6cd0de-a9a6-4e9d-b3eb-042945a9f0a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson8-level2-test-2025",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson8-level2-test-2025"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "516e6f09-0a99-4010-b88a-afef117b3a31"
       }
     },
     {
@@ -3979,6 +4290,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-generated-design-lesson10-level1-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson10-level1-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "cda03805-b149-49fd-9d72-0159bfc57944"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-generated-design-lesson10-vocab-panel-wireframe-test-2025",
         "script_level.level_keys": [
           "ai-generated-design-lesson10-vocab-panel-wireframe-test-2025"
@@ -3999,18 +4322,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aif-s2-unit1",
         "activity_section.key": "0fb0d08d-4ed6-4678-a7ee-380a7f6f1751"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson10-level1-test-2025",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-level1-test-2025"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "cda03805-b149-49fd-9d72-0159bfc57944"
       }
     },
     {
