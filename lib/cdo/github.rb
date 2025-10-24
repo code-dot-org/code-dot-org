@@ -73,26 +73,31 @@ module GitHub
       'git fetch',
       "git checkout -b #{branch_name} #{base_branch}",
     ].join(' && ')
-    return false unless created_branch
+    raise Exception.new("GitHub.create_branch_from_commit: Failed to create branch #{branch_name}") unless created_branch
 
     # merge the commit into the branch
-    system "#{prefix_command} && git merge #{commit} --no-edit"
+    merge_success = system "#{prefix_command} && git merge #{commit} --no-edit"
 
-    # check for conflicts
-    conflicts = `#{prefix_command} && git ls-files -u | wc -l`.to_i
-    if conflicts > 0
-      # if there are conflicts, abort the merge and cleanup
+    if merge_success
+      # if the merge succeeds push the new branch
+      push_success = system "#{prefix_command} && git push origin #{branch_name}"
+      raise Exception.new("GitHub.create_branch_from_commit: Failed to push to #{branch_name}") unless push_success
+    else
+      conflicts = `#{prefix_command} && git ls-files -u | wc -l`.to_i
+
+      # if the merge fails or there are conflicts, abort the merge and cleanup
       system [
         prefix_command,
         'git merge --abort',
         "git checkout #{base_branch}",
         "git branch -D #{branch_name}"
       ].join(' && ')
-      return false
-    else
-      # otherwise, push the new branch!
-      system "#{prefix_command} && git push origin #{branch_name}"
-      return true
+
+      # check for conflicts
+      if conflicts > 0
+        raise Exception.new("GitHub.create_branch_from_commit: Failed to merge due to conflicts")
+      end
+      raise Exception.new("GitHub.create_branch_from_commit: Failed to merge but there were no conflicts")
     end
   end
 
