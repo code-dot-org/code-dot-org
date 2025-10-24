@@ -32,6 +32,7 @@ namespace :install do
   end
 
   timed_task_with_logging :apps do
+    puts "rake install:apps drone target branch: #{ENV.fetch('DRONE_TARGET_BRANCH')}"
     if RakeUtils.local_environment?
       RakeUtils.install_npm
     end
