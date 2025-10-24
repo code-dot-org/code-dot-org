@@ -39,7 +39,7 @@
 .item {
   display: flex;
   pointer-events: auto;
-  flex: 1;
+  //flex: 1;
   opacity: 1;
   height: 100%;
 
@@ -297,10 +297,12 @@
 }
 
 .scrollingContent {
-  flex: 1;
-  overflow-y: auto;
+  //flex: 1;
+  overflow-y: scroll;
   min-height: 70px;
   padding: 0 12px;
+  box-sizing: border-box;
+  height: auto;
 }
 
 .nonScrollingSubContent {
