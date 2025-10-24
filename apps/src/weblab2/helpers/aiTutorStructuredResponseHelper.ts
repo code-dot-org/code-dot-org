@@ -1,6 +1,6 @@
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 
-const getAnswerJsonSchema = (isCopyCodeMode: boolean): JsonObjectSchema => {
+const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
     type: 'object',
     properties: {
@@ -74,7 +74,7 @@ const getAnswerJsonSchema = (isCopyCodeMode: boolean): JsonObjectSchema => {
 export const copyCodeJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {
-    answer: getAnswerJsonSchema(true),
+    answer: getAnswerJsonSchema(),
   },
   required: ['answer'],
   additionalProperties: false,
