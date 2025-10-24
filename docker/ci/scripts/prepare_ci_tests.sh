@@ -77,8 +77,6 @@ echo "Wrote settings and secrets from env vars into locals.yml."
 
 set -x
 
-echo "prepare_ci_tests.sh Drone target branch: $DRONE_TARGET_BRANCH"
-
 bundle exec rake install
 # catch any code loader errors before starting any rails environment
 bundle exec rake lint:zeitwerk
