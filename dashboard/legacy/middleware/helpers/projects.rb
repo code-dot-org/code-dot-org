@@ -39,6 +39,7 @@ class Projects
       remix_parent_id: remix_parent_id,
       skip_content_moderation: false,
       standalone: standalone,
+      guid: SecureRandom.uuid,
     }
     row[:id] = @table.insert(row)
 
@@ -110,6 +111,7 @@ class Projects
       updated_ip: ip_address,
     }
     row[:project_type] = project_type if project_type
+    row[:guid] = SecureRandom.uuid if project[:value]['guid'].blank?
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
