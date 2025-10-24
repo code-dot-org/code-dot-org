@@ -51,7 +51,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     # Mock the Client class
     mock_client = mock('client')
     mock_client.expects(:request_lesson_summary).with(@system_prompt).returns(mock_response)
-    AiLessonSummariesHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
+    AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
 
     result = AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id)
 
@@ -77,12 +77,12 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     # Mock the Client class
     mock_client = mock('client')
     mock_client.expects(:request_lesson_summary).with(@system_prompt).returns(mock_response)
-    AiLessonSummariesHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
+    AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
 
     result = AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id)
 
     assert_equal 429, result[:status]
-    assert_equal error_response, result[:json]
+    assert_equal error_response, result[:json].to_json
   end
 
   test "get_ai_lesson_summary gets system prompt from helper" do
@@ -217,11 +217,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     client.request_lesson_summary(prompt)
   end
 
-  # *****
-  # Integration tests
-  # *****
-
-  test "full integration: retrieve_and_save creates record with actual API response structure" do
+  test "Retrieve_and_save creates record with actual API response structure" do
     # Mock the full chain
     mock_response = mock('response')
     mock_response.stubs(:code).returns(200)
