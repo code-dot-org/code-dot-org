@@ -175,64 +175,59 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
       <Guide id="generate-panel">
         Create your dancer.
-        {(aiGenerateState === 'generating' ||
-          aiGenerateState === 'reviewing') && (
-          <div className={moduleStyles.textArea}>{promptText}</div>
-        )}
-        {aiGenerateState === 'none' && (
+        {aiGenerateState === 'none' && levelProperties.aiDancerGenerateText && (
           <>
-            {levelProperties.aiDancerGenerateText && (
-              <>
-                <div>Describe the dancer you'd like AI to create.</div>
-                <textarea
-                  id="generate-description"
-                  onChange={evt => {
-                    setPromptText(evt.target.value);
-                  }}
-                  value={promptText}
-                  rows={4}
-                  className={moduleStyles.textArea}
-                />
+            <div>Describe the dancer you'd like AI to create.</div>
+            <textarea
+              id="generate-description"
+              onChange={evt => {
+                setPromptText(evt.target.value);
+              }}
+              value={promptText}
+              rows={4}
+              className={moduleStyles.textArea}
+            />
+            <Button
+              ariaLabel={'Continue'}
+              text={'Continue'}
+              type="primary"
+              color="black"
+              size="s"
+              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+              onClick={() => {
+                dispatch(continueOrFinishLesson());
+                analyticsReporter.sendEvent('hoai2025-dancer-prompt', {
+                  promptText,
+                });
+              }}
+            />
+          </>
+        )}
+        {!levelProperties.aiDancerGenerateText && (
+          <>
+            <Adlib
+              adlib={adlibs[adlibOption]}
+              readOnly={['generating', 'reviewing'].includes(aiGenerateState)}
+              glowSpeed={glowSpeed}
+              onChange={(promptText, choices) => {
+                setPromptText(promptText);
+                setChoices(choices);
+                variantHistory.current = [];
+              }}
+            />
+            {aiGenerateState === 'none' && (
+              <div className={moduleStyles.buttonRow}>
                 <Button
-                  ariaLabel={'Continue'}
-                  text={'Continue'}
+                  ariaLabel={'Generate dancer'}
+                  text={'Generate dancer'}
                   type="primary"
                   color="black"
                   size="s"
-                  iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-                  onClick={() => {
-                    dispatch(continueOrFinishLesson());
-                    analyticsReporter.sendEvent('hoai2025-dancer-prompt', {
-                      promptText,
-                    });
-                  }}
+                  iconLeft={{iconName: 'sparkles'}}
+                  onClick={generateDancer}
+                  className={moduleStyles.buttonWide}
                 />
-              </>
-            )}
-            {!levelProperties.aiDancerGenerateText && (
-              <>
-                <Adlib
-                  adlib={adlibs[adlibOption]}
-                  glowSpeed={glowSpeed}
-                  onChange={(promptText, choices) => {
-                    setPromptText(promptText);
-                    setChoices(choices);
-                    variantHistory.current = [];
-                  }}
-                />
-                <div className={moduleStyles.buttonRow}>
-                  <Button
-                    ariaLabel={'Generate dancer'}
-                    text={'Generate dancer'}
-                    type="primary"
-                    color="black"
-                    size="s"
-                    iconLeft={{iconName: 'sparkles'}}
-                    onClick={generateDancer}
-                    className={moduleStyles.buttonWide}
-                  />
-                </div>
-              </>
+              </div>
             )}
           </>
         )}

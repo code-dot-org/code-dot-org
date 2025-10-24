@@ -189,8 +189,16 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {aiGenerateState === 'generating' && (
-        <div className={styles.textArea}>{promptText}</div>
+      {useAdlib && (
+        <Adlib
+          adlib={useAdlib}
+          readOnly={aiGenerateState !== 'none'}
+          glowSpeed={glowSpeed}
+          onChange={(text, choices) => {
+            setPromptText(text);
+            setChoices(choices);
+          }}
+        />
       )}
 
       {aiGenerateState === 'none' && (
@@ -209,16 +217,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               />
             </>
           )}
-          {useAdlib && (
-            <Adlib
-              adlib={useAdlib}
-              glowSpeed={glowSpeed}
-              onChange={(text, choices) => {
-                setPromptText(text);
-                setChoices(choices);
-              }}
-            />
-          )}
+
           <Button
             ariaLabel={'Generate code'}
             text={'Generate code'}

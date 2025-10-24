@@ -18,6 +18,7 @@ export type AdlibsType = {
 interface AdlibProps {
   children?: React.ReactNode;
   adlib: AdlibType;
+  readOnly?: boolean;
   glowSpeed?: 'normal' | 'fast';
   onChange: (value: string, choices: string[]) => void;
 }
@@ -29,6 +30,7 @@ interface AdlibProps {
 const Adlib: React.FunctionComponent<AdlibProps> = ({
   children,
   adlib,
+  readOnly,
   glowSpeed,
   onChange,
 }) => {
@@ -112,7 +114,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
       )}
     >
       <div className={styles.adlibInner}>
-        <div>{adlibHtml}</div>
+        <div>{readOnly ? filledAdlibText : adlibHtml}</div>
         {children}
       </div>
     </div>
