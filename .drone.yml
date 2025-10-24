@@ -19,9 +19,9 @@ services:
     ports:
       - 6379
   - name: ci-tests-mysql
-    image: mysql
+    image: mysql:8.0
     ports:
-      - 8080
+      - 3306
     environment:
       # TODO: GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
@@ -144,15 +144,14 @@ services:
     ports:
       - 6379
   - name: ci-tests-mysql
-    image: mysql
+    image: mysql:8.0
     ports:
-      - 8080
+      - 3306
     environment:
       # TODO: GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
       MYSQL_USER: readonly
       MYSQL_PASSWORD: ''
-
 
 steps:
   - name: bin/drone/shell
@@ -287,9 +286,9 @@ clone:
 
 services:
   - name: ci-tests-mysql
-    image: mysql
+    image: mysql:8.0
     ports:
-      - 8080
+      - 3306
     environment:
       # TODO: GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
