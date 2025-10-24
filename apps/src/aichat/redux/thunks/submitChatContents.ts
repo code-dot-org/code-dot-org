@@ -79,18 +79,22 @@ export const submitChatContents = createAsyncThunk(
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
-    const userAddedSelectionContextPrompt =
+
+    const chatMessageText =
+      text +
+      '\n\n' +
       formatUserAddedSelectionContextForPrompt(userAddedSelectionContext);
+
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: text,
+      chatMessageText,
+      chatMessageDisplayText: text,
       hiddenContext,
       assets,
       userAddedSelectionContext,
       timestamp: Date.now(),
-      userAddedSelectionContextPrompt,
     };
     dispatch(setChatMessagePending(newUserMessage));
 

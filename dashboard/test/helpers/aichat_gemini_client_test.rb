@@ -118,14 +118,6 @@ class AichatGeminiClientTest < AichatAiClientTest
       ]
     end
 
-    let(:contents_with_hidden_and_selection_context_and_level_system_prompt) do
-      [
-        {role: 'user', parts: [{text: 'hello from user'}]},
-        {role: 'model', parts: [{text: 'assistant response'}]},
-        {role: 'user', parts: [{text: "new message from user\n\nuser added seleection context text"}]}
-      ]
-    end
-
     let(:contents_with_assets_and_without_level_system_prompt) do
       [
         {role: 'user', parts: [{text: 'hello from user'}]},
