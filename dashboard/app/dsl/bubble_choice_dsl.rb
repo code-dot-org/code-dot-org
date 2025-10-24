@@ -40,6 +40,14 @@ class BubbleChoiceDSL < ContentDSL
     @hash[:sublevels] << name
   end
 
+  def custom_mode(text)
+    valid_modes = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES.values
+    unless valid_modes.include?(text)
+      raise "custom_mode must be one of [#{valid_modes.join(', ')}]"
+    end
+    @hash[:custom_mode] = text
+  end
+
   def self.serialize(level)
     new_dsl = "name '#{escape(level.name)}'"
     new_dsl += "\neditor_experiment '#{level.editor_experiment}'" if level.editor_experiment.present?
