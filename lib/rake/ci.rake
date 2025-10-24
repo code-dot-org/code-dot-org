@@ -79,7 +79,8 @@ namespace :ci do
     if CI::Utils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
-    elsif target_branch == 'staging'
+    # Always run all unit tests on pull requests against the 'test' branch
+    elsif target_branch == 'test'
       ChatClient.log "Target branch is #{target_branch.dump}, force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     elsif CI::Utils.tagged?(RUN_APPS_TESTS_TAG)
