@@ -30,7 +30,7 @@ class StatsigReporter {
     this.user = null;
     this.api_key = '';
     this.local_mode = true;
-    this.options = {};
+    this.options = {environment: {tier: getEnvironment()}};
     this.statsigClient = null;
 
     this.readyPromise = waitForOnetrustGroupsReady().then(() => {
@@ -70,12 +70,12 @@ class StatsigReporter {
       ? managed_test_environment_element.dataset.managedTestServer === 'true'
       : false;
     this.local_mode = !(
-      isProductionEnvironment() ||
+      IN_UNIT_TEST ||
       managed_test_environment ||
+      isProductionEnvironment() ||
       process.env.STATSIG_LOCAL_MODE_OFF
     );
     this.options = {
-      environment: {tier: getEnvironment()},
       localMode: this.local_mode,
       disableErrorLogging: true,
     };
@@ -155,7 +155,7 @@ class StatsigReporter {
   }
 
   log(message) {
-    if (isDevelopmentEnvironment() && !IN_UNIT_TEST) {
+    if (!IN_UNIT_TEST && isDevelopmentEnvironment()) {
       console.log(`[STATSIG ANALYTICS EVENT]: ${message}`);
     }
   }
