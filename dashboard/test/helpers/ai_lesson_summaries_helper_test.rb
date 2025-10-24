@@ -23,9 +23,9 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
         message: {
           content: {
             learning_objective: "Students will learn variables",
-            lesson_beats: "Introduction, practice, assessment",
-            misconceptions: "Variables are boxes",
-            tips: "Use concrete examples"
+            lesson_beats: ["Introduction, practice, assessment"],
+            misconceptions: ["Variables are boxes"],
+            tips: ["Use concrete examples"]
           }.to_json
         }
       }]
@@ -57,9 +57,9 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     expected_content = {
       learning_objective: "Students will learn variables",
-      lesson_beats: "Introduction, practice, assessment",
-      misconceptions: "Variables are boxes",
-      tips: "Use concrete examples"
+      lesson_beats: ["Introduction, practice, assessment"],
+      misconceptions: ["Variables are boxes"],
+      tips: ["Use concrete examples"]
     }.to_json
 
     assert_equal 200, result[:status]
@@ -131,6 +131,27 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     end
   end
 
+  test "Retrieve_and_save creates record with actual API response structure" do
+    # Mock the full chain
+    mock_response = mock('response')
+    mock_response.stubs(:code).returns(200)
+    mock_response.stubs(:body).returns(@successful_openai_response)
+
+    HTTParty.stubs(:post).returns(mock_response)
+
+    assert_difference 'AiLessonSummary.count', 1 do
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id)
+    end
+
+    created_summary = AiLessonSummary.last
+    summary_data = JSON.parse(created_summary.lesson_summary)
+
+    assert_equal "Students will learn variables", summary_data['learning_objective']
+    assert_equal ["Introduction, practice, assessment"], summary_data['lesson_beats']
+    assert_equal ["Variables are boxes"], summary_data['misconceptions']
+    assert_equal ["Use concrete examples"], summary_data['tips']
+  end
+
   # *****
   # Client class tests
   # *****
@@ -170,9 +191,9 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
             type: "object",
             properties: {
               learning_objective: {type: "string"},
-              lesson_beats: {type: "string"},
-              misconceptions: {type: "string"},
-              tips: {type: "string"}
+              lesson_beats: {type: "array", items: {type: "string"}},
+              misconceptions: {type: "array", items: {type: "string"}},
+              tips: {type: "array", items: {type: "string"}}
             }
           }
         }
@@ -215,26 +236,5 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     client = AiLessonSummariesHelper::Client.new(@api_key, @model)
     client.request_lesson_summary(prompt)
-  end
-
-  test "Retrieve_and_save creates record with actual API response structure" do
-    # Mock the full chain
-    mock_response = mock('response')
-    mock_response.stubs(:code).returns(200)
-    mock_response.stubs(:body).returns(@successful_openai_response)
-
-    HTTParty.stubs(:post).returns(mock_response)
-
-    assert_difference 'AiLessonSummary.count', 1 do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id)
-    end
-
-    created_summary = AiLessonSummary.last
-    summary_data = JSON.parse(created_summary.lesson_summary)
-
-    assert_equal "Students will learn variables", summary_data['learning_objective']
-    assert_equal "Introduction, practice, assessment", summary_data['lesson_beats']
-    assert_equal "Variables are boxes", summary_data['misconceptions']
-    assert_equal "Use concrete examples", summary_data['tips']
   end
 end
