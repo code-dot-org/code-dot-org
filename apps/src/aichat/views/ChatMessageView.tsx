@@ -55,7 +55,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     showProfaneUserMessage
   );
 
-  // If the chat message's dsiaply text is what is displayed (i.e. no error or violation)
+  // If the chat message's display text is what is displayed (i.e. no error or violation)
   const messageVisible =
     displayText === intendedDisplayText &&
     chatMessage.status !== Status.PROFANITY_VIOLATION;
