@@ -5,20 +5,20 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
 
 Lesson Name: #{lesson_plan[:name]}
 Lesson Overview: #{lesson_plan[:overview]}
-Learning Objectives: #{lesson_plan[:objectives]}
+Learning Objectives: #{lesson_plan[:objectives].to_json}
 #{'Lesson Purpose: '+lesson_plan[:purpose] if lesson_plan[:purpose]}
-#{'Assessment Opportunities: '+lesson_plan[:assessment_opportunities].to_s if lesson_plan[:assessment_opportunities]}
-Standards: #{lesson_plan[:standards]}
-#{'Opportunity Standards: '+lesson_plan[:opportunity_standards].to_s if lesson_plan[:opportunity_standards]}
-Activities: #{lesson_plan[:activities]}
+#{'Assessment Opportunities: '+lesson_plan[:assessment_opportunities] if lesson_plan[:assessment_opportunities]}
+Standards: #{lesson_plan[:standards].to_json}
+#{'Opportunity Standards: '+lesson_plan[:opportunity_standards].to_json.to_s if lesson_plan[:opportunity_standards]}
+Activities: #{lesson_plan[:activities].to_json}
 Preparation: #{lesson_plan[:preparation]}
-Vocabulary: #{lesson_plan[:vocabularies]}
+Vocabulary: #{lesson_plan[:vocabularies].to_json}
 
 Your summary should be returned in JSON format and should be composed as follows:
 {learning_objective: this should be a brief, one paragraph summary of the lesson, focusing on each of the Learning Objectives and how they will be achieved,
 lesson_beats: an ordered list of the main parts of the lesson, including activities and new vocabulary terms,
 misconceptions: an unordered list including 2 - 3 misconceptions students might have about the material being covered,
-tips: additional strategies or ideas to help with teaching the lesson"
+tips: additional strategies or ideas to help with teaching the lesson}"
     prompt
   end
 
