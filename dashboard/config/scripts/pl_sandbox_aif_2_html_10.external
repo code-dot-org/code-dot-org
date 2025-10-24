@@ -9,6 +9,11 @@ markdown <<MARKDOWN
 #### HTML **(HyperText Markup Language)** is the basic building block of every website. Think of it as the skeleton or structure of a webpage.
 
 #### It tells the computer what content to show: text, images, links, buttons, and more.
+---
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### Take a look at the sample HTML below. Try to match the code to the element in the output. 
 
 ## Sample HTML Page
 
@@ -41,8 +46,8 @@ The **p** tag makes a regular block of text.
 The **img*** tag shows the picture (in this case, puppy.jpg), with the text “A cute puppy” used if the image can’t load." width="650px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
-#### HTML doesn’t control colors or style—that’s what **CSS** is for. Instead, it answers the question: “What is on the page?”
+#### HTML doesn’t control colors or style—that’s what **CSS** is for. Instead, it answers the question: “What is on the page?” Notice in the output above, there is no styling. Everything is plain and the system default. 
 
-#### Next, let's see how **CSS** layers in!
+## Next, let's see how **CSS** layers in!
 
 MARKDOWN

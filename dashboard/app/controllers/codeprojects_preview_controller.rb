@@ -66,6 +66,9 @@ class CodeprojectsPreviewController < ApplicationController
     script_src = script_src_base + script_src_eval + script_src_inline
     style_src = style_src_base + style_src_inline
 
+    # Allow loading google fonts and any self-hosted fonts.
+    font_src = "'self' fonts.googleapis.com fonts.gstatic.com"
+
     policies = [
       "default-src #{default_src}",
       "connect-src #{connect_src}",
@@ -73,6 +76,7 @@ class CodeprojectsPreviewController < ApplicationController
       "script-src #{script_src}",
       "style-src #{style_src}",
       "img-src #{img_src}",
+      "font-src #{font_src}"
     ]
 
     unless rack_env?(:development) || rack_env?(:test)

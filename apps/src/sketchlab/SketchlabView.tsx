@@ -1,5 +1,10 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
-import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {
+  ExcalidrawElement,
+  Theme as ExcalidrawTheme,
+} from '@excalidraw/excalidraw/types/element/types';
 import {
   AppState,
   BinaryFiles,
@@ -9,21 +14,30 @@ import {
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
-const INITIAL_INFO_PANEL_WIDTH = 400;
+// This initial width is derived from the following:
+// The narrowest screen we see in GA with 1% usage is 1024px.
+// The version of Excalidraw we're using switches into a mobile mode at 730px.
+// So, we want to make sure the initial workspace is over 730px.
+// 1024 - 290 - 1px for resize bar = 734px.
+const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
@@ -37,11 +51,27 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
-  const {currentSources, updateSources} = useSources<SketchlabSources>();
+  const {
+    currentSources,
+    updateSources,
+    setReinitializationHandler,
+    showStartOverDialog,
+  } = useSources<SketchlabSources>();
+
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
+
+  const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+
+  const onClickStartOver = useCallback(() => {
+    showStartOverDialog('custom', commonI18n.startOverGeneric());
+  }, [showStartOverDialog]);
+
+  const {theme} = useTheme();
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  // We remount (ie, reset) Excalidraw any time we observe
+  // sources being initialized (eg, when level changes, teacher views a student's project, etc).
+  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
     levelProperties.id,
@@ -122,25 +152,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, []);
 
-  // This effect runs on each source change,
-  // but the full remount (via key change) is only intended when
-  // Excalidraw state diverges from the saved source state.
-  // This happens when a user switches levels, or a teachers switches
-  // between viewing different students on the same level.
   useEffect(() => {
-    // Note that we do not compare appState, as Excalidraw tracks a lot of app state properties
-    // that we do not store to S3.
-    const excalidrawApi = excalidrawApiRef.current;
-    if (
-      excalidrawApi &&
-      (JSON.stringify(excalidrawApi.getSceneElements()) !==
-        JSON.stringify(currentSources.source.elements) ||
-        JSON.stringify(excalidrawApi.getFiles()) !==
-          JSON.stringify(currentSources.source.files))
-    ) {
-      setExcalidrawMountKey(key => key + 1);
-    }
-  }, [currentSources.source]);
+    setReinitializationHandler(() => setExcalidrawMountKey(key => key + 1));
+  }, [setReinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -162,6 +176,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           isRunning={false}
           hasRun={hasRun}
           hasEdited={false}
+          settings={[useThemeSetting('sketchlab')]}
         />
       </div>
       <ResizeBar
@@ -173,13 +188,27 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         <PanelContainer
           id="workspace"
           className={panelClassName}
-          headerContent="Workspace"
+          headerContent={<WorkspaceHeader />}
+          rightHeaderContent={
+            !readonlyWorkspace && (
+              <Button
+                text={commonI18n.startOver()}
+                iconRight={{iconStyle: 'solid', iconName: 'arrow-rotate-left'}}
+                color={'gray'}
+                onClick={onClickStartOver}
+                ariaLabel={commonI18n.startOver()}
+                size={'xs'}
+                type="secondary"
+              />
+            )
+          }
         >
           <Excalidraw
             initialData={currentSources.source}
             onChange={debouncedSerializeAndSaveWorkspace}
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
+            theme={theme.toLowerCase() as ExcalidrawTheme}
           />
           {WorkspaceAlert}
         </PanelContainer>

@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:48:30.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Solving a Riddle\r\nBased on this flowchart logic, add to the start code to complete the program. \r\n- If the riddle is solved correctly, print \"You move forward.\"\r\n- If incorrect, ask if they want a hint:\r\n    - \"yes\" → Give hint.\r\n    - \"no\" → Print \"Try again.\"",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def solve_riddle():\n    print(\"A wise old owl asks: 'The more you take, the more you leave behind. What am I?'\")\n    answer = input(\"Your answer: \").lower()\n\n    if answer == \"footsteps\":\n        print(\"✅ Correct! You move forward through the mysterious door.\")\n    else:\n        hint = input(\"❓ Incorrect! Would you like a hint? (yes/no) \").lower()\n        # Add the nested conditional here. Ask if they want a hint. If \"yes\", give hint, if \"no\" print \"Try again.\"\n\n\nsolve_riddle()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzk3QwIdDqRtpsDh72ZX20gDV7fGaaWpH\ndrNb0De12s6UWriuiUO//cFDrBRl04s8bWi2vUbo5FbVEn0eqZqwBkxNxb+u\nz0hnMmbx/Y8TfNFjP6CTnSbRNn1ojv+FYWl2jyW3n2RgVwMegWhitvuUxrEp\nhDhWVI5vbvkQFABHi8ZNlI9ssEdve7c2L+Fr3Eyv6UeZEhL9p6JEOg+kgb51\nIvzAadE86oxFtDmK6uwdrIOMsobXnEubnTtsvXsdcyH2puPIMtyjNBqZM0u4\noFGD1ZTUu55xR8m6PY/hSVX4eD0E2mYR1cGbK0Rn1pDvqxEdHJ6nFZjMJziw\ngvOMGdpSWgducsbCH55eNHi3O7eIoRYInjAiR6Rmp0w61a12psj01mZBeO41\nOodV+UD34SOBE2InS1aYEEbOGdhcqP3CmQ/iFLp1E6r0aurc4LZst81jdEvL\nl840LCtNCDfOqPsIcjqqk3j44vd9qi4PPNA7uil/Bgs8V7cdF0geI1Zv2Wg1\nU0ZOWHUvpsL5wLXl5NayjP1vmN/TKPImZsMT2fjTaxXlW22vteorVfOjRfm2\nGqnzpKWgSAmjatNLLYfdSC62tCh4FHnUzzfdwilDL3zKiXFvo+ChB8eFu5x3\n0Z5xy7rBAjrGNe3Au50YDkgGrL8j9ocp9KX/0dHTvI2yLgma8At76FzmWtQk\npwVWGsOA33CxOc5sfL1ewAOAS684iEd8WERGVOl8hKbEkyNhRab1ScH6rEIh\nOaM6RYQARlzpSQ0c5J01vPssWts/R8xJlPAvRdAt/A0QrgemejWl35fA6Ib1\nd5dwuEOeMU7fe8jh5oRexzFotok7PMfnb3V1KmmIzHI=\n",
+    "display_name": "Add nested conditional",
+    "thumbnail_url": "https://images.code.org/e3fed20843ff6adbfee2e13579770a99-python - foot.jpg",
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestSolveRiddle(unittest.TestCase):\n\n    def test_nested_conditional_present(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Parse the file into an AST (Abstract Syntax Tree)\n            tree = ast.parse(content)\n\n            # Find the function definition\n            for node in ast.walk(tree):\n                if isinstance(node, ast.FunctionDef) and node.name == \"solve_riddle\":\n                    for stmt in node.body:\n                        if isinstance(stmt, ast.If) and isinstance(stmt.orelse, list):\n                            # Look for a second nested if-statement inside the else block\n                            for nested_stmt in stmt.orelse:\n                                if isinstance(nested_stmt, ast.If):\n                                    return  # Test passes if a nested if-statement is found inside the else block\n\n            self.fail(\n                \"The `else` block in `solve_riddle()` is missing a nested conditional. \"\n                \"Please add an if-statement to check if the user wants a hint.\"\n            )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:30.942+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson20-level7b_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson20-level7b_2025\"}]"
+}]]></config>
+</Pythonlab>

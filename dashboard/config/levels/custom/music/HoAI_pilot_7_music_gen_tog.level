@@ -1,0 +1,92 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-10-24T03:10:15.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "level_data": {
+      "library": "launch2024",
+      "danceMove": "floss",
+      "guideMode": "aiCodeGenerate",
+      "aiCodeGenerateExtraPrompt": "Always nest play blocks inside play together. Use only two to three play togethers and do not use repeat.",
+      "aiCodeGenerateAdlib": {
+        "id": "layers",
+        "template": "Please code a music remix that layers {layer1} and {layer2} together.",
+        "options": {
+          "layer1": [
+            {
+              "id": "bass",
+              "text": "bass"
+            },
+            {
+              "id": "beats",
+              "text": "beats"
+            },
+            {
+              "id": "vocals",
+              "text": "vocals"
+            },
+            {
+              "id": "leads",
+              "text": "leads"
+            }
+          ],
+          "layer2": [
+            {
+              "id": "bass",
+              "text": "bass"
+            },
+            {
+              "id": "beats",
+              "text": "beats"
+            },
+            {
+              "id": "vocals",
+              "text": "vocals"
+            },
+            {
+              "id": "leads",
+              "text": "leads"
+            }
+          ]
+        },
+        "variantCount": 3
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "kenya_grace_strangers"
+    },
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "name_suffix": "_4",
+    "long_instructions": "###AI can help layer sounds together.\r\nComplete the prompt below, then generate code",
+    "project_template_level_name": "HoAI_pilot_5_template1",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-24T03:10:15.378+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_gen_tog\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_gen_tog\"}]"
+}]]></config>
+  <blocks/>
+</Music>

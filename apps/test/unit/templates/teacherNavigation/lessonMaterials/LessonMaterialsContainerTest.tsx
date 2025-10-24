@@ -11,6 +11,11 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser, {
+  setShowAITALessonSummary,
+  setHasCompletedPersonalizationQuiz,
+  setAudioSummaryTranscript,
+} from '@cdo/apps/templates/currentUserRedux';
 import teacherSections, {
   selectSection,
   setSections,
@@ -261,6 +266,7 @@ describe('LessonMaterialsContainer', () => {
     registerReducers({
       unitSelection,
       teacherSections,
+      currentUser,
     });
 
     store = getStore();
@@ -604,6 +610,61 @@ describe('LessonMaterialsContainer', () => {
         'https://videos.code.org/video.mp4',
         '_self'
       );
+    });
+  });
+
+  describe('lesson summary', () => {
+    beforeEach(() => {
+      store.dispatch(setShowAITALessonSummary(true));
+    });
+
+    it('does not render lesson summary when showAITALessonSummary is false', async () => {
+      store.dispatch(setShowAITALessonSummary(false));
+
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+    });
+
+    it('renders lesson summary when showAITALessonSummary is true', async () => {
+      const audioTranscript = [
+        {timeStamp: '0:00', text: 'First line of dialogue.'},
+        {timeStamp: '0:30', text: 'Second line of dialogue.'},
+        {timeStamp: '1:00', text: 'Third line of dialogue.'},
+      ];
+      store.dispatch(setAudioSummaryTranscript(audioTranscript));
+
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+      screen.getByText(i18n.teachingTips());
+
+      // Audio summary transcript dialog is present as well
+      fireEvent.click(screen.getByText(i18n.transcript()));
+      screen.getByText(i18n.audioTranscript());
+      audioTranscript.forEach(transcriptLine => {
+        screen.getByText(transcriptLine.timeStamp);
+        screen.getByText(transcriptLine.text);
+      });
+    });
+
+    it('does not render Personalization Quiz note if user has completed the quiz', async () => {
+      store.dispatch(setHasCompletedPersonalizationQuiz(true));
+
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.wantToSeeDifferentInformation())).toBe(
+        null
+      );
+    });
+
+    it('renders Personalization Quiz note if user has not completed the quiz', async () => {
+      store.dispatch(setHasCompletedPersonalizationQuiz(false));
+
+      await renderDefault();
+
+      screen.getByText(i18n.wantToSeeDifferentInformation());
     });
   });
 });

@@ -785,6 +785,8 @@ const marketingPaths = {
   "/news/why-ai-education-is-the-key-to-global-competitiveness": true,
   "/district-set-up": true,
   "/impact-report": true,
+  "/about/impact-report": true,
+  "/news/fetc-2025": true,
 }
 
 const pathPatterns = [

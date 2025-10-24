@@ -12,6 +12,8 @@ import {
   AnalyticsProperties,
 } from '../types';
 
+import UploadButton, {UploadButtonProps} from './assets/UploadButton';
+
 import moduleStyles from './UserChatMessageEditor.module.scss';
 
 interface UserChatMessageEditorProps {
@@ -21,6 +23,13 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
+  responseCallback?: (response: string) => string;
+
+  /** UploadButton props */
+  uploadDisabled?: UploadButtonProps['isDisabled'];
+  levelName?: UploadButtonProps['levelName'];
+  buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
+  hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
 }
 
 /**
@@ -35,6 +44,11 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatButtons,
   hiddenContextCallback,
   multimodalAvailable,
+  responseCallback,
+  levelName,
+  hasStarterAssets,
+  buildAssetUrl,
+  uploadDisabled,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
@@ -80,6 +94,7 @@ const UserChatMessageEditor: React.FunctionComponent<
               Object.values(userAddedSelectionContext).length > 0
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
+            responseCallback,
           })
         );
       }
@@ -93,6 +108,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       multimodalAvailable,
       chatAssets,
       userAddedSelectionContext,
+      responseCallback,
     ]
   );
 
@@ -118,7 +134,18 @@ const UserChatMessageEditor: React.FunctionComponent<
         disabled={disabled}
         editorContainerClassName={editorContainerClassName}
         ref={inputRef}
-      />
+      >
+        {multimodalAvailable && buildAssetUrl && levelName && (
+          <div className={moduleStyles.buttonRow}>
+            <UploadButton
+              isDisabled={!!uploadDisabled || disabled}
+              levelName={levelName}
+              hasStarterAssets={hasStarterAssets}
+              buildAssetUrl={buildAssetUrl}
+            />
+          </div>
+        )}
+      </UserMessageEditor>
     </>
   );
 };

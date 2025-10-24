@@ -10,6 +10,8 @@ export type SegmentButtonType = 'withLabel' | 'iconOnly' | 'number';
 export interface SegmentedButtonModel {
   /** Button Label */
   label?: string;
+  /** Aria label for icon only buttons without labels */
+  ariaLabel?: string;
   /** Is button disabled */
   disabled?: boolean;
   /** Is button selected */
@@ -40,6 +42,7 @@ interface SegmentedButtonProps extends SegmentedButtonModel {
 
 const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
   label,
+  ariaLabel,
   disabled,
   selected,
   buttonType = 'withLabel',
@@ -55,6 +58,7 @@ const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
   return (
     <button
       id={id}
+      aria-label={ariaLabel}
       type="button"
       disabled={disabled}
       onClick={handleClick}
