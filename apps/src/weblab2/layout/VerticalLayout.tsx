@@ -159,9 +159,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             className={weblab2Styles.headerContainer}
             headerContent={<WorkspaceHeader />}
             leftHeaderContent={
-              isWidgetView ? (
-                <span />
-              ) : (
+              isWidgetView ? undefined : (
                 <SegmentedButtons {...viewModeButtonsProps} />
               )
             }
