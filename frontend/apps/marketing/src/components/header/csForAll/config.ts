@@ -43,12 +43,12 @@ const SHARED_LINKS = {
     label: 'Activities',
   },
   HOUR_OF_AI_HOST_AN_EVENT: {
-    href: '/hour-of-ai/partners#host-event',
+    href: '/hour-of-ai/how-to/k-12educator',
     label: 'Host an Event',
   },
-  HOUR_OF_AI_HOW_TO_GUIDES: {
-    href: '/hour-of-ai/how-to/k-12educator',
-    label: 'How-to Guides',
+  HOUR_OF_AI_FAQS: {
+    href: '/hour-of-ai/faq',
+    label: 'FAQs',
   },
   HOUR_OF_AI_PARTNERS: {
     href: '/hour-of-ai/partners',
@@ -148,7 +148,7 @@ export const HOUR_OF_AI_LINKS: {linkList: LinkItemProps[]} = {
     createLinkItem(SHARED_LINKS.HOUR_OF_AI_PARTNERS),
     createLinkItem(SHARED_LINKS.HOUR_OF_AI_RESOURCES),
     createLinkItem(SHARED_LINKS.HOUR_OF_AI_HOST_AN_EVENT),
-    createLinkItem(SHARED_LINKS.HOUR_OF_AI_HOW_TO_GUIDES),
+    createLinkItem(SHARED_LINKS.HOUR_OF_AI_FAQS),
   ],
 };
 

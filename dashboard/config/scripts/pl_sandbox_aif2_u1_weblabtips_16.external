@@ -18,7 +18,7 @@ markdown <<MARKDOWN
     <img src="https://images.code.org/65cc70df044c06a2e9750d1a48bf87f1-image-1761073828457.png" alt="AI Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
     <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
       <h3><b>Using the AI</b></h3>
-      <p style="font-size: 14pt;">The AI can be a great partner for debugging and creating. Encourage students to ask it for help finding problems in their code or brainstorming ways to improve their project — but always review and test the results before using them.</p>
+      <p style="font-size: 14pt;">The AI can be a great partner for debugging and creating. Encourage students to ask it for help finding problems in their code or brainstorming ways to improve their project.</p>
       <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
         ➡️ Click on the AI icon on the top left of the workspace to access the AI bot.
       </p>
@@ -34,8 +34,7 @@ markdown <<MARKDOWN
       <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
         💡 Example: Instead of “make it look better,” try “center the box and change the text color to blue.”
       </p> 
-      <p>Check out our  <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none;'>prompt guide</a> *update link*
-      </p>
+      
     </div>
   </div>
 
