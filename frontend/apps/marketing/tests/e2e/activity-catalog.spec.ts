@@ -88,6 +88,8 @@ test.describe('Activity Catalog', () => {
   });
 
   test('eyes', {tag: '@csforall'}, async ({page, eyes, browserName}) => {
+    // This test waits for images to load, so it is slow
+    test.slow();
     test.skip(browserName === 'webkit', 'AVIF does not work on Webkit');
     test.skip(getSiteType() !== 'csforall', 'Only runs on csforall site');
 
