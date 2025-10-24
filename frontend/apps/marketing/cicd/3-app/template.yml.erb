@@ -637,8 +637,8 @@ Resources:
         TargetValue: 70.0
         PredefinedMetricSpecification:
           PredefinedMetricType: ECSServiceAverageCPUUtilization
-        ScaleInCooldown: 60 # Wait 60 seconds before scaling up
-        ScaleOutCooldown: 900 # Scale out incrementally over 15 minutes
+        ScaleInCooldown: 300 # Wait 5 minutes before removing more instances
+        ScaleOutCooldown: 60 # Wait 1 minute before adding more instances
   ECSAutoScalingRole:
     Type: AWS::IAM::Role
     Properties:
