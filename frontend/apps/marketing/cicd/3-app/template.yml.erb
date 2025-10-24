@@ -240,11 +240,17 @@ Resources:
               OriginProtocolPolicy: https-only
               OriginSSLProtocols:
                 - TLSv1.2
+            OriginShield:
+              Enabled: true
+              OriginShieldRegion: !Ref 'AWS::Region'
           - Id: marketing-sites-static-assets-origin
             DomainName: !GetAtt StaticAssetsBucket.RegionalDomainName
             S3OriginConfig:
               OriginAccessIdentity: ""
             OriginAccessControlId: !Ref CloudFrontOriginAccessControl
+            OriginShield:
+              Enabled: true
+              OriginShieldRegion: !Ref 'AWS::Region'
         DefaultCacheBehavior:
           TargetOriginId: marketing-sites-application-origin
           ViewerProtocolPolicy: redirect-to-https
