@@ -100,7 +100,7 @@ export interface ButtonSpecificProps {
   forceHover?: boolean;
 }
 
-export interface _BaseButtonProps
+export interface GenericButtonProps
   extends CoreButtonProps,
     LinkButtonSpecificProps,
     ButtonSpecificProps {}
@@ -115,7 +115,7 @@ const checkButtonPropsForErrors = ({
   isIconOnly,
   color,
   type,
-}: _BaseButtonProps) => {
+}: GenericButtonProps) => {
   if (
     (color === 'gray' && type == 'primary') ||
     (color === 'gray' && type === 'tertiary' && !isIconOnly)
@@ -191,7 +191,7 @@ const spinnerIcon: FontAwesomeV6IconProps = {
   animationType: 'spin',
 };
 
-const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
+const BaseButton: React.FunctionComponent<GenericButtonProps> = ({
   className,
   id,
   disabled = false,

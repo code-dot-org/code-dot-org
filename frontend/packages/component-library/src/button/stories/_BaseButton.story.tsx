@@ -1,6 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react-webpack5';
 
-import _BaseButton, {_BaseButtonProps} from '../_BaseButton';
+import _BaseButton, {GenericButtonProps} from '../_BaseButton';
 import {buttonColors} from '../index';
 
 export default {
@@ -19,12 +19,12 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<_BaseButtonProps> = args => (
+const SingleTemplate: StoryFn<GenericButtonProps> = args => (
   <_BaseButton {...args} />
 );
 
 const MultipleTemplate: StoryFn<{
-  components: _BaseButtonProps[];
+  components: GenericButtonProps[];
 }> = args => (
   <div
     style={{
