@@ -6,7 +6,7 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import {ButtonType, ButtonColor} from './types';
 
-import moduleStyles from './_baseButton.module.scss';
+import moduleStyles from './genericButton.module.scss';
 
 export interface TextButtonSpecificProps {
   /** Left Button icon */
@@ -191,7 +191,7 @@ const spinnerIcon: FontAwesomeV6IconProps = {
   animationType: 'spin',
 };
 
-const BaseButton: React.FunctionComponent<GenericButtonProps> = ({
+const GenericButton: React.FunctionComponent<GenericButtonProps> = ({
   className,
   id,
   disabled = false,
@@ -317,9 +317,7 @@ const BaseButton: React.FunctionComponent<GenericButtonProps> = ({
  *
  * ###  Status: ```Ready for dev```
  *
- * Design System: ***_BaseButton*** Component.
+ * Design System: ***GenericButton*** Component.
  *
- * ***(!IMPORTANT!)*** This is a private component for Designs System use only. It provides a base for ***Button***
- * and ***LinkButton*** components, implementing all the logic and styles for them.
  */
-export default memo(BaseButton);
+export default memo(GenericButton);
