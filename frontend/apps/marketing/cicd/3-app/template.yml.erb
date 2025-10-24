@@ -616,7 +616,10 @@ Resources:
     Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       MaxCapacity: 20 # Upper limit for scaling, can be increased as needed
-      MinCapacity: 3 # High availability minimum
+      MinCapacity:  !If
+        - IsProductionEnvironment
+        - 3 # High Availability for production
+        - 1
       ResourceId: !Sub "service/${EcsCluster}/${FargateService.Name}"
       RoleARN: !GetAtt ECSAutoScalingRole.Arn
       ScalableDimension: ecs:service:DesiredCount
