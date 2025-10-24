@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-14 04:15:43 UTC",
+    "serialized_at": "2025-10-24 06:31:13 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2419,8 +2419,37 @@
       }
     },
     {
-      "key": "75018531-ed83-43a0-8332-c1def25f40cb",
+      "key": "79f94c93-f18c-4f01-a464-332eb8aaa389",
       "position": 2,
+      "properties": {
+        "description": "Before we start processing data, let’s act like real data scientists and make sure our dataset is trustworthy. Sometimes data includes mistakes or even made-up information. We’ll use the chatbot to help spot those issues before we analyze anything.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "79f94c93-f18c-4f01-a464-332eb8aaa389",
+        "lesson_activity.key": "b699d64b-788b-4933-9c06-3244317f3ab4"
+      }
+    },
+    {
+      "key": "be670326-8dba-465d-8b60-3ea3320684cd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 8, Level 1: Validate the Data.\nExplain that in this level, they’ll review the library dataset and use AI Chat to identify misleading or fabricated entries.\n- Open the Library Books Dataset\n- Ask the chatbot for one strategy to validate the data.\n- Try that strategy—look for duplicates, mismatched author names, or impossible publication dates.\n- Verify what you find by checking the spreadsheet yourself.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Teaching Tip\nStudents don’t need to fix the errors right now—just identify and note any misleading or fabricated entries. They’ll keep these findings in mind when they process the data in Level 2."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be670326-8dba-465d-8b60-3ea3320684cd",
+        "lesson_activity.key": "b699d64b-788b-4933-9c06-3244317f3ab4"
+      }
+    },
+    {
+      "key": "75018531-ed83-43a0-8332-c1def25f40cb",
+      "position": 4,
       "properties": {
         "description": "Imagine you’re a librarian who needs to make decisions quickly, like recommending books to visitors or identifying which books are rarely checked out. You can’t rely on manual sorting all the time, especially when dealing with thousands of records. That’s where computer systems and computational tasks come in. Today, we’ll work with a dataset about a library’s book collection and use computational processes to uncover patterns and make data-driven decisions, just like a computer system would. In this activity, you’ll analyze a dataset step by step, just like a computer system processes data. We’ll use a template to break the problem into clear steps. Let’s walk through an example together to get started.",
         "remarks": true
@@ -2432,9 +2461,9 @@
     },
     {
       "key": "e6f1645f-1d7d-48b4-a69d-c354b6adaaaf",
-      "position": 3,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to open Lesson 8, Level 1. Walk students through solving the first choice level using the following steps ([here is a demo](https://drive.google.com/file/d/1tkR53BYic9eqtBFS5-Y9AAktrc_2ey-v/view) of how to do this):\n- **Define the goal:** A new visitor wants to know the hottest books to start reading.\n- **Identify the relevant data:** Popularity Score column.\n- **Choose the action (reference the action bank at the top of their activity guides):** Sort.\n- **Apply the action:** Use the spreadsheet to **sort by descending order (Z-A) of Popularity Score**.\n- **Describe the output:** The books are now listed from most popular to least popular.\n- **Reflect on insights**: This helps the library highlight the most popular books to new visitors.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to open Lesson 8, Level 2. Walk students through solving the first choice level using the following steps ([here is a demo](https://drive.google.com/file/d/1tkR53BYic9eqtBFS5-Y9AAktrc_2ey-v/view) of how to do this):\n- **Define the goal:** A new visitor wants to know the hottest books to start reading.\n- **Identify the relevant data:** Popularity Score column.\n- **Choose the action (reference the action bank at the top of their activity guides):** Sort.\n- **Apply the action:** Use the spreadsheet to **sort by descending order (Z-A) of Popularity Score**.\n- **Describe the output:** The books are now listed from most popular to least popular.\n- **Reflect on insights**: This helps the library highlight the most popular books to new visitors.",
         "progression_name": "Processing Library Data"
       },
       "seeding_key": {
@@ -2444,7 +2473,7 @@
     },
     {
       "key": "f686dfc2-ac2e-4331-abef-e8eaa786b838",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**:  Model filling out the Madlib template on chart paper or the board for the first scenario: “The goal is to [show the hottest books to visitors]. The system will [Sort] the [Popularity Score column] by [descending order]. The output is [a list of books ranked by popularity] so that [visitors know the best books to start with].”"
       },
@@ -2455,9 +2484,9 @@
     },
     {
       "key": "d0c25ad1-859b-40d1-b83c-39978600a350",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *sort*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *filter*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *aggregate*\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *sort*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *filter*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *aggregate*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *validate*\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d0c25ad1-859b-40d1-b83c-39978600a350",
@@ -2466,7 +2495,7 @@
     },
     {
       "key": "407c2ca9-9295-4446-80d2-71101b1baece",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "Now it’s your turn! Work with your partner to complete two additional library data choice levels. For each scenario, follow the steps we just practiced: define the goal, choose the action, identify the relevant data, apply the action, describe the output, and reflect on the insights.",
         "remarks": true
@@ -2478,9 +2507,9 @@
     },
     {
       "key": "158e9d81-36ee-4ec9-b8a8-eccde169da08",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students complete two more library data choice levels in Lesson 8, Level 1. They use their activity guide to write down the steps for two of the choice levels, and fill out the template to summarize their process and results each.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students complete two more library data choice levels in Lesson 8, Level 2. They use their activity guide to write down the steps for two of the choice levels, and fill out the template to summarize their process and results each.\n"
       },
       "seeding_key": {
         "activity_section.key": "158e9d81-36ee-4ec9-b8a8-eccde169da08",
@@ -2489,7 +2518,7 @@
     },
     {
       "key": "da67ece8-ebd5-40c7-a618-33e7ea393903",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**:\n- Observe students as they work through the scenarios.\n- Check that students are filling out their templates correctly.\n- Provide guidance or clarification if students are stuck on any step.",
         "tips": [
@@ -2506,7 +2535,7 @@
     },
     {
       "key": "56fb44a0-4bfc-4a2f-9db1-a9a6026f1af3",
-      "position": 9,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -2516,7 +2545,7 @@
     },
     {
       "key": "6db39ba8-4fc9-4572-8078-a5058cdf0a01",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have completed their scenarios, lead a review as a class. \n- Ask student pairs to share their answers.\n- Highlight and clarify any differences or commonalities in their findings."
       },
@@ -2527,7 +2556,7 @@
     },
     {
       "key": "e432c14a-da34-4d68-8205-0524ccb3a4ac",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "Let’s take some time to reflect on what you’ve learned. You’ll answer three free-response questions to compare the benefits and limitations of manual and computational data processing. Think about how the tools and methods we used today improve efficiency, accuracy, and help us handle larger datasets.",
         "duration": "10",
@@ -2541,9 +2570,9 @@
     },
     {
       "key": "f565044a-eafd-4881-a77d-908dc4f282b8",
-      "position": 12,
+      "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to respond to the reflection questions on Levels 2, 3, and 4.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3 to respond to the reflection questions on Levels 3, 4, and 5.",
         "progression_name": "Reflection",
         "tips": [
           {
@@ -2884,10 +2913,16 @@
       "key": "26c4aada-2f63-43bb-8578-5239c079fb48",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 1. Students look at user testing results for a product and pull out the main themes.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 1. Students look at user testing results for a product and pull out the main themes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around to ensure students are looking at all the types of data (observations, user survey response tables, and feedback) when doing their analysis.",
         "duration": "15",
         "name": "User Testing Data",
-        "progression_name": "User Testing Results"
+        "progression_name": "User Testing Results",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this activity moving. Students will refine their summaries with the chatbot in the next level, so aim to limit this analysis to five minutes or so, and allow about fifteen minutes with the chatbot in Level 2. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "26c4aada-2f63-43bb-8578-5239c079fb48",
@@ -2909,8 +2944,14 @@
       "key": "2a994ba0-28dc-41db-bd0c-37f469b0b3ee",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 2 to work with the chatbot to help summarize the same data they just looked at.",
-        "progression_name": "Using AI to Analyze Data"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 2 to work with the chatbot to help summarize the same data they just looked at.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to compare the chatbot’s summary with their own observations from Level 1. Remind them to record the chatbot’s response, revise their prompt for clarity or focus, and note any improvements in their activity guide.",
+        "progression_name": "Using AI to Analyze Data",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to think about why their revised prompt produced a stronger (or weaker) response — this mirrors how user testing involves multiple iterations to refine a product."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2a994ba0-28dc-41db-bd0c-37f469b0b3ee",
@@ -2932,7 +2973,7 @@
       "key": "5f65f099-8a35-4df7-87d2-ce1cab6a160d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 3. Students will see the same scenario, along with four choices for how Alice should respond to this situation.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the second page of the User Testing activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 3. Students will see the same scenario, along with four choices for how Alice should respond to this situation.",
         "duration": "20",
         "name": "What's Next",
         "progression_name": "Alice's Scenario"
@@ -5987,7 +6028,7 @@
       }
     },
     {
-      "name": "_key_build_a_computer_system2",
+      "name": "[KEY] Build a Computer System",
       "url": "https://docs.google.com/document/d/1IAZcD8QFc3c-jOhoGnMYFWnzweGu_Fb0Pgt6GGojHVM/edit?usp=sharing",
       "key": "_key_build_a_computer_system2",
       "properties": {
@@ -6134,14 +6175,16 @@
     },
     {
       "name": "[KEY] User Testing",
-      "url": "https://docs.google.com/document/d/1uKchorQvM--IFoPcoBlNNvLinVydVTm8CdL13M4PK1M/edit?usp=drivesdk",
-      "key": "_key_user_testing",
+      "url": "https://docs.google.com/document/d/16g2XhVwTbsWxpGug-uzS2b3CkL91lB3dX3pWeZuNXG4/edit?usp=sharing",
+      "key": "_key_user_testing_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_user_testing"
+        "resource.key": "_key_user_testing_1"
       }
     },
     {
@@ -6237,7 +6280,7 @@
       }
     },
     {
-      "name": "build_a_computer_system_2",
+      "name": "Build a Computer System",
       "url": "https://docs.google.com/presentation/d/1ix_rIeIHD5a4MV-YGuEOCeoY4auzZ9ha2ax3kL8u_jI/edit?usp=sharing",
       "key": "build_a_computer_system_2",
       "properties": {
@@ -6251,7 +6294,7 @@
       }
     },
     {
-      "name": "build_a_computer_system_3",
+      "name": "Build a Computer System",
       "url": "https://docs.google.com/document/d/1Tw-rh_2b5zIuCDCUOy4S-2wcV6sdnAtTz9D0zfL-w4s/edit?usp=sharing",
       "key": "build_a_computer_system_3",
       "properties": {
@@ -6710,27 +6753,30 @@
     },
     {
       "name": "User Testing",
-      "url": "https://docs.google.com/presentation/d/1UC4dnTYyqo8XhS2QBZoMA_Gaomfv_lzX2CFr7_dB7yE/edit?usp=drivesdk",
-      "key": "user_testing",
+      "url": "https://docs.google.com/presentation/d/1UoykfbPPdGrgchkjBFTYyU03RYg8EY82Nx33GfqyfDo/edit?usp=sharing",
+      "key": "user_testing_2",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "user_testing"
+        "resource.key": "user_testing_2"
       }
     },
     {
       "name": "User Testing",
-      "url": "https://docs.google.com/document/d/1Nqb8_xopj7cL8vE5XUARg4L-3PCY9GcporaBdUKHHXw/edit?usp=drivesdk",
-      "key": "user_testing_1",
+      "url": "https://docs.google.com/document/d/1zr6ATCilcHCnksBFyJYjMpnXp7qnGjBYasWn-9tTCHI/edit?usp=sharing",
+      "key": "user_testing_3",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "user_testing_1"
+        "resource.key": "user_testing_3"
       }
     },
     {
@@ -6828,7 +6874,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: User Testing",
-        "resource.key": "_key_user_testing"
+        "resource.key": "_key_user_testing_1"
       }
     },
     {
@@ -6840,13 +6886,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: User Testing",
-        "resource.key": "user_testing"
+        "resource.key": "user_testing_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: User Testing",
-        "resource.key": "user_testing_1"
+        "resource.key": "user_testing_3"
       }
     },
     {
