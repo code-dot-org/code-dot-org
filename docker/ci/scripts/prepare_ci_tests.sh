@@ -82,13 +82,13 @@ bundle exec rake install
 bundle exec rake lint:zeitwerk
 
 # Run tasks in parallel
-echo "running build and seed tasks in parallel..."
-bundle exec rake build & pid1=$!
+echo "running seed and build tasks in parallel..."
 bundle exec rake ci:seed_ui_test & pid2=$!
+bundle exec rake build & pid1=$!
 
 # Wait for all tasks and fail if any fail
-echo "waiting for rake build..."
-wait $pid1 || exit 1
 echo "waiting for rake ci:seed_ui_test..."
 wait $pid2 || exit 1
-echo "Build and seed complete."
+echo "waiting for rake build..."
+wait $pid1 || exit 1
+echo "Seed and build complete."
