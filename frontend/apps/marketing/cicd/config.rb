@@ -79,6 +79,13 @@ module MarketingSites
             CONTENTFUL_SPACE_ID: '27jkibac934d',
             CONTENTFUL_ENV_ID: 'master'
           },
+        }.freeze,
+        aiday: {
+          # Environment Variables to pass to the Next.js web application server.
+          environment_variables: {
+            CONTENTFUL_SPACE_ID: '90t6bu6vlf76',
+            CONTENTFUL_ENV_ID: 'master'
+          },
         }.freeze
       }.freeze,
 
@@ -101,6 +108,9 @@ module MarketingSites
         }.freeze,
         [:csforall, :production] => {
           base_domain_name: 'csforall.org'
+        }.freeze,
+        [:aiday, :production] => {
+          base_domain_name: 'aiday.org'
         }.freeze
       }.freeze
     }.freeze
