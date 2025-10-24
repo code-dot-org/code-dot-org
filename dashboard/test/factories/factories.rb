@@ -2363,4 +2363,10 @@ FactoryBot.define do
     association :user
     form_id {1}
   end
+
+  factory :ai_lesson_summary do
+    association :user
+    association :lesson
+    lesson_summary {'Sample summary'}
+  end
 end
