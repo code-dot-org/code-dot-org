@@ -138,25 +138,9 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   return (
     <div className={moduleStyles.container} ref={containerRef} tabIndex={-1}>
-      {/* Show static pack info & clickable Start Over button. */}
+      {/* Show static pack information. */}
       {!allowPackSelection && packFolder && (
-        <>
-          <CurrentPack packFolder={packFolder} />
-          {/* Start Over button. */}
-          <IconButtonWithTooltip
-            id="start-over"
-            label={musicI18n.startOver()}
-            icon={{iconName: 'refresh', iconStyle: 'solid'}}
-            type="tertiary"
-            color="black"
-            buttonSize="xs"
-            tooltipSize="xs"
-            tooltipDirection="onBottom"
-            hideTooltipTail={true}
-            onClick={onClickStartOver}
-            containerRef={containerRef}
-          />
-        </>
+        <CurrentPack packFolder={packFolder} />
       )}
       {/* Show Start Over button, possibly with pack information inside it. */}
       {!readOnlyWorkspace && (
