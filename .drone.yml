@@ -18,6 +18,15 @@ services:
     image: redis
     ports:
       - 6379
+  - name: ci-tests-mysql
+    image: mysql
+    ports:
+      - 8080
+    environment:
+      # TODO: GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_USER: readonly
+      MYSQL_PASSWORD: ''
 
 steps:
   - name: bin/drone/shell
