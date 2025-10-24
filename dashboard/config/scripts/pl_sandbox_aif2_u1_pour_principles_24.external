@@ -5,7 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # POUR Principles 
 
-#### Now that you’ve had a chance to explore Web Lab, let’s look at some common challenges teachers (and students!) run into — and how to handle them smoothly.
+#### In addition to considering user profiles, students also analyze the user experience, ensuring their sites are accessible to all users.
+
+#### The POUR principles provide a framework for designing digital content and experiences that are accessible to everyone, including people with disabilities.
 
  
 
@@ -49,16 +51,10 @@ markdown <<MARKDOWN
   </div>
 
 </div>
----
-
-
-
-
-
-
 
 ---
-## Wireframes are Up Next
+## Up Next
+#### As you explore sitemaps and wireframes keep these principles in mind. 
 
 
 
