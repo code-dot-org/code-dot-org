@@ -75,7 +75,7 @@ namespace :ci do
       next
     end
 
-    if CI::Utils.tagged?(RUN_ALL_TESTS_TAG)
+    if CI::Utils.tagged?(RUN_ALL_TESTS_TAG) || ENV.fetch('DRONE_TARGET_BRANCH', '') == 'staging'
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     elsif CI::Utils.tagged?(RUN_APPS_TESTS_TAG)
