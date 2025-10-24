@@ -56,9 +56,9 @@ module AiLessonSummariesHelper
               type: "object",
               properties: {
                 learning_objective: {type: "string"},
-                lesson_beats: {type: "string"},
-                misconceptions: {type: "string"},
-                tips: {type: "string"}
+                lesson_beats: {type: "array", items: {type: "string"}},
+                misconceptions: {type: "array", items: {type: "string"}},
+                tips: {type: "array", items: {type: "string"}}
               },
             }
           }
