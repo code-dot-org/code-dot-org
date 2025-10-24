@@ -58,9 +58,10 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           'short list to confirm ambiguous details. Format as markdown bullets.',
       },
     },
-    required: ['tutorMode', 'nextSteps', 'code', 'explanation'],
+    required: ['tutorMode', 'nextSteps', 'code', 'explanation', 'goal'],
     propertyOrdering: [
       'tutorMode',
+      'goal',
       'assumptions',
       'code',
       'explanation',
