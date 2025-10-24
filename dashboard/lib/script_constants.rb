@@ -234,6 +234,7 @@ module ScriptConstants
       MINECRAFT_AQUATIC_NAME,
       MINECRAFT_AI_NAME,
       MINECRAFT_SHOW_NAME,
+      MINECRAFT_NIGHT_NAME,
     ],
   }.freeze
 
