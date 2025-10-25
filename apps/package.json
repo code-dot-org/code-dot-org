@@ -10,7 +10,9 @@
   "scripts": {
     "lint": "yarn lint:scss && yarn lint:js",
     "lint:fix": "yarn lint:scss --fix && yarn lint:js --fix",
-    "lint:js": "eslint --format ./.eslintCustomMessagesFormatter.js --ext=.js,.jsx,.ts,.tsx --report-unused-disable-directives-severity=error",
+    "lint:js": "concurrently \"yarn lint:js:ts\" \"yarn lint:jsx:tsx\"",
+    "lint:js:ts": "eslint --format ./.eslintCustomMessagesFormatter.js --ext=.js,.ts --report-unused-disable-directives-severity=error .",
+    "lint:jsx:tsx": "eslint --format ./.eslintCustomMessagesFormatter.js --ext=.jsx,.tsx --report-unused-disable-directives-severity=error .",
     "lint:scss": "npx stylelint '**/*.scss'",
     "test": "./run-tests-in-parallel.sh",
     "test:unit": "jest",
