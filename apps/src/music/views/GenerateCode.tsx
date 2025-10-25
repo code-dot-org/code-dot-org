@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
@@ -12,6 +12,7 @@ import Adlib, {
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -167,6 +168,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     'listened',
   ].includes(aiGenerateState);
 
+  const multiProject = useMultiProject();
+  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+
   if (!packId) {
     return null;
   }
@@ -281,15 +285,15 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         <>
           <div>Keep editing, or continue when you're done.</div>
           <div className={styles.buttonRow}>
-            <Button
-              ariaLabel={'Continue'}
-              text={'Continue'}
-              type="primary"
-              color="black"
-              size="s"
-              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-              onClick={() => dispatch(continueOrFinishLesson())}
-            />
+            {showNavigation && (
+              <NavigationArea
+                levelProperties={levelProperties}
+                // The following props don't really matter as we don't have a Submit button or validation here.
+                hasRun={true}
+                hasEdited={true}
+                isRunning={false}
+              />
+            )}
           </div>
         </>
       )}

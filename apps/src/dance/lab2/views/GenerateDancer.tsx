@@ -6,9 +6,11 @@ import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeS
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
@@ -171,6 +173,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
 
+  const multiProject = useMultiProject();
+  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
       <ModeSwitchBar levelId={levelProperties.id} />
@@ -267,15 +272,15 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             <>
               <div>Great! Let's continue.</div>
 
-              <Button
-                ariaLabel={'Continue'}
-                text={'Continue'}
-                type="primary"
-                color="black"
-                size="s"
-                iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-                onClick={() => dispatch(continueOrFinishLesson())}
-              />
+              {showNavigation && (
+                <NavigationArea
+                  levelProperties={levelProperties}
+                  // The following props don't really matter as we don't have a Submit button or validation here.
+                  hasRun={true}
+                  hasEdited={true}
+                  isRunning={false}
+                />
+              )}
             </>
           )}
         </Guide>
