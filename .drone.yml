@@ -142,8 +142,8 @@ steps:
         You can also open a VSCode tunnel into drone to edit live:
         bin/drone/vscode $hostname
         EOF
-      - echo "Sleeping for 60 seconds to allow manual EBS volume modifications..."
-      - sleep 60
+      - echo "Sleeping for 600 seconds to allow manual EBS volume modifications..."
+      - sleep 600
 
   # Restore the staging build we created in the `cache-staging-build` pipeline
   - name: get-cached-staging-build
@@ -314,6 +314,6 @@ trigger:
 
 ---
 kind: signature
-hmac: c89320229134c40cbbc0b4678209c7688c65e9ff988322e2bdf5f74a3eaee11f
+hmac: f4e196256cffaa40ba10aad3ec32c24ab351ee24cb870c3aa4284bff0db67ac7
 
 ...
