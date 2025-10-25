@@ -70,6 +70,15 @@ Conditions:
   IsCorporateSite: !Equals [ !Ref SiteType, corporate ]
 
 Mappings:
+  # A mapping of AWS Regions to their Origin Shield Regions. Not all regions have Origin Shield enabled and may require
+  # redirecting to another region. For now, we only deploy to us-east-1 and us-east-2 which both support Origin Shield.
+  # In the future, if we expand to other regions, we can add them here as needed.
+  # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html
+  OriginShieldRegionMap:
+    us-east-1:
+      OriginShieldRegion: us-east-1
+    us-east-2:
+      OriginShieldRegion: us-east-2
   # Cloudfront Mappings
   # See: https://aws.amazon.com/blogs/networking-and-content-delivery/limit-access-to-your-origins-using-the-aws-managed-prefix-list-for-amazon-cloudfront/
   CFRegionMap:
@@ -242,7 +251,7 @@ Resources:
                 - TLSv1.2
             OriginShield:
               Enabled: true
-              OriginShieldRegion: !Ref 'AWS::Region'
+              OriginShieldRegion: !FindInMap [OriginShieldRegionMap, !Ref "AWS::Region", OriginShieldRegion]
           - Id: marketing-sites-static-assets-origin
             DomainName: !GetAtt StaticAssetsBucket.RegionalDomainName
             S3OriginConfig:
@@ -250,7 +259,7 @@ Resources:
             OriginAccessControlId: !Ref CloudFrontOriginAccessControl
             OriginShield:
               Enabled: true
-              OriginShieldRegion: !Ref 'AWS::Region'
+              OriginShieldRegion: !FindInMap [OriginShieldRegionMap, !Ref "AWS::Region", OriginShieldRegion]
         DefaultCacheBehavior:
           TargetOriginId: marketing-sites-application-origin
           ViewerProtocolPolicy: redirect-to-https
