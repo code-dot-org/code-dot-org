@@ -122,7 +122,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        SITE_TYPE: [ corporate, csforall ]
+        SITE_TYPE: [ corporate, csforall, aiday ]
 
   # Deploy production environments in parallel, after test environments completes successfully
   deploy-production:
@@ -143,4 +143,4 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        SITE_TYPE: [ corporate, csforall ]
+        SITE_TYPE: [ corporate, csforall, aiday ]

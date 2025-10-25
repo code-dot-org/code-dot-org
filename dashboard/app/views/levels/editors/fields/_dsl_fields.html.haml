@@ -55,6 +55,18 @@
       you can add/remove the <code>hide_letters_lab2</code> property above
       to control whether letters appear in the bubbles for each sublevel.
       The <code>hide_letters_lab2</code> has no effect on a legacy bubble choice level.
+    %h4 Tip: Custom Modes
+    %p
+      With the Lab2 version of bubble choice levels (described above), certain custom modes
+      are available which present alternate versions of the bubble choice level. Use
+      <code>custom_mode 'mode_name'</code> to enable. Currently this includes:
+    %ul
+      %li
+        <code>music_dance_ai</code>: A mode for Hour of AI 2025 which shows a custom
+        tabbed experience where students can switch between a Dancer Creation, Music Creation,
+        and Dance Creation level. At least one of these level types must be included as a sublevel
+        for this mode to be enabled. If some sublevels are missing, the corresponding tabs will display
+        as disabled and locked.
 
   - if @level.is_a?(Multi)
     %h4 Tip: Allow Multiple Attempts
