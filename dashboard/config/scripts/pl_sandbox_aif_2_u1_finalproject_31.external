@@ -1,0 +1,31 @@
+name 'pl_sandbox_aif_2_U1-finalproject-31'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Final Project 
+
+## Multi-page web application
+#### In the final project, students step into the role of web designers to create a multi-page digital magazine for a fictional user or community.
+
+#### They define their target audience and brand identity, plan layouts for key pages such as the home and article pages, and use AI in Guide Mode to generate the HTML and CSS that bring their designs to life.
+
+
+## You did it! 
+
+#### You’ve now practiced using the tools to build this project while getting an overview of much of the Unit 1 content. This module is designed to give you a strong head start as you prepare to teach the unit.
+
+## Want to try more? 
+
+#### If you’d like to continue and complete the full project, open the link in a new tab and return to it after finishing this module in the next level.
+
+---
+
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ The project is in lesson 13. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+MARKDOWN

@@ -24,6 +24,13 @@
   border-radius: 10px;
 }
 
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+}
+
 .navigationButton {
   height: 35px;
 
