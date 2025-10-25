@@ -25,7 +25,7 @@ import {
   getToolboxDefinition,
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
-import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
+import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
@@ -523,134 +523,129 @@ const DanceView: React.FunctionComponent<{
 
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
-      {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
-      {!guideMode && (
-        <ResourcePanel
-          isRunning={isRunning}
-          hasRun={hasRun}
-          hasEdited={hasEdited}
-          levelProperties={levelProperties}
-          headerClassName={moduleStyles.panelHeader}
-          className={moduleStyles.instructionsArea}
-          settings={settings}
-        />
-      )}
-      <div className={moduleStyles.divider} />
-      {!isToolboxMode && (
+      <ModeSwitchBar levelId={levelProperties.id} />
+      <div className={moduleStyles.mainContent}>
+        {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
+        {!guideMode && (
+          <ResourcePanel
+            isRunning={isRunning}
+            hasRun={hasRun}
+            hasEdited={hasEdited}
+            levelProperties={levelProperties}
+            headerClassName={moduleStyles.panelHeader}
+            className={moduleStyles.instructionsArea}
+            settings={settings}
+          />
+        )}
+        <div className={moduleStyles.divider} />
+        {!isToolboxMode && (
+          <PanelContainer
+            id="visualization"
+            headerContent="Dance Party!"
+            headerClassName={moduleStyles.panelHeader}
+            className={classNames(
+              moduleStyles.visualizationArea,
+              guideMode && moduleStyles.jumbo
+            )}
+          >
+            <div className={moduleStyles.visualizationColumn}>
+              {!usingMusicProject && currentSources.selectedSong && (
+                <SongSelector
+                  enableSongSelection={!isRunning}
+                  setSong={onSetSong}
+                  selectedSong={currentSources.selectedSong}
+                  songData={songData}
+                  filterOn={filterOn}
+                  levelIsRunning={isRunning}
+                />
+              )}
+              {usingMusicProject &&
+                (loadedMusicProject && metadataToUse ? (
+                  <MusicProjectBar title={metadataToUse.title} />
+                ) : (
+                  // Temp UI
+                  'Loading your Music Lab project...'
+                ))}
+              <div
+                id={DANCE_VISUALIZATION_ID}
+                className={moduleStyles.visualization}
+              >
+                <div
+                  className={classNames(
+                    moduleStyles.loading,
+                    isLoading && moduleStyles.loadingShow
+                  )}
+                >
+                  <img
+                    src={loadingGif}
+                    className={moduleStyles.loadingGif}
+                    alt={danceI18n.dancePartyLoading()}
+                  />
+                </div>
+              </div>
+              <DanceControls
+                onRun={runProgram}
+                onReset={resetProgram}
+                disabled={(usingMusicProject && !loadedMusicProject) || false}
+              />
+            </div>
+          </PanelContainer>
+        )}
+        <div className={moduleStyles.divider} />
         <PanelContainer
-          id="visualization"
-          headerContent="Dance Party!"
+          id="dance-workspace-panel"
+          headerContent={commonI18n.workspaceHeaderShort()}
+          className={moduleStyles.workspaceArea}
           headerClassName={moduleStyles.panelHeader}
-          className={classNames(
-            moduleStyles.visualizationArea,
-            guideMode && moduleStyles.jumbo
-          )}
-          leftHeaderContent={
-            <BackToParentProject
-              text="Go to Hub"
-              iconLeft={{iconName: 'home'}}
-              type="secondary"
-              size="s"
-            />
+          rightHeaderContent={
+            !readonlyWorkspace && (
+              <Button
+                text={commonI18n.startOver()}
+                iconRight={{iconStyle: 'solid', iconName: 'refresh'}}
+                color={'black'}
+                onClick={onClickStartOver}
+                ariaLabel={commonI18n.startOver()}
+                size={'xs'}
+                type="secondary"
+              />
+            )
           }
         >
-          <div className={moduleStyles.visualizationColumn}>
-            {!usingMusicProject && currentSources.selectedSong && (
-              <SongSelector
-                enableSongSelection={!isRunning}
-                setSong={onSetSong}
-                selectedSong={currentSources.selectedSong}
-                songData={songData}
-                filterOn={filterOn}
-                levelIsRunning={isRunning}
-              />
-            )}
-            {usingMusicProject &&
-              (loadedMusicProject && metadataToUse ? (
-                <MusicProjectBar title={metadataToUse.title} />
-              ) : (
-                // Temp UI
-                'Loading your Music Lab project...'
-              ))}
-            <div
-              id={DANCE_VISUALIZATION_ID}
-              className={moduleStyles.visualization}
-            >
-              <div
-                className={classNames(
-                  moduleStyles.loading,
-                  isLoading && moduleStyles.loadingShow
-                )}
-              >
-                <img
-                  src={loadingGif}
-                  className={moduleStyles.loadingGif}
-                  alt={danceI18n.dancePartyLoading()}
-                />
-              </div>
-            </div>
-            <DanceControls
-              onRun={runProgram}
-              onReset={resetProgram}
-              disabled={(usingMusicProject && !loadedMusicProject) || false}
-            />
-          </div>
+          {WorkspaceAlert}
+          <div id={BLOCKLY_DIV_ID} />
         </PanelContainer>
-      )}
-      <div className={moduleStyles.divider} />
-      <PanelContainer
-        id="dance-workspace-panel"
-        headerContent={commonI18n.workspaceHeaderShort()}
-        className={moduleStyles.workspaceArea}
-        headerClassName={moduleStyles.panelHeader}
-        rightHeaderContent={
-          !readonlyWorkspace && (
-            <Button
-              text={commonI18n.startOver()}
-              iconRight={{iconStyle: 'solid', iconName: 'refresh'}}
-              color={'black'}
-              onClick={onClickStartOver}
-              ariaLabel={commonI18n.startOver()}
-              size={'xs'}
-              type="secondary"
-            />
-          )
-        }
-      >
-        {WorkspaceAlert}
-        <div id={BLOCKLY_DIV_ID} />
-      </PanelContainer>
-      {guideMode === 'instructions' && (
-        <GuideInstructions
-          isRunning={isRunning}
-          hasRun={hasRun}
-          hasEdited={hasEdited}
-          levelProperties={levelProperties}
-          width="narrow"
-        />
-      )}
-      {guideMode === 'aiCodeGenerate' && (
-        <Guide id="generate-panel" width="narrow">
-          {
-            <>
-              <div>
-                {generatedAiDance
-                  ? "Let's dance!"
-                  : "Now, let's generate a dance sequence to go with your song!"}
-              </div>
-              <Button
-                ariaLabel={'Generate dance'}
-                text={generatedAiDance ? 'Generate again!' : 'Generate dance'}
-                type="primary"
-                color="black"
-                size="s"
-                iconLeft={{iconName: 'sparkles'}}
-                onClick={generateAiDance}
-              />
-            </>
-          }
-        </Guide>
-      )}
+        {guideMode === 'instructions' && (
+          <GuideInstructions
+            isRunning={isRunning}
+            hasRun={hasRun}
+            hasEdited={hasEdited}
+            levelProperties={levelProperties}
+            width="narrow"
+          />
+        )}
+        {guideMode === 'aiCodeGenerate' && (
+          <Guide id="generate-panel" width="narrow">
+            {
+              <>
+                <div>
+                  {generatedAiDance
+                    ? "Let's dance!"
+                    : "Now, let's generate a dance sequence to go with your song!"}
+                </div>
+                <Button
+                  ariaLabel={'Generate dance'}
+                  text={generatedAiDance ? 'Generate again!' : 'Generate dance'}
+                  type="primary"
+                  color="black"
+                  size="s"
+                  iconLeft={{iconName: 'sparkles'}}
+                  onClick={generateAiDance}
+                />
+              </>
+            }
+          </Guide>
+        )}
+      </div>
     </div>
   );
 };

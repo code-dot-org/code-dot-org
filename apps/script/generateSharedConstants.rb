@@ -123,6 +123,7 @@ def main
       RESOURCE_EMBEDDABILITY_OPTIONS
       AI_DIFF_CONTEXT
       DISALLOWED_ROUTES
+      BUBBLE_CHOICE_CUSTOM_MODES
     ),
     file_type: 'ts'
   )

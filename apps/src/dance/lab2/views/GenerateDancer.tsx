@@ -2,7 +2,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
+import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -173,126 +173,122 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
-      <Guide id="generate-panel" glowSpeed={glowSpeed}>
-        {(aiGenerateState === 'generating' ||
-          aiGenerateState === 'reviewing') && (
-          <div className={moduleStyles.textArea}>{promptText}</div>
-        )}
-        {aiGenerateState === 'none' && (
-          <>
-            {levelProperties.aiDancerGenerateText && (
-              <>
-                <div>Describe the dancer you'd like AI to create.</div>
-                <textarea
-                  id="generate-description"
-                  onChange={evt => {
-                    setPromptText(evt.target.value);
-                  }}
-                  value={promptText}
-                  rows={4}
-                  className={moduleStyles.textArea}
-                />
+      <ModeSwitchBar levelId={levelProperties.id} />
+      <div className={moduleStyles.mainContent}>
+        <Guide id="generate-panel" glowSpeed={glowSpeed}>
+          {(aiGenerateState === 'generating' ||
+            aiGenerateState === 'reviewing') && (
+            <div className={moduleStyles.textArea}>{promptText}</div>
+          )}
+          {aiGenerateState === 'none' && (
+            <>
+              {levelProperties.aiDancerGenerateText && (
+                <>
+                  <div>Describe the dancer you'd like AI to create.</div>
+                  <textarea
+                    id="generate-description"
+                    onChange={evt => {
+                      setPromptText(evt.target.value);
+                    }}
+                    value={promptText}
+                    rows={4}
+                    className={moduleStyles.textArea}
+                  />
+                  <Button
+                    ariaLabel={'Continue'}
+                    text={'Continue'}
+                    type="primary"
+                    color="black"
+                    size="s"
+                    iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+                    onClick={() => {
+                      dispatch(continueOrFinishLesson());
+                      analyticsReporter.sendEvent('hoai2025-dancer-prompt', {
+                        promptText,
+                      });
+                    }}
+                  />
+                </>
+              )}
+              {!levelProperties.aiDancerGenerateText && (
+                <>
+                  <Adlib
+                    adlib={adlibs[adlibOption]}
+                    onChange={(promptText, choices) => {
+                      setPromptText(promptText);
+                      setChoices(choices);
+                      variantHistory.current = [];
+                    }}
+                    className={moduleStyles.textArea}
+                  />
+                  <Button
+                    ariaLabel={'Generate dancer'}
+                    text={'Generate dancer'}
+                    type="primary"
+                    color="black"
+                    size="s"
+                    iconLeft={{iconName: 'sparkles'}}
+                    onClick={generateDancer}
+                  />
+                </>
+              )}
+            </>
+          )}
+
+          {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
+
+          {aiGenerateState === 'reviewing' && (
+            <>
+              <div>Here is the dancer that was generated. Do you like it?</div>
+
+              <div className={moduleStyles.buttonRow}>
                 <Button
-                  ariaLabel={'Continue'}
-                  text={'Continue'}
+                  ariaLabel={"No. Let's try again."}
+                  text={"No. Let's try again."}
                   type="primary"
                   color="black"
                   size="s"
-                  iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-                  onClick={() => {
-                    dispatch(continueOrFinishLesson());
-                    analyticsReporter.sendEvent('hoai2025-dancer-prompt', {
-                      promptText,
-                    });
-                  }}
+                  onClick={() => setAiGenerateState('none')}
                 />
-              </>
-            )}
-            {!levelProperties.aiDancerGenerateText && (
-              <>
-                <Adlib
-                  adlib={adlibs[adlibOption]}
-                  onChange={(promptText, choices) => {
-                    setPromptText(promptText);
-                    setChoices(choices);
-                    variantHistory.current = [];
-                  }}
-                  className={moduleStyles.textArea}
-                />
+
                 <Button
-                  ariaLabel={'Generate dancer'}
-                  text={'Generate dancer'}
+                  ariaLabel={"Yes. Let's continue."}
+                  text={"Yes. Let's continue."}
                   type="primary"
                   color="black"
                   size="s"
-                  iconLeft={{iconName: 'sparkles'}}
-                  onClick={generateDancer}
+                  onClick={() => setAiGenerateState('done')}
                 />
-              </>
-            )}
-          </>
-        )}
+              </div>
+            </>
+          )}
 
-        {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
+          {aiGenerateState === 'done' && (
+            <>
+              <div>Great! Let's continue.</div>
 
-        {aiGenerateState === 'reviewing' && (
-          <>
-            <div>Here is the dancer that was generated. Do you like it?</div>
-
-            <div className={moduleStyles.buttonRow}>
               <Button
-                ariaLabel={"No. Let's try again."}
-                text={"No. Let's try again."}
+                ariaLabel={'Continue'}
+                text={'Continue'}
                 type="primary"
                 color="black"
                 size="s"
-                onClick={() => setAiGenerateState('none')}
+                iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+                onClick={() => dispatch(continueOrFinishLesson())}
               />
-
-              <Button
-                ariaLabel={"Yes. Let's continue."}
-                text={"Yes. Let's continue."}
-                type="primary"
-                color="black"
-                size="s"
-                onClick={() => setAiGenerateState('done')}
-              />
-            </div>
-          </>
-        )}
-
-        {aiGenerateState === 'done' && (
-          <>
-            <div>Great! Let's continue.</div>
-
-            <Button
-              ariaLabel={'Continue'}
-              text={'Continue'}
-              type="primary"
-              color="black"
-              size="s"
-              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-              onClick={() => dispatch(continueOrFinishLesson())}
+            </>
+          )}
+        </Guide>
+        <div className={moduleStyles.dancerContainer} ref={containerRef}>
+          <div>
+            {showPlaceholder && <img alt="" src={dancerEmptyHeadShoulders} />}
+            <DancerCanvas
+              key={dancerMetadata || 'none'}
+              size={containerHeight}
+              move="rest"
+              onLoadingChange={setIsPreviewLoading}
             />
-          </>
-        )}
-
-        <BackToParentProject
-          text="Go to Hub"
-          iconLeft={{iconName: 'home'}}
-          type="secondary"
-          size="s"
-        />
-      </Guide>
-      <div className={moduleStyles.dancerContainer} ref={containerRef}>
-        <div>
-          {showPlaceholder && <img alt="" src={dancerEmptyHeadShoulders} />}
-          <DancerCanvas
-            key={dancerMetadata || 'none'}
-            size={containerHeight}
-            move="rest"
-            onLoadingChange={setIsPreviewLoading}
-          />
+          </div>
         </div>
       </div>
     </div>
