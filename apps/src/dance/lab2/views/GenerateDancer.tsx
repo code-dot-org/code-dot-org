@@ -1,5 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {Heading4} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
@@ -9,6 +10,7 @@ import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLess
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
@@ -20,7 +22,7 @@ import moduleStyles from './generate-dancer.module.scss';
 
 const adlibs: AdlibsType = {
   'animal-02': {
-    template: 'Please generate a dancer.  It should look like {animal}.',
+    template: 'Create {animal}.',
     options: {
       animal: [
         {id: 'wolf', text: 'a wolf'},
@@ -33,8 +35,7 @@ const adlibs: AdlibsType = {
     variantCount: 5,
   },
   'animal-attire-02': {
-    template:
-      'Please generate a dancer.  It should look like {animal} wearing {attire}.',
+    template: 'Create {animal} wearing {attire}.',
     options: {
       animal: [
         {id: 'wolf', text: 'a wolf'},
@@ -54,8 +55,7 @@ const adlibs: AdlibsType = {
     variantCount: 5,
   },
   'adjective-animal-attire-02': {
-    template:
-      'Please generate a dancer.  It should look like {animal} with {adjective} style, wearing {attire}.',
+    template: 'Create {animal} wearing {attire}, with {adjective} style.',
     options: {
       adjective: [
         {id: 'basic', text: 'a basic'},
@@ -78,6 +78,43 @@ const adlibs: AdlibsType = {
         {id: 'headphones', text: 'headphones'},
         {id: 'crown', text: 'a crown'},
         {id: 'beanie', text: 'a beanie'},
+      ],
+    },
+    variantCount: 5,
+  },
+  'adjective-animal-attire-mood-03': {
+    template:
+      'Create {animal} wearing {attire}, in {mood} mood, with {adjective} style.',
+    options: {
+      adjective: [
+        {id: 'basic', text: 'a basic'},
+        {id: 'emo', text: 'an emo'},
+        {id: 'sporty', text: 'a sporty'},
+        {id: 'streetwear', text: 'a streetwear'},
+        {id: 'fancy', text: 'a fancy'},
+        {id: 'preppy', text: 'a preppy'},
+      ],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
+      attire: [
+        {id: 'headscarf', text: 'a headscarf'},
+        {id: 'sunglasses', text: 'sunglasses'},
+        {id: 'headphones', text: 'headphones'},
+        {id: 'crown', text: 'a crown'},
+        {id: 'beanie', text: 'a beanie'},
+      ],
+      mood: [
+        {id: 'happy', text: 'a happy'},
+        {id: 'silly', text: 'a silly'},
+        {id: 'sleepy', text: 'a sleepy'},
+        {id: 'surprised', text: 'a surprised'},
+        {id: 'confused', text: 'a confused'},
+        {id: 'fierce', text: 'a fierce'},
       ],
     },
     variantCount: 5,
@@ -141,7 +178,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
     setDancerMetadata(newDancerMetadata);
     const elapsedTime = Date.now() - startTime;
-    const delayDuration = 2000; // 2 seconds.
+    const delayDuration = 7000;
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
     await new Promise(res => setTimeout(res, remainingDelayDuration));
   }, [adlibOption, choices, variantHistory]);
@@ -176,7 +213,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       <ModeSwitchBar levelId={levelProperties.id} />
       <div className={moduleStyles.mainContent}>
         <Guide id="generate-panel">
-          Create your dancer.
+          {aiGenerateState === 'none' && levelProperties.longInstructions && (
+            <MainInstructionsContent
+              instructionsText={levelProperties.longInstructions}
+              handleInstructionsTextClick={() => {}}
+            />
+          )}
+          {aiGenerateState === 'generating' && <Heading4>Generating</Heading4>}
           {aiGenerateState === 'none' &&
             levelProperties.aiDancerGenerateText && (
               <>
@@ -206,43 +249,50 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 />
               </>
             )}
-          {!levelProperties.aiDancerGenerateText && (
-            <>
-              <Adlib
-                adlib={adlibs[adlibOption]}
-                readOnly={['generating', 'reviewing'].includes(aiGenerateState)}
-                glowSpeed={glowSpeed}
-                onChange={(promptText, choices) => {
-                  setPromptText(promptText);
-                  setChoices(choices);
-                  variantHistory.current = [];
-                }}
-              />
-              {aiGenerateState === 'none' && (
-                <div className={moduleStyles.buttonRow}>
-                  <Button
-                    ariaLabel={"Yes. Let's continue."}
-                    text={"Yes. Let's continue."}
-                    type="primary"
-                    color="black"
-                    size="s"
-                    iconLeft={{iconName: 'sparkles'}}
-                    onClick={generateDancer}
-                    className={moduleStyles.buttonWide}
-                  />
-                </div>
-              )}
-            </>
+          {['none', 'generating'].includes(aiGenerateState) &&
+            !levelProperties.aiDancerGenerateText && (
+              <>
+                <Adlib
+                  adlib={adlibs[adlibOption]}
+                  readOnly={['generating', 'reviewing'].includes(
+                    aiGenerateState
+                  )}
+                  glowSpeed={glowSpeed}
+                  onChange={(promptText, choices) => {
+                    setPromptText(promptText);
+                    setChoices(choices);
+                    variantHistory.current = [];
+                  }}
+                />
+                {aiGenerateState === 'none' && (
+                  <div className={moduleStyles.buttonRow}>
+                    <Button
+                      ariaLabel={'Generate Image'}
+                      text={'Generate Image'}
+                      type="primary"
+                      color="black"
+                      size="s"
+                      iconLeft={{iconName: 'sparkles'}}
+                      onClick={generateDancer}
+                      className={moduleStyles.buttonWide}
+                    />
+                  </div>
+                )}
+              </>
+            )}
+          {aiGenerateState === 'generating' ? 'Generating image.' : ''}
+          {aiGenerateState === 'reviewing' && (
+            <div>
+              <Heading4>Your Dancer is Ready</Heading4>
+              <div>Do you want to keep what AI generated?</div>
+            </div>
           )}
-          {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
           {aiGenerateState === 'reviewing' && (
             <>
-              <div>Here is the dancer that was generated. Do you like it?</div>
-
               <div className={moduleStyles.buttonRow}>
                 <Button
-                  ariaLabel={"No. Let's try again."}
-                  text={"No. Let's try again."}
+                  ariaLabel={'Try prompting again'}
+                  text={'Try prompting again'}
                   type="primary"
                   color="black"
                   size="s"
@@ -251,8 +301,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 />
 
                 <Button
-                  ariaLabel={'Continue'}
-                  text={'Continue'}
+                  ariaLabel={'Keep this'}
+                  text={'Keep this'}
                   type="primary"
                   color="black"
                   size="s"

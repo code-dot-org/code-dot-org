@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {Heading4} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -136,25 +137,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   }, [aiGenerateState, currentPlayheadPosition, dispatch, isPlaying]);
 
   useEffect(() => {
-    // If the user goes back to none or forward to editing, stop playback.
-    if (['none', 'editing'].includes(aiGenerateState)) {
-      if (isPlaying) {
-        setPlaying(false);
-      }
-    }
-  }, [aiGenerateState, dispatch, hasEdited, isPlaying, setPlaying]);
-
-  useEffect(() => {
-    if (aiGenerateState === 'editing' && hasEdited) {
+    if (aiGenerateState === 'editing' && isPlaying && hasEdited) {
       dispatch(setAiGenerateState('edited'));
     }
-  }, [aiGenerateState, dispatch, hasEdited]);
-
-  useEffect(() => {
-    if (aiGenerateState === 'edited' && isPlaying) {
-      dispatch(setAiGenerateState('listeningAfterEdit'));
-    }
-  }, [aiGenerateState, dispatch, isPlaying]);
+  }, [aiGenerateState, dispatch, hasEdited, isPlaying]);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
@@ -178,6 +164,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           handleInstructionsTextClick={() => {}}
         />
       )}
+      {aiGenerateState === 'generating' && <Heading4>Generating</Heading4>}
 
       {showFullContext && aiGenerateState === 'none' && (
         <textarea
@@ -189,7 +176,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {useAdlib && (
+      {['none', 'generating'].includes(aiGenerateState) && useAdlib && (
         <Adlib
           adlib={useAdlib}
           readOnly={aiGenerateState !== 'none'}
@@ -235,51 +222,59 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         </>
       )}
 
-      {aiGenerateState === 'generating' ? 'Generating code...' : ''}
+      {aiGenerateState === 'generating' ? 'Generating code.' : ''}
 
       {aiGenerateState === 'generated' ? '...' : ''}
 
-      {aiGenerateState === 'listening' && <div>Let's have a listen...</div>}
+      {aiGenerateState === 'listening' && <div>Take a listen.</div>}
 
       {aiGenerateState === 'listened' && (
         <>
-          <div>Did you like what you heard?</div>
+          <div>Do you want to keep what AI generated?</div>
 
           <div className={styles.buttonRow}>
             <Button
-              ariaLabel={"No. Let's try again."}
-              text={"No. Let's try again."}
+              ariaLabel={'Try prompting again'}
+              text={'Try prompting again'}
               type="primary"
               color="black"
               size="s"
-              onClick={() => dispatch(setAiGenerateState('none'))}
+              onClick={() => {
+                dispatch(setAiGenerateState('none'));
+                setPlaying(false);
+              }}
               className={styles.buttonWide}
             />
 
             <Button
-              ariaLabel={"Yes. Let's continue."}
-              text={"Yes. Let's continue."}
+              ariaLabel={'Keep this'}
+              text={'Keep this'}
               type="primary"
               color="black"
               size="s"
-              onClick={() => dispatch(setAiGenerateState('editing'))}
+              onClick={() => {
+                dispatch(setAiGenerateState('editing'));
+                setPlaying(false);
+              }}
               className={styles.buttonWide}
             />
           </div>
         </>
       )}
 
-      {aiGenerateState === 'editing' && (
-        <div>Now it's your turn. Try editing the code.</div>
+      {aiGenerateState === 'editing' && !isPlaying && (
+        <div>
+          AI helped you get started. Now, edit the code to make it your own.
+        </div>
+      )}
+
+      {aiGenerateState === 'editing' && isPlaying && (
+        <div>Try changing the code. </div>
       )}
 
       {aiGenerateState === 'edited' && (
-        <div>Nice. Now have another listen.</div>
-      )}
-
-      {aiGenerateState === 'listeningAfterEdit' && (
         <>
-          <div>Keep editing, or continue when you're done.</div>
+          <div>That's a great mix!.</div>
           <div className={styles.buttonRow}>
             <Button
               ariaLabel={'Continue'}
