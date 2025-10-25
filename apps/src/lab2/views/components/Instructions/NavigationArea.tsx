@@ -4,7 +4,7 @@ import React, {useEffect, useMemo, useRef} from 'react';
 
 import {
   getCurrentLevel,
-  nextLevelId,
+  getNextLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -77,9 +77,10 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   const validationSatisfied = useAppSelector(
     state => state.lab.validationState?.satisfied
   );
-  const hasNextLevel = useAppSelector(
-    state => nextLevelId(state) !== undefined
+  const continueToLevelId = useAppSelector(
+    state => getNextLevel(state)?.levelNumber
   );
+  const hasNextLevel = continueToLevelId !== undefined;
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = predictSettings?.isPredictLevel;
   const isAiTutorVersion = useAppSelector(
@@ -208,6 +209,10 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     return null;
   }
 
+  const text = hasNextLevel
+    ? commonI18n.continueToLevel({level: continueToLevelId})
+    : commonI18n.finishLesson();
+
   return (
     <div
       key={useMessageIndex + ' - ' + feedbackMessage}
@@ -249,7 +254,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               type={type}
               color={color}
               iconRight={iconRight}
-              text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
+              text={text}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
               onContinue={onContinue}

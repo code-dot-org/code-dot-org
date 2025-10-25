@@ -302,11 +302,12 @@ export const getCurrentScriptLevelId = state => {
 };
 
 /**
- * Get the next level ID in the progression if it exists.
- * Returns undefined if not currently in a script level or
- * currently on the last level.
+ * Get a reference to the next level in the progression, if it exists.
+ *
+ * Returns undefined if not currently in a script level or currently
+ * on the last level.
  */
-export const nextLevelId = state => {
+export const getNextLevel = state => {
   if (getProgressLevelType(state) !== ProgressLevelType.SCRIPT_LEVEL) {
     return undefined;
   }
@@ -341,8 +342,16 @@ export const nextLevelId = state => {
     return undefined;
   }
 
-  const nextLevel = levels[currentLevelIndex + 1];
-  return nextLevel.id;
+  return levels[currentLevelIndex + 1];
+};
+
+/**
+ * Get the next level ID in the progression if it exists.
+ * Returns undefined if not currently in a script level or
+ * currently on the last level.
+ */
+export const nextLevelId = state => {
+  return getNextLevel(state)?.id;
 };
 
 export const levelCount = state => {
