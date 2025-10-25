@@ -1,5 +1,4 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading4} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -158,13 +157,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   return (
     <Guide id="generate-panel" modal={modal}>
-      {aiGenerateState === 'none' && levelProperties.longInstructions && (
-        <MainInstructionsContent
-          instructionsText={levelProperties.longInstructions}
-          handleInstructionsTextClick={() => {}}
-        />
-      )}
-      {aiGenerateState === 'generating' && <Heading4>Generating</Heading4>}
+      {['none', 'generating'].includes(aiGenerateState) &&
+        levelProperties.longInstructions && (
+          <MainInstructionsContent
+            instructionsText={levelProperties.longInstructions}
+            handleInstructionsTextClick={() => {}}
+          />
+        )}
 
       {showFullContext && aiGenerateState === 'none' && (
         <textarea
@@ -222,9 +221,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         </>
       )}
 
-      {aiGenerateState === 'generating' ? 'Generating code.' : ''}
-
-      {aiGenerateState === 'generated' ? '...' : ''}
+      {['generating', 'generated'].includes(aiGenerateState)
+        ? 'Generating code.'
+        : ''}
 
       {aiGenerateState === 'listening' && <div>Take a listen.</div>}
 

@@ -213,13 +213,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       <ModeSwitchBar levelId={levelProperties.id} />
       <div className={moduleStyles.mainContent}>
         <Guide id="generate-panel">
-          {aiGenerateState === 'none' && levelProperties.longInstructions && (
-            <MainInstructionsContent
-              instructionsText={levelProperties.longInstructions}
-              handleInstructionsTextClick={() => {}}
-            />
-          )}
-          {aiGenerateState === 'generating' && <Heading4>Generating</Heading4>}
+          {['none', 'generating'].includes(aiGenerateState) &&
+            levelProperties.longInstructions && (
+              <MainInstructionsContent
+                instructionsText={levelProperties.longInstructions}
+                handleInstructionsTextClick={() => {}}
+              />
+            )}
           {aiGenerateState === 'none' &&
             levelProperties.aiDancerGenerateText && (
               <>
