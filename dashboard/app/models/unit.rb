@@ -366,6 +366,7 @@ class Unit < ApplicationRecord
 
   # Caching is disabled when editing units and levels or running unit tests.
   def self.should_cache?
+    return true
     return false if Rails.application.config.levelbuilder_mode
     return false unless Rails.application.config.cache_classes
     return false if ENV['UNIT_TEST'] || ENV['CI']
