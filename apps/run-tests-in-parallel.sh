@@ -1,5 +1,5 @@
 #!/bin/bash
-# This is the implementation of `yarn test`. It runs all the tests
+# This is the implementation of `yarn test`. It runs all the tests 
 # (just like `npx karma start`) would, but it splits them into parallel jobs.
 #
 # If you want to add a new levelType or testType to `yarn test`, add an
@@ -32,7 +32,7 @@ function linuxNumProcs() {
   if ((procs == 0)); then
     local free_kb=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
     procs=1
-  fi
+  fi 
 
   echo $procs
 }
@@ -96,12 +96,9 @@ echo && echo && echo "Starting ${PROCS}x-parallel test jobs:"
 PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 
 # Each line in this SCRIPT block will be run as a parallel test job
-# If any line fails, the whole block will fail and exit early.
-#
-# This list has been optimized for drone m7i.4xlarge instances with 11x parallelism.
+# If any line fails, the whole block will fail and exit early
 ${PARALLEL} <<SCRIPT || (echo && echo && echo "One of the parallel test jobs FAILED, exiting early." && echo && exit 1)
-  yarn lint:js:ts
-  yarn lint:jsx:tsx
+  yarn lint
   npx karma start --testType=unit --port=9876
   npx karma start --testType=storybook --port=9877
   npx karma start --testType=integration --levelType='turtle' --port=9879
