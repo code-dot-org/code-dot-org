@@ -15,6 +15,7 @@ import ProjectContainer from './ProjectContainer';
 import {getStandaloneProjectId} from './utils';
 
 const MultiProjectContext = createContext<{
+  parentLevelId: number;
   backToParent: () => void;
 } | null>(null);
 
@@ -86,7 +87,7 @@ const MultiProjectContainer: React.FC<{children: React.ReactNode}> = ({
   }
 
   return (
-    <MultiProjectContext.Provider value={{backToParent}}>
+    <MultiProjectContext.Provider value={{backToParent, parentLevelId}}>
       <ProjectContainer channelId={currentProjectId}>
         {children}
       </ProjectContainer>
