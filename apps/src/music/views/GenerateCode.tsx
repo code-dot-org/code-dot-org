@@ -54,6 +54,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const currentPlayheadPosition = useAppSelector(
     state => state.music.currentPlayheadPosition
   );
+  const lastMeasure = useAppSelector(state => state.music.lastMeasure);
 
   const useCache = appConfig.getValue('ai-generate-cache') === 'true';
   const showFullContext =
@@ -81,6 +82,15 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       : adlibOption
       ? adlibs[adlibOption]
       : undefined);
+
+  useEffect(() => {
+    // If there is already generated music when we begin, presumably
+    // because the user is returning to a level they've previously worked
+    // on, then skip AI generation.
+    if (aiGenerateState === 'none' && lastMeasure > 1) {
+      dispatch(setAiGenerateState('edited'));
+    }
+  }, [aiGenerateState, dispatch, lastMeasure]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     dispatch(setAiGenerateState('none'));
@@ -158,6 +168,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   return (
     <Guide id="generate-panel" modal={modal}>
       {['none', 'generating'].includes(aiGenerateState) &&
+        useAdlib &&
         levelProperties.longInstructions && (
           <MainInstructionsContent
             instructionsText={levelProperties.longInstructions}

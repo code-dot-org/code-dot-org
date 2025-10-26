@@ -319,7 +319,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           timelineAtTop && moduleStyles.reverse
         )}
       >
-        {allowPackSelection && <PackDialog player={player} />}
+        {allowPackSelection && (
+          <PackDialog
+            player={player}
+            forcePackSelect={guideMode === 'aiCodeGenerate'}
+          />
+        )}
         {guideMode === 'instructions' && (
           <GuideInstructions
             levelProperties={levelProperties}
