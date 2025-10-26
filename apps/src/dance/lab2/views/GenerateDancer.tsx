@@ -16,7 +16,11 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-shoulders.png';
 
+import {getConfigValue} from '../../lottie/LottieDancerUtils';
+
 import moduleStyles from './generate-dancer.module.scss';
+
+const BODY_VARIANT_COUNT = 5;
 
 const adlibs: AdlibsType = {
   'animal-02': {
@@ -127,8 +131,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
     // Avoid showing a variant if it was shown recently.
     let variant = undefined;
+    let bodyVariant = 0;
     do {
       variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
+      bodyVariant = getRandomInt(0, BODY_VARIANT_COUNT - 1);
     } while (variantHistory.current.includes(variant));
     const newVariantsHistory = [...variantHistory.current, variant];
     // Keep the array length at a maximum of 3
@@ -137,7 +143,12 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     }
     variantHistory.current = newVariantsHistory;
 
-    const newDancerMetadata = JSON.stringify({adlibOption, choices, variant});
+    const newDancerMetadata = JSON.stringify({
+      adlibOption,
+      choices,
+      variant,
+      bodyVariant,
+    });
     trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
     setDancerMetadata(newDancerMetadata);
     const elapsedTime = Date.now() - startTime;
@@ -169,6 +180,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     return () => resizeObserver.disconnect();
   }, []);
 
+  // We artificially increase the 'generating' time so that the image doesn't appear
+  // too soon.
   const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
 
   return (
@@ -285,7 +298,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             <DancerCanvas
               key={dancerMetadata || 'none'}
               size={containerHeight}
-              move="rest"
+              move={getConfigValue('danceMove') || 'rest'}
               onLoadingChange={setIsPreviewLoading}
             />
           </div>
