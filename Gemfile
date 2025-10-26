@@ -82,6 +82,9 @@ group :development do
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
   gem 'bootsnap', '>= 1.14.0', require: false
   gem 'localhost'
+
+  # This gem is installed in development only for now while the node version in deployed environments is upgraded.
+  gem "vite_rails", "~> 3.0"
 end
 
 # Rack::Cache middleware used in development/test;
@@ -404,5 +407,3 @@ end
 # This gem line can be removed once we upgrade to Ruby 3.4 >= 3.4.8, or Ruby 3.3 >= 3.3.10 or Ruby 3.2 >= 3.2.10
 # which will include the openssl fix by default, see: https://github.com/ruby/openssl/issues/949#issuecomment-3388132260
 gem 'openssl', '>= 3.3.1'
-
-gem "vite_rails", "~> 3.0"
