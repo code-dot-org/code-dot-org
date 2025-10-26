@@ -77,10 +77,10 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   const validationSatisfied = useAppSelector(
     state => state.lab.validationState?.satisfied
   );
-  const continueToLevelId = useAppSelector(
+  const continueToLevel = useAppSelector(
     state => getNextLevel(state)?.levelNumber
   );
-  const hasNextLevel = continueToLevelId !== undefined;
+  const hasNextLevel = continueToLevel !== undefined;
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = predictSettings?.isPredictLevel;
   const isAiTutorVersion = useAppSelector(
@@ -210,7 +210,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   }
 
   const text = hasNextLevel
-    ? commonI18n.continueToLevel({level: continueToLevelId})
+    ? commonI18n.continueToLevel({level: continueToLevel})
     : commonI18n.finishLesson();
 
   return (
