@@ -8,6 +8,9 @@ import ButtonWithDialog from './ButtonWithDialog';
 
 import styles from './disclaimer.module.scss';
 
+const LEARN_MORE_URL =
+  'https://support.code.org/hc/en-us/articles/40542019587213/live_preview/01K86JQKCEP6HFD5CCWX0M1T05';
+
 interface DisclaimerProps {
   theme: Theme;
 }
@@ -21,19 +24,18 @@ const DisclaimerButton: React.FunctionComponent<DisclaimerProps> = ({
       isDisclaimerOpen ? (
         <div data-theme={'Light'}>
           <Modal
-            title={'Using AI Tutor'}
+            title={lab2I18n.aiTutorDisclaimerTitle()}
             description={lab2I18n.aiTutorDisclaimerLong()}
             className={styles.respectNewLines}
             primaryButtonProps={{
-              text: 'Back to project',
+              text: lab2I18n.backToProject(),
               onClick: () => setIsDisclaimerOpen(false),
             }}
             secondaryButtonProps={{
-              text: 'Learn more',
-              onClick: () =>
-                window.open(
-                  'https://support.code.org/hc/en-us/articles/40542019587213/live_preview/01K86JQKCEP6HFD5CCWX0M1T05'
-                ),
+              text: lab2I18n.learnMore(),
+              useAsLink: true,
+              href: LEARN_MORE_URL,
+              target: '_blank',
             }}
             onClose={() => setIsDisclaimerOpen(false)}
           />
