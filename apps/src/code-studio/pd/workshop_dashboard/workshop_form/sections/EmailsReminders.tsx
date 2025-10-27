@@ -1,6 +1,10 @@
 import {LinkButton} from '@code-dot-org/component-library/button';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Typography} from '@mui/material';
+import {
+  BodyFourText,
+  Heading2,
+  OverlineThreeText,
+} from '@code-dot-org/component-library/typography';
 import React, {FC, memo, useCallback} from 'react';
 
 import {SectionProps, WorkshopFormState} from '../../workshops/types';
@@ -54,14 +58,10 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
 
   return (
     <section>
-      <Typography component="h2" variant="h5" gutterBottom>
-        Emails & Reminders
-      </Typography>
+      <Heading2 visualAppearance="heading-sm">Emails & Reminders</Heading2>
       <div className={commonStyles.row}>
         <div className={commonStyles.col}>
-          <Typography variant="overline3" gutterBottom>
-            pre-workshop emails
-          </Typography>
+          <OverlineThreeText>pre-workshop emails</OverlineThreeText>
           {fields.suppress_email && (
             <div className={commonStyles.toggleWrapper}>
               <div className={commonStyles.row}>
@@ -79,9 +79,7 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
           )}
         </div>
         <div className={commonStyles.col}>
-          <Typography variant="overline3" gutterBottom>
-            post-workshop emails
-          </Typography>
+          <OverlineThreeText>post-workshop emails</OverlineThreeText>
           <div className={commonStyles.toggleWrapper}>
             <div className={commonStyles.row}>
               <Toggle
@@ -95,9 +93,9 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
               {/* TODO: blank href for now until we have mailjet email preview links */}
               <PreviewEmailLink href="" />
             </div>
-            <Typography variant="body4" gutterBottom>
+            <BodyFourText>
               *We require this email for every workshop.
-            </Typography>
+            </BodyFourText>
           </div>
         </div>
       </div>

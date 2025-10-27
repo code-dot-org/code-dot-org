@@ -1,4 +1,8 @@
-import {Box, Typography} from '@mui/material';
+import {
+  BodyTwoText,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
+import {Box} from '@mui/material';
 import React from 'react';
 import {
   BarChart,
@@ -197,11 +201,9 @@ const BarChartGroup: React.FC<BarChartGroupProps> = ({
 }) => (
   <Box className={moduleStyles.barChartGroupContainer}>
     <Box className={moduleStyles.barChartGroupHeaderContainer}>
-      <Typography variant="body2">
-        <Typography variant="strong" gutterBottom>
-          {title}
-        </Typography>
-      </Typography>
+      <BodyTwoText noMargin>
+        <StrongText>{title}</StrongText>
+      </BodyTwoText>
     </Box>
     <Box className={moduleStyles.simpleBarChartContainer}>
       <SimpleBarChart
@@ -217,4 +219,5 @@ const BarChartGroup: React.FC<BarChartGroupProps> = ({
 );
 
 export {SimpleBarChart, BarChartGroup};
+
 export default BarChartGroup;

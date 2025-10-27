@@ -14,12 +14,10 @@ module AichatAiHelper
   end
 
   def self.format_message_parts(message, encrypted_channel_id, level_name)
-    content = message['chatMessageText']
-    content += "\n\n" + message['userAddedSelectionContextPrompt'] if message['userAddedSelectionContextPrompt']
     parts = [
       AichatAiClientTypes::TextMessagePart.new(
         type: 'text',
-        content: content
+        content: message['chatMessageText']
       )
     ]
 

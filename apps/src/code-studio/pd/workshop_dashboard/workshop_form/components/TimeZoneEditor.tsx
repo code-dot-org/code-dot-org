@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import moment from 'moment-timezone';
 import React, {FC, memo, useState} from 'react';
 
@@ -27,9 +27,9 @@ export const TimeZoneEditor: FC<{
 
   return (
     <div className={styles.container}>
-      <Typography id="tz-label" variant="body3" gutterBottom>
+      <BodyThreeText id="tz-label">
         {timeZone ? fields.time_zone.label : 'Workshop times are local'}
-      </Typography>
+      </BodyThreeText>
       {editMode ? (
         <SimpleDropdown
           name={fields.time_zone.stateKey}
@@ -49,9 +49,9 @@ export const TimeZoneEditor: FC<{
           }))}
         />
       ) : (
-        <Typography variant="body3" gutterBottom>
+        <BodyThreeText>
           <strong>{timeZone}</strong>
-        </Typography>
+        </BodyThreeText>
       )}
       {!editMode && (
         <Button

@@ -1,7 +1,14 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Card, CardContent, Box, Typography} from '@mui/material';
+import {
+  BodyFourText,
+  BodyThreeText,
+  Heading2,
+  Heading3,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
+import {Card, CardContent, Box} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useMemo, useState} from 'react';
 
@@ -68,14 +75,12 @@ export const ScoreCard: FC<ScoreCardProps> = ({
       >
         <CardContent className={commonStyles.cardContent}>
           <Box>
-            <Typography component="h2" variant="overline2">
-              <Typography variant="strong" gutterBottom>
-                {title}
-              </Typography>
-            </Typography>
-            <Typography className={commonStyles.description} variant="body4">
+            <Heading2 visualAppearance="overline-two" noMargin>
+              <StrongText>{title}</StrongText>
+            </Heading2>
+            <BodyFourText className={commonStyles.description} noMargin>
               {responseBasedDescription}
-            </Typography>
+            </BodyFourText>
           </Box>
 
           <Box
@@ -85,16 +90,16 @@ export const ScoreCard: FC<ScoreCardProps> = ({
             {insufficientData ? (
               <FontAwesomeV6Icon iconName="question" />
             ) : (
-              <Typography component="p" variant="h3">
+              <BodyThreeText noMargin visualAppearance="heading-lg">
                 {score}
-              </Typography>
+              </BodyThreeText>
             )}
           </Box>
         </CardContent>
         <Box className={styles.scoreCardFooter}>
           <Box className={styles.scoreCardFooterText}>
             <FontAwesomeV6Icon iconName="info-circle" />
-            <Typography variant="body4">{footer}</Typography>
+            <BodyFourText noMargin>{footer}</BodyFourText>
           </Box>
           {breakdown && !insufficientData && (
             <Button
@@ -113,20 +118,20 @@ export const ScoreCard: FC<ScoreCardProps> = ({
           className={commonStyles.customDialog}
           onClose={() => setShowBreakdown(false)}
         >
-          <Typography id="response-breakdown" variant="h3">
+          <Heading3 id="response-breakdown" noMargin>
             Response breakdown
-          </Typography>
+          </Heading3>
           <Box className={styles.breakdownContentContainer}>
             <Box
               id="dsco-dialog-description"
               className={styles.longTitleContainer}
             >
-              <Typography variant="body3">
-                <Typography variant="strong" gutterBottom>
-                  {longTitle}
-                </Typography>
-              </Typography>
-              <Typography variant="body4">{`${responseCount} responses received`}</Typography>
+              <BodyThreeText noMargin>
+                <StrongText>{longTitle}</StrongText>
+              </BodyThreeText>
+              <BodyFourText
+                noMargin
+              >{`${responseCount} responses received`}</BodyFourText>
             </Box>
             {questionType === 'likert' && (
               <PercentageBarGroup

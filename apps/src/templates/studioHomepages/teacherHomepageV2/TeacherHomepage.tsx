@@ -1,4 +1,4 @@
-import {Typography} from '@mui/material';
+import {Heading2} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
@@ -105,11 +105,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
-        <Typography variant="h2" gutterBottom>
+        <Heading2>
           {teacherName
             ? i18n.welcome({teacherName: teacherName})
             : i18n.welcomeWithoutName()}
-        </Typography>
+        </Heading2>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
             <Header
