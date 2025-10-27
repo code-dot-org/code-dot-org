@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q10_2025'
+
+question 'A designer uses AI to build a web page for a small bakery. The AI\'s design looks attractive, but the "Order Online" button links to the wrong page and the footer text is cut off. What should the designer do to ensure the website is ready for real users?'
+
+wrong 'Publish the site as-is since the AI produced it.'
+wrong 'Add more images to distract from the broken links.'
+right 'Test the website and correct the AI\'s mistakes before publishing it.'
+wrong 'Delete the project and start over with a new AI tool.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 3, 6, 10
+MARKDOWN
