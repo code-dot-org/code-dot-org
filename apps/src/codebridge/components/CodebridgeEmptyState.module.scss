@@ -1,0 +1,21 @@
+.emptyStateContainer {
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .emptyStateImage {
+    width: auto;
+    height: 8.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .textContainer {
+    max-width: 21rem;
+  }
+}
