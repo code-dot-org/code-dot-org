@@ -303,11 +303,8 @@
   padding: 0 12px;
   // scrollbar-gutter: stable prevents layout shift when scrollbar appears,
   // and avoids a bug we've seen where the browser isn't calculuating the scrollbar
-  // correctly and scrolls when it shouldn't. It is supported by current browser versions
-  // of our supported browsers, but not by older versions of Safari.
-  @supports (scrollbar-gutter: stable) {
-    scrollbar-gutter: stable;
-  }
+  // correctly and scrolls when it shouldn't.
+  scrollbar-gutter: stable;
 }
 
 .nonScrollingSubContent {
