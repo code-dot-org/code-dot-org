@@ -42,7 +42,7 @@ layout: wide_index
 - use_preview = !!request.params["preview"]
 - tutorial_sheet_id = use_preview ? :tutorials_preview : :tutorials
 - no_cache = use_preview
-- tutorials_contents = Tutorials.new(tutorial_sheet_id, no_cache).contents(request.host_with_port)
+- tutorials_contents = Tutorials.new(tutorial_sheet_id, no_cache).contents
 
 -# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
 - tutorials_contents.each do |tutorial|
