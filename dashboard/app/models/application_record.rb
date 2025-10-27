@@ -1,3 +1,5 @@
+require_relative '../../lib/policies/active_record_roles'
+
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
