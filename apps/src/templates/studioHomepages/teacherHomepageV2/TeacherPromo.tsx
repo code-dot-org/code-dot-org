@@ -1,7 +1,12 @@
 import {LinkButton} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {
+  BodyThreeText,
+  Heading5,
+  OverlineTwoText,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React from 'react';
@@ -73,38 +78,24 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
           onClick={() => onClose(id)}
         />
       )}
-      <Typography
-        className={styles.promotionType}
-        variant="overline2"
-        gutterBottom
-      >
+      <OverlineTwoText className={styles.promotionType}>
         <FontAwesomeV6Icon iconName={getIconType(announcementType)} />{' '}
         {announcementType}
-      </Typography>
-      <Typography className={styles.promotionTitle} variant="h5" gutterBottom>
-        {title}
-      </Typography>
+      </OverlineTwoText>
+      <Heading5 className={styles.promotionTitle}>{title}</Heading5>
       {image && (
         <img src={image} alt={title} className={styles.promotionImage} />
       )}
-      <Typography variant="body3" gutterBottom>
-        {description}
-      </Typography>
+      <BodyThreeText>{description}</BodyThreeText>
       {partnerLogo && (
-        <Typography
-          className={styles.promotionPartnerLogo}
-          variant="body3"
-          gutterBottom
-        >
-          <Typography variant="strong" gutterBottom>
-            {i18n.partnershipWith()}
-          </Typography>
+        <BodyThreeText className={styles.promotionPartnerLogo}>
+          <StrongText>{i18n.partnershipWith()}</StrongText>
           <img
             src={partnerLogo}
             alt="Partner Logo"
             className={styles.partnerLogo}
           />
-        </Typography>
+        </BodyThreeText>
       )}
       <LinkButton
         href={buttonTarget}
