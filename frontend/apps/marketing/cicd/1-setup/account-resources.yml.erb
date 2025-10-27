@@ -240,10 +240,11 @@ Resources:
                               TextTransformations:
                                 - Priority: 0
                                   Type: NONE
+          # This Label helps downstream Rules conditionally apply the CHALLENGE action, so don't Sample or publish Metrics.
           VisibilityConfig:
-            CloudWatchMetricsEnabled: true
+            CloudWatchMetricsEnabled: false
             MetricName: LabelHTMLRequests
-            SampledRequestsEnabled: true
+            SampledRequestsEnabled: false
           RuleLabels:
             - Name: HTMLContent
         - Name: AWS-AWSManagedRulesAmazonIpReputationList
