@@ -18,7 +18,6 @@
 
 services:
   site:
-    # TODO: switch to codedotorg/cdo-ci or other new image
     image: codedotorg/cdo-ci:ruby-3.1.7
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
