@@ -7,6 +7,7 @@ import uuid
 import json
 import random
 import asyncio
+import argparse
 from pathlib import Path
 from slugify import slugify
 from PIL import Image
@@ -14,11 +15,21 @@ import numpy as np
 from tqdm import tqdm
 from openai import AsyncOpenAI
 
+parser = argparse.ArgumentParser(
+        prog='HoAI 2025 Image Generation Script',
+        description='Generates dancer images')
+
+parser.add_argument('-a', '--attire', action='append', default=[])
+parser.add_argument('-n', '--animal', action='append', default=[])
+parser.add_argument('-j', '--adjective', action='append', default=[])
+
+args = parser.parse_args()
+
 # ---------------- CONFIG ----------------
 # Lists
-adjectives = ["basic", "emo", "sporty", "streetwear", "fancy", "preppy"]
-animals    = ["frog", "moose", "wolf", "panda", "tiger"]
-attire     = ["headphones", "sunglasses", "crown", "headscarf", "baseball-cap", "beanie", "headband"]
+adjectives = args.adjective
+animals    = args.animal
+attire     = args.attire
 
 # Per-combo duplicate count -> 00, 01, ... (n variants per combo)
 REPEATS_PER_COMBO = 5

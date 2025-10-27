@@ -13,6 +13,9 @@ options = {
   dry_run: true,
   production: false,
   just_upload: false,
+  attires: [],
+  animals: [],
+  adjectives: [],
 }
 OptionParser.new do |opts|
   opts.banner = <<~BANNER
@@ -42,18 +45,48 @@ OptionParser.new do |opts|
            options[:just_upload] = just_upload
          end
 
+  opts.on('-a', '--attire ATTIRE',
+          'Adds the given string to the attires list. If none are specified, uses attires.txt',
+         ) do |attire|
+           options[:attires] << attire
+         end
+
+  opts.on('-n', '--animal ANIMAL',
+          'Adds the given string to the animals list. If none are specified, uses animals.txt',
+         ) do |animal|
+           options[:animals] << animal
+         end
+
+  opts.on('-j', '--adjective ADJECTIVE',
+          'Adds the given string to the adjectives list. If none are specified, uses adjectives.txt',
+         ) do |adjective|
+           options[:adjectives] << adjective
+         end
+
   opts.on('-h', '--help', 'Prints this help message') do
     puts opts
     exit
   end
 end.parse!
 
+[:attires, :animals, :adjectives].each do |set|
+  if options[set].empty?
+    options[set] = File.readlines(File.join(File.dirname(__FILE__), "./#{set}.txt")).map(&:strip).filter {|i| !i.empty?}
+  end
+end
+
 puts 'Running the generator... (you may need OPENAI_API_KEY set in your environment)'
+puts options
 
 python_path = File.join(File.dirname(__FILE__), '../../../python/hoai_2025')
 Dir.chdir(python_path)
-system('uv run python -m hoai_2025.combinatoric_generation') unless options[:just_upload]
+python_args = ""
+python_args << " #{options[:attires].map {|a| "-a '#{a}'"}.join(' ')}"
+python_args << " #{options[:animals].map {|a| "-n '#{a}'"}.join(' ')}"
+python_args << " #{options[:adjectives].map {|a| "-j '#{a}'"}.join(' ')}"
+system("uv run python -m hoai_2025.combinatoric_generation#{python_args}") unless options[:just_upload]
 Dir.chdir('../..')
+exit
 
 # We put the things in 'cdo-curriculum-devel' unless we use --production
 bucket_name = "#{BUCKET_NAME}#{options[:production] ? '' : '-devel'}"
