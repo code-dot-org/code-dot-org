@@ -15,8 +15,6 @@ import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
 import styles from './generate-dance.module.scss';
 
-// Create a dance with [a (chill|energetic) vibe] and [N backup dancers]. Sync [the (background|dance moves|foreground|everything)] with the music."
-
 const adlib: AdlibType = {
   template:
     'Create a dance with {vibe} and {dancers}.  Synchronize {features} with the music.',
@@ -54,6 +52,7 @@ interface GenerateCodeProps {
   startOver: () => void;
 }
 
+// Generate dance code.
 const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   levelProperties,
   isRunning,
