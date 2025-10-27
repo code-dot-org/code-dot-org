@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2025-10-24T20:05:56.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "link_title": "End-of-Lesson Survey ",
+    "url": "https://forms.gle/WNpS4QJaVNKE3S7H8",
+    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End-of-Lesson Survey](https://forms.gle/WNpS4QJaVNKE3S7H8).",
+    "long_instructions": "#### Please take a moment to respond to this short survey. \r\n\r\nCode.org takes your privacy seriously. Your responses will be kept **anonymous**."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-24T20:05:56.963+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-pilot-survey_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-pilot-survey_2025\"},{\"changed_at\":\"2025-10-24 20:07:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</ExternalLink>

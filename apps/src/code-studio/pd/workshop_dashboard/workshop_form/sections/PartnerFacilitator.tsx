@@ -1,5 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {
   FC,
@@ -158,9 +158,9 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
 
   return (
     <section>
-      <Heading2 visualAppearance="heading-sm">
+      <Typography component="h2" variant="h5" gutterBottom>
         Partner and Facilitator Information
-      </Heading2>
+      </Typography>
       {(fields.regional_partner_id || fields.facilitators) && (
         <div className={commonStyles.row}>
           {fields.regional_partner_id && (

@@ -1,6 +1,9 @@
 import {memo} from 'react';
 
-import _BaseButton, {CoreButtonProps, ButtonSpecificProps} from './_BaseButton';
+import GenericButton, {
+  CoreButtonProps,
+  ButtonSpecificProps,
+} from './GenericButton';
 import {ButtonColor} from './types';
 
 export const buttonColors: {[key in ButtonColor]: ButtonColor} = {
@@ -14,7 +17,7 @@ export const buttonColors: {[key in ButtonColor]: ButtonColor} = {
 export interface ButtonProps extends CoreButtonProps, ButtonSpecificProps {}
 
 const Button: React.FunctionComponent<ButtonProps> = props => (
-  <_BaseButton {...props} />
+  <GenericButton {...props} />
 );
 
 /**
@@ -22,7 +25,7 @@ const Button: React.FunctionComponent<ButtonProps> = props => (
  *
  * Design System: Link Button Component.
  *
- * Alias for ***_BaseButton*** Component. Renders a Button with ```<button>``` html tag.
+ * Alias for ***GenericButton*** Component. Renders a Button with ```<button>``` html tag.
  *
  * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
  */
