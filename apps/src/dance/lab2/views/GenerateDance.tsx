@@ -21,7 +21,7 @@ const adlib: AdlibType = {
   options: {
     vibe: [
       {id: 'chill', text: 'a chill vibe'},
-      {id: 'energic', text: 'an energetic vibe'},
+      {id: 'energetic', text: 'an energetic vibe'},
     ],
     dancers: [
       {id: '1', text: 'one backup dancer'},
@@ -94,7 +94,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       setAiGenerateState('edited');
     } else if (
       ['editing', 'edited'].includes(aiGenerateState) &&
-      blockCount === 1
+      blockCount <= 1
     ) {
       resetProgram();
       setAiGenerateState('none');
@@ -137,13 +137,13 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     ) {
       setAiGenerateState('listened');
     }
-  }, [aiGenerateState, dispatch, hasPlayedFourMeasures, isRunning]);
+  }, [aiGenerateState, hasPlayedFourMeasures, isRunning]);
 
   useEffect(() => {
     if (aiGenerateState === 'editing' && isRunning && hasEdited) {
       setAiGenerateState('edited');
     }
-  }, [aiGenerateState, dispatch, hasEdited, isRunning]);
+  }, [aiGenerateState, hasEdited, isRunning]);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
@@ -241,7 +241,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {aiGenerateState === 'editing' && isRunning && (
-        <div>Try changing the code. </div>
+        <div>Try changing the code.</div>
       )}
 
       {aiGenerateState === 'edited' && (

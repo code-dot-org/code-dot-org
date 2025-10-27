@@ -286,7 +286,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'edited' && (
         <>
-          <div>That's a great mix!.</div>
+          <div>That's a great mix!</div>
           <div className={styles.buttonRow}>
             <Button
               ariaLabel={'Continue'}
