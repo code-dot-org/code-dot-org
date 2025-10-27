@@ -18,7 +18,7 @@ interface BaseChatEvent {
 /** Base type for all chat messages */
 interface BaseChatMessage extends BaseChatEvent {
   /**
-   * Message text send to the model. This is also used for display if
+   * Message text to send to the model. This is also used for display if
    * `chatMessageDisplayText is `undefined`.
    * */
   chatMessageText: string;
