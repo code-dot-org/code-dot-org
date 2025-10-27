@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -49,9 +49,9 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
                 iconName={'check-circle'}
                 iconStyle={'solid'}
               />
-              <Typography variant="body3" gutterBottom>
+              <BodyThreeText>
                 {i18n.studentsAdded({numStudents: section.studentCount})}
-              </Typography>
+              </BodyThreeText>
             </div>
           </div>
         ) : (
