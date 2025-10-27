@@ -1,6 +1,7 @@
 class AppController < ApplicationController
   def index
-    return head :not_found if Rails.env.production?
+    # Only render the app in development mode while the frontend is being built.
+    return head :not_found unless Rails.env.development?
 
     render 'app/index', layout: false
   end
