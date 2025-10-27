@@ -50,37 +50,40 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
     color: 'strong',
     buttons: [
       {
-        label: weblab2I18n.desktop(),
-        value: PreviewViewMode.DESKTOP,
-        iconLeft: {
+        ariaLabel: weblab2I18n.desktopView(),
+        icon: {
           iconName: 'desktop',
           iconStyle: 'solid',
+          title: weblab2I18n.desktop(),
         },
+        value: PreviewViewMode.DESKTOP,
       },
       {
-        label: weblab2I18n.mobile(),
-        value: PreviewViewMode.MOBILE,
-        iconLeft: {
+        ariaLabel: weblab2I18n.mobileView(),
+        icon: {
           iconName: 'mobile',
           iconStyle: 'solid',
+          title: weblab2I18n.mobile(),
         },
+        value: PreviewViewMode.MOBILE,
       },
     ],
     size: 'xs',
     selectedButtonValue: previewViewMode,
+    type: 'iconOnly',
     onChange: previewViewMode =>
       setPreviewViewMode(previewViewMode as PreviewViewMode),
   };
 
   return (
-    <div className={moduleStyles.previewHeaderContainer}>
+    <div
+      className={classNames(
+        moduleStyles.previewHeaderContainer,
+        isFullScreenView && moduleStyles.fullScreenPreviewHeaderContainer
+      )}
+    >
       <div className={moduleStyles.urlBarContent}>
-        <div
-          className={classNames(
-            moduleStyles.urlButtonsWrapper,
-            moduleStyles.navButtonsWrapper
-          )}
-        >
+        <div className={moduleStyles.navButtonsWrapper}>
           <Button
             onClick={onNavigateBack}
             aria-label={weblab2I18n.navigateBack()}
@@ -89,8 +92,8 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
             color="gray"
             isIconOnly={true}
             icon={{iconName: 'chevron-left'}}
-            className={moduleStyles.urlButton}
             disabled={!canNavigateBack}
+            className={moduleStyles.iconButton}
           />
           <Button
             onClick={onNavigateForward}
@@ -100,8 +103,8 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
             color="gray"
             isIconOnly={true}
             icon={{iconName: 'chevron-right'}}
-            className={moduleStyles.urlButton}
             disabled={!canNavigateForward}
+            className={moduleStyles.iconButton}
           />
         </div>
         <TextField
@@ -109,30 +112,24 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           onKeyDown={handleKeyDown}
           value={value}
           name={'url-input'}
+          aria-label={weblab2I18n.addressBar()}
           size={'s'}
           className={moduleStyles.urlBarInput}
         />
-        <div
-          className={classNames(
-            moduleStyles.urlButtonsWrapper,
-            moduleStyles.refreshButtonWrapper
-          )}
-        >
-          <Button
-            onClick={onRefresh}
-            aria-label={weblab2I18n.refresh()}
-            size="xs"
-            type="tertiary"
-            color="gray"
-            isIconOnly={true}
-            icon={{iconName: 'refresh'}}
-            className={moduleStyles.urlButton}
-          />
-        </div>
+        <Button
+          onClick={onRefresh}
+          aria-label={weblab2I18n.refresh()}
+          size="xs"
+          type="tertiary"
+          color="gray"
+          isIconOnly={true}
+          icon={{iconName: 'refresh'}}
+          className={moduleStyles.iconButton}
+        />
       </div>
       <SegmentedButtons
+        className={moduleStyles.previewViewModeButtons}
         {...previewViewModeButtonsProps}
-        className={moduleStyles.customSegmentedButtons}
       />
       <ToggleFullScreenButton
         isFullScreenView={isFullScreenView}
@@ -164,7 +161,6 @@ const ToggleFullScreenButton: React.FC<ToggleFullScreenButtonProps> = ({
       color="gray"
       isIconOnly={true}
       icon={{iconName: isFullScreenView ? 'compress' : 'expand'}}
-      className={moduleStyles.urlButton}
     />
   );
 };

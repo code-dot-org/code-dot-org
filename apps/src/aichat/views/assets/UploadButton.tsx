@@ -1,6 +1,5 @@
 import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
-import classNames from 'classnames';
 import React, {ChangeEvent, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -26,13 +25,12 @@ import {
 } from '../../redux';
 import {AssetSource, ChatAsset} from '../../types';
 
-import styles from './upload-button.module.scss';
-
-interface UploadButtonProps {
+export interface UploadButtonProps {
   isDisabled: boolean;
   levelName: string;
   buildAssetUrl: (asset: ChatAsset) => string;
   hasStarterAssets?: boolean;
+  showLabel?: boolean;
 }
 
 const UploadButton: React.FC<UploadButtonProps> = ({
@@ -40,6 +38,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
   levelName,
   buildAssetUrl,
   hasStarterAssets = false,
+  showLabel = true,
 }) => {
   const dispatch = useAppDispatch();
   const numStagedFiles = useAppSelector(
@@ -168,15 +167,24 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     );
   };
 
-  const buttonProps: ButtonProps = {
+  const buttonPropsCommon: ButtonProps = {
     type: 'secondary',
     color: 'gray',
-    iconLeft: {iconName: 'plus'},
+  };
+
+  const buttonPropsWithLabel: ButtonProps = {
+    ...buttonPropsCommon,
     text: aichatI18n.aichatAddFile(),
+    iconLeft: {iconName: 'plus'},
+  };
+
+  const buttonPropsIconOnly: ButtonProps = {
+    ...buttonPropsCommon,
+    icon: {iconName: 'plus', iconStyle: 'solid'},
   };
 
   const commonProps = {
-    size: 's',
+    size: 'xs',
     disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
   } as const;
 
@@ -185,8 +193,10 @@ const UploadButton: React.FC<UploadButtonProps> = ({
       {...commonProps}
       name="uploadDropdown"
       labelText={aichatI18n.upload()}
-      triggerButtonProps={buttonProps}
-      className={classNames(styles.upload, styles.dropdown)}
+      triggerButtonProps={
+        showLabel ? buttonPropsWithLabel : buttonPropsIconOnly
+      }
+      menuVerticalPlacement="top"
       options={[
         {
           value: 'fromLibrary',
@@ -210,7 +220,11 @@ const UploadButton: React.FC<UploadButtonProps> = ({
       ]}
     />
   ) : (
-    <Button {...buttonProps} {...commonProps} onClick={onDeviceUploadClick} />
+    <Button
+      {...(showLabel ? buttonPropsWithLabel : buttonPropsIconOnly)}
+      {...commonProps}
+      onClick={onDeviceUploadClick}
+    />
   );
 
   return (

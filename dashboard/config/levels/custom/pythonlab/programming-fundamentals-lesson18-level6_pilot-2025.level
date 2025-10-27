@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:48:19.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You can create a condition based on the user's input. \r\n\r\n## Do This: \r\n- Run the code and test it with different inputs.\r\n- **Modify**: Add a new ingredient (flower) and a message for it.\r\n\r\n\r\n**Hint**: \r\nRemember to add a `flower` option to the choices the user can ask for. \r\n\r\n    elif ingredient == \"flower\":\r\n        flower_choice()",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from support import herb_choice, root_choice, berry_choice, flower_choice \nimport random\n\n# This asks the  user what they want to choose. \ningredient = input(\"What ingredient do you want to gather (herb, root, berry)? \").lower()\n\nif ingredient == \"herb\":\n    herb_choice()\nelif ingredient == \"root\":\n    root_choice()\nelif ingredient == \"berry\":\n    berry_choice()\n# Add code here that will execute a flower_choice()\n\n\nelse:\n    print(\"That ingredient doesn't exist!\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "support.py",
+          "language": "py",
+          "contents": "# Support file for critter capture messages\n\ndef herb_choice():\n    art = \"\"\"\n    🌿🌱🌿\n    You found a **fresh herb**!\n    \"\"\"\n    print(art)\n\ndef root_choice():\n    art = \"\"\"\n    🌳🌳🌳\n    You found a **sturdy root**!\n    \"\"\"\n    print(art)\n\ndef berry_choice():\n    art = \"\"\"\n    🍓🫐🍓\n    You picked some **fresh berries**! \n    \"\"\"\n    print(art)\n\ndef flower_choice():\n    art = \"\"\"\n    🌼💐🌼\n    You picked some **beautiful flowers**!\n    \"\"\"\n    print(art)\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFSi4aaBiEaakp8IBSnq60mXm1w1Rj4e2pq0O0PCF\ng8UNBLB/C7qioiEoHQhKPj2l1P8axn0aNoejw5N6Wb00FQ7yZjWUkPRNE5Ef\neM3uKz7jkSLRv/WKPMZmCfy9K1ut8IU1pltxp9Ul4zfM2Vfzlb/bfn6pmpxv\ntTWCDLtCpXq0Z5YsFiwd1FyQmXYByQ65oqgEoaNE87CynqOrxPAdTR0g9w3f\n/Tb4wkS9m0pzi5PPa6+ezHk7rXrSYCCO5zCOl2wxABufYWwIXklQ+A1ef+8P\nhDCf8gOwgTv5ek5CczDSvbU+4tjBNX77lqRNH1jAPgO+K+abWeVM+/2+Eafj\nw6cJjiPlsNcsEGi4sUHwQEDglkXVF3qkExITeVgrfqybQNdCbt+mgNr6HCxM\nd6nN8AczlXhmr/V2QqvzHoHHx0fbtB8CQ+2SyoceX556ZUIssM9hdkwqHk+q\n4fBGSBM78w26IQrmnFAv+e+Fb8UV0ImMlO9Nfkr+yrLPup2I1YFnGd/u4fz/\n9PVThegcb7+w+Bfp4rxV2uwfHYMDaJLqEWZ4Gaphe7R3O0Xm12MEvQuFV0Fr\n6C3m9nHmfjBLAIAeqw/X7wZBhdsGN86Qa6TaLraokoaLIBW880E99Bu2tsYM\nsHle/Ila46nn+TVoiDRJHZV5g79XfkT+KHltXnTP5fIFaBopLPaFJxHR1qCQ\nE5TDxZBi0qevuqBqwOyI9BCqeWo20lTslv90DOuKGyb3LcgAUCEHA5e9GiAx\nlyTrnocIaxfec9f4r9I6iBoB7fKMzhQBUy/U/qKtEDDV8c3siOg19QM1E38i\n72QwBxk9XT8xbKYNPuZkv1K3XbI8/k4eS7Drd6BCsZUgbtJQ6N7JnvM9mzdg\nsBnAqUFBpOvPANER8FoOiKGhJoD3GjppxQ044P8xIzCFyRLhFf0ZNEF+ESCS\n4ICw6DLdfWUX2lLmXAQiWNZBDjnjzWXiBuIPEIA7uGcbAT0zfiFLugodyBgX\nL3/4HQglXKLobF+4uS8X31mYSFaAVNVgbGrDmUowrDsTa1mbEoLw20ORmk6y\nKWLIkQoa\n",
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:19.538+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson18-level6_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson18-level6_2025\"}]"
+}]]></config>
+</Pythonlab>

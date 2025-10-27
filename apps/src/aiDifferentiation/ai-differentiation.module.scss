@@ -20,9 +20,9 @@
 $container-width: 512;
 $header-height: 40;
 $body-height: 612;
-$fab-left: 10;
-$fab-bottom: 33;
-$fab-height: 60;
+$fab-left: 11;
+$fab-bottom: 35;
+$fab-height: 48;
 
 :export {
   containerHeight: $header-height + $body-height;
@@ -62,6 +62,36 @@ $fab-height: 60;
   flex-direction: column;
   height: 100%;
   flex: 1 1 0;
+
+  .chatHeader {
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 0.75rem;
+    align-self: stretch;
+    border-bottom: 1px solid var(--borders-neutral-primary, #D4DAE1);
+    background: var(--background-neutral-primary, #FFF);
+
+    .chatHeaderTitle {
+      flex: 1 0 0;
+      max-width: 180px;
+
+      p {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .chatHeaderButtons {
+      display: flex;
+      width: 15.2188rem;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
 }
 
 .hiddenAiDiffPanel {
@@ -200,25 +230,16 @@ $fab-height: 60;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 20px;
+    gap: 1rem;
   }
 
   &Footer {
     display: flex;
-    padding: 6px;
+    padding: 1rem 1.25rem 0.875rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
     border-top: 2px solid $neutral_gray10;
-
-    &Buttons {
-      margin-inline-start: 10px;
-      margin-bottom: 10px;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 12px;
-    }
   }
 }
 
@@ -229,7 +250,7 @@ $fab-height: 60;
 }
 
 .message-user {
-  margin-left: 48px;
+  margin-inline-start: 48px;
 }
 
 .messageFeedback {
@@ -238,7 +259,7 @@ $fab-height: 60;
     align-items: center;
     gap: 8px;
     align-self: stretch;
-    color: $light-gray-600;
+    color: var(--text-neutral-quaternary);
   }
   &Left {
     display: flex;
@@ -252,13 +273,13 @@ $fab-height: 60;
     flex: 1 0 0;
   }
   &Button i {
-    color: $light-gray-600;
+    color: var(--text-neutral-quaternary);
   }
   &Confirm i {
-    color: $light_affirmative_500;
+    color: var(--text-success-primary);
   }
   &Negative i {
-    color: $light_negative_500;
+    color: var(--text-error-primary);
   }
 }
 
@@ -272,15 +293,23 @@ $fab-height: 60;
   bottom: $fab-bottom * 1px;
 
   height: $fab-height * 1px;
-  width: 60px;
+  width: 48px;
   background-size: 60px;
   padding: 0;
   background-color: transparent;
 
   border-width: 0;
+  border-radius: 50%;
 
   img {
     opacity: 1;
+  }
+
+  .floatingActionButtonTag {
+    position: absolute;
+    width: 25px;
+    left: 33px;
+    top: -8px;
   }
 }
 
@@ -405,12 +434,18 @@ $fab-height: 60;
   min-height: 32px;
   border-radius: 0;
 
+  & span {
+    flex-grow: 1;
+    text-align: start;
+  }
+
   &.selected {
     border-left: 4px solid var(--borders-brand-teal-primary);
     background-color: var(--background-neutral-quaternary);
     padding-left: 12px;
     text-decoration: none;
     color: var(--text-neutral-primary);
+    font-weight: 600;
   }
 
   &:active {
@@ -426,5 +461,14 @@ $fab-height: 60;
   &:hover {
     background-color: var(--background-neutral-tertiary);
     text-decoration: none;
+  }
+
+  .readAt {
+    color: var(--background-error-primary);
+    font-size: 8px;
+    min-width: 8px;
+    margin-inline-start: 8px;
+    width: 8px;
+    line-height: var(--font-line-height-body-xxs, 17.6px);
   }
 }

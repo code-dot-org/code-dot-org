@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:17.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're helping fix a book recommendation app. The code is supposed to store and print the title of a recommended book, but something's broken!\r\n\r\n1. Look for **two** bugs.\r\n\r\n2. Fix both bugs so the program runs without errors and prints the message.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Book Club",
+    "bubble_choice_description": "You're helping fix a book recommendation app. The code is supposed to store and print the title of a recommended book, but something's broken!",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program prints a book recommendation\n\nbook_title = The House on Mango Street\nprint(\"Next read:\", booktile)\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/4618d23a464e9f5836e9c4f7beecdb54-stack-of-books.png",
+    "name_suffix": "_pilot-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzjyIC9kGMPkCsYtnbSD9slxg7eOotTTl\nI8ETMkhB7bdNcPezgg/7lWNIoyUx5Io9vrNWaId2ENekpbBRuQoQ3vUYGScy\nviopt7SxhIZdRtY7eZtZVeMFRliKPLIRsmmcsz2gVkdZ5PU4CNT/qw+//jNm\nVpku51+zwmUJgwB2d/Q4cPRw82vL/Iow5eDj+x3bM1nBlcyPX3poTDqSMIui\nde9o0kEs00kBGrlwJpgmNYgSTWi3IZ2mcpWaQ85Q1q9ENg==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestBookRecommendation(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_book_title_printed(self):\n        \"\"\"The correct book title should be printed\"\"\"\n        printed_lines = [line.strip() for line in self.log if line.strip()]\n\n        self.assertTrue(\n            any(\"The House on Mango Street\" in line for line in printed_lines),\n            \"Make sure you correctly assign and print the book title 'The House on Mango Street'!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:17.062+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level7a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level7a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

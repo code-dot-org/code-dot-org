@@ -1,0 +1,27 @@
+name 'ai-generated-design-preassessment_2025'
+title 'AI-Generated Design Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'ai-generated-design-preassessment-intro_2025'
+level 'ai-generated-design-preassessment-q1_2025'
+level 'ai-generated-design-preassessment-q2_2025'
+level 'ai-generated-design-preassessment-q3_2025'
+level 'ai-generated-design-preassessment-q4_2025'
+level 'ai-generated-design-preassessment-q5_2025'
+
+page
+level 'ai-generated-design-preassessment-q6_2025'
+level 'ai-generated-design-preassessment-q7_2025'
+level 'ai-generated-design-preassessment-q8_2025'
+level 'ai-generated-design-preassessment-q9_2025'
+level 'ai-generated-design-preassessment-q10_2025'
+
+page
+level 'ai-generated-design-preassessment-q11_2025'
+level 'ai-generated-design-preassessment-q12_2025'
+level 'ai-generated-design-preassessment-q13_2025'
+level 'ai-generated-design-preassessment-q14_2025'
+level 'ai-generated-design-preassessment-q15_2025'

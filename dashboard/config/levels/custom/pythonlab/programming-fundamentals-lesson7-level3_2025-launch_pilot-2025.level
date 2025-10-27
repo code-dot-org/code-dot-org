@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:39.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're coding a tool that generates a music playlist for a friend. The function is supposed to print a message that says it's creating a playlist for the person whose name you pass in. But right now, the code crashes as soon as you run it! \r\n\r\n1. Look at the function `make_playlist(user)`. It's supposed to print a message that uses the person's name.\r\n\r\n2. Try running the code. Read the error message carefully.\r\n\r\n3. Figure out what's wrong and fix the function so it prints the message correctly.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can only use a parameter inside the function where it’s defined. And you must use the exact name of the parameter — spelling matters!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def make_playlist(user):\n  # Print a message that a playlist is being created for a user\n  print(\"Making a playlist for \" + name)\n\nmake_playlist(\"Jordan\")\n\nprint(\"Playlist created for \" + user)\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nziEqtwNc8szNOEvpyQWrLMnWV60h14pH\ng5kRKu4TAXhYXOH2Q8pyfTGQ4NmojbYmjyPkQ5n9Y53/3CENxNKom3RnrVhQ\n0OscU9hW1ww2gXKJmxlC/RXQadF4r13szVZxxQyd/ZEKA7gha57OIbe2aH8b\noUXyp4/TZWOPNeIfzch6FzwWyOP4PAewoX4nTS7orf8+mMJbDTO1kgj+j+GT\nhsE8u0ylvdE2ZhekFofLiV2QxL2wOkA6pftuk0losI64rWIBzzu82364c/B2\ng1I7QvuSxVo+u2Ud8Mzx0GzSyMqDUNBdQCQaF2IfbRZayC77mWp4yoquXxIj\n7/Zmt1bAMggiCSUexh1YXAz7UXm6xMhx\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestMakePlaylistFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Set up validation and get stdout logs\"\"\"\n        cls.validation = ValidationProtocol()\n        cls.stdout_logs = cls.validation.get_stdout_logs()\n\n    def test_function_prints_message(self):\n        \"\"\"Printed output should include a playlist message\"\"\"\n        self.assertGreaterEqual(\n            len(self.stdout_logs),\n            1,\n            \"No output was found. Make sure your program prints a message about the playlist.\"\n        )\n\n        output_text = \" \".join(self.stdout_logs).lower()\n\n        expected_keywords = [\"playlist\", \"for\"]\n        for word in expected_keywords:\n            self.assertIn(\n                word,\n                output_text,\n                f\"The output should include the word '{word}'. Make sure your playlist message uses the username!\"\n            )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:39.942+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level3_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level3_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

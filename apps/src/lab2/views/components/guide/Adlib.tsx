@@ -4,10 +4,19 @@ import reactStringReplace from 'react-string-replace';
 
 import styles from './Adlib.module.scss';
 
-interface AdlibProps {
+export type AdlibType = {
   template: string;
-  options: {[key: string]: string[]};
-  onChange: (value: string) => void;
+  options: {[key: string]: {id: string; text: string}[]};
+  variantCount: number;
+};
+
+export type AdlibsType = {
+  [key: string]: AdlibType;
+};
+
+interface AdlibProps {
+  adlib: AdlibType;
+  onChange: (value: string, choices: string[]) => void;
   className?: string;
 }
 
@@ -16,30 +25,41 @@ interface AdlibProps {
 // dropdowns to select the options.  When the selected options change, it calls
 // onChange with the filled-in text.
 const Adlib: React.FunctionComponent<AdlibProps> = ({
-  template,
-  options,
+  adlib,
   onChange,
   className,
 }) => {
   const [adlibOptions, setAdlibOptions] = useState<{[key: string]: string}>({});
+  const {template, options} = adlib;
 
   // Initialize defaults.
   useEffect(() => {
     const initialOptions: {[key: string]: string} = {};
     Object.keys(options).forEach(key => {
-      initialOptions[key] = sample(options[key]) || '';
+      initialOptions[key] = sample(options[key])?.id || '';
     });
     setAdlibOptions(initialOptions);
-  }, [onChange, options]);
+  }, [options]);
 
   // Compute filled text.
   const filledAdlibText = useMemo(() => {
     let output = template;
     Object.keys(options).forEach(key => {
-      output = output.replace(`{${key}}`, adlibOptions[key]);
+      output = output.replace(
+        `{${key}}`,
+        options[key].find(option => option.id === adlibOptions[key])?.text || ''
+      );
     });
     return output;
   }, [adlibOptions, options, template]);
+
+  // Compute joined choices text.
+  const choices = useMemo(() => {
+    const output = Object.keys(options).map(key => {
+      return adlibOptions[key];
+    });
+    return output;
+  }, [adlibOptions, options]);
 
   // Compute HTML.
   const adlibHtml = useMemo(() => {
@@ -60,8 +80,8 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
             }}
           >
             {options[key].map(option => (
-              <option key={option} value={option}>
-                {option}
+              <option key={option.id} value={option.id}>
+                {option.text}
               </option>
             ))}
           </select>
@@ -72,10 +92,10 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     return output;
   }, [adlibOptions, options, template]);
 
-  // Notify parent when filled text changes.
+  // Notify parent when choices change.
   useEffect(() => {
-    onChange(filledAdlibText);
-  }, [filledAdlibText, onChange]);
+    onChange(filledAdlibText, choices);
+  }, [adlibOptions, choices, filledAdlibText, onChange]);
 
   return <div className={className}>{adlibHtml}</div>;
 };

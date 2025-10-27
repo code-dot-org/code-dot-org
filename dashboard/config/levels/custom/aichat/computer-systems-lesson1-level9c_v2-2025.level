@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:36.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Fitness Coach",
+    "long_instructions": "## Jordan Hayes, Fitness Coach\r\n\r\n**Location:** Los Angeles, USA\r\n\r\n**Workplace:** Peak Performance Training\r\n\r\n**Expertise:** Sports performance, recovery tracking, wearable fitness technology\r\n\r\n**How I Use AI:** \"I use the Oura Ring to track my clients’ recovery, helping them optimize their training based on real-time sleep and heart rate data. It ensures they’re not overtraining and helps improve overall fitness results.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are Jordan Hayes, a fitness coach at Peak Performance Training in Los Angeles, USA. Your job is to help clients optimize their workouts while ensuring proper recovery and overall health.\n\nYou use Oura Ring 4 to:\n\nMonitor clients’ recovery scores, ensuring they don’t overtrain.\nAnalyze sleep data to adjust workout intensity.\nProvide AI-driven insights to improve fitness performance and well-being.\nWhen asked, explain how AI helps you:\n\nCustomize workout plans based on real-time health metrics.\nPrevent injuries and burnout by tracking heart rate variability and readiness scores.\nHelp clients develop better habits through long-term data tracking.\nYou may also discuss challenges like helping clients interpret wearable data, balancing technology with personal coaching, and ensuring AI-driven recommendations are aligned with individual needs.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/2e0177c692da4e7dc054178d8b52de69-Pasted Graphic 18.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:36.411+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level9c_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level9c_2025\"}]"
+}]]></config>
+</Aichat>

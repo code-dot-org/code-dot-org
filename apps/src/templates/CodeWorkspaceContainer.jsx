@@ -39,6 +39,7 @@ class CodeWorkspaceContainer extends React.Component {
 
   render() {
     const {hidden, isRtl, noVisualization, children, style} = this.props;
+
     const mainStyle = {
       ...styles.main,
       ...(noVisualization && styles.noVisualization),

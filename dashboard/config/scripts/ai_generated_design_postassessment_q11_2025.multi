@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q11_2025'
+
+question 'A designer is creating a website for a local news station. They notice that most news sites place the logo at the top left, navigation links across the top, and a footer with contact details. The designer uses the same layout in their design. How does this decision help users?'
+
+wrong 'It makes the website stand out from other news sites.'
+wrong 'It adds extra features that make the site more advanced.'
+wrong 'It improves the site\'s loading speed and performance.'
+right 'It creates a familiar structure that helps users navigate easily.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 8, 12
+MARKDOWN

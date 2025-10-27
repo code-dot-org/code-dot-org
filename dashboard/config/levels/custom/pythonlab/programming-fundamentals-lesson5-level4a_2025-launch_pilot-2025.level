@@ -1,0 +1,394 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:22.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nModify the program so the `Painter` goes the other way to get around the food trucks.\r\n\r\n![](https://images.code.org/ebf7ee568c28d07b194a9b50a7bf6f5a-choiceA.gif)",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_pilot-2025",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 43
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 42
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 43
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 42
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 41
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 40
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 41
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 40
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 39
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 38
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 39
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 38
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 37
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 36
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 37
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 36
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 95
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 96
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 95
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 96
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 95
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 96
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n\nanika = Painter()\n\nanika.move()\nanika.move()\n\nanika.turn_left()\nanika.turn_left()\nanika.turn_left()\n\nanika.move()\nanika.move()\nanika.move()\nanika.move()\nanika.move()\n\nanika.turn_left()\n\nanika.move()\nanika.move()\nanika.move()",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\njNp//cAj\n",
+    "display_name": "Around the Food Trucks",
+    "bubble_choice_description": "Modify the program so the `Painter` goes the other way to get around the food trucks.",
+    "thumbnail_url": "https://images.code.org/ebf7ee568c28d07b194a9b50a7bf6f5a-choiceA.gif",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestPainterGoesAroundFoodTrucks(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and cache the results\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        if not cls.log.painter_logs:\n            cls.painter = None\n        else:\n            cls.painter = cls.log.painter_logs[0]\n\n    def setUp(self):\n        if self.painter is None:\n            self.skipTest(\"No Painter was created. Make sure to create a Painter named anika = Painter()!\")\n\n    def test_correct_sequence_of_moves(self):\n        \"\"\"Painter should move five times, turn, and move five more times\"\"\"\n        events = self.painter.get_events()\n\n        # Extract just the action types\n        action_sequence = [event.neighborhood_action_type for event in events]\n\n        # Find indexes of all the moves\n        move_indexes = [i for i, action in enumerate(action_sequence) if action == \"MOVE\"]\n\n        # Check that moves happen in two groups, separated by a TURN_LEFT\n        first_turn_index = action_sequence.index(\"TURN_LEFT\")\n        moves_before_turn = sum(1 for action in action_sequence[:first_turn_index] if action == \"MOVE\")\n        moves_after_turn = sum(1 for action in action_sequence[first_turn_index+1:] if action == \"MOVE\")\n\n        self.assertGreaterEqual(\n            moves_before_turn,\n            5,\n            \"Make sure your Painter moves forward five times BEFORE turning left!\"\n        )\n\n        self.assertGreaterEqual(\n            moves_after_turn,\n            5,\n            \"Make sure your Painter moves forward five times AFTER turning left!\"\n        )\n\n    def test_painter_ends_at_correct_position(self):\n        \"\"\"Painter should end at (5, 5)\"\"\"\n        final_x = self.painter.ending_position.x\n        final_y = self.painter.ending_position.y\n\n        self.assertEqual(\n            (final_x, final_y),\n            (5, 5),\n            \"The Painter should end at (5, 5) after navigating correctly around the food trucks.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:22.416+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level4a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level4a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

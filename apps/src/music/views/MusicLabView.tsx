@@ -1,10 +1,11 @@
 import {javascript} from '@codemirror/lang-javascript';
 import classNames from 'classnames';
-import React, {memo, useCallback, useContext, useEffect} from 'react';
+import React, {memo, useCallback, useContext, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
+import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
 import header from '@cdo/apps/code-studio/header';
 import {
   START_SOURCES,
@@ -12,6 +13,7 @@ import {
   WARNING_BANNER_MESSAGES,
 } from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import useTimelineDancer from '@cdo/apps/lab2/hooks/useTimelineDancer';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {
   getAppOptionsEditBlocks,
@@ -21,13 +23,12 @@ import {
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions';
-import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
-import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -43,7 +44,6 @@ import {
   getBlockMode,
   InstructionsPosition,
   setCurrentPlayheadPosition,
-  setShowInstructions,
   showCallout,
 } from '../redux/musicRedux';
 import {MusicExemplarSettings, MusicLevelData} from '../types';
@@ -51,7 +51,7 @@ import {MusicExemplarSettings, MusicLevelData} from '../types';
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
 import ExemplarPlayerView from './ExemplarPlayerView';
-import Generate from './Generate';
+import GenerateCode from './GenerateCode';
 import HeaderButtons from './HeaderButtons';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import useUpdateAnalytics from './hooks/useUpdateAnalytics';
@@ -116,9 +116,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   );
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
-  const showInstructions = useAppSelector(
-    state => state.music.showInstructions
-  );
+  const guideMode = (levelProperties.levelData as MusicLevelData).guideMode;
   const instructionsPosition = useAppSelector(
     state => state.music.instructionsPosition
   );
@@ -138,6 +136,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const validationStateCallout = useAppSelector(
     state => state.lab.validationState.callout
   );
+  const aiCodeGenerateAdlibOption =
+    (levelData as MusicLevelData).aiCodeGenerateAdlibId ||
+    (AppConfig.getValue('ai-generate-adlib') as string);
+  const aiCodeGenerateAdlib = (levelData as MusicLevelData).aiCodeGenerateAdlib;
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -147,9 +149,15 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
-  const useNewInstructions = experiments.isEnabled(
-    experiments.LAB2_INSTRUCTIONS_V2
+  const isStandaloneCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
   );
+  const timelineAreaRef = useRef<HTMLDivElement | null>(null);
+  const {dancerMeasurePosition, danceMove, dancerSize} = useTimelineDancer({
+    isPlaying,
+    levelProperties,
+    timelineAreaRef,
+  });
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -157,10 +165,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       progressManager.setValidator(validator);
     }
   }, [progressManager, validator, appName]);
-
-  useEffect(() => {
-    dispatch(setShowInstructions(!!levelProperties.longInstructions));
-  }, [dispatch, levelProperties.longInstructions]);
 
   useEffect(() => {
     if (isStartMode) {
@@ -273,7 +277,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     () => progressManager?.resetValidation(),
     [progressManager]
   );
-  usePlaybackUpdate(doPlaybackUpdate, resetValidation);
+  usePlaybackUpdate(isPlaying, doPlaybackUpdate, resetValidation);
 
   const onInstructionsTextClick = useCallback(
     (id: string) => {
@@ -306,46 +310,54 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     return <MusicPlayView setPlaying={setPlaying} />;
   }
 
-  const headerContent = (
-    <div className={moduleStyles.centerHeaderContent}>
-      <div className={moduleStyles.centerHeaderContentText}>
-        {musicI18n.panelHeaderWorkspace()}
-      </div>
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 darkMode={true} />
-      )}
-    </div>
-  );
-
   return (
-    <div
-      id="music-lab"
-      className={classNames(
-        moduleStyles.musicLab,
-        timelineAtTop && moduleStyles.reverse
-      )}
-    >
-      {allowPackSelection && <PackDialog player={player} />}
+    <div id="music-lab" className={classNames(moduleStyles.musicLab)}>
+      <ModeSwitchBar levelId={levelProperties.id} />
       <div
-        id="work-area"
-        className={classNames(moduleStyles.workArea, {
-          // Allow full height when the play area is hidden.
-          [moduleStyles.toolboxMode]: isToolboxMode,
-          [moduleStyles.reverse]:
-            instructionsPosition === InstructionsPosition.RIGHT,
-        })}
+        className={classNames(
+          moduleStyles.mainContent,
+          timelineAtTop && moduleStyles.reverse
+        )}
       >
-        {showInstructions && (
-          <div
-            id="instructions-area"
-            className={classNames(
-              moduleStyles.instructionsArea,
-              moduleStyles.instructionsSide
-            )}
-          >
-            {experiments.isEnabledAllowingQueryString(
-              experiments.LAB2_RESOURCE_PANEL
-            ) ? (
+        {allowPackSelection && <PackDialog player={player} />}
+        {guideMode === 'instructions' && (
+          <GuideInstructions
+            levelProperties={levelProperties}
+            isRunning={isPlaying}
+            hasRun={hasRun}
+            hasEdited={hasEdited}
+          />
+        )}
+        {guideMode === 'aiCodeGenerate' && (
+          <GenerateCode
+            adlibOption={aiCodeGenerateAdlibOption}
+            adlib={aiCodeGenerateAdlib}
+            levelProperties={levelProperties}
+            setPlaying={setPlaying}
+            hasEdited={hasEdited}
+            setToolboxVisibility={visible =>
+              blocklyWorkspace.setToolboxVisibility(visible)
+            }
+          />
+        )}
+        <div
+          id="work-area"
+          className={classNames(moduleStyles.workArea, {
+            // Allow full height when the play area is hidden.
+            [moduleStyles.toolboxMode]: isToolboxMode,
+            [moduleStyles.reverse]:
+              instructionsPosition === InstructionsPosition.RIGHT,
+          })}
+        >
+          {!guideMode && (
+            <div
+              id="instructions-area"
+              className={classNames(
+                moduleStyles.instructionsArea,
+                moduleStyles.instructionsSide,
+                isStandaloneCollapsed && moduleStyles.instructionsCollapsed
+              )}
+            >
               <ResourcePanel
                 isRunning={isPlaying}
                 handleInstructionsTextClick={onInstructionsTextClick}
@@ -368,185 +380,137 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 levelProperties={levelProperties}
                 headerClassName={moduleStyles.headerWithBorder}
                 settings={settings}
+                hideContinueIfDisabled={true}
+                hideNavigation={false}
+                styleNavigationAsBubble={true}
+                documentationUrl={'/docs/ide/music'}
               />
-            ) : (
+            </div>
+          )}
+
+          <div id="blockly-area" className={moduleStyles.blocklyArea}>
+            <PanelContainer
+              id="workspace-panel"
+              headerContent={<WorkspaceHeader />}
+              hideHeaders={hideHeaders}
+              rightHeaderContent={
+                <HeaderButtons
+                  onClickUndo={undo}
+                  onClickRedo={redo}
+                  clearCode={clearCode}
+                  allowPackSelection={allowPackSelection}
+                  skipUrl={skipUrl}
+                  hideChaff={hideChaff}
+                />
+              }
+              headerClassName={moduleStyles.headerWithBorder}
+            >
+              {isStartMode && (
+                <div
+                  id="startSourcesWarningBanner"
+                  className={moduleStyles.warningBanner}
+                >
+                  {projectTemplateLevel
+                    ? WARNING_BANNER_MESSAGES.TEMPLATE
+                    : WARNING_BANNER_MESSAGES.STANDARD}
+                </div>
+              )}
+              {isEditingExemplar && (
+                <div
+                  id="toolboxModeWarningBanner"
+                  className={moduleStyles.warningBanner}
+                >
+                  {WARNING_BANNER_MESSAGES.EXEMPLAR_MODE}
+                </div>
+              )}
+              {isViewingExemplar && (
+                <div
+                  id="toolboxModeWarningBanner"
+                  className={moduleStyles.warningBanner}
+                >
+                  {WARNING_BANNER_MESSAGES.VIEWING_EXEMPLAR}
+                </div>
+              )}
+              {isToolboxMode && (
+                <div
+                  id="toolboxModeWarningBanner"
+                  className={moduleStyles.warningBanner}
+                >
+                  {WARNING_BANNER_MESSAGES.TOOLBOX_MODE}
+                </div>
+              )}
+              {AppConfig.getValue('js-editor') === 'true' && (
+                <CodeEditor
+                  onCodeChange={executeCode}
+                  startCode={''}
+                  editorConfigExtensions={[javascript()]}
+                  appName="music"
+                />
+              )}
+              <div role="application" id={blocklyDivId} />
+              {showAdvancedControls && (
+                <div className={moduleStyles.advancedControlsContainer}>
+                  <AdvancedControls />
+                </div>
+              )}
+            </PanelContainer>
+          </div>
+        </div>
+
+        {!isToolboxMode && (
+          <div id="play-area" className={classNames(moduleStyles.playArea)}>
+            <div id="controls-area" className={moduleStyles.controlsArea}>
               <PanelContainer
-                id="instructions-panel"
-                headerContent={musicI18n.panelHeaderInstructions()}
+                id="controls-panel"
+                headerContent={musicI18n.panelHeaderControls()}
                 hideHeaders={hideHeaders}
-                headerClassName={moduleStyles.panelContainerHeader}
               >
-                {useNewInstructions ? (
-                  <InstructionsV2
-                    isRunning={isPlaying}
-                    handleInstructionsTextClick={onInstructionsTextClick}
-                    bottomComponent={
-                      exemplarPlayerInsideInstructions &&
-                      showExemplarPlayer && (
-                        <ExemplarPlayerView
-                          playbackEvents={exemplarPlaybackEvents}
-                          title={exemplarSettings.playerTitle!}
-                          player={player}
-                          insideInstructions={exemplarPlayerInsideInstructions}
-                        />
-                      )
-                    }
-                    hasRun={hasRun}
-                    hasEdited={hasEdited}
-                    fixedDarkBackground={true}
-                    overrideTheme={'Light'}
-                    levelProperties={levelProperties}
-                  />
-                ) : (
-                  <Instructions
-                    isRunning={isPlaying}
-                    handleInstructionsTextClick={onInstructionsTextClick}
-                    bottomComponent={
-                      exemplarPlayerInsideInstructions &&
-                      showExemplarPlayer && (
-                        <ExemplarPlayerView
-                          playbackEvents={exemplarPlaybackEvents}
-                          title={exemplarSettings.playerTitle!}
-                          player={player}
-                          insideInstructions={exemplarPlayerInsideInstructions}
-                        />
-                      )
-                    }
-                    hasRun={hasRun}
-                    hasEdited={hasEdited}
-                  />
-                )}
-                {!exemplarPlayerInsideInstructions && showExemplarPlayer && (
-                  <ExemplarPlayerView
-                    playbackEvents={exemplarPlaybackEvents}
-                    title={exemplarSettings.playerTitle!}
-                    player={player}
-                    insideInstructions={exemplarPlayerInsideInstructions}
-                  />
-                )}
+                <Controls
+                  setPlaying={setPlaying}
+                  playTrigger={playTrigger}
+                  triggers={triggers}
+                  isPredictLevel={
+                    levelProperties.predictSettings?.isPredictLevel
+                  }
+                  enableSkipControls={
+                    AppConfig.getValue('skip-controls-enabled') === 'true'
+                  }
+                />
               </PanelContainer>
-            )}
+            </div>
+
+            <div
+              dir="ltr"
+              id="timeline-area"
+              className={moduleStyles.timelineArea}
+              ref={timelineAreaRef}
+            >
+              <PanelContainer
+                id="timeline-panel"
+                headerContent={musicI18n.panelHeaderTimeline()}
+                hideHeaders={hideHeaders}
+              >
+                <div className={moduleStyles.dancerCanvasContainer}>
+                  <DancerCanvas
+                    size={dancerSize}
+                    measurePosition={dancerMeasurePosition}
+                    move={danceMove}
+                  />
+                </div>
+                <Timeline
+                  allowChangeStartingPlayheadPosition={
+                    (levelProperties.levelData as MusicLevelData | undefined)
+                      ?.allowChangeStartingPlayheadPosition
+                  }
+                  isPredictLevel={
+                    levelProperties.predictSettings?.isPredictLevel
+                  }
+                />
+              </PanelContainer>
+            </div>
           </div>
         )}
-
-        <div id="blockly-area" className={moduleStyles.blocklyArea}>
-          {AppConfig.getValue('ai-generate') === 'true' && <Generate />}
-
-          <PanelContainer
-            id="workspace-panel"
-            headerContent={headerContent}
-            hideHeaders={hideHeaders}
-            rightHeaderContent={
-              <HeaderButtons
-                onClickUndo={undo}
-                onClickRedo={redo}
-                clearCode={clearCode}
-                allowPackSelection={allowPackSelection}
-                skipUrl={skipUrl}
-                hideChaff={hideChaff}
-              />
-            }
-            headerClassName={
-              experiments.isEnabledAllowingQueryString(
-                experiments.LAB2_RESOURCE_PANEL
-              )
-                ? moduleStyles.headerWithBorder
-                : moduleStyles.panelContainerHeader
-            }
-          >
-            {isStartMode && (
-              <div
-                id="startSourcesWarningBanner"
-                className={moduleStyles.warningBanner}
-              >
-                {projectTemplateLevel
-                  ? WARNING_BANNER_MESSAGES.TEMPLATE
-                  : WARNING_BANNER_MESSAGES.STANDARD}
-              </div>
-            )}
-            {isEditingExemplar && (
-              <div
-                id="toolboxModeWarningBanner"
-                className={moduleStyles.warningBanner}
-              >
-                {WARNING_BANNER_MESSAGES.EXEMPLAR_MODE}
-              </div>
-            )}
-            {isViewingExemplar && (
-              <div
-                id="toolboxModeWarningBanner"
-                className={moduleStyles.warningBanner}
-              >
-                {WARNING_BANNER_MESSAGES.VIEWING_EXEMPLAR}
-              </div>
-            )}
-            {isToolboxMode && (
-              <div
-                id="toolboxModeWarningBanner"
-                className={moduleStyles.warningBanner}
-              >
-                {WARNING_BANNER_MESSAGES.TOOLBOX_MODE}
-              </div>
-            )}
-            {AppConfig.getValue('js-editor') === 'true' && (
-              <CodeEditor
-                onCodeChange={executeCode}
-                startCode={''}
-                editorConfigExtensions={[javascript()]}
-                appName="music"
-              />
-            )}
-            <div role="application" id={blocklyDivId} />
-            {showAdvancedControls && (
-              <div className={moduleStyles.advancedControlsContainer}>
-                <AdvancedControls />
-              </div>
-            )}
-          </PanelContainer>
-        </div>
       </div>
-
-      {!isToolboxMode && (
-        <div id="play-area" className={classNames(moduleStyles.playArea)}>
-          <div id="controls-area" className={moduleStyles.controlsArea}>
-            <PanelContainer
-              id="controls-panel"
-              headerContent={musicI18n.panelHeaderControls()}
-              hideHeaders={hideHeaders}
-            >
-              <Controls
-                setPlaying={setPlaying}
-                playTrigger={playTrigger}
-                triggers={triggers}
-                isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
-                enableSkipControls={
-                  AppConfig.getValue('skip-controls-enabled') === 'true'
-                }
-              />
-            </PanelContainer>
-          </div>
-
-          <div
-            dir="ltr"
-            id="timeline-area"
-            className={moduleStyles.timelineArea}
-          >
-            <PanelContainer
-              id="timeline-panel"
-              headerContent={musicI18n.panelHeaderTimeline()}
-              hideHeaders={hideHeaders}
-            >
-              <Timeline
-                allowChangeStartingPlayheadPosition={
-                  (levelProperties.levelData as MusicLevelData | undefined)
-                    ?.allowChangeStartingPlayheadPosition
-                }
-                isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
-              />
-            </PanelContainer>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

@@ -318,9 +318,17 @@ const EVENTS = {
   AI_DIFF_101: 'AI Teaching Assistant AI 101 CTA',
   AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
 
+  AI_DIFF_NOTIFICATIONS_OPENED: 'AI Differentiation Notifications Opened',
+  AI_DIFF_NOTIFICATION_URL_CLICKED:
+    'AI Differentiation Notification URL Clicked',
+  AI_DIFF_NOTIFICATION_AI_PROMPT_CLICKED:
+    'AI Differentiation Notification AI Prompt Clicked',
+
   // AI Tutor
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
+  AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
+  AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',
 
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
@@ -550,7 +558,6 @@ const EVENTS = {
     'User changed font size on codebridge editor',
   CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE:
     'User changed font size on codebridge console',
-  CODEBRIDGE_THEME_CHANGE: 'User changed theme on codebridge',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
@@ -589,6 +596,9 @@ const EVENTS = {
   TEACHER_NAV_COURSE_OVERVIEW_FAILED:
     'Teacher Nav Course Overview Load Failure',
 
+  DEPRECATED_CURRICULUM_ERROR_PAGE_VISITED:
+    'Deprecated Curriculum Error Page Visited',
+
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 
@@ -610,6 +620,7 @@ const EVENTS = {
 
   // Lab2
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
+  LAB2_THEME_CHANGE: 'User changed theme',
 
   // AI Teaching Assistant - Differentiation
 };

@@ -782,10 +782,16 @@ const marketingPaths = {
   "/back-to-school-for-district": true,
   "/india": true,
   "/global/cuantrix": true,
+  "/news/why-ai-education-is-the-key-to-global-competitiveness": true,
+  "/district-set-up": true,
+  "/impact-report": true,
+  "/about/impact-report": true,
+  "/news/fetc-2025": true,
 }
 
 const pathPatterns = [
   /^\/_next\/static\//, // Next.js static assets
+  /^\/_next\/image/,  // Next.js dynamic images, /_next/image*
   /^\/forms\//,         // /forms/*
   /^\/schools\//,       // /schools/*
   /^\/applab\/docs\//,  // /applab/docs/*

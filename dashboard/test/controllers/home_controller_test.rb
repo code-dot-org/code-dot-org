@@ -4,9 +4,8 @@ require 'time'
 class HomeControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  test "teacher in teacher-homepage-v2 experiment redirected to teacher_dashboard/home" do
+  test "teacher redirected to teacher_dashboard/home" do
     teacher = create(:teacher)
-    SingleUserExperiment.find_or_create_by!(min_user_id: teacher.id, name: 'teacher-homepage-v2')
     sign_in teacher
     get :home
 
@@ -169,8 +168,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student without pilot access will go to index" do
-    pilot_script = create(:script, pilot_experiment: 'pilot-experiment')
-    create(:single_unit_course, unit: pilot_script, pilot_experiment: 'pilot-experiment')
+    pilot_script = create(:script, :in_single_unit_course, pilot_experiment: 'pilot-experiment')
     section = create(:section, script: pilot_script)
     student = create(:follower, section: section).student_user
     sign_in student
@@ -180,16 +178,14 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with pilot access will go to pilot script" do
-    unit_group = create(:unit_group)
-    pilot_unit = create(:unit, pilot_experiment: 'pilot-experiment', original_unit_group: unit_group)
-    create(:unit_group_unit, unit_group: unit_group, script: pilot_unit, position: 1)
+    pilot_unit = create(:unit, :in_single_unit_course, pilot_experiment: 'pilot-experiment')
     pilot_teacher = create(:teacher, pilot_experiment: 'pilot-experiment')
     section = create(:section, script: pilot_unit, user: pilot_teacher)
     student = create(:follower, section: section).student_user
     sign_in student
     get :index
 
-    assert_redirected_to course_unit_path(unit_group, 1)
+    assert_redirected_to course_unit_path(pilot_unit.original_unit_group, 1)
   end
 
   test "redirect index when signed out" do
@@ -440,17 +436,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#student-information-modal', false
   end
 
-  test "teacher visiting homepage gets expected cookies set" do
-    teacher = create(:teacher)
-    sign_in teacher
-    get :home
-
-    cookie_header = @response.header['Set-Cookie']
-    assert_includes(cookie_header, "teacher_account_age_in_years")
-    assert_includes(cookie_header, "teacher_within_us")
-    assert_includes(cookie_header, "teacher_has_attended_pd")
-  end
-
   # This exception is actually annoying to handle because it never gets to
   # ActionController (so we can't use the rescue in ApplicationController).
   # test "bad http methods are rejected" do
@@ -471,5 +456,79 @@ class HomeControllerTest < ActionController::TestCase
     assert_raises ActionController::UrlGenerationError do
       get :debug
     end
+  end
+
+  test "home page topCourse uses correct unit_group when UserScript has different unit_group than script original_unit_group" do
+    student = create(:student)
+
+    # Create two unit groups for the same unit
+    unit = create(:script, :with_levels)
+    create(:single_unit_course, :stable, unit: unit)
+    other_unit_group = create(:single_unit_course, :stable)
+    create(:unit_group_unit, unit_group: other_unit_group, script: unit, position: 2)
+
+    # Create a user_script with the different unit_group (not the original)
+    # Use the UserScript.find_and_migrate_or_create_by! method to ensure unit_group is set properly
+    user_script = UserScript.find_and_migrate_or_create_by!(user_id: student.id, unit: unit, unit_group: other_unit_group)
+    user_script.update!(started_at: Time.now)
+
+    sign_in student
+    get :home
+
+    # Verify topCourse is set
+    refute_nil assigns(:homepage_data)[:topCourse]
+    top_course = assigns(:homepage_data)[:topCourse]
+
+    # Verify the links use the other_unit_group, not the original_unit_group
+    assert_equal "/courses/#{other_unit_group.name}/units/2", top_course[:linkToOverview]
+    assert_equal "/courses/#{other_unit_group.name}/units/2/next", top_course[:linkToLesson]
+  end
+
+  test "home page courses data comes from courses_as_participant" do
+    student = create(:student)
+
+    # Create a section course
+    section_course = create(:unit_group, name: 'section-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    section = create(:section, unit_group: section_course)
+    section.students << student
+
+    # Create a user_script course
+    user_script_course = create(:unit_group, name: 'user-script-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    script = create(:script, original_unit_group: user_script_course)
+    create(:unit_group_unit, unit_group: user_script_course, script: script, position: 1)
+    script.reload
+    create(:user_script, user: student, script: script, unit_group: user_script_course)
+
+    sign_in student
+    get :home
+
+    # Verify courses data is set
+    refute_nil assigns(:homepage_data)[:courses]
+    courses = assigns(:homepage_data)[:courses]
+
+    # Should have both courses
+    assert_equal 2, courses.length
+    course_names = courses.pluck(:name)
+    assert_includes course_names, 'section-course'
+    assert_includes course_names, 'user-script-course'
+  end
+
+  test "home page topCourse with nil unit_group_unit" do
+    student = create(:student)
+
+    # Create a standalone script (not in any unit_group)
+    script = create(:script, :with_levels)
+    create(:user_script, user: student, script: script, started_at: Time.now)
+
+    sign_in student
+    get :home
+
+    # Verify topCourse is set
+    refute_nil assigns(:homepage_data)[:topCourse]
+    top_course = assigns(:homepage_data)[:topCourse]
+
+    # Verify the links use the script path (not course path) when there's no unit_group_unit
+    assert_equal "/s/#{script.name}", top_course[:linkToOverview]
+    assert_equal "/s/#{script.name}/next", top_course[:linkToLesson]
   end
 end

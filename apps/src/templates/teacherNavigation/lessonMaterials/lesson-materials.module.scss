@@ -115,10 +115,203 @@
   }
 }
 
-.lessonMaterialsContainer{
+.lessonContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.lessonMaterialsContainer, .lessonSummaryContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.lessonMaterialsContainer {
+  flex: 1;
+}
+
+.lessonSummaryContainer {
+  flex: 0 0 20rem;
+}
+
+.lessonSummarySection {
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem 0.75rem;
+  border: 2px solid var(--borders-brand-aqua-primary);
+  border-radius: 4px;
+  gap: 0.75rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.lessonSummarySectionHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lessonSummarySectionTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+
+  i {
+    font-size: 1rem;
+  }
+
+  p {
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+}
+
+.openTranscriptButton {
+  border: none !important;
+
+  span {
+    color: var(--text-neutral-tertiary);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
+.transcriptDialog {
+  max-width: 736px;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+
+  > div:first-of-type {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  > div:last-of-type {
+    align-self: flex-end;
+  }
+}
+
+.transcriptDialogContent {
+  max-height: 15rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--borders-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.transcriptLine {
+  display: flex;
+  flex-direction: row;
+  gap: 0.875rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .transcriptLineTimeStamp {
+    color: var(--text-neutral-tertiary);
+  }
+}
+
+.audioPlayerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  i {
+    margin-top: 1px;
+    color: var(--background-success-primary);
+  }
+}
+
+.audioPlayer {
+  width: 90%;
+  height: 2rem;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: var(--background-neutral-true-base);
+}
+
+audio::-webkit-media-controls-current-time-display {
+  font-size: 12px;
+  color: var(--text-neutral-black-fixed);
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  font-size: 12px;
+  color: var(--text-neutral-black-fixed);
+}
+
+.lessonSummaryInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lessonSummaryInfoBlock {
+  > p:first-of-type{
+    font-weight: 600;
+  }
+
+  ol, ul {
+    margin-bottom: 0;
+  }
+}
+
+.askAITAButton > span {
+  font-size: 14px;
+}
+
+.personalizationQuizSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.horizontalLine {
+  height: 1px;
+  background-color: var(--neutral-gray-30);
+  margin-top: 0.25rem;
+}
+
+.personalizationQuizPrompt {
+  justify-content: center;
+
+  p, a {
+    color: var(--text-neutral-tertiary);
+  }
+
+  a > p {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
+.poweredByAITANote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  img {
+    height: 25px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .skeletonDropdown {

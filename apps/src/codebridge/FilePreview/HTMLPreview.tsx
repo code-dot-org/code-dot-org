@@ -28,8 +28,6 @@ export const HTMLPreview: React.FC = () => {
   const iframeHeightClass = useMemo(() => {
     if (pageAction === 'share' || isFullScreenView) {
       return moduleStyles.fullScreenPreviewIframeHeight;
-    } else if (pageAction === 'edit' || pageAction === 'view') {
-      return moduleStyles.projectViewPreviewIframeHeight;
     }
     return moduleStyles.levelViewPreviewIframeHeight;
   }, [pageAction, isFullScreenView]);
@@ -258,7 +256,12 @@ export const HTMLPreview: React.FC = () => {
       headerContent={codebridgeI18n.preview()}
       hideHeaders
     >
-      <div className={moduleStyles.previewContainer}>
+      <div
+        className={classNames(
+          moduleStyles.previewContainer,
+          isFullScreenView && moduleStyles.fullScreenPreviewContainer
+        )}
+      >
         <HTMLPreviewHeader
           value={inputValue}
           onChange={setInputValue}

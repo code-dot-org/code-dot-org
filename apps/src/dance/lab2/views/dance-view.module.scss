@@ -2,7 +2,14 @@
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  display: flex;
+  flex: 1;
   flex-direction: row;
+  position: relative;
 }
 
 .visualizationColumn {
@@ -10,9 +17,7 @@
 }
 
 .visualization {
-  // TODO: support resizing
-  width: 400px;
-  height: 400px;
+  width: 100%;
   background-color: var(--background-neutral-secondary);
   position: relative;
   border: 1px solid var(--borders-neutral-primary);
@@ -32,6 +37,16 @@
 .visualizationArea {
   flex: 0;
   background-color: var(--background-neutral-primary);
+
+  &.jumbo {
+    flex: initial;
+    width: min(50vw, calc(100vh - 250px));
+
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
 }
 
 .workspaceArea {

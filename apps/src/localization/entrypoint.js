@@ -11,12 +11,14 @@ import {get, set} from 'js-cookie';
  * The current course listing and a mapping between them and Localize project
  * keys. This is a temporary measure for now.
  */
-const csd_prefixes = ['/courses/csd-2024'];
+const csd_prefixes = ['/courses/csd-2024', '/courses/self-paced-pl-csd-2024'];
 
 const csf_prefixes = [
   '/courses/k5-unplugged',
   '/courses/express-2024',
   '/courses/pre-express-2024',
+  '/courses/k5-onlinepd-2024',
+  '/courses/teaching-csf-2025',
 ];
 
 const donor_prefixes = [
@@ -31,7 +33,12 @@ const donor_prefixes = [
   '/courses/elem-game-design-2024',
 ];
 
-const aif_prefixes = ['/courses/artificial-intelligence-foundations-2025'];
+const aif_prefixes = [
+  '/courses/artificial-intelligence-foundations-2025',
+  '/courses/teaching-ai-foundations-2025',
+  '/courses/oceans',
+  '/courses/how-ai-works-2023',
+];
 
 const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
 
@@ -49,6 +56,7 @@ const live = [
   '/courses/foundations-gen-ai-2025',
   '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
+  '/courses/artificial-intelligence-foundations-2025/',
 ];
 
 const experiments =

@@ -1,0 +1,68 @@
+import {UserAddedSelectionContext} from '@cdo/apps/aichat/types';
+import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
+import {AiTutorContext} from '@cdo/apps/aiTutor/types';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+
+interface AiTutorWebLab2Params {
+  source: MultiFileSource | undefined;
+  longInstructions: string | undefined;
+  selection: UserAddedSelectionContext;
+}
+
+const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['txt', 'csv', 'md'];
+
+export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
+  private params?: AiTutorWebLab2Params;
+
+  override setAiTutorContext(params: AiTutorWebLab2Params): void {
+    this.params = params;
+  }
+
+  protected override getAiTutorContext(): AiTutorContext {
+    if (!this.params) return {};
+
+    const {source, longInstructions, selection} = this.params;
+    const sourceCode = source
+      ? Object.values(source.files)
+          .filter(
+            file =>
+              file.type !== ProjectFileType.VALIDATION &&
+              file.type !== ProjectFileType.SYSTEM_SUPPORT &&
+              !LANGUAGES_TO_EXCLUDE_FROM_CONTEXT.includes(file.language)
+          )
+          .map(
+            file => `filename: ${file.name}\n${this.codeBlock(file.contents)}`
+          )
+          .join('\n\n')
+      : undefined;
+
+    const userSelection =
+      selection && Object.values(selection).length > 0
+        ? Object.values(selection)
+            .map(context => {
+              if (context.lineReference) {
+                const lineString =
+                  context.lineReference.start === context.lineReference.end
+                    ? `line ${context.lineReference.start}`
+                    : `lines ${context.lineReference.start} - ${context.lineReference.end}`;
+                return `snippet of file ${
+                  context.filename
+                }, ${lineString}\nContents of snippet:\n${this.codeBlock(
+                  context.sourceCode
+                )}`;
+              } else {
+                return `entirety of file ${
+                  context.filename
+                }\nContents of file:\n${this.codeBlock(context.sourceCode)}`;
+              }
+            })
+            .join('\n\n')
+        : undefined;
+
+    return {
+      sourceCode,
+      longInstructions,
+      userSelection,
+    };
+  }
+}

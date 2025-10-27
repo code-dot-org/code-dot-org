@@ -5,14 +5,16 @@
  */
 import React, {Suspense, useEffect} from 'react';
 
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
 import {
   getLabViewPageAction,
-  isUsingResourcePanel,
+  isUsingInstructions,
   getIsLabViewBlocked,
 } from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -48,28 +50,45 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const pageAction = getLabViewPageAction() || '';
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
-  const isProjectLevel = levelProperties?.isProjectLevel || false;
   const hideExtraLinks =
     queryParams('hide-extra-links') === 'true' ||
-    isUsingResourcePanel(currentAppName || '', isProjectLevel);
+    isUsingInstructions(currentAppName || '');
 
   useInitialLabTheme({
     currentAppName,
     levelProperties,
   });
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel || false
+  );
+  const hasSubmittedPredictResponse = useAppSelector(
+    state => state.predictLevel.hasSubmittedResponse
+  );
+
+  const {setChatDisabledState} = useAiChatDisabled();
+  useEffect(() => {
+    if (isPredictLevel && !hasSubmittedPredictResponse) {
+      setChatDisabledState({
+        chatDisabled: true,
+        chatDisabledMessage: lab2I18n.predictTutorDisabledMessage(),
+      });
+    } else {
+      setChatDisabledState({chatDisabled: false});
+    }
+  }, [isPredictLevel, hasSubmittedPredictResponse, setChatDisabledState]);
 
   useEffect(() => {
     const footer = document.getElementById('page-small-footer');
     // The resource panel has includes copyright and language, so we hide the footer.
-    // We control this here so the footer will show up on levels that do not use the resource panel,
+    // We control this here so the footer will show up on levels that do not include instructions,
     // such as panels levels. The footer is controlled by the server, so we need to show/hide it here
     // to ensure it will show up when we switch to a level that does not use the resource panel.
-    if (isUsingResourcePanel(currentAppName || '', isProjectLevel)) {
+    if (isUsingInstructions(currentAppName)) {
       footer?.classList.add(moduleStyles.hiddenFooter);
     } else if (footer?.classList.contains(moduleStyles.hiddenFooter)) {
       footer.classList.remove(moduleStyles.hiddenFooter);
     }
-  }, [currentAppName, isProjectLevel]);
+  }, [currentAppName]);
 
   const blockLabView = getIsLabViewBlocked(
     pageAction,
@@ -95,11 +114,8 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     return null;
   }
 
-  const extraLinksButtonRightOfFooter =
-    levelProperties?.isProjectLevel &&
-    (currentAppName === 'pythonlab' || currentAppName === 'weblab2');
-
   const LabView = properties.view;
+
   return (
     <ProgressContainer key={currentAppName} appType={currentAppName}>
       <div id={`lab2-${currentAppName}`} className={moduleStyles.labContainer}>
@@ -109,12 +125,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
             initialSources={initialSources}
           />
         </Suspense>
-        {!hideExtraLinks && levelId && (
-          <ExtraLinks
-            levelId={levelId}
-            positionRightOfFooter={extraLinksButtonRightOfFooter}
-          />
-        )}
+        {!hideExtraLinks && levelId && <ExtraLinks levelId={levelId} />}
       </div>
     </ProgressContainer>
   );

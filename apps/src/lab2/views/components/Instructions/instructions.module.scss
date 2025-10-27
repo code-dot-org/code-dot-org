@@ -29,7 +29,7 @@
 }
 
 .fixedDarkBackground {
-  background-color: var( --background-neutral-black-fixed);
+  background-color: var(--background-neutral-black-fixed);
 }
 
 .standardBackground {
@@ -54,7 +54,6 @@
 
 .bubble {
   position: relative;
-  padding: 12px;
   border-radius: 4px;
   animation: slidein 0.5s;
   background-color: var(--background-neutral-secondary);
@@ -63,7 +62,23 @@
   flex-direction: column;
   min-height: 0;
 
-  h1, h2, h3, h4 {
+  /* If there is scrolling content, it will provide horizontal padding.
+     Doing this allows the scrollbar to use that padding area. */
+  &:has(.scrollingContent) {
+    padding: 12px 0;
+  }
+
+  /* If there is no scrolling content, we will provide horizontal padding. */
+  &:not(:has(.scrollingContent)) {
+    padding: 12px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: var(--text-neutral-primary);
   }
 
@@ -71,7 +86,8 @@
     margin-bottom: 10px;
   }
 
-  a:link, a {
+  a:link,
+  a {
     color: var(--text-brand-purple-primary);
     text-decoration: underline;
     &:hover {
@@ -98,6 +114,7 @@
 .ttsContainer {
   display: flex;
   justify-content: flex-end;
+  padding-right: 12px;
 }
 
 .bubbleNoSlide {
@@ -109,6 +126,20 @@
   height: 32px;
 }
 
+// Ensure the TooltipOverlay wrapper div matches the button width
+// without changing TooltipOverlay's calculated position.
+.buttonInstructionTooltipOverlay {
+  > div {
+    width: 100%;
+  }
+
+  // Contained button takes full width.
+  button {
+    width: 100%;
+    height: 32px;
+  }
+}
+
 .markdownText {
   line-height: 0;
   user-select: auto;
@@ -117,17 +148,53 @@
   h1,
   h2,
   h3,
-  h4 {
-    margin: 0 0 10px 0;
-    font-size: 1.75em;
-    line-height: 1.2em;
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 0.5em 0;
 
-    &, em, strong {
+    &:not(h5, h6),
+    em,
+    strong {
       font-family: $barlowSemiCondensed-semibold;
     }
   }
 
-  ol, ul {
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.28;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.32;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: 1rem;
+    line-height: 1.48;
+  }
+
+  h5 {
+    font-size: 0.875rem;
+    line-height: 1.48;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-size: 0.75rem;
+    line-height: 1.48;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  ol,
+  ul {
     line-height: 0;
   }
 
@@ -135,7 +202,8 @@
     margin-bottom: 5px;
   }
 
-  code, pre {
+  code,
+  pre {
     color: var(--text-info-secondary);
     background-color: var(--background-neutral-primary);
     border: 1px solid var(--borders-neutral-strong);
@@ -228,14 +296,15 @@
   }
 }
 
-%scrolling-content {
+.scrollingContent {
   flex: 1;
   overflow-y: auto;
   min-height: 70px;
+  padding: 0 12px;
 }
 
-.scrollingContent {
-  @extend %scrolling-content;
+.nonScrollingSubContent {
+  padding: 0 12px;
 }
 
 .bottomComponent {

@@ -30,10 +30,7 @@ module OpenaiEvaluateHelper
     aiReasoning: "Dummy data returned for testing purposes."
   }
 
-  def self.evaluate(level, options)
-    student_work = options[:student_work]
-    evaluation_type = options[:evaluation_type]
-
+  def self.evaluate(level, student_work:, evaluation_type:, should_evaluate_skills: false)
     if (level.is_a?(FreeResponse) && student_work.delete(' ').empty?) || (level.upper_grades_programming_level? && level.get_starter_code == student_work)
       response = NO_ATTEMPT_RESPONSE
       # mimic the format of the response from AI
@@ -53,7 +50,7 @@ module OpenaiEvaluateHelper
       system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(level, evaluation_type)
       student_work_message = [{role: "user", content: student_work}]
       messages = prepend_system_prompt(system_prompt, student_work_message)
-      response = client.request_evaluation(messages)
+      response = should_evaluate_skills ? client.request_skill_evaluations(messages) : client.request_evaluation(messages)
       response_body = JSON.parse(response.body)
       response_body = response_body['choices'][0]['message'] if response.code == 200
       evaluation =  {status: response.code, json: response_body}
@@ -74,7 +71,7 @@ module OpenaiEvaluateHelper
       if user_level.level_source && user_level.level_source.data.present?
         evaluate_free_response(user_level, unit)
       elsif user_level.level.name == 'U4 L03 Variables operator practice 5_2024' || user_level.level.name == 'U4 L03 Variables numbers practice 4_2024'
-        evaluate_code_level(user_level, unit)
+        evaluate_code_level(user_level, unit, true)
       end
     end
 
@@ -93,12 +90,17 @@ module OpenaiEvaluateHelper
     create_ai_evaluations_from_ai_response(user_level.user, user_level, unit, response, {})
   end
 
-  def self.evaluate_code_level(user_level, unit)
+  def self.evaluate_code_level(user_level, unit, should_evaluate_skills)
     helper = ApplicationController.helpers
     student_code = helper.get_student_code(user_level.user.id, user_level.level, unit.id)
 
     unless student_code.nil? || student_code[:student_code].nil?
-      response = evaluate(user_level.level, student_work: student_code[:student_code], evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT])
+      response = evaluate(
+        user_level.level,
+        student_work: student_code[:student_code],
+        evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT],
+        should_evaluate_skills: should_evaluate_skills
+      )
 
       create_ai_evaluations_from_ai_response(user_level.user, user_level, unit, response, code_version: student_code[:code_version])
     end
@@ -162,5 +164,5 @@ module OpenaiEvaluateHelper
     messages
   end
 
-  private_class_method :client, :prepend_system_prompt, :evaluate_free_response
+  private_class_method :client, :prepend_system_prompt
 end

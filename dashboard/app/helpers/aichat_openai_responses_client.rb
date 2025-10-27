@@ -20,12 +20,24 @@ class AichatOpenaiResponsesClient < AichatAiClient
     {
       'prompt_tokens' => response_body.dig('usage', 'input_tokens') || 0,
       'completion_tokens' => response_body.dig('usage', 'output_tokens') || 0,
-      'cached_prompt_tokens' => response_body.dig('usage', 'input_tokens_details', 'cached_tokens') || 0
+      'cached_prompt_tokens' => response_body.dig('usage', 'input_tokens_details', 'cached_tokens') || 0,
+      'thought_tokens' => response_body.dig('usage', 'output_tokens_details', 'reasoning_tokens') || 0
     }
   end
 
   # Create request body.
   private def create_body(config, request, context = [])
+    if config.dig(:response, :validation, :type) == 'jsonSchema'
+      response_json_schema = config[:response][:validation][:schema]
+      text = {
+        format: {
+          type: 'json_schema',
+            name: 'response_schema',
+            schema: response_json_schema
+        }
+      }
+    end
+
     input = [
       # Add systemInstructions if not nil.
       *(config[:systemInstructions] ? [format_message(config[:systemInstructions], 'system')] : []),
@@ -40,8 +52,9 @@ class AichatOpenaiResponsesClient < AichatAiClient
     body = {
       model: config[:model],
       temperature: config[:temperature],
+      text: text,
       input: input
-    }
+    }.compact # Use compact to remove null text
 
     body
   end

@@ -1,6 +1,5 @@
 /** @file Top-level view for AI Chat Lab */
 
-import Button from '@code-dot-org/component-library/button';
 import ActionDropdown from '@code-dot-org/component-library/dropdown/actionDropdown';
 import SegmentedButtons, {
   SegmentedButtonsProps,
@@ -17,15 +16,13 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
-import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
-import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
@@ -54,6 +51,7 @@ import {
 } from '../redux';
 import {AichatLevelProperties, ModelParameters, ViewMode} from '../types';
 
+import AiChatHeaderButtons from './aiChatHeaderButtons/AiChatHeaderButtons';
 import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
@@ -282,21 +280,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     }
   }, [dialogControl, resetProject]);
 
-  const onClear = useCallback(() => {
-    dispatch(clearChatMessages());
-    dispatch(
-      addChatEvent({
-        timestamp: Date.now(),
-        descriptionKey: 'CLEAR_CHAT',
-      })
-    );
-    dispatch(
-      sendAnalytics(EVENTS.CHAT_ACTION, {
-        action: 'Clear chat history',
-      })
-    );
-  }, [dispatch]);
-
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     dispatch(clearHasSetStartingCustomizations());
   });
@@ -336,51 +319,21 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
           {viewMode === ViewMode.EDIT && (
             <>
               <div className={moduleStyles.instructionsArea}>
-                {experiments.isEnabledAllowingQueryString(
-                  experiments.LAB2_RESOURCE_PANEL
-                ) ? (
-                  <ResourcePanel
-                    className={moduleStyles.panelContainer}
-                    headerClassName={moduleStyles.panelHeader}
-                    /** AI Chat doesn't have a traditional "run" state, so this is always false. */
-                    isRunning={false}
-                    hasRun={hasSentMessage}
-                    hasEdited={hasUpdatedCustomizations}
-                    levelProperties={levelProperties}
-                    rightHeaderContent={renderInstructionsHeaderRight(
-                      isUserTeacher,
-                      () => {
-                        dispatch(
-                          setShowModalType(ModalTypes.TEACHER_ONBOARDING)
-                        );
-                      }
-                    )}
-                  />
-                ) : (
-                  <PanelContainer
-                    id="aichat-instructions-panel"
-                    headerContent={commonI18n.instructions()}
-                    className={moduleStyles.panelContainer}
-                    headerClassName={moduleStyles.panelHeader}
-                    rightHeaderContent={renderInstructionsHeaderRight(
-                      isUserTeacher,
-                      () => {
-                        dispatch(
-                          setShowModalType(ModalTypes.TEACHER_ONBOARDING)
-                        );
-                      }
-                    )}
-                  >
-                    <InstructionsV2
-                      className={moduleStyles.instructions}
-                      /** AI Chat doesn't have a traditional "run" state, so this is always false. */
-                      isRunning={false}
-                      hasRun={hasSentMessage}
-                      hasEdited={hasUpdatedCustomizations}
-                      levelProperties={levelProperties}
-                    />
-                  </PanelContainer>
-                )}
+                <ResourcePanel
+                  className={moduleStyles.panelContainer}
+                  headerClassName={moduleStyles.panelHeader}
+                  /** AI Chat doesn't have a traditional "run" state, so this is always false. */
+                  isRunning={false}
+                  hasRun={hasSentMessage}
+                  hasEdited={hasUpdatedCustomizations}
+                  levelProperties={levelProperties}
+                  rightHeaderContent={renderInstructionsHeaderRight(
+                    isUserTeacher,
+                    () => {
+                      dispatch(setShowModalType(ModalTypes.TEACHER_ONBOARDING));
+                    }
+                  )}
+                />
               </div>
               {!allFieldsHidden && (
                 <div className={moduleStyles.customizationArea}>
@@ -428,12 +381,12 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerContent={chatWorkspaceHeader}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
+              rightHeaderContent={<AiChatHeaderButtons />}
             >
               {hasSetStartingCustomizations && (
                 <ChatWorkspace
                   modelParameters={modelParameters}
                   clientType={AiChatClientTypes.AI_CHAT_LAB}
-                  onClear={onClear}
                   levelName={levelName}
                   channelId={channelId}
                   hasStarterAssets={
@@ -453,15 +406,17 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
   return (
     <div>
-      <Button
-        icon={{iconStyle: 'solid', iconName: 'refresh'}}
-        isIconOnly={true}
-        color={'black'}
-        onClick={onStartOver}
-        ariaLabel={aichatI18n.aria_startOver()}
-        size={'xs'}
+      <IconButtonWithTooltip
+        id="start-over"
+        label={aichatI18n.aria_startOver()}
+        icon={{iconName: 'refresh', iconStyle: 'solid'}}
         type="tertiary"
-        className={moduleStyles.startOverButton}
+        color="gray"
+        buttonSize="xs"
+        tooltipSize="xs"
+        tooltipDirection="onBottom"
+        hideTooltipTail={true}
+        onClick={onStartOver}
       />
     </div>
   );

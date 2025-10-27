@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q14_2025-pilot_v2-2025'
+
+question 'Why might creators want the ability to opt out of having their work used in AI training?'
+
+wrong 'To improve the quality of AI outputs.'
+wrong 'To ensure AI systems remain objective.'
+right 'To maintain control over how their work is used and avoid exploitation.'
+wrong 'To speed up the AI training process.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Ownership, Ethics, and Creativity
+MARKDOWN

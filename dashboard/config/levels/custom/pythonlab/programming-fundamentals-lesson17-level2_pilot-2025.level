@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:48:14.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This: \r\n- Run the code and observe the output for the predefined values of num1 and num2.\r\n- Modify the values of num1 and num2 and run the program again to see how the results change.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Compare two numbers. Keep changing the numbers and running the code. What happens? \nnum1 = 10\nnum2 = 5\n\nprint(\"Is num1 equal to num2? \" + str(num1 == num2))\nprint(\"Is num1 greater than num2? \" + str(num1 > num2))\nprint(\"Is num1 less than or equal to num2? \" + str(num1 <= num2))\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\n\nclass TestNumValues(unittest.TestCase):\n\n    def test_change_num_values(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Check if num1 is not 10 and num2 is not 5\n            if 'num1 = 10' in content and 'num2 = 5' in content:\n                self.fail(\n                    \"The variables 'num1' and 'num2' have not been changed from their original values. \"\n                    \"Please update 'num1' to a value other than 10 and 'num2' to a value other than 5.\"\n                )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:14.010+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson17-level2_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson17-level2_2025\"}]"
+}]]></config>
+</Pythonlab>

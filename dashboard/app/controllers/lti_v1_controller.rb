@@ -158,7 +158,9 @@ class LtiV1Controller < ApplicationController
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment_name = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_PLATFORM_CLAIM]&.[](:name)
       deployment = Queries::Lti.get_deployment(integration[:id], deployment_id)
-      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
+      # ClassLink uses a non-standard role claim key
+      role_key = decoded_jwt[Policies::Lti::CLASSLINK_ROLE_KEY].present? ? Policies::Lti::CLASSLINK_ROLE_KEY : Policies::Lti::LTI_ROLES_KEY
+      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[role_key])
 
       # If deployment name is nil, update it with the name from the JWT. This
       # could likely be removed after a period of time, as we also write the name
@@ -194,12 +196,6 @@ class LtiV1Controller < ApplicationController
           metadata: metadata,
         )
 
-        # Add user's lti_user_identity to deployment if it doesn't exist
-        lti_user_identity = Queries::Lti.lti_user_identity(user, integration)
-        unless deployment.lti_user_identities.include?(lti_user_identity)
-          deployment.lti_user_identities << lti_user_identity
-        end
-
         # If this is the user's first login, send them into the account linking flow
         unless user.lms_landing_opted_out
           Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
@@ -225,6 +221,8 @@ class LtiV1Controller < ApplicationController
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
+        # Store the deployment ID in the session, so we can check if it's a restricted deployment later
+        session[:lti_deployment_id] = deployment.id
         publish_linking_page_visit(user, integration[:platform_name])
         render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end
@@ -284,7 +282,7 @@ class LtiV1Controller < ApplicationController
       rescue ActionController::ParameterMissing => exception
         case exception.param
         when :context_id, :nrps_url
-          return render_sync_course_error('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
+          return redirect_to home_path
         when :lti_integration_id, :deployment_id, :rlid
           return render_sync_course_error("Missing #{exception.param}.", :bad_request, 'missing_param')
         end
@@ -394,73 +392,6 @@ class LtiV1Controller < ApplicationController
       end
       format.json {render json: result}
     end
-  end
-
-  # POST /lti/v1/integrations
-  # Creates a new LtiIntegration
-  def create_integration
-    begin
-      params.require([:name, :client_id, :lms, :email])
-    rescue
-      flash.alert = I18n.t('lti.error.missing_params')
-      return redirect_to lti_v1_integrations_path
-    end
-
-    integration_name = params[:name]
-    client_id = params[:client_id]
-    platform_name = params[:lms]
-    admin_email = params[:email]
-
-    unless Policies::Lti::LMS_PLATFORMS.key?(platform_name.to_sym)
-      flash.alert = I18n.t('lti.error.unsupported_lms_type')
-      return redirect_to lti_v1_integrations_path
-    end
-
-    platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
-    issuer = platform_urls[:issuer]
-    auth_redirect_url = platform_urls[:auth_redirect_url]
-    jwks_url = platform_urls[:jwks_url]
-    access_token_url = platform_urls[:access_token_url]
-
-    existing_integration = Queries::Lti.get_lti_integration(issuer, client_id)
-    @integration_status = nil
-
-    if existing_integration.nil?
-      Services::Lti.create_lti_integration(
-        name: integration_name,
-        client_id: client_id,
-        issuer: issuer,
-        platform_name: platform_name,
-        auth_redirect_url: auth_redirect_url,
-        jwks_url: jwks_url,
-        access_token_url: access_token_url,
-        admin_email: admin_email
-      )
-
-      @integration_status = :created
-      LtiMailer.lti_integration_confirmation(admin_email).deliver_now
-
-      metadata = {
-        lms_name: platform_name,
-      }
-      Metrics::Events.log_event(
-        session: session,
-        event_name: 'lti_portal_registration_completed',
-        metadata: metadata,
-      )
-    end
-    render 'lti/v1/integration_status'
-  end
-
-  # GET /lti/v1/integrations
-  # Displays the onboarding portal for creating a new LTI Integration
-  def new_integration
-    @form_data = {}
-    @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.map do |key, value|
-      {platform: key, name: value[:name]}
-    end
-
-    render lti_v1_integrations_path
   end
 
   # POST /lti/v1/upgrade_account

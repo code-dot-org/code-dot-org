@@ -29,6 +29,7 @@ import {setThemeAndRenderBlocks} from '../utils';
 
 import CdoConnectionChecker from './cdoConnectionChecker';
 import {frameSizes} from './cdoConstants';
+import {initializeAdditionalWorkspace} from './cdoKeyboardNavigation';
 import CdoMetricsManager from './cdoMetricsManager';
 import {initializeScrollbarPair} from './cdoScrollbar';
 import CdoTrashcan from './cdoTrashcan';
@@ -115,6 +116,13 @@ export default class FunctionEditor {
     document
       .getElementById(MODAL_EDITOR_CLOSE_ID)
       ?.addEventListener('click', () => this.hide());
+    document
+      .getElementById(MODAL_EDITOR_CLOSE_ID)
+      ?.addEventListener('keydown', event => {
+        if (event.key === 'Enter') {
+          this.hide(); // Also call the hide function when Enter is pressed
+        }
+      });
     // Adds an ESC key shortcut to Blockly's shortcut registry.
     registerCloseModalEditorShortcut(this.hide.bind(this));
     // Handler for delete button. We only enable the delete button for writeable workspaces.
@@ -122,6 +130,13 @@ export default class FunctionEditor {
       document
         .getElementById(MODAL_EDITOR_DELETE_ID)
         ?.addEventListener('click', this.onDeletePressed.bind(this));
+      document
+        .getElementById(MODAL_EDITOR_DELETE_ID)
+        ?.addEventListener('keydown', event => {
+          if (event.key === 'Enter') {
+            this.onDeletePressed();
+          }
+        });
     }
 
     // Editor workspace toolbox procedure category callback
@@ -147,6 +162,7 @@ export default class FunctionEditor {
 
     const functionEditorTrashcan = new CdoTrashcan(this.editorWorkspace);
     functionEditorTrashcan.init();
+    initializeAdditionalWorkspace(this.editorWorkspace);
     // Set primary workspace to be active (until a function is shown).
     Blockly.common.setMainWorkspace(this.primaryWorkspace);
   }

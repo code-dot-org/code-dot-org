@@ -533,17 +533,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert deployment.name
   end
 
-  test 'auth - link lti_user_identity with lti_deployment' do
-    payload = get_valid_payload
-    jwt = create_jwt_and_stub(payload)
-    user = create_preexisting_user(payload)
-    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
-    assert_equal deployment.lti_user_identities.count, 0
-    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_equal deployment.lti_user_identities.count, 1
-    assert_equal deployment.lti_user_identities.first, user.lti_user_identities.first
-  end
-
   test 'auth - do not link lti_user_identity with lti_deployment if already linked' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
@@ -652,11 +641,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :bad_request
   end
 
-  test 'sync - should not sync when launching from wrong context' do
+  test 'sync - should redirect to homepage when context or nrps_url is missing' do
     user = create(:teacher, :with_lti_auth)
     sign_in user
-    LtiV1Controller.any_instance.expects(:render_sync_course_error).with('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
     get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: nil, rlid: 'qux', nrps_url: nil}
+    assert_response :redirect
+    assert_equal '/home', '/' + @response.redirect_url.split('/').last
   end
 
   test 'sync - should not sync and render sync course error when missing a param' do
@@ -853,61 +843,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_empty lti_course.lti_sections
     assert_response :internal_server_error
-  end
-
-  test 'integration - given valid inputs, creates a new integration if one does not exist' do
-    name = "Fake School"
-    client_id = "1234canvas"
-    lms = "canvas_cloud"
-    email = "fake@email.com"
-
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_response :ok
-
-    client_id = "5678schoology"
-    lms = "schoology"
-
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_response :ok
-  end
-
-  test 'integration - given missing inputs, does not create a new integration' do
-    name = "Fake School"
-    client_id = "1234canvas"
-    lms = "canvas_cloud"
-    email = "fake@email.com"
-
-    # missing client_id
-    post '/lti/v1/integrations', params: {name: name, lms: lms, email: email}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-
-    # missing lms
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: '', email: email}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-
-    # missing email
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-
-    # unsupported lms type
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: 'unsupported', email: email}
-    assert_equal I18n.t('lti.error.unsupported_lms_type'), flash[:alert]
-
-    # missing name
-    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-  end
-
-  test 'integration - if existing integration, does not create a new one' do
-    name = "Fake School"
-    client_id = "1234canvas"
-    lms = "canvas_cloud"
-    email = "fake@email.com"
-
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_template 'lti/v1/integration_status'
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_template 'lti/v1/integration_status'
   end
 
   test 'attempting to sync a section with no LTI course should return a 400' do

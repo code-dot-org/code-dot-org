@@ -81,7 +81,7 @@ class Ability
       environment.published || user.levelbuilder?
     end
 
-    can [:read, :show_by_keys], ProgrammingClass do |programming_class|
+    can [:read, :show_by_keys, :get_serialized], ProgrammingClass do |programming_class|
       can? :read, programming_class.programming_environment
     end
 
@@ -171,6 +171,7 @@ class Ability
 
       can :evaluate, :openai_evaluate
       can :evaluate_section, :openai_evaluate
+      can :match_teaching_profile, :openai_personalization
 
       # all signed in users can access the aichat_request and aichat_events endpoints
       # additional permission logic lives in the controllers themselves
@@ -318,20 +319,11 @@ class Ability
 
     can :read, Unit do |script, context_unit_group|
       unit_group = context_unit_group || script.original_unit_group
+      unit_group ||= script.get_professional_learning_course if script.old_professional_learning_course?
       if unit_group
         can?(:read, unit_group)
       else
-        if script.can_be_participant?(user) || script.can_be_instructor?(user)
-          if script.in_development?
-            user.levelbuilder?
-          elsif script.pilot?
-            script.has_pilot_access?(user)
-          else
-            true
-          end
-        else
-          false
-        end
+        user.levelbuilder?
       end
     end
 
@@ -515,18 +507,6 @@ class Ability
 
       can :use_unrestricted_javabuilder, :javabuilder_session do
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
-      end
-
-      can :index, AiTutorInteraction do
-        user.can_view_student_ai_chat_messages? || user.has_ai_tutor_access?
-      end
-
-      can :create, AiTutorInteraction do
-        user.has_ai_tutor_access?
-      end
-
-      can :chat_completion, :openai_chat do
-        user.has_ai_tutor_access?
       end
 
       can :find_toxicity, :aichat do

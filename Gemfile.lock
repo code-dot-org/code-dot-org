@@ -90,10 +90,13 @@ GIT
 
 PATH
   remote: .
-  glob: **/engines/marketing/marketing.gemspec
+  glob: **/engines/*/*.gemspec
   specs:
-    marketing (0.0.0)
-      contentful
+    cdo_contentful (0.1.0)
+      contentful (~> 2.18)
+      rails (~> 6.1.7)
+      zeitwerk (~> 2.6.7)
+    hoc_legacy (0.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -164,8 +167,8 @@ GEM
     activerecord (6.1.7.7)
       activemodel (= 6.1.7.7)
       activesupport (= 6.1.7.7)
-    activerecord-import (1.0.8)
-      activerecord (>= 3.2)
+    activerecord-import (1.3.0)
+      activerecord (>= 4.2)
     activestorage (6.1.7.7)
       actionpack (= 6.1.7.7)
       activejob (= 6.1.7.7)
@@ -185,9 +188,9 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     aes_key_wrap (1.1.0)
     afm (0.2.2)
-    annotate (3.1.1)
-      activerecord (>= 3.2, < 7.0)
-      rake (>= 10.4, < 14.0)
+    annotaterb (4.20.0)
+      activerecord (>= 6.0.0)
+      activesupport (>= 6.0.0)
     ansi (1.5.0)
     ast (2.4.2)
     async (1.32.1)
@@ -312,9 +315,9 @@ GEM
       fiber-annotation
       fiber-local
       json
-    contentful (2.17.1)
+    contentful (2.18.0)
       http (> 0.8, < 6.0)
-      multi_json (~> 1)
+      multi_json (~> 1.15)
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -548,6 +551,7 @@ GEM
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
+    localhost (1.5.0)
     logger (1.6.1)
     loofah (2.19.1)
       crass (~> 1.0.2)
@@ -589,7 +593,7 @@ GEM
       ruby-progressbar
     minitest-spec-context (0.0.5)
     minitest-stub-const (0.6)
-    mocha (1.1.0)
+    mocha (1.2.1)
       metaclass (~> 0.0.1)
     msgpack (1.7.0)
     multi_json (1.15.0)
@@ -659,6 +663,7 @@ GEM
       time
       uri
     open_uri_redirections (0.2.1)
+    openssl (3.3.1)
     orm_adapter (0.5.0)
     os (1.1.4)
     ostruct (0.6.0)
@@ -892,12 +897,13 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     state_machine (1.2.0)
-    statsig (1.33.2)
+    statsig (2.5.5)
       concurrent-ruby (~> 1.1)
       connection_pool (~> 2.4, >= 2.4.1)
       http (>= 4.4, < 6.0)
       ip3country (~> 0.2.1)
-      user_agent_parser (~> 2.15.0)
+      user_agent_parser (~> 2.18.0)
+      zlib (~> 3.1.0)
     stringex (2.5.2)
     stringio (3.1.5)
     strscan (3.1.0)
@@ -936,7 +942,7 @@ GEM
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)
     uri (1.0.3)
-    user_agent_parser (2.15.0)
+    user_agent_parser (2.18.0)
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
       public_suffix
@@ -963,7 +969,8 @@ GEM
     xxhash (0.4.0)
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
-    zeitwerk (2.6.7)
+    zeitwerk (2.6.18)
+    zlib (3.1.1)
 
 PLATFORMS
   ruby
@@ -974,10 +981,10 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.13)
   active_record_query_trace
   active_record_union
-  activerecord-import (~> 1.0.3)
+  activerecord-import (~> 1.3.0)
   acts_as_list
   addressable
-  annotate (~> 3.1.1)
+  annotaterb (~> 4.19)
   async (~> 1.32)
   auto_strip_attributes (~> 2.1)
   aws-google (~> 0.2.3)
@@ -1008,6 +1015,7 @@ DEPENDENCIES
   bootstrap-sass (~> 2.3.2.2)
   brakeman
   cancancan (~> 3.5.0)
+  cdo_contentful!
   cgi (~> 0.3.6)
   chronic (~> 0.10.2)
   cld
@@ -1043,6 +1051,7 @@ DEPENDENCIES
   haml-rails
   haml_lint
   highline (~> 3.1.0)
+  hoc_legacy!
   honeybadger (>= 4.5.6)
   http (~> 5.0)
   httparty
@@ -1057,11 +1066,11 @@ DEPENDENCIES
   jumphash
   jwt (~> 2.7.0)
   kaminari
+  localhost
   lograge!
   loofah (~> 2.19.1)
   mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
-  marketing!
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer
@@ -1071,7 +1080,7 @@ DEPENDENCIES
   minitest-reporters (~> 1.2.0.beta3)
   minitest-spec-context (~> 0.0.3)
   minitest-stub-const (~> 0.6)
-  mocha
+  mocha (~> 1.2.1)
   mutex_m
   mysql2 (>= 0.4.1)
   nakayoshi_fork
@@ -1088,6 +1097,7 @@ DEPENDENCIES
   omniauth-microsoft_v2_auth!
   omniauth-rails_csrf_protection (~> 1.0.2)
   open_uri_redirections
+  openssl (>= 3.3.1)
   os
   parallel
   parallel_tests
@@ -1147,7 +1157,7 @@ DEPENDENCIES
   spring-commands-testunit
   sprockets!
   sshkit
-  statsig (~> 1.33)
+  statsig (~> 2.5.5)
   stringex (~> 2.5.2)
   syslog
   thin
@@ -1166,6 +1176,7 @@ DEPENDENCIES
   webrick (~> 1.9)
   xxhash
   youtube-dl.rb
+  zeitwerk (~> 2.6.9)
 
 RUBY VERSION
    ruby 3.1.0p0

@@ -256,15 +256,8 @@ FactoryBot.define do
           authorized_teacher.save
         end
       end
-      factory :ai_tutor_access do
-        after(:create) do |ai_tutor_access|
-          ai_tutor_access.permission = UserPermission::AI_TUTOR_ACCESS
-          ai_tutor_access.save
-        end
-      end
       factory :ai_iteration_tools_user do
         after(:create) do |ai_iteration_tools_user|
-          ai_iteration_tools_user.permission = UserPermission::AI_TUTOR_ACCESS
           ai_iteration_tools_user.permission = UserPermission::LEVELBUILDER
           ai_iteration_tools_user.save
         end
@@ -1163,12 +1156,22 @@ FactoryBot.define do
     published_state {nil}
 
     trait :in_single_unit_course do
-      published_state {nil}
-      instruction_type {nil}
-      participant_audience {nil}
-      instructor_audience {nil}
-      after(:create) do |unit|
-        create(:single_unit_course, unit: unit)
+      transient do
+        published_state {nil}
+        instruction_type {nil}
+        participant_audience {nil}
+        instructor_audience {nil}
+        pilot_experiment {nil}
+      end
+      after(:create) do |unit, evaluator|
+        attributes = {
+          published_state: evaluator.published_state,
+          instruction_type: evaluator.instruction_type,
+          participant_audience: evaluator.participant_audience,
+          instructor_audience: evaluator.instructor_audience,
+          pilot_experiment: evaluator.pilot_experiment
+        }.compact
+        create(:single_unit_course, unit: unit, **attributes)
       end
     end
 
@@ -1539,6 +1542,13 @@ FactoryBot.define do
   factory :user_script do
     user {create(:student)}
     script {create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit}
+
+    after(:build) do |user_script|
+      unit_group = user_script.script.original_unit_group
+      if unit_group
+        user_script.unit_group = unit_group
+      end
+    end
   end
 
   factory :user_school_info do
@@ -2267,12 +2277,6 @@ FactoryBot.define do
     name {"foosbars"}
     email {"foobar@example.com"}
     receives_marketing {true}
-  end
-
-  factory :ai_tutor_interaction do
-    association :user
-    type {SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT]}
-    status {SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK]}
   end
 
   factory :aichat_event do

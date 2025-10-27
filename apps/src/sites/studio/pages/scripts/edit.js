@@ -72,7 +72,6 @@ export default function initPage(unitEditorData) {
         initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
         initialTopicTags={scriptData.topic_tags || []}
         initialContentArea={scriptData.content_area || ''}
-        unitFamilies={unitEditorData.script_families}
         isLevelbuilder={unitEditorData.is_levelbuilder}
         initialTts={scriptData.tts}
         hasCourse={unitEditorData.has_course}

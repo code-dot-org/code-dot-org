@@ -6,15 +6,12 @@ import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
-import ValidationResults from '@cdo/apps/lab2/views/components/Instructions/ValidationResults';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import NavigationArea from './NavigationArea';
 import PredictQuestion from './PredictQuestion';
 import PredictQuestionRunPrompt from './PredictQuestionRunPrompt';
 import PredictSummary from './PredictSummary';
-import ValidationButton from './ValidationButton';
 
 import moduleStyles from './instructions.module.scss';
 
@@ -41,16 +38,18 @@ export interface InstructionsProps {
   /** If the instructions panel should always have a dark background, regardless of theme */
   fixedDarkBackground?: boolean;
   /** Component to use for AI Tutor responses, if any. */
-  AiTutor2ResponseView?: React.ReactNode;
+  AiTutorResponseView?: React.ReactNode;
   overrideTheme?: Theme;
   /** If the lab requires the user to click run in order to continue.
    * Only applies to non-validated levels. */
   requireRun?: boolean;
   /** If the navigation area should be hidden. */
   hideNavigation?: boolean;
+  /** If the continue button should be hidden if disabled. */
+  hideContinueIfDisabled?: boolean;
 }
 
-interface ValidationSettings {
+export interface ValidationSettings {
   onValidate: () => void;
   onStopValidation: () => void;
   isValidating: boolean;
@@ -73,19 +72,16 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   bottomComponent,
   validationSettings,
   fixedDarkBackground,
-  AiTutor2ResponseView,
+  AiTutorResponseView,
   overrideTheme,
   hideNavigation = false,
+  hideContinueIfDisabled = false,
   ...feedbackProps
 }) => {
-  const validationResults = useAppSelector(
-    state => state.lab.validationState?.validationResults
-  );
   const {longInstructions, predictSettings, offerBrowserTts} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
-  const defaultTheme = useTheme();
-  const theme = overrideTheme || defaultTheme;
+  const {theme: defaultTheme} = useTheme();
 
   // Don't render anything if we don't have any instructions.
   if (longInstructions === undefined) {
@@ -106,10 +102,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         'instructions',
         className
       )}
-      data-theme={theme}
+      data-theme={overrideTheme || defaultTheme}
     >
       <div
         id="instructions-panel"
+        aria-live="polite"
         className={classNames(
           moduleStyles.item,
           vertical && moduleStyles.itemVertical
@@ -132,30 +129,13 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <TextToSpeech text={longInstructions} />
             </div>
           )}
-          {validationSettings && (
-            <ValidationButton
-              onValidate={validationSettings.onValidate}
-              onStopValidation={validationSettings.onStopValidation}
-              isValidating={validationSettings.isValidating}
-              isValidateDisabled={validationSettings.isValidateDisabled}
-            />
-          )}
           {bottomComponent && (
             <div className={moduleStyles.bottomComponent}>
               {bottomComponent}
             </div>
           )}
         </div>
-        {validationResults && (
-          <div className={moduleStyles.bubble}>
-            <div className={moduleStyles.textContent}>
-              <div className={moduleStyles.scrollingContent}>
-                <ValidationResults />
-              </div>
-            </div>
-          </div>
-        )}
-        {AiTutor2ResponseView && AiTutor2ResponseView}
+        {AiTutorResponseView && AiTutorResponseView}
         {isPredictLevel && (
           <>
             <InstructorsOnly>
@@ -174,8 +154,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         {!hideNavigation && (
           <NavigationArea
             {...feedbackProps}
+            overrideTheme={overrideTheme}
             levelProperties={levelProperties}
             handleInstructionsTextClick={handleInstructionsTextClick}
+            hideContinueIfDisabled={hideContinueIfDisabled}
+            styleAsBubble
           />
         )}
       </div>

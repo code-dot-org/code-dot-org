@@ -13,6 +13,8 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -24,6 +26,7 @@ import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
+
 import './styles/codebridge.scss';
 
 const RUN_BUTTON_ID = '#uitest-codebridge-run';
@@ -39,8 +42,12 @@ type CodebridgeProps = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  AiTutor2ResponseView?: React.ReactNode;
-  aiTutor2Context?: string;
+  hiddenContextCallback?: () => Promise<string>;
+  aiTutorMultimodalEnabled?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
+  aiTutorContextHelper?: AiTutorContextHelper<object>;
+  aiTutorSystemPromptName?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 };
 
 export const Codebridge = React.memo(
@@ -53,8 +60,12 @@ export const Codebridge = React.memo(
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
-    AiTutor2ResponseView,
-    aiTutor2Context,
+    hiddenContextCallback,
+    aiTutorMultimodalEnabled,
+    aiTutorChatButtonData,
+    aiTutorContextHelper,
+    aiTutorSystemPromptName,
+    aiTutorResponseSchemaSettings,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -179,9 +190,13 @@ export const Codebridge = React.memo(
           sendConsoleInput,
           levelProperties,
           projectPickerSettings,
-          AiTutor2ResponseView,
-          aiTutor2Context,
+          hiddenContextCallback,
           onImageFlagged,
+          aiTutorMultimodalEnabled,
+          aiTutorChatButtonData,
+          aiTutorContextHelper,
+          aiTutorSystemPromptName,
+          aiTutorResponseSchemaSettings,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

@@ -387,3 +387,233 @@ GroupOfSizesOfActionDropdown.args = {
     },
   ],
 };
+
+export const GroupOfMenuPlacementOptions = MultipleTemplate.bind({});
+GroupOfMenuPlacementOptions.args = {
+  components: [
+    {
+      name: 'menu-placement-left',
+      triggerButtonProps: {
+        color: 'purple',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      },
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+      ],
+      labelText: 'Placement Left',
+      size: 'm',
+      menuPlacement: 'left',
+    },
+    {
+      name: 'menu-placement-right',
+      triggerButtonProps: {
+        color: 'purple',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      },
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+      ],
+      labelText: 'Placement Right',
+      size: 'm',
+      menuPlacement: 'right',
+    },
+  ],
+};
+
+export const GroupOfMenuVerticalPlacementOptions = MultipleTemplate.bind({});
+GroupOfMenuVerticalPlacementOptions.args = {
+  components: [
+    {
+      name: 'menu-vertical-top',
+      triggerButtonProps: {
+        color: 'purple',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      },
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+      ],
+      labelText: 'Vertical Top',
+      size: 'm',
+      menuVerticalPlacement: 'top',
+    },
+    {
+      name: 'menu-vertical-bottom',
+      triggerButtonProps: {
+        color: 'purple',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      },
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+      ],
+      labelText: 'Vertical Bottom',
+      size: 'm',
+      menuVerticalPlacement: 'bottom',
+    },
+  ],
+};
+
+export const GroupOfAllPlacements = MultipleTemplate.bind({});
+GroupOfAllPlacements.args = {
+  components: [
+    {
+      name: 'placement-left-bottom',
+      triggerButtonProps: {
+        color: 'purple',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      },
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+      ],
+      labelText: 'Left + Bottom',
+      size: 'm',
+      menuPlacement: 'left',
+      menuVerticalPlacement: 'bottom',
+    },
+    {
+      name: 'placement-right-bottom',
+      triggerButtonProps: {
+        color: 'purple',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      },
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+      ],
+      labelText: 'Right + Bottom',
+      size: 'm',
+      menuPlacement: 'right',
+      menuVerticalPlacement: 'bottom',
+    },
+    {
+      name: 'placement-left-top',
+      triggerButtonProps: {
+        color: 'purple',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      },
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+      ],
+      labelText: 'Left + Top',
+      size: 'm',
+      menuPlacement: 'left',
+      menuVerticalPlacement: 'top',
+    },
+    {
+      name: 'placement-right-top',
+      triggerButtonProps: {
+        color: 'purple',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      },
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+      ],
+      labelText: 'Right + Top',
+      size: 'm',
+      menuPlacement: 'right',
+      menuVerticalPlacement: 'top',
+    },
+  ],
+};

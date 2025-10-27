@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q8_2025-pilot_v2-2025'
+
+question 'How does AI bias emerge from training data?'
+
+wrong 'AI develops its own opinions based on human-like reasoning.'
+wrong 'AI is programmed to intentionally favor certain groups over others.'
+right 'AI learns from patterns in training data, which may reflect societal biases.'
+wrong 'AI randomly assigns characteristics to different groups.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Understanding Bias
+MARKDOWN

@@ -6,6 +6,8 @@ import {
 import classNames from 'classnames';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {AiDiffNotification, IconColor} from './types';
@@ -35,13 +37,11 @@ const getRelativeTimeString = (date: Date): string => {
 };
 
 interface NotificationProps {
-  key: string;
   notification: AiDiffNotification | null;
   aiPromptClick?: (label: string, prompt: string) => void;
 }
 
 const Notification: React.FC<NotificationProps> = ({
-  key,
   notification,
   aiPromptClick,
 }) => {
@@ -60,7 +60,7 @@ const Notification: React.FC<NotificationProps> = ({
   };
 
   return (
-    <div className={styles.notification} key={key}>
+    <div className={styles.notification}>
       <FontAwesomeV6Icon
         iconName={notificationOrPlaceholder.iconName}
         iconStyle="solid"
@@ -74,41 +74,56 @@ const Notification: React.FC<NotificationProps> = ({
         data-testid={'icon-' + notificationOrPlaceholder.iconName}
       />
       <div className={styles.textAndLinks}>
-        <div
+        <BodyThreeText
+          noMargin
           className={classNames(
             styles.text,
             isLoading && skeletonizeContent.skeletonizeContent
           )}
         >
-          <BodyThreeText noMargin>
-            <StrongText>
-              {notificationOrPlaceholder.title}
-              {': '}
-            </StrongText>
-            {notificationOrPlaceholder.description}
-          </BodyThreeText>
-        </div>
+          <StrongText>
+            {notificationOrPlaceholder.title}
+            {': '}
+          </StrongText>
+          {notificationOrPlaceholder.description}
+        </BodyThreeText>
         <ol className={styles.links}>
           {notificationOrPlaceholder.hrefLinks?.length > 0 &&
-            notificationOrPlaceholder.hrefLinks.map(link => (
-              <li key={link.url}>
+            notificationOrPlaceholder.hrefLinks.map((link, index) => (
+              <li key={'url-' + index} className={styles.hrefLink}>
                 <a
                   href={link.url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className={styles.hrefLink}
+                  onClick={() => {
+                    analyticsReporter.sendEvent(
+                      EVENTS.AI_DIFF_NOTIFICATION_URL_CLICKED,
+                      {
+                        notificationId: notificationOrPlaceholder.id,
+                        externalId: notificationOrPlaceholder.externalId,
+                      }
+                    );
+                  }}
                 >
                   {link.text}
                 </a>
               </li>
             ))}
           {notificationOrPlaceholder.aiPrompts?.length > 0 &&
-            notificationOrPlaceholder.aiPrompts.map(prompt => (
-              <li key={prompt.prompt}>
+            notificationOrPlaceholder.aiPrompts.map((prompt, index) => (
+              <li key={'ai-' + index}>
                 <button
                   onClick={() => {
                     if (aiPromptClick) {
                       aiPromptClick(prompt.text, prompt.prompt);
+
+                      analyticsReporter.sendEvent(
+                        EVENTS.AI_DIFF_NOTIFICATION_AI_PROMPT_CLICKED,
+                        {
+                          notificationId: notificationOrPlaceholder.id,
+                          externalId: notificationOrPlaceholder.externalId,
+                        }
+                      );
                     }
                   }}
                   className={styles.aiButton}
@@ -131,7 +146,7 @@ const Notification: React.FC<NotificationProps> = ({
           notificationOrPlaceholder.publishedAt
         ).toLocaleUpperCase()}
       </BodyThreeText>
-      {notificationOrPlaceholder.readAt === null && notification !== null ? (
+      {!notificationOrPlaceholder.readAt && notification !== null ? (
         <FontAwesomeV6Icon
           iconName="circle"
           iconStyle="solid"

@@ -9,13 +9,22 @@ import aichatI18n from '@cdo/apps/aichat/locale';
 import styles from './staged-files-preview.module.scss';
 
 const FilePreview: React.FC<{
-  type: 'pdf' | 'image';
+  type: 'pdf' | 'image' | 'text';
   filename: string;
-  url: string;
+  fileDetail?: string | number;
+  url?: string;
   isUploading?: boolean;
   onRemove?: () => void;
   onLoadError?: () => void;
-}> = ({type, filename, url, isUploading, onRemove, onLoadError}) => {
+}> = ({
+  type,
+  filename,
+  fileDetail,
+  url,
+  isUploading,
+  onRemove,
+  onLoadError,
+}) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
@@ -46,9 +55,15 @@ const FilePreview: React.FC<{
       imageElement.removeEventListener('error', handleError);
     };
   }, [url, onLoadError]);
+  const previewType = type === 'image' ? 'image' : 'file';
+
+  const getFileExtension = (filename: string): string => {
+    const extension = filename.split('.').pop();
+    return filename.includes('.') && extension ? extension : 'TEXT';
+  };
 
   return (
-    <div className={styles[`preview-${type}`]} title={filename}>
+    <div className={styles[`preview-${previewType}`]} title={filename}>
       {onRemove ? (
         isUploading || (type === 'image' && !imageLoaded) ? (
           <FontAwesomeV6Icon
@@ -96,11 +111,28 @@ const FilePreview: React.FC<{
       ) : (
         <>
           <div className={styles.fileIcon}>
-            <FontAwesomeV6Icon iconName="file" />
+            <FontAwesomeV6Icon
+              iconName={
+                {
+                  pdf: 'file-pdf',
+                  text: 'file-code',
+                }[type] || 'file'
+              }
+            />
           </div>
           <div className={styles.filenameContainer}>
             <StrongText>{filename}</StrongText>
-            <span>PDF</span>
+            <span className={styles.fileDetail}>
+              {[
+                type === 'pdf' ? 'PDF' : null,
+                type === 'text'
+                  ? getFileExtension(filename).toUpperCase()
+                  : null,
+                fileDetail ? fileDetail : null,
+              ]
+                .filter(Boolean)
+                .join(' ')}
+            </span>
           </div>
         </>
       )}

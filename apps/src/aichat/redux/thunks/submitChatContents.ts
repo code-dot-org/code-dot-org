@@ -3,6 +3,7 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 import {
   clearChatMessagePending,
   clearStagedFiles,
+  clearUserAddedSelectionContext,
   setChatMessagePending,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -17,6 +18,7 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
+import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
   isCompletedChatMessage,
@@ -26,6 +28,7 @@ import {
   ModelParameters,
   AiChatClientType,
   AnalyticsProperties,
+  UserAddedSelectionContextItem,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
@@ -46,6 +49,8 @@ export const submitChatContents = createAsyncThunk(
       hiddenContext?: string;
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
+      userAddedSelectionContext?: UserAddedSelectionContextItem[];
+      responseCallback?: (response: string) => string;
     },
     thunkAPI
   ) => {
@@ -59,10 +64,14 @@ export const submitChatContents = createAsyncThunk(
       modelParameters,
       clientType,
       analyticsProperties,
+      userAddedSelectionContext,
+      responseCallback,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
     thunkAPI.dispatch(clearStagedFiles());
+    // Clear any user added context if present.
+    thunkAPI.dispatch(clearUserAddedSelectionContext());
 
     const aichatContext: AichatContext = {
       clientType,
@@ -70,13 +79,30 @@ export const submitChatContents = createAsyncThunk(
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
+
+    // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
+    let chatMessageText = text;
+    let chatMessageDisplayText;
+
+    // If we have userAddedSelectionContext, display text and text to send to the model will be different.
+    if (userAddedSelectionContext?.length) {
+      // Add the user added selections to the text to send to the model.
+      chatMessageText +=
+        '\n\n' +
+        formatUserAddedSelectionContextForPrompt(userAddedSelectionContext);
+      // And use the original message for the display.
+      chatMessageDisplayText = text;
+    }
+
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: text,
+      chatMessageText,
+      chatMessageDisplayText,
       hiddenContext,
       assets,
+      userAddedSelectionContext,
       timestamp: Date.now(),
     };
     dispatch(setChatMessagePending(newUserMessage));
@@ -131,6 +157,9 @@ export const submitChatContents = createAsyncThunk(
     // A teacher will view that the level is now in progress.
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
+      if (responseCallback && message.role === Role.ASSISTANT) {
+        message.chatMessageText = responseCallback(message.chatMessageText);
+      }
       dispatch(addChatEvent(message));
     });
   }

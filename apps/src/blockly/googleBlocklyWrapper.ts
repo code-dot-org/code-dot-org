@@ -18,6 +18,7 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
@@ -51,7 +52,10 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
-import {initializeKeyboardNavigation} from './addons/cdoKeyboardNavigation';
+import {
+  initializeKeyboardNavigation,
+  preInjectRegistrations,
+} from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -127,13 +131,13 @@ import {
   setThemeAndRenderBlocks,
 } from './utils';
 
-const options = {
+const options: {contextMenu: true; shortcut: true} = {
   contextMenu: true,
   shortcut: true,
 };
 
-const plugin = new CrossTabCopyPaste();
-plugin.init(options);
+const crossTabCopyPastePlugin = new CrossTabCopyPaste();
+crossTabCopyPastePlugin.init(options);
 
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
@@ -203,6 +207,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
+  preInjectRegistrations();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
@@ -778,6 +783,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       Blockly.Xml.domToText(xml),
       includeHiddenDefinitions
     );
+
     // Loop through all the parent blocks and remove vertical translation value
     // This makes the output more condensed and readable, while preserving
     // horizontal translation values for RTL rendering.
@@ -915,9 +921,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options.enableKeyboardNavigation ||
       experiments.isEnabledAllowingQueryString(
         experiments.BLOCKLY_KEYBOARD_NAVIGATION
-      )
+      ) ||
+      DCDO.get('blockly-keyboard-navigation', false)
     ) {
-      initializeKeyboardNavigation(workspace);
+      initializeKeyboardNavigation(
+        workspace,
+        blocklyWrapper.isDarkTheme || false
+      );
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an

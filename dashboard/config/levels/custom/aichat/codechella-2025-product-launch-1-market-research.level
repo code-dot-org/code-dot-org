@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Marketing Research Chat\r\n\r\nUse AI Chat to do some market research for your product or app. \r\n\r\nFocus on ideas that connect to your assigned role (e.g., name + slogan, visuals, script, or jingle).\r\n\r\n### Do This:\r\n1. Use AI Chat to do some market research for your product or app.\r\n    - What do students want or need in a product like yours?\r\n    - What problems are you trying to solve?\r\n    - Are there similar products already out there?\r\n    - Are there images or documents you can provide to AI?\r\n2. In your Activity Guide under Stage 1: Market Research, write:\r\n\t- The question or prompt you gave to AI\r\n\t- A summary of what the AI told you\r\n3. Want better results? Try asking AI about a specific audience—like middle schoolers, students with busy schedules, or students who use tech often.",
+    "long_instructions": "## Marketing Research Chat\r\n\r\nHave one person in your group make a copy of the **[template](https://docs.google.com/presentation/d/1oKz0lKygs6NsKqrO1HSiH2JRAWXtLT4uQEw8F18mwY0/template/preview).**  \r\n\r\nUse AI Chat to do some market research for your product or app. \r\n\r\nFocus on ideas that connect to your assigned role (e.g., name + slogan, visuals, script, or jingle).\r\n\r\n### Do This:\r\n1. Use AI Chat to do some market research for your product or app.\r\n    - What do people in your target audience want or need in a product like this?\r\n    - What everyday challenges or frustrations could this product solve?\r\n    - What existing solutions already try to meet these needs? How does yours stand out?\r\n    - Are there images, examples, or documents you can share with AI to spark better ideas?\r\n2. Want better results? Try asking AI about a specific audience—for example:\r\n   - busy professionals working from home\r\n   - parents balancing work and family life\r\n   - adults trying to simplify their daily routines",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "You are helping a creative team explore market research for a new product designed to support adults working from home. Provide clear, concise insights about user needs, challenges, and existing solutions.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -44,8 +44,11 @@
     },
     "bubble_choice_description": "Use AI Chat to do some market research for your product or app. ",
     "display_name": "Marketing Research Chat",
-    "thumbnail_url": "https://images.code.org/0c2e3bb0e1a6a1b4ee36a79baa8f9df5-analytics.png"
+    "thumbnail_url": "https://images.code.org/0c2e3bb0e1a6a1b4ee36a79baa8f9df5-analytics.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T15:53:13.194+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-level1a_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-level1a_2024\"},{\"changed_at\":\"2025-05-08 15:54:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T15:53:13.194+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-level1a_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-level1a_2024\"},{\"changed_at\":\"2025-05-08 15:54:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 18:57:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 20:40:51 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 20:41:26 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 20:00:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 20:02:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

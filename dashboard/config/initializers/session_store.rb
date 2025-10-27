@@ -5,7 +5,7 @@ require_relative '../../lib/middlewares/redis_session_store'
 session_cookie_key = environment_specific_cookie_name('_learn_session')
 Dashboard::Application.config.session_store Middlewares::RedisSessionStore,
   key: session_cookie_key,
-  servers: [CDO.session_store_server || 'redis://localhost:6379/0/session'],
+  servers: ["#{CDO.redis_url}/session"],
   secure: !CDO.no_https_store && (!Rails.env.development? || CDO.https_development),
   domain: :all,
 

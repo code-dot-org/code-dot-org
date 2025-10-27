@@ -1,0 +1,19 @@
+name 'programming-fundamentals-postassessment-question6_pilot-2025'
+title 'Programming Fundamentals Post-Assessment: Question 6'
+
+right 'Breaking a problem into steps (decomposition) and focusing only on necessary details (abstraction)'
+wrong 'Using one function to call another function'
+wrong 'Writing code in multiple languages'
+wrong 'Storing data in an organized way'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following best describes **decomposition** and **abstraction** working together?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Computational Thinking
+
+Lesson 11: Decomposition
+MARKDOWN

@@ -64,6 +64,8 @@ export const SortedAlphabetically: Story = {
     // Check that blocks are sorted alphabetically by title
     titles.forEach(title => {
       expect(canvas.getByText(title)).toBeInTheDocument();
+      // Check that images are rendered
+      expect(canvas.getByAltText(title)).toBeInTheDocument();
     });
     const renderedTitles = canvas
       .queryAllByRole('heading', {level: 3})
@@ -71,9 +73,6 @@ export const SortedAlphabetically: Story = {
       .filter(Boolean);
     const sortedTitles = [...renderedTitles].sort((a, b) => a.localeCompare(b));
     expect(renderedTitles).toEqual(sortedTitles);
-
-    // Check that images are rendered
-    expect(canvas.getAllByRole('presentation').length).toBe(titles.length);
 
     // Check that buttons are rendered
     primaryButtons.forEach(button => {
