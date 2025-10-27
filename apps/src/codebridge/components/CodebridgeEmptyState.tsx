@@ -27,7 +27,12 @@ export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
       className={classNames(styles.codebridgeEmptyStateContainer, className)}
     >
       {imageProps && (
-        <Image className={styles.emptyStateImage} alt="" {...imageProps} />
+        <Image
+          className={styles.emptyStateImage}
+          role="presentation"
+          alt=""
+          {...imageProps}
+        />
       )}
       <div className={styles.textContainer}>
         {title && (
