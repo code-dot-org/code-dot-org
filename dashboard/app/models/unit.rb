@@ -42,7 +42,7 @@ require_relative 'application_record'
 require_relative 'levels/text_match'
 require_relative 'levels/free_response'
 require_relative '../../lib/script_constants'
-require_relative 'concerns/unit/text_to_speech'
+require_relative 'concerns/unit_concerns/text_to_speech'
 require_relative 'concerns/serialized_to_file_validation'
 
 # A sequence of Levels
