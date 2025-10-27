@@ -161,7 +161,7 @@ export const SectionList: React.FC<SectionListProps> = ({
     : sortableSectionIds;
 
   return (
-    <div id="ui-test-section-list">
+    <div>
       {sectionsAreLoaded ? (
         <DndContext
           sensors={sensors}
@@ -173,7 +173,7 @@ export const SectionList: React.FC<SectionListProps> = ({
             items={sortableSectionIds}
             strategy={verticalListSortingStrategy}
           >
-            <ol className={styles.sectionList}>
+            <ol id="ui-test-section-list" className={styles.sectionList}>
               {sectionIdsToShow.map(id =>
                 sections[id] ? (
                   <SectionCard
