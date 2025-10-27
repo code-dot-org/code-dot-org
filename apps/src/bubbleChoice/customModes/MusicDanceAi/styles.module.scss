@@ -1,0 +1,40 @@
+@import '../../../mixins.scss';
+@import 'color.scss';
+
+.container {
+  display: flex;
+  background-color: var(--background-neutral-secondary);
+  padding: 4px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.button {
+  @include remove-button-styles;
+  padding: 4px;
+  flex: 1;
+
+  > p {
+    margin: 0;
+  }
+
+  &.selected {
+    background-color: var(--background-neutral-primary-inverse);
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 4px;
+
+    > p {
+      color: var(--text-neutral-primary-inverse);
+    }
+  }
+
+  &.locked {
+    cursor: not-allowed;
+    > p {
+      color: var(--text-neutral-disabled);
+      > i {
+        margin-right: 8px;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
+import PersonalizationProgressBar from '@cdo/apps/aiDifferentiation/personalization/PersonalizationProgressBar';
 import {matchTeachingProfile} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import i18n from '@cdo/locale';
 
@@ -219,46 +220,58 @@ const PersonalizationCollectorContainer: React.FC = () => {
     return TEACHING_STYLES.find(style => style.name === styleName);
   };
 
-  return (
-    <div className={style.carouselContainer}>
-      {isLoading ? (
-        <div>Loading...</div>
-      ) : showResults ? (
-        <PersonalizationResults
-          teachingStyle={
-            matchedTeachingProfile
-              ? findTeachingStyle(matchedTeachingProfile) ?? TEACHING_STYLES[0]
-              : TEACHING_STYLES[0]
-          }
-        />
-      ) : (
-        <>
-          <PersonalizationQuestion questionNumber={questionsNumber} />
-          <div className={style.answerContainer}>{determineAnswerType()}</div>
+  const showProgressBar = !isLoading && !showResults;
 
-          <div className={style.navigationButtons}>
-            <Button
-              id={'back-button'}
-              text={i18n.back()}
-              type="secondary"
-              color="gray"
-              size="m"
-              onClick={() => onCarouselPress(BACK)}
-              iconLeft={{iconName: 'angle-left'}}
-            />
-            <Button
-              id={'next-button'}
-              text={isSaving ? i18n.saving() : i18n.next()}
-              type="primary"
-              size="m"
-              onClick={() => onCarouselPress(NEXT)}
-              disabled={isSaving}
-              iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
-            />
-          </div>
-        </>
+  return (
+    <>
+      {showProgressBar && (
+        <PersonalizationProgressBar
+          currentQuestionNumber={questionsNumber + 1}
+          totalQuestionsNumber={PERSONALIZATION_PROMPTS.length}
+        />
       )}
-    </div>
+
+      <div className={style.carouselContainer}>
+        {isLoading ? (
+          <div>Loading...</div>
+        ) : showResults ? (
+          <PersonalizationResults
+            teachingStyle={
+              matchedTeachingProfile
+                ? findTeachingStyle(matchedTeachingProfile) ??
+                  TEACHING_STYLES[0]
+                : TEACHING_STYLES[0]
+            }
+          />
+        ) : (
+          <>
+            <PersonalizationQuestion questionNumber={questionsNumber} />
+            <div className={style.answerContainer}>{determineAnswerType()}</div>
+
+            <div className={style.navigationButtons}>
+              <Button
+                id={'back-button'}
+                text={i18n.back()}
+                type="secondary"
+                color="gray"
+                size="m"
+                onClick={() => onCarouselPress(BACK)}
+                iconLeft={{iconName: 'angle-left'}}
+              />
+              <Button
+                id={'next-button'}
+                text={isSaving ? i18n.saving() : i18n.next()}
+                type="primary"
+                size="m"
+                onClick={() => onCarouselPress(NEXT)}
+                disabled={isSaving}
+                iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
+              />
+            </div>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 
