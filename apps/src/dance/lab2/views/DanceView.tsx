@@ -37,6 +37,7 @@ import {
   loadSongs,
   reducers,
   setHasEdited,
+  setHasPlayedFourMeasures,
   setHasRun,
   setIsRunning,
   setRunIsStarting,
@@ -61,7 +62,6 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
-import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -78,12 +78,12 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import loadingGif from '@cdo/static/dance/DancePartyLoading.gif';
 
-import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 import danceI18n from '../locale';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
 import DanceValidator from './DanceValidator';
+import GenerateDance from './GenerateDance';
 import GenerateDancer from './GenerateDancer';
 
 import moduleStyles from './dance-view.module.scss';
@@ -113,19 +113,21 @@ const DanceView: React.FunctionComponent<{
     state => state.dance.currentSongMetadata
   );
   const hasRun = useAppSelector(state => state.dance.hasRun);
+  const hasPlayedFourMeasures = useAppSelector(
+    state => state.dance.hasPlayedFourMeasures
+  );
   const hasEdited = useAppSelector(state => state.dance.hasEdited);
   const isLoading = useAppSelector(state => state.dance.isLoading);
   const signedIn = useAppSelector(state => state.currentUser.signInState);
   const scriptName = useAppSelector(state => state.progress.scriptName);
 
-  const {currentSources, updateSources, showStartOverDialog} =
+  const {currentSources, updateSources, showStartOverDialog, startOver} =
     useSources<DanceProjectSources>();
 
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<WorkspaceSvg | null>(null);
   const musicProjectPlayer = useRef<ProjectPlayer | null>(null);
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
-  const [generatedAiDance, setGeneratedAiDance] = useState(false);
 
   const guideMode = levelProperties.guideMode;
   const usingMusicProject =
@@ -264,8 +266,13 @@ const DanceView: React.FunctionComponent<{
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
     dispatch(setIsRunning(false));
+    dispatch(setHasPlayedFourMeasures(false));
     programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
   }, [programExecutor, dispatch]);
+
+  const onPlayedFourMeasures = useCallback(() => {
+    dispatch(setHasPlayedFourMeasures(true));
+  }, [dispatch]);
 
   const onPuzzleComplete = useCallback(
     (result: boolean, message: string) => {
@@ -326,6 +333,7 @@ const DanceView: React.FunctionComponent<{
   useEffect(() => {
     dispatch(setHasRun(false));
     dispatch(setHasEdited(false));
+    dispatch(setHasPlayedFourMeasures(false));
   }, [levelProperties.id, dispatch]);
 
   // Load or update song manifest when level properties change.
@@ -456,7 +464,10 @@ const DanceView: React.FunctionComponent<{
       onEventsChanged,
       playSound: musicProjectPlayer.current
         ? (_url, callback) => {
-            musicProjectPlayer.current?.play(resetProgram);
+            musicProjectPlayer.current?.play(
+              resetProgram,
+              onPlayedFourMeasures
+            );
             callback(true);
           }
         : undefined,
@@ -480,33 +491,7 @@ const DanceView: React.FunctionComponent<{
     resetProgram,
     onPuzzleComplete,
     readonlyWorkspace,
-  ]);
-
-  const generateAiDance = useCallback(() => {
-    if (
-      !usingMusicProject ||
-      !musicProjectPlayer.current ||
-      !loadedMusicProject
-    ) {
-      return;
-    }
-
-    setGeneratedAiDance(false);
-    const resultBlockly = buildDanceBlockly(
-      musicProjectPlayer.current.getEventMeasures(),
-      levelProperties.sharedBlocks || []
-    );
-    updateSources({
-      ...currentSources,
-      source: resultBlockly,
-    });
-    setGeneratedAiDance(true);
-  }, [
-    currentSources,
-    updateSources,
-    loadedMusicProject,
-    levelProperties.sharedBlocks,
-    usingMusicProject,
+    onPlayedFourMeasures,
   ]);
 
   // Create dance validator.
@@ -623,28 +608,29 @@ const DanceView: React.FunctionComponent<{
             width="narrow"
           />
         )}
-        {guideMode === 'aiCodeGenerate' && (
-          <Guide id="generate-panel" width="narrow">
-            {
-              <>
-                <div>
-                  {generatedAiDance
-                    ? "Let's dance!"
-                    : "Now, let's generate a dance sequence to go with your song!"}
-                </div>
-                <Button
-                  ariaLabel={'Generate dance'}
-                  text={generatedAiDance ? 'Generate again!' : 'Generate dance'}
-                  type="primary"
-                  color="black"
-                  size="s"
-                  iconLeft={{iconName: 'sparkles'}}
-                  onClick={generateAiDance}
-                />
-              </>
-            }
-          </Guide>
-        )}
+        {guideMode === 'aiCodeGenerate' &&
+          usingMusicProject &&
+          musicProjectPlayer.current &&
+          loadedMusicProject && (
+            <GenerateDance
+              levelProperties={levelProperties}
+              isRunning={isRunning}
+              hasEdited={hasEdited}
+              hasPlayedFourMeasures={hasPlayedFourMeasures}
+              measures={musicProjectPlayer.current.getEventMeasures()}
+              blockDefinitions={levelProperties.sharedBlocks || []}
+              blockCount={workspace.current?.getAllBlocks().length || 0}
+              runProgram={runProgram}
+              resetProgram={resetProgram}
+              updateSources={resultBlockly => {
+                updateSources({
+                  ...currentSources,
+                  source: resultBlockly,
+                });
+              }}
+              startOver={startOver}
+            />
+          )}
       </div>
     </div>
   );

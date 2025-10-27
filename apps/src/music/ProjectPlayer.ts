@@ -61,21 +61,29 @@ class ProjectPlayer {
     await this.player.preloadSounds(playbackEvents);
   }
 
-  play(onEnded?: () => void) {
+  play(onEnded?: () => void, onPlayedFourMeasures?: () => void) {
     if (this.currentMetadata === null) {
       throw new Error('No project loaded!');
     }
     const {playbackEvents, lastMeasure} = this.currentMetadata;
     this.player.playSong(playbackEvents);
 
-    // Stop the song after the last measure.
     this.stopIntervalId = window.setInterval(() => {
-      if (
-        this.stopIntervalId &&
-        this.player.getCurrentPlayheadPosition() >= lastMeasure
-      ) {
-        onEnded?.();
-        this.stop();
+      if (this.stopIntervalId) {
+        const currentPlayheadPosition =
+          this.player.getCurrentPlayheadPosition();
+
+        // Stop the song after the last measure.
+        if (currentPlayheadPosition >= lastMeasure) {
+          onEnded?.();
+          this.stop();
+        }
+
+        // Optionally notify the client after 4 measures.
+        // (Or the end if the song is shorter than 4 measures.)
+        if (currentPlayheadPosition >= Math.min(4, lastMeasure)) {
+          onPlayedFourMeasures?.();
+        }
       }
     }, (60 / this.player.getBPM()) * 1000);
   }

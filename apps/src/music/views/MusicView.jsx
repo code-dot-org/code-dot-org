@@ -520,7 +520,7 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
-  clearCode = () => {
+  clearCode = maintainPackId => {
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
     const isEditingExemplar = getAppOptionsEditingExemplar();
@@ -531,8 +531,9 @@ class UnconnectedMusicView extends React.Component {
       packId = packId || DEFAULT_PACK;
     }
 
-    // Clear the pack, unless it came from the level data itself.
-    if (!packId) {
+    // Clear the pack, unless it came from the level data itself, or we are
+    // explicitly told to leave it intact.
+    if (!packId && !maintainPackId) {
       this.props.setPackId(null);
       this.library.setCurrentPackId(null);
     }

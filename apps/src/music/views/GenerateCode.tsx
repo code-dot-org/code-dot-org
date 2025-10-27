@@ -35,7 +35,8 @@ interface GenerateCodeProps {
   levelProperties: LevelProperties;
   setPlaying: (play: boolean) => void;
   hasEdited: boolean;
-  setToolboxVisibility: (visible: boolean) => void;
+  blockCount: number;
+  clearCode: (maintainPackId?: boolean) => void;
 }
 
 const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
@@ -44,7 +45,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   levelProperties,
   setPlaying,
   hasEdited,
-  setToolboxVisibility,
+  blockCount,
+  clearCode,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -54,7 +56,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const currentPlayheadPosition = useAppSelector(
     state => state.music.currentPlayheadPosition
   );
-  const lastMeasure = useAppSelector(state => state.music.lastMeasure);
 
   const useCache = appConfig.getValue('ai-generate-cache') === 'true';
   const showFullContext =
@@ -87,10 +88,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     // If there is already generated music when we begin, presumably
     // because the user is returning to a level they've previously worked
     // on, then skip AI generation.
-    if (aiGenerateState === 'none' && lastMeasure > 1) {
+    if (aiGenerateState === 'none' && blockCount > 1) {
       dispatch(setAiGenerateState('edited'));
     }
-  }, [aiGenerateState, dispatch, lastMeasure]);
+  }, [aiGenerateState, blockCount, dispatch]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     dispatch(setAiGenerateState('none'));
@@ -250,8 +251,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               color="black"
               size="s"
               onClick={() => {
-                dispatch(setAiGenerateState('none'));
                 setPlaying(false);
+                clearCode(true);
+                dispatch(setAiGenerateState('none'));
               }}
               className={styles.buttonWide}
             />
