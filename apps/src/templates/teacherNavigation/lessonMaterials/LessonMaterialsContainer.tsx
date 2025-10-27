@@ -49,6 +49,13 @@ interface LessonMaterialsData {
   versionYear?: number;
 }
 
+interface LessonSummaryInfo {
+  learning_objective: string;
+  lesson_beats: string[];
+  misconceptions: string[];
+  tips: string[];
+}
+
 const lessonMaterialsApiCall = (unitId: number) =>
   HttpClient.fetchJson<LessonMaterialsData>(
     `/dashboardapi/lesson_materials/${unitId}`
@@ -99,6 +106,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [lessonMaterials, setLessonMaterials] =
     useState<LessonMaterialsData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [aiTALessonSummaryInfo, setAITALessonSummaryInfo] =
+    useState<LessonSummaryInfo | null>(null);
   const [showTranscriptDialog, setShowTranscriptDialog] = useState(false);
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
@@ -213,11 +222,11 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
-  React.useMemo(() => {
-    HttpClient.fetchJson<LessonMaterialsData>(
+  React.useEffect(() => {
+    HttpClient.fetchJson<LessonSummaryInfo>(
       `/ai_lesson_summaries/show?user_id=${userId}&lesson_id=${selectedLesson?.id}`
     )
-      .then(response => console.log(`Response: ${response}`))
+      .then(response => setAITALessonSummaryInfo(response.value))
       .catch(error => console.log(`Error: ${error}`));
   }, [userId, selectedLesson]);
 
@@ -396,57 +405,31 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
               <div className={styles.lessonSummaryInfoBlock}>
                 <BodyThreeText>{i18n.learningObjective()}</BodyThreeText>
                 <BodyThreeText>
-                  Students will use parameters to control the size and placement
-                  of shapes, learning that parameters let us give more precise
-                  instructions to the computer.
+                  {aiTALessonSummaryInfo?.learning_objective}
                 </BodyThreeText>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
                 <BodyThreeText>{i18n.keyLessonBeats()}</BodyThreeText>
                 <ol>
-                  <li>
-                    <BodyThreeText>
-                      Warm-up brainstorm on “extra details” for rectangles.
-                    </BodyThreeText>
-                  </li>
-                  <li>
-                    <BodyThreeText>
-                      Introduce vocabulary parameter.
-                    </BodyThreeText>
-                  </li>
-                  <li>
-                    <BodyThreeText>
-                      Code Studio activity—test and debug.
-                    </BodyThreeText>
-                  </li>
-                  <li>
-                    <BodyThreeText>
-                      Wrap-up reflection: other uses for parameters.
-                    </BodyThreeText>
-                  </li>
+                  {aiTALessonSummaryInfo?.lesson_beats.map(
+                    (lessonBeat, index) => (
+                      <li key={`lessonBeat-${index}`}>
+                        <BodyThreeText>{lessonBeat}</BodyThreeText>
+                      </li>
+                    )
+                  )}
                 </ol>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
                 <BodyThreeText>{i18n.commonMisconceptions()}</BodyThreeText>
                 <ul>
-                  <li>
-                    <BodyThreeText>
-                      Students may confuse x/y position with width/height. Use
-                      visuals: draw arrows for position, then outline size
-                      separately.
-                    </BodyThreeText>
-                  </li>
-                  <li>
-                    <BodyThreeText>
-                      Introduce vocabulary parameter.
-                    </BodyThreeText>
-                  </li>
-                  <li>
-                    <BodyThreeText>
-                      Some think order doesn't matter—remind them code runs top
-                      to bottom.
-                    </BodyThreeText>
-                  </li>
+                  {aiTALessonSummaryInfo?.misconceptions.map(
+                    (misconception, index) => (
+                      <li key={`misconception-${index}`}>
+                        <BodyThreeText>{misconception}</BodyThreeText>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             </div>
@@ -511,7 +494,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           </>
         )}
       </div>
-      {showAITALessonSummary && renderLessonSummaryContainer()}
+      {showAITALessonSummary &&
+        aiTALessonSummaryInfo &&
+        renderLessonSummaryContainer()}
     </div>
   );
 };
