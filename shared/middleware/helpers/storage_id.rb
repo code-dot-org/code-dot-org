@@ -52,12 +52,21 @@ end
 # encrypted or was encrypted using a different key (e.g. on localhost vs prod).
 def storage_decrypt_channel_id(encrypted)
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
-  # pad to a multiple of 4 characters to make a valid base64 string.
-  encrypted += '=' * ((4 - (encrypted.length % 4)) % 4)
-  storage_id, project_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
-  raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
-  [storage_id, project_id]
+  if encrypted[0, 3] == 'v2:'
+    project = Project.find_by(guid: encrypted)
+    puts "project #{project.inspect}"
+    raise ArgumentError, "No project found with guid #{encrypted}" unless project
+    storage_id = project.storage_id
+    project_id = project.id
+    return [storage_id, project_id]
+  else
+    # pad to a multiple of 4 characters to make a valid base64 string.
+    encrypted += '=' * ((4 - (encrypted.length % 4)) % 4)
+    storage_id, project_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
+    raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
+    raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
+    [storage_id, project_id]
+  end
 end
 
 def valid_encrypted_channel_id(encrypted)
