@@ -53,6 +53,7 @@ import {
   PartialUserAppOptions,
   Validation,
 } from './types';
+import LevelPropertiesCache from './utils/LevelPropertiesCache';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
 
 interface PageError {
@@ -509,11 +510,16 @@ function setProjectAndLevelData(
 async function loadLevelProperties(
   levelPropertiesPath: string
 ): Promise<LevelProperties> {
+  const cached = LevelPropertiesCache.get(levelPropertiesPath);
+  if (cached) {
+    return cached;
+  }
   const response = await HttpClient.fetchJson<LevelProperties>(
     levelPropertiesPath,
     {},
     LevelPropertiesValidator
   );
+  LevelPropertiesCache.set(levelPropertiesPath, response.value);
   return response.value;
 }
 

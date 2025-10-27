@@ -2,6 +2,7 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 import React, {useState} from 'react';
 
 import {useExtraLinks} from '@cdo/apps/lab2/hooks/useExtraLinks';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import ExtraLinksModal from '@cdo/apps/lab2/views/ExtraLinksModal';
 
 import ButtonWithDialog from './ButtonWithDialog';
@@ -35,6 +36,7 @@ const ResourcePanelExtraLinks: React.FunctionComponent<
   return (
     <ButtonWithDialog
       text={'Extra Links'}
+      ariaLabel={lab2I18n.extraLinks()}
       id={'extra-links'}
       theme={theme}
       Dialog={innerDialog}

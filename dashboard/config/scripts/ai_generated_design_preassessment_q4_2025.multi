@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q4_2025'
+
+question 'A small business owner wants to redesign their website. They decide to start by planning three main sections: a homepage, a shop page, and a contact page. What design strategy are they used?'
+
+wrong 'Debugging the website\'s broken code.'
+wrong 'Pattern recognition, by repeating the same page layout.'
+wrong 'Accessibility, by making the website easier to read.'
+right 'Decomposition, by breaking the project into smaller, manageable parts.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 8, 9
+MARKDOWN

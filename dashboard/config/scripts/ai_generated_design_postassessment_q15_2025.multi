@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q15_2025'
+
+question 'A local government website updates its code by adding clear HTML headings, descriptive alt text for images, and CSS rules that make pages adjust automatically for phones and tablets. What is the main benefit of these changes?'
+
+right 'The website becomes easier for all users to read and navigate on any device.'
+wrong 'The website uses fewer colors and graphics to save memory.'
+wrong 'The website looks more complex and advanced to visitors.'
+wrong 'The website loads faster but becomes harder to use.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 6, 11, 12
+MARKDOWN
