@@ -1,3 +1,5 @@
+require_relative '../../parent_levels_child_level'
+
 # The LevelsWithinLevels module encapsulates all functionality related to the
 # various ways we have of combining levels, including:
 #
