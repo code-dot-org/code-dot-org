@@ -36,7 +36,7 @@ class Project < ApplicationRecord
   before_save :ensure_guid
 
   def ensure_guid
-    self.guid ||= SecureRandom.uuid
+    self.guid ||= "v2:" + SecureRandom.uuid
   end
 
   # Finds a project by channel id. Like `find`, this method raises an

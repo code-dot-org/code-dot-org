@@ -101,7 +101,13 @@ def storage_encrypt_channel_id(storage_id, project_id)
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   project_id = project_id.to_i
   raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
-  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{project_id}")).tr('=', '')
+  project = Project.find(project_id)
+  raise ArgumentError, "No project found with id #{project_id}" unless project
+
+  # Assign a guid if the project doesn't have one yet
+  project.update(guid: "v2:" + SecureRandom.uuid) unless project.guid
+
+  project.guid
 end
 
 def get_storage_id
