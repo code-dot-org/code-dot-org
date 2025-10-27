@@ -1058,6 +1058,7 @@ designMode.onInsertAICode = function (code) {
 
 /**/
 designMode.serializeToLevelHtml = function () {
+  console.log('in designMode serializeToLevelHtml');
   var designModeViz = $('#designModeViz');
   // Children are screens. Want to operate on grandchildren
   var madeUndraggable = makeUndraggable(designModeViz.children().children());
@@ -1114,6 +1115,7 @@ designMode.serializeToLevelHtml = function () {
   }
 
   Applab.levelHtml = serialization;
+  console.log('in designMode serializeToLevelHtml - setting Applab.levelHtml');
   return serialization;
 };
 

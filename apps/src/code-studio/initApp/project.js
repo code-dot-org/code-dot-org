@@ -1066,6 +1066,7 @@ var projects = (module.exports = {
     forceNewVersion,
     clientSideRemix
   ) {
+    console.log('saveSourceAndHtml_');
     if (!isEditable()) {
       return;
     }
@@ -1105,6 +1106,7 @@ var projects = (module.exports = {
     unpackSources(sourceAndHtml);
 
     if (this.useSourcesApi()) {
+      console.log('useSourcesApi');
       let params = '';
       if (currentSourceVersionId && !clientSideRemix) {
         params =
@@ -1296,6 +1298,7 @@ var projects = (module.exports = {
         .getLevelSource()
         .then(source => {
           const html = this.sourceHandler.getLevelHtml();
+          console.log('html', html);
           const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
@@ -1514,6 +1517,7 @@ var projects = (module.exports = {
       }
 
       if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
+        console.log('no changes in sources in autosave');
         if (!projectChangedWhileSaveInProgress) {
           hasProjectChanged = false;
         }
