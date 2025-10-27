@@ -57,6 +57,7 @@ namespace :install do
           else
             raise "Unknown CI job: #{ENV['CI_JOB']}"
           end
+          RakeUtils.system_stream_output('mysql -uroot -e "DESCRIBE dashboard_test.temp_tables"')
         else
           RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
         end
