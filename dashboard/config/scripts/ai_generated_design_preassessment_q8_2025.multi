@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q8_2025'
+
+question 'A company wants to design an app that helps people find local volunteer opportunities. Their research shows that "Taylor, age 17, wants to volunteer but struggles to find events nearby that fit their schedule." What is the company\'s next step in the design process?'
+
+wrong 'Start coding the app before deciding on any features.'
+wrong 'Choose bright colors to make the app look exciting.'
+wrong 'Create random advertisements to attract attention.'
+right 'Write a problem statement explaining what Taylor needs and why.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+MARKDOWN

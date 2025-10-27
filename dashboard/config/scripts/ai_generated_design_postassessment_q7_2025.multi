@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q7_2025'
+
+question 'An online bookstore\'s website looks neat on a laptop, but on a phone the book images overlap and some text runs off the screen. What should the web designer do to solve this problem?'
+
+wrong 'Add more text to push the images lower on the page'
+right 'Adjust the CSS so the layout automatically resizes for smaller screens'
+wrong 'Replace the book images with text-only description'
+wrong 'Change the background color to make the problem less noticeable'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 8, 12
+MARKDOWN

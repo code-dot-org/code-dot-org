@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-23 22:27:53 UTC",
+    "serialized_at": "2025-10-24 16:33:42 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1310,24 +1310,24 @@
       }
     },
     {
-      "key": "abc9c07f-b440-4796-b113-7b81d2e152d6",
-      "position": 1,
-      "properties": {
-        "progression_name": "Vocab: Responsiveness"
-      },
-      "seeding_key": {
-        "activity_section.key": "abc9c07f-b440-4796-b113-7b81d2e152d6",
-        "lesson_activity.key": "bf1ea6a0-18f4-4944-9f33-4a613df7602f"
-      }
-    },
-    {
       "key": "3f484213-dd27-46f7-a385-cf6d7fd2fbfd",
-      "position": 2,
+      "position": 1,
       "properties": {
         "progression_name": "Webpage Responsiveness"
       },
       "seeding_key": {
         "activity_section.key": "3f484213-dd27-46f7-a385-cf6d7fd2fbfd",
+        "lesson_activity.key": "bf1ea6a0-18f4-4944-9f33-4a613df7602f"
+      }
+    },
+    {
+      "key": "abc9c07f-b440-4796-b113-7b81d2e152d6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Responsiveness"
+      },
+      "seeding_key": {
+        "activity_section.key": "abc9c07f-b440-4796-b113-7b81d2e152d6",
         "lesson_activity.key": "bf1ea6a0-18f4-4944-9f33-4a613df7602f"
       }
     },
@@ -3238,6 +3238,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "ai-generated-design-lesson12-level1-test-2025"
+        ],
+        "progression": "Webpage Responsiveness"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson12-level1-test-2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "3f484213-dd27-46f7-a385-cf6d7fd2fbfd"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson12-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "ai-generated-design-lesson12-vocab-panel-responsiveness-test-2025"
         ],
         "progression": "Vocab: Responsiveness"
@@ -3257,8 +3282,8 @@
       ]
     },
     {
-      "chapter": 75,
-      "position": 2,
+      "chapter": 76,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3279,31 +3304,6 @@
       },
       "level_keys": [
         "ai-generated-design-lesson12-vocab-frq-responsiveness-test-2025"
-      ]
-    },
-    {
-      "chapter": 76,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson12-level1-test-2025"
-        ],
-        "progression": "Webpage Responsiveness"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson12-level1-test-2025"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "3f484213-dd27-46f7-a385-cf6d7fd2fbfd"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson12-level1-test-2025"
       ]
     },
     {
@@ -4386,6 +4386,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-generated-design-lesson12-level1-test-2025",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson12-level1-test-2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aif-s2-unit1",
+        "activity_section.key": "3f484213-dd27-46f7-a385-cf6d7fd2fbfd"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-generated-design-lesson12-vocab-panel-responsiveness-test-2025",
         "script_level.level_keys": [
           "ai-generated-design-lesson12-vocab-panel-responsiveness-test-2025"
@@ -4406,18 +4418,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aif-s2-unit1",
         "activity_section.key": "abc9c07f-b440-4796-b113-7b81d2e152d6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson12-level1-test-2025",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson12-level1-test-2025"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aif-s2-unit1",
-        "activity_section.key": "3f484213-dd27-46f7-a385-cf6d7fd2fbfd"
       }
     },
     {
