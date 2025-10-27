@@ -1,5 +1,4 @@
-# Pushed to Docker Hub at codedotorg/code-dot-org:<version>
-# TODO: Switch to pushing this to codedotorg/cdo-ci:<version> and update .drone.yml
+# Pushed to Docker Hub at codedotorg/cdo-ci:<version>
 #
 # This Dockerfile builds the image used on DroneCI
 # and is referenced by version in .drone.yml
