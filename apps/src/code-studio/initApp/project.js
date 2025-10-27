@@ -5,6 +5,7 @@ import {
   OPEN_ENDED_PROJECTS_YOUNG_AGE,
 } from '@cdo/apps/constants';
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
@@ -716,10 +717,25 @@ var projects = (module.exports = {
         }
 
         if (!appOptions.level.skipRunSave) {
-          $(window).on(
-            events.appModeChanged,
-            this.saveIfSourcesChanged.bind(this)
-          );
+          $(window).on(events.appModeChanged, () => {
+            try {
+              this.saveIfSourcesChanged().catch(error => {
+                MetricsReporter.logError({
+                  message:
+                    'error in saveIfSourcesChanged when app mode changed',
+                  error,
+                  channelId: this.getCurrentId(),
+                });
+              });
+            } catch (error) {
+              MetricsReporter.logError({
+                message:
+                  'error in saveIfSourcesChanged when app mode changed - synchronously',
+                error,
+                channelId: this.getCurrentId(),
+              });
+            }
+          });
         }
 
         $(window).on(
@@ -1295,7 +1311,17 @@ var projects = (module.exports = {
       this.sourceHandler
         .getLevelSource()
         .then(source => {
-          const html = this.sourceHandler.getLevelHtml();
+          let html;
+          try {
+            html = this.sourceHandler.getLevelHtml();
+          } catch (error) {
+            MetricsReporter.logError({
+              message: 'error in getLevelHtml',
+              error,
+              channelId: this.getCurrentId(),
+            });
+            return callback({error});
+          }
           const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
