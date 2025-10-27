@@ -322,13 +322,7 @@ Applab.getCode = function () {
 Applab.getHtml = function () {
   // This method is called on autosave. If we're about to autosave, let's update
   // levelHtml to include our current state.
-  if ($('#designModeViz').is(':visible')) {
-    console.log('in applab getHtml - designModeVi is visible');
-  } else {
-    console.log('in applab getHtml - designModeVi is not visible');
-  }
   designMode.serializeToLevelHtml();
-  console.log('in applab getHtml - returning');
   return Applab.levelHtml;
 };
 
