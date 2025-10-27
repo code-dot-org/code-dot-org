@@ -1,6 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
-import {Typography} from '@mui/material';
+import {
+  BodyFourText,
+  BodyTwoText,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import bookWithBulb from './images/book_with_bulb.png';
@@ -47,14 +51,10 @@ const PermanentPromotions: React.FC = () => {
       {promotions.map(promotion => (
         <li key={promotion.id} className={styles.staticPromotion}>
           <div className={styles.staticPromotionText}>
-            <Typography variant="body2" gutterBottom>
-              <Typography variant="strong" gutterBottom>
-                {promotion.title}
-              </Typography>
-            </Typography>
-            <Typography variant="body4" gutterBottom>
-              {promotion.description}
-            </Typography>
+            <BodyTwoText>
+              <StrongText>{promotion.title}</StrongText>
+            </BodyTwoText>
+            <BodyFourText>{promotion.description}</BodyFourText>
             <Link href={promotion.buttonTarget} size="xs" openInNewTab={true}>
               {promotion.buttonLabel}
               <FontAwesomeV6Icon iconName="up-right-from-square" />
