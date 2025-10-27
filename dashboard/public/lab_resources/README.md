@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0e5ae9b53264283175ba352f71eaef21b467c004f8a80bc530b8fb4b50a6d249
-size 233
+# Lab Resources
+This folder contains resources for labs, such as placeholder images.
+They are stored here so users have an easy URL to use.
+On prod, items in this folder can be accessed via `studio.code.org/lab_resources/<filename>`.
