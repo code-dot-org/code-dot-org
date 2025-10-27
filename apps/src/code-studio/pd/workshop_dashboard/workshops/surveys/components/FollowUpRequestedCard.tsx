@@ -1,4 +1,9 @@
-import {Card, CardContent, Box, CardHeader, Typography} from '@mui/material';
+import {
+  BodyThreeText,
+  Heading2,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
+import {Card, CardContent, Box, CardHeader} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
@@ -29,14 +34,12 @@ export const FollowUpRequestedCard: FC<FollowUpRequestedCardProps> = ({
         className={commonStyles.cardHeader}
         title={
           <>
-            <Typography component="h2" variant="body1">
-              <Typography variant="strong" gutterBottom>
-                {title}
-              </Typography>
-            </Typography>
-            <Typography className={commonStyles.subHeader} variant="body3">
+            <Heading2 visualAppearance="body-one" noMargin>
+              <StrongText>{title}</StrongText>
+            </Heading2>
+            <BodyThreeText noMargin className={commonStyles.subHeader}>
               {description}
-            </Typography>
+            </BodyThreeText>
           </>
         }
       />
@@ -47,12 +50,10 @@ export const FollowUpRequestedCard: FC<FollowUpRequestedCardProps> = ({
           >
             {items.map(item => (
               <Box key={item.email} className={styles.emailRow}>
-                <Typography variant="body3">
-                  <Typography variant="strong" gutterBottom>
-                    {item.name}
-                  </Typography>
-                </Typography>
-                <Typography variant="body3">{item.email}</Typography>
+                <BodyThreeText noMargin>
+                  <StrongText>{item.name}</StrongText>
+                </BodyThreeText>
+                <BodyThreeText noMargin>{item.email}</BodyThreeText>
                 <CopyButton
                   buttonText="Copy email"
                   textToCopy={item.email}

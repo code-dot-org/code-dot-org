@@ -1,6 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Dialog} from '@code-dot-org/component-library/dialog';
-import {Typography} from '@mui/material';
+import {Heading1} from '@code-dot-org/component-library/typography';
 import React, {
   FC,
   useCallback,
@@ -296,9 +296,7 @@ export const WorkshopForm: FC<WorkshopFormProps> = ({config}) => {
           closeLabel="Cancel"
         />
       )}
-      <Typography component="h1" variant="h2" gutterBottom>
-        {heading}
-      </Typography>
+      <Heading1 visualAppearance="heading-xl">{heading}</Heading1>
       <Basics
         capacity={workshopFormState.capacity}
         description={workshopFormState.description}

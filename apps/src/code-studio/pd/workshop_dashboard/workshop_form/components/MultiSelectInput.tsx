@@ -4,7 +4,7 @@ import FormFieldWrapper, {
   FormFieldWrapperProps,
 } from '@code-dot-org/component-library/formFieldWrapper';
 import Tags from '@code-dot-org/component-library/tags';
-import {Typography} from '@mui/material';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useState, useRef, useEffect, useCallback, useMemo} from 'react';
 
@@ -340,15 +340,12 @@ export const MultiSelectInput: React.FC<{
                       }
                     >
                       <div className={styles.optionLabelText}>
-                        <Typography variant="body3" gutterBottom>
-                          {option.label}
-                        </Typography>
+                        <BodyThreeText>{option.label}</BodyThreeText>
                         {option.secondaryLabel && (
-                          <Typography variant="body3" gutterBottom>
-                            {option.secondaryLabel}
-                          </Typography>
+                          <BodyThreeText>{option.secondaryLabel}</BodyThreeText>
                         )}
                       </div>
+
                       {selected && (
                         <FontAwesomeV6Icon
                           iconName={
@@ -362,13 +359,9 @@ export const MultiSelectInput: React.FC<{
                 })
               ) : (
                 <li>
-                  <Typography
-                    className={styles.emptyState}
-                    variant="body3"
-                    gutterBottom
-                  >
+                  <BodyThreeText className={styles.emptyState}>
                     {emptyStateMessage}
-                  </Typography>
+                  </BodyThreeText>
                 </li>
               )}
             </ul>

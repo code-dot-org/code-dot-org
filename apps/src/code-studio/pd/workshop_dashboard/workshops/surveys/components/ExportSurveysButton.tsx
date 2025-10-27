@@ -1,7 +1,10 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
-import {Typography} from '@mui/material';
+import {
+  BodyOneText,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 import {useParams} from 'react-router-dom';
 
@@ -74,13 +77,13 @@ export const ExportSurveysButton = () => {
             id="dsco-dialog-description"
             className={commonStyles.customDialogContent}
           >
-            <Typography
+            <BodyOneText
               id="export-survey-dialog-title"
-              component="p"
-              variant="h4"
+              visualAppearance="heading-md"
+              noMargin
             >
               Export Survey Results
-            </Typography>
+            </BodyOneText>
             <table>
               <tbody>
                 {(forms ?? []).map(form => {
@@ -89,12 +92,12 @@ export const ExportSurveysButton = () => {
                   return (
                     <tr key={`${form.name}_${form.version}`}>
                       <td>
-                        <Typography variant="body2">{formName}</Typography>
+                        <BodyTwoText noMargin>{formName}</BodyTwoText>
                       </td>
                       <td>
-                        <Typography variant="body2">
+                        <BodyTwoText noMargin>
                           {`Version: ${form.version}`}
-                        </Typography>
+                        </BodyTwoText>
                       </td>
                       <td>
                         <Button
