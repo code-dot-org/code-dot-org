@@ -1,4 +1,4 @@
-@import '../../mixins.scss';
+@use '@cdo/apps/mixins.scss' as mixins;
 
 .workspace {
   color: var(--text-neutral-primary);
@@ -27,7 +27,7 @@
   flex: 1;
   grid-column: span 2;
 
-  @include focus-styles($outline-offset: -2px);
+  @include mixins.focus-styles($outline-offset: -2px);
 }
 
 .workplaceEditorWrapper.withFileBrowser {
@@ -57,7 +57,7 @@
 }
 
 .centerHeaderContent {
-  @include center-header-content(true);
+  @include mixins.center-header-content(true);
 }
 
 .lockedFilesBanner {

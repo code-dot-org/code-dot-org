@@ -4,29 +4,36 @@ import {
   BodyTwoText,
 } from '@code-dot-org/component-library/typography';
 import {Box} from '@mui/material';
+import classNames from 'classnames';
 import React, {FC} from 'react';
 
 import styles from './CodebridgeEmptyState.module.scss';
 
 export interface CodebridgeEmptyStateProps {
-  imageProps: ImageProps;
-  title: string;
-  description: string;
+  imageProps?: ImageProps;
+  title?: string;
+  description?: string;
+  className?: string;
 }
 
 export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
   imageProps,
   title,
   description,
+  className,
 }) => {
   return (
-    <Box className={styles.emptyStateContainer}>
-      {/* empty state images generally do not convey additional meaning.
-      using alt="" by default so screen readers will ignore the image */}
-      <Image className={styles.emptyStateImage} alt="" {...imageProps} />
+    <Box
+      className={classNames(styles.codebridgeEmptyStateContainer, className)}
+    >
+      {imageProps && (
+        <Image className={styles.emptyStateImage} alt="" {...imageProps} />
+      )}
       <div className={styles.textContainer}>
-        <BodyTwoText visualAppearance="heading-md">{title}</BodyTwoText>
-        <BodyThreeText noMargin>{description}</BodyThreeText>
+        {title && (
+          <BodyTwoText visualAppearance="heading-md">{title}</BodyTwoText>
+        )}
+        {description && <BodyThreeText>{description}</BodyThreeText>}
       </div>
     </Box>
   );
