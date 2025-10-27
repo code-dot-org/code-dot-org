@@ -368,7 +368,7 @@ class Unit < ApplicationRecord
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
     return false unless Rails.application.config.cache_classes
-    return false if ENV['UNIT_TEST'] || ENV['CI']
+    return false if ENV['UNIT_TEST'] || CI::Utils.ci_job_unit_tests?
     true
   end
 
