@@ -39,7 +39,7 @@
 .item {
   display: flex;
   pointer-events: auto;
-  //flex: 1;
+  flex: 1;
   opacity: 1;
   height: 100%;
 
@@ -61,6 +61,7 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
+  height: max-content;
 
   /* If there is scrolling content, it will provide horizontal padding.
      Doing this allows the scrollbar to use that padding area. */
@@ -297,12 +298,13 @@
 }
 
 .scrollingContent {
-  //flex: 1;
-  overflow-y: scroll;
+  flex: 1;
+  overflow-y: auto;
   min-height: 70px;
-  padding: 0 12px;
+  padding: 0 0 0 12px;
   box-sizing: border-box;
   height: auto;
+  scrollbar-gutter: stable;
 }
 
 .nonScrollingSubContent {
