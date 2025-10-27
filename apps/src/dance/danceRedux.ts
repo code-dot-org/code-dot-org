@@ -37,7 +37,6 @@ export interface DanceState {
   isLoading: boolean;
   hasRun: boolean;
   hasEdited: boolean;
-  hasPlayedFourMeasures: boolean;
 }
 
 const initialState: DanceState = {
@@ -52,7 +51,6 @@ const initialState: DanceState = {
   isLoading: false,
   hasRun: false,
   hasEdited: false,
-  hasPlayedFourMeasures: false,
 };
 
 // THUNKS
@@ -266,9 +264,6 @@ const danceSlice = createSlice({
     setHasEdited: (state, action: PayloadAction<boolean>) => {
       state.hasEdited = action.payload;
     },
-    setHasPlayedFourMeasures: (state, action: PayloadAction<boolean>) => {
-      state.hasPlayedFourMeasures = action.payload;
-    },
   },
   extraReducers: builder => {
     builder.addCase(initSongs.pending, state => {
@@ -307,6 +302,5 @@ export const {
   setIsRunning,
   setHasRun,
   setHasEdited,
-  setHasPlayedFourMeasures,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};

@@ -24,6 +24,8 @@ import moduleStyles from './generate-dancer.module.scss';
 
 const BODY_VARIANT_COUNT = 5;
 
+const GENERATE_DELAY_DURATION = 7000;
+
 const adlibs: AdlibsType = {
   'animal-02': {
     template: 'Create {animal}.',
@@ -189,8 +191,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
     setDancerMetadata(newDancerMetadata);
     const elapsedTime = Date.now() - startTime;
-    const delayDuration = 7000;
-    const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
+    const remainingDelayDuration = Math.max(
+      GENERATE_DELAY_DURATION - elapsedTime,
+      0
+    );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
   }, [adlibOption, choices, variantHistory]);
 
@@ -230,7 +234,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             levelProperties.longInstructions && (
               <MainInstructionsContent
                 instructionsText={levelProperties.longInstructions}
-                handleInstructionsTextClick={() => {}}
               />
             )}
           {aiGenerateState === 'none' &&

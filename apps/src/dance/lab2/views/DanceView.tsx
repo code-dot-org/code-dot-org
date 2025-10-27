@@ -37,7 +37,6 @@ import {
   loadSongs,
   reducers,
   setHasEdited,
-  setHasPlayedFourMeasures,
   setHasRun,
   setIsRunning,
   setRunIsStarting,
@@ -71,6 +70,7 @@ import SourcesContainer, {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
+import usePlaybackUpdate from '@cdo/apps/music/views/hooks/usePlaybackUpdate';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
 import {registerReducers} from '@cdo/apps/redux';
 import AgeDialog from '@cdo/apps/templates/AgeDialog';
@@ -90,6 +90,8 @@ import moduleStyles from './dance-view.module.scss';
 
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
 const BLOCKLY_DIV_ID = 'dance-blockly-div';
+
+const GENERATE_DANCE_PLAYBACK_MEASURES = 4;
 
 registerReducers(reducers);
 
@@ -113,9 +115,6 @@ const DanceView: React.FunctionComponent<{
     state => state.dance.currentSongMetadata
   );
   const hasRun = useAppSelector(state => state.dance.hasRun);
-  const hasPlayedFourMeasures = useAppSelector(
-    state => state.dance.hasPlayedFourMeasures
-  );
   const hasEdited = useAppSelector(state => state.dance.hasEdited);
   const isLoading = useAppSelector(state => state.dance.isLoading);
   const signedIn = useAppSelector(state => state.currentUser.signInState);
@@ -136,6 +135,18 @@ const DanceView: React.FunctionComponent<{
   const {theme} = useTheme();
 
   const progressManager = useContext(ProgressManagerContext);
+
+  const [musicPlayheadPosition, setMusicPlayheadPosition] = useState(1);
+
+  const updateMusicPlayhead = useCallback(() => {
+    if (usingMusicProject && musicProjectPlayer.current) {
+      setMusicPlayheadPosition(
+        musicProjectPlayer.current.getCurrentPlayheadPosition()
+      );
+    }
+  }, [usingMusicProject]);
+
+  usePlaybackUpdate(isRunning, updateMusicPlayhead);
 
   const metadataToUse: SongMetadata | undefined = useMemo(() => {
     if (!musicProjectPlayer.current || !loadedMusicProject) {
@@ -266,13 +277,9 @@ const DanceView: React.FunctionComponent<{
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
     dispatch(setIsRunning(false));
-    dispatch(setHasPlayedFourMeasures(false));
     programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
+    setMusicPlayheadPosition(1);
   }, [programExecutor, dispatch]);
-
-  const onPlayedFourMeasures = useCallback(() => {
-    dispatch(setHasPlayedFourMeasures(true));
-  }, [dispatch]);
 
   const onPuzzleComplete = useCallback(
     (result: boolean, message: string) => {
@@ -333,7 +340,6 @@ const DanceView: React.FunctionComponent<{
   useEffect(() => {
     dispatch(setHasRun(false));
     dispatch(setHasEdited(false));
-    dispatch(setHasPlayedFourMeasures(false));
   }, [levelProperties.id, dispatch]);
 
   // Load or update song manifest when level properties change.
@@ -464,10 +470,7 @@ const DanceView: React.FunctionComponent<{
       onEventsChanged,
       playSound: musicProjectPlayer.current
         ? (_url, callback) => {
-            musicProjectPlayer.current?.play(
-              resetProgram,
-              onPlayedFourMeasures
-            );
+            musicProjectPlayer.current?.play(resetProgram);
             callback(true);
           }
         : undefined,
@@ -491,7 +494,6 @@ const DanceView: React.FunctionComponent<{
     resetProgram,
     onPuzzleComplete,
     readonlyWorkspace,
-    onPlayedFourMeasures,
   ]);
 
   // Create dance validator.
@@ -616,7 +618,13 @@ const DanceView: React.FunctionComponent<{
               levelProperties={levelProperties}
               isRunning={isRunning}
               hasEdited={hasEdited}
-              hasPlayedFourMeasures={hasPlayedFourMeasures}
+              hasPlayedGeneratedDance={
+                musicPlayheadPosition >=
+                Math.min(
+                  GENERATE_DANCE_PLAYBACK_MEASURES,
+                  musicProjectPlayer.current.getLastMeasure() || 0
+                )
+              }
               measures={musicProjectPlayer.current.getEventMeasures()}
               blockDefinitions={levelProperties.sharedBlocks || []}
               blockCount={workspace.current?.getAllBlocks().length || 0}

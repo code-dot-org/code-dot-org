@@ -173,7 +173,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         levelProperties.longInstructions && (
           <MainInstructionsContent
             instructionsText={levelProperties.longInstructions}
-            handleInstructionsTextClick={() => {}}
           />
         )}
 

@@ -61,7 +61,7 @@ class ProjectPlayer {
     await this.player.preloadSounds(playbackEvents);
   }
 
-  play(onEnded?: () => void, onPlayedFourMeasures?: () => void) {
+  play(onEnded?: () => void) {
     if (this.currentMetadata === null) {
       throw new Error('No project loaded!');
     }
@@ -77,12 +77,6 @@ class ProjectPlayer {
         if (currentPlayheadPosition >= lastMeasure) {
           onEnded?.();
           this.stop();
-        }
-
-        // Optionally notify the client after 4 measures.
-        // (Or the end if the song is shorter than 4 measures.)
-        if (currentPlayheadPosition >= Math.min(4, lastMeasure)) {
-          onPlayedFourMeasures?.();
         }
       }
     }, (60 / this.player.getBPM()) * 1000);
@@ -107,6 +101,14 @@ class ProjectPlayer {
       throw new Error('No project loaded!');
     }
     return this.player.getBPM();
+  }
+
+  getCurrentPlayheadPosition() {
+    return this.player.getCurrentPlayheadPosition();
+  }
+
+  getLastMeasure() {
+    return this.currentMetadata?.lastMeasure;
   }
 
   private async loadMetadata(

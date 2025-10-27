@@ -15,6 +15,8 @@ import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
 import styles from './generate-dance.module.scss';
 
+const GENERATE_DELAY_DURATION = 7000;
+
 const adlib: AdlibType = {
   template:
     'Create a dance with {vibe} and {dancers}.  Synchronize {features} with the music.',
@@ -42,7 +44,7 @@ interface GenerateCodeProps {
   levelProperties: DanceLevelProperties;
   isRunning: boolean;
   hasEdited: boolean;
-  hasPlayedFourMeasures: boolean;
+  hasPlayedGeneratedDance: boolean;
   measures: number[];
   blockDefinitions: BlockDefinition[];
   blockCount: number;
@@ -57,7 +59,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   levelProperties,
   isRunning,
   hasEdited,
-  hasPlayedFourMeasures,
+  hasPlayedGeneratedDance,
   measures,
   blockDefinitions,
   blockCount,
@@ -113,8 +115,10 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     const resultBlockly = buildDanceBlockly(measures, blockDefinitions);
 
     const elapsedTime = Date.now() - startTime;
-    const delayDuration = 7000;
-    const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
+    const remainingDelayDuration = Math.max(
+      GENERATE_DELAY_DURATION - elapsedTime,
+      0
+    );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
 
     updateSources(resultBlockly);
@@ -133,11 +137,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   useEffect(() => {
     if (
       aiGenerateState === 'listening' &&
-      (!isRunning || hasPlayedFourMeasures)
+      (!isRunning || hasPlayedGeneratedDance)
     ) {
       setAiGenerateState('listened');
     }
-  }, [aiGenerateState, hasPlayedFourMeasures, isRunning]);
+  }, [aiGenerateState, hasPlayedGeneratedDance, isRunning]);
 
   useEffect(() => {
     if (aiGenerateState === 'editing' && isRunning && hasEdited) {
@@ -161,7 +165,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
         levelProperties.longInstructions && (
           <MainInstructionsContent
             instructionsText={levelProperties.longInstructions}
-            handleInstructionsTextClick={() => {}}
           />
         )}
 
