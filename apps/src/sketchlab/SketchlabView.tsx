@@ -8,6 +8,7 @@ import {
   AppState,
   BinaryFiles,
   ExcalidrawImperativeAPI,
+  ExcalidrawInitialDataState,
 } from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
@@ -223,6 +224,15 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  const convertToExcalidrawSources = (
+    sourcesWithExternalFiles: ExcalidrawSourceWithExternalFiles
+  ) => {
+    // Currently doesn't do anything except update the type.
+    // In the future, we'll need a step here that takes the external URLs and converts them to base64,
+    // which will make them safe for Excalidraw to use.
+    return sourcesWithExternalFiles as ExcalidrawInitialDataState;
+  };
+
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <div style={{width: leftPanelWidth}} className={panelClassName}>
@@ -246,7 +256,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           headerContent={<WorkspaceHeader />}
         >
           <Excalidraw
-            initialData={currentSources.source}
+            initialData={convertToExcalidrawSources(currentSources.source)}
             onChange={debouncedSerializeAndSaveWorkspace}
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
