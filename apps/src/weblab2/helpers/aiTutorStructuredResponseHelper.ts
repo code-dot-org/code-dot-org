@@ -58,6 +58,8 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           'short list to confirm ambiguous details. Format as markdown bullets.',
       },
     },
+    // We return tutorMode and goal but do not show them to the student.
+    // These are used to help guide the AI's response.
     required: ['tutorMode', 'nextSteps', 'code', 'explanation', 'goal'],
     propertyOrdering: [
       'tutorMode',
@@ -103,7 +105,7 @@ export const acceptRejectJsonSchema: JsonObjectSchema = {
   additionalProperties: false,
 };
 
-// Parsed json comes in as 'any'
+// Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchema().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatExplanationResponse = (response: any): string => {
   let formattedResponse = '';
