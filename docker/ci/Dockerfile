@@ -112,6 +112,10 @@ RUN locale-gen en_US.UTF-8
 RUN apt-get update && \
     apt-get install --yes libmysqlclient-dev mysql-client mysql-server
 
+# Configure MySQL with READ-COMMITTED transaction isolation
+RUN mkdir -p /etc/mysql/mysql.conf.d && \
+    echo '[mysqld]\ntransaction-isolation = READ-COMMITTED' > /etc/mysql/mysql.conf.d/ci-config.cnf
+
 # disable auth for local dashboard mysql db
 RUN service mysql start && \
     echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \

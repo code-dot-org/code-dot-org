@@ -77,11 +77,23 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
         <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
     </details>
 
-1. fix your database timezone to match our servers
+1. Configure your database timezone and transaction isolation level to match our servers
     - `bin/mysql-client-admin`
-    - `SET GLOBAL time_zone = '+00:00';` Set time zone for all new database connections
-    - `SET PERSIST time_zone = '+00:00';` Save the setting to the mysqld-auto.cnf file which is read on restart
-    - `SELECT @@global.time_zone;` Verify the setting
+    - Copy and paste the following SQL commands:
+```sql
+    -- Set time zone for all new database connections
+    SET GLOBAL time_zone = '+00:00';
+    -- Save the time zone setting to mysqld-auto.cnf (read on restart)
+    SET PERSIST time_zone = '+00:00';
+    
+    -- Set transaction isolation level for all new database connections
+    SET GLOBAL transaction_isolation = 'READ-COMMITTED';
+    -- Save the transaction isolation setting to mysqld-auto.cnf (read on restart)
+    SET PERSIST transaction_isolation = 'READ-COMMITTED';
+    
+    -- Verify both settings
+    SELECT @@global.time_zone, @@global.transaction_isolation;
+```
 
 1. `bundle exec rake build`
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
