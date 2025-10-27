@@ -36,18 +36,22 @@ import {
   fetchJson,
   normalizePalette,
   applyColorMapping,
-  fetchHeadImageInfo,
-  findHeadPrecompLayerDeep,
+  fetchDataUrl,
+  findPrecompLayerDeep,
   getAssetById,
-  hideVectorHeadInComp,
-  ensureHeadImageAsset,
-  insertHeadImageLayer,
+  ensureImageAsset,
   loadCanvasAnimation,
   resolveDancerAssets,
   getConfigValue,
+  insertImageLayer,
+  hideLayersByTypeAndCaptureKs,
+  fetchText,
+  recolorBodySvgString,
+  svgStringToDataUrl,
+  getSkeletonMetadataUrl,
 } from './LottieDancerUtils';
 
-const TEST_BASE_DANCER = 'duck';
+const TEST_SKELETON = 'duck';
 
 export default class LottieDancerRenderer {
   // Injected by DanceParty's GeneratedDancer
@@ -58,8 +62,9 @@ export default class LottieDancerRenderer {
 
   // Values pulled from appConfig/localStorage
   private readonly headScale: number;
-  private readonly skeletonName: string;
   private cachedAnimationData: {[key: string]: LottieJSON} = {};
+  private skeletonNamePromise?: Promise<string>;
+  private pendingAnimationLoads = new Map<string, Promise<LottieJSON>>();
 
   /**
    * In Lottie/After Effects, a composition is a timeline that groups layers.
@@ -69,18 +74,22 @@ export default class LottieDancerRenderer {
    **/
   private compW?: number;
   private compH?: number;
-  private headUrl: string | null;
-  private metadataUrl: string | null;
+  private headUrl: string;
+  private metadataUrl: string;
+  private bodyUrl?: string;
+  private bodyMetadataUrl?: string;
 
   constructor() {
-    const skeletonParam = getConfigValue('skeleton')?.toLowerCase();
-    this.skeletonName = skeletonParam || TEST_BASE_DANCER;
     this.headScale = 0.5;
     this.cachedAnimationData = {};
 
-    const {headUrl, metadataUrl} = resolveDancerAssets({sourceTag: 'canvas'});
-    this.headUrl = headUrl;
-    this.metadataUrl = metadataUrl;
+    const {urls} = resolveDancerAssets({
+      sourceTag: 'canvas',
+    });
+    this.headUrl = urls.headUrl;
+    this.metadataUrl = urls.metadataUrl;
+    this.bodyUrl = urls.bodyUrl;
+    this.bodyMetadataUrl = urls.bodyMetadataUrl;
   }
   /**
    * The caller provides a CanvasRenderingContext2D to paint into.
@@ -178,59 +187,193 @@ export default class LottieDancerRenderer {
   }
 
   /**
+   * Resolve skeleton name once with precedence:
+   * 1) URL param
+   * 2) bodyMetadataUrl JSON: { "skeletonName": "..." }
+   * 3) Default (TEST_SKELETON)
+   */
+  private async getSkeletonName(): Promise<string> {
+    if (this.skeletonNamePromise) {
+      return this.skeletonNamePromise;
+    }
+    const skeletonParam = getConfigValue('skeleton')?.toLowerCase();
+    this.skeletonNamePromise = (async () => {
+      if (!skeletonParam && this.bodyMetadataUrl) {
+        try {
+          const bodyMetaData = await fetchJson<{skeleton?: string}>(
+            this.bodyMetadataUrl
+          );
+          const skeletonNameFromJson = bodyMetaData?.skeleton;
+          if (typeof skeletonNameFromJson === 'string') {
+            console.log(
+              `Resolved skeleton name "${skeletonNameFromJson}" from body metadata JSON.`
+            );
+            return skeletonNameFromJson.trim().toLowerCase();
+          }
+        } catch {}
+      }
+      return skeletonParam || TEST_SKELETON;
+    })();
+    return this.skeletonNamePromise;
+  }
+
+  /**
    * Load, recolor, inject head, and memoize a move's Lottie JSON.
    * Returns the cached/transformed JSON if already present.
    */
   private async loadAndTransformMove(danceMove: string): Promise<LottieJSON> {
+    const skeletonName = await this.getSkeletonName();
+    const key = danceMove.toLowerCase();
     const danceMoveLowerCase = String(danceMove).toLowerCase();
     if (this.cachedAnimationData[danceMoveLowerCase]) {
       return this.cachedAnimationData[danceMoveLowerCase];
     }
-
-    const jsonUrl = resolveAnimationUrl(this.skeletonName, danceMoveLowerCase);
-
-    const animData = await fetchJson<LottieJSON>(jsonUrl);
-
-    // Fetch palette metadata if we have a URL for it.
-    let palette: Palette | null = null;
-    if (this.metadataUrl) {
-      const metadataJson = await fetchJson<DancerMetadata>(this.metadataUrl);
-      palette = normalizePalette(metadataJson);
+    const pendingLoad = this.pendingAnimationLoads.get(key);
+    if (pendingLoad) {
+      return pendingLoad;
     }
+    const loadPromise = (async () => {
+      const jsonUrl = resolveAnimationUrl(skeletonName, danceMoveLowerCase);
 
-    // Recolor assets based on hard-coded accessory-name rules.
-    applyColorMapping(animData, palette);
+      const animData = await fetchJson<LottieJSON>(jsonUrl);
+      const shorten = (url?: string) =>
+        url?.match(/generate\/([^?]+)/)?.[1] || url;
 
-    // Replace vector head with an image, when head.png is available.
-    const headInfo = await fetchHeadImageInfo(this.headUrl);
-    if (headInfo) {
-      const headPre = findHeadPrecompLayerDeep(animData);
-      if (headPre?.refId) {
-        const headComp = getAssetById(animData, headPre.refId);
-        if (headComp && Array.isArray(headComp.layers)) {
-          const {insertIndex, headKs} = hideVectorHeadInComp(headComp);
-          const assetId = ensureHeadImageAsset(
-            animData,
-            headInfo.dataUrl,
-            headInfo.width,
-            headInfo.height
+      console.log('Creating Lottie Dancer with:', {
+        dance: shorten(jsonUrl),
+        headDataUrl: shorten(this.headUrl),
+        metadataUrl: shorten(this.metadataUrl),
+        bodyUrl: shorten(this.bodyUrl),
+        bodyMetadataUrl: shorten(this.bodyMetadataUrl),
+      });
+      // Fetch palette metadata if we have a URL for it.
+      let palette: Palette | null = null;
+      if (this.metadataUrl) {
+        // Ideally we fetch dancer-specific metadata first. This accompanies the head PNG.
+        try {
+          const metadataJson = await fetchJson<DancerMetadata>(
+            this.metadataUrl
           );
-          insertHeadImageLayer(
-            headComp,
-            insertIndex,
-            assetId,
-            headInfo.width,
-            headInfo.height,
-            this.headScale,
-            headKs
-          );
+          palette = normalizePalette(metadataJson);
+        } catch (e) {
+          // If that fails, try to fetch a default palette based on skeleton name.
+          try {
+            const skeletonMetaJson = await fetchJson<DancerMetadata>(
+              getSkeletonMetadataUrl(skeletonName)
+            );
+            palette = normalizePalette(skeletonMetaJson);
+          } catch {
+            // Ignore failures; palette remains null which means no recoloring.
+            console.warn(
+              `Metadata not found at ${this.metadataUrl} - skipping palette recolor.`
+            );
+          }
         }
       }
+
+      // Recolor assets based on hard-coded accessory-name rules.
+      applyColorMapping(animData, palette, skeletonName);
+
+      // Replace vector head with an image, if one can be loaded.
+      const headDataUrl = await fetchDataUrl(this.headUrl);
+      if (headDataUrl) {
+        const headRegex = /\b(head)\b/i;
+        const headPrecomp = findPrecompLayerDeep(animData, headRegex);
+        if (headPrecomp?.refId) {
+          const headComp = getAssetById(animData, headPrecomp.refId);
+          if (headComp && Array.isArray(headComp.layers)) {
+            const {insertIndex, ks: headKs} =
+              hideLayersByTypeAndCaptureKs(headComp);
+            const assetId = ensureImageAsset(
+              animData,
+              headDataUrl,
+              'img_head_custom'
+            );
+            insertImageLayer(
+              headComp,
+              insertIndex,
+              assetId,
+              headKs,
+              'Head Image',
+              500,
+              500,
+              this.headScale,
+              {bm: 0, hd: false}
+            );
+          }
+        }
+      }
+
+      // Replace vector body with an image only if an SVG is successfully fetched and recolored.
+      if (this.bodyUrl) {
+        const bodyRegex = /\b(body)\b/i;
+        const bodyPrecomp = findPrecompLayerDeep(animData, bodyRegex);
+        if (bodyPrecomp?.refId) {
+          const bodyComp = getAssetById(animData, bodyPrecomp.refId);
+
+          if (bodyComp && Array.isArray(bodyComp.layers)) {
+            /**
+             * Body assets are expected to be SVGs. The renderer fetches the SVG markup
+             * and performs pre-raster recoloring. The original vector body shapes are
+             * preserved unless the SVG is fetched and processed successfully.
+             */
+            let finalBodyDataUrl: string | null = null;
+
+            try {
+              const svgText = await fetchText(this.bodyUrl);
+              if (!svgText) {
+                throw new Error(
+                  `Failed to fetch body SVG: empty response for URL ${this.bodyUrl}.
+                Using unmodified vector body from ${skeletonName} Lottie JSON`
+                );
+              }
+              const recoloredSvg = recolorBodySvgString(svgText, palette);
+              finalBodyDataUrl = svgStringToDataUrl(recoloredSvg);
+            } catch (e) {
+              console.warn('Error processing body SVG:', e);
+              finalBodyDataUrl = null;
+            }
+
+            // Perform replacement only on success; otherwise preserve original shapes
+            if (finalBodyDataUrl) {
+              // Hide existing vector/solid layers and capture a transform to reuse
+              const {insertIndex, ks: bodyKs} =
+                hideLayersByTypeAndCaptureKs(bodyComp);
+
+              const imgAssetId = ensureImageAsset(
+                animData,
+                finalBodyDataUrl,
+                'img_body_custom'
+              );
+
+              insertImageLayer(
+                bodyComp,
+                insertIndex,
+                imgAssetId,
+                bodyKs,
+                'Body Image',
+                400,
+                400,
+                1,
+                {hasMask: false}
+              );
+            }
+            // If finalBodyDataUrl is null, do nothing: original vector body remains.
+          }
+        }
+      }
+      // Memoize transformed Lottie JSON per move (in-memory cache) so subsequent setSource calls skip recolor/head work.
+      // This is useful if the same dance move is used later in a song, or if there are multiple generated dancers using the same move.
+      this.cachedAnimationData[danceMoveLowerCase] = animData;
+      return animData;
+    })();
+
+    this.pendingAnimationLoads.set(key, loadPromise);
+    try {
+      return await loadPromise;
+    } finally {
+      this.pendingAnimationLoads.delete(key);
     }
-    // Memoize transformed Lottie JSON per move (in-memory cache) so subsequent setSource calls skip recolor/head work.
-    // This is useful if the same dance move is used later in a song, or if there are multiple generated dancers using the same move.
-    this.cachedAnimationData[danceMoveLowerCase] = animData;
-    return animData;
   }
 
   /**

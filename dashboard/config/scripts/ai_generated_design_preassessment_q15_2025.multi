@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q15_2025'
+
+question 'A nonprofit organization updates its website so that each page has clear headings, alt text for images, and a layout that automatically adjusts on phones and tablets. What are these updates helping the site achieve?'
+
+wrong 'More decorative fonts and complex layouts'
+wrong 'Faster loading speeds for desktop computers only'
+right 'Better accessibility and responsiveness for all users'
+wrong 'Stronger passwords and higher security protection'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 6, 11, 12
+MARKDOWN

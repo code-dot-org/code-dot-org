@@ -145,11 +145,7 @@ const Weblab2View: React.FC<
             return jsonResponse.explanation;
           },
         };
-      } else if (
-        experiments.isEnabledAllowingQueryString(
-          experiments.WEBLAB2_STRUCTURED_OUTPUT
-        )
-      ) {
+      } else {
         return {
           jsonSchema: copyCodeJsonSchema,
           responseCallback: (response: string) => {
