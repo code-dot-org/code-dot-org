@@ -1,5 +1,6 @@
 class LoadTestingExperimentChannel < ApplicationCable::Channel
   def subscribed
+    puts "subscribed with userid: #{params[:user_id]}"
     stream_from "load_testing_experiment_channel_#{params[:user_id]}"
   end
 

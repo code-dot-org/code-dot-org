@@ -24,40 +24,43 @@ const testLoad = function () {
     PLATFORMS.BOTH
   );
 
-  const channel = consumer.subscriptions.create('ChatterChannel', {
-    connected() {
-      analyticsReporter.sendEvent(
-        'ActionCableLoadTestingConnected',
-        {connectionId},
-        PLATFORMS.BOTH
-      );
-
-      setTimeout(() => {
-        channel.echo('test message from client', connectionId);
-      }, 1000);
-    },
-    received(data) {
-      console.log({received: data, expected: connectionId});
-      if (data === connectionId) {
+  const channel = consumer.subscriptions.create(
+    'LoadTestingExperimentChannel',
+    {
+      connected() {
         analyticsReporter.sendEvent(
-          'ActionCableLoadTestingReceived',
+          'ActionCableLoadTestingConnected',
           {connectionId},
           PLATFORMS.BOTH
         );
-      }
 
-      // setTimeout(() => {
-      //   channel.close();
-      // }, 10000);
-    },
-    echo(message, connectionId) {
-      this.perform('echo', {connectionId});
+        setTimeout(() => {
+          channel.echo('test message from client', connectionId);
+        }, 1000);
+      },
+      received(data) {
+        console.log({received: data, expected: connectionId});
+        if (data === connectionId) {
+          analyticsReporter.sendEvent(
+            'ActionCableLoadTestingReceived',
+            {connectionId},
+            PLATFORMS.BOTH
+          );
+        }
 
-      analyticsReporter.sendEvent(
-        'ActionCableLoadTestingEchoSent',
-        {connectionId},
-        PLATFORMS.BOTH
-      );
-    },
-  });
+        // setTimeout(() => {
+        //   channel.close();
+        // }, 10000);
+      },
+      echo(message, connectionId) {
+        this.perform('echo', {connectionId});
+
+        analyticsReporter.sendEvent(
+          'ActionCableLoadTestingEchoSent',
+          {connectionId},
+          PLATFORMS.BOTH
+        );
+      },
+    }
+  );
 };
