@@ -19,7 +19,7 @@ interface BaseChatEvent {
 interface BaseChatMessage extends BaseChatEvent {
   /**
    * Message text to send to the model. This is also used for display if
-   * `chatMessageDisplayText is `undefined`.
+   * `chatMessageDisplayText` is `undefined`.
    * */
   chatMessageText: string;
 
