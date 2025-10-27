@@ -1303,7 +1303,6 @@ function onInterfaceModeChange(mode) {
   } else if (mode === ApplabInterfaceMode.CODE) {
     setTimeout(() => utils.fireResizeEvent(), 0);
     if (!Applab.isRunning()) {
-      // serializeAndSave called but designModeVi is not visible!
       Applab.serializeAndSave();
       var divApplab = document.getElementById('divApplab');
       designMode.parseFromLevelHtml(divApplab, false);
