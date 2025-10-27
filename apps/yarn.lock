@@ -6339,6 +6339,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rails/actioncable@npm:^8.0.201":
+  version: 8.0.201
+  resolution: "@rails/actioncable@npm:8.0.201"
+  checksum: 10/d1fe0e164eb50d07076ede049cf5c3ee3c44203d72c7b247797ddd18020fa68fc965612b6416a3c43b081a80eb1f616e8ea2165c4794042e0377b02408cd497e
+  languageName: node
+  linkType: hard
+
 "@react-aria/ssr@npm:^3.5.0":
   version: 3.6.0
   resolution: "@react-aria/ssr@npm:3.6.0"
@@ -11076,6 +11083,7 @@ __metadata:
     "@mui/material": "npm:^7.3.2"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.11"
     "@pyodide/webpack-plugin": "npm:^1.4.0"
+    "@rails/actioncable": "npm:^8.0.201"
     "@react-bootstrap/pagination": "npm:^1.0.0"
     "@react-pdf/renderer": "npm:3.4.4"
     "@reduxjs/toolkit": "npm:^1.9.3"
