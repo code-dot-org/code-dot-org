@@ -1,6 +1,11 @@
 import {LinkButton, buttonColors} from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import {
+  Heading2,
+  BodyFourText,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
+import {
   Card,
   CardContent,
   CardHeader,
@@ -10,7 +15,6 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Typography,
 } from '@mui/material';
 import React, {FC} from 'react';
 
@@ -35,24 +39,22 @@ export const WorkshopAttendance: FC = () => {
         className={commonStyles.cardHeader}
         title={
           <Box className={commonStyles.cardHeaderContainer}>
-            <Typography component="h2" variant="body2">
-              <Typography variant="strong" gutterBottom>
-                Take Attendance
-              </Typography>
-            </Typography>
+            <Heading2 visualAppearance="body-two" noMargin>
+              <StrongText>Take Attendance</StrongText>
+            </Heading2>
           </Box>
         }
       />
       <CardContent className={commonStyles.cardContent}>
         <Box className={commonStyles.sectionContainer}>
           <Box className={commonStyles.column}>
-            <Typography variant="body4">
+            <BodyFourText noMargin>
               There is a unique attendance URL for each day of your workshop. On
               each day of your workshop, your participants must visit that day's
               attendance URL to receive professional development credit. The
               attendance URL(s) will be shown below, 2 days in advance, for your
               convenience.
-            </Typography>
+            </BodyFourText>
           </Box>
         </Box>
 
@@ -65,25 +67,19 @@ export const WorkshopAttendance: FC = () => {
             <TableHead>
               <TableRow>
                 <TableCell>
-                  <Typography variant="body4">
-                    <Typography variant="strong" gutterBottom>
-                      Date
-                    </Typography>
-                  </Typography>
+                  <BodyFourText noMargin>
+                    <StrongText>Date</StrongText>
+                  </BodyFourText>
                 </TableCell>
                 <TableCell>
-                  <Typography variant="body4">
-                    <Typography variant="strong" gutterBottom>
-                      Attendance URL
-                    </Typography>
-                  </Typography>
+                  <BodyFourText noMargin>
+                    <StrongText>Attendance URL</StrongText>
+                  </BodyFourText>
                 </TableCell>
                 <TableCell>
-                  <Typography variant="body4">
-                    <Typography variant="strong" gutterBottom>
-                      View Daily Roster
-                    </Typography>
-                  </Typography>
+                  <BodyFourText noMargin>
+                    <StrongText>View Daily Roster</StrongText>
+                  </BodyFourText>
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -107,9 +103,9 @@ export const WorkshopAttendance: FC = () => {
                 return (
                   <TableRow key={session.id}>
                     <TableCell>
-                      <Typography variant="body4">
+                      <BodyFourText noMargin>
                         {formattedDateMonthFirst}
-                      </Typography>
+                      </BodyFourText>
                     </TableCell>
                     <TableCell>
                       {session.showLink && (

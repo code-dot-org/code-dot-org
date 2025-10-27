@@ -5,7 +5,7 @@ import {
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import Tags from '@code-dot-org/component-library/tags';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography} from '@mui/material';
+import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {ChangeEvent, FC, memo, useCallback, useMemo} from 'react';
 
@@ -155,9 +155,7 @@ export const Basics: FC<BasicsProps> = ({
 
   return (
     <section>
-      <Typography component="h2" variant="h5" gutterBottom>
-        Workshop Basics
-      </Typography>
+      <Heading2 visualAppearance="heading-sm">Workshop Basics</Heading2>
       {(fields.name || fields.grades || fields.subject) && (
         <div className={commonStyles.row}>
           {fields.name && (

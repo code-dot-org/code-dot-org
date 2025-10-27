@@ -1,13 +1,17 @@
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
 import {
+  Heading2,
+  BodyFourText,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
+import {
   Card,
   CardContent,
   CardHeader,
   Box,
   Divider,
   useMediaQuery,
-  Typography,
 } from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
@@ -37,9 +41,9 @@ export const WorkshopLinksSection: React.FC<WorkshopLinksSectionProps> = ({
         className={styles.cardHeader}
         title={
           <Box display="flex" alignItems="center">
-            <Typography component="h2" variant="body2">
+            <Heading2 visualAppearance="body-two" noMargin>
               <strong>Your Workshop Links</strong>
-            </Typography>
+            </Heading2>
           </Box>
         }
       />
@@ -48,9 +52,7 @@ export const WorkshopLinksSection: React.FC<WorkshopLinksSectionProps> = ({
           {/* Marketing Page Column */}
           <Box className={styles.column}>
             <Box className={styles.labelRow}>
-              <Typography variant="strong" gutterBottom>
-                Marketing Page
-              </Typography>
+              <StrongText>Marketing Page</StrongText>
               <Tags
                 size="s"
                 className={classNames(styles.workshopTag, styles.visibility)}
@@ -73,11 +75,11 @@ export const WorkshopLinksSection: React.FC<WorkshopLinksSectionProps> = ({
               />
             </Box>
             <Box>
-              <Typography variant="body4">
+              <BodyFourText noMargin>
                 Share this page with teachers to promote your workshop. It
                 includes key details and will guide them to the correct
                 registration process.
-              </Typography>
+              </BodyFourText>
               <Link
                 className={styles.workshopLink}
                 size="xs"
@@ -108,17 +110,15 @@ export const WorkshopLinksSection: React.FC<WorkshopLinksSectionProps> = ({
 
               <Box className={styles.column}>
                 <Box className={styles.labelRow}>
-                  <Typography variant="strong" gutterBottom>
-                    Join Workshop Page
-                  </Typography>
+                  <StrongText>Join Workshop Page</StrongText>
                 </Box>
                 <Box>
-                  <Typography variant="body4">
+                  <BodyFourText noMargin>
                     Participants must use this link to enroll in this workshop
                     on Code.org after registering through your system. This
                     ensures they're counted for attendance, surveys, and
                     certificates.
-                  </Typography>
+                  </BodyFourText>
                   <Link
                     className={styles.workshopLink}
                     size="xs"

@@ -1,4 +1,9 @@
-import {Card, CardContent, CardHeader, Typography} from '@mui/material';
+import {
+  BodyThreeText,
+  Heading2,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
+import {Card, CardContent, CardHeader} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
@@ -38,14 +43,12 @@ export const SelectCard: FC<SelectCardProps> = ({
         className={styles.cardHeader}
         title={
           <>
-            <Typography component="h2" variant="body1">
-              <Typography variant="strong" gutterBottom>
-                {title}
-              </Typography>
-            </Typography>
-            <Typography className={styles.subHeader} variant="body3">
+            <Heading2 visualAppearance="body-one" noMargin>
+              <StrongText>{title}</StrongText>
+            </Heading2>
+            <BodyThreeText noMargin className={styles.subHeader}>
               {description}
-            </Typography>
+            </BodyThreeText>
           </>
         }
       />
