@@ -22,6 +22,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument('-a', '--attire', action='append', default=[])
 parser.add_argument('-n', '--animal', action='append', default=[])
 parser.add_argument('-j', '--adjective', action='append', default=[])
+parser.add_argument('-k', '--key', action='store', default=None)
 
 args = parser.parse_args()
 
@@ -74,7 +75,8 @@ ADJ_ANIMAL_ATTIRE_DIR = OUTDIR / "adjective-animal-attire"
 # ---------------------------------------
 
 # API client
-aclient = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+key = args.key or os.getenv("OPENAI_API_KEY")
+aclient = AsyncOpenAI(api_key=key)
 
 def ensure_dirs():
     OUTDIR.mkdir(parents=True, exist_ok=True)
