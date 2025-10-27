@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import {Theme} from '@code-dot-org/component-library/common/contexts';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React from 'react';
@@ -12,6 +12,7 @@ interface ButtonWithDialogProps {
   Dialog: React.ReactNode;
   iconName: string;
   ariaLabel?: string;
+  buttonSize?: ButtonProps['size'];
   setIsDialogOpen: (isOpen: boolean) => void;
 }
 
@@ -22,6 +23,7 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
   Dialog,
   iconName,
   ariaLabel,
+  buttonSize,
   setIsDialogOpen,
 }) => {
   // Tooltip should disappear quickly.
@@ -49,6 +51,7 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
           color={'gray'}
           type={'tertiary'}
           aria-label={ariaLabel}
+          size={buttonSize}
         />
       </WithTooltip>
       {Dialog}

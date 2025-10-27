@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q4_2025'
+
+question 'A nonprofit organization is creating a website to share community resources. The team decides to design the homepage, the events page, and the contact page separately before combining them into one complete site. What design strategy are they using?'
+
+right 'Decomposition – breaking a large project into smaller, organized parts'
+wrong 'Abstraction – removing unnecessary details from the project'
+wrong 'Debugging – fixing problems in the website\'s code'
+wrong 'Accessibility – making the site usable for all audiences'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 8, 9
+MARKDOWN

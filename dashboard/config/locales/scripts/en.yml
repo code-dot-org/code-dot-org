@@ -25255,8 +25255,16 @@ en:
           title: Pre-Learning for Teaching AI Foundations Semester 2
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          student_description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
         pl-sandbox-aif-sem-2-unit-1:
           lessons:
             lesson-1:
@@ -25266,8 +25274,20 @@ en:
           title: Teaching Introduction AI Generated Design
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |
+            ## Welcome
+            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+
+            #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
+
+            #### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+          student_description: |-
+            ## Welcome
+            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+
+            #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
+
+            #### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
         pl-sandbox-aif-sem-2-unit-2:
           lessons: {}
           lesson_groups: {}
@@ -25647,21 +25667,64 @@ en:
         ai-generated-design-pilot-2025:
           lessons:
             lesson-1:
-              name: Unit Vocabulary
+              name: End of Unit Assessment
+            lesson-2:
+              name: Pre-Assessment
+            lesson-3:
+              name: Introduction to Web Apps
+            lesson-4:
+              name: The User's Experience
+            lesson-5:
+              name: Build Your First Web Page with AI
+            lesson-6:
+              name: Finding Your Style
+            lesson-7:
+              name: Brand Identity
+            lesson-8:
+              name: Intro to CSS
+            lesson-9:
+              name: Meet Your User
+            lesson-10:
+              name: Site Maps
+            lesson-11:
+              name: Accessibility in Design
+            lesson-12:
+              name: Wireframes
+            lesson-13:
+              name: From Wireframes to Layouts
+            lesson-14:
+              name: Designing for Responsiveness
+            lesson-15:
+              name: Digital Magazine Project
           lesson_groups:
             lessonGroup-2:
               display_name: Pre-Assessment
             lessonGroup-3:
               display_name: Content
             lessonGroup-4:
-              display_name: End of Unit Project and Assessment
+              display_name: End of Unit Project
             lessonGroup-5:
-              display_name: Vocabulary
+              display_name: End of Unit Assessment
           name: ai-generated-design-pilot-2025
           title: AI-Generated Design
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |-
+            Students learn that effective digital experiences begin not with code, but with empathy for a user. They take on the roles of professional UX and UI designers, first defining a specific user's problem with a user persona and problem statement. They then plan a multi-page solution using a site map and wireframes. Students collaborate with an AI partner throughout this process, using it for ideation and content generation before directing it in Guide mode to build their app piece-by-piece. This unit establishes a design-first mindset, lays the groundwork for computational thinking, and introduces responsible AI collaboration.
+
+            ## Learning Outcomes
+
+            **By the end of this unit, students will be able to . . .**
+
+            - Define a problem from a specific user’s perspective.
+            - Apply computational thinking concepts of decomposition, pattern recognition, and abstraction to plan a web app’s structure.
+            - Create a visual representation (e.g., wireframe) of a multi-page web app that responds to a defined user need.
+            - Plan a cohesive, multi-page user journey by designing for consistent navigation and visual style.
+            - Write descriptive prompts to generate individual, responsive, and accessible HTML/CSS components.
+            - Evaluate an AI-generated layout for its clarity, purpose, responsiveness, and accessibility.
+            - Develop strategies for debugging AI-generated outputs, including refining prompts and reverting to previous versions, to overcome challenges and persevere in achieving a design goal.
+            - Explain the difference between HTML for structure and CSS for styling.
+            - Describe how design tasks relate to the professional roles of UX and UI designers.
           student_description: ''
         ai-and-algorithmic-decisions-pilot-2025:
           lessons: {}
@@ -25787,7 +25850,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-ai-generated-design-pilot-2025
-          title: Teaching AI-Generated Design
+          title: 'Unit 1: Preparing to Teach AI-Generated Design'
           description_audience: ''
           description_short: ''
           description: ''
@@ -25842,6 +25905,15 @@ en:
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-foundations-sem2-core-content-2025
           title: 'Teaching AI Foundations: Core Concepts, Tools, and Teaching Strategies'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025
+          title: Introduction to Teaching AI Foundations
           description_audience: ''
           description_short: ''
           description: ''
