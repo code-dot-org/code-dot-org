@@ -22,10 +22,6 @@ require 'cdo/shared_constants'
 # can be automatically loaded just below.
 require 'cdo/pycall'
 
-# Early in the Rails boot process, set the environment variable VITE_RUBY_ROOT so that
-# vite_ruby knows where to find the frontend code.
-ENV["VITE_RUBY_ROOT"] = vite_dir
-
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)

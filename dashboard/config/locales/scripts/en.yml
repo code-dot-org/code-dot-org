@@ -25276,14 +25276,14 @@ en:
           description_short: ''
           description: |
             ## Welcome
-            #### This professional learning module prepares you to teach **AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
 
             #### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
           student_description: |-
             ## Welcome
-            #### This professional learning module prepares you to teach **AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
 
@@ -25850,7 +25850,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-ai-generated-design-pilot-2025
-          title: Teaching AI-Generated Design
+          title: 'Unit 1: Preparing to Teach AI-Generated Design'
           description_audience: ''
           description_short: ''
           description: ''
