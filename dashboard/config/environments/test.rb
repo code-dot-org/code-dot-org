@@ -6,6 +6,8 @@ Dashboard::Application.configure do
   # https://guides.rubyonrails.org/configuring.html#config-cache-classes
   # https://stackoverflow.com/a/70566038/1810460
   # https://github.com/rails/spring/issues/598#issuecomment-1268885973
+  cache_classes = !(defined?(Spring::Env) && Spring::Env.new.server_running?)
+  puts "cache_classes: #{cache_classes}, spring defined: #{!!defined?(Spring::Env)}, spring running: #{!!defined?(Spring::Env) && !!Spring::Env.new.server_running?}"
   config.cache_classes = !(defined?(Spring::Env) && Spring::Env.new.server_running?)
 
   # Do not eager load code on boot. This avoids loading your whole application
