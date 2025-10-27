@@ -31,7 +31,6 @@ module OpenaiPersonalizationHelper
   end
 
   def self.create_teaching_profile_system_prompt
-    # Define the teaching style profile keys in order
     profile_keys = %w[Innovator CodeWhisperer BridgeBuilder Storyteller CommunityArchitect LeadLearner]
 
     profiles = profile_keys.map do |key|
