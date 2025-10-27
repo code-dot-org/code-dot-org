@@ -300,16 +300,16 @@
   flex: 1;
   overflow-y: auto;
   min-height: 70px;
-  padding: 0 0 0 12px;
+  padding: 0;
   // scrollbar-gutter: stable prevents layout shift when scrollbar appears,
   // and avoids a bug we've seen where the browser isn't calculuating the scrollbar
   // correctly and scrolls when it shouldn't. It is supported by current browser versions
   // of our supported browsers, but not by older versions of Safari.
   @supports (scrollbar-gutter: stable) {
-    scrollbar-gutter: stable;
+    scrollbar-gutter: stable both-edges;
   }
   @supports not (scrollbar-gutter: stable) {
-    padding-right: 12px;
+    padding: 0 12px;
   }
 }
 
