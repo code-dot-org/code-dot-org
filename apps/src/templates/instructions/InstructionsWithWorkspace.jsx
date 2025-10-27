@@ -105,7 +105,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
-    const {
+    let {
       instructionsStyle,
       workspaceStyle,
       instructionsHeight,
@@ -124,8 +124,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       : sidebarSpace;
 
     if (showAiTutor) {
-      instructionsStyle.right = tutorSpace;
-      workspaceStyle.right = tutorSpace;
+      instructionsStyle = {...instructionsStyle, right: tutorSpace};
+      workspaceStyle = {...workspaceStyle, right: tutorSpace};
     }
 
     return (
