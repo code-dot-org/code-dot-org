@@ -103,6 +103,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
 
+  const userId = useAppSelector(state => state.currentUser.userId);
+
   const selectedSection = useAppSelector(selectedSectionSelector);
 
   const needsReload = useAppSelector(
@@ -210,6 +212,14 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   };
 
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
+
+  React.useMemo(() => {
+    HttpClient.fetchJson<LessonMaterialsData>(
+      `/ai_lesson_summaries/show?user_id=${userId}&lesson_id=${selectedLesson?.id}`
+    )
+      .then(response => console.log(`Response: ${response}`))
+      .catch(error => console.log(`Error: ${error}`));
+  }, [userId, selectedLesson]);
 
   React.useEffect(() => {
     if (lessons.length > 0) {
