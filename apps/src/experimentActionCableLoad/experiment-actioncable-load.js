@@ -7,7 +7,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {PLATFORMS} from '../metrics/AnalyticsConstants';
 
 export const experimentActionCableLoad = function () {
-  console.log('lfm testing before experiment');
+  console.log('actioncable testing before experiment');
   // if (experiments.isEnabled('actioncable-load-testing')) {
   setTimeout(testLoad, 3000);
   // }
@@ -35,12 +35,12 @@ const testLoad = function () {
         );
 
         setTimeout(() => {
-          channel.echo('test message from client', connectionId);
+          channel.echo(connectionId);
         }, 1000);
       },
       received(data) {
-        console.log({received: data, expected: connectionId});
-        if (data === connectionId) {
+        console.log('actioncable', {received: data, expected: connectionId});
+        if (data?.connectionId === connectionId) {
           analyticsReporter.sendEvent(
             'ActionCableLoadTestingReceived',
             {connectionId},
@@ -52,7 +52,7 @@ const testLoad = function () {
         //   channel.close();
         // }, 10000);
       },
-      echo(message, connectionId) {
+      echo(connectionId) {
         this.perform('echo', {connectionId});
 
         analyticsReporter.sendEvent(
