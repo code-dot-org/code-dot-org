@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-24T21:02:22.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Document Object Model (DOM)\n\nA **DOM** is a programming interface that makes a website interactive. \n\nThe DOM turns elements of the HTML document (like text, images, buttons, and more) into objects that JavaScript can work with. \n",
+        "imageUrl": "https://images.code.org/f41bb5ffc9237f0a610b111ee3e5be98-Screenshot 2025-10-24 142719.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-24T21:02:22.696+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-panel-tradeoff-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-panel-tradeoff-test-2025\"},{\"changed_at\":\"2025-10-24 21:16:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-24 21:28:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

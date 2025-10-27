@@ -4,8 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "content_area": "self_paced_pl_6_8",
-      "curriculum_umbrella": "Self-paced PL - CSD",
+      "content_area": "self_paced_pl_k_5",
+      "curriculum_umbrella": "Self-paced PL - CSF",
       "is_migrated": true,
       "student_detail_progress_view": true,
       "topic_tags": [
@@ -15,7 +15,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-22 19:00:06 UTC",
+    "serialized_at": "2025-10-24 18:19:55 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

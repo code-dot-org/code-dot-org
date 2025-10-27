@@ -12,9 +12,19 @@
   }
 }
 
+.guideContainerModal {
+  background-color: rgba(0 0 0 / .3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 71;
+}
+
 .guide {
-  position: fixed;
-  top: 110px;
+  position: absolute;
+  top: 62px;
   right: 80px;
   border-radius: 20px;
   padding: 4px;

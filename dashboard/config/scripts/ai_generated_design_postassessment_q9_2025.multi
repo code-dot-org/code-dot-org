@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q9_2025'
+
+question 'A travel company\'s design team is planning a new website. Before adding colors or photos, they sketch simple layouts showing where the navigation bar, images, and trip descriptions will go. Why is this step important in the design process?'
+
+wrong 'It makes the website load faster once it\'s published online.'
+wrong 'It ensures the website uses the correct color scheme for branding.'
+right 'It helps the team focus on layout and structure before adding visual details.'
+wrong 'It allows the AI tool to automatically write the site\'s content.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 8, 9
+MARKDOWN

@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-24T21:20:57.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# variable\n\nA **variable** is a container that stores a value, which can change while a program runs.\n\n",
+        "imageUrl": "https://images.code.org/eb08ee204186ae8c13cb5205899f4d28-variable2.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-24T21:20:57.772+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-panel-DOM-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-panel-DOM-test-2025\"},{\"changed_at\":\"2025-10-24 21:21:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-25 01:56:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

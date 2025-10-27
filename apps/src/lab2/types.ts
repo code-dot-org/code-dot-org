@@ -238,6 +238,7 @@ export interface BubbleChoiceLevelData {
   displayName: string;
   description: string;
   sublevels: BubbleChoiceSublevel[];
+  hideLetters: boolean;
 }
 
 // Bubble Choice specific property
@@ -247,6 +248,7 @@ export interface BubbleChoiceSublevel {
   level_id: string;
   thumbnail_url: string;
   url: string;
+  position: number;
 }
 
 // Addtional fields for videos that are linked as references in the

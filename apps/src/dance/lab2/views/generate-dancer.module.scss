@@ -6,7 +6,15 @@
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  display: flex;
   flex-direction: row;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
 }
 
 .textArea {
@@ -22,6 +30,13 @@
   border: none;
   resize: vertical;
   border-radius: 10px;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
 }
 
 .navigationButton {
