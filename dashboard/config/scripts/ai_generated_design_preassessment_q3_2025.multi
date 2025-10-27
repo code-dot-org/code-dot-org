@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q3_2025'
+
+question 'A freelance web designer uses an AI tool to create a homepage for a small business. The first version looks unorganized and leaves out key information about the company. What should the designer do to get a better result?'
+
+right 'Write a clearer prompt that explains exactly what sections the homepage should include.'
+wrong 'Keep using the same short prompt and hope the AI improves over time.'
+wrong 'Stop using the AI and build the page completely by hand.'
+wrong 'Add more pictures to the page without changing the prompt.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 3, 6, 10
+MARKDOWN
