@@ -107,7 +107,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       // Keydown handler for cmScroller
       const onScrollerKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Enter') {
-          cmContentDiv.setAttribute('tabIndex', '-1');
           cmContentDiv.focus();
         }
       };
