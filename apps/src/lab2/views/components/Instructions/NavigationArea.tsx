@@ -80,7 +80,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   const continueToLevel = useAppSelector(
     state => getNextLevel(state)?.levelNumber
   );
-  const hasNextLevel = continueToLevel !== undefined;
+  const hasNextLevel = useAppSelector(
+    state => getNextLevel(state)?.id !== undefined
+  );
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = predictSettings?.isPredictLevel;
   const isAiTutorVersion = useAppSelector(
