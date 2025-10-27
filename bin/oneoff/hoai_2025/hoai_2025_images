@@ -4,6 +4,12 @@ require 'aws-sdk-s3'
 require 'ruby-progressbar'
 require 'optparse'
 require 'parallel'
+require File.expand_path('../../../../dashboard/config/environment', __FILE__)
+require_relative '../../../lib/cdo/aws/s3'
+require_relative '../../../deployment'
+
+key = ENV.fetch("OPENAI_API_KEY", nil) || CDO.openai_student_learning_api_key.presence
+raise "Missing OpenAI API key (set openai_student_learning_api_key or OPENAI_API_KEY)" if key.blank?
 
 BUCKET_NAME = 'cdo-curriculum'
 BUCKET_PATH = 'media/musiclab/generate/dancer'
@@ -76,7 +82,7 @@ end.parse!
 end
 
 puts 'Running the generator... (you may need OPENAI_API_KEY set in your environment)'
-puts options
+puts
 
 python_path = File.join(File.dirname(__FILE__), '../../../python/hoai_2025')
 Dir.chdir(python_path)
@@ -84,6 +90,8 @@ python_args = ""
 python_args << " #{options[:attires].map {|a| "-a '#{a}'"}.join(' ')}"
 python_args << " #{options[:animals].map {|a| "-n '#{a}'"}.join(' ')}"
 python_args << " #{options[:adjectives].map {|a| "-j '#{a}'"}.join(' ')}"
+python_args << " -k '#{key}'"
+puts "python -m hoai_2025.combinatoric_generation#{python_args}"
 system("uv run python -m hoai_2025.combinatoric_generation#{python_args}") unless options[:just_upload]
 Dir.chdir('../..')
 exit
@@ -116,10 +124,6 @@ Dir.glob(File.join(output_path, '**', '*.*').to_s) do |file_path|
   key = file_path[(output_path.length + 1)..]
   objects[key] = file_path
 end
-
-require File.expand_path('../../../../dashboard/config/environment', __FILE__)
-require_relative '../../../lib/cdo/aws/s3'
-require_relative '../../../deployment'
 
 # Parallelize uploading them to the bucket
 upload_progress_bar = ProgressBar.create(total: objects.size)
