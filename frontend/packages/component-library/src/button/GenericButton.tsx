@@ -6,7 +6,7 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import {ButtonType, ButtonColor} from './types';
 
-import moduleStyles from './_baseButton.module.scss';
+import moduleStyles from './genericButton.module.scss';
 
 export interface TextButtonSpecificProps {
   /** Left Button icon */
@@ -100,7 +100,7 @@ export interface ButtonSpecificProps {
   forceHover?: boolean;
 }
 
-export interface _BaseButtonProps
+export interface GenericButtonProps
   extends CoreButtonProps,
     LinkButtonSpecificProps,
     ButtonSpecificProps {}
@@ -115,7 +115,7 @@ const checkButtonPropsForErrors = ({
   isIconOnly,
   color,
   type,
-}: _BaseButtonProps) => {
+}: GenericButtonProps) => {
   if (
     (color === 'gray' && type == 'primary') ||
     (color === 'gray' && type === 'tertiary' && !isIconOnly)
@@ -191,7 +191,7 @@ const spinnerIcon: FontAwesomeV6IconProps = {
   animationType: 'spin',
 };
 
-const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
+const GenericButton: React.FunctionComponent<GenericButtonProps> = ({
   className,
   id,
   disabled = false,
@@ -312,14 +312,12 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see ./__tests__/_BaseButton.test.tsx)
+ * * (see ./__tests__/GenericButton.test.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
  *
- * Design System: ***_BaseButton*** Component.
+ * Design System: ***GenericButton*** Component.
  *
- * ***(!IMPORTANT!)*** This is a private component for Designs System use only. It provides a base for ***Button***
- * and ***LinkButton*** components, implementing all the logic and styles for them.
  */
-export default memo(BaseButton);
+export default memo(GenericButton);
