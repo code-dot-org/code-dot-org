@@ -1,0 +1,7 @@
+basic
+emo
+sporty
+streetwear
+fancy
+preppy
+

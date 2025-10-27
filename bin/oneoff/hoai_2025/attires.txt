@@ -1,0 +1,8 @@
+headphones
+sunglasses
+crown
+headscarf
+baseball-cap
+beanie
+headband
+
