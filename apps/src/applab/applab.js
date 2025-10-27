@@ -323,9 +323,11 @@ Applab.getHtml = function () {
   // This method is called on autosave. If we're about to autosave, let's update
   // levelHtml to include our current state.
   if ($('#designModeViz').is(':visible')) {
-    console.log('in applab getHtml - is visible');
-    designMode.serializeToLevelHtml();
+    console.log('in applab getHtml - designModeVi is visible');
+  } else {
+    console.log('in applab getHtml - designModeVi is not visible');
   }
+  designMode.serializeToLevelHtml();
   console.log('in applab getHtml - returning');
   return Applab.levelHtml;
 };
@@ -1307,6 +1309,7 @@ function onInterfaceModeChange(mode) {
   } else if (mode === ApplabInterfaceMode.CODE) {
     setTimeout(() => utils.fireResizeEvent(), 0);
     if (!Applab.isRunning()) {
+      // serializeAndSave called but designModeVi is not visible!
       Applab.serializeAndSave();
       var divApplab = document.getElementById('divApplab');
       designMode.parseFromLevelHtml(divApplab, false);
