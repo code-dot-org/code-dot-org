@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q13_2025'
+
+question 'A university website has clear navigation and well-organized content, but many students complain that the text is small and the color contrast makes it hard to read. What should the web team do to make the site both accessible and usable?'
+
+wrong 'Add more animations and graphics to make the site more engaging'
+right 'Increase text size and color contrast so information is easier to read for everyone'
+wrong 'Keep the design the same since the layout is already organized'
+wrong 'Reduce the number of pages so users can find information faster'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 2, 11
+MARKDOWN

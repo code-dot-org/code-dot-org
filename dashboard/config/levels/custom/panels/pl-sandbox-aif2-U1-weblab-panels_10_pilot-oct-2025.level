@@ -1,0 +1,65 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-10-24T17:29:58.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "## Web Lab\n Welcome to **Web Lab** an integrated development space that allows you to collaborate with AI while building web applications. ",
+        "imageUrl": "https://images.code.org/2b635f8b182c882baa56fbbe6a3559ed-_WebLab.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Sidebar Panel\n The left **Sidebar Panel** toggles between instructions, AI Chat, and Version History. \n\n## Instructions Panel\nClick on the `i` icon to find the instructions for the web lab level.",
+        "imageUrl": "https://images.code.org/bcd7359e8550c99277ffc673d3fb5463-_WebLab (1).png",
+        "key": "sp-pl-DS-pythonLab_tour-e31a5299-fb7b-4695-ac1f-5a80498a9378",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## AI Chat\nTo access AI Chat, click the AI bot icon in the side panel. You can use it to get hints, debug code, or ask for explanations while you work.",
+        "imageUrl": "https://images.code.org/95125fb3b0b78f94f629678a8f0c92c4-_WebLab (2).png",
+        "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Version History\nUse Version History to save snapshots of your project and return to any previous version at any time. \n\nEncourage students to save versions regularly as they make updates or experiment with their code.",
+        "imageUrl": "https://images.code.org/d1e105a7ed355fed1cd3b11cfe521d78-_WebLab (3).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-f545a3f8-80df-47e7-a398-659a35ae4b5b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# The Workspace \nThe Workspace panel is where you build your project. You can toggle between Code, Preview, and Split View while you work.\n## Code View\nIn Code view, you can see the different files that make up your project. Here, you’ll see an HTML file and a CSS file. As you build, you’ll switch between the two to write and style your code.",
+        "imageUrl": "https://images.code.org/c42672f166a022edd430ce4a83caff4b-_WebLab (4).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-1381dbb9-2fdf-4433-9c6a-2610b745cb36",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Preview \nPreview lets you see what your project looks like as it runs—showing the output of your code in real time.\n\n## Response View Toggle\nThe Mobile/Desktop View Toggle lets you see how your project looks on different devices. Switch between views to preview your site on a phone or a computer screen.",
+        "imageUrl": "https://images.code.org/4bc6f84b27c6469800cd2507329cce7b-_WebLab (5).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-ddc7c7da-1060-4c21-9dd6-9b7845350c55",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Split View\nSplit View lets you see your code and the live output next to each other, so you can easily test and adjust as you build.\n\n**Tip:** Need more space? Drag the divider between panels to resize each window.\n",
+        "imageUrl": "https://images.code.org/3aa52b83f0158bf14b94b04a761e0adb-_WebLab (6).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-b8a0d511-d93e-4d1f-9fe8-7eb46274e42e",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Settings\nThe Settings feature, accessed by clicking the gear icon in the bottom-left corner, lets you customize your workspace by adjusting the language, font size, and theme.",
+        "imageUrl": "https://images.code.org/18a6a98850f5df71a38f275ef96eb8e6-_WebLab (7).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-06cf4529-4198-452a-9c02-38d08054e531",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_pilot-oct-2025",
+    "offer_browser_tts": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-24T17:29:58.463+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2-U1-weblab-panels_10\\\"\"],\"cloned_from\":\"pl-sandbox-aif2-U1-weblab-panels_10\"}]"
+}]]></config>
+</Panels>
