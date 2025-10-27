@@ -7,7 +7,7 @@ import {Box} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
-import styles from './CodebridgeEmptyState.module.scss';
+import styles from './codebridgeEmptyState.module.scss';
 
 export interface CodebridgeEmptyStateProps {
   imageProps?: ImageProps;
