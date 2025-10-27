@@ -1,5 +1,5 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
-import {Typography} from '@mui/material';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState, useMemo} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
@@ -68,15 +68,13 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
 
   return (
     <div className={styles.courseContentDropdownContainer}>
-      <Typography
+      <BodyThreeText
         className={styles.courseTitleText}
         id={`course-content-dropdown-${section.name.replaceAll(' ', '-')}`}
-        variant="body3"
-        gutterBottom
       >
         <b>{`${i18n.course()}: `}</b>
         {section.courseDisplayName}
-      </Typography>
+      </BodyThreeText>
       {section.unitId ? (
         <CustomDropdown
           className={styles.courseContentDropdown}

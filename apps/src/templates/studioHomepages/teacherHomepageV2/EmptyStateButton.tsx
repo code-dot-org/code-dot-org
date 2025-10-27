@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
@@ -46,9 +46,7 @@ export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
           iconName={icon}
           iconStyle={'solid'}
         />
-        <Typography variant="body3" gutterBottom>
-          {buttonText}
-        </Typography>
+        <BodyThreeText>{buttonText}</BodyThreeText>
       </div>
       <FontAwesomeV6Icon
         className={styles.emptyStateButtonIcon}
@@ -68,9 +66,7 @@ export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
           iconName={icon}
           iconStyle={'solid'}
         />
-        <Typography variant="body3" gutterBottom>
-          {buttonText}
-        </Typography>
+        <BodyThreeText>{buttonText}</BodyThreeText>
       </div>
       <FontAwesomeV6Icon
         className={styles.emptyStateButtonIcon}
