@@ -21,6 +21,18 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "ed5b1ffa-18d0-46c5-baa1-c68be0c88f7c",
+        "notice": "AI Foundations Semester 2 Professional Learning",
+        "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+        "link": "https://studio.code.org/courses/teaching-ai-foundations-semester2-2025",
+        "type": "collaborate",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "Let's Go!"
+      }
+    ],
     "family_name": "artificial-intelligence-foundations-semester2",
     "has_verified_resources": true,
     "numbered_units": "auto",
