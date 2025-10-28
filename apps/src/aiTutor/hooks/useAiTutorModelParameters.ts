@@ -6,6 +6,23 @@ import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+// Dynamically import LangfuseClient when needed to avoid CommonJS/ESM interop issues.
+const fetchLangfusePrompt = async (): Promise<string | undefined> => {
+  const {LangfuseClient} = await import('@langfuse/client');
+  const LANGFUSE_SECRET_KEY = 'sk-lf-11a57395-36e1-4552-90b0-a901c9c6aa1c';
+  const LANGFUSE_PUBLIC_KEY = 'pk-lf-50c2babe-69ec-42a7-9a02-eadf703dc9eb';
+  const LANGFUSE_BASE_URL = 'https://us.cloud.langfuse.com';
+  // Initialize with proper authentication
+  const langfuse = new LangfuseClient({
+    secretKey: LANGFUSE_SECRET_KEY,
+    publicKey: LANGFUSE_PUBLIC_KEY,
+    baseUrl: LANGFUSE_BASE_URL, // Optional: defaults to https://cloud.langfuse.com
+  });
+
+  const langfusePrompt = await langfuse.prompt.get('modes/debug');
+  return langfusePrompt?.prompt;
+};
+
 export const fetchCustomPrompt = async (promptName: string) => {
   const url = `https://curriculum.code.org/media/prompt-library/${promptName}.md`;
   const response = await HttpClient.get(url);
@@ -44,28 +61,42 @@ export const useAiTutorModelParameters = (
   useEffect(() => {
     let mounted = true;
 
-    const promptName = customPromptName ?? options?.aiTutorSystemPromptName;
+    // const promptName = customPromptName ?? options?.aiTutorSystemPromptName;
 
-    const fetchPrompt = async () => {
-      if (!promptName) {
-        setSystemPrompt(defaultSystemPrompt);
-        return;
-      }
+    // const fetchPrompt = async () => {
+    //   if (!promptName) {
+    //     setSystemPrompt(defaultSystemPrompt);
+    //     return;
+    //   }
 
+    //   try {
+    //     const prompt = await fetchCustomPrompt(promptName);
+    //     if (mounted) {
+    //       setSystemPrompt(prompt || defaultSystemPrompt);
+    //     }
+    //   } catch (error) {
+    //     console.error('Error fetching custom prompt', error);
+    //     if (mounted) {
+    //       setSystemPrompt(defaultSystemPrompt);
+    //     }
+    //   }
+    // };
+
+    // fetchPrompt();
+
+    const fetchLangfusePromptAndSet = async () => {
       try {
-        const prompt = await fetchCustomPrompt(promptName);
-        if (mounted) {
-          setSystemPrompt(prompt || defaultSystemPrompt);
+        const langfusePrompt = await fetchLangfusePrompt();
+        if (mounted && langfusePrompt) {
+          setSystemPrompt(langfusePrompt);
         }
+        console.log('🤖: langfusePrompt:', langfusePrompt);
       } catch (error) {
-        console.error('Error fetching custom prompt', error);
-        if (mounted) {
-          setSystemPrompt(defaultSystemPrompt);
-        }
+        console.error('Error fetching Langfuse prompt:', error);
       }
     };
 
-    fetchPrompt();
+    fetchLangfusePromptAndSet();
 
     return () => {
       mounted = false;
