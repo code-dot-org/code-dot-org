@@ -2,15 +2,14 @@ import {createConsumer} from '@rails/actioncable';
 import _ from 'lodash';
 
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-// import experiments from '@cdo/apps/util/experiments';
+import experiments from '@cdo/apps/util/experiments';
 
 import {PLATFORMS} from '../metrics/AnalyticsConstants';
 
 export const experimentActionCableLoad = function () {
-  // DO NOT MERGE WITHOUT ADDING EXPERIMENT LOGIC BACK IN
-  // if (experiments.isEnabled('actioncable-load-testing')) {
-  setTimeout(testLoad, 3000);
-  // }
+  if (experiments.isEnabled('actioncable-load-testing')) {
+    setTimeout(testLoad, 3000);
+  }
 };
 
 const testLoad = function () {
