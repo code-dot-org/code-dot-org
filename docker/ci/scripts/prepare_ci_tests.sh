@@ -77,6 +77,6 @@ echo "Wrote settings and secrets from env vars into locals.yml."
 
 set -x
 
-bundle exec rake install
+./install_ci_tests.sh
 
 ./build_ci_tests.sh
