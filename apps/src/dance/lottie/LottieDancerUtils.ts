@@ -330,7 +330,7 @@ export async function fetchDataUrl(url?: string): Promise<string | null> {
       fileReader.readAsDataURL(blob);
     });
   } catch (e) {
-    console.log(`Failed to fetch data URL for image at ${url}:`, e);
+    console.warn(`Failed to fetch data URL for image at ${url}:`, e);
     return null;
   }
 }
@@ -385,6 +385,10 @@ export function getAssetById(
   ) as LottieAssetPrecomp | null;
 }
 
+/**
+ * Hides vector layers inside their respective comp. Also captures a copy of the
+ * first matching layer’s transform (ks), so we can reuse it for positioning.
+ */
 export function hideLayersByTypeAndCaptureKs(
   compAsset: LottieAssetPrecomp,
   typesToHide: number[] = [4, 1] // 4: shape, 1: solid
@@ -470,7 +474,7 @@ export function insertImageLayer(
   compDefaultH: number,
   scaleMul: number,
   extraLayerProps?: Partial<LottieImageLayer>
-): void {
+): LottieImageLayer {
   const compW = compAsset.w || compDefaultW;
   const compH = compAsset.h || compDefaultH;
   const imgW = DEFAULT_IMAGE_SIZE;
@@ -503,6 +507,7 @@ export function insertImageLayer(
   };
 
   (compAsset.layers = compAsset.layers || []).splice(insertIndex, 0, layer);
+  return layer;
 }
 
 export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
@@ -531,7 +536,7 @@ export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
   const {sourceTag = 'default'} = opts;
   const srcSuffix = `?src=${encodeURIComponent(sourceTag)}`;
 
-  // 1) Initializae with defaults
+  // 1) Initialize with defaults
   const urls: ResolvedDancerAssets = {
     headUrl: `${DEFAULT_HEAD_URL}${srcSuffix}`,
     metadataUrl: DEFAULT_METADATA_URL,
@@ -706,4 +711,33 @@ export function recolorBodySvgString(
 
 export function getSkeletonMetadataUrl(skeletonName: string): string {
   return `${BASE_HOST}/dancers/input/palettes/${skeletonName}-metadata.json`;
+}
+
+// Hide the magenta "dress" solids in the comp tree (frog skeleton only).
+export function hideMagentaDress(animData: LottieJSON): void {
+  if (!animData) return;
+
+  // Build lookup for nested precomps.
+  const assetById: Record<string, LottieJSON> = {};
+  for (const asset of animData.assets || []) {
+    if (asset?.id) assetById[asset.id] = asset;
+  }
+
+  const visitComp = (comp: LottieJSON) => {
+    if (!comp?.layers) return;
+    for (const layer of comp.layers) {
+      if (layer.nm === 'Deep Magenta-Red Solid 4') {
+        layer.hd = true;
+      }
+
+      // Recurse into precomps.
+      if (layer.ty === 0 && typeof layer.refId === 'string') {
+        const child = assetById[layer.refId];
+        if (child) visitComp(child);
+      }
+    }
+  };
+
+  // Start from top-level comp.
+  visitComp(animData);
 }

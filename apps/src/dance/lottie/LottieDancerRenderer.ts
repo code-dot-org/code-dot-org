@@ -49,9 +49,10 @@ import {
   recolorBodySvgString,
   svgStringToDataUrl,
   getSkeletonMetadataUrl,
+  hideMagentaDress,
 } from './LottieDancerUtils';
 
-const TEST_SKELETON = 'duck';
+const DEFAULT_SKELETON = 'unicorn';
 
 export default class LottieDancerRenderer {
   // Injected by DanceParty's GeneratedDancer
@@ -78,6 +79,7 @@ export default class LottieDancerRenderer {
   private metadataUrl: string;
   private bodyUrl?: string;
   private bodyMetadataUrl?: string;
+  private currentMove: DanceMoves | null;
 
   constructor() {
     this.headScale = 0.5;
@@ -90,6 +92,7 @@ export default class LottieDancerRenderer {
     this.metadataUrl = urls.metadataUrl;
     this.bodyUrl = urls.bodyUrl;
     this.bodyMetadataUrl = urls.bodyMetadataUrl;
+    this.currentMove = null;
   }
   /**
    * The caller provides a CanvasRenderingContext2D to paint into.
@@ -120,6 +123,8 @@ export default class LottieDancerRenderer {
     // Lottie instance bound to our canvas 2D context
     await this.prepareLottie(animData);
 
+    this.currentMove = danceMove;
+
     this.totalFrames = Math.max(
       0,
       Math.round((animData.op || 0) - (animData.ip || 0))
@@ -139,16 +144,44 @@ export default class LottieDancerRenderer {
     return this.compW && this.compH ? {w: this.compW, h: this.compH} : null;
   }
 
-  renderFrame(frameIndex: number): void {
+  renderFrame(frameIndex: number, mirror?: number): void {
     if (!this.anim || !this.ctx || this.totalFrames === null) {
       return;
     }
+
+    if (this.moveRequiresMirroring()) {
+      // Flip the entire canvas for vectors.
+      (this.ctx.canvas as HTMLElement).style.transform = `scaleX(${mirror})`;
+    } else {
+      (this.ctx.canvas as HTMLElement).style.transform = '';
+    }
+
     const totalFrames = Math.max(1, this.totalFrames || 1);
     const frame = Math.floor(
       ((frameIndex % totalFrames) + totalFrames) % totalFrames
     );
-
     this.anim.goToAndStop(frame, true);
+  }
+
+  moveRequiresMirroring(): boolean {
+    if (this.currentMove === null) {
+      return false;
+    }
+    // List of moves that should be mirrored when rendering.
+    // Other moves (double_jam, this_or_that, zombie) already have symmetrical choreography.
+    const movesToMirror = new Set<DanceMoves>([
+      'rest',
+      'clap_high',
+      'dab',
+      'drop',
+      'floss',
+      'fresh',
+      'kick',
+      'roll',
+      'thriller',
+    ]);
+    const currentMove = this.currentMove;
+    return movesToMirror.has(currentMove);
   }
 
   resize(): void {
@@ -205,14 +238,17 @@ export default class LottieDancerRenderer {
           );
           const skeletonNameFromJson = bodyMetaData?.skeleton;
           if (typeof skeletonNameFromJson === 'string') {
-            console.log(
-              `Resolved skeleton name "${skeletonNameFromJson}" from body metadata JSON.`
-            );
             return skeletonNameFromJson.trim().toLowerCase();
           }
-        } catch {}
+        } catch (e) {
+          console.warn(
+            `Failed to fetch skeleton name from body metadata URL ${this.bodyMetadataUrl}`,
+            e,
+            `Falling back to ${skeletonParam || DEFAULT_SKELETON} skeleton.`
+          );
+        }
       }
-      return skeletonParam || TEST_SKELETON;
+      return skeletonParam || DEFAULT_SKELETON;
     })();
     return this.skeletonNamePromise;
   }
@@ -362,6 +398,12 @@ export default class LottieDancerRenderer {
           }
         }
       }
+
+      // The frog has an extra magenta dress layer that needs to be hidden.
+      if (skeletonName === 'frog') {
+        hideMagentaDress(animData);
+      }
+
       // Memoize transformed Lottie JSON per move (in-memory cache) so subsequent setSource calls skip recolor/head work.
       // This is useful if the same dance move is used later in a song, or if there are multiple generated dancers using the same move.
       this.cachedAnimationData[danceMoveLowerCase] = animData;
