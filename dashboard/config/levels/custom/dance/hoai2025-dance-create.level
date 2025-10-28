@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 63,
-  "created_at": "2025-09-17T09:36:01.000Z",
+  "created_at": "2025-09-10T22:47:56.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -37,9 +37,10 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "long_instructions": "#### Create Your Dance Performance\r\nModify the prompt to generate dance code with AI."
   },
-  "audit_log": "[{\"changed_at\":\"2025-09-10 22:48:37 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-07 00:36:07 +0000\",\"changed\":[\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-10-08 04:52:01 +0000\",\"changed\":[\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-09-10 22:48:37 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-07 00:36:07 +0000\",\"changed\":[\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-10-08 04:52:01 +0000\",\"changed\":[\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-26 23:40:26 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-26 23:41:16 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
