@@ -22,6 +22,7 @@ interface UserChatMessageEditorProps {
   editorContainerClassName?: string;
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
+  messageContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
   responseCallback?: (response: string) => string;
 
@@ -43,6 +44,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   editorContainerClassName,
   chatButtons,
   hiddenContextCallback,
+  messageContextCallback,
   multimodalAvailable,
   responseCallback,
   levelName,
@@ -79,6 +81,7 @@ const UserChatMessageEditor: React.FunctionComponent<
     async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
       if (!disabled) {
         const hiddenContext = await hiddenContextCallback?.();
+        const messageContext = await messageContextCallback?.();
         dispatch(
           submitChatContents({
             text: userMessage,
@@ -95,12 +98,14 @@ const UserChatMessageEditor: React.FunctionComponent<
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
             responseCallback,
+            messageContext,
           })
         );
       }
     },
     [
       disabled,
+      messageContextCallback,
       hiddenContextCallback,
       dispatch,
       modelParameters,

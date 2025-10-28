@@ -80,6 +80,7 @@ type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
   hiddenContextCallback?: () => Promise<string>;
+  messageContextCallback?: () => Promise<string>;
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
@@ -102,6 +103,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   className,
   headerClassName,
   hiddenContextCallback,
+  messageContextCallback,
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
@@ -207,6 +209,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = (
         <AiTutorChat
           hiddenContextCallback={hiddenContextCallback}
+          messageContextCallback={messageContextCallback}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           levelName={levelName}
           channelId={channelId}
@@ -258,6 +261,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     versionHistoryProps,
     showRubric,
     hideInstructionsNavigation,
+    messageContextCallback,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,

@@ -172,6 +172,7 @@ const Weblab2View: React.FC<
           startSources={startSources}
           levelProperties={levelProperties}
           hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+          messageContextCallback={aiTutorHelper.getMessageContextCallback()}
           aiTutorMultimodalEnabled={true}
           aiTutorChatButtonData={[]}
           aiTutorContextHelper={aiTutorHelper}

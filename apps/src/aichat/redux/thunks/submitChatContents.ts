@@ -50,6 +50,7 @@ export const submitChatContents = createAsyncThunk(
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
       responseCallback?: (response: string) => string;
+      messageContext?: string;
     },
     thunkAPI
   ) => {
@@ -65,6 +66,7 @@ export const submitChatContents = createAsyncThunk(
       analyticsProperties,
       userAddedSelectionContext,
       responseCallback,
+      messageContext,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -87,6 +89,7 @@ export const submitChatContents = createAsyncThunk(
       assets,
       userAddedSelectionContext,
       timestamp: Date.now(),
+      messageContext,
     };
     dispatch(setChatMessagePending(newUserMessage));
 
