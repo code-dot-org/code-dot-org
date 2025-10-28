@@ -144,14 +144,16 @@ export default class LottieDancerRenderer {
     return this.compW && this.compH ? {w: this.compW, h: this.compH} : null;
   }
 
-  renderFrame(frameIndex: number, mirror?: number): void {
+  renderFrame(frameIndex: number, mirror?: boolean): void {
     if (!this.anim || !this.ctx || this.totalFrames === null) {
       return;
     }
 
     if (this.moveRequiresMirroring()) {
       // Flip the entire canvas for vectors.
-      (this.ctx.canvas as HTMLElement).style.transform = `scaleX(${mirror})`;
+      (this.ctx.canvas as HTMLElement).style.transform = `scaleX(${
+        mirror ? -1 : 1
+      })`;
     } else {
       (this.ctx.canvas as HTMLElement).style.transform = '';
     }

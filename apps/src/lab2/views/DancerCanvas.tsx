@@ -64,8 +64,7 @@ const DancerCanvas: React.FC<Props> = ({
 
     // A single loop plays out over half a measure. Every other half-measure
     // is mirrored.
-    const shouldMirror = Math.floor(measure * 2) % 2 === 1;
-    const mirror = shouldMirror ? -1 : 1;
+    const mirror = Math.floor(measure * 2) % 2 === 1;
 
     const animationStep = measure % 1;
     const frameIndex = Math.floor(animationStep * totalFrames * 2);
@@ -181,15 +180,12 @@ const DancerCanvas: React.FC<Props> = ({
     // The animation speed should be similar to with a 120 bpm song.
     const targetFps = 48;
 
-    let mirror = 1;
     const tick = (currentMs: number) => {
       const elapsedMs = currentMs - startMs;
-      const frameIndex =
-        Math.floor((elapsedMs * targetFps) / 1000) % totalFrames;
-      // Detect when the animation loops back to frame 0
-      if (frameRef.current === totalFrames - 1 && frameIndex === 0) {
-        mirror *= -1;
-      }
+      const elapsedFrames = Math.floor((elapsedMs * targetFps) / 1000);
+      const frameIndex = elapsedFrames % totalFrames;
+      // Every other loop is mirrored.
+      const mirror = Math.floor((elapsedFrames / totalFrames) % 2) === 1;
       frameRef.current = frameIndex;
       renderer?.renderFrame(frameIndex, mirror);
       rafId = requestAnimationFrame(tick);
