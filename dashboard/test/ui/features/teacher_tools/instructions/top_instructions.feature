@@ -4,11 +4,11 @@ Feature: Eyes Tests for Top Instructions
 
 Scenario: CSF Top Instructions
   When I open my eyes to test "top instructions in CSF"
-  And I am on "https://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/3?noautoplay=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/3?noautoplay=true"
   And I wait for the lab page to fully load
   Then I see no difference for "maze short instructions"
 
-  And I am on "https://studio.code.org/courses/allthethingscourse/units/1/lessons/5/levels/4?noautoplay=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/5/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
   And I see no difference for "artist long instructions"
 
@@ -19,7 +19,7 @@ Scenario: CSF Top Instructions
   Then I press "ani-gif-preview"
   And I see no difference for "maze ani gif dialog"
 
-  Then I am on "https://studio.code.org/courses/allthethingscourse/units/1/lessons/1/levels/1?noautoplay=true"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/1/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I see no difference for "Jigsaw with anigif"
 
