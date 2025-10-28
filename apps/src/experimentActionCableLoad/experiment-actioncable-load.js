@@ -7,7 +7,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {PLATFORMS} from '../metrics/AnalyticsConstants';
 
 export const experimentActionCableLoad = function () {
-  console.log('actioncable testing before experiment');
+  // DO NOT MERGE WITHOUT ADDING EXPERIMENT LOGIC BACK IN
   // if (experiments.isEnabled('actioncable-load-testing')) {
   setTimeout(testLoad, 3000);
   // }
@@ -39,7 +39,6 @@ const testLoad = function () {
         }, 1000);
       },
       received(data) {
-        console.log('actioncable', {received: data, expected: connectionId});
         if (data?.connectionId === connectionId) {
           analyticsReporter.sendEvent(
             'ActionCableLoadTestingReceived',
@@ -47,10 +46,6 @@ const testLoad = function () {
             PLATFORMS.BOTH
           );
         }
-
-        // setTimeout(() => {
-        //   channel.close();
-        // }, 10000);
       },
       echo(connectionId) {
         this.perform('echo', {connectionId});
@@ -63,4 +58,14 @@ const testLoad = function () {
       },
     }
   );
+
+  setTimeout(() => {
+    consumer.disconnect();
+
+    analyticsReporter.sendEvent(
+      'ActionCableLoadTestingUnsubscribed',
+      {connectionId},
+      PLATFORMS.BOTH
+    );
+  }, 60000);
 };
