@@ -1,0 +1,760 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-10-27 18:53:51 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Teaching AI Foundations (Semester 2)",
+      "name": "Introduction to Teaching AI Foundations (Semester 2)",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "\n **By the end of this professional learning module, you will be able to:**\n\n*  Introduce the foundaitonal concepts in the AI Foundations (Semester 2) course.\n*  Understand the basics of web applications and how they support interactive, AI-powered projects.\n*  Understand how to integrate AI tools and concepts into coding lessons to model responsible and creative AI use.\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "\n **By the end of this professional learning module, you will be able to:**\n\n*  Introduce the foundaitonal concepts in the AI Foundations (Semester 2) course.\n*  Understand the basics of web applications and how they support interactive, AI-powered projects.\n*  Understand how to integrate AI tools and concepts into coding lessons to model responsible and creative AI use.\n\n**Suggested Time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f5022dc7-0bc2-47b1-ad92-ba4ab540e991",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f5022dc7-0bc2-47b1-ad92-ba4ab540e991",
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "b7d11905-1bcd-46db-a856-3ece62062a22",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to AI Foundations "
+      },
+      "seeding_key": {
+        "activity_section.key": "b7d11905-1bcd-46db-a856-3ece62062a22",
+        "lesson_activity.key": "f5022dc7-0bc2-47b1-ad92-ba4ab540e991"
+      }
+    },
+    {
+      "key": "bf86d446-5d1e-42f7-8d53-b26c2cab0428",
+      "position": 2,
+      "properties": {
+        "progression_name": "Coding with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf86d446-5d1e-42f7-8d53-b26c2cab0428",
+        "lesson_activity.key": "f5022dc7-0bc2-47b1-ad92-ba4ab540e991"
+      }
+    },
+    {
+      "key": "06051361-c636-4286-97a6-b7ad8d8c2468",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Building Blocks"
+      },
+      "seeding_key": {
+        "activity_section.key": "06051361-c636-4286-97a6-b7ad8d8c2468",
+        "lesson_activity.key": "f5022dc7-0bc2-47b1-ad92-ba4ab540e991"
+      }
+    },
+    {
+      "key": "c5cf519a-0eff-42b8-adc8-c8fe9212612d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Introducing Web Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5cf519a-0eff-42b8-adc8-c8fe9212612d",
+        "lesson_activity.key": "f5022dc7-0bc2-47b1-ad92-ba4ab540e991"
+      }
+    },
+    {
+      "key": "633c8a4c-8cc6-4183-924b-107c06516e43",
+      "position": 5,
+      "properties": {
+        "progression_name": "Closing"
+      },
+      "seeding_key": {
+        "activity_section.key": "633c8a4c-8cc6-4183-924b-107c06516e43",
+        "lesson_activity.key": "f5022dc7-0bc2-47b1-ad92-ba4ab540e991"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-pre-L1-Welcome_pilot-oct-2025"
+        ],
+        "progression": "Introduction to AI Foundations "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-L1-Welcome_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "b7d11905-1bcd-46db-a856-3ece62062a22"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-pre-L1-Welcome_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-pre_what_is_aif_4_pilot-oct-2025"
+        ],
+        "progression": "Introduction to AI Foundations "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre_what_is_aif_4_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "b7d11905-1bcd-46db-a856-3ece62062a22"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-pre_what_is_aif_4_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-pre-learning-approach_5_pilot-oct-2025"
+        ],
+        "progression": "Introduction to AI Foundations "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-learning-approach_5_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "b7d11905-1bcd-46db-a856-3ece62062a22"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-pre-learning-approach_5_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-pre-different-6_pilot-oct-2025"
+        ],
+        "progression": "Introduction to AI Foundations "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-different-6_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "b7d11905-1bcd-46db-a856-3ece62062a22"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-pre-different-6_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_what is GenAI_5_pilot-oct-2025"
+        ],
+        "progression": "Coding with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_what is GenAI_5_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "bf86d446-5d1e-42f7-8d53-b26c2cab0428"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_what is GenAI_5_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-reflection_pilot-oct-2025"
+        ],
+        "progression": "Coding with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre-reflection_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "bf86d446-5d1e-42f7-8d53-b26c2cab0428"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-pre-reflection_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_final_project_7_pilot-oct-2025"
+        ],
+        "progression": "Coding with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_final_project_7_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "bf86d446-5d1e-42f7-8d53-b26c2cab0428"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_final_project_7_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_HowWeGetThere_8_pilot-oct-2025"
+        ],
+        "progression": "Coding with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_HowWeGetThere_8_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "bf86d446-5d1e-42f7-8d53-b26c2cab0428"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_HowWeGetThere_8_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_HTML-10_pilot-oct-2025"
+        ],
+        "progression": "The Building Blocks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_HTML-10_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "06051361-c636-4286-97a6-b7ad8d8c2468"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_HTML-10_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_CSS_11_pilot-oct-2025"
+        ],
+        "progression": "The Building Blocks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_CSS_11_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "06051361-c636-4286-97a6-b7ad8d8c2468"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_CSS_11_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_JavaScript_12_pilot-oct-2025"
+        ],
+        "progression": "The Building Blocks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_JavaScript_12_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "06051361-c636-4286-97a6-b7ad8d8c2468"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_JavaScript_12_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_AIFitIn_12_pilot-oct-2025"
+        ],
+        "progression": "The Building Blocks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_AIFitIn_12_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "06051361-c636-4286-97a6-b7ad8d8c2468"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_AIFitIn_12_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_weblabAI_13_pilot-oct-2025"
+        ],
+        "progression": "Introducing Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_weblabAI_13_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "c5cf519a-0eff-42b8-adc8-c8fe9212612d"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_weblabAI_13_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre1-weblab-panels_10_pilot-oct-2025"
+        ],
+        "progression": "Introducing Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre1-weblab-panels_10_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "c5cf519a-0eff-42b8-adc8-c8fe9212612d"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-pre1-weblab-panels_10_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-reflection2_pilot-oct-2025"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre-reflection2_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "633c8a4c-8cc6-4183-924b-107c06516e43"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-pre-reflection2_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-Closing_pilot-oct-2025"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre-Closing_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "633c8a4c-8cc6-4183-924b-107c06516e43"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-pre-Closing_pilot-oct-2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-pre-L1-Welcome_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-L1-Welcome_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "b7d11905-1bcd-46db-a856-3ece62062a22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-pre_what_is_aif_4_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre_what_is_aif_4_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "b7d11905-1bcd-46db-a856-3ece62062a22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-pre-learning-approach_5_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-learning-approach_5_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "b7d11905-1bcd-46db-a856-3ece62062a22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-pre-different-6_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-different-6_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "b7d11905-1bcd-46db-a856-3ece62062a22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_what is GenAI_5_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_what is GenAI_5_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "bf86d446-5d1e-42f7-8d53-b26c2cab0428"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-pre-reflection_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre-reflection_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "bf86d446-5d1e-42f7-8d53-b26c2cab0428"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_final_project_7_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_final_project_7_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "bf86d446-5d1e-42f7-8d53-b26c2cab0428"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_HowWeGetThere_8_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_HowWeGetThere_8_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "bf86d446-5d1e-42f7-8d53-b26c2cab0428"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_HTML-10_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_HTML-10_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "06051361-c636-4286-97a6-b7ad8d8c2468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_CSS_11_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_CSS_11_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "06051361-c636-4286-97a6-b7ad8d8c2468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_JavaScript_12_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_JavaScript_12_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "06051361-c636-4286-97a6-b7ad8d8c2468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_AIFitIn_12_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_AIFitIn_12_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "06051361-c636-4286-97a6-b7ad8d8c2468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_weblabAI_13_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_weblabAI_13_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "c5cf519a-0eff-42b8-adc8-c8fe9212612d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-pre1-weblab-panels_10_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre1-weblab-panels_10_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "c5cf519a-0eff-42b8-adc8-c8fe9212612d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-pre-reflection2_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre-reflection2_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "633c8a4c-8cc6-4183-924b-107c06516e43"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-pre-Closing_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre-Closing_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+        "activity_section.key": "633c8a4c-8cc6-4183-924b-107c06516e43"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -18,14 +18,12 @@ interface AiDiffChatHeaderProps {
   onSuggestPrompts: (promptType: SuggestPromptsType) => void;
   messages: ChatItem[];
   threadTitle?: string;
-  disableEndButtons: boolean;
 }
 
 const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
   onSuggestPrompts,
   messages,
   threadTitle,
-  disableEndButtons,
 }) => {
   return (
     <div className={style.chatHeader}>
@@ -34,64 +32,62 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
           <StrongText>{threadTitle}</StrongText>
         </BodyThreeText>
       </div>
-      {!disableEndButtons && (
-        <div className={style.chatHeaderButtons}>
-          <ActionDropdown
+      <div className={style.chatHeaderButtons}>
+        <ActionDropdown
+          size="s"
+          triggerButtonProps={{
+            size: 's',
+            color: 'gray',
+            type: 'secondary',
+            text: commonI18n.aiDifferentiation_suggest_prompt(),
+            'aria-label': commonI18n.aiDifferentiation_suggest_prompt(),
+            iconLeft: {iconName: 'solid-pen-sparkle', iconFamily: 'kit'},
+          }}
+          labelText={commonI18n.aiDifferentiation_suggest_prompt()}
+          name="aiDiffChatHeaderDropdown"
+          menuPlacement="right"
+          options={[
+            {
+              value: 'support',
+              label: 'Get Started',
+              icon: {iconName: 'rocket-launch'},
+              onClick: () => onSuggestPrompts('support'),
+            },
+            {
+              value: 'plan',
+              label: 'Ideate',
+              icon: {iconName: 'spinner-scale'},
+              onClick: () => onSuggestPrompts('plan'),
+            },
+            {
+              value: 'create',
+              label: 'Create',
+              icon: {iconName: 'file-pen'},
+              onClick: () => onSuggestPrompts('create'),
+            },
+            {
+              value: 'apcsp',
+              label: 'AP Prep',
+              icon: {iconName: 'laptop-code'},
+              onClick: () => onSuggestPrompts('apcsp'),
+            },
+          ]}
+        />
+        <PDFDownloadLink
+          document={<AiDiffPdf messages={messages} />}
+          fileName="ai_differentiation_chat.pdf"
+        >
+          <Button
+            color="gray"
             size="s"
-            triggerButtonProps={{
-              size: 's',
-              color: 'gray',
-              type: 'secondary',
-              text: commonI18n.aiDifferentiation_suggest_prompt(),
-              'aria-label': commonI18n.aiDifferentiation_suggest_prompt(),
-              iconLeft: {iconName: 'solid-pen-sparkle', iconFamily: 'kit'},
-            }}
-            labelText={commonI18n.aiDifferentiation_suggest_prompt()}
-            name="aiDiffChatHeaderDropdown"
-            menuPlacement="right"
-            options={[
-              {
-                value: 'support',
-                label: 'Get Started',
-                icon: {iconName: 'rocket-launch'},
-                onClick: () => onSuggestPrompts('support'),
-              },
-              {
-                value: 'plan',
-                label: 'Ideate',
-                icon: {iconName: 'spinner-scale'},
-                onClick: () => onSuggestPrompts('plan'),
-              },
-              {
-                value: 'create',
-                label: 'Create',
-                icon: {iconName: 'file-pen'},
-                onClick: () => onSuggestPrompts('create'),
-              },
-              {
-                value: 'apcsp',
-                label: 'AP Prep',
-                icon: {iconName: 'laptop-code'},
-                onClick: () => onSuggestPrompts('apcsp'),
-              },
-            ]}
+            type="secondary"
+            isIconOnly
+            icon={{iconName: 'download'}}
+            onClick={() => {}}
+            aria-label={commonI18n.aiDifferentiation_download_pdf()}
           />
-          <PDFDownloadLink
-            document={<AiDiffPdf messages={messages} />}
-            fileName="ai_differentiation_chat.pdf"
-          >
-            <Button
-              color="gray"
-              size="s"
-              type="secondary"
-              isIconOnly
-              icon={{iconName: 'download'}}
-              onClick={() => {}}
-              aria-label={commonI18n.aiDifferentiation_download_pdf()}
-            />
-          </PDFDownloadLink>
-        </div>
-      )}
+        </PDFDownloadLink>
+      </div>
     </div>
   );
 };

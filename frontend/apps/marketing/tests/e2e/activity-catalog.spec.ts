@@ -9,7 +9,11 @@ async function waitForImages(page: Page) {
 
   for (const lazyImage of lazyImages) {
     await lazyImage.scrollIntoViewIfNeeded();
-    await expect(lazyImage).toHaveJSProperty('complete', true);
+
+    // wait up to 10 seconds for each image to load
+    await expect(lazyImage).toHaveJSProperty('complete', true, {
+      timeout: 10000,
+    });
   }
 }
 
@@ -40,9 +44,6 @@ test.describe('Activity Catalog', () => {
       page.getByRole('heading', {name: 'Explore Hour of Code Activities'}),
     ).toBeVisible();
     await expect(page.getByPlaceholder('Search...')).toBeVisible();
-
-    // Wait for lazy loaded images to load
-    await waitForImages(page);
 
     // Click the "13-18" label element
     await page.locator('label').filter({hasText: '13-18'}).click();
@@ -87,6 +88,8 @@ test.describe('Activity Catalog', () => {
   });
 
   test('eyes', {tag: '@csforall'}, async ({page, eyes, browserName}) => {
+    // This test waits for images to load, so it is slow
+    test.slow();
     test.skip(browserName === 'webkit', 'AVIF does not work on Webkit');
     test.skip(getSiteType() !== 'csforall', 'Only runs on csforall site');
 

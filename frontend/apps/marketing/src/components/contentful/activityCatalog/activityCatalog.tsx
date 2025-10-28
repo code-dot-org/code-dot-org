@@ -160,7 +160,7 @@ const ActivityCatalog = ({
       (acc, [facetName, _facetValues]) => {
         const facetValues = _facetValues as Set<string>;
         if (facetValues.size > 0) {
-          acc[facetName] = [...facetValues];
+          acc[facetName] = {containsAny: [...facetValues]};
         }
         return acc;
       },

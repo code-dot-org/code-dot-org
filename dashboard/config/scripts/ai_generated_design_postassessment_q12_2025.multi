@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q12_2025'
+
+question 'A web designer uses AI to generate a landing page, but the images don\'t align correctly and some text overlaps the buttons. What is the best way to solve these problems?'
+
+wrong 'Continue running the same prompt until the AI randomly fixes the layout.'
+right 'Adjust the prompt to describe the issues clearly, test the new output, and refine again if needed.'
+wrong 'Replace all the text with images to cover up the problem.'
+wrong 'Stop using AI and leave the page unfinished.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 3, 6, 10
+MARKDOWN

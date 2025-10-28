@@ -1,0 +1,48 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-23T23:32:24.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "How To: Add Code Context",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# How To: Add Code Context\n\nHighlighting  relevant code helps AI stay focused. It keeps your prompt precise and ensures feedback connects directly to the lines you’re working on.",
+        "imageUrl": "https://images.code.org/99faadcc634d32c086fb0b3db4bd0b6a-ai-curriculum-societal-impacts.png",
+        "key": "ai-generated-design-onboarding-highlight-context-test-2025-b166b815-5bfc-4bdb-aa48-5d5b539f41fc"
+      },
+      {
+        "text": "## Step 1:\n\nTo prompt AI about **specific lines of code**, highlight the lines of code you want AI to focus on.",
+        "imageUrl": "https://images.code.org/97056f9aa9f6b49e213f43eb2a146a7c-Pasted Graphic 18.png",
+        "key": "ai-generated-design-onboarding-highlight-context-test-2025-4ffa31aa-f645-4171-86ea-b52f771d5f49"
+      },
+      {
+        "text": "## Step 2:\n\nClick **Add to AI Tutor Chat** to add the lines to your prompt automatically.",
+        "imageUrl": "https://images.code.org/8cc6ccc5166c59055150baf5f418678c-Adobe Express - p2.gif",
+        "key": "ai-generated-design-onboarding-highlight-context-test-2025-b0e5cc59-8d90-48e9-8697-a3da6eb78805"
+      },
+      {
+        "text": "## Step 3: \n\nTo add an **entire code file**, hover over the file and click the three dots. Then, click  **Add to AI Tutor Chat**.",
+        "imageUrl": "https://images.code.org/75d12c5ca29159f88d9e2d84bf5f4a2f-Adobe Express - file.gif",
+        "key": "ai-generated-design-onboarding-highlight-context-test-2025-9d3eac78-2a97-4063-8d41-658b47dfc832",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Step 4: \n\nIn the prompt text box, explain your goal or issue, and refer to the highlighted section or code file.\n\n<br/>\n\n**Example:** *“Explain the line of code to me.”*",
+        "imageUrl": "https://images.code.org/a2db1f80b134443de94b6cf5d41538f8-Pasted Graphic 19.png",
+        "key": "ai-generated-design-onboarding-highlight-context-test-2025-2cfc48ec-e2a0-414c-872d-8c7ed3685e0b"
+      },
+      {
+        "text": "## Step 5:\n\nSubmit your prompt and check if AI’s reasoning connects directly to the selected code.",
+        "imageUrl": "https://images.code.org/6ce44abcf16f84737e9926b89ee12a66-Pasted Graphic 20.png",
+        "key": "ai-generated-design-onboarding-highlight-context-test-2025-22cbcecf-d834-4a8f-9a04-624a1c52b80e"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-23T23:32:24.746+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-onboarding-highlight-context-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-onboarding-highlight-context-test-2025\"},{\"changed_at\":\"2025-10-23 23:37:27 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>
