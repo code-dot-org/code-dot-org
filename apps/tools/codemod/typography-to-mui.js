@@ -7,7 +7,9 @@
 // - Rewrites imports: removes DSCO Typography / wrapper imports; adds MUI Typography import
 
 // Run:
-//   npx jscodeshift -t ./apps/tools/codemod/typography-to-mui.js "src/directory-or-file-to-modify" --parser=tsx --extensions=tsx,ts,jsx,js
+//   cd apps
+//   npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src/directory-or-file-to-modify" --parser=tsx --extensions=tsx,ts,jsx,js
+//   yarn lint:fix
 
 // Tips:
 //   - Add --dry --print to preview changes
