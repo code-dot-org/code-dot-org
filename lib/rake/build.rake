@@ -54,6 +54,7 @@ namespace :build do
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:setup_or_migrate'
+        RakeUtils.system_stream_output('mysql -uroot -e "DESCRIBE dashboard_test.other_temp_tables"')
 
         # Update the schema cache file only on the staging branch, because the
         # staging system's Rails database is the source of truth for dashboard's
