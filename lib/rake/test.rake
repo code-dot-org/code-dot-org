@@ -106,7 +106,7 @@ namespace :test do
         ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
 
-        TestRunUtils.run_dashboard_tests(parallel: true)
+        TestRunUtils.run_dashboard_tests(parallel: true, upload_seed_data: true)
 
         ENV.delete 'UNIT_TEST'
         ENV.delete 'USE_PEGASUS_UNITTEST_DB'

@@ -26,7 +26,7 @@ module TestRunUtils
     end
   end
 
-  def self.setup_dashboard_tests_parallel
+  def self.setup_dashboard_tests_parallel(upload_seed_data: false)
     # Parallel tests don't seem to run more quickly over 16 processes.
     ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
 
@@ -85,15 +85,20 @@ module TestRunUtils
       ENV.delete 'TEST_ENV_NUMBER'
       # Store new DB contents
       `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
-      gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
 
-      s3_client.put_object(
-        bucket: bucket_name,
-        key: s3_key,
-        body: gzip_data,
-        acl: 'public-read'
-      )
-      CDO.log.info "Uploaded seed data to #{s3_key}"
+      if upload_seed_data
+        gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
+
+        s3_client.put_object(
+          bucket: bucket_name,
+          key: s3_key,
+          body: gzip_data,
+          acl: 'public-read'
+        )
+        CDO.log.info "Uploaded seed data to #{s3_key}"
+      else
+        CDO.log.info 'Not uploading seed data to S3'
+      end
     end
 
     cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
@@ -119,11 +124,11 @@ module TestRunUtils
     end
   end
 
-  def self.run_dashboard_tests(parallel: false)
+  def self.run_dashboard_tests(parallel: false, upload_seed_data: false)
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard tests') do
         if parallel
-          TestRunUtils.setup_dashboard_tests_parallel
+          TestRunUtils.setup_dashboard_tests_parallel(upload_seed_data: upload_seed_data)
           RakeUtils.rake_stream_output 'parallel:test'
         else
           RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
