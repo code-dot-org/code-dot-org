@@ -318,7 +318,7 @@ function transformer(file, api) {
       }
 
       const noMargin = getJSXAttr(opening, 'noMargin');
-      if (!noMargin) {
+      if (!noMargin && semanticTag !== 'em' && semanticTag !== 'strong') {
         inferred.gutterBottom = true;
       }
 
@@ -363,7 +363,11 @@ function transformer(file, api) {
       }
 
       const noMargin = getJSXAttr(opening, 'noMargin');
-      if (!noMargin) {
+      if (
+        !noMargin &&
+        inferred.variant !== 'em' &&
+        inferred.variant !== 'strong'
+      ) {
         inferred.gutterBottom = true;
       }
 
