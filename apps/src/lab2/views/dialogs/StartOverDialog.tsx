@@ -32,7 +32,6 @@ const StartOverDialog: React.FunctionComponent<StartOverDialogProps> = ({
   const currentAppName = useAppSelector(
     state => state.lab.levelProperties?.appName
   );
-  console.log('currentAppName', currentAppName);
 
   const isTextWorkspace =
     currentAppName && TEXT_BASED_LABS.includes(currentAppName);
