@@ -74,7 +74,7 @@ interface MusicLabViewProps {
   updateHighlightedBlocks: () => void;
   undo: () => void;
   redo: () => void;
-  clearCode: () => void;
+  clearCode: (maintainPackId?: boolean) => void;
   validator: MusicValidator;
   player: MusicPlayer;
   allowPackSelection: boolean;
@@ -319,7 +319,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           timelineAtTop && moduleStyles.reverse
         )}
       >
-        {allowPackSelection && <PackDialog player={player} />}
+        {allowPackSelection && (
+          <PackDialog
+            player={player}
+            forcePackSelect={guideMode === 'aiCodeGenerate'}
+          />
+        )}
         {guideMode === 'instructions' && (
           <GuideInstructions
             levelProperties={levelProperties}
@@ -335,9 +340,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             levelProperties={levelProperties}
             setPlaying={setPlaying}
             hasEdited={hasEdited}
-            setToolboxVisibility={visible =>
-              blocklyWorkspace.setToolboxVisibility(visible)
-            }
+            blockCount={blocklyWorkspace.getBlockCount()}
+            clearCode={clearCode}
           />
         )}
         <div

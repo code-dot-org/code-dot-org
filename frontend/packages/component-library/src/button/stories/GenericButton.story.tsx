@@ -1,10 +1,10 @@
 import {Meta, StoryFn} from '@storybook/react-webpack5';
 
-import _BaseButton, {_BaseButtonProps} from '../_BaseButton';
+import GenericButton, {GenericButtonProps} from '../GenericButton';
 import {buttonColors} from '../index';
 
 export default {
-  title: 'DesignSystem/Button/_BaseButton',
+  title: 'DesignSystem/Button/GenericButton',
   /**
    * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
    * This workaround (component: Component.type instead of component: Component) is taken from
@@ -13,18 +13,18 @@ export default {
    */
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore-next-line
-  component: _BaseButton.type,
+  component: GenericButton.type,
 } as Meta;
 
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<_BaseButtonProps> = args => (
-  <_BaseButton {...args} />
+const SingleTemplate: StoryFn<GenericButtonProps> = args => (
+  <GenericButton {...args} />
 );
 
 const MultipleTemplate: StoryFn<{
-  components: _BaseButtonProps[];
+  components: GenericButtonProps[];
 }> = args => (
   <div
     style={{
@@ -35,7 +35,7 @@ const MultipleTemplate: StoryFn<{
     }}
   >
     {args.components?.map(componentArg => (
-      <_BaseButton
+      <GenericButton
         key={`${componentArg.size}-${componentArg.text}`}
         {...componentArg}
       />
@@ -43,23 +43,23 @@ const MultipleTemplate: StoryFn<{
   </div>
 );
 
-export const Default_BaseButton = SingleTemplate.bind({});
-Default_BaseButton.args = {
+export const DefaultGenericButton = SingleTemplate.bind({});
+DefaultGenericButton.args = {
   text: 'Button',
   onClick: () => null,
   size: 'm',
 };
 
-export const Disabled_BaseButton = SingleTemplate.bind({});
-Disabled_BaseButton.args = {
+export const DisabledGenericButton = SingleTemplate.bind({});
+DisabledGenericButton.args = {
   text: 'Button',
   onClick: () => null,
   disabled: true,
   size: 'm',
 };
 
-export const Pending_BaseButton = SingleTemplate.bind({});
-Pending_BaseButton.args = {
+export const PendingGenericButton = SingleTemplate.bind({});
+PendingGenericButton.args = {
   text: 'Button',
   ariaLabel: 'Button',
   onClick: () => null,
@@ -67,8 +67,8 @@ Pending_BaseButton.args = {
   size: 'm',
 };
 
-export const _BaseButtonWithIcons = SingleTemplate.bind({});
-_BaseButtonWithIcons.args = {
+export const GenericButtonWithIcons = SingleTemplate.bind({});
+GenericButtonWithIcons.args = {
   text: 'Button',
   onClick: () => null,
   iconLeft: {iconName: 'house', iconStyle: 'solid'},
@@ -76,18 +76,18 @@ _BaseButtonWithIcons.args = {
   size: 'm',
 };
 
-export const Icon_BaseButton = SingleTemplate.bind({});
-Icon_BaseButton.args = {
+export const IconGenericButton = SingleTemplate.bind({});
+IconGenericButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
-  ariaLabel: 'Purple primary icon base button',
+  ariaLabel: 'Purple primary icon generic button',
   type: 'primary',
   isIconOnly: true,
   onClick: () => null,
   size: 'm',
 };
 
-export const Link_BaseButton = SingleTemplate.bind({});
-Link_BaseButton.args = {
+export const LinkGenericButton = SingleTemplate.bind({});
+LinkGenericButton.args = {
   text: 'Link',
   useAsLink: true,
   href: 'https://www.google.com',
@@ -112,8 +112,8 @@ ButtonButtonVsLinkButton.args = {
   ],
 };
 
-export const GroupOfColorsOf_BaseButtons = MultipleTemplate.bind({});
-GroupOfColorsOf_BaseButtons.args = {
+export const GroupOfColorsOfGenericButtons = MultipleTemplate.bind({});
+GroupOfColorsOfGenericButtons.args = {
   components: [
     {
       text: 'Button Primary Purple',
@@ -197,7 +197,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Purple primary icon only base button',
+      ariaLabel: 'Purple primary icon only generic button',
       color: buttonColors.purple,
       type: 'primary',
       isIconOnly: true,
@@ -206,7 +206,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Black primary icon only base button',
+      ariaLabel: 'Black primary icon only generic button',
       color: buttonColors.black,
       type: 'primary',
       isIconOnly: true,
@@ -215,7 +215,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'White primary icon only base button',
+      ariaLabel: 'White primary icon only generic button',
       color: buttonColors.white,
       type: 'primary',
       isIconOnly: true,
@@ -224,7 +224,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Destructive primary icon only base button',
+      ariaLabel: 'Destructive primary icon only generic button',
       color: buttonColors.destructive,
       type: 'primary',
       isIconOnly: true,
@@ -233,7 +233,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Black secondary icon only base button',
+      ariaLabel: 'Black secondary icon only generic button',
       color: buttonColors.black,
       type: 'secondary',
       isIconOnly: true,
@@ -242,7 +242,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Gray secondary icon only base button',
+      ariaLabel: 'Gray secondary icon only generic button',
       color: buttonColors.gray,
       type: 'secondary',
       isIconOnly: true,
@@ -251,7 +251,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'White secondary icon only base button',
+      ariaLabel: 'White secondary icon only generic button',
       color: buttonColors.white,
       type: 'secondary',
       isIconOnly: true,
@@ -260,7 +260,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Destructive secondary icon only base button',
+      ariaLabel: 'Destructive secondary icon only generic button',
       color: buttonColors.destructive,
       type: 'secondary',
       isIconOnly: true,
@@ -269,7 +269,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Purple tertiary icon only base button',
+      ariaLabel: 'Purple tertiary icon only generic button',
       color: buttonColors.purple,
       type: 'tertiary',
       isIconOnly: true,
@@ -278,7 +278,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Black tertiary icon only base button',
+      ariaLabel: 'Black tertiary icon only generic button',
       color: buttonColors.black,
       type: 'tertiary',
       isIconOnly: true,
@@ -287,7 +287,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'White tertiary icon only base button',
+      ariaLabel: 'White tertiary icon only generic button',
       color: buttonColors.white,
       type: 'tertiary',
       isIconOnly: true,
@@ -296,7 +296,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Gray tertiary icon only base button',
+      ariaLabel: 'Gray tertiary icon only generic button',
       color: buttonColors.gray,
       type: 'tertiary',
       isIconOnly: true,
@@ -305,7 +305,7 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Destructive tertiary icon only base button',
+      ariaLabel: 'Destructive tertiary icon only generic button',
       color: buttonColors.destructive,
       type: 'tertiary',
       isIconOnly: true,
@@ -315,8 +315,8 @@ GroupOfColorsOf_BaseButtons.args = {
   ],
 };
 
-export const GroupOfSizesOf_BaseButtons = MultipleTemplate.bind({});
-GroupOfSizesOf_BaseButtons.args = {
+export const GroupOfSizesOfGenericButtons = MultipleTemplate.bind({});
+GroupOfSizesOfGenericButtons.args = {
   components: [
     {
       text: 'Button xs',
