@@ -9,4 +9,9 @@ export const PREVIEW_HOSTNAMES = new Set<string | null>([
   'preview-csforall.marketing-sites.dev-code.org',
   'preview-csforall.marketing-sites.test-code.org',
   'preview-csforall.marketing-sites.localhost:3001',
+  // AIDay
+  'preview-aiday.marketing-sites.code.org',
+  'preview-aiday.marketing-sites.dev-code.org',
+  'preview-aiday.marketing-sites.test-code.org',
+  'preview-aiday.marketing-sites.localhost:3001',
 ]);

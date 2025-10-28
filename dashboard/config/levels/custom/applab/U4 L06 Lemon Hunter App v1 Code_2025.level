@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:21:38.000Z",
   "level_num": "custom",
@@ -44,7 +45,7 @@
     "validation_enabled": "true",
     "text_mode_at_start": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "show_turtle_before_run": "false",
@@ -55,7 +56,6 @@
     "beginner_mode": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"citrus\" id=\"startScreen\" style=\"height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(150, 194, 87);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; color: rgb(247, 236, 96); background-color: rgb(105, 136, 61); border-color: rgb(105, 136, 61); border-radius: 2px; border-width: 0px; font-family: Georgia, serif; padding: 2px 15px; height: 40px; position: absolute; top: 0px; width: 320px; left: 0px; font-size: 36px;\" id=\"appName\">Lemon Squeeze</label><button id=\"playButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 50px; background-color: rgb(247, 236, 96); color: rgb(0, 0, 0); border-color: rgb(105, 136, 61); border-radius: 2px; border-width: 2px; font-family: Georgia, serif; position: absolute; left: 10px; top: 390px; font-size: 30px; width: 300px;\">Play!</button><img data-canonical-image-url=\"icon://fa-lemon-o\" data-object-fit=\"contain\" id=\"appImage\" style=\"height: 40px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 280px; top: 0px; margin: 0px; width: 40px;\" data-icon-color=\"#f7ec60\"><div contenteditable=\"true\" class=\"textArea\" id=\"startLabel\" style=\"height: 140px; border-style: solid; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); border-color: rgb(105, 136, 61); border-radius: 4px; border-width: 0px; font-family: &quot;Palatino Linotype&quot;, &quot;Book Antiqua&quot;, Palatino, serif; padding: 5px 15px; position: absolute; left: 10px; top: 50px; margin: 0px; width: 300px; font-size: 15px; text-align: center;\">Welcome Lemon Lovers!<div>Collect lemons! Avoid limes!</div></div></div><div class=\"screen\" tabindex=\"1\" data-theme=\"citrus\" id=\"gameScreen\" style=\"height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(150, 194, 87); display: none;\"><img src=\"//levelbuilder-studio.code.org/media?u=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2012%2F04%2F05%2F00%2F27%2Flime-25314_960_720.png\" data-canonical-image-url=\"https://cdn.pixabay.com/photo/2012/04/05/00/27/lime-25314_960_720.png\" data-object-fit=\"contain\" id=\"lime\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 205px; top: 15px; margin: 0px;\"><img src=\"//levelbuilder-studio.code.org/media?u=http%3A%2F%2Fres.freestockphotos.biz%2Fpictures%2F16%2F16786-illustration-of-a-yellow-lemon-slice-pv.png\" data-canonical-image-url=\"http://res.freestockphotos.biz/pictures/16/16786-illustration-of-a-yellow-lemon-slice-pv.png\" data-object-fit=\"contain\" id=\"lemon\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 40px; top: 205px; margin: 0px;\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; color: rgb(247, 236, 96); background-color: rgb(105, 136, 61); border-color: rgb(105, 136, 61); border-radius: 2px; border-width: 0px; font-family: Georgia, serif; padding: 2px 15px; width: 320px; position: absolute; left: 0px; top: 420px; height: 30px; font-size: 20px;\" id=\"scoreLivesLabel\">Score: 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Lives: 3</label></div></div>",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false",
     "long_instructions": "**Do This**\r\n\r\nPlay the game at least once. Then with a partner, choose one of the three code sections below\r\n\r\n* Section 1: lines 1 - 13\r\n* Section 2: lines 16 - 30\r\n* Section 3: lines 33 - 53\r\n\r\nRead the code in your section carefully, making sure you understand how each line works.\r\n\r\n**Discuss**\r\n\r\nFind partners from the two other groups and:\r\n\r\n* Explain what your section does\r\n* Call out any lines of code you thought were interesting or confusing\r\n* Ask good questions about how their section works\r\n\r\n**Modify**\r\n\r\n* Right now the game keeps going when the player has 0 lives. Fix this problem.",
     "parent_level_id": 19204,
     "mini_rubric": "false",
@@ -68,9 +68,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:38.055+00:00\",\"changed\":[\"cloned from \\\"U4 L06 Lemon Hunter App v1 Code_2024\\\"\"],\"cloned_from\":\"U4 L06 Lemon Hunter App v1 Code_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:38.055+00:00\",\"changed\":[\"cloned from \\\"U4 L06 Lemon Hunter App v1 Code_2024\\\"\"],\"cloned_from\":\"U4 L06 Lemon Hunter App v1 Code_2024\"},{\"changed_at\":\"2025-10-17 18:07:55 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

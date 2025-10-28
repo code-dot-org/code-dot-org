@@ -45,6 +45,7 @@ module Services
           ao.assign_attributes(email: '', hashed_email: '', authentication_id: nil, data: nil)
           ao.save(validate: false) # Records may be invalid due to duplicate empty string emails
         end
+        user.primary_contact_info_id = nil # in rare cases, this might point to a different account's live auth option
         user.lti_user_identities.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
         user.email = ''
         user.hashed_email = nil

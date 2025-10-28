@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import {Button, ButtonProps} from '@/button';
+import {GenericButton, GenericButtonProps} from '@/button';
 import CustomDialog from '@/dialog/CustomDialog';
 import {BodyTwoText, Heading3} from '@/typography';
 
@@ -20,9 +20,9 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
    *  for dialog's `aria-describedBy` attribute) */
   customBottomContent?: ReactNode;
   /** Modal primary button props */
-  primaryButtonProps: ButtonProps;
+  primaryButtonProps: GenericButtonProps;
   /** Modal secondary button props */
-  secondaryButtonProps?: ButtonProps;
+  secondaryButtonProps?: GenericButtonProps;
   /** @deprecated Modal color mode - use theme provider instead. This prop will be removed in a future version. */
   mode?: 'light' | 'dark';
   /** Custom class name */
@@ -117,13 +117,13 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       <hr />
       <div className={moduleStyles.modalActionsSection}>
         {secondaryButtonProps && (
-          <Button
+          <GenericButton
             type="secondary"
             color={mode === 'dark' ? 'white' : 'black'}
             {...secondaryButtonProps}
           />
         )}
-        <Button
+        <GenericButton
           type="primary"
           color={mode === 'dark' ? 'white' : 'purple'}
           {...primaryButtonProps}

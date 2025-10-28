@@ -1,35 +1,41 @@
-# Marketing Site Continuous Integration / Continuous Deployment Infrastructure
+# Marketing Site Build & Deployment Infrastructure
 
-## Prerequisites
+## Pre-Requisite - Provision Global and Region Resources
 
-1. **Execute `1-setup/deploy.rb` to create Global resources** (`per-account.yml.erb` and `per-region.yml.erb`)
-   that support all Marketing Sites deployed to the current AWS Account and Region.
+Execute a script (`cicd/1-setup/setup.rb`) that creates the Stack `marketing-sites-global-resources` in the current AWS Account and
+`marketing-sites-region-resources` in the current Region to support provisioning one or more Marketing Sites in the current
+Account and Region. This setup script must be re-run once per AWS Account anytime `MarketingSites::Configuration` module
+in `config.rb` or when `account-resources.yml.erb` is modified. Must be re-run once per Region when
+`region-resources.yml.erb` is modified
 
-   **Important Requirements:**
+1. Assume an AWS Role that has **admin permissions** in the AWS Account: `export AWS_PROFILE=codeorg-admin`
+1. Find or Create an S3 bucket in the current Region to store rendered CloudFormation templates: `cf-templates-1a2b3c4d5e6f-us-east-1`
+1. Execute the setup script:
 
-   - This script must be executed with a Role that has **admin permissions** to the AWS Account
-   - Must be **re-run once per Account** when additional `site_types` are added to the
-     `MarketingSites::Configuration` module in `config.rb`
-
-   This defaults to setting up Region resources in `us-east-1`.
-   Use `setup.rb --region [region id]` to prepare a different Region to support Marketing Sites.
-
-2. **Create an AWS Secrets Manager Secret** in the same Account and Region where the marketing site
-   Stack will be provisioned and with the naming convention:
-
-   `marketing-sites/[environment type]/[base domain name of the marketing site]/[subdomain of the site]`
-
-   **Populate the secret with the following keys:**
-
-   - CONTENTFUL_DELIVERY_TOKEN
-   - CONTENTFUL_PREVIEW_TOKEN
-   - CONTENTFUL_REVALIDATE_TOKEN
-   - DRAFT_MODE_TOKEN
-   - STATSIG_CLIENT_KEY
-   - STATSIG_SERVER_KEY
-   - OTEL_EXPORTER_OTLP_HEADERS
+- `./setup.rb --template-bucket cf-templates-1a2b3c4d5e6f # Default to us-east-1`
+- `./setup.rb --region us-east-2 --template-bucket cf-templates-1a2b3c4d5e6f # Explicitly specify a Region`
 
 ## Provision a Marketing Site CloudFormation Stack
+
+1. Configure Stack-specific Passwords/Keys/Settings
+
+   1. Configure an AWS Secrets Manager Secret in the same Account and Region where the marketing site Stack will be provisioned
+      and with the naming convention:
+
+      `marketing-sites/[environment type]/[base domain name of the marketing site]/[subdomain of the site]`
+
+   1. Populate the secret with the following keys:
+      - CONTENTFUL_DELIVERY_TOKEN
+      - CONTENTFUL_PREVIEW_TOKEN
+      - CONTENTFUL_REVALIDATE_TOKEN
+      - DRAFT_MODE_TOKEN
+      - STATSIG_CLIENT_KEY
+      - STATSIG_SERVER_KEY
+      - OTEL_EXPORTER_OTLP_HEADERS
+
+1. Assume an AWS Role that had permissions to create most types of Resources (must be admin for environment_type=production):
+   `export AWS_PROFILE=cdo`
+1. Execute Site Deployment Script
 
 ```bash
 cd 3-app

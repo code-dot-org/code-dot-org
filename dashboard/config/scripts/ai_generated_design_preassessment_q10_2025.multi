@@ -1,0 +1,15 @@
+name 'ai-generated-design-preassessment-q10_2025'
+
+question 'A small business owner uses an AI tool to build their website. The AI creates a home page, but some text overlaps with images, and a few links don\'t work. What should the owner do next to act responsibly as the designer?'
+
+wrong 'Refine the prompt or fix the issues, then test the website again.'
+right 'Keep the design as it is since the AI created it.'
+wrong 'Delete the entire project and start over from scratch.'
+wrong 'Copy another company\'s website to save time.
+'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 3, 6, 10
+MARKDOWN

@@ -1,0 +1,24 @@
+{
+  "name": "hoai-pilot-7",
+  "script_names": [
+    "hour-of-ai-pilot-7"
+  ],
+  "original_script_names": [
+    "hour-of-ai-pilot-7"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hoai-pilot-7",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
