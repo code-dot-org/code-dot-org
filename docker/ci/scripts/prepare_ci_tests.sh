@@ -76,7 +76,3 @@ aiproxy_api_key: 'fake_key'
 echo "Wrote settings and secrets from env vars into locals.yml."
 
 set -x
-
-./install_ci_tests.sh
-
-./build_ci_tests.sh
