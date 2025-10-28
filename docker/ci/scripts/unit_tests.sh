@@ -6,6 +6,7 @@
 # `docker/unit-tests-compose.yml`. See instructions in that file.
 
 source docker/ci/scripts/prepare_ci_tests.sh
+source docker/ci/scripts/install_ci_tests.sh
 source docker/ci/scripts/build_ci_tests.sh
 
 
