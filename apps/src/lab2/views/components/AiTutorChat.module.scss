@@ -69,6 +69,18 @@
     color: var(--text-info-primary-fixed);
   }
 
+  .icon-brain {
+    color: purple;
+  }
+
+  .icon-bug {
+    color: red;
+  }
+
+  .icon-star {
+    color: goldenrod;
+  }
+
   // Hover and active states
   @include generate-chat-button-hover-states(
     (
