@@ -240,10 +240,11 @@ Resources:
                               TextTransformations:
                                 - Priority: 0
                                   Type: NONE
+          # This Label helps downstream Rules conditionally apply the CHALLENGE action, so don't Sample or publish Metrics.
           VisibilityConfig:
-            CloudWatchMetricsEnabled: true
+            CloudWatchMetricsEnabled: false
             MetricName: LabelHTMLRequests
-            SampledRequestsEnabled: true
+            SampledRequestsEnabled: false
           RuleLabels:
             - Name: HTMLContent
         - Name: AWS-AWSManagedRulesAmazonIpReputationList
@@ -691,8 +692,8 @@ Resources:
   CloudFrontManagementPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
-      ManagedPolicyName: marketing-sites-cloudfront-management-policy
-      Description: CloudFront permissions for marketing sites
+      ManagedPolicyName: marketing-sites-cloudfront-waf-shield-policy
+      Description: CloudFront distribution management with WAF and Shield Advanced protection capabilities
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -735,12 +736,84 @@ Resources:
             Action:
               - cloudfront:Get*
               - cloudfront:Describe*
+              - cloudfront:List*
             Resource: '*'
+          
+          # WAF Permissions for CloudFront Protection
+          - Sid: WAFReadPermissions
+            Effect: Allow
+            Action:
+              - wafv2:GetWebACL
+              - wafv2:ListWebACLs
+              - wafv2:GetWebACLForResource
+              - wafv2:ListResourcesForWebACL
+              - wafv2:ListTagsForResource
+            Resource:
+              - !Sub 'arn:aws:wafv2:*:${AWS::AccountId}:global/webacl/*/*'
+              - !Sub 'arn:aws:wafv2:*:${AWS::AccountId}:global/ipset/*/*'
+          
+          - Sid: WAFAssociationPermissions
+            Effect: Allow
+            Action:
+              - wafv2:AssociateWebACL
+              - wafv2:DisassociateWebACL
+            Resource:
+              - !Sub 'arn:aws:wafv2:*:${AWS::AccountId}:global/webacl/*/*'
+              - !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/*'
+          
+          - Sid: WAFTagPermissions
+            Effect: Allow
+            Action:
+              - wafv2:TagResource
+              - wafv2:UntagResource
+            Resource: !Sub 'arn:aws:wafv2:*:${AWS::AccountId}:global/webacl/*/*'
+          
+          # Shield Advanced Permissions for CloudFront Protection
+          - Sid: ShieldReadPermissions
+            Effect: Allow
+            Action:
+              - shield:DescribeProtection
+              - shield:ListProtections
+              - shield:DescribeSubscription
+              - shield:GetSubscriptionState
+              - shield:DescribeDRTAccess
+              - shield:DescribeEmergencyContactSettings
+              - shield:ListTagsForResource
+            Resource: '*'
+          
+          - Sid: ShieldProtectionManagement
+            Effect: Allow
+            Action:
+              - shield:CreateProtection
+              - shield:DeleteProtection
+              - shield:UpdateProtection
+              - shield:UpdateApplicationLayerAutomaticResponse
+              - shield:EnableApplicationLayerAutomaticResponse
+              - shield:DisableApplicationLayerAutomaticResponse
+            Resource:
+              - !Sub 'arn:aws:shield::${AWS::AccountId}:protection/*'
+              - !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/*'
+          
+          - Sid: ShieldTagManagement
+            Effect: Allow
+            Action:
+              - shield:TagResource
+              - shield:UntagResource
+            Resource: !Sub 'arn:aws:shield::${AWS::AccountId}:protection/*'
+          
+          - Sid: ShieldHealthCheckAssociation
+            Effect: Allow
+            Action:
+              - shield:AssociateHealthCheck
+              - shield:DisassociateHealthCheck
+            Resource:
+              - !Sub 'arn:aws:shield::${AWS::AccountId}:protection/*'
+              - !Sub 'arn:aws:route53:::healthcheck/*'
   DNSCertificateManagementPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
-      ManagedPolicyName: marketing-sites-dns-certificate-management-policy
-      Description: Route53 and ACM permissions for marketing sites
+      ManagedPolicyName: marketing-sites-dns-certificate-health-policy
+      Description: Route53 DNS, ACM certificates, and health check management for Shield Advanced integration
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -754,6 +827,34 @@ Resources:
               - acm:Add*
               - acm:Describe*
             Resource: '*'
+          
+          # Route 53 Health Check Permissions (for Shield Advanced)
+          - Sid: Route53HealthCheckManagement
+            Effect: Allow
+            Action:
+              - route53:CreateHealthCheck
+              - route53:DeleteHealthCheck
+              - route53:UpdateHealthCheck
+              - route53:GetHealthCheck
+              - route53:GetHealthCheckStatus
+              - route53:ListHealthChecks
+              - route53:ChangeTagsForResource
+            Resource:
+              - !Sub 'arn:aws:route53:::healthcheck/*'
+              - 'arn:aws:route53:::hostedzone/*'
+              - 'arn:aws:route53:::change/*'
+          
+          # CloudWatch Alarms for Shield Health Checks
+          - Sid: CloudWatchAlarmManagement
+            Effect: Allow
+            Action:
+              - cloudwatch:PutMetricAlarm
+              - cloudwatch:DeleteAlarms
+              - cloudwatch:DescribeAlarms
+              - cloudwatch:GetMetricStatistics
+              - cloudwatch:PutMetricData
+            Resource:
+              - !Sub 'arn:aws:cloudwatch:*:${AWS::AccountId}:alarm:*'
   EFSManagementPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -1132,6 +1233,33 @@ Resources:
                   - secretsmanager:Get*
                   - secretsmanager:Describe*
                 Resource: "arn:aws:secretsmanager:*:*:secret:marketing-sites/<%=environment_type%>/*"
+              
+              # WAF Web ACL Association for CloudFront
+              - Sid: AllowMarketingSitesWebACLAssociation
+                Effect: Allow
+                Action:
+                  - wafv2:AssociateWebACL
+                  - wafv2:DisassociateWebACL
+                  - wafv2:GetWebACLForResource
+                Resource:
+                  - !GetAtt MarketingSitesWebACL.Arn
+                  - !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/*"
+              
+              # Shield Advanced Protection for CloudFront (primarily for production)
+              - Sid: AllowShieldProtectionForCloudFront
+                Effect: Allow
+                Action:
+                  - shield:CreateProtection
+                  - shield:DeleteProtection
+                  - shield:UpdateProtection
+                  - shield:DescribeProtection
+                  - shield:AssociateHealthCheck
+                  - shield:DisassociateHealthCheck
+                  - shield:TagResource
+                  - shield:UntagResource
+                Resource:
+                  - !Sub "arn:aws:shield::${AWS::AccountId}:protection/*"
+                  - !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/*"
 <% end %>
 
 Outputs:
@@ -1141,6 +1269,9 @@ Outputs:
   MarketingSitesWebACLId:
     Description: ID of the Marketing Sites WAF Web ACL
     Value: !GetAtt MarketingSitesWebACL.Id
+  MarketingSitesWebACLName:
+    Description: Name of the Marketing Sites WAF Web ACL for easy reference
+    Value: !Ref MarketingSitesWebACL
 <%
   marketing_sites_environment_configuration.each do |environment_type, _|
     environment_type = environment_type.to_s

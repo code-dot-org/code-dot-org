@@ -24,7 +24,8 @@ options = {
   # TODO: populate Account ID dynamically.
   # role_arn: "arn:aws:iam::${account_id}:role/admin/CloudFormationMarketingSitesDevelopmentRole"
   role_arn: nil,
-  cloudformation_role_boundary: nil
+  cloudformation_role_boundary: nil,
+  web_application_firewall: nil
 }
 
 opt_parser = OptionParser.new do |opts|
@@ -152,6 +153,15 @@ opt_parser = OptionParser.new do |opts|
     "Format: arn:aws:iam::<account-id>:policy/<policy-name>"
   ) do |arn|
     options[:cloudformation_role_boundary] = arn
+  end
+
+  opts.on(
+    '--web-application-firewall ARN',
+    String,
+    "ARN of the Web Application Firewall Web Access Control List (WAF Web ACL / WAF Protection Pack) to protect this site.",
+    "Format: arn:aws:wafv2:<region-id>:<account-id>:global/webacl/<Web ACL Name>/<Web ACL Id>"
+  ) do |arn|
+    options[:web_application_firewall] = arn
   end
 
   opts.on('-h', '--help', 'Show this help message') do
