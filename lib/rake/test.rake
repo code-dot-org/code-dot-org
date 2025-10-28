@@ -267,7 +267,8 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging ci: [
+  desc 'Runs full QA test pass (to be run on the test machine)'
+  timed_task_with_logging qa: [
     :shared_ci,
     :pegasus_ci,
     :dashboard_ci,
