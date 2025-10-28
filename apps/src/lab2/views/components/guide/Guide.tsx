@@ -7,7 +7,6 @@ interface GuideProps {
   id?: string;
   children: React.ReactNode;
   width?: 'normal' | 'narrow';
-  glowSpeed?: 'normal' | 'fast';
   modal?: boolean;
 }
 
@@ -18,7 +17,6 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   id,
   children,
   width,
-  glowSpeed,
   modal,
 }) => {
   return (
@@ -30,17 +28,10 @@ const Guide: React.FunctionComponent<GuideProps> = ({
         id={id}
         className={classNames(
           styles.guide,
-          width === 'narrow'
-            ? styles.guideNarrowWidth
-            : styles.guideNormalWidth,
-          glowSpeed === 'fast'
-            ? styles.guideFastGlowSpeed
-            : glowSpeed === 'normal'
-            ? styles.guideNormalGlowSpeed
-            : undefined
+          width === 'narrow' ? styles.guideNarrowWidth : styles.guideNormalWidth
         )}
       >
-        <div className={styles.guideInner}>{children}</div>
+        {children}
       </div>
     </div>
   );
