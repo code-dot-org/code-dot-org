@@ -58,7 +58,7 @@ const ActivityCarousel: React.FC<ActivityCarouselProps> = ({slides}) => {
             cardId: tutorialID,
             cardTitle: title,
           }}
-          chipLabels={[...topic]}
+          chipLabels={[...topic] as string[]}
         />
       ),
     };
