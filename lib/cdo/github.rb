@@ -124,7 +124,7 @@ module GitHub
     configure_octokit
     response = Octokit.create_pull_request(REPO, base, head, title, body)
 
-    response['number']
+    response['number'] || raise("GitHub.create_pull_request failed.")
   end
 
   # Octokit Documentation: https://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_requests-instance_method

@@ -71,9 +71,6 @@ def main
     head: branch_name,
     title: "DTL (Test > Levelbuilder): #{test_green_commit}"
   )
-  if pr_number.nil?
-    raise Exception.new('GitHub.create_pull_request failed.')
-  end
 
   DevelopersTopic.set_dtl(TOPIC_DTL_SOON)
   ChatClient.message('levelbuilder', message_dtl_soon(pr_number), color: 'yellow')
