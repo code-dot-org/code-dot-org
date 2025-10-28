@@ -22,6 +22,7 @@ import {
   LevelProperties,
   ProjectSources,
   ExcalidrawSourceWithExternalFiles,
+  SketchlabExternalFiles,
 } from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -60,10 +61,45 @@ const MIME_TO_EXT = {
 
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
+async function uploadBase64ToUrl(
+  dataUrl: string,
+  uploadUrl: string,
+  mimeType: string
+): Promise<Response> {
+  // Fetch the data URL to get a Blob (handles all decoding automatically)
+  const response = await fetch(dataUrl);
+  const blob = await response.blob();
+
+  // Create a File object from the Blob
+  const file = new File([blob], 'file', {
+    type: mimeType,
+  });
+
+  // Create FormData and append the file
+  const formData = new FormData();
+  formData.append('files[]', file);
+
+  // Make the upload request
+  const uploadResponse = await fetch(uploadUrl, {
+    method: 'PUT',
+    body: formData,
+  });
+
+  // Should we throw here?
+  if (!uploadResponse.ok) {
+    throw new Error(
+      `Upload failed: ${uploadResponse.status} ${uploadResponse.statusText}`
+    );
+  }
+
+  return uploadResponse;
+}
+
 interface SerializedExcalidrawState {
   elements: ExcalidrawElement[];
   appState: AppState;
   files: BinaryFiles;
+  externalFiles?: SketchlabExternalFiles;
 }
 
 interface SketchlabSources extends ProjectSources {
@@ -122,44 +158,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     appName: 'sketchlab',
   });
 
-  async function uploadBase64ToUrl(
-    dataUrl: string,
-    uploadUrl: string,
-    options?: {
-      filename?: string;
-      mimeType?: string;
-      additionalHeaders?: Record<string, string>;
-    }
-  ): Promise<Response> {
-    // Fetch the data URL to get a Blob (handles all decoding automatically)
-    const response = await fetch(dataUrl);
-    const blob = await response.blob();
-
-    // Create a File object from the Blob
-    const file = new File([blob], options?.filename || 'upload', {
-      type: options?.mimeType || blob.type,
-    });
-
-    // Create FormData and append the file
-    const formData = new FormData();
-    formData.append('files[]', file);
-
-    // Make the upload request
-    const uploadResponse = await fetch(uploadUrl, {
-      method: 'PUT',
-      headers: options?.additionalHeaders || {},
-      body: formData,
-    });
-
-    if (!uploadResponse.ok) {
-      throw new Error(
-        `Upload failed: ${uploadResponse.status} ${uploadResponse.statusText}`
-      );
-    }
-
-    return uploadResponse;
-  }
-
   // Excalidraw runs its onChange every time the cursor moves,
   // so we debounce actually serializing the workspace to stringified JSON.
   const debouncedSerializeAndSaveWorkspace = useCallback(
@@ -191,27 +189,44 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         // On success, store to externalFiles.
 
         // Note: does this every half second thing work in this context?
-        const savedFileIds = Object.keys(currentSources.source.files || {});
+        const savedFileIds = Object.keys(
+          currentSources.source.externalFiles || {}
+        );
         const excalidrawFileIds = Object.keys(serializedData.files || {});
         const difference = excalidrawFileIds.filter(
           id => !savedFileIds.includes(id)
         );
 
         // // Probably need actual comparison of keys
-        // Check that image hasn't been uploaded previously.
+        // Don't rerun on update hook until the upload has finished?
+        // Or, maybe just set a boolean that upload is happening.
         if (difference.length) {
           if (serializedData.files) {
             const fileId = difference[0];
             const newFile = serializedData.files[fileId];
 
             const extension = MIME_TO_EXT[newFile.mimeType];
+            // note: rename to Url
             const externalURL = `/v3/assets/${channelId}/${fileId}.${extension}`;
             const response = await uploadBase64ToUrl(
               newFile.dataURL,
-              externalURL
+              externalURL,
+              newFile.mimeType
             );
 
             console.log(await response.json());
+
+            if (!serializedData.externalFiles) {
+              serializedData.externalFiles = {};
+            }
+            serializedData.externalFiles[fileId] = {
+              id: fileId,
+              name: 'external',
+              language: extension,
+              contents: '',
+              folderId: '1',
+              url: externalURL,
+            };
           }
         }
 
@@ -261,6 +276,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     // Currently doesn't do anything except update the type.
     // In the future, we'll need a step here that takes the external URLs and converts them to base64,
     // which will make them safe for Excalidraw to use.
+
+    // Should this remove the externalFiles so that Excalidraw never sees it?
+    // Maybe cloneDeep first?
     return sourcesWithExternalFiles as ExcalidrawInitialDataState;
   };
 

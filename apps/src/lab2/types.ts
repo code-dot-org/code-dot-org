@@ -101,15 +101,11 @@ export type BlocklySource = {[key: string]: unknown};
 
 // -- SKETCH LAB -- //
 
-type ExternalFileData = Omit<BinaryFileData, 'dataURL'> & {
-  externalURL?: string;
-};
-
-type FileData = BinaryFileData | ExternalFileData;
+export type SketchlabExternalFiles = Record<FileId, ProjectFile>;
 
 export interface ExcalidrawSourceWithExternalFiles
-  extends Omit<ExcalidrawInitialDataState, 'files'> {
-  files: Record<ExcalidrawElement['id'], FileData>;
+  extends ExcalidrawInitialDataState {
+  externalFiles?: SketchlabExternalFiles;
   elements?: ExcalidrawElement[] | null; // for mutability for Redux?
 }
 
