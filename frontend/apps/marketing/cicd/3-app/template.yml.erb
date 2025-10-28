@@ -573,7 +573,7 @@ Resources:
       EnableECSManagedTags: false
       HealthCheckGracePeriodSeconds: 60
       LaunchType: FARGATE
-      DesiredCount: 3
+      DesiredCount: 6
       AvailabilityZoneRebalancing: ENABLED
       LoadBalancers:
         - ContainerName: web
@@ -619,7 +619,10 @@ Resources:
     Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       MaxCapacity: 20 # Upper limit for scaling, can be increased as needed
-      MinCapacity: 3 # High availability minimum
+      MinCapacity:  !If
+        - IsProductionEnvironment
+        - 3 # High Availability for production
+        - 1
       ResourceId: !Sub "service/${EcsCluster}/${FargateService.Name}"
       RoleARN: !GetAtt ECSAutoScalingRole.Arn
       ScalableDimension: ecs:service:DesiredCount
@@ -637,8 +640,8 @@ Resources:
         TargetValue: 70.0
         PredefinedMetricSpecification:
           PredefinedMetricType: ECSServiceAverageCPUUtilization
-        ScaleInCooldown: 60 # Wait 60 seconds before scaling up
-        ScaleOutCooldown: 300 # Wait 5 minutes before scaling down
+        ScaleInCooldown: 300 # Wait 5 minutes before removing more instances
+        ScaleOutCooldown: 60 # Wait 1 minute before adding more instances
   ECSAutoScalingRole:
     Type: AWS::IAM::Role
     Properties:
