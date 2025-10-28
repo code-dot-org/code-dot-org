@@ -362,7 +362,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             chatResponseCallback={() => setChatContinueButtonDisabled(false)}
             initialChatMessage={initialMessage}
             suggestedPrompts={suggestedPrompts}
-            disableEndButtons={true}
+            hideChatHeader
           />
         </div>
         {continueAndSkipButtons(
