@@ -1,0 +1,118 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-10-22T14:34:53.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##8.1\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Movie Spoiler Checker</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <script src=\"script.js\"></script>\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"image-section\">\n        <img id=\"result-image\" src=\"NN.png\" alt=\"Result image\" />\n      </div>\n\n      <div class=\"questions-section\">\n        <div class=\"question-group\">\n          <p class=\"question-text\">Have you finished the movie?</p>\n          <div class=\"button-group\">\n            <button id=\"movie-no\">No</button>\n            <button id=\"movie-yes\">Yes</button>\n          </div>\n        </div>\n\n        <div class=\"question-group\">\n          <p class=\"question-text\">Does the post contain spoiler tags?</p>\n          <div class=\"button-group\">\n            <button id=\"spoiler-no\">No</button>\n            <button id=\"spoiler-yes\">Yes</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "let finishedMovie = false;\nlet hasSpoilerTags = false;\n\nconst updateImage = () => {\n  const resultImage = document.querySelector(\"#result-image\");\n\n  if (finishedMovie) {\n    if (hasSpoilerTags) {\n      resultImage.src = \"YY.png\";\n    } else {\n      resultImage.src = \"YN.png\";\n    }\n  } else {\n    if (hasSpoilerTags) {\n      resultImage.src = \"NY.png\";\n    } else {\n      resultImage.src = \"NN.png\";\n    }\n  }\n}\n\nconst setupEventListeners = () => {\n  const movieYesBtn = document.querySelector(\"#movie-yes\");\n  const movieNoBtn = document.querySelector(\"#movie-no\");\n  const spoilerYesBtn = document.querySelector(\"#spoiler-yes\");\n  const spoilerNoBtn = document.querySelector(\"#spoiler-no\");\n\n  movieYesBtn.addEventListener(\"click\", () => {\n    finishedMovie = true;\n    movieYesBtn.classList.add(\"btn-primary\");\n    movieNoBtn.classList.remove(\"btn-primary\");\n    updateImage();\n  });\n\n  movieNoBtn.addEventListener(\"click\", () => {\n    finishedMovie = false;\n    movieNoBtn.classList.add(\"btn-primary\");\n    movieYesBtn.classList.remove(\"btn-primary\");\n    updateImage();\n  });\n\n  spoilerYesBtn.addEventListener(\"click\", () => {\n    hasSpoilerTags = true;\n    spoilerYesBtn.classList.add(\"btn-primary\");\n    spoilerNoBtn.classList.remove(\"btn-primary\");\n    updateImage();\n  });\n\n  spoilerNoBtn.addEventListener(\"click\", () => {\n    hasSpoilerTags = false;\n    spoilerNoBtn.classList.add(\"btn-primary\");\n    spoilerYesBtn.classList.remove(\"btn-primary\");\n    updateImage();\n  });\n}\n\nwindow.addEventListener(\"load\", () => {\n  setupEventListeners();\n});\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  padding: 20px;\n  font-family: Arial, sans-serif;\n  background-color: #f5f5f5;\n}\n\n.container {\n  padding: 30px;\n  margin: 0 auto;\n  max-width: 900px;\n}\n\n.questions-section {\n  width: 45%;\n  float: left;\n}\n\n.image-section {\n  width: 50%;\n  float: right;\n  background-color: #e8e8e8;\n  border: 1px solid #ccc;\n  padding: 20px;\n  min-height: 300px;\n}\n\n.question-group {\n  margin-bottom: 30px;\n}\n\n.question-text {\n  padding: 0;\n  margin-bottom: 10px;\n  font-size: 14px;\n  font-weight: bold;\n}\n\n.button-group {\n  margin-left: 10px;\n}\n\nbutton {\n  background-color: white;\n  border: 2px solid #333;\n  border-radius: 8px;\n  padding: 8px 20px;\n  margin-right: 10px;\n  cursor: pointer;\n  font-size: 14px;\n}\n\nbutton:hover {\n  background-color: #f0f0f0;\n}\n\n.btn-primary {\n  background-color: #90ee90;\n}\n\n.btn-primary:hover {\n  background-color: #7ed97e;\n}\n\n.container::after {\n  content: \"\";\n  clear: both;\n}\n\n#result-image {\n  width: 100%;\n  height: auto;\n  border-radius: 5px;\n}\n\n@media (max-width: 768px) {\n  .container {\n    padding: 20px;\n  }\n\n  .questions-section {\n    width: 100%;\n    float: none;\n    clear: both;\n  }\n\n  .image-section {\n    width: 100%;\n    float: none;\n    margin-bottom: 20px;\n  }\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "flowchart.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level1-test-2025/uuid/563d16c5-54bd-4d28-b712-d5064f3ec7f7.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "NN.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level1-test-2025/uuid/06d1703e-08be-42ac-8edb-4feede065b69.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "NY.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level1-test-2025/uuid/57dc8115-dff0-4d75-a0cc-b98dd2d50502.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "YN.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level1-test-2025/uuid/74a94089-d514-424e-b209-bf119dab81e2.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "YY.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level1-test-2025/uuid/f04a073b-0a9a-4337-8dbe-80948cd3212d.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-22 14:35:12 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 17:26:26 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 17:26:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

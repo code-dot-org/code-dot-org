@@ -8,6 +8,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
   setup do
     @ids = ['http://some-iss.com', ['some-aud'], 'some-sub'].freeze
     @roles_key = Policies::Lti::LTI_ROLES_KEY
+    @classlink_role_key = Policies::Lti::CLASSLINK_ROLE_KEY
     @teacher_roles = [
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',
@@ -40,6 +41,16 @@ class Policies::LtiTest < ActiveSupport::TestCase
   test 'get_account_type should return a student if id_token does not have TEACHER_ROLES' do
     @id_token[@roles_key] = ['not-a-teacher-role']
     assert_equal Policies::Lti.get_account_type(@id_token[Policies::Lti::LTI_ROLES_KEY]), User::TYPE_STUDENT
+  end
+
+  test 'get_account_type should return a teacher if id_token has Classlink formated Teacher role' do
+    @id_token[@classlink_role_key] = 'Teacher'
+    assert_equal Policies::Lti.get_account_type(@id_token[@classlink_role_key]), User::TYPE_TEACHER
+  end
+
+  test 'get_account_type should return a student if id_token has Classlink formated Student role' do
+    @id_token[@classlink_role_key] = 'Student'
+    assert_equal Policies::Lti.get_account_type(@id_token[@classlink_role_key]), User::TYPE_STUDENT
   end
 
   test 'issuer should return the issuer of the LTI Platform from a users LTI authentication_options' do
