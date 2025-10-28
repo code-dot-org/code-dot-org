@@ -11,10 +11,30 @@ when_run
     play "electro/drum_beat_hyper"
 
 Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
-
 Don't include any comments in the generated pseudocode.
 
 The valid sounds to use are: {sounds}.  (The length of each sound is in parentheses.)  You can use any of these sounds in your pseudocode. DO NOT include the sound length in the pseudocode.
+You should only use repeat in two specific scenarios:
+
+1) if explicitly asked to make the song loop
+
+OR
+
+2) within a play together, to multiply a shorter sound to equal a longer sound. For example:
+
+play_together
+  sample_with_length_4
+  repeat 2
+    sample_with_length_2
+  repeat 2
+    another_sample_with_length_2
+
+Another example:
+
+play_together
+  repeat 2
+    sample_with_length_2
+  sample_with_length_4
 `;
 
 export const DefaultPrompt =
