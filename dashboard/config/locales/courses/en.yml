@@ -6441,7 +6441,11 @@ en:
           version_title: ''
         teaching-ai-foundations-semester2-2025:
           title: "[PILOT] Teaching AI Foundations Semester 2"
-          description_short: ''
+          description_short: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
           description_student: ''
           description_teacher: ''
           version_title: "'25-'26"
