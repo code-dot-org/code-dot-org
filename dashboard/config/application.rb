@@ -190,7 +190,7 @@ module Dashboard
     #
     # These directories will also be treated as top-level directories by
     # Zeitwerk, rather than as subdirectories which require namspacing.
-    config.eager_load_paths += runtime_load_paths.map(&:to_s)
+    config.eager_load_paths += runtime_load_paths
 
     # Ignore certain directories for autoloading and eager loading
     Rails.autoloaders.main.ignore(
@@ -203,7 +203,13 @@ module Dashboard
     # still be autoloaded as needed without being explicitly required.
     config.autoload_paths << Rails.root.join('lib', 'devtools')
     Rails.autoloaders.main.do_not_eager_load(Rails.root.join('lib', 'devtools'))
+
+    # Explicitly cast all paths to strings; otherwise, the bootsnap gem might
+    # fail in some local development environments with a `no implicit
+    # conversion of Pathname into String` error when trying to run `db:migrate`
+    # See https://github.com/rails/bootsnap/blob/v1.16.0/lib/bootsnap/load_path_cache/loaded_features_index.rb#L39
     config.autoload_paths.map!(&:to_s)
+    config.eager_load_paths.map!(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
