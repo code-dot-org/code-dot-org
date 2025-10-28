@@ -1,4 +1,3 @@
-import {UserAddedSelectionContext} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
@@ -6,7 +5,6 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 interface AiTutorWebLab2Params {
   source: MultiFileSource | undefined;
   longInstructions: string | undefined;
-  selection: UserAddedSelectionContext;
 }
 
 const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['txt', 'csv', 'md'];
