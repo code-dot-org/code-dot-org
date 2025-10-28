@@ -9,7 +9,7 @@ import ButtonWithDialog from './ButtonWithDialog';
 import styles from './disclaimer.module.scss';
 
 const LEARN_MORE_URL =
-  'https://support.code.org/hc/en-us/articles/40542019587213/live_preview/01K86JQKCEP6HFD5CCWX0M1T05';
+  'https://support.code.org/hc/en-us/articles/40542019587213-AI-Tutor-FAQ';
 
 interface DisclaimerProps {
   theme: Theme;
