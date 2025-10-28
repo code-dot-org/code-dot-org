@@ -1,16 +1,16 @@
 import {memo} from 'react';
 
-import _BaseButton, {
+import GenericButton, {
   CoreButtonProps,
   LinkButtonSpecificProps,
-} from './_BaseButton';
+} from './GenericButton';
 
 export interface LinkButtonProps
   extends CoreButtonProps,
     LinkButtonSpecificProps {}
 
 const LinkButton: React.FunctionComponent<LinkButtonProps> = props => (
-  <_BaseButton useAsLink {...props} />
+  <GenericButton useAsLink {...props} />
 );
 
 /**
@@ -18,7 +18,7 @@ const LinkButton: React.FunctionComponent<LinkButtonProps> = props => (
  *
  * Design System: Link Button Component.
  *
- * Alias for ***_BaseButton*** Component. Renders a Button with ```<a>``` html tag.
+ * Alias for ***GenericButton*** Component. Renders a Button with ```<a>``` html tag.
  *
  * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
  */

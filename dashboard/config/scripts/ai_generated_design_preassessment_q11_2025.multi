@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q11_2025'
+
+question 'A designer notices that most news websites include the same layout elements: a logo at the top left, navigation links across the top, and a footer with contact information. The designer decides to include those features in a new site to make it feel familiar to users. What design skill is the designer using?'
+
+wrong 'Debugging – fixing broken links and code errors'
+wrong 'Abstraction – hiding unnecessary details from users'
+wrong 'Accessibility – ensuring the site works for all users'
+right 'Pattern recognition – identifying and reusing common design elements'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 8, 12
+MARKDOWN

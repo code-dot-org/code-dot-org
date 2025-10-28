@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q6_2025'
+
+question 'A city\'s event website uses light gray text on a white background, and many visitors say the information is hard to read. Which accessibility principle does this problem relate to?'
+
+right 'Perceivable – everyone should be able to see and read the content'
+wrong 'Operable – everyone should be able to use buttons and links'
+wrong 'Understandable – everyone should be able to follow the directions'
+wrong 'Robust – the website should work on any browser'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 6, 11
+MARKDOWN

@@ -80,5 +80,16 @@ markdown <<MARKDOWN
 
 </div>
 
-![]()
+---
+Sources:
+
+PWC [The Fearless Future: 2025 Global AI Jobs Barometer](https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/aijb-2025-united-states-analysis.pdf)
+ 
+The Interview Guys [The State of AI in the Workplace](https://blog.theinterviewguys.com/the-state-of-ai-in-the-workplace-in-2025/)
+
+Quanta Intelligence [AI Job Report 2025](https://quantaintelligence.ai/2025/02/10/technology/ai-job-report-2025-q1)
+ 
+Microsoft Learn+ [Computational Thinking and Its Importance in Education](https://learn.microsoft.com/en-us/training/modules/computational-thinking-importance-education/)
+
+
 MARKDOWN

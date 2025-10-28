@@ -2,7 +2,7 @@ import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelp
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
-import {AI_TUTOR_LABS} from './constants';
+import {AI_TUTOR_LEGACY_LABS, PROJECT_EXAMPLES} from './constants';
 
 export interface AiTutorLegacyLabParams {
   sourceCode?: string;
@@ -36,8 +36,11 @@ export class AiTutorLegacyLabContextHelper extends AiTutorContextHelper<AiTutorL
   }
 
   setLabDocumentationLocation(labType?: string) {
-    if (labType && AI_TUTOR_LABS.includes(labType)) {
+    if (labType && AI_TUTOR_LEGACY_LABS.includes(labType)) {
       this.documentationLocation = studio(`/docs/ide/${labType}`);
+    }
+    if (labType && PROJECT_EXAMPLES[labType]) {
+      this.examplesLocation = PROJECT_EXAMPLES[labType].join('\n');
     }
   }
 }
