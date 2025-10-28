@@ -5,7 +5,6 @@ import {
   OPEN_ENDED_PROJECTS_YOUNG_AGE,
 } from '@cdo/apps/constants';
 import firehoseClient from '@cdo/apps/metrics/firehose';
-import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
@@ -717,25 +716,10 @@ var projects = (module.exports = {
         }
 
         if (!appOptions.level.skipRunSave) {
-          $(window).on(events.appModeChanged, () => {
-            try {
-              this.saveIfSourcesChanged().catch(error => {
-                MetricsReporter.logError({
-                  message:
-                    'Error in saveIfSourcesChanged when app mode changed',
-                  error,
-                  channelId: this.getCurrentId(),
-                });
-              });
-            } catch (error) {
-              MetricsReporter.logError({
-                message:
-                  'Error in saveIfSourcesChanged when app mode changed - synchronously',
-                error,
-                channelId: this.getCurrentId(),
-              });
-            }
-          });
+          $(window).on(
+            events.appModeChanged,
+            this.saveIfSourcesChanged.bind(this)
+          );
         }
 
         $(window).on(
@@ -980,12 +964,8 @@ var projects = (module.exports = {
       return Promise.resolve();
     }
 
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(newSources => {
-        if (newSources.error) {
-          return reject(newSources.error);
-        }
-
         const sourcesChanged =
           JSON.stringify(currentSources) !== JSON.stringify(newSources);
         if (sourcesChanged || thumbnailChanged) {
@@ -1050,9 +1030,6 @@ var projects = (module.exports = {
     const completeAsyncSave = () =>
       new Promise((resolve, reject) =>
         this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-          if (sourceAndHtml.error) {
-            return reject(sourceAndHtml.error);
-          }
           try {
             this.saveSourceAndHtml_(
               sourceAndHtml,
@@ -1318,17 +1295,7 @@ var projects = (module.exports = {
       this.sourceHandler
         .getLevelSource()
         .then(source => {
-          let html;
-          try {
-            html = this.sourceHandler.getLevelHtml();
-          } catch (error) {
-            MetricsReporter.logError({
-              message: 'Error in getLevelHtml',
-              error,
-              channelId: this.getCurrentId(),
-            });
-            return callback({error});
-          }
+          const html = this.sourceHandler.getLevelHtml();
           const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
@@ -1349,14 +1316,7 @@ var projects = (module.exports = {
             teacherHasConfirmedUploadWarning,
           });
         })
-        .catch(error => {
-          MetricsReporter.logError({
-            message: 'Error in getUpdatedSourceAndHtml promise chain',
-            error,
-            channelId: this.getCurrentId(),
-          });
-          callback({error});
-        })
+        .catch(error => callback({error}))
     );
   },
 
@@ -1370,11 +1330,8 @@ var projects = (module.exports = {
    * @returns {Promise} (mostly useful for tests)
    */
   setMakerEnabled(apisEnabled) {
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-        if (sourceAndHtml.error) {
-          return reject(sourceAndHtml.error);
-        }
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
@@ -1398,11 +1355,8 @@ var projects = (module.exports = {
         library.fromLevelbuilder = true;
       });
     }
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-        if (sourceAndHtml.error) {
-          return reject(sourceAndHtml.error);
-        }
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
@@ -1555,11 +1509,6 @@ var projects = (module.exports = {
     this.getUpdatedSourceAndHtml_(newSources => {
       if (newSources.error) {
         header.showProjectSaveError();
-        MetricsReporter.logError({
-          message: 'Error in autosave getUpdatedSourceAndHtml',
-          error: newSources.error,
-          channelId: this.getCurrentId(),
-        });
         callCallback();
         return;
       }
