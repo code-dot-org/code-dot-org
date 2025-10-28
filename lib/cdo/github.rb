@@ -73,7 +73,7 @@ module GitHub
       'git fetch',
       "git checkout -b #{branch_name} #{base_branch}",
     ].join(' && ')
-    raise Exception.new("GitHub.create_branch_from_commit: Failed to create branch #{branch_name}") unless created_branch
+    raise "GitHub.create_branch_from_commit: Failed to create branch #{branch_name}" unless created_branch
 
     # merge the commit into the branch
     merge_success = system "#{prefix_command} && git merge #{commit} --no-edit"
@@ -81,8 +81,9 @@ module GitHub
     if merge_success
       # if the merge succeeds push the new branch
       push_success = system "#{prefix_command} && git push origin #{branch_name}"
-      raise Exception.new("GitHub.create_branch_from_commit: Failed to push to #{branch_name}") unless push_success
+      raise "GitHub.create_branch_from_commit: Failed to push to #{branch_name}" unless push_success
     else
+      # check for conflicts
       conflicts = `#{prefix_command} && git ls-files -u | wc -l`.to_i
 
       # if the merge fails or there are conflicts, abort the merge and cleanup
@@ -93,11 +94,7 @@ module GitHub
         "git branch -D #{branch_name}"
       ].join(' && ')
 
-      # check for conflicts
-      if conflicts > 0
-        raise Exception.new("GitHub.create_branch_from_commit: Failed to merge due to conflicts")
-      end
-      raise Exception.new("GitHub.create_branch_from_commit: Failed to merge but there were no conflicts")
+      raise "GitHub.create_branch_from_commit: Failed to merge; #{conflicts} conflicts detected"
     end
   end
 
