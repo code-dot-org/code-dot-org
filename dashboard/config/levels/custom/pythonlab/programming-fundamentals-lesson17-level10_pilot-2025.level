@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:48:15.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "Use dice rolls to randomly determine how many villagers are healed with each potion.\r\n\r\n## Do This: \r\n- Run the code to see how villagers are healed with each potion.\r\n- Modify the code so that each potion heals between 2 and 5 villagers.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -43,9 +44,12 @@
       "type": "validation"
     },
     "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWGIY/ZrAXtyOB9uL563fB2CeYUHsCowFfREC6Jt\n7I8mJPJwO2e3tZlmhfOVYqGnrsiJe4kD8WeBo2LVTk4o21rxZjTUQRjLk9ak\nwpBJQlFe0GO46YrkqBG/U5JjXneF3R1RZeuUOlHJEiArUUs1b+fZCeUjtRtl\n0Vy6SMAl6XYuzsl4iLl6Ikt0GcnWlrChvWvfaGtirPYpYzxwuaxwT1gidckx\njRHkmv6t3E6Yc2KFsko+IYRrYFVekC0YY3EjgYpyIQtxsAwbSeSzejaTjtId\nB0nfd1UhMm3D3KHfAVHSLEbqnuuznz2zkrFAezwV1Bjx21O2uei4Iw0YOXp5\nxEh9Bcez3J4ktkwuPjFgArW2SSO/1gZzlgBQgYnydLLYx8kscW4ByUw+kKKX\n51V7RWKxylmSCpGEbPXnEmuKdbzH1dzN0MsvFv/k/jHEciwLx+VRlUPYIvvZ\nsKjDcRwHPaEvXMOQPhRA1y3QycZ1PKT0sdFJrb6rwraLv0S5qC8fzRAv2cS/\npA5jUFYNihCwFXdEYm9xj4UOS71qfPPvgAPQAGHocxR/zHHZ0xnehQ+rWnVO\nOg5hTb/Wy/u0ziy51S6qRTw6u3b6N8jZprUrkRgQRVqdQnqKZov47OE3tK5h\npCkMpyUebqoIGlvClGHKOAh/VLluePVrHbvtPFSI8KdxRgGWNfvnaxq9YO1Y\ncCyHTC8zqzDDpA+H/CS1VdsDNYA=\n",
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:15.705+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson17-level10_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson17-level10_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:15.705+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson17-level10_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson17-level10_2025\"},{\"changed_at\":\"2025-10-27 16:11:14 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>
