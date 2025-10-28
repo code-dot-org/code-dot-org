@@ -192,7 +192,10 @@ namespace :test do
 
   desc 'Runs dashboard tests.'
   timed_task_with_logging :dashboard do
-    TestRunUtils.run_dashboard_tests
+    # This task can be run locally or in CI (the test machine uses dashboard_qa). By default, we
+    # only want to run in parallel in CI to avoid overloading local machines.
+    parallel = CI::Utils.ci_job_unit_tests?
+    TestRunUtils.run_dashboard_tests(parallel: parallel)
   end
 
   desc 'Runs dashboard legacy tests.'
@@ -273,7 +276,10 @@ namespace :test do
         ],
         ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
       ) do
-        TestRunUtils.run_dashboard_tests
+        # This task is typically only run in CI, so gate on CI just as a safeguard
+        # in case a developer tries to run it locally.
+        parallel = CI::Utils.ci_job_unit_tests?
+        TestRunUtils.run_dashboard_tests(parallel: parallel)
       end
     end
 
