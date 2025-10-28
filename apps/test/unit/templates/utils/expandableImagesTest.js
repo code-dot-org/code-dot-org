@@ -18,7 +18,7 @@ describe('expandableImages', () => {
       const result = document.createElement('span');
       result.classList.add('expandable-image');
       result.dataset['url'] = url;
-      result.dataset['alt'] = alt;
+      result.textContent = alt;
       return result;
     };
 
