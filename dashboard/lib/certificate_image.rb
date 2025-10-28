@@ -323,8 +323,6 @@ class CertificateImage
         'MC_Hour_Of_Code_Certificate_Generation_Ai.png'
       when ScriptConstants::MINECRAFT_SHOW_NAME
         'MC_Hour_Of_Code_Certificate_Show.png'
-      when ScriptConstants::MINECRAFT_NIGHT_NAME
-        'MC_Hour_Of_AI_Certificate_First_Night.png'
       else
         'MC_Hour_Of_Code_Certificate.png'
       end
