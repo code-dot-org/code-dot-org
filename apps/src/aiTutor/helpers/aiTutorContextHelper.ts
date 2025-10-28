@@ -20,6 +20,9 @@ const DOCUMENTATION_INTRO = 'Here is the documentation:';
 const DOCUMENTATION_LOCATION_INTRO =
   'Here is where the student can find the documentation:';
 
+const EXAMPLES_LOCATION_INTRO =
+  'Here is where the student can find example projects:';
+
 /*
  * Abstract base class used to provide lab specific context to AI Tutor.  Each lab will inherit from and
  * extend this class, but conversion to a system prompt string should be kept here for coordination and
@@ -27,6 +30,7 @@ const DOCUMENTATION_LOCATION_INTRO =
  */
 export abstract class AiTutorContextHelper<AiTutorParams extends object> {
   protected documentationLocation: string = '';
+  protected examplesLocation: string = '';
 
   protected abstract getAiTutorContext(): MaybePromise<AiTutorContext>;
 
@@ -59,6 +63,9 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
       documentation ? `${DOCUMENTATION_INTRO} ${documentation}` : '',
       this.documentationLocation
         ? `${DOCUMENTATION_LOCATION_INTRO} ${this.documentationLocation}`
+        : '',
+      this.examplesLocation
+        ? `${EXAMPLES_LOCATION_INTRO} ${this.examplesLocation}`
         : '',
     ]
       .filter(Boolean)
