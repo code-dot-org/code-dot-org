@@ -72,13 +72,13 @@ module Dashboard
 
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
       # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
-      config.autoload_paths << Rails.root.join('test/mailers/previews')
+      config.autoload_paths << Rails.root.join('test/mailers/previews').to_s
 
       # Automatically load tools intended to make the local development
       # environment behave more like production.
       require 'cdo/local_development'
       if CDO.aws_s3_emulated
-        config.autoload_paths << Rails.root.join('../lib/cdo/local_development/s3_emulation')
+        config.autoload_paths << Rails.root.join('../lib/cdo/local_development/s3_emulation').to_s
       end
     end
 
@@ -181,7 +181,7 @@ module Dashboard
       Rails.root.join('app', 'models', 'levels'),
       Rails.root.join('app', 'models', 'sections'),
       Rails.root.join('../lib/cdo/shared_constants')
-    ]
+    ].map(&:to_s)
 
     config.autoload_paths += runtime_load_paths
 
@@ -201,7 +201,7 @@ module Dashboard
     # Tools which are designed for development / test environments should not be eager-loaded
     # because they may depend on gems which are not available in production. These tools can
     # still be autoloaded as needed without being explicitly required.
-    config.autoload_paths << Rails.root.join('lib', 'devtools')
+    config.autoload_paths << Rails.root.join('lib', 'devtools').to_s
     Rails.autoloaders.main.do_not_eager_load(Rails.root.join('lib', 'devtools'))
 
     # use https://(*-)studio.code.org urls in mails
