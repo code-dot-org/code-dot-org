@@ -967,6 +967,7 @@ var projects = (module.exports = {
 
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(newSources => {
+        // Adding error logging for retrieval of current sources for debugging/monitoring purposes.
         if (newSources.error) {
           MetricsReporter.logError({
             event:
@@ -975,8 +976,6 @@ var projects = (module.exports = {
             appType: this.getStandaloneApp(),
             channelId: this.getCurrentId(),
           });
-          resolve();
-          return;
         }
         const sourcesChanged =
           JSON.stringify(currentSources) !== JSON.stringify(newSources);
@@ -1409,8 +1408,8 @@ var projects = (module.exports = {
       event: errorType,
       errorMessage: errorText,
       errorCount: errorCount,
-      channelId: this.getCurrentId(),
       appType: this.getStandaloneApp(),
+      channelId: this.getCurrentId(),
     });
 
     return firehoseClient.putRecord(
