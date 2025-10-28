@@ -88,8 +88,8 @@ const customInputTypes = {
           name = JSON.parse(name);
         } catch {}
         if (name === GENERATED_DANCER) {
-          const {headUrl} = resolveDancerAssets({sourceTag: 'blockly'});
-          return [headUrl, option];
+          const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
+          return [urls.headUrl, option];
         }
         return [`/blockly/media/skins/dance/${name.toLowerCase()}.png`, option];
       });

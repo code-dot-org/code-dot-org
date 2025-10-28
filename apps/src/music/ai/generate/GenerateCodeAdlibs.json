@@ -1,25 +1,25 @@
 {
   "complex": {
-    "template": "Please generate a new song.  Around {length} measures in duration is good.  Go for a {mood} vibe.  Sequence it like a {sequence}.",
+    "template": "Please generate a new song.  Around {length} measures in duration is good.  Go for {mood} vibe.  Sequence it like {sequence}.",
     "options": {
       "length": [
-        "20",
-        "30",
-        "40"
+        {"id": "20", "text": "20"},
+        {"id": "30", "text": "30"},
+        {"id": "40", "text": "40"}
       ],
       "mood": [
-        "happy",
-        "sad",
-        "energetic",
-        "calm",
-        "upbeat",
-        "chill"
+        {"id": "happy", "text": "a happy"},
+        {"id": "sad", "text": "a sad"},
+        {"id": "energetic", "text": "an energetic"},
+        {"id": "calm", "text": "a calm"},
+        {"id": "upbeat", "text": "an upbeat"},
+        {"id": "chill", "text": "a chill"}
       ],
       "sequence": [
-        "verse-chorus-verse",
-        "A-B-A",
-        "A-B-A-C-A",
-        "A-A-B-A"
+        {"id": "verse-chorus-verse", "text": "a verse-chorus-verse"},
+        {"id": "A-B-A", "text": "an A-B-A"},
+        {"id": "A-B-A-C-A", "text": "an A-B-A-C-A"},
+        {"id": "A-A-B-A", "text": "an A-A-B-A"}
       ]
     },
     "variantCount": 3
@@ -28,9 +28,9 @@
     "template": "Please generate a new song.  Around {length} measures in duration is good.",
     "options": {
       "length": [
-        "20",
-        "30",
-        "40"
+        {"id": "20", "text": "20"},
+        {"id": "30", "text": "30"},
+        {"id": "40", "text": "40"}
       ]
     },
     "variantCount": 3
@@ -39,10 +39,10 @@
     "template": "Please make a song with {sounds} sounds in order.",
     "options": {
       "sounds": [
-        "2",
-        "3",
-        "4",
-        "5"
+        {"id": "2", "text": "2"},
+        {"id": "3", "text": "3"},
+        {"id": "4", "text": "4"},
+        {"id": "5", "text": "5"}
       ]
     },
     "variantCount": 3
@@ -51,16 +51,16 @@
     "template": "Please make a song that layers {type1} and {type2} together. Around 10 measures is good.",
     "options": {
       "type1": [
-        "bass",
-        "leads",
-        "beats",
-        "vocals"
+        {"id": "bass", "text": "bass"},
+        {"id": "leads", "text": "leads"},
+        {"id": "beats", "text": "beats"},
+        {"id": "vocals", "text": "vocals"}
       ],
       "type2": [
-        "bass",
-        "leads",
-        "beats",
-        "vocals"
+        {"id": "bass", "text": "bass"},
+        {"id": "leads", "text": "leads"},
+        {"id": "beats", "text": "beats"},
+        {"id": "vocals", "text": "vocals"}
       ]
     },
     "variantCount": 3
@@ -69,21 +69,21 @@
     "template": "Please make a song that layers {type1} and {type2} together. Around {length} measures in duration is good.",
     "options": {
       "type1": [
-        "bass",
-        "leads",
-        "beats",
-        "vocals"
+        {"id": "bass", "text": "bass"},
+        {"id": "leads", "text": "leads"},
+        {"id": "beats", "text": "beats"},
+        {"id": "vocals", "text": "vocals"}
       ],
       "type2": [
-        "bass",
-        "leads",
-        "beats",
-        "vocals"
+        {"id": "bass", "text": "bass"},
+        {"id": "leads", "text": "leads"},
+        {"id": "beats", "text": "beats"},
+        {"id": "vocals", "text": "vocals"}
       ],
       "length": [
-        "20",
-        "30",
-        "40"
+        {"id": "20", "text": "20"},
+        {"id": "30", "text": "30"},
+        {"id": "40", "text": "40"}
       ]
     },
     "variantCount": 3

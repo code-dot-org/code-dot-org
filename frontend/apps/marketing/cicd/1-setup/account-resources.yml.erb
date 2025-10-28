@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: |
-  Provision all the global Resources (such as IAM Roles/Policies) needed in an AWS Account to support provisioning one
+  Provision all the global Resources (such as IAM Roles/Policies, WAF Web ACL) needed in an AWS Account to support provisioning one
   or more Marketing Sites Stacks in the Account.
 
 Parameters:
@@ -39,6 +39,567 @@ Parameters:
 %>
 
 Resources:
+  # ------------------------------------------------------------
+  # Web Application Firewall (WAF) Resources
+  # ------------------------------------------------------------
+  MarketingSitesIPv4AllowList:
+    Type: AWS::WAFv2::IPSet
+    Properties:
+      Name: marketing-sites_IPV4_Allow
+      Description: IPv4 addresses allowed to bypass WAF rules for marketing sites
+      Scope: CLOUDFRONT
+      IPAddressVersion: IPV4
+      Addresses: []  # Empty initially - typically edited manually in response to need.
+  MarketingSitesIPv6AllowList:
+    Type: AWS::WAFv2::IPSet
+    Properties:
+      Name: marketing-sites_IPV6_Allow
+      Description: IPv6 addresses allowed to bypass WAF rules for marketing sites
+      Scope: CLOUDFRONT
+      IPAddressVersion: IPV6
+      Addresses: []  # Empty initially - typically edited manually in response to need.
+  MarketingSitesIPv4BlockList:
+    Type: AWS::WAFv2::IPSet
+    Properties:
+      Name: marketing-sites_IPV4_Block
+      Description: IPv4 addresses blocked by WAF for marketing sites
+      Scope: CLOUDFRONT
+      IPAddressVersion: IPV4
+      Addresses: []  # Empty initially - typically edited manually in response to need.
+  MarketingSitesIPv6BlockList:
+    Type: AWS::WAFv2::IPSet
+    Properties:
+      Name: marketing-sites_IPV6_Block
+      Description: IPv6 addresses blocked by WAF for marketing sites
+      Scope: CLOUDFRONT
+      IPAddressVersion: IPV6
+      Addresses: []  # Empty initially - typically edited manually in response to need.
+  # Any Marketing Site provisioned in this AWS Account can use this WebACL to protect its CloudFront Distribution.
+  MarketingSitesWebACL:
+    Type: AWS::WAFv2::WebACL
+    Properties:
+      Name: marketing-sites
+      Description: Protect Marketing Websites in this AWS Account from Distributed Denial of Service Attacks and malicious HTTP requests.
+      Scope: CLOUDFRONT
+      DefaultAction:
+        Allow: {}
+      VisibilityConfig:
+        CloudWatchMetricsEnabled: true
+        MetricName: marketing-sites
+        SampledRequestsEnabled: true
+      Rules:
+        - Name: AWS-AWSManagedRulesAntiDDoSRuleSet
+          Priority: 0
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesAntiDDoSRuleSet
+              ManagedRuleGroupConfigs:
+                - AWSManagedRulesAntiDDoSRuleSet:
+                    SensitivityToBlock: LOW
+                    ClientSideActionConfig:
+                      Challenge:
+                        UsageOfAction: ENABLED
+                        Sensitivity: HIGH
+                        # Don't Challenge HTTP requests for URLs that serve a different content-type from text/html
+                        ExemptUriRegularExpressions:
+                          # `/api` endpoints typically serve JSON.
+                          - RegexString: '\\/api\\/'
+                          # All assets are served from `/_next/static` and HTML pages are never served from this path.
+                          - RegexString: '\\/_next\\/static'
+                          # The `/_next/image` endpoint proxies images from the Contentful webservice.
+                          - RegexString: '\\/_next\\/image'
+                          # Just to be safe, exclude paths where the file extension is a non-HTML resource.
+                          - RegexString: '\\.(acc|avi|css|gif|ico|jpe?g|js|json|mp[34]|ogg|otf|pdf|png|tiff?|ttf|txt|webm|webp|woff2?|xml)$'
+              RuleActionOverrides:
+                - Name: ChallengeAllDuringEvent
+                  ActionToUse:
+                    Challenge: {}
+                - Name: ChallengeDDoSRequests
+                  ActionToUse:
+                    Challenge: {}
+                - Name: DDoSRequests
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesAntiDDoSRuleSet
+            SampledRequestsEnabled: true
+        - Name: marketing-sites_IPV4_Allow
+          Priority: 1
+          Action:
+            Allow: {}
+          Statement:
+            IPSetReferenceStatement:
+              Arn: !GetAtt MarketingSitesIPv4AllowList.Arn
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: marketing-sites_IPV4_Allow
+            SampledRequestsEnabled: true
+        - Name: marketing-sites_IPV6_Allow
+          Priority: 2
+          Action:
+            Allow: {}
+          Statement:
+            IPSetReferenceStatement:
+              Arn: !GetAtt MarketingSitesIPv6AllowList.Arn
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: marketing-sites_IPV6_Allow
+            SampledRequestsEnabled: true
+        - Name: marketing-sites_IPV4_Block
+          Priority: 3
+          Action:
+            Block: {}
+          Statement:
+            IPSetReferenceStatement:
+              Arn: !GetAtt MarketingSitesIPv4BlockList.Arn
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: marketing-sites_IPV4_Block
+            SampledRequestsEnabled: true
+        - Name: marketing-sites_IPV6_Block
+          Priority: 4
+          Action:
+            Block: {}
+          Statement:
+            IPSetReferenceStatement:
+              Arn: !GetAtt MarketingSitesIPv6BlockList.Arn
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: marketing-sites_IPV6_Block
+            SampledRequestsEnabled: true
+        - Name: GeoRule
+          Priority: 5
+          Action:
+            Block: {}
+          Statement:
+            GeoMatchStatement:
+              CountryCodes:
+                - KP
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: GeoRule
+            SampledRequestsEnabled: true
+        # Label GET requests to HTML content to Scope Down Managed Rules CHALLENGE Action
+        # This label is used by subsequent managed rules to only challenge HTML requests,
+        # preventing challenges on API calls and static assets which would break functionality
+        - Name: LabelHTMLRequests
+          Priority: 6
+          Action:
+            Count: {}  # Just add label, don't block
+          Statement:
+            AndStatement:
+              Statements:
+                - ByteMatchStatement:
+                    SearchString: GET
+                    FieldToMatch:
+                      Method: {}
+                    TextTransformations:
+                      - Priority: 0
+                        Type: NONE
+                    PositionalConstraint: EXACTLY
+                - NotStatement:
+                    Statement:
+                      OrStatement:
+                        Statements:
+                          # `/api` endpoints typically serve JSON.
+                          - ByteMatchStatement:
+                              SearchString: /api/
+                              FieldToMatch:
+                                UriPath: {}
+                              TextTransformations:
+                                - Priority: 0
+                                  Type: NONE
+                              PositionalConstraint: CONTAINS
+                          # All assets are served from `/_next/static` and HTML pages are never served from this path.
+                          - ByteMatchStatement:
+                              SearchString: /_next/static
+                              FieldToMatch:
+                                UriPath: {}
+                              TextTransformations:
+                                - Priority: 0
+                                  Type: NONE
+                              PositionalConstraint: CONTAINS
+                          # The `/_next/image` endpoint proxies images from the Contentful webservice.
+                          - ByteMatchStatement:
+                              SearchString: /_next/image
+                              FieldToMatch:
+                                UriPath: {}
+                              TextTransformations:
+                                - Priority: 0
+                                  Type: NONE
+                              PositionalConstraint: CONTAINS
+                          # Just to be safe, exclude paths where the file extension is a non-HTML resource.
+                          - RegexMatchStatement:
+                              RegexString: '\\.(acc|avi|css|gif|ico|jpe?g|js|json|mp[34]|ogg|otf|pdf|png|tiff?|ttf|txt|webm|webp|woff2?|xml)$'
+                              FieldToMatch:
+                                UriPath: {}
+                              TextTransformations:
+                                - Priority: 0
+                                  Type: NONE
+          # This Label helps downstream Rules conditionally apply the CHALLENGE action, so don't Sample or publish Metrics.
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: false
+            MetricName: LabelHTMLRequests
+            SampledRequestsEnabled: false
+          RuleLabels:
+            - Name: HTMLContent
+        - Name: AWS-AWSManagedRulesAmazonIpReputationList
+          Priority: 7
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesAmazonIpReputationList
+              ScopeDownStatement:
+                LabelMatchStatement:
+                  Scope: LABEL
+                  Key: awswaf:marketing-sites:LabelHTMLRequests:HTMLContent
+              RuleActionOverrides:
+                - Name: AWSManagedReconnaissanceList
+                  ActionToUse:
+                    Challenge: {}
+                - Name: AWSManagedIPDDoSList
+                  ActionToUse:
+                    Challenge: {}
+                - Name: AWSManagedIPReputationList
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesAmazonIpReputationList
+            SampledRequestsEnabled: true
+        - Name: AWS-AWSManagedRulesAnonymousIpList
+          Priority: 8
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesAnonymousIpList
+              ScopeDownStatement:
+                LabelMatchStatement:
+                  Scope: LABEL
+                  Key: awswaf:marketing-sites:LabelHTMLRequests:HTMLContent
+              RuleActionOverrides:
+                - Name: AnonymousIPList
+                  ActionToUse:
+                    Challenge: {}
+                - Name: HostingProviderIPList
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesAnonymousIpList
+            SampledRequestsEnabled: true
+        # Protection against Linux-specific Local File Inclusion attacks
+        - Name: AWS-AWSManagedRulesLinuxRuleSet
+          Priority: 9
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesLinuxRuleSet
+              ScopeDownStatement:
+                LabelMatchStatement:
+                  Scope: LABEL
+                  Key: awswaf:marketing-sites:LabelHTMLRequests:HTMLContent
+              RuleActionOverrides:
+                - Name: LFI_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: LFI_QUERYSTRING
+                  ActionToUse:
+                    Challenge: {}
+                - Name: LFI_HEADER
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesLinuxRuleSet
+            SampledRequestsEnabled: true
+        # Protection against requests with known malicious inputs
+        - Name: AWS-AWSManagedRulesKnownBadInputsRuleSet
+          Priority: 10
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesKnownBadInputsRuleSet
+              ScopeDownStatement:
+                LabelMatchStatement:
+                  Scope: LABEL
+                  Key: awswaf:marketing-sites:LabelHTMLRequests:HTMLContent
+              RuleActionOverrides:
+                - Name: JavaDeserializationRCE_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: JavaDeserializationRCE_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: JavaDeserializationRCE_QUERYSTRING
+                  ActionToUse:
+                    Challenge: {}
+                - Name: JavaDeserializationRCE_HEADER
+                  ActionToUse:
+                    Challenge: {}
+                - Name: Host_localhost_HEADER
+                  ActionToUse:
+                    Challenge: {}
+               # TODO: This will never run because we're only scoping this Managed Rule to HTTP GET for HTML content.
+                - Name: PROPFIND_METHOD
+                  ActionToUse:
+                    Challenge: {}
+                - Name: ExploitablePaths_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: Log4JRCE_QUERYSTRING
+                  ActionToUse:
+                    Challenge: {}
+                - Name: Log4JRCE_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: Log4JRCE_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: Log4JRCE_HEADER
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesKnownBadInputsRuleSet
+            SampledRequestsEnabled: true
+        # Rate based rules don't work well for us because schools and school districts often have multiple users
+        # simultaneously visiting our sites from a single source IP address, so these Limits are set fairly high.
+        - Name: GlobalRateBasedRule
+          Priority: 11
+          Action:
+            Count: {}
+          Statement:
+            RateBasedStatement:
+              AggregateKeyType: IP
+              EvaluationWindowSec: 300
+              Limit: 100000
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: GlobalRateBasedRule
+            SampledRequestsEnabled: true
+        - Name: RateBasedRuleGET
+          Priority: 12
+          Action:
+            Count: {}
+          Statement:
+            RateBasedStatement:
+              AggregateKeyType: IP
+              EvaluationWindowSec: 300
+              Limit: 100000
+              ScopeDownStatement:
+                ByteMatchStatement:
+                  FieldToMatch:
+                    Method: {}
+                  PositionalConstraint: EXACTLY
+                  SearchString: GET
+                  TextTransformations:
+                    - Priority: 0
+                      Type: NONE
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: RateBasedRuleGET
+            SampledRequestsEnabled: true
+        - Name: RateBasedRulePOST
+          Priority: 13
+          Action:
+            Count: {}
+          Statement:
+            RateBasedStatement:
+              AggregateKeyType: IP
+              EvaluationWindowSec: 300
+              Limit: 10000
+              ScopeDownStatement:
+                OrStatement:
+                  Statements:
+                    - ByteMatchStatement:
+                        FieldToMatch:
+                          Method: {}
+                        PositionalConstraint: EXACTLY
+                        SearchString: POST
+                        TextTransformations:
+                          - Priority: 0
+                            Type: NONE
+                    - ByteMatchStatement:
+                        FieldToMatch:
+                          Method: {}
+                        PositionalConstraint: EXACTLY
+                        SearchString: PUT
+                        TextTransformations:
+                          - Priority: 0
+                            Type: NONE
+                    - ByteMatchStatement:
+                        FieldToMatch:
+                          Method: {}
+                        PositionalConstraint: EXACTLY
+                        SearchString: DELETE
+                        TextTransformations:
+                          - Priority: 0
+                            Type: NONE
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: RateBasedRulePOST
+            SampledRequestsEnabled: true
+        - Name: BodySizeRestrictionRule
+          Priority: 14
+          Action:
+            Count: {}
+          Statement:
+            SizeConstraintStatement:
+              ComparisonOperator: GT
+              FieldToMatch:
+                Body:
+                  OversizeHandling: MATCH
+              Size: 16384
+              TextTransformations:
+                - Priority: 0
+                  Type: NONE
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: BodySizeRestrictionRule
+            SampledRequestsEnabled: true
+        - Name: ManagedIPDDoSRateLimit
+          Priority: 16
+          Action:
+            Count: {}
+          Statement:
+            RateBasedStatement:
+              AggregateKeyType: IP
+              EvaluationWindowSec: 300
+              Limit: 10000
+              ScopeDownStatement:
+                LabelMatchStatement:
+                  Key: "awswaf:managed:aws:amazon-ip-list:AWSManagedIPDDoSList"
+                  Scope: LABEL
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: ManagedIPDDoSRateLimit
+            SampledRequestsEnabled: true
+        - Name: AWS-AWSManagedRulesCommonRuleSet
+          Priority: 17
+          OverrideAction:
+            Count: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesCommonRuleSet
+              RuleActionOverrides:
+                - Name: NoUserAgent_HEADER
+                  ActionToUse:
+                    Challenge: {}
+                - Name: UserAgent_BadBots_HEADER
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SizeRestrictions_QUERYSTRING
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SizeRestrictions_Cookie_HEADER
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SizeRestrictions_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SizeRestrictions_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: EC2MetaDataSSRF_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: EC2MetaDataSSRF_COOKIE
+                  ActionToUse:
+                    Challenge: {}
+                - Name: EC2MetaDataSSRF_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: EC2MetaDataSSRF_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericLFI_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericLFI_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericLFI_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: RestrictedExtensions_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: RestrictedExtensions_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericRFI_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericRFI_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericRFI_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CrossSiteScripting_COOKIE
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CrossSiteScripting_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CrossSiteScripting_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CrossSiteScripting_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesCommonRuleSet
+            SampledRequestsEnabled: true
+        # Marketing Sites don't have a relational database, but anyone probing SQL injection is likely malicious.
+        - Name: AWS-AWSManagedRulesSQLiRuleSet
+          Priority: 18
+          OverrideAction:
+            Count: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesSQLiRuleSet
+              RuleActionOverrides:
+                - Name: SQLiExtendedPatterns_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SQLi_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SQLi_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SQLi_COOKIE
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SQLi_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesSQLiRuleSet
+            SampledRequestsEnabled: true
+
+  # ------------------------------------------------------------
+  # GitHub OIDC Provider and IAM Resources
+  # ------------------------------------------------------------
+
   GitHubOpenIDConnectProvider:
     Type: AWS::IAM::OIDCProvider
     Properties:
@@ -131,8 +692,8 @@ Resources:
   CloudFrontManagementPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
-      ManagedPolicyName: marketing-sites-cloudfront-management-policy
-      Description: CloudFront permissions for marketing sites
+      ManagedPolicyName: marketing-sites-cloudfront-waf-shield-policy
+      Description: CloudFront distribution management with WAF and Shield Advanced protection capabilities
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -175,12 +736,84 @@ Resources:
             Action:
               - cloudfront:Get*
               - cloudfront:Describe*
+              - cloudfront:List*
             Resource: '*'
+          
+          # WAF Permissions for CloudFront Protection
+          - Sid: WAFReadPermissions
+            Effect: Allow
+            Action:
+              - wafv2:GetWebACL
+              - wafv2:ListWebACLs
+              - wafv2:GetWebACLForResource
+              - wafv2:ListResourcesForWebACL
+              - wafv2:ListTagsForResource
+            Resource:
+              - !Sub 'arn:aws:wafv2:*:${AWS::AccountId}:global/webacl/*/*'
+              - !Sub 'arn:aws:wafv2:*:${AWS::AccountId}:global/ipset/*/*'
+          
+          - Sid: WAFAssociationPermissions
+            Effect: Allow
+            Action:
+              - wafv2:AssociateWebACL
+              - wafv2:DisassociateWebACL
+            Resource:
+              - !Sub 'arn:aws:wafv2:*:${AWS::AccountId}:global/webacl/*/*'
+              - !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/*'
+          
+          - Sid: WAFTagPermissions
+            Effect: Allow
+            Action:
+              - wafv2:TagResource
+              - wafv2:UntagResource
+            Resource: !Sub 'arn:aws:wafv2:*:${AWS::AccountId}:global/webacl/*/*'
+          
+          # Shield Advanced Permissions for CloudFront Protection
+          - Sid: ShieldReadPermissions
+            Effect: Allow
+            Action:
+              - shield:DescribeProtection
+              - shield:ListProtections
+              - shield:DescribeSubscription
+              - shield:GetSubscriptionState
+              - shield:DescribeDRTAccess
+              - shield:DescribeEmergencyContactSettings
+              - shield:ListTagsForResource
+            Resource: '*'
+          
+          - Sid: ShieldProtectionManagement
+            Effect: Allow
+            Action:
+              - shield:CreateProtection
+              - shield:DeleteProtection
+              - shield:UpdateProtection
+              - shield:UpdateApplicationLayerAutomaticResponse
+              - shield:EnableApplicationLayerAutomaticResponse
+              - shield:DisableApplicationLayerAutomaticResponse
+            Resource:
+              - !Sub 'arn:aws:shield::${AWS::AccountId}:protection/*'
+              - !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/*'
+          
+          - Sid: ShieldTagManagement
+            Effect: Allow
+            Action:
+              - shield:TagResource
+              - shield:UntagResource
+            Resource: !Sub 'arn:aws:shield::${AWS::AccountId}:protection/*'
+          
+          - Sid: ShieldHealthCheckAssociation
+            Effect: Allow
+            Action:
+              - shield:AssociateHealthCheck
+              - shield:DisassociateHealthCheck
+            Resource:
+              - !Sub 'arn:aws:shield::${AWS::AccountId}:protection/*'
+              - !Sub 'arn:aws:route53:::healthcheck/*'
   DNSCertificateManagementPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
-      ManagedPolicyName: marketing-sites-dns-certificate-management-policy
-      Description: Route53 and ACM permissions for marketing sites
+      ManagedPolicyName: marketing-sites-dns-certificate-health-policy
+      Description: Route53 DNS, ACM certificates, and health check management for Shield Advanced integration
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -194,6 +827,34 @@ Resources:
               - acm:Add*
               - acm:Describe*
             Resource: '*'
+          
+          # Route 53 Health Check Permissions (for Shield Advanced)
+          - Sid: Route53HealthCheckManagement
+            Effect: Allow
+            Action:
+              - route53:CreateHealthCheck
+              - route53:DeleteHealthCheck
+              - route53:UpdateHealthCheck
+              - route53:GetHealthCheck
+              - route53:GetHealthCheckStatus
+              - route53:ListHealthChecks
+              - route53:ChangeTagsForResource
+            Resource:
+              - !Sub 'arn:aws:route53:::healthcheck/*'
+              - 'arn:aws:route53:::hostedzone/*'
+              - 'arn:aws:route53:::change/*'
+          
+          # CloudWatch Alarms for Shield Health Checks
+          - Sid: CloudWatchAlarmManagement
+            Effect: Allow
+            Action:
+              - cloudwatch:PutMetricAlarm
+              - cloudwatch:DeleteAlarms
+              - cloudwatch:DescribeAlarms
+              - cloudwatch:GetMetricStatistics
+              - cloudwatch:PutMetricData
+            Resource:
+              - !Sub 'arn:aws:cloudwatch:*:${AWS::AccountId}:alarm:*'
   EFSManagementPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -572,9 +1233,45 @@ Resources:
                   - secretsmanager:Get*
                   - secretsmanager:Describe*
                 Resource: "arn:aws:secretsmanager:*:*:secret:marketing-sites/<%=environment_type%>/*"
+              
+              # WAF Web ACL Association for CloudFront
+              - Sid: AllowMarketingSitesWebACLAssociation
+                Effect: Allow
+                Action:
+                  - wafv2:AssociateWebACL
+                  - wafv2:DisassociateWebACL
+                  - wafv2:GetWebACLForResource
+                Resource:
+                  - !GetAtt MarketingSitesWebACL.Arn
+                  - !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/*"
+              
+              # Shield Advanced Protection for CloudFront (primarily for production)
+              - Sid: AllowShieldProtectionForCloudFront
+                Effect: Allow
+                Action:
+                  - shield:CreateProtection
+                  - shield:DeleteProtection
+                  - shield:UpdateProtection
+                  - shield:DescribeProtection
+                  - shield:AssociateHealthCheck
+                  - shield:DisassociateHealthCheck
+                  - shield:TagResource
+                  - shield:UntagResource
+                Resource:
+                  - !Sub "arn:aws:shield::${AWS::AccountId}:protection/*"
+                  - !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/*"
 <% end %>
 
 Outputs:
+  MarketingSitesWebACLArn:
+    Description: ARN of the Marketing Sites WAF Web ACL
+    Value: !GetAtt MarketingSitesWebACL.Arn
+  MarketingSitesWebACLId:
+    Description: ID of the Marketing Sites WAF Web ACL
+    Value: !GetAtt MarketingSitesWebACL.Id
+  MarketingSitesWebACLName:
+    Description: Name of the Marketing Sites WAF Web ACL for easy reference
+    Value: !Ref MarketingSitesWebACL
 <%
   marketing_sites_environment_configuration.each do |environment_type, _|
     environment_type = environment_type.to_s
@@ -585,8 +1282,6 @@ Outputs:
   MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>PolicyArn:
     Description: ARN of the permissions boundary policy for <%=environment_type%> environment roles
     Value: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
-    Export:
-      Name: !Sub "${AWS::StackName}-MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>PolicyArn"
 <%  if %w[test production].include?(environment_type) %>
   GitHubActions<%=environment_type.capitalize%>RoleArn:
     Description: ARN of the GitHub Actions role for <%=environment_type%> environment (all site types)

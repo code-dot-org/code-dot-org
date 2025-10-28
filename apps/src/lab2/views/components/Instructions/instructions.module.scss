@@ -29,7 +29,7 @@
 }
 
 .fixedDarkBackground {
-  background-color: var( --background-neutral-black-fixed);
+  background-color: var(--background-neutral-black-fixed);
 }
 
 .standardBackground {
@@ -73,7 +73,12 @@
     padding: 12px;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: var(--text-neutral-primary);
   }
 
@@ -81,7 +86,8 @@
     margin-bottom: 10px;
   }
 
-  a:link, a {
+  a:link,
+  a {
     color: var(--text-brand-purple-primary);
     text-decoration: underline;
     &:hover {
@@ -122,11 +128,11 @@
 
 // Ensure the TooltipOverlay wrapper div matches the button width
 // without changing TooltipOverlay's calculated position.
-.buttonInstructionTooltipOverlay { 
+.buttonInstructionTooltipOverlay {
   > div {
     width: 100%;
   }
-  
+
   // Contained button takes full width.
   button {
     width: 100%;
@@ -142,17 +148,53 @@
   h1,
   h2,
   h3,
-  h4 {
-    margin: 0 0 10px 0;
-    font-size: 1.75em;
-    line-height: 1.2em;
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 0.5em 0;
 
-    &, em, strong {
+    &:not(h5, h6),
+    em,
+    strong {
       font-family: $barlowSemiCondensed-semibold;
     }
   }
 
-  ol, ul {
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.28;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.32;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: 1rem;
+    line-height: 1.48;
+  }
+
+  h5 {
+    font-size: 0.875rem;
+    line-height: 1.48;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-size: 0.75rem;
+    line-height: 1.48;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  ol,
+  ul {
     line-height: 0;
   }
 
@@ -160,7 +202,8 @@
     margin-bottom: 5px;
   }
 
-  code, pre {
+  code,
+  pre {
     color: var(--text-info-secondary);
     background-color: var(--background-neutral-primary);
     border: 1px solid var(--borders-neutral-strong);
@@ -258,6 +301,10 @@
   overflow-y: auto;
   min-height: 70px;
   padding: 0 12px;
+  // scrollbar-gutter: stable prevents layout shift when scrollbar appears,
+  // and avoids a bug we've seen where the browser isn't calculuating the scrollbar
+  // correctly and scrolls when it shouldn't.
+  scrollbar-gutter: stable;
 }
 
 .nonScrollingSubContent {

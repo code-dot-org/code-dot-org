@@ -9,33 +9,33 @@
     "level_data": {
       "library": "launch2024",
       "danceMove": "dab",
-      "aiCodeGenerate": "true",
+      "guideMode": "aiCodeGenerate",
       "aiCodeGenerateAdlib": {
         "id": "length",
         "template": "Please code a music remix that layers {type1}, {type2}, and {type3} together, around {length} measures long.",
         "options": {
           "type1": [
-            "bass",
-            "leads",
-            "beats",
-            "vocals"
+            {"id": "bass", "text": "bass"},
+            {"id": "leads", "text": "leads"},
+            {"id": "beats", "text": "beats"},
+            {"id": "vocals", "text": "vocals"}
           ],
           "type2": [
-            "bass",
-            "leads",
-            "beats",
-            "vocals"
+            {"id": "bass", "text": "bass"},
+            {"id": "leads", "text": "leads"},
+            {"id": "beats", "text": "beats"},
+            {"id": "vocals", "text": "vocals"}
           ],
           "type3": [
-            "bass",
-            "leads",
-            "beats",
-            "vocals"
+            {"id": "bass", "text": "bass"},
+            {"id": "leads", "text": "leads"},
+            {"id": "beats", "text": "beats"},
+            {"id": "vocals", "text": "vocals"}
           ],
           "length": [
-            "10",
-            "15",
-            "20"
+            {"id": "10", "text": "10"},
+            {"id": "15", "text": "15"},
+            {"id": "20", "text": "20"}
           ]
         },
         "variantCount": 3
