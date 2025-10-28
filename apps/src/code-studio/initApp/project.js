@@ -5,6 +5,7 @@ import {
   OPEN_ENDED_PROJECTS_YOUNG_AGE,
 } from '@cdo/apps/constants';
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
@@ -966,6 +967,17 @@ var projects = (module.exports = {
 
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(newSources => {
+        if (newSources.error) {
+          MetricsReporter.logError({
+            event:
+              'Error from getUpdatedSourceAndHtml_ in saveIfSourcesChanged',
+            error: newSources.error,
+            appType: this.getStandaloneApp(),
+            channelId: this.getCurrentId(),
+          });
+          resolve();
+          return;
+        }
         const sourcesChanged =
           JSON.stringify(currentSources) !== JSON.stringify(newSources);
         if (sourcesChanged || thumbnailChanged) {
@@ -1392,6 +1404,14 @@ var projects = (module.exports = {
     // Share URLs only make sense for standalone app types.
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
+
+    MetricsReporter.logError({
+      event: errorType,
+      errorMessage: errorText,
+      errorCount: errorCount,
+      channelId: this.getCurrentId(),
+      appType: this.getStandaloneApp(),
+    });
 
     return firehoseClient.putRecord(
       {
