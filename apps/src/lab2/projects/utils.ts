@@ -55,6 +55,10 @@ export function getAppOptionsEditBlocks(): string | undefined {
   }
 }
 
+export function getIsStartMode() {
+  return getAppOptionsEditBlocks() === START_SOURCES;
+}
+
 /**
  * Returns the value of isEditingExemplar provided by App Options, if available.
  * This can be used to tell if we are currently editing exemplars.

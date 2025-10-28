@@ -15,6 +15,7 @@ import React, {useEffect, useCallback, useRef, useState} from 'react';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
   LabProps,
@@ -43,7 +44,27 @@ const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
+// TO DO: add Jira to handle bad extensions.
+const MIME_TO_EXT = {
+  'image/svg+xml': 'svg',
+  'image/png': 'png',
+  'image/jpeg': 'jpg',
+  'image/gif': 'gif',
+  'image/webp': 'webp',
+  'image/bmp': 'bmp',
+  'image/x-icon': 'ico',
+  'image/avif': 'avif',
+  'image/jfif': 'jfif',
+  'application/octet-stream': 'bin',
+};
+
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
+
+interface SerializedExcalidrawState {
+  elements: ExcalidrawElement[];
+  appState: AppState;
+  files: BinaryFiles;
+}
 
 interface SketchlabSources extends ProjectSources {
   source: ExcalidrawSourceWithExternalFiles;
@@ -147,13 +168,19 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       state: AppState,
       files: BinaryFiles
     ) => {
+      console.log(files);
+      // In start mode, we manage saving explicitly via the button in the header.
+      if (getIsStartMode()) {
+        return;
+      }
+
       if (saveSourcesTimeoutRef.current) {
         clearTimeout(saveSourcesTimeoutRef.current);
         saveSourcesTimeoutRef.current = null;
       }
 
-      saveSourcesTimeoutRef.current = setTimeout(() => {
-        const serializedData = JSON.parse(
+      saveSourcesTimeoutRef.current = setTimeout(async () => {
+        const serializedData: SerializedExcalidrawState = JSON.parse(
           serializeAsJSON(elements, state, files, 'local')
         );
 
@@ -173,21 +200,25 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         // // Probably need actual comparison of keys
         // Check that image hasn't been uploaded previously.
         if (difference.length) {
-          const fileId = difference[0];
-          const newFile = serializedData.files[difference[0]];
-          uploadBase64ToUrl(
-            newFile.dataURL,
-            `/v3/assets/${channelId}/${fileId}.jpg`
-          );
+          if (serializedData.files) {
+            const fileId = difference[0];
+            const newFile = serializedData.files[fileId];
+
+            const extension = MIME_TO_EXT[newFile.mimeType];
+            const externalURL = `/v3/assets/${channelId}/${fileId}.${extension}`;
+            const response = await uploadBase64ToUrl(
+              newFile.dataURL,
+              externalURL
+            );
+
+            console.log(await response.json());
+          }
         }
 
         const excalidrawApi = excalidrawApiRef.current;
         if (excalidrawApi) {
           // serializeAsJSON exports an extremely limited set of properties from appState,
-          // and excludes the chosen scroll position (scrollX/Y) and zoom,
-          // so we use the API to serialize those manually.
-          // Serializing the whole appState is extremely lengthy and threw errors on page load, unfortunately,
-          // but we may want to serialize additional properties in the future.
+          // and excludes the chosen scroll position (scrollX/Y) and zoom, so we use the API to serialize those manually.
           const appState = excalidrawApi.getAppState();
           serializedData.appState.scrollX = appState.scrollX;
           serializedData.appState.scrollY = appState.scrollY;
