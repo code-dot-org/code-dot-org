@@ -10,7 +10,7 @@
       "guideMode": "aiCodeGenerate",
       "aiCodeGenerateAdlib": {
         "id": "sounds",
-        "template": "Code a {mood} music mix. It should be {length} length. Use {drums}.",
+        "template": "Code a {mood} music mix. It should be a {length} length. Use {drums}.",
         "options": {
           "mood": [
             {
