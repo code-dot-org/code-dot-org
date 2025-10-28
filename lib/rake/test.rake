@@ -98,7 +98,7 @@ namespace :test do
     :ui_all
   ]
 
-  timed_task_with_logging :dashboard_ci do
+  timed_task_with_logging :dashboard_qa do
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
@@ -204,7 +204,7 @@ namespace :test do
     end
   end
 
-  timed_task_with_logging :dashboard_legacy_ci do
+  timed_task_with_logging :dashboard_legacy_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -213,7 +213,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :dashboard_hoc_legacy_engine_ci do
+  timed_task_with_logging :dashboard_hoc_legacy_engine_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -222,7 +222,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :dashboard_cdo_contentful_engine_ci do
+  timed_task_with_logging :dashboard_cdo_contentful_engine_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -231,7 +231,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :shared_ci do
+  timed_task_with_logging :shared_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -240,7 +240,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :pegasus_ci do
+  timed_task_with_logging :pegasus_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -249,7 +249,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :lib_ci do
+  timed_task_with_logging :lib_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -258,7 +258,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :bin_ci do
+  timed_task_with_logging :bin_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -269,14 +269,14 @@ namespace :test do
 
   desc 'Runs full QA test pass (to be run on the test machine)'
   timed_task_with_logging qa: [
-    :shared_ci,
-    :pegasus_ci,
-    :dashboard_ci,
-    :dashboard_legacy_ci,
-    :dashboard_hoc_legacy_engine_ci,
-    :dashboard_cdo_contentful_engine_ci,
-    :lib_ci,
-    :bin_ci,
+    :shared_qa,
+    :pegasus_qa,
+    :dashboard_qa,
+    :dashboard_legacy_qa,
+    :dashboard_hoc_legacy_engine_qa,
+    :dashboard_cdo_contentful_engine_qa,
+    :lib_qa,
+    :bin_qa,
     :ui_live
   ]
 
