@@ -722,7 +722,7 @@ var projects = (module.exports = {
               this.saveIfSourcesChanged().catch(error => {
                 MetricsReporter.logError({
                   message:
-                    'error in saveIfSourcesChanged when app mode changed',
+                    'Error in saveIfSourcesChanged when app mode changed',
                   error,
                   channelId: this.getCurrentId(),
                 });
@@ -730,7 +730,7 @@ var projects = (module.exports = {
             } catch (error) {
               MetricsReporter.logError({
                 message:
-                  'error in saveIfSourcesChanged when app mode changed - synchronously',
+                  'Error in saveIfSourcesChanged when app mode changed - synchronously',
                 error,
                 channelId: this.getCurrentId(),
               });
@@ -980,8 +980,12 @@ var projects = (module.exports = {
       return Promise.resolve();
     }
 
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       this.getUpdatedSourceAndHtml_(newSources => {
+        if (newSources.error) {
+          return reject(newSources.error);
+        }
+
         const sourcesChanged =
           JSON.stringify(currentSources) !== JSON.stringify(newSources);
         if (sourcesChanged || thumbnailChanged) {
@@ -1046,6 +1050,9 @@ var projects = (module.exports = {
     const completeAsyncSave = () =>
       new Promise((resolve, reject) =>
         this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+          if (sourceAndHtml.error) {
+            return reject(sourceAndHtml.error);
+          }
           try {
             this.saveSourceAndHtml_(
               sourceAndHtml,
@@ -1316,7 +1323,7 @@ var projects = (module.exports = {
             html = this.sourceHandler.getLevelHtml();
           } catch (error) {
             MetricsReporter.logError({
-              message: 'error in getLevelHtml',
+              message: 'Error in getLevelHtml',
               error,
               channelId: this.getCurrentId(),
             });
@@ -1342,7 +1349,14 @@ var projects = (module.exports = {
             teacherHasConfirmedUploadWarning,
           });
         })
-        .catch(error => callback({error}))
+        .catch(error => {
+          MetricsReporter.logError({
+            message: 'Error in getUpdatedSourceAndHtml promise chain',
+            error,
+            channelId: this.getCurrentId(),
+          });
+          callback({error});
+        })
     );
   },
 
@@ -1356,8 +1370,11 @@ var projects = (module.exports = {
    * @returns {Promise} (mostly useful for tests)
    */
   setMakerEnabled(apisEnabled) {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        if (sourceAndHtml.error) {
+          return reject(sourceAndHtml.error);
+        }
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
@@ -1381,8 +1398,11 @@ var projects = (module.exports = {
         library.fromLevelbuilder = true;
       });
     }
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        if (sourceAndHtml.error) {
+          return reject(sourceAndHtml.error);
+        }
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
@@ -1535,6 +1555,11 @@ var projects = (module.exports = {
     this.getUpdatedSourceAndHtml_(newSources => {
       if (newSources.error) {
         header.showProjectSaveError();
+        MetricsReporter.logError({
+          message: 'Error in autosave getUpdatedSourceAndHtml',
+          error: newSources.error,
+          channelId: this.getCurrentId(),
+        });
         callCallback();
         return;
       }
