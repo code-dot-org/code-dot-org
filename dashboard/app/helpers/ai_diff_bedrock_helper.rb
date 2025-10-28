@@ -246,4 +246,44 @@ module AiDiffBedrockHelper
     end
     filter_config
   end
+
+  def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id, section_contexts, labs = [])
+    config = format_inputs_for_bedrock_request(input, prompt)
+    config[:session_id] = session_id unless session_id.nil?
+    filter_config = filter_for_context(lesson_number, unit_num, course_name, section_contexts, labs)
+    config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = filter_config
+
+    response = create_bedrock_client.retrieve_and_generate(
+      config
+    )
+
+    format_rag_response(response)
+  end
+
+  def self.format_rag_response(response)
+    text = response.output.text.dup
+
+    # Remove useless references such as '(Sources 1 and 7)' from the response
+    text.gsub!(/ ?\([Ss]ource[^)]+\)/, '')
+
+    # Gather and append links
+    reference_urls = response.citations.flat_map do |citation|
+      citation.retrieved_references.map do |ref|
+        ref.metadata&.[]('url')
+      end
+    end.sort.uniq
+
+    if reference_urls.any?
+      text << "\n\n**See also:**"
+      reference_urls.each_with_index do |url, index|
+        text << "\n- [Link #{index+1}](#{url})"
+      end
+    end
+    {
+      content: text,
+      raw_content: response.output.text,
+      links: reference_urls.any? ? reference_urls : nil,
+      session_id: response.session_id,
+    }
+  end
 end
