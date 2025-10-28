@@ -70,15 +70,15 @@
   }
 
   .icon-brain {
-    color: purple;
+    color: var(--text-brand-purple-primary-fixed);
   }
 
   .icon-bug {
-    color: red;
+    color: var(--text-error-primary-fixed);
   }
 
   .icon-star {
-    color: goldenrod;
+    color: var(--text-warning-primary-fixed);
   }
 
   // Hover and active states
@@ -87,6 +87,9 @@
       'code': 'success',
       'lightbulb': 'warning',
       'book': 'info',
+      'brain': 'brand-purple',
+      'bug': 'error',
+      'star': 'warning',
     )
   );
 
