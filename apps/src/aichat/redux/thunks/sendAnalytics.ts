@@ -10,8 +10,6 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 export const sendAnalytics =
   (event: string, properties: object, skipAccessCheck = false) =>
   (dispatch: AppDispatch, getState: () => RootState) => {
-    const state = getState();
-    console.log('state in sendAnalytics thunk:', state);
     const curriculumDetails = getState().lab;
     const clientType = getState().aichat.clientType;
     const userHasAichatAccess = getState().aichat.userHasAichatAccess;
