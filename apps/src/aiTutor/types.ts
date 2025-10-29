@@ -19,7 +19,6 @@ export interface AiTutorContext {
   longInstructions?: string;
   documentation?: string;
   documentationLocation?: string;
-  userSelection?: string;
 }
 
 export interface AnalyticsData {

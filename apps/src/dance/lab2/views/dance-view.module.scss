@@ -40,7 +40,7 @@
 
   &.jumbo {
     flex: initial;
-    width: min(50vw, calc(100vh - 250px));
+    width: min(33vw, calc(100vh - 250px));
 
     canvas {
       width: 100% !important;

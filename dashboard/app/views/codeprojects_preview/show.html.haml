@@ -10,7 +10,11 @@
     - if CDO.optimize_webpack_assets
       %script{src: webpack_asset_path('js/vendors.js'), 'data-ot-ignore' => ''}
       %script{src: webpack_asset_path('js/code-studio-common.js'), 'data-ot-ignore' => ''}
+    -# Import brand fonts
+    %link{rel: "stylesheet", href: "shared/css/fonts/barlow-semi-condensed.scss", media: "all"}
+    %link{rel: "stylesheet", href: "shared/css/fonts/figtree.scss", media: "all"}
 
-  %body
+  -# Remove default body margin and padding to prevent empty state spacing issues
+  %body{style: 'margin:0; padding:0;'}
     #codeprojects-preview-container
 

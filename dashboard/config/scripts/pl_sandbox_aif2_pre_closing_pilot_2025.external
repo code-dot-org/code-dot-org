@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Congratulations, you are finished!
+# Congratulations, you finished this unit of the Teaching AI Foundations Semester 2 professional learning Pilot!
 
 <div style="text-align: center; margin: 20px auto;">
   <img src="https://images.code.org/2df93307f477af0f75dc1c179d9a9a4c-image-1707852636486.30.31 AM.png" 
@@ -55,9 +55,9 @@ markdown <<MARKDOWN
           <img src="https://images.code.org/a80122489de1e5f82370109a47941ff1-image-1756334955537.png" 
                alt="A happiness meter survey" 
                style="width: 35%; height: auto; border-radius: 10px; margin: 0 auto 0px auto; display: block;">
-          <p style="font-size: 14pt; font-weight: bold; margin: 0;">Help Us Improve</p>
+          <p style="font-size: 14pt; font-weight: bold; margin: 0;">Help Us Improve by Completing the Professional Learning Pilot Survey</p>
           <p style="font-size: 14pt; margin-top: 10px; line-height: 1.2">
-            Your feedback shapes future learning experiences. Please take our short <a href="https://studio.code.org/form/selfpaced_csd_post?survey_data[module]=3" target="blank" rel="noopener noreferrer">end-of-module survey</a>.
+            Your feedback shapes future learning experiences. Please take our short <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGHeNY7eAYuyTa0Y4eoYeI_Gb9KrVsSwovg1I3xDIhmUHkGg/viewform?usp=publish-editor" target="blank" rel="noopener noreferrer">end-of-module professional learning pilot survey</a>.
           </p>
         </div>
       </div>
