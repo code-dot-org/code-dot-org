@@ -6,9 +6,11 @@ import experiments from '@cdo/apps/util/experiments';
 import MetricsReporter from '../metrics/MetricsReporter';
 
 export const experimentActionCableLoad = function () {
-  if (experiments.isEnabled('actioncable-load-testing')) {
-    setTimeout(testLoad, 3000);
-  }
+  setTimeout(() => {
+    if (experiments.isEnabled('actioncable-load-testing')) {
+      testLoad();
+    }
+  }, 3000);
 };
 
 const testLoad = function () {
@@ -45,7 +47,7 @@ const testLoad = function () {
     consumer.disconnect();
 
     logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
-  }, 20000);
+  }, 5 * 60 * 1000);
 };
 
 const logEvent = (eventName, connectionId) =>
