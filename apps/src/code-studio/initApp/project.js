@@ -1099,6 +1099,7 @@ var projects = (module.exports = {
     // TODO(dave): Remove this check and remove clearHtml() once all projects
     // have versioning: https://www.pivotaltracker.com/story/show/103347498
     if (currentSources.html && !sourceAndHtml.html) {
+      // Only App Lab error.
       throw new Error('Attempting to blow away existing levelHtml');
     }
 

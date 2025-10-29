@@ -867,6 +867,7 @@ StudioApp.prototype.getCode = function (opt_showHidden) {
   if (this.hideSource) {
     return this.startBlocks_;
   } else {
+    // App Lab: return the value of the editor
     return this.editor.getValue();
   }
 };
