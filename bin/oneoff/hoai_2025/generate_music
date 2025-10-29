@@ -497,18 +497,18 @@ else
     upload_progress_bar&.increment
   end
   ) do |object|
-    path = "#{object[:pack]}-#{object[:adlib_option]}-#{object[:adlibs].join('-')}-#{object[:length]}-#{object[:variant].to_s.rjust(2, '0')}.txt"
+    path = "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
     name = "#{BUCKET_PATH}/#{path}"
 
     # Upload json
-    #AWS::S3.upload_to_bucket(
-    #  bucket_name,
-    #  File.join(BUCKET_PATH, name),
-    #  File.read(File.join(output_path, path)),
-    #  acl: 'public-read',
-    #  no_random: true,
-    #  content_type: 'json'
-    #)
+    AWS::S3.upload_to_bucket(
+      bucket_name,
+      File.join(BUCKET_PATH, name),
+      File.read(File.join(output_path, path)),
+      acl: 'public-read',
+      no_random: true,
+      content_type: 'json'
+    )
 
     true
   end
