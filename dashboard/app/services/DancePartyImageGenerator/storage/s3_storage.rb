@@ -75,9 +75,9 @@ module DancePartyImageGenerator
         module_function def path_for(dest:, base:, ext:)
           folder =
             case dest
-            when :animal          then "animal"
-            when :animal_attire   then "animal-attire"
-            else                        "adjective-animal-attire"
+            when :animal          then "creature-04"
+            when :animal_attire   then "creature-attire-04"
+            else                        "creature-attire-mood-style-04"
             end
           File.join(folder, "#{base}#{ext}")
         end

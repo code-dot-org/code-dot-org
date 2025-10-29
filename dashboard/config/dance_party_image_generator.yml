@@ -1,9 +1,40 @@
 default: &default
-  animals: ["frog"]
-  attire: ["headphones"]
-  adjectives: ["basic"]
-  repeats_per_combo: 1
-  namespace: "media/musiclab/generate/dancer/ruby_test"
+  animals:
+    [
+      wolf,
+      moose,
+      frog,
+      tiger,
+      frilled_lizard,
+      axolotl,
+      fox,
+      giraffe,
+      turtle,
+      jellyfish,
+      koala,
+      bunny_rabbit,
+      cat,
+      dog,
+      squirrel,
+      planet,
+      mushroom,
+      flame,
+      volcano,
+      zombie,
+    ]
+  attire:
+    [
+      headscarf,
+      sunglasses,
+      headphones,
+      crown,
+      beanie,
+      colorful_hair,
+      no_accessories,
+    ]
+  adjectives: [happy, silly, sleepy, surprised, confused, fierce]
+  repeats_per_combo: 2
+  namespace: "media/musiclab/generate/dancer"
   bucket: "cdo-curriculum"
 
 development:

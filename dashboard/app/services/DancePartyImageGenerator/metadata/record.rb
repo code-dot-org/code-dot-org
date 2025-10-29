@@ -18,7 +18,7 @@ module DancePartyImageGenerator
           "people_count"    => 0,
           "copy_space"      => false,
           "background"      => "transparent",
-          "adjective"       => item[:adj],
+          "mood"       => item[:adj],
           "animal"          => item[:animal],
           "attire"          => item[:attire],
           "variant"         => item[:variant],

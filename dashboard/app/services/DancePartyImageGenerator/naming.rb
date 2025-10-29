@@ -6,9 +6,9 @@ module DancePartyImageGenerator
     module_function def base_name(item)
       i = item.symbolize_keys
       parts = []
-      parts << slug(i[:adj])   if i[:adj].present?
       parts << slug(i[:animal])
       parts << slug(i[:attire]) if i[:attire].present?
+      parts << slug(i[:adj])   if i[:adj].present?
       parts << format("%02d", Integer(i[:variant]))
       parts.join("-")
     end

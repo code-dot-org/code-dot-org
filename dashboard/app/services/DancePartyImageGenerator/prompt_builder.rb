@@ -8,7 +8,7 @@ module DancePartyImageGenerator
     # {adj:, animal:, attire:}
     def build(item)
       theme =
-        if item[:adj] && item[:attire] then "#{item[:adj]} #{item[:animal]} in #{item[:attire]}"
+        if item[:adj] && item[:attire] then "#{item[:animal]} wearing #{item[:attire]}, with #{item[:adj]} mood."
         elsif item[:attire] then "#{item[:animal]} in #{item[:attire]}"
         else
           item[:animal]
