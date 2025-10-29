@@ -98,13 +98,30 @@ namespace :test do
     :ui_all
   ]
 
+  # In each environment, we use the following databases by default:
+  #  - databases for web servers: dashboard_<env> and pegasus_<env>
+  #  - databases for unit tests: dashboard_test and pegasus_test
+  #
+  # On the test machine, where we run both unit and ui tests in the same environment, this leads to
+  # conflicting names for both pegasus and dashboard. We work around this as follows:
+  # - USE_PEGASUS_UNITTEST_DB=1 tells any unit tests to use pegasus_unittest instead of pegasus_test
+  # - PARALLEL_TEST_FIRST_IS_1=1 tells the parallel_tests gem (which uses multiple test databases
+  #   dashboard_test, dashboard_test2, etc. to run dashboard unit tests) to instead use
+  #   dashboard_test1, dashboard_test2, etc.
+  # - TEST_ENV_NUMBER=1 tells other ruby unit tests (not currently run in parallel) to use
+  #   dashboard_test1 as well.
+  #
+  # No such workaround is currently needed for CI, because Drone runs unit tests and UI tests in
+  # separate containers, so it is safe for both containers to use the default database names.
+  # However, We still set PARALLEL_TEST_FIRST_IS_1=1 in the unit pipeline in CI to simplify
+  # parallel database setup.
+
   timed_task_with_logging :dashboard_qa do
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
         ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
-        ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
 
         TestRunUtils.run_dashboard_tests(parallel: true, upload_seed_data: true)
 

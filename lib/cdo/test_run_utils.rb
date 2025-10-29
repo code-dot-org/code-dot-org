@@ -26,6 +26,8 @@ module TestRunUtils
     end
   end
 
+  # Setup method to prepare test databases for parallel dashboard tests,
+  # which can be called from the QA pass (the test machine) or CI (Drone).
   def self.setup_dashboard_tests_parallel(upload_seed_data: false)
     # Parallel tests don't seem to run more quickly over 16 processes.
     ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
@@ -128,6 +130,7 @@ module TestRunUtils
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard tests') do
         if parallel
+          ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
           TestRunUtils.setup_dashboard_tests_parallel(upload_seed_data: upload_seed_data)
           RakeUtils.rake_stream_output 'parallel:test'
         else
