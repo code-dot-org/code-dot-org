@@ -198,8 +198,6 @@ const adlibs: AdlibsType = {
       creature: adlibOptions.creature,
       attire: adlibOptions.attire,
       mood: adlibOptions.mood,
-    },
-    optionsExtra: {
       style: adlibOptions.style,
     },
     variantCount: 5,
@@ -229,6 +227,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const [promptText, setPromptText] = useState<string>('');
   const [choices, setChoices] = useState<string[] | undefined>(undefined);
+
   const variantHistory = useRef<number[]>([]);
 
   const [aiGenerateState, setAiGenerateState] = useState<
@@ -248,8 +247,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     const startTime = Date.now();
 
     // Avoid showing a variant if it was shown recently.
-    let variant = undefined;
-    let bodyVariant = 0;
+    let variant, bodyVariant;
     do {
       variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
       bodyVariant = getRandomInt(0, BODY_VARIANT_COUNT - 1);
@@ -261,11 +259,30 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     }
     variantHistory.current = newVariantsHistory;
 
+    // Special case: for the creature-attire-mood-style-04 adlib only,
+    // move mood from choices to choicesExtra, and use a unique path.
+    // This is because the style option is not used in retrieving the
+    // head image, and is instead used to retrieve the body.
+    let choicesToSave;
+    let choicesExtraToSave;
+    let pathToSave;
+    if (adlibOption === 'creature-attire-mood-style-04') {
+      pathToSave = 'creature-attire-mood-04';
+      choicesToSave = choices?.slice(0, -1);
+      choicesExtraToSave = [choices?.at(-1)];
+    } else {
+      pathToSave = adlibOption;
+      choicesToSave = choices;
+      choicesExtraToSave = undefined;
+    }
+
     const newDancerMetadata = JSON.stringify({
       adlibOption,
-      choices,
+      path: pathToSave,
+      choices: choicesToSave,
+      choicesExtra: choicesExtraToSave,
       variant,
-      bodyVariant,
+      extraVariant: bodyVariant,
     });
     trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
     setDancerMetadata(newDancerMetadata);
@@ -275,7 +292,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       0
     );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
-  }, [adlibOption, choices, variantHistory]);
+  }, [adlibOption, choices]);
 
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
