@@ -12,7 +12,9 @@ import _ from 'lodash';
 import React, {useState, useMemo, useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
+import {setInitialThreadPrompt} from '@cdo/apps/aichat/redux/thunks';
 import {EXT_COMPONENT_OPEN_FAB_EVENT} from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import {LESSON_SUMMARY_PREP_PROMPT} from '@cdo/apps/aiDifferentiation/AiDiffPredefinedPrompts';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -87,13 +89,6 @@ const createDisplayName = (
       lessonName: lessonName,
     });
   }
-};
-
-const handleLessonSummaryAskAITAClick = () => {
-  const openAITAEvent = new Event(EXT_COMPONENT_OPEN_FAB_EVENT, {
-    bubbles: true,
-  });
-  document.dispatchEvent(openAITAEvent);
 };
 
 interface LessonMaterialsContainerProps {
@@ -262,6 +257,15 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     () => generateLessonDropdownOptions(),
     [generateLessonDropdownOptions]
   );
+
+  const handleLessonSummaryAskAITAClick = () => {
+    setInitialThreadPrompt(dispatch, LESSON_SUMMARY_PREP_PROMPT);
+
+    const openAITAEvent = new Event(EXT_COMPONENT_OPEN_FAB_EVENT, {
+      bubbles: true,
+    });
+    document.dispatchEvent(openAITAEvent);
+  };
 
   const renderHeader = () => {
     return (
