@@ -45,11 +45,11 @@ import {
   getConfigValue,
   insertImageLayer,
   hideLayersByTypeAndCaptureKs,
-  fetchText,
   recolorBodySvgString,
   svgStringToDataUrl,
   getSkeletonMetadataUrl,
   hideMagentaDress,
+  safeFetchSvgText,
 } from './LottieDancerUtils';
 
 const DEFAULT_SKELETON = 'unicorn';
@@ -80,6 +80,7 @@ export default class LottieDancerRenderer {
   private bodyUrl?: string;
   private bodyMetadataUrl?: string;
   private currentMove: DanceMoves | null;
+  private fallbackSkeletonName: string;
 
   constructor() {
     this.headScale = 0.5;
@@ -93,6 +94,7 @@ export default class LottieDancerRenderer {
     this.bodyUrl = urls.bodyUrl;
     this.bodyMetadataUrl = urls.bodyMetadataUrl;
     this.currentMove = null;
+    this.fallbackSkeletonName = DEFAULT_SKELETON;
   }
   /**
    * The caller provides a CanvasRenderingContext2D to paint into.
@@ -246,11 +248,13 @@ export default class LottieDancerRenderer {
           console.warn(
             `Failed to fetch skeleton name from body metadata URL ${this.bodyMetadataUrl}`,
             e,
-            `Falling back to ${skeletonParam || DEFAULT_SKELETON} skeleton.`
+            `Falling back to ${
+              skeletonParam || this.fallbackSkeletonName
+            } skeleton.`
           );
         }
       }
-      return skeletonParam || DEFAULT_SKELETON;
+      return skeletonParam || this.fallbackSkeletonName;
     })();
     return this.skeletonNamePromise;
   }
@@ -358,7 +362,7 @@ export default class LottieDancerRenderer {
             let finalBodyDataUrl: string | null = null;
 
             try {
-              const svgText = await fetchText(this.bodyUrl);
+              const svgText = await safeFetchSvgText(this.bodyUrl);
               if (!svgText) {
                 throw new Error(
                   `Failed to fetch body SVG: empty response for URL ${this.bodyUrl}.
