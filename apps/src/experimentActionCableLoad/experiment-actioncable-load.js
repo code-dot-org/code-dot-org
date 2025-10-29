@@ -1,10 +1,9 @@
 import {createConsumer} from '@rails/actioncable';
 import _ from 'lodash';
 
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 
-import {PLATFORMS} from '../metrics/AnalyticsConstants';
+import MetricsReporter from '../metrics/MetricsReporter';
 
 export const experimentActionCableLoad = function () {
   if (experiments.isEnabled('actioncable-load-testing')) {
@@ -50,4 +49,6 @@ const testLoad = function () {
 };
 
 const logEvent = (eventName, connectionId) =>
-  analyticsReporter.sendEvent(eventName, {connectionId}, PLATFORMS.BOTH);
+  MetricsReporter.incrementCounter(eventName, [
+    {name: 'connectionId', value: connectionId},
+  ]);
