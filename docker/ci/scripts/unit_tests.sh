@@ -6,7 +6,12 @@
 # `docker/unit-tests-compose.yml`. See instructions in that file.
 
 source docker/ci/scripts/prepare_ci_tests.sh
+
+# The install step is currently needed for unit (but not ui) because the database needed
+# by ui tests is prepopulated by the cache-staging-build step.
+# TODO: remove this line once cache-staging-build prepopulates dashboard unit test databases.
 source docker/ci/scripts/install_ci_tests.sh
+
 source docker/ci/scripts/build_ci_tests.sh
 
 
