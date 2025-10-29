@@ -10,10 +10,16 @@
     visibility: visible;
     background-color: #fff;
     min-width: 250px;
-    max-width: 350px;
+    max-width: 700px;
     border-radius: 5px;
     box-shadow: 0 3px 30px #21212140;
     transition: opacity .1s ease-out;
+  }
+
+  /* Wide tooltip for specific steps */
+  .introjs-tooltip:has(.sketchlab-tour-wide-step) {
+    max-width: 650px;
+    min-width: 600px;
   }
   
   .introjs-tooltiptext {
