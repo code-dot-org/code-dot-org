@@ -77,13 +77,6 @@ async function uploadBase64ToUrl(
     type: mimeType,
   });
 
-  // // Should we throw here?
-  // if (!uploadResponse.ok) {
-  //   throw new Error(
-  //     `Upload failed: ${uploadResponse.status} ${uploadResponse.statusText}`
-  //   );
-  // }
-
   return await HttpClient.put(uploadUrl, file);
 }
 
@@ -169,15 +162,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         saveSourcesTimeoutRef.current = null;
       }
 
-      // Each time there is an update (particularly file add, but happens on each cursor move):
-      // Get the current state from Excalidraw.
-      // Compare the set of files in Excalidraw to the set in sources.
-      // Find ones in Excalidraw, but not sources.
-      // For each of these:
-      //   Upload to S3
-      //   While the upload is in process, don't allow other updates to kick off
-      // Make sure that the state update is made once the upload(s) are done.
-
       saveSourcesTimeoutRef.current = setTimeout(async () => {
         const serializedData: SerializedExcalidrawState = JSON.parse(
           serializeAsJSON(elements, state, files, 'local')
@@ -200,13 +184,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           },
         });
 
-        // On upload:
-        // Check if files are different (maybe length is sufficient?)
-        // If they are, figure out what the new file is.
-        // Take base64 encoding and post to S3.
-        // On success, store to externalFiles.
-
         // Note: does this every half second thing work in this context?
+        // Might need to be faster if we want to quickly make sure that an upload succeeded.
         const savedFileIds = Object.keys(
           currentSources.source.externalFiles || {}
         );
@@ -227,14 +206,15 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           difference.forEach(async fileId => {
             filesBeingUploadedRef.current.add(fileId);
 
-            console.log(fileId);
             const newFile = serializedData.files[fileId];
             const extension = MIME_TO_EXT[newFile.mimeType];
             // note: rename to Url
-            const externalURL = `/v3/assets/${channelId}/${fileId}.${extension}`;
+            const externalUrl = `/v3/assets/${channelId}/${fileId}.${extension}`;
+
+            // To do: what do we do if it fails?
             await uploadBase64ToUrl(
               newFile.dataURL,
-              externalURL,
+              externalUrl,
               newFile.mimeType
             );
 
@@ -244,7 +224,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
               language: extension,
               contents: '',
               folderId: '1',
-              url: externalURL,
+              url: externalUrl,
             };
 
             updateSources({
@@ -261,7 +241,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    // [updateSources]
     [updateSources, channelId, currentSources.source]
   );
 
