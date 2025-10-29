@@ -4,7 +4,7 @@ This document details the specific log formats used across the Code.org platform
 
 ## Table of Contents
 
-- [CloudFront Access Logs](#cloudfront-access-logs)
+- [CloudFront Standard Access Logs (non-real-time)](#cloudfront-standard-access-logs-non-real-time)
 - [CloudFront Real-Time Access Logs (Parquet)](#cloudfront-real-time-access-logs-parquet)
 - [Application Load Balancer (ALB) Logs](#application-load-balancer-alb-logs)
 - [Rails Application Logs (Lograge CEE JSON)](#rails-application-logs-lograge-cee-json)
@@ -16,28 +16,30 @@ This document details the specific log formats used across the Code.org platform
 
 ---
 
-## CloudFront Access Logs
+## CloudFront Standard Access Logs (non-real-time)
 
 **Format:** Tab-Separated Values (TSV)  
 **Official Documentation:** [AWS CloudFront Access Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html)
 
-CloudFront writes access logs for every request received by the CDN, regardless of whether it was served from cache or forwarded to the origin. Logs are delivered to S3 (bucket: `cdo-logs`) under per-environment prefixes and then partitioned by a Lambda function into `year=/month=/day=/hour=` folders for Athena querying.
+CloudFront writes access logs for every request received by the CDN, regardless of whether it was served from cache or forwarded to the origin. Logs are delivered to S3 (bucket: `cdo-logs`) under per-environment prefixes and then partitioned by a Lambda function into `year=/month=/day=/hour=` folders for Athena querying. Query these records in Athena via table `elb_logs.cloudfront_logs` (database `elb_logs`).
 
 ### Example Log Entries
 
 **Cache Hit:**
 ```
-2025-10-29	17:30:15	IAD89-C1	4523	203.0.113.42	GET	d3qj0f3vkqkfl3.cloudfront.net	/blockly/js/en_us/common_locale.js	200	https://studio.code.org/s/course1	Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20Chrome/118.0.0.0	-	Hit	xY9kL2mN3oP4qR5sT6uV7wX8yZ9aB0cD1eF2gH3iJ4kL5m=	studio.code.org	https	142	0.001	-	TLSv1.3	TLS_AES_128_GCM_SHA256	Hit	HTTP/2.0	-	-	54321	0.001	Hit	application/javascript	789	0.000
+2025-10-29	23:04:19	SYD3-P3	534	208.127.115.39	GET	aaaabbbbccccdddd.cloudfront.net	/assets/js/images/toggleSummaryInactivewp68f831113447582d7d79.png	200	https://studio.code.org/courses/dance-ai-2023/units/1?viewAs=Instructor	Mozilla/5.0%20(X11;%20CrOS%20x86_64%2014541.0.0)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/140.0.0.0%20Safari/537.36	-	-	Hit	xtJZo1nd2Lu3bSZSihuBZmRdZGGv0N2PYshQIzbiThCsH9AkSTN4Bw==	studio.code.org	https	139	0.001	-	TLSv1.3	TLS_AES_128_GCM_SHA256	Hit	HTTP/2.0	-	-	15188	0.001	Hit	image/png	168	-	-
 ```
 
 **Cache Miss (Origin Fetch):**
 ```
-2025-10-29	17:31:22	SFO5-C2	8234	198.51.100.89	GET	d3qj0f3vkqkfl3.cloudfront.net	/api/v1/user_progress	200	https://studio.code.org/s/course2	Mozilla/5.0%20(Macintosh;%20Intel%20Mac%20OS%20X%2010_15_7)	session_id=abc123	Miss	aB1cD2eF3gH4iJ5kL6mN7oP8qR9sT0uV1wX2yZ3aB4cD5e=	studio.code.org	https	523	0.089	203.0.113.10	TLSv1.3	TLS_AES_256_GCM_SHA384	Miss	HTTP/2.0	-	-	12345	0.088	Miss	application/json	1024	0.082
+#Version: 1.0
+#Fields: date time x-edge-location sc-bytes c-ip cs-method cs(Host) cs-uri-stem sc-status cs(Referer) cs(User-Agent) cs-uri-query cs(Cookie) x-edge-result-type x-edge-request-id x-host-header cs-protocol cs-bytes time-taken x-forwarded-for ssl-protocol ssl-cipher x-edge-response-result-type cs-protocol-version fle-status fle-encrypted-fields c-port time-to-first-byte x-edge-detailed-result-type sc-content-type sc-content-len sc-range-start sc-range-end
+2025-10-29	23:04:14	BNE50-P2	1953	110.145.217.98	POST	aaaabbbbccccdddd.cloudfront.net	/browser_events/put_metric_data	200	https://studio.code.org/courses/music-jam-2024/units/1/lessons/1/levels/17	Mozilla/5.0%20(X11;%20CrOS%20x86_64%2014541.0.0)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/140.0.0.0%20Safari/537.36	-	-	Miss	mGNFm_LKNPzcbHOHuG5ASx_G68PyTNzaTr_S7Y37lR8tnLf_ieZ4CQ==	studio.code.org	https	3234	0.253	-	TLSv1.3	TLS_AES_128_GCM_SHA256	Miss	HTTP/2.0	-	-	38308	0.253	Miss	application/json;%20charset=utf-8	2	-	-
 ```
 
 **WAF Block:**
 ```
-2025-10-29	17:32:45	JFK50-C3	0	192.0.2.15	GET	d3qj0f3vkqkfl3.cloudfront.net	/admin/users	403	-	BadBot/1.0	-	Error	zX8yW7vU6tS5rQ4pO3nM2lK1jI0hG9fE8dC7bA6zA5y=	studio.code.org	https	0	0.000	-	TLSv1.2	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256	Error	HTTP/1.1	WAFBlock	-	0	0.000	Error	-	0	0.000
+2025-10-29	17:32:45	JFK50-C3	0	192.0.2.15	GET	aaaabbbbccccdddd.cloudfront.net	/admin/users	403	-	BadBot/1.0	-	Error	zX8yW7vU6tS5rQ4pO3nM2lK1jI0hG9fE8dC7bA6zA5y=	studio.code.org	https	0	0.000	-	TLSv1.2	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256	Error	HTTP/1.1	WAFBlock	-	0	0.000	Error	-	0	0.000
 ```
 
 ### Fields
@@ -91,7 +93,7 @@ CloudFront logs contain 40+ fields (varies by version). Key fields include:
 **Format:** AWS Kinesis Data Firehose → JSON rows converted to Parquet (`snappy`) partitioned by `YYYY/MM/DD/HH`  
 **Official Documentation:** [CloudFront Real-Time Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html)
 
-CloudFront real-time logging is enabled via a `RealtimeLogConfig` that streams request data to Kinesis, transforms each row into JSON, and stores the result in Parquet inside `s3://cdo-access-logs/access-logs/`. The schema matches the `LOG_FIELDS` list configured in the access-log stack.
+CloudFront real-time logging is enabled via a `RealtimeLogConfig` that streams request data to Kinesis, transforms each row into JSON, and stores the result in Parquet inside `s3://cdo-access-logs/access-logs/`. The schema matches the `LOG_FIELDS` list configured in the access-log stack, and is exposed in Athena as table `cdo_access_logs.access_logs` (database `cdo_access_logs`).
 
 ### Example Record (JSON prior to Parquet serialization)
 
@@ -473,7 +475,7 @@ Firehose events are client-defined and typically include:
 
 | Log Type | Format | Destination | Retention | Official Docs |
 |----------|--------|-------------|-----------|---------------|
-| CloudFront Access | TSV | S3 `cdo-logs/cloudfront/` | Indefinite (partitioned) | [AWS CloudFront Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html) |
+| CloudFront Standard Access | TSV | S3 `cdo-logs/cloudfront/` | Indefinite (partitioned) | [AWS CloudFront Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html) |
 | CloudFront Real-Time Access | Parquet | S3 `cdo-access-logs/access-logs/` | Intelligent Tiering → Deep Archive | [CloudFront Real-Time Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html) |
 | ALB Access | Space-delimited | S3 `cdo-logs/.../elasticloadbalancing/` | Indefinite | [AWS ALB Logs](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html) |
 | Rails (Lograge CEE) | JSON | Syslog → S3 `cdo-logs/hosts/` | 7 days local, indefinite S3 | [Lograge](https://github.com/roidrage/lograge) |
