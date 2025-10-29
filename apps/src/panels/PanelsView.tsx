@@ -72,7 +72,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const {cancel} = useBrowserTextToSpeech();
 
   const lastPanelStartTime = useRef<number>(Date.now());
-  const nextButtonRef = useRef<HTMLElement>(null);
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
