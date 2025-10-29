@@ -16,7 +16,6 @@ import {
   getUserType,
   findOrCreateStableId,
   formatUserId,
-  waitForOnetrustGroupsReady,
 } from './statsigHelpers';
 
 // A flag that can be toggled to send events regardless of environment
@@ -30,10 +29,15 @@ class StatsigReporter {
     this.user = null;
     this.api_key = '';
     this.local_mode = true;
-    this.options = {environment: {tier: getEnvironment()}};
+    this.options = {};
+    this.environment = getEnvironment();
     this.statsigClient = null;
-
-    this.readyPromise = waitForOnetrustGroupsReady().then(() => {
+    const oneTrustPromise =
+      window.oneTrustPromise &&
+      typeof window.oneTrustPromise.then === 'function'
+        ? window.oneTrustPromise
+        : Promise.resolve(); // Default for environments without OneTrust (tests)
+    this.readyPromise = oneTrustPromise.then(() => {
       this.initializeAfterConsent();
     });
   }
@@ -71,13 +75,14 @@ class StatsigReporter {
       : false;
     this.local_mode = !(
       IN_UNIT_TEST ||
-      managed_test_environment ||
       isProductionEnvironment() ||
+      managed_test_environment ||
       process.env.STATSIG_LOCAL_MODE_OFF
     );
     this.options = {
       localMode: this.local_mode,
       disableErrorLogging: true,
+      environment: {tier: this.environment},
     };
 
     this.ready = true;
