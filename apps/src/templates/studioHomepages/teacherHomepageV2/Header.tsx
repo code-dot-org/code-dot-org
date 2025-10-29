@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
@@ -50,7 +50,9 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <div id="teacher-home-header">
-      <Heading4>{i18n.classSections()}</Heading4>
+      <Typography variant="h4" gutterBottom>
+        {i18n.classSections()}
+      </Typography>
       <div className={styles.headerButtonRow}>
         <SegmentedButtons
           onChange={value =>
