@@ -40,9 +40,13 @@ module Cdo::CloudFormation
     # by installing dependencies, zipping the Lambda directory, uploading to S3, and returning the S3 URI to
     # populate the `AWS::Lambda::Function` `Code` Property.
     # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
+    # @example
+    #   <% pkg = package_node_lambda('sql-user') %>
+    #   Code: <%= pkg[:s3_location].to_json %>
+    #   Description: "Code hash: <%= pkg[:content_hash] %>"
     def package_node_lambda(relative_directory, environment_variables: {})
       install_node_dependencies(relative_directory)
-      return zip_directory(relative_directory, environment_variables: environment_variables)
+      zip_directory(relative_directory, environment_variables: environment_variables)
     end
 
     # Install npm packages used by a lambda to prepare the directory the lambda is in for being zipped and uploaded.
