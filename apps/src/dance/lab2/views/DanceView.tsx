@@ -25,7 +25,7 @@ import {
   getToolboxDefinition,
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
-import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
+import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
@@ -61,7 +61,6 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
-import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -71,6 +70,7 @@ import SourcesContainer, {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
+import usePlaybackUpdate from '@cdo/apps/music/views/hooks/usePlaybackUpdate';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
 import {registerReducers} from '@cdo/apps/redux';
 import AgeDialog from '@cdo/apps/templates/AgeDialog';
@@ -78,18 +78,20 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import loadingGif from '@cdo/static/dance/DancePartyLoading.gif';
 
-import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 import danceI18n from '../locale';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
 import DanceValidator from './DanceValidator';
+import GenerateDance from './GenerateDance';
 import GenerateDancer from './GenerateDancer';
 
 import moduleStyles from './dance-view.module.scss';
 
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
 const BLOCKLY_DIV_ID = 'dance-blockly-div';
+
+const GENERATE_DANCE_PLAYBACK_MEASURES = 4;
 
 registerReducers(reducers);
 
@@ -118,14 +120,13 @@ const DanceView: React.FunctionComponent<{
   const signedIn = useAppSelector(state => state.currentUser.signInState);
   const scriptName = useAppSelector(state => state.progress.scriptName);
 
-  const {currentSources, updateSources, showStartOverDialog} =
+  const {currentSources, updateSources, showStartOverDialog, startOver} =
     useSources<DanceProjectSources>();
 
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<WorkspaceSvg | null>(null);
   const musicProjectPlayer = useRef<ProjectPlayer | null>(null);
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
-  const [generatedAiDance, setGeneratedAiDance] = useState(false);
 
   const guideMode = levelProperties.guideMode;
   const usingMusicProject =
@@ -134,6 +135,18 @@ const DanceView: React.FunctionComponent<{
   const {theme} = useTheme();
 
   const progressManager = useContext(ProgressManagerContext);
+
+  const [musicPlayheadPosition, setMusicPlayheadPosition] = useState(1);
+
+  const updateMusicPlayhead = useCallback(() => {
+    if (usingMusicProject && musicProjectPlayer.current) {
+      setMusicPlayheadPosition(
+        musicProjectPlayer.current.getCurrentPlayheadPosition()
+      );
+    }
+  }, [usingMusicProject]);
+
+  usePlaybackUpdate(isRunning, updateMusicPlayhead);
 
   const metadataToUse: SongMetadata | undefined = useMemo(() => {
     if (!musicProjectPlayer.current || !loadedMusicProject) {
@@ -265,6 +278,7 @@ const DanceView: React.FunctionComponent<{
     programExecutor.current?.reset();
     dispatch(setIsRunning(false));
     programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
+    setMusicPlayheadPosition(1);
   }, [programExecutor, dispatch]);
 
   const onPuzzleComplete = useCallback(
@@ -482,33 +496,6 @@ const DanceView: React.FunctionComponent<{
     readonlyWorkspace,
   ]);
 
-  const generateAiDance = useCallback(() => {
-    if (
-      !usingMusicProject ||
-      !musicProjectPlayer.current ||
-      !loadedMusicProject
-    ) {
-      return;
-    }
-
-    setGeneratedAiDance(false);
-    const resultBlockly = buildDanceBlockly(
-      musicProjectPlayer.current.getEventMeasures(),
-      levelProperties.sharedBlocks || []
-    );
-    updateSources({
-      ...currentSources,
-      source: resultBlockly,
-    });
-    setGeneratedAiDance(true);
-  }, [
-    currentSources,
-    updateSources,
-    loadedMusicProject,
-    levelProperties.sharedBlocks,
-    usingMusicProject,
-  ]);
-
   // Create dance validator.
   const danceValidator = useRef(new DanceValidator());
 
@@ -523,134 +510,136 @@ const DanceView: React.FunctionComponent<{
 
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
-      {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
-      {!guideMode && (
-        <ResourcePanel
-          isRunning={isRunning}
-          hasRun={hasRun}
-          hasEdited={hasEdited}
-          levelProperties={levelProperties}
-          headerClassName={moduleStyles.panelHeader}
-          className={moduleStyles.instructionsArea}
-          settings={settings}
-        />
-      )}
-      <div className={moduleStyles.divider} />
-      {!isToolboxMode && (
+      <ModeSwitchBar levelId={levelProperties.id} />
+      <div className={moduleStyles.mainContent}>
+        {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
+        {!guideMode && (
+          <ResourcePanel
+            isRunning={isRunning}
+            hasRun={hasRun}
+            hasEdited={hasEdited}
+            levelProperties={levelProperties}
+            headerClassName={moduleStyles.panelHeader}
+            className={moduleStyles.instructionsArea}
+            settings={settings}
+          />
+        )}
+        <div className={moduleStyles.divider} />
+        {!isToolboxMode && (
+          <PanelContainer
+            id="visualization"
+            headerContent="Dance Party!"
+            headerClassName={moduleStyles.panelHeader}
+            className={classNames(
+              moduleStyles.visualizationArea,
+              guideMode && moduleStyles.jumbo
+            )}
+          >
+            <div className={moduleStyles.visualizationColumn}>
+              {!usingMusicProject && currentSources.selectedSong && (
+                <SongSelector
+                  enableSongSelection={!isRunning}
+                  setSong={onSetSong}
+                  selectedSong={currentSources.selectedSong}
+                  songData={songData}
+                  filterOn={filterOn}
+                  levelIsRunning={isRunning}
+                />
+              )}
+              {usingMusicProject &&
+                (loadedMusicProject && metadataToUse ? (
+                  <MusicProjectBar title={metadataToUse.title} />
+                ) : (
+                  // Temp UI
+                  'Loading your Music Lab project...'
+                ))}
+              <div
+                id={DANCE_VISUALIZATION_ID}
+                className={moduleStyles.visualization}
+              >
+                <div
+                  className={classNames(
+                    moduleStyles.loading,
+                    isLoading && moduleStyles.loadingShow
+                  )}
+                >
+                  <img
+                    src={loadingGif}
+                    className={moduleStyles.loadingGif}
+                    alt={danceI18n.dancePartyLoading()}
+                  />
+                </div>
+              </div>
+              <DanceControls
+                onRun={runProgram}
+                onReset={resetProgram}
+                disabled={(usingMusicProject && !loadedMusicProject) || false}
+              />
+            </div>
+          </PanelContainer>
+        )}
+        <div className={moduleStyles.divider} />
         <PanelContainer
-          id="visualization"
-          headerContent="Dance Party!"
+          id="dance-workspace-panel"
+          headerContent={commonI18n.workspaceHeaderShort()}
+          className={moduleStyles.workspaceArea}
           headerClassName={moduleStyles.panelHeader}
-          className={classNames(
-            moduleStyles.visualizationArea,
-            guideMode && moduleStyles.jumbo
-          )}
-          leftHeaderContent={
-            <BackToParentProject
-              text="Go to Hub"
-              iconLeft={{iconName: 'home'}}
-              type="secondary"
-              size="s"
-            />
+          rightHeaderContent={
+            !readonlyWorkspace && (
+              <Button
+                text={commonI18n.startOver()}
+                iconRight={{iconStyle: 'solid', iconName: 'refresh'}}
+                color={'black'}
+                onClick={onClickStartOver}
+                ariaLabel={commonI18n.startOver()}
+                size={'xs'}
+                type="secondary"
+              />
+            )
           }
         >
-          <div className={moduleStyles.visualizationColumn}>
-            {!usingMusicProject && currentSources.selectedSong && (
-              <SongSelector
-                enableSongSelection={!isRunning}
-                setSong={onSetSong}
-                selectedSong={currentSources.selectedSong}
-                songData={songData}
-                filterOn={filterOn}
-                levelIsRunning={isRunning}
-              />
-            )}
-            {usingMusicProject &&
-              (loadedMusicProject && metadataToUse ? (
-                <MusicProjectBar title={metadataToUse.title} />
-              ) : (
-                // Temp UI
-                'Loading your Music Lab project...'
-              ))}
-            <div
-              id={DANCE_VISUALIZATION_ID}
-              className={moduleStyles.visualization}
-            >
-              <div
-                className={classNames(
-                  moduleStyles.loading,
-                  isLoading && moduleStyles.loadingShow
-                )}
-              >
-                <img
-                  src={loadingGif}
-                  className={moduleStyles.loadingGif}
-                  alt={danceI18n.dancePartyLoading()}
-                />
-              </div>
-            </div>
-            <DanceControls
-              onRun={runProgram}
-              onReset={resetProgram}
-              disabled={(usingMusicProject && !loadedMusicProject) || false}
-            />
-          </div>
+          {WorkspaceAlert}
+          <div id={BLOCKLY_DIV_ID} />
         </PanelContainer>
-      )}
-      <div className={moduleStyles.divider} />
-      <PanelContainer
-        id="dance-workspace-panel"
-        headerContent={commonI18n.workspaceHeaderShort()}
-        className={moduleStyles.workspaceArea}
-        headerClassName={moduleStyles.panelHeader}
-        rightHeaderContent={
-          !readonlyWorkspace && (
-            <Button
-              text={commonI18n.startOver()}
-              iconRight={{iconStyle: 'solid', iconName: 'refresh'}}
-              color={'black'}
-              onClick={onClickStartOver}
-              ariaLabel={commonI18n.startOver()}
-              size={'xs'}
-              type="secondary"
+        {guideMode === 'instructions' && (
+          <GuideInstructions
+            isRunning={isRunning}
+            hasRun={hasRun}
+            hasEdited={hasEdited}
+            levelProperties={levelProperties}
+            width="narrow"
+          />
+        )}
+        {guideMode === 'aiCodeGenerate' &&
+          usingMusicProject &&
+          musicProjectPlayer.current &&
+          loadedMusicProject && (
+            <GenerateDance
+              levelProperties={levelProperties}
+              isRunning={isRunning}
+              hasEdited={hasEdited}
+              hasPlayedGeneratedDance={
+                musicPlayheadPosition >=
+                Math.min(
+                  GENERATE_DANCE_PLAYBACK_MEASURES,
+                  musicProjectPlayer.current.getLastMeasure() || 0
+                )
+              }
+              measures={musicProjectPlayer.current.getEventMeasures()}
+              blockDefinitions={levelProperties.sharedBlocks || []}
+              blockCount={workspace.current?.getAllBlocks().length || 0}
+              runProgram={runProgram}
+              resetProgram={resetProgram}
+              updateSources={resultBlockly => {
+                updateSources({
+                  ...currentSources,
+                  source: resultBlockly,
+                });
+              }}
+              startOver={startOver}
             />
-          )
-        }
-      >
-        {WorkspaceAlert}
-        <div id={BLOCKLY_DIV_ID} />
-      </PanelContainer>
-      {guideMode === 'instructions' && (
-        <GuideInstructions
-          isRunning={isRunning}
-          hasRun={hasRun}
-          hasEdited={hasEdited}
-          levelProperties={levelProperties}
-          width="narrow"
-        />
-      )}
-      {guideMode === 'aiCodeGenerate' && (
-        <Guide id="generate-panel" width="narrow">
-          {
-            <>
-              <div>
-                {generatedAiDance
-                  ? "Let's dance!"
-                  : "Now, let's generate a dance sequence to go with your song!"}
-              </div>
-              <Button
-                ariaLabel={'Generate dance'}
-                text={generatedAiDance ? 'Generate again!' : 'Generate dance'}
-                type="primary"
-                color="black"
-                size="s"
-                iconLeft={{iconName: 'sparkles'}}
-                onClick={generateAiDance}
-              />
-            </>
-          }
-        </Guide>
-      )}
+          )}
+      </div>
     </div>
   );
 };

@@ -30,7 +30,7 @@
   }
 }
 
-.buttonWithPack {
+.startOverButton {
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   display: flex;
@@ -39,11 +39,15 @@
   gap: 0.125rem;
   height: 26.25px;
   padding-block: 0.1875rem;
-  padding-inline: 0.125rem 0.5rem;
+  padding-inline:  0.5rem;
   border: variables.$default-border;
   border-color: var(--borders-neutral-strong);
   border-radius: 0.25rem;
   transition: all 0.2s ease;
+
+  &WithPack {
+    padding-inline: 0.125rem 0.5rem;
+  }
 
   &:hover {
     background-color: var(--background-neutral-tertiary);

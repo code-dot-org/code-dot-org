@@ -9,28 +9,27 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useEffect, useMemo, useRef} from 'react';
 
-import {
-  navigateToLevelId,
-  setCurrentLevelId,
-} from '@cdo/apps/code-studio/progressRedux';
 import {levelById} from '@cdo/apps/code-studio/progressReduxSelectors';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {
-  LabProps,
-  BubbleChoiceLevelData,
-  BubbleChoiceSublevel,
-} from '@cdo/apps/lab2/types';
+import {BubbleChoiceLevelData, LabProps} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  BubbleChoiceCustomModes,
+  LevelStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 
-import notifyLevelChange from '../lab2/utils/notifyLevelChange';
 import {commonI18n} from '../types/locale';
+
+import {BubbleChoiceLevelProperties} from './types';
+import useNavigateToSublevel from './useNavigateToSublevel';
 
 import styles from './BubbleChoice.module.scss';
 
-const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
+const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
+  levelProperties,
+}) => {
   // The image has a 4:3 aspect ratio.
   const imageAspectRatio = 4 / 3;
 
@@ -52,9 +51,6 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
           sublevel.level_id
         )?.status || LevelStatus.not_tried
     )
-  );
-  const currentLessonId = useAppSelector(
-    state => state.progress.currentLessonId
   );
 
   const [containerWidth, setContainerWidth] = React.useState(0);
@@ -127,21 +123,36 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
     return level;
   };
 
-  const navigateToSublevel = (sublevel: BubbleChoiceSublevel) => {
-    if (currentLessonId) {
-      dispatch(navigateToLevelId(sublevel.level_id));
-    } else if (levelProperties.isProjectLevel) {
-      // For BubbleChoice project levels, set the level ID in redux, and let the
-      // MultiProjectContainer handle switching projects. The standard progress redux
-      // system does not work for project levels since there is no progress, lesson, etc.
-      dispatch(setCurrentLevelId(sublevel.level_id));
-      // TODO: This is a dupe of code in navigateToLevelId(). Can we consolidate?
-      notifyLevelChange(String(levelProperties.id), sublevel.level_id);
-      // TODO: Handle browser navigation.
-    } else {
-      window.location.href = sublevel.url;
+  const navigateToSublevel = useNavigateToSublevel();
+
+  const onSingleLevel = useAppSelector(
+    ({progress}) =>
+      progress.currentLevelId &&
+      !progress.currentLessonId &&
+      !levelProperties.isProjectLevel
+  );
+  useEffect(() => {
+    if (
+      !onSingleLevel &&
+      levelProperties.customMode === BubbleChoiceCustomModes.MUSIC_DANCE_AI
+    ) {
+      // Navigate directly to the first available sublevel in the custom Music Dance AI mode.
+      navigateToSublevel(levelProperties, levelBubbleChoice.sublevels[0]);
     }
-  };
+  }, [
+    onSingleLevel,
+    levelProperties,
+    levelBubbleChoice.sublevels,
+    navigateToSublevel,
+  ]);
+
+  if (
+    !onSingleLevel &&
+    levelProperties.customMode === BubbleChoiceCustomModes.MUSIC_DANCE_AI
+  ) {
+    // In Music Dance AI custom mode, we immediately navigate to the first sublevel so there's nothing to render.
+    return null;
+  }
 
   return (
     <div id="bubble-choice" className={styles.bubbleChoiceContainer}>
@@ -178,7 +189,7 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
                 width: imageWidth,
                 height: imageWidth / aspectRatio,
               }}
-              onClick={() => navigateToSublevel(sublevel)}
+              onClick={() => navigateToSublevel(levelProperties, sublevel)}
             >
               <div
                 className={styles.sublevelImageContainer}

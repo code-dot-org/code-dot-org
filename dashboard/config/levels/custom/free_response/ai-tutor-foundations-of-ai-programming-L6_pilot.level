@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-10-27T15:34:47.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# AI Tutor Quick Reflection\r\n\r\nNow that you are familiar with AI Tutor, how useful do you think it will be?\r\n\r\nHow do you plan on using it this unit?",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-27T15:34:47.337+00:00\",\"changed\":[\"cloned from \\\"ai-tutor-foundations-of-ai-programming-L6-2025\\\"\"],\"cloned_from\":\"ai-tutor-foundations-of-ai-programming-L6-2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

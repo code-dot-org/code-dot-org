@@ -1,9 +1,10 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
-  draw :marketing
+  mount ActionCable.server => '/cable'
+  get 'chatter/index'
 
-  get "app", to: "app#index"
+  draw :marketing
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all

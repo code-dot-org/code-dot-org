@@ -25,6 +25,7 @@ export type LottieShapeFillOrStroke = {
   ty: 'fl' | 'st';
   nm?: string;
   c?: LottieColorNode;
+  hd?: boolean;
 };
 
 export type LottieShapeGroup = {
@@ -81,10 +82,11 @@ export type LottieImageLayer = LottieLayerBase & {
   ty: 2; // image layer
   refId: string;
   shapes?: Array<LottieShapeAny>;
+  hasMask?: boolean;
 };
 
 export type LottieVectorLayer = LottieLayerBase & {
-  ty: 4; // shape/vector
+  ty: 4 | 1; // shape/vector
   shapes?: Array<LottieShapeAny>;
 };
 
@@ -110,8 +112,8 @@ export type LottieAssetImage = {
 
 export type LottieAssetPrecomp = {
   id: string;
-  w?: number;
-  h?: number;
+  w: number;
+  h: number;
   layers?: Array<LottieLayer>;
 };
 
@@ -122,12 +124,6 @@ export type LottieJSON = {
   h?: number;
   layers?: Array<LottieLayer>;
   assets?: Array<LottieAssetImage | LottieAssetPrecomp>;
-};
-
-export type HeadImageInfo = {
-  dataUrl: string;
-  width: number;
-  height: number;
 };
 
 export type Palette = {
@@ -177,6 +173,8 @@ export interface DancerMetadata {
 export type ResolvedDancerAssets = {
   headUrl: string;
   metadataUrl: string;
+  bodyUrl?: string;
+  bodyMetadataUrl?: string;
 };
 
 export type ResolveDancerAssetsOpts = {
@@ -189,4 +187,5 @@ export type LocalStoragePayload = {
   adlibOption: string;
   choices: string[];
   variant: number | string;
+  bodyVariant?: number;
 } | null;

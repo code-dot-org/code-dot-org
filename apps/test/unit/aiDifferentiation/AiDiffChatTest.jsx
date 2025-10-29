@@ -10,6 +10,9 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiInteractionStatus as Status,
@@ -69,6 +72,7 @@ describe('AiDiffChat', () => {
 
     registerReducers({
       currentUser,
+      teacherSections,
     });
     store.dispatch(
       setInitialData({
@@ -76,6 +80,7 @@ describe('AiDiffChat', () => {
         name: 'test_user',
       })
     );
+    store.dispatch(setSections([]));
 
     render(
       <Provider store={store}>

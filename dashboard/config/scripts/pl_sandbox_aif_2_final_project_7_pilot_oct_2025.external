@@ -1,0 +1,19 @@
+name 'pl_sandbox_aif_2_final_project_7_pilot-oct-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Capstone Project - Web Apps with AI
+
+#### Unit 6 is the Semester 2 capstone, where students design and build a purposeful web app for a real audience. They apply technical skills, human-centered design, and AI literacy while making transparent, ethical choices. 
+
+#### The emphasis is on both creating and reflecting—showing how thoughtful, values-driven design leads to confident, intentional creators.
+
+#### **Project Title:** Capstone Project
+#### **Unit:** Unit 6 - Capstone Project
+#### **Final Product Type:** Complete Web Application (with API integration, documentation, and reflection)
+#### **Student Role or Framing Device:** Students act as intentional designers and developers, rotating through professional roles (software engineer, UX researcher, product manager, ethical technologist)
+#### **When Project Begins:** Final two weeks of the semester (full duration of Unit 6)
+
+
+MARKDOWN

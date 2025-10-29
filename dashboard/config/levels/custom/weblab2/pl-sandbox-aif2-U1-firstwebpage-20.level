@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2025-10-21T16:46:18.000Z",
   "level_num": "custom",
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "1. **Create a New Feature**\r\n\r\nDraw a card from the deck and prompt AI to create that feature. Re-prompt AI as needed.\r\n\r\n2. **Save with a Comment**\r\n\r\nWhen the feature looks good, navigate to the Version History tab. Describe your changes and click \"Save version\".\r\n\r\n3. **Revert as Needed**  \r\n\r\nAfter 5 minutes, or when prompted by your teacher, revert to the most recent version you saved with a description.\r\n\r\n:::details [**Why go back to an old version?**]\r\nSometimes new code breaks things that used to work. In that case, developers “revert” — they go back to a previous version that worked correctly. It’s important to save your changes with short, clear messages, so you can easily find and restore the right version later.\r\n:::",
+    "long_instructions": "## Exploring design\r\n\r\n1. Prompt the AI to create an HTML site on the topic of your choice that includes: a navigation bar, a hero, a row of cards, and a footer. \r\n\r\n2. Save this version.\r\n\r\n3. Next prompt the AI to style your website with CSS. Be as specific as you like and go back and forth as many times as  you like. Remember to save each version along the way. \r\n\r\n>This level is designed for you to get comfortable designing with AI. Spend as little or as much time here as you like. Move on when you are ready. \r\n\r\n:::details [**Why go back to an old version?**]\r\nSometimes new code breaks things that used to work. In that case, developers “revert” — they go back to a previous version that worked correctly. It’s important to save your changes with short, clear messages, so you can easily find and restore the right version later.\r\n:::",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
@@ -43,7 +44,6 @@
       ]
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-21T16:46:18.393+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level3-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level3-test-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-21T16:46:18.393+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level3-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level3-test-2025\"},{\"changed_at\":\"2025-10-23 19:58:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>
