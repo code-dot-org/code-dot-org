@@ -10,7 +10,6 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/editor.module.scss';
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
-import ConsoleShare from '@cdo/apps/pythonlab/layout/ConsoleShare';
 
 /**
  * Returns a CodeMirror StateField extension that adds a tooltip button

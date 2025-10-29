@@ -20,6 +20,7 @@ import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/Backpac
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
 
 /**
  * Handles downloading a file and sending an analytics event.
@@ -104,6 +105,13 @@ export const useFileRowOptions = (
           if (folderPath !== '/') {
             fullFilename = (folderPath + '/' + file.name).substring(1); // remove leading slash
           }
+          dispatch(
+            sendAnalytics(EVENTS.AI_TUTOR_FILE_ADDED_TO_CONTEXT, {
+              file: fullFilename,
+              codingLanguage:
+                fullFilename?.split('.').pop()?.toLowerCase() || '',
+            })
+          );
           dispatch(
             addItemToUserAddedSelectionContext({
               displayName: fullFilename,
