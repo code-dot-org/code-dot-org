@@ -1,4 +1,4 @@
-@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@cdo/apps/mixins.scss' as mixins;
 
 .previewContainer {
   position: relative;
@@ -30,15 +30,8 @@
   display: flex;
   justify-content: center;
   background-color: var(--background-neutral-secondary);
-  &:focus {
-    @include mixins.focus-styles;
-    outline-offset: 0;
-  }
 
-  &:focus-visible {
-    @include mixins.focus-styles;
-    outline-offset: 0;
-  }
+  @include mixins.focus-styles($outline-offset: -2px);
 }
 
 .previewIframe {
@@ -52,10 +45,6 @@
 
 .fullScreenPreviewIframeHeight {
   height: 100%;
-}
-
-.projectViewPreviewIframeHeight {
-  height: calc(100vh - 180px); // Account for header, some padding, and footer
 }
 
 .desktopPreviewIframe {

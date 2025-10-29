@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
 import {
@@ -15,6 +16,7 @@ import React, {useEffect, useCallback, useRef, useState} from 'react';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -24,12 +26,18 @@ import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
-const INITIAL_INFO_PANEL_WIDTH = 400;
+// This initial width is derived from the following:
+// The narrowest screen we see in GA with 1% usage is 1024px.
+// The version of Excalidraw we're using switches into a mobile mode at 730px.
+// So, we want to make sure the initial workspace is over 730px.
+// 1024 - 290 - 1px for resize bar = 734px.
+const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
@@ -43,9 +51,20 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
-  const {currentSources, updateSources, setReinitializationHandler} =
-    useSources<SketchlabSources>();
+  const {
+    currentSources,
+    updateSources,
+    setReinitializationHandler,
+    showStartOverDialog,
+  } = useSources<SketchlabSources>();
+
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+
+  const onClickStartOver = useCallback(() => {
+    showStartOverDialog('custom', commonI18n.startOverGeneric());
+  }, [showStartOverDialog]);
 
   const {theme} = useTheme();
 
@@ -170,6 +189,19 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           id="workspace"
           className={panelClassName}
           headerContent={<WorkspaceHeader />}
+          rightHeaderContent={
+            !readonlyWorkspace && (
+              <Button
+                text={commonI18n.startOver()}
+                iconRight={{iconStyle: 'solid', iconName: 'arrow-rotate-left'}}
+                color={'gray'}
+                onClick={onClickStartOver}
+                ariaLabel={commonI18n.startOver()}
+                size={'xs'}
+                type="secondary"
+              />
+            )
+          }
         >
           <Excalidraw
             initialData={currentSources.source}
@@ -177,6 +209,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
             theme={theme.toLowerCase() as ExcalidrawTheme}
+            viewModeEnabled={readonlyWorkspace}
           />
           {WorkspaceAlert}
         </PanelContainer>

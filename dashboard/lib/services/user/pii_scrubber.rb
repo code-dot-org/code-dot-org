@@ -18,7 +18,8 @@ module Services
     class PiiScrubber < Services::Base
       attr_reader :user, :email
 
-      REDACTED_EMAIL_STRING = 'redacted'
+      REDACTED_STRING = 'redacted'
+      REDACTED_EMAIL_STRING = 'redacted@code.org'
       EMAIL_REGEX = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i
 
       def initialize(user:)
@@ -44,6 +45,7 @@ module Services
           ao.assign_attributes(email: '', hashed_email: '', authentication_id: nil, data: nil)
           ao.save(validate: false) # Records may be invalid due to duplicate empty string emails
         end
+        user.primary_contact_info_id = nil # in rare cases, this might point to a different account's live auth option
         user.lti_user_identities.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
         user.email = ''
         user.hashed_email = nil
@@ -64,7 +66,7 @@ module Services
         if email.present? && ::User.find_by_email(email).blank?
           EmailPreference.where(email: email).destroy_all
           Census::CensusSubmission.where(submitter_email_address: email).find_each do |cs|
-            cs.update!(submitter_email_address: nil, submitter_name: nil)
+            cs.update!(submitter_email_address: REDACTED_EMAIL_STRING, submitter_name: REDACTED_STRING)
           end
         end
 
@@ -80,7 +82,7 @@ module Services
         user.full_address = nil
         user.current_sign_in_ip = nil
         user.last_sign_in_ip = nil
-        user.data_transfer_agreement_request_ip = nil
+        user.data_transfer_agreement_request_ip = REDACTED_STRING
         user.user_geos.each(&:clear_user_geo)
 
         # PD data

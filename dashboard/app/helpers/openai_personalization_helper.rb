@@ -31,62 +31,19 @@ module OpenaiPersonalizationHelper
   end
 
   def self.create_teaching_profile_system_prompt
-    profiles = [
+    profile_keys = %w[Innovator CodeWhisperer BridgeBuilder Storyteller CommunityArchitect LeadLearner]
+
+    profiles = profile_keys.map do |key|
       {
-        name: "The Innovator",
-        tagline: "You embrace new tools and creative approaches, constantly experimenting to enhance learning.",
+        name: I18n.t("teachingStyle#{key}Name"),
+        tagline: I18n.t("teachingStyle#{key}Tagline"),
         superpowers: [
-          "Tech Trailblazer: You're eager to integrate new technologies and find creative ways to enhance learning through digital tools.",
-          "Creative Problem-Solver: You approach challenges with fresh perspectives, turning obstacles into opportunities for innovation.",
-          "Future-Focused: You prepare students for tomorrow's world by incorporating cutting-edge tools and forward-thinking approaches."
-        ]
-      },
-      {
-        name: "The Code Whisperer",
-        tagline: "You have a deep understanding of programming concepts and love diving into the technical details.",
-        superpowers: [
-          "Technical Expert: You have strong programming knowledge and enjoy exploring the deeper aspects of computer science.",
-          "Debug Detective: You excel at troubleshooting code issues and helping students understand what went wrong and why.",
-          "Concept Clarifier: You break down complex programming concepts into understandable pieces, making the technical accessible."
-        ]
-      },
-      {
-        name: "The Bridge Builder",
-        tagline: "You excel at connecting computer science to other subjects and real-world applications.",
-        superpowers: [
-          "Connection Creator: You naturally link CS concepts to other subjects, helping students see interdisciplinary relationships.",
-          "Real-World Relevance: You consistently show students how programming applies to their interests and future careers.",
-          "Context Champion: You provide meaningful contexts that make abstract concepts concrete and relatable."
-        ]
-      },
-      {
-        name: "The Storyteller",
-        tagline: "You use narrative, examples, and engaging content to make learning memorable and meaningful.",
-        superpowers: [
-          "Narrative Navigator: You weave stories and scenarios into lessons, making abstract concepts memorable through narrative.",
-          "Example Expert: You create compelling analogies and examples that help students grasp difficult concepts.",
-          "Engagement Engineer: You design learning experiences that captivate student attention and spark curiosity."
-        ]
-      },
-      {
-        name: "The Community Architect",
-        tagline: "You build strong classroom communities where collaboration and peer learning thrive.",
-        superpowers: [
-          "Collaboration Catalyst: You create opportunities for meaningful peer interaction and group problem-solving.",
-          "Culture Builder: You establish classroom norms and practices that foster mutual respect and shared learning.",
-          "Team Leader: You facilitate productive group work and help students learn from each other."
-        ]
-      },
-      {
-        name: "The Lead Learner",
-        tagline: "You learn alongside your students, turning every challenge into a shared adventure.",
-        superpowers: [
-          "Co-Learner: You're comfortable not having all the answers, showing students that discovery and exploration are part of learning.",
-          "Curiosity Driver: You spark experimentation and model lifelong learning by exploring new tools and ideas alongside students.",
-          "Growth Mindset Modeler: You demonstrate that challenges are opportunities to learn and grow."
+          I18n.t("teachingStyle#{key}Superpower1"),
+          I18n.t("teachingStyle#{key}Superpower2"),
+          I18n.t("teachingStyle#{key}Superpower3")
         ]
       }
-    ]
+    end
 
     profiles_text = profiles.map do |profile|
       superpowers_text = profile[:superpowers].map {|s| "  - #{s}"}.join("\n")

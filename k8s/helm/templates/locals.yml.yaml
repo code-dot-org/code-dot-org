@@ -12,8 +12,7 @@ data:
     {{- end }}
     
     {{- if .Values.services.redis.enabled }}
-    geocoder_redis_url: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0/geocoder
-    session_store_server: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0/session
+    redis_url: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0
     netsim_redis_groups:
     - master: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379
     {{- end }}

@@ -17,7 +17,18 @@ interface BaseChatEvent {
 
 /** Base type for all chat messages */
 interface BaseChatMessage extends BaseChatEvent {
+  /**
+   * Message text to send to the model. This is also used for display if
+   * `chatMessageDisplayText` is `undefined`.
+   * */
   chatMessageText: string;
+
+  /**
+   * Message text for display in the UI (in message history), if this differs from
+   *  what is sent to the model. If `undefined`, chatMessageText will be displayed.
+   **/
+  chatMessageDisplayText?: string;
+
   hiddenContext?: string;
   /** Asset file names to optionally send with text content */
   assets?: ChatAsset[];

@@ -1,6 +1,9 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  mount ActionCable.server => '/cable'
+  get 'chatter/index'
+
   draw :marketing
 
   # Override Error Codes
@@ -737,6 +740,7 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+    get '/lti/v1/integrations', to: redirect('/lti/v1/integrations/new')
 
     namespace :lti do
       namespace :v1 do
@@ -1151,6 +1155,13 @@ Dashboard::Application.routes.draw do
     end
 
     resources :feedback, controller: 'teacher_feedbacks'
+
+    # AI Lesson Summaries routes
+    resources :ai_lesson_summaries, only: [:show] do
+      collection do
+        get :show # GET /ai_lesson_summaries/show?user_id=1&lesson_id=2
+      end
+    end
 
     get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
     get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'

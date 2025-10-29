@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Clarify instructions\r\n\r\n## Do This:\r\n- Use AI to clarify instructions .... ",
+    "long_instructions": "## Do This:\r\n\r\nWrite a program that greets the user.\r\n\r\nRun your program to test it.\r\n* **\r\n**Open the *AI Tutor* on the right and ask it to _CLARIFY what the INSTRUCTIONS mean_ and how you might start.**\r\n\r\n\r\nYou can type things like:\r\n* _What does \"greet the user\" mean in Python? Please explain in simple steps._\r\n* _Can you give me a very short example of a program that greets the user?_\r\n* _Do I need to ask for a name or is a simple \"hello\" okay for this level?_\r\n* _What Python command shows text on the screen?_\r\n",
     "ai_tutor_available": "true",
     "offer_browser_tts": "false",
     "submittable": "false",
@@ -18,8 +18,27 @@
     "widget_view_allow_show_code": "false",
     "predict_settings": {
       "isPredictLevel": false
+    },
+    "teacher_markdown": "The ambiguity (“greet the user”) is intentional so students must practice asking the Tutor for clarification.\r\n\r\nIf students ask you first, gently redirect: “Try asking the AI Tutor to clarify the instruction. If it’s still unclear after that, I’m here.”\r\n\r\nAccept any greeting output that runs (with or without input()).\r\n\r\nIf students paste a long solution they don’t understand, nudge them to ask the Tutor:\r\n“Explain each line of this code in simple words.”\r\n\r\nIf they get an error, let them finish this level as-is; Debugging is coming in Level 3.",
+    "additional_ai_evaluation_instructions": "The goal of this level is for students to practice using the AI Tutor to clarify vague instructions before coding. \r\nIf the student’s final code correctly greets the user (e.g., prints a greeting or asks for a name and prints it), \r\nconsider it correct even if formatting or capitalization is imperfect. \r\nPrioritize whether the student correctly interpreted the instruction rather than syntax details.\r\n",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Your program goes here",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-14 20:35:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14 20:35:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-19 21:28:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-19 21:31:56 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-19 21:32:41 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 01:39:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 01:40:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 15:36:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

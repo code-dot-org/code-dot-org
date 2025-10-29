@@ -40,6 +40,11 @@
   // Chat Actions container styles
   .chatActionsContainer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+
+    // If there's only one child element, align it to the right
+    & > *:only-child {
+      margin-left: auto;
+    }
   }
 }

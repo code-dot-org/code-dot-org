@@ -51,13 +51,14 @@ const ActivityCarousel: React.FC<ActivityCarouselProps> = ({slides}) => {
           description={shortDescription}
           primaryButton={primaryButton}
           imageSrc={getAbsoluteImageUrl(resolvedImage)}
+          imageObjectFit={'contain'}
           primaryButtonEventName={EVENT.CARD_PRIMARY_BUTTON_CLICKED}
           secondaryButtonEventName={EVENT.CARD_SECONDARY_BUTTON_CLICKED}
           eventMetadata={{
             cardId: tutorialID,
             cardTitle: title,
           }}
-          chipLabels={[...topic]}
+          chipLabels={[...topic] as string[]}
         />
       ),
     };

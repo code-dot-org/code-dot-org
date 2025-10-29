@@ -1,0 +1,32 @@
+name 'pl_sandbox_aif_2_U1-html_9'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing HTML + AI
+
+####  Now that you have been introduced to user experience, let’s dive into how the web apps are made.
+
+## HTML
+
+#### **HTML (HyperText Markup Language)** is the code that gives a web page its structure. It tells the browser what to show — like headings, paragraphs, images, and links — so users can see and interact with the content.
+
+#### In this activity, you’ll guide students to use AI to help generate a basic HTML framework for a simple web page. The AI acts like a coding assistant, helping students get started while they learn how each part of the code works.
+
+
+## Prompt Engineering
+#### A key ingredient of using AI is refining prompts through prompt engineering. When the AI’s output is flawed or incomplete, revise your prompt to be more specific and provide clear context or constraints.
+
+
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt Engineering</strong> is the process of designing, refining, and optimizing prompts given to AI models to achieve desired outputs. It's like giving clear instructions to a very smart assistant.
+</p>
+</div>
+
+## What's Next?
+
+#### Let’s practice prompting AI to create a basic webpage in HTML but first, review the features in Web Lab
+
+
+MARKDOWN

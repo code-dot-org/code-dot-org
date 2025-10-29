@@ -1,0 +1,1326 @@
+{
+  "script": {
+    "name": "self-paced-pl-ai-generated-design-pilot-2025",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-10-28 14:29:55 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-ai-generated-design-pilot-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to WebApps",
+      "name": "Introduction to WebApps",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "####**By the end of this professional learning module, you will be able to:**\n- Prepare to teach what a web app is and explain how it serves as the foundation for AI-assisted projects.\n- Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.\n- Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.\n- Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.\n\n**Suggested Time:** 60 minutes",
+        "student_overview": "####**By the end of this professional learning module, you will be able to:**\n- Prepare to teach what a web app is and explain how it serves as the foundation for AI-assisted projects.\n- Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.\n- Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.\n- Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.\n\n**Suggested Time:** 60 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e0fc53c6-1dc1-49d0-b459-b150c9ae1b36",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0fc53c6-1dc1-49d0-b459-b150c9ae1b36",
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48",
+        "lesson_activity.key": "e0fc53c6-1dc1-49d0-b459-b150c9ae1b36"
+      }
+    },
+    {
+      "key": "8426ccf0-b940-41cc-9b47-edc0bef3da29",
+      "position": 2,
+      "properties": {
+        "progression_name": "User-Centered Design"
+      },
+      "seeding_key": {
+        "activity_section.key": "8426ccf0-b940-41cc-9b47-edc0bef3da29",
+        "lesson_activity.key": "e0fc53c6-1dc1-49d0-b459-b150c9ae1b36"
+      }
+    },
+    {
+      "key": "e7567d89-2761-4513-b6fb-dced820d1823",
+      "position": 3,
+      "properties": {
+        "progression_name": "Building Web Apps with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823",
+        "lesson_activity.key": "e0fc53c6-1dc1-49d0-b459-b150c9ae1b36"
+      }
+    },
+    {
+      "key": "11f48daf-699d-4800-a69e-027954333601",
+      "position": 4,
+      "properties": {
+        "progression_name": "Web Design with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "11f48daf-699d-4800-a69e-027954333601",
+        "lesson_activity.key": "e0fc53c6-1dc1-49d0-b459-b150c9ae1b36"
+      }
+    },
+    {
+      "key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Sitemaps and Wireframes"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a",
+        "lesson_activity.key": "e0fc53c6-1dc1-49d0-b459-b150c9ae1b36"
+      }
+    },
+    {
+      "key": "4817aac4-162c-4914-8cef-2c5e4ed45041",
+      "position": 6,
+      "properties": {
+        "progression_name": "Closing"
+      },
+      "seeding_key": {
+        "activity_section.key": "4817aac4-162c-4914-8cef-2c5e4ed45041",
+        "lesson_activity.key": "e0fc53c6-1dc1-49d0-b459-b150c9ae1b36"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U1-Intro_1_pilot-oct-2025"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U1-Intro_1_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U1-Intro_1_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U1-overview_2_pilot-oct-2025"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U1-overview_2_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U1-overview_2_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U1-Instructional-commitments_3_pilot-oct-2025"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U1-Instructional-commitments_3_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U1-Instructional-commitments_3_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-webapp_4_pilot-oct-2025"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-webapp_4_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-webapp_4_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-projectOverview_5_pilot-oct-2025"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-projectOverview_5_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-projectOverview_5_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2- U1-evolving-web_6_pilot-oct-2025"
+        ],
+        "progression": "User-Centered Design"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2- U1-evolving-web_6_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "8426ccf0-b940-41cc-9b47-edc0bef3da29"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2- U1-evolving-web_6_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-user-centered-design_7_pilot-oct-2025"
+        ],
+        "progression": "User-Centered Design"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-user-centered-design_7_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "8426ccf0-b940-41cc-9b47-edc0bef3da29"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-user-centered-design_7_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-html_9_pilot-oct-2025"
+        ],
+        "progression": "Building Web Apps with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-html_9_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-html_9_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-weblab-panels_10_pilot-oct-2025"
+        ],
+        "progression": "Building Web Apps with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-weblab-panels_10_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-weblab-panels_10_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1_HTML-11_pilot-oct-2025"
+        ],
+        "progression": "Building Web Apps with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1_HTML-11_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1_HTML-11_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-HTML-howto-12_pilot-oct-2025"
+        ],
+        "progression": "Building Web Apps with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-HTML-howto-12_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-HTML-howto-12_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-CSS-13_pilot-oct-2025"
+        ],
+        "progression": "Building Web Apps with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-CSS-13_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-CSS-13_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 13,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-CSS-practice-14_pilot-oct-2025"
+        ],
+        "progression": "Building Web Apps with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-CSS-practice-14_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-CSS-practice-14_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 14,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-CSS-howto-15_pilot-oct-2025"
+        ],
+        "progression": "Building Web Apps with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-CSS-howto-15_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-CSS-howto-15_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 15,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-weblabTips-16_pilot-oct-2025"
+        ],
+        "progression": "Building Web Apps with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-weblabTips-16_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-weblabTips-16_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 16,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-CFU-17_pilot-oct-2025"
+        ],
+        "progression": "Building Web Apps with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-CFU-17_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-CFU-17_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 17,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-CSS-HTML-18_pilot-oct-2025"
+        ],
+        "progression": "Building Web Apps with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-CSS-HTML-18_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-CSS-HTML-18_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-webdesign-19_pilot-oct-2025"
+        ],
+        "progression": "Web Design with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-webdesign-19_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "11f48daf-699d-4800-a69e-027954333601"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-webdesign-19_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-firstwebpage-20_pilot-oct-2025"
+        ],
+        "progression": "Web Design with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-firstwebpage-20_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "11f48daf-699d-4800-a69e-027954333601"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-firstwebpage-20_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 20,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-userExperience-21_pilot-oct-2025"
+        ],
+        "progression": "Web Design with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-userExperience-21_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "11f48daf-699d-4800-a69e-027954333601"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-userExperience-21_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 21,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-Pour-principles-24_pilot-oct-2025"
+        ],
+        "progression": "Web Design with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-Pour-principles-24_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "11f48daf-699d-4800-a69e-027954333601"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-Pour-principles-24_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 22,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-sitemaps-23_pilot-oct-2025"
+        ],
+        "progression": "Sitemaps and Wireframes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-sitemaps-23_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-sitemaps-23_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 23,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-wireframe-26_pilot-oct-2025"
+        ],
+        "progression": "Sitemaps and Wireframes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-wireframe-26_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-wireframe-26_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 24,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_sketchlab_panels_pilot-oct-2025"
+        ],
+        "progression": "Sitemaps and Wireframes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_sketchlab_panels_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_sketchlab_panels_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 25,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-webapp-27_pilot-oct-2025"
+        ],
+        "progression": "Sitemaps and Wireframes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-webapp-27_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-wireframe-webapp-27_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 26,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-practice-28_pilot-oct-2025"
+        ],
+        "progression": "Sitemaps and Wireframes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-practice-28_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-wireframe-practice-28_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 27,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-howto-29_pilot-oct-2025"
+        ],
+        "progression": "Sitemaps and Wireframes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-howto-29_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-wireframe-howto-29_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 28,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-finalproject-31_pilot-oct-2025"
+        ],
+        "progression": "Sitemaps and Wireframes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-finalproject-31_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-finalproject-31_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 29,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-lesson-info_pilot-oct-2025"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-lesson-info_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "4817aac4-162c-4914-8cef-2c5e4ed45041"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-lesson-info_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 30,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-reflection_pilot-oct-2025"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-reflection_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "4817aac4-162c-4914-8cef-2c5e4ed45041"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1-reflection_pilot-oct-2025"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 31,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1_Closing-Cert_pilot-oct-2025"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1_Closing-Cert_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "4817aac4-162c-4914-8cef-2c5e4ed45041"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-U1_Closing-Cert_pilot-oct-2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U1-Intro_1_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U1-Intro_1_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U1-overview_2_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U1-overview_2_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U1-Instructional-commitments_3_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U1-Instructional-commitments_3_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_U1-webapp_4_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-webapp_4_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_U1-projectOverview_5_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-projectOverview_5_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "16093e6a-501b-4d3f-aa2b-d5e263bf1a48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2- U1-evolving-web_6_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2- U1-evolving-web_6_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "8426ccf0-b940-41cc-9b47-edc0bef3da29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_U1-user-centered-design_7_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-user-centered-design_7_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "8426ccf0-b940-41cc-9b47-edc0bef3da29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_U1-html_9_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-html_9_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-weblab-panels_10_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-weblab-panels_10_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1_HTML-11_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1_HTML-11_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-HTML-howto-12_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-HTML-howto-12_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_U1-CSS-13_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-CSS-13_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-CSS-practice-14_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-CSS-practice-14_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-CSS-howto-15_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-CSS-howto-15_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-weblabTips-16_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-weblabTips-16_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-CFU-17_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-CFU-17_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-CSS-HTML-18_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-CSS-HTML-18_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "e7567d89-2761-4513-b6fb-dced820d1823"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_U1-webdesign-19_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-webdesign-19_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "11f48daf-699d-4800-a69e-027954333601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-firstwebpage-20_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-firstwebpage-20_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "11f48daf-699d-4800-a69e-027954333601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-userExperience-21_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-userExperience-21_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "11f48daf-699d-4800-a69e-027954333601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-Pour-principles-24_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-Pour-principles-24_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "11f48daf-699d-4800-a69e-027954333601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_U1-sitemaps-23_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-sitemaps-23_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_U1-wireframe-26_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-wireframe-26_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_sketchlab_panels_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_sketchlab_panels_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-wireframe-webapp-27_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-webapp-27_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-wireframe-practice-28_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-practice-28_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-wireframe-howto-29_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-howto-29_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_U1-finalproject-31_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-finalproject-31_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "ba505d43-8fb8-4063-b3b2-ed5fead15c6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-lesson-info_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-lesson-info_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "4817aac4-162c-4914-8cef-2c5e4ed45041"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1-reflection_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1-reflection_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "4817aac4-162c-4914-8cef-2c5e4ed45041"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-U1_Closing-Cert_pilot-oct-2025",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-U1_Closing-Cert_pilot-oct-2025"
+        ],
+        "lesson.key": "Introduction to WebApps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-generated-design-pilot-2025",
+        "activity_section.key": "4817aac4-162c-4914-8cef-2c5e4ed45041"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
