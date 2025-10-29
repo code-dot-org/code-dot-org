@@ -1,4 +1,4 @@
-import {memo} from 'react';
+import {forwardRef, memo} from 'react';
 
 import GenericButton, {
   CoreButtonProps,
@@ -16,9 +16,12 @@ export const buttonColors: {[key in ButtonColor]: ButtonColor} = {
 
 export interface ButtonProps extends CoreButtonProps, ButtonSpecificProps {}
 
-const Button: React.FunctionComponent<ButtonProps> = props => (
-  <GenericButton {...props} />
-);
+const Button = forwardRef<HTMLElement, ButtonProps>((props, ref) => (
+  <GenericButton
+    ref={ref as React.Ref<HTMLButtonElement & HTMLAnchorElement>}
+    {...props}
+  />
+));
 
 /**
  * ###  Status: ```Ready for dev```
