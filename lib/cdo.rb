@@ -105,10 +105,6 @@ module Cdo
       canonical_hostname('code.org')
     end
 
-    def hourofcode_hostname
-      canonical_hostname('hourofcode.com')
-    end
-
     def codeprojects_hostname
       return 'codeprojects.org' if rack_env?(:production)
       return "localhost.codeprojects.org" if rack_env?(:development) || ci_webserver?

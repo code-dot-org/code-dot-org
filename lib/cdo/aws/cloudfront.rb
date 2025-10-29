@@ -51,15 +51,6 @@ module AWS
           bucket: 'cdo-logs',
           prefix: "#{ENV.fetch('RACK_ENV', nil)}-dashboard-cdn"
         }
-      },
-      hourofcode: {
-        aliases: [CDO.hourofcode_hostname],
-        origin: "#{ENV.fetch('RACK_ENV', nil)}-origin.hourofcode.com",
-        ssl_cert: 'hourofcode.com',
-        log: {
-          bucket: 'cdo-logs',
-          prefix: "#{ENV.fetch('RACK_ENV', nil)}-hourofcode-cdn"
-        }
       }
     }
 
@@ -132,7 +123,7 @@ module AWS
     end
 
     # Returns a CloudFront DistributionConfig in CloudFormation syntax.
-    # `app` is a symbol containing the app name (:pegasus, :dashboard or :hourofcode)
+    # `app` is a symbol containing the app name (:pegasus or :dashboard)
     def self.distribution_config(app, origin, aliases, ssl_cert = nil)
       # Add root-domain aliases to production environment stack.
       aliases += CONFIG[app][:aliases] if rack_env?(:production)
