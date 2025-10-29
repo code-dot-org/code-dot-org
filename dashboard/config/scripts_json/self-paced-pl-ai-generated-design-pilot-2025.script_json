@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-24 17:35:41 UTC",
+    "serialized_at": "2025-10-28 14:29:55 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -140,6 +140,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U1-Intro_1_pilot-oct-2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -162,6 +165,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U1-overview_2_pilot-oct-2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -184,6 +190,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U1-Instructional-commitments_3_pilot-oct-2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -206,6 +215,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-webapp_4_pilot-oct-2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -228,6 +240,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-projectOverview_5_pilot-oct-2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -250,6 +265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2- U1-evolving-web_6_pilot-oct-2025"
+        ],
         "progression": "User-Centered Design"
       },
       "bonus": false,
@@ -272,6 +290,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-user-centered-design_7_pilot-oct-2025"
+        ],
         "progression": "User-Centered Design"
       },
       "bonus": false,
@@ -294,6 +315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-html_9_pilot-oct-2025"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -316,6 +340,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-weblab-panels_10_pilot-oct-2025"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -338,6 +365,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1_HTML-11_pilot-oct-2025"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -360,6 +390,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-HTML-howto-12_pilot-oct-2025"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -382,6 +415,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-CSS-13_pilot-oct-2025"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -404,6 +440,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-CSS-practice-14_pilot-oct-2025"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -426,6 +465,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-CSS-howto-15_pilot-oct-2025"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -448,6 +490,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-weblabTips-16_pilot-oct-2025"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -470,6 +515,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-CFU-17_pilot-oct-2025"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -492,6 +540,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-CSS-HTML-18_pilot-oct-2025"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -514,6 +565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-webdesign-19_pilot-oct-2025"
+        ],
         "progression": "Web Design with AI"
       },
       "bonus": false,
@@ -536,6 +590,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-firstwebpage-20_pilot-oct-2025"
+        ],
         "progression": "Web Design with AI"
       },
       "bonus": false,
@@ -558,6 +615,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-userExperience-21_pilot-oct-2025"
+        ],
         "progression": "Web Design with AI"
       },
       "bonus": false,
@@ -580,6 +640,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-Pour-principles-24_pilot-oct-2025"
+        ],
         "progression": "Web Design with AI"
       },
       "bonus": false,
@@ -602,6 +665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-sitemaps-23_pilot-oct-2025"
+        ],
         "progression": "Sitemaps and Wireframes"
       },
       "bonus": false,
@@ -624,6 +690,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-wireframe-26_pilot-oct-2025"
+        ],
         "progression": "Sitemaps and Wireframes"
       },
       "bonus": false,
@@ -646,6 +715,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_sketchlab_panels_pilot-oct-2025"
+        ],
         "progression": "Sitemaps and Wireframes"
       },
       "bonus": false,
@@ -668,6 +740,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-webapp-27_pilot-oct-2025"
+        ],
         "progression": "Sitemaps and Wireframes"
       },
       "bonus": false,
@@ -690,6 +765,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-practice-28_pilot-oct-2025"
+        ],
         "progression": "Sitemaps and Wireframes"
       },
       "bonus": false,
@@ -712,6 +790,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-howto-29_pilot-oct-2025"
+        ],
         "progression": "Sitemaps and Wireframes"
       },
       "bonus": false,
@@ -734,6 +815,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-finalproject-31_pilot-oct-2025"
+        ],
         "progression": "Sitemaps and Wireframes"
       },
       "bonus": false,
@@ -756,6 +840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-lesson-info_pilot-oct-2025"
+        ],
         "progression": "Closing"
       },
       "bonus": false,
@@ -778,6 +865,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-reflection_pilot-oct-2025"
+        ],
         "progression": "Closing"
       },
       "bonus": false,
@@ -800,6 +890,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1_Closing-Cert_pilot-oct-2025"
+        ],
         "progression": "Closing"
       },
       "bonus": false,

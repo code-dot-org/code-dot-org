@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-02 19:27:01 UTC",
+    "serialized_at": "2025-10-28 16:32:31 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -81,6 +81,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dani Test - Sketch Lab - Oct25"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -102,6 +105,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dani Test - Web Lab 2 - Oct25"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -123,6 +129,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dani Test - Web Lab 2 - Oct25 -2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -208,12 +217,78 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "Dani Test - Web Lab 2 - Oct25",
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+      "position": 1,
+      "learning_goal": "Do what Dani asks",
+      "ai_enabled": false,
+      "tips": "You should do what I asked",
+      "seeding_key": {
+        "learning_goal.key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "You did nothing",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "You did not much",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "You did it mostly",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You did it exactly",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    }
   ]
 }
