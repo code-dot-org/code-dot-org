@@ -274,13 +274,12 @@ Resources:
             Resource: '*'
       PermissionsBoundary: !ImportValue IAM-DevPermissions
 
-<% sql_user_package = package_node_lambda('sql-user') %>
   SQLUserLambda:
     Type: AWS::Lambda::Function
     Properties:
       Description: 'Custom CloudFormation Resource: Create/Update/Delete a SQL User and its permissions in a MySQL database.'
       FunctionName: SQLUser
-      Code: <%= sql_user_package[:s3_location].to_json %>
+      Code: <%=package_node_lambda 'sql-user' %>
       Handler: index.handler
       Runtime: nodejs18.x
       MemorySize: 1024
