@@ -102,8 +102,8 @@ namespace :test do
   #  - databases for web servers: dashboard_<env> and pegasus_<env>
   #  - databases for unit tests: dashboard_test and pegasus_test
   #
-  # On the test machine, where we run both unit and ui tests in the same environment, this leads to
-  # conflicting names for both pegasus and dashboard. We work around this as follows:
+  # On the chef-managed test system, where we run both unit and ui tests in the same environment,
+  # this leads to conflicting names for both pegasus and dashboard. We work around this as follows:
   # - USE_PEGASUS_UNITTEST_DB=1 tells any unit tests to use pegasus_unittest instead of pegasus_test
   # - PARALLEL_TEST_FIRST_IS_1=1 tells the parallel_tests gem (which uses multiple test databases
   #   dashboard_test, dashboard_test2, etc. to run dashboard unit tests) to instead use
@@ -194,7 +194,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  desc 'Runs full QA test pass (to be run on the test machine)'
+  desc 'Runs full QA test pass (to be run on the chef-managed test system)'
   timed_task_with_logging qa: [
     :shared_qa,
     :pegasus_qa,
@@ -209,8 +209,8 @@ namespace :test do
 
   desc 'Runs dashboard tests.'
   timed_task_with_logging :dashboard do
-    # This task can be run locally or in CI (the test machine uses dashboard_qa). By default, we
-    # only want to run in parallel in CI to avoid overloading local machines.
+    # This task can be run locally or in CI (the chef-managed test system uses dashboard_qa).
+    # By default, we only want to run in parallel in CI to avoid overloading local machines.
     parallel = CI::Utils.ci_job_unit_tests?
     TestRunUtils.run_dashboard_tests(parallel: parallel)
   end
