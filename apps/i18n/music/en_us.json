@@ -123,5 +123,4 @@
   "tuneKeyNotes": "Key Notes",
   "tuneAllNotes": "All Notes",
   "keyPad": "Key Pad: Press enter to edit, escape to exit",
-  "startOverMusicWorkspace": "This will reset the workspace to its start state and remove all the blocks you've added or changed. You will NOT be able to go back to the current version of this project if you start over."
-}
+  "startOverMusicWorkspace": "This will clear all your work. This action cannot be reversed."}
