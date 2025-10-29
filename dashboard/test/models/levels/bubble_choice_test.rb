@@ -249,7 +249,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         status: 'not_tried',
         is_validated: false,
         can_have_feedback: false,
-        uses_lab2: false
+        uses_lab2: false,
+        navigation_type: nil
       },
       {
         level_id: @sublevel2.id.to_s,
@@ -269,7 +270,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         short_instructions: @sublevel2.short_instructions,
         is_validated: false,
         can_have_feedback: false,
-        uses_lab2: false
+        uses_lab2: false,
+        navigation_type: nil
       }
     ]
 
@@ -317,7 +319,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         exampleSolutions: [],
         is_validated: false,
         can_have_feedback: false,
-        uses_lab2: false
+        uses_lab2: false,
+        navigation_type: nil
       },
       {
         level_id: @sublevel2.id.to_s,
@@ -340,7 +343,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         exampleSolutions: [],
         is_validated: false,
         can_have_feedback: false,
-        uses_lab2: false
+        uses_lab2: false,
+        navigation_type: nil
       }
     ]
     assert_equal expected_summary, sublevel_summary
