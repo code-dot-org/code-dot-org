@@ -1,10 +1,5 @@
 import Tags from '@code-dot-org/component-library/tags';
-import {
-  BodyThreeText,
-  Heading2,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
-import {Card, CardContent, Box, CardHeader} from '@mui/material';
+import {Card, CardContent, Box, CardHeader, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
@@ -38,12 +33,12 @@ export const FreeResponseCard: FC<FreeResponseCardProps> = ({
         className={commonStyles.cardHeader}
         title={
           <Box className={styles.cardHeaderRow}>
-            <Heading2
-              visualAppearance={size === 's' ? 'body-two' : 'body-one'}
-              noMargin
+            <Typography
+              component="h2"
+              variant={size === 's' ? 'body2' : 'body1'}
             >
-              <StrongText>{title}</StrongText>
-            </Heading2>
+              <Typography variant="strong">{title}</Typography>
+            </Typography>
             {tagText && (
               <Tags
                 size="s"
@@ -73,7 +68,7 @@ export const FreeResponseCard: FC<FreeResponseCardProps> = ({
                   statusColor && styles[statusColor]
                 )}
               >
-                <BodyThreeText noMargin>{item}</BodyThreeText>
+                <Typography variant="body3">{item}</Typography>
               </Box>
             ))}
           </Box>
