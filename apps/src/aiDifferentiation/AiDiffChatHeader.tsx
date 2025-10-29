@@ -71,6 +71,42 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
               icon: {iconName: 'laptop-code'},
               onClick: () => onSuggestPrompts('apcsp'),
             },
+            {
+              value: 'innovator',
+              label: 'Innovator',
+              icon: {iconName: 'lightbulb-on'},
+              onClick: () => onSuggestPrompts('innovator'),
+            },
+            {
+              value: 'codeWhisperer',
+              label: 'Code Whisperer',
+              icon: {iconName: 'code'},
+              onClick: () => onSuggestPrompts('codeWhisperer'),
+            },
+            {
+              value: 'bridgeBuilder',
+              label: 'Bridge Builder',
+              icon: {iconName: 'bridge'},
+              onClick: () => onSuggestPrompts('bridgeBuilder'),
+            },
+            {
+              value: 'storyteller',
+              label: 'Storyteller',
+              icon: {iconName: 'book-open'},
+              onClick: () => onSuggestPrompts('storyteller'),
+            },
+            {
+              value: 'communityArchitect',
+              label: 'Community Architect',
+              icon: {iconName: 'users'},
+              onClick: () => onSuggestPrompts('communityArchitect'),
+            },
+            {
+              value: 'leadLearner',
+              label: 'Lead Learner',
+              icon: {iconName: 'graduation-cap'},
+              onClick: () => onSuggestPrompts('leadLearner'),
+            },
           ]}
         />
         <PDFDownloadLink
