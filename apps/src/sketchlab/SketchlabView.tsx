@@ -113,6 +113,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   const {currentSources, updateSources, setReinitializationHandler} =
     useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const filesBeingUploadedRef = useRef<string[]>([]);
 
   const {theme} = useTheme();
 
@@ -166,7 +167,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       state: AppState,
       files: BinaryFiles
     ) => {
-      console.log(files);
       // In start mode, we manage saving explicitly via the button in the header.
       if (getIsStartMode()) {
         return;
@@ -208,25 +208,31 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             const extension = MIME_TO_EXT[newFile.mimeType];
             // note: rename to Url
             const externalURL = `/v3/assets/${channelId}/${fileId}.${extension}`;
-            const response = await uploadBase64ToUrl(
-              newFile.dataURL,
-              externalURL,
-              newFile.mimeType
-            );
 
-            console.log(await response.json());
+            if (!filesBeingUploadedRef.current.includes(fileId)) {
+              filesBeingUploadedRef.current = [fileId];
+              const response = await uploadBase64ToUrl(
+                newFile.dataURL,
+                externalURL,
+                newFile.mimeType
+              );
 
-            if (!serializedData.externalFiles) {
-              serializedData.externalFiles = {};
+              console.log(await response.json());
+
+              if (!serializedData.externalFiles) {
+                serializedData.externalFiles = {};
+              }
+              serializedData.externalFiles[fileId] = {
+                id: fileId,
+                name: 'external',
+                language: extension,
+                contents: '',
+                folderId: '1',
+                url: externalURL,
+              };
+
+              filesBeingUploadedRef.current = [];
             }
-            serializedData.externalFiles[fileId] = {
-              id: fileId,
-              name: 'external',
-              language: extension,
-              contents: '',
-              folderId: '1',
-              url: externalURL,
-            };
           }
         }
 
@@ -244,6 +250,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
     [updateSources]
+    // [updateSources, channelId, currentSources.source.externalFiles]
   );
 
   useEffect(() => {
