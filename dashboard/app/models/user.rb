@@ -353,13 +353,11 @@ class User < ApplicationRecord
   # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
     if user.primary_contact_info && !user.primary_contact_info.valid?
-      user.primary_contact_info.errors.each {|k, v| user.errors.add k, v}
+      user.errors.merge!(user.primary_contact_info.errors)
     end
 
     user.authentication_options.each do |ao|
-      unless ao.valid?
-        ao.errors.each {|k, v| user.errors.add k, v}
-      end
+      user.errors.merge!(ao.errors) unless ao.valid?
     end
   end
 
@@ -651,7 +649,7 @@ class User < ApplicationRecord
     # For this step, we only care about email, password, and password confirmation.
     # Remove any other validation errors for now.
     required_fields = [:email, :password, :password_confirmation]
-    errors.each do |attribute, _|
+    errors.attribute_names.each do |attribute|
       errors.delete(attribute) unless required_fields.include?(attribute)
     end
 
