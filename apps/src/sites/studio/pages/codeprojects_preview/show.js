@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import InnerHTMLPreview from '@cdo/apps/codebridge/FilePreview/InnerHTMLPreview';
+import InnerHTMLPreview from '@cdo/apps/codebridge/FilePreview/InnerHTMLPreview2';
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
