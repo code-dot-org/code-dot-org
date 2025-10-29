@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
@@ -66,6 +66,8 @@ const UserChatMessageEditor: React.FunctionComponent<
   const userAddedSelectionContext = useAppSelector(
     state => state.aichat.userAddedSelectionContext
   );
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
   const dispatch = useAppDispatch();
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -112,6 +114,10 @@ const UserChatMessageEditor: React.FunctionComponent<
       responseCallback,
     ]
   );
+
+  useEffect(() => {
+    setUserMessage('');
+  }, [currentLevelId]);
 
   useEffect(() => {
     if (!disabled) {

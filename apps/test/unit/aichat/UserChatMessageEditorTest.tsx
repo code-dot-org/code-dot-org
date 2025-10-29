@@ -11,6 +11,7 @@ import {
   PendingChatMessage,
 } from '@cdo/apps/aichat/types';
 import UserChatMessageEditor from '@cdo/apps/aichat/views/UserChatMessageEditor';
+import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {
   AiChatClientTypes,
@@ -19,12 +20,18 @@ import {
 
 const mockDispatch = jest.fn();
 const mockSubmitChatContents = jest.fn();
-let mockState: {aichat: Partial<AichatState>} = {
+let mockState: {
+  aichat: Partial<AichatState>;
+  progress: Partial<ProgressState>;
+} = {
   aichat: {
     chatMessagePending: undefined,
     saveInProgress: false,
     stagedFiles: [],
     userAddedSelectionContext: {},
+  },
+  progress: {
+    currentLevelId: 'level1',
   },
 };
 
@@ -59,6 +66,9 @@ describe('UserChatMessageEditor', () => {
         saveInProgress: false,
         stagedFiles: [],
         userAddedSelectionContext: {},
+      },
+      progress: {
+        currentLevelId: 'level1',
       },
     };
   });
@@ -167,5 +177,24 @@ describe('UserChatMessageEditor', () => {
       text: 'Use my image',
       assets: [file],
     });
+  });
+
+  it('clears the un-submitted user message when the level changes', async () => {
+    const user = userEvent.setup();
+
+    const {rerender} = render(<UserChatMessageEditor {...baseProps} />);
+
+    const textarea = screen.getByPlaceholderText(
+      commonI18n.aiUserMessagePlaceholder()
+    );
+    await user.type(textarea, 'Here is a message that should clear');
+
+    expect(textarea).toHaveValue('Here is a message that should clear');
+
+    mockState.progress.currentLevelId = 'level2';
+
+    rerender(<UserChatMessageEditor {...baseProps} />);
+
+    expect(textarea).toHaveValue('');
   });
 });
