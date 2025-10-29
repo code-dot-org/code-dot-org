@@ -105,7 +105,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   const {currentSources, updateSources, setReinitializationHandler} =
     useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const filesBeingUploadedRef = useRef<string[]>([]);
+  const filesBeingUploadedRef = useRef<Set<string>>(new Set());
 
   const {theme} = useTheme();
 
@@ -169,10 +169,36 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         saveSourcesTimeoutRef.current = null;
       }
 
+      // Each time there is an update (particularly file add, but happens on each cursor move):
+      // Get the current state from Excalidraw.
+      // Compare the set of files in Excalidraw to the set in sources.
+      // Find ones in Excalidraw, but not sources.
+      // For each of these:
+      //   Upload to S3
+      //   While the upload is in process, don't allow other updates to kick off
+      // Make sure that the state update is made once the upload(s) are done.
+
       saveSourcesTimeoutRef.current = setTimeout(async () => {
         const serializedData: SerializedExcalidrawState = JSON.parse(
           serializeAsJSON(elements, state, files, 'local')
         );
+
+        const excalidrawApi = excalidrawApiRef.current;
+        if (excalidrawApi) {
+          // serializeAsJSON exports an extremely limited set of properties from appState,
+          // and excludes the chosen scroll position (scrollX/Y) and zoom, so we use the API to serialize those manually.
+          const appState = excalidrawApi.getAppState();
+          serializedData.appState.scrollX = appState.scrollX;
+          serializedData.appState.scrollY = appState.scrollY;
+          serializedData.appState.zoom = appState.zoom;
+        }
+
+        updateSources({
+          source: {
+            ...serializedData,
+            externalFiles: {...currentSources.source.externalFiles},
+          },
+        });
 
         // On upload:
         // Check if files are different (maybe length is sufficient?)
@@ -186,7 +212,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         );
         const excalidrawFileIds = Object.keys(serializedData.files || {});
         const difference = excalidrawFileIds.filter(
-          id => !savedFileIds.includes(id)
+          id =>
+            !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
         );
 
         console.log('savedFileIds:', savedFileIds);
@@ -196,57 +223,46 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         // // Probably need actual comparison of keys
         // Don't rerun on update hook until the upload has finished?
         // Or, maybe just set a boolean that upload is happening.
-        if (difference.length) {
-          if (serializedData.files) {
-            const fileId = difference[0];
-            const newFile = serializedData.files[fileId];
+        if (difference.length && serializedData.files) {
+          difference.forEach(async fileId => {
+            filesBeingUploadedRef.current.add(fileId);
 
+            console.log(fileId);
+            const newFile = serializedData.files[fileId];
             const extension = MIME_TO_EXT[newFile.mimeType];
             // note: rename to Url
             const externalURL = `/v3/assets/${channelId}/${fileId}.${extension}`;
+            await uploadBase64ToUrl(
+              newFile.dataURL,
+              externalURL,
+              newFile.mimeType
+            );
 
-            if (!filesBeingUploadedRef.current.includes(fileId)) {
-              filesBeingUploadedRef.current = [fileId];
-              const response = await uploadBase64ToUrl(
-                newFile.dataURL,
-                externalURL,
-                newFile.mimeType
-              );
+            const newExternalFile = {
+              id: fileId,
+              name: 'external',
+              language: extension,
+              contents: '',
+              folderId: '1',
+              url: externalURL,
+            };
 
-              console.log(await response.json());
-
-              if (!serializedData.externalFiles) {
-                serializedData.externalFiles = {};
-              }
-              serializedData.externalFiles[fileId] = {
-                id: fileId,
-                name: 'external',
-                language: extension,
-                contents: '',
-                folderId: '1',
-                url: externalURL,
-              };
-
-              filesBeingUploadedRef.current = [];
-            }
-          }
+            updateSources({
+              source: {
+                ...currentSources.source,
+                externalFiles: {
+                  ...currentSources.source.externalFiles,
+                  [fileId]: newExternalFile,
+                },
+              },
+            });
+            filesBeingUploadedRef.current.delete(fileId);
+          });
         }
-
-        const excalidrawApi = excalidrawApiRef.current;
-        if (excalidrawApi) {
-          // serializeAsJSON exports an extremely limited set of properties from appState,
-          // and excludes the chosen scroll position (scrollX/Y) and zoom, so we use the API to serialize those manually.
-          const appState = excalidrawApi.getAppState();
-          serializedData.appState.scrollX = appState.scrollX;
-          serializedData.appState.scrollY = appState.scrollY;
-          serializedData.appState.zoom = appState.zoom;
-        }
-
-        updateSources({source: serializedData});
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources]
-    // [updateSources, channelId, currentSources.source.externalFiles]
+    // [updateSources]
+    [updateSources, channelId, currentSources.source]
   );
 
   useEffect(() => {
