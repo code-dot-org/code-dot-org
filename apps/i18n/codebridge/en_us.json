@@ -39,6 +39,7 @@
   "expectedFailure": "Expected failure",
   "fail": "Fail",
   "filesHeader": "Files",
+  "myFilesHeader": "My Files",
   "fileOptions": "File Options",
   "filesInBackpackMessage": "Files saved to your Backpack will appear here.",
   "filesInBackpackTitle": "Files saved in Backpack",

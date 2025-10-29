@@ -94,7 +94,7 @@ export const FileBrowser = React.memo(() => {
   return (
     <PanelContainer
       id="file-browser"
-      headerContent={codebridgeI18n.filesHeader()}
+      headerContent={codebridgeI18n.myFilesHeader()}
       headerClassName={moduleStyles.fileBrowserHeader}
       className={moduleStyles['file-browser']}
       rightHeaderContent={!isReadOnly && <FileBrowserHeaderPopUpButton />}
