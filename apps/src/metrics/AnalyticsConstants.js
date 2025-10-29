@@ -329,6 +329,8 @@ const EVENTS = {
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
   AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
   AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',
+  AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT:
+    'AI Tutor Code Snippet Added to Context',
 
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
