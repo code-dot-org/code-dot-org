@@ -47,7 +47,17 @@ export type ChatThread = {
 
 export type ChatItem = ChatTextMessage | ChatPrompt[];
 
-export type SuggestPromptsType = 'plan' | 'create' | 'support' | 'apcsp';
+export type SuggestPromptsType =
+  | 'plan'
+  | 'create'
+  | 'support'
+  | 'apcsp'
+  | 'innovator'
+  | 'codeWhisperer'
+  | 'bridgeBuilder'
+  | 'storyteller'
+  | 'communityArchitect'
+  | 'leadLearner';
 
 export type Context = {
   type: (typeof AiDiffContext)[keyof typeof AiDiffContext];
