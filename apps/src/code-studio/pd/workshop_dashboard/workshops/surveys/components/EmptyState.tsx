@@ -1,10 +1,5 @@
 import Image, {ImageProps} from '@code-dot-org/component-library/image';
-import {
-  BodyThreeText,
-  BodyTwoText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
-import {Box} from '@mui/material';
+import {Box, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
@@ -32,10 +27,10 @@ export const EmptyState: FC<EmptyStateProps> = ({
       {/* empty state images generally do not convey additional meaning. 
       using alt="" by default so screen readers will ignore the image */}
       <Image className={styles.emptyStateImage} alt="" {...imageProps} />
-      <BodyTwoText noMargin>
-        <StrongText>{title}</StrongText>
-      </BodyTwoText>
-      <BodyThreeText noMargin>{description}</BodyThreeText>
+      <Typography variant="body2">
+        <Typography variant="strong">{title}</Typography>
+      </Typography>
+      <Typography variant="body3">{description}</Typography>
     </Box>
   );
 };
