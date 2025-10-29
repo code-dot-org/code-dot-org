@@ -24,6 +24,7 @@ interface UserChatMessageEditorProps {
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
   responseCallback?: (response: string) => string;
+  currentLevelId?: string | null;
 
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
@@ -45,6 +46,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   hiddenContextCallback,
   multimodalAvailable,
   responseCallback,
+  currentLevelId,
   levelName,
   hasStarterAssets,
   buildAssetUrl,
@@ -66,7 +68,6 @@ const UserChatMessageEditor: React.FunctionComponent<
   const userAddedSelectionContext = useAppSelector(
     state => state.aichat.userAddedSelectionContext
   );
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   const dispatch = useAppDispatch();
 

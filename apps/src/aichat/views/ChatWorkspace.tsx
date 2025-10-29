@@ -306,6 +306,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             hasStarterAssets={hasStarterAssets}
             buildAssetUrl={buildAssetUrl}
             uploadDisabled={uploadDisabled}
+            currentLevelId={currentLevelId}
           />
         )}
       </div>

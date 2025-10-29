@@ -11,7 +11,6 @@ import {
   PendingChatMessage,
 } from '@cdo/apps/aichat/types';
 import UserChatMessageEditor from '@cdo/apps/aichat/views/UserChatMessageEditor';
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {
   AiChatClientTypes,
@@ -22,16 +21,12 @@ const mockDispatch = jest.fn();
 const mockSubmitChatContents = jest.fn();
 let mockState: {
   aichat: Partial<AichatState>;
-  progress: Partial<ProgressState>;
 } = {
   aichat: {
     chatMessagePending: undefined,
     saveInProgress: false,
     stagedFiles: [],
     userAddedSelectionContext: {},
-  },
-  progress: {
-    currentLevelId: 'level1',
   },
 };
 
@@ -55,6 +50,7 @@ describe('UserChatMessageEditor', () => {
       retrievalContexts: [],
     },
     clientType: AiChatClientTypes.AI_TUTOR,
+    currentLevelId: 'level1',
   };
 
   beforeEach(() => {
@@ -66,9 +62,6 @@ describe('UserChatMessageEditor', () => {
         saveInProgress: false,
         stagedFiles: [],
         userAddedSelectionContext: {},
-      },
-      progress: {
-        currentLevelId: 'level1',
       },
     };
   });
@@ -195,9 +188,7 @@ describe('UserChatMessageEditor', () => {
 
     expect(textarea).toHaveValue('Here is a message that should clear');
 
-    mockState.progress.currentLevelId = 'level2';
-
-    rerender(<UserChatMessageEditor {...baseProps} />);
+    rerender(<UserChatMessageEditor {...baseProps} currentLevelId="level2" />);
 
     expect(textarea).toHaveValue('');
   });
