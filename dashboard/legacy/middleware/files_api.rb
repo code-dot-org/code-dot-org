@@ -237,7 +237,13 @@ class FilesApi < Sinatra::Base
     type = File.extname(filename)
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
-    content_type type
+    type_params = {}
+    # Sinatra does not have a content type for markdown files, so we
+    # add it here.
+    if type == '.md'
+      type_params = {default: 'text/markdown'}
+    end
+    content_type(type, type_params)
 
     # Unless this is hosted by codeprojects.org or is a safely viewable file type,
     # serve all files with Content-Disposition set to attachment so browsers
