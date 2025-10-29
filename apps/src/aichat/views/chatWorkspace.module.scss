@@ -22,6 +22,10 @@ $tabs-default-spacing: 4px;
   overflow-y: auto;
 }
 
+.chatEventViewWrapper {
+  scroll-margin-top: .6rem;
+}
+
 .scrollToBottomContainer {
   position: relative;
   width: 100%;
