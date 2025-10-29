@@ -45,8 +45,8 @@ const adlibOptions = {
     {id: 'squirrel', text: 'squirrel'},
     {id: 'tiger', text: 'tiger'},
     {id: 'turtle', text: 'turtle'},
-    {id: 'wolf', text: 'wolf'},
     {id: 'volcano', text: 'volcano'},
+    {id: 'wolf', text: 'wolf'},
     {id: 'zombie', text: 'zombie'},
   ],
   attire: [
@@ -69,13 +69,13 @@ const adlibOptions = {
   style: [
     {id: 'classic', text: 'classic'},
     {id: 'fantasy', text: 'fantasy'},
-    {id: 'streetwear', text: 'streetwear'},
     {id: 'kpop', text: 'K-pop'},
     {id: 'preppy', text: 'preppy'},
     {id: 'retro', text: 'retro'},
     {id: 'rock', text: 'rock'},
     {id: 'scifi', text: 'sci-fi'},
     {id: 'sporty', text: 'sporty'},
+    {id: 'streetwear', text: 'streetwear'},
   ],
 };
 
