@@ -321,32 +321,17 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   className={moduleStyles.buttonWide}
                 />
 
-                <Button
-                  ariaLabel={'Keep this'}
-                  text={'Keep this'}
-                  type="primary"
-                  color="black"
-                  size="s"
-                  onClick={() => dispatch(continueOrFinishLesson())}
-                  className={moduleStyles.buttonWide}
-                />
+                {showNavigation && (
+                  <NavigationArea
+                    levelProperties={levelProperties}
+                    // The following props don't really matter as we don't have a Submit button or validation here.
+                    hasRun={true}
+                    hasEdited={true}
+                    isRunning={false}
+                    className={moduleStyles.buttonWide}
+                  />
+                )}
               </div>
-            </>
-          )}
-
-          {aiGenerateState === 'done' && (
-            <>
-              <div>Great! Let's continue.</div>
-
-              {showNavigation && (
-                <NavigationArea
-                  levelProperties={levelProperties}
-                  // The following props don't really matter as we don't have a Submit button or validation here.
-                  hasRun={true}
-                  hasEdited={true}
-                  isRunning={false}
-                />
-              )}
             </>
           )}
         </Guide>

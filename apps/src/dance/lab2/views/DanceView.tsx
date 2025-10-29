@@ -55,7 +55,6 @@ import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {
   getAppOptionsEditBlocks,
   getIsShareView,
@@ -63,7 +62,6 @@ import {
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
-import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
@@ -509,9 +507,6 @@ const DanceView: React.FunctionComponent<{
   }, [progressManager, levelProperties.appName, guideMode]);
 
   const settings = useBlocklySettings();
-
-  const multiProject = useMultiProject();
-  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
 
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
