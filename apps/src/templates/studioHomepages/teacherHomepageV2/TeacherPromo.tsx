@@ -96,9 +96,7 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
           variant="body3"
           gutterBottom
         >
-          <Typography variant="strong" gutterBottom>
-            {i18n.partnershipWith()}
-          </Typography>
+          <Typography variant="strong">{i18n.partnershipWith()}</Typography>
           <img
             src={partnerLogo}
             alt="Partner Logo"
