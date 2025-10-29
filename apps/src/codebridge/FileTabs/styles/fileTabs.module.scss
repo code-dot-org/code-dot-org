@@ -22,14 +22,14 @@
 
 .fileTab {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 0.375rem;
+  height: 24px;
   padding-block: 0;
   padding-inline: 0.5rem 0.25rem;
   cursor: pointer;
   white-space: nowrap;
-  justify-content: space-between;
-  height: 24px;
   background-color: var(--background-neutral-secondary);
   border-radius: variables.$default-border-radius;
   transition: all 0.2s ease-in-out;
