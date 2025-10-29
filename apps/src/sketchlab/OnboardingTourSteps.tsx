@@ -1,5 +1,5 @@
 import {Steps} from 'intro.js-react';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
@@ -22,10 +22,41 @@ const OnboardingTourSteps: React.FC = () => {
     SKETCHLAB_ONBOARDING_TOUR_SEEN,
     'no'
   );
+  const [isToolbarReady, setIsToolbarReady] = useState(false);
+
+  useEffect(() => {
+    // Wait for Excalidraw toolbar to be fully rendered.
+    const checkToolbarReady = () => {
+      // Check if required elements for the tour's initial step exists.
+      const toolbarElements = document.querySelectorAll('label.ToolIcon');
+      if (toolbarElements.length > 0) {
+        setIsToolbarReady(true);
+        return true;
+      }
+      return false;
+    };
+
+    // Try immediately first.
+    if (checkToolbarReady()) {
+      return;
+    }
+
+    // If not ready, poll every 100ms for up to 5 seconds
+    const maxAttempts = 50;
+    let attempts = 0;
+    const interval = setInterval(() => {
+      attempts++;
+      if (checkToolbarReady() || attempts >= maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Steps
-      enabled={sketchlabOnboardingTourSeen !== 'yes'}
+      enabled={isToolbarReady && sketchlabOnboardingTourSeen !== 'yes'}
       initialStep={INITIAL_STEP}
       steps={STEPS}
       onExit={() => {

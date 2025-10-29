@@ -29,6 +29,8 @@ import SourcesContainer, {
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import OnboardingTourSteps from './OnboardingTourSteps';
+
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
@@ -170,6 +172,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   return (
     <div className={moduleStyles.sketchlabContainer}>
+      <OnboardingTourSteps />
       <div style={{width: leftPanelWidth}} className={panelClassName}>
         <ResourcePanel
           levelProperties={levelProperties}
