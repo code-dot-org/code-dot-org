@@ -16,15 +16,6 @@ export const sendAnalytics =
     const clientType = aichatState.clientType;
     const userHasAichatAccess = aichatState.userHasAichatAccess;
 
-    const analyticsProperties = {
-      aiTutorMode: labState.levelProperties?.aiTutorMode,
-      appType: labState.levelProperties?.appName,
-      levelId: labState.levelProperties?.id,
-      scriptId: labState.scriptId,
-      channel: labState.channel?.id,
-      levelPath: window.location.pathname,
-    };
-
     // Only check `userHasAichatAccess` for AI Chat.
     if (
       clientType !== AiChatClientTypes.AI_CHAT_LAB ||
@@ -33,8 +24,13 @@ export const sendAnalytics =
     ) {
       const allProperties = {
         ...properties,
-        ...analyticsProperties,
         clientType,
+        aiTutorMode: labState.levelProperties?.aiTutorMode,
+        appType: labState.levelProperties?.appName,
+        levelId: labState.levelProperties?.id,
+        scriptId: labState.scriptId,
+        channel: labState.channel?.id,
+        levelPath: window.location.pathname,
       };
 
       analyticsReporter.sendEvent(
