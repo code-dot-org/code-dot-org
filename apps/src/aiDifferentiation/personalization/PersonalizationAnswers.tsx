@@ -33,7 +33,7 @@ export const NumberOfYearsTeachingAnswer: React.FC<
   return (
     <div className={style.numberOfYearsArea}>
       <BodyOneText className={style.bodyText}>
-        I've been teaching for
+        {i18n.yearsTeaching()}
       </BodyOneText>
       <input
         type="number"
@@ -42,7 +42,7 @@ export const NumberOfYearsTeachingAnswer: React.FC<
         value={yearsTeaching > 0 ? yearsTeaching : ''}
         onChange={handleChange}
       />
-      <BodyOneText className={style.bodyText}>years!</BodyOneText>
+      <BodyOneText className={style.bodyText}>{i18n.years()}</BodyOneText>
     </div>
   );
 };
@@ -90,7 +90,7 @@ export const ChallengeAnswer: React.FC<ChallengeAnswerProps> = ({
 
   return (
     <div>
-      <StrongText>Describe your challenge</StrongText>
+      <StrongText>{i18n.describeYourChallenge()}</StrongText>
       <textarea
         name="classroom-challenge"
         value={challenge}
@@ -135,8 +135,8 @@ export const ConfidenceAnswer: React.FC<ConfidenceAnswerProps> = ({
         />
       </div>
       <div className={style.confidenceContinuum}>
-        <BodyThreeText>Not confident at all</BodyThreeText>
-        <BodyThreeText>Extremely confident</BodyThreeText>
+        <BodyThreeText>{i18n.confidenceLow()}</BodyThreeText>
+        <BodyThreeText>{i18n.confidenceHigh()}</BodyThreeText>
       </div>
     </div>
   );
