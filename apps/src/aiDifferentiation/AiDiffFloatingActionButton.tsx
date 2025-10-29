@@ -227,16 +227,17 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           </div>
         )}
       </button>
-      <AiDiffContainer
-        open={isOpen}
-        context={context}
-        closeTutor={handleClick}
-        scriptName={scriptName}
-        curriculumCourses={curriculumCourses}
-        unreadNotificationCount={
-          unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
-        }
-      />
+      {isOpen && (
+        <AiDiffContainer
+          context={context}
+          closeTutor={handleClick}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+          unreadNotificationCount={
+            unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
+          }
+        />
+      )}
     </div>
   );
 };
