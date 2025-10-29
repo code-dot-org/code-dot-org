@@ -26,6 +26,59 @@ const BODY_VARIANT_COUNT = 5;
 
 const GENERATE_DELAY_DURATION = 7000;
 
+const adlibOptions = {
+  creature: [
+    {id: 'axolotl', text: 'an axolotl'},
+    {id: 'cat', text: 'a cat'},
+    {id: 'dog', text: 'a dog'},
+    {id: 'flame', text: 'a flame'},
+    {id: 'fox', text: 'a fox'},
+    {id: 'frilled_lizard', text: 'a frilled lizard'},
+    {id: 'frog', text: 'a frog'},
+    {id: 'giraffe', text: 'a giraffe'},
+    {id: 'jellyfish', text: 'a jellyfish'},
+    {id: 'koala', text: 'a koala'},
+    {id: 'moose', text: 'a moose'},
+    {id: 'mushroom', text: 'a mushroom'},
+    {id: 'planet', text: 'a planet'},
+    {id: 'rabbit', text: 'a bunny rabbit'},
+    {id: 'squirrel', text: 'a squirrel'},
+    {id: 'tiger', text: 'a tiger'},
+    {id: 'turtle', text: 'a turtle'},
+    {id: 'wolf', text: 'a wolf'},
+    {id: 'volcano', text: 'a volcano'},
+    {id: 'zombie', text: 'a zombie'},
+  ],
+  attire: [
+    {id: 'beanie', text: 'a beanie'},
+    {id: 'colorful_hair', text: 'colorful hair'},
+    {id: 'crown', text: 'a crown'},
+    {id: 'headphones', text: 'headphones'},
+    {id: 'headscarf', text: 'a headscarf'},
+    {id: 'sunglasses', text: 'sunglasses'},
+    {id: 'no_accessories', text: 'no accessories'},
+  ],
+  mood: [
+    {id: 'confused', text: 'a confused'},
+    {id: 'fierce', text: 'a fierce'},
+    {id: 'happy', text: 'a happy'},
+    {id: 'silly', text: 'a silly'},
+    {id: 'sleepy', text: 'a sleepy'},
+    {id: 'surprised', text: 'a surprised'},
+  ],
+  style: [
+    {id: 'basic', text: 'a basic'},
+    {id: 'fantasy', text: 'a fantasy'},
+    {id: 'hip_hop', text: 'a hip hop'},
+    {id: 'k_pop', text: 'K-pop'},
+    {id: 'preppy', text: 'a preppy'},
+    {id: 'retro', text: 'a retro'},
+    {id: 'rock', text: 'a rock'},
+    {id: 'sci-fi', text: 'a sci-fi'},
+    {id: 'sporty', text: 'a sporty'},
+  ],
+};
+
 const adlibs: AdlibsType = {
   'animal-02': {
     template: 'Create {animal}.',
@@ -122,6 +175,32 @@ const adlibs: AdlibsType = {
         {id: 'confused', text: 'a confused'},
         {id: 'fierce', text: 'a fierce'},
       ],
+    },
+    variantCount: 5,
+  },
+  'creature-04': {
+    template: 'Design {creature}.',
+    options: {creature: adlibOptions.creature},
+    variantCount: 5,
+  },
+  'creature-attire-04': {
+    template: 'Design {creature} wearing {attire}.',
+    options: {
+      creature: adlibOptions.creature,
+      attire: adlibOptions.attire,
+    },
+    variantCount: 5,
+  },
+  'creature-attire-mood-style-04': {
+    template:
+      'Design {creature} wearing {attire}, in {mood} mood, with {style} style.',
+    options: {
+      creature: adlibOptions.creature,
+      attire: adlibOptions.attire,
+      mood: adlibOptions.mood,
+    },
+    optionsExtra: {
+      style: adlibOptions.style,
     },
     variantCount: 5,
   },
