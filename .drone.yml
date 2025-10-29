@@ -283,6 +283,8 @@ steps:
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
+      - /entrypoint.sh docker/ci/scripts/install_ci_tests.sh
+      - /entrypoint.sh docker/ci/scripts/build_ci_tests.sh
 
   - name: cache-staging-ci-build
     image: plugins/s3-cache
@@ -312,6 +314,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 017c2f750c43c36090a68e67662a4f86d4aee137f83b7be90da61181e79d8c35
+hmac: 925c21602c339f772dc42252cdd352841ca442fdb9f4ca96a8a4b93b9add0c2b
 
 ...
