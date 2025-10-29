@@ -50,6 +50,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   buildAssetUrl,
   uploadDisabled,
 }) => {
+  const [userMessage, setUserMessage] = useState<string>('');
   const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
@@ -76,12 +77,12 @@ const UserChatMessageEditor: React.FunctionComponent<
     chatDisabled;
 
   const handleSubmit = useCallback(
-    async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
+    async (message: string, analyticsProperties?: AnalyticsProperties) => {
       if (!disabled) {
         const hiddenContext = await hiddenContextCallback?.();
         dispatch(
           submitChatContents({
-            text: userMessage,
+            text: message,
             modelParameters,
             clientType,
             hiddenContext,
@@ -130,6 +131,8 @@ const UserChatMessageEditor: React.FunctionComponent<
         </div>
       )}
       <UserMessageEditor
+        userMessage={userMessage}
+        setUserMessage={setUserMessage}
         onSubmit={handleSubmit}
         disabled={disabled}
         editorContainerClassName={editorContainerClassName}

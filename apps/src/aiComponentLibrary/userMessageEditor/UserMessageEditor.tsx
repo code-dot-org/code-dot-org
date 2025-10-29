@@ -1,6 +1,14 @@
 import Button from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
-import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
+import React, {
+  useState,
+  useMemo,
+  useEffect,
+  useRef,
+  Dispatch,
+  SetStateAction,
+  useCallback,
+} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -13,6 +21,8 @@ const MAX_MESSAGE_LENGTH = 10000;
  */
 
 export interface UserMessageEditorProps {
+  userMessage: string;
+  setUserMessage: Dispatch<SetStateAction<string>>;
   onSubmit: (userMessage: string) => void;
   disabled: boolean;
   showSubmitLabel?: boolean;
@@ -28,6 +38,8 @@ const UserMessageEditor = React.forwardRef<
 >(
   (
     {
+      userMessage,
+      setUserMessage,
       onSubmit,
       disabled,
       editorContainerClassName,
@@ -38,7 +50,6 @@ const UserMessageEditor = React.forwardRef<
     externalInputRef
   ) => {
     const internalInputRef = useRef<HTMLTextAreaElement | null>(null);
-    const [userMessage, setUserMessage] = useState<string>('');
     // Track focus state on textarea to apply focus styles to container since
     // :focus-visible doesn't work on divs and :has() is not supported in Firefox.
     const [focused, setFocused] = useState(false);
@@ -59,7 +70,7 @@ const UserMessageEditor = React.forwardRef<
         onSubmit(userMessage);
         setUserMessage('');
       },
-      [onSubmit]
+      [onSubmit, setUserMessage]
     );
 
     useEffect(() => {
