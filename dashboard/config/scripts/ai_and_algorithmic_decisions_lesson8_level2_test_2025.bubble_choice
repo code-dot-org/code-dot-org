@@ -1,0 +1,7 @@
+name 'ai-and-algorithmic-decisions-lesson8-level2-test-2025'
+display_name '8.2'
+description 'level description here'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson8-level2a-test-2025'
+level 'ai-and-algorithmic-decisions-lesson8-level2b-test-2025'

@@ -18,6 +18,12 @@ $icon-overlay-padding-right: 8px;
   gap: 0.5rem;
   border-start-start-radius: $message-border-radius;
   border-start-end-radius: $message-border-radius;
+  word-break: break-word;
+
+  code {
+    word-break: break-word;
+    white-space: unset;
+  }
 }
 
 %markdown-styles {
