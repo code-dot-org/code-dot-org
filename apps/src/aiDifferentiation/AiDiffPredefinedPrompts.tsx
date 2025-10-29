@@ -206,6 +206,125 @@ export const IMPROVE_THIS_CODE = {
   prompt: 'How can this student code be improved?',
 };
 
+export const INNOVATOR_NEW_WAYS_PROMPT = {
+  label: 'New ways to teach this lesson',
+  prompt: `I want to explore, extend, and find the next exciting thing. I’m looking for a new way to teach this lesson’s key concepts. Suggest a hands-on activity that my students could experiment with.`,
+};
+
+export const INNOVATOR_CREATIVE_EXTENSION_PROMPT = {
+  label: 'Creative extension activities for a challenge',
+  prompt: `I want to explore, extend, and find the next exciting thing. My students finished the lesson. What are some ideas or extensions to creatively challenge them?`,
+};
+
+export const CODE_WHISPERER_GUIDING_QUESTIONS_PROMPT = {
+  label: 'Guiding questions',
+  prompt: `My student is struggling with this lesson. Give me guiding questions to help them get unstuck. You can ask me a follow-up question: What is the student struggling with?`,
+};
+
+export const CODE_WHISPERER_SUGGEST_HINT_PROMPT = {
+  label: 'Suggest a hint',
+  prompt: `Suggest targeted hints that explain the key concepts of this lesson without giving the answer.`,
+};
+
+export const BRIDGE_BUILDER_CONNECT_TO_SPORTS_PROMPT = {
+  label: 'Connect to sports',
+  prompt: `Can you give me an analogy for how the main concepts introduced in this lesson are used in professional sports?`,
+};
+
+export const BRIDGE_BUILDER_CONNECT_TO_MUSIC_PROMPT = {
+  label: 'Connect to music',
+  prompt: `Can you give me an analogy for how the main concepts introduced in this lesson are used in popular music?`,
+};
+
+export const BRIDGE_BUILDER_EXPLAIN_KEY_CONCEPTS_PROMPT = {
+  label: 'Explain key concepts',
+  prompt: `Help me explain this lesson’s key concepts.`,
+};
+
+export const STORYTELLER_EXPLAIN_MEMORABLE_PROMPT = {
+  label: 'Explain in a memorable way',
+  prompt: `I want to explain the key concepts of this lesson by creating analogies, metaphors, and memorable stories.`,
+};
+
+export const STORYTELLER_LESSON_HOOK_PROMPT = {
+  label: 'Lesson hook',
+  prompt: `Create a short, engaging lesson hook that uses an analogy, metaphor, or memorable story to introduce this lesson’s key concepts.`,
+};
+
+export const COMMUNITY_ARCHITECT_TEAM_ACTIVITY_PROMPT = {
+  label: 'Create a team activity',
+  prompt: `I want to foster collaboration, inclusion, and teamwork. Suggest a group activity for a small team that mirrors a real-world developer team.`,
+};
+
+export const COMMUNITY_ARCHITECT_ENGAGE_QUIET_STUDENTS_PROMPT = {
+  label: 'Engage quiet students',
+  prompt: `I want to foster collaboration, inclusion, and teamwork. I have quiet students who are hesitant to contribute during class. Suggest strategies to support them.`,
+};
+
+export const LEAD_LEARNER_MODEL_THINK_OUT_LOUD_PROMPT = {
+  label: 'Model think out loud',
+  prompt: `I want to model curiosity and learn alongside my students. Help me model how to ‘think out loud’ during this lesson.`,
+};
+
+export const LEAD_LEARNER_EXPLAIN_KEY_CONCEPTS_PROMPT = {
+  label: 'Explain key concepts',
+  prompt: `Can you explain the key concepts of this lesson so a teacher new to the subject can understand them?`,
+};
+
+export const TEACHING_STYLE_SUGGESTED_PROMPTS_FOR_SELECTION: {
+  [selection: string]: {initialMessage: string; suggestedPrompts: ChatPrompt[]};
+} = {
+  innovator: {
+    initialMessage:
+      'The Innovator 🚀 wants to explore, extend, and find the next exciting thing.',
+    suggestedPrompts: [
+      INNOVATOR_NEW_WAYS_PROMPT,
+      INNOVATOR_CREATIVE_EXTENSION_PROMPT,
+    ],
+  },
+  codeWhisperer: {
+    initialMessage:
+      'The Code Whisperer 🔍 wants to understand student misconceptions and provide perfect hints.',
+    suggestedPrompts: [
+      CODE_WHISPERER_GUIDING_QUESTIONS_PROMPT,
+      CODE_WHISPERER_SUGGEST_HINT_PROMPT,
+    ],
+  },
+  bridgeBuilder: {
+    initialMessage:
+      "The Bridge Builder 🌉 wants to connect CS to students' passions and the real world.",
+    suggestedPrompts: [
+      BRIDGE_BUILDER_CONNECT_TO_SPORTS_PROMPT,
+      BRIDGE_BUILDER_CONNECT_TO_MUSIC_PROMPT,
+      BRIDGE_BUILDER_EXPLAIN_KEY_CONCEPTS_PROMPT,
+    ],
+  },
+  storyteller: {
+    initialMessage:
+      'The Storyteller 📚 wants to create analogies, metaphors, and memorable stories.',
+    suggestedPrompts: [
+      STORYTELLER_EXPLAIN_MEMORABLE_PROMPT,
+      LESSON_HOOK_PROMPT,
+    ],
+  },
+  communityArchitect: {
+    initialMessage:
+      'The Community Architect 👥 wants to foster collaboration, inclusion, and teamwork.',
+    suggestedPrompts: [
+      COMMUNITY_ARCHITECT_TEAM_ACTIVITY_PROMPT,
+      COMMUNITY_ARCHITECT_ENGAGE_QUIET_STUDENTS_PROMPT,
+    ],
+  },
+  leadLearner: {
+    initialMessage:
+      'The Lead Learner ⭐ wants to model curiosity and learn alongside students.',
+    suggestedPrompts: [
+      LEAD_LEARNER_MODEL_THINK_OUT_LOUD_PROMPT,
+      LEAD_LEARNER_EXPLAIN_KEY_CONCEPTS_PROMPT,
+    ],
+  },
+};
+
 export const SUGGESTED_PROMPTS_FOR_SELECTION: {
   [selection: string]: {initialMessage: string; suggestedPrompts: ChatPrompt[]};
 } = {
@@ -249,4 +368,5 @@ export const SUGGESTED_PROMPTS_FOR_SELECTION: {
       APCSP_CREATE_PT_PREPARATION,
     ],
   },
+  ...TEACHING_STYLE_SUGGESTED_PROMPTS_FOR_SELECTION,
 };
