@@ -31,6 +31,7 @@ import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
@@ -70,29 +71,20 @@ async function uploadBase64ToUrl(
   const response = await fetch(dataUrl);
   const blob = await response.blob();
 
+  console.log(`type: ${mimeType}`);
   // Create a File object from the Blob
   const file = new File([blob], 'file', {
     type: mimeType,
   });
 
-  // Create FormData and append the file
-  const formData = new FormData();
-  formData.append('files[]', file);
+  // // Should we throw here?
+  // if (!uploadResponse.ok) {
+  //   throw new Error(
+  //     `Upload failed: ${uploadResponse.status} ${uploadResponse.statusText}`
+  //   );
+  // }
 
-  // Make the upload request
-  const uploadResponse = await fetch(uploadUrl, {
-    method: 'PUT',
-    body: formData,
-  });
-
-  // Should we throw here?
-  if (!uploadResponse.ok) {
-    throw new Error(
-      `Upload failed: ${uploadResponse.status} ${uploadResponse.statusText}`
-    );
-  }
-
-  return uploadResponse;
+  return await HttpClient.put(uploadUrl, file);
 }
 
 interface SerializedExcalidrawState {
@@ -196,6 +188,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         const difference = excalidrawFileIds.filter(
           id => !savedFileIds.includes(id)
         );
+
+        console.log('savedFileIds:', savedFileIds);
+        console.log('excalidrawFileIds:', excalidrawFileIds);
+        console.log('filesBeingUploaded:', filesBeingUploadedRef.current);
 
         // // Probably need actual comparison of keys
         // Don't rerun on update hook until the upload has finished?
