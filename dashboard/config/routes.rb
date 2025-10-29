@@ -1156,13 +1156,6 @@ Dashboard::Application.routes.draw do
 
     resources :feedback, controller: 'teacher_feedbacks'
 
-    # AI Lesson Summaries routes
-    resources :ai_lesson_summaries, only: [:show] do
-      collection do
-        get :show # GET /ai_lesson_summaries/show?user_id=1&lesson_id=2
-      end
-    end
-
     get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
     get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
     post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
