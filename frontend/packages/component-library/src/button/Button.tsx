@@ -16,12 +16,9 @@ export const buttonColors: {[key in ButtonColor]: ButtonColor} = {
 
 export interface ButtonProps extends CoreButtonProps, ButtonSpecificProps {}
 
-const Button = forwardRef<HTMLElement, ButtonProps>((props, ref) => (
-  <GenericButton
-    ref={ref as React.Ref<HTMLButtonElement & HTMLAnchorElement>}
-    {...props}
-  />
-));
+const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+  (props, ref) => <GenericButton ref={ref} {...props} />,
+);
 
 /**
  * ###  Status: ```Ready for dev```

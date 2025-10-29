@@ -282,7 +282,8 @@ const GenericButton = forwardRef<
 
     return (
       <ButtonTag
-        ref={ref as React.Ref<HTMLButtonElement & HTMLAnchorElement>}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ref={ref as React.Ref<any>} // Cannot be more specific without refactoring entire file
         className={classNames(
           moduleStyles.button,
           moduleStyles[`button-${type}`],
