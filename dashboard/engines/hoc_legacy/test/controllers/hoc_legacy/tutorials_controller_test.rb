@@ -24,8 +24,8 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       allow(CDO).to receive(:default_scheme).and_return('https:')
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
-      allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_code)
-      allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_code).with(tutorial_code).and_return(tutorial)
+      allow(HocLegacy::Tutorials).to receive(:get)
+      allow(HocLegacy::Tutorials).to receive(:get).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialLauncher).to receive(:call)
     end
 
@@ -126,7 +126,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     before do
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
-      allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_code).with(tutorial_code).and_return(tutorial)
+      allow(HocLegacy::Tutorials).to receive(:get).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialPixelLauncher).to receive(:call)
     end
 
@@ -264,7 +264,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     before do
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
-      allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_code).with(tutorial_code).and_return(tutorial)
+      allow(HocLegacy::Tutorials).to receive(:get).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialCompleter).to receive(:call).
         with(controller: instance_of(described_class), tutorial:).
         and_return(session_row)
@@ -345,7 +345,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     before do
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
-      allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_code).with(tutorial_code).and_return(tutorial)
+      allow(HocLegacy::Tutorials).to receive(:get).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialPixelCompleter).to receive(:call)
     end
 

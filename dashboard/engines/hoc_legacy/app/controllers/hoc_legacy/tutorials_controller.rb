@@ -4,8 +4,6 @@ require 'cdo/db'
 
 module HocLegacy
   class TutorialsController < ApplicationController
-    CACHE_TTL = 1.hour.freeze
-
     before_action :assign_tutorial, only: %i[begin begin_pixel finish finish_pixel]
     before_action :require_tutorial, only: %i[show begin begin_pixel finish finish_pixel]
 
@@ -77,9 +75,7 @@ module HocLegacy
     end
 
     private def assign_tutorial
-      @tutorial = Rails.cache.fetch("hoc_legacy:tutorial:#{params[:code]}", expires_in: CACHE_TTL) do
-        CdoContentful::CsForAll::Entry::Tutorial.find_by_code(params[:code])
-      end
+      @tutorial = Tutorials.get(params[:code])
     end
 
     private def require_tutorial

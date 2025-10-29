@@ -5,7 +5,7 @@ require 'test_helper'
 class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
-  let(:tutorial_code) {'poem_art'}
+  let(:tutorial_code) {'mc'}
   let(:encoded_tutorial_code) {CGI.escape(Base64.urlsafe_encode64(tutorial_code))}
   let(:student_name) {'Student Name'}
 
@@ -20,6 +20,8 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
   end
 
   before do
+    allow(CDO).to receive(:default_scheme).and_return('https:')
+
     allow(DCDO).to receive(:get).and_call_original
     allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', false).and_return(true)
   end
@@ -27,7 +29,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
   it 'has expected basic flow from begin to finish' do
     VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow') do
       get "/api/hour/begin/#{tutorial_code}"
-      must_redirect_to 'https://code.org/poetry'
+      must_redirect_to 'https://test.code.org/minecraft'
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).wont_be_nil
       _(PEGASUS_DB[:hoc_activity].where(session: cookies[HocLegacy::HOC_COOKIE_KEY]).count).must_equal 1
 
@@ -65,7 +67,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
   it 'has expected basic flow from begin to finish_current' do
     VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow_with_finish_current') do
       get "/api/hour/begin/#{tutorial_code}"
-      must_redirect_to 'https://code.org/poetry'
+      must_redirect_to 'https://test.code.org/minecraft'
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).wont_be_nil
 
       get "/api/hour/begin_#{tutorial_code}.png"
@@ -103,7 +105,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
     it 'has expected basic flow from begin to finish without activity tracking' do
       VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow_without_activity_tracking') do
         get "/api/hour/begin/#{tutorial_code}"
-        must_redirect_to 'https://code.org/poetry'
+        must_redirect_to 'https://test.code.org/minecraft'
 
         get "/api/hour/begin_#{tutorial_code}.png"
         must_respond_with :success
