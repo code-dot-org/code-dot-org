@@ -114,7 +114,7 @@ module TestRunUtils
       require 'parallel_tests'
       procs = ParallelTests.determine_number_of_processes(nil)
       CDO.log.info "Test data modified, cloning across #{procs} databases..."
-      databases = Array.new(procs) {|i| "#{database}#{i + 1}"}
+      databases = (2..procs).map {|i| "#{database}#{i}"}
       databases.each do |db|
         recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
         RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql #{opts}"
