@@ -41,19 +41,6 @@ const InnerHTMLPreview = () => {
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }, []);
 
-  // Wrapper around setFilesToBlobs that will revoke the previous blob URLs
-  // to prevent memory leaks.
-  // const revokeAndSetFilesToBlobs = (
-  //   newFilesToBlobs: Record<string, string>
-  // ) => {
-  //   setFilesToBlobs(prevFilesToBlobs => {
-  //     Object.values(prevFilesToBlobs).forEach(blobUrl =>
-  //       URL.revokeObjectURL(blobUrl)
-  //     );
-  //     return newFilesToBlobs;
-  //   });
-  // };
-
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
@@ -110,6 +97,53 @@ const InnerHTMLPreview = () => {
     [parentOrigin]
   );
 
+  // Send source data to service worker when it changes
+  useEffect(() => {
+    if (serviceWorkerReady && source && navigator.serviceWorker.controller) {
+      // Prepare files data for service worker
+      const filesData: Record<string, {content: string; mimeType: string}> = {};
+
+      Object.values(source.files).forEach(file => {
+        const fullFileName = getFullyQualifiedFileName(
+          file.name,
+          file.folderId,
+          source.folders
+        );
+
+        let content = file.contents;
+        let mimeType = 'text/plain';
+
+        // Determine MIME type based on file extension or language
+        if (file.url) {
+          // Right not only images are handled via URL
+          content = file.url;
+          mimeType = `image/${file.name.split('.').pop()?.toLowerCase()}`;
+        } else if (file.language === 'html') {
+          mimeType = 'text/html';
+          // Process HTML files to update links
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(file.contents, 'text/html');
+          updateLinksToNonHtmlFiles(doc, {}, fullFileName);
+          updateLinksToHtmlFiles(doc, fullFileName);
+          content = doc.documentElement.outerHTML;
+        } else if (file.language === 'css') {
+          mimeType = 'text/css';
+        } else if (file.language === 'javascript') {
+          mimeType = 'application/javascript';
+        }
+
+        filesData[fullFileName] = {content, mimeType};
+      });
+
+      // Send files data to service worker
+      navigator.serviceWorker.controller.postMessage({
+        type: 'UPDATE_FILES',
+        files: filesData,
+        currentFile: currentFile,
+      });
+    }
+  }, [serviceWorkerReady, source, currentFile, parentOrigin]);
+
   useEffect(() => {
     window.addEventListener('message', handleMessage);
     // Notify parent that we're ready to receive messages
@@ -135,66 +169,6 @@ const InnerHTMLPreview = () => {
     return fullPath.substring(1); // remove leading slash
   }
 
-  // useEffect(() => {
-  //   if (currentFile && filesToBlobs) {
-  //     const newBlobUrl = filesToBlobs[currentFile];
-  //     if (newBlobUrl) {
-  //       setBlobUrl(newBlobUrl);
-  //     } else {
-  //       console.error(`current file ${currentFile} not found in source files`);
-  //       setBlobUrl(NOT_FOUND_FILE);
-  //     }
-  //   }
-  // }, [currentFile, filesToBlobs, parentOrigin]);
-
-  // TODOs:
-  // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
-  // useEffect(() => {
-  //   if (source) {
-  //     const files: Record<string, string> = {};
-  //     // Handle non-HTML files. These are just converted to Blobs.
-  //     Object.values(source.files).forEach(file => {
-  //       if (file.language !== 'html') {
-  //         const fullFileName = getFullyQualifiedFileName(
-  //           file.name,
-  //           file.folderId,
-  //           source.folders
-  //         );
-  //         files[fullFileName] = getUrlForFile(
-  //           file,
-  //           parentOrigin,
-  //           WEBLAB2_IMAGE_FILE_TYPES
-  //         );
-  //       }
-  //     });
-  //     // Handle HTML files. We do the following;
-  //     // 1. Set the Content Security Policy to allow requests to certain origins.
-  //     // 2. Replace src links to non-html files with blob URLs.
-  //     // 3. Update links to other files with a click handler that will post a message to us
-  //     //    to change the file.
-  //     const htmlFiles = Object.values(source.files).filter(
-  //       file => file.language === 'html'
-  //     );
-  //     htmlFiles.forEach(file => {
-  //       const parser = new DOMParser();
-  //       const doc = parser.parseFromString(file.contents, 'text/html');
-
-  //       const fullFileName = getFullyQualifiedFileName(
-  //         file.name,
-  //         file.folderId,
-  //         source.folders
-  //       );
-
-  //       updateLinksToNonHtmlFiles(doc, files, fullFileName);
-  //       updateLinksToHtmlFiles(doc, fullFileName);
-  //       const updatedContents = doc.documentElement.outerHTML;
-  //       const blob = new Blob([updatedContents], {type: 'text/html'});
-  //       files[fullFileName] = URL.createObjectURL(blob);
-  //     });
-  //     revokeAndSetFilesToBlobs(files);
-  //   }
-  // }, [parentOrigin, source]);
-
   const getPreview = useCallback(() => {
     // if (blobUrl === NOT_FOUND_FILE) {
     //   return (
@@ -215,7 +189,7 @@ const InnerHTMLPreview = () => {
           title="Inner HTML Preview"
           id="inner-preview"
           key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
-          src={`serve-project`}
+          src={`${window.location.origin}/assets/js/serve-project`}
           className={moduleStyles.fileIframe}
         />
       );
