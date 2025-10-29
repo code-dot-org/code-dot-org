@@ -12,7 +12,6 @@ export const sendAnalytics =
   (dispatch: AppDispatch, getState: () => RootState) => {
     const state = getState();
     const aichatState = state.aichat;
-
     const labState = state.lab;
     const clientType = aichatState.clientType;
     const userHasAichatAccess = aichatState.userHasAichatAccess;
