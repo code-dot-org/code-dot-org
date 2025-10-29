@@ -20,6 +20,7 @@ import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRu
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import '@cdo/apps/lab2/introjs.scss';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
@@ -39,7 +40,6 @@ import {Tabs} from './types';
 import ValidationPanel from './ValidationPanel';
 import ValidationTourSteps from './ValidationTourSteps';
 import {VersionHistoryPanel} from './VersionHistory';
-import './resource-panel-introjs.scss';
 
 import styles from './styles.module.scss';
 
