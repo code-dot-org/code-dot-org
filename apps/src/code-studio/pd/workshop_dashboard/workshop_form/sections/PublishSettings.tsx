@@ -1,7 +1,7 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography} from '@mui/material';
+import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {ChangeEvent, FC, memo} from 'react';
 
@@ -42,9 +42,7 @@ export const PublishSettings: FC<PublishSettingsProps> = ({
 
   return (
     <section>
-      <Typography component="h2" variant="h5" gutterBottom>
-        Publish Settings
-      </Typography>
+      <Heading2 visualAppearance="heading-sm">Publish Settings</Heading2>
       {(fields.registration_link || fields.hidden) && (
         <div className={commonStyles.row}>
           {fields.registration_link && (

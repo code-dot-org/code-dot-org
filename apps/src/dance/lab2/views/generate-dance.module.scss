@@ -1,0 +1,10 @@
+.buttonWide {
+  flex: 1;
+}
+
+.buttonRows {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-direction: column;
+}

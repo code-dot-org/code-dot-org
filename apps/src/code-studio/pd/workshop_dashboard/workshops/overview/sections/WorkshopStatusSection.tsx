@@ -3,7 +3,13 @@ import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
-import {Card, CardContent, CardHeader, Box, Typography} from '@mui/material';
+import {
+  Heading2,
+  BodyFourText,
+  StrongText,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
+import {Card, CardContent, CardHeader, Box} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
@@ -133,11 +139,9 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
           title={
             <Box className={styles.cardHeaderContainer}>
               <Box className={styles.cardHeaderRow}>
-                <Typography component="h2" variant="body2">
-                  <Typography variant="strong" gutterBottom>
-                    Workshop Status
-                  </Typography>
-                </Typography>
+                <Heading2 visualAppearance="body-two" noMargin>
+                  <StrongText>Workshop Status</StrongText>
+                </Heading2>
                 <Tags
                   className={classNames(styles.workshopTag, styles.status)}
                   tagsList={[
@@ -174,24 +178,22 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
           <Box className={styles.sectionContainer}>
             <Box className={styles.column}>
               {notStarted && (
-                <Typography variant="body4">
+                <BodyFourText noMargin>
                   On the day of your workshop, click the "Start Workshop" button
                   below.
-                </Typography>
+                </BodyFourText>
               )}
 
               {inProgress && workshop.accountRequiredForAttendance && (
                 <>
-                  <Typography variant="body4">
+                  <BodyFourText noMargin>
                     On the day of the workshop, ask workshop attendees to follow
                     the steps:
-                  </Typography>
-                  <Typography component="h3" variant="body2">
-                    <Typography variant="strong" gutterBottom>
-                      Step 1: Sign into Code Studio
-                    </Typography>
-                  </Typography>
-                  <Typography variant="body4">
+                  </BodyFourText>
+                  <Heading3 visualAppearance="body-two" noMargin>
+                    <StrongText>Step 1: Sign into Code Studio</StrongText>
+                  </Heading3>
+                  <BodyFourText noMargin>
                     Tell workshop attendees to sign into their Code Studio
                     accounts. If they do not already have an account tell them
                     to create one by going to{' '}
@@ -204,13 +206,11 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                     >
                       {window.origin}
                     </Link>
-                  </Typography>
-                  <Typography component="h3" variant="body2">
-                    <Typography variant="strong" gutterBottom>
-                      Step 2: Take attendance
-                    </Typography>
-                  </Typography>
-                  <Typography variant="body4">
+                  </BodyFourText>
+                  <Heading3 visualAppearance="body-two" noMargin>
+                    <StrongText>Step 2: Take attendance</StrongText>
+                  </Heading3>
+                  <BodyFourText noMargin>
                     After workshop attendees have signed into their Code Studio
                     accounts, use the attendance links below to take attendance.
                     Note: Workshop attendees need to have enrolled in the
@@ -225,17 +225,17 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                     >
                       {`${window.origin}/professional-learning/workshops/${workshop.id}`}
                     </Link>
-                  </Typography>
+                  </BodyFourText>
                 </>
               )}
 
               {inProgress && !workshop.accountRequiredForAttendance && (
                 <>
-                  <Typography variant="body4">
+                  <BodyFourText noMargin>
                     On the day of the workshop, ask workshop attendees to
                     register if they haven't already:
-                  </Typography>
-                  <Typography variant="body4">
+                  </BodyFourText>
+                  <BodyFourText noMargin>
                     <Link
                       className={styles.workshopLink}
                       size="xs"
@@ -245,23 +245,23 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                     >
                       {`${window.origin}/professional-learning/workshops/${workshop.id}`}
                     </Link>
-                  </Typography>
+                  </BodyFourText>
                 </>
               )}
 
               {inProgress && cannotEndWorkshop && (
-                <Typography variant="body4">
+                <BodyFourText noMargin>
                   Workshop should not end until all sessions are complete and
                   attendance has been taken.
-                </Typography>
+                </BodyFourText>
               )}
 
               {ended && (
                 <>
-                  <Typography variant="body4">
+                  <BodyFourText noMargin>
                     We hope you had a great workshop!
-                  </Typography>
-                  <Typography variant="body4">
+                  </BodyFourText>
+                  <BodyFourText noMargin>
                     Workshop attendees will receive an email with survey link
                     from{' '}
                     <Link size="xs" href="mailto:survey@code.org">
@@ -277,14 +277,14 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                     'my account' page via the top right corner to confirm their
                     email address was typed correctly when they first created
                     the account.
-                  </Typography>
-                  <Typography variant="body4">
+                  </BodyFourText>
+                  <BodyFourText noMargin>
                     If they still can't find the email, have them email{' '}
                     <Link size="xs" href="mailto:support@code.org">
                       support@code.org
                     </Link>{' '}
                     and we will help them.
-                  </Typography>
+                  </BodyFourText>
                 </>
               )}
 
@@ -323,6 +323,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
           </Box>
         </CardContent>
       </Card>
+
       {dialogs.map(({stateKey, label, description, primaryButtonProps}) =>
         activeDialog === stateKey ? (
           <Dialog
