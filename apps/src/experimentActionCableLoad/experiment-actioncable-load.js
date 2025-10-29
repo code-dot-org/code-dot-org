@@ -3,8 +3,6 @@ import _ from 'lodash';
 
 import experiments from '@cdo/apps/util/experiments';
 
-import MetricsReporter from '../metrics/MetricsReporter';
-
 export const experimentActionCableLoad = function () {
   setTimeout(() => {
     if (experiments.isEnabled('actioncable-load-testing')) {
@@ -50,7 +48,12 @@ const testLoad = function () {
   }, 5 * 60 * 1000);
 };
 
-const logEvent = (eventName, connectionId) =>
-  MetricsReporter.incrementCounter(eventName, [
-    {name: 'connectionId', value: connectionId},
-  ]);
+const logEvent = (eventName, connectionId) => {
+  if (window.newrelic) {
+    window.newrelic.recordCustomEvent(eventName, {connectionId});
+  } else {
+    console.log(
+      `[NewRelic not found]: ${eventName}, {connectionId:${connectionId}}`
+    );
+  }
+};
