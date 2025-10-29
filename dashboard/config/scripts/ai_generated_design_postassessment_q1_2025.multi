@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q1_2025'
+
+question 'A new grocery delivery app has a sleek design, but many users give it low ratings because it\'s difficult to find the "Add to Cart" button and checkout process. What would most improve the app\'s user experience?'
+
+wrong 'Adding more colors and animations to make the app visually exciting.'
+wrong 'Removing the checkout process entirely to speed up ordering.'
+wrong 'Hiding extra options in more menus to make the interface simpler.'
+right 'Making the "Add to Cart" button larger and easier to find on every product page.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 2, 7
+MARKDOWN

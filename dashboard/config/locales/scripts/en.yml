@@ -411,7 +411,7 @@ en:
             lesson-57:
               name: Sketch Lab
             lesson-58:
-              name: Unplugged
+              name: Unplugged level
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -25276,14 +25276,14 @@ en:
           description_short: ''
           description: |
             ## Welcome
-            #### This professional learning module prepares you to teach **AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
 
             #### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
           student_description: |-
             ## Welcome
-            #### This professional learning module prepares you to teach **AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
 
@@ -25824,6 +25824,10 @@ en:
             &nbsp;
           description_short: ''
           description_audience: ''
+          lessons:
+            lesson-13:
+              name: AI Tutor - Python Lab
+          name: aif2-tutor-pilot-2025
         aif-all-the-things:
           lessons:
             lesson-1:
@@ -25913,8 +25917,16 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025
-          title: Introduction to Teaching AI Foundations
+          title: "[PILOT] Pre-Work Teaching AI Foundations"
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          student_description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
