@@ -45,7 +45,7 @@ const ActivityCollection: React.FC<ActivityCollectionProps> = ({
               cardId: tutorialID,
               cardTitle: title,
             }}
-            chipLabels={[...topic]}
+            chipLabels={[...topic] as string[]}
           />
         </Box>
       ),

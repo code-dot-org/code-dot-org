@@ -1,17 +1,19 @@
+type OramaEnum = (string | number)[];
+
 export interface Activity {
   title: string;
   image: string;
   organization: string;
-  ages: string[];
-  languageProgramming: string[];
+  ages: OramaEnum;
+  languageProgramming: OramaEnum;
   shortDescription: string;
   longDescription: string;
   primaryLinkRef: string;
-  technologyClassroom: string[];
-  topic: string[];
-  activityType: string[];
-  length: string[];
-  accessibilitys: string[];
+  technologyClassroom: OramaEnum;
+  topic: OramaEnum;
+  activityType: OramaEnum;
+  length: OramaEnum;
+  accessibilitys: OramaEnum;
   languagesText: string;
   standards: string;
   tutorialID: string;
