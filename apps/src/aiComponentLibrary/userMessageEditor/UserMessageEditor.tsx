@@ -76,6 +76,7 @@ const UserMessageEditor = React.forwardRef<
           focused && moduleStyles.focused,
           editorContainerClassName
         )}
+        onClick={() => internalInputRef.current?.focus()}
       >
         <textarea
           ref={node => {
@@ -110,7 +111,10 @@ const UserMessageEditor = React.forwardRef<
             id="uitest-chat-submit"
             isIconOnly={!showSubmitLabel}
             size="xs"
-            onClick={() => onSubmit(userMessage)}
+            onClick={e => {
+              e.stopPropagation();
+              onSubmit(userMessage);
+            }}
             disabled={disabled || !userMessage || userMessageIsEmpty}
             text={showSubmitLabel ? commonI18n.submit() : undefined}
             {...{[showSubmitLabel ? 'iconLeft' : 'icon']: icon}}
