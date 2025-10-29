@@ -1,6 +1,6 @@
 module DancePartyImageGenerator
   module Naming
-    module_function def slug(text) = text.to_s.downcase.strip.gsub(/[^\w\- ]+/, "").gsub(/[ _]+/, "-")
+    module_function def slug(text) = text.to_s.downcase.strip.gsub(/[^\w\- ]+/, "").gsub(/[ ]+/, "-")
 
     # item: {animal:, adj: (optional), attire: (optional), variant: Integer}
     module_function def base_name(item)
