@@ -41,16 +41,18 @@ export const STEPS = [
       'Click the hamburger menu icon to access extra options like exporting your work.',
   },
   {
-    element: '.dropdown-menu',
     title: 'Exporting your sketches',
-    intro:
-      'From the menu, select Export image (or press Cmd + Shift + E) to open export options. Click Next to continue.',
+    intro: `
+      <p>From the menu, select Export image (or press Cmd + Shift + E) to open export options. Click Next to continue.</p>
+      <img src="/blockly/media/sketchlab/export-image-button.png" alt="Export PNG button" style="width: 100%; max-width: 500px; border-radius: 8px; margin: 10px 0;" />
+
+    `,
   },
   {
     title: 'Save as an image',
     intro: `
         <p>Choose the PNG option to save your canvas as an image. You'll use this later to share with the AI Tutor.</p>
-        <img src="/blockly/media/sketchlab/export-image.png" alt="Export PNG dialog" style="width: 100%; max-width: 500px; border-radius: 8px; margin: 10px 0;" />
+        <img src="/blockly/media/sketchlab/export-image-dialog.png" alt="Export PNG dialog" style="width: 100%; max-width: 500px; border-radius: 8px; margin: 10px 0;" />
       `,
   },
   {
