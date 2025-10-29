@@ -1,6 +1,7 @@
 // import sketchlabI18n from '@cdo/apps/lab2/locale';
 
 // import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
+import {resourcePanelNavigationButtonElementId} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 export const INITIAL_STEP = 0;
 export const STEPS = [
   {
@@ -13,7 +14,7 @@ export const STEPS = [
     element: 'label.ToolIcon[title^="Rectangle"]',
     title: 'Shape Tools',
     intro:
-      'This square (2) tool and the icons next to it — diamond (3) and circle (4)—let you draw basic shapes for diagrams and layouts.',
+      'This square (2) tool and the icons next to it - diamond (3) and circle (4) - let you draw basic shapes for diagrams and layouts.',
   },
   {
     element: 'label.ToolIcon[title^="Arrow"]',
@@ -31,12 +32,30 @@ export const STEPS = [
     element: 'label.ToolIcon[title^="Eraser"]',
     title: 'Eraser Tool',
     intro:
-      'Click the eraser (0) once on any element to remove it. You can’t drag to erase — one click per item.',
+      "Click the eraser (0) once on any element to remove it. You can't drag to erase — one click per item.",
   },
   {
     element: '.dropdown-menu-button',
     title: 'Open the menu',
     intro:
       'Click the hamburger menu icon to access extra options like exporting your work.',
+  },
+  {
+    element: '.dropdown-menu',
+    title: 'Exporting your sketches',
+    intro:
+      'From the menu, select Export image (or press Cmd + Shift + E) to open export options.',
+  },
+  {
+    element: '.ExcButton[aria-label="Export PNG"]',
+    title: 'Save as an image',
+    intro:
+      "Choose the PNG option to save your canvas as an image. You'll use this later to share with the AI Tutor.",
+  },
+  {
+    element: `#${resourcePanelNavigationButtonElementId}`,
+    title: 'Move on to the next level',
+    intro:
+      "When you're done with your Sketch Lab creation, click Continue to move on to the next level.",
   },
 ];
