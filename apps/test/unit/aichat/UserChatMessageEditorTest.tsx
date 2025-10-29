@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {act, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
@@ -112,7 +112,9 @@ describe('UserChatMessageEditor', () => {
 
     await user.click(textarea);
     await user.type(textarea, 'Hello bot');
-    await user.keyboard('{Enter}');
+    await act(async () => {
+      await user.keyboard('{Enter}');
+    });
 
     expect(mockSubmitChatContents).toHaveBeenCalledTimes(1);
     // First arg is the payload object
@@ -170,7 +172,9 @@ describe('UserChatMessageEditor', () => {
       commonI18n.aiUserMessagePlaceholder()
     );
     await user.type(textarea, 'Use my image');
-    await user.keyboard('{Enter}');
+    await act(async () => {
+      await user.keyboard('{Enter}');
+    });
 
     expect(mockSubmitChatContents).toHaveBeenCalledTimes(1);
     expect(mockSubmitChatContents.mock.calls[0][0]).toMatchObject({
