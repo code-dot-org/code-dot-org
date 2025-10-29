@@ -81,12 +81,12 @@ entries, and links to official format specifications, see the
 
 When a signed‑in user views a level at `studio.code.org`:
 
-- CloudFront [logs](#cloudwatch-logs) the request/response; if the WebACL blocks it, the WAF log records the decision.
-- ALB [logs](#load-balancers) the request and target response.
-- On the instance, NGINX [writes](#application-servers-ec2) an access line and proxies to the appropriate Puma app; Rails (via Lograge in prod/staging) records a condensed application line. Cron‑triggered tasks that run during the same window write through the same Rails logger, so their events appear alongside web requests.
-- Browser‑side events (if enabled) are batched and written to the `<env>-browser-events` CloudWatch log group.
-- Aurora emits slow/error/general/audit entries to CloudWatch Logs as relevant.
-- Hourly, instance app logs are synced to S3 for long‑term retention.
+- CloudFront [logs](./log-formats.md#cloudfront-access-logs) the request/response; if the WebACL blocks it, the WAF log [records](../aws/cloudformation/data.yml.erb#L662-L715) the decision.
+- ALB [logs](./log-formats.md#application-load-balancer-alb-logs) the request and target response.
+- On the instance, NGINX [writes](#application-servers-ec2) an access line and proxies to the appropriate Puma app; Rails (via Lograge in prod/staging) [emits](./log-formats.md#rails-application-logs-lograge-cee-json) a condensed JSON line to syslog/CloudWatch. Cron‑triggered tasks that run during the same window write through the same Rails logger, so their events appear alongside web requests.
+  - Browser‑side events (if enabled) are batched and [written](#cloudwatch-logs) to the `<env>-browser-events` CloudWatch log group, and the page may [report](../apps/src/logToCloud.js#L31-L41) a New Relic page action.
+  - Aurora [emits](#cloudwatch-logs) slow/error/general/audit entries to CloudWatch Logs as relevant; severe server‑side errors may also [notify](../lib/cdo/honeybadger.rb#L27-L74) Honeybadger.
+  - Hourly, instance app logs are [synced](#s3-cdo-logs-bucket) to S3 for long‑term retention.
 
 Read across the sections above to locate each artifact and the linked infrastructure/app code that configures it.
 
