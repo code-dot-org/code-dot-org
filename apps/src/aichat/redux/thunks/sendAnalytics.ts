@@ -10,6 +10,9 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 export const sendAnalytics =
   (event: string, properties: object, skipAccessCheck = false) =>
   (dispatch: AppDispatch, getState: () => RootState) => {
+    const state = getState();
+    console.log('state in sendAnalytics thunk:', state);
+    const curriculumDetails = getState().lab;
     const clientType = getState().aichat.clientType;
     const userHasAichatAccess = getState().aichat.userHasAichatAccess;
 
@@ -23,9 +26,18 @@ export const sendAnalytics =
         ...properties,
         clientType,
       };
+      const propertiesWithCurriculumDetails = {
+        ...propertiesWithClientType,
+        aiTutorMode: curriculumDetails.levelProperties?.aiTutorMode,
+        appType: curriculumDetails.levelProperties?.appName,
+        levelId: curriculumDetails.levelProperties?.id,
+        scriptId: curriculumDetails.scriptId,
+        channel: curriculumDetails.channel?.id,
+        levelPath: window.location.pathname,
+      };
       analyticsReporter.sendEvent(
         event,
-        propertiesWithClientType,
+        propertiesWithCurriculumDetails,
 
         // Only log to Amplitude for AI Chat otherwise just log to Statsig.
         clientType === AiChatClientTypes.AI_CHAT_LAB
