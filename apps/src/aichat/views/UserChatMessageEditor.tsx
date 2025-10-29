@@ -78,6 +78,8 @@ const UserChatMessageEditor: React.FunctionComponent<
     uploadsPending ||
     chatDisabled;
 
+  const clearUserMessage = () => setUserMessage('');
+
   const handleSubmit = useCallback(
     async (message: string, analyticsProperties?: AnalyticsProperties) => {
       if (!disabled) {
@@ -100,6 +102,7 @@ const UserChatMessageEditor: React.FunctionComponent<
             responseCallback,
           })
         );
+        clearUserMessage();
       }
     },
     [
@@ -116,7 +119,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   );
 
   useEffect(() => {
-    setUserMessage('');
+    clearUserMessage();
   }, [currentLevelId]);
 
   useEffect(() => {
@@ -138,7 +141,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       )}
       <UserMessageEditor
         userMessage={userMessage}
-        setUserMessage={setUserMessage}
+        onChange={setUserMessage}
         onSubmit={handleSubmit}
         disabled={disabled}
         editorContainerClassName={editorContainerClassName}

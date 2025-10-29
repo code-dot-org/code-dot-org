@@ -1,14 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
-import React, {
-  useState,
-  useMemo,
-  useEffect,
-  useRef,
-  Dispatch,
-  SetStateAction,
-  useCallback,
-} from 'react';
+import React, {useState, useMemo, useEffect, useRef} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -22,7 +14,7 @@ const MAX_MESSAGE_LENGTH = 10000;
 
 export interface UserMessageEditorProps {
   userMessage: string;
-  setUserMessage: Dispatch<SetStateAction<string>>;
+  onChange: (userMessage: string) => void;
   onSubmit: (userMessage: string) => void;
   disabled: boolean;
   showSubmitLabel?: boolean;
@@ -39,7 +31,7 @@ const UserMessageEditor = React.forwardRef<
   (
     {
       userMessage,
-      setUserMessage,
+      onChange,
       onSubmit,
       disabled,
       editorContainerClassName,
@@ -61,17 +53,9 @@ const UserMessageEditor = React.forwardRef<
     const handleKeyPress = (e: React.KeyboardEvent, userMessage: string) => {
       if (e.key === 'Enter' && !e.shiftKey && userMessage.trim() !== '') {
         e.preventDefault(); // Prevent the text box from having just a blank line.
-        handleSubmit(userMessage);
+        onSubmit(userMessage);
       }
     };
-
-    const handleSubmit = useCallback(
-      (userMessage: string) => {
-        onSubmit(userMessage);
-        setUserMessage('');
-      },
-      [onSubmit, setUserMessage]
-    );
 
     useEffect(() => {
       if (!internalInputRef.current) {
@@ -109,7 +93,7 @@ const UserMessageEditor = React.forwardRef<
           placeholder={
             customPlaceholder || commonI18n.aiUserMessagePlaceholder()
           }
-          onChange={e => setUserMessage(e.target.value)}
+          onChange={e => onChange(e.target.value)}
           value={userMessage}
           disabled={disabled}
           onKeyDown={e => handleKeyPress(e, userMessage)}
@@ -126,7 +110,7 @@ const UserMessageEditor = React.forwardRef<
             id="uitest-chat-submit"
             isIconOnly={!showSubmitLabel}
             size="xs"
-            onClick={() => handleSubmit(userMessage)}
+            onClick={() => onSubmit(userMessage)}
             disabled={disabled || !userMessage || userMessageIsEmpty}
             text={showSubmitLabel ? commonI18n.submit() : undefined}
             {...{[showSubmitLabel ? 'iconLeft' : 'icon']: icon}}

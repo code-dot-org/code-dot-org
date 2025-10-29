@@ -290,6 +290,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
       setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
       getAIResponse(message, false, null);
+      setUserMessage('');
     },
     [threadTitle, getAIResponse, setThreadTitle]
   );
@@ -421,7 +422,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       </div>
       <AiDiffChatFooter
         userMessage={userMessage}
-        setUserMessage={setUserMessage}
+        onChange={setUserMessage}
         onSubmit={onMessageSend}
         waiting={isWaitingForResponse}
         userMessageEditorRef={userMessageEditorRef}
