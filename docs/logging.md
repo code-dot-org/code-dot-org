@@ -81,9 +81,9 @@ entries, and links to official format specifications, see the
 
 When a signed‑in user views a level at `studio.code.org`:
 
-- CloudFront [logs](#sources-that-emit-logs) the request/response; if the WebACL blocks it, the WAF log records the decision.
-- ALB logs the request and target response.
-- On the instance, NGINX writes an access line and proxies to the appropriate Puma app; Rails (via Lograge in prod/staging) records a condensed application line. Cron‑triggered tasks that run during the same window write through the same Rails logger, so their events appear alongside web requests.
+- CloudFront [logs](#cloudwatch-logs) the request/response; if the WebACL blocks it, the WAF log records the decision.
+- ALB [logs](#load-balancers) the request and target response.
+- On the instance, NGINX [writes](#application-servers-ec2) an access line and proxies to the appropriate Puma app; Rails (via Lograge in prod/staging) records a condensed application line. Cron‑triggered tasks that run during the same window write through the same Rails logger, so their events appear alongside web requests.
 - Browser‑side events (if enabled) are batched and written to the `<env>-browser-events` CloudWatch log group.
 - Aurora emits slow/error/general/audit entries to CloudWatch Logs as relevant.
 - Hourly, instance app logs are synced to S3 for long‑term retention.
