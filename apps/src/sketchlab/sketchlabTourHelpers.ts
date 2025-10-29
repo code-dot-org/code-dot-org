@@ -41,7 +41,7 @@ export const STEPS = [
       'Click the hamburger menu icon to access extra options like exporting your work.',
   },
   {
-    element: '.dropdown-menu',
+    element: '.dropdown-menu-item[data-testid="image-export-button"]',
     title: 'Exporting your sketches',
     intro:
       'From the menu, select Export image (or press Cmd + Shift + E) to open export options.',
