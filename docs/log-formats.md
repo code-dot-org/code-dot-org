@@ -5,6 +5,7 @@ This document details the specific log formats used across the Code.org platform
 ## Table of Contents
 
 - [CloudFront Access Logs](#cloudfront-access-logs)
+- [CloudFront Real-Time Access Logs (Parquet)](#cloudfront-real-time-access-logs-parquet)
 - [Application Load Balancer (ALB) Logs](#application-load-balancer-alb-logs)
 - [Rails Application Logs (Lograge CEE JSON)](#rails-application-logs-lograge-cee-json)
 - [NGINX Access Logs](#nginx-access-logs)
@@ -20,7 +21,7 @@ This document details the specific log formats used across the Code.org platform
 **Format:** Tab-Separated Values (TSV)  
 **Official Documentation:** [AWS CloudFront Access Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html)
 
-CloudFront writes access logs for every request received by the CDN, regardless of whether it was served from cache or forwarded to the origin. Logs are delivered to S3 (bucket: `cdo-logs`) and then partitioned by a Lambda function into year/month/day/hour folders for Athena querying.
+CloudFront writes access logs for every request received by the CDN, regardless of whether it was served from cache or forwarded to the origin. Logs are delivered to S3 (bucket: `cdo-logs`) under per-environment prefixes and then partitioned by a Lambda function into `year=/month=/day=/hour=` folders for Athena querying.
 
 ### Example Log Entries
 
@@ -79,7 +80,84 @@ CloudFront logs contain 40+ fields (varies by version). Key fields include:
 
 **Note:** Fields are tab-separated. A `-` (hyphen) indicates no value. Certain fields (User-Agent, URI query, cookies) are URL-encoded.
 
-**Configuration:** [../lib/cdo/aws/cloudfront.rb#L41-L53](../lib/cdo/aws/cloudfront.rb#L41-L53), [../aws/cloudformation/cloud_formation_stack.yml.erb](../aws/cloudformation/cloud_formation_stack.yml.erb)
+**Configuration:** [../lib/cdo/aws/cloudfront.rb#L41-L53](../lib/cdo/aws/cloudfront.rb#L41-L53), [../aws/cloudformation/cloud_formation_stack.yml.erb#L414-L419](../aws/cloudformation/cloud_formation_stack.yml.erb#L414-L419), [../aws/cloudformation/s3PartitionCloudFrontLog.js](../aws/cloudformation/s3PartitionCloudFrontLog.js)
+
+> **Duplication note:** The real-time pipeline described below captures the same CloudFront events but stores them in Parquet for faster querying; the TSV archive remains useful as the raw, minimally processed record.
+
+---
+
+## CloudFront Real-Time Access Logs (Parquet)
+
+**Format:** AWS Kinesis Data Firehose → JSON rows converted to Parquet (`snappy`) partitioned by `YYYY/MM/DD/HH`  
+**Official Documentation:** [CloudFront Real-Time Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html)
+
+CloudFront real-time logging is enabled via a `RealtimeLogConfig` that streams request data to Kinesis, transforms each row into JSON, and stores the result in Parquet inside `s3://cdo-access-logs/access-logs/`. The schema matches the `LOG_FIELDS` list configured in the access-log stack.
+
+### Example Record (JSON prior to Parquet serialization)
+
+```json
+{
+  "timestamp": "2025-10-29T17:30:15.123Z",
+  "c-ip": "203.0.113.42",
+  "time-to-first-byte": 0.001,
+  "sc-status": 200,
+  "sc-bytes": 142,
+  "cs-method": "GET",
+  "cs-protocol": "https",
+  "cs-host": "studio.code.org",
+  "cs-uri-stem": "/s/course1/lessons/2/levels/3",
+  "cs-bytes": 512,
+  "x-edge-location": "IAD89-C1",
+  "x-edge-request-id": "xY9kL2mN3oP4qR5sT6uV7wX8yZ9aB0cD1eF2gH3iJ4",
+  "x-host-header": "studio.code.org",
+  "time-taken": 0.006,
+  "cs-protocol-version": "HTTP/2.0",
+  "c-ip-version": "IPv4",
+  "cs-user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/118.0.0.0",
+  "cs-referer": "https://studio.code.org/home",
+  "cs-cookie": "-",
+  "cs-uri-query": "level_id=12345",
+  "x-edge-response-result-type": "Hit",
+  "x-forwarded-for": "203.0.113.42",
+  "ssl-protocol": "TLSv1.3",
+  "ssl-cipher": "TLS_AES_128_GCM_SHA256",
+  "x-edge-result-type": "Hit",
+  "fle-encrypted-fields": 0,
+  "fle-status": "-",
+  "sc-content-type": "text/html",
+  "sc-content-len": 789,
+  "sc-range-start": 0,
+  "sc-range-end": 0,
+  "c-port": 54321,
+  "x-edge-detailed-result-type": "Hit",
+  "c-country": "US",
+  "cs-accept-encoding": "gzip, deflate, br",
+  "cs-accept": "text/html",
+  "cache-behavior-path-pattern": "/s/*",
+  "cs-headers": "Authorization:****;Accept-Language:en-US",
+  "cs-header-names": "authorization;accept-language",
+  "cs-headers-count": 12
+}
+```
+
+### Fields
+
+Fields are defined by the comma-delimited `LOG_FIELDS` parameter in the access logs CloudFormation stack and mirror the CloudFront real-time log field list. Notable fields (subset shown above):
+
+- `timestamp` — ISO 8601 timestamp with millisecond precision
+- `c-ip` — Client IP address
+- `time-to-first-byte` — Seconds until the first byte was sent
+- `sc-status` — HTTP status returned to the viewer
+- `cs-method`, `cs-host`, `cs-uri-stem`, `cs-uri-query` — Request details
+- `x-edge-location`, `x-edge-request-id` — Edge POP and unique request ID
+- `x-edge-result-type`, `x-edge-response-result-type`, `time-taken` — Edge processing outcome and latency
+- `ssl-protocol`, `ssl-cipher` — TLS protocol and cipher
+- `cache-behavior-path-pattern` — Behavior that matched the request
+- `cs-headers`, `cs-header-names`, `cs-headers-count` — Header metadata supplied by CloudFront real-time logs
+
+**Configuration:** [../aws/cloudformation/standalone/access_logs/access_logs.yml](../aws/cloudformation/standalone/access_logs/access_logs.yml), [../aws/cloudformation/standalone/access_logs/access_logs.rb](../aws/cloudformation/standalone/access_logs/access_logs.rb), [../aws/cloudformation/standalone/access_logs/access_logs_partition.rb](../aws/cloudformation/standalone/access_logs/access_logs_partition.rb), [../lib/cdo/aws/cloudfront.rb#L301-L314](../lib/cdo/aws/cloudfront.rb#L301-L314)
+
+> **Duplication note:** Both CloudFront formats represent the same events. Keep the Parquet dataset for low-latency analytics and consider pruning the TSV archive (or vice versa) if cost becomes an issue.
 
 ---
 
@@ -396,6 +474,7 @@ Firehose events are client-defined and typically include:
 | Log Type | Format | Destination | Retention | Official Docs |
 |----------|--------|-------------|-----------|---------------|
 | CloudFront Access | TSV | S3 `cdo-logs/cloudfront/` | Indefinite (partitioned) | [AWS CloudFront Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html) |
+| CloudFront Real-Time Access | Parquet | S3 `cdo-access-logs/access-logs/` | Intelligent Tiering → Deep Archive | [CloudFront Real-Time Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html) |
 | ALB Access | Space-delimited | S3 `cdo-logs/.../elasticloadbalancing/` | Indefinite | [AWS ALB Logs](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html) |
 | Rails (Lograge CEE) | JSON | Syslog → S3 `cdo-logs/hosts/` | 7 days local, indefinite S3 | [Lograge](https://github.com/roidrage/lograge) |
 | NGINX Access | Combined CLF | Local → S3 `cdo-logs/hosts/` | 7 days local, indefinite S3 | [NGINX Logging](https://nginx.org/en/docs/http/ngx_http_log_module.html) |
