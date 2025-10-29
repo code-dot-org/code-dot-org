@@ -68,14 +68,16 @@ class ProjectPlayer {
     const {playbackEvents, lastMeasure} = this.currentMetadata;
     this.player.playSong(playbackEvents);
 
-    // Stop the song after the last measure.
     this.stopIntervalId = window.setInterval(() => {
-      if (
-        this.stopIntervalId &&
-        this.player.getCurrentPlayheadPosition() >= lastMeasure
-      ) {
-        onEnded?.();
-        this.stop();
+      if (this.stopIntervalId) {
+        const currentPlayheadPosition =
+          this.player.getCurrentPlayheadPosition();
+
+        // Stop the song after the last measure.
+        if (currentPlayheadPosition >= lastMeasure) {
+          onEnded?.();
+          this.stop();
+        }
       }
     }, (60 / this.player.getBPM()) * 1000);
   }
@@ -99,6 +101,14 @@ class ProjectPlayer {
       throw new Error('No project loaded!');
     }
     return this.player.getBPM();
+  }
+
+  getCurrentPlayheadPosition() {
+    return this.player.getCurrentPlayheadPosition();
+  }
+
+  getLastMeasure() {
+    return this.currentMetadata?.lastMeasure;
   }
 
   private async loadMetadata(

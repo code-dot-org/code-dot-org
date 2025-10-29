@@ -185,7 +185,10 @@ export type ResolveDancerAssetsOpts = {
 
 export type LocalStoragePayload = {
   adlibOption: string;
+  path?: string;
   choices: string[];
+  choicesExtra?: string[];
   variant: number | string;
-  bodyVariant?: number;
+  bodyVariant?: number; // Deprecated in favor of extraVariant
+  extraVariant?: number;
 } | null;

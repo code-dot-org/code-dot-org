@@ -136,4 +136,8 @@ module AllowedHostnameHelper
     'swapi.dev',                # Star Wars data. We may want to remove this in favor of swapi.info
     # REMOVED: 'theunitedstates.io' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
   ].freeze
+
+  ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
+    'picsum.photos' # Placeholder images - Public API
+  ].freeze
 end

@@ -305,7 +305,7 @@ def dotd_menu(dotd_name)
       end
       menu.choice(:DTP) {do_dtp(dotd_name)}
       menu.choice(:STP) do
-        if run_on 'production_daemon', 'production/bin/seed-curriculum-content-from-staging-branch'
+        if run_on 'production-daemon', 'production/bin/seed-curriculum-content-from-staging-branch'
           puts 'Content from staging branch successfully seeded to production database'
         else
           puts 'Content from staging branch was not successfully seeded to production database.'
