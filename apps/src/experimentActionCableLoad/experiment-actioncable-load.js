@@ -17,21 +17,13 @@ const testLoad = function () {
 
   const connectionId = _.random(10000);
 
-  analyticsReporter.sendEvent(
-    'ActionCableLoadTestingConnecting',
-    {connectionId},
-    PLATFORMS.BOTH
-  );
+  logEvent('ActionCableLoadTestingConnecting', connectionId);
 
   const channel = consumer.subscriptions.create(
     'LoadTestingExperimentChannel',
     {
       connected() {
-        analyticsReporter.sendEvent(
-          'ActionCableLoadTestingConnected',
-          {connectionId},
-          PLATFORMS.BOTH
-        );
+        logEvent('ActionCableLoadTestingConnected', connectionId);
 
         setTimeout(() => {
           channel.echo(connectionId);
@@ -39,21 +31,13 @@ const testLoad = function () {
       },
       received(data) {
         if (data?.connectionId === connectionId) {
-          analyticsReporter.sendEvent(
-            'ActionCableLoadTestingReceived',
-            {connectionId},
-            PLATFORMS.BOTH
-          );
+          logEvent('ActionCableLoadTestingReceived', connectionId);
         }
       },
       echo(connectionId) {
         this.perform('echo', {connectionId});
 
-        analyticsReporter.sendEvent(
-          'ActionCableLoadTestingEchoSent',
-          {connectionId},
-          PLATFORMS.BOTH
-        );
+        logEvent('ActionCableLoadTestingEchoSent', connectionId);
       },
     }
   );
@@ -61,10 +45,9 @@ const testLoad = function () {
   setTimeout(() => {
     consumer.disconnect();
 
-    analyticsReporter.sendEvent(
-      'ActionCableLoadTestingUnsubscribed',
-      {connectionId},
-      PLATFORMS.BOTH
-    );
-  }, 60000);
+    logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
+  }, 20000);
 };
+
+const logEvent = (eventName, connectionId) =>
+  analyticsReporter.sendEvent(eventName, {connectionId}, PLATFORMS.BOTH);
