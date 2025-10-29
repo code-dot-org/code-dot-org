@@ -27,16 +27,16 @@ This document inventories logging across the Code.org platform. It explains, in 
   - **Slack notifier** ([code](../aws/cloudformation/slackCloudWatchEvent.js)): Receives CloudWatch Events/SNS, posts to Slack via webhook; logs include event metadata, Slack response status, and errors.
   - **CloudFront partitioner** ([code](../aws/cloudformation/s3PartitionCloudFrontLog.js)): Triggered by S3 `ObjectCreated` events; moves CloudFront objects into partitioned prefixes and deletes originals. Logs each move/delete decision, target partition path, and failures.
   - **Honeybadger notify** ([code](../aws/cloudformation/honeybadgerNotify.js)): Subscribed to an SNS topic; on alarm‑shaped messages, sends a concise Honeybadger notification and logs minimal handler flow and errors. The notification payload goes to Honeybadger, not CloudWatch.
-  - **Marketing router** (defined in [function](../aws/cloudformation/cloud_formation_stack.yml.erb#L438-L447) with [policy](../aws/cloudformation/cloud_formation_stack.yml.erb#L459-L476)): Proxies/forwards requests and emits structured JSON via `console.log`; logs include route, status, latency, and correlation/request IDs when present.
-  - Common patterns: CloudWatch captures start/end/report lines per invocation, including billed duration and memory; application logs should avoid PII and large payload dumps. Errors automatically generate stack traces in the function’s log stream.
+  - **Marketing router** (defined in [function](../aws/cloudformation/cloud_formation_stack.yml.erb#L438-L447): Proxies/forwards requests and emits structured JSON via `console.log`; logs include route, status, latency, and correlation/request IDs when present.
+  - Common patterns: CloudWatch captures start/end/report lines per invocation, including billed duration and memory;
 
 - Security/administration
-  - **CloudTrail** records AWS API activity and delivers JSON logs to S3; we expose them in Athena via a [CloudTrail table](../aws/cloudformation/data.yml.erb#L452-L503). Administrative audit trails also live in a dedicated [admin audit log group](../aws/cloudformation/data.yml.erb#L620-L661).
+  - **CloudTrail** records AWS API activity and delivers JSON logs to S3; we expose them in Athena via a [CloudTrail table](../aws/cloudformation/data.yml.erb#L452-L503). Administrative SSM audit trails also live in a dedicated [admin audit log group](../aws/cloudformation/data.yml.erb#L620-L661).
 
 - Observability services (third‑party)
-  - **Honeybadger**: Error reporting/alerting from Rails, Lambda handlers, and jobs (e.g., `Honeybadger.notify` uses across the codebase); use it for triage and visualization of exceptions.
-  - **New Relic**: APM and browser monitoring via the Ruby agent ([agent config](../cookbooks/cdo-apps/templates/default/newrelic.yml.erb)); use for performance traces and browser RUM, not as the durable store of logs.
-  - **Statsig**: Feature flagging/analytics. Where possible, prefer Statsig (or equivalent) for client analytics events over direct Firehose writes.
+  - **[Honeybadger](../lib/cdo/honeybadger.rb)**: Error reporting/alerting from Rails, Lambda handlers, and jobs (e.g., `Honeybadger.notify` uses across the codebase); use it for triage and visualization of exceptions.
+  - **[New Relic](../cookbooks/cdo-apps/templates/default/newrelic.yml.erb)**: APM and browser monitoring via the Ruby agent; use for performance traces and browser RUM, not as the durable store of logs.
+  - **Statsig**: Feature flagging/analytics for [marketing site](../frontend/apps/marketing/src/providers/statsig/client.ts), studio [front‑end](../apps/webpackEntryPoints.js), and [back‑end](../dashboard/lib/metrics/events.rb) with initialization in [server](../lib/cdo/statsig.rb) and [initializer](../dashboard/config/initializers/statsig.rb). Where possible, prefer Statsig (or equivalent) for client analytics events over direct Firehose writes.
 
 ## Destinations (and durability expectations)
 
