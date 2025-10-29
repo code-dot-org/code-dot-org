@@ -13,7 +13,7 @@ require 'cdo/honeybadger'
 class InactiveUserDeleter
   class SafetyConstraintViolation < RuntimeError; end
 
-  attr_reader :dry_run, :inactive_since, :limit
+  attr_reader :dry_run, :inactive_since, :limit, :query_limit
   attr_accessor :processed_user_ids
   alias :dry_run? :dry_run
 
@@ -24,13 +24,14 @@ class InactiveUserDeleter
   ACCOUNT_DELETION_LIMIT = 8_000
   BATCH_SIZE = 1_000
   INACTIVE_USER_TTL = 42.months
+  QUERY_LIMIT = 10_000
 
   # @param dry_run [Boolean] If true, no accounts will actually be deleted.
   # @param inactive_since [Time] The time before which accounts are considered inactive
   #   Defaults to 3.5 years ago, which is the current period before accounts are rendered inactive
   # @param limit [Integer] The maximum number of accounts to delete in a single run.
   #   This is a safety limit to prevent accidental deletion of too many accounts.
-  def initialize(dry_run: false, inactive_since: nil, limit: ACCOUNT_DELETION_LIMIT)
+  def initialize(dry_run: false, inactive_since: nil, limit: ACCOUNT_DELETION_LIMIT, query_limit: nil)
     @dry_run = dry_run.nil? ? false : dry_run
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
@@ -42,6 +43,11 @@ class InactiveUserDeleter
     # This is a safety limit to prevent accidental deletion of too many accounts.
     @limit = limit || ACCOUNT_DELETION_LIMIT
     raise ArgumentError.new('limit must be Integer') unless @limit.is_a? Integer
+
+    # Maximum number of accounts to query.
+    # This safety limit prevents the job from issuing extremely large queries
+    # that can take too long to execute or overwhelm the database.
+    @query_limit = query_limit || QUERY_LIMIT
 
     # Users that we don't want to include in paged batches. Includes users who have already been processed or encountered an error.
     @processed_user_ids = []
@@ -88,7 +94,10 @@ class InactiveUserDeleter
 
   def inactive_users
     ActiveRecord::Base.connected_to(role: :reporting) do
-      Queries::User::Inactive.call(inactive_since: inactive_since).where.not(id: processed_user_ids)
+      Queries::User::Inactive.
+      call(inactive_since: inactive_since).
+      where.not(id: processed_user_ids).
+      limit(@query_limit)
     end
   end
 
