@@ -1,5 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+import {ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
 
 import {
@@ -37,6 +38,7 @@ import {AichatState} from './state';
 
 const initialState: AichatState = {
   clientType: undefined,
+  chatInitialThreadPrompt: null,
   chatEventsPast: [],
   chatEventsCurrent: [],
   chatMessagePending: undefined,
@@ -112,6 +114,12 @@ const aichatSlice = createSlice({
 
     setClientType(state, action: PayloadAction<AiChatClientType>) {
       state.clientType = action.payload;
+    },
+    setChatInitialThreadPrompt(
+      state,
+      action: PayloadAction<ChatPrompt | null>
+    ) {
+      state.chatInitialThreadPrompt = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -404,6 +412,7 @@ export const {
   setOwnChatHistory,
   setUserHasAichatAccess,
   setClientType,
+  setChatInitialThreadPrompt,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,

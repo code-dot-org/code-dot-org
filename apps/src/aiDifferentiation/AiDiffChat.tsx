@@ -6,9 +6,10 @@ import React, {
   useState,
 } from 'react';
 
+import {setInitialThreadPrompt} from '@cdo/apps/aichat/redux/thunks';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
   AiDiffContext,
@@ -103,8 +104,6 @@ interface AiDiffChatProps {
   threadFetchCallback?: () => void;
   threadId?: number;
   setThreadId?: Dispatch<SetStateAction<number>>;
-  initialThreadPrompt?: ChatPrompt | null;
-  setInitialThreadPrompt?: Dispatch<SetStateAction<ChatPrompt | null>>;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
@@ -121,8 +120,6 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   threadFetchCallback = () => {},
   threadId = 0,
   setThreadId = () => {},
-  initialThreadPrompt = null,
-  setInitialThreadPrompt = () => {},
 }) => {
   const reportingData = React.useMemo(() => {
     return {
@@ -138,6 +135,10 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
   const viewAsUserId = useAppSelector(
     state => state.progress?.viewAsUserId || undefined
+  );
+
+  const initialThreadPrompt = useAppSelector(
+    state => state.aichat.chatInitialThreadPrompt
   );
 
   const teacherSections = Object.values(
@@ -179,6 +180,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           ).concat(additionalPrompts),
         ]
   );
+
+  const dispatch = useAppDispatch();
 
   const sendChatEvent = React.useCallback(
     (role: string, prompt: string, preset: boolean, thread: number) => {
@@ -335,15 +338,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
       setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
       onPromptSelect(initialThreadPrompt);
-      setInitialThreadPrompt(null);
+      setInitialThreadPrompt(dispatch, null);
     }
-  }, [
-    initialThreadPrompt,
-    threadMessages,
-    threadId,
-    onPromptSelect,
-    setInitialThreadPrompt,
-  ]);
+  }, [initialThreadPrompt, threadMessages, threadId, onPromptSelect, dispatch]);
 
   const onSuggestPrompts = (promptType: SuggestPromptsType) => {
     const aiInitialSuggestionsMessage = {

@@ -1,6 +1,8 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {setInitialThreadPrompt} from '@cdo/apps/aichat/redux/thunks';
 import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import HttpClient from '../util/HttpClient';
 
@@ -14,7 +16,6 @@ import {
   chatThreadValidator,
   chatThreadMessagesValidator,
   Context,
-  ChatPrompt,
 } from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -37,10 +38,10 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const [threadId, setThreadId] = useState<number>(0);
   const [threadTitle, setThreadTitle] = useState<string>(defaultThreadTitle);
   const [keyId, setKeyId] = useState<number>(0);
-  const [initialThreadPrompt, setInitialThreadPrompt] =
-    useState<ChatPrompt | null>(null);
 
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
+
+  const dispatch = useAppDispatch();
 
   async function asyncFetchThreads(): Promise<ChatThread[]> {
     const response = await HttpClient.fetchJson<ChatThread[]>(
@@ -104,13 +105,13 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const aiPromptOutsideChatClicked = useCallback(
     (label: string, prompt: string) => {
       setShowNotifications(false);
-      setInitialThreadPrompt({
+      setInitialThreadPrompt(dispatch, {
         label: label,
         prompt: prompt,
       });
       fetchThreadMessages(0);
     },
-    [fetchThreadMessages]
+    [dispatch, fetchThreadMessages]
   );
 
   return (
@@ -137,8 +138,6 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           key={keyId}
           threadId={threadId}
           setThreadId={setThreadId}
-          initialThreadPrompt={initialThreadPrompt}
-          setInitialThreadPrompt={setInitialThreadPrompt}
         />
       )}
     </div>

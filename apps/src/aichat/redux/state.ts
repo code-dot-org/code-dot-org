@@ -1,3 +1,5 @@
+import {ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
+
 import {ModalTypes} from '../constants';
 import {
   AiCustomizations,
@@ -16,6 +18,8 @@ import {
 
 export interface AichatState {
   clientType?: AiChatClientType;
+  // Initial prompt and the thread name for starting a new thread
+  chatInitialThreadPrompt: ChatPrompt | null;
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
   chatEventsPast: ChatEvent[];
