@@ -1,6 +1,7 @@
 import React from 'react';
 
 import aichatI18n from '@cdo/apps/aichat/locale';
+import musicI18n from '@cdo/apps/music/locale';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -12,6 +13,7 @@ import GenericDialog, {GenericDialogProps} from './GenericDialog';
 // Lab-specific messages for starting over.
 const LAB_SPECIFIC_MESSAGES: {[appName in AppName]?: string} = {
   aichat: aichatI18n.startOverAichatModelCustomizations(),
+  music: musicI18n.startOverMusicWorkspace(),
 };
 
 /**

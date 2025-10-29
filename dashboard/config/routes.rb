@@ -1,6 +1,9 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  mount ActionCable.server => '/cable'
+  get 'chatter/index'
+
   draw :marketing
 
   # Override Error Codes

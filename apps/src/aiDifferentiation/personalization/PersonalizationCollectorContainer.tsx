@@ -111,6 +111,12 @@ const PersonalizationCollectorContainer: React.FC = () => {
 
           if (profileMatch?.matchingProfile) {
             setMatchedTeachingProfile(profileMatch.matchingProfile);
+
+            const updatedData = {
+              ...personalizationData,
+              matchedPersona: profileMatch.matchingProfile,
+            };
+            await saveTeachingProfileData(updatedData);
           }
 
           setShowResults(true);
