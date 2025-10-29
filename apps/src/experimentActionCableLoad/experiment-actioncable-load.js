@@ -45,7 +45,7 @@ const testLoad = function () {
     consumer.disconnect();
 
     logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
-  }, 5 * 60 * 1000);
+  }, 30 * 1000);
 };
 
 const logEvent = (eventName, connectionId) => {
