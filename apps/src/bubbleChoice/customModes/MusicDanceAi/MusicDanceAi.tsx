@@ -64,7 +64,7 @@ async function loadLevelProperties(path: string): Promise<LevelProperties> {
 interface LabData extends LabProps {
   // In addition to LabProps, we'll also pass down a dedicated ProjectManager for each sublevel,
   // so each lab is writing and reading the correct project (instead accessing the singleton from Lab2Registry).
-  // Note that this requires the LabView to accept a ProjectManager prop, which is curr
+  // Note that this requires the LabView to accept a ProjectManager prop, which is currently only supported by Music and Dance.
   projectManager?: ProjectManager;
 }
 
