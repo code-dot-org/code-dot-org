@@ -83,10 +83,9 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
     end
 
     context 'when user has project' do
-      
       it 'removes updated_ip' do
         # The project factory causes db issues, so we use ProjectsTestUtils instead.
-        with_channel_for(user) do |project_id, storage_id|
+        with_channel_for(user) do |project_id, _storage_id|
           project = projects_table.where(id: project_id).first
           _(project[:updated_ip]).must_be :present?
           scrub_pii

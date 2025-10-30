@@ -108,9 +108,9 @@ module Services
       end
 
       private def scrub_project_ips
-        DASHBOARD_DB[:projects]
-          .where(storage_id: user.user_storage_id)
-          .update(updated_ip: '', updated_at: Time.now)
+        DASHBOARD_DB[:projects].
+          where(storage_id: user.user_storage_id).
+          update(updated_ip: '', updated_at: Time.now)
       end
 
       # Deletes PII from deprecated tables that no longer have a corresponding ActiveRecord model.
