@@ -29,7 +29,7 @@ import SourcesContainer, {
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import OnboardingTourSteps from './OnboardingTourSteps';
+import SketchlabTourSteps from './sketchlabTourSteps';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -172,7 +172,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   return (
     <div className={moduleStyles.sketchlabContainer}>
-      <OnboardingTourSteps />
+      <SketchlabTourSteps />
       <div style={{width: leftPanelWidth}} className={panelClassName}>
         <ResourcePanel
           levelProperties={levelProperties}
