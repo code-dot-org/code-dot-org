@@ -319,6 +319,12 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     return () => resizeObserver.disconnect();
   }, []);
 
+  const onAdlibChange = useCallback((promptText: string, choices: string[]) => {
+    setPromptText(promptText);
+    setChoices([...choices]);
+    variantHistory.current = [];
+  }, []);
+
   // We artificially increase the 'generating' time so that the image doesn't appear
   // too soon.
   const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
@@ -375,11 +381,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                     aiGenerateState
                   )}
                   glowSpeed={glowSpeed}
-                  onChange={(promptText, choices) => {
-                    setPromptText(promptText);
-                    setChoices([...choices]);
-                    variantHistory.current = [];
-                  }}
+                  onChange={onAdlibChange}
                 />
                 {aiGenerateState === 'none' && (
                   <div className={moduleStyles.buttonRow}>
