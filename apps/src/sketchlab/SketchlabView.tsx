@@ -67,8 +67,8 @@ async function uploadBase64ToUrl(
   uploadUrl: string,
   mimeType: string
 ): Promise<Response> {
-  const response = await fetch(dataUrl);
-  const blob = await response.blob();
+  const localResponse = await fetch(dataUrl);
+  const blob = await localResponse.blob();
   const file = new File([blob], 'file', {
     type: mimeType,
   });
@@ -197,15 +197,20 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
             const newFile = serializedData.files[fileId];
             const extension = MIME_TO_EXT[newFile.mimeType];
-            // note: rename to Url
-            const externalUrl = `/v3/assets/${channelId}/${fileId}.${extension}`;
+            let externalUrl = `/v3/assets/${channelId}/${fileId}.${extension}`;
 
-            // To do: what do we do if it fails?
-            await uploadBase64ToUrl(
-              newFile.dataURL,
-              externalUrl,
-              newFile.mimeType
-            );
+            try {
+              await uploadBase64ToUrl(
+                newFile.dataURL,
+                externalUrl,
+                newFile.mimeType
+              );
+            } catch {
+              // If an upload fails, still add an entry to externalFiles
+              // so we don't reattempt the upload repeatedly.
+              // Longer term, how should we handle failed uploads?
+              externalUrl = 'uploadFailed';
+            }
 
             const newExternalFile = {
               id: fileId,
