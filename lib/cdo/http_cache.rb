@@ -332,7 +332,14 @@ class HttpCache
             path: '/curriculum_tracking_pixel',
             headers: [],
             cookies: allowlisted_cookies
-          }
+          },
+          {
+            # ActionCable Websocket path:
+            path: '/cable',
+            # pass all headers, which disables caching, and also passes essential websocket upgrade headers:
+            headers: ['*'],
+            cookies: allowlisted_cookies,
+          },
         ],
         # Default Dashboard paths are session-specific, allowlist all session cookies and language header.
         default: {

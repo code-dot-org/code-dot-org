@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-23 16:29:05 UTC",
+    "serialized_at": "2025-10-27 18:53:51 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -103,6 +103,7 @@
       "key": "c5cf519a-0eff-42b8-adc8-c8fe9212612d",
       "position": 4,
       "properties": {
+        "progression_name": "Introducing Web Lab"
       },
       "seeding_key": {
         "activity_section.key": "c5cf519a-0eff-42b8-adc8-c8fe9212612d",
@@ -128,6 +129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-pre-L1-Welcome_pilot-oct-2025"
+        ],
         "progression": "Introduction to AI Foundations "
       },
       "bonus": false,
@@ -150,6 +154,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-pre_what_is_aif_4_pilot-oct-2025"
+        ],
         "progression": "Introduction to AI Foundations "
       },
       "bonus": false,
@@ -172,6 +179,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-pre-learning-approach_5_pilot-oct-2025"
+        ],
         "progression": "Introduction to AI Foundations "
       },
       "bonus": false,
@@ -194,6 +204,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-pre-different-6_pilot-oct-2025"
+        ],
         "progression": "Introduction to AI Foundations "
       },
       "bonus": false,
@@ -216,6 +229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_what is GenAI_5_pilot-oct-2025"
+        ],
         "progression": "Coding with AI"
       },
       "bonus": false,
@@ -238,6 +254,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-reflection_pilot-oct-2025"
+        ],
         "progression": "Coding with AI"
       },
       "bonus": false,
@@ -260,6 +279,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_final_project_7_pilot-oct-2025"
+        ],
         "progression": "Coding with AI"
       },
       "bonus": false,
@@ -282,6 +304,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_HowWeGetThere_8_pilot-oct-2025"
+        ],
         "progression": "Coding with AI"
       },
       "bonus": false,
@@ -304,6 +329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_HTML-10_pilot-oct-2025"
+        ],
         "progression": "The Building Blocks"
       },
       "bonus": false,
@@ -326,6 +354,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_CSS_11_pilot-oct-2025"
+        ],
         "progression": "The Building Blocks"
       },
       "bonus": false,
@@ -348,6 +379,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_JavaScript_12_pilot-oct-2025"
+        ],
         "progression": "The Building Blocks"
       },
       "bonus": false,
@@ -370,6 +404,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_AIFitIn_12_pilot-oct-2025"
+        ],
         "progression": "The Building Blocks"
       },
       "bonus": false,
@@ -392,6 +429,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_weblabAI_13_pilot-oct-2025"
+        ],
+        "progression": "Introducing Web Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -413,6 +454,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre1-weblab-panels_10_pilot-oct-2025"
+        ],
+        "progression": "Introducing Web Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -434,6 +479,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-reflection2_pilot-oct-2025"
+        ],
         "progression": "Closing"
       },
       "bonus": false,
@@ -456,6 +504,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-Closing_pilot-oct-2025"
+        ],
         "progression": "Closing"
       },
       "bonus": false,

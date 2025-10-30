@@ -24,9 +24,15 @@ options = {
   # TODO: populate Account ID dynamically.
   # role_arn: "arn:aws:iam::${account_id}:role/admin/CloudFormationMarketingSitesDevelopmentRole"
   role_arn: nil,
-  cloudformation_role_boundary: nil
+  cloudformation_role_boundary: nil,
+  web_application_firewall: nil
 }
 
+# To simplify the bash logic, GitHub Actions attempts to populate every optional command line argument:
+# https://github.com/code-dot-org/code-dot-org/blob/61057a9080e9cfb67672e027bd0ab91634e84830/.github/workflows/marketing-app-deploy-to-environment.yml#L104-L116
+#
+# OptionsParser interprets an empty value as an invalid argument when the declared type is `String`, so we omit the String
+# type constraint on optional arguments and set the option to `nil` when the supplied argument was an empty string.
 opt_parser = OptionParser.new do |opts|
   opts.banner = "Usage: ./deploy.rb [options]"
 
@@ -85,28 +91,22 @@ opt_parser = OptionParser.new do |opts|
     options[:subdomain_name] = subdomain
   end
 
+  # optional
   opts.on(
     '--production_domain_name DOMAIN',
     "Fully qualified production domain name for this site",
     "(e.g. 'hourofcode.org' for production deployments)",
     "Only used when environment_type is 'production'"
   ) do |domain|
-    # To simplify the bash logic, GitHub Actions always attempts to send this argument, even when the GitHub Environment
-    # `PRODUCTION_DOMAIN_NAME` does not exist or is empty. OptionsParser with String type interprets an empty string
-    # value as an invalid argument, so we remove the String type constraint and set this to `nil` when the supplied
-    # argument was an empty string.
     options[:production_domain_name] = (domain.nil? || domain.empty?) ? nil : domain
   end
 
+  # optional
   opts.on(
     '--production_hosted_zone_id ID',
     "AWS Route 53 Hosted Zone ID for the production domain",
     "Required when production_domain_name is specified"
   ) do |id|
-    # To simplify the bash logic, GitHub Actions always attempts to send this argument, even when the GitHub Environment
-    # Secret `PRODUCTION_HOSTED_ZONE_ID` does not exist or is empty. OptionsParser with String type interprets an empty
-    # string value as an invalid argument, so we remove the String type constraint and set this to `nil` when the
-    # supplied argument was an empty string.
     options[:production_hosted_zone_id] = (id.nil? || id.empty?) ? nil : id
   end
 
@@ -152,6 +152,15 @@ opt_parser = OptionParser.new do |opts|
     "Format: arn:aws:iam::<account-id>:policy/<policy-name>"
   ) do |arn|
     options[:cloudformation_role_boundary] = arn
+  end
+
+  # optional
+  opts.on(
+    '--web-application-firewall ARN',
+    "ARN of the Web Application Firewall Web Access Control List (WAF Web ACL / WAF Protection Pack) to protect this site.",
+    "Format: arn:aws:wafv2:<region-id>:<account-id>:global/webacl/<Web ACL Name>/<Web ACL Id>"
+  ) do |waf_web_acl_arn|
+    options[:web_application_firewall] = (waf_web_acl_arn.nil? || waf_web_acl_arn.empty?) ? nil : waf_web_acl_arn
   end
 
   opts.on('-h', '--help', 'Show this help message') do

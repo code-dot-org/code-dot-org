@@ -36,6 +36,8 @@ class BubbleChoice < DSLDefined
     uses_lab2
     is_project_level
     hide_letters_lab2
+    custom_mode
+    navigation_type
   )
 
   ALPHABET = ('a'..'z').to_a
@@ -185,6 +187,7 @@ class BubbleChoice < DSLDefined
           icon: level.try(:icon),
           uses_lab2: level.uses_lab2?,
           parent_level_id: id,
+          navigation_type: navigation_type,
         }
       )
 

@@ -21,7 +21,6 @@ export const submitTeacherFeedback = createAsyncThunk<
     await postSubmitTeacherFeedback(id, feedback);
     dispatch(
       sendAnalytics(EVENTS.SUBMIT_AICHAT_TEACHER_FEEDBACK, {
-        levelPath: window.location.pathname,
         feedback: feedback,
       })
     );

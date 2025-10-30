@@ -411,7 +411,7 @@ en:
             lesson-57:
               name: Sketch Lab
             lesson-58:
-              name: Unplugged
+              name: Unplugged level
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -25289,10 +25289,12 @@ en:
 
             #### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
         pl-sandbox-aif-sem-2-unit-2:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Teaching AI and Algorithmic Thinking
           lesson_groups: {}
           name: pl-sandbox-aif-sem-2-unit-2
-          title: ''
+          title: Teaching AI and Algorithmic Decisions
           description_audience: ''
           description_short: ''
           description: ''
@@ -25824,6 +25826,10 @@ en:
             &nbsp;
           description_short: ''
           description_audience: ''
+          lessons:
+            lesson-13:
+              name: AI Tutor - Python Lab
+          name: aif2-tutor-pilot-2025
         aif-all-the-things:
           lessons:
             lesson-1:
@@ -25850,11 +25856,19 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-ai-generated-design-pilot-2025
-          title: 'Unit 1: Preparing to Teach AI-Generated Design'
+          title: Teaching AI-Generated Design
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          student_description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
         self-paced-pl-ai-and-algorithmic-decisions-pilot-2025:
           lessons: {}
           lesson_groups: {}
@@ -25913,8 +25927,16 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025
-          title: Introduction to Teaching AI Foundations
+          title: "[PILOT] Pre-Work Teaching AI Foundations"
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          student_description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.

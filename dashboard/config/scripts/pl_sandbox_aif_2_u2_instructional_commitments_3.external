@@ -1,0 +1,344 @@
+name 'pl_sandbox_aif-2-U2-Instructional-commitments_3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Instructional Commitments
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Code.org AI bot character" style="border-radius:40px; float: left; padding-right: 2px; height: 150px; clear: both; margin: 0 20px 0px 10px;">
+
+<br>
+
+#### As part of this unit’s *instructional commitments*, students develop the habits and mindsets that connect *computational thinking, human-centered design, and responsible AI use*.
+
+#### They learn to think critically, design with empathy, and take ownership of their AI-assisted work—building a foundation that mirrors real-world roles in technology and design.
+
+<div style="clear:both;"></div>
+
+## Computational Thinking
+
+#### Foundational computational thinking practices are introduced through the design process, allowing students to apply these skills before writing any code.
+
+<!-- Grid container -->
+<div
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 10px 0;
+  "
+>
+  <!-- Card 1 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🧩 Decomposition
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>They practice decomposition by breaking down a complex interaction into smaller, manageable code chunks, such as “a function to check the answer,” “a variable to store the score,” and a “function to show the next question.”</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+      🧠 Algorithmic Thinking
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Students practice algorithmic thinking by using flowcharts to map out the branching logic of their program before they begin to code. They learn to plan a sequence of steps, decisions, and outcomes.</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 3 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🪲 Debugging
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i> Debugging is a central practice in this unit, framed as an essential part of the creative process. Building on the prompt-based debugging from Unit 1, students now learn to debug their own code. They practice perseverance by methodically identifying and fixing bugs, learning to view errors not as failures, but as opportunities to deepen their understanding of the code’s logic.</i>
+      </p>
+    </details>
+  </div>
+</div>
+
+
+
+
+<hr>
+
+## Human-Centered Design and Systems Thinking
+
+#### A “human-centered first” philosophy anchors the course, guiding students to prioritize people in every stage of design.
+
+<!-- Grid container -->
+<div
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 10px 0;
+  "
+>
+  <!-- Card 1 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        💛 Designing for Interaction and Feedback
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i> Students move beyond static layouts to design for dynamic user feedback. They answer the question, “When a user makes a choice, how does the app’s response show a consequence or reflect another character’s perspective?” This pushes them to design interactions that feel like a responsive dialogue.
+</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🖥️ Introducing Trade-offs
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>As students design branching logic, they are introduced to the concept of trade-offs. A choice a user makes might lead to a positive outcome in one area but a negative one in another, reflecting the competing needs of a small network of stakeholders (e.g., in a story, pleasing one character might displease another).
+</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 3 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🌐 Authoring a Point of View
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i> Students learn that the code they write is not neutral; it authors a perspective. The conditional logic they create determines how the app responds, what it values, and what consequences it presents, which is an early and important ethical consideration for a developer.
+</i>
+      </p>
+    </details>
+  </div>
+</div>
+
+<hr>
+
+## AI Ethics and Safety 
+#### Students are introduced to the concept of responsible AI collaboration, with an emphasis on their accountability for the outputs produced by AI tools.
+<!-- AI Ethics and Safety Cards -->
+<div
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 10px 0;
+  "
+>
+  <!-- Card 1 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🧠 Understanding Before Implementing
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i> A core principle is that students should not use AI-generated code that they do not understand. They are taught to use AI to get suggestions or fix bugs, but they are ultimately responsible for comprehending and owning the logic in their app.</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🔍 Accountability for AI Suggested Code
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Students learn that AI can sometimes introduce subtle bugs, inefficient code, or logic that doesn't fully align with their goals. They practice critically evaluating AI suggestions, testing them thoroughly, and modifying them to fit their specific context.</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 3 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+       ⚖️Developing Judgement
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>The unit challenges students to develop their own personal framework for when to write code themselves and when to ask for AI assistance. This involves reflecting on which tasks are best suited for AI and which require their own critical thinking and problem-solving skills.</i>
+      </p>
+    </details>
+  </div>
+</div>
+
+<hr>
+
+## Career Journeys
+#### Activities are framed around real-world professional roles, helping students see design as a meaningful and practical career skill.
+
+<!-- Career Journeys Cards -->
+<div
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 10px 0;
+  "
+>
+  <!-- Card 1 -->
+  <div
+    style="
+      flex: 1 1 calc(50% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 16px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 280px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🎨Front-end Developer
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>As students write their first lines of JavaScript to build the interactive parts of a web app that users see and touch, they are acting as Front-End Developers.</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    style="
+      flex: 1 1 calc(50% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 16px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 280px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+      ✅ Quality Assurance Engineer</summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>When students methodically test their app, create test cases to see if their logic holds up, identify bugs, and fix them, they are practicing the essential skills of a QA Engineer.</i>
+      </p>
+    </details>
+  </div>
+</div>
+
+<hr>
+
+
+
+
+MARKDOWN

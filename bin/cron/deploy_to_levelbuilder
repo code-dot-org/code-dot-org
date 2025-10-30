@@ -59,12 +59,11 @@ def main
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull request
   # from a commit hash (only a branch name), we create and push a branch.
   branch_name = "dtl_candidate_#{test_green_commit}"
-  success = GitHub.create_branch_from_commit(
+  GitHub.create_branch_from_commit(
     branch_name: branch_name,
     commit: test_green_commit,
     base_branch: 'origin/levelbuilder'
   )
-  raise Exception.new('GitHub.create_pull_request failed.') unless success
 
   # Create the PR, raising an exception if doing so failed.
   pr_number = GitHub.create_pull_request(
@@ -72,9 +71,6 @@ def main
     head: branch_name,
     title: "DTL (Test > Levelbuilder): #{test_green_commit}"
   )
-  if pr_number.nil?
-    raise Exception.new('GitHub.create_pull_request failed.')
-  end
 
   DevelopersTopic.set_dtl(TOPIC_DTL_SOON)
   ChatClient.message('levelbuilder', message_dtl_soon(pr_number), color: 'yellow')
