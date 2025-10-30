@@ -30,7 +30,7 @@ CloudFront writes access logs for every request received by the CDN, regardless 
 2025-10-29	23:04:19	SYD3-P3	534	208.127.115.39	GET	aaaabbbbccccdddd.cloudfront.net	/assets/js/images/toggleSummaryInactivewp68f831113447582d7d79.png	200	https://studio.code.org/courses/dance-ai-2023/units/1?viewAs=Instructor	Mozilla/5.0%20(X11;%20CrOS%20x86_64%2014541.0.0)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/140.0.0.0%20Safari/537.36	-	-	Hit	xtJZo1nd2Lu3bSZSihuBZmRdZGGv0N2PYshQIzbiThCsH9AkSTN4Bw==	studio.code.org	https	139	0.001	-	TLSv1.3	TLS_AES_128_GCM_SHA256	Hit	HTTP/2.0	-	-	15188	0.001	Hit	image/png	168	-	-
 ```
 
-**Cache Miss (Origin Fetch):**
+**Cache Miss (Origin Fetch):** (shows the `#Version/#Fields` header CloudFront prepends)
 ```
 #Version: 1.0
 #Fields: date time x-edge-location sc-bytes c-ip cs-method cs(Host) cs-uri-stem sc-status cs(Referer) cs(User-Agent) cs-uri-query cs(Cookie) x-edge-result-type x-edge-request-id x-host-header cs-protocol cs-bytes time-taken x-forwarded-for ssl-protocol ssl-cipher x-edge-response-result-type cs-protocol-version fle-status fle-encrypted-fields c-port time-to-first-byte x-edge-detailed-result-type sc-content-type sc-content-len sc-range-start sc-range-end
@@ -82,9 +82,7 @@ CloudFront logs contain 40+ fields (varies by version). Key fields include:
 
 **Note:** Fields are tab-separated. A `-` (hyphen) indicates no value. Certain fields (User-Agent, URI query, cookies) are URL-encoded.
 
-**Configuration:** [../lib/cdo/aws/cloudfront.rb#L41-L53](../lib/cdo/aws/cloudfront.rb#L41-L53), [../aws/cloudformation/cloud_formation_stack.yml.erb#L414-L419](../aws/cloudformation/cloud_formation_stack.yml.erb#L414-L419), [../aws/cloudformation/s3PartitionCloudFrontLog.js](../aws/cloudformation/s3PartitionCloudFrontLog.js)
-
-> **Duplication note:** The real-time pipeline described below captures the same CloudFront events but stores them in Parquet for faster querying; the TSV archive remains useful as the raw, minimally processed record.
+> **Duplication note:** The real-time pipeline described below captures the same CloudFront events but stores them in Parquet for faster querying
 
 ---
 
@@ -93,7 +91,7 @@ CloudFront logs contain 40+ fields (varies by version). Key fields include:
 **Format:** AWS Kinesis Data Firehose → JSON rows converted to Parquet (`snappy`) partitioned by `YYYY/MM/DD/HH`  
 **Official Documentation:** [CloudFront Real-Time Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html)
 
-CloudFront real-time logging is enabled via a `RealtimeLogConfig` that streams request data to Kinesis, transforms each row into JSON, and stores the result in Parquet inside `s3://cdo-access-logs/access-logs/`. The schema matches the `LOG_FIELDS` list configured in the access-log stack, and is exposed in Athena as table `cdo_access_logs.access_logs` (database `cdo_access_logs`).
+CloudFront real-time logging is enabled via a `RealtimeLogConfig` that streams request data to Kinesis, transforms each row into JSON, and the serializer writes the result in Parquet/Hive SerDe structure inside `s3://cdo-access-logs/access-logs/`. The schema matches the `LOG_FIELDS` list configured in the access-log stack, and is exposed in Athena as table `cdo_access_logs.access_logs` (database `cdo_access_logs`).
 
 ### Example Record (JSON prior to Parquet serialization)
 
@@ -157,7 +155,6 @@ Fields are defined by the comma-delimited `LOG_FIELDS` parameter in the access l
 - `cache-behavior-path-pattern` — Behavior that matched the request
 - `cs-headers`, `cs-header-names`, `cs-headers-count` — Header metadata supplied by CloudFront real-time logs
 
-**Configuration:** [../aws/cloudformation/standalone/access_logs/access_logs.yml](../aws/cloudformation/standalone/access_logs/access_logs.yml), [../aws/cloudformation/standalone/access_logs/access_logs.rb](../aws/cloudformation/standalone/access_logs/access_logs.rb), [../aws/cloudformation/standalone/access_logs/access_logs_partition.rb](../aws/cloudformation/standalone/access_logs/access_logs_partition.rb), [../lib/cdo/aws/cloudfront.rb#L301-L314](../lib/cdo/aws/cloudfront.rb#L301-L314)
 
 > **Duplication note:** Both CloudFront formats represent the same events. Keep the Parquet dataset for low-latency analytics and consider pruning the TSV archive (or vice versa) if cost becomes an issue.
 
@@ -168,7 +165,7 @@ Fields are defined by the comma-delimited `LOG_FIELDS` parameter in the access l
 **Format:** Space-delimited with quoted fields  
 **Official Documentation:** [AWS ALB Access Logs](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html)
 
-The Application Load Balancer writes logs for every HTTP/HTTPS request it receives. Logs are written directly to S3 at `s3://cdo-logs/production-codeorg/AWSLogs/<account>/elasticloadbalancing/<region>/YYYY/MM/DD/`.
+The Application Load Balancer writes logs for every HTTP/HTTPS request it receives. Logs are written directly to S3 at `s3://cdo-logs/<stack-name>-alb-access-logs/AWSLogs/<account>/elasticloadbalancing/<region>/YYYY/MM/DD/`. Query these records in Athena via table `elb_logs.prod_dashboard_alb`.
 
 ### Example Log Entries
 
@@ -216,7 +213,6 @@ http 2025-10-29T17:36:45.123456Z app/production-codeorg/a1b2c3d4e5f6g7h8 198.51.
 
 **Note:** Fields are space-delimited; values with spaces (request line, User-Agent, etc.) are enclosed in double quotes.
 
-**Configuration:** [../aws/cloudformation/cloud_formation_stack.yml.erb#L300-L305](../aws/cloudformation/cloud_formation_stack.yml.erb#L300-L305)
 
 ---
 
@@ -224,56 +220,54 @@ http 2025-10-29T17:36:45.123456Z app/production-codeorg/a1b2c3d4e5f6g7h8 198.51.
 
 **Format:** CEE-enhanced JSON (Common Event Expression)  
 **Library:** [Lograge](https://github.com/roidrage/lograge) with CEE formatter  
-**Configuration:** [../dashboard/config/environments/production.rb#L71-L72](../dashboard/config/environments/production.rb#L71-L72)
 
-Rails application logs (Dashboard and Pegasus via Puma) are written to syslog in JSON format using the Lograge gem with a CEE (Common Event Expression) prefix. CEE is a JSON-based logging standard that prepends `@cee:` to each JSON log line for easier parsing by syslog receivers.
+Rails application logs (Dashboard and Pegasus via Puma) are written to syslog in JSON format using the Lograge gem with a CEE (Common Event Expression) prefix. CEE is a JSON-based logging standard that prepends `@cee:` to each JSON log line for easier parsing by syslog receivers.  To query these logs, in CloudWatch Logs, use the `production-syslog` log group.
 
 ### Example Log Entries
 
 **Successful Web Request (INFO):**
 ```json
-@cee: {"method":"GET","path":"/s/course1/lessons/3/levels/5","format":"html","controller":"LevelsController","action":"show","status":200,"duration":124.56,"view":89.23,"db":28.45,"ip":"203.0.113.77","user_id":987654,"request_id":"a1b2c3d4-e5f6-7890-abcd-ef1234567890","timestamp":"2025-10-29T17:40:15.123Z"}
+Oct 30 16:35:40 ip-100-0-255-122 dashboard[2143738]: Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Oct 30 16:35:40 ip-100-0-255-122 dashboard[2143738]: @cee: {"method":"GET","path":"/api/v1/users/current/permissions","format":"*/*","controller":"Api::V1::UsersController","action":"get_current_permissions","status":200,"duration":26.01,"view":0.5,"db":5.4}
 ```
 
 **API Request with Parameters (INFO):**
 ```json
-@cee: {"method":"POST","path":"/api/v1/projects/12345/save","format":"json","controller":"ProjectsController","action":"save","status":200,"duration":456.78,"view":0.12,"db":398.34,"ip":"198.51.100.42","user_id":123456,"params":{"project_id":"12345"},"request_id":"b2c3d4e5-f6a7-8901-bcde-f12345678901","timestamp":"2025-10-29T17:41:22.456Z"}
+Oct 30 16:35:40 ip-100-0-255-122 dashboard[2142172]: @cee: {"method":"POST","path":"/user_level_interactions","format":"*/*","controller":"UserLevelInteractionsController","action":"create","status":201,"duration":73.82,"view":0.46,"db":7.58}
 ```
 
-**Application Error (ERROR):**
+**Not Found (404):**
 ```json
-@cee: {"method":"GET","path":"/s/course2/lessons/5/levels/10","format":"html","controller":"LevelsController","action":"show","status":500,"duration":89.12,"view":0.00,"db":15.23,"error":"ActiveRecord::RecordNotFound: Couldn't find Level with id=999","ip":"192.0.2.88","user_id":null,"request_id":"c3d4e5f6-a7b8-9012-cdef-123456789012","timestamp":"2025-10-29T17:42:30.789Z"}
+Oct 30 16:43:16 ip-100-0-255-122 dashboard[2114079]: @cee: {"method":"GET","path":"/user_preference/theme","format":"json","controller":"UserPreferencesController","action":"theme","status":404,"duration":28.87,"view":0.43,"db":8.47}
 ```
 
-**Slow Query Warning (WARN):**
+**Redirect (302):**
 ```json
-@cee: {"method":"GET","path":"/admin/reports","format":"html","controller":"AdminController","action":"reports","status":200,"duration":5234.12,"view":102.34,"db":5089.45,"ip":"10.0.1.15","user_id":1,"slow_query":true,"request_id":"d4e5f6a7-b8c9-0123-def1-234567890123","timestamp":"2025-10-29T17:43:45.012Z"}
+Oct 30 16:43:22 ip-100-0-255-122 dashboard[2127182]: @cee: {"method":"GET","path":"/","format":"html","controller":"HomeController","action":"index","status":302,"duration":93.55,"view":0.0,"db":60.68,"location":"https://studio.code.org/courses/csd3-virtual/un>
+```
+
+**Bad Request (400):**
+```json
+Oct 30 16:43:21 ip-100-0-255-122 dashboard[2140562]: @cee: {"method":"POST","path":"/user_level_interactions","format":"*/*","controller":"UserLevelInteractionsController","action":"create","status":400,"duration":78.22,"view":0.4,"db":5.98}
 ```
 
 ### Fields
 
-Rails Lograge logs typically include:
+Rails Lograge logs typically include the core keys shown in the examples above:
 
-- `method` — HTTP method (GET, POST, PUT, DELETE, etc.)
+- `method` — HTTP method (GET, POST, etc.)
 - `path` — Request path
-- `format` — Response format (html, json, xml, etc.)
+- `format` — Response format (html, json, `*/*`, etc.)
 - `controller` — Rails controller name
 - `action` — Controller action name
 - `status` — HTTP status code
 - `duration` — Total request duration in milliseconds
 - `view` — View rendering time in milliseconds
 - `db` — Database query time in milliseconds
-- `ip` — Client IP address (from X-Forwarded-For or direct connection)
-- `user_id` — Authenticated user ID, or `null` if not logged in
-- `params` — Request parameters (filtered to exclude sensitive data like passwords)
-- `request_id` — Unique request identifier (UUID)
-- `timestamp` — ISO 8601 timestamp (UTC)
-- `error` — Error message and class (only present for exceptions)
-- `exception` — Exception backtrace (only present for errors, may be truncated)
 
-**Note:** The `@cee:` prefix is followed by a space and then the JSON object. This format allows syslog processors to recognize and parse the structured JSON payload.
+Depending on the route and Lograge hooks, optional keys may also appear—for example `ip`, `user_id`, `params`, `request_id`, `timestamp`, `location` (for redirects), or error metadata like `error` and `exception`.
 
-**Additional Context:** Lograge is configured to condense Rails' verbose multi-line logs into a single JSON line per request. In production and staging ([../dashboard/config/environments/production.rb#L71](../dashboard/config/environments/production.rb#L71), [../dashboard/config/environments/staging.rb#L69](../dashboard/config/environments/staging.rb#L69)), logs go to syslog facility `LOCAL0`. In adhoc environments ([../dashboard/config/environments/adhoc.rb#L34](../dashboard/config/environments/adhoc.rb#L34)), Lograge is disabled to show full Rails logs for easier debugging.
+**Note:** The `@cee:` prefix is followed by a space and then the JSON object. Rails still emits unstructured lines (for example, `Rendered ...`) immediately before the JSON; parsers should filter for lines beginning with `@cee:` when extracting structured entries.
 
 ---
 
@@ -284,10 +278,11 @@ Rails Lograge logs typically include:
 
 NGINX sits in front of both Puma applications and proxies requests to the appropriate backend (Dashboard or Pegasus). Access logs use the default "combined" format.
 
-### Example Log Entry
+### Example Log Entries
 
 ```
-203.0.113.99 - - [29/Oct/2025:17:45:12 +0000] "GET /s/course1 HTTP/1.1" 200 12345 "https://www.google.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+100.0.255.150 - - [30/Oct/2025:00:38:40 +0000] "GET /user_preference/theme HTTP/1.1" 401 49 "-" "Amazon CloudFront"
+100.0.255.190 - - [30/Oct/2025:00:38:40 +0000] "POST /milestone/130681994/158325/10433?course_id=673 HTTP/1.1" 200 358 "-" "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
 ```
 
 ### Fields
@@ -305,7 +300,6 @@ The combined log format includes:
 
 **Note:** NGINX logs are written to `/var/log/nginx/access.log` on each EC2 instance and uploaded hourly to S3 by the [log upload script](../bin/upload-logs-to-s3).
 
-**Configuration:** [../cookbooks/cdo-nginx/templates/default/nginx.conf.erb#L19](../cookbooks/cdo-nginx/templates/default/nginx.conf.erb#L19)
 
 ---
 
@@ -347,7 +341,6 @@ YYYY/MM/DD HH:MM:SS [level] pid#tid: *connection_id message, context_key: value,
 - `message` — Error or event description
 - `context` — Comma-separated key-value pairs (e.g., `client`, `server`, `request`, `upstream`, `host`, `referrer`)
 
-**Configuration:** [../cookbooks/cdo-nginx/templates/default/nginx.conf.erb#L20](../cookbooks/cdo-nginx/templates/default/nginx.conf.erb#L20)
 
 ---
 
@@ -387,7 +380,6 @@ Browser event logs are flexible and include:
 - `page` — Page path
 - Additional event-specific fields (e.g., `target`, `message`, `stack`, `metric`, `value`, `browser`, `os`)
 
-**Configuration:** [../dashboard/app/controllers/browser_events_controller.rb#L4-L13](../dashboard/app/controllers/browser_events_controller.rb#L4-L13), [#L21-L27](../dashboard/app/controllers/browser_events_controller.rb#L21-L27), [#L54-L57](../dashboard/app/controllers/browser_events_controller.rb#L54-L57)
 
 ---
 
@@ -430,7 +422,6 @@ MMM DD HH:MM:SS hostname program[pid]: message
 
 **Note:** Rails logs include the `@cee:` JSON prefix in the message field. Syslog on EC2 instances is configured to rotate at 100MB and keep 7 days of logs locally. Logs are also uploaded hourly to S3 via the [log upload script](../bin/upload-logs-to-s3).
 
-**Configuration:** [../cookbooks/cdo-syslog/recipes/default.rb](../cookbooks/cdo-syslog/recipes/default.rb), [../bin/upload-logs-to-s3](../bin/upload-logs-to-s3)
 
 ---
 
@@ -477,7 +468,7 @@ Firehose events are client-defined and typically include:
 |----------|--------|-------------|-----------|---------------|
 | CloudFront Standard Access | TSV | S3 `cdo-logs/cloudfront/` | Indefinite (partitioned) | [AWS CloudFront Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html) |
 | CloudFront Real-Time Access | Parquet | S3 `cdo-access-logs/access-logs/` | Intelligent Tiering → Deep Archive | [CloudFront Real-Time Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html) |
-| ALB Access | Space-delimited | S3 `cdo-logs/.../elasticloadbalancing/` | Indefinite | [AWS ALB Logs](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html) |
+| ALB Access | Space-delimited | S3 `cdo-logs/<stack>-alb-access-logs/AWSLogs/.../elasticloadbalancing/` | Indefinite | [AWS ALB Logs](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html) |
 | Rails (Lograge CEE) | JSON | Syslog → S3 `cdo-logs/hosts/` | 7 days local, indefinite S3 | [Lograge](https://github.com/roidrage/lograge) |
 | NGINX Access | Combined CLF | Local → S3 `cdo-logs/hosts/` | 7 days local, indefinite S3 | [NGINX Logging](https://nginx.org/en/docs/http/ngx_http_log_module.html) |
 | NGINX Error | NGINX error format | Local → S3 `cdo-logs/hosts/` | 7 days local, indefinite S3 | [NGINX Error Log](https://nginx.org/en/docs/ngx_core_module.html#error_log) |
