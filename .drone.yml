@@ -79,8 +79,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/cdo-ci:1.17
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -189,8 +188,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/cdo-ci:1.17
     pull: always
     volumes:
       - name: mysql
@@ -271,7 +269,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-ci-tests
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/cdo-ci:1.17
     pull: always
     environment:
       CI_JOB: 'ui_tests'
@@ -283,8 +281,6 @@ steps:
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
-      - /entrypoint.sh docker/ci/scripts/install_ci_tests.sh
-      - /entrypoint.sh docker/ci/scripts/build_ci_tests.sh
 
   - name: cache-staging-ci-build
     image: plugins/s3-cache
@@ -314,6 +310,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 925c21602c339f772dc42252cdd352841ca442fdb9f4ca96a8a4b93b9add0c2b
+hmac: 12a10fb1535474843e0004d777e7fb5472679ab0d4f955faece04a24d1b05160
 
 ...
