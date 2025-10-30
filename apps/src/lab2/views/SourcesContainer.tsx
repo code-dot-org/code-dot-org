@@ -88,7 +88,9 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
     (sources: ProjectSources, save: boolean = false) => {
       setCurrentSources(sources);
       if (save) {
-        projectManager?.save(sources, true);
+        (
+          projectManager || Lab2Registry.getInstance().getProjectManager()
+        )?.save(sources, true);
       }
 
       if (reinitializationHandler.current) {
