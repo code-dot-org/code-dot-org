@@ -1,12 +1,7 @@
 import {LinkButton} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  Heading5,
-  OverlineTwoText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React from 'react';
@@ -78,24 +73,36 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
           onClick={() => onClose(id)}
         />
       )}
-      <OverlineTwoText className={styles.promotionType}>
+      <Typography
+        className={styles.promotionType}
+        variant="overline2"
+        gutterBottom
+      >
         <FontAwesomeV6Icon iconName={getIconType(announcementType)} />{' '}
         {announcementType}
-      </OverlineTwoText>
-      <Heading5 className={styles.promotionTitle}>{title}</Heading5>
+      </Typography>
+      <Typography className={styles.promotionTitle} variant="h5" gutterBottom>
+        {title}
+      </Typography>
       {image && (
         <img src={image} alt={title} className={styles.promotionImage} />
       )}
-      <BodyThreeText>{description}</BodyThreeText>
+      <Typography variant="body3" gutterBottom>
+        {description}
+      </Typography>
       {partnerLogo && (
-        <BodyThreeText className={styles.promotionPartnerLogo}>
-          <StrongText>{i18n.partnershipWith()}</StrongText>
+        <Typography
+          className={styles.promotionPartnerLogo}
+          variant="body3"
+          gutterBottom
+        >
+          <Typography variant="strong">{i18n.partnershipWith()}</Typography>
           <img
             src={partnerLogo}
             alt="Partner Logo"
             className={styles.partnerLogo}
           />
-        </BodyThreeText>
+        </Typography>
       )}
       <LinkButton
         href={buttonTarget}

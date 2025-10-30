@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import {sample} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 import reactStringReplace from 'react-string-replace';
@@ -6,7 +7,7 @@ import styles from './Adlib.module.scss';
 
 export type AdlibType = {
   template: string;
-  options: {[key: string]: string[]};
+  options: {[key: string]: {id: string; text: string}[]};
   variantCount: number;
 };
 
@@ -15,9 +16,11 @@ export type AdlibsType = {
 };
 
 interface AdlibProps {
+  children?: React.ReactNode;
   adlib: AdlibType;
+  readOnly?: boolean;
+  glowSpeed?: 'normal' | 'fast';
   onChange: (value: string, choices: string[]) => void;
-  className?: string;
 }
 
 // This component takes a template string with placeholders in {curly braces}
@@ -25,9 +28,11 @@ interface AdlibProps {
 // dropdowns to select the options.  When the selected options change, it calls
 // onChange with the filled-in text.
 const Adlib: React.FunctionComponent<AdlibProps> = ({
+  children,
   adlib,
+  readOnly,
+  glowSpeed,
   onChange,
-  className,
 }) => {
   const [adlibOptions, setAdlibOptions] = useState<{[key: string]: string}>({});
   const {template, options} = adlib;
@@ -36,7 +41,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
   useEffect(() => {
     const initialOptions: {[key: string]: string} = {};
     Object.keys(options).forEach(key => {
-      initialOptions[key] = sample(options[key]) || '';
+      initialOptions[key] = sample(options[key])?.id || '';
     });
     setAdlibOptions(initialOptions);
   }, [options]);
@@ -45,7 +50,10 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
   const filledAdlibText = useMemo(() => {
     let output = template;
     Object.keys(options).forEach(key => {
-      output = output.replace(`{${key}}`, adlibOptions[key]);
+      output = output.replace(
+        `{${key}}`,
+        options[key].find(option => option.id === adlibOptions[key])?.text || ''
+      );
     });
     return output;
   }, [adlibOptions, options, template]);
@@ -77,8 +85,8 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
             }}
           >
             {options[key].map(option => (
-              <option key={option} value={option}>
-                {option}
+              <option key={option.id} value={option.id}>
+                {option.text}
               </option>
             ))}
           </select>
@@ -94,7 +102,23 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     onChange(filledAdlibText, choices);
   }, [adlibOptions, choices, filledAdlibText, onChange]);
 
-  return <div className={className}>{adlibHtml}</div>;
+  return (
+    <div
+      className={classNames(
+        styles.adlib,
+        glowSpeed === 'fast'
+          ? styles.adlibFastGlowSpeed
+          : glowSpeed === 'normal'
+          ? styles.adlibNormalGlowSpeed
+          : undefined
+      )}
+    >
+      <div className={styles.adlibInner}>
+        <div>{readOnly ? filledAdlibText : adlibHtml}</div>
+        {children}
+      </div>
+    </div>
+  );
 };
 
 export default Adlib;

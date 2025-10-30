@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:13.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're building a weather app that shows the current forecast. The forecast just changed, so your app needs to update the weather description.\r\n\r\n1. Look at the original value stored in `forecast`\r\n\r\n2. Change the value to a new forecast, like `\"sunny\"` or `\"thunderstorms\"`\r\n\r\n3. Run the program to see the updated forecast.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery time you assign a new value to a variable, the old one is replaced -- it's like swapping out what's in a labeled box.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Weather Forecast",
+    "bubble_choice_description": "You're building a weather app that shows the current forecast. The forecast just changed, so your app needs to update the weather description.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program updates the weather forecast\n\nforecast = \"cloudy\"\nprint(\"Today's forecast:\", forecast)\n\n# Update the forecast below\n\n\nprint(\"Updated forecast:\", forecast)\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/5741dffd0124e616519cb8ff652f5506-weather.png",
+    "name_suffix": "_pilot-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzj10bsFDb4xVPYT394LW1p+CFyEIktKM\nQq7kpkFTdpFMimc0DzODNvtmfL/fLwt8vmPqSveAZFR4jmZsaN0dVR3wfjfz\n6i34lTGhoUJBAbH1P4dvWU75iejXcQ9f8BFfDpPrgrY3hZopJTLJWADloSyK\nuFNW1zU1AmUapqXEvuDoSgxBC16H7a7AJKCqhM4ygaK4SldPrBjCP0vX+zVJ\nPemHjA8eAhrOvjer2Ottwp0aBb+rhKtmzYoPOZTOO8cBrPEYtNPzIbG6Tf8N\nUsmO6kWw2IT607UfVJV7wQQ9M1I8Pwo/bz1LtlhKiV6E6fwbgf28e+dKTkZ0\n0ZRzGo5p8v4wokLb14BEeM9z2iTt+YPZ\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestForecastUpdate(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get the printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_forecast_updated(self):\n        \"\"\"forecast should change from original to a new value\"\"\"\n        try:\n            from main import forecast\n        except ImportError:\n            self.fail(\"Make sure you create a variable called forecast!\")\n\n        printed_lines = [line.strip() for line in self.log if line.strip()]\n\n        # Find original and updated printed lines\n        original_line = next((line for line in printed_lines if \"Today's forecast:\" in line), None)\n        updated_line = next((line for line in printed_lines if \"Updated forecast:\" in line), None)\n\n        self.assertIsNotNone(original_line, \"Make sure you print the original forecast!\")\n        self.assertIsNotNone(updated_line, \"Make sure you print the updated forecast!\")\n\n        # Extract just the forecast words\n        original_forecast = original_line.split(\":\")[-1].strip()\n        updated_forecast = updated_line.split(\":\")[-1].strip()\n\n        self.assertNotEqual(\n            original_forecast,\n            updated_forecast,\n            \"Make sure you actually update the forecast to a new value!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:13.441+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level4c_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level4c_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

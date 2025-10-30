@@ -25,7 +25,7 @@
         },
         {
           "tileType": 1,
-          "value": 6,
+          "value": 5,
           "assetId": 303
         },
         {
@@ -384,8 +384,12 @@
       "active": false,
       "open": false,
       "type": "validation"
-    }
+    },
+    "offer_browser_tts": "false",
+    "widget_view": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:49.865+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson8-level3_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson8-level3_2025-launch\"},{\"changed_at\":\"2025-04-17 02:22:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:42:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:43:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:43:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-25 01:45:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-30 18:04:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:49.865+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson8-level3_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson8-level3_2025-launch\"},{\"changed_at\":\"2025-04-17 02:22:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:42:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:43:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:43:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-25 01:45:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-30 18:04:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-22 15:39:55 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

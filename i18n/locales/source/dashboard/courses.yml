@@ -5429,6 +5429,24 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        pilot5:
+          title: pilot5
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-5:
+          title: hoai-dance-5
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-hoai-pl:
+          title: sandbox-hoai-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
     resources:
       curriculum/csd/2017:
         name: Curriculum

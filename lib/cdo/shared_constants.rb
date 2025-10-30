@@ -738,6 +738,7 @@ module SharedConstants
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   AI_EVALUATION_TYPES = {
     SINGLE_STUDENT: 'single_student',
@@ -906,4 +907,13 @@ module SharedConstants
     "/oauth_sign_out/",
     "/certificates/"
   ].freeze
+
+  BUBBLE_CHOICE_CUSTOM_MODES = {
+    MUSIC_DANCE_AI: 'music_dance_ai',
+  }.freeze
+
+  BUBBLE_CHOICE_NAVIGATION_TYPES = {
+    PARENT: 'parent',
+    NEXT_LEVEL: 'next_level',
+  }
 end

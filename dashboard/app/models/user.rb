@@ -251,6 +251,7 @@ class User < ApplicationRecord
 
   has_many :hint_view_requests
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
+  has_many :ai_lesson_summaries, dependent: :destroy
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 

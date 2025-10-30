@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 0.5rem;
   transition: outline 0.2s ease-in;
+  cursor: text;
 
   @include mixins.border-styles($border-color: var(--borders-neutral-strong));
 
@@ -40,6 +41,11 @@
   // Chat Actions container styles
   .chatActionsContainer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+
+    // If there's only one child element, align it to the right
+    & > *:only-child {
+      margin-left: auto;
+    }
   }
 }

@@ -16,7 +16,7 @@ class HomeController < ApplicationController
   # The terms_and_privacy page gets loaded in an iframe on the signup page, so skip
   # clearing the sign up tracking variables
   skip_before_action :clear_sign_up_session_vars, only: [:terms_and_privacy]
-  skip_before_action :statsig_stable_id, only: [:health_check]
+  skip_before_action :initialize_statsig_stable_id, only: [:health_check]
 
   def set_locale
     redirect_path = if params[:i18npath]
@@ -140,19 +140,15 @@ class HomeController < ApplicationController
     @show_school_info_interstitial = params[:showSchoolInfoInterstitial]
     @show_section_creation_celebration_dialog = params[:showSectionCreationDialog]
 
-    # Students and teachers will receive a @top_course for their primary
-    # script, so we don't want to include that script (if it exists) in the
-    # regular lists of recent scripts.
-    exclude_primary_script = true
-    @homepage_data[:courses] = current_user.recent_student_courses_and_units(exclude_primary_script)
+    @homepage_data[:courses] = current_user.recent_student_courses
 
     @homepage_data[:hasFeedback] = TeacherFeedback.has_feedback?(current_user.id)
 
-    script = Queries::ScriptActivity.primary_student_unit(current_user)
-    if script
+    unit_context = Queries::ScriptActivity.primary_student_unit_context(current_user)
+    if unit_context
+      script = unit_context[:unit]
       script_level = current_user.next_unpassed_progression_level(script)
-      unit_group = script.get_original_unit_group
-      unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group == unit_group} if unit_group
+      unit_group_unit = unit_context[:unit_group_unit]
     end
     @homepage_data[:topCourse] = nil
     if script && script_level

@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:15.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're working on a pet adoption app that stores info about each animal: their name, age, and whether they're already adopted.\r\n\r\n1. Look at the variables already defined: `pet_name`, `pet_age`, and `is_adopted`\r\n\r\n2. Try using different operations (`+`, `-`, etc.) on them.\r\n\r\n3. Predict which operations will work, and which will give you errors.\r\n\r\n4. Use `print()` to test and explore what happens.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can add numbers and combine strings — but some operations won't work with booleans or if the data types don't match. Try it and see what happens!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Pet Profile Builder",
+    "bubble_choice_description": "You're working on a pet adoption app that stores info about each animal: their name, age, and whether they're already adopted.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program explores operations with different data types\n\npet_name = \"Bella\"\npet_age = 3\nis_adopted = True\n\n# Try combining or operating on the variables below\n# What works? What causes errors?\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/382d9122a6d6afdf6ba392c2657efd4f-pets.png",
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:15.715+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level6a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level6a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

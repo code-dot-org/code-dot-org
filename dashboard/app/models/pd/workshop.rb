@@ -538,6 +538,7 @@ class Pd::Workshop < ApplicationRecord
     scheduled_start_in_days(days).each do |workshop|
       next if workshop.suppress_reminders?
 
+      # Send reminder email to workshop enrollees
       workshop.enrollments.each do |enrollment|
         user = enrollment.user
         Pd::WorkshopMailjetMailer.send_teacher_workshop_reminder(enrollment, user, false, days)
@@ -550,6 +551,16 @@ class Pd::Workshop < ApplicationRecord
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
       end
 
+      # Send reminder email to the workshop Regional Partner (if available)
+      if workshop.regional_partner.present?
+        begin
+          Pd::WorkshopMailjetMailer.send_rp_workshop_reminder(workshop, days)
+        rescue => exception
+          errors << "regional partner #{workshop.regional_partner.id} - #{exception.message}"
+        end
+      end
+
+      # Send reminder email to facilitators (if available)
       workshop.facilitators.each do |facilitator|
         next if facilitator == workshop.organizer
         begin
@@ -559,6 +570,7 @@ class Pd::Workshop < ApplicationRecord
         end
       end
 
+      # Send reminder email to the workshop organizer
       begin
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
       rescue => exception
@@ -983,14 +995,12 @@ class Pd::Workshop < ApplicationRecord
     when "National"
       true
     when "Regional"
-      zip = user&.school_info&.school&.zip || user&.school_info&.zip
+      school = Queries::SchoolInfo.current_school(user)
+      zip = school&.dig(:school_zip)
       return false if zip.blank?
 
-      normalized_zip = zip.to_s.rjust(5, '0')
-
       zip_codes = regional_partner&.mappings&.pluck(:zip_code)
-
-      zip_codes&.include?(normalized_zip)
+      zip_codes&.include?(zip)
     else
       false
     end

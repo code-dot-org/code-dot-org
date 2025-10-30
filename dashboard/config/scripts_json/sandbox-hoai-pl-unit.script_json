@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-08 22:36:30 UTC",
+    "serialized_at": "2025-10-27 15:57:08 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -67,7 +67,7 @@
       "key": "057330e3-859d-46f4-9203-865eb0f16f96",
       "position": 1,
       "properties": {
-        "progression_name": "Generate a star dancer! "
+        "progression_name": "PL Info Levels"
       },
       "seeding_key": {
         "activity_section.key": "057330e3-859d-46f4-9203-865eb0f16f96",
@@ -103,7 +103,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Generate a star dancer! "
+        "level_keys": [
+          "HoAI_pilot_5_intro_-pl"
+        ],
+        "progression": "PL Info Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -125,12 +128,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Generate a star dancer! "
+        "level_keys": [
+          "HoAI_pilot_5_dancer_info_XII-pl"
+        ],
+        "progression": "PL Info Levels"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_5_dancer1_-pl"
+          "HoAI_pilot_5_dancer_info_XII-pl"
         ],
         "lesson.key": "Pilot 5",
         "lesson_group.key": "new-lesson-group",
@@ -138,7 +144,7 @@
         "activity_section.key": "057330e3-859d-46f4-9203-865eb0f16f96"
       },
       "level_keys": [
-        "HoAI_pilot_5_dancer1_-pl"
+        "HoAI_pilot_5_dancer_info_XII-pl"
       ]
     },
     {
@@ -147,51 +153,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Generate a star dancer! "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot_5_musicX_-pl"
+        "level_keys": [
+          "HoAI_pilot_5_dancer_info_-pl"
         ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "057330e3-859d-46f4-9203-865eb0f16f96"
-      },
-      "level_keys": [
-        "HoAI_pilot_5_musicX_-pl"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Generate a star dancer! "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot_5_dancer2_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "057330e3-859d-46f4-9203-865eb0f16f96"
-      },
-      "level_keys": [
-        "HoAI_pilot_5_dancer2_-pl"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Generate a star dancer! "
+        "progression": "PL Info Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -208,34 +173,15 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Generate a star dancer! "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot_5_dancer3_-pl"
+        "level_keys": [
+          "HoAI_pilot_5_musicXI_-pl"
         ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "057330e3-859d-46f4-9203-865eb0f16f96"
-      },
-      "level_keys": [
-        "HoAI_pilot_5_dancer3_-pl"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Generate a star dancer! "
+        "progression": "PL Info Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -252,193 +198,28 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music1_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      },
-      "level_keys": [
-        "HoAI_pilot_5_music1_-pl"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music2_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      },
-      "level_keys": [
-        "HoAI_pilot_5_music2_-pl"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot5_music2playtog_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      },
-      "level_keys": [
-        "HoAI_pilot5_music2playtog_-pl"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music4_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      },
-      "level_keys": [
-        "HoAI_pilot_5_music4_-pl"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_pilot_5_musicX_-pl"
+        ],
+        "progression": "PL Info Levels"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_5_music_modify_together_-pl"
+          "HoAI_pilot_5_musicX_-pl"
         ],
         "lesson.key": "Pilot 5",
         "lesson_group.key": "new-lesson-group",
         "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
+        "activity_section.key": "057330e3-859d-46f4-9203-865eb0f16f96"
       },
       "level_keys": [
-        "HoAI_pilot_5_music_modify_together_-pl"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 13,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music5_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      },
-      "level_keys": [
-        "HoAI_pilot_5_music5_-pl"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 14,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music6_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      },
-      "level_keys": [
-        "HoAI_pilot_5_music6_-pl"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 15,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music_modify_song_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      },
-      "level_keys": [
-        "HoAI_pilot_5_music_modify_song_-pl"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 16,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Generate the dance party!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI_pilot_5_choice_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "a510ae17-97d4-4b10-96d1-744541204d47"
-      },
-      "level_keys": [
-        "HoAI_pilot_5_choice_-pl"
+        "HoAI_pilot_5_musicX_-pl"
       ]
     }
   ],
@@ -457,33 +238,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_5_dancer1_-pl",
+        "level.key": "HoAI_pilot_5_dancer_info_XII-pl",
         "script_level.level_keys": [
-          "HoAI_pilot_5_dancer1_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "057330e3-859d-46f4-9203-865eb0f16f96"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HoAI_pilot_5_musicX_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot_5_musicX_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "057330e3-859d-46f4-9203-865eb0f16f96"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HoAI_pilot_5_dancer2_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot_5_dancer2_-pl"
+          "HoAI_pilot_5_dancer_info_XII-pl"
         ],
         "lesson.key": "Pilot 5",
         "lesson_group.key": "new-lesson-group",
@@ -505,18 +262,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_5_dancer3_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot_5_dancer3_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "057330e3-859d-46f4-9203-865eb0f16f96"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "HoAI_pilot_5_musicXI_-pl",
         "script_level.level_keys": [
           "HoAI_pilot_5_musicXI_-pl"
@@ -529,110 +274,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_5_music1_-pl",
+        "level.key": "HoAI_pilot_5_musicX_-pl",
         "script_level.level_keys": [
-          "HoAI_pilot_5_music1_-pl"
+          "HoAI_pilot_5_musicX_-pl"
         ],
         "lesson.key": "Pilot 5",
         "lesson_group.key": "new-lesson-group",
         "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HoAI_pilot_5_music2_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music2_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HoAI_pilot5_music2playtog_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot5_music2playtog_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HoAI_pilot_5_music4_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music4_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HoAI_pilot_5_music_modify_together_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music_modify_together_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HoAI_pilot_5_music5_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music5_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HoAI_pilot_5_music6_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music6_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HoAI_pilot_5_music_modify_song_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot_5_music_modify_song_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "fc6dbfa8-5414-48ef-9da3-b6bf17c7595a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HoAI_pilot_5_choice_-pl",
-        "script_level.level_keys": [
-          "HoAI_pilot_5_choice_-pl"
-        ],
-        "lesson.key": "Pilot 5",
-        "lesson_group.key": "new-lesson-group",
-        "script.name": "sandbox-hoai-pl-unit",
-        "activity_section.key": "a510ae17-97d4-4b10-96d1-744541204d47"
+        "activity_section.key": "057330e3-859d-46f4-9203-865eb0f16f96"
       }
     }
   ],

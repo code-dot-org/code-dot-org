@@ -158,7 +158,9 @@ class LtiV1Controller < ApplicationController
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment_name = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_PLATFORM_CLAIM]&.[](:name)
       deployment = Queries::Lti.get_deployment(integration[:id], deployment_id)
-      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
+      # ClassLink uses a non-standard role claim key
+      role_key = decoded_jwt[Policies::Lti::CLASSLINK_ROLE_KEY].present? ? Policies::Lti::CLASSLINK_ROLE_KEY : Policies::Lti::LTI_ROLES_KEY
+      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[role_key])
 
       # If deployment name is nil, update it with the name from the JWT. This
       # could likely be removed after a period of time, as we also write the name
@@ -192,6 +194,7 @@ class LtiV1Controller < ApplicationController
           user: user,
           event_name: 'lti_user_signin',
           metadata: metadata,
+          session: session,
         )
 
         # If this is the user's first login, send them into the account linking flow

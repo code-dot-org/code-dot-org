@@ -2,6 +2,7 @@
   width: 45px;
   position: absolute;
   right: 0;
+  top: 0;
 
   &-header {
     display: flex;
@@ -47,14 +48,14 @@
   }
 
   .icon-brain {
-    color: purple;
+    color: var(--text-brand-purple-primary-fixed);
   }
 
   .icon-bug {
-    color: red;
+    color: var(--text-error-primary-fixed);
   }
 
   .icon-star {
-    color: goldenrod;
+    color: var(--text-warning-primary-fixed);
   }
 }

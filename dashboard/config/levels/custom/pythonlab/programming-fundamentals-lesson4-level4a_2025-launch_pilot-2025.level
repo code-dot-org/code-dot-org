@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-10-14T18:46:13.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're creating a lifestyle app that asks users to choose their favorite snack. Later, they decide to change their answer -- maybe they're in the mood for something new!\r\n\r\n1. Look at the original value stored in `favorite_snack`\r\n\r\n2. Change the value to a **different** snack.\r\n\r\n3. Run the program to see the **before** and **after**.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery time you assign a new value to a variable, the old one is replaced -- it's like swapping out what's in a labeled box.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Favorite Snack",
+    "bubble_choice_description": "You're creating a lifestyle app that asks users to choose their favorite snack. Later, they decide to change their answer -- maybe they're in the mood for something new!",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program updates a favorite snack\n\nfavorite_snack = \"pretzels\"\nprint(\"Original favorite snack:\", favorite_snack)\n\n# Update the snack below\n\n\nprint(\"Favorite snack updated to:\", favorite_snack)\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/36670926f59f7d6a183a4a81a15e6332-snack.png",
+    "name_suffix": "_pilot-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzhkaiO69lvUXJX4XKbujJhFmYzrfvU/2\nBtWNdxLQ0CsuTGaq990Suz1J1eWQzb9lHkGwxOXtHAOViRzQm2cl3Ts8ldrf\nX6z9n1eUtt3qzpJgsVwXCasxVX4lvaovmJfeOEa0eyeRb2Wv/kvp/+7XjJun\n65vpQS5u0mbZj76mM8jxmd5o8D8Uo3tUPaC4/fQXQK2vdwUaBilss8ChQWed\nPFJau6iHmtI7pDyWHXktkqunoEbNuIPzNtyTcrUt8k2bOqQtKAtSturr4Q5F\nR15Pn39FJhiKNv0ERUrxnl4NMadmZk3+F/G7nr/7lfPkjpTDSBJyTDjuIanv\ndRh1su2DSAul6E/hKEBBANyH5bRGkUeDTDW5G+VWksgdFs6c1V53oQImnJ43\nqvNgTXESnlFHEgk=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestFavoriteSnackUpdate(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get the printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_favorite_snack_updated(self):\n        \"\"\"favorite_snack should change from original to a new value\"\"\"\n        try:\n            from main import favorite_snack\n        except ImportError:\n            self.fail(\"Make sure you create a variable called favorite_snack!\")\n\n        printed_lines = [line.strip() for line in self.log if line.strip()]\n\n        # Find original snack\n        original_line = next((line for line in printed_lines if \"Original favorite snack:\" in line), None)\n        updated_line = next((line for line in printed_lines if \"Favorite snack updated to:\" in line), None)\n\n        self.assertIsNotNone(original_line, \"Make sure you print the original favorite snack!\")\n        self.assertIsNotNone(updated_line, \"Make sure you print the updated favorite snack!\")\n\n        # Extract just the snack names\n        original_snack = original_line.split(\":\")[-1].strip()\n        updated_snack = updated_line.split(\":\")[-1].strip()\n\n        self.assertNotEqual(\n            original_snack,\n            updated_snack,\n            \"Make sure you actually update the favorite_snack to a new snack!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:13.059+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level4a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level4a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

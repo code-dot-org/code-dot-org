@@ -1,0 +1,114 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-10-22T14:45:29.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Code Your Rule\r\n\r\n1. Upload your flowchart from Level 3. You may upload your flowchart or describe your rule to AI Chat to plan and debug your code.\r\n\r\n1. Use the same two conditions from your flowchart. Store each as a true/false value (for example, if a checkbox is checked).\r\n\r\n1. Open the `runRule()` function in `script.js`. Write your decision rule there using nested `if`–`else` statements. Each branch should match one of the outcomes from your truth table.\r\n\r\n1. Update the result area so the correct message or image appears for each outcome.\r\n\r\n1. Run all four combinations (TT, TF, FT, FF). Compare your app's behavior to your truth table and fix anything that doesn't match.\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "sample_flowcharts",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Code Your Rule</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <main class=\"wrap\">\n    <section class=\"card\">\n\n      <!-- Condition Inputs -->\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"condA\" />\n          Condition A\n        </label>\n      </div>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"condB\" />\n          Condition B\n        </label>\n      </div>\n\n      <!-- Run Button -->\n      <button id=\"btnRun\">Run</button>\n\n      <!-- Result Area -->\n      <p id=\"result\" class=\"result\">Result will appear here.</p>\n\n      <!-- Optional image area -->\n      <img id=\"heroImg\" class=\"hidden\" src=\"\" alt=\"\" />\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "tryout-eligibility.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level3-test-2025/uuid/27ec93a8-4c95-42e7-a9ca-61c6b9e65a7f.png",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "smarthome.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level3-test-2025/uuid/2c3e6571-a8a2-453a-b25e-2ca1f8fe2d3e.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "movie-admission.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level3-test-2025/uuid/e7c98dbd-b2c5-4c86-aa70-0b3e4c68fda7.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "free-shipping.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level3-test-2025/uuid/50b36e43-f4b7-47ec-80fc-be88c035fc3c.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  background-color: #f8fafc;\n  color: #0f172a;\n}\n\n.wrap {\n  max-width: 680px;\n  margin: 48px auto;\n  padding: 0 16px;\n}\n\n.card {\n  background-color: #ffffff;\n  border: 1px solid #e2e8f0;\n  border-radius: 16px;\n  padding: 24px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n}\n\nh1 {\n  margin: 0 0 4px 0;\n  font-size: 24px;\n}\n\n.subtitle {\n  margin: 0 0 16px 0;\n  color: #475569;\n}\n\n.control {\n  margin-bottom: 10px;\n}\n\nbutton {\n  margin-top: 8px;\n  padding: 10px 16px;\n  font-size: 16px;\n  border-radius: 8px;\n  border: 1px solid #e2e8f0;\n  background-color: #ffffff;\n  cursor: pointer;\n}\n\n.result {\n  margin-top: 16px;\n  padding: 12px 14px;\n  border-radius: 10px;\n  border: 1px solid #e2e8f0;\n  text-align: center;\n  font-weight: 700;\n}\n\n.result.ok {\n  color: #1a7f37;\n  background-color: #ecfdf3;\n  border-color: #abefc6;\n}\n\n.result.no {\n  color: #b42318;\n  background-color: #fef3f2;\n  border-color: #f9d3cf;\n}\n\n.hidden {\n  display: none;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Selector\nlet condA = document.getElementById(\"condA\");\nlet condB = document.getElementById(\"condB\");\nlet result = document.getElementById(\"result\");\nlet btnRun = document.getElementById(\"btnRun\");\n\n// Run when button is clicked\nbtnRun.addEventListener(\"click\", runRule);\n\nconst runRule  = () => {\n  \n  let a = condA.checked;\n  let b = condB.checked;\n\n  // Example Rule:\n  if (a && b) {\n    result.textContent = \"Both conditions are true!\";\n    result.className = \"result ok\";\n  } else if (a && !b) {\n    result.textContent = \"A is true, B is false.\";\n    result.className = \"result no\";\n  } else if (!a && b) {\n    result.textContent = \"A is false, B is true.\";\n    result.className = \"result no\";\n  } else {\n    result.textContent = \"Both are false.\";\n    result.className = \"result no\";\n  }\n\n}\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "6",
+        "7"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nocE0FQSfsPEwlxR9e00OlJ5dh5YBXKIFxnD3UgG0lWM/hdVi0r8AV/Ut6/Ib\nPxPDXzSVNx9QZQObsVcd2WNqc31rZFpnGxtrUDhR88qwnlVJLZA2dqpAck3v\niL90n3oZyCmnZi6p2NuFqeX5b8ohCW2FxaqV9ijoopqsto0LLdtLmS2Xk/ME\nConrz93RT4x99aahHskTZORgG2abkOdWWRfEFypAufb8O7QasbanpEoERzSC\nKKRZkCjzjDU1TrmMr8Nz7xrgQJaRCylclA6JaV8n6O5GL2V+C1DJ68tmg71U\nP5ZZ4zgXdHXwrkPbsEwlNGGYVRxzMGlsvDkfiSkTNrEXGdYqkhP79pl5iz/6\nLvcS44QDjBAnlPQSQPClDxSlTMSaJot0LghWE0NO3oGjC/rFt2L9bPAJxspr\n4CnjaaMT2LKsmtPsSxBTKAQaYrmBWRqTOZjOwOX1pnZ3NTL5PWAHCC95Mztv\nNW4K1F1UtaJ9oqskF2HAY9s3gAsWA5I52MZradtPo0hZ5P3YZDBZXU18j8+k\ntzmtqSKahUmBlAgUl4+vYcQrKD3XocFuHuxVPRv7/XfHtn352kf+TykTZxW5\n+p9R/9VBjKBAwXHUrAFa46TrmGnl9Ia/UxIkXfWdNidzpgS6iIb3osQ/Yb8j\ncnQZ0jMG7fR62VVh9I3r5lhr/wN6afvdKKhD9va/Vqd9GVX4P9+pPpXYp8ZY\nb2+2egwZKC/Tra6aiqwwXDEq0ZgUoWP8sXC56GTKWCn/YOYo3zqJPl5g+Q65\n7E9jXXt4+kCej0txy6/G9EPSNHkx2EHo+SDxJV935duVsA3sWjWJuSJS+z4k\nvU1wYtWDTpQfoi5HsIeD5P4tuwRs4Orwo8JQYHrNgnc94SGcJvgtynSxEW6x\noljfG7qrDplbPCwvF+EKZBvyNme3K67F/3jZbQs8CQ2+r8LNv16aiShvzHB4\n1j1oz/nBIYbC+WKo6eg+kpxKcot8ns/pHaFaP0elOVpffs/p7Ql0r7GBX04J\nHd/b5kyqwl6z0oUeCDZ+u9JFfIb4U/E16tqJnKbJwQm0jGMI7MpkCdSvf84I\n5NNNrw95aaiUgXTRjTppb8dLEXwbIXdQKdp+6AiIfKy5aeMjSIwRf0Oq9V/a\ntwLaLV9+FJZuz7OvYco9x9m30nyfkrAz2xcj/YZrYO+W4Y5YKv7SS0myZ6fq\naPaHWzOZz28P0tZsBTUKZ4KGSxkaqTpZu7GP7APStMQyxn2Hpkf2lGBn8X9I\n50gnZvePqJxr1LrUAAG8YTYtslZPgc3iEjem37eiNrH0iVnWPdQNe7pT9ZsH\n78HcoZPrgPIX0wznU2Ykrso09PYrg54pJWTloBdcCQGnJMwGd8e7xe8lUyZ6\nPKaXPIg32V9UfVrSI/ZMQ6tTvKd/iz2zisCUwvzDV8apmnlJSYX7FOMLAJQP\nD9nF2J8hDlv2g89SAJeH4qdInMiumPVSFzqUMWCuhsWDIb58F6CBcdk+VY84\nqjy35mvrCCF20NzCkZhmMkub6cgFvmkTo8unzlMzOcsyUqqLK7mOdv4+3Ju0\nndsMo6jiyRR7kS6hqh8LwxZ1FJK3dyfuxwsnWN+NPaBB88hX5TQOgMjPZQfR\nLiN0CMqkM1TwjSx1mdInB/mn0fPdYlbUeMk2nrAtUbDyZT+i1cvIBIBqOkBW\nueu5yy9cvUO5BO2GAvwgXVIfbSPZLou6xCWV8l0KMJOjWIbdSrpbsqP/aSxf\no5eVgbRsednzOH0SKT4XozW1BaeqeeUd6gdjUXysjTMqIim15vVG5I+xLRJF\nb3xQKCmuEy+NS/bvrHFdhoP+fLIraOZSVkuo0CLLjLOUpz5mrPYtZHAE9ID1\nIfq+eMlHt21WNMHcQuSCfOaUyySZbKUB1kD3OhFQLB7AY47d1Q3FgiZn5u5d\n3mPj8wk6NTAMqRf54srynqamxy7bfpyA0u+uKMqAjcFPW3ZCejDX/UPj0yZg\nOZInh/wNUxBYXxu5duMTDRzfiQQfOoR/paTOafDdNfAiVU6yd4hLSPnwddJ8\npS3RAICgYarvdbY+uQKsy2HbPkZznFW1+zFWDU7f+AP18WsfVQVqFlU3GDlB\nXUBHCPuiwDpolqMlTNdi1CiCFZ6z4i802XuGlBcH2sQyG0MHwU779EOi9V3K\n0s2uFr5J7zftjz8o+LGZeWur1Es+avJ9Uxib6Ym3uvkh0FObazn6fV2Ap6f+\nmlEsMOijSchnABA67mPAefE+2bd1x/tW/Upw13wyWZsl01M=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-22 14:45:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 15:21:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 16:00:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 16:29:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 16:39:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 16:39:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 16:40:52 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -1,5 +1,5 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
 import {
   StrongText,
@@ -7,6 +7,8 @@ import {
   BodyThreeText,
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
+
+import i18n from '@cdo/locale';
 
 import {
   TEACHER_GOAL_PROMPT,
@@ -31,7 +33,7 @@ export const NumberOfYearsTeachingAnswer: React.FC<
   return (
     <div className={style.numberOfYearsArea}>
       <BodyOneText className={style.bodyText}>
-        I've been teaching for
+        {i18n.yearsTeaching()}
       </BodyOneText>
       <input
         type="number"
@@ -40,7 +42,7 @@ export const NumberOfYearsTeachingAnswer: React.FC<
         value={yearsTeaching > 0 ? yearsTeaching : ''}
         onChange={handleChange}
       />
-      <BodyOneText className={style.bodyText}>years!</BodyOneText>
+      <BodyOneText className={style.bodyText}>{i18n.years()}</BodyOneText>
     </div>
   );
 };
@@ -59,8 +61,8 @@ export const ClassroomVisionAnswer: React.FC<ClassroomVisionAnswerProps> = ({
   };
 
   return (
-    <div>
-      <StrongText>Describe your ideal classroom environment:</StrongText>
+    <div className={style.classroomVisionArea}>
+      <StrongText>{i18n.idealClassroomDescription()}</StrongText>
       <textarea
         name="classroom-vision"
         value={classroomVision}
@@ -68,8 +70,7 @@ export const ClassroomVisionAnswer: React.FC<ClassroomVisionAnswerProps> = ({
         className={style.freeResponseBox}
         rows={4}
       />
-      For example, you could say, "A collaborative learning community" or "A
-      creative, engaging space"
+      {i18n.idealClassroomHelperText()}
     </div>
   );
 };
@@ -89,7 +90,7 @@ export const ChallengeAnswer: React.FC<ChallengeAnswerProps> = ({
 
   return (
     <div>
-      <StrongText>Describe your challenge</StrongText>
+      <StrongText>{i18n.describeYourChallenge()}</StrongText>
       <textarea
         name="classroom-challenge"
         value={challenge}
@@ -110,91 +111,32 @@ export const ConfidenceAnswer: React.FC<ConfidenceAnswerProps> = ({
   selectedConfidence,
   setSelectedConfidence,
 }) => {
-  const handleButtonClick = (index: number) => {
-    setSelectedConfidence(index);
+  const handleChange = (value: string) => {
+    setSelectedConfidence(parseInt(value));
   };
 
-  const determineColor = (index: number) => {
-    if (selectedConfidence === index) {
-      return buttonColors.purple;
-    } else {
-      return buttonColors.white;
-    }
-  };
+  // Create buttons array for SegmentedButtons
+  const confidenceButtons = Array.from({length: 11}, (_, index) => ({
+    label: index.toString(),
+    value: index.toString(),
+    id: `confidence-${index}`,
+  }));
 
   return (
     <div>
       <div className={style.confidenceButtons}>
-        <Button
-          type={'primary'}
-          color={determineColor(0)}
-          text="0"
-          onClick={() => handleButtonClick(0)}
-        />
-        <Button
-          type={'primary'}
-          color={determineColor(1)}
-          text="1"
-          onClick={() => handleButtonClick(1)}
-        />
-        <Button
-          type={'primary'}
-          color={determineColor(2)}
-          text="2"
-          onClick={() => handleButtonClick(2)}
-        />
-        <Button
-          type={'primary'}
-          color={determineColor(3)}
-          text="3"
-          onClick={() => handleButtonClick(3)}
-        />
-        <Button
-          type={'primary'}
-          color={determineColor(4)}
-          text="4"
-          onClick={() => handleButtonClick(4)}
-        />
-        <Button
-          type={'primary'}
-          color={determineColor(5)}
-          text="5"
-          onClick={() => handleButtonClick(5)}
-        />
-        <Button
-          type={'primary'}
-          color={determineColor(6)}
-          text="6"
-          onClick={() => handleButtonClick(6)}
-        />
-        <Button
-          type={'primary'}
-          color={determineColor(7)}
-          text="7"
-          onClick={() => handleButtonClick(7)}
-        />
-        <Button
-          type={'primary'}
-          color={determineColor(8)}
-          text="8"
-          onClick={() => handleButtonClick(8)}
-        />
-        <Button
-          type={'primary'}
-          color={determineColor(9)}
-          text="9"
-          onClick={() => handleButtonClick(9)}
-        />
-        <Button
-          type={'primary'}
-          color={determineColor(10)}
-          text="10"
-          onClick={() => handleButtonClick(10)}
+        <SegmentedButtons
+          buttons={confidenceButtons}
+          selectedButtonValue={selectedConfidence.toString()}
+          onChange={handleChange}
+          type="withLabel"
+          size="m"
+          color="primary"
         />
       </div>
       <div className={style.confidenceContinuum}>
-        <BodyThreeText>Not confident at all</BodyThreeText>
-        <BodyThreeText>Extremely confident</BodyThreeText>
+        <BodyThreeText>{i18n.confidenceLow()}</BodyThreeText>
+        <BodyThreeText>{i18n.confidenceHigh()}</BodyThreeText>
       </div>
     </div>
   );
@@ -242,22 +184,19 @@ export const GoalsAnswer: React.FC<GoalsAnswerProps> = ({
       ))}
 
       {isOtherSelected && (
-        <div style={{marginTop: '10px'}}>
+        <div className={style.otherTextFieldContainer}>
           <TextField
             size="m"
             name="other-goal-text"
+            label={i18n.describeYourGoal()}
             placeholder="Please describe your other goal..."
             onChange={handleOtherTextChange}
             value={otherGoalText}
             inputType="text"
+            className={style.otherTextField}
           />
         </div>
       )}
-
-      {/* Debug info - remove this later */}
-      <div style={{marginTop: '10px', fontSize: '12px', color: '#666'}}>
-        Selected goals: {selectedGoals.join(', ')}
-      </div>
     </div>
   );
 };
@@ -307,23 +246,18 @@ export const SupportAnswer: React.FC<SupportAnswerProps> = ({
 
       {/* Show text area when "Other" is selected */}
       {isOtherSelected && (
-        <div style={{marginTop: '10px'}}>
+        <div className={style.otherTextFieldContainer}>
           <TextField
             size="m"
             name="other-support-text"
-            placeholder="Please describe your other support preference..."
             onChange={handleOtherTextChange}
             value={otherSupportText}
             inputType="text"
+            label={i18n.describeYourAdditionalSupport()}
+            className={style.otherTextField}
           />
         </div>
       )}
-
-      {/* Debug info - remove this later */}
-      <div style={{marginTop: '10px', fontSize: '12px', color: '#666'}}>
-        Selected supports: {selectedSupports.join(', ')}
-        {otherSupportText && <div>Other text: "{otherSupportText}"</div>}
-      </div>
     </div>
   );
 };

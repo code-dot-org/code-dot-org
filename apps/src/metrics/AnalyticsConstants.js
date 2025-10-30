@@ -327,6 +327,11 @@ const EVENTS = {
   // AI Tutor
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
+  AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
+  AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',
+  AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT:
+    'AI Tutor Code Snippet Added to Context',
+  AI_TUTOR_FILE_ADDED_TO_CONTEXT: 'AI Tutor File Added to Context',
 
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
@@ -556,7 +561,6 @@ const EVENTS = {
     'User changed font size on codebridge editor',
   CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE:
     'User changed font size on codebridge console',
-  CODEBRIDGE_THEME_CHANGE: 'User changed theme on codebridge',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
@@ -619,6 +623,7 @@ const EVENTS = {
 
   // Lab2
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
+  LAB2_THEME_CHANGE: 'User changed theme',
 
   // AI Teaching Assistant - Differentiation
 };

@@ -1,6 +1,8 @@
 import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
+import PersonalizationProgressBar from '@cdo/apps/aiDifferentiation/personalization/PersonalizationProgressBar';
+import {matchTeachingProfile} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import i18n from '@cdo/locale';
 
 import {
@@ -39,6 +41,9 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const [personalizationData, setPersonalizationData] = React.useState<
     Partial<PersonalizationData>
   >({});
+  const [matchedTeachingProfile, setMatchedTeachingProfile] = React.useState(
+    TEACHING_STYLES[0].name
+  );
 
   const NEXT = 1;
   const BACK = -1;
@@ -102,9 +107,22 @@ const PersonalizationCollectorContainer: React.FC = () => {
         setIsSaving(true);
         try {
           await saveTeachingProfileData(personalizationData);
+          const profileMatch = await matchTeachingProfile(personalizationData);
+
+          if (profileMatch?.matchingProfile) {
+            setMatchedTeachingProfile(profileMatch.matchingProfile);
+
+            const updatedData = {
+              ...personalizationData,
+              matchedPersona: profileMatch.matchingProfile,
+            };
+            await saveTeachingProfileData(updatedData);
+          }
+
           setShowResults(true);
         } catch (error) {
-          console.error('Failed to save final teaching profile data:', error);
+          console.error('Error in final step:', error);
+          setShowResults(true);
         } finally {
           setIsSaving(false);
         }
@@ -204,40 +222,62 @@ const PersonalizationCollectorContainer: React.FC = () => {
     }
   }, [questionsNumber, personalizationData]);
 
-  return (
-    <div className={style.carouselContainer}>
-      {isLoading ? (
-        <div>Loading...</div>
-      ) : showResults ? (
-        <PersonalizationResults teachingStyle={TEACHING_STYLES[0]} />
-      ) : (
-        <>
-          <PersonalizationQuestion questionNumber={questionsNumber} />
-          <div className={style.answerContainer}>{determineAnswerType()}</div>
+  const findTeachingStyle = (styleName: string) => {
+    return TEACHING_STYLES.find(style => style.name === styleName);
+  };
 
-          <div className={style.navigationButtons}>
-            <Button
-              id={'back-button'}
-              text={i18n.back()}
-              type="secondary"
-              color="gray"
-              size="m"
-              onClick={() => onCarouselPress(BACK)}
-              iconLeft={{iconName: 'angle-left'}}
-            />
-            <Button
-              id={'next-button'}
-              text={isSaving ? i18n.saving() : i18n.next()}
-              type="primary"
-              size="m"
-              onClick={() => onCarouselPress(NEXT)}
-              disabled={isSaving}
-              iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
-            />
-          </div>
-        </>
+  const showProgressBar = !isLoading && !showResults;
+
+  return (
+    <>
+      {showProgressBar && (
+        <PersonalizationProgressBar
+          currentQuestionNumber={questionsNumber + 1}
+          totalQuestionsNumber={PERSONALIZATION_PROMPTS.length}
+        />
       )}
-    </div>
+
+      <div className={style.carouselContainer}>
+        {isLoading ? (
+          <div>Loading...</div>
+        ) : showResults ? (
+          <PersonalizationResults
+            teachingStyle={
+              matchedTeachingProfile
+                ? findTeachingStyle(matchedTeachingProfile) ??
+                  TEACHING_STYLES[0]
+                : TEACHING_STYLES[0]
+            }
+          />
+        ) : (
+          <>
+            <PersonalizationQuestion questionNumber={questionsNumber} />
+            <div className={style.answerContainer}>{determineAnswerType()}</div>
+
+            <div className={style.navigationButtons}>
+              <Button
+                id={'back-button'}
+                text={i18n.back()}
+                type="secondary"
+                color="gray"
+                size="m"
+                onClick={() => onCarouselPress(BACK)}
+                iconLeft={{iconName: 'angle-left'}}
+              />
+              <Button
+                id={'next-button'}
+                text={isSaving ? i18n.saving() : i18n.next()}
+                type="primary"
+                size="m"
+                onClick={() => onCarouselPress(NEXT)}
+                disabled={isSaving}
+                iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
+              />
+            </div>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 

@@ -1,107 +1,214 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {Heading5} from '@code-dot-org/component-library/typography';
+import {Heading4} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
-import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
+import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
+import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {LevelProperties} from '@cdo/apps/lab2/types';
+import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
+import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-shoulders.png';
 
+import {getConfigValue} from '../../lottie/LottieDancerUtils';
+
 import moduleStyles from './generate-dancer.module.scss';
 
+const BODY_VARIANT_COUNT = 5;
+
+const GENERATE_DELAY_DURATION = 7000;
+
+const adlibOptions = {
+  creature: [
+    {id: 'axolotl', text: 'axolotl'},
+    {id: 'cat', text: 'cat'},
+    {id: 'dog', text: 'dog'},
+    {id: 'flame', text: 'flame'},
+    {id: 'fox', text: 'fox'},
+    {id: 'frilled_lizard', text: 'frilled lizard'},
+    {id: 'frog', text: 'frog'},
+    {id: 'giraffe', text: 'giraffe'},
+    {id: 'jellyfish', text: 'jellyfish'},
+    {id: 'koala', text: 'koala'},
+    {id: 'moose', text: 'moose'},
+    {id: 'mushroom', text: 'mushroom'},
+    {id: 'planet', text: 'planet'},
+    {id: 'rabbit', text: 'rabbit'},
+    {id: 'squirrel', text: 'squirrel'},
+    {id: 'tiger', text: 'tiger'},
+    {id: 'turtle', text: 'turtle'},
+    {id: 'volcano', text: 'volcano'},
+    {id: 'wolf', text: 'wolf'},
+    {id: 'zombie', text: 'zombie'},
+  ],
+  attire: [
+    {id: 'beanie', text: 'beanie'},
+    {id: 'colorful_hair', text: 'colorful hair'},
+    {id: 'crown', text: 'crown'},
+    {id: 'headphones', text: 'headphones'},
+    {id: 'headscarf', text: 'headscarf'},
+    {id: 'sunglasses', text: 'sunglasses'},
+    {id: 'no_accessories', text: 'no accessories'},
+  ],
+  mood: [
+    {id: 'confused', text: 'confused'},
+    {id: 'fierce', text: 'fierce'},
+    {id: 'happy', text: 'happy'},
+    {id: 'silly', text: 'silly'},
+    {id: 'sleepy', text: 'sleepy'},
+    {id: 'surprised', text: 'surprised'},
+  ],
+  style: [
+    {id: 'classic', text: 'classic'},
+    {id: 'fantasy', text: 'fantasy'},
+    {id: 'kpop', text: 'K-pop'},
+    {id: 'preppy', text: 'preppy'},
+    {id: 'retro', text: 'retro'},
+    {id: 'rock', text: 'rock'},
+    {id: 'scifi', text: 'sci-fi'},
+    {id: 'sporty', text: 'sporty'},
+    {id: 'streetwear', text: 'streetwear'},
+  ],
+};
+
 const adlibs: AdlibsType = {
-  basic: {
-    template:
-      'Please generate a dancer.  It should look like a {animal} with {appearance}.',
-    options: {
-      animal: ['frog', 'moose'],
-      appearance: ['hair', 'glasses'],
-    },
-    variantCount: 2,
-  },
   'animal-02': {
-    template: 'Please generate a dancer.  It should look like a {animal}.',
+    template: 'Create {animal}.',
     options: {
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
     },
     variantCount: 5,
   },
   'animal-attire-02': {
-    template:
-      'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
+    template: 'Create {animal} wearing {attire}.',
     options: {
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
-      attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
+      attire: [
+        {id: 'headscarf', text: 'a headscarf'},
+        {id: 'sunglasses', text: 'sunglasses'},
+        {id: 'headphones', text: 'headphones'},
+        {id: 'crown', text: 'a crown'},
+        {id: 'beanie', text: 'a beanie'},
+      ],
     },
     variantCount: 5,
   },
   'adjective-animal-attire-02': {
-    template:
-      'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
+    template: 'Create {animal} wearing {attire}, with {adjective} style.',
     options: {
-      adjective: ['basic', 'emo', 'sporty', 'streetwear', 'fancy', 'preppy'],
-      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
-      attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
+      adjective: [
+        {id: 'basic', text: 'a basic'},
+        {id: 'emo', text: 'an emo'},
+        {id: 'sporty', text: 'a sporty'},
+        {id: 'streetwear', text: 'a streetwear'},
+        {id: 'fancy', text: 'a fancy'},
+        {id: 'preppy', text: 'a preppy'},
+      ],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
+      attire: [
+        {id: 'headscarf', text: 'a headscarf'},
+        {id: 'sunglasses', text: 'sunglasses'},
+        {id: 'headphones', text: 'headphones'},
+        {id: 'crown', text: 'a crown'},
+        {id: 'beanie', text: 'a beanie'},
+      ],
     },
     variantCount: 5,
   },
-  // Earlier adlibs which will be removed soon:
-  animal: {
-    template: 'Please generate a dancer.  It should look like a {animal}.',
-    options: {
-      animal: ['frog', 'moose', 'wolf'],
-    },
-    variantCount: 3,
-  },
-  'animal-attire': {
+  'adjective-animal-attire-mood-03': {
     template:
-      'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
+      'Create {animal} wearing {attire}, in {mood} mood, with {adjective} style.',
     options: {
-      animal: ['frog', 'moose', 'wolf'],
+      adjective: [
+        {id: 'basic', text: 'a basic'},
+        {id: 'emo', text: 'an emo'},
+        {id: 'sporty', text: 'a sporty'},
+        {id: 'streetwear', text: 'a streetwear'},
+        {id: 'fancy', text: 'a fancy'},
+        {id: 'preppy', text: 'a preppy'},
+      ],
+      animal: [
+        {id: 'wolf', text: 'a wolf'},
+        {id: 'moose', text: 'a moose'},
+        {id: 'frog', text: 'a frog'},
+        {id: 'tiger', text: 'a tiger'},
+        {id: 'panda', text: 'a panda'},
+      ],
       attire: [
-        'headphones',
-        'sunglasses',
-        'crown',
-        'headscarf',
-        'baseball-cap',
-        'beanie',
-        'headband',
+        {id: 'headscarf', text: 'a headscarf'},
+        {id: 'sunglasses', text: 'sunglasses'},
+        {id: 'headphones', text: 'headphones'},
+        {id: 'crown', text: 'a crown'},
+        {id: 'beanie', text: 'a beanie'},
+      ],
+      mood: [
+        {id: 'happy', text: 'a happy'},
+        {id: 'silly', text: 'a silly'},
+        {id: 'sleepy', text: 'a sleepy'},
+        {id: 'surprised', text: 'a surprised'},
+        {id: 'confused', text: 'a confused'},
+        {id: 'fierce', text: 'a fierce'},
       ],
     },
-    variantCount: 3,
+    variantCount: 5,
   },
-  'adjective-animal-attire': {
-    template:
-      'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
+  'creature-04': {
+    template: 'Design a {creature}.',
+    options: {creature: adlibOptions.creature},
+    variantCount: 5,
+  },
+  'creature-attire-04': {
+    template: 'Design a {creature} wearing {attire}.',
     options: {
-      adjective: ['basic', 'goth'],
-      animal: ['frog', 'moose', 'wolf'],
-      attire: [
-        'headphones',
-        'sunglasses',
-        'crown',
-        'headscarf',
-        'baseball-cap',
-        'beanie',
-        'headband',
-      ],
+      creature: adlibOptions.creature,
+      attire: adlibOptions.attire,
     },
-    variantCount: 3,
+    variantCount: 5,
+  },
+  'creature-attire-mood-style-04': {
+    template:
+      'Design a {creature} wearing {attire}, in a {mood} mood, with a {style} style.',
+    options: {
+      creature: adlibOptions.creature,
+      attire: adlibOptions.attire,
+      mood: adlibOptions.mood,
+      style: adlibOptions.style,
+    },
+    variantCount: 5,
   },
 };
 
 interface DancerGenerateProps {
   adlibOption: string;
-  levelProperties: LevelProperties;
+  levelProperties: DanceLevelProperties;
 }
 
 // This UI takes over the entire lab area and allows the user to generate a dancer using
@@ -110,6 +217,7 @@ interface DancerGenerateProps {
 // storage.
 const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   adlibOption,
+  levelProperties,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -119,20 +227,21 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setTheme('Dark');
   }, [setTheme]);
 
-  const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
+  const [promptText, setPromptText] = useState<string>('');
   const [choices, setChoices] = useState<string[] | undefined>(undefined);
+
   const variantHistory = useRef<number[]>([]);
 
   const [aiGenerateState, setAiGenerateState] = useState<
-    'none' | 'generating' | 'done'
+    'none' | 'generating' | 'reviewing'
   >('none');
-
-  const [headImageUrl, setHeadImageUrl] = useState<string | undefined>(
-    undefined
+  const [dancerMetadata, setDancerMetadata] = useState<string | null>(
+    localStorage.getItem('dancer-ai-generate')
   );
 
-  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('none');
+    setPromptText('');
     variantHistory.current = [];
   });
 
@@ -140,9 +249,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     const startTime = Date.now();
 
     // Avoid showing a variant if it was shown recently.
-    let variant = undefined;
+    let variant, bodyVariant;
     do {
       variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
+      bodyVariant = getRandomInt(0, BODY_VARIANT_COUNT - 1);
     } while (variantHistory.current.includes(variant));
     const newVariantsHistory = [...variantHistory.current, variant];
     // Keep the array length at a maximum of 3
@@ -151,106 +261,187 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     }
     variantHistory.current = newVariantsHistory;
 
-    const {head} = getGeneratedDancerAssets(adlibOption, choices, variant);
+    // Special case: for the creature-attire-mood-style-04 adlib only,
+    // move mood from choices to choicesExtra, and use a unique path.
+    // This is because the style option is not used in retrieving the
+    // head image, and is instead used to retrieve the body.
+    let choicesToSave;
+    let choicesExtraToSave;
+    let pathToSave;
+    if (adlibOption === 'creature-attire-mood-style-04') {
+      pathToSave = 'creature-attire-mood-04';
+      choicesToSave = choices?.slice(0, -1);
+      choicesExtraToSave = [choices?.at(-1)];
+    } else {
+      pathToSave = adlibOption;
+      choicesToSave = choices;
+      choicesExtraToSave = undefined;
+    }
 
-    setHeadImageUrl(head);
-
-    trySetLocalStorage(
-      'dancer-ai-generate',
-      JSON.stringify({adlibOption, choices, variant})
-    );
-
+    const newDancerMetadata = JSON.stringify({
+      adlibOption,
+      path: pathToSave,
+      choices: choicesToSave,
+      choicesExtra: choicesExtraToSave,
+      variant,
+      extraVariant: bodyVariant,
+    });
+    trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
+    setDancerMetadata(newDancerMetadata);
     const elapsedTime = Date.now() - startTime;
-    const delayDuration = 2000; // 2 seconds.
-    const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
+    const remainingDelayDuration = Math.max(
+      GENERATE_DELAY_DURATION - elapsedTime,
+      0
+    );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
-  }, [adlibOption, choices, variantHistory]);
+  }, [adlibOption, choices]);
 
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
     await generateDancerCache();
-    setAiGenerateState('done');
+    setAiGenerateState('reviewing');
   }, [generateDancerCache]);
+
+  const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
+
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
+  useEffect(() => {
+    if (!containerRef.current) {
+      return;
+    }
+    const resizeObserver = new ResizeObserver(() => {
+      setContainerHeight(containerRef.current?.clientHeight ?? 0);
+    });
+    resizeObserver.observe(containerRef.current);
+    setContainerHeight(containerRef.current.clientHeight ?? 0);
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  // We artificially increase the 'generating' time so that the image doesn't appear
+  // too soon.
+  const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
+
+  const multiProject = useMultiProject();
+  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
-      <Guide id="generate-panel">
-        <Heading5 className={moduleStyles.heading}> Use AI</Heading5>
-        {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
-          <div className={moduleStyles.textArea}>{adlibText}</div>
-        )}
-        {aiGenerateState === 'none' && (
-          <>
-            <Adlib
-              adlib={adlibs[adlibOption]}
-              onChange={(adlibText, choices) => {
-                setAdlibText(adlibText);
-                setChoices(choices);
-                variantHistory.current = [];
-              }}
-              className={moduleStyles.textArea}
-            />
-            <Button
-              ariaLabel={'Generate dancer'}
-              text={'Generate dancer'}
-              type="primary"
-              color="black"
-              size="s"
-              iconLeft={{iconName: 'sparkles'}}
-              onClick={generateDancer}
-            />
-          </>
-        )}
-        {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
-        {aiGenerateState === 'done' && (
-          <>
-            <div>Here is the dancer that was generated.</div>
+      <ModeSwitchBar levelId={levelProperties.id} />
+      <div className={moduleStyles.mainContent}>
+        <Guide id="generate-panel">
+          {['none', 'generating'].includes(aiGenerateState) &&
+            levelProperties.longInstructions && (
+              <MainInstructionsContent
+                instructionsText={levelProperties.longInstructions}
+              />
+            )}
+          {aiGenerateState === 'none' &&
+            levelProperties.aiDancerGenerateText && (
+              <>
+                <div>Describe the dancer you'd like AI to create.</div>
+                <textarea
+                  id="generate-description"
+                  onChange={evt => {
+                    setPromptText(evt.target.value);
+                  }}
+                  value={promptText}
+                  rows={4}
+                  className={moduleStyles.textArea}
+                />
+                <Button
+                  ariaLabel={'Continue'}
+                  text={'Continue'}
+                  type="primary"
+                  color="black"
+                  size="s"
+                  iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+                  onClick={() => {
+                    dispatch(continueOrFinishLesson());
+                    analyticsReporter.sendEvent('hoai2025-dancer-prompt', {
+                      promptText,
+                    });
+                  }}
+                />
+              </>
+            )}
+          {['none', 'generating'].includes(aiGenerateState) &&
+            !levelProperties.aiDancerGenerateText && (
+              <>
+                <Adlib
+                  adlib={adlibs[adlibOption]}
+                  readOnly={['generating', 'reviewing'].includes(
+                    aiGenerateState
+                  )}
+                  glowSpeed={glowSpeed}
+                  onChange={(promptText, choices) => {
+                    setPromptText(promptText);
+                    setChoices(choices);
+                    variantHistory.current = [];
+                  }}
+                />
+                {aiGenerateState === 'none' && (
+                  <div className={moduleStyles.buttonRow}>
+                    <Button
+                      ariaLabel={'Generate dancer'}
+                      text={'Generate dancer'}
+                      type="primary"
+                      color="black"
+                      size="s"
+                      iconLeft={{iconName: 'sparkles'}}
+                      onClick={generateDancer}
+                      className={moduleStyles.buttonWide}
+                    />
+                  </div>
+                )}
+              </>
+            )}
+          {aiGenerateState === 'generating' ? 'Generating dancer.' : ''}
+          {aiGenerateState === 'reviewing' && (
+            <div>
+              <Heading4>Your Dancer is Ready</Heading4>
+              <div>Do you want to keep what AI generated?</div>
+            </div>
+          )}
+          {aiGenerateState === 'reviewing' && (
+            <>
+              <div className={moduleStyles.buttonRow}>
+                <Button
+                  ariaLabel={'Try prompting again'}
+                  text={'Try prompting again'}
+                  type="primary"
+                  color="black"
+                  size="s"
+                  onClick={() => setAiGenerateState('none')}
+                  className={moduleStyles.buttonWide}
+                />
 
-            <Button
-              ariaLabel={'Generate again'}
-              text={'Generate again'}
-              type="primary"
-              color="black"
-              size="s"
-              iconLeft={{iconName: 'sparkles'}}
-              onClick={generateDancer}
+                {showNavigation && (
+                  <NavigationArea
+                    levelProperties={levelProperties}
+                    // The following props don't really matter as we don't have a Submit button or validation here.
+                    hasRun={true}
+                    hasEdited={true}
+                    isRunning={false}
+                    className={moduleStyles.buttonWide}
+                  />
+                )}
+              </div>
+            </>
+          )}
+        </Guide>
+        <div className={moduleStyles.dancerContainer} ref={containerRef}>
+          <div>
+            {showPlaceholder && <img alt="" src={dancerEmptyHeadShoulders} />}
+            <DancerCanvas
+              key={dancerMetadata || 'none'}
+              size={containerHeight}
+              move={getConfigValue('danceMove') || 'rest'}
+              onLoadingChange={setIsPreviewLoading}
             />
-
-            <Button
-              ariaLabel={'Adjust prompt'}
-              text={'Adjust prompt'}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => setAiGenerateState('none')}
-            />
-
-            <Button
-              ariaLabel={'Continue'}
-              text={'Continue'}
-              type="primary"
-              color="black"
-              size="s"
-              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-              onClick={() => dispatch(continueOrFinishLesson())}
-            />
-          </>
-        )}
-        <BackToParentProject
-          text="Go to Hub"
-          iconLeft={{iconName: 'home'}}
-          type="secondary"
-          size="s"
-        />
-      </Guide>
-
-      <div className={moduleStyles.dancerContainer}>
-        <img
-          alt=""
-          src={
-            aiGenerateState === 'done' ? headImageUrl : dancerEmptyHeadShoulders
-          }
-        />
+          </div>
+        </div>
       </div>
     </div>
   );

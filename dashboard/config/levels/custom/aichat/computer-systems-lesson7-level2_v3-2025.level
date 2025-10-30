@@ -1,0 +1,63 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-10-29T06:27:44.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Investigate with AI\r\n\r\nUse AI Chat to see how its interpretation of data compares to your own.  \r\n\r\n### Do This:\r\n\r\n1. **Add the PDF** for the dataset from your station into AI Chat.  \r\n   *(Each dataset represents real sensor or system data from a career scenario — like the Zookeeper or Concert Promoter.)*\r\n\r\n2. **Write your own prompt** to ask the AI what it thinks the data shows.  \r\n   - Try describing what kind of data it is and what you want the AI to look for.  \r\n   - Press **Send** and read the AI’s response.\r\n\r\n3. Compare the AI’s interpretation to your own labels in the **Activity Guide.**  \r\n   - Did the AI describe the data the same way you did?  \r\n   - What details did it notice or miss?\r\n\r\n4. Record your thoughts in the **Investigate with AI** section of your Activity Guide.\r\n\r\n::: details [**Need help with your prompt?**]\r\nTry starting with something like:\r\n> What do you think this data shows?  \r\n> What patterns or problems do you notice in this dataset?  \r\n> Could any of these readings or messages mean something different?\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Investigate with AI Assistant",
+          "description": "This AI tool helps students explore how humans and AI interpret data differently.\nStudents upload a small, “messy” dataset from a real-world scenario (such as animal monitoring, museum sensors, or crowd data) and ask the AI to explain what it sees. The AI describes patterns, possible problems, and uncertainties in the data—then asks students to compare their own interpretations.\n\nBy discussing how their thinking differs from the AI’s, students learn how human decisions and labeling choices shape how computer systems use data.",
+          "intendedUse": "Who It’s For: Middle school students learning about sensors, data, and human roles in AI systems.\n\nWhat It Does:\n\nInterprets short, ambiguous datasets provided in class.\n\nPoints out possible patterns or problems it detects.\n\nEncourages students to share their own analysis and compare reasoning.\n\nPrompts reflection about how human labeling and context affect AI performance.",
+          "limitationsAndWarnings": "AI Can Be Uncertain: The model may make reasonable guesses based on patterns but can’t truly “see” or “hear” the data.\n\nSimplified Reasoning: Its explanations are designed for discussion, not technical accuracy.\n\nNot a Real Diagnostic Tool: Interpretations are for learning and exploration only, not real-world decision-making.",
+          "testingAndEvaluation": "Accuracy: Does the AI provide a plausible interpretation of the dataset?\nClarity: Are explanations short, friendly, and age-appropriate?\nReflection Quality: Does the conversation encourage students to think critically about human vs. AI perspectives?",
+          "exampleTopics": [
+            "What patterns do you notice in this dataset?",
+            "Why do you think the sensor readings dropped here?",
+            "Could this missing data mean something else?",
+            "Do you think my labels make sense?",
+            "What might happen if an AI misread this data?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI learning assistant that helps students analyze real-world data collected from sensors or computer systems.\n\nEach student will upload a short dataset from a career scenario (such as a zookeeper monitoring animal health, a concert promoter reviewing crowd data, or a pilot troubleshooting flight logs).\n\nYour role is to:\n\nInterpret the data — briefly describe what you notice, including any patterns, changes, or unusual entries.\n\nOffer a possible explanation for what might be happening in the scenario, based only on the data.\n\nAcknowledge uncertainty — if the data is incomplete or ambiguous, mention that and explain what more information might help.\n\nAsk the student what they think — invite them to share their interpretation and discuss how it compares to yours.\n\nEncourage reflection — ask short follow-ups like:\n\n“Where might I have misread the data?”\n\n“What might happen if an AI system misunderstood this data?”\n\nKeep responses short, clear, and friendly (aim for 4–6 sentences).\nAvoid technical jargon — use plain language a middle school student can understand.\n\nYour goal is to help students see that humans and AI can interpret data differently — and that these differences matter when building or using computer systems.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "starter_assets": {
+      "Zookeeper Dataset.pdf": "435007be-ff61-4607-99cb-3a5b322a129a.pdf",
+      "MuseumCurator Dataset.pdf": "fd6ffd14-76e5-42f7-9896-b8cd79eb5f3f.pdf",
+      "ConcertPromoter Dataset.pdf": "0c7417b9-ebb7-4238-9cd6-d5b59af2e3dd.pdf",
+      "AirplanePilot Dataset.pdf": "c1dad33d-8a5a-4519-a4f8-480dc86c5f1f.pdf",
+      "GroceryStoreManager Dataset.pdf": "b48f5e49-db51-4601-993f-4edec8c2ed2f.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-29T06:27:44.801+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level3_v2-2025\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level3_v2-2025\"},{\"changed_at\":\"2025-10-29 06:31:44 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>
