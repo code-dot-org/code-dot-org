@@ -145,7 +145,7 @@ RUN curl -sS https://packagecloud.io/install/repositories/github/git-lfs/script.
     apt-get install -y git-lfs
 
 # install node, based on instructions at https://github.com/nodesource/distributions#using-ubuntu-1
-RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - && \
     apt-get install -y nodejs && \
     corepack enable # corepack required for yarn support
 
