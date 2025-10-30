@@ -380,6 +380,52 @@ Browser event logs are flexible and include:
 - `userId` — User ID if known
 - `release` — Release version
 
+### Useful Queries/Patterns
+
+Parse the log message into structured fields:
+```
+fields @timestamp
+| parse @message /"level":"(?<level>[^"]+)"/
+| parse @message /"message":\{"event":"(?<event>[^"]+)"/
+| parse @message /"message":\{"message":"(?<msg>[^"]+)"/
+| parse @message /"currentLevelId":(?<levelId>\d+)/
+| parse @message /"scriptId":(?<scriptId>\d+)/
+| parse @message /"channelId":"(?<channelId>[^"]+)"/
+| parse @message /"loadTimeMs":(?<loadTimeMs>\d+)/
+| parse @message /"soundsLoaded":(?<soundsLoaded>\d+)/
+| parse @message /"userId":(?<userId>\d+)/
+| parse @message /"hostname":"(?<host>[^"]+)"/
+| parse @message /"full_path":"(?<path>[^"]+)"/
+| sort @timestamp desc
+| limit 200
+```
+
+Get the top 50 most frequent errors or warnings:
+```
+parse @message /"level":"(?<level>[^"]+)"/
+| filter level in ["ERROR","WARNING"]
+| parse @message /"message":\{"message":"(?<msg>[^"]+)"/
+| stats count() as cnt by level, msg
+| sort cnt desc
+| limit 50
+```
+
+Get the top 30 slowest page loads by course, unit, and lesson:
+```
+parse @message /"full_path":"https:\/\/studio\.code\.org\/courses\/(?<course>[^\/]+)\/units\/(?<unit>\d+)\/lessons\/(?<lesson>\d+)\/levels\/(?<level>[^"?]+)/
+| parse @message /"loadTimeMs":(?<ms>\d+)/
+| stats pct(ms,95) as p95_ms, avg(ms) as avg_ms, count() as n by course, unit, lesson
+| sort p95_ms desc
+| limit 30
+```
+
+Get the number of unique users by event:
+```
+parse @message /"userId":(?<userId>\d+)/
+| filter ispresent(userId)
+| stats count_distinct(userId) as users, count(*) as events
+```
+
 ---
 
 ## Syslog Format
