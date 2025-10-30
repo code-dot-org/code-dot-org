@@ -88,7 +88,7 @@ function useProjectServiceWorker(
           const doc = parser.parseFromString(file.contents, 'text/html');
           addBaseTagToDocument(
             doc,
-            `${window.location.origin}/assets/js/serve-project/${folder}/ll`
+            `${window.location.origin}/assets/js/serve-project/${folder}/`
           );
           content = doc.documentElement.outerHTML;
         } else if (file.language === 'css') {
