@@ -1,7 +1,7 @@
-basic
-emo
-sporty
-streetwear
-fancy
-preppy
+happy 
+silly 
+sleepy 
+surprised 
+confused 
+fierce
 

@@ -1,8 +1,7 @@
-headphones
-sunglasses
-crown
 headscarf
-baseball-cap
-beanie
-headband
-
+sunglasses 
+headphones 
+crown 
+beanie 
+colorful_hair 
+no_accessories
