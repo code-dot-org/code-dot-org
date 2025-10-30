@@ -122,6 +122,36 @@ const OnboardingTourSteps: React.FC = () => {
     };
     document.addEventListener('click', documentClickHandler, {capture: true});
 
+    // Add a keyboard listener to support Enter key navigation.
+    const documentKeydownHandler = (event: KeyboardEvent) => {
+      if (event.key !== 'Enter') return;
+
+      const target = event.target as HTMLElement;
+
+      // If user pressed Enter on the dropdown menu button or IntroJS overlay, trigger the button.
+      if (
+        target === dropdownMenuButton ||
+        target.classList.contains('introjs-helperLayer') ||
+        target.classList.contains('introjs-tooltipReferenceLayer')
+      ) {
+        if (dropdownMenuButton) {
+          (dropdownMenuButton as HTMLElement).click();
+        }
+      }
+
+      // Check if a new dialog appeared after Enter key press
+      setTimeout(() => {
+        const currentDialogCount =
+          document.querySelectorAll('[role="dialog"]').length;
+        if (currentDialogCount > initialDialogCount && !hasDetectedDropdown) {
+          handleDropdownMenuOpen();
+        }
+      }, 50);
+    };
+    document.addEventListener('keydown', documentKeydownHandler, {
+      capture: true,
+    });
+
     // MutationObserver to detect when a new dialog appears (dropdown opens)
     const checkForDropdownMenu = () => {
       const currentDialogCount =
@@ -140,6 +170,9 @@ const OnboardingTourSteps: React.FC = () => {
     return () => {
       observer.disconnect();
       document.removeEventListener('click', documentClickHandler, {
+        capture: true,
+      });
+      document.removeEventListener('keydown', documentKeydownHandler, {
         capture: true,
       });
     };
