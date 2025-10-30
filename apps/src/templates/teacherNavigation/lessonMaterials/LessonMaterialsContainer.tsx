@@ -227,7 +227,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
   React.useEffect(() => {
-    if (userId && selectedLesson) {
+    if (selectedLesson) {
       HttpClient.fetchJson<LessonSummaryInfoResponse>(
         `/ai_lesson_summaries/show?user_id=${userId}&lesson_id=${selectedLesson?.id}`
       )
