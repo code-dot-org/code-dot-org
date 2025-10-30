@@ -25,7 +25,6 @@ import {
   getToolboxDefinition,
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
-import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
@@ -243,7 +242,7 @@ const DanceView: React.FunctionComponent<{
       });
     }
 
-    if (!programExecutor.current || !metadataToUse) {
+    if (!programExecutor.current || !metadataToUse || !workspace.current) {
       return;
     }
 
@@ -252,7 +251,7 @@ const DanceView: React.FunctionComponent<{
     dispatch(setRunIsStarting(true));
     programExecutor.current.reset();
     await programExecutor.current.execute(
-      Blockly.getWorkspaceCode(),
+      Blockly.JavaScript.workspaceToCode(workspace.current),
       metadataToUse
     );
     dispatch(setRunIsStarting(false));
@@ -277,8 +276,12 @@ const DanceView: React.FunctionComponent<{
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
     dispatch(setIsRunning(false));
-    programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
     setMusicPlayheadPosition(1);
+    if (workspace.current) {
+      programExecutor.current?.staticPreview(
+        Blockly.JavaScript.workspaceToCode(workspace.current)
+      );
+    }
   }, [programExecutor, dispatch]);
 
   const onPuzzleComplete = useCallback(
@@ -320,8 +323,10 @@ const DanceView: React.FunctionComponent<{
         return;
       }
 
-      if (!isRunning) {
-        programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
+      if (!isRunning && workspace.current) {
+        programExecutor.current?.staticPreview(
+          Blockly.JavaScript.workspaceToCode(workspace.current)
+        );
       }
       saveBlocks();
       dispatch(setHasEdited(true));
@@ -510,7 +515,6 @@ const DanceView: React.FunctionComponent<{
 
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
-      <ModeSwitchBar levelId={levelProperties.id} />
       <div className={moduleStyles.mainContent}>
         {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
         {!guideMode && (
