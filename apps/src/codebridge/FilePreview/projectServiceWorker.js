@@ -69,7 +69,13 @@ async function handleProjectRequest(url) {
     console.log('Service worker serving file:', requestedFile);
 
     if (filesData[requestedFile]) {
-      const {content, mimeType} = filesData[requestedFile];
+      const {content, mimeType, url} = filesData[requestedFile];
+      sendMessageToAllClients(`Serving file: ${requestedFile}`);
+      if (url) {
+        sendMessageToAllClients('FETCHING_EXTERNAL_URL');
+        const response = await fetch(url);
+        return response;
+      }
       return new Response(content, {
         status: 200,
         headers: {

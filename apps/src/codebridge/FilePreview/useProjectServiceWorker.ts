@@ -64,7 +64,10 @@ function useProjectServiceWorker(
     if (serviceWorker && source) {
       console.log('Sending source data to service worker:', source);
       // Prepare files data for service worker
-      const filesData: Record<string, {content: string; mimeType: string}> = {};
+      const filesData: Record<
+        string,
+        {content: string; mimeType: string; url: string | undefined}
+      > = {};
 
       Object.values(source.files).forEach(file => {
         const {fullFileName, folder} = getFullyQualifiedFileName(
@@ -75,11 +78,12 @@ function useProjectServiceWorker(
 
         let content = file.contents;
         let mimeType = 'text/plain';
+        let url = undefined;
 
         // Determine MIME type based on file extension or language
         if (file.url) {
           // Right not only images are handled via URL
-          content = file.url;
+          url = file.url;
           mimeType = `image/${file.name.split('.').pop()?.toLowerCase()}`;
         } else if (file.language === 'html') {
           mimeType = 'text/html';
@@ -97,7 +101,7 @@ function useProjectServiceWorker(
           mimeType = 'application/javascript';
         }
 
-        filesData[fullFileName] = {content, mimeType};
+        filesData[fullFileName] = {content, mimeType, url};
       });
       console.log({filesData});
 
