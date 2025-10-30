@@ -9,6 +9,7 @@ import {
 import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
 
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -20,7 +21,6 @@ import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/Backpac
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
-import {sendAnalytics} from '@cdo/apps/aichat/redux';
 
 /**
  * Handles downloading a file and sending an analytics event.

@@ -3,13 +3,13 @@ import {EditorState, StateField} from '@codemirror/state';
 import {showTooltip, Tooltip} from '@codemirror/view';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/editor.module.scss';
-import {sendAnalytics} from '@cdo/apps/aichat/redux';
 
 /**
  * Returns a CodeMirror StateField extension that adds a tooltip button
