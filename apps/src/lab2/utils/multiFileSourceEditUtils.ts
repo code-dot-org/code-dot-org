@@ -68,7 +68,7 @@ export const createNewFileHelper = ({
 }: CreateNewFileHelperArgs): MultiFileSource => {
   const fileId = getNextFileId(Object.values(source.files));
   const newSource = {...source, files: {...source.files}};
-  const [, extension] = fileName.split('.');
+  const extension = fileName.split('.').pop();
   const defaultContents = `Add your changes to ${fileName}`;
 
   const file: ProjectFile = {

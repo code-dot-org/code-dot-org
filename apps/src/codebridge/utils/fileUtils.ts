@@ -41,7 +41,7 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
 } {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   if (!isStartMode) {
-    const [, fileType] = file.name.split('.');
+    const fileType = file.name.split('.').pop();
     const iconConfig =
       FILE_TYPE_ICON_MAP[fileType as keyof typeof FILE_TYPE_ICON_MAP];
     if (iconConfig) {

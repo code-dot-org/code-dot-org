@@ -157,7 +157,7 @@ export const useFileUploader = ({
           name: file.name,
           type: file.type,
         });
-        const [, fileType] = file.name.split('.');
+        const fileType = file.name.split('.').pop() || '';
         errorCallback(
           codebridgeI18n.invalidFileType({fileType: file.type || fileType}),
           callbackArgs.current

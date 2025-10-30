@@ -10,8 +10,8 @@
  */
 export const getFileNameWithNumberSuffix = (filename: string) => {
   const parts = filename.split('.');
-  const originalName = parts[0];
-  const fileExtension = parts[1];
+  const fileExtension = parts.pop();
+  const originalName = parts.join('.');
   const nameParts = originalName.split('_');
   const lastPart = nameParts[nameParts.length - 1];
   const numberSuffix = parseInt(lastPart, 10); // NaN if not a number.

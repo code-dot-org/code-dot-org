@@ -42,7 +42,7 @@ export const useFileUploader = (
   const uploadExternalFile = useCallback(
     async (file: File) => {
       const uuid = createUuid();
-      const fileType = file.name.split('.')[1];
+      const fileType = file.name.split('.').pop();
 
       if (isStartMode) {
         const bodyData = new FormData();
