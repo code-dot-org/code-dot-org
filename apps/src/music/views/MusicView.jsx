@@ -861,10 +861,10 @@ class UnconnectedMusicView extends React.Component {
     }
     sourcesToSave.labConfig.music.blockMode = this.props.blockMode;
 
-    const projectManager =
+    (
       this.props.projectManager ||
-      Lab2Registry.getInstance().getProjectManager();
-    projectManager?.save(sourcesToSave, forceSave);
+      Lab2Registry.getInstance().getProjectManager()
+    )?.save(sourcesToSave, forceSave);
 
     // If we are AI generating, then save metadata for Dance Party.
     if (
@@ -872,7 +872,7 @@ class UnconnectedMusicView extends React.Component {
       this.props.levelProperties.levelData.guideMode === 'aiCodeGenerate'
     ) {
       saveGeneratedSongMetadata(
-        projectManager?.getChannelId(),
+        this.props.channel?.id,
         this.props.packId,
         this.props.playbackEvents,
         this.props.lastMeasure
