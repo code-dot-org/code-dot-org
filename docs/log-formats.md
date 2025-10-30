@@ -10,8 +10,11 @@ This document details the specific log formats used across the Code.org platform
 - [Rails Application Logs (CloudWatch Logs/Lograge CEE JSON)](#rails-application-logs-cloudwatch-logslograge-cee-json)
 - [NGINX Access Logs](#nginx-access-logs)
 - [NGINX Error Logs](#nginx-error-logs)
-- [Browser Events (CloudWatch Logs)](#browser-events-cloudwatch-logs)
-- [Syslog Format](#syslog-format)
+- [Browser Events (CloudWatch Logs)](#browser-events-cloudwatch)
+- [Aurora MySQL Logs (CloudWatch Logs)](#aurora-mysql-logs-cloudwatch-logs)
+- [RDS Enhanced Monitoring (CloudWatch Logs)](#rds-enhanced-monitoring-cloudwatch-logs)
+- [Lambda Execution Logs (CloudWatch Logs)](#lambda-execution-logs-cloudwatch-logs)
+- [Admin/Audit Logs (CloudWatch Logs)](#adminaudit-logs-cloudwatch-logs)
 - [Kinesis Firehose Events](#kinesis-firehose-events)
 
 ---
@@ -454,6 +457,149 @@ parse @message /"userId":(?<userId>\d+)/
 
 ---
 
+## Aurora MySQL Logs (CloudWatch Logs)
+
+**Format:** Plain text (MySQL general/audit/error/slowquery formats)
+
+Aurora is configured to export the `general`, `audit`, `error`, and `slowquery` streams to CloudWatch Logs. Each export appears under a log group named `/aws/rds/cluster/<stack-name>-cluster/<log-type>` (for example, `/aws/rds/cluster/production-cluster/slowquery`). Entries follow the native MySQL formats so you can copy documentation straight from upstream tooling.
+
+### Example Log Entries
+
+**General log (connection / statement):**
+```
+/aws/rds/cluster/production-cluster/general:2025-10-30T19:05:12.123456Z	ip-10-0-2-17	admin[12345]	Connect	database@10.0.5.42 on dashboard using TCP/IP
+/aws/rds/cluster/production-cluster/general:2025-10-30T19:05:12.234567Z	ip-10-0-2-17	admin[12345]	Query	SELECT 1 FROM user_levels WHERE user_id = 123456 LIMIT 1
+```
+
+**Slow query log:**
+```
+/aws/rds/cluster/production-cluster/slowquery:# Time: 2025-10-30T19:07:45.812345Z
+# User@Host: dashboard[dashboard] @ 10.0.6.81 []  Id: 87654321
+# Query_time: 4.235302  Lock_time: 0.000221 Rows_sent: 200 Rows_examined: 92651
+SET timestamp=1730315265;
+SELECT * FROM user_levels WHERE script_id = 12345 ORDER BY updated_at DESC LIMIT 200;
+```
+
+### Useful Queries/Patterns
+
+List the busiest statements in the general log:
+```
+fields @timestamp, @message, @log
+| filter @log like /\/general/
+| filter @message like /\tQuery\t/
+| parse @message "\tQuery\t*" as sql
+| stats count() as executions by sql
+| sort executions desc
+| limit 50
+```
+
+Find slow queries over 2 seconds:
+```
+fields @timestamp, @message
+| filter @log like /\/slowquery/
+| filter @message like /Query_time/
+| parse @message "Query_time: *  Lock_time: * Rows_sent: * Rows_examined: *" as query_time, lock_time, rows_sent, rows_examined
+| filter to_number(query_time) >= 2
+| sort @timestamp desc
+| limit 100
+```
+
+---
+
+## RDS Enhanced Monitoring (CloudWatch Logs)
+
+**Format:** JSON per-sample OS metrics
+
+Enhanced Monitoring publishes one JSON document per collection interval to the `RDSOSMetrics` log group. Each document contains CPU, memory, disk, file I/O, and process metrics collected from the Aurora host.
+
+### Example Log Entry
+
+```json
+{
+  "instanceID": "production",
+  "instanceResourceID": "db-ABCDEFGHIJKLMNOP",
+  "engine": "Aurora MySQL",
+  "timestamp": "2025-10-30T19:10:01Z",
+  "cpuUtilization": {"total": 18.52, "user": 6.13, "system": 3.02, "wait": 8.91},
+  "loadAverageMinute": {"one": 0.71, "five": 0.64, "fifteen": 0.59},
+  "memory": {"used": 13245.4, "free": 1842.7, "cached": 4098.2, "total": 16384.0},
+  "diskIO": [{"device": "nvme0n1", "readIOsPS": 121.3, "writeIOsPS": 54.9, "readKbPS": 1824.7, "writeKbPS": 763.4}],
+  "tasks": {"total": 265, "running": 2, "blocked": 0}
+}
+```
+
+### Useful Queries/Patterns
+
+Track CPU utilization over time:
+```
+fields @timestamp, cpuUtilization.total as cpu
+| filter @log = 'RDSOSMetrics'
+| stats avg(cpu) as avg_cpu, pct(cpu, 95) as p95_cpu by bin(@timestamp, 5m)
+| sort @timestamp desc
+```
+
+Surface top processes by thread count:
+```
+fields @timestamp, engine, processes[*].name as process, processes[*].threadCount as threads
+| filter @log = 'RDSOSMetrics'
+| filter ispresent(process)
+| stats max(threads) as max_threads by process
+| sort max_threads desc
+| limit 20
+```
+
+---
+
+## Lambda Execution Logs (CloudWatch Logs)
+
+**Format:** Plain text (START/END/REPORT records)
+
+Each Lambda invocation writes three standard lines to the `/aws/lambda/<function-name>` log group: `START`, the function's own output (if any), and `END`/`REPORT`. The REPORT line captures billed duration, memory usage, cold-start information, and request IDs, which makes it ideal for runtime and cost investigations.
+
+### Example Log Entry
+
+```
+START RequestId: e6daeb73-ff96-4e81-869a-19a9fd5827cf Version: $LATEST
+END RequestId: e6daeb73-ff96-4e81-869a-19a9fd5827cf
+REPORT RequestId: e6daeb73-ff96-4e81-869a-19a9fd5827cf	Duration: 64.37 ms	Billed Duration: 65 ms	Memory Size: 1024 MB	Max Memory Used: 178 MB
+```
+
+### Fields
+
+- `RequestId` — Unique identifier for the invocation.
+- `Version` — Published version or `$LATEST` alias that ran.
+- `Duration` — Wall-clock execution time in milliseconds.
+- `Billed Duration` — Duration rounded up to the nearest millisecond billing unit.
+- `Memory Size` — Configured memory allocation for the function.
+- `Max Memory Used` — Peak runtime memory consumption; a good indicator of tuning needs.
+- Optional keys (when applicable): `Init Duration` for cold starts, `XRAY TraceId`, `Used`/`Remaining` concurrency metrics.
+
+### Useful Queries/Patterns
+
+Find the most expensive invocations:
+```
+fields @timestamp, @logStream, @message
+| filter @log like /\/aws\/lambda\//
+| filter @message like /REPORT/
+| parse @message "Duration: * ms" as duration
+| parse @message "Max Memory Used: * MB" as max_mem
+| stats max(to_number(duration)) as max_duration_ms, avg(to_number(duration)) as avg_duration_ms, max(to_number(max_mem)) as max_memory_mb by @logStream
+| sort max_duration_ms desc
+| limit 20
+```
+
+Detect cold starts:
+```
+fields @timestamp, @message
+| filter @log like /\/aws\/lambda\//
+| filter @message like /REPORT/ and @message like /Init Duration/
+| parse @message "Init Duration: * ms" as init_ms
+| sort @timestamp desc
+| limit 50
+```
+
+---
+
 ## Admin/Audit Logs (CloudWatch Logs)
 
 **Format:** Plain text
@@ -519,7 +665,11 @@ Firehose events are client-defined and typically include:
 | Rails (Lograge CEE) | JSON | CloudWatch Logs `<env>-syslog` | Indefinite (CloudWatch retention) | [Lograge](https://github.com/roidrage/lograge) |
 | NGINX Access | Combined CLF | Local filesystem only | Local rotation (~7 days) | [NGINX Logging](https://nginx.org/en/docs/http/ngx_http_log_module.html) |
 | NGINX Error | NGINX error format | Local filesystem only | Local rotation (~7 days) | [NGINX Error Log](https://nginx.org/en/docs/ngx_core_module.html#error_log) |
-| Browser Events | JSON | CloudWatch Logs | Indefinite | [CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/) |
+| Browser Events | JSON | CloudWatch Logs `<env>-browser-events` | Indefinite | [CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/) |
+| Aurora MySQL Logs | Plain text | CloudWatch Logs `/aws/rds/cluster/<cluster>/<log>` | Indefinite | [Aurora MySQL Logging](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.MySQL.html) |
+| RDS Enhanced Monitoring | JSON | CloudWatch Logs `RDSOSMetrics` | Indefinite | [RDS Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html) |
+| Lambda Execution | Plain text | CloudWatch Logs `/aws/lambda/<function>` | Indefinite | [AWS Lambda Logs](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html) |
+| Admin/Audit | Plain text | CloudWatch Logs `/admin/auditlogs` | Indefinite | [AWS Systems Manager Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-logging.html) |
 | Firehose (deprecated) | JSON | S3 → Redshift | Varies | [Kinesis Firehose](https://docs.aws.amazon.com/firehose/latest/dev/) |
 
 ---
