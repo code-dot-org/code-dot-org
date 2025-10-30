@@ -140,4 +140,9 @@ module AllowedHostnameHelper
   ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
     'picsum.photos' # Placeholder images - Public API
   ].freeze
+
+  ALLOWED_FONT_HOSTNAMES = [
+    'fonts.googleapis.com',
+    'fonts.gstatic.com'
+  ]
 end
