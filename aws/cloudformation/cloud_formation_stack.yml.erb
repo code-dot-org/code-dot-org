@@ -210,6 +210,17 @@ Resources:
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
+          - Effect: Deny
+            Action:
+              - 's3:DeleteBucket'
+              - 's3:DeleteBucketPolicy'
+              - 's3:DeleteBucketWebsite'
+              - 's3:PutBucketAcl'
+              - 's3:PutBucketPolicy'
+              - 's3:PutBucketPublicAccessBlock'
+              - 's3:PutObjectAcl'
+              - 's3:PutLifecycleConfiguration'
+            Resource: '*'
           # TODO: Move to dedicated policy for GenAI
           # GenAI Sagemaker access
           - Effect: Allow
