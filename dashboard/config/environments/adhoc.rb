@@ -31,7 +31,7 @@ Dashboard::Application.configure do
   config.log_formatter = Logger::Formatter.new
 
   # Log condensed lines to syslog for centralized logging.
-  config.lograge.enabled = false
+  config.lograge.enabled = true
   config.lograge.formatter = Lograge::Formatters::Cee.new
   require 'syslog/logger'
   config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
