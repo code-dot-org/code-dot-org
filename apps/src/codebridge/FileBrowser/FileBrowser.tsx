@@ -88,51 +88,53 @@ export const FileBrowser = React.memo(() => {
   );
 
   return (
-    <div className={moduleStyles.fileBrowserContents}>
-      {isEmpty ? (
-        <CodebridgeEmptyState
-          imageProps={{src: emptyFileManagerPlaceholderImage}}
-          description={codebridgeI18n.thisProjectIsEmpty()}
-        />
-      ) : (
-        <DndContext
-          onDragEnd={handleDragEnd}
-          sensors={sensors}
-          modifiers={[restrictToVerticalAxis]}
-          collisionDetection={collisionDetector}
-          accessibility={{
-            screenReaderInstructions: {
-              draggable: codebridgeI18n.dragAndDropInstructionsFolders(),
-            },
-          }}
-        >
-          <DndDataContextProvider
-            value={{dragData, dropData}}
-            dndMonitor={dndMonitor}
+    <div id="file-browser">
+      <div className={moduleStyles.fileBrowserContents}>
+        {isEmpty ? (
+          <CodebridgeEmptyState
+            imageProps={{src: emptyFileManagerPlaceholderImage}}
+            description={codebridgeI18n.thisProjectIsEmpty()}
+          />
+        ) : (
+          <DndContext
+            onDragEnd={handleDragEnd}
+            sensors={sensors}
+            modifiers={[restrictToVerticalAxis]}
+            collisionDetection={collisionDetector}
+            accessibility={{
+              screenReaderInstructions: {
+                draggable: codebridgeI18n.dragAndDropInstructionsFolders(),
+              },
+            }}
           >
-            <Droppable
-              data={{id: DEFAULT_FOLDER_ID}}
-              className={classNames(
-                moduleStyles.droppableArea,
-                moduleStyles.expandedDroppableArea,
-                {
-                  [moduleStyles.acceptingDrop]:
-                    DEFAULT_FOLDER_ID === dropData?.id,
-                }
-              )}
+            <DndDataContextProvider
+              value={{dragData, dropData}}
+              dndMonitor={dndMonitor}
             >
-              <div id="uitest-files-list" className={moduleStyles.folder}>
-                <InnerFileBrowser
-                  parentId={DEFAULT_FOLDER_ID}
-                  folders={source.folders}
-                  files={source.files}
-                  appName={appName}
-                />
-              </div>
-            </Droppable>
-          </DndDataContextProvider>
-        </DndContext>
-      )}
+              <Droppable
+                data={{id: DEFAULT_FOLDER_ID}}
+                className={classNames(
+                  moduleStyles.droppableArea,
+                  moduleStyles.expandedDroppableArea,
+                  {
+                    [moduleStyles.acceptingDrop]:
+                      DEFAULT_FOLDER_ID === dropData?.id,
+                  }
+                )}
+              >
+                <div id="uitest-files-list" className={moduleStyles.folder}>
+                  <InnerFileBrowser
+                    parentId={DEFAULT_FOLDER_ID}
+                    folders={source.folders}
+                    files={source.files}
+                    appName={appName}
+                  />
+                </div>
+              </Droppable>
+            </DndDataContextProvider>
+          </DndContext>
+        )}
+      </div>
     </div>
   );
 });

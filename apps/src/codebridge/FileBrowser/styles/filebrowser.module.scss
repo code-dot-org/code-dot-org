@@ -1,5 +1,10 @@
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
+.file-browser {
+  height: 100%;
+  overflow: hidden;
+}
+
 .fileBrowserContents {
   overflow-y: auto;
   scrollbar-color: var(--background-neutral-senary)
@@ -93,9 +98,13 @@ button.button-kebab:focus {
 }
 
 .nameContainer {
-  text-overflow: ellipsis;
   overflow: hidden;
   width: auto;
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .label {
