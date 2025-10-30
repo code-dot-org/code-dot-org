@@ -73,33 +73,29 @@ const AiTutorSidebarSuggestedPrompts: React.FC<
   );
 
   return (
-    <div className={`ai-tutor-suggested-prompts ${className}`}>
-      <div className="ai-tutor-suggested-prompts-list">
-        {suggestedPrompts.map(prompt => (
-          <Button
-            className={styles['ai-tutor-suggested-prompt-item']}
-            aria-label={prompt.label}
-            isIconOnly
-            icon={
-              {
-                ...prompt.icon,
-                className: classNames({
-                  [styles['icon']]: true,
-                  [styles[`icon-${prompt.icon?.iconName}`]]: prompt.icon,
-                }),
-              } as FontAwesomeV6IconProps
-            }
-            onClick={() =>
-              handleSubmit(prompt.value, prompt.analyticsProperties)
-            }
-            key={prompt.id}
-            size="m"
-            type="primary"
-            color="white"
-            disabled={!modelParameters}
-          />
-        ))}
-      </div>
+    <div className={styles['ai-tutor-suggested-prompts-list']}>
+      {suggestedPrompts.map(prompt => (
+        <Button
+          className={styles['ai-tutor-suggested-prompt-item']}
+          aria-label={prompt.label}
+          isIconOnly
+          icon={
+            {
+              ...prompt.icon,
+              className: classNames({
+                [styles['icon']]: true,
+                [styles[`icon-${prompt.icon?.iconName}`]]: prompt.icon,
+              }),
+            } as FontAwesomeV6IconProps
+          }
+          onClick={() => handleSubmit(prompt.value, prompt.analyticsProperties)}
+          key={prompt.id}
+          size="m"
+          type="primary"
+          color="white"
+          disabled={!modelParameters}
+        />
+      ))}
     </div>
   );
 };
