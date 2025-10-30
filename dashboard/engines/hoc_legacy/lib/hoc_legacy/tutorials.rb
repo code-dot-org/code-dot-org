@@ -20,7 +20,7 @@ module HocLegacy
 
       # @return [Hash{String => Contentful::Entry}] a hash mapping tutorial codes to their Tutorial entries
       private def store
-        cache.fetch(CACHE_KEY) {fetch_all} || {}
+        cache.fetch(CACHE_KEY, force: CDO.rack_env?(:development)) {fetch_all} || {}
       end
 
       private def cache
