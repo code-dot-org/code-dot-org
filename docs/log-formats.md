@@ -7,10 +7,10 @@ This document details the specific log formats used across the Code.org platform
 - [CloudFront Standard Access Logs (non-real-time)](#cloudfront-standard-access-logs-non-real-time)
 - [CloudFront Real-Time Access Logs (Parquet)](#cloudfront-real-time-access-logs-parquet)
 - [Application Load Balancer (ALB) Logs](#application-load-balancer-alb-logs)
-- [Rails Application Logs (Lograge CEE JSON)](#rails-application-logs-lograge-cee-json)
+- [Rails Application Logs (CloudWatch Logs/Lograge CEE JSON)](#rails-application-logs-cloudwatch-logslograge-cee-json)
 - [NGINX Access Logs](#nginx-access-logs)
 - [NGINX Error Logs](#nginx-error-logs)
-- [CloudWatch Logs (Browser Events)](#cloudwatch-logs-browser-events)
+- [Browser Events (CloudWatch Logs)](#browser-events-cloudwatch-logs)
 - [Syslog Format](#syslog-format)
 - [Kinesis Firehose Events](#kinesis-firehose-events)
 
@@ -216,7 +216,7 @@ http 2025-10-29T17:36:45.123456Z app/production-codeorg/a1b2c3d4e5f6g7h8 198.51.
 
 ---
 
-## Rails Application Logs (Lograge CEE JSON)
+## Rails Application Logs (CloudWatch Logs/lograge CEE JSON)
 
 **Format:** CEE-enhanced JSON (Common Event Expression)  
 **Library:** [Lograge](https://github.com/roidrage/lograge) with CEE formatter  
@@ -269,7 +269,38 @@ Depending on the route and Lograge hooks, optional keys may also appear—for ex
 
 **Note:** The `@cee:` prefix is followed by a space and then the JSON object. Rails still emits unstructured lines (for example, `Rendered ...`) immediately before the JSON; parsers should filter for lines beginning with `@cee:` when extracting structured entries.
 
----
+### Useful Queries/Patterns
+
+Get the top 50 most frequent 500 errors by controller and action:
+```
+parse @message "@cee: *" as payload
+| filter ispresent(payload)
+| parse payload /"controller":"(?<controller>[^"]+)".*"action":"(?<action>[^"]+)".*"status":(?<status>\d+)/
+| filter status >= 500
+| stats count() as err by controller, action, status
+| sort err desc
+| limit 50
+```
+
+Get the 95th percentile and average duration of requests by controller and action:
+```
+parse @message "@cee: *" as payload
+| filter ispresent(payload)
+| parse payload /"controller":"(?<controller>[^"]+)".*"action":"(?<action>[^"]+)".*"duration":(?<duration>[\d.]+)/
+| stats pct(duration, 95) as p95_ms, avg(duration) as avg_ms, count() as count by controller, action
+| sort p95_ms desc
+| limit 20
+```
+
+Get the top 200 slowest requests to a given endpoint:
+```
+parse @message "@cee: *" as payload
+| filter ispresent(payload)
+| parse payload /"path":"(?<path>[^"]+)".*"status":(?<status>\d+).*"duration":(?<duration>[\d.]+)/
+| filter path = "/api/v1/users/current" and duration > 300
+| sort duration desc
+| limit 200
+```
 
 ## NGINX Access Logs
 
@@ -298,7 +329,7 @@ The combined log format includes:
 - `http_referer` — Referer header, or `-` if none
 - `http_user_agent` — User-Agent header
 
-**Note:** NGINX logs are written to `/var/log/nginx/access.log` on each EC2 instance and are NOT uploaded to S3.
+**Note:** NGINX logs are written to `/var/log/nginx/access.log` on each EC2 instance and are NOT uploaded anywhere for durable storage.
 
 
 ---
@@ -312,7 +343,7 @@ In practice on production servers, there actually are essentially no entries in 
 
 ---
 
-## CloudWatch Logs (Browser Events)
+## Browser Events (CloudWatch)
 
 **Format:** JSON  
 **Official Documentation:** [CloudWatch Logs Concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogsConcepts.html)
