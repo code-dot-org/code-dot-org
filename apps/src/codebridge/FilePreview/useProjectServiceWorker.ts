@@ -23,13 +23,13 @@ function useProjectServiceWorker(
             // @ts-expect-error because TypeScript does not like this syntax.
             import.meta.url
           )
+          //{scope: '/'}
         )
         .then(registration => {
           console.log(
             'Project Service Worker registered with scope:',
             registration.scope
           );
-          setServiceWorkerReady(true);
           if (registration.active) {
             console.log('found active service worker');
             setServiceWorker(registration.active);
@@ -46,7 +46,7 @@ function useProjectServiceWorker(
           });
           navigator.serviceWorker.onmessage = event => {
             console.log('Received message from service worker:', event);
-            if (event.data === 'RECEIVED_SOURCE') {
+            if (event.data.type === 'RECEIVED_SOURCE') {
               console.log('received source acknowledged by service worker');
               setServiceWorkerReady(true);
             }
