@@ -30,6 +30,10 @@ function useProjectServiceWorker(
             registration.scope
           );
           setServiceWorkerReady(true);
+          if (registration.active) {
+            console.log('found active service worker');
+            setServiceWorker(registration.active);
+          }
           registration.addEventListener('updatefound', () => {
             const installingWorker = registration.installing;
             if (installingWorker) {
