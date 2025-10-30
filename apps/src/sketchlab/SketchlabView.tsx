@@ -67,12 +67,8 @@ async function uploadBase64ToUrl(
   uploadUrl: string,
   mimeType: string
 ): Promise<Response> {
-  // Fetch the data URL to get a Blob (handles all decoding automatically)
   const response = await fetch(dataUrl);
   const blob = await response.blob();
-
-  console.log(`type: ${mimeType}`);
-  // Create a File object from the Blob
   const file = new File([blob], 'file', {
     type: mimeType,
   });
@@ -195,15 +191,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
         );
 
-        console.log('savedFileIds:', savedFileIds);
-        console.log('excalidrawFileIds:', excalidrawFileIds);
-        console.log('filesBeingUploaded:', filesBeingUploadedRef.current);
-
-        // // Probably need actual comparison of keys
-        // Don't rerun on update hook until the upload has finished?
-        // Or, maybe just set a boolean that upload is happening.
         if (difference.length && serializedData.files) {
-          difference.forEach(async fileId => {
+          difference.map(async fileId => {
             filesBeingUploadedRef.current.add(fileId);
 
             const newFile = serializedData.files[fileId];
