@@ -20,6 +20,9 @@
   .introjs-tooltip:has(.sketchlab-tour-wide-step) {
     max-width: 650px;
     min-width: 600px;
+  }
+
+  .introjs-tooltip:has(.sketchlab-move-vertical) {
     transform: translateY(-120px);
   }
   
