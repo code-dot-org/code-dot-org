@@ -17,6 +17,8 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
 
   around do |test|
     PEGASUS_DB.transaction(rollback: :always) {test.call}
+  ensure
+    HocLegacy::Tutorials.send(:cache).delete(HocLegacy::Tutorials::CACHE_KEY)
   end
 
   before do
@@ -24,6 +26,8 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
 
     allow(DCDO).to receive(:get).and_call_original
     allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', false).and_return(true)
+
+    HocLegacy::Tutorials.send(:cache).delete(HocLegacy::Tutorials::CACHE_KEY)
   end
 
   it 'has expected basic flow from begin to finish' do

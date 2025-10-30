@@ -11,7 +11,10 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
     end
   end
 
-  before do
+  around do |test|
+    described_class.send(:cache).delete(described_class::CACHE_KEY)
+    test.call
+  ensure
     described_class.send(:cache).delete(described_class::CACHE_KEY)
   end
 
