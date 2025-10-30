@@ -40,7 +40,7 @@ const existingDataResponse = {
 };
 
 const mockMatchingProfileResponse = {
-  matchingProfile: 'Collaborative Facilitator',
+  matchingProfile: 'The Innovator',
 };
 
 describe('PersonalizationCollectorContainer', () => {
@@ -73,26 +73,29 @@ describe('PersonalizationCollectorContainer', () => {
     render(<PersonalizationCollectorContainer />);
   }
 
+  async function renderAndWaitForLoad() {
+    renderDefault();
+    await waitFor(() => {
+      expect(screen.queryByText('Loading...')).toBeNull();
+    });
+  }
+
   it('renders loading state initially', () => {
     renderDefault();
     screen.getByText('Loading...');
   });
 
   it('renders first question after loading', async () => {
-    renderDefault();
+    await renderAndWaitForLoad();
 
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
-    });
-
-    // Should show progress bar
+    // Show progress bar
     screen.getByText('Question 1 of 6');
 
-    // Should show first question (years teaching)
+    // Show first question (years teaching)
     screen.getByText("I've been teaching for");
     screen.getByText('years!');
 
-    // Should show navigation buttons
+    // Show navigation buttons
     screen.getByRole('button', {name: i18n.back()});
     screen.getByRole('button', {name: i18n.next()});
   });
@@ -109,16 +112,12 @@ describe('PersonalizationCollectorContainer', () => {
       expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
     });
 
-    // Should pre-populate the years teaching field
+    // Pre-populate the years teaching field
     screen.getByDisplayValue('5');
   });
 
   it('navigates through questions using next button', async () => {
-    renderDefault();
-
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).toBeNull();
-    });
+    await renderAndWaitForLoad();
 
     // Start at question 1 (years teaching)
     screen.getByText('Question 1 of 6');
@@ -135,17 +134,13 @@ describe('PersonalizationCollectorContainer', () => {
       screen.getByText('Question 2 of 6');
     });
 
-    // Should now be on confidence question
+    // Show confidence question
     screen.getByText('Not confident at all');
     screen.getByText('Extremely confident');
   });
 
   it('navigates back to previous question using back button', async () => {
-    renderDefault();
-
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).toBeNull();
-    });
+    await renderAndWaitForLoad();
 
     // Navigate to second question first
     const yearsInput = screen.getByRole('spinbutton');
@@ -171,11 +166,7 @@ describe('PersonalizationCollectorContainer', () => {
   });
 
   it('saves data when advancing to next question', async () => {
-    renderDefault();
-
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).toBeNull();
-    });
+    await renderAndWaitForLoad();
 
     const yearsInput = screen.getByRole('spinbutton');
     fireEvent.change(yearsInput, {target: {value: '3'}});
@@ -194,11 +185,7 @@ describe('PersonalizationCollectorContainer', () => {
   });
 
   it('handles confidence selection with segmented buttons', async () => {
-    renderDefault();
-
-    await waitFor(() => {
-      expect(screen.queryByText('Loading..')).toBeNull();
-    });
+    await renderAndWaitForLoad();
 
     // Navigate to confidence question
     const yearsInput = screen.getByRole('spinbutton');
@@ -211,16 +198,13 @@ describe('PersonalizationCollectorContainer', () => {
       screen.getByText('Question 2 of 6');
     });
 
-    // Should show segmented buttons for confidence (0-10)
+    // Show segmented buttons for confidence (0-10)
     screen.getByText('0');
     screen.getByText('5');
     screen.getByText('10');
 
-    // Click on confidence level 8
-    const confidenceButton = screen.getByText('8');
-    fireEvent.click(confidenceButton);
-
-    // Advance to next question
+    // Click on confidence level 8 and advance
+    fireEvent.click(screen.getByText('8'));
     fireEvent.click(nextButton);
 
     await waitFor(() => {
@@ -233,14 +217,9 @@ describe('PersonalizationCollectorContainer', () => {
   });
 
   it('handles checkbox selections for goals', async () => {
-    renderDefault();
+    await renderAndWaitForLoad();
 
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).toBeNull();
-    });
-
-    // Navigate to goals question (question 3)
-    // First, fill years teaching
+    // Navigate through to goals question (question 3)
     const yearsInput = screen.getByRole('spinbutton');
     fireEvent.change(yearsInput, {target: {value: '3'}});
     fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
@@ -249,24 +228,19 @@ describe('PersonalizationCollectorContainer', () => {
       screen.getByText('Question 2 of 6');
     });
 
-    // Then select confidence
-    const confidenceButton = screen.getByText('7');
-    fireEvent.click(confidenceButton);
+    fireEvent.click(screen.getByText('7'));
     fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
 
     await waitFor(() => {
       screen.getByText('Question 3 of 6');
     });
 
-    // Should now be on goals question with checkboxes
+    // Go to goals question with checkboxes
     const checkboxes = screen.getAllByRole('checkbox');
     expect(checkboxes.length).toBeGreaterThan(0);
 
-    // Select a goal
-    const firstCheckbox = checkboxes[0];
-    fireEvent.click(firstCheckbox);
-
-    // Advance to next question
+    // Select a goal and advance
+    fireEvent.click(checkboxes[0]);
     fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
 
     await waitFor(() => {
@@ -279,11 +253,7 @@ describe('PersonalizationCollectorContainer', () => {
   });
 
   it('shows text field when "Other" is selected for goals', async () => {
-    renderDefault();
-
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).toBeNull();
-    });
+    await renderAndWaitForLoad();
 
     // Navigate to goals question
     const yearsInput = screen.getByRole('spinbutton');
@@ -294,8 +264,7 @@ describe('PersonalizationCollectorContainer', () => {
       screen.getByText('Question 2 of 6');
     });
 
-    const confidenceButton = screen.getByText('7');
-    fireEvent.click(confidenceButton);
+    fireEvent.click(screen.getByText('7'));
     fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
 
     await waitFor(() => {
@@ -306,18 +275,12 @@ describe('PersonalizationCollectorContainer', () => {
     const otherCheckbox = screen.getByRole('checkbox', {name: /other/i});
     fireEvent.click(otherCheckbox);
 
-    // Should show text field for other goal
-    await waitFor(() => {
-      screen.getByPlaceholderText('Please describe your other goal...');
-    });
+    // Show text field for other goal (this is synchronous)
+    screen.getByPlaceholderText('Please describe your other goal...');
   });
 
   it('completes full flow and shows results', async () => {
-    renderDefault();
-
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).toBeNull();
-    });
+    await renderAndWaitForLoad();
 
     // Complete all questions quickly
     // Question 1: Years teaching
@@ -375,12 +338,12 @@ describe('PersonalizationCollectorContainer', () => {
       expect(matchTeachingProfileSpy).toHaveBeenCalled();
       expect(saveTeachingProfileDataSpy).toHaveBeenCalledWith(
         expect.objectContaining({
-          matchedPersona: 'Collaborative Facilitator',
+          matchedPersona: 'The Innovator',
         })
       );
     });
 
-    // Should show results
+    // Show results
     await waitFor(() => {
       expect(screen.queryByText('Question 6 of 6')).toBeNull();
       // Progress bar should be hidden when showing results
@@ -411,11 +374,7 @@ describe('PersonalizationCollectorContainer', () => {
       () => new Promise(resolve => setTimeout(resolve, 100))
     );
 
-    renderDefault();
-
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).toBeNull();
-    });
+    await renderAndWaitForLoad();
 
     const yearsInput = screen.getByRole('spinbutton');
     fireEvent.change(yearsInput, {target: {value: '3'}});
@@ -423,25 +382,20 @@ describe('PersonalizationCollectorContainer', () => {
     const nextButton = screen.getByRole('button', {name: i18n.next()});
     fireEvent.click(nextButton);
 
-    // Should show saving state
-
+    // Show saving state
     screen.getByRole('button', {name: i18n.saving()});
     expect(screen.getByRole('button', {name: i18n.saving()})).toBeDisabled();
   });
 
   it('does not allow going back from first question', async () => {
-    renderDefault();
-
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).toBeNull();
-    });
+    await renderAndWaitForLoad();
 
     screen.getByText('Question 1 of 6');
 
     const backButton = screen.getByRole('button', {name: i18n.back()});
     fireEvent.click(backButton);
 
-    // Should remain on first question
+    // Remain on first question (synchronous check)
     screen.getByText('Question 1 of 6');
     screen.getByText("I've been teaching for");
   });
@@ -467,7 +421,7 @@ describe('PersonalizationCollectorContainer', () => {
         'Failed to save teaching profile data:',
         expect.any(Error)
       );
-      // Should still navigate to next question despite save error
+      // Navigate to next question despite save error
       screen.getByText('Question 2 of 6');
     });
 
@@ -480,11 +434,7 @@ describe('PersonalizationCollectorContainer', () => {
       new Error('Final save failed')
     );
 
-    renderDefault();
-
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).toBeNull();
-    });
+    await renderAndWaitForLoad();
 
     // Navigate through all questions quickly
     const yearsInput = screen.getByRole('spinbutton');
