@@ -33,6 +33,7 @@ import {
   resourcePanelLinksElementId,
 } from './constants';
 import CopyrightButton from './CopyrightButton';
+import DisclaimerButton from './DisclaimerButton';
 import OnboardingTourSteps from './OnboardingTourSteps';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
@@ -167,10 +168,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isReadOnly &&
     (isRunning || isValidating);
 
+  const levelProperties = instructionsProps.levelProperties;
+  const aiTutorVisible = shouldShowAiTutor(
+    appName,
+    levelProperties.aiTutorAvailable
+  );
+
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
-    const levelProperties = instructionsProps.levelProperties;
 
     if (levelProperties.longInstructions) {
       tabMap[Tabs.Instructions] = (
@@ -200,10 +206,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (
-      hiddenContextCallback &&
-      shouldShowAiTutor(appName, levelProperties.aiTutorAvailable)
-    ) {
+    if (hiddenContextCallback && aiTutorVisible) {
       tabMap[Tabs.AiTutor] = (
         <AiTutorChat
           hiddenContextCallback={hiddenContextCallback}
@@ -248,10 +251,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return tabMap;
   }, [
     instructionsProps,
+    levelProperties,
     hasValidationConditions,
     isUserTeacher,
+    aiTutorVisible,
     hiddenContextCallback,
-    appName,
     isViewingOldVersion,
     viewAsUserId,
     isWidgetView,
@@ -456,6 +460,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 buttonSize="s"
               />
             )}
+            {aiTutorVisible && <DisclaimerButton theme={theme} />}
             <CopyrightButton theme={theme} />
             <div ref={settingsButtonRef}>
               <IconButtonWithTooltip

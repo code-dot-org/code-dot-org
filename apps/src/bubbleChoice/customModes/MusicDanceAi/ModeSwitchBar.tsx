@@ -11,6 +11,7 @@ import {
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import {setIsLoading} from '@cdo/apps/lab2/lab2Redux';
 import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
+import {LevelPropertiesValidator} from '@cdo/apps/lab2/responseValidators';
 import {
   BubbleChoiceLevelData,
   BubbleChoiceSublevel,
@@ -45,7 +46,11 @@ async function loadLevelProperties(
         sublevelPosition ? `/sublevel/${sublevelPosition}` : ''
       }/level_properties`
     : `/levels/${levelId}/level_properties`;
-  const {value} = await HttpClient.fetchJson<LevelProperties>(path);
+  const {value} = await HttpClient.fetchJson<LevelProperties>(
+    path,
+    {},
+    LevelPropertiesValidator
+  );
   LevelPropertiesCache.set(path, value);
   return value;
 }
