@@ -4059,10 +4059,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/remark-plugins@npm:2.0.0, @code-dot-org/remark-plugins@npm:^2.0.0":
+"@code-dot-org/remark-plugins@npm:2.0.0":
   version: 2.0.0
   resolution: "@code-dot-org/remark-plugins@npm:2.0.0"
   checksum: 10/551b440b6567cd653ae5994d31dcaf2f3cd5f7ba59044758006b4a12c215dd06c2f768ce9517cf522093eebb19accad1839d468ad89fc303dbb6cb33678e6c6c
+  languageName: node
+  linkType: hard
+
+"@code-dot-org/remark-plugins@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@code-dot-org/remark-plugins@npm:2.0.1"
+  checksum: 10/9d80760ede352c83f50e2a7f74bbbff855dc2d29cc4e4dfd822d661721095983636308314042fcf1f9c0aebae1b536ff8bf0e81c0aa2fa91ebd6fd12a66e8e09
   languageName: node
   linkType: hard
 
@@ -11052,7 +11059,7 @@ __metadata:
     "@code-dot-org/p5.play": "npm:1.3.21-cdo"
     "@code-dot-org/piskel": "npm:0.13.0-cdo.13"
     "@code-dot-org/redactable-markdown": "npm:^0.10.0"
-    "@code-dot-org/remark-plugins": "npm:^2.0.0"
+    "@code-dot-org/remark-plugins": "npm:^2.0.1"
     "@codemirror/autocomplete": "npm:^6.18.6"
     "@codemirror/commands": "npm:^6.8.0"
     "@codemirror/lang-css": "npm:^6.3.1"
