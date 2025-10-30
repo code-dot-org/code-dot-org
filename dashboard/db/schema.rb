@@ -1688,6 +1688,18 @@ ActiveRecord::Schema.define(version: 2025_10_13_190700) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
+  create_table "portfolio_entries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "student_id"
+    t.string "title"
+    t.string "before_asset_url"
+    t.string "before_level_url"
+    t.string "after_asset_url"
+    t.string "after_level_url"
+    t.text "reflection"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "potential_teachers", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -2354,7 +2366,7 @@ ActiveRecord::Schema.define(version: 2025_10_13_190700) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at"
     t.datetime "anonymized_at"

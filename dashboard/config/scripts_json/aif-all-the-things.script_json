@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-22 16:16:33 UTC",
+    "serialized_at": "2025-10-29 15:30:01 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -164,6 +164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-suggest"
+        ],
         "progression": "Mode: Suggest"
       },
       "bonus": false,
@@ -186,6 +189,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-outline"
+        ],
         "progression": "Mode: Outline"
       },
       "bonus": false,
@@ -208,6 +214,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-guide"
+        ],
         "progression": "Mode: Guide"
       },
       "bonus": false,
@@ -230,6 +239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "all-the-aif-things-web-lab-tutor-mode-produce"
+        ],
         "progression": "Mode: Produce"
       },
       "bonus": false,
@@ -252,6 +264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "all-the-aif-things-sketch-lab-wireframe-assets"
+        ],
         "progression": "Wireframe Assets"
       },
       "bonus": false,
@@ -274,6 +289,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "all-the-aif-things-sketch-lab-flowchart-assets"
+        ],
         "progression": "Flowchart Assets"
       },
       "bonus": false,
