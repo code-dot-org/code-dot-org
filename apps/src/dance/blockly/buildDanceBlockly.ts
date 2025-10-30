@@ -33,6 +33,7 @@ const MAKE_SPRITE = 'makeAnonymousDanceSprite';
 const CHANGE_MOVE = 'changeMoveEachLR';
 const SET_BACKGROUND = 'setBackgroundEffectWithPalette';
 const SET_FOREGROUND = 'setForegroundEffectExtended';
+const ALTERNATE_MOVES = 'alternateMoves';
 
 function randomElement<T>(array: readonly T[]): T {
   return array[Math.floor(Math.random() * array.length)];
@@ -76,6 +77,26 @@ function makeSetForegroundBlock(
     type,
     fields: {
       EFFECT: randomField('EFFECT', effects),
+    },
+  };
+}
+
+function makeAlternateMovesBlock(
+  type: string,
+  moves: string[]
+): JsonBlockConfig {
+  const move1 = randomField('MOVE', moves);
+  const move2 = randomField(
+    'MOVE',
+    moves.filter(move => move !== move1)
+  );
+  return {
+    type,
+    fields: {
+      GROUP: groupSpritesField(),
+      N: 2,
+      MOVE1: move1,
+      MOVE2: move2,
     },
   };
 }
@@ -145,6 +166,10 @@ export default function buildDanceBlockly(
     blockDefinitions,
     MAKE_SPRITE
   );
+  const alternateMovesBlockType = getPreferredBlockType(
+    blockDefinitions,
+    ALTERNATE_MOVES
+  );
 
   const validMoves = getBlockOptions(
     blockDefinitions,
@@ -195,11 +220,17 @@ export default function buildDanceBlockly(
     validForegrounds
   );
 
+  const alternateMoves = makeAlternateMovesBlock(
+    alternateMovesBlockType,
+    validMoves
+  );
+
   const setupDoChain = chainBlocks(
     makeSprite,
     initialChangeMove,
     initialBg,
-    initialFg
+    initialFg,
+    ...(codeComplexity === 'simple' ? [alternateMoves] : [])
   );
 
   const setupBlock: JsonBlockConfig = {
