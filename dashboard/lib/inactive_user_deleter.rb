@@ -21,7 +21,6 @@ class InactiveUserDeleter
   EVENT_NAME = 'inactive_user_deleter'
   SLACK_CHANNEL_FOR_SUMMARY = 'cron-daily'
   SLACK_CHANNEL_FOR_ERRORS = 'user-accounts'
-  ACCOUNT_DELETION_LIMIT = 8_000
   BATCH_SIZE = 1_000
   INACTIVE_USER_TTL = 42.months
   QUERY_LIMIT = 10_000
@@ -31,7 +30,7 @@ class InactiveUserDeleter
   #   Defaults to 3.5 years ago, which is the current period before accounts are rendered inactive
   # @param limit [Integer] The maximum number of accounts to delete in a single run.
   #   This is a safety limit to prevent accidental deletion of too many accounts.
-  def initialize(dry_run: false, inactive_since: nil, limit: ACCOUNT_DELETION_LIMIT, query_limit: nil)
+  def initialize(dry_run: false, inactive_since: nil, query_limit: nil)
     @dry_run = dry_run.nil? ? false : dry_run
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
@@ -39,15 +38,11 @@ class InactiveUserDeleter
     @inactive_since = inactive_since || INACTIVE_USER_TTL.ago
     raise ArgumentError.new('inactive_since must be Time') unless @inactive_since.is_a? Time
 
-    # Maximum number of accounts to delete in a single run.
-    # This is a safety limit to prevent accidental deletion of too many accounts.
-    @limit = limit || ACCOUNT_DELETION_LIMIT
-    raise ArgumentError.new('limit must be Integer') unless @limit.is_a? Integer
-
     # Maximum number of accounts to query.
     # This safety limit prevents the job from issuing extremely large queries
     # that can take too long to execute or overwhelm the database.
     @query_limit = query_limit || QUERY_LIMIT
+    raise ArgumentError.new('query_limit must be Integer') unless @query_limit.is_a? Integer
 
     # Users that we don't want to include in paged batches. Includes users who have already been processed or encountered an error.
     @processed_user_ids = []
@@ -57,11 +52,6 @@ class InactiveUserDeleter
 
   def call
     reset_metrics
-
-    total_size = inactive_users.size
-    if total_size > limit
-      raise SafetyConstraintViolation, "Too many accounts to delete: #{total_size} exceeds limit of #{limit}"
-    end
 
     # Process individual batches in a loop to avoid issues with find_each, which imposes
     # an order by id, causing an inefficient scan on the id index. Order does not matter
