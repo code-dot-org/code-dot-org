@@ -35,7 +35,7 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
         iconStyle: 'solid',
       }}
       type={showFileBrowser ? 'tertiary' : 'secondary'}
-      color={showFileBrowser ? 'gray' : 'gray'}
+      color="gray"
       buttonSize="xs"
       tooltipSize="xs"
       tooltipDirection="onBottom"
