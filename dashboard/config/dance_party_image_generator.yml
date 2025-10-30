@@ -12,7 +12,7 @@ default: &default
       turtle,
       jellyfish,
       koala,
-      bunny_rabbit,
+      rabbit,
       cat,
       dog,
       squirrel,
