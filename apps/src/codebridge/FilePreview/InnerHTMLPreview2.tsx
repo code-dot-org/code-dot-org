@@ -86,7 +86,7 @@ const InnerHTMLPreview = () => {
     //       />
     //     </div>
     //   );
-    if (serviceWorkerReady) {
+    if (serviceWorkerReady && currentFile) {
       return (
         <iframe
           ref={iframeRef}
@@ -95,7 +95,7 @@ const InnerHTMLPreview = () => {
           title="Inner HTML Preview"
           id="inner-preview"
           key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
-          src={`${window.location.origin}/assets/js/serve-project`}
+          src={`${window.location.origin}/assets/js/serve-project/${currentFile}`}
           className={moduleStyles.fileIframe}
         />
       );
@@ -106,7 +106,7 @@ const InnerHTMLPreview = () => {
         </div>
       );
     }
-  }, [allowScripts, serviceWorkerReady]);
+  }, [allowScripts, currentFile, serviceWorkerReady]);
 
   return getPreview();
 };
