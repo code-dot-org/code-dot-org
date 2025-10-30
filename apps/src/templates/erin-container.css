@@ -1,0 +1,9 @@
+.erin-container, #erin-container {
+  display: block;
+  background: #e0f7fa;
+  border: 2px solid #00796b;
+  padding: 16px;
+  margin: 16px 0;
+  color: #004d40;
+  font-weight: bold;
+}

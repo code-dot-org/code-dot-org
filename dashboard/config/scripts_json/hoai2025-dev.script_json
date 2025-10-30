@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-29 15:30:32 UTC",
+    "serialized_at": "2025-10-28 22:15:45 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -273,9 +273,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "hoai2025-music-adlib-3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
