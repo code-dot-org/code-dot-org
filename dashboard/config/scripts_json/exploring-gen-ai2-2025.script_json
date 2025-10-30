@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-21 21:24:46 UTC",
+    "serialized_at": "2025-10-29 16:27:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6168,15 +6168,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "gen-ai-customizing-studentsurvey-postmodule_2025"
-        ],
         "progression": "Student Post-Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-customizing-studentsurvey-postmodule_2025"
+          "gen-ai-customizing-studentsurvey-postmodule-v2_2025"
         ],
         "lesson.key": "Project: Solving Community Problems with Chatbots",
         "lesson_group.key": "lessonGroup-4",
@@ -6184,7 +6181,7 @@
         "activity_section.key": "8d3315e4-3c28-4bf5-9f53-34bda47e73ea"
       },
       "level_keys": [
-        "gen-ai-customizing-studentsurvey-postmodule_2025"
+        "gen-ai-customizing-studentsurvey-postmodule-v2_2025"
       ]
     }
   ],
@@ -7307,9 +7304,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-studentsurvey-postmodule_2025",
+        "level.key": "gen-ai-customizing-studentsurvey-postmodule-v2_2025",
         "script_level.level_keys": [
-          "gen-ai-customizing-studentsurvey-postmodule_2025"
+          "gen-ai-customizing-studentsurvey-postmodule-v2_2025"
         ],
         "lesson.key": "Project: Solving Community Problems with Chatbots",
         "lesson_group.key": "lessonGroup-4",
