@@ -211,9 +211,9 @@ OptionParser.new do |opts|
 end.parse!
 
 options[:layers] = LAYERS if options[:layers].empty?
-options[:lengths] = LENGTHS if options[:lengths].empty?
 options[:length_for_words] = options[:lengths]
 options[:length_for_words] = LENGTH_WORD_AMOUNTS if options[:lengths].empty?
+options[:lengths] = LENGTHS if options[:lengths].empty?
 options[:moods] = MOODS if options[:moods].empty?
 options[:drums] = DRUMS if options[:drums].empty?
 
