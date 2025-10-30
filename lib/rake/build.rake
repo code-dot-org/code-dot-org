@@ -127,7 +127,7 @@ namespace :build do
         #
         # The sequencing described here is the best for mitigating any issues
         # that may arise when that best practice is not followed.
-        unless rack_env?(:development)
+        if CDO.active_job_queue_adapter == :delayed_job
           ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
           RakeUtils.system_stream_output 'bundle', 'exec', bin_dir('restart-active-job-workers')
         end
