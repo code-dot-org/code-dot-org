@@ -14,7 +14,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     let(:tutorial_code) {'tutorial_code'}
     let(:tutorial_url) {'https://studio.code.org/expected/tutorial_url'}
-    let(:tutorial_primary_ref) {OpenStruct.new(primary_target: tutorial_url)}
+    let(:tutorial_primary_ref) {OpenStruct.new(fields: {primary_target: tutorial_url})}
     let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code, primary_link_ref: tutorial_primary_ref)}
 
     let(:pegasus_db_mock) {double(:pegasus_db)}

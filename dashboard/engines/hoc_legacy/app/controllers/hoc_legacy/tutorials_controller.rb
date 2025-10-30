@@ -11,7 +11,7 @@ module HocLegacy
 
     # GET /api/hour/begin/:code
     def begin
-      tutorial_url = @tutorial.primary_link_ref&.primary_target
+      tutorial_url = @tutorial.primary_link_ref&.fields.try(:[], :primary_target)
       return render_404 if tutorial_url.blank?
 
       TutorialLauncher.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
