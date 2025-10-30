@@ -129,7 +129,6 @@ export const submitChatContents = createAsyncThunk(
       const fileCountImage = fileCount - fileCountPdf;
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
-          levelPath: window.location.pathname,
           fileCount,
           fileCountImage,
           fileCountPdf,

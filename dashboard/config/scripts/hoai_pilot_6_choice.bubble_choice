@@ -9,3 +9,4 @@ level 'dance_moves_choice_2_3_4'
 
 custom_mode 'music_dance_ai'
 uses_lab2
+navigation_type 'next_level'
