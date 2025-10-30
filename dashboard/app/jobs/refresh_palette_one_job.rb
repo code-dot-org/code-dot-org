@@ -19,7 +19,8 @@ class RefreshPaletteOneJob < ApplicationJob
     return unless need
 
     bytes = AWS::S3.download_from_bucket(bucket, full_png)
-    body, sec, ter = DancePartyImageGenerator::PaletteExtractor.extract_png_bytes(bytes, normalize_grays: normalize)
+    pe = DancePartyImageGenerator::PaletteExtractor.new(normalize_grays: normalize)
+    body, sec, ter = pe.extract(bytes)
     meta["body_color"] = body
     meta["secondary_color"] = sec
     meta["tertiary_color"] = ter
