@@ -46,7 +46,7 @@ Feature: Send and receive messages in the AI differentiation chat
     Then I see no difference for "ai diff welcome create chat"
     #eyes here
     And I click selector "#uitest_aiDiffWelcomeContinue"
-    # wait for confetti animation to finish and ai101Thumnail to load
+    # wait for confetti animation to finish
     And I wait for 3 seconds
     Then I scroll the "button:contains(Finish)" element into view
     Then I see no difference for "ai diff welcome finish"
