@@ -280,6 +280,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const uploadDisabled = !canChatWithModel || !!selectedStudent || chatDisabled;
 
+  const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+
+  const isTeacherView = !!selectedStudent;
+
   const showTabs =
     selectedStudent && clientType === AiChatClientTypes.AI_CHAT_LAB;
 
@@ -289,8 +293,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <Tabs {...tabArgs} />
       ) : (
         <ChatEventsList
-          events={selectedStudent ? studentChatHistory : visibleItems}
-          isTeacherView={!!selectedStudent}
+          events={chatEvents}
+          isTeacherView={isTeacherView}
           buildAssetUrl={buildAssetUrlValue}
         />
       )}
