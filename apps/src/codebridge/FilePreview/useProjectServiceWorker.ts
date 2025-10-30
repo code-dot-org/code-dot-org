@@ -5,6 +5,8 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {getFolderPath} from '../utils';
 
+import {addBaseTagToDocument} from './htmlParsingHelpers';
+
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
   currentFile: string | undefined
@@ -65,7 +67,7 @@ function useProjectServiceWorker(
       const filesData: Record<string, {content: string; mimeType: string}> = {};
 
       Object.values(source.files).forEach(file => {
-        const fullFileName = getFullyQualifiedFileName(
+        const {fullFileName, folder} = getFullyQualifiedFileName(
           file.name,
           file.folderId,
           source.folders
@@ -81,12 +83,14 @@ function useProjectServiceWorker(
           mimeType = `image/${file.name.split('.').pop()?.toLowerCase()}`;
         } else if (file.language === 'html') {
           mimeType = 'text/html';
-          // Process HTML files to update links
-          // const parser = new DOMParser();
-          // const doc = parser.parseFromString(file.contents, 'text/html');
-          // updateLinksToNonHtmlFiles(doc, {}, fullFileName);
-          // updateLinksToHtmlFiles(doc, fullFileName);
-          //content = doc.documentElement.outerHTML;
+          // Process HTML files to add base tag
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(file.contents, 'text/html');
+          addBaseTagToDocument(
+            doc,
+            `${window.location.origin}/assets/js/serve-project/${folder}/ll`
+          );
+          content = doc.documentElement.outerHTML;
         } else if (file.language === 'css') {
           mimeType = 'text/css';
         } else if (file.language === 'js') {
@@ -117,10 +121,11 @@ function useProjectServiceWorker(
     folders: MultiFileSource['folders']
   ) {
     if (folderId === DEFAULT_FOLDER_ID) {
-      return fileName; // root folder, no path needed
+      return {fullFileName: fileName, folder: ''}; // root folder, no path needed
     }
-    const fullPath = getFolderPath(folderId, folders) + '/' + fileName;
-    return fullPath.substring(1); // remove leading slash
+    const folderPath = getFolderPath(folderId, folders);
+    const fullPath = folderPath + '/' + fileName;
+    return {fullFileName: fullPath.substring(1), folder: folderPath}; // remove leading slash
   }
 
   return {serviceWorkerReady};

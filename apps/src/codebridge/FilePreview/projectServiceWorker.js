@@ -35,6 +35,7 @@ self.addEventListener('message', event => {
 // Intercept fetch requests
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
+  console.log('Handling project request for URL:', {url});
   if (url.pathname.includes(SERVE_PROJECT_SEGMENT)) {
     event.respondWith(handleProjectRequest(url));
   }
@@ -45,6 +46,7 @@ sendMessageToAllClients('SERVICE_WORKER_LOADED?');
 async function handleProjectRequest(url) {
   try {
     // Extract portion after /serve-project
+    console.log('Handling project request for URL:', {url});
     const idx = url.pathname.indexOf(SERVE_PROJECT_SEGMENT);
     let remainder = url.pathname.substring(idx + SERVE_PROJECT_SEGMENT.length); // maybe "" or "/some/file"
     if (remainder.startsWith('/')) {

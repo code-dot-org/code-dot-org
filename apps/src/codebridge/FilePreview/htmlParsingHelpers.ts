@@ -58,3 +58,17 @@ export const updateLinksToHtmlFiles = (doc: Document, fullFileName: string) => {
     }
   });
 };
+
+export const addBaseTagToDocument = (doc: Document, baseHref: string) => {
+  let baseTag = doc.querySelector('base');
+  if (!baseTag) {
+    baseTag = doc.createElement('base');
+    const head = doc.querySelector('head');
+    if (head) {
+      head.insertBefore(baseTag, head.firstChild);
+    } else {
+      doc.documentElement.insertBefore(baseTag, doc.documentElement.firstChild);
+    }
+  }
+  baseTag.setAttribute('href', baseHref);
+};
