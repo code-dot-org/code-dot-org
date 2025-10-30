@@ -282,14 +282,14 @@ NGINX sits in front of both Puma applications and proxies requests to the approp
 
 ```
 100.0.255.150 - - [30/Oct/2025:00:38:40 +0000] "GET /user_preference/theme HTTP/1.1" 401 49 "-" "Amazon CloudFront"
-100.0.255.190 - - [30/Oct/2025:00:38:40 +0000] "POST /milestone/130681994/158325/10433?course_id=673 HTTP/1.1" 200 358 "-" "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+100.0.255.190 - - [30/Oct/2025:00:38:40 +0000] "POST /milestone/13069999/159999/10999?course_id=673 HTTP/1.1" 200 358 "-" "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
 ```
 
 ### Fields
 
 The combined log format includes:
 
-- `remote_addr` — Client IP address (203.0.113.99)
+- `remote_addr` — Client IP address, usually the incoming IP address from CloudFront
 - `remote_user` — HTTP authenticated username, or `-` if none
 - `time_local` — Local time in format `[DD/Mon/YYYY:HH:MM:SS +ZZZZ]`
 - `request` — Full request line: `"METHOD URI PROTOCOL"`
@@ -298,7 +298,7 @@ The combined log format includes:
 - `http_referer` — Referer header, or `-` if none
 - `http_user_agent` — User-Agent header
 
-**Note:** NGINX logs are written to `/var/log/nginx/access.log` on each EC2 instance and uploaded hourly to S3 by the [log upload script](../bin/upload-logs-to-s3).
+**Note:** NGINX logs are written to `/var/log/nginx/access.log` on each EC2 instance and are NOT uploaded to S3.
 
 
 ---
@@ -308,39 +308,7 @@ The combined log format includes:
 **Format:** NGINX error log format  
 **Official Documentation:** [NGINX Core Module](https://nginx.org/en/docs/ngx_core_module.html#error_log)
 
-NGINX writes errors, warnings, and notices to a separate error log file.
-
-### Example Log Entries
-
-**Upstream Connection Error:**
-```
-2025/10/29 17:46:23 [error] 12345#12345: *67890 connect() to unix:/var/run/dashboard.sock failed (111: Connection refused) while connecting to upstream, client: 203.0.113.45, server: _, request: "GET /s/course2 HTTP/1.1", upstream: "http://unix:/var/run/dashboard.sock:/s/course2", host: "studio.code.org", referrer: "https://code.org/"
-```
-
-**Upstream Timeout:**
-```
-2025/10/29 17:47:30 [error] 12345#12345: *67891 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 198.51.100.22, server: _, request: "POST /api/v1/save HTTP/1.1", upstream: "http://unix:/var/run/dashboard.sock:/api/v1/save", host: "studio.code.org"
-```
-
-**Warning Level:**
-```
-2025/10/29 17:48:15 [warn] 12345#12345: *67892 an upstream response is buffered to a temporary file /var/cache/nginx/proxy_temp/3/45/0000000453 while reading upstream, client: 192.0.2.67, server: _, request: "GET /large-file HTTP/1.1", upstream: "http://unix:/var/run/pegasus.sock:/large-file", host: "code.org"
-```
-
-### Format
-
-Error logs follow the pattern:
-```
-YYYY/MM/DD HH:MM:SS [level] pid#tid: *connection_id message, context_key: value, context_key: value, ...
-```
-
-- `timestamp` — Date and time (YYYY/MM/DD HH:MM:SS)
-- `level` — Log level: `emerg`, `alert`, `crit`, `error`, `warn`, `notice`, `info`, `debug`
-- `pid#tid` — Process ID and thread ID
-- `*connection_id` — Connection number (internal NGINX identifier)
-- `message` — Error or event description
-- `context` — Comma-separated key-value pairs (e.g., `client`, `server`, `request`, `upstream`, `host`, `referrer`)
-
+In practice on production servers, there actually are essentially no entries in these logs. They are nearly 100% empty all the time.
 
 ---
 
