@@ -111,46 +111,59 @@ export const submitChatContents = createAsyncThunk(
     const startTime = Date.now();
 
     let messages: CompletedChatMessage[] = [];
+    const projectFileCount =
+      newUserMessage.userAddedSelectionContext?.length || 0;
+    const projectFileCountHtml =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.html')
+      ).length || 0;
+    const projectFileCountJs =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.js')
+      ).length || 0;
+    const projectFileCountCss =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.css')
+      ).length || 0;
+    const fileCount = newUserMessage.assets?.length || 0;
+    const fileCountPdf =
+      newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
+        .length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
+
+    const eventData = {
+      fileCount,
+      fileCountImage,
+      fileCountPdf,
+      projectFileCount,
+      projectFileCountHtml,
+      projectFileCountJs,
+      projectFileCountCss,
+      clientType,
+      ...analyticsProperties,
+    };
+
     try {
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .incrementCounter('Aichat.ChatCompletionRequestInitiated');
+
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
+      );
+
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
         modelParameters,
         aichatContext
       );
-      const projectFileCount =
-        newUserMessage.userAddedSelectionContext?.length || 0;
-      const projectFileCountHtml =
-        newUserMessage.userAddedSelectionContext?.filter(file =>
-          file.filename.endsWith('.html')
-        ).length || 0;
-      const projectFileCountJs =
-        newUserMessage.userAddedSelectionContext?.filter(file =>
-          file.filename.endsWith('.js')
-        ).length || 0;
-      const projectFileCountCss =
-        newUserMessage.userAddedSelectionContext?.filter(file =>
-          file.filename.endsWith('.css')
-        ).length || 0;
-      const fileCount = newUserMessage.assets?.length || 0;
-      const fileCountPdf =
-        newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
-          .length || 0;
-      const fileCountImage = fileCount - fileCountPdf;
+      // In milliseconds
+      const responseTime = Date.now() - startTime;
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
-          fileCount,
-          fileCountImage,
-          fileCountPdf,
-          projectFileCount,
-          projectFileCountHtml,
-          projectFileCountJs,
-          projectFileCountCss,
-          clientType,
-          ...analyticsProperties,
+          ...eventData,
+          responseTime,
         })
       );
     } catch (error) {
@@ -158,9 +171,10 @@ export const submitChatContents = createAsyncThunk(
       return;
     }
 
+    const responseTime = Date.now() - startTime;
     Lab2Registry.getInstance()
       .getMetricsReporter()
-      .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
+      .reportLoadTime('AichatModelResponseTime', responseTime, [
         {
           name: 'ModelId',
           value: modelParameters.selectedModelId,
