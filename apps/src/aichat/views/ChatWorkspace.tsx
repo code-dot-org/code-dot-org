@@ -6,6 +6,7 @@ import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext'
 import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import ChatEventLogger from '../chatEventLogger';
 import {
@@ -279,12 +280,17 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const uploadDisabled = !canChatWithModel || !!selectedStudent || chatDisabled;
 
+  const showTabs =
+    selectedStudent && clientType === AiChatClientTypes.AI_CHAT_LAB;
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {selectedStudent ? (
+      {showTabs ? (
         <Tabs {...tabArgs} />
       ) : (
         <ChatEventsList
+          events={selectedStudent ? studentChatHistory : visibleItems}
+          isTeacherView={!!selectedStudent}
           buildAssetUrl={buildAssetUrlValue}
         />
       )}
