@@ -10,13 +10,14 @@
     visibility: visible;
     background-color: #fff;
     min-width: 250px;
-    max-width: 700px;
+    max-width: 650px;
     border-radius: 5px;
     box-shadow: 0 3px 30px #21212140;
     transition: opacity .1s ease-out;
   }
 
   .introjs-tooltipReferenceLayer {
+    // This fixes the Safari bug where the introjs panel is not always visible.
     visibility: visible !important;
   }
 
@@ -26,6 +27,7 @@
     min-width: 600px;
   }
 
+  /* Move the tooltip vertically upwards. */
   .introjs-tooltip:has(.sketchlab-move-vertical) {
     transform: translateY(-120px);
   }

@@ -134,13 +134,11 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
 
       // Handle both Enter and Space key activation.
       if (event.key === 'Enter' || event.key === ' ') {
-        // Check if user pressed key on validation tab element (or its children) or IntroJS overlay during step 0.
+        // Check if user pressed key on validation tab element during step 0.
         if (
           validationTourStep === 0 &&
           validationTabElement &&
-          (validationTabElement.contains(target) ||
-            target.classList.contains('introjs-helperLayer') ||
-            target.classList.contains('introjs-tooltipReferenceLayer'))
+          validationTabElement.contains(target)
         ) {
           event.preventDefault();
           // Find the button within the tab element and click it.
@@ -149,13 +147,11 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
             buttonElement.click();
           }
         }
-        // Check if user pressed key on validate button element (or its children) or IntroJS overlay during step 1.
+        // Check if user pressed key on validate button element during step 1.
         else if (
           validationTourStep === 1 &&
           validateButtonElement &&
-          (validateButtonElement.contains(target) ||
-            target.classList.contains('introjs-helperLayer') ||
-            target.classList.contains('introjs-tooltipReferenceLayer'))
+          validateButtonElement.contains(target)
         ) {
           event.preventDefault();
           validateButtonElement.click();
