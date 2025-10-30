@@ -14,9 +14,6 @@ if (urlParams.get('noIntrojs') === 'true') {
   trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
 }
 
-// Note that this introjs flow includes a step that highlights the navigation button which is always visible
-// at the bottom of the resource panel (whether it's enabled or not).
-// Some labs do not always show the navigation button so this tour is not appropriate for all labs.
 const OnboardingTourSteps: React.FC = () => {
   const sketchlabOnboardingTourSeen = tryGetLocalStorage(
     SKETCHLAB_ONBOARDING_TOUR_SEEN,
@@ -26,8 +23,7 @@ const OnboardingTourSteps: React.FC = () => {
   const [tourEnabled, setTourEnabled] = useState(false);
   const [tourStep, setTourStep] = useState(0);
 
-  // The Next button on step 6 (index 5) is disabled until the user completes an action.
-  // Step 7 (index 6) is informational only - no forced interaction.
+  // The Next button on the Open Menu step (6th step) is disabled until the user completes an action.
   const [openMenuNextStepEnabled, setOpenMenuNextStepEnabled] = useState(false);
 
   useEffect(() => {
@@ -66,42 +62,29 @@ const OnboardingTourSteps: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const returnFocusToTourPanel = () => {
-    setTimeout(() => {
-      const nextButton = document.querySelector(
-        '.introjs-nextbutton'
-      ) as HTMLButtonElement;
-      if (nextButton) {
-        nextButton.focus();
-      }
-    }, 100);
-  };
-
-  // Add event listeners for tour progression - Step 6: Dropdown menu button
+  // Add event listeners for tour progression - Open Menu step (6th step which is tourStep 5).
   useEffect(() => {
     if (!tourEnabled || tourStep !== 5) return;
 
     let hasDetectedDropdown = false;
-    // Count initial dialogs to detect when a NEW one appears
+    // Count initial dialogs to detect when a NEW one appears.
     const initialDialogCount =
       document.querySelectorAll('[role="dialog"]').length;
 
     const handleDropdownMenuOpen = () => {
-      if (hasDetectedDropdown) return; // Prevent multiple calls
+      if (hasDetectedDropdown) return; // Prevent multiple calls.
       hasDetectedDropdown = true;
       // Enable 'Next' button on open menu step.
       setOpenMenuNextStepEnabled(true);
-      // Return focus to the tour panel for keyboard users.
-      returnFocusToTourPanel();
     };
 
     const dropdownMenuButton = document.querySelector('.dropdown-menu-button');
 
-    // Add a click listener to the entire document to detect any clicks during this step
+    // Add a click listener to the entire document to detect any clicks during this step.
     const documentClickHandler = (event: Event) => {
       const target = event.target as HTMLElement;
 
-      // If user clicked on IntroJS overlay/helper layer, forward the click to the button
+      // If user clicked on IntroJS overlay, forward the click to the button.
       if (
         target.classList.contains('introjs-helperLayer') ||
         target.classList.contains('introjs-tooltipReferenceLayer')
@@ -128,18 +111,14 @@ const OnboardingTourSteps: React.FC = () => {
 
       const target = event.target as HTMLElement;
 
-      // If user pressed Enter on the dropdown menu button or IntroJS overlay, trigger the button.
-      if (
-        target === dropdownMenuButton ||
-        target.classList.contains('introjs-helperLayer') ||
-        target.classList.contains('introjs-tooltipReferenceLayer')
-      ) {
+      // If user pressed Enter on the dropdown menu button, trigger the button.
+      if (target === dropdownMenuButton) {
         if (dropdownMenuButton) {
           (dropdownMenuButton as HTMLElement).click();
         }
       }
 
-      // Check if a new dialog appeared after Enter key press
+      // Check if a new dialog appeared after Enter key press.
       setTimeout(() => {
         const currentDialogCount =
           document.querySelectorAll('[role="dialog"]').length;
@@ -178,7 +157,8 @@ const OnboardingTourSteps: React.FC = () => {
     };
   }, [tourEnabled, tourStep]);
 
-  // Step 7 is informational only - just ensure dropdown stays open
+  // 7th step is informational only. When the user clicks on the Next button, this closes the dropdown menu.
+  // Reopen the dropdown menu when the 7th step starts so user can see the information.
   useEffect(() => {
     if (!tourEnabled || tourStep !== 6) return;
 
