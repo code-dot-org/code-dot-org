@@ -92,25 +92,6 @@ class AichatAiClient
     }
   end
 
-  # Helper to determine if a filename is an image (by extension).
-  private def file_is_image?(filename)
-    # Assumes if not PDF than is an image but this could be improved
-    # with a list of supported extensions shared w/ frontend.
-    !file_is_pdf?(filename)
-  end
-
-  # Helper to determine if a filename is a PDF (by extension).
-  private def file_is_pdf?(filename)
-    File.extname(filename) == '.pdf'
-  end
-
-  # Get message text, including any hidden context
-  private def get_message_text(message)
-    text = message['chatMessageText']
-    text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
-    text
-  end
-
   private def raise_not_implemented_error
     raise NotImplementedError, "This method must be implemented in the derived class"
   end

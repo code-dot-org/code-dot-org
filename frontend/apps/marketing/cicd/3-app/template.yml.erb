@@ -70,6 +70,15 @@ Conditions:
   IsCorporateSite: !Equals [ !Ref SiteType, corporate ]
 
 Mappings:
+  # A mapping of AWS Regions to their Origin Shield Regions. Not all regions have Origin Shield enabled and may require
+  # redirecting to another region. For now, we only deploy to us-east-1 and us-east-2 which both support Origin Shield.
+  # In the future, if we expand to other regions, we can add them here as needed.
+  # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html
+  OriginShieldRegionMap:
+    us-east-1:
+      OriginShieldRegion: us-east-1
+    us-east-2:
+      OriginShieldRegion: us-east-2
   # Cloudfront Mappings
   # See: https://aws.amazon.com/blogs/networking-and-content-delivery/limit-access-to-your-origins-using-the-aws-managed-prefix-list-for-amazon-cloudfront/
   CFRegionMap:
@@ -240,11 +249,17 @@ Resources:
               OriginProtocolPolicy: https-only
               OriginSSLProtocols:
                 - TLSv1.2
+            OriginShield:
+              Enabled: true
+              OriginShieldRegion: !FindInMap [OriginShieldRegionMap, !Ref "AWS::Region", OriginShieldRegion]
           - Id: marketing-sites-static-assets-origin
             DomainName: !GetAtt StaticAssetsBucket.RegionalDomainName
             S3OriginConfig:
               OriginAccessIdentity: ""
             OriginAccessControlId: !Ref CloudFrontOriginAccessControl
+            OriginShield:
+              Enabled: true
+              OriginShieldRegion: !FindInMap [OriginShieldRegionMap, !Ref "AWS::Region", OriginShieldRegion]
         DefaultCacheBehavior:
           TargetOriginId: marketing-sites-application-origin
           ViewerProtocolPolicy: redirect-to-https
@@ -320,6 +335,9 @@ Resources:
             ViewerProtocolPolicy: redirect-to-https
             ResponseHeadersPolicyId: !Ref DefaultResponseHeadersPolicy
             OriginRequestPolicyId: 216adef6-5c7f-47e4-b989-5492eafa07d3 # AllViewer
+<% if options[:web_application_firewall] %>
+        WebACLId: <%= options[:web_application_firewall] %>
+<% end %>
 
   ####################################
   # Load Balancer Resources          #
@@ -570,7 +588,7 @@ Resources:
       EnableECSManagedTags: false
       HealthCheckGracePeriodSeconds: 60
       LaunchType: FARGATE
-      DesiredCount: 3
+      DesiredCount: 6
       AvailabilityZoneRebalancing: ENABLED
       LoadBalancers:
         - ContainerName: web
@@ -616,7 +634,10 @@ Resources:
     Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       MaxCapacity: 20 # Upper limit for scaling, can be increased as needed
-      MinCapacity: 3 # High availability minimum
+      MinCapacity:  !If
+        - IsProductionEnvironment
+        - 3 # High Availability for production
+        - 1
       ResourceId: !Sub "service/${EcsCluster}/${FargateService.Name}"
       RoleARN: !GetAtt ECSAutoScalingRole.Arn
       ScalableDimension: ecs:service:DesiredCount
@@ -634,8 +655,8 @@ Resources:
         TargetValue: 70.0
         PredefinedMetricSpecification:
           PredefinedMetricType: ECSServiceAverageCPUUtilization
-        ScaleInCooldown: 60 # Wait 60 seconds before scaling up
-        ScaleOutCooldown: 300 # Wait 5 minutes before scaling down
+        ScaleInCooldown: 300 # Wait 5 minutes before removing more instances
+        ScaleOutCooldown: 60 # Wait 1 minute before adding more instances
   ECSAutoScalingRole:
     Type: AWS::IAM::Role
     Properties:

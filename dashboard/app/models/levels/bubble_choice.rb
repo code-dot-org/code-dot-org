@@ -35,6 +35,9 @@ class BubbleChoice < DSLDefined
     description
     uses_lab2
     is_project_level
+    hide_letters_lab2
+    custom_mode
+    navigation_type
   )
 
   ALPHABET = ('a'..'z').to_a
@@ -48,6 +51,8 @@ class BubbleChoice < DSLDefined
       sublevels
       level 'level1'
       level 'level2'
+
+      uses_lab2
     RUBY
   end
 
@@ -79,6 +84,10 @@ class BubbleChoice < DSLDefined
     uses_lab2
   end
 
+  def hide_letters_lab2?
+    !!hide_letters_lab2
+  end
+
   def enable_scrolling?
     # ensures we have the small footer
     true
@@ -93,7 +102,12 @@ class BubbleChoice < DSLDefined
       sublevel.delete(:status)
     end
 
-    level_properties[:levelData] = {sublevels: summary[:sublevels], displayName: summary[:display_name], description: summary[:description]}
+    level_properties[:levelData] = {
+      sublevels: summary[:sublevels],
+      displayName: summary[:display_name],
+      description: summary[:description],
+      hideLetters: hide_letters_lab2?,
+    }
 
     # Overwrite the incorrect finish URL with the actual next URL.
     level_properties[:finishUrl] = summary[:redirect_url]
@@ -173,6 +187,7 @@ class BubbleChoice < DSLDefined
           icon: level.try(:icon),
           uses_lab2: level.uses_lab2?,
           parent_level_id: id,
+          navigation_type: navigation_type,
         }
       )
 

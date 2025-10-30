@@ -33,6 +33,7 @@ interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   updateSources: (newSources: T, forceSave?: boolean) => void;
   showStartOverDialog: (type: MessageType, message?: string) => void;
   setReinitializationHandler: (handler: () => void) => void;
+  startOver: () => void;
 }
 
 const SourcesContext = createContext<SourcesContextType | null>(null);
@@ -141,6 +142,7 @@ const SourcesContainer: React.FC<
         updateSources,
         showStartOverDialog,
         setReinitializationHandler,
+        startOver: onStartOver,
       }}
     >
       {children}

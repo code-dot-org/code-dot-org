@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-26T19:54:17.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Nested Conditional\n\nA **nested conditional** is a conditional statement (if/else) inside another conditional statement. \n\nThis allows for more complex decision-making processes where one decision depends on the outcome of a previous decision.\n\n",
+        "imageUrl": "https://images.code.org/eca142c632dc2c9d3cb98abe6e75114c-Pasted Graphic 3.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-26T19:54:17.123+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-panel-parameter-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-panel-parameter-test-2025\"},{\"changed_at\":\"2025-10-26 19:55:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-26 20:32:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 18:17:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

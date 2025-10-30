@@ -1,9 +1,8 @@
 import {Button} from '@code-dot-org/component-library/button';
-import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
@@ -12,6 +11,7 @@ import Adlib, {
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -36,7 +36,8 @@ interface GenerateCodeProps {
   levelProperties: LevelProperties;
   setPlaying: (play: boolean) => void;
   hasEdited: boolean;
-  setToolboxVisibility: (visible: boolean) => void;
+  blockCount: number;
+  clearCode: (maintainPackId?: boolean) => void;
 }
 
 const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
@@ -45,7 +46,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   levelProperties,
   setPlaying,
   hasEdited,
-  setToolboxVisibility,
+  blockCount,
+  clearCode,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -82,6 +84,15 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       : adlibOption
       ? adlibs[adlibOption]
       : undefined);
+
+  useEffect(() => {
+    // If there is already generated music when we begin, presumably
+    // because the user is returning to a level they've previously worked
+    // on, then skip AI generation.
+    if (aiGenerateState === 'none' && blockCount > 1) {
+      dispatch(setAiGenerateState('edited'));
+    }
+  }, [aiGenerateState, blockCount, dispatch]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     dispatch(setAiGenerateState('none'));
@@ -137,25 +148,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   }, [aiGenerateState, currentPlayheadPosition, dispatch, isPlaying]);
 
   useEffect(() => {
-    // If the user goes back to none or forward to editing, stop playback.
-    if (['none', 'editing'].includes(aiGenerateState)) {
-      if (isPlaying) {
-        setPlaying(false);
-      }
-    }
-  }, [aiGenerateState, dispatch, hasEdited, isPlaying, setPlaying]);
-
-  useEffect(() => {
-    if (aiGenerateState === 'editing' && hasEdited) {
+    if (aiGenerateState === 'editing' && isPlaying && hasEdited) {
       dispatch(setAiGenerateState('edited'));
     }
-  }, [aiGenerateState, dispatch, hasEdited]);
-
-  useEffect(() => {
-    if (aiGenerateState === 'edited' && isPlaying) {
-      dispatch(setAiGenerateState('listeningAfterEdit'));
-    }
-  }, [aiGenerateState, dispatch, isPlaying]);
+  }, [aiGenerateState, dispatch, hasEdited, isPlaying]);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
@@ -167,18 +163,22 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     'listened',
   ].includes(aiGenerateState);
 
+  const multiProject = useMultiProject();
+  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+
   if (!packId) {
     return null;
   }
 
   return (
-    <Guide id="generate-panel" glowSpeed={glowSpeed} modal={modal}>
-      {aiGenerateState === 'none' && levelProperties.longInstructions && (
-        <MainInstructionsContent
-          instructionsText={levelProperties.longInstructions}
-          handleInstructionsTextClick={() => {}}
-        />
-      )}
+    <Guide id="generate-panel" modal={modal}>
+      {['none', 'generating'].includes(aiGenerateState) &&
+        useAdlib &&
+        levelProperties.longInstructions && (
+          <MainInstructionsContent
+            instructionsText={levelProperties.longInstructions}
+          />
+        )}
 
       {showFullContext && aiGenerateState === 'none' && (
         <textarea
@@ -186,12 +186,20 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           onChange={evt => setContextText(evt.target.value)}
           value={contextText}
           rows={6}
-          className={classNames(styles.textArea, styles.textAreaSmall)}
+          className={styles.textArea}
         />
       )}
 
-      {aiGenerateState === 'generating' && (
-        <div className={styles.textArea}>{promptText}</div>
+      {['none', 'generating'].includes(aiGenerateState) && useAdlib && (
+        <Adlib
+          adlib={useAdlib}
+          readOnly={aiGenerateState !== 'none'}
+          glowSpeed={glowSpeed}
+          onChange={(text, choices) => {
+            setPromptText(text);
+            setChoices(choices);
+          }}
+        />
       )}
 
       {aiGenerateState === 'none' && (
@@ -210,16 +218,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               />
             </>
           )}
-          {useAdlib && (
-            <Adlib
-              adlib={useAdlib}
-              onChange={(text, choices) => {
-                setPromptText(text);
-                setChoices(choices);
-              }}
-              className={styles.textArea}
-            />
-          )}
+
           <Button
             ariaLabel={'Generate code'}
             text={'Generate code'}
@@ -237,59 +236,70 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         </>
       )}
 
-      {aiGenerateState === 'generating' ? 'Generating code...' : ''}
+      {['generating', 'generated'].includes(aiGenerateState)
+        ? 'Generating code.'
+        : ''}
 
-      {aiGenerateState === 'generated' ? '...' : ''}
-
-      {aiGenerateState === 'listening' && <div>Let's have a listen...</div>}
+      {aiGenerateState === 'listening' && <div>Take a listen.</div>}
 
       {aiGenerateState === 'listened' && (
         <>
-          <div>Did you like what you heard?</div>
+          <div>Do you want to keep what AI generated?</div>
 
           <div className={styles.buttonRow}>
             <Button
-              ariaLabel={"No. Let's try again."}
-              text={"No. Let's try again."}
+              ariaLabel={'Try prompting again'}
+              text={'Try prompting again'}
               type="primary"
               color="black"
               size="s"
-              onClick={() => dispatch(setAiGenerateState('none'))}
+              onClick={() => {
+                setPlaying(false);
+                clearCode(true);
+                dispatch(setAiGenerateState('none'));
+              }}
+              className={styles.buttonWide}
             />
 
             <Button
-              ariaLabel={"Yes. Let's continue."}
-              text={"Yes. Let's continue."}
+              ariaLabel={'Keep this'}
+              text={'Keep this'}
               type="primary"
               color="black"
               size="s"
-              onClick={() => dispatch(setAiGenerateState('editing'))}
+              onClick={() => {
+                dispatch(setAiGenerateState('editing'));
+                setPlaying(false);
+              }}
+              className={styles.buttonWide}
             />
           </div>
         </>
       )}
 
-      {aiGenerateState === 'editing' && (
-        <div>Now it's your turn. Try editing the code.</div>
+      {aiGenerateState === 'editing' && !isPlaying && (
+        <div>
+          AI helped you get started. Now, edit the code to make it your own.
+        </div>
+      )}
+
+      {aiGenerateState === 'editing' && isPlaying && (
+        <div>Try changing the code. </div>
       )}
 
       {aiGenerateState === 'edited' && (
-        <div>Nice. Now have another listen.</div>
-      )}
-
-      {aiGenerateState === 'listeningAfterEdit' && (
         <>
-          <div>Keep editing, or continue when you're done.</div>
+          <div>That's a great mix!</div>
           <div className={styles.buttonRow}>
-            <Button
-              ariaLabel={'Continue'}
-              text={'Continue'}
-              type="primary"
-              color="black"
-              size="s"
-              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-              onClick={() => dispatch(continueOrFinishLesson())}
-            />
+            {showNavigation && (
+              <NavigationArea
+                levelProperties={levelProperties}
+                // The following props don't really matter as we don't have a Submit button or validation here.
+                hasRun={true}
+                hasEdited={true}
+                isRunning={false}
+              />
+            )}
           </div>
         </>
       )}

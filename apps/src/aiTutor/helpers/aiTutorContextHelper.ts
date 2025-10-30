@@ -1,8 +1,5 @@
 import {AiTutorContext, MaybePromise} from '../types';
 
-const USER_SELECTION_INTRO =
-  'The student is asking about this part of their current code:';
-
 const SOURCE_CODE_INTRO = "Here is the student's current code:";
 
 const HIDDEN_SOURCE_CODE_INTRO =
@@ -23,6 +20,9 @@ const DOCUMENTATION_INTRO = 'Here is the documentation:';
 const DOCUMENTATION_LOCATION_INTRO =
   'Here is where the student can find the documentation:';
 
+const EXAMPLES_LOCATION_INTRO =
+  'Here is where the student can find example projects:';
+
 /*
  * Abstract base class used to provide lab specific context to AI Tutor.  Each lab will inherit from and
  * extend this class, but conversion to a system prompt string should be kept here for coordination and
@@ -30,6 +30,7 @@ const DOCUMENTATION_LOCATION_INTRO =
  */
 export abstract class AiTutorContextHelper<AiTutorParams extends object> {
   protected documentationLocation: string = '';
+  protected examplesLocation: string = '';
 
   protected abstract getAiTutorContext(): MaybePromise<AiTutorContext>;
 
@@ -44,11 +45,9 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
       validationResults,
       longInstructions,
       documentation,
-      userSelection,
     } = await this.getAiTutorContext();
 
     const hiddenContextString = [
-      userSelection ? `${USER_SELECTION_INTRO} ${userSelection}` : '',
       sourceCode ? `${SOURCE_CODE_INTRO} ${sourceCode}` : '',
       hiddenSourceCode ? `${HIDDEN_SOURCE_CODE_INTRO} ${hiddenSourceCode}` : '',
       readOnlySourceCode
@@ -65,6 +64,9 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
       this.documentationLocation
         ? `${DOCUMENTATION_LOCATION_INTRO} ${this.documentationLocation}`
         : '',
+      this.examplesLocation
+        ? `${EXAMPLES_LOCATION_INTRO} ${this.examplesLocation}`
+        : '',
     ]
       .filter(Boolean)
       .join('\n\n');
@@ -75,6 +77,8 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
     return hiddenContextString;
   }
 
+  // Hidden context is additional context provided to AI tutor that is not
+  // visible to the student and is not stored as part of the chat history.
   getHiddenContextCallback() {
     return this.getHiddenContextString.bind(this);
   }

@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-24T20:05:37.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "##QA Mindset\r\n###Refine and Expand\r\n- Write targeted fixes (_e.g., “Place nav at top with links labeled Home, About, Contact”_).\r\n- Use styling to make sure the look and feel match your brand identity.\r\n- Apply POUR checklist from Lesson 9 to ensure accessibility.\r\n- Save **Version 2**\r\n",
+    "project_template_level_name": "ai-generated-design-lesson13-weblab-template-test-2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-24T20:05:37.371+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level5-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level5-test-2025\"},{\"changed_at\":\"2025-10-24 20:07:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

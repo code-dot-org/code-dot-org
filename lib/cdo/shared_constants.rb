@@ -907,4 +907,13 @@ module SharedConstants
     "/oauth_sign_out/",
     "/certificates/"
   ].freeze
+
+  BUBBLE_CHOICE_CUSTOM_MODES = {
+    MUSIC_DANCE_AI: 'music_dance_ai',
+  }.freeze
+
+  BUBBLE_CHOICE_NAVIGATION_TYPES = {
+    PARENT: 'parent',
+    NEXT_LEVEL: 'next_level',
+  }
 end

@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q14_2025'
+
+question 'A local animal shelter wants its website to feel friendly and caring. The designer uses warm colors, soft shapes, and photos of people interacting gently with pets. How do these design choices support the shelter\'s goals?'
+
+wrong 'They make the website look more high-tech and modern.'
+wrong 'They help the shelter collect data faster from users.'
+wrong 'They reduce the time it takes for the website to load.'
+right 'They help visitors feel emotionally connected to the shelter\'s mission and values.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 5, 7
+MARKDOWN

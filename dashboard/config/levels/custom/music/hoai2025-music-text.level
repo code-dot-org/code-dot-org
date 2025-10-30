@@ -24,10 +24,10 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
-    "long_instructions": "### Use AI",
+    "long_instructions": "### Create a Mix\r\nTell AI what to create.",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-13T19:43:44.082+00:00\",\"changed\":[\"cloned from \\\"hoai2025-music-adlib-2\\\"\"],\"cloned_from\":\"hoai2025-music-adlib-2\"},{\"changed_at\":\"2025-10-13 19:43:47 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-13T19:43:44.082+00:00\",\"changed\":[\"cloned from \\\"hoai2025-music-adlib-2\\\"\"],\"cloned_from\":\"hoai2025-music-adlib-2\"},{\"changed_at\":\"2025-10-13 19:43:47 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-25 21:50:18 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

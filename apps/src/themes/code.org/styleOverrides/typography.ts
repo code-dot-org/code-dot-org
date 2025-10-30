@@ -29,46 +29,46 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
       },
     }),
     gutterBottom: ({theme}) => ({
-      '&.MuiTypography-h1': {
+      '&:where(.MuiTypography-h1)': {
         marginBottom: theme.spacing(3), // 24px
       },
-      '&.MuiTypography-h2': {
+      '&:where(.MuiTypography-h2)': {
         marginBottom: theme.spacing(2.125), // 17px
       },
-      '&.MuiTypography-h3': {
+      '&:where(.MuiTypography-h3)': {
         marginBottom: theme.spacing(1.75), // 14px
       },
-      '&.MuiTypography-h4': {
+      '&:where(.MuiTypography-h4)': {
         marginBottom: theme.spacing(1.5), // 12px
       },
-      '&.MuiTypography-h5': {
+      '&:where(.MuiTypography-h5)': {
         marginBottom: theme.spacing(1.25), // 10px
       },
-      '&.MuiTypography-h6': {
+      '&:where(.MuiTypography-h6)': {
         marginBottom: theme.spacing(1), // 8px
       },
-      '&.MuiTypography-body1': {
+      '&:where(.MuiTypography-body1)': {
         marginBottom: theme.spacing(2.5), // 20px
       },
-      '&.MuiTypography-body2': {
+      '&:where(.MuiTypography-body2)': {
         marginBottom: theme.spacing(2), // 16px
       },
-      '&.MuiTypography-body3': {
+      '&:where(.MuiTypography-body3)': {
         marginBottom: theme.spacing(1.75), // 14px
       },
-      '&.MuiTypography-body4': {
+      '&:where(.MuiTypography-body4)': {
         marginBottom: theme.spacing(1.625), // 13px
       },
-      '&.MuiTypography-overline1': {
+      '&:where(.MuiTypography-overline1)': {
         marginBottom: theme.spacing(1.75), // 14px
       },
-      '&.MuiTypography-overline2': {
+      '&:where(.MuiTypography-overline2)': {
         marginBottom: theme.spacing(1.625), // 13px
       },
-      '&.MuiTypography-overline3': {
+      '&:where(.MuiTypography-overline3)': {
         marginBottom: theme.spacing(1.375), // 11px
       },
-      '&.MuiTypography-figcaption': {
+      '&:where(.MuiTypography-figcaption)': {
         marginBottom: theme.spacing(1.75), // 14px
       },
     }),
