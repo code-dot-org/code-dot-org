@@ -224,6 +224,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     iconStyle: 'solid',
   };
 
+  const buildAssetUrlValue = multimodalAvailable ? buildAssetUrl : undefined;
+
   const tabs = [
     {
       value: 'viewStudentChatHistory',
@@ -241,7 +243,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={studentChatHistory}
           isTeacherView={true}
-          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+          buildAssetUrl={buildAssetUrlValue}
         />
       ),
       iconLeft: iconValue,
@@ -252,7 +254,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       tabContent: (
         <ChatEventsList
           events={visibleItems}
-          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+          buildAssetUrl={buildAssetUrlValue}
         />
       ),
     },
@@ -283,8 +285,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <Tabs {...tabArgs} />
       ) : (
         <ChatEventsList
-          events={visibleItems}
-          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+          buildAssetUrl={buildAssetUrlValue}
         />
       )}
 
