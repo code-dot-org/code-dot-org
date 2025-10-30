@@ -2,6 +2,26 @@
 
 This document inventories logging across the Code.org platform. It explains, in plain English, what emits logs during common operations, where those logs go (S3, CloudWatch, syslog), how they’re formatted, and how to view them across environments. Inline links point to the exact code and templates that configure each behavior.
 
+## Table of Contents
+
+- [Sources that emit logs](#sources-that-emit-logs)
+  - [Web/CDN](#webcdn)
+  - [Load Balancers](#load-balancers)
+  - [Application servers (EC2)](#application-servers-ec2)
+  - [Database](#database)
+  - [Event pipelines (Firehose)](#event-pipelines-firehose)
+  - [Lambdas and supporting infra](#lambdas-and-supporting-infra)
+  - [Security/administration](#securityadministration)
+  - [Observability services (third-party)](#observability-services-third-party)
+- [Destinations (and durability expectations)](#destinations-and-durability-expectations)
+  - [S3 `cdo-logs` bucket](#s3-cdo-logs-bucket)
+  - [S3 `cdo-access-logs` bucket](#s3-cdo-access-logs-bucket)
+  - [CloudWatch Logs](#cloudwatch-logs)
+  - [EC2 instance filesystem](#ec2-instance-filesystem)
+- [Log formats](#log-formats)
+- [Typical Studio page view: what logs are emitted and where to view](#typical-studio-page-view-what-logs-are-emitted-and-where-to-view)
+- [Observations and recommendations](#observations-and-recommendations)
+
 ## Sources that emit logs
 
 ### Web/CDN
