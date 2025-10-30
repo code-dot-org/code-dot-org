@@ -28,17 +28,7 @@ const OnboardingTourSteps: React.FC = () => {
 
   // The Next button on step 6 (index 5) is disabled until the user completes an action.
   // Step 7 (index 6) is informational only - no forced interaction.
-  const [tourStepsEnabled, setTourStepsEnabled] = useState([
-    true,
-    true,
-    true,
-    true,
-    true,
-    false,
-    true,
-    true,
-    true,
-  ]);
+  const [openMenuNextStepEnabled, setOpenMenuNextStepEnabled] = useState(false);
 
   useEffect(() => {
     if (sketchlabOnboardingTourSeen !== 'yes') {
@@ -99,18 +89,8 @@ const OnboardingTourSteps: React.FC = () => {
     const handleDropdownMenuOpen = () => {
       if (hasDetectedDropdown) return; // Prevent multiple calls
       hasDetectedDropdown = true;
-      // Enable 'Next' button on sixth step (index 5).
-      setTourStepsEnabled(prev => [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-      ]);
+      // Enable 'Next' button on open menu step.
+      setOpenMenuNextStepEnabled(true);
       // Return focus to the tour panel for keyboard users.
       returnFocusToTourPanel();
     };
@@ -196,7 +176,7 @@ const OnboardingTourSteps: React.FC = () => {
         '.introjs-nextbutton'
       ) as HTMLButtonElement;
       if (nextButton) {
-        if (tourStep === 5 && !tourStepsEnabled[5]) {
+        if (tourStep === 5 && !openMenuNextStepEnabled) {
           nextButton.setAttribute('disabled', 'true');
         } else {
           nextButton.removeAttribute('disabled');
@@ -210,7 +190,7 @@ const OnboardingTourSteps: React.FC = () => {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [tourEnabled, tourStep, tourStepsEnabled]);
+  }, [tourEnabled, tourStep, openMenuNextStepEnabled]);
 
   return (
     <Steps
@@ -225,7 +205,7 @@ const OnboardingTourSteps: React.FC = () => {
       }}
       onBeforeChange={nextStepIndex => {
         // Control step progression based on user interactions.
-        if (nextStepIndex === 6 && !tourStepsEnabled[5]) {
+        if (nextStepIndex === 6 && !openMenuNextStepEnabled) {
           return false; // Prevent going to step 7 (index 6) until dropdown menu is clicked.
         }
 
