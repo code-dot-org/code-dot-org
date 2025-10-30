@@ -1,0 +1,46 @@
+name 'pl_sandbox_aif_2_U2-projectOverview_5'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Final Project Overview
+
+## Interactive Customizer
+#### For their final project, students act as Front-End Developers and QA Engineers to design and implement a badge-awarding system in a web app of their choice (e.g., sports, music, art, gaming, or school life).
+
+#### They first plan their logic with a flowchart that defines badge criteria, then translate it into JavaScript functions, variables, and conditionals that dynamically update the app’s interface.
+
+#### Throughout the process, students test and refine their code, document their debugging journey, and reflect on how AI supported their brainstorming and problem-solving. The result is a personalized, interactive app that demonstrates how developer choices and values shape user experience.
+ 
+
+---
+
+### **When Project Begins:** Final lesson of the unit
+
+### The project extends over three class periods. Beginning in Lesson 13.
+
+## Sample
+
+#### In this example, the student designed a web app to showcase local events and activities in their town.
+
+
+<img src="https://images.code.org/09e512de4a9aabe1d639227212addd72-image-1760984659003.png" alt="Sample student project of a website giving informaiton about events happening locally in their community" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+
+
+## What success looks like
+- #### Their flowchart logic maps cleanly to their JavaScript code, and each badge is awarded deterministically based on the user’s inputs.
+- #### The app uses variables to accurately track both user selections and a calculated numerical value, like the total price.
+- #### The JavaScript is organized into clear, readable functions, and the UI updates correctly to match the program’s internal state.
+- #### The student provides evidence of their testing and iteration process.
+
+---
+
+#### This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
+
+##Now, let’s see how we get here! 
+
+
+MARKDOWN
