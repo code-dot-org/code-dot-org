@@ -1,5 +1,3 @@
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {getFolderPath} from '@codebridge/utils';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -7,10 +5,7 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {CodebridgeEmptyState} from '../components/CodebridgeEmptyState';
 
 import {IframeMessageType} from './constants';
-import {
-  updateLinksToHtmlFiles,
-  updateLinksToNonHtmlFiles,
-} from './htmlParsingHelpers';
+import useProjectServiceWorker from './useProjectServiceWorker';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
 
@@ -19,10 +14,10 @@ const InnerHTMLPreview = () => {
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
     undefined
   );
-  const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
+  const {serviceWorkerReady} = useProjectServiceWorker(source, currentFile);
   const [allowScripts, setAllowScripts] = useState(false);
 
   const parentOrigin = useMemo(() => {
@@ -32,32 +27,6 @@ const InnerHTMLPreview = () => {
     const port = 'localhost-' === environment ? `:${location.port}` : '';
     const cdn = environment.includes('adhoc') ? 'cdn-' : '';
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
-  }, []);
-
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register(
-          new URL(
-            /* webpackChunkName: "project-service-worker-1.0.0" */
-            './projectServiceWorker.js',
-            // @ts-expect-error because TypeScript does not like this syntax.
-            import.meta.url
-          )
-        )
-        .then(registration => {
-          console.log(
-            'Project Service Worker registered with scope:',
-            registration.scope
-          );
-          setServiceWorkerReady(true);
-          navigator.serviceWorker.onmessage = event => {
-            console.log('Received message from service worker:', event);
-          };
-        });
-    } else {
-      console.error('Service workers are not supported in this browser.');
-    }
   }, []);
 
   const handleMessage = useCallback(
@@ -93,53 +62,6 @@ const InnerHTMLPreview = () => {
     [parentOrigin]
   );
 
-  // Send source data to service worker when it changes
-  useEffect(() => {
-    if (serviceWorkerReady && source && navigator.serviceWorker.controller) {
-      // Prepare files data for service worker
-      const filesData: Record<string, {content: string; mimeType: string}> = {};
-
-      Object.values(source.files).forEach(file => {
-        const fullFileName = getFullyQualifiedFileName(
-          file.name,
-          file.folderId,
-          source.folders
-        );
-
-        let content = file.contents;
-        let mimeType = 'text/plain';
-
-        // Determine MIME type based on file extension or language
-        if (file.url) {
-          // Right not only images are handled via URL
-          content = file.url;
-          mimeType = `image/${file.name.split('.').pop()?.toLowerCase()}`;
-        } else if (file.language === 'html') {
-          mimeType = 'text/html';
-          // Process HTML files to update links
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(file.contents, 'text/html');
-          updateLinksToNonHtmlFiles(doc, {}, fullFileName);
-          updateLinksToHtmlFiles(doc, fullFileName);
-          content = doc.documentElement.outerHTML;
-        } else if (file.language === 'css') {
-          mimeType = 'text/css';
-        } else if (file.language === 'javascript') {
-          mimeType = 'application/javascript';
-        }
-
-        filesData[fullFileName] = {content, mimeType};
-      });
-
-      // Send files data to service worker
-      navigator.serviceWorker.controller.postMessage({
-        type: 'UPDATE_FILES',
-        files: filesData,
-        currentFile: currentFile,
-      });
-    }
-  }, [serviceWorkerReady, source, currentFile, parentOrigin]);
-
   useEffect(() => {
     window.addEventListener('message', handleMessage);
     // Notify parent that we're ready to receive messages
@@ -152,18 +74,6 @@ const InnerHTMLPreview = () => {
       window.removeEventListener('message', handleMessage);
     };
   }, [handleMessage, parentOrigin]);
-
-  function getFullyQualifiedFileName(
-    fileName: string,
-    folderId: string,
-    folders: MultiFileSource['folders']
-  ) {
-    if (folderId === DEFAULT_FOLDER_ID) {
-      return fileName; // root folder, no path needed
-    }
-    const fullPath = getFolderPath(folderId, folders) + '/' + fileName;
-    return fullPath.substring(1); // remove leading slash
-  }
 
   const getPreview = useCallback(() => {
     // if (blobUrl === NOT_FOUND_FILE) {

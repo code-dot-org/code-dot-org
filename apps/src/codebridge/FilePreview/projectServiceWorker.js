@@ -3,13 +3,13 @@ const SERVE_PROJECT_SEGMENT = '/serve-project';
 addEventListener('install', () => {
   // Ensure this service worker is activated immediately.
   self.skipWaiting();
-  sendDummyMessageToAllClients('INSTALL');
+  sendMessageToAllClients('INSTALL');
 });
 
 addEventListener('activate', event => {
   // Claim clients from any old service workers on this path.
   event.waitUntil(self.clients.claim());
-  sendDummyMessageToAllClients('ACTIVATE');
+  sendMessageToAllClients('ACTIVATE');
 });
 
 let filesData = {};
@@ -25,6 +25,7 @@ self.addEventListener('message', event => {
       currentFile = newCurrentFile;
     }
     console.log('Service worker received files:', Object.keys(filesData));
+    sendMessageToAllClients('RECEIVED_SOURCE');
   } else if (type === 'SET_CURRENT_FILE') {
     currentFile = newCurrentFile;
     console.log('Service worker current file set to:', currentFile);
@@ -39,7 +40,7 @@ self.addEventListener('fetch', event => {
   }
 });
 
-sendDummyMessageToAllClients('SERVICE_WORKER_LOADED?');
+sendMessageToAllClients('SERVICE_WORKER_LOADED?');
 
 async function handleProjectRequest(url) {
   try {
@@ -105,7 +106,7 @@ async function handleProjectRequest(url) {
   }
 }
 
-function sendDummyMessageToAllClients(messageType) {
+function sendMessageToAllClients(messageType) {
   self.clients.matchAll({includeUncontrolled: true}).then(clients => {
     clients.forEach(client => {
       if (client.type === 'window') {
