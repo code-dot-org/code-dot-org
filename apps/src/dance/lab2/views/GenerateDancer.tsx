@@ -377,7 +377,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   glowSpeed={glowSpeed}
                   onChange={(promptText, choices) => {
                     setPromptText(promptText);
-                    setChoices(choices);
+                    setChoices([...choices]);
                     variantHistory.current = [];
                   }}
                 />

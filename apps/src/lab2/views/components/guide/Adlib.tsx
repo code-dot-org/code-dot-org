@@ -100,7 +100,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
   // Notify parent when choices change.
   useEffect(() => {
     onChange(filledAdlibText, choices);
-  }, [adlibOptions, choices, filledAdlibText, onChange]);
+  }, [choices, filledAdlibText, onChange]);
 
   return (
     <div

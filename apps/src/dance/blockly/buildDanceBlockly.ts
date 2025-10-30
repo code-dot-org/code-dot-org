@@ -106,6 +106,17 @@ function chainBlocks(
   return head;
 }
 
+const backgroundsByEnergy = {
+  chill: [
+    '"quads"',
+    '"blooming_petals"',
+    '"circles"',
+    '"galaxy"',
+    '"sparkles"',
+  ],
+  high: ['"clouds"', '"diamonds"', '"fireworks"', '"swirl"', '"lasers"'],
+};
+
 /**
  * Build Blockly JSON for a simple dance that reacts at given measures.
  * - Creates a CAT sprite at center on setup
@@ -114,7 +125,9 @@ function chainBlocks(
  */
 export default function buildDanceBlockly(
   measures: number[],
-  blockDefinitions: BlockDefinition[]
+  blockDefinitions: BlockDefinition[],
+  codeComplexity: 'simple' | 'complex',
+  energy: 'chill' | 'high'
 ): WorkspaceSerialization {
   const changeMoveBlockType = getPreferredBlockType(
     blockDefinitions,
@@ -143,7 +156,9 @@ export default function buildDanceBlockly(
     blockDefinitions,
     setBackgroundBlockType,
     'EFFECT'
-  ).filter(option => !['"none"', '"rand"'].includes(option));
+  )
+    .filter(option => !['"none"', '"rand"'].includes(option))
+    .filter(option => backgroundsByEnergy[energy].includes(option));
 
   const validForegrounds = getBlockOptions(
     blockDefinitions,
@@ -225,7 +240,10 @@ export default function buildDanceBlockly(
     }
   );
 
-  const blocks: JsonBlockConfig[] = [setupBlock, ...eventBlocks];
+  const blocks: JsonBlockConfig[] = [
+    setupBlock,
+    ...(codeComplexity === 'complex' ? eventBlocks : []),
+  ];
 
   return {
     blocks: {
