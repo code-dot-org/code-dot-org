@@ -93,7 +93,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               </BodyFourText>
             )}
             <div className={moduleStyles.fileBrowserHeaderButtons}>
-              {!isReadOnly && showFileBrowser && (
+              {showFileBrowser && !isReadOnly && (
                 <FileBrowserHeaderPopUpButton />
               )}
               <ToggleFileBrowserButton />

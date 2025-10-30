@@ -40,7 +40,7 @@
   flex-direction: row;
   gap: 0.125rem;
 
-  // Flip close icon for RTL languages
+  // Flip icons for RTL languages
   :global(html[dir='rtl']) & i {
     transform: scaleX(-1);
   }
