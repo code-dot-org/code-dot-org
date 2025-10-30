@@ -58,6 +58,10 @@ interface LessonSummaryInfo {
   tips: string[];
 }
 
+interface LessonSummaryInfoResponse {
+  lesson_summary: string;
+}
+
 const lessonMaterialsApiCall = (unitId: number) =>
   HttpClient.fetchJson<LessonMaterialsData>(
     `/dashboardapi/lesson_materials/${unitId}`
@@ -218,11 +222,23 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
   React.useEffect(() => {
-    HttpClient.fetchJson<LessonSummaryInfo>(
-      `/ai_lesson_summaries/show?user_id=${userId}&lesson_id=${selectedLesson?.id}`
-    )
-      .then(response => setAITALessonSummaryInfo(response.value))
-      .catch(error => console.log(`Error: ${error}`));
+    if (userId && selectedLesson) {
+      HttpClient.fetchJson<LessonSummaryInfoResponse>(
+        `/ai_lesson_summaries/show?user_id=${userId}&lesson_id=${selectedLesson?.id}`
+      )
+        .then(response => {
+          const preParsedResponse = response.value?.lesson_summary;
+          setAITALessonSummaryInfo(
+            response.response.ok && preParsedResponse
+              ? JSON.parse(preParsedResponse)
+              : null
+          );
+        })
+        .catch(error => {
+          setAITALessonSummaryInfo(null);
+          console.log(`Error: ${error}`);
+        });
+    }
   }, [userId, selectedLesson]);
 
   React.useEffect(() => {
@@ -422,6 +438,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                       </li>
                     )
                   )}
+                </ol>
+              </div>
+              <div className={styles.lessonSummaryInfoBlock}>
+                <BodyThreeText>{i18n.tipsHeader()}</BodyThreeText>
+                <ol>
+                  {aiTALessonSummaryInfo?.tips.map((tip, index) => (
+                    <li key={`tip-${index}`}>
+                      <BodyThreeText>{tip}</BodyThreeText>
+                    </li>
+                  ))}
                 </ol>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
