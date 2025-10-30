@@ -16,6 +16,10 @@
     transition: opacity .1s ease-out;
   }
 
+  .introjs-tooltipReferenceLayer {
+    visibility: visible !important;
+  }
+
   /* Wide tooltip for specific steps */
   .introjs-tooltip:has(.sketchlab-tour-wide-step) {
     max-width: 650px;
