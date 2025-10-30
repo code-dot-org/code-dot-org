@@ -872,7 +872,7 @@ class UnconnectedMusicView extends React.Component {
       this.props.levelProperties.levelData.guideMode === 'aiCodeGenerate'
     ) {
       saveGeneratedSongMetadata(
-        this.projectManager?.getChannelId(),
+        projectManager?.getChannelId(),
         this.props.packId,
         this.props.playbackEvents,
         this.props.lastMeasure
