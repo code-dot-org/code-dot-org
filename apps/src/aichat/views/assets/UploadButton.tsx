@@ -77,6 +77,8 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     let uploadSuccessCount = 0;
     let sizeLimitExceededCount = 0;
     let uploadFailureCount = 0;
+    let fileCountPdf = 0;
+    let fileCountImage = 0;
     for (const [key, asset, file] of allowedFiles) {
       if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
         sizeLimitExceededCount += 1;
@@ -87,6 +89,12 @@ const UploadButton: React.FC<UploadButtonProps> = ({
           })
         );
         continue; // Skip uploading this file if it exceeds the size limit.
+      }
+
+      if (file.name.endsWith('.pdf')) {
+        fileCountPdf += 1;
+      } else {
+        fileCountImage += 1;
       }
 
       try {
@@ -126,6 +134,8 @@ const UploadButton: React.FC<UploadButtonProps> = ({
         fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
         fileCountFailureUnknownCause: uploadFailureCount,
         fileCountFailureNumberExceeded: Math.max(excessFileCount, 0),
+        fileCountImage,
+        fileCountPdf,
       })
     );
   };
@@ -143,11 +153,17 @@ const UploadButton: React.FC<UploadButtonProps> = ({
         })
       );
     }
+    const fileCount = assets.length;
+    const fileCountPdf =
+      assets?.filter(asset => asset.filename.endsWith('.pdf')).length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
 
     dispatch(
       sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
         source: AssetSource.LEVEL,
-        fileCountSuccess: assets.length,
+        fileCountSuccess: fileCount,
+        fileCountImage,
+        fileCountPdf,
       })
     );
   };
