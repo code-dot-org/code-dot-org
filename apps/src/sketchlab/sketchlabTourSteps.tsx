@@ -78,12 +78,25 @@ const OnboardingTourSteps: React.FC = () => {
       setOpenMenuNextStepEnabled(true);
     };
 
+    const checkForNewDialog = (
+      initialDialogCount: number,
+      hasDetectedDropdown: boolean
+    ) => {
+      // Check if a new dialog appeared after any click.
+      setTimeout(() => {
+        const currentDialogCount =
+          document.querySelectorAll('[role="dialog"]').length;
+        if (currentDialogCount > initialDialogCount && !hasDetectedDropdown) {
+          handleDropdownMenuOpen();
+        }
+      }, 50);
+    };
+
     const dropdownMenuButton = document.querySelector('.dropdown-menu-button');
 
     // Add a click listener to the entire document to detect any clicks during this step.
     const documentClickHandler = (event: Event) => {
       const target = event.target as HTMLElement;
-
       // If user clicked on IntroJS overlay, forward the click to the button.
       if (
         target.classList.contains('introjs-helperLayer') ||
@@ -93,15 +106,8 @@ const OnboardingTourSteps: React.FC = () => {
           (dropdownMenuButton as HTMLElement).click();
         }
       }
-
-      // Check if a new dialog appeared after any click
-      setTimeout(() => {
-        const currentDialogCount =
-          document.querySelectorAll('[role="dialog"]').length;
-        if (currentDialogCount > initialDialogCount && !hasDetectedDropdown) {
-          handleDropdownMenuOpen();
-        }
-      }, 50);
+      // Check if a new dialog appeared after any click.
+      checkForNewDialog(initialDialogCount, hasDetectedDropdown);
     };
     document.addEventListener('click', documentClickHandler, {capture: true});
 
@@ -110,44 +116,20 @@ const OnboardingTourSteps: React.FC = () => {
       if (event.key !== 'Enter') return;
 
       const target = event.target as HTMLElement;
-
       // If user pressed Enter on the dropdown menu button, trigger the button.
       if (target === dropdownMenuButton) {
         if (dropdownMenuButton) {
           (dropdownMenuButton as HTMLElement).click();
         }
       }
-
       // Check if a new dialog appeared after Enter key press.
-      setTimeout(() => {
-        const currentDialogCount =
-          document.querySelectorAll('[role="dialog"]').length;
-        if (currentDialogCount > initialDialogCount && !hasDetectedDropdown) {
-          handleDropdownMenuOpen();
-        }
-      }, 50);
+      checkForNewDialog(initialDialogCount, hasDetectedDropdown);
     };
     document.addEventListener('keydown', documentKeydownHandler, {
       capture: true,
     });
 
-    // MutationObserver to detect when a new dialog appears (dropdown opens)
-    const checkForDropdownMenu = () => {
-      const currentDialogCount =
-        document.querySelectorAll('[role="dialog"]').length;
-      if (currentDialogCount > initialDialogCount && !hasDetectedDropdown) {
-        handleDropdownMenuOpen();
-      }
-    };
-
-    const observer = new MutationObserver(checkForDropdownMenu);
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-
     return () => {
-      observer.disconnect();
       document.removeEventListener('click', documentClickHandler, {
         capture: true,
       });
