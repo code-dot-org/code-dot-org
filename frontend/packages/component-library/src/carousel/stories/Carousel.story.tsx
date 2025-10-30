@@ -532,43 +532,19 @@ ImageCarousel.args = {
   slides: [
     {
       id: 'image-slide-1',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png"
-          style={{width: '100%'}}
-          alt="Slide 1"
-        />
-      ),
+      slide: <img src={image1} style={{width: '100%'}} alt="Slide 1" />,
     },
     {
       id: 'image-slide-2',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide2_STEM_CS.png"
-          style={{width: '100%'}}
-          alt="Slide 2"
-        />
-      ),
+      slide: <img src={image2} style={{width: '100%'}} alt="Slide 2" />,
     },
     {
       id: 'image-slide-3',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide_Students_Like_CS.png"
-          style={{width: '100%'}}
-          alt="Slide 3"
-        />
-      ),
+      slide: <img src={image3} style={{width: '100%'}} alt="Slide 3" />,
     },
     {
       id: 'image-slide-4',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png"
-          style={{width: '100%'}}
-          alt="Slide 4"
-        />
-      ),
+      slide: <img src={image4} style={{width: '100%'}} alt="Slide 4" />,
     },
   ],
 };

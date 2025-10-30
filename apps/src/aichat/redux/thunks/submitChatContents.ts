@@ -121,7 +121,20 @@ export const submitChatContents = createAsyncThunk(
         modelParameters,
         aichatContext
       );
-
+      const projectFileCount =
+        newUserMessage.userAddedSelectionContext?.length || 0;
+      const projectFileCountHtml =
+        newUserMessage.userAddedSelectionContext?.filter(file =>
+          file.filename.endsWith('.html')
+        ).length || 0;
+      const projectFileCountJs =
+        newUserMessage.userAddedSelectionContext?.filter(file =>
+          file.filename.endsWith('.js')
+        ).length || 0;
+      const projectFileCountCss =
+        newUserMessage.userAddedSelectionContext?.filter(file =>
+          file.filename.endsWith('.css')
+        ).length || 0;
       const fileCount = newUserMessage.assets?.length || 0;
       const fileCountPdf =
         newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
@@ -129,10 +142,13 @@ export const submitChatContents = createAsyncThunk(
       const fileCountImage = fileCount - fileCountPdf;
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
-          levelPath: window.location.pathname,
           fileCount,
           fileCountImage,
           fileCountPdf,
+          projectFileCount,
+          projectFileCountHtml,
+          projectFileCountJs,
+          projectFileCountCss,
           clientType,
           ...analyticsProperties,
         })

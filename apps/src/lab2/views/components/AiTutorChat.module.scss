@@ -69,12 +69,27 @@
     color: var(--text-info-primary-fixed);
   }
 
+  .icon-brain {
+    color: var(--text-brand-purple-primary-fixed);
+  }
+
+  .icon-bug {
+    color: var(--text-error-primary-fixed);
+  }
+
+  .icon-star {
+    color: var(--text-warning-primary-fixed);
+  }
+
   // Hover and active states
   @include generate-chat-button-hover-states(
     (
       'code': 'success',
       'lightbulb': 'warning',
       'book': 'info',
+      'brain': 'brand-purple',
+      'bug': 'error',
+      'star': 'warning',
     )
   );
 

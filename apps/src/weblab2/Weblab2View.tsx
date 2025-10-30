@@ -85,9 +85,6 @@ const Weblab2View: React.FC<
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
-  const userAddedSelectionContext = useAppSelector(
-    state => state.aichat.userAddedSelectionContext
-  );
 
   const {startSources} = useSource(
     defaultProject,
@@ -107,9 +104,8 @@ const Weblab2View: React.FC<
     aiTutorHelper.setAiTutorContext({
       source,
       longInstructions: levelProperties.longInstructions,
-      selection: userAddedSelectionContext,
     });
-  }, [source, levelProperties.longInstructions, userAddedSelectionContext]);
+  }, [source, levelProperties.longInstructions]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.

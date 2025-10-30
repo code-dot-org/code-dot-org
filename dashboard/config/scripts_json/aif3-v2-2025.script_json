@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-27 04:06:50 UTC",
+    "serialized_at": "2025-10-29 06:33:17 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2285,7 +2285,13 @@
       "key": "5ce8d431-639b-46de-8c10-2e732acf6660",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers that might be solved through the use of sensors and data. Students should complete the *Empathize with the User* section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the *Define the Data* and *Ideate a Solution* sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** On the sticky notes at each station, students write 1 - 2 examples of data that might be collected to aid in solving the challenge or problem outlined in their scenario. They can use the sentence stems available here to help draft their response.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers that might be solved through the use of sensors and data. Students should complete the *Empathize with the User* section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the **Define the Data** section of the activity guide. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** On the sticky notes at each station, students write 1 - 2 examples of data that might be collected to aid in solving the challenge or problem outlined in their scenario. They can use the sentence stems available here to help draft their response in the **Ideate a Solution** section later.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 2. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the **Investigate with AI section** of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the Ideate a Solution section of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** On the sticky notes at each station, students write 1 - 2 examples of data that might be collected to aid in solving the challenge or problem outlined in their scenario. They can use the sentence stems available here to help draft their response.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Data in Computer Systems Activity Guide can be collected and used to formatively assess the lesson objectives:\n- Describe various types of data \n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5ce8d431-639b-46de-8c10-2e732acf6660",
@@ -4660,17 +4666,14 @@
       "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "computer-systems-lesson7-level2_2025-launch_v2-2025"
-        ],
         "progression": "Sensors and AI Chatbot"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson7-level2_2025-launch_v2-2025"
+          "computer-systems-lesson7-level2_v3-2025"
         ],
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
@@ -4678,15 +4681,40 @@
         "activity_section.key": "a9b181cc-b7f0-4804-af8e-3634348149a7"
       },
       "level_keys": [
-        "computer-systems-lesson7-level2_2025-launch_v2-2025"
+        "computer-systems-lesson7-level2_v3-2025"
       ]
     },
     {
       "chapter": 39,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Sensors and AI Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson7-level3_v2-2025"
+        ],
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif3-v2-2025",
+        "activity_section.key": "a9b181cc-b7f0-4804-af8e-3634348149a7"
+      },
+      "level_keys": [
+        "computer-systems-lesson7-level3_v2-2025"
+      ]
+    },
+    {
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level1_v3-2025"
+        ],
         "progression": "Validating Library Data"
       },
       "bonus": false,
@@ -4704,11 +4732,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level2_v3-2025"
+        ],
         "progression": "Processing Library Data"
       },
       "bonus": false,
@@ -4726,11 +4757,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level3_v3-2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4748,11 +4782,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level4_v3-2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4770,11 +4807,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level5_v2-2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4792,7 +4832,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4817,7 +4857,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4842,7 +4882,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4867,7 +4907,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4892,7 +4932,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4917,7 +4957,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4942,7 +4982,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4967,7 +5007,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4992,7 +5032,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5017,7 +5057,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -5042,11 +5082,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson12-level1_v3-2025"
+        ],
         "progression": "AI Artifact Station"
       },
       "bonus": false,
@@ -5064,7 +5107,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5089,7 +5132,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5114,7 +5157,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5139,7 +5182,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5164,7 +5207,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5189,7 +5232,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5214,7 +5257,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5239,7 +5282,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5264,7 +5307,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5736,9 +5779,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson7-level2_2025-launch_v2-2025",
+        "level.key": "computer-systems-lesson7-level2_v3-2025",
         "script_level.level_keys": [
-          "computer-systems-lesson7-level2_2025-launch_v2-2025"
+          "computer-systems-lesson7-level2_v3-2025"
+        ],
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif3-v2-2025",
+        "activity_section.key": "a9b181cc-b7f0-4804-af8e-3634348149a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson7-level3_v2-2025",
+        "script_level.level_keys": [
+          "computer-systems-lesson7-level3_v2-2025"
         ],
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
@@ -6138,14 +6193,16 @@
     },
     {
       "name": "[KEY] Data in Computer Systems",
-      "url": "https://docs.google.com/document/d/1xQ3mKCtmyJ3KbtqnFbxeCxyaKATZh18UsbevhA7uYUQ",
-      "key": "_key_data_in_computer_systems",
+      "url": "https://docs.google.com/document/d/1l8RsLtZiGyc6UBTo7dJLSC1Q-KAAvP8pBadkr-bjgHs/edit?usp=sharing",
+      "key": "_key_data_in_computer_systems_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_data_in_computer_systems"
+        "resource.key": "_key_data_in_computer_systems_1"
       }
     },
     {
@@ -6459,27 +6516,30 @@
     },
     {
       "name": "Data in Computer Systems",
-      "url": "https://docs.google.com/document/d/1Z2aKZH9uA0JdTH3ya4aui0njw5CcOjzaylUkagpJzEI/edit?usp=sharing\t",
-      "key": "data_in_computer_systems",
+      "url": "https://docs.google.com/document/d/1N5MLLZqaET2sU4kiJ2Reyhd-lcVeIblGIJ8dGs3SlHc/edit?usp=sharing",
+      "key": "data_in_computer_systems_2",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "data_in_computer_systems"
+        "resource.key": "data_in_computer_systems_2"
       }
     },
     {
       "name": "Data in Computer Systems",
-      "url": "https://docs.google.com/presentation/d/1yZBEBv1l9QUBl1-6SN8IH7QEnls62BurmyQhHkJciqo/edit?usp=drivesdk",
-      "key": "data_in_computer_systems_1",
+      "url": "https://docs.google.com/presentation/d/1bEYain6SyhFHCdeCo6Q_rCw7Ap9yfP6daH36NI-OKyw/edit?usp=sharing",
+      "key": "data_in_computer_systems_3",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "data_in_computer_systems_1"
+        "resource.key": "data_in_computer_systems_3"
       }
     },
     {
@@ -6714,14 +6774,16 @@
     },
     {
       "name": "Station Activity Cards",
-      "url": "https://docs.google.com/presentation/d/1SCsG2f4UMTzSb4uw2cxF8M1dsC4vtzYphrxbxOEtJXU/edit?usp=drivesdk",
-      "key": "station_activity_cards",
+      "url": "https://docs.google.com/presentation/d/1WLBS55qlZkzYKsg7ulYoBptdw3eaKitvKOVrYT8LOXE/edit?usp=sharing",
+      "key": "station_activity_cards_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "station_activity_cards"
+        "resource.key": "station_activity_cards_1"
       }
     },
     {
@@ -7325,7 +7387,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
-        "resource.key": "_key_data_in_computer_systems"
+        "resource.key": "_key_data_in_computer_systems_1"
       }
     },
     {
@@ -7337,19 +7399,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
-        "resource.key": "data_in_computer_systems"
+        "resource.key": "data_in_computer_systems_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
-        "resource.key": "data_in_computer_systems_1"
+        "resource.key": "data_in_computer_systems_3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
-        "resource.key": "station_activity_cards"
+        "resource.key": "station_activity_cards_1"
       }
     },
     {
