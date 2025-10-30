@@ -158,7 +158,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         saveSourcesTimeoutRef.current = null;
       }
 
-      saveSourcesTimeoutRef.current = setTimeout(async () => {
+      saveSourcesTimeoutRef.current = setTimeout(() => {
         const serializedData: SerializedExcalidrawState = JSON.parse(
           serializeAsJSON(elements, state, files, 'local')
         );
