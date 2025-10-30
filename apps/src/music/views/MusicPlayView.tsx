@@ -6,6 +6,7 @@ import {
 import React, {memo, useCallback, useContext, useMemo} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
@@ -21,13 +22,13 @@ import moduleStyles from './music-play-view.module.scss';
 interface MusicPlayViewProps {
   setPlaying: (value: boolean) => void;
   projectName?: string;
-  projectManager?: ProjectManager;
+  overrideProjectManager?: ProjectManager;
 }
 
 const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   setPlaying,
   projectName,
-  projectManager,
+  overrideProjectManager,
 }) => {
   const isPlaying = useAppSelector(state => state.music.isPlaying);
   const percentPlayed = useAppSelector(state => {
@@ -62,6 +63,9 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
       canShareInternal
     );
   }, [canShareInternal, shareData]);
+
+  const projectManager =
+    overrideProjectManager || Lab2Registry.getInstance().getProjectManager();
 
   const onShareProject = useCallback(() => {
     analyticsReporter?.onButtonClicked('shareFromShareView');

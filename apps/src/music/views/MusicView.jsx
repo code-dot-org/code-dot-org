@@ -187,9 +187,6 @@ class UnconnectedMusicView extends React.Component {
     this.exemplarPlaybackEvents = [];
     this.triggers = [];
 
-    this.projectManager =
-      props.projectManager || Lab2Registry.getInstance().getProjectManager();
-
     MusicBlocklyWorkspace.setupBlocklyEnvironment(this.props.blockMode);
   }
 
@@ -864,7 +861,10 @@ class UnconnectedMusicView extends React.Component {
     }
     sourcesToSave.labConfig.music.blockMode = this.props.blockMode;
 
-    this.projectManager?.save(sourcesToSave, forceSave);
+    const projectManager =
+      this.props.projectManager ||
+      Lab2Registry.getInstance().getProjectManager();
+    projectManager?.save(sourcesToSave, forceSave);
 
     // If we are AI generating, then save metadata for Dance Party.
     if (
@@ -999,7 +999,7 @@ class UnconnectedMusicView extends React.Component {
           hasEdited={this.state.hasEdited}
           levelProperties={this.props.levelProperties}
           channel={this.props.channel}
-          projectManager={this.projectManager}
+          overrideProjectManager={this.props.projectManager}
         />
         <Callouts />
       </AnalyticsContext.Provider>

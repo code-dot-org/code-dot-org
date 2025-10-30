@@ -86,7 +86,7 @@ interface MusicLabViewProps {
   hasEdited: boolean;
   levelProperties: LevelProperties;
   channel?: Channel;
-  projectManager?: ProjectManager;
+  overrideProjectManager?: ProjectManager;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -110,7 +110,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   hasEdited,
   levelProperties,
   channel,
-  projectManager,
+  overrideProjectManager,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
@@ -316,7 +316,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       <MusicPlayView
         setPlaying={setPlaying}
         projectName={channel?.name}
-        projectManager={projectManager}
+        overrideProjectManager={overrideProjectManager}
       />
     );
   }

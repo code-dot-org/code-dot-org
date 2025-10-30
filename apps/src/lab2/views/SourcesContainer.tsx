@@ -68,7 +68,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   initialSources,
   defaultSources,
   children,
-  projectManager = Lab2Registry.getInstance().getProjectManager(),
+  projectManager,
 }) => {
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
     () => getInitialSources(levelProperties, initialSources) || defaultSources
@@ -128,7 +128,10 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
         }
         return newSources;
       });
-      projectManager?.save(newSources, forceSave);
+      (projectManager || Lab2Registry.getInstance().getProjectManager())?.save(
+        newSources,
+        forceSave
+      );
     },
     [setCurrentSources, projectManager]
   );
