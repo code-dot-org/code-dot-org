@@ -142,6 +142,7 @@ module AllowedHostnameHelper
   ].freeze
 
   ALLOWED_FONT_HOSTNAMES = [
+    # These hostnames are used to load google fonts. Public API.
     'fonts.googleapis.com',
     'fonts.gstatic.com'
   ]
