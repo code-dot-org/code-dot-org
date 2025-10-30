@@ -33,7 +33,7 @@ animals    = args.animal
 attire     = args.attire
 
 # Per-combo duplicate count -> 00, 01, ... (n variants per combo)
-REPEATS_PER_COMBO = 5
+REPEATS_PER_COMBO = 3
 
 # Image settings
 IMG_W, IMG_H = 1024, 1024
@@ -44,6 +44,11 @@ BACKGROUND = "transparent"
 CONCURRENCY = 4
 RETRIES = 5
 BASE_BACKOFF = 1.0  # seconds
+
+# Seed enforcement for derivative images (attire / adjective+attire)
+REQUIRE_SEED_FOR_DERIVATIVES = True
+FAIL_IF_MISSING_SEED = False  # set True if you want the run to hard-fail when a seed is missing
+
 
 # -------- Robust color picker (v2) TUNABLES --------
 ALPHA_WEIGHT_FOR_PALETTE   = True
@@ -69,9 +74,9 @@ DRIVE_SUBDIR = "dance_party_animal_heads_v2"
 OUTDIR = Path(os.path.dirname(__file__)) / ".." / "output" / DRIVE_SUBDIR
 
 # Subfolders by name shape
-ANIMAL_DIR            = OUTDIR / "animal"
-ANIMAL_ATTIRE_DIR     = OUTDIR / "animal-attire"
-ADJ_ANIMAL_ATTIRE_DIR = OUTDIR / "adjective-animal-attire"
+ANIMAL_DIR            = OUTDIR / "creature-05"
+ANIMAL_ATTIRE_DIR     = OUTDIR / "creature-attire-05"
+ADJ_ANIMAL_ATTIRE_DIR = OUTDIR / "creature-attire-mood-style-05"
 # ---------------------------------------
 
 # API client
@@ -129,7 +134,12 @@ def delta_e76(lab1, lab2):
     return np.sqrt(np.sum(diff*diff, axis=1))
 
 # ---------- Prompt & naming ----------
-def build_prompt(theme_desc: str) -> str:
+def build_prompt(theme_desc: str, preserve: bool = False) -> str:
+    preserve_txt = (
+        "Start from the provided base head image and PRESERVE its overall shape, proportions, facial features, "
+        "and silhouette. Do not change the character species. Only add/adjust accessories per the theme. "
+        if preserve else ""
+    )
     return (
         "Create one non-human character head for Code.org’s Dance Party.\n"
         f"Canvas & Size: exactly {IMG_W} px wide × {IMG_H} px tall.\n"
@@ -139,17 +149,27 @@ def build_prompt(theme_desc: str) -> str:
         "Extras: Animal ears, antlers, hair/feather tufts, hats, bows — keep simple, flat, 1–4 colors.\n"
         "Proportions: Eyes and mouth oversized and expressive.\n"
         "Background: transparent PNG only. Entire head visible and centered, nothing cropped.\n"
+        f"{preserve_txt}"
         f"Theme: {theme_desc}.\n"
         "Art style: Flat vector color fills, no outlines, no shading/gradients, crisp edges, bold simple shapes, perfect left-right symmetry. Head must be completely colored in, no transparent pixels within head. \n"
         "Framing: small uniform margin; head fills most of the canvas."
     )
 
+def seed_image_for_variant(animal: str, v: int) -> Path | None:
+    """
+    Return the path to the base animal-only seed image for variant v,
+    e.g., animal_dir/<animal>-<v>.png, or None if not found.
+    """
+    base = base_name(animal, None, None, v)
+    p = ANIMAL_DIR / f"{base}.png"
+    return p if p.exists() else None
+
 def base_name(animal: str, adj: str | None, att: str | None, v: int) -> str:
-    parts = [slugify(animal, separator="-")]
+    parts = [slugify(animal, separator="_")]
     if att:
-        parts.append(slugify(att, separator="-"))               # animal-attire
+        parts.append(slugify(att, separator="_"))    # preserves internal underscores
     if adj:
-        parts.insert(0, slugify(adj, separator="-"))            # adjective-animal-attire
+        parts.append(slugify(adj, separator="_"))
     parts.append(f"{v:02d}")
     return "-".join(parts)
 
@@ -171,9 +191,9 @@ def build_plan():
     for animal in animals:
         yield (None, animal, None, f"{animal}", f"{animal.title()}")
         for att in attire:
-            yield (None, animal, att, f"{animal} in {att}", f"{animal.title()} In {att.title()}")
+            yield (None, animal, att, f"{animal} in {att}", f"{animal.title()} Wearing {att.title()}")
             for adj in adjectives:
-                yield (adj, animal, att, f"{adj} {animal} in {att}", f"{adj.title()} {animal.title()} In {att.title()}")
+                yield (adj, animal, att, f"{animal} wearing {att} with {adj} mood", f"{animal.title()} Wearing {att.title()} With {adj.title()} Mood")
 
 # ---------- Resume (scan all folders) ----------
 def _norm(x):
@@ -224,7 +244,7 @@ def unique_plan(plan_iterable):
         unique.append((adj, animal, att, desc, title))
     return unique
 
-# ---------- Robust palette extraction (v2) ----------
+# ---------- Palette extraction (v2) ----------
 def _extract_palette_robust_v2_from_image(img: Image.Image):
     """Return (dominant/body, secondary, tertiary) with:
        - smaller outer-band background exclusion (dominance-checked)
@@ -411,40 +431,99 @@ def metadata_record(adj, animal, att, v, img_path: Path, prompt: str,
     }
 
 # ---------- Parallel worker ----------
+# --- replace your generate_for_combo with this version ---
 async def generate_for_combo(adj, animal, att, title, desc, missing_variants, sem: asyncio.Semaphore):
     if not missing_variants:
         return 0
 
-    prompt = build_prompt(desc)
-    n = len(missing_variants)
+    use_seed = (att is not None) or (adj is not None)
 
-    async with sem:
-        delay = BASE_BACKOFF
-        for attempt in range(1, RETRIES + 1):
-            try:
-                resp = await aclient.images.generate(
-                    model=MODEL,
-                    prompt=prompt,
-                    size=f"{IMG_W}x{IMG_H}",
-                    n=n,
-                    background=BACKGROUND,
-                )
-                break
-            except Exception as e:
-                if attempt == RETRIES:
-                    print(f"[ERROR] {animal}-{adj or 'none'}-{att or 'none'}: {e}")
-                    return 0
-                await asyncio.sleep(delay + random.uniform(0, 0.5))
-                delay = min(delay * 2, 20)
+    # --- Base animals ---
+    if not use_seed:
+        prompt = build_prompt(desc, preserve=False)
+        n = len(missing_variants)
 
+        async with sem:
+            delay = BASE_BACKOFF
+            for attempt in range(1, RETRIES + 1):
+                try:
+                    resp = await aclient.images.generate(
+                        model=MODEL,
+                        prompt=prompt,
+                        size=f"{IMG_W}x{IMG_H}",
+                        n=n,
+                        background=BACKGROUND,
+                    )
+                    break
+                except Exception as e:
+                    if attempt == RETRIES:
+                        print(f"[ERROR] {animal}-base: {e}")
+                        return 0
+                    await asyncio.sleep(delay + random.uniform(0, 0.5))
+                    delay = min(delay * 2, 20)
+
+        created = 0
+        dest_dir = destination_dir(adj, animal, att)
+        for b64, v in zip((d.b64_json for d in resp.data), missing_variants):
+            base = base_name(animal, adj, att, v)
+            img_path  = dest_dir / f"{base}.png"
+            meta_path = dest_dir / f"{base}-metadata.json"
+            if img_path.exists() and meta_path.exists():
+                continue
+            save_png(b64, img_path)
+            body_hex, secondary_hex, tertiary_hex = extract_palette(img_path)
+            meta = metadata_record(adj, animal, att, v, img_path, prompt,
+                                   body_hex, secondary_hex, tertiary_hex, title, desc)
+            meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False))
+            created += 1
+        return created
+
+    # --- Derivatives: strictly require seed, never fall back to generate ---
     created = 0
     dest_dir = destination_dir(adj, animal, att)
+    for v in missing_variants:
+        seed_path = seed_image_for_variant(animal, v)
 
-    for b64, v in zip((d.b64_json for d in resp.data), missing_variants):
-        base = base_name(animal, adj, att, v)  # (animal, adj, att, v)
+        if seed_path is None:
+            # Shouldn't happen if we filtered in main_async(), but double-guard anyway.
+            msg = f"[ERROR] Missing seed for {animal}-{att or 'none'}-{adj or 'none'} v{v:02d}"
+            if FAIL_IF_MISSING_SEED:
+                raise RuntimeError(msg)
+            else:
+                print(msg)
+                continue
+
+        prompt = build_prompt(desc, preserve=True)
+
+        async with sem:
+            delay = BASE_BACKOFF
+            for attempt in range(1, RETRIES + 1):
+                try:
+                    with open(seed_path, "rb") as f:
+                        resp = await aclient.images.edit(
+                            model=MODEL,
+                            image=f,
+                            prompt=prompt,
+                            size=f"{IMG_W}x{IMG_H}",
+                            background=BACKGROUND,
+                            n=1,
+                        )
+                    break
+                except Exception as e:
+                    if attempt == RETRIES:
+                        print(f"[ERROR] Edit failed {animal}-{adj or 'none'}-{att or 'none'} v{v:02d}: {e}")
+                        resp = None
+                        break
+                    await asyncio.sleep(delay + random.uniform(0, 0.5))
+                    delay = min(delay * 2, 20)
+
+        if not resp:
+            continue
+
+        b64 = resp.data[0].b64_json
+        base = base_name(animal, adj, att, v)
         img_path  = dest_dir / f"{base}.png"
         meta_path = dest_dir / f"{base}-metadata.json"
-
         if img_path.exists() and meta_path.exists():
             continue
 
@@ -462,39 +541,90 @@ async def main_async():
     ensure_dirs()
 
     # 1) Build full plan in the required order and deduplicate
-    full_plan = list(build_plan())                               # (adj, animal, att, desc, title)
-    plan = unique_plan(full_plan)                                # remove duplicates, keep order
+    full_plan = list(build_plan())   # (adj, animal, att, desc, title)
+    plan = unique_plan(full_plan)
 
-    # 2) Scan all folders for existing variants and compute missing work
+    # Split into base vs. derivatives
+    base_plan = [(adj, animal, att, desc, title) for (adj, animal, att, desc, title) in plan
+                 if adj is None and att is None]
+    deriv_plan = [(adj, animal, att, desc, title) for (adj, animal, att, desc, title) in plan
+                  if not (adj is None and att is None)]
+
+    created_total = 0
+    sem = asyncio.Semaphore(CONCURRENCY)
+
+    # ---------------- Phase 1: BASE animals ----------------
     completed = scan_completed_variants()
-    work = []
-    total_missing = 0
-    for adj, animal, att, desc, title in plan:
+    work_base = []
+    total_missing_base = 0
+
+    for adj, animal, att, desc, title in base_plan:
         have = completed.get((_norm(adj), _norm(animal), _norm(att)), set())
         missing = [v for v in range(REPEATS_PER_COMBO) if v not in have]
         if missing:
-            work.append((adj, animal, att, title, desc, missing))
-            total_missing += len(missing)
+            work_base.append((adj, animal, att, title, desc, missing))
+            total_missing_base += len(missing)
 
-    if not work:
-        print("Nothing to do — all combos complete.")
-        return
+    if work_base:
+        print(f"Planned base combos: {len(base_plan)}")
+        print(f"Base images to generate (missing variants): {total_missing_base}")
+        tasks_base = [generate_for_combo(adj, animal, att, title, desc, missing, sem)
+                      for (adj, animal, att, title, desc, missing) in work_base]
+        pbar = tqdm(total=total_missing_base, desc="Generating (base)", unit="img")
+        for coro in asyncio.as_completed(tasks_base):
+            c = await coro
+            created_total += c
+            pbar.update(c)
+        pbar.close()
+    else:
+        print("No base images to generate.")
 
-    sem = asyncio.Semaphore(CONCURRENCY)
-    tasks = [generate_for_combo(adj, animal, att, title, desc, missing, sem)
-             for (adj, animal, att, title, desc, missing) in work]
+    # ---------------- Phase 2: DERIVATIVES ----------------
+    # Re-scan so seeds from Phase 1 are visible
+    completed = scan_completed_variants()
+    work_deriv = []
+    total_missing_deriv = 0
 
+    for adj, animal, att, desc, title in deriv_plan:
+        have = completed.get((_norm(adj), _norm(animal), _norm(att)), set())
+        missing_all = [v for v in range(REPEATS_PER_COMBO) if v not in have]
+
+        if REQUIRE_SEED_FOR_DERIVATIVES and (att is not None or adj is not None):
+            missing = []
+            for v in missing_all:
+                if seed_image_for_variant(animal, v) is not None:
+                    missing.append(v)
+                else:
+                    msg = f"[SKIP] No seed found for derivative {animal}-{att or 'none'}-{adj or 'none'} v{v:02d}"
+                    if FAIL_IF_MISSING_SEED:
+                        raise RuntimeError(msg)
+                    else:
+                        print(msg)
+        else:
+            missing = missing_all
+
+        if missing:
+            work_deriv.append((adj, animal, att, title, desc, missing))
+            total_missing_deriv += len(missing)
+
+    if work_deriv:
+        print(f"Planned derivative combos: {len(deriv_plan)}")
+        print(f"Derivative images to generate (missing variants): {total_missing_deriv}")
+        tasks_deriv = [generate_for_combo(adj, animal, att, title, desc, missing, sem)
+                       for (adj, animal, att, title, desc, missing) in work_deriv]
+        pbar = tqdm(total=total_missing_deriv, desc="Generating (derivatives)", unit="img")
+        for coro in asyncio.as_completed(tasks_deriv):
+            c = await coro
+            created_total += c
+            pbar.update(c)
+        pbar.close()
+    else:
+        print("No derivative images to generate.")
+
+    # ---------------- Summary ----------------
+    total_missing = total_missing_base + total_missing_deriv
     print(f"Planned unique combos: {len(plan)}")
     print(f"Images to generate (missing variants): {total_missing}")
-
-    created_total = 0
-    pbar = tqdm(total=total_missing, desc="Generating", unit="img")
-    for coro in asyncio.as_completed(tasks):
-        c = await coro
-        created_total += c
-        pbar.update(c)
-    pbar.close()
-
     print(f"Done. Created {created_total} new image(s).")
     print(f"Output root: {OUTDIR}")
     print("Folders used:")
