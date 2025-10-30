@@ -221,7 +221,7 @@ http 2025-10-29T17:36:45.123456Z app/production-codeorg/a1b2c3d4e5f6g7h8 198.51.
 **Format:** CEE-enhanced JSON (Common Event Expression)  
 **Library:** [Lograge](https://github.com/roidrage/lograge) with CEE formatter  
 
-Rails application logs (Dashboard and Pegasus via Puma) are written to syslog in JSON format using the Lograge gem with a CEE (Common Event Expression) prefix. CEE is a JSON-based logging standard that prepends `@cee:` to each JSON log line for easier parsing by syslog receivers.  To query these logs, in CloudWatch Logs, use the `production-syslog` log group.
+Rails application logs (Dashboard and Pegasus via Puma) are written to `/var/log/syslog` in JSON format using the Lograge gem with a CEE (Common Event Expression) prefix. The Amazon CloudWatch Agent tails this file and ships entries to the `<env>-syslog` CloudWatch Logs group (for production: `production-syslog`).
 
 ### Example Log Entries
 
@@ -269,6 +269,16 @@ Depending on the route and Lograge hooks, optional keys may also appear—for ex
 
 **Note:** The `@cee:` prefix is followed by a space and then the JSON object. Rails still emits unstructured lines (for example, `Rendered ...`) immediately before the JSON; parsers should filter for lines beginning with `@cee:` when extracting structured entries.
 
+#### Other syslog lines you will see
+
+The same `/var/log/syslog` stream also captures operating-system activity. Typical examples include cron jobs, SSH and SSM session notices, and sudo elevation events. These lack the `@cee:` prefix but are viewable in the same CloudWatch log group.
+
+```
+Oct 30 17:56:01 ip-10-0-1-23 CRON[12345]: (root) CMD (cd /home/ubuntu/production/current && bundle exec rake cron:hourly RAILS_ENV=production)
+Oct 30 17:56:30 ip-10-0-1-23 sshd[23456]: Accepted publickey for ubuntu from 203.0.113.100 port 54321 ssh2: RSA SHA256:abcdefghijklmnop1234567890
+Oct 30 18:04:11 ip-10-0-1-23 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/bin/systemctl status nginx
+```
+
 ### Useful Queries/Patterns
 
 Get the top 50 most frequent 500 errors by controller and action:
@@ -300,6 +310,22 @@ parse @message "@cee: *" as payload
 | filter path = "/api/v1/users/current" and duration > 300
 | sort duration desc
 | limit 200
+```
+
+Find recent cron executions on an app server:
+```
+fields @timestamp, @message
+| filter @message like /CRON\[/
+| sort @timestamp desc
+| limit 50
+```
+
+Find interactive SSH or SSM logins:
+```
+fields @timestamp, @message
+| filter @message like /sshd/ and @message like /Accepted/
+| sort @timestamp desc
+| limit 50
 ```
 
 ## NGINX Access Logs
@@ -428,45 +454,21 @@ parse @message /"userId":(?<userId>\d+)/
 
 ---
 
-## Syslog Format
+## Admin/Audit Logs (CloudWatch Logs)
 
-**Format:** RFC 3164 / RFC 5424 syslog  
-**Official Documentation:** [RFC 5424](https://tools.ietf.org/html/rfc5424), [RFC 3164](https://tools.ietf.org/html/rfc3164)
+**Format:** Plain text
 
-System logs on EC2 instances are collected via rsyslog and written locally to `/var/log/syslog`. Rails application logs (using Syslog::Logger) and system messages are both captured here.
+Admin/audit logs are written to CloudWatch Logs as plain text for SSM sessions.
 
-### Example Log Entries
+### Useful Queries/Patterns
 
-**Rails Application Log (via Lograge CEE):**
+Show all SSM sessions by user:
 ```
-Oct 29 17:55:12 ip-10-0-1-23 dashboard: @cee: {"method":"GET","path":"/","format":"html","controller":"HomeController","action":"index","status":200,"duration":45.67,"view":30.12,"db":10.23,"ip":"203.0.113.88","timestamp":"2025-10-29T17:55:12.345Z"}
+fields @timestamp, @logStream
+| parse @logStream /(?<email>[^\/-]+@[^\/-]+)/ 
+| stats count() as entries by bin(@timestamp, 1d) as day, email
+| sort day desc, entries desc
 ```
-
-**System Message:**
-```
-Oct 29 17:56:01 ip-10-0-1-23 CRON[12345]: (root) CMD (cd /home/ubuntu/production/current && bundle exec rake cron:hourly RAILS_ENV=production)
-```
-
-**SSH Login:**
-```
-Oct 29 17:56:30 ip-10-0-1-23 sshd[23456]: Accepted publickey for ubuntu from 203.0.113.100 port 54321 ssh2: RSA SHA256:abcdefghijklmnop1234567890
-```
-
-### Format
-
-Traditional syslog format (RFC 3164):
-```
-MMM DD HH:MM:SS hostname program[pid]: message
-```
-
-- `timestamp` — Month, day, time (local time, not UTC)
-- `hostname` — Hostname or IP of the machine generating the log
-- `program` — Program name (e.g., `dashboard`, `CRON`, `sshd`)
-- `pid` — Process ID in square brackets
-- `message` — Log message content
-
-**Note:** Rails logs include the `@cee:` JSON prefix in the message field. Syslog on EC2 instances is configured to rotate at 100MB and keep 7 days of logs locally. Logs are also uploaded hourly to S3 via the [log upload script](../bin/upload-logs-to-s3).
-
 
 ---
 
@@ -514,11 +516,10 @@ Firehose events are client-defined and typically include:
 | CloudFront Standard Access | TSV | S3 `cdo-logs/cloudfront/` | Indefinite (partitioned) | [AWS CloudFront Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html) |
 | CloudFront Real-Time Access | Parquet | S3 `cdo-access-logs/access-logs/` | Intelligent Tiering → Deep Archive | [CloudFront Real-Time Logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html) |
 | ALB Access | Space-delimited | S3 `cdo-logs/<stack>-alb-access-logs/AWSLogs/.../elasticloadbalancing/` | Indefinite | [AWS ALB Logs](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html) |
-| Rails (Lograge CEE) | JSON | Syslog → S3 `cdo-logs/hosts/` | 7 days local, indefinite S3 | [Lograge](https://github.com/roidrage/lograge) |
-| NGINX Access | Combined CLF | Local → S3 `cdo-logs/hosts/` | 7 days local, indefinite S3 | [NGINX Logging](https://nginx.org/en/docs/http/ngx_http_log_module.html) |
-| NGINX Error | NGINX error format | Local → S3 `cdo-logs/hosts/` | 7 days local, indefinite S3 | [NGINX Error Log](https://nginx.org/en/docs/ngx_core_module.html#error_log) |
+| Rails (Lograge CEE) | JSON | CloudWatch Logs `<env>-syslog` | Indefinite (CloudWatch retention) | [Lograge](https://github.com/roidrage/lograge) |
+| NGINX Access | Combined CLF | Local filesystem only | Local rotation (~7 days) | [NGINX Logging](https://nginx.org/en/docs/http/ngx_http_log_module.html) |
+| NGINX Error | NGINX error format | Local filesystem only | Local rotation (~7 days) | [NGINX Error Log](https://nginx.org/en/docs/ngx_core_module.html#error_log) |
 | Browser Events | JSON | CloudWatch Logs | Indefinite | [CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/) |
-| Syslog | RFC 3164/5424 | Local → S3 `cdo-logs/hosts/` | 7 days local, indefinite S3 | [RFC 5424](https://tools.ietf.org/html/rfc5424) |
 | Firehose (deprecated) | JSON | S3 → Redshift | Varies | [Kinesis Firehose](https://docs.aws.amazon.com/firehose/latest/dev/) |
 
 ---
