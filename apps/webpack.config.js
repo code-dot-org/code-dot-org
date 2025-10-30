@@ -728,6 +728,13 @@ function createWebpackConfig({
           port: WEBPACK_DEV_SERVER_PORT,
           proxy: [
             {
+              context: ['/cable'],
+              target: 'ws://localhost-studio.code.org:3000',
+              changeOrigin: false,
+              logLevel: 'debug',
+              ws: true,
+            },
+            {
               context: ['**'],
               target: 'http://localhost-studio.code.org:3000',
               changeOrigin: false,

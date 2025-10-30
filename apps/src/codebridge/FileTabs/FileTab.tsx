@@ -1,5 +1,6 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 import {ProjectFile} from '@codebridge/types';
 import {getFileIconNameAndStyle} from '@codebridge/utils';
 import classNames from 'classnames';
@@ -66,13 +67,14 @@ const FileTab = ({file}: FileTabProps) => {
           iconStyle={iconStyle}
           className={iconClassName}
         />
-        <span>{file.name}</span>
+        <BodyFourText noMargin>{file.name}</BodyFourText>
       </div>
       <CloseButton
         onClick={() => dispatch(closeFileThunk(file.id))}
         color={'light'}
         aria-label={codebridgeI18n.closeFile({filename: file.name})}
         className={moduleStyles.closeButton}
+        size="s"
       />
     </div>
   );

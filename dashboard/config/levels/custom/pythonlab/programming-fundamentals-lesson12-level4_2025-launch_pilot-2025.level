@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:47:09.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nThe `Painter` is trying to follow a winding path, but something's off! The `Painter` turns left *no matter what*, even when the `Painter` is supposed to move forward.\r\n\r\n1. Look at the `move_or_turn()` function in `custom.py`.\r\n\r\n   * It checks if the `Painter` can move. If so, the `Painter` moves forward.\r\n   \r\n   * But right now, the `Painter` *always* turns left, *even when moving forward*, which causes problems!\r\n   \r\n2. Find and fix the bug by adding an `else` statement so the `Painter` only turns left when it can't move forward.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/62b990764f2a161d41522ea3d621a0d8-image-1745168571995.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nIf both the `if` and the following line run every time, it's not really a choice! Use `else` to make sure **only one** action happens each time the function runs.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -393,9 +394,12 @@
       "active": false,
       "open": false,
       "type": "validation"
-    }
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:47:09.211+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson12-level4_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson12-level4_2025-launch_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:47:09.211+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson12-level4_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson12-level4_2025-launch_2025\"},{\"changed_at\":\"2025-10-27 16:01:22 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>

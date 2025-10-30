@@ -209,6 +209,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
             theme={theme.toLowerCase() as ExcalidrawTheme}
+            viewModeEnabled={readonlyWorkspace}
           />
           {WorkspaceAlert}
         </PanelContainer>

@@ -203,6 +203,7 @@ export interface LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
+  aiTutorMode?: string;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
@@ -248,6 +249,7 @@ export interface BubbleChoiceSublevel {
   level_id: string;
   thumbnail_url: string;
   url: string;
+  position: number;
 }
 
 // Addtional fields for videos that are linked as references in the

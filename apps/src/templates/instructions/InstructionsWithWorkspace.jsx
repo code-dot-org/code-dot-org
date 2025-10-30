@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {AI_TUTOR_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
+import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
 
 import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
@@ -105,7 +105,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
-    const {
+    let {
       instructionsStyle,
       workspaceStyle,
       instructionsHeight,
@@ -114,7 +114,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     } = this.props;
 
     const showAiTutor =
-      AI_TUTOR_LABS.includes(labType) &&
+      AI_TUTOR_LEGACY_LABS.includes(labType) &&
       experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
@@ -124,8 +124,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       : sidebarSpace;
 
     if (showAiTutor) {
-      instructionsStyle.right = tutorSpace;
-      workspaceStyle.right = tutorSpace;
+      instructionsStyle = {...instructionsStyle, right: tutorSpace};
+      workspaceStyle = {...workspaceStyle, right: tutorSpace};
     }
 
     return (

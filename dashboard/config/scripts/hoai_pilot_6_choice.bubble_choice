@@ -7,4 +7,6 @@ level 'pilot_generate_dancer_choice_2_3_4'
 level 'length_prompt_choice_2_3_4'
 level 'dance_moves_choice_2_3_4'
 
+custom_mode 'music_dance_ai'
 uses_lab2
+navigation_type 'next_level'

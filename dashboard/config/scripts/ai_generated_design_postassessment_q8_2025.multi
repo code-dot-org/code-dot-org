@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q8_2025'
+
+question 'A company is developing an app to help teenagers manage their time. Through interviews, the team learns that "Avery, age 16, often forgets homework deadlines and wants simple reminders to stay organized." What should the team do with this information?'
+
+wrong 'Add random productivity quotes to make the app more motivating.'
+wrong 'Start designing the app layout without considering user feedback.'
+right 'Write a clear problem that defines Avery\'s main challenge and goal.'
+wrong 'Choose bright colors and fonts before identifying key features.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+MARKDOWN

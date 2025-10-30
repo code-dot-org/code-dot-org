@@ -6,6 +6,7 @@ import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext'
 import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import ChatEventLogger from '../chatEventLogger';
 import {
@@ -224,6 +225,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     iconStyle: 'solid',
   };
 
+  const buildAssetUrlValue = multimodalAvailable ? buildAssetUrl : undefined;
+
   const tabs = [
     {
       value: 'viewStudentChatHistory',
@@ -241,7 +244,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={studentChatHistory}
           isTeacherView={true}
-          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+          buildAssetUrl={buildAssetUrlValue}
         />
       ),
       iconLeft: iconValue,
@@ -252,7 +255,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       tabContent: (
         <ChatEventsList
           events={visibleItems}
-          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+          buildAssetUrl={buildAssetUrlValue}
         />
       ),
     },
@@ -277,14 +280,22 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const uploadDisabled = !canChatWithModel || !!selectedStudent || chatDisabled;
 
+  const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+
+  const isTeacherView = !!selectedStudent;
+
+  const showTabs =
+    selectedStudent && clientType === AiChatClientTypes.AI_CHAT_LAB;
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {selectedStudent ? (
+      {showTabs ? (
         <Tabs {...tabArgs} />
       ) : (
         <ChatEventsList
-          events={visibleItems}
-          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+          events={chatEvents}
+          isTeacherView={isTeacherView}
+          buildAssetUrl={buildAssetUrlValue}
         />
       )}
 
@@ -306,6 +317,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             hasStarterAssets={hasStarterAssets}
             buildAssetUrl={buildAssetUrl}
             uploadDisabled={uploadDisabled}
+            currentLevelId={currentLevelId}
           />
         )}
       </div>

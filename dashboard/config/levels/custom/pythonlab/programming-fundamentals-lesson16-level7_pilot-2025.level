@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:48:11.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### Do This: \r\nThere is a bug in this code. \r\n- **Investigate**: Run the program and observe the output. Use the debug print statements to identify what is missing or incorrect.\r\n- **Modify**: Fix the function call by ensuring it provides both required parameters (name and age).\r\n- **Document Results**: Explain how the debug print statements helped you identify the issue.\r\n\r\nHints: \r\n- Check the number of arguments provided in the function call.\r\n- Ensure all required parameters are included.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -43,9 +44,12 @@
       "open": false,
       "type": "validation"
     },
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:11.281+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson16-level7_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson16-level7_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:11.281+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson16-level7_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson16-level7_2025\"},{\"changed_at\":\"2025-10-27 16:08:46 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>

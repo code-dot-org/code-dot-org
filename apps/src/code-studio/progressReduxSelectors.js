@@ -5,7 +5,11 @@ import _ from 'lodash';
 
 import {TestResults} from '@cdo/apps/constants';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
-import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+import {
+  LevelStatus,
+  LevelKind,
+  BubbleChoiceNavigationTypes,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {activityCssClass} from './activityUtils';
 
@@ -312,11 +316,27 @@ export const nextLevelId = state => {
     state.progress.currentLessonId
   );
   const currentLevel = getCurrentLevel(state);
-  // If we are on a sublevel, navigate back to the parent level.
+
+  let currentLevelIndex = currentLevel.levelNumber - 1;
+
+  // Sublevel navigation
   if (currentLevel.parentLevelId) {
-    return currentLevel.parentLevelId;
+    if (
+      currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_LEVEL
+    ) {
+      // If navigationType is NEXT_LEVEL, go to the next level after the parent.
+      const parentLevel = levelById(
+        state.progress,
+        state.progress.currentLessonId,
+        currentLevel.parentLevelId
+      );
+      currentLevelIndex = parentLevel.levelNumber - 1;
+    } else {
+      // Otherwise, default to parent level.
+      return currentLevel.parentLevelId;
+    }
   }
-  const currentLevelIndex = currentLevel.levelNumber - 1;
+
   if (currentLevelIndex === levels.length - 1) {
     return undefined;
   }

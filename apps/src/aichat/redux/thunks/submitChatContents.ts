@@ -79,18 +79,31 @@ export const submitChatContents = createAsyncThunk(
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
-    const userAddedSelectionContextPrompt =
-      formatUserAddedSelectionContextForPrompt(userAddedSelectionContext);
+
+    // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
+    let chatMessageText = text;
+    let chatMessageDisplayText;
+
+    // If we have userAddedSelectionContext, display text and text to send to the model will be different.
+    if (userAddedSelectionContext?.length) {
+      // Add the user added selections to the text to send to the model.
+      chatMessageText +=
+        '\n\n' +
+        formatUserAddedSelectionContextForPrompt(userAddedSelectionContext);
+      // And use the original message for the display.
+      chatMessageDisplayText = text;
+    }
+
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: text,
+      chatMessageText,
+      chatMessageDisplayText,
       hiddenContext,
       assets,
       userAddedSelectionContext,
       timestamp: Date.now(),
-      userAddedSelectionContextPrompt,
     };
     dispatch(setChatMessagePending(newUserMessage));
 
@@ -108,7 +121,20 @@ export const submitChatContents = createAsyncThunk(
         modelParameters,
         aichatContext
       );
-
+      const projectFileCount =
+        newUserMessage.userAddedSelectionContext?.length || 0;
+      const projectFileCountHtml =
+        newUserMessage.userAddedSelectionContext?.filter(file =>
+          file.filename.endsWith('.html')
+        ).length || 0;
+      const projectFileCountJs =
+        newUserMessage.userAddedSelectionContext?.filter(file =>
+          file.filename.endsWith('.js')
+        ).length || 0;
+      const projectFileCountCss =
+        newUserMessage.userAddedSelectionContext?.filter(file =>
+          file.filename.endsWith('.css')
+        ).length || 0;
       const fileCount = newUserMessage.assets?.length || 0;
       const fileCountPdf =
         newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
@@ -116,10 +142,13 @@ export const submitChatContents = createAsyncThunk(
       const fileCountImage = fileCount - fileCountPdf;
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
-          levelPath: window.location.pathname,
           fileCount,
           fileCountImage,
           fileCountPdf,
+          projectFileCount,
+          projectFileCountHtml,
+          projectFileCountJs,
+          projectFileCountCss,
           clientType,
           ...analyticsProperties,
         })

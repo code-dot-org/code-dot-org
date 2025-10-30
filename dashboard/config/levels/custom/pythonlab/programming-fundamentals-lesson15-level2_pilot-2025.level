@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:48:04.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Modify the print() function \r\n\r\nChange the text inside the quotation marks to something other than `\"Hello, world!\"`",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -42,9 +43,12 @@
       "open": false,
       "type": "validation"
     },
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:04.735+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson15-level2_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson15-level2_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:04.735+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson15-level2_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson15-level2_2025\"},{\"changed_at\":\"2025-10-27 16:05:47 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>
