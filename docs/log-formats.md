@@ -352,33 +352,33 @@ Browser-side events (analytics, errors, user interactions) are sent from the cli
 
 ### Example Log Entries
 
-**User Click Event:**
-```json
-{"event":"click","target":"run_button","level_id":12345,"user_id":98765,"timestamp":"2025-10-29T17:50:12.456Z","session_id":"abc123def456","page":"/s/course1/lessons/2/levels/3"}
+**Warning Event:**
+```csv
+2025-10-30T17:35:50.956Z,"{""level"":""WARNING"",""message"":{""message"":""updateHighlightedBlocks called before workspace initialized."",""currentLevelId"":64666,""scriptId"":70999,""channelId"":""aaaabbbb_ccccdddd"",""appName"":""music""},""deviceInfo"":{""user_agent"":""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15"",""window_width"":1180,""window_height"":702,""hostname"":""studio.code.org"",""full_path"":""https://studio.code.org/courses/music-jam-2024/units/1/lessons/1/levels/3""},""release"":""abbf7953cccddd""}",111122223334444:production-browser-events,production
 ```
 
-**JavaScript Error:**
-```json
-{"event":"error","message":"Uncaught TypeError: Cannot read property 'x' of undefined","stack":"TypeError: Cannot read property 'x' of undefined\n    at app.js:234:15\n    at Array.forEach (<anonymous>)","level_id":12345,"user_id":98765,"timestamp":"2025-10-29T17:51:22.789Z","session_id":"abc123def456","page":"/s/course1/lessons/2/levels/3","browser":"Chrome 118.0.0.0","os":"Windows 10"}
-```
-
-**Performance Metric:**
-```json
-{"event":"performance","metric":"load_time","value":1234,"level_id":12345,"user_id":98765,"timestamp":"2025-10-29T17:52:30.123Z","session_id":"abc123def456","page":"/s/course1/lessons/2/levels/3"}
+**Info Event:**
+```csv
+2025-10-30T17:36:02.172Z,"{""level"":""INFO"",""message"":{""event"":""InitialSoundsLoaded"",""soundsLoaded"":0,""loadTimeMs"":2,""currentLevelId"":78702,""scriptId"":847821,""channelId"":""aaaabbbb_ccccdddd"",""appName"":""music""},""deviceInfo"":{""user_agent"":""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"",""window_width"":958,""window_height"":944,""hostname"":""studio.code.org"",""full_path"":""https://studio.code.org/courses/express-2025/units/1/lessons/3/levels/13""},""userId"":132999888777,""release"":""abbf7953cccddd""}",111122223334444:production-browser-events,production
 ```
 
 ### Fields
 
 Browser event logs are flexible and include:
 
-- `event` — Event type (e.g., `click`, `error`, `performance`, `navigation`)
-- `timestamp` — ISO 8601 timestamp (UTC)
-- `user_id` — Authenticated user ID, or `null`
-- `session_id` — Browser session identifier
-- `level_id` — Current level ID, if applicable
-- `page` — Page path
-- Additional event-specific fields (e.g., `target`, `message`, `stack`, `metric`, `value`, `browser`, `os`)
-
+- `level` — Event level (INFO, WARNING, ERROR, etc.)
+- `message` — Event message (e.g., "InitialSoundsLoaded", "updateHighlightedBlocks called before workspace initialized.")
+   - `event` — Event type (e.g., "InitialSoundsLoaded", "updateHighlightedBlocks called before workspace initialized.")
+   - `appName` — Application name
+   - Various event-specific fields (e.g., `soundsLoaded`, `loadTimeMs`, `currentLevelId`, `scriptId`, `channelId`, etc.)
+- `deviceInfo` — Device information (user agent, window width, window height, hostname, full path)
+   - `user_agent` — User agent
+   - `window_width` — Window width
+   - `window_height` — Window height
+   - `hostname` — Hostname
+   - `full_path` — Full path
+- `userId` — User ID if known
+- `release` — Release version
 
 ---
 
