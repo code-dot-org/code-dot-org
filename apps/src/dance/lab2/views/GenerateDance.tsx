@@ -4,12 +4,12 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 
 import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
@@ -68,8 +68,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   updateSources,
   startOver,
 }) => {
-  const dispatch = useAppDispatch();
-
   const [aiGenerateState, setAiGenerateState] = useState<
     | 'none'
     | 'generating'
@@ -158,6 +156,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     'listening',
     'listened',
   ].includes(aiGenerateState);
+
+  const multiProject = useMultiProject();
+  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
 
   return (
     <Guide id="generate-panel" modal={modal} width="narrow">
@@ -253,15 +254,15 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             Amazing moves! Keep editing, or click Finish when you're done.
           </div>
           <div className={styles.buttonRow}>
-            <Button
-              ariaLabel={'Continue'}
-              text={'Continue'}
-              type="primary"
-              color="black"
-              size="s"
-              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-              onClick={() => dispatch(continueOrFinishLesson())}
-            />
+            {showNavigation && (
+              <NavigationArea
+                levelProperties={levelProperties}
+                // The following props don't really matter as we don't have a Submit button or validation here.
+                hasRun={true}
+                hasEdited={true}
+                isRunning={false}
+              />
+            )}
           </div>
         </>
       )}

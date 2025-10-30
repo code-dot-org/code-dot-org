@@ -7,10 +7,12 @@ import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeS
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
@@ -225,6 +227,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   // too soon.
   const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
 
+  const multiProject = useMultiProject();
+  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
       <ModeSwitchBar levelId={levelProperties.id} />
@@ -316,15 +321,16 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   className={moduleStyles.buttonWide}
                 />
 
-                <Button
-                  ariaLabel={'Keep this'}
-                  text={'Keep this'}
-                  type="primary"
-                  color="black"
-                  size="s"
-                  onClick={() => dispatch(continueOrFinishLesson())}
-                  className={moduleStyles.buttonWide}
-                />
+                {showNavigation && (
+                  <NavigationArea
+                    levelProperties={levelProperties}
+                    // The following props don't really matter as we don't have a Submit button or validation here.
+                    hasRun={true}
+                    hasEdited={true}
+                    isRunning={false}
+                    className={moduleStyles.buttonWide}
+                  />
+                )}
               </div>
             </>
           )}

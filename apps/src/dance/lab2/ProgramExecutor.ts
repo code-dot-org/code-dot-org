@@ -135,7 +135,15 @@ export default class ProgramExecutor {
       return;
     }
 
-    const previewDraw = () => {
+    const previewDraw = async () => {
+      if (this.nativeAPI.generatedDancer) {
+        await this.ensureAllMovesPrecached();
+        // Wait an extra animation frame to ensure any async Lottie work inside the generated dancer has
+        // finished before drawing.
+        await new Promise(resolve =>
+          requestAnimationFrame(() => requestAnimationFrame(resolve))
+        );
+      }
       this.nativeAPI.setEffectsInPreviewMode(true);
 
       // the user setup hook initializes effects,
@@ -326,5 +334,25 @@ export default class ProgramExecutor {
     this.metricsReporter.logWarning(
       `Missing required hooks in compiled code: ${hooks.join(', ')}`
     );
+  }
+
+  private async ensureAllMovesPrecached() {
+    if (!this.nativeAPI.generatedDancer) {
+      return;
+    }
+    await this.nativeAPI.generatedDancer.renderer.precacheMoves([
+      'rest',
+      'clap_high',
+      'clown',
+      'dab',
+      'double_jam',
+      'drop',
+      'floss',
+      'fresh',
+      'kick',
+      'roll',
+      'this_or_that',
+      'thriller',
+    ]);
   }
 }
