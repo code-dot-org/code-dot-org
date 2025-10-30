@@ -12,7 +12,7 @@ key = ENV.fetch("OPENAI_API_KEY", nil) || CDO.openai_student_learning_api_key.pr
 raise "Missing OpenAI API key (set openai_student_learning_api_key or OPENAI_API_KEY)" if key.blank?
 
 BUCKET_NAME = 'cdo-curriculum'
-BUCKET_PATH = 'media/musiclab/generate/dancer'
+BUCKET_PATH = 'media/musiclab/generate/dancer/'
 
 # Parse options
 options = {
@@ -33,7 +33,7 @@ OptionParser.new do |opts|
     Options:
   BANNER
 
-  opts.on('--no-dry-run',
+  opts.on('--[no-]dry-run',
           'Disables the read-only mode where no changes are written to S3'
          ) do |no_dry_run|
            options[:dry_run] = no_dry_run
@@ -94,7 +94,6 @@ python_args << " -k '#{key}'"
 puts "python -m hoai_2025.combinatoric_generation#{python_args}"
 system("uv run python -m hoai_2025.combinatoric_generation#{python_args}") unless options[:just_upload]
 Dir.chdir('../..')
-exit
 
 # We put the things in 'cdo-curriculum-devel' unless we use --production
 bucket_name = "#{BUCKET_NAME}#{options[:production] ? '' : '-devel'}"
