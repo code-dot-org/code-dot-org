@@ -25289,10 +25289,12 @@ en:
 
             #### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
         pl-sandbox-aif-sem-2-unit-2:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Teaching AI and Algorithmic Thinking
           lesson_groups: {}
           name: pl-sandbox-aif-sem-2-unit-2
-          title: ''
+          title: Teaching AI and Algorithmic Decisions
           description_audience: ''
           description_short: ''
           description: ''

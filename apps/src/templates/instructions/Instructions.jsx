@@ -19,6 +19,7 @@ export default class Instructions extends React.Component {
   static propTypes = {
     instructions: PropTypes.string,
     imgURL: PropTypes.string,
+    imgAlt: PropTypes.string,
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     inTopPane: PropTypes.bool,
@@ -43,6 +44,7 @@ export default class Instructions extends React.Component {
       noInstructionsWhenCollapsed,
       inputOutputTable,
       imgURL,
+      imgAlt,
       authoredHints,
     } = this.props;
 
@@ -66,8 +68,8 @@ export default class Instructions extends React.Component {
           </>
         )}
         {inputOutputTable && <InputOutputTable data={inputOutputTable} />}
-        {imgURL && !inTopPane && <ExampleImage src={imgURL} />}
-        {imgURL && inTopPane && <AniGifPreview />}
+        {imgURL && !inTopPane && <ExampleImage src={imgURL} alt={imgAlt} />}
+        {imgURL && inTopPane && <AniGifPreview alt={imgAlt} />}
         {authoredHints}
       </div>
     );
