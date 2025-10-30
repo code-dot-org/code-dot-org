@@ -1,10 +1,8 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {getUrlForFile, getFolderPath} from '@codebridge/utils';
+import {getFolderPath} from '@codebridge/utils';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import emptyPreviewPlaceholderImage from '@cdo/apps/codebridge/images/empty-preview-placeholder.svg';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 import {CodebridgeEmptyState} from '../components/CodebridgeEmptyState';
 
@@ -15,7 +13,6 @@ import {
 } from './htmlParsingHelpers';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
-const NOT_FOUND_FILE = 'NOT_FOUND';
 
 const InnerHTMLPreview = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -23,10 +20,6 @@ const InnerHTMLPreview = () => {
     undefined
   );
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
-  // const [blobUrl, setBlobUrl] = React.useState<string | undefined>(undefined);
-  // const [filesToBlobs, setFilesToBlobs] = React.useState<
-  //   Record<string, string>
-  // >({});
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
@@ -58,6 +51,9 @@ const InnerHTMLPreview = () => {
             registration.scope
           );
           setServiceWorkerReady(true);
+          navigator.serviceWorker.onmessage = event => {
+            console.log('Received message from service worker:', event);
+          };
         });
     } else {
       console.error('Service workers are not supported in this browser.');

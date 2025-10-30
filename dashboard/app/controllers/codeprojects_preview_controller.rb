@@ -3,6 +3,9 @@ class CodeprojectsPreviewController < ApplicationController
   # Public preview page, static content for now.
   def show
     code_studio_url = CDO.dashboard_site_host
+    preview_url = CDO.preview_codeprojects_hostname
+    puts "Hi from show!!"
+    puts preview_url
     # Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
     # Therefore we explicitly set the prefix to 'http', which will also allow https.
     prefix = 'http://'
@@ -18,6 +21,8 @@ class CodeprojectsPreviewController < ApplicationController
       # Explicitly allow WebSocket connections to preview.localhost.codeprojects.org:9000, which is used by the webpack dev server
       # both on ports 9000 and 3000.
       allowed_connect_src += " ws://preview.localhost.codeprojects.org:9000/ws"
+      # preview_url does not have a port by default.
+      preview_url = "#{preview_url}:3000 #{preview_url}:9000"
     end
 
     # Security Control: Set base resource loading policy ("default" is a fallback for unspecified resource types)
@@ -62,7 +67,7 @@ class CodeprojectsPreviewController < ApplicationController
 
     # Security Control: Restrict which sites can embed this page in iframes
     # Goal: Prevent clickjacking attacks by controlling frame embedding
-    frame_ancestors = "#{code_studio_url} 'self'"
+    frame_ancestors = "#{code_studio_url} 'self' #{preview_url}"
 
     script_src = script_src_base + script_src_eval + script_src_inline
     style_src = style_src_base + style_src_inline
