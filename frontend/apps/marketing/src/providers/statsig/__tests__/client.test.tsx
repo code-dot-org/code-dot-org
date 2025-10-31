@@ -192,6 +192,38 @@ describe('getClient', () => {
     expect(setCookie).not.toHaveBeenCalled();
   });
 
+  it('should not set stableId for non-code.org brands', () => {
+    const clientKey = 'test-client-key';
+    const stage = 'production';
+    const values = 'test-values';
+    const brand = 'otherbrand';
+
+    render(
+      <OneTrustContext.Provider
+        value={{allowedCookies: new Set([OneTrustCookieGroup.Performance])}}
+      >
+        <MockStatsigComponent
+          clientKey={clientKey}
+          stage={stage}
+          values={values}
+          brand={brand}
+        />
+        <div>Test Child</div>
+      </OneTrustContext.Provider>,
+    );
+
+    expect(useClientBootstrapInit).toHaveBeenCalledWith(
+      clientKey,
+      {userID: 'marketing-user'},
+      values,
+      {
+        environment: {tier: stage},
+        plugins: plugins,
+      },
+    );
+    expect(setCookie).not.toHaveBeenCalled();
+  });
+
   it('should only set plugins in production', () => {
     (getCookie as jest.Mock).mockReturnValue('existing-stable-id');
     const clientKey = 'test-client-key';
