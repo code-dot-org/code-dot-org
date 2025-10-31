@@ -21,6 +21,7 @@ This document inventories logging across the Code.org platform. It explains, in 
 - [Log formats](#log-formats)
 - [Typical Studio page view: what logs are emitted and where to view](#typical-studio-page-view-what-logs-are-emitted-and-where-to-view)
 - [Observations and recommendations](#observations-and-recommendations)
+- [Summary table](#summary-table)
 
 ## Sources that emit logs
 
@@ -159,3 +160,4 @@ Secondly, while the user is on the page (in addition to the above):
 | Lambda execution logs | CloudWatch `/aws/lambda/<function>` | Indefinite | - |
 | Administrative audit logs | CloudWatch `/admin/auditlogs` | Indefinite | - |
 | Kinesis Firehose (deprecated) | Redshift `analysis-events` tables | Indefinite | Public client can inject bad payloads causing batch failures; pipeline deprecated |
+| Statsig | Replicated to RedShift `analytics.dim_statsig_events` table | 3-4 months | - |
