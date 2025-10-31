@@ -465,10 +465,10 @@ Aurora is configured to export the `general`, `audit`, `error`, and `slowquery` 
 
 ### Example Log Entries
 
-**General log (connection / statement):**
+**Error log:**
 ```
-/aws/rds/cluster/production-cluster/general:2025-10-30T19:05:12.123456Z	ip-10-0-2-17	admin[12345]	Connect	database@10.0.5.42 on dashboard using TCP/IP
-/aws/rds/cluster/production-cluster/general:2025-10-30T19:05:12.234567Z	ip-10-0-2-17	admin[12345]	Query	SELECT 1 FROM user_levels WHERE user_id = 123456 LIMIT 1
+2025-10-31T16:09:25.034021Z 2025180 [Note] [MY-013730] [Server] 'wait_timeout' period of 10 seconds was exceeded for `rdsadmin`@`localhost`. The idle time since last command was too long. (net_serv.cc:1550)
+2025-10-31T16:09:25.034090Z 2025180 [Note] [MY-010914] [Server] Aborted connection 2025180 to db: 'unconnected' user: 'rdsadmin' host: 'localhost' (The client was disconnected by the server because of inactivity.). (sql_connect.cc:842)
 ```
 
 **Slow query log:**
@@ -480,30 +480,6 @@ SET timestamp=1730315265;
 SELECT * FROM user_levels WHERE script_id = 12345 ORDER BY updated_at DESC LIMIT 200;
 ```
 
-### Useful Queries/Patterns
-
-List the busiest statements in the general log:
-```
-fields @timestamp, @message, @log
-| filter @log like /\/general/
-| filter @message like /\tQuery\t/
-| parse @message "\tQuery\t*" as sql
-| stats count() as executions by sql
-| sort executions desc
-| limit 50
-```
-
-Find slow queries over 2 seconds:
-```
-fields @timestamp, @message
-| filter @log like /\/slowquery/
-| filter @message like /Query_time/
-| parse @message "Query_time: *  Lock_time: * Rows_sent: * Rows_examined: *" as query_time, lock_time, rows_sent, rows_examined
-| filter to_number(query_time) >= 2
-| sort @timestamp desc
-| limit 100
-```
-
 ---
 
 ## RDS Enhanced Monitoring (CloudWatch Logs)
@@ -511,42 +487,6 @@ fields @timestamp, @message
 **Format:** JSON per-sample OS metrics
 
 Enhanced Monitoring publishes one JSON document per collection interval to the `RDSOSMetrics` log group. Each document contains CPU, memory, disk, file I/O, and process metrics collected from the Aurora host.
-
-### Example Log Entry
-
-```json
-{
-  "instanceID": "production",
-  "instanceResourceID": "db-ABCDEFGHIJKLMNOP",
-  "engine": "Aurora MySQL",
-  "timestamp": "2025-10-30T19:10:01Z",
-  "cpuUtilization": {"total": 18.52, "user": 6.13, "system": 3.02, "wait": 8.91},
-  "loadAverageMinute": {"one": 0.71, "five": 0.64, "fifteen": 0.59},
-  "memory": {"used": 13245.4, "free": 1842.7, "cached": 4098.2, "total": 16384.0},
-  "diskIO": [{"device": "nvme0n1", "readIOsPS": 121.3, "writeIOsPS": 54.9, "readKbPS": 1824.7, "writeKbPS": 763.4}],
-  "tasks": {"total": 265, "running": 2, "blocked": 0}
-}
-```
-
-### Useful Queries/Patterns
-
-Track CPU utilization over time:
-```
-fields @timestamp, cpuUtilization.total as cpu
-| filter @log = 'RDSOSMetrics'
-| stats avg(cpu) as avg_cpu, pct(cpu, 95) as p95_cpu by bin(@timestamp, 5m)
-| sort @timestamp desc
-```
-
-Surface top processes by thread count:
-```
-fields @timestamp, engine, processes[*].name as process, processes[*].threadCount as threads
-| filter @log = 'RDSOSMetrics'
-| filter ispresent(process)
-| stats max(threads) as max_threads by process
-| sort max_threads desc
-| limit 20
-```
 
 ---
 

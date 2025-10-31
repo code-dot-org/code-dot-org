@@ -142,3 +142,20 @@ Secondly, while the user is on the page (in addition to the above):
 - Cost controls
   - Set S3 lifecycle rules on `cdo-logs` prefixes.
   - Potentially aggregate old logs into single larger files ( so they are above the critical threshold of 8kb making Glacier actually cost-effective).  Then sel lifecycle rules to transition to Glacier.
+
+## Summary table
+
+| Log source | Primary destination (short) | Retention | Known gaps / notes |
+|------------|-----------------------------|-----------|--------------------|
+| CloudFront standard access logs | S3 `cdo-logs/cloudfront/...` | Indefinite | Occasional gaps during DDoS or partition Lambda throttling |
+| CloudFront real-time access logs | S3 `cdo-access-logs/access-logs/` | Indefinite | Firehose retries but best-effort; Kinesis backpressure can drop rows |
+| ALB access logs | S3 `cdo-logs/<stack>-alb-access-logs/...` | Indefinite | - |
+| Rails Lograge request logs | CloudWatch `<env>-syslog` | Indefinite | - |
+| Rails stdout/stderr (Puma) | S3 `cdo-logs/hosts/<hostname>/...` | Indefinite | ~99% loss, due to overwrites shared host prefix |
+| NGINX access/error logs | Instance filesystem | none, lost on termination | not retained |
+| Browser events | CloudWatch `<env>-browser-events` | Indefinite | Subject to CloudWatch throttle; high burst can drop batches |
+| Aurora MySQL exports | CloudWatch `/aws/rds/cluster/...` | Indefinite | - |
+| RDS enhanced monitoring | CloudWatch `RDSOSMetrics` | Indefinite | - |
+| Lambda execution logs | CloudWatch `/aws/lambda/<function>` | Indefinite | - |
+| Administrative audit logs | CloudWatch `/admin/auditlogs` | Indefinite | - |
+| Kinesis Firehose (deprecated) | Redshift `analysis-events` tables | Indefinite | Public client can inject bad payloads causing batch failures; pipeline deprecated |
