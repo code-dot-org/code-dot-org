@@ -161,7 +161,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   const showNavigation = !levelProperties.isProjectLevel && !multiProject;
 
   return (
-    <Guide id="generate-panel" modal={modal} width="narrow">
+    <Guide id="generate-panel" modal={modal} position="bottom">
       {['none', 'generating'].includes(aiGenerateState) &&
         levelProperties.longInstructions && (
           <MainInstructionsContent
@@ -207,7 +207,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
         <>
           <div>Do you want to keep what AI generated?</div>
 
-          <div className={styles.buttonRows}>
+          <div className={styles.buttonRow}>
             <Button
               ariaLabel={'Try prompting again'}
               text={'Try prompting again'}
