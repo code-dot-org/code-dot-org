@@ -7,11 +7,24 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import i18n from '@cdo/locale';
 
 import style from './copy-button.module.scss';
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 const CONFIRM_TIMEOUT_MS = 1500;
 
-const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
+const CopyButton: React.FC<{
+  copyText: string;
+}> = ({copyText}) => {
   const [showCopyConfirmation, setShowCopyConfirmation] = useState(false);
+  const clientType = useAppSelector(state => state.aichat.clientType);
+  console.log('clientType', clientType);
+  const analyticsEvent =
+    clientType === AiChatClientTypes.AI_TUTOR
+      ? EVENTS.COPY_AI_TUTOR_RESPONSE
+      : undefined;
+  console.log('analyticsEvent', analyticsEvent);
 
   /**
    * Get the theme, if available.  If not within a `ThemeProvider`, theme will be `undefined`
@@ -36,6 +49,10 @@ const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
           copyToClipboard(copyText);
           setShowCopyConfirmation(true);
           setTimeout(() => setShowCopyConfirmation(false), CONFIRM_TIMEOUT_MS);
+          // if (!!analyticsEvent) {
+          //   console.log('should send analytics', analyticsEvent, copyText);
+          //   sendAnalytics(analyticsEvent, {copyText});
+          // }
         }}
         color="gray"
         size="xs"

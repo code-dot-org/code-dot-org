@@ -512,6 +512,10 @@ const EVENTS = {
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
 
+  // AI features - copy button
+  COPY_AI_TUTOR_RESPONSE: 'User copies AI Tutor response to clipboard',
+  COPY_AI_TUTOR_CODE_SNIPPET: 'User copies AI Tutor code snippet to clipboard',
+
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
     'Teacher gave feedback on AIs summary of student work',
