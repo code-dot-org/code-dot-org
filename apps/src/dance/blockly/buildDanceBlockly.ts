@@ -45,6 +45,10 @@ function randomField(name: string, options: string[]): string {
   return `<field name="${name}">${randomElement(options)}</field>`;
 }
 
+function field(name: string, option: string): string {
+  return `<field name="${name}">${option}</field>`;
+}
+
 function groupSpritesField(): string {
   return '<field name="GROUP">sprites</field>';
 }
@@ -87,18 +91,15 @@ function makeAlternateMovesBlock(
   type: string,
   moves: string[]
 ): JsonBlockConfig {
-  const move1 = randomField('MOVE', moves);
-  const move2 = randomField(
-    'MOVE',
-    moves.filter(move => move !== move1)
-  );
+  const move1 = randomElement(moves);
+  const move2 = randomElement(moves.filter(move => move !== move1));
   return {
     type,
     fields: {
       GROUP: groupSpritesField(),
       N: '2',
-      MOVE1: move1,
-      MOVE2: move2,
+      MOVE1: field('MOVE', move1),
+      MOVE2: field('MOVE', move2),
     },
   };
 }
