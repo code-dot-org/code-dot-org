@@ -48,11 +48,11 @@ export function getClient(
   // Add stableID only for code.org brand so we can track users across
   // studio.code.org and code.org, otherwise fallback to Statsig SDK's default behavior
   const stableId = brand === CODEORG_BRAND ? getStatsigStableId() : undefined;
-  const payload: StatsigUser = stableId
+  const user: StatsigUser = stableId
     ? {userID: 'marketing-user', customIDs: {stableID: stableId}}
     : {userID: 'marketing-user'};
 
-  return useClientBootstrapInit(clientKey, payload, values, {
+  return useClientBootstrapInit(clientKey, user, values, {
     environment: {tier: stage},
     plugins: stage === 'production' ? plugins : undefined,
   });
