@@ -30,12 +30,14 @@ const MockStatsigComponent = ({
   clientKey,
   stage,
   values,
+  brand,
 }: {
   clientKey: string;
   stage: Stage;
   values: string;
+  brand: string;
 }) => {
-  getClient(clientKey, stage, values);
+  getClient(clientKey, stage, values, brand);
 
   return <></>;
 };
@@ -50,6 +52,7 @@ describe('getClient', () => {
     const clientKey = 'test-client-key';
     const stage = 'production';
     const values = 'test-values';
+    const brand = 'codeorg';
 
     render(
       <OneTrustContext.Provider
@@ -59,6 +62,7 @@ describe('getClient', () => {
           clientKey={clientKey}
           stage={stage}
           values={values}
+          brand={brand}
         />
         <div>Test Child</div>
       </OneTrustContext.Provider>,
@@ -82,6 +86,7 @@ describe('getClient', () => {
     const clientKey = 'test-client-key';
     const stage = 'production';
     const values = 'test-values';
+    const brand = 'codeorg';
 
     render(
       <OneTrustContext.Provider
@@ -91,6 +96,7 @@ describe('getClient', () => {
           clientKey={clientKey}
           stage={stage}
           values={values}
+          brand={brand}
         />
         <div>Test Child</div>
       </OneTrustContext.Provider>,
@@ -123,6 +129,7 @@ describe('getClient', () => {
     const clientKey = 'test-client-key';
     const stage = 'production';
     const values = 'test-values';
+    const brand = 'codeorg';
 
     render(
       <OneTrustContext.Provider
@@ -132,6 +139,7 @@ describe('getClient', () => {
           clientKey={clientKey}
           stage={stage}
           values={values}
+          brand={brand}
         />
         <div>Test Child</div>
       </OneTrustContext.Provider>,
@@ -154,6 +162,7 @@ describe('getClient', () => {
     const clientKey = 'test-client-key';
     const stage = 'production';
     const values = 'test-values';
+    const brand = 'codeorg';
 
     render(
       <OneTrustContext.Provider
@@ -165,6 +174,7 @@ describe('getClient', () => {
           clientKey={clientKey}
           stage={stage}
           values={values}
+          brand={brand}
         />
         <div>Test Child</div>
       </OneTrustContext.Provider>,
@@ -172,7 +182,7 @@ describe('getClient', () => {
 
     expect(useClientBootstrapInit).toHaveBeenCalledWith(
       clientKey,
-      {userID: 'marketing-user', customIDs: {stableID: undefined}},
+      {userID: 'marketing-user'},
       values,
       {
         environment: {tier: stage},
@@ -186,6 +196,7 @@ describe('getClient', () => {
     (getCookie as jest.Mock).mockReturnValue('existing-stable-id');
     const clientKey = 'test-client-key';
     const values = 'test-values';
+    const brand = 'codeorg';
 
     // Production: plugins should be set
     render(
@@ -196,6 +207,7 @@ describe('getClient', () => {
           clientKey={clientKey}
           stage={'production'}
           values={values}
+          brand={brand}
         />
       </OneTrustContext.Provider>,
     );
@@ -218,6 +230,7 @@ describe('getClient', () => {
           clientKey={clientKey}
           stage={'development'}
           values={values}
+          brand={brand}
         />
       </OneTrustContext.Provider>,
     );

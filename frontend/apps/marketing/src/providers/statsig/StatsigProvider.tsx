@@ -11,6 +11,7 @@ interface StatsigProviderProps {
   clientKey?: string;
   children: ReactNode;
   values: string;
+  brand: string;
 }
 
 export default function StatsigProvider({
@@ -18,6 +19,7 @@ export default function StatsigProvider({
   clientKey,
   values,
   children,
+  brand,
 }: StatsigProviderProps) {
   if (!clientKey) {
     console.debug(
@@ -26,7 +28,7 @@ export default function StatsigProvider({
     return children;
   }
 
-  const client = getClient(clientKey, stage, values);
+  const client = getClient(clientKey, stage, values, brand);
 
   return <BaseStatsigProvider client={client}>{children}</BaseStatsigProvider>;
 }
