@@ -6,12 +6,16 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import style from './ai-differentiation.module.scss';
 
 interface AiDiffChatFooterProps {
+  userMessage: string;
+  onChange: (msg: string) => void;
   onSubmit: (msg: string) => void;
   waiting: boolean;
   userMessageEditorRef?: React.RefObject<HTMLTextAreaElement>;
 }
 
 const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
+  userMessage,
+  onChange,
   onSubmit,
   waiting,
   userMessageEditorRef,
@@ -19,6 +23,8 @@ const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
   return (
     <div className={style.chatFooter}>
       <UserMessageEditor
+        userMessage={userMessage}
+        onChange={onChange}
         ref={userMessageEditorRef}
         onSubmit={onSubmit}
         disabled={waiting}
