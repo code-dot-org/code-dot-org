@@ -6,10 +6,7 @@ import {
   WorkspaceSerialization,
 } from '@cdo/apps/blockly/types';
 
-import getBlockOptions, {
-  getBlockOptionsDancers,
-  getBlockOptionsNumbers,
-} from './getBlockOptions';
+import getBlockOptions, {getBlockOptionsNumbers} from './getBlockOptions';
 
 const DANCELAB_PREFIX = 'Dancelab_';
 const GENERATED_PREFIX = 'GeneratedDancers_';
@@ -108,14 +105,14 @@ function makeAlternateMovesBlock(
 function makeNewDanceSpriteGroupBlock(
   type: string,
   numbers: string[],
-  dancers: string[],
+  dancers: string,
   layouts: string[]
 ): JsonBlockConfig {
   return {
     type,
     fields: {
       N: randomElement(numbers),
-      COSTUME: randomElement(dancers),
+      COSTUME: dancers,
       LAYOUT: randomField('LAYOUT', layouts),
     },
   };
@@ -147,16 +144,42 @@ function chainBlocks(
   return head;
 }
 
-const backgroundsByEnergy = {
-  chill: [
-    '"quads"',
-    '"blooming_petals"',
-    '"circles"',
-    '"galaxy"',
-    '"sparkles"',
-  ],
-  high: ['"clouds"', '"diamonds"', '"fireworks"', '"swirl"', '"lasers"'],
-};
+const backgroundsChill = [
+  '"quads"',
+  '"blooming_petals"',
+  '"clouds"',
+  '"color_cycle"',
+  '"frosted_grid"',
+  '"splatter"',
+  '"rainbow"',
+  '"snowflakes"',
+  '"text"',
+  '"sparkles"',
+  '"spiral"',
+  '"squiggles"',
+  '"stars"',
+  '"music_wave"',
+];
+
+const foregroundsChill = [
+  '"bubbles"',
+  '"confetti"',
+  '"hearts_colorful"',
+  '"hearts_red"',
+  '"music_notes"',
+  '"paint_drip"',
+  '"rain"',
+  '"raining_tacos"',
+];
+
+const movesChill = [
+  'MOVES.Roll',
+  'MOVES.Dab',
+  'MOVES.Floss',
+  'MOVES.Fresh',
+  'MOVES.ThisOrThat',
+  'MOVES.Rest',
+];
 
 /**
  * Build Blockly JSON for a simple dance that reacts at given measures.
@@ -168,7 +191,8 @@ export default function buildDanceBlockly(
   measures: number[],
   blockDefinitions: BlockDefinition[],
   codeComplexity: 'simple' | 'complex',
-  energy: 'chill' | 'high'
+  energy: 'chill' | 'high',
+  backgroundDancers: string
 ): WorkspaceSerialization {
   const changeMoveBlockType = getPreferredBlockType(
     blockDefinitions,
@@ -199,32 +223,36 @@ export default function buildDanceBlockly(
     blockDefinitions,
     changeMoveBlockType,
     'MOVE'
-  ).filter(option => !['"next"', '"prev"', '"rand"'].includes(option));
+  ).filter(option =>
+    !['"next"', '"prev"', '"rand"'].includes(option) && energy === 'chill'
+      ? movesChill.includes(option)
+      : !movesChill.includes(option)
+  );
 
   const validBackgrounds = getBlockOptions(
     blockDefinitions,
     setBackgroundBlockType,
     'EFFECT'
-  )
-    .filter(option => !['"none"', '"rand"'].includes(option))
-    .filter(option => backgroundsByEnergy[energy].includes(option));
+  ).filter(option =>
+    !['"none"', '"rand"'].includes(option) && energy === 'chill'
+      ? backgroundsChill.includes(option)
+      : !backgroundsChill.includes(option)
+  );
 
   const validForegrounds = getBlockOptions(
     blockDefinitions,
     setForegroundBlockType,
     'EFFECT'
-  ).filter(option => !['"none"', '"rand"'].includes(option));
+  ).filter(option =>
+    !['"none"', '"rand"'].includes(option) && energy === 'chill'
+      ? foregroundsChill.includes(option)
+      : !foregroundsChill.includes(option)
+  );
 
   const validPalettes = getBlockOptions(
     blockDefinitions,
     setBackgroundBlockType,
     'PALETTE'
-  );
-
-  const validDancers = getBlockOptionsDancers(
-    blockDefinitions,
-    makeNewDanceSpriteGroupBlockType,
-    'COSTUME'
   );
 
   const validLayouts = getBlockOptions(
@@ -263,21 +291,16 @@ export default function buildDanceBlockly(
     validForegrounds
   );
 
-  // Normalize validDancers to a string[] by extracting the costume string
-  const dancerStrings: string[] = (validDancers || []).map(d =>
-    Array.isArray(d) ? d[0] : d
-  );
-
   const numberStrings: string[] = (validNumbers || []).map(d =>
     Array.isArray(d) ? d[0] : d
   );
 
   const danceSpriteGroup =
-    validNumbers.length > 0 && dancerStrings.length > 0
+    validNumbers.length > 0 && backgroundDancers !== 'nobody'
       ? makeNewDanceSpriteGroupBlock(
           makeNewDanceSpriteGroupBlockType,
           numberStrings,
-          dancerStrings,
+          `"${backgroundDancers.toUpperCase()}"`,
           validLayouts
         )
       : null;

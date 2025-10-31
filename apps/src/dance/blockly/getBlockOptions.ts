@@ -16,18 +16,6 @@ export default function (
   );
 }
 
-export function getBlockOptionsDancers(
-  blocks: BlockDefinition[],
-  name: string,
-  field: string
-): (string | [string, string])[] | undefined {
-  return blocks
-    .find(block => block.name === name)
-    ?.config?.args?.find(arg => arg.name === field)?.options as
-    | (string | [string, string])[]
-    | undefined;
-}
-
 export function getBlockOptionsNumbers(
   blocks: BlockDefinition[],
   name: string,

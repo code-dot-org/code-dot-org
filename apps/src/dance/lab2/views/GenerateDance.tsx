@@ -30,10 +30,18 @@ const adlib: AdlibType = {
     ],
     dancers: [
       {id: 'nobody', text: 'nobody'},
-      {id: 'cats', text: 'cats'},
-      {id: 'dogs', text: 'dogs'},
-      {id: 'ducks', text: 'ducks'},
-      {id: 'frogs', text: 'frogs'},
+      {id: 'alien', text: 'aliens'},
+      {id: 'bear', text: 'bears'},
+      {id: 'cat', text: 'cats'},
+      {id: 'dog', text: 'dogs'},
+      {id: 'duck', text: 'ducks'},
+      {id: 'frog', text: 'frogs'},
+      {id: 'moose', text: 'moose'},
+      {id: 'pineapple', text: 'pineapples'},
+      {id: 'robot', text: 'robots'},
+      {id: 'shark', text: 'sharks'},
+      {id: 'sloth', text: 'sloths'},
+      {id: 'unicorn', text: 'unicorns'},
     ],
   },
   variantCount: 5,
@@ -113,7 +121,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       measures,
       blockDefinitions,
       choices && choices[0] === 'complex' ? 'complex' : 'simple',
-      choices && choices[1] === 'high' ? 'high' : 'chill'
+      choices && choices[1] === 'high' ? 'high' : 'chill',
+      (choices && choices[2]) || 'nobody'
     );
 
     const elapsedTime = Date.now() - startTime;
