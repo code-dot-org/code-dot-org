@@ -106,11 +106,7 @@ describe('PersonalizationCollectorContainer', () => {
       json: () => Promise.resolve(existingDataResponse),
     });
 
-    renderDefault();
-
-    await waitFor(() => {
-      expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
-    });
+    await renderAndWaitForLoad();
 
     // Pre-populate the years teaching field
     screen.getByDisplayValue('5');
