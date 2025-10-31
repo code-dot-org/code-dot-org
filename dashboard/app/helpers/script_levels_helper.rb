@@ -67,9 +67,9 @@ module ScriptLevelsHelper
 
   def tracking_pixel_url(script)
     if script.name == Unit::HOC_2013_NAME
-      CDO.studio_url('/api/hour/begin_codeorg.png')
+      CDO.code_org_url '/api/hour/begin_codeorg.png'
     else
-      CDO.studio_url("/api/hour/begin_#{script.name}.png")
+      CDO.code_org_url "/api/hour/begin_#{script.name}.png"
     end
   end
 

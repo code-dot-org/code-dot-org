@@ -1204,9 +1204,9 @@ class Unit < ApplicationRecord
 
   def hoc_finish_url
     if name == Unit::HOC_2013_NAME
-      CDO.studio_url('/api/hour/finish')
+      CDO.code_org_url '/api/hour/finish'
     else
-      CDO.studio_url("/api/hour/finish/#{name}")
+      CDO.code_org_url "/api/hour/finish/#{name}"
     end
   end
 

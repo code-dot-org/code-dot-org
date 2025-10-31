@@ -6,9 +6,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
-import * as AuthTokenStore from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -37,25 +35,22 @@ describe('Certificate', () => {
   });
 
   describe('personalized certificate', () => {
-    const authToken = 'fake-token';
     let server;
 
     beforeEach(() => {
-      sinon.stub(AuthTokenStore, 'getAuthenticityToken').resolves(authToken);
       server = sinon.fakeServer.create();
     });
 
     afterEach(() => {
-      sinon.restore();
       server.restore();
     });
 
-    it('renders code studio image urls', async () => {
+    it('renders code studio image urls', () => {
       const data = {
         certificate_sent: true,
         name: 'Student',
       };
-      server.respondWith('POST', studio('/api/hour/certificate'), [
+      server.respondWith('POST', `/v2/certificate`, [
         200,
         {'Content-Type': 'application/json'},
         JSON.stringify(data),
@@ -88,10 +83,6 @@ describe('Certificate', () => {
         .find('button')
         .filterWhere(button => button.text() === 'Submit');
       submitButton.simulate('click');
-
-      // `personalizeHocCertificate` awaits the authenticity token before issuing the ajax request.
-      // Give the microtask queue a chance to flush so the request is created before responding with the fake server.
-      await new Promise(resolve => setTimeout(resolve));
       server.respond();
 
       wrapper.update();
