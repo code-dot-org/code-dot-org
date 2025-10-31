@@ -30,6 +30,7 @@ import moduleStyles from './lab-views-renderer.module.scss';
 const LabViewsRenderer: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const initialSources = useAppSelector(state => state.lab.initialSources);
+  const channel = useAppSelector(state => state.lab.channel);
 
   const currentAppName = levelProperties?.appName;
   const exemplarSources = levelProperties?.exemplarSources;
@@ -123,6 +124,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
           <LabView
             levelProperties={levelProperties}
             initialSources={initialSources}
+            channel={channel}
           />
         </Suspense>
         {!hideExtraLinks && levelId && <ExtraLinks levelId={levelId} />}

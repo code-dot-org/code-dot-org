@@ -2,27 +2,28 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 63,
-  "created_at": "2025-09-18T17:57:09.000Z",
+  "created_at": "2025-10-30T19:44:49.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "encrypted": "false",
     "skin": "dance",
     "block_pools": [
-      "Dancelab"
+      "Dancelab",
+      "GeneratedDancers"
     ],
     "helper_libraries": [
       "DanceLab"
     ],
     "hide_animation_mode": true,
     "show_type_hints": true,
+    "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "use_modal_function_editor": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "validation_enabled": "false",
@@ -32,17 +33,15 @@
     "hide_pause_button": "false",
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
-    "ai_code_generate": true,
-    "bubble_choice_description": "Use your AI generated dancer and song to create the ultimate Dance Party!",
-    "display_name": "Create a dance!",
-    "thumbnail_url": "/blockly/media/dance/placeholder.png",
+    "guide_mode": "aiDancerGenerate",
+    "ai_dancer_generate_adlib": "creature-attire-mood-style-04",
+    "long_instructions": "#### Create Your Dancer\r\nModify the prompt to generate a new dancer with AI.",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "guide_mode": "aiCodeGenerate"
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-09-18T17:57:09.492+00:00\",\"changed\":[\"cloned from \\\"New Dance AI Project\\\"\"],\"cloned_from\":\"New Dance AI Project\"},{\"changed_at\":\"2025-09-18 17:57:41 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-23 18:45:33 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-10-30T19:44:49.240+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dancer-adlib3\\\"\"],\"cloned_from\":\"hoai2025-dancer-adlib3\"},{\"changed_at\":\"2025-10-30 19:45:02 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
