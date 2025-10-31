@@ -36,9 +36,10 @@ export function renderExpandableImages(node, showImageDialog) {
     ReactDOM.render(
       <ImagePreview
         url={expandableImg.dataset.url}
+        alt={expandableImg.textContent}
         noVisualization={false}
         showInstructionsDialog={() =>
-          showImageDialog(expandableImg.dataset.url)
+          showImageDialog(expandableImg.dataset.url, expandableImg.textContent)
         }
       />,
       expandableImg
