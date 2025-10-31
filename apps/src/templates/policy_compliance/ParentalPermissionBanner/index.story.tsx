@@ -7,11 +7,12 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
+import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 
 import ParentalPermissionBanner from '.';
 
 const store = getStore();
-registerReducers({currentUser});
+registerReducers({currentUser, teachingProfile});
 store.dispatch(
   setInitialData({
     id: 1,

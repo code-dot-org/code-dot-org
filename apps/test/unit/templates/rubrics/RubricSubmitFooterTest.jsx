@@ -15,6 +15,7 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 import * as teacherFeedbackDataApi from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
 import * as topInstructionDataApi from '@cdo/apps/templates/instructions/topInstructionsDataApi';
 import RubricSubmitFooter from '@cdo/apps/templates/rubrics/RubricSubmitFooter';
+import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -157,7 +158,7 @@ describe('RubricSubmitFooter', () => {
 
     // Stub redux
     stubRedux();
-    registerReducers({currentUser});
+    registerReducers({currentUser, teachingProfile});
     store = getStore();
   });
 

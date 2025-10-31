@@ -48,6 +48,7 @@ import {
   sortedSectionsList,
   sortSectionsList,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -273,7 +274,7 @@ describe('teacherSectionsRedux', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({currentUser, teacherSections: reducer});
+    registerReducers({currentUser, teacherSections: reducer, teachingProfile});
     store = getStore();
   });
 

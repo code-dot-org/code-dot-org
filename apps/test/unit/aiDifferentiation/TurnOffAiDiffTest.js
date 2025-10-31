@@ -13,6 +13,7 @@ import {
 import currentUser, {
   setAiDifferentiationEnabled,
 } from '@cdo/apps/templates/currentUserRedux';
+import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import i18n from '@cdo/locale';
 
 describe('TurnOffAiDiff', () => {
@@ -20,7 +21,7 @@ describe('TurnOffAiDiff', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({currentUser});
+    registerReducers({currentUser, teachingProfile});
     store = getStore();
     store.dispatch(setAiDifferentiationEnabled(true));
   });

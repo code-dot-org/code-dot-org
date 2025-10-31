@@ -14,6 +14,7 @@ import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 
 import microBit from '../maker/microBitRedux';
 import frozenProjectInfoDialog from '../templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
@@ -49,6 +50,7 @@ registerReducers({
   projects,
   verifiedInstructor,
   currentUser,
+  teachingProfile,
   arrowDisplay,
   microBit,
   lab,

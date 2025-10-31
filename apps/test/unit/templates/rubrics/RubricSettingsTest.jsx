@@ -25,6 +25,7 @@ import teacherSections, {
   selectSection,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import i18n from '@cdo/locale';
 
 const fakeStudent = {
@@ -92,7 +93,12 @@ describe('RubricSettings', () => {
       }
     });
     stubRedux();
-    registerReducers({teacherRubric, teacherSections, currentUser});
+    registerReducers({
+      teacherRubric,
+      teacherSections,
+      currentUser,
+      teachingProfile,
+    });
     store = getStore();
     store.dispatch(setSections([fakeSection]));
     store.dispatch(selectSection(fakeSection.id));

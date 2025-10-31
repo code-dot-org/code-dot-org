@@ -13,6 +13,7 @@ import teacherSections, {
   setSections,
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 
 const script = document.querySelector('script[data-json]');
 const scriptData = JSON.parse(script.dataset.json);
@@ -23,7 +24,7 @@ setPegasusOrigin(scriptData.pegasusOrigin);
 setStudioOrigin(scriptData.studioOrigin);
 
 // Register the reducers we need to show the parent letter:
-registerReducers({currentUser, teacherSections});
+registerReducers({currentUser, teacherSections, teachingProfile});
 
 // Populate the store with data passed down from the server:
 const store = getStore();

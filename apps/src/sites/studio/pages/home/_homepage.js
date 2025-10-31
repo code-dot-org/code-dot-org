@@ -20,6 +20,7 @@ import {
   setPageType,
   beginCreatingSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import i18n from '@cdo/locale';
 
 $(document).ready(showHomepage);
@@ -33,7 +34,12 @@ function showHomepage() {
   const specialAnnouncement = homepageData.specialAnnouncement;
   const studentSpecialAnnouncement = homepageData.studentSpecialAnnouncement;
   const query = queryString.parse(window.location.search);
-  registerReducers({locales, mapbox: mapboxReducer, currentUser});
+  registerReducers({
+    locales,
+    mapbox: mapboxReducer,
+    currentUser,
+    teachingProfile,
+  });
   const store = getStore();
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));

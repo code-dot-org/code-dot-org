@@ -18,6 +18,7 @@ import {
 } from '@cdo/apps/StudioApp';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
+import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import * as utils from '@cdo/apps/utils';
 import {
   changeMaxProjectCapacity,
@@ -42,7 +43,7 @@ describe('WebLab', () => {
     weblab.studioApp_ = studioApp();
     registerReducers(commonReducers);
     registerReducers(reducers);
-    registerReducers({currentUser});
+    registerReducers({currentUser, teachingProfile});
     config = {
       skin: {},
       level: {},

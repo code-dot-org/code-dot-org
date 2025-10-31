@@ -3,6 +3,13 @@ import React from 'react';
 
 import PersonalizationProgressBar from '@cdo/apps/aiDifferentiation/personalization/PersonalizationProgressBar';
 import {matchTeachingProfile} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {
+  fetchTeachingProfileData,
+  selectTeachingProfileData,
+  selectTeachingProfileHasFetched,
+  selectTeachingProfileLoading,
+} from '@cdo/apps/templates/teachingProfileRedux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {
@@ -31,13 +38,19 @@ interface PersonalizationData {
   dateYearsTeachingSet: Date | null;
   classroomVision: string;
   challenge: string;
+  matchedPersona?: string;
 }
 
 const PersonalizationCollectorContainer: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const teachingProfileData = useAppSelector(selectTeachingProfileData);
+  const teachingProfileHasFetched = useAppSelector(
+    selectTeachingProfileHasFetched
+  );
+  const teachingProfileLoading = useAppSelector(selectTeachingProfileLoading);
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
   const [isSaving, setIsSaving] = React.useState(false);
   const [showResults, setShowResults] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(true);
   const [personalizationData, setPersonalizationData] = React.useState<
     Partial<PersonalizationData>
   >({});
@@ -49,39 +62,27 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const BACK = -1;
 
   React.useEffect(() => {
-    const loadExistingData = async () => {
-      try {
-        const response = await fetch('/teaching_profile_data', {
-          method: 'GET',
-          headers: {
-            'X-CSRF-Token':
-              document
-                .querySelector('meta[name="csrf-token"]')
-                ?.getAttribute('content') || '',
-          },
-        });
+    if (!teachingProfileHasFetched && !teachingProfileLoading) {
+      dispatch(fetchTeachingProfileData());
+    }
+  }, [dispatch, teachingProfileHasFetched, teachingProfileLoading]);
 
-        if (response.ok) {
-          const result = await response.json();
-          if (result.exists && result.data) {
-            const existingData = {...result.data};
-            if (existingData.dateYearsTeachingSet) {
-              existingData.dateYearsTeachingSet = new Date(
-                existingData.dateYearsTeachingSet
-              );
-            }
-            setPersonalizationData(existingData);
-          }
-        }
-      } catch (error) {
-        console.error('Failed to load existing teaching profile data:', error);
-      } finally {
-        setIsLoading(false);
+  React.useEffect(() => {
+    if (teachingProfileData) {
+      const existingData: Partial<PersonalizationData> = {
+        ...teachingProfileData,
+      };
+      if (existingData.dateYearsTeachingSet) {
+        existingData.dateYearsTeachingSet = new Date(
+          existingData.dateYearsTeachingSet
+        );
       }
-    };
-
-    loadExistingData();
-  }, []);
+      setPersonalizationData(existingData);
+      if (existingData.matchedPersona) {
+        setMatchedTeachingProfile(existingData.matchedPersona);
+      }
+    }
+  }, [teachingProfileData]);
 
   const onCarouselPress = async (direction: number) => {
     if (direction === NEXT) {
@@ -226,6 +227,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
     return TEACHING_STYLES.find(style => style.name === styleName);
   };
 
+  const isLoading = teachingProfileLoading || !teachingProfileHasFetched;
   const showProgressBar = !isLoading && !showResults;
 
   return (

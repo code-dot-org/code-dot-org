@@ -7,6 +7,7 @@ import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {UnconnectedLoginTypePicker as LoginTypePicker} from '@cdo/apps/templates/teacherDashboard/LoginTypePicker';
+import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
@@ -16,7 +17,7 @@ describe('LoginTypePicker', () => {
   beforeEach(() => {
     stubRedux();
     registerReducers(commonReducers);
-    registerReducers({currentUser});
+    registerReducers({currentUser, teachingProfile});
     experiments.isEnabled = jest.fn(() => true);
   });
 
