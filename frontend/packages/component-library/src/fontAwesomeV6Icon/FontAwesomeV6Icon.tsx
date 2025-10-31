@@ -7,10 +7,8 @@ export interface FontAwesomeV6IconProps extends HTMLAttributes<HTMLElement> {
    * Style vs Figma font-weight:
    *  * solid - 900
    *  * regular - 400
-   *  * light - 300
-   *  * thin - 100
    * */
-  iconStyle?: 'solid' | 'regular' | 'light' | 'thin';
+  iconStyle?: 'solid' | 'regular';
   /** Icon family
    *    * brands - for FA brand icons
    *    * duotone - for FA duotone icons
