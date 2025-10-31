@@ -83,6 +83,8 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     return () => clearTimeout(timeout);
   }, []);
 
+  const scrollToTop = () => window.scrollTo({top: 0});
+
   const {
     data: workshopResponse,
     loading: workshopLoading,
@@ -93,7 +95,12 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   );
 
   useEffect(() => {
+    scrollToTop();
+  }, [workshopId]);
+
+  useEffect(() => {
     if (state === 'refetch') {
+      scrollToTop();
       refetchWorkshop();
       // Clear the navigation state after triggering refetch
       navigate('.', {replace: true, state: null});
