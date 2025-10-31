@@ -189,6 +189,9 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
         this.config,
         existingOptionsMap
       );
+      if (this.menuGenerator_.length === 1) {
+        this.EDITABLE = false;
+      }
     }
     // Call super so value is set.
     super.fromXml(element);
