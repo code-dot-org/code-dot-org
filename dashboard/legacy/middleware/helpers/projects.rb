@@ -39,10 +39,11 @@ class Projects
       remix_parent_id: remix_parent_id,
       skip_content_moderation: false,
       standalone: standalone,
+      uuid: SecureRandom.uuid,
     }
     row[:id] = @table.insert(row)
 
-    storage_encrypt_channel_id(row[:storage_id], row[:id])
+    row[:uuid]
   end
 
   def delete(channel_id)

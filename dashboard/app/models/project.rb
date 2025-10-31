@@ -19,7 +19,7 @@
 #
 # Indexes
 #
-#  index_projects_on_uuid               (guid) UNIQUE
+#  index_projects_on_uuid               (uuid) UNIQUE
 #  storage_apps_project_type_index      (project_type)
 #  storage_apps_published_at_index      (published_at)
 #  storage_apps_standalone_index        (standalone)
