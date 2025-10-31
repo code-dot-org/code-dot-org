@@ -5,8 +5,9 @@ import {
   JsonBlockConfig,
   WorkspaceSerialization,
 } from '@cdo/apps/blockly/types';
+import getRandomInt from '@cdo/apps/util/getRandomInt';
 
-import getBlockOptions, {getBlockOptionsNumbers} from './getBlockOptions';
+import getBlockOptions from './getBlockOptions';
 
 const DANCELAB_PREFIX = 'Dancelab_';
 const GENERATED_PREFIX = 'GeneratedDancers_';
@@ -104,14 +105,13 @@ function makeAlternateMovesBlock(
 
 function makeNewDanceSpriteGroupBlock(
   type: string,
-  numbers: string[],
   dancers: string,
   layouts: string[]
 ): JsonBlockConfig {
   return {
     type,
     fields: {
-      N: randomElement(numbers),
+      N: `${getRandomInt(2, 40)}`,
       COSTUME: dancers,
       LAYOUT: randomField('LAYOUT', layouts),
     },
@@ -223,30 +223,36 @@ export default function buildDanceBlockly(
     blockDefinitions,
     changeMoveBlockType,
     'MOVE'
-  ).filter(option =>
-    !['"next"', '"prev"', '"rand"'].includes(option) && energy === 'chill'
-      ? movesChill.includes(option)
-      : !movesChill.includes(option)
+  ).filter(
+    option =>
+      !['"next"', '"prev"', '"rand"'].includes(option) &&
+      (energy === 'chill'
+        ? movesChill.includes(option)
+        : !movesChill.includes(option))
   );
 
   const validBackgrounds = getBlockOptions(
     blockDefinitions,
     setBackgroundBlockType,
     'EFFECT'
-  ).filter(option =>
-    !['"none"', '"rand"'].includes(option) && energy === 'chill'
-      ? backgroundsChill.includes(option)
-      : !backgroundsChill.includes(option)
+  ).filter(
+    option =>
+      !['"none"', '"rand"'].includes(option) &&
+      (energy === 'chill'
+        ? backgroundsChill.includes(option)
+        : !backgroundsChill.includes(option))
   );
 
   const validForegrounds = getBlockOptions(
     blockDefinitions,
     setForegroundBlockType,
     'EFFECT'
-  ).filter(option =>
-    !['"none"', '"rand"'].includes(option) && energy === 'chill'
-      ? foregroundsChill.includes(option)
-      : !foregroundsChill.includes(option)
+  ).filter(
+    option =>
+      !['"none"', '"rand"'].includes(option) &&
+      (energy === 'chill'
+        ? foregroundsChill.includes(option)
+        : !foregroundsChill.includes(option))
   );
 
   const validPalettes = getBlockOptions(
@@ -260,13 +266,6 @@ export default function buildDanceBlockly(
     makeNewDanceSpriteGroupBlockType,
     'LAYOUT'
   ).filter(option => !['"random"'].includes(option));
-
-  const validNumbers =
-    getBlockOptionsNumbers(
-      blockDefinitions,
-      makeNewDanceSpriteGroupBlockType,
-      'N'
-    ) || [];
 
   // Setup: create sprite → change move → start background → start foreground
   const makeSprite: JsonBlockConfig = {
@@ -291,15 +290,10 @@ export default function buildDanceBlockly(
     validForegrounds
   );
 
-  const numberStrings: string[] = (validNumbers || []).map(d =>
-    Array.isArray(d) ? d[0] : d
-  );
-
   const danceSpriteGroup =
-    validNumbers.length > 0 && backgroundDancers !== 'nobody'
+    backgroundDancers !== 'nobody'
       ? makeNewDanceSpriteGroupBlock(
           makeNewDanceSpriteGroupBlockType,
-          numberStrings,
           `"${backgroundDancers.toUpperCase()}"`,
           validLayouts
         )
@@ -312,10 +306,10 @@ export default function buildDanceBlockly(
 
   const setupDoChain = chainBlocks(
     makeSprite,
-    initialChangeMove,
+    ...(danceSpriteGroup ? [danceSpriteGroup] : []),
     initialBg,
     initialFg,
-    ...(danceSpriteGroup ? [danceSpriteGroup] : []),
+    ...(codeComplexity === 'complex' ? [initialChangeMove] : []),
     ...(codeComplexity === 'simple' ? [alternateMoves] : [])
   );
 

@@ -18,11 +18,11 @@ import styles from './generate-dance.module.scss';
 const GENERATE_DELAY_DURATION = 7000;
 
 const adlib: AdlibType = {
-  template: `Generate {code} for a {energy} dance, with {dancers} as backup dancers.`,
+  template: `Generate {complexity} code for a {energy} dance, with {dancers} as backup dancers.`,
   options: {
-    code: [
-      {id: 'basic', text: 'basic code'},
-      {id: 'complex', text: 'complex code'},
+    complexity: [
+      {id: 'basic', text: 'basic'},
+      {id: 'complex', text: 'complex'},
     ],
     energy: [
       {id: 'chill', text: 'chill'},
