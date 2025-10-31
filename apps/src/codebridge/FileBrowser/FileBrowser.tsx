@@ -88,7 +88,7 @@ export const FileBrowser = React.memo(() => {
   );
 
   return (
-    <div id="file-browser">
+    <div id="file-browser" className={moduleStyles.fileBrowser}>
       <div className={moduleStyles.fileBrowserContents}>
         {isEmpty ? (
           <CodebridgeEmptyState
