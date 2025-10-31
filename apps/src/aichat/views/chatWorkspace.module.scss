@@ -107,6 +107,10 @@ $tabs-default-spacing: 4px;
   padding: 0.625rem;
   border-top: variables.$default-border;
   background: var(--background-neutral-secondary);
+
+  &:empty {
+    display: none;
+  }
 }
 
 .alertLink {

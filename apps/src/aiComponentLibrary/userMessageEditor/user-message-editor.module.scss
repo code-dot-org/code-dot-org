@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 0.5rem;
   transition: outline 0.2s ease-in;
+  cursor: text;
 
   @include mixins.border-styles($border-color: var(--borders-neutral-strong));
 
