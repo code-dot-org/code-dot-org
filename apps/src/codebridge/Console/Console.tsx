@@ -207,6 +207,7 @@ const Console: React.FunctionComponent = () => {
       <div
         ref={terminalRef}
         className={moduleStyles.consoleV2}
+        data-notranslate
         id="uitest-codebridge-console"
       />
     </PanelContainer>

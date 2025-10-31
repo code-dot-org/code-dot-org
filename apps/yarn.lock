@@ -11345,6 +11345,7 @@ __metadata:
     swiper: "npm:^11.0.5"
     terser-webpack-plugin: "npm:^5.3.10"
     timers-browserify: "npm:^2.0.12"
+    tokenizr: "npm:^1.7.0"
     tone: "npm:14.7.77"
     ts-jest: "npm:^29.1.2"
     ts-loader: "npm:^9.5.1"
@@ -29394,6 +29395,13 @@ canvg@gabelerner/canvg:
   version: 1.0.1
   resolution: "toidentifier@npm:1.0.1"
   checksum: 10/952c29e2a85d7123239b5cfdd889a0dde47ab0497f0913d70588f19c53f7e0b5327c95f4651e413c74b785147f9637b17410ac8c846d5d4a20a5a33eb6dc3a45
+  languageName: node
+  linkType: hard
+
+"tokenizr@npm:^1.7.0":
+  version: 1.7.0
+  resolution: "tokenizr@npm:1.7.0"
+  checksum: 10/2e3a01bf14dc94994dafd991f9071d09080066e9d932c7be88e7f42984c1a9207db43c6bb19d9c0d23bf0bca4fa4426f3df99b23fce909114b61b590816f70e8
   languageName: node
   linkType: hard
 

@@ -1,4 +1,5 @@
 import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
+import type Localizer from '@codebridge/Localizer';
 import {CodebridgeLevelProperties, MazeCell} from '@codebridge/types';
 import {
   combineStartSourcesAndValidation,
@@ -15,10 +16,12 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {
   MultiFileSource,
+  ProjectFile,
   ProjectFileType,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+
 /**
  * Custom hook that determines the initial sources for the current level.
  * It selects various sources including from the student's project, the start sources
@@ -33,11 +36,11 @@ import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
  * @param {ProjectSources} defaultSources - The default sources to use if no other sources are found.
  * @returns {ProjectSources} - The initial sources to use.
  */
-
 export const useInitialSources = (
   defaultSources: ProjectSources,
   levelProperties: CodebridgeLevelProperties,
-  initialServerSource: ProjectSources | undefined
+  initialServerSource?: ProjectSources,
+  localizers?: Localizer[]
 ) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const exemplarSources = levelProperties.exemplarSources as MultiFileSource;
@@ -88,6 +91,25 @@ export const useInitialSources = (
       }
       startCode = repairOpenFiles(startCode);
 
+      // Localize, if desired
+      startCode = {
+        ...startCode,
+        files: Object.fromEntries(
+          Object.entries(startCode.files).map(([key, file]) => {
+            if (typeof file === 'string') {
+              return [key, file];
+            }
+
+            const projectFile = file as ProjectFile;
+
+            return [
+              key,
+              (localizers || []).reduce((a, b) => b.localize(a), projectFile),
+            ];
+          })
+        ),
+      };
+
       const source = isStartMode
         ? combineStartSourcesAndValidation(startCode, validationFile)
         : startCode;
@@ -96,7 +118,7 @@ export const useInitialSources = (
 
       return {source, labConfig};
     },
-    [isStartMode, miniApp, serializedMaze, validationFile]
+    [isStartMode, miniApp, serializedMaze, validationFile, localizers]
   );
 
   // We memoize these objects so that they don't cause an unexpected re-render.
