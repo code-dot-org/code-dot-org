@@ -12,5 +12,7 @@ Dashboard::Application.routes.draw do
 
       post :certificate
     end
+
+    post '/v2/certificate', controller: :tutorials, action: :certificate
   end
 end

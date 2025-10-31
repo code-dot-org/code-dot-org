@@ -15,8 +15,6 @@ import {connect} from 'react-redux';
 import {register} from 'swiper/element/bundle';
 
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import BackToFrontConfetti from '../BackToFrontConfetti';
@@ -59,14 +57,11 @@ function Certificate(props) {
     }
   };
 
-  const personalizeHocCertificate = async session => {
+  const personalizeHocCertificate = session => {
     $.ajax({
-      url: studio('/api/hour/certificate'),
+      url: '/v2/certificate',
       type: 'post',
       dataType: 'json',
-      headers: {
-        'X-CSRF-Token': await getAuthenticityToken(),
-      },
       data: {
         session_s: session,
         name_s: nameInputRef.current.value,
