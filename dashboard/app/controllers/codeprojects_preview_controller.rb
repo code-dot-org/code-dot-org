@@ -97,7 +97,6 @@ class CodeprojectsPreviewController < ApplicationController
 
   skip_forgery_protection only: :weblab2_project_service_worker
   def weblab2_project_service_worker
-    weblab2_project_service_worker_js = Net::HTTP.get_response(URI.join(request.base_url, '/assets/js/weblab2_project_service_worker.js')).body
-    send_data weblab2_project_service_worker_js, type: 'application/javascript'
+    send_file "#{apps_dir}/src/codebridge/FilePreview/weblab2_project_service_worker.js", type: 'application/javascript'
   end
 end

@@ -1,3 +1,10 @@
+// WARNING: THIS FILE IS NOT RUN THROUGH WEBPACK, so make sure you USE OLDER JAVASCRIPT SYNTAX
+// (i.e. don't use things that weren't broadly supported before 2018).
+//
+// TMI: The reason its not run through webpack is that the webpacked entry point was not working as a
+// service worker, some pollyfill or somesuch was depending on interfaces (like document) existing that
+// aren't defined for service workers???
+//
 // This is served as preview.codeprojects.org/weblab2-project-service-worker.js by routes.rb and codeprojects_preview_controller.rb
 
 function main() {

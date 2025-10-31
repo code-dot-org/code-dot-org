@@ -7,13 +7,6 @@ import {getFolderPath} from '../utils';
 
 import {addBaseTagToDocument} from './htmlParsingHelpers';
 
-// We reference the service worker using a URL with an ESM relative import (import.meta.url)
-// so that Webpack will generate the service worker as a separate known-name JS chunk. We later
-// return this chunk in codeprojects_preview_controller.rb so that it can control the root scope.
-// import(
-//   /* webpackChunkName: "weblab2_project_service_worker" */ './weblab2_project_service_worker.js'
-// );
-
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
   currentFile: string | undefined
