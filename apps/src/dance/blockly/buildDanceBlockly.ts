@@ -48,8 +48,31 @@ function field(name: string, option: string): string {
   return `<field name="${name}">${option}</field>`;
 }
 
-function groupSpritesField(): string {
-  return '<field name="GROUP">sprites</field>';
+function groupSpritesField(
+  backgroundDancers: string,
+  simpleCode: boolean
+): string {
+  // The config value determines the selectable options in the dropdown.
+  // If there are no background dancers, the only option is the generated dancer.
+  // If there are background dancers, the options are (all) sprites, the generated dancer and the background dancers.
+  const configValue =
+    backgroundDancers === 'nobody'
+      ? '&quot;GENERATED_DANCER&quot;'
+      : `sprites,&quot;GENERATED_DANCER&quot;,&quot;${backgroundDancers.toUpperCase()}&quot;`;
+  const configAttribute = simpleCode ? `config="${configValue}"` : '';
+  // The field value determines the default selected option in the dropdown.
+  const fieldValue =
+    backgroundDancers === 'nobody' ? '&quot;GENERATED_DANCER&quot;' : `sprites`;
+  return `<field name="GROUP" ${configAttribute}>${fieldValue}</field>`;
+}
+
+function costumeSpritesField(
+  backgroundDancers: string,
+  simpleCode: boolean
+): string {
+  const escapedValue = `&quot;${backgroundDancers.toUpperCase()}&quot;`;
+  const configAttribute = simpleCode ? `config="${escapedValue}"` : '';
+  return `<field name="COSTUME" ${configAttribute}>${escapedValue}</field>`;
 }
 
 function dirLeftRightField(value: -1 | 1): string {
@@ -88,14 +111,16 @@ function makeSetForegroundBlock(
 
 function makeAlternateMovesBlock(
   type: string,
-  moves: string[]
+  moves: string[],
+  backgroundDancers: string,
+  simpleCode: boolean
 ): JsonBlockConfig {
   const move1 = randomElement(moves);
   const move2 = randomElement(moves.filter(move => move !== move1));
   return {
     type,
     fields: {
-      GROUP: groupSpritesField(),
+      GROUP: groupSpritesField(backgroundDancers, simpleCode),
       N: '2',
       MOVE1: field('MOVE', move1),
       MOVE2: field('MOVE', move2),
@@ -105,8 +130,9 @@ function makeAlternateMovesBlock(
 
 function makeNewDanceSpriteGroupBlock(
   type: string,
-  dancers: string,
-  layouts: string[]
+  backgroundDancers: string,
+  layouts: string[],
+  simpleCode: boolean
 ): JsonBlockConfig {
   const layoutFieldValue = randomElement(layouts);
   const nFieldValue = bestLayouts[layoutFieldValue];
@@ -114,7 +140,7 @@ function makeNewDanceSpriteGroupBlock(
     type,
     fields: {
       N: nFieldValue,
-      COSTUME: dancers,
+      COSTUME: costumeSpritesField(backgroundDancers, simpleCode),
       LAYOUT: field('LAYOUT', layoutFieldValue),
     },
   };
@@ -122,12 +148,14 @@ function makeNewDanceSpriteGroupBlock(
 
 function makeChangeMoveEachLRBlock(
   type: string,
-  moves: string[]
+  moves: string[],
+  backgroundDancers: string,
+  simpleCode: boolean
 ): JsonBlockConfig {
   return {
     type,
     fields: {
-      GROUP: groupSpritesField(),
+      GROUP: groupSpritesField(backgroundDancers, simpleCode),
       MOVE: randomField('MOVE', moves),
       DIR: dirLeftRightField(randomElement([-1, 1])),
     },
@@ -187,15 +215,15 @@ const movesChill = [
  * A mapping of layouts that work best with a large, central dancer sprite
  * and a good starting number of sprites for that layout.
  * */
-const bestLayouts: Record<string, number> = {
-  '"border"': 16,
-  '"diamond"': 16,
-  '"circle"': 10,
-  '"grid"': 16,
-  '"top"': 4,
-  '"row"': 4,
-  '"bottom"': 4,
-  '"x"': 8,
+const bestLayouts: Record<string, string> = {
+  '"border"': '16',
+  '"diamond"': '16',
+  '"circle"': '10',
+  '"grid"': '16',
+  '"top"': '4',
+  '"row"': '4',
+  '"bottom"': '4',
+  '"x"': '8',
 };
 
 /**
@@ -288,14 +316,15 @@ export default function buildDanceBlockly(
   const makeSprite: JsonBlockConfig = {
     type: makeSpriteBlockType,
     fields: {
-      COSTUME: '<field name="COSTUME">"CAT"</field>',
       LOCATION: '<field name="LOCATION">{x: 200, y: 200}</field>',
     },
   };
 
   const initialChangeMove = makeChangeMoveEachLRBlock(
     changeMoveBlockType,
-    validMoves
+    validMoves,
+    backgroundDancers,
+    codeComplexity === 'simple'
   );
   const initialBg = makeSetBackgroundBlock(
     setBackgroundBlockType,
@@ -311,14 +340,17 @@ export default function buildDanceBlockly(
     backgroundDancers !== 'nobody'
       ? makeNewDanceSpriteGroupBlock(
           makeNewDanceSpriteGroupBlockType,
-          `"${backgroundDancers.toUpperCase()}"`,
-          validLayouts
+          backgroundDancers,
+          validLayouts,
+          codeComplexity === 'simple'
         )
       : null;
 
   const alternateMoves = makeAlternateMovesBlock(
     alternateMovesBlockType,
-    validMoves
+    validMoves,
+    backgroundDancers,
+    codeComplexity === 'simple'
   );
 
   const setupDoChain = chainBlocks(
@@ -354,7 +386,12 @@ export default function buildDanceBlockly(
         setForegroundBlockType,
         validForegrounds
       );
-      const move = makeChangeMoveEachLRBlock(changeMoveBlockType, validMoves);
+      const move = makeChangeMoveEachLRBlock(
+        changeMoveBlockType,
+        validMoves,
+        backgroundDancers,
+        codeComplexity === 'simple'
+      );
       const chain = chainBlocks(bg, fg, move);
 
       return {
