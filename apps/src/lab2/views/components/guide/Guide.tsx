@@ -35,7 +35,7 @@ const Guide: React.FunctionComponent<GuideProps> = ({
             : styles.guideNormalWidth,
           position === 'bottom'
             ? styles.guideBottomPosition
-            : styles.NormalPosition
+            : styles.guideNormalPosition
         )}
       >
         {children}
