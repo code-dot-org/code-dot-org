@@ -47,8 +47,8 @@
     },
     "bubble_choice_description": "Chat with AI about designing wireframes and crafting flowcharts.",
     "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png",
-    "display_name": "AI Chat"
+    "display_name": "Flowchart Bot"
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-28T22:51:09.678+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level3b-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level3b-test-2025\"},{\"changed_at\":\"2025-10-28 22:51:58 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-29 23:11:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-29 23:25:29 +0000\",\"changed\":[\"aichat_settings\",\"bubble_choice_description\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-28T22:51:09.678+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level3b-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level3b-test-2025\"},{\"changed_at\":\"2025-10-28 22:51:58 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-29 23:11:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-29 23:25:29 +0000\",\"changed\":[\"aichat_settings\",\"bubble_choice_description\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-30 21:50:26 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>
