@@ -95,6 +95,7 @@ const SILENCED = [
   'googleblockly',
   'brambleHost',
   'levelbuilder',
+  'weblab2_project_service_worker',
 
   // needed to initialize the locales before all other app code loads
   'localization',

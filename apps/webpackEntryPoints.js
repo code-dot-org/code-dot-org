@@ -301,6 +301,8 @@ const OTHER_ENTRIES = {
   'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
   regionalPartnerMiniContact: './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
+
+  weblab2_project_service_worker: './src/codebridge/FilePreview/weblab2_project_service_worker.js',
 };
 
 const LOCALIZATION_ENTRIES = {
