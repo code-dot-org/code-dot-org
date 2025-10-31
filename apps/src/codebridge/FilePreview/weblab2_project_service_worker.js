@@ -8,7 +8,8 @@
 // This is served as preview.codeprojects.org/weblab2-project-service-worker.js by routes.rb and codeprojects_preview_controller.rb
 
 function main() {
-  const SERVE_PROJECT_SEGMENT = '/serve-project';
+  //const SERVE_PROJECT_SEGMENT = '/serve-project';
+  console.log('hi');
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -45,9 +46,16 @@ function main() {
   // Intercept fetch requests
   self.addEventListener('fetch', event => {
     const url = new URL(event.request.url);
-    console.log('Handling project request for URL:', {url});
-    if (url.pathname.includes(SERVE_PROJECT_SEGMENT)) {
+    console.log('Handling project request for URL:', {
+      url,
+      pathname: url.pathname,
+    });
+    if (url.pathname.length > 1 && filesData) {
+      console.log('Service worker intercepting fetch for:', url.pathname);
       event.respondWith(handleProjectRequest(url));
+    } else {
+      console.log('Service worker passing through fetch for:', url.pathname);
+      fetch(event.request);
     }
   });
 
@@ -57,17 +65,13 @@ function main() {
     try {
       // Extract portion after /serve-project
       console.log('Handling project request for URL:', {url});
-      const idx = url.pathname.indexOf(SERVE_PROJECT_SEGMENT);
-      let remainder = url.pathname.substring(
-        idx + SERVE_PROJECT_SEGMENT.length
-      ); // maybe "" or "/some/file"
+      let remainder = url.pathname; // maybe "" or "/some/file"
       if (remainder.startsWith('/')) {
         remainder = remainder.substring(1);
       }
 
       // Allow ?file= overrides (optional enhancement)
-      const qpFile = url.searchParams.get('file');
-      let requestedFile = qpFile || remainder || currentFile || 'index.html';
+      let requestedFile = remainder || currentFile || 'index.html';
 
       if (requestedFile === '' || requestedFile === '/') {
         requestedFile = 'index.html';
