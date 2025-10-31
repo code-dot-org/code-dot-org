@@ -99,12 +99,18 @@ export const generateSongAi = async (
 
   console.log('Starting AI ask...');
 
+  // It's possible that the extra prompt text references the drums.
+  const promptTextExtraWithDrums = promptTextExtra?.replace(
+    '{drumSounds}',
+    drumSounds
+  );
+
   const result = await askAi(
     'Here is the context: \n\n' +
       GenerateContext(contextText, sounds, drumSounds) +
       '\n\n And here is the request: \n\n' +
       promptText +
-      (promptTextExtra ? '\n\n' + promptTextExtra : '')
+      (promptTextExtraWithDrums ? '\n\n' + promptTextExtraWithDrums : '')
   );
 
   if (result.length > 1 && result[1].status === AiInteractionStatus.OK) {

@@ -112,7 +112,8 @@ jobs:
             --web_application_server_secrets_arn ${{ secrets.APPLICATION_SERVER_SECRETS_ARN }} \
             --cloudformation_role_boundary ${{ secrets.CLOUDFORMATION_ROLE_BOUNDARY_ARN }} \
             --production_domain_name "${{ vars.PRODUCTION_DOMAIN_NAME }}" \
-            --production_hosted_zone_id "${{ secrets.PRODUCTION_HOSTED_ZONE_ID }}"
+            --production_hosted_zone_id "${{ secrets.PRODUCTION_HOSTED_ZONE_ID }}" \
+            --web-application-firewall "${{ secrets.WEB_APPLICATION_FIREWALL_ARN }}"
 
       - name: "[${{ env.GITHUB_ENVIRONMENT_NAME }}] Invalidate CloudFront Cache"
         env:

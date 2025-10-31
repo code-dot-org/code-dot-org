@@ -124,6 +124,7 @@ def main
       AI_DIFF_CONTEXT
       DISALLOWED_ROUTES
       BUBBLE_CHOICE_CUSTOM_MODES
+      BUBBLE_CHOICE_NAVIGATION_TYPES
     ),
     file_type: 'ts'
   )

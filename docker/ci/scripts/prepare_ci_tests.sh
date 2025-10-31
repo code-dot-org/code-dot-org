@@ -14,6 +14,10 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
+# Number of parallel processes for dashboard ruby unit tests,
+# optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
+export PARALLEL_TEST_PROCESSORS=7
+
 # Install in deployment mode, both to better mirror the test server and to make
 # caching easier.
 bundle config set --local deployment 'true'

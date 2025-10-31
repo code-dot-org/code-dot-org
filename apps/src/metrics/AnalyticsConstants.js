@@ -329,6 +329,9 @@ const EVENTS = {
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
   AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
   AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',
+  AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT:
+    'AI Tutor Code Snippet Added to Context',
+  AI_TUTOR_FILE_ADDED_TO_CONTEXT: 'AI Tutor File Added to Context',
 
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
@@ -502,7 +505,8 @@ const EVENTS = {
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
-  SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
+  SUBMIT_AICHAT_REQUEST_INITIATED: 'User submits aichat request',
+  SUBMIT_AICHAT_REQUEST_SUCCESS: 'User aichat request succeeds',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
     'Unauthorized user attempts to submit aichat request or model customizations and fails',
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',

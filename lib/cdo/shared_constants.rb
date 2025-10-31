@@ -833,9 +833,9 @@ module SharedConstants
   }
 
   AI_CHAT_CLIENT_TYPES = {
-    AI_CHAT_LAB: 0,
-    AI_TUTOR: 1,
-    FLOW_LAB: 2,
+    AI_CHAT_LAB: "ai-chat-lab",
+    AI_TUTOR: "ai-tutor",
+    FLOW_LAB: "flow-lab",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
@@ -911,4 +911,9 @@ module SharedConstants
   BUBBLE_CHOICE_CUSTOM_MODES = {
     MUSIC_DANCE_AI: 'music_dance_ai',
   }.freeze
+
+  BUBBLE_CHOICE_NAVIGATION_TYPES = {
+    PARENT: 'parent',
+    NEXT_LEVEL: 'next_level',
+  }
 end

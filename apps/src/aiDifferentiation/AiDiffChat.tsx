@@ -98,7 +98,7 @@ interface AiDiffChatProps {
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
   suggestedPrompts?: ChatPrompt[];
-  disableEndButtons?: boolean;
+  hideChatHeader?: boolean;
   curriculumCourses?: string[];
   threadFetchCallback?: () => void;
   threadId?: number;
@@ -116,7 +116,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
   suggestedPrompts,
-  disableEndButtons = false,
+  hideChatHeader = false,
   curriculumCourses = [],
   threadFetchCallback = () => {},
   threadId = 0,
@@ -124,6 +124,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   initialThreadPrompt = null,
   setInitialThreadPrompt = () => {},
 }) => {
+  const [userMessage, setUserMessage] = useState<string>('');
   const reportingData = React.useMemo(() => {
     return {
       chatContext: context,
@@ -289,6 +290,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
       setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
       getAIResponse(message, false, null);
+      setUserMessage('');
     },
     [threadTitle, getAIResponse, setThreadTitle]
   );
@@ -372,12 +374,13 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
   return (
     <div className={style.chatContainer}>
-      <AiDiffChatHeader
-        onSuggestPrompts={onSuggestPrompts}
-        messages={messageHistory}
-        threadTitle={threadTitle}
-        disableEndButtons={disableEndButtons}
-      />
+      {!hideChatHeader && (
+        <AiDiffChatHeader
+          onSuggestPrompts={onSuggestPrompts}
+          messages={messageHistory}
+          threadTitle={threadTitle}
+        />
+      )}
       <div className={style.chatContent}>
         {messageHistory.map((item: ChatItem, id: number) =>
           Array.isArray(item) ? (
@@ -418,6 +421,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         </div>
       </div>
       <AiDiffChatFooter
+        userMessage={userMessage}
+        onChange={setUserMessage}
         onSubmit={onMessageSend}
         waiting={isWaitingForResponse}
         userMessageEditorRef={userMessageEditorRef}
