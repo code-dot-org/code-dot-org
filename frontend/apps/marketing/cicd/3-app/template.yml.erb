@@ -234,7 +234,12 @@ Resources:
         Enabled: true
         Comment: Marketing Sites Application CloudFront Distribution
         HttpVersion: http2
-        PriceClass: PriceClass_100
+        # Use PriceClass_All for production to maximize global performance and availability.
+        # Use PriceClass_100 for non-production to reduce costs, as it limits edge locations.
+        PriceClass: !If
+          - IsProductionEnvironment
+          - PriceClass_All
+          - PriceClass_100
         Aliases:
           - !Sub "${SubdomainName}.${BaseDomainName}"
           - !Sub "preview-${SubdomainName}.${BaseDomainName}"

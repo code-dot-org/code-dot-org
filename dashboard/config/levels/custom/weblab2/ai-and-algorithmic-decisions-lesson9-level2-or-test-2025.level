@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2025-10-29T10:33:34.000Z",
   "level_num": "custom",
@@ -35,7 +34,7 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>OR Logic — Payment Options</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <main class=\"wrap\">\n    <section class=\"card\">\n      <h1>Payment Options</h1>\n      <p class=\"subtitle\">You can pay if you have <em>cash</em> or a <em>coupon</em>.</p>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"hasCash\" />\n          Has Cash\n        </label>\n        <span id=\"pillA\" class=\"pill\">false</span>\n      </div>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"hasCoupon\" />\n          Has Coupon\n        </label>\n        <span id=\"pillB\" class=\"pill\">false</span>\n      </div>\n\n      <p id=\"orResult\" class=\"result no\">Cannot pay</p>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n  ",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>OR Logic — Payment Options</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <main class=\"wrap\">\n    <section class=\"card\">\n      <h1>Payment Options</h1>\n      <p class=\"subtitle\">You can pay if you have cash <em>or</em> a coupon.</p>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"hasCash\" />\n          Has Cash\n        </label>\n        <span id=\"pillA\" class=\"pill\">false</span>\n      </div>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"hasCoupon\" />\n          Has Coupon\n        </label>\n        <span id=\"pillB\" class=\"pill\">false</span>\n      </div>\n\n      <p id=\"orResult\" class=\"result no\">Cannot pay</p>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n  ",
           "active": true,
           "folderId": "0"
         },
@@ -63,6 +62,7 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-29T10:33:34.922+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level1-test-2025\"},{\"changed_at\":\"2025-10-29 10:34:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:44 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:44:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-29T10:33:34.922+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level1-test-2025\"},{\"changed_at\":\"2025-10-29 10:34:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:44 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:44:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 17:52:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 17:52:23 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
