@@ -166,19 +166,18 @@ export const submitChatContents = createAsyncThunk(
           responseTime,
         })
       );
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .reportLoadTime('AichatModelResponseTime', responseTime, [
+          {
+            name: 'ModelId',
+            value: modelParameters.selectedModelId,
+          },
+        ]);
     } catch (error) {
       await handleChatCompletionError(error as Error, newUserMessage, dispatch);
       return;
     }
-
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
-        {
-          name: 'ModelId',
-          value: modelParameters.selectedModelId,
-        },
-      ]);
 
     thunkAPI.dispatch(clearChatMessagePending());
     // Send a report that the user has started the aichat level after successfully sending
