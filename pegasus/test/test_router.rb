@@ -68,6 +68,15 @@ class RouterTest < Minitest::Test
     assert_equal 200, get('/test_view').status
   end
 
+  def test_promotes_cloudfront_request_id_header
+    cf_id = 'pegasus-test-request-id'
+    header 'X-Amz-Cf-Id', cf_id
+
+    response = get('/test_view')
+
+    assert_equal cf_id, response.headers['X-Request-Id']
+  end
+
   def test_index
     assert_match 'Test folder/index', get('/folder').body
   end

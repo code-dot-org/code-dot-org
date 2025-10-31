@@ -18,6 +18,8 @@ end
 use Rack::Session::Cookie, secret: (CDO.sinatra_session_secret || 'dev_mode')
 
 require 'rack/ssl-enforcer'
+require 'cdo/rack/cloudfront_request_id'
+use Rack::CloudFrontRequestId
 use Rack::SslEnforcer,
   # Add HSTS header to all HTTPS responses in all environments.
   hsts: {expires: 31_536_000, subdomains: false},

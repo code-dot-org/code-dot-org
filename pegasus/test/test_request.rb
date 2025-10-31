@@ -23,6 +23,22 @@ class RequestTest < Minitest::Test
     end
   end
 
+  def test_correlation_id_prefers_cloudfront_header
+    cf_id = 'cf-request-id'
+    request = Rack::Request.new('HTTP_X_AMZ_CF_ID' => cf_id)
+
+    assert_equal cf_id, request.correlation_id
+    assert_equal cf_id, request.cloudfront_request_id
+  end
+
+  def test_correlation_id_falls_back_to_request_header
+    request_id = 'fallback-request-id'
+    request = Rack::Request.new('HTTP_X_REQUEST_ID' => request_id)
+
+    assert_equal request_id, request.correlation_id
+    assert_nil request.cloudfront_request_id
+  end
+
   def test_unknown_ip
     req = Rack::Request.new({'HTTP_X_FORWARDED_FOR' => 'unknown'})
     assert_nil req.location

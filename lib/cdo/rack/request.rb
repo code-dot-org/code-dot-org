@@ -97,6 +97,14 @@ module Cdo
       host
     end
 
+    def correlation_id
+      env['cdo.request_id'] || env['action_dispatch.request_id'] || env['HTTP_X_REQUEST_ID']
+    end
+
+    def cloudfront_request_id
+      env['cdo.cloudfront_request_id'] || env['HTTP_X_AMZ_CF_ID']
+    end
+
     def splat_path_info
       env[:splat_path_info]
     end
