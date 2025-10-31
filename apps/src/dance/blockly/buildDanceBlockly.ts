@@ -5,7 +5,6 @@ import {
   JsonBlockConfig,
   WorkspaceSerialization,
 } from '@cdo/apps/blockly/types';
-import getRandomInt from '@cdo/apps/util/getRandomInt';
 
 import getBlockOptions from './getBlockOptions';
 
@@ -109,12 +108,14 @@ function makeNewDanceSpriteGroupBlock(
   dancers: string,
   layouts: string[]
 ): JsonBlockConfig {
+  const layoutFieldValue = randomElement(layouts);
+  const nFieldValue = bestLayouts[layoutFieldValue];
   return {
     type,
     fields: {
-      N: `${getRandomInt(2, 40)}`,
+      N: nFieldValue,
       COSTUME: dancers,
-      LAYOUT: randomField('LAYOUT', layouts),
+      LAYOUT: field('LAYOUT', layoutFieldValue),
     },
   };
 }
@@ -181,6 +182,21 @@ const movesChill = [
   'MOVES.ThisOrThat',
   'MOVES.Rest',
 ];
+
+/**
+ * A mapping of layouts that work best with a large, central dancer sprite
+ * and a good starting number of sprites for that layout.
+ * */
+const bestLayouts: Record<string, number> = {
+  '"border"': 16,
+  '"diamond"': 16,
+  '"circle"': 10,
+  '"grid"': 16,
+  '"top"': 4,
+  '"row"': 4,
+  '"bottom"': 4,
+  '"x"': 8,
+};
 
 /**
  * Build Blockly JSON for a simple dance that reacts at given measures.
@@ -266,7 +282,7 @@ export default function buildDanceBlockly(
     blockDefinitions,
     makeNewDanceSpriteGroupBlockType,
     'LAYOUT'
-  ).filter(option => !['"random"'].includes(option));
+  ).filter(option => Object.keys(bestLayouts).includes(option));
 
   // Setup: create sprite → change move → start background → start foreground
   const makeSprite: JsonBlockConfig = {
