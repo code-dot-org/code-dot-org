@@ -6,7 +6,6 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 
 import LockoutPanel, {LockoutPanelProps} from './LockoutPanel';
@@ -26,7 +25,7 @@ const defaultArgs: LockoutPanelProps = {
 };
 
 const store = getStore();
-registerReducers({currentUser, teachingProfile});
+registerReducers({currentUser});
 store.dispatch(
   setInitialData({
     id: 1,

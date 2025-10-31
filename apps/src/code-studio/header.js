@@ -10,7 +10,6 @@ import {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
-import {fetchTeachingProfileData} from '@cdo/apps/templates/teachingProfileRedux';
 
 import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
@@ -205,7 +204,6 @@ function setUpGlobalData(store) {
       store.dispatch(setUserSignedIn(data.is_signed_in));
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
-        store.dispatch(fetchTeachingProfileData());
         data.is_verified_instructor && store.dispatch(setVerified());
 
         logToCloud.setCustomAttribute('userId', data.id);

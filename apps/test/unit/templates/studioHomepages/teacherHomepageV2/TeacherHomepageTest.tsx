@@ -26,7 +26,6 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
-import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
@@ -162,7 +161,7 @@ describe('TeacherHomepage', () => {
 
   function renderComponent(initialSections = serverSections) {
     const store = getStore();
-    registerReducers({teacherSections, currentUser, teachingProfile});
+    registerReducers({teacherSections, currentUser});
     store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
     store.dispatch(setSections(initialSections));
     return render(

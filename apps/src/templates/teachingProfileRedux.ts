@@ -35,7 +35,7 @@ type TeachingProfileActions =
 
 const API_ENDPOINT = '/teaching_profile_data';
 
-const initialState: TeachingProfileState = {
+export const initialTeachingProfileState: TeachingProfileState = {
   data: null,
   loading: false,
   error: null,
@@ -44,7 +44,7 @@ const initialState: TeachingProfileState = {
 };
 
 export default function teachingProfile(
-  state = initialState,
+  state = initialTeachingProfileState,
   action: TeachingProfileActions
 ): TeachingProfileState {
   if (action.type === SET_TEACHING_PROFILE_LOADING) {
@@ -147,18 +147,21 @@ export const fetchTeachingProfileData = (): ThunkAction<
   };
 };
 
+const getTeachingProfileSlice = (state: RootState) =>
+  state.teachingProfile ?? initialTeachingProfileState;
+
 export const selectTeachingProfileState = (state: RootState) =>
-  state.teachingProfile;
+  getTeachingProfileSlice(state);
 export const selectTeachingProfileData = (state: RootState) =>
-  state.teachingProfile.data;
+  getTeachingProfileSlice(state).data;
 export const selectTeachingProfileExists = (state: RootState) =>
-  state.teachingProfile.exists;
+  getTeachingProfileSlice(state).exists;
 export const selectTeachingProfileLoading = (state: RootState) =>
-  state.teachingProfile.loading;
+  getTeachingProfileSlice(state).loading;
 export const selectTeachingProfileHasFetched = (state: RootState) =>
-  state.teachingProfile.hasFetched;
+  getTeachingProfileSlice(state).hasFetched;
 export const selectTeachingProfileError = (state: RootState) =>
-  state.teachingProfile.error;
+  getTeachingProfileSlice(state).error;
 
 export const serializeTeachingProfileData = (
   data: Partial<TeachingProfileDataState> & {

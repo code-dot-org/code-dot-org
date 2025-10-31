@@ -22,7 +22,6 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {SchoolInfo} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepageConstants';
 import TeacherHomepageDrawer from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepageDrawer';
-import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -120,7 +119,7 @@ describe('TeacherHomepageDrawer', () => {
     existingSchoolInfo: SchoolInfo
   ) {
     const store = getStore();
-    registerReducers({currentUser, teachingProfile});
+    registerReducers({currentUser});
     store.dispatch(setInitialData({id: 1, country_code: 'US'}));
     return render(
       <Provider store={store}>

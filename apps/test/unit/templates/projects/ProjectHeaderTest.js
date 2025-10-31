@@ -12,13 +12,12 @@ import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
-import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 
 describe('ProjectHeader', () => {
   let store;
   beforeEach(() => {
     stubRedux();
-    registerReducers({currentUser, teachingProfile});
+    registerReducers({currentUser});
     store = getStore();
     store.dispatch(
       setInitialData({

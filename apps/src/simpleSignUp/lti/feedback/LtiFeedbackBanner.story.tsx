@@ -7,7 +7,6 @@ import {BANNER_STATUS} from '@cdo/apps/sharedComponents/userFeedback/FeedbackBan
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -16,7 +15,7 @@ import LtiFeedbackBanner from './LtiFeedbackBanner';
 const store = getStore();
 const currentUserUuid = 'currentUserUuid';
 const feedbackBannerKey = `lti-fb-${currentUserUuid}`;
-registerReducers({currentUser, teachingProfile});
+registerReducers({currentUser});
 store.dispatch(
   setInitialData({
     id: 1,

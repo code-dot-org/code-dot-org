@@ -20,7 +20,6 @@ import {
   setPageType,
   beginCreatingSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import teachingProfile from '@cdo/apps/templates/teachingProfileRedux';
 import i18n from '@cdo/locale';
 
 $(document).ready(showHomepage);
@@ -38,7 +37,6 @@ function showHomepage() {
     locales,
     mapbox: mapboxReducer,
     currentUser,
-    teachingProfile,
   });
   const store = getStore();
   store.dispatch(setAuthProviders(homepageData.providers));
