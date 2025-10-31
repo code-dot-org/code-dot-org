@@ -6,7 +6,10 @@ import {
   WorkspaceSerialization,
 } from '@cdo/apps/blockly/types';
 
-import getBlockOptions from './getBlockOptions';
+import getBlockOptions, {
+  getBlockOptionsDancers,
+  getBlockOptionsNumbers,
+} from './getBlockOptions';
 
 const DANCELAB_PREFIX = 'Dancelab_';
 const GENERATED_PREFIX = 'GeneratedDancers_';
@@ -34,6 +37,7 @@ const CHANGE_MOVE = 'changeMoveEachLR';
 const SET_BACKGROUND = 'setBackgroundEffectWithPalette';
 const SET_FOREGROUND = 'setForegroundEffectExtended';
 const ALTERNATE_MOVES = 'alternateMoves';
+const MAKE_NEW_DANCE_SPRITE_GROUP = 'makeNewDanceSpriteGroup';
 
 function randomElement<T>(array: readonly T[]): T {
   return array[Math.floor(Math.random() * array.length)];
@@ -94,9 +98,25 @@ function makeAlternateMovesBlock(
     type,
     fields: {
       GROUP: groupSpritesField(),
-      N: 2,
+      N: '2',
       MOVE1: move1,
       MOVE2: move2,
+    },
+  };
+}
+
+function makeNewDanceSpriteGroupBlock(
+  type: string,
+  numbers: string[],
+  dancers: string[],
+  layouts: string[]
+): JsonBlockConfig {
+  return {
+    type,
+    fields: {
+      N: randomElement(numbers),
+      COSTUME: randomElement(dancers),
+      LAYOUT: randomField('LAYOUT', layouts),
     },
   };
 }
@@ -170,6 +190,10 @@ export default function buildDanceBlockly(
     blockDefinitions,
     ALTERNATE_MOVES
   );
+  const makeNewDanceSpriteGroupBlockType = getPreferredBlockType(
+    blockDefinitions,
+    MAKE_NEW_DANCE_SPRITE_GROUP
+  );
 
   const validMoves = getBlockOptions(
     blockDefinitions,
@@ -197,6 +221,25 @@ export default function buildDanceBlockly(
     'PALETTE'
   );
 
+  const validDancers = getBlockOptionsDancers(
+    blockDefinitions,
+    makeNewDanceSpriteGroupBlockType,
+    'COSTUME'
+  );
+
+  const validLayouts = getBlockOptions(
+    blockDefinitions,
+    makeNewDanceSpriteGroupBlockType,
+    'LAYOUT'
+  ).filter(option => !['"random"'].includes(option));
+
+  const validNumbers =
+    getBlockOptionsNumbers(
+      blockDefinitions,
+      makeNewDanceSpriteGroupBlockType,
+      'N'
+    ) || [];
+
   // Setup: create sprite → change move → start background → start foreground
   const makeSprite: JsonBlockConfig = {
     type: makeSpriteBlockType,
@@ -220,6 +263,25 @@ export default function buildDanceBlockly(
     validForegrounds
   );
 
+  // Normalize validDancers to a string[] by extracting the costume string
+  const dancerStrings: string[] = (validDancers || []).map(d =>
+    Array.isArray(d) ? d[0] : d
+  );
+
+  const numberStrings: string[] = (validNumbers || []).map(d =>
+    Array.isArray(d) ? d[0] : d
+  );
+
+  const danceSpriteGroup =
+    validNumbers.length > 0 && dancerStrings.length > 0
+      ? makeNewDanceSpriteGroupBlock(
+          makeNewDanceSpriteGroupBlockType,
+          numberStrings,
+          dancerStrings,
+          validLayouts
+        )
+      : null;
+
   const alternateMoves = makeAlternateMovesBlock(
     alternateMovesBlockType,
     validMoves
@@ -230,6 +292,7 @@ export default function buildDanceBlockly(
     initialChangeMove,
     initialBg,
     initialFg,
+    ...(danceSpriteGroup ? [danceSpriteGroup] : []),
     ...(codeComplexity === 'simple' ? [alternateMoves] : [])
   );
 
