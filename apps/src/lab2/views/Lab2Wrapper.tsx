@@ -126,6 +126,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     ? 'projectSharingDisabled'
     : undefined;
 
+  // To do: to remove/update the labContainerFullScreenView styling
   return (
     <ErrorBoundary
       fallback={<ErrorFallbackPage />}
