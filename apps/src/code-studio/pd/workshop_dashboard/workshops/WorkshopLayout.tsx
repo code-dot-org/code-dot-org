@@ -172,20 +172,9 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
 
   const showLoading = useMemo(() => {
     return (
-      defaultLoading ||
-      (!workshop && workshopLoading) ||
-      (!enrollments && enrollmentsLoading) ||
-      (!surveys && surveysLoading)
+      defaultLoading || workshopLoading || enrollmentsLoading || surveysLoading
     );
-  }, [
-    defaultLoading,
-    enrollments,
-    enrollmentsLoading,
-    surveys,
-    surveysLoading,
-    workshop,
-    workshopLoading,
-  ]);
+  }, [defaultLoading, enrollmentsLoading, surveysLoading, workshopLoading]);
 
   const activeSurveyCategoryButtons = useMemo(() => {
     if (onPreSurveyPage) return questionCategoryButtons.preWorkshopSurvey;
