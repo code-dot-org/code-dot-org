@@ -741,8 +741,8 @@ Resources:
       EngineVersion: 7.1
       CacheNodeType: !If
         - IsProductionEnvironment
-        - cache.r7g.xlarge
-        - cache.t3.medium
+        - cache.r7g.large
+        - cache.t4g.micro
       NumNodeGroups: 1
       ReplicasPerNodeGroup: 1
       SecurityGroupIds:
