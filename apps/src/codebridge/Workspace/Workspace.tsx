@@ -89,7 +89,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
                 className={moduleStyles.fileBrowserHeaderText}
                 noMargin
               >
-                {codebridgeI18n.myFilesHeader()}
+                {codebridgeI18n.filesHeader()}
               </BodyFourText>
             )}
             <div className={moduleStyles.fileBrowserHeaderButtons}>
