@@ -1,8 +1,9 @@
 {
   "category": "Groups",
   "config": {
-    "func": "changeMoveEachLR",
-    "blockText": "{GROUP} do {MOVE} {DIR} forever",
+    "func": "alternateMoves",
+    "inline": false,
+    "blockText": "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}",
     "style": "lab_blocks",
     "args": [
       {
@@ -26,20 +27,13 @@
         ]
       },
       {
-        "name": "MOVE",
+        "name": "N",
+        "type": "ClampedNumber(0.1,)",
+        "field": true
+      },
+      {
+        "name": "MOVE1",
         "options": [
-          [
-            "(Next)",
-            "\"next\""
-          ],
-          [
-            "(Previous)",
-            "\"prev\""
-          ],
-          [
-            "(Random)",
-            "\"rand\""
-          ],
           [
             "Body Roll",
             "MOVES.Roll"
@@ -91,15 +85,55 @@
         ]
       },
       {
-        "name": "DIR",
+        "name": "MOVE2",
         "options": [
           [
-            "←",
-            "-1"
+            "Body Roll",
+            "MOVES.Roll"
           ],
           [
-            "→",
-            "1"
+            "Clap High",
+            "MOVES.ClapHigh"
+          ],
+          [
+            "Dab",
+            "MOVES.Dab"
+          ],
+          [
+            "Double Down",
+            "MOVES.DoubleJam"
+          ],
+          [
+            "Drop",
+            "MOVES.Drop"
+          ],
+          [
+            "Floss",
+            "MOVES.Floss"
+          ],
+          [
+            "Fresh",
+            "MOVES.Fresh"
+          ],
+          [
+            "Gangnam",
+            "MOVES.Clown"
+          ],
+          [
+            "Star",
+            "MOVES.Kick"
+          ],
+          [
+            "This or That",
+            "MOVES.ThisOrThat"
+          ],
+          [
+            "Zombie",
+            "MOVES.Thriller"
+          ],
+          [
+            "None",
+            "MOVES.Rest"
           ]
         ]
       }

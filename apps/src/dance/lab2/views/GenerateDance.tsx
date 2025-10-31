@@ -18,23 +18,30 @@ import styles from './generate-dance.module.scss';
 const GENERATE_DELAY_DURATION = 7000;
 
 const adlib: AdlibType = {
-  template:
-    'Create a dance with {vibe} and {dancers}.  Synchronize {features} with the music.',
+  template: `Generate {complexity} code for a {energy} dance, with {dancers} as backup dancers.`,
   options: {
-    vibe: [
-      {id: 'chill', text: 'a chill vibe'},
-      {id: 'energetic', text: 'an energetic vibe'},
+    complexity: [
+      {id: 'basic', text: 'basic'},
+      {id: 'complex', text: 'complex'},
+    ],
+    energy: [
+      {id: 'chill', text: 'chill'},
+      {id: 'high', text: 'high energy'},
     ],
     dancers: [
-      {id: '1', text: 'one backup dancer'},
-      {id: '2', text: 'two backup dancers'},
-      {id: '3', text: 'three backup dancers'},
-    ],
-    features: [
-      {id: 'background', text: 'the background'},
-      {id: 'danceMoves', text: 'the dance moves'},
-      {id: 'foreground', text: 'the foreground'},
-      {id: 'everything', text: 'everything'},
+      {id: 'nobody', text: 'nobody'},
+      {id: 'alien', text: 'aliens'},
+      {id: 'bear', text: 'bears'},
+      {id: 'cat', text: 'cats'},
+      {id: 'dog', text: 'dogs'},
+      {id: 'duck', text: 'ducks'},
+      {id: 'frog', text: 'frogs'},
+      {id: 'moose', text: 'moose'},
+      {id: 'pineapple', text: 'pineapples'},
+      {id: 'robot', text: 'robots'},
+      {id: 'shark', text: 'sharks'},
+      {id: 'sloth', text: 'sloths'},
+      {id: 'unicorn', text: 'unicorns'},
     ],
   },
   variantCount: 5,
@@ -79,7 +86,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   >('none');
 
   // The array of user choices in the adlib.
-  const [, setChoices] = useState<string[] | undefined>(undefined);
+  const [choices, setChoices] = useState<string[] | undefined>(undefined);
 
   const [, setPromptText] = useState('');
 
@@ -110,7 +117,13 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     setAiGenerateState('generating');
 
     const startTime = Date.now();
-    const resultBlockly = buildDanceBlockly(measures, blockDefinitions);
+    const resultBlockly = buildDanceBlockly(
+      measures,
+      blockDefinitions,
+      choices && choices[0] === 'complex' ? 'complex' : 'simple',
+      choices && choices[1] === 'high' ? 'high' : 'chill',
+      (choices && choices[2]) || 'nobody'
+    );
 
     const elapsedTime = Date.now() - startTime;
     const remainingDelayDuration = Math.max(
@@ -123,7 +136,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     runProgram();
 
     setAiGenerateState('generated');
-  }, [blockDefinitions, measures, runProgram, updateSources]);
+  }, [blockDefinitions, choices, measures, runProgram, updateSources]);
 
   useEffect(() => {
     // There can be a delay before we're playing, so wait for it explicitly.
@@ -146,6 +159,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       setAiGenerateState('edited');
     }
   }, [aiGenerateState, hasEdited, isRunning]);
+
+  const onAdlibChange = useCallback((text: string, choices: string[]) => {
+    setPromptText(text);
+    setChoices([...choices]);
+  }, []);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
@@ -174,10 +192,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           adlib={adlib}
           readOnly={aiGenerateState !== 'none'}
           glowSpeed={glowSpeed}
-          onChange={(text, choices) => {
-            setPromptText(text);
-            setChoices(choices);
-          }}
+          onChange={onAdlibChange}
         />
       )}
 
