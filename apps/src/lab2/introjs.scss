@@ -18,6 +18,7 @@
 
   .introjs-tooltipReferenceLayer {
     // This fixes the Safari bug where the introjs panel is not always visible.
+    // See https://github.com/usablica/intro.js/issues/2081.
     visibility: visible !important;
   }
 
