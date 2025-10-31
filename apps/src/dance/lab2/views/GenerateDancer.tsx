@@ -4,6 +4,7 @@ import {Heading4} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -280,7 +281,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
     const newDancerMetadata = JSON.stringify({
       adlibOption,
-      path: pathToSave,
+      path: queryParams('ai-dancer-path') || pathToSave,
       choices: choicesToSave,
       choicesExtra: choicesExtraToSave,
       variant,
