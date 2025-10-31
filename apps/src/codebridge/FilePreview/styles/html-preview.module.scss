@@ -19,6 +19,17 @@
   }
 }
 
+.fullScreenPanelContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  color: var(--text-neutral-primary);
+  background: var(--neutral-black-alpha-80);
+}
+
 .previewHeader {
   display: flex;
   justify-content: space-between;
