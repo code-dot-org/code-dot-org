@@ -7,6 +7,13 @@ import {getFolderPath} from '../utils';
 
 import {addBaseTagToDocument} from './htmlParsingHelpers';
 
+// We reference the service worker using a URL with an ESM relative import (import.meta.url)
+// so that Webpack will generate the service worker as a separate known-name JS chunk. We later
+// return this chunk in codeprojects_preview_controller.rb so that it can control the root scope.
+import(
+  /* webpackChunkName: "weblab2_project_service_worker" */ './weblab2_project_service_worker.js'
+);
+
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
   currentFile: string | undefined
@@ -18,15 +25,7 @@ function useProjectServiceWorker(
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
-        .register(
-          new URL(
-            /* webpackChunkName: "project-service-worker-1.0.0" */
-            './projectServiceWorker.js',
-            // @ts-expect-error because TypeScript does not like this syntax.
-            import.meta.url
-          )
-          //{scope: '/'}
-        )
+        .register('/weblab2_project_service_worker.js', {scope: '/'})
         .then(registration => {
           console.log(
             'Project Service Worker registered with scope:',

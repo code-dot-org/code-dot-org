@@ -94,4 +94,10 @@ class CodeprojectsPreviewController < ApplicationController
     response.headers['Content-Security-Policy'] = policies.join('; ')
     render 'show', layout: false
   end
+
+  skip_forgery_protection only: :weblab2_project_service_worker
+  def weblab2_project_service_worker
+    weblab2_project_service_worker_js = Net::HTTP.get_response(URI.join(request.base_url, '/assets/js/weblab2_project_service_worker.js')).body
+    send_data weblab2_project_service_worker_js, type: 'application/javascript'
+  end
 end
