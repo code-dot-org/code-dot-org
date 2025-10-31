@@ -953,7 +953,9 @@ Resources:
                 # See: https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#configuring-the-role-and-trust-policy
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
               StringLike:
-                token.actions.githubusercontent.com:sub: 'repo:code-dot-org/code-dot-org:environment:marketing-sites-<%=environment_type%>-*'
+                token.actions.githubusercontent.com:sub: 
+                  - 'repo:code-dot-org/code-dot-org:environment:marketing-sites-<%=environment_type%>-*'
+                  - 'repo:code-dot-org/marketing-sites:environment:marketing-sites-<%=environment_type%>-*'
       Policies:
         - PolicyName: github-actions-cloudformation-policy
           PolicyDocument:
