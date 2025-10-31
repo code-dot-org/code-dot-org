@@ -3,7 +3,6 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading4} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -329,7 +328,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
-      <ModeSwitchBar levelId={levelProperties.id} />
       <div className={moduleStyles.mainContent}>
         <Guide id="generate-panel">
           {['none', 'generating'].includes(aiGenerateState) &&

@@ -27,6 +27,9 @@ function getStatsigStableId() {
     stableId = uuidv4();
     setCookie('statsig_stable_id', stableId, {
       path: '/',
+      domain: '.code.org',
+      sameSite: 'lax',
+      secure: true,
     });
   }
 
