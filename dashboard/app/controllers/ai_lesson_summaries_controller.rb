@@ -35,7 +35,6 @@ class AiLessonSummariesController < ApplicationController
   def perform_ai_lesson_summary_by_lesson(lesson_id)
     if lesson.has_lesson_plan
       request = {
-        execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:NOT_STARTED],
         user_id: current_user.id,
         lesson_id: [lesson.id],
         unit_id: nil
