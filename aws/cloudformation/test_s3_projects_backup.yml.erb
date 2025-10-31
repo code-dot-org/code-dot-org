@@ -1,0 +1,149 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AWS Glue Table for S3 Inventory Reports with partitioning logic'
+
+Parameters:
+  InventoryReportsPrefix:
+    Type: String
+    Description: S3 prefix where inventory reports are published
+    Default: 's3://cdo-backups/project_backup_tracking/source_bucket_inventory_reports/'
+  GlueDatabaseName:
+    Type: String
+    Description: Name for the Glue database
+    Default: 's3_inventory_backup_tracking'
+
+Resources:
+  GlueDatabase:
+    Type: AWS::Glue::Database
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseInput:
+        Name: !Ref GlueDatabaseName
+        Description: 'Database for S3 inventory reports tracking'
+  InventoryReportsTable:
+    Type: AWS::Glue::Table
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref GlueDatabase
+      TableInput:
+        Name: 's3_inventory_reports'
+        Description: 'Table for searching S3 inventory reports across multiple buckets'
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          classification: 'parquet'
+          compressionType: 'gzip'
+          typeOfData: 's3_inventory'
+        StorageDescriptor:
+          Columns:
+            - Name: bucket
+              Type: string
+              Comment: 'Name of the S3 bucket'
+            - Name: key
+              Type: string
+              Comment: 'Object key'
+            - Name: version_id
+              Type: string
+              Comment: 'Version ID of the object'
+            - Name: is_latest
+              Type: boolean
+              Comment: 'Whether this is the latest version'
+            - Name: is_delete_marker
+              Type: boolean
+              Comment: 'Whether this is a delete marker'
+            - Name: size
+              Type: bigint
+              Comment: 'Size of the object in bytes'
+            - Name: last_modified_date
+              Type: timestamp
+              Comment: 'Last modified timestamp'
+            - Name: e_tag
+              Type: string
+              Comment: 'ETag of the object'
+            - Name: storage_class
+              Type: string
+              Comment: 'Storage class of the object'
+            - Name: is_multipart_uploaded
+              Type: boolean
+              Comment: 'Whether object was uploaded via multipart'
+            - Name: replication_status
+              Type: string
+              Comment: 'Replication status of the object'
+            - Name: encryption_status
+              Type: string
+              Comment: 'Encryption status of the object'
+            - Name: inventory_report_timestamp
+              Type: string
+              Comment: 'Timestamp of the inventory report this record came from'
+          Location: !Sub '${InventoryReportsPrefix}'
+          InputFormat: 'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'
+          OutputFormat: 'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
+          SerdeInfo:
+            SerializationLibrary: 'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
+        PartitionKeys:
+          - Name: source_bucket
+            Type: string
+            Comment: 'Source bucket name partition'
+          - Name: report_date
+            Type: string
+            Comment: 'Inventory report date partition'
+  PartitionUpdaterLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: GlueAndS3Access
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - glue:CreatePartition
+                  - glue:GetTable
+                  - glue:GetDatabase
+                  - glue:UpdatePartition
+                  - glue:BatchCreatePartition
+                Resource:
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:catalog'
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:database/${GlueDatabaseName}'
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:table/${GlueDatabaseName}/s3_inventory_reports'
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:ListBucket
+                Resource:
+                  - 'arn:aws:s3:::cdo-dist/lambda*'
+                  - 'arn:aws:s3:::cdo-backups/*'
+  PartitionUpdaterLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: 's3-inventory-partition-updater'
+      Runtime: ruby3.2
+      Handler: lambda_function.handler
+      Role: !GetAtt PartitionUpdaterLambdaRole.Arn
+      Timeout: 60
+      MemorySize: 256
+      Environment:
+        Variables:
+          GLUE_DATABASE: !Ref GlueDatabaseName
+          GLUE_TABLE: 's3_inventory_reports'
+          INVENTORY_PREFIX: !Ref InventoryReportsPrefix
+      Code: {"S3Bucket":"cdo-dist","S3Key":"lambda-partition-s3-inventory-reports.202510312234.zip"}
+Outputs:
+  GlueDatabaseName:
+    Description: 'Name of the Glue database'
+    Value: !Ref GlueDatabase
+
+  GlueTableName:
+    Description: 'Name of the Glue table for inventory reports'
+    Value: 's3_inventory_reports'
+
+  LambdaFunctionArn:
+    Description: 'ARN of the partition updater Lambda function'
+    Value: !GetAtt PartitionUpdaterLambda.Arn
