@@ -171,10 +171,9 @@ export const submitChatContents = createAsyncThunk(
       return;
     }
 
-    const responseTime = Date.now() - startTime;
     Lab2Registry.getInstance()
       .getMetricsReporter()
-      .reportLoadTime('AichatModelResponseTime', responseTime, [
+      .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
         {
           name: 'ModelId',
           value: modelParameters.selectedModelId,
