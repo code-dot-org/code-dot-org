@@ -22,6 +22,7 @@ import {
 
 import {commonI18n} from '../types/locale';
 
+import MusicDanceAi from './customModes/MusicDanceAi';
 import {BubbleChoiceLevelProperties} from './types';
 import useNavigateToSublevel from './useNavigateToSublevel';
 
@@ -29,6 +30,7 @@ import styles from './BubbleChoice.module.scss';
 
 const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
   levelProperties,
+  channel,
 }) => {
   // The image has a 4:3 aspect ratio.
   const imageAspectRatio = 4 / 3;
@@ -125,33 +127,11 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
 
   const navigateToSublevel = useNavigateToSublevel();
 
-  const onSingleLevel = useAppSelector(
-    ({progress}) =>
-      progress.currentLevelId &&
-      !progress.currentLessonId &&
-      !levelProperties.isProjectLevel
-  );
-  useEffect(() => {
-    if (
-      !onSingleLevel &&
-      levelProperties.customMode === BubbleChoiceCustomModes.MUSIC_DANCE_AI
-    ) {
-      // Navigate directly to the first available sublevel in the custom Music Dance AI mode.
-      navigateToSublevel(levelProperties, levelBubbleChoice.sublevels[0]);
-    }
-  }, [
-    onSingleLevel,
-    levelProperties,
-    levelBubbleChoice.sublevels,
-    navigateToSublevel,
-  ]);
-
   if (
-    !onSingleLevel &&
+    channel &&
     levelProperties.customMode === BubbleChoiceCustomModes.MUSIC_DANCE_AI
   ) {
-    // In Music Dance AI custom mode, we immediately navigate to the first sublevel so there's nothing to render.
-    return null;
+    return <MusicDanceAi levelProperties={levelProperties} channel={channel} />;
   }
 
   return (
