@@ -30,6 +30,8 @@ import styles from './GenerateCode.module.scss';
 
 const adlibs = adlibsUntyped as AdlibsType;
 
+const GENERATE_DELAY_DURATION = 5000;
+
 interface GenerateCodeProps {
   adlibOption?: string;
   adlib?: AdlibType;
@@ -58,7 +60,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     state => state.music.currentPlayheadPosition
   );
 
-  const useCache = appConfig.getValue('ai-generate-cache') === 'true';
+  const useCache = appConfig.getValue('ai-generate-real') !== 'true';
   const showFullContext =
     appConfig.getValue('ai-generate-full-context') === 'true';
 
@@ -100,6 +102,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   });
 
   const generateSong = useCallback(async () => {
+    const startTime = Date.now();
+
     dispatch(setAiGenerateState('generating'));
 
     const pseudocode = await (useCache
@@ -111,6 +115,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           (levelProperties.levelData as MusicLevelData)
             .aiCodeGenerateExtraPrompt
         ));
+
+    const elapsedTime = Date.now() - startTime;
+    const remainingDelayDuration = Math.max(
+      GENERATE_DELAY_DURATION - elapsedTime,
+      0
+    );
+    await new Promise(res => setTimeout(res, remainingDelayDuration));
 
     if (pseudocode) {
       const resultBlockly = generateBlocklyJson(pseudocode);
