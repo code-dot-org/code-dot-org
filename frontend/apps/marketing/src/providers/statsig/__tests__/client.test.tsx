@@ -109,7 +109,12 @@ describe('getClient', () => {
     expect(setCookie).toHaveBeenCalledWith(
       'statsig_stable_id',
       'new-stable-id',
-      {path: '/'},
+      {
+        path: '/',
+        domain: '.code.org',
+        sameSite: 'lax',
+        secure: true,
+      },
     );
   });
 

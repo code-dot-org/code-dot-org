@@ -153,6 +153,11 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     }
   }, [aiGenerateState, dispatch, hasEdited, isPlaying]);
 
+  const onAdlibChange = useCallback((text: string, choices: string[]) => {
+    setPromptText(text);
+    setChoices([...choices]);
+  }, []);
+
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
   const modal = [
@@ -195,10 +200,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           adlib={useAdlib}
           readOnly={aiGenerateState !== 'none'}
           glowSpeed={glowSpeed}
-          onChange={(text, choices) => {
-            setPromptText(text);
-            setChoices(choices);
-          }}
+          onChange={onAdlibChange}
         />
       )}
 
