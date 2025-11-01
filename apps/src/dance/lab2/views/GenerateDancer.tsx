@@ -26,7 +26,7 @@ import moduleStyles from './generate-dancer.module.scss';
 
 const BODY_VARIANT_COUNT = 5;
 
-const GENERATE_DELAY_DURATION = 7000;
+const GENERATE_DELAY_DURATION = 5000;
 
 const adlibOptions = {
   creature: [
