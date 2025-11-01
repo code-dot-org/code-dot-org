@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2025-10-22T14:50:58.000Z",
   "level_num": "custom",
@@ -12,7 +13,7 @@
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
-    "ai_tutor_mode": "suggest",
+    "ai_tutor_mode": "outline",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -46,7 +47,7 @@
           "language": "js",
           "contents": "// Selectors\nconst btnToggle = document.getElementById(\"btnToggle\");\nconst captionText = document.getElementById(\"captionText\");\n\n\n",
           "folderId": "0",
-          "active": false
+          "active": true
         },
         "3": {
           "id": "3",
@@ -54,7 +55,7 @@
           "language": "css",
           "contents": "/* Layout */\nbody {\n  font-family: sans-serif;\n  text-align: center;\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  align-items: center;\n  min-height: 100vh;\n  transition: background-color 0.3s, color 0.3s;\n}\n\n/* Button */\nbutton {\n  background: none;\n  border: 2px solid #ccc;\n  padding: 0.6rem 1rem;\n  border-radius: 8px;\n  cursor: pointer;\n  color: inherit;\n  transition: background-color 0.2s, border-color 0.2s;\n}\nbutton:hover {\n  background-color: rgba(128,128,128,0.15);\n  border-color: #aaa;\n}\n\n/* Hidden state */\n.hidden { \n  display: none; \n}\n\n\n/* Caption text */\n#captionText {\n  margin-top: 0.5rem;\n  font-style: italic;\n  background: rgba(0,0,0,0.05);\n  padding: 0.4rem 0.8rem;\n  border-radius: 4px;\n  width: fit-content;\n}\n",
           "folderId": "0",
-          "active": true
+          "active": false
         },
         "4": {
           "id": "4",
@@ -68,14 +69,13 @@
         }
       },
       "openFiles": [
+        "2",
         "1",
-        "3",
-        "2"
+        "3"
       ]
     },
     "encrypted_exemplar_sources": "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\n8DrV9a1aMI7Hz4IfITO4mm8cGo6AtvbBqhjlQQ==\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-22 14:50:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:56:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 18:57:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 22:18:29 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 22:18:38 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 22:19:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 22:19:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-22 14:50:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:56:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 18:57:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 22:18:29 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 22:18:38 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 22:19:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 22:19:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-31 14:36:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 18:43:57 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
