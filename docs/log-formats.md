@@ -549,6 +549,10 @@ fields @timestamp, @message
 
 CloudTrail captures API activity across the AWS account, including console, CLI, SDK, and service operations. AWS delivers gzipped JSON objects partitioned by `YYYY/MM/DD`; Athena queries them via external table `cdo.cloudtrail_logs`, which uses partition projection and the CloudTrail SerDe so new dates do not require manual partition operations.
 
+### Useful Queries/Patterns
+
+List the most recent console logins with MFA:
+```
 SELECT eventtime, json_extract_scalar(additionaleventdata,'$.MFAUsed') AS mfa_used, sourceipaddress, useridentity
 FROM cdo.cloudtrail_logs
 WHERE eventsource = 'signin.amazonaws.com'
