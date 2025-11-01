@@ -25,7 +25,10 @@ markdown <<MARKDOWN
 
 ## From HTML to Interactivity: 3 Steps
 
-#### Here is how JavaScript Connects to the DOM to make a button intearactive. 
+<img src="https://images.code.org/81172d7d887440d93de134094236427d-image-1761925481650.png" alt="digram showing steps select an element 2 add event listener and 3 update content" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
 
+
+
+#### Let's see how this looks in code.
 
 MARKDOWN
