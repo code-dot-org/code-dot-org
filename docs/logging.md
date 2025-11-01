@@ -158,6 +158,7 @@ Secondly, while the user is on the page (in addition to the above):
 | Aurora MySQL exports | CloudWatch `/aws/rds/cluster/...` | Indefinite | - |
 | RDS enhanced monitoring | CloudWatch `RDSOSMetrics` | Indefinite | - |
 | Lambda execution logs | CloudWatch `/aws/lambda/<function>` | Indefinite | - |
+| CloudTrail | S3 `cdo-logs/AWSLogs/.../CloudTrail/` | Indefinite | - |
 | Administrative audit logs | CloudWatch `/admin/auditlogs` | Indefinite | - |
 | Kinesis Firehose (deprecated) | Redshift `analysis.events` table | Indefinite | Public client can inject bad payloads causing batch failures; pipeline deprecated |
 | Statsig | Replicated to RedShift `analytics.dim_statsig_events` table | 3-4 months | - |

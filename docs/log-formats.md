@@ -14,6 +14,7 @@ This document details the specific log formats used across the Code.org platform
 - [Aurora MySQL Logs (CloudWatch Logs)](#aurora-mysql-logs-cloudwatch-logs)
 - [RDS Enhanced Monitoring (CloudWatch Logs)](#rds-enhanced-monitoring-cloudwatch-logs)
 - [Lambda Execution Logs (CloudWatch Logs)](#lambda-execution-logs-cloudwatch-logs)
+- [CloudTrail Logs](#cloudtrail-logs)
 - [Admin/Audit Logs (CloudWatch Logs)](#adminaudit-logs-cloudwatch-logs)
 - [Kinesis Firehose Events](#kinesis-firehose-events)
 
@@ -537,6 +538,45 @@ fields @timestamp, @message
 | sort @timestamp desc
 | limit 50
 ```
+
+---
+
+## CloudTrail Logs
+
+**Format:** JSON (CloudTrail event schema)  
+**Location:** `s3://cdo-logs/AWSLogs/475661607190/CloudTrail/us-east-1`  
+**Athena Table:** `cdo.cloudtrail_logs` (projection on `datedir`)
+
+CloudTrail captures API activity across the AWS account, including console, CLI, SDK, and service operations. AWS delivers gzipped JSON objects partitioned by `YYYY/MM/DD`; Athena queries them via external table `cdo.cloudtrail_logs`, which uses partition projection and the CloudTrail SerDe so new dates do not require manual partition operations.
+
+SELECT eventtime, json_extract_scalar(additionaleventdata,'$.MFAUsed') AS mfa_used, sourceipaddress, useridentity
+FROM cdo.cloudtrail_logs
+WHERE eventsource = 'signin.amazonaws.com'
+  AND eventname = 'ConsoleLogin'
+  AND datedir >= date_format(date_add('day', -10, current_date), '%Y/%m/%d')
+ORDER BY eventtime DESC
+LIMIT 1000;
+```
+
+Track IAM configuration changes over the last 7 days:
+```
+SELECT eventtime, useridentity.arn, eventname, requestparameters
+FROM cdo.cloudtrail_logs
+WHERE eventsource = 'iam.amazonaws.com'
+  AND datedir >= date_format(date_add('day', -10, current_date), '%Y/%m/%d')
+ORDER BY eventtime DESC;
+```
+
+Detect root account activity:
+```
+SELECT eventtime, eventsource, eventname, sourceipaddress
+FROM cdo.cloudtrail_logs
+WHERE useridentity.type = 'Root'
+ORDER BY eventtime DESC
+LIMIT 25;
+```
+
+CloudTrail delivery is managed by AWS; short delays can occur during regional incidents, but logs are retained indefinitely in S3. There are currently no lifecycle policies pruning historical data, so records dating back to 2021 remain queryable.
 
 ---
 
