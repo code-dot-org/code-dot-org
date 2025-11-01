@@ -60,7 +60,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     state => state.music.currentPlayheadPosition
   );
 
-  const useCache = appConfig.getValue('ai-generate-real') !== 'true';
+  const useCache = true;
   const showFullContext =
     appConfig.getValue('ai-generate-full-context') === 'true';
 
