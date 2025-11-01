@@ -517,17 +517,16 @@ const DanceView: React.FunctionComponent<{
     <div id="dance-lab" className={moduleStyles.danceLab}>
       <div className={moduleStyles.mainContent}>
         {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
-        {!guideMode && (
-          <ResourcePanel
-            isRunning={isRunning}
-            hasRun={hasRun}
-            hasEdited={hasEdited}
-            levelProperties={levelProperties}
-            headerClassName={moduleStyles.panelHeader}
-            className={moduleStyles.instructionsArea}
-            settings={settings}
-          />
-        )}
+        <ResourcePanel
+          isRunning={isRunning}
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+          levelProperties={levelProperties}
+          headerClassName={moduleStyles.panelHeader}
+          className={!guideMode ? moduleStyles.instructionsArea : ''}
+          settings={settings}
+          sidebarOnly={!!guideMode}
+        />
         <div className={moduleStyles.divider} />
         {!isToolboxMode && (
           <PanelContainer
