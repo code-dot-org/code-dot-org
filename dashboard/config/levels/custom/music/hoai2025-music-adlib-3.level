@@ -11,7 +11,7 @@
       "guideMode": "aiCodeGenerate",
       "aiCodeGenerateAdlib": {
         "id": "sounds",
-        "template": "Code a {mood} music mix. It should be a {length} length. Use {drums}.",
+        "template": "Code a {mood} music mix. It should be a {length} length. Use {drums} drums.",
         "options": {
           "mood": [
             {
@@ -44,31 +44,31 @@
           "drums": [
             {
               "id": "original",
-              "text": "original drums"
+              "text": "original"
             },
             {
               "id": "electro",
-              "text": "electro drums"
+              "text": "electro"
             },
             {
               "id": "groove",
-              "text": "groove drums"
+              "text": "groove"
             },
             {
               "id": "indie",
-              "text": "indie drums"
+              "text": "indie"
             },
             {
               "id": "pop",
-              "text": "pop drums"
+              "text": "pop"
             },
             {
               "id": "hiphop",
-              "text": "hip hop drums"
+              "text": "hip hop"
             },
             {
               "id": "rock",
-              "text": "heavy rock drums"
+              "text": "heavy rock"
             }
           ]
         },

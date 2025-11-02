@@ -29,6 +29,7 @@ const GuideInstructions: React.FunctionComponent<GuideInstructionsProps> = ({
         hasRun={hasRun}
         hasEdited={hasEdited}
         className={styles.GuideInstructions}
+        markdownClassName={styles.markdown}
       />
     </Guide>
   );

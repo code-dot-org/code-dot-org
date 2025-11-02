@@ -233,7 +233,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const getInitialChoices = () => {
     const initial: AdlibChoices = {};
-    Object.keys(adlibs[adlibOption].options).forEach(key => {
+    Object.keys(adlibs[adlibOption]?.options || []).forEach(key => {
       const opts = adlibs[adlibOption].options[key];
       initial[key] = sample(opts)?.id || '';
     });
@@ -364,6 +364,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             levelProperties.longInstructions && (
               <MainInstructionsContent
                 instructionsText={levelProperties.longInstructions}
+                markdownClassName={moduleStyles.markdown}
               />
             )}
           {aiGenerateState === 'none' &&

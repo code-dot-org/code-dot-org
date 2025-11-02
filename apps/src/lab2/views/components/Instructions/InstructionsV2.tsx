@@ -31,6 +31,8 @@ export interface InstructionsProps {
   handleInstructionsTextClick?: (id: string) => void;
   /** Optional classname for the container */
   className?: string;
+  /** Optional classname for the markdown instructions */
+  markdownClassName?: string;
   /** Optional component to render at the bottom of the main instructions. */
   bottomComponent?: React.ReactNode;
   /** Props for in-panel validation button and results table. */
@@ -69,6 +71,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   layout = 'vertical',
   handleInstructionsTextClick,
   className,
+  markdownClassName,
   bottomComponent,
   validationSettings,
   fixedDarkBackground,
@@ -120,6 +123,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
           <div className={moduleStyles.scrollingContent}>
             <MainInstructionsContent
               instructionsText={longInstructions}
+              markdownClassName={markdownClassName}
               handleInstructionsTextClick={handleInstructionsTextClick}
             />
             <PredictQuestion className={moduleStyles.predictQuestion} />
@@ -156,6 +160,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             {...feedbackProps}
             overrideTheme={overrideTheme}
             levelProperties={levelProperties}
+            markdownClassName={markdownClassName}
             handleInstructionsTextClick={handleInstructionsTextClick}
             hideContinueIfDisabled={hideContinueIfDisabled}
             styleAsBubble

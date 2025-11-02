@@ -32,6 +32,7 @@ interface NavigationAreaProps {
   requireRun?: boolean;
   hideContinueIfDisabled?: boolean;
   className?: string;
+  markdownClassName?: string;
   overrideTheme?: Theme;
   styleAsBubble?: boolean;
 }
@@ -48,6 +49,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   handleInstructionsTextClick,
   hideContinueIfDisabled,
   className,
+  markdownClassName,
   overrideTheme,
   styleAsBubble = false,
 }) => {
@@ -209,7 +211,10 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
           <div ref={feedbackRef} tabIndex={-1}>
             <EnhancedSafeMarkdown
               markdown={feedbackMessage}
-              className={moduleStyles.markdownText}
+              className={classNames(
+                moduleStyles.markdownText,
+                markdownClassName
+              )}
               handleInstructionsTextClick={handleInstructionsTextClick}
             />
           </div>

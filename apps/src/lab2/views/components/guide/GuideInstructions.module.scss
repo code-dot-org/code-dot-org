@@ -1,8 +1,19 @@
 .GuideInstructions {
   background-color: initial;
   padding: 0;
+  font-size: 16px !important;
 
   div > div {
     background-color: initial;
+  }
+}
+
+.markdown {
+  h1, h2, h3, h4 {
+    font-size: 24px;
+  }
+
+  p, li {
+    font-size: 16px;
   }
 }
