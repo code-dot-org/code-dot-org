@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
@@ -6,7 +7,10 @@ import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import Adlib, {AdlibType} from '@cdo/apps/lab2/views/components/guide/Adlib';
+import Adlib, {
+  AdlibType,
+  AdlibChoices,
+} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
@@ -85,8 +89,18 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     | 'edited'
   >('none');
 
+  const getInitialChoices = () => {
+    return {
+      complexity: 'basic',
+      energy: 'chill',
+      dancers: sample(adlib.options.dancers)?.id || 'nobody',
+    };
+  };
+
   // The array of user choices in the adlib.
-  const [choices, setChoices] = useState<string[] | undefined>(undefined);
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>(
+    getInitialChoices()
+  );
 
   const [, setPromptText] = useState('');
 
@@ -110,6 +124,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('none');
+    setAdlibChoices(getInitialChoices());
     setPromptText('');
   });
 
@@ -120,9 +135,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     const resultBlockly = buildDanceBlockly(
       measures,
       blockDefinitions,
-      choices && choices[0] === 'complex' ? 'complex' : 'simple',
-      choices && choices[1] === 'high' ? 'high' : 'chill',
-      (choices && choices[2]) || 'nobody'
+      adlibChoices && adlibChoices['complexity'] === 'complex'
+        ? 'complex'
+        : 'simple',
+      adlibChoices && adlibChoices['energy'] === 'high' ? 'high' : 'chill',
+      (adlibChoices && adlibChoices['dancers']) || 'nobody'
     );
 
     const elapsedTime = Date.now() - startTime;
@@ -136,7 +153,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     runProgram();
 
     setAiGenerateState('generated');
-  }, [blockDefinitions, choices, measures, runProgram, updateSources]);
+  }, [adlibChoices, blockDefinitions, measures, runProgram, updateSources]);
 
   useEffect(() => {
     // There can be a delay before we're playing, so wait for it explicitly.
@@ -160,9 +177,12 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     }
   }, [aiGenerateState, hasEdited, isRunning]);
 
-  const onAdlibChange = useCallback((text: string, choices: string[]) => {
+  const onAdlibChange = useCallback((choices: AdlibChoices) => {
+    setAdlibChoices({...choices});
+  }, []);
+
+  const onAdlibTextChange = useCallback((text: string) => {
     setPromptText(text);
-    setChoices([...choices]);
   }, []);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
@@ -190,9 +210,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       {['none', 'generating'].includes(aiGenerateState) && (
         <Adlib
           adlib={adlib}
+          adlibChoices={adlibChoices}
           readOnly={aiGenerateState !== 'none'}
           glowSpeed={glowSpeed}
-          onChange={onAdlibChange}
+          onChoicesChange={onAdlibChange}
+          onTextChange={onAdlibTextChange}
         />
       )}
 

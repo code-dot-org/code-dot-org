@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -8,6 +9,7 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibsType,
   AdlibType,
+  AdlibChoices,
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
@@ -62,15 +64,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const showFullContext =
     appConfig.getValue('ai-generate-full-context') === 'true';
 
-  // The array of user choices in the adlib.
-  const [choices, setChoices] = useState<string[] | undefined>(undefined);
-
-  const [contextText, setContextText] = useState(DefaultContext);
-
-  const [promptText, setPromptText] = useState(
-    adlibOption ? '' : DefaultPrompt
-  );
-
   const useText = !!(levelProperties.levelData as MusicLevelData)
     .aiCodeGenerateText;
 
@@ -85,6 +78,26 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       ? adlibs[adlibOption]
       : undefined);
 
+  const getInitialChoices = () => {
+    if (!useAdlib) return {};
+    const initial: AdlibChoices = {};
+    Object.keys(useAdlib.options).forEach(key => {
+      const opts = useAdlib.options[key];
+      initial[key] = sample(opts)?.id || '';
+    });
+    return initial;
+  };
+
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>(
+    getInitialChoices()
+  );
+
+  const [contextText, setContextText] = useState(DefaultContext);
+
+  const [promptText, setPromptText] = useState(
+    adlibOption ? '' : DefaultPrompt
+  );
+
   useEffect(() => {
     // If there is already generated music when we begin, presumably
     // because the user is returning to a level they've previously worked
@@ -96,14 +109,15 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     dispatch(setAiGenerateState('none'));
+    setAdlibChoices(getInitialChoices());
     setPromptText(adlibOption ? '' : useText ? '' : DefaultPrompt);
   });
 
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));
 
-    const pseudocode = await (useCache
-      ? generateSongCache(adlibs, adlibOption || 'complex', packId, choices)
+    const pseudocode = await (useCache && useAdlib
+      ? generateSongCache(adlibOption || '', useAdlib, packId, adlibChoices)
       : generateSongAi(
           contextText,
           packId,
@@ -120,14 +134,15 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     setPlaying(true);
     dispatch(setAiGenerateState('generated'));
   }, [
+    adlibChoices,
     adlibOption,
-    choices,
     contextText,
     dispatch,
     levelProperties.levelData,
     packId,
     promptText,
     setPlaying,
+    useAdlib,
     useCache,
   ]);
 
@@ -153,9 +168,12 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     }
   }, [aiGenerateState, dispatch, hasEdited, isPlaying]);
 
-  const onAdlibChange = useCallback((text: string, choices: string[]) => {
+  const onAdlibChoicesChange = useCallback((adlibChoices: AdlibChoices) => {
+    setAdlibChoices({...adlibChoices});
+  }, []);
+
+  const onAdlibTextChange = useCallback((text: string) => {
     setPromptText(text);
-    setChoices([...choices]);
   }, []);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
@@ -198,9 +216,11 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       {['none', 'generating'].includes(aiGenerateState) && useAdlib && (
         <Adlib
           adlib={useAdlib}
+          adlibChoices={adlibChoices}
           readOnly={aiGenerateState !== 'none'}
           glowSpeed={glowSpeed}
-          onChange={onAdlibChange}
+          onChoicesChange={onAdlibChoicesChange}
+          onTextChange={onAdlibTextChange}
         />
       )}
 

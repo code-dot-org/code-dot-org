@@ -1,6 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading4} from '@code-dot-org/component-library/typography';
+import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -9,7 +10,10 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
+import Adlib, {
+  AdlibsType,
+  AdlibChoices,
+} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
@@ -227,8 +231,20 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setTheme('Dark');
   }, [setTheme]);
 
+  const getInitialChoices = () => {
+    const initial: AdlibChoices = {};
+    Object.keys(adlibs[adlibOption].options).forEach(key => {
+      const opts = adlibs[adlibOption].options[key];
+      initial[key] = sample(opts)?.id || '';
+    });
+    return initial;
+  };
+
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>(() => {
+    return getInitialChoices();
+  });
+
   const [promptText, setPromptText] = useState<string>('');
-  const [choices, setChoices] = useState<string[] | undefined>(undefined);
 
   const variantHistory = useRef<number[]>([]);
 
@@ -241,6 +257,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('none');
+    setAdlibChoices(getInitialChoices());
     setPromptText('');
     variantHistory.current = [];
   });
@@ -270,11 +287,15 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     let pathToSave;
     if (adlibOption === 'creature-attire-mood-style-04') {
       pathToSave = 'creature-attire-mood-04';
-      choicesToSave = choices?.slice(0, -1);
-      choicesExtraToSave = [choices?.at(-1)];
+      choicesToSave = Object.keys(adlibChoices)
+        .slice(0, -1)
+        .map(key => adlibChoices[key]);
+      choicesExtraToSave = Object.keys(adlibChoices)
+        .slice(-1)
+        .map(key => adlibChoices[key]);
     } else {
       pathToSave = adlibOption;
-      choicesToSave = choices;
+      choicesToSave = Object.keys(adlibChoices).map(key => adlibChoices[key]);
       choicesExtraToSave = undefined;
     }
 
@@ -294,7 +315,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       0
     );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
-  }, [adlibOption, choices]);
+  }, [adlibChoices, adlibOption]);
 
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
@@ -319,10 +340,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     return () => resizeObserver.disconnect();
   }, []);
 
-  const onAdlibChange = useCallback((promptText: string, choices: string[]) => {
-    setPromptText(promptText);
-    setChoices([...choices]);
+  const onAdlibChoicesChange = useCallback((choices: AdlibChoices) => {
+    setAdlibChoices({...choices});
     variantHistory.current = [];
+  }, []);
+
+  const onAdlibTextChange = useCallback((text: string) => {
+    setPromptText(text);
   }, []);
 
   // We artificially increase the 'generating' time so that the image doesn't appear
@@ -376,11 +400,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               <>
                 <Adlib
                   adlib={adlibs[adlibOption]}
+                  adlibChoices={adlibChoices}
                   readOnly={['generating', 'reviewing'].includes(
                     aiGenerateState
                   )}
                   glowSpeed={glowSpeed}
-                  onChange={onAdlibChange}
+                  onChoicesChange={onAdlibChoicesChange}
+                  onTextChange={onAdlibTextChange}
                 />
                 {aiGenerateState === 'none' && (
                   <div className={moduleStyles.buttonRow}>
