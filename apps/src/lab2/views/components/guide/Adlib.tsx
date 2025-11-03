@@ -39,19 +39,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
   onChoicesChange,
   onTextChange,
 }) => {
-  //const [adlibOptions, setAdlibOptions] = useState<{[key: string]: string}>({});
   const {template, options} = adlib;
-
-  /*
-  // Initialize defaults.
-  useEffect(() => {
-    const initialOptions: {[key: string]: string} = {};
-    Object.keys(options).forEach(key => {
-      initialOptions[key] = sample(options[key])?.id || '';
-    });
-    setAdlibOptions(initialOptions);
-  }, [options]);
-  */
 
   // Compute filled text.
   const filledAdlibText = useMemo(() => {
