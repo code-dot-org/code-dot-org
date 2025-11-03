@@ -206,7 +206,7 @@ Resources:
               - 's3:RestoreObject'
             Resource: 'arn:aws:s3:::cdo-v3-libraries/libraries_<%=environment%>/*'
           # General s3 access.
-          # TODO: Further restrict permissions to grant least privilege.
+          # TODO: Switch from `allow *` then `deny risky` to a proper least-privilege allow-list
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
