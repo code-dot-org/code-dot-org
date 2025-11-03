@@ -375,9 +375,14 @@ const DanceView: React.FunctionComponent<{
       Categories: [BLOCK_TYPES.category, BLOCK_TYPES.categoryDynamic],
       ...blocksByCategory,
     };
-    const toolbox = isToolboxMode
+    let toolbox = isToolboxMode
       ? getToolboxDefinition(toolboxModeBlocks, 'categoryToolbox')
       : levelProperties.toolboxDefinition;
+
+    // Don't show the toolbox if it's empty
+    if (toolbox?.contents?.length === 0) {
+      toolbox = undefined;
+    }
 
     workspace.current = Blockly.inject(blocklyDiv, {
       toolbox,
