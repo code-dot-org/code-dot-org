@@ -3,11 +3,11 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading4} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
@@ -330,8 +330,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   // too soon.
   const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
 
-  const multiProject = useMultiProject();
-  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+  const parentProperties = useParentLevelProperties();
+  const showNavigation =
+    !levelProperties.isProjectLevel && !parentProperties?.isProjectLevel;
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>

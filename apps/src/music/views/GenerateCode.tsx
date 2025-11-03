@@ -1,8 +1,8 @@
 import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
@@ -168,8 +168,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     'listened',
   ].includes(aiGenerateState);
 
-  const multiProject = useMultiProject();
-  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+  const parentProperties = useParentLevelProperties();
+  const showNavigation =
+    !levelProperties.isProjectLevel && !parentProperties?.isProjectLevel;
 
   if (!packId) {
     return null;
