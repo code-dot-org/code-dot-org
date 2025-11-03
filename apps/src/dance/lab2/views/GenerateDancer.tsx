@@ -1,6 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading4} from '@code-dot-org/component-library/typography';
+import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -9,7 +10,10 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
+import Adlib, {
+  AdlibsType,
+  AdlibChoices,
+} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
@@ -205,6 +209,30 @@ const adlibs: AdlibsType = {
     },
     variantCount: 5,
   },
+  'creature-05': {
+    template: 'Design a {creature}.',
+    options: {creature: adlibOptions.creature},
+    variantCount: 7,
+  },
+  'creature-attire-05': {
+    template: 'Design a {creature} wearing {attire}.',
+    options: {
+      creature: adlibOptions.creature,
+      attire: adlibOptions.attire,
+    },
+    variantCount: 7,
+  },
+  'creature-attire-mood-style-05': {
+    template:
+      'Design a {creature} wearing {attire}, in a {mood} mood, with a {style} style.',
+    options: {
+      creature: adlibOptions.creature,
+      attire: adlibOptions.attire,
+      mood: adlibOptions.mood,
+      style: adlibOptions.style,
+    },
+    variantCount: 7,
+  },
 };
 
 interface DancerGenerateProps {
@@ -228,8 +256,20 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setTheme('Dark');
   }, [setTheme]);
 
+  const getInitialChoices = () => {
+    const initial: AdlibChoices = {};
+    Object.keys(adlibs[adlibOption]?.options || []).forEach(key => {
+      const opts = adlibs[adlibOption].options[key];
+      initial[key] = sample(opts)?.id || '';
+    });
+    return initial;
+  };
+
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>(() => {
+    return getInitialChoices();
+  });
+
   const [promptText, setPromptText] = useState<string>('');
-  const [choices, setChoices] = useState<string[] | undefined>(undefined);
 
   const variantHistory = useRef<number[]>([]);
 
@@ -242,6 +282,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('none');
+    setAdlibChoices(getInitialChoices());
     setPromptText('');
     variantHistory.current = [];
   });
@@ -269,13 +310,25 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     let choicesToSave;
     let choicesExtraToSave;
     let pathToSave;
-    if (adlibOption === 'creature-attire-mood-style-04') {
-      pathToSave = 'creature-attire-mood-04';
-      choicesToSave = choices?.slice(0, -1);
-      choicesExtraToSave = [choices?.at(-1)];
+    if (
+      [
+        'creature-attire-mood-style-04',
+        'creature-attire-mood-style-05',
+      ].includes(adlibOption)
+    ) {
+      pathToSave =
+        adlibOption === 'creature-attire-mood-style-04'
+          ? 'creature-attire-mood-04'
+          : 'creature-attire-mood-05';
+      choicesToSave = Object.keys(adlibChoices)
+        .slice(0, -1)
+        .map(key => adlibChoices[key]);
+      choicesExtraToSave = Object.keys(adlibChoices)
+        .slice(-1)
+        .map(key => adlibChoices[key]);
     } else {
       pathToSave = adlibOption;
-      choicesToSave = choices;
+      choicesToSave = Object.keys(adlibChoices).map(key => adlibChoices[key]);
       choicesExtraToSave = undefined;
     }
 
@@ -289,13 +342,14 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     });
     trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
     setDancerMetadata(newDancerMetadata);
+
     const elapsedTime = Date.now() - startTime;
     const remainingDelayDuration = Math.max(
       GENERATE_DELAY_DURATION - elapsedTime,
       0
     );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
-  }, [adlibOption, choices]);
+  }, [adlibChoices, adlibOption]);
 
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
@@ -320,10 +374,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     return () => resizeObserver.disconnect();
   }, []);
 
-  const onAdlibChange = useCallback((promptText: string, choices: string[]) => {
-    setPromptText(promptText);
-    setChoices([...choices]);
+  const onAdlibChoicesChange = useCallback((choices: AdlibChoices) => {
+    setAdlibChoices({...choices});
     variantHistory.current = [];
+  }, []);
+
+  const onAdlibTextChange = useCallback((text: string) => {
+    setPromptText(text);
   }, []);
 
   // We artificially increase the 'generating' time so that the image doesn't appear
@@ -349,6 +406,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             levelProperties.longInstructions && (
               <MainInstructionsContent
                 instructionsText={levelProperties.longInstructions}
+                markdownClassName={moduleStyles.markdown}
               />
             )}
           {aiGenerateState === 'none' &&
@@ -385,42 +443,53 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               <>
                 <Adlib
                   adlib={adlibs[adlibOption]}
+                  adlibChoices={adlibChoices}
                   readOnly={['generating', 'reviewing'].includes(
                     aiGenerateState
                   )}
                   glowSpeed={glowSpeed}
-                  onChange={onAdlibChange}
+                  onChoicesChange={onAdlibChoicesChange}
+                  onTextChange={onAdlibTextChange}
                 />
-                {aiGenerateState === 'none' && (
-                  <div className={moduleStyles.buttonRow}>
-                    <Button
-                      ariaLabel={'Generate dancer'}
-                      text={'Generate dancer'}
-                      type="primary"
-                      color="black"
-                      size="s"
-                      iconLeft={{iconName: 'sparkles'}}
-                      onClick={generateDancer}
-                      className={moduleStyles.buttonWide}
-                    />
-                  </div>
-                )}
+                <div className={moduleStyles.buttonRow}>
+                  <Button
+                    ariaLabel={
+                      aiGenerateState === 'none'
+                        ? 'Generate dancer'
+                        : 'Generating dancer'
+                    }
+                    text={
+                      aiGenerateState === 'none'
+                        ? 'Generate dancer'
+                        : 'Generating dancer'
+                    }
+                    type="primary"
+                    color="black"
+                    size="s"
+                    iconLeft={{iconName: 'sparkles'}}
+                    isPending={aiGenerateState === 'generating'}
+                    disabled={aiGenerateState === 'generating'}
+                    onClick={generateDancer}
+                    className={moduleStyles.buttonWide}
+                  />
+                </div>
               </>
             )}
-          {aiGenerateState === 'generating' ? 'Generating dancer.' : ''}
           {aiGenerateState === 'reviewing' && (
             <div>
-              <Heading4>Your Dancer is Ready</Heading4>
-              <div>Do you want to keep what AI generated?</div>
+              <Heading4>Decide what to do next</Heading4>
+              <div>
+                AI generated a dancer based on your prompt, "{promptText}"
+              </div>
             </div>
           )}
           {aiGenerateState === 'reviewing' && (
             <>
               <div className={moduleStyles.buttonRow}>
                 <Button
-                  ariaLabel={'Try prompting again'}
-                  text={'Try prompting again'}
-                  type="primary"
+                  ariaLabel={'Back to prompt'}
+                  text={'Back to prompt'}
+                  type="secondary"
                   color="black"
                   size="s"
                   onClick={() => setAiGenerateState('none')}
