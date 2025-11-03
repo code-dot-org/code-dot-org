@@ -47,7 +47,6 @@ module HocLegacy
     end
 
     # POST /api/hour/certificate
-    # POST /v2/certificate
     def certificate
       session_params = params.permit(:session_s, :name_s)
       session_row = PEGASUS_DB[:hoc_activity].where(session: session_params[:session_s]).first || {}
