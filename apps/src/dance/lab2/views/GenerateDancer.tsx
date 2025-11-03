@@ -3,6 +3,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading4} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -279,7 +280,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
     const newDancerMetadata = JSON.stringify({
       adlibOption,
-      path: pathToSave,
+      path: queryParams('ai-dancer-path') || pathToSave,
       choices: choicesToSave,
       choicesExtra: choicesExtraToSave,
       variant,
@@ -316,6 +317,12 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     resizeObserver.observe(containerRef.current);
     setContainerHeight(containerRef.current.clientHeight ?? 0);
     return () => resizeObserver.disconnect();
+  }, []);
+
+  const onAdlibChange = useCallback((promptText: string, choices: string[]) => {
+    setPromptText(promptText);
+    setChoices([...choices]);
+    variantHistory.current = [];
   }, []);
 
   // We artificially increase the 'generating' time so that the image doesn't appear
@@ -373,11 +380,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                     aiGenerateState
                   )}
                   glowSpeed={glowSpeed}
-                  onChange={(promptText, choices) => {
-                    setPromptText(promptText);
-                    setChoices(choices);
-                    variantHistory.current = [];
-                  }}
+                  onChange={onAdlibChange}
                 />
                 {aiGenerateState === 'none' && (
                   <div className={moduleStyles.buttonRow}>

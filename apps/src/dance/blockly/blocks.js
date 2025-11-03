@@ -104,6 +104,20 @@ const customInputTypes = {
       return block.getFieldValue(arg.name);
     },
   },
+  generatedDancerImage: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldImage(urls.headUrl, 40, 40),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      return `"${GENERATED_DANCER}"`;
+    },
+  },
 };
 
 export default {
