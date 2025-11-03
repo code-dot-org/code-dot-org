@@ -17,7 +17,12 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
-  const {serviceWorkerReady} = useProjectServiceWorker(source, currentFile);
+  const [previewKeyIndex, setPreviewKeyIndex] = useState(0);
+  const {serviceWorkerReady} = useProjectServiceWorker(
+    source,
+    currentFile,
+    () => setPreviewKeyIndex(previewKeyIndex + 1)
+  );
   const [allowScripts, setAllowScripts] = useState(false);
 
   const parentOrigin = useMemo(() => {
@@ -43,13 +48,6 @@ const InnerHTMLPreview = () => {
         } else {
           setSource(data.source);
         }
-      } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
-        setCurrentFile(data.filePath);
-        // Tell the parent that we are changing the file, as this came from a link click.
-        window.parent.postMessage(
-          {type: IframeMessageType.FILE_UPDATED, fileName: data.filePath},
-          parentOrigin
-        );
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
         setCurrentFile(data.fileName);
         // We don't need to update the parent, because they initiated this change.
@@ -74,6 +72,12 @@ const InnerHTMLPreview = () => {
       window.removeEventListener('message', handleMessage);
     };
   }, [handleMessage, parentOrigin]);
+
+  useEffect(() => {
+    if (iframeRef.current) {
+      iframeRef.current.contentWindow?.location.reload();
+    }
+  }, [previewKeyIndex]);
 
   const getPreview = useCallback(() => {
     // if (blobUrl === NOT_FOUND_FILE) {

@@ -9,7 +9,8 @@ import {addBaseTagToDocument} from './htmlParsingHelpers';
 
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
-  currentFile: string | undefined
+  currentFile: string | undefined,
+  incrementPreviewKeyIndex: () => void
 ) {
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
@@ -43,13 +44,21 @@ function useProjectServiceWorker(
             if (event.data.type === 'RECEIVED_SOURCE') {
               console.log('received source acknowledged by service worker');
               setServiceWorkerReady(true);
+              incrementPreviewKeyIndex();
             }
+            if (event.data.type === 'UPDATED_CURRENT_FILE') {
+              console.log('service worker confirmed current file update');
+              incrementPreviewKeyIndex();
+            }
+          };
+          return () => {
+            registration.unregister();
           };
         });
     } else {
       console.error('Service workers are not supported in this browser.');
     }
-  }, []);
+  }, [incrementPreviewKeyIndex]);
 
   // Send source data to service worker when it changes
   useEffect(() => {
@@ -99,7 +108,6 @@ function useProjectServiceWorker(
       serviceWorker.postMessage({
         type: 'UPDATE_FILES',
         files: filesData,
-        currentFile: currentFile,
       });
     } else {
       console.log('skipping sending to service worker', {
@@ -107,7 +115,17 @@ function useProjectServiceWorker(
         source,
       });
     }
-  }, [serviceWorker, source, currentFile]);
+  }, [serviceWorker, source]);
+
+  useEffect(() => {
+    if (serviceWorker && currentFile) {
+      console.log('Notifying service worker of current file:', currentFile);
+      serviceWorker.postMessage({
+        type: 'SET_CURRENT_FILE',
+        currentFile,
+      });
+    }
+  }, [serviceWorker, currentFile]);
 
   function getFullyQualifiedFileName(
     fileName: string,

@@ -48,6 +48,7 @@ function main() {
     } else if (type === 'SET_CURRENT_FILE') {
       currentFile = newCurrentFile;
       console.log('Service worker current file set to:', currentFile);
+      sendMessageToAllClients('UPDATED_CURRENT_FILE');
     }
   });
 
