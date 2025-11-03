@@ -69,12 +69,16 @@
             {
               "id": "rock",
               "text": "heavy rock"
+            },
+            {
+              "id": "acoustic",
+              "text": "acoustic"
             }
           ]
         },
         "variantCount": 3
       },
-      "aiCodeGenerateExtraPrompt": "You can also use any of the following additional drum sounds: \"{drumSounds}\"."
+      "aiCodeGenerateExtraPrompt": "You can also use any of the following additional drum sounds: \"{drumSounds}\". If asked to play \"acoustic\" drums, use the \"acoustic_arcade\" ones."
     },
     "encrypted": "false",
     "offer_browser_tts": "false",
