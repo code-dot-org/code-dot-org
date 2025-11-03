@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {Heading4} from '@code-dot-org/component-library/typography';
-import {sample} from 'lodash';
 import * as GoogleBlockly from 'blockly/core';
+import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
@@ -163,7 +163,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   }, [
     adlibChoices,
     blockDefinitions,
-    choices,
     measures,
     runProgram,
     updateBlocklyFlyout,
