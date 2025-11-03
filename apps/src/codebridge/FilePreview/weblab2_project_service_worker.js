@@ -13,6 +13,7 @@ function main() {
   const IGNORED_FILE_PATHS = [
     '/',
     '/shared/css/fonts/barlow-semi-condensed.scss',
+    '/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf',
     '/shared/css/fonts/figtree.scss',
     '/assets/js/webpack-runtime.js',
     '/assets/js/codeprojects_preview/show.js',
