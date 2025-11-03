@@ -21,10 +21,10 @@ const PersonalizationInformationBox: React.FC<
           if (parts.length === 2) {
             return (
               <div className={style.boldedInformationBox}>
-                <BodyThreeText>
+                <BodyThreeText noMargin>
                   <strong>{parts[0].trim()}</strong>
                 </BodyThreeText>
-                <BodyThreeText>{parts[1].trim()}</BodyThreeText>
+                <BodyThreeText noMargin>{parts[1].trim()}</BodyThreeText>
               </div>
             );
           }
@@ -36,7 +36,7 @@ const PersonalizationInformationBox: React.FC<
       }
       case 'regular':
       default:
-        return <BodyThreeText>{information}</BodyThreeText>;
+        return <BodyThreeText noMargin>{information}</BodyThreeText>;
     }
   };
 
