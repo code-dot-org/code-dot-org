@@ -9,7 +9,8 @@
 
 function main() {
   //const SERVE_PROJECT_SEGMENT = '/serve-project';
-  console.log('hi');
+  let filesData = {};
+  let currentFile = 'index.html'; // Default file
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -22,9 +23,6 @@ function main() {
     event.waitUntil(self.clients.claim());
     sendMessageToAllClients('ACTIVATE');
   });
-
-  let filesData = {};
-  let currentFile = 'index.html'; // Default file
 
   // Listen for messages from the main thread
   self.addEventListener('message', event => {
@@ -50,7 +48,23 @@ function main() {
       url,
       pathname: url.pathname,
     });
-    if (url.pathname.length > 1 && filesData) {
+    const filename = getFilenameFromUrl(url);
+    console.log('Derived filename from URL:', filename);
+    const otherOrigin = `${location.protocol}//channel.${location.hostname}`;
+    console.log({
+      url,
+      locationOrigin: location.origin,
+      urlOriginMatches: url.origin === location.origin,
+      pathnameLength: url.pathname.length,
+      startsWithPreview: url.pathname.startsWith('/preview'),
+      otherOrigin,
+    });
+    if (
+      (url.origin === location.origin &&
+        url.pathname.length > 1 &&
+        url.pathname.startsWith('/preview')) ||
+      url.origin === otherOrigin
+    ) {
       console.log('Service worker intercepting fetch for:', url.pathname);
       event.respondWith(handleProjectRequest(url));
     } else {
@@ -61,26 +75,32 @@ function main() {
 
   sendMessageToAllClients('SERVICE_WORKER_LOADED?');
 
+  function getFilenameFromUrl(url) {
+    console.log('Handling project request for URL:', {url});
+    const idx = url.pathname.indexOf('/preview');
+    let remainder =
+      idx >= 0 ? url.pathname.substring(idx + '/preview'.length) : url.pathname;
+    if (remainder.startsWith('/')) {
+      remainder = remainder.substring(1);
+    }
+    // Allow ?file= overrides (optional enhancement)
+    let requestedFile = remainder || currentFile || 'index.html';
+    console.log({remainder, requestedFile});
+
+    if (requestedFile === '' || requestedFile === '/') {
+      requestedFile = 'index.html';
+    }
+
+    // Normalize (remove accidental leading slash)
+    if (requestedFile.startsWith('/')) {
+      requestedFile = requestedFile.slice(1);
+    }
+    return requestedFile;
+  }
+
   async function handleProjectRequest(url) {
     try {
-      // Extract portion after /serve-project
-      console.log('Handling project request for URL:', {url});
-      let remainder = url.pathname; // maybe "" or "/some/file"
-      if (remainder.startsWith('/')) {
-        remainder = remainder.substring(1);
-      }
-
-      // Allow ?file= overrides (optional enhancement)
-      let requestedFile = remainder || currentFile || 'index.html';
-
-      if (requestedFile === '' || requestedFile === '/') {
-        requestedFile = 'index.html';
-      }
-
-      // Normalize (remove accidental leading slash)
-      if (requestedFile.startsWith('/')) {
-        requestedFile = requestedFile.slice(1);
-      }
+      const requestedFile = getFilenameFromUrl(url);
 
       console.log('Service worker serving file:', requestedFile);
 

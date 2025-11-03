@@ -82,7 +82,11 @@ function useProjectServiceWorker(
           // Process HTML files to add base tag
           const parser = new DOMParser();
           const doc = parser.parseFromString(file.contents, 'text/html');
-          addBaseTagToDocument(doc, `${window.location.origin}/${folder}/`);
+          const urlSuffix = folder ? `${folder}/` : '';
+          addBaseTagToDocument(
+            doc,
+            `${window.location.protocol}//channel.${window.location.hostname}${urlSuffix}`
+          );
           content = doc.documentElement.outerHTML;
         } else if (file.language === 'css') {
           mimeType = 'text/css';
