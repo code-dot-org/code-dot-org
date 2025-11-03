@@ -99,6 +99,14 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   );
 
   useEffect(() => {
+    // If we are clearing, make sure we are called with the new
+    // block count before deciding what to do next.
+    if (aiGenerateState === 'clearing' && blockCount <= 1) {
+      dispatch(setAiGenerateState('none'));
+    }
+  }, [aiGenerateState, blockCount, dispatch]);
+
+  useEffect(() => {
     // If there is already generated music when we begin, presumably
     // because the user is returning to a level they've previously worked
     // on, then skip AI generation.
@@ -147,7 +155,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   ]);
 
   useEffect(() => {
-    // There can be a delay before we're playing, so wait for it explicitly.
+    // There can be a delay before we're playing (often due to sample loading),
+    // so wait for it explicitly.
     if (aiGenerateState === 'generated' && isPlaying) {
       dispatch(setAiGenerateState('listening'));
     }
@@ -184,6 +193,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     'generated',
     'listening',
     'listened',
+    'clearing',
   ].includes(aiGenerateState);
 
   const multiProject = useMultiProject();
@@ -271,15 +281,15 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
           <div className={styles.buttonRow}>
             <Button
-              ariaLabel={'Try prompting again'}
-              text={'Try prompting again'}
+              ariaLabel={'Back to prompt'}
+              text={'Back to prompt'}
               type="primary"
               color="black"
               size="s"
               onClick={() => {
                 setPlaying(false);
                 clearCode(true);
-                dispatch(setAiGenerateState('none'));
+                dispatch(setAiGenerateState('clearing'));
               }}
               className={styles.buttonWide}
             />
@@ -314,6 +324,19 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         <>
           <div>That's a great mix!</div>
           <div className={styles.buttonRow}>
+            <Button
+              ariaLabel={'Back to prompt'}
+              text={'Back to prompt'}
+              type="secondary"
+              color="black"
+              size="s"
+              onClick={() => {
+                setPlaying(false);
+                clearCode(true);
+                dispatch(setAiGenerateState('clearing'));
+              }}
+              className={styles.buttonWide}
+            />
             {showNavigation && (
               <NavigationArea
                 levelProperties={levelProperties}
@@ -321,6 +344,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 hasRun={true}
                 hasEdited={true}
                 isRunning={false}
+                className={styles.buttonWide}
               />
             )}
           </div>

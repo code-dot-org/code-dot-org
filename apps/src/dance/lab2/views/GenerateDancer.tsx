@@ -309,6 +309,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     });
     trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
     setDancerMetadata(newDancerMetadata);
+
     const elapsedTime = Date.now() - startTime;
     const remainingDelayDuration = Math.max(
       GENERATE_DELAY_DURATION - elapsedTime,
@@ -436,9 +437,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             <>
               <div className={moduleStyles.buttonRow}>
                 <Button
-                  ariaLabel={'Try prompting again'}
-                  text={'Try prompting again'}
-                  type="primary"
+                  ariaLabel={'Back to prompt'}
+                  text={'Back to prompt'}
+                  type="secondary"
                   color="black"
                   size="s"
                   onClick={() => setAiGenerateState('none')}

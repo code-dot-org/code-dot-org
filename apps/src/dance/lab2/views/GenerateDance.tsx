@@ -247,9 +247,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
 
           <div className={styles.buttonRow}>
             <Button
-              ariaLabel={'Try prompting again'}
-              text={'Try prompting again'}
-              type="primary"
+              ariaLabel={'Back to prompt'}
+              text={'Back to prompt'}
+              type="secondary"
               color="black"
               size="s"
               onClick={() => {
@@ -292,6 +292,19 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             Amazing moves! Keep editing, or click Finish when you're done.
           </div>
           <div className={styles.buttonRow}>
+            <Button
+              ariaLabel={'Back to prompt'}
+              text={'Back to prompt'}
+              type="secondary"
+              color="black"
+              size="s"
+              onClick={() => {
+                startOver();
+                setAiGenerateState('none');
+                resetProgram();
+              }}
+              className={styles.buttonWide}
+            />
             {showNavigation && (
               <NavigationArea
                 levelProperties={levelProperties}
@@ -299,6 +312,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 hasRun={true}
                 hasEdited={true}
                 isRunning={false}
+                className={styles.buttonWide}
               />
             )}
           </div>
