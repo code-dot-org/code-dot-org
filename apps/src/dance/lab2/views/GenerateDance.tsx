@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import * as GoogleBlockly from 'blockly/core';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
@@ -59,6 +60,9 @@ interface GenerateCodeProps {
   resetProgram: () => void;
   updateSources: (newSources: WorkspaceSerialization) => void;
   startOver: () => void;
+  updateBlocklyFlyout: (
+    toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo
+  ) => void;
 }
 
 // Generate dance code.
@@ -74,6 +78,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   resetProgram,
   updateSources,
   startOver,
+  updateBlocklyFlyout,
 }) => {
   const [aiGenerateState, setAiGenerateState] = useState<
     | 'none'
@@ -117,8 +122,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     setAiGenerateState('generating');
 
     const startTime = Date.now();
-    const resultBlockly = buildDanceBlockly(
-      measures,
+    const {workspaceSerialization, flyoutDefinition} = buildDanceBlockly(
+      measures.filter(measure => measure !== 1), // First measure is redundant with "when run"
       blockDefinitions,
       choices && choices[0] === 'complex' ? 'complex' : 'simple',
       choices && choices[1] === 'high' ? 'high' : 'chill',
@@ -132,11 +137,19 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-    updateSources(resultBlockly);
+    updateSources(workspaceSerialization);
+    updateBlocklyFlyout(flyoutDefinition);
     runProgram();
 
     setAiGenerateState('generated');
-  }, [blockDefinitions, choices, measures, runProgram, updateSources]);
+  }, [
+    blockDefinitions,
+    choices,
+    measures,
+    runProgram,
+    updateBlocklyFlyout,
+    updateSources,
+  ]);
 
   useEffect(() => {
     // There can be a delay before we're playing, so wait for it explicitly.

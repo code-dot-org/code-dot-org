@@ -1,4 +1,14 @@
-// AI generated file.
+/**
+ * Build Blockly JSON for a dance level based on measures and complexity.
+ * Returns both workspace serialization and flyout toolbox definition.
+ * Prioritizes similiarly named blocks from GeneratedDancers over Dancelab.
+ * Creates different block structures based on code complexity.
+ * Default block field values and configuration are based on prompt options.
+ * Code Complexity determines overall block structure, as well as available field options.
+ * Toolbox blocks are dynamically synced to generated blocks with each prompt.
+ */
+
+import * as GoogleBlockly from 'blockly/core';
 
 import {
   BlockDefinition,
@@ -7,6 +17,11 @@ import {
 } from '@cdo/apps/blockly/types';
 
 import getBlockOptions from './getBlockOptions';
+
+type BlockState = GoogleBlockly.serialization.blocks.State & {
+  kind: 'block';
+};
+type BlockStateFlyout = GoogleBlockly.utils.toolbox.BlockInfo;
 
 const DANCELAB_PREFIX = 'Dancelab_';
 const GENERATED_PREFIX = 'GeneratedDancers_';
@@ -33,24 +48,48 @@ const MAKE_SPRITE = 'makeAnonymousDanceSprite';
 const CHANGE_MOVE = 'changeMoveEachLR';
 const SET_BACKGROUND = 'setBackgroundEffectWithPalette';
 const SET_FOREGROUND = 'setForegroundEffectExtended';
-const ALTERNATE_MOVES = 'alternateMoves';
 const MAKE_NEW_DANCE_SPRITE_GROUP = 'makeNewDanceSpriteGroup';
+const AT_TIMESTAMP_NOT_AFTER = 'atTimestampNotAfter';
 
 function randomElement<T>(array: readonly T[]): T {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-function randomField(name: string, options: string[]): string {
-  return `<field name="${name}">${randomElement(options)}</field>`;
+// Create a field XML string with random option from options array.
+// Restricts the field options to those provided if simpleCode is true.
+function randomField(
+  name: string,
+  options: string[],
+  simpleCode?: boolean
+): string {
+  const escapedOptions = options.map(option => option.replace(/"/g, '&quot;'));
+  const configValue = simpleCode ? `${escapedOptions.join(',')}` : '';
+  const configAttribute = simpleCode ? `config="${configValue}"` : '';
+  return `<field name="${name}" ${configAttribute}>${randomElement(
+    options
+  )}</field>`;
 }
 
-function field(name: string, option: string): string {
-  return `<field name="${name}">${option}</field>`;
+// Create a field XML string with given option and optional options array.
+// Restricts the field options to those provided if simpleCode is true.
+function field(
+  name: string,
+  option: string,
+  options?: string[],
+  simpleCode?: boolean
+): string {
+  const escapedOptions = options?.map(opt => opt.replace(/"/g, '&quot;'));
+  const configValue = simpleCode ? `${escapedOptions?.join(',')}` : '';
+  const configAttribute = simpleCode ? `config="${configValue}"` : '';
+  return `<field name="${name}" ${configAttribute}>${option}</field>`;
 }
 
+// Create a GROUP field XML string. Value is determined by backgroundDancers or
+// an optional defaultFieldValue. Options are restricted if simpleCode is true.
 function groupSpritesField(
   backgroundDancers: string,
-  simpleCode: boolean
+  simpleCode: boolean,
+  defaultFieldValue?: string
 ): string {
   // The config value determines the selectable options in the dropdown.
   // If there are no background dancers, the only option is the generated dancer.
@@ -61,11 +100,17 @@ function groupSpritesField(
       : `sprites,&quot;GENERATED_DANCER&quot;,&quot;${backgroundDancers.toUpperCase()}&quot;`;
   const configAttribute = simpleCode ? `config="${configValue}"` : '';
   // The field value determines the default selected option in the dropdown.
+  // Choose based on background dancers unless a specific default is provided.
   const fieldValue =
-    backgroundDancers === 'nobody' ? '&quot;GENERATED_DANCER&quot;' : `sprites`;
+    defaultFieldValue ||
+    (backgroundDancers === 'nobody'
+      ? '&quot;GENERATED_DANCER&quot;'
+      : `sprites`);
   return `<field name="GROUP" ${configAttribute}>${fieldValue}</field>`;
 }
 
+// Create a COSTUME field XML string. Value is determined by backgroundDancers.
+// Restricts the field options to just the backgroundDancers if simpleCode is true.
 function costumeSpritesField(
   backgroundDancers: string,
   simpleCode: boolean
@@ -86,45 +131,30 @@ function unitMeasuresField(): string {
 function makeSetBackgroundBlock(
   type: string,
   effects: string[],
-  palettes: string[]
-): JsonBlockConfig {
+  palettes: string[],
+  simpleCode: boolean
+): BlockState {
   return {
     type,
     fields: {
       PALETTE: randomField('PALETTE', palettes),
-      EFFECT: randomField('EFFECT', effects),
+      EFFECT: randomField('EFFECT', effects, simpleCode),
     },
+    kind: 'block',
   };
 }
 
 function makeSetForegroundBlock(
   type: string,
-  effects: string[]
-): JsonBlockConfig {
-  return {
-    type,
-    fields: {
-      EFFECT: randomField('EFFECT', effects),
-    },
-  };
-}
-
-function makeAlternateMovesBlock(
-  type: string,
-  moves: string[],
-  backgroundDancers: string,
+  effects: string[],
   simpleCode: boolean
-): JsonBlockConfig {
-  const move1 = randomElement(moves);
-  const move2 = randomElement(moves.filter(move => move !== move1));
+): BlockState {
   return {
     type,
     fields: {
-      GROUP: groupSpritesField(backgroundDancers, simpleCode),
-      N: '2',
-      MOVE1: field('MOVE', move1),
-      MOVE2: field('MOVE', move2),
+      EFFECT: randomField('EFFECT', effects, simpleCode),
     },
+    kind: 'block',
   };
 }
 
@@ -133,7 +163,7 @@ function makeNewDanceSpriteGroupBlock(
   backgroundDancers: string,
   layouts: string[],
   simpleCode: boolean
-): JsonBlockConfig {
+): BlockState {
   const layoutFieldValue = randomElement(layouts);
   const nFieldValue = bestLayouts[layoutFieldValue];
   return {
@@ -141,8 +171,9 @@ function makeNewDanceSpriteGroupBlock(
     fields: {
       N: nFieldValue,
       COSTUME: costumeSpritesField(backgroundDancers, simpleCode),
-      LAYOUT: field('LAYOUT', layoutFieldValue),
+      LAYOUT: field('LAYOUT', layoutFieldValue, layouts, simpleCode),
     },
+    kind: 'block',
   };
 }
 
@@ -150,22 +181,25 @@ function makeChangeMoveEachLRBlock(
   type: string,
   moves: string[],
   backgroundDancers: string,
-  simpleCode: boolean
-): JsonBlockConfig {
+  simpleCode: boolean,
+  defaultGroupFieldValue?: string
+): BlockState {
   return {
     type,
     fields: {
-      GROUP: groupSpritesField(backgroundDancers, simpleCode),
-      MOVE: randomField('MOVE', moves),
+      GROUP: groupSpritesField(
+        backgroundDancers,
+        simpleCode,
+        defaultGroupFieldValue
+      ),
+      MOVE: randomField('MOVE', moves, simpleCode),
       DIR: dirLeftRightField(randomElement([-1, 1])),
     },
+    kind: 'block',
   };
 }
 
-function chainBlocks(
-  head: JsonBlockConfig,
-  ...rest: JsonBlockConfig[]
-): JsonBlockConfig {
+function chainBlocks(head: BlockState, ...rest: BlockState[]): BlockState {
   let current = head;
   for (const b of rest) {
     current.next = {block: b};
@@ -238,7 +272,10 @@ export default function buildDanceBlockly(
   codeComplexity: 'simple' | 'complex',
   energy: 'chill' | 'high',
   backgroundDancers: string
-): WorkspaceSerialization {
+): {
+  workspaceSerialization: WorkspaceSerialization;
+  flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo;
+} {
   const changeMoveBlockType = getPreferredBlockType(
     blockDefinitions,
     CHANGE_MOVE
@@ -255,14 +292,25 @@ export default function buildDanceBlockly(
     blockDefinitions,
     MAKE_SPRITE
   );
-  const alternateMovesBlockType = getPreferredBlockType(
-    blockDefinitions,
-    ALTERNATE_MOVES
-  );
   const makeNewDanceSpriteGroupBlockType = getPreferredBlockType(
     blockDefinitions,
     MAKE_NEW_DANCE_SPRITE_GROUP
   );
+  const atTimestampNotAfterBlockType = getPreferredBlockType(
+    blockDefinitions,
+    AT_TIMESTAMP_NOT_AFTER
+  );
+
+  // This ensures the blocks appear in the expected order in the flyout.
+  // World blocks -> sprite blocks -> action blocks -> event blocks
+  const flyoutBlockOrder = [
+    setBackgroundBlockType,
+    setForegroundBlockType,
+    makeSpriteBlockType,
+    makeNewDanceSpriteGroupBlockType,
+    changeMoveBlockType,
+    atTimestampNotAfterBlockType,
+  ];
 
   const validMoves = getBlockOptions(
     blockDefinitions,
@@ -312,107 +360,160 @@ export default function buildDanceBlockly(
     'LAYOUT'
   ).filter(option => Object.keys(bestLayouts).includes(option));
 
+  const simpleCode = codeComplexity === 'simple';
+
+  const flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo = {
+    kind: 'flyoutToolbox',
+    contents: [],
+  };
+
   // Setup: create sprite → change move → start background → start foreground
-  const makeSprite: JsonBlockConfig = {
+  const makeSpriteBlock: BlockState = {
     type: makeSpriteBlockType,
     fields: {
       LOCATION: '<field name="LOCATION">{x: 200, y: 200}</field>',
     },
+    kind: 'block',
   };
 
   const initialChangeMove = makeChangeMoveEachLRBlock(
     changeMoveBlockType,
     validMoves,
     backgroundDancers,
-    codeComplexity === 'simple'
+    simpleCode
   );
   const initialBg = makeSetBackgroundBlock(
     setBackgroundBlockType,
     validBackgrounds,
-    validPalettes
+    validPalettes,
+    simpleCode
   );
   const initialFg = makeSetForegroundBlock(
     setForegroundBlockType,
-    validForegrounds
+    validForegrounds,
+    simpleCode
   );
 
-  const danceSpriteGroup =
-    backgroundDancers !== 'nobody'
-      ? makeNewDanceSpriteGroupBlock(
-          makeNewDanceSpriteGroupBlockType,
-          backgroundDancers,
-          validLayouts,
-          codeComplexity === 'simple'
-        )
-      : null;
+  flyoutDefinition.contents.push({...makeSpriteBlock});
+  flyoutDefinition.contents.push({...initialChangeMove});
+  flyoutDefinition.contents.push({...initialBg});
+  flyoutDefinition.contents.push({...initialFg});
 
-  const alternateMoves = makeAlternateMovesBlock(
-    alternateMovesBlockType,
+  const danceSpriteGroup = makeNewDanceSpriteGroupBlock(
+    makeNewDanceSpriteGroupBlockType,
+    backgroundDancers,
+    validLayouts,
+    simpleCode
+  );
+
+  if (backgroundDancers !== 'nobody' || codeComplexity === 'complex') {
+    flyoutDefinition.contents.push({...danceSpriteGroup});
+  }
+
+  const leadGroupValue = '&quot;GENERATED_DANCER&quot;';
+  const leadChangeMoveBlock = makeChangeMoveEachLRBlock(
+    changeMoveBlockType,
     validMoves,
     backgroundDancers,
-    codeComplexity === 'simple'
+    simpleCode,
+    leadGroupValue
+  );
+
+  const backupGroupValue = `&quot;${backgroundDancers.toUpperCase()}&quot;`;
+  const backupChangeMoveBlock = makeChangeMoveEachLRBlock(
+    changeMoveBlockType,
+    validMoves,
+    backgroundDancers,
+    simpleCode,
+    backupGroupValue
   );
 
   const setupDoChain = chainBlocks(
-    makeSprite,
-    ...(danceSpriteGroup ? [danceSpriteGroup] : []),
     initialBg,
     initialFg,
-    ...(codeComplexity === 'complex' ? [initialChangeMove] : []),
-    ...(codeComplexity === 'simple' ? [alternateMoves] : [])
+    makeSpriteBlock,
+    ...(backgroundDancers !== 'nobody' ? [danceSpriteGroup] : []),
+    ...(simpleCode
+      ? [leadChangeMoveBlock, backupChangeMoveBlock]
+      : [initialChangeMove])
   );
 
-  const setupBlock: JsonBlockConfig = {
-    type: 'Dancelab_whenSetup',
-    id: 'setup',
-    x: 16,
-    y: 16,
+  const setupBlock: BlockState = {
+    type: 'Dancelab_whenRun',
     deletable: false,
     movable: false,
-    inputs: {
-      DO: {block: setupDoChain},
+    next: {block: setupDoChain},
+    kind: 'block',
+  };
+
+  const eventBlock = {
+    type: atTimestampNotAfterBlockType,
+    fields: {
+      TIMESTAMP: 4,
+      UNIT: unitMeasuresField(),
     },
+    kind: 'block',
   };
 
   // Event blocks for each measure
-  const eventBlocks: JsonBlockConfig[] = measures.map(
-    (m, idx): JsonBlockConfig => {
-      const bg = makeSetBackgroundBlock(
-        setBackgroundBlockType,
-        validBackgrounds,
-        validPalettes
-      );
-      const fg = makeSetForegroundBlock(
-        setForegroundBlockType,
-        validForegrounds
-      );
-      const move = makeChangeMoveEachLRBlock(
-        changeMoveBlockType,
-        validMoves,
-        backgroundDancers,
-        codeComplexity === 'simple'
-      );
-      const chain = chainBlocks(bg, fg, move);
+  const eventBlocks: BlockState[] = measures.map((measure): BlockState => {
+    const backgroundBlock = makeSetBackgroundBlock(
+      setBackgroundBlockType,
+      validBackgrounds,
+      validPalettes,
+      simpleCode
+    );
+    const foregroundBlock = makeSetForegroundBlock(
+      setForegroundBlockType,
+      validForegrounds,
+      simpleCode
+    );
+    const changeMoveBlock = makeChangeMoveEachLRBlock(
+      changeMoveBlockType,
+      validMoves,
+      backgroundDancers,
+      simpleCode
+    );
+    const chain = chainBlocks(
+      backgroundBlock,
+      foregroundBlock,
+      changeMoveBlock
+    );
 
-      return {
-        type: 'Dancelab_atTimestampNotAfter',
-        fields: {
-          TIMESTAMP: m,
-          UNIT: unitMeasuresField(),
-        },
-        next: {block: chain},
-      };
+    return {
+      ...eventBlock,
+      fields: {
+        TIMESTAMP: measure,
+        UNIT: unitMeasuresField(),
+      },
+      next: {block: chain},
+      kind: 'block',
+    };
+  });
+
+  flyoutDefinition.contents.push({...eventBlock});
+
+  const blocks: BlockState[] = [setupBlock, ...(simpleCode ? [] : eventBlocks)];
+
+  flyoutDefinition.contents.sort((a, b) => {
+    const order = flyoutBlockOrder;
+    function sort(a: BlockStateFlyout, b: BlockStateFlyout): number {
+      const indexA = order.indexOf(a.type!);
+      const indexB = order.indexOf(b.type!);
+      return indexA - indexB;
     }
-  );
-
-  const blocks: JsonBlockConfig[] = [
-    setupBlock,
-    ...(codeComplexity === 'complex' ? eventBlocks : []),
-  ];
+    if (a.kind === 'block' && b.kind === 'block') {
+      return sort(a as BlockStateFlyout, b as BlockStateFlyout);
+    }
+    return 0;
+  });
 
   return {
-    blocks: {
-      blocks,
+    workspaceSerialization: {
+      blocks: {
+        blocks: blocks as JsonBlockConfig[],
+      },
     },
+    flyoutDefinition: flyoutDefinition,
   };
 }

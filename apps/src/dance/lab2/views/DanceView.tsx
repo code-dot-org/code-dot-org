@@ -1,6 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {BlocklyOptions, Events, WorkspaceSvg} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
 import React, {
@@ -121,9 +121,19 @@ const DanceView: React.FunctionComponent<{
 
   const {currentSources, updateSources, showStartOverDialog, startOver} =
     useSources<DanceProjectSources>();
-
   const programExecutor = useRef<ProgramExecutor | null>(null);
-  const workspace = useRef<WorkspaceSvg | null>(null);
+  const workspace = useRef<GoogleBlockly.WorkspaceSvg | null>(null);
+
+  const updateBlocklyFlyout = useCallback(
+    (toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo) => {
+      const currentWorkspace = workspace.current;
+      if (currentWorkspace) {
+        currentWorkspace.updateToolbox(toolboxDefinition);
+      }
+    },
+    []
+  );
+
   const musicProjectPlayer = useRef<ProjectPlayer | null>(null);
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
 
@@ -306,7 +316,7 @@ const DanceView: React.FunctionComponent<{
   };
 
   const onBlockSpaceChange = useCallback(
-    (e: Events.Abstract) => {
+    (e: GoogleBlockly.Events.Abstract) => {
       if (
         isToolboxMode &&
         workspace.current &&
@@ -315,11 +325,17 @@ const DanceView: React.FunctionComponent<{
         validateBlockCategories(workspace.current);
       }
 
-      if (e.type !== Events.BLOCK_DRAG && e.type !== Events.BLOCK_CHANGE) {
+      if (
+        e.type !== GoogleBlockly.Events.BLOCK_DRAG &&
+        e.type !== GoogleBlockly.Events.BLOCK_CHANGE
+      ) {
         return;
       }
 
-      if (e.type === Events.BLOCK_DRAG && (e as Events.BlockDrag).isStart) {
+      if (
+        e.type === GoogleBlockly.Events.BLOCK_DRAG &&
+        (e as GoogleBlockly.Events.BlockDrag).isStart
+      ) {
         return;
       }
 
@@ -384,7 +400,7 @@ const DanceView: React.FunctionComponent<{
       theme: theme === 'Dark' ? cdoDark : cdoTheme,
       readOnly: readonlyWorkspace,
       editBlocks: getAppOptionsEditBlocks(),
-    } as BlocklyOptions);
+    } as GoogleBlockly.BlocklyOptions);
 
     return () => workspace.current?.dispose();
   }, [dispatch, readonlyWorkspace, levelProperties, theme]);
@@ -640,6 +656,7 @@ const DanceView: React.FunctionComponent<{
                 });
               }}
               startOver={startOver}
+              updateBlocklyFlyout={updateBlocklyFlyout}
             />
           )}
       </div>
