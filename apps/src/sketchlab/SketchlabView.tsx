@@ -157,10 +157,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   }, []);
 
   useEffect(() => {
-    setReinitializationHandler(() => {
-      console.log('reinit!');
-      setExcalidrawMountKey(key => key + 1);
-    });
+    setReinitializationHandler(() => setExcalidrawMountKey(key => key + 1));
   }, [setReinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
