@@ -27,6 +27,7 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import StudentSnapshot from '../studentSnapshot/StudentSnapshot';
 import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import SkillsDashboard from '../teacherDashboard/skillsDashboard/SkillsDashboard';
@@ -295,6 +296,10 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             <Route
               path={TEACHER_NAVIGATION_PATHS.unitOverview}
               element={<TeacherUnitOverview />}
+            />
+            <Route
+              path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
+              element={<StudentSnapshot />}
             />
             <Route
               path={TEACHER_NAVIGATION_PATHS.settings}
