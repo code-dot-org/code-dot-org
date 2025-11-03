@@ -54,7 +54,8 @@ class Callout < ApplicationRecord
     script_level = ScriptLevel.joins(levels: :game).joins(:script).where(script_level_search_conditions)
 
     unless script_level && script_level.count > 0
-      raise "Error finding script level with search conditions: #{script_level_search_conditions}"
+      puts "Error finding script level with search conditions: #{script_level_search_conditions}"
+      return nil
     end
 
     begin
