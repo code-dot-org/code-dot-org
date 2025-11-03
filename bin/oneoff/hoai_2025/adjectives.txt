@@ -4,4 +4,3 @@ sleepy
 surprised 
 confused 
 fierce
-

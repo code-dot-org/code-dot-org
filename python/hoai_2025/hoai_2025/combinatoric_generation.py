@@ -33,7 +33,7 @@ animals    = args.animal
 attire     = args.attire
 
 # Per-combo duplicate count -> 00, 01, ... (n variants per combo)
-REPEATS_PER_COMBO = 3
+REPEATS_PER_COMBO = 7
 
 # Image settings
 IMG_W, IMG_H = 1024, 1024
@@ -76,7 +76,7 @@ OUTDIR = Path(os.path.dirname(__file__)) / ".." / "output" / DRIVE_SUBDIR
 # Subfolders by name shape
 ANIMAL_DIR            = OUTDIR / "creature-05"
 ANIMAL_ATTIRE_DIR     = OUTDIR / "creature-attire-05"
-ADJ_ANIMAL_ATTIRE_DIR = OUTDIR / "creature-attire-mood-style-05"
+ADJ_ANIMAL_ATTIRE_DIR = OUTDIR / "creature-attire-mood-05"
 # ---------------------------------------
 
 # API client
@@ -206,10 +206,30 @@ def _norm(x):
         return s
     return x
 
+def _canon_raw(x):
+    """None/empty/'none' -> None; else lowercased raw text."""
+    if x is None:
+        return None
+    s = str(x).strip()
+    if s == "" or s.lower() in {"none", "null"}:
+        return None
+    return s.lower()
+
+def _canon_slug(x):
+    """None -> None; else slugify + lower for key matching & metadata."""
+    if x is None:
+        return None
+    return slugify(str(x), separator="_").lower()
+
+def key_of(adj, animal, att):
+    """Canonical key used everywhere for plan vs. completed matching."""
+    return (_canon_slug(adj), _canon_slug(animal), _canon_slug(att))
+
+
 def scan_completed_variants():
     """
-    Look for *-metadata.json in OUTDIR and the three subfolders.
-    Return { (adj, animal, att): set(variant_int) }.
+    Look for *-metadata.json and return { (adj_slug, animal_slug, att_slug): set(variant_int) }.
+    Old metadata with mixed casing/spacing will be normalized here.
     """
     completed = {}
     for folder in [OUTDIR, ANIMAL_DIR, ANIMAL_ATTIRE_DIR, ADJ_ANIMAL_ATTIRE_DIR]:
@@ -220,27 +240,38 @@ def scan_completed_variants():
                 meta = json.loads(meta_path.read_text())
             except Exception:
                 continue
-            adj = _norm(meta.get("adjective"))
-            animal = _norm(meta.get("animal"))
-            att = _norm(meta.get("attire"))
-            var = meta.get("variant")
+
+            # Prefer explicit *_slug if present; otherwise normalize free-text fields.
+            adj_slug    = meta.get("adjective_slug")
+            animal_slug = meta.get("animal_slug")
+            att_slug    = meta.get("attire_slug")
+
+            if animal_slug is None:
+                animal_slug = _canon_slug(meta.get("animal"))
+            if adj_slug is None:
+                adj_slug = _canon_slug(meta.get("adjective"))
+            if att_slug is None:
+                att_slug = _canon_slug(meta.get("attire"))
+
             try:
-                var = int(var)
+                var = int(meta.get("variant"))
             except Exception:
                 continue
-            key = (adj, animal, att)
+
+            key = (adj_slug, animal_slug, att_slug)
             completed.setdefault(key, set()).add(var)
+
     return completed
 
 def unique_plan(plan_iterable):
-    """Deduplicate (adj, animal, att) while preserving order."""
+    """Deduplicate (adj, animal, att) while preserving order, using slug keys."""
     seen = set()
     unique = []
     for adj, animal, att, desc, title in plan_iterable:
-        key = (_norm(adj), _norm(animal), _norm(att))
-        if key in seen:
+        k = key_of(adj, animal, att)
+        if k in seen:
             continue
-        seen.add(key)
+        seen.add(k)
         unique.append((adj, animal, att, desc, title))
     return unique
 
@@ -431,8 +462,7 @@ def metadata_record(adj, animal, att, v, img_path: Path, prompt: str,
     }
 
 # ---------- Parallel worker ----------
-# --- replace your generate_for_combo with this version ---
-async def generate_for_combo(adj, animal, att, title, desc, missing_variants, sem: asyncio.Semaphore):
+async def generate_for_combo(adj, animal, att, title, desc, missing_variants, sem: asyncio.Semaphore, progress=None):
     if not missing_variants:
         return 0
 
@@ -457,7 +487,7 @@ async def generate_for_combo(adj, animal, att, title, desc, missing_variants, se
                     break
                 except Exception as e:
                     if attempt == RETRIES:
-                        print(f"[ERROR] {animal}-base: {e}")
+                        print(f"[ERROR] {animal}-base: {e}", flush=True)
                         return 0
                     await asyncio.sleep(delay + random.uniform(0, 0.5))
                     delay = min(delay * 2, 20)
@@ -476,21 +506,22 @@ async def generate_for_combo(adj, animal, att, title, desc, missing_variants, se
                                    body_hex, secondary_hex, tertiary_hex, title, desc)
             meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False))
             created += 1
+            if progress:
+                await progress.step(1)  # <- tick the bar per image
         return created
 
-    # --- Derivatives: strictly require seed, never fall back to generate ---
+    # --- Derivatives (per-variant edit) ---
     created = 0
     dest_dir = destination_dir(adj, animal, att)
     for v in missing_variants:
         seed_path = seed_image_for_variant(animal, v)
 
         if seed_path is None:
-            # Shouldn't happen if we filtered in main_async(), but double-guard anyway.
             msg = f"[ERROR] Missing seed for {animal}-{att or 'none'}-{adj or 'none'} v{v:02d}"
             if FAIL_IF_MISSING_SEED:
                 raise RuntimeError(msg)
             else:
-                print(msg)
+                print(msg, flush=True)
                 continue
 
         prompt = build_prompt(desc, preserve=True)
@@ -511,7 +542,7 @@ async def generate_for_combo(adj, animal, att, title, desc, missing_variants, se
                     break
                 except Exception as e:
                     if attempt == RETRIES:
-                        print(f"[ERROR] Edit failed {animal}-{adj or 'none'}-{att or 'none'} v{v:02d}: {e}")
+                        print(f"[ERROR] Edit failed {animal}-{adj or 'none'}-{att or 'none'} v{v:02d}: {e}", flush=True)
                         resp = None
                         break
                     await asyncio.sleep(delay + random.uniform(0, 0.5))
@@ -533,8 +564,33 @@ async def generate_for_combo(adj, animal, att, title, desc, missing_variants, se
                                body_hex, secondary_hex, tertiary_hex, title, desc)
         meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False))
         created += 1
+        if progress:
+            await progress.step(1)  # <- tick the bar per image
 
     return created
+
+# --- Per-image progress helper for tqdm ---
+class AsyncProgress:
+    def __init__(self, pbar):
+        self.pbar = pbar
+        self._lock = asyncio.Lock()
+        self.count = 0
+
+    async def step(self, n=1):
+        async with self._lock:
+            self.pbar.update(n)
+            self.count += n
+
+async def heartbeat(task_name, progress, total, interval=15):
+    try:
+        while True:
+            done = progress.count
+            pct = (done * 100.0 / total) if total else 100.0
+            print(f"[{task_name}] {done}/{total} ({pct:.1f}%)", flush=True)
+            await asyncio.sleep(interval)
+    except asyncio.CancelledError:
+        pass
+
 
 # ---------- Main orchestration ----------
 async def main_async():
@@ -559,7 +615,7 @@ async def main_async():
     total_missing_base = 0
 
     for adj, animal, att, desc, title in base_plan:
-        have = completed.get((_norm(adj), _norm(animal), _norm(att)), set())
+        have = completed.get(key_of(adj, animal, att), set())  # if you added key_of; else keep original
         missing = [v for v in range(REPEATS_PER_COMBO) if v not in have]
         if missing:
             work_base.append((adj, animal, att, title, desc, missing))
@@ -568,25 +624,25 @@ async def main_async():
     if work_base:
         print(f"Planned base combos: {len(base_plan)}")
         print(f"Base images to generate (missing variants): {total_missing_base}")
-        tasks_base = [generate_for_combo(adj, animal, att, title, desc, missing, sem)
-                      for (adj, animal, att, title, desc, missing) in work_base]
         pbar = tqdm(total=total_missing_base, desc="Generating (base)", unit="img")
-        for coro in asyncio.as_completed(tasks_base):
-            c = await coro
-            created_total += c
-            pbar.update(c)
+        progress = AsyncProgress(pbar)
+        tasks_base = [
+            generate_for_combo(adj, animal, att, title, desc, missing, sem, progress=progress)
+            for (adj, animal, att, title, desc, missing) in work_base
+        ]
+        results = await asyncio.gather(*tasks_base)
+        created_total += sum(results)
         pbar.close()
     else:
         print("No base images to generate.")
 
     # ---------------- Phase 2: DERIVATIVES ----------------
-    # Re-scan so seeds from Phase 1 are visible
     completed = scan_completed_variants()
     work_deriv = []
     total_missing_deriv = 0
 
     for adj, animal, att, desc, title in deriv_plan:
-        have = completed.get((_norm(adj), _norm(animal), _norm(att)), set())
+        have = completed.get(key_of(adj, animal, att), set()) 
         missing_all = [v for v in range(REPEATS_PER_COMBO) if v not in have]
 
         if REQUIRE_SEED_FOR_DERIVATIVES and (att is not None or adj is not None):
@@ -599,7 +655,7 @@ async def main_async():
                     if FAIL_IF_MISSING_SEED:
                         raise RuntimeError(msg)
                     else:
-                        print(msg)
+                        print(msg, flush=True)
         else:
             missing = missing_all
 
@@ -610,14 +666,24 @@ async def main_async():
     if work_deriv:
         print(f"Planned derivative combos: {len(deriv_plan)}")
         print(f"Derivative images to generate (missing variants): {total_missing_deriv}")
-        tasks_deriv = [generate_for_combo(adj, animal, att, title, desc, missing, sem)
-                       for (adj, animal, att, title, desc, missing) in work_deriv]
+
         pbar = tqdm(total=total_missing_deriv, desc="Generating (derivatives)", unit="img")
-        for coro in asyncio.as_completed(tasks_deriv):
-            c = await coro
-            created_total += c
-            pbar.update(c)
-        pbar.close()
+        progress = AsyncProgress(pbar)
+
+        tasks_deriv = [
+            generate_for_combo(adj, animal, att, title, desc, missing, sem, progress=progress)
+            for (adj, animal, att, title, desc, missing) in work_deriv
+        ]
+
+        # Start heartbeat AFTER progress & total exist
+        hb = asyncio.create_task(heartbeat("Derivatives", progress, total_missing_deriv, interval=15))
+
+        try:
+            results = await asyncio.gather(*tasks_deriv)
+            created_total += sum(results)
+        finally:
+            hb.cancel()
+            pbar.close()
     else:
         print("No derivative images to generate.")
 
