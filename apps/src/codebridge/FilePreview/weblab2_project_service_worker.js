@@ -61,8 +61,9 @@ function main() {
       event.respondWith(handleProjectRequest(url));
     } else {
       // TODO: why isn't this working?
-      console.log('Service worker passing through fetch for:', url.pathname);
-      fetch(event.request);
+      console.log('Returning for', url.pathname);
+      //fetch(event.request);
+      return;
     }
   });
 
