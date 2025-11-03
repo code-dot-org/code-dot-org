@@ -13,6 +13,7 @@ import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
@@ -335,6 +336,14 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
       <div className={moduleStyles.mainContent}>
+        <ResourcePanel
+          levelProperties={levelProperties}
+          hasRun={false}
+          hasEdited={false}
+          isRunning={false}
+          // We only display the sidebar, so none of the above props matter.
+          sidebarOnly={true}
+        />
         <Guide id="generate-panel">
           {['none', 'generating'].includes(aiGenerateState) &&
             levelProperties.longInstructions && (
