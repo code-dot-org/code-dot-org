@@ -10,6 +10,16 @@
 function main() {
   let filesData = {};
   let currentFile = 'index.html'; // Default file
+  const IGNORED_FILE_PATHS = [
+    '/',
+    '/shared/css/fonts/barlow-semi-condensed.scss',
+    '/shared/css/fonts/figtree.scss',
+    '/assets/js/webpack-runtime.js',
+    '/assets/js/codeprojects_preview/show.js',
+    '/assets/application.js',
+    '/assets/js/vendors.js',
+    '/assets/js/code-studio-common.js',
+  ];
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -43,25 +53,14 @@ function main() {
   // Intercept fetch requests
   self.addEventListener('fetch', event => {
     const url = new URL(event.request.url);
-    console.log('Handling project request for URL:', {
-      url,
-      pathname: url.pathname,
-    });
-    const filename = getFilenameFromUrl(url);
-    console.log('Derived filename from URL:', filename);
-    const otherOrigin = `${location.protocol}//channel.${location.hostname}`;
-    console.log({
-      url,
-      locationOrigin: location.origin,
-      urlOriginMatches: url.origin === location.origin,
-      pathnameLength: url.pathname.length,
-      startsWithPreview: url.pathname.startsWith('/preview'),
-      otherOrigin,
-    });
-    if (url.origin === location.origin && url.pathname.length > 1) {
+    if (
+      url.origin === location.origin &&
+      !IGNORED_FILE_PATHS.includes(url.pathname)
+    ) {
       console.log('Service worker intercepting fetch for:', url.pathname);
       event.respondWith(handleProjectRequest(url));
     } else {
+      // TODO: why isn't this working?
       console.log('Service worker passing through fetch for:', url.pathname);
       fetch(event.request);
     }
@@ -70,15 +69,12 @@ function main() {
   sendMessageToAllClients('SERVICE_WORKER_LOADED?');
 
   function getFilenameFromUrl(url) {
-    console.log('Handling project request for URL:', {url});
     let remainder = url.pathname;
     if (remainder.startsWith('/')) {
       remainder = remainder.substring(1);
     }
     // Allow ?file= overrides (optional enhancement)
     let requestedFile = remainder || currentFile || 'index.html';
-    console.log({remainder, requestedFile});
-
     if (requestedFile === '' || requestedFile === '/') {
       requestedFile = 'index.html';
     }

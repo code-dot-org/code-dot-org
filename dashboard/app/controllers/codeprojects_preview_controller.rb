@@ -4,8 +4,6 @@ class CodeprojectsPreviewController < ApplicationController
   def show
     code_studio_url = CDO.dashboard_site_host
     preview_url = CDO.preview_codeprojects_hostname
-    puts "Hi from show!!"
-    puts preview_url
     # Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
     # Therefore we explicitly set the prefix to 'http', which will also allow https.
     prefix = 'http://'
