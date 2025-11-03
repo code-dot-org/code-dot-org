@@ -35,7 +35,6 @@ const PersonalizationCollectorContainer: React.FC = () => {
 
   const {personalizationData, setPersonalizationData, isLoading} =
     useTeachingProfileData();
-  console.log('personalizationData', personalizationData, isLoading);
 
   const onCarouselPress = async (direction: number) => {
     if (direction === NEXT) {
