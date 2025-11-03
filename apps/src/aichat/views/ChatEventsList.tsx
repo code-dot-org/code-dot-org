@@ -115,7 +115,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           <Button
             isIconOnly
             icon={{iconName: 'arrow-down'}}
-            size="s"
+            size="xs"
             color="black"
             type="secondary"
             onClick={scrollToBottom}
