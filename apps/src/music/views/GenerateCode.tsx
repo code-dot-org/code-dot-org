@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {Heading4} from '@code-dot-org/component-library/typography';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -253,8 +254,12 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {['none', 'generating', 'generated'].includes(aiGenerateState) && (
         <Button
-          ariaLabel={'Generate code'}
-          text={'Generate code'}
+          ariaLabel={
+            aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
+          }
+          text={
+            aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
+          }
           type="primary"
           color="black"
           size="s"
@@ -270,56 +275,67 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {aiGenerateState === 'listening' && <div>Take a listen.</div>}
+      {['listening', 'listened'].includes(aiGenerateState) && (
+        <div>
+          <Heading4>
+            {aiGenerateState === 'listening' && 'Take a listen...'}
+            {aiGenerateState === 'listened' && 'Code is ready'}
+          </Heading4>
+          <div>AI generated code based on your prompt, "{promptText}"</div>
+        </div>
+      )}
 
       {aiGenerateState === 'listened' && (
-        <>
-          <div>Do you want to keep what AI generated?</div>
+        <div className={styles.buttonRow}>
+          <Button
+            ariaLabel={'Back to prompt'}
+            text={'Back to prompt'}
+            type="secondary"
+            color="black"
+            size="s"
+            onClick={() => {
+              setPlaying(false);
+              clearCode(true);
+              dispatch(setAiGenerateState('clearing'));
+            }}
+            className={styles.buttonWide}
+          />
 
-          <div className={styles.buttonRow}>
-            <Button
-              ariaLabel={'Back to prompt'}
-              text={'Back to prompt'}
-              type="secondary"
-              color="black"
-              size="s"
-              onClick={() => {
-                setPlaying(false);
-                clearCode(true);
-                dispatch(setAiGenerateState('clearing'));
-              }}
-              className={styles.buttonWide}
-            />
-
-            <Button
-              ariaLabel={'Keep this'}
-              text={'Keep this'}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => {
-                dispatch(setAiGenerateState('editing'));
-                setPlaying(false);
-              }}
-              className={styles.buttonWide}
-            />
-          </div>
-        </>
+          <Button
+            ariaLabel={'Use code'}
+            text={'Use code'}
+            type="primary"
+            color="black"
+            size="s"
+            onClick={() => {
+              dispatch(setAiGenerateState('editing'));
+              setPlaying(false);
+            }}
+            className={styles.buttonWide}
+          />
+        </div>
       )}
 
       {aiGenerateState === 'editing' && !isPlaying && (
         <div>
-          AI helped you get started. Now, edit the code to make it your own.
+          <Heading4>Modify the code</Heading4>
+          AI helped you get started. Make your own changes, then press Run.
         </div>
       )}
 
       {aiGenerateState === 'editing' && isPlaying && (
-        <div>Try changing the code. </div>
+        <div>
+          <Heading4>Modify the code</Heading4>
+          <div>Try changing the code. </div>
+        </div>
       )}
 
       {aiGenerateState === 'edited' && (
         <>
-          <div>That's a great mix!</div>
+          <div>
+            <Heading4>Modify the code</Heading4>
+            <div>That's a great mix!</div>
+          </div>
           <div className={styles.buttonRow}>
             <Button
               ariaLabel={'Back to prompt'}

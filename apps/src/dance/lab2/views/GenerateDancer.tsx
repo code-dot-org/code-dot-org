@@ -412,8 +412,16 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 />
                 <div className={moduleStyles.buttonRow}>
                   <Button
-                    ariaLabel={'Generate dancer'}
-                    text={'Generate dancer'}
+                    ariaLabel={
+                      aiGenerateState === 'none'
+                        ? 'Generate dancer'
+                        : 'Generating dancer'
+                    }
+                    text={
+                      aiGenerateState === 'none'
+                        ? 'Generate dancer'
+                        : 'Generating dancer'
+                    }
                     type="primary"
                     color="black"
                     size="s"
@@ -428,8 +436,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             )}
           {aiGenerateState === 'reviewing' && (
             <div>
-              <Heading4>Your Dancer is Ready</Heading4>
-              <div>Do you want to keep what AI generated?</div>
+              <Heading4>Your dancer is ready</Heading4>
+              <div>
+                AI generated a dancer based on your prompt, "{promptText}"
+              </div>
             </div>
           )}
           {aiGenerateState === 'reviewing' && (

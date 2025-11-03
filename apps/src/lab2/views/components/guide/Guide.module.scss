@@ -23,6 +23,7 @@
   background: var(--background-neutral-secondary);
   box-shadow: 0 6px 18px 0 rgba(0 0 0 / 0.30);
   font-size: 16px;
+  line-height: 1.5;
   gap: 16px;
 
   &NormalWidth {
@@ -45,5 +46,6 @@
 .markdown {
   p, li, h1, h2, h3, h4 {
     font-size: 16px;
+    line-height: 1.5;
   }
 }

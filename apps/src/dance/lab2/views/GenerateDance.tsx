@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {Heading4} from '@code-dot-org/component-library/typography';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -102,7 +103,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     getInitialChoices()
   );
 
-  const [, setPromptText] = useState('');
+  const [promptText, setPromptText] = useState('');
 
   useEffect(() => {
     // If there is already a generated dance when we begin, presumably
@@ -220,8 +221,12 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
 
           <Button
-            ariaLabel={'Generate code'}
-            text={'Generate code'}
+            ariaLabel={
+              aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
+            }
+            text={
+              aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
+            }
             type="primary"
             color="black"
             size="s"
@@ -235,57 +240,67 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
         </>
       )}
 
-      {aiGenerateState === 'listening' && <div>Take a listen.</div>}
+      {['listening', 'listened'].includes(aiGenerateState) && (
+        <div>
+          <Heading4>
+            {aiGenerateState === 'listening' && 'Take a look...'}
+            {aiGenerateState === 'listened' && 'Code is ready'}
+          </Heading4>
+          <div>AI generated code based on your prompt, "{promptText}"</div>
+        </div>
+      )}
 
       {aiGenerateState === 'listened' && (
-        <>
-          <div>Do you want to keep what AI generated?</div>
+        <div className={styles.buttonRow}>
+          <Button
+            ariaLabel={'Back to prompt'}
+            text={'Back to prompt'}
+            type="secondary"
+            color="black"
+            size="s"
+            onClick={() => {
+              startOver();
+              setAiGenerateState('none');
+              resetProgram();
+            }}
+            className={styles.buttonWide}
+          />
 
-          <div className={styles.buttonRow}>
-            <Button
-              ariaLabel={'Back to prompt'}
-              text={'Back to prompt'}
-              type="secondary"
-              color="black"
-              size="s"
-              onClick={() => {
-                startOver();
-                setAiGenerateState('none');
-                resetProgram();
-              }}
-              className={styles.buttonWide}
-            />
-
-            <Button
-              ariaLabel={'Keep this'}
-              text={'Keep this'}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => {
-                setAiGenerateState('editing');
-                resetProgram();
-              }}
-              className={styles.buttonWide}
-            />
-          </div>
-        </>
+          <Button
+            ariaLabel={'Use code'}
+            text={'Use code'}
+            type="primary"
+            color="black"
+            size="s"
+            onClick={() => {
+              setAiGenerateState('editing');
+              resetProgram();
+            }}
+            className={styles.buttonWide}
+          />
+        </div>
       )}
 
       {aiGenerateState === 'editing' && !isRunning && (
         <div>
+          <Heading4>Modify the code</Heading4>
           AI helped you get started. Now, edit the code to make it your own.
         </div>
       )}
 
       {aiGenerateState === 'editing' && isRunning && (
-        <div>Try changing the code.</div>
+        <div>
+          <Heading4>Modify the code</Heading4>
+          Try changing the code.
+        </div>
       )}
 
       {aiGenerateState === 'edited' && (
         <>
           <div>
-            Amazing moves! Keep editing, or click Finish when you're done.
+            <Heading4>Modify the code</Heading4>
+            Amazing moves! Keep editing, or update your dancer design or music
+            mix above. Click Finish when you're done.
           </div>
           <div className={styles.buttonRow}>
             <Button
