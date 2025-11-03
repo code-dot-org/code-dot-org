@@ -1,7 +1,6 @@
 class OpenaiLessonSummaryTimeout < StandardError; end
 
 module AiLessonSummariesHelper
-  # API_KEY = CDO.openai_lesson_summaries_api_key
   API_KEY = CDO.openai_lesson_summaries_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
@@ -24,6 +23,7 @@ module AiLessonSummariesHelper
 
   def self.retrieve_and_save_ai_lesson_summary(lesson_id, user_id)
     ai_lesson_summary = get_ai_lesson_summary(lesson_id)
+    puts ai_lesson_summary
     if ai_lesson_summary[:status] == 200
       AiLessonSummary.create!({user_id: user_id, lesson_id: lesson_id, lesson_summary: ai_lesson_summary[:json]})
     end
