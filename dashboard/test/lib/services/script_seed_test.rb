@@ -435,7 +435,7 @@ module Services
       )
     end
 
-    test 'import resources raises error when require_course is true and course version is missing' do
+    test 'import resources raises error when require_course_version is true and course version is missing' do
       script = create_script_tree(
         num_resources_per_lesson: 0,
         num_vocabularies_per_lesson: 0
@@ -452,16 +452,16 @@ module Services
       # Now destroy the course version
       script.get_course_version.destroy!
 
-      # Assert that seeding with require_course: true raises an error
+      # Assert that seeding with require_course_version: true raises an error
       error = assert_raises RuntimeError do
-        ScriptSeed.seed_from_json(json, require_course: true)
+        ScriptSeed.seed_from_json(json, require_course_version: true)
       end
 
       assert_match(/unable to import resources into script #{script.name}/, error.message)
       assert_match(/because course version is missing/, error.message)
     end
 
-    test 'import vocabularies raises error when require_course is true and course version is missing' do
+    test 'import vocabularies raises error when require_course_version is true and course version is missing' do
       # Create a script with vocabularies but no resources
       script = create_script_tree(
         num_resources_per_lesson: 0,
@@ -479,9 +479,9 @@ module Services
       # Now destroy the course version
       script.get_course_version.destroy!
 
-      # Assert that seeding with require_course: true raises an error
+      # Assert that seeding with require_course_version: true raises an error
       error = assert_raises RuntimeError do
-        ScriptSeed.seed_from_json(json, require_course: true)
+        ScriptSeed.seed_from_json(json, require_course_version: true)
       end
 
       assert_match(/unable to import vocabulary into script #{script.name}/, error.message)
