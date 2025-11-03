@@ -349,7 +349,6 @@ namespace :seed do
       coursef-2017
       csd-2023
       csd-2024
-      csd-2025
       csp-2024
       csp-2025
       csp-ap
