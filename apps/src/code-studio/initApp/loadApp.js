@@ -522,41 +522,15 @@ const sourceHandler = {
       let source;
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
-        try {
-          const getSourceAsJson = true;
-          // If we're readOnly, source hasn't changed at all
-          source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
-            ? currentLevelSource
-            : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
-          resolve(source);
-        } catch (err) {
-          MetricsReporter.logError({
-            event: 'Error from Blockly in getLevelSource',
-            error: err,
-            errorMessage: err?.message,
-            errorStack: err?.stack,
-            errorName: err?.name,
-            appType: appOptions.app,
-            levelId: appOptions.level?.id,
-          });
-          reject(err);
-        }
+        const getSourceAsJson = true;
+        // If we're readOnly, source hasn't changed at all
+        source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
+          ? currentLevelSource
+          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
+        resolve(source);
       } else if (appOptions.getCode) {
-        try {
-          source = appOptions.getCode();
-          resolve(source);
-        } catch (err) {
-          MetricsReporter.logError({
-            event: 'Error from getCode in getLevelSource',
-            error: err,
-            errorMessage: err?.message,
-            errorStack: err?.stack,
-            errorName: err?.name,
-            appType: appOptions.app,
-            levelId: appOptions.level?.id,
-          });
-          reject(err);
-        }
+        source = appOptions.getCode();
+        resolve(source);
       } else if (appOptions.getCodeAsync) {
         appOptions
           .getCodeAsync()

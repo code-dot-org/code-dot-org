@@ -1330,7 +1330,18 @@ var projects = (module.exports = {
             teacherHasConfirmedUploadWarning,
           });
         })
-        .catch(error => callback({error}))
+        .catch(error => {
+          MetricsReporter.logError({
+            event: 'Error in getUpdatedSourceAndHtml_',
+            error: error,
+            errorMessage: error?.message,
+            errorStack: error?.stack,
+            errorName: error?.name,
+            appType: this.getStandaloneApp(),
+            channelId: this.getCurrentId(),
+          });
+          callback({error});
+        })
     );
   },
 
@@ -1825,7 +1836,7 @@ var projects = (module.exports = {
           resolve();
         },
         error => {
-          console.error(`error saving thumbnail image: ${error}`);
+          reject(`error saving thumbnail image: ${error}`);
         }
       );
     });
