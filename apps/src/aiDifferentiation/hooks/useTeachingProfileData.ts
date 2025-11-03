@@ -41,7 +41,7 @@ export function useTeachingProfileData(): UseTeachingProfileDataReturn {
 
       if (!response.ok) {
         console.error(
-          `Failed to fetch teaching profile data: ${response.statusText}`
+          `Failed to load existing teaching profile data:${response.statusText}`
         );
         return;
       }
@@ -58,7 +58,7 @@ export function useTeachingProfileData(): UseTeachingProfileDataReturn {
         setPersonalizationData(existingData);
       }
     } catch (error) {
-      console.error('Error fetching teaching profile data:', error);
+      console.error('Failed to load existing teaching profile data:', error);
     } finally {
       setIsLoading(false);
     }
