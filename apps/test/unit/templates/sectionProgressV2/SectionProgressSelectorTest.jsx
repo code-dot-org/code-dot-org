@@ -69,6 +69,7 @@ describe('SectionProgressSelector', () => {
 
     postStub.mockRestore();
     jest.restoreAllMocks();
+    DCDO.set('disable-progress-v1', false);
   });
 
   function renderDefault(propOverrides = {}) {
@@ -245,5 +246,17 @@ describe('SectionProgressSelector', () => {
     screen.getByTestId(V1_TEST_ID);
 
     expect(screen.queryByText(i18n.progressTrackingAnnouncement())).toBeFalsy();
+  });
+
+  it('does not show toggle link or v1 when v1 is disabled', () => {
+    DCDO.set('disable-progress-v1', true);
+    renderDefault();
+
+    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).toBeFalsy();
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).toBeFalsy();
+    // eslint-disable-next-line no-restricted-properties
+    expect(screen.queryByTestId(V1_TEST_ID)).toBeFalsy();
+    // eslint-disable-next-line no-restricted-properties
+    screen.getByTestId(V2_TEST_ID);
   });
 });
