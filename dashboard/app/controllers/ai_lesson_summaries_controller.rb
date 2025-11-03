@@ -28,7 +28,6 @@ class AiLessonSummariesController < ApplicationController
       lesson_ids: lesson_ids
     }
     AiLessonSummariesJob.perform_later(request: request)
-    render json: {message: "Lesson Summary Job Started", user_id: request[:user_id], lesson_ids: request[:lesson_ids]}
   end
 
   def perform_ai_lesson_summary_by_lesson

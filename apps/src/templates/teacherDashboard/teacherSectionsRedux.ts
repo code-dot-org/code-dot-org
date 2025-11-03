@@ -1014,6 +1014,11 @@ export const assignToSection = (
     },
     {includeUserId: true}
   );
+  if (!!unitId) {
+    HttpClient.get(
+      `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+    );
+  }
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
     // Only log if the assignment is changing.
