@@ -435,6 +435,61 @@ module Services
       )
     end
 
+    test 'import resources raises error when require_course is true and course version is missing' do
+      script = create_script_tree(
+        num_resources_per_lesson: 0,
+        num_vocabularies_per_lesson: 0
+      )
+      assert script.get_original_unit_group.course_version
+
+      # Serialize while resources are still present
+      json = ScriptSeed.serialize_seeding_json(script)
+
+      # Destroy resources and vocabularies before destroying the course version
+      script.resources.destroy_all
+      script.get_original_unit_group.course_version.resources.destroy_all
+
+      # Now destroy the course version
+      script.get_original_unit_group.course_version.destroy!
+      script.reload
+
+      # Assert that seeding with require_course: true raises an error
+      error = assert_raises RuntimeError do
+        ScriptSeed.seed_from_json(json, require_course: true)
+      end
+
+      assert_match(/unable to import resources into script #{script.name}/, error.message)
+      assert_match(/because course version is missing/, error.message)
+    end
+
+    test 'import vocabularies raises error when require_course is true and course version is missing' do
+      # Create a script with vocabularies but no resources
+      script = create_script_tree(
+        num_resources_per_lesson: 0,
+        num_resources_per_script: 0
+      )
+      assert script.get_original_unit_group.course_version
+
+      # Serialize while vocabularies are still present
+      json = ScriptSeed.serialize_seeding_json(script)
+
+      # Destroy vocabularies before destroying the course version
+      script.lessons.each {|l| l.vocabularies.destroy_all}
+      script.get_original_unit_group.course_version.vocabularies.destroy_all
+
+      # Now destroy the course version
+      script.get_original_unit_group.course_version.destroy!
+      script.reload
+
+      # Assert that seeding with require_course: true raises an error
+      error = assert_raises RuntimeError do
+        ScriptSeed.seed_from_json(json, require_course: true)
+      end
+
+      assert_match(/unable to import vocabulary into script #{script.name}/, error.message)
+      assert_match(/because course version is missing/, error.message)
+    end
+
     test 'seed updates lesson programming expressions' do
       script = create_script_tree
 
