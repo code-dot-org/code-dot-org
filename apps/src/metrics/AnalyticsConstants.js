@@ -119,6 +119,8 @@ const EVENTS = {
 
   // Workshop enrollment
   WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT: 'Workshop Enrollment Page Visited',
+  WORKSHOP_ENROLLMENT_PAGE_VISITED_BY_ENROLLED_USER_EVENT:
+    'Workshop Enrollment Page Visited By Enrolled User',
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
   WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
     'Workshop Add Session to Calendar Clicked',
