@@ -123,6 +123,13 @@ const COURSES_WITH_PROGRESS = [
   },
 ];
 
+const LESSON_SUMMARY = {
+  learning_objective: 'Sample learning objective info.',
+  lesson_beats: ['Beat 1', 'Beat 2', 'Beat 3'],
+  misconceptions: ['Misconception 1', 'Misconception 2'],
+  tips: ['Tip 1', 'Tip 2', 'Tip 3'],
+};
+
 describe('LessonMaterialsContainer', () => {
   let store: Store;
   let fetchSpy: jest.SpyInstance;
@@ -246,9 +253,10 @@ describe('LessonMaterialsContainer', () => {
 
   const renderDefault = async (
     showNoCurriculumAssigned = false,
-    lessonData: object = mockLessonData
+    lessonData: object = mockLessonData,
+    lessonSummary: object = LESSON_SUMMARY
   ) => {
-    mockSpy(lessonData);
+    mockSpy(lessonData, lessonSummary);
     await act(async () =>
       render(
         <Provider store={store}>
@@ -275,7 +283,7 @@ describe('LessonMaterialsContainer', () => {
     store.dispatch(selectSection(1));
 
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
-    mockSpy(mockLessonData);
+    mockSpy(mockLessonData, LESSON_SUMMARY);
   });
 
   afterEach(async () => {
@@ -284,7 +292,7 @@ describe('LessonMaterialsContainer', () => {
     fetchSpy.mockReset();
   });
 
-  const mockSpy = (lessonData: object) => {
+  const mockSpy = (lessonData: object, lessonSummary: object) => {
     fetchSpy.mockReset();
     fetchSpy.mockImplementation((path: string) => {
       if (path.includes('lesson_materials')) {
@@ -296,6 +304,12 @@ describe('LessonMaterialsContainer', () => {
       if (path.includes('section_courses')) {
         return Promise.resolve({
           value: COURSES_WITH_PROGRESS,
+          response: new Response(),
+        });
+      }
+      if (path.includes('ai_lesson_summaries')) {
+        return Promise.resolve({
+          value: {lesson_summary: JSON.stringify(lessonSummary)},
           response: new Response(),
         });
       }
@@ -625,9 +639,49 @@ describe('LessonMaterialsContainer', () => {
 
       expect(screen.queryByText(i18n.audioSummary())).toBe(null);
       expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      expect(screen.queryByText(LESSON_SUMMARY.learning_objective)).toBe(null);
+      LESSON_SUMMARY.lesson_beats.forEach(beat =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        expect(screen.queryByText(misconception)).toBe(null)
+      );
+      LESSON_SUMMARY.tips.forEach(tip =>
+        expect(screen.queryByText(tip)).toBe(null)
+      );
     });
 
-    it('renders lesson summary when showAITALessonSummary is true', async () => {
+    it('does not render lesson summary when lesson summary has not been generated', async () => {
+      await renderDefault(true, mockLessonData, {});
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      expect(screen.queryByText(LESSON_SUMMARY.learning_objective)).toBe(null);
+      LESSON_SUMMARY.lesson_beats.forEach(beat =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        expect(screen.queryByText(misconception)).toBe(null)
+      );
+      LESSON_SUMMARY.tips.forEach(tip =>
+        expect(screen.queryByText(tip)).toBe(null)
+      );
+    });
+
+    it('renders lesson summary when showAITALessonSummary is true and lesson summary has been generated', async () => {
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+      screen.getByText(i18n.teachingTips());
+      screen.getByText(LESSON_SUMMARY.learning_objective);
+      LESSON_SUMMARY.lesson_beats.forEach(beat => screen.getByText(beat));
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        screen.getByText(misconception)
+      );
+      LESSON_SUMMARY.tips.forEach(tip => screen.getByText(tip));
+    });
+
+    it('renders audio summary transcript dialog when transcript data is present', async () => {
       const audioTranscript = [
         {timeStamp: '0:00', text: 'First line of dialogue.'},
         {timeStamp: '0:30', text: 'Second line of dialogue.'},
@@ -638,7 +692,6 @@ describe('LessonMaterialsContainer', () => {
       await renderDefault();
 
       screen.getByText(i18n.audioSummary());
-      screen.getByText(i18n.teachingTips());
 
       // Audio summary transcript dialog is present as well
       fireEvent.click(screen.getByText(i18n.transcript()));
