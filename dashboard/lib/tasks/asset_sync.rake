@@ -26,6 +26,7 @@ namespace :assets do
     next if changed_paths.empty?
 
     puts "Copying #{changed_paths.length} new assets to s3://#{CDO.assets_bucket}/#{CDO.assets_bucket_prefix}/assets/"
+    start_time = Time.now
     require 'aws-sdk-s3'
     require 'parallel'
     bucket = Aws::S3::Resource.new.bucket(CDO.assets_bucket)
@@ -37,6 +38,8 @@ namespace :assets do
         content_type: Rack::Mime.mime_type(File.extname(key))
       )
     end
+    duration = Time.now - start_time
+    puts "Uploaded #{changed_paths.length} assets to s3 in #{duration.round(2)} seconds"
   rescue
     if m && changed_paths
       puts "Removing #{changed_paths.length} new assets because S3 sync failed.

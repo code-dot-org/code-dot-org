@@ -143,7 +143,7 @@ namespace :build do
         ChatClient.log 'Cleaning <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:clean'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:precompile', '--quiet'
+        RakeUtils.rake_stream_output 'assets:precompile'
       end
 
       ChatClient.log 'Restarting <b>dashboard</b> web server.'
