@@ -20,7 +20,7 @@ import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
 import styles from './generate-dance.module.scss';
 
-const GENERATE_DELAY_DURATION = 7000;
+const GENERATE_DELAY_DURATION = 5000;
 
 const adlib: AdlibType = {
   template: `Generate {complexity} code for a {energy} dance, with {dancers} as backup dancers.`,
