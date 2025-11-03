@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-03 20:16:06 UTC",
+    "serialized_at": "2025-10-30 17:40:18 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -220,9 +220,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl_sandbox_aif_2_U2-event-response-6"
-        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -245,9 +242,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl_sandbox_aif_2_U2-DOM-7"
-        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -270,9 +264,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl_sandbox_aif_2_U2-javascript-8"
-        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -295,9 +286,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-onebutton-9"
-        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -320,9 +308,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-U2-buttonChoice-10"
-        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -345,9 +330,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-U2-CFU-vocab-11"
-        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
