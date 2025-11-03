@@ -10,6 +10,8 @@
 function main() {
   let filesData = {};
   let currentFile = 'index.html'; // Default file
+  const broadcastChannel = new BroadcastChannel('weblab2-file-preview');
+
   const IGNORED_FILE_PATHS = [
     '/',
     '/shared/css/fonts/barlow-semi-condensed.scss',
@@ -62,9 +64,7 @@ function main() {
       console.log('Service worker intercepting fetch for:', url.pathname);
       event.respondWith(handleProjectRequest(url));
     } else {
-      // TODO: why isn't this working?
       console.log('Returning for', url.pathname);
-      //fetch(event.request);
       return;
     }
   });
@@ -97,7 +97,14 @@ function main() {
 
       if (filesData[requestedFile]) {
         const {content, mimeType, url} = filesData[requestedFile];
-        sendMessageToAllClients(`Serving file: ${requestedFile}`);
+        sendMessageToAllClients('SERVING_FILE', {filePath: requestedFile});
+        if (requestedFile.endsWith('.html')) {
+          console.log('Broadcasting HTML file serving:', requestedFile);
+          broadcastChannel.postMessage({
+            type: 'SERVING_HTML_FILE',
+            filePath: requestedFile,
+          });
+        }
         if (url) {
           sendMessageToAllClients('FETCHING_EXTERNAL_URL');
           const response = await fetch(url);
@@ -141,12 +148,13 @@ function main() {
     }
   }
 
-  function sendMessageToAllClients(messageType) {
+  function sendMessageToAllClients(messageType, details) {
     self.clients.matchAll({includeUncontrolled: true}).then(clients => {
       clients.forEach(client => {
         if (client.type === 'window') {
           client.postMessage({
             type: messageType,
+            details,
           });
         }
       });

@@ -50,6 +50,12 @@ function useProjectServiceWorker(
               console.log('service worker confirmed current file update');
               incrementPreviewKeyIndex();
             }
+            if (event.data.type === 'SERVING_FILE') {
+              console.log(
+                'service worker is serving file:',
+                event.data.details.filePath
+              );
+            }
           };
           return () => {
             registration.unregister();

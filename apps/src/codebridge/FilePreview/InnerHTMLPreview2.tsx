@@ -9,6 +9,10 @@ import useProjectServiceWorker from './useProjectServiceWorker';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
 
+// TODOs:
+// Can we keep the nice file not found UI
+// Update the url bar with the current file name
+
 const InnerHTMLPreview = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
@@ -45,6 +49,7 @@ const InnerHTMLPreview = () => {
         if (!data.source) {
           // Clear the preview if no source is provided. We are likely changing levels.
           // todo: send something to service worker?
+          // setSource(undefined);
         } else {
           setSource(data.source);
         }
@@ -72,6 +77,25 @@ const InnerHTMLPreview = () => {
       window.removeEventListener('message', handleMessage);
     };
   }, [handleMessage, parentOrigin]);
+
+  useEffect(() => {
+    const broadcastChannel = new BroadcastChannel('weblab2-file-preview');
+    broadcastChannel.onmessage = event => {
+      if (event.data.type === 'SERVING_HTML_FILE') {
+        const filePath = event.data.filePath;
+        setCurrentFile(filePath);
+        console.log('Notifying parent of HTML file change:', filePath);
+        // Notify parent of the file change
+        window.parent.postMessage(
+          {type: IframeMessageType.FILE_UPDATED, fileName: filePath},
+          parentOrigin
+        );
+      }
+    };
+    return () => {
+      broadcastChannel.close();
+    };
+  }, [parentOrigin]);
 
   useEffect(() => {
     if (iframeRef.current) {
