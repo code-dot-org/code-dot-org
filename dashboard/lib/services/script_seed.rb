@@ -135,16 +135,16 @@ module Services
     # @param [String | File] file_or_path - Can be String representing a path, relative or absolute, to the file
     #   to read from, or it can be a File object to read from.
     # @return [Unit] the Unit created/updated from seeding
-    def self.seed_from_json_file(file_or_path)
-      seed_from_json(File.read(file_or_path))
+    def self.seed_from_json_file(file_or_path, require_course: false)
+      seed_from_json(File.read(file_or_path), require_course: require_course)
     end
 
     # Convenience wrapper around seed_from_hash. Parses the given content as a json string and then seeds using it.
     #
     # @param [String] json_string
     # @return [Unit] the Unit created/updated from seeding
-    def self.seed_from_json(json_string)
-      seed_from_hash(JSON.parse(json_string))
+    def self.seed_from_json(json_string, require_course: false)
+      seed_from_hash(JSON.parse(json_string), require_course: require_course)
     end
 
     # Creates / updates the objects in the database described by the input hash.
@@ -189,7 +189,7 @@ module Services
     #
     # @param [Hash] data - The input data to seed from.
     # @return [Unit] the Unit created/updated from seeding
-    def self.seed_from_hash(data)
+    def self.seed_from_hash(data, require_course: false)
       script_data = data['script']
       lesson_groups_data = data['lesson_groups']
       lessons_data = data['lessons']
@@ -242,11 +242,11 @@ module Services
         seed_context.levels = seed_context.script_levels.map(&:levels).flatten
         import_levels_script_levels(levels_script_levels_data, seed_context)
 
-        seed_context.resources = import_resources(resources_data, seed_context)
+        seed_context.resources = import_resources(resources_data, seed_context, require_course: require_course)
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
         seed_context.scripts_resources = import_scripts_resources(scripts_resources_data, seed_context)
         seed_context.scripts_student_resources = import_scripts_student_resources(scripts_student_resources_data, seed_context)
-        seed_context.vocabularies = import_vocabularies(vocabularies_data, seed_context)
+        seed_context.vocabularies = import_vocabularies(vocabularies_data, seed_context, require_course: require_course)
         seed_context.lessons_vocabularies = import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
         seed_context.programming_environments = ProgrammingEnvironment.all
         seed_context.programming_expressions = ProgrammingExpression.all
@@ -427,7 +427,7 @@ module Services
       destroy_outdated_objects(LevelsScriptLevel, levels_script_levels, levels_script_levels_to_import, seed_context)
     end
 
-    def self.import_resources(resources_data, seed_context)
+    def self.import_resources(resources_data, seed_context, require_course: false)
       course_version_id = seed_context.script.get_course_version&.id
 
       unless course_version_id
@@ -441,9 +441,15 @@ module Services
         # this method will be able to import the resources the next time the
         # seed process runs.
         if resources_data.count > 0
-          puts "WARNING: unable to import resources into script #{seed_context.script.name} " \
+          message = "unable to import resources into script #{seed_context.script.name} " \
             "because course version is missing. This is only to be expected if " \
             "the script is being seeded for the first time."
+
+          if require_course
+            raise message
+          else
+            puts "WARNING: #{message}"
+          end
         end
         return []
       end
@@ -533,7 +539,7 @@ module Services
       ScriptsStudentResource.where('script_id' => seed_context.script.id)
     end
 
-    def self.import_vocabularies(vocabularies_data, seed_context)
+    def self.import_vocabularies(vocabularies_data, seed_context, require_course: false)
       course_version_id = seed_context.script.get_course_version&.id
 
       return [] if vocabularies_data.blank?
@@ -549,9 +555,15 @@ module Services
         # this method will be able to import vocabulary the next time the
         # seed process runs.
         if vocabularies_data.count > 0
-          puts "WARNING: unable to import vocabulary into script #{seed_context.script.name} " \
+          message =  "unable to import vocabulary into script #{seed_context.script.name} " \
             "because course version is missing. This is only to be expected if " \
             "the script is being seeded for the first time."
+
+          if require_course
+            raise message
+          else
+            puts "WARNING: #{message}"
+          end
         end
         return []
       end

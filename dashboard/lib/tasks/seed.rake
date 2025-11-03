@@ -248,7 +248,7 @@ namespace :seed do
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
       custom_scripts.each do |filepath|
-        Services::ScriptSeed.seed_from_json_file(filepath)
+        Services::ScriptSeed.seed_from_json_file(filepath, require_course: opts.fetch(:require_course, false))
       rescue => exception
         raise exception, "Error parsing script file #{filepath}: #{exception}"
       end
@@ -310,7 +310,7 @@ namespace :seed do
   # an empty DB. For more context, see
   # https://github.com/code-dot-org/code-dot-org/pull/64792
   timed_task_with_logging reseed_scripts_ui_tests: :environment do
-    update_scripts(script_files: UI_TEST_SCRIPTS)
+    update_scripts(script_files: UI_TEST_SCRIPTS, require_course: true)
   end
 
   timed_task_with_logging scripts_adhoc: SCRIPTS_DEPENDENCIES do
