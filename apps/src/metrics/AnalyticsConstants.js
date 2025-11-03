@@ -512,6 +512,10 @@ const EVENTS = {
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
 
+  // AI chat response copied. Shared across features; check event properties for usage and clientType
+  // to determine feature.
+  CHAT_COPIED: 'User copied an AI chat response',
+
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
     'Teacher gave feedback on AIs summary of student work',
