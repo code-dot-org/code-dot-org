@@ -154,15 +154,15 @@ const DanceView: React.FunctionComponent<{
 
     return {
       analysis: [],
-      artist: 'A.I.', // TODO: user's name?
+      artist: '', // Unused
       bpm: musicProjectPlayer.current.getBpm().toString(),
       delay: '0',
       duration: 0, // Unused
       file: '', // Unused
-      title: 'My AI Remix', // TODO: what should this be?
+      title: guideMode === 'instructions' ? 'Starter Beat' : 'My Music Mix',
       peaks: {},
     };
-  }, [currentSongMetadata, loadedMusicProject]);
+  }, [currentSongMetadata, loadedMusicProject, guideMode]);
 
   const WorkspaceAlert = useLevelEditMode<DanceLevelProperties>(
     levelProperties.id,
@@ -521,7 +521,9 @@ const DanceView: React.FunctionComponent<{
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
       <div className={moduleStyles.mainContent}>
-        {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
+        {!getIsShareView() && !usingMusicProject && (
+          <AgeDialog turnOffFilter={turnOffFilter} />
+        )}
         <ResourcePanel
           isRunning={isRunning}
           hasRun={hasRun}
@@ -536,7 +538,7 @@ const DanceView: React.FunctionComponent<{
         {!isToolboxMode && (
           <PanelContainer
             id="visualization"
-            headerContent="Dance Party!"
+            headerContent="Dance"
             headerClassName={moduleStyles.panelHeader}
             className={classNames(
               moduleStyles.visualizationArea,

@@ -197,8 +197,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   ].includes(aiGenerateState);
 
   const parentProperties = useParentLevelProperties();
-  const showNavigation =
-    !levelProperties.isProjectLevel && !parentProperties?.isProjectLevel;
+  const isStandalone =
+    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
 
   return (
     <Guide id="generate-panel" modal={modal} position="bottom">
@@ -274,7 +274,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              setAiGenerateState('editing');
+              // Skip the 'editing' validation state for standalone projects.
+              setAiGenerateState(isStandalone ? 'edited' : 'editing');
               resetProgram();
             }}
             className={styles.buttonWide}
@@ -300,8 +301,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
         <>
           <div>
             <Heading4>Modify the code</Heading4>
-            Amazing moves! Keep editing, or update your dancer design or music
-            mix above. Click Finish when you're done.
+            {isStandalone
+              ? 'Amazing moves! Keep editing, or update your dancer design or music mix above.'
+              : "Amazing moves! Keep editing, or update your dancer design or music mix above. Click Finish when you're done."}
           </div>
           <div className={styles.buttonRow}>
             <Button
@@ -317,7 +319,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {showNavigation && (
+            {!isStandalone && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.

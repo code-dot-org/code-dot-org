@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
@@ -176,6 +177,12 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     getLevelPropertiesPath,
     dispatch,
   ]);
+
+  // Default to dark mode for this experience.
+  const {setTheme} = useTheme();
+  useEffect(() => {
+    setTheme('Dark');
+  }, [setTheme]);
 
   useEffect(() => {
     loadData();
