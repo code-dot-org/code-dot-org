@@ -39,6 +39,7 @@ const GuideInstructions: React.FunctionComponent<GuideInstructionsProps> = ({
         isRunning={isRunning}
         hasRun={hasRun}
         hasEdited={hasEdited}
+        hideContinueIfDisabled={true}
       />
     </Guide>
   );
