@@ -52,7 +52,7 @@ module AichatRubyTypes
       to_s
     end
 
-    # Helper to determint if a value is this type. Needs to be implemented in derived classes.
+    # Helper to determine if a value is this type. Needs to be implemented in derived classes.
     def value_is_type?(value)
       AichatRubyTypes.raise_or_notify_type_error("not implmemented")
     end
