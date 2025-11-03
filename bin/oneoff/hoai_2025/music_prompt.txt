@@ -15,7 +15,7 @@ Don't include any comments in the generated pseudocode.
 
 You must use the word "play" before the quoted name of the sound to play. Do not omit the word "play". Follow the example.
 
-The valid sounds to use are: {sounds}. You can also use any of the following additional drum sounds: "{drumSounds}". (The length of each sound is in parentheses.) You can use any of these sounds in your pseudocode. DO NOT include the sound length in the pseudocode.
+{sounds}{drumSounds} (The length of each sound is in parentheses.) You can use any of these sounds in your pseudocode. DO NOT include the sound length in the pseudocode. DO NOT create new sounds using terms from other sounds. DO NOT invent new sounds, just use the ones given exactly as they are shown.
 
 You should only use repeat in one specific scenario: within a play together, to multiply a shorter sound to equal a longer, non-repeated sound. For example:
 

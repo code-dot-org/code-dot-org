@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby
+
+# This script just ensures that the generated music pseudo-code is valid code.
+#
+# You can specific --delete to actually delete the invalid files.
+
+require 'optparse'
+require_relative 'music_validation'
+
+# Parse options
+options = {
+  delete: false,
+  filter: '*',
+}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    Validates the generated music produced by the `generate_music` script.
+
+    Options:
+  BANNER
+
+  opts.on('--delete',
+          'Deletes any invalid files. Afterward, run the generate_music script to re-generate them.'
+         ) do |delete|
+           options[:delete] = delete
+         end
+
+  opts.on('-f', '--filter FILTER',
+          'Filters out only packs with the given string within their id.',
+         ) do |filter|
+           options[:filter] = "*#{filter}*" unless filter == '*' || filter.empty?
+         end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+output_path = File.join(File.dirname(__FILE__), "music_output")
+Dir.glob(File.join(output_path, '**', "#{options[:filter]}.txt")) do |path|
+  error = validate_music path
+  name = File.basename(path)
+
+  # Print result if error
+  if error
+    puts "#{name}: #{error}"
+    if options[:delete]
+      puts "Deleting #{path}"
+      File.delete(path)
+    end
+  end
+end

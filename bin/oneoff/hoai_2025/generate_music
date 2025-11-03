@@ -53,59 +53,22 @@
 require 'benchmark'
 require 'fileutils'
 require 'httparty'
+require 'json'
 require 'optparse'
 require 'parallel'
 require 'ruby-progressbar'
 
-BUCKET_NAME = 'cdo-curriculum'
-BUCKET_PATH = 'media/musiclab/generate/music'
-
-# The default music lab library and version
-LIBRARY='launch2024'
-LIBRARY_VERSION='launch2024-3'
-
-# Derived URL
-LIBRARY_URL="https://curriculum.code.org/media/musiclab/music-library-#{LIBRARY}.json?version=#{LIBRARY_VERSION}"
-
-# Default Model to use
-MODEL='gemini-2.5-flash'
-
-# Temperature in our system is between 0 and 1 (and will be proportionally altered to reflect the model)
-# For Gemini, this gets multiplied by 2, for instance.
-TEMPERATURE=0.7
-
-# Default layer types (adlib_text:sound_type)
-LAYERS=%w[beats:beat bass:bass leads:lead vocals:vocal]
-
-# Moods
-MOODS=%w[simple creative wild]
-
-# Drums (limits the drum choices to the given packs where 'original' is the source artist pack)
-DRUMS=%w[original electro groove indie pop hiphop rock]
-
-# The system prompt
-PROMPT=File.read(File.join(File.dirname(__FILE__), 'music_prompt.txt'))
-
-# The user prompt
-MESSAGE=File.read(File.join(File.dirname(__FILE__), 'music_message.txt'))
-
-# The number of different options to produce
-VARIANTS=3
-
-# The name of the adlib option (usually always 'complex')
-ADLIB_OPTION='complex'
-
-# The default list of possible lengths
-LENGTHS=[10, 15, 20]
-LENGTH_WORD_AMOUNTS=[10, 20, 30]
-LENGTH_WORDS=%w[short medium long]
+require_relative 'constants'
+require_relative 'music_validation'
 
 # Parse options
 options = {
+  just_save_prompt: false,
   dry_run: true,
   production: false,
   just_upload: false,
   lengths: [],
+  list_packs: false,
   layers: [],
   drums: [],
   moods: [],
@@ -114,16 +77,26 @@ options = {
   temperature: TEMPERATURE,
   variants: VARIANTS,
   adlib_option: ADLIB_OPTION,
+  filter: '',
 }
 OptionParser.new do |opts|
   opts.banner = <<~BANNER
     Usage: #{File.basename(__FILE__)} [options]
 
-    This script calls the Python hoai_2025 image generation script and, if not
-    a dry run, uploads them to S3.
+    This script calls out to Gemini to produce music pseudo-code for use in the
+    Hour of AI music generation levels.
+
+    It can selectively upload the generated music to our curriculum bucket for
+    production use.
 
     Options:
   BANNER
+
+  opts.on('--list-packs',
+          'Just lists the known packs and exists.'
+         ) do |list_packs|
+           options[:list_packs] = list_packs
+         end
 
   opts.on('--no-dry-run',
           'Disables the read-only mode where no changes are written to S3'
@@ -135,6 +108,12 @@ OptionParser.new do |opts|
           'Publishes the content into the production bucket.'
          ) do |production|
            options[:production] = production
+         end
+
+  opts.on('--just-save-prompt',
+          'Saves the prompt to the generated file for ungenerated content',
+         ) do |just_save_prompt|
+           options[:just_save_prompt] = just_save_prompt
          end
 
   opts.on('--just-upload',
@@ -204,6 +183,12 @@ OptionParser.new do |opts|
            options[:variants] = variants.to_i
          end
 
+  opts.on('-f', '--filter FILTER',
+          'Filters out only packs with the given string within their id.',
+         ) do |filter|
+           options[:filter] = filter
+         end
+
   opts.on('-h', '--help', 'Prints this help message') do
     puts opts
     exit
@@ -221,27 +206,43 @@ if options[:layers].length < 2
   raise 'Error: need at least 2 layers'
 end
 
-# Load the application layer
-ENV['SKIP_SCRIPT_PRELOAD'] = '1'
-ENV['SKIP_I18N_INIT'] = '1'
-require_relative '../../../dashboard/config/environment'
-require_relative '../../../dashboard/app/helpers/aichat_ai_helper'
-
 # Determine the music library songs by downloading the current manifest
 puts
 puts "Downloading music manifest from #{LIBRARY_URL}..."
 data = HTTParty.get(LIBRARY_URL)
 
+manifest_path = File.join(File.dirname(__FILE__), "manifest.json")
+puts
+puts "Caching music manifest for validation in #{manifest_path}"
+File.write(manifest_path, data)
+
 # The ids of packs that are available. We will generate unique things for each pack.
-packs = data['packs'].map {|pack| pack['id']}
+# We drop any packs that don't have any sounds ('default')
+packs = data['packs'].filter {|pack| (pack['sounds']&.length || 0) >= 2}
 puts
 puts "Found #{packs.length} packs."
+
+unless options[:filter].empty?
+  packs = packs.filter {|pack| pack['id'].include?(options[:filter])}
+  puts "Filtered out to just #{packs.length} packs."
+end
+
+packs = packs.map {|pack| pack['id']}
+
+if options[:list_packs]
+  puts
+  puts 'List listing packs:'
+  packs.each do |pack|
+    puts " - #{pack}"
+  end
+  exit
+end
 
 # For every pack, the list of sounds
 sounds = data['packs'].map {|pack| [pack['id'], pack['sounds'].filter {|sound| sound['type'] != 'preview'}]}.to_h
 
 # Also keep track of 'universal' sounds from 'Code.org' packs
-universals = data['packs'].filter {|pack| pack['artist'] == 'Code.org'}.map {|pack| pack['sounds'].filter {|sound| sound['type'] != 'preview'}.map {|sound| sound['pack'] = pack['id']; sound}}.flatten
+universals = data['packs'].filter {|pack| pack['artist'] == 'Code.org' || pack['artist'].nil?}.map {|pack| pack['sounds'].filter {|sound| sound['type'] != 'preview'}.map {|sound| sound['pack'] = pack['id']; sound}}.flatten
 
 # Specifically the drum sounds (those which are not associated with packs)
 drum_sounds = universals.filter {|sound| sound['type'] == 'beat'}
@@ -385,6 +386,14 @@ average = {
   count: 0,
 }
 
+puts
+puts "Loading application..."
+# Load the application layer
+ENV['SKIP_SCRIPT_PRELOAD'] = '1'
+ENV['SKIP_I18N_INIT'] = '1'
+require_relative '../../../dashboard/config/environment'
+require_relative '../../../dashboard/app/helpers/aichat_ai_helper'
+
 output_path = File.join(File.dirname(__FILE__), "music_output")
 FileUtils.mkdir_p output_path
 
@@ -405,70 +414,75 @@ else
     response = nil
     time = true
 
-    drum_sounds = object[:drum_sounds]
-    if object[:drum] == 'original'
-      drum_sounds = []
-    elsif object[:drum]
-      drum_sounds = drum_sounds.filter do |sound|
-        sound['pack'] == object[:drum]
-      end
-    end
+    adlibs = object[:adlibs]
+    path = File.join(output_path, "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt")
 
-    object[:adlibs].permutation(object[:adlibs].length).each do |adlibs|
-      path = File.join(output_path, "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt")
-
-      unless File.exist?(path)
-        if response.nil?
-          # Truncate sounds, if needed
-          sounds = object[:sounds]
-          if object[:types]
-            sounds = object[:sounds].filter do |sound|
-              object[:types].include?(sound['type'])
+    unless File.exist?(path)
+      if response.nil?
+        drum_sounds = object[:drum_sounds]
+        sounds = object[:sounds]
+        # Truncate sounds, if needed
+        if object[:types]
+          sounds = object[:sounds].filter do |sound|
+            object[:types].include?(sound['type'])
+          end
+        else
+          if object[:drum] == 'original'
+            drum_sounds = sounds.filter {|sound| sound['type'] == 'beat'}
+          elsif object[:drum]
+            drum_sounds = drum_sounds.filter do |sound|
+              sound['pack'] == object[:drum]
             end
           end
 
-          prompt = PROMPT.
-            gsub('{sounds}', sounds.map do |sound|
-              "\"#{sound['pack'] || object[:pack]}/#{sound['src']}\" (#{sound['length']} measures)"
-            end.join(', ')
-            ).
-            gsub('{drumSounds}', drum_sounds.map do |sound|
-              "\"#{sound['pack'] || object[:pack]}/#{sound['src']}\" (#{sound['length']} measures)"
-            end.join(', ')
-            )
-          message = MESSAGE.gsub('{range}', "#{object[:length]}-#{object[:length] + 2}").gsub('{mood}', object[:mood] || 'fun')
-
-          # Create a AI client via the Aichat system
-          client = AichatAiHelper.create_ai_client_instance(SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR], MODEL)
-
-          # Craft a response to send
-          config, request, context = AichatAiHelper.get_config_request_context(
-            [],
-            {'chatMessageText' => message},
-            options[:temperature],
-            prompt,
-            [],
-            MODEL,
-            nil,
-            nil,
-            nil,
-            nil,
-            SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR],
-            nil
-          )
-
-          # Carry out the request and get the AI response back
-          time = Benchmark.measure do
-            response = client.get_response(config, request, context)
-          rescue Net::ReadTimeout
-            sleep(3)
-            retry
-          end.real
+          sounds = sounds.filter {|sound| sound['type'] != 'beat'}
         end
 
-        # Write all forms of it locally
-        File.write(path, response)
+        prompt = PROMPT.
+          gsub('{sounds}', sounds.any? ? "The valid sounds to use are: #{sounds.map do |sound|
+            "\"#{sound['pack'] || object[:pack]}/#{sound['src']}\" (#{sound['length']} measures)"
+          end.join(', ')}. " : ""
+          ).
+          gsub('{drumSounds}', "You can #{sounds.any? ? 'also ' : ''}use any of the following #{sounds.any? ? 'additional ' : ''}drum sounds: #{drum_sounds.map do |sound|
+            "\"#{sound['pack'] || object[:pack]}/#{sound['src']}\" (#{sound['length']} measures)"
+          end.join(', ')}."
+          )
+        message = MESSAGE.gsub('{range}', "#{object[:length]}-#{object[:length] + 2}").gsub('{mood}', object[:mood] || 'fun')
+
+        # Create a AI client via the Aichat system
+        client = AichatAiHelper.create_ai_client_instance(SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR], MODEL)
+
+        # Craft a response to send
+        config, request, context = AichatAiHelper.get_config_request_context(
+          [],
+          {'chatMessageText' => message},
+          options[:temperature],
+          prompt,
+          [],
+          MODEL,
+          nil,
+          nil,
+          nil,
+          nil,
+          SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR],
+          nil
+        )
+
+        # Carry out the request and get the AI response back
+        time = Benchmark.measure do
+          response = if options[:just_save_prompt]
+                       prompt + "\n\n" + message + "\n\n" + object.inspect
+                     else
+                       client.get_response(config, request, context)
+                     end
+        rescue Net::ReadTimeout, Net::OpenTimeout
+          sleep(3)
+          retry
+        end.real
       end
+
+      # Write all forms of it locally
+      File.write(path, response)
     end
 
     time
@@ -485,30 +499,48 @@ bucket_name = "#{BUCKET_NAME}#{options[:production] ? '' : '-devel'}"
 puts
 puts "Uploading to s3://#{bucket_name}..."
 
+unless !options[:dry_run] && options[:production]
+  puts "Note: Development bucket upload. Specify --production to commit to the production bucket for live use"
+end
+
 if options[:dry_run]
   puts "Note: Dry run. Not uploading content. Specify --no-dry-run to upload"
-else
-  unless options[:production]
-    "Note: Development bucket upload. Specify --production to commit to the production bucket for live use"
-  end
+end
 
+unless options[:just_save_prompt]
   upload_progress_bar = ProgressBar.create(total: objects.size)
   Parallel.map(objects, finish: lambda do |_, _, _|
     upload_progress_bar&.increment
   end
   ) do |object|
-    path = "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
-    name = "#{BUCKET_PATH}/#{path}"
+    # The generated path
+    original_path = "#{object[:pack]}-#{object[:adlib_option]}-#{object[:adlibs].join('-')}#{object[:types] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
+    file_path = File.join(output_path, original_path)
+    next unless File.exist?(file_path)
 
-    # Upload json
-    AWS::S3.upload_to_bucket(
-      bucket_name,
-      File.join(BUCKET_PATH, name),
-      File.read(File.join(output_path, path)),
-      acl: 'public-read',
-      no_random: true,
-      content_type: 'json'
-    )
+    error = validate_music file_path
+
+    object[:adlibs].permutation(object[:adlibs].length).each do |adlibs|
+      # All 'same' permutations get uploaded from the original generated path
+      path = "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
+
+      if error
+        puts "Not uploading: #{path}\n        Error: #{error}"
+      else
+        # Upload code
+        unless options[:dry_run]
+          name = "#{BUCKET_PATH}/#{path}"
+          AWS::S3.upload_to_bucket(
+            bucket_name,
+            File.join(BUCKET_PATH, name),
+            File.read(file_path),
+            acl: 'public-read',
+            no_random: true,
+            content_type: 'json'
+          )
+        end
+      end
+    end
 
     true
   end
