@@ -2,9 +2,9 @@
   flex: 1;
 }
 
-.buttonRows {
+.buttonRow {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-top: 10px;
   gap: 10px;
-  flex-direction: column;
 }

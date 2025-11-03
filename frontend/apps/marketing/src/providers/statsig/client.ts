@@ -1,6 +1,7 @@
 import {
   useStatsigClient,
   useClientBootstrapInit,
+  StatsigUser,
 } from '@statsig/react-bindings';
 import {setCookie} from 'cookies-next';
 import {getCookie} from 'cookies-next/client';
@@ -12,6 +13,8 @@ import OneTrustContext, {
   OneTrustCookieGroup,
 } from '@/providers/onetrust/context/OneTrustContext';
 import plugins from '@/providers/statsig/plugins';
+
+const CODEORG_BRAND = 'codeorg';
 
 function getStatsigStableId() {
   const onetrustContext = useContext(OneTrustContext);
@@ -27,22 +30,32 @@ function getStatsigStableId() {
     stableId = uuidv4();
     setCookie('statsig_stable_id', stableId, {
       path: '/',
+      domain: '.code.org',
+      sameSite: 'lax',
+      secure: true,
     });
   }
 
   return stableId;
 }
 
-export function getClient(clientKey: string, stage: Stage, values: string) {
-  return useClientBootstrapInit(
-    clientKey,
-    {userID: 'marketing-user', customIDs: {stableID: getStatsigStableId()}},
-    values,
-    {
-      environment: {tier: stage},
-      plugins: stage === 'production' ? plugins : undefined,
-    },
-  );
+export function getClient(
+  clientKey: string,
+  stage: Stage,
+  values: string,
+  brand: string,
+) {
+  // Add stableID only for code.org brand so we can track users across
+  // studio.code.org and code.org, otherwise fallback to Statsig SDK's default behavior
+  const stableId = brand === CODEORG_BRAND ? getStatsigStableId() : undefined;
+  const user: StatsigUser = stableId
+    ? {userID: 'marketing-user', customIDs: {stableID: stableId}}
+    : {userID: 'marketing-user'};
+
+  return useClientBootstrapInit(clientKey, user, values, {
+    environment: {tier: stage},
+    plugins: stage === 'production' ? plugins : undefined,
+  });
 }
 
 // Log events in Statsig

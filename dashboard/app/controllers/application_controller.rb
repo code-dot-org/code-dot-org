@@ -434,4 +434,10 @@ class ApplicationController < ActionController::Base
   ensure
     RequestStore.store[:current_user] = nil
   end
+
+  private def append_info_to_payload(payload)
+    super
+    payload[:user_id] = current_user&.id
+    payload[:admin_id] = session[:admin_id] if session[:assumed_identity]
+  end
 end

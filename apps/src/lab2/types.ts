@@ -404,4 +404,5 @@ export interface LabProps<
 > {
   levelProperties: T;
   initialSources?: U;
+  channel?: Channel;
 }

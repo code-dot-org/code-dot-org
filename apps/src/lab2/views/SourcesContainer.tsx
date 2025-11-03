@@ -23,6 +23,7 @@ import StartOverDialog, {
   MessageType,
 } from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 
+import ProjectManager from '../projects/ProjectManager';
 import getInitialSources from '../utils/getInitialSources';
 
 const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -49,15 +50,26 @@ export function useSources<T extends ProjectSources = ProjectSources>() {
   return context as unknown as SourcesContextType<T>;
 }
 
+interface SourcesContainerProps extends LabProps {
+  children: ReactNode;
+  defaultSources: ProjectSources;
+  /**
+   * Optionally supply a custom ProjectManager to use in place of the Lab2Registry's ProjectManager.
+   * Currently only used in very specific multi-project scenarios.
+   */
+  projectManager?: ProjectManager;
+}
+
 /**
  * Manages sources for a Lab.
  */
-const SourcesContainer: React.FC<
-  LabProps & {
-    children: ReactNode;
-    defaultSources: ProjectSources;
-  }
-> = ({levelProperties, initialSources, defaultSources, children}) => {
+const SourcesContainer: React.FC<SourcesContainerProps> = ({
+  levelProperties,
+  initialSources,
+  defaultSources,
+  children,
+  projectManager,
+}) => {
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
     () => getInitialSources(levelProperties, initialSources) || defaultSources
   );
@@ -76,14 +88,16 @@ const SourcesContainer: React.FC<
     (sources: ProjectSources, save: boolean = false) => {
       setCurrentSources(sources);
       if (save) {
-        Lab2Registry.getInstance().getProjectManager()?.save(sources, true);
+        (
+          projectManager || Lab2Registry.getInstance().getProjectManager()
+        )?.save(sources, true);
       }
 
       if (reinitializationHandler.current) {
         reinitializationHandler.current();
       }
     },
-    [setCurrentSources, reinitializationHandler]
+    [projectManager, setCurrentSources, reinitializationHandler]
   );
 
   useEffect(() => {
@@ -116,11 +130,12 @@ const SourcesContainer: React.FC<
         }
         return newSources;
       });
-      Lab2Registry.getInstance()
-        .getProjectManager()
-        ?.save(newSources, forceSave);
+      (projectManager || Lab2Registry.getInstance().getProjectManager())?.save(
+        newSources,
+        forceSave
+      );
     },
-    [setCurrentSources]
+    [setCurrentSources, projectManager]
   );
 
   const onStartOver = useCallback(() => {

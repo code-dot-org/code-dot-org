@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2025-10-29T10:33:34.000Z",
   "level_num": "custom",
@@ -13,7 +12,7 @@
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "preview",
-    "ai_tutor_mode": "suggest",
+    "ai_tutor_mode": "outline",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -35,8 +34,8 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>OR Logic — Payment Options</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <main class=\"wrap\">\n    <section class=\"card\">\n      <h1>Payment Options</h1>\n      <p class=\"subtitle\">You can pay if you have <em>cash</em> or a <em>coupon</em>.</p>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"hasCash\" />\n          Has Cash\n        </label>\n        <span id=\"pillA\" class=\"pill\">false</span>\n      </div>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"hasCoupon\" />\n          Has Coupon\n        </label>\n        <span id=\"pillB\" class=\"pill\">false</span>\n      </div>\n\n      <p id=\"orResult\" class=\"result no\">Cannot pay</p>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n  ",
-          "active": true,
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>OR Logic — Payment Options</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <main class=\"wrap\">\n    <section class=\"card\">\n      <h1>Payment Options</h1>\n      <p class=\"subtitle\">You can pay if you have cash <em>or</em> a coupon.</p>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"hasCash\" />\n          Has Cash\n        </label>\n        <span id=\"pillA\" class=\"pill\">false</span>\n      </div>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"hasCoupon\" />\n          Has Coupon\n        </label>\n        <span id=\"pillB\" class=\"pill\">false</span>\n      </div>\n\n      <p id=\"orResult\" class=\"result no\">Cannot pay</p>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n  ",
+          "active": false,
           "folderId": "0"
         },
         "2": {
@@ -45,7 +44,7 @@
           "language": "js",
           "contents": "// Get elements from the page\nlet cashBox = document.getElementById(\"hasCash\");\nlet couponBox = document.getElementById(\"hasCoupon\");\nlet result = document.getElementById(\"orResult\");\nlet pillA = document.getElementById(\"pillA\");\nlet pillB = document.getElementById(\"pillB\");\n\n// This function checks both boxes and updates the page\nconst checkPayment = () => {\n  // Step 1: Read current checkbox values\n  let hasCash = cashBox.checked;\n  let hasCoupon = couponBox.checked;\n\n  // Step 2: Use OR logic (only one needs to be true)\n  let canPay = hasCash || hasCoupon;\n\n  // Step 3: Update the main message\n  if (canPay) {\n    result.textContent = \"Payment accepted\";\n    result.className = \"result ok\";\n  } else {\n    result.textContent = \"Cannot pay\";\n    result.className = \"result no\";\n  }\n\n  // Step 4: Update the small true/false pills\n  pillA.textContent = hasCash;\n  pillB.textContent = hasCoupon;\n\n  if (hasCash) {\n    pillA.className = \"pill ok\";\n  } else {\n    pillA.className = \"pill no\";\n  }\n\n  if (hasCoupon) {\n    pillB.className = \"pill ok\";\n  } else {\n    pillB.className = \"pill no\";\n  }\n}\n\n// Run the function whenever a checkbox changes\ncashBox.addEventListener(\"change\", checkPayment);\ncouponBox.addEventListener(\"change\", checkPayment);\n\n// Run once at the start to set everything\ncheckPayment();\n",
           "folderId": "0",
-          "active": false
+          "active": true
         },
         "3": {
           "id": "3",
@@ -57,12 +56,13 @@
         }
       },
       "openFiles": [
-        "1",
         "2",
+        "1",
         "3"
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-29T10:33:34.922+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level1-test-2025\"},{\"changed_at\":\"2025-10-29 10:34:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:44 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:44:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-29T10:33:34.922+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level1-test-2025\"},{\"changed_at\":\"2025-10-29 10:34:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:32:44 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:44:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 17:52:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 17:52:23 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 18:48:11 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 18:49:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
