@@ -61,7 +61,7 @@ steps:
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'WARNING: get-cached-staging-build failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
+      - "git rev-parse --git-dir >/dev/null 2>&1 || (echo 'WARNING: Invalid git repo, cloning from scratch (SLOW and LFS $$$!)' && find . -mindepth 1 -delete && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (=the PR)
@@ -171,7 +171,7 @@ steps:
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'get-cached-staging-build failed: checkout will be SLOW and LFS $$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
+      - "git rev-parse --git-dir >/dev/null 2>&1 || (echo 'WARNING: Invalid git repo, cloning from scratch (SLOW and LFS $$!)' && find . -mindepth 1 -delete && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (the PR's branch).
@@ -316,6 +316,6 @@ trigger:
 
 ---
 kind: signature
-hmac: d0de97812011e6377e6e652fa06cf7852542927d8db4ad52d5e4f4af77aa5bf3
+hmac: ab6feebae513a986145814d79294df86457258c691d932669d83af3d409bb43f
 
 ...
