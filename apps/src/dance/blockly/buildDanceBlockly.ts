@@ -361,6 +361,7 @@ export default function buildDanceBlockly(
   ).filter(option => Object.keys(bestLayouts).includes(option));
 
   const simpleCode = codeComplexity === 'simple';
+  const hasBackgroundDancers = backgroundDancers !== 'nobody';
 
   const flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo = {
     kind: 'flyoutToolbox',
@@ -406,7 +407,7 @@ export default function buildDanceBlockly(
     simpleCode
   );
 
-  if (backgroundDancers !== 'nobody' || codeComplexity === 'complex') {
+  if (hasBackgroundDancers || !simpleCode) {
     flyoutDefinition.contents.push({...danceSpriteGroup});
   }
 
@@ -428,21 +429,23 @@ export default function buildDanceBlockly(
     backupGroupValue
   );
 
-  const setupDoChain = chainBlocks(
+  const whenRunChain = chainBlocks(
     initialBg,
     initialFg,
     makeSpriteBlock,
-    ...(backgroundDancers !== 'nobody' ? [danceSpriteGroup] : []),
+    ...(hasBackgroundDancers ? [danceSpriteGroup] : []),
     ...(simpleCode
-      ? [leadChangeMoveBlock, backupChangeMoveBlock]
+      ? hasBackgroundDancers
+        ? [leadChangeMoveBlock, backupChangeMoveBlock]
+        : [leadChangeMoveBlock]
       : [initialChangeMove])
   );
 
-  const setupBlock: BlockState = {
+  const whenRunBlock: BlockState = {
     type: 'Dancelab_whenRun',
     deletable: false,
     movable: false,
-    next: {block: setupDoChain},
+    next: {block: whenRunChain},
     kind: 'block',
   };
 
@@ -493,7 +496,10 @@ export default function buildDanceBlockly(
 
   flyoutDefinition.contents.push({...eventBlock});
 
-  const blocks: BlockState[] = [setupBlock, ...(simpleCode ? [] : eventBlocks)];
+  const blocks: BlockState[] = [
+    whenRunBlock,
+    ...(simpleCode ? [] : eventBlocks),
+  ];
 
   flyoutDefinition.contents.sort((a, b) => {
     const order = flyoutBlockOrder;
