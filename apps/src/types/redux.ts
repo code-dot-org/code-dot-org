@@ -22,7 +22,6 @@ import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {TeachingProfileState} from '@cdo/apps/templates/TeachingProfileState';
 import {Weblab2State} from '@cdo/apps/weblab2/redux';
 
 import {DanceState} from '../dance/danceRedux';
@@ -62,7 +61,6 @@ export interface RootState {
   teacherPanel: TeacherPanelState;
   teacherRubric: TeacherRubricState;
   teacherSections: TeacherSectionState;
-  teachingProfile: TeachingProfileState;
   weblab2: Weblab2State;
 }
 

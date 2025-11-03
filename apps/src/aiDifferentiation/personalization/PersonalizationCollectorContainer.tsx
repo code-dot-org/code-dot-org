@@ -3,13 +3,6 @@ import React from 'react';
 
 import PersonalizationProgressBar from '@cdo/apps/aiDifferentiation/personalization/PersonalizationProgressBar';
 import {matchTeachingProfile} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
-import {
-  fetchTeachingProfileData,
-  selectTeachingProfileData,
-  selectTeachingProfileHasFetched,
-  selectTeachingProfileLoading,
-} from '@cdo/apps/templates/teachingProfileRedux';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {
@@ -25,6 +18,7 @@ import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
 import PersonalizationResults from './PersonalizationResults';
 import {TEACHING_STYLES} from './PersonalizationResultsPersonas';
 import {saveTeachingProfileData} from './teachingProfileApi';
+import {useTeachingProfileData} from './useTeachingProfileData';
 
 import style from './personalization-information.module.scss';
 
@@ -42,12 +36,11 @@ interface PersonalizationData {
 }
 
 const PersonalizationCollectorContainer: React.FC = () => {
-  const dispatch = useAppDispatch();
-  const teachingProfileData = useAppSelector(selectTeachingProfileData);
-  const teachingProfileHasFetched = useAppSelector(
-    selectTeachingProfileHasFetched
-  );
-  const teachingProfileLoading = useAppSelector(selectTeachingProfileLoading);
+  const {
+    data: teachingProfileData,
+    loading: teachingProfileLoading,
+    hasFetched: teachingProfileHasFetched,
+  } = useTeachingProfileData();
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
   const [isSaving, setIsSaving] = React.useState(false);
   const [showResults, setShowResults] = React.useState(false);
@@ -62,25 +55,17 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const BACK = -1;
 
   React.useEffect(() => {
-    if (!teachingProfileHasFetched && !teachingProfileLoading) {
-      dispatch(fetchTeachingProfileData());
-    }
-  }, [dispatch, teachingProfileHasFetched, teachingProfileLoading]);
-
-  React.useEffect(() => {
     if (teachingProfileData) {
       const existingData: Partial<PersonalizationData> = {
         ...teachingProfileData,
       };
-      if (existingData.dateYearsTeachingSet) {
-        existingData.dateYearsTeachingSet = new Date(
-          existingData.dateYearsTeachingSet
-        );
-      }
       setPersonalizationData(existingData);
       if (existingData.matchedPersona) {
         setMatchedTeachingProfile(existingData.matchedPersona);
       }
+    } else {
+      setPersonalizationData({});
+      setMatchedTeachingProfile(TEACHING_STYLES[0].name);
     }
   }, [teachingProfileData]);
 

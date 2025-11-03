@@ -2,13 +2,36 @@
  * API utilities for teaching profile data
  */
 
-import {getStore} from '@cdo/apps/redux';
-import {
-  serializeTeachingProfileData,
-  setTeachingProfileData,
-} from '@cdo/apps/templates/teachingProfileRedux';
-
 const API_ENDPOINT = '/teaching_profile_data';
+
+/**
+ * Normalize personalization data before sending it to the server.
+ * Ensures dates are serialized to ISO strings.
+ * @param {Object} personalizationData
+ * @returns {Object}
+ */
+export const serializeTeachingProfileData = personalizationData => {
+  const dataToSave = {...(personalizationData || {})};
+  const dateValue = dataToSave.dateYearsTeachingSet;
+
+  if (dateValue instanceof Date) {
+    dataToSave.dateYearsTeachingSet = dateValue.toISOString();
+  } else if (typeof dateValue === 'string' && dateValue) {
+    const parsedDate = new Date(dateValue);
+    dataToSave.dateYearsTeachingSet = isNaN(parsedDate)
+      ? null
+      : parsedDate.toISOString();
+  } else if (dateValue) {
+    const parsedDate = new Date(dateValue);
+    dataToSave.dateYearsTeachingSet = isNaN(parsedDate)
+      ? null
+      : parsedDate.toISOString();
+  } else {
+    dataToSave.dateYearsTeachingSet = null;
+  }
+
+  return dataToSave;
+};
 
 /**
  * Save personalization data to the teaching profile
@@ -61,12 +84,7 @@ export const saveTeachingProfileData = async personalizationData => {
       );
     }
 
-    const responseData = await response.json();
-
-    const store = getStore();
-    store.dispatch(setTeachingProfileData(dataToSave, true));
-
-    return responseData;
+    return await response.json();
   } catch (error) {
     console.error('Error saving teaching profile data:', error);
     throw error;
