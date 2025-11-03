@@ -468,7 +468,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             )}
           {aiGenerateState === 'reviewing' && (
             <div>
-              <Heading4>Your dancer is ready</Heading4>
+              <Heading4>Decide what to do next</Heading4>
               <div>
                 AI generated a dancer based on your prompt, "{promptText}"
               </div>

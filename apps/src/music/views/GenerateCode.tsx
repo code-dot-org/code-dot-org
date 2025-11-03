@@ -279,7 +279,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         <div>
           <Heading4>
             {aiGenerateState === 'listening' && 'Take a listen...'}
-            {aiGenerateState === 'listened' && 'Code is ready'}
+            {aiGenerateState === 'listened' && 'Decide what to do next'}
           </Heading4>
           <div>AI generated code based on your prompt, "{promptText}"</div>
         </div>

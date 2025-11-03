@@ -244,7 +244,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
         <div>
           <Heading4>
             {aiGenerateState === 'listening' && 'Take a look...'}
-            {aiGenerateState === 'listened' && 'Code is ready'}
+            {aiGenerateState === 'listened' && 'Decide what to do next'}
           </Heading4>
           <div>AI generated code based on your prompt, "{promptText}"</div>
         </div>
