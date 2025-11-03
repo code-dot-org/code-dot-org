@@ -8,3 +8,5 @@ level 'Dancer AI Subproject'
 level 'Dance AI Subproject'
 uses_lab2
 standalone
+
+custom_mode 'music_dance_ai'

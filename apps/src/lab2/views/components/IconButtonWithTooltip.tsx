@@ -8,8 +8,9 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 import {
   TooltipProps,
   WithTooltip,
+  WithTooltipHandle,
 } from '@code-dot-org/component-library/tooltip';
-import React, {memo, useCallback} from 'react';
+import React, {memo, useCallback, useRef} from 'react';
 
 interface IconButtonWithTooltipProps {
   id: string;
@@ -50,8 +51,12 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
       href,
       target = '_blank',
     }) => {
+      const tooltipRef = useRef<WithTooltipHandle>(null);
+
       const handleClick = useCallback(
         (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+          // Hide the tooltip when button is clicked (keyboard or mouse)
+          tooltipRef.current?.hideTooltip();
           onClick?.();
           // Adding this to prevent focus from jumping to the next button
           // and showing its tooltip when a button is disabled after click.
@@ -86,7 +91,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
       };
 
       return (
-        <WithTooltip tooltipProps={tooltipProps}>
+        <WithTooltip ref={tooltipRef} tooltipProps={tooltipProps}>
           {href ? (
             <LinkButton {...commonButtonProps} href={href} target={target} />
           ) : (
