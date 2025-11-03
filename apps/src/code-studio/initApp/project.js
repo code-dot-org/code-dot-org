@@ -967,19 +967,6 @@ var projects = (module.exports = {
 
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(newSources => {
-        // Adding error logging for retrieval of current sources for debugging/monitoring purposes.
-        if (newSources.error) {
-          MetricsReporter.logError({
-            event:
-              'Error from getUpdatedSourceAndHtml_ in saveIfSourcesChanged',
-            error: newSources.error,
-            errorMessage: newSources.error?.message,
-            errorStack: newSources.error?.stack,
-            errorName: newSources.error?.name,
-            appType: this.getStandaloneApp(),
-            channelId: this.getCurrentId(),
-          });
-        }
         const sourcesChanged =
           JSON.stringify(currentSources) !== JSON.stringify(newSources);
         if (sourcesChanged || thumbnailChanged) {
