@@ -440,18 +440,17 @@ module Services
         num_resources_per_lesson: 0,
         num_vocabularies_per_lesson: 0
       )
-      assert script.get_original_unit_group.course_version
+      assert script.get_course_version
 
       # Serialize while resources are still present
       json = ScriptSeed.serialize_seeding_json(script)
 
       # Destroy resources and vocabularies before destroying the course version
       script.resources.destroy_all
-      script.get_original_unit_group.course_version.resources.destroy_all
+      script.get_course_version.resources.destroy_all
 
       # Now destroy the course version
-      script.get_original_unit_group.course_version.destroy!
-      script.reload
+      script.get_course_version.destroy!
 
       # Assert that seeding with require_course: true raises an error
       error = assert_raises RuntimeError do
@@ -468,18 +467,17 @@ module Services
         num_resources_per_lesson: 0,
         num_resources_per_script: 0
       )
-      assert script.get_original_unit_group.course_version
+      assert script.get_course_version
 
       # Serialize while vocabularies are still present
       json = ScriptSeed.serialize_seeding_json(script)
 
       # Destroy vocabularies before destroying the course version
       script.lessons.each {|l| l.vocabularies.destroy_all}
-      script.get_original_unit_group.course_version.vocabularies.destroy_all
+      script.get_course_version.vocabularies.destroy_all
 
       # Now destroy the course version
-      script.get_original_unit_group.course_version.destroy!
-      script.reload
+      script.get_course_version.destroy!
 
       # Assert that seeding with require_course: true raises an error
       error = assert_raises RuntimeError do
