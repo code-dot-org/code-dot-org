@@ -1,6 +1,7 @@
 import {createConsumer} from '@rails/actioncable';
 import _ from 'lodash';
 
+import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 
 export const experimentActionCableLoad = function () {
@@ -16,6 +17,13 @@ const testLoad = function () {
 
   const connectionId = _.random(10000);
 
+  const repeatInterval = DCDO.get('actioncable-repeat-interval', 1000);
+  const isRepeat = DCDO.get('actioncable-repeat', true);
+  const disconnectTimeout = DCDO.get(
+    'actioncable-disconnect-timeout',
+    30 * 1000
+  );
+
   logEvent('ActionCableLoadTestingConnecting', connectionId);
 
   const channel = consumer.subscriptions.create(
@@ -25,12 +33,20 @@ const testLoad = function () {
         logEvent('ActionCableLoadTestingConnected', connectionId);
 
         setTimeout(() => {
-          channel.echo(connectionId);
+          if (channel) {
+            channel.echo(connectionId);
+          }
         }, 1000);
       },
       received(data) {
         if (data?.connectionId === connectionId) {
           logEvent('ActionCableLoadTestingReceived', connectionId);
+        }
+
+        if (!!channel && isRepeat) {
+          setTimeout(() => {
+            channel.echo(connectionId);
+          }, repeatInterval);
         }
       },
       echo(connectionId) {
@@ -45,7 +61,7 @@ const testLoad = function () {
     consumer.disconnect();
 
     logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
-  }, 30 * 1000);
+  }, disconnectTimeout);
 };
 
 const logEvent = (eventName, connectionId) => {

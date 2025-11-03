@@ -291,7 +291,7 @@ Then /^I save the section id from row (\d+) of the section table$/ do |section_i
   href = nil
   wait_until do
     href = @browser.execute_script(
-      "return $('#ui-test-section-list ol li:eq(#{section_index}) #ui-test-Section-settings').attr('href')"
+      "return $('#ui-test-section-list li:eq(#{section_index}) #ui-test-Section-settings').attr('href')"
     )
     !href.nil?
   end

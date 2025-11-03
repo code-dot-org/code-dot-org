@@ -61,6 +61,7 @@ export default async function Layout({
                 stage={getStage()}
                 clientKey={statsigClientKey}
                 values={statsigBootstrapValues}
+                brand={brand}
               >
                 {getHeader(brand)}
                 {children}

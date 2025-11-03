@@ -120,7 +120,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         }
         style={chatIsOpen ? undefined : {display: 'none'}}
       >
-        <FocusLock>
+        <FocusLock disabled={!open}>
           <AiDiffHeader
             closeTutor={closeTutor}
             closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}

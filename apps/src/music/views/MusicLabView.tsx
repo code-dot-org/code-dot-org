@@ -5,7 +5,6 @@ import {useSelector} from 'react-redux';
 
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
-import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
 import header from '@cdo/apps/code-studio/header';
 import {
   START_SOURCES,
@@ -15,13 +14,14 @@ import {
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useTimelineDancer from '@cdo/apps/lab2/hooks/useTimelineDancer';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {LevelProperties} from '@cdo/apps/lab2/types';
+import {Channel, LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -85,6 +85,8 @@ interface MusicLabViewProps {
   hasRun: boolean;
   hasEdited: boolean;
   levelProperties: LevelProperties;
+  channel?: Channel;
+  overrideProjectManager?: ProjectManager;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -107,12 +109,15 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   hasRun,
   hasEdited,
   levelProperties,
+  channel,
+  overrideProjectManager,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
   useUpdateAnalytics(
     analyticsReporter,
-    levelProperties.isProjectLevel || false
+    levelProperties.isProjectLevel || false,
+    channel?.id
   );
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
@@ -307,12 +312,17 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const settings = useBlocklySettings();
 
   if (isPlayView) {
-    return <MusicPlayView setPlaying={setPlaying} />;
+    return (
+      <MusicPlayView
+        setPlaying={setPlaying}
+        projectName={channel?.name}
+        overrideProjectManager={overrideProjectManager}
+      />
+    );
   }
 
   return (
     <div id="music-lab" className={classNames(moduleStyles.musicLab)}>
-      <ModeSwitchBar levelId={levelProperties.id} />
       <div
         className={classNames(
           moduleStyles.mainContent,
@@ -353,44 +363,44 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               instructionsPosition === InstructionsPosition.RIGHT,
           })}
         >
-          {!guideMode && (
-            <div
-              id="instructions-area"
-              className={classNames(
-                moduleStyles.instructionsArea,
-                moduleStyles.instructionsSide,
-                isStandaloneCollapsed && moduleStyles.instructionsCollapsed
-              )}
-            >
-              <ResourcePanel
-                isRunning={isPlaying}
-                handleInstructionsTextClick={onInstructionsTextClick}
-                bottomComponent={
-                  exemplarPlayerInsideInstructions &&
-                  showExemplarPlayer && (
-                    <ExemplarPlayerView
-                      playbackEvents={exemplarPlaybackEvents}
-                      title={exemplarSettings.playerTitle!}
-                      player={player}
-                      insideInstructions={exemplarPlayerInsideInstructions}
-                    />
-                  )
-                }
-                hasRun={hasRun}
-                hasEdited={hasEdited}
-                fixedDarkBackground={true}
-                overrideTheme={'Light'}
-                includeFooterSpacing={false}
-                levelProperties={levelProperties}
-                headerClassName={moduleStyles.headerWithBorder}
-                settings={settings}
-                hideContinueIfDisabled={true}
-                hideNavigation={false}
-                styleNavigationAsBubble={true}
-                documentationUrl={'/docs/ide/music'}
-              />
-            </div>
-          )}
+          <div
+            id="instructions-area"
+            className={classNames(
+              moduleStyles.instructionsArea,
+              moduleStyles.instructionsSide,
+              (isStandaloneCollapsed || guideMode) &&
+                moduleStyles.instructionsCollapsed
+            )}
+          >
+            <ResourcePanel
+              isRunning={isPlaying}
+              handleInstructionsTextClick={onInstructionsTextClick}
+              bottomComponent={
+                exemplarPlayerInsideInstructions &&
+                showExemplarPlayer && (
+                  <ExemplarPlayerView
+                    playbackEvents={exemplarPlaybackEvents}
+                    title={exemplarSettings.playerTitle!}
+                    player={player}
+                    insideInstructions={exemplarPlayerInsideInstructions}
+                  />
+                )
+              }
+              hasRun={hasRun}
+              hasEdited={hasEdited}
+              fixedDarkBackground={true}
+              overrideTheme={'Light'}
+              includeFooterSpacing={false}
+              levelProperties={levelProperties}
+              headerClassName={moduleStyles.headerWithBorder}
+              settings={settings}
+              hideContinueIfDisabled={true}
+              hideNavigation={false}
+              styleNavigationAsBubble={true}
+              documentationUrl={'/docs/ide/music'}
+              sidebarOnly={!!guideMode}
+            />
+          </div>
 
           <div id="blockly-area" className={moduleStyles.blocklyArea}>
             <PanelContainer

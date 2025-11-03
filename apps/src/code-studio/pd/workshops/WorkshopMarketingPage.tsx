@@ -47,7 +47,6 @@ const WorkshopMarketingPage: React.FunctionComponent<
     fee,
     prereq,
     description,
-    notes,
     customRegistrationLink,
     regionalPartnerName,
     organizer,
@@ -83,7 +82,6 @@ const WorkshopMarketingPage: React.FunctionComponent<
             fee={fee}
             prereq={prereq}
             description={description}
-            notes={notes}
             courseOfferings={courseOfferings}
             facilitators={facilitators}
           />

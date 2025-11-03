@@ -9,6 +9,7 @@
         "name": "GROUP",
         "customInput": "dancerPicker",
         "options": [
+          "sprites",
           "\"GENERATED_DANCER\"",
           "\"ALIEN\"",
           "\"BEAR\"",
@@ -21,8 +22,7 @@
           "\"ROBOT\"",
           "\"SHARK\"",
           "\"SLOTH\"",
-          "\"UNICORN\"",
-          "sprites"
+          "\"UNICORN\""
         ]
       },
       {

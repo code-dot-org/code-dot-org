@@ -115,6 +115,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   initialThreadPrompt = null,
   setInitialThreadPrompt = () => {},
 }) => {
+  const [userMessage, setUserMessage] = useState<string>('');
   const reportingData = React.useMemo(() => {
     return {
       chatContext: context,
@@ -311,6 +312,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
       dispatch(setThreadMessages([...threadMessages, newUserMessage]));
       getAIResponse(message, false, null);
+      setUserMessage('');
     },
     [threadTitle, dispatch, threadMessages, getAIResponse]
   );
@@ -445,6 +447,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         </div>
       </div>
       <AiDiffChatFooter
+        userMessage={userMessage}
+        onChange={setUserMessage}
         onSubmit={onMessageSend}
         waiting={isWaitingForResponse}
         userMessageEditorRef={userMessageEditorRef}

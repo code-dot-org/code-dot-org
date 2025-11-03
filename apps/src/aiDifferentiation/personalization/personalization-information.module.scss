@@ -1,5 +1,5 @@
 :global(#main_content) {
-  background: var(--background-neutral-secondary, #F0F2F5);
+  background: var(--background-neutral-secondary, #f0f2f5);
 
   :global(#personalization-information) {
     flex-direction: column;
@@ -64,10 +64,19 @@
     width: 36px;
     height: 40px;
     padding: 8px 12px;
+    font-size: 20px !important;
   }
 
   .bodyText {
-    margin-bottom: 0;
+    margin-bottom: 8px;
+  }
+}
+
+.otherTextField {
+  width: 450px !important;
+
+  input {
+    width: 100% !important;
   }
 }
 
@@ -79,12 +88,19 @@
   flex: 1 0 0;
   align-self: stretch;
   border-radius: 4px;
-  min-height: 42px;
   box-sizing: border-box;
   resize: none;
-  margin: 0;
+  margin: 4px 0;
   width: 430px;
   height: 220px;
+}
+
+.classroomVisionArea {
+  width: 430px;
+}
+
+.otherTextFieldContainer {
+  margin-top: 10px;
 }
 
 .confidenceContinuum {

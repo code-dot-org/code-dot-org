@@ -95,6 +95,8 @@ class UnconnectedMusicView extends React.Component {
   static propTypes = {
     levelProperties: PropTypes.object.isRequired,
     initialSources: PropTypes.object,
+    channel: PropTypes.object,
+    projectManager: PropTypes.object,
     // populated by Redux
     currentLevelId: PropTypes.string,
     userId: PropTypes.number,
@@ -859,9 +861,10 @@ class UnconnectedMusicView extends React.Component {
     }
     sourcesToSave.labConfig.music.blockMode = this.props.blockMode;
 
-    Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save(sourcesToSave, forceSave);
+    (
+      this.props.projectManager ||
+      Lab2Registry.getInstance().getProjectManager()
+    )?.save(sourcesToSave, forceSave);
 
     // If we are AI generating, then save metadata for Dance Party.
     if (
@@ -869,7 +872,7 @@ class UnconnectedMusicView extends React.Component {
       this.props.levelProperties.levelData.guideMode === 'aiCodeGenerate'
     ) {
       saveGeneratedSongMetadata(
-        Lab2Registry.getInstance().getProjectManager().getChannelId(),
+        this.props.channel?.id,
         this.props.packId,
         this.props.playbackEvents,
         this.props.lastMeasure
@@ -995,6 +998,8 @@ class UnconnectedMusicView extends React.Component {
           hasRun={this.state.hasRun}
           hasEdited={this.state.hasEdited}
           levelProperties={this.props.levelProperties}
+          channel={this.props.channel}
+          overrideProjectManager={this.props.projectManager}
         />
         <Callouts />
       </AnalyticsContext.Provider>

@@ -13,7 +13,7 @@
     "widget_view": "false",
     "initial_view_mode": "split",
     "disable_edit_run_for_submission": "false",
-    "ai_tutor_mode": "suggest",
+    "ai_tutor_mode": "produce",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -26,8 +26,9 @@
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
-    "project_template_level_name": "ai-and-algorithmic-decisions-lesson11-template-test-2025"
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson11-template-test-2025",
+    "level_system_prompt": "The student is beginning to build the foundational version of their interactive web app using HTML, CSS, and JavaScript.\r\nYour role is to act as a coding coach, helping them translate their planned logic into an initial, working prototype.\r\n\t•\tEmphasize understanding how and why code works rather than simply fixing errors.\r\n\t•\tEncourage the student to test ideas and explain their reasoning.\r\n\t•\tOffer guidance on linking files, using event listeners, and setting up one interactive feature that updates the page.\r\n\t•\tWhen providing code examples, keep them short and framed as illustrations rather than full solutions.\r\n\t•\tReinforce persistence, curiosity, and debugging as core developer habits."
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-28T22:54:11.703+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level4-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level4-test-2025\"},{\"changed_at\":\"2025-10-28 22:54:29 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-29 23:29:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-28T22:54:11.703+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level4-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level4-test-2025\"},{\"changed_at\":\"2025-10-28 22:54:29 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-29 23:29:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-30 21:46:11 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-31 14:40:13 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Weblab2>
