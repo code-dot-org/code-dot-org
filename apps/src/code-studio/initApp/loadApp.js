@@ -11,6 +11,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import msg from '@cdo/locale';
 
 import getScriptData from '../../util/getScriptData';
@@ -521,20 +522,57 @@ const sourceHandler = {
       let source;
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
-        const getSourceAsJson = true;
-        // If we're readOnly, source hasn't changed at all
-        source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
-          ? currentLevelSource
-          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
-        resolve(source);
+        try {
+          const getSourceAsJson = true;
+          // If we're readOnly, source hasn't changed at all
+          source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
+            ? currentLevelSource
+            : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
+          resolve(source);
+        } catch (err) {
+          MetricsReporter.logError({
+            event: 'Error from Blockly in getLevelSource',
+            error: err,
+            errorMessage: err?.message,
+            errorStack: err?.stack,
+            errorName: err?.name,
+            appType: appOptions.app,
+            levelId: appOptions.level?.id,
+          });
+          reject(err);
+        }
       } else if (appOptions.getCode) {
-        source = appOptions.getCode();
-        resolve(source);
+        try {
+          source = appOptions.getCode();
+          resolve(source);
+        } catch (err) {
+          MetricsReporter.logError({
+            event: 'Error from getCode in getLevelSource',
+            error: err,
+            errorMessage: err?.message,
+            errorStack: err?.stack,
+            errorName: err?.name,
+            appType: appOptions.app,
+            levelId: appOptions.level?.id,
+          });
+          reject(err);
+        }
       } else if (appOptions.getCodeAsync) {
         appOptions
           .getCodeAsync()
           .then(source => resolve(source))
-          .catch(err => reject(err));
+          .catch(err => {
+            MetricsReporter.logError({
+              event: 'Error from getCodeAsync in getLevelSource',
+              error: err,
+              errorMessage: err?.message,
+              errorStack: err?.stack,
+              errorName: err?.name,
+              appType: appOptions.app,
+              levelId: appOptions.level?.id,
+            });
+            reject(err);
+          });
       }
     });
   },

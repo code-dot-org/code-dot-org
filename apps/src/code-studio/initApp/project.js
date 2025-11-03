@@ -973,6 +973,9 @@ var projects = (module.exports = {
             event:
               'Error from getUpdatedSourceAndHtml_ in saveIfSourcesChanged',
             error: newSources.error,
+            errorMessage: newSources.error?.message,
+            errorStack: newSources.error?.stack,
+            errorName: newSources.error?.name,
             appType: this.getStandaloneApp(),
             channelId: this.getCurrentId(),
           });
@@ -1822,7 +1825,7 @@ var projects = (module.exports = {
           resolve();
         },
         error => {
-          reject(`error saving thumbnail image: ${error}`);
+          console.error(`error saving thumbnail image: ${error}`);
         }
       );
     });
