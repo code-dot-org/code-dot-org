@@ -78,7 +78,7 @@
         },
         "variantCount": 3
       },
-      "aiCodeGenerateExtraPrompt": "You can also use any of the following additional drum sounds: \"{drumSounds}\". If asked to play \"acoustic\" drums, use the \"acoustic_arcade\" ones."
+      "aiCodeGenerateExtraPrompt": "You can also use any of the following additional drum sounds: \"{drumSounds}\"."
     },
     "encrypted": "false",
     "offer_browser_tts": "false",
