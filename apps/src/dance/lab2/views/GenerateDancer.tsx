@@ -410,23 +410,22 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   onChoicesChange={onAdlibChoicesChange}
                   onTextChange={onAdlibTextChange}
                 />
-                {aiGenerateState === 'none' && (
-                  <div className={moduleStyles.buttonRow}>
-                    <Button
-                      ariaLabel={'Generate dancer'}
-                      text={'Generate dancer'}
-                      type="primary"
-                      color="black"
-                      size="s"
-                      iconLeft={{iconName: 'sparkles'}}
-                      onClick={generateDancer}
-                      className={moduleStyles.buttonWide}
-                    />
-                  </div>
-                )}
+                <div className={moduleStyles.buttonRow}>
+                  <Button
+                    ariaLabel={'Generate dancer'}
+                    text={'Generate dancer'}
+                    type="primary"
+                    color="black"
+                    size="s"
+                    iconLeft={{iconName: 'sparkles'}}
+                    isPending={aiGenerateState === 'generating'}
+                    disabled={aiGenerateState === 'generating'}
+                    onClick={generateDancer}
+                    className={moduleStyles.buttonWide}
+                  />
+                </div>
               </>
             )}
-          {aiGenerateState === 'generating' ? 'Generating dancer.' : ''}
           {aiGenerateState === 'reviewing' && (
             <div>
               <Heading4>Your Dancer is Ready</Heading4>

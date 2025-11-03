@@ -224,54 +224,51 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {['none', 'generating'].includes(aiGenerateState) && useAdlib && (
-        <Adlib
-          adlib={useAdlib}
-          adlibChoices={adlibChoices}
-          readOnly={aiGenerateState !== 'none'}
-          glowSpeed={glowSpeed}
-          onChoicesChange={onAdlibChoicesChange}
-          onTextChange={onAdlibTextChange}
-        />
-      )}
+      {['none', 'generating', 'generated'].includes(aiGenerateState) &&
+        useAdlib && (
+          <Adlib
+            adlib={useAdlib}
+            adlibChoices={adlibChoices}
+            readOnly={aiGenerateState !== 'none'}
+            glowSpeed={glowSpeed}
+            onChoicesChange={onAdlibChoicesChange}
+            onTextChange={onAdlibTextChange}
+          />
+        )}
 
-      {aiGenerateState === 'none' && (
+      {aiGenerateState === 'none' && !useAdlib && (
         <>
-          {!useAdlib && (
-            <>
-              <div>Describe the song you'd like AI to make.</div>
-              <textarea
-                id="generate-description"
-                onChange={evt => {
-                  setPromptText(evt.target.value);
-                }}
-                value={promptText}
-                rows={4}
-                className={styles.textArea}
-              />
-            </>
-          )}
-
-          <Button
-            ariaLabel={'Generate code'}
-            text={'Generate code'}
-            type="primary"
-            color="black"
-            size="s"
-            iconLeft={{iconName: 'sparkles'}}
-            onClick={() => {
-              generateSong();
-              analyticsReporter.sendEvent('hoai2025-music-prompt', {
-                promptText,
-              });
+          <div>Describe the song you'd like AI to make.</div>
+          <textarea
+            id="generate-description"
+            onChange={evt => {
+              setPromptText(evt.target.value);
             }}
+            value={promptText}
+            rows={4}
+            className={styles.textArea}
           />
         </>
       )}
 
-      {['generating', 'generated'].includes(aiGenerateState)
-        ? 'Generating code.'
-        : ''}
+      {['none', 'generating', 'generated'].includes(aiGenerateState) && (
+        <Button
+          ariaLabel={'Generate code'}
+          text={'Generate code'}
+          type="primary"
+          color="black"
+          size="s"
+          iconLeft={{iconName: 'sparkles'}}
+          isPending={aiGenerateState !== 'none'}
+          disabled={aiGenerateState !== 'none'}
+          onClick={() => {
+            generateSong();
+            analyticsReporter.sendEvent('hoai2025-music-prompt', {
+              promptText,
+            });
+          }}
+        />
+      )}
 
       {aiGenerateState === 'listening' && <div>Take a listen.</div>}
 

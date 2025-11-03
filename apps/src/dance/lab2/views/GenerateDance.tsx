@@ -208,19 +208,17 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
         )}
 
-      {['none', 'generating'].includes(aiGenerateState) && (
-        <Adlib
-          adlib={adlib}
-          adlibChoices={adlibChoices}
-          readOnly={aiGenerateState !== 'none'}
-          glowSpeed={glowSpeed}
-          onChoicesChange={onAdlibChange}
-          onTextChange={onAdlibTextChange}
-        />
-      )}
-
-      {aiGenerateState === 'none' && (
+      {['none', 'generating', 'generated'].includes(aiGenerateState) && (
         <>
+          <Adlib
+            adlib={adlib}
+            adlibChoices={adlibChoices}
+            readOnly={aiGenerateState !== 'none'}
+            glowSpeed={glowSpeed}
+            onChoicesChange={onAdlibChange}
+            onTextChange={onAdlibTextChange}
+          />
+
           <Button
             ariaLabel={'Generate code'}
             text={'Generate code'}
@@ -228,16 +226,14 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             iconLeft={{iconName: 'sparkles'}}
+            isPending={aiGenerateState !== 'none'}
+            disabled={aiGenerateState !== 'none'}
             onClick={() => {
               generateDance();
             }}
           />
         </>
       )}
-
-      {['generating', 'generated'].includes(aiGenerateState)
-        ? 'Generating code.'
-        : ''}
 
       {aiGenerateState === 'listening' && <div>Take a listen.</div>}
 
