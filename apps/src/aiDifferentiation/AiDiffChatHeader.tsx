@@ -19,14 +19,14 @@ interface AiDiffChatHeaderProps {
   onSuggestPrompts: (promptType: SuggestPromptsType) => void;
   messages: ChatItem[];
   threadTitle?: string;
-  personalizationData: PersonalizationData;
+  personalizationData?: PersonalizationData;
 }
 
 const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
   onSuggestPrompts,
   messages,
   threadTitle,
-  personalizationData,
+  // personalizationData,
 }) => {
   return (
     <div className={style.chatHeader}>

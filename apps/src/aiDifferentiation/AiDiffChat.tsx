@@ -106,7 +106,7 @@ interface AiDiffChatProps {
   setThreadId?: Dispatch<SetStateAction<number>>;
   initialThreadPrompt?: ChatPrompt | null;
   setInitialThreadPrompt?: Dispatch<SetStateAction<ChatPrompt | null>>;
-  personalizationData: PersonalizationData;
+  personalizationData?: PersonalizationData;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({

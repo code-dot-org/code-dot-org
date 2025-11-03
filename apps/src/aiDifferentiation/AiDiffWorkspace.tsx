@@ -25,7 +25,7 @@ interface AiDiffWorkSpaceProps {
   scriptName?: string;
   curriculumCourses?: string[];
   unreadNotificationCount: number;
-  personalizationData: PersonalizationData;
+  personalizationData?: PersonalizationData;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
