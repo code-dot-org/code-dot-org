@@ -622,5 +622,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['rebuild', 'test']);
 };
 
+// temp comment to trigger apps build
+
 // Exported for matching use in `run-tests-in-parallel.sh`
 module.exports.MEM_PER_TEST_PROCESS_MB = MEM_PER_TEST_PROCESS_MB;
