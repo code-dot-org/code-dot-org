@@ -1,5 +1,10 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+import {
+  DEFAULT_THREAD_TITLE,
+  DEFAULT_INITIAL_CHAT_MESSAGE,
+} from '@cdo/apps/aiDifferentiation/constants';
+import {ChatItem} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
 
 import {
@@ -36,7 +41,13 @@ import {validateModelId} from '../views/modelCustomization/utils';
 import {AichatState} from './state';
 
 const initialState: AichatState = {
+  chatIsOpen: false,
   clientType: undefined,
+  threadId: 0,
+  threadTitle: DEFAULT_THREAD_TITLE,
+  threadMessages: [],
+  threadKeyId: 0,
+  initialChatMessage: DEFAULT_INITIAL_CHAT_MESSAGE,
   chatEventsPast: [],
   chatEventsCurrent: [],
   chatMessagePending: undefined,
@@ -65,6 +76,9 @@ const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
+    setChatIsOpen: (state, action: PayloadAction<boolean>) => {
+      state.chatIsOpen = action.payload;
+    },
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
     },
@@ -109,9 +123,20 @@ const aichatSlice = createSlice({
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
     },
-
     setClientType(state, action: PayloadAction<AiChatClientType>) {
       state.clientType = action.payload;
+    },
+    setThreadId(state, action: PayloadAction<number>) {
+      state.threadId = action.payload;
+    },
+    setThreadTitle(state, action: PayloadAction<string>) {
+      state.threadTitle = action.payload;
+    },
+    setThreadMessages(state, action: PayloadAction<ChatItem[]>) {
+      state.threadMessages = action.payload;
+    },
+    setThreadKeyId(state, action: PayloadAction<number>) {
+      state.threadKeyId = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -152,6 +177,9 @@ const aichatSlice = createSlice({
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
+    },
+    setInitialChatMessage(state, action: PayloadAction<string>) {
+      state.initialChatMessage = action.payload;
     },
     setShowModalType: (
       state,
@@ -385,6 +413,7 @@ const getUpdateMessageLocation = (removeId: number, state: AichatState) => {
 registerReducers({aichat: aichatSlice.reducer});
 
 export const {
+  setChatIsOpen,
   addEventToChatEventsCurrent,
   startSave,
   setChatMessagePending,
@@ -398,12 +427,17 @@ export const {
   setAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
+  setInitialChatMessage,
   setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
   setOwnChatHistory,
   setUserHasAichatAccess,
   setClientType,
+  setThreadId,
+  setThreadTitle,
+  setThreadMessages,
+  setThreadKeyId,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,

@@ -28,14 +28,16 @@ const AiDiffSuggestedPrompts: React.FC<ComponentProps> = ({
     setSelectedPrompt(prompt);
   };
 
-  const structuredPrompts = suggestedPrompts.map(prompt => {
-    return {
-      label: prompt.label,
-      selected: prompt === selectedPrompt,
-      onClick: onClick(prompt),
-      show: true,
-    };
-  });
+  const structuredPrompts = suggestedPrompts
+    .filter(prompt => prompt !== undefined)
+    .map(prompt => {
+      return {
+        label: prompt.label,
+        selected: prompt === selectedPrompt,
+        onClick: onClick(prompt),
+        show: true,
+      };
+    });
 
   return <SuggestedPrompts suggestedPrompts={structuredPrompts} />;
 };

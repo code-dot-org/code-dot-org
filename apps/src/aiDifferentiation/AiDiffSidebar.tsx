@@ -5,10 +5,12 @@ import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {ChatThread} from './types';
@@ -17,8 +19,6 @@ import styles from './ai-differentiation.module.scss';
 
 interface AiDiffSidebarProps {
   threads?: ChatThread[];
-  selectedThreadId?: number;
-  threadSelectCallback?: (thread: number) => void;
   setShowNotifications: (show: boolean) => void;
   showNotifications: boolean;
   unreadNotificationCount: number;
@@ -64,16 +64,11 @@ const ThreadItem: React.FC<{
 
 const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   threads = [],
-  selectedThreadId,
-  threadSelectCallback = () => {},
   setShowNotifications,
   showNotifications,
   unreadNotificationCount,
 }) => {
-  const handleListItemClick = (chatId: number) => {
-    setShowNotifications(false);
-    threadSelectCallback(chatId);
-  };
+  const selectedThreadId = useAppSelector(state => state.aichat.threadId);
 
   const todayChats = threads.filter(thread => {
     return thread.updatedAt > yesterday;
@@ -93,6 +88,13 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
     return thread.updatedAt < thirtyDaysAgo;
   });
 
+  const dispatch = useAppDispatch();
+
+  const handleListItemClick = (chatId: number) => {
+    setShowNotifications(false);
+    dispatch(fetchThreadMessages({thread: chatId}));
+  };
+
   return (
     <aside className={styles.sidebarContainer}>
       <Box
@@ -108,7 +110,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           iconLeft={{iconName: 'plus'}}
           onClick={() => {
             setShowNotifications(false);
-            threadSelectCallback(0);
+            dispatch(fetchThreadMessages({thread: 0}));
           }}
           text={commonI18n.aiDifferentiation_new_chat()}
           className={styles.sidebarButton}
