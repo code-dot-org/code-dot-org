@@ -208,6 +208,30 @@ const adlibs: AdlibsType = {
     },
     variantCount: 5,
   },
+  'creature-05': {
+    template: 'Design a {creature}.',
+    options: {creature: adlibOptions.creature},
+    variantCount: 7,
+  },
+  'creature-attire-05': {
+    template: 'Design a {creature} wearing {attire}.',
+    options: {
+      creature: adlibOptions.creature,
+      attire: adlibOptions.attire,
+    },
+    variantCount: 7,
+  },
+  'creature-attire-mood-style-05': {
+    template:
+      'Design a {creature} wearing {attire}, in a {mood} mood, with a {style} style.',
+    options: {
+      creature: adlibOptions.creature,
+      attire: adlibOptions.attire,
+      mood: adlibOptions.mood,
+      style: adlibOptions.style,
+    },
+    variantCount: 7,
+  },
 };
 
 interface DancerGenerateProps {
@@ -285,8 +309,16 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     let choicesToSave;
     let choicesExtraToSave;
     let pathToSave;
-    if (adlibOption === 'creature-attire-mood-style-04') {
-      pathToSave = 'creature-attire-mood-04';
+    if (
+      [
+        'creature-attire-mood-style-04',
+        'creature-attire-mood-style-05',
+      ].includes(adlibOption)
+    ) {
+      pathToSave =
+        adlibOption === 'creature-attire-mood-style-04'
+          ? 'creature-attire-mood-04'
+          : 'creature-attire-mood-05';
       choicesToSave = Object.keys(adlibChoices)
         .slice(0, -1)
         .map(key => adlibChoices[key]);
