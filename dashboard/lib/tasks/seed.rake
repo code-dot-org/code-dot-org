@@ -347,6 +347,8 @@ namespace :seed do
       coursee-2017
       coursee-2019
       coursef-2017
+      csd-2023
+      csd-2024
       csp-2024
       csp-2025
       csp-ap
