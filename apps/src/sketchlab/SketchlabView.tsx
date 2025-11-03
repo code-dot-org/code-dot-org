@@ -45,6 +45,8 @@ const INITIAL_WORKSPACE_WIDTH = 800;
 
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
+const DEFAULT_SOURCES = {source: {}};
+
 interface SketchlabSources extends ProjectSources {
   source: ExcalidrawInitialDataState;
 }
@@ -155,7 +157,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   }, []);
 
   useEffect(() => {
-    setReinitializationHandler(() => setExcalidrawMountKey(key => key + 1));
+    setReinitializationHandler(() => {
+      console.log('reinit!');
+      setExcalidrawMountKey(key => key + 1);
+    });
   }, [setReinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
@@ -222,7 +227,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 };
 
 export default (props: LabProps<LevelProperties>) => (
-  <SourcesContainer {...props} defaultSources={{source: {}}}>
+  <SourcesContainer {...props} defaultSources={DEFAULT_SOURCES}>
     <SketchlabView levelProperties={props.levelProperties} />
   </SourcesContainer>
 );
