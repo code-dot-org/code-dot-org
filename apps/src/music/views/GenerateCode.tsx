@@ -283,7 +283,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             <Button
               ariaLabel={'Back to prompt'}
               text={'Back to prompt'}
-              type="primary"
+              type="secondary"
               color="black"
               size="s"
               onClick={() => {
