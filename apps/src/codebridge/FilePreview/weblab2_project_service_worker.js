@@ -8,7 +8,6 @@
 // This is served as preview.codeprojects.org/weblab2-project-service-worker.js by routes.rb and codeprojects_preview_controller.rb
 
 function main() {
-  //const SERVE_PROJECT_SEGMENT = '/serve-project';
   let filesData = {};
   let currentFile = 'index.html'; // Default file
 
@@ -59,12 +58,7 @@ function main() {
       startsWithPreview: url.pathname.startsWith('/preview'),
       otherOrigin,
     });
-    if (
-      (url.origin === location.origin &&
-        url.pathname.length > 1 &&
-        url.pathname.startsWith('/preview')) ||
-      url.origin === otherOrigin
-    ) {
+    if (url.origin === location.origin && url.pathname.length > 1) {
       console.log('Service worker intercepting fetch for:', url.pathname);
       event.respondWith(handleProjectRequest(url));
     } else {
@@ -77,9 +71,7 @@ function main() {
 
   function getFilenameFromUrl(url) {
     console.log('Handling project request for URL:', {url});
-    const idx = url.pathname.indexOf('/preview');
-    let remainder =
-      idx >= 0 ? url.pathname.substring(idx + '/preview'.length) : url.pathname;
+    let remainder = url.pathname;
     if (remainder.startsWith('/')) {
       remainder = remainder.substring(1);
     }

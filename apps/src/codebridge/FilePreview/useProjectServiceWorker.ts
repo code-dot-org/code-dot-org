@@ -83,10 +83,7 @@ function useProjectServiceWorker(
           const parser = new DOMParser();
           const doc = parser.parseFromString(file.contents, 'text/html');
           const urlSuffix = folder ? `${folder}/` : '';
-          addBaseTagToDocument(
-            doc,
-            `${window.location.protocol}//channel.${window.location.hostname}${urlSuffix}`
-          );
+          addBaseTagToDocument(doc, `${window.location.origin}/${urlSuffix}`);
           content = doc.documentElement.outerHTML;
         } else if (file.language === 'css') {
           mimeType = 'text/css';

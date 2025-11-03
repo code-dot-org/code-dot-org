@@ -95,7 +95,7 @@ const InnerHTMLPreview = () => {
           title="Inner HTML Preview"
           id="inner-preview"
           key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
-          src={`${window.location.origin}/preview/${currentFile}`}
+          src={`${window.location.origin}/${currentFile}`}
           className={moduleStyles.fileIframe}
         />
       );
