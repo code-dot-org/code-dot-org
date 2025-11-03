@@ -171,12 +171,10 @@ const DanceView: React.FunctionComponent<{
       mode => {
         if (mode === 'toolbox') {
           if (workspace.current) {
-            const toolboxDef = workspaceToToolboxDefinition(workspace.current);
-            // TODO: We should probably handle this within workspaceToToolboxDefinition,
-            // but we want to avoid affecting other levels right now.
             return {
-              toolbox_definition:
-                toolboxDef.contents.length === 0 ? undefined : toolboxDef,
+              toolbox_definition: workspaceToToolboxDefinition(
+                workspace.current
+              ),
             };
           }
         }
