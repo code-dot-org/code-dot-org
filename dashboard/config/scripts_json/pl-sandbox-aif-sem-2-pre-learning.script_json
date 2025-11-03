@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-23 15:07:48 UTC",
+    "serialized_at": "2025-11-03 20:16:06 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -253,6 +253,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-reflection"
+        ],
         "progression": "Coding with AI"
       },
       "bonus": false,
@@ -473,6 +476,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-reflection2"
+        ],
         "progression": "Closing"
       },
       "bonus": false,
