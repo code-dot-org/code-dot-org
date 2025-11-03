@@ -28,7 +28,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   buildAssetUrl,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
-  const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
@@ -41,18 +40,10 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       setShowScrollToBottom(false);
 
       if (!isAtBottom()) {
-        setInProgrammaticScroll(true);
         conversationContainerRef.current.scrollTo({
           top: conversationContainerRef.current.scrollHeight,
           behavior: 'smooth',
         });
-
-        const intervalId = setInterval(() => {
-          if (isAtBottom()) {
-            setInProgrammaticScroll(false);
-            clearInterval(intervalId);
-          }
-        }, 100);
       }
     }
   };
@@ -78,9 +69,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     }
 
     const handleScroll = () => {
-      if (!inProgrammaticScroll) {
-        setShowScrollToBottom(!isAtBottom());
-      }
+      setShowScrollToBottom(!isAtBottom());
     };
 
     container.addEventListener('scroll', handleScroll);
@@ -92,7 +81,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       container?.removeEventListener('scroll', handleScroll);
       resizeObserver?.disconnect();
     };
-  }, [inProgrammaticScroll]);
+  }, []);
 
   useEffect(scrollToBottom, [events.length, isWaitingForChatResponse]);
 
