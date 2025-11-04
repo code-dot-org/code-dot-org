@@ -18,6 +18,8 @@ import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWit
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -328,12 +330,22 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   const onClickTab = useCallback(
     (tab: Tabs) => {
+      analyticsReporter.sendEvent(
+        EVENTS.RESOURCE_PANEL_TAB_CLICKED,
+        {
+          app_name: appName,
+          channel_id: channelId,
+          resource_panel_tab_clicked_from: currentTab,
+          resource_panel_tab_clicked_to: tab,
+        },
+        PLATFORMS.STATSIG
+      );
       setCurrentTab(tab);
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [dispatch, isStandaloneCollapsed]
+    [appName, channelId, currentTab, dispatch, isStandaloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
@@ -343,7 +355,26 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
         setIsSettingsOpen(true);
+        analyticsReporter.sendEvent(
+          EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
+          {
+            app_name: appName,
+            channel_id: channelId,
+          },
+          PLATFORMS.STATSIG
+        );
       } else {
+        // If settngs is currently not open, open settings panel and send analytics event.
+        if (!isSettingsOpen) {
+          analyticsReporter.sendEvent(
+            EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
+            {
+              app_name: appName,
+              channel_id: channelId,
+            },
+            PLATFORMS.STATSIG
+          );
+        }
         setIsSettingsOpen(!isSettingsOpen);
       }
     } else {
@@ -351,12 +382,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
     }
   }, [
-    dispatch,
     hasTabs,
-    isSettingsOpen,
     isStandaloneCollapsed,
+    dispatch,
+    appName,
+    channelId,
+    isSettingsOpen,
     isFloatingSettingsOpen,
-    setIsFloatingSettingsOpen,
   ]);
 
   return (
