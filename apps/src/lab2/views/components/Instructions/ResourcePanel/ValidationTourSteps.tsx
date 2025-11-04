@@ -104,25 +104,6 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
       }
     };
 
-    const handleValidationTabKeydown = (event: KeyboardEvent) => {
-      // Handle both Enter and Space key activation.
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        handleValidationTabActivation();
-      }
-    };
-
-    const handleValidateButtonKeydown = (event: KeyboardEvent) => {
-      // Handle both Enter and Space key activation.
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        if (onValidate) {
-          onValidate();
-        }
-        handleValidateButtonActivation();
-      }
-    };
-
     const validationTabElement = document.getElementById(
       resourcePanelTabValidationElementId
     );
@@ -130,14 +111,72 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
       resourcePanelValidateButtonElementId
     );
 
+    // Document-level click handler to forward clicks from IntroJS overlay to actual elements.
+    const documentClickHandler = (event: Event) => {
+      const target = event.target as HTMLElement;
+
+      // If user clicked on IntroJS overlay/helper layer, forward the click to the appropriate element.
+      if (
+        target.classList.contains('introjs-helperLayer') ||
+        target.classList.contains('introjs-tooltipReferenceLayer')
+      ) {
+        if (validationTourStep === 0 && validationTabElement) {
+          validationTabElement.click();
+        } else if (validationTourStep === 1 && validateButtonElement) {
+          validateButtonElement.click();
+        }
+      }
+    };
+
+    // Document-level keyboard handler to forward keyboard activation from IntroJS overlay or actual elements.
+    const documentKeydownHandler = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement;
+
+      // Handle both Enter and Space key activation.
+      if (event.key === 'Enter' || event.key === ' ') {
+        // Check if user pressed key on validation tab element during step 0.
+        if (
+          validationTourStep === 0 &&
+          validationTabElement &&
+          validationTabElement.contains(target)
+        ) {
+          event.preventDefault();
+          // Find the button within the tab element and click it.
+          const buttonElement = validationTabElement.querySelector('button');
+          if (buttonElement) {
+            buttonElement.click();
+          }
+        }
+        // Check if user pressed key on validate button element during step 1.
+        else if (
+          validationTourStep === 1 &&
+          validateButtonElement &&
+          validateButtonElement.contains(target)
+        ) {
+          event.preventDefault();
+          validateButtonElement.click();
+        }
+      }
+    };
+
+    // Handler to trigger onValidate when button is clicked.
+    const validateButtonClickHandler = () => {
+      if (validationTourStep === 1 && onValidate) {
+        onValidate();
+      }
+    };
+
+    // Add document-level listeners to capture clicks on the overlay.
+    document.addEventListener('click', documentClickHandler, {capture: true});
+    document.addEventListener('keydown', documentKeydownHandler, {
+      capture: true,
+    });
+
+    // Element-specific listeners for direct clicks.
     if (validationTabElement) {
       validationTabElement.addEventListener(
         'click',
         handleValidationTabActivation
-      );
-      validationTabElement.addEventListener(
-        'keydown',
-        handleValidationTabKeydown
       );
     }
     if (validateButtonElement) {
@@ -146,20 +185,22 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
         handleValidateButtonActivation
       );
       validateButtonElement.addEventListener(
-        'keydown',
-        handleValidateButtonKeydown
+        'click',
+        validateButtonClickHandler
       );
     }
 
     return () => {
+      document.removeEventListener('click', documentClickHandler, {
+        capture: true,
+      });
+      document.removeEventListener('keydown', documentKeydownHandler, {
+        capture: true,
+      });
       if (validationTabElement) {
         validationTabElement.removeEventListener(
           'click',
           handleValidationTabActivation
-        );
-        validationTabElement.removeEventListener(
-          'keydown',
-          handleValidationTabKeydown
         );
       }
       if (validateButtonElement) {
@@ -168,8 +209,8 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
           handleValidateButtonActivation
         );
         validateButtonElement.removeEventListener(
-          'keydown',
-          handleValidateButtonKeydown
+          'click',
+          validateButtonClickHandler
         );
       }
     };

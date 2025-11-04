@@ -13,6 +13,7 @@ export const sendAnalytics =
     const state = getState();
     const aichatState = state.aichat;
     const labState = state.lab;
+    const progressState = state.progress;
     const clientType = aichatState.clientType;
     const userHasAichatAccess = aichatState.userHasAichatAccess;
 
@@ -28,7 +29,10 @@ export const sendAnalytics =
         aiTutorMode: labState.levelProperties?.aiTutorMode,
         appType: labState.levelProperties?.appName,
         levelId: labState.levelProperties?.id,
+        levelName: labState.levelProperties?.name,
         scriptId: labState.scriptId,
+        scriptName: progressState.scriptName,
+        courseName: progressState.courseName,
         channel: labState.channel?.id,
         levelPath: window.location.pathname,
       };

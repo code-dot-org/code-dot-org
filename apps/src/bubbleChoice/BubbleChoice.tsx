@@ -11,7 +11,11 @@ import React, {useEffect, useMemo, useRef} from 'react';
 
 import {levelById} from '@cdo/apps/code-studio/progressReduxSelectors';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {BubbleChoiceLevelData, LabProps} from '@cdo/apps/lab2/types';
+import {
+  BubbleChoiceLevelData,
+  BubbleChoiceSublevel,
+  LabProps,
+} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -20,15 +24,17 @@ import {
   LevelStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
+import {navigateToLevelId} from '../code-studio/progressRedux';
 import {commonI18n} from '../types/locale';
 
+import MusicDanceAi from './customModes/MusicDanceAi';
 import {BubbleChoiceLevelProperties} from './types';
-import useNavigateToSublevel from './useNavigateToSublevel';
 
 import styles from './BubbleChoice.module.scss';
 
 const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
   levelProperties,
+  channel,
 }) => {
   // The image has a 4:3 aspect ratio.
   const imageAspectRatio = 4 / 3;
@@ -51,6 +57,10 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
           sublevel.level_id
         )?.status || LevelStatus.not_tried
     )
+  );
+
+  const currentLessonId = useAppSelector(
+    state => state.progress.currentLessonId
   );
 
   const [containerWidth, setContainerWidth] = React.useState(0);
@@ -123,35 +133,19 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
     return level;
   };
 
-  const navigateToSublevel = useNavigateToSublevel();
-
-  const onSingleLevel = useAppSelector(
-    ({progress}) =>
-      progress.currentLevelId &&
-      !progress.currentLessonId &&
-      !levelProperties.isProjectLevel
-  );
-  useEffect(() => {
-    if (
-      !onSingleLevel &&
-      levelProperties.customMode === BubbleChoiceCustomModes.MUSIC_DANCE_AI
-    ) {
-      // Navigate directly to the first available sublevel in the custom Music Dance AI mode.
-      navigateToSublevel(levelProperties, levelBubbleChoice.sublevels[0]);
+  const navigateToSublevel = (sublevel: BubbleChoiceSublevel) => {
+    if (currentLessonId) {
+      dispatch(navigateToLevelId(sublevel.level_id));
+    } else {
+      window.location.href = sublevel.url;
     }
-  }, [
-    onSingleLevel,
-    levelProperties,
-    levelBubbleChoice.sublevels,
-    navigateToSublevel,
-  ]);
+  };
 
   if (
-    !onSingleLevel &&
+    channel &&
     levelProperties.customMode === BubbleChoiceCustomModes.MUSIC_DANCE_AI
   ) {
-    // In Music Dance AI custom mode, we immediately navigate to the first sublevel so there's nothing to render.
-    return null;
+    return <MusicDanceAi levelProperties={levelProperties} channel={channel} />;
   }
 
   return (
@@ -189,7 +183,7 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
                 width: imageWidth,
                 height: imageWidth / aspectRatio,
               }}
-              onClick={() => navigateToSublevel(levelProperties, sublevel)}
+              onClick={() => navigateToSublevel(sublevel)}
             >
               <div
                 className={styles.sublevelImageContainer}
