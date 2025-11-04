@@ -5,9 +5,9 @@
  * @see sync_course.html.haml.
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import LtiSectionSyncDialog from '@cdo/apps/simpleSignUp/lti/sync/LtiSectionSyncDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const result = scriptData['lti_section_sync_result'];
   const lmsName = scriptData['lms_name'];
 
-  ReactDOM.render(
+  createReactRoot(
     <LtiSectionSyncDialog
       isOpen
       syncResult={result}

@@ -1,9 +1,9 @@
 import {TestResults, ResultType} from '../constants';
 import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
 
 const maze = require('@code-dot-org/maze');
 const React = require('react');
-const ReactDOM = require('react-dom');
 const Provider = require('react-redux').Provider;
 
 const containedLevels = require('../containedLevels');
@@ -214,7 +214,7 @@ module.exports = class Maze {
       />
     );
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={visualizationColumn}

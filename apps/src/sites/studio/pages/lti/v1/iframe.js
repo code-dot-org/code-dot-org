@@ -5,9 +5,9 @@
  * @see iframe.html.haml.
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import LtiIframePage from '@cdo/apps/simpleSignUp/lti/iframe/LtiIframePage';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <LtiIframePage logoUrl={logoUrl} authUrl={authUrl} />,
     mountPoint
   );

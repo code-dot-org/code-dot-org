@@ -1,12 +1,12 @@
 import moment from 'moment';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider, useSelector} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     };
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <Modal
           lockoutDate={getScriptData('lockoutDate')}

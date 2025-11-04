@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {
   workshopInfoDataResponseToParams,
   userInfoDataResponseToParams,
 } from '@cdo/apps/code-studio/pd/workshops/types';
 import WorkshopMarketingPage from '@cdo/apps/code-studio/pd/workshops/WorkshopMarketingPage';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   const userEnrollmentParams = getScriptData('userEnrollment');
 
-  ReactDOM.render(
+  createReactRoot(
     <WorkshopMarketingPage
       {...workshopInfoParams}
       {...userInfoParams}

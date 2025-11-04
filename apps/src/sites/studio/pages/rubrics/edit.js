@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import RubricsContainer from '@cdo/apps/levelbuilder/rubrics/RubricsContainer';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -12,7 +12,7 @@ $(document).ready(() => {
     level => level.properties.submittable === 'true'
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <RubricsContainer
       unitName={unitName}
       lessonNumber={lessonNumber}

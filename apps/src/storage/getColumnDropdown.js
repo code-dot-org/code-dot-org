@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import msg from '@cdo/locale';
 
 import {getFirstParam} from '../dropletUtils';
@@ -12,7 +12,7 @@ function openModal(type, callback, table) {
   const modalDiv = document.createElement('div');
   modalDiv.setAttribute('id', 'modalDiv');
   document.body.appendChild(modalDiv);
-  ReactDOM.render(
+  createReactRoot(
     <GetColumnParamPicker
       param={type}
       table={table}

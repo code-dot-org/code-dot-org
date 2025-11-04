@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import AIIterationTools from '@cdo/apps/levelbuilder/ai-iteration-tools/AIIterationTools';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const aiIterationToolsData = getScriptData('aiIterationToolsData');
-  ReactDOM.render(
+  createReactRoot(
     <AIIterationTools
       aiTutorAccess={aiIterationToolsData.aiTutorAccess}
       studentWorkAccess={aiIterationToolsData.studentWorkAccess}

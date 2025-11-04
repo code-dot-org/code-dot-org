@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import ManageLinkedAccounts from './ManageLinkedAccounts';
 import manageLinkedAccounts, {
@@ -34,7 +34,7 @@ export default class ManageLinkedAccountsController {
       })
     );
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={store}>
         <ManageLinkedAccounts />
       </Provider>,

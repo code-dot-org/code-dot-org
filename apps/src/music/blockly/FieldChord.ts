@@ -2,6 +2,8 @@ import * as GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 import {getNoteName} from '../utils/Notes';
@@ -184,7 +186,7 @@ export default class FieldChord extends GoogleBlockly.Field {
       return;
     }
 
-    ReactDOM.render(
+    createReactRoot(
       React.createElement<ChordPanelProps>(ChordPanel, {
         initValue: this.getValue(),
         onChange: this.onValueChange,

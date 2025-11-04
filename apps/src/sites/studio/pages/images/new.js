@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import UploadImageForm from '@cdo/apps/levelbuilder/lesson-editor/UploadImageForm';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(() => {
-  ReactDOM.render(<UploadImageForm />, document.getElementById('form'));
+  createReactRoot(<UploadImageForm />, document.getElementById('form'));
 });

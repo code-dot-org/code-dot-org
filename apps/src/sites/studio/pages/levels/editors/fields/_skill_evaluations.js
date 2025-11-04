@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import SkillEvaluationSettings from '@cdo/apps/levelbuilder/skills/SkillEvaluationSettings';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
@@ -10,7 +10,7 @@ $(document).ready(function () {
     'input#level_additional_ai_evaluation_instructions'
   );
   const data = getScriptData('skillevaluationdata');
-  ReactDOM.render(
+  createReactRoot(
     <SkillEvaluationSettings
       skills={data.skills}
       levelId={data.levelId}

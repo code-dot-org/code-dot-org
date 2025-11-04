@@ -10,7 +10,6 @@ import '@code-dot-org/component-library-styles/colors.scss';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
 import initSigninState from '@cdo/apps/code-studio/initSigninState';
@@ -25,6 +24,7 @@ import initResponsive from '@cdo/apps/code-studio/responsive';
 import {experimentActionCableLoad} from '@cdo/apps/experimentActionCableLoad/experiment-actioncable-load';
 import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 // disable import/order rule to import consoleShim after setting store.
 // This might be safe to remove but needs investigation whether any behavior is changed by order.
 /* eslint-disable import/order*/
@@ -114,7 +114,7 @@ $(document).ready(function () {
   if (document.querySelector(`script[data-gdpr]`)) {
     const gdprData = getScriptData('gdpr');
     if (gdprData.show_gdpr_dialog && gdprData.current_user_id) {
-      ReactDOM.render(
+      createReactRoot(
         <GDPRDialog
           isDialogOpen={gdprData.show_gdpr_dialog}
           currentUserId={gdprData.current_user_id}

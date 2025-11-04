@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import PageContainer from '@cdo/apps/templates/codeDocs/PageContainer';
 import ProgrammingEnvironmentOverview from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentOverview';
 import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 function prepareBlockly() {
@@ -18,7 +18,7 @@ $(document).ready(() => {
   prepareBlockly();
   const programmingEnvironment = getScriptData('programmingEnvironment');
   const categoriesForNavigation = getScriptData('categoriesForNavigation');
-  ReactDOM.render(
+  createReactRoot(
     <PageContainer
       programmingEnvironmentTitle={programmingEnvironment.title}
       categoriesForNavigation={categoriesForNavigation}

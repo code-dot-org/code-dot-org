@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import BubbleChoice from '@cdo/apps/code-studio/components/BubbleChoice';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 const script = document.querySelector('script[data-bubblechoice]');
 const data = JSON.parse(script.dataset.bubblechoice);
@@ -16,7 +16,7 @@ level.id = level.id.toString();
 
 reportTeacherReviewingStudentNonLabLevel();
 
-ReactDOM.render(
+createReactRoot(
   <BubbleChoice level={level} />,
   document.querySelector('#bubble-choice')
 );

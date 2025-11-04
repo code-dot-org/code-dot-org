@@ -41,6 +41,7 @@ import dom from '../dom';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '../redux';
 import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
 import experiments from '../util/experiments';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 
@@ -48,7 +49,6 @@ import ArtistSkins from './skins';
 
 var _ = require('lodash');
 var React = require('react');
-var ReactDOM = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var commonMsg = require('@cdo/locale');
@@ -414,7 +414,7 @@ Artist.prototype.init = function (config) {
     this.preloadAllShapeImages(),
     this.preloadAllPatternImages(),
   ]).then(() => {
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={visualizationColumn}

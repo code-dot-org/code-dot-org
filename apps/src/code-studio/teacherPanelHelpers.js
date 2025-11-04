@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import TeacherPanel from './components/progress/teacherPanel/TeacherPanel';
 
@@ -18,7 +18,7 @@ export function renderTeacherPanel(
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <InstructorsOnly>
         <TeacherPanel

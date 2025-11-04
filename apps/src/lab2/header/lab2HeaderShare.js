@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import trackEvent from '@cdo/apps/util/trackEvent';
 
 import Lab2Registry from '../Lab2Registry';
@@ -31,7 +31,7 @@ export function shareLab2Project(dialogId, finishUrl) {
       dialogDom.setAttribute('id', PROJECT_SHARE_DIALOG_ID);
       document.body.appendChild(dialogDom);
     }
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <Lab2ShareDialogWrapper
           shareDialogId={dialogId}

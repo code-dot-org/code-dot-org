@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
@@ -20,6 +19,7 @@ import {
   setPageType,
   beginCreatingSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/locale';
 
 $(document).ready(showHomepage);
@@ -86,7 +86,7 @@ function showHomepage() {
     />
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <div>
         {isTeacher ? (

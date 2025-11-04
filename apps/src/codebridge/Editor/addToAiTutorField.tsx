@@ -2,11 +2,11 @@ import AddToAiTutorChatButton from '@codebridge/Editor/AddToAiTutorChatButton';
 import {EditorState, StateField} from '@codemirror/state';
 import {showTooltip, Tooltip} from '@codemirror/view';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/editor.module.scss';
@@ -70,7 +70,7 @@ export const getAddToAiTutorField = (
           create: () => {
             const dom = document.createElement('div');
             dom.className = moduleStyles.aiTutorTooltip;
-            ReactDOM.render(
+            createReactRoot(
               <AddToAiTutorChatButton saveSelectionContext={saveSelection} />,
               dom
             );

@@ -1,7 +1,7 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
 
 var ShareWarningsDialog = require('./templates/ShareWarningsDialog');
+var createReactRoot = require('./util/createReactRoot').createReactRoot;
 var utils = require('./utils');
 
 function hasSeenDataAlert(channelId) {
@@ -102,7 +102,7 @@ exports.checkSharedAppWarnings = function (options) {
 
   // If we don't end up needing to show any alerts, the dialog will just render
   // an empty div.
-  return ReactDOM.render(
+  return createReactRoot(
     <ShareWarningsDialog
       showStoreDataAlert={!!showStoreDataAlert}
       promptForAge={!!promptForAge}

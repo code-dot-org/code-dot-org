@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import DropletPaletteSelector from '@cdo/apps/levelbuilder/level-editor/DropletPaletteSelector';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const data = getScriptData('pageOptions');
@@ -31,7 +31,7 @@ Object.keys(fieldConfig).forEach(key => {
 });
 
 if (data.original_palette && !fieldConfig.codeFunctions.hideWhen) {
-  ReactDOM.render(
+  createReactRoot(
     <DropletPaletteSelector
       palette={data.original_palette}
       editor={fieldConfig.codeFunctions.editor}

@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import msg from '@cdo/locale';
 
 import AlertExclamation from '../components/AlertExclamation';
@@ -19,7 +19,7 @@ export function VersionNotFoundAlert() {
 }
 
 export default () => {
-  ReactDOM.render(<VersionNotFoundAlert />, document.getElementById('codeApp'));
+  createReactRoot(<VersionNotFoundAlert />, document.getElementById('codeApp'));
 };
 
 const styles = {

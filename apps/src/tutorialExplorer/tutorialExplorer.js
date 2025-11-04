@@ -7,9 +7,9 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {StickyContainer} from 'react-sticky';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 import FilterHeader from './filterHeader';
@@ -808,7 +808,7 @@ window.TutorialExplorerManager = function (options) {
     : TutorialsSortByOptions.displayweight;
 
   this.renderToElement = function (element) {
-    ReactDOM.render(
+    createReactRoot(
       <TutorialExplorer
         tutorials={options.tutorials}
         filterGroups={filters}

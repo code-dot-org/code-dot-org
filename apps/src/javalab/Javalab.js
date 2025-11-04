@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
@@ -13,6 +12,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import javalabMsg from '@cdo/javalab/locale';
 
@@ -321,7 +321,7 @@ Javalab.prototype.init = function (config) {
     method: 'GET',
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <BackpackAPIContext.Provider value={backpackApi}>
         <JavalabView

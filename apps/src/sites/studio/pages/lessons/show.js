@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
@@ -24,6 +23,7 @@ import {
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import LessonOverview from '@cdo/apps/templates/lessonOverview/LessonOverview';
 import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
@@ -106,7 +106,7 @@ function displayLessonOverview() {
     );
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <LessonOverview lesson={lessonData} activities={activities} />
     </Provider>,
@@ -126,7 +126,7 @@ function prepareExpandableImageDialog() {
   const container = document.createElement('div');
   document.body.appendChild(container);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <ExpandableImageDialog />
     </Provider>,
@@ -143,7 +143,7 @@ function displayDifferentiationChat() {
   const lessonName = lessonData['displayName'];
 
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton
           context={{
@@ -167,7 +167,7 @@ const renderCopyLessonButton = () => {
     const lessonId = lessonData['id'];
     const lessonName = lessonData['displayName'];
 
-    ReactDOM.render(
+    createReactRoot(
       <CloneLessonDialogButton
         lessonId={lessonId}
         lessonName={lessonName}

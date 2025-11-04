@@ -13,10 +13,10 @@ import {dataURIFromURI} from '../imageUtils';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '../redux';
 import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 
 var React = require('react');
-var ReactDOM = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var commonMsg = require('@cdo/locale');
@@ -650,7 +650,7 @@ Flappy.init = function (config) {
 
   studioApp().setPageConstants(config);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={

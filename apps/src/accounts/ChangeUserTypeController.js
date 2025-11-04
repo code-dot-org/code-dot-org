@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/locale';
 
 import * as utils from '../utils';
@@ -87,7 +88,7 @@ export default class ChangeUserTypeController {
     }
     this.mountPoint = document.createElement('div');
     document.body.appendChild(this.mountPoint);
-    ReactDOM.render(
+    createReactRoot(
       <ChangeUserTypeModal
         handleSubmit={this.submitUserTypeChange}
         handleCancel={this.hideChangeUserTypeModal}

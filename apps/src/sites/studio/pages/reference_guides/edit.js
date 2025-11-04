@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import reducers, {
@@ -8,6 +7,7 @@ import reducers, {
 import ReferenceGuideEditor from '@cdo/apps/levelbuilder/reference-guide-editor/ReferenceGuideEditor';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(() => {
@@ -25,7 +25,7 @@ $(() => {
   const levelSearchingInfo = getScriptData('levelSearchingInfo');
   store.dispatch(initLevelSearching(levelSearchingInfo));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <ReferenceGuideEditor
         referenceGuide={referenceGuide}

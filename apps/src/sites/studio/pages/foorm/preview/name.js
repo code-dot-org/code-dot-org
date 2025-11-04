@@ -1,13 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 import 'survey-react/survey.css';
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  ReactDOM.render(
+  createReactRoot(
     <Foorm {...getScriptData('props')} />,
     document.getElementById('application-container')
   );

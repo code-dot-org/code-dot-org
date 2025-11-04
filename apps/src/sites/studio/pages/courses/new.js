@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import NewCourseForm from '@cdo/apps/levelbuilder/course-editor/NewCourseForm';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
-  ReactDOM.render(
+  createReactRoot(
     <NewCourseForm
       families={getScriptData('families')}
       versionYearOptions={getScriptData('versionYearOptions')}

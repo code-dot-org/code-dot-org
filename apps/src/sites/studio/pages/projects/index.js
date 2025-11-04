@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
@@ -15,6 +14,7 @@ import projects, {
   setPublicProjects,
   setCaptchaKey,
 } from '@cdo/apps/templates/projects/projectsRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -41,7 +41,7 @@ $(document).ready(() => {
   store.dispatch(setPublicProjects());
   store.dispatch(setCaptchaKey(projectsData.recaptchaSiteKey));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <div>
         <ProjectHeader

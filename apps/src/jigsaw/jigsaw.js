@@ -8,9 +8,9 @@
 import {TestResults, ResultType} from '../constants';
 import {getStore} from '../redux';
 import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
 
 var React = require('react');
-var ReactDOM = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var studioApp = require('../StudioApp').singleton;
@@ -192,7 +192,7 @@ Jigsaw.init = function (config) {
     noVisualization: true,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={<JigsawVisualizationColumn />}

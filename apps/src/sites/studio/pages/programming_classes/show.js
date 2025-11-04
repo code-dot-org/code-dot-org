@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -7,6 +6,7 @@ import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import PageContainer from '@cdo/apps/templates/codeDocs/PageContainer';
 import ProgrammingClassOverview from '@cdo/apps/templates/codeDocs/ProgrammingClassOverview';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -30,7 +30,7 @@ $(document).ready(() => {
   const currentCategoryKey = hasScriptData('currentCategoryKey')
     ? getScriptData('currentCategoryKey')
     : null;
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <>
         <PageContainer

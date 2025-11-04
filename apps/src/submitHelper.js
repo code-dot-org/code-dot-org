@@ -4,8 +4,8 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import commonMsg from '@cdo/locale';
 
 import {getLastServerResponse} from './code-studio/reporting';
@@ -115,7 +115,7 @@ function showConfirmationDialog(config) {
     '</p>';
 
   const buttons = document.createElement('div');
-  ReactDOM.render(
+  createReactRoot(
     <DialogButtons
       confirmText={commonMsg.dialogOK()}
       cancelText={commonMsg.dialogCancel()}

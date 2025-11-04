@@ -1,10 +1,10 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(initPage);
 
@@ -15,7 +15,7 @@ function initPage() {
 
   const store = getStore();
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <UnitRollup objectToRollUp={'Resources'} unit={unitSummary} />
     </Provider>,
