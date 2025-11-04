@@ -220,12 +220,12 @@ const VersionHistoryPanel: React.FunctionComponent<
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (selectedVersion === INITIAL_VERSION_ID) {
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_RESTORED, appName, {
+      sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, appName, {
         isInitialVersion: 'true',
       });
       confirmStartOver();
     } else if (projectManager && selectedVersion) {
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_RESTORED, appName, {
+      sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, appName, {
         isInitialVersion: 'false',
       });
       setVersionLoading(true);
@@ -281,7 +281,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
       const isLatest = isLatestVersion(e.target.value);
       if (!isLatest) {
-        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_VIEWED, appName, {
+        sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_VIEWED, appName, {
           isInitialVersion: viewingInitialVersion.toString(),
         });
       }
