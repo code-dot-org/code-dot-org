@@ -198,8 +198,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   ].includes(aiGenerateState);
 
   const parentProperties = useParentLevelProperties();
-  const showNavigation =
-    !levelProperties.isProjectLevel && !parentProperties?.isProjectLevel;
+  const isStandalone =
+    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
 
   if (!packId) {
     return null;
@@ -309,7 +309,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              dispatch(setAiGenerateState('editing'));
+              // Skip the 'editing' validation state for standalone projects.
+              dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
               setPlaying(false);
             }}
             className={styles.buttonWide}
@@ -351,7 +352,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {showNavigation && (
+            {!isStandalone && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.
