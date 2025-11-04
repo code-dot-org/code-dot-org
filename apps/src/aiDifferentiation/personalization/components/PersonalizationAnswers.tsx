@@ -13,9 +13,9 @@ import i18n from '@cdo/locale';
 import {
   TEACHER_GOAL_PROMPT,
   SUPPORT_PREFERENCES_PROMPT,
-} from './personalizationQuestions';
+} from './personalizationQuestion/personalizationQuestions';
 
-import style from './personalization-information.module.scss';
+import style from './../personalization-information.module.scss';
 
 interface NumberOfYearsTeachingAnswerProps {
   yearsTeaching: number;
