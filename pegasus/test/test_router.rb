@@ -15,7 +15,12 @@ class RouterTest < Minitest::Test
   include Rack::Test::Methods
 
   def app
-    @app ||= TestDocuments.new
+    # Build a Rack app with middleware and TestDocuments for testing
+    @app ||= Rack::Builder.app do
+      require 'cdo/rack/cloudfront_request_id'
+      use Rack::CloudFrontRequestId
+      run TestDocuments.new
+    end
   end
 
   def test_div_brackets
