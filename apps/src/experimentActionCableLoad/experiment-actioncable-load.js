@@ -12,10 +12,17 @@ export const experimentActionCableLoad = function () {
   }, 3000);
 };
 
+let echoCount;
+let hasTimedOut;
+let echoTimestamps;
+
 const testLoad = function () {
+  echoCount = 0;
+  hasTimedOut = false;
+  echoTimestamps = new Map();
   const consumer = createConsumer('/cable');
 
-  const connectionId = _.random(10000);
+  const connectionId = _.random(1000000000000);
 
   const repeatInterval = DCDO.get('actioncable-repeat-interval', 1000);
   const isRepeat = DCDO.get('actioncable-repeat', true);
@@ -23,6 +30,7 @@ const testLoad = function () {
     'actioncable-disconnect-timeout',
     30 * 1000
   );
+  const echoTimeout = DCDO.get('actioncable-echo-timeout', 5 * 1000);
 
   logEvent('ActionCableLoadTestingConnecting', connectionId);
 
@@ -40,7 +48,31 @@ const testLoad = function () {
       },
       received(data) {
         if (data?.connectionId === connectionId) {
-          logEvent('ActionCableLoadTestingReceived', connectionId);
+          const receivedTime = performance.now();
+          const sentTime = echoTimestamps.get(data?.echoCount);
+          const roundTripTime = sentTime
+            ? _.floor(receivedTime - sentTime)
+            : null;
+
+          logEvent('ActionCableLoadTestingReceived', connectionId, {
+            echoCount: data?.echoCount,
+            roundTripTimeMs: roundTripTime,
+          });
+
+          if (sentTime) {
+            echoTimestamps.delete(data?.echoCount);
+          }
+        }
+
+        if (hasTimedOut) {
+          if (echoTimestamps.size === 0) {
+            consumer.disconnect();
+
+            echoTimestamps.clear();
+          }
+
+          logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
+          return;
         }
 
         if (!!channel && isRepeat) {
@@ -50,26 +82,53 @@ const testLoad = function () {
         }
       },
       echo(connectionId) {
-        this.perform('echo', {connectionId});
+        const sendTime = performance.now();
+        echoTimestamps.set(echoCount, sendTime);
+        this.perform('echo', {connectionId, echoCount});
+        logEvent('ActionCableLoadTestingEchoSent', connectionId, {echoCount});
+        const currentEchoCount = echoCount;
 
-        logEvent('ActionCableLoadTestingEchoSent', connectionId);
+        // Set a timeout for the echo response.
+        // If we don't get a response in time, log a timeout event and clean up.
+        setTimeout(() => {
+          if (echoTimestamps.has(currentEchoCount)) {
+            logEvent('ActionCableLoadTestingEchoTimeout', connectionId, {
+              echoCount: currentEchoCount,
+            });
+            echoTimestamps.delete(currentEchoCount);
+          }
+          if (isRepeat && !hasTimedOut) {
+            channel.echo(connectionId);
+          }
+          if (echoTimestamps.size === 0 && hasTimedOut) {
+            consumer.disconnect();
+
+            echoTimestamps.clear();
+          }
+        }, echoTimeout);
+        echoCount++;
       },
     }
   );
 
   setTimeout(() => {
-    consumer.disconnect();
+    if (!isRepeat && echoTimestamps.size === 0) {
+      consumer.disconnect();
 
-    logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
+      logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
+    }
+    hasTimedOut = true;
   }, disconnectTimeout);
 };
 
-const logEvent = (eventName, connectionId) => {
+const logEvent = (eventName, connectionId, metadata = {}) => {
   if (window.newrelic) {
-    window.newrelic.recordCustomEvent(eventName, {connectionId});
+    window.newrelic.recordCustomEvent(eventName, {connectionId, ...metadata});
   } else {
     console.log(
-      `[NewRelic not found]: ${eventName}, {connectionId:${connectionId}}`
+      `[NewRelic not found]: ${eventName}, {connectionId:${connectionId}, ${JSON.stringify(
+        metadata
+      )}}`
     );
   }
 };

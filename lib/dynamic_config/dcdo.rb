@@ -68,6 +68,7 @@ class DCDOBase < DynamicConfigBase
       'actioncable-repeat-interval': DCDO.get('actioncable-repeat-interval', 1000),
       'actioncable-repeat': DCDO.get('actioncable-repeat', true),
       'actioncable-disconnect-timeout': DCDO.get('actioncable-disconnect-timeout', 30 * 1000),
+      'actioncable-echo-timeout': DCDO.get('actioncable-echo-timeout', 5 * 1000),
     }
   end
 end
