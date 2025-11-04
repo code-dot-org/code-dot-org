@@ -71,7 +71,6 @@ const testLoad = function () {
               from: 'timed-out-after-received',
             });
 
-            echoTimestamps.clear();
           }
           return;
         }
