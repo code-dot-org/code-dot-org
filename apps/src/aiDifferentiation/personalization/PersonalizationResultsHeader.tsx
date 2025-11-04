@@ -18,11 +18,12 @@ const PersonalizationResultsHeader: React.FC<
 > = ({teachingStyle}) => {
   return (
     <div className={style.revealHeader}>
-      <OverlineTwoText>Your teaching style is</OverlineTwoText>
-      <Heading1 className="persona-text">{teachingStyle.name}</Heading1>
-      <BodyTwoText className="potential-text">
-        <span className="icon">{teachingStyle.emoji}</span>{' '}
-        {teachingStyle.tagline}
+      <OverlineTwoText noMargin className={style.lightText}>
+        Your teaching style is
+      </OverlineTwoText>
+      <Heading1 noMargin>{teachingStyle.name}</Heading1>
+      <BodyTwoText noMargin className={style.lightText}>
+        <span>{teachingStyle.emoji}</span> {teachingStyle.tagline}
       </BodyTwoText>
     </div>
   );

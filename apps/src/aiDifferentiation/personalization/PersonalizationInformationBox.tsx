@@ -24,7 +24,9 @@ const PersonalizationInformationBox: React.FC<
                 <BodyThreeText noMargin>
                   <strong>{parts[0].trim()}</strong>
                 </BodyThreeText>
-                <BodyThreeText noMargin>{parts[1].trim()}</BodyThreeText>
+                <BodyThreeText noMargin className={style.lightText}>
+                  {parts[1].trim()}
+                </BodyThreeText>
               </div>
             );
           }
@@ -36,7 +38,11 @@ const PersonalizationInformationBox: React.FC<
       }
       case 'regular':
       default:
-        return <BodyThreeText noMargin>{information}</BodyThreeText>;
+        return (
+          <BodyThreeText noMargin className={style.lightText}>
+            {information}
+          </BodyThreeText>
+        );
     }
   };
 
