@@ -29,6 +29,7 @@ DRUMS=%w[original electro groove indie pop hiphop rock]
 
 # The system prompt
 PROMPT=File.read(File.join(File.dirname(__FILE__), 'music_prompt.txt'))
+PROMPT_MOOD=File.read(File.join(File.dirname(__FILE__), 'music_prompt_mood.txt'))
 
 # The user prompt
 MESSAGE=File.read(File.join(File.dirname(__FILE__), 'music_message.txt'))

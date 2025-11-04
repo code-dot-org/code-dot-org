@@ -74,6 +74,8 @@ options = {
   moods: [],
   produce_layers: false,
   produce_moods: true,
+  # Special flag to generate for three layers
+  use_full_layers: false,
   temperature: TEMPERATURE,
   variants: VARIANTS,
   adlib_option: ADLIB_OPTION,
@@ -276,7 +278,7 @@ packs.each do |pack|
       types = combination.map do |adlib|
         adlib.split(':').last
       end
-      lengths.each do |length|
+      (options[:use_full_layers] ? lengths : [18]).each do |length|
         variants.times do |variant|
           objects << {
             **base,
@@ -290,50 +292,8 @@ packs.each do |pack|
     end
 
     # Every possible unique triplet
-    layers.combination(3).each do |combination|
-      adlibs = combination.map do |adlib|
-        adlib.split(':').first
-      end
-      types = combination.map do |adlib|
-        adlib.split(':').last
-      end
-      lengths.each do |length|
-        variants.times do |variant|
-          objects << {
-            **base,
-            adlibs: adlibs,
-            types: types,
-            length: length,
-            variant: variant,
-          }
-        end
-      end
-    end
-
-    # Special case for doubling the pair (and adding a third)
-    layers.each do |layer|
-      combination = [layer, layer]
-      adlibs = combination.map do |adlib|
-        adlib.split(':').first
-      end
-      types = combination.map do |adlib|
-        adlib.split(':').last
-      end
-      lengths.each do |length|
-        variants.times do |variant|
-          objects << {
-            **base,
-            adlibs: adlibs,
-            types: types,
-            length: length,
-            variant: variant,
-          }
-        end
-      end
-
-      # Also includes the special case for tripling
-      layers.each do |extra_layer|
-        combination = [layer, layer, extra_layer]
+    if options[:use_full_layers]
+      layers.combination(3).each do |combination|
         adlibs = combination.map do |adlib|
           adlib.split(':').first
         end
@@ -349,6 +309,52 @@ packs.each do |pack|
               length: length,
               variant: variant,
             }
+          end
+        end
+      end
+    end
+
+    # Special case for doubling the pair (and adding a third)
+    layers.each do |layer|
+      combination = [layer, layer]
+      adlibs = combination.map do |adlib|
+        adlib.split(':').first
+      end
+      types = combination.map do |adlib|
+        adlib.split(':').last
+      end
+      (options[:use_full_layers] ? lengths : [18]).each do |length|
+        variants.times do |variant|
+          objects << {
+            **base,
+            adlibs: adlibs,
+            types: types,
+            length: length,
+            variant: variant,
+          }
+        end
+      end
+
+      # Also includes the special case for tripling
+      if options[:use_full_layers]
+        layers.each do |extra_layer|
+          combination = [layer, layer, extra_layer]
+          adlibs = combination.map do |adlib|
+            adlib.split(':').first
+          end
+          types = combination.map do |adlib|
+            adlib.split(':').last
+          end
+          lengths.each do |length|
+            variants.times do |variant|
+              objects << {
+                **base,
+                adlibs: adlibs,
+                types: types,
+                length: length,
+                variant: variant,
+              }
+            end
           end
         end
       end
@@ -415,7 +421,7 @@ else
     time = true
 
     adlibs = object[:adlibs]
-    path = File.join(output_path, "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt")
+    path = File.join(output_path, "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt")
 
     unless File.exist?(path)
       if response.nil?
@@ -438,7 +444,7 @@ else
           sounds = sounds.filter {|sound| sound['type'] != 'beat'}
         end
 
-        prompt = PROMPT.
+        prompt = (object[:types] ? PROMPT : PROMPT_MOOD).
           gsub('{sounds}', sounds.any? ? "The valid sounds to use are: #{sounds.map do |sound|
             "\"#{sound['pack'] || object[:pack]}/#{sound['src']}\" (#{sound['length']} measures)"
           end.join(', ')}. " : ""
@@ -514,7 +520,7 @@ unless options[:just_save_prompt]
   end
   ) do |object|
     # The generated path
-    original_path = "#{object[:pack]}-#{object[:adlib_option]}-#{object[:adlibs].join('-')}#{object[:types] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
+    original_path = "#{object[:pack]}-#{object[:adlib_option]}-#{object[:adlibs].join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
     file_path = File.join(output_path, original_path)
     next unless File.exist?(file_path)
 
@@ -522,7 +528,7 @@ unless options[:just_save_prompt]
 
     object[:adlibs].permutation(object[:adlibs].length).each do |adlibs|
       # All 'same' permutations get uploaded from the original generated path
-      path = "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
+      path = "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
 
       if error
         puts "Not uploading: #{path}\n        Error: #{error}"

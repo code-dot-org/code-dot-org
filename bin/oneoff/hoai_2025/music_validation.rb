@@ -102,6 +102,9 @@ def validate_music(path)
         error = "'play_together' block has arguments"
       end
     when 'repeat'
+      # Layered output cannot have a 'repeat' block
+      error = "'repeat' exists within a layered output" if is_layers
+
       # The argument is a number
       unless args.length == 1 && args.first.match(/^\d+$/)
         error = "'repeat' either has no arguments or not a number: #{args.first}"

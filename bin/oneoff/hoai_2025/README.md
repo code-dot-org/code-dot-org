@@ -6,16 +6,25 @@ The `generate_music` script will contact AI (gemini) to produce musiclab
 psuedo-code for the various possible packs and choice combinations a student
 might make during the activity.
 
-There are a few types of 'adlib' prompts:
+There are two types of 'adlib' prompts:
 
 ```
+Code a music mix that layers {layer1} and {layer2} together.
 ```
 
-```
-```
+Where `layer\d` are one of the following (including duplicates): beats,
+vocals, leads, bass. These correspond to the sound types that exist within
+music lab packs. The scripts also can handle a third layer and a length
+which was an early version of this prompt (see `:use_full_layers` option
+hard-coded in the script)
 
 ```
+Code a {mood} music mix with a {length} length, using {drums} drums.
 ```
+
+Where the 'mood' is either simple, creative, or wild and the drums correspond
+to the various provided packs and a 'default' option which uses the drums of
+the current pack (song) which a student selects when first viewing the level.
 
 ### Usage
 
