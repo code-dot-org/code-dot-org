@@ -532,10 +532,7 @@ const sourceHandler = {
         } catch (err) {
           MetricsReporter.logError({
             event: 'Error from Blockly in getLevelSource',
-            error: err,
-            errorMessage: err?.message,
-            errorStack: err?.stack,
-            errorName: err?.name,
+            error: serializeError(err),
             appType: appOptions.app,
             levelId: appOptions.level?.id,
           });
@@ -548,10 +545,7 @@ const sourceHandler = {
         } catch (err) {
           MetricsReporter.logError({
             event: 'Error from getCode in getLevelSource',
-            error: err,
-            errorMessage: err?.message,
-            errorStack: err?.stack,
-            errorName: err?.name,
+            error: serializeError(err),
             appType: appOptions.app,
             levelId: appOptions.level?.id,
           });
@@ -564,10 +558,7 @@ const sourceHandler = {
           .catch(err => {
             MetricsReporter.logError({
               event: 'Error from getCodeAsync in getLevelSource',
-              error: err,
-              errorMessage: err?.message,
-              errorStack: err?.stack,
-              errorName: err?.name,
+              error: serializeError(err),
               appType: appOptions.app,
               levelId: appOptions.level?.id,
             });
@@ -594,6 +585,17 @@ const sourceHandler = {
     return Promise.resolve(); // Return an insta-resolved promise.
   },
 };
+
+export function serializeError(error) {
+  if (error instanceof Error) {
+    return {
+      message: error.message,
+      name: error.name,
+      stack: error.stack,
+    };
+  }
+  return String(error);
+}
 
 /** @type {AppOptionsConfig} */
 let APP_OPTIONS;

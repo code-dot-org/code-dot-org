@@ -657,6 +657,7 @@ var projects = (module.exports = {
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
    * @param {function(): boolean} sourceHandler.setSelectedPoem
+   * @param {function(Error)} sourceHandler.serializeError
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -1320,10 +1321,7 @@ var projects = (module.exports = {
         .catch(error => {
           MetricsReporter.logError({
             event: 'Error in getUpdatedSourceAndHtml_',
-            error: error,
-            errorMessage: error?.message,
-            errorStack: error?.stack,
-            errorName: error?.name,
+            error: this.sourceHandler.serializeError(error),
             appType: this.getStandaloneApp(),
             channelId: this.getCurrentId(),
           });
