@@ -333,7 +333,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       analyticsReporter.sendEvent(
         EVENTS.RESOURCE_PANEL_TAB_CLICKED,
         {
-          app_name: appName,
+          lab_type: appName,
           channel_id: channelId,
           resource_panel_tab_clicked_from: currentTab,
           resource_panel_tab_clicked_to: tab,
@@ -358,7 +358,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         analyticsReporter.sendEvent(
           EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
           {
-            app_name: appName,
+            lab_type: appName,
             channel_id: channelId,
           },
           PLATFORMS.STATSIG
@@ -369,7 +369,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           analyticsReporter.sendEvent(
             EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
             {
-              app_name: appName,
+              lab_type: appName,
               channel_id: channelId,
             },
             PLATFORMS.STATSIG
