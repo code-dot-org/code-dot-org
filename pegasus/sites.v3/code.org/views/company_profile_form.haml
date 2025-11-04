@@ -1,6 +1,6 @@
 -dont_cache
 -landing_page = "/employees/#{data['name_s']}"
--congrats_page = "/congrats?co=#{data['name_s']}"
+-congrats_page = CDO.studio_url("/congrats?co=#{data['name_s']}", CDO.default_scheme)
 -markdown_basics = "http://daringfireball.net/projects/markdown/basics"
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee-form.css"}/

@@ -1,6 +1,12 @@
 class CongratsController < ApplicationController
   include CertificatesHelper
 
+  # GET /congrats/:course_name
+  def show
+    # Redirects to the `index` action with the `course_name` parameter
+    redirect_to helpers.course_completion_certificate_url(course_name: params[:course_name])
+  end
+
   def index
     view_options(full_width: true, responsive_content: true, has_i18n: true)
 

@@ -22,7 +22,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
   end
 
   before do
-    allow(CDO).to receive(:default_scheme).and_return('https:')
+    allow(CDO).to receive(:default_scheme).and_return('http:')
 
     allow(DCDO).to receive(:get).and_call_original
     allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', false).and_return(true)
@@ -33,7 +33,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
   it 'has expected basic flow from begin to finish' do
     VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow') do
       get "/api/hour/begin/#{tutorial_code}"
-      must_redirect_to 'https://test.code.org/minecraft'
+      must_redirect_to 'http://test.code.org/minecraft'
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).wont_be_nil
       _(PEGASUS_DB[:hoc_activity].where(session: cookies[HocLegacy::HOC_COOKIE_KEY]).count).must_equal 1
 
@@ -48,7 +48,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
       _(response.headers["Content-Disposition"]).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
 
       get "/api/hour/finish/#{tutorial_code}"
-      must_redirect_to "https://test-studio.code.org/congrats?i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}&s=#{encoded_tutorial_code}"
+      must_redirect_to "http://test-studio.code.org/congrats?i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}&s=#{encoded_tutorial_code}"
 
       post '/api/hour/certificate', params: {session_s: cookies[HocLegacy::HOC_COOKIE_KEY], name_s: student_name}
       must_respond_with :success
@@ -71,7 +71,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
   it 'has expected basic flow from begin to finish_current' do
     VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow_with_finish_current') do
       get "/api/hour/begin/#{tutorial_code}"
-      must_redirect_to 'https://test.code.org/minecraft'
+      must_redirect_to 'http://test.code.org/minecraft'
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).wont_be_nil
 
       get "/api/hour/begin_#{tutorial_code}.png"
@@ -81,7 +81,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
       must_respond_with :success
 
       get '/api/hour/finish'
-      must_redirect_to "https://test-studio.code.org/congrats?i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}"
+      must_redirect_to "http://test-studio.code.org/congrats?i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}"
 
       post '/api/hour/certificate', params: {session_s: cookies[HocLegacy::HOC_COOKIE_KEY], name_s: student_name}
       must_respond_with :success
@@ -109,7 +109,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
     it 'has expected basic flow from begin to finish without activity tracking' do
       VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow_without_activity_tracking') do
         get "/api/hour/begin/#{tutorial_code}"
-        must_redirect_to 'https://test.code.org/minecraft'
+        must_redirect_to 'http://test.code.org/minecraft'
 
         get "/api/hour/begin_#{tutorial_code}.png"
         must_respond_with :success
@@ -122,7 +122,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
         _(response.headers["Content-Disposition"]).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
 
         get "/api/hour/finish/#{tutorial_code}"
-        must_redirect_to "https://test-studio.code.org/congrats?s=#{encoded_tutorial_code}"
+        must_redirect_to "http://test-studio.code.org/congrats?s=#{encoded_tutorial_code}"
 
         post '/api/hour/certificate', params: {session_s: cookies[HocLegacy::HOC_COOKIE_KEY], name_s: student_name}
         must_respond_with :success
