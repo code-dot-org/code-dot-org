@@ -52,14 +52,14 @@ module AichatRubyTypes
       to_s
     end
 
-    # Helper to determint if a value is this type. Needs to be implemented in derived classes.
+    # Helper to determine if a value is this type. Needs to be implemented in derived classes.
     def value_is_type?(value)
-      raise_or_notify_type_error("not implmemented")
+      AichatRubyTypes.raise_or_notify_type_error("not implmemented")
     end
 
     # Assert whether a value is this type.  Relies on `value_is_type?` helper.
     def assert_value_is_type(value, key = nil)
-      raise_or_notify_type_error("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type_string}#{key.nil? ? "" : " for key=#{key}"}") unless value_is_type?(value)
+      AichatRubyTypes.raise_or_notify_type_error("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type_string}#{key.nil? ? "" : " for key=#{key}"}") unless value_is_type?(value)
     end
   end
 
