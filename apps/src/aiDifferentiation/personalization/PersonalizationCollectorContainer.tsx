@@ -36,6 +36,8 @@ interface PersonalizationData {
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
   const [isSaving, setIsSaving] = React.useState(false);
+  const [showInterstitialState, setShowInterstitialState] =
+    React.useState(false);
   const [showResults, setShowResults] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
   const [personalizationData, setPersonalizationData] = React.useState<
@@ -130,7 +132,18 @@ const PersonalizationCollectorContainer: React.FC = () => {
       return;
     }
 
-    setQuestionsNumber(questionsNumber + direction);
+    if (showInterstitialState) {
+      setShowInterstitialState(false);
+      if (direction === NEXT) setQuestionsNumber(questionsNumber + direction);
+    }
+
+    if (!showInterstitialState && direction === NEXT) {
+      setShowInterstitialState(true);
+    }
+
+    if (!showInterstitialState && direction === BACK) {
+      setQuestionsNumber(questionsNumber + direction);
+    }
   };
 
   const determineAnswerType = React.useCallback(() => {
@@ -251,9 +264,16 @@ const PersonalizationCollectorContainer: React.FC = () => {
           />
         ) : (
           <>
-            <PersonalizationQuestion questionNumber={questionsNumber} />
-            <div className={style.answerContainer}>{determineAnswerType()}</div>
-
+            {showInterstitialState || isSaving ? (
+              <>interstitial state</>
+            ) : (
+              <>
+                <PersonalizationQuestion questionNumber={questionsNumber} />
+                <div className={style.answerContainer}>
+                  {determineAnswerType()}
+                </div>
+              </>
+            )}
             <div className={style.navigationButtons}>
               <Button
                 id={'back-button'}
