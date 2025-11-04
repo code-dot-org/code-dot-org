@@ -348,7 +348,7 @@ class HttpCache
         dashboard: {
           behaviors: [
             {
-              path: "#{HocLegacy::API_ROOT_PATH}*",
+              path: "#{HocLegacy::API_ROOT_PATH}/*",
               headers: ALLOWLISTED_HEADERS,
               cookies: allowlisted_cookies,
             },
@@ -357,7 +357,7 @@ class HttpCache
         pegasus: {
           behaviors: [
             {
-              path: "#{HocLegacy::API_ROOT_PATH}*",
+              path: "#{HocLegacy::API_ROOT_PATH}/*",
               proxy: 'dashboard',
               headers: ALLOWLISTED_HEADERS,
               cookies: allowlisted_cookies,
