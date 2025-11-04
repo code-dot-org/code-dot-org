@@ -3,8 +3,8 @@ import {Heading4} from '@code-dot-org/component-library/typography';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
@@ -197,8 +197,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     'clearing',
   ].includes(aiGenerateState);
 
-  const multiProject = useMultiProject();
-  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+  const parentProperties = useParentLevelProperties();
+  const isStandalone =
+    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
 
   if (!packId) {
     return null;
@@ -308,7 +309,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              dispatch(setAiGenerateState('editing'));
+              // Skip the 'editing' validation state for standalone projects.
+              dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
               setPlaying(false);
             }}
             className={styles.buttonWide}
@@ -350,7 +352,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {showNavigation && (
+            {!isStandalone && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.

@@ -5,9 +5,9 @@ import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibType,
@@ -21,7 +21,7 @@ import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
 import styles from './generate-dance.module.scss';
 
-const GENERATE_DELAY_DURATION = 7000;
+const GENERATE_DELAY_DURATION = 5000;
 
 const adlib: AdlibType = {
   template: `Generate {complexity} code for a {energy} dance, with {dancers} as backup dancers.`,
@@ -212,8 +212,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     'listened',
   ].includes(aiGenerateState);
 
-  const multiProject = useMultiProject();
-  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+  const parentProperties = useParentLevelProperties();
+  const isStandalone =
+    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
 
   return (
     <Guide id="generate-panel" modal={modal} position="bottom">
@@ -289,7 +290,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              setAiGenerateState('editing');
+              // Skip the 'editing' validation state for standalone projects.
+              setAiGenerateState(isStandalone ? 'edited' : 'editing');
               resetProgram();
             }}
             className={styles.buttonWide}
@@ -315,8 +317,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
         <>
           <div>
             <Heading4>Modify the code</Heading4>
-            Amazing moves! Keep editing, or update your dancer design or music
-            mix above. Click Finish when you're done.
+            {isStandalone
+              ? 'Amazing moves! Keep editing, or update your dancer design or music mix above.'
+              : "Amazing moves! Keep editing, or update your dancer design or music mix above. Click Finish when you're done."}
           </div>
           <div className={styles.buttonRow}>
             <Button
@@ -332,7 +335,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {showNavigation && (
+            {!isStandalone && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.
