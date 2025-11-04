@@ -173,7 +173,7 @@ export const GoalsAnswer: React.FC<GoalsAnswerProps> = ({
 
   return (
     <div className={style.multiSelectContainer}>
-      {TEACHER_GOAL_PROMPT.choices.map((choice, index) => (
+      {TEACHER_GOAL_PROMPT.choices?.map((choice, index) => (
         <Checkbox
           key={index}
           label={choice}
@@ -234,7 +234,7 @@ export const SupportAnswer: React.FC<SupportAnswerProps> = ({
 
   return (
     <div className={style.multiSelectContainer}>
-      {SUPPORT_PREFERENCES_PROMPT.choices.map((choice, index) => (
+      {SUPPORT_PREFERENCES_PROMPT.choices?.map((choice, index) => (
         <Checkbox
           key={index}
           label={choice}
