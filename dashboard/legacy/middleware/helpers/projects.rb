@@ -39,10 +39,11 @@ class Projects
       remix_parent_id: remix_parent_id,
       skip_content_moderation: false,
       standalone: standalone,
+      uuid: SecureRandom.uuid,
     }
     row[:id] = @table.insert(row)
 
-    storage_encrypt_channel_id(row[:storage_id], row[:id])
+    row[:uuid]
   end
 
   def delete(channel_id)
@@ -110,6 +111,10 @@ class Projects
       updated_ip: ip_address,
     }
     row[:project_type] = project_type if project_type
+
+    # Add uuid if the project doesn't have one yet
+    row[:uuid] = SecureRandom.uuid if project[:uuid].nil?
+
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
