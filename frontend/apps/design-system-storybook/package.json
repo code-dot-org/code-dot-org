@@ -48,6 +48,7 @@
     "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
     "@storybook/react-webpack5": "^9.0.18",
     "@storybook/test-runner": "^0.23.0",
+    "@types/react": "^18.3.12",
     "axe-playwright": "^2.0.3",
     "concurrently": "^9.1.0",
     "eslint": "^9.16.0",

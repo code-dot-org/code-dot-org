@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:46:11.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're building a fitness app that tracks a user's daily step goal. Your app needs to remember how many steps the user is aiming for each day.\r\n\r\n1. Create a variable called `step_goal`.\r\n\r\n2. Assign it a number, like `8000` or `10000`.\r\n\r\n3. Use `print()` to show a message like\r\n\r\n   ```\r\n   Your daily step goal is 10000 steps.\r\n   ```\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use **commas** in a `print()` statement to combine text and variables. For example:\r\n\r\n```\r\nprint(\"Name:\", first_name)\r\n```",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -47,9 +48,12 @@
       "active": false,
       "open": false,
       "type": "validation"
-    }
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:11.908+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level3b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level3b_2025-launch_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:11.908+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level3b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level3b_2025-launch_2025\"},{\"changed_at\":\"2025-11-04 05:23:51 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>

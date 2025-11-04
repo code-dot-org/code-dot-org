@@ -4,8 +4,6 @@ require 'cdo/db'
 
 module HocLegacy
   class TutorialsController < ApplicationController
-    CACHE_TTL = 1.hour.freeze
-
     before_action :assign_tutorial, only: %i[begin begin_pixel finish finish_pixel]
     before_action :require_tutorial, only: %i[show begin begin_pixel finish finish_pixel]
 
@@ -13,7 +11,7 @@ module HocLegacy
 
     # GET /api/hour/begin/:code
     def begin
-      tutorial_url = @tutorial.primary_link_ref&.primary_target
+      tutorial_url = @tutorial.primary_link_ref&.fields.try(:[], :primary_target)
       return render_404 if tutorial_url.blank?
 
       TutorialLauncher.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
@@ -49,7 +47,6 @@ module HocLegacy
     end
 
     # POST /api/hour/certificate
-    # POST /v2/certificate
     def certificate
       session_params = params.permit(:session_s, :name_s)
       session_row = PEGASUS_DB[:hoc_activity].where(session: session_params[:session_s]).first || {}
@@ -77,9 +74,7 @@ module HocLegacy
     end
 
     private def assign_tutorial
-      @tutorial = Rails.cache.fetch("hoc_legacy:tutorial:#{params[:code]}", expires_in: CACHE_TTL) do
-        CdoContentful::CsForAll::Entry::Tutorial.find_by_code(params[:code])
-      end
+      @tutorial = Tutorials.get(params[:code])
     end
 
     private def require_tutorial

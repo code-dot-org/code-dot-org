@@ -1,6 +1,7 @@
 name 'ai-and-algorithmic-decisions-lesson9-level2-test-2025'
 display_name 'Creating a Multi-Decision Flowchart'
 description 'Choose one of the levels and create a conditionals flowchart to represent the scenario.'
+uses_lab2
 
 sublevels
 level 'ai-and-algorithmic-decisions-lesson9-level2a-test-2025'

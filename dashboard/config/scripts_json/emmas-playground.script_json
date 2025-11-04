@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-01 18:37:47 UTC",
+    "serialized_at": "2025-11-03 21:52:33 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -918,6 +918,17 @@
       },
       "seeding_key": {
         "activity_section.key": "8d1af895-266c-40bd-ab2d-9281df526af6",
+        "lesson_activity.key": "3af229ae-9678-4db3-90dd-5e140db74b5b"
+      }
+    },
+    {
+      "key": "fbe2b592-4970-442d-9ca6-79299553923b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sketch Lab 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbe2b592-4970-442d-9ca6-79299553923b",
         "lesson_activity.key": "3af229ae-9678-4db3-90dd-5e140db74b5b"
       }
     }
@@ -2676,6 +2687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emma-test-sketch-lab-1"
+        ],
         "progression": "Sketch Lab 1"
       },
       "bonus": false,
@@ -2690,6 +2704,28 @@
       },
       "level_keys": [
         "emma-test-sketch-lab-1"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sketch Lab 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-sketch-lab-bug"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "fbe2b592-4970-442d-9ca6-79299553923b"
+      },
+      "level_keys": [
+        "emma-test-sketch-lab-bug"
       ]
     }
   ],
@@ -3556,6 +3592,18 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground",
         "activity_section.key": "8d1af895-266c-40bd-ab2d-9281df526af6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-sketch-lab-bug",
+        "script_level.level_keys": [
+          "emma-test-sketch-lab-bug"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "fbe2b592-4970-442d-9ca6-79299553923b"
       }
     }
   ],

@@ -1,18 +1,17 @@
 name 'pl-sandbox-aif2-U2-CFU-vocab-11'
 title 'Terminology Matching'
 
-height '75'
+height '80'
 
-question 'The code that gives a web page its structure.'
-answer 'HTML'
-question 'The code that gives a web page its style'
-answer 'CSS'
-question 'The idea that design should start with understanding the needs of the end-user.'
-answer 'Human Centered Design'
-question 'The overall experience a person has when interacting with a product, system, or service.'
-answer 'User Experience'
-question 'An interactive program that runs in a web browser.'
-answer 'Web App'
+question 'The ability of a software application or website to respond to user input.'
+answer 'Interactivity'
+question 'A compromise where you give up something to get something else.'
+answer 'Trade-off'
+question 'A programming interface that makes a website interactive.'
+answer 'DOM'
+question 'A line of code that defines the reaction that a program takes based on a specific action, like a button click.'
+answer 'Event Handler'
+
 
 
 markdown <<MARKDOWN
