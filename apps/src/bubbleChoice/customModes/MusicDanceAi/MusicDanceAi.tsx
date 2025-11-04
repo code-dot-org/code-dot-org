@@ -22,11 +22,14 @@ import {
 } from '@cdo/apps/lab2/types';
 import LevelPropertiesCache from '@cdo/apps/lab2/utils/LevelPropertiesCache';
 import Loading from '@cdo/apps/lab2/views/Loading';
+import {getTypedKeys} from '@cdo/apps/types/utils';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {BubbleChoiceLevelProperties} from '../../types';
+
+import {ParentLevelPropertiesContext} from './ParentLevelPropertiesContext';
 
 import styles from './styles.module.scss';
 
@@ -78,7 +81,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
   levelProperties,
   channel,
 }) => {
-  const [currentTab, setCurrentTab] = useState<Tab>(Tab.Dancer);
+  const [currentTab, setCurrentTab] = useState<Tab>();
   const [propsMap, setPropsMap] = useState<{[tab in Tab]?: LabData}>({});
   const userId = useAppSelector(state => state.progress.viewAsUserId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
@@ -162,6 +165,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
       }
     }
     setPropsMap(map);
+    setCurrentTab(getTypedKeys(map)[0]);
     dispatch(setIsLoading(false));
   }, [
     levelProperties,
@@ -178,66 +182,74 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
   }, [loadData]);
 
   // Delay rendering each tab until we see it for the first time to avoid UI issues (ex: Music Lab pack dialog locking focus while hidden).
-  const [seenTabs, setSeenTabs] = useState<Set<Tab>>(new Set([currentTab]));
+  const [seenTabs, setSeenTabs] = useState<Set<Tab>>(new Set());
   useEffect(() => {
-    setSeenTabs(prevSeenTabs => new Set(prevSeenTabs).add(currentTab));
+    if (currentTab) {
+      setSeenTabs(prevSeenTabs => new Set(prevSeenTabs).add(currentTab));
+    }
   }, [currentTab]);
 
+  if (!currentTab) {
+    return null;
+  }
+
   return (
-    <div className={styles.container}>
-      <div className={styles.tabSwitcher}>
-        {Object.values(Tab).map(tab => {
-          const disabled = !propsMap[tab];
-          return (
-            <button
-              type="button"
-              className={classNames(
-                styles.button,
-                disabled && styles.locked,
-                tab === currentTab && styles.selected
-              )}
-              key={tab}
-              onClick={() => (disabled ? undefined : setCurrentTab(tab))}
-              disabled={disabled}
-            >
-              <BodyThreeText>
-                {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
-                {labels[tab]}
-              </BodyThreeText>
-            </button>
-          );
-        })}
-      </div>
-      <div className={styles.labsContainer}>
-        {Array.from(seenTabs).map(tab => {
-          const sublevelProps = propsMap[tab];
-          const LabView =
-            sublevelProps &&
-            lab2EntryPoints[sublevelProps?.levelProperties.appName]?.view;
-          const hidden = tab !== currentTab;
-          return (
-            LabView && (
-              <div
+    <ParentLevelPropertiesContext.Provider value={levelProperties}>
+      <div className={styles.container}>
+        <div className={styles.tabSwitcher}>
+          {Object.values(Tab).map(tab => {
+            const disabled = !propsMap[tab];
+            return (
+              <button
+                type="button"
                 className={classNames(
-                  styles.labContainer,
-                  hidden && styles.hidden
+                  styles.button,
+                  disabled && styles.locked,
+                  tab === currentTab && styles.selected
                 )}
                 key={tab}
-                ref={el => {
-                  if (el) {
-                    el.inert = hidden;
-                  }
-                }}
+                onClick={() => (disabled ? undefined : setCurrentTab(tab))}
+                disabled={disabled}
               >
-                <Suspense fallback={<Loading isLoading={true} />}>
-                  <LabView {...sublevelProps} />
-                </Suspense>
-              </div>
-            )
-          );
-        })}
+                <BodyThreeText>
+                  {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
+                  {labels[tab]}
+                </BodyThreeText>
+              </button>
+            );
+          })}
+        </div>
+        <div className={styles.labsContainer}>
+          {Array.from(seenTabs).map(tab => {
+            const sublevelProps = propsMap[tab];
+            const LabView =
+              sublevelProps &&
+              lab2EntryPoints[sublevelProps?.levelProperties.appName]?.view;
+            const hidden = tab !== currentTab;
+            return (
+              LabView && (
+                <div
+                  className={classNames(
+                    styles.labContainer,
+                    hidden && styles.hidden
+                  )}
+                  key={tab}
+                  ref={el => {
+                    if (el) {
+                      el.inert = hidden;
+                    }
+                  }}
+                >
+                  <Suspense fallback={<Loading isLoading={true} />}>
+                    <LabView {...sublevelProps} />
+                  </Suspense>
+                </div>
+              )
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </ParentLevelPropertiesContext.Provider>
   );
 };
 
