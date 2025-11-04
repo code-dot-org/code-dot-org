@@ -171,6 +171,8 @@ Fields are defined by the comma-delimited `LOG_FIELDS` parameter in the access l
 
 The Application Load Balancer writes logs for every HTTP/HTTPS request it receives. Logs are written directly to S3 at `s3://cdo-logs/<stack-name>-alb-access-logs/AWSLogs/<account>/elasticloadbalancing/<region>/YYYY/MM/DD/`. Query these records in Athena via table `elb_logs.prod_dashboard_alb`.
 
+**CodeProjects ALB:** The codeprojects.org Application Load Balancer (manually configured) writes logs to `s3://cdo-logs/codeprojects-elb/AWSLogs/475661607190/elasticloadbalancing/us-east-1/YYYY/MM/DD/`. These logs are discovered by a Glue crawler and exposed in Athena as table `elb_logs.codeprojects_alb` (partitioned by `year/month/day`). The format is identical to the main dashboard ALB logs described above.
+
 ### Example Log Entries
 
 **Successful Request:**

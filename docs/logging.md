@@ -34,6 +34,7 @@ This document inventories logging across the Code.org platform. It explains, in 
 ### Load Balancers
 
 - **ALB access logs**: After CloudFront, requests that reach the Application Load Balancer are logged with full request/target/latency details. Logging is enabled directly on the ALB via [access log attributes](../aws/cloudformation/cloud_formation_stack.yml.erb#L300-L305), and those CSV logs are written to S3 under the standard `AWSLogs/<account>/<region>/elasticloadbalancing/` prefixes. We define an Athena schema so you can query ALB traffic efficiently using the [ELB/ALB Glue/Athena schema](../aws/cloudformation/data.yml.erb#L350-L420).
+- **CodeProjects ALB access logs**: The codeprojects.org Application Load Balancer (manually configured, not in infrastructure-as-code) writes logs to `s3://cdo-logs/codeprojects-elb/AWSLogs/475661607190/elasticloadbalancing/us-east-1/`. A Glue crawler discovers these logs and exposes them in Athena as table `elb_logs.codeprojects_alb` (partitioned by `year/month/day`). Format is the same space-delimited ALB format as the main dashboard ALB logs.
 
 ### Application servers (EC2)
 
@@ -79,6 +80,7 @@ This document inventories logging across the Code.org platform. It explains, in 
   - Production web frontends: instances cloned from the latest AMI builder upload under a shared prefix `hosts/ami-<builder-instance-id>/<app>` (the builder is a stopped EC2 instance; clear the "running" filter to find it). 
   - **DATA LOSS NOTE**: Because all frontends get the same `hostname` and the file names are simple date-based (e.g., `puma_stderr.log-YYYYMMDD.gz`), the hourly sync causes last-writer-wins overwrites. _As even instances not in the pool (with no traffic) still also overwrite, most logs in here all-but empty (80 bytes - 30kb), this means we essentially lose 99.9% of these logs for long-term retention._
 - **`<stack-name>-alb-access-logs/` ALB access logs** (space‑delimited [format](./log-formats.md#application-load-balancer-alb-logs)): Load balancer logs are written to `s3://cdo-logs/<stack-name>-alb-access-logs/AWSLogs/<account>/elasticloadbalancing/<region>/YYYY/MM/DD/`. Queryable in Athena using the [ALB/ELB schema](../aws/cloudformation/data.yml.erb#L350-L420).
+- **`codeprojects-elb/` CodeProjects ALB access logs** (space‑delimited [format](./log-formats.md#application-load-balancer-alb-logs)): The codeprojects.org ALB (manually configured) writes logs to `s3://cdo-logs/codeprojects-elb/AWSLogs/475661607190/elasticloadbalancing/us-east-1/YYYY/MM/DD/`. Queryable in Athena via table `elb_logs.codeprojects_alb` (discovered by Glue crawler `codeprojects_alb_logs`).
 - **`cloudfront/<env>-<app>-cdn/` CloudFront access logs** (TSV [format](./log-formats.md#cloudfront-standard-access-logs-non-real-time)): initially land under `s3://cdo-logs/cloudfront/<env>-<app>-cdn/` and are rewritten by the partition Lambda to `s3://cdo-logs/cloudfront/<env>-<app>-cdn/year=YYYY/month=MM/day=DD/hour=HH/<ID>.YYYY-MM-DD-HH.<hash>.gz`, matching the [Athena table](../aws/cloudformation/data.yml.erb#L504-L563). During extreme traffic (e.g., DDoS), the end‑to‑end pipeline is best‑effort and short‑term gaps can occur due to S3 event throttling, Lambda concurrency limits, or retry exhaustion; operationally, these logs are not guaranteed to be 100% complete in peak scenarios.
 - **`AWSLogs/` CloudTrail logs** (JSON [format](./log-formats.md#cloudtrail-logs)): AWS delivers API activity here and can be queried in Athena  under `cdo.cloudtrail_logs`.
 
@@ -152,6 +154,7 @@ Secondly, while the user is on the page (in addition to the above):
 | CloudFront standard access logs | S3 `cdo-logs/cloudfront/...` | Indefinite | Occasional gaps during DDoS or partition Lambda throttling |
 | CloudFront real-time access logs | S3 `cdo-access-logs/access-logs/` | Indefinite | Firehose retries but best-effort; Kinesis backpressure can drop rows |
 | ALB access logs | S3 `cdo-logs/<stack>-alb-access-logs/...` | Indefinite | - |
+| CodeProjects ALB access logs | S3 `cdo-logs/codeprojects-elb/...` | Indefinite | Manually configured ALB; discovered by Glue crawler |
 | Rails Lograge request logs | CloudWatch `<env>-syslog` | Indefinite | - |
 | Rails stdout/stderr (Puma) | S3 `cdo-logs/hosts/<hostname>/...` | Indefinite | ~99% loss, due to overwrites shared host prefix |
 | NGINX access/error logs | Instance filesystem | none, lost on termination | not retained |
