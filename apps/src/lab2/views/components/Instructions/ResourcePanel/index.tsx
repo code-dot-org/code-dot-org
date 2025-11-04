@@ -367,6 +367,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       }
     } else {
       // For standalone projects with no tabs, we toggle the floating settings panel.
+      if (!isFloatingSettingsOpen) {
+        sendLab2AnalyticsEvent(
+          EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
+          appName
+        );
+      }
       setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
     }
   }, [
