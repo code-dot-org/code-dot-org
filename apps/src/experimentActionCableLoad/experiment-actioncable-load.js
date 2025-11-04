@@ -110,7 +110,6 @@ const testLoad = function () {
               from: 'after-timeout',
             });
 
-            echoTimestamps.clear();
           }
         }, echoTimeout);
         echoCount++;
