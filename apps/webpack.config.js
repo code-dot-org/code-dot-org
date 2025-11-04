@@ -311,18 +311,34 @@ const WEBPACK_BASE_CONFIG = {
         enforce: 'pre',
         include: [...nodeModulesToTranspile, p('src'), p('test')],
         exclude: [p('src/lodash.js')],
-        loader: 'babel-loader',
-        options: {
-          cacheDirectory: p('build/babel-cache'),
-          compact: false,
-          ...(envConstants.HOT
-            ? {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
-            : {}),
-        },
+        use: [
+          {
+            loader: 'thread-loader',
+            options: {
+              workers: 8,
+            },
+          },
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: p('build/babel-cache'),
+              compact: false,
+              ...(envConstants.HOT
+                ? {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
+                : {}),
+            },
+          },
+        ],
       },
       {
         test: /\.tsx?$/,
         use: [
+          {
+            loader: 'thread-loader',
+            options: {
+              workers: 8,
+            },
+          },
           {
             loader: 'ts-loader',
             options: {
@@ -330,6 +346,7 @@ const WEBPACK_BASE_CONFIG = {
               // Instead we typecheck in parallel using ForkTsCheckerWebpackPlugin
               transpileOnly: true,
               configFile: 'tsconfig.build.json',
+              happyPackMode: true, // Required when using thread-loader
               getCustomTransformers: () => ({
                 before: envConstants.HOT ? [new ReactRefreshTypeScript()] : [],
               }),
