@@ -218,7 +218,6 @@ Resources:
               - 's3:PutBucketAcl'
               - 's3:PutBucketPolicy'
               - 's3:PutBucketPublicAccessBlock'
-              - 's3:PutObjectAcl'
               - 's3:PutLifecycleConfiguration'
 
               # S3 Batch Operations
@@ -237,6 +236,15 @@ Resources:
               - 's3:PutObjectLegalHold'
               - 's3:PutObjectRetention'
             Resource: '*'
+          # Deny PutObjectAcl except for cucumber-logs bucket
+          - Effect: Deny
+            Action:
+              - 's3:PutObjectAcl'
+            Resource: '*'
+            Condition:
+              StringNotLike:
+                's3:arn':
+                  - 'arn:aws:s3:::cucumber-logs/*'
           # TODO: Move to dedicated policy for GenAI
           # GenAI Sagemaker access
           - Effect: Allow
