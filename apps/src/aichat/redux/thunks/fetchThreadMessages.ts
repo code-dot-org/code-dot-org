@@ -15,6 +15,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   setThreadId,
   setThreadTitle,
+  setThreadType,
   setThreadMessages,
   setThreadKeyId,
   setInitialChatMessage,
@@ -41,6 +42,7 @@ export const fetchThreadMessages = createAsyncThunk(
     thunkAPI
   ) => {
     const state = thunkAPI.getState() as RootState;
+    thunkAPI.dispatch(setThreadType(threadType));
     if (thread === 0) {
       thunkAPI.dispatch(setThreadMessages([]));
       thunkAPI.dispatch(setThreadId(thread));

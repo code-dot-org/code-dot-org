@@ -1,3 +1,4 @@
+import {ThreadTypeFields} from '@cdo/apps/aiDifferentiation/constants';
 import {ChatItem} from '@cdo/apps/aiDifferentiation/types';
 
 import {ModalTypes} from '../constants';
@@ -23,6 +24,9 @@ export interface AichatState {
   threadId: number;
   // Title of the current thread open
   threadTitle: string;
+  // Type of thread which can be used to delineate initial messages, whether to show
+  // suggested prompts, etc.
+  threadType: ThreadTypeFields;
   // Chat history of the current thread
   threadMessages: ChatItem[];
   // This is similar to the threadId but is used slightly differently: changing the

@@ -3,6 +3,8 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {
   DEFAULT_THREAD_TITLE,
   DEFAULT_INITIAL_CHAT_MESSAGE,
+  ThreadTypeFields,
+  THREAD_TYPES,
 } from '@cdo/apps/aiDifferentiation/constants';
 import {ChatItem} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
@@ -45,6 +47,7 @@ const initialState: AichatState = {
   clientType: undefined,
   threadId: 0,
   threadTitle: DEFAULT_THREAD_TITLE,
+  threadType: THREAD_TYPES.default,
   threadMessages: [],
   threadKeyId: 0,
   initialChatMessage: DEFAULT_INITIAL_CHAT_MESSAGE,
@@ -131,6 +134,9 @@ const aichatSlice = createSlice({
     },
     setThreadTitle(state, action: PayloadAction<string>) {
       state.threadTitle = action.payload;
+    },
+    setThreadType(state, action: PayloadAction<ThreadTypeFields>) {
+      state.threadType = action.payload;
     },
     setThreadMessages(state, action: PayloadAction<ChatItem[]>) {
       state.threadMessages = action.payload;
@@ -436,6 +442,7 @@ export const {
   setClientType,
   setThreadId,
   setThreadTitle,
+  setThreadType,
   setThreadMessages,
   setThreadKeyId,
   setViewMode,
