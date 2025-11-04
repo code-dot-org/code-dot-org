@@ -623,12 +623,13 @@ const EVENTS = {
 
   // Lab2
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
-  LAB2_THEME_CHANGE: 'User changed theme',
 
   // Resource Panel
   RESOURCE_PANEL_TAB_CLICKED: 'Resource Panel Tab Clicked',
   RESOURCE_PANEL_SETTINGS_PANEL_OPENED: 'Resource Panel Settings Panel Opened',
   RESOURCE_PANEL_SETTINGS_CHANGED: 'Resource Panel Settings Changed',
+  RESOURCE_PANEL_LANGUAGE_CHANGE: 'Resource Panel Language Change',
+  RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
 
   // AI Teaching Assistant - Differentiation
 };

@@ -562,6 +562,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   closePanel={() => {
                     setIsSettingsOpen(false);
                   }}
+                  appName={appName}
                 />
               )}
             </PanelContainer>
@@ -580,6 +581,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             closePanel={() => {
               setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
             }}
+            appName={appName}
           />
         </div>
       )}
