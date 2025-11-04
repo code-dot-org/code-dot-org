@@ -67,11 +67,12 @@ const testLoad = function () {
         if (hasTimedOut) {
           if (echoTimestamps.size === 0) {
             consumer.disconnect();
+            logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
+              from: 'timed-out-after-received',
+            });
 
             echoTimestamps.clear();
           }
-
-          logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
           return;
         }
 
@@ -91,17 +92,23 @@ const testLoad = function () {
         // Set a timeout for the echo response.
         // If we don't get a response in time, log a timeout event and clean up.
         setTimeout(() => {
-          if (echoTimestamps.has(currentEchoCount)) {
-            logEvent('ActionCableLoadTestingEchoTimeout', connectionId, {
-              echoCount: currentEchoCount,
-            });
-            echoTimestamps.delete(currentEchoCount);
+          if (!echoTimestamps.has(currentEchoCount)) {
+            return;
           }
+
+          logEvent('ActionCableLoadTestingEchoTimeout', connectionId, {
+            echoCount: currentEchoCount,
+          });
+          echoTimestamps.delete(currentEchoCount);
+
           if (isRepeat && !hasTimedOut) {
             channel.echo(connectionId);
           }
           if (echoTimestamps.size === 0 && hasTimedOut) {
             consumer.disconnect();
+            logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
+              from: 'after-timeout',
+            });
 
             echoTimestamps.clear();
           }
@@ -112,12 +119,14 @@ const testLoad = function () {
   );
 
   setTimeout(() => {
+    hasTimedOut = true;
     if (!isRepeat && echoTimestamps.size === 0) {
       consumer.disconnect();
 
-      logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
+      logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
+        from: 'single-echo-complete',
+      });
     }
-    hasTimedOut = true;
   }, disconnectTimeout);
 };
 
