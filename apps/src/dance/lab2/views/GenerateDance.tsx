@@ -1,5 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {Heading4} from '@code-dot-org/component-library/typography';
+import * as GoogleBlockly from 'blockly/core';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -64,6 +65,9 @@ interface GenerateCodeProps {
   resetProgram: () => void;
   updateSources: (newSources: WorkspaceSerialization) => void;
   startOver: () => void;
+  updateBlocklyFlyout: (
+    toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo
+  ) => void;
 }
 
 // Generate dance code.
@@ -79,6 +83,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   resetProgram,
   updateSources,
   startOver,
+  updateBlocklyFlyout,
 }) => {
   const [aiGenerateState, setAiGenerateState] = useState<
     | 'none'
@@ -133,7 +138,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     setAiGenerateState('generating');
 
     const startTime = Date.now();
-    const resultBlockly = buildDanceBlockly(
+    const {workspaceSerialization, flyoutDefinition} = buildDanceBlockly(
       measures,
       blockDefinitions,
       adlibChoices && adlibChoices['complexity'] === 'complex'
@@ -150,11 +155,22 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-    updateSources(resultBlockly);
+    updateSources(workspaceSerialization);
+    updateBlocklyFlyout(flyoutDefinition);
+    const levelId = levelProperties.id;
+    localStorage.setItem(`flyout-${levelId}`, JSON.stringify(flyoutDefinition));
     runProgram();
 
     setAiGenerateState('generated');
-  }, [adlibChoices, blockDefinitions, measures, runProgram, updateSources]);
+  }, [
+    adlibChoices,
+    blockDefinitions,
+    levelProperties.id,
+    measures,
+    runProgram,
+    updateBlocklyFlyout,
+    updateSources,
+  ]);
 
   useEffect(() => {
     // There can be a delay before we're playing, so wait for it explicitly.
