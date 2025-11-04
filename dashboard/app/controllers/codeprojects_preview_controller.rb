@@ -2,6 +2,23 @@ class CodeprojectsPreviewController < ApplicationController
   include AllowedHostnameHelper
   # Public preview page, static content for now.
   def show
+    puts "hi from show"
+    set_content_security_policy
+    render 'show', layout: false
+  end
+
+  skip_forgery_protection only: :weblab2_project_service_worker
+  def weblab2_project_service_worker
+    send_file "#{apps_dir}/src/codebridge/FilePreview/weblab2_project_service_worker.js", type: 'application/javascript'
+  end
+
+  def not_found
+    puts "hi from not_found"
+    set_content_security_policy
+    render 'not_found', layout: false, status: :not_found
+  end
+
+  def set_content_security_policy
     code_studio_url = CDO.dashboard_site_host
     preview_url = CDO.preview_codeprojects_hostname
     # Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
@@ -90,11 +107,5 @@ class CodeprojectsPreviewController < ApplicationController
       policies << "upgrade-insecure-requests"
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')
-    render 'show', layout: false
-  end
-
-  skip_forgery_protection only: :weblab2_project_service_worker
-  def weblab2_project_service_worker
-    send_file "#{apps_dir}/src/codebridge/FilePreview/weblab2_project_service_worker.js", type: 'application/javascript'
   end
 end

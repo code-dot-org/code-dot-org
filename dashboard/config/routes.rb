@@ -37,7 +37,9 @@ Dashboard::Application.routes.draw do
     get '/', to: 'codeprojects_preview#show'
     # Must be served from / on preview.codeprojects.org to control the root scope:
     get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
+    match '*path', to: 'codeprojects_preview#not_found', via: :all
   end
+
   # This matches any host that is not the codeprojects hostname
   constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.

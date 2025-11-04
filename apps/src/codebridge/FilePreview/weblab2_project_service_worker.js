@@ -63,7 +63,8 @@ function main() {
     } else if (type === SET_CURRENT_FILE) {
       currentFile = newCurrentFile;
       console.log('Service worker current file set to:', currentFile);
-      broadcastChannel.postMessage({type: UPDATED_CURRENT_FILE});
+      // TODO: do we need to do something here? Always notifying breaks the 404 page because it has latency.
+      //broadcastChannel.postMessage({type: UPDATED_CURRENT_FILE});
     }
   };
 
@@ -136,13 +137,8 @@ function main() {
           'Available files:',
           Object.keys(filesData)
         );
-        return new Response(`File not found: ${requestedFile}`, {
-          status: 404,
-          headers: {
-            'Content-Type': 'text/plain',
-            'X-Frame-Options': 'ALLOWALL',
-          },
-        });
+        // forward to default fetch handler to allow 404 handling
+        return await fetch(url);
       }
     } catch (error) {
       console.error('Service worker error:', error);
@@ -161,6 +157,7 @@ const isServiceWorker = typeof ServiceWorkerGlobalScope !== 'undefined';
 if (isServiceWorker) {
   main();
   console.warn('I AM A SERVICE WORKER');
+  // send broadcast message that the service worker has been started?
 } else {
   console.warn('I AM NOT A SERVICE WORKER');
 }
