@@ -26,6 +26,95 @@ type BlockStateFlyout = GoogleBlockly.utils.toolbox.BlockInfo;
 const DANCELAB_PREFIX = 'Dancelab_';
 const GENERATED_PREFIX = 'GeneratedDancers_';
 
+type CachedDefs = {
+  types: {
+    changeMove: string;
+    setBackground: string;
+    setForeground: string;
+    makeSprite: string;
+    makeNewDanceSpriteGroup: string;
+    atTimestampNotAfter: string;
+  };
+  options: {
+    [blockType: string]: {
+      [field: string]: string[];
+    };
+  };
+  flyoutOrder: string[];
+};
+
+const defsCache = new Map<string, CachedDefs>();
+
+function defsKey(defs: BlockDefinition[]): string {
+  // If BlockDefinition has a stable unique id, prefer that; name is fine if unique.
+  return defs
+    .map(d => d.name)
+    .sort()
+    .join('|');
+}
+
+function cachedGetBlockOptions(
+  cache: CachedDefs,
+  defs: BlockDefinition[],
+  blockType: string,
+  field: string
+): string[] {
+  cache.options[blockType] ??= {};
+  if (!cache.options[blockType][field]) {
+    cache.options[blockType][field] = getBlockOptions(defs, blockType, field);
+  }
+  return cache.options[blockType][field];
+}
+
+function buildDefsCache(defs: BlockDefinition[]): CachedDefs {
+  const changeMove = getPreferredBlockType(defs, CHANGE_MOVE);
+  const setBackground = getPreferredBlockType(defs, SET_BACKGROUND);
+  const setForeground = getPreferredBlockType(defs, SET_FOREGROUND);
+  const makeSprite = getPreferredBlockType(defs, MAKE_SPRITE);
+  const makeNewDanceSpriteGroup = getPreferredBlockType(
+    defs,
+    MAKE_NEW_DANCE_SPRITE_GROUP
+  );
+  const atTimestampNotAfter = getPreferredBlockType(
+    defs,
+    AT_TIMESTAMP_NOT_AFTER
+  );
+
+  // This ensures the blocks appear in the expected order in the flyout.
+  // World blocks -> sprite blocks -> action blocks -> event blocks
+  const flyoutOrder = [
+    setBackground,
+    setForeground,
+    makeSprite,
+    makeNewDanceSpriteGroup,
+    changeMove,
+    atTimestampNotAfter,
+  ];
+
+  return {
+    types: {
+      changeMove,
+      setBackground,
+      setForeground,
+      makeSprite,
+      makeNewDanceSpriteGroup,
+      atTimestampNotAfter,
+    },
+    options: {},
+    flyoutOrder,
+  };
+}
+
+function getDefsCache(defs: BlockDefinition[]): CachedDefs {
+  const key = defsKey(defs);
+  let cached = defsCache.get(key);
+  if (!cached) {
+    cached = buildDefsCache(defs);
+    defsCache.set(key, cached);
+  }
+  return cached;
+}
+
 // Try to find a block definition by type string.
 // We don't rely on the exact shape of BlockDefinition; cover common keys.
 function hasBlockType(defs: BlockDefinition[], name: string): boolean {
@@ -60,13 +149,14 @@ function randomElement<T>(array: readonly T[]): T {
 function randomField(
   name: string,
   options: string[],
-  simpleCode?: boolean
+  simpleCode?: boolean,
+  excludedOption?: string | null
 ): string {
   const escapedOptions = options.map(option => option.replace(/"/g, '&quot;'));
   const configValue = simpleCode ? `${escapedOptions.join(',')}` : '';
   const configAttribute = simpleCode ? `config="${configValue}"` : '';
   return `<field name="${name}" ${configAttribute}>${randomElement(
-    options
+    options.filter(option => option !== excludedOption)
   )}</field>`;
 }
 
@@ -182,7 +272,8 @@ function makeChangeMoveEachLRBlock(
   moves: string[],
   backgroundDancers: string,
   simpleCode: boolean,
-  defaultGroupFieldValue?: string
+  defaultGroupFieldValue?: string,
+  excludedMove?: string | null
 ): BlockState {
   return {
     type,
@@ -192,7 +283,7 @@ function makeChangeMoveEachLRBlock(
         simpleCode,
         defaultGroupFieldValue
       ),
-      MOVE: randomField('MOVE', moves, simpleCode),
+      MOVE: randomField('MOVE', moves, simpleCode, excludedMove),
       DIR: dirLeftRightField(randomElement([-1, 1])),
     },
     kind: 'block',
@@ -275,47 +366,24 @@ export default function buildDanceBlockly(
   workspaceSerialization: WorkspaceSerialization;
   flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo;
 } {
-  const changeMoveBlockType = getPreferredBlockType(
-    blockDefinitions,
-    CHANGE_MOVE
-  );
-  const setBackgroundBlockType = getPreferredBlockType(
-    blockDefinitions,
-    SET_BACKGROUND
-  );
-  const setForegroundBlockType = getPreferredBlockType(
-    blockDefinitions,
-    SET_FOREGROUND
-  );
-  const makeSpriteBlockType = getPreferredBlockType(
-    blockDefinitions,
-    MAKE_SPRITE
-  );
-  const makeNewDanceSpriteGroupBlockType = getPreferredBlockType(
-    blockDefinitions,
-    MAKE_NEW_DANCE_SPRITE_GROUP
-  );
-  const atTimestampNotAfterBlockType = getPreferredBlockType(
-    blockDefinitions,
-    AT_TIMESTAMP_NOT_AFTER
-  );
+  const defsCached = getDefsCache(blockDefinitions);
+  const {
+    changeMove: changeMoveBlockType,
+    setBackground: setBackgroundBlockType,
+    setForeground: setForegroundBlockType,
+    makeSprite: makeSpriteBlockType,
+    makeNewDanceSpriteGroup: makeNewDanceSpriteGroupBlockType,
+    atTimestampNotAfter: atTimestampNotAfterBlockType,
+  } = defsCached.types;
 
-  // This ensures the blocks appear in the expected order in the flyout.
-  // World blocks -> sprite blocks -> action blocks -> event blocks
-  const flyoutBlockOrder = [
-    setBackgroundBlockType,
-    setForegroundBlockType,
-    makeSpriteBlockType,
-    makeNewDanceSpriteGroupBlockType,
-    changeMoveBlockType,
-    atTimestampNotAfterBlockType,
-  ];
-
-  const validMoves = getBlockOptions(
+  // Pull raw options via cached helper, then do cheap per-call filtering.
+  const rawMoves = cachedGetBlockOptions(
+    defsCached,
     blockDefinitions,
     changeMoveBlockType,
     'MOVE'
-  ).filter(
+  );
+  const validMoves = rawMoves.filter(
     option =>
       !['"next"', '"prev"', '"rand"'].includes(option) &&
       (energy === 'chill'
@@ -323,11 +391,13 @@ export default function buildDanceBlockly(
         : !movesChill.includes(option))
   );
 
-  const validBackgrounds = getBlockOptions(
+  const rawBackgrounds = cachedGetBlockOptions(
+    defsCached,
     blockDefinitions,
     setBackgroundBlockType,
     'EFFECT'
-  ).filter(
+  );
+  const validBackgrounds = rawBackgrounds.filter(
     option =>
       !['"none"', '"rand"'].includes(option) &&
       (energy === 'chill'
@@ -335,11 +405,13 @@ export default function buildDanceBlockly(
         : !backgroundsChill.includes(option))
   );
 
-  const validForegrounds = getBlockOptions(
+  const rawForegrounds = cachedGetBlockOptions(
+    defsCached,
     blockDefinitions,
     setForegroundBlockType,
     'EFFECT'
-  ).filter(
+  );
+  const validForegrounds = rawForegrounds.filter(
     option =>
       !['"none"', '"rand"'].includes(option) &&
       (energy === 'chill'
@@ -347,17 +419,22 @@ export default function buildDanceBlockly(
         : !foregroundsChill.includes(option))
   );
 
-  const validPalettes = getBlockOptions(
+  const validPalettes = cachedGetBlockOptions(
+    defsCached,
     blockDefinitions,
     setBackgroundBlockType,
     'PALETTE'
   );
 
-  const validLayouts = getBlockOptions(
+  const rawLayouts = cachedGetBlockOptions(
+    defsCached,
     blockDefinitions,
     makeNewDanceSpriteGroupBlockType,
     'LAYOUT'
-  ).filter(option => Object.keys(bestLayouts).includes(option));
+  );
+  const validLayouts = rawLayouts.filter(option =>
+    Object.keys(bestLayouts).includes(option)
+  );
 
   const simpleCode = codeComplexity === 'simple';
   const hasBackgroundDancers = backgroundDancers !== 'nobody';
@@ -419,13 +496,19 @@ export default function buildDanceBlockly(
     leadGroupValue
   );
 
+  // We force the backup dancers to not repeat the lead dancer's move.
+  const leadDancerMove = Blockly.Xml.textToDom(
+    leadChangeMoveBlock.fields?.MOVE || ''
+  ).textContent;
+
   const backupGroupValue = `&quot;${backgroundDancers.toUpperCase()}&quot;`;
   const backupChangeMoveBlock = makeChangeMoveEachLRBlock(
     changeMoveBlockType,
     validMoves,
     backgroundDancers,
     simpleCode,
-    backupGroupValue
+    backupGroupValue,
+    leadDancerMove
   );
 
   const whenRunChain = chainBlocks(
@@ -458,40 +541,43 @@ export default function buildDanceBlockly(
   };
 
   // Event blocks for each measure
-  const eventBlocks: BlockState[] = measures.map((measure): BlockState => {
-    const backgroundBlock = makeSetBackgroundBlock(
-      setBackgroundBlockType,
-      validBackgrounds,
-      validPalettes,
-      simpleCode
-    );
-    const foregroundBlock = makeSetForegroundBlock(
-      setForegroundBlockType,
-      validForegrounds,
-      simpleCode
-    );
-    const changeMoveBlock = makeChangeMoveEachLRBlock(
-      changeMoveBlockType,
-      validMoves,
-      backgroundDancers,
-      simpleCode
-    );
-    const chain = chainBlocks(
-      backgroundBlock,
-      foregroundBlock,
-      changeMoveBlock
-    );
+  const eventBlocks: BlockState[] = measures
+    // First measure is redundant with "when run"
+    .filter(measure => measure !== 1)
+    .map((measure): BlockState => {
+      const backgroundBlock = makeSetBackgroundBlock(
+        setBackgroundBlockType,
+        validBackgrounds,
+        validPalettes,
+        simpleCode
+      );
+      const foregroundBlock = makeSetForegroundBlock(
+        setForegroundBlockType,
+        validForegrounds,
+        simpleCode
+      );
+      const changeMoveBlock = makeChangeMoveEachLRBlock(
+        changeMoveBlockType,
+        validMoves,
+        backgroundDancers,
+        simpleCode
+      );
+      const chain = chainBlocks(
+        backgroundBlock,
+        foregroundBlock,
+        changeMoveBlock
+      );
 
-    return {
-      ...eventBlock,
-      fields: {
-        TIMESTAMP: measure,
-        UNIT: unitMeasuresField(),
-      },
-      next: {block: chain},
-      kind: 'block',
-    };
-  });
+      return {
+        ...eventBlock,
+        fields: {
+          TIMESTAMP: measure,
+          UNIT: unitMeasuresField(),
+        },
+        next: {block: chain},
+        kind: 'block',
+      };
+    });
 
   flyoutDefinition.contents.push({...eventBlock});
 
@@ -500,8 +586,8 @@ export default function buildDanceBlockly(
     ...(simpleCode ? [] : eventBlocks),
   ];
 
+  const order = defsCached.flyoutOrder;
   flyoutDefinition.contents.sort((a, b) => {
-    const order = flyoutBlockOrder;
     function sort(a: BlockStateFlyout, b: BlockStateFlyout): number {
       const indexA = order.indexOf(a.type!);
       const indexB = order.indexOf(b.type!);

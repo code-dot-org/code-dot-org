@@ -415,8 +415,18 @@ const DanceView: React.FunctionComponent<{
         workspace.current,
         JSON.stringify(currentSources.source)
       );
+      const toolboxFromStorage = localStorage.getItem(
+        `flyout-${levelProperties.id}`
+      );
+      // GenerateDance levels depend upon a generated toolbox.
+      if (toolboxFromStorage) {
+        try {
+          const toolboxDefinition = JSON.parse(toolboxFromStorage);
+          updateBlocklyFlyout(toolboxDefinition);
+        } catch {}
+      }
     }
-  }, [currentSources.source]);
+  }, [currentSources.source, levelProperties.id, updateBlocklyFlyout]);
 
   useEffect(() => {
     const songKeys = Object.keys(songData);

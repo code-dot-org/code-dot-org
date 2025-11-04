@@ -139,7 +139,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
 
     const startTime = Date.now();
     const {workspaceSerialization, flyoutDefinition} = buildDanceBlockly(
-      measures.filter(measure => measure !== 1), // First measure is redundant with "when run"
+      measures,
       blockDefinitions,
       adlibChoices && adlibChoices['complexity'] === 'complex'
         ? 'complex'
@@ -157,12 +157,15 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
 
     updateSources(workspaceSerialization);
     updateBlocklyFlyout(flyoutDefinition);
+    const levelId = levelProperties.id;
+    localStorage.setItem(`flyout-${levelId}`, JSON.stringify(flyoutDefinition));
     runProgram();
 
     setAiGenerateState('generated');
   }, [
     adlibChoices,
     blockDefinitions,
+    levelProperties.id,
     measures,
     runProgram,
     updateBlocklyFlyout,
