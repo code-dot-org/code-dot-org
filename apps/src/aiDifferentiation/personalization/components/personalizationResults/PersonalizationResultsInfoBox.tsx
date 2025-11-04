@@ -3,7 +3,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import style from './personalization-information.module.scss';
+import style from './../../personalization-information.module.scss';
 
 const PersonalizationResultsInfoBox: React.FC = () => {
   return (

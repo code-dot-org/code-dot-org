@@ -4,9 +4,9 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import PersonalizationInformationBox from './PersonalizationInformationBox';
+import PersonalizationInformationBox from './../PersonalizationInformationBox';
 
-import style from './personalization-information.module.scss';
+import style from './../../personalization-information.module.scss';
 
 interface PersonalizationResultsColumnAiHelpProps {
   aiHelpSuggestions: string[];

@@ -5,9 +5,9 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {TeachingStyle} from './personalization_types';
+import {TeachingStyle} from './../../personalization_types';
 
-import style from './personalization-information.module.scss';
+import style from './../../personalization-information.module.scss';
 
 interface PersonalizationResultsHeaderProps {
   teachingStyle: TeachingStyle;
