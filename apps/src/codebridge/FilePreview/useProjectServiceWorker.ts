@@ -10,9 +10,8 @@ import {addBaseTagToDocument} from './htmlParsingHelpers';
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
   currentFile: string | undefined,
-  incrementPreviewKeyIndex: () => void
+  setServiceWorkerReady: (ready: boolean) => void
 ) {
-  const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
     null
   );
@@ -39,24 +38,6 @@ function useProjectServiceWorker(
               });
             }
           });
-          navigator.serviceWorker.onmessage = event => {
-            console.log('Received message from service worker:', event);
-            if (event.data.type === 'RECEIVED_SOURCE') {
-              console.log('received source acknowledged by service worker');
-              setServiceWorkerReady(true);
-              incrementPreviewKeyIndex();
-            }
-            if (event.data.type === 'UPDATED_CURRENT_FILE') {
-              console.log('service worker confirmed current file update');
-              incrementPreviewKeyIndex();
-            }
-            if (event.data.type === 'SERVING_FILE') {
-              console.log(
-                'service worker is serving file:',
-                event.data.details.filePath
-              );
-            }
-          };
           return () => {
             registration.unregister();
           };
@@ -64,7 +45,7 @@ function useProjectServiceWorker(
     } else {
       console.error('Service workers are not supported in this browser.');
     }
-  }, [incrementPreviewKeyIndex]);
+  }, []);
 
   // Send source data to service worker when it changes
   useEffect(() => {
@@ -145,8 +126,6 @@ function useProjectServiceWorker(
     const fullPath = folderPath + '/' + fileName;
     return {fullFileName: fullPath.substring(1), folder: folderPath}; // remove leading slash
   }
-
-  return {serviceWorkerReady};
 }
 
 export default useProjectServiceWorker;

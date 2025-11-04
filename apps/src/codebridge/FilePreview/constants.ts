@@ -14,3 +14,11 @@ export enum PreviewViewMode {
 }
 
 export const DEFAULT_START_HTML_FILE = 'index.html';
+export const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
+
+// Service worker broadcast channel message types.
+export enum ProjectServiceWorkerMessageType {
+  SERVING_HTML_FILE = 'SERVING_HTML_FILE',
+  RECEIVED_SOURCE = 'RECEIVED_SOURCE',
+  UPDATED_CURRENT_FILE = 'UPDATED_CURRENT_FILE',
+}

@@ -7,10 +7,20 @@
 //
 // This is served as preview.codeprojects.org/weblab2-project-service-worker.js by routes.rb and codeprojects_preview_controller.rb
 
+// These constants are duplicated to constants.ts. Service workers cannot import modules.
+const DEFAULT_START_HTML_FILE = 'index.html';
+const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
+// These are duplicated to the ProjectServiceWorkerMessageType enum in constants.ts
+const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
+const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
+const UPDATED_CURRENT_FILE = 'UPDATED_CURRENT_FILE';
+
 function main() {
   let filesData = {};
-  let currentFile = 'index.html'; // Default file
-  const broadcastChannel = new BroadcastChannel('weblab2-file-preview');
+  let currentFile = DEFAULT_START_HTML_FILE; // Default file
+  const broadcastChannel = new BroadcastChannel(
+    PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
+  );
 
   const IGNORED_FILE_PATHS = [
     '/',
@@ -46,11 +56,11 @@ function main() {
         currentFile = newCurrentFile;
       }
       console.log('Service worker received files:', Object.keys(filesData));
-      sendMessageToAllClients('RECEIVED_SOURCE');
+      broadcastChannel.postMessage({type: RECEIVED_SOURCE});
     } else if (type === 'SET_CURRENT_FILE') {
       currentFile = newCurrentFile;
       console.log('Service worker current file set to:', currentFile);
-      sendMessageToAllClients('UPDATED_CURRENT_FILE');
+      broadcastChannel.postMessage({type: UPDATED_CURRENT_FILE});
     }
   });
 
@@ -77,9 +87,9 @@ function main() {
       remainder = remainder.substring(1);
     }
     // Allow ?file= overrides (optional enhancement)
-    let requestedFile = remainder || currentFile || 'index.html';
+    let requestedFile = remainder || currentFile || DEFAULT_START_HTML_FILE;
     if (requestedFile === '' || requestedFile === '/') {
-      requestedFile = 'index.html';
+      requestedFile = DEFAULT_START_HTML_FILE;
     }
 
     // Normalize (remove accidental leading slash)
@@ -101,7 +111,7 @@ function main() {
         if (requestedFile.endsWith('.html')) {
           console.log('Broadcasting HTML file serving:', requestedFile);
           broadcastChannel.postMessage({
-            type: 'SERVING_HTML_FILE',
+            type: SERVING_HTML_FILE,
             filePath: requestedFile,
           });
         }

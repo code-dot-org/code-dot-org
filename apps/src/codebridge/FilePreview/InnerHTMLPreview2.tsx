@@ -4,7 +4,11 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {CodebridgeEmptyState} from '../components/CodebridgeEmptyState';
 
-import {IframeMessageType} from './constants';
+import {
+  IframeMessageType,
+  PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL,
+  ProjectServiceWorkerMessageType,
+} from './constants';
 import useProjectServiceWorker from './useProjectServiceWorker';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
@@ -22,11 +26,8 @@ const InnerHTMLPreview = () => {
     undefined
   );
   const [previewKeyIndex, setPreviewKeyIndex] = useState(0);
-  const {serviceWorkerReady} = useProjectServiceWorker(
-    source,
-    currentFile,
-    () => setPreviewKeyIndex(previewKeyIndex + 1)
-  );
+  const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
+  useProjectServiceWorker(source, currentFile, setServiceWorkerReady);
   const [allowScripts, setAllowScripts] = useState(false);
 
   const parentOrigin = useMemo(() => {
@@ -79,9 +80,13 @@ const InnerHTMLPreview = () => {
   }, [handleMessage, parentOrigin]);
 
   useEffect(() => {
-    const broadcastChannel = new BroadcastChannel('weblab2-file-preview');
+    const broadcastChannel = new BroadcastChannel(
+      PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
+    );
     broadcastChannel.onmessage = event => {
-      if (event.data.type === 'SERVING_HTML_FILE') {
+      if (
+        event.data.type === ProjectServiceWorkerMessageType.SERVING_HTML_FILE
+      ) {
         const filePath = event.data.filePath;
         setCurrentFile(filePath);
         console.log('Notifying parent of HTML file change:', filePath);
@@ -90,6 +95,17 @@ const InnerHTMLPreview = () => {
           {type: IframeMessageType.FILE_UPDATED, fileName: filePath},
           parentOrigin
         );
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.RECEIVED_SOURCE
+      ) {
+        console.log('Received source acknowledged by service worker');
+        setServiceWorkerReady(true);
+        setPreviewKeyIndex(prevIndex => prevIndex + 1);
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.UPDATED_CURRENT_FILE
+      ) {
+        console.log('Service worker confirmed current file update');
+        setPreviewKeyIndex(prevIndex => prevIndex + 1);
       }
     };
     return () => {
