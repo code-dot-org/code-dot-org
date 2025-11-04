@@ -1,6 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -478,7 +478,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             )}
           {aiGenerateState === 'reviewing' && (
             <div>
-              <Heading4>Decide what to do next</Heading4>
+              <Typography variant="h4" gutterBottom>
+                Decide what to do next
+              </Typography>
               <div>
                 AI generated a dancer based on your prompt, "{promptText}"
               </div>

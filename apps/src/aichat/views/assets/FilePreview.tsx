@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {StrongText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -121,7 +121,7 @@ const FilePreview: React.FC<{
             />
           </div>
           <div className={styles.filenameContainer}>
-            <StrongText>{filename}</StrongText>
+            <Typography variant="strong">{filename}</Typography>
             <span className={styles.fileDetail}>
               {[
                 type === 'pdf' ? 'PDF' : null,

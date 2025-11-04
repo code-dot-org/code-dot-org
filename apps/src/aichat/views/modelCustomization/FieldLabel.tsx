@@ -1,7 +1,4 @@
-import {
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import InfoTooltipIcon from '../InfoTooltipIcon';
@@ -22,9 +19,9 @@ const FieldLabel: React.FunctionComponent<FieldLabelProps> = ({
   return (
     <div className={styles.fieldLabelContainer}>
       <label htmlFor={id}>
-        <BodyThreeText className={styles.fieldLabel}>
-          <StrongText>{label}</StrongText>
-        </BodyThreeText>
+        <Typography className={styles.fieldLabel} variant="body3" gutterBottom>
+          <Typography variant="strong">{label}</Typography>
+        </Typography>
       </label>
       <InfoTooltipIcon id={id} tooltipText={tooltipText} direction="onRight" />
     </div>

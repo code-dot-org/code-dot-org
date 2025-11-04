@@ -1,6 +1,6 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useContext, useState, useCallback, useMemo} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
@@ -81,14 +81,14 @@ const ModelSelectionFields: React.FunctionComponent = () => {
             size="s"
           />
           <br />
-          <BodyFourText>
+          <Typography variant="body4" gutterBottom>
             <i>
               Models available to the student to select from and compare to each
               other. If making this setting editable, it's best practice to
               select at least 2 models so students have something to compare -
               otherwise, consider making this read only or hidden.
             </i>
-          </BodyFourText>
+          </Typography>
           {modelDescriptions.map(model => {
             return (
               <div key={model.id} className={moduleStyles.fieldRow}>
@@ -112,13 +112,13 @@ const ModelSelectionFields: React.FunctionComponent = () => {
           <br />
           {multimodalIncluded && (
             <>
-              <BodyFourText>
+              <Typography variant="body4" gutterBottom>
                 <i>
                   Enables multimodal chat. Note that the list of models must
                   include a multimodal model for this feature to be available to
                   students (currently only GPT 4o-mini).
                 </i>
-              </BodyFourText>
+              </Typography>
               <div className={moduleStyles.fieldRow}>
                 <label
                   htmlFor="multimodalEnabled"

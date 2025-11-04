@@ -1,5 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {Heading5} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
@@ -69,7 +69,9 @@ const AdvancedControls: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.container}>
-      <Heading5 className={moduleStyles.title}>Advanced Controls</Heading5>
+      <Typography className={moduleStyles.title} variant="h5" gutterBottom>
+        Advanced Controls
+      </Typography>
       <div className={moduleStyles.section}>
         <div className={moduleStyles.row}>
           <div>BPM: {bpm}</div>

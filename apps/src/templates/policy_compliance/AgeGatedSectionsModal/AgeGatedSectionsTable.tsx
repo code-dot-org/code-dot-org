@@ -1,5 +1,5 @@
 import Link from '@code-dot-org/component-library/link';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import {orderBy} from 'lodash';
 import React from 'react';
 import * as Table from 'reactabular-table';
@@ -62,7 +62,7 @@ export const AgeGatedSectionsTable: React.FC<Props> = ({ageGatedSections}) => {
     sortableOptions
   );
   const sectionFormatter = (name: string, {rowData}: {rowData: RowData}) => (
-    <Typography semanticTag="p" visualAppearance="body-two">
+    <Typography variant="body2" gutterBottom>
       <Link
         href={teacherDashboardUrl(rowData.section.id)}
         onClick={() => {
@@ -104,7 +104,7 @@ export const AgeGatedSectionsTable: React.FC<Props> = ({ageGatedSections}) => {
     };
   };
   const gradesFormatter = (grades: string[]) => (
-    <Typography semanticTag="p" visualAppearance="body-two">
+    <Typography variant="body2" gutterBottom>
       {grades && grades.join(', ')}
     </Typography>
   );

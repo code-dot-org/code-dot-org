@@ -1,12 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
-import Typography, {
-  Heading2,
-  Heading3,
-  BodyTwoText,
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {DATA_SHARING_NOTICE} from '@cdo/apps/code-studio/pd/constants';
@@ -48,47 +42,59 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
   return (
     <section className={moduleStyles.workshopDetails}>
       <section className={moduleStyles.workshopDetailsItem}>
-        <Heading2>{name}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {name}
+        </Typography>
         <div className={moduleStyles.workshopUnderHeadingDetails}>
-          <BodyTwoText className={moduleStyles.gradeLevels}>
+          <Typography
+            className={moduleStyles.gradeLevels}
+            variant="body2"
+            gutterBottom
+          >
             <FontAwesomeV6Icon iconName="users" />
-            <StrongText>Grades:</StrongText> {gradeLevels?.join(', ')}
-          </BodyTwoText>
+            <Typography variant="strong">Grades:</Typography>{' '}
+            {gradeLevels?.join(', ')}
+          </Typography>
           {prereq && (
-            <BodyTwoText className={moduleStyles.prerequisites}>
+            <Typography
+              className={moduleStyles.prerequisites}
+              variant="body2"
+              gutterBottom
+            >
               <FontAwesomeV6Icon iconName="arrow-up-wide-short" />
-              <StrongText>Prerequisites:</StrongText> {prereq}
-            </BodyTwoText>
+              <Typography variant="strong">Prerequisites:</Typography> {prereq}
+            </Typography>
           )}
-          <BodyTwoText className={moduleStyles.fee}>
+          <Typography className={moduleStyles.fee} variant="body2" gutterBottom>
             <FontAwesomeV6Icon iconName="dollar-circle" />
-            <StrongText>Cost:</StrongText> {!fee || fee === '0' ? 'Free' : fee}
-          </BodyTwoText>
+            <Typography variant="strong">Cost:</Typography>{' '}
+            {!fee || fee === '0' ? 'Free' : fee}
+          </Typography>
         </div>
       </section>
-
       <hr />
-
       <section className={moduleStyles.workshopDetailsItem}>
-        <Heading3 visualAppearance={'heading-xs'}>
+        <Typography component="h3" variant="h6" gutterBottom>
           Sessions in This Workshop
-        </Heading3>
+        </Typography>
         <WorkshopSessionsList
           sessions={sessions}
           isUserEnrolled={isUserEnrolled}
         />
       </section>
-
       <section className={moduleStyles.workshopDetailsItem}>
-        <Heading3 visualAppearance={'heading-xs'}>Description:</Heading3>
-        <Typography semanticTag="div" visualAppearance="body-two">
+        <Typography component="h3" variant="h6" gutterBottom>
+          Description:
+        </Typography>
+        <Typography component="div" variant="body2" gutterBottom>
           <SafeMarkdown unwrapped markdown={description} />
         </Typography>
       </section>
-
       {courseOfferings && courseOfferings.length > 0 && (
         <section className={moduleStyles.workshopDetailsItem}>
-          <Heading3 visualAppearance="heading-xs">PL Topics Covered:</Heading3>
+          <Typography component="h3" variant="h6" gutterBottom>
+            PL Topics Covered:
+          </Typography>
           <Tags
             size="s"
             className={moduleStyles.plTopicsTags}
@@ -96,22 +102,24 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
           />
         </section>
       )}
-
       {facilitators && facilitators.length > 0 && (
         <section className={moduleStyles.workshopDetailsItem}>
-          <Heading3 visualAppearance="heading-xs">
+          <Typography component="h3" variant="h6" gutterBottom>
             Workshop Facilitators
-          </Heading3>
+          </Typography>
           <WorkshopFacilitatorsList facilitators={facilitators} />
         </section>
       )}
-
       <section
         id="data-sharing-notice"
         className={moduleStyles.workshopDetailsItem}
       >
-        <Heading3 visualAppearance="heading-xs">Data Sharing Notice</Heading3>
-        <BodyThreeText>{DATA_SHARING_NOTICE}</BodyThreeText>
+        <Typography component="h3" variant="h6" gutterBottom>
+          Data Sharing Notice
+        </Typography>
+        <Typography variant="body3" gutterBottom>
+          {DATA_SHARING_NOTICE}
+        </Typography>
       </section>
     </section>
   );

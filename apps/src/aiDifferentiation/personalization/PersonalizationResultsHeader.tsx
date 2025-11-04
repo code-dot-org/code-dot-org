@@ -1,8 +1,4 @@
-import {
-  OverlineTwoText,
-  BodyTwoText,
-  Heading1,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {TeachingStyle} from './personalization_types';
@@ -18,12 +14,16 @@ const PersonalizationResultsHeader: React.FC<
 > = ({teachingStyle}) => {
   return (
     <div className={style.revealHeader}>
-      <OverlineTwoText>Your teaching style is</OverlineTwoText>
-      <Heading1 className="persona-text">{teachingStyle.name}</Heading1>
-      <BodyTwoText className="potential-text">
+      <Typography variant="overline2" gutterBottom>
+        Your teaching style is
+      </Typography>
+      <Typography className="persona-text" variant="h1" gutterBottom>
+        {teachingStyle.name}
+      </Typography>
+      <Typography className="potential-text" variant="body2" gutterBottom>
         <span className="icon">{teachingStyle.emoji}</span>{' '}
         {teachingStyle.tagline}
-      </BodyTwoText>
+      </Typography>
     </div>
   );
 };

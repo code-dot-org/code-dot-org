@@ -1,7 +1,7 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -50,9 +50,10 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
     <div className={styles.settingsPanel}>
       <div className={styles.header}>
         <Typography
-          semanticTag="h2"
-          visualAppearance="overline-two"
           className={styles.headerText}
+          component="h2"
+          variant="overline2"
+          gutterBottom
         >
           {commonI18n.settings()}
         </Typography>

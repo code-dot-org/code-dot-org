@@ -1,4 +1,4 @@
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -47,7 +47,9 @@ const GradeLevelsBarDisplay = ({supportedGradeLevels}) => {
           key={`grade-${grade}`}
           className={getGradeBoxStyles(grade, arr[index - 1])}
         >
-          <BodyFourText>{grade}</BodyFourText>
+          <Typography variant="body4" gutterBottom>
+            {grade}
+          </Typography>
         </div>
       ))}
     </div>

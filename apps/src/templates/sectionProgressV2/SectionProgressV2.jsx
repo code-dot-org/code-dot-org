@@ -1,4 +1,4 @@
-import {Heading6} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -131,14 +131,20 @@ function SectionProgressV2({
         sectionId={sectionId}
       />
       <div className={styles.title}>
-        <Heading6 className={styles.titleStudents}>{i18n.students()}</Heading6>
-        <Heading6 className={styles.titleUnitSelector}>
+        <Typography className={styles.titleStudents} variant="h6" gutterBottom>
+          {i18n.students()}
+        </Typography>
+        <Typography
+          className={styles.titleUnitSelector}
+          variant="h6"
+          gutterBottom
+        >
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
           <DownloadProgressCsv isLoading={isLoading} />
           <MoreOptionsDropdown />
-        </Heading6>
+        </Typography>
       </div>
       <ProgressTableV2 isSkeleton={isLoading} />
     </div>

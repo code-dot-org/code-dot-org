@@ -1,4 +1,4 @@
-import {Heading1} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -18,7 +18,9 @@ $(document).ready(() => {
 
   ReactDOM.render(
     <div className={moduleStyles.containerWithMarginTop}>
-      <Heading1>{i18n.setUpClassSectionsHeader()}</Heading1>
+      <Typography variant="h1" gutterBottom>
+        {i18n.setUpClassSectionsHeader()}
+      </Typography>
       <SectionsSetUpContainer
         isUsersFirstSection={isUsersFirstSection}
         canEnableAITutor={canEnableAITutor}

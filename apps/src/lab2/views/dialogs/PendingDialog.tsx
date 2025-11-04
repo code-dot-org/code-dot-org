@@ -1,9 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 export type dialogCallback = (args?: unknown) => void;
@@ -49,9 +46,17 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
       {titleComponent ? (
         titleComponent
       ) : title ? (
-        <Heading3 className={moduleStyles.title}>{title}</Heading3>
+        <Typography className={moduleStyles.title} variant="h3" gutterBottom>
+          {title}
+        </Typography>
       ) : null}
-      {hasBodyComponent ? bodyComponent : <BodyTwoText>{message}</BodyTwoText>}
+      {hasBodyComponent ? (
+        bodyComponent
+      ) : (
+        <Typography variant="body2" gutterBottom>
+          {message}
+        </Typography>
+      )}
       <div className={moduleStyles.spinnerContainer}>
         <FontAwesomeV6Icon
           iconName="spinner"

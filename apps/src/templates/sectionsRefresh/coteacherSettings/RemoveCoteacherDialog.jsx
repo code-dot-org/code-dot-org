@@ -1,4 +1,4 @@
-import {StrongText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 
@@ -55,11 +55,11 @@ export default function RemoveCoteacherDialog({
         onClose={closeRemoveDialog}
         className={styles.removeDialog}
       >
-        <StrongText className={styles.removeDialogTitle}>
+        <Typography className={styles.removeDialogTitle} variant="strong">
           {i18n.coteacherRemoveDialogHeader({
             email: coteacherToRemove.instructorEmail,
           })}
-        </StrongText>
+        </Typography>
         <div className={styles.removeDialogDescription}>
           {i18n.coteacherRemoveDialogDescription()}
         </div>

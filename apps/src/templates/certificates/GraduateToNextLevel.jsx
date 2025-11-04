@@ -1,4 +1,4 @@
-import {Heading1} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -21,9 +21,9 @@ const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
   return (
     <>
       <div id="next-level-block">
-        <Heading1 id="next-level-title">
+        <Typography id="next-level-title" variant="h1" gutterBottom>
           {i18n.congratsNextLevelHeading()}
-        </Heading1>
+        </Typography>
         <VerticalImageResourceCard
           id={`course-card-${courseInfo.scriptName}`}
           title={courseTitle || i18n.introToAppLabTitle()}

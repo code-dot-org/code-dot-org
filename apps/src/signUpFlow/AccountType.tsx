@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useState, useEffect} from 'react';
 
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
@@ -145,9 +145,9 @@ const AccountType: React.FunctionComponent<{
         />
         <div className={style.freeCurriculumWrapper}>
           <FontAwesomeV6Icon iconName={'book-open-cover'} />
-          <Heading2 visualAppearance="heading-xs">
+          <Typography component="h2" variant="h6" gutterBottom>
             {locale.free_curriculum_forever()}
-          </Heading2>
+          </Typography>
           <Button
             className={style.dialogButton}
             size="s"

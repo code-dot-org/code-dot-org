@@ -3,10 +3,7 @@ import {
   buttonColors,
   LinkButton,
 } from '@code-dot-org/component-library/button';
-import {
-  BodyThreeText,
-  Heading4,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
 import PropTypes from 'prop-types';
@@ -278,10 +275,16 @@ const CustomizableCurriculumCatalogCard = ({
       return (
         <div className={style.wideCardContent}>
           <CardLabels subjectsAndTopics={subjectsAndTopics} />
-          <Heading4>{courseDisplayName}</Heading4>
-          <BodyThreeText className={style.wideCardDescription}>
+          <Typography variant="h4" gutterBottom>
+            {courseDisplayName}
+          </Typography>
+          <Typography
+            className={style.wideCardDescription}
+            variant="body3"
+            gutterBottom
+          >
             {description}
-          </BodyThreeText>
+          </Typography>
           <div className={style.wideCardAspects}>
             <div className={style.iconWithDescription}>
               <FontAwesome icon="user" className="fa-solid" />

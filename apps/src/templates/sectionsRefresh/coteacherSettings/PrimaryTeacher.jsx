@@ -1,4 +1,4 @@
-import {StrongText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
@@ -19,10 +19,12 @@ export default function PrimaryTeacher({primaryTeacher, numCoteachers}) {
   return shouldDisplayTeacher ? (
     <div>
       <label className={styles.label}>
-        <StrongText>{i18n.coteacherPrimaryTeacher()}</StrongText>
+        <Typography variant="strong">
+          {i18n.coteacherPrimaryTeacher()}
+        </Typography>
       </label>
       <div className={styles.primaryTeacher}>
-        <StrongText>{primaryTeacher.name}</StrongText>
+        <Typography variant="strong">{primaryTeacher.name}</Typography>
         <br />
         {primaryTeacher.email}
       </div>

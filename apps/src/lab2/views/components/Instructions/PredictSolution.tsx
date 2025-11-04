@@ -1,7 +1,4 @@
-import {
-  BodyThreeText,
-  Heading1,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {
@@ -59,8 +56,12 @@ export const PredictSolution: React.FunctionComponent<PredictSolutionProps> = ({
 
   return (
     <div className={moduleStyles.predictSolutionContainer}>
-      <Heading1 visualAppearance="heading-sm">{commonI18n.answer()}</Heading1>
-      <BodyThreeText>{getFormattedSolution()}</BodyThreeText>
+      <Typography component="h1" variant="h5" gutterBottom>
+        {commonI18n.answer()}
+      </Typography>
+      <Typography variant="body3" gutterBottom>
+        {getFormattedSolution()}
+      </Typography>
     </div>
   );
 };

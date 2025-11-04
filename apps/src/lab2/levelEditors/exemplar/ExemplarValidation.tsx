@@ -1,4 +1,4 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
@@ -33,13 +33,13 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
         headerContent="Exemplar Validation"
       >
         <div className={moduleStyles.row}>
-          <BodyThreeText>
+          <Typography variant="body3" gutterBottom>
             An additional layer of validation is available for levels with
             exemplar sources. If enabled, the student's work will be compared
             against the exemplar's expected output. The validation method may
             vary by app, and all validations must pass for the level to be
             marked complete.
-          </BodyThreeText>
+          </Typography>
         </div>
         {!exemplarDefined && (
           <div className={moduleStyles.row}>

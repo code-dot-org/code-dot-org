@@ -1,7 +1,4 @@
-import {
-  BodyTwoText,
-  Heading6,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -26,9 +23,9 @@ type LessonResourcesProps = {
 
 const renderNoResourcesRow = (
   <div className={styles.rowContainer}>
-    <BodyTwoText className={styles.resourceLabel}>
+    <Typography className={styles.resourceLabel} variant="body2" gutterBottom>
       <em>{i18n.noStudentResources()}</em>
-    </BodyTwoText>
+    </Typography>
   </div>
 );
 
@@ -91,9 +88,13 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
     if (!hasLessonPlan) {
       return (
         <div className={styles.rowContainer}>
-          <BodyTwoText className={styles.resourceLabel}>
+          <Typography
+            className={styles.resourceLabel}
+            variant="body2"
+            gutterBottom
+          >
             <em>{i18n.noTeacherResources()}</em>
-          </BodyTwoText>
+          </Typography>
         </div>
       );
     }
@@ -117,7 +118,9 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
   return (
     <div className={styles.resourcesTable}>
       <div className={styles.topRowForResourcesTable}>
-        <Heading6 className={styles.headerText}>{sectionHeaderText}</Heading6>
+        <Typography className={styles.headerText} variant="h6" gutterBottom>
+          {sectionHeaderText}
+        </Typography>
       </div>
       {!lessonPlanUrl && resources.length === 0 && renderNoResourcesRow}
       {renderLessonPlanRow()}

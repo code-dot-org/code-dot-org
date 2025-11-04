@@ -1,4 +1,4 @@
-import {Heading6} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -14,13 +14,15 @@ export default function EvidenceDescriptions({
   return (
     <div>
       <div style={styles.grid}>
-        <Heading6 style={styles.columnHeaders}>Evidence level</Heading6>
-        <Heading6 style={styles.columnHeaders}>
+        <Typography style={styles.columnHeaders} variant="h6" gutterBottom>
+          Evidence level
+        </Typography>
+        <Typography style={styles.columnHeaders} variant="h6" gutterBottom>
           Description for external viewers
-        </Heading6>
-        <Heading6 style={styles.columnHeaders}>
+        </Typography>
+        <Typography style={styles.columnHeaders} variant="h6" gutterBottom>
           Description for AI generated evaluation
-        </Heading6>
+        </Typography>
       </div>
       <EvidenceDescriptionsRow
         isAiEnabled={learningGoalData.aiEnabled}

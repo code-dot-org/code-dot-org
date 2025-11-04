@@ -1,6 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {Suspense, useCallback, useEffect, useState} from 'react';
 
@@ -218,10 +218,10 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
                 onClick={() => (disabled ? undefined : setCurrentTab(tab))}
                 disabled={disabled}
               >
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
                   {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
                   {labels[tab]}
-                </BodyThreeText>
+                </Typography>
               </button>
             );
           })}

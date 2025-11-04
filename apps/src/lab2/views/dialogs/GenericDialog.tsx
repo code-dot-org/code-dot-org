@@ -1,9 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import FocusTrap from 'focus-trap-react';
 import React, {useMemo} from 'react';
 
@@ -146,7 +143,9 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
         {titleComponent ? (
           titleComponent
         ) : title ? (
-          <Heading3 className={moduleStyles.title}>{title}</Heading3>
+          <Typography className={moduleStyles.title} variant="h3" gutterBottom>
+            {title}
+          </Typography>
         ) : null}
         <div
           className={
@@ -158,7 +157,9 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
           {hasBodyComponent ? (
             bodyComponent
           ) : (
-            <BodyTwoText>{message}</BodyTwoText>
+            <Typography variant="body2" gutterBottom>
+              {message}
+            </Typography>
           )}
         </div>
         <div className={moduleStyles.buttonContainer}>

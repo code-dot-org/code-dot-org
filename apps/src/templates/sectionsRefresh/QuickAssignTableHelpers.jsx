@@ -1,4 +1,4 @@
-import {Heading5} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import React from 'react';
 
@@ -26,7 +26,9 @@ export function renderRows(
   return headers.map(header => (
     <tr key={header} className={moduleStyles.courseTableRow}>
       <td className={moduleStyles.courseHeaders}>
-        <Heading5>{header}</Heading5>
+        <Typography variant="h5" gutterBottom>
+          {header}
+        </Typography>
         {renderOfferings(
           courseData[header],
           sectionCourse,

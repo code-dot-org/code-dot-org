@@ -1,9 +1,4 @@
-import {
-  BodyThreeText,
-  BodyTwoText,
-  Heading3,
-  Heading4,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
@@ -75,7 +70,9 @@ export default function RubricContent({
     >
       {infoText && <InfoAlert text={infoText} />}
       <div className={style.studentInfoGroup}>
-        <Heading3>{lesson?.title}</Heading3>
+        <Typography variant="h3" gutterBottom>
+          {lesson?.title}
+        </Typography>
 
         <div className={style.selectors}>
           <SectionSelector reloadOnChange={true} />
@@ -94,40 +91,54 @@ export default function RubricContent({
               {onLevelForEvaluation && (
                 <div className={style.studentMetadata}>
                   {studentLevelInfo.timeSpent && (
-                    <BodyThreeText className={style.singleMetadatum}>
+                    <Typography
+                      className={style.singleMetadatum}
+                      variant="body3"
+                      gutterBottom
+                    >
                       <FontAwesome icon="clock" />
                       <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
-                    </BodyThreeText>
+                    </Typography>
                   )}
-                  <BodyThreeText className={style.singleMetadatum}>
+                  <Typography
+                    className={style.singleMetadatum}
+                    variant="body3"
+                    gutterBottom
+                  >
                     <FontAwesome icon="rocket" />
                     {i18n.numAttempts({
                       numAttempts: studentLevelInfo.attempts || 0,
                     })}
-                  </BodyThreeText>
+                  </Typography>
                   {studentLevelInfo.lastAttempt && (
-                    <BodyThreeText className={style.singleMetadatum}>
+                    <Typography
+                      className={style.singleMetadatum}
+                      variant="body3"
+                      gutterBottom
+                    >
                       <FontAwesome icon="calendar" />
                       <span>
                         {formatLastAttempt(studentLevelInfo.lastAttempt)}
                       </span>
-                    </BodyThreeText>
+                    </Typography>
                   )}
                 </div>
               )}
               {!onLevelForEvaluation && rubricLevel?.position && (
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
                   {i18n.feedbackAvailableOnLevel({
                     levelPosition: rubricLevel.position,
                   })}
-                </BodyThreeText>
+                </Typography>
               )}
             </div>
           </div>
         )}
       </div>
       <div className={style.learningGoalsWrapper}>
-        <Heading4>{i18n.rubric()}</Heading4>
+        <Typography variant="h4" gutterBottom>
+          {i18n.rubric()}
+        </Typography>
         <LearningGoals
           productTour={productTour}
           open={open}
@@ -184,7 +195,9 @@ export const InfoAlert = ({text, dismissable}) => {
           className={style.infoAlertIcon}
           title="info circle icon"
         />
-        <BodyTwoText>{text}</BodyTwoText>
+        <Typography variant="body2" gutterBottom>
+          {text}
+        </Typography>
       </div>
       {!!dismissable && (
         <button

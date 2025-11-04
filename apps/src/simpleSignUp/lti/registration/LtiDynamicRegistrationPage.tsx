@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import $ from 'jquery';
 import React, {useState} from 'react';
 
@@ -62,11 +62,7 @@ export const LtiDynamicRegistrationPage = ({
     <main className={styles.mainContentContainer}>
       <div className={styles.mainContent}>
         <img className={styles.logo} src={logoUrl} alt={i18n.codeLogo()} />
-        <Typography
-          semanticTag="p"
-          visualAppearance="body-one"
-          className={styles.description}
-        >
+        <Typography className={styles.description} variant="body1" gutterBottom>
           {hasError ? errorMsg : i18n.ltiDynamicRegistrationDescription()}
         </Typography>
         <div>

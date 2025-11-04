@@ -1,9 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import Image, {ImageProps} from '@code-dot-org/component-library/image';
-import {
-  Heading2,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -28,9 +25,9 @@ const NoMatchingSearchResultsFound: React.FunctionComponent<
   return (
     <div className={moduleStyles.noResultsFoundContainer}>
       {illustrationImageProps && <Image {...illustrationImageProps} />}
-      <Heading2 noMargin>{noResultsHeadingText}</Heading2>
+      <Typography variant="h2">{noResultsHeadingText}</Typography>
       {noResultsSubHeadingText && (
-        <BodyTwoText noMargin>{noResultsSubHeadingText}</BodyTwoText>
+        <Typography variant="body2">{noResultsSubHeadingText}</Typography>
       )}
       {onClearAllFilters && (
         <Button

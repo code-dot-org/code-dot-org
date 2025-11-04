@@ -1,5 +1,5 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {Heading6} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -15,18 +15,34 @@ const FreeResponseAiStudentResponseHeader: React.FC<
 > = ({closeStudentResponses}) => {
   return (
     <div className={styles.headerRow}>
-      <Heading6 className={styles.aiAnalysisNameColumn}>
+      <Typography
+        className={styles.aiAnalysisNameColumn}
+        variant="h6"
+        gutterBottom
+      >
         {i18n.studentName()}
-      </Heading6>
-      <Heading6 className={styles.aiAnalysisResponseColumn}>
+      </Typography>
+      <Typography
+        className={styles.aiAnalysisResponseColumn}
+        variant="h6"
+        gutterBottom
+      >
         {i18n.studentResponse()}
-      </Heading6>
-      <Heading6 className={styles.aiAnalysisTagColumn}>
+      </Typography>
+      <Typography
+        className={styles.aiAnalysisTagColumn}
+        variant="h6"
+        gutterBottom
+      >
         {i18n.aiAnalysis()}
-      </Heading6>
-      <Heading6 className={styles.aiAnalysisReasoningColumn}>
+      </Typography>
+      <Typography
+        className={styles.aiAnalysisReasoningColumn}
+        variant="h6"
+        gutterBottom
+      >
         {i18n.details()}
-      </Heading6>
+      </Typography>
       <CloseButton
         id="ui-close-student-table"
         aria-label={i18n.closeTable()}

@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {OverlineTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -80,9 +80,13 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
     <div className={moduleStyles.footerPanel}>
       <div className={moduleStyles.saveCurrentVersionHeader}>
         <div className={moduleStyles.saveCurrentVersionHeaderText}>
-          <OverlineTwoText className={moduleStyles.overlineTwoText}>
+          <Typography
+            className={moduleStyles.overlineTwoText}
+            variant="overline2"
+            gutterBottom
+          >
             {lab2I18n.saveCurrentVersion()}
-          </OverlineTwoText>
+          </Typography>
         </div>
       </div>
       <div className={moduleStyles.saveCurrentVersionDescription}>

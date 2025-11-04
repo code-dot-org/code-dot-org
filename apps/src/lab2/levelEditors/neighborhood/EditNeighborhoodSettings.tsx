@@ -1,6 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import Slider from '@code-dot-org/component-library/slider';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {MazeCell} from '@cdo/apps/lab2/types';
@@ -36,7 +36,9 @@ const EditNeighborhoodSettings: React.FunctionComponent<
 
   return (
     <div>
-      <BodyTwoText>Serialized Maze</BodyTwoText>
+      <Typography variant="body2" gutterBottom>
+        Serialized Maze
+      </Typography>
       <textarea
         value={maze}
         onChange={e => setMaze(e.target.value)}

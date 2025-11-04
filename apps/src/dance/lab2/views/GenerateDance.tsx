@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -209,7 +209,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             markdownClassName={styles.markdown}
           />
         )}
-
       {['none', 'generating', 'generated'].includes(aiGenerateState) && (
         <>
           <Adlib
@@ -240,17 +239,15 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
         </>
       )}
-
       {['listening', 'listened'].includes(aiGenerateState) && (
         <div>
-          <Heading4>
+          <Typography variant="h4" gutterBottom>
             {aiGenerateState === 'listening' && 'Take a look...'}
             {aiGenerateState === 'listened' && 'Decide what to do next'}
-          </Heading4>
+          </Typography>
           <div>AI generated code based on your prompt, "{promptText}"</div>
         </div>
       )}
-
       {aiGenerateState === 'listened' && (
         <div className={styles.buttonRow}>
           <Button
@@ -282,25 +279,28 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
         </div>
       )}
-
       {aiGenerateState === 'editing' && !isRunning && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Typography variant="h4" gutterBottom>
+            Modify the code
+          </Typography>
           AI helped you get started. Now, edit the code to make it your own.
         </div>
       )}
-
       {aiGenerateState === 'editing' && isRunning && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Typography variant="h4" gutterBottom>
+            Modify the code
+          </Typography>
           Try changing the code.
         </div>
       )}
-
       {aiGenerateState === 'edited' && (
         <>
           <div>
-            <Heading4>Modify the code</Heading4>
+            <Typography variant="h4" gutterBottom>
+              Modify the code
+            </Typography>
             {isStandalone
               ? 'Amazing moves! Keep editing, or update your dancer design or music mix above.'
               : "Amazing moves! Keep editing, or update your dancer design or music mix above. Click Finish when you're done."}

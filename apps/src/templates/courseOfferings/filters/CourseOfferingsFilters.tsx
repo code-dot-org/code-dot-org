@@ -1,6 +1,6 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import {CheckboxDropdown} from '@code-dot-org/component-library/dropdown';
-import {Heading6} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback, ChangeEvent} from 'react';
 
 import {FilterTypeConfig} from '@cdo/apps/templates/courseOfferings/filters/helpers';
@@ -57,9 +57,13 @@ const CourseOfferingsFilters = <TFilterKey extends string = string>({
   return (
     <div className={style.catalogFiltersContainer}>
       <div className={style.catalogDropdownFiltersTopRow}>
-        <Heading6 className={style.catalogFiltersRowLabel}>
+        <Typography
+          className={style.catalogFiltersRowLabel}
+          variant="h6"
+          gutterBottom
+        >
           {i18n.filterBy()}
-        </Heading6>
+        </Typography>
         <Button
           id="clear-filters"
           className={style.catalogClearFiltersButton}

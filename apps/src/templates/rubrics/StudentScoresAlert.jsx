@@ -1,5 +1,5 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -27,9 +27,9 @@ export default function StudentScoresAlert({closeAlert, viewScores}) {
       className={classnames(style.dismissableAlert, 'uitest-dismissible-alert')}
     >
       <span className={style.dismissableAlertText}>
-        <BodyThreeText>
+        <Typography variant="body3" gutterBottom>
           {i18n.rubricStudentScoresAlert({studentCount, sectionName})}
-        </BodyThreeText>
+        </Typography>
       </span>
       <CloseButton
         className={dialogStyle.xCloseButton}

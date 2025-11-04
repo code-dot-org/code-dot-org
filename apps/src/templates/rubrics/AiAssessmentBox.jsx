@@ -1,8 +1,4 @@
-import {
-  EmText,
-  StrongText,
-  BodyFourText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 
@@ -144,11 +140,15 @@ export default function AiAssessmentBox({
     <div className={style.aiAssessmentInfoBlock}>
       {isAiAssessed && (
         <div className={style.aiAssessmentInfoRow}>
-          <BodyFourText className={style.aiAssessmentScoreText}>
+          <Typography
+            className={style.aiAssessmentScoreText}
+            variant="body4"
+            gutterBottom
+          >
             {/* Score: */}
-            <StrongText>{i18n.aiAssessmentScore()}</StrongText>
+            <Typography variant="strong">{i18n.aiAssessmentScore()}</Typography>
             <span>{studentAchievement()}</span>
-          </BodyFourText>
+          </Typography>
           {aiConfidence && <AiConfidenceBox aiConfidence={aiConfidence} />}
           <AiAssessmentFeedbackRadio
             onChosen={val => setAiFeedback(val)}
@@ -165,10 +165,16 @@ export default function AiAssessmentBox({
       )}
       {isAiAssessed && aiEvidence && aiEvidence.length > 0 && (
         <div id="tour-ai-evidence">
-          <BodyFourText className={style.aiAssessmentEvidenceBlock}>
+          <Typography
+            className={style.aiAssessmentEvidenceBlock}
+            variant="body4"
+            gutterBottom
+          >
             {/* Evidence: */}
-            <StrongText>{i18n.aiAssessmentEvidence()}</StrongText>
-          </BodyFourText>
+            <Typography variant="strong">
+              {i18n.aiAssessmentEvidence()}
+            </Typography>
+          </Typography>
           <ul>
             {aiEvidence.map((info, i) => (
               <li key={i}>{renderEvidenceItem(info, i)}</li>
@@ -176,7 +182,9 @@ export default function AiAssessmentBox({
           </ul>
         </div>
       )}
-      {!isAiAssessed && <EmText>{i18n.aiCannotAssess()}</EmText>}
+      {!isAiAssessed && (
+        <Typography variant="em">{i18n.aiCannotAssess()}</Typography>
+      )}
     </div>
   );
 }

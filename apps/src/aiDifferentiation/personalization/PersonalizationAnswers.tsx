@@ -1,11 +1,7 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
-import {
-  StrongText,
-  BodyOneText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -32,9 +28,9 @@ export const NumberOfYearsTeachingAnswer: React.FC<
 
   return (
     <div className={style.numberOfYearsArea}>
-      <BodyOneText className={style.bodyText}>
+      <Typography className={style.bodyText} variant="body1" gutterBottom>
         {i18n.yearsTeaching()}
-      </BodyOneText>
+      </Typography>
       <input
         type="number"
         name="years-teaching"
@@ -42,7 +38,9 @@ export const NumberOfYearsTeachingAnswer: React.FC<
         value={yearsTeaching > 0 ? yearsTeaching : ''}
         onChange={handleChange}
       />
-      <BodyOneText className={style.bodyText}>{i18n.years()}</BodyOneText>
+      <Typography className={style.bodyText} variant="body1" gutterBottom>
+        {i18n.years()}
+      </Typography>
     </div>
   );
 };
@@ -62,7 +60,9 @@ export const ClassroomVisionAnswer: React.FC<ClassroomVisionAnswerProps> = ({
 
   return (
     <div className={style.classroomVisionArea}>
-      <StrongText>{i18n.idealClassroomDescription()}</StrongText>
+      <Typography variant="strong">
+        {i18n.idealClassroomDescription()}
+      </Typography>
       <textarea
         name="classroom-vision"
         value={classroomVision}
@@ -90,7 +90,7 @@ export const ChallengeAnswer: React.FC<ChallengeAnswerProps> = ({
 
   return (
     <div>
-      <StrongText>{i18n.describeYourChallenge()}</StrongText>
+      <Typography variant="strong">{i18n.describeYourChallenge()}</Typography>
       <textarea
         name="classroom-challenge"
         value={challenge}
@@ -135,8 +135,12 @@ export const ConfidenceAnswer: React.FC<ConfidenceAnswerProps> = ({
         />
       </div>
       <div className={style.confidenceContinuum}>
-        <BodyThreeText>{i18n.confidenceLow()}</BodyThreeText>
-        <BodyThreeText>{i18n.confidenceHigh()}</BodyThreeText>
+        <Typography variant="body3" gutterBottom>
+          {i18n.confidenceLow()}
+        </Typography>
+        <Typography variant="body3" gutterBottom>
+          {i18n.confidenceHigh()}
+        </Typography>
       </div>
     </div>
   );

@@ -1,8 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
-import {
-  Heading2,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useEffect} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -71,10 +68,16 @@ export default function AssessmentsAnnouncementDialog() {
           className={styles.announcementImage}
           alt=""
         />
-        <Heading2>{i18n.aiAssessmentsAnnouncementHeading()}</Heading2>
-        <BodyTwoText className={styles.announcementBody}>
+        <Typography variant="h2" gutterBottom>
+          {i18n.aiAssessmentsAnnouncementHeading()}
+        </Typography>
+        <Typography
+          className={styles.announcementBody}
+          variant="body2"
+          gutterBottom
+        >
           {i18n.aiAssessmentsAnnouncementBody()}
-        </BodyTwoText>
+        </Typography>
         <Button
           className="learn-more-button"
           text={i18n.learnMore()}

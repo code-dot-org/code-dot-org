@@ -1,10 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Button, {LinkButton} from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
-import {
-  Heading3,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {
@@ -103,10 +100,10 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
     if (customRegistrationLink) {
       return (
         <>
-          <BodyThreeText>
+          <Typography variant="body3" gutterBottom>
             This workshop's registration is managed externally by the regional
             partner.
-          </BodyThreeText>
+          </Typography>
           <LinkButton
             href={customRegistrationLink}
             target="_blank"
@@ -178,7 +175,9 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
 
   return (
     <div className={moduleStyles.card}>
-      <Heading3 visualAppearance="heading-xs">Enroll in this workshop</Heading3>
+      <Typography component="h3" variant="h6" gutterBottom>
+        Enroll in this workshop
+      </Typography>
       {renderEnrollmentAction()}
       <Link type="secondary" size="xs" href="#data-sharing-notice">
         Click to see data sharing notice

@@ -3,7 +3,7 @@
  * can put a text header and subheader over that banner image.
  */
 
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -42,16 +42,16 @@ export default class HeaderBanner extends React.Component {
       <div style={backgroundImageStyle} className={style.banner}>
         <div className={style.contentWrapper}>
           <div className={style.textWrapper}>
-            <Typography semanticTag="h1" visualAppearance="heading-xxl">
+            <Typography variant="h1" gutterBottom>
               {headingText}
             </Typography>
             {subHeadingText && (
-              <Typography semanticTag="p" visualAppearance="body-one">
+              <Typography variant="body1" gutterBottom>
                 {subHeadingText}
               </Typography>
             )}
             {description && (
-              <Typography semanticTag="p" visualAppearance="body-one">
+              <Typography variant="body1" gutterBottom>
                 {description}
               </Typography>
             )}

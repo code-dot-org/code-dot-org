@@ -1,5 +1,5 @@
 import TextField from '@code-dot-org/component-library/textField';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import debounce from 'lodash/debounce';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
@@ -45,7 +45,11 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
 }) => {
   return (
     <>
-      {message && <BodyTwoText>{message}</BodyTwoText>}
+      {message && (
+        <Typography variant="body2" gutterBottom>
+          {message}
+        </Typography>
+      )}
       <TextField
         name="prompt-field"
         placeholder={placeholder}

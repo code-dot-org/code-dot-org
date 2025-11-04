@@ -1,4 +1,4 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import Box from '@mui/material/Box';
 import LinearProgress, {
   linearProgressClasses,
@@ -26,10 +26,10 @@ const PersonalizationProgressBar: React.FC<PersonalizationProgressBarProps> = ({
   return (
     <div className={style.personalizationProgressBarContainer}>
       <div className={style.personalizationProgressBarHeader}>
-        <BodyThreeText noMargin>
+        <Typography variant="body3">
           Question {currentQuestionNumber} of {totalQuestionsNumber}
-        </BodyThreeText>
-        <BodyThreeText noMargin>{progressValue}% complete</BodyThreeText>
+        </Typography>
+        <Typography variant="body3">{progressValue}% complete</Typography>
       </div>
       <Box style={{width: '100%'}}>
         <LinearProgress

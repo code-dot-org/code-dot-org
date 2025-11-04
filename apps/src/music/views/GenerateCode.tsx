@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -215,7 +215,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             markdownClassName={styles.markdown}
           />
         )}
-
       {showFullContext && aiGenerateState === 'none' && (
         <textarea
           id="generate-context"
@@ -225,7 +224,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           className={styles.textArea}
         />
       )}
-
       {['none', 'generating', 'generated'].includes(aiGenerateState) &&
         useAdlib && (
           <Adlib
@@ -237,7 +235,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             onTextChange={onAdlibTextChange}
           />
         )}
-
       {aiGenerateState === 'none' && !useAdlib && (
         <>
           <div>Describe the song you'd like AI to make.</div>
@@ -252,7 +249,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           />
         </>
       )}
-
       {['none', 'generating', 'generated'].includes(aiGenerateState) && (
         <Button
           ariaLabel={
@@ -275,17 +271,15 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           }}
         />
       )}
-
       {['listening', 'listened'].includes(aiGenerateState) && (
         <div>
-          <Heading4>
+          <Typography variant="h4" gutterBottom>
             {aiGenerateState === 'listening' && 'Take a listen...'}
             {aiGenerateState === 'listened' && 'Decide what to do next'}
-          </Heading4>
+          </Typography>
           <div>AI generated code based on your prompt, "{promptText}"</div>
         </div>
       )}
-
       {aiGenerateState === 'listened' && (
         <div className={styles.buttonRow}>
           <Button
@@ -317,25 +311,28 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           />
         </div>
       )}
-
       {aiGenerateState === 'editing' && !isPlaying && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Typography variant="h4" gutterBottom>
+            Modify the code
+          </Typography>
           AI helped you get started. Make your own changes, then press Run.
         </div>
       )}
-
       {aiGenerateState === 'editing' && isPlaying && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Typography variant="h4" gutterBottom>
+            Modify the code
+          </Typography>
           <div>Try changing the code. </div>
         </div>
       )}
-
       {aiGenerateState === 'edited' && (
         <>
           <div>
-            <Heading4>Modify the code</Heading4>
+            <Typography variant="h4" gutterBottom>
+              Modify the code
+            </Typography>
             <div>That's a great mix!</div>
           </div>
           <div className={styles.buttonRow}>

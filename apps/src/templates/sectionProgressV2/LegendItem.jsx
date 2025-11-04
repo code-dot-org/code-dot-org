@@ -1,4 +1,4 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -13,7 +13,9 @@ export default function LegendItem({itemType, labelText}) {
       <div className={styles.legendIcon}>
         <ProgressIcon itemType={itemType} />
       </div>
-      <BodyThreeText className={styles.labelText}>{labelText}</BodyThreeText>
+      <Typography className={styles.labelText} variant="body3" gutterBottom>
+        {labelText}
+      </Typography>
     </div>
   );
 }

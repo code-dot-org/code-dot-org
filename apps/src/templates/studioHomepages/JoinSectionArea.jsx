@@ -1,4 +1,4 @@
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
@@ -97,9 +97,9 @@ export default function JoinSectionArea({
 
   return isPlSections ? (
     <>
-      <Heading2>
+      <Typography variant="h2" gutterBottom>
         {i18n.joinedProfessionalLearningSectionsHomepageTitle()}
-      </Heading2>
+      </Typography>
       {renderSectionContent()}
     </>
   ) : (

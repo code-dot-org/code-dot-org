@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {StrongText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useState, useCallback} from 'react';
 
 import aichatI18n from '../../locale';
@@ -80,7 +80,9 @@ const MultiInputCustomization: React.FunctionComponent<{
         </>
       )}
       <div className={modelCustomizationStyles.addedItemsHeaderContainer}>
-        <StrongText>{aichatI18n.addCustomizationCompletionText()}</StrongText>
+        <Typography variant="strong">
+          {aichatI18n.addCustomizationCompletionText()}
+        </Typography>
       </div>
       {addedItems.map((message, index) => {
         return (

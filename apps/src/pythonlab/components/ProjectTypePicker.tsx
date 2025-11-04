@@ -1,10 +1,7 @@
 import ActionBlock from '@code-dot-org/component-library/actionBlock';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
-import {
-  BodyThreeText,
-  Heading2,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
@@ -36,20 +33,20 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
         aria-labelledby="project-picker-title"
         onClose={currentProjectType ? closeDialog : undefined}
       >
-        <Heading2 id="project-picker-title">
+        <Typography id="project-picker-title" variant="h2" gutterBottom>
           {currentProjectType
             ? pythonlabI18n.switchProjectTypeTitle()
             : pythonlabI18n.projectPickerTitle()}
-        </Heading2>
+        </Typography>
         <div id="dsco-dialog-description">
           {(isNeighborhood || isConsole) && (
-            <BodyThreeText>
+            <Typography variant="body3" gutterBottom>
               <span className={moduleStyles.boldWarning}>
                 {pythonlabI18n.projectPickerReplaceWarning()}
               </span>
               <br />
               {pythonlabI18n.projectPickerReplaceRestoreInfo()}
-            </BodyThreeText>
+            </Typography>
           )}
           <div className={moduleStyles.pickerContainer}>
             <ActionBlock

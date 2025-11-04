@@ -1,8 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
-import {
-  Heading1,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -30,9 +27,9 @@ const FreeCurriculumDialog: React.FunctionComponent<
       onClose={onClose}
       closeOnClickBackdrop={true}
     >
-      <Heading1 visualAppearance="heading-lg">
+      <Typography component="h1" variant="h3" gutterBottom>
         {locale.our_commitment_to_free_curriculum()}
-      </Heading1>
+      </Typography>
       <div className={style.contentWrapper}>
         <SafeMarkdown
           className={style.markdownDesc}
@@ -42,7 +39,9 @@ const FreeCurriculumDialog: React.FunctionComponent<
               'https://creativecommons.org/licenses/by-nc-sa/4.0/',
           })}
         />
-        <BodyThreeText>{locale.dedicated_to_expanding()}</BodyThreeText>
+        <Typography variant="body3" gutterBottom>
+          {locale.dedicated_to_expanding()}
+        </Typography>
       </div>
       <Button
         onClick={closeModal}

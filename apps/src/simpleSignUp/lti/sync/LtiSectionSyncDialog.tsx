@@ -1,5 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {CSSProperties, useState} from 'react';
@@ -84,11 +84,11 @@ export default function LtiSectionSyncDialog({
           />
         ))}
         {syncResult.honeybadger_id && (
-          <BodyFourText>
+          <Typography variant="body4" gutterBottom>
             {i18n.ltiSectionSyncDialogErrorCode({
               code: syncResult.honeybadger_id,
             })}
-          </BodyFourText>
+          </Typography>
         )}
       </div>
     );

@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -47,7 +47,7 @@ export const PopUpButtonOption = ({
       id={id}
     >
       <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
-      <BodyFourText noMargin>{labelText}</BodyFourText>
+      <Typography variant="body4">{labelText}</Typography>
     </div>
   );
 };

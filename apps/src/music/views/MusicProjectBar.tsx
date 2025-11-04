@@ -1,7 +1,4 @@
-import {
-  BodyFourText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
@@ -37,11 +34,13 @@ const MusicProjectBar: React.FC<{title: string}> = ({title}) => {
         />
       )}
       <div className={styles.text}>
-        <BodyThreeText>{title}</BodyThreeText>
+        <Typography variant="body3" gutterBottom>
+          {title}
+        </Typography>
         {packFolder && (
-          <BodyFourText>
+          <Typography variant="body4" gutterBottom>
             {`${packFolder.name} - ${packFolder.artist}`}
-          </BodyFourText>
+          </Typography>
         )}
       </div>
     </div>

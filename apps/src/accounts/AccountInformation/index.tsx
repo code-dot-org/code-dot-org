@@ -4,7 +4,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import Link from '@code-dot-org/component-library/link';
 import TextField from '@code-dot-org/component-library/textField';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {ChangeEvent, useEffect, useMemo, useState} from 'react';
 
@@ -293,12 +293,14 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   return (
     <>
       <hr />
-      <Heading2
-        visualAppearance="heading-sm"
+      <Typography
         className={commonStyles.sectionHeader}
+        component="h2"
+        variant="h5"
+        gutterBottom
       >
         {i18n.accountInformation_accountInformation()}
-      </Heading2>
+      </Typography>
       <form name="account-information-form" className={styles.accountForm}>
         <div className={commonStyles.inputContainer}>
           {/* verified teacher account */}

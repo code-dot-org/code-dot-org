@@ -1,8 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
-import {
-  Heading2,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -146,8 +143,12 @@ function InviteToV2ProgressModal({
           className={styles.dialog}
         >
           <img src={newProgressViewGraphic} alt="" />
-          <Heading2>{i18n.progressTrackingAnnouncement()}</Heading2>
-          <BodyTwoText>{i18n.progressTrackingInvite()}</BodyTwoText>
+          <Typography variant="h2" gutterBottom>
+            {i18n.progressTrackingAnnouncement()}
+          </Typography>
+          <Typography variant="body2" gutterBottom>
+            {i18n.progressTrackingInvite()}
+          </Typography>
           <Button
             id="accept-invitation"
             text={i18n.tryItNow()}

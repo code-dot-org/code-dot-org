@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {Heading4, StrongText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useState, useRef} from 'react';
 
 import {
@@ -60,7 +60,6 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
           name={'tooLow'}
           label={'Response was evaluated too low'}
         />
-
         <Checkbox
           checked={aiTooHigh}
           onChange={() => {
@@ -77,7 +76,6 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
           name={'flagged'}
           label={'Response was incorrectly flagged'}
         />
-
         <Checkbox
           checked={aiVague}
           onChange={() => {
@@ -96,7 +94,9 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
         />
         {aiFeedbackOther && (
           <div className={style.aiFeedbackOther}>
-            <StrongText>{i18n.aiFeedbackOtherDetails()} </StrongText>
+            <Typography variant="strong">
+              {i18n.aiFeedbackOtherDetails()}{' '}
+            </Typography>
             <textarea
               onChange={e => {
                 setAiOtherContent(e.target.value);
@@ -126,9 +126,9 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
   return (
     <AccessibleDialog onClose={onCloseHandler} closeOnClickBackdrop={true}>
       <div>
-        <Heading4>
+        <Typography variant="h4" gutterBottom>
           Why is the AI analysis inaccurate? (Check all that apply)
-        </Heading4>
+        </Typography>
         <hr />
         {/* TODO: add options for section-level feedback - TEACH-1769 */}
         {forStudentAiInteractionFeedback &&

@@ -2,7 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import Link from '@code-dot-org/component-library/link';
 import {RadioButtonsGroup} from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -86,7 +86,7 @@ export const ChangeEmailForm: React.FC<ChangeEmailFormProps> = ({
       )}
       {userType === UserTypes.TEACHER && (
         <div>
-          <Typography semanticTag="span" visualAppearance="body-three">
+          <Typography component="span" variant="body3" gutterBottom>
             {i18n.changeEmailModal_emailOptIn_description()}{' '}
             <Link
               text={i18n.changeEmailModal_emailOptIn_privacyPolicy()}

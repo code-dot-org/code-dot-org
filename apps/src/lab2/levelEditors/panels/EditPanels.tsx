@@ -2,11 +2,7 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  Heading3,
-  Heading5,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -130,7 +126,9 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
         name="level[level_data]"
         value={JSON.stringify({})}
       />
-      <Heading3>Preview</Heading3>
+      <Typography variant="h3" gutterBottom>
+        Preview
+      </Typography>
       <div className={moduleStyles.panelsContainer}>
         <Toast message={toastMessage} index={toastIndex} />
         <div className={moduleStyles.fullSizeContainer}>
@@ -204,9 +202,13 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
   return (
     <div className={moduleStyles.panelEditor}>
       <div className={moduleStyles.fieldRow}>
-        <Heading5 className={moduleStyles.panelHeader}>
+        <Typography
+          className={moduleStyles.panelHeader}
+          variant="h5"
+          gutterBottom
+        >
           Panel {index + 1}
-        </Heading5>
+        </Typography>
         {index !== 0 && (
           <button
             type="button"
@@ -343,9 +345,13 @@ const Toast: React.FunctionComponent<{message: string; index: number}> = ({
           show && message && moduleStyles.toastShow
         )}
       >
-        <BodyThreeText className={moduleStyles.toastMessage}>
+        <Typography
+          className={moduleStyles.toastMessage}
+          variant="body3"
+          gutterBottom
+        >
           {message}
-        </BodyThreeText>
+        </Typography>
       </div>
     </div>
   );

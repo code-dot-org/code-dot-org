@@ -1,5 +1,5 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
@@ -52,21 +52,18 @@ const AccountUnlinkWarningModal = ({
     <Fade in={isOpen} mountOnEnter unmountOnExit>
       <AccessibleDialog onClose={onClose}>
         <Typography
-          semanticTag="h4"
-          visualAppearance="heading-sm"
           className={styles.warningTitle}
+          component="h4"
+          variant="h5"
+          gutterBottom
         >
           {i18n.manageLinkedAccounts_warning_title({lmsName})}
         </Typography>
         <hr className={styles.line} />
-        <Typography
-          semanticTag="p"
-          visualAppearance="body-two"
-          className={styles.warningText}
-        >
+        <Typography className={styles.warningText} variant="body2" gutterBottom>
           {i18n.manageLinkedAccounts_warning_body({lmsName})}
         </Typography>
-        <Typography semanticTag="p" visualAppearance="body-two">
+        <Typography variant="body2" gutterBottom>
           {i18n.manageLinkedAccounts_warning_instructions({lmsName})}
         </Typography>
         <hr className={styles.line} />

@@ -1,12 +1,7 @@
 import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import Modal from '@code-dot-org/component-library/modal';
 import TextField from '@code-dot-org/component-library/textField';
-import {
-  Heading1,
-  Heading2,
-  BodyTwoText,
-  OverlineTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useCallback, useMemo, useState} from 'react';
 
@@ -161,8 +156,10 @@ export default function RegionalWorkshopCatalog({
   const RenderUpcomingLocalWorkshopsHeading = () => {
     return (
       <div className={style.bodyContainerHeaderText}>
-        <Heading2>Upcoming local workshops</Heading2>
-        <BodyTwoText>
+        <Typography variant="h2" gutterBottom>
+          Upcoming local workshops
+        </Typography>
+        <Typography variant="body2" gutterBottom>
           Workshops are always being added. Don't see the workshop you're
           looking for? Check back again or{' '}
           <a
@@ -174,7 +171,7 @@ export default function RegionalWorkshopCatalog({
             contact your regional partner
           </a>
           {'.'}
-        </BodyTwoText>
+        </Typography>
       </div>
     );
   };
@@ -191,12 +188,14 @@ export default function RegionalWorkshopCatalog({
               alt=""
             />
             <div className={style.noCardsTextContainer}>
-              <Heading2>Enter zip code to see workshops</Heading2>
-              <BodyTwoText>
+              <Typography variant="h2" gutterBottom>
+                Enter zip code to see workshops
+              </Typography>
+              <Typography variant="body2" gutterBottom>
                 To see upcoming workshops in your area, you'll need to provide
                 your zip code so we can match you with your regional partner.
                 You can still enroll for national workshops below.
-              </BodyTwoText>
+              </Typography>
             </div>
             <div className={style.zipSearchInput}>
               <TextField
@@ -220,11 +219,13 @@ export default function RegionalWorkshopCatalog({
     } else if (showInvalidZipMessage) {
       return (
         <div className={style.bodyContainerHeaderText}>
-          <Heading2>Invalid zip entered</Heading2>
-          <BodyTwoText>
+          <Typography variant="h2" gutterBottom>
+            Invalid zip entered
+          </Typography>
+          <Typography variant="body2" gutterBottom>
             We are unable to find your zip, you can try again or register for
             National Workshops.
-          </BodyTwoText>
+          </Typography>
         </div>
       );
     } else if (
@@ -241,13 +242,15 @@ export default function RegionalWorkshopCatalog({
               alt=""
             />
             <div className={style.noCardsTextContainer}>
-              <Heading2>No workshops found</Heading2>
-              <BodyTwoText>
+              <Typography variant="h2" gutterBottom>
+                No workshops found
+              </Typography>
+              <Typography variant="body2" gutterBottom>
                 We didn't find any upcoming workshops in your area. Workshops
                 are being added all the time. Check back again soon or contact
                 your regional partner for more information on upcoming
                 workshops.
-              </BodyTwoText>
+              </Typography>
             </div>
             <LinkButton
               text="Contact regional partner"
@@ -322,13 +325,15 @@ export default function RegionalWorkshopCatalog({
       )}
       <section className={style.headerContainer}>
         <div className={style.headerText}>
-          <Heading1>Find Code.org workshops near you</Heading1>
-          <BodyTwoText>
+          <Typography variant="h1" gutterBottom>
+            Find Code.org workshops near you
+          </Typography>
+          <Typography variant="body2" gutterBottom>
             Enter your school ZIP code to explore local professional learning
             workshops, and connect with your regional partner.{' '}
             <a href={'#nationalWorkshopContainer'}>National workshops</a> are
             available to teachers nationwide.
-          </BodyTwoText>
+          </Typography>
         </div>
         <div className={style.zipSearchContainer}>
           <div className={style.zipSearchInput}>
@@ -353,17 +358,23 @@ export default function RegionalWorkshopCatalog({
             />
           </div>
           <div className={style.rpInfoContainer}>
-            <OverlineTwoText className={style.rpInfoHeader}>
+            <Typography
+              className={style.rpInfoHeader}
+              variant="overline2"
+              gutterBottom
+            >
               Your Regional Partner
-            </OverlineTwoText>
+            </Typography>
             <div className={style.rpInfo}>
-              <BodyTwoText
+              <Typography
                 className={
                   regionalPartnerName ? style.rpName : style.rpNameMissing
                 }
+                variant="body2"
+                gutterBottom
               >
                 {regionalPartnerText}
-              </BodyTwoText>
+              </Typography>
               <div className={style.rpInfoButtons}>
                 <Button
                   aria-label="partnerInfo"
@@ -399,11 +410,13 @@ export default function RegionalWorkshopCatalog({
         >
           <div className={style.withWsCardsContainer}>
             <div className={style.nationalWorkshopsHeader}>
-              <Heading2>National workshops</Heading2>
-              <BodyTwoText>
+              <Typography variant="h2" gutterBottom>
+                National workshops
+              </Typography>
+              <Typography variant="body2" gutterBottom>
                 These workshops are managed by different regional partners, and
                 are available to teachers nationwide.
-              </BodyTwoText>
+              </Typography>
             </div>
             {WorkshopCardContainer(availableNationalWorkshops)}
           </div>

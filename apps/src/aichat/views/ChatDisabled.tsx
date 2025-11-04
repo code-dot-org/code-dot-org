@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {FC} from 'react';
 
 import aichatI18n from '../locale';
@@ -16,7 +16,9 @@ export const ChatDisabled: FC<{message?: string}> = ({
         iconName="ai-locked"
         iconFamily="kit"
       />
-      <BodyThreeText>{message}</BodyThreeText>
+      <Typography variant="body3" gutterBottom>
+        {message}
+      </Typography>
     </div>
   );
 };

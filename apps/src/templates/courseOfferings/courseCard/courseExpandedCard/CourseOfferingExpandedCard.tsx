@@ -2,12 +2,7 @@ import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Image from '@code-dot-org/component-library/image';
 import Link from '@code-dot-org/component-library/link';
-import {
-  Heading3,
-  BodyTwoText,
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {CourseOffering} from '@cdo/apps/templates/courseOfferings/types';
@@ -50,32 +45,38 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
           <div className={moduleStyles.top}>
             <div className={moduleStyles.text}>
               <div className={moduleStyles.main}>
-                <Heading3 noMargin>{courseOffering.display_name}</Heading3>
+                <Typography variant="h3">
+                  {courseOffering.display_name}
+                </Typography>
                 <div className={moduleStyles.aspects}>
                   <div>
                     <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
-                    <BodyThreeText noMargin>
-                      <StrongText noMargin>
+                    <Typography variant="body3">
+                      <Typography variant="strong">
                         {translatedGradeRange[0]}
-                      </StrongText>{' '}
+                      </Typography>{' '}
                       {translatedGradeRange[1]}
                       {isThisCourseForTeachers && '  Teachers'}
-                    </BodyThreeText>
+                    </Typography>
                   </div>
                   <div>
                     <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
-                    <BodyThreeText noMargin>
-                      <StrongText noMargin>{i18n.duration()}:</StrongText>{' '}
+                    <Typography variant="body3">
+                      <Typography variant="strong">
+                        {i18n.duration()}:
+                      </Typography>{' '}
                       {courseDurationLabel}
-                    </BodyThreeText>
+                    </Typography>
                   </div>
                   {!!translatedSubjectsAndTopicsTitlesArray.length && (
                     <div>
                       <FontAwesomeV6Icon iconName="book" iconStyle="solid" />
-                      <BodyThreeText noMargin>
-                        <StrongText noMargin>{i18n.topic()}:</StrongText>{' '}
+                      <Typography variant="body3">
+                        <Typography variant="strong">
+                          {i18n.topic()}:
+                        </Typography>{' '}
                         {translatedSubjectsAndTopicsTitlesArray.join(', ')}
-                      </BodyThreeText>
+                      </Typography>
                     </div>
                   )}
                 </div>
@@ -84,9 +85,9 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
           </div>
           <div className={moduleStyles.details}>
             {courseOffering.description && (
-              <BodyThreeText noMargin>
+              <Typography variant="body3">
                 {courseOffering.description}
-              </BodyThreeText>
+              </Typography>
             )}
             {courseOffering.image && <Image src={courseOffering.image} />}
           </div>
@@ -97,9 +98,11 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
                   iconName="book-open-cover"
                   iconStyle="solid"
                 />
-                <BodyThreeText noMargin>
-                  <StrongText>Associated Curriculum:</StrongText>
-                </BodyThreeText>
+                <Typography variant="body3">
+                  <Typography variant="strong">
+                    Associated Curriculum:
+                  </Typography>
+                </Typography>
                 {relatedCurriculums.map(
                   ({display_name, course_version_path}, index) => (
                     <React.Fragment key={display_name}>
@@ -110,14 +113,14 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
                         text={display_name}
                       />
                       {index < relatedCurriculums.length - 1 && (
-                        <BodyThreeText
+                        <Typography
                           className={
                             moduleStyles.associatedCurriculumsSeparator
                           }
-                          noMargin
+                          variant="body3"
                         >
                           •
-                        </BodyThreeText>
+                        </Typography>
                       )}
                     </React.Fragment>
                   )
@@ -137,9 +140,11 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
             <>
               <div className={moduleStyles.top}>
                 {relatedProposalsHeader && (
-                  <BodyTwoText noMargin>
-                    <StrongText>{relatedProposalsHeader}</StrongText>
-                  </BodyTwoText>
+                  <Typography variant="body2">
+                    <Typography variant="strong">
+                      {relatedProposalsHeader}
+                    </Typography>
+                  </Typography>
                 )}
               </div>
               <div className={moduleStyles.related}>

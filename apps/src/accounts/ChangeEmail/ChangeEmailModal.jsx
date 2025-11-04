@@ -1,7 +1,7 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {Heading3} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -148,9 +148,9 @@ export default class ChangeEmailModal extends React.Component {
       >
         <CloseButton onClick={this.cancel} className={styles.closeButton} />
         <div className={styles.container}>
-          <Heading3 visualAppearance="heading-sm">
+          <Typography component="h3" variant="h5" gutterBottom>
             {i18n.changeEmailModal_title()}
-          </Heading3>
+          </Typography>
           <ChangeEmailForm
             values={values}
             validationErrors={validationErrors}

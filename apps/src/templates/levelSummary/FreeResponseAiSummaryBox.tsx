@@ -1,10 +1,7 @@
 import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
-import {
-  BodyTwoText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
@@ -75,7 +72,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
 
   const aiSummaryMessage = (proficiencyCount: number) => (
     <>
-      <BodyTwoText>
+      <Typography variant="body2" gutterBottom>
         <strong>{`${i18n.reasoning()}: `}</strong>
         {proficiencyCount >= proficiencyStudentGoal
           ? '75% or more of the students demonstrated proficiency in their responses. '
@@ -88,7 +85,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
         >
           {i18n.viewDetailedAnalysis()}
         </Link>
-      </BodyTwoText>
+      </Typography>
     </>
   );
 
@@ -160,9 +157,13 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
         <div className={styles.summaryBoxHeader}>
           {aiSummaryTag(proficientStudentCount)}
           <div className={styles.feedbackQuestion}>
-            <BodyThreeText className={styles.feedbackText}>
+            <Typography
+              className={styles.feedbackText}
+              variant="body3"
+              gutterBottom
+            >
               {i18n.aiFeedbackQuestion()}
-            </BodyThreeText>
+            </Typography>
             <FeedbackToggle
               onThumbsUpClick={() => {
                 handleIconClick(true);

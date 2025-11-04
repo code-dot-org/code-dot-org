@@ -1,6 +1,6 @@
 import Breadcrumbs from '@code-dot-org/component-library/breadcrumbs';
 import {LinkWithText} from '@code-dot-org/component-library/link';
-import {Heading1} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import EnrollInWorkshop from './components/EnrollInWorkshop';
@@ -68,9 +68,9 @@ const WorkshopMarketingPage: React.FunctionComponent<
           breadcrumbs={workshopMarketingBreadcrumbs}
           className={moduleStyles.headerBreadcrumbs}
         />
-        <Heading1>
+        <Typography variant="h1" gutterBottom>
           {isUserEnrolled ? 'Workshop information' : 'Register for a workshop'}
-        </Heading1>
+        </Typography>
       </section>
       <div className={moduleStyles.bodyWrapper}>
         <div className={moduleStyles.bodyContainer}>
@@ -110,7 +110,6 @@ const WorkshopMarketingPage: React.FunctionComponent<
           </aside>
         </div>
       </div>
-
       <WorkshopEventJsonLdData {...props} />
     </div>
   );

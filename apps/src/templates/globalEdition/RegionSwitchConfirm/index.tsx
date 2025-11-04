@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
-import {Heading1} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback, useState, useEffect} from 'react';
 import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
@@ -67,7 +67,9 @@ const RegionSwitchConfirm: React.FC<RegionSwitchConfirmProps> = ({
         onDismiss={handleClose}
         onClose={() => {}}
       >
-        <Heading1>{i18n.globalEdition_regionSwitchConfirm_title()}</Heading1>
+        <Typography variant="h1" gutterBottom>
+          {i18n.globalEdition_regionSwitchConfirm_title()}
+        </Typography>
 
         <SafeMarkdown
           markdown={i18n.globalEdition_regionSwitchConfirm_text({region: name})}

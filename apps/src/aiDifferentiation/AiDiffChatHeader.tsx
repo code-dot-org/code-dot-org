@@ -1,9 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
-import {
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import {PDFDownloadLink} from '@react-pdf/renderer';
 import React from 'react';
 
@@ -28,9 +25,9 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
   return (
     <div className={style.chatHeader}>
       <div className={style.chatHeaderTitle}>
-        <BodyThreeText noMargin>
-          <StrongText>{threadTitle}</StrongText>
-        </BodyThreeText>
+        <Typography variant="body3">
+          <Typography variant="strong">{threadTitle}</Typography>
+        </Typography>
       </div>
       <div className={style.chatHeaderButtons}>
         <ActionDropdown

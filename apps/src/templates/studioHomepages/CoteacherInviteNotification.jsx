@@ -1,7 +1,4 @@
-import {
-  BodyTwoText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import {connect} from 'react-redux';
@@ -72,13 +69,13 @@ const CoteacherInviteNotification = ({
         invitedByName: invite.invited_by_name,
       })}
       details={
-        <BodyTwoText style={{marginBottom: 0}}>
+        <Typography style={{marginBottom: 0}} variant="body2" gutterBottom>
           {i18n.coteacherInviteDescription({
             invitedByEmail: invite.invited_by_email,
           })}
           <br />
-          <StrongText>{invite.section_name}</StrongText>
-        </BodyTwoText>
+          <Typography variant="strong">{invite.section_name}</Typography>
+        </Typography>
       }
       tooltipText={i18n.coteacherTooltip()}
       buttonsStyles={styles.buttons}

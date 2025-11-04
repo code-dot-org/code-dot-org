@@ -1,7 +1,4 @@
-import {
-  Heading3,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import styles from './teacher-navigation.module.scss';
@@ -21,8 +18,12 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
   return (
     <div className={styles.emptyClassroomDiv}>
       <div className={styles.emptyClassroomImage}>{imageComponent}</div>
-      <Heading3 className={styles.topPadding}>{headline}</Heading3>
-      <BodyTwoText>{descriptionText}</BodyTwoText>
+      <Typography className={styles.topPadding} variant="h3" gutterBottom>
+        {headline}
+      </Typography>
+      <Typography variant="body2" gutterBottom>
+        {descriptionText}
+      </Typography>
       {button}
     </div>
   );

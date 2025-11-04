@@ -1,4 +1,4 @@
-import {Heading5} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import React from 'react';
 
@@ -17,9 +17,13 @@ const PersonalizationResultsColumnAiHelp: React.FC<
 > = ({aiHelpSuggestions}) => {
   return (
     <div className={classnames(style.personaColumn, style.personaColumnBlack)}>
-      <Heading5 className={classnames(style.headerWhite, style.header)}>
+      <Typography
+        className={classnames(style.headerWhite, style.header)}
+        variant="h5"
+        gutterBottom
+      >
         {i18n.teachingStyleHowAiHelps()}
-      </Heading5>
+      </Typography>
       {aiHelpSuggestions.map((suggestion, index) => (
         <PersonalizationInformationBox key={index} information={suggestion} />
       ))}
