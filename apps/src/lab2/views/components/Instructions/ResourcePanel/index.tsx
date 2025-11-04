@@ -13,13 +13,13 @@ import lab2I18n from '@cdo/apps/lab2/locale';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -330,22 +330,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   const onClickTab = useCallback(
     (tab: Tabs) => {
-      analyticsReporter.sendEvent(
-        EVENTS.RESOURCE_PANEL_TAB_CLICKED,
-        {
-          lab_type: appName,
-          channel_id: channelId,
-          resource_panel_tab_clicked_from: currentTab,
-          resource_panel_tab_clicked_to: tab,
-        },
-        PLATFORMS.STATSIG
-      );
+      sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, appName, {
+        resourcePanelTabClickedTo: tab,
+        resourcePanelTabClickedFrom: currentTab || '',
+      });
       setCurrentTab(tab);
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [appName, channelId, currentTab, dispatch, isStandaloneCollapsed]
+    [appName, currentTab, dispatch, isStandaloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
@@ -355,24 +349,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
         setIsSettingsOpen(true);
-        analyticsReporter.sendEvent(
+        sendLab2AnalyticsEvent(
           EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-          {
-            lab_type: appName,
-            channel_id: channelId,
-          },
-          PLATFORMS.STATSIG
+          appName
         );
       } else {
         // If settngs is currently not open, open settings panel and send analytics event.
         if (!isSettingsOpen) {
-          analyticsReporter.sendEvent(
+          sendLab2AnalyticsEvent(
             EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-            {
-              lab_type: appName,
-              channel_id: channelId,
-            },
-            PLATFORMS.STATSIG
+            appName
           );
         }
         setIsSettingsOpen(!isSettingsOpen);
@@ -386,7 +372,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isStandaloneCollapsed,
     dispatch,
     appName,
-    channelId,
     isSettingsOpen,
     isFloatingSettingsOpen,
   ]);
