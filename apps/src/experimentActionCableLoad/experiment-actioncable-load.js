@@ -70,7 +70,6 @@ const testLoad = function () {
             logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
               from: 'timed-out-after-received',
             });
-
           }
           return;
         }
@@ -108,7 +107,6 @@ const testLoad = function () {
             logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
               from: 'after-timeout',
             });
-
           }
         }, echoTimeout);
         echoCount++;
