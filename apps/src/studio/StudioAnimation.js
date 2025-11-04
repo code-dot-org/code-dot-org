@@ -177,6 +177,7 @@ export default class StudioAnimation {
    * Display the current frame at the given location
    */
   redrawCenteredAt(center, tickCount) {
+    console.log('hi');
     var animTick = tickCount;
 
     // Each animation will start at a different frame when this is enabled:
@@ -193,6 +194,10 @@ export default class StudioAnimation {
     } else {
       currentFrame = Math.min(currentFrame, framesInThisAnimation - 1);
     }
+
+    // Always use frame 0 to keep sprite static (no animation)
+    currentFrame = 0;
+    framesInThisAnimation = 1;
 
     var frame = this.getFrame(currentFrame);
 
