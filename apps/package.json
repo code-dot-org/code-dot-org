@@ -25,6 +25,7 @@
     "build:dist": "NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8096 grunt clean build",
     "build:dist:debug": "NODE_ENV=production DEBUG_MINIFIED=1 yarn grunt clean build",
     "build:dist:analyze": "NODE_ENV=production ANALYZE_BUNDLE=1 yarn build:dist",
+    "build:dist:profile": "PROFILE_APPS_BUILD=1 NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8096 grunt clean build",
     "grunt": "NODE_OPTIONS=--max-old-space-size=4096 grunt",
     "start": "yarn grunt dev",
     "start:applab": "yarn grunt dev --app=applab",
