@@ -1,0 +1,82 @@
+name 'pl-sandbox-aif2-u2-variables-12'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Variables
+
+#### Have you ever noticed how a game keeps track of your score or how an app shows your number of likes? 
+
+#### Programs do this using **variables!** Just like we use names to keep track of things in real life, programs use **variables** to keep track of changing information.
+
+## What is a variable?
+
+<div style="width:90%; margin:auto; font-family:sans-serif;">
+
+  <!-- Row 1 -->
+  <div style="display:flex; margin-bottom:10px;">
+    <!-- Left Box -->
+    <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px;font-size:14pt;">
+      <strong>Definition:</strong>
+      <p>A <b>variable</b> is a name you give to a piece of data in your program. The value connected to that name can change while the program runs — you can think of it like a container that holds the data.</p>
+      <strong>Example:</strong>
+      <p> In a game, <b>score = 0</b> starts at zero and increases whenever a player earns points.
+</p>
+    </div>
+    <!-- Right Box -->
+    <div style="flex:1; background-color:#fff; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; text-align:center;">
+      <img src="https://images.code.org/6aac191fc61f33592100e3d59ac7b717-image-1762187266713.png" alt="Eboxes symbolizing variable storage for greeting, animal, and age" style="width:100%; border-radius:10px;">
+    </div>
+  </div>
+
+## What is State?
+
+  <!-- Row 2 -->
+  <div style="display:flex; margin-bottom:10px;">
+    <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px;font-size:14pt;">
+      <strong>Definition:</strong>
+      <p><b>State</b> is the current stored values of variables that describe what’s happening in a program right now.</p>
+      <strong>Example:</strong>
+      <p>In a game, the player’s current score and level together show the program’s state.</p>
+    </div>
+    <div style="flex:1; background-color:#fff; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; text-align:center;">
+      <img src="https://images.code.org/e3a6cd792666963257437c276c283ed5-image-1762187492236.png" alt="A graph showing score, level, lives as examples of a programs state." style="width:100%; border-radius:10px;">
+    </div>
+  </div>
+
+## What is an operation?
+
+  <!-- Row 3 -->
+  <div style="display:flex;">
+    <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px; font-size:14pt;">
+      <strong>Definition:</strong>
+      <p>An operation is an action that changes the value of a variable using math or logic.</p>
+      <strong>Example:</strong>
+      <p>When you click a “like” button, the operation score = score + 1 adds one to the total likes.
+</p>
+    </div>
+    <div style="flex:1; background-color:#fff; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; text-align:center;">
+      <img src="https://images.code.org/2d7424f5c8832b0c3266d95848076aa7-image-1762187634384.png" alt="Graph showing a +1 operation changing the score from 4 to 5" style="width:60%; border-radius:10px;">
+    </div>
+  </div>
+
+</div>
+
+    
+<br>  
+
+## Let's practice! 
+
+#### In the next level, you will use AI to help debug a program with variables. You will also practice making comments. 
+
+<image comments here and note></image>
+
+This code defines the variables using the keyword `let` - a variable must be declared before it can be used. 
+
+![](https://images.code.org/3fc90531df0a250a6d4d032641296c12-image-1762197748560.png)
+
+Here, an eveent handler is used to increase the health by 2 when the steghth-up button is pushed. 
+![](https://images.code.org/0c92bf9c223b25e95f34a943d8f26407-image-1762198022750.png)
+
+There are always 2 steps to using a variable, first it must be defined and then it must be used in the program. 
+MARKDOWN
