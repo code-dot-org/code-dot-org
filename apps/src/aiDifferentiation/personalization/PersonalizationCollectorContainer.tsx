@@ -1,6 +1,7 @@
 import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
+import PersonalizationInterstitial from '@cdo/apps/aiDifferentiation/personalization/components/personalizationInterstitial/PersonalizationInterstitial';
 import {matchTeachingProfile} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import i18n from '@cdo/locale';
 
@@ -265,7 +266,9 @@ const PersonalizationCollectorContainer: React.FC = () => {
         ) : (
           <>
             {showInterstitialState || isSaving ? (
-              <>interstitial state</>
+              <PersonalizationInterstitial
+                currentQuestion={PERSONALIZATION_PROMPTS[questionsNumber]}
+              />
             ) : (
               <>
                 <PersonalizationQuestion questionNumber={questionsNumber} />
