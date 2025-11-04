@@ -532,19 +532,6 @@ const EVENTS = {
     'Attempted upload of unaccepted file on codebridge',
   CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',
 
-  // Codebridge - Backpack events
-  CODEBRIDGE_SAVE_TO_BACKPACK_NEW: 'Save new file to backpack on codebridge',
-  CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE: 'Replace file in backpack on codebridge',
-  CODEBRIDGE_SAVE_TO_BACKPACK_RENAME:
-    'Save renamed file to backpack on codebridge',
-  CODEBRIDGE_DELETE_FROM_BACKPACK: 'Delete from backpack on codebridge',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW:
-    'Import new file from backpack on codebridge',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE:
-    'Import a file from backpack on codebridge, replacing existing file',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME:
-    'Import a file from backpack on codebridge, renaming it',
-
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
   CODEBRIDGE_MOVE_CONSOLE: 'Console moved on codebridge',
@@ -616,6 +603,17 @@ const EVENTS = {
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
   LAB2_VERSION_RESTORED: 'Version restored on lab2',
   LAB2_VERSION_VIEWED: 'Version viewed on lab2',
+
+  // Lab2 - Backpack events
+  LAB2_SAVE_TO_BACKPACK_NEW: 'Save new file to backpack on lab2',
+  LAB2_SAVE_TO_BACKPACK_REPLACE: 'Replace file in backpack on lab2',
+  LAB2_SAVE_TO_BACKPACK_RENAME: 'Save renamed file to backpack on lab2',
+  LAB2_DELETE_FROM_BACKPACK: 'Delete from backpack on lab2',
+  LAB2_IMPORT_FROM_BACKPACK_NEW: 'Import new file from backpack on lab2',
+  LAB2_IMPORT_FROM_BACKPACK_REPLACE:
+    'Import a file from backpack on lab2, replacing existing file',
+  LAB2_IMPORT_FROM_BACKPACK_RENAME:
+    'Import a file from backpack on lab2, renaming it',
 
   // Resource Panel
   RESOURCE_PANEL_TAB_CLICKED: 'Resource Panel Tab Clicked',

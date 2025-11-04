@@ -65,7 +65,7 @@ export const openImportFromBackpackPrompt = async ({
           codebridgeI18n.closeWindowTryAgain(),
         'Backpack file delete error'
       ),
-      () => sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FROM_BACKPACK)
+      () => sendLab2AnalyticsEvent(EVENTS.LAB2_DELETE_FROM_BACKPACK)
     );
   };
 
@@ -173,7 +173,7 @@ export const openImportFromBackpackPrompt = async ({
             if (results.type === 'confirm') {
               fetchFileContentAndProcess(
                 selectedBackpackFileName,
-                EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
+                EVENTS.LAB2_IMPORT_FROM_BACKPACK_RENAME,
                 newFileName
               ); // Fetch backpack file content and import new file with numeric suffix.
             }
@@ -195,12 +195,12 @@ export const openImportFromBackpackPrompt = async ({
             if (results.type === 'confirm') {
               fetchFileContentAndProcess(
                 selectedBackpackFileName,
-                EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE
+                EVENTS.LAB2_IMPORT_FROM_BACKPACK_REPLACE
               ); // Update existing project file.
             } else if (results.type === 'neutral') {
               fetchFileContentAndProcess(
                 selectedBackpackFileName,
-                EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
+                EVENTS.LAB2_IMPORT_FROM_BACKPACK_RENAME,
                 newFileName
               ); // Fetch backpack file content and import new file with numeric suffix.
             }
@@ -208,7 +208,7 @@ export const openImportFromBackpackPrompt = async ({
             // Fetch backpack file content and import new file to project - not a duplicate file name.
             fetchFileContentAndProcess(
               selectedBackpackFileName,
-              EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW,
+              EVENTS.LAB2_IMPORT_FROM_BACKPACK_NEW,
               selectedBackpackFileName
             );
           }
