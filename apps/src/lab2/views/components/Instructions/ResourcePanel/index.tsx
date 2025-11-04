@@ -330,10 +330,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   const onClickTab = useCallback(
     (tab: Tabs) => {
-      sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, appName, {
-        resourcePanelTabClickedTo: tab,
-        resourcePanelTabClickedFrom: currentTab || '',
-      });
+      if (currentTab && currentTab !== tab) {
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, appName, {
+          resourcePanelTabClickedTo: tab,
+          resourcePanelTabClickedFrom: currentTab,
+        });
+      }
       setCurrentTab(tab);
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
