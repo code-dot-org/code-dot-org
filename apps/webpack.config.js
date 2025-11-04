@@ -445,7 +445,7 @@ function createWebpackConfig({
       minimize: minify,
       minimizer: [
         new TerserPlugin({
-          parallel: 4,
+          parallel: 8,
           // Excludes these from minification to avoid breaking functionality,
           // but still adds .min to the output filename suffix.
           exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
