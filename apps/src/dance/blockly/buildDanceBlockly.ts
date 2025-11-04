@@ -217,7 +217,6 @@ const backgroundsChill = [
   '"splatter"',
   '"rainbow"',
   '"snowflakes"',
-  '"text"',
   '"sparkles"',
   '"spiral"',
   '"squiggles"',
