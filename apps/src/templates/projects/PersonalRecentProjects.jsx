@@ -27,9 +27,7 @@ class PersonalRecentProjects extends Component {
           {this.props.projectList &&
             this.props.projectList.slice(0, 4).map((project, index) => {
               const cardStyle =
-                index < 3
-                  ? {...styles.card, ...cardPaddingStyle}
-                  : styles.card;
+                index < 3 ? {...styles.card, ...cardPaddingStyle} : styles.card;
 
               return (
                 <div key={index} style={cardStyle}>
