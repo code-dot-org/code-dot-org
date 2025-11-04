@@ -1,7 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
-import PersonalizationProgressBar from '@cdo/apps/aiDifferentiation/personalization/PersonalizationProgressBar';
 import {matchTeachingProfile} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import i18n from '@cdo/locale';
 
@@ -12,11 +11,12 @@ import {
   ConfidenceAnswer,
   GoalsAnswer,
   SupportAnswer,
-} from './PersonalizationAnswers';
-import PersonalizationQuestion from './PersonalizationQuestion';
-import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
-import PersonalizationResults from './PersonalizationResults';
-import {TEACHING_STYLES} from './PersonalizationResultsPersonas';
+} from './components/PersonalizationAnswers';
+import PersonalizationProgressBar from './components/PersonalizationProgressBar';
+import PersonalizationQuestion from './components/personalizationQuestion/PersonalizationQuestion';
+import {PERSONALIZATION_PROMPTS} from './components/personalizationQuestion/personalizationQuestions';
+import PersonalizationResults from './components/personalizationResults/PersonalizationResults';
+import {TEACHING_STYLES} from './components/personalizationResults/PersonalizationResultsPersonas';
 import {saveTeachingProfileData} from './teachingProfileApi';
 
 import style from './personalization-information.module.scss';
