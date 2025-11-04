@@ -370,6 +370,17 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   className={moduleStyles.buttonWide}
                 />
 
+                <Button
+                  ariaLabel={'Generate again'}
+                  text={'Generate again'}
+                  type="secondary"
+                  color="black"
+                  size="s"
+                  iconLeft={{iconName: 'sparkles'}}
+                  onClick={generateDancer}
+                  className={moduleStyles.buttonWide}
+                />
+
                 {showNavigation && (
                   <NavigationArea
                     levelProperties={levelProperties}
