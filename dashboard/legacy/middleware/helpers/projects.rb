@@ -43,7 +43,7 @@ class Projects
     }
     row[:id] = @table.insert(row)
 
-    storage_encrypt_channel_id(row[:storage_id], row[:id])
+    row[:uuid]
   end
 
   def delete(channel_id)

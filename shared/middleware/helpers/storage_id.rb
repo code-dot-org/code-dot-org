@@ -52,12 +52,20 @@ end
 # encrypted or was encrypted using a different key (e.g. on localhost vs prod).
 def storage_decrypt_channel_id(encrypted)
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
-  # pad to a multiple of 4 characters to make a valid base64 string.
-  encrypted += '=' * ((4 - (encrypted.length % 4)) % 4)
-  storage_id, project_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
-  raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
-  [storage_id, project_id]
+  if uuid?(encrypted)
+    project = Project.find_by(uuid: encrypted)
+    raise ArgumentError, "No project found with uuid #{encrypted}" unless project
+    storage_id = project.storage_id
+    project_id = project.id
+    return [storage_id, project_id]
+  else
+    # pad to a multiple of 4 characters to make a valid base64 string.
+    encrypted += '=' * ((4 - (encrypted.length % 4)) % 4)
+    storage_id, project_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
+    raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
+    raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
+    [storage_id, project_id]
+  end
 end
 
 def valid_encrypted_channel_id(encrypted)
@@ -92,6 +100,13 @@ def storage_encrypt_channel_id(storage_id, project_id)
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   project_id = project_id.to_i
   raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
+  project = Project.find(project_id)
+  raise ArgumentError, "No project found with id #{project_id}" unless project
+
+  # return uuid if it exists
+  return project.uuid if project.uuid
+
+  # otherwise, continue to use the old encryption method
   Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{project_id}")).tr('=', '')
 end
 
@@ -205,4 +220,9 @@ end
 # Used in tests only
 def delete_storage_id_for_user(user_id)
   user_storage_ids_table.where(user_id: user_id).delete
+end
+
+private def uuid?(string)
+  uuid_format = /\A[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\z/i
+  uuid_format.match?(string)
 end
