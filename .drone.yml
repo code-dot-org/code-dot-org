@@ -88,6 +88,8 @@ steps:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
@@ -200,6 +202,8 @@ steps:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
       SAUCE_USERNAME:
@@ -273,6 +277,8 @@ steps:
     pull: always
     environment:
       CI_JOB: 'ui_tests'
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     volumes:
@@ -310,6 +316,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 12a10fb1535474843e0004d777e7fb5472679ab0d4f955faece04a24d1b05160
+hmac: d0de97812011e6377e6e652fa06cf7852542927d8db4ad52d5e4f4af77aa5bf3
 
 ...

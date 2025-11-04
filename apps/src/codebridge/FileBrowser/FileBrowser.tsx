@@ -22,14 +22,11 @@ import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DndDataContextProvider} from './DnDDataContextProvider';
 import {Droppable} from './Droppable';
-import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {useHandleDragEnd} from './hooks';
 import InnerFileBrowser from './InnerFileBrowser';
 import {DragDataType, DropDataType} from './types';
@@ -38,7 +35,6 @@ import moduleStyles from './styles/filebrowser.module.scss';
 
 export const FileBrowser = React.memo(() => {
   const {levelProperties} = useCodebridgeContext();
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const appName = levelProperties.appName;
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
@@ -92,13 +88,7 @@ export const FileBrowser = React.memo(() => {
   );
 
   return (
-    <PanelContainer
-      id="file-browser"
-      headerContent={codebridgeI18n.filesHeader()}
-      headerClassName={moduleStyles.fileBrowserHeader}
-      className={moduleStyles['file-browser']}
-      rightHeaderContent={!isReadOnly && <FileBrowserHeaderPopUpButton />}
-    >
+    <div id="file-browser" className={moduleStyles.fileBrowser}>
       <div className={moduleStyles.fileBrowserContents}>
         {isEmpty ? (
           <CodebridgeEmptyState
@@ -145,6 +135,6 @@ export const FileBrowser = React.memo(() => {
           </DndContext>
         )}
       </div>
-    </PanelContainer>
+    </div>
   );
 });
