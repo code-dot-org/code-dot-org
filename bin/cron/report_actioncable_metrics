@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/aws/metrics'
+
+def main
+  report_actioncable_websocket_count
+end
+
+def report_actioncable_websocket_count
+  websocket_count = ActionCable.server.connections.count
+
+  Cdo::Metrics.put(
+    'code-dot-org/ActionCable',
+    'ActiveWebsocketConnections',
+    websocket_count,
+    {
+      Environment: CDO.rack_env
+    },
+    unit: 'Count'
+  )
+rescue => exception
+  Honeybadger.notify(exception, error_message: 'Error reporting ActionCable metrics')
+end
+
+main
