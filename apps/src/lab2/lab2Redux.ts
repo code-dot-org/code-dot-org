@@ -53,6 +53,7 @@ import {
   PartialUserAppOptions,
   Validation,
 } from './types';
+import LevelPropertiesCache from './utils/LevelPropertiesCache';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
 
 interface PageError {
@@ -161,8 +162,6 @@ export const setUpWithLevel = createAsyncThunk<
       .getMetricsReporter()
       .updateProperties({appName: levelProperties.appName});
 
-    const {isProjectLevel, usesProjects} = levelProperties;
-
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
 
     // If we are cached, and there is a user app options path because we are in a script
@@ -179,7 +178,7 @@ export const setUpWithLevel = createAsyncThunk<
       }
     }
 
-    if (!usesProjects) {
+    if (!levelProperties.usesProjects) {
       // If projects are disabled on this level, we can skip loading projects data.
       setProjectAndLevelData(
         {levelProperties},
@@ -219,18 +218,17 @@ export const setUpWithLevel = createAsyncThunk<
     // Create a new project manager. If we have a channel id,
     // default to loading the project for that channel. Otherwise
     // create a project manager for the given level and script id.
-    const projectManager =
-      payload.channelId && isProjectLevel
-        ? ProjectManagerFactory.getProjectManager(
-            payload.channelId,
-            thunkAPI.getState().lab.isShareView
-          )
-        : await ProjectManagerFactory.getProjectManagerForLevel(
-            payload.levelId,
-            payload.userId,
-            payload.scriptId,
-            payload.scriptLevelId
-          );
+    const projectManager = payload.channelId
+      ? ProjectManagerFactory.getProjectManager(
+          payload.channelId,
+          thunkAPI.getState().lab.isShareView
+        )
+      : await ProjectManagerFactory.getProjectManagerForLevel(
+          payload.levelId,
+          payload.userId,
+          payload.scriptId,
+          payload.scriptLevelId
+        );
 
     // Only set the project manager and initiate load
     // if this request hasn't been cancelled.
@@ -512,11 +510,16 @@ function setProjectAndLevelData(
 async function loadLevelProperties(
   levelPropertiesPath: string
 ): Promise<LevelProperties> {
+  const cached = LevelPropertiesCache.get(levelPropertiesPath);
+  if (cached) {
+    return cached;
+  }
   const response = await HttpClient.fetchJson<LevelProperties>(
     levelPropertiesPath,
     {},
     LevelPropertiesValidator
   );
+  LevelPropertiesCache.set(levelPropertiesPath, response.value);
   return response.value;
 }
 

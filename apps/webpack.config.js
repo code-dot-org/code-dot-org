@@ -209,6 +209,7 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/pythonlab/locale'),
     localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
     localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
+    localeDoNotImport('@cdo/sketchlab/locale'),
     localeDoNotImport('@cdo/standaloneVideo/locale'),
     localeDoNotImport('@cdo/tutorialExplorer/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
@@ -298,7 +299,12 @@ const WEBPACK_BASE_CONFIG = {
           p('test'),
           p('../dashboard/app/assets/images'),
         ],
-        type: 'asset/inline',
+        type: 'asset/resource',
+        generator: {
+          filename: '[name]wp[contenthash:20][ext]',
+          outputPath: 'images/', // build/package/js/images/
+          publicPath: '/assets/js/images/', // Dashboard assets path
+        },
       },
       {
         test: /\.jsx?$/,
@@ -722,6 +728,13 @@ function createWebpackConfig({
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,
           proxy: [
+            {
+              context: ['/cable'],
+              target: 'ws://localhost-studio.code.org:3000',
+              changeOrigin: false,
+              logLevel: 'debug',
+              ws: true,
+            },
             {
               context: ['**'],
               target: 'http://localhost-studio.code.org:3000',

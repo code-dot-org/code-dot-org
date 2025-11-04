@@ -887,4 +887,8 @@ export default class MusicBlocklyWorkspace {
     }
     this.workspace.undo(redo);
   }
+
+  getBlockCount(): number {
+    return this.workspace?.getAllBlocks().length || 0;
+  }
 }

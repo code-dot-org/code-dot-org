@@ -322,8 +322,8 @@ class UnitGroup < ApplicationRecord
           unit_group_unit = unit.unit_group_units.find {|ugu| ugu.unit_group == self}
           unit.summarize(include_lessons, user, unit_group_unit: unit_group_unit).merge!(unit.summarize_i18n_for_display(unit_group_unit: unit_group_unit))
         end,
-        teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-        student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        teacher_resources: resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        student_resources: student_resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown),
         is_migrated: has_migrated_unit?,
         has_verified_resources: has_verified_resources?,
         numbered_units: numbered_units,

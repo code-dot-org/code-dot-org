@@ -5,16 +5,17 @@ import {
   enableUserAddedSelectionContext,
   getFolderPath,
   getPossibleDestinationFoldersForFile,
-  sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
 
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -29,7 +30,7 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
  */
 const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
   fileDownload(file.contents, file.name);
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
 };
 
 /**
@@ -95,7 +96,7 @@ export const useFileRowOptions = (
         clickHandler: () => openRenameFilePrompt({fileId: file.id}),
       },
       {
-        condition: enableUserAddedSelectionContext(appName, file),
+        condition: enableUserAddedSelectionContext(appName, file.url),
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {
@@ -104,6 +105,13 @@ export const useFileRowOptions = (
           if (folderPath !== '/') {
             fullFilename = (folderPath + '/' + file.name).substring(1); // remove leading slash
           }
+          dispatch(
+            sendAnalytics(EVENTS.AI_TUTOR_FILE_ADDED_TO_CONTEXT, {
+              file: fullFilename,
+              codingLanguage:
+                fullFilename?.split('.').pop()?.toLowerCase() || '',
+            })
+          );
           dispatch(
             addItemToUserAddedSelectionContext({
               displayName: fullFilename,

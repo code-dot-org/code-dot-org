@@ -1,0 +1,80 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-22T00:40:23.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "display_name": "Order a Pizza",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Pizza Order</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <h1>🍕 Pizza Order Form</h1>\n\n  <label>Choose Size:</label>\n  <select id=\"sizeSelect\">\n    <option value=\"Small\">Small</option>\n    <option value=\"Medium\">Medium</option>\n    <option value=\"Large\">Large</option>\n  </select>\n\n  <br><br>\n\n  <label>Choose Topping:</label>\n  <select id=\"toppingSelect\">\n    <option value=\"Pepperoni\">Pepperoni</option>\n    <option value=\"Olives\">Olives</option>\n    <option value=\"Veggies\">Veggies</option>\n  </select>\n\n  <br><br>\n\n  <button id=\"orderBtn\">Place Order</button>\n\n  <p id=\"output\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- SELECT ELEMENTS ---\nconst sizeSelect = document.getElementById(\"sizeSelect\");\nconst toppingSelect = document.getElementById(\"toppingSelect\");\nconst orderBtn = document.getElementById(\"orderBtn\");\nconst outputElement = document.getElementById(\"output\");\n\n// --- FUNCTION WITH PARAMETERS ---\n\n\n\n\n\n// --- EVENT LISTENER ---\norderBtn.addEventListener(\"click\", () => {\n  const selectedSize = sizeSelect.value;\n  const selectedTopping = toppingSelect.value;\n  orderPizza(selectedSize, selectedTopping);\n});\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  text-align: center;\n  margin-top: 50px;\n}\n\nselect, button {\n  padding: 6px 10px;\n  margin: 5px;\n  font-size: 16px;\n}\n\n#output {\n  margin-top: 20px;\n  font-weight: bold;\n  font-size: 18px;\n  color: darkred;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "documentation.md",
+          "language": "md",
+          "contents": "# Function: <orderPizza>\n\n# What it does\nDisplay a confirmation message for the user’s pizza order based on their selections.\n\n# Inputs\nsize — the chosen pizza size (string)\ntopping — the chosen topping (string)\n\n# What it changes\nVariables: Sets a local message string.\nOn screen: Updates outputElement.textContent to show message \n(e.g., “Order: Small pizza with pepperoni.”)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nfFr68Rq/3TQ4hdq5etl481tSaPHsRYQKDp8=\n",
+    "long_instructions": "# Order a Pizza\r\n\r\n1. Create a function called `orderPizza` that takes in two parameters.\r\n2. Build a message using the parameters.\r\n3. Display the message on screen.\r\n\r\n_Challenge: Add another dropdown field to add an additional topping to the pizza._",
+    "bubble_choice_description": "Code a function that takes in two parameters and updates the pizza order.",
+    "thumbnail_url": "https://images.code.org/6c22bc32112c1f36a24794d345486e74-Screenshot 2025-10-21 at 7.56.48 PM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-22T00:40:23.004+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level4b-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level4b-test-2025\"},{\"changed_at\":\"2025-10-22 00:40:24 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 01:56:31 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 02:00:18 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 02:00:28 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 02:00:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 02:02:47 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 02:04:18 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:35:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:43:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 17:48:39 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

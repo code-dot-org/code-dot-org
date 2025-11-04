@@ -1,4 +1,7 @@
-import {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
+import {
+  AdlibType,
+  AdlibChoices,
+} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetLocalStorage} from '@cdo/apps/utils';
@@ -68,7 +71,8 @@ export const computeEventMeasures = (events: PlaybackEvent[]) => {
 export const generateSongAi = async (
   contextText: string,
   packId: string,
-  promptText: string
+  promptText: string,
+  promptTextExtra?: string
 ) => {
   const library = MusicLibrary.getInstance();
   const sounds =
@@ -98,11 +102,18 @@ export const generateSongAi = async (
 
   console.log('Starting AI ask...');
 
+  // It's possible that the extra prompt text references the drums.
+  const promptTextExtraWithDrums = promptTextExtra?.replace(
+    '{drumSounds}',
+    drumSounds
+  );
+
   const result = await askAi(
     'Here is the context: \n\n' +
       GenerateContext(contextText, sounds, drumSounds) +
       '\n\n And here is the request: \n\n' +
-      promptText
+      promptText +
+      (promptTextExtraWithDrums ? '\n\n' + promptTextExtraWithDrums : '')
   );
 
   if (result.length > 1 && result[1].status === AiInteractionStatus.OK) {
@@ -116,14 +127,16 @@ export const generateSongAi = async (
 
 // Generate song code by retrieving from an online cache.
 export const generateSongCache = async (
-  adlibs: AdlibsType,
-  adlibOption: string,
+  adlibId: string,
+  adlib: AdlibType,
   packId: string,
-  choices: string[] | undefined
+  adlibChoices: AdlibChoices
 ) => {
-  const variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
-  const joinedChoices = choices?.join('-');
-  const cacheFilePath = `${baseAssetUrl}generate/music/${packId}-${adlibOption}-${joinedChoices}-${variant
+  const variant = getRandomInt(0, adlib.variantCount - 1);
+  const joinedChoices = Object.keys(adlibChoices)
+    .map(key => adlibChoices[key])
+    .join('-');
+  const cacheFilePath = `${baseAssetUrl}generate/music/${packId}-${adlibId}-${joinedChoices}-${variant
     .toString()
     .padStart(2, '0')}.txt`;
   console.log(cacheFilePath);

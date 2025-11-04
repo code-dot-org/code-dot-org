@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-10-23T17:44:06.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "CSS (Cascading Style Sheets)",
+    "display_name": "CSS",
+    "long_instructions": "Define the term in your own words. Use examples from the lesson to explain your thinking and take notes on anything that helps you remember how it works.",
+    "thumbnail_url": "https://images.code.org/59a22848c8830b0f6c5de941fda787a0-css-icon.png",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-23T17:44:06.288+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson1-vocab-frq-css-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson1-vocab-frq-css-test-2025\"},{\"changed_at\":\"2025-10-23 19:00:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

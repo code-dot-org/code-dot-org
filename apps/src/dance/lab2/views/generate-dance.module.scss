@@ -1,0 +1,20 @@
+.buttonWide {
+  flex: 1;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.markdown {
+  h1, h2, h3, h4 {
+    font-size: 24px;
+  }
+
+  p, li {
+    font-size: 16px;
+  }
+}

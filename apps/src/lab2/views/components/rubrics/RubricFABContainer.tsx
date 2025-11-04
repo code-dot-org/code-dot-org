@@ -1,7 +1,6 @@
 import React, {useEffect, useMemo} from 'react';
 
 import {isLabLoading} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -30,9 +29,6 @@ const RubricFABContainer: React.FC = () => {
   const courseName = useAppSelector(state => state.progress.courseName);
   const unitName = useAppSelector(state => state.progress.scriptName);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const isProjectLevel = useAppSelector(
-    state => state.lab.levelProperties?.isProjectLevel
-  );
 
   const studentLevelInfo = useMemo(() => {
     const userLevel = levelsWithProgress?.find(
@@ -68,9 +64,7 @@ const RubricFABContainer: React.FC = () => {
     showRubric &&
     !labLoading &&
     !isLoadingRubric &&
-    rubricData &&
-    // Only show the rubric FAB is the resource panel is enabled
-    isUsingResourcePanel(appName, isProjectLevel || false);
+    rubricData;
 
   // Temporary hack: show/hide the AI Differentiation FAB based on if the Rubric FAB is showing.
   // Note that currently, the AI Diff FAB will be out of date on Lab2 levels since it relies on

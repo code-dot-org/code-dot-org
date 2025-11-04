@@ -12,7 +12,7 @@ class AichatGeminiClientTest < AichatAiClientTest
     {
       temperature: 1.0,
       thinkingConfig: {
-        thinkingBudget: 0
+        thinkingBudget: 2000
       }
     }
   end

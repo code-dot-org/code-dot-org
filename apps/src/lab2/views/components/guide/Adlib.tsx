@@ -1,12 +1,14 @@
-import {sample} from 'lodash';
-import React, {useEffect, useMemo, useState} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useMemo} from 'react';
 import reactStringReplace from 'react-string-replace';
 
 import styles from './Adlib.module.scss';
 
+export type AdlibChoices = {[key: string]: string};
+
 export type AdlibType = {
   template: string;
-  options: {[key: string]: string[]};
+  options: {[key: string]: {id: string; text: string}[]};
   variantCount: number;
 };
 
@@ -15,9 +17,13 @@ export type AdlibsType = {
 };
 
 interface AdlibProps {
+  children?: React.ReactNode;
   adlib: AdlibType;
-  onChange: (value: string, choices: string[]) => void;
-  className?: string;
+  adlibChoices: AdlibChoices;
+  readOnly?: boolean;
+  glowSpeed?: 'normal' | 'fast';
+  onChoicesChange: (choices: {[key: string]: string}) => void;
+  onTextChange: (promptText: string) => void;
 }
 
 // This component takes a template string with placeholders in {curly braces}
@@ -25,38 +31,41 @@ interface AdlibProps {
 // dropdowns to select the options.  When the selected options change, it calls
 // onChange with the filled-in text.
 const Adlib: React.FunctionComponent<AdlibProps> = ({
+  children,
   adlib,
-  onChange,
-  className,
+  adlibChoices,
+  readOnly,
+  glowSpeed,
+  onChoicesChange,
+  onTextChange,
 }) => {
-  const [adlibOptions, setAdlibOptions] = useState<{[key: string]: string}>({});
   const {template, options} = adlib;
-
-  // Initialize defaults.
-  useEffect(() => {
-    const initialOptions: {[key: string]: string} = {};
-    Object.keys(options).forEach(key => {
-      initialOptions[key] = sample(options[key]) || '';
-    });
-    setAdlibOptions(initialOptions);
-  }, [options]);
 
   // Compute filled text.
   const filledAdlibText = useMemo(() => {
     let output = template;
     Object.keys(options).forEach(key => {
-      output = output.replace(`{${key}}`, adlibOptions[key]);
+      output = output.replace(
+        `{${key}}`,
+        options[key].find(option => option.id === adlibChoices[key])?.text || ''
+      );
     });
     return output;
-  }, [adlibOptions, options, template]);
+  }, [adlibChoices, options, template]);
 
+  useEffect(() => {
+    onTextChange(filledAdlibText);
+  }, [filledAdlibText, onTextChange]);
+
+  /*
   // Compute joined choices text.
   const choices = useMemo(() => {
     const output = Object.keys(options).map(key => {
-      return adlibOptions[key];
+      return adlibChoices[key];
     });
     return output;
-  }, [adlibOptions, options]);
+  }, [adlibChoices, options]);
+  */
 
   // Compute HTML.
   const adlibHtml = useMemo(() => {
@@ -68,17 +77,17 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
             key={key}
             id={key}
             className={styles.select}
-            value={adlibOptions[key]}
+            value={adlibChoices[key]}
             onChange={event => {
-              setAdlibOptions({
-                ...adlibOptions,
+              onChoicesChange({
+                ...adlibChoices,
                 [key]: event.target.value,
               });
             }}
           >
             {options[key].map(option => (
-              <option key={option} value={option}>
-                {option}
+              <option key={option.id} value={option.id}>
+                {option.text}
               </option>
             ))}
           </select>
@@ -87,14 +96,32 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     });
 
     return output;
-  }, [adlibOptions, options, template]);
+  }, [adlibChoices, onChoicesChange, options, template]);
 
+  /*
   // Notify parent when choices change.
   useEffect(() => {
     onChange(filledAdlibText, choices);
-  }, [adlibOptions, choices, filledAdlibText, onChange]);
+  }, [choices, filledAdlibText, onChange]);
+  */
 
-  return <div className={className}>{adlibHtml}</div>;
+  return (
+    <div
+      className={classNames(
+        styles.adlib,
+        glowSpeed === 'fast'
+          ? styles.adlibFastGlowSpeed
+          : glowSpeed === 'normal'
+          ? styles.adlibNormalGlowSpeed
+          : undefined
+      )}
+    >
+      <div className={styles.adlibInner}>
+        <div>{readOnly ? filledAdlibText : adlibHtml}</div>
+        {children}
+      </div>
+    </div>
+  );
 };
 
 export default Adlib;

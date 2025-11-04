@@ -37,10 +37,7 @@ class AichatAiClient
 
     response_time = Time.now - start_time
 
-    # Disable metrics temporarily for gemini until reporter is customized for gemini.
-    if is_a?(AichatOpenaiResponsesClient)
-      usage_reporter&.report_usage_and_throttling_metrics(usage, config, request, context, response_time)
-    end
+    usage_reporter&.report_usage_and_throttling_metrics(usage, config, request, context, response_time)
 
     raise StandardError.new("Unexpected response from AI API: #{http_response.body}") unless response_text
 
@@ -93,25 +90,6 @@ class AichatAiClient
     {
       "Content-Type" => "application/json",
     }
-  end
-
-  # Helper to determine if a filename is an image (by extension).
-  private def file_is_image?(filename)
-    # Assumes if not PDF than is an image but this could be improved
-    # with a list of supported extensions shared w/ frontend.
-    !file_is_pdf?(filename)
-  end
-
-  # Helper to determine if a filename is a PDF (by extension).
-  private def file_is_pdf?(filename)
-    File.extname(filename) == '.pdf'
-  end
-
-  # Get message text, including any hidden context
-  private def get_message_text(message)
-    text = message['chatMessageText']
-    text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
-    text
   end
 
   private def raise_not_implemented_error

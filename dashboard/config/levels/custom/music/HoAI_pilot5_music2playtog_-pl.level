@@ -1,0 +1,147 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-10-08T22:02:13.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "instructions_important": "false",
+    "long_instructions": "#### Play Together\r\nPlay two or more sounds at the same time.\r\n- Add two different [sounds](#clickable=play-sound-block) _into_ the [play together](#clickable=play-sounds-together-block-workspace) block. ",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
+        "message": "Those sounds are great together!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-playtogether_795b9999-0f45-441c-bd81-23af6c157f81",
+        "message": "Play two different [sounds](#clickable=play-sound-block) in the [play together](#clickable=id-up-left:play_sounds_together) block.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together",
+            "value": 1
+          }
+        ],
+        "callout": "id-up-left:play_sounds_together"
+      },
+      {
+        "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
+        "message": "No sounds have played yet. Add two [play](#clickable=play-sound-block) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "play-sound-block---play-sounds-together-block-workspace-up-inside"
+      }
+    ],
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together_no_next",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "library": "launch2024",
+      "sounds": {
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip",
+          "guitar_fit",
+          "guitar_pocket",
+          "horns",
+          "piano_chords",
+          "piano_clout",
+          "piano_fresh",
+          "piano_round",
+          "piano_slice",
+          "piano_warble",
+          "string_burst",
+          "synth_brass",
+          "synth_whistle",
+          "brass",
+          "brass_short",
+          "dark_sweep_crash",
+          "dive",
+          "kick_impact",
+          "bubble",
+          "vibraslap"
+        ]
+      },
+      "packId": "default"
+    },
+    "name_suffix": "_-pl",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-08T22:02:13.435+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot5_music2playtog\\\"\"],\"cloned_from\":\"HoAI_pilot5_music2playtog\"}]"
+}]]></config>
+  <blocks/>
+</Music>

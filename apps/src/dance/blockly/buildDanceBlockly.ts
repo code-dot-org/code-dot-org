@@ -8,29 +8,74 @@ import {
 
 import getBlockOptions from './getBlockOptions';
 
-const SET_BACKGROUND = 'Dancelab_setBackgroundEffectWithPaletteAI';
-const SET_FOREGROUND = 'Dancelab_setForegroundEffectExtended';
-const CHANGE_MOVE = 'Dancelab_changeMoveEachLR';
+const DANCELAB_PREFIX = 'Dancelab_';
+const GENERATED_PREFIX = 'GeneratedDancers_';
+
+// Try to find a block definition by type string.
+// We don't rely on the exact shape of BlockDefinition; cover common keys.
+function hasBlockType(defs: BlockDefinition[], name: string): boolean {
+  return defs.some(d => d.name === name);
+}
+
+// Given a block type (without block prefix), get the preferred, defined type.
+// Prefers blocks from the GeneratedDancers pool over the standard Dancelab pool.
+// Block pools may vary by level, but all Dance level use the Dancelab pool.
+function getPreferredBlockType(
+  defs: BlockDefinition[],
+  blockType: string
+): string {
+  return hasBlockType(defs, GENERATED_PREFIX + blockType)
+    ? GENERATED_PREFIX + blockType
+    : DANCELAB_PREFIX + blockType;
+}
+
+const MAKE_SPRITE = 'makeAnonymousDanceSprite';
+const CHANGE_MOVE = 'changeMoveEachLR';
+const SET_BACKGROUND = 'setBackgroundEffectWithPalette';
+const SET_FOREGROUND = 'setForegroundEffectExtended';
+const ALTERNATE_MOVES = 'alternateMoves';
+const MAKE_NEW_DANCE_SPRITE_GROUP = 'makeNewDanceSpriteGroup';
 
 function randomElement<T>(array: readonly T[]): T {
   return array[Math.floor(Math.random() * array.length)];
-}
-
-function uidFactory(prefix: string): () => string {
-  let i = 0;
-  return () => `${prefix}_${++i}`;
 }
 
 function randomField(name: string, options: string[]): string {
   return `<field name="${name}">${randomElement(options)}</field>`;
 }
 
-function groupSpritesField(): string {
-  return '<field name="GROUP">sprites</field>';
+function field(name: string, option: string): string {
+  return `<field name="${name}">${option}</field>`;
+}
+
+function groupSpritesField(
+  backgroundDancers: string,
+  simpleCode: boolean
+): string {
+  // The config value determines the selectable options in the dropdown.
+  // If there are no background dancers, the only option is the generated dancer.
+  // If there are background dancers, the options are (all) sprites, the generated dancer and the background dancers.
+  const configValue =
+    backgroundDancers === 'nobody'
+      ? '&quot;GENERATED_DANCER&quot;'
+      : `sprites,&quot;GENERATED_DANCER&quot;,&quot;${backgroundDancers.toUpperCase()}&quot;`;
+  const configAttribute = simpleCode ? `config="${configValue}"` : '';
+  // The field value determines the default selected option in the dropdown.
+  const fieldValue =
+    backgroundDancers === 'nobody' ? '&quot;GENERATED_DANCER&quot;' : `sprites`;
+  return `<field name="GROUP" ${configAttribute}>${fieldValue}</field>`;
+}
+
+function costumeSpritesField(
+  backgroundDancers: string,
+  simpleCode: boolean
+): string {
+  const escapedValue = `&quot;${backgroundDancers.toUpperCase()}&quot;`;
+  const configAttribute = simpleCode ? `config="${escapedValue}"` : '';
+  return `<field name="COSTUME" ${configAttribute}>${escapedValue}</field>`;
 }
 
 function dirLeftRightField(value: -1 | 1): string {
-  // -1 means both or "left/right" depending on block impl; matches your example
   return `<field name="DIR">${value}</field>`;
 }
 
@@ -39,13 +84,12 @@ function unitMeasuresField(): string {
 }
 
 function makeSetBackgroundBlock(
-  id: string,
+  type: string,
   effects: string[],
   palettes: string[]
 ): JsonBlockConfig {
   return {
-    type: SET_BACKGROUND,
-    id,
+    type,
     fields: {
       PALETTE: randomField('PALETTE', palettes),
       EFFECT: randomField('EFFECT', effects),
@@ -54,27 +98,64 @@ function makeSetBackgroundBlock(
 }
 
 function makeSetForegroundBlock(
-  id: string,
+  type: string,
   effects: string[]
 ): JsonBlockConfig {
   return {
-    type: SET_FOREGROUND,
-    id,
+    type,
     fields: {
       EFFECT: randomField('EFFECT', effects),
     },
   };
 }
 
+function makeAlternateMovesBlock(
+  type: string,
+  moves: string[],
+  backgroundDancers: string,
+  simpleCode: boolean
+): JsonBlockConfig {
+  const move1 = randomElement(moves);
+  const move2 = randomElement(moves.filter(move => move !== move1));
+  return {
+    type,
+    fields: {
+      GROUP: groupSpritesField(backgroundDancers, simpleCode),
+      N: '2',
+      MOVE1: field('MOVE', move1),
+      MOVE2: field('MOVE', move2),
+    },
+  };
+}
+
+function makeNewDanceSpriteGroupBlock(
+  type: string,
+  backgroundDancers: string,
+  layouts: string[],
+  simpleCode: boolean
+): JsonBlockConfig {
+  const layoutFieldValue = randomElement(layouts);
+  const nFieldValue = bestLayouts[layoutFieldValue];
+  return {
+    type,
+    fields: {
+      N: nFieldValue,
+      COSTUME: costumeSpritesField(backgroundDancers, simpleCode),
+      LAYOUT: field('LAYOUT', layoutFieldValue),
+    },
+  };
+}
+
 function makeChangeMoveEachLRBlock(
-  id: string,
-  moves: string[]
+  type: string,
+  moves: string[],
+  backgroundDancers: string,
+  simpleCode: boolean
 ): JsonBlockConfig {
   return {
-    type: CHANGE_MOVE,
-    id,
+    type,
     fields: {
-      GROUP: groupSpritesField(),
+      GROUP: groupSpritesField(backgroundDancers, simpleCode),
       MOVE: randomField('MOVE', moves),
       DIR: dirLeftRightField(randomElement([-1, 1])),
     },
@@ -93,6 +174,58 @@ function chainBlocks(
   return head;
 }
 
+const backgroundsChill = [
+  '"quads"',
+  '"blooming_petals"',
+  '"clouds"',
+  '"color_cycle"',
+  '"frosted_grid"',
+  '"splatter"',
+  '"rainbow"',
+  '"snowflakes"',
+  '"text"',
+  '"sparkles"',
+  '"spiral"',
+  '"squiggles"',
+  '"stars"',
+  '"music_wave"',
+];
+
+const foregroundsChill = [
+  '"bubbles"',
+  '"confetti"',
+  '"hearts_colorful"',
+  '"hearts_red"',
+  '"music_notes"',
+  '"paint_drip"',
+  '"rain"',
+  '"raining_tacos"',
+];
+
+const movesChill = [
+  'MOVES.Roll',
+  'MOVES.Dab',
+  'MOVES.Floss',
+  'MOVES.Fresh',
+  'MOVES.ThisOrThat',
+  'MOVES.Rest',
+];
+
+/**
+ * A mapping of layouts that work best with a large, central dancer sprite
+ * and a good starting number of sprites for that layout.
+ * */
+const bestLayouts: Record<string, string> = {
+  '"border"': '16',
+  '"diamond"': '16',
+  '"circle"': '10',
+  '"grid"': '16',
+  '"top"': '4',
+  '"row"': '4',
+  '"bottom"': '4',
+  '"x"': '8',
+};
+
 /**
  * Build Blockly JSON for a simple dance that reacts at given measures.
  * - Creates a CAT sprite at center on setup
@@ -101,57 +234,132 @@ function chainBlocks(
  */
 export default function buildDanceBlockly(
   measures: number[],
-  blockDefinitions: BlockDefinition[]
+  blockDefinitions: BlockDefinition[],
+  codeComplexity: 'simple' | 'complex',
+  energy: 'chill' | 'high',
+  backgroundDancers: string
 ): WorkspaceSerialization {
-  const makeId = uidFactory('id');
+  const changeMoveBlockType = getPreferredBlockType(
+    blockDefinitions,
+    CHANGE_MOVE
+  );
+  const setBackgroundBlockType = getPreferredBlockType(
+    blockDefinitions,
+    SET_BACKGROUND
+  );
+  const setForegroundBlockType = getPreferredBlockType(
+    blockDefinitions,
+    SET_FOREGROUND
+  );
+  const makeSpriteBlockType = getPreferredBlockType(
+    blockDefinitions,
+    MAKE_SPRITE
+  );
+  const alternateMovesBlockType = getPreferredBlockType(
+    blockDefinitions,
+    ALTERNATE_MOVES
+  );
+  const makeNewDanceSpriteGroupBlockType = getPreferredBlockType(
+    blockDefinitions,
+    MAKE_NEW_DANCE_SPRITE_GROUP
+  );
 
   const validMoves = getBlockOptions(
     blockDefinitions,
-    CHANGE_MOVE,
+    changeMoveBlockType,
     'MOVE'
-  ).filter(option => !['"next"', '"prev"', '"rand"'].includes(option));
+  ).filter(
+    option =>
+      !['"next"', '"prev"', '"rand"'].includes(option) &&
+      (energy === 'chill'
+        ? movesChill.includes(option)
+        : !movesChill.includes(option))
+  );
 
   const validBackgrounds = getBlockOptions(
     blockDefinitions,
-    SET_BACKGROUND,
+    setBackgroundBlockType,
     'EFFECT'
-  ).filter(option => !['"none"', '"rand"'].includes(option));
+  ).filter(
+    option =>
+      !['"none"', '"rand"'].includes(option) &&
+      (energy === 'chill'
+        ? backgroundsChill.includes(option)
+        : !backgroundsChill.includes(option))
+  );
 
   const validForegrounds = getBlockOptions(
     blockDefinitions,
-    SET_FOREGROUND,
+    setForegroundBlockType,
     'EFFECT'
-  ).filter(option => !['"none"', '"rand"'].includes(option));
+  ).filter(
+    option =>
+      !['"none"', '"rand"'].includes(option) &&
+      (energy === 'chill'
+        ? foregroundsChill.includes(option)
+        : !foregroundsChill.includes(option))
+  );
 
   const validPalettes = getBlockOptions(
     blockDefinitions,
-    SET_BACKGROUND,
+    setBackgroundBlockType,
     'PALETTE'
   );
 
+  const validLayouts = getBlockOptions(
+    blockDefinitions,
+    makeNewDanceSpriteGroupBlockType,
+    'LAYOUT'
+  ).filter(option => Object.keys(bestLayouts).includes(option));
+
   // Setup: create sprite → change move → start background → start foreground
   const makeSprite: JsonBlockConfig = {
-    type: 'Dancelab_makeAnonymousDanceSprite',
-    id: makeId(),
+    type: makeSpriteBlockType,
     fields: {
-      COSTUME: '<field name="COSTUME">"CAT"</field>',
       LOCATION: '<field name="LOCATION">{x: 200, y: 200}</field>',
     },
   };
 
-  const initialChangeMove = makeChangeMoveEachLRBlock(makeId(), validMoves);
+  const initialChangeMove = makeChangeMoveEachLRBlock(
+    changeMoveBlockType,
+    validMoves,
+    backgroundDancers,
+    codeComplexity === 'simple'
+  );
   const initialBg = makeSetBackgroundBlock(
-    makeId(),
+    setBackgroundBlockType,
     validBackgrounds,
     validPalettes
   );
-  const initialFg = makeSetForegroundBlock(makeId(), validForegrounds);
+  const initialFg = makeSetForegroundBlock(
+    setForegroundBlockType,
+    validForegrounds
+  );
+
+  const danceSpriteGroup =
+    backgroundDancers !== 'nobody'
+      ? makeNewDanceSpriteGroupBlock(
+          makeNewDanceSpriteGroupBlockType,
+          backgroundDancers,
+          validLayouts,
+          codeComplexity === 'simple'
+        )
+      : null;
+
+  const alternateMoves = makeAlternateMovesBlock(
+    alternateMovesBlockType,
+    validMoves,
+    backgroundDancers,
+    codeComplexity === 'simple'
+  );
 
   const setupDoChain = chainBlocks(
     makeSprite,
-    initialChangeMove,
+    ...(danceSpriteGroup ? [danceSpriteGroup] : []),
     initialBg,
-    initialFg
+    initialFg,
+    ...(codeComplexity === 'complex' ? [initialChangeMove] : []),
+    ...(codeComplexity === 'simple' ? [alternateMoves] : [])
   );
 
   const setupBlock: JsonBlockConfig = {
@@ -170,19 +378,24 @@ export default function buildDanceBlockly(
   const eventBlocks: JsonBlockConfig[] = measures.map(
     (m, idx): JsonBlockConfig => {
       const bg = makeSetBackgroundBlock(
-        makeId(),
+        setBackgroundBlockType,
         validBackgrounds,
         validPalettes
       );
-      const fg = makeSetForegroundBlock(makeId(), validForegrounds);
-      const move = makeChangeMoveEachLRBlock(makeId(), validMoves);
+      const fg = makeSetForegroundBlock(
+        setForegroundBlockType,
+        validForegrounds
+      );
+      const move = makeChangeMoveEachLRBlock(
+        changeMoveBlockType,
+        validMoves,
+        backgroundDancers,
+        codeComplexity === 'simple'
+      );
       const chain = chainBlocks(bg, fg, move);
 
       return {
         type: 'Dancelab_atTimestampNotAfter',
-        id: makeId(),
-        x: 24 + (idx % 2) * 6, // tiny stagger to avoid exact overlap
-        y: 200 + idx * 180, // vertical spacing between event stacks
         fields: {
           TIMESTAMP: m,
           UNIT: unitMeasuresField(),
@@ -192,7 +405,10 @@ export default function buildDanceBlockly(
     }
   );
 
-  const blocks: JsonBlockConfig[] = [setupBlock, ...eventBlocks];
+  const blocks: JsonBlockConfig[] = [
+    setupBlock,
+    ...(codeComplexity === 'complex' ? eventBlocks : []),
+  ];
 
   return {
     blocks: {

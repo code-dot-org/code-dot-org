@@ -47,6 +47,30 @@ class ProxyHelperTest < ActionView::TestCase
     refute allowed_ip_address?('resolves.to.private.ip.example.net')
   end
 
+  test 'resolve_and_validate_ip_address returns IP string for allowed addresses' do
+    hostname = 'google.com'
+    IPSocket.expects(:getaddress).with(hostname).returns('8.8.8.8')
+    result = resolve_and_validate_ip_address(hostname)
+    assert_equal '8.8.8.8', result
+  end
+
+  test 'resolve_and_validate_ip_address returns nil for disallowed addresses' do
+    hostname = 'private.example.com'
+    IPSocket.expects(:getaddress).with(hostname).returns('169.254.0.0')
+    ProxyHelper.stubs(:dashboard_ip_address).returns('127.0.0.1')
+    result = resolve_and_validate_ip_address(hostname)
+    assert_nil result
+  end
+
+  test 'resolve_and_validate_ip_address returns dashboard IP for dashboard hostname' do
+    hostname = 'dashboard.example.com'
+    dashboard_ip = '127.0.0.1'
+    IPSocket.expects(:getaddress).with(hostname).returns(dashboard_ip)
+    ProxyHelper.stubs(:dashboard_ip_address).returns(dashboard_ip)
+    result = resolve_and_validate_ip_address(hostname)
+    assert_equal dashboard_ip, result
+  end
+
   test 'disallows private IP address provided as hostname' do
     refute allowed_ip_address?('169.254.0.0')
   end

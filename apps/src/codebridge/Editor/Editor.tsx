@@ -1,4 +1,3 @@
-import {BodyOneText} from '@code-dot-org/component-library/typography';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {esLint} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
@@ -14,6 +13,8 @@ import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
 import React, {useCallback, useMemo} from 'react';
 
+import {CodebridgeEmptyState} from '@cdo/apps/codebridge/components/CodebridgeEmptyState';
+import emptyFilesPlaceholderImage from '@cdo/apps/codebridge/images/empty-files-placeholder.svg';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
@@ -21,7 +22,13 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {editableFileType, viewableImageFileType} from '../utils';
+import {
+  editableFileType,
+  enableUserAddedSelectionContext,
+  viewableImageFileType,
+} from '../utils';
+
+import {getAddToAiTutorField} from './addToAiTutorField';
 
 import moduleStyles from './styles/editor.module.scss';
 
@@ -48,8 +55,17 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   );
 
   const editorConfigExtensions = useMemo(() => {
+    const extensions: Extension[] = [];
+    if (
+      file?.name &&
+      enableUserAddedSelectionContext(levelProperties.appName, file?.url)
+    ) {
+      const addToAiTutorField = getAddToAiTutorField(file.name, dispatch);
+      extensions.push(addToAiTutorField);
+    }
+
     if (file?.language && langMapping[file.language]) {
-      const extensions: Extension[] = [langMapping[file.language]];
+      extensions.push(langMapping[file.language]);
       if (file.language === 'js') {
         // eslint configuration
         const config = {
@@ -74,12 +90,16 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
           })
         );
       }
-
-      return extensions;
-    } else {
-      return [];
     }
-  }, [file?.language, langMapping]);
+    return extensions;
+  }, [
+    dispatch,
+    file?.language,
+    file?.name,
+    file?.url,
+    langMapping,
+    levelProperties.appName,
+  ]);
 
   if (file?.url && viewableImageFileType(file.language)) {
     return (
@@ -106,11 +126,11 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
           editorConfigExtensions={editorConfigExtensions}
         />
       ) : (
-        <div className={moduleStyles.noOpenFilesContainer}>
-          <BodyOneText className={moduleStyles.noOpenFilesMessage}>
-            {codebridgeI18n.noOpenFiles()}
-          </BodyOneText>
-        </div>
+        <CodebridgeEmptyState
+          imageProps={{src: emptyFilesPlaceholderImage}}
+          title={codebridgeI18n.noFilesOpen()}
+          description={codebridgeI18n.noFilesOpenDescription()}
+        />
       )}
     </div>
   );

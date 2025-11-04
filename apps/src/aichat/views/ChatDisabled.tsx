@@ -1,7 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {FC} from 'react';
-
-import aiBotLockedIcon from '@cdo/static/aichat/ai-bot-locked-icon.png';
 
 import aichatI18n from '../locale';
 
@@ -12,7 +11,11 @@ export const ChatDisabled: FC<{message?: string}> = ({
 }) => {
   return (
     <div className={styles.chatDisabledContainer}>
-      <img src={aiBotLockedIcon} alt="" className={styles.chatDisabledIcon} />
+      <FontAwesomeV6Icon
+        className={styles.chatDisabledIcon}
+        iconName="ai-locked"
+        iconFamily="kit"
+      />
       <BodyThreeText>{message}</BodyThreeText>
     </div>
   );

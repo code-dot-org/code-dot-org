@@ -15,6 +15,7 @@ export default function reducer(state = initialState, action) {
       open: true,
       imgOnly: action.imgOnly,
       imgUrl: action.imgUrl,
+      imgAlt: action.imgAlt,
     };
   }
 
@@ -29,10 +30,11 @@ export default function reducer(state = initialState, action) {
   return state;
 }
 
-export const openDialog = ({imgOnly, imgUrl}) => ({
+export const openDialog = ({imgOnly, imgUrl, imgAlt}) => ({
   type: OPEN_DIALOG,
   imgOnly,
   imgUrl,
+  imgAlt,
 });
 
 export const closeDialog = () => ({type: CLOSE_DIALOG});

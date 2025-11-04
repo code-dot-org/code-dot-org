@@ -1,15 +1,17 @@
 'use client';
 import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
 import {FacetResult, InternalTypedDocument, Orama, search} from '@orama/orama';
 import {restore} from '@orama/plugin-data-persistence';
 import {useSearchParams} from 'next/navigation';
 import {ChangeEvent, ComponentProps, useEffect, useState} from 'react';
+import {useDebouncedCallback} from 'use-debounce';
 
 import FacetBar from '@/components/contentful/activityCatalog/facetBar/facetBar';
 import FacetDrawer from '@/components/contentful/activityCatalog/facetDrawer/facetDrawer';
-import Section from '@/components/contentful/section';
 import ActivityCollection from '@/components/csforall/activityCollection/ActivityCollection';
 import {ActivitySchema} from '@/modules/activityCatalog/orama/schema/ActivitySchema';
 import {OramaActivity} from '@/modules/activityCatalog/types/Activity';
@@ -81,35 +83,35 @@ const ActivityCatalog = ({
    * @param searchTerm - The current search term to serialize.
    * @param selectedFacets - The currently selected facets to serialize.
    */
-  const serializeClientState = (
-    searchTerm: string,
-    selectedFacets: Record<string, Set<string>>,
-  ) => {
-    const params = new URLSearchParams();
+  const serializeClientState = useDebouncedCallback(
+    (searchTerm: string, selectedFacets: Record<string, Set<string>>) => {
+      const params = new URLSearchParams();
 
-    /**
-     * For each selected facet, add it to the URL search params as a comma-separated list.
-     * Each value is individually encoded to handle commas and special characters.
-     */
-    Object.entries(selectedFacets).forEach(([facet, values]) => {
-      if (values.size > 0) {
-        // The value may contain commas, so encode each value individually.
-        const encodedValues = Array.from(values).map(v =>
-          encodeURIComponent(v),
-        );
-        params.set(facet, encodedValues.join(','));
-      }
-    });
+      /**
+       * For each selected facet, add it to the URL search params as a comma-separated list.
+       * Each value is individually encoded to handle commas and special characters.
+       */
+      Object.entries(selectedFacets).forEach(([facet, values]) => {
+        if (values.size > 0) {
+          // The value may contain commas, so encode each value individually.
+          const encodedValues = Array.from(values).map(v =>
+            encodeURIComponent(v),
+          );
+          params.set(facet, encodedValues.join(','));
+        }
+      });
 
-    // Update the URL without reloading the page
-    // Note: Using pushState instead of router.push to avoid extraneous RSC requests
-    // See: https://nextjs.org/docs/app/guides/single-page-applications#shallow-routing-on-the-client
-    window.history.pushState(
-      null,
-      '',
-      `?term=${encodeURIComponent(searchTerm)}&${params.toString()}`,
-    );
-  };
+      // Update the URL without reloading the page
+      // Note: Using pushState instead of router.push to avoid extraneous RSC requests
+      // See: https://nextjs.org/docs/app/guides/single-page-applications#shallow-routing-on-the-client
+      window.history.pushState(
+        null,
+        '',
+        `?term=${encodeURIComponent(searchTerm)}&${params.toString()}`,
+      );
+    },
+    250, // Debounce by 250ms to avoid excessive URL updates while typing
+  );
 
   /**
    * Deserializes the selected facets from the URL search params.
@@ -158,7 +160,7 @@ const ActivityCatalog = ({
       (acc, [facetName, _facetValues]) => {
         const facetValues = _facetValues as Set<string>;
         if (facetValues.size > 0) {
-          acc[facetName] = [...facetValues];
+          acc[facetName] = {containsAny: [...facetValues]};
         }
         return acc;
       },
@@ -192,9 +194,6 @@ const ActivityCatalog = ({
 
     // Update the URL query parameters
     serializeClientState(nextSearchTerm, selectedFacets);
-
-    // Update the search results based on the new search term
-    updateSearchResults(nextSearchTerm, selectedFacets);
   };
 
   /**
@@ -223,16 +222,12 @@ const ActivityCatalog = ({
     setSelectedFacets(newSelectedFacets);
     // Update the URL query parameters
     serializeClientState(searchTerm, newSelectedFacets);
-
-    // Update the search results based on the new selected facets
-    updateSearchResults(searchTerm, newSelectedFacets);
   };
 
   const handleClearAll = () => {
     setSelectedFacets({});
     setSearchTerm('');
     serializeClientState('', {});
-    updateSearchResults('', {});
   };
 
   const toggleFacetDrawer = (isOpen: boolean) => {
@@ -249,30 +244,56 @@ const ActivityCatalog = ({
   };
 
   return (
-    <Section>
+    <Box sx={{p: 1}}>
       <FacetDrawer
         {...facetBarProps}
         isOpen={isFacetDrawerOpen}
         onClose={() => toggleFacetDrawer(false)}
       />
-      <Grid container spacing={3} sx={{justifyContent: 'center'}}>
-        <Grid size={10} sx={{display: {xs: 'none', sm: 'none', md: 'block'}}}>
+
+      <Grid container justifyContent="center" flexWrap={'nowrap'}>
+        <Grid
+          size={3}
+          sx={{
+            display: {xs: 'none', sm: 'none', md: 'block'},
+            maxWidth: 275,
+            flexBasis: 275,
+          }}
+        >
           <FacetBar {...facetBarProps} />
         </Grid>
-
-        <Grid size={2}>
-          <Button
-            onClick={() => toggleFacetDrawer(true)}
-            color={'secondary'}
-            variant={'contained'}
-            size={'small'}
-          >
-            <FilterAltOutlinedIcon /> Filters
-          </Button>
+        <Grid size={9}>
+          <Box sx={{display: 'flex', mb: 2, gap: 2}}>
+            <TextField
+              fullWidth
+              variant="outlined"
+              size="small"
+              placeholder="Search..."
+              aria-label="Search activities"
+              value={searchTerm}
+              onChange={handleSearchTermChange}
+              sx={{
+                backgroundColor: 'background.paper',
+                borderRadius: 2,
+              }}
+            />
+            <Button
+              onClick={() => toggleFacetDrawer(true)}
+              color={'secondary'}
+              variant={'contained'}
+              size={'small'}
+              sx={{
+                display: {xs: 'inline-flex', sm: 'inline-flex', md: 'none'},
+                flexShrink: 0,
+              }}
+            >
+              <FilterAltOutlinedIcon /> Filters
+            </Button>
+          </Box>
+          <ActivityCollection activities={results} />
         </Grid>
       </Grid>
-      <ActivityCollection activities={results} />
-    </Section>
+    </Box>
   );
 };
 

@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-10-22T14:40:23.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "\r\n### AND Logic\r\n\r\n**Do This:**\r\n\r\n1. Before checking both boxes, predict when the result will say **\"Access granted.\"**\r\n2. Then, toggle both checkboxes to test every combination. Notice which combination(s) make the result turn green.\r\n3. In your Activity Guide, complete all 4 rows of the AND (`&&`) truth table and write one sentence explaining what you observed about how the AND operator works.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>AND Logic — Ride Rules</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <main class=\"wrap\">\n    <section class=\"card\">\n      <h1>Ride Rules</h1>\n      <p class=\"subtitle\">Access requires both: a valid ticket <em>and</em> permission.</p>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"hasTicket\" />\n          Has Ticket\n        </label>\n        <span id=\"pillA\" class=\"pill\">false</span>\n      </div>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"hasPermission\" />\n          Has Permission\n        </label>\n        <span id=\"pillB\" class=\"pill\">false</span>\n      </div>\n\n      <p id=\"andResult\" class=\"result no\">No access</p>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nhtml {\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  color: #0f172a;\n  background-color: #f8fafc;\n}\n\n.wrap {\n  max-width: 680px;\n  margin: 48px auto;\n  padding: 0 16px;\n}\n\n.card {\n  background-color: #ffffff;\n  border: 1px solid #e2e8f0;\n  border-radius: 16px;\n  padding: 24px;\n  box-shadow: 0px 2px 10px rgba(2, 6, 23, 0.04);\n}\n\nh1 {\n  margin: 0 0 4px 0;\n  font-size: 24px;\n}\n\n.subtitle {\n  margin: 0 0 16px 0;\n  color: #475569;\n}\n\n.control {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border: 1px solid #e2e8f0;\n  border-radius: 12px;\n  padding: 10px 14px;\n  margin-bottom: 10px;\n  background-color: #ffffff;\n}\n\n.control label {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  font-size: 16px;\n}\n\n.pill {\n  display: inline-block;\n  padding: 4px 10px;\n  border-radius: 999px;\n  border: 1px solid #e2e8f0;\n  font-size: 12px;\n  color: #475569;\n  background-color: #ffffff;\n}\n\n.pill.ok {\n  color: #1a7f37;\n  background-color: #ecfdf3;\n  border-color: #1a7f37;\n}\n\n.pill.no {\n  color: #b42318;\n  background-color: #f9d3cf;\n  border-color: #b42318;\n}\n\n\n.result {\n  margin-top: 16px;\n  font-weight: 700;\n  padding: 12px 14px;\n  border-radius: 10px;\n  border: 1px solid #e2e8f0;\n  text-align: center;\n}\n\n.result.ok {\n  color: #1a7f37;\n  background-color: #ecfdf3;\n  border-color: #abefc6;\n}\n\n.result.no {\n  color: #b42318;\n  background-color: #fef3f2;\n  border-color: #f9d3cf;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Get elements from the page\nlet ticketBox = document.getElementById(\"hasTicket\");\nlet permissionBox = document.getElementById(\"hasPermission\");\nlet result = document.getElementById(\"andResult\");\nlet pillA = document.getElementById(\"pillA\");\nlet pillB = document.getElementById(\"pillB\");\n\n// This function checks both boxes and updates the page\nconst checkAccess = () => {\n  // Step 1: Read current checkbox values\n  let hasTicket = ticketBox.checked;\n  let hasPermission = permissionBox.checked;\n\n  // Step 2: Use AND logic (both must be true)\n  let access = hasTicket && hasPermission;\n\n  // Step 3: Update the main message\n  if (access) {\n    result.textContent = \"Access granted\";\n    result.className = \"result ok\";\n  } else {\n    result.textContent = \"No access\";\n    result.className = \"result no\";\n  }\n\n  // Step 4: Update the small true/false pills\n  pillA.textContent = hasTicket;\n  pillB.textContent = hasPermission;\n\n  if (hasTicket) {\n    pillA.className = \"pill ok\";\n  } else {\n    pillA.className = \"pill no\";\n  }\n\n  if (hasPermission) {\n    pillB.className = \"pill ok\";\n  } else {\n    pillB.className = \"pill no\";\n  }\n}\n\n// Run the function whenever a checkbox changes\nticketBox.addEventListener(\"change\", checkAccess);\npermissionBox.addEventListener(\"change\", checkAccess);\n\n// Run once at the start to set everything\ncheckAccess();\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-22 14:40:25 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 13:23:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:25:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:26:29 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:38:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 13:40:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-31 18:48:05 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 18:48:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 18:49:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

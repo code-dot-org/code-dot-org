@@ -25,11 +25,12 @@ import {
 } from '../../redux';
 import {AssetSource, ChatAsset} from '../../types';
 
-interface UploadButtonProps {
+export interface UploadButtonProps {
   isDisabled: boolean;
   levelName: string;
   buildAssetUrl: (asset: ChatAsset) => string;
   hasStarterAssets?: boolean;
+  showLabel?: boolean;
 }
 
 const UploadButton: React.FC<UploadButtonProps> = ({
@@ -37,6 +38,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
   levelName,
   buildAssetUrl,
   hasStarterAssets = false,
+  showLabel = true,
 }) => {
   const dispatch = useAppDispatch();
   const numStagedFiles = useAppSelector(
@@ -75,6 +77,8 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     let uploadSuccessCount = 0;
     let sizeLimitExceededCount = 0;
     let uploadFailureCount = 0;
+    let fileCountPdf = 0;
+    let fileCountImage = 0;
     for (const [key, asset, file] of allowedFiles) {
       if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
         sizeLimitExceededCount += 1;
@@ -85,6 +89,12 @@ const UploadButton: React.FC<UploadButtonProps> = ({
           })
         );
         continue; // Skip uploading this file if it exceeds the size limit.
+      }
+
+      if (file.name.endsWith('.pdf')) {
+        fileCountPdf += 1;
+      } else {
+        fileCountImage += 1;
       }
 
       try {
@@ -124,6 +134,8 @@ const UploadButton: React.FC<UploadButtonProps> = ({
         fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
         fileCountFailureUnknownCause: uploadFailureCount,
         fileCountFailureNumberExceeded: Math.max(excessFileCount, 0),
+        fileCountImage,
+        fileCountPdf,
       })
     );
   };
@@ -141,11 +153,17 @@ const UploadButton: React.FC<UploadButtonProps> = ({
         })
       );
     }
+    const fileCount = assets.length;
+    const fileCountPdf =
+      assets?.filter(asset => asset.filename.endsWith('.pdf')).length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
 
     dispatch(
       sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
         source: AssetSource.LEVEL,
-        fileCountSuccess: assets.length,
+        fileCountSuccess: fileCount,
+        fileCountImage,
+        fileCountPdf,
       })
     );
   };
@@ -165,15 +183,24 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     );
   };
 
-  const buttonProps: ButtonProps = {
+  const buttonPropsCommon: ButtonProps = {
     type: 'secondary',
     color: 'gray',
-    iconLeft: {iconName: 'plus'},
+  };
+
+  const buttonPropsWithLabel: ButtonProps = {
+    ...buttonPropsCommon,
     text: aichatI18n.aichatAddFile(),
+    iconLeft: {iconName: 'plus'},
+  };
+
+  const buttonPropsIconOnly: ButtonProps = {
+    ...buttonPropsCommon,
+    icon: {iconName: 'plus', iconStyle: 'solid'},
   };
 
   const commonProps = {
-    size: 's',
+    size: 'xs',
     disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
   } as const;
 
@@ -182,7 +209,9 @@ const UploadButton: React.FC<UploadButtonProps> = ({
       {...commonProps}
       name="uploadDropdown"
       labelText={aichatI18n.upload()}
-      triggerButtonProps={buttonProps}
+      triggerButtonProps={
+        showLabel ? buttonPropsWithLabel : buttonPropsIconOnly
+      }
       menuVerticalPlacement="top"
       options={[
         {
@@ -207,7 +236,11 @@ const UploadButton: React.FC<UploadButtonProps> = ({
       ]}
     />
   ) : (
-    <Button {...buttonProps} {...commonProps} onClick={onDeviceUploadClick} />
+    <Button
+      {...(showLabel ? buttonPropsWithLabel : buttonPropsIconOnly)}
+      {...commonProps}
+      onClick={onDeviceUploadClick}
+    />
   );
 
   return (

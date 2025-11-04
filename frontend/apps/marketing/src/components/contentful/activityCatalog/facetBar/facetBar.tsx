@@ -1,10 +1,15 @@
 'use client';
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import {Chip, MenuItem, Select} from '@mui/material';
-import Button from '@mui/material/Button';
-import FormControl from '@mui/material/FormControl';
-import Grid from '@mui/material/Grid';
-import Input from '@mui/material/Input';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Checkbox,
+  FormControlLabel,
+  FormGroup,
+  Typography,
+} from '@mui/material';
 import {FacetResult} from '@orama/orama';
 import {ChangeEvent} from 'react';
 
@@ -19,15 +24,7 @@ interface FacetPanelProps {
   onSearchTermChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onClearAll: () => void;
 }
-const FacetBar = ({
-  isInDrawer,
-  facets,
-  selectedFacets,
-  searchTerm,
-  onFacetChange,
-  onClearAll,
-  onSearchTermChange,
-}: FacetPanelProps) => {
+const FacetBar = ({facets, selectedFacets, onFacetChange}: FacetPanelProps) => {
   if (!facets) {
     return null;
   }
@@ -36,101 +33,68 @@ const FacetBar = ({
     onFacetChange(facet, facetValue);
   };
 
-  const getDropdownMenuItem = (
-    selectedFacetValues: Set<string>,
-    facet: string,
-    facetValue: string,
-  ) => {
-    const isSelected = selectedFacetValues?.has(facetValue);
-    return (
-      <MenuItem key={facetValue} value={facetValue}>
-        <Chip
-          key={facetValue}
-          label={facetValue}
-          onDelete={
-            isSelected ? () => handleChange(facet, facetValue) : undefined
-          }
-          deleteIcon={
-            isSelected ? <CloseRoundedIcon fontSize="small" /> : undefined
-          }
-          variant={isSelected ? 'filled' : 'outlined'}
-          color={isSelected ? 'primary' : 'default'}
-        />
-      </MenuItem>
-    );
-  };
-
   const getDropdowns = () => {
     return Object.entries(facets).map(([facet, facetDetails]) => {
       // Sort using localeCompare with numeric option for mixed strings/numbers
       const facetValues = Object.keys(facetDetails.values).sort((a, b) =>
         a.localeCompare(b, undefined, {numeric: true}),
       );
-      const hasSelectedValue =
-        selectedFacets[facet] && selectedFacets[facet].size > 0;
 
       return (
-        <FormControl
-          key={facet}
-          sx={{minWidth: 0, display: isInDrawer ? 'block' : 'inline-flex'}}
+        <Accordion
+          defaultExpanded
+          sx={{
+            bgcolor: 'card.main',
+            color: 'card.contrastText',
+            width: '100%',
+          }}
         >
-          <Select
-            aria-label={FACET_LABELS[facet]}
-            multiple
-            onChange={e => handleChange(facet, e.target.value[0])}
-            value={[]}
-            sx={theme => ({
-              width: 'auto',
-              minWidth: 'fit-content',
-              '.MuiSelect-select': {
-                width: 'auto',
-                minWidth: 'fit-content',
-                paddingRight: 4,
-                backgroundColor: hasSelectedValue
-                  ? theme.palette.primary.main
-                  : 'inherit',
-                color: hasSelectedValue
-                  ? theme.palette.common.white
-                  : 'inherit',
-              },
-              '& .MuiSelect-icon': {
-                color: hasSelectedValue
-                  ? theme.palette.common.white
-                  : theme.palette.action.active,
-              },
-            })}
-            displayEmpty
-            renderValue={() => <span>{FACET_LABELS[facet]}</span>}
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{color: 'foreground.main'}} />}
+            sx={{padding: 1}}
           >
-            {facetValues.map(facetValue => {
-              return getDropdownMenuItem(
-                selectedFacets[facet],
-                facet,
-                facetValue,
-              );
-            })}
-          </Select>
-        </FormControl>
+            <Typography variant="subtitle1" sx={{fontWeight: 600}}>
+              {FACET_LABELS[facet]}
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <FormGroup>
+              {facetValues.map(facetValue => {
+                return (
+                  <FormControlLabel
+                    key={facetValue}
+                    control={
+                      <Checkbox
+                        checked={
+                          selectedFacets[facet]?.has(facetValue) || false
+                        }
+                        onChange={() => handleChange(facet, facetValue)}
+                        sx={{color: 'muted.contrastText'}}
+                      />
+                    }
+                    label={
+                      <Typography variant="body4">{facetValue}</Typography>
+                    }
+                  />
+                );
+              })}
+            </FormGroup>
+          </AccordionDetails>
+        </Accordion>
       );
     });
   };
 
   return (
-    <Grid container spacing={2} flexDirection={isInDrawer ? 'column' : 'row'}>
-      <Grid size={isInDrawer ? 12 : 2}>
-        <Input
-          onChange={onSearchTermChange}
-          value={searchTerm}
-          placeholder={'Search...'}
-        />
-      </Grid>
-
-      <Grid size={isInDrawer ? 12 : 10}>
-        {getDropdowns()}
-
-        <Button onClick={onClearAll}>Clear All</Button>
-      </Grid>
-    </Grid>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        padding: 2,
+      }}
+    >
+      {getDropdowns()}
+    </Box>
   );
 };
 

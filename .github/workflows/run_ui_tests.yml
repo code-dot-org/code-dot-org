@@ -10,6 +10,7 @@ jobs:
       DISABLE_SPRING: 1   
       CLOUDFRONT_KEY_PAIR_ID: ${{ secrets.CLOUDFRONT_KEY_PAIR_ID }}
       CLOUDFRONT_PRIVATE_KEY: ${{ secrets.CLOUDFRONT_PRIVATE_KEY }}
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN }}
       PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}      
       AWS_ACCESS_KEY_ID: $${{ secrets.CI_AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: $${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}  
@@ -40,6 +41,7 @@ jobs:
             properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
             cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
             cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
+            contentful_cs_for_all_access_token: $CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
             saucelabs_username: $SAUCE_USERNAME
             saucelabs_authkey: $SAUCE_ACCESS_KEY
             ignore_eyes_mismatches: true

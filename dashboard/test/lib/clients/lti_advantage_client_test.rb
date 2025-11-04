@@ -1,13 +1,13 @@
 require 'test_helper'
 require_relative '../../../lib/clients/lti_advantage_client'
 
-class LtiAdvantageClientTest < ActiveSupport::TestCase
+class Clients::LtiAdvantageClientTest < ActiveSupport::TestCase
   setup do
     @client_id = 'expected_client_id'
     @issuer = 'expected_issuer'
     @rlid = 'expected_rlid'
 
-    @lti_client = LtiAdvantageClient.new(@client_id, @issuer)
+    @lti_client = Clients::LtiAdvantageClient.new(@client_id, @issuer)
     @lti_client.stubs(:get_access_token).returns('fake_access_token')
     @page_2_url = 'https://example.com/api/lti/courses/1234/memberships?rlid=1234&page=2'
     @page_3_url = 'https://example.com/api/lti/courses/1234/memberships?rlid=1234&page=3'
@@ -59,7 +59,7 @@ class LtiAdvantageClientTest < ActiveSupport::TestCase
 
   test 'throws an error if no client_id or issuer is provided' do
     assert_raises ArgumentError do
-      LtiAdvantageClient.new(nil, nil)
+      Clients::LtiAdvantageClient.new(nil, nil)
     end
   end
 

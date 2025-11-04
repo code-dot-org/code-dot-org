@@ -58,7 +58,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_source = create(:level_source, level: level)
 
     assert_difference('PeerReview.count', 1) do
-      track_progress level_source.id, @user, script_level_only_instructor_review
+      track_progress level_source.id, @user, script_level_only_instructor_review, nil
     end
 
     assert_equal ['escalated'], PeerReview.where(submitter: @user, level: level).map(&:status)
@@ -525,7 +525,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     refute PeerReview.exists?(level_source_id: new_level_source.id)
   end
 
-  private def track_progress(level_source_id, user = @user, script_level = @script_level)
+  private def track_progress(level_source_id, user = @user, script_level = @script_level, unit_group = @unit_group)
     # this is what creates the peer review objects
     User.track_level_progress(
       user_id: user.id,
@@ -535,7 +535,7 @@ class PeerReviewTest < ActiveSupport::TestCase
       submitted: true,
       level_source_id: level_source_id,
       pairing_user_ids: nil,
-      unit_group: @unit_group
+      unit_group: unit_group
     )
   end
 

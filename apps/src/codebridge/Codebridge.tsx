@@ -13,7 +13,7 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
-import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -43,10 +43,11 @@ type CodebridgeProps = {
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;
-  aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorContextHelper?: AiTutorContextHelper<object>;
+  aiTutorSystemPromptName?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 };
 
 export const Codebridge = React.memo(
@@ -60,18 +61,16 @@ export const Codebridge = React.memo(
     levelProperties,
     projectPickerSettings,
     hiddenContextCallback,
-    aiTutorSystemPromptSettings,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorContextHelper,
+    aiTutorSystemPromptName,
+    aiTutorResponseSchemaSettings,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const appName = levelProperties.appName;
-    const isFullScreenView = useAppSelector(
-      state => state.lab.isFullScreenView
-    );
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -132,9 +131,6 @@ export const Codebridge = React.memo(
       if (isWidgetView && config.layoutComponents.widget && !isStartMode) {
         return config.layoutComponents.widget;
       }
-      if (isFullScreenView && config.layoutComponents.fullScreen) {
-        return config.layoutComponents.fullScreen;
-      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
         currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
@@ -149,7 +145,6 @@ export const Codebridge = React.memo(
       appName,
       config.activeLayout,
       config.layoutComponents,
-      isFullScreenView,
       isShareView,
       isStartMode,
       isWidgetView,
@@ -190,10 +185,11 @@ export const Codebridge = React.memo(
           projectPickerSettings,
           hiddenContextCallback,
           onImageFlagged,
-          aiTutorSystemPromptSettings,
           aiTutorMultimodalEnabled,
           aiTutorChatButtonData,
           aiTutorContextHelper,
+          aiTutorSystemPromptName,
+          aiTutorResponseSchemaSettings,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

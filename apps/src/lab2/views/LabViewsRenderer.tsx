@@ -3,19 +3,17 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
-import React, {Suspense, useEffect} from 'react';
+import React, {createContext, Suspense, useEffect, useState} from 'react';
 
-import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
-import {
-  getLabViewPageAction,
-  isUsingResourcePanel,
-  getIsLabViewBlocked,
-} from '@cdo/apps/lab2/utils';
+import {getLabViewPageAction, getIsLabViewBlocked} from '@cdo/apps/lab2/utils';
+import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
@@ -26,13 +24,23 @@ import Loading from './Loading';
 
 import moduleStyles from './lab-views-renderer.module.scss';
 
+const queryHideExtraLinks = queryParams('hide-extra-links') === 'true';
+
+const ExtraLinksButtonContext = createContext<{
+  setShowExtraLinksButton: (show: boolean) => void;
+} | null>(null);
+
+/** Allows downstream components to show/hide the Extra Links button */
+export const useExtraLinksButtonContext = () =>
+  useRequiredContext(ExtraLinksButtonContext, 'ExtraLinksButtonContext');
+
 const LabViewsRenderer: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const initialSources = useAppSelector(state => state.lab.initialSources);
+  const channel = useAppSelector(state => state.lab.channel);
 
   const currentAppName = levelProperties?.appName;
   const exemplarSources = levelProperties?.exemplarSources;
-  const levelId = levelProperties?.id;
 
   const isBlockedAbuse = useAppSelector(state => !!state.lab.isBlockedAbuse);
   const projectSharingDisabled = useAppSelector(
@@ -49,28 +57,31 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const pageAction = getLabViewPageAction() || '';
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
-  const isProjectLevel = levelProperties?.isProjectLevel || false;
-  const hideExtraLinks =
-    queryParams('hide-extra-links') === 'true' ||
-    isUsingResourcePanel(currentAppName || '', isProjectLevel);
+
+  const [showExtraLinksButton, setShowExtraLinksButton] = useState(true);
 
   useInitialLabTheme({
     currentAppName,
     levelProperties,
   });
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel || false
+  );
+  const hasSubmittedPredictResponse = useAppSelector(
+    state => state.predictLevel.hasSubmittedResponse
+  );
 
+  const {setChatDisabledState} = useAiChatDisabled();
   useEffect(() => {
-    const footer = document.getElementById('page-small-footer');
-    // The resource panel has includes copyright and language, so we hide the footer.
-    // We control this here so the footer will show up on levels that do not use the resource panel,
-    // such as panels levels. The footer is controlled by the server, so we need to show/hide it here
-    // to ensure it will show up when we switch to a level that does not use the resource panel.
-    if (isUsingResourcePanel(currentAppName || '', isProjectLevel)) {
-      footer?.classList.add(moduleStyles.hiddenFooter);
-    } else if (footer?.classList.contains(moduleStyles.hiddenFooter)) {
-      footer.classList.remove(moduleStyles.hiddenFooter);
+    if (isPredictLevel && !hasSubmittedPredictResponse) {
+      setChatDisabledState({
+        chatDisabled: true,
+        chatDisabledMessage: lab2I18n.predictTutorDisabledMessage(),
+      });
+    } else {
+      setChatDisabledState({chatDisabled: false});
     }
-  }, [currentAppName, isProjectLevel]);
+  }, [isPredictLevel, hasSubmittedPredictResponse, setChatDisabledState]);
 
   const blockLabView = getIsLabViewBlocked(
     pageAction,
@@ -96,14 +107,11 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     return null;
   }
 
-  const extraLinksButtonRightOfFooter =
-    levelProperties?.isProjectLevel &&
-    (currentAppName === 'pythonlab' || currentAppName === 'weblab2');
-
   const LabView = properties.view;
+
   return (
-    <AiChatDisabledProvider>
-      <ProgressContainer key={currentAppName} appType={currentAppName}>
+    <ProgressContainer key={currentAppName} appType={currentAppName}>
+      <ExtraLinksButtonContext.Provider value={{setShowExtraLinksButton}}>
         <div
           id={`lab2-${currentAppName}`}
           className={moduleStyles.labContainer}
@@ -112,17 +120,15 @@ const LabViewsRenderer: React.FunctionComponent = () => {
             <LabView
               levelProperties={levelProperties}
               initialSources={initialSources}
+              channel={channel}
             />
           </Suspense>
-          {!hideExtraLinks && levelId && (
-            <ExtraLinks
-              levelId={levelId}
-              positionRightOfFooter={extraLinksButtonRightOfFooter}
-            />
+          {!queryHideExtraLinks && showExtraLinksButton && (
+            <ExtraLinks levelId={levelProperties.id} />
           )}
         </div>
-      </ProgressContainer>
-    </AiChatDisabledProvider>
+      </ExtraLinksButtonContext.Provider>
+    </ProgressContainer>
   );
 };
 

@@ -1,3 +1,5 @@
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
+
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 export function getRelativeImageUrl(asset: ExperienceAsset | undefined) {
@@ -58,4 +60,30 @@ export function getAbsoluteImageUrl(
     console.error(e);
     return imgUrl;
   }
+}
+
+function getAssetIdFromImageUrl(imgUrl: string | undefined) {
+  if (!imgUrl) return undefined;
+
+  // Example URL: https://contentful-images.code.org/27jkibac934d/6twVI3a8N6IoRIvwGuPMDq/c96010513f029b80a86e193b7a098135/hourofai_logo_og.jpg
+  // This regex captures the asset ID segment (6twVI3a8N6IoRIvwGuPMDq) from the URL
+  const match = imgUrl.match(/\/[^/]+\/([^/]+)\/[^/]+\/[^/]+$/);
+  return match ? match[1] : undefined;
+}
+
+export function getImageEntityFromImageUrl(imageSource: string | undefined) {
+  if (!imageSource) {
+    return undefined;
+  }
+
+  // Retrieve metadata about the image from the entity store
+  const imageAssetId = getAssetIdFromImageUrl(imageSource);
+
+  if (!imageAssetId) {
+    return undefined;
+  }
+
+  const entities = useInMemoryEntities();
+
+  return entities.maybeResolveByAssetId(imageAssetId) as ExperienceAsset;
 }
