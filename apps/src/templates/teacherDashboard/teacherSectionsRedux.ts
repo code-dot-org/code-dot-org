@@ -1017,7 +1017,9 @@ export const assignToSection = (
   if (!!unitId) {
     HttpClient.get(
       `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
-    );
+    ).catch(error => {
+      console.error(error);
+    });
   }
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
