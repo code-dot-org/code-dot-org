@@ -5,6 +5,10 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {getFolderPath} from '../utils';
 
+import {
+  PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL,
+  ProjectServiceWorkerMessageType,
+} from './constants';
 import {addBaseTagToDocument} from './htmlParsingHelpers';
 
 function useProjectServiceWorker(
@@ -15,8 +19,10 @@ function useProjectServiceWorker(
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
     null
   );
+
   useEffect(() => {
     if ('serviceWorker' in navigator) {
+      setServiceWorker(null);
       navigator.serviceWorker
         .register('/weblab2_project_service_worker.js')
         .then(registration => {
@@ -92,10 +98,14 @@ function useProjectServiceWorker(
       console.log({filesData});
 
       // Send files data to service worker
-      serviceWorker.postMessage({
-        type: 'UPDATE_FILES',
+      const broadcastChannel = new BroadcastChannel(
+        PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
+      );
+      broadcastChannel.postMessage({
+        type: ProjectServiceWorkerMessageType.UPDATE_FILES,
         files: filesData,
       });
+      broadcastChannel.close();
     } else {
       console.log('skipping sending to service worker', {
         serviceWorker,
@@ -107,10 +117,14 @@ function useProjectServiceWorker(
   useEffect(() => {
     if (serviceWorker && currentFile) {
       console.log('Notifying service worker of current file:', currentFile);
-      serviceWorker.postMessage({
-        type: 'SET_CURRENT_FILE',
+      const broadcastChannel = new BroadcastChannel(
+        PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
+      );
+      broadcastChannel.postMessage({
+        type: ProjectServiceWorkerMessageType.SET_CURRENT_FILE,
         currentFile,
       });
+      broadcastChannel.close();
     }
   }, [serviceWorker, currentFile]);
 

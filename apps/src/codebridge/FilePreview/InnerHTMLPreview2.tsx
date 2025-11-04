@@ -106,6 +106,8 @@ const InnerHTMLPreview = () => {
       ) {
         console.log('Service worker confirmed current file update');
         setPreviewKeyIndex(prevIndex => prevIndex + 1);
+      } else {
+        console.log('Unknown message from service worker:', event.data);
       }
     };
     return () => {

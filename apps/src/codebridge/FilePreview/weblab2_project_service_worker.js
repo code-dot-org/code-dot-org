@@ -14,6 +14,10 @@ const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
 const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATED_CURRENT_FILE = 'UPDATED_CURRENT_FILE';
+const UPDATE_FILES = 'UPDATE_FILES';
+const SET_CURRENT_FILE = 'SET_CURRENT_FILE';
+const SERVICE_WORKER_INSTALLED = 'SERVICE_WORKER_INSTALLED';
+const SERVICE_WORKER_ACTIVATED = 'SERVICE_WORKER_ACTIVATED';
 
 function main() {
   let filesData = {};
@@ -37,32 +41,31 @@ function main() {
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
     self.skipWaiting();
-    sendMessageToAllClients('INSTALL');
+    broadcastChannel.postMessage({type: SERVICE_WORKER_INSTALLED});
   });
 
   addEventListener('activate', event => {
     // Claim clients from any old service workers on this path.
     event.waitUntil(self.clients.claim());
-    sendMessageToAllClients('ACTIVATE');
+    broadcastChannel.postMessage({type: SERVICE_WORKER_ACTIVATED});
   });
 
   // Listen for messages from the main thread
-  self.addEventListener('message', event => {
+  broadcastChannel.onmessage = event => {
     const {type, files, currentFile: newCurrentFile} = event.data;
-
-    if (type === 'UPDATE_FILES') {
+    if (type === UPDATE_FILES) {
       filesData = files || {};
       if (newCurrentFile) {
         currentFile = newCurrentFile;
       }
       console.log('Service worker received files:', Object.keys(filesData));
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
-    } else if (type === 'SET_CURRENT_FILE') {
+    } else if (type === SET_CURRENT_FILE) {
       currentFile = newCurrentFile;
       console.log('Service worker current file set to:', currentFile);
       broadcastChannel.postMessage({type: UPDATED_CURRENT_FILE});
     }
-  });
+  };
 
   // Intercept fetch requests
   self.addEventListener('fetch', event => {
@@ -79,14 +82,11 @@ function main() {
     }
   });
 
-  sendMessageToAllClients('SERVICE_WORKER_LOADED?');
-
   function getFilenameFromUrl(url) {
     let remainder = url.pathname;
     if (remainder.startsWith('/')) {
       remainder = remainder.substring(1);
     }
-    // Allow ?file= overrides (optional enhancement)
     let requestedFile = remainder || currentFile || DEFAULT_START_HTML_FILE;
     if (requestedFile === '' || requestedFile === '/') {
       requestedFile = DEFAULT_START_HTML_FILE;
@@ -107,7 +107,6 @@ function main() {
 
       if (filesData[requestedFile]) {
         const {content, mimeType, url} = filesData[requestedFile];
-        sendMessageToAllClients('SERVING_FILE', {filePath: requestedFile});
         if (requestedFile.endsWith('.html')) {
           console.log('Broadcasting HTML file serving:', requestedFile);
           broadcastChannel.postMessage({
@@ -116,7 +115,6 @@ function main() {
           });
         }
         if (url) {
-          sendMessageToAllClients('FETCHING_EXTERNAL_URL');
           const response = await fetch(url);
           return response;
         }
@@ -156,19 +154,6 @@ function main() {
         },
       });
     }
-  }
-
-  function sendMessageToAllClients(messageType, details) {
-    self.clients.matchAll({includeUncontrolled: true}).then(clients => {
-      clients.forEach(client => {
-        if (client.type === 'window') {
-          client.postMessage({
-            type: messageType,
-            details,
-          });
-        }
-      });
-    });
   }
 }
 
