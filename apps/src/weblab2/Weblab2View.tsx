@@ -24,7 +24,6 @@ import {
   formatExplanationResponse,
   copyCodeJsonSchema,
 } from './helpers/aiTutorStructuredResponseHelper';
-import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import {setViewMode} from './redux';
@@ -49,7 +48,6 @@ const defaultConfig: ConfigType = {
     vertical: VerticalLayout,
     widget: VerticalLayout,
     share: ShareView,
-    fullScreen: FullScreenView,
   },
 };
 
