@@ -37,7 +37,7 @@ class CodeprojectsPreviewController < ApplicationController
 
     # Security Control: Restrict JavaScript execution sources (overrides default-src for scripts)
     # Goal: Allow student code execution while preventing external script injection
-    script_src_base = "'self' blob:"
+    script_src_base = "'self' blob: #{code_studio_url}"
 
     # Security Control: Allow eval() for dynamic code execution in student projects and to load our dependencies.
     # Goal: Enable loading dependencies that use eval() so we can preview student projects.
@@ -51,7 +51,7 @@ class CodeprojectsPreviewController < ApplicationController
 
     # Security Control: Restrict CSS loading sources (overrides default-src for stylesheets)
     # Goal: Allow student styling while preventing external CSS injection
-    style_src_base = "'self' blob:"
+    style_src_base = "'self' blob: #{code_studio_url}"
 
     # Security Control: Allow inline styles for student HTML projects
     # Goal: Enable students to write inline CSS in their HTML files
@@ -71,7 +71,7 @@ class CodeprojectsPreviewController < ApplicationController
     style_src = style_src_base + style_src_inline
 
     # Allow loading google fonts and any self-hosted fonts.
-    font_src = "'self' fonts.googleapis.com fonts.gstatic.com"
+    font_src = "'self' fonts.googleapis.com fonts.gstatic.com #{code_studio_url}"
 
     policies = [
       "default-src #{default_src}",
@@ -91,6 +91,13 @@ class CodeprojectsPreviewController < ApplicationController
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')
     render 'show', layout: false
+  end
+
+  # provides access to a `to_code_studio_url` helper method inside show.html.haml
+  helper do
+    def to_code_studio_url(url = '')
+      CDO.studio_url + (url.start_with?('/') ? '' : '/') + url
+    end
   end
 
   skip_forgery_protection only: :weblab2_project_service_worker
