@@ -28,6 +28,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   buildAssetUrl,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
+  const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
@@ -38,6 +39,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const scrollToBottom = () => {
     if (conversationContainerRef.current) {
       setShowScrollToBottom(false);
+      setInProgrammaticScroll(true);
 
       if (!isAtBottom()) {
         conversationContainerRef.current.scrollTo({
@@ -68,20 +70,45 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       return;
     }
 
-    const handleScroll = () => {
+    const handleUserScroll = () => {
       setShowScrollToBottom(!isAtBottom());
     };
 
-    container.addEventListener('scroll', handleScroll);
+    let previousScrollTop: number | null = null;
+    let scrollEndIntervalId: number;
+    let resizeObserver: ResizeObserver | undefined;
 
-    const resizeObserver = new ResizeObserver(handleScroll);
-    resizeObserver.observe(container);
+    // If we're in a programmatic scroll, set up an interval to detect when programmatic scroll has
+    // ended. We do not show the scroll to bottom button until the programmatic scroll finishes.
+    if (inProgrammaticScroll) {
+      scrollEndIntervalId = window.setInterval(() => {
+        if (conversationContainerRef.current) {
+          if (
+            previousScrollTop === conversationContainerRef.current.scrollTop
+          ) {
+            window.clearInterval(scrollEndIntervalId);
+            setInProgrammaticScroll(false);
+            setShowScrollToBottom(!isAtBottom());
+            previousScrollTop = null;
+          } else {
+            previousScrollTop = conversationContainerRef.current.scrollTop;
+          }
+        }
+      }, 250);
+    }
+    // Otherwise, set up the user scroll handler to display the scroll button when not at scroll end.
+    else {
+      container.addEventListener('scroll', handleUserScroll);
+      resizeObserver = new ResizeObserver(handleUserScroll);
+      resizeObserver.observe(container);
+    }
 
     return () => {
-      container?.removeEventListener('scroll', handleScroll);
+      container?.removeEventListener('scroll', handleUserScroll);
       resizeObserver?.disconnect();
+      window.clearInterval(scrollEndIntervalId);
     };
-  }, []);
+  }, [inProgrammaticScroll]);
 
   useEffect(scrollToBottom, [events.length, isWaitingForChatResponse]);
 
