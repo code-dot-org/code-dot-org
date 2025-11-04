@@ -1,6 +1,7 @@
 name 'ai-generated-design-lesson13-level1_2025'
 display_name 'Your Digital Magazine Support Hub'
 description 'Your goal: Use these levels in whatever way helps you move your project forward — whether that is generating ideas, designing visuals, mapping pages, or planning your next steps. You are in control of how and when to use them to meet the project goals.'
+uses_lab2
 
 sublevels
 level 'ai-generated-design-lesson13-level1a_2025'

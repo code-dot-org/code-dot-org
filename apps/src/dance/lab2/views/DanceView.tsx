@@ -25,7 +25,6 @@ import {
   getToolboxDefinition,
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
-import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
@@ -155,15 +154,15 @@ const DanceView: React.FunctionComponent<{
 
     return {
       analysis: [],
-      artist: 'A.I.', // TODO: user's name?
+      artist: '', // Unused
       bpm: musicProjectPlayer.current.getBpm().toString(),
       delay: '0',
       duration: 0, // Unused
       file: '', // Unused
-      title: 'My AI Remix', // TODO: what should this be?
+      title: guideMode === 'instructions' ? 'Starter Beat' : 'My Music Mix',
       peaks: {},
     };
-  }, [currentSongMetadata, loadedMusicProject]);
+  }, [currentSongMetadata, loadedMusicProject, guideMode]);
 
   const WorkspaceAlert = useLevelEditMode<DanceLevelProperties>(
     levelProperties.id,
@@ -243,7 +242,7 @@ const DanceView: React.FunctionComponent<{
       });
     }
 
-    if (!programExecutor.current || !metadataToUse) {
+    if (!programExecutor.current || !metadataToUse || !workspace.current) {
       return;
     }
 
@@ -252,7 +251,7 @@ const DanceView: React.FunctionComponent<{
     dispatch(setRunIsStarting(true));
     programExecutor.current.reset();
     await programExecutor.current.execute(
-      Blockly.getWorkspaceCode(),
+      Blockly.JavaScript.workspaceToCode(workspace.current),
       metadataToUse
     );
     dispatch(setRunIsStarting(false));
@@ -277,8 +276,12 @@ const DanceView: React.FunctionComponent<{
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
     dispatch(setIsRunning(false));
-    programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
     setMusicPlayheadPosition(1);
+    if (workspace.current) {
+      programExecutor.current?.staticPreview(
+        Blockly.JavaScript.workspaceToCode(workspace.current)
+      );
+    }
   }, [programExecutor, dispatch]);
 
   const onPuzzleComplete = useCallback(
@@ -320,8 +323,10 @@ const DanceView: React.FunctionComponent<{
         return;
       }
 
-      if (!isRunning) {
-        programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
+      if (!isRunning && workspace.current) {
+        programExecutor.current?.staticPreview(
+          Blockly.JavaScript.workspaceToCode(workspace.current)
+        );
       }
       saveBlocks();
       dispatch(setHasEdited(true));
@@ -370,9 +375,14 @@ const DanceView: React.FunctionComponent<{
       Categories: [BLOCK_TYPES.category, BLOCK_TYPES.categoryDynamic],
       ...blocksByCategory,
     };
-    const toolbox = isToolboxMode
+    let toolbox = isToolboxMode
       ? getToolboxDefinition(toolboxModeBlocks, 'categoryToolbox')
       : levelProperties.toolboxDefinition;
+
+    // Don't show the toolbox if it's empty
+    if (toolbox?.contents?.length === 0) {
+      toolbox = undefined;
+    }
 
     workspace.current = Blockly.inject(blocklyDiv, {
       toolbox,
@@ -510,25 +520,25 @@ const DanceView: React.FunctionComponent<{
 
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
-      <ModeSwitchBar levelId={levelProperties.id} />
       <div className={moduleStyles.mainContent}>
-        {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
-        {!guideMode && (
-          <ResourcePanel
-            isRunning={isRunning}
-            hasRun={hasRun}
-            hasEdited={hasEdited}
-            levelProperties={levelProperties}
-            headerClassName={moduleStyles.panelHeader}
-            className={moduleStyles.instructionsArea}
-            settings={settings}
-          />
+        {!getIsShareView() && !usingMusicProject && (
+          <AgeDialog turnOffFilter={turnOffFilter} />
         )}
+        <ResourcePanel
+          isRunning={isRunning}
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+          levelProperties={levelProperties}
+          headerClassName={moduleStyles.panelHeader}
+          className={!guideMode ? moduleStyles.instructionsArea : ''}
+          settings={settings}
+          sidebarOnly={!!guideMode}
+        />
         <div className={moduleStyles.divider} />
         {!isToolboxMode && (
           <PanelContainer
             id="visualization"
-            headerContent="Dance Party!"
+            headerContent="Dance"
             headerClassName={moduleStyles.panelHeader}
             className={classNames(
               moduleStyles.visualizationArea,

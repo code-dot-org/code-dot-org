@@ -14,7 +14,6 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 62px;
   right: 32px;
   border-radius: 14px;
   padding: 24px;
@@ -23,7 +22,8 @@
   z-index: variables.$z-index-floating-ui;
   background: var(--background-neutral-secondary);
   box-shadow: 0 6px 18px 0 rgba(0 0 0 / 0.30);
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.5;
   gap: 16px;
 
   &NormalWidth {
@@ -32,5 +32,20 @@
 
   &NarrowWidth {
     width: 20%;
+  }
+
+  &NormalPosition {
+    top: 62px;
+  }
+
+  &BottomPosition {
+    bottom: 20px;
+  }
+}
+
+.markdown {
+  p, li, h1, h2, h3, h4 {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
