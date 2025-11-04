@@ -116,6 +116,7 @@ module ScriptConstants
       # with code_s matching the script name (in quotes) in this list.
 
       nil,
+      MIX_MOVE_AI_2025 = 'mix-move-ai-2025'.freeze, # 2025 hour of ai
       MUSIC_JAM_2024 = 'music-jam-2024'.freeze, # 2024 hour of code
       DANCE_AI_2023 = 'dance-ai-2023'.freeze, # 2023 hour of code
       POEM_ART_2021_NAME = 'poem-art-2021'.freeze, # 2021 hour of code
