@@ -1,14 +1,14 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Heading3} from '@code-dot-org/component-library/typography';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibsType,
@@ -43,16 +43,11 @@ const adlibOptions = {
     {id: 'frilled_lizard', text: 'frilled lizard'},
     {id: 'frog', text: 'frog'},
     {id: 'giraffe', text: 'giraffe'},
-    {id: 'jellyfish', text: 'jellyfish'},
     {id: 'koala', text: 'koala'},
     {id: 'moose', text: 'moose'},
-    {id: 'mushroom', text: 'mushroom'},
-    {id: 'planet', text: 'planet'},
     {id: 'rabbit', text: 'rabbit'},
     {id: 'squirrel', text: 'squirrel'},
     {id: 'tiger', text: 'tiger'},
-    {id: 'turtle', text: 'turtle'},
-    {id: 'volcano', text: 'volcano'},
     {id: 'wolf', text: 'wolf'},
     {id: 'zombie', text: 'zombie'},
   ],
@@ -87,128 +82,6 @@ const adlibOptions = {
 };
 
 const adlibs: AdlibsType = {
-  'animal-02': {
-    template: 'Create {animal}.',
-    options: {
-      animal: [
-        {id: 'wolf', text: 'a wolf'},
-        {id: 'moose', text: 'a moose'},
-        {id: 'frog', text: 'a frog'},
-        {id: 'tiger', text: 'a tiger'},
-        {id: 'panda', text: 'a panda'},
-      ],
-    },
-    variantCount: 5,
-  },
-  'animal-attire-02': {
-    template: 'Create {animal} wearing {attire}.',
-    options: {
-      animal: [
-        {id: 'wolf', text: 'a wolf'},
-        {id: 'moose', text: 'a moose'},
-        {id: 'frog', text: 'a frog'},
-        {id: 'tiger', text: 'a tiger'},
-        {id: 'panda', text: 'a panda'},
-      ],
-      attire: [
-        {id: 'headscarf', text: 'a headscarf'},
-        {id: 'sunglasses', text: 'sunglasses'},
-        {id: 'headphones', text: 'headphones'},
-        {id: 'crown', text: 'a crown'},
-        {id: 'beanie', text: 'a beanie'},
-      ],
-    },
-    variantCount: 5,
-  },
-  'adjective-animal-attire-02': {
-    template: 'Create {animal} wearing {attire}, with {adjective} style.',
-    options: {
-      adjective: [
-        {id: 'basic', text: 'a basic'},
-        {id: 'emo', text: 'an emo'},
-        {id: 'sporty', text: 'a sporty'},
-        {id: 'streetwear', text: 'a streetwear'},
-        {id: 'fancy', text: 'a fancy'},
-        {id: 'preppy', text: 'a preppy'},
-      ],
-      animal: [
-        {id: 'wolf', text: 'a wolf'},
-        {id: 'moose', text: 'a moose'},
-        {id: 'frog', text: 'a frog'},
-        {id: 'tiger', text: 'a tiger'},
-        {id: 'panda', text: 'a panda'},
-      ],
-      attire: [
-        {id: 'headscarf', text: 'a headscarf'},
-        {id: 'sunglasses', text: 'sunglasses'},
-        {id: 'headphones', text: 'headphones'},
-        {id: 'crown', text: 'a crown'},
-        {id: 'beanie', text: 'a beanie'},
-      ],
-    },
-    variantCount: 5,
-  },
-  'adjective-animal-attire-mood-03': {
-    template:
-      'Create {animal} wearing {attire}, in {mood} mood, with {adjective} style.',
-    options: {
-      adjective: [
-        {id: 'basic', text: 'a basic'},
-        {id: 'emo', text: 'an emo'},
-        {id: 'sporty', text: 'a sporty'},
-        {id: 'streetwear', text: 'a streetwear'},
-        {id: 'fancy', text: 'a fancy'},
-        {id: 'preppy', text: 'a preppy'},
-      ],
-      animal: [
-        {id: 'wolf', text: 'a wolf'},
-        {id: 'moose', text: 'a moose'},
-        {id: 'frog', text: 'a frog'},
-        {id: 'tiger', text: 'a tiger'},
-        {id: 'panda', text: 'a panda'},
-      ],
-      attire: [
-        {id: 'headscarf', text: 'a headscarf'},
-        {id: 'sunglasses', text: 'sunglasses'},
-        {id: 'headphones', text: 'headphones'},
-        {id: 'crown', text: 'a crown'},
-        {id: 'beanie', text: 'a beanie'},
-      ],
-      mood: [
-        {id: 'happy', text: 'a happy'},
-        {id: 'silly', text: 'a silly'},
-        {id: 'sleepy', text: 'a sleepy'},
-        {id: 'surprised', text: 'a surprised'},
-        {id: 'confused', text: 'a confused'},
-        {id: 'fierce', text: 'a fierce'},
-      ],
-    },
-    variantCount: 5,
-  },
-  'creature-04': {
-    template: 'Design a {creature}.',
-    options: {creature: adlibOptions.creature},
-    variantCount: 5,
-  },
-  'creature-attire-04': {
-    template: 'Design a {creature} wearing {attire}.',
-    options: {
-      creature: adlibOptions.creature,
-      attire: adlibOptions.attire,
-    },
-    variantCount: 5,
-  },
-  'creature-attire-mood-style-04': {
-    template:
-      'Design a {creature} wearing {attire}, in a {mood} mood, with a {style} style.',
-    options: {
-      creature: adlibOptions.creature,
-      attire: adlibOptions.attire,
-      mood: adlibOptions.mood,
-      style: adlibOptions.style,
-    },
-    variantCount: 5,
-  },
   'creature-05': {
     template: 'Design a {creature}.',
     options: {creature: adlibOptions.creature},
@@ -387,8 +260,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   // too soon.
   const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
 
-  const multiProject = useMultiProject();
-  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+  const parentProperties = useParentLevelProperties();
+  const showNavigation =
+    !levelProperties.isProjectLevel && !parentProperties?.isProjectLevel;
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
@@ -477,7 +351,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             )}
           {aiGenerateState === 'reviewing' && (
             <div>
-              <Heading4>Decide what to do next</Heading4>
+              <Heading3>Decide what to do next</Heading3>
               <div>
                 AI generated a dancer based on your prompt, "{promptText}"
               </div>

@@ -1,10 +1,10 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Heading3} from '@code-dot-org/component-library/typography';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
@@ -197,8 +197,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     'clearing',
   ].includes(aiGenerateState);
 
-  const multiProject = useMultiProject();
-  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+  const parentProperties = useParentLevelProperties();
+  const isStandalone =
+    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
 
   if (!packId) {
     return null;
@@ -277,10 +278,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {['listening', 'listened'].includes(aiGenerateState) && (
         <div>
-          <Heading4>
+          <Heading3>
             {aiGenerateState === 'listening' && 'Take a listen...'}
             {aiGenerateState === 'listened' && 'Decide what to do next'}
-          </Heading4>
+          </Heading3>
           <div>AI generated code based on your prompt, "{promptText}"</div>
         </div>
       )}
@@ -308,7 +309,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              dispatch(setAiGenerateState('editing'));
+              // Skip the 'editing' validation state for standalone projects.
+              dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
               setPlaying(false);
             }}
             className={styles.buttonWide}
@@ -318,14 +320,14 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'editing' && !isPlaying && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Heading3>Modify the code</Heading3>
           AI helped you get started. Make your own changes, then press Run.
         </div>
       )}
 
       {aiGenerateState === 'editing' && isPlaying && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Heading3>Modify the code</Heading3>
           <div>Try changing the code. </div>
         </div>
       )}
@@ -333,7 +335,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       {aiGenerateState === 'edited' && (
         <>
           <div>
-            <Heading4>Modify the code</Heading4>
+            <Heading3>Modify the code</Heading3>
             <div>That's a great mix!</div>
           </div>
           <div className={styles.buttonRow}>
@@ -350,7 +352,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {showNavigation && (
+            {!isStandalone && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.

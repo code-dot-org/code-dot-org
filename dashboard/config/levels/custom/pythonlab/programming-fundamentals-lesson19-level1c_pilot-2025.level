@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:48:24.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### Example 3: \"The Mystery of the Missing Cupcake\" \r\n\r\n**Narrative:** The player is a detective solving the case of a stolen cupcake. They interrogate suspects, gather clues, and make decisions that lead to different suspects being accused.\r\n\r\n**Key Features:**\r\n- Three interrogation questions with two possible answers each\r\n- Uses conditionals to track clues and determine the outcome\r\n- Fun and light-hearted, with simple logic puzzles",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -34,9 +35,12 @@
     },
     "display_name": "Detective Theme",
     "thumbnail_url": "https://images.code.org/7aca9500153a19e728dc0858ba1f21bc-cupcake-sweet-sprikles-pastry-muffin-cartoon-vector.jpg",
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:24.720+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson19-level1c_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson19-level1c_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:24.720+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson19-level1c_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson19-level1c_2025\"},{\"changed_at\":\"2025-11-04 06:20:05 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>
