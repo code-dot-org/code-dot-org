@@ -1,8 +1,16 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 @import 'color.scss';
 @import '../common.scss';
 
 .dialogContainer {
   @extend %full-container-overlay;
+  // Adding these styles to override the common.scss styles.
+  // TODO - Ideally dialogs that are using this stylesheet
+  // should be replaced with a DSCO component.
+  top: -$top-spacing;
+  height: calc(100% + $top-spacing);
+  background-color: var(--neutral-black-alpha-90);
+  z-index: variables.$z-index-fullscreen;
 }
 
 %dialog {
