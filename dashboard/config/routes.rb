@@ -38,7 +38,7 @@ Dashboard::Application.routes.draw do
   constraints host: CDO.preview_codeprojects_hostname do
     get '/', to: 'codeprojects_preview#show'
     # Custom 404 page for codeprojects preview
-    match '*path', to: 'codeprojects_preview#not_found', via: :all
+    get '*path', to: 'codeprojects_preview#not_found'
   end
 
   # This matches any host that is not the codeprojects hostname
