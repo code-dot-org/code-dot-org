@@ -88,8 +88,9 @@ class CongratsController < ApplicationController
         @sections = current_user.sections.all.reject(&:hidden).map(&:summarize)
       end
       @assignable_course_suggestions =
-        CourseOffering.assignable_published_for_students_course_offerings.
-          select {|co| co.self_paced_pl_course_offering_id == curriculum.get_course_version&.course_offering_id}.
+        CourseOffering.
+          assignable_published_for_students_course_offerings.
+          where(self_paced_pl_course_offering_id: curriculum.get_course_version&.course_offering_id).
           map(&:summarize_for_catalog)
     end
     @next_course_script_name = ScriptConstants.csf_next_course_recommendation(@course_name)

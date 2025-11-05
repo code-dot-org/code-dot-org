@@ -204,7 +204,16 @@ class CourseOffering < ApplicationRecord
   # - Published (associated unit group or unit 'published_state' setting is 'preview' or 'stable')
   # - For students (associated unit group or unit 'participant_audience' setting is student)
   def self.assignable_published_for_students_course_offerings
-    all_course_offerings.select {|co| co.assignable? && co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
+    CourseOffering.includes(course_versions: {content_root: {default_unit_group_units: {}}}).
+      joins(course_versions: :content_root).
+      where(assignable: true).
+      where(course_versions: {published_state: [
+              Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview,
+              Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+            ]}
+      ).
+      where(unit_groups: {participant_audience: 'student'}).
+      distinct
   end
 
   def self.assignable_course_offerings(user)
