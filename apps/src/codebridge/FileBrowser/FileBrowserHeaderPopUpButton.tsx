@@ -71,6 +71,8 @@ export const FileBrowserHeaderPopUpButton = () => {
         name="manageFilesDropdown"
         labelText={codebridgeI18n.manageFiles()}
         triggerButtonProps={{
+          type: 'tertiary',
+          color: 'gray',
           isIconOnly: true,
           icon: {iconName: 'plus', iconStyle: 'solid'},
         }}
