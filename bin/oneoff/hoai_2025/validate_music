@@ -10,6 +10,7 @@ require_relative 'music_validation'
 # Parse options
 options = {
   delete: false,
+  fix: false,
   filter: '*',
 }
 OptionParser.new do |opts|
@@ -27,6 +28,12 @@ OptionParser.new do |opts|
            options[:delete] = delete
          end
 
+  opts.on('--fix',
+          'Fixes any issues that are fixable.'
+         ) do |fix|
+           options[:fix] = fix
+         end
+
   opts.on('-f', '--filter FILTER',
           'Filters out only packs with the given string within their id.',
          ) do |filter|
@@ -41,7 +48,7 @@ end.parse!
 
 output_path = File.join(File.dirname(__FILE__), "music_output")
 Dir.glob(File.join(output_path, '**', "#{options[:filter]}.txt")) do |path|
-  error = validate_music path
+  error = validate_music path, options
   name = File.basename(path)
 
   # Print result if error

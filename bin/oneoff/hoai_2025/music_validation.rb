@@ -4,7 +4,7 @@ require_relative 'constants'
 
 INDENTED_BLOCKS = ['repeat', 'play_together']
 
-def validate_music(path)
+def validate_music(path, options = {})
   manifest_path = File.join(File.dirname(__FILE__), "manifest.json")
   data = JSON.parse(File.read(manifest_path))
 
@@ -37,7 +37,15 @@ def validate_music(path)
   last_block = nil
   last_indent = 0
 
+  # The current indentation of the play together
+  within_play_together = -1
+  play_together_sounds = []
+
+  # The 'fixed' file content
+  result = []
+
   File.readlines(path).each_with_index do |line, i|
+    result << line
     indent = (line.match(/^\s+/) || [])[0]&.length || 0
     line = line.strip
     if line == ''
@@ -67,6 +75,12 @@ def validate_music(path)
       break
     end
 
+    # Escaping the play together block
+    if indent != within_play_together
+      within_play_together = -1
+      play_together_sounds = []
+    end
+
     # Check arguments
     block, *args = line.split
 
@@ -94,6 +108,19 @@ def validate_music(path)
           error = "'play' argument has an invalid pack specified: #{parts.first}"
         elsif !(sounds[parts.first] || []).include?(parts.last)
           error = "'play' argument has an invalid sound specified: #{parts.join('/')}"
+        else
+          if indent == within_play_together
+            if play_together_sounds.include?(arg)
+              if options[:fix]
+                # Remove this line
+                result.pop
+              else
+                error = "'play_together' has a repeated sound: #{parts.join('/')}"
+              end
+            else
+              play_together_sounds << arg
+            end
+          end
         end
       end
     when 'play_together'
@@ -101,6 +128,14 @@ def validate_music(path)
       unless args.empty?
         error = "'play_together' block has arguments"
       end
+
+      # Cannot be within another play_together
+      if within_play_together > 0
+        error = "'play_together' within another play_together block"
+      end
+
+      within_play_together = indent + 2
+      play_together_sounds = []
     when 'repeat'
       # Layered output cannot have a 'repeat' block
       error = "'repeat' exists within a layered output" if is_layers
@@ -130,6 +165,11 @@ def validate_music(path)
   # Lastly, look for an indented block at the end (empty statement block)
   if INDENTED_BLOCKS.include? last_block
     error ||= "last block is an empty '#{last_block}'"
+  end
+
+  # If fix is specified, write out the file again
+  if options[:fix]
+    File.write(path, result.join)
   end
 
   error
