@@ -45,7 +45,7 @@ const InnerHTMLPreview = () => {
       if (data.type === IframeMessageType.SET_SOURCE) {
         if (!data.source) {
           // Clear the preview if no source is provided. We are likely changing levels.
-          // todo: send something to service worker?
+          // todo: do we need to do this?
           setSource(undefined);
         } else {
           setSource(data.source);
