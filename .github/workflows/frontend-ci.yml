@@ -35,7 +35,7 @@ jobs:
               - 'frontend/packages/component-library-styles/**'
               - 'frontend/packages/fonts/**'
               - 'frontend/*'
-              - '.github/*'
+              - '.github/**'
 
   # Start the component library CI workflow
   component-library:
