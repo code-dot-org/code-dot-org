@@ -608,37 +608,6 @@ function createWebpackConfig({
             }),
           ]
         : []),
-      // Custom plugin to measure ForkTsCheckerWebpackPlugin performance
-      ...(envConstants.PROFILE_APPS_BUILD
-        ? [
-            {
-              apply: compiler => {
-                let typeCheckStartTime;
-                let typeCheckEndTime;
-
-                compiler.hooks.beforeCompile.tap('ForkTsCheckerTimer', () => {
-                  typeCheckStartTime = Date.now();
-                  console.log(
-                    '[ForkTsCheckerWebpackPlugin] Type checking started'
-                  );
-                });
-
-                compiler.hooks.afterCompile.tapPromise(
-                  'ForkTsCheckerTimer',
-                  async compilation => {
-                    // Wait a bit to ensure ForkTsCheckerWebpackPlugin has reported
-                    await new Promise(resolve => setTimeout(resolve, 100));
-                    typeCheckEndTime = Date.now();
-                    const duration = typeCheckEndTime - typeCheckStartTime;
-                    console.log(
-                      `[ForkTsCheckerWebpackPlugin] Type checking completed in ${duration}ms`
-                    );
-                  }
-                );
-              },
-            },
-          ]
-        : []),
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
         IN_STORYBOOK: JSON.stringify(false),
