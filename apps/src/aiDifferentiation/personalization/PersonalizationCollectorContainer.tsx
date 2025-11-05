@@ -121,7 +121,6 @@ const PersonalizationCollectorContainer: React.FC = () => {
       return;
     }
     if (direction === NEXT) {
-      console.log('Submitting answer for question', questionsNumber);
       analyticsReporter.sendEvent(EVENTS.PERSONALIZATION_ANSWER_SUBMITTED, {
         question: PERSONALIZATION_PROMPTS[questionsNumber].question,
         questionNumber: questionsNumber + 1,
