@@ -15,7 +15,7 @@ class CodeprojectsPreviewController < ApplicationController
   def not_found
     puts "hi from not_found"
     set_content_security_policy
-    render 'not_found', layout: false, status: :not_found
+    render 'page_not_found', layout: false, status: :not_found
   end
 
   def set_content_security_policy

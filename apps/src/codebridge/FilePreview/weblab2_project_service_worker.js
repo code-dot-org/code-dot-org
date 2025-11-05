@@ -8,19 +8,18 @@
 // This is served as preview.codeprojects.org/weblab2-project-service-worker.js by routes.rb and codeprojects_preview_controller.rb
 
 // These constants are duplicated to constants.ts. Service workers cannot import modules.
-const DEFAULT_START_HTML_FILE = 'index.html';
 const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
 // These are duplicated to the ProjectServiceWorkerMessageType enum in constants.ts
 const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
-const SET_CURRENT_FILE = 'SET_CURRENT_FILE';
 const SERVICE_WORKER_INSTALLED = 'SERVICE_WORKER_INSTALLED';
 const SERVICE_WORKER_ACTIVATED = 'SERVICE_WORKER_ACTIVATED';
+// todo: if the student's project links to '/', we currently enter an infinite loop.
+// can we detect if the request is coming from a student project and avoid that?
 
 function main() {
   let filesData = {};
-  let currentFile = DEFAULT_START_HTML_FILE; // Default file
   const broadcastChannel = new BroadcastChannel(
     PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
   );
@@ -39,18 +38,11 @@ function main() {
 
   // Listen for messages from the main thread
   broadcastChannel.onmessage = event => {
-    const {type, files, currentFile: newCurrentFile} = event.data;
+    const {type, files} = event.data;
     if (type === UPDATE_FILES) {
       filesData = files || {};
-      if (newCurrentFile) {
-        currentFile = newCurrentFile;
-      }
       console.log('Service worker received files:', Object.keys(filesData));
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
-    } else if (type === SET_CURRENT_FILE) {
-      // TODO: is this needed?
-      currentFile = newCurrentFile;
-      console.log('Service worker current file set to:', currentFile);
     }
   };
 

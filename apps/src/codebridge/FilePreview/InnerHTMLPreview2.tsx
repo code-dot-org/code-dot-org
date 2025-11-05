@@ -13,10 +13,6 @@ import useProjectServiceWorker from './useProjectServiceWorker';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
 
-// TODOs:
-// Can we keep the nice file not found UI
-// Update the url bar with the current file name
-
 const InnerHTMLPreview = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
@@ -122,16 +118,6 @@ const InnerHTMLPreview = () => {
   }, [previewKeyIndex]);
 
   const getPreview = useCallback(() => {
-    // if (blobUrl === NOT_FOUND_FILE) {
-    //   return (
-    //     <div className={moduleStyles.placeholderContainer}>
-    //       <CodebridgeEmptyState
-    //         imageProps={{src: emptyPreviewPlaceholderImage}}
-    //         title="Nothing to preview"
-    //         description="Your project preview will appear here once you've created or opened a page with content."
-    //       />
-    //     </div>
-    //   );
     if (serviceWorkerReady && currentFile) {
       return (
         <iframe
