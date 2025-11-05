@@ -23,6 +23,9 @@ export PARALLEL_TEST_PROCESSORS=7
 export APPS_BUILD_WORKERS=8
 export APPS_BUILD_MAX_MEMORY=16384
 
+# profile apps builds in CI
+export PROFILE_APPS_BUILD=1
+
 # Install in deployment mode, both to better mirror the test server and to make
 # caching easier.
 bundle config set --local deployment 'true'
