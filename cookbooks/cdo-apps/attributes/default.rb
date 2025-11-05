@@ -23,4 +23,7 @@ default['cdo-apps'] = {
   'app_server' => 'puma',
   'jemalloc' => true
 }
+default['cdo-newrelic'] = {
+  'license-key': 'placeholder'
+}
 default['omnibus_updater']['version'] = '17.6.18'
