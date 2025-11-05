@@ -22,7 +22,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     before do
       allow(CDO).to receive(:default_scheme).and_return('https:')
-      allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
       allow(HocLegacy::Tutorials).to receive(:get)
       allow(HocLegacy::Tutorials).to receive(:get).with(tutorial_code).and_return(tutorial)
@@ -93,28 +92,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
       end
     end
-
-    context 'when DCDO hoc_apis_in_dashboard is false' do
-      before do
-        allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(false)
-      end
-
-      it 'does not launch tutorial' do
-        begin_tutorial_request
-        expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
-      end
-
-      it 'disables caching' do
-        begin_tutorial_request
-        must_disable_caching
-      end
-
-      it 'redirects to tutorial URL' do
-        begin_tutorial_request
-        must_respond_with :found
-        must_redirect_to tutorial_url
-      end
-    end
   end
 
   describe 'GET /api/hour/begin_:code.png' do
@@ -124,8 +101,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
 
     before do
-      allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
-
       allow(HocLegacy::Tutorials).to receive(:get).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialPixelLauncher).to receive(:call)
     end
@@ -159,32 +134,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         expect(HocLegacy::TutorialPixelLauncher).not_to have_received(:call)
       end
     end
-
-    context 'when DCDO hoc_apis_in_dashboard is false' do
-      before do
-        allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(false)
-      end
-
-      it 'does not launch tutorial pixel' do
-        begin_tutorial_pixel_request
-        expect(HocLegacy::TutorialPixelLauncher).not_to have_received(:call)
-      end
-
-      it 'sends pixel png file' do
-        begin_tutorial_pixel_request
-
-        must_respond_with :success
-
-        _(response.content_type).must_equal 'image/png'
-        _(response.headers['Content-Disposition']).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
-        _(response.body.bytesize).must_equal 110 # Size of 1x1.png
-      end
-
-      it 'disables caching' do
-        begin_tutorial_pixel_request
-        must_disable_caching
-      end
-    end
   end
 
   describe 'GET /api/hour/finish' do
@@ -194,8 +143,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     let(:session_row) {{session: session_id}}
 
     before do
-      allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
-
       allow(HocLegacy::TutorialCompleter).to receive(:call).with(controller: instance_of(described_class)).and_return(session_row)
     end
 
@@ -229,26 +176,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         must_redirect_to 'https://test-studio.code.org/congrats'
       end
     end
-
-    context 'when DCDO hoc_apis_in_dashboard is false' do
-      before do
-        allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(false)
-      end
-
-      it 'does not finish current tutorial and redirects to congrats page for completed tutorial' do
-        expect(HocLegacy::TutorialCompleter).not_to receive(:call)
-
-        finish_current_tutorial_request
-
-        must_respond_with :found
-        must_redirect_to 'https://test-studio.code.org/congrats'
-      end
-
-      it 'disables caching' do
-        finish_current_tutorial_request
-        must_disable_caching
-      end
-    end
   end
 
   describe 'GET /api/hour/finish/:code' do
@@ -262,8 +189,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     let(:session_row) {{session: session_id}}
 
     before do
-      allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
-
       allow(HocLegacy::Tutorials).to receive(:get).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialCompleter).to receive(:call).
         with(controller: instance_of(described_class), tutorial:).
@@ -315,25 +240,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         expect(HocLegacy::TutorialCompleter).not_to have_received(:call)
       end
     end
-
-    context 'when DCDO hoc_apis_in_dashboard is false' do
-      before do
-        allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(false)
-      end
-
-      it 'does not finish tutorial and redirects to congrats page for completed tutorial' do
-        expect(HocLegacy::TutorialCompleter).not_to receive(:call)
-        finish_tutorial_request
-
-        must_respond_with :found
-        must_redirect_to "https://test-studio.code.org/congrats?s=#{encoded_tutorial_code}"
-      end
-
-      it 'disables caching' do
-        finish_tutorial_request
-        must_disable_caching
-      end
-    end
   end
 
   describe 'GET /api/hour/finish_:code.png' do
@@ -343,8 +249,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
 
     before do
-      allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
-
       allow(HocLegacy::Tutorials).to receive(:get).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialPixelCompleter).to receive(:call)
     end
@@ -376,32 +280,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_tutorial_pixel_request
         must_respond_with :not_found
         expect(HocLegacy::TutorialPixelCompleter).not_to have_received(:call)
-      end
-    end
-
-    context 'when DCDO hoc_apis_in_dashboard is false' do
-      before do
-        allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(false)
-      end
-
-      it 'does not launch tutorial pixel' do
-        finish_tutorial_pixel_request
-        expect(HocLegacy::TutorialPixelCompleter).not_to have_received(:call)
-      end
-
-      it 'sends pixel png file' do
-        finish_tutorial_pixel_request
-
-        must_respond_with :success
-
-        _(response.content_type).must_equal 'image/png'
-        _(response.headers['Content-Disposition']).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
-        _(response.body.bytesize).must_equal 110 # Size of 1x1.png
-      end
-
-      it 'disables caching' do
-        finish_tutorial_pixel_request
-        must_disable_caching
       end
     end
   end
