@@ -2,6 +2,16 @@ class CodeprojectsPreviewController < ApplicationController
   include AllowedHostnameHelper
   # Public preview page, static content for now.
   def show
+    set_content_security_policy
+    render 'show', layout: false
+  end
+
+  def not_found
+    set_content_security_policy
+    render 'page_not_found', layout: false, status: :not_found
+  end
+
+  def set_content_security_policy
     code_studio_url = CDO.dashboard_site_host
     # Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
     # Therefore we explicitly set the prefix to 'http', which will also allow https.
@@ -89,6 +99,5 @@ class CodeprojectsPreviewController < ApplicationController
       policies << "upgrade-insecure-requests"
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')
-    render 'show', layout: false
   end
 end
