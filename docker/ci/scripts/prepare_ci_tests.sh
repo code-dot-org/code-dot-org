@@ -19,7 +19,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 export PARALLEL_TEST_PROCESSORS=7
 
 # profile apps builds in CI
-PROFILE_APPS_BUILD=1
+export PROFILE_APPS_BUILD=1
 
 # Install in deployment mode, both to better mirror the test server and to make
 # caching easier.
