@@ -23,7 +23,7 @@ const InnerHTMLPreview = () => {
   );
   const [previewKeyIndex, setPreviewKeyIndex] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
-  useProjectServiceWorker(source, currentFile, setServiceWorkerReady);
+  useProjectServiceWorker(source, currentFile);
   const [allowScripts, setAllowScripts] = useState(false);
 
   const parentOrigin = useMemo(() => {

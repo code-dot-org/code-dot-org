@@ -13,8 +13,7 @@ import {addBaseTagToDocument} from './htmlParsingHelpers';
 
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
-  currentFile: string | undefined,
-  setServiceWorkerReady: (ready: boolean) => void
+  currentFile: string | undefined
 ) {
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
     null
