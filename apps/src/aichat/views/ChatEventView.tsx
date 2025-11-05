@@ -1,4 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
+import classNames from 'classnames';
 import React, {forwardRef, memo} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -71,10 +72,7 @@ function formatModelUpdateText(update: ModelUpdate): string {
  * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
 const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
-  (
-    {event, isTeacherView, buildAssetUrl, tabIndex, onKeyDown, ...rest},
-    ref
-  ) => {
+  ({event, isTeacherView, buildAssetUrl, tabIndex, onKeyDown}, ref) => {
     const dispatch = useAppDispatch();
 
     const chatEventDescriptions = isTeacherView
@@ -94,7 +92,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             event.chatMessageText,
             false
           )}
-          {...rest}
+          className={styles.chatMessageOutline}
         >
           <ChatMessageView
             chatMessage={event}
@@ -130,6 +128,11 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
               : undefined
           }
           size="s"
+          ref={ref}
+          tabIndex={tabIndex}
+          onKeyDown={onKeyDown}
+          aria-label={`${text} ${timestampToLocalTime(timestamp)}`}
+          className={styles.chatMessageOutline}
         />
       );
     }
@@ -137,7 +140,10 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
     if (isModelUpdate(event)) {
       return (
         <Alert
-          className="uitest-aichat-chat-alert"
+          className={classNames(
+            'uitest-aichat-chat-alert',
+            styles.chatMessageOutline
+          )}
           text={formatModelUpdateText(event)}
           type="success"
           size="s"
@@ -146,6 +152,10 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
               ? undefined
               : () => dispatch(removeUpdateMessage(event.removeId))
           }
+          ref={ref}
+          tabIndex={tabIndex}
+          onKeyDown={onKeyDown}
+          aria-label={formatModelUpdateText(event)}
         />
       );
     }
@@ -156,6 +166,11 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
         text={chatEventDescriptions[event.descriptionKey]}
         type="info"
         size="s"
+        ref={ref}
+        tabIndex={tabIndex}
+        onKeyDown={onKeyDown}
+        aria-label={chatEventDescriptions[event.descriptionKey]}
+        className={styles.chatMessageOutline}
       />
     );
   }

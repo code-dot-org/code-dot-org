@@ -37,7 +37,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 
   const conversationContainerRef = useRef<HTMLDivElement>(null);
   const parentRef = useRef<HTMLDivElement>(null);
-  const firstEventRef = useRef<HTMLDivElement>(null);
+  const finalEventRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
     if (conversationContainerRef.current) {
@@ -76,7 +76,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const handleParentKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key === 'Enter') {
       setIsInChatNavigationMode(true);
-      firstEventRef.current?.focus();
+      finalEventRef.current?.focus();
     }
   };
 
@@ -112,7 +112,11 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       ref={parentRef}
       // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
       tabIndex={0}
-      aria-label={'Chat history: press Enter to navigate, Escape to exit'}
+      aria-label={
+        isInChatNavigationMode
+          ? ''
+          : 'Chat history: press Enter to navigate, Escape to exit'
+      }
       onKeyDown={handleParentKeyDown}
       className={classNames(
         moduleStyles.conversationArea,
@@ -130,7 +134,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                 key={event.timestamp}
                 isTeacherView={isTeacherView}
                 buildAssetUrl={buildAssetUrl}
-                ref={id === 0 ? firstEventRef : undefined}
+                ref={id === events.length - 1 ? finalEventRef : undefined}
                 tabIndex={isInChatNavigationMode ? 0 : -1}
                 onKeyDown={e => {
                   if (e.key === 'Escape') {
