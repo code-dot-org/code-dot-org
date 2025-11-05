@@ -593,8 +593,23 @@ function createWebpackConfig({
           },
     },
     mode: minify ? 'production' : 'development',
+    profile: envConstants.PROFILE_APPS_BUILD,
+    infrastructureLogging: {
+      // When profiling, suppress verbose webpack progress logs but keep warnings/errors.
+      // This shows any build steps taking >1s, and keeps the output size reasonable in CI.
+      // To see more details when profiling, set this value to 'info' or 'verbose'.
+      level: envConstants.PROFILE_APPS_BUILD ? 'warn' : 'info',
+    },
     plugins: [
       ...WEBPACK_BASE_CONFIG.plugins,
+      // Add explicit ProgressPlugin for profiling to ensure progress logs appear in CI
+      ...(envConstants.PROFILE_APPS_BUILD
+        ? [
+            new webpack.ProgressPlugin({
+              profile: true,
+            }),
+          ]
+        : []),
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
         IN_STORYBOOK: JSON.stringify(false),
