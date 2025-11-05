@@ -13,8 +13,7 @@ const VALIDATION_CONTENTS_INTRO = 'Here is the validation code:';
 const VALIDATION_RESULTS_INTRO =
   'Here are the validation test names along with their results, in JSON:';
 
-const VALIDATION_NOT_RUN =
-  'The student has not run test validation yet. It is very important that they run the tests first. Do not try to point them to the instructions until they have run the tests.';
+const VALIDATION_NOT_RUN = 'The student has not run test validation yet.';
 
 const INSTRUCTIONS_INTRO = 'Here are the instructions:';
 
