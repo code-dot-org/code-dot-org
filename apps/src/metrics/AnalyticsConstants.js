@@ -628,6 +628,11 @@ const EVENTS = {
   LAB2_THEME_CHANGE: 'User changed theme',
 
   // AI Teaching Assistant - Differentiation
+
+  // Just In Time Professional Learning
+  PERSONALIZATION_ANSWER_SUBMITTED:
+    'Answered Just In Time PL Personalization Question',
+  PERSONALIZATION_PERSONA_MATCHED: 'User gets a matched persona',
 };
 
 const EVENT_GROUP_NAMES = {
