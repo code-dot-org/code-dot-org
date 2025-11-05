@@ -13,13 +13,17 @@ import lab2I18n from '@cdo/apps/lab2/locale';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
+import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import '@cdo/apps/lab2/introjs.scss';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
@@ -35,12 +39,12 @@ import CopyrightButton from './CopyrightButton';
 import DisclaimerButton from './DisclaimerButton';
 import OnboardingTourSteps from './OnboardingTourSteps';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
+import setFooterVisibility from './setFooterVisibility';
 import SettingsPanel from './SettingsPanel';
 import {Tabs} from './types';
 import ValidationPanel from './ValidationPanel';
 import ValidationTourSteps from './ValidationTourSteps';
 import {VersionHistoryPanel} from './VersionHistory';
-import './resource-panel-introjs.scss';
 
 import styles from './styles.module.scss';
 
@@ -94,6 +98,8 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
+  /** Only display the sidebar and hide all tabs. */
+  sidebarOnly?: boolean;
 };
 
 /**
@@ -117,6 +123,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorSystemPromptName,
   aiTutorResponseSchemaSettings,
   documentationUrl,
+  sidebarOnly = false,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -176,6 +183,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
+    if (sidebarOnly) {
+      return {};
+    }
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
 
     if (levelProperties.longInstructions) {
@@ -271,6 +281,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,
+    sidebarOnly,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -306,14 +317,31 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
+  // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
+  const {setShowExtraLinksButton} = useExtraLinksButtonContext();
+  useEffect(() => {
+    setFooterVisibility(false);
+    setShowExtraLinksButton(false);
+    return () => {
+      setFooterVisibility(true);
+      setShowExtraLinksButton(true);
+    };
+  }, [setShowExtraLinksButton]);
+
   const onClickTab = useCallback(
     (tab: Tabs) => {
+      if (currentTab && currentTab !== tab) {
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, appName, {
+          resourcePanelTabClickedTo: tab,
+          resourcePanelTabClickedFrom: currentTab,
+        });
+      }
       setCurrentTab(tab);
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [dispatch, isStandaloneCollapsed]
+    [appName, currentTab, dispatch, isStandaloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
@@ -323,20 +351,37 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
         setIsSettingsOpen(true);
+        sendLab2AnalyticsEvent(
+          EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
+          appName
+        );
       } else {
+        // If settngs is currently not open, open settings panel and send analytics event.
+        if (!isSettingsOpen) {
+          sendLab2AnalyticsEvent(
+            EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
+            appName
+          );
+        }
         setIsSettingsOpen(!isSettingsOpen);
       }
     } else {
       // For standalone projects with no tabs, we toggle the floating settings panel.
+      if (!isFloatingSettingsOpen) {
+        sendLab2AnalyticsEvent(
+          EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
+          appName
+        );
+      }
       setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
     }
   }, [
-    dispatch,
     hasTabs,
-    isSettingsOpen,
     isStandaloneCollapsed,
+    dispatch,
+    appName,
+    isSettingsOpen,
     isFloatingSettingsOpen,
-    setIsFloatingSettingsOpen,
   ]);
 
   return (
@@ -478,7 +523,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             </div>
           </div>
         </div>
-        {!isStandaloneCollapsed && (
+        {!isStandaloneCollapsed && hasTabs && (
           <div className={styles.panels}>
             <PanelContainer
               id={currentTab || 'resource-panel'}
@@ -525,6 +570,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   closePanel={() => {
                     setIsSettingsOpen(false);
                   }}
+                  appName={appName}
                 />
               )}
             </PanelContainer>
@@ -543,6 +589,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             closePanel={() => {
               setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
             }}
+            appName={appName}
           />
         </div>
       )}

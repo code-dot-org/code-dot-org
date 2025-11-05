@@ -27,7 +27,6 @@ interface WorkshopDetailsProps
     | 'fee'
     | 'prereq'
     | 'description'
-    | 'notes'
     | 'courseOfferings'
     | 'facilitators'
   > {
@@ -42,7 +41,6 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
   fee,
   prereq,
   description,
-  notes,
   courseOfferings,
   facilitators,
   isUserEnrolled,
@@ -87,15 +85,6 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
           <SafeMarkdown unwrapped markdown={description} />
         </Typography>
       </section>
-
-      {notes && (
-        <section className={moduleStyles.workshopDetailsItem}>
-          <Heading3 visualAppearance={'heading-xs'}>Attendee Notes:</Heading3>
-          <Typography semanticTag="div" visualAppearance="body-two">
-            <SafeMarkdown unwrapped markdown={notes} />
-          </Typography>
-        </section>
-      )}
 
       {courseOfferings && courseOfferings.length > 0 && (
         <section className={moduleStyles.workshopDetailsItem}>

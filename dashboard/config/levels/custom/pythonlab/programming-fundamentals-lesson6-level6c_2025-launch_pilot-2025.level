@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:46:32.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're helping program an emergency response robot for your school. The robot already has functions to sound an alarm and lock the doors, but now it needs an upgrade. You'll create a full emergency protocol that calls multiple safety steps in the right order, including a new function to secure the server room.\r\n\r\n1. Three safety functions are already defined for you:\r\n\r\n   * `sound_alarm()`\r\n   \r\n   * `lock_doors()`\r\n   \r\n   * `secure_server_room()`\r\n\r\n2. Write a new function called `emergency_protocol()` that:\r\n\r\n   * Calls `sound_alarm()` **twice** at the start (to make sure everyone hears it)\r\n   \r\n   * Then calls `lock_doors()`\r\n   \r\n   * Then calls `secure_server_room()`\r\n\r\n3. After defining `emergency_protocol()`, call it to run the full safety sequence.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nFunctions can call other functions—just make sure the ones you're calling are defined first!",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -47,9 +48,12 @@
       "active": false,
       "open": false,
       "type": "validation"
-    }
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:32.148+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level6c_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level6c_2025-launch_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:32.148+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level6c_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level6c_2025-launch_2025\"},{\"changed_at\":\"2025-11-04 05:39:44 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>
