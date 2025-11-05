@@ -55,56 +55,65 @@ function useProjectServiceWorker(
 
   // Send source data to service worker when it changes
   useEffect(() => {
-    if (serviceWorker && source) {
-      console.log('Sending source data to service worker:', source);
-      // Prepare files data for service worker
-      const filesData: Record<
-        string,
-        {content: string; mimeType: string; url: string | undefined}
-      > = {};
-
-      Object.values(source.files).forEach(file => {
-        const {fullFileName, folder} = getFullyQualifiedFileName(
-          file.name,
-          file.folderId,
-          source.folders
-        );
-
-        let content = file.contents;
-        let mimeType = 'text/plain';
-        let url = undefined;
-
-        // Determine MIME type based on file extension or language
-        if (file.url) {
-          // Right not only images are handled via URL
-          url = file.url;
-          mimeType = `image/${file.name.split('.').pop()?.toLowerCase()}`;
-        } else if (file.language === 'html') {
-          mimeType = 'text/html';
-          // Process HTML files to add base tag
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(file.contents, 'text/html');
-          const urlSuffix = folder ? `${folder}/` : '';
-          addBaseTagToDocument(doc, `${window.location.origin}/${urlSuffix}`);
-          content = doc.documentElement.outerHTML;
-        } else if (file.language === 'css') {
-          mimeType = 'text/css';
-        } else if (file.language === 'js') {
-          mimeType = 'application/javascript';
-        }
-
-        filesData[fullFileName] = {content, mimeType, url};
-      });
-      console.log({filesData});
-
-      // Send files data to service worker
+    if (serviceWorker) {
       const broadcastChannel = new BroadcastChannel(
         PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
       );
-      broadcastChannel.postMessage({
-        type: ProjectServiceWorkerMessageType.UPDATE_FILES,
-        files: filesData,
-      });
+      if (source) {
+        console.log('Sending source data to service worker:', source);
+        // Prepare files data for service worker
+        const filesData: Record<
+          string,
+          {content: string; mimeType: string; url: string | undefined}
+        > = {};
+
+        Object.values(source.files).forEach(file => {
+          const {fullFileName, folder} = getFullyQualifiedFileName(
+            file.name,
+            file.folderId,
+            source.folders
+          );
+
+          let content = file.contents;
+          let mimeType = 'text/plain';
+          let url = undefined;
+
+          // Determine MIME type based on file extension or language
+          if (file.url) {
+            // Right not only images are handled via URL
+            url = file.url;
+            mimeType = `image/${file.name.split('.').pop()?.toLowerCase()}`;
+          } else if (file.language === 'html') {
+            mimeType = 'text/html';
+            // Process HTML files to add base tag
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(file.contents, 'text/html');
+            const urlSuffix = folder ? `${folder}/` : '';
+            addBaseTagToDocument(doc, `${window.location.origin}/${urlSuffix}`);
+            content = doc.documentElement.outerHTML;
+          } else if (file.language === 'css') {
+            mimeType = 'text/css';
+          } else if (file.language === 'js') {
+            mimeType = 'application/javascript';
+          }
+
+          filesData[fullFileName] = {content, mimeType, url};
+        });
+        console.log({filesData});
+
+        // Send files data to service worker
+        broadcastChannel.postMessage({
+          type: ProjectServiceWorkerMessageType.UPDATE_FILES,
+          files: filesData,
+        });
+      } else {
+        // No source provided, clear files in service worker
+        console.log('Clearing files in service worker');
+        broadcastChannel.postMessage({
+          type: ProjectServiceWorkerMessageType.UPDATE_FILES,
+          files: {},
+        });
+      }
       broadcastChannel.close();
     } else {
       console.log('skipping sending to service worker', {

@@ -50,7 +50,7 @@ const InnerHTMLPreview = () => {
         if (!data.source) {
           // Clear the preview if no source is provided. We are likely changing levels.
           // todo: send something to service worker?
-          // setSource(undefined);
+          setSource(undefined);
         } else {
           setSource(data.source);
         }

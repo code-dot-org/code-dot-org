@@ -13,7 +13,6 @@ const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
 // These are duplicated to the ProjectServiceWorkerMessageType enum in constants.ts
 const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
-const UPDATED_CURRENT_FILE = 'UPDATED_CURRENT_FILE';
 const UPDATE_FILES = 'UPDATE_FILES';
 const SET_CURRENT_FILE = 'SET_CURRENT_FILE';
 const SERVICE_WORKER_INSTALLED = 'SERVICE_WORKER_INSTALLED';
@@ -25,18 +24,6 @@ function main() {
   const broadcastChannel = new BroadcastChannel(
     PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
   );
-
-  const IGNORED_FILE_PATHS = [
-    '/',
-    '/shared/css/fonts/barlow-semi-condensed.scss',
-    '/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf',
-    '/shared/css/fonts/figtree.scss',
-    '/assets/js/webpack-runtime.js',
-    '/assets/js/codeprojects_preview/show.js',
-    '/assets/application.js',
-    '/assets/js/vendors.js',
-    '/assets/js/code-studio-common.js',
-  ];
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -61,22 +48,21 @@ function main() {
       console.log('Service worker received files:', Object.keys(filesData));
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
     } else if (type === SET_CURRENT_FILE) {
+      // TODO: is this needed?
       currentFile = newCurrentFile;
       console.log('Service worker current file set to:', currentFile);
-      // TODO: do we need to do something here? Always notifying breaks the 404 page because it has latency.
-      //broadcastChannel.postMessage({type: UPDATED_CURRENT_FILE});
     }
   };
 
   // Intercept fetch requests
   self.addEventListener('fetch', event => {
     const url = new URL(event.request.url);
-    if (
-      url.origin === location.origin &&
-      !IGNORED_FILE_PATHS.includes(url.pathname)
-    ) {
+    const requestedFile = getFilenameFromUrl(url);
+    if (url.origin === location.origin && filesData[requestedFile]) {
       console.log('Service worker intercepting fetch for:', url.pathname);
-      event.respondWith(handleProjectRequest(url));
+      event.respondWith(
+        handleProjectRequest(requestedFile, filesData[requestedFile])
+      );
     } else {
       console.log('Returning for', url.pathname);
       return;
@@ -84,14 +70,7 @@ function main() {
   });
 
   function getFilenameFromUrl(url) {
-    let remainder = url.pathname;
-    if (remainder.startsWith('/')) {
-      remainder = remainder.substring(1);
-    }
-    let requestedFile = remainder || currentFile || DEFAULT_START_HTML_FILE;
-    if (requestedFile === '' || requestedFile === '/') {
-      requestedFile = DEFAULT_START_HTML_FILE;
-    }
+    let requestedFile = url.pathname;
 
     // Normalize (remove accidental leading slash)
     if (requestedFile.startsWith('/')) {
@@ -100,46 +79,30 @@ function main() {
     return requestedFile;
   }
 
-  async function handleProjectRequest(url) {
+  async function handleProjectRequest(requestedFile, fileData) {
     try {
-      const requestedFile = getFilenameFromUrl(url);
-
-      console.log('Service worker serving file:', requestedFile);
-
-      if (filesData[requestedFile]) {
-        const {content, mimeType, url} = filesData[requestedFile];
-        if (requestedFile.endsWith('.html')) {
-          console.log('Broadcasting HTML file serving:', requestedFile);
-          broadcastChannel.postMessage({
-            type: SERVING_HTML_FILE,
-            filePath: requestedFile,
-          });
-        }
-        if (url) {
-          const response = await fetch(url);
-          return response;
-        }
-        return new Response(content, {
-          status: 200,
-          headers: {
-            'Content-Type': mimeType,
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-            Pragma: 'no-cache',
-            Expires: '0',
-            // Intentionally omit SAMEORIGIN; ALLOWALL is non‑standard but keeps older code path.
-            'X-Frame-Options': 'ALLOWALL',
-          },
+      const {content, mimeType, url} = fileData;
+      if (requestedFile.endsWith('.html')) {
+        broadcastChannel.postMessage({
+          type: SERVING_HTML_FILE,
+          filePath: requestedFile,
         });
-      } else {
-        console.warn(
-          'File not found:',
-          requestedFile,
-          'Available files:',
-          Object.keys(filesData)
-        );
-        // forward to default fetch handler to allow 404 handling
-        return await fetch(url);
       }
+      if (url) {
+        const response = await fetch(url);
+        return response;
+      }
+      return new Response(content, {
+        status: 200,
+        headers: {
+          'Content-Type': mimeType,
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          Pragma: 'no-cache',
+          Expires: '0',
+          // Intentionally omit SAMEORIGIN; ALLOWALL is non‑standard but keeps older code path.
+          'X-Frame-Options': 'ALLOWALL',
+        },
+      });
     } catch (error) {
       console.error('Service worker error:', error);
       return new Response('Internal Server Error', {
