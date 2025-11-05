@@ -18,6 +18,7 @@ export interface ActionDropdownOption extends CustomDropdownOption {
   onClick: () => void;
   isOptionDestructive?: boolean;
   icon: FontAwesomeV6IconProps;
+  optionId?: string;
 }
 
 export interface ActionDropdownProps extends AriaAttributes {
@@ -100,6 +101,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
             onClick,
             isOptionDisabled,
             isOptionDestructive,
+            optionId,
             icon: {
               iconName,
               iconStyle,
@@ -110,6 +112,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
           return (
             <li key={value}>
               <button
+                id={optionId}
                 className={classNames(
                   moduleStyles.dropdownMenuItem,
                   isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
