@@ -131,7 +131,9 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
           ref={ref}
           tabIndex={tabIndex}
           onKeyDown={onKeyDown}
-          aria-label={`Notification: ${text}, Time: ${timestampToLocalTime(timestamp)}`}
+          aria-label={`Notification: ${text}, Time: ${timestampToLocalTime(
+            timestamp
+          )}`}
           className={styles.chatMessageOutline}
         />
       );
