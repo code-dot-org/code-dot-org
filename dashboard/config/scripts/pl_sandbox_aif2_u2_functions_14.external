@@ -3,32 +3,64 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introducing Functions 
+# Introducing Functions in Java Script
 
-#### If you've ever written the same line of code more than once—or copied and pasted a block of code to use it again—you’ve already run into a common coding problem: **repetition.**
+#### When you build web apps, you often want something to happen — like showing a message when a button is clicked. But what if you want that same behavior in more than one place, or want to trigger it from different events?
 
-## Stop Repeating Yourself! 
+#### That’s where **functions** come in.
 
-#### When you're just starting out with coding, it's easy to write the same lines of code over and over. For example, imagine you’re making a birthday program that prints a greeting for three friends:
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Function</strong> is a named set of reusable instructions that tells your program what to do.</p>
+</div>
 
-<img src="https://images.code.org/509ee403d4b4a39439a3248a068054bc-image-1745420914259.png" alt="Python code printing Happy Birthday to 3 different people" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
-
-
-#### That’s a lot of repeating! It works, but what if you wanted to change the message? You’d have to update every section by hand.
-
-#### This is where **functions** help.
+## Stop Repeating Actions!
 
 
+#### Functions in JavaScript are especially powerful because they’re what make interactive behavior possible. You can define one function and connect it to different events — clicks, key presses, even timers — without rewriting the same code each time.
 
-> #### A **function** is like a mini-program inside your program. It lets you group a set of instructions under a name, so you can run those instructions whenever you need them—without rewriting the code each time. You **define** a function once, and then you can **call** it as many times as you like.
+#### **Functions help you:**
 
-#### Here's how that birthday example looks using a function: 
+- #### Reuse code without repeating it
+
+- #### Organize logic into clear, named steps
+
+- #### Make interactive apps easier to update and debug
+
+## Before Functions: Repeating Code
+
+
+#### When you start adding actions to buttons, it’s tempting to copy and paste the same lines again and again.
+
+#### Here’s what the code might look like before using a function:
+
+// levelbuilder is not loading pictures. I'm assuming it will be back up so I am continuing with text. 
+Hold for image.
 
 <img src="https://images.code.org/4bcfc9203dd932bd5393016a5e8a27fb-image-1745421696182.png" alt="Happy birthday Python code condensed with a function" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
 
-#### Much cleaner, right?
+#### This works fine—but notice the repetition?
 
-#### Functions make your code **easier to read, easier to reuse, and easier to fix if something changes**. And once you get the hang of them, they make your programs more powerful too!
+#### Each event handler repeats the same steps: add to `total` and update the display. If you ever want to change how the display looks, you’d have to fix it in multiple places.
+
+
+
+## After Functions: Cleaner, Reusable Code
+
+#### By moving that repeated logic into a function, we can call it whenever we need it — no copy-pasting required.
+
+// levelbuilder is not loading pictures. I'm assuming it will be back up so I am continuing with text. 
+Hold for image.
+
+<img src="https://images.code.org/4bcfc9203dd932bd5393016a5e8a27fb-image-1745421696182.png" alt="Happy birthday Python code condensed with a function" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+
+
+
+
+
+
+
+#### Now the code is shorter, easier to update, and easier for students to understand.
+#### If you ever want to change how the total appears, you only need to edit one place — inside the `updateTotal()` function.
 
 
 
@@ -40,11 +72,6 @@ markdown <<MARKDOWN
 
 
 ---
-
-
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This concept is covered in Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/aif2-2025/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
-</p>
 
 
 MARKDOWN
