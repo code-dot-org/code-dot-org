@@ -20,9 +20,7 @@ import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
   LabProps,
   LevelProperties,
-  ProjectSources,
   ExcalidrawSourceWithExternalFiles,
-  SketchlabExternalFiles,
 } from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -31,8 +29,10 @@ import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {SketchlabSources, SerializedExcalidrawState} from './types';
+import uploadExternalFiles from './utils/uploadExternalFiles';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -46,46 +46,7 @@ const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
-// TO DO: add Jira to handle bad extensions.
-const MIME_TO_EXT = {
-  'image/svg+xml': 'svg',
-  'image/png': 'png',
-  'image/jpeg': 'jpg',
-  'image/gif': 'gif',
-  'image/webp': 'webp',
-  'image/bmp': 'bmp',
-  'image/x-icon': 'ico',
-  'image/avif': 'avif',
-  'image/jfif': 'jfif',
-  'application/octet-stream': 'bin',
-};
-
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
-
-async function uploadBase64ToUrl(
-  dataUrl: string,
-  uploadUrl: string,
-  mimeType: string
-): Promise<Response> {
-  const localResponse = await fetch(dataUrl);
-  const blob = await localResponse.blob();
-  const file = new File([blob], 'file', {
-    type: mimeType,
-  });
-
-  return await HttpClient.put(uploadUrl, file);
-}
-
-interface SerializedExcalidrawState {
-  elements: ExcalidrawElement[];
-  appState: AppState;
-  files: BinaryFiles;
-  externalFiles?: SketchlabExternalFiles;
-}
-
-interface SketchlabSources extends ProjectSources {
-  source: ExcalidrawSourceWithExternalFiles;
-}
 
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
@@ -180,59 +141,13 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           },
         });
 
-        // Note: does this every half second thing work in this context?
-        // Might need to be faster if we want to quickly make sure that an upload succeeded.
-        const savedFileIds = Object.keys(
-          currentSources.source.externalFiles || {}
+        uploadExternalFiles(
+          currentSources.source,
+          serializedData,
+          filesBeingUploadedRef,
+          channelId,
+          updateSources
         );
-        const excalidrawFileIds = Object.keys(serializedData.files || {});
-        const difference = excalidrawFileIds.filter(
-          id =>
-            !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
-        );
-
-        if (difference.length && serializedData.files) {
-          difference.map(async fileId => {
-            filesBeingUploadedRef.current.add(fileId);
-
-            const newFile = serializedData.files[fileId];
-            const extension = MIME_TO_EXT[newFile.mimeType];
-            let externalUrl = `/v3/assets/${channelId}/${fileId}.${extension}`;
-
-            try {
-              await uploadBase64ToUrl(
-                newFile.dataURL,
-                externalUrl,
-                newFile.mimeType
-              );
-            } catch {
-              // If an upload fails, still add an entry to externalFiles
-              // so we don't reattempt the upload repeatedly.
-              // Longer term, how should we handle failed uploads?
-              externalUrl = 'uploadFailed';
-            }
-
-            const newExternalFile = {
-              id: fileId,
-              name: 'external',
-              language: extension,
-              contents: '',
-              folderId: '1',
-              url: externalUrl,
-            };
-
-            updateSources({
-              source: {
-                ...currentSources.source,
-                externalFiles: {
-                  ...currentSources.source.externalFiles,
-                  [fileId]: newExternalFile,
-                },
-              },
-            });
-            filesBeingUploadedRef.current.delete(fileId);
-          });
-        }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
     [updateSources, channelId, currentSources.source]

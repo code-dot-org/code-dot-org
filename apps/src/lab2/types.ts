@@ -9,10 +9,7 @@
 
 import {Theme} from '@code-dot-org/component-library/common/contexts';
 import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
-import {
-  ExcalidrawInitialDataState,
-  BinaryFileData,
-} from '@excalidraw/excalidraw/types/types';
+import {ExcalidrawInitialDataState} from '@excalidraw/excalidraw/types/types';
 import type * as GoogleBlockly from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
@@ -101,13 +98,17 @@ export type BlocklySource = {[key: string]: unknown};
 
 // -- SKETCH LAB -- //
 
-export type SketchlabExternalFiles = Record<FileId, ProjectFile>;
+export type SketchlabExternalFiles = Record<FileId, SketchlabProjectFile>;
 
 export interface ExcalidrawSourceWithExternalFiles
   extends ExcalidrawInitialDataState {
   externalFiles?: SketchlabExternalFiles;
   elements?: ExcalidrawElement[] | null; // for mutability for Redux?
 }
+
+export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
+  uploadFailed?: boolean;
+};
 
 // -- MULTI-FILE -- //
 
