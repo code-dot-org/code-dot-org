@@ -627,8 +627,6 @@ const EVENTS = {
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
   LAB2_THEME_CHANGE: 'User changed theme',
 
-  // AI Teaching Assistant - Differentiation
-
   // Just In Time Professional Learning
   PERSONALIZATION_ANSWER_SUBMITTED:
     'Answered Just In Time PL Personalization Question',
