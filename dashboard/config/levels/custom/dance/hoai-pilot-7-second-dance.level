@@ -75,7 +75,7 @@
     "name_suffix": "_draft3",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"<img src=\\\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\\\" style=\\\" margin-right: 10px;  height: 20px; float: left\\\"> The dancer should be the same on both blocks and the sequence (order) is important.  \",\"hint_id\":\"HInt2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/752f59bde46210c97c339095f7cb0f7e/dance_ai_dancer_and_dance_move.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"<img src=\\\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\\\" style=\\\" margin-right: 10px;  height: 20px; float: left\\\"> Add these blocks to <code style=\\\"color:white; background-color:#FFBD46\\\">setup</code> to create your first dancer: \\n<xml xmlns=\\\"https://developers.google.com/blockly/xml\\\">\\n      <block type=\\\"Dancelab_makeAnonymousDanceSprite\\\" id=\\\"1\\\">\\n        <field name=\\\"COSTUME\\\" config=\\\"&quot;CAT&quot;,&quot;SLOTH&quot;\\\">\\\"CAT\\\"</field>\\n        <field name=\\\"LOCATION\\\">{x: 200, y: 200}</field>\\n        <next>\\n          <block type=\\\"Dancelab_changeMoveEachLR\\\" id=\\\"|y+CWEBlleENO5MU(?yL\\\">\\n            <field name=\\\"GROUP\\\" config=\\\"&quot;CAT&quot;,&quot;SLOTH&quot;\\\">\\\"CAT\\\"</field>\\n            <field name=\\\"MOVE\\\">MOVES.Roll</field>\\n            <field name=\\\"DIR\\\">-1</field>\\n          </block>\\n        </next>\\n      </block>\\n    </statement>\\n\\n</xml>\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8f36bc970ceaa3260e7e09d32502c272/dance_ai_dancer_and_dance_move.mp3\"}]",
     "default_song": "asitwas_harrystyles",
-    "long_instructions": "##Your lead dancer is here!\r\n- Drag the `do dance move` block and connect it ***under*** `make new dancer`\r\n- Then press Run!",
+    "long_instructions": "##Choose a move!\r\n\r\nChange the dance move on the new block.\r\n\r\nThen, press the Run button.\r\n\r\n---\r\n\r\nWhen you're ready to mix new music, press Continue. ",
     "encrypted": "false",
     "mini_rubric": "false",
     "tts_short_instructions_override": "Connect the `make a new` block and then `dancers do` block into the workspace, and connect them inside the setup block.",
@@ -96,27 +96,7 @@
     "guide_mode": "instructions",
     "toolbox_definition": {
       "contents": [
-        {
-          "kind": "block",
-          "type": "GeneratedDancers_makeAnonymousDanceSprite",
-          "id": "/MVA^R/EKt=.qbNjdghw",
-          "fields": {
-            "COSTUME": "\"GENERATED_DANCER\"",
-            "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 100}</field>"
-          },
-          "enabled": true
-        },
-        {
-          "kind": "block",
-          "type": "GeneratedDancers_changeMoveEachLR",
-          "id": "8~xvvzJ7t%K8`xfS;P=a",
-          "fields": {
-            "GROUP": "\"GENERATED_DANCER\"",
-            "MOVE": "<field name=\"MOVE\">MOVES.ClapHigh</field>",
-            "DIR": "<field name=\"DIR\">-1</field>"
-          },
-          "enabled": true
-        }
+
       ],
       "kind": "flyoutToolbox"
     },
@@ -154,17 +134,12 @@
     }
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-10-24T03:08:44.092+00:00\",\"changed\":[\"cloned from \\\"hoai-pilot-6-second-dance\\\"\"],\"cloned_from\":\"hoai-pilot-6-second-dance\"},{\"changed_at\":\"2025-10-27 17:52:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-10-24T03:08:44.092+00:00\",\"changed\":[\"cloned from \\\"hoai-pilot-6-second-dance\\\"\"],\"cloned_from\":\"hoai-pilot-6-second-dance\"},{\"changed_at\":\"2025-10-27 17:52:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:37:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:38:17 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:38:34 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 22:26:49 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 22:28:52 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="Dancelab_whenSetup" id="n2IvvYw0`dD^TvxCN_`K" deletable="false" movable="false" x="18" y="15"/>
-      </xml>
-    </start_blocks>
-    <toolbox_blocks>
       <xml>
         <block type="Dancelab_makeAnonymousDanceSprite" id="1" x="54" y="185">
           <field name="COSTUME" config="&quot;CAT&quot;,&quot;SLOTH&quot;">"CAT"</field>
@@ -176,6 +151,6 @@
           <field name="DIR">-1</field>
         </block>
       </xml>
-    </toolbox_blocks>
+    </start_blocks>
   </blocks>
 </Dancelab>

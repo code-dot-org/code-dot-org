@@ -55,6 +55,15 @@
       you can add/remove the <code>hide_letters_lab2</code> property above
       to control whether letters appear in the bubbles for each sublevel.
       The <code>hide_letters_lab2</code> has no effect on a legacy bubble choice level.
+    %h4 Tip: Navigation Type
+    %p
+      The Lab2 version of bubble choice levels (described above) allows you to specify where a student should go after completing a sublevel.
+      Use <code>navigation_type 'type_name'</code> to set the navigation type. Currently the following types are available:
+    %ul
+      %li
+        <code>parent</code> (default): Clicking Continue on a sublevel returns to the parent bubble choice level. This is the default behavior if no navigation_type is set.
+      %li
+        <code>next_level</code>: Clicking Continue/Finish on a sublevel advances to the next in the level progression, or finishes the lesson if there are no more levels.
     %h4 Tip: Custom Modes
     %p
       With the Lab2 version of bubble choice levels (described above), certain custom modes

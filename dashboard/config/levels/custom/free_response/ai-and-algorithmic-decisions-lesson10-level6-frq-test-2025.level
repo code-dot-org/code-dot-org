@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-10-31T14:46:52.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Fairness and Inclusivity",
+    "long_instructions": "Reflect on the feature that you just created. \r\n* Does your rule exclude any group unintentionally?\r\n* Suggest one rule that improves inclusivity for a subgroup, and one potential downside.",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "Prompt students to actively propose solutions for improving inclusivity and to consider the trade-offs or unintended consequences of those solutions. Encourage students to think critically about the potential for bias or exclusion in their designed rules, promoting a human-centered approach to coding.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-31 14:46:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 14:47:43 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

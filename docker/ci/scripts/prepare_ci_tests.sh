@@ -49,6 +49,7 @@ build_dashboard: true
 build_pegasus: true
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
+contentful_cs_for_all_access_token: $CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
 dashboard_workers: 5
@@ -80,3 +81,10 @@ aiproxy_api_key: 'fake_key'
 echo "Wrote settings and secrets from env vars into locals.yml."
 
 set -x
+
+bundle exec rake install
+# catch any code loader errors before starting any rails environment
+bundle exec rake lint:zeitwerk
+bundle exec rake build
+
+bundle exec rake ci:seed_ui_test

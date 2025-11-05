@@ -1224,22 +1224,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'end of HoC for a user is HOC endpoint' do
     stubs(:current_user).returns(@student)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is HOC endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is frozen endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
   end
 
   test 'post script redirect is starwars endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
   end
 
   test "show redirects admins to root" do
@@ -1287,7 +1287,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 1,
     }
 
-    assert_select 'img[src="//code.org/api/hour/begin_hoc-script.png"]'
+    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-script.png"]'
   end
 
   test 'should not show tracking pixel for second level of hoc course in prod' do
@@ -1303,7 +1303,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 2,
     }
 
-    assert_select 'img[src="//code.org/api/hour/begin_hoc-script.png"]', false, 'must not contain tracking pixel'
+    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-script.png"]', false, 'must not contain tracking pixel'
   end
 
   test "should 404 for invalid chapter for flappy" do
