@@ -11,6 +11,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import msg from '@cdo/locale';
 
@@ -532,7 +533,7 @@ const sourceHandler = {
         } catch (err) {
           MetricsReporter.logError({
             event: 'Error from Blockly in getLevelSource',
-            error: serializeError(err),
+            error: repackageError(err),
             appType: appOptions.app,
             levelId: appOptions.level?.id,
           });
@@ -545,7 +546,7 @@ const sourceHandler = {
         } catch (err) {
           MetricsReporter.logError({
             event: 'Error from getCode in getLevelSource',
-            error: serializeError(err),
+            error: repackageError(err),
             appType: appOptions.app,
             levelId: appOptions.level?.id,
           });
@@ -558,7 +559,7 @@ const sourceHandler = {
           .catch(err => {
             MetricsReporter.logError({
               event: 'Error from getCodeAsync in getLevelSource',
-              error: serializeError(err),
+              error: repackageError(err),
               appType: appOptions.app,
               levelId: appOptions.level?.id,
             });
@@ -585,17 +586,6 @@ const sourceHandler = {
     return Promise.resolve(); // Return an insta-resolved promise.
   },
 };
-
-export function serializeError(error) {
-  if (error instanceof Error) {
-    return {
-      message: error.message,
-      name: error.name,
-      stack: error.stack,
-    };
-  }
-  return String(error);
-}
 
 /** @type {AppOptionsConfig} */
 let APP_OPTIONS;

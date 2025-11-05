@@ -4,6 +4,7 @@ import {
   OPEN_ENDED_LEGACY_PROJECT_TYPES,
   OPEN_ENDED_PROJECTS_YOUNG_AGE,
 } from '@cdo/apps/constants';
+import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
@@ -657,7 +658,6 @@ var projects = (module.exports = {
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
    * @param {function(): boolean} sourceHandler.setSelectedPoem
-   * @param {function(Error)} sourceHandler.serializeError
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -1321,7 +1321,7 @@ var projects = (module.exports = {
         .catch(error => {
           MetricsReporter.logError({
             event: 'Error in getUpdatedSourceAndHtml_',
-            error: this.sourceHandler.serializeError(error),
+            error: repackageError(error),
             appType: this.getStandaloneApp(),
             channelId: this.getCurrentId(),
           });
