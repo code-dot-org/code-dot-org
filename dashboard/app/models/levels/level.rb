@@ -1050,7 +1050,7 @@ class Level < ApplicationRecord
   end
 
   def uses_theme_preference?
-    # Only python lab and web lab 2 set and use the theme preference in UserPreferences right now.
+    # These are the level types that set and use the theme preference in UserPreferences right now.
     is_a?(Pythonlab) || is_a?(Weblab2) || is_a?(Sketchlab)
   end
 
