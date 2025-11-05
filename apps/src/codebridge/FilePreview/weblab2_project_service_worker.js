@@ -15,8 +15,7 @@ const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
 const SERVICE_WORKER_INSTALLED = 'SERVICE_WORKER_INSTALLED';
 const SERVICE_WORKER_ACTIVATED = 'SERVICE_WORKER_ACTIVATED';
-// todo: if the student's project links to '/', we currently enter an infinite loop.
-// can we detect if the request is coming from a student project and avoid that?
+// todo: getting a 404 does not update the url bar...
 
 function main() {
   let filesData = {};
@@ -49,7 +48,14 @@ function main() {
   // Intercept fetch requests
   self.addEventListener('fetch', event => {
     const url = new URL(event.request.url);
-    const requestedFile = getFilenameFromUrl(url);
+    let requestedFile = getFilenameFromUrl(url);
+    const referrerFile = getFilenameFromUrl(new URL(event.request.referrer));
+    if (filesData[referrerFile] && requestedFile === '') {
+      // If the request is for the root of the project and it's coming from a file in the project,
+      // return index.html instead of trying to fetch a non-existent root file.
+      console.log('getting index.html for referrer', referrerFile);
+      requestedFile = 'index.html';
+    }
     if (url.origin === location.origin && filesData[requestedFile]) {
       console.log('Service worker intercepting fetch for:', url.pathname);
       event.respondWith(
@@ -65,7 +71,7 @@ function main() {
     let requestedFile = url.pathname;
 
     // Normalize (remove accidental leading slash)
-    if (requestedFile.startsWith('/')) {
+    while (requestedFile.startsWith('/')) {
       requestedFile = requestedFile.slice(1);
     }
     return requestedFile;
