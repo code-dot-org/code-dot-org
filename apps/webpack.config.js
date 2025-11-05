@@ -35,6 +35,9 @@ const WEBPACK_DEV_SERVER_PORT = 9000;
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
 
+// Read worker count from environment variable, defaulting to 4 for local development
+const APPS_BUILD_WORKERS = parseInt(process.env.APPS_BUILD_WORKERS || '4', 10);
+
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
 const nodeModulesToTranspile = [
   // All of our @cdo- and @dsco_-aliased files should get transpiled as they are our own
@@ -315,7 +318,7 @@ const WEBPACK_BASE_CONFIG = {
           {
             loader: 'thread-loader',
             options: {
-              workers: 8,
+              workers: APPS_BUILD_WORKERS,
             },
           },
           {
@@ -336,7 +339,7 @@ const WEBPACK_BASE_CONFIG = {
           {
             loader: 'thread-loader',
             options: {
-              workers: 8,
+              workers: APPS_BUILD_WORKERS,
             },
           },
           {
@@ -462,7 +465,7 @@ function createWebpackConfig({
       minimize: minify,
       minimizer: [
         new TerserPlugin({
-          parallel: 8,
+          parallel: APPS_BUILD_WORKERS,
           // Excludes these from minification to avoid breaking functionality,
           // but still adds .min to the output filename suffix.
           exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
