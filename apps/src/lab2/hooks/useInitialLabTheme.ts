@@ -24,6 +24,7 @@ interface UseInitialLabThemeProps {
 const LABS_WITH_THEME_PREFERENCE: (string | undefined)[] = [
   'pythonlab',
   'weblab2',
+  'sketchlab',
 ];
 
 // Determine and set the theme for the lab that is currently being loaded.
