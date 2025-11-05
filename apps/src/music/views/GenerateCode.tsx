@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Heading3} from '@code-dot-org/component-library/typography';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -278,10 +278,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {['listening', 'listened'].includes(aiGenerateState) && (
         <div>
-          <Heading4>
+          <Heading3>
             {aiGenerateState === 'listening' && 'Take a listen...'}
             {aiGenerateState === 'listened' && 'Decide what to do next'}
-          </Heading4>
+          </Heading3>
           <div>AI generated code based on your prompt, "{promptText}"</div>
         </div>
       )}
@@ -320,14 +320,14 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'editing' && !isPlaying && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Heading3>Modify the code</Heading3>
           AI helped you get started. Make your own changes, then press Run.
         </div>
       )}
 
       {aiGenerateState === 'editing' && isPlaying && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Heading3>Modify the code</Heading3>
           <div>Try changing the code. </div>
         </div>
       )}
@@ -335,7 +335,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       {aiGenerateState === 'edited' && (
         <>
           <div>
-            <Heading4>Modify the code</Heading4>
+            <Heading3>Modify the code</Heading3>
             <div>That's a great mix!</div>
           </div>
           <div className={styles.buttonRow}>
