@@ -306,13 +306,11 @@ const backgroundsChill = [
   '"color_cycle"',
   '"frosted_grid"',
   '"splatter"',
-  '"rainbow"',
   '"snowflakes"',
   '"sparkles"',
   '"spiral"',
   '"squiggles"',
   '"stars"',
-  '"music_wave"',
 ];
 
 const foregroundsChill = [
