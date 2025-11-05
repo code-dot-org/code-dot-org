@@ -21,7 +21,7 @@ const testLoad = function () {
 
   const connectionId = _.random(1000000000000);
 
-  const repeatInterval = DCDO.get('actioncable-repeat-interval', 10000);
+  const repeatInterval = DCDO.get('actioncable-repeat-interval', 1000);
   const isRepeat = DCDO.get('actioncable-repeat', false);
   const disconnectTimeout = DCDO.get(
     'actioncable-disconnect-timeout',
