@@ -149,7 +149,6 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
         sign_in user
         new_account_request
 
-        user.reload
         _(user.verified_teacher?).must_equal false
       end
     end
@@ -164,14 +163,12 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       it 'does not opt the user out of lms landing' do
         new_account_request
 
-        user.reload
         _(user.lms_landing_opted_out).must_be_nil
       end
 
       it 'does not verify the teacher' do
         new_account_request
 
-        user.reload
         _(user.verified_teacher?).must_equal false
       end
     end
