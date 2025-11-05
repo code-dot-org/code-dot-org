@@ -405,10 +405,11 @@ const DanceView: React.FunctionComponent<{
       theme: theme === 'Dark' ? cdoDark : cdoTheme,
       readOnly: readonlyWorkspace,
       editBlocks: getAppOptionsEditBlocks(),
+      extraScrollheight: guideMode === 'aiCodeGenerate' ? 200 : 0,
     } as GoogleBlockly.BlocklyOptions);
 
     return () => workspace.current?.dispose();
-  }, [dispatch, readonlyWorkspace, levelProperties, theme]);
+  }, [dispatch, guideMode, readonlyWorkspace, levelProperties, theme]);
 
   useEffect(() => {
     if (!workspace.current) {

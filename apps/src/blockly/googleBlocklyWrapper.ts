@@ -882,6 +882,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.isDarkTheme = isDarkTheme(
       options.theme as GoogleBlockly.Theme | undefined
     );
+    blocklyWrapper.extraScrollHeight =
+      optOptionsExtended.extraScrollHeight || 0;
 
     // Only allow toggling disabled blocks in start mode.
     // This is also important for ensuring that Blockly does not

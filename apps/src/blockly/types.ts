@@ -189,6 +189,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   shortcutBackups: {
     [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
   };
+  extraScrollHeight: number;
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;
@@ -286,6 +287,7 @@ export interface ExtendedVariableMap extends GoogleBlockly.VariableMap {
 }
 
 export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
+  extraScrollHeight: number;
   varsInGlobals: boolean;
   disableVariableEditing: boolean;
   assetUrl: (path: string) => string;

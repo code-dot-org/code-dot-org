@@ -54,4 +54,26 @@ export default class MetricsManager extends ScrollMetricsManager {
     // See: https://github.com/google/blockly/issues/8637
     return !this.workspace_.RTL;
   }
+
+  /**
+   * Gets content metrics in either pixel or workspace coordinates.
+   * The content area is a rectangle around all the top bounded elements on the
+   * workspace (workspace comments and blocks).
+   *
+   * Overridden to add extra height to content metrics to allow for scrolling
+   * past a bottom-anchored overlay (e.g. Dance Lab2 aiCodeGenerate guide).
+   *
+   * @param opt_getWorkspaceCoordinates True to get the content metrics in
+   *     workspace coordinates, false to get them in pixel coordinates.
+   * @returns The metrics for the content container.
+   */
+  getContentMetrics(
+    opt_getWorkspaceCoordinates?: boolean
+  ): GoogleBlockly.MetricsManager.ContainerRegion {
+    const metrics = super.getContentMetrics(opt_getWorkspaceCoordinates);
+    return {
+      ...metrics,
+      height: metrics.height + Blockly.extraScrollHeight,
+    };
+  }
 }
