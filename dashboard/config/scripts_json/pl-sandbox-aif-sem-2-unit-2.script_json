@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-03 15:50:10 UTC",
+    "serialized_at": "2025-11-04 20:19:20 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -392,6 +392,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-variables-12"
+        ],
         "progression": "Variables in JavaScript"
       },
       "bonus": false,
@@ -414,6 +417,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-debug-variable-lab-13"
+        ],
         "progression": "Variables in JavaScript"
       },
       "bonus": false,
@@ -436,6 +442,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-functions-14"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -458,6 +467,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-identify-functions-15"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -485,7 +497,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-creatingFunctions-JS-16"
+          "pl-sandbox-aif2-U2-functions-Lab-16"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -493,7 +505,7 @@
         "activity_section.key": "fac4da79-8679-42d5-ac3c-39b5d9d69a16"
       },
       "level_keys": [
-        "pl-sandbox-aif2-u2-creatingFunctions-JS-16"
+        "pl-sandbox-aif2-U2-functions-Lab-16"
       ]
     },
     {
@@ -502,6 +514,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-arrowfunction-17"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -524,6 +539,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-functions-practice-lab-18"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -546,6 +564,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-function-parameters-19"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -568,6 +589,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-function-paramenter-lab-20"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -768,9 +792,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-sandbox-aif2-u2-creatingFunctions-JS-16",
+        "level.key": "pl-sandbox-aif2-U2-functions-Lab-16",
         "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-creatingFunctions-JS-16"
+          "pl-sandbox-aif2-U2-functions-Lab-16"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
