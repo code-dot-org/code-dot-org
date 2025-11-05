@@ -507,7 +507,8 @@ const EVENTS = {
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
-  SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
+  SUBMIT_AICHAT_REQUEST_INITIATED: 'User submits aichat request',
+  SUBMIT_AICHAT_REQUEST_SUCCESS: 'User aichat request succeeds',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
     'Unauthorized user attempts to submit aichat request or model customizations and fails',
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',

@@ -34,7 +34,7 @@
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
     "guide_mode": "aiCodeGenerate",
-    "long_instructions": "#### Create Your Dance Performance\r\nModify the prompt to generate dance code with AI.",
+    "long_instructions": "### Create Your Dance Performance\r\nModify the prompt to generate dance code with AI.",
     "preload_asset_list": null,
     "encrypted_examples": [
 
