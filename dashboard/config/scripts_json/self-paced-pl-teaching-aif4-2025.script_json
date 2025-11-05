@@ -11,11 +11,12 @@
       "topic_tags": [
         "ai"
       ],
+      "tts": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-29 19:33:11 UTC",
+    "serialized_at": "2025-11-03 19:13:31 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

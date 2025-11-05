@@ -128,6 +128,9 @@
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
 
+    # Refresh the Tutorials cache every hour (runs at the start of each hour, UTC)
+    cronjob at:'0 * * * *', do:"#{deploy_dir('bin', 'cron', 'perform_job')} HocLegacy::RefreshTutorialsJob"
+
     # background tasks that adhoc instances don't need to run.
     unless node.chef_environment == 'adhoc'
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'process_forms')
