@@ -54,6 +54,18 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
     event.target.form?.submit();
   };
 
+  const handleSettingChange = (
+    setting: Setting,
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_CHANGE, appName, {
+      settingName: setting.label,
+      settingChangedTo: event.target.value,
+      settingChangedFrom: setting.selectedValue || '',
+    });
+    setting.onChange(event.target.value);
+  };
+
   return (
     <div className={styles.settingsPanel}>
       <div className={styles.header}>
@@ -96,37 +108,21 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
             id={'settings-language-dropdown'}
           />
         </form>
-        {settings.map(setting => {
-          const handleChange = (
-            event: React.ChangeEvent<HTMLSelectElement>
-          ) => {
-            sendLab2AnalyticsEvent(
-              EVENTS.RESOURCE_PANEL_SETTINGS_CHANGE,
-              appName,
-              {
-                settingName: setting.label,
-                settingChangedTo: event.target.value,
-                settingChangedFrom: setting.selectedValue || '',
-              }
-            );
-            setting.onChange(event.target.value);
-          };
-          return (
-            <SimpleDropdown
-              key={setting.id}
-              labelText={setting.label}
-              isLabelVisible={true}
-              onChange={event => handleChange(event)}
-              items={setting.options}
-              selectedValue={setting.selectedValue}
-              name={setting.id}
-              size="s"
-              color={dropdownColor}
-              dropdownTextThickness="thin"
-              className={styles.dropdown}
-            />
-          );
-        })}
+        {settings.map(setting => (
+          <SimpleDropdown
+            key={setting.id}
+            labelText={setting.label}
+            isLabelVisible={true}
+            onChange={event => handleSettingChange(setting, event)}
+            items={setting.options}
+            selectedValue={setting.selectedValue}
+            name={setting.id}
+            size="s"
+            color={dropdownColor}
+            dropdownTextThickness="thin"
+            className={styles.dropdown}
+          />
+        ))}
       </div>
     </div>
   );
