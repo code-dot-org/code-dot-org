@@ -1,7 +1,10 @@
 import Breadcrumbs from '@code-dot-org/component-library/breadcrumbs';
 import {LinkWithText} from '@code-dot-org/component-library/link';
 import {Heading1} from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useEffect} from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import EnrollInWorkshop from './components/EnrollInWorkshop';
 import OrganizerInformation from './components/OrganizerInformation';
@@ -47,7 +50,6 @@ const WorkshopMarketingPage: React.FunctionComponent<
     fee,
     prereq,
     description,
-    notes,
     customRegistrationLink,
     regionalPartnerName,
     organizer,
@@ -57,6 +59,17 @@ const WorkshopMarketingPage: React.FunctionComponent<
   } = props;
 
   const isUserEnrolled = !!userEnrollment;
+
+  useEffect(() => {
+    analyticsReporter.sendEvent(
+      isUserEnrolled
+        ? EVENTS.WORKSHOP_ENROLLMENT_PAGE_VISITED_BY_ENROLLED_USER_EVENT
+        : EVENTS.WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT,
+      {
+        'workshop id': id,
+      }
+    );
+  }, [id, isUserEnrolled]);
 
   return (
     <div className={moduleStyles.workshopMarketingPage}>
@@ -83,7 +96,6 @@ const WorkshopMarketingPage: React.FunctionComponent<
             fee={fee}
             prereq={prereq}
             description={description}
-            notes={notes}
             courseOfferings={courseOfferings}
             facilitators={facilitators}
           />

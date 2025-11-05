@@ -1,7 +1,6 @@
 import React, {useEffect, useMemo} from 'react';
 
 import {isLabLoading} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {isUsingInstructions} from '@cdo/apps/lab2/utils';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -65,9 +64,7 @@ const RubricFABContainer: React.FC = () => {
     showRubric &&
     !labLoading &&
     !isLoadingRubric &&
-    rubricData &&
-    // Only show the rubric FAB if instructions are displayed via resource panel.
-    isUsingInstructions(appName);
+    rubricData;
 
   // Temporary hack: show/hide the AI Differentiation FAB based on if the Rubric FAB is showing.
   // Note that currently, the AI Diff FAB will be out of date on Lab2 levels since it relies on
