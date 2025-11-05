@@ -14,8 +14,8 @@ $header-height: 31px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 4px;
-    padding: 0 4px;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
     box-sizing: border-box;
 
     button {
@@ -24,7 +24,7 @@ $header-height: 31px;
     }
 
     .mini-bot-icon {
-      height: 24px;
+      height: 1.5rem;
       object-fit: contain;
     }
 
