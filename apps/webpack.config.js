@@ -595,8 +595,7 @@ function createWebpackConfig({
     mode: minify ? 'production' : 'development',
     profile: envConstants.PROFILE_APPS_BUILD,
     infrastructureLogging: {
-      // When profile is enabled, print any build step taking >1s.
-      level: 'warn',
+      level: 'info',
     },
     plugins: [
       ...WEBPACK_BASE_CONFIG.plugins,
