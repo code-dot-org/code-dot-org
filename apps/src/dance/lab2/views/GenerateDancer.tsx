@@ -195,10 +195,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('loading');
-    //setAdlibs(undefined);
-    //setAdlibChoices(undefined);
-    //setPromptText('');
-    //variantHistory.current = [];
   });
 
   const generateDancerCache = useCallback(async () => {
