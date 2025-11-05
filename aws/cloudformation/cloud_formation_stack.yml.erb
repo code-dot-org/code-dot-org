@@ -236,13 +236,14 @@ Resources:
               - 's3:PutObjectLegalHold'
               - 's3:PutObjectRetention'
             Resource: '*'
-          # Deny PutObjectAcl except for cucumber-logs and cdo-build-package buckets
+          # Deny PutObjectAcl except for some test log / build / deployment buckets.
           - Effect: Deny
             Action:
               - 's3:PutObjectAcl'
             NotResource:
               - 'arn:aws:s3:::cucumber-logs/*'
               - 'arn:aws:s3:::cdo-build-package/*'
+              - 'arn:aws:s3:::cdo-dist/*'
           # TODO: Move to dedicated policy for GenAI
           # GenAI Sagemaker access
           - Effect: Allow

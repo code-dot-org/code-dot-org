@@ -17,9 +17,17 @@ const PersonalizationResultsColumnSuperpowers: React.FC<
 > = ({superpowers}) => {
   return (
     <div className={classNames(style.personaColumn, style.personaColumnYellow)}>
-      <Heading5 className={classNames(style.headerBlack, style.header)}>
-        {i18n.teachingStyleSuperpowers()}
-      </Heading5>
+      <div
+        className={classNames(
+          style.headerBlack,
+          style.header,
+          style.superpowersHeader
+        )}
+      >
+        <Heading5 noMargin className={style.superpowersHeaderText}>
+          {i18n.teachingStyleSuperpowers()}
+        </Heading5>
+      </div>
       {superpowers.map((superpower, index) => (
         <PersonalizationInformationBox
           key={index}
