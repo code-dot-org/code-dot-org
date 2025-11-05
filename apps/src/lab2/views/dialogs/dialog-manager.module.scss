@@ -4,7 +4,8 @@
 
 .dialogContainer {
   @extend %full-container-overlay;
-  // Adding these styles to override the common.scss styles.
+  // Adding these styles to override the common.scss styles
+  // just in case this affects dialogs we don't want to change.
   // TODO - Ideally dialogs that are using this stylesheet
   // should be replaced with a DSCO component.
   top: -$top-spacing;
