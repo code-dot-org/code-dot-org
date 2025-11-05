@@ -169,12 +169,6 @@ class HttpCache
             cookies: 'none'
           },
           {
-            path: '/api/hour/*',
-            headers: ALLOWLISTED_HEADERS,
-            # Allow the company cookie to be read and set to track company users for tutorials.
-            cookies: allowlisted_cookies + ['company']
-          },
-          {
             path: %w[/congrats /congrats/*],
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
@@ -360,12 +354,22 @@ class HttpCache
         dashboard: {
           behaviors: [
             {
-              path: "#{HocLegacy::API_ROOT_PATH}*",
+              path: "#{HocLegacy::API_ROOT_PATH}/*",
               headers: ALLOWLISTED_HEADERS,
               cookies: allowlisted_cookies,
             },
           ],
         },
+        pegasus: {
+          behaviors: [
+            {
+              path: "#{HocLegacy::API_ROOT_PATH}/*",
+              proxy: 'dashboard',
+              headers: ALLOWLISTED_HEADERS,
+              cookies: allowlisted_cookies,
+            },
+          ],
+        }
       )
     end
 

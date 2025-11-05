@@ -2,7 +2,6 @@ Feature: Certificate page features
 
   Background:
     Given I am on "http://studio.code.org/reset_session"
-    And I use a cookie to mock the DCDO key "hoc_apis_in_dashboard" as "true"
 
   Scenario: share page preserves certificate when redirecting
   # Reset lesson data (otherwise it will pull a cached certificate from
