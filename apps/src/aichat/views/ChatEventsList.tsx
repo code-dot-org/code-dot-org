@@ -30,7 +30,8 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
-  const [previousLastMessageRole, setPreviousMessageRole] = useState<Role>();
+  const [previousLastMessageRole, setPreviousLastMessageRole] =
+    useState<Role>();
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
@@ -39,12 +40,12 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const conversationContainerRef = useRef<HTMLDivElement>(null);
   const lastMessageRef = useRef<HTMLDivElement | null>(null);
 
-  const scrollToLastMessage = useCallback((keepToOfMessageVisible = false) => {
+  const scrollToLastMessage = useCallback((keepTopOfMessageVisible = false) => {
     if (conversationContainerRef.current) {
       setShowScrollToBottom(false);
       setInProgrammaticScroll(true);
 
-      if (keepToOfMessageVisible) {
+      if (keepTopOfMessageVisible) {
         lastMessageRef.current?.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
@@ -149,7 +150,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       scrollToLastMessage();
     }
 
-    setPreviousMessageRole(lastMessageRole);
+    setPreviousLastMessageRole(lastMessageRole);
   }, [events, events.length, previousLastMessageRole, scrollToLastMessage]);
 
   return (
