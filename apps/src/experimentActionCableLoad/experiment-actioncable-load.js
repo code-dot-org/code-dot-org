@@ -37,8 +37,8 @@ const testLoad = function () {
         logEvent('ActionCableLoadTestingConnected', connectionId);
         channel.sendEcho(connectionId);
       },
-      received({connectionId, sentEchoCount}) {
-        if (connectionId !== connectionId) return;
+      received({connectionId: receivedConnectionId, sentEchoCount}) {
+        if (receivedConnectionId !== connectionId) return;
 
         const receivedTime = performance.now();
         const sentTime = sentEchoTimestamps.get(sentEchoCount);
