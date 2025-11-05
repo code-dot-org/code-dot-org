@@ -595,7 +595,8 @@ function createWebpackConfig({
     mode: minify ? 'production' : 'development',
     profile: envConstants.PROFILE_APPS_BUILD,
     infrastructureLogging: {
-      level: 'info',
+      // When profiling, suppress verbose webpack progress logs but keep warnings/errors
+      level: envConstants.PROFILE_APPS_BUILD ? 'warn' : 'info',
     },
     plugins: [
       ...WEBPACK_BASE_CONFIG.plugins,
