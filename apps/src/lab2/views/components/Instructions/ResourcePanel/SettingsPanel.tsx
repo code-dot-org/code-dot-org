@@ -4,20 +4,24 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import Typography from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState} from 'react';
 
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import localization, {useLocalization} from '@cdo/apps/localization';
 import {LanguageInfo} from '@cdo/apps/localization/Localization';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import styles from './settings-panel.module.scss';
 interface SettingsPanelProps {
   settings: Setting[];
   closePanel: () => void;
+  appName: string;
 }
 
 const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   settings,
   closePanel,
+  appName,
 }) => {
   const {theme} = useTheme();
   // SimpleDropdown isn't themed properly, so we have to manually set the color.
@@ -43,7 +47,23 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   const handleLanguageChange = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
+    sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_LANGUAGE_CHANGE, appName, {
+      languageChangedTo: event.target.value,
+      languageChangedFrom: locale,
+    });
     event.target.form?.submit();
+  };
+
+  const handleSettingChange = (
+    setting: Setting,
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_CHANGE, appName, {
+      settingName: setting.label,
+      settingChangedTo: event.target.value,
+      settingChangedFrom: setting.selectedValue || '',
+    });
+    setting.onChange(event.target.value);
   };
 
   return (
@@ -93,7 +113,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
             key={setting.id}
             labelText={setting.label}
             isLabelVisible={true}
-            onChange={event => setting.onChange(event.target.value)}
+            onChange={event => handleSettingChange(setting, event)}
             items={setting.options}
             selectedValue={setting.selectedValue}
             name={setting.id}

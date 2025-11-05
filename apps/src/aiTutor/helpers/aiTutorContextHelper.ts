@@ -13,6 +13,8 @@ const VALIDATION_CONTENTS_INTRO = 'Here is the validation code:';
 const VALIDATION_RESULTS_INTRO =
   'Here are the validation test names along with their results, in JSON:';
 
+const VALIDATION_NOT_RUN = 'The student has not run test validation yet.';
+
 const INSTRUCTIONS_INTRO = 'Here are the instructions:';
 
 const DOCUMENTATION_INTRO = 'Here is the documentation:';
@@ -47,12 +49,15 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
       documentation,
     } = await this.getAiTutorContext();
 
+    const validationNotRun = validationContents && !validationResults;
+
     const hiddenContextString = [
       sourceCode ? `${SOURCE_CODE_INTRO} ${sourceCode}` : '',
       hiddenSourceCode ? `${HIDDEN_SOURCE_CODE_INTRO} ${hiddenSourceCode}` : '',
       readOnlySourceCode
         ? `${READ_ONLY_SOURCE_CODE_INTRO} ${readOnlySourceCode}`
         : '',
+      validationNotRun ? VALIDATION_NOT_RUN : '',
       validationContents
         ? `${VALIDATION_CONTENTS_INTRO} ${validationContents}`
         : '',
