@@ -9,7 +9,7 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import {Outlet, useLocation, useParams} from 'react-router-dom';
+import {Outlet, useLocation, useParams, useNavigate} from 'react-router-dom';
 
 import {CourseBuildYourOwn} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useFetch, UseFetchResult} from '@cdo/apps/util/useFetch';
@@ -69,7 +69,8 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   surveyTypeOptions,
   questionCategoryButtons,
 }) => {
-  const {pathname} = useLocation();
+  const navigate = useNavigate();
+  const {pathname, state} = useLocation();
   const {workshopId} = useParams<{workshopId: string}>();
 
   const [defaultLoading, setDefaultLoading] = useState(true);
@@ -82,6 +83,8 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     return () => clearTimeout(timeout);
   }, []);
 
+  const scrollToTop = () => window.scrollTo({top: 0});
+
   const {
     data: workshopResponse,
     loading: workshopLoading,
@@ -90,6 +93,19 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   } = useFetch<Workshop | null>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
   );
+
+  useEffect(() => {
+    scrollToTop();
+  }, [workshopId]);
+
+  useEffect(() => {
+    if (state === 'refetch') {
+      scrollToTop();
+      refetchWorkshop();
+      // Clear the navigation state after triggering refetch
+      navigate('.', {replace: true, state: null});
+    }
+  }, [refetchWorkshop, state, navigate, pathname]);
 
   const {
     data: enrollmentResponse,
@@ -156,20 +172,9 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
 
   const showLoading = useMemo(() => {
     return (
-      defaultLoading ||
-      (!workshop && workshopLoading) ||
-      (!enrollments && enrollmentsLoading) ||
-      (!surveys && surveysLoading)
+      defaultLoading || workshopLoading || enrollmentsLoading || surveysLoading
     );
-  }, [
-    defaultLoading,
-    enrollments,
-    enrollmentsLoading,
-    surveys,
-    surveysLoading,
-    workshop,
-    workshopLoading,
-  ]);
+  }, [defaultLoading, enrollmentsLoading, surveysLoading, workshopLoading]);
 
   const activeSurveyCategoryButtons = useMemo(() => {
     if (onPreSurveyPage) return questionCategoryButtons.preWorkshopSurvey;

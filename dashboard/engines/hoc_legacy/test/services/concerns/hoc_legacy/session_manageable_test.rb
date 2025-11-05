@@ -29,7 +29,7 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
     let(:session_row) {{session: session_id}}
 
     it 'sets hour_of_code cookie with row session id' do
-      _set_hour_of_code_cookie_for_row.must_equal "hour_of_code=#{session_id}; domain=.code.org; path=/api/hour/"
+      _set_hour_of_code_cookie_for_row.must_equal "hour_of_code=#{session_id}; domain=.code.org; path=/api/hour"
       _(response.cookies[HocLegacy::HOC_COOKIE_KEY]).must_equal session_id
     end
 
@@ -42,7 +42,7 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
       end
 
       it 'sets hour_of_code cookie with correct path' do
-        _set_hour_of_code_cookie_for_row.must_include "path=#{engine_mount_path}/api/hour/"
+        _set_hour_of_code_cookie_for_row.must_include "path=#{engine_mount_path}/api/hour"
       end
     end
   end

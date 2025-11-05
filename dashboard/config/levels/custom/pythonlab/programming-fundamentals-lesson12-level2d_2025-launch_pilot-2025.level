@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:47:08.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\n1. Take a look at the `move_or_left()` and `move_or_right()` functions in `custom.py`.\r\n\r\n   * Each function checks if the `Painter` can move forward.\r\n   \r\n   * If it can, it moves forward.\r\n   \r\n   * But if it *can't* move, the program currently does nothing, which means the `Painter` gets stuck!\r\n\r\n2. Add an `else` statement in each function so that:\r\n\r\n   * If the `Painter` *can't* move in `move_or_left()`, it turns left.\r\n   \r\n   * If the `Painter` *can't* move in `move_or_right()`, it turns right.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/b392869ea6d6a41cf49b74005b6cb0ed-choiceD.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYour `Painter` should always do something during a loop -- either move forward or turn. Use `if/else` to make sure every situation is handled.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -580,9 +581,12 @@
       "active": false,
       "open": false,
       "type": "validation"
-    }
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:47:08.811+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson12-level2d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson12-level2d_2025-launch_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:47:08.811+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson12-level2d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson12-level2d_2025-launch_2025\"},{\"changed_at\":\"2025-11-04 05:53:52 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>

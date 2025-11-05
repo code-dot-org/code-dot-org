@@ -38,10 +38,13 @@ const AiTutorSidebar: React.FC<AiTutorSidebarProps> = ({
 
   return (
     <div className={styles['ai-tutor-sidebar']}>
-      <div className={styles['ai-tutor-sidebar-header']}>
-        <div className={styles['bot-icon-container']}>
-          <img src={aiBotOutlineIcon} alt="" className={styles['bot-icon']} />
-        </div>
+      <div
+        role="button"
+        onClick={openTutor}
+        tabIndex={-1}
+        className={styles['ai-tutor-sidebar-header']}
+      >
+        <img src={aiBotOutlineIcon} alt="" className={styles['bot-icon']} />
       </div>
       <div className={styles['ai-tutor-sidebar-content']}>
         <Button

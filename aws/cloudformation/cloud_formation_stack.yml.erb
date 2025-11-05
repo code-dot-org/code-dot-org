@@ -206,10 +206,44 @@ Resources:
               - 's3:RestoreObject'
             Resource: 'arn:aws:s3:::cdo-v3-libraries/libraries_<%=environment%>/*'
           # General s3 access.
-          # TODO: Further restrict permissions to grant least privilege.
+          # TODO: Switch from `allow *` then `deny risky` to a proper least-privilege allow-list
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
+          - Effect: Deny
+            Action:
+              - 's3:DeleteBucket'
+              - 's3:DeleteBucketPolicy'
+              - 's3:DeleteBucketWebsite'
+              - 's3:PutBucketAcl'
+              - 's3:PutBucketPolicy'
+              - 's3:PutBucketPublicAccessBlock'
+              - 's3:PutLifecycleConfiguration'
+
+              # S3 Batch Operations
+              - 's3:CreateJob'
+              - 's3:UpdateJobPriority'
+              - 's3:UpdateJobStatus'
+
+              # Management S3 APIs that Daemon and FrontEnds don't need.
+              - 's3:PutBucketVersioning'
+              - 's3:PutBucketReplication'
+              - 's3:PutBucketCORS'
+              - 's3:PutBucketLogging'
+              - 's3:PutEncryptionConfiguration'
+              - 's3:BypassGovernanceRetention'
+              - 's3:DeleteObjectVersionTagging'
+              - 's3:PutObjectLegalHold'
+              - 's3:PutObjectRetention'
+            Resource: '*'
+          # Deny PutObjectAcl except for some test log / build / deployment buckets.
+          - Effect: Deny
+            Action:
+              - 's3:PutObjectAcl'
+            NotResource:
+              - 'arn:aws:s3:::cucumber-logs/*'
+              - 'arn:aws:s3:::cdo-build-package/*'
+              - 'arn:aws:s3:::cdo-dist/*'
           # TODO: Move to dedicated policy for GenAI
           # GenAI Sagemaker access
           - Effect: Allow
