@@ -24,7 +24,7 @@ module Services
 
         # upgrade_to_teacher and downgrade_to_student have inconsistent behavior so we need to
         # check that the new user type is different than the previous, before logging an event.
-        if result && previous_user_type != user_type
+        if result && (previous_user_type != user_type)
           Metrics::Events.log_event(
             user: user,
             event_name: 'user_type_changed',
