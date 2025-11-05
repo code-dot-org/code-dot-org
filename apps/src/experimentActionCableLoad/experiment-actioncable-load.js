@@ -21,12 +21,34 @@ const testLoad = function () {
 
   const connectionId = _.random(1000000000000);
 
-  const repeatInterval = DCDO.get('actioncable-repeat-interval', 10000);
+  const repeatInterval = DCDO.get('actioncable-repeat-interval', 10 * 1000);
   const isRepeat = DCDO.get('actioncable-repeat', false);
   const disconnectTimeout = DCDO.get(
     'actioncable-disconnect-timeout',
     30 * 1000
   );
+
+  // After disconnectTimeout milliseconds, unsubscribe and disconnect
+  setTimeout(() => {
+    hasTimedOut = true;
+    try {
+      logEvent('ActionCableLoadTestingUnsubscribing', connectionId);
+      consumer.disconnect();
+      logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
+        success: true,
+      });
+    } catch (e) {
+      logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
+        success: false,
+        errorMessage: String(e),
+      });
+
+      // try to disconnect again in 10s:
+      setTimeout(() => {
+        consumer.disconnect();
+      }, 10000);
+    }
+  }, disconnectTimeout);
 
   logEvent('ActionCableLoadTestingConnecting', connectionId);
 
@@ -67,22 +89,13 @@ const testLoad = function () {
       },
     }
   );
-
-  setTimeout(() => {
-    hasTimedOut = true;
-    logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
-    consumer.disconnect();
-  }, disconnectTimeout);
 };
 
 const logEvent = (eventName, connectionId, metadata = {}) => {
+  const msg = {connectionId, ...metadata};
   if (window.newrelic) {
-    window.newrelic.recordCustomEvent(eventName, {connectionId, ...metadata});
+    window.newrelic.recordCustomEvent(eventName, msg);
   } else {
-    console.log(
-      `[NewRelic not found]: ${eventName}, {connectionId:${connectionId}, ${JSON.stringify(
-        metadata
-      )}}`
-    );
+    console.log(`[NewRelic not found]: ${eventName}`, msg);
   }
 };

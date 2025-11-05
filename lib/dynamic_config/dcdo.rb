@@ -65,7 +65,7 @@ class DCDOBase < DynamicConfigBase
       'skills-dashboard': DCDO.get('skills-dashboard', false),
       'teacher-homepage-welcome': DCDO.get('teacher-homepage-welcome', false),
       'blockly-keyboard-navigation': DCDO.get('blockly-keyboard-navigation', false),
-      'actioncable-repeat-interval': DCDO.get('actioncable-repeat-interval', 10000),
+      'actioncable-repeat-interval': DCDO.get('actioncable-repeat-interval', 10 * 1000),
       'actioncable-repeat': DCDO.get('actioncable-repeat', false),
       'actioncable-disconnect-timeout': DCDO.get('actioncable-disconnect-timeout', 30 * 1000),
     }
