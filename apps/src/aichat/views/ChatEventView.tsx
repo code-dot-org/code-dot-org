@@ -90,7 +90,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             event.status,
             event.role,
             event.chatMessageText,
-            false
+            false // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
           )}
           className={styles.chatMessageOutline}
         >
