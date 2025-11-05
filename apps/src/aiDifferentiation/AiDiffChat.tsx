@@ -42,11 +42,7 @@ import {
   CREATE_SECTION_PROMPT,
 } from './AiDiffPredefinedPrompts';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
-import {
-  DEFAULT_THREAD_TITLE,
-  DEFAULT_INITIAL_CHAT_MESSAGE,
-  THREAD_TYPES,
-} from './constants';
+import {DEFAULT_THREAD_TITLE, DEFAULT_INITIAL_CHAT_MESSAGE} from './constants';
 import {ChatItem, ChatPrompt, Context, SuggestPromptsType} from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -135,43 +131,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     state => state.progress?.viewAsUserId || undefined
   );
 
-  const threadId = useAppSelector(state => state.aichat.threadId);
-  const threadTitle = useAppSelector(state => state.aichat.threadTitle);
-  const threadType = useAppSelector(state => state.aichat.threadType);
-  const initialChatMessage = useAppSelector(
-    state => state.aichat.initialChatMessage
-  );
-  const threadMessages = useAppSelector(state => {
-    const currMessages = state.aichat.threadMessages;
-    if (currMessages.length > 0) {
-      return currMessages;
-    } else {
-      const initialMessage = {
-        role: Role.ASSISTANT,
-        chatMessageText: initialChatMessage
-          ? initialChatMessage
-          : DEFAULT_INITIAL_CHAT_MESSAGE,
-        status: Status.OK,
-      };
-      return threadType === THREAD_TYPES.default
-        ? [
-            initialMessage,
-            (
-              suggestedPrompts ||
-              getDefaultSuggestedPrompts(
-                context,
-                teacherHasSections,
-                teacherHasSectionWithCurriculum,
-                teacherHasSectionWithStudents
-              )
-            ).concat(additionalPrompts),
-          ]
-        : [initialMessage];
-    }
-  });
-
   const teacherSections = Object.values(
-    useAppSelector(state => state.teacherSections.sections)
+    useAppSelector(state => state.teacherSections?.sections ?? {})
   );
   const teacherHasSections = teacherSections.length > 0;
   const teacherHasSectionWithCurriculum = !!teacherSections.find(
@@ -188,6 +149,41 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   if (context.type === AiDiffContext.LEVEL) {
     additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
   }
+
+  const threadId = useAppSelector(state => state.aichat.threadId);
+  const threadTitle = useAppSelector(state => state.aichat.threadTitle);
+  const threadType = useAppSelector(state => state.aichat.threadType);
+  const initialChatMessage = useAppSelector(
+    state => state.aichat.initialChatMessage
+  );
+  const threadMessages = useAppSelector(state => {
+    const currMessages = state.aichat.threadMessages;
+    if (currMessages && currMessages.length > 0) {
+      return currMessages;
+    } else {
+      const initialMessage = {
+        role: Role.ASSISTANT,
+        chatMessageText: initialChatMessage
+          ? initialChatMessage
+          : DEFAULT_INITIAL_CHAT_MESSAGE,
+        status: Status.OK,
+      };
+      return threadType.showSuggestedPrompts
+        ? [
+            initialMessage,
+            (
+              suggestedPrompts ||
+              getDefaultSuggestedPrompts(
+                context,
+                teacherHasSections,
+                teacherHasSectionWithCurriculum,
+                teacherHasSectionWithStudents
+              )
+            ).concat(additionalPrompts),
+          ]
+        : [initialMessage];
+    }
+  });
 
   const dispatch = useAppDispatch();
 
