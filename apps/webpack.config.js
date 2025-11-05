@@ -599,6 +599,14 @@ function createWebpackConfig({
     },
     plugins: [
       ...WEBPACK_BASE_CONFIG.plugins,
+      // Add explicit ProgressPlugin for profiling to ensure progress logs appear in CI
+      ...(envConstants.PROFILE_APPS_BUILD
+        ? [
+            new webpack.ProgressPlugin({
+              profile: true,
+            }),
+          ]
+        : []),
       // Custom plugin to measure ForkTsCheckerWebpackPlugin performance
       ...(envConstants.PROFILE_APPS_BUILD
         ? [
