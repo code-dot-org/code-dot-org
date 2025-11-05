@@ -12,11 +12,11 @@ import {timestampToLocalTime} from '../redux/utils';
 import {
   ChatEvent,
   ModelUpdate,
-  ChatEventDescriptionKey,
-  ChatAsset,
   isChatMessage,
   isNotification,
   isModelUpdate,
+  ChatEventDescriptionKey,
+  ChatAsset,
 } from '../types';
 
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
