@@ -227,7 +227,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'generating' && (
         <div>
-          <Heading4>Generating...</Heading4>
+          <Heading3>Generating...</Heading3>
           AI is generating code based on your prompt.
         </div>
       )}
@@ -292,7 +292,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           <Button
             ariaLabel={'Regenerate'}
             text={'Regenerate'}
-            type="primary"
+            type="secondary"
             color="black"
             size="s"
             iconLeft={{iconName: 'sparkles'}}

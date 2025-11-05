@@ -285,7 +285,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
           {aiGenerateState === 'generating' && (
             <div>
-              <Heading4>Generating...</Heading4>
+              <Heading3>Generating...</Heading3>
               AI is generating a dancer based on your prompt.
             </div>
           )}
