@@ -99,29 +99,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     adlibOption ? '' : DefaultPrompt
   );
 
-  useEffect(() => {
-    // If we are clearing, make sure we are called with the new
-    // block count before deciding what to do next.
-    if (aiGenerateState === 'clearing' && blockCount <= 1) {
-      dispatch(setAiGenerateState('none'));
-    }
-  }, [aiGenerateState, blockCount, dispatch]);
-
-  useEffect(() => {
-    // If there is already generated music when we begin, presumably
-    // because the user is returning to a level they've previously worked
-    // on, then skip AI generation.
-    if (aiGenerateState === 'none' && blockCount > 1) {
-      dispatch(setAiGenerateState('edited'));
-    }
-  }, [aiGenerateState, blockCount, dispatch]);
-
-  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
-    dispatch(setAiGenerateState('none'));
-    setAdlibChoices(getInitialChoices());
-    setPromptText(adlibOption ? '' : useText ? '' : DefaultPrompt);
-  });
-
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));
 
@@ -154,6 +131,34 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     useAdlib,
     useCache,
   ]);
+
+  useEffect(() => {
+    // If we are clearing, make sure we are called with the new
+    // block count before deciding what to do next.
+    if (aiGenerateState === 'clearing-before-none' && blockCount <= 1) {
+      dispatch(setAiGenerateState('none'));
+    } else if (
+      aiGenerateState === 'clearing-before-generating' &&
+      blockCount <= 1
+    ) {
+      generateSong();
+    }
+  }, [aiGenerateState, blockCount, dispatch, generateSong]);
+
+  useEffect(() => {
+    // If there is already generated music when we begin, presumably
+    // because the user is returning to a level they've previously worked
+    // on, then skip AI generation.
+    if (aiGenerateState === 'none' && blockCount > 1) {
+      dispatch(setAiGenerateState('edited'));
+    }
+  }, [aiGenerateState, blockCount, dispatch]);
+
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
+    dispatch(setAiGenerateState('none'));
+    setAdlibChoices(getInitialChoices());
+    setPromptText(adlibOption ? '' : useText ? '' : DefaultPrompt);
+  });
 
   useEffect(() => {
     // There can be a delay before we're playing (often due to sample loading),
@@ -194,7 +199,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     'generated',
     'listening',
     'listened',
-    'clearing',
+    'clearing-before-none',
+    'clearing-before-generating',
   ].includes(aiGenerateState);
 
   const parentProperties = useParentLevelProperties();
@@ -297,7 +303,25 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               setPlaying(false);
               clearCode(true);
-              dispatch(setAiGenerateState('clearing'));
+              dispatch(setAiGenerateState('clearing-before-none'));
+            }}
+            className={styles.buttonWide}
+          />
+
+          <Button
+            ariaLabel={'Regenerate'}
+            text={'Regenerate'}
+            type="primary"
+            color="black"
+            size="s"
+            iconLeft={{iconName: 'sparkles'}}
+            onClick={() => {
+              setPlaying(false);
+              clearCode(true);
+              dispatch(setAiGenerateState('clearing-before-generating'));
+              analyticsReporter.sendEvent('hoai2025-music-prompt', {
+                promptText,
+              });
             }}
             className={styles.buttonWide}
           />
@@ -348,7 +372,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               onClick={() => {
                 setPlaying(false);
                 clearCode(true);
-                dispatch(setAiGenerateState('clearing'));
+                dispatch(setAiGenerateState('clearing-before-none'));
               }}
               className={styles.buttonWide}
             />

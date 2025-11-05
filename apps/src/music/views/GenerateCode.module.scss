@@ -20,6 +20,10 @@
 
 .buttonWide {
   flex: 1;
+
+  @container (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 .buttonRow {
