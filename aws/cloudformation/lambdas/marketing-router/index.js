@@ -787,6 +787,8 @@ const marketingPaths = {
   "/impact-report": true,
   "/about/impact-report": true,
   "/news/fetc": true,
+  "/districts/set-up": true,
+  "/districts/program": true,
 }
 
 const pathPatterns = [
