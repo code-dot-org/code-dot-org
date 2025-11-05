@@ -16,6 +16,9 @@ let echoCount;
 let hasTimedOut;
 let echoTimestamps;
 
+let numberSuccessfulEchos = 0;
+let numberFailedEchos = 0;
+
 const testLoad = function () {
   echoCount = 0;
   hasTimedOut = false;
@@ -54,6 +57,7 @@ const testLoad = function () {
             ? _.floor(receivedTime - sentTime)
             : null;
 
+          numberSuccessfulEchos++;
           logEvent('ActionCableLoadTestingReceived', connectionId, {
             echoCount: data?.echoCount,
             roundTripTimeMs: roundTripTime,
@@ -94,8 +98,11 @@ const testLoad = function () {
             return;
           }
 
+          numberFailedEchos++;
           logEvent('ActionCableLoadTestingEchoTimeout', connectionId, {
             echoCount: currentEchoCount,
+            numberFailedEchos,
+            numberSuccessfulEchos,
           });
           echoTimestamps.delete(currentEchoCount);
 
