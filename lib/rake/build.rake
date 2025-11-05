@@ -27,7 +27,7 @@ namespace :build do
 
       ChatClient.log 'Building <b>apps</b>...'
       npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
-      RakeUtils.system_stream_output "npm run #{npm_target}"
+      RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
 
       if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
