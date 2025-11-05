@@ -28,6 +28,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   buildAssetUrl,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
+  const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
@@ -35,6 +36,8 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   );
 
   const conversationContainerRef = useRef<HTMLDivElement>(null);
+  const parentRef = useRef<HTMLDivElement>(null);
+  const firstEventRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
     if (conversationContainerRef.current) {
@@ -70,6 +73,13 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     );
   };
 
+  const handleParentKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Enter') {
+      setIsInChatNavigationMode(true);
+      firstEventRef.current?.focus();
+    }
+  };
+
   useEffect(() => {
     const container = conversationContainerRef.current;
 
@@ -99,6 +109,11 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   return (
     <div
       id="chat-workspace-conversation"
+      ref={parentRef}
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+      tabIndex={0}
+      aria-label={'Chat history: press Enter to navigate, Escape to exit'}
+      onKeyDown={handleParentKeyDown}
       className={classNames(
         moduleStyles.conversationArea,
         moduleStyles.scrollToBottomContainer
@@ -109,12 +124,20 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
-            {events.map(event => (
+            {events.map((event, id) => (
               <ChatEventView
                 event={event}
                 key={event.timestamp}
                 isTeacherView={isTeacherView}
                 buildAssetUrl={buildAssetUrl}
+                ref={id === 0 ? firstEventRef : undefined}
+                tabIndex={isInChatNavigationMode ? 0 : -1}
+                onKeyDown={e => {
+                  if (e.key === 'Escape') {
+                    setIsInChatNavigationMode(false);
+                    parentRef.current?.focus();
+                  }
+                }}
               />
             ))}
             <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
