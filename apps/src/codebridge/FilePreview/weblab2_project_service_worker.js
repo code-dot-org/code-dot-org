@@ -53,7 +53,7 @@ function main() {
     if (filesData[referrerFile] && requestedFile === '') {
       // If the request is for the root of the project and it's coming from a file in the project,
       // return index.html instead of trying to fetch a non-existent root file.
-      console.log('getting index.html for referrer', referrerFile);
+      console.log('getting index.html for referrer', {referrerFile, url});
       requestedFile = 'index.html';
     }
     if (url.origin === location.origin && filesData[requestedFile]) {
@@ -63,6 +63,14 @@ function main() {
       );
     } else {
       console.log('Returning for', url.pathname);
+      // Still send SERVING_HTML_FILE message for non-project files.
+      // This allows the URL bar to update correctly when an invalid url is requested.
+      if (requestedFile.endsWith('.html')) {
+        broadcastChannel.postMessage({
+          type: SERVING_HTML_FILE,
+          filePath: requestedFile,
+        });
+      }
       return;
     }
   });
