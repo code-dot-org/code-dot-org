@@ -12,17 +12,11 @@ export const experimentActionCableLoad = function () {
   }, 3000);
 };
 
-let echoCount;
-let hasTimedOut;
-let echoTimestamps;
-
-let numberSuccessfulEchos = 0;
-let numberFailedEchos = 0;
-
 const testLoad = function () {
-  echoCount = 0;
-  hasTimedOut = false;
-  echoTimestamps = new Map();
+  let sentEchoCount = 0;
+  let hasTimedOut = false;
+  let sentEchoTimestamps = new Map();
+
   const consumer = createConsumer('/cable');
 
   const connectionId = _.random(1000000000000);
@@ -33,7 +27,6 @@ const testLoad = function () {
     'actioncable-disconnect-timeout',
     30 * 1000
   );
-  const echoTimeout = DCDO.get('actioncable-echo-timeout', 5 * 1000);
 
   logEvent('ActionCableLoadTestingConnecting', connectionId);
 
@@ -42,94 +35,41 @@ const testLoad = function () {
     {
       connected() {
         logEvent('ActionCableLoadTestingConnected', connectionId);
-
-        setTimeout(() => {
-          if (channel) {
-            channel.echo(connectionId);
-          }
-        }, 1000);
+        channel.sendEcho(connectionId);
       },
-      received(data) {
-        if (data?.connectionId === connectionId) {
-          const receivedTime = performance.now();
-          const sentTime = echoTimestamps.get(data?.echoCount);
-          const roundTripTime = sentTime
-            ? _.floor(receivedTime - sentTime)
-            : null;
+      received({connectionId, sentEchoCount}) {
+        if (connectionId !== connectionId) return;
 
-          numberSuccessfulEchos++;
-          logEvent('ActionCableLoadTestingReceived', connectionId, {
-            echoCount: data?.echoCount,
-            roundTripTimeMs: roundTripTime,
-          });
+        const receivedTime = performance.now();
+        const sentTime = sentEchoTimestamps.get(sentEchoCount);
+        if (sentTime) sentEchoTimestamps.delete(sentEchoCount);
+        const roundTripTime = sentTime
+          ? _.floor(receivedTime - sentTime)
+          : null;
 
-          if (sentTime) {
-            echoTimestamps.delete(data?.echoCount);
-          }
-        }
+        logEvent('ActionCableLoadTestingReceived', connectionId, {
+          sentEchoCount: sentEchoCount,
+          roundTripTimeMs: roundTripTime,
+        });
 
-        if (hasTimedOut) {
-          if (echoTimestamps.size === 0) {
-            consumer.disconnect();
-            logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
-              from: 'timed-out-after-received',
-            });
-          }
-          return;
-        }
-
-        if (!!channel && isRepeat) {
-          setTimeout(() => {
-            channel.echo(connectionId);
-          }, repeatInterval);
+        if (isRepeat && !hasTimedOut) {
+          setTimeout(() => channel.sendEcho(connectionId), repeatInterval);
         }
       },
-      echo(connectionId) {
-        const sendTime = performance.now();
-        echoTimestamps.set(echoCount, sendTime);
-        this.perform('echo', {connectionId, echoCount});
-        logEvent('ActionCableLoadTestingEchoSent', connectionId, {echoCount});
-        const currentEchoCount = echoCount;
-
-        // Set a timeout for the echo response.
-        // If we don't get a response in time, log a timeout event and clean up.
-        setTimeout(() => {
-          if (!echoTimestamps.has(currentEchoCount)) {
-            return;
-          }
-
-          numberFailedEchos++;
-          logEvent('ActionCableLoadTestingEchoTimeout', connectionId, {
-            echoCount: currentEchoCount,
-            numberFailedEchos,
-            numberSuccessfulEchos,
-          });
-          echoTimestamps.delete(currentEchoCount);
-
-          if (isRepeat && !hasTimedOut) {
-            channel.echo(connectionId);
-          }
-          if (echoTimestamps.size === 0 && hasTimedOut) {
-            consumer.disconnect();
-            logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
-              from: 'after-timeout',
-            });
-          }
-        }, echoTimeout);
-        echoCount++;
+      sendEcho(connectionId) {
+        sentEchoTimestamps.set(sentEchoCount, performance.now());
+        this.perform('echo', {connectionId, sentEchoCount});
+        logEvent('ActionCableLoadTestingEchoSent', connectionId, {
+          sentEchoCount,
+        });
       },
     }
   );
 
   setTimeout(() => {
     hasTimedOut = true;
-    if (!isRepeat && echoTimestamps.size === 0) {
-      consumer.disconnect();
-
-      logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
-        from: 'single-echo-complete',
-      });
-    }
+    logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
+    consumer.disconnect();
   }, disconnectTimeout);
 };
 
