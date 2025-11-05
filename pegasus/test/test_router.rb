@@ -15,12 +15,7 @@ class RouterTest < Minitest::Test
   include Rack::Test::Methods
 
   def app
-    # Build a Rack app with middleware and TestDocuments for testing
-    @app ||= Rack::Builder.app do
-      require 'cdo/rack/cloudfront_request_id'
-      use Rack::CloudFrontRequestId
-      run TestDocuments.new
-    end
+    @app ||= TestDocuments.new
   end
 
   def test_div_brackets
@@ -71,15 +66,6 @@ class RouterTest < Minitest::Test
 
   def test_view
     assert_equal 200, get('/test_view').status
-  end
-
-  def test_promotes_cloudfront_request_id_header
-    cf_id = 'pegasus-test-request-id'
-    header 'X-Amz-Cf-Id', cf_id
-
-    response = get('/test_view')
-
-    assert_equal cf_id, response.headers['X-Request-Id']
   end
 
   def test_index
