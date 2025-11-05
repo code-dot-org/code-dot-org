@@ -62,6 +62,7 @@ const testLoad = function () {
         logEvent('ActionCableLoadTestingEchoSent', connectionId, {
           sentEchoCount,
         });
+        sentEchoCount++;
       },
     }
   );
