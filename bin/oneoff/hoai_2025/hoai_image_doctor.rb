@@ -89,12 +89,6 @@ end
 openai_key = ENV.fetch("OPENAI_API_KEY", nil) || CDO.openai_student_learning_api_key.presence
 raise "Missing OpenAI API key (set openai_student_learning_api_key or OPENAI_API_KEY)" if openai_key.nil? || openai_key.strip.empty?
 
-# AWS creds pass-through (optional; IAM roles may populate these automatically)
-aws_access_key_id     = ENV.fetch('AWS_ACCESS_KEY_ID', nil)
-aws_secret_access_key = ENV.fetch('AWS_SECRET_ACCESS_KEY', nil)
-aws_session_token     = ENV.fetch('AWS_SESSION_TOKEN', nil)
-aws_region            = ENV['AWS_REGION'] || 'us-east-1'
-
 def build_command(tool, python_root, options, openai_key, aws_access_key_id, aws_secret_access_key, aws_session_token, aws_region)
   runner = `which uv`.strip.empty? ? 'python' : 'uv run python'
 
@@ -139,7 +133,7 @@ Dir.chdir(job[:chdir]) do
 end
 exit(($?.exitstatus || 1)) unless ok
 
-# Optional upload step (mirrors generator harness)
+# Optional upload step
 if options[:upload]
   bucket_name = "#{BUCKET_NAME_BASE}#{options[:production] ? '' : '-devel'}"
   output_root = job[:output_dir]
