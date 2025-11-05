@@ -213,7 +213,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   return (
     <Guide id="generate-panel" modal={modal}>
-      {['none', 'generating'].includes(aiGenerateState) &&
+      {aiGenerateState === 'none' &&
         useAdlib &&
         levelProperties.longInstructions && (
           <MainInstructionsContent
@@ -230,6 +230,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           rows={6}
           className={styles.textArea}
         />
+      )}
+
+      {aiGenerateState === 'generating' && (
+        <div>
+          <Heading4>Generating...</Heading4>
+          AI is generating code based on your prompt.
+        </div>
       )}
 
       {['none', 'generating', 'generated'].includes(aiGenerateState) &&
