@@ -1,7 +1,6 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
-import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -68,42 +67,50 @@ export const FileBrowserHeaderPopUpButton = () => {
   return (
     <>
       <FileUploaderComponent />
-      <PopUpButton
-        iconName="plus"
-        alignment="left"
-        id="uitest-files-plus"
-        ariaLabel={codebridgeI18n.manageFiles()}
-      >
-        <PopUpButtonOption
-          iconName="plus"
-          labelText={codebridgeI18n.newFolder()}
-          clickHandler={() =>
-            openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})
-          }
-        />
-        <PopUpButtonOption
-          iconName="plus"
-          labelText={codebridgeI18n.newFile()}
-          clickHandler={() => openNewFilePrompt(openNewFilePromptArgs)}
-          id="uitest-new-file"
-        />
-        <PopUpButtonOption
-          iconName="upload"
-          labelText={codebridgeI18n.uploadFile()}
-          clickHandler={() => startFileUpload()}
-        />
-        <PopUpButtonOption
-          iconName="backpack"
-          labelText={codebridgeI18n.importFromBackpackTitle()}
-          clickHandler={() =>
-            openImportFromBackpackPrompt({
-              backpackApi: backpackApi,
-              projectFiles: files,
-              validationFile: validationFile,
-            })
-          }
-        />
-      </PopUpButton>
+      <ActionDropdown
+        name="manageFilesDropdown"
+        labelText={codebridgeI18n.manageFiles()}
+        triggerButtonProps={{
+          isIconOnly: true,
+          icon: {iconName: 'plus', iconStyle: 'solid'},
+        }}
+        size="xs"
+        menuVerticalPlacement="bottom"
+        options={[
+          {
+            value: 'newFolder',
+            label: codebridgeI18n.newFolder(),
+            icon: {iconName: 'plus'},
+            onClick: () => {
+              openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID});
+            },
+          },
+          {
+            value: 'newFile',
+            label: codebridgeI18n.newFile(),
+            icon: {iconName: 'plus', iconStyle: 'solid'},
+            onClick: () => openNewFilePrompt(openNewFilePromptArgs),
+            optionId: 'uitest-new-file',
+          },
+          {
+            value: 'uploadFile',
+            label: codebridgeI18n.uploadFile(),
+            icon: {iconName: 'upload', iconStyle: 'solid'},
+            onClick: () => startFileUpload(),
+          },
+          {
+            value: 'importFromBackpack',
+            label: codebridgeI18n.importFromBackpackTitle(),
+            icon: {iconName: 'backpack', iconStyle: 'solid'},
+            onClick: () =>
+              openImportFromBackpackPrompt({
+                backpackApi: backpackApi,
+                projectFiles: files,
+                validationFile: validationFile,
+              }),
+          },
+        ]}
+      />
     </>
   );
 };
