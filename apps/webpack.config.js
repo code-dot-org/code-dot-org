@@ -619,7 +619,7 @@ function createWebpackConfig({
                 compiler.hooks.beforeCompile.tap('ForkTsCheckerTimer', () => {
                   typeCheckStartTime = Date.now();
                   console.log(
-                    '\n[ForkTsCheckerWebpackPlugin] Type checking started'
+                    '[ForkTsCheckerWebpackPlugin] Type checking started'
                   );
                 });
 
@@ -631,7 +631,7 @@ function createWebpackConfig({
                     typeCheckEndTime = Date.now();
                     const duration = typeCheckEndTime - typeCheckStartTime;
                     console.log(
-                      `\n[ForkTsCheckerWebpackPlugin] Type checking completed in ${duration}ms`
+                      `[ForkTsCheckerWebpackPlugin] Type checking completed in ${duration}ms`
                     );
                   }
                 );
