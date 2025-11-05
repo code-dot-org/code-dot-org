@@ -31,14 +31,13 @@
       overflow: auto;
 
       > pre {
-      margin: 0;
-      padding-bottom: 0;
-      border-radius: 0;
-      border: none;
-      background-color: var(--background-neutral-primary);
-      color: var(--text-neutral-primary);
+        margin: 0;
+        padding-bottom: 0;
+        border-radius: 0;
+        border: none;
+        background-color: var(--background-neutral-primary);
+        color: var(--text-neutral-primary);
       }
-
     }
 
     > .codeContentOverlay {
