@@ -106,6 +106,13 @@ const PersonalizationCollectorContainer: React.FC = () => {
       direction === NEXT &&
       questionsNumber === PERSONALIZATION_PROMPTS.length - 1
     ) {
+      if (showResults && showInterstitialState) {
+        setShowInterstitialState(false);
+        return;
+      }
+      if (!showInterstitialState) {
+        setShowInterstitialState(true);
+      }
       if (!isSaving) {
         setIsSaving(true);
         try {
@@ -240,7 +247,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
     return TEACHING_STYLES.find(style => style.name === styleName);
   };
 
-  const showProgressBar = !isLoading && !showResults;
+  const showProgressBar = !isLoading && (!showResults || showInterstitialState);
 
   return (
     <>
@@ -254,7 +261,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
       <div className={style.carouselContainer}>
         {isLoading ? (
           <div>Loading...</div>
-        ) : showResults ? (
+        ) : showResults && !showInterstitialState ? (
           <PersonalizationResults
             teachingStyle={
               matchedTeachingProfile
