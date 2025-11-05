@@ -4,6 +4,7 @@ import {loadFonts, injectFontAwesome} from '@code-dot-org/fonts';
 
 import '@code-dot-org/fonts/brands/code.org/index.css';
 import './preview.module.scss';
+import MuiDecorator from '../decorators/MuiDecorator';
 
 injectFontAwesome();
 
@@ -33,7 +34,7 @@ const preview = {
 };
 
 export const tags = ['autodocs'];
-export const decorators = [...RtlPreview.decorators];
+export const decorators = [...RtlPreview.decorators, MuiDecorator];
 export const loaders = document.fonts ? [fontLoader] : [];
 
 export default preview;

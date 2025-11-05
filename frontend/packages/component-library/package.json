@@ -415,6 +415,14 @@
       "import": "./dist/esm/tags/index.mjs",
       "require": "./dist/cjs/tags/index.js"
     },
+    "./themes": {
+      "types": {
+        "import": "./dist/esm/themes/index.d.ts",
+        "require": "./dist/cjs/themes/index.d.ts"
+      },
+      "import": "./dist/esm/themes/index.mjs",
+      "require": "./dist/cjs/themes/index.js"
+    },
     "./textField": {
       "types": {
         "import": "./dist/esm/textField/index.d.ts",

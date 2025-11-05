@@ -1,9 +1,8 @@
+import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import MuiTypography from '@mui/material/Typography';
 import type {Meta, StoryObj} from '@storybook/react';
 import React from 'react';
-
-import theme from '@cdo/apps/themes/code.org';
 
 // global styles so typography tokens apply
 import '@code-dot-org/component-library-styles/colors.scss';
@@ -13,7 +12,7 @@ export default {
   component: MuiTypography,
   decorators: [
     Story => (
-      <MuiThemeProvider theme={theme}>
+      <MuiThemeProvider theme={CdoTheme}>
         <Story />
       </MuiThemeProvider>
     ),
