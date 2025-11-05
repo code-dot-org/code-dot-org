@@ -21,6 +21,7 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-shoulders.png';
@@ -49,7 +50,6 @@ const adlibOptions = {
     {id: 'squirrel', text: 'squirrel'},
     {id: 'tiger', text: 'tiger'},
     {id: 'wolf', text: 'wolf'},
-    {id: 'zombie', text: 'zombie'},
   ],
   attire: [
     {id: 'beanie', text: 'beanie'},
@@ -81,7 +81,7 @@ const adlibOptions = {
   ],
 };
 
-const adlibs: AdlibsType = {
+const adlibsDefault: AdlibsType = {
   'creature-05': {
     template: 'Design a {creature}.',
     options: {creature: adlibOptions.creature},
@@ -129,39 +129,84 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setTheme('Dark');
   }, [setTheme]);
 
-  const getInitialChoices = () => {
-    const initial: AdlibChoices = {};
-    Object.keys(adlibs[adlibOption]?.options || []).forEach(key => {
-      const opts = adlibs[adlibOption].options[key];
-      initial[key] = sample(opts)?.id || '';
-    });
-    return initial;
-  };
+  const [aiGenerateState, setAiGenerateState] = useState<
+    'loading' | 'none' | 'generating' | 'reviewing'
+  >('loading');
 
-  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>(() => {
-    return getInitialChoices();
-  });
+  const [adlibs, setAdlibs] = useState<AdlibsType | undefined>(undefined);
+
+  const getInitialChoices = useCallback(
+    (adlibsValue: AdlibsType) => {
+      const initial: AdlibChoices = {};
+      if (adlibsValue) {
+        Object.keys(adlibsValue[adlibOption]?.options || []).forEach(key => {
+          const opts = adlibsValue[adlibOption].options[key];
+          initial[key] = sample(opts)?.id || '';
+        });
+      }
+      return initial;
+    },
+    [adlibOption]
+  );
+
+  useEffect(() => {
+    const fetchAdlib = async () => {
+      if (aiGenerateState !== 'loading') {
+        return;
+      }
+
+      let adlibsValue = adlibsDefault;
+
+      const manifestFilename =
+        ((queryParams('dancer-adlib-manifest') as string) || 'adlib-manifest') +
+        '.json';
+      const adlibsFilePath =
+        'https://curriculum.code.org/media/musiclab/generate/dancer/manifest/' +
+        manifestFilename;
+
+      try {
+        const {value} = await HttpClient.fetchJson<AdlibsType>(adlibsFilePath);
+        adlibsValue = value;
+      } catch (error) {
+        console.log("Couldn't retrieve adlib manifest.");
+      }
+
+      setAiGenerateState('none');
+      setAdlibs(adlibsValue);
+      setAdlibChoices(getInitialChoices(adlibsValue));
+      setPromptText('');
+      variantHistory.current = [];
+    };
+
+    fetchAdlib();
+  }, [adlibs, aiGenerateState, getInitialChoices]);
+
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices | undefined>(
+    undefined
+  );
 
   const [promptText, setPromptText] = useState<string>('');
 
   const variantHistory = useRef<number[]>([]);
 
-  const [aiGenerateState, setAiGenerateState] = useState<
-    'none' | 'generating' | 'reviewing'
-  >('none');
   const [dancerMetadata, setDancerMetadata] = useState<string | null>(
     localStorage.getItem('dancer-ai-generate')
   );
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
-    setAiGenerateState('none');
-    setAdlibChoices(getInitialChoices());
-    setPromptText('');
-    variantHistory.current = [];
+    setAiGenerateState('loading');
+    //setAdlibs(undefined);
+    //setAdlibChoices(undefined);
+    //setPromptText('');
+    //variantHistory.current = [];
   });
 
   const generateDancerCache = useCallback(async () => {
     const startTime = Date.now();
+
+    if (!adlibs || !adlibChoices) {
+      return;
+    }
 
     // Avoid showing a variant if it was shown recently.
     let variant, bodyVariant;
@@ -222,7 +267,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       0
     );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
-  }, [adlibChoices, adlibOption]);
+  }, [adlibChoices, adlibOption, adlibs]);
 
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
@@ -315,16 +360,18 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           {['none', 'generating'].includes(aiGenerateState) &&
             !levelProperties.aiDancerGenerateText && (
               <>
-                <Adlib
-                  adlib={adlibs[adlibOption]}
-                  adlibChoices={adlibChoices}
-                  readOnly={['generating', 'reviewing'].includes(
-                    aiGenerateState
-                  )}
-                  glowSpeed={glowSpeed}
-                  onChoicesChange={onAdlibChoicesChange}
-                  onTextChange={onAdlibTextChange}
-                />
+                {adlibs && adlibChoices && (
+                  <Adlib
+                    adlib={adlibs[adlibOption]}
+                    adlibChoices={adlibChoices}
+                    readOnly={['generating', 'reviewing'].includes(
+                      aiGenerateState
+                    )}
+                    glowSpeed={glowSpeed}
+                    onChoicesChange={onAdlibChoicesChange}
+                    onTextChange={onAdlibTextChange}
+                  />
+                )}
                 <div className={moduleStyles.buttonRow}>
                   <Button
                     ariaLabel={
