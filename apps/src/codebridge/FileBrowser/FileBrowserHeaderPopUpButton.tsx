@@ -68,13 +68,13 @@ export const FileBrowserHeaderPopUpButton = () => {
     <>
       <FileUploaderComponent />
       <ActionDropdown
-        name="manageFilesDropdown"
+        name="uitest-files-plus"
         labelText={codebridgeI18n.manageFiles()}
         triggerButtonProps={{
-          type: 'tertiary',
-          color: 'gray',
           isIconOnly: true,
           icon: {iconName: 'plus', iconStyle: 'solid'},
+          color: 'gray',
+          type: 'tertiary',
         }}
         size="xs"
         menuVerticalPlacement="bottom"

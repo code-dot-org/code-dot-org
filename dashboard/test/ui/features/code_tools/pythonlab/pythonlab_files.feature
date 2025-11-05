@@ -8,7 +8,7 @@ Background:
   And I wait to see "#uitest-codebridge-run"
 
 Scenario: Can add a new, unlocked file
-  And I press "uitest-files-plus"
+  And I press "uitest-files-plus-dropdown"
   And I wait to see "#uitest-new-file"
   And I press "uitest-new-file"
   And I wait to see "#uitest-prompt-field"
