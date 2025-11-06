@@ -423,7 +423,7 @@ const DanceView: React.FunctionComponent<{
       );
       // Provide extra scroll height to account for bottom-anchored guide overlay.
       if (guideMode === 'aiCodeGenerate') {
-        Blockly.extraScrollHeight = 200;
+        Blockly.extraScrollHeight = 250;
       }
       const toolboxFromStorage = localStorage.getItem(
         `flyout-${levelProperties.id}`

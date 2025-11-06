@@ -77,15 +77,46 @@ export default class MetricsManager extends ScrollMetricsManager {
     opt_viewMetrics?: ContainerRegion,
     opt_contentMetrics?: ContainerRegion
   ): ContainerRegion {
-    const metrics = super.getScrollMetrics(
+    // Start with core’s result (already handles scaling on return).
+    const baseScrollMetrics = super.getScrollMetrics(
       opt_getWorkspaceCoordinates,
       opt_viewMetrics,
       opt_contentMetrics
     );
-    const extraScrollHeight = Blockly.extraScrollHeight || 0;
+
+    const extraScrollHeightPixels = Blockly.extraScrollHeight || 0;
+    if (!extraScrollHeightPixels) {
+      return baseScrollMetrics;
+    }
+
+    // Work in pixels for the decision, since super() uses pixels internally.
+    const scale = (this.workspace_ as GoogleBlockly.WorkspaceSvg).scale || 1;
+    const viewPx = opt_viewMetrics ?? this.getViewMetrics(false);
+    const contentPx = opt_contentMetrics ?? this.getContentMetrics();
+    const fixed = this.getComputedFixedEdges_(viewPx);
+    const padded = this.getPaddedContent_(viewPx, contentPx);
+
+    // Allow bottom-most content to sit extraScrollHeightPixels above the viewport bottom.
+    // That means the scroll area's bottom must be at least (content.bottom + extraScrollHeightPixels).
+    const desiredBottomPx =
+      contentPx.top + contentPx.height + extraScrollHeightPixels;
+
+    // Preserve fixed bottom.
+    const currentBottomPx =
+      fixed.bottom !== undefined ? fixed.bottom : padded.bottom;
+    const extraBottomPx = Math.max(0, desiredBottomPx - currentBottomPx);
+    if (!extraBottomPx) {
+      return baseScrollMetrics;
+    }
+
+    // Convert only the delta to the return units (pixels or workspace units).
+    const extraInReturnUnits = opt_getWorkspaceCoordinates
+      ? extraBottomPx / scale
+      : extraBottomPx;
+
     return {
-      ...metrics,
-      height: metrics.height + extraScrollHeight,
+      ...baseScrollMetrics,
+      height: baseScrollMetrics.height + extraInReturnUnits,
     };
   }
 }
