@@ -48,6 +48,7 @@
     "@storybook/addon-a11y": "^9.0.18",
     "@storybook/addon-docs": "^9.0.18",
     "@storybook/addon-styling-webpack": "^2.0.0",
+    "@storybook/addon-themes": "^9.0.18",
     "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
     "@storybook/react-webpack5": "^9.0.18",
     "@storybook/test-runner": "^0.23.0",
