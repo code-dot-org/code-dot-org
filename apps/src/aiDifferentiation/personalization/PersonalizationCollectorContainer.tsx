@@ -228,6 +228,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
             {showInterstitialState || isSaving ? (
               <PersonalizationInterstitial
                 currentQuestion={PERSONALIZATION_PROMPTS[questionsNumber]}
+                personalizationData={personalizationData}
               />
             ) : (
               <>
