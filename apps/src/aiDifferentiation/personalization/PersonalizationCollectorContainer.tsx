@@ -52,7 +52,16 @@ const PersonalizationCollectorContainer: React.FC = () => {
     }
 
     if (direction === BACK && questionsNumber === 0) {
+      setShowInterstitialState(false);
       return;
+    }
+
+    if (
+      direction === BACK &&
+      questionsNumber === PERSONALIZATION_PROMPTS.length - 1
+    ) {
+      setShowResults(false);
+      setShowInterstitialState(false);
     }
 
     if (
@@ -69,6 +78,8 @@ const PersonalizationCollectorContainer: React.FC = () => {
       if (!isSaving) {
         setIsSaving(true);
         try {
+          setShowResults(true);
+
           await saveTeachingProfileData(personalizationData);
           const profileMatch = await matchTeachingProfile(personalizationData);
 
@@ -81,8 +92,6 @@ const PersonalizationCollectorContainer: React.FC = () => {
             };
             await saveTeachingProfileData(updatedData);
           }
-
-          setShowResults(true);
         } catch (error) {
           console.error('Error in final step:', error);
           setShowResults(true);
