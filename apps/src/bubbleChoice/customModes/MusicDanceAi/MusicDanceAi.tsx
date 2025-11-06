@@ -326,7 +326,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
         <div className={styles.labsContainer}>
           <div className={classNames(styles.labContainer)}>
             <Suspense fallback={<Loading isLoading={true} />}>
-              <LabView {...labProps} />
+              <LabView {...labProps} key={currentTab} />
             </Suspense>
           </div>
         </div>
