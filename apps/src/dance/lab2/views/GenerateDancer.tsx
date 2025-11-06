@@ -276,13 +276,20 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           sidebarOnly={true}
         />
         <Guide id="generate-panel">
-          {['none', 'generating'].includes(aiGenerateState) &&
-            levelProperties.longInstructions && (
-              <MainInstructionsContent
-                instructionsText={levelProperties.longInstructions}
-                markdownClassName={moduleStyles.markdown}
-              />
-            )}
+          {aiGenerateState === 'none' && levelProperties.longInstructions && (
+            <MainInstructionsContent
+              instructionsText={levelProperties.longInstructions}
+              markdownClassName={moduleStyles.markdown}
+            />
+          )}
+
+          {aiGenerateState === 'generating' && (
+            <div>
+              <Heading3>Generating...</Heading3>
+              AI is generating a dancer based on your prompt.
+            </div>
+          )}
+
           {aiGenerateState === 'none' &&
             levelProperties.aiDancerGenerateText && (
               <>
@@ -367,6 +374,17 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   color="black"
                   size="s"
                   onClick={() => setAiGenerateState('none')}
+                  className={moduleStyles.buttonWide}
+                />
+
+                <Button
+                  ariaLabel={'Regenerate'}
+                  text={'Regenerate'}
+                  type="secondary"
+                  color="black"
+                  size="s"
+                  iconLeft={{iconName: 'sparkles'}}
+                  onClick={generateDancer}
                   className={moduleStyles.buttonWide}
                 />
 

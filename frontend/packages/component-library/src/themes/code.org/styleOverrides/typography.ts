@@ -14,7 +14,7 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
     },
   },
   styleOverrides: {
-    root: ({theme}) => ({
+    root: () => ({
       color: 'var(--text-neutral-primary)',
 
       // when Typography is used as a wrapper (component="div")
