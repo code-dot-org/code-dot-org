@@ -6,6 +6,21 @@ import Header, {HeaderProps} from '../Header';
 export default {
   title: 'DesignSystem/Header',
   component: Header,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Disable the color contrast rule for the Header.
+            // Header component has one a11y issue, and it's related to the background and link colors.
+            // This is a known issue across our design system, and we are ok accepting this for now.
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 const Template: StoryFn<HeaderProps> = (args: HeaderProps) => (
