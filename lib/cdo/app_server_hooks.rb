@@ -49,32 +49,49 @@ module Cdo
     end
 
     def self.start_metric_thread(host:)
-      puts "Starting metrics thread"
-      dimensions = {
-        PID: Process.pid,
-        Host: host,
-      }
-      begin
-        dimensions[:InstanceId] = AWS::EC2.instance_id
-      rescue
-        # We're not on EC2, ignore
-      end
+      puts "Starting metrics thread, getting instance id"
 
       Thread.new do
+        dimensions = {
+          PID: Process.pid,
+          Host: host,
+        }
+
+        begin
+          dimensions[:InstanceId] = AWS::EC2.instance_id
+        rescue
+        end
+
+        client = ::Aws::CloudWatch::Client.new(
+          retry_limit: 3,
+          http_open_timeout: 5,
+          http_read_timeout: 5,
+          http_idle_timeout: 2
+        )
         loop do
-          puts "Getting metrics for PID #{Process.pid}"
-          # print a line to /tmp/boo.log:
-          # File.open("/tmp/boo.log", "a") do |f|
-          #   f.puts "ActionCable connections: #{ActionCable.server.connections.count}"
-          # end
-          Cdo::Metrics.put(
-            'ActionCable',
-            'ServerConnectionsCount',
-            ActionCable.server.connections.count,
-            dimensions,
-            unit: 'Count'
+          puts "Uploading metrics for PID #{Process.pid}"
+          puts "PID #{Process.pid}, ServerConnectionsCount: #{ActionCable.server.connections.count}"
+          #
+          # Horrible segfaults if we do this and there's even 1 puma worker (i.e. not just single-mode):
+          #
+          # Cdo::Metrics.put(
+          #   'ActionCable',
+          #   'ServerConnectionsCount',
+          #   ActionCable.server.connections.count,
+          #   dimensions,
+          #   unit: 'Count'
+          # )
+          client.put_metric_data(
+            namespace: 'ActionCable',
+            metric_data: [{
+              metric_name: 'ServerConnectionsCount',
+              value: ActionCable.server.connections.count,
+              unit: 'Count',
+              dimensions: dimensions.map {|k, v| {name: k.to_s, value: v.to_s}}.reject {|kv| kv[:value].empty?}
+            }]
           )
-          sleep 1
+          puts "Uploaded metrics for PID #{Process.pid}"
+          sleep 10
         end
       end
     end
