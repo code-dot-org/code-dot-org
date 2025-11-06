@@ -15,7 +15,11 @@ const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
 const SERVICE_WORKER_INSTALLED = 'SERVICE_WORKER_INSTALLED';
 const SERVICE_WORKER_ACTIVATED = 'SERVICE_WORKER_ACTIVATED';
-// todo: getting a 404 does not update the url bar...
+
+// bugs to fix:
+// on firefox on adhoc, if you are on a page not found page and navigate to a new level, the page not found persists
+// until you type in a new filename and hit enter (you can't refresh or press enter on index.html, you have to do a different filename, then go back to index.html)
+// flash of outdated content when switching levels (sometimes)
 
 function main() {
   let filesData = {};
