@@ -39,6 +39,8 @@ const DEFAULT_BODY_METADATA_URL = `${BODIES_PATH}/default.json`;
 const SKELETONS_PATH = `${BASE_HOST}/skeletons`;
 const PALETTES_PATH = `${SKELETONS_PATH}/palettes`;
 
+const DEFAULT_HEAD_SCALE = 0.5;
+
 // Expected colors to replace in body SVGs.
 const BODY_SVG_PRIMARY = '#33FF21';
 const BODY_SVG_SECONDARY = '#808080';
@@ -767,4 +769,36 @@ export function hideMagentaDress(animData: LottieJSON): void {
 
   // Start from top-level comp.
   visitComp(animData);
+}
+
+/**
+ * Loads a PNG image from a data URL, mirrors it horizontally, and returns a new data URL.
+ * @param dataUrl
+ * @returns
+ */
+export async function mirrorPngDataUrl(dataUrl: string): Promise<string> {
+  const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const imageElement = new Image();
+    imageElement.onload = () => resolve(imageElement);
+    imageElement.onerror = reject;
+    imageElement.src = dataUrl;
+  });
+
+  const canvas = document.createElement('canvas');
+  canvas.width = img.naturalWidth || img.width;
+  canvas.height = img.naturalHeight || img.height;
+  const context2D = canvas.getContext('2d')!;
+  context2D.translate(canvas.width, 0);
+  context2D.scale(-1, 1);
+  context2D.drawImage(img, 0, 0);
+  return canvas.toDataURL('image/png');
+}
+
+// Head scale can be overridden via URL param, e.g. ?headScale=0.8, ?bigHead=true
+export function getHeadScale(): number {
+  const scaleParam =
+    getConfigValue('headScale') ||
+    (getConfigValue('bigHead') === 'true' ? '1.0' : undefined);
+  const scale = scaleParam ? parseFloat(scaleParam) : NaN;
+  return isNaN(scale) || scale <= 0 ? DEFAULT_HEAD_SCALE : scale;
 }
