@@ -4,6 +4,8 @@ import React, {useEffect, useState} from 'react';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
+import {useAppSelector} from '../util/reduxHooks';
+
 import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
 import {STEPS, INITIAL_STEP} from './sketchlabTourHelpers';
 
@@ -20,6 +22,10 @@ const OnboardingTourSteps: React.FC = () => {
     'no'
   );
   const [isToolbarReady, setIsToolbarReady] = useState(false);
+  const isAiDiffContainerOpen = useAppSelector(
+    state => state.lab2View.isAiDiffContainerOpen
+  );
+  console.log('isAiDiffContainerOpen', isAiDiffContainerOpen);
 
   useEffect(() => {
     // Wait for Excalidraw toolbar to be fully rendered.
@@ -53,7 +59,11 @@ const OnboardingTourSteps: React.FC = () => {
 
   return (
     <Steps
-      enabled={isToolbarReady && sketchlabOnboardingTourSeen !== 'yes'}
+      enabled={
+        isToolbarReady &&
+        sketchlabOnboardingTourSeen !== 'yes' &&
+        !isAiDiffContainerOpen
+      }
       initialStep={INITIAL_STEP}
       steps={STEPS}
       onExit={() => {
