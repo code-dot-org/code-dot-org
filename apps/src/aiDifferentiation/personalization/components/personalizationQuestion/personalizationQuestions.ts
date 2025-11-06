@@ -1,5 +1,6 @@
 export type PersonalizationQuestionType = {
   order: number;
+  id: string;
   question: string;
   subhead: string;
   type: 'short_answer' | 'single_choice' | 'multi_select' | 'free_response';
@@ -7,6 +8,7 @@ export type PersonalizationQuestionType = {
 };
 
 export const YEARS_TEACHING_PROMPT: PersonalizationQuestionType = {
+  id: 'yearsTeaching',
   order: 1,
   question: 'How many years have you been teaching?',
   subhead:
@@ -16,6 +18,7 @@ export const YEARS_TEACHING_PROMPT: PersonalizationQuestionType = {
 };
 
 export const CONFIDENCE_PROMPT: PersonalizationQuestionType = {
+  id: 'confidence',
   order: 2,
   question: 'How confident are you in teaching programming concepts?',
   subhead:
@@ -24,6 +27,7 @@ export const CONFIDENCE_PROMPT: PersonalizationQuestionType = {
 };
 
 export const TEACHER_GOAL_PROMPT: PersonalizationQuestionType = {
+  id: 'goals',
   order: 3,
   question:
     "What goals do you have for your own teaching practice while using Code.org's curriculum this year?",
@@ -39,6 +43,7 @@ export const TEACHER_GOAL_PROMPT: PersonalizationQuestionType = {
 };
 
 export const CLASSROOM_VISION_PROMPT: PersonalizationQuestionType = {
+  id: 'classroomVision',
   order: 4,
   question:
     'What do you want your classroom to look like, feel like, sound like?',
@@ -48,6 +53,7 @@ export const CLASSROOM_VISION_PROMPT: PersonalizationQuestionType = {
 };
 
 export const SUPPORT_PREFERENCES_PROMPT: PersonalizationQuestionType = {
+  id: 'support',
   order: 5,
   question: 'What kind of support is most helpful to you?',
   subhead:
@@ -63,6 +69,7 @@ export const SUPPORT_PREFERENCES_PROMPT: PersonalizationQuestionType = {
 };
 
 export const CHALLENGE_PROMPT: PersonalizationQuestionType = {
+  id: 'challenge',
   order: 6,
   question:
     "What's the biggest challenge you anticipate while teaching computer science this year?",
