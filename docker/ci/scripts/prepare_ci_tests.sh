@@ -18,6 +18,11 @@ export LD_LIBRARY_PATH=/usr/local/lib
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
 export PARALLEL_TEST_PROCESSORS=7
 
+# Sauce Connect HTTP idle connection timeout.
+# Set to 1s for testing to verify this is the timeout causing intermittent CI failures.
+# If confirmed, change to a longer value (e.g., 20m) or 0 for no timeout.
+export SAUCE_HTTP_IDLE_CONN_TIMEOUT=1s
+
 # Apps build parallelization settings for CI
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
 export APPS_BUILD_WORKERS=10
