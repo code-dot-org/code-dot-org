@@ -1,13 +1,16 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {Heading4} from '@code-dot-org/component-library/typography';
+import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {useMultiProject} from '@cdo/apps/lab2/projects/MultiProjectContainer';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibsType,
   AdlibType,
+  AdlibChoices,
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
@@ -62,15 +65,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const showFullContext =
     appConfig.getValue('ai-generate-full-context') === 'true';
 
-  // The array of user choices in the adlib.
-  const [choices, setChoices] = useState<string[] | undefined>(undefined);
-
-  const [contextText, setContextText] = useState(DefaultContext);
-
-  const [promptText, setPromptText] = useState(
-    adlibOption ? '' : DefaultPrompt
-  );
-
   const useText = !!(levelProperties.levelData as MusicLevelData)
     .aiCodeGenerateText;
 
@@ -85,6 +79,34 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       ? adlibs[adlibOption]
       : undefined);
 
+  const getInitialChoices = () => {
+    if (!useAdlib) return {};
+    const initial: AdlibChoices = {};
+    Object.keys(useAdlib.options).forEach(key => {
+      const opts = useAdlib.options[key];
+      initial[key] = sample(opts)?.id || '';
+    });
+    return initial;
+  };
+
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>(
+    getInitialChoices()
+  );
+
+  const [contextText, setContextText] = useState(DefaultContext);
+
+  const [promptText, setPromptText] = useState(
+    adlibOption ? '' : DefaultPrompt
+  );
+
+  useEffect(() => {
+    // If we are clearing, make sure we are called with the new
+    // block count before deciding what to do next.
+    if (aiGenerateState === 'clearing' && blockCount <= 1) {
+      dispatch(setAiGenerateState('none'));
+    }
+  }, [aiGenerateState, blockCount, dispatch]);
+
   useEffect(() => {
     // If there is already generated music when we begin, presumably
     // because the user is returning to a level they've previously worked
@@ -96,14 +118,15 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     dispatch(setAiGenerateState('none'));
+    setAdlibChoices(getInitialChoices());
     setPromptText(adlibOption ? '' : useText ? '' : DefaultPrompt);
   });
 
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));
 
-    const pseudocode = await (useCache
-      ? generateSongCache(adlibs, adlibOption || 'complex', packId, choices)
+    const pseudocode = await (useCache && useAdlib
+      ? generateSongCache(adlibOption || '', useAdlib, packId, adlibChoices)
       : generateSongAi(
           contextText,
           packId,
@@ -120,19 +143,21 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     setPlaying(true);
     dispatch(setAiGenerateState('generated'));
   }, [
+    adlibChoices,
     adlibOption,
-    choices,
     contextText,
     dispatch,
     levelProperties.levelData,
     packId,
     promptText,
     setPlaying,
+    useAdlib,
     useCache,
   ]);
 
   useEffect(() => {
-    // There can be a delay before we're playing, so wait for it explicitly.
+    // There can be a delay before we're playing (often due to sample loading),
+    // so wait for it explicitly.
     if (aiGenerateState === 'generated' && isPlaying) {
       dispatch(setAiGenerateState('listening'));
     }
@@ -153,6 +178,14 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     }
   }, [aiGenerateState, dispatch, hasEdited, isPlaying]);
 
+  const onAdlibChoicesChange = useCallback((adlibChoices: AdlibChoices) => {
+    setAdlibChoices({...adlibChoices});
+  }, []);
+
+  const onAdlibTextChange = useCallback((text: string) => {
+    setPromptText(text);
+  }, []);
+
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
   const modal = [
@@ -161,10 +194,12 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     'generated',
     'listening',
     'listened',
+    'clearing',
   ].includes(aiGenerateState);
 
-  const multiProject = useMultiProject();
-  const showNavigation = !levelProperties.isProjectLevel && !multiProject;
+  const parentProperties = useParentLevelProperties();
+  const isStandalone =
+    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
 
   if (!packId) {
     return null;
@@ -177,6 +212,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         levelProperties.longInstructions && (
           <MainInstructionsContent
             instructionsText={levelProperties.longInstructions}
+            markdownClassName={styles.markdown}
           />
         )}
 
@@ -190,114 +226,140 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {['none', 'generating'].includes(aiGenerateState) && useAdlib && (
-        <Adlib
-          adlib={useAdlib}
-          readOnly={aiGenerateState !== 'none'}
-          glowSpeed={glowSpeed}
-          onChange={(text, choices) => {
-            setPromptText(text);
-            setChoices(choices);
-          }}
-        />
-      )}
+      {['none', 'generating', 'generated'].includes(aiGenerateState) &&
+        useAdlib && (
+          <Adlib
+            adlib={useAdlib}
+            adlibChoices={adlibChoices}
+            readOnly={aiGenerateState !== 'none'}
+            glowSpeed={glowSpeed}
+            onChoicesChange={onAdlibChoicesChange}
+            onTextChange={onAdlibTextChange}
+          />
+        )}
 
-      {aiGenerateState === 'none' && (
+      {aiGenerateState === 'none' && !useAdlib && (
         <>
-          {!useAdlib && (
-            <>
-              <div>Describe the song you'd like AI to make.</div>
-              <textarea
-                id="generate-description"
-                onChange={evt => {
-                  setPromptText(evt.target.value);
-                }}
-                value={promptText}
-                rows={4}
-                className={styles.textArea}
-              />
-            </>
-          )}
-
-          <Button
-            ariaLabel={'Generate code'}
-            text={'Generate code'}
-            type="primary"
-            color="black"
-            size="s"
-            iconLeft={{iconName: 'sparkles'}}
-            onClick={() => {
-              generateSong();
-              analyticsReporter.sendEvent('hoai2025-music-prompt', {
-                promptText,
-              });
+          <div>Describe the song you'd like AI to make.</div>
+          <textarea
+            id="generate-description"
+            onChange={evt => {
+              setPromptText(evt.target.value);
             }}
+            value={promptText}
+            rows={4}
+            className={styles.textArea}
           />
         </>
       )}
 
-      {['generating', 'generated'].includes(aiGenerateState)
-        ? 'Generating code.'
-        : ''}
+      {['none', 'generating', 'generated'].includes(aiGenerateState) && (
+        <Button
+          ariaLabel={
+            aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
+          }
+          text={
+            aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
+          }
+          type="primary"
+          color="black"
+          size="s"
+          iconLeft={{iconName: 'sparkles'}}
+          isPending={aiGenerateState !== 'none'}
+          disabled={aiGenerateState !== 'none'}
+          onClick={() => {
+            generateSong();
+            analyticsReporter.sendEvent('hoai2025-music-prompt', {
+              promptText,
+            });
+          }}
+        />
+      )}
 
-      {aiGenerateState === 'listening' && <div>Take a listen.</div>}
+      {['listening', 'listened'].includes(aiGenerateState) && (
+        <div>
+          <Heading4>
+            {aiGenerateState === 'listening' && 'Take a listen...'}
+            {aiGenerateState === 'listened' && 'Decide what to do next'}
+          </Heading4>
+          <div>AI generated code based on your prompt, "{promptText}"</div>
+        </div>
+      )}
 
       {aiGenerateState === 'listened' && (
-        <>
-          <div>Do you want to keep what AI generated?</div>
+        <div className={styles.buttonRow}>
+          <Button
+            ariaLabel={'Back to prompt'}
+            text={'Back to prompt'}
+            type="secondary"
+            color="black"
+            size="s"
+            onClick={() => {
+              setPlaying(false);
+              clearCode(true);
+              dispatch(setAiGenerateState('clearing'));
+            }}
+            className={styles.buttonWide}
+          />
 
+          <Button
+            ariaLabel={'Use code'}
+            text={'Use code'}
+            type="primary"
+            color="black"
+            size="s"
+            onClick={() => {
+              // Skip the 'editing' validation state for standalone projects.
+              dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
+              setPlaying(false);
+            }}
+            className={styles.buttonWide}
+          />
+        </div>
+      )}
+
+      {aiGenerateState === 'editing' && !isPlaying && (
+        <div>
+          <Heading4>Modify the code</Heading4>
+          AI helped you get started. Make your own changes, then press Run.
+        </div>
+      )}
+
+      {aiGenerateState === 'editing' && isPlaying && (
+        <div>
+          <Heading4>Modify the code</Heading4>
+          <div>Try changing the code. </div>
+        </div>
+      )}
+
+      {aiGenerateState === 'edited' && (
+        <>
+          <div>
+            <Heading4>Modify the code</Heading4>
+            <div>That's a great mix!</div>
+          </div>
           <div className={styles.buttonRow}>
             <Button
-              ariaLabel={'Try prompting again'}
-              text={'Try prompting again'}
-              type="primary"
+              ariaLabel={'Back to prompt'}
+              text={'Back to prompt'}
+              type="secondary"
               color="black"
               size="s"
               onClick={() => {
                 setPlaying(false);
                 clearCode(true);
-                dispatch(setAiGenerateState('none'));
+                dispatch(setAiGenerateState('clearing'));
               }}
               className={styles.buttonWide}
             />
-
-            <Button
-              ariaLabel={'Keep this'}
-              text={'Keep this'}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => {
-                dispatch(setAiGenerateState('editing'));
-                setPlaying(false);
-              }}
-              className={styles.buttonWide}
-            />
-          </div>
-        </>
-      )}
-
-      {aiGenerateState === 'editing' && !isPlaying && (
-        <div>
-          AI helped you get started. Now, edit the code to make it your own.
-        </div>
-      )}
-
-      {aiGenerateState === 'editing' && isPlaying && (
-        <div>Try changing the code. </div>
-      )}
-
-      {aiGenerateState === 'edited' && (
-        <>
-          <div>That's a great mix!</div>
-          <div className={styles.buttonRow}>
-            {showNavigation && (
+            {!isStandalone && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.
                 hasRun={true}
                 hasEdited={true}
                 isRunning={false}
+                className={styles.buttonWide}
               />
             )}
           </div>

@@ -1,6 +1,10 @@
 Feature: Certificate page features
 
-  Scenario: Pegasus share page preserves certificate when redirecting
+  Background:
+    Given I am on "http://studio.code.org/reset_session"
+    And I use a cookie to mock the DCDO key "hoc_apis_in_dashboard" as "true"
+
+  Scenario: share page preserves certificate when redirecting
   # Reset lesson data (otherwise it will pull a cached certificate from
   # other tests)
     Given I am on "http://studio.code.org/courses/mc/units/1/reset"
@@ -8,7 +12,7 @@ Feature: Certificate page features
     Then I wait until the Minecraft game is loaded
 
   # Set up a customized certificate
-    Given I am on "http://code.org/api/hour/finish/mc"
+    Given I am on "http://studio.code.org/api/hour/finish/mc"
     And I wait until current URL contains "/congrats"
     And I wait to see element with ID "uitest-certificate"
     And I type "Robo Coder" into "#name"

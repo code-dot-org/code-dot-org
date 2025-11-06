@@ -255,6 +255,9 @@ export const HTMLPreview: React.FC = () => {
       id={'html-preview'}
       headerContent={codebridgeI18n.preview()}
       hideHeaders
+      className={classNames(
+        isFullScreenView && moduleStyles.fullScreenPanelContainer
+      )}
     >
       <div
         className={classNames(

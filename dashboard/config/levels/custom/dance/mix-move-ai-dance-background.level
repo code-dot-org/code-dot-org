@@ -1,0 +1,151 @@
+<Dancelab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 63,
+  "created_at": "2025-11-02T22:59:29.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "uses_preview": "true",
+    "skin": "dance",
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "validations": [
+      {
+        "key": "dance-pass",
+        "message": "That looks great!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "pass"
+          }
+        ]
+      },
+      {
+        "key": "dance-fail",
+        "message": "Make sure you add a dancer.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "dance-fail"
+          }
+        ]
+      }
+    ],
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "use_modal_function_editor": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "block_pool": "Dancelab",
+    "preload_asset_list": [
+      "https://curriculum.code.org/images/DancePartyLoading.gif",
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_08.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_09.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_10.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_11.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_40.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_41.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_42.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_43.png"
+    ],
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"ai_dance_callout_draft_level_02\",\r\n  \"callout_text\": \"⬆️ Start here.\",\r\n  \"element_id\": \".blocklyFlyout [data-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "parent_level_id": 14643,
+    "name_suffix": "_draft3",
+    "default_song": "asitwas_harrystyles",
+    "long_instructions": "##Welcome! \r\n\r\n1. Choose an effect on the set background block. \r\n\r\n2. Press the Run button.",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "validation_enabled": "false",
+    "hide_pause_button": "false",
+    "validation_code": "if (nativeAPI.getTime(\"measures\") >= 4.5) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"dance-fail\");\r\n  } else {\r\n    nativeAPI.pass();\r\n  }\r\n}",
+    "song_selection": [
+      "asitwas_harrystyles",
+      "bornthisway_ladygaga",
+      "good4u_oliviarodrigo"
+    ],
+    "block_pools": [
+      "Dancelab",
+      "GeneratedDancers"
+    ],
+    "encrypted_examples": "QcyE1JnIa2c7fdVSHVOkbatQQV4OdsWG9/WbEyZMlHVc9qqXh0SPTAxAdr7o\nYoaj2AvdWdpsweQIUzGmgIErkA==\n",
+    "uses_lab2": "true",
+    "guide_mode": "instructions",
+    "toolbox_definition": {
+      "contents": [
+
+      ],
+      "kind": "flyoutToolbox"
+    },
+    "start_sources": {
+      "source": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "Dancelab_whenRun",
+              "id": "when-run-block",
+              "x": 16,
+              "y": 16,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "GeneratedDancers_makeAnonymousDanceSprite",
+                  "id": "vzvF:!o_2n#y..Ztz|Vu",
+                  "fields": {
+                    "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 100}</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "Dancelab_setBackgroundEffectWithPaletteAI",
+                      "id": "Xe8Sdv]u~#w`bh4dz`X~",
+                      "fields": {
+                        "PALETTE": "<field name=\"PALETTE\">\"neon\"</field>",
+                        "EFFECT": "<field name=\"EFFECT\">\"none\"</field>"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "selectedSong": "asitwas_harrystyles"
+    }
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-11-02T22:59:29.674+00:00\",\"changed\":[\"cloned from \\\"hoai-pilot-6-first-dance\\\"\"],\"cloned_from\":\"hoai-pilot-6-first-dance\"},{\"changed_at\":\"2025-11-02 22:59:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 17:18:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 17:20:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"tts_short_instructions_override\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 17:21:14 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 17:21:22 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 19:11:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 19:12:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 19:14:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 19:16:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 19:50:19 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 19:53:15 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="Dancelab_whenSetup" id="n2IvvYw0`dD^TvxCN_`K" deletable="false" movable="false" x="18" y="15"/>
+      </xml>
+    </start_blocks>
+  </blocks>
+</Dancelab>

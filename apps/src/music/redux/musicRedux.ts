@@ -34,7 +34,8 @@ type AiGenerateState =
   | 'listening'
   | 'listened'
   | 'editing'
-  | 'edited';
+  | 'edited'
+  | 'clearing';
 
 export interface MusicState {
   /** Current pack ID, if a specific restricted pack from the current music library is selected */

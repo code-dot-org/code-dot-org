@@ -1,8 +1,10 @@
 import Alert from '@code-dot-org/component-library/alert';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import ToggleFileBrowserButton from '@codebridge/components/ToggleFileBrowserButton';
 import {Editor} from '@codebridge/Editor/Editor';
 import {FileBrowser} from '@codebridge/FileBrowser/FileBrowser';
+import {FileBrowserHeaderPopUpButton} from '@codebridge/FileBrowser/FileBrowserHeaderPopUpButton';
 import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import classnames from 'classnames';
 import React, {useRef} from 'react';
@@ -11,7 +13,10 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {setRestoredOldVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {
+  isReadOnlyWorkspace,
+  isProjectTemplateLevel,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -35,6 +40,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
 }) => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const containerRef = useRef<HTMLDivElement>(null);
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const viewingOldVersion = useAppSelector(
@@ -78,7 +84,20 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               [moduleStyles.withFileBrowser]: showFileBrowser,
             })}
           >
-            <ToggleFileBrowserButton />
+            {showFileBrowser && (
+              <BodyFourText
+                className={moduleStyles.fileBrowserHeaderText}
+                noMargin
+              >
+                {codebridgeI18n.filesHeader()}
+              </BodyFourText>
+            )}
+            <div className={moduleStyles.fileBrowserHeaderButtons}>
+              {showFileBrowser && !isReadOnly && (
+                <FileBrowserHeaderPopUpButton />
+              )}
+              <ToggleFileBrowserButton />
+            </div>
           </div>
           <FileTabs />
           {showFileBrowser && <FileBrowser />}

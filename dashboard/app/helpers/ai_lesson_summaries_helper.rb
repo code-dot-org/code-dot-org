@@ -1,5 +1,4 @@
 module AiLessonSummariesHelper
-  # API_KEY = CDO.openai_lesson_summaries_api_key
   API_KEY = CDO.openai_lesson_summaries_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 

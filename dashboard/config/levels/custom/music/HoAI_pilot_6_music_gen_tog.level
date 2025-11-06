@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 70,
-  "created_at": "2025-10-15T18:05:34.000Z",
+  "created_at": "2025-10-10T13:18:42.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -16,16 +16,40 @@
         "template": "Please code a music remix that layers {layer1} and {layer2} together.",
         "options": {
           "layer1": [
-            {"id": "bass", "text": "bass"},
-            {"id": "beats", "text": "beats"},
-            {"id": "vocals", "text": "vocals"},
-            {"id": "leads", "text": "leads"}
+            {
+              "id": "bass",
+              "text": "bass"
+            },
+            {
+              "id": "beats",
+              "text": "beats"
+            },
+            {
+              "id": "vocals",
+              "text": "vocals"
+            },
+            {
+              "id": "leads",
+              "text": "leads"
+            }
           ],
           "layer2": [
-            {"id": "bass", "text": "bass"},
-            {"id": "beats", "text": "beats"},
-            {"id": "vocals", "text": "vocals"},
-            {"id": "leads", "text": "leads"}
+            {
+              "id": "bass",
+              "text": "bass"
+            },
+            {
+              "id": "beats",
+              "text": "beats"
+            },
+            {
+              "id": "vocals",
+              "text": "vocals"
+            },
+            {
+              "id": "leads",
+              "text": "leads"
+            }
           ]
         },
         "variantCount": 3
@@ -62,7 +86,7 @@
     "project_template_level_name": "HoAI_pilot_5_template1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-10T13:18:42.436+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music4\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music4\"},{\"changed_at\":\"2025-10-14 22:08:23 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:15:38 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:16:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:25:28 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:28:03 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-15 00:45:42 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-18 03:33:15 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-10T13:18:42.436+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music4\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music4\"},{\"changed_at\":\"2025-10-14 22:08:23 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:15:38 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:16:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:25:28 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-14 22:28:03 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-15 00:45:42 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-18 03:33:15 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-02 22:52:41 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

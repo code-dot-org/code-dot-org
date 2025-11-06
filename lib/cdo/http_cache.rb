@@ -358,11 +358,6 @@ class HttpCache
               headers: ALLOWLISTED_HEADERS,
               cookies: allowlisted_cookies,
             },
-            {
-              path: '/v2/certificate',
-              headers: ALLOWLISTED_HEADERS,
-              cookies: allowlisted_cookies,
-            },
           ],
         },
       )
