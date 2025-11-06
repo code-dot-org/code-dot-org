@@ -23,11 +23,6 @@ export PARALLEL_TEST_PROCESSORS=7
 # If confirmed, change to a longer value (e.g., 20m) or 0 for no timeout.
 export SAUCE_HTTP_IDLE_CONN_TIMEOUT=1s
 
-# Apps build parallelization settings for CI
-# optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
-export APPS_BUILD_WORKERS=10
-export APPS_BUILD_MAX_MEMORY=16384
-
 # Install in deployment mode, both to better mirror the test server and to make
 # caching easier.
 bundle config set --local deployment 'true'
