@@ -1,5 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import experiments from '@cdo/apps/util/experiments';
 
 import HttpClient from '../util/HttpClient';
@@ -24,6 +25,7 @@ interface AiDiffWorkSpaceProps {
   scriptName?: string;
   curriculumCourses?: string[];
   unreadNotificationCount: number;
+  personalizationData?: PersonalizationData;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
@@ -31,6 +33,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   scriptName,
   curriculumCourses,
   unreadNotificationCount,
+  personalizationData,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
@@ -137,6 +140,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           key={keyId}
           threadId={threadId}
           setThreadId={setThreadId}
+          personalizationData={personalizationData}
           initialThreadPrompt={initialThreadPrompt}
           setInitialThreadPrompt={setInitialThreadPrompt}
         />

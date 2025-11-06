@@ -8,6 +8,7 @@ import React, {
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
@@ -105,6 +106,7 @@ interface AiDiffChatProps {
   setThreadId?: Dispatch<SetStateAction<number>>;
   initialThreadPrompt?: ChatPrompt | null;
   setInitialThreadPrompt?: Dispatch<SetStateAction<ChatPrompt | null>>;
+  personalizationData?: PersonalizationData;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
@@ -123,6 +125,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   setThreadId = () => {},
   initialThreadPrompt = null,
   setInitialThreadPrompt = () => {},
+  personalizationData,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
   const reportingData = React.useMemo(() => {
@@ -379,6 +382,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           onSuggestPrompts={onSuggestPrompts}
           messages={messageHistory}
           threadTitle={threadTitle}
+          personalizationData={personalizationData}
         />
       )}
       <div className={style.chatContent}>
