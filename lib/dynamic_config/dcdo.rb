@@ -70,6 +70,7 @@ class DCDOBase < DynamicConfigBase
       'actioncable-disconnect-timeout': DCDO.get('actioncable-disconnect-timeout', 30 * 1000),
       'disable-progress-v1': DCDO.get('disable-progress-v1', false),
       'detect-remote-network-config': DCDO.get('detect-remote-network-config', {}),
+      'show-aita-lesson-summaries': DCDO.get('show-aita-lesson-summaries', false)
     }
   end
 end
