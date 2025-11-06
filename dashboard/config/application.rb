@@ -72,6 +72,8 @@ module Dashboard
     end
 
     if Rails.env.development?
+      Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
+
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
       # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
       config.autoload_paths << Rails.root.join('test/mailers/previews')
@@ -113,8 +115,7 @@ module Dashboard
 
     config.encoding = 'utf-8'
 
-    Rails.application.routes.default_url_options[:host] = CDO.canonical_hostname('studio.code.org')
-    Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
+    Rails.application.routes.default_url_options[:host] = CDO.dashboard_site_host
 
     config.generators do |g|
       g.template_engine :haml
