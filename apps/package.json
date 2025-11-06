@@ -22,7 +22,7 @@
     "clean": "grunt clean",
     "build": "DEV=1 yarn grunt build",
     "build:analyze": "ANALYZE_BUNDLE=1 DEV=1 yarn grunt build",
-    "build:dist": "NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8096 grunt clean build",
+    "build:dist": "NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8096 grunt build",
     "build:dist:debug": "NODE_ENV=production DEBUG_MINIFIED=1 yarn grunt clean build",
     "build:dist:analyze": "ANALYZE_BUNDLE=1 yarn build:dist",
     "build:dist:profile": "PROFILE_APPS_BUILD=1 yarn build:dist",
