@@ -74,7 +74,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   };
 
   const handleParentKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    if (e.key === 'Enter') {
+    if (e.target === e.currentTarget && e.key === 'Enter') {
       setIsInChatNavigationMode(true);
       finalEventRef.current?.focus();
     }
@@ -137,7 +137,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                 ref={id === events.length - 1 ? finalEventRef : undefined}
                 tabIndex={isInChatNavigationMode ? 0 : -1}
                 onKeyDown={e => {
-                  if (e.key === 'Escape') {
+                  if (e.key === 'Escape' && e.target === e.currentTarget) {
                     setIsInChatNavigationMode(false);
                     parentRef.current?.focus();
                   }
