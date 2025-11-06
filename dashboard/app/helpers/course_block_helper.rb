@@ -145,19 +145,19 @@ module CourseBlockHelper
       },
       Unit::MINECRAFT_AQUATIC_NAME => {
         body: data_t_suffix('script.name', id, 'description_short'),
-        url: CDO.code_org_url('/api/hour/begin/mc')
+        url: CDO.studio_url('/api/hour/begin/mc')
       },
       Unit::MINECRAFT_DESIGNER_NAME => {
         body: data_t_suffix('script.name', id, 'description_short'),
-        url: CDO.code_org_url('/api/hour/begin/mc')
+        url: CDO.studio_url('/api/hour/begin/mc')
       },
       Unit::MINECRAFT_HERO_NAME => {
         body: data_t_suffix('script.name', id, 'description_short'),
-        url: CDO.code_org_url('/api/hour/begin/mc')
+        url: CDO.studio_url('/api/hour/begin/mc')
       },
       Unit::MINECRAFT_NAME => {
         body: data_t_suffix('script.name', id, 'description_short'),
-        url: CDO.code_org_url('/api/hour/begin/mc')
+        url: CDO.studio_url('/api/hour/begin/mc')
       },
       Unit::STARWARS_BLOCKS_NAME => {
         url: CDO.code_org_url('/starwars'),

@@ -1,0 +1,687 @@
+{
+  "script": {
+    "name": "mix-move-ai-2025",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "hoc",
+      "curriculum_umbrella": "HOAI",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai",
+        "music_lab"
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-11-03 21:04:29 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "mix-move-ai-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Mix & Move with AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this 45-minute activity, students will explore how creativity, coding, and artificial intelligence come together to bring dance and music to life. By designing a custom dancer, generating and modifying code for a musical remix, and choreographing moves to the beat, students will learn foundational computer science concepts like sequencing and parallelism, alongside AI concepts like prompting and iteration.\n\nStudents will gain confidence in their creative abilities and deepen their understanding of how AI can enhance, not replace, human creativity. They’ll also be introduced to careers that blend art, technology, and AI through an inspiring spotlight from a professional in the music and dance industry. The goal is for students to see themselves as creators—using AI as a tool for imagination, innovation, and self-expression.",
+        "purpose": "This lesson is designed to show students that coding and AI go hand in hand to amplify creativity and expression. In Mix & Move with AI, students will design their own dancer, remix music, and choreograph a performance using code. Along the way, they’ll explore coding concepts like sequencing and parallelism and AI concepts like prompting and iteration.\n\nStudents will see how the creative process of designing, testing, and refining with AI mirrors the way artists, musicians, and coders bring ideas to life. By the end of the lesson, they’ll understand that AI can be a powerful tool for imagination and innovation, but that they are ultimately the ones in charge of the final product.",
+        "student_overview": "In this 45-minute activity, you’ll use Code.org’s Mix & Move with AI to design your own dancer, mix music from artists like Sabrina Carpenter, Benson Boone, and Shakira, and code your own dance performance. You’ll learn how AI can help you create faster while staying in control of your ideas, explore key coding skills like sequencing and parallelism, and discover how creativity, technology, and AI come together to make something amazing."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "5471cfa4-2135-4972-aca6-c67c5aed326b",
+      "position": 1,
+      "properties": {
+        "duration": 40,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5471cfa4-2135-4972-aca6-c67c5aed326b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "da6547ed-29ef-4288-b18b-86a7bad73bb8",
+      "position": 1,
+      "properties": {
+        "name": "Intro to Mix & Move with AI",
+        "progression_name": "Intro"
+      },
+      "seeding_key": {
+        "activity_section.key": "da6547ed-29ef-4288-b18b-86a7bad73bb8",
+        "lesson_activity.key": "5471cfa4-2135-4972-aca6-c67c5aed326b"
+      }
+    },
+    {
+      "key": "199f6452-6692-4338-99bb-8f98b14c0f82",
+      "position": 2,
+      "properties": {
+        "name": "Design Your Dancer with AI",
+        "progression_name": "Design"
+      },
+      "seeding_key": {
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82",
+        "lesson_activity.key": "5471cfa4-2135-4972-aca6-c67c5aed326b"
+      }
+    },
+    {
+      "key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b",
+      "position": 3,
+      "properties": {
+        "name": "Mix Your Music with AI",
+        "progression_name": "Mix"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b",
+        "lesson_activity.key": "5471cfa4-2135-4972-aca6-c67c5aed326b"
+      }
+    },
+    {
+      "key": "62c36a4f-8615-4d16-8f93-051d35b5739a",
+      "position": 4,
+      "properties": {
+        "name": "Code Your Dance Moves with AI",
+        "progression_name": "Move"
+      },
+      "seeding_key": {
+        "activity_section.key": "62c36a4f-8615-4d16-8f93-051d35b5739a",
+        "lesson_activity.key": "5471cfa4-2135-4972-aca6-c67c5aed326b"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-video-intro"
+        ],
+        "progression": "Intro"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-video-intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "da6547ed-29ef-4288-b18b-86a7bad73bb8"
+      },
+      "level_keys": [
+        "mix-move-ai-video-intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-dance-background"
+        ],
+        "progression": "Design"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-dance-background"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      },
+      "level_keys": [
+        "mix-move-ai-dance-background"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-dancer-prompt-1-input"
+        ],
+        "progression": "Design"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-dancer-prompt-1-input"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      },
+      "level_keys": [
+        "mix-move-ai-dancer-prompt-1-input"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-dancer-prompt-2-input"
+        ],
+        "progression": "Design"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-dancer-prompt-2-input"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      },
+      "level_keys": [
+        "mix-move-ai-dancer-prompt-2-input"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-panels-image-generation"
+        ],
+        "progression": "Design"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-panels-image-generation"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      },
+      "level_keys": [
+        "mix-move-ai-panels-image-generation"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-dancer-prompt-4-input"
+        ],
+        "progression": "Design"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-dancer-prompt-4-input"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      },
+      "level_keys": [
+        "mix-move-ai-dancer-prompt-4-input"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-dance-move"
+        ],
+        "progression": "Design"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-dance-move"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      },
+      "level_keys": [
+        "mix-move-ai-dance-move"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-panels-mix-intro"
+        ],
+        "progression": "Mix"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-panels-mix-intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      },
+      "level_keys": [
+        "mix-move-ai-panels-mix-intro"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-sequence"
+        ],
+        "progression": "Mix"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-sequence"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      },
+      "level_keys": [
+        "mix-move-ai-sequence"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-play-together"
+        ],
+        "progression": "Mix"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-play-together"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      },
+      "level_keys": [
+        "mix-move-ai-play-together"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-music-prompt-2-input"
+        ],
+        "progression": "Mix"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-music-prompt-2-input"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      },
+      "level_keys": [
+        "mix-move-ai-music-prompt-2-input"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-panels-code-generation"
+        ],
+        "progression": "Mix"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-panels-code-generation"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      },
+      "level_keys": [
+        "mix-move-ai-panels-code-generation"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-music-prompt-3-input"
+        ],
+        "progression": "Mix"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-music-prompt-3-input"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      },
+      "level_keys": [
+        "mix-move-ai-music-prompt-3-input"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "mix-move-ai-dance-freeplay"
+        ],
+        "progression": "Move"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mix-move-ai-dance-freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "62c36a4f-8615-4d16-8f93-051d35b5739a"
+      },
+      "level_keys": [
+        "mix-move-ai-dance-freeplay"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-video-intro",
+        "script_level.level_keys": [
+          "mix-move-ai-video-intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "da6547ed-29ef-4288-b18b-86a7bad73bb8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-dance-background",
+        "script_level.level_keys": [
+          "mix-move-ai-dance-background"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-dancer-prompt-1-input",
+        "script_level.level_keys": [
+          "mix-move-ai-dancer-prompt-1-input"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-dancer-prompt-2-input",
+        "script_level.level_keys": [
+          "mix-move-ai-dancer-prompt-2-input"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-panels-image-generation",
+        "script_level.level_keys": [
+          "mix-move-ai-panels-image-generation"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-dancer-prompt-4-input",
+        "script_level.level_keys": [
+          "mix-move-ai-dancer-prompt-4-input"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-dance-move",
+        "script_level.level_keys": [
+          "mix-move-ai-dance-move"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "199f6452-6692-4338-99bb-8f98b14c0f82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-panels-mix-intro",
+        "script_level.level_keys": [
+          "mix-move-ai-panels-mix-intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-sequence",
+        "script_level.level_keys": [
+          "mix-move-ai-sequence"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-play-together",
+        "script_level.level_keys": [
+          "mix-move-ai-play-together"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-music-prompt-2-input",
+        "script_level.level_keys": [
+          "mix-move-ai-music-prompt-2-input"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-panels-code-generation",
+        "script_level.level_keys": [
+          "mix-move-ai-panels-code-generation"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-music-prompt-3-input",
+        "script_level.level_keys": [
+          "mix-move-ai-music-prompt-3-input"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mix-move-ai-dance-freeplay",
+        "script_level.level_keys": [
+          "mix-move-ai-dance-freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025",
+        "activity_section.key": "62c36a4f-8615-4d16-8f93-051d35b5739a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

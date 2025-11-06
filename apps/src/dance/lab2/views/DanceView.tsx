@@ -1,6 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {BlocklyOptions, Events, WorkspaceSvg} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
 import React, {
@@ -25,7 +25,6 @@ import {
   getToolboxDefinition,
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
-import ModeSwitchBar from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ModeSwitchBar';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
@@ -122,9 +121,19 @@ const DanceView: React.FunctionComponent<{
 
   const {currentSources, updateSources, showStartOverDialog, startOver} =
     useSources<DanceProjectSources>();
-
   const programExecutor = useRef<ProgramExecutor | null>(null);
-  const workspace = useRef<WorkspaceSvg | null>(null);
+  const workspace = useRef<GoogleBlockly.WorkspaceSvg | null>(null);
+
+  const updateBlocklyFlyout = useCallback(
+    (toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo) => {
+      const currentWorkspace = workspace.current;
+      if (currentWorkspace) {
+        currentWorkspace.updateToolbox(toolboxDefinition);
+      }
+    },
+    []
+  );
+
   const musicProjectPlayer = useRef<ProjectPlayer | null>(null);
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
 
@@ -155,15 +164,15 @@ const DanceView: React.FunctionComponent<{
 
     return {
       analysis: [],
-      artist: 'A.I.', // TODO: user's name?
+      artist: '', // Unused
       bpm: musicProjectPlayer.current.getBpm().toString(),
       delay: '0',
       duration: 0, // Unused
       file: '', // Unused
-      title: 'My AI Remix', // TODO: what should this be?
+      title: guideMode === 'instructions' ? 'Starter Beat' : 'My Music Mix',
       peaks: {},
     };
-  }, [currentSongMetadata, loadedMusicProject]);
+  }, [currentSongMetadata, loadedMusicProject, guideMode]);
 
   const WorkspaceAlert = useLevelEditMode<DanceLevelProperties>(
     levelProperties.id,
@@ -243,7 +252,7 @@ const DanceView: React.FunctionComponent<{
       });
     }
 
-    if (!programExecutor.current || !metadataToUse) {
+    if (!programExecutor.current || !metadataToUse || !workspace.current) {
       return;
     }
 
@@ -252,7 +261,7 @@ const DanceView: React.FunctionComponent<{
     dispatch(setRunIsStarting(true));
     programExecutor.current.reset();
     await programExecutor.current.execute(
-      Blockly.getWorkspaceCode(),
+      Blockly.JavaScript.workspaceToCode(workspace.current),
       metadataToUse
     );
     dispatch(setRunIsStarting(false));
@@ -277,8 +286,12 @@ const DanceView: React.FunctionComponent<{
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
     dispatch(setIsRunning(false));
-    programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
     setMusicPlayheadPosition(1);
+    if (workspace.current) {
+      programExecutor.current?.staticPreview(
+        Blockly.JavaScript.workspaceToCode(workspace.current)
+      );
+    }
   }, [programExecutor, dispatch]);
 
   const onPuzzleComplete = useCallback(
@@ -303,7 +316,7 @@ const DanceView: React.FunctionComponent<{
   };
 
   const onBlockSpaceChange = useCallback(
-    (e: Events.Abstract) => {
+    (e: GoogleBlockly.Events.Abstract) => {
       if (
         isToolboxMode &&
         workspace.current &&
@@ -312,16 +325,24 @@ const DanceView: React.FunctionComponent<{
         validateBlockCategories(workspace.current);
       }
 
-      if (e.type !== Events.BLOCK_DRAG && e.type !== Events.BLOCK_CHANGE) {
+      if (
+        e.type !== GoogleBlockly.Events.BLOCK_DRAG &&
+        e.type !== GoogleBlockly.Events.BLOCK_CHANGE
+      ) {
         return;
       }
 
-      if (e.type === Events.BLOCK_DRAG && (e as Events.BlockDrag).isStart) {
+      if (
+        e.type === GoogleBlockly.Events.BLOCK_DRAG &&
+        (e as GoogleBlockly.Events.BlockDrag).isStart
+      ) {
         return;
       }
 
-      if (!isRunning) {
-        programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
+      if (!isRunning && workspace.current) {
+        programExecutor.current?.staticPreview(
+          Blockly.JavaScript.workspaceToCode(workspace.current)
+        );
       }
       saveBlocks();
       dispatch(setHasEdited(true));
@@ -370,16 +391,21 @@ const DanceView: React.FunctionComponent<{
       Categories: [BLOCK_TYPES.category, BLOCK_TYPES.categoryDynamic],
       ...blocksByCategory,
     };
-    const toolbox = isToolboxMode
+    let toolbox = isToolboxMode
       ? getToolboxDefinition(toolboxModeBlocks, 'categoryToolbox')
       : levelProperties.toolboxDefinition;
+
+    // Don't show the toolbox if it's empty
+    if (toolbox?.contents?.length === 0) {
+      toolbox = undefined;
+    }
 
     workspace.current = Blockly.inject(blocklyDiv, {
       toolbox,
       theme: theme === 'Dark' ? cdoDark : cdoTheme,
       readOnly: readonlyWorkspace,
       editBlocks: getAppOptionsEditBlocks(),
-    } as BlocklyOptions);
+    } as GoogleBlockly.BlocklyOptions);
 
     return () => workspace.current?.dispose();
   }, [dispatch, readonlyWorkspace, levelProperties, theme]);
@@ -394,8 +420,18 @@ const DanceView: React.FunctionComponent<{
         workspace.current,
         JSON.stringify(currentSources.source)
       );
+      const toolboxFromStorage = localStorage.getItem(
+        `flyout-${levelProperties.id}`
+      );
+      // GenerateDance levels depend upon a generated toolbox.
+      if (toolboxFromStorage) {
+        try {
+          const toolboxDefinition = JSON.parse(toolboxFromStorage);
+          updateBlocklyFlyout(toolboxDefinition);
+        } catch {}
+      }
     }
-  }, [currentSources.source]);
+  }, [currentSources.source, levelProperties.id, updateBlocklyFlyout]);
 
   useEffect(() => {
     const songKeys = Object.keys(songData);
@@ -510,25 +546,25 @@ const DanceView: React.FunctionComponent<{
 
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
-      <ModeSwitchBar levelId={levelProperties.id} />
       <div className={moduleStyles.mainContent}>
-        {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
-        {!guideMode && (
-          <ResourcePanel
-            isRunning={isRunning}
-            hasRun={hasRun}
-            hasEdited={hasEdited}
-            levelProperties={levelProperties}
-            headerClassName={moduleStyles.panelHeader}
-            className={moduleStyles.instructionsArea}
-            settings={settings}
-          />
+        {!getIsShareView() && !usingMusicProject && (
+          <AgeDialog turnOffFilter={turnOffFilter} />
         )}
+        <ResourcePanel
+          isRunning={isRunning}
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+          levelProperties={levelProperties}
+          headerClassName={moduleStyles.panelHeader}
+          className={!guideMode ? moduleStyles.instructionsArea : ''}
+          settings={settings}
+          sidebarOnly={!!guideMode}
+        />
         <div className={moduleStyles.divider} />
         {!isToolboxMode && (
           <PanelContainer
             id="visualization"
-            headerContent="Dance Party!"
+            headerContent="Dance"
             headerClassName={moduleStyles.panelHeader}
             className={classNames(
               moduleStyles.visualizationArea,
@@ -637,6 +673,7 @@ const DanceView: React.FunctionComponent<{
                 });
               }}
               startOver={startOver}
+              updateBlocklyFlyout={updateBlocklyFlyout}
             />
           )}
       </div>

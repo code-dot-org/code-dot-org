@@ -148,12 +148,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 8px;
+}
+
+.lightText {
+  color: var(--text-neutral-tertiary);
 }
 
 .revealDetailsContainer {
   display: flex;
   flex-direction: row;
   gap: 12px;
+  align-self: center;
 }
 
 .revealInfoBox {
@@ -169,7 +175,6 @@
 .arrowColumn {
   width: 15px !important;
   background-color: transparent !important;
-  padding: 16px 0 !important;
 }
 
 .personaColumnYellow {
@@ -183,32 +188,62 @@
 .personaColumn {
   width: 350px;
   height: 432px;
-  padding: 16px;
+  padding-bottom: 4px;
   display: flex;
   flex-direction: column;
 
   .header {
     margin: 0 0 16px 0;
     width: 350px;
+    text-align: left;
   }
 
   .arrowHeader {
-    height: 44px;
+    height: 76px;
   }
 
   .headerBlack {
     color: var(--text-neutral-primary, #292f36);
   }
 
-  .headerWhite {
-    color: var(--text-neutral-white-fixed, #fff);
+  .superpowersHeader {
+    background-image: url('./images/teacher-superpowers.png');
+    background-position: top;
+    background-size: cover;
+    min-height: 76px;
+    position: relative;
+    margin-bottom: 4px;
+
+    .superpowersHeaderText {
+      position: absolute;
+      bottom: 5px;
+      width: 157px;
+      padding-left: 28px;
+    }
+  }
+
+  .aiCanHelpHeader {
+    background-image: url('./images/ta-can-do.png');
+    background-position: top;
+    background-size: cover;
+    min-height: 76px;
+    position: relative;
+    margin-bottom: 4px;
+
+    .aiCanHelpText {
+      position: absolute;
+      bottom: 5px;
+      width: 174px;
+      padding-left: 114px;
+      color: var(--text-neutral-white-fixed, #fff);
+    }
   }
 
   .informationBox {
     background-color: white;
     align-self: stretch;
     padding: 12px;
-    margin: 4px 0;
+    margin: 4px 8px;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -216,6 +251,7 @@
 
     .boldedInformationBox {
       display: flex;
+      gap: 4px;
       align-items: flex-start;
       flex-direction: column;
     }

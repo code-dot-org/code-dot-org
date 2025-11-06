@@ -1,5 +1,6 @@
+class OpenaiLessonSummaryTimeout < StandardError; end
+
 module AiLessonSummariesHelper
-  # API_KEY = CDO.openai_lesson_summaries_api_key
   API_KEY = CDO.openai_lesson_summaries_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
@@ -7,7 +8,12 @@ module AiLessonSummariesHelper
     system_prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id)
 
     client = Client.new(API_KEY, MODEL)
-    response = client.request_lesson_summary(system_prompt)
+
+    begin
+      response = client.request_lesson_summary(system_prompt)
+    rescue Net::ReadTimeout
+      raise OpenaiLessonSummaryTimeout.new("Timeout waiting for AI client to return lesson summary.")
+    end
 
     response_body = JSON.parse(response.body)
     response_body = response_body['choices'][0]['message']['content'] if response.code == 200

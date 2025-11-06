@@ -35,6 +35,9 @@ const WEBPACK_DEV_SERVER_PORT = 9000;
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
 
+// Read worker count from environment variable, defaulting to 4 for local development
+const APPS_BUILD_WORKERS = parseInt(process.env.APPS_BUILD_WORKERS || '4', 10);
+
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
 const nodeModulesToTranspile = [
   // All of our @cdo- and @dsco_-aliased files should get transpiled as they are our own
@@ -209,6 +212,7 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/pythonlab/locale'),
     localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
     localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
+    localeDoNotImport('@cdo/sketchlab/locale'),
     localeDoNotImport('@cdo/standaloneVideo/locale'),
     localeDoNotImport('@cdo/tutorialExplorer/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
@@ -310,18 +314,34 @@ const WEBPACK_BASE_CONFIG = {
         enforce: 'pre',
         include: [...nodeModulesToTranspile, p('src'), p('test')],
         exclude: [p('src/lodash.js')],
-        loader: 'babel-loader',
-        options: {
-          cacheDirectory: p('build/babel-cache'),
-          compact: false,
-          ...(envConstants.HOT
-            ? {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
-            : {}),
-        },
+        use: [
+          {
+            loader: 'thread-loader',
+            options: {
+              workers: APPS_BUILD_WORKERS,
+            },
+          },
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: p('build/babel-cache'),
+              compact: false,
+              ...(envConstants.HOT
+                ? {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
+                : {}),
+            },
+          },
+        ],
       },
       {
         test: /\.tsx?$/,
         use: [
+          {
+            loader: 'thread-loader',
+            options: {
+              workers: APPS_BUILD_WORKERS,
+            },
+          },
           {
             loader: 'ts-loader',
             options: {
@@ -329,6 +349,7 @@ const WEBPACK_BASE_CONFIG = {
               // Instead we typecheck in parallel using ForkTsCheckerWebpackPlugin
               transpileOnly: true,
               configFile: 'tsconfig.build.json',
+              happyPackMode: true, // Required when using thread-loader
               getCustomTransformers: () => ({
                 before: envConstants.HOT ? [new ReactRefreshTypeScript()] : [],
               }),
@@ -444,7 +465,7 @@ function createWebpackConfig({
       minimize: minify,
       minimizer: [
         new TerserPlugin({
-          parallel: 4,
+          parallel: APPS_BUILD_WORKERS,
           // Excludes these from minification to avoid breaking functionality,
           // but still adds .min to the output filename suffix.
           exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
@@ -592,8 +613,24 @@ function createWebpackConfig({
           },
     },
     mode: minify ? 'production' : 'development',
+    profile: envConstants.PROFILE_APPS_BUILD,
+    infrastructureLogging: {
+      // When profiling, suppress verbose webpack progress logs but keep warnings/errors.
+      // This shows any build steps taking >1s, and keeps the output size reasonable in CI.
+      // To see more details when profiling, set this value to 'info' or 'verbose'.
+      level: envConstants.PROFILE_APPS_BUILD ? 'warn' : 'info',
+    },
     plugins: [
       ...WEBPACK_BASE_CONFIG.plugins,
+      // Add explicit ProgressPlugin for profiling to ensure progress logs appear in CI.
+      // Do not enable outside of CI, since that will generate duplicate progress logs.
+      ...(envConstants.PROFILE_APPS_BUILD && envConstants.CI
+        ? [
+            new webpack.ProgressPlugin({
+              profile: true,
+            }),
+          ]
+        : []),
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
         IN_STORYBOOK: JSON.stringify(false),

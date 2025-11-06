@@ -17,9 +17,11 @@ const PersonalizationResultsColumnAiHelp: React.FC<
 > = ({aiHelpSuggestions}) => {
   return (
     <div className={classnames(style.personaColumn, style.personaColumnBlack)}>
-      <Heading5 className={classnames(style.headerWhite, style.header)}>
-        {i18n.teachingStyleHowAiHelps()}
-      </Heading5>
+      <div className={classnames(style.header, style.aiCanHelpHeader)}>
+        <Heading5 noMargin className={style.aiCanHelpText}>
+          {i18n.teachingStyleHowAiHelps()}
+        </Heading5>
+      </div>
       {aiHelpSuggestions.map((suggestion, index) => (
         <PersonalizationInformationBox key={index} information={suggestion} />
       ))}

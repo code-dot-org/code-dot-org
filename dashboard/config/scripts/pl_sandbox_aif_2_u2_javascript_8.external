@@ -1,0 +1,61 @@
+name 'pl_sandbox_aif_2_U2-javascript-8'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# DOM Update
+
+#### Let's take a look at what the steps to make a DOM update look like in code. 
+
+#### In this example, we will change the text inside the box when the button in clicked.
+ 
+
+<img src="https://images.code.org/2e8aec64b2c5cd684feae4a7345f7c3a-image-1761933082814.png" alt="sample output with button and textbox" width="550px" style="display: block; margin-left: 0; ">
+
+## Getting an Element ID
+
+#### First, look at the HTML file to find the IDs for the elements you want to interact with.
+
+## In this example:
+
+- #### The button has the ID **"actionBtn"**
+
+- #### The div box has the ID **"message"** 
+
+<img src="https://images.code.org/562cd87589bf4b1cbe14870c8c7f91d6-image-1761936915657.png" alt="html code highlighting the element ids" width="550px" style="display: block;margin-left: 0;">
+
+---
+
+#### Switch to the JavaScript file and select the element using its ID.
+
+## Step 1:Select the Element
+
+#### Now that we know the ID for the button, we need to write the code that selects the element.
+
+<img src="https://images.code.org/c8aab1e49dbc7c1a5c8b6bcb642e941e-image-1761937141379.png" alt="javascript code to select element" width="550px" style="display: block; margin-left: 0;">
+
+
+## Step 2: Add Event Listener
+#### Use an event listener to make something happen when the button is clicked.
+
+#### You Connect the code for the event lister to the element using a dot (.)
+
+<img src="https://images.code.org/e33f545c4aa34f6646e374a7734f8cea-image-1761937258302.png" alt="javascript code adding an event listener" width="550px" style="display: block; margin-left: 0;">
+
+## Step 3: Update the Content
+
+#### Inside the curly braces { } of the event listener, write the code that updates the content in the div box.
+
+- #### Select the element you want to change (the div box).
+
+- #### Use .textContent to set a new message.
+
+<img src="https://images.code.org/6661ec61c9e65113f71a5f7681dac0e2-image-1761937395155.png" alt="javascript code adding an event listener" width="550px" style="display: block; margin-left: 0;">
+
+---
+
+## Now it's your turn!
+
+#### Try updating the content in your own example. Remember — if you get stuck, ask the AI helper for a hint.
+ 
+MARKDOWN
