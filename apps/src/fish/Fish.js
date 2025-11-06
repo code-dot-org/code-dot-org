@@ -97,11 +97,8 @@ Fish.prototype.init = function (config) {
       );
     }
 
-    try {
-      this.initMLActivities();
-    } finally {
-      reportActivityEvent();
-    }
+    this.initMLActivities();
+    reportActivityEvent();
   };
 
   // Push initial level properties into the Redux store
