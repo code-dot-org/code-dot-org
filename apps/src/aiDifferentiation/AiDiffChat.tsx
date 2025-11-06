@@ -21,6 +21,8 @@ import HttpClient from '../util/HttpClient';
 import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
 import AiDiffChatFooter from './AiDiffChatFooter';
 import AiDiffChatHeader from './AiDiffChatHeader';
+import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
+import {defaultThreadTitle} from './constants';
 import {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
@@ -35,9 +37,7 @@ import {
   SUGGEST_CURRICULUM_PROMPT,
   GET_STARTED_PROMPT,
   CREATE_SECTION_PROMPT,
-} from './AiDiffPredefinedPrompts';
-import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
-import {defaultThreadTitle} from './constants';
+} from './predefinedPrompts';
 import {ChatItem, ChatPrompt, Context, SuggestPromptsType} from './types';
 
 import style from './ai-differentiation.module.scss';
