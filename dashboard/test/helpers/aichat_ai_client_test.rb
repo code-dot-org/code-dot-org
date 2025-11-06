@@ -28,7 +28,7 @@ class AichatAiClientTest < ActionView::TestCase
     @encrypted_channel_id = 12345
     @user_id = 'test-user'
     @project_id = 'Aichat project'
-    @client_type = 0
+    @client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]
     @response_text = "some response text"
     @specific_error_message = 'some specific error message'
     @ruby_types_error = 'does not match type'

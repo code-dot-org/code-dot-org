@@ -2,7 +2,6 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
 
   Background:
     Given I am on "http://studio.code.org/reset_session"
-    And I use a cookie to mock the DCDO key "hoc_apis_in_dashboard" as "true"
 
   Scenario: Completing Minecraft HoC should go to certificate page and generate a certificate
     Given I am on "http://studio.code.org/courses/mc/units/1/reset"

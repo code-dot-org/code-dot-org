@@ -43,6 +43,10 @@
   justify-content: flex-end;
   margin-top: 10px;
   gap: 10px;
+
+  @container (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 .navigationButton {

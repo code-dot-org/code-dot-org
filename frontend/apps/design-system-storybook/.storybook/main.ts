@@ -17,6 +17,7 @@ const config: StorybookConfig = {
   addons: [
     getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@storybook/addon-themes'),
     getAbsolutePath('storybook-addon-rtl'),
     {
       name: getAbsolutePath('@storybook/addon-styling-webpack'),

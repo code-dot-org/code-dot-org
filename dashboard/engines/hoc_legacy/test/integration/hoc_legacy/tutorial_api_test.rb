@@ -24,9 +24,6 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
   before do
     allow(CDO).to receive(:default_scheme).and_return('https:')
 
-    allow(DCDO).to receive(:get).and_call_original
-    allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', false).and_return(true)
-
     HocLegacy::Tutorials.send(:cache).delete(HocLegacy::Tutorials::CACHE_KEY)
   end
 
@@ -98,48 +95,6 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
           'certificate_sent' => true,
         }
       )
-    end
-  end
-
-  context 'when DCDO hoc_apis_in_dashboard is false' do
-    before do
-      allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', false).and_return(false)
-    end
-
-    it 'has expected basic flow from begin to finish without activity tracking' do
-      VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow_without_activity_tracking') do
-        get "/api/hour/begin/#{tutorial_code}"
-        must_redirect_to 'https://test.code.org/minecraft'
-
-        get "/api/hour/begin_#{tutorial_code}.png"
-        must_respond_with :success
-        _(response.media_type).must_equal 'image/png'
-        _(response.headers["Content-Disposition"]).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
-
-        get "/api/hour/finish_#{tutorial_code}.png"
-        must_respond_with :success
-        _(response.media_type).must_equal 'image/png'
-        _(response.headers["Content-Disposition"]).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
-
-        get "/api/hour/finish/#{tutorial_code}"
-        must_redirect_to "https://test-studio.code.org/congrats?s=#{encoded_tutorial_code}"
-
-        post '/api/hour/certificate', params: {session_s: cookies[HocLegacy::HOC_COOKIE_KEY], name_s: student_name}
-        must_respond_with :success
-        _(json_response).must_equal(
-          {
-            'session'          => nil,
-            'tutorial'         => nil,
-            'company'          => nil,
-            'started'          => false,
-            'pixel_started'    => false,
-            'pixel_finished'   => false,
-            'finished'         => false,
-            'name'             => nil,
-            'certificate_sent' => false,
-          }
-        )
-      end
     end
   end
 end
