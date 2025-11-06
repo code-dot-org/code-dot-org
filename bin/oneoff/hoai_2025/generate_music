@@ -63,6 +63,7 @@ require_relative 'music_validation'
 
 # Parse options
 options = {
+  allow_drums_in_layers: false,
   just_save_prompt: false,
   dry_run: true,
   production: false,
@@ -421,7 +422,7 @@ else
     time = true
 
     adlibs = object[:adlibs]
-    path = File.join(output_path, "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt")
+    path = File.join(output_path, "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ''}-#{object[:variant].to_s.rjust(2, '0')}.txt")
 
     unless File.exist?(path)
       if response.nil?
@@ -432,6 +433,10 @@ else
           sounds = object[:sounds].filter do |sound|
             object[:types].include?(sound['type'])
           end
+          unless options[:allow_drums_in_layers]
+            drum_sounds = sounds.filter {|sound| sound['type'] == 'beat'}
+          end
+          drum_sounds = [] unless object[:types].include?('beat')
         else
           if object[:drum] == 'original'
             drum_sounds = sounds.filter {|sound| sound['type'] == 'beat'}
@@ -444,14 +449,17 @@ else
           sounds = sounds.filter {|sound| sound['type'] != 'beat'}
         end
 
+        extra_prompt_word = sounds.any? ? 'also ' : ''
+        extra_additional_word = sounds.any? ? 'additional ' : ''
+
         prompt = (object[:types] ? PROMPT : PROMPT_MOOD).
           gsub('{sounds}', sounds.any? ? "The valid sounds to use are: #{sounds.map do |sound|
             "\"#{sound['pack'] || object[:pack]}/#{sound['src']}\" (#{sound['length']} measures)"
-          end.join(', ')}. " : ""
+          end.join(', ')}. " : ''
           ).
-          gsub('{drumSounds}', "You can #{sounds.any? ? 'also ' : ''}use any of the following #{sounds.any? ? 'additional ' : ''}drum sounds: #{drum_sounds.map do |sound|
+          gsub('{drumSounds}', drum_sounds.any? ? "You can #{extra_prompt_word}use any of the following #{extra_additional_word}drum sounds: #{drum_sounds.map do |sound|
             "\"#{sound['pack'] || object[:pack]}/#{sound['src']}\" (#{sound['length']} measures)"
-          end.join(', ')}."
+          end.join(', ')}." : ''
           )
         message = MESSAGE.gsub('{range}', "#{object[:length]}-#{object[:length] + 2}").gsub('{mood}', object[:mood] || 'fun')
 

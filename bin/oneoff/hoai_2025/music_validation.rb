@@ -11,7 +11,10 @@ def validate_music(path, options = {})
   # Get possible sounds for the different packs
   sounds = data['packs'].map {|pack| [pack['id'], pack['sounds'].filter {|sound| sound['type'] != 'preview'}.map {|sound| sound['src']}]}.to_h
 
-  drum_packs = data['packs'].filter {|pack| pack['artist'] == 'Code.org' || pack['artist'].nil?}.map {|pack| pack['id']}
+  drum_packs = []
+  if options[:allow_drums_in_layers]
+    drum_packs = data['packs'].filter {|pack| pack['artist'] == 'Code.org' || pack['artist'].nil?}.map {|pack| pack['id']}
+  end
 
   # Get pack name from filename
   name = File.basename(path)

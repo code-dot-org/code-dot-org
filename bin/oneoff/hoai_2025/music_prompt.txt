@@ -16,5 +16,3 @@ Don't include any comments in the generated pseudocode.
 You must use the word "play" before the quoted name of the sound to play. Do not omit the word "play". Follow the example.
 
 {sounds}{drumSounds} (The length of each sound is in parentheses.) You can use any of these sounds in your pseudocode. DO NOT include the sound length in the pseudocode. DO NOT create new sounds using terms from other sounds. DO NOT invent new sounds, just use the ones given exactly as they are shown. Only use the sounds in this list exactly as they are written.
-
-If asked to use genre drums, use more of those instead of the original artist's drums.

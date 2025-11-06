@@ -25,7 +25,7 @@ LAYERS=%w[beats:beat bass:bass leads:lead vocals:vocal]
 MOODS=%w[simple creative wild]
 
 # Drums (limits the drum choices to the given packs where 'original' is the source artist pack)
-DRUMS=%w[original electro groove indie pop hiphop rock]
+DRUMS=%w[original electro groove indie pop hiphop rock acoustic]
 
 # The system prompt
 PROMPT=File.read(File.join(File.dirname(__FILE__), 'music_prompt.txt'))
