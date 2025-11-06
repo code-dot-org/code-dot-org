@@ -22,7 +22,6 @@ import {
 } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import initResponsive from '@cdo/apps/code-studio/responsive';
-import {experimentActionCableLoad} from '@cdo/apps/experimentActionCableLoad/experiment-actioncable-load';
 import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 // disable import/order rule to import consoleShim after setting store.
@@ -142,5 +141,3 @@ initHamburger();
 initSigninState(userType, under13);
 initResponsive();
 injectFontAwesome();
-
-experimentActionCableLoad();

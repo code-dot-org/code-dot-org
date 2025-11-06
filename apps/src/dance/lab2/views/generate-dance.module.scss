@@ -2,9 +2,23 @@
   flex: 1;
 }
 
-.buttonRows {
+.buttonRow {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-top: 10px;
   gap: 10px;
-  flex-direction: column;
+
+  @container (max-width: 500px) {
+    flex-direction: column;
+  }
+}
+
+.markdown {
+  h1, h2, h3, h4 {
+    font-size: 28px;
+  }
+
+  p, li {
+    font-size: 16px;
+  }
 }

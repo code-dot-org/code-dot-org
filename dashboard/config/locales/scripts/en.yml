@@ -9925,6 +9925,8 @@ en:
               name: EscA.I.pe Room
             lesson-14:
               name: Sketch Lab Levels
+            lesson-15:
+              name: AIF Sem 2 - Unit 2 - Lesson 1
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -25940,3 +25942,28 @@ en:
             #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
 
             #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+        mix-move-ai:
+          lessons: {}
+          lesson_groups: {}
+        mix-move-ai-2025:
+          lessons:
+            lesson-1:
+              name: Mix & Move with AI
+          lesson_groups: {}
+          name: mix-move-ai-2025
+          title: Mix & Move with AI
+          description_audience: ''
+          description_short: Bring dance, music, and coding together in this interactive Hour of AI tutorial.
+          description: Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat. Along the way, they learn AI basics like prompting and coding basics like sequencing and parallelism, all while exploring how AI can amplify creativity while keeping them in control. Perfect for sparking curiosity, confidence, and classroom energy!
+          student_description: Ready to mix design, music, and dance together? In Mix & Move with AI, you’ll design your own dancer, mix music from artists like Sabrina Carpenter, Benson Boone, and Shakira, and code a dance performance — all while exploring how AI can help you try out ideas faster while staying in charge. It’s a fun, creative way to explore coding and AI!
+        dan-playground:
+          lessons:
+            lesson-1:
+              name: Video Spike
+          lesson_groups: {}
+          name: dan-playground
+          title: Dan's Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

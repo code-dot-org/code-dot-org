@@ -261,6 +261,19 @@ class BubbleChoice < DSLDefined
     user_levels.max_by(&:best_result)&.level_id
   end
 
+  def project_type
+    if custom_mode == SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+      SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+    else
+      super
+    end
+  end
+
+  def channel_backed?
+    return false if try(:is_project_level)
+    custom_mode == SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+  end
+
   # Returns an array of BubbleChoice parent levels for any given sublevel name.
   # @param [String] level_name. The name of the sublevel.
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.

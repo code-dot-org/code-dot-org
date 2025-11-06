@@ -14,14 +14,6 @@ class LevelPropertiesCache {
   public set(path: string, levelProperties: LevelProperties): void {
     this.cache[path] = levelProperties;
   }
-
-  public getById(id: number): LevelProperties | null {
-    return (
-      Object.values(this.cache).find(
-        levelProperties => levelProperties.id === id
-      ) || null
-    );
-  }
 }
 
 export default new LevelPropertiesCache();

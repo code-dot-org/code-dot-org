@@ -11344,6 +11344,7 @@ __metadata:
     survey-react: "npm:^1.9.28"
     swiper: "npm:^11.0.5"
     terser-webpack-plugin: "npm:^5.3.10"
+    time-grunt: "npm:^2.0.0"
     timers-browserify: "npm:^2.0.12"
     tone: "npm:14.7.77"
     ts-jest: "npm:^29.1.2"
@@ -13483,6 +13484,15 @@ canvg@gabelerner/canvg:
   version: 0.1.4
   resolution: "date-now@npm:0.1.4"
   checksum: 10/7f4762ce64c3535cb004d8f8517dae23b57fed221ffd661ef7db0142dc639a66e95700da10e98b9225d86dd2655d81a3d7bc2186adcb09a6a8e13647265a621d
+  languageName: node
+  linkType: hard
+
+"date-time@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "date-time@npm:1.1.0"
+  dependencies:
+    time-zone: "npm:^0.1.0"
+  checksum: 10/17f3ba3f46203ba73f20f6272edf25884866af200399a0469785715b292b462ab9f78bb52d5515db6e6f50f798b89bdb568613fa9736341665b5c43b795a1aab
   languageName: node
   linkType: hard
 
@@ -16232,7 +16242,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"figures@npm:^1.0.1":
+"figures@npm:^1.0.0, figures@npm:^1.0.1":
   version: 1.7.0
   resolution: "figures@npm:1.7.0"
   dependencies:
@@ -18142,7 +18152,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"hooker@npm:~0.2.3":
+"hooker@npm:^0.2.3, hooker@npm:~0.2.3":
   version: 0.2.3
   resolution: "hooker@npm:0.2.3"
   checksum: 10/ff4867b3665c5629ba480d70a0cfff9e94cf9eceb43a458b5c3978749b4959c7557ef1db9716a5120c07b028a29f83ea301e83df3745406ff95d6ae4a2c248d1
@@ -19158,6 +19168,13 @@ canvg@gabelerner/canvg:
   dependencies:
     call-bind: "npm:^1.0.2"
   checksum: 10/1b8e9e1bf2075e862315ef9d38ce6d39c43ca9d81d46f73b34473506992f4b0fbaadb47ec9b420a5e76afe3f564d9f1f0d9b552ef272cc2395e0f21d743c9c29
+  languageName: node
+  linkType: hard
+
+"is-finite@npm:^1.0.1":
+  version: 1.1.0
+  resolution: "is-finite@npm:1.1.0"
+  checksum: 10/532b97ed3d03e04c6bd203984d9e4ba3c0c390efee492bad5d1d1cd1802a68ab27adbd3ef6382f6312bed6c8bb1bd3e325ea79a8dc8fe080ed7a06f5f97b93e7
   languageName: node
   linkType: hard
 
@@ -23581,6 +23598,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"parse-ms@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "parse-ms@npm:1.0.1"
+  checksum: 10/bbf0feaaead1fd6c2b8f0c0651566449e9f7674c7de46f8be9e07ab1dcbbc20c1a77c9e17f16ffd60bbf82fb9872d7148fdc9a35810736f5b868dbafbf98e6ed
+  languageName: node
+  linkType: hard
+
 "parse-passwd@npm:^1.0.0":
   version: 1.0.0
   resolution: "parse-passwd@npm:1.0.0"
@@ -23994,6 +24018,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"plur@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "plur@npm:1.0.0"
+  checksum: 10/bd8725178b2db5a708293c072631c84a33299dece6e5041835f874064e51c515d201905408c780e48df54d960d32bc0ac2e9e4cfe6d756ec4fff29ba5adfbf6c
+  languageName: node
+  linkType: hard
+
 "pngjs@npm:^4.0.1":
   version: 4.0.1
   resolution: "pngjs@npm:4.0.1"
@@ -24319,6 +24350,17 @@ canvg@gabelerner/canvg:
   version: 1.0.3
   resolution: "pretty-hrtime@npm:1.0.3"
   checksum: 10/0a462e88a0a3fd3320288fd8307f488974326ae8e13eea8c27f590f8ee767ccb59cf35bcae1cadff241cd8b72f3e373fc76ff1be95243649899bf8c816874af9
+  languageName: node
+  linkType: hard
+
+"pretty-ms@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "pretty-ms@npm:2.1.0"
+  dependencies:
+    is-finite: "npm:^1.0.1"
+    parse-ms: "npm:^1.0.0"
+    plur: "npm:^1.0.0"
+  checksum: 10/484d78f28a10c41cabad115dc1a4866567225d448d0945b67615a4338154f82bbe9e7dd745c75698bb765819c7ba2ff06fd2f5de7b2b91fb4b4c12013843620a
   languageName: node
   linkType: hard
 
@@ -29257,6 +29299,28 @@ canvg@gabelerner/canvg:
   version: 1.1.0
   resolution: "thunky@npm:1.1.0"
   checksum: 10/825e3bd07ab3c9fd6f753c457a60957c628cacba5dd0656fd93b037c445e2828b43cf0805a9f2b16b0c5f5a10fd561206271acddb568df4f867f0aea0eb2772f
+  languageName: node
+  linkType: hard
+
+"time-grunt@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "time-grunt@npm:2.0.0"
+  dependencies:
+    chalk: "npm:^1.0.0"
+    date-time: "npm:^1.1.0"
+    figures: "npm:^1.0.0"
+    hooker: "npm:^0.2.3"
+    number-is-nan: "npm:^1.0.0"
+    pretty-ms: "npm:^2.1.0"
+    text-table: "npm:^0.2.0"
+  checksum: 10/30019d8309747e79aa30224744f3d25d78c0918fdca21e95e36d29ebf717241c772d4b134ed42496a3b7fe34ccd6991804a01788aa301f797154be4916f1f009
+  languageName: node
+  linkType: hard
+
+"time-zone@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "time-zone@npm:0.1.0"
+  checksum: 10/6866477c28defd0dd16d4665e4f2bc35c211b9c5a7756fcdb941184577f51a427d9bae13a2cd72dc26531aa7a5086933d6e7f332688b362aa879d2ff3913fcad
   languageName: node
   linkType: hard
 

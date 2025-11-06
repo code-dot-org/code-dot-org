@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-31 01:59:56 UTC",
+    "serialized_at": "2025-10-31 14:48:28 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1104,24 +1104,24 @@
       }
     },
     {
-      "key": "efa45325-c8a9-40a8-a8ac-38f897672981",
-      "position": 2,
-      "properties": {
-        "progression_name": "Code a Toggle with NOT"
-      },
-      "seeding_key": {
-        "activity_section.key": "efa45325-c8a9-40a8-a8ac-38f897672981",
-        "lesson_activity.key": "011b829c-5783-444d-8a60-14be62c2036b"
-      }
-    },
-    {
       "key": "afa7aa20-bcf4-441d-9e00-d23c6a698699",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Vocab: NOT (!)"
       },
       "seeding_key": {
         "activity_section.key": "afa7aa20-bcf4-441d-9e00-d23c6a698699",
+        "lesson_activity.key": "011b829c-5783-444d-8a60-14be62c2036b"
+      }
+    },
+    {
+      "key": "efa45325-c8a9-40a8-a8ac-38f897672981",
+      "position": 3,
+      "properties": {
+        "progression_name": "Code a Toggle with NOT"
+      },
+      "seeding_key": {
+        "activity_section.key": "efa45325-c8a9-40a8-a8ac-38f897672981",
         "lesson_activity.key": "011b829c-5783-444d-8a60-14be62c2036b"
       }
     },
@@ -1133,6 +1133,17 @@
       },
       "seeding_key": {
         "activity_section.key": "c31a57b8-89ac-4477-a9f5-b85c8392f69a",
+        "lesson_activity.key": "011b829c-5783-444d-8a60-14be62c2036b"
+      }
+    },
+    {
+      "key": "6fa8d13b-1f76-4bf6-971f-3c1ca289c4d6",
+      "position": 5,
+      "properties": {
+        "progression_name": "Fairness and Inclusivity"
+      },
+      "seeding_key": {
+        "activity_section.key": "6fa8d13b-1f76-4bf6-971f-3c1ca289c4d6",
         "lesson_activity.key": "011b829c-5783-444d-8a60-14be62c2036b"
       }
     },
@@ -2385,6 +2396,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level3-test-2025"
+        ],
         "progression": "Exploring Functions with Parameters"
       },
       "bonus": false,
@@ -2407,6 +2421,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level2-test-2025"
+        ],
         "progression": "Exploring Functions with Parameters"
       },
       "bonus": false,
@@ -2454,6 +2471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level5-frq-test-2025"
+        ],
         "progression": "Reflection on AI Use"
       },
       "bonus": false,
@@ -3102,31 +3122,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
-        ],
-        "progression": "Code a Toggle with NOT"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit2",
-        "activity_section.key": "efa45325-c8a9-40a8-a8ac-38f897672981"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
-      ]
-    },
-    {
-      "chapter": 78,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "ai-and-algorithmic-decisions-lesson10-panel-NOT-test-2025"
         ],
         "progression": "Vocab: NOT (!)"
@@ -3146,8 +3141,8 @@
       ]
     },
     {
-      "chapter": 79,
-      "position": 4,
+      "chapter": 78,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3168,6 +3163,31 @@
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson10-vocab-NOT-test-2025"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
+        ],
+        "progression": "Code a Toggle with NOT"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "efa45325-c8a9-40a8-a8ac-38f897672981"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
       ]
     },
     {
@@ -3201,6 +3221,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Fairness and Inclusivity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level6-frq-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "6fa8d13b-1f76-4bf6-971f-3c1ca289c4d6"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson10-level6-frq-test-2025"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "ai-and-algorithmic-decisions-lesson10-pilot-survey_2025"
         ],
@@ -3221,7 +3263,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3246,7 +3288,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3271,7 +3313,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3296,7 +3338,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3321,7 +3363,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4261,18 +4303,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson10-level2-test-2025",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit2",
-        "activity_section.key": "efa45325-c8a9-40a8-a8ac-38f897672981"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-and-algorithmic-decisions-lesson10-panel-NOT-test-2025",
         "script_level.level_keys": [
           "ai-and-algorithmic-decisions-lesson10-panel-NOT-test-2025"
@@ -4297,6 +4327,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson10-level2-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level2-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "efa45325-c8a9-40a8-a8ac-38f897672981"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-and-algorithmic-decisions-lesson10-complex-rules-test-2025",
         "script_level.level_keys": [
           "ai-and-algorithmic-decisions-lesson10-complex-rules-test-2025"
@@ -4305,6 +4347,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit2",
         "activity_section.key": "c31a57b8-89ac-4477-a9f5-b85c8392f69a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson10-level6-frq-test-2025",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson10-level6-frq-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit2",
+        "activity_section.key": "6fa8d13b-1f76-4bf6-971f-3c1ca289c4d6"
       }
     },
     {

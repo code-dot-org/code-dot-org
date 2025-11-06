@@ -84,10 +84,4 @@ class OptimizeTest < Minitest::Test
     refute_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
     DCDO.set('image_optim_pixel_max', nil)
   end
-
-  def test_uncacheable
-    path = '/api/hour/begin_mc.png'
-    get path
-    refute_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
-  end
 end

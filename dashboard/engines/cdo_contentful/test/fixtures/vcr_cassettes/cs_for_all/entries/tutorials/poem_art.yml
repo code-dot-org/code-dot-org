@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://preview.contentful.com/spaces/27jkibac934d/environments/master/entries?content_type=curriculum&fields.tutorialID=poem_art&limit=1&locale=en-US&skip=0
+    uri: https://preview.contentful.com/spaces/27jkibac934d/environments/master/entries?content_type=curriculum&fields.tutorialID=poem_art&limit=1&locale=en-US&order&skip=0
     body:
       encoding: UTF-8
       string: ''

@@ -189,6 +189,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   shortcutBackups: {
     [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
   };
+  extraScrollHeight?: number;
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;
