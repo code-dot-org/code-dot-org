@@ -218,13 +218,19 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
 
   return (
     <Guide id="generate-panel" modal={modal} position="bottom">
-      {['none', 'generating'].includes(aiGenerateState) &&
-        levelProperties.longInstructions && (
-          <MainInstructionsContent
-            instructionsText={levelProperties.longInstructions}
-            markdownClassName={styles.markdown}
-          />
-        )}
+      {aiGenerateState === 'none' && levelProperties.longInstructions && (
+        <MainInstructionsContent
+          instructionsText={levelProperties.longInstructions}
+          markdownClassName={styles.markdown}
+        />
+      )}
+
+      {aiGenerateState === 'generating' && (
+        <div>
+          <Heading3>Generating...</Heading3>
+          AI is generating code based on your prompt.
+        </div>
+      )}
 
       {['none', 'generating', 'generated'].includes(aiGenerateState) && (
         <>
@@ -279,6 +285,21 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               startOver();
               setAiGenerateState('none');
               resetProgram();
+            }}
+            className={styles.buttonWide}
+          />
+
+          <Button
+            ariaLabel={'Regenerate'}
+            text={'Regenerate'}
+            type="secondary"
+            color="black"
+            size="s"
+            iconLeft={{iconName: 'sparkles'}}
+            onClick={() => {
+              startOver();
+              resetProgram();
+              generateDance();
             }}
             className={styles.buttonWide}
           />
