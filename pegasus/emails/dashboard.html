@@ -16,5 +16,3 @@ cc: <%= local_assigns.fetch(:cc, nil)&.inspect&.html_safe%>
 bcc: <%= local_assigns.fetch(:bcc, nil)&.inspect&.html_safe %>
 ---
 <%= local_assigns.fetch(:body, "").html_safe %>
-
-<img src="<%= local_assigns.fetch(:tracking_pixel, "") %>"/>

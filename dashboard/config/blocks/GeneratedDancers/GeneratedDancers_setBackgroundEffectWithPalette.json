@@ -18,20 +18,8 @@
             "\"rand\""
           ],
           [
-            "Circles",
-            "\"circles\""
-          ],
-          [
             "Angles",
             "\"quads\""
-          ],
-          [
-            "Colors",
-            "\"color_cycle\""
-          ],
-          [
-            "Diamonds",
-            "\"diamonds\""
           ],
           [
             "Disco Ball",
@@ -40,10 +28,6 @@
           [
             "Fireworks",
             "\"fireworks\""
-          ],
-          [
-            "Flowers",
-            "\"flowers\""
           ],
           [
             "Growing Stars",
@@ -70,18 +54,6 @@
             "\"splatter\""
           ],
           [
-            "Rainbow",
-            "\"rainbow\""
-          ],
-          [
-            "Random Ripples",
-            "\"ripples_random\""
-          ],
-          [
-            "Ripples",
-            "\"ripples\""
-          ],
-          [
             "Snow",
             "\"snowflakes\""
           ],
@@ -102,16 +74,8 @@
             "\"spiral\""
           ],
           [
-            "Squares",
-            "\"disco\""
-          ],
-          [
             "Stars",
             "\"stars\""
-          ],
-          [
-            "Waves",
-            "\"music_wave\""
           ]
         ]
       },
