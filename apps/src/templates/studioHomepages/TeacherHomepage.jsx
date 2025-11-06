@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import DCDO from '@cdo/apps/dcdo';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import NewString from '@cdo/apps/NewString';
 import Notification from '@cdo/apps/sharedComponents/Notification';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
@@ -201,6 +202,7 @@ export const UnconnectedTeacherHomepage = ({
           )}
         <ProtectedStatefulDiv ref={flashes} />
         <ProtectedStatefulDiv ref={teacherReminders} />
+        <NewString />
         {showNpsSurvey && <NpsSurveyBlock />}
         {specialAnnouncement && (
           <GlobalEditionWrapper
