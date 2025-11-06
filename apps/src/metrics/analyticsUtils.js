@@ -26,3 +26,16 @@ export const reportTeacherReviewingStudentNonLabLevel = (
     );
   }
 };
+
+// Error instances in javascript have non-enumerable properties so JSON.stringify won't include them.
+// Convert Errors to objects with enumerable properties for serialization.
+export function repackageError(error) {
+  if (error instanceof Error) {
+    return {
+      message: error.message,
+      name: error.name,
+      stack: error.stack,
+    };
+  }
+  return error;
+}

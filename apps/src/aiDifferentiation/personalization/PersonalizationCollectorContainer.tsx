@@ -5,6 +5,7 @@ import PersonalizationInterstitial from '@cdo/apps/aiDifferentiation/personaliza
 import {matchTeachingProfile} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import i18n from '@cdo/locale';
 
+import {useTeachingProfileData} from './../hooks/useTeachingProfileData';
 import {
   NumberOfYearsTeachingAnswer,
   ClassroomVisionAnswer,
@@ -22,28 +23,12 @@ import {saveTeachingProfileData} from './teachingProfileApi';
 
 import style from './personalization-information.module.scss';
 
-interface PersonalizationData {
-  selectedGoals: string[];
-  selectedSupports: string[];
-  otherSupportText: string;
-  otherGoalText: string;
-  selectedConfidence: number;
-  yearsTeaching: number;
-  dateYearsTeachingSet: Date | null;
-  classroomVision: string;
-  challenge: string;
-}
-
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
   const [isSaving, setIsSaving] = React.useState(false);
   const [showInterstitialState, setShowInterstitialState] =
     React.useState(false);
   const [showResults, setShowResults] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [personalizationData, setPersonalizationData] = React.useState<
-    Partial<PersonalizationData>
-  >({});
   const [matchedTeachingProfile, setMatchedTeachingProfile] = React.useState(
     TEACHING_STYLES[0].name
   );
@@ -51,40 +36,8 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const NEXT = 1;
   const BACK = -1;
 
-  React.useEffect(() => {
-    const loadExistingData = async () => {
-      try {
-        const response = await fetch('/teaching_profile_data', {
-          method: 'GET',
-          headers: {
-            'X-CSRF-Token':
-              document
-                .querySelector('meta[name="csrf-token"]')
-                ?.getAttribute('content') || '',
-          },
-        });
-
-        if (response.ok) {
-          const result = await response.json();
-          if (result.exists && result.data) {
-            const existingData = {...result.data};
-            if (existingData.dateYearsTeachingSet) {
-              existingData.dateYearsTeachingSet = new Date(
-                existingData.dateYearsTeachingSet
-              );
-            }
-            setPersonalizationData(existingData);
-          }
-        }
-      } catch (error) {
-        console.error('Failed to load existing teaching profile data:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadExistingData();
-  }, []);
+  const {personalizationData, setPersonalizationData, isLoading} =
+    useTeachingProfileData();
 
   const onCarouselPress = async (direction: number) => {
     if (direction === NEXT) {
@@ -241,7 +194,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
       default:
         return <div>Error: question not found</div>;
     }
-  }, [questionsNumber, personalizationData]);
+  }, [questionsNumber, setPersonalizationData, personalizationData]);
 
   const findTeachingStyle = (styleName: string) => {
     return TEACHING_STYLES.find(style => style.name === styleName);

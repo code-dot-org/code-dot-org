@@ -1,0 +1,17 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-11-05T16:49:17.000Z",
+  "level_num": "custom",
+  "user_id": 887,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "hoc-dance-ai-warmup",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-05T16:49:17.757+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-video-intro\\\"\"],\"cloned_from\":\"mix-move-ai-video-intro\"}]"
+}]]></config>
+</StandaloneVideo>

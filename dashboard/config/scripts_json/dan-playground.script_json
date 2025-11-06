@@ -1,0 +1,336 @@
+{
+  "script": {
+    "name": "dan-playground",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-11-05 16:15:48 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "dan-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "dan-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Video Spike",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "89feddef-8bae-4937-9d29-742f4bd450d9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89feddef-8bae-4937-9d29-742f4bd450d9",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9d7d0f1b-7e97-4c09-a27d-10d57324acbf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d7d0f1b-7e97-4c09-a27d-10d57324acbf",
+        "lesson_activity.key": "89feddef-8bae-4937-9d29-742f4bd450d9"
+      }
+    },
+    {
+      "key": "71e45d0a-eeb8-4bcb-b3c6-294aa89f0c0b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "71e45d0a-eeb8-4bcb-b3c6-294aa89f0c0b",
+        "lesson_activity.key": "89feddef-8bae-4937-9d29-742f4bd450d9"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dan-video-variables-example-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "9d7d0f1b-7e97-4c09-a27d-10d57324acbf"
+      },
+      "level_keys": [
+        "dan-video-variables-example-1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dan-video-variables-example-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "9d7d0f1b-7e97-4c09-a27d-10d57324acbf"
+      },
+      "level_keys": [
+        "dan-video-variables-example-2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dan-video-variables-example-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "9d7d0f1b-7e97-4c09-a27d-10d57324acbf"
+      },
+      "level_keys": [
+        "dan-video-variables-example-3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dan-video-functions-example-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "71e45d0a-eeb8-4bcb-b3c6-294aa89f0c0b"
+      },
+      "level_keys": [
+        "dan-video-functions-example-1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dan-video-functions-example-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "71e45d0a-eeb8-4bcb-b3c6-294aa89f0c0b"
+      },
+      "level_keys": [
+        "dan-video-functions-example-2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dan-video-functions-example-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "71e45d0a-eeb8-4bcb-b3c6-294aa89f0c0b"
+      },
+      "level_keys": [
+        "dan-video-functions-example-3"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "dan-video-variables-example-1",
+        "script_level.level_keys": [
+          "dan-video-variables-example-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "9d7d0f1b-7e97-4c09-a27d-10d57324acbf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dan-video-variables-example-2",
+        "script_level.level_keys": [
+          "dan-video-variables-example-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "9d7d0f1b-7e97-4c09-a27d-10d57324acbf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dan-video-variables-example-3",
+        "script_level.level_keys": [
+          "dan-video-variables-example-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "9d7d0f1b-7e97-4c09-a27d-10d57324acbf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dan-video-functions-example-1",
+        "script_level.level_keys": [
+          "dan-video-functions-example-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "71e45d0a-eeb8-4bcb-b3c6-294aa89f0c0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dan-video-functions-example-2",
+        "script_level.level_keys": [
+          "dan-video-functions-example-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "71e45d0a-eeb8-4bcb-b3c6-294aa89f0c0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dan-video-functions-example-3",
+        "script_level.level_keys": [
+          "dan-video-functions-example-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dan-playground",
+        "activity_section.key": "71e45d0a-eeb8-4bcb-b3c6-294aa89f0c0b"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

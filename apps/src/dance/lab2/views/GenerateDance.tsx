@@ -318,8 +318,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           <div>
             <Heading3>Modify the code</Heading3>
             {isStandalone
-              ? 'Amazing moves! Keep editing, or update your dancer design or music mix above.'
-              : "Amazing moves! Keep editing, or update your dancer design or music mix above. Click Finish when you're done."}
+              ? 'Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix.'
+              : "Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix. Click Finish when you're done."}
           </div>
           <div className={styles.buttonRow}>
             <Button
