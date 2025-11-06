@@ -6,12 +6,12 @@ import {NewString} from '@cdo/apps/NewString';
 import i18n from '@cdo/locale';
 
 describe('newString test', function () {
-  it('returns "New String"', function () {
-    expect(i18n.newString()).toBe('New String');
+  it('returns "New String for Dave"', function () {
+    expect(i18n.newStringForDave()).toBe('New String for Dave');
   });
 
-  it('renders the component with "New String"', function () {
+  it('renders the component with "New String for Dave"', function () {
     render(<NewString />);
-    expect(screen.getByText('New String')).toBeInTheDocument();
+    expect(screen.getByText('New String for Dave')).toBeInTheDocument();
   });
 });
