@@ -53,11 +53,9 @@ end
 def storage_decrypt_channel_id(encrypted)
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
   if uuid?(encrypted)
-    project = Project.find_by(uuid: encrypted)
+    project = Projects.table.where(uuid: encrypted).first
     raise ArgumentError, "No project found with uuid #{encrypted}" unless project
-    storage_id = project.storage_id
-    project_id = project.id
-    return [storage_id, project_id]
+    [project[:storage_id], project[:id]]
   else
     # pad to a multiple of 4 characters to make a valid base64 string.
     encrypted += '=' * ((4 - (encrypted.length % 4)) % 4)
@@ -100,11 +98,11 @@ def storage_encrypt_channel_id(storage_id, project_id)
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   project_id = project_id.to_i
   raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
-  project = Project.find(project_id)
+  project = Projects.table.where(id: project_id).first
   raise ArgumentError, "No project found with id #{project_id}" unless project
 
   # return uuid if it exists
-  return project.uuid if project.uuid
+  return project[:uuid] if project[:uuid]
 
   # otherwise, continue to use the old encryption method
   Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{project_id}")).tr('=', '')
