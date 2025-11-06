@@ -1,4 +1,9 @@
 Rake::Task['db:test:prepare'].enhance do
+  puts "pegasus_hostname: #{CDO.pegasus_hostname}"
+  if CDO.test_system? && !ENV.fetch('TEST_ENV_NUMBER', nil)
+    raise 'Do not run db:test:prepare against dashboard_test DB on the chef-managed test system. ' \
+      'Instead, specify TEST_ENV_NUMBER=1 to run against the dashboard_test1 database.'
+  end
   ActiveRecord::Base.establish_connection(:test)
   Rake::Task['db:fixtures:load'].invoke
   require 'cdo/db_utils'
