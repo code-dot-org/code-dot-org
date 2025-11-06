@@ -25,4 +25,4 @@ echo "  Max Memory: ${APPS_BUILD_MAX_MEMORY}MB"
 echo
 
 # Set Node.js memory and run the build
-NODE_OPTIONS="--max-old-space-size=${APPS_BUILD_MAX_MEMORY}" npx grunt build
+NODE_OPTIONS="--max-old-space-size=${APPS_BUILD_MAX_MEMORY}" npx grunt clean build
