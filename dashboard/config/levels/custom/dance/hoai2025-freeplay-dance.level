@@ -14,7 +14,7 @@
     "helper_libraries": [
       "DanceLab"
     ],
-        "toolbox_definition": {
+    "toolbox_definition": {
       "contents": [
         {
           "kind": "block",
