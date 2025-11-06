@@ -146,7 +146,7 @@ export default function CertificateBatch({
 
       <div className={style.continueBeyond}>
         <Heading3 className={style.textCenter}>
-          {i18n.continueBeyondHourOfCode()}
+          {i18n.continueBeyondHourOfAI()}
         </Heading3>
         <div
           className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol}`}
