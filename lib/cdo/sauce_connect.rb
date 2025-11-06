@@ -42,6 +42,7 @@ module Cdo
 
         # Explicitly pass the HTTP idle connection timeout if set via environment variable.
         # This controls how long idle HTTP connections stay open before timing out.
+        puts "ENV['SAUCE_HTTP_IDLE_CONN_TIMEOUT']: #{ENV['SAUCE_HTTP_IDLE_CONN_TIMEOUT'].inspect}"
         if ENV['SAUCE_HTTP_IDLE_CONN_TIMEOUT']
           cmd += ["--http-idle-conn-timeout", ENV['SAUCE_HTTP_IDLE_CONN_TIMEOUT']]
         end
