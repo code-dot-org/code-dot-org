@@ -8,8 +8,8 @@ on:
       - staging
       - staging-next
     paths:
-      - 'frontend/**'
-      - '.github/**'
+      - "frontend/**"
+      - ".github/**"
 
 env:
   APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -35,15 +35,7 @@ jobs:
               - 'frontend/packages/component-library-styles/**'
               - 'frontend/packages/fonts/**'
               - 'frontend/*'
-
-  # Start the marketing app CI workflow
-  marketing:
-    needs: setup
-    uses: ./.github/workflows/marketing-app-ci.yml
-    with:
-      BRANCHED_TESTING_ENABLED: ${{ contains( github.event.pull_request.labels.*.name, 'All The Things') }}
-      PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
-    secrets: inherit
+              - '.github/**'
 
   # Start the component library CI workflow
   component-library:
@@ -55,7 +47,7 @@ jobs:
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
-    needs: [setup, marketing, component-library]
+    needs: [setup, component-library]
     if: always()
     runs-on: ubuntu-24.04
     steps:
