@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2025-10-01T21:15:27.000Z",
   "level_num": "custom",
@@ -32,14 +33,17 @@
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
     "generate_dancer_mode": "true",
-    "ai_dancer_generate_adlib": "adjective-animal-attire",
+    "ai_dancer_generate_adlib": "adjective-animal-attire-02",
     "bubble_choice_description": "With the help of generative AI, create your custom dancer!",
     "thumbnail_url": "/blockly/media/dance/placeholder.png",
     "display_name": "Create a dancer!",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "guide_mode": "aiDancerGenerate"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-01T21:15:27.345+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dancer-adlib3\\\"\"],\"cloned_from\":\"hoai2025-dancer-adlib3\"},{\"changed_at\":\"2025-10-01 21:15:39 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-02 20:26:10 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-03 19:09:42 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-10-01T21:15:27.345+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dancer-adlib3\\\"\"],\"cloned_from\":\"hoai2025-dancer-adlib3\"},{\"changed_at\":\"2025-10-01 21:15:39 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-02 20:26:10 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-03 19:09:42 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-23 18:44:10 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-23 18:44:40 +0000\",\"changed\":[\"ai_dancer_generate_adlib\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,11 +1,7 @@
-import Button from '@code-dot-org/component-library/button';
-import {
-  TooltipProps,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {setShowFileBrowser} from '../redux/workspaceRedux';
@@ -26,31 +22,27 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
     [showFileBrowser, dispatch]
   );
 
-  const tooltipProps: TooltipProps = {
-    text: codebridgeI18n.toggleFileBrowser(),
-    direction: 'onRight',
-    tooltipId: 'toggle-file-browser-tooltip',
-    size: 'xs',
-  };
+  const tooltipText = showFileBrowser
+    ? codebridgeI18n.closeFileManager()
+    : codebridgeI18n.openFileManager();
 
   return (
-    <span>
-      <WithTooltip tooltipProps={tooltipProps}>
-        <Button
-          icon={{
-            iconStyle: showFileBrowser ? 'solid' : 'regular',
-            iconName: 'folder',
-          }}
-          isIconOnly
-          onClick={onClick}
-          ariaLabel={codebridgeI18n.toggleFileBrowser()}
-          size={'xs'}
-          type={'tertiary'}
-          aria-expanded={showFileBrowser}
-          color={'black'}
-        />
-      </WithTooltip>
-    </span>
+    <IconButtonWithTooltip
+      id="toggle-file-manager"
+      label={tooltipText}
+      icon={{
+        iconName: showFileBrowser ? 'arrow-left-to-line' : 'folder',
+        iconStyle: 'solid',
+      }}
+      type={showFileBrowser ? 'tertiary' : 'secondary'}
+      color="gray"
+      buttonSize="xs"
+      tooltipSize="xs"
+      tooltipDirection="onBottom"
+      hideTooltipTail={false}
+      onClick={onClick}
+      aria-expanded={showFileBrowser}
+    />
   );
 };
 

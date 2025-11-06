@@ -43,6 +43,10 @@
   justify-content: flex-end;
   margin-top: 10px;
   gap: 10px;
+
+  @container (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 .navigationButton {
@@ -58,6 +62,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  border-left: 1px solid var(--borders-neutral-primary);
 
   img {
     width: 100%;
@@ -74,4 +79,14 @@
   justify-content: center;
   pointer-events: none;
   z-index: 1;
+}
+
+.markdown {
+  h1, h2, h3, h4 {
+    font-size: 28px;
+  }
+
+  p, li {
+    font-size: 16px;
+  }
 }

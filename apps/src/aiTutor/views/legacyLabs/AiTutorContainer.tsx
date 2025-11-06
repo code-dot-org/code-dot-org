@@ -102,7 +102,7 @@ export const AiTutorContainer: FC<{
           <Button
             aria-label="Close AI tutor"
             isIconOnly
-            icon={{iconName: 'close'}}
+            icon={{iconName: 'dash'}}
             onClick={toggleAiChat}
             size="xs"
             type="tertiary"
@@ -115,14 +115,18 @@ export const AiTutorContainer: FC<{
           channelId={lab?.channel}
         />
       </div>
-      {!aiChatOpen && (
+      <div
+        className={classNames({
+          [styles.displayNone]: aiChatOpen,
+        })}
+      >
         <AiTutorSidebar
           toggleAiChat={toggleAiChat}
           suggestedPrompts={allPrompts}
           hiddenContextCallback={getHiddenContext}
           analyticsData={analyticsData}
         />
-      )}
+      </div>
     </>
   );
 };

@@ -39,9 +39,10 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "guide_mode": "aiCodeGenerate"
   },
-  "audit_log": "[{\"changed_at\":\"2025-09-18T17:57:09.492+00:00\",\"changed\":[\"cloned from \\\"New Dance AI Project\\\"\"],\"cloned_from\":\"New Dance AI Project\"},{\"changed_at\":\"2025-09-18 17:57:41 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-09-18T17:57:09.492+00:00\",\"changed\":[\"cloned from \\\"New Dance AI Project\\\"\"],\"cloned_from\":\"New Dance AI Project\"},{\"changed_at\":\"2025-09-18 17:57:41 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-23 18:45:33 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
