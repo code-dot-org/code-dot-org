@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-09-25T19:52:40.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Video Game Developer - Providing a Single Example\r\n\r\nPractice prompting through the career of a video game developer by adding a single example to help guide the AI's dialogue.\r\n\r\n### Do This:\r\n\r\n1. Prompt AI to generate a conversation by including **a brief example** of a hero-sidekick exchange.\r\n2. Press **Send**.\r\n3. Read the response you get, noticing how the AI uses the example to shape tone, style, or plot.\r\n\r\n::: details [**Not sure where to start?**]\r\nHere's an example prompt:\r\n> Write a very short dialogue between a superhero and their sidekick where the sidekick is lovable but foolish. For example:\r\n>\r\n> Hero: \"I told you to stay in the jet!\"\r\n>\r\n> Sidekick: \"And miss this explosion? Never.\"\r\n:::",
+    "long_instructions": "## Video Game Developer - Providing a Single Example\r\n\r\nPractice prompting through the career of a video game developer by adding a single example to help guide the AI's dialogue.\r\n\r\n### Do This:\r\n\r\n1. With your partner, decide on **a brief example** of a hero-sidekick exchange to include in your prompt.\r\n2. Prompt AI to generate a conversation by including your example.\r\n2. Press **Send**.\r\n3. Read the response you get, noticing how the AI uses the example to shape tone, style, or plot.\r\n\r\n::: details [**Not sure where to start?**]\r\nHere's an example prompt:\r\n> Write a very short dialogue between a superhero and their sidekick where the sidekick is lovable but foolish. For example:\r\n>\r\n> Hero: \"I told you to stay in the jet!\"\r\n>\r\n> Sidekick: \"And miss this explosion? Never.\"\r\n:::",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -48,7 +49,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:40.885+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level2b_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level2b_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:40.885+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level2b_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level2b_2025\"},{\"changed_at\":\"2025-11-05 18:39:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

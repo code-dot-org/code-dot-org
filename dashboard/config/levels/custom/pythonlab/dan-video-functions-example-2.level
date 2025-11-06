@@ -1,13 +1,12 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-11-03T23:45:41.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Do This:\r\n\r\nYou're designing a simple program to simulate a productive study session. The code includes repeated reminders to take breaks and check your to-do list, but it's messy and hard to maintain. Clean things up by writing two functions that organize these tasks.\r\n\r\n1. Look closely at the code. There are **two different blocks** of repeated code:\r\n\r\n   * One reminds you to take a break.\r\n   \r\n   * One tells you to check your to-do list.\r\n\r\n2. Define a function called `take_break()` for the break reminders.\r\n\r\n3. Define a second function called `check_todo()` for the to-do list reminders.\r\n\r\n4. Replace the repeated blocks by calling your new functions in the correct places.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEach function should include the lines that belong together. Pay close attention to indentation, and use the UMPIRE strategy:\r\n\r\n* **U**nderstand: What's repeated and why?\r\n\r\n* **M**ake a plan: Which messages go in which function?\r\n\r\n* **P**roduce: Write and call both functions.\r\n\r\n* **I**nspect: Does it run as expected?\r\n\r\n* **E**xplain: How did using functions improve the code?",
+    "long_instructions": "## Do This:\r\n\r\nYou are programming the diagnostic system for a **space lander**. Before descent, the system must print a two-line confirmation message multiple times. The current code is messy and repeats the block three times. Clean up the code by putting the two-line message into a single function.\r\n\r\n* Read the block of repeated code that shows the lander status.\r\n\r\n* Create a function called **`lander_status_check()`** that prints both lines of the status message.\r\n\r\n* Replace the repeated blocks by calling your new function.\r\n\r\n---",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -25,7 +24,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "# TODO - Write the take_break() function for the break reminders\n\n\n\n# TODO - Write the check_todo() function for the to-do list reminders\n\n\n\n# TODO - Replace the repeated blocks by calling your new functions\nprint(\"🧠 Don't forget to take a short break.\")\nprint(\"⏱️ Stretch, get water, and rest your eyes.\")\n\nprint(\"📋 What's next on your to-do list?\")\nprint(\"✅ Pick one task and get started.\")\n\nprint(\"🧠 Don't forget to take a short break.\")\nprint(\"⏱️ Stretch, get water, and rest your eyes.\")\n\nprint(\"📋 What's next on your to-do list?\")\nprint(\"✅ Pick one task and get started.\")\n",
+          "contents": "# TODO - Write the lander_status_check() function\n\n\n# TODO - Replace the repeated blocks by calling your new function\nprint(\"Running diagnostic sequence 1 of 3...\")\n\n# first diagnostic update\nprint(\"DIAGNOSTIC: All systems nominal.\")\nprint(\"FUEL: 97.5 Liters remaining.\")\nprint(\"---------------------------------------\")\n\n# The lander performs a small adjustment\nprint(\"System Check complete at 09:00\")\n\n# second diagnostic update\nprint(\"DIAGNOSTIC: All systems nominal.\")\nprint(\"FUEL: 97.5 Liters remaining.\")\nprint(\"---------------------------------------\")\n\n# altitude check\nprint(\"Current Altitude: 12000m\")\nprint(\"Awaiting final descent command.\")\n\n# third diagnostic update\nprint(\"DIAGNOSTIC: All systems nominal.\")\nprint(\"FUEL: 97.5 Liters remaining.\")\nprint(\"---------------------------------------\")\n\nprint(\"Pre-flight checklist complete.\")",
           "folderId": "0",
           "active": false,
           "open": true,
@@ -54,6 +53,7 @@
     "widget_view": "false",
     "widget_view_allow_show_code": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-03T23:45:41.400+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level8d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level8d_2025-launch_2025\"},{\"changed_at\":\"2025-11-03 23:45:44 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-03T23:45:41.400+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level8d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level8d_2025-launch_2025\"},{\"changed_at\":\"2025-11-03 23:45:44 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-11-05 22:35:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-11-05 22:39:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-09-25T19:52:41.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Video Game Developer - Providing Multiple Examples\r\n\r\nPractice prompting through the career of a video game developer by guiding the AI with clear structure and multiple expectations for the dialogue.\r\n\r\n### Do This:\r\n\r\n1. Prompt AI to generate a conversation by including **multiple examples** of a hero-sidekick exchange.\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how the added structure affects the story flow, character depth, and tension.\r\n\r\n::: details [**Not sure where to start?**]\r\nHere's an example prompt:\r\n> Write a very short dialogue between a superhero and their sidekick where the sidekick is lovable but foolish. For example:\r\n>\r\n> Hero: \"I told you to stay in the jet!\"\r\n>\r\n> Sidekick: \"And miss this explosion? Never.\"\r\n>\r\n> OR\r\n>\r\n> Hero: \"We're running out of time—hand me the anti-gravity boots!\"\r\n>\r\n> Sidekick: \"Uh... you said we’d never need them again, so I traded them for tacos.\"\r\n>\r\n> Hero: \"...Worth it?\"\r\n>\r\n> Sidekick [*mouth full*]:  \"So worth it.\"\r\n>\r\n> OR\r\n>\r\n> Hero: \"This mission requires silence, precision, and zero distractions.\"\r\n>\r\n> Sidekick [*throws something behind him*]: \"I guess I won't be needing this bagpipe.\"\r\n>\r\n:::",
+    "long_instructions": "## Video Game Developer - Providing Multiple Examples\r\n\r\nPractice prompting through the career of a video game developer by guiding the AI with clear structure and multiple expectations for the dialogue.\r\n\r\n### Do This:\r\n\r\n1. Prompt AI to generate a conversation by including **multiple examples** of a hero-sidekick exchange.\r\n2. Before sending it, turn and talk with your partner about the difference between your prompt on this level and the previous one.\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how the added structure affects the story flow, character depth, and tension.\r\n\r\n::: details [**Not sure where to start?**]\r\nHere's an example prompt:\r\n> Write a very short dialogue between a superhero and their sidekick where the sidekick is lovable but foolish. For example:\r\n>\r\n> Hero: \"I told you to stay in the jet!\"\r\n>\r\n> Sidekick: \"And miss this explosion? Never.\"\r\n>\r\n> OR\r\n>\r\n> Hero: \"We're running out of time—hand me the anti-gravity boots!\"\r\n>\r\n> Sidekick: \"Uh... you said we’d never need them again, so I traded them for tacos.\"\r\n>\r\n> Hero: \"...Worth it?\"\r\n>\r\n> Sidekick [*mouth full*]:  \"So worth it.\"\r\n>\r\n> OR\r\n>\r\n> Hero: \"This mission requires silence, precision, and zero distractions.\"\r\n>\r\n> Sidekick [*throws something behind him*]: \"I guess I won't be needing this bagpipe.\"\r\n>\r\n:::",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -48,7 +49,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:41.976+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level3b_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level3b_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:41.976+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level3b_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level3b_2025\"},{\"changed_at\":\"2025-11-05 18:31:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

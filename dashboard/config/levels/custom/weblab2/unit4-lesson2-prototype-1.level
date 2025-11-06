@@ -1,0 +1,47 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-05T19:07:17.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Color Fill Bar Loop</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <h1>Color Fill Bar</h1>\n  <button id=\"runLoop\">Run Loop</button>\n  <div id=\"bar-container\">\n    <div id=\"bar\"></div>\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: system-ui, sans-serif;\n  background: #f6f9fc;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100vh;\n}\n\nh1 {\n  margin-bottom: 10px;\n}\n\n#bar-container {\n  width: 300px;\n  height: 30px;\n  background: repeating-linear-gradient(\n    to right,\n    #e0e0e0,\n    #e0e0e0 29px,\n    #ff0000 30px\n  );\n  border-radius: 8px;\n  overflow: hidden;\n  margin-top: 20px;\n  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);\n}\n\n#bar {\n  width: 0%;\n  height: 100%;\n  background: linear-gradient(to right, #6dd5fa, #2980b9);\n  transition: width 0.2s ease;\n}\n\nbutton {\n  background: #2980b9;\n  color: white;\n  border: none;\n  padding: 10px 18px;\n  border-radius: 6px;\n  cursor: pointer;\n  font-size: 1rem;\n}\n\nbutton:hover {\n  background: #2573a8;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const bar = document.getElementById(\"bar\");\nconst runButton = document.getElementById(\"runLoop\");\n\nconst fillBar = () => {\n  bar.style.width = \"0%\"; // reset bar to empty\n\n  const totalSteps = 10; // number of grid sections\n  const stepPercent = 100 / totalSteps; // 10% per step\n\n  for (let step = 1; step <= totalSteps; step++) {\n    setTimeout(() => {\n      bar.style.width = step * stepPercent + \"%\";\n    }, step * 300); // delay each fill for animation\n  }\n};\n\nrunButton.addEventListener(\"click\", fillBar);\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-05 19:14:31 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-05 19:20:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>
