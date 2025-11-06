@@ -405,10 +405,11 @@ const DanceView: React.FunctionComponent<{
       theme: theme === 'Dark' ? cdoDark : cdoTheme,
       readOnly: readonlyWorkspace,
       editBlocks: getAppOptionsEditBlocks(),
+      extraScrollheight: guideMode === 'aiCodeGenerate' ? 200 : 0,
     } as GoogleBlockly.BlocklyOptions);
 
     return () => workspace.current?.dispose();
-  }, [dispatch, readonlyWorkspace, levelProperties, theme]);
+  }, [dispatch, guideMode, readonlyWorkspace, levelProperties, theme]);
 
   useEffect(() => {
     if (!workspace.current) {
@@ -420,6 +421,10 @@ const DanceView: React.FunctionComponent<{
         workspace.current,
         JSON.stringify(currentSources.source)
       );
+      // Provide extra scroll height to account for bottom-anchored guide overlay.
+      if (guideMode === 'aiCodeGenerate') {
+        Blockly.extraScrollHeight = 250;
+      }
       const toolboxFromStorage = localStorage.getItem(
         `flyout-${levelProperties.id}`
       );
@@ -431,7 +436,12 @@ const DanceView: React.FunctionComponent<{
         } catch {}
       }
     }
-  }, [currentSources.source, levelProperties.id, updateBlocklyFlyout]);
+  }, [
+    currentSources.source,
+    guideMode,
+    levelProperties.id,
+    updateBlocklyFlyout,
+  ]);
 
   useEffect(() => {
     const songKeys = Object.keys(songData);
