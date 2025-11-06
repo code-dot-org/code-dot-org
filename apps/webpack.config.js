@@ -765,6 +765,16 @@ function createWebpackConfig({
           },
         }
       : undefined,
+    // FIXME: before this will actually do anything, upstream grunt-webpack needs
+    // to merge my PR: https://github.com/webpack/grunt-webpack/pull/250
+    //
+    // There's a bug that keeps grunt-webpack from working correctly with webpack 5's filesystem cache.
+    //
+    // Fork available at: https://github.com/code-dot-org/grunt-webpack/tree/call-webpack-compiler-close
+    cache: {
+      type: 'filesystem',
+      cacheDirectory: p('build/webpack-cache'),
+    },
   };
 
   //////////////////////////////////////////////
