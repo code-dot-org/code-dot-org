@@ -37,6 +37,13 @@ const BODY_VARIANT_COUNT = 5;
 
 const GENERATE_DELAY_DURATION = 5000;
 
+type AdlibsBlockList = {[key: string]: string[]};
+
+interface AdlibsManifest {
+  adlibs: AdlibsType;
+  blockList: AdlibsBlockList;
+}
+
 interface DancerGenerateProps {
   adlibOption: string;
   levelProperties: DanceLevelProperties;
@@ -64,13 +71,27 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const [adlibs, setAdlibs] = useState<AdlibsType | undefined>(undefined);
 
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices | undefined>(
+    undefined
+  );
+
+  const [promptText, setPromptText] = useState<string>('');
+
+  const variantHistory = useRef<number[]>([]);
+
+  const [dancerMetadata, setDancerMetadata] = useState<string | null>(
+    localStorage.getItem('dancer-ai-generate')
+  );
+
+  const blockList = useRef<AdlibsBlockList | undefined>(undefined);
+
   const getInitialChoices = useCallback(
     (adlibsValue: AdlibsType) => {
       const initial: AdlibChoices = {};
       if (adlibsValue) {
         Object.keys(adlibsValue[adlibOption]?.options || []).forEach(key => {
-          const opts = adlibsValue[adlibOption].options[key];
-          initial[key] = sample(opts)?.id || '';
+          const options = adlibsValue[adlibOption].options[key];
+          initial[key] = sample(options)?.id || '';
         });
       }
       return initial;
@@ -94,10 +115,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
         manifestFilename;
 
       try {
-        const {value} = await HttpClient.fetchJson<AdlibsType>(adlibsFilePath);
-        adlibsValue = value;
+        const {value} = await HttpClient.fetchJson<AdlibsManifest>(
+          adlibsFilePath
+        );
+        adlibsValue = value.adlibs;
+        blockList.current = value.blockList;
       } catch (error) {
-        console.log("Couldn't retrieve adlib manifest.");
+        console.log("Couldn't retrieve adlib manifest.", error);
         Lab2Registry.getInstance().getMetricsReporter().logWarning({
           message: 'Error loading adlib manifest',
           manifestFilename,
@@ -114,18 +138,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     fetchAdlib();
   }, [adlibs, aiGenerateState, getInitialChoices]);
 
-  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices | undefined>(
-    undefined
-  );
-
-  const [promptText, setPromptText] = useState<string>('');
-
-  const variantHistory = useRef<number[]>([]);
-
-  const [dancerMetadata, setDancerMetadata] = useState<string | null>(
-    localStorage.getItem('dancer-ai-generate')
-  );
-
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('loading');
   });
@@ -137,20 +149,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       return;
     }
 
-    // Avoid showing a variant if it was shown recently.
-    let variant, bodyVariant;
-    do {
-      variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
-      bodyVariant = getRandomInt(0, BODY_VARIANT_COUNT - 1);
-    } while (variantHistory.current.includes(variant));
-    const newVariantsHistory = [...variantHistory.current, variant];
-    // Keep the array length at a maximum of 3
-    if (newVariantsHistory.length > adlibs[adlibOption].variantCount - 2) {
-      newVariantsHistory.shift(); // Remove the oldest entry
-    }
-    variantHistory.current = newVariantsHistory;
-
-    // Special case: for the creature-attire-mood-style-04 adlib only,
+    // Special case: for the creature-attire-mood-style-05 adlib only,
     // move mood from choices to choicesExtra, and use a unique path.
     // This is because the style option is not used in retrieving the
     // head image, and is instead used to retrieve the body.
@@ -178,6 +177,42 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       choicesToSave = Object.keys(adlibChoices).map(key => adlibChoices[key]);
       choicesExtraToSave = undefined;
     }
+
+    // Build a list of available variants, excluding blocked ones.
+    const variants = [];
+    for (
+      let variant = 0;
+      variant <= adlibs[adlibOption].variantCount - 1;
+      variant++
+    ) {
+      // Generate a filename that will match an entry in the block list.
+      const assetFilename = `${choicesToSave?.join('-')}-${variant
+        .toString()
+        .padStart(2, '0')}`;
+
+      if (!blockList.current?.[adlibOption].includes(assetFilename)) {
+        variants.push(variant);
+      }
+    }
+
+    // Build a smaller set of available variants, by excluding recently-shown
+    // ones.
+    const newVariants = variants.filter(
+      variant => !variantHistory.current.includes(variant)
+    );
+
+    const variant = sample(newVariants) as number;
+    const bodyVariant = getRandomInt(0, BODY_VARIANT_COUNT - 1);
+
+    // Keep the recently-shown array length at a maximum that ensures
+    // there are still two choices to be made each time.
+    const availableVariantCount = variants.length;
+    const lengthOfVariantsHistory = Math.max(availableVariantCount - 2, 2);
+    const newVariantsHistory: number[] = [...variantHistory.current, variant];
+    if (newVariantsHistory.length > lengthOfVariantsHistory) {
+      newVariantsHistory.shift(); // Remove the oldest entry.
+    }
+    variantHistory.current = newVariantsHistory;
 
     const newDancerMetadata = JSON.stringify({
       adlibOption,
