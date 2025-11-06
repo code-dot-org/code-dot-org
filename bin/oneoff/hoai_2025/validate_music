@@ -46,6 +46,8 @@ OptionParser.new do |opts|
   end
 end.parse!
 
+good = 0
+count = 0
 output_path = File.join(File.dirname(__FILE__), "music_output")
 Dir.glob(File.join(output_path, '**', "#{options[:filter]}.txt")) do |path|
   error = validate_music path, options
@@ -58,5 +60,13 @@ Dir.glob(File.join(output_path, '**', "#{options[:filter]}.txt")) do |path|
       puts "Deleting #{path}"
       File.delete(path)
     end
+  else
+    good += 1
   end
+
+  count += 1
 end
+
+puts "Passed: #{good}/#{count}"
+puts
+puts "Done."

@@ -37,8 +37,8 @@ MESSAGE=File.read(File.join(File.dirname(__FILE__), 'music_message.txt'))
 # The number of different options to produce
 VARIANTS=3
 
-# The name of the adlib option (usually always 'complex')
-ADLIB_OPTION='complex'
+# The name of the adlib option (used to be 'complex'... now empty string)
+ADLIB_OPTION=''
 
 # The default list of possible lengths
 LENGTHS=[10, 15, 20]
