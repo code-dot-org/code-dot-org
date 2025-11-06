@@ -72,6 +72,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const {cancel} = useBrowserTextToSpeech();
 
   const lastPanelStartTime = useRef<number>(Date.now());
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -159,6 +160,18 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   }, [currentPanelIndex, setTypingDone]);
 
   const panel = panels[currentPanelIndex];
+  const showTyping =
+    panel.typing || queryParams('panels-show-typing') === 'true';
+
+  // When typing, only show the button when the typing is done.
+  const showButton = !showTyping || typingDone;
+
+  useEffect(() => {
+    if (showButton) {
+      nextButtonRef.current?.focus();
+    }
+  }, [showButton, currentPanelIndex]);
+
   if (!panel) {
     return null;
   }
@@ -190,12 +203,6 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       : commonI18n.continue();
 
   const plainText = markdownToTxt(panel.text);
-
-  const showTyping =
-    panel.typing || queryParams('panels-show-typing') === 'true';
-
-  // When typing, only show the button when the typing is done.
-  const showButton = !showTyping || typingDone;
 
   return (
     <div
@@ -268,6 +275,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       >
         {showButton && (
           <Button
+            ref={nextButtonRef}
             key={`button-${currentPanelIndex}`}
             id="panels-button"
             onClick={handleButtonClick}

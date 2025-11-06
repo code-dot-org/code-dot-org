@@ -14,7 +14,7 @@ import {
 import {
   getUserID,
   getUserType,
-  getStableId,
+  findOrCreateStableId,
   formatUserId,
 } from './statsigHelpers';
 
@@ -24,10 +24,26 @@ const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
 
 class StatsigReporter {
   constructor() {
-    // stable_id is set as a cookie in application_controller.rb. However in a
-    // the rare case we are running outside of the application layout,
-    // set stable_id as a cookie here if it doesn't exist.
-    this.stable_id = getStableId();
+    this.ready = false;
+    this.stable_id = null;
+    this.user = null;
+    this.api_key = '';
+    this.local_mode = true;
+    this.options = {};
+    this.environment = getEnvironment();
+    this.statsigClient = null;
+    const oneTrustPromise =
+      window.oneTrustPromise &&
+      typeof window.oneTrustPromise.then === 'function'
+        ? window.oneTrustPromise
+        : Promise.resolve(); // Default for environments without OneTrust (tests)
+    this.readyPromise = oneTrustPromise.then(() => {
+      this.initializeAfterConsent();
+    });
+  }
+
+  initializeAfterConsent() {
+    this.stable_id = findOrCreateStableId();
     this.log(`Statsig Stable ID: ${this.stable_id}`);
     let user = {
       custom: {
@@ -58,16 +74,18 @@ class StatsigReporter {
       ? managed_test_environment_element.dataset.managedTestServer === 'true'
       : false;
     this.local_mode = !(
+      IN_UNIT_TEST ||
       isProductionEnvironment() ||
       managed_test_environment ||
       process.env.STATSIG_LOCAL_MODE_OFF
     );
     this.options = {
-      environment: {tier: getEnvironment()},
       localMode: this.local_mode,
       disableErrorLogging: true,
+      environment: {tier: this.environment},
     };
 
+    this.ready = true;
     this.initialize(this.api_key, this.user, this.options);
   }
 
@@ -88,6 +106,10 @@ class StatsigReporter {
     enabledExperiments,
     educatorRole,
   }) {
+    await this.readyPromise;
+    if (!this.ready || !this.statsigClient) {
+      return;
+    }
     const formattedUserId = formatUserId(userId);
     const user = {
       userID: formattedUserId,
@@ -108,6 +130,10 @@ class StatsigReporter {
   }
 
   sendEvent(eventName, payload) {
+    if (!this.ready) {
+      this.readyPromise.then(() => this.sendEvent(eventName, payload));
+      return;
+    }
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       if (!eventName) {
         logToCloud.addPageAction(
@@ -134,12 +160,15 @@ class StatsigReporter {
   }
 
   log(message) {
-    if (isDevelopmentEnvironment() && !IN_UNIT_TEST) {
+    if (!IN_UNIT_TEST && isDevelopmentEnvironment()) {
       console.log(`[STATSIG ANALYTICS EVENT]: ${message}`);
     }
   }
 
   getIsInExperiment(name, parameter, defaultValue) {
+    if (!this.ready || !this.statsigClient) {
+      return defaultValue ?? false;
+    }
     if (this.local_mode) {
       return defaultValue ?? false;
     }
@@ -158,6 +187,9 @@ class StatsigReporter {
     if (alwaysPut) {
       return true;
     }
+    if (!this.ready) {
+      return false;
+    }
     if (!this.local_mode) {
       return true;
     }
@@ -169,6 +201,10 @@ class StatsigReporter {
    * @see https://docs.statsig.com/webanalytics/overview
    */
   async runAutoCapture() {
+    await this.readyPromise;
+    if (!this.ready) {
+      return;
+    }
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       const client = new StatsigClient(this.api_key, this.user, this.options);
       runStatsigAutoCapture(client);

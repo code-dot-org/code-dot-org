@@ -4,31 +4,20 @@
     "func": "makeAnonymousDanceSprite",
     "docFunc": "gamelab_makeNewSpriteAnon",
     "inline": false,
-    "blockText": "make a new {COSTUME} at {LOCATION}",
+    "blockText": "make a new {DANCER} at {LOCATION}",
     "style": "sprite_blocks",
     "args": [
       {
-        "name": "COSTUME",
-        "customInput": "dancerPicker",
-        "options": [
-          "\"GENERATED_DANCER\"",
-          "\"ALIEN\"",
-          "\"BEAR\"",
-          "\"CAT\"",
-          "\"DOG\"",
-          "\"DUCK\"",
-          "\"FROG\"",
-          "\"MOOSE\"",
-          "\"PINEAPPLE\"",
-          "\"ROBOT\"",
-          "\"SHARK\"",
-          "\"SLOTH\"",
-          "\"UNICORN\""
-        ]
+        "name": "DANCER",
+        "customInput": "generatedDancerImage"
       },
       {
         "name": "LOCATION",
         "options": [
+          [
+            "center",
+            "{x: 200, y: 200}"
+          ],
           [
             "top",
             "{x: 200, y: 100}"
@@ -44,10 +33,6 @@
           [
             "right",
             "{x: 300, y: 200}"
-          ],
-          [
-            "center",
-            "{x: 200, y: 200}"
           ],
           [
             "top left",

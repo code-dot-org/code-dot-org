@@ -1,6 +1,7 @@
 name 'ai-generated-design-lesson4-level1_2025'
 display_name 'Mood Board Design'
 description 'Use Sketch Lab to design a mood board. Use AI Chat to discuss and get feedback about designing a mood board and your mood board choices.'
+uses_lab2
 
 sublevels
 level 'ai-generated-design-lesson4-level1a_2025'

@@ -261,6 +261,21 @@ frontend_device_name ||= '/dev/sda1'
                 Action: 'sns:Publish'
                 Resource: !Ref WebServerHookTopicNew
       PermissionsBoundary: !ImportValue IAM-DevPermissions
+  PredictiveScalingPolicy:
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties:
+      AutoScalingGroupName: !Ref Frontends
+      PolicyType: PredictiveScaling
+      PredictiveScalingConfiguration:
+        Mode: ForecastOnly # Generate forecasts, but don't actually scale the Auto Scaling Group.
+        MetricSpecifications:
+          - TargetValue: 50
+            PredefinedMetricPairSpecification:
+              PredefinedMetricType: ASGCPUUtilization
+        # Warm up new instance 5 minutes before Predictive Scaling forecasts that it will be needed.
+        SchedulingBufferTime: 300
+        MaxCapacityBreachBehavior: IncreaseMaxCapacity
+        MaxCapacityBuffer: 4  # Usage increases 2-3X  from 5AM to 6:30AM PT
 
   FrontendHighMemoryAlarm:
     Type: AWS::CloudWatch::Alarm

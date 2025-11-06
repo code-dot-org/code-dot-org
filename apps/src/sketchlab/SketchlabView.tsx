@@ -29,6 +29,8 @@ import SourcesContainer, {
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import SketchlabTourSteps from './sketchlabTourSteps';
+
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
@@ -42,6 +44,8 @@ const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
+
+const DEFAULT_SOURCES = {source: {}};
 
 interface SketchlabSources extends ProjectSources {
   source: ExcalidrawInitialDataState;
@@ -170,6 +174,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   return (
     <div className={moduleStyles.sketchlabContainer}>
+      <SketchlabTourSteps />
       <div style={{width: leftPanelWidth}} className={panelClassName}>
         <ResourcePanel
           levelProperties={levelProperties}
@@ -209,6 +214,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
             theme={theme.toLowerCase() as ExcalidrawTheme}
+            viewModeEnabled={readonlyWorkspace}
           />
           {WorkspaceAlert}
         </PanelContainer>
@@ -218,7 +224,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 };
 
 export default (props: LabProps<LevelProperties>) => (
-  <SourcesContainer {...props} defaultSources={{source: {}}}>
+  <SourcesContainer {...props} defaultSources={DEFAULT_SOURCES}>
     <SketchlabView levelProperties={props.levelProperties} />
   </SourcesContainer>
 );

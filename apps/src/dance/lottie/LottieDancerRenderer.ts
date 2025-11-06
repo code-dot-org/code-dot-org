@@ -45,11 +45,11 @@ import {
   getConfigValue,
   insertImageLayer,
   hideLayersByTypeAndCaptureKs,
-  fetchText,
   recolorBodySvgString,
   svgStringToDataUrl,
   getSkeletonMetadataUrl,
   hideMagentaDress,
+  safeFetchSvgText,
 } from './LottieDancerUtils';
 
 const DEFAULT_SKELETON = 'unicorn';
@@ -80,6 +80,7 @@ export default class LottieDancerRenderer {
   private bodyUrl?: string;
   private bodyMetadataUrl?: string;
   private currentMove: DanceMoves | null;
+  private fallbackSkeletonName: string;
 
   constructor() {
     this.headScale = 0.5;
@@ -93,6 +94,7 @@ export default class LottieDancerRenderer {
     this.bodyUrl = urls.bodyUrl;
     this.bodyMetadataUrl = urls.bodyMetadataUrl;
     this.currentMove = null;
+    this.fallbackSkeletonName = DEFAULT_SKELETON;
   }
   /**
    * The caller provides a CanvasRenderingContext2D to paint into.
@@ -246,11 +248,13 @@ export default class LottieDancerRenderer {
           console.warn(
             `Failed to fetch skeleton name from body metadata URL ${this.bodyMetadataUrl}`,
             e,
-            `Falling back to ${skeletonParam || DEFAULT_SKELETON} skeleton.`
+            `Falling back to ${
+              skeletonParam || this.fallbackSkeletonName
+            } skeleton.`
           );
         }
       }
-      return skeletonParam || DEFAULT_SKELETON;
+      return skeletonParam || this.fallbackSkeletonName;
     })();
     return this.skeletonNamePromise;
   }
@@ -274,16 +278,6 @@ export default class LottieDancerRenderer {
       const jsonUrl = resolveAnimationUrl(skeletonName, danceMoveLowerCase);
 
       const animData = await fetchJson<LottieJSON>(jsonUrl);
-      const shorten = (url?: string) =>
-        url?.match(/generate\/([^?]+)/)?.[1] || url;
-
-      console.log('Creating Lottie Dancer with:', {
-        dance: shorten(jsonUrl),
-        headDataUrl: shorten(this.headUrl),
-        metadataUrl: shorten(this.metadataUrl),
-        bodyUrl: shorten(this.bodyUrl),
-        bodyMetadataUrl: shorten(this.bodyMetadataUrl),
-      });
       // Fetch palette metadata if we have a URL for it.
       let palette: Palette | null = null;
       if (this.metadataUrl) {
@@ -358,7 +352,7 @@ export default class LottieDancerRenderer {
             let finalBodyDataUrl: string | null = null;
 
             try {
-              const svgText = await fetchText(this.bodyUrl);
+              const svgText = await safeFetchSvgText(this.bodyUrl);
               if (!svgText) {
                 throw new Error(
                   `Failed to fetch body SVG: empty response for URL ${this.bodyUrl}.
@@ -409,6 +403,19 @@ export default class LottieDancerRenderer {
       // Memoize transformed Lottie JSON per move (in-memory cache) so subsequent setSource calls skip recolor/head work.
       // This is useful if the same dance move is used later in a song, or if there are multiple generated dancers using the same move.
       this.cachedAnimationData[danceMoveLowerCase] = animData;
+      if (Object.keys(this.cachedAnimationData).length === 1) {
+        // Log only on first successful load to avoid spamming console in Dance levels.
+        const shorten = (url?: string) =>
+          url?.match(/generate\/([^?]+)/)?.[1] || url;
+
+        console.log('Creating Lottie Dancer with:', {
+          danceUrl: shorten(jsonUrl),
+          headDataUrl: shorten(this.headUrl),
+          metadataUrl: shorten(this.metadataUrl),
+          bodyUrl: shorten(this.bodyUrl),
+          bodyMetadataUrl: shorten(this.bodyMetadataUrl),
+        });
+      }
       return animData;
     })();
 

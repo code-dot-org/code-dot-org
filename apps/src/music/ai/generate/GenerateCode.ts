@@ -1,4 +1,7 @@
-import {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
+import {
+  AdlibType,
+  AdlibChoices,
+} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetLocalStorage} from '@cdo/apps/utils';
@@ -124,14 +127,16 @@ export const generateSongAi = async (
 
 // Generate song code by retrieving from an online cache.
 export const generateSongCache = async (
-  adlibs: AdlibsType,
-  adlibOption: string,
+  adlibId: string,
+  adlib: AdlibType,
   packId: string,
-  choices: string[] | undefined
+  adlibChoices: AdlibChoices
 ) => {
-  const variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
-  const joinedChoices = choices?.join('-');
-  const cacheFilePath = `${baseAssetUrl}generate/music/${packId}-${adlibOption}-${joinedChoices}-${variant
+  const variant = getRandomInt(0, adlib.variantCount - 1);
+  const joinedChoices = Object.keys(adlibChoices)
+    .map(key => adlibChoices[key])
+    .join('-');
+  const cacheFilePath = `${baseAssetUrl}generate/music/${packId}-${adlibId}-${joinedChoices}-${variant
     .toString()
     .padStart(2, '0')}.txt`;
   console.log(cacheFilePath);

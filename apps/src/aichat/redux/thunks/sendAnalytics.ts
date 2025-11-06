@@ -10,8 +10,12 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 export const sendAnalytics =
   (event: string, properties: object, skipAccessCheck = false) =>
   (dispatch: AppDispatch, getState: () => RootState) => {
-    const clientType = getState().aichat.clientType;
-    const userHasAichatAccess = getState().aichat.userHasAichatAccess;
+    const state = getState();
+    const aichatState = state.aichat;
+    const labState = state.lab;
+    const progressState = state.progress;
+    const clientType = aichatState.clientType;
+    const userHasAichatAccess = aichatState.userHasAichatAccess;
 
     // Only check `userHasAichatAccess` for AI Chat.
     if (
@@ -19,13 +23,23 @@ export const sendAnalytics =
       userHasAichatAccess ||
       skipAccessCheck
     ) {
-      const propertiesWithClientType = {
+      const allProperties = {
         ...properties,
         clientType,
+        aiTutorMode: labState.levelProperties?.aiTutorMode,
+        appType: labState.levelProperties?.appName,
+        levelId: labState.levelProperties?.id,
+        levelName: labState.levelProperties?.name,
+        scriptId: labState.scriptId,
+        scriptName: progressState.scriptName,
+        courseName: progressState.courseName,
+        channel: labState.channel?.id,
+        levelPath: window.location.pathname,
       };
+
       analyticsReporter.sendEvent(
         event,
-        propertiesWithClientType,
+        allProperties,
 
         // Only log to Amplitude for AI Chat otherwise just log to Statsig.
         clientType === AiChatClientTypes.AI_CHAT_LAB

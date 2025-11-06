@@ -19,7 +19,6 @@ import {HTMLPreviewHeader} from './HTMLPreviewHeader';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
-const URL_CHANGE_DELAY_MS = 300;
 const SOURCE_CHANGE_DELAY_MS = 500;
 
 export const HTMLPreview: React.FC = () => {
@@ -192,14 +191,10 @@ export const HTMLPreview: React.FC = () => {
   }, [previewUrl, currentFile, navigationHistory, navigationHistoryIndex]);
 
   useEffect(() => {
-    const debouncedUpdate = setTimeout(() => {
-      iframeRef.current?.contentWindow?.postMessage(
-        {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
-        previewUrl
-      );
-    }, URL_CHANGE_DELAY_MS);
-
-    return () => clearTimeout(debouncedUpdate);
+    iframeRef.current?.contentWindow?.postMessage(
+      {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
+      previewUrl
+    );
   }, [currentFile, previewUrl]);
 
   useEffect(() => {
@@ -255,6 +250,9 @@ export const HTMLPreview: React.FC = () => {
       id={'html-preview'}
       headerContent={codebridgeI18n.preview()}
       hideHeaders
+      className={classNames(
+        isFullScreenView && moduleStyles.fullScreenPanelContainer
+      )}
     >
       <div
         className={classNames(
