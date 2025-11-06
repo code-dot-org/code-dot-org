@@ -6,6 +6,8 @@ import {Provider} from 'react-redux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
 import localization from '@cdo/apps/localization';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import {getStore} from '../redux';
 
@@ -58,6 +60,21 @@ Fish.prototype.init = function (config) {
 
   config.pinWorkspaceToBottom = true;
 
+  const reportActivityEvent = () => {
+    const {isProjectLevel} = getStore().getState().pageConstants;
+
+    analyticsReporter.sendEvent(
+      isProjectLevel ? EVENTS.PROJECT_ACTIVITY : EVENTS.LEVEL_ACTIVITY,
+      {
+        signedIn: config.isSignedIn,
+        unitName: config.scriptName,
+        levelId: config.serverLevelId,
+        levelName: config.level.name,
+      },
+      PLATFORMS.BOTH
+    );
+  };
+
   const onMount = () => {
     // NOTE: Other apps call studioApp.init(), except WebLab. Fish is imitating WebLab
     this.studioApp_.setConfigValues_(config);
@@ -80,7 +97,11 @@ Fish.prototype.init = function (config) {
       );
     }
 
-    this.initMLActivities();
+    try {
+      this.initMLActivities();
+    } finally {
+      reportActivityEvent();
+    }
   };
 
   // Push initial level properties into the Redux store
