@@ -98,6 +98,7 @@ const Header: React.FC<HeaderProps> = ({
                     href={item.href}
                     color="inherit"
                     sx={styles.menuListItemLink}
+                    variant="body1"
                   >
                     {item.label}
                   </Link>
