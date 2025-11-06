@@ -20,7 +20,6 @@ const OnboardingTourSteps: React.FC = () => {
     'no'
   );
   const [isToolbarReady, setIsToolbarReady] = useState(false);
-  const [isAiDiffOpen, setIsAiDiffOpen] = useState(false);
 
   useEffect(() => {
     // Wait for Excalidraw toolbar to be fully rendered.
@@ -52,54 +51,9 @@ const OnboardingTourSteps: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    // Check if AI Diff container is actually open and visible in the DOM
-    const checkAiDiffState = () => {
-      // First check if the FAB/container exists on the page (experiment is enabled)
-      const fabContainer = document.getElementById('fab-contained');
-      if (!fabContainer) {
-        // AI Diff feature is not available on this page
-        setIsAiDiffOpen(false);
-        return;
-      }
-
-      // Check if the container is actually rendered and visible
-      const draggableContainer = document.getElementById('draggable-id');
-      if (draggableContainer) {
-        const isVisible =
-          draggableContainer.style.display !== 'none' &&
-          window.getComputedStyle(draggableContainer).display !== 'none';
-        setIsAiDiffOpen(isVisible);
-      } else {
-        setIsAiDiffOpen(false);
-      }
-    };
-
-    // Check initial state
-    checkAiDiffState();
-
-    // Listen for storage changes (when AI Diff is opened/closed)
-    const handleStorageChange = () => {
-      checkAiDiffState();
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-
-    // Also poll periodically since session storage changes in the same tab
-    // don't trigger storage events, and to detect DOM changes
-    const interval = setInterval(checkAiDiffState, 500);
-
-    return () => {
-      window.removeEventListener('storage', handleStorageChange);
-      clearInterval(interval);
-    };
-  }, []);
-
   return (
     <Steps
-      enabled={
-        isToolbarReady && sketchlabOnboardingTourSeen !== 'yes' && !isAiDiffOpen
-      }
+      enabled={isToolbarReady && sketchlabOnboardingTourSeen !== 'yes'}
       initialStep={INITIAL_STEP}
       steps={STEPS}
       onExit={() => {
