@@ -23,7 +23,7 @@ require 'sass'
 require 'sass/plugin'
 require 'haml'
 
-if rack_env?(:adhoc)
+if rack_env?(:production)
   require 'newrelic_rpm'
   # Enable GC profiler for New Relic instrumentation.
   GC::Profiler.enable
