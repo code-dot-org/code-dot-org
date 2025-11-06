@@ -1,6 +1,7 @@
 import {ScrollMetricsManager} from '@blockly/plugin-scroll-options';
 import * as GoogleBlockly from 'blockly/core';
 
+type ContainerRegion = GoogleBlockly.MetricsManager.ContainerRegion;
 export default class MetricsManager extends ScrollMetricsManager {
   /** Force content to start in top-left corner, not scroll in all directions.
    * @override
@@ -56,24 +57,35 @@ export default class MetricsManager extends ScrollMetricsManager {
   }
 
   /**
-   * Gets content metrics in either pixel or workspace coordinates.
-   * The content area is a rectangle around all the top bounded elements on the
-   * workspace (workspace comments and blocks).
+   * Returns the metrics for the scroll area of the workspace.
    *
-   * Overridden to add extra height to content metrics to allow for scrolling
+   * Overridden to add extra height to scroll metrics to allow for scrolling
    * past a bottom-anchored overlay (e.g. Dance Lab2 aiCodeGenerate guide).
    *
-   * @param opt_getWorkspaceCoordinates True to get the content metrics in
+   * @param opt_getWorkspaceCoordinates True to get the scroll metrics in
    *     workspace coordinates, false to get them in pixel coordinates.
-   * @returns The metrics for the content container.
+   * @param opt_viewMetrics The view metrics if they have been previously
+   *     computed. Passing in null may cause the view metrics to be computed
+   *     again, if it is needed.
+   * @param opt_contentMetrics The content metrics if they have been previously
+   *     computed. Passing in null may cause the content metrics to be computed
+   *     again, if it is needed.
+   * @returns The metrics for the scroll container.
    */
-  getContentMetrics(
-    opt_getWorkspaceCoordinates?: boolean
-  ): GoogleBlockly.MetricsManager.ContainerRegion {
-    const metrics = super.getContentMetrics(opt_getWorkspaceCoordinates);
+  getScrollMetrics(
+    opt_getWorkspaceCoordinates?: boolean,
+    opt_viewMetrics?: ContainerRegion,
+    opt_contentMetrics?: ContainerRegion
+  ): ContainerRegion {
+    const metrics = super.getScrollMetrics(
+      opt_getWorkspaceCoordinates,
+      opt_viewMetrics,
+      opt_contentMetrics
+    );
+    const extraScrollHeight = Blockly.extraScrollHeight || 0;
     return {
       ...metrics,
-      height: metrics.height + Blockly.extraScrollHeight,
+      height: metrics.height + extraScrollHeight,
     };
   }
 }
