@@ -310,7 +310,7 @@ class ProjectsListTest < ActionController::TestCase
   end
 
   private def library_db_result(result)
-    stub(where: stub(where: stub(where: result)))
+    stub(where: stub(where: stub(where: result, first: result.first), first: result.first))
   end
 
   private def db_result(result)
