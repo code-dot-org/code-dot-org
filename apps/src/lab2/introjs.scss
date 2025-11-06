@@ -8,13 +8,13 @@
     // Use box-shadow instead of border to avoid layout shift.
     // Shadows are rendered in reverse order: first = on top, last = on bottom.
     box-shadow:
-      0 0 0 2px #9657C7,                    // Purple border (on top, most visible).
-      0 0 20px 2px rgb(150 87 199 / 0.9),   // Purple glow (middle layer).
+      0 0 0 3px #9657C7,                    // Purple border (on top, most visible).
+      0 0 20px 3px rgb(150 87 199 / 0.9),   // Purple glow (middle layer).
       0 0 0 5000px rgb(0 0 0 / 0.5),        // Lighter overlay (bottom layer).
-      inset 0 0 0 2px rgb(255 255 255 / 0.2) !important; // Inner highlight.
+      inset 0 0 0 3px rgb(255 255 255 / 0.2) !important; // Inner highlight.
   }
  
-  /* Tooltip. */
+  /* Tooltip */
   .introjs-tooltip {
     box-sizing: content-box;
     position: absolute;
