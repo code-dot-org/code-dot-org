@@ -254,6 +254,24 @@ export default class ProjectManager {
     return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
   }
 
+  async updateChannel(channelUpdates: Partial<Channel>, forceSave = false) {
+    if (this.destroyed || !this.lastChannel) {
+      // If we have already been destroyed or the channel does not exist,
+      // don't attempt to update.
+      return this.getNoopResponseAndSendSaveNoopEvent();
+    }
+    if (!this.channelToSave) {
+      this.channelToSave = JSON.parse(
+        JSON.stringify(this.lastChannel)
+      ) as Channel;
+    }
+    this.channelToSave = {
+      ...this.channelToSave,
+      ...channelUpdates,
+    };
+    return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
+  }
+
   /**
    * Returns a share URL for the current project.
    *
@@ -395,6 +413,16 @@ export default class ProjectManager {
 
   setLastSource(lastSource: ProjectSources) {
     this.lastSource = JSON.stringify(lastSource);
+  }
+
+  getLastSource() {
+    return this.lastSource
+      ? (JSON.parse(this.lastSource) as ProjectSources)
+      : undefined;
+  }
+
+  getLastChannel() {
+    return this.lastChannel;
   }
 
   getShouldCaptureThumbnail() {
