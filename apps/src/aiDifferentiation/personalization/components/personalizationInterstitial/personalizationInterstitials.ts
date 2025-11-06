@@ -84,7 +84,6 @@ export const PERSONALIZATION_INTERSTITIALS: PersonalizationInterstitial[] = [
   },
   {
     id: 'challenge',
-    icon: 'robot',
     defaultMessage:
       'Compiling your answers to add to AI Teaching Assistant’s system prompt...',
   },
