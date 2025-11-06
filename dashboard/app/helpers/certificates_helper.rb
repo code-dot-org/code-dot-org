@@ -5,7 +5,7 @@ module CertificatesHelper
     congrats_url_params[:i] = session_id if session_id.present?
     congrats_url_params[:s] = Base64.urlsafe_encode64(course_name) if course_name.present?
 
-    Rails.application.routes.url_helpers.congrats_url(congrats_url_params)
+    CDO.studio_url(Rails.application.routes.url_helpers.congrats_path(congrats_url_params), CDO.default_scheme)
   end
 
   def encode_params(name, course, donor)
