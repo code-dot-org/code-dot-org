@@ -1,6 +1,7 @@
 import '@code-dot-org/component-library-styles/colors.scss';
-import {LinkButton} from '@code-dot-org/component-library/button';
 import {Typography} from '@mui/material';
+
+import {LinkButton} from '@code-dot-org/component-library/button';
 
 function App() {
   return (

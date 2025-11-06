@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-03 07:15:15 UTC",
+    "serialized_at": "2025-11-03 21:04:29 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -130,6 +130,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-video-intro"
+        ],
         "progression": "Intro"
       },
       "bonus": false,
@@ -152,6 +155,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dance-background"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -174,6 +180,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dancer-prompt-1-input"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -196,6 +205,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dancer-prompt-2-input"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -218,6 +230,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-panels-image-generation"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -240,6 +255,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dancer-prompt-4-input"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -262,6 +280,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dance-move"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -284,6 +305,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-panels-mix-intro"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -306,6 +330,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-sequence"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -328,6 +355,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-play-together"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -350,6 +380,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-music-prompt-2-input"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -372,6 +405,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-panels-code-generation"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -394,6 +430,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-music-prompt-3-input"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -416,6 +455,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dance-freeplay"
+        ],
         "progression": "Move"
       },
       "bonus": false,

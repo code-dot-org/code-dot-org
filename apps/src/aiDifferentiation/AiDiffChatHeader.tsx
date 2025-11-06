@@ -7,6 +7,7 @@ import {
 import {PDFDownloadLink} from '@react-pdf/renderer';
 import React from 'react';
 
+import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import AiDiffPdf from './AiDiffPdf';
@@ -18,12 +19,14 @@ interface AiDiffChatHeaderProps {
   onSuggestPrompts: (promptType: SuggestPromptsType) => void;
   messages: ChatItem[];
   threadTitle?: string;
+  personalizationData?: PersonalizationData;
 }
 
 const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
   onSuggestPrompts,
   messages,
   threadTitle,
+  // personalizationData,
 }) => {
   return (
     <div className={style.chatHeader}>

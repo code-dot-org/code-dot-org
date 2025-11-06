@@ -8,10 +8,12 @@ import style from './personalization-information.module.scss';
 const PersonalizationResultsInfoBox: React.FC = () => {
   return (
     <div className={style.revealInfoBox}>
-      <BodyThreeText>
+      <BodyThreeText noMargin>
         <strong>{i18n.teachingStyleDataBoxHeadline()}</strong>
       </BodyThreeText>
-      <BodyThreeText>{i18n.teachingStyleDataBoxBody()}</BodyThreeText>
+      <BodyThreeText className={style.lightText}>
+        {i18n.teachingStyleDataBoxBody()}
+      </BodyThreeText>
     </div>
   );
 };
