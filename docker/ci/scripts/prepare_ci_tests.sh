@@ -18,11 +18,6 @@ export LD_LIBRARY_PATH=/usr/local/lib
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
 export PARALLEL_TEST_PROCESSORS=7
 
-# Apps build parallelization settings for CI
-# optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
-export APPS_BUILD_WORKERS=10
-export APPS_BUILD_MAX_MEMORY=16384
-
 # Install in deployment mode, both to better mirror the test server and to make
 # caching easier.
 bundle config set --local deployment 'true'
