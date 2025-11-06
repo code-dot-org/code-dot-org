@@ -32,7 +32,6 @@ class DelivererTest < Minitest::Test
   end
 
   def test_deliverer_send
-    skip
     email = "test@deliverer.send"
     contact = Poste2.create_recipient(email, {ip_address: '5.6.7.8.'})
 
