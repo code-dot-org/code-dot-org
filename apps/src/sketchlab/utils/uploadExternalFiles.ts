@@ -1,10 +1,16 @@
-import {SketchlabProjectFile} from '@cdo/apps/lab2/types';
+import {
+  SketchlabProjectFile,
+  ExcalidrawSourceWithExternalFiles,
+} from '@cdo/apps/lab2/types';
 
 import {SketchlabSources, SerializedExcalidrawState} from '../types';
 
 import uploadBase64ToUrl from './uploadBase64ToUrl';
 
-// TO DO: add Jira to handle bad extensions.
+// TO DO: these are the upload types officially supported by Excalidraw,
+// not all of which we actually support uploading to S3.
+// Tracking error handling work here:
+// https://codedotorg.atlassian.net/browse/AFL-345
 const MIME_TO_EXT = {
   'image/svg+xml': 'svg',
   'image/png': 'png',

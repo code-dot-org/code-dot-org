@@ -181,11 +181,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     sourcesWithExternalFiles: ExcalidrawSourceWithExternalFiles
   ) => {
     // Currently doesn't do anything except update the type.
-    // In the future, we'll need a step here that takes the external URLs and converts them to base64,
+    // In the future, we'll need a step here that takes the external S3 URLs and converts them to base64,
     // which will make them safe for Excalidraw to use.
-
-    // Should this remove the externalFiles so that Excalidraw never sees it?
-    // Maybe cloneDeep first?
     return sourcesWithExternalFiles as ExcalidrawInitialDataState;
   };
 
