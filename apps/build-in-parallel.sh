@@ -18,7 +18,6 @@ APPS_BUILD_MAX_MEMORY=${APPS_BUILD_MAX_MEMORY:-$DEFAULT_MAX_MEMORY}
 
 # Export for webpack.config.js to read
 export APPS_BUILD_WORKERS
-export APPS_BUILD_MAX_MEMORY
 
 echo "Building with configuration:"
 echo "  Workers: ${APPS_BUILD_WORKERS}"
