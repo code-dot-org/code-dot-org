@@ -68,6 +68,7 @@ class DCDOBase < DynamicConfigBase
       'actioncable-repeat-interval': DCDO.get('actioncable-repeat-interval', 10 * 1000),
       'actioncable-repeat': DCDO.get('actioncable-repeat', false),
       'actioncable-disconnect-timeout': DCDO.get('actioncable-disconnect-timeout', 30 * 1000),
+      'disable-progress-v1': DCDO.get('disable-progress-v1', false),
       'detect-remote-network-config': DCDO.get('detect-remote-network-config', {}),
     }
   end
