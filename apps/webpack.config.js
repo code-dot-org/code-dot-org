@@ -622,8 +622,9 @@ function createWebpackConfig({
     },
     plugins: [
       ...WEBPACK_BASE_CONFIG.plugins,
-      // Add explicit ProgressPlugin for profiling to ensure progress logs appear in CI
-      ...(envConstants.PROFILE_APPS_BUILD
+      // Add explicit ProgressPlugin for profiling to ensure progress logs appear in CI.
+      // Do not enable outside of CI, since that will generate duplicate progress logs.
+      ...(envConstants.PROFILE_APPS_BUILD && envConstants.CI
         ? [
             new webpack.ProgressPlugin({
               profile: true,
