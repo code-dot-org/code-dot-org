@@ -168,12 +168,6 @@ class HttpCache
             headers: S3_FORWARD_HEADERS,
             cookies: 'none'
           },
-          {
-            path: '/api/hour/*',
-            headers: ALLOWLISTED_HEADERS,
-            # Allow the company cookie to be read and set to track company users for tutorials.
-            cookies: allowlisted_cookies + ['company']
-          },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
             path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /fonts/*),
@@ -354,12 +348,22 @@ class HttpCache
         dashboard: {
           behaviors: [
             {
-              path: "#{HocLegacy::API_ROOT_PATH}*",
+              path: "#{HocLegacy::API_ROOT_PATH}/*",
               headers: ALLOWLISTED_HEADERS,
               cookies: allowlisted_cookies,
             },
           ],
         },
+        pegasus: {
+          behaviors: [
+            {
+              path: "#{HocLegacy::API_ROOT_PATH}/*",
+              proxy: 'dashboard',
+              headers: ALLOWLISTED_HEADERS,
+              cookies: allowlisted_cookies,
+            },
+          ],
+        }
       )
     end
 

@@ -14,7 +14,7 @@ module HocLegacy
       tutorial_url = @tutorial.primary_link_ref&.fields.try(:[], :primary_target)
       return render_404 if tutorial_url.blank?
 
-      TutorialLauncher.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
+      TutorialLauncher.call(controller: self, tutorial: @tutorial)
 
       # If the tutorial_url is a relative path, make it absolute by prepending code.org
       tutorial_url = CDO.code_org_url(tutorial_url, CDO.default_scheme) if tutorial_url.starts_with?('/')
@@ -24,25 +24,25 @@ module HocLegacy
 
     # GET /api/hour/begin_:code.png
     def begin_pixel
-      TutorialPixelLauncher.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
+      TutorialPixelLauncher.call(controller: self, tutorial: @tutorial)
       send_pixel_png
     end
 
     # GET /api/hour/finish
     def finish_current
-      session_row = TutorialCompleter.call(controller: self) if activity_tracking_enabled?
+      session_row = TutorialCompleter.call(controller: self)
       redirect_to_congrats_page(session_row:)
     end
 
     # GET /api/hour/finish/:code
     def finish
-      session_row = TutorialCompleter.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
+      session_row = TutorialCompleter.call(controller: self, tutorial: @tutorial)
       redirect_to_congrats_page(session_row:)
     end
 
     # GET /api/hour/finish_:code.png
     def finish_pixel
-      TutorialPixelCompleter.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
+      TutorialPixelCompleter.call(controller: self, tutorial: @tutorial)
       send_pixel_png
     end
 
@@ -67,10 +67,6 @@ module HocLegacy
         name:             session_row[:name],
         certificate_sent: session_row[:name].present?,
       }
-    end
-
-    private def activity_tracking_enabled?
-      DCDO.get('hoc_apis_in_dashboard', false)
     end
 
     private def assign_tutorial

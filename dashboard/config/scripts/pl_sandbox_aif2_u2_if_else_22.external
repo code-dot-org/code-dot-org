@@ -1,0 +1,38 @@
+name 'pl-sandbox-aif2-u2-if-else-22'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# If/ Else Conditionals 
+
+#### Conditionals let your program make decisions.They check whether something is true or false and then choose what to do next.
+
+<img src="https://images.code.org/adfe383e838d3e72fa57df27d2e1ac44-image-1762364455509.png" alt="Happy birthday Python code condensed with a function" width="300px" style="display: block; float:right; margin: 0 0 0px 10px; border-radius:10px;">
+
+
+## 💡 Think of it like a flowchart
+
+#### Your program asks a question — for example:  **“Is the score greater than 100?”**
+
+- #### If the answer is `true`, the program runs one set of instructions.
+- #### If the answer is `false`, it can do something else instead.
+
+#### That question produces a **Boolean** value (true or false), which controls the flow of your program.
+
+
+ <div style="clear:both;"></div>
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Boolean</strong> is a data type that can only have one of two values: true or false. In programming, Booleans are often the result of comparison operations (like age>18) and are used to control the flow of your program.
+</p>
+</div>
+
+
+---
+
+## Next up
+
+#### Let's see how flowcharts translate to code. 
+
+![]()
+MARKDOWN
