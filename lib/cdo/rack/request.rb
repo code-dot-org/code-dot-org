@@ -97,10 +97,15 @@ module Cdo
       host
     end
 
+    # Returns the CloudFront request ID if present, nil otherwise.
+    # Used when you specifically need the CloudFront ID for correlation.
     def cloudfront_request_id
       env['cdo.cloudfront_request_id'] || env['HTTP_X_AMZ_CF_ID']
     end
 
+    # Returns the best available request ID for correlation, preferring CloudFront ID.
+    # Falls back to: cdo.request_id -> action_dispatch.request_id -> HTTP_X_REQUEST_ID.
+    # Use this when you need any request ID for logging/tracking, not specifically CloudFront.
     def correlation_id
       cloudfront_request_id || env['cdo.request_id'] || env['action_dispatch.request_id'] || env['HTTP_X_REQUEST_ID']
     end
