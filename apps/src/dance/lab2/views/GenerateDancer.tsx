@@ -20,10 +20,11 @@ import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instruction
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-shoulders.png';
 
@@ -140,6 +141,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('loading');
+    setHasGenerated(false);
   });
 
   const generateDancerCache = useCallback(async () => {
@@ -233,11 +235,31 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     await new Promise(res => setTimeout(res, remainingDelayDuration));
   }, [adlibChoices, adlibOption, adlibs]);
 
+  const [hasGenerated, setHasGenerated] = useState(false);
+  const signedIn = useAppSelector(state => state.currentUser.signInState);
+  const scriptName = useAppSelector(state => state.progress.scriptName);
+  const logLevelActivity = useCallback(() => {
+    const eventName = levelProperties.isProjectLevel
+      ? EVENTS.PROJECT_ACTIVITY
+      : EVENTS.LEVEL_ACTIVITY;
+
+    analyticsReporter.sendEvent(eventName, {
+      signedIn: signedIn,
+      unitName: scriptName,
+      levelId: levelProperties.id,
+      levelName: levelProperties.name,
+    });
+  }, [levelProperties, signedIn, scriptName]);
+
   const generateDancer = useCallback(async () => {
+    if (!hasGenerated) {
+      logLevelActivity();
+    }
     setAiGenerateState('generating');
     await generateDancerCache();
     setAiGenerateState('reviewing');
-  }, [generateDancerCache]);
+    setHasGenerated(true);
+  }, [generateDancerCache, hasGenerated, logLevelActivity]);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
