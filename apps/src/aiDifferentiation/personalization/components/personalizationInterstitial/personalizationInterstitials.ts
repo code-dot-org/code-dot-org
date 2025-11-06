@@ -1,3 +1,8 @@
+import bulb from './../../images/bulb.svg';
+import drums from './../../images/drum.svg';
+import partyHorn from './../../images/party-horn.svg';
+import seed from './../../images/seeding.svg';
+import users from './../../images/users.svg';
 export interface ConditionalMessage {
   range: [number, number];
   message: string;
@@ -6,7 +11,6 @@ export interface ConditionalMessage {
 
 export interface PersonalizationInterstitial {
   id: string;
-  afterQuestion: number;
   icon?: string;
   defaultMessage?: string;
   conditionalMessages?: ConditionalMessage[];
@@ -15,7 +19,7 @@ export interface PersonalizationInterstitial {
 export const PERSONALIZATION_INTERSTITIALS: PersonalizationInterstitial[] = [
   {
     id: 'yearsTeaching',
-    afterQuestion: 1,
+    icon: drums,
     conditionalMessages: [
       {
         range: [0, 1],
@@ -41,7 +45,7 @@ export const PERSONALIZATION_INTERSTITIALS: PersonalizationInterstitial[] = [
   },
   {
     id: 'confidence',
-    afterQuestion: 2,
+    icon: seed,
     conditionalMessages: [
       {
         range: [0, 3],
@@ -62,30 +66,46 @@ export const PERSONALIZATION_INTERSTITIALS: PersonalizationInterstitial[] = [
   },
   {
     id: 'goals',
-    icon: 'target',
-    afterQuestion: 3,
+    icon: partyHorn,
     defaultMessage:
       'Having clear goals is half the battle. You’re setting yourself up for an amazing year!',
   },
   {
     id: 'classroomVision',
-    icon: 'users',
-    afterQuestion: 4,
+    icon: users,
     defaultMessage:
       'Your thoughtful approach to classroom culture will help every student feel like they belong in computer science!',
   },
   {
     id: 'support',
-    icon: 'lightbulb',
-    afterQuestion: 5,
+    icon: bulb,
     defaultMessage:
       'Understanding your preferred learning style means you’ll get the most out of every learning opportunity!',
   },
   {
     id: 'challenge',
     icon: 'robot',
-    afterQuestion: 6,
     defaultMessage:
       'Compiling your answers to add to AI Teaching Assistant’s system prompt...',
   },
 ];
+
+export const getInterstitialMessage = (
+  interstitialId: string,
+  answerValue?: number
+): string | undefined => {
+  const interstitial = PERSONALIZATION_INTERSTITIALS.find(
+    i => i.id === interstitialId
+  );
+
+  if (!interstitial) return undefined;
+
+  if (interstitial.conditionalMessages && typeof answerValue === 'number') {
+    const matched = interstitial.conditionalMessages.find(
+      ({range}) => answerValue >= range[0] && answerValue <= range[1]
+    );
+    if (matched) return matched.message;
+  }
+
+  return interstitial.defaultMessage;
+};
