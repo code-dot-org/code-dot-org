@@ -23,6 +23,8 @@ def validate_music(path, options = {})
   drums = name.split('-')[4]
   if drums == 'original'
     drums = pack
+  elsif drums == 'acoustic'
+    drums = 'acoustic_arcade'
   end
 
   # Detect adlib type

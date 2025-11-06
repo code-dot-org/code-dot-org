@@ -440,6 +440,10 @@ else
         else
           if object[:drum] == 'original'
             drum_sounds = sounds.filter {|sound| sound['type'] == 'beat'}
+          elsif object[:drum] == 'acoustic'
+            drum_sounds = drum_sounds.filter do |sound|
+              sound['pack'] == 'acoustic_arcade'
+            end
           elsif object[:drum]
             drum_sounds = drum_sounds.filter do |sound|
               sound['pack'] == object[:drum]
