@@ -9,6 +9,7 @@ export interface Lab2ViewState {
   editorFontSizeKey: keyof typeof FontSize;
   editorFontSizeLoaded: boolean;
   isStandaloneCollapsed?: boolean;
+  isAiDiffContainerOpen?: boolean;
 }
 
 const initialState: Lab2ViewState = {
@@ -16,6 +17,7 @@ const initialState: Lab2ViewState = {
   editorFontSizeKey: 'Small',
   editorFontSizeLoaded: false,
   isStandaloneCollapsed: false,
+  isAiDiffContainerOpen: false,
 };
 
 // THUNKS
@@ -68,6 +70,9 @@ const lab2ViewSlice = createSlice({
     setIsStandaloneCollapsed(state, action: PayloadAction<boolean>) {
       state.isStandaloneCollapsed = action.payload;
     },
+    setIsAiDiffContainerOpen(state, action: PayloadAction<boolean>) {
+      state.isAiDiffContainerOpen = action.payload;
+    },
   },
 });
 
@@ -76,6 +81,7 @@ export const {
   setEditorFontSize,
   setEditorFontSizeLoaded,
   setIsStandaloneCollapsed,
+  setIsAiDiffContainerOpen,
 } = lab2ViewSlice.actions;
 
 export default lab2ViewSlice.reducer;
