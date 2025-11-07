@@ -40,7 +40,13 @@ const aif_prefixes = [
   '/courses/how-ai-works-2023',
 ];
 
-const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
+const dashboard_prefixes = [
+  '/home',
+  '/users',
+  '/teacher_dashboard',
+  '/congrats',
+  '/certificates',
+];
 
 const prefixes = {
   MlKri360o3v2T: csd_prefixes,
@@ -57,6 +63,8 @@ const live = [
   '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
   '/courses/artificial-intelligence-foundations-2025/',
+  '/congrats',
+  '/certificates',
 ];
 
 const experiments =
