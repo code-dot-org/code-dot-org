@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-03 21:52:33 UTC",
+    "serialized_at": "2025-11-06 18:54:55 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -247,6 +247,21 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "lesson-15",
+      "name": "AIF Sem 2 - Unit 4",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -469,6 +484,136 @@
       "seeding_key": {
         "lesson_activity.key": "3af229ae-9678-4db3-90dd-5e140db74b5b",
         "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "b68f311d-8872-4918-92a9-1fb0811753f3",
+      "position": 1,
+      "properties": {
+        "name": "Lesson 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b68f311d-8872-4918-92a9-1fb0811753f3",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "8cd350c4-015d-48bf-939e-31a2399ab277",
+      "position": 2,
+      "properties": {
+        "name": "Lesson 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8cd350c4-015d-48bf-939e-31a2399ab277",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "f49f4813-05d2-46ad-bd7a-b689df2c1688",
+      "position": 3,
+      "properties": {
+        "name": "Lesson 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f49f4813-05d2-46ad-bd7a-b689df2c1688",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "a2ff2c30-ef9a-4dc2-aa73-76548e60305e",
+      "position": 4,
+      "properties": {
+        "name": "Lesson 4"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a2ff2c30-ef9a-4dc2-aa73-76548e60305e",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "7588f373-f74a-4a45-8ab8-dae798769f2e",
+      "position": 5,
+      "properties": {
+        "name": "Lesson 5"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7588f373-f74a-4a45-8ab8-dae798769f2e",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "af39b059-7c51-49ed-9139-14c8a0c61726",
+      "position": 6,
+      "properties": {
+        "name": "Lesson 6"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "af39b059-7c51-49ed-9139-14c8a0c61726",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "9a550107-ac85-4aa5-8275-adb11290bfe4",
+      "position": 7,
+      "properties": {
+        "name": "Lesson 7"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a550107-ac85-4aa5-8275-adb11290bfe4",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "b02482c4-9a6a-4a06-a47a-4888ce3622cf",
+      "position": 8,
+      "properties": {
+        "name": "Lesson 8"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b02482c4-9a6a-4a06-a47a-4888ce3622cf",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "97b76d3f-8bf3-4f0d-9c86-62d93dcc211d",
+      "position": 9,
+      "properties": {
+        "name": "Lesson 9"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97b76d3f-8bf3-4f0d-9c86-62d93dcc211d",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "58180758-0a34-4e09-a4f2-00326dd9922b",
+      "position": 10,
+      "properties": {
+        "name": "Lesson 10"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "58180758-0a34-4e09-a4f2-00326dd9922b",
+        "lesson.key": "lesson-15",
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
@@ -930,6 +1075,150 @@
       "seeding_key": {
         "activity_section.key": "fbe2b592-4970-442d-9ca6-79299553923b",
         "lesson_activity.key": "3af229ae-9678-4db3-90dd-5e140db74b5b"
+      }
+    },
+    {
+      "key": "83932644-1f94-42c1-b2d4-052144f3e10e",
+      "position": 1,
+      "properties": {
+        "progression_name": "For Loop Flowchart"
+      },
+      "seeding_key": {
+        "activity_section.key": "83932644-1f94-42c1-b2d4-052144f3e10e",
+        "lesson_activity.key": "b68f311d-8872-4918-92a9-1fb0811753f3"
+      }
+    },
+    {
+      "key": "df697b38-7a81-4047-ba0c-d08f33c057ac",
+      "position": 2,
+      "properties": {
+        "progression_name": "Web Lab Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "df697b38-7a81-4047-ba0c-d08f33c057ac",
+        "lesson_activity.key": "b68f311d-8872-4918-92a9-1fb0811753f3"
+      }
+    },
+    {
+      "key": "2fa45194-8ebc-4345-803c-ad47726b35ba",
+      "position": 1,
+      "properties": {
+        "progression_name": "Color Fill Bar"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fa45194-8ebc-4345-803c-ad47726b35ba",
+        "lesson_activity.key": "8cd350c4-015d-48bf-939e-31a2399ab277"
+      }
+    },
+    {
+      "key": "9b3b62d3-26a7-406b-b43f-3d4076cb6546",
+      "position": 2,
+      "properties": {
+        "progression_name": "Timer/Alarm Clock"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b3b62d3-26a7-406b-b43f-3d4076cb6546",
+        "lesson_activity.key": "8cd350c4-015d-48bf-939e-31a2399ab277"
+      }
+    },
+    {
+      "key": "cefd15c4-54ea-43af-bf6c-aa820a12c7e8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cefd15c4-54ea-43af-bf6c-aa820a12c7e8",
+        "lesson_activity.key": "f49f4813-05d2-46ad-bd7a-b689df2c1688"
+      }
+    },
+    {
+      "key": "2c4df58a-48d5-42a5-8d26-eb390564d2e2",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2c4df58a-48d5-42a5-8d26-eb390564d2e2",
+        "lesson_activity.key": "f49f4813-05d2-46ad-bd7a-b689df2c1688"
+      }
+    },
+    {
+      "key": "ca356ea5-b04a-419c-8c4c-338cee68de5e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ca356ea5-b04a-419c-8c4c-338cee68de5e",
+        "lesson_activity.key": "a2ff2c30-ef9a-4dc2-aa73-76548e60305e"
+      }
+    },
+    {
+      "key": "1bc2c81a-0663-4de3-973f-8f39f7fbfbe2",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1bc2c81a-0663-4de3-973f-8f39f7fbfbe2",
+        "lesson_activity.key": "a2ff2c30-ef9a-4dc2-aa73-76548e60305e"
+      }
+    },
+    {
+      "key": "cf08aa4a-9c07-4733-a514-a898049d25de",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cf08aa4a-9c07-4733-a514-a898049d25de",
+        "lesson_activity.key": "7588f373-f74a-4a45-8ab8-dae798769f2e"
+      }
+    },
+    {
+      "key": "2212b63e-716c-4a6b-91ab-a23235079981",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2212b63e-716c-4a6b-91ab-a23235079981",
+        "lesson_activity.key": "af39b059-7c51-49ed-9139-14c8a0c61726"
+      }
+    },
+    {
+      "key": "c1715325-d07b-408b-8f61-2103e8e78908",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c1715325-d07b-408b-8f61-2103e8e78908",
+        "lesson_activity.key": "9a550107-ac85-4aa5-8275-adb11290bfe4"
+      }
+    },
+    {
+      "key": "274136c4-666b-4307-8570-ffc5d08db1af",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "274136c4-666b-4307-8570-ffc5d08db1af",
+        "lesson_activity.key": "b02482c4-9a6a-4a06-a47a-4888ce3622cf"
+      }
+    },
+    {
+      "key": "90620ddc-9525-4fa2-bc45-3eee9138f3c5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "90620ddc-9525-4fa2-bc45-3eee9138f3c5",
+        "lesson_activity.key": "97b76d3f-8bf3-4f0d-9c86-62d93dcc211d"
+      }
+    },
+    {
+      "key": "5bbe737f-9bc9-423c-a431-301e6a95158b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5bbe737f-9bc9-423c-a431-301e6a95158b",
+        "lesson_activity.key": "58180758-0a34-4e09-a4f2-00326dd9922b"
       }
     }
   ],
@@ -2712,6 +3001,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emma-test-sketch-lab-bug"
+        ],
         "progression": "Sketch Lab 2"
       },
       "bonus": false,
@@ -2726,6 +3018,190 @@
       },
       "level_keys": [
         "emma-test-sketch-lab-bug"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emma-aif-sem2-unit4-lesson1-level1"
+        ],
+        "progression": "For Loop Flowchart"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-aif-sem2-unit4-lesson1-level1"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "83932644-1f94-42c1-b2d4-052144f3e10e"
+      },
+      "level_keys": [
+        "emma-aif-sem2-unit4-lesson1-level1"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "erik-weblab-playground-clone"
+        ],
+        "progression": "Web Lab Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "erik-weblab-playground-clone"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "df697b38-7a81-4047-ba0c-d08f33c057ac"
+      },
+      "level_keys": [
+        "erik-weblab-playground-clone"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unit4-lesson2-prototype-1"
+        ],
+        "progression": "Color Fill Bar"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unit4-lesson2-prototype-1"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "2fa45194-8ebc-4345-803c-ad47726b35ba"
+      },
+      "level_keys": [
+        "unit4-lesson2-prototype-1"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unit4-lesson2-prototype-3"
+        ],
+        "progression": "Timer/Alarm Clock"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unit4-lesson2-prototype-3"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "9b3b62d3-26a7-406b-b43f-3d4076cb6546"
+      },
+      "level_keys": [
+        "unit4-lesson2-prototype-3"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unit-4-l3-sketchlab-prototype"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "cefd15c4-54ea-43af-bf6c-aa820a12c7e8"
+      },
+      "level_keys": [
+        "unit-4-l3-sketchlab-prototype"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unit-4-l3-weblab-prototype"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "2c4df58a-48d5-42a5-8d26-eb390564d2e2"
+      },
+      "level_keys": [
+        "unit-4-l3-weblab-prototype"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unit4-lesson4-sketchlab-prototype"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "ca356ea5-b04a-419c-8c4c-338cee68de5e"
+      },
+      "level_keys": [
+        "unit4-lesson4-sketchlab-prototype"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unit4-lesson4-weblab-prototype"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "1bc2c81a-0663-4de3-973f-8f39f7fbfbe2"
+      },
+      "level_keys": [
+        "unit4-lesson4-weblab-prototype"
       ]
     }
   ],
@@ -3604,6 +4080,102 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground",
         "activity_section.key": "fbe2b592-4970-442d-9ca6-79299553923b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-aif-sem2-unit4-lesson1-level1",
+        "script_level.level_keys": [
+          "emma-aif-sem2-unit4-lesson1-level1"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "83932644-1f94-42c1-b2d4-052144f3e10e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "erik-weblab-playground-clone",
+        "script_level.level_keys": [
+          "erik-weblab-playground-clone"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "df697b38-7a81-4047-ba0c-d08f33c057ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unit4-lesson2-prototype-1",
+        "script_level.level_keys": [
+          "unit4-lesson2-prototype-1"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "2fa45194-8ebc-4345-803c-ad47726b35ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unit4-lesson2-prototype-3",
+        "script_level.level_keys": [
+          "unit4-lesson2-prototype-3"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "9b3b62d3-26a7-406b-b43f-3d4076cb6546"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unit-4-l3-sketchlab-prototype",
+        "script_level.level_keys": [
+          "unit-4-l3-sketchlab-prototype"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "cefd15c4-54ea-43af-bf6c-aa820a12c7e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unit-4-l3-weblab-prototype",
+        "script_level.level_keys": [
+          "unit-4-l3-weblab-prototype"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "2c4df58a-48d5-42a5-8d26-eb390564d2e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unit4-lesson4-sketchlab-prototype",
+        "script_level.level_keys": [
+          "unit4-lesson4-sketchlab-prototype"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "ca356ea5-b04a-419c-8c4c-338cee68de5e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unit4-lesson4-weblab-prototype",
+        "script_level.level_keys": [
+          "unit4-lesson4-weblab-prototype"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "1bc2c81a-0663-4de3-973f-8f39f7fbfbe2"
       }
     }
   ],

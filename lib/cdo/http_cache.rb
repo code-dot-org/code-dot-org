@@ -77,6 +77,7 @@ class HttpCache
     dance-ai-2023
     mc
     music-jam-2024
+    mix-move-ai-2025
   ).map do |script_name|
     # Assume all cached units are in single unit courses.
     [script_name, "/courses/#{script_name}/units/1/lessons/*"]
@@ -167,6 +168,12 @@ class HttpCache
             proxy: 'cdo-assets',
             headers: S3_FORWARD_HEADERS,
             cookies: 'none'
+          },
+          {
+            path: %w[/congrats /congrats/*],
+            proxy: 'dashboard',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies,
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {

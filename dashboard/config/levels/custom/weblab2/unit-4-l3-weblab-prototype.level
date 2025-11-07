@@ -1,0 +1,47 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-06T18:53:32.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Guessing Game (While Loop)</title>\n</head>\n<body>\n  <h2>🎯 Guess the Number (1–10)</h2>\n  <p>Secret Number: <span id=\"targetNumber\"></span></p>\n\n  <input id=\"guessInput\" placeholder=\"Enter your guess\">\n  <p id=\"output\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n\n\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: \"Segoe UI\", Arial, sans-serif;\n  background-color: #f7f8fc;\n  color: #333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.container {\n  background: #fff;\n  border-radius: 12px;\n  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\n  padding: 30px;\n  width: 320px;\n  text-align: center;\n}\n\nh1 {\n  margin-top: 0;\n  color: #0066cc;\n}\n\n.game-box {\n  margin-top: 20px;\n}\n\ninput {\n  padding: 8px;\n  width: 80%;\n  border-radius: 6px;\n  border: 1px solid #ccc;\n  margin-bottom: 10px;\n}\n\nbutton {\n  padding: 8px 16px;\n  border: none;\n  border-radius: 6px;\n  background-color: #0066cc;\n  color: white;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: #0055aa;\n}\n\n#output {\n  margin-top: 15px;\n  font-weight: bold;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const output = document.getElementById(\"output\");\nconst guessInput = document.getElementById(\"guessInput\");\nconst targetNumber = document.getElementById(\"targetNumber\");\n\n// Generate random number between 1–10\nconst secretNumber = Math.floor(Math.random() * 10) + 1;\ntargetNumber.textContent = `${secretNumber}`; // for teaching visibility\n\nlet attempts = 0; // persist across guesses\n\n// --- GAME LOGIC USING A WHILE LOOP ---\nconst playGame = () => {\n  let guess = Number(guessInput.value);\n\n  // Only run if a valid number is entered\n  if (!guess) {\n    output.textContent = \"\";\n    return;\n  }\n\n  // Keep looping until the guess is correct\n  while (guess !== secretNumber) {\n    attempts++;\n\n    if (guess < secretNumber) {\n      output.textContent = \"Too low! Try again.\";\n    } else {\n      output.textContent = \"Too high! Try again.\";\n    }\n\n    // break so it doesn't lock up the browser\n    break;\n  }\n\n  if (guess === secretNumber) {\n    attempts++;\n    output.textContent = `✅ Correct! The number was ${secretNumber}. You took ${attempts} attempts.`;\n  }\n};\n\n// 👇 Run game every time the user types\nguessInput.addEventListener(\"input\", playGame);\n\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-06 19:01:28 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-06 19:01:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-06 19:21:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-06 19:27:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

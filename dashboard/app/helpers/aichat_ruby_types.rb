@@ -12,7 +12,7 @@ module AichatRubyTypes
   def self.raise_or_notify_type_error(message)
     if rack_env?(:production)
       Honeybadger.notify(
-        error_class: AichatRubyTypesWarning,
+        error_class: 'AichatRubyTypesWarning',
         error_message: message
       )
     else

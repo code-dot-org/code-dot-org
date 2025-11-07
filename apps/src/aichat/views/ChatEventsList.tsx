@@ -29,6 +29,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   buildAssetUrl,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
+  const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
@@ -36,9 +37,10 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   );
 
   const conversationContainerRef = useRef<HTMLDivElement>(null);
-  const lastMessageRef = useRef<HTMLDivElement | null>(null);
   const previousLastMessageRole = useRef<Role | null>(null);
   const previousEventsLength = useRef<number | null>(null);
+  const parentRef = useRef<HTMLDivElement>(null);
+  const finalEventRef = useRef<HTMLDivElement>(null);
 
   const scrollToLastMessage = useCallback((keepTopOfMessageVisible = false) => {
     if (conversationContainerRef.current) {
@@ -46,7 +48,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       setInProgrammaticScroll(true);
 
       if (keepTopOfMessageVisible) {
-        lastMessageRef.current?.scrollIntoView({
+        finalEventRef.current?.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
         });
@@ -70,6 +72,13 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     return (
       container.scrollTop + container.clientHeight + 1 >= container.scrollHeight
     );
+  };
+
+  const handleParentKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget && e.key === 'Enter') {
+      setIsInChatNavigationMode(true);
+      finalEventRef.current?.focus();
+    }
   };
 
   useEffect(() => {
@@ -153,6 +162,15 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   return (
     <div
       id="chat-workspace-conversation"
+      ref={parentRef}
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+      tabIndex={0}
+      aria-label={
+        isInChatNavigationMode
+          ? ''
+          : 'Chat history: press Enter to navigate, Escape to exit'
+      }
+      onKeyDown={handleParentKeyDown}
       className={classNames(
         moduleStyles.conversationArea,
         moduleStyles.scrollToBottomContainer
@@ -164,17 +182,20 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         ) : (
           <>
             {events.map((event, index) => (
-              <div
+              <ChatEventView
+                event={event}
                 key={event.timestamp}
-                ref={index === events.length - 1 ? lastMessageRef : null}
-                className={moduleStyles.chatEventViewWrapper}
-              >
-                <ChatEventView
-                  event={event}
-                  isTeacherView={isTeacherView}
-                  buildAssetUrl={buildAssetUrl}
-                />
-              </div>
+                isTeacherView={isTeacherView}
+                buildAssetUrl={buildAssetUrl}
+                ref={index === events.length - 1 ? finalEventRef : undefined}
+                tabIndex={isInChatNavigationMode ? 0 : -1}
+                onKeyDown={e => {
+                  if (e.key === 'Escape' && e.target === e.currentTarget) {
+                    setIsInChatNavigationMode(false);
+                    parentRef.current?.focus();
+                  }
+                }}
+              />
             ))}
             <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
           </>

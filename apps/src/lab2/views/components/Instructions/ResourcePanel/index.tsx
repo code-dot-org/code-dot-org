@@ -13,11 +13,13 @@ import lab2I18n from '@cdo/apps/lab2/locale';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -61,10 +63,6 @@ interface VersionHistoryProps {
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
-  [Tabs.TeachersOnly]: {
-    title: commonI18n.teachingTips(),
-    icon: 'chalkboard-teacher',
-  },
   [Tabs.StudentRubric]: {
     title: commonI18n.rubric(),
     icon: 'clipboard-list',
@@ -76,6 +74,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Validation]: {
     title: commonI18n.validation(),
     icon: 'clipboard-check',
+  },
+  [Tabs.TeachersOnly]: {
+    title: commonI18n.teachingTips(),
+    icon: 'chalkboard-teacher',
   },
 };
 
@@ -201,19 +203,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (
-      isUserTeacher &&
-      (levelProperties.teacherMarkdown ||
-        levelProperties.predictSettings?.solution)
-    ) {
-      tabMap[Tabs.TeachersOnly] = (
-        <ForTeachersOnly
-          levelProperties={levelProperties}
-          className={styles.panelContent}
-        />
-      );
-    }
-
     if (hiddenContextCallback && aiTutorVisible) {
       tabMap[Tabs.AiTutor] = (
         <AiTutorChat
@@ -254,6 +243,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
     if (showRubric) {
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
+    }
+
+    if (
+      isUserTeacher &&
+      (levelProperties.teacherMarkdown ||
+        levelProperties.predictSettings?.solution)
+    ) {
+      tabMap[Tabs.TeachersOnly] = (
+        <ForTeachersOnly
+          levelProperties={levelProperties}
+          className={classNames(styles.panelContent, styles.teachersOnlyTab)}
+        />
+      );
     }
 
     return tabMap;
@@ -328,12 +330,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   const onClickTab = useCallback(
     (tab: Tabs) => {
+      if (currentTab && currentTab !== tab) {
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, appName, {
+          resourcePanelTabClickedTo: tab,
+          resourcePanelTabClickedFrom: currentTab,
+        });
+      }
       setCurrentTab(tab);
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [dispatch, isStandaloneCollapsed]
+    [appName, currentTab, dispatch, isStandaloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
@@ -343,20 +351,37 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
         setIsSettingsOpen(true);
+        sendLab2AnalyticsEvent(
+          EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
+          appName
+        );
       } else {
+        // If settngs is currently not open, open settings panel and send analytics event.
+        if (!isSettingsOpen) {
+          sendLab2AnalyticsEvent(
+            EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
+            appName
+          );
+        }
         setIsSettingsOpen(!isSettingsOpen);
       }
     } else {
       // For standalone projects with no tabs, we toggle the floating settings panel.
+      if (!isFloatingSettingsOpen) {
+        sendLab2AnalyticsEvent(
+          EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
+          appName
+        );
+      }
       setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
     }
   }, [
-    dispatch,
     hasTabs,
-    isSettingsOpen,
     isStandaloneCollapsed,
+    dispatch,
+    appName,
+    isSettingsOpen,
     isFloatingSettingsOpen,
-    setIsFloatingSettingsOpen,
   ]);
 
   return (
@@ -441,7 +466,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     <Button
                       className={classNames(
                         styles.tabButton,
-                        tab === currentTab && styles.selected
+                        tab === currentTab && styles.selected,
+                        tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
                       onClick={() => onClickTab(tab)}
                       key={tab}
@@ -545,6 +571,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   closePanel={() => {
                     setIsSettingsOpen(false);
                   }}
+                  appName={appName}
                 />
               )}
             </PanelContainer>
@@ -563,6 +590,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             closePanel={() => {
               setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
             }}
+            appName={appName}
           />
         </div>
       )}
