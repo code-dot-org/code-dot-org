@@ -318,6 +318,14 @@
       "import": "./dist/esm/formFieldWrapper/index.mjs",
       "require": "./dist/cjs/formFieldWrapper/index.js"
     },
+    "./header": {
+      "types": {
+        "import": "./dist/esm/header/index.d.ts",
+        "require": "./dist/cjs/header/index.d.ts"
+      },
+      "import": "./dist/esm/header/index.mjs",
+      "require": "./dist/cjs/header/index.js"
+    },
     "./heroBanner": {
       "types": {
         "import": "./dist/esm/heroBanner/index.d.ts",
