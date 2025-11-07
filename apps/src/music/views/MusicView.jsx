@@ -543,7 +543,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     // In case we are showing the music generation Guide, reset its state.
-    this.props.setAiGenerateState('clearing');
+    this.props.setAiGenerateState('clearing-before-none');
 
     // In Start mode, load sources from the default JSON.
     if (isStartMode) {

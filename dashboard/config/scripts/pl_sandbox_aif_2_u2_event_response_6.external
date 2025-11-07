@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/917f3d8daa6b66a5a7eedf298da49e85-image-1761849785790.png" alt="icon of hand pressing a button" width="150px" style="border-radius:10px; float:left; margin: 0 20px 10px 0px;">
 
-#### Every interactive moment on a webpage—like clicking a button or typing into a box—follows a simple pattern:
+#### Every interactive moment on a webpage follows a simple pattern:
 
 
 <ul>
@@ -28,7 +28,7 @@ markdown <<MARKDOWN
 
 #### This sequence represents a simple cause-and-effect chain: **Event → State → Response**. 
 
-#### It illustrates how user actions trigger changes within a program and how those changes produce visible responses—forming the core logic behind interactivity in web apps.
+#### It illustrates how user actions trigger changes within a program and how those changes produce visible responses thus, forming the core logic behind interactivity in web apps.
 
 
 

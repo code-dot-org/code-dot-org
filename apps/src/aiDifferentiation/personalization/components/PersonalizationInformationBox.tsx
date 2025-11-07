@@ -1,9 +1,9 @@
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import arrowRight from './images/arrow-right.svg';
+import arrowRight from './../images/arrow-right.svg';
 
-import style from './personalization-information.module.scss';
+import style from '../personalization-information.module.scss';
 interface PersonalizationInformationBoxProps {
   information?: string;
   type?: 'regular' | 'formatted' | 'arrow';
