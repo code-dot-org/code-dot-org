@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 63,
-  "created_at": "2025-11-05T19:48:15.000Z",
+  "created_at": "2025-11-07T19:46:33.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -34,15 +34,14 @@
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
     "guide_mode": "aiDancerGenerate",
-    "ai_dancer_generate_adlib": "creature-attire-mood-style-05",
-    "long_instructions": "### Finish your lead dancer\r\nModify the prompt with more details.",
-    "project_template_level_name": "mix-move-ai-dancer-prompt-template",
+    "ai_dancer_generate_adlib": "creature-05",
+    "long_instructions": "#### Use AI to design your dancer\r\nA prompt is an instruction that tells AI what to do.\r\n1. Modify the prompt below.\r\n2. Press Generate dancer.",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-03T20:55:09.854+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-dancer-prompt-4-input\\\"\"],\"cloned_from\":\"mix-move-ai-dancer-prompt-4-input\"},{\"changed_at\":\"2025-11-03 20:56:53 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 18:53:54 +0000\",\"changed\":[\"ai_dancer_generate_adlib\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-07 19:50:50 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-11-07T19:46:33.067+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-dancer-prompt-1-input\\\"\"],\"cloned_from\":\"mix-move-ai-dancer-prompt-1-input\"},{\"changed_at\":\"2025-11-07 19:46:47 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
