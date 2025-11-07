@@ -11,6 +11,7 @@ import {useMemo} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -28,9 +29,13 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
  * @param appName - (optional) The name of the application triggering the download, used for analytics.
  * @returns Nothing (void)
  */
-const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
+const handleFileDownload = (
+  file: ProjectFile,
+  appName: string | undefined,
+  levelPath: string
+) => {
   fileDownload(file.contents, file.name);
-  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName, {levelPath});
 };
 
 /**
@@ -68,7 +73,7 @@ export const useFileRowOptions = (
 
   const appName = levelProperties.appName;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
   const isLocked = !isStartMode && file.type === ProjectFileType.LOCKED_STARTER;
 
   const dropdownOptions = useMemo(
@@ -125,7 +130,7 @@ export const useFileRowOptions = (
         condition: editableFileTypes.includes(file.language),
         iconName: 'download',
         labelText: codebridgeI18n.downloadFile(),
-        clickHandler: () => handleFileDownload(file, appName),
+        clickHandler: () => handleFileDownload(file, appName, levelPath),
       },
       {
         condition: !isLocked,
@@ -148,6 +153,7 @@ export const useFileRowOptions = (
       file,
       isLocked,
       isStartMode,
+      levelPath,
       openConfirmDeleteFile,
       openMoveFilePrompt,
       openRenameFilePrompt,

@@ -4,12 +4,14 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import Typography from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import localization, {useLocalization} from '@cdo/apps/localization';
 import {LanguageInfo} from '@cdo/apps/localization/Localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import styles from './settings-panel.module.scss';
 interface SettingsPanelProps {
@@ -30,6 +32,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   const [localeOptions, setLocaleOptions] = useState<LanguageInfo[]>(
     localization.locales
   );
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
 
   useEffect(() => {
     // Set up a listener for localization changes.
@@ -50,6 +53,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
     sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_LANGUAGE_CHANGE, appName, {
       languageChangedTo: event.target.value,
       languageChangedFrom: locale,
+      levelPath,
     });
     event.target.form?.submit();
   };
@@ -62,6 +66,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
       settingName: setting.label,
       settingChangedTo: event.target.value,
       settingChangedFrom: setting.selectedValue || '',
+      levelPath,
     });
     setting.onChange(event.target.value);
   };

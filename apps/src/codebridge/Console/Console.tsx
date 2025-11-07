@@ -7,6 +7,7 @@ import {ImageAddon} from '@xterm/addon-image';
 import {Terminal} from '@xterm/xterm';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -43,6 +44,7 @@ const Console: React.FunctionComponent = () => {
   );
   const {signInState} = useAppSelector(state => state.currentUser);
   const dispatch = useAppDispatch();
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
   const {theme} = useTheme();
 
   const clearOutput = useCallback(
@@ -51,10 +53,12 @@ const Console: React.FunctionComponent = () => {
         .getConsoleManager()
         ?.clearTerminalLines();
       if (sendAnalytics) {
-        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
+        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName, {
+          levelPath,
+        });
       }
     },
-    [appName]
+    [appName, levelPath]
   );
 
   // Clear console when we change levels. Don't send an analytics event

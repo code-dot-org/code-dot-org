@@ -7,6 +7,7 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -165,6 +166,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const dispatch = useAppDispatch();
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -334,6 +336,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, appName, {
           resourcePanelTabClickedTo: tab,
           resourcePanelTabClickedFrom: currentTab,
+          levelPath,
         });
       }
       setCurrentTab(tab);
@@ -341,7 +344,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [appName, currentTab, dispatch, isStandaloneCollapsed]
+    [appName, currentTab, dispatch, isStandaloneCollapsed, levelPath]
   );
 
   const onClickSettingsButton = useCallback(() => {
@@ -353,14 +356,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         setIsSettingsOpen(true);
         sendLab2AnalyticsEvent(
           EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-          appName
+          appName,
+          {levelPath}
         );
       } else {
         // If settngs is currently not open, open settings panel and send analytics event.
         if (!isSettingsOpen) {
           sendLab2AnalyticsEvent(
             EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-            appName
+            appName,
+            {levelPath}
           );
         }
         setIsSettingsOpen(!isSettingsOpen);
@@ -370,7 +375,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       if (!isFloatingSettingsOpen) {
         sendLab2AnalyticsEvent(
           EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-          appName
+          appName,
+          {levelPath}
         );
       }
       setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
@@ -380,6 +386,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isStandaloneCollapsed,
     dispatch,
     appName,
+    levelPath,
     isSettingsOpen,
     isFloatingSettingsOpen,
   ]);
