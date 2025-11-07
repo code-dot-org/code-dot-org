@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-29 06:33:17 UTC",
+    "serialized_at": "2025-10-31 08:24:34 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2648,8 +2648,19 @@
       }
     },
     {
-      "key": "efbb3c8d-a277-4b2b-b614-d6c7187e2d0f",
+      "key": "e9a04208-8ab4-4a0d-81b8-d02867e3d597",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that predictive AI focuses on identifying patterns in existing data, while generative AI uses patterns to produce something entirely new. Encourage students to notice how generative tasks need more processing power, memory, and energy on the bars above.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think generating new text might require more computational resources than predicting patterns?*\n- Think-Pair-Share: Ask students to consider their answers, share with a partner, and then debrief as a class. \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that generative AI tasks demand more processing power and memory because they must create new outputs from complex models, while predictive tasks focus on analyzing existing data to make faster, simpler decisions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Summarize that predictive AI tasks focus on analyzing existing data and they’re fast and efficient whereas generative AI tasks have to create something new, like text or images, which takes much more computation and energy."
+      },
+      "seeding_key": {
+        "activity_section.key": "e9a04208-8ab4-4a0d-81b8-d02867e3d597",
+        "lesson_activity.key": "a1c12a16-61e4-47b3-ba50-05ee9a69f2c1"
+      }
+    },
+    {
+      "key": "efbb3c8d-a277-4b2b-b614-d6c7187e2d0f",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a How AI Uses Data activity guide.",
         "duration": "10",
@@ -2662,7 +2673,7 @@
     },
     {
       "key": "817237d5-d4e7-440d-ad0f-66702d85a91e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "AI systems use data to make decisions in real-world applications. Let’s explore how different AI models function and what data they rely on.",
         "remarks": true
@@ -2674,7 +2685,7 @@
     },
     {
       "key": "6fb7efed-151d-43bb-bcdb-2c477275d582",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4. Assign each group an AI use case:\n- Voice Assistants (Alexa/Siri): AI processes voice input and generates responses.\n- Self-Driving Cars: AI uses sensor data to navigate roads.\n- Medical Imaging AI: AI scans medical images for disease detection.\n- AI Translation Tools: AI converts text/audio between languages.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to open Lesson 9, Level 2. In their groups, students will watch a video about the assigned technology and answer the following questions in their activity guide:\n- What is the AI model doing in this scenario?\n- What type of data is being input?\n- What is the decision being made? In other words, what does this AI system do with the data?\n- Why does this task require speed and scale?",
         "progression_name": "Explore an AI Model"
@@ -2686,7 +2697,7 @@
     },
     {
       "key": "9581d646-fb04-451f-b2b2-9e071e3c2e5a",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure that all students are able to answer all questions. At the end of the lesson, students will do a jigsaw activity to share out their answers."
       },
@@ -2697,7 +2708,7 @@
     },
     {
       "key": "fe212366-5fe4-4f96-8f9f-8a30fba5ba5f",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to Lesson 9, Level 3. Students use AI Chat to research and choose the best AI hardware for various tasks that might be associated with an AI model",
         "progression_name": "Determine AI Hardware",
@@ -3451,15 +3462,43 @@
       }
     },
     {
-      "key": "83af076d-6308-46f8-b747-e729a6222c3c",
+      "key": "28f87abe-734e-4958-8097-ca69810e7c7a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use discuss the targets they identified as interesting and get them to agree on one target to focus on for their project. Direct students to record this target in their Project Guide under Select an SDG Target.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 2 to use AI Chat to help them learn more about the target they’ve chosen and start to brainstorm potential solutions and project ideas.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss the targets they identified as interesting and get them to agree on one target to focus on for their project. Direct students to write their selected target in the Select an SDG Target section of their Project Guide. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students review the duties for each role on the next slide and ask each pair to choose a role for themselves and their partner before beginning the AI.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to balance the workload. The AI Manager leads the prompting and refinement process, while the Researcher records findings and helps improve prompts. Both partners share responsibility for evaluating and refining chatbot responses."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "28f87abe-734e-4958-8097-ca69810e7c7a",
+        "lesson_activity.key": "b5ce20af-fdf0-414e-a8f8-fb0d5a960978"
+      }
+    },
+    {
+      "key": "66d8b059-fc28-489e-975b-5245e0c4fda1",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the role responsibilities for **Researcher** and **AI Manager** with the students. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that groups have decided who will begin as the AI Manager and who will be the Researcher."
+      },
+      "seeding_key": {
+        "activity_section.key": "66d8b059-fc28-489e-975b-5245e0c4fda1",
+        "lesson_activity.key": "b5ce20af-fdf0-414e-a8f8-fb0d5a960978"
+      }
+    },
+    {
+      "key": "83af076d-6308-46f8-b747-e729a6222c3c",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use discuss the targets they identified as interesting and get them to agree on one target to focus on for their project. Direct students to record this target in their Project Guide under Select an SDG Target.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 2 to use AI Chat to research their selected SDG target. Explain that they’ll not only gather information and brainstorm possible solutions, but also practice refining one of their prompts using the Prompt Refinement Tables in their project guide.",
         "progression_name": "Brainstorm Your Project",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Open Lesson 13 Level 2 and model for students how to use AI Chat in the brainstorming process. Demonstrate an example conversation where AI helps brainstorm ideas. Some questions to try: \n- How could technology help solve the effects of natural disasters?\n- What kinds of sensors or data could be used to address pollution?\n- How might a computer system (hardware, software, network) be designed to improve energy efficiency?\n"
+            "markdown": "Open Lesson 13, Level 2 and model how to use AI Chat for both research and refinement.\nDemonstrate an example conversation where AI helps brainstorm ideas and then show how to identify when a response is too broad or unclear and improve the prompt.\n\nSome example questions to try:\n- How could technology help reduce waste in cities?\n- What kinds of sensors or data could be used to address pollution?\n- How might a computer system (hardware, software, or network) be designed to improve energy efficiency?\n\nEncourage students to complete at least one full refinement cycle, adjusting their wording to get more specific or useful responses from the chatbot."
           }
         ]
       },
@@ -3470,7 +3509,7 @@
     },
     {
       "key": "0f900bca-3baf-431c-b40d-bf21bcc83eb5",
-      "position": 6,
+      "position": 8,
       "properties": {
         "progression_name": "Brainstorm Your Project"
       },
@@ -3481,7 +3520,7 @@
     },
     {
       "key": "4dc3f604-2d63-4193-afcb-22e9140cfca6",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should wrote a description of the system in the Project Description section of their project guide.",
         "tips": [
@@ -3498,14 +3537,14 @@
     },
     {
       "key": "11b11abc-15ac-4652-914b-1aad1a32e576",
-      "position": 8,
+      "position": 10,
       "properties": {
-        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
+        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them create user personas for their project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use AI Chat to co-create their first user persona, describing who the user is, what they need, and what challenge the system could help solve.\n\nThen, have them choose a focus area and ask the chatbot what might be missing from their first persona in relation to that focus area.\n\nStudents should then co-create a second persona that reflects the AI’s feedback and record both personas in their project guide.\n",
         "progression_name": "Understanding Your Users",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students who are excited about their ideas may want to rush past this part to get to the prototyping and designing of the device. Remind them about the importance in going slow and considering diverse perspectives from the start of the design process to ensure less need for reworking and revising designs later in the process."
+            "markdown": "Model how to build a persona with AI by showing a short example. Demonstrate how to follow up with a refinement prompt like:\n- What might be missing from this persona if I want to make my system more sustainable?\n\nEncourage students to compare their two personas and notice how the focus area changes the user’s needs or perspective."
           }
         ]
       },
@@ -3516,9 +3555,9 @@
     },
     {
       "key": "7de51764-b449-437b-8a5b-25ab348e3241",
-      "position": 9,
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Rapid Prototype section in their Project Guides which includes defining the data that might be needed and sketching a rapid prototype.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Rapid Prototype section in their Project Guides which includes defining the data that might be needed and sketching a rapid prototype.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3533,7 +3572,7 @@
     },
     {
       "key": "f6291a2c-5856-4174-aeb4-6ed5b9f61f6f",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the components section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
         "duration": "5",
@@ -3624,7 +3663,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Before starting, set clear expectations: students will analyze projects, provide feedback, and rotate through stations. Walk through the first visit together to model reading the diagram, identifying hardware/software components, connecting to SDGs, and discussing ethical considerations. Use a structured feedback approach and keep rotations timed and organized.\n\nModel the process for the first visit (observe, analyze, discuss). Use a simple feedback framework:\n- I notice… (Observation)\n- I wonder… (Question)\n- Some ethical issues that might arise are… (Ethics)\n\nSet time limits (e.g., four to six minutes per station) and use a visual timer.\n\nGive a 1-minute warning before rotations and remind students to make sure they’ve left post-it notes by the station."
+            "markdown": "This activity can run long — keep pacing tight so there’s time for ethics synthesis and AI critique later.\nEncourage students to leave concise, meaningful feedback rather than long notes.\n\nBefore starting, set clear expectations: students will analyze projects, provide feedback, and rotate through stations. Walk through the first visit together to model reading the diagram, identifying hardware/software components, connecting to SDGs, and discussing ethical considerations. Use a structured feedback approach and keep rotations timed and organized.\n\nSet time limits (e.g., four to six minutes per station) and use a visual timer.\n\nGive a 1-minute warning before rotations and remind students to make sure they’ve left post-it notes by the station.\n"
           }
         ]
       },
@@ -3659,8 +3698,14 @@
       "key": "3035aeb1-da4d-402d-b756-52725babdff9",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 5. Students will upload their computer system diagram into the AI Chat in order to receive feedback on how to improve it. ",
-        "progression_name": "Computer System Diagram Feedback"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 5. Students will upload their computer system diagram into the AI Chat in order to receive feedback on how to improve it. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students upload their work and ask for feedback based on the project rubric. \n\nEnsure students record both the chatbot’s feedback and their refinements in their project guide.",
+        "progression_name": "Computer System Diagram Feedback",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this activity short. Encourage groups to focus on one key improvement rather than trying to revise everything.\nIf time is short after the gallery walk, limit the critique to either the problem statement or the system diagram."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3035aeb1-da4d-402d-b756-52725babdff9",
@@ -4668,6 +4713,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson7-level2_v3-2025"
+        ],
         "progression": "Sensors and AI Chatbot"
       },
       "bonus": false,
@@ -4690,6 +4738,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson7-level3_v2-2025"
+        ],
         "progression": "Sensors and AI Chatbot"
       },
       "bonus": false,
@@ -6105,26 +6156,30 @@
   "resources": [
     {
       "name": "[EXEMPLAR] Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1Dato9dFitzLp4ba51-oy8mAov2HxxqJH9873QlPmUvQ/edit?usp=drivesdk",
-      "key": "_exemplar_sustainable_systems_project_planning_guide",
+      "url": "https://docs.google.com/document/d/1B564B7VVxuGwiYfi1YQBLMzoS6eqT8d8DvixrwaqBTs/edit?usp=sharing",
+      "key": "_exemplar_sustainable_systems_project_planning_guide_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
-        "resource.key": "_exemplar_sustainable_systems_project_planning_guide"
+        "resource.key": "_exemplar_sustainable_systems_project_planning_guide_1"
       }
     },
     {
       "name": "[EXEMPLAR] System Diagram Template",
-      "url": "https://docs.google.com/presentation/d/1P9C5kOsQswM9LVnL2UeBKhtWKQJX4QlfOzEnfZr5vBQ/edit?usp=drivesdk",
-      "key": "_exemplar_system_diagram_template",
+      "url": "https://docs.google.com/presentation/d/1JsKxBj1nciCg-_4YSOsI5X9vR0-uIC5YygkLoDtSdTk/edit?usp=sharing",
+      "key": "_exemplar_system_diagram_template_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
-        "resource.key": "_exemplar_system_diagram_template"
+        "resource.key": "_exemplar_system_diagram_template_1"
       }
     },
     {
@@ -6163,6 +6218,20 @@
       },
       "seeding_key": {
         "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_2"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/158PRYzfYM0fRDuorQJ5GvE-A4PBvpgJn8EblGr71gjM/edit?usp=sharing",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_3"
       }
     },
     {
@@ -6380,6 +6449,20 @@
       },
       "seeding_key": {
         "resource.key": "ai_and_the_systems_that_power_it_unit_guide_2"
+      }
+    },
+    {
+      "name": "AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1PbJJI6iyRpNriXMWOYpWnWQY7mxTqGv8v9T3Ku59-co/edit?usp=sharing",
+      "key": "ai_and_the_systems_that_power_it_unit_guide_3",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_3"
       }
     },
     {
@@ -6618,6 +6701,20 @@
       }
     },
     {
+      "name": "How AI Uses Data",
+      "url": "https://docs.google.com/presentation/d/1cfi44CMWhHfUI9nRuSwR1NsnzEsIkCHIxyzMJAYNhgY/edit?usp=sharing",
+      "key": "how_ai_uses_data_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "how_ai_uses_data_2"
+      }
+    },
+    {
       "name": "How Computers Work: Hardware and Software",
       "url": "https://youtu.be/DKGZlaPlVLY?si=nAAc-e14ctDiqfN8",
       "key": "how_computers_work_hardware_and_software",
@@ -6788,27 +6885,30 @@
     },
     {
       "name": "Sustainable Systems Project",
-      "url": "https://docs.google.com/presentation/d/12wyuza4y1dtipfaZ1C7NroXnY4sMzy-kVdiKK8C_GoY/edit?usp=drivesdk",
-      "key": "sustainable_systems_project",
+      "url": "https://docs.google.com/presentation/d/12v_QRcfdFTx-qpeO6mOdW-V5FTnyEciNtYj23uPWov4/edit?usp=sharing",
+      "key": "sustainable_systems_project_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "sustainable_systems_project"
+        "resource.key": "sustainable_systems_project_1"
       }
     },
     {
       "name": "Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1-bJOm3T_O1e4wljgCmbJFhvnDCoEHeZEV4TgLfHVDrw/edit?usp=drivesdk",
-      "key": "sustainable_systems_project_planning_guide",
+      "url": "https://docs.google.com/document/d/1Q2XZY-7HUOAboldM5sTE30bTjTCqpjYSGacgy1GQ-TY/edit?usp=sharing",
+      "key": "sustainable_systems_project_planning_guide_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "sustainable_systems_project_planning_guide"
+        "resource.key": "sustainable_systems_project_planning_guide_1"
       }
     },
     {
@@ -6826,14 +6926,16 @@
     },
     {
       "name": "System Diagram Template",
-      "url": "https://docs.google.com/presentation/d/1--YAf2B_F6JyHNget4slQWEehQSaVPHSl6bbD29Zjjo/edit?usp=drivesdk",
-      "key": "system_diagram_template",
+      "url": "https://docs.google.com/presentation/d/1jqzWp8BPkmBwLc-xw3zDUdecHC11J5B98nfqAE0h66A/edit?usp=sharing",
+      "key": "system_diagram_template_1",
       "properties": {
         "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "system_diagram_template"
+        "resource.key": "system_diagram_template_1"
       }
     },
     {
@@ -7105,25 +7207,25 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "_exemplar_sustainable_systems_project_planning_guide"
+        "resource.key": "_exemplar_sustainable_systems_project_planning_guide_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "_exemplar_system_diagram_template"
+        "resource.key": "_exemplar_system_diagram_template_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "sustainable_systems_project"
+        "resource.key": "sustainable_systems_project_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "sustainable_systems_project_planning_guide"
+        "resource.key": "sustainable_systems_project_planning_guide_1"
       }
     },
     {
@@ -7135,7 +7237,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "system_diagram_template"
+        "resource.key": "system_diagram_template_1"
       }
     },
     {
@@ -7459,7 +7561,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_3"
       }
     },
     {
@@ -7471,7 +7573,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_3"
       }
     },
     {
@@ -7484,6 +7586,12 @@
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
         "resource.key": "how_ai_uses_data_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: How AI Uses Data",
+        "resource.key": "how_ai_uses_data_2"
       }
     }
   ],

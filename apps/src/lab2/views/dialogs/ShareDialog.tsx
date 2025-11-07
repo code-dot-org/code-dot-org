@@ -11,16 +11,18 @@ import FocusLock from 'react-focus-lock';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {ProjectType} from '@cdo/apps/lab2/types';
+import {ProjectType, ShareDialogId} from '@cdo/apps/lab2/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
+import {commonI18n as i18n} from '@cdo/apps/types/locale';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
-import i18n from '@cdo/locale';
+
+import HoaiCongrats from './finishDialogs/HoaiCongrats';
 
 import moduleStyles from './share-dialog.module.scss';
 
@@ -142,7 +144,7 @@ const SubmitButtonInfo: React.FunctionComponent<{
  */
 
 const ShareDialog: React.FunctionComponent<{
-  dialogId?: string;
+  dialogId?: ShareDialogId;
   shareUrl: string;
   finishUrl?: string;
   projectType: ProjectType;
@@ -188,6 +190,16 @@ const ShareDialog: React.FunctionComponent<{
   // ThemeProvider (the header is in its own tree). We copy the lab theme to the registry
   // in Lab2Wrapper.
   const theme = Lab2Registry.getInstance().getTheme();
+
+  if (finishUrl && dialogId === 'hoai2025') {
+    return (
+      <HoaiCongrats
+        handleClose={handleClose}
+        finishUrl={finishUrl}
+        theme={theme}
+      />
+    );
+  }
 
   return sharingDisabled() ? (
     <div data-theme={theme}>

@@ -1,0 +1,40 @@
+name 'pl-sandbox-aif2-u2-conditionals-CFU-28'
+title 'Conditional Logic'
+
+wrong 'Change the condition to `batteryPercent === 20`.'
+wrong 'Change `batteryPercent` to `19` so it prints the right message.'
+wrong 'Swap the two messages inside the `if` and `else` blocks.'
+right 'Change the condition to `batteryPercent <= 20` .'
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+**Scenario**: Battery Saver should turn ON at 20% or below.
+
+Given code:
+```
+let batteryPercent = 20;
+let msg;
+
+if (batteryPercent < 20) {
+  msg = "Battery Saver ON";
+} else {
+  msg = "Normal Mode";
+}
+
+console.log(msg); // Output: Normal Mode
+```
+
+The output at 20% is `Normal Mode,` but the requirement says it should be `Battery Saver ON`.
+
+**Which change is the best fix so the rule works for all battery levels?**
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+A. triggers only at exactly 20%, not “20% or below.”
+
+B. only “fixes” the example value (20 → 19) but fails for other levels (e.g., 20, 18, 21).
+
+C. breaks low-battery behavior: at 5% it would say “Normal Mode,” which is wrong.
+
+D. fixes the boundary: “20% or below” → <= 20. Works for 0–20 (Saver ON) and 21+ (Normal).
+MARKDOWN
