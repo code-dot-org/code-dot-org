@@ -9,7 +9,7 @@ import HttpClient from '../util/HttpClient';
 import AiDiffChat from './AiDiffChat';
 import AiDiffSidebar from './AiDiffSidebar';
 import AiDiffNotificationList from './notifications/AiDiffNotificationList';
-import {ChatThread, chatThreadValidator, Context, ChatPrompt} from './types';
+import {ChatThread, chatThreadValidator, Context} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -27,9 +27,6 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   unreadNotificationCount,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
-  const [initialThreadPrompt, setInitialThreadPrompt] =
-    useState<ChatPrompt | null>(null);
-
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
 
   const dispatch = useAppDispatch();
@@ -60,11 +57,15 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const aiPromptOutsideChatClicked = useCallback(
     (label: string, prompt: string) => {
       setShowNotifications(false);
-      setInitialThreadPrompt({
-        label: label,
-        prompt: prompt,
-      });
-      dispatch(fetchThreadMessages({thread: 0}));
+      dispatch(
+        fetchThreadMessages({
+          thread: 0,
+          initialThreadPrompt: {
+            label: label,
+            prompt: prompt,
+          },
+        })
+      );
     },
     [dispatch]
   );
@@ -72,10 +73,12 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   return (
     <div className={style.aiDiffWorkspace}>
       <AiDiffSidebar
+        context={context}
         threads={threads}
         setShowNotifications={setShowNotifications}
         showNotifications={showNotifications}
         unreadNotificationCount={unreadNotificationCount}
+        curriculumCourses={curriculumCourses}
       />
       {showNotifications && experiments.isEnabled('teacher-notifications') ? (
         <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />
@@ -83,10 +86,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         <AiDiffChat
           context={context}
           scriptName={scriptName}
-          curriculumCourses={curriculumCourses}
           threadFetchCallback={fetchThreads}
-          initialThreadPrompt={initialThreadPrompt}
-          setInitialThreadPrompt={setInitialThreadPrompt}
         />
       )}
     </div>

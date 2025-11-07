@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 
+import {setSelectedPrompt} from '@cdo/apps/aichat/redux/slice';
 import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {ChatPrompt} from './types';
 
@@ -15,17 +17,22 @@ const AiDiffSuggestedPrompts: React.FC<ComponentProps> = ({
   isLatest,
   onSubmit,
 }) => {
-  const [selectedPrompt, setSelectedPrompt] = useState<ChatPrompt>();
+  const selectedPrompt = useAppSelector(state => state.aichat.selectedPrompt);
+
+  const dispatch = useAppDispatch();
 
   const onClick = (prompt: ChatPrompt) => () => {
     // The first prompt selected is final.
     // Can't select a prompt after something else has happened.
-    if (selectedPrompt || !isLatest) {
+    if (
+      (selectedPrompt && suggestedPrompts.includes(selectedPrompt)) ||
+      !isLatest
+    ) {
       return;
     }
 
     onSubmit(prompt);
-    setSelectedPrompt(prompt);
+    dispatch(setSelectedPrompt(prompt));
   };
 
   const structuredPrompts = suggestedPrompts

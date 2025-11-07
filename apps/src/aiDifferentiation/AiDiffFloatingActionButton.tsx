@@ -2,6 +2,7 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import {fetchThreadMessages} from '@cdo/apps/aichat/redux';
 import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -156,6 +157,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
     dispatch(setChatIsOpen(!chatIsOpen));
+    dispatch(fetchThreadMessages({thread: 0}));
     trySetSessionStorage(SESSION_STORAGE_KEY, (!chatIsOpen).toString());
     updateUnreadNotificationCount();
   };

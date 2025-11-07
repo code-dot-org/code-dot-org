@@ -6,7 +6,7 @@ import {
   ThreadTypeFields,
   THREAD_TYPES,
 } from '@cdo/apps/aiDifferentiation/constants';
-import {ChatItem} from '@cdo/apps/aiDifferentiation/types';
+import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
 
 import {
@@ -48,6 +48,8 @@ const initialState: AichatState = {
   threadId: 0,
   threadTitle: DEFAULT_THREAD_TITLE,
   threadType: THREAD_TYPES.default,
+  initialThreadPrompt: null,
+  selectedPrompt: null,
   threadMessages: [],
   threadKeyId: 0,
   initialChatMessage: DEFAULT_INITIAL_CHAT_MESSAGE,
@@ -138,8 +140,17 @@ const aichatSlice = createSlice({
     setThreadType(state, action: PayloadAction<ThreadTypeFields>) {
       state.threadType = action.payload;
     },
+    setInitialThreadPrompt(state, action: PayloadAction<ChatPrompt | null>) {
+      state.initialThreadPrompt = action.payload;
+    },
+    setSelectedPrompt(state, action: PayloadAction<ChatPrompt | null>) {
+      state.selectedPrompt = action.payload;
+    },
     setThreadMessages(state, action: PayloadAction<ChatItem[]>) {
       state.threadMessages = action.payload;
+    },
+    addThreadMessage: (state, action: PayloadAction<ChatItem>) => {
+      state.threadMessages.push(action.payload);
     },
     setThreadKeyId(state, action: PayloadAction<number>) {
       state.threadKeyId = action.payload;
@@ -443,7 +454,10 @@ export const {
   setThreadId,
   setThreadTitle,
   setThreadType,
+  setInitialThreadPrompt,
+  setSelectedPrompt,
   setThreadMessages,
+  addThreadMessage,
   setThreadKeyId,
   setViewMode,
   addStagedFile,

@@ -14,10 +14,17 @@ import classNames from 'classnames';
 import React from 'react';
 import Confetti from 'react-dom-confetti';
 
-import {setInitialChatMessage} from '@cdo/apps/aichat/redux/slice';
+import {
+  setInitialChatMessage,
+  setThreadMessages,
+} from '@cdo/apps/aichat/redux/slice';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiInteractionStatus as Status,
+  AiDiffContext,
+} from '@cdo/generated-scripts/sharedConstants';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
@@ -283,14 +290,22 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     }
   }, [currentWelcomeState]);
 
-  const suggestedPrompts = React.useMemo(() => {
-    if (!selectedOption) return undefined;
-
-    const {initialMessage, suggestedPrompts} =
-      SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
-    dispatch(setInitialChatMessage(initialMessage));
-
-    return suggestedPrompts;
+  React.useEffect(() => {
+    if (selectedOption) {
+      const {initialMessage, suggestedPrompts} =
+        SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
+      dispatch(setInitialChatMessage(initialMessage));
+      dispatch(
+        setThreadMessages([
+          {
+            role: Role.USER,
+            chatMessageText: initialMessage,
+            status: Status.OK,
+          },
+          suggestedPrompts,
+        ])
+      );
+    }
   }, [selectedOption, dispatch]);
 
   const endPage = React.useCallback(() => {
@@ -372,7 +387,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             context={context}
             scriptName={scriptName}
             chatResponseCallback={() => setChatContinueButtonDisabled(false)}
-            suggestedPrompts={suggestedPrompts}
             hideChatHeader
           />
         </div>
@@ -386,7 +400,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     selectedOption,
     context,
     scriptName,
-    suggestedPrompts,
     continueAndSkipButtons,
     chatContinueButtonDisabled,
   ]);

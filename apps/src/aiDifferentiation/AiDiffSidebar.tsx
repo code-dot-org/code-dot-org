@@ -6,23 +6,51 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
+import {
+  EXAMPLE_PROMPT,
+  EXPLAIN_CONCEPT_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  EXIT_TICKET_PROMPT,
+  MINI_LESSON_PROMPT,
+  APCSP_DUMMY_CREATE,
+  APCSP_DUMMY_EXAM,
+  DEBUG_THIS_CODE,
+  IMPROVE_THIS_CODE,
+  SUGGESTED_PROMPTS_FOR_SELECTION,
+  SUGGEST_CURRICULUM_PROMPT,
+  GET_STARTED_PROMPT,
+  CREATE_SECTION_PROMPT,
+} from '@cdo/apps/aiDifferentiation/AiDiffPredefinedPrompts';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {ChatThread} from './types';
+import {ChatPrompt, ChatThread, Context} from './types';
 
 import styles from './ai-differentiation.module.scss';
 
 interface AiDiffSidebarProps {
+  context: Context;
   threads?: ChatThread[];
   setShowNotifications: (show: boolean) => void;
   showNotifications: boolean;
   unreadNotificationCount: number;
+  curriculumCourses: string[] | undefined;
 }
+
+const APCSP_PROMPTS = [APCSP_DUMMY_CREATE, APCSP_DUMMY_EXAM];
+
+const SUGGESTED_PROMPTS = [
+  EXAMPLE_PROMPT,
+  EXPLAIN_CONCEPT_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  MINI_LESSON_PROMPT,
+  EXIT_TICKET_PROMPT,
+];
 
 const now = new Date();
 const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000);
@@ -62,31 +90,96 @@ const ThreadItem: React.FC<{
   </ListItem>
 );
 
+const getDefaultSuggestedPrompts = (
+  context: Context,
+  teacherHasSections: boolean,
+  teacherHasSectionWithCurriculum: boolean,
+  teacherHasSectionWithStudents: boolean
+) =>
+  context.type === AiDiffContext.GENERAL
+    ? SUGGESTED_PROMPTS_FOR_SELECTION['support'].suggestedPrompts.filter(
+        ({label}) => {
+          // Hide some new thread default prompts based on teacher's sections
+          if (
+            (label === GET_STARTED_PROMPT.label ||
+              label === CREATE_SECTION_PROMPT.label) &&
+            teacherHasSections &&
+            teacherHasSectionWithCurriculum &&
+            teacherHasSectionWithStudents
+          ) {
+            return false;
+          }
+
+          if (
+            label === SUGGEST_CURRICULUM_PROMPT.label &&
+            teacherHasSectionWithCurriculum
+          ) {
+            return false;
+          }
+
+          return true;
+        }
+      )
+    : SUGGESTED_PROMPTS;
+
 const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
+  context,
   threads = [],
   setShowNotifications,
   showNotifications,
   unreadNotificationCount,
+  curriculumCourses,
 }) => {
   const selectedThreadId = useAppSelector(state => state.aichat.threadId);
 
   const todayChats = threads.filter(thread => {
     return thread.updatedAt > yesterday;
   });
-
   const past7DaysChats = threads.filter(thread => {
     return thread.updatedAt >= sevenDaysAgo && thread.updatedAt <= yesterday;
   });
-
   const past30DaysChats = threads.filter(thread => {
     return (
       thread.updatedAt >= thirtyDaysAgo && thread.updatedAt <= sevenDaysAgo
     );
   });
-
   const oldChats = threads.filter(thread => {
     return thread.updatedAt < thirtyDaysAgo;
   });
+
+  const teacherSections = Object.values(
+    useAppSelector(state => state.teacherSections?.sections ?? {})
+  );
+  const teacherHasSections = teacherSections.length > 0;
+  const teacherHasSectionWithCurriculum = !!teacherSections.find(
+    section => section.courseId !== null
+  );
+  const teacherHasSectionWithStudents = !!teacherSections.find(
+    section => section.studentCount > 0
+  );
+
+  const suggestedPrompts = React.useMemo(() => {
+    const defaultSuggestedPrompts = getDefaultSuggestedPrompts(
+      context,
+      teacherHasSections,
+      teacherHasSectionWithCurriculum,
+      teacherHasSectionWithStudents
+    );
+    const additionalPrompts: ChatPrompt[] = [];
+    if (curriculumCourses?.includes('csp')) {
+      additionalPrompts.push(...APCSP_PROMPTS);
+    }
+    if (context.type === AiDiffContext.LEVEL) {
+      additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
+    }
+    return defaultSuggestedPrompts.concat(additionalPrompts);
+  }, [
+    context,
+    curriculumCourses,
+    teacherHasSectionWithCurriculum,
+    teacherHasSectionWithStudents,
+    teacherHasSections,
+  ]);
 
   const dispatch = useAppDispatch();
 
@@ -110,7 +203,12 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           iconLeft={{iconName: 'plus'}}
           onClick={() => {
             setShowNotifications(false);
-            dispatch(fetchThreadMessages({thread: 0}));
+            dispatch(
+              fetchThreadMessages({
+                thread: 0,
+                suggestedPrompts: suggestedPrompts,
+              })
+            );
           }}
           text={commonI18n.aiDifferentiation_new_chat()}
           className={styles.sidebarButton}
