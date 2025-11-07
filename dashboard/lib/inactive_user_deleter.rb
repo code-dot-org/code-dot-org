@@ -57,9 +57,9 @@ class InactiveUserDeleter
     # an order by id, causing an inefficient scan on the id index. Order does not matter
     # for this operation, so we can use a simple limit approach.
     loop do
-      break if num_accounts_deleted >= max_users_per_run
       account_batch = inactive_users.limit(BATCH_SIZE)
       account_batch.each do |user|
+        break if num_accounts_deleted >= max_users_per_run
         delete_user(user)
         self.num_accounts_deleted += 1
       rescue StandardError => exception
@@ -69,7 +69,7 @@ class InactiveUserDeleter
       ensure
         processed_user_ids << user.id
       end
-      break if account_batch.size < BATCH_SIZE
+      break if account_batch.size < BATCH_SIZE || num_accounts_deleted >= max_users_per_run
     end
 
     if dry_run?

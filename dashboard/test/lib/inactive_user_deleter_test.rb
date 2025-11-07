@@ -4,7 +4,7 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
   include Minitest::RSpecMocks
 
   subject(:described_class) {InactiveUserDeleter}
-  subject(:described_instance) {described_class.new(dry_run: dry_run, inactive_since: inactive_since, max_users_per_run: limit)}
+  subject(:described_instance) {described_class.new(dry_run: dry_run, inactive_since: inactive_since, max_users_per_run: max_users_per_run)}
 
   let(:dry_run) {false}
   let(:inactive_since) {described_class::INACTIVE_USER_TTL.ago}
@@ -87,6 +87,7 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
     context 'when max_users_per_run is provided' do
       let(:max_users_per_run) {1}
       it 'limits the inactive users query to the specified max_users_per_run' do
+        delete_inactive_users
         _(described_instance.max_users_per_run).must_equal 1
         _(described_instance.send(:num_accounts_deleted)).must_equal 1
       end
