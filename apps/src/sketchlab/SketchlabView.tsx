@@ -9,7 +9,9 @@ import {
   BinaryFiles,
   ExcalidrawImperativeAPI,
   ExcalidrawInitialDataState,
+  DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import cloneDeep from 'lodash/cloneDeep';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
@@ -32,6 +34,7 @@ import SourcesContainer, {
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {SketchlabSources, SerializedExcalidrawState} from './types';
+import imageUrlToBase64 from './utils/imageUrlToBase64';
 import uploadExternalFiles from './utils/uploadExternalFiles';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
@@ -177,13 +180,36 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
-  const convertToExcalidrawSources = (
+  // UseMemo on result so that we do not refetch unnecessarily?
+  const convertToExcalidrawSources = async (
     sourcesWithExternalFiles: ExcalidrawSourceWithExternalFiles
   ) => {
-    // Currently doesn't do anything except update the type.
-    // In the future, we'll need a step here that takes the external S3 URLs and converts them to base64,
-    // which will make them safe for Excalidraw to use.
-    return sourcesWithExternalFiles as ExcalidrawInitialDataState;
+    const excalidrawInitialState = cloneDeep(sourcesWithExternalFiles);
+    Object.values(excalidrawInitialState?.files || {}).forEach(
+      file => delete file.dataURL
+    );
+
+    if (excalidrawInitialState.externalFiles) {
+      const imageDownloadPromises = Object.values(
+        excalidrawInitialState.externalFiles
+      ).map(async file => {
+        if (file.url) {
+          console.log(file.url);
+          await imageUrlToBase64(file.url)
+            .then(base64 => {
+              if (excalidrawInitialState.files) {
+                excalidrawInitialState.files[file.id].dataURL =
+                  base64 as DataURL;
+              }
+            })
+            .catch(error => console.error(error));
+        }
+      });
+      await Promise.allSettled(imageDownloadPromises);
+    }
+
+    delete excalidrawInitialState.externalFiles;
+    return excalidrawInitialState as ExcalidrawInitialDataState;
   };
 
   return (
