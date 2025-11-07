@@ -51,15 +51,6 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     [template, locale]
   );
 
-  // Initialize defaults.
-  useEffect(() => {
-    const initialOptions: {[key: string]: string} = {};
-    Object.keys(options).forEach(key => {
-      initialOptions[key] = sample(options[key])?.id || '';
-    });
-    setAdlibOptions(initialOptions);
-  }, [options]);
-
   const fillTemplate = useCallback(
     (template: string, chosen: {[key: string]: string}) => {
       let output = template;
@@ -79,28 +70,30 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
       fillTemplate(
         template,
         Object.fromEntries(
-          Object.entries(adlibOptions).map(([key, value]) => [
+          Object.entries(options).map(([key, value]) => [
             key,
-            options[key].find(option => option.id === value)?.text || '',
+            options[key].find(option => option.id === adlibChoices[key])
+              ?.text || '',
           ])
         )
       ),
-    [fillTemplate, options, template]
+    [fillTemplate, adlibChoices, options, template]
   );
   const localizedFilledAdlibText = useMemo(
     () =>
       fillTemplate(
         localizedTemplate,
         Object.fromEntries(
-          Object.entries(adlibOptions).map(([key, value]) => [
+          Object.entries(options).map(([key, value]) => [
             key,
             localization.translate(
-              options[key].find(option => option.id === value)?.text || ''
+              options[key].find(option => option.id === adlibChoices[key])
+                ?.text || ''
             ),
           ])
         )
       ),
-    [fillTemplate, options, localizedTemplate]
+    [fillTemplate, adlibChoices, options, localizedTemplate]
   );
 
   useEffect(() => {
@@ -140,6 +133,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
 
   return (
     <div
+      data-notranslate
       className={classNames(
         styles.adlib,
         glowSpeed === 'fast'
@@ -150,7 +144,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
       )}
     >
       <div className={styles.adlibInner}>
-        <div>{readOnly ? filledAdlibText : adlibHtml}</div>
+        <div>{readOnly ? localizedFilledAdlibText : adlibHtml}</div>
         {children}
       </div>
     </div>
