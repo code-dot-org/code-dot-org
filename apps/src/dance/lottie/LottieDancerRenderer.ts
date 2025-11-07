@@ -53,6 +53,7 @@ import {
   safeFetchSvgText,
   mirrorPngDataUrl,
   getHeadScale,
+  cropDataUrl,
 } from './LottieDancerUtils';
 
 const DEFAULT_SKELETON = 'unicorn';
@@ -326,12 +327,14 @@ export default class LottieDancerRenderer {
           if (headComp && Array.isArray(headComp.layers)) {
             const {insertIndex, ks: headKs} =
               hideLayersByTypeAndCaptureKs(headComp);
+            // Crop edge artifacts from generated head PNGs using URL param (ex. ?headCrop=10)
+            const croppedHeadUrl = await cropDataUrl(headDataUrl);
             const assetId = ensureImageAsset(
               animData,
-              headDataUrl,
+              croppedHeadUrl,
               'img_head_custom'
             );
-            const headMirrorDataUrl = await mirrorPngDataUrl(headDataUrl);
+            const headMirrorDataUrl = await mirrorPngDataUrl(croppedHeadUrl);
             const headMirrorAssetId = ensureImageAsset(
               animData,
               headMirrorDataUrl,

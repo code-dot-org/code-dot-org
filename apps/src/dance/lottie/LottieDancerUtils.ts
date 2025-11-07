@@ -802,3 +802,39 @@ export function getHeadScale(): number {
   const scale = scaleParam ? parseFloat(scaleParam) : NaN;
   return isNaN(scale) || scale <= 0 ? DEFAULT_HEAD_SCALE : scale;
 }
+
+/** Crops "transparent" inset from all sides of a PNG data URL. */
+export async function cropDataUrl(dataUrl: string): Promise<string> {
+  const inset = Number(getConfigValue('headCrop')) || 0;
+  if (inset <= 0) {
+    return dataUrl;
+  }
+
+  const loadedImage = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const imageElement = new Image();
+    imageElement.onload = () => resolve(imageElement);
+    imageElement.onerror = reject;
+    imageElement.src = dataUrl;
+  });
+
+  const scaledWidth = Math.max(1, loadedImage.naturalWidth - inset * 2);
+  const scaledHeight = Math.max(1, loadedImage.naturalHeight - inset * 2);
+
+  const offscreenCanvas = document.createElement('canvas');
+  offscreenCanvas.width = scaledWidth;
+  offscreenCanvas.height = scaledHeight;
+  const offscreenCanvasContext = offscreenCanvas.getContext('2d')!;
+  offscreenCanvasContext.drawImage(
+    loadedImage,
+    inset,
+    inset,
+    scaledWidth,
+    scaledHeight,
+    0,
+    0,
+    scaledWidth,
+    scaledHeight
+  );
+
+  return offscreenCanvas.toDataURL('image/png');
+}
