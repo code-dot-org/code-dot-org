@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+z#!/usr/bin/env ruby
 
 require_relative '../../../dashboard/config/environment'
 
@@ -13,7 +13,7 @@ OptionParser.new do |opts|
   opts.on('-u', '--actually-update', 'Actually perform the update.') do
     options[:actually_update] = true
   end
-  opts.on('-sSTART', '--start-with=START', Integer, 'Start with section ID START.') do |s|
+  opts.on('-sSTART', '--start-with=START', Integer, 'Start with project ID START.') do |s|
     options[:start_with] = s
   end
   opts.on('-h', '--help', 'Add -u to perform the update.') do
@@ -30,7 +30,7 @@ projects_processed = 0
 projects_not_processed = 0
 
 Project.where(uuid: nil).find_each(batch_size: BATCH_SIZE, start: options[:start_with]) do |project|
-  # Be kind to the database by limiting to 1000 sections processed per second
+  # Be kind to the database by limiting to 1000 projects processed per second
   sleep 0.001
 
   ActiveRecord::Base.transaction do
@@ -48,4 +48,4 @@ rescue => exception
 end
 
 CDO.log.info "Script completed"
-CDO.log.info "#{projects_processed} sections were processed, #{projects_not_processed} experienced errors"
+CDO.log.info "#{projects_processed} projects were processed, #{projects_not_processed} experienced errors"
