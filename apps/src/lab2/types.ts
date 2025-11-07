@@ -115,11 +115,10 @@ type ExcalidrawFilesWithoutData = Record<
 
 export type ExcalidrawSourceWithExternalFiles = Omit<
   ExcalidrawInitialDataState,
-  'files' | 'elements'
+  'files'
 > & {
   files?: ExcalidrawFilesWithoutData;
   externalFiles?: SketchlabExternalFiles;
-  elements?: ExcalidrawElement[] | null; // for mutability for Redux? Should elements be omitted?
 };
 
 export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
