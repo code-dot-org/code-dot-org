@@ -13,6 +13,7 @@ import {
 } from '@codebridge/FileBrowser/prompts';
 import {useCallback, useMemo} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {setOverrideValidations} from '@cdo/apps/lab2/lab2Redux';
@@ -55,10 +56,12 @@ export const usePrompts = () => {
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
   );
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
 
   const sendLab2AnalyticsEvent = useCallback(
-    (event: string) => globalSendLab2AnalyticsEvent(event, appName),
-    [appName]
+    (event: string) =>
+      globalSendLab2AnalyticsEvent(event, appName, {levelPath}),
+    [appName, levelPath]
   );
 
   const cleanupValidationFile = useCallback(

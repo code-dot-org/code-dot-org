@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
   setIsValidating,
@@ -53,14 +54,16 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
-
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
   const {appName, id: levelId} = levelProperties;
   const settings = useCodebridgeSettings();
 
   const handleValidate = () => {
     if (onRun) {
       dispatch(setIsValidating(true));
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK, appName);
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK, appName, {
+        levelPath,
+      });
       logUserLevelInteraction({
         levelId: levelId,
         scriptId: scriptId,

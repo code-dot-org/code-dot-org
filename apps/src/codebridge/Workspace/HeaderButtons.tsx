@@ -1,6 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -18,7 +19,7 @@ import moduleStyles from './workspace.module.scss';
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {levelProperties, projectPickerSettings} = useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
-
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
   const dialogControl = useDialogControl();
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
@@ -31,13 +32,15 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         type: DialogType.Skip,
         handleConfirm: () => {
           if (skipUrl) {
-            sendLab2AnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName);
+            sendLab2AnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName, {
+              levelPath,
+            });
             window.location.href = skipUrl;
           }
         },
       });
     }
-  }, [appName, dialogControl, skipUrl]);
+  }, [appName, dialogControl, skipUrl, levelPath]);
 
   const onClickFlash = async () => {
     let pythonCode = '';

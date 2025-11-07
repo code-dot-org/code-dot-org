@@ -4,6 +4,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -80,6 +81,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const projectSources = useAppSelector(
     state => state.lab2Project.projectSources
   );
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -222,11 +224,13 @@ const VersionHistoryPanel: React.FunctionComponent<
     if (selectedVersion === INITIAL_VERSION_ID) {
       sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, appName, {
         isInitialVersion: 'true',
+        levelPath,
       });
       confirmStartOver();
     } else if (projectManager && selectedVersion) {
       sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, appName, {
         isInitialVersion: 'false',
+        levelPath,
       });
       setVersionLoading(true);
       setVersionLoadError(false);
@@ -252,6 +256,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     confirmStartOver,
     dispatch,
     successfulProjectResetCleanUp,
+    levelPath,
   ]);
 
   const isLatestVersion = useCallback(
@@ -283,6 +288,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       if (!isLatest) {
         sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_VIEWED, appName, {
           isInitialVersion: viewingInitialVersion.toString(),
+          levelPath,
         });
       }
       if (viewingInitialVersion) {
@@ -293,7 +299,14 @@ const VersionHistoryPanel: React.FunctionComponent<
         dispatch(loadVersion({versionId: e.target.value, startSources}));
       }
     },
-    [appName, dispatch, isLatestVersion, setSelectedVersion, startSources]
+    [
+      appName,
+      dispatch,
+      isLatestVersion,
+      setSelectedVersion,
+      startSources,
+      levelPath,
+    ]
   );
 
   // Function called when clicking 'cancel'. This will reset the project to the current version

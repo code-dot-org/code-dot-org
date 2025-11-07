@@ -2,6 +2,7 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {validateFileName as validateCodebridgeFileName} from '@codebridge/utils';
 import {useCallback} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {
   useFileUploader as useLab2FileUploader,
@@ -29,6 +30,7 @@ export const useFileUploader = (
 ) => {
   const {levelProperties, onImageFlagged} = useCodebridgeContext();
   const {appName, validationFile, name} = levelProperties;
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
@@ -67,20 +69,19 @@ export const useFileUploader = (
           sendLab2AnalyticsEvent(
             EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE,
             appName,
-            payload
+            {levelPath, ...payload}
           );
           return;
         }
         case analyticsEvents.UPLOAD_UNACCEPTED_FILE: {
-          sendLab2AnalyticsEvent(
-            EVENTS.CODEBRIDGE_UPLOAD_FAILED,
-            appName,
-            payload
-          );
+          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, appName, {
+            levelPath,
+            ...payload,
+          });
         }
       }
     },
-    [appName]
+    [appName, levelPath]
   );
 
   const {validFileTypes, ...lab2FileUploaderArgs} = args;

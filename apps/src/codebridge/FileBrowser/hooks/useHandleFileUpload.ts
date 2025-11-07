@@ -3,6 +3,7 @@ import {FolderId, ProjectFile} from '@codebridge/types';
 import {validateFileName} from '@codebridge/utils';
 import {useCallback} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
@@ -12,7 +13,7 @@ import {
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 export const useHandleFileUpload = (
   projectFiles: Record<string, ProjectFile>
@@ -21,7 +22,7 @@ export const useHandleFileUpload = (
   const {appName, validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const dispatch = useAppDispatch();
-
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
   const dialogControl = useDialogControl();
   return useCallback(
     (
@@ -49,6 +50,7 @@ export const useHandleFileUpload = (
         sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, appName, {
           fileName,
           error: validationError,
+          levelPath,
         });
         return;
       }
@@ -62,6 +64,7 @@ export const useHandleFileUpload = (
       }
       sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,
+        levelPath,
       });
     },
     [
@@ -71,6 +74,7 @@ export const useHandleFileUpload = (
       dispatch,
       appName,
       dialogControl,
+      levelPath,
     ]
   );
 };

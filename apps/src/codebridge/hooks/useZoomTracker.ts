@@ -1,13 +1,16 @@
 import debounce from 'lodash/debounce';
 import {useEffect, useRef} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 const DEBOUNCE_TIMEOUT = 1500;
 
 export const useZoomTracker = (appName: string) => {
   const initialDevicePixelRatioRef = useRef(window?.devicePixelRatio || 1);
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
   const lastZoomValuesRef = useRef<number[]>([
     Math.round(initialDevicePixelRatioRef.current * 100),
     100,
@@ -39,6 +42,7 @@ export const useZoomTracker = (appName: string) => {
       sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_ZOOM, appName, {
         zoomPercent: zoomPercent,
         direction,
+        levelPath,
       });
     };
 
@@ -64,5 +68,5 @@ export const useZoomTracker = (appName: string) => {
       debouncedCheckZoom.cancel();
       window.visualViewport?.removeEventListener('resize', debouncedCheckZoom);
     };
-  }, [appName]);
+  }, [appName, levelPath]);
 };
