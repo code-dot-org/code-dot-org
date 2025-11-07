@@ -30,7 +30,6 @@ const CODE_STUDIO_ENTRIES = {
   'code-studio': './src/sites/studio/pages/code-studio.js',
   'codeprojects_preview/page_not_found': './src/sites/studio/pages/codeprojects_preview/page_not_found.js',
   'codeprojects_preview/show': './src/sites/studio/pages/codeprojects_preview/show.js',
-  'codeprojects_preview/page_not_found': './src/sites/studio/pages/codeprojects_preview/page_not_found.js',
   'congrats/index': './src/sites/studio/pages/congrats/index.js',
   'courses/show': './src/sites/studio/pages/courses/show.js',
   'courses/vocab': './src/sites/studio/pages/courses/vocab.js',
