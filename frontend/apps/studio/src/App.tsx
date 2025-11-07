@@ -1,6 +1,5 @@
-import './global.css';
 import '@code-dot-org/component-library-styles/colors.scss';
-import {ThemeProvider, Typography} from '@mui/material';
+import {CssBaseline, ThemeProvider, Typography} from '@mui/material';
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
 
 import {LinkButton} from '@code-dot-org/component-library/button';
@@ -20,6 +19,8 @@ const SIGNED_OUT_MENU_ITEMS = [
 function App() {
   return (
     <ThemeProvider theme={CdoTheme}>
+      {/* Resets browser CSS defaults (e.g. body margin) using MUI defaults */}
+      <CssBaseline />
       <Header
         logoImageUrl={CdoLogo}
         brandName="Code.org"
