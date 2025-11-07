@@ -292,7 +292,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       {showTabs ? (
         <Tabs {...tabArgs} />
       ) : (
-        <div role="log" aria-live="polite">
+        <div
+          role="log"
+          aria-live="polite"
+          aria-relevant="additions"
+          aria-atomic="true"
+        >
           <ChatEventsList
             events={chatEvents}
             isTeacherView={isTeacherView}
