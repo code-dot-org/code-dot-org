@@ -123,6 +123,18 @@ describe('validateFileName', function () {
       })}`
     );
 
+    // Name with multiple periods is invalid (ex. test.file.py).
+    expect(
+      validateFileName({
+        fileName: 'test.file.py',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+      })
+    ).toEqual(codebridgeI18n.invalidNameError());
+
     // Valid file name/type has no return.
     expect(
       validateFileName({
