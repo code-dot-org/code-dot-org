@@ -8,3 +8,7 @@
 source docker/ci/scripts/prepare_ci_tests.sh
 
 bundle exec rake ci:run_ui_tests
+
+echo "dumping Sauce Connect log for debugging:"
+cat log/sc.log
+echo "end of Sauce Connect log."
