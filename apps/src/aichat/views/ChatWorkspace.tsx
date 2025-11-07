@@ -292,11 +292,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       {showTabs ? (
         <Tabs {...tabArgs} />
       ) : (
-        <ChatEventsList
-          events={chatEvents}
-          isTeacherView={isTeacherView}
-          buildAssetUrl={buildAssetUrlValue}
-        />
+        <div role="log" aria-live="polite">
+          <ChatEventsList
+            events={chatEvents}
+            isTeacherView={isTeacherView}
+            buildAssetUrl={buildAssetUrlValue}
+          />
+        </div>
       )}
 
       <div className={moduleStyles.footer}>
