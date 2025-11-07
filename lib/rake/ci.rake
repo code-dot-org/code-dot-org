@@ -124,7 +124,8 @@ namespace :ci do
     if use_saucelabs || test_eyes?
       Cdo::SauceConnect.start_sauce_connect(daemonize: true)
       # Tail the Sauce Connect log for real-time visibility in CI (from beginning of file)
-      RakeUtils.exec_in_background 'tail -f -n +1 log/sc.log | sed "s/^/[SC] /"'
+      # Use system() with & to background it while keeping stdout attached to parent process
+      system('tail -f -n +1 log/sc.log | sed "s/^/[SC] /" &')
     end
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
