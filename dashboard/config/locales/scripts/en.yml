@@ -25257,16 +25257,8 @@ en:
           title: Pre-Learning for Teaching AI Foundations Semester 2
           description_audience: ''
           description_short: ''
-          description: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
-
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
-          student_description: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
-
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          description: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? "
+          student_description: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? "
         pl-sandbox-aif-sem-2-unit-1:
           lessons:
             lesson-1:
@@ -25276,20 +25268,19 @@ en:
           title: Teaching Introduction AI Generated Design
           description_audience: ''
           description_short: ''
-          description: |
+          description: |+
             ## Welcome
             #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
 
-            #### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
-          student_description: |-
+
+          student_description: |+
             ## Welcome
             #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
 
-            #### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
         pl-sandbox-aif-sem-2-unit-2:
           lessons:
             lesson-1:
@@ -25299,8 +25290,16 @@ en:
           title: Teaching AI and Algorithmic Decisions
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ## Welcome!
+            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+
+            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+          student_description: |-
+            ## Welcome!
+            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+
+            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
         aif1-v2-2025:
           lesson_groups:
             lessonGroup-3:
@@ -25838,6 +25837,10 @@ en:
               name: Web Lab 2 - Mode Exploration
             lesson-2:
               name: Sketch Lab - Wireframe Assets
+            lesson-3:
+              name: Unit 3 Prototypes
+            lesson-4:
+              name: Unit 4 Prototypes
           lesson_groups: {}
           name: aif-all-the-things
           title: All the AIF Things!
@@ -25963,6 +25966,15 @@ en:
           lesson_groups: {}
           name: dan-playground
           title: Dan's Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        mix-move-ai-educators-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: mix-move-ai-educators-2025
+          title: Hour of AI for Educators
           description_audience: ''
           description_short: ''
           description: ''

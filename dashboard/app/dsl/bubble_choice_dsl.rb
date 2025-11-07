@@ -56,6 +56,8 @@ class BubbleChoiceDSL < ContentDSL
     @hash[:navigation_type] = type
   end
 
+  def finish_dialog(text) @hash[:finish_dialog] = text end
+
   def self.serialize(level)
     new_dsl = "name '#{escape(level.name)}'"
     new_dsl += "\neditor_experiment '#{level.editor_experiment}'" if level.editor_experiment.present?

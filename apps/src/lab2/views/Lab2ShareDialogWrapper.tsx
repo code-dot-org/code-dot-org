@@ -4,7 +4,7 @@ import {useSelector} from 'react-redux';
 import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
-import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
+import {PROJECT_TYPES_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {MetricEvent} from '@cdo/apps/metrics/events';
@@ -17,6 +17,8 @@ import {
 import SubmitProjectDialog from '@cdo/apps/templates/projects/submitProjectDialog/SubmitProjectDialog';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {ShareDialogId} from '../types';
 
 import ShareDialog from './dialogs/ShareDialog';
 
@@ -109,7 +111,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     return null;
   }
 
-  if (LABS_USING_NEW_SHARE_DIALOG.includes(projectType)) {
+  if (PROJECT_TYPES_USING_NEW_SHARE_DIALOG.includes(projectType)) {
     return dialogPanel === 'share' ? (
       <ShareDialog
         dialogId={shareDialogId}
@@ -150,7 +152,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 };
 
 interface Lab2ShareDialogWrapperProps {
-  shareDialogId?: string;
+  shareDialogId?: ShareDialogId;
   shareUrl: string;
   finishUrl?: string;
 }
