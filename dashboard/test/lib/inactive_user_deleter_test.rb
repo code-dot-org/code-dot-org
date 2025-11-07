@@ -4,12 +4,12 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
   include Minitest::RSpecMocks
 
   subject(:described_class) {InactiveUserDeleter}
-  subject(:described_instance) {described_class.new(dry_run: dry_run, inactive_since: inactive_since, limit: limit, query_limit: query_limit)}
+  subject(:described_instance) {described_class.new(dry_run: dry_run, inactive_since: inactive_since, max_users_per_run: limit)}
 
   let(:dry_run) {false}
   let(:inactive_since) {described_class::INACTIVE_USER_TTL.ago}
   let(:limit) {described_class::ACCOUNT_DELETION_LIMIT}
-  let(:query_limit) {nil}
+  let(:max_users_per_run) {nil}
 
   let(:email) {Faker::Internet.unique.email}
   let!(:student) {create(:student, current_sign_in_at: inactive_since - 1.day)}
@@ -75,7 +75,7 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
       _(active_user.deleted?).must_equal false
     end
 
-    it 'increments num_accounts_scrubbed' do
+    it 'increments num_accounts_deleted' do
       delete_inactive_users
       _(described_instance.send(:num_accounts_deleted)).must_equal 2
     end
@@ -85,27 +85,22 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
       delete_inactive_users
     end
 
-    context 'when query_limit is provided' do
-      let(:query_limit) {1}
-
-      describe '#inactive_users' do
-        subject(:inactive_users) {described_instance.inactive_users}
-
-        it 'limits the inactive users query to the specified query_limit' do
-          _(described_instance.query_limit).must_equal 1
-          _(inactive_users.count).must_equal 1
-        end
+    context 'when max_users_per_run is provided' do
+      let(:max_users_per_run) {1}
+      it 'limits the inactive users query to the specified max_users_per_run' do
+        _(described_instance.max_users_per_run).must_equal 1
+        _(described_instance.send(:num_accounts_deleted)).must_equal 1
       end
     end
 
-    context 'when no query_limit is provided' do
-      let(:query_limit) {nil}
+    context 'when no max_users_per_run is provided' do
+      let(:max_users_per_run) {nil}
 
       describe '#inactive_users' do
         subject(:inactive_users) {described_instance.inactive_users}
 
-        it 'defaults to the ACCOUNT_DELETION_LIMIT' do
-          _(described_instance.query_limit).must_equal described_class::QUERY_LIMIT
+        it 'defaults to the DELETION_LIMIT' do
+          _(described_instance.max_users_per_run).must_equal described_class::DELETION_LIMIT
         end
       end
     end
