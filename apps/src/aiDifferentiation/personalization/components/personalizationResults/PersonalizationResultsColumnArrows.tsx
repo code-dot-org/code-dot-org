@@ -2,9 +2,9 @@ import {Heading5} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import React from 'react';
 
-import PersonalizationInformationBox from './PersonalizationInformationBox';
+import PersonalizationInformationBox from './../PersonalizationInformationBox';
 
-import style from './personalization-information.module.scss';
+import style from './../../personalization-information.module.scss';
 
 const PersonalizationResultsColumnArrows: React.FC = () => {
   return (
