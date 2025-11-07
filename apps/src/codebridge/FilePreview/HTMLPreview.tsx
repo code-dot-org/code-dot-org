@@ -235,6 +235,15 @@ export const HTMLPreview: React.FC = () => {
     }
   }, [previewUrl, debouncedSource, isIframeLoaded]);
 
+  useEffect(() => {
+    if (isIframeLoaded && iframeRef.current) {
+      iframeRef.current.contentWindow?.postMessage(
+        {type: IframeMessageType.LEVEL_LOADING, isLoading: isLevelLoading},
+        previewUrl
+      );
+    }
+  }, [isIframeLoaded, isLevelLoading, previewUrl]);
+
   // Keep inner preview's script permission in sync with predict level state.
   useEffect(() => {
     if (isIframeLoaded && iframeRef.current && previewUrl) {

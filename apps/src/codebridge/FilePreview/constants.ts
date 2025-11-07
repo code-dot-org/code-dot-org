@@ -6,6 +6,7 @@ export enum IframeMessageType {
   FILE_UPDATED = 'FILE_UPDATED',
   SET_ALLOW_SCRIPTS = 'SET_ALLOW_SCRIPTS',
   REFRESH = 'REFRESH',
+  LEVEL_LOADING = 'LEVEL_LOADING',
 }
 
 export enum PreviewViewMode {

@@ -25,6 +25,7 @@ const InnerHTMLPreview = () => {
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
   useProjectServiceWorker(source, currentFile);
   const [allowScripts, setAllowScripts] = useState(false);
+  const [isLevelLoading, setIsLevelLoading] = useState(false);
 
   const parentOrigin = useMemo(() => {
     const regex = /preview\.([^.]+)\.codeprojects\.org/;
@@ -57,6 +58,8 @@ const InnerHTMLPreview = () => {
         setAllowScripts(!!data.allow);
       } else if (data.type === IframeMessageType.REFRESH) {
         iframeRef.current?.contentWindow?.location.reload();
+      } else if (data.type === IframeMessageType.LEVEL_LOADING) {
+        setIsLevelLoading(data.isLoading);
       }
     },
     [parentOrigin]
@@ -118,7 +121,7 @@ const InnerHTMLPreview = () => {
   }, [previewKeyIndex]);
 
   const getPreview = useCallback(() => {
-    if (serviceWorkerReady && currentFile) {
+    if (serviceWorkerReady && currentFile && !isLevelLoading) {
       return (
         <iframe
           ref={iframeRef}
@@ -138,7 +141,7 @@ const InnerHTMLPreview = () => {
         </div>
       );
     }
-  }, [allowScripts, currentFile, serviceWorkerReady]);
+  }, [allowScripts, currentFile, isLevelLoading, serviceWorkerReady]);
 
   return getPreview();
 };
