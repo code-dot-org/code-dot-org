@@ -96,6 +96,7 @@
       ],
       "kind": "flyoutToolbox"
     },
+    "long_instructions": "### Use AI to code your dance\r\nModify the prompt, then press Generate code.",
     "preload_asset_list": null
   },
   "published": true,

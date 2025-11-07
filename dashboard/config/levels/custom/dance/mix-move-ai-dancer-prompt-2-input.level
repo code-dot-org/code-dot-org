@@ -35,7 +35,7 @@
     "uses_lab2": "true",
     "guide_mode": "aiDancerGenerate",
     "ai_dancer_generate_adlib": "creature-attire-05",
-    "long_instructions": "#### Use a prompt with more details\r\n\r\nExtra details help AI make your image better.",
+    "long_instructions": "### Use a prompt with more details\r\n\r\nExtra details help AI create what you have in mind.",
     "preload_asset_list": null,
     "encrypted_examples": [
 
