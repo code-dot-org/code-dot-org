@@ -40,12 +40,6 @@ module Cdo
           "--tunnel-name", CDO.saucelabs_tunnel_name,
         ]
 
-        # Explicitly pass the HTTP idle connection timeout if set via environment variable.
-        # This controls how long idle HTTP connections stay open before timing out.
-        if ENV['SAUCE_HTTP_IDLE_CONN_TIMEOUT']
-          cmd += ["--http-idle-conn-timeout", ENV['SAUCE_HTTP_IDLE_CONN_TIMEOUT']]
-        end
-
         # In CI, enable verbose logging to help diagnose connection issues
         if ENV['CI']
           cmd += ["--log-level", "info"]
