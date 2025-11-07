@@ -4,6 +4,9 @@ import {
   useMemo,
   useRef,
   useEffect,
+  useLayoutEffect,
+  useState,
+  type CSSProperties,
   AriaAttributes,
   KeyboardEvent,
   memo,
@@ -122,6 +125,9 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownMenuRef = useRef<HTMLDivElement>(null);
+  const [dropdownMenuStyles, setDropdownMenuStyles] = useState<CSSProperties>({});
+  const [isDropdownMenuPositioned, setIsDropdownMenuPositioned] = useState(false);
   const handleClickOutside = useCallback(
     (event: Event) => {
       if (
@@ -175,6 +181,66 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     () => activeDropdownName === name,
     [activeDropdownName, name],
   );
+
+  const updateDropdownMenuPosition = useCallback(() => {
+    if (
+      !isOpen ||
+      !dropdownRef.current ||
+      !dropdownMenuRef.current ||
+      typeof window === 'undefined'
+    ) {
+      return;
+    }
+
+    const dropdownRect = dropdownRef.current.getBoundingClientRect();
+    const menuRect = dropdownMenuRef.current.getBoundingClientRect();
+    const VERTICAL_OFFSET = 4;
+
+    const top =
+      menuVerticalPlacement === 'top'
+        ? dropdownRect.top - menuRect.height - VERTICAL_OFFSET
+        : dropdownRect.bottom + VERTICAL_OFFSET;
+    const left =
+      menuPlacement === 'right'
+        ? dropdownRect.right - menuRect.width
+        : dropdownRect.left;
+
+    setDropdownMenuStyles({
+      top,
+      left,
+    });
+    setIsDropdownMenuPositioned(true);
+  }, [isOpen, menuPlacement, menuVerticalPlacement]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      setIsDropdownMenuPositioned(false);
+      setDropdownMenuStyles({});
+      return;
+    }
+
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
+    }
+
+    const handleWindowChange = () => {
+      updateDropdownMenuPosition();
+    };
+
+    window.addEventListener('resize', handleWindowChange);
+    document.addEventListener('scroll', handleWindowChange, true);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowChange);
+      document.removeEventListener('scroll', handleWindowChange, true);
+    };
+  }, [isOpen, updateDropdownMenuPosition]);
+
+  useLayoutEffect(() => {
+    if (isOpen) {
+      updateDropdownMenuPosition();
+    }
+  }, [isOpen, updateDropdownMenuPosition, children]);
 
   // Collapse dropdown if 'Escape' is pressed
   const onKeyDown: (e: KeyboardEvent) => void = e => {
@@ -268,7 +334,16 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
         </button>
       )}
-      <div className={moduleStyles.dropdownMenuContainer}>
+      <div
+        className={moduleStyles.dropdownMenuContainer}
+        ref={dropdownMenuRef}
+        style={{
+          ...dropdownMenuStyles,
+          position: isOpen ? 'fixed' : 'absolute',
+          visibility:
+            isOpen && isDropdownMenuPositioned ? 'visible' : 'hidden',
+        }}
+      >
         {/** Dropdown menu content is rendered here as children props*/}
         {children}
       </div>

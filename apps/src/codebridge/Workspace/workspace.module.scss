@@ -62,7 +62,9 @@
   display: grid;
   grid-template-columns: 34px auto;
   grid-auto-rows: 40px 1fr auto;
-  overflow: hidden;
+  // Allow overlay elements like dropdown menus to extend outside of the
+  // header row without being clipped.
+  overflow: visible;
   flex: 1;
 }
 
