@@ -13,7 +13,7 @@ require 'cdo/honeybadger'
 class InactiveUserDeleter
   class SafetyConstraintViolation < RuntimeError; end
 
-  attr_reader :dry_run, :inactive_since, :max_users_per_run
+  attr_reader :dry_run, :inactive_since, :limit
   attr_accessor :processed_user_ids
   alias :dry_run? :dry_run
 
@@ -30,7 +30,7 @@ class InactiveUserDeleter
   #   Defaults to 3.5 years ago, which is the current period before accounts are rendered inactive
   # @param limit [Integer] The maximum number of accounts to delete in a single run.
   #   This is a safety limit to prevent accidental deletion of too many accounts.
-  def initialize(dry_run: false, inactive_since: nil, max_users_per_run: ACCOUNT_DELETION_LIMIT)
+  def initialize(dry_run: false, inactive_since: nil, limit: ACCOUNT_DELETION_LIMIT)
     @dry_run = dry_run.nil? ? false : dry_run
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
@@ -39,10 +39,9 @@ class InactiveUserDeleter
     raise ArgumentError.new('inactive_since must be Time') unless @inactive_since.is_a? Time
 
     # Maximum number of accounts to delete per run.
-    # This safety limit prevents the job from issuing extremely large queries
-    # that can take too long to execute or overwhelm the database.
-    @max_users_per_run = max_users_per_run || ACCOUNT_DELETION_LIMIT
-    raise ArgumentError.new('max_users_per_run must be Integer') unless @max_users_per_run.is_a? Integer
+    # This is a safety limit to prevent accidental deletion of too many accounts.
+    @limit = limit || ACCOUNT_DELETION_LIMIT
+    raise ArgumentError.new('limit must be Integer') unless @limit.is_a? Integer
 
     # Users that we don't want to include in paged batches. Includes users who have already been processed or encountered an error.
     @processed_user_ids = []
@@ -52,14 +51,14 @@ class InactiveUserDeleter
 
   def call
     reset_metrics
-    log_message("Starting InactiveUserDeleter#{dry_run? ? ' (dry-run)' : ''} for users inactive since #{inactive_since}, up to #{max_users_per_run} accounts.")
+    log_message("Starting InactiveUserDeleter#{dry_run? ? ' (dry-run)' : ''} for users inactive since #{inactive_since}, up to #{limit} accounts.")
     # Process individual batches in a loop to avoid issues with find_each, which imposes
     # an order by id, causing an inefficient scan on the id index. Order does not matter
     # for this operation, so we can use a simple limit approach.
     loop do
       account_batch = inactive_users.limit(BATCH_SIZE)
       account_batch.each do |user|
-        break if num_accounts_deleted >= max_users_per_run
+        break if num_accounts_deleted >= limit
         delete_user(user)
         self.num_accounts_deleted += 1
       rescue StandardError => exception
@@ -69,7 +68,7 @@ class InactiveUserDeleter
       ensure
         processed_user_ids << user.id
       end
-      break if account_batch.size < BATCH_SIZE || num_accounts_deleted >= max_users_per_run
+      break if account_batch.size < BATCH_SIZE || num_accounts_deleted >= limit
     end
 
     if dry_run?
