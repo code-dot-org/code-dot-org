@@ -147,6 +147,29 @@ describe('Design System - Custom Dropdown Component', () => {
     expect(screen.getByRole('button').parentElement).toHaveClass('hasError');
   });
 
+  it('renders dropdown menu content in a portal when requested', async () => {
+    const user = userEvent.setup();
+    render(
+      <CustomDropdown
+        name="portal-dropdown"
+        labelText="Portal dropdown"
+        size="m"
+        renderMenuInPortal
+      >
+        <div>Portal dropdown content</div>
+      </CustomDropdown>,
+    );
+
+    const dropdownButton = screen.getByRole('button', {
+      name: /portal-dropdown filter dropdown/i,
+    });
+
+    await user.click(dropdownButton);
+
+    const portalContent = screen.getByText('Portal dropdown content');
+    expect(portalContent.parentElement?.parentElement).toBe(document.body);
+  });
+
   it('renders as form field with selected value', () => {
     render(
       <CustomDropdown

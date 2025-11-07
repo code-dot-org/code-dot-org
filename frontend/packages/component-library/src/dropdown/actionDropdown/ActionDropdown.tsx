@@ -42,6 +42,10 @@ export interface ActionDropdownProps extends AriaAttributes {
   options: ActionDropdownOption[];
   /** ActionDropdown trigger button props */
   triggerButtonProps?: ButtonProps;
+  /** Render dropdown menu in a portal instead of inline with the trigger */
+  renderMenuInPortal?: boolean;
+  /** Custom element to use as the portal parent (defaults to document.body) */
+  portalParentElement?: Element | null;
 }
 
 /**
@@ -67,6 +71,8 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   menuVerticalPlacement = 'bottom',
   size = 'm',
   triggerButtonProps,
+  renderMenuInPortal,
+  portalParentElement,
   ...rest
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
@@ -89,6 +95,8 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
       menuPlacement={menuPlacement}
       menuVerticalPlacement={menuVerticalPlacement}
       size={size}
+      renderMenuInPortal={renderMenuInPortal}
+      portalParentElement={portalParentElement}
       {...rest}
       useDSCOButtonAsTrigger
       triggerButtonProps={triggerButtonProps}

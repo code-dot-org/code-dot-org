@@ -4,10 +4,15 @@ import {
   useMemo,
   useRef,
   useEffect,
+  useLayoutEffect,
+  useState,
   AriaAttributes,
   KeyboardEvent,
+  CSSProperties,
   memo,
 } from 'react';
+
+import {createPortal} from 'react-dom';
 
 import {Button, ButtonProps} from '@/button';
 import {dropdownColors} from '@/common/constants';
@@ -82,6 +87,10 @@ export interface CustomDropdownProps extends AriaAttributes {
   styleAsFormField?: boolean;
   /** (used with styleAsFormField: true) Selected value text */
   selectedValueText?: string;
+  /** Render dropdown menu in a portal instead of inline with the trigger */
+  renderMenuInPortal?: boolean;
+  /** Custom element to use as the portal parent (defaults to document.body) */
+  portalParentElement?: Element | null;
 }
 
 /**
@@ -118,10 +127,16 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   errorMessage,
   styleAsFormField = false,
   selectedValueText,
+  renderMenuInPortal = false,
+  portalParentElement,
   ...rest
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownMenuRef = useRef<HTMLDivElement>(null);
+  const [portalMenuStyles, setPortalMenuStyles] = useState<CSSProperties>({
+    display: 'block',
+  });
   const handleClickOutside = useCallback(
     (event: Event) => {
       if (
@@ -176,6 +191,86 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     [activeDropdownName, name],
   );
 
+  const portalParent = useMemo(() => {
+    if (!renderMenuInPortal) {
+      return null;
+    }
+    if (portalParentElement) {
+      return portalParentElement;
+    }
+    if (typeof document !== 'undefined') {
+      return document.body;
+    }
+    return null;
+  }, [portalParentElement, renderMenuInPortal]);
+
+  const updatePortalMenuPosition = useCallback(() => {
+    if (!renderMenuInPortal || !isOpen) {
+      return;
+    }
+    if (typeof window === 'undefined') {
+      return;
+    }
+    const dropdownElement = dropdownRef.current;
+    const menuElement = dropdownMenuRef.current;
+    if (!dropdownElement || !menuElement) {
+      return;
+    }
+
+    const dropdownRect = dropdownElement.getBoundingClientRect();
+    const menuRect = menuElement.getBoundingClientRect();
+
+    const scrollX = window.scrollX || window.pageXOffset;
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    const top =
+      menuVerticalPlacement === 'bottom'
+        ? dropdownRect.bottom + scrollY
+        : dropdownRect.top + scrollY - menuRect.height;
+
+    const left =
+      menuPlacement === 'right'
+        ? dropdownRect.right + scrollX - menuRect.width
+        : dropdownRect.left + scrollX;
+
+    setPortalMenuStyles(prevStyles => ({
+      ...prevStyles,
+      top,
+      left,
+      minWidth: dropdownRect.width,
+    }));
+  }, [
+    isOpen,
+    menuPlacement,
+    menuVerticalPlacement,
+    renderMenuInPortal,
+  ]);
+
+  useLayoutEffect(() => {
+    if (!renderMenuInPortal || !isOpen) {
+      return;
+    }
+    updatePortalMenuPosition();
+  }, [isOpen, renderMenuInPortal, updatePortalMenuPosition]);
+
+  useEffect(() => {
+    if (!renderMenuInPortal || !isOpen) {
+      return;
+    }
+
+    const handleReposition = () => {
+      updatePortalMenuPosition();
+    };
+
+    window.addEventListener('resize', handleReposition);
+    window.addEventListener('scroll', handleReposition, true);
+
+    return () => {
+      window.removeEventListener('resize', handleReposition);
+      window.removeEventListener('scroll', handleReposition, true);
+    };
+  }, [isOpen, renderMenuInPortal, updatePortalMenuPosition]);
+
   // Collapse dropdown if 'Escape' is pressed
   const onKeyDown: (e: KeyboardEvent) => void = e => {
     if (e.key === 'Escape') {
@@ -194,29 +289,30 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   };
 
   return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-    <div
-      id={`${name}-dropdown`}
-      className={classNames(
-        {
-          [moduleStyles.open]: isOpen,
-          [moduleStyles.hasError]: errorMessage,
-          [moduleStyles.readOnly]: readOnly,
-          [moduleStyles.styleAsFormField]: styleAsFormField,
-        },
-        moduleStyles.dropdownContainer,
-        moduleStyles[`dropdownContainer-${menuPlacement}-menuPlacement`],
-        moduleStyles[
-          `dropdownContainer-${menuVerticalPlacement}-menuVerticalPlacement`
-        ],
-        moduleStyles[`dropdownContainer-${color}`],
-        moduleStyles[`dropdownContainer-${size}`],
-        className,
-      )}
-      onKeyDown={onKeyDown}
-      ref={dropdownRef}
-      aria-describedby={ariaProps['aria-describedby']}
-    >
+    <>
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
+      <div
+        id={`${name}-dropdown`}
+        className={classNames(
+          {
+            [moduleStyles.open]: isOpen,
+            [moduleStyles.hasError]: errorMessage,
+            [moduleStyles.readOnly]: readOnly,
+            [moduleStyles.styleAsFormField]: styleAsFormField,
+          },
+          moduleStyles.dropdownContainer,
+          moduleStyles[`dropdownContainer-${menuPlacement}-menuPlacement`],
+          moduleStyles[
+            `dropdownContainer-${menuVerticalPlacement}-menuVerticalPlacement`
+          ],
+          moduleStyles[`dropdownContainer-${color}`],
+          moduleStyles[`dropdownContainer-${size}`],
+          className,
+        )}
+        onKeyDown={onKeyDown}
+        ref={dropdownRef}
+        aria-describedby={ariaProps['aria-describedby']}
+      >
       {styleAsFormField && labelText && (
         <div className={moduleStyles.dropdownFieldLabel}>
           <span>{labelText}</span>
@@ -268,10 +364,12 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
         </button>
       )}
-      <div className={moduleStyles.dropdownMenuContainer}>
-        {/** Dropdown menu content is rendered here as children props*/}
-        {children}
-      </div>
+      {!renderMenuInPortal && (
+        <div className={moduleStyles.dropdownMenuContainer} ref={dropdownMenuRef}>
+          {/** Dropdown menu content is rendered here as children props*/}
+          {children}
+        </div>
+      )}
 
       {!errorMessage && (helperMessage || helperIcon) && (
         <div className={moduleStyles.helperSection}>
@@ -290,7 +388,24 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           <span>{errorMessage}</span>
         </div>
       )}
-    </div>
+      </div>
+      {renderMenuInPortal &&
+        portalParent &&
+        isOpen &&
+        createPortal(
+          <div
+            className={classNames(
+              moduleStyles.dropdownMenuContainer,
+              moduleStyles.dropdownMenuContainerPortal,
+            )}
+            ref={dropdownMenuRef}
+            style={portalMenuStyles}
+          >
+            {children}
+          </div>,
+          portalParent,
+        )}
+    </>
   );
 };
 

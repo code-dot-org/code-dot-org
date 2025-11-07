@@ -78,6 +78,7 @@ export const FileBrowserHeaderPopUpButton = () => {
         }}
         size="xs"
         menuVerticalPlacement="bottom"
+        renderMenuInPortal
         options={[
           {
             value: 'newFolder',
