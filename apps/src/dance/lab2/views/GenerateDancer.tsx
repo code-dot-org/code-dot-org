@@ -36,7 +36,8 @@ import adlibsDefault from './dancerAdlibsDefault';
 
 import moduleStyles from './generate-dancer.module.scss';
 
-const BODY_VARIANT_COUNT = 5;
+// Fallback body variant count if not specified in manifest.
+const DEFAULT_BODY_VARIANT_COUNT = 5;
 
 // A little time for the previous dancer to fade out.
 const GENERATE_INITIAL_DELAY_DURATION = 250;
@@ -44,6 +45,10 @@ const GENERATE_INITIAL_DELAY_DURATION = 250;
 // The total time we spend on the generation process.
 const GENERATE_TOTAL_DELAY_DURATION = 5000;
 
+const MANIFEST_BASE =
+  'https://curriculum.code.org/media/musiclab/generate/dancer/manifest/';
+
+type BodiesVariantCount = Record<string, {variants: number}>;
 type AdlibsBlockList = {[key: string]: string[]};
 
 interface AdlibsManifest {
@@ -92,6 +97,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const blockList = useRef<AdlibsBlockList | undefined>(undefined);
 
+  const [bodyManifest, setBodyManifest] = useState<BodiesVariantCount | null>(
+    null
+  );
+
   const getInitialChoices = useCallback(
     (adlibsValue: AdlibsType) => {
       const initial: AdlibChoices = {};
@@ -107,6 +116,30 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   );
 
   useEffect(() => {
+    const fetchBodies = async () => {
+      const bodiesManifestFilename =
+        ((queryParams('dancer-bodies-manifest') as string) ||
+          'bodies-manifest') + '.json';
+      const bodiesManifestPath = MANIFEST_BASE + bodiesManifestFilename;
+
+      try {
+        const {value} = await HttpClient.fetchJson<BodiesVariantCount>(
+          bodiesManifestPath
+        );
+        setBodyManifest(value);
+      } catch (error) {
+        Lab2Registry.getInstance().getMetricsReporter().logWarning({
+          message: 'Error loading bodies manifest',
+          manifestFilename: bodiesManifestFilename,
+        });
+        setBodyManifest(null);
+      }
+    };
+
+    fetchBodies();
+  }, []);
+
+  useEffect(() => {
     const fetchAdlib = async () => {
       if (aiGenerateState !== 'loading') {
         return;
@@ -114,12 +147,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
       let adlibsValue = adlibsDefault;
 
-      const manifestFilename =
+      const adlibManifestFilename =
         ((queryParams('dancer-adlib-manifest') as string) || 'adlib-manifest') +
         '.json';
-      const adlibsFilePath =
-        'https://curriculum.code.org/media/musiclab/generate/dancer/manifest/' +
-        manifestFilename;
+      const adlibsFilePath = MANIFEST_BASE + adlibManifestFilename;
 
       try {
         const {value} = await HttpClient.fetchJson<AdlibsManifest>(
@@ -131,7 +162,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
         console.log("Couldn't retrieve adlib manifest.", error);
         Lab2Registry.getInstance().getMetricsReporter().logWarning({
           message: 'Error loading adlib manifest',
-          manifestFilename,
+          manifestFilename: adlibManifestFilename,
         });
       }
 
@@ -149,6 +180,16 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setAiGenerateState('loading');
     setHasGenerated(false);
   });
+
+  const getBodyVariantCountForStyle = useCallback(
+    (styleId?: string) => {
+      const count = styleId && bodyManifest?.[styleId]?.variants;
+      return Number.isFinite(count) && Number(count) > 0
+        ? (count as number)
+        : DEFAULT_BODY_VARIANT_COUNT;
+    },
+    [bodyManifest]
+  );
 
   const generateDancerCache = useCallback(async () => {
     const startTime = Date.now();
@@ -210,7 +251,11 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     );
 
     const variant = sample(newVariants) as number;
-    const bodyVariant = getRandomInt(0, BODY_VARIANT_COUNT - 1);
+    const currentStyle = adlibChoices?.style;
+    const bodyVariant = getRandomInt(
+      0,
+      getBodyVariantCountForStyle(currentStyle) - 1
+    );
 
     // Keep the recently-shown array length at a maximum that ensures
     // there are still two choices to be made each time.
@@ -241,7 +286,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       0
     );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
-  }, [adlibChoices, adlibOption, adlibs]);
+  }, [adlibChoices, adlibOption, adlibs, getBodyVariantCountForStyle]);
 
   const [hasGenerated, setHasGenerated] = useState(false);
   const signedIn = useAppSelector(state => state.currentUser.signInState);
