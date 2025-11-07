@@ -14,6 +14,8 @@ from PIL import Image
 import numpy as np
 from tqdm import tqdm
 from openai import AsyncOpenAI
+from datetime import datetime, timezone
+import re
 
 parser = argparse.ArgumentParser(
         prog='HoAI 2025 Image Generation Script',
@@ -23,6 +25,8 @@ parser.add_argument('-a', '--attire', action='append', default=[])
 parser.add_argument('-n', '--animal', action='append', default=[])
 parser.add_argument('-j', '--adjective', action='append', default=[])
 parser.add_argument('-k', '--key', action='store', default=None)
+parser.add_argument('--redo-only',nargs='+',default=None, help='Redo specific variants (e.g., flame_03 tiger-hat-happy_02), then exit.')
+
 
 args = parser.parse_args()
 
@@ -49,6 +53,8 @@ BASE_BACKOFF = 1.0  # seconds
 REQUIRE_SEED_FOR_DERIVATIVES = True
 FAIL_IF_MISSING_SEED = False  # set True if you want the run to hard-fail when a seed is missing
 
+# Back up files before overwriting on redo
+BACKUP_ON_REDO = True
 
 # -------- Robust color picker (v2) TUNABLES --------
 ALPHA_WEIGHT_FOR_PALETTE   = True
@@ -461,6 +467,29 @@ def metadata_record(adj, animal, att, v, img_path: Path, prompt: str,
         "tertiary_color": tertiary_hex,
     }
 
+def _find_metadata_for_base(base: str) -> Path | None:
+    """
+    Look for '<base>-metadata.json' in any of the three subfolders.
+    """
+    for folder in [ANIMAL_DIR, ANIMAL_ATTIRE_DIR, ADJ_ANIMAL_ATTIRE_DIR]:
+        p = folder / f"{base}-metadata.json"
+        if p.exists():
+            return p
+    return None
+
+def _backup_paths(img_path: Path, meta_path: Path, stamp: str):
+    """
+    Move current files into a backup folder under OUTDIR/_redo_backups/<stamp>/...
+    """
+    backup_root = OUTDIR / "_redo_backups" / stamp
+    backup_root.mkdir(parents=True, exist_ok=True)
+    for p in [img_path, meta_path]:
+        if p.exists():
+            rel = p.parent.name + "/" + p.name  # keep subfolder context
+            dest = backup_root / rel
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            p.replace(dest)  # atomic move on same filesystem
+
 # ---------- Parallel worker ----------
 async def generate_for_combo(adj, animal, att, title, desc, missing_variants, sem: asyncio.Semaphore, progress=None):
     if not missing_variants:
@@ -591,10 +620,146 @@ async def heartbeat(task_name, progress, total, interval=15):
     except asyncio.CancelledError:
         pass
 
+async def redo_specific_variants(target_tokens: list[str], sem: asyncio.Semaphore) -> int:
+    """
+    Re-generate specific assets by base name using the original metadata.
+    - Base animals: regenerate via images.generate (no seed).
+    - Derivatives (attire or adjective+attire): regenerate via images.edit using the base animal seed for the same variant.
+    """
+    if not target_tokens:
+        return 0
+
+    bases = [t for t in target_tokens]
+
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+    regenerated = 0
+
+    for base in bases:
+        meta_path = _find_metadata_for_base(base)
+        if not meta_path:
+            print(f"[REDO] SKIP: no metadata found for {base}", flush=True)
+            continue
+
+        try:
+            meta = json.loads(meta_path.read_text())
+        except Exception as e:
+            print(f"[REDO] SKIP: unreadable metadata for {base}: {e}", flush=True)
+            continue
+
+        # Pull canonical slugs first, then human fields if slugs missing
+        adj_slug    = meta.get("adjective_slug")
+        animal_slug = meta.get("animal_slug") or _canon_slug(meta.get("animal"))
+        att_slug    = meta.get("attire_slug")
+        try:
+            v = int(meta.get("variant"))
+        except Exception:
+            # fallback: try to parse from base suffix -\d{2}
+            m = re.search(r"-(\d{2})$", base)
+            if not m:
+                print(f"[REDO] SKIP: cannot determine variant index for {base}", flush=True)
+                continue
+            v = int(m.group(1))
+
+        prompt = meta.get("prompt_used")
+        if not prompt:
+            print(f"[REDO] SKIP: metadata missing 'prompt_used' for {base}", flush=True)
+            continue
+
+        # Resolve image path for overwrite
+        img_path = meta_path.with_name(meta.get("file_name") or f"{base}.png")
+        dest_dir = img_path.parent
+        dest_dir.mkdir(parents=True, exist_ok=True)
+
+        # Decide seeded vs unseeded based on presence of attire/adjective (derivative)
+        is_derivative = bool(att_slug or adj_slug)
+
+        print(f"[REDO] {'DERIV' if is_derivative else 'BASE'} -> {base}", flush=True)
+
+        # Run request
+        async with sem:
+            delay = BASE_BACKOFF
+            resp = None
+            for attempt in range(1, RETRIES + 1):
+                try:
+                    if is_derivative:
+                        # Enforce seed for derivatives
+                        seed_path = seed_image_for_variant(animal_slug or meta.get("animal"), v)
+                        if not seed_path:
+                            print("[REDO] WARNING: falling back to generate", flush=True)
+                            resp = await aclient.images.generate(
+                                model=MODEL,
+                                prompt=prompt,
+                                size=f"{IMG_W}x{IMG_H}",
+                                n=1,
+                                background=BACKGROUND,
+                            )
+                            break
+
+                        # Seed available → use images.edit to preserve shape
+                        with open(seed_path, "rb") as f:
+                            resp = await aclient.images.edit(
+                                model=MODEL,
+                                image=f,
+                                prompt=prompt,
+                                size=f"{IMG_W}x{IMG_H}",
+                                background=BACKGROUND,
+                                n=1,
+                            )
+                    else:
+                        # Base animal → plain generate
+                        resp = await aclient.images.generate(
+                            model=MODEL,
+                            prompt=prompt,
+                            size=f"{IMG_W}x{IMG_H}",
+                            n=1,
+                            background=BACKGROUND,
+                        )
+                    break
+                except Exception as e:
+                    if attempt == RETRIES:
+                        print(f"[REDO] ERROR request for {base}: {e}", flush=True)
+                    await asyncio.sleep(delay + random.uniform(0, 0.5))
+                    delay = min(delay * 2, 20)
+
+        if not resp:
+            continue
+
+        # Back up current files and overwrite with new results
+        try:
+            if BACKUP_ON_REDO:
+                _backup_paths(img_path, meta_path, stamp)
+
+            b64 = resp.data[0].b64_json
+            save_png(b64, img_path)
+            body_hex, secondary_hex, tertiary_hex = extract_palette(img_path)
+
+            # Refresh metadata fields that are dynamic
+            meta["id"] = str(uuid.uuid4())
+            meta["file_name"] = img_path.name
+            meta["body_color"] = body_hex
+            meta["secondary_color"] = secondary_hex
+            meta["tertiary_color"] = tertiary_hex
+            meta["regenerated_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+            meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False))
+            print(f"[REDO] DONE: {base}", flush=True)
+            regenerated += 1
+        except Exception as e:
+            print(f"[REDO] ERROR writing {base}: {e}", flush=True)
+
+    return regenerated
 
 # ---------- Main orchestration ----------
 async def main_async():
     ensure_dirs()
+
+    # --- Optional: redo specific variants (from CLI) ---
+    if args.redo_only:
+        sem = asyncio.Semaphore(CONCURRENCY)
+        count = await redo_specific_variants(args.redo_only, sem)
+        print(f"[REDO] Completed {count} re-generation(s).")
+        print("[REDO] --redo-only supplied; skipping base and derivative generation.")
+        return
 
     # 1) Build full plan in the required order and deduplicate
     full_plan = list(build_plan())   # (adj, animal, att, desc, title)
@@ -608,6 +773,7 @@ async def main_async():
 
     created_total = 0
     sem = asyncio.Semaphore(CONCURRENCY)
+
 
     # ---------------- Phase 1: BASE animals ----------------
     completed = scan_completed_variants()

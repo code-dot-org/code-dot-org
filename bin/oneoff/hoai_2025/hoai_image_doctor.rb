@@ -10,7 +10,7 @@ require File.expand_path('../../../../dashboard/config/environment', __FILE__)
 require_relative '../../../lib/cdo/aws/s3'
 require_relative '../../../deployment'
 
-DOCTOR_TOOLS = ['transparent_eyes', 'regen_transparent_eyes']
+DOCTOR_TOOLS = ['regen_transparent_eyes', 'trim_edges', 'clean_edge_artifacts']
 
 # S3 settings (same path scheme as generator harness)
 BUCKET_NAME_BASE = 'cdo-curriculum'.freeze
@@ -27,7 +27,12 @@ options = {
   model: 'gpt-image-1',
   size: '1024x1024',
   upload: false,
-  production: false
+  production: false,
+  pixels: 4,
+  band: 6,
+  tolerance: 18.0,
+  feather: 1.5,
+  keep_format: false
 }
 
 parser = OptionParser.new do |opts|
@@ -36,8 +41,9 @@ parser = OptionParser.new do |opts|
       ruby #{File.basename(__FILE__)} --tool TOOL --input DIR [options]
 
     Tools:
-      transparent_eyes       Local PIL fixer
       regen_transparent_eyes OpenAI edit -> evaluate -> HTML report
+      trim_edges            Crop N pixels off all edges (Pillow) [supports --inplace]
+      clean_edge_artifacts  Detect edge halos and make them transparent [supports --inplace]
 
     Options:
   BANNER
@@ -57,6 +63,11 @@ parser = OptionParser.new do |opts|
   # S3 upload toggles (mirrors generator harness)
   opts.on('--upload', 'Upload the output directory to S3 after processing') {options[:upload] = true}
   opts.on('--production', 'Use production bucket (cdo-curriculum) instead of -devel') {options[:production] = true}
+  opts.on('--pixels N', Integer, 'Pixels to trim from each edge (default: 4)') {|v| options[:pixels] = v}
+  opts.on('--band N', Integer, 'Edge band width to analyze/clean for clean_edge_artifacts (default: 6)') {|v| options[:band] = v}
+  opts.on('--tolerance F', Float, 'RGB distance threshold for clean_edge_artifacts (default: 18.0)') {|v| options[:tolerance] = v}
+  opts.on('--feather F', Float, 'Gaussian blur radius for soft alpha (default: 1.5)') {|v| options[:feather] = v}
+  opts.on('--keep-format', 'Keep original extension even if it drops alpha (JPEG will flatten)') {options[:keep_format] = true}
 
   opts.on('-h', '--help', 'Show help and exit') {puts opts; exit 0}
 end
@@ -85,11 +96,14 @@ unless Dir.exist?(python_root)
   exit 2
 end
 
-# OpenAI key (same extraction as generator harness)
-openai_key = ENV.fetch("OPENAI_API_KEY", nil) || CDO.openai_student_learning_api_key.presence
-raise "Missing OpenAI API key (set openai_student_learning_api_key or OPENAI_API_KEY)" if openai_key.nil? || openai_key.strip.empty?
+# OpenAI key
+openai_key = nil
+if options[:tool] == 'regen_transparent_eyes'
+  openai_key = ENV.fetch("OPENAI_API_KEY", nil) || CDO.openai_student_learning_api_key.presence
+  raise "Missing OpenAI API key (set openai_student_learning_api_key or OPENAI_API_KEY)" if openai_key.nil? || openai_key.strip.empty?
+end
 
-def build_command(tool, python_root, options, openai_key, aws_access_key_id, aws_secret_access_key, aws_session_token, aws_region)
+def build_command(tool, python_root, options, openai_key)
   runner = `which uv`.strip.empty? ? 'python' : 'uv run python'
 
   case tool
@@ -109,12 +123,44 @@ def build_command(tool, python_root, options, openai_key, aws_access_key_id, aws
     }.delete_if {|_, v| v.nil? || v == ""}
     {chdir: python_root, cmd: "#{runner} -m #{mod} #{args.join(' ')}", env: env, output_dir: out_dir}
 
+  when 'trim_edges'
+    mod = 'hoai_2025.trim_edges'
+    in_dir  = File.expand_path(options[:input])
+    out_dir = File.expand_path(options[:output] || File.join(in_dir, "_trimmed"))
+    args = []
+    args << "--input '#{in_dir}'"
+    # Only pass --output when not doing inplace
+    unless options[:inplace]
+      args << "--output '#{out_dir}'"
+    end
+    args << "--pixels #{Integer(options[:pixels] || 4)}"
+    args << "--inplace" if options[:inplace]
+    args << "--verbose" if options[:verbose]
+    {chdir: python_root, cmd: "#{runner} -m #{mod} #{args.join(' ')}", env: {}, output_dir: (options[:inplace] ? in_dir : out_dir)}
+
+  when 'clean_edge_artifacts'
+    mod = 'hoai_2025.clean_edge_artifacts'
+    in_dir  = File.expand_path(options[:input])
+    out_dir = File.expand_path(options[:output] || File.join(in_dir, "_edgeclean"))
+    args = []
+    args << "--input '#{in_dir}'"
+    unless options[:inplace]
+      args << "--output '#{out_dir}'"
+    end
+    args << "--band #{Integer(options[:band] || 6)}"
+    args << "--tolerance #{Float(options[:tolerance] || 18.0)}"
+    args << "--feather #{Float(options[:feather] || 1.5)}"
+    args << "--inplace" if options[:inplace]
+    args << "--keep-format" if options[:keep_format]
+    args << "--verbose" if options[:verbose]
+    {chdir: python_root, cmd: "#{runner} -m #{mod} #{args.join(' ')}", env: {}, output_dir: (options[:inplace] ? in_dir : out_dir)}
+
   else
     raise "Unknown tool: #{tool}"
   end
 end
 
-job = build_command(options[:tool], python_root, options, openai_key, aws_access_key_id, aws_secret_access_key, aws_session_token, aws_region)
+job = build_command(options[:tool], python_root, options, openai_key)
 
 puts "[doctor] Tool: #{options[:tool]}"
 puts "[doctor] Workdir: #{job[:chdir]}"

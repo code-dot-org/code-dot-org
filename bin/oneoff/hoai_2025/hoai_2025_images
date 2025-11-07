@@ -22,6 +22,7 @@ options = {
   attires: [],
   animals: [],
   adjectives: [],
+  redo_only: [],
 }
 OptionParser.new do |opts|
   opts.banner = <<~BANNER
@@ -68,6 +69,14 @@ OptionParser.new do |opts|
          ) do |adjective|
            options[:adjectives] << adjective
          end
+  opts.on('--redo-only TARGETS',
+          'ONLY redo specific variants (e.g., flame_03).',
+          'May be repeated or comma-separated (e.g., "a_01,b_02").'
+         ) do |targets|
+    options[:redo_only].concat(
+      targets.split(',').map(&:strip).reject(&:empty?)
+    )
+  end
 
   opts.on('-h', '--help', 'Prints this help message') do
     puts opts
@@ -91,6 +100,9 @@ python_args << " #{options[:attires].map {|a| "-a '#{a}'"}.join(' ')}"
 python_args << " #{options[:animals].map {|a| "-n '#{a}'"}.join(' ')}"
 python_args << " #{options[:adjectives].map {|a| "-j '#{a}'"}.join(' ')}"
 python_args << " -k '#{key}'"
+unless options[:redo_only].empty?
+  python_args << " --redo-only #{options[:redo_only].map {|t| "'#{t}'"}.join(' ')}"
+end
 puts "python -m hoai_2025.combinatoric_generation#{python_args}"
 system("uv run python -m hoai_2025.combinatoric_generation#{python_args}") unless options[:just_upload]
 Dir.chdir('../..')

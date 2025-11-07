@@ -1,6 +1,5 @@
 happy 
 silly 
 sleepy 
-surprised 
-confused 
+surprised
 fierce
