@@ -142,9 +142,8 @@
                           "deletable": false,
                           "movable": false,
                           "fields": {
-                            "GROUP": "<field name=\"GROUP\">\"GENERATED_DANCER\"</field>",
-                            "MOVE": "<field name=\"MOVE\">MOVES.Rest</field>",
-                            "DIR": "<field name=\"DIR\">1</field>"
+                            "GROUP": "<field name=\"GROUP\" config=\"&quot;GENERATED_DANCER&quot;\">\"GENERATED_DANCER\"</field>",
+                            "MOVE": "<field name=\"MOVE\">MOVES.Rest</field>"
                           }
                         }
                       }

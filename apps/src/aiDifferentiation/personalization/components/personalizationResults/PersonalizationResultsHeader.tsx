@@ -7,9 +7,9 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {TeachingStyle} from './personalization_types';
+import {TeachingStyle} from './../../personalization_types';
 
-import style from './personalization-information.module.scss';
+import style from './../../personalization-information.module.scss';
 
 interface PersonalizationResultsHeaderProps {
   teachingStyle: TeachingStyle;
