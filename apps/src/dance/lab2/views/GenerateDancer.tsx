@@ -38,7 +38,11 @@ import moduleStyles from './generate-dancer.module.scss';
 
 const BODY_VARIANT_COUNT = 5;
 
-const GENERATE_DELAY_DURATION = 5000;
+// A little time for the previous dancer to fade out.
+const GENERATE_INITIAL_DELAY_DURATION = 250;
+
+// The total time we spend on the generation process.
+const GENERATE_TOTAL_DELAY_DURATION = 5000;
 
 type AdlibsBlockList = {[key: string]: string[]};
 
@@ -231,7 +235,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
     const elapsedTime = Date.now() - startTime;
     const remainingDelayDuration = Math.max(
-      GENERATE_DELAY_DURATION - elapsedTime,
+      GENERATE_TOTAL_DELAY_DURATION -
+        GENERATE_INITIAL_DELAY_DURATION -
+        elapsedTime,
       0
     );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
@@ -258,7 +264,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       logLevelActivity();
     }
     setAiGenerateState('generating');
-    await new Promise(res => setTimeout(res, 250));
+    await new Promise(res => setTimeout(res, GENERATE_INITIAL_DELAY_DURATION));
     await generateDancerCache();
     setAiGenerateState('reviewing');
     setHasGenerated(true);
@@ -448,12 +454,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           </div>
 
           {showGenerating && (
-            <div
-              className={classNames(
-                moduleStyles.dancerSilhouette,
-                moduleStyles.dancerSilhouetteBright
-              )}
-            >
+            <div className={moduleStyles.dancerSilhouetteBright}>
               <img alt="" src={dancerSilhouetteBrightImage} />
             </div>
           )}

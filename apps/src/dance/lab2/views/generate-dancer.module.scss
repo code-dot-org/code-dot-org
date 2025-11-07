@@ -83,16 +83,13 @@
   }
 }
 
-.dancerSilhouette {
+.dancerSilhouetteBright {
   position: absolute;
   display: flex;
   justify-content: center;
   height: 99.5%;
   opacity: 1;
-
-  &Bright {
-    animation: fadein 5s;
-  }
+  animation: fadein 5s;
 }
 
 .dancer {
