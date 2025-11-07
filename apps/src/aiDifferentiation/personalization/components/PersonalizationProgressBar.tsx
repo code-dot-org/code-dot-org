@@ -5,7 +5,7 @@ import LinearProgress, {
 } from '@mui/material/LinearProgress';
 import React from 'react';
 
-import style from './personalization-information.module.scss';
+import style from './../personalization-information.module.scss';
 
 type PersonalizationProgressBarProps = {
   /** Current question number */
