@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing Arrow Functions in JavaScript
 
-#### Now that you know how to write basic functions using the function keyword, let’s look at a newer, shorter way to write them — called arrow functions.
+#### Now that you know how to write basic functions using the function keyword, let’s look at a newer, shorter way to write them.
 
 #### Arrow functions do the same thing as regular functions, but use a simpler syntax.
 

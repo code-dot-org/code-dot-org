@@ -1144,6 +1144,7 @@ __metadata:
   resolution: "@code-dot-org/design-system-storybook@workspace:apps/design-system-storybook"
   dependencies:
     "@applitools/eyes-storybook": "npm:^3.56.0"
+    "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"

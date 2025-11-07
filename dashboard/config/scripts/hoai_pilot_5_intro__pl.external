@@ -5,12 +5,8 @@ description 'description here'
 markdown <<MARKDOWN
 <div style="padding:60px 20px 40px; text-align:center;">
 <h1 style="font-size:44px; color:#7b3fe4; margin:0;">Mix & Move with AI</h1>
-<h2 style="font-size:24px; color:#1a8a9a; margin:10px 0 16px;">Educator’s Experience</h2>
+<h2 style="font-size:24px; color:#1a8a9a; margin:10px 0;">Educator’s Experience</h2>
 </div>
-
-<p style="font-size:17px; line-height:1.6; color:#444; margin-bottom:18px;">
-    An opportunity for educators to explore AI hands-on — completing your own Hour of AI activity with learning that’s designed just for you.
-</p>
 
 <section style="max-width:1100px; margin:60px auto 40px; padding:0 24px; display:flex; align-items:center; gap:36px; flex-wrap:wrap;">
 

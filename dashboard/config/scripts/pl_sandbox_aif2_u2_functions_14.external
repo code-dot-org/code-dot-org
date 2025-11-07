@@ -37,7 +37,7 @@ markdown <<MARKDOWN
 
 #### This works fine—but notice the repetition?
 
-#### Each **event handler** repeats the same steps: add to `total` and update the display. If you ever want to change how the display looks, you’d have to fix it in multiple places.
+#### Each **event listener** repeats the same steps: add to `total` and update the display. If you ever want to change how the display looks, you’d have to fix it in multiple places.
 
 
 
@@ -50,7 +50,7 @@ markdown <<MARKDOWN
 
 
 
-#### Now the code for the event handers are shorter, easier to update, and easier for students to understand.
+#### Now the code for the event listeners are shorter, easier to update, and easier for students to understand.
 #### If you ever want to change how the total appears, you only need to edit one place — inside the `updateTotal()` function.
 
 

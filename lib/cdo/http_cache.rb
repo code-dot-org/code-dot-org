@@ -168,6 +168,12 @@ class HttpCache
             headers: S3_FORWARD_HEADERS,
             cookies: 'none'
           },
+          {
+            path: %w[/congrats /congrats/*],
+            proxy: 'dashboard',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies,
+          },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
             path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /fonts/*),
