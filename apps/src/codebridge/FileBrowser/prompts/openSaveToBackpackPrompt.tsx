@@ -6,7 +6,6 @@ import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErr
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectFile} from '@cdo/apps/lab2/types';
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
   DialogType,
   DialogControlInterface,
@@ -19,12 +18,14 @@ type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   backpackApi: BackpackContextType;
   file: ProjectFile;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
 };
 
 export const openSaveToBackpackPrompt = async ({
   dialogControl,
   backpackApi,
   file,
+  sendLab2AnalyticsEvent,
 }: OpenSaveToBackpackPromptArgsType) => {
   const handleError =
     (title: string, message: string, errorMessage: string) =>

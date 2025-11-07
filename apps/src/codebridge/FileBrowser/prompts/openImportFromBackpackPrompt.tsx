@@ -14,7 +14,6 @@ import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErr
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
   DialogType,
   DialogControlInterface,
@@ -31,6 +30,7 @@ type OpenImportFromBackpackPromptArgsType = {
   saveFile: SaveFileFunction;
   projectFiles: MultiFileSource['files'];
   validationFile?: ProjectFile;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
 };
 
 export const openImportFromBackpackPrompt = async ({
@@ -40,6 +40,7 @@ export const openImportFromBackpackPrompt = async ({
   saveFile,
   projectFiles,
   validationFile,
+  sendLab2AnalyticsEvent,
 }: OpenImportFromBackpackPromptArgsType) => {
   const handleError =
     (title: string, message: string, errorMessage: string) =>

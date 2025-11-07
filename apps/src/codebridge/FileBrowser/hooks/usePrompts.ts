@@ -173,6 +173,7 @@ export const usePrompts = () => {
       newFile,
       saveFile,
       dialogControl,
+      sendLab2AnalyticsEvent,
     } satisfies PAFunctionArgs<typeof globalOpenImportFromBackpackPrompt>
   );
 
@@ -180,6 +181,7 @@ export const usePrompts = () => {
     globalOpenSaveToBackpackPrompt,
     {
       dialogControl,
+      sendLab2AnalyticsEvent,
     } satisfies PAFunctionArgs<typeof globalOpenSaveToBackpackPrompt>
   );
 
