@@ -1,6 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading3} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -26,7 +27,8 @@ import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
-import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-shoulders.png';
+import backgroundImage from '@cdo/static/dance/generateDancer/generate-dancer-background.png';
+import dancerSilhouetteBrightImage from '@cdo/static/dance/generateDancer/generate-dancer-silhouette-bright.svg';
 
 import {getConfigValue} from '../../lottie/LottieDancerUtils';
 
@@ -256,6 +258,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       logLevelActivity();
     }
     setAiGenerateState('generating');
+    await new Promise(res => setTimeout(res, 250));
     await generateDancerCache();
     setAiGenerateState('reviewing');
     setHasGenerated(true);
@@ -289,7 +292,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   // We artificially increase the 'generating' time so that the image doesn't appear
   // too soon.
-  const showPlaceholder = aiGenerateState === 'generating' || isPreviewLoading;
+  const showGenerating = aiGenerateState === 'generating' || isPreviewLoading;
 
   const parentProperties = useParentLevelProperties();
   const showNavigation =
@@ -436,11 +439,34 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           )}
         </Guide>
         <div className={moduleStyles.dancerContainer} ref={containerRef}>
-          <div>
-            {showPlaceholder && <img alt="" src={dancerEmptyHeadShoulders} />}
+          <div className={moduleStyles.background}>
+            <img
+              src={backgroundImage}
+              alt=""
+              className={moduleStyles.backgroundImage}
+            />
+          </div>
+
+          {showGenerating && (
+            <div
+              className={classNames(
+                moduleStyles.dancerSilhouette,
+                moduleStyles.dancerSilhouetteBright
+              )}
+            >
+              <img alt="" src={dancerSilhouetteBrightImage} />
+            </div>
+          )}
+
+          <div
+            className={classNames(
+              moduleStyles.dancer,
+              showGenerating && moduleStyles.dancerHidden
+            )}
+          >
             <DancerCanvas
               key={dancerMetadata || 'none'}
-              size={containerHeight}
+              size={containerHeight * 1.1}
               move={getConfigValue('danceMove') || 'rest'}
               onLoadingChange={setIsPreviewLoading}
             />
