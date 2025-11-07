@@ -80,7 +80,7 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
 
       expect(CdoContentful::CsForAll::Entry::Tutorial).
         to receive(:find_each).
-        with(limit: 200, order: 'fields.tutorialID').
+        with(limit: 200, order: 'fields.tutorialID', 'tutorialID[exists]': true).
         exactly(2).times.
         and_return(
           [OpenStruct.new(tutorial_id: original_tutorial_id)].to_enum,

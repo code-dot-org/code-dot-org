@@ -31,7 +31,7 @@ module HocLegacy
 
       private def fetch_all
         CdoContentful::CsForAll::Entry::Tutorial.
-          find_each(order: FETCH_ORDER, limit: FETCH_LIMIT).
+          find_each(order: FETCH_ORDER, limit: FETCH_LIMIT, 'tutorialID[exists]': true).
           with_object({}) do |tutorial, data|
             data[tutorial.tutorial_id] = tutorial
           rescue StandardError => exception
