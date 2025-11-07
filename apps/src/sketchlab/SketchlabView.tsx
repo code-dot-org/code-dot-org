@@ -59,6 +59,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const filesBeingUploadedRef = useRef<Set<string>>(new Set());
+  const downloadedFileDataRef = useRef<
+    Record<ExcalidrawElement['id'], DataURL>
+  >({});
 
   const {theme} = useTheme();
 
@@ -194,15 +197,26 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         excalidrawInitialState.externalFiles
       ).map(async file => {
         if (file.url) {
-          console.log(file.url);
-          await imageUrlToBase64(file.url)
-            .then(base64 => {
-              if (excalidrawInitialState.files) {
-                excalidrawInitialState.files[file.id].dataURL =
-                  base64 as DataURL;
-              }
-            })
-            .catch(error => console.error(error));
+          if (!Object.keys(downloadedFileDataRef.current).includes(file.id)) {
+            await imageUrlToBase64(file.url)
+              .then(base64 => {
+                // handle empty files?
+                if (excalidrawInitialState.files) {
+                  excalidrawInitialState.files[file.id].dataURL =
+                    base64 as DataURL;
+                  downloadedFileDataRef.current[file.id] = base64 as DataURL;
+                }
+              })
+              .catch(error => {
+                // what to do on error?
+                console.error(error);
+              });
+          } else {
+            if (excalidrawInitialState.files) {
+              const base64 = downloadedFileDataRef.current[file.id];
+              excalidrawInitialState.files[file.id].dataURL = base64;
+            }
+          }
         }
       });
       await Promise.allSettled(imageDownloadPromises);
