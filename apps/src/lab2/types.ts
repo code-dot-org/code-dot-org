@@ -192,7 +192,7 @@ export interface LevelProperties {
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   finishUrl?: string;
-  finishDialog?: string;
+  finishDialog?: ShareDialogId;
   offerBrowserTts?: boolean;
   useSecondaryFinishButton?: boolean;
   // Python Lab/Codebridge specific properties
