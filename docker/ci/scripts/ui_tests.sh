@@ -7,8 +7,13 @@
 
 source docker/ci/scripts/prepare_ci_tests.sh
 
-bundle exec rake ci:run_ui_tests
+# Set up trap to dump Sauce Connect log on exit (success or failure)
+function dump_sc_log() {
+  if [ -f log/sc.log ]; then
+    echo "Sauce Connect log:"
+    cat log/sc.log
+  fi
+}
+trap dump_sc_log EXIT
 
-echo "dumping Sauce Connect log for debugging:"
-cat log/sc.log
-echo "end of Sauce Connect log."
+bundle exec rake ci:run_ui_tests
