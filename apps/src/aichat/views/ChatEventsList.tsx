@@ -30,8 +30,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
-  const [previousLastMessageRole, setPreviousLastMessageRole] =
-    useState<Role>();
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
@@ -39,6 +37,8 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 
   const conversationContainerRef = useRef<HTMLDivElement>(null);
   const lastMessageRef = useRef<HTMLDivElement | null>(null);
+  const previousLastMessageRole = useRef<Role | null>(null);
+  const previousEventsLength = useRef<number | null>(null);
 
   const scrollToLastMessage = useCallback((keepTopOfMessageVisible = false) => {
     if (conversationContainerRef.current) {
@@ -120,38 +120,35 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   }, [inProgrammaticScroll]);
 
   useEffect(() => {
-    const lastMessage = events.at(-1);
-    let lastMessageRole: Role | undefined;
-    if (lastMessage && isChatMessage(lastMessage)) {
-      lastMessageRole = lastMessage.role;
+    if (previousEventsLength.current !== events.length) {
+      previousEventsLength.current = events.length;
+
+      const lastMessage = events.at(-1);
+      let lastMessageRole: Role | null = null;
+      if (lastMessage && isChatMessage(lastMessage)) {
+        lastMessageRole = lastMessage.role;
+      }
+
+      // Heuristic to determine if we have an incoming assistant message and need to scroll only
+      // to the top of the incoming message, For all other messages we scroll to the bottom.
+      // Checking previousLastMessageRole.current is truthy avoids triggering this behavior when
+      // the history is first loaded.
+      const isIncomingAssistantMessage =
+        lastMessageRole === 'assistant' &&
+        previousLastMessageRole.current &&
+        previousLastMessageRole.current !== 'assistant';
+
+      if (isIncomingAssistantMessage) {
+        // Scroll to top of last message.
+        scrollToLastMessage(true);
+      } else {
+        // Scroll to bottom of last message.
+        scrollToLastMessage();
+      }
+
+      previousLastMessageRole.current = lastMessageRole;
     }
-
-    // Heuristics to determine if we have an incoming assistant message and need to scroll only
-    // to the top of the incoming message, or an outgoing user message and need to scroll to the
-    // bottom. Checking previousLastMessageRole is truthy avoids triggering this behavior when
-    // the history is first loaded.
-    const isIncomingAssistantMessage =
-      lastMessageRole === 'assistant' &&
-      previousLastMessageRole &&
-      previousLastMessageRole !== 'assistant';
-    const isOutgoingUserMessage =
-      lastMessageRole === 'user' &&
-      previousLastMessageRole &&
-      previousLastMessageRole !== 'user';
-    const isHistoryLoading =
-      lastMessageRole !== previousLastMessageRole &&
-      previousLastMessageRole === undefined;
-
-    if (isIncomingAssistantMessage) {
-      // Scroll to top of last message.
-      scrollToLastMessage(true);
-    } else if (isOutgoingUserMessage || isHistoryLoading) {
-      // Scroll to bottom of last message.
-      scrollToLastMessage();
-    }
-
-    setPreviousLastMessageRole(lastMessageRole);
-  }, [events, events.length, previousLastMessageRole, scrollToLastMessage]);
+  }, [events, events.length, scrollToLastMessage]);
 
   return (
     <div
