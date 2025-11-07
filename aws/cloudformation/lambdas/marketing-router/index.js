@@ -787,6 +787,7 @@ const marketingPaths = {
   "/impact-report": true,
   "/about/impact-report": true,
   "/news/fetc": true,
+  "/mix-move-ai": true,
 }
 
 const pathPatterns = [
