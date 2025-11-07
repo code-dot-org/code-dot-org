@@ -8,7 +8,6 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
 
   let(:dry_run) {false}
   let(:inactive_since) {described_class::INACTIVE_USER_TTL.ago}
-  let(:limit) {described_class::ACCOUNT_DELETION_LIMIT}
   let(:max_users_per_run) {nil}
 
   let(:email) {Faker::Internet.unique.email}
@@ -99,8 +98,8 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
       describe '#inactive_users' do
         subject(:inactive_users) {described_instance.inactive_users}
 
-        it 'defaults to the DELETION_LIMIT' do
-          _(described_instance.max_users_per_run).must_equal described_class::DELETION_LIMIT
+        it 'defaults to the ACCOUNT_DELETION_LIMIT' do
+          _(described_instance.max_users_per_run).must_equal described_class::ACCOUNT_DELETION_LIMIT
         end
       end
     end
