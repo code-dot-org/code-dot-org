@@ -1,4 +1,4 @@
-import {AppName} from './types';
+import {AppName, ProjectType} from './types';
 
 export const SOURCE_FILE = 'main.json';
 
@@ -18,7 +18,12 @@ export const START_SOURCES = 'start_sources';
 export const TOOLBOX_BLOCKS = 'toolbox_blocks';
 export const EDIT_EXEMPLAR = 'edit_exemplar';
 
-export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab', 'weblab2'];
+export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
+  'music',
+  'pythonlab',
+  'weblab2',
+  'music_dance_ai',
+];
 
 // Text-based labs that are currently supported by lab2.
 export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];

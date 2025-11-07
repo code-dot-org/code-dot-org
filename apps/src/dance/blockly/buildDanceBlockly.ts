@@ -210,10 +210,6 @@ function costumeSpritesField(
   return `<field name="COSTUME" ${configAttribute}>${escapedValue}</field>`;
 }
 
-function dirLeftRightField(value: -1 | 1): string {
-  return `<field name="DIR">${value}</field>`;
-}
-
 function unitMeasuresField(): string {
   return '<field name="UNIT">"measures"</field>';
 }
@@ -284,7 +280,6 @@ function makeChangeMoveEachLRBlock(
         defaultGroupFieldValue
       ),
       MOVE: randomField('MOVE', moves, simpleCode, excludedMove),
-      DIR: dirLeftRightField(randomElement([-1, 1])),
     },
     kind: 'block',
   };

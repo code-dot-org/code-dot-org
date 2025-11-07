@@ -39,6 +39,7 @@ Dashboard::Application.routes.draw do
     get '/', to: 'codeprojects_preview#show'
     # Must be served from / on preview.codeprojects.org to control the root scope:
     get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
+    # Custom 404 page for codeprojects preview
     get '*path', to: 'codeprojects_preview#not_found'
   end
 
@@ -105,8 +106,6 @@ Dashboard::Application.routes.draw do
 
     get "/home", to: "home#home"
 
-    get "/congrats", to: "congrats#index"
-
     get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
     get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
@@ -122,6 +121,7 @@ Dashboard::Application.routes.draw do
 
     resources :puzzle_ratings, only: [:create]
     resources :callouts
+    resources :congrats, only: %i[index show], param: :course_name
     resources :videos do
       collection do
         get 'test'

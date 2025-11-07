@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
-import React, {memo} from 'react';
+import classNames from 'classnames';
+import React, {forwardRef, memo} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -18,7 +19,7 @@ import {
   ChatAsset,
 } from '../types';
 
-import ChatMessageView from './ChatMessageView';
+import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
@@ -33,7 +34,7 @@ const chatEventDescriptionsStudent = {
   LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
 } as const satisfies {[key in ChatEventDescriptionKey]: string};
 
-interface ChatEventViewProps {
+interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
   event: ChatEvent;
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
@@ -70,80 +71,111 @@ function formatModelUpdateText(update: ModelUpdate): string {
 /**
  * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
-const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
-  event,
-  isTeacherView,
-  buildAssetUrl,
-}) => {
-  const dispatch = useAppDispatch();
+const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
+  ({event, isTeacherView, buildAssetUrl, tabIndex, onKeyDown}, ref) => {
+    const dispatch = useAppDispatch();
 
-  const chatEventDescriptions = isTeacherView
-    ? chatEventDescriptionsStudent
-    : chatEventDescriptionsOwner;
+    const chatEventDescriptions = isTeacherView
+      ? chatEventDescriptionsStudent
+      : chatEventDescriptionsOwner;
 
-  if (isChatMessage(event)) {
-    return (
-      <ChatMessageView
-        chatMessage={event}
-        isChatHistoryView={isTeacherView || false}
-        buildAssetUrl={buildAssetUrl}
-      />
-    );
-  }
+    // Only wrap chat messages in a focusable div for keyboard navigation
+    if (isChatMessage(event)) {
+      return (
+        <div
+          ref={ref}
+          tabIndex={tabIndex}
+          onKeyDown={onKeyDown}
+          aria-label={getChatMessageDisplayText(
+            event.status,
+            event.role,
+            event.chatMessageText,
+            false // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
+          )}
+          className={styles.chatMessageOutline}
+        >
+          <ChatMessageView
+            chatMessage={event}
+            isChatHistoryView={isTeacherView || false}
+            buildAssetUrl={buildAssetUrl}
+          />
+        </div>
+      );
+    }
 
-  if (isNotification(event)) {
-    const {removeId, text, notificationType, timestamp} = event;
+    if (isNotification(event)) {
+      const {removeId, text, notificationType, timestamp} = event;
+      return (
+        <Alert
+          text={`${text} ${timestampToLocalTime(timestamp)}`}
+          type={
+            ['error', 'permissionsError'].includes(notificationType)
+              ? 'danger'
+              : 'success'
+          }
+          onClose={
+            isTeacherView
+              ? undefined
+              : () => dispatch(removeUpdateMessage(removeId))
+          }
+          link={
+            notificationType === 'permissionsError'
+              ? {
+                  href: FAQ_LINK,
+                  text: commonI18n.learnMore(),
+                  className: styles.alertLink,
+                }
+              : undefined
+          }
+          size="s"
+          ref={ref}
+          tabIndex={tabIndex}
+          onKeyDown={onKeyDown}
+          aria-label={`Notification: ${text}, Time: ${timestampToLocalTime(
+            timestamp
+          )}`}
+          className={styles.chatMessageOutline}
+        />
+      );
+    }
+
+    if (isModelUpdate(event)) {
+      return (
+        <Alert
+          className={classNames(
+            'uitest-aichat-chat-alert',
+            styles.chatMessageOutline
+          )}
+          text={formatModelUpdateText(event)}
+          type="success"
+          size="s"
+          onClose={
+            isTeacherView
+              ? undefined
+              : () => dispatch(removeUpdateMessage(event.removeId))
+          }
+          ref={ref}
+          tabIndex={tabIndex}
+          onKeyDown={onKeyDown}
+          aria-label={formatModelUpdateText(event)}
+        />
+      );
+    }
+
+    // Automatically narrowed to UserActionEvent
     return (
       <Alert
-        text={`${text} ${timestampToLocalTime(timestamp)}`}
-        type={
-          ['error', 'permissionsError'].includes(notificationType)
-            ? 'danger'
-            : 'success'
-        }
-        onClose={
-          isTeacherView
-            ? undefined
-            : () => dispatch(removeUpdateMessage(removeId))
-        }
-        link={
-          notificationType === 'permissionsError'
-            ? {
-                href: FAQ_LINK,
-                text: commonI18n.learnMore(),
-                className: styles.alertLink,
-              }
-            : undefined
-        }
+        text={chatEventDescriptions[event.descriptionKey]}
+        type="info"
         size="s"
+        ref={ref}
+        tabIndex={tabIndex}
+        onKeyDown={onKeyDown}
+        aria-label={chatEventDescriptions[event.descriptionKey]}
+        className={styles.chatMessageOutline}
       />
     );
   }
-
-  if (isModelUpdate(event)) {
-    return (
-      <Alert
-        className="uitest-aichat-chat-alert"
-        text={formatModelUpdateText(event)}
-        type="success"
-        size="s"
-        onClose={
-          isTeacherView
-            ? undefined
-            : () => dispatch(removeUpdateMessage(event.removeId))
-        }
-      />
-    );
-  }
-
-  // Automatically narrowed to UserActionEvent
-  return (
-    <Alert
-      text={chatEventDescriptions[event.descriptionKey]}
-      type="info"
-      size="s"
-    />
-  );
-};
+);
 
 export default memo(ChatEventView);

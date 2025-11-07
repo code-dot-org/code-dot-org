@@ -2,7 +2,6 @@ class CodeprojectsPreviewController < ApplicationController
   include AllowedHostnameHelper
   # Public preview page, static content for now.
   def show
-    puts "hi from show"
     set_content_security_policy
     render 'show', layout: false
   end
@@ -13,7 +12,6 @@ class CodeprojectsPreviewController < ApplicationController
   end
 
   def not_found
-    puts "hi from not_found"
     set_content_security_policy
     render 'page_not_found', layout: false, status: :not_found
   end

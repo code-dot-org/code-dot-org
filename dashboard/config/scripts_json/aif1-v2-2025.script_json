@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-05 20:56:14 UTC",
+    "serialized_at": "2025-11-06 18:13:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3439,8 +3439,19 @@
       }
     },
     {
-      "key": "d9c8fbdf-343b-4c52-9e31-2ce1bb5e0c50",
+      "key": "b4189bb6-bbf9-453d-8936-dc711aacd7e3",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to list out the specific tasks their role involves. Then, have them sort each task into Best for AI, Best for Humans, or Best for Collaboration, discussing their reasoning with a partner or small group."
+      },
+      "seeding_key": {
+        "activity_section.key": "b4189bb6-bbf9-453d-8936-dc711aacd7e3",
+        "lesson_activity.key": "3739351c-0e95-409f-965b-074983987905"
+      }
+    },
+    {
+      "key": "d9c8fbdf-343b-4c52-9e31-2ce1bb5e0c50",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Give students hands-on experience using AI to co-create part of a product launch. Students will work through a sequence of AI-powered levels in order to build and refine their content.",
         "duration": "20",
@@ -3453,7 +3464,7 @@
     },
     {
       "key": "0e3b3662-2d95-44ca-8ae3-379d26bfb16d",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "You've seen how creators break tasks into smaller steps. Now you'll use AI to help complete your part of the product launch, just like a real creative team might. Move through the four stages—research, brainstorming, content creation, and refinement.",
         "remarks": true
@@ -3465,7 +3476,7 @@
     },
     {
       "key": "7ad8a0c2-48e8-4eff-b97e-c8d73fede2bf",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 9, Level 1. Students should complete each choice level based on the part of the product they are launching.",
         "progression_name": "Collaborate on a Product Launch"
@@ -3477,7 +3488,7 @@
     },
     {
       "key": "89ce702a-0284-4f6c-8150-3836d98e542a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are progressing through each stage. Listen for how they talk about AI responses and how they’re improving or combining ideas. Encourage specificity in their reflection and remind them that they are the creative lead and that the AI is here to support, not replace, their ideas."
       },
@@ -3488,7 +3499,7 @@
     },
     {
       "key": "dbef6084-03bf-48cf-b80b-e8c5f9bac4d1",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Now that you've completed your part of the campaign with AI, let's reflect on the collaboration. Think about what you gained from using AI and what could have been lost if you relied only on it. These questions help us understand AI's strengths and limitations in creative work.",
         "remarks": true
@@ -3500,7 +3511,7 @@
     },
     {
       "key": "4ae51b6a-c742-4013-b014-77daf72a868d",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 9, Level 6 to complete the formative assessment.",
         "progression_name": "Check Your Understanding",
