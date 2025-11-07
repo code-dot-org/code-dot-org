@@ -61,7 +61,7 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
           error,
           error_message: '[Contentful] Invalid Tutorial entry',
           context: kind_of(Hash)
-        )
+        ).once
         get_tutorial
       end
     end
