@@ -48,7 +48,7 @@ module Cdo
 
         # In CI, enable verbose logging to help diagnose connection issues
         if ENV['CI']
-          cmd += ["--log-level", "debug"]
+          cmd += ["--log-level", "info"]
           cmd += ["--log-http", "proxy:errors"]
         end
 
