@@ -1,9 +1,6 @@
 const imageUrlToBase64 = async (url: string) => {
   try {
-    // Fetch the image from the URL
     const response = await fetch(url);
-
-    // Check if the request was successful
     if (!response.ok) {
       throw new Error(
         `Failed to fetch image: ${response.status} ${response.statusText}`
@@ -18,7 +15,6 @@ const imageUrlToBase64 = async (url: string) => {
       const reader = new FileReader();
 
       reader.onloadend = () => {
-        // The result includes the data URL prefix (e.g., "data:image/png;base64,...")
         resolve(reader.result);
       };
 
