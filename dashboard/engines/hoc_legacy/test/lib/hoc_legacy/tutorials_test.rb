@@ -44,6 +44,27 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
         _get_tutorial.must_be_nil
       end
     end
+
+    context 'when Tutorial entry is invalid' do
+      let(:error) {StandardError.new('Invalid Tutorial entry')}
+
+      before do
+        allow_any_instance_of(Contentful::Entry).to receive(:tutorial_id).and_raise(error)
+      end
+
+      it 'returns nil' do
+        _get_tutorial.must_be_nil
+      end
+
+      it 'notifies Honeybadger' do
+        expect(Honeybadger).to receive(:notify).with(
+          error,
+          error_message: '[Contentful] Invalid Tutorial entry',
+          context: kind_of(Hash)
+        )
+        get_tutorial
+      end
+    end
   end
 
   describe '.refresh' do
