@@ -1,4 +1,3 @@
-@skip
 @no_mobile
 Feature: Angle Helper
 
@@ -20,7 +19,7 @@ Scenario: Angle Helper Eyes Tests
   And I close my eyes
 
 Scenario: Free Text Input Angle Helper
-  Then I show the editor of field "VALUE" of block "turnConstant"
+  Then I run a bogus command
 
   # defaults to 90
   Then the angle text is at "90"
