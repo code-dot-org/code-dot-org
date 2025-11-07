@@ -7,7 +7,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Do This:\r\n\r\nYou've just joined a group chat with your friends, and you want to impress them with your Python skills. Your goal is to write a function that sends a message -- like a shoutout or a greeting -- and then call it to display the message.\r\n\r\n1. Complete the function named `shoutout()` so that it prints a fun message.\r\n\r\n   You can write anything! Say hi to a friend, cheer on your team, or just say something cool.\r\n\r\n\r\n2. After defining the function, **call it** to make sure it runs.\r\n\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nMake sure you use **parentheses** when calling your function, even if there are no inputs.",
+    "long_instructions": "## Do This:\r\n\r\nYou want to create a custom function for your group chat that sends a string of your favorite emojis.\r\n\r\n1. Define a function called `emojis()`\r\n\r\n2. Inside your function, print a long string of emojis\r\n\r\n   For example: 🦄🌒🌼🦄🌒🌼🦄🌒🌼🦄🌒🌼\r\n\r\n\r\n3. Call your function\r\n\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nMake sure you use **parentheses** when calling your function, even if there are no inputs.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -51,6 +51,6 @@
     "widget_view": "false",
     "widget_view_allow_show_code": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-03T23:45:26.163+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level1_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level1_2025-launch_2025\"},{\"changed_at\":\"2025-11-03 23:45:31 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-03T23:45:26.163+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level1_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level1_2025-launch_2025\"},{\"changed_at\":\"2025-11-03 23:45:31 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-11-05 21:42:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Pythonlab>

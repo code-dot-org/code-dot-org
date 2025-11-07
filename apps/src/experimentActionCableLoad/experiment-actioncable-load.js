@@ -13,16 +13,42 @@ export const experimentActionCableLoad = function () {
 };
 
 const testLoad = function () {
+  let sentEchoCount = 0;
+  let hasTimedOut = false;
+  let sentEchoTimestamps = new Map();
+
   const consumer = createConsumer('/cable');
 
-  const connectionId = _.random(10000);
+  const connectionId = _.random(1000000000000);
 
-  const repeatInterval = DCDO.get('actioncable-repeat-interval', 1000);
-  const isRepeat = DCDO.get('actioncable-repeat', true);
+  const repeatInterval = DCDO.get('actioncable-repeat-interval', 10 * 1000);
+  const isRepeat = DCDO.get('actioncable-repeat', false);
   const disconnectTimeout = DCDO.get(
     'actioncable-disconnect-timeout',
     30 * 1000
   );
+
+  // After disconnectTimeout milliseconds, unsubscribe and disconnect
+  setTimeout(() => {
+    hasTimedOut = true;
+    try {
+      logEvent('ActionCableLoadTestingUnsubscribing', connectionId);
+      consumer.disconnect();
+      logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
+        success: true,
+      });
+    } catch (e) {
+      logEvent('ActionCableLoadTestingUnsubscribed', connectionId, {
+        success: false,
+        errorMessage: String(e),
+      });
+
+      // try to disconnect again in 10s:
+      setTimeout(() => {
+        consumer.disconnect();
+      }, 10000);
+    }
+  }, disconnectTimeout);
 
   logEvent('ActionCableLoadTestingConnecting', connectionId);
 
@@ -31,45 +57,45 @@ const testLoad = function () {
     {
       connected() {
         logEvent('ActionCableLoadTestingConnected', connectionId);
-
-        setTimeout(() => {
-          if (channel) {
-            channel.echo(connectionId);
-          }
-        }, 1000);
+        channel.sendEcho(connectionId);
       },
-      received(data) {
-        if (data?.connectionId === connectionId) {
-          logEvent('ActionCableLoadTestingReceived', connectionId);
-        }
+      received({connectionId: receivedConnectionId, sentEchoCount}) {
+        if (receivedConnectionId !== connectionId) return;
 
-        if (!!channel && isRepeat) {
-          setTimeout(() => {
-            channel.echo(connectionId);
-          }, repeatInterval);
+        const receivedTime = performance.now();
+        const sentTime = sentEchoTimestamps.get(sentEchoCount);
+        if (sentTime) sentEchoTimestamps.delete(sentEchoCount);
+        const roundTripTime = sentTime
+          ? _.floor(receivedTime - sentTime)
+          : null;
+
+        logEvent('ActionCableLoadTestingReceived', connectionId, {
+          sentEchoCount: sentEchoCount,
+          roundTripTimeMs: roundTripTime,
+        });
+
+        if (isRepeat) {
+          setTimeout(() => channel.sendEcho(connectionId), repeatInterval);
         }
       },
-      echo(connectionId) {
-        this.perform('echo', {connectionId});
-
-        logEvent('ActionCableLoadTestingEchoSent', connectionId);
+      sendEcho(connectionId) {
+        if (hasTimedOut) return;
+        sentEchoTimestamps.set(sentEchoCount, performance.now());
+        this.perform('echo', {connectionId, sentEchoCount});
+        logEvent('ActionCableLoadTestingEchoSent', connectionId, {
+          sentEchoCount,
+        });
+        sentEchoCount++;
       },
     }
   );
-
-  setTimeout(() => {
-    consumer.disconnect();
-
-    logEvent('ActionCableLoadTestingUnsubscribed', connectionId);
-  }, disconnectTimeout);
 };
 
-const logEvent = (eventName, connectionId) => {
+const logEvent = (eventName, connectionId, metadata = {}) => {
+  const msg = {connectionId, ...metadata};
   if (window.newrelic) {
-    window.newrelic.recordCustomEvent(eventName, {connectionId});
+    window.newrelic.recordCustomEvent(eventName, msg);
   } else {
-    console.log(
-      `[NewRelic not found]: ${eventName}, {connectionId:${connectionId}}`
-    );
+    console.log(`[NewRelic not found]: ${eventName}`, msg);
   }
 };

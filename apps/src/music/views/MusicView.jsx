@@ -73,6 +73,7 @@ import {
   getBlockMode,
   addPlaybackEvents,
   setCodeToLoad,
+  setAiGenerateState,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
@@ -137,6 +138,7 @@ class UnconnectedMusicView extends React.Component {
     scriptName: PropTypes.string,
     clearCodeToLoad: PropTypes.func,
     sendAttemptReport: PropTypes.func,
+    setAiGenerateState: PropTypes.func,
     isFirstAttempt: PropTypes.bool,
   };
 
@@ -539,6 +541,9 @@ class UnconnectedMusicView extends React.Component {
       this.props.setPackId(null);
       this.library.setCurrentPackId(null);
     }
+
+    // In case we are showing the music generation Guide, reset its state.
+    this.props.setAiGenerateState('clearing-before-none');
 
     // In Start mode, load sources from the default JSON.
     if (isStartMode) {
@@ -1074,6 +1079,7 @@ const MusicView = connect(
     clearCodeToLoad: () => dispatch(setCodeToLoad(undefined)),
     sendAttemptReport: () =>
       dispatch(sendProgressReport('music', TestResults.LEVEL_STARTED)),
+    setAiGenerateState: state => dispatch(setAiGenerateState(state)),
   })
 )(UnconnectedMusicView);
 

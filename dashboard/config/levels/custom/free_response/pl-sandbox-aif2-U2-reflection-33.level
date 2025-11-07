@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-06T18:02:58.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection:",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "#### As you wrap up this module, take some time to reflect. Think about one of the following and share your feelings. \r\n\r\n>- ####How do you see students expressing their creativity through this project?\r\n>- #### How might using AI in this unit empower students as independent learners?\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18982,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-11-06T18:02:58.190+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2-U1-reflection\\\"\"],\"cloned_from\":\"pl-sandbox-aif2-U1-reflection\"},{\"changed_at\":\"2025-11-06 19:20:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-11-06 19:21:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
