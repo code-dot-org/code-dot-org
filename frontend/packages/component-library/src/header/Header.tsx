@@ -58,7 +58,7 @@ const styles = {
     '&:hover': {
       backgroundColor: 'var(--background-brand-teal-strong)',
     },
-    fontSize: 'var(--font-size-body-sm)',
+    fontWeight: 'normal',
   },
 };
 
@@ -97,8 +97,8 @@ const Header: React.FC<HeaderProps> = ({
                   <Link
                     href={item.href}
                     color="inherit"
+                    variant="body3"
                     sx={styles.menuListItemLink}
-                    variant="body1"
                   >
                     {item.label}
                   </Link>
