@@ -2177,7 +2177,7 @@ class UnitTest < ActiveSupport::TestCase
     unit.reload
 
     encoded_course_name = ERB::Util.url_encode(Base64.urlsafe_encode64(unit_group.name))
-    assert_equal "http://test-studio.code.org/congrats?s=#{encoded_course_name}", unit.finish_url
+    assert_equal "#{CDO.default_scheme}//test-studio.code.org/congrats?s=#{encoded_course_name}", unit.finish_url
   end
 
   test 'deleting unit in unit group deletes corresponding dependencies' do
