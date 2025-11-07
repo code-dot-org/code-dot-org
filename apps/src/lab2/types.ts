@@ -314,7 +314,8 @@ export type ProjectType =
   | 'playlab'
   | 'playlab_k1'
   | 'sports'
-  | 'basketball';
+  | 'basketball'
+  | 'music_dance_ai';
 
 export type AppName = keyof typeof lab2EntryPoints;
 
@@ -406,3 +407,5 @@ export interface LabProps<
   initialSources?: U;
   channel?: Channel;
 }
+
+export type ShareDialogId = 'hoc2024' | 'hoai2025';
