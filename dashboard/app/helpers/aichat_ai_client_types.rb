@@ -239,7 +239,7 @@ module AichatAiClientTypes
   #   temperature: number;
 
   #   // Client type.
-  #   clientType: number
+  #   clientType: string
 
   #   // Configure the response. Optional, defaults to TextResponse.
   #   response?: TextResponseConfig | JsonResponseConfig
@@ -250,7 +250,7 @@ module AichatAiClientTypes
     :model, string,
     :systemInstructions, Optional(MessagePart[]),
     :temperature, number,
-    :clientType, number,
+    :clientType, string,
     :response,  Optional(TextResponseConfig | JsonResponseConfig)
   )
 
