@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 73,
-  "created_at": "2025-11-06T07:48:43.000Z",
+  "created_at": "2025-11-07T22:17:31.000Z",
   "level_num": "custom",
   "user_id": 18605,
   "properties": {
@@ -41,13 +41,13 @@
         "key": "Generate_dancer_more_details-90264270-422b-4ad6-86cd-c9c12253b4a6"
       },
       {
-        "text": "**You’re in charge**\n\nAlways check what AI wrote. You decide what to keep or change!",
+        "text": "**Next up…**\n\nCode a custom music mix for your dance performance.",
         "imageUrl": "",
         "key": "mix-move-ai-panels-code-generation-82688fba-1792-4158-b4fb-1bf0890f67d4"
       }
     ],
     "name_suffix": "_4"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-06T07:48:43.523+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-panels-code-generation\\\"\"],\"cloned_from\":\"mix-move-ai-panels-code-generation\"},{\"changed_at\":\"2025-11-06 07:48:48 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:52:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-06T07:48:43.523+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-panels-code-generation\\\"\"],\"cloned_from\":\"mix-move-ai-panels-code-generation\"},{\"changed_at\":\"2025-11-06 07:48:48 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:52:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-08 00:06:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-08 00:07:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
