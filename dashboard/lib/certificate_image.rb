@@ -347,7 +347,7 @@ class CertificateImage
       # congrats and certificate pages (see csf_finish_url).
       '20hours_certificate.jpg'
     elsif course_type == 'hoc'
-      'hour_of_code_certificate.jpg'
+      'hour_of_ai_certificate.png'
     elsif course_type == 'pl'
       'self_paced_pl_certificate.png'
     else

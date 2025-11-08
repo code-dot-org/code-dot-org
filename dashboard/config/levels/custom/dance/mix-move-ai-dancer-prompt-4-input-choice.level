@@ -35,7 +35,7 @@
     "uses_lab2": "true",
     "guide_mode": "aiDancerGenerate",
     "ai_dancer_generate_adlib": "creature-attire-mood-style-05",
-    "long_instructions": "#### Finish your lead dancer\r\nModify the prompt with more details.",
+    "long_instructions": "### Finish your lead dancer\r\nModify the prompt with more details.",
     "project_template_level_name": "mix-move-ai-dancer-prompt-template",
     "preload_asset_list": null,
     "encrypted_examples": [

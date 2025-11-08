@@ -1,6 +1,7 @@
 import lottie, {type AnimationItem} from 'lottie-web';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import DCDO from '@cdo/apps/dcdo';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {GENERATED_DANCER_STORAGE_KEY} from '../ai/constants';
@@ -796,11 +797,66 @@ export async function mirrorPngDataUrl(dataUrl: string): Promise<string> {
   return canvas.toDataURL('image/png');
 }
 
+// Head crop can be overridden via DCDO or URL param.
+function getHeadCrop(): number {
+  const dcdoHeadCrop = DCDO.get('ai-dancer-head-crop');
+
+  if (dcdoHeadCrop === false) {
+    return Number(getConfigValue('headCrop')) || 10;
+  }
+
+  return Number(dcdoHeadCrop);
+}
+
 // Head scale can be overridden via URL param, e.g. ?headScale=0.8, ?bigHead=true
+// If getHeadCrop() returns a value, then it calculates the right scale based on that.
 export function getHeadScale(): number {
+  const headCrop = getHeadCrop();
+
   const scaleParam =
     getConfigValue('headScale') ||
-    (getConfigValue('bigHead') === 'true' ? '1.0' : undefined);
+    (getConfigValue('bigHead') === 'true'
+      ? '1.0'
+      : headCrop
+      ? String((0.5 * (DEFAULT_IMAGE_SIZE - 2 * headCrop)) / DEFAULT_IMAGE_SIZE)
+      : undefined);
   const scale = scaleParam ? parseFloat(scaleParam) : NaN;
   return isNaN(scale) || scale <= 0 ? DEFAULT_HEAD_SCALE : scale;
+}
+
+/** Crops "transparent" inset from all sides of a PNG data URL. */
+export async function cropDataUrl(dataUrl: string): Promise<string> {
+  const inset = getHeadCrop();
+
+  if (!inset) {
+    return dataUrl;
+  }
+
+  const loadedImage = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const imageElement = new Image();
+    imageElement.onload = () => resolve(imageElement);
+    imageElement.onerror = reject;
+    imageElement.src = dataUrl;
+  });
+
+  const scaledWidth = Math.max(1, loadedImage.naturalWidth - inset * 2);
+  const scaledHeight = Math.max(1, loadedImage.naturalHeight - inset * 2);
+
+  const offscreenCanvas = document.createElement('canvas');
+  offscreenCanvas.width = scaledWidth;
+  offscreenCanvas.height = scaledHeight;
+  const offscreenCanvasContext = offscreenCanvas.getContext('2d')!;
+  offscreenCanvasContext.drawImage(
+    loadedImage,
+    inset,
+    inset,
+    scaledWidth,
+    scaledHeight,
+    0,
+    0,
+    scaledWidth,
+    scaledHeight
+  );
+
+  return offscreenCanvas.toDataURL('image/png');
 }
