@@ -7,7 +7,7 @@
   "properties": {
     "uses_lab2": true,
     "encrypted": "false",
-    "video_key": "hoc-dance-ai-warmup",
+    "video_key": "mix_move_ai_intro",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
