@@ -25,6 +25,9 @@ import Loading from '@cdo/apps/lab2/views/Loading';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import DancerIcon from '@cdo/static/dance/mixMoveAi/design.png';
+import MusicIcon from '@cdo/static/dance/mixMoveAi/mix.png';
+import DanceIcon from '@cdo/static/dance/mixMoveAi/move.png';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {BubbleChoiceLevelProperties} from '../../types';
@@ -43,6 +46,12 @@ const labels: {[tab in Tab]: string} = {
   [Tab.Dancer]: 'Design',
   [Tab.Music]: 'Mix',
   [Tab.Dance]: 'Move',
+};
+
+const icons: {[tab in Tab]: string} = {
+  [Tab.Dancer]: DancerIcon,
+  [Tab.Music]: MusicIcon,
+  [Tab.Dance]: DanceIcon,
 };
 
 interface MusicDanceAiProps {
@@ -317,6 +326,14 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
               >
                 <BodyThreeText>
                   {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
+                  <img
+                    src={icons[tab]}
+                    alt=""
+                    className={classNames(
+                      styles.tabIcon,
+                      tab === currentTab && styles.tabIconSelected
+                    )}
+                  />
                   {labels[tab]}
                 </BodyThreeText>
               </button>

@@ -71,6 +71,15 @@
   animation-delay: 3s;
 }
 
+.tabIcon {
+  height: 20px;
+  padding-right: 8px;
+
+  &Selected {
+    filter: invert(1);
+  }
+}
+
 .labsContainer {
   flex: 1;
   overflow: hidden;
