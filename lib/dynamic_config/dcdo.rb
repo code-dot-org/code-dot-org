@@ -56,6 +56,7 @@ class DCDOBase < DynamicConfigBase
       'browser-tts-button-enabled-locales': DCDO.get('browser-tts-button-enabled-locales', ['en-US']),
       'lab2-submit-project-enabled': DCDO.get('lab2-submit-project-enabled', true),
       'cdo-blockly-usage': DCDO.get('cdo-blockly-usage', false),
+      'ai-dancer-head-crop': DCDO.get('ai-dancer-head-crop', false),
       # TODO ACQ-3074 - Remove this after the Exploring Gen AI launch
       'exploring-gen-ai-launch': DCDO.get('exploring-gen-ai-launch', false),
       'music-lab-banner': DCDO.get('music-lab-banner', false),
