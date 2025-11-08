@@ -77,7 +77,6 @@ class HttpCache
     dance-ai-2023
     mc
     music-jam-2024
-    mix-move-ai-2025
   ).map do |script_name|
     # Assume all cached units are in single unit courses.
     [script_name, "/courses/#{script_name}/units/1/lessons/*"]
