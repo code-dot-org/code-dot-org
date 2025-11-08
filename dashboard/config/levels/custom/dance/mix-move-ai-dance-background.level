@@ -24,7 +24,7 @@
       },
       {
         "key": "dance-fail",
-        "message": "Make sure to change the background effect.",
+        "message": "<i class=\"fa-solid fa-lightbulb\"></i> Make sure to change the background effect.",
         "next": false,
         "conditions": [
           {
@@ -74,7 +74,7 @@
     "parent_level_id": 14643,
     "name_suffix": "_draft3",
     "default_song": "asitwas_harrystyles",
-    "long_instructions": "### Get started! \r\n\r\n1. Choose an effect on the `set background` block. \r\n\r\n2. Press the `Run` button.",
+    "long_instructions": "### Get started! \r\n\r\n1. Choose an effect on the **set background effect** block. \r\n\r\n2. Press the Run button.",
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "false",
@@ -116,7 +116,7 @@
                   "id": "vzvF:!o_2n#y..Ztz|Vu",
                   "deletable": false,
                   "movable": false,
-                  "editable": false,
+                  "editable": true,
                   "fields": {
                     "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 200}</field>"
                   },
