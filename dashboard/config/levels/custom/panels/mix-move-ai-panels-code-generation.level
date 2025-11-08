@@ -45,7 +45,7 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "**AI isn’t magic…it’s math**\n\nRemember, AI doesn’t think or feel — it just uses math to make predictions based on its training data.",
+        "text": "**AI isn’t magic… it’s math**\n\nRemember, AI doesn’t think or feel — it just uses math to make predictions based on its training data.",
         "imageUrl": "https://images.code.org/8f5aaa014b66092ad67514d28816acf4-Code Gen Panel6.jpg",
         "key": "Generate_dancer_more_details-90264270-422b-4ad6-86cd-c9c12253b4a6",
         "layout": "text-bottom-center",
@@ -61,6 +61,6 @@
     ],
     "name_suffix": "_4"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-02T22:54:35.004+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_panel\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_panel\"},{\"changed_at\":\"2025-11-02 22:54:46 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:45:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:54:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-08 04:05:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-08 04:29:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-02T22:54:35.004+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_panel\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_panel\"},{\"changed_at\":\"2025-11-02 22:54:46 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:45:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:54:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-08 04:05:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-08 04:29:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-08 04:53:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
