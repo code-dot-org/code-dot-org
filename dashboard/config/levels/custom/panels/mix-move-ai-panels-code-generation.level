@@ -13,47 +13,54 @@
         "text": "### Behind the scenes\n\nHow does AI generate code from your words?",
         "imageUrl": "https://images.code.org/e9fe982a414e14e551e8b7cd27561cfd-Code Gen Panel1.jpg",
         "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "**AI went through a training process**\n\nIn training, it read huge amounts of text, like books, computer programs, and articles from the internet.",
         "imageUrl": "https://images.code.org/1363cdb9262a72d9fafc98e776fc9e54-Code Gen Panel2.jpg",
         "key": "Generate_dancer_more_details-0bf87b05-fdcb-4acc-b8d2-5455e69d6e87",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "**AI learned from examples**\n\nAI noticed patterns in how words usually go together and learned to predict the next word.",
         "imageUrl": "https://images.code.org/2f7eb200a4b6788f8283c47190ee6a7e-Code Gen Panel3.jpg",
         "key": "Generate_dancer_more_details-48f5d03d-6aff-4230-bbc0-75fbac278d9c",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "**AI makes predictions**\n\nWhen you give AI some starting words, it predicts how to respond, one word after another.",
         "imageUrl": "https://images.code.org/f9ec60227b7ab8a245dc235b2a3e85b1-Code Gen Panel4.jpg",
         "key": "Generate_dancer_more_details-f7defbff-6781-4fcd-ba98-bb4e03422fd5",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "**AI generates something new**\n\nIn this way, it generates full sentences, whole conversations, and even Music Lab code!",
         "imageUrl": "https://images.code.org/edbc9f6ff18eda312a2d882f95ec06fc-Code Gen Panel5.jpg",
         "key": "Generate_dancer_more_details-1af42de1-d2bc-4653-9e86-16d56ff2ceb3",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "**AI isn’t magic…it’s math**\n\nRemember, AI doesn’t think or feel — it just uses math to make predictions based on its training data.",
         "imageUrl": "https://images.code.org/8f5aaa014b66092ad67514d28816acf4-Code Gen Panel6.jpg",
         "key": "Generate_dancer_more_details-90264270-422b-4ad6-86cd-c9c12253b4a6",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "**You’re in charge**\n\nAlways check what AI wrote. You decide what to keep or change!",
         "imageUrl": "https://images.code.org/67a18d8272a20868331463af2a34a089-Code Gen Panel7.jpg",
         "key": "mix-move-ai-panels-code-generation-82688fba-1792-4158-b4fb-1bf0890f67d4",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       }
     ],
     "name_suffix": "_4"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-02T22:54:35.004+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_panel\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_panel\"},{\"changed_at\":\"2025-11-02 22:54:46 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:45:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:54:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-08 04:05:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-02T22:54:35.004+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_panel\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_panel\"},{\"changed_at\":\"2025-11-02 22:54:46 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:45:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:54:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-08 04:05:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-08 04:29:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
