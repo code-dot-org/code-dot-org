@@ -74,6 +74,34 @@ module Cdo
       stats[:calling] = @stats.max_calling.tap {@stats.max_calling = 0}
       stats
     end
+
+    def self.start_background_metrics_thread(host:)
+      Thread.new do
+        dimensions = {
+          PID: Process.pid,
+          Host: host,
+        }
+
+        begin
+          dimensions[:InstanceId] = AWS::EC2.instance_id
+        rescue
+        end
+
+        loop do
+          puts "gather metrics for pid #{Process.pid}"
+          Cdo::Metrics.put(
+            'ActionCable',
+            'ServerConnectionsCount',
+            ActionCable.server.connections.count,
+            dimensions,
+            unit: 'Count'
+          )
+          # FIXME FIXME FIXME: change sleep to 60s before committing to prod, we really don't need this every second
+          # but it makes dev easier.
+          sleep 1
+        end
+      end
+    end
   end
 
   # Extends Raindrops::Middleware::Stats (which defines :calling and :writing)
