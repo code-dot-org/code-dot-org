@@ -27,7 +27,6 @@ const adlibOptions = {
     {id: 'no_accessories', text: 'no accessories'},
   ],
   mood: [
-    {id: 'confused', text: 'confused'},
     {id: 'fierce', text: 'fierce'},
     {id: 'happy', text: 'happy'},
     {id: 'silly', text: 'silly'},
