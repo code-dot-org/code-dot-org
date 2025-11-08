@@ -34,7 +34,6 @@ import SourcesContainer, {
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {SketchlabSources, SerializedExcalidrawState} from './types';
-import imageUrlToBase64 from './utils/imageUrlToBase64';
 import uploadExternalFiles from './utils/uploadExternalFiles';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';

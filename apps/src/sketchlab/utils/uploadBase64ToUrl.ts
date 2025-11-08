@@ -1,6 +1,6 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-export default async function uploadBase64ToUrl(
+export async function uploadBase64ToUrl(
   dataUrl: string,
   uploadUrl: string,
   mimeType: string

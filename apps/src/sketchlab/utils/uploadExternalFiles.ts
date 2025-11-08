@@ -5,7 +5,7 @@ import {
 
 import {SketchlabSources, SerializedExcalidrawState} from '../types';
 
-import uploadBase64ToUrl from './uploadBase64ToUrl';
+import {uploadBase64ToUrl} from './uploadBase64ToUrl';
 
 // TO DO: these are the upload types officially supported by Excalidraw,
 // not all of which we actually support uploading to S3.
@@ -24,7 +24,7 @@ const MIME_TO_EXT = {
   'application/octet-stream': 'bin',
 };
 
-const uploadExternalFiles = (
+export const uploadExternalFiles = (
   source: ExcalidrawSourceWithExternalFiles,
   serializedData: SerializedExcalidrawState,
   filesBeingUploadedRef: React.MutableRefObject<Set<string>>,
@@ -72,5 +72,3 @@ const uploadExternalFiles = (
     });
   }
 };
-
-export default uploadExternalFiles;

@@ -1,4 +1,4 @@
-const imageUrlToBase64 = async (url: string) => {
+export const imageUrlToBase64 = async (url: string) => {
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -29,5 +29,3 @@ const imageUrlToBase64 = async (url: string) => {
     throw error;
   }
 };
-
-export default imageUrlToBase64;
