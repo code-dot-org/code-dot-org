@@ -313,7 +313,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
               setAiGenerateState(isStandalone ? 'edited' : 'editing');
-              resetProgram();
             }}
             className={styles.buttonWide}
           />
