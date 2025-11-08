@@ -327,7 +327,7 @@ export default class LottieDancerRenderer {
           if (headComp && Array.isArray(headComp.layers)) {
             const {insertIndex, ks: headKs} =
               hideLayersByTypeAndCaptureKs(headComp);
-            // Crop edge artifacts from generated head PNGs using URL param (ex. ?headCrop=10)
+            // Crop edge artifacts from generated head PNGs.
             const croppedHeadUrl = await cropDataUrl(headDataUrl);
             const assetId = ensureImageAsset(
               animData,
