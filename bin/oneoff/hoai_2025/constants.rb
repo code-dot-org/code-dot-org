@@ -35,7 +35,7 @@ PROMPT_MOOD=File.read(File.join(File.dirname(__FILE__), 'music_prompt_mood.txt')
 MESSAGE=File.read(File.join(File.dirname(__FILE__), 'music_message.txt'))
 
 # The number of different options to produce
-VARIANTS=3
+VARIANTS=10
 
 # The name of the adlib option (used to be 'complex'... now empty string)
 ADLIB_OPTION=''

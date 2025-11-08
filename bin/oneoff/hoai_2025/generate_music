@@ -424,7 +424,9 @@ else
     adlibs = object[:adlibs]
     path = File.join(output_path, "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ''}-#{object[:variant].to_s.rjust(2, '0')}.txt")
 
-    unless File.exist?(path)
+    if File.exist?(path)
+      puts "Warning: #{path} does not exist"
+    else
       if response.nil?
         drum_sounds = object[:drum_sounds]
         sounds = object[:sounds]
