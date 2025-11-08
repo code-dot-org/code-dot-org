@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 63,
-  "created_at": "2025-11-02T22:42:06.000Z",
+  "created_at": "2025-11-07T19:46:33.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -34,14 +34,14 @@
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
     "guide_mode": "aiDancerGenerate",
-    "ai_dancer_generate_adlib": "creature-attire-mood-style-04",
-    "long_instructions": "### Create Your Dancer\r\nModify the prompt to generate a new dancer with AI.",
+    "ai_dancer_generate_adlib": "creature-05",
+    "long_instructions": "#### Use AI to design your dancer\r\nA prompt is an instruction that tells AI what to do.\r\n1. Modify the prompt below.\r\n2. Press Generate dancer.",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-02T22:42:06.836+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dancer-adlib3\\\"\"],\"cloned_from\":\"hoai2025-dancer-adlib3\"},{\"changed_at\":\"2025-11-02 22:42:09 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-11-07T19:46:33.067+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-dancer-prompt-1-input\\\"\"],\"cloned_from\":\"mix-move-ai-dancer-prompt-1-input\"},{\"changed_at\":\"2025-11-07 19:46:47 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

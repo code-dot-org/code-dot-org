@@ -76,7 +76,7 @@
             }
           ]
         },
-        "variantCount": 3
+        "variantCount": 10
       },
       "aiCodeGenerateExtraPrompt": "You can also use any of the following additional drum sounds: \"{drumSounds}\"."
     },

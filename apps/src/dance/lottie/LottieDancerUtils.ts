@@ -3,6 +3,8 @@ import lottie, {type AnimationItem} from 'lottie-web';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {GENERATED_DANCER_STORAGE_KEY} from '../ai/constants';
+
 import {
   CanvasAnimConfig,
   DancerMetadata,
@@ -563,7 +565,7 @@ export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
   let localStorageOptions: LocalStoragePayload = null;
   let extraVariant: number | null = null;
   try {
-    const raw = localStorage.getItem('dancer-ai-generate');
+    const raw = localStorage.getItem(GENERATED_DANCER_STORAGE_KEY);
     localStorageOptions = raw ? (JSON.parse(raw) as LocalStoragePayload) : null;
   } catch {
     localStorageOptions = null;
