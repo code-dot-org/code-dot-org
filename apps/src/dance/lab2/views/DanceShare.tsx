@@ -8,7 +8,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {MusicMetadata} from '@cdo/apps/music/ai/generate/GenerateCode';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
 import TimelineUI from '@cdo/apps/music/views/Timeline/TimelineUI';
-import mixMoveAiBanner from '@cdo/static/dance/ai/mix-move-ai-banner-transparent.png';
+import mixMoveAiBanner from '@cdo/static/dance/mix-move-ai-banner-transparent.png';
 
 import DanceControls from './DanceControls';
 import DanceLoading from './DanceLoading';
