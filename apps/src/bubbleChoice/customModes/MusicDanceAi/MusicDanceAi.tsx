@@ -1,23 +1,23 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {Suspense, useCallback, useEffect, useState} from 'react';
+import React, {memo, Suspense, useCallback, useEffect, useState} from 'react';
 
 import {
   getCurrentLesson,
-  getCurrentScriptLevelId,
   levelById,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
-import {DanceLevelProperties} from '@cdo/apps/dance/types';
-import {setIsLoading} from '@cdo/apps/lab2/lab2Redux';
+import {setIsLoading, setPageError} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
+import {getIsShareView} from '@cdo/apps/lab2/projects/utils';
 import {LevelPropertiesValidator} from '@cdo/apps/lab2/responseValidators';
 import {
   BubbleChoiceLevelData,
   BubbleChoiceSublevel,
   Channel,
-  LabProps,
   LevelProperties,
 } from '@cdo/apps/lab2/types';
 import LevelPropertiesCache from '@cdo/apps/lab2/utils/LevelPropertiesCache';
@@ -64,9 +64,10 @@ async function loadLevelProperties(path: string): Promise<LevelProperties> {
   return value;
 }
 
-interface LabData extends LabProps {
-  // In addition to LabProps, we'll also pass down a dedicated ProjectManager for each sublevel,
-  // so each lab is writing and reading the correct project (instead accessing the singleton from Lab2Registry).
+interface LabData {
+  levelProperties: LevelProperties;
+  // We pass down a dedicated ProjectManager for each sublevel, so each lab is writing
+  // and reading the correct project (instead accessing the singleton from Lab2Registry).
   // Note that this requires the LabView to accept a ProjectManager prop, which is currently only supported by Music and Dance.
   projectManager?: ProjectManager;
 }
@@ -82,10 +83,9 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
   channel,
 }) => {
   const [currentTab, setCurrentTab] = useState<Tab>();
-  const [propsMap, setPropsMap] = useState<{[tab in Tab]?: LabData}>({});
+  const [tabDataMap, setTabDataMap] = useState<{[tab in Tab]?: LabData}>();
   const userId = useAppSelector(state => state.progress.viewAsUserId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
-  const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
   const dispatch = useAppDispatch();
 
   const levelPropertiesPathPrefix = useAppSelector(state => {
@@ -114,6 +114,10 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
 
   // Load level properties and project data for each sublevel.
   const loadData = useCallback(async () => {
+    if (tabDataMap) {
+      // Already loaded; return.
+      return;
+    }
     const sublevels = (
       levelProperties.levelData as BubbleChoiceLevelData | undefined
     )?.sublevels;
@@ -127,70 +131,170 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
       const sublevelProperties = await loadLevelProperties(
         getLevelPropertiesPath(sublevel)
       );
+      const appName = sublevelProperties.appName;
+      let tab: Tab | undefined;
+      if (appName === 'music') {
+        tab = Tab.Music;
+      } else if (appName === 'dance' && 'guideMode' in sublevelProperties) {
+        const guideMode = sublevelProperties.guideMode;
+        tab = guideMode === 'aiCodeGenerate' ? Tab.Dance : Tab.Dancer;
+      }
+
+      if (!tab) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logWarning('Invalid level type ' + sublevelProperties.appName);
+        continue;
+      }
+
       const data: LabData = {levelProperties: sublevelProperties};
 
       let projectManager: ProjectManager | null = null;
 
-      if (levelProperties.isProjectLevel && channel.subprojects) {
-        const channelId = channel.subprojects.find(
-          ({level_id}) => level_id.toString() === sublevel.level_id
-        )?.project_id;
-        if (channelId) {
-          projectManager = ProjectManagerFactory.getProjectManager(channelId);
+      if (levelProperties.isProjectLevel) {
+        let channelId: string | undefined;
+        // Check subprojects first.
+        if (channel.subprojects) {
+          channelId = channel.subprojects.find(
+            ({level_id}) => level_id.toString() === sublevel.level_id
+          )?.project_id;
+        } else if (channel.labConfig) {
+          // Otherwise, check labConfig for cases where we've transitioned from a script level.
+          channelId = channel.labConfig[tab]?.channelId;
         }
+
+        if (!channelId) {
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .logWarning(
+              'Expected to find subproject channel ID for standalone project.'
+            );
+          continue;
+        }
+
+        projectManager = ProjectManagerFactory.getProjectManager(channelId);
       } else {
         projectManager = await ProjectManagerFactory.getProjectManagerForLevel(
           parseInt(sublevel.level_id),
           userId || undefined,
-          scriptId || undefined,
-          scriptLevelId
+          scriptId || undefined
         );
       }
 
       if (projectManager) {
-        const {sources, channel} = await projectManager.load();
-        data.initialSources = sources;
-        data.channel = channel;
+        await projectManager.load();
         data.projectManager = projectManager;
       }
-      if (sublevelProperties.appName === 'music') {
-        map[Tab.Music] = data;
-      } else if (sublevelProperties.appName === 'dance') {
-        map[
-          (sublevelProperties as DanceLevelProperties).guideMode ===
-          'aiCodeGenerate'
-            ? Tab.Dance
-            : Tab.Dancer
-        ] = data;
-      }
+      map[tab] = data;
     }
-    setPropsMap(map);
+
+    setTabDataMap(map);
     setCurrentTab(getTypedKeys(map)[0]);
     dispatch(setIsLoading(false));
   }, [
     levelProperties,
+    channel.labConfig,
     channel.subprojects,
     userId,
     scriptId,
-    scriptLevelId,
     getLevelPropertiesPath,
     dispatch,
+    tabDataMap,
   ]);
+
+  // Clear out tab data when switching levels.
+  useEffect(() => {
+    setTabDataMap(undefined);
+  }, [levelProperties.id]);
+
+  useEffect(() => {
+    if (!tabDataMap) {
+      return;
+    }
+    // Update the parent channel with sublevel channel IDs once we've loaded everything.
+    const updatedLabConfig: {[key: string]: {channelId: string}} = {};
+    const updatedSubprojects: {level_id: number; project_id: string}[] = [];
+
+    for (const tab of getTypedKeys(tabDataMap)) {
+      const data = tabDataMap[tab];
+      if (!data?.projectManager) {
+        continue;
+      }
+      updatedLabConfig[tab] = {channelId: data.projectManager.getChannelId()};
+      updatedSubprojects.push({
+        level_id: data.levelProperties.id,
+        project_id: data.projectManager.getChannelId(),
+      });
+      data.projectManager?.addSaveSuccessListener(() => {
+        Lab2Registry.getInstance()
+          .getProjectManager()
+          ?.updateChannel({updatedAt: new Date().toISOString()}, true);
+      });
+    }
+    const channelUpdate: Partial<Channel> = {
+      labConfig: updatedLabConfig,
+    };
+    if (levelProperties.isProjectLevel && !channel.subprojects) {
+      // Also update the subprojects in the specific case where we're
+      // viewing a project created from a script level in a standalone context.
+      channelUpdate.subprojects = updatedSubprojects;
+    }
+    Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.updateChannel(channelUpdate, true);
+  }, [tabDataMap, channel.subprojects, levelProperties.isProjectLevel]);
+
+  // Default to dark mode for this experience.
+  const {setTheme} = useTheme();
+  useEffect(() => {
+    setTheme('Dark');
+  }, [setTheme]);
 
   useEffect(() => {
     loadData();
   }, [loadData]);
 
-  // Delay rendering each tab until we see it for the first time to avoid UI issues (ex: Music Lab pack dialog locking focus while hidden).
-  const [seenTabs, setSeenTabs] = useState<Set<Tab>>(new Set());
-  useEffect(() => {
-    if (currentTab) {
-      setSeenTabs(prevSeenTabs => new Set(prevSeenTabs).add(currentTab));
-    }
-  }, [currentTab]);
-
-  if (!currentTab) {
+  if (!tabDataMap || !currentTab) {
     return null;
+  }
+
+  const tabData = tabDataMap[currentTab];
+  const LabView =
+    tabData && lab2EntryPoints[tabData?.levelProperties.appName]?.view;
+
+  if (!LabView) {
+    console.error('Invalid state: selected tab without data');
+    return null;
+  }
+
+  const labProps = {
+    ...tabData,
+    initialSources: tabData.projectManager?.getLastSource(),
+    channel: tabData.projectManager?.getLastChannel(),
+  };
+
+  if (getIsShareView()) {
+    // Present the Dance share UI in share view.
+    const danceProps = tabDataMap[Tab.Dance];
+    if (!danceProps) {
+      dispatch(
+        setPageError({
+          errorMessage:
+            'Missing required dance level in Music Dance AI project',
+        })
+      );
+      return null;
+    }
+    const DanceView = lab2EntryPoints.dance.view;
+    return (
+      <ParentLevelPropertiesContext.Provider value={levelProperties}>
+        <div className={styles.container}>
+          <Suspense fallback={<Loading isLoading={true} />}>
+            <DanceView {...danceProps} />
+          </Suspense>
+        </div>
+      </ParentLevelPropertiesContext.Provider>
+    );
   }
 
   return (
@@ -198,7 +302,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
       <div className={styles.container}>
         <div className={styles.tabSwitcher}>
           {Object.values(Tab).map(tab => {
-            const disabled = !propsMap[tab];
+            const disabled = !tabDataMap[tab];
             return (
               <button
                 type="button"
@@ -220,37 +324,15 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
           })}
         </div>
         <div className={styles.labsContainer}>
-          {Array.from(seenTabs).map(tab => {
-            const sublevelProps = propsMap[tab];
-            const LabView =
-              sublevelProps &&
-              lab2EntryPoints[sublevelProps?.levelProperties.appName]?.view;
-            const hidden = tab !== currentTab;
-            return (
-              LabView && (
-                <div
-                  className={classNames(
-                    styles.labContainer,
-                    hidden && styles.hidden
-                  )}
-                  key={tab}
-                  ref={el => {
-                    if (el) {
-                      el.inert = hidden;
-                    }
-                  }}
-                >
-                  <Suspense fallback={<Loading isLoading={true} />}>
-                    <LabView {...sublevelProps} />
-                  </Suspense>
-                </div>
-              )
-            );
-          })}
+          <div className={classNames(styles.labContainer)}>
+            <Suspense fallback={<Loading isLoading={true} />}>
+              <LabView {...labProps} key={currentTab} />
+            </Suspense>
+          </div>
         </div>
       </div>
     </ParentLevelPropertiesContext.Provider>
   );
 };
 
-export default MusicDanceAi;
+export default memo(MusicDanceAi);

@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Heading3} from '@code-dot-org/component-library/typography';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -33,6 +33,8 @@ import styles from './GenerateCode.module.scss';
 
 const adlibs = adlibsUntyped as AdlibsType;
 
+const GENERATE_DELAY_DURATION = 5000;
+
 interface GenerateCodeProps {
   adlibOption?: string;
   adlib?: AdlibType;
@@ -61,7 +63,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     state => state.music.currentPlayheadPosition
   );
 
-  const useCache = appConfig.getValue('ai-generate-cache') === 'true';
+  const useCache = true;
   const showFullContext =
     appConfig.getValue('ai-generate-full-context') === 'true';
 
@@ -99,30 +101,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     adlibOption ? '' : DefaultPrompt
   );
 
-  useEffect(() => {
-    // If we are clearing, make sure we are called with the new
-    // block count before deciding what to do next.
-    if (aiGenerateState === 'clearing' && blockCount <= 1) {
-      dispatch(setAiGenerateState('none'));
-    }
-  }, [aiGenerateState, blockCount, dispatch]);
-
-  useEffect(() => {
-    // If there is already generated music when we begin, presumably
-    // because the user is returning to a level they've previously worked
-    // on, then skip AI generation.
-    if (aiGenerateState === 'none' && blockCount > 1) {
-      dispatch(setAiGenerateState('edited'));
-    }
-  }, [aiGenerateState, blockCount, dispatch]);
-
-  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
-    dispatch(setAiGenerateState('none'));
-    setAdlibChoices(getInitialChoices());
-    setPromptText(adlibOption ? '' : useText ? '' : DefaultPrompt);
-  });
-
   const generateSong = useCallback(async () => {
+    const startTime = Date.now();
+
     dispatch(setAiGenerateState('generating'));
 
     const pseudocode = await (useCache && useAdlib
@@ -134,6 +115,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           (levelProperties.levelData as MusicLevelData)
             .aiCodeGenerateExtraPrompt
         ));
+
+    const elapsedTime = Date.now() - startTime;
+    const remainingDelayDuration = Math.max(
+      GENERATE_DELAY_DURATION - elapsedTime,
+      0
+    );
+    await new Promise(res => setTimeout(res, remainingDelayDuration));
 
     if (pseudocode) {
       const resultBlockly = generateBlocklyJson(pseudocode);
@@ -154,6 +142,34 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     useAdlib,
     useCache,
   ]);
+
+  useEffect(() => {
+    // If we are clearing, make sure we are called with the new
+    // block count before deciding what to do next.
+    if (aiGenerateState === 'clearing-before-none' && blockCount <= 1) {
+      dispatch(setAiGenerateState('none'));
+    } else if (
+      aiGenerateState === 'clearing-before-generating' &&
+      blockCount <= 1
+    ) {
+      generateSong();
+    }
+  }, [aiGenerateState, blockCount, dispatch, generateSong]);
+
+  useEffect(() => {
+    // If there is already generated music when we begin, presumably
+    // because the user is returning to a level they've previously worked
+    // on, then skip AI generation.
+    if (aiGenerateState === 'none' && blockCount > 1) {
+      dispatch(setAiGenerateState('edited'));
+    }
+  }, [aiGenerateState, blockCount, dispatch]);
+
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
+    dispatch(setAiGenerateState('none'));
+    setAdlibChoices(getInitialChoices());
+    setPromptText(adlibOption ? '' : useText ? '' : DefaultPrompt);
+  });
 
   useEffect(() => {
     // There can be a delay before we're playing (often due to sample loading),
@@ -194,12 +210,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     'generated',
     'listening',
     'listened',
-    'clearing',
+    'clearing-before-none',
+    'clearing-before-generating',
   ].includes(aiGenerateState);
 
   const parentProperties = useParentLevelProperties();
-  const showNavigation =
-    !levelProperties.isProjectLevel && !parentProperties?.isProjectLevel;
+  const isStandalone =
+    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
 
   if (!packId) {
     return null;
@@ -207,7 +224,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   return (
     <Guide id="generate-panel" modal={modal}>
-      {['none', 'generating'].includes(aiGenerateState) &&
+      {aiGenerateState === 'none' &&
         useAdlib &&
         levelProperties.longInstructions && (
           <MainInstructionsContent
@@ -224,6 +241,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           rows={6}
           className={styles.textArea}
         />
+      )}
+
+      {aiGenerateState === 'generating' && (
+        <div>
+          <Heading3>Generating...</Heading3>
+          AI is generating code based on your prompt.
+        </div>
       )}
 
       {['none', 'generating', 'generated'].includes(aiGenerateState) &&
@@ -278,10 +302,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {['listening', 'listened'].includes(aiGenerateState) && (
         <div>
-          <Heading4>
+          <Heading3>
             {aiGenerateState === 'listening' && 'Take a listen...'}
             {aiGenerateState === 'listened' && 'Decide what to do next'}
-          </Heading4>
+          </Heading3>
           <div>AI generated code based on your prompt, "{promptText}"</div>
         </div>
       )}
@@ -297,7 +321,25 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               setPlaying(false);
               clearCode(true);
-              dispatch(setAiGenerateState('clearing'));
+              dispatch(setAiGenerateState('clearing-before-none'));
+            }}
+            className={styles.buttonWide}
+          />
+
+          <Button
+            ariaLabel={'Regenerate'}
+            text={'Regenerate'}
+            type="secondary"
+            color="black"
+            size="s"
+            iconLeft={{iconName: 'sparkles'}}
+            onClick={() => {
+              setPlaying(false);
+              clearCode(true);
+              dispatch(setAiGenerateState('clearing-before-generating'));
+              analyticsReporter.sendEvent('hoai2025-music-prompt', {
+                promptText,
+              });
             }}
             className={styles.buttonWide}
           />
@@ -309,8 +351,12 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              dispatch(setAiGenerateState('editing'));
-              setPlaying(false);
+              // Skip the 'editing' validation state for standalone projects.
+              dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
+
+              if (appConfig.getValue('ai-music-skip-stop') !== 'true') {
+                setPlaying(false);
+              }
             }}
             className={styles.buttonWide}
           />
@@ -319,14 +365,14 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'editing' && !isPlaying && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Heading3>Modify the code</Heading3>
           AI helped you get started. Make your own changes, then press Run.
         </div>
       )}
 
       {aiGenerateState === 'editing' && isPlaying && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Heading3>Modify the code</Heading3>
           <div>Try changing the code. </div>
         </div>
       )}
@@ -334,7 +380,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       {aiGenerateState === 'edited' && (
         <>
           <div>
-            <Heading4>Modify the code</Heading4>
+            <Heading3>Modify the code</Heading3>
             <div>That's a great mix!</div>
           </div>
           <div className={styles.buttonRow}>
@@ -347,11 +393,11 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               onClick={() => {
                 setPlaying(false);
                 clearCode(true);
-                dispatch(setAiGenerateState('clearing'));
+                dispatch(setAiGenerateState('clearing-before-none'));
               }}
               className={styles.buttonWide}
             />
-            {showNavigation && (
+            {!isStandalone && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.

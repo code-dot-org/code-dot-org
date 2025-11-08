@@ -37,7 +37,10 @@ Dashboard::Application.routes.draw do
 
   constraints host: CDO.preview_codeprojects_hostname do
     get '/', to: 'codeprojects_preview#show'
+    # Custom 404 page for codeprojects preview
+    get '*path', to: 'codeprojects_preview#not_found'
   end
+
   # This matches any host that is not the codeprojects hostname
   constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
@@ -101,8 +104,6 @@ Dashboard::Application.routes.draw do
 
     get "/home", to: "home#home"
 
-    get "/congrats", to: "congrats#index"
-
     get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
     get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
@@ -118,6 +119,7 @@ Dashboard::Application.routes.draw do
 
     resources :puzzle_ratings, only: [:create]
     resources :callouts
+    resources :congrats, only: %i[index show], param: :course_name
     resources :videos do
       collection do
         get 'test'
@@ -1161,7 +1163,9 @@ Dashboard::Application.routes.draw do
     # AI Lesson Summaries routes
     resources :ai_lesson_summaries, only: [:show] do
       collection do
-        get :show # GET /ai_lesson_summaries/show?user_id=1&lesson_id=2
+        get :show # GET /ai_lesson_summaries/show?lesson_id=2
+        get :perform_ai_lesson_summaries_by_unit, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summaries_by_unit # GET ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=1
+        get :perform_ai_lesson_summary_by_lesson, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summary_by_lesson # GET ai_lesson_summaries/perform_ai_lesson_summary_by_lesson?lesson_id=1
       end
     end
 

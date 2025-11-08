@@ -1,5 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Heading3} from '@code-dot-org/component-library/typography';
+import * as GoogleBlockly from 'blockly/core';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -64,6 +65,9 @@ interface GenerateCodeProps {
   resetProgram: () => void;
   updateSources: (newSources: WorkspaceSerialization) => void;
   startOver: () => void;
+  updateBlocklyFlyout: (
+    toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo
+  ) => void;
 }
 
 // Generate dance code.
@@ -79,6 +83,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   resetProgram,
   updateSources,
   startOver,
+  updateBlocklyFlyout,
 }) => {
   const [aiGenerateState, setAiGenerateState] = useState<
     | 'none'
@@ -133,7 +138,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     setAiGenerateState('generating');
 
     const startTime = Date.now();
-    const resultBlockly = buildDanceBlockly(
+    const {workspaceSerialization, flyoutDefinition} = buildDanceBlockly(
       measures,
       blockDefinitions,
       adlibChoices && adlibChoices['complexity'] === 'complex'
@@ -150,11 +155,22 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-    updateSources(resultBlockly);
+    updateSources(workspaceSerialization);
+    updateBlocklyFlyout(flyoutDefinition);
+    const levelId = levelProperties.id;
+    localStorage.setItem(`flyout-${levelId}`, JSON.stringify(flyoutDefinition));
     runProgram();
 
     setAiGenerateState('generated');
-  }, [adlibChoices, blockDefinitions, measures, runProgram, updateSources]);
+  }, [
+    adlibChoices,
+    blockDefinitions,
+    levelProperties.id,
+    measures,
+    runProgram,
+    updateBlocklyFlyout,
+    updateSources,
+  ]);
 
   useEffect(() => {
     // There can be a delay before we're playing, so wait for it explicitly.
@@ -197,18 +213,24 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   ].includes(aiGenerateState);
 
   const parentProperties = useParentLevelProperties();
-  const showNavigation =
-    !levelProperties.isProjectLevel && !parentProperties?.isProjectLevel;
+  const isStandalone =
+    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
 
   return (
     <Guide id="generate-panel" modal={modal} position="bottom">
-      {['none', 'generating'].includes(aiGenerateState) &&
-        levelProperties.longInstructions && (
-          <MainInstructionsContent
-            instructionsText={levelProperties.longInstructions}
-            markdownClassName={styles.markdown}
-          />
-        )}
+      {aiGenerateState === 'none' && levelProperties.longInstructions && (
+        <MainInstructionsContent
+          instructionsText={levelProperties.longInstructions}
+          markdownClassName={styles.markdown}
+        />
+      )}
+
+      {aiGenerateState === 'generating' && (
+        <div>
+          <Heading3>Generating...</Heading3>
+          AI is generating code based on your prompt.
+        </div>
+      )}
 
       {['none', 'generating', 'generated'].includes(aiGenerateState) && (
         <>
@@ -243,10 +265,10 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
 
       {['listening', 'listened'].includes(aiGenerateState) && (
         <div>
-          <Heading4>
+          <Heading3>
             {aiGenerateState === 'listening' && 'Take a look...'}
             {aiGenerateState === 'listened' && 'Decide what to do next'}
-          </Heading4>
+          </Heading3>
           <div>AI generated code based on your prompt, "{promptText}"</div>
         </div>
       )}
@@ -268,13 +290,29 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
 
           <Button
+            ariaLabel={'Regenerate'}
+            text={'Regenerate'}
+            type="secondary"
+            color="black"
+            size="s"
+            iconLeft={{iconName: 'sparkles'}}
+            onClick={() => {
+              startOver();
+              resetProgram();
+              generateDance();
+            }}
+            className={styles.buttonWide}
+          />
+
+          <Button
             ariaLabel={'Use code'}
             text={'Use code'}
             type="primary"
             color="black"
             size="s"
             onClick={() => {
-              setAiGenerateState('editing');
+              // Skip the 'editing' validation state for standalone projects.
+              setAiGenerateState(isStandalone ? 'edited' : 'editing');
               resetProgram();
             }}
             className={styles.buttonWide}
@@ -284,14 +322,14 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'editing' && !isRunning && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Heading3>Modify the code</Heading3>
           AI helped you get started. Now, edit the code to make it your own.
         </div>
       )}
 
       {aiGenerateState === 'editing' && isRunning && (
         <div>
-          <Heading4>Modify the code</Heading4>
+          <Heading3>Modify the code</Heading3>
           Try changing the code.
         </div>
       )}
@@ -299,9 +337,10 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       {aiGenerateState === 'edited' && (
         <>
           <div>
-            <Heading4>Modify the code</Heading4>
-            Amazing moves! Keep editing, or update your dancer design or music
-            mix above. Click Finish when you're done.
+            <Heading3>Modify the code</Heading3>
+            {isStandalone
+              ? 'Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix.'
+              : "Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix. Click Finish when you're done."}
           </div>
           <div className={styles.buttonRow}>
             <Button
@@ -317,7 +356,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {showNavigation && (
+            {!isStandalone && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.

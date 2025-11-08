@@ -3,12 +3,46 @@ title 'Review'
 description 'description here'
 
 markdown <<MARKDOWN
-  <h1 style="text-align: center;">Mix and Move with AI! </h1>
-<h2 style="text-align: center;">Use AI to help you set up the ultimate party.</h2>
-<h3 style="text-align: center;">Generate a new dancer, a music remix and fresh moves.</h3>
+<div style="padding:60px 20px 40px; text-align:center;">
+<h1 style="font-size:44px; color:#7b3fe4; margin:0;">Mix & Move with AI</h1>
+<h2 style="font-size:24px; color:#1a8a9a; margin:10px 0;">Educator’s Experience</h2>
+</div>
 
+<section style="max-width:1100px; margin:60px auto 40px; padding:0 24px; display:flex; align-items:center; gap:36px; flex-wrap:wrap;">
 
-![](https://images.code.org/9f64b81644560da1f2b7e510801712da-image-1759904531209.png)
+<div style="flex:1 1 480px; position:relative; min-height:300px;">
+<div style="position:absolute; right:0; top:18px; width:72%; height:72%; background:radial-gradient(120% 90% at 70% 20%, #f4f8ff 0%, #eef4ff 60%, #ffffff 100%); border-radius:28px;"></div>
+<img src="https://images.code.org/664e0bd0bb52519bb4ac2040efe26063-Screenshot 2025-11-05 at 12.09.47 PM.png" alt="Sparky the AI guide"
+style="position:relative; width:58%; max-width:360px; height:auto; display:block;">
+<div style="position:absolute; right:6px; top:8px; max-width:500px; background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 10px 24px rgba(0,0,0,.08);">
+<div style="position:absolute; left:-14px; top:28px; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-right:14px solid #fff;"></div>
+<p style="margin:0; font-size:18px; line-height:1.6;">
+Hi there — I’m <em>Sparky</em>, your friendly AI guide.<br><br>
+Together we’ll peek behind the scenes to see how Artificial Intelligence actually works.
+<br><br>
+By the end of this experience, you’ll:
+<ul>
+<li style="margin:0; font-size:16px; line-height:1.6;">Understand the basic principles of how AI “learns” from data.</li>
+<li style="margin:0; font-size:16px; line-height:1.6;">Experience how AI models create images, text, and code.</li>
+<li style="margin:0; font-size:16px; line-height:1.6;">Explore how AI can support creativity and problem-solving.</li>
+<li style="margin:0; font-size:16px; line-height:1.6;">Gain confidence to introduce AI-related learning with your students.</li>
+</ul>
+</p>
+</div>
+</div>
+
+<p style="font-size:17px; line-height:1.6; color:#444; margin-bottom:18px;">
+
+</p>
+
+<div style="background:#f3f0ff; border-left:4px solid #7b3fe4; padding:16px 20px; border-radius:8px; margin-top:30px;">
+<p style="margin:0; font-size:17px; color:#333;">
+      Get ready to explore, create, and learn with AI.
+</p>
+</div>
+</section>
+
+</body>
 MARKDOWN
 
 "First, team up with AI to create your own star dancer. Next, remix a track to set the vibe. Finally, code an original dance routine to bring your dancer and music to life!"

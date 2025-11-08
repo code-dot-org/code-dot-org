@@ -57,16 +57,6 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     onTextChange(filledAdlibText);
   }, [filledAdlibText, onTextChange]);
 
-  /*
-  // Compute joined choices text.
-  const choices = useMemo(() => {
-    const output = Object.keys(options).map(key => {
-      return adlibChoices[key];
-    });
-    return output;
-  }, [adlibChoices, options]);
-  */
-
   // Compute HTML.
   const adlibHtml = useMemo(() => {
     let output: React.ReactNode[] = [template];
@@ -97,13 +87,6 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
 
     return output;
   }, [adlibChoices, onChoicesChange, options, template]);
-
-  /*
-  // Notify parent when choices change.
-  useEffect(() => {
-    onChange(filledAdlibText, choices);
-  }, [choices, filledAdlibText, onChange]);
-  */
 
   return (
     <div

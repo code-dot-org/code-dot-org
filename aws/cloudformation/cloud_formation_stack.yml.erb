@@ -218,7 +218,6 @@ Resources:
               - 's3:PutBucketAcl'
               - 's3:PutBucketPolicy'
               - 's3:PutBucketPublicAccessBlock'
-              - 's3:PutObjectAcl'
               - 's3:PutLifecycleConfiguration'
 
               # S3 Batch Operations
@@ -228,7 +227,7 @@ Resources:
 
               # Management S3 APIs that Daemon and FrontEnds don't need.
               - 's3:PutBucketVersioning'
-              - 's3:PutBucketReplication'
+              - 's3:PutReplicationConfiguration'
               - 's3:PutBucketCORS'
               - 's3:PutBucketLogging'
               - 's3:PutEncryptionConfiguration'
@@ -237,6 +236,16 @@ Resources:
               - 's3:PutObjectLegalHold'
               - 's3:PutObjectRetention'
             Resource: '*'
+          # Deny PutObjectAcl except for some test log / build / deployment buckets.
+          - Effect: Deny
+            Action:
+              - 's3:PutObjectAcl'
+            NotResource:
+              - 'arn:aws:s3:::cucumber-logs/*'
+              - 'arn:aws:s3:::cdo-build-package/*'
+              - 'arn:aws:s3:::cdo-dist/*'
+              - 'arn:aws:s3:::images.code.org/*'
+              - 'arn:aws:s3:::videos.code.org/*'
           # TODO: Move to dedicated policy for GenAI
           # GenAI Sagemaker access
           - Effect: Allow

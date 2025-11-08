@@ -1,10 +1,11 @@
 import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
-import PersonalizationProgressBar from '@cdo/apps/aiDifferentiation/personalization/PersonalizationProgressBar';
+import PersonalizationInterstitial from '@cdo/apps/aiDifferentiation/personalization/components/personalizationInterstitial/PersonalizationInterstitial';
 import {matchTeachingProfile} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import i18n from '@cdo/locale';
 
+import {useTeachingProfileData} from './../hooks/useTeachingProfileData';
 import {
   NumberOfYearsTeachingAnswer,
   ClassroomVisionAnswer,
@@ -12,35 +13,22 @@ import {
   ConfidenceAnswer,
   GoalsAnswer,
   SupportAnswer,
-} from './PersonalizationAnswers';
-import PersonalizationQuestion from './PersonalizationQuestion';
-import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
-import PersonalizationResults from './PersonalizationResults';
-import {TEACHING_STYLES} from './PersonalizationResultsPersonas';
+} from './components/PersonalizationAnswers';
+import PersonalizationProgressBar from './components/PersonalizationProgressBar';
+import PersonalizationQuestion from './components/personalizationQuestion/PersonalizationQuestion';
+import {PERSONALIZATION_PROMPTS} from './components/personalizationQuestion/personalizationQuestions';
+import PersonalizationResults from './components/personalizationResults/PersonalizationResults';
+import {TEACHING_STYLES} from './components/personalizationResults/PersonalizationResultsPersonas';
 import {saveTeachingProfileData} from './teachingProfileApi';
 
 import style from './personalization-information.module.scss';
 
-interface PersonalizationData {
-  selectedGoals: string[];
-  selectedSupports: string[];
-  otherSupportText: string;
-  otherGoalText: string;
-  selectedConfidence: number;
-  yearsTeaching: number;
-  dateYearsTeachingSet: Date | null;
-  classroomVision: string;
-  challenge: string;
-}
-
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
   const [isSaving, setIsSaving] = React.useState(false);
+  const [showInterstitialState, setShowInterstitialState] =
+    React.useState(false);
   const [showResults, setShowResults] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [personalizationData, setPersonalizationData] = React.useState<
-    Partial<PersonalizationData>
-  >({});
   const [matchedTeachingProfile, setMatchedTeachingProfile] = React.useState(
     TEACHING_STYLES[0].name
   );
@@ -48,40 +36,8 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const NEXT = 1;
   const BACK = -1;
 
-  React.useEffect(() => {
-    const loadExistingData = async () => {
-      try {
-        const response = await fetch('/teaching_profile_data', {
-          method: 'GET',
-          headers: {
-            'X-CSRF-Token':
-              document
-                .querySelector('meta[name="csrf-token"]')
-                ?.getAttribute('content') || '',
-          },
-        });
-
-        if (response.ok) {
-          const result = await response.json();
-          if (result.exists && result.data) {
-            const existingData = {...result.data};
-            if (existingData.dateYearsTeachingSet) {
-              existingData.dateYearsTeachingSet = new Date(
-                existingData.dateYearsTeachingSet
-              );
-            }
-            setPersonalizationData(existingData);
-          }
-        }
-      } catch (error) {
-        console.error('Failed to load existing teaching profile data:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadExistingData();
-  }, []);
+  const {personalizationData, setPersonalizationData, isLoading} =
+    useTeachingProfileData();
 
   const onCarouselPress = async (direction: number) => {
     if (direction === NEXT) {
@@ -96,16 +52,34 @@ const PersonalizationCollectorContainer: React.FC = () => {
     }
 
     if (direction === BACK && questionsNumber === 0) {
+      setShowInterstitialState(false);
       return;
+    }
+
+    if (
+      direction === BACK &&
+      questionsNumber === PERSONALIZATION_PROMPTS.length - 1
+    ) {
+      setShowResults(false);
+      setShowInterstitialState(false);
     }
 
     if (
       direction === NEXT &&
       questionsNumber === PERSONALIZATION_PROMPTS.length - 1
     ) {
+      if (showResults && showInterstitialState) {
+        setShowInterstitialState(false);
+        return;
+      }
+      if (!showInterstitialState) {
+        setShowInterstitialState(true);
+      }
       if (!isSaving) {
         setIsSaving(true);
         try {
+          setShowResults(true);
+
           await saveTeachingProfileData(personalizationData);
           const profileMatch = await matchTeachingProfile(personalizationData);
 
@@ -118,8 +92,6 @@ const PersonalizationCollectorContainer: React.FC = () => {
             };
             await saveTeachingProfileData(updatedData);
           }
-
-          setShowResults(true);
         } catch (error) {
           console.error('Error in final step:', error);
           setShowResults(true);
@@ -130,7 +102,18 @@ const PersonalizationCollectorContainer: React.FC = () => {
       return;
     }
 
-    setQuestionsNumber(questionsNumber + direction);
+    if (showInterstitialState) {
+      setShowInterstitialState(false);
+      if (direction === NEXT) setQuestionsNumber(questionsNumber + direction);
+    }
+
+    if (!showInterstitialState && direction === NEXT) {
+      setShowInterstitialState(true);
+    }
+
+    if (!showInterstitialState && direction === BACK) {
+      setQuestionsNumber(questionsNumber + direction);
+    }
   };
 
   const determineAnswerType = React.useCallback(() => {
@@ -220,13 +203,13 @@ const PersonalizationCollectorContainer: React.FC = () => {
       default:
         return <div>Error: question not found</div>;
     }
-  }, [questionsNumber, personalizationData]);
+  }, [questionsNumber, setPersonalizationData, personalizationData]);
 
   const findTeachingStyle = (styleName: string) => {
     return TEACHING_STYLES.find(style => style.name === styleName);
   };
 
-  const showProgressBar = !isLoading && !showResults;
+  const showProgressBar = !isLoading && (!showResults || showInterstitialState);
 
   return (
     <>
@@ -240,7 +223,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
       <div className={style.carouselContainer}>
         {isLoading ? (
           <div>Loading...</div>
-        ) : showResults ? (
+        ) : showResults && !showInterstitialState ? (
           <PersonalizationResults
             teachingStyle={
               matchedTeachingProfile
@@ -251,9 +234,19 @@ const PersonalizationCollectorContainer: React.FC = () => {
           />
         ) : (
           <>
-            <PersonalizationQuestion questionNumber={questionsNumber} />
-            <div className={style.answerContainer}>{determineAnswerType()}</div>
-
+            {showInterstitialState || isSaving ? (
+              <PersonalizationInterstitial
+                currentQuestion={PERSONALIZATION_PROMPTS[questionsNumber]}
+                personalizationData={personalizationData}
+              />
+            ) : (
+              <>
+                <PersonalizationQuestion questionNumber={questionsNumber} />
+                <div className={style.answerContainer}>
+                  {determineAnswerType()}
+                </div>
+              </>
+            )}
             <div className={style.navigationButtons}>
               <Button
                 id={'back-button'}

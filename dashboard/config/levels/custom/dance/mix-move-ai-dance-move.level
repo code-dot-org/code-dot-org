@@ -14,7 +14,7 @@
     "validations": [
       {
         "key": "dance-pass",
-        "message": "That looks great!",
+        "message": "Nice move! When you are ready to create a music mix for your dance, press Continue.",
         "next": true,
         "conditions": [
           {
@@ -24,7 +24,7 @@
       },
       {
         "key": "dance-fail",
-        "message": "Make sure you add a dancer.",
+        "message": "<i class=\"fa-solid fa-lightbulb\"></i> Make sure to change the **dancer do move** block.",
         "next": false,
         "conditions": [
           {
@@ -70,18 +70,17 @@
       "https://curriculum.code.org/images/sprites/dance_20191106/sloth_42.png",
       "https://curriculum.code.org/images/sprites/dance_20191106/sloth_43.png"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"ai_dance_callout_draft_level_02\",\r\n  \"callout_text\": \"⬆️ Start here.\",\r\n  \"element_id\": \".blocklyFlyout [data-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[]",
     "parent_level_id": 14643,
     "name_suffix": "_draft3",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"<img src=\\\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\\\" style=\\\" margin-right: 10px;  height: 20px; float: left\\\"> The dancer should be the same on both blocks and the sequence (order) is important.  \",\"hint_id\":\"HInt2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/752f59bde46210c97c339095f7cb0f7e/dance_ai_dancer_and_dance_move.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"<img src=\\\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\\\" style=\\\" margin-right: 10px;  height: 20px; float: left\\\"> Add these blocks to <code style=\\\"color:white; background-color:#FFBD46\\\">setup</code> to create your first dancer: \\n<xml xmlns=\\\"https://developers.google.com/blockly/xml\\\">\\n      <block type=\\\"Dancelab_makeAnonymousDanceSprite\\\" id=\\\"1\\\">\\n        <field name=\\\"COSTUME\\\" config=\\\"&quot;CAT&quot;,&quot;SLOTH&quot;\\\">\\\"CAT\\\"</field>\\n        <field name=\\\"LOCATION\\\">{x: 200, y: 200}</field>\\n        <next>\\n          <block type=\\\"Dancelab_changeMoveEachLR\\\" id=\\\"|y+CWEBlleENO5MU(?yL\\\">\\n            <field name=\\\"GROUP\\\" config=\\\"&quot;CAT&quot;,&quot;SLOTH&quot;\\\">\\\"CAT\\\"</field>\\n            <field name=\\\"MOVE\\\">MOVES.Roll</field>\\n            <field name=\\\"DIR\\\">-1</field>\\n          </block>\\n        </next>\\n      </block>\\n    </statement>\\n\\n</xml>\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8f36bc970ceaa3260e7e09d32502c272/dance_ai_dancer_and_dance_move.mp3\"}]",
     "default_song": "asitwas_harrystyles",
-    "long_instructions": "##Choose a move!\r\n\r\nChange the dance move on the new block.\r\n\r\nThen, press the Run button.\r\n\r\n---\r\n\r\nWhen you're ready to mix new music, press Continue. ",
+    "long_instructions": "### Choose a dance move!\r\n\r\n1. Change the move on the **dancer do move** block.\r\n\r\n2. Press the Run button.",
     "encrypted": "false",
     "mini_rubric": "false",
-    "tts_short_instructions_override": "Connect the `make a new` block and then `dancers do` block into the workspace, and connect them inside the setup block.",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "validation_code": "if (nativeAPI.getTime(\"measures\") >= 4.5) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"dance-fail\");\r\n  } else {\r\n    nativeAPI.pass();\r\n  }\r\n}",
+    "validation_code": "if (nativeAPI.getTime(\"measures\") >= 2.5) {\r\n  if (!nativeAPI.generatedDancer.danceMove || nativeAPI.generatedDancer.danceMove === 'rest') {\r\n    nativeAPI.fail(\"dance-fail\");\r\n  } else {\r\n    nativeAPI.pass();\r\n  }\r\n}",
     "song_selection": [
       "asitwas_harrystyles",
       "bornthisway_ladygaga",
@@ -91,7 +90,9 @@
       "Dancelab",
       "GeneratedDancers"
     ],
-    "encrypted_examples": "QcyE1JnIa2c7fdVSHVOkbatQQV4OdsWG9/WbEyZMlHVc9qqXh0SPTAxAdr7o\nYoaj2AvdWdpsweQIUzGmgIErkA==\n",
+    "encrypted_examples": [
+
+    ],
     "uses_lab2": "true",
     "guide_mode": "instructions",
     "toolbox_definition": {
@@ -119,10 +120,33 @@
                   "id": "vb{0++WnQE=^`]L[u(L(",
                   "deletable": false,
                   "movable": false,
-                  "editable": false,
+                  "editable": true,
                   "fields": {
-                    "COSTUME": "\"GENERATED_DANCER\"",
                     "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 200}</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "Dancelab_setBackgroundEffectWithPaletteAI",
+                      "id": "}3E#h@z]BaYkI%8d)b[v",
+                      "deletable": false,
+                      "movable": false,
+                      "fields": {
+                        "PALETTE": "<field name=\"PALETTE\">\"cool\"</field>",
+                        "EFFECT": "<field name=\"EFFECT\">\"fireworks\"</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "GeneratedDancers_changeMoveEachLR",
+                          "id": "8~xvvzJ7t%K8`xfS;P=a",
+                          "deletable": false,
+                          "movable": false,
+                          "fields": {
+                            "GROUP": "<field name=\"GROUP\" config=\"&quot;GENERATED_DANCER&quot;\">\"GENERATED_DANCER\"</field>",
+                            "MOVE": "<field name=\"MOVE\">MOVES.Rest</field>"
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -134,7 +158,7 @@
     }
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-11-02T22:47:28.673+00:00\",\"changed\":[\"cloned from \\\"hoai-pilot-7-second-dance\\\"\"],\"cloned_from\":\"hoai-pilot-7-second-dance\"},{\"changed_at\":\"2025-11-02 22:47:33 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-11-02T22:47:28.673+00:00\",\"changed\":[\"cloned from \\\"hoai-pilot-7-second-dance\\\"\"],\"cloned_from\":\"hoai-pilot-7-second-dance\"},{\"changed_at\":\"2025-11-02 22:47:33 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 19:24:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 19:55:00 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 17:06:44 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 18:58:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:03:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 06:00:26 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 17:11:33 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 17:56:14 +0000\",\"changed\":[\"start_blocks\",\"callout_json\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 17:57:12 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-06 07:39:40 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -191,6 +191,8 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
       );
       if (this.menuGenerator_.length === 1) {
         this.EDITABLE = false;
+        // No-op showing the dropdown editor since there is only one option.
+        this.showEditor_ = () => {};
       }
     }
     // Call super so value is set.

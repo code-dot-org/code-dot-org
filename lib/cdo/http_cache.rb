@@ -77,6 +77,7 @@ class HttpCache
     dance-ai-2023
     mc
     music-jam-2024
+    mix-move-ai-2025
   ).map do |script_name|
     # Assume all cached units are in single unit courses.
     [script_name, "/courses/#{script_name}/units/1/lessons/*"]
@@ -169,10 +170,10 @@ class HttpCache
             cookies: 'none'
           },
           {
-            path: '/api/hour/*',
+            path: %w[/congrats /congrats/*],
+            proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
-            # Allow the company cookie to be read and set to track company users for tutorials.
-            cookies: allowlisted_cookies + ['company']
+            cookies: allowlisted_cookies,
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
@@ -354,12 +355,22 @@ class HttpCache
         dashboard: {
           behaviors: [
             {
-              path: "#{HocLegacy::API_ROOT_PATH}*",
+              path: "#{HocLegacy::API_ROOT_PATH}/*",
               headers: ALLOWLISTED_HEADERS,
               cookies: allowlisted_cookies,
             },
           ],
         },
+        pegasus: {
+          behaviors: [
+            {
+              path: "#{HocLegacy::API_ROOT_PATH}/*",
+              proxy: 'dashboard',
+              headers: ALLOWLISTED_HEADERS,
+              cookies: allowlisted_cookies,
+            },
+          ],
+        }
       )
     end
 

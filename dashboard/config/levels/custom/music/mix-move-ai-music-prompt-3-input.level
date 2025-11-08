@@ -11,7 +11,7 @@
       "guideMode": "aiCodeGenerate",
       "aiCodeGenerateAdlib": {
         "id": "sounds",
-        "template": "Code a {mood} music mix. It should be a {length} length. Use {drums}.",
+        "template": "Code a {mood} music mix with a {length} length, using {drums} drums.",
         "options": {
           "mood": [
             {
@@ -44,35 +44,39 @@
           "drums": [
             {
               "id": "original",
-              "text": "original drums"
+              "text": "original"
             },
             {
               "id": "electro",
-              "text": "electro drums"
+              "text": "electro"
             },
             {
               "id": "groove",
-              "text": "groove drums"
+              "text": "groove"
             },
             {
               "id": "indie",
-              "text": "indie drums"
+              "text": "indie"
             },
             {
               "id": "pop",
-              "text": "pop drums"
+              "text": "pop"
             },
             {
               "id": "hiphop",
-              "text": "hip hop drums"
+              "text": "hip hop"
             },
             {
               "id": "rock",
-              "text": "heavy rock drums"
+              "text": "heavy rock"
+            },
+            {
+              "id": "acoustic",
+              "text": "acoustic"
             }
           ]
         },
-        "variantCount": 3
+        "variantCount": 10
       },
       "aiCodeGenerateExtraPrompt": "You can also use any of the following additional drum sounds: \"{drumSounds}\"."
     },
@@ -89,11 +93,11 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
-    "long_instructions": "### Create a Mix\r\nTell AI what to create.",
-    "project_template_level_name": "hoai2025-music-template",
+    "long_instructions": "### Code the music mix for your dance\r\nModify the prompt with more details, then press Generate code.",
+    "project_template_level_name": "mix-move-ai-music-prompt-3-input-choice-template",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-02T22:55:50.449+00:00\",\"changed\":[\"cloned from \\\"hoai2025-music-adlib-3\\\"\"],\"cloned_from\":\"hoai2025-music-adlib-3\"},{\"changed_at\":\"2025-11-02 22:56:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-02T22:55:50.449+00:00\",\"changed\":[\"cloned from \\\"hoai2025-music-adlib-3\\\"\"],\"cloned_from\":\"hoai2025-music-adlib-3\"},{\"changed_at\":\"2025-11-02 22:56:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 17:30:52 +0000\",\"changed\":[\"level_data\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 17:31:59 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 19:58:08 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 20:35:56 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 20:40:03 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 20:40:14 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 20:41:27 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 20:44:08 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 21:03:51 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
