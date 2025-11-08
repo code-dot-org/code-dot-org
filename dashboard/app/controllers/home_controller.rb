@@ -83,8 +83,6 @@ class HomeController < ApplicationController
   def home
     authenticate_user!
 
-    raise 'introduce artificial 5xx error into ui tests'
-
     if current_user.teacher?
       redirect_to '/teacher_dashboard/home'
       return
