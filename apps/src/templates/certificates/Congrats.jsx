@@ -301,7 +301,7 @@ export default function Congrats(props) {
         <div>
           <div className={style.continueBeyond}>
             <Heading3 className={style.textCenter}>
-              {i18n.continueBeyondHourOfCode()}
+              Continue Beyond an Hour of AI
             </Heading3>
             <div
               className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol} ${style.courseContainer}`}
