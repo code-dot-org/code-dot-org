@@ -353,10 +353,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
               dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
-
-              if (appConfig.getValue('ai-music-skip-stop') !== 'true') {
-                setPlaying(false);
-              }
             }}
             className={styles.buttonWide}
           />
