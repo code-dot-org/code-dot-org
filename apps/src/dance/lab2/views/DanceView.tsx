@@ -41,6 +41,7 @@ import {
   setRunIsStarting,
   setSong,
 } from '@cdo/apps/dance/danceRedux';
+import LottieDancerRenderer from '@cdo/apps/dance/lottie/LottieDancerRenderer';
 import {getFilterStatus} from '@cdo/apps/dance/songs';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import {
@@ -536,6 +537,7 @@ const DanceView: React.FunctionComponent<{
         ? () => musicProjectPlayer.current?.stop()
         : undefined,
       onSoundEnded: resetProgram,
+      externalRendererFactory: () => new LottieDancerRenderer(),
     });
 
     if (recordReplayLog) {
