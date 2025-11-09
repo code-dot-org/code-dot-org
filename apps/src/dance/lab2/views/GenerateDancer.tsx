@@ -481,18 +481,20 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             </div>
           )}
 
-          <div
-            className={classNames(
-              moduleStyles.dancer,
-              aiGenerateState === 'generating' && moduleStyles.dancerHidden
-            )}
-          >
-            <DancerCanvas
-              key={canvasKey}
-              size={containerHeight * 1.1}
-              move={getConfigValue('danceMove') || 'rest'}
-            />
-          </div>
+          {canvasKey && (
+            <div
+              className={classNames(
+                moduleStyles.dancer,
+                aiGenerateState === 'generating' && moduleStyles.dancerHidden
+              )}
+            >
+              <DancerCanvas
+                key={canvasKey}
+                size={containerHeight * 1.1}
+                move={getConfigValue('danceMove') || 'rest'}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
