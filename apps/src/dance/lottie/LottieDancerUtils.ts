@@ -678,6 +678,36 @@ function getInlineFillFromStyle(style: string | null): string | null {
   return m ? m[1] : null;
 }
 
+function colorDistance(color1: RGBA, color2: RGBA) {
+  return Math.sqrt(
+    (color1[0] - color2[0]) * (color1[0] - color2[0]) +
+      (color1[1] - color2[1]) * (color1[1] - color2[1]) +
+      (color1[2] - color2[2]) * (color1[2] - color2[2])
+  );
+}
+
+function colorInverse(color: RGBA): RGBA {
+  return [1 - color[0], 1 - color[1], 1 - color[2], color[3]];
+}
+
+export function improvePalette(palette: Palette): Palette {
+  if (palette.primary && palette.secondary && palette.tertiary) {
+    const primary = palette.primary;
+    const secondary =
+      colorDistance(palette.primary, palette.secondary) < 0.3
+        ? colorInverse(palette.secondary)
+        : palette.secondary;
+    const tertiary =
+      colorDistance(palette.primary, palette.secondary) < 0.3
+        ? colorInverse(palette.tertiary)
+        : palette.tertiary;
+
+    return {primary, secondary, tertiary};
+  }
+
+  return palette;
+}
+
 /**
  * Performs in-place recoloring of an SVG markup string.
  * Only shapes whose fill or inline-style fill exactly matches one of the
