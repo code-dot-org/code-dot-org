@@ -293,7 +293,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerHeight, setContainerHeight] = useState(0);
-  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
   useEffect(() => {
     if (!containerRef.current) {
       return;
@@ -314,13 +313,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const onAdlibTextChange = useCallback((text: string) => {
     setPromptText(text);
   }, []);
-
-  // We artificially increase the 'generating' time so that the image doesn't appear
-  // too soon.
-  const showGenerating =
-    canvasKey === undefined ||
-    aiGenerateState === 'generating' ||
-    isPreviewLoading;
 
   const parentProperties = useParentLevelProperties();
   const showNavigation =
@@ -483,7 +475,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             />
           </div>
 
-          {showGenerating && (
+          {aiGenerateState === 'generating' && (
             <div className={moduleStyles.dancerSilhouetteBright}>
               <img alt="" src={dancerSilhouetteBrightImage} />
             </div>
@@ -492,14 +484,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           <div
             className={classNames(
               moduleStyles.dancer,
-              showGenerating && moduleStyles.dancerHidden
+              aiGenerateState === 'generating' && moduleStyles.dancerHidden
             )}
           >
             <DancerCanvas
               key={canvasKey}
               size={containerHeight * 1.1}
               move={getConfigValue('danceMove') || 'rest'}
-              onLoadingChange={setIsPreviewLoading}
             />
           </div>
         </div>
