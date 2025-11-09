@@ -195,10 +195,12 @@ const VersionHistoryPanel: React.FunctionComponent<
       dispatch(setViewingOldVersion(false));
       dispatch(setRestoredOldVersion(!published));
       loadVersionList(true);
+      sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_COMMITTED, appName, {
+        levelPath,
+      });
     },
-    [dispatch, loadVersionList]
+    [dispatch, loadVersionList, levelPath, appName]
   );
-
   const startOver = useCallback(async () => {
     // We force a new version on start over so the user doesn't lose their recent edits.
     // We also force the save to occur immediately to avoid confusion.
