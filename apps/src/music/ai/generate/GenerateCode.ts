@@ -8,6 +8,7 @@ import {trySetLocalStorage} from '@cdo/apps/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {baseAssetUrl} from '../../constants';
+import {FunctionEvents} from '../../player/interfaces/FunctionEvents';
 import {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
 import MusicLibrary from '../../player/MusicLibrary';
 
@@ -20,6 +21,7 @@ export const cacheKey = () => `music-ai-generate`;
 
 export interface MusicMetadata {
   playbackEvents: PlaybackEvent[];
+  orderedFunctions: FunctionEvents[];
   lastMeasure: number;
   packId?: string;
   libraryName?: string;
@@ -30,12 +32,14 @@ export const saveGeneratedSongMetadata = (
   channelId: string,
   packId: string,
   events: PlaybackEvent[],
+  orderedFunctions: FunctionEvents[],
   lastMeasure: number
 ) => {
   trySetLocalStorage(
     cacheKey(),
     JSON.stringify({
       playbackEvents: events,
+      orderedFunctions,
       lastMeasure,
       packId,
       libraryName: MusicLibrary.getInstance()?.name,

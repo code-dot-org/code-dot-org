@@ -50,6 +50,7 @@ export interface TimelineProps {
   clearSelectedBlockId?: () => void;
   selectedBlockId?: string;
   selectBlockId?: (blockId: string) => void;
+  fixedLength?: boolean;
 }
 
 /**
@@ -69,6 +70,7 @@ const Timeline: React.FunctionComponent<TimelineProps> = props => {
     loopEnd = 1,
     setStartingPlayheadPosition,
     clearSelectedBlockId,
+    fixedLength = false,
   } = props;
 
   const canChangeStartingPlayheadPosition =
@@ -76,8 +78,9 @@ const Timeline: React.FunctionComponent<TimelineProps> = props => {
       appConfig.getValue('allow-change-starting-playhead-position') ===
         'true') &&
     !isPlaying;
-  const measuresToDisplay =
-    Math.max(MIN_NUM_MEASURES, lastMeasure) + extraMeasures;
+  const measuresToDisplay = fixedLength
+    ? lastMeasure
+    : Math.max(MIN_NUM_MEASURES, lastMeasure) + extraMeasures;
   const playheadRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
 
