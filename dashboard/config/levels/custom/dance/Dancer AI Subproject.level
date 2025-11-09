@@ -33,7 +33,7 @@
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
     "generate_dancer_mode": "true",
-    "ai_dancer_generate_adlib": "adjective-animal-attire-02",
+    "ai_dancer_generate_adlib": "creature-attire-mood-style-05",
     "bubble_choice_description": "With the help of generative AI, create your custom dancer!",
     "thumbnail_url": "/blockly/media/dance/placeholder.png",
     "display_name": "Create a dancer!",

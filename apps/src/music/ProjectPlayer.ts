@@ -111,6 +111,13 @@ class ProjectPlayer {
     return this.currentMetadata?.lastMeasure;
   }
 
+  getMetadata() {
+    if (this.currentMetadata === null) {
+      throw new Error('No project loaded!');
+    }
+    return this.currentMetadata;
+  }
+
   private async loadMetadata(
     channelId: string,
     useLocalStorage = false
@@ -123,15 +130,17 @@ class ProjectPlayer {
       }
     }
 
-    // Otherwise, load from server
+    // Otherwise, load from server.
     const sources = await this.sourcesStore.load(channelId);
     const labConfig = sources.labConfig as MusicLabConfig;
     this.workspace.loadCode(JSON.parse(sources.source as string));
     this.workspace.compileSong(labConfig.music.blockMode);
-    const {playbackEvents, lastMeasure} = this.workspace.executeCompiledSong();
+    const {playbackEvents, orderedFunctions, lastMeasure} =
+      this.workspace.executeCompiledSong();
 
     return {
       playbackEvents,
+      orderedFunctions,
       lastMeasure,
       packId: labConfig.music.packId,
       libraryName: labConfig.music.library,
