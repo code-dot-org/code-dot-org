@@ -44,6 +44,10 @@ const PALETTES_PATH = `${SKELETONS_PATH}/palettes`;
 
 const DEFAULT_HEAD_SCALE = 0.5;
 
+// When we improve the palette, we want both secondary and tertiary to be at least
+// this far from the primary, when measured using simple Euclidean color distance.
+const COLOR_DISTANCE_REQUIRED = 0.32;
+
 // Expected colors to replace in body SVGs.
 const BODY_SVG_PRIMARY = '#33FF21';
 const BODY_SVG_SECONDARY = '#808080';
@@ -676,6 +680,43 @@ function getInlineFillFromStyle(style: string | null): string | null {
   if (!style) return null;
   const m = style.match(/fill\s*:\s*(#[0-9a-fA-F]{6})\b/);
   return m ? m[1] : null;
+}
+
+/** Simple Euclidean color distance between two colors. */
+function colorDistance(color1: RGBA, color2: RGBA) {
+  return Math.sqrt(
+    (color1[0] - color2[0]) * (color1[0] - color2[0]) +
+      (color1[1] - color2[1]) * (color1[1] - color2[1]) +
+      (color1[2] - color2[2]) * (color1[2] - color2[2])
+  );
+}
+
+/** Simple inversion of a color. */
+function colorInverse(color: RGBA): RGBA {
+  return [1 - color[0], 1 - color[1], 1 - color[2], color[3]];
+}
+
+/** Returns a new, improved palette, in which secondary and tertiary are
+ * at least COLOR_DISTANCE_REQUIRED away from primary.  If either is initially
+ * closer, then it is inverted in the returned palette.
+ */
+export function improvePalette(palette: Palette): Palette {
+  if (palette.primary && palette.secondary && palette.tertiary) {
+    const primary = palette.primary;
+    const secondary =
+      colorDistance(palette.primary, palette.secondary) <
+      COLOR_DISTANCE_REQUIRED
+        ? colorInverse(palette.secondary)
+        : palette.secondary;
+    const tertiary =
+      colorDistance(palette.primary, palette.tertiary) < COLOR_DISTANCE_REQUIRED
+        ? colorInverse(palette.tertiary)
+        : palette.tertiary;
+
+    return {primary, secondary, tertiary};
+  }
+
+  return palette;
 }
 
 /**
