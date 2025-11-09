@@ -465,6 +465,14 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               </div>
             </>
           )}
+          {/* Retain focus with a hidden button. */}
+          {['generating'].includes(aiGenerateState) && (
+            <div
+              tabIndex={0}
+              role="button"
+              className={moduleStyles.hiddenButton}
+            />
+          )}
         </Guide>
         <div className={moduleStyles.dancerContainer} ref={containerRef}>
           <div className={moduleStyles.background}>
