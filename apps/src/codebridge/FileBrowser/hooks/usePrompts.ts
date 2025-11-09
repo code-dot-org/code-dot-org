@@ -59,8 +59,12 @@ export const usePrompts = () => {
   const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
 
   const sendLab2AnalyticsEvent = useCallback(
-    (event: string) =>
-      globalSendLab2AnalyticsEvent(event, appName, {levelPath}),
+    (event: string, {fileType}: {fileType?: string} = {}): void => {
+      globalSendLab2AnalyticsEvent(event, appName, {
+        levelPath,
+        ...(fileType && {fileType}),
+      });
+    },
     [appName, levelPath]
   );
 

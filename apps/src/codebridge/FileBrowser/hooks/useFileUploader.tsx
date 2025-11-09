@@ -69,7 +69,7 @@ export const useFileUploader = (
           sendLab2AnalyticsEvent(
             EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE,
             appName,
-            {levelPath, ...payload}
+            {levelPath, ...payload, fileType: payload.fileType?.toLowerCase()}
           );
           return;
         }

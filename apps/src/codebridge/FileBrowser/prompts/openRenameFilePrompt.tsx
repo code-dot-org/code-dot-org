@@ -18,7 +18,10 @@ type RenameNewFilePromptArgsType = {
   projectFiles: MultiFileSource['files'];
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
-  sendLab2AnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, unknown>
+  ) => unknown;
 };
 
 export const openRenameFilePrompt = async ({
@@ -59,5 +62,7 @@ export const openRenameFilePrompt = async ({
 
   const newName = extractUserInput(results);
   renameFile(fileId, newName);
-  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, {
+    fileType: file.language?.toLowerCase(),
+  });
 };

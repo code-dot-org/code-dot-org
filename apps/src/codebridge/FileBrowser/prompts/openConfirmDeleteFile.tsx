@@ -10,7 +10,10 @@ type OpenConfirmDeleteFileArgsType = {
   file: ProjectFile;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   deleteFile: DeleteFileFunction;
-  sendLab2AnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, unknown>
+  ) => unknown;
   cleanupValidationFile: () => void;
 };
 
@@ -38,6 +41,8 @@ export const openConfirmDeleteFile = async ({
       cleanupValidationFile();
     }
     deleteFile({fileId: file.id});
-    sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE);
+    sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE, {
+      fileType: file.language?.toLowerCase(),
+    });
   }
 };

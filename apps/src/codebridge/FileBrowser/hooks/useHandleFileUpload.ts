@@ -51,6 +51,7 @@ export const useHandleFileUpload = (
           fileName,
           error: validationError,
           levelPath,
+          fileType: (fileName.split('.').pop() || '').toLowerCase(),
         });
         return;
       }
@@ -65,6 +66,7 @@ export const useHandleFileUpload = (
       sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,
         levelPath,
+        fileType: (fileName.split('.').pop() || '').toLowerCase(),
       });
     },
     [

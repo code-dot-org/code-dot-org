@@ -17,7 +17,10 @@ type OpenNewFilePromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   newFile: NewFileFunction;
   projectFiles: MultiFileSource['files'];
-  sendLab2AnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, unknown>
+  ) => unknown;
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
   validFileTypes?: string[];
@@ -56,5 +59,7 @@ export const openNewFilePrompt = async ({
     folderId,
   });
 
-  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, {
+    fileType: fileName.split('.').pop()?.toLowerCase(),
+  });
 };

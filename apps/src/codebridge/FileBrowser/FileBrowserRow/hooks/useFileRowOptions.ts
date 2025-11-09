@@ -35,7 +35,10 @@ const handleFileDownload = (
   levelPath: string
 ) => {
   fileDownload(file.contents, file.name);
-  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName, {levelPath});
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName, {
+    levelPath,
+    fileType: file.language?.toLowerCase(),
+  });
 };
 
 /**
@@ -92,7 +95,11 @@ export const useFileRowOptions = (
           ),
         iconName: 'arrow-right',
         labelText: codebridgeI18n.moveFile(),
-        clickHandler: () => openMoveFilePrompt({fileId: file.id}),
+        clickHandler: () =>
+          openMoveFilePrompt({
+            fileId: file.id,
+            fileType: file.language?.toLowerCase(),
+          }),
       },
       {
         condition: !isLocked,

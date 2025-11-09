@@ -34,6 +34,7 @@ describe('openMoveFilePrompt', function () {
       isStartMode: false,
       validationFile: undefined,
       sendLab2AnalyticsEvent,
+      fileType: 'txt',
     });
 
     expect(moveFileData.id).toEqual(fileId);
@@ -58,6 +59,7 @@ describe('openMoveFilePrompt', function () {
       isStartMode: false,
       validationFile: undefined,
       sendLab2AnalyticsEvent,
+      fileType: 'txt',
     });
 
     expect(Object.keys(moveFileData).length).toEqual(0);
