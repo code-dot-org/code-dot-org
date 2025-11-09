@@ -698,7 +698,7 @@ export function improvePalette(palette: Palette): Palette {
         ? colorInverse(palette.secondary)
         : palette.secondary;
     const tertiary =
-      colorDistance(palette.primary, palette.secondary) < 0.3
+      colorDistance(palette.primary, palette.tertiary) < 0.3
         ? colorInverse(palette.tertiary)
         : palette.tertiary;
 
