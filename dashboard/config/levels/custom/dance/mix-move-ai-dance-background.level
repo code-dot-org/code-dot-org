@@ -122,7 +122,7 @@
                   },
                   "next": {
                     "block": {
-                      "type": "Dancelab_setBackgroundEffectWithPaletteAI",
+                      "type": "GeneratedDancers_setBackgroundEffectWithPalette",
                       "id": "Xe8Sdv]u~#w`bh4dz`X~",
                       "deletable": false,
                       "movable": false,
