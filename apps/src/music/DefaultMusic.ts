@@ -30,4 +30,5 @@ export const defaultMetadata: MusicMetadata = {
   lastMeasure: 5,
   packId: 'default',
   libraryName: 'launch2024',
+  orderedFunctions: [],
 };

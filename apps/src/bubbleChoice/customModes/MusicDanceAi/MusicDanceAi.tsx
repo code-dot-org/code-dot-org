@@ -8,7 +8,7 @@ import {
   getCurrentLesson,
   levelById,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
-import {setIsLoading, setPageError} from '@cdo/apps/lab2/lab2Redux';
+import {setIsLoading} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
@@ -198,7 +198,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     }
 
     setTabDataMap(map);
-    setCurrentTab(getTypedKeys(map)[0]);
+    setCurrentTab(getIsShareView() ? Tab.Dance : getTypedKeys(map)[0]);
     dispatch(setIsLoading(false));
   }, [
     levelProperties,
@@ -282,64 +282,42 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     channel: tabData.projectManager?.getLastChannel(),
   };
 
-  if (getIsShareView()) {
-    // Present the Dance share UI in share view.
-    const danceProps = tabDataMap[Tab.Dance];
-    if (!danceProps) {
-      dispatch(
-        setPageError({
-          errorMessage:
-            'Missing required dance level in Music Dance AI project',
-        })
-      );
-      return null;
-    }
-    const DanceView = lab2EntryPoints.dance.view;
-    return (
-      <ParentLevelPropertiesContext.Provider value={levelProperties}>
-        <div className={styles.container}>
-          <Suspense fallback={<Loading isLoading={true} />}>
-            <DanceView {...danceProps} />
-          </Suspense>
-        </div>
-      </ParentLevelPropertiesContext.Provider>
-    );
-  }
-
   return (
     <ParentLevelPropertiesContext.Provider value={levelProperties}>
       <div className={styles.container}>
-        <div className={styles.tabSwitcher}>
-          {Object.values(Tab).map(tab => {
-            const disabled = !tabDataMap[tab];
-            return (
-              <button
-                type="button"
-                className={classNames(
-                  styles.button,
-                  disabled && styles.locked,
-                  tab === currentTab && styles.selected
-                )}
-                key={tab}
-                onClick={() => (disabled ? undefined : setCurrentTab(tab))}
-                disabled={disabled}
-              >
-                <BodyThreeText>
-                  {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
-                  <img
-                    src={icons[tab]}
-                    alt=""
-                    className={classNames(
-                      styles.tabIcon,
-                      tab === currentTab && styles.tabIconSelected
-                    )}
-                  />
-                  {labels[tab]}
-                </BodyThreeText>
-              </button>
-            );
-          })}
-        </div>
+        {!getIsShareView() && (
+          <div className={styles.tabSwitcher}>
+            {Object.values(Tab).map(tab => {
+              const disabled = !tabDataMap[tab];
+              return (
+                <button
+                  type="button"
+                  className={classNames(
+                    styles.button,
+                    disabled && styles.locked,
+                    tab === currentTab && styles.selected
+                  )}
+                  key={tab}
+                  onClick={() => (disabled ? undefined : setCurrentTab(tab))}
+                  disabled={disabled}
+                >
+                  <BodyThreeText>
+                    {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
+                    <img
+                      src={icons[tab]}
+                      alt=""
+                      className={classNames(
+                        styles.tabIcon,
+                        tab === currentTab && styles.tabIconSelected
+                      )}
+                    />
+                    {labels[tab]}
+                  </BodyThreeText>
+                </button>
+              );
+            })}
+          </div>
+        )}
         <div className={styles.labsContainer}>
           <div className={classNames(styles.labContainer)}>
             <Suspense fallback={<Loading isLoading={true} />}>
