@@ -54,6 +54,7 @@ import {
   mirrorPngDataUrl,
   getHeadScale,
   cropDataUrl,
+  improvePalette,
 } from './LottieDancerUtils';
 
 const DEFAULT_SKELETON = 'unicorn';
@@ -312,6 +313,12 @@ export default class LottieDancerRenderer {
             );
           }
         }
+      }
+
+      if (palette) {
+        // Improve palette to avoid secondary and tertiary colors being too close to
+        // primary color.
+        palette = improvePalette(palette);
       }
 
       // Recolor assets based on hard-coded accessory-name rules.
