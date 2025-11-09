@@ -174,6 +174,7 @@ class FilesTest < FilesApiTestBase
     # for DCDO.get('disallowed_html_tags', []), which is the only call we care about in this test.
     DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
     DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
+    DCDO.stubs(:get).with('s3_connection_pool_timeout', 5).returns(5)
     DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
 
     filename = 'index.html'
