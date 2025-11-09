@@ -316,6 +316,8 @@ export default class LottieDancerRenderer {
       }
 
       if (palette) {
+        // Improve palette to avoid secondary and tertiary colors being too close to
+        // primary color.
         palette = improvePalette(palette);
       }
 
