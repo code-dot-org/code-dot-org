@@ -18,7 +18,10 @@ type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   backpackApi: BackpackContextType;
   file: ProjectFile;
-  sendLab2AnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, unknown>
+  ) => unknown;
 };
 
 export const openSaveToBackpackPrompt = async ({
@@ -91,7 +94,10 @@ export const openSaveToBackpackPrompt = async ({
             ? EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE
             : EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_RENAME;
       }
-      const successCallback = () => sendLab2AnalyticsEvent(successMetric);
+      const successCallback = () =>
+        sendLab2AnalyticsEvent(successMetric, {
+          fileType: file.language?.toLowerCase(),
+        });
 
       const fileContents = {
         name: selectedFileName,
