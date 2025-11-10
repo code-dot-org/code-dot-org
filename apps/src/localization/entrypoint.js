@@ -40,7 +40,13 @@ const aif_prefixes = [
   '/courses/how-ai-works-2023',
 ];
 
-const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
+const dashboard_prefixes = [
+  '/home',
+  '/users',
+  '/teacher_dashboard',
+  '/congrats',
+  '/certificates',
+];
 
 const prefixes = {
   MlKri360o3v2T: csd_prefixes,
@@ -57,6 +63,8 @@ const live = [
   '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
   '/courses/artificial-intelligence-foundations-2025/',
+  '/congrats',
+  '/certificates',
 ];
 
 const experiments =
@@ -71,7 +79,7 @@ const projectKeys = Object.entries(prefixes).filter(([projectId, prefixes]) =>
 
 const isLive = live.some(prefix => window.location.pathname.startsWith(prefix));
 
-function loadLocalize() {
+function loadLocalize(language) {
   !(function (a) {
     if (!a.Localize) {
       a.Localize = {};
@@ -183,7 +191,7 @@ function loadLocalize() {
   Localize.setLanguage = Localize.cdoSetLanguage;
 
   // Ensure we are setting the correct direction on our <html> tag
-  Localize.cdoSetLanguage(Localize.getLanguage());
+  Localize.cdoSetLanguage(language || Localize.getLanguage());
 
   // Forcibly hide the widget for good measure
   Localize.hideWidget();
@@ -197,6 +205,17 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
   if (!locale.startsWith('en')) {
     set('language_', 'en-US');
     set('language_', 'en-US', {domain: '.code.org'});
+
+    // Ensure we reload the page with their chosen locale
+    if (window.localStorage) {
+      const localeMap = {
+        'es-MX': 'es-LA',
+        'es-ES': 'es',
+        'en-US': 'en',
+      };
+      window.localStorage.oldLocale = localeMap[locale] || locale;
+    }
+
     window.location.reload();
   } else {
     // Load the Localize widget
@@ -210,7 +229,11 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
     window.LocalizeLoader = new Promise((resolve, reject) => {
       script.onload = () => {
         // Optional: Handle script load event
-        loadLocalize();
+        loadLocalize(window.localStorage?.oldLocale);
+
+        // Remove any 'remembered' language so we rely only on the
+        // memory of their chosen language in the new system
+        window.localStorage.oldLocale = undefined;
         resolve(window.Localize);
       };
       script.onerror = () => {
