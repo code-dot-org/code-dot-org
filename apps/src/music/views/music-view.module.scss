@@ -68,11 +68,6 @@ $default-spacing: 2px;
     height: 100%;
     border-top: variables.$default-border;
   }
-  .dancerCanvasContainer {
-    position: absolute;
-    right: 0;
-    z-index: 1;
-  }
 }
 
 .instructionsArea {

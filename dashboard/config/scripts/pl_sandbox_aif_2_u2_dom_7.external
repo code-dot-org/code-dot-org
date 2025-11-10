@@ -1,0 +1,34 @@
+name 'pl_sandbox_aif_2_U2-DOM-7'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Understanding the DOM
+
+#### The **DOM (Document Object Model)** is a bridge between a webpage’s code and what users see and interact with.
+#### It’s a **programming interface** that turns the elements of an HTML document—like text, images, and buttons—into objects that JavaScript can access, modify, and respond to.
+
+<br>
+
+<img src="https://images.code.org/d77aa4ddfe768eb2e16d6072e8ac323f-image-1761850949297.png" alt="simple html map going from head to id of green button" width="350px" style="border-radius:10px; float:left; margin: 0 20px 0px 40px;">
+
+#### Think of the DOM as a map or tree structure that shows how every element on a page is connected.
+#### At the top is the document itself, which branches into sections (like `head` and `body`), and then into individual elements inside those sections.
+
+<div style="clear:both;"></div>
+
+<br>
+
+#### When JavaScript interacts with the DOM, it can select, listen to, and update these elements, allowing **structure (HTML), style (CSS), and behavior (JavaScript)** to work together as one unified, dynamic system.
+
+---
+
+## From HTML to Interactivity: 3 Steps
+
+<img src="https://images.code.org/81172d7d887440d93de134094236427d-image-1761925481650.png" alt="digram showing steps select an element 2 add event listener and 3 update content" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+## Next up
+#### Let's see how this looks in code.
+
+MARKDOWN

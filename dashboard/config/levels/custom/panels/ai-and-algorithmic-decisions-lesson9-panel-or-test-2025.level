@@ -11,12 +11,11 @@
     "panels": [
       {
         "text": "# OR (`||`)\n\n**OR (`||`)** is a logical operator used in conditional statements. \n\nFor a condition using **OR** to be true, **at least one** part of the condition must be true. \n\n| A | B | A &#124;&#124; B |\n|:---:|:---:|:---:|\n| T | T | T |\n| T | F | T |\n| F | T | T |\n| F | F | F |\n\n\n\n",
-        "imageUrl": "https://images.code.org/325240ce958c0eb5bdae2a7dc87c3287-OR1.png",
-        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
-        "layout": "text-top-left"
+        "imageUrl": "https://images.code.org/686a61bfe08e7cee16c6ac7434acd2f0-Screenshot 2025-10-30 at 11.26.22 AM.png",
+        "key": "ai-and-algorithmic-decisions-lesson9-panel-or-test-2025-a46f4a74-be1d-4f4b-89d5-43be89fed664"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-29T15:13:55.431+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-panel-and-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-panel-and-test-2025\"},{\"changed_at\":\"2025-10-29 15:14:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 15:55:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-29T15:13:55.431+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-panel-and-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-panel-and-test-2025\"},{\"changed_at\":\"2025-10-29 15:14:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 15:55:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 17:27:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -36,7 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 2.4;
     padding: 16px;
   }
@@ -46,8 +46,9 @@
   background-color: initial;
   color: white;
   width: initial;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: initial;
+  vertical-align: baseline;
 
   option {
     color: initial;

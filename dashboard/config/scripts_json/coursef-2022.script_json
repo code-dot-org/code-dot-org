@@ -4168,7 +4168,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "At the end of presentations, make time to celebrate students' hard work! You might choose to print out [certificates of completion](https://code.org/congrats/course1) for students or host an awards ceremony. If you choose to present awards to your students, focus on their skills and contributions as a classmate rather than on the complexity of their final project. For example, consider awards such as Most Improved Coder, Most Persistent Debugger, and Best Teammate. "
+            "markdown": "At the end of presentations, make time to celebrate students' hard work! You might choose to print out [certificates of completion](https://studio.code.org/congrats/course1) for students or host an awards ceremony. If you choose to present awards to your students, focus on their skills and contributions as a classmate rather than on the complexity of their final project. For example, consider awards such as Most Improved Coder, Most Persistent Debugger, and Best Teammate. "
           }
         ]
       },

@@ -75,8 +75,7 @@
     "name_suffix": "_draft3",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"<img src=\\\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\\\" style=\\\" margin-right: 10px;  height: 20px; float: left\\\"> The dancer should be the same on both blocks and the sequence (order) is important.  \",\"hint_id\":\"HInt2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/752f59bde46210c97c339095f7cb0f7e/dance_ai_dancer_and_dance_move.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"<img src=\\\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\\\" style=\\\" margin-right: 10px;  height: 20px; float: left\\\"> Add these blocks to <code style=\\\"color:white; background-color:#FFBD46\\\">setup</code> to create your first dancer: \\n<xml xmlns=\\\"https://developers.google.com/blockly/xml\\\">\\n      <block type=\\\"Dancelab_makeAnonymousDanceSprite\\\" id=\\\"1\\\">\\n        <field name=\\\"COSTUME\\\" config=\\\"&quot;CAT&quot;,&quot;SLOTH&quot;\\\">\\\"CAT\\\"</field>\\n        <field name=\\\"LOCATION\\\">{x: 200, y: 200}</field>\\n        <next>\\n          <block type=\\\"Dancelab_changeMoveEachLR\\\" id=\\\"|y+CWEBlleENO5MU(?yL\\\">\\n            <field name=\\\"GROUP\\\" config=\\\"&quot;CAT&quot;,&quot;SLOTH&quot;\\\">\\\"CAT\\\"</field>\\n            <field name=\\\"MOVE\\\">MOVES.Roll</field>\\n            <field name=\\\"DIR\\\">-1</field>\\n          </block>\\n        </next>\\n      </block>\\n    </statement>\\n\\n</xml>\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8f36bc970ceaa3260e7e09d32502c272/dance_ai_dancer_and_dance_move.mp3\"}]",
     "default_song": "asitwas_harrystyles",
-    "long_instructions": "##Start your dance!\r\n- Drag the `set background` block and connect it under `When Run`\r\n- Then, connect a `make new dancer` block\r\n- Click Run to start dancing.",
-    "short_instructions": "**Create your dancer and code them do a new dance move!** Click Run to start dancing.",
+    "long_instructions": "##Welcome! \r\n\r\nTo get started, choose an effect on the set background block. \r\n\r\nThen, press the Run button.\r\n\r\n---\r\n\r\nWhen you are ready to design a new dancer, press Continue.\r\n",
     "encrypted": "false",
     "mini_rubric": "false",
     "tts_short_instructions_override": "Connect the `make a new` block and then `dancers do` block into the workspace, and connect them inside the setup block.",
@@ -97,26 +96,7 @@
     "guide_mode": "instructions",
     "toolbox_definition": {
       "contents": [
-        {
-          "kind": "block",
-          "type": "GeneratedDancers_makeAnonymousDanceSprite",
-          "id": "vzvF:!o_2n#y..Ztz|Vu",
-          "fields": {
-            "COSTUME": "\"GENERATED_DANCER\"",
-            "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 100}</field>"
-          },
-          "enabled": true
-        },
-        {
-          "kind": "block",
-          "type": "Dancelab_setBackgroundEffect",
-          "id": "1a5a*qC3;cX5+pQwtKuC",
-          "fields": {
-            "EFFECT": "<field name=\"EFFECT\">\"sparkles\"</field>",
-            "PALETTE": "<field name=\"PALETTE\">\"neon\"</field>"
-          },
-          "enabled": true
-        }
+
       ],
       "kind": "flyoutToolbox"
     },
@@ -137,7 +117,7 @@
     }
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-10-24T03:04:14.489+00:00\",\"changed\":[\"cloned from \\\"hoai-pilot-6-first-dance\\\"\"],\"cloned_from\":\"hoai-pilot-6-first-dance\"},{\"changed_at\":\"2025-10-27 14:53:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 17:09:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 17:10:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 17:15:11 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 17:15:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 17:18:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-10-24T03:04:14.489+00:00\",\"changed\":[\"cloned from \\\"hoai-pilot-6-first-dance\\\"\"],\"cloned_from\":\"hoai-pilot-6-first-dance\"},{\"changed_at\":\"2025-10-27 14:53:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 17:09:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 17:10:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 17:15:11 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 17:15:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 17:18:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:22:45 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:22:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:25:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:44:59 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:45:32 +0000\",\"changed\":[\"start_blocks\",\"short_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:45:33 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 22:05:09 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 22:08:31 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 22:09:43 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 22:10:47 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 22:25:42 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 16:29:37 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -145,10 +125,6 @@
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <block type="Dancelab_whenSetup" id="n2IvvYw0`dD^TvxCN_`K" deletable="false" movable="false" x="18" y="15"/>
-      </xml>
-    </start_blocks>
-    <toolbox_blocks>
-      <xml>
         <block type="Dancelab_makeAnonymousDanceSprite" id="1" x="54" y="185">
           <field name="COSTUME" config="&quot;CAT&quot;,&quot;SLOTH&quot;">"CAT"</field>
           <field name="LOCATION">{x: 200, y: 200}</field>
@@ -159,6 +135,6 @@
           <field name="DIR">-1</field>
         </block>
       </xml>
-    </toolbox_blocks>
+    </start_blocks>
   </blocks>
 </Dancelab>
