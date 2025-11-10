@@ -1,8 +1,13 @@
 import {Steps} from 'intro.js-react';
 import React, {useEffect, useState} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+
+import {sendLab2AnalyticsEvent} from '../lab2/utils';
+import {EVENTS} from '../metrics/AnalyticsConstants';
 
 import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
 import {STEPS, INITIAL_STEP} from './sketchlabTourHelpers';
@@ -14,7 +19,7 @@ if (urlParams.get('noIntrojs') === 'true') {
   trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
 }
 
-const OnboardingTourSteps: React.FC = () => {
+const OnboardingTourSteps: React.FC<{appName: string}> = ({appName}) => {
   const sketchlabOnboardingTourSeen = tryGetLocalStorage(
     SKETCHLAB_ONBOARDING_TOUR_SEEN,
     'no'
@@ -25,6 +30,8 @@ const OnboardingTourSteps: React.FC = () => {
 
   // The Next button on the Open Menu step (6th step) is disabled until the user completes an action.
   const [openMenuNextStepEnabled, setOpenMenuNextStepEnabled] = useState(false);
+
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path) || '';
 
   useEffect(() => {
     if (sketchlabOnboardingTourSeen !== 'yes') {
@@ -190,14 +197,26 @@ const OnboardingTourSteps: React.FC = () => {
   return (
     <Steps
       enabled={isToolbarReady && sketchlabOnboardingTourSeen !== 'yes'}
+      onStart={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, appName, {
+          flowName: 'SketchLab Onboarding',
+          levelPath,
+        });
+      }}
       initialStep={INITIAL_STEP}
       steps={STEPS}
       onExit={() => {
-        console.log('onExit');
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, appName, {
+          flowName: 'SketchLab Onboarding',
+          levelPath,
+        });
         trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
       }}
       onComplete={() => {
-        console.log('onComplete');
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, appName, {
+          flowName: 'SketchLab Onboarding',
+          levelPath,
+        });
       }}
       onChange={nextStepIndex => {
         setTourStep(nextStepIndex);

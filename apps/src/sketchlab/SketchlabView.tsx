@@ -174,7 +174,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   return (
     <div className={moduleStyles.sketchlabContainer}>
-      <SketchlabTourSteps />
+      <SketchlabTourSteps appName={'sketchlab'} />
       <div style={{width: leftPanelWidth}} className={panelClassName}>
         <ResourcePanel
           levelProperties={levelProperties}

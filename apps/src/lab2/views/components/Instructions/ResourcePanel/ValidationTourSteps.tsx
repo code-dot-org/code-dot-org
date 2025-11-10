@@ -1,8 +1,12 @@
 import {Steps} from 'intro.js-react';
 import React, {useState, useEffect} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {
@@ -26,6 +30,7 @@ interface ValidationTourStepsProps {
   validationSettings: ValidationSettings | undefined;
   setCurrentTab: (tab: Tabs) => void;
   onValidate: (() => void) | undefined;
+  appName: string;
 }
 
 // This introjs flow is currently only used for Python Lab, but other labs can opt in to use it if they also
@@ -35,6 +40,7 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
   validationSettings,
   setCurrentTab,
   onValidate,
+  appName,
 }) => {
   const [validationTourEnabled, setValidationTourEnabled] = useState(false);
   const [validationTourStep, setValidationTourStep] = useState(0);
@@ -44,6 +50,8 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
     RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     'no'
   );
+  const levelPath =
+    useAppSelector(state => getCurrentLevel(state)?.path) || 'standalone';
 
   const returnFocusToTourPanel = () => {
     setTimeout(() => {
@@ -252,15 +260,27 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
   return (
     <Steps
       enabled={validationTourEnabled}
+      onStart={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, appName, {
+          flowName: 'Resource Panel Validation Tour',
+          levelPath,
+        });
+      }}
       initialStep={validationTourStep}
       steps={VALIDATION_TOUR_STEPS}
       onExit={() => {
-        console.log('onExit');
         setValidationTourEnabled(false);
         trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, appName, {
+          flowName: 'Resource Panel Validation Tour',
+          levelPath,
+        });
       }}
       onComplete={() => {
-        console.log('onComplete');
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, appName, {
+          flowName: 'Resource Panel Validation Tour',
+          levelPath,
+        });
       }}
       onChange={nextStepIndex => {
         setValidationTourStep(nextStepIndex);

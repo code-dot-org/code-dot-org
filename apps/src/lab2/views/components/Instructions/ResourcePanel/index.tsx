@@ -390,13 +390,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         id={resourcePanelInstructionsElementId}
         className={classNames(styles.resourcePanel, className)}
       >
-        {isOnboardingTourEnabled && <OnboardingTourSteps />}
+        {isOnboardingTourEnabled && <OnboardingTourSteps appName={appName} />}
         {isValidationTourEnabled && (
           <ValidationTourSteps
             hasValidationConditions={hasValidationConditions}
             validationSettings={instructionsProps.validationSettings}
             setCurrentTab={setCurrentTab}
             onValidate={instructionsProps.validationSettings?.onValidate}
+            appName={appName}
           />
         )}
         <div
