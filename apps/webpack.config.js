@@ -315,6 +315,10 @@ const WEBPACK_BASE_CONFIG = {
         include: [...nodeModulesToTranspile, p('src'), p('test')],
         exclude: [p('src/lodash.js')],
         use: [
+          // Only use thread-loader in CI environments. thread-loader causes JSON serialization
+          // errors ("Bad control character in string literal") when combined with devtool modes
+          // that generate full source maps (e.g., 'source-map'). CI uses devtool: 'eval' which
+          // avoids this problem.
           ...(process.env.CI
             ? [
                 {
@@ -340,6 +344,7 @@ const WEBPACK_BASE_CONFIG = {
       {
         test: /\.tsx?$/,
         use: [
+          // Only use thread-loader in CI environments.
           ...(process.env.CI
             ? [
                 {
