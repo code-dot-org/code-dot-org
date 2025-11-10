@@ -71,6 +71,7 @@ const defaultProps = {
     lessonId: 2,
   },
   scriptName: 'test_lesson',
+  personalizationData: {},
 };
 
 const defaultChatResponse = {

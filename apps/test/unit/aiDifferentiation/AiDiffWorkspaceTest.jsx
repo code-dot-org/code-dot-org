@@ -70,6 +70,7 @@ const defaultProps = {
   },
   scriptName: 'test_lesson',
   curriculumCourses: [],
+  personalizationData: {},
 };
 
 const now = new Date();

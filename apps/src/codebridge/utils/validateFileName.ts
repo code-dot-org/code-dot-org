@@ -41,8 +41,8 @@ export const validateFileName = ({
     return;
   }
 
-  const [, extension] = fileName.split('.');
-  if (!extension) {
+  const extension = fileName.split('.').pop();
+  if (!extension || extension === fileName) {
     return codebridgeI18n.noFileExtensionError();
   }
 

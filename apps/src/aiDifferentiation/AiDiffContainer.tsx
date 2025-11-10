@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 import FocusLock from 'react-focus-lock';
 
+import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+
 import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
@@ -51,6 +53,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   unreadNotificationCount,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+  const {personalizationData} = useTeachingProfileData();
 
   const [positionX, setPositionX] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
@@ -138,6 +141,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
               : curriculumCourses && (
                   <AiDiffWorkSpace
                     context={context}
+                    personalizationData={personalizationData}
                     scriptName={scriptName}
                     curriculumCourses={curriculumCourses}
                     unreadNotificationCount={unreadNotificationCount}

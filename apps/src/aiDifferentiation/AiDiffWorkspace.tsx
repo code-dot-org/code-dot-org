@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
+import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -18,6 +19,7 @@ interface AiDiffWorkSpaceProps {
   scriptName?: string;
   curriculumCourses?: string[];
   unreadNotificationCount: number;
+  personalizationData?: PersonalizationData;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
@@ -25,6 +27,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   scriptName,
   curriculumCourses,
   unreadNotificationCount,
+  personalizationData,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
@@ -87,6 +90,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           context={context}
           scriptName={scriptName}
           threadFetchCallback={fetchThreads}
+          personalizationData={personalizationData}
         />
       )}
     </div>

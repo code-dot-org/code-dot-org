@@ -2,7 +2,8 @@ import React from 'react';
 
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 
 import styles from './GuideInstructions.module.scss';
 
@@ -21,14 +22,24 @@ const GuideInstructions: React.FunctionComponent<GuideInstructionsProps> = ({
   hasRun,
   hasEdited,
 }) => {
+  const {longInstructions} = levelProperties;
+
   return (
     <Guide id="guide-instructions" modal={false} width={width}>
-      <Instructions
+      {longInstructions && (
+        <MainInstructionsContent
+          instructionsText={longInstructions}
+          markdownClassName={styles.markdown}
+        />
+      )}
+
+      <NavigationArea
         levelProperties={levelProperties}
+        markdownClassName={styles.markdown}
         isRunning={isRunning}
         hasRun={hasRun}
         hasEdited={hasEdited}
-        className={styles.GuideInstructions}
+        hideContinueIfDisabled={true}
       />
     </Guide>
   );

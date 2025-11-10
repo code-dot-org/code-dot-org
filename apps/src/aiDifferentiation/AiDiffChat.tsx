@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/aichat/redux/slice';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
@@ -36,6 +37,7 @@ interface AiDiffChatProps {
   chatResponseCallback?: () => void;
   hideChatHeader?: boolean;
   threadFetchCallback?: () => void;
+  personalizationData?: PersonalizationData;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
@@ -44,6 +46,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   chatResponseCallback = () => {},
   hideChatHeader = false,
   threadFetchCallback = () => {},
+  personalizationData,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
   const [hasSentInitialPrompt, setHasSentInitialPrompt] =
@@ -247,6 +250,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           onSuggestPrompts={onSuggestPrompts}
           messages={threadMessages}
           threadTitle={threadTitle}
+          personalizationData={personalizationData}
         />
       )}
       <div className={style.chatContent}>

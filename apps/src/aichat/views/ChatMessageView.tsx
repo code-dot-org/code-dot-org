@@ -152,7 +152,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   );
 };
 
-function getChatMessageDisplayText(
+export function getChatMessageDisplayText(
   status: ValueOf<typeof Status>,
   role: Role,
   chatMessageDisplayText: string,

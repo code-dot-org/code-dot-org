@@ -1,0 +1,8 @@
+name 'pl-sandbox-aif2-u2-sketchtutorial-conditionals-23-2'
+display_name 'Creating Conditionals with Flowcharts'
+description '#### Use Sketchlab and AI Chat to help create a conditional flow chart.'
+uses_lab2
+
+sublevels
+level 'pl-sandbox-aif2-u2-sketchlab-a'
+level 'pl-sandbox-aif2-u2-sketchlab-b'

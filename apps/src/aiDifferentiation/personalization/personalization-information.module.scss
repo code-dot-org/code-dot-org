@@ -11,7 +11,7 @@
   display: flex;
   width: 800px;
   min-height: 528px;
-  padding: 30px;
+  padding: 1.875rem 3.75rem;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
@@ -148,12 +148,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 8px;
+}
+
+.lightText {
+  color: var(--text-neutral-tertiary);
 }
 
 .revealDetailsContainer {
   display: flex;
   flex-direction: row;
   gap: 12px;
+  align-self: center;
 }
 
 .revealInfoBox {
@@ -169,7 +175,6 @@
 .arrowColumn {
   width: 15px !important;
   background-color: transparent !important;
-  padding: 16px 0 !important;
 }
 
 .personaColumnYellow {
@@ -183,32 +188,62 @@
 .personaColumn {
   width: 350px;
   height: 432px;
-  padding: 16px;
+  padding-bottom: 4px;
   display: flex;
   flex-direction: column;
 
   .header {
     margin: 0 0 16px 0;
     width: 350px;
+    text-align: left;
   }
 
   .arrowHeader {
-    height: 44px;
+    height: 76px;
   }
 
   .headerBlack {
     color: var(--text-neutral-primary, #292f36);
   }
 
-  .headerWhite {
-    color: var(--text-neutral-white-fixed, #fff);
+  .superpowersHeader {
+    background-image: url('./images/teacher-superpowers.png');
+    background-position: top;
+    background-size: cover;
+    min-height: 76px;
+    position: relative;
+    margin-bottom: 4px;
+
+    .superpowersHeaderText {
+      position: absolute;
+      bottom: 5px;
+      width: 157px;
+      padding-left: 28px;
+    }
+  }
+
+  .aiCanHelpHeader {
+    background-image: url('./images/ta-can-do.png');
+    background-position: top;
+    background-size: cover;
+    min-height: 76px;
+    position: relative;
+    margin-bottom: 4px;
+
+    .aiCanHelpText {
+      position: absolute;
+      bottom: 5px;
+      width: 174px;
+      padding-left: 114px;
+      color: var(--text-neutral-white-fixed, #fff);
+    }
   }
 
   .informationBox {
     background-color: white;
     align-self: stretch;
     padding: 12px;
-    margin: 4px 0;
+    margin: 4px 8px;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -216,6 +251,7 @@
 
     .boldedInformationBox {
       display: flex;
+      gap: 4px;
       align-items: flex-start;
       flex-direction: column;
     }
@@ -227,5 +263,47 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
+  }
+}
+
+.personalizationInterstitial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  h5 {
+    text-align: center;
+  }
+
+  .robotProcessingAnimation {
+    height: 300px;
+  }
+
+  .iconCard {
+    display: flex;
+    width: 7.25rem;
+    padding: 0.25rem 0.25rem 1.75rem 0.25rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.375rem;
+    border: 1px solid var(--borders-neutral-strong, #B7C1CB);
+    background: var(--background-neutral-secondary, #F0F2F5);
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 0.25);
+
+    .iconContainer {
+      display: flex;
+      box-sizing: border-box;
+      width: 6.75rem;
+      height: 5.75rem;
+      padding: 1.375rem 1.875rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.375rem;
+      background: var(--background-neutral-black-fixed, #292F36);
+    }
   }
 }

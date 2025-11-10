@@ -28,6 +28,7 @@ import {
   CanvasAnimConfig,
   DanceMoves,
   DancerMetadata,
+  LottieImageLayer,
   LottieJSON,
   Palette,
 } from './LottieDancerTypes';
@@ -50,6 +51,10 @@ import {
   getSkeletonMetadataUrl,
   hideMagentaDress,
   safeFetchSvgText,
+  mirrorPngDataUrl,
+  getHeadScale,
+  cropDataUrl,
+  improvePalette,
 } from './LottieDancerUtils';
 
 const DEFAULT_SKELETON = 'unicorn';
@@ -81,9 +86,13 @@ export default class LottieDancerRenderer {
   private bodyMetadataUrl?: string;
   private currentMove: DanceMoves | null;
   private fallbackSkeletonName: string;
+  private headLayers?: {
+    normal: LottieImageLayer;
+    mirrored: LottieImageLayer;
+  };
 
   constructor() {
-    this.headScale = 0.5;
+    this.headScale = getHeadScale();
     this.cachedAnimationData = {};
 
     const {urls} = resolveDancerAssets({
@@ -156,8 +165,11 @@ export default class LottieDancerRenderer {
       (this.ctx.canvas as HTMLElement).style.transform = `scaleX(${
         mirror ? -1 : 1
       })`;
-    } else {
-      (this.ctx.canvas as HTMLElement).style.transform = '';
+      // Re-flip the head image layer to remain net unmirrored.
+      if (this.headLayers) {
+        this.headLayers.normal.hd = mirror;
+        this.headLayers.mirrored.hd = !mirror;
+      }
     }
 
     const totalFrames = Math.max(1, this.totalFrames || 1);
@@ -278,16 +290,6 @@ export default class LottieDancerRenderer {
       const jsonUrl = resolveAnimationUrl(skeletonName, danceMoveLowerCase);
 
       const animData = await fetchJson<LottieJSON>(jsonUrl);
-      const shorten = (url?: string) =>
-        url?.match(/generate\/([^?]+)/)?.[1] || url;
-
-      console.log('Creating Lottie Dancer with:', {
-        dance: shorten(jsonUrl),
-        headDataUrl: shorten(this.headUrl),
-        metadataUrl: shorten(this.metadataUrl),
-        bodyUrl: shorten(this.bodyUrl),
-        bodyMetadataUrl: shorten(this.bodyMetadataUrl),
-      });
       // Fetch palette metadata if we have a URL for it.
       let palette: Palette | null = null;
       if (this.metadataUrl) {
@@ -313,6 +315,12 @@ export default class LottieDancerRenderer {
         }
       }
 
+      if (palette) {
+        // Improve palette to avoid secondary and tertiary colors being too close to
+        // primary color.
+        palette = improvePalette(palette);
+      }
+
       // Recolor assets based on hard-coded accessory-name rules.
       applyColorMapping(animData, palette, skeletonName);
 
@@ -326,12 +334,22 @@ export default class LottieDancerRenderer {
           if (headComp && Array.isArray(headComp.layers)) {
             const {insertIndex, ks: headKs} =
               hideLayersByTypeAndCaptureKs(headComp);
+            // Crop edge artifacts from generated head PNGs.
+            const croppedHeadUrl = await cropDataUrl(headDataUrl);
             const assetId = ensureImageAsset(
               animData,
-              headDataUrl,
+              croppedHeadUrl,
               'img_head_custom'
             );
-            insertImageLayer(
+            const headMirrorDataUrl = await mirrorPngDataUrl(croppedHeadUrl);
+            const headMirrorAssetId = ensureImageAsset(
+              animData,
+              headMirrorDataUrl,
+              'img_head_custom_mirror'
+            );
+
+            // Insert both head layers at same position, mirroring disabled by default
+            const headNormal = insertImageLayer(
               headComp,
               insertIndex,
               assetId,
@@ -342,6 +360,19 @@ export default class LottieDancerRenderer {
               this.headScale,
               {bm: 0, hd: false}
             );
+            const headMirrored = insertImageLayer(
+              headComp,
+              insertIndex + 1,
+              headMirrorAssetId,
+              headKs,
+              'Head Image (mirrored)',
+              500,
+              500,
+              this.headScale,
+              {bm: 0, hd: true}
+            );
+
+            this.headLayers = {normal: headNormal, mirrored: headMirrored};
           }
         }
       }
@@ -413,6 +444,19 @@ export default class LottieDancerRenderer {
       // Memoize transformed Lottie JSON per move (in-memory cache) so subsequent setSource calls skip recolor/head work.
       // This is useful if the same dance move is used later in a song, or if there are multiple generated dancers using the same move.
       this.cachedAnimationData[danceMoveLowerCase] = animData;
+      if (Object.keys(this.cachedAnimationData).length === 1) {
+        // Log only on first successful load to avoid spamming console in Dance levels.
+        const shorten = (url?: string) =>
+          url?.match(/generate\/([^?]+)/)?.[1] || url;
+
+        console.log('Creating Lottie Dancer with:', {
+          danceUrl: shorten(jsonUrl),
+          headDataUrl: shorten(this.headUrl),
+          metadataUrl: shorten(this.metadataUrl),
+          bodyUrl: shorten(this.bodyUrl),
+          bodyMetadataUrl: shorten(this.bodyMetadataUrl),
+        });
+      }
       return animData;
     })();
 

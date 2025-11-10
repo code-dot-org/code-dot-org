@@ -45,6 +45,8 @@ const INITIAL_WORKSPACE_WIDTH = 800;
 
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
+const DEFAULT_SOURCES = {source: {}};
+
 interface SketchlabSources extends ProjectSources {
   source: ExcalidrawInitialDataState;
 }
@@ -222,7 +224,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 };
 
 export default (props: LabProps<LevelProperties>) => (
-  <SourcesContainer {...props} defaultSources={{source: {}}}>
+  <SourcesContainer {...props} defaultSources={DEFAULT_SOURCES}>
     <SketchlabView levelProperties={props.levelProperties} />
   </SourcesContainer>
 );
