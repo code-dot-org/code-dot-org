@@ -105,6 +105,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       state: AppState,
       files: BinaryFiles
     ) => {
+      // TO DO: figure out how to update to support starter assets.
+      // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
       // In start mode, we manage saving explicitly via the button in the header.
       if (getIsStartMode()) {
         return;

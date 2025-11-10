@@ -104,20 +104,23 @@ export type BlocklySource = {[key: string]: unknown};
 
 export type SketchlabExternalFiles = Record<FileId, SketchlabProjectFile>;
 
-type ExcalidrawFileWithoutData = Omit<BinaryFileData, 'dataURL'> & {
+// By default, Excalidraw file entries require a dataURL field that has a
+// base64 encoding of the file. As we move to store images in S3, this field
+// is now optional.
+type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
   dataURL?: DataURL;
 };
 
-type ExcalidrawFilesWithoutData = Record<
+type ExcalidrawFilesWithOptionalData = Record<
   ExcalidrawElement['id'],
-  ExcalidrawFileWithoutData
+  ExcalidrawFileWithOptionalData
 >;
 
 export type ExcalidrawSourceWithExternalFiles = Omit<
   ExcalidrawInitialDataState,
   'files'
 > & {
-  files?: ExcalidrawFilesWithoutData;
+  files?: ExcalidrawFilesWithOptionalData;
   externalFiles?: SketchlabExternalFiles;
 };
 

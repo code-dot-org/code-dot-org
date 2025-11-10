@@ -329,8 +329,8 @@ const labSlice = createSlice({
     ) {
       const levelProperties = action.payload.levelProperties;
       state.channel = action.payload.channel;
-      state.levelProperties = levelProperties as any;
-      state.initialSources = action.payload.initialSources as any;
+      state.levelProperties = levelProperties;
+      state.initialSources = action.payload.initialSources;
       if (typeof action.payload.abuseScore === 'number') {
         state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;
       }

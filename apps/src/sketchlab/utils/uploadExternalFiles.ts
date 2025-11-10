@@ -33,24 +33,26 @@ export const uploadExternalFiles = (
 ) => {
   const savedFileIds = Object.keys(source.externalFiles || {});
   const excalidrawFileIds = Object.keys(serializedData.files || {});
-  const difference = excalidrawFileIds.filter(
+  const newFileIds = excalidrawFileIds.filter(
     id => !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
   );
 
-  if (difference.length && serializedData.files) {
-    difference.map(async fileId => {
+  if (newFileIds.length && serializedData.files) {
+    newFileIds.map(async fileId => {
       filesBeingUploadedRef.current.add(fileId);
 
+      // TO DO: update to support starter assets.
+      // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
       const newFile = serializedData.files[fileId];
       const extension = MIME_TO_EXT[newFile.mimeType];
       const externalUrl = `/v3/assets/${channelId}/${fileId}.${extension}`;
       const newExternalFile: SketchlabProjectFile = {
         id: fileId,
-        url: externalUrl,
       };
 
       try {
         await uploadBase64ToUrl(newFile.dataURL, externalUrl, newFile.mimeType);
+        newExternalFile.url = externalUrl;
       } catch {
         // If an upload fails, still add an entry to externalFiles
         // so we don't reattempt the upload repeatedly.
