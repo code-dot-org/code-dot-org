@@ -206,7 +206,9 @@ export const WorkshopForm: FC<WorkshopFormProps> = ({config}) => {
         }
 
         if (response.ok) {
-          navigate(`/workshops/${responseData.id}`);
+          navigate(`/workshops/${responseData.id}`, {
+            state: workshop ? 'refetch' : undefined,
+          });
         }
       } catch (error) {
         setResponseErrors([

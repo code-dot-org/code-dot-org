@@ -57,7 +57,8 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     it 'returns true if SingleUserExperiment is enabled' do
       allow(Queries::User::TeacherEnabledExperiments).to receive(:call).with(user).and_return([])
       allow(SingleUserExperiment).to receive(:enabled?).with(user: user, experiment_name: 'ai-tutor').and_return(true)
-      _can_enable_ai_tutor?.must_equal true
+      # todo-aitutor: change this back to true once the redesigned permissions page is functional
+      _can_enable_ai_tutor?.must_equal false
     end
   end
 

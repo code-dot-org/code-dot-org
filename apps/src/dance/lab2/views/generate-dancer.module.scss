@@ -1,3 +1,12 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .heading {
   margin-bottom: 0;
 }
@@ -43,6 +52,10 @@
   justify-content: flex-end;
   margin-top: 10px;
   gap: 10px;
+
+  @container (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 .navigationButton {
@@ -58,11 +71,36 @@
   display: flex;
   justify-content: center;
   position: relative;
+  border-left: 1px solid var(--borders-neutral-primary);
+}
 
-  img {
-    width: 100%;
+.background {
+  position: absolute;
+  height: 107%;
+
+  .backgroundImage {
     height: 100%;
-    object-fit: contain;
+  }
+}
+
+.dancerSilhouetteBright {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 99.5%;
+  opacity: 1;
+  animation: fadein 5s;
+}
+
+.dancer {
+  position: absolute;
+  height: 110%;
+  top: -10%;
+  transition: opacity 0.2s ease;
+  opacity: 1;
+
+  &Hidden {
+    opacity: 0;
   }
 }
 
@@ -74,4 +112,14 @@
   justify-content: center;
   pointer-events: none;
   z-index: 1;
+}
+
+.markdown {
+  h1, h2, h3, h4 {
+    font-size: 28px;
+  }
+
+  p, li {
+    font-size: 16px;
+  }
 }

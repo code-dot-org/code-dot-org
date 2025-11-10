@@ -6015,7 +6015,7 @@ en:
             #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Insights from Data and AI unit. However, you can engage with the content in the order that best meets your needs.
           version_title: ''
         teaching-problem-solving-with-ai-2025:
-          title: Teaching Problem-Solving with AI
+          title: Teaching Problem Solving with AI
           description_short: This professional learning module is designed to help you prepare to teach Code.org's Problem Solving with AI unit. This is a part of the AI Foundations curriculum.
           description_student: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.
@@ -6449,3 +6449,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'25-'26"
+        mix-move-ai-2025:
+          title: mix-move-ai-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        mix-move-ai-educators-2025:
+          title: mix-move-ai-educators-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
