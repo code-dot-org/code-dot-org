@@ -1128,6 +1128,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     Blockly.Events.enable();
   };
 
+  // Initialize metadata houses for original English source strings for
+  // various Blockly metadata that gets installed. These are used by the
+  // updateLocale(), localizeVariables(), etc, functions to translate a
+  // variety of both custom and built-in Blockly content.
   blocklyWrapper.SourceMsg = {};
   blocklyWrapper.SourceVariables = {};
   blocklyWrapper.SourceCustomBlocks = {
@@ -1135,6 +1139,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blockTexts: {},
   };
   blocklyWrapper.SourceCustomInputTypes = {};
+
+  // Keep track of the custom blocks that are used to initialize the
+  // Blockly environment.
   blocklyWrapper.customBlocks = customBlocks;
 
   initializeBlocklyXml(blocklyWrapper);
