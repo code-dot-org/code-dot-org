@@ -3,6 +3,7 @@ import {PayloadAction, createSelector, createSlice} from '@reduxjs/toolkit';
 
 export interface LayoutState {
   visualizationScale: number | null;
+  // TODO: Remove isAiDiffContainerOpen when https://codedotorg.atlassian.net/browse/AITT-1281 is implemented.
   isAiDiffContainerOpen: boolean;
 }
 

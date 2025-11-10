@@ -94,6 +94,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)));
 
       setIsOpen(isOpenState);
+      // TODO: Remove calls to setIsAiDiffContainerOpen when https://codedotorg.atlassian.net/browse/AITT-1281 is implemented.
       dispatch(setIsAiDiffContainerOpen(isOpenState));
     }
   }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen, dispatch]);
