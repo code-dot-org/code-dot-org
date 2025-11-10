@@ -46,7 +46,7 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
     'no'
   );
   const isAiDiffContainerOpen = useAppSelector(
-    state => state.lab2View.isAiDiffContainerOpen
+    state => state.layout.isAiDiffContainerOpen
   );
 
   const returnFocusToTourPanel = () => {

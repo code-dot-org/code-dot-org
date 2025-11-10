@@ -22,7 +22,7 @@ const OnboardingTourSteps: React.FC = () => {
   );
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   const isAiDiffContainerOpen = useAppSelector(
-    state => state.lab2View.isAiDiffContainerOpen
+    state => state.layout.isAiDiffContainerOpen
   );
 
   useEffect(() => {

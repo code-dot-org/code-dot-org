@@ -2,7 +2,7 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
-import {setIsAiDiffContainerOpen} from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import {setIsAiDiffContainerOpen} from '@cdo/apps/redux/layout';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {

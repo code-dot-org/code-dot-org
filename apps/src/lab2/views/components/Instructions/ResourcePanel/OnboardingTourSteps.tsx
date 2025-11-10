@@ -24,7 +24,7 @@ const OnboardingTourSteps: React.FC = () => {
     'no'
   );
   const isAiDiffContainerOpen = useAppSelector(
-    state => state.lab2View.isAiDiffContainerOpen
+    state => state.layout.isAiDiffContainerOpen
   );
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
