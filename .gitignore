@@ -30,6 +30,7 @@ npm-debug.log
 /rebuild-apps
 /rebuild-shared
 /rebuild-code-studio
+/.cache-staging-build-file-count
 
 #
 # Ruby Ignores
