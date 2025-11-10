@@ -86,7 +86,7 @@ set -x
 # the the cache-staging-build pipeline, and the ui pipeline re-uses that cache. We can't
 # skip rake install in the unit pipeline because cache-staging-build does not yet generate
 # correct DB contents for the unit pipeline.
-if [ "$CI_JOB" != "ui" ]; then
+if [ "$CI_JOB" != "ui_tests" ]; then
   bundle exec rake install
 fi
 
@@ -95,7 +95,7 @@ fi
 # that would block application load. Only do this in unit pipeline, since it
 # runs faster than the ui pipeline, and running in just one pipeline is sufficient
 # to make sure the developer sees a useful error message.
-if [ "$CI_JOB" = "unit" ]; then
+if [ "$CI_JOB" = "unit_tests" ]; then
   bundle exec rake lint:zeitwerk
 fi
 
