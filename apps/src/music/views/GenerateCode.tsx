@@ -360,7 +360,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
               dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
-              setPlaying(false);
             }}
             className={styles.buttonWide}
           />
@@ -414,6 +413,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           </div>
         </>
       )}
+      {/* Retain focus with a hidden button. */}
+      {['generating', 'generated', 'listening', 'editing'].includes(
+        aiGenerateState
+      ) && <div tabIndex={0} role="button" className={styles.hiddenButton} />}
     </Guide>
   );
 };

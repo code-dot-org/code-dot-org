@@ -6,7 +6,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import LottieDancerRenderer from '@cdo/apps/dance/lottie/LottieDancerRenderer';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 import localization from '@cdo/apps/localization';
@@ -465,7 +464,7 @@ Dance.prototype.afterInject_ = function () {
     i18n: msg,
     resourceLoader: new ResourceLoader(ASSET_BASE),
     logger: danceMetricsReporter,
-    externalRendererFactory: () => new LottieDancerRenderer(),
+    externalRendererFactory: undefined,
   });
 
   // Add command names from the Dance Party API to the Blockly generator's

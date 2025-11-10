@@ -41,6 +41,7 @@ interface ProgramExecutorOptions {
   ) => void;
   stopSound?: () => void;
   onSoundEnded?: () => void;
+  externalRendererFactory?: () => LottieDancerRenderer;
 }
 
 /**
@@ -106,7 +107,7 @@ export default class ProgramExecutor {
         i18n: msg,
         resourceLoader: new ResourceLoader(ASSET_BASE),
         logger: options.metricsReporter,
-        externalRendererFactory: () => new LottieDancerRenderer(),
+        externalRendererFactory: options.externalRendererFactory,
       });
     this.nativeAPI.reset();
     this.metricsReporter = options.metricsReporter;
