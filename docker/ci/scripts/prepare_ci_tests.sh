@@ -88,7 +88,7 @@ set -x
 # correct DB contents for the unit pipeline.
 if [ "$CI_JOB" != "ui" ]; then
   bundle exec rake install
-end
+fi
 
 # Catch any zeitwerk code loader errors before starting any rails environment,
 # in order to ensure that we give a clear error message for any zeitwerk issues
@@ -97,7 +97,7 @@ end
 # to make sure the developer sees a useful error message.
 if [ "$CI_JOB" = "unit" ]; then
   bundle exec rake lint:zeitwerk
-end
+fi
 
 bundle exec rake build
 
