@@ -109,25 +109,18 @@ const PersonalizationCollectorContainer: React.FC = () => {
       }
       return;
     }
-    if (direction === NEXT) {
-      analyticsReporter.sendEvent(EVENTS.PERSONALIZATION_ANSWER_SUBMITTED, {
-        question: PERSONALIZATION_PROMPTS[questionsNumber].question,
-        questionNumber: questionsNumber + 1,
-      });
-      setIsSaving(true);
-      try {
-        await saveTeachingProfileData(personalizationData);
-      } catch (error) {
-        console.error('Failed to save teaching profile data:', error);
-      } finally {
-        setIsSaving(false);
-      }
+    if (showInterstitialState) {
+      setShowInterstitialState(false);
+      if (direction === NEXT) setQuestionsNumber(questionsNumber + direction);
     }
 
-    if (direction === BACK && questionsNumber === 0) {
-      return;
+    if (!showInterstitialState && direction === NEXT) {
+      setShowInterstitialState(true);
     }
-    setQuestionsNumber(questionsNumber + direction);
+
+    if (!showInterstitialState && direction === BACK) {
+      setQuestionsNumber(questionsNumber + direction);
+    }
   };
 
   const determineAnswerType = React.useCallback(() => {
