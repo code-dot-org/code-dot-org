@@ -1,8 +1,10 @@
-.GuideInstructions {
-  background-color: initial;
-  padding: 0;
+.markdown {
+  h1, h2, h3, h4 {
+    font-size: 28px;
+  }
 
-  div > div {
-    background-color: initial;
+  p, li {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }

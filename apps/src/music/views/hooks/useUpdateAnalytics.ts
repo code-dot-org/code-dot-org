@@ -15,7 +15,8 @@ import AnalyticsReporter from '../../analytics/AnalyticsReporter';
  */
 function useUpdateAnalytics(
   analyticsReporter: AnalyticsReporter,
-  isProjectLevel: boolean
+  isProjectLevel: boolean,
+  channelId?: string
 ) {
   /**
    * Effect that runs on initial mount
@@ -98,7 +99,6 @@ function useUpdateAnalytics(
       analyticsReporter.setUserProperties(userId, userType, signInState);
   }, [analyticsReporter, sessionInProgress, userId, userType, signInState]);
 
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   useEffect(() => {
     sessionInProgress &&
       analyticsReporter.setProjectProperty('channelId', channelId);

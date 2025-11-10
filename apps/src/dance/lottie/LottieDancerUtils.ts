@@ -1,7 +1,10 @@
 import lottie, {type AnimationItem} from 'lottie-web';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import DCDO from '@cdo/apps/dcdo';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {GENERATED_DANCER_STORAGE_KEY} from '../ai/constants';
 
 import {
   CanvasAnimConfig,
@@ -38,6 +41,12 @@ const DEFAULT_BODY_METADATA_URL = `${BODIES_PATH}/default.json`;
 
 const SKELETONS_PATH = `${BASE_HOST}/skeletons`;
 const PALETTES_PATH = `${SKELETONS_PATH}/palettes`;
+
+const DEFAULT_HEAD_SCALE = 0.5;
+
+// When we improve the palette, we want both secondary and tertiary to be at least
+// this far from the primary, when measured using simple Euclidean color distance.
+const COLOR_DISTANCE_REQUIRED = 0.32;
 
 // Expected colors to replace in body SVGs.
 const BODY_SVG_PRIMARY = '#33FF21';
@@ -561,7 +570,7 @@ export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
   let localStorageOptions: LocalStoragePayload = null;
   let extraVariant: number | null = null;
   try {
-    const raw = localStorage.getItem('dancer-ai-generate');
+    const raw = localStorage.getItem(GENERATED_DANCER_STORAGE_KEY);
     localStorageOptions = raw ? (JSON.parse(raw) as LocalStoragePayload) : null;
   } catch {
     localStorageOptions = null;
@@ -673,6 +682,43 @@ function getInlineFillFromStyle(style: string | null): string | null {
   return m ? m[1] : null;
 }
 
+/** Simple Euclidean color distance between two colors. */
+function colorDistance(color1: RGBA, color2: RGBA) {
+  return Math.sqrt(
+    (color1[0] - color2[0]) * (color1[0] - color2[0]) +
+      (color1[1] - color2[1]) * (color1[1] - color2[1]) +
+      (color1[2] - color2[2]) * (color1[2] - color2[2])
+  );
+}
+
+/** Simple inversion of a color. */
+function colorInverse(color: RGBA): RGBA {
+  return [1 - color[0], 1 - color[1], 1 - color[2], color[3]];
+}
+
+/** Returns a new, improved palette, in which secondary and tertiary are
+ * at least COLOR_DISTANCE_REQUIRED away from primary.  If either is initially
+ * closer, then it is inverted in the returned palette.
+ */
+export function improvePalette(palette: Palette): Palette {
+  if (palette.primary && palette.secondary && palette.tertiary) {
+    const primary = palette.primary;
+    const secondary =
+      colorDistance(palette.primary, palette.secondary) <
+      COLOR_DISTANCE_REQUIRED
+        ? colorInverse(palette.secondary)
+        : palette.secondary;
+    const tertiary =
+      colorDistance(palette.primary, palette.tertiary) < COLOR_DISTANCE_REQUIRED
+        ? colorInverse(palette.tertiary)
+        : palette.tertiary;
+
+    return {primary, secondary, tertiary};
+  }
+
+  return palette;
+}
+
 /**
  * Performs in-place recoloring of an SVG markup string.
  * Only shapes whose fill or inline-style fill exactly matches one of the
@@ -767,4 +813,91 @@ export function hideMagentaDress(animData: LottieJSON): void {
 
   // Start from top-level comp.
   visitComp(animData);
+}
+
+/**
+ * Loads a PNG image from a data URL, mirrors it horizontally, and returns a new data URL.
+ * @param dataUrl
+ * @returns
+ */
+export async function mirrorPngDataUrl(dataUrl: string): Promise<string> {
+  const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const imageElement = new Image();
+    imageElement.onload = () => resolve(imageElement);
+    imageElement.onerror = reject;
+    imageElement.src = dataUrl;
+  });
+
+  const canvas = document.createElement('canvas');
+  canvas.width = img.naturalWidth || img.width;
+  canvas.height = img.naturalHeight || img.height;
+  const context2D = canvas.getContext('2d')!;
+  context2D.translate(canvas.width, 0);
+  context2D.scale(-1, 1);
+  context2D.drawImage(img, 0, 0);
+  return canvas.toDataURL('image/png');
+}
+
+// Head crop can be overridden via DCDO or URL param.
+function getHeadCrop(): number {
+  const dcdoHeadCrop = DCDO.get('ai-dancer-head-crop');
+
+  if (dcdoHeadCrop === false) {
+    return Number(getConfigValue('headCrop')) || 10;
+  }
+
+  return Number(dcdoHeadCrop);
+}
+
+// Head scale can be overridden via URL param, e.g. ?headScale=0.8, ?bigHead=true
+// If getHeadCrop() returns a value, then it calculates the right scale based on that.
+export function getHeadScale(): number {
+  const headCrop = getHeadCrop();
+
+  const scaleParam =
+    getConfigValue('headScale') ||
+    (getConfigValue('bigHead') === 'true'
+      ? '1.0'
+      : headCrop
+      ? String((0.5 * (DEFAULT_IMAGE_SIZE - 2 * headCrop)) / DEFAULT_IMAGE_SIZE)
+      : undefined);
+  const scale = scaleParam ? parseFloat(scaleParam) : NaN;
+  return isNaN(scale) || scale <= 0 ? DEFAULT_HEAD_SCALE : scale;
+}
+
+/** Crops "transparent" inset from all sides of a PNG data URL. */
+export async function cropDataUrl(dataUrl: string): Promise<string> {
+  const inset = getHeadCrop();
+
+  if (!inset) {
+    return dataUrl;
+  }
+
+  const loadedImage = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const imageElement = new Image();
+    imageElement.onload = () => resolve(imageElement);
+    imageElement.onerror = reject;
+    imageElement.src = dataUrl;
+  });
+
+  const scaledWidth = Math.max(1, loadedImage.naturalWidth - inset * 2);
+  const scaledHeight = Math.max(1, loadedImage.naturalHeight - inset * 2);
+
+  const offscreenCanvas = document.createElement('canvas');
+  offscreenCanvas.width = scaledWidth;
+  offscreenCanvas.height = scaledHeight;
+  const offscreenCanvasContext = offscreenCanvas.getContext('2d')!;
+  offscreenCanvasContext.drawImage(
+    loadedImage,
+    inset,
+    inset,
+    scaledWidth,
+    scaledHeight,
+    0,
+    0,
+    scaledWidth,
+    scaledHeight
+  );
+
+  return offscreenCanvas.toDataURL('image/png');
 }

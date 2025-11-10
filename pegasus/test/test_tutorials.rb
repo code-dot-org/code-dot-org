@@ -6,9 +6,9 @@ class TutorialsTest < Minitest::Test
   def test_tutorials_contents_immutable
     Tutorials.new(:tutorials) # Warm cache
 
-    tutorial = Tutorials.new(:tutorials).contents('code.org').first
+    tutorial = Tutorials.new(:tutorials).contents.first
     tutorial[:image] = 'xyz'
-    refute_equal Tutorials.new(:tutorials).contents('code.org').first[:image], tutorial[:image]
+    refute_equal Tutorials.new(:tutorials).contents.first[:image], tutorial[:image]
   end
 
   def test_sort_by_popularity_code_org

@@ -19,3 +19,5 @@ export const DANCE_AI_SOUNDS = [
 ] as const;
 
 export const DANCE_AI_FIELD_NAME = 'VALUE';
+
+export const GENERATED_DANCER_STORAGE_KEY = 'dancer-ai-generate';
