@@ -293,7 +293,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerHeight, setContainerHeight] = useState(0);
-  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
   useEffect(() => {
     if (!containerRef.current) {
       return;
@@ -314,13 +313,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const onAdlibTextChange = useCallback((text: string) => {
     setPromptText(text);
   }, []);
-
-  // We artificially increase the 'generating' time so that the image doesn't appear
-  // too soon.
-  const showGenerating =
-    canvasKey === undefined ||
-    aiGenerateState === 'generating' ||
-    isPreviewLoading;
 
   const parentProperties = useParentLevelProperties();
   const showNavigation =
@@ -465,6 +457,14 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               </div>
             </>
           )}
+          {/* Retain focus with a hidden button. */}
+          {['generating'].includes(aiGenerateState) && (
+            <div
+              tabIndex={0}
+              role="button"
+              className={moduleStyles.hiddenButton}
+            />
+          )}
         </Guide>
         <div className={moduleStyles.dancerContainer} ref={containerRef}>
           <div className={moduleStyles.background}>
@@ -475,25 +475,26 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             />
           </div>
 
-          {showGenerating && (
+          {aiGenerateState === 'generating' && (
             <div className={moduleStyles.dancerSilhouetteBright}>
               <img alt="" src={dancerSilhouetteBrightImage} />
             </div>
           )}
 
-          <div
-            className={classNames(
-              moduleStyles.dancer,
-              showGenerating && moduleStyles.dancerHidden
-            )}
-          >
-            <DancerCanvas
-              key={canvasKey}
-              size={containerHeight * 1.1}
-              move={getConfigValue('danceMove') || 'rest'}
-              onLoadingChange={setIsPreviewLoading}
-            />
-          </div>
+          {canvasKey && (
+            <div
+              className={classNames(
+                moduleStyles.dancer,
+                aiGenerateState === 'generating' && moduleStyles.dancerHidden
+              )}
+            >
+              <DancerCanvas
+                key={canvasKey}
+                size={containerHeight * 1.1}
+                move={getConfigValue('danceMove') || 'rest'}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
