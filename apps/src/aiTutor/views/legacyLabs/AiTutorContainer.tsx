@@ -15,7 +15,10 @@ import {
   standaloneProjectPrompts,
 } from '../../suggestedPrompts';
 
-import {AiTutorLegacyLabContextHelper} from './aiTutorContextHelper';
+import {
+  AiTutorLegacyLabContextHelper,
+  AiTutorLegacyLabParams,
+} from './aiTutorContextHelper';
 import AiTutorSidebar from './AiTutorSidebar';
 
 import styles from './AiTutorContainer.module.scss';
@@ -24,12 +27,14 @@ const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
 interface Level {
   longInstructions?: string;
+  hideSource?: boolean;
 }
 
 interface CommonLab {
   getCode?: () => Promise<string | undefined>;
   channel?: string;
   level?: Level;
+  hideSource?: boolean;
 }
 
 export const AiTutorContainer: FC<{
@@ -49,9 +54,23 @@ export const AiTutorContainer: FC<{
     labState.appType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
 
   const getHiddenContext = async () => {
+    const params: AiTutorLegacyLabParams = {
+      longInstructions: lab?.level?.longInstructions,
+      labType: labState.appType,
+    };
+
     const sourceCode = await lab?.getCode?.();
-    const longInstructions = lab?.level?.longInstructions;
-    aiTutorHelper.setAiTutorContext({sourceCode, longInstructions});
+    const hideSource = lab?.hideSource ?? lab?.level?.hideSource ?? false;
+    const readOnly = labState.isReadOnlyWorkspace;
+
+    if (hideSource) {
+      params.hiddenSourceCode = sourceCode;
+    } else if (readOnly) {
+      params.readOnlySourceCode = sourceCode;
+    } else {
+      params.sourceCode = sourceCode;
+    }
+    aiTutorHelper.setAiTutorContext(params);
     const callback = aiTutorHelper.getHiddenContextCallback();
     return callback();
   };
@@ -83,7 +102,7 @@ export const AiTutorContainer: FC<{
           <Button
             aria-label="Close AI tutor"
             isIconOnly
-            icon={{iconName: 'close'}}
+            icon={{iconName: 'dash'}}
             onClick={toggleAiChat}
             size="xs"
             type="tertiary"
@@ -96,14 +115,18 @@ export const AiTutorContainer: FC<{
           channelId={lab?.channel}
         />
       </div>
-      {!aiChatOpen && (
+      <div
+        className={classNames({
+          [styles.displayNone]: aiChatOpen,
+        })}
+      >
         <AiTutorSidebar
           toggleAiChat={toggleAiChat}
           suggestedPrompts={allPrompts}
           hiddenContextCallback={getHiddenContext}
           analyticsData={analyticsData}
         />
-      )}
+      </div>
     </>
   );
 };

@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q3_2025'
+
+question 'A web designer asks an AI tool to create a homepage for a pet adoption center. The AI generates a page, but the layout is cluttered, and the contact information is missing. What is the most effective way for the designer to get a better result?'
+
+wrong 'Keep the same short prompt but run it several more times.'
+right 'Revise the prompt to include details about layout sections and the need for contact information.'
+wrong 'Switch to a different AI tool without changing the request.'
+wrong 'Add new photos to distract from the missing contact information.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 3, 6, 10
+MARKDOWN

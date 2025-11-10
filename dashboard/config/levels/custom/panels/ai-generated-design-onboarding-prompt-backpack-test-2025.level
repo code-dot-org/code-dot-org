@@ -1,0 +1,55 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-23T15:23:31.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "How To: Prompt Backpack",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# How To: Prompt Backpack\n\nSaving your best prompts builds a reusable library of ideas. You can revisit what worked and apply strong prompts to new projects.\n\n",
+        "imageUrl": "https://images.code.org/b3de180f330ee40ef6b766a4cd8841c7-ai-curriculum-societal-impacts.png",
+        "key": "ai-generated-design-onboarding-prompt-backpack-test-2025-0dc5b1b1-58c4-4fc3-b45d-f4b4ab782f54"
+      },
+      {
+        "text": "## Step 1:\n\nCreate a new Markdown file (`.md`) in your project and give it a clear, specific name.\n\n<br/>\n\n**Example**: `click-event-prompt.md`\n",
+        "imageUrl": "https://images.code.org/0d74573f99cb016ffa98568eee34b0cc-Adobe Express - bp.gif",
+        "key": "ai-generated-design-onboarding-prompt-backpack-test-2025-3c723079-029b-4ac7-bc6e-89971d888eb1"
+      },
+      {
+        "text": "## Step 2:\n\nWrite or paste a prompt that worked well for you into the file.\n\n<br/>\n\n**Tip**: Keep only the prompt itself, not the whole chat.\n\n",
+        "imageUrl": "https://images.code.org/4ab47f7d7549fb9aa77f8c24572e92ed-Pasted Graphic 23.png",
+        "key": "ai-generated-design-onboarding-prompt-backpack-test-2025-d32e2e9e-9df7-4f47-b9d5-8580a4d7ca2e",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Step 3:\n\nClick the three dots next to the Markdown file and click **Save to Backpack**.",
+        "imageUrl": "https://images.code.org/5dca1044c7c68ef9e31d2b3e878db7a7-Adobe Express - bp2.gif",
+        "key": "ai-generated-design-onboarding-prompt-backpack-test-2025-ad9adc45-1220-4671-a411-9e842d3eb187"
+      },
+      {
+        "text": "## Step 4:\n\nLater, open a project and click the plus `+` button to add a new file. Click the **Import from Backpack** to import your Markdown file. Choose your saved prompt file from the dropdown and click Import to Project.",
+        "imageUrl": "https://images.code.org/40924f19a792ab4f452e6d98b0598893-Adobe Express - import.gif",
+        "key": "ai-generated-design-onboarding-prompt-backpack-test-2025-f79b7323-de5d-467d-98be-df20b3922c5d",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Step 5:\n\nOnce imported, highlight the lines of the prompt you want to use and click **Add to AI Tutor Chat**.",
+        "imageUrl": "https://images.code.org/41c976e89dcd1b2835415c32841562f7-code.gif",
+        "key": "ai-generated-design-onboarding-prompt-backpack-test-2025-493b97c5-99c1-4c8f-9417-1c15f62335be",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Step 6:\n\nIn your AI prompt, reference the imported context so AI knows what it’s using.\n\n<br/>\n\n**Example**: *“Use the imported prompt about click events to check if my handler logic matches.”*",
+        "imageUrl": "https://images.code.org/65b089930f238a136883f8f8ccdbde9c-Pasted Graphic 24.png",
+        "key": "ai-generated-design-onboarding-prompt-backpack-test-2025-d0d6acc4-02d5-47f9-bef1-e57dd47e8a91"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-23 15:44:30 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 15:45:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 15:45:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 15:59:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 17:53:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 17:54:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 17:58:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 17:59:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:00:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:03:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:04:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:08:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:09:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:10:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:13:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:14:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:19:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:19:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 18:20:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

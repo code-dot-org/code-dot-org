@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:46:39.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're coding a tool that generates a music playlist for a friend. The function is supposed to print a message that says it's creating a playlist for the person whose name you pass in. But right now, the code crashes as soon as you run it! \r\n\r\n1. Look at the function `make_playlist(user)`. It's supposed to print a message that uses the person's name.\r\n\r\n2. Try running the code. Read the error message carefully.\r\n\r\n3. Figure out what's wrong and fix the function so it prints the message correctly.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can only use a parameter inside the function where it’s defined. And you must use the exact name of the parameter — spelling matters!",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -44,9 +45,12 @@
       "active": false,
       "open": false,
       "type": "validation"
-    }
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:39.942+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level3_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level3_2025-launch_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:39.942+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level3_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level3_2025-launch_2025\"},{\"changed_at\":\"2025-10-27 15:53:11 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>

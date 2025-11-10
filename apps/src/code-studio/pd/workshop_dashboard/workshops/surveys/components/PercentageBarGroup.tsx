@@ -1,8 +1,4 @@
-import {
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
-import {Box} from '@mui/material';
+import {Box, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useEffect, useState} from 'react';
 
@@ -37,9 +33,9 @@ export const PercentageBarGroup: FC<PercentageBarGroupProps> = ({
     <Box className={classNames(commonStyles.column, className)}>
       {items.map(item => (
         <Box key={item.label}>
-          <BodyThreeText noMargin id={normalizeString(item.label)}>
-            <StrongText>{item.label}</StrongText>
-          </BodyThreeText>
+          <Typography id={normalizeString(item.label)} variant="body3">
+            <Typography variant="strong">{item.label}</Typography>
+          </Typography>
           <Box className={styles.barRow}>
             <PercentageBar
               percentage={item.percentage}
@@ -47,9 +43,9 @@ export const PercentageBarGroup: FC<PercentageBarGroupProps> = ({
               count={item.count}
               label={item.label}
             />
-            <BodyThreeText noMargin className={styles.barLabel}>{`${
+            <Typography className={styles.barLabel} variant="body3">{`${
               item.count
-            }${barLabel ? ` ${barLabel}` : ''}`}</BodyThreeText>
+            }${barLabel ? ` ${barLabel}` : ''}`}</Typography>
           </Box>
         </Box>
       ))}

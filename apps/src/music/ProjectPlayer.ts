@@ -1,5 +1,3 @@
-// TODO: Better name?
-
 import {SourcesStore} from '../lab2/projects/SourcesStore';
 
 import {
@@ -30,32 +28,13 @@ class ProjectPlayer {
     setUpBlocklyForMusicLab();
   }
 
-  // TODO: Support fetching by level + user ID?
-  async loadProject(channelId: string, useLocalStorage = false) {
+  async loadProject(channelId: string) {
     this.currentMetadata = null;
     this.eventMeasures = null;
     this.workspace.initHeadless();
 
-    if (channelId === 'default-music') {
-      this.currentMetadata = defaultMetadata;
-    } else {
-      this.currentMetadata = await this.loadMetadata(
-        channelId,
-        useLocalStorage
-      );
-    }
-    const {libraryName, packId, playbackEvents} = this.currentMetadata;
-
-    let library = MusicLibrary.getInstance();
-    if (!library) {
-      library = await MusicLibrary.loadLibrary(libraryName || 'launch2024');
-    }
-
-    if (packId) {
-      library.setCurrentPackId(packId);
-    }
-
-    this.player.updateConfiguration(library.getBPM(), library.getKey());
+    this.currentMetadata = await this.loadMetadata(channelId);
+    const playbackEvents = this.currentMetadata.playbackEvents;
     this.eventMeasures = computeEventMeasures(playbackEvents);
 
     await this.player.preloadSounds(playbackEvents);
@@ -68,14 +47,16 @@ class ProjectPlayer {
     const {playbackEvents, lastMeasure} = this.currentMetadata;
     this.player.playSong(playbackEvents);
 
-    // Stop the song after the last measure.
     this.stopIntervalId = window.setInterval(() => {
-      if (
-        this.stopIntervalId &&
-        this.player.getCurrentPlayheadPosition() >= lastMeasure
-      ) {
-        onEnded?.();
-        this.stop();
+      if (this.stopIntervalId) {
+        const currentPlayheadPosition =
+          this.player.getCurrentPlayheadPosition();
+
+        // Stop the song after the last measure.
+        if (currentPlayheadPosition >= lastMeasure + 1) {
+          onEnded?.();
+          this.stop();
+        }
       }
     }, (60 / this.player.getBPM()) * 1000);
   }
@@ -101,31 +82,79 @@ class ProjectPlayer {
     return this.player.getBPM();
   }
 
-  private async loadMetadata(
-    channelId: string,
-    useLocalStorage = false
-  ): Promise<MusicMetadata> {
-    // Try to load from local storage if it exists
-    if (useLocalStorage) {
-      const metadataString = localStorage.getItem(cacheKey());
-      if (metadataString) {
-        return JSON.parse(metadataString) as MusicMetadata;
+  getCurrentPlayheadPosition() {
+    return this.player.getCurrentPlayheadPosition();
+  }
+
+  getLastMeasure() {
+    return this.currentMetadata?.lastMeasure;
+  }
+
+  getMetadata() {
+    if (this.currentMetadata === null) {
+      throw new Error('No project loaded!');
+    }
+    return this.currentMetadata;
+  }
+
+  private async loadMetadata(channelId: string): Promise<MusicMetadata> {
+    // Return default if specified.
+    if (channelId === defaultMetadata.channelId) {
+      return this.prepareLibraryFromMetadata(defaultMetadata);
+    }
+
+    // Try to load from local storage if it exists.
+    const metadataString = localStorage.getItem(cacheKey());
+    if (metadataString) {
+      try {
+        const localStorageMetadata = JSON.parse(
+          metadataString
+        ) as MusicMetadata;
+        if (localStorageMetadata.channelId === channelId) {
+          return this.prepareLibraryFromMetadata(localStorageMetadata);
+        }
+      } catch (e) {
+        // Ignore JSON parse errors and fall through to loading from server.
       }
     }
 
-    // Otherwise, load from server
+    // Otherwise, load from server.
     const sources = await this.sourcesStore.load(channelId);
     const labConfig = sources.labConfig as MusicLabConfig;
+    // Prepare library so sounds are available during code execution.
+    await this.prepareLibrary(labConfig.music.library, labConfig.music.packId);
+
     this.workspace.loadCode(JSON.parse(sources.source as string));
     this.workspace.compileSong(labConfig.music.blockMode);
-    const {playbackEvents, lastMeasure} = this.workspace.executeCompiledSong();
+    const {playbackEvents, orderedFunctions, lastMeasure} =
+      this.workspace.executeCompiledSong();
 
     return {
+      channelId,
       playbackEvents,
+      orderedFunctions,
       lastMeasure,
       packId: labConfig.music.packId,
       libraryName: labConfig.music.library,
     };
+  }
+
+  private async prepareLibrary(libraryName?: string, packId?: string) {
+    let library = MusicLibrary.getInstance();
+    if (!library) {
+      library = await MusicLibrary.loadLibrary(libraryName || 'launch2024');
+    }
+
+    if (packId) {
+      library.setCurrentPackId(packId);
+    }
+
+    this.player.updateConfiguration(library.getBPM(), library.getKey());
+  }
+
+  private async prepareLibraryFromMetadata(metadata: MusicMetadata) {
+    await this.prepareLibrary(metadata.libraryName, metadata.packId);
+    return metadata;
   }
 }
 

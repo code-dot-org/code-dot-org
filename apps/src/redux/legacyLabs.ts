@@ -6,4 +6,5 @@ export interface LegacyLabsState {
   serverLevelId?: number;
   serverScriptId?: number;
   appType?: string;
+  isReadOnlyWorkspace?: boolean;
 }

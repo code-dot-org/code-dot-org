@@ -1,9 +1,9 @@
 name 'ai-and-algorithmic-decisions-lesson7-level2-test-2025'
 display_name 'Redesign for a User'
 description 'Select a starter website with a specific user persona, then implement one small accessibility feature'
+uses_lab2
 
 sublevels
 level 'ai-and-algorithmic-decisions-lesson7-level2a-test-2025'
 level 'ai-and-algorithmic-decisions-lesson7-level2b-test-2025'
 level 'ai-and-algorithmic-decisions-lesson7-level2c-test-2025'
-level 'ai-and-algorithmic-decisions-lesson7-level2d-test-2025'

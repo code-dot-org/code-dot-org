@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
 import {
@@ -16,6 +17,7 @@ import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -25,8 +27,10 @@ import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
 import {uploadExternalFiles} from './utils';
 
@@ -44,14 +48,27 @@ const INITIAL_WORKSPACE_WIDTH = 800;
 
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
+const DEFAULT_SOURCES = {source: {}};
+
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
-  const {currentSources, updateSources, setReinitializationHandler} =
-    useSources<SketchlabSources>();
+  const {
+    currentSources,
+    updateSources,
+    setReinitializationHandler,
+    showStartOverDialog,
+  } = useSources<SketchlabSources>();
+
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const filesBeingUploadedRef = useRef<Set<string>>(new Set());
+
+  const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+
+  const onClickStartOver = useCallback(() => {
+    showStartOverDialog('custom', commonI18n.startOverGeneric());
+  }, [showStartOverDialog]);
 
   const {theme} = useTheme();
 
@@ -175,6 +192,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   return (
     <div className={moduleStyles.sketchlabContainer}>
+      <SketchlabTourSteps />
       <div style={{width: leftPanelWidth}} className={panelClassName}>
         <ResourcePanel
           levelProperties={levelProperties}
@@ -194,6 +212,19 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           id="workspace"
           className={panelClassName}
           headerContent={<WorkspaceHeader />}
+          rightHeaderContent={
+            !readonlyWorkspace && (
+              <Button
+                text={commonI18n.startOver()}
+                iconRight={{iconStyle: 'solid', iconName: 'arrow-rotate-left'}}
+                color={'gray'}
+                onClick={onClickStartOver}
+                ariaLabel={commonI18n.startOver()}
+                size={'xs'}
+                type="secondary"
+              />
+            )
+          }
         >
           <Excalidraw
             initialData={currentSources.source as ExcalidrawInitialDataState}
@@ -201,6 +232,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
             theme={theme.toLowerCase() as ExcalidrawTheme}
+            viewModeEnabled={readonlyWorkspace}
           />
           {WorkspaceAlert}
         </PanelContainer>
@@ -210,7 +242,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 };
 
 export default (props: LabProps<LevelProperties>) => (
-  <SourcesContainer {...props} defaultSources={{source: {}}}>
+  <SourcesContainer {...props} defaultSources={DEFAULT_SOURCES}>
     <SketchlabView levelProperties={props.levelProperties} />
   </SourcesContainer>
 );

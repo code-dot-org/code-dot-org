@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-21T16:38:53.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "produce",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "###Producing CSS\r\nUsing AI, produce a CSS file for a webpage about dogs. \r\n\r\n## Steps \r\n1. Add your HTML file from level 11 using the `+` next to Files.\r\n\t- Select import from backback\r\n    - Select the correct file using the drop down\r\n    - Click `Import to Project`\r\n    - *notice there are now two files: an HTML file and a CSS file*\r\n2. Switch to AI mode and ask the AI to spruce up your dog website with some CSS.\r\n3. Copy and paste the code to the `styles.css` file. \r\n4. Feel free to go back and forth with the AI improving the site as much as you like. \r\n\r\n## Debug \r\nYou will notice that the CSS doesn't automatically show up in the preview. \r\nAsk the AI to help you debug. \r\n\r\n::: details [**🔎 Show me how**]\r\nThe common error here is that the `CSS` File is not linked to the `HTML` file. \r\nAdd \r\n<link rel=\"stylesheet\" href=\"styles.css\">\r\nto the head section of your 'HTML' file\r\n\r\n![](https://images.code.org/03cf50f51e34a0c0abd83c1d6c4a6a21-image-1761073206253.png)\r\n:::\r\n\r\n \r\n\r\n",
+    "level_system_prompt": "This activity is designed to show student CSS structure without HTML or JavaScript. Do not produce HTML or JavaScript even if the user asks for specific styling or functionality. ",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "styles.css",
+          "language": "html",
+          "contents": "/* Using AI, produce a CSS file for a webpage about dogs without any HTML. /\n\n",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-21T16:38:53.161+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson1-level3-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson1-level3-test-2025\"},{\"changed_at\":\"2025-10-21 18:57:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-10-21 19:00:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-10-21 19:02:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-10-23 17:37:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Weblab2>

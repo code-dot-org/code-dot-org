@@ -15,6 +15,39 @@
         "elements": [
           {
             "type": "rectangle",
+            "version": 565,
+            "versionNonce": 151768818,
+            "isDeleted": false,
+            "id": "Xg7fBMBJ5CSiqrJWcY5Og",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": 27.75381320700444,
+            "y": -170.18153918921064,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 736.4923735859911,
+            "height": 1390.3630783784213,
+            "seed": 311747433,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1761150801110,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "rectangle",
             "version": 793,
             "versionNonce": 393718151,
             "isDeleted": false,
@@ -3565,48 +3598,15 @@
             "originalText": "Header",
             "lineHeight": 1.2720458891013384,
             "baseline": 38
-          },
-          {
-            "type": "rectangle",
-            "version": 564,
-            "versionNonce": 942416807,
-            "isDeleted": false,
-            "id": "Xg7fBMBJ5CSiqrJWcY5Og",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 10,
-            "angle": 0,
-            "x": 27.75381320700444,
-            "y": -170.18153918921064,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 736.4923735859911,
-            "height": 1390.3630783784213,
-            "seed": 311747433,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1760980367376,
-            "link": null,
-            "locked": false
           }
         ],
         "appState": {
           "gridSize": null,
           "viewBackgroundColor": "#ffffff",
-          "scrollX": 0,
-          "scrollY": 0,
+          "scrollX": 7575.809523809508,
+          "scrollY": 3743.9999999999945,
           "zoom": {
-            "value": 1
+            "value": 0.10000000000000014
           }
         },
         "files": {
@@ -3615,6 +3615,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-20 17:11:42 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 17:12:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-20 17:11:42 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 17:12:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 16:33:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

@@ -1,3 +1,12 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .heading {
   margin-bottom: 0;
 }
@@ -6,29 +15,47 @@
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  display: flex;
   flex-direction: row;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  background-color: var(--neutral-base-black);
 }
 
 .textArea {
-  font-size: 20px;
-  line-height: 1.5;
   width: 100%;
-  height: 40%;
-  padding: 10px 20px;
-  margin: 0;
+  height: 100%;
   box-sizing: border-box;
-  color: white;
-  background-color: #55146a;
-  border: none;
-  resize: vertical;
+  gap: 12px;
+  background-color: var(--neutral-base-black);
+  color: var(--neutral-base-white);
   border-radius: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  font-size: 14px;
+  padding: 16px;
+}
+
+.buttonWide {
+  flex: 1;
 }
 
 .buttonRow {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 10px;
   gap: 10px;
+
+  @container (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 .navigationButton {
@@ -44,11 +71,36 @@
   display: flex;
   justify-content: center;
   position: relative;
+  border-left: 1px solid var(--borders-neutral-primary);
+}
 
-  img {
-    width: 100%;
+.background {
+  height: 107%;
+
+  .backgroundImage {
     height: 100%;
-    object-fit: contain;
+  }
+}
+
+.dancerSilhouetteBright {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 99.5%;
+  opacity: 1;
+  animation: fadein 5s;
+}
+
+.dancer {
+  position: absolute;
+  height: 110%;
+  top: -10%;
+  transition: opacity 0.2s ease;
+  opacity: 1;
+
+  &Hidden {
+    opacity: 0;
   }
 }
 
@@ -60,4 +112,23 @@
   justify-content: center;
   pointer-events: none;
   z-index: 1;
+}
+
+.markdown {
+  h1, h2, h3, h4 {
+    font-size: 28px;
+  }
+
+  p, li {
+    font-size: 16px;
+  }
+}
+
+.hiddenButton {
+  opacity: 0;
+  position: fixed;
+  left: -100%;
+  bottom: -100%;
+  width: 0;
+  height: 0;
 }

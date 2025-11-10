@@ -88,8 +88,8 @@ const customInputTypes = {
           name = JSON.parse(name);
         } catch {}
         if (name === GENERATED_DANCER) {
-          const {headUrl} = resolveDancerAssets({sourceTag: 'blockly'});
-          return [headUrl, option];
+          const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
+          return [urls.headUrl, option];
         }
         return [`/blockly/media/skins/dance/${name.toLowerCase()}.png`, option];
       });
@@ -102,6 +102,20 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return block.getFieldValue(arg.name);
+    },
+  },
+  generatedDancerImage: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldImage(urls.headUrl, 40, 40),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      return `"${GENERATED_DANCER}"`;
     },
   },
 };

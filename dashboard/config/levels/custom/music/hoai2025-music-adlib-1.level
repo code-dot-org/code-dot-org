@@ -14,10 +14,22 @@
         "template": "Please make a song with {sounds} sounds in order.",
         "options": {
           "sounds": [
-            {"id": "2", "text": "2"},
-            {"id": "3", "text": "3"},
-            {"id": "4", "text": "4"},
-            {"id": "5", "text": "5"}
+            {
+              "id": "2",
+              "text": "2"
+            },
+            {
+              "id": "3",
+              "text": "3"
+            },
+            {
+              "id": "4",
+              "text": "4"
+            },
+            {
+              "id": "5",
+              "text": "5"
+            }
           ]
         },
         "variantCount": 3
@@ -37,10 +49,10 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
-    "long_instructions": "### Use AI",
+    "long_instructions": "### Create a Mix\r\nModify the prompt to generate a new mix with AI.",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-08 04:53:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 04:54:30 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 19:24:18 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 19:27:31 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 19:27:59 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-08 04:53:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 04:54:30 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 19:24:18 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 19:27:31 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 19:27:59 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-25 20:10:21 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-25 20:12:53 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-25 21:49:55 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 08:29:15 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

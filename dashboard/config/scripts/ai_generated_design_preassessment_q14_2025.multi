@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q14_2025'
+
+question 'A local mental health organization is redesigning its website to make teens feel calm and supported. The designer chooses soft blue tones, clean layouts, and rounded shapes. What does this show about how the design connects to user needs?'
+
+wrong 'The design focuses only on what looks trendy online.'
+right 'The design uses color and style to match the emotions and needs of its audience.'
+wrong 'The design ignores the users and focuses on personal taste.'
+wrong 'The design improves the site\'s speed and security features.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 5, 7
+MARKDOWN

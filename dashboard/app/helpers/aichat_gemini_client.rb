@@ -19,16 +19,18 @@ class AichatGeminiClient < AichatAiClient
   private def get_usage_from_body(response_body)
     total_tokens = response_body.dig('usageMetadata', 'totalTokenCount')
     prompt_tokens = response_body.dig('usageMetadata', 'promptTokenCount')
+    thought_tokens = response_body.dig('usageMetadata', 'thoughtsTokenCount')
+    cached_prompt_tokens = response_body.dig('usageMetadata', 'cachedContentTokenCount')
+
     {
       'prompt_tokens' =>  prompt_tokens || 0,
+      'thought_tokens' => thought_tokens ||  0,
+      'cached_prompt_tokens' =>  cached_prompt_tokens || 0,
 
       # This calculation - (total tokens - prompt tokens) seems to be what the OpenAI compat API
       # returns for completion tokens, but metrics could be made more flexible based on what's
       # available in a given API.
-      'completion_tokens' => total_tokens &&  prompt_tokens ? total_tokens -  prompt_tokens : 0,
-
-      # Gemini doesn't seem to support so setting to -1 to indicate the value is not meaningful.
-      'cached_prompt_tokens' =>  -1
+      'completion_tokens' => total_tokens &&  prompt_tokens ? total_tokens -  prompt_tokens : 0
 
     }
   end

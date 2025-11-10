@@ -1,11 +1,39 @@
 import {AiTutorContext, MaybePromise} from '../types';
 
+const SOURCE_CODE_INTRO = "Here is the student's current code:";
+
+const HIDDEN_SOURCE_CODE_INTRO =
+  'Here is the hidden source code used to run this lesson. The student cannot view or modify this code so do not reference it in your response:';
+
+const READ_ONLY_SOURCE_CODE_INTRO =
+  'Here is the source code used to run this lesson. The student can view the code but cannot modify it:';
+
+const VALIDATION_CONTENTS_INTRO = 'Here is the validation code:';
+
+const VALIDATION_RESULTS_INTRO =
+  'Here are the validation test names along with their results, in JSON:';
+
+const VALIDATION_NOT_RUN = 'The student has not run test validation yet.';
+
+const INSTRUCTIONS_INTRO = 'Here are the instructions:';
+
+const DOCUMENTATION_INTRO = 'Here is the documentation:';
+
+const DOCUMENTATION_LOCATION_INTRO =
+  'Here is where the student can find the documentation:';
+
+const EXAMPLES_LOCATION_INTRO =
+  'Here is where the student can find example projects:';
+
 /*
  * Abstract base class used to provide lab specific context to AI Tutor.  Each lab will inherit from and
  * extend this class, but conversion to a system prompt string should be kept here for coordination and
  * consistency.
  */
 export abstract class AiTutorContextHelper<AiTutorParams extends object> {
+  protected documentationLocation: string = '';
+  protected examplesLocation: string = '';
+
   protected abstract getAiTutorContext(): MaybePromise<AiTutorContext>;
 
   protected abstract setAiTutorContext(params: AiTutorParams): void;
@@ -13,41 +41,40 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
   private async getHiddenContextString(): Promise<string> {
     const {
       sourceCode,
+      hiddenSourceCode,
+      readOnlySourceCode,
       validationContents,
       validationResults,
       longInstructions,
       documentation,
-      userSelection,
     } = await this.getAiTutorContext();
 
+    const validationNotRun = validationContents && !validationResults;
+
     const hiddenContextString = [
-      ...(userSelection
-        ? [
-            'The student is asking about this part of their current code:',
-            userSelection,
-          ]
-        : []),
-      "Here is the student's current code:",
-      sourceCode,
-      ...(validationContents
-        ? ['Here is the validation code:', `\`\`\`${validationContents}\`\`\``]
-        : []),
-      ...(validationResults
-        ? [
-            'Here are the validation test names along with their results, in JSON:',
-            validationResults,
-          ]
-        : []),
-      ...(longInstructions
-        ? ['Here are the instructions:', longInstructions]
-        : []),
-      ...(documentation
-        ? [
-            'Here is the documentation. (The student can view the documentation by clicking the book icon at the top of the workspace.):',
-            documentation,
-          ]
-        : []),
-    ].join('\n\n');
+      sourceCode ? `${SOURCE_CODE_INTRO} ${sourceCode}` : '',
+      hiddenSourceCode ? `${HIDDEN_SOURCE_CODE_INTRO} ${hiddenSourceCode}` : '',
+      readOnlySourceCode
+        ? `${READ_ONLY_SOURCE_CODE_INTRO} ${readOnlySourceCode}`
+        : '',
+      validationNotRun ? VALIDATION_NOT_RUN : '',
+      validationContents
+        ? `${VALIDATION_CONTENTS_INTRO} ${validationContents}`
+        : '',
+      validationResults
+        ? `${VALIDATION_RESULTS_INTRO} ${validationResults}`
+        : '',
+      longInstructions ? `${INSTRUCTIONS_INTRO} ${longInstructions}` : '',
+      documentation ? `${DOCUMENTATION_INTRO} ${documentation}` : '',
+      this.documentationLocation
+        ? `${DOCUMENTATION_LOCATION_INTRO} ${this.documentationLocation}`
+        : '',
+      this.examplesLocation
+        ? `${EXAMPLES_LOCATION_INTRO} ${this.examplesLocation}`
+        : '',
+    ]
+      .filter(Boolean)
+      .join('\n\n');
 
     // TODO: This log is a bit chatty, but useful while we're working on this feature.
     // remove once tutor context is more stable, or if it gets annoying.
@@ -55,7 +82,14 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
     return hiddenContextString;
   }
 
+  // Hidden context is additional context provided to AI tutor that is not
+  // visible to the student and is not stored as part of the chat history.
   getHiddenContextCallback() {
     return this.getHiddenContextString.bind(this);
+  }
+
+  protected codeBlock(str?: string): string {
+    if (!str) return '';
+    return `\`\`\`\n${str}\n\`\`\``;
   }
 }

@@ -2361,12 +2361,49 @@
   "gamelab_yLocationOf": {
     "text": "y coordinate of {SPRITE}"
   },
+  "GeneratedDancers_alternateMoves": {
+    "text": "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}",
+    "options": {
+      "GROUP": {
+        "s": "s",
+        "\"": "\""
+      },
+      "MOVE1": {
+        "MOVES.Roll": "Body Roll",
+        "MOVES.ClapHigh": "Clap High",
+        "MOVES.Dab": "Dab",
+        "MOVES.DoubleJam": "Double Down",
+        "MOVES.Drop": "Drop",
+        "MOVES.Floss": "Floss",
+        "MOVES.Fresh": "Fresh",
+        "MOVES.Clown": "Gangnam",
+        "MOVES.Kick": "Star",
+        "MOVES.ThisOrThat": "This or That",
+        "MOVES.Thriller": "Zombie",
+        "MOVES.Rest": "None"
+      },
+      "MOVE2": {
+        "MOVES.Roll": "Body Roll",
+        "MOVES.ClapHigh": "Clap High",
+        "MOVES.Dab": "Dab",
+        "MOVES.DoubleJam": "Double Down",
+        "MOVES.Drop": "Drop",
+        "MOVES.Floss": "Floss",
+        "MOVES.Fresh": "Fresh",
+        "MOVES.Clown": "Gangnam",
+        "MOVES.Kick": "Star",
+        "MOVES.ThisOrThat": "This or That",
+        "MOVES.Thriller": "Zombie",
+        "MOVES.Rest": "None"
+      }
+    }
+  },
   "GeneratedDancers_changeMoveEachLR": {
     "text": "{GROUP} do {MOVE} {DIR} forever",
     "options": {
       "GROUP": {
-        "\"": "\"",
-        "s": "s"
+        "s": "s",
+        "\"": "\""
       },
       "MOVE": {
         "\"next\"": "(Next)",
@@ -2409,17 +2446,14 @@
     }
   },
   "GeneratedDancers_makeAnonymousDanceSprite": {
-    "text": "make a new {COSTUME} at {LOCATION}",
+    "text": "make a new {DANCER} at {LOCATION}",
     "options": {
-      "COSTUME": {
-        "\"": "\""
-      },
       "LOCATION": {
+        "{x: 200, y: 200}": "center",
         "{x: 200, y: 100}": "top",
         "{x: 200, y: 300}": "bottom",
         "{x: 100, y: 200}": "left",
         "{x: 300, y: 200}": "right",
-        "{x: 200, y: 200}": "center",
         "{x: 100, y: 100}": "top left",
         "{x: 300, y: 100}": "top right",
         "{x: 100, y: 300}": "bottom left",
@@ -2492,6 +2526,50 @@
         "\"spiral\"": "spiral",
         "\"infinity\"": "infinite line",
         "\"random\"": "random"
+      }
+    }
+  },
+  "GeneratedDancers_setBackgroundEffectWithPalette": {
+    "text": "set background effect\n{PALETTE} {EFFECT}",
+    "options": {
+      "EFFECT": {
+        "\"none\"": "None",
+        "\"rand\"": "(Random)",
+        "\"circles\"": "Circles",
+        "\"quads\"": "Angles",
+        "\"color_cycle\"": "Colors",
+        "\"diamonds\"": "Diamonds",
+        "\"disco_ball\"": "Disco Ball",
+        "\"fireworks\"": "Fireworks",
+        "\"flowers\"": "Flowers",
+        "\"growing_stars\"": "Growing Stars",
+        "\"higher_power\"": "Higher Power",
+        "\"swirl\"": "Hypno",
+        "\"kaleidoscope\"": "Kaleidoscope",
+        "\"lasers\"": "Laser Dance Floor",
+        "\"splatter\"": "Paint Splatter",
+        "\"rainbow\"": "Rainbow",
+        "\"ripples_random\"": "Random Ripples",
+        "\"ripples\"": "Ripples",
+        "\"snowflakes\"": "Snow",
+        "\"squiggles\"": "Squiggles",
+        "\"galaxy\"": "Space",
+        "\"sparkles\"": "Sparkles",
+        "\"spiral\"": "Spiral",
+        "\"disco\"": "Squares",
+        "\"stars\"": "Stars",
+        "\"music_wave\"": "Waves"
+      },
+      "PALETTE": {
+        "\"rave\"": "Black and White",
+        "\"cool\"": "Cool",
+        "\"electronic\"": "Electronic",
+        "\"iceCream\"": "Ice Cream",
+        "\"default\"": "Light",
+        "\"neon\"": "Neon",
+        "\"tropical\"": "Tropical",
+        "\"vintage\"": "Vintage",
+        "\"warm\"": "Warm"
       }
     }
   },

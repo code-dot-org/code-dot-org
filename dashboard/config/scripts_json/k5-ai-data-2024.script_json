@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
+      "hideable_lessons": true,
       "is_migrated": true,
       "show_calendar": true,
       "supported_locales": [
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-14 16:18:31 UTC",
+    "serialized_at": "2025-10-22 18:57:19 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

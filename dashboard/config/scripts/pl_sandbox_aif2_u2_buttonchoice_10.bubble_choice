@@ -1,0 +1,9 @@
+name 'pl-sandbox-aif2-U2-buttonChoice-10'
+display_name 'Mini-App Build'
+description  ' #### Want more practice? Choose one of the activities below and plan and build a tiny, polished app that responds to button clicks with clear UI changes.'
+
+sublevels
+level 'pl-sandbox-aif2-U2-buttonChoice-A'
+level 'pl-sandbox-aif2-U2-buttonChoice-B'
+level 'pl-sandbox-aif2-U2-buttonChoice-C'
+level 'pl-sandbox-aif2-U2-buttonChoice-D'

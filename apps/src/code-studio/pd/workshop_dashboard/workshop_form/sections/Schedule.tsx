@@ -1,4 +1,4 @@
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {Dispatch, FC, memo, useCallback} from 'react';
 
 import {
@@ -34,7 +34,9 @@ export const Schedule: FC<ScheduleProps> = ({
   );
   return (
     <section>
-      <Heading2 visualAppearance="heading-sm">Schedule</Heading2>
+      <Typography component="h2" variant="h5" gutterBottom>
+        Schedule
+      </Typography>
       <TimeZoneEditor
         timeZone={timeZone}
         handleChange={handleChange}

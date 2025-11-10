@@ -9,6 +9,7 @@ import {
 import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
 
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -104,6 +105,13 @@ export const useFileRowOptions = (
           if (folderPath !== '/') {
             fullFilename = (folderPath + '/' + file.name).substring(1); // remove leading slash
           }
+          dispatch(
+            sendAnalytics(EVENTS.AI_TUTOR_FILE_ADDED_TO_CONTEXT, {
+              file: fullFilename,
+              codingLanguage:
+                fullFilename?.split('.').pop()?.toLowerCase() || '',
+            })
+          );
           dispatch(
             addItemToUserAddedSelectionContext({
               displayName: fullFilename,

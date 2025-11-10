@@ -6,8 +6,8 @@ import {collectBlockIdsRecursively} from '@cdo/apps/music/blockly/blockUtils';
 import {MAX_FUNCTION_BOUNDS_RENDER_DEPTH} from '@cdo/apps/music/constants';
 import {FunctionEvents} from '@cdo/apps/music/player/interfaces/FunctionEvents';
 import {PlaybackEvent} from '@cdo/apps/music/player/interfaces/PlaybackEvent';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {useTimelineContext} from './TimelineContext';
 import TimelineElement from './TimelineElement';
 
 const timelineLayoutParam = AppConfig.getValue('timeline-layout');
@@ -199,9 +199,8 @@ const TimelineSimple2Events: React.FunctionComponent<
   getEventHeight,
   getEventVerticalSpace,
 }) => {
-  const soundEventsOriginal = useAppSelector(
-    state => state.music.playbackEvents
-  );
+  const {playbackEvents: soundEventsOriginal, orderedFunctions} =
+    useTimelineContext();
 
   // soundEventsOriginal has sounds sorted primarily by the immediate function
   // that generates them, and next by when they are played.
@@ -215,10 +214,6 @@ const TimelineSimple2Events: React.FunctionComponent<
   } else if (timelineLayoutParam !== 'old') {
     soundEvents = getOrderedByWhenSoundEvents(soundEventsOriginal);
   }
-
-  const orderedFunctions = useAppSelector(
-    state => state.music.orderedFunctions
-  );
 
   // Generate a list of unique sounds, with uniqueness being a combination of
   // the function name and the sound ID.

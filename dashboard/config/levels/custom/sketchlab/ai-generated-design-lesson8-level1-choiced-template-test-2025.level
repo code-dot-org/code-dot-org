@@ -659,42 +659,44 @@
             ]
           },
           {
-            "id": "ioYNCAhh_MVe_q1tQXRdZ",
             "type": "text",
-            "x": 393.2372695868297,
-            "y": 133.7818424036783,
-            "width": 237.08604232124654,
-            "height": 26.902343749999993,
-            "angle": 0,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
+            "version": 343,
+            "versionNonce": 601565258,
+            "isDeleted": false,
+            "id": "ioYNCAhh_MVe_q1tQXRdZ",
             "fillStyle": "solid",
             "strokeWidth": 2,
             "strokeStyle": "solid",
             "roughness": 1,
             "opacity": 100,
+            "angle": 0,
+            "x": 435.0107070868297,
+            "y": 137.5357486536783,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 237.05198669433594,
+            "height": 26.90234374999999,
+            "seed": 1586728091,
             "groupIds": [
 
             ],
             "frameId": null,
             "roundness": null,
-            "seed": 1586728091,
-            "version": 287,
-            "versionNonce": 609182331,
-            "isDeleted": false,
-            "boundElements": null,
-            "updated": 1760745232817,
+            "boundElements": [
+
+            ],
+            "updated": 1761240218448,
             "link": null,
             "locked": false,
-            "text": "Eco Challenge Tracker",
             "fontSize": 23.39334239130434,
             "fontFamily": 2,
+            "text": "Eco Challenge Tracker",
             "textAlign": "left",
             "verticalAlign": "top",
-            "baseline": 21.000000000000004,
             "containerId": null,
             "originalText": "Eco Challenge Tracker",
-            "lineHeight": 1.15
+            "lineHeight": 1.15,
+            "baseline": 21
           }
         ],
         "appState": {
@@ -1378,6 +1380,6 @@
     "thumbnail_url": "https://images.code.org/9227eb12e610901c8b0680af1a5c7795-Pasted Graphic 13.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-17T23:49:20.613+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level1-choiced-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level1-choiced-test-2025\"},{\"changed_at\":\"2025-10-17 23:49:48 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-17 23:53:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-17T23:49:20.613+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level1-choiced-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level1-choiced-test-2025\"},{\"changed_at\":\"2025-10-17 23:49:48 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-17 23:53:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-23 17:16:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 17:23:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

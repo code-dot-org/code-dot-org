@@ -35,7 +35,7 @@
         "key": "Generate_dancer_more_details-1af42de1-d2bc-4653-9e86-16d56ff2ceb3"
       },
       {
-        "text": "AI doesn’t think or feel - it makes mathematical guesses about the next word.",
+        "text": "AI doesn’t think or feel. It makes mathematical guesses about the next word.",
         "imageUrl": "",
         "key": "Generate_dancer_more_details-90264270-422b-4ad6-86cd-c9c12253b4a6"
       },
@@ -47,6 +47,6 @@
     ],
     "name_suffix": "_7"
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-20T22:10:17.931+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_panel\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_panel\"},{\"changed_at\":\"2025-10-20 23:08:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 23:09:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 23:14:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-20T22:10:17.931+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_panel\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_panel\"},{\"changed_at\":\"2025-10-20 23:08:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 23:09:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 23:14:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-21 16:47:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

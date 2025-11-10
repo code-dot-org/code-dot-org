@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q5_2025'
+
+question 'A start-up that sells eco-friendly clothing wants its website to feel natural and trustworthy. The designer uses soft green tones, lots of white space, and clean, modern fonts. What design choices are these choices supporting?'
+
+wrong 'Showing off the designer\'s favorite color palette'
+wrong 'Making the site load faster on mobile devices'
+wrong 'Adding complexity to make the brand seem high-tech'
+right 'Expressing the company\'s brand identity and values'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 4, 5, 6
+MARKDOWN

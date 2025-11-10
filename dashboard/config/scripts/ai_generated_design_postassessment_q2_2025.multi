@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q2_2025'
+
+question 'A designer creates a news website where all the text appears in one long block with no headings, spacing, or color contrast. Readers say it\'s tiring to read and hard to find information. How could the designer best fix this problem?'
+
+wrong 'Use CSS to delete sections of the text to make the page shorter.'
+right 'Use HTML to add headings and structure, and CSS to style and separate content visually.'
+wrong 'Use HTML to fill the page with images instead of text.'
+wrong 'Use CSS to make all the text the same size and color.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 1, 6
+MARKDOWN

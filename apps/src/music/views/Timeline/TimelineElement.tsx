@@ -1,14 +1,13 @@
 import classNames from 'classnames';
 import React from 'react';
-import {useDispatch} from 'react-redux';
 
 import {isChordEvent} from '@cdo/apps/music/player/interfaces/ChordEvent';
 import {isInstrumentEvent} from '@cdo/apps/music/player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '@cdo/apps/music/player/interfaces/PlaybackEvent';
 import {isSoundEvent} from '@cdo/apps/music/player/interfaces/SoundEvent';
-import {selectBlockId} from '@cdo/apps/music/redux/musicRedux';
 import SoundStyle from '@cdo/apps/music/utils/SoundStyle';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {useTimelineContext} from './TimelineContext';
 
 import moduleStyles from './timeline.module.scss';
 
@@ -34,23 +33,18 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
   top,
   left,
 }) => {
-  const isPlaying = useAppSelector(state => state.music.isPlaying);
-  const selectedBlockId = useAppSelector(state => state.music.selectedBlockId);
-  const dispatch = useDispatch();
+  const {isPlaying, selectedBlockId, currentPlayheadPosition, selectBlockId} =
+    useTimelineContext();
   const isInsideRandom = eventData.skipContext?.insideRandom;
   const isSkipSound = isPlaying && eventData.skipContext?.skipSound;
   const isThinBorder = height <= 4;
 
-  const isCurrentlyPlaying = useAppSelector(state => {
-    const currentPlayheadPosition = state.music.currentPlayheadPosition;
-    return (
-      isPlaying &&
-      !isSkipSound &&
-      currentPlayheadPosition !== 0 &&
-      currentPlayheadPosition >= eventData.when &&
-      currentPlayheadPosition < eventData.when + eventData.length
-    );
-  });
+  const isCurrentlyPlaying =
+    isPlaying &&
+    !isSkipSound &&
+    currentPlayheadPosition !== 0 &&
+    currentPlayheadPosition >= eventData.when &&
+    currentPlayheadPosition < eventData.when + eventData.length;
 
   const isBlockSelected = eventData.blockId === selectedBlockId;
 
@@ -90,7 +84,7 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
         left,
       }}
       onClick={event => {
-        dispatch(selectBlockId(eventData.blockId));
+        selectBlockId?.(eventData.blockId);
         event.stopPropagation();
       }}
     >

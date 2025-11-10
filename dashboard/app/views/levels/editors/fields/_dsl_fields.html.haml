@@ -44,9 +44,38 @@
   - if @level.is_a?(BubbleChoice)
     %h4 Tip: Lab2
     %p
-      Add <code>uses_lab2</code> to use the Lab2 implementation of this level.
+      By default, new levels use the more modern "Lab2" implementation of this level.
+      You can add/remove the <code>uses_lab2</code> property above to control
+      whether the level uses the modern or legacy versions of bubble choice levels.
       The Lab2 implementation can host non-Lab2 sublevels, but only transitions
       between Lab2 levels will be done without a page reload.
+    %h4 Tip: Letters in bubbles
+    %p
+      If you are using the Lab2 version of bubble choice levels (described above),
+      you can add/remove the <code>hide_letters_lab2</code> property above
+      to control whether letters appear in the bubbles for each sublevel.
+      The <code>hide_letters_lab2</code> has no effect on a legacy bubble choice level.
+    %h4 Tip: Navigation Type
+    %p
+      The Lab2 version of bubble choice levels (described above) allows you to specify where a student should go after completing a sublevel.
+      Use <code>navigation_type 'type_name'</code> to set the navigation type. Currently the following types are available:
+    %ul
+      %li
+        <code>parent</code> (default): Clicking Continue on a sublevel returns to the parent bubble choice level. This is the default behavior if no navigation_type is set.
+      %li
+        <code>next_level</code>: Clicking Continue/Finish on a sublevel advances to the next in the level progression, or finishes the lesson if there are no more levels.
+    %h4 Tip: Custom Modes
+    %p
+      With the Lab2 version of bubble choice levels (described above), certain custom modes
+      are available which present alternate versions of the bubble choice level. Use
+      <code>custom_mode 'mode_name'</code> to enable. Currently this includes:
+    %ul
+      %li
+        <code>music_dance_ai</code>: A mode for Hour of AI 2025 which shows a custom
+        tabbed experience where students can switch between a Dancer Creation, Music Creation,
+        and Dance Creation level. At least one of these level types must be included as a sublevel
+        for this mode to be enabled. If some sublevels are missing, the corresponding tabs will display
+        as disabled and locked.
 
   - if @level.is_a?(Multi)
     %h4 Tip: Allow Multiple Attempts

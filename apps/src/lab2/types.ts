@@ -229,7 +229,7 @@ export interface LevelProperties {
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   finishUrl?: string;
-  finishDialog?: string;
+  finishDialog?: ShareDialogId;
   offerBrowserTts?: boolean;
   useSecondaryFinishButton?: boolean;
   // Python Lab/Codebridge specific properties
@@ -240,6 +240,7 @@ export interface LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
+  aiTutorMode?: string;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
@@ -275,6 +276,7 @@ export interface BubbleChoiceLevelData {
   displayName: string;
   description: string;
   sublevels: BubbleChoiceSublevel[];
+  hideLetters: boolean;
 }
 
 // Bubble Choice specific property
@@ -284,6 +286,7 @@ export interface BubbleChoiceSublevel {
   level_id: string;
   thumbnail_url: string;
   url: string;
+  position: number;
 }
 
 // Addtional fields for videos that are linked as references in the
@@ -348,7 +351,8 @@ export type ProjectType =
   | 'playlab'
   | 'playlab_k1'
   | 'sports'
-  | 'basketball';
+  | 'basketball'
+  | 'music_dance_ai';
 
 export type AppName = keyof typeof lab2EntryPoints;
 
@@ -438,4 +442,7 @@ export interface LabProps<
 > {
   levelProperties: T;
   initialSources?: U;
+  channel?: Channel;
 }
+
+export type ShareDialogId = 'hoc2024' | 'hoai2025';

@@ -3,11 +3,6 @@ import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Dialog from '@code-dot-org/component-library/dialog';
 import TextField from '@code-dot-org/component-library/textField';
-import Typography, {
-  BodyTwoText,
-  OverlineThreeText,
-  OverlineTwoText,
-} from '@code-dot-org/component-library/typography';
 import {
   Table,
   TableBody,
@@ -19,6 +14,7 @@ import {
   Card,
   Box,
   Divider,
+  Typography,
 } from '@mui/material';
 import classNames from 'classnames';
 import React, {
@@ -40,7 +36,6 @@ import {useWorkshopContext} from '../WorkshopLayout';
 
 import styles from './WorkshopEnrollments.module.scss';
 import commonStyles from '../WorkshopLayout.module.scss';
-
 const pluralize = (length: number): string => (length > 1 ? 's' : '');
 
 const columns: {key: keyof EnrollmentData; label: string}[] = [
@@ -284,9 +279,9 @@ export const WorkshopEnrollments: FC = () => {
               orientation="vertical"
               className={styles.actionDivider}
             />
-            <OverlineTwoText noMargin className={styles.numSelectedText}>
+            <Typography className={styles.numSelectedText} variant="overline2">
               {selected.length} selected
-            </OverlineTwoText>
+            </Typography>
             <Button
               ariaLabel={`Move selected enrollment${s}`}
               onClick={() => setActiveDialog('move')}
@@ -333,7 +328,7 @@ export const WorkshopEnrollments: FC = () => {
                 </TableCell>
                 {columns.map(({label, key}) => (
                   <TableCell key={key}>
-                    <OverlineThreeText noMargin>{label}</OverlineThreeText>
+                    <Typography variant="overline3">{label}</Typography>
                   </TableCell>
                 ))}
               </TableRow>
@@ -362,9 +357,9 @@ export const WorkshopEnrollments: FC = () => {
                       </TableCell>
                       {columns.map(({key}) => (
                         <TableCell key={key}>
-                          <BodyTwoText noMargin>
+                          <Typography variant="body2">
                             {renderCellValue(row, key)}
-                          </BodyTwoText>
+                          </Typography>
                         </TableCell>
                       ))}
                     </TableRow>
@@ -384,7 +379,6 @@ export const WorkshopEnrollments: FC = () => {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Card>
-
       {activeDialog === 'remove' && (
         <Dialog
           id="remove-enrollments-dialog"
@@ -395,7 +389,7 @@ export const WorkshopEnrollments: FC = () => {
           title={`Remove Enrollment${s}?`}
           customContent={
             <Box id="dsco-dialog-description">
-              <Typography semanticTag="div" visualAppearance="body-two">
+              <Typography component="div" variant="body2" gutterBottom>
                 {`Are you sure you want to remove the enrollment${s} for:`}
                 <ul className={styles.enrollmentList}>
                   {selectedNotAttended.map(
@@ -414,11 +408,7 @@ export const WorkshopEnrollments: FC = () => {
                     type="warning"
                     text={`The following users have already attended a session and cannot be removed.`}
                   />
-                  <Typography
-                    noMargin
-                    semanticTag="div"
-                    visualAppearance="body-two"
-                  >
+                  <Typography component="div" variant="body2">
                     <ul className={styles.enrollmentList}>
                       {selectedAlreadyAttended.map(
                         ({id, givenName, familyName, email}) => (
@@ -459,7 +449,6 @@ export const WorkshopEnrollments: FC = () => {
           }}
         />
       )}
-
       {activeDialog === 'move' && (
         <Dialog
           id="move-enrollments-dialog"
@@ -470,7 +459,7 @@ export const WorkshopEnrollments: FC = () => {
           title={`Move Enrollment${s}?`}
           customContent={
             <Box id="dsco-dialog-description">
-              <Typography semanticTag="div" visualAppearance="body-two">
+              <Typography component="div" variant="body2" gutterBottom>
                 {`You are moving the following enrollment${s} for:`}
                 <ul className={styles.enrollmentList}>
                   {selected.map(({id, givenName, familyName, email}) => (

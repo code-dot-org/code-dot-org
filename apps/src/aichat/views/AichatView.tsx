@@ -346,11 +346,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                       !viewAsUserId &&
                       renderModelCustomizationHeaderRight(() => {
                         onClickStartOver();
-                        dispatch(
-                          sendAnalytics(EVENTS.AICHAT_START_OVER, {
-                            levelPath: window.location.pathname,
-                          })
-                        );
+                        dispatch(sendAnalytics(EVENTS.AICHAT_START_OVER, {}));
                       })
                     }
                   >

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-20 23:26:03 UTC",
+    "serialized_at": "2025-10-24 03:12:19 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -109,7 +109,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_6_intro_7"
+          "HoAI_pilot_7_intro"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -117,7 +117,7 @@
         "activity_section.key": "d19b9066-8577-46e5-9075-d5b6a1233297"
       },
       "level_keys": [
-        "HoAI_pilot_6_intro_7"
+        "HoAI_pilot_7_intro"
       ]
     },
     {
@@ -131,7 +131,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "hoai-pilot-6-first-dance_7"
+          "hoai-pilot-7-first-dance"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -139,7 +139,7 @@
         "activity_section.key": "d19b9066-8577-46e5-9075-d5b6a1233297"
       },
       "level_keys": [
-        "hoai-pilot-6-first-dance_7"
+        "hoai-pilot-7-first-dance"
       ]
     },
     {
@@ -153,7 +153,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_6_dancer1_7"
+          "HoAI_pilot_7_dancer1"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -161,7 +161,7 @@
         "activity_section.key": "d19b9066-8577-46e5-9075-d5b6a1233297"
       },
       "level_keys": [
-        "HoAI_pilot_6_dancer1_7"
+        "HoAI_pilot_7_dancer1"
       ]
     },
     {
@@ -175,7 +175,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_6_dancer2_7"
+          "HoAI_pilot_7_dancer2"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -183,7 +183,7 @@
         "activity_section.key": "d19b9066-8577-46e5-9075-d5b6a1233297"
       },
       "level_keys": [
-        "HoAI_pilot_6_dancer2_7"
+        "HoAI_pilot_7_dancer2"
       ]
     },
     {
@@ -192,6 +192,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_pilot_6_dancer_info_7"
+        ],
         "progression": "Generate a dancer"
       },
       "bonus": false,
@@ -219,7 +222,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_6_dancer3_7"
+          "HoAI_pilot_7_dancer3"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -227,7 +230,7 @@
         "activity_section.key": "d19b9066-8577-46e5-9075-d5b6a1233297"
       },
       "level_keys": [
-        "HoAI_pilot_6_dancer3_7"
+        "HoAI_pilot_7_dancer3"
       ]
     },
     {
@@ -241,7 +244,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "hoai-pilot-6-second-dance_7"
+          "hoai-pilot-7-second-dance"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -249,7 +252,7 @@
         "activity_section.key": "d19b9066-8577-46e5-9075-d5b6a1233297"
       },
       "level_keys": [
-        "hoai-pilot-6-second-dance_7"
+        "hoai-pilot-7-second-dance"
       ]
     },
     {
@@ -263,7 +266,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_6_music_code_sound_7"
+          "HoAI_pilot_7_music_code_sound"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -271,7 +274,7 @@
         "activity_section.key": "cc5345f5-cff8-4c25-bf51-a791623782e9"
       },
       "level_keys": [
-        "HoAI_pilot_6_music_code_sound_7"
+        "HoAI_pilot_7_music_code_sound"
       ]
     },
     {
@@ -285,7 +288,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "hoai-pilot-6-play-together_7"
+          "hoai-pilot-7-play-together"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -293,7 +296,7 @@
         "activity_section.key": "cc5345f5-cff8-4c25-bf51-a791623782e9"
       },
       "level_keys": [
-        "hoai-pilot-6-play-together_7"
+        "hoai-pilot-7-play-together"
       ]
     },
     {
@@ -307,7 +310,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_6_music_gen_tog_7"
+          "HoAI_pilot_7_music_gen_tog"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -315,7 +318,7 @@
         "activity_section.key": "cc5345f5-cff8-4c25-bf51-a791623782e9"
       },
       "level_keys": [
-        "HoAI_pilot_6_music_gen_tog_7"
+        "HoAI_pilot_7_music_gen_tog"
       ]
     },
     {
@@ -329,7 +332,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_6_music_panel_7"
+          "HoAI_pilot_7_music_panel"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -337,7 +340,7 @@
         "activity_section.key": "cc5345f5-cff8-4c25-bf51-a791623782e9"
       },
       "level_keys": [
-        "HoAI_pilot_6_music_panel_7"
+        "HoAI_pilot_7_music_panel"
       ]
     },
     {
@@ -351,7 +354,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_6_music_gen_song_7"
+          "HoAI_pilot_7_music_gen_song"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -359,7 +362,7 @@
         "activity_section.key": "cc5345f5-cff8-4c25-bf51-a791623782e9"
       },
       "level_keys": [
-        "HoAI_pilot_6_music_gen_song_7"
+        "HoAI_pilot_7_music_gen_song"
       ]
     },
     {
@@ -373,7 +376,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_pilot_6_choice_7"
+          "HoAI_pilot_7_choice"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -381,16 +384,16 @@
         "activity_section.key": "3127b32f-887a-49bc-a745-6afd5a4134a2"
       },
       "level_keys": [
-        "HoAI_pilot_6_choice_7"
+        "HoAI_pilot_7_choice"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_6_intro_7",
+        "level.key": "HoAI_pilot_7_intro",
         "script_level.level_keys": [
-          "HoAI_pilot_6_intro_7"
+          "HoAI_pilot_7_intro"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -400,9 +403,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "hoai-pilot-6-first-dance_7",
+        "level.key": "hoai-pilot-7-first-dance",
         "script_level.level_keys": [
-          "hoai-pilot-6-first-dance_7"
+          "hoai-pilot-7-first-dance"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -412,9 +415,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_6_dancer1_7",
+        "level.key": "HoAI_pilot_7_dancer1",
         "script_level.level_keys": [
-          "HoAI_pilot_6_dancer1_7"
+          "HoAI_pilot_7_dancer1"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -424,9 +427,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_6_dancer2_7",
+        "level.key": "HoAI_pilot_7_dancer2",
         "script_level.level_keys": [
-          "HoAI_pilot_6_dancer2_7"
+          "HoAI_pilot_7_dancer2"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -448,9 +451,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_6_dancer3_7",
+        "level.key": "HoAI_pilot_7_dancer3",
         "script_level.level_keys": [
-          "HoAI_pilot_6_dancer3_7"
+          "HoAI_pilot_7_dancer3"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -460,9 +463,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "hoai-pilot-6-second-dance_7",
+        "level.key": "hoai-pilot-7-second-dance",
         "script_level.level_keys": [
-          "hoai-pilot-6-second-dance_7"
+          "hoai-pilot-7-second-dance"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -472,9 +475,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_6_music_code_sound_7",
+        "level.key": "HoAI_pilot_7_music_code_sound",
         "script_level.level_keys": [
-          "HoAI_pilot_6_music_code_sound_7"
+          "HoAI_pilot_7_music_code_sound"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -484,9 +487,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "hoai-pilot-6-play-together_7",
+        "level.key": "hoai-pilot-7-play-together",
         "script_level.level_keys": [
-          "hoai-pilot-6-play-together_7"
+          "hoai-pilot-7-play-together"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -496,9 +499,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_6_music_gen_tog_7",
+        "level.key": "HoAI_pilot_7_music_gen_tog",
         "script_level.level_keys": [
-          "HoAI_pilot_6_music_gen_tog_7"
+          "HoAI_pilot_7_music_gen_tog"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -508,9 +511,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_6_music_panel_7",
+        "level.key": "HoAI_pilot_7_music_panel",
         "script_level.level_keys": [
-          "HoAI_pilot_6_music_panel_7"
+          "HoAI_pilot_7_music_panel"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -520,9 +523,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_6_music_gen_song_7",
+        "level.key": "HoAI_pilot_7_music_gen_song",
         "script_level.level_keys": [
-          "HoAI_pilot_6_music_gen_song_7"
+          "HoAI_pilot_7_music_gen_song"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
@@ -532,9 +535,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_pilot_6_choice_7",
+        "level.key": "HoAI_pilot_7_choice",
         "script_level.level_keys": [
-          "HoAI_pilot_6_choice_7"
+          "HoAI_pilot_7_choice"
         ],
         "lesson.key": "Pilot 6",
         "lesson_group.key": "",
