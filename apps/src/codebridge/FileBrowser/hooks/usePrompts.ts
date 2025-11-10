@@ -48,7 +48,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
  */
 export const usePrompts = () => {
   const {levelProperties} = useCodebridgeContext();
-  const {appName, validationFile} = levelProperties;
+  const {validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const dialogControl = useDialogControl();
   const dispatch = useAppDispatch();
@@ -57,8 +57,8 @@ export const usePrompts = () => {
   );
 
   const sendLab2AnalyticsEvent = useCallback(
-    (event: string) => globalSendLab2AnalyticsEvent(event, appName),
-    [appName]
+    (event: string) => globalSendLab2AnalyticsEvent(event),
+    []
   );
 
   const cleanupValidationFile = useCallback(

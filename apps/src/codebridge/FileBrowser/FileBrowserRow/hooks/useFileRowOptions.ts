@@ -30,7 +30,7 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
  */
 const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
   fileDownload(file.contents, file.name);
-  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE);
 };
 
 /**

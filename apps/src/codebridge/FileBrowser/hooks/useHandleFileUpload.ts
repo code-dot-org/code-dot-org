@@ -18,7 +18,7 @@ export const useHandleFileUpload = (
   projectFiles: Record<string, ProjectFile>
 ) => {
   const {levelProperties} = useCodebridgeContext();
-  const {appName, validationFile} = levelProperties;
+  const {validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const dispatch = useAppDispatch();
 
@@ -46,7 +46,7 @@ export const useHandleFileUpload = (
           type: DialogType.GenericAlert,
           title: validationError,
         });
-        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, appName, {
+        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, {
           fileName,
           error: validationError,
         });
@@ -60,17 +60,10 @@ export const useHandleFileUpload = (
       } else {
         dispatch(createNewFileThunk({fileName, folderId, contents}));
       }
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, {
         fileName,
       });
     },
-    [
-      projectFiles,
-      isStartMode,
-      validationFile,
-      dispatch,
-      appName,
-      dialogControl,
-    ]
+    [projectFiles, isStartMode, validationFile, dispatch, dialogControl]
   );
 };
