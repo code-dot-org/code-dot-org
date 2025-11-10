@@ -82,7 +82,13 @@ echo "Wrote settings and secrets from env vars into locals.yml."
 
 set -x
 
-bundle exec rake install
+# Skip rake install in ui pipeline. This is safe because we've already run rake install
+# the the cache-staging-build pipeline, and the ui pipeline re-uses that cache. We can't
+# skip rake install in the unit pipeline because cache-staging-build does not yet generate
+# correct DB contents for the unit pipeline.
+if [ "$CI_JOB" != "ui" ]; then
+  bundle exec rake install
+end
 
 if [ "$CI_JOB" = "unit" ]; then
   # Catch any zeitwerk code loader errors before starting any rails environment,
