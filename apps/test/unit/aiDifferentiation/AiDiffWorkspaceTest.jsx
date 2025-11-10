@@ -2,12 +2,37 @@ import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import {
+  aichatReducer,
+  setThreadId,
+  setThreadTitle,
+  setThreadType,
+  setThreadMessages,
+  setInitialChatMessage,
+} from '@cdo/apps/aichat/redux/slice';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {
+  EXAMPLE_PROMPT,
+  EXPLAIN_CONCEPT_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  EXIT_TICKET_PROMPT,
+  MINI_LESSON_PROMPT,
+} from '@cdo/apps/aiDifferentiation/AiDiffPredefinedPrompts';
 import AiDiffWorkspace from '@cdo/apps/aiDifferentiation/AiDiffWorkspace';
+import {
+  DEFAULT_INITIAL_CHAT_MESSAGE,
+  THREAD_TYPES,
+} from '@cdo/apps/aiDifferentiation/constants';
 import {
   chatThreadMessagesValidator,
   chatThreadValidator,
 } from '@cdo/apps/aiDifferentiation/types';
-import {getStore, registerReducers} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -30,8 +55,15 @@ jest.mock('@react-pdf/renderer', () => {
   };
 });
 
+const DEFAULT_SUGGESTED_PROMPTS = [
+  EXAMPLE_PROMPT,
+  EXPLAIN_CONCEPT_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  MINI_LESSON_PROMPT,
+  EXIT_TICKET_PROMPT,
+];
+
 const defaultProps = {
-  open: true,
   context: {
     type: AiDiffContext.LESSON,
     lessonId: 2,
@@ -109,15 +141,16 @@ const defaultChatResponse = {
 
 describe('AiDiffWorkspace', () => {
   let fetchJsonStub;
-  let fetchStub;
+  let postStub;
 
   beforeEach(() => {
+    stubRedux();
     window.HTMLElement.prototype.scrollIntoView = () => {};
     sessionStorage.clear();
 
     fetchJsonStub = jest.fn();
     HttpClient.fetchJson = fetchJsonStub;
-    fetchStub = jest.spyOn(HttpClient, 'post').mockResolvedValue({
+    postStub = jest.spyOn(HttpClient, 'post').mockResolvedValue({
       json: jest.fn(() => defaultChatResponse),
     });
   });
@@ -125,14 +158,16 @@ describe('AiDiffWorkspace', () => {
   afterEach(() => {
     sessionStorage.clear();
     jest.restoreAllMocks();
+    restoreRedux();
   });
 
-  function renderDefault(propOverrides = {}) {
+  function renderDefault(overrideThreadId = 0) {
     const store = getStore();
 
     registerReducers({
       currentUser,
       teacherSections,
+      aichat: aichatReducer,
     });
     store.dispatch(
       setInitialData({
@@ -141,10 +176,25 @@ describe('AiDiffWorkspace', () => {
       })
     );
     store.dispatch(setSections([]));
+    store.dispatch(setSections([]));
+    store.dispatch(setThreadId(overrideThreadId));
+    store.dispatch(setThreadTitle('Sample title'));
+    store.dispatch(setThreadType(THREAD_TYPES.default));
+    store.dispatch(setInitialChatMessage(DEFAULT_INITIAL_CHAT_MESSAGE));
+    store.dispatch(
+      setThreadMessages([
+        {
+          role: Role.ASSISTANT,
+          chatMessageText: DEFAULT_INITIAL_CHAT_MESSAGE,
+          status: Status.OK,
+        },
+        DEFAULT_SUGGESTED_PROMPTS,
+      ])
+    );
 
     render(
       <Provider store={store}>
-        <AiDiffWorkspace {...defaultProps} {...propOverrides} />
+        <AiDiffWorkspace {...defaultProps} />
       </Provider>
     );
   }
@@ -292,7 +342,7 @@ describe('AiDiffWorkspace', () => {
     fireEvent.click(submit_btn);
 
     await waitFor(() => {
-      expect(fetchStub).toHaveBeenCalledWith(
+      expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads/2/chat_completion',
         JSON.stringify({
           inputText: 'new message on old thread',
@@ -395,7 +445,7 @@ describe('AiDiffWorkspace', () => {
     fireEvent.click(submit_btn);
 
     await waitFor(() => {
-      expect(fetchStub).toHaveBeenCalledWith(
+      expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads',
         JSON.stringify({
           inputText: 'starting new thread',
@@ -466,7 +516,7 @@ describe('AiDiffWorkspace', () => {
     fireEvent.click(submit_btn);
 
     await waitFor(() => {
-      expect(fetchStub).toHaveBeenCalledWith(
+      expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads',
         JSON.stringify({
           inputText: 'starting new thread',
@@ -516,7 +566,7 @@ describe('AiDiffWorkspace', () => {
     expect(screen.queryByLabelText(i18n.aiChatMessageUser())).toBeNull();
 
     fetchJsonStub.mockClear();
-    fetchStub.mockClear();
+    postStub.mockClear();
 
     const submit_btn2 = screen.getByRole('button', {name: i18n.submit()});
     const textbox2 = screen.getByRole('textbox');
@@ -524,7 +574,7 @@ describe('AiDiffWorkspace', () => {
     fireEvent.click(submit_btn2);
 
     await waitFor(() => {
-      expect(fetchStub).toHaveBeenCalledWith(
+      expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads',
         JSON.stringify({
           inputText: 'starting 2nd thread',

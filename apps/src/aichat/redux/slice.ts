@@ -429,6 +429,8 @@ const getUpdateMessageLocation = (removeId: number, state: AichatState) => {
 
 registerReducers({aichat: aichatSlice.reducer});
 
+export const aichatReducer = aichatSlice.reducer;
+
 export const {
   setChatIsOpen,
   addEventToChatEventsCurrent,
