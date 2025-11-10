@@ -308,7 +308,8 @@ class HttpCache
             # For static-asset paths, don't forward any cookies or additional headers.
             path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/* /media),
             headers: [],
-            cookies: 'none'
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
           {
             path: '/v2/*',
