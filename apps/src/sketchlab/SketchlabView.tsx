@@ -10,7 +10,9 @@ import {
   BinaryFiles,
   ExcalidrawImperativeAPI,
   ExcalidrawInitialDataState,
+  DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import cloneDeep from 'lodash/cloneDeep';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
@@ -19,7 +21,11 @@ import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  LevelProperties,
+  ExcalidrawSourceWithExternalFiles,
+} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -32,7 +38,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
-import {uploadExternalFiles} from './utils';
+import uploadExternalFiles from './utils/uploadExternalFiles';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -63,6 +69,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const filesBeingUploadedRef = useRef<Set<string>>(new Set());
+  const downloadedFileDataRef = useRef<
+    Record<ExcalidrawElement['id'], DataURL>
+  >({});
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
 
@@ -194,6 +203,49 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  // UseMemo on result so that we do not refetch unnecessarily?
+  const convertToExcalidrawSources = async (
+    sourcesWithExternalFiles: ExcalidrawSourceWithExternalFiles
+  ) => {
+    const excalidrawInitialState = cloneDeep(sourcesWithExternalFiles);
+    Object.values(excalidrawInitialState?.files || {}).forEach(
+      file => delete file.dataURL
+    );
+
+    if (excalidrawInitialState.externalFiles) {
+      const imageDownloadPromises = Object.values(
+        excalidrawInitialState.externalFiles
+      ).map(async file => {
+        if (file.url) {
+          if (!Object.keys(downloadedFileDataRef.current).includes(file.id)) {
+            await imageUrlToBase64(file.url)
+              .then(base64 => {
+                // handle empty files?
+                if (excalidrawInitialState.files) {
+                  excalidrawInitialState.files[file.id].dataURL =
+                    base64 as DataURL;
+                  downloadedFileDataRef.current[file.id] = base64 as DataURL;
+                }
+              })
+              .catch(error => {
+                // what to do on error?
+                console.error(error);
+              });
+          } else {
+            if (excalidrawInitialState.files) {
+              const base64 = downloadedFileDataRef.current[file.id];
+              excalidrawInitialState.files[file.id].dataURL = base64;
+            }
+          }
+        }
+      });
+      await Promise.allSettled(imageDownloadPromises);
+    }
+
+    delete excalidrawInitialState.externalFiles;
+    return excalidrawInitialState as ExcalidrawInitialDataState;
+  };
+
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <SketchlabTourSteps />
@@ -231,7 +283,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           }
         >
           <Excalidraw
-            initialData={currentSources.source as ExcalidrawInitialDataState}
+            initialData={convertToExcalidrawSources(currentSources.source)}
             onChange={debouncedSerializeAndSaveWorkspace}
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
