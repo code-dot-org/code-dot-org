@@ -90,11 +90,12 @@ if [ "$CI_JOB" != "ui" ]; then
   bundle exec rake install
 end
 
+# Catch any zeitwerk code loader errors before starting any rails environment,
+# in order to ensure that we give a clear error message for any zeitwerk issues
+# that would block application load. Only do this in unit pipeline, since it
+# runs faster than the ui pipeline, and running in just one pipeline is sufficient
+# to make sure the developer sees a useful error message.
 if [ "$CI_JOB" = "unit" ]; then
-  # Catch any zeitwerk code loader errors before starting any rails environment,
-  # in order to ensure that we give a clear error message for any zeitwerk issues
-  # that would block application load. Only do this in unit pipeline, since it
-  # runs faster than the ui pipeline.
   bundle exec rake lint:zeitwerk
 end
 
