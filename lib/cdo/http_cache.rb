@@ -179,7 +179,8 @@ class HttpCache
           {
             path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /fonts/*),
             headers: [],
-            cookies: 'none'
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
           # Dashboard-based API paths in Pegasus are session-specific, allowlist all cookies.
           {
@@ -308,8 +309,7 @@ class HttpCache
             # For static-asset paths, don't forward any cookies or additional headers.
             path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/* /media),
             headers: [],
-            cookies: 'none',
-            include_marketing_router_lambda: true,
+            cookies: 'none'
           },
           {
             path: '/v2/*',
