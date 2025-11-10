@@ -1,0 +1,38 @@
+name 'pl_sandbox_aif_2_U2-event-response-6_pilot-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Event - State - Response
+
+####  Now that you've explored how interactive features feel as a user, let’s consider about how they work behind the scenes in code. 
+
+<br>
+
+<img src="https://images.code.org/917f3d8daa6b66a5a7eedf298da49e85-image-1761849785790.png" alt="icon of hand pressing a button" width="150px" style="border-radius:10px; float:left; margin: 0 20px 10px 0px;">
+
+#### Every interactive moment on a webpage follows a simple pattern:
+
+
+<ul>
+  <li style="font-size: 14pt;"><strong>Event:</strong> Something the user does.</li>
+  <li style="font-size: 14pt;"><strong>State:</strong> The app’s current setup or information it’s tracking.</li>
+  <li style="font-size: 14pt;"><strong>Response:</strong> What the app does because of the event.</li>
+</ul>
+<br>
+<blockquote style="border-left: 4px solid #ccc; padding-left: 10px; margin-left: 0;">
+<p><em><b>Example:</b></em> When you tap the button (<strong>event</strong>), the app knows the button is “on” (<strong>state</strong>), and the color changes to show it’s active (<strong>response</strong>).</p>
+</blockquote>
+
+## Chain of Events 
+
+#### This sequence represents a simple cause-and-effect chain: **Event → State → Response**. 
+
+#### It illustrates how user actions trigger changes within a program and how those changes produce visible responses thus, forming the core logic behind interactivity in web apps.
+
+
+
+## What's Next?
+
+#### Let's check out how these interactive features look in code!
+MARKDOWN

@@ -18,6 +18,10 @@
     ],
     "name_suffix": "_4"
   },
+<<<<<<< HEAD
+  "audit_log": "[{\"changed_at\":\"2025-11-06T07:48:43.523+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-panels-code-generation\\\"\"],\"cloned_from\":\"mix-move-ai-panels-code-generation\"},{\"changed_at\":\"2025-11-06 07:48:48 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:52:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-07 23:17:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+=======
   "audit_log": "[{\"changed_at\":\"2025-11-06T07:48:43.523+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-panels-code-generation\\\"\"],\"cloned_from\":\"mix-move-ai-panels-code-generation\"},{\"changed_at\":\"2025-11-06 07:48:48 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:52:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-08 00:06:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-08 00:07:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-08 03:43:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-08 04:04:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-08 04:09:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+>>>>>>> origin/staging
 }]]></config>
 </Panels>
