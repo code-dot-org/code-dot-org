@@ -100,10 +100,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     (adlibsValue: AdlibsType) => {
       const initial: AdlibChoices = {};
       if (adlibsValue) {
-        const raw = localStorage.getItem(GENERATED_DANCER_STORAGE_KEY);
-        const lastDancer = raw
-          ? (JSON.parse(raw) as GeneratedDancerMetadata)
-          : null;
+        const lastChoices = currentSources.generatedDancer?.choices;
 
         Object.keys(adlibsValue[adlibOption]?.options || []).forEach(
           (key, index) => {
@@ -112,10 +109,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             if (
               options
                 .map(option => option.id)
-                .includes(lastDancer?.choices[index] || '')
+                .includes(lastChoices?.[index] || '')
             ) {
               // Use a value from the last saved dancer.
-              initial[key] = lastDancer?.choices[index] || '';
+              initial[key] = lastChoices?.[index] || '';
             } else {
               // Select a random value.
               initial[key] = sample(options)?.id || '';
@@ -125,7 +122,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       }
       return initial;
     },
-    [adlibOption]
+    [adlibOption, currentSources.generatedDancer?.choices]
   );
 
   useEffect(() => {
@@ -159,13 +156,18 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
       setAiGenerateState('none');
       setAdlibs(adlibsValue);
-      setAdlibChoices(getInitialChoices(adlibsValue));
       setPromptText('');
       variantHistory.current = [];
     };
 
     fetchAdlib();
   }, [adlibs, aiGenerateState, getInitialChoices]);
+
+  useEffect(() => {
+    if (adlibs && currentSources) {
+      setAdlibChoices(getInitialChoices(adlibs));
+    }
+  }, [adlibs, currentSources, getInitialChoices]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('loading');
