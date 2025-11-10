@@ -1,7 +1,86 @@
+PERSONAS = {
+  INNOVATOR: "Name: The Innovator
+Tagline: Your classroom is where wild ideas come to life
+
+Superpowers:
+  -Educational Experimenter: You're always trying new tools, languages, or project formats to enhance learning
+  -Creative Catalyst: You encourage experimental thinking and creative solutions in your students
+  -Trendsetter: Other teachers ask YOU what's new and exciting in CS education
+
+Ways AI Can Help:
+  -AI expands your toolkit with new project extensions and resources, keeping your experiments flowing.
+  -AI sparks imaginative prompts and remix ideas to fuel student creativity.
+  -AI keeps you ahead by surfacing what's new in CS education.",
+  WHISPERER: "Name: The Code Whisperer
+Tagline: You have an uncanny ability to debug student thinking
+
+Superpowers:
+  -Logic Detective: You can pinpoint exactly where student reasoning goes astray
+  -Master of Guiding Questions: You ask the perfect questions that lead students to their own discoveries
+  -Problem-Solving Guru: Students seek you out when they're truly stuck and need expert guidance
+
+Ways AI Can Help:
+  -AI analyzes student work to uncover where thinking goes off track
+  -AI generates Socratic-style prompts aligned to a student's specific struggle
+  -Using our chat with Student Code Feature - AI provides targeted hints to keep students moving without giving away answers",
+  BUILDER: "Name: The Bridge Builder
+Tagline: You connect CS to everything students care about
+
+Superpowers:
+  -Master of Real-World Connections: You seamlessly integrate CS with art, music, social justice, and sports
+  -Eye-Opening Educator: Students leave your class saying, \"I never knew coding could do that!\"
+  -Relevance Wizard: You make abstract concepts meaningful by connecting them to student interests
+
+Ways AI Can Help:
+  -AI pulls in examples from art, sports, or current events.
+  -AI suggests engaging demos that make students say, \"Whoa, coding can do that?\"
+  -AI translates CS ideas into contexts that match your students' passions.",
+  STORYTELLER: "Name: The Storyteller
+Tagline: You make algorithms feel like adventures
+
+Superpowers:
+  -Narrative Master: You use stories, analogies, and themes to make complex concepts accessible
+  -Memory Maker: Students remember your lessons through the vivid stories you tell
+  -Abstract Translator: You make abstract concepts tangible and memorable through storytelling
+
+Ways AI Can Help:
+  -AI helps you build analogies and classroom \"plots\" that turn coding into adventure.
+  -AI generates sticky metaphors and hooks that help lessons last.
+  -AI provides playful mini-stories that make the abstract tangible.",
+  ARCHITECT: "Name: The Community Architect
+Tagline: You build collaborative coders, not just code
+
+Superpowers:
+  -Collaboration Champion: You focus on teamwork, code reviews, and peer learning experiences
+  -Inclusion Expert: You create inclusive spaces where every student contributes and belongs
+  -Team Builder: Your classroom feels more like a supportive dev team than a traditional class
+
+Ways AI Can Help:
+  -AI designs role-based activities that mirror real-world developer teamwork.
+  -AI tailors strategies to help quiet students contribute and belong.
+  -AI helps set up prompts for code reviews, daily developer check ins and group structures that build a supportive culture.",
+  LEARNER: "Name: The Lead Learner
+Tagline: You learn alongside your students, turning every challenge into a shared adventure.
+
+Superpowers:
+  -Co-Learner: You're comfortable not having all the answers, showing students that discovery, exploration, and even mistakes are part of the learning journey.
+  -Curiosity Driver: You spark experimentation and model lifelong learning by exploring new tools and ideas alongside your students.
+  -Growth Mindset Modeler: You build a classroom culture of teamwork and inclusion, where every student feels they belong.
+
+Ways AI Can Help:
+  -AI models \"thinking out loud\" alongside you, normalizing exploration.
+  -AI fuels curiosity with prompts that invite tinkering and exploration.
+  -AI designs role-based activities that mirror real-world dev teamwork."
+}
+
 module AiSystemPrompts::LessonSummariesSystemPromptHelper
   def self.get_system_prompt(lesson_id)
     lesson_plan = get_lesson_materials(lesson_id)
-    prompt = "Use the following lesson plan to generate your summary:
+    personalization = ""
+    if current_user
+      personalization = get_personalization(current_user.id)
+    end
+    prompt = personalization + "Use the following lesson plan to generate your summary:
 
 Lesson Name: #{lesson_plan[:name]}
 Lesson Overview: #{lesson_plan[:overview]}
@@ -20,6 +99,50 @@ lesson_beats: an ordered list of the main parts of the lesson, including activit
 misconceptions: an unordered list including 2 - 3 misconceptions students might have about the material being covered,
 tips: additional strategies or ideas to help with teaching the lesson}"
     prompt
+  end
+
+  def self.get_personalization(user_id)
+    profile = TeachingProfileData.find_by(user_id: user_id)
+    unless profile
+      return nil
+    end
+    personalization_string = ""
+    if profile.individual_data["yearsTeaching"]
+      personalization_string << "\nThe teacher has #{profile.individual_data["yearsTeaching"]} years of experience in the classroom."
+    end
+    if profile.individual_data["selectedConfidence"]
+      personalization_string << "\nThey rate their confidence with computer science concepts at #{profile.individual_data["selectedConfidence"]}, with 10 being extremely confident, and 1 being not confident at all."
+    end
+    if profile.individual_data["selectedGoals"]
+      personalization_string << "\nThey listed the following as their primary teaching goals:\n  -#{profile.individual_data["selectedGoals"].join("\n  -")}"
+    end
+    if profile.individual_data["selectedSupports"]
+      personalization_string << "\nThey requested the following types of support from the assistant:\n  -#{profile.individual_data["selectedSupports"].join("\n  -")}"
+    end
+    if profile.individual_data["challenge"]
+      personalization_string << "\nThey stated that their biggest challenge is: #{profile.individual_data["challenge"]}"
+    end
+    if profile.individual_data["classroomVision"]
+      personalization_string << "\nTheir vision for their classroom is: #{profile.individual_data["classroomVision"]}"
+    end
+    if profile.individual_data["matchedPersona"]
+      persona = case profile.individual_data["matchedPersona"]
+                when "The Innovator"
+                  PERSONAS[:INNOVATOR]
+                when "The Code Whisperer"
+                  PERSONAS[:WHISPERER]
+                when "The Bridge Builder"
+                  PERSONAS[:BUILDER]
+                when "The Storyteller"
+                  PERSONAS[:STORYTELLER]
+                when "The Community Architect"
+                  PERSONAS[:ARCHITECT]
+                when "The Lead Learner"
+                  PERSONAS[:LEARNER]
+                end
+      personalization_string << "\nThey were matched with the following teaching persona as part of a personalization quiz:\n#{persona}\n"
+    end
+    personalization_string
   end
 
   def self.get_lesson_materials(lesson_id)
