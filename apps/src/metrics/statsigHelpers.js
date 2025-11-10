@@ -16,7 +16,10 @@ const COOKIE_OPTIONS = {
 const ONETRUST_ALLOWED_CATEGORIES = ['C0002'];
 
 export function getUserID() {
+  console.log('getUserID called');
   const user_id_element = document.querySelector('script[data-user-id]');
+
+  console.log('user_id_element:', user_id_element.dataset.userId);
   return user_id_element ? user_id_element.dataset.userId : null;
 }
 
