@@ -16,6 +16,7 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import localization from '@cdo/apps/localization';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
@@ -35,6 +36,7 @@ import getAchievements from './achievements';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import AuthoredHints from './authoredHints';
 import * as blockUtils from './block_utils';
+import * as BlocklyUtils from './blockly/utils';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import {assets as assetsApi} from './clientApi';
 import * as assets from './code-studio/assets';
@@ -530,6 +532,9 @@ StudioApp.prototype.init = function (config) {
     this.resizeVisualization(e.detail);
   });
 
+  // Ensure we also resize any of the application panels when the locale changes
+  localization.on('change', this.onResize.bind(this));
+
   this.reset(true);
 
   // Add display of blocks used.
@@ -537,6 +542,12 @@ StudioApp.prototype.init = function (config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
+    // Hook the blockly environment into the localization engine
+    if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
+      localization.on('change', info => {
+        BlocklyUtils.updateLocale(info.rtl);
+      });
+    }
     Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
       utils.showUnusedBlockQtip(e.target);
     });
