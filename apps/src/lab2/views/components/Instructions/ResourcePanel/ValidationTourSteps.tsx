@@ -25,6 +25,8 @@ if (urlParams.get('noIntrojs') === 'true') {
   trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
 }
 
+const VALIDATION_FLOW_NAME = 'Resource Panel Validation';
+
 interface ValidationTourStepsProps {
   hasValidationConditions: boolean;
   validationSettings: ValidationSettings | undefined;
@@ -261,7 +263,7 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
       enabled={validationTourEnabled}
       onStart={() => {
         sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, appName, {
-          flowName: 'Resource Panel Validation Tour',
+          flowName: VALIDATION_FLOW_NAME,
           levelPath,
         });
       }}
@@ -271,13 +273,13 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
         setValidationTourEnabled(false);
         trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
         sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, appName, {
-          flowName: 'Resource Panel Validation Tour',
+          flowName: VALIDATION_FLOW_NAME,
           levelPath,
         });
       }}
       onComplete={() => {
         sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, appName, {
-          flowName: 'Resource Panel Validation Tour',
+          flowName: VALIDATION_FLOW_NAME,
           levelPath,
         });
       }}

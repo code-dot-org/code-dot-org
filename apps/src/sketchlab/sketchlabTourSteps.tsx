@@ -19,6 +19,8 @@ if (urlParams.get('noIntrojs') === 'true') {
   trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
 }
 
+const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding';
+
 const OnboardingTourSteps: React.FC<{appName: string}> = ({appName}) => {
   const sketchlabOnboardingTourSeen = tryGetLocalStorage(
     SKETCHLAB_ONBOARDING_TOUR_SEEN,
@@ -199,7 +201,7 @@ const OnboardingTourSteps: React.FC<{appName: string}> = ({appName}) => {
       enabled={isToolbarReady && sketchlabOnboardingTourSeen !== 'yes'}
       onStart={() => {
         sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, appName, {
-          flowName: 'SketchLab Onboarding',
+          flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
           levelPath,
         });
       }}
@@ -207,14 +209,14 @@ const OnboardingTourSteps: React.FC<{appName: string}> = ({appName}) => {
       steps={STEPS}
       onExit={() => {
         sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, appName, {
-          flowName: 'SketchLab Onboarding',
+          flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
           levelPath,
         });
         trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
       }}
       onComplete={() => {
         sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, appName, {
-          flowName: 'SketchLab Onboarding',
+          flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
           levelPath,
         });
       }}

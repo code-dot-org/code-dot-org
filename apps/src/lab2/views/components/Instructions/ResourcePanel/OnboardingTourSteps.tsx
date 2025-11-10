@@ -18,6 +18,8 @@ if (urlParams.get('noIntrojs') === 'true') {
   trySetLocalStorage(RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN, 'yes');
 }
 
+const RESOURCE_PANEL_ONBOARDING_FLOW_NAME = 'Resource Panel Onboarding';
+
 // Note that this introjs flow includes a step that highlights the navigation button which is always visible
 // at the bottom of the resource panel (whether it's enabled or not).
 // Some labs do not always show the navigation button so this tour is not appropriate for all labs.
@@ -33,7 +35,7 @@ const OnboardingTourSteps: React.FC<{appName: string}> = ({appName}) => {
       enabled={resourcePanelPinnedButtonOnboardingTourSeen !== 'yes'}
       onStart={() => {
         sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, appName, {
-          flowName: 'Resource Panel Onboarding',
+          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_NAME,
           levelPath,
         });
       }}
@@ -41,7 +43,7 @@ const OnboardingTourSteps: React.FC<{appName: string}> = ({appName}) => {
       steps={STEPS}
       onExit={() => {
         sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, appName, {
-          flowName: 'Resource Panel Onboarding',
+          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_NAME,
           levelPath,
         });
         trySetLocalStorage(
@@ -51,7 +53,7 @@ const OnboardingTourSteps: React.FC<{appName: string}> = ({appName}) => {
       }}
       onComplete={() => {
         sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, appName, {
-          flowName: 'Resource Panel Onboarding',
+          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_NAME,
           levelPath,
         });
       }}
