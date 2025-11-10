@@ -361,16 +361,6 @@ class HttpCache
             },
           ],
         },
-        pegasus: {
-          behaviors: [
-            {
-              path: "#{HocLegacy::API_ROOT_PATH}/*",
-              proxy: 'dashboard',
-              headers: ALLOWLISTED_HEADERS,
-              cookies: allowlisted_cookies,
-            },
-          ],
-        }
       )
     end
 
