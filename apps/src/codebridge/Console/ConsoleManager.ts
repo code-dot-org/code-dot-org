@@ -1,13 +1,14 @@
 import {FitAddon} from '@xterm/addon-fit';
 import {Terminal} from '@xterm/xterm';
 
-const ESC = '\\x1B';
+const ESC = '\x1B';
+const BEL = '\x07';
 const ANSI_ESCAPE_SEQUENCE_REGEX = new RegExp(
-  `${ESC}\\[[0-9;?]*[ -/]*[@-~]`,
+  `${ESC}\[[0-9;?]*[ -/]*[@-~]`,
   'g'
 );
 const OSC_ESCAPE_SEQUENCE_REGEX = new RegExp(
-  `${ESC}\\][0-9;?]*(?:[\\s\\S]*?)(?:\\u0007|${ESC}\\\\)`,
+  `${ESC}\][0-9;?]*(?:[\s\S]*?)(?:${BEL}|${ESC}\\)`,
   'g'
 );
 
