@@ -1,0 +1,47 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-07T18:35:11.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Local Volunteer Finder</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <h1>Find Volunteer Opportunities</h1>\n\n  <label>Cause\n    <select id=\"cause-filter\">\n      <option value=\"\">Any</option>\n      <option>Animals</option>\n      <option>Environment</option>\n      <option>Community</option>\n      <option>Education</option>\n    </select>\n  </label>\n\n  <label>Max Miles from School\n    <input id=\"miles-filter\" type=\"number\" value=\"10\" min=\"1\">\n  </label>\n\n  <button id=\"apply-button\">Apply Filters</button>\n\n  <hr>\n\n  <h2>Results</h2>\n  \n  <p id=\"active-filters\"></p>\n  \n  <p id=\"count\"></p>\n\n  <ul id=\"list\"></ul>\n\n  <p id=\"empty-message\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "process.md",
+          "language": "md",
+          "contents": "Add your changes to process.md",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// The dataset of volunteer opportunities\nconst opportunities = [\n  { \n    name: \"City Animal Shelter\", \n    location: \"Downtown\", \n    cause: \"Animals\", \n    miles: 3, \n    hours: \"Weekends\" \n  },\n  { \n    name: \"Park Cleanup Crew\", \n    location: \"Greenwood Park\", \n    cause: \"Environment\", \n    miles: 5, \n    hours: \"Sat AM\" \n  },\n  { \n    name: \"Community Food Bank\", \n    location: \"West Side\", \n    cause: \"Community\", \n    miles: 8, \n    hours: \"Weekdays\" \n  },\n  { \n    name: \"Reading Partners\", \n    location: \"Local Library\", \n    cause: \"Education\", \n    miles: 2, \n    hours: \"Tues/Thurs PM\" \n  },\n  { \n    name: \"RiverKeepers\", \n    location: \"Riverfront\", \n    cause: \"Environment\", \n    miles: 12, \n    hours: \"Weekends\" \n  }\n];\n\n// Get references to DOM elements\nconst causeEl = document.getElementById(\"cause-filter\");\nconst milesEl = document.getElementById(\"miles-filter\");\nconst applyBtn = document.getElementById(\"apply-button\");\n\nconst listEl = document.getElementById(\"list\");\nconst activeEl = document.getElementById(\"active-filters\");\nconst countEl = document.getElementById(\"count\");\nconst emptyEl = document.getElementById(\"empty-message\");\n\n// --- This is the function we need to build ---\n\nconst applyFilters = () => {\n  // 1. Get the current filter values\n  const filters = {\n    cause: causeEl.value,\n    miles: Number(milesEl.value)\n  };\n\n  // 2. Use .filter() to create a new array\n  const filtered = opportunities.filter((op) => {\n    \n    // TODO: Add the filter logic here\n    // Hint: You need to check two things:\n    // 1. Does the cause match? (or is the filter set to \"Any\"?)\n    // 2. Is the opportunity's miles LESS THAN OR EQUAL TO filters.miles?\n    // Both must be true to return `true`.\n\n    return true; // This placeholder keeps all items right now\n  });\n\n  // 3. TODO: Render the `filtered` array to the page\n  // We will build a 'render' function for this.\n  // For now, let's just log it to see if our filter works.\n  console.log(\"Filtered Results:\", filtered);\n\n  // TODO: Update the text for countEl, activeEl, and emptyEl\n  // TODO: Build the HTML for listEl\n};\n\n// --- Event Listener ---\n// Run the applyFilters function when the button is clicked\napplyBtn.addEventListener(\"click\", applyFilters);",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-07 19:28:21 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Weblab2>

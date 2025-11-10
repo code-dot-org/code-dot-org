@@ -1,0 +1,44 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-11-07T22:34:24.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">AI image models like DALL·E or DeepAI create pictures from text prompts using a process called <strong>diffusion</strong> — a method of adding and then removing noise from images.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/32416f886842edee771083ccb1c8a2e9-Screenshot 2025-10-22 at 4.44.51 PM.png",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">Imagine taking a photo and adding digital “static” until it’s unrecognizable. <br><br> The AI learns to reverse that process: starting from noise and reconstructing the image. <br><br>During training, it studies millions of labeled images, practicing how to add noise, then remove it to rebuild what was there.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/cff7e2f15e82b473c94600fcd5a97499-Screenshot 2025-10-22 at 4.35.04 PM.png",
+        "key": "HoAI_pilot_5_dancer_info_-pl-26827f86-0270-42eb-8cc8-075cc731eae3",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">Over time, the model learns how noise patterns relate to shapes, colors, and objects.<br><br>For example, that “four legs and fur” often mean “dog,” while “straight edges and wheels” suggest “car.”\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/da963e38ab8097b100d04375926af483-Screenshot 2025-10-22 at 4.43.45 PM.png",
+        "key": "HoAI_pilot_5_dancer_info_-pl-bfb56243-e440-4e17-92d5-3c7d4cfdd275"
+      },
+      {
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">When you type a prompt like “a dog wearing sunglasses,” the model starts with pure static and gradually removes noise, guided by what it has learned about dogs, sunglasses, and how those patterns fit together.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/2ef97220041d5bffb9b771e1a82f29a2-Screenshot 2025-10-22 at 4.36.53 PM.png",
+        "key": "HoAI_pilot_5_dancer_info_-pl-61bcf404-e424-4df1-a858-bffad1b4d484"
+      },
+      {
+        "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">What seems like magic is really math — probabilities and patterns at scale. <br><br>The AI doesn’t “see” or “understand” a dog; it has learned that certain pixel patterns are labeled “dog.”<br><br> Each run may vary slightly — changing the fur color, pose, or sunglasses shape — which makes results feel creative and new.\n  </p>\n</div>",
+        "imageUrl": "https://images.code.org/bcf39c233525349a30dee8f6b0752db2-Screenshot 2025-10-22 at 4.35.16 PM.png",
+        "key": "HoAI_pilot_5_dancer_info_-pl-a0504e03-ae45-4898-83db-b0c7a3b5e7af"
+      }
+    ],
+    "name_suffix": "_-pl"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-07T22:34:24.744+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_dancer_info_-pl\\\"\"],\"cloned_from\":\"HoAI_pilot_5_dancer_info_-pl\"}]"
+}]]></config>
+</Panels>

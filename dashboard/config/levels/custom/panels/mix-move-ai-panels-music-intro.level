@@ -14,40 +14,10 @@
         "imageUrl": "https://images.code.org/f0ebed8947c9806ed9ac03e953acc487-panel-transition-proof.png",
         "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1",
         "layout": "text-bottom-center"
-      },
-      {
-        "text": "**AI went through a training process**\n\nIn training, it read huge amounts of text, like books, computer programs, and articles from the internet.",
-        "imageUrl": "https://images.code.org/85951b59bbc4cc06c971712bf91da1d9-llms panel 2.gif",
-        "key": "Generate_dancer_more_details-0bf87b05-fdcb-4acc-b8d2-5455e69d6e87"
-      },
-      {
-        "text": "**AI learned from examples**\n\nAI noticed patterns in how words usually go together and learned to predict the next word.",
-        "imageUrl": "https://images.code.org/f07aac64ce1d0fcf2e1a3798b39a72bb-llm panel3.gif",
-        "key": "Generate_dancer_more_details-48f5d03d-6aff-4230-bbc0-75fbac278d9c"
-      },
-      {
-        "text": "**AI makes predictions**\n\nWhen you give AI some starting words, it predicts how to respond, one word after another.",
-        "imageUrl": "https://images.code.org/2df2eadd2ab8d72a58245b7c4454645f-llm panel 4.jpg",
-        "key": "Generate_dancer_more_details-f7defbff-6781-4fcd-ba98-bb4e03422fd5"
-      },
-      {
-        "text": "**AI generates something new**\n\nIn this way, it generates full sentences, whole conversations, and even Music Lab code!",
-        "imageUrl": "https://images.code.org/5f07dcd1ddde8a1aefe85b2dc448151d-llm panel 5b.jpg",
-        "key": "Generate_dancer_more_details-1af42de1-d2bc-4653-9e86-16d56ff2ceb3"
-      },
-      {
-        "text": "**AI isn’t magic…it’s math**\n\nRemember, AI doesn’t think or feel — it just uses math to make predictions based on its training data.",
-        "imageUrl": "",
-        "key": "Generate_dancer_more_details-90264270-422b-4ad6-86cd-c9c12253b4a6"
-      },
-      {
-        "text": "**You’re in charge**\n\nAlways check what AI wrote. You decide what to keep or change!",
-        "imageUrl": "",
-        "key": "mix-move-ai-panels-code-generation-82688fba-1792-4158-b4fb-1bf0890f67d4"
       }
     ],
     "name_suffix": "_4"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-06T07:48:43.523+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-panels-code-generation\\\"\"],\"cloned_from\":\"mix-move-ai-panels-code-generation\"},{\"changed_at\":\"2025-11-06 07:48:48 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:52:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-06T07:48:43.523+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-panels-code-generation\\\"\"],\"cloned_from\":\"mix-move-ai-panels-code-generation\"},{\"changed_at\":\"2025-11-06 07:48:48 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-06 07:52:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-07 23:17:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Panels>
