@@ -26,7 +26,7 @@ namespace :build do
       RakeUtils.yarn_install
 
       ChatClient.log 'Building <b>apps</b>...'
-      npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
+      npm_target = get_npm_build_target
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
 
@@ -213,4 +213,17 @@ end
 
 def calculate_apps_commit_hash
   RakeUtils.git_folder_hash(*apps_build_trigger_paths)
+end
+
+def get_npm_build_target
+  if CDO.optimize_webpack_assets
+    # Skip clean step in CI to take advantage of cached build artifacts
+    if ENV['CI']
+      'build:dist'
+    else
+      'clean build:dist'
+    end
+  else
+    'build'
+  end
 end
