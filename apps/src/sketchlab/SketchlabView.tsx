@@ -105,13 +105,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       state: AppState,
       files: BinaryFiles
     ) => {
-      // TO DO: figure out how to update to support starter assets.
-      // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
-      // In start mode, we manage saving explicitly via the button in the header.
-      if (getIsStartMode()) {
-        return;
-      }
-
       if (saveSourcesTimeoutRef.current) {
         clearTimeout(saveSourcesTimeoutRef.current);
         saveSourcesTimeoutRef.current = null;
@@ -139,13 +132,18 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           },
         });
 
-        uploadExternalFiles(
-          currentSources.source,
-          serializedData,
-          filesBeingUploadedRef,
-          channelId,
-          updateSources
-        );
+        // TO DO: figure out how to update to support starter assets.
+        // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
+        // In start mode, we manage saving explicitly via the button in the header.
+        if (!getIsStartMode()) {
+          uploadExternalFiles(
+            currentSources.source,
+            serializedData,
+            filesBeingUploadedRef,
+            channelId,
+            updateSources
+          );
+        }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
     [updateSources, channelId, currentSources.source]
