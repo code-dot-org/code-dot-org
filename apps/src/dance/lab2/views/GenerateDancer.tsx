@@ -100,10 +100,28 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     (adlibsValue: AdlibsType) => {
       const initial: AdlibChoices = {};
       if (adlibsValue) {
-        Object.keys(adlibsValue[adlibOption]?.options || []).forEach(key => {
-          const options = adlibsValue[adlibOption].options[key];
-          initial[key] = sample(options)?.id || '';
-        });
+        const raw = localStorage.getItem(GENERATED_DANCER_STORAGE_KEY);
+        const lastDancer = raw
+          ? (JSON.parse(raw) as GeneratedDancerMetadata)
+          : null;
+
+        Object.keys(adlibsValue[adlibOption]?.options || []).forEach(
+          (key, index) => {
+            const options = adlibsValue[adlibOption].options[key];
+
+            if (
+              options
+                .map(option => option.id)
+                .includes(lastDancer?.choices[index] || '')
+            ) {
+              // Use a value from the last saved dancer.
+              initial[key] = lastDancer?.choices[index] || '';
+            } else {
+              // Select a random value.
+              initial[key] = sample(options)?.id || '';
+            }
+          }
+        );
       }
       return initial;
     },
