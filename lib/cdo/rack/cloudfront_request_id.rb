@@ -41,7 +41,7 @@ module Rack
       end
 
       # cdo.cloudfront_request_id: Stores CloudFront ID separately for direct access.
-      # Used by Rack::Request#cloudfront_request_id and Lograge.
+      # Used by Rack::Request#cloudfront_request_id.
       env[CDO_CF_REQUEST_ID] = cf_request_id if cf_request_id
 
       if defined?(RequestStore)
