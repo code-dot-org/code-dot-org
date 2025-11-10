@@ -100,7 +100,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     (adlibsValue: AdlibsType) => {
       const initial: AdlibChoices = {};
       if (adlibsValue) {
-        const lastChoices = currentSources.generatedDancer?.choices;
+        const lastChoices = [
+          ...(currentSources.generatedDancer?.choices || []),
+          ...(currentSources.generatedDancer?.choicesExtra || []),
+        ];
 
         Object.keys(adlibsValue[adlibOption]?.options || []).forEach(
           (key, index) => {
@@ -122,7 +125,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       }
       return initial;
     },
-    [adlibOption, currentSources.generatedDancer?.choices]
+    [adlibOption, currentSources.generatedDancer]
   );
 
   useEffect(() => {
