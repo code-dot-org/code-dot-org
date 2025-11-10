@@ -214,9 +214,17 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
   };
   extraScrollHeight?: number;
+  /** Maintains the original English forms of Msg.* strings */
   SourceMsg: {[key: string]: string};
+  /** Maintains the original English names of provided variables in flyouts, toolboxes, etc */
   SourceVariables: {[key: string]: string};
+  /** Keeps track of the original inputTypes passed in when predefined in level metadata */
   SourceCustomInputTypes: CustomInputTypes;
+  /**
+   * Keeps track of custom blocks provided into installCustomBlocks such that we have the
+   * original forms so that we can localize them when re-serializing the workspace on a
+   * locale change.
+   */
   SourceCustomBlocks: {
     blockDefinitionsByName: {
       [key: string]: BlockDefinition;
