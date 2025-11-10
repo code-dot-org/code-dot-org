@@ -315,12 +315,16 @@ const WEBPACK_BASE_CONFIG = {
         include: [...nodeModulesToTranspile, p('src'), p('test')],
         exclude: [p('src/lodash.js')],
         use: [
-          {
-            loader: 'thread-loader',
-            options: {
-              workers: APPS_BUILD_WORKERS,
-            },
-          },
+          ...(process.env.CI
+            ? [
+                {
+                  loader: 'thread-loader',
+                  options: {
+                    workers: APPS_BUILD_WORKERS,
+                  },
+                },
+              ]
+            : []),
           {
             loader: 'babel-loader',
             options: {
@@ -336,12 +340,16 @@ const WEBPACK_BASE_CONFIG = {
       {
         test: /\.tsx?$/,
         use: [
-          {
-            loader: 'thread-loader',
-            options: {
-              workers: APPS_BUILD_WORKERS,
-            },
-          },
+          ...(process.env.CI
+            ? [
+                {
+                  loader: 'thread-loader',
+                  options: {
+                    workers: APPS_BUILD_WORKERS,
+                  },
+                },
+              ]
+            : []),
           {
             loader: 'ts-loader',
             options: {
