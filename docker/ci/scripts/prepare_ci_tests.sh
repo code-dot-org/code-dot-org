@@ -83,8 +83,15 @@ echo "Wrote settings and secrets from env vars into locals.yml."
 set -x
 
 bundle exec rake install
-# catch any code loader errors before starting any rails environment
-bundle exec rake lint:zeitwerk
+
+if [ "$CI_JOB" = "unit" ]; then
+  # Catch any zeitwerk code loader errors before starting any rails environment,
+  # in order to ensure that we give a clear error message for any zeitwerk issues
+  # that would block application load. Only do this in unit pipeline, since it
+  # runs faster than the ui pipeline.
+  bundle exec rake lint:zeitwerk
+end
+
 bundle exec rake build
 
 bundle exec rake ci:seed_ui_test
