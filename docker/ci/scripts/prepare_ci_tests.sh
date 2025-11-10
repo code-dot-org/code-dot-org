@@ -39,7 +39,7 @@ else
   fi
 fi
 
-ulimit -n 4096
+ulimit -n 16000
 
 # Set up locals.yml.
 # TODO: move all of this into test.yml.erb
