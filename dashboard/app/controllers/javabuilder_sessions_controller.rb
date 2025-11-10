@@ -71,7 +71,13 @@ class JavabuilderSessionsController < ApplicationController
       javabuilder_upload_url = CDO.javabuilder_demo_upload_url
     end
 
-    response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload, javabuilder_upload_url)
+    response = JavalabFilesHelper.upload_project_files(
+      project_files,
+      request.host,
+      encoded_payload,
+      javabuilder_upload_url,
+      request_id: request.request_id
+    )
     if response
       return render(json: {token: encoded_payload, session_id: session_id, javabuilder_url: javabuilder_url}) if response.code == '200'
       return render(status: response.code, json: response.body)

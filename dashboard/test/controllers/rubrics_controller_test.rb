@@ -1,5 +1,7 @@
 require 'test_helper'
 
+require 'cdo/request_tracing'
+
 class RubricsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include SharedConstants
@@ -855,7 +857,16 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     AiRubricConfig.stubs(:ai_enabled?).returns(true)
-    EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
+    traceparent = '00-dddddddddddddddddddddddddddddd-eeeeeeeeeeeeeeee-01'
+    RequestTracing.stubs(:current_traceparent).returns(traceparent)
+    EvaluateRubricJob.expects(:perform_later).with(has_entries(
+                                                     user_id: @student.id,
+                                                     requester_id: @teacher.id,
+                                                     script_level_id: @script_level.id,
+                                                     request_id: kind_of(String),
+                                                     traceparent: traceparent
+    )
+).once
 
     post :ai_evaluation_status_for_user, params: {
       id: @rubric.id,
@@ -886,7 +897,16 @@ class RubricsControllerTest < ActionController::TestCase
     stub_project_source_data(new_channel_id)
 
     AiRubricConfig.stubs(:ai_enabled?).returns(true)
-    EvaluateRubricJob.expects(:perform_later).with(user_id: new_student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
+    traceparent = '00-1234567890abcdef1234567890abcdef-fedcba0987654321-01'
+    RequestTracing.stubs(:current_traceparent).returns(traceparent)
+    EvaluateRubricJob.expects(:perform_later).with(has_entries(
+                                                     user_id: new_student.id,
+                                                     requester_id: @teacher.id,
+                                                     script_level_id: @script_level.id,
+                                                     request_id: kind_of(String),
+                                                     traceparent: traceparent
+    )
+).once
 
     post :ai_evaluation_status_for_user, params: {
       id: @rubric.id,
@@ -1010,7 +1030,16 @@ class RubricsControllerTest < ActionController::TestCase
       sign_in @teacher
 
       AiRubricConfig.stubs(:ai_enabled?).returns(true)
-      EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
+      traceparent = '00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-1111111111111111-01'
+      RequestTracing.stubs(:current_traceparent).returns(traceparent)
+      EvaluateRubricJob.expects(:perform_later).with(has_entries(
+                                                       user_id: @student.id,
+                                                       requester_id: @teacher.id,
+                                                       script_level_id: @script_level.id,
+                                                       request_id: kind_of(String),
+                                                       traceparent: traceparent
+      )
+).once
 
       post :ai_evaluation_status_for_user, params: {
         id: @rubric.id,

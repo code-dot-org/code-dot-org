@@ -1,9 +1,14 @@
+require 'cdo/request_tracing'
+
 module JavalabFilesHelper
-  def self.upload_project_files(project_files, hostname, auth_token, upload_url)
+  def self.upload_project_files(project_files, hostname, auth_token, upload_url, request_id: nil)
     uri = URI.parse("#{upload_url}?Authorization=#{auth_token}")
     upload_request = Net::HTTP::Put.new(uri)
     upload_request['Origin'] = hostname
     upload_request['Content-Type'] = 'application/json'
+    upload_request['X-Request-Id'] = request_id if request_id.present?
+    traceparent = RequestTracing.current_traceparent
+    upload_request['traceparent'] = traceparent if traceparent.present?
     upload_request.body = project_files.to_json
 
     response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') do |http|

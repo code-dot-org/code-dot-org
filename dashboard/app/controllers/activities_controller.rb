@@ -2,6 +2,7 @@ require 'cdo/activity_constants'
 require 'cdo/share_filtering'
 require 'cdo/firehose'
 require 'cdo/web_purify'
+require 'cdo/request_tracing'
 require 'policies/ai'
 require 'metrics/events'
 
@@ -142,7 +143,13 @@ class ActivitiesController < ApplicationController
           event_name: 'TA Rubric Student AI Level Submitted',
           metadata: metadata,
         )
-        EvaluateRubricJob.perform_later(user_id: current_user.id, requester_id: current_user.id, script_level_id: @script_level.id)
+        EvaluateRubricJob.perform_later(
+          user_id: current_user.id,
+          requester_id: current_user.id,
+          script_level_id: @script_level.id,
+          request_id: request.request_id,
+          traceparent: RequestTracing.current_traceparent
+        )
       end
     end
 

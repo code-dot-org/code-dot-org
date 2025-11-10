@@ -1,6 +1,8 @@
 # Sending token usage to CloudWatch
 require 'cdo/aws/metrics'
+require 'cdo/request_tracing'
 require 'csv'
+require 'request_store'
 
 class EvaluateRubricJob < ApplicationJob
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
@@ -216,7 +218,27 @@ class EvaluateRubricJob < ApplicationJob
     AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'gateway-timeout', agent: agent)
   end
 
-  def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
+  def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil, request_id: nil, traceparent: nil)
+    request_id = request_id.presence
+    traceparent = traceparent.presence
+
+    original_request_id = defined?(RequestStore) ? RequestStore.store[:request_id] : nil
+    original_traceparent = RequestTracing.current_traceparent
+
+    if defined?(RequestStore)
+      if request_id.present?
+        RequestStore.store[:request_id] = request_id
+      else
+        request_id = original_request_id
+      end
+    end
+
+    if traceparent.present?
+      RequestTracing.set_traceparent(traceparent)
+    elsif request_id
+      RequestTracing.ensure_traceparent!(request_id)
+    end
+
     # prevent the job from running if per-user limits have been exceeded.
     check_evaluation_limits(user_id: user_id, requester_id: requester_id, script_level_id: script_level_id)
 
@@ -240,7 +262,11 @@ class EvaluateRubricJob < ApplicationJob
     ShareFiltering.find_pii_failure(code, exceptions: true)
 
     openai_params = AiRubricConfig.get_openai_params(lesson_s3_name, code)
-    response = get_openai_evaluations(openai_params)
+    response = get_openai_evaluations(
+      openai_params,
+      request_id: request_id,
+      traceparent: RequestTracing.current_traceparent
+    )
 
     # Log tokens and usage information
     AiRubricMetrics.log_token_metrics(response)
@@ -255,6 +281,20 @@ class EvaluateRubricJob < ApplicationJob
     merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
 
     write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
+  ensure
+    if defined?(RequestStore)
+      if original_request_id
+        RequestStore.store[:request_id] = original_request_id
+      else
+        RequestStore.store.delete(:request_id)
+      end
+    end
+
+    if original_traceparent
+      RequestTracing.set_traceparent(original_traceparent)
+    else
+      RequestTracing.clear_traceparent
+    end
   end
 
   # Ensure that the RubricAiEvaluation exists as an argument to the job
@@ -331,13 +371,19 @@ class EvaluateRubricJob < ApplicationJob
     [code, version]
   end
 
-  private def get_openai_evaluations(openai_params)
+  private def get_openai_evaluations(openai_params, request_id: nil, traceparent: nil)
     origin = get_ai_proxy_origin
     uri = URI.parse("#{origin}/assessment")
+    headers = {
+      'Content-Type' => 'application/x-www-form-urlencoded',
+      'Authorization' => CDO.aiproxy_api_key
+    }
+    headers['X-Request-Id'] = request_id if request_id.present?
+    headers['traceparent'] = traceparent if traceparent.present?
     response = HTTParty.post(
       uri,
       body: URI.encode_www_form(openai_params),
-      headers: {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => CDO.aiproxy_api_key},
+      headers: headers,
       timeout: AIPROXY_API_TIMEOUT
     )
 

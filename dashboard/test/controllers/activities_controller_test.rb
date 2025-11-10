@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/request_tracing'
 
 class ActivitiesControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
@@ -1250,7 +1251,16 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     Metrics::Events.stubs(:log_event).once
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
-    EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id).once
+    traceparent = '00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-cccccccccccccccc-01'
+    RequestTracing.stubs(:current_traceparent).returns(traceparent)
+    EvaluateRubricJob.expects(:perform_later).with(has_entries(
+                                                     user_id: @student.id,
+                                                     requester_id: @student.id,
+                                                     script_level_id: @script_level.id,
+                                                     request_id: kind_of(String),
+                                                     traceparent: traceparent
+    )
+).once
     sign_in @student
 
     post :milestone, params: @milestone_rubric_params

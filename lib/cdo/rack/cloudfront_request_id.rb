@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'request_store'
+require 'cdo/request_tracing'
 
 module Rack
   # Rack middleware that normalizes the CloudFront-generated request id so it
@@ -42,9 +43,13 @@ module Rack
         # * Rails echoes the value to response headers as `X-Request-Id`, which we verify in
         #   `dashboard/test/integration/cloudfront_request_id_test.rb`. That keeps parity with CloudFront’s
         #   `X-Amz-Cf-Id` header when troubleshooting CDN issues.
+        # * Background jobs and downstream services can forward it—`EvaluateRubricJob` sends it to AI Proxy as
+        #   `X-Request-Id`, and Javabuilder upload requests now include the same header.
         # Forwarding this ID to downstream services (AI Proxy, Javabuilder, AWS SDK clients, etc.) still requires
         # explicit instrumentation—those calls do not yet consume the Rack env automatically.
         env[REQUEST_ID_ENV] = request_id
+
+        RequestTracing.ensure_traceparent!(request_id)
 
         # No additional aliases—callers should rely on the standard Rack / Rails keys above.
       end

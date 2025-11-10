@@ -1,4 +1,5 @@
 require 'aws-sdk-s3'
+require 'cdo/request_tracing'
 require 'tempfile'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'active_support/core_ext/hash/slice'
@@ -33,6 +34,19 @@ module AWS
         end
       end
       handler(Handler)
+      Aws::S3::Client.add_plugin(self)
+    end
+
+    class TraceparentPlugin < Seahorse::Client::Plugin
+      class Handler < Seahorse::Client::Handler
+        def call(context)
+          traceparent = RequestTracing.current_traceparent
+          context.http_request.headers['traceparent'] = traceparent if traceparent
+          @handler.call(context)
+        end
+      end
+
+      handler(Handler, step: :build)
       Aws::S3::Client.add_plugin(self)
     end
 

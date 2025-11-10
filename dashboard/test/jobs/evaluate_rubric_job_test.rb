@@ -1,5 +1,6 @@
 require "test_helper"
 require 'testing/includes_metrics'
+require 'cdo/request_tracing'
 
 class EvaluateRubricJobTest < ActiveJob::TestCase
   setup do
@@ -43,6 +44,41 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], RubricAiEvaluation.where(user_id: @student.id).first.status
     verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student)
+  end
+
+  test "forwards request id header to ai proxy when provided" do
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+    stub_lesson_s3_data
+
+    request_id = 'req-test-123'
+    traceparent = '00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-01'
+    RequestTracing.stubs(:set_traceparent)
+    RequestTracing.stubs(:ensure_traceparent!)
+    RequestTracing.stubs(:clear_traceparent)
+    RequestTracing.stubs(:current_traceparent).returns(traceparent)
+
+    stub_get_openai_evaluations(
+      expected_request_id: request_id,
+      expected_traceparent: traceparent
+    )
+
+    perform_enqueued_jobs do
+      EvaluateRubricJob.perform_later(
+        user_id: @student.id,
+        requester_id: @student.id,
+        script_level_id: @script_level.id,
+        request_id: request_id,
+        traceparent: traceparent
+      )
+    end
+
+    evaluation = RubricAiEvaluation.where(user_id: @student.id).first
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], evaluation.status
   end
 
   test "job succeeds on ai-enabled level with json response type" do
@@ -599,7 +635,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     AiRubricConfig.stubs(:s3_client).returns(s3_client)
   end
 
-  private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {}, response_type: 'tsv', message: 'message')
+  private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {}, response_type: 'tsv', message: 'message', expected_request_id: nil, expected_traceparent: nil)
     raise "invalid response type #{response_type}" unless ['tsv', 'json'].include? response_type
     expected_examples = [
       ['fake-code-1', 'fake-response-1'],
@@ -648,12 +684,33 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     )
     response.stubs(:is_a?).with(HTTParty::Response).returns(true)
 
-    post_stub = HTTParty.stubs(:post).with(
-      uri,
-      body: URI.encode_www_form(expected_form_data),
-      headers: {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => CDO.aiproxy_api_key},
-      timeout: EvaluateRubricJob::AIPROXY_API_TIMEOUT
-    )
+    expected_headers = {
+      'Content-Type' => 'application/x-www-form-urlencoded',
+      'Authorization' => CDO.aiproxy_api_key
+    }
+    post_stub = HTTParty.stubs(:post).with do |passed_uri, options|
+      headers = options[:headers] || {}
+      base_match = passed_uri == uri &&
+        options[:body] == URI.encode_www_form(expected_form_data) &&
+        options[:timeout] == EvaluateRubricJob::AIPROXY_API_TIMEOUT &&
+        expected_headers.all? {|key, value| headers[key] == value}
+
+      request_id_match =
+        if expected_request_id
+          headers['X-Request-Id'] == expected_request_id
+        else
+          !headers.key?('X-Request-Id')
+        end
+
+      traceparent_match =
+        if expected_traceparent
+          headers['traceparent'] == expected_traceparent
+        else
+          !headers.key?('traceparent')
+        end
+
+      base_match && request_id_match && traceparent_match
+    end
 
     if raises
       post_stub.raises(raises)
