@@ -474,6 +474,7 @@ timed_task_with_logging test: ['test:changed']
 # should cause us to run all tests.
 GLOBS_AFFECTING_EVERYTHING = %w(
   .drone.yml
+  lib/rake/build.rake
   lib/rake/test.rake
 )
 
