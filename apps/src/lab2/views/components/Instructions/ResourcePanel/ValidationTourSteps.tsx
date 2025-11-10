@@ -255,8 +255,12 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
       initialStep={validationTourStep}
       steps={VALIDATION_TOUR_STEPS}
       onExit={() => {
+        console.log('onExit');
         setValidationTourEnabled(false);
         trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
+      }}
+      onComplete={() => {
+        console.log('onComplete');
       }}
       onChange={nextStepIndex => {
         setValidationTourStep(nextStepIndex);

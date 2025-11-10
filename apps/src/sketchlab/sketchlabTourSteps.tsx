@@ -193,7 +193,11 @@ const OnboardingTourSteps: React.FC = () => {
       initialStep={INITIAL_STEP}
       steps={STEPS}
       onExit={() => {
+        console.log('onExit');
         trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
+      }}
+      onComplete={() => {
+        console.log('onComplete');
       }}
       onChange={nextStepIndex => {
         setTourStep(nextStepIndex);
