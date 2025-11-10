@@ -64,7 +64,7 @@ module Lti
 
       # POST /lti/v1/account_linking/new_account
       def new_account
-        if current_user
+        if current_user && Policies::Lti.lti?(current_user)
           current_user.lms_landing_opted_out = true
           current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
           current_user.save!

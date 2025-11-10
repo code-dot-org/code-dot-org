@@ -53,6 +53,8 @@ import {
   safeFetchSvgText,
   mirrorPngDataUrl,
   getHeadScale,
+  cropDataUrl,
+  improvePalette,
 } from './LottieDancerUtils';
 
 const DEFAULT_SKELETON = 'unicorn';
@@ -313,6 +315,12 @@ export default class LottieDancerRenderer {
         }
       }
 
+      if (palette) {
+        // Improve palette to avoid secondary and tertiary colors being too close to
+        // primary color.
+        palette = improvePalette(palette);
+      }
+
       // Recolor assets based on hard-coded accessory-name rules.
       applyColorMapping(animData, palette, skeletonName);
 
@@ -326,12 +334,14 @@ export default class LottieDancerRenderer {
           if (headComp && Array.isArray(headComp.layers)) {
             const {insertIndex, ks: headKs} =
               hideLayersByTypeAndCaptureKs(headComp);
+            // Crop edge artifacts from generated head PNGs.
+            const croppedHeadUrl = await cropDataUrl(headDataUrl);
             const assetId = ensureImageAsset(
               animData,
-              headDataUrl,
+              croppedHeadUrl,
               'img_head_custom'
             );
-            const headMirrorDataUrl = await mirrorPngDataUrl(headDataUrl);
+            const headMirrorDataUrl = await mirrorPngDataUrl(croppedHeadUrl);
             const headMirrorAssetId = ensureImageAsset(
               animData,
               headMirrorDataUrl,

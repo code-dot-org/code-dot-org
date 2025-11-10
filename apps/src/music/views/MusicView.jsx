@@ -131,6 +131,7 @@ class UnconnectedMusicView extends React.Component {
     isPlayView: PropTypes.bool,
     blockMode: PropTypes.string,
     playbackEvents: PropTypes.array,
+    orderedFunctions: PropTypes.array,
     validationState: PropTypes.object,
     canUndo: PropTypes.bool,
     canRedo: PropTypes.bool,
@@ -543,7 +544,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     // In case we are showing the music generation Guide, reset its state.
-    this.props.setAiGenerateState('clearing');
+    this.props.setAiGenerateState('clearing-before-none');
 
     // In Start mode, load sources from the default JSON.
     if (isStartMode) {
@@ -880,6 +881,7 @@ class UnconnectedMusicView extends React.Component {
         this.props.channel?.id,
         this.props.packId,
         this.props.playbackEvents,
+        this.props.orderedFunctions,
         this.props.lastMeasure
       );
     }
@@ -1034,6 +1036,7 @@ const MusicView = connect(
     startingPlayheadPosition: state.music.startingPlayheadPosition,
     isPlayView: state.lab.isShareView,
     playbackEvents: state.music.playbackEvents,
+    orderedFunctions: state.music.orderedFunctions,
     validationState: state.lab.validationState,
     lastMeasure: state.music.lastMeasure,
     canUndo: state.music.canUndo,

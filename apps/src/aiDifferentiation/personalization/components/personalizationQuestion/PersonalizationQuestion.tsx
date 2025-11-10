@@ -6,7 +6,7 @@ import React from 'react';
 
 import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
 
-import style from './personalization-information.module.scss';
+import style from './../../personalization-information.module.scss';
 
 interface PersonalizationQuestionProps {
   questionNumber: number;
