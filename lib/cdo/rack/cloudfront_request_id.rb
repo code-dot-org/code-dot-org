@@ -12,11 +12,9 @@ module Rack
   # development) we preserve any existing `X-Request-Id` value and otherwise
   # fall back to the framework defaults.
   class CloudFrontRequestId
-    CLOUDFRONT_HEADER = 'HTTP_X_AMZ_CF_ID'
-    REQUEST_ID_HEADER = 'HTTP_X_REQUEST_ID'
-    REQUEST_ID_ENV    = 'action_dispatch.request_id'
-    CDO_REQUEST_ID    = 'cdo.request_id'
-    CDO_CF_REQUEST_ID = 'cdo.cloudfront_request_id'
+    CLOUDFRONT_HEADER = 'HTTP_X_AMZ_CF_ID' # CloudFront request ID header
+    REQUEST_ID_HEADER = 'HTTP_X_REQUEST_ID' # Standard Rack request ID header
+    REQUEST_ID_ENV    = 'action_dispatch.request_id' # Standard Rails request ID env var, passed to downstream services
 
     def initialize(app)
       @app = app
@@ -33,33 +31,35 @@ module Rack
 
         # action_dispatch.request_id: Rails ActionDispatch reads this and includes
         # it in event.payload[:request_id] for Lograge/Rails logging.
+        #
+        # Concretely this unlocks a few things in our stack today:
+        # * `request.uuid` / `request.request_id` in controllers comes from this key. Keeping it aligned with the
+        #   CloudFront ID means any feature that saves the request UUID (audit trails, email flows, etc.) stays
+        #   in sync with CDN logs.
+        # * Rails pushes the same value into controller instrumentation payloads; our Lograge initializer
+        #   (`dashboard/config/initializers/lograge.rb`) reads `event.payload[:request_id]` so log lines retain the
+        #   CloudFront correlation ID instead of a Rails-generated one.
+        # * Rails echoes the value to response headers as `X-Request-Id`, which we verify in
+        #   `dashboard/test/integration/cloudfront_request_id_test.rb`. That keeps parity with CloudFront’s
+        #   `X-Amz-Cf-Id` header when troubleshooting CDN issues.
+        # Forwarding this ID to downstream services (AI Proxy, Javabuilder, AWS SDK clients, etc.) still requires
+        # explicit instrumentation—those calls do not yet consume the Rack env automatically.
         env[REQUEST_ID_ENV] = request_id
 
-        # cdo.request_id: Code.org convention for accessing request ID in code.
-        # Used by Rack::Request#correlation_id as a fallback.
-        env[CDO_REQUEST_ID] = request_id
+        # No additional aliases—callers should rely on the standard Rack / Rails keys above.
       end
 
-      # cdo.cloudfront_request_id: Stores CloudFront ID separately for direct access.
-      # Used by Rack::Request#cloudfront_request_id.
-      env[CDO_CF_REQUEST_ID] = cf_request_id if cf_request_id
-
-      if defined?(RequestStore)
+      if defined?(RequestStore) && request_id
         # RequestStore: Allows background jobs/threads spawned during request to
         # access the request ID. Used by Lograge initializer (lograge.rb).
-        RequestStore.store[:request_id] = request_id if request_id
-        RequestStore.store[:cloudfront_request_id] = cf_request_id if cf_request_id
+        RequestStore.store[:request_id] = request_id
       end
 
       status, headers, body = @app.call(env)
 
       # Rails may have set action_dispatch.request_id if we didn't. Capture it.
       request_id ||= env[REQUEST_ID_ENV]
-      env[CDO_REQUEST_ID] ||= request_id if request_id
-
-      if defined?(RequestStore) && request_id
-        RequestStore.store[:request_id] ||= request_id
-      end
+      RequestStore.store[:request_id] ||= request_id if defined?(RequestStore) && request_id
 
       if request_id
         # Response headers: Standard X-Request-Id header for downstream services.
@@ -70,10 +70,7 @@ module Rack
 
       [status, headers, body]
     ensure
-      if defined?(RequestStore)
-        RequestStore.store.delete(:request_id)
-        RequestStore.store.delete(:cloudfront_request_id)
-      end
+      RequestStore.store.delete(:request_id) if defined?(RequestStore)
     end
 
     private def extract_header(env, header)
