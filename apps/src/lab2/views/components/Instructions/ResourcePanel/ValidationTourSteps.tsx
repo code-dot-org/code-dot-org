@@ -50,8 +50,7 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
     RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     'no'
   );
-  const levelPath =
-    useAppSelector(state => getCurrentLevel(state)?.path) || 'standalone';
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path) || '';
 
   const returnFocusToTourPanel = () => {
     setTimeout(() => {

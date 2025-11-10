@@ -26,8 +26,7 @@ const OnboardingTourSteps: React.FC<{appName: string}> = ({appName}) => {
     RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     'no'
   );
-  const levelPath =
-    useAppSelector(state => getCurrentLevel(state)?.path) || 'standalone';
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path) || '';
 
   return (
     <Steps
