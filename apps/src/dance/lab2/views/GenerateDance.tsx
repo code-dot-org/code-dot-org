@@ -313,7 +313,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
               setAiGenerateState(isStandalone ? 'edited' : 'editing');
-              resetProgram();
             }}
             className={styles.buttonWide}
           />
@@ -369,6 +368,10 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           </div>
         </>
       )}
+      {/* Retain focus with a hidden button. */}
+      {['generating', 'generated', 'listening', 'editing'].includes(
+        aiGenerateState
+      ) && <div tabIndex={0} role="button" className={styles.hiddenButton} />}
     </Guide>
   );
 };

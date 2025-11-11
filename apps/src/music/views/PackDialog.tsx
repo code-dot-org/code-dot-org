@@ -75,6 +75,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
       aria-label={folder.name}
       tabIndex={0}
       role="button"
+      data-notranslate
       ref={isSelected ? currentFolderRefCallback : null}
     >
       {imageSrc && (

@@ -7,7 +7,7 @@
   "user_id": 887,
   "properties": {
     "encrypted": "false",
-    "video_key": "mix-move-ai-intro",
+    "video_key": "mix_move_ai_intro",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true
