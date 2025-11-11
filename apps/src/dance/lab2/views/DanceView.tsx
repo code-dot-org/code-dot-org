@@ -80,6 +80,7 @@ import AgeDialog from '@cdo/apps/templates/AgeDialog';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import useReportAnalytics from '../hooks/useReportAnalytics';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
@@ -733,22 +734,26 @@ const DanceView: React.FunctionComponent<{
   );
 };
 
-export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
-  <SourcesContainer
-    {...props}
-    defaultSources={defaultSources}
-    key={props.levelProperties.id}
-  >
-    {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
-      <GenerateDancer
-        adlibOption={
-          props.levelProperties.aiDancerGenerateAdlib ||
-          'adjective-animal-attire'
-        }
-        levelProperties={props.levelProperties}
-      />
-    ) : (
-      <DanceView levelProperties={props.levelProperties} />
-    )}
-  </SourcesContainer>
-);
+export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => {
+  useReportAnalytics(props.levelProperties, props.channel?.id);
+
+  return (
+    <SourcesContainer
+      {...props}
+      defaultSources={defaultSources}
+      key={props.levelProperties.id}
+    >
+      {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
+        <GenerateDancer
+          adlibOption={
+            props.levelProperties.aiDancerGenerateAdlib ||
+            'adjective-animal-attire'
+          }
+          levelProperties={props.levelProperties}
+        />
+      ) : (
+        <DanceView levelProperties={props.levelProperties} />
+      )}
+    </SourcesContainer>
+  );
+};
