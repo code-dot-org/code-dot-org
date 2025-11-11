@@ -43,8 +43,12 @@ const LabViewsRenderer: React.FunctionComponent = () => {
 
   const currentAppName = levelProperties?.appName;
   const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
-  analyticsReporter.setProjectProperty('levelPath', levelPath);
-  analyticsReporter.setProjectProperty('appName', currentAppName);
+  useEffect(() => {
+    // Set the level path and app name in the analytics reporter for Statsig events.
+    levelPath && analyticsReporter.setProjectProperty('levelPath', levelPath);
+    currentAppName &&
+      analyticsReporter.setProjectProperty('appName', currentAppName);
+  }, [levelPath, currentAppName]);
 
   const exemplarSources = levelProperties?.exemplarSources;
 
