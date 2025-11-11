@@ -167,8 +167,12 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
               <Button
                 isIconOnly
                 onClick={onNotificationsButtonClick}
+                className={classNames(
+                  unreadNotificationCount > 0 && styles.buttonWithUnreadDot
+                )}
                 color="black"
                 type="tertiary"
+                size="s"
                 icon={{iconName: 'bell'}}
                 aria-label={commonI18n.notifications()}
               />
@@ -179,6 +183,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                 onClick={onDailyBytesButtonClick}
                 color="black"
                 type="tertiary"
+                size="s"
                 icon={{iconName: 'podcast'}}
                 aria-label="Daily Bytes"
               />

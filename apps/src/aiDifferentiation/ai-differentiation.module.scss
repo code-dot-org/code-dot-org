@@ -366,6 +366,24 @@ $fab-height: 48;
   align-self: stretch;
 }
 
+
+.buttonWithUnreadDot {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    left: 16px;
+    top: 3px;
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--background-error-primary);
+    border-radius: 50%;
+    margin-left: 4px;
+  }
+}
+
 .sidebarBoxCollapsed {
   .sidebarActions {
     flex-direction: column;
