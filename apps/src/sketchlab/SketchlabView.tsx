@@ -38,7 +38,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
-import uploadExternalFiles from './utils/uploadExternalFiles';
+import {uploadExternalFiles, imageUrlToBase64} from './utils';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -220,22 +220,25 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           if (!Object.keys(downloadedFileDataRef.current).includes(file.id)) {
             await imageUrlToBase64(file.url)
               .then(base64 => {
-                // handle empty files?
-                if (excalidrawInitialState.files) {
-                  excalidrawInitialState.files[file.id].dataURL =
-                    base64 as DataURL;
-                  downloadedFileDataRef.current[file.id] = base64 as DataURL;
+                if (!excalidrawInitialState.files) {
+                  excalidrawInitialState.files = {};
                 }
+
+                excalidrawInitialState.files[file.id].dataURL =
+                  base64 as DataURL;
+                downloadedFileDataRef.current[file.id] = base64 as DataURL;
               })
               .catch(error => {
                 // what to do on error?
                 console.error(error);
               });
           } else {
-            if (excalidrawInitialState.files) {
-              const base64 = downloadedFileDataRef.current[file.id];
-              excalidrawInitialState.files[file.id].dataURL = base64;
+            if (!excalidrawInitialState.files) {
+              excalidrawInitialState.files = {};
             }
+
+            const base64 = downloadedFileDataRef.current[file.id];
+            excalidrawInitialState.files[file.id].dataURL = base64;
           }
         }
       });
