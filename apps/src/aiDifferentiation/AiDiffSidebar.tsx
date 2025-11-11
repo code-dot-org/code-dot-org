@@ -115,7 +115,12 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   });
 
   return (
-    <aside className={styles.sidebarContainer}>
+    <aside
+      className={classNames(
+        styles.sidebarContainer,
+        isCollapsed && styles.sidebarContainerCollapsed
+      )}
+    >
       <Box
         component="nav"
         sx={{width: {sm: '100%'}, flexShrink: {sm: 0}}}
@@ -143,12 +148,17 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             color={buttonColors.purple}
             size="s"
             type="primary"
-            iconLeft={{iconName: 'plus'}}
             onClick={() => {
               setShowNotifications(false);
               threadSelectCallback(0);
             }}
-            text={commonI18n.aiDifferentiation_new_chat()}
+            isIconOnly={isCollapsed}
+            icon={isCollapsed ? {iconName: 'plus'} : undefined}
+            aria-label={commonI18n.aiDifferentiation_new_chat()}
+            iconLeft={!isCollapsed ? {iconName: 'plus'} : undefined}
+            text={
+              !isCollapsed ? commonI18n.aiDifferentiation_new_chat() : undefined
+            }
           />
         </Box>
         {!isCollapsed && (
