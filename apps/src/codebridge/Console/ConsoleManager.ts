@@ -1,17 +1,6 @@
 import {FitAddon} from '@xterm/addon-fit';
 import {Terminal} from '@xterm/xterm';
 
-const ESC = '\x1B';
-const BEL = '\x07';
-const ANSI_ESCAPE_SEQUENCE_REGEX = new RegExp(
-  `${ESC}\[[0-9;?]*[ -/]*[@-~]`,
-  'g'
-);
-const OSC_ESCAPE_SEQUENCE_REGEX = new RegExp(
-  `${ESC}\][0-9;?]*(?:[\s\S]*?)(?:${BEL}|${ESC}\\)`,
-  'g'
-);
-
 // Manager for xterm.js-based console in codebridge
 export default class ConsoleManager {
   private terminal: Terminal;
@@ -53,10 +42,7 @@ export default class ConsoleManager {
     this.executeTerminalLinesListeners();
   }
 
-  public getTerminalLines(stripFormatting = false) {
-    if (stripFormatting) {
-      return this.terminalLines.map(ConsoleManager.stripAnsiSequences);
-    }
+  public getTerminalLines() {
     return this.terminalLines;
   }
 
@@ -125,11 +111,5 @@ export default class ConsoleManager {
       this.terminalLines.push(message);
     }
     this.executeTerminalLinesListeners();
-  }
-
-  private static stripAnsiSequences(line: string) {
-    return line
-      .replace(OSC_ESCAPE_SEQUENCE_REGEX, '')
-      .replace(ANSI_ESCAPE_SEQUENCE_REGEX, '');
   }
 }
