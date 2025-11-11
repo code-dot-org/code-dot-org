@@ -109,59 +109,96 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           isCollapsed && styles.sidebarBoxCollapsed
         )}
       >
-        <Button
-          isIconOnly
-          onClick={toggleSidebar}
-          icon={{
-            iconName: isCollapsed
-              ? 'arrow-right-to-line'
-              : 'arrow-left-to-line',
-          }}
-          color="gray"
-          type="secondary"
-          size="s"
-          className={styles.sidebarToggleButton}
-        />
-        <Button
-          color={buttonColors.white}
-          size="s"
-          type="primary"
-          iconLeft={{iconName: 'plus'}}
-          onClick={() => {
-            setShowNotifications(false);
-            threadSelectCallback(0);
-          }}
-          text={commonI18n.aiDifferentiation_new_chat()}
-          className={styles.sidebarButton}
-        />
-        {experiments.isEnabled('teacher-notifications') && (
-          <button
-            onClick={() => {
-              setShowNotifications(true);
-              setShowDailyBytes(false);
-
-              analyticsReporter.sendEvent(EVENTS.AI_DIFF_NOTIFICATIONS_OPENED, {
-                unreadNotificationCount: unreadNotificationCount,
-              });
+        <Box className={styles.sidebarActions}>
+          <Button
+            isIconOnly
+            onClick={toggleSidebar}
+            icon={{
+              iconName: isCollapsed
+                ? 'arrow-right-to-line'
+                : 'arrow-left-to-line',
             }}
-            className={classNames(styles.notificationsButton, {
-              [styles.selected]: showNotifications,
-            })}
-            id="ui-notificationsButton"
-            type="button"
-          >
-            <FontAwesomeV6Icon iconName="bell" />
-            <span>{commonI18n.notifications()}</span>
-            {unreadNotificationCount > 0 && (
-              <FontAwesomeV6Icon
-                iconName="circle"
-                iconStyle="solid"
-                className={styles.readAt}
-                aria-label={i18n.unread()}
+            color="gray"
+            type="secondary"
+            size="s"
+            className={styles.sidebarToggleButton}
+          />
+          <Button
+            color={buttonColors.purple}
+            size="s"
+            type="primary"
+            iconLeft={{iconName: 'plus'}}
+            onClick={() => {
+              setShowNotifications(false);
+              threadSelectCallback(0);
+            }}
+            text={commonI18n.aiDifferentiation_new_chat()}
+          />
+        </Box>
+        {!isCollapsed && (
+          <>
+            {experiments.isEnabled('teacher-notifications') && (
+              <button
+                onClick={() => {
+                  setShowNotifications(true);
+                  setShowDailyBytes(false);
+
+                  analyticsReporter.sendEvent(
+                    EVENTS.AI_DIFF_NOTIFICATIONS_OPENED,
+                    {
+                      unreadNotificationCount: unreadNotificationCount,
+                    }
+                  );
+                }}
+                className={classNames(styles.notificationsButton, {
+                  [styles.selected]: showNotifications,
+                })}
+                id="ui-notificationsButton"
+                type="button"
+              >
+                <FontAwesomeV6Icon iconName="bell" />
+                <span>{commonI18n.notifications()}</span>
+                {unreadNotificationCount > 0 && (
+                  <FontAwesomeV6Icon
+                    iconName="circle"
+                    iconStyle="solid"
+                    className={styles.readAt}
+                    aria-label={i18n.unread()}
+                  />
+                )}
+              </button>
+            )}
+          </>
+        )}
+        {isCollapsed && (
+          <Box>
+            {experiments.isEnabled('teacher-notifications') && (
+              <Button
+                isIconOnly
+                onClick={() => {
+                  setShowNotifications(true);
+                }}
+                color="black"
+                type="tertiary"
+                icon={{iconName: 'bell'}}
+                aria-label={commonI18n.notifications()}
               />
             )}
-          </button>
+            {experiments.isEnabled('daily-bytes') && (
+              <Button
+                isIconOnly
+                onClick={() => {
+                  setShowDailyBytes(true);
+                }}
+                color="black"
+                type="tertiary"
+                icon={{iconName: 'podcast'}}
+                aria-label="Daily Bytes"
+              />
+            )}
+          </Box>
         )}
+
         {experiments.isEnabled('daily-bytes') && (
           <button
             onClick={() => {
