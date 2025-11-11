@@ -3,7 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {OverlineThreeText} from '@code-dot-org/component-library/typography';
 import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -70,6 +70,11 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   showNotifications,
   unreadNotificationCount,
 }) => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [showDailyBytes, setShowDailyBytes] = useState(false);
+  const toggleSidebar = () => {
+    setIsCollapsed(!isCollapsed);
+  };
   const handleListItemClick = (chatId: number) => {
     setShowNotifications(false);
     threadSelectCallback(chatId);
@@ -99,8 +104,24 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
         component="nav"
         sx={{width: {sm: '100%'}, flexShrink: {sm: 0}}}
         aria-label="AI differentiation chat threads"
-        className={styles.sidebarBox}
+        className={classNames(
+          styles.sidebarBox,
+          isCollapsed && styles.sidebarBoxCollapsed
+        )}
       >
+        <Button
+          isIconOnly
+          onClick={toggleSidebar}
+          icon={{
+            iconName: isCollapsed
+              ? 'arrow-right-to-line'
+              : 'arrow-left-to-line',
+          }}
+          color="gray"
+          type="secondary"
+          size="s"
+          className={styles.sidebarToggleButton}
+        />
         <Button
           color={buttonColors.white}
           size="s"
@@ -117,6 +138,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           <button
             onClick={() => {
               setShowNotifications(true);
+              setShowDailyBytes(false);
 
               analyticsReporter.sendEvent(EVENTS.AI_DIFF_NOTIFICATIONS_OPENED, {
                 unreadNotificationCount: unreadNotificationCount,
@@ -140,6 +162,24 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             )}
           </button>
         )}
+        {experiments.isEnabled('daily-bytes') && (
+          <button
+            onClick={() => {
+              setShowDailyBytes(true);
+              setShowNotifications(false);
+              // TODO: add daily bytes logic
+            }}
+            className={classNames(styles.notificationsButton, {
+              [styles.selected]: showDailyBytes,
+            })}
+            id="ui-dailyBytesButton"
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="podcast" />
+            <span>Daily Bytes</span>
+          </button>
+        )}
+
         <div className={styles.sidebarContent}>
           <List disablePadding={true}>
             {todayChats.length > 0 && (
