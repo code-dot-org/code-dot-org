@@ -312,6 +312,13 @@ const VersionHistoryPanel: React.FunctionComponent<
     setSelectedVersion,
   ]);
 
+  const handleSaveVersionSuccess = useCallback(() => {
+    sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_COMMITTED, {
+      versionId: selectedVersion,
+    });
+    successfulProjectResetCleanUp(true);
+  }, [selectedVersion, successfulProjectResetCleanUp]);
+
   const showList = listLoaded && !listLoading && !listLoadError;
 
   return (
@@ -411,7 +418,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       {isLatestVersion(selectedVersion) && (
         <SaveVersionPanel
           projectSources={projectSources}
-          onSuccess={() => successfulProjectResetCleanUp(true)}
+          onSuccess={handleSaveVersionSuccess}
           versionLoading={versionLoading}
           disabled={disabled}
         />

@@ -619,6 +619,7 @@ const EVENTS = {
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
   LAB2_VERSION_RESTORED: 'Version restored on lab2',
   LAB2_VERSION_VIEWED: 'Version viewed on lab2',
+  LAB2_VERSION_COMMITTED: 'Version committed on lab2',
 
   // Resource Panel
   RESOURCE_PANEL_TAB_CLICKED: 'Resource Panel Tab Clicked',
