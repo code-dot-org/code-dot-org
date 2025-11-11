@@ -96,7 +96,7 @@ export const openSaveToBackpackPrompt = async ({
       }
       const successCallback = () =>
         sendLab2AnalyticsEvent(successMetric, {
-          fileType: selectedFileName.split('.').pop()?.toLowerCase(),
+          fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
         });
 
       const fileContents = {

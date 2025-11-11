@@ -71,7 +71,7 @@ export const openImportFromBackpackPrompt = async ({
       ),
       () =>
         sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FROM_BACKPACK, {
-          fileType: selectedFileName.split('.').pop()?.toLowerCase(),
+          fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
         })
     );
   };
@@ -103,7 +103,7 @@ export const openImportFromBackpackPrompt = async ({
           if (fileId) saveFile(fileId, fileContent);
         }
         sendLab2AnalyticsEvent(successMetric, {
-          fileType: newFileName?.split('.').pop()?.toLowerCase(),
+          fileType: newFileName?.split('.').pop()?.toLowerCase() || '',
         });
       }
     );
