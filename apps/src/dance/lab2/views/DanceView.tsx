@@ -19,6 +19,7 @@ import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {
   applyBlockIdOverrides,
+  updateLocale,
   validateBlockCategories,
 } from '@cdo/apps/blockly/utils';
 import {
@@ -67,6 +68,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
+import localization from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {defaultMetadata} from '@cdo/apps/music/DefaultMusic';
@@ -78,6 +80,7 @@ import AgeDialog from '@cdo/apps/templates/AgeDialog';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import useReportAnalytics from '../hooks/useReportAnalytics';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
@@ -394,6 +397,12 @@ const DanceView: React.FunctionComponent<{
     const blocksByCategory = installSharedBlocks(
       levelProperties.sharedBlocks || []
     );
+
+    // Ensure that Blockly localizes when the locale changes
+    localization.on('change', info => {
+      updateLocale(localization.rtl);
+    });
+
     if (isShareView) {
       workspace.current = new GoogleBlockly.Workspace();
     } else {
@@ -725,22 +734,26 @@ const DanceView: React.FunctionComponent<{
   );
 };
 
-export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
-  <SourcesContainer
-    {...props}
-    defaultSources={defaultSources}
-    key={props.levelProperties.id}
-  >
-    {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
-      <GenerateDancer
-        adlibOption={
-          props.levelProperties.aiDancerGenerateAdlib ||
-          'adjective-animal-attire'
-        }
-        levelProperties={props.levelProperties}
-      />
-    ) : (
-      <DanceView levelProperties={props.levelProperties} />
-    )}
-  </SourcesContainer>
-);
+export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => {
+  useReportAnalytics(props.levelProperties, props.channel?.id);
+
+  return (
+    <SourcesContainer
+      {...props}
+      defaultSources={defaultSources}
+      key={props.levelProperties.id}
+    >
+      {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
+        <GenerateDancer
+          adlibOption={
+            props.levelProperties.aiDancerGenerateAdlib ||
+            'adjective-animal-attire'
+          }
+          levelProperties={props.levelProperties}
+        />
+      ) : (
+        <DanceView levelProperties={props.levelProperties} />
+      )}
+    </SourcesContainer>
+  );
+};

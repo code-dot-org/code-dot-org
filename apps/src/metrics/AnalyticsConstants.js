@@ -631,6 +631,9 @@ const EVENTS = {
   PERSONALIZATION_ANSWER_SUBMITTED:
     'Answered Just In Time PL Personalization Question',
   PERSONALIZATION_PERSONA_MATCHED: 'User gets a matched persona',
+
+  // Dance Party (Lab2)
+  DANCE_PARTY_SESSION_END: 'Dance Party Session End',
 };
 
 const EVENT_GROUP_NAMES = {

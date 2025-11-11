@@ -126,6 +126,7 @@ import {
   LOOP_HIGHLIGHT,
   handleCodeGenerationFailure,
   strip,
+  initializeVariableLocalization,
   interpolateMsg,
   isDarkTheme,
   setThemeAndRenderBlocks,
@@ -806,6 +807,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
+    // Ensure we do not translate content within the blockly workspace
+    if (typeof container !== 'string') {
+      (container as HTMLElement).classList.add('notranslate');
+    }
+
     // Set the default value for hasLoadedBlocks to false.
     blocklyWrapper.hasLoadedBlocks = false;
     if (!opt_options) {
@@ -892,6 +898,16 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       container,
       options
     ) as ExtendedWorkspaceSvg;
+    // Mark the blockly container as something we do not want translated
+    // and undo the container being marked as such
+    const div = workspace.getInjectionDiv();
+    if (div) {
+      div.classList.add('notranslate');
+    }
+    if (typeof container !== 'string') {
+      (container as HTMLElement).classList.remove('notranslate');
+    }
+
     Blockly.cdoUtils
       .getUserTheme(workspace.getTheme())
       .then((theme: GoogleBlockly.Theme) => {
@@ -1053,6 +1069,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
     }
+
+    // Set up variable localization
+    initializeVariableLocalization(workspace);
+
     return workspace;
   };
 
@@ -1108,6 +1128,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     Blockly.Events.enable();
   };
 
+  // Initialize metadata houses for original English source strings for
+  // various Blockly metadata that gets installed. These are used by the
+  // updateLocale(), localizeVariables(), etc, functions to translate a
+  // variety of both custom and built-in Blockly content.
+  blocklyWrapper.SourceMsg = {};
+  blocklyWrapper.SourceVariables = {};
+  blocklyWrapper.SourceCustomBlocks = {
+    blockDefinitionsByName: {},
+    blockTexts: {},
+  };
+  blocklyWrapper.SourceCustomInputTypes = {};
+
+  // Keep track of the custom blocks that are used to initialize the
+  // Blockly environment.
   blocklyWrapper.customBlocks = customBlocks;
 
   initializeBlocklyXml(blocklyWrapper);
