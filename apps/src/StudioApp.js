@@ -532,9 +532,6 @@ StudioApp.prototype.init = function (config) {
     this.resizeVisualization(e.detail);
   });
 
-  // Ensure we also resize any of the application panels when the locale changes
-  localization.on('change', this.onResize.bind(this));
-
   this.reset(true);
 
   // Add display of blocks used.
