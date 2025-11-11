@@ -48,6 +48,7 @@ export const useHandleFileUpload = (
         });
         sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, {
           fileName,
+          fileType: fileName.split('.').pop()?.toLowerCase() || '',
           error: validationError,
         });
         return;

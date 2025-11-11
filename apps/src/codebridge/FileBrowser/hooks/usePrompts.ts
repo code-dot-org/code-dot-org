@@ -57,8 +57,8 @@ export const usePrompts = () => {
   );
 
   const sendLab2AnalyticsEvent = useCallback(
-    (event: string, {fileType}: {fileType?: string} = {}): void =>
-      globalSendLab2AnalyticsEvent(event, {...(fileType && {fileType})}),
+    (event: string, payload?: Record<string, string>): void =>
+      globalSendLab2AnalyticsEvent(event, payload),
     []
   );
 

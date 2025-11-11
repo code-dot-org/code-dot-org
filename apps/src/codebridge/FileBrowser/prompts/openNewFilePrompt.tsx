@@ -60,6 +60,6 @@ export const openNewFilePrompt = async ({
   });
 
   sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, {
-    filetype: fileName.split('.').pop()?.toLowerCase() || '',
+    fileType: fileName.split('.').pop()?.toLowerCase() || '',
   });
 };
