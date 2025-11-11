@@ -20,7 +20,7 @@ type OpenSaveToBackpackPromptArgsType = {
   file: ProjectFile;
   sendLab2AnalyticsEvent: (
     eventName: string,
-    payload?: {fileType?: string}
+    payload?: Record<string, string>
   ) => void;
 };
 

@@ -32,7 +32,7 @@ type OpenImportFromBackpackPromptArgsType = {
   validationFile?: ProjectFile;
   sendLab2AnalyticsEvent: (
     eventName: string,
-    pyaload?: {fileType?: string}
+    payload?: Record<string, string>
   ) => void;
 };
 
