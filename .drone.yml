@@ -288,7 +288,7 @@ steps:
       # Generate baseline file count for validation
       - touch .cache-staging-build-file-count
       - "find . -type f | wc -l > .cache-staging-build-file-count"
-      - printf "Baseline file count: %s\n" "$(cat .cache-staging-build-file-count)"
+      - 'printf "Baseline file count: %s\n" "$(cat .cache-staging-build-file-count)"'
 
   # - name: cache-staging-ci-build
   #   image: plugins/s3-cache
@@ -319,6 +319,6 @@ trigger:
 
 ---
 kind: signature
-hmac: d0de97812011e6377e6e652fa06cf7852542927d8db4ad52d5e4f4af77aa5bf3
+hmac: 0e111692e7bdb40941c36beb4e169b1efd8c5a750f2b4e236cad5c3df8606a08
 
 ...
