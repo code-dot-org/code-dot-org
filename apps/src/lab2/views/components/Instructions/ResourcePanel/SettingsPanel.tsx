@@ -51,7 +51,12 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
       languageChangedTo: event.target.value,
       languageChangedFrom: locale,
     });
-    event.target.form?.submit();
+
+    if (localization.isLocalizeJS()) {
+      localization.locale = event.target.value;
+    } else {
+      event.target.form?.submit();
+    }
   };
 
   const handleSettingChange = (

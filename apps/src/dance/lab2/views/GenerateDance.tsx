@@ -218,13 +218,19 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
 
   return (
     <Guide id="generate-panel" modal={modal} position="bottom">
-      {['none', 'generating'].includes(aiGenerateState) &&
-        levelProperties.longInstructions && (
-          <MainInstructionsContent
-            instructionsText={levelProperties.longInstructions}
-            markdownClassName={styles.markdown}
-          />
-        )}
+      {aiGenerateState === 'none' && levelProperties.longInstructions && (
+        <MainInstructionsContent
+          instructionsText={levelProperties.longInstructions}
+          markdownClassName={styles.markdown}
+        />
+      )}
+
+      {aiGenerateState === 'generating' && (
+        <div>
+          <Heading3>Generating...</Heading3>
+          AI is generating code based on your prompt.
+        </div>
+      )}
 
       {['none', 'generating', 'generated'].includes(aiGenerateState) && (
         <>
@@ -284,6 +290,21 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
 
           <Button
+            ariaLabel={'Regenerate'}
+            text={'Regenerate'}
+            type="secondary"
+            color="black"
+            size="s"
+            iconLeft={{iconName: 'sparkles'}}
+            onClick={() => {
+              startOver();
+              resetProgram();
+              generateDance();
+            }}
+            className={styles.buttonWide}
+          />
+
+          <Button
             ariaLabel={'Use code'}
             text={'Use code'}
             type="primary"
@@ -292,7 +313,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
               setAiGenerateState(isStandalone ? 'edited' : 'editing');
-              resetProgram();
             }}
             className={styles.buttonWide}
           />
@@ -348,6 +368,10 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           </div>
         </>
       )}
+      {/* Retain focus with a hidden button. */}
+      {['generating', 'generated', 'listening', 'editing'].includes(
+        aiGenerateState
+      ) && <div tabIndex={0} role="button" className={styles.hiddenButton} />}
     </Guide>
   );
 };

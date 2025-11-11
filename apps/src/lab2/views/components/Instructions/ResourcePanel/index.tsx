@@ -63,10 +63,6 @@ interface VersionHistoryProps {
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
-  [Tabs.TeachersOnly]: {
-    title: commonI18n.teachingTips(),
-    icon: 'chalkboard-teacher',
-  },
   [Tabs.StudentRubric]: {
     title: commonI18n.rubric(),
     icon: 'clipboard-list',
@@ -78,6 +74,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Validation]: {
     title: commonI18n.validation(),
     icon: 'clipboard-check',
+  },
+  [Tabs.TeachersOnly]: {
+    title: commonI18n.teachingTips(),
+    icon: 'chalkboard-teacher',
   },
 };
 
@@ -203,19 +203,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (
-      isUserTeacher &&
-      (levelProperties.teacherMarkdown ||
-        levelProperties.predictSettings?.solution)
-    ) {
-      tabMap[Tabs.TeachersOnly] = (
-        <ForTeachersOnly
-          levelProperties={levelProperties}
-          className={styles.panelContent}
-        />
-      );
-    }
-
     if (hiddenContextCallback && aiTutorVisible) {
       tabMap[Tabs.AiTutor] = (
         <AiTutorChat
@@ -256,6 +243,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
     if (showRubric) {
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
+    }
+
+    if (
+      isUserTeacher &&
+      (levelProperties.teacherMarkdown ||
+        levelProperties.predictSettings?.solution)
+    ) {
+      tabMap[Tabs.TeachersOnly] = (
+        <ForTeachersOnly
+          levelProperties={levelProperties}
+          className={classNames(styles.panelContent, styles.teachersOnlyTab)}
+        />
+      );
     }
 
     return tabMap;
@@ -456,7 +456,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     <Button
                       className={classNames(
                         styles.tabButton,
-                        tab === currentTab && styles.selected
+                        tab === currentTab && styles.selected,
+                        tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
                       onClick={() => onClickTab(tab)}
                       key={tab}

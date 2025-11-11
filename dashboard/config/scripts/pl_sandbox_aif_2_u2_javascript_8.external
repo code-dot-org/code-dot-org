@@ -38,7 +38,7 @@ markdown <<MARKDOWN
 ## Step 2: Add Event Listener
 #### Use an event listener to make something happen when the button is clicked.
 
-#### You Connect the code for the event lister to the element using a dot (.)
+#### Connect the code for the event lister to the element using a dot (.)
 
 <img src="https://images.code.org/e33f545c4aa34f6646e374a7734f8cea-image-1761937258302.png" alt="javascript code adding an event listener" width="550px" style="display: block; margin-left: 0;">
 
