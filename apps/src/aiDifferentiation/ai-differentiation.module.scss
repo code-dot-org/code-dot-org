@@ -367,7 +367,7 @@ $fab-height: 48;
 }
 
 .sidebarBoxCollapsed {
-  &.sidebarActions {
+  .sidebarActions {
     flex-direction: column;
   }
 }
