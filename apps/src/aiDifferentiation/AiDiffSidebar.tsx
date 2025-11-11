@@ -77,6 +77,12 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
     setIsCollapsed(!isCollapsed);
   };
 
+  const onNewChatButtonClick = useCallback(() => {
+    setShowNotifications(false);
+    setShowDailyBytes(false);
+    threadSelectCallback(0);
+  }, [setShowNotifications, threadSelectCallback]);
+
   const onNotificationsButtonClick = useCallback(() => {
     setShowNotifications(true);
     setShowDailyBytes(false);
@@ -94,6 +100,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
 
   const handleListItemClick = (chatId: number) => {
     setShowNotifications(false);
+    setShowDailyBytes(false);
     threadSelectCallback(chatId);
   };
 
@@ -171,10 +178,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                 color={buttonColors.purple}
                 size="s"
                 type="primary"
-                onClick={() => {
-                  setShowNotifications(false);
-                  threadSelectCallback(0);
-                }}
+                onClick={onNewChatButtonClick}
                 isIconOnly
                 icon={{iconName: 'plus'}}
                 aria-label={commonI18n.aiDifferentiation_new_chat()}
@@ -185,10 +189,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
               color={buttonColors.purple}
               size="s"
               type="primary"
-              onClick={() => {
-                setShowNotifications(false);
-                threadSelectCallback(0);
-              }}
+              onClick={onNewChatButtonClick}
               iconLeft={{iconName: 'plus'}}
               text={commonI18n.aiDifferentiation_new_chat()}
             />
