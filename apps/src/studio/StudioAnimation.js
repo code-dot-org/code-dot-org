@@ -22,6 +22,8 @@ var uniqueId = 0;
  *        should be played, in 30 fps ticks per frame.  Default 1 (30 fps).
  * @param {boolean} [options.loop] - Whether the animation should loop
  *        automatically.  Default false.
+ * @param {boolean} [options.disableAnimations] - If true, always use frame 0
+ *        (static image, no animation).  Default false.
  */
 export default class StudioAnimation {
   constructor(options) {
@@ -59,6 +61,9 @@ export default class StudioAnimation {
 
     /** @private {boolean} whether each animation should be uniquely skewed */
     this.skewAnimations_ = valueOr(options.skewAnimations, false);
+
+    /** @private {boolean} whether animations are disabled (always use frame 0) */
+    this.disableAnimations_ = valueOr(options.disableAnimations, false);
 
     /** @private {SVGImageElement} */
     this.element_ = null;
@@ -177,27 +182,29 @@ export default class StudioAnimation {
    * Display the current frame at the given location
    */
   redrawCenteredAt(center, tickCount) {
-    console.log('hi');
-    var animTick = tickCount;
+    var currentFrame;
 
-    // Each animation will start at a different frame when this is enabled:
-    if (this.skewAnimations_) {
-      // NOTE: not intended to be used with non-looping animations
-      animTick = tickCount + this.animId * (this.animationFrameDuration_ + 1);
-    }
-
-    var currentFrame = Math.floor(animTick / this.animationFrameDuration_);
-    var framesInThisAnimation = this.getAnimationFrameCount();
-
-    if (this.loop_) {
-      currentFrame = currentFrame % framesInThisAnimation;
+    // If animations are disabled, always use frame 0 (static image)
+    if (this.disableAnimations_) {
+      currentFrame = 0;
     } else {
-      currentFrame = Math.min(currentFrame, framesInThisAnimation - 1);
-    }
+      var animTick = tickCount;
 
-    // Always use frame 0 to keep sprite static (no animation)
-    currentFrame = 0;
-    framesInThisAnimation = 1;
+      // Each animation will start at a different frame when this is enabled:
+      if (this.skewAnimations_) {
+        // NOTE: not intended to be used with non-looping animations
+        animTick = tickCount + this.animId * (this.animationFrameDuration_ + 1);
+      }
+
+      currentFrame = Math.floor(animTick / this.animationFrameDuration_);
+      var framesInThisAnimation = this.getAnimationFrameCount();
+
+      if (this.loop_) {
+        currentFrame = currentFrame % framesInThisAnimation;
+      } else {
+        currentFrame = Math.min(currentFrame, framesInThisAnimation - 1);
+      }
+    }
 
     var frame = this.getFrame(currentFrame);
 
