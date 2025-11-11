@@ -24,6 +24,7 @@ describe('openSaveToBackpackPrompt', () => {
       dialogControl: dialogMock,
       backpackApi: mockBackpackApi,
       file: projectFile,
+      sendLab2AnalyticsEvent: jest.fn(),
     });
   };
 

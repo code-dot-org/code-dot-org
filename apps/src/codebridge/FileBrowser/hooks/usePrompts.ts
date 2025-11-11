@@ -57,7 +57,8 @@ export const usePrompts = () => {
   );
 
   const sendLab2AnalyticsEvent = useCallback(
-    (event: string) => globalSendLab2AnalyticsEvent(event),
+    (event: string, {fileType}: {fileType?: string} = {}): void =>
+      globalSendLab2AnalyticsEvent(event, {...(fileType && {fileType})}),
     []
   );
 
@@ -170,6 +171,7 @@ export const usePrompts = () => {
       newFile,
       saveFile,
       dialogControl,
+      sendLab2AnalyticsEvent,
     } satisfies PAFunctionArgs<typeof globalOpenImportFromBackpackPrompt>
   );
 
@@ -177,6 +179,7 @@ export const usePrompts = () => {
     globalOpenSaveToBackpackPrompt,
     {
       dialogControl,
+      sendLab2AnalyticsEvent,
     } satisfies PAFunctionArgs<typeof globalOpenSaveToBackpackPrompt>
   );
 
