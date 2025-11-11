@@ -101,6 +101,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     adlibOption ? '' : DefaultPrompt
   );
 
+  const [localizedPromptText, setLocalizedPromptText] = useState(
+    adlibOption ? '' : DefaultPrompt
+  );
+
   const generateSong = useCallback(async () => {
     const startTime = Date.now();
 
@@ -198,8 +202,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     setAdlibChoices({...adlibChoices});
   }, []);
 
-  const onAdlibTextChange = useCallback((text: string) => {
+  const onAdlibTextChange = useCallback((text: string, localized: string) => {
     setPromptText(text);
+    setLocalizedPromptText(localized);
   }, []);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
@@ -306,7 +311,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             {aiGenerateState === 'listening' && 'Take a listen...'}
             {aiGenerateState === 'listened' && 'Decide what to do next'}
           </Heading3>
-          <div>AI generated code based on your prompt, "{promptText}"</div>
+          <div>
+            AI generated code based on your prompt, "{localizedPromptText}"
+          </div>
         </div>
       )}
 
@@ -353,7 +360,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
               dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
-              setPlaying(false);
             }}
             className={styles.buttonWide}
           />
@@ -407,6 +413,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           </div>
         </>
       )}
+      {/* Retain focus with a hidden button. */}
+      {['generating', 'generated', 'listening', 'editing'].includes(
+        aiGenerateState
+      ) && <div tabIndex={0} role="button" className={styles.hiddenButton} />}
     </Guide>
   );
 };

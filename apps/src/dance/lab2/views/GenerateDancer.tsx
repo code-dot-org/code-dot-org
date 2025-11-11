@@ -7,7 +7,11 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {DanceLevelProperties} from '@cdo/apps/dance/types';
+import {
+  DanceLevelProperties,
+  DanceProjectSources,
+  GeneratedDancerMetadata,
+} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -21,6 +25,7 @@ import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instruction
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
+import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
@@ -30,6 +35,7 @@ import {trySetLocalStorage} from '@cdo/apps/utils';
 import backgroundImage from '@cdo/static/dance/generateDancer/generate-dancer-background.png';
 import dancerSilhouetteBrightImage from '@cdo/static/dance/generateDancer/generate-dancer-silhouette-bright.svg';
 
+import {GENERATED_DANCER_STORAGE_KEY} from '../../ai/constants';
 import {getConfigValue} from '../../lottie/LottieDancerUtils';
 
 import adlibsDefault from './dancerAdlibsDefault';
@@ -86,9 +92,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const variantHistory = useRef<number[]>([]);
 
-  const [dancerMetadata, setDancerMetadata] = useState<string | null>(
-    localStorage.getItem('dancer-ai-generate')
-  );
+  const {currentSources, updateSources} = useSources<DanceProjectSources>();
 
   const blockList = useRef<AdlibsBlockList | undefined>(undefined);
 
@@ -96,14 +100,32 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     (adlibsValue: AdlibsType) => {
       const initial: AdlibChoices = {};
       if (adlibsValue) {
-        Object.keys(adlibsValue[adlibOption]?.options || []).forEach(key => {
-          const options = adlibsValue[adlibOption].options[key];
-          initial[key] = sample(options)?.id || '';
-        });
+        const lastChoices = [
+          ...(currentSources.generatedDancer?.choices || []),
+          ...(currentSources.generatedDancer?.choicesExtra || []),
+        ];
+
+        Object.keys(adlibsValue[adlibOption]?.options || []).forEach(
+          (key, index) => {
+            const options = adlibsValue[adlibOption].options[key];
+
+            if (
+              options
+                .map(option => option.id)
+                .includes(lastChoices?.[index] || '')
+            ) {
+              // Use a value from the last saved dancer.
+              initial[key] = lastChoices?.[index] || '';
+            } else {
+              // Select a random value.
+              initial[key] = sample(options)?.id || '';
+            }
+          }
+        );
       }
       return initial;
     },
-    [adlibOption]
+    [adlibOption, currentSources.generatedDancer]
   );
 
   useEffect(() => {
@@ -137,13 +159,18 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
       setAiGenerateState('none');
       setAdlibs(adlibsValue);
-      setAdlibChoices(getInitialChoices(adlibsValue));
       setPromptText('');
       variantHistory.current = [];
     };
 
     fetchAdlib();
   }, [adlibs, aiGenerateState, getInitialChoices]);
+
+  useEffect(() => {
+    if (adlibs && currentSources) {
+      setAdlibChoices(getInitialChoices(adlibs));
+    }
+  }, [adlibs, currentSources, getInitialChoices]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('loading');
@@ -222,16 +249,18 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     }
     variantHistory.current = newVariantsHistory;
 
-    const newDancerMetadata = JSON.stringify({
+    const newDancerMetadata: GeneratedDancerMetadata = {
       adlibOption,
-      path: queryParams('ai-dancer-path') || pathToSave,
+      path: (queryParams('ai-dancer-path') as string) || pathToSave,
       choices: choicesToSave,
       choicesExtra: choicesExtraToSave,
       variant,
       extraVariant: bodyVariant,
-    });
-    trySetLocalStorage('dancer-ai-generate', newDancerMetadata);
-    setDancerMetadata(newDancerMetadata);
+    };
+    updateSources(
+      {...currentSources, generatedDancer: newDancerMetadata},
+      true
+    );
 
     const elapsedTime = Date.now() - startTime;
     const remainingDelayDuration = Math.max(
@@ -241,7 +270,20 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       0
     );
     await new Promise(res => setTimeout(res, remainingDelayDuration));
-  }, [adlibChoices, adlibOption, adlibs]);
+  }, [adlibChoices, adlibOption, adlibs, updateSources, currentSources]);
+
+  // Update local storage whenever the generated dancer metadata changes and update the canvas key so the canvas refreshes.
+  const [canvasKey, setCanvasKey] = useState<string>();
+  useEffect(() => {
+    const metadataString = JSON.stringify(currentSources.generatedDancer);
+    if (metadataString) {
+      trySetLocalStorage(GENERATED_DANCER_STORAGE_KEY, metadataString);
+    } else {
+      // If no dancer has been generated on this level, clear local storage to prevent stale artifacts from showing.
+      localStorage.removeItem(GENERATED_DANCER_STORAGE_KEY);
+    }
+    setCanvasKey(metadataString || 'none');
+  }, [currentSources]);
 
   const [hasGenerated, setHasGenerated] = useState(false);
   const signedIn = useAppSelector(state => state.currentUser.signInState);
@@ -274,7 +316,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerHeight, setContainerHeight] = useState(0);
-  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
   useEffect(() => {
     if (!containerRef.current) {
       return;
@@ -295,10 +336,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const onAdlibTextChange = useCallback((text: string) => {
     setPromptText(text);
   }, []);
-
-  // We artificially increase the 'generating' time so that the image doesn't appear
-  // too soon.
-  const showGenerating = aiGenerateState === 'generating' || isPreviewLoading;
 
   const parentProperties = useParentLevelProperties();
   const showNavigation =
@@ -443,6 +480,14 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               </div>
             </>
           )}
+          {/* Retain focus with a hidden button. */}
+          {['generating'].includes(aiGenerateState) && (
+            <div
+              tabIndex={0}
+              role="button"
+              className={moduleStyles.hiddenButton}
+            />
+          )}
         </Guide>
         <div className={moduleStyles.dancerContainer} ref={containerRef}>
           <div className={moduleStyles.background}>
@@ -453,25 +498,26 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             />
           </div>
 
-          {showGenerating && (
+          {aiGenerateState === 'generating' && (
             <div className={moduleStyles.dancerSilhouetteBright}>
               <img alt="" src={dancerSilhouetteBrightImage} />
             </div>
           )}
 
-          <div
-            className={classNames(
-              moduleStyles.dancer,
-              showGenerating && moduleStyles.dancerHidden
-            )}
-          >
-            <DancerCanvas
-              key={dancerMetadata || 'none'}
-              size={containerHeight * 1.1}
-              move={getConfigValue('danceMove') || 'rest'}
-              onLoadingChange={setIsPreviewLoading}
-            />
-          </div>
+          {canvasKey && (
+            <div
+              className={classNames(
+                moduleStyles.dancer,
+                aiGenerateState === 'generating' && moduleStyles.dancerHidden
+              )}
+            >
+              <DancerCanvas
+                key={canvasKey}
+                size={containerHeight * 1.1}
+                move={getConfigValue('danceMove') || 'rest'}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
