@@ -3,7 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {OverlineThreeText} from '@code-dot-org/component-library/typography';
 import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -75,6 +75,22 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
   };
+
+  const onNotificationsButtonClick = useCallback(() => {
+    setShowNotifications(true);
+    setShowDailyBytes(false);
+
+    analyticsReporter.sendEvent(EVENTS.AI_DIFF_NOTIFICATIONS_OPENED, {
+      unreadNotificationCount: unreadNotificationCount,
+    });
+  }, [setShowNotifications, unreadNotificationCount]);
+
+  const onDailyBytesButtonClick = useCallback(() => {
+    setShowDailyBytes(true);
+    setShowNotifications(false);
+    // TODO: add daily bytes logic
+  }, [setShowNotifications]);
+
   const handleListItemClick = (chatId: number) => {
     setShowNotifications(false);
     threadSelectCallback(chatId);
@@ -139,17 +155,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           <>
             {experiments.isEnabled('teacher-notifications') && (
               <button
-                onClick={() => {
-                  setShowNotifications(true);
-                  setShowDailyBytes(false);
-
-                  analyticsReporter.sendEvent(
-                    EVENTS.AI_DIFF_NOTIFICATIONS_OPENED,
-                    {
-                      unreadNotificationCount: unreadNotificationCount,
-                    }
-                  );
-                }}
+                onClick={onNotificationsButtonClick}
                 className={classNames(styles.notificationsButton, {
                   [styles.selected]: showNotifications,
                 })}
@@ -168,16 +174,27 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                 )}
               </button>
             )}
+            {experiments.isEnabled('daily-bytes') && (
+              <button
+                onClick={onDailyBytesButtonClick}
+                className={classNames(styles.notificationsButton, {
+                  [styles.selected]: showDailyBytes,
+                })}
+                id="ui-dailyBytesButton"
+                type="button"
+              >
+                <FontAwesomeV6Icon iconName="podcast" />
+                <span>Daily Bytes</span>
+              </button>
+            )}
           </>
         )}
         {isCollapsed && (
-          <Box>
+          <Box className={styles.sidebarActions}>
             {experiments.isEnabled('teacher-notifications') && (
               <Button
                 isIconOnly
-                onClick={() => {
-                  setShowNotifications(true);
-                }}
+                onClick={onNotificationsButtonClick}
                 color="black"
                 type="tertiary"
                 icon={{iconName: 'bell'}}
@@ -187,9 +204,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             {experiments.isEnabled('daily-bytes') && (
               <Button
                 isIconOnly
-                onClick={() => {
-                  setShowDailyBytes(true);
-                }}
+                onClick={onDailyBytesButtonClick}
                 color="black"
                 type="tertiary"
                 icon={{iconName: 'podcast'}}
@@ -199,96 +214,80 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           </Box>
         )}
 
-        {experiments.isEnabled('daily-bytes') && (
-          <button
-            onClick={() => {
-              setShowDailyBytes(true);
-              setShowNotifications(false);
-              // TODO: add daily bytes logic
-            }}
-            className={classNames(styles.notificationsButton, {
-              [styles.selected]: showDailyBytes,
-            })}
-            id="ui-dailyBytesButton"
-            type="button"
-          >
-            <FontAwesomeV6Icon iconName="podcast" />
-            <span>Daily Bytes</span>
-          </button>
+        {!isCollapsed && (
+          <div className={styles.sidebarContent}>
+            <List disablePadding={true}>
+              {todayChats.length > 0 && (
+                <>
+                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                    TODAY
+                  </OverlineThreeText>
+                  {todayChats.map(chat => (
+                    <ThreadItem
+                      key={chat.id}
+                      chat={chat}
+                      selected={
+                        !showNotifications && chat.id === selectedThreadId
+                      }
+                      onClick={() => handleListItemClick(chat.id)}
+                    />
+                  ))}
+                </>
+              )}
+              {past7DaysChats.length > 0 && (
+                <>
+                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                    PREVIOUS 7 DAYS
+                  </OverlineThreeText>
+                  {past7DaysChats.map(chat => (
+                    <ThreadItem
+                      key={chat.id}
+                      chat={chat}
+                      selected={
+                        !showNotifications && chat.id === selectedThreadId
+                      }
+                      onClick={() => handleListItemClick(chat.id)}
+                    />
+                  ))}
+                </>
+              )}
+              {past30DaysChats.length > 0 && (
+                <>
+                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                    PREVIOUS 30 DAYS
+                  </OverlineThreeText>
+                  {past30DaysChats.map(chat => (
+                    <ThreadItem
+                      key={chat.id}
+                      chat={chat}
+                      selected={
+                        !showNotifications && chat.id === selectedThreadId
+                      }
+                      onClick={() => handleListItemClick(chat.id)}
+                    />
+                  ))}
+                </>
+              )}
+              {oldChats.length > 0 && (
+                <>
+                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                    OLDER CHATS
+                  </OverlineThreeText>
+                  {oldChats.map(chat => (
+                    <ThreadItem
+                      key={chat.id}
+                      chat={chat}
+                      selected={
+                        !showNotifications && chat.id === selectedThreadId
+                      }
+                      onClick={() => handleListItemClick(chat.id)}
+                    />
+                  ))}
+                </>
+              )}
+            </List>
+          </div>
         )}
-
-        <div className={styles.sidebarContent}>
-          <List disablePadding={true}>
-            {todayChats.length > 0 && (
-              <>
-                <OverlineThreeText className={styles.sidebarSectionTitle}>
-                  TODAY
-                </OverlineThreeText>
-                {todayChats.map(chat => (
-                  <ThreadItem
-                    key={chat.id}
-                    chat={chat}
-                    selected={
-                      !showNotifications && chat.id === selectedThreadId
-                    }
-                    onClick={() => handleListItemClick(chat.id)}
-                  />
-                ))}
-              </>
-            )}
-            {past7DaysChats.length > 0 && (
-              <>
-                <OverlineThreeText className={styles.sidebarSectionTitle}>
-                  PREVIOUS 7 DAYS
-                </OverlineThreeText>
-                {past7DaysChats.map(chat => (
-                  <ThreadItem
-                    key={chat.id}
-                    chat={chat}
-                    selected={
-                      !showNotifications && chat.id === selectedThreadId
-                    }
-                    onClick={() => handleListItemClick(chat.id)}
-                  />
-                ))}
-              </>
-            )}
-            {past30DaysChats.length > 0 && (
-              <>
-                <OverlineThreeText className={styles.sidebarSectionTitle}>
-                  PREVIOUS 30 DAYS
-                </OverlineThreeText>
-                {past30DaysChats.map(chat => (
-                  <ThreadItem
-                    key={chat.id}
-                    chat={chat}
-                    selected={
-                      !showNotifications && chat.id === selectedThreadId
-                    }
-                    onClick={() => handleListItemClick(chat.id)}
-                  />
-                ))}
-              </>
-            )}
-            {oldChats.length > 0 && (
-              <>
-                <OverlineThreeText className={styles.sidebarSectionTitle}>
-                  OLDER CHATS
-                </OverlineThreeText>
-                {oldChats.map(chat => (
-                  <ThreadItem
-                    key={chat.id}
-                    chat={chat}
-                    selected={
-                      !showNotifications && chat.id === selectedThreadId
-                    }
-                    onClick={() => handleListItemClick(chat.id)}
-                  />
-                ))}
-              </>
-            )}
-          </List>
-        </div>
       </Box>
     </aside>
   );
