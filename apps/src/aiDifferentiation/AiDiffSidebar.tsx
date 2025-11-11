@@ -1,5 +1,6 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {OverlineThreeText} from '@code-dot-org/component-library/typography';
 import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import classNames from 'classnames';
@@ -131,62 +132,116 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
         )}
       >
         <Box className={styles.sidebarActions}>
-          <Button
-            isIconOnly
-            onClick={toggleSidebar}
-            icon={{
-              iconName: isCollapsed
-                ? 'arrow-right-to-line'
-                : 'arrow-left-to-line',
+          <WithTooltip
+            tooltipProps={{
+              tooltipId: 'sidebar-toggle-tooltip',
+              direction: 'onRight',
+              text: isCollapsed ? 'Collapse sidebar' : 'Expand sidebar',
+              className: styles.sidebarActionTooltip,
+              hideTail: true,
+              size: 's',
             }}
-            color="gray"
-            type="secondary"
-            size="s"
-            className={styles.sidebarToggleButton}
-          />
-          <Button
-            color={buttonColors.purple}
-            size="s"
-            type="primary"
-            onClick={() => {
-              setShowNotifications(false);
-              threadSelectCallback(0);
-            }}
-            isIconOnly={isCollapsed}
-            icon={isCollapsed ? {iconName: 'plus'} : undefined}
-            aria-label={commonI18n.aiDifferentiation_new_chat()}
-            iconLeft={!isCollapsed ? {iconName: 'plus'} : undefined}
-            text={
-              !isCollapsed ? commonI18n.aiDifferentiation_new_chat() : undefined
-            }
-          />
+          >
+            <Button
+              isIconOnly
+              onClick={toggleSidebar}
+              icon={{
+                iconName: isCollapsed
+                  ? 'arrow-right-to-line'
+                  : 'arrow-left-to-line',
+              }}
+              color="gray"
+              type="secondary"
+              size="s"
+              className={styles.sidebarToggleButton}
+            />
+          </WithTooltip>
+          {isCollapsed ? (
+            <WithTooltip
+              tooltipProps={{
+                tooltipId: 'new-chat-button-tooltip',
+                direction: 'onRight',
+                text: commonI18n.aiDifferentiation_new_chat(),
+                className: styles.sidebarActionTooltip,
+                hideTail: true,
+                size: 's',
+              }}
+            >
+              <Button
+                color={buttonColors.purple}
+                size="s"
+                type="primary"
+                onClick={() => {
+                  setShowNotifications(false);
+                  threadSelectCallback(0);
+                }}
+                isIconOnly
+                icon={{iconName: 'plus'}}
+                aria-label={commonI18n.aiDifferentiation_new_chat()}
+              />
+            </WithTooltip>
+          ) : (
+            <Button
+              color={buttonColors.purple}
+              size="s"
+              type="primary"
+              onClick={() => {
+                setShowNotifications(false);
+                threadSelectCallback(0);
+              }}
+              iconLeft={{iconName: 'plus'}}
+              text={commonI18n.aiDifferentiation_new_chat()}
+            />
+          )}
         </Box>
         {isCollapsed ? (
           <Box className={styles.sidebarActions}>
             {experiments.isEnabled('teacher-notifications') && (
-              <Button
-                isIconOnly
-                onClick={onNotificationsButtonClick}
-                className={classNames(
-                  unreadNotificationCount > 0 && styles.buttonWithUnreadDot
-                )}
-                color="black"
-                type="tertiary"
-                size="s"
-                icon={{iconName: 'bell'}}
-                aria-label={commonI18n.notifications()}
-              />
+              <WithTooltip
+                tooltipProps={{
+                  tooltipId: 'notifications-button-tooltip',
+                  direction: 'onRight',
+                  text: commonI18n.notifications(),
+                  className: styles.sidebarActionTooltip,
+                  hideTail: true,
+                  size: 's',
+                }}
+              >
+                <Button
+                  isIconOnly
+                  onClick={onNotificationsButtonClick}
+                  className={classNames(
+                    unreadNotificationCount > 0 && styles.buttonWithUnreadDot
+                  )}
+                  color="black"
+                  type="tertiary"
+                  size="s"
+                  icon={{iconName: 'bell'}}
+                  aria-label={commonI18n.notifications()}
+                />
+              </WithTooltip>
             )}
             {experiments.isEnabled('daily-bytes') && (
-              <Button
-                isIconOnly
-                onClick={onDailyBytesButtonClick}
-                color="black"
-                type="tertiary"
-                size="s"
-                icon={{iconName: 'podcast'}}
-                aria-label="Daily Bytes"
-              />
+              <WithTooltip
+                tooltipProps={{
+                  tooltipId: 'daily-bytes-button-tooltip',
+                  direction: 'onRight',
+                  text: 'Daily Bytes',
+                  className: styles.sidebarActionTooltip,
+                  hideTail: true,
+                  size: 's',
+                }}
+              >
+                <Button
+                  isIconOnly
+                  onClick={onDailyBytesButtonClick}
+                  color="black"
+                  type="tertiary"
+                  size="s"
+                  icon={{iconName: 'podcast'}}
+                  aria-label="Daily Bytes"
+                />
+              </WithTooltip>
             )}
           </Box>
         ) : (

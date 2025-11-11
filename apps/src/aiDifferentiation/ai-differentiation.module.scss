@@ -23,6 +23,7 @@ $body-height: 612;
 $fab-left: 11;
 $fab-bottom: 35;
 $fab-height: 48;
+$sidebar-tooltip-z-index: 2010;
 
 :export {
   containerHeight: $header-height + $body-height;
@@ -366,7 +367,6 @@ $fab-height: 48;
   align-self: stretch;
 }
 
-
 .buttonWithUnreadDot {
   position: relative;
 
@@ -388,6 +388,10 @@ $fab-height: 48;
   .sidebarActions {
     flex-direction: column;
   }
+}
+
+html body .sidebarActionTooltip {
+  z-index: $sidebar-tooltip-z-index;
 }
 
 .sidebarContent {
