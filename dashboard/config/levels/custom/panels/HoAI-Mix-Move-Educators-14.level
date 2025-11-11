@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-11-07T22:39:03.000Z",
   "level_num": "custom",
@@ -10,12 +11,12 @@
     "panels": [
       {
         "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\"><strong>Large Language Models (LLMs)</strong> — like ChatGPT or GitHub Copilot — are a type of AI trained to understand and generate human-like language.\n  </p>\n</div>",
-        "imageUrl": "https://images.code.org/202b63be936e0a94e34c7b1e8c4f4c55-Screenshot 2025-10-28 at 12.07.34 PM.png",
+        "imageUrl": "https://images.code.org/84a8fc62ef31b4c2d26721e3b51c04be-Screenshot 2025-11-10 at 1.50.49 PM.png",
         "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1"
       },
       {
         "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">LLMs are trained on enormous amounts of text, code, and conversation data. <br><br>They break all that information into tiny pieces called <strong>tokens</strong> (which might be a word, a character, or part of a word).\n  </p>\n</div>",
-        "imageUrl": "https://images.code.org/cf1253dad98aafa4847374e114e2226a-Screenshot 2025-10-28 at 12.13.36 PM.png",
+        "imageUrl": "https://images.code.org/7573b30d24d4c951bfc955ec623a3706-Screenshot 2025-11-10 at 1.49.07 PM.png",
         "key": "HoAI_pilot_5_musicX_-pl-3d352fd8-59b0-4867-bad6-e47083a5073f"
       },
       {
@@ -25,13 +26,12 @@
       },
       {
         "text": "<div style=\"\n  position:relative;\n  background:#fff;\n  border:1px solid rgba(0,0,0,0.08);\n  border-radius:12px;\n  padding:12px 14px;\n  box-shadow:0 4px 10px rgba(0,0,0,0.15);\n  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;\n  color:#222;\n  line-height:1.5;\n  max-width:600px;\n\">\n  <!-- Tail -->\n  <div style=\"\n    position:absolute;\n    left:14px;\n    bottom:-7px;\n    width:14px; height:14px;\n    background:#fff;\n    transform:rotate(45deg);\n    border-left:1px solid rgba(0,0,0,0.08);\n    border-bottom:1px solid rgba(0,0,0,0.08);\n  \"></div>\n\n  <p style=\"margin:0; font-size:20px;\">However, they don’t truly understand language or meaning. <br><br>Instead, they approximate understanding by identifying statistical patterns in data — which is why they can sound confident, even when they’re wrong.<br><br>In short, LLMs are powerful pattern recognizers, not conscious thinkers. <br><br>They excel at mimicking human expression, but it’s still up to humans to guide, verify, and interpret their output.\n  </p>\n</div>",
-        "imageUrl": "https://images.code.org/86e1e508354a56fdf45777ce94603443-Screenshot 2025-10-28 at 12.07.46 PM.png",
+        "imageUrl": "https://images.code.org/0c5f52f1253fed08fe9228646193950c-Screenshot 2025-11-10 at 1.48.39 PM.png",
         "key": "HoAI_pilot_5_musicX_-pl-2ae07053-0ae4-4aa3-a1f6-7abe1ca0da98"
       }
     ],
     "name_suffix": "_-pl"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-07T22:39:03.663+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_musicX_-pl\\\"\"],\"cloned_from\":\"HoAI_pilot_5_musicX_-pl\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-07T22:39:03.663+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_musicX_-pl\\\"\"],\"cloned_from\":\"HoAI_pilot_5_musicX_-pl\"},{\"changed_at\":\"2025-11-10 18:51:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Panels>
