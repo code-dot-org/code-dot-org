@@ -8,6 +8,10 @@
   right: 0;
   bottom: 0;
   z-index: 71;
+
+  &Gap {
+    top: 43px;
+  }
 }
 
 .guide {
@@ -41,6 +45,10 @@
 
   &BottomPosition {
     bottom: 20px;
+  }
+
+  &Gap {
+    top: 62px - 43px;
   }
 }
 
