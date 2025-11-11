@@ -628,6 +628,9 @@ const EVENTS = {
   RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
 
   // AI Teaching Assistant - Differentiation
+
+  // Dance Party (Lab2)
+  DANCE_PARTY_SESSION_END: 'Dance Party Session End',
 };
 
 const EVENT_GROUP_NAMES = {
