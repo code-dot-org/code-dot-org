@@ -161,7 +161,30 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             }
           />
         </Box>
-        {!isCollapsed && (
+        {isCollapsed ? (
+          <Box className={styles.sidebarActions}>
+            {experiments.isEnabled('teacher-notifications') && (
+              <Button
+                isIconOnly
+                onClick={onNotificationsButtonClick}
+                color="black"
+                type="tertiary"
+                icon={{iconName: 'bell'}}
+                aria-label={commonI18n.notifications()}
+              />
+            )}
+            {experiments.isEnabled('daily-bytes') && (
+              <Button
+                isIconOnly
+                onClick={onDailyBytesButtonClick}
+                color="black"
+                type="tertiary"
+                icon={{iconName: 'podcast'}}
+                aria-label="Daily Bytes"
+              />
+            )}
+          </Box>
+        ) : (
           <>
             {experiments.isEnabled('teacher-notifications') && (
               <button
@@ -199,31 +222,6 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             )}
           </>
         )}
-        {isCollapsed && (
-          <Box className={styles.sidebarActions}>
-            {experiments.isEnabled('teacher-notifications') && (
-              <Button
-                isIconOnly
-                onClick={onNotificationsButtonClick}
-                color="black"
-                type="tertiary"
-                icon={{iconName: 'bell'}}
-                aria-label={commonI18n.notifications()}
-              />
-            )}
-            {experiments.isEnabled('daily-bytes') && (
-              <Button
-                isIconOnly
-                onClick={onDailyBytesButtonClick}
-                color="black"
-                type="tertiary"
-                icon={{iconName: 'podcast'}}
-                aria-label="Daily Bytes"
-              />
-            )}
-          </Box>
-        )}
-
         {!isCollapsed && (
           <div className={styles.sidebarContent}>
             <List disablePadding={true}>
