@@ -62,6 +62,7 @@ export const useHandleFileUpload = (
       }
       sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, {
         fileName,
+        fileType: fileName.split('.').pop()?.toLowerCase() || '',
       });
     },
     [projectFiles, isStartMode, validationFile, dispatch, dialogControl]
