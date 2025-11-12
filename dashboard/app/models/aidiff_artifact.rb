@@ -48,5 +48,4 @@ class AidiffArtifact < ApplicationRecord
       }
     )
   end
-
 end
