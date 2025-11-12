@@ -239,12 +239,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const isStandalone =
     levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
 
+  const levelSpecificId = `generate-panel-${levelProperties.id}`;
   if (!packId) {
     return null;
   }
 
   return (
-    <Guide id="generate-panel" modal={modal}>
+    <Guide key={levelSpecificId} id={levelSpecificId} modal={modal}>
       {aiGenerateState === 'none' &&
         useAdlib &&
         levelProperties.longInstructions && (
