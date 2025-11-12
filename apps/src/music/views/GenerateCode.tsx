@@ -223,15 +223,17 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
-  const modal = [
-    'none',
-    'generating',
-    'generated',
-    'listening',
-    'listened',
-    'clearing-before-none',
-    'clearing-before-generating',
-  ].includes(aiGenerateState);
+  const modal = ['none', 'listened'].includes(aiGenerateState)
+    ? 'gap'
+    : [
+        'generating',
+        'generated',
+        'listening',
+        'clearing-before-none',
+        'clearing-before-generating',
+      ].includes(aiGenerateState)
+    ? 'full'
+    : undefined;
 
   const parentProperties = useParentLevelProperties();
   const isStandalone =

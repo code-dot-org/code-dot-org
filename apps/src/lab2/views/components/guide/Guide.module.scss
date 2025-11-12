@@ -1,5 +1,9 @@
 @use '../layout/variables.scss' as variables;
 
+$top-position: 62px;
+$bottom-position: 20px;
+$gap-height: 43px;
+
 .guideContainerModal {
   background-color: rgba(0 0 0 / .3);
   position: absolute;
@@ -8,6 +12,10 @@
   right: 0;
   bottom: 0;
   z-index: 71;
+
+  &Gap {
+    top: $gap-height;
+  }
 }
 
 .guide {
@@ -36,11 +44,15 @@
   }
 
   &NormalPosition {
-    top: 62px;
+    top: $top-position;
   }
 
   &BottomPosition {
-    bottom: 20px;
+    bottom: $bottom-position;
+  }
+
+  &Gap {
+    top: $top-position - $gap-height;
   }
 }
 

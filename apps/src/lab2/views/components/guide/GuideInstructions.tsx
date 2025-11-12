@@ -25,7 +25,7 @@ const GuideInstructions: React.FunctionComponent<GuideInstructionsProps> = ({
   const {longInstructions} = levelProperties;
 
   return (
-    <Guide id="guide-instructions" modal={false} width={width}>
+    <Guide id="guide-instructions" modal={undefined} width={width}>
       {longInstructions && (
         <MainInstructionsContent
           instructionsText={longInstructions}
