@@ -34,6 +34,7 @@ import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import SketchlabTourSteps from './sketchlabTourSteps';
@@ -68,7 +69,12 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   } = useSources<SketchlabSources>();
 
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Keeps track of files that we are in the process of uploading, so that we don't attempt to reupload
+  // while a request is in flight.
   const filesBeingUploadedRef = useRef<Set<string>>(new Set());
+
+  // Keeps a cache of files that we already have downloaded, so that we don't request them repeatedly.
   const downloadedFileDataRef = useRef<
     Record<ExcalidrawElement['id'], DataURL>
   >({});
@@ -208,6 +214,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     sourcesWithExternalFiles: ExcalidrawSourceWithExternalFiles
   ) => {
     const excalidrawInitialState = cloneDeep(sourcesWithExternalFiles);
+
+    // Should we be doing this? Shouldn't we be falling back if we don't have the file uploaded?
+    // Maybe we keep this in here temporarily for testing purposes, but remove it so we have a fallback longer term?
     Object.values(excalidrawInitialState?.files || {}).forEach(
       file => delete file.dataURL
     );
@@ -245,6 +254,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       await Promise.allSettled(imageDownloadPromises);
     }
 
+    // Excalidraw does not need to access externalFiles, so we remove it
+    // before passing this initial state to Excalidraw.
     delete excalidrawInitialState.externalFiles;
     return excalidrawInitialState as ExcalidrawInitialDataState;
   };
@@ -286,7 +297,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           }
         >
           <Excalidraw
-            initialData={convertToExcalidrawSources(currentSources.source)}
+            initialData={
+              experiments.isEnabledAllowingQueryString('s3-images')
+                ? convertToExcalidrawSources(currentSources.source)
+                : (currentSources.source as ExcalidrawInitialDataState)
+            }
             onChange={debouncedSerializeAndSaveWorkspace}
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
