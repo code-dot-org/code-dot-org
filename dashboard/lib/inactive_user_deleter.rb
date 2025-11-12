@@ -56,7 +56,7 @@ class InactiveUserDeleter
     # an order by id, causing an inefficient scan on the id index. Order does not matter
     # for this operation, so we can use a simple limit approach.
     loop do
-      account_batch = inactive_users.limit(BATCH_SIZE)
+      account_batch = inactive_users
       account_batch.each do |user|
         break if num_accounts_deleted >= limit
         delete_user(user)
@@ -86,7 +86,8 @@ class InactiveUserDeleter
     ActiveRecord::Base.connected_to(role: :reporting) do
       Queries::User::Inactive.
       call(inactive_since: inactive_since).
-      where.not(id: processed_user_ids)
+      where.not(id: processed_user_ids).
+      limit(BATCH_SIZE)
     end
   end
 
