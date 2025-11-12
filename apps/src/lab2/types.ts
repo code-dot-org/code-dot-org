@@ -116,6 +116,8 @@ type ExcalidrawFilesWithOptionalData = Record<
   ExcalidrawFileWithOptionalData
 >;
 
+// We add the externalFiles property to Excalidraw's default state
+// to map each file to an external URL (a location in S3) where we store the image.
 export type ExcalidrawSourceWithExternalFiles = Omit<
   ExcalidrawInitialDataState,
   'files'
