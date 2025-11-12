@@ -24,6 +24,7 @@ frontend_policies ||= []
 
 # Array of properties to append to the frontend AutoScalingGroup resource.
 frontend_properties ||= {}
+frontend_availability_zones ||= raise('frontend_availability_zones is required')
 
 image_id ||= {Ref: 'ImageId'}.to_json
 ssh_key_name ||= {Ref: 'SSHKeyName'}.to_json
@@ -100,7 +101,7 @@ frontend_device_name ||= '/dev/sda1'
     InstanceId: {Ref: "WebServerAMI" } %>
   FastSnapshotRestore: <%= lambda_fn 'FastSnapshotRestore',
     ImageIds: [{Ref: "AMI#{commit_hash}" }],
-    AvailabilityZones: AVAILABILITY_ZONES
+    AvailabilityZones: frontend_availability_zones
   %>
   ASGCount: <%= lambda_fn 'CountASG',
     Default: {

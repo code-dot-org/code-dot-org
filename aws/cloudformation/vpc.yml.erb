@@ -24,7 +24,7 @@ Resources:
     Type: AWS::EC2::VPCEndpoint
     Properties:
       RouteTableIds: <%=
-        azs.map {|az| "PrivateRouteTable#{az}"}.
+        availability_zone_suffixes.map {|az| "PrivateRouteTable#{az}"}.
           push('PublicRouteTable').
           map {|ref| {"Ref": ref}}.to_json
       %>
@@ -299,12 +299,12 @@ Resources:
     Type: AWS::RDS::DBSubnetGroup
     Properties:
       DBSubnetGroupDescription: Public Database Subnet Group
-      SubnetIds: <%=azs.map{|az| {Ref: "PublicSubnet#{az}"}}.to_json%>
+      SubnetIds: <%=availability_zone_suffixes.map{|az| {Ref: "PublicSubnet#{az}"}}.to_json%>
   RedshiftSubnetGroup:
     Type: AWS::Redshift::ClusterSubnetGroup
     Properties:
       Description: Redshift Public Subnet Group
-      SubnetIds: <%=azs.map{|az| {Ref: "PublicSubnet#{az}"}}.to_json%>
+      SubnetIds: <%=availability_zone_suffixes.map{|az| {Ref: "PublicSubnet#{az}"}}.to_json%>
   RedshiftSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -341,7 +341,7 @@ Resources:
     Properties:
       ReplicationSubnetGroupDescription: DMS Private Subnet Group.
       ReplicationSubnetGroupIdentifier: VPC-DMSSubnetGroup
-      SubnetIds: <%=azs.map{|az| {Ref: "Subnet#{az}"}}.to_json%>
+      SubnetIds: <%=availability_zone_suffixes.map{|az| {Ref: "Subnet#{az}"}}.to_json%>
 Outputs:
   VpcId:
     Description: VPC ID
