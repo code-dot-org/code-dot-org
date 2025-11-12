@@ -24,16 +24,10 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   return (
     <div
       id={id ? `${id}-container` : undefined}
-      className={
-        modal === 'gap'
-          ? classNames(
-              styles.guideContainerModal,
-              styles.guideContainerModalGap
-            )
-          : modal === 'full'
-          ? styles.guideContainerModal
-          : undefined
-      }
+      className={classNames(
+        modal && styles.guideContainerModal,
+        modal === 'gap' && styles.guideContainerModalGap
+      )}
     >
       <div
         id={id}
