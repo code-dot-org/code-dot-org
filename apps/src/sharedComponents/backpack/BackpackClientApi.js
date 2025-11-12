@@ -93,13 +93,13 @@ export default class BackpackClientApi {
   }
 
   /**
-   * Save a pythonlab file to the backpack
+   * Save a Codebridge (ie, MultiFile project) file to the backpack
    * @param {String} filename
    * @param {ProjectFile} fileContents ProjectFile
    * @param {Function} onError Function to call if file fails to save
    * @param {Function} onSuccess Function to call if file saves.
    */
-  savePythonlabFile(filename, fileContents, onError, onSuccess) {
+  saveCodebridgeFile(filename, fileContents, onError, onSuccess) {
     const fileObject = {[filename]: fileContents};
     this.updateFilesHelper(
       this.fileUploadsInProgress,
@@ -107,13 +107,7 @@ export default class BackpackClientApi {
       onError,
       onSuccess,
       () =>
-        this.saveFilesHelper(
-          fileObject,
-          [filename],
-          onError,
-          onSuccess,
-          'pythonlab'
-        )
+        this.saveFilesHelper(fileObject, [filename], onError, onSuccess, true)
     );
   }
 
@@ -165,14 +159,13 @@ export default class BackpackClientApi {
     }
   }
 
-  saveFilesHelper(filesJson, filenames, onError, onSuccess, appType) {
+  saveFilesHelper(filesJson, filenames, onError, onSuccess, multiFile) {
     this.fileUploadsInProgress = [...filenames];
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
-      const fileContents =
-        appType === 'pythonlab'
-          ? filesJson[filename].contents
-          : filesJson[filename].text;
+      const fileContents = multiFile
+        ? filesJson[filename].contents
+        : filesJson[filename].text;
       // write file with REQUEST_RETRY_COUNT failure retries
       this.writeSingleFileToBackpack(
         filename,

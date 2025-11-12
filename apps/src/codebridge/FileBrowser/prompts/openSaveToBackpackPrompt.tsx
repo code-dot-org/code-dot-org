@@ -96,10 +96,10 @@ export const openSaveToBackpackPrompt = async ({
         name: selectedFileName,
         contents: file.contents,
         folderId: DEFAULT_FOLDER_ID,
-        language: 'py',
+        language: file.language,
         active: false,
       } as ProjectFile;
-      backpackApi.savePythonlabFile(
+      backpackApi.saveCodebridgeFile(
         selectedFileName,
         fileContents,
         handleError(
