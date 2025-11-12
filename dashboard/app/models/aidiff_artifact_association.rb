@@ -42,8 +42,6 @@ class AidiffArtifactAssociation < ApplicationRecord
     when SharedConstants::AI_DIFF_ASSOCIATION[:SECTION]
       summary[:section_id] = section_id
     end
-
     summary
   end
-
 end
