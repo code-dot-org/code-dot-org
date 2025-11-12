@@ -288,20 +288,20 @@ steps:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
 
-  # - name: cache-staging-ci-build
-  #   image: plugins/s3-cache
-  #   volumes:
-  #     - name: mysql
-  #       path: /var/lib/mysql
-  #   settings:
-  #     filename: cache-staging-ci-build.tar.gz
-  #     endpoint: s3://cdo-drone
-  #     rebuild: true
-  #     debug: true
-  #     pull: true
-  #     mount:
-  #       - .
-  #       - /var/lib/mysql
+  - name: cache-staging-ci-build
+    image: plugins/s3-cache
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
+    settings:
+      filename: cache-staging-ci-build.tar.gz
+      endpoint: s3://cdo-drone
+      rebuild: true
+      debug: true
+      pull: true
+      mount:
+        - .
+        - /var/lib/mysql
 
 volumes:
   - name: mysql
@@ -313,10 +313,9 @@ trigger:
     - "staging-next"
   event:
     - push
-    - pull_request
 
 ---
 kind: signature
-hmac: c06215ca1b762700b1d0a6f4222b09ad5728404f0f0407f8ccb001cfcfc3d3c9
+hmac: d0de97812011e6377e6e652fa06cf7852542927d8db4ad52d5e4f4af77aa5bf3
 
 ...
