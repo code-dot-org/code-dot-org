@@ -39,10 +39,11 @@ export const HTMLPreview: React.FC = () => {
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
     const port = 'localhost' === environmentKey ? `:${location.port}` : '';
-
     return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
   }, []);
 
+  // The new preview is currently behind an experiment flag. We pass this flag
+  // through to the inner iframe via a query string so it knows whether or not to use the new preview.
   const previewQueryString = useMemo(() => {
     const useV2Preview = experiments.isEnabledAllowingQueryString(
       experiments.WEBLAB2_PREVIEW_V2
@@ -245,6 +246,8 @@ export const HTMLPreview: React.FC = () => {
     }
   }, [previewUrl, debouncedSource, isIframeLoaded]);
 
+  // Inform the inner preview when we start/finish loading the level,
+  // so it can avoid showing outdated content while we are loading.
   useEffect(() => {
     if (isIframeLoaded && iframeRef.current) {
       iframeRef.current.contentWindow?.postMessage(

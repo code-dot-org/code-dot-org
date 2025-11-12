@@ -11,6 +11,7 @@ import {
 } from './constants';
 import {addBaseTagToDocument} from './htmlParsingHelpers';
 
+// Hook that handles registering and communicating with the project service worker.
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
   currentFile: string | undefined
@@ -33,6 +34,7 @@ function useProjectServiceWorker(
             if (installingWorker) {
               installingWorker.addEventListener('statechange', () => {
                 if (installingWorker.state === 'installed') {
+                  // If we get a message that we have a new active service worker, update our reference.
                   setServiceWorker(installingWorker);
                 }
               });
@@ -47,7 +49,7 @@ function useProjectServiceWorker(
     }
   }, []);
 
-  // Send source data to service worker when it changes
+  // Send source data to service worker when it changes.
   useEffect(() => {
     if (serviceWorker && source) {
       const broadcastChannel = new BroadcastChannel(
@@ -72,7 +74,7 @@ function useProjectServiceWorker(
 
         // Determine MIME type based on file extension or language
         if (file.url) {
-          // Right not only images are handled via URL
+          // Right now only images are handled via URL
           url = file.url;
           mimeType = `image/${file.name.split('.').pop()?.toLowerCase()}`;
         } else if (file.language === 'html') {
@@ -100,19 +102,6 @@ function useProjectServiceWorker(
       broadcastChannel.close();
     }
   }, [serviceWorker, source]);
-
-  useEffect(() => {
-    if (serviceWorker && currentFile) {
-      const broadcastChannel = new BroadcastChannel(
-        PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
-      );
-      broadcastChannel.postMessage({
-        type: ProjectServiceWorkerMessageType.SET_CURRENT_FILE,
-        currentFile,
-      });
-      broadcastChannel.close();
-    }
-  }, [serviceWorker, currentFile]);
 
   function getFullyQualifiedFileName(
     fileName: string,

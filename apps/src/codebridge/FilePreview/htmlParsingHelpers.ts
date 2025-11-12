@@ -59,6 +59,8 @@ export const updateLinksToHtmlFiles = (doc: Document, fullFileName: string) => {
   });
 };
 
+// This adds a base tag to the header of the given document, setting its href to the provided baseHref.
+// If a base tag already exists, its href is updated.
 export const addBaseTagToDocument = (doc: Document, baseHref: string) => {
   let baseTag = doc.querySelector('base');
   if (!baseTag) {

@@ -13,6 +13,9 @@ import useProjectServiceWorker from './useProjectServiceWorker';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
 
+// Previewer for student code that utilizes a service worker to serve project files.
+// This allows us to handle linking between files within the project without hacking links in
+// the HTML, which is fragile and doesn't work for links set via JavaScript.
 const InnerHTMLPreview = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
@@ -21,7 +24,8 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
-  const [previewKeyIndex, setPreviewKeyIndex] = useState(0);
+  // Numerical key used to trigger iframe reloads when we have updates.
+  const [previewKey, setPreviewKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
   useProjectServiceWorker(source, currentFile);
   const [allowScripts, setAllowScripts] = useState(false);
@@ -44,16 +48,9 @@ const InnerHTMLPreview = () => {
       }
       const {data} = event;
       if (data.type === IframeMessageType.SET_SOURCE) {
-        if (!data.source) {
-          // Clear the preview if no source is provided. We are likely changing levels.
-          // todo: do we need to do this?
-          setSource(undefined);
-        } else {
-          setSource(data.source);
-        }
+        setSource(data.source);
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
         setCurrentFile(data.fileName);
-        // We don't need to update the parent, because they initiated this change.
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
       } else if (data.type === IframeMessageType.REFRESH) {
@@ -79,6 +76,7 @@ const InnerHTMLPreview = () => {
   }, [handleMessage, parentOrigin]);
 
   useEffect(() => {
+    // Set up a broadcast channel to receive messages from the service worker.
     const broadcastChannel = new BroadcastChannel(
       PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
     );
@@ -97,11 +95,11 @@ const InnerHTMLPreview = () => {
         event.data.type === ProjectServiceWorkerMessageType.RECEIVED_SOURCE
       ) {
         setServiceWorkerReady(true);
-        setPreviewKeyIndex(prevIndex => prevIndex + 1);
+        setPreviewKey(prevKey => prevKey + 1);
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.UPDATED_CURRENT_FILE
       ) {
-        setPreviewKeyIndex(prevIndex => prevIndex + 1);
+        setPreviewKey(prevKey => prevKey + 1);
       }
     };
     return () => {
@@ -113,7 +111,7 @@ const InnerHTMLPreview = () => {
     if (iframeRef.current) {
       iframeRef.current.contentWindow?.location.reload();
     }
-  }, [previewKeyIndex]);
+  }, [previewKey]);
 
   const getPreview = useCallback(() => {
     if (serviceWorkerReady && currentFile && !isLevelLoading) {
