@@ -296,20 +296,20 @@ steps:
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
       - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
 
-  # - name: cache-staging-ci-build
-  #   image: plugins/s3-cache
-  #   volumes:
-  #     - name: mysql
-  #       path: /var/lib/mysql
-  #   settings:
-  #     filename: cache-staging-ci-build.tar.gz
-  #     endpoint: s3://cdo-drone
-  #     rebuild: true
-  #     debug: true
-  #     pull: true
-  #     mount:
-  #       - .
-  #       - /var/lib/mysql
+  - name: cache-staging-ci-build
+    image: plugins/s3-cache
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
+    settings:
+      filename: cache-staging-ci-build.tar.gz
+      endpoint: s3://cdo-drone
+      rebuild: true
+      debug: true
+      pull: true
+      mount:
+        - .
+        - /var/lib/mysql
 
 volumes:
   - name: mysql
@@ -321,7 +321,6 @@ trigger:
     - "staging-next"
   event:
     - push
-    - pull_request
 
 ---
 kind: signature
