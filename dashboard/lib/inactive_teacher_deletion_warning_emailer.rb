@@ -37,12 +37,14 @@ class InactiveTeacherDeletionWarningEmailer
           mark_warning_email_sent(teacher.id) unless @dry_run
           self.num_teachers_warned += 1
 
-          Metrics::Events.log_event(
-            event_name: EVENT_NAME,
-            metadata: {
-              teacher_id: teacher.id,
-            }
-          )
+          unless @dry_run
+            Metrics::Events.log_event(
+              event_name: EVENT_NAME,
+              metadata: {
+                teacher_id: teacher.id,
+              }
+            )
+          end
         ensure
           processed_teacher_ids << teacher.id
         end
