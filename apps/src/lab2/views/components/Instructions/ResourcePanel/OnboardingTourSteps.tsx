@@ -1,6 +1,8 @@
 import {Steps} from 'intro.js-react';
-import React from 'react';
+import React, {useState} from 'react';
 
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
@@ -13,6 +15,7 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('noIntrojs') === 'true') {
   trySetLocalStorage(RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN, 'yes');
 }
+const RESOURCE_PANEL_ONBOARDING_FLOW_NAME = 'Resource Panel Onboarding';
 
 // Note that this introjs flow includes a step that highlights the navigation button which is always visible
 // at the bottom of the resource panel (whether it's enabled or not).
@@ -22,17 +25,35 @@ const OnboardingTourSteps: React.FC = () => {
     RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     'no'
   );
+  const [tourStep, setTourStep] = useState(0);
 
   return (
     <Steps
       enabled={resourcePanelPinnedButtonOnboardingTourSeen !== 'yes'}
       initialStep={INITIAL_STEP}
       steps={STEPS}
+      onStart={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, {
+          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_NAME,
+        });
+      }}
       onExit={() => {
         trySetLocalStorage(
           RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
           'yes'
         );
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, {
+          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_NAME,
+          step: tourStep.toString(),
+        });
+      }}
+      onComplete={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, {
+          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_NAME,
+        });
+      }}
+      onChange={nextStepIndex => {
+        setTourStep(nextStepIndex);
       }}
       options={{
         scrollToElement: false,

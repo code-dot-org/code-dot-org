@@ -628,6 +628,11 @@ const EVENTS = {
   RESOURCE_PANEL_LANGUAGE_CHANGE: 'Resource Panel Language Change',
   RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
 
+  // IntroJS flows
+  INTROJS_FLOW_STARTED: 'IntroJS Flow Started',
+  INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
+  INTROJS_FLOW_COMPLETED: 'IntroJS Flow Completed',
+
   // AI Teaching Assistant - Differentiation
 
   // Dance Party (Lab2)
