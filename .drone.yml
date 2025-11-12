@@ -62,8 +62,13 @@ steps:
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # Validate cache restore
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
-      - "[ -f docker/ci/scripts/validate_file_count.sh ] || { echo 'ERROR: Cache restore failed: validate_file_count.sh not found'; exit 1; }"
-      - docker/ci/scripts/validate_file_count.sh
+      - |
+        if [ -f .cached-staging-build-file-count ]; then
+          expected=$(cat .cached-staging-build-file-count)
+          actual=$(find . -type f -not -path './.git/*' | wc -l)
+          diff=$((actual - expected))
+          [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
+        fi
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (=the PR)
@@ -174,8 +179,13 @@ steps:
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # Validate cache restore
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
-      - "[ -f docker/ci/scripts/validate_file_count.sh ] || { echo 'ERROR: Cache restore failed: validate_file_count.sh not found'; exit 1; }"
-      - docker/ci/scripts/validate_file_count.sh
+      - |
+        if [ -f .cached-staging-build-file-count ]; then
+          expected=$(cat .cached-staging-build-file-count)
+          actual=$(find . -type f -not -path './.git/*' | wc -l)
+          diff=$((actual - expected))
+          [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
+        fi
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (the PR's branch).
