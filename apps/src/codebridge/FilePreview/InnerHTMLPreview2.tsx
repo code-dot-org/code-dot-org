@@ -57,6 +57,9 @@ const InnerHTMLPreview = () => {
         iframeRef.current?.contentWindow?.location.reload();
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
         setIsLevelLoading(data.isLoading);
+        if (data.isLoading) {
+          setServiceWorkerReady(false);
+        }
       }
     },
     [parentOrigin]
