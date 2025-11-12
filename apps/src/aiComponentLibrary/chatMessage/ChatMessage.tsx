@@ -30,11 +30,14 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   messageStyle = 'default',
 }) => {
   /*
-   * A rehype component map used to map between `pre` tags and `CopyableCodeBlock` components.
+   * Rehype component maps used to map between `pre` tags and `CopyableCodeBlock` components.
    *
    * For performance reasons, it is the `SafeMarkdown` consumer's responsibility to create the
    * rehypeMap outside  of the component function or to define the mapping in an ES module and
    * import it, if used in multiple components. See `SafeMarkdown` for more info.
+   *
+   * In this case, we create two maps outside the component function to pass different prop values
+   * for `isTA` and then dynamically decide which map to use from within the component function.
    **/
   const taRehypeMap = {
     pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
