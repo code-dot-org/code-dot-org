@@ -515,6 +515,7 @@ const EVENTS = {
   // AI chat response copied. Shared across features; check event properties for usage and clientType
   // to determine feature.
   CHAT_COPIED: 'User copied an AI chat response',
+  CODE_COPIED: 'User copied AI-generated code snippet',
 
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:

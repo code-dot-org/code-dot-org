@@ -20,15 +20,6 @@ interface ChatMessageProps {
   messageStyle?: 'default' | 'warning' | 'danger';
 }
 
-/*
- * A rehype component map used to map between `pre` tags and `CopyableCodeBlock` components.
- *
- * For performance reasons, it is the `SafeMarkdown` consumer's responsibility to create the
- * rehypeMap outside  of the component function or to define the mapping in an ES module and
- * import it, if used in multiple components. See `SafeMarkdown` for more info.
- **/
-const rehypeMap = {pre: CopyableCodeBlock};
-
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
   role,
@@ -38,6 +29,25 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   isTA,
   messageStyle = 'default',
 }) => {
+  /*
+   * A rehype component map used to map between `pre` tags and `CopyableCodeBlock` components.
+   *
+   * For performance reasons, it is the `SafeMarkdown` consumer's responsibility to create the
+   * rehypeMap outside  of the component function or to define the mapping in an ES module and
+   * import it, if used in multiple components. See `SafeMarkdown` for more info.
+   **/
+  const taRehypeMap = {
+    pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
+      <CopyableCodeBlock {...props} isTA={true} />
+    ),
+  };
+
+  const nonTaRehypeMap = {
+    pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
+      <CopyableCodeBlock {...props} isTA={false} />
+    ),
+  };
+  const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
   return (
     <div
       className={classNames(
