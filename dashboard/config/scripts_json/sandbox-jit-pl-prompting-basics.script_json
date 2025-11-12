@@ -4,13 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "content_area": "skills_focused_self_paced_pl",
-      "curriculum_umbrella": "AIF",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-27 21:36:45 UTC",
+    "serialized_at": "2025-11-12 18:33:37 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -118,6 +116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "jit-pl-prompting-basics-overview-1"
+        ],
         "progression": "Prompting Power-Ups"
       },
       "bonus": false,
@@ -140,6 +141,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "jit-pl-prompting-basics-buggy-code-2"
+        ],
         "progression": "Power-Up in Action"
       },
       "bonus": false,
@@ -162,6 +166,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "jit-pl-prompting-basics-fix-my-code-3"
+        ],
         "progression": "Power-Up in Action"
       },
       "bonus": false,
@@ -184,6 +191,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "jit-pl-prompting-basics-explain-why-4"
+        ],
         "progression": "Power-Up in Action"
       },
       "bonus": false,
@@ -206,6 +216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "jit-pl-prompting-basics-prompt-power-up-5"
+        ],
         "progression": "Power-Up Practice"
       },
       "bonus": false,
@@ -228,6 +241,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "jit-pl-prompting-basics-hold-6"
+        ],
         "progression": "Power-Up Practice"
       },
       "bonus": false,
@@ -250,6 +266,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "jit-pl-prompting-basics-reflection-7"
+        ],
         "progression": "Power-Up Practice"
       },
       "bonus": false,
@@ -272,6 +291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "jit-pl-prompting-basics-wrap-up-8"
+        ],
         "progression": "Power-Up Unlocked "
       },
       "bonus": false,
