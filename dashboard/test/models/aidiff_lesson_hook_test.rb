@@ -160,7 +160,6 @@ class AidiffLessonHookTest < ActiveSupport::TestCase
       content: {blah: "lol"}.to_json,
     )
 
-
     lesson_hook.aidiff_artifact_associations.create!(association_type: "section", section: section)
     lesson_hook2.aidiff_artifact_associations.create!(association_type: "section", section: section)
 
