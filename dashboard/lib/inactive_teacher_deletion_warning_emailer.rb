@@ -34,7 +34,7 @@ class InactiveTeacherDeletionWarningEmailer
           next if teacher.email.blank?
           send_warning_email(teacher)
           # Set email sent at field
-          mark_warning_email_sent(teacher.id)
+          mark_warning_email_sent(teacher.id) unless @dry_run
           self.num_teachers_warned += 1
 
           Metrics::Events.log_event(
