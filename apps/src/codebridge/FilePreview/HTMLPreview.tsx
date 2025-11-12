@@ -8,6 +8,7 @@ import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {getLabViewPageAction, LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
@@ -38,8 +39,17 @@ export const HTMLPreview: React.FC = () => {
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
     const port = 'localhost' === environmentKey ? `:${location.port}` : '';
+
     return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
   }, []);
+
+  const previewQueryString = useMemo(() => {
+    const useV2Preview = experiments.isEnabledAllowingQueryString(
+      experiments.WEBLAB2_PREVIEW_V2
+    );
+    return useV2Preview ? `?${experiments.WEBLAB2_PREVIEW_V2}=true` : '';
+  }, []);
+
   const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
   const [navigationHistoryIndex, setNavigationHistoryIndex] = useState(-1);
 
@@ -306,7 +316,7 @@ export const HTMLPreview: React.FC = () => {
                 ? moduleStyles.desktopPreviewIframe
                 : moduleStyles.mobilePreviewIframe
             )}
-            src={previewUrl}
+            src={`${previewUrl}${previewQueryString}`}
           />
         </div>
       </div>

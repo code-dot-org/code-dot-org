@@ -25,12 +25,7 @@ function useProjectServiceWorker(
       navigator.serviceWorker
         .register('/weblab2_project_service_worker.js')
         .then(registration => {
-          console.log(
-            'Project Service Worker registered with scope:',
-            registration.scope
-          );
           if (registration.active) {
-            console.log('found active service worker');
             setServiceWorker(registration.active);
           }
           registration.addEventListener('updatefound', () => {
@@ -58,7 +53,6 @@ function useProjectServiceWorker(
       const broadcastChannel = new BroadcastChannel(
         PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
       );
-      console.log('Sending source data to service worker:', source);
       // Prepare files data for service worker
       const filesData: Record<
         string,
@@ -97,7 +91,6 @@ function useProjectServiceWorker(
 
         filesData[fullFileName] = {content, mimeType, url};
       });
-      console.log({filesData});
 
       // Send files data to service worker
       broadcastChannel.postMessage({
@@ -105,17 +98,11 @@ function useProjectServiceWorker(
         files: filesData,
       });
       broadcastChannel.close();
-    } else {
-      console.log('skipping sending to service worker', {
-        serviceWorker,
-        source,
-      });
     }
   }, [serviceWorker, source]);
 
   useEffect(() => {
     if (serviceWorker && currentFile) {
-      console.log('Notifying service worker of current file:', currentFile);
       const broadcastChannel = new BroadcastChannel(
         PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
       );

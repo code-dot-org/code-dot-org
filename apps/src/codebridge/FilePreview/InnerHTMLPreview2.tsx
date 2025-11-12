@@ -88,7 +88,6 @@ const InnerHTMLPreview = () => {
       ) {
         const filePath = event.data.filePath;
         setCurrentFile(filePath);
-        console.log('Notifying parent of HTML file change:', filePath);
         // Notify parent of the file change
         window.parent.postMessage(
           {type: IframeMessageType.FILE_UPDATED, fileName: filePath},
@@ -97,16 +96,12 @@ const InnerHTMLPreview = () => {
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.RECEIVED_SOURCE
       ) {
-        console.log('Received source acknowledged by service worker');
         setServiceWorkerReady(true);
         setPreviewKeyIndex(prevIndex => prevIndex + 1);
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.UPDATED_CURRENT_FILE
       ) {
-        console.log('Service worker confirmed current file update');
         setPreviewKeyIndex(prevIndex => prevIndex + 1);
-      } else {
-        console.log('Unknown message from service worker:', event.data);
       }
     };
     return () => {

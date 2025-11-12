@@ -44,7 +44,6 @@ function main() {
     const {type, files} = event.data;
     if (type === UPDATE_FILES) {
       filesData = files || {};
-      console.log('Service worker received files:', Object.keys(filesData));
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
     }
   };
@@ -57,16 +56,13 @@ function main() {
     if (filesData[referrerFile] && requestedFile === '') {
       // If the request is for the root of the project and it's coming from a file in the project,
       // return index.html instead of trying to fetch a non-existent root file.
-      console.log('getting index.html for referrer', {referrerFile, url});
       requestedFile = 'index.html';
     }
     if (url.origin === location.origin && filesData[requestedFile]) {
-      console.log('Service worker intercepting fetch for:', url.pathname);
       event.respondWith(
         handleProjectRequest(requestedFile, filesData[requestedFile])
       );
     } else {
-      console.log('Returning for', url.pathname);
       // Still send SERVING_HTML_FILE message for non-project files.
       // This allows the URL bar to update correctly when an invalid url is requested.
       if (requestedFile.endsWith('.html')) {
