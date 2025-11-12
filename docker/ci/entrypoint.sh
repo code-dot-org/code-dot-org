@@ -5,6 +5,9 @@ eval $( fixuid )
 
 cd $HOME/code-dot-org
 
+# test if sudo is taking a long time to run
+time sudo true
+
 # Need to change ownership of volume mounts which are not bind-mounted to the uid/gid after fixuid is applied
 sudo chown -R $USER:$GROUP \
         $HOME/.rbenv \
