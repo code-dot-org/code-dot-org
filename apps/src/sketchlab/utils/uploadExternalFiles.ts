@@ -1,6 +1,7 @@
 import {
   SketchlabProjectFile,
   ExcalidrawSourceWithExternalFiles,
+  SketchlabExternalFiles,
 } from '@cdo/apps/lab2/types';
 
 import {SketchlabSources, SerializedExcalidrawState} from '../types';
@@ -24,7 +25,7 @@ const MIME_TO_EXT = {
   'application/octet-stream': 'bin',
 };
 
-export const uploadExternalFiles = (
+export const uploadExternalFiles = async (
   source: ExcalidrawSourceWithExternalFiles,
   serializedData: SerializedExcalidrawState,
   filesBeingUploadedRef: React.MutableRefObject<Set<string>>,
@@ -37,8 +38,13 @@ export const uploadExternalFiles = (
     id => !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
   );
 
+  if (!newFileIds.length) {
+    return;
+  }
+
+  const uploadedFiles: SketchlabExternalFiles = {};
   if (newFileIds.length && serializedData.files) {
-    newFileIds.map(async fileId => {
+    const fileUploadPromises = newFileIds.map(async fileId => {
       filesBeingUploadedRef.current.add(fileId);
 
       // TO DO: update to support starter assets.
@@ -61,16 +67,11 @@ export const uploadExternalFiles = (
         newExternalFile.uploadFailed = true;
       }
 
-      updateSources({
-        source: {
-          ...source,
-          externalFiles: {
-            ...source.externalFiles,
-            [fileId]: newExternalFile,
-          },
-        },
-      });
+      uploadedFiles[fileId] = newExternalFile;
       filesBeingUploadedRef.current.delete(fileId);
     });
+
+    await Promise.allSettled(fileUploadPromises);
+    return uploadedFiles;
   }
 };

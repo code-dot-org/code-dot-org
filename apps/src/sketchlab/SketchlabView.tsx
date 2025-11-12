@@ -127,7 +127,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         saveSourcesTimeoutRef.current = null;
       }
 
-      saveSourcesTimeoutRef.current = setTimeout(() => {
+      saveSourcesTimeoutRef.current = setTimeout(async () => {
         const serializedData: SerializedExcalidrawState = JSON.parse(
           serializeAsJSON(elements, state, files, 'local')
         );
@@ -153,13 +153,25 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
         // In start mode, we manage saving explicitly via the button in the header.
         if (!getIsStartMode()) {
-          uploadExternalFiles(
-            currentSources.source,
+          const uploadedFiles = await uploadExternalFiles(
+            currentSources.source, // remove this
             serializedData,
             filesBeingUploadedRef,
             channelId,
             updateSources
           );
+
+          if (uploadedFiles) {
+            updateSources({
+              source: {
+                ...currentSources.source,
+                externalFiles: {
+                  ...currentSources.source.externalFiles,
+                  ...uploadedFiles,
+                },
+              },
+            });
+          }
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
