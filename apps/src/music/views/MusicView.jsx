@@ -484,7 +484,12 @@ class UnconnectedMusicView extends React.Component {
     const imageAttributions = this.library.getImageAttributions();
     if (imageAttributions.length > 0) {
       setExtraCopyrightContent(
-        <ImageAttributions attributions={this.library.getImageAttributions()} />
+        <>
+          <ImageAttributions
+            attributions={this.library.getImageAttributions()}
+          />
+          <p>Additional audio by William Cremin.</p>
+        </>
       );
     }
   };
