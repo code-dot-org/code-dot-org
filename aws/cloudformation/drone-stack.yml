@@ -45,7 +45,7 @@ Parameters:
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/ecs/optimized-ami/amazon-linux/recommended/image_id
   AutoscalerECSAMI:
-    Description: AMI ID
+    Description: AMI ID for ECS Optimized AMI
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id
 Resources:
@@ -459,6 +459,20 @@ Resources:
       MinSize: 1
       MaxSize: 1
       DesiredCapacity: 1
+    UpdatePolicy:
+      AutoScalingRollingUpdate:
+        MinInstancesInService: 0
+        MaxBatchSize: 1
+        PauseTime: PT5M
+        WaitOnResourceSignals: false
+        SuspendProcesses:
+          - HealthCheck
+          - ReplaceUnhealthy
+          - AZRebalance
+          - AlarmNotification
+          - ScheduledActions
+      AutoScalingReplacingUpdate:
+        WillReplace: true
 
   DroneAutoscalerEcsSecurityGroup:
     Type: AWS::EC2::SecurityGroup
