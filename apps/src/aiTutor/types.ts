@@ -20,6 +20,8 @@ export interface AiTutorContext {
   documentation?: string;
   documentationLocation?: string;
   consoleOutput?: string;
+  hasRun?: boolean;
+  hasEdited?: boolean;
 }
 
 export interface AnalyticsData {
