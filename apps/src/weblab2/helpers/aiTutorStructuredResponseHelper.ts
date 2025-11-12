@@ -12,8 +12,11 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           'Ask',
           'Hint',
           'Debug',
-          'Explain',
-          'Refuse',
+          'Explain Code',
+          'Example',
+          'Pseudocode',
+          'Documentation',
+          'Refusal',
         ],
       },
       goal: {
@@ -40,7 +43,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           additionalProperties: false,
         },
         description:
-          '`html` and/or `css` fences. When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation. The student will need to copy and paste this code into their project.',
+          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation. The student will need to copy and paste this code into their project.',
       },
       explanation: {
         type: 'string',

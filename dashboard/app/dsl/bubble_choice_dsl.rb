@@ -48,6 +48,16 @@ class BubbleChoiceDSL < ContentDSL
     @hash[:custom_mode] = text
   end
 
+  def navigation_type(type)
+    valid_types = SharedConstants::BUBBLE_CHOICE_NAVIGATION_TYPES.values
+    unless valid_types.include?(type)
+      raise "Invalid navigation_type '#{type}'. Valid types are: #{valid_types.join(', ')}"
+    end
+    @hash[:navigation_type] = type
+  end
+
+  def finish_dialog(text) @hash[:finish_dialog] = text end
+
   def self.serialize(level)
     new_dsl = "name '#{escape(level.name)}'"
     new_dsl += "\neditor_experiment '#{level.editor_experiment}'" if level.editor_experiment.present?

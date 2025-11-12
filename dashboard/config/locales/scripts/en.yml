@@ -9925,6 +9925,8 @@ en:
               name: EscA.I.pe Room
             lesson-14:
               name: Sketch Lab Levels
+            lesson-15:
+              name: AIF Sem 2 - Unit 2 - Lesson 1
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -20261,7 +20263,7 @@ en:
               name: Ensuring a Responsible Approach to AI
           lesson_groups: {}
           name: self-paced-pl-ai-districts-2024
-          title: AI 101 Professional Learning for Districts
+          title: AI 101 Professional Learning for District Leaders
           description_audience: ''
           description_short: "## Welcome!  ##### This professional learning module is designed to introduce you to AI and its impact on your role as a district leader.  ### Find the learning that works for you * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**  * **Pick your content:** The content is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**"
           description: "## Welcome! \n##### This professional learning module is designed to introduce you to AI and its impact on your role as a district leader.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**"
@@ -25255,16 +25257,8 @@ en:
           title: Pre-Learning for Teaching AI Foundations Semester 2
           description_audience: ''
           description_short: ''
-          description: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
-
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
-          student_description: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
-
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          description: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? "
+          student_description: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? "
         pl-sandbox-aif-sem-2-unit-1:
           lessons:
             lesson-1:
@@ -25274,29 +25268,38 @@ en:
           title: Teaching Introduction AI Generated Design
           description_audience: ''
           description_short: ''
-          description: |
+          description: |+
             ## Welcome
             #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
 
-            #### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
-          student_description: |-
+
+          student_description: |+
             ## Welcome
             #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
 
-            #### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
         pl-sandbox-aif-sem-2-unit-2:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Teaching AI and Algorithmic Thinking
           lesson_groups: {}
           name: pl-sandbox-aif-sem-2-unit-2
-          title: ''
+          title: Teaching AI and Algorithmic Decisions
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ## Welcome!
+            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+
+            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+          student_description: |-
+            ## Welcome!
+            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+
+            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
         aif1-v2-2025:
           lesson_groups:
             lessonGroup-3:
@@ -25834,6 +25837,10 @@ en:
               name: Web Lab 2 - Mode Exploration
             lesson-2:
               name: Sketch Lab - Wireframe Assets
+            lesson-3:
+              name: Unit 3 Prototypes
+            lesson-4:
+              name: Unit 4 Prototypes
           lesson_groups: {}
           name: aif-all-the-things
           title: All the AIF Things!
@@ -25857,13 +25864,21 @@ en:
           title: Teaching AI-Generated Design
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          student_description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
         self-paced-pl-ai-and-algorithmic-decisions-pilot-2025:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-ai-and-algorithmic-decisions-pilot-2025
-          title: Teaching AI and Algorithmic Decisions
+          title: "[PILOT] Teaching AI and Algorithmic Decisions"
           description_audience: ''
           description_short: ''
           description: ''
@@ -25930,3 +25945,39 @@ en:
             #### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.
 
             #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+        mix-move-ai:
+          lessons: {}
+          lesson_groups: {}
+        mix-move-ai-2025:
+          lessons:
+            lesson-1:
+              name: Mix & Move with AI
+          lesson_groups: {}
+          name: mix-move-ai-2025
+          title: Mix & Move with AI
+          description_audience: ''
+          description_short: Bring dance, music, and coding together in this interactive Hour of AI tutorial.
+          description: Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat. Along the way, they learn AI basics like prompting and coding basics like sequencing and parallelism, all while exploring how AI can amplify creativity while keeping them in control. Perfect for sparking curiosity, confidence, and classroom energy!
+          student_description: Ready to mix design, music, and dance together? In Mix & Move with AI, you’ll design your own dancer, mix music from artists like Sabrina Carpenter, Benson Boone, and Shakira, and code a dance performance — all while exploring how AI can help you try out ideas faster while staying in charge. It’s a fun, creative way to explore coding and AI!
+        dan-playground:
+          lessons:
+            lesson-1:
+              name: Video Spike
+          lesson_groups: {}
+          name: dan-playground
+          title: Dan's Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        mix-move-ai-educators-2025:
+          lessons:
+            lesson-1:
+              name: Mix & Move with AI
+          lesson_groups: {}
+          name: mix-move-ai-educators-2025
+          title: Mix & Move with AI - Educator's Experience
+          description_audience: ''
+          description_short: ''
+          description: "<section style=\"max-width:800px; margin:50px auto; padding:0 20px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif; color:#333; line-height:1.6;\">\n\n  <h2 style=\"text-align:center; color:#1a8a9a; font-size:32px; margin-bottom:10px;\">\n    Bring Dance, Music, and Coding Together\n  </h2>\n\n  <p style=\"font-size:18px; margin-top:20px;\">\n    In this self-guided professional learning activity, educators explore \n    <strong>Mix & Move with AI</strong> just like students do — using Artificial Intelligence \n    to generate a dancer, remix music, and choreograph moves through code.\n  </p>\n\n  <p style=\"font-size:18px;\">\n    Along the way, you’ll learn how AI “learns” from data, experiment with how AI models create \n    images, text, and code, and explore how these tools can support creativity and problem-solving \n    in the classroom. You’ll also build confidence introducing AI-related learning with your students.\n  </p>\n\n  <p style=\"font-size:18px; font-weight:500; color:#555; margin-top:24px;\">\n    Perfect for sparking curiosity, creativity, and confidence in both teaching with AI \n    and learning about AI.\n  </p>\n\n</section>"
+          student_description: ''

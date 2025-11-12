@@ -1,7 +1,10 @@
 import lottie, {type AnimationItem} from 'lottie-web';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import DCDO from '@cdo/apps/dcdo';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {GENERATED_DANCER_STORAGE_KEY} from '../ai/constants';
 
 import {
   CanvasAnimConfig,
@@ -24,17 +27,26 @@ import {
   RGBA,
 } from './LottieDancerTypes';
 
-const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
+const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate/dancer';
 
 const DEFAULT_IMAGE_SIZE = 1024;
 
-const DEFAULT_PATH = 'default';
-const DEFAULT_DANCER = 'default';
+const DEFAULT_DANCER_PATH = `${BASE_HOST}/default`;
+const DEFAULT_HEAD_URL = `${DEFAULT_DANCER_PATH}/default.png`;
+const DEFAULT_METADATA_URL = `${DEFAULT_DANCER_PATH}/default-metadata.json`;
 
-const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${DEFAULT_PATH}/${DEFAULT_DANCER}.png`;
-const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${DEFAULT_PATH}/${DEFAULT_DANCER}-metadata.json`;
-const DEFAULT_BODY_URL = `${BASE_HOST}/dancers/bodies/default.svg`;
-const DEFAULT_BODY_METADATA_URL = `${BASE_HOST}/dancers/bodies/default.json`;
+const BODIES_PATH = `${BASE_HOST}/bodies`;
+const DEFAULT_BODY_URL = `${BODIES_PATH}/default.svg`;
+const DEFAULT_BODY_METADATA_URL = `${BODIES_PATH}/default.json`;
+
+const SKELETONS_PATH = `${BASE_HOST}/skeletons`;
+const PALETTES_PATH = `${SKELETONS_PATH}/palettes`;
+
+const DEFAULT_HEAD_SCALE = 0.5;
+
+// When we improve the palette, we want both secondary and tertiary to be at least
+// this far from the primary, when measured using simple Euclidean color distance.
+const COLOR_DISTANCE_REQUIRED = 0.32;
 
 // Expected colors to replace in body SVGs.
 const BODY_SVG_PRIMARY = '#33FF21';
@@ -82,27 +94,37 @@ export const getConfigValue = (name: string) =>
 
 // Given information about a generated dancer, this returns the URL for the head image.
 function getGeneratedDancerAssets(
-  adlibOption: string,
+  path: string,
   choices: string[] | undefined,
+  choicesExtra: string[] | null,
   variant: number,
-  bodyVariant: number | null
+  extraVariant: number | null
 ) {
   const joinedChoices = choices?.join('-');
-  const dancerPath = `${BASE_HOST}/dancer/${adlibOption}/${joinedChoices}-${variant
+  const dancerPath = `${BASE_HOST}/${path}/${joinedChoices}-${variant
     .toString()
     .padStart(2, '0')}`;
   const head = `${dancerPath}.png`;
   const metadata = `${dancerPath}-metadata.json`;
-  const adjectiveIndex = adlibOption.split('-').indexOf('adjective');
-  const bodyPath = `${BASE_HOST}/dancers/bodies/`;
-  let body = `${bodyPath}default.svg`;
-  let bodyMetadata = `${bodyPath}default.json`;
-  if (adjectiveIndex >= 0 && choices && choices[adjectiveIndex]) {
-    const adlibBody = `${choices[adjectiveIndex]}-${bodyVariant
-      ?.toString()
-      .padStart(2, '0')}`;
-    body = `${bodyPath}${adlibBody}.svg`;
-    bodyMetadata = `${bodyPath}${adlibBody}.json`;
+
+  // Body selection logic: 1) default, 2) extra choices, 3) adlib choice
+  let body = `${BODIES_PATH}/default.svg`;
+  let bodyMetadata = `${BODIES_PATH}/default.json`;
+
+  const extraVariantString = extraVariant?.toString().padStart(2, '0') || '00';
+  // If we have choicesExtra, use them with the extraVariant to select body.
+  if (Array.isArray(choicesExtra) && choicesExtra.length > 0) {
+    const bodyName = `${choicesExtra.join('-')}-${extraVariantString}`;
+    body = `${BODIES_PATH}/${bodyName}.svg`;
+    bodyMetadata = `${BODIES_PATH}/${bodyName}.json`;
+  } else {
+    // If no choicesExtra, see if the path from adlibOption includes 'adjective' to select body.
+    const adjectiveIndex = path.split('-').indexOf('adjective');
+    if (adjectiveIndex >= 0 && choices && choices[adjectiveIndex]) {
+      const adlibBody = `${choices[adjectiveIndex]}-${extraVariantString}`;
+      body = `${BODIES_PATH}/${adlibBody}.svg`;
+      bodyMetadata = `${BODIES_PATH}/${adlibBody}.json`;
+    }
   }
   return {head, metadata, body, bodyMetadata};
 }
@@ -112,7 +134,7 @@ export function resolveAnimationUrl(
   skeletonName: string,
   danceMove: string
 ): string {
-  return `${BASE_HOST}/dancers/input/${skeletonName.toUpperCase()}/${skeletonName}_${danceMove}.json`;
+  return `${SKELETONS_PATH}/${skeletonName}/${skeletonName}_${danceMove}.json`;
 }
 
 export async function fetchJson<T>(url: string): Promise<T> {
@@ -330,7 +352,7 @@ export async function fetchDataUrl(url?: string): Promise<string | null> {
       fileReader.readAsDataURL(blob);
     });
   } catch (e) {
-    console.log(`Failed to fetch data URL for image at ${url}:`, e);
+    console.warn(`Failed to fetch data URL for image at ${url}:`, e);
     return null;
   }
 }
@@ -385,6 +407,10 @@ export function getAssetById(
   ) as LottieAssetPrecomp | null;
 }
 
+/**
+ * Hides vector layers inside their respective comp. Also captures a copy of the
+ * first matching layer’s transform (ks), so we can reuse it for positioning.
+ */
 export function hideLayersByTypeAndCaptureKs(
   compAsset: LottieAssetPrecomp,
   typesToHide: number[] = [4, 1] // 4: shape, 1: solid
@@ -470,7 +496,7 @@ export function insertImageLayer(
   compDefaultH: number,
   scaleMul: number,
   extraLayerProps?: Partial<LottieImageLayer>
-): void {
+): LottieImageLayer {
   const compW = compAsset.w || compDefaultW;
   const compH = compAsset.h || compDefaultH;
   const imgW = DEFAULT_IMAGE_SIZE;
@@ -503,6 +529,7 @@ export function insertImageLayer(
   };
 
   (compAsset.layers = compAsset.layers || []).splice(insertIndex, 0, layer);
+  return layer;
 }
 
 export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
@@ -531,7 +558,7 @@ export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
   const {sourceTag = 'default'} = opts;
   const srcSuffix = `?src=${encodeURIComponent(sourceTag)}`;
 
-  // 1) Initializae with defaults
+  // 1) Initialize with defaults
   const urls: ResolvedDancerAssets = {
     headUrl: `${DEFAULT_HEAD_URL}${srcSuffix}`,
     metadataUrl: DEFAULT_METADATA_URL,
@@ -541,32 +568,35 @@ export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
 
   // 2) Generated dancer from localStorage
   let localStorageOptions: LocalStoragePayload = null;
-  let bodyVariant: number | null = null;
+  let extraVariant: number | null = null;
   try {
-    const raw = localStorage.getItem('dancer-ai-generate');
+    const raw = localStorage.getItem(GENERATED_DANCER_STORAGE_KEY);
     localStorageOptions = raw ? (JSON.parse(raw) as LocalStoragePayload) : null;
   } catch {
     localStorageOptions = null;
   }
   if (localStorageOptions) {
-    const adlibOption = localStorageOptions?.adlibOption;
+    const path = localStorageOptions?.path ?? localStorageOptions?.adlibOption;
     const choices = Array.isArray(localStorageOptions?.choices)
       ? (localStorageOptions!.choices as string[])
       : null;
-    bodyVariant = localStorageOptions?.bodyVariant ?? null;
+    const choicesExtra = Array.isArray(localStorageOptions?.choicesExtra)
+      ? (localStorageOptions!.choicesExtra as string[])
+      : null;
+    extraVariant =
+      localStorageOptions?.extraVariant ??
+      // Keep bodyVariant for backward compatibility.
+      localStorageOptions?.bodyVariant ??
+      null;
     const variant = localStorageOptions?.variant;
 
-    if (
-      adlibOption &&
-      choices &&
-      choices.length > 0 &&
-      typeof variant === 'number'
-    ) {
+    if (path && choices && choices.length > 0 && typeof variant === 'number') {
       const assets = getGeneratedDancerAssets(
-        adlibOption,
+        path,
         choices,
+        choicesExtra,
         variant,
-        bodyVariant
+        extraVariant
       );
       urls.headUrl = `${assets.head}${srcSuffix}`;
       urls.metadataUrl = assets.metadata;
@@ -581,14 +611,13 @@ export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
   const bodyParam = getConfigValue('body');
 
   if (dancerParam && pathParam) {
-    const headPrefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
+    const headPrefix = `${BASE_HOST}/${pathParam}/${dancerParam}`;
     urls.headUrl = `${headPrefix}.png${srcSuffix}`;
     urls.metadataUrl = `${headPrefix}-metadata.json`;
   }
   if (bodyParam) {
-    const bodyPrefix = `${BASE_HOST}/dancers/bodies/`;
-    urls.bodyUrl = `${bodyPrefix}${bodyParam}.svg`;
-    urls.bodyMetadataUrl = `${bodyPrefix}${bodyParam}.json`;
+    urls.bodyUrl = `${BODIES_PATH}/${bodyParam}.svg`;
+    urls.bodyMetadataUrl = `${BODIES_PATH}/${bodyParam}.json`;
   }
   return {urls};
 }
@@ -611,6 +640,18 @@ export async function fetchText(url?: string): Promise<string | null> {
   } catch {
     return null;
   }
+}
+
+/**
+ * Fetches SVG text from the given URL, falling back to the default body SVG if needed.
+ */
+export async function safeFetchSvgText(url?: string): Promise<string | null> {
+  let svgText = await fetchText(url);
+  if (!svgText) {
+    console.warn(`Failed to fetch SVG text from ${url}`);
+    svgText = await fetchText(DEFAULT_BODY_URL);
+  }
+  return svgText;
 }
 
 /**
@@ -639,6 +680,43 @@ function getInlineFillFromStyle(style: string | null): string | null {
   if (!style) return null;
   const m = style.match(/fill\s*:\s*(#[0-9a-fA-F]{6})\b/);
   return m ? m[1] : null;
+}
+
+/** Simple Euclidean color distance between two colors. */
+function colorDistance(color1: RGBA, color2: RGBA) {
+  return Math.sqrt(
+    (color1[0] - color2[0]) * (color1[0] - color2[0]) +
+      (color1[1] - color2[1]) * (color1[1] - color2[1]) +
+      (color1[2] - color2[2]) * (color1[2] - color2[2])
+  );
+}
+
+/** Simple inversion of a color. */
+function colorInverse(color: RGBA): RGBA {
+  return [1 - color[0], 1 - color[1], 1 - color[2], color[3]];
+}
+
+/** Returns a new, improved palette, in which secondary and tertiary are
+ * at least COLOR_DISTANCE_REQUIRED away from primary.  If either is initially
+ * closer, then it is inverted in the returned palette.
+ */
+export function improvePalette(palette: Palette): Palette {
+  if (palette.primary && palette.secondary && palette.tertiary) {
+    const primary = palette.primary;
+    const secondary =
+      colorDistance(palette.primary, palette.secondary) <
+      COLOR_DISTANCE_REQUIRED
+        ? colorInverse(palette.secondary)
+        : palette.secondary;
+    const tertiary =
+      colorDistance(palette.primary, palette.tertiary) < COLOR_DISTANCE_REQUIRED
+        ? colorInverse(palette.tertiary)
+        : palette.tertiary;
+
+    return {primary, secondary, tertiary};
+  }
+
+  return palette;
 }
 
 /**
@@ -705,5 +783,121 @@ export function recolorBodySvgString(
 }
 
 export function getSkeletonMetadataUrl(skeletonName: string): string {
-  return `${BASE_HOST}/dancers/input/palettes/${skeletonName}-metadata.json`;
+  return `${PALETTES_PATH}/${skeletonName}-metadata.json`;
+}
+
+// Hide the magenta "dress" solids in the comp tree (frog skeleton only).
+export function hideMagentaDress(animData: LottieJSON): void {
+  if (!animData) return;
+
+  // Build lookup for nested precomps.
+  const assetById: Record<string, LottieJSON> = {};
+  for (const asset of animData.assets || []) {
+    if (asset?.id) assetById[asset.id] = asset;
+  }
+
+  const visitComp = (comp: LottieJSON) => {
+    if (!comp?.layers) return;
+    for (const layer of comp.layers) {
+      if (layer.nm === 'Deep Magenta-Red Solid 4') {
+        layer.hd = true;
+      }
+
+      // Recurse into precomps.
+      if (layer.ty === 0 && typeof layer.refId === 'string') {
+        const child = assetById[layer.refId];
+        if (child) visitComp(child);
+      }
+    }
+  };
+
+  // Start from top-level comp.
+  visitComp(animData);
+}
+
+/**
+ * Loads a PNG image from a data URL, mirrors it horizontally, and returns a new data URL.
+ * @param dataUrl
+ * @returns
+ */
+export async function mirrorPngDataUrl(dataUrl: string): Promise<string> {
+  const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const imageElement = new Image();
+    imageElement.onload = () => resolve(imageElement);
+    imageElement.onerror = reject;
+    imageElement.src = dataUrl;
+  });
+
+  const canvas = document.createElement('canvas');
+  canvas.width = img.naturalWidth || img.width;
+  canvas.height = img.naturalHeight || img.height;
+  const context2D = canvas.getContext('2d')!;
+  context2D.translate(canvas.width, 0);
+  context2D.scale(-1, 1);
+  context2D.drawImage(img, 0, 0);
+  return canvas.toDataURL('image/png');
+}
+
+// Head crop can be overridden via DCDO or URL param.
+function getHeadCrop(): number {
+  const dcdoHeadCrop = DCDO.get('ai-dancer-head-crop');
+
+  if (dcdoHeadCrop === false) {
+    return Number(getConfigValue('headCrop')) || 10;
+  }
+
+  return Number(dcdoHeadCrop);
+}
+
+// Head scale can be overridden via URL param, e.g. ?headScale=0.8, ?bigHead=true
+// If getHeadCrop() returns a value, then it calculates the right scale based on that.
+export function getHeadScale(): number {
+  const headCrop = getHeadCrop();
+
+  const scaleParam =
+    getConfigValue('headScale') ||
+    (getConfigValue('bigHead') === 'true'
+      ? '1.0'
+      : headCrop
+      ? String((0.5 * (DEFAULT_IMAGE_SIZE - 2 * headCrop)) / DEFAULT_IMAGE_SIZE)
+      : undefined);
+  const scale = scaleParam ? parseFloat(scaleParam) : NaN;
+  return isNaN(scale) || scale <= 0 ? DEFAULT_HEAD_SCALE : scale;
+}
+
+/** Crops "transparent" inset from all sides of a PNG data URL. */
+export async function cropDataUrl(dataUrl: string): Promise<string> {
+  const inset = getHeadCrop();
+
+  if (!inset) {
+    return dataUrl;
+  }
+
+  const loadedImage = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const imageElement = new Image();
+    imageElement.onload = () => resolve(imageElement);
+    imageElement.onerror = reject;
+    imageElement.src = dataUrl;
+  });
+
+  const scaledWidth = Math.max(1, loadedImage.naturalWidth - inset * 2);
+  const scaledHeight = Math.max(1, loadedImage.naturalHeight - inset * 2);
+
+  const offscreenCanvas = document.createElement('canvas');
+  offscreenCanvas.width = scaledWidth;
+  offscreenCanvas.height = scaledHeight;
+  const offscreenCanvasContext = offscreenCanvas.getContext('2d')!;
+  offscreenCanvasContext.drawImage(
+    loadedImage,
+    inset,
+    inset,
+    scaledWidth,
+    scaledHeight,
+    0,
+    0,
+    scaledWidth,
+    scaledHeight
+  );
+
+  return offscreenCanvas.toDataURL('image/png');
 }

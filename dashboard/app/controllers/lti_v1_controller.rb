@@ -194,6 +194,7 @@ class LtiV1Controller < ApplicationController
           user: user,
           event_name: 'lti_user_signin',
           metadata: metadata,
+          session: session,
         )
 
         # If this is the user's first login, send them into the account linking flow

@@ -10,13 +10,13 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# Display\n\nA **display** shows the current value of a variable so users can see it.\n\n\n\n",
-        "imageUrl": "https://images.code.org/00767a0fa2f7cb19a398a368e6495a9e-display1.png",
+        "text": "# State\n\n**State** is the current stored values of variables that describe what’s happening in a program right now.\n\n\n\n\n",
+        "imageUrl": "https://images.code.org/7117fa8cf532328a648b26060a7db0bf-Screenshot 2025-10-28 133153.png",
         "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
         "layout": "text-top-left"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-24T21:24:46.827+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson3-panel-operation-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson3-panel-operation-test-2025\"},{\"changed_at\":\"2025-10-24 21:25:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-25 02:30:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-24T21:24:46.827+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson3-panel-operation-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson3-panel-operation-test-2025\"},{\"changed_at\":\"2025-10-24 21:25:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-25 02:30:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 20:32:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

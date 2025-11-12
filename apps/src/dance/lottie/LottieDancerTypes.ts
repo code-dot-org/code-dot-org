@@ -1,6 +1,8 @@
 // Minimal types for the subset of Lottie JSON we mutate. These are intentionally
 // partial: we only model the fields this renderer reads/writes.
 
+import {GeneratedDancerMetadata} from '../types';
+
 export type CanvasAnimConfig = {
   renderer: 'canvas';
   loop?: boolean;
@@ -183,9 +185,4 @@ export type ResolveDancerAssetsOpts = {
   getLocalStorage?: (key: string) => string | null;
 };
 
-export type LocalStoragePayload = {
-  adlibOption: string;
-  choices: string[];
-  variant: number | string;
-  bodyVariant?: number;
-} | null;
+export type LocalStoragePayload = GeneratedDancerMetadata | null;

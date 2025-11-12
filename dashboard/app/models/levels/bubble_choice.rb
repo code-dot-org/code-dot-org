@@ -36,6 +36,9 @@ class BubbleChoice < DSLDefined
     uses_lab2
     is_project_level
     hide_letters_lab2
+    custom_mode
+    navigation_type
+    finish_dialog
   )
 
   ALPHABET = ('a'..'z').to_a
@@ -185,6 +188,7 @@ class BubbleChoice < DSLDefined
           icon: level.try(:icon),
           uses_lab2: level.uses_lab2?,
           parent_level_id: id,
+          navigation_type: navigation_type,
         }
       )
 
@@ -256,6 +260,23 @@ class BubbleChoice < DSLDefined
     return keep_working_level_id if keep_working_level_id
 
     user_levels.max_by(&:best_result)&.level_id
+  end
+
+  def project_type
+    if custom_mode == SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+      SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+    else
+      super
+    end
+  end
+
+  def channel_backed?
+    return false if try(:is_project_level)
+    custom_mode == SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+  end
+
+  def supports_sharing?
+    custom_mode == SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
   end
 
   # Returns an array of BubbleChoice parent levels for any given sublevel name.

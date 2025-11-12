@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2025-10-16T20:03:28.000Z",
   "level_num": "custom",
@@ -13,8 +14,8 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Score Counter</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n</head>\n<body>\n  <main class=\"wrap\">\n    <header class=\"header\">\n      <h1>Score</h1>\n    </header>\n\n    <section class=\"score-card\"\">\n      <div id=\"score\" class=\"score\">0</div>\n\n      <div class=\"controls\">\n        <!-- Up / Increment -->\n        <button id=\"btn-up\" class=\"control\">\n          <svg viewBox=\"0 0 120 120\" class=\"icon\">\n            <path d=\"M60 10 L115 110 H5 Z\" />\n            <rect x=\"56\" y=\"40\" width=\"8\" height=\"40\" rx=\"2\" fill=\"white\"/>\n            <rect x=\"40\" y=\"58\" width=\"40\" height=\"8\" rx=\"2\" fill=\"white\"/>\n          </svg>\n        </button>\n\n        <!-- Down / Decrement -->\n        <button id=\"btn-down\" class=\"control\">\n          <svg viewBox=\"0 0 120 120\" class=\"icon\">\n            <path d=\"M60 110 L5 10 H115 Z\" />\n            <rect x=\"40\" y=\"56\" width=\"40\" height=\"8\" rx=\"2\" fill=\"white\"/>\n          </svg>\n        </button>\n      </div>\n    </section>\n\n    <p class=\"hint\">Tip: Use ↑ and ↓ keys as well.</p>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
-          "active": false,
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Score Counter</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n</head>\n<body>\n  <main class=\"wrap\">\n    <header class=\"header\">\n      <h1>Score</h1>\n    </header>\n\n    <section class=\"score-card\"\">\n      <div id=\"score\" class=\"score\">0</div>\n\n      <div class=\"controls\">\n        <!-- Up / Increment -->\n        <button id=\"btn-up\" class=\"control\">\n          <svg viewBox=\"0 0 120 120\" class=\"icon\">\n            <path d=\"M60 10 L115 110 H5 Z\" />\n            <rect x=\"56\" y=\"40\" width=\"8\" height=\"40\" rx=\"2\" fill=\"white\"/>\n            <rect x=\"40\" y=\"58\" width=\"40\" height=\"8\" rx=\"2\" fill=\"white\"/>\n          </svg>\n        </button>\n\n        <!-- Down / Decrement -->\n        <button id=\"btn-down\" class=\"control\">\n          <svg viewBox=\"0 0 120 120\" class=\"icon\">\n            <path d=\"M60 110 L5 10 H115 Z\" />\n            <rect x=\"40\" y=\"56\" width=\"40\" height=\"8\" rx=\"2\" fill=\"white\"/>\n          </svg>\n        </button>\n      </div>\n    </section>\n\n    <p class=\"hint\">Tip: Use ↑ and ↓ keys as well.</p>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": true,
           "folderId": "0"
         },
         "2": {
@@ -27,11 +28,11 @@
         },
         "3": {
           "id": "3",
-          "name": "app.js",
+          "name": "script.js",
           "language": "js",
           "contents": "let score = 0;\n\nconst scoreDisplay = document.getElementById('score');\nconst upBtn = document.getElementById('btn-up');\nconst downBtn = document.getElementById('btn-down');\n\nupBtn.addEventListener('click', () => {\n  score++;\n  scoreDisplay.textContent = score;\n});\n\ndownBtn.addEventListener('click', () => {\n  score--;\n  scoreDisplay.textContent = score;\n});\n                         \nwindow.addEventListener('keydown', (e) => {\n  if (e.key === 'ArrowUp') scoreDisplay.textContent = score++;\n  if (e.key === 'ArrowDown') scoreDisplay.textContent = score--;\n});\n",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
@@ -46,22 +47,21 @@
     "disable_edit_run_for_submission": "false",
     "widget_view": "false",
     "initial_view_mode": "preview",
-    "ai_tutor_mode": "suggest",
+    "ai_tutor_mode": "outline",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
-      "placeholderText": "",
+      "allowMultipleAttempts": true,
+      "placeholderText": "Type response here ",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": true
     },
     "long_instructions": "# Change the Score\r\n\r\nPlay with this website by clicking the up and down arrow buttons (or by pressing up and down arrow keys). \r\n\r\nWith a partner, discuss how you think the code is working behind the scenes."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-16 20:14:41 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:17:49 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:19:44 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:20:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:20:19 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:40:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:49:43 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 17:45:22 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 17:46:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 17:47:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 17:52:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-16 20:14:41 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:17:49 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:19:44 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:20:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:20:19 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:40:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-16 20:49:43 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 17:45:22 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 17:46:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 17:47:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-17 17:52:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 17:10:53 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 17:11:32 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 20:37:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-28 20:37:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 17:34:34 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

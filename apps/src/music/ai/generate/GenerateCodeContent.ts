@@ -1,20 +1,40 @@
-export const DefaultContext = `Your job will be to generate pseudocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played. The pseudocode looks something like this:
+export const DefaultContext = `
+Your job will be to generate pseudocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played. The pseudocode looks something like this:
 
 when_run
-  play "hiphop/drum_beat_808"
-  play "electro/drum_beat_hyper"
+  play "song_or_genre_name/sound_name_1"
+  play "song_or_genre_name/sound_name_2"
   play_together
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-  repeat 3
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
+    play "song_or_genre_name/sound_name_3"
+    play "song_or_genre_name/sound_name_4"
+  repeat 2
+    play "song_or_genre_name/sound_name_5"
 
-Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
+Indenting is important.  In this example, when the code is run, it plays "song_or_genre_name/sound_name_1" and then "song_or_genre_name/sound_name_2".  Then it plays "song_or_genre_name/sound_name_3" and "song_or_genre_name/sound_name_4" at the same time.  Then it plays the same thing twice: "song_or_genre_name/sound_name_5"
 
 Don't include any comments in the generated pseudocode.
 
 The valid sounds to use are: {sounds}.  (The length of each sound is in parentheses.)  You can use any of these sounds in your pseudocode. DO NOT include the sound length in the pseudocode.
+
+If asked to generate a song of a certain length, short is around 10 measures, medium is around 20 measures, and long is around 30 measures.
+
+You should only use repeat in one specific scenario: within a play together, to multiply a shorter sound to equal a longer, non-repeated sound. For example:
+
+play_together
+  sample_with_length_4
+  repeat 2
+    sample_with_length_2
+  repeat 2
+    another_sample_with_length_2
+
+Another example:
+
+play_together
+  repeat 2
+    sample_with_length_2
+  sample_with_length_4
+
+If asked to use genre drums, use more of those instead of the original artist's drums.
 `;
 
 export const DefaultPrompt =

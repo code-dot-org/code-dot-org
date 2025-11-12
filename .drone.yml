@@ -79,8 +79,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/cdo-ci:1.17
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -89,6 +88,8 @@ steps:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
@@ -189,8 +190,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/cdo-ci:1.17
     pull: always
     volumes:
       - name: mysql
@@ -202,6 +202,8 @@ steps:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
       SAUCE_USERNAME:
@@ -271,10 +273,12 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-ci-tests
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/cdo-ci:1.17
     pull: always
     environment:
       CI_JOB: 'ui_tests'
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     volumes:
@@ -312,6 +316,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 017c2f750c43c36090a68e67662a4f86d4aee137f83b7be90da61181e79d8c35
+hmac: d0de97812011e6377e6e652fa06cf7852542927d8db4ad52d5e4f4af77aa5bf3
 
 ...

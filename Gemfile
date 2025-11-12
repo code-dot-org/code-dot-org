@@ -82,6 +82,9 @@ group :development do
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
   gem 'bootsnap', '>= 1.14.0', require: false
   gem 'localhost'
+
+  # This gem is installed in development only for now while the node version in deployed environments is upgraded.
+  gem "vite_rails", "~> 3.0"
 end
 
 # Rack::Cache middleware used in development/test;
@@ -376,7 +379,8 @@ gem 'rack-cors', '~> 2.0.1'
 
 # pin http to 5.0 or greater so that statsig does not pull in an older version.
 # older versions depend on http-parser which breaks some developer builds.
-gem 'http', '~> 5.0'
+# Speculatively target 5.3 specifically to diagnose some S3 networking errors
+gem 'http', '~> 5.3.1'
 
 gem 'statsig', '~> 2.5.5'
 

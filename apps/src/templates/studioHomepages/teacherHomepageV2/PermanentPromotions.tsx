@@ -48,9 +48,7 @@ const PermanentPromotions: React.FC = () => {
         <li key={promotion.id} className={styles.staticPromotion}>
           <div className={styles.staticPromotionText}>
             <Typography variant="body2" gutterBottom>
-              <Typography variant="strong" gutterBottom>
-                {promotion.title}
-              </Typography>
+              <Typography variant="strong">{promotion.title}</Typography>
             </Typography>
             <Typography variant="body4" gutterBottom>
               {promotion.description}

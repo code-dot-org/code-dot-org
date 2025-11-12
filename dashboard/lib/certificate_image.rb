@@ -323,6 +323,8 @@ class CertificateImage
         'MC_Hour_Of_Code_Certificate_Generation_Ai.png'
       when ScriptConstants::MINECRAFT_SHOW_NAME
         'MC_Hour_Of_Code_Certificate_Show.png'
+      when ScriptConstants::MINECRAFT_NIGHT_NAME
+        'MC_Hour_Of_AI_Certificate_First_Night.png'
       else
         'MC_Hour_Of_Code_Certificate.png'
       end
@@ -334,6 +336,8 @@ class CertificateImage
       'MC_Hour_Of_Code_Certificate_mee_timecraft.png'
     elsif course == 'mee_estate'
       'MC_Hour_Of_Code_Certificate_mee_estate.png'
+    elsif course == ScriptConstants::MIX_MOVE_AI_2025
+      'mix_move_hour_of_ai_certificate.png'
     elsif course == ScriptConstants::MUSIC_JAM_2024
       'music_hoc_certificate.png'
     elsif course == ScriptConstants::OCEANS_NAME
@@ -343,7 +347,7 @@ class CertificateImage
       # congrats and certificate pages (see csf_finish_url).
       '20hours_certificate.jpg'
     elsif course_type == 'hoc'
-      'hour_of_code_certificate.jpg'
+      'hour_of_ai_certificate.png'
     elsif course_type == 'pl'
       'self_paced_pl_certificate.png'
     else

@@ -17,6 +17,9 @@ Scenario:
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/11/levels/1?noautoplay=true"
   And The header is finished animating
   Then element ".submitButton" is visible
+  And I wait to see a dialog titled "Instructions"
+  And I close the dialog
+  And I wait for 3 seconds
   And I see no difference for "level load"
   And I close my eyes
 

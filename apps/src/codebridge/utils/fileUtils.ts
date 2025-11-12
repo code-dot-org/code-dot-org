@@ -8,6 +8,7 @@ const FILE_TYPE_ICON_MAP = {
   py: {iconName: 'python', iconStyle: 'regular' as const, isBrand: true},
   csv: {iconName: 'file-csv', iconStyle: 'solid' as const, isBrand: false},
   txt: {iconName: 'file-lines', iconStyle: 'solid' as const, isBrand: false},
+  md: {iconName: 'markdown', iconStyle: 'regular' as const, isBrand: true},
   html: {iconName: 'file-code', iconStyle: 'solid' as const, isBrand: false},
   js: {iconName: 'js', iconStyle: 'regular' as const, isBrand: true},
   css: {iconName: 'css', iconStyle: 'regular' as const, isBrand: true},
@@ -40,7 +41,7 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
 } {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   if (!isStartMode) {
-    const [, fileType] = file.name.split('.');
+    const fileType = file.name.split('.').pop();
     const iconConfig =
       FILE_TYPE_ICON_MAP[fileType as keyof typeof FILE_TYPE_ICON_MAP];
     if (iconConfig) {

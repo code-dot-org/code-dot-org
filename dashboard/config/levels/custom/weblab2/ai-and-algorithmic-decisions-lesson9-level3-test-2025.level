@@ -1,19 +1,18 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2025-10-22T14:45:29.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##9.3\r\n",
+    "long_instructions": "## Code Your Rule\r\n\r\n1. Upload your flowchart from Level 9. You may upload your flowchart or describe your rule to AI Chat to plan and debug your code.\r\n\r\n1. Use the same two conditions from your flowchart. Store each as a true/false value (for example, if a checkbox is checked).\r\n\r\n1. Open the `runRule()` function in `script.js`. Write your decision rule there using `if`–`else` statements with AND and OR operators. Each branch should match one of the outcomes from your truth table.\r\n\r\n1. Update the result area so the correct message or image appears for each outcome.\r\n\r\n1. Run all four combinations (TT, TF, FT, FF). Compare your app's behavior to your truth table and fix anything that doesn't match.\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
     "disable_edit_run_for_submission": "false",
-    "ai_tutor_mode": "suggest",
+    "ai_tutor_mode": "outline",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -25,8 +24,91 @@
       ],
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
-    }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "sample_flowcharts",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Code Your Rule</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <main class=\"wrap\">\n    <section class=\"card\">\n\n      <!-- Condition Inputs -->\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"condA\" />\n          Condition A\n        </label>\n      </div>\n\n      <div class=\"control\">\n        <label>\n          <input type=\"checkbox\" id=\"condB\" />\n          Condition B\n        </label>\n      </div>\n\n      <!-- Run Button -->\n      <button id=\"btnRun\">Run</button>\n\n      <!-- Result Area -->\n      <p id=\"result\" class=\"result\">Result will appear here.</p>\n\n      <!-- Optional image area -->\n      <img id=\"heroImg\" class=\"hidden\" src=\"\" alt=\"\" />\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "tryout-eligibility.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level3-test-2025/uuid/27ec93a8-4c95-42e7-a9ca-61c6b9e65a7f.png",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "smarthome.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level3-test-2025/uuid/2c3e6571-a8a2-453a-b25e-2ca1f8fe2d3e.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "movie-admission.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level3-test-2025/uuid/e7c98dbd-b2c5-4c86-aa70-0b3e4c68fda7.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "free-shipping.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level3-test-2025/uuid/50b36e43-f4b7-47ec-80fc-be88c035fc3c.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  background-color: #f8fafc;\n  color: #0f172a;\n}\n\n.wrap {\n  max-width: 680px;\n  margin: 48px auto;\n  padding: 0 16px;\n}\n\n.card {\n  background-color: #ffffff;\n  border: 1px solid #e2e8f0;\n  border-radius: 16px;\n  padding: 24px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n}\n\nh1 {\n  margin: 0 0 4px 0;\n  font-size: 24px;\n}\n\n.subtitle {\n  margin: 0 0 16px 0;\n  color: #475569;\n}\n\n.control {\n  margin-bottom: 10px;\n}\n\nbutton {\n  margin-top: 8px;\n  padding: 10px 16px;\n  font-size: 16px;\n  border-radius: 8px;\n  border: 1px solid #e2e8f0;\n  background-color: #ffffff;\n  cursor: pointer;\n}\n\n.result {\n  margin-top: 16px;\n  padding: 12px 14px;\n  border-radius: 10px;\n  border: 1px solid #e2e8f0;\n  text-align: center;\n  font-weight: 700;\n}\n\n.result.ok {\n  color: #1a7f37;\n  background-color: #ecfdf3;\n  border-color: #abefc6;\n}\n\n.result.no {\n  color: #b42318;\n  background-color: #fef3f2;\n  border-color: #f9d3cf;\n}\n\n.hidden {\n  display: none;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Selector\nlet condA = document.getElementById(\"condA\");\nlet condB = document.getElementById(\"condB\");\nlet result = document.getElementById(\"result\");\nlet btnRun = document.getElementById(\"btnRun\");\n\n// Define the runRule function\nconst runRule = () => {\n\n  // Step 1: Read checkbox values\n  let a = condA.checked;\n  let b = condB.checked;\n\n  // Step 2: Apply flowchart logic\n  if (a && b) {\n    result.textContent = \"Both conditions are true!\";\n    result.className = \"result ok\";\n  } else if (a || b) {\n    result.textContent = \"One condition is true.\";\n    result.className = \"result ok\";\n  } else {\n    result.textContent = \"Both conditions are false.\";\n    result.className = \"result no\";\n  }\n}\n\n// Run the rule when the button is clicked\nbtnRun.addEventListener(\"click\", runRule);\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "7",
+        "1",
+        "6"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-22 14:45:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-22 14:45:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 15:21:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 16:00:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 16:29:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 16:39:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 16:39:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 16:40:52 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 21:02:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:09:50 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:25:18 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:31:11 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:31:40 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:32:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:33:41 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:33:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:33:59 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:34:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:36:03 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:43:40 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:45:53 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:50:22 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:53:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:54:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:57:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:57:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:57:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:59:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 21:59:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 22:00:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 22:00:37 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 18:48:17 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 18:49:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

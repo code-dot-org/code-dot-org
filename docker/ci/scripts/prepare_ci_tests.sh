@@ -14,6 +14,10 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
+# Number of parallel processes for dashboard ruby unit tests,
+# optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
+export PARALLEL_TEST_PROCESSORS=7
+
 # Install in deployment mode, both to better mirror the test server and to make
 # caching easier.
 bundle config set --local deployment 'true'
@@ -45,6 +49,7 @@ build_dashboard: true
 build_pegasus: true
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
+contentful_cs_for_all_access_token: $CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
 dashboard_workers: 5

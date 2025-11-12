@@ -1,9 +1,9 @@
 {
   "key": "teaching-ai-foundations-semester2",
-  "display_name": "teaching-ai-foundations-semester2",
+  "display_name": "[PILOT] Teaching AI Foundations Semester 2",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
+  "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
   "grade_levels": null,
   "header": null,
@@ -12,10 +12,10 @@
   "school_subject": null,
   "device_compatibility": null,
   "description": null,
-  "professional_learning_program": null,
+  "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_key": null,
+  "self_paced_pl_course_offering_key": "teaching-ai-foundations-semester2",
   "ai_teaching_assistant_available": false,
   "facilitator_course_permissions": [
 
