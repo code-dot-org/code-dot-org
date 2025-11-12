@@ -53,7 +53,7 @@ class AnalyticsReporter {
   }
 
   setProjectProperty(property, value) {
-    // Store project properties for Statsig only. These properties will be included in all events sent to Statsig.
+    // Store project properties for Statsig only. These properties are included in events sent to Statsig if opted in.
     if (value) {
       this.projectContext[property] = value;
     } else {
