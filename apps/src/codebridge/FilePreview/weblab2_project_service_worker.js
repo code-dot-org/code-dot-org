@@ -13,13 +13,6 @@ const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
 const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
-const SERVICE_WORKER_INSTALLED = 'SERVICE_WORKER_INSTALLED';
-const SERVICE_WORKER_ACTIVATED = 'SERVICE_WORKER_ACTIVATED';
-
-// bugs to fix:
-// on firefox on adhoc, if you are on a page not found page and navigate to a new level, the page not found persists
-// until you type in a new filename and hit enter (you can't refresh or press enter on index.html, you have to do a different filename, then go back to index.html)
-// flash of outdated content when switching levels (sometimes)
 
 function main() {
   let filesData = {};
@@ -30,13 +23,11 @@ function main() {
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
     self.skipWaiting();
-    broadcastChannel.postMessage({type: SERVICE_WORKER_INSTALLED});
   });
 
   addEventListener('activate', event => {
     // Claim clients from any old service workers on this path.
     event.waitUntil(self.clients.claim());
-    broadcastChannel.postMessage({type: SERVICE_WORKER_ACTIVATED});
   });
 
   // Listen for messages from the main thread
@@ -78,7 +69,7 @@ function main() {
   function getFilenameFromUrl(url) {
     let requestedFile = url.pathname;
 
-    // Normalize (remove accidental leading slash)
+    // Normalize (remove accidental leading slash(es))
     while (requestedFile.startsWith('/')) {
       requestedFile = requestedFile.slice(1);
     }
@@ -95,8 +86,7 @@ function main() {
         });
       }
       if (url) {
-        const response = await fetch(url);
-        return response;
+        return await fetch(url);
       }
       return new Response(content, {
         status: 200,
@@ -125,8 +115,4 @@ function main() {
 const isServiceWorker = typeof ServiceWorkerGlobalScope !== 'undefined';
 if (isServiceWorker) {
   main();
-  console.warn('I AM A SERVICE WORKER');
-  // send broadcast message that the service worker has been started?
-} else {
-  console.warn('I AM NOT A SERVICE WORKER');
 }
