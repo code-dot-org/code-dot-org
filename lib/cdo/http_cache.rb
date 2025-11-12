@@ -127,7 +127,7 @@ class HttpCache
 
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [
-      'hour_of_code',
+      HocLegacy::HOC_COOKIE_KEY,
       'progress',
       'lines',
       'scripts',
@@ -142,7 +142,7 @@ class HttpCache
       'sign_up_user_type',
     ].concat(default_cookies)
 
-    http_config = {
+    {
       pegasus: {
         behaviors: [
           # NextJS assets path for the marketing app
@@ -356,32 +356,6 @@ class HttpCache
         }
       }
     }
-
-    if defined?(HocLegacy::Engine)
-      http_config.deep_merge!(
-        dashboard: {
-          behaviors: [
-            {
-              path: "#{HocLegacy::API_ROOT_PATH}/*",
-              headers: ALLOWLISTED_HEADERS,
-              cookies: allowlisted_cookies,
-            },
-          ],
-        },
-        pegasus: {
-          behaviors: [
-            {
-              path: "#{HocLegacy::API_ROOT_PATH}/*",
-              proxy: 'dashboard',
-              headers: ALLOWLISTED_HEADERS,
-              cookies: allowlisted_cookies,
-            },
-          ],
-        }
-      )
-    end
-
-    http_config
   end
 
   def self.uncached_script_level_path?(script_level_path)
