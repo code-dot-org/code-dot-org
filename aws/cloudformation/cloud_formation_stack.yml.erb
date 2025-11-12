@@ -298,7 +298,7 @@ Resources:
 <%=  component 'ami', commit_hash: (commit_hash = commit[0..4]),
   image_id: IMAGE_ID,
   ssh_key_name: SSH_KEY_NAME,
-  subnets: subnets(frontend_subnet_suffixes),
+  frontend_subnets: subnets(frontend_subnet_suffixes),
   frontend_availability_zones: frontend_availability_zones,
   frontend_policies: [{Ref: 'CDOPolicy'}, {'Fn::ImportValue': 'IAM-SessionPermissions'}],
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
