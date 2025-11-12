@@ -127,7 +127,6 @@ class HttpCache
 
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [
-      HocLegacy::HOC_COOKIE_KEY,
       'progress',
       'lines',
       'scripts',
@@ -141,6 +140,10 @@ class HttpCache
       storage_id,
       'sign_up_user_type',
     ].concat(default_cookies)
+
+    # Allows the HoC session tracking cookie
+    require 'hoc_legacy'
+    allowlisted_cookies << HocLegacy::HOC_COOKIE_KEY
 
     {
       pegasus: {
