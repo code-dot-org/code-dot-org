@@ -5,6 +5,8 @@ eval $( fixuid )
 
 cd $HOME/code-dot-org
 
+set -x
+
 # test if sudo is taking a long time to run
 echo "running sudo true to warm up sudo..."
 sudo true
