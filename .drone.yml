@@ -64,8 +64,9 @@ steps:
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
       - |
         if [ -f .cached-staging-build-file-count ]; then
-          expected=$(cat .cached-staging-build-file-count)
-          actual=$(find . -type f -not -path './.git/*' | wc -l)
+          expected=$(cat .cached-staging-build-file-count | tr -d ' ')
+          actual=$(find . -type f -not -path './.git/*' | wc -l | tr -d ' ')
+          echo "Cache validation: expected=$expected actual=$actual"
           diff=$((actual - expected))
           [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
         fi
@@ -181,8 +182,9 @@ steps:
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
       - |
         if [ -f .cached-staging-build-file-count ]; then
-          expected=$(cat .cached-staging-build-file-count)
-          actual=$(find . -type f -not -path './.git/*' | wc -l)
+          expected=$(cat .cached-staging-build-file-count | tr -d ' ')
+          actual=$(find . -type f -not -path './.git/*' | wc -l | tr -d ' ')
+          echo "Cache validation: expected=$expected actual=$actual"
           diff=$((actual - expected))
           [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
         fi
