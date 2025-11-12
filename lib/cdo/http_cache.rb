@@ -169,12 +169,6 @@ class HttpCache
             headers: S3_FORWARD_HEADERS,
             cookies: 'none'
           },
-          {
-            path: %w[/congrats /congrats/*],
-            proxy: 'dashboard',
-            headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies,
-          },
           # For .png images, don't forward any cookies or additional headers.
           {
             path: '/*.png',
