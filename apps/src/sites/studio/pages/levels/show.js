@@ -23,6 +23,10 @@ $(document).ready(initPage);
 
 function initPage() {
   const script = document.querySelector('script[data-level]');
+  if (!script || !script.dataset.level) {
+    console.error('Level script element not found');
+    return;
+  }
   const config = JSON.parse(script.dataset.level);
 
   registerReducers({instructions});
@@ -50,6 +54,50 @@ function initPage() {
     );
   }
 
+  // Helper function to determine if the current level is a lab
+  const isLabLevel = () => {
+    try {
+      // Check config.app first
+      let appType = config.app;
+      // Fallback to Redux store pageConstants if config.app is not available
+      if (!appType) {
+        try {
+          const pageConstants = getStore().getState().pageConstants;
+          appType = pageConstants?.appType;
+        } catch (e) {
+          // If store isn't ready yet, just return false
+          return false;
+        }
+      }
+      // If still no app type, we can't determine if it's a lab
+      if (!appType) {
+        return false;
+      }
+      appType = appType.toLowerCase();
+      // Lab2 apps
+      const lab2Apps = [
+        'aichat',
+        'bubble_choice',
+        'dance',
+        'music',
+        'panels',
+        'pythonlab',
+        'standalone_video',
+        'weblab2',
+        'sketchlab',
+      ];
+      // Legacy lab apps (end with "lab")
+      const isLegacyLab = appType.endsWith('lab');
+      // Check if it's a lab2 app
+      const isLab2App = lab2Apps.includes(appType);
+      return isLegacyLab || isLab2App;
+    } catch (e) {
+      // If anything goes wrong, default to allowing auto-open (safer)
+      console.warn('Error detecting lab level:', e);
+      return false;
+    }
+  };
+
   // AI Differentiation FAB to be shown only if rubric FAB is not.
   const renderAiDiffButton = () => {
     const reportingData = {
@@ -69,12 +117,16 @@ function initPage() {
       'ai-differentiation-fab-mount-point'
     );
     if (aiDiffFabMountPoint && experiments.isEnabled('ai-diff-levels')) {
+      // Don't automatically open TA in lab contexts
+      const isLab = isLabLevel();
       ReactDOM.render(
         <Provider store={getStore()}>
           <AiDiffFloatingActionButton
             context={differentiationContext}
             scriptId={reportingData.unitName}
             scriptName={reportingData.unitName}
+            canStartOpen={!isLab}
+            canDefaultOpen={!isLab}
           />
         </Provider>,
         aiDiffFabMountPoint
