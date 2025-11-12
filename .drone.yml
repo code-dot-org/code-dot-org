@@ -40,14 +40,14 @@ steps:
         EOF
 
   # Restore the staging build we created in the `cache-staging-build` pipeline
-  # - name: get-cached-staging-build
-  #   image: plugins/s3-cache
-  #   settings:
-  #     filename: cache-staging-ci-build.tar.gz
-  #     endpoint: s3://cdo-drone
-  #     restore: true
-  #     debug: true
-  #     pull: true
+  - name: get-cached-staging-build
+    image: plugins/s3-cache
+    settings:
+      filename: cache-staging-ci-build.tar.gz
+      endpoint: s3://cdo-drone
+      restore: true
+      debug: true
+      pull: true
 
   - name: checkout
     image: bitnamilegacy/git
@@ -147,19 +147,19 @@ steps:
         EOF
 
   # Restore the staging build we created in the `cache-staging-build` pipeline
-  # - name: get-cached-staging-build
-  #   image: plugins/s3-cache
-  #   volumes:
-  #     # Even files cached with absolute paths will be restored into the
-  #     # workdir; so for this step, we mount the relevant volumes there, too.
-  #     - name: mysql
-  #       path: /drone/src/var/lib/mysql
-  #   settings:
-  #     filename: cache-staging-ci-build.tar.gz
-  #     endpoint: s3://cdo-drone
-  #     restore: true
-  #     debug: true
-  #     pull: true
+  - name: get-cached-staging-build
+    image: plugins/s3-cache
+    volumes:
+      # Even files cached with absolute paths will be restored into the
+      # workdir; so for this step, we mount the relevant volumes there, too.
+      - name: mysql
+        path: /drone/src/var/lib/mysql
+    settings:
+      filename: cache-staging-ci-build.tar.gz
+      endpoint: s3://cdo-drone
+      restore: true
+      debug: true
+      pull: true
 
   - name: checkout
     image: bitnamilegacy/git
