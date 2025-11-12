@@ -1,10 +1,11 @@
+import {BinaryFiles} from '@excalidraw/excalidraw/types/types';
+
 import {
   SketchlabProjectFile,
-  ExcalidrawSourceWithExternalFiles,
   SketchlabExternalFiles,
 } from '@cdo/apps/lab2/types';
 
-import {SketchlabSources, SerializedExcalidrawState} from '../types';
+import {SketchlabSources} from '../types';
 
 import {uploadBase64ToUrl} from './uploadBase64ToUrl';
 
@@ -26,30 +27,26 @@ const MIME_TO_EXT = {
 };
 
 export const uploadExternalFiles = async (
-  source: ExcalidrawSourceWithExternalFiles,
-  serializedData: SerializedExcalidrawState,
+  savedFiles: SketchlabExternalFiles,
+  excalidrawFiles: BinaryFiles,
   filesBeingUploadedRef: React.MutableRefObject<Set<string>>,
   channelId: string,
   updateSources: (newSources: SketchlabSources, forceSave?: boolean) => void
 ) => {
-  const savedFileIds = Object.keys(source.externalFiles || {});
-  const excalidrawFileIds = Object.keys(serializedData.files || {});
+  const savedFileIds = Object.keys(savedFiles || {});
+  const excalidrawFileIds = Object.keys(excalidrawFiles || {});
   const newFileIds = excalidrawFileIds.filter(
     id => !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
   );
 
-  if (!newFileIds.length) {
-    return;
-  }
-
   const uploadedFiles: SketchlabExternalFiles = {};
-  if (newFileIds.length && serializedData.files) {
+  if (newFileIds.length && excalidrawFiles) {
     const fileUploadPromises = newFileIds.map(async fileId => {
       filesBeingUploadedRef.current.add(fileId);
 
       // TO DO: update to support starter assets.
       // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
-      const newFile = serializedData.files[fileId];
+      const newFile = excalidrawFiles[fileId];
       const extension = MIME_TO_EXT[newFile.mimeType];
       const externalUrl = `/v3/assets/${channelId}/${fileId}.${extension}`;
       const newExternalFile: SketchlabProjectFile = {
@@ -72,6 +69,7 @@ export const uploadExternalFiles = async (
     });
 
     await Promise.allSettled(fileUploadPromises);
-    return uploadedFiles;
   }
+
+  return uploadedFiles;
 };

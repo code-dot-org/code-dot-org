@@ -142,37 +142,29 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializedData.appState.zoom = appState.zoom;
         }
 
-        updateSources({
-          source: {
-            ...serializedData,
-            externalFiles: {...currentSources.source.externalFiles},
-          },
-        });
-
         // TO DO: figure out how to update to support starter assets.
         // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
         // In start mode, we manage saving explicitly via the button in the header.
+        let uploadedFiles;
         if (!getIsStartMode()) {
-          const uploadedFiles = await uploadExternalFiles(
-            currentSources.source, // remove this
-            serializedData,
+          uploadedFiles = await uploadExternalFiles(
+            currentSources.source.externalFiles || {},
+            serializedData.files,
             filesBeingUploadedRef,
             channelId,
             updateSources
           );
-
-          if (uploadedFiles) {
-            updateSources({
-              source: {
-                ...currentSources.source,
-                externalFiles: {
-                  ...currentSources.source.externalFiles,
-                  ...uploadedFiles,
-                },
-              },
-            });
-          }
         }
+
+        updateSources({
+          source: {
+            ...serializedData,
+            externalFiles: {
+              ...currentSources.source.externalFiles,
+              ...(uploadedFiles || {}),
+            },
+          },
+        });
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
     [updateSources, channelId, currentSources.source]
