@@ -1,6 +1,8 @@
 import classNames from 'classnames';
-import React, {useEffect, useMemo} from 'react';
+import React, {useEffect, useCallback, useMemo} from 'react';
 import reactStringReplace from 'react-string-replace';
+
+import localization, {useLocalization} from '@cdo/apps/localization';
 
 import styles from './Adlib.module.scss';
 
@@ -23,7 +25,7 @@ interface AdlibProps {
   readOnly?: boolean;
   glowSpeed?: 'normal' | 'fast';
   onChoicesChange: (choices: {[key: string]: string}) => void;
-  onTextChange: (promptText: string) => void;
+  onTextChange: (promptText: string, localizedText: string) => void;
 }
 
 // This component takes a template string with placeholders in {curly braces}
@@ -41,25 +43,66 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
 }) => {
   const {template, options} = adlib;
 
+  const locale = useLocalization();
+
+  const localizedTemplate = useMemo(
+    () =>
+      locale !== 'en' ? localization.translate(template, ['adlib']) : template,
+    [template, locale]
+  );
+
+  const fillTemplate = useCallback(
+    (template: string, chosen: {[key: string]: string}) => {
+      let output = template;
+      Object.keys(options).forEach(key => {
+        if (chosen[key]) {
+          output = output.replace(`{${key}}`, chosen[key]);
+        }
+      });
+      return output;
+    },
+    [options]
+  );
+
   // Compute filled text.
-  const filledAdlibText = useMemo(() => {
-    let output = template;
-    Object.keys(options).forEach(key => {
-      output = output.replace(
-        `{${key}}`,
-        options[key].find(option => option.id === adlibChoices[key])?.text || ''
-      );
-    });
-    return output;
-  }, [adlibChoices, options, template]);
+  const filledAdlibText = useMemo(
+    () =>
+      fillTemplate(
+        template,
+        Object.fromEntries(
+          Object.entries(options).map(([key, value]) => [
+            key,
+            options[key].find(option => option.id === adlibChoices[key])
+              ?.text || '',
+          ])
+        )
+      ),
+    [fillTemplate, adlibChoices, options, template]
+  );
+  const localizedFilledAdlibText = useMemo(
+    () =>
+      fillTemplate(
+        localizedTemplate,
+        Object.fromEntries(
+          Object.entries(options).map(([key, value]) => [
+            key,
+            localization.translate(
+              options[key].find(option => option.id === adlibChoices[key])
+                ?.text || ''
+            ),
+          ])
+        )
+      ),
+    [fillTemplate, adlibChoices, options, localizedTemplate]
+  );
 
   useEffect(() => {
-    onTextChange(filledAdlibText);
-  }, [filledAdlibText, onTextChange]);
+    onTextChange(filledAdlibText, localizedFilledAdlibText);
+  }, [filledAdlibText, localizedFilledAdlibText, onTextChange]);
 
   // Compute HTML.
   const adlibHtml = useMemo(() => {
-    let output: React.ReactNode[] = [template];
+    let output: React.ReactNode[] = [localizedTemplate];
     Object.keys(options).forEach(key => {
       output = reactStringReplace(output, `{${key}}`, match => {
         return (
@@ -77,7 +120,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
           >
             {options[key].map(option => (
               <option key={option.id} value={option.id}>
-                {option.text}
+                {localization.translate(option.text)}
               </option>
             ))}
           </select>
@@ -86,10 +129,11 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     });
 
     return output;
-  }, [adlibChoices, onChoicesChange, options, template]);
+  }, [adlibChoices, onChoicesChange, options, localizedTemplate]);
 
   return (
     <div
+      data-notranslate
       className={classNames(
         styles.adlib,
         glowSpeed === 'fast'
@@ -100,7 +144,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
       )}
     >
       <div className={styles.adlibInner}>
-        <div>{readOnly ? filledAdlibText : adlibHtml}</div>
+        <div>{readOnly ? localizedFilledAdlibText : adlibHtml}</div>
         {children}
       </div>
     </div>

@@ -77,6 +77,7 @@ class HttpCache
     dance-ai-2023
     mc
     music-jam-2024
+    mix-move-ai-2025
   ).map do |script_name|
     # Assume all cached units are in single unit courses.
     [script_name, "/courses/#{script_name}/units/1/lessons/*"]
@@ -174,9 +175,16 @@ class HttpCache
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies,
           },
+          # For .png images, don't forward any cookies or additional headers.
+          {
+            path: '/*.png',
+            headers: [],
+            cookies: 'none',
+            include_marketing_router_lambda: true,
+          },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /fonts/*),
+            path: STATIC_ASSET_EXTENSION_PATHS - %w(/*.png) + %w(/files/* /images/* /fonts/*),
             headers: [],
             cookies: 'none'
           },
