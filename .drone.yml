@@ -293,7 +293,7 @@ steps:
       - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
       # Generate baseline file count for validation
       - touch .cached-staging-build-file-count
-      - "find . -type f | wc -l > .cached-staging-build-file-count"
+      - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
       - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
 
   # - name: cache-staging-ci-build
