@@ -627,7 +627,10 @@ const EVENTS = {
   RESOURCE_PANEL_LANGUAGE_CHANGE: 'Resource Panel Language Change',
   RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
 
-  // AI Teaching Assistant - Differentiation
+  // Just In Time Professional Learning
+  PERSONALIZATION_ANSWER_SUBMITTED:
+    'Answered Just In Time PL Personalization Question',
+  PERSONALIZATION_PERSONA_MATCHED: 'User gets a matched persona',
 
   // Dance Party (Lab2)
   DANCE_PARTY_SESSION_END: 'Dance Party Session End',

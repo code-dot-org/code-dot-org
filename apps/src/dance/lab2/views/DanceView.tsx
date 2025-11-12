@@ -127,8 +127,13 @@ const DanceView: React.FunctionComponent<{
   const signedIn = useAppSelector(state => state.currentUser.signInState);
   const scriptName = useAppSelector(state => state.progress.scriptName);
 
-  const {currentSources, updateSources, showStartOverDialog, startOver} =
-    useSources<DanceProjectSources>();
+  const {
+    currentSources,
+    updateSources,
+    showStartOverDialog,
+    setReinitializationHandler,
+    startOver,
+  } = useSources<DanceProjectSources>();
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<GoogleBlockly.Workspace | null>(null);
 
@@ -368,6 +373,14 @@ const DanceView: React.FunctionComponent<{
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('blocks');
   }, [showStartOverDialog]);
+
+  const onStartOver = useCallback(() => {
+    progressManager?.resetValidation();
+  }, [progressManager]);
+
+  useEffect(() => {
+    setReinitializationHandler(onStartOver);
+  }, [onStartOver, setReinitializationHandler]);
 
   // Setup Blockly for dance party when first mounting.
   useEffect(setupBlocklyEnvironment, []);

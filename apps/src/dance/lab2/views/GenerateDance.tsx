@@ -227,7 +227,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     'generated',
     'listening',
     'listened',
-  ].includes(aiGenerateState);
+  ].includes(aiGenerateState)
+    ? 'full'
+    : undefined;
 
   const parentProperties = useParentLevelProperties();
   const isStandalone =
