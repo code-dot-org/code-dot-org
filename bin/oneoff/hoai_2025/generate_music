@@ -424,9 +424,7 @@ else
     adlibs = object[:adlibs]
     path = File.join(output_path, "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ''}-#{object[:variant].to_s.rjust(2, '0')}.txt")
 
-    if File.exist?(path)
-      puts "Warning: #{path} does not exist"
-    else
+    unless File.exist?(path)
       if response.nil?
         drum_sounds = object[:drum_sounds]
         sounds = object[:sounds]
@@ -536,7 +534,10 @@ unless options[:just_save_prompt]
     # The generated path
     original_path = "#{object[:pack]}-#{object[:adlib_option]}-#{object[:adlibs].join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
     file_path = File.join(output_path, original_path)
-    next unless File.exist?(file_path)
+    unless File.exist?(file_path)
+      puts "Warning: #{file_path} does not exist"
+      next
+    end
 
     error = validate_music file_path
 

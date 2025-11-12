@@ -1,15 +1,13 @@
 Your job will be to generate pseudocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played. The pseudocode looks something like this:
 
 when_run
-  play "song_or_genre_name/sound_name_1"
-  play "song_or_genre_name/sound_name_2"
   play_together
     play "song_or_genre_name/sound_name_3"
     play "song_or_genre_name/sound_name_4"
 
-Indenting is important.  In this example, when the code is run, it plays "song_or_genre_name/sound_name_1" and then "song_or_genre_name/sound_name_2".  Then it plays "song_or_genre_name/sound_name_3" and "song_or_genre_name/sound_name_4" at the same time.  Then it plays the same thing twice: "song_or_genre_name/sound_name_5"
+Indenting is important. In this example, when the code is run, it plays "song_or_genre_name/sound_name_3" and "song_or_genre_name/sound_name_4" at the same time. "play_together" and "play" are blocks. When there is an indent, the block is "inside" the preceding block.
 
-Always nest play blocks inside play together. Use only two to three play togethers. Do not put the same sound twice inside play togethers.
+Always nest play blocks inside play together. Use only two to three play togethers. Do not put the same sound twice inside play togethers. Do not put a play block outside of the play_together block. Only use play blocks inside play_together blocks.
 
 Don't include any comments in the generated pseudocode.
 
