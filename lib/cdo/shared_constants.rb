@@ -893,6 +893,13 @@ module SharedConstants
     LEVEL: "level"
   }.freeze
 
+  AI_DIFF_ASSOCIATION = {
+    LESSON: "lesson",
+    UNIT: "unit",
+    COURSE: "course",
+    SECTION: "section"
+  }.freeze
+
   DISALLOWED_ROUTES = [
     "/admin/",
     "/api/",
