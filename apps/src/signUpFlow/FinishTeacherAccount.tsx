@@ -22,9 +22,11 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+import GradeLevelChips from '@cdo/apps/templates/sectionsRefresh/GradeLevelChips';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes, EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
 
 import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
 import {buildSchoolData} from '../schoolInfo/utils/buildSchoolData';
@@ -106,6 +108,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorCreatingAccountMessage, setErrorCreatingAccountMessage] =
     useState('');
+  const [selectedGrades, setSelectedGrades] = useState<string[]>([]);
 
   // Remove oauth user_type cookie if it exists
   cookies.remove(SIGN_UP_USER_TYPE);
@@ -449,6 +452,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
             }}
             itemGroups={roleItemGroups}
             dropdownTextThickness="thin"
+          />
+          <GradeLevelChips
+            inputLabel={i18n.gradesTaught()}
+            values={selectedGrades}
+            setValues={vals => setSelectedGrades(vals)}
+            className={style.gradeSelectChips}
           />
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
