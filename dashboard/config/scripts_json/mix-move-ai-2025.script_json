@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-07 00:05:16 UTC",
+    "serialized_at": "2025-11-10 22:46:45 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -120,7 +120,7 @@
       "key": "cf72b6bf-dc37-4a88-b413-af014cf15508",
       "position": 1,
       "properties": {
-        "description": "Get started with our Self-Paced Professional Learning to explore the activity.\n\nFeel confident and prepared as you start teaching the lesson. Click here to start learning!",
+        "description": "Try out the student activity on your own or watch the Teacher Prep Video to preview the activity.\n\nFeel confident and prepared as you start teaching the lesson. Click here to start learning!",
         "tips": [
           {
             "type": "teachingTip",
@@ -774,6 +774,19 @@
   ],
   "resources": [
     {
+      "name": "Educator’s Guide",
+      "url": "https://drive.google.com/file/d/1aS4cwFjks_Pd12a_aZDusj49QfdaHlTx/view?usp=sharing",
+      "key": "educator_s_guide",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "educator_s_guide"
+      }
+    },
+    {
       "name": "Mix & Move Slides",
       "url": "https://docs.google.com/presentation/d/1q8aIlobDfMj6gcrqLqv2sQma_rKYw4jVMLIPJ8CJI0w/template/preview",
       "key": "mix_move_slides",
@@ -786,13 +799,38 @@
       "seeding_key": {
         "resource.key": "mix_move_slides"
       }
+    },
+    {
+      "name": "Teacher Prep Video ",
+      "url": "https://www.youtube.com/watch?v=yZRBxIZrVSk",
+      "key": "teacher_prep_video",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_prep_video"
+      }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "educator_s_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "mix_move_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "teacher_prep_video"
       }
     }
   ],

@@ -29,6 +29,7 @@ export type SongMetadata = {
 
 export interface DanceProjectSources extends ProjectSources {
   selectedSong?: string;
+  generatedDancer?: GeneratedDancerMetadata;
 }
 
 export interface DanceLevelProperties extends BlocklyLevelProperties {
@@ -40,4 +41,14 @@ export interface DanceLevelProperties extends BlocklyLevelProperties {
   aiDancerGenerateAdlib?: string;
   aiDancerGenerateText?: boolean;
   aiCodePreview?: boolean;
+}
+
+export interface GeneratedDancerMetadata {
+  adlibOption: string;
+  path?: string;
+  choices: string[];
+  choicesExtra?: string[];
+  variant: number | string;
+  bodyVariant?: number; // Deprecated in favor of extraVariant
+  extraVariant?: number;
 }

@@ -9455,6 +9455,8 @@ en:
               name: EscA.I.pe Room
             lesson-14:
               name: Sketch Lab Levels
+            lesson-15:
+              name: AIF Sem 2 - Unit 2 - Lesson 1
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -23412,8 +23414,8 @@ en:
           title: Pre-Learning for Teaching AI Foundations Semester 2
           description_audience: ''
           description_short: ''
-          description: "# Welcome!\n\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about."
-          student_description: "# Welcome!\n\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about."
+          description: "# Welcome!\n\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different?"
+          student_description: "# Welcome!\n\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different?"
         pl-sandbox-aif-sem-2-unit-1:
           lessons:
             lesson-1:
@@ -23423,8 +23425,8 @@ en:
           title: Teaching Introduction AI Generated Design
           description_audience: ''
           description_short: ''
-          description: "## Welcome\n\n#### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.\n\n#### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.\n\n#### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace."
-          student_description: "## Welcome\n\n#### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.\n\n#### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.\n\n#### **Go at your own pace:**  This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace."
+          description: "## Welcome\n\n#### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.\n\n#### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI."
+          student_description: "## Welcome\n\n#### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.\n\n#### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI."
         pl-sandbox-aif-sem-2-unit-2:
           lessons:
             lesson-1:
@@ -23434,8 +23436,8 @@ en:
           title: Teaching AI and Algorithmic Decisions
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "## Welcome!\n\n#### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.\n\n#### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps."
+          student_description: "## Welcome!\n\n#### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.\n\n#### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps."
         aif1-v2-2025:
           lesson_groups:
             lessonGroup-3:
@@ -23870,6 +23872,10 @@ en:
               name: Web Lab 2 - Mode Exploration
             lesson-2:
               name: Sketch Lab - Wireframe Assets
+            lesson-3:
+              name: Unit 3 Prototypes
+            lesson-4:
+              name: Unit 4 Prototypes
           lesson_groups: {}
           name: aif-all-the-things
           title: All the AIF Things!
@@ -23972,3 +23978,23 @@ en:
           description_short: Bring dance, music, and coding together in this interactive Hour of AI tutorial.
           description: Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat. Along the way, they learn AI basics like prompting and coding basics like sequencing and parallelism, all while exploring how AI can amplify creativity while keeping them in control. Perfect for sparking curiosity, confidence, and classroom energy!
           student_description: Ready to mix design, music, and dance together? In Mix & Move with AI, you’ll design your own dancer, mix music from artists like Sabrina Carpenter, Benson Boone, and Shakira, and code a dance performance — all while exploring how AI can help you try out ideas faster while staying in charge. It’s a fun, creative way to explore coding and AI!
+        dan-playground:
+          lessons:
+            lesson-1:
+              name: Video Spike
+          lesson_groups: {}
+          name: dan-playground
+          title: Dan's Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        mix-move-ai-educators-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: mix-move-ai-educators-2025
+          title: Hour of AI for Educators
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

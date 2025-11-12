@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import DCDO from '@cdo/apps/dcdo';
+import localization from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {MetricEvent} from '@cdo/apps/metrics/events';
@@ -10,6 +11,7 @@ import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 
+import * as BlockUtils from '../block_utils';
 import UserPreferences from '../lib/util/UserPreferences';
 import {shrinkBlockSpaceContainer} from '../templates/instructions/utils';
 
@@ -20,8 +22,10 @@ import {
   BLOCKLY_THEME,
 } from './constants';
 import {
+  BlockJson,
   BlocklyWrapperType,
   ExtendedBlock,
+  ExtendedWorkspaceSvg,
   JsonBlockConfig,
   WorkspaceSerialization,
 } from './types';
@@ -516,4 +520,300 @@ export function applyBlockIdOverrides(
   if (Array.isArray(workspaceJson.blocks?.blocks)) {
     workspaceJson.blocks.blocks.forEach(walkBlocks);
   }
+}
+
+/**
+ * Redraws a workspace.
+ */
+export function refreshWorkspace(workspace: ExtendedWorkspaceSvg) {
+  const state = Blockly.serialization.workspaces.save(workspace);
+  // Do not allow the variables to be redefined as they will conflict when the
+  // block data is reloaded.
+  const variables = workspace.globalVariables;
+  if (variables) {
+    workspace.globalVariables = [];
+  }
+  Blockly.serialization.workspaces.load(state, workspace);
+  if (variables) {
+    workspace.globalVariables = variables;
+  }
+
+  // Handle the toolbox
+  const toolbox = workspace.getToolbox();
+  if (toolbox) {
+    // Close the toolbox when it exists
+    toolbox.clearSelection();
+  }
+
+  // Handle the flyout as well
+  const flyout = workspace.getFlyout(true);
+  if (flyout) {
+    // Redraw the flyout
+    if (workspace.options.languageTree) {
+      flyout.show(workspace.options.languageTree);
+    }
+
+    // Scroll the flyout to the start
+    if (typeof flyout.scrollToStart === 'function') {
+      flyout.scrollToStart();
+    }
+  }
+}
+
+/**
+ * Reverts localized variables in a workspace to their source (English) forms.
+ */
+export function unlocalizeVariables(workspace: ExtendedWorkspaceSvg) {
+  // Go through the original variables and return them to their source language.
+  for (const variable of workspace.getAllVariables()) {
+    if (Blockly.SourceVariables[variable.getId()]) {
+      workspace.renameVariableById(
+        variable.getId(),
+        Blockly.SourceVariables[variable.getId()]
+      );
+    }
+  }
+}
+
+export function initializeVariableLocalization(
+  workspace: ExtendedWorkspaceSvg
+) {
+  // Clear known variables
+  Blockly.SourceVariables = {};
+  workspace.sourceGlobalVariables = [];
+
+  const flyout = workspace.getFlyout(true);
+  if (flyout) {
+    // For the flyout, we have to find all of the variables in the input list
+    // for each block in the flyout. Blockly does not give us a convenient way
+    // to do this, but this is modelled after the block methods to pull out
+    // all of the variable ids in the block (Block.getVars())
+    const flyoutWorkspace = flyout.getWorkspace();
+    if (flyoutWorkspace) {
+      for (const block of flyoutWorkspace.getTopBlocks()) {
+        for (const input of block?.inputList || []) {
+          for (const field of input?.fieldRow || []) {
+            if (field?.referencesVariables()) {
+              const varField = field as GoogleBlockly.FieldVariable;
+              const variable = varField?.getVariable();
+              if (variable) {
+                const id = variable.getId();
+                const oldName = variable.getName();
+                Blockly.SourceVariables[id] = oldName;
+
+                // And we note them as 'global' variables
+                if (!workspace.sourceGlobalVariables.includes(oldName)) {
+                  workspace.sourceGlobalVariables.push(oldName);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // We keep track of all variables in the workspace
+  for (const variable of workspace.getAllVariables()) {
+    const id = variable.getId();
+    const oldName = variable.getName();
+    Blockly.SourceVariables[id] = oldName;
+
+    // And we note them as 'global' variables
+    if (!workspace.sourceGlobalVariables.includes(oldName)) {
+      workspace.sourceGlobalVariables.push(oldName);
+    }
+  }
+
+  // Keep track of the installed global variables, too
+  if (workspace.globalVariables) {
+    workspace.sourceGlobalVariables = workspace.sourceGlobalVariables.concat(
+      workspace.globalVariables
+    );
+  }
+}
+
+/**
+ * Goes through workspace variables and localizes them.
+ */
+export function localizeVariables(workspace: ExtendedWorkspaceSvg) {
+  // Localize the flyout, if there is one
+  const languageTree = workspace.options.languageTree;
+  if (languageTree) {
+    // Update the language tree that is used to represent the flyout blocks
+    for (const [id, oldName] of Object.entries(Blockly.SourceVariables)) {
+      let newName: string = localization.translate(`[variable] ${oldName}`, [
+        'blockly-variable',
+        'blockly-block',
+      ]);
+      if (newName.startsWith('[variable] ')) {
+        newName = newName.substring(11);
+      } else {
+        console.error(
+          'Global variable translation does not have the [variable] tag',
+          oldName,
+          newName
+        );
+        newName = oldName;
+      }
+
+      for (const node of languageTree?.contents || []) {
+        const blockNode = node as GoogleBlockly.utils.toolbox.BlockInfo;
+        const xml = blockNode.blockxml;
+        if (xml !== undefined && typeof xml !== 'string') {
+          const node = xml as HTMLElement;
+          for (const el of Array.from(
+            node.querySelectorAll(`field[id="${id}"]`) || []
+          )) {
+            const fieldElement = el as HTMLElement;
+            fieldElement.textContent = newName;
+          }
+        }
+      }
+    }
+  }
+
+  for (const variable of workspace.getAllVariables()) {
+    Blockly.SourceVariables[variable.getId()] ||= variable.getName();
+    const oldName = Blockly.SourceVariables[variable.getId()];
+
+    // Make sure we've seen the old name before
+    if (workspace.sourceGlobalVariables?.includes(oldName)) {
+      const globalVariableIndex =
+        workspace.sourceGlobalVariables.indexOf(oldName);
+      let newName: string = localization.translate(`[variable] ${oldName}`, [
+        'blockly-variable',
+        'blockly-block',
+      ]);
+      if (newName.startsWith('[variable] ')) {
+        newName = newName.substring(11);
+      } else {
+        console.error(
+          'Global variable translation does not have the [variable] tag',
+          oldName,
+          newName
+        );
+        newName = oldName;
+      }
+
+      workspace.renameVariableById(variable.getId(), newName);
+      if (workspace.globalVariables?.[globalVariableIndex]) {
+        workspace.globalVariables[globalVariableIndex] = newName;
+      }
+    }
+  }
+}
+
+/**
+ * Localizes a modern block definition and returns the localized form of it.
+ */
+export function localizeBlockDefinition(blockDefinition: BlockJson): BlockJson {
+  return {
+    ...blockDefinition,
+    tooltip:
+      blockDefinition.tooltip !== undefined
+        ? localization.translate(blockDefinition.tooltip)
+        : undefined,
+    message0:
+      blockDefinition.message0 !== undefined
+        ? localization.translate(blockDefinition.message0, ['blockly-block'])
+        : undefined,
+    message1:
+      blockDefinition.message1 !== undefined
+        ? localization.translate(blockDefinition.message1, ['blockly-block'])
+        : undefined,
+    message2:
+      blockDefinition.message2 !== undefined
+        ? localization.translate(blockDefinition.message2, ['blockly-block'])
+        : undefined,
+    message3:
+      blockDefinition.message3 !== undefined
+        ? localization.translate(blockDefinition.message3, ['blockly-block'])
+        : undefined,
+  };
+}
+
+/**
+ * Updates the locale and localization strings for all workspaces.
+ */
+export function updateLocale(rtl: boolean) {
+  // Call into our localization engine to get the new blocks and refresh all active
+  // workspaces.
+
+  // Copy over new localization keys for the normal blocks in 'Msg'
+  for (const [key, value] of Object.entries(Blockly.Msg || {})) {
+    Blockly.SourceMsg[key] ||= value;
+    Blockly.Msg[key] = localization.translate(Blockly.SourceMsg[key], [
+      'blockly-block',
+    ]);
+  }
+
+  // Go through custom and shared blocks to translate the blockText there
+  // This means recreating the block init() functions with updated block
+  // configurations.
+  for (const blockName of Object.keys(
+    Blockly.SourceCustomBlocks.blockDefinitionsByName
+  )) {
+    const blockDefinition =
+      Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName];
+    Blockly.SourceCustomBlocks.blockTexts[blockName] ||=
+      blockDefinition.config.blockText;
+    const oldBlockText = Blockly.SourceCustomBlocks.blockTexts[blockName];
+    let newBlockText: string = oldBlockText;
+    if (blockDefinition.config.returnType === 'Behavior') {
+      newBlockText = localization.translate(`[behavior] ${oldBlockText}`, [
+        'blockly-block',
+        'blockly-behavior',
+      ]);
+      if (newBlockText.startsWith('[behavior] ')) {
+        newBlockText = newBlockText.substring(11);
+      } else {
+        console.error(
+          'Behavior translation does not have the [behavior] tag',
+          oldBlockText,
+          newBlockText
+        );
+      }
+    } else {
+      newBlockText = localization.translate(oldBlockText, ['blockly-block']);
+    }
+
+    // Unfreeze the block definition to add the new translation strings
+    Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName] = {
+      ...blockDefinition,
+      config: {
+        ...blockDefinition.config,
+        blockText: newBlockText,
+      },
+    };
+  }
+
+  const blockDefinitions = Object.values(
+    Blockly.SourceCustomBlocks.blockDefinitionsByName
+  );
+
+  BlockUtils.installCustomBlocks({
+    blockly: Blockly,
+    blockDefinitions,
+    customInputTypes: Blockly.SourceCustomInputTypes,
+  });
+
+  const mainWorkspace = Blockly.getMainWorkspace();
+  if (mainWorkspace) {
+    mainWorkspace.RTL = rtl;
+    localizeVariables(mainWorkspace as ExtendedWorkspaceSvg);
+    refreshWorkspace(mainWorkspace as ExtendedWorkspaceSvg);
+  }
+
+  // Refresh embedded workspaces (blocks in instructions, documentation, etc)
+  Blockly.embeddedWorkspaces.forEach(workspace_id => {
+    const workspace = Blockly.Workspace.getById(
+      workspace_id
+    ) as ExtendedWorkspaceSvg;
+    if (workspace) {
+      workspace.RTL = rtl;
+      localizeVariables(workspace as ExtendedWorkspaceSvg);
+      refreshWorkspace(workspace);
+    }
+  });
 }
