@@ -290,7 +290,7 @@ Resources:
   # Frontend Servers
   # ---------------------------------------------
 
-<% frontend_availability_zones = AVAILABILITY_ZONES - ['us-east-1e'] # us-east-1e doesn't support m7i instance types.
+<% frontend_availability_zones = AVAILABILITY_ZONES - ['us-east-1e'] # As of Nov 2025, us-east-1e doesn't support m7i instance types. 
    frontend_subnet_suffixes = availability_zone_suffixes(frontend_availability_zones)
 -%>
 
