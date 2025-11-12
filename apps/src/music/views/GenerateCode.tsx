@@ -15,6 +15,7 @@ import Adlib, {
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -105,47 +106,60 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     adlibOption ? '' : DefaultPrompt
   );
 
-  const generateSong = useCallback(async () => {
-    const startTime = Date.now();
+  const generateSong = useCallback(
+    async (regenerate = false) => {
+      const startTime = Date.now();
 
-    dispatch(setAiGenerateState('generating'));
+      dispatch(setAiGenerateState('generating'));
 
-    const pseudocode = await (useCache && useAdlib
-      ? generateSongCache(adlibOption || '', useAdlib, packId, adlibChoices)
-      : generateSongAi(
-          contextText,
+      analyticsReporter.sendEvent(
+        EVENTS[
+          `MUSIC_LAB_${regenerate ? 'REGENERATE' : 'GENERATE'}_CODE_CLICKED`
+        ],
+        {
+          adlibChoices,
           packId,
-          promptText || '',
-          (levelProperties.levelData as MusicLevelData)
-            .aiCodeGenerateExtraPrompt
-        ));
+          levelPath: window.location.pathname,
+        }
+      );
+      const pseudocode = await (useCache && useAdlib
+        ? generateSongCache(adlibOption || '', useAdlib, packId, adlibChoices)
+        : generateSongAi(
+            contextText,
+            packId,
+            promptText || '',
+            (levelProperties.levelData as MusicLevelData)
+              .aiCodeGenerateExtraPrompt
+          ));
 
-    const elapsedTime = Date.now() - startTime;
-    const remainingDelayDuration = Math.max(
-      GENERATE_DELAY_DURATION - elapsedTime,
-      0
-    );
-    await new Promise(res => setTimeout(res, remainingDelayDuration));
+      const elapsedTime = Date.now() - startTime;
+      const remainingDelayDuration = Math.max(
+        GENERATE_DELAY_DURATION - elapsedTime,
+        0
+      );
+      await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-    if (pseudocode) {
-      const resultBlockly = generateBlocklyJson(pseudocode);
-      dispatch(setCodeToLoad(resultBlockly));
-    }
+      if (pseudocode) {
+        const resultBlockly = generateBlocklyJson(pseudocode);
+        dispatch(setCodeToLoad(resultBlockly));
+      }
 
-    setPlaying(true);
-    dispatch(setAiGenerateState('generated'));
-  }, [
-    adlibChoices,
-    adlibOption,
-    contextText,
-    dispatch,
-    levelProperties.levelData,
-    packId,
-    promptText,
-    setPlaying,
-    useAdlib,
-    useCache,
-  ]);
+      setPlaying(true);
+      dispatch(setAiGenerateState('generated'));
+    },
+    [
+      adlibChoices,
+      adlibOption,
+      contextText,
+      dispatch,
+      levelProperties.levelData,
+      packId,
+      promptText,
+      setPlaying,
+      useAdlib,
+      useCache,
+    ]
+  );
 
   useEffect(() => {
     // If we are clearing, make sure we are called with the new
@@ -156,7 +170,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       aiGenerateState === 'clearing-before-generating' &&
       blockCount <= 1
     ) {
-      generateSong();
+      generateSong(true);
     }
   }, [aiGenerateState, blockCount, dispatch, generateSong]);
 
@@ -329,6 +343,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               setPlaying(false);
               clearCode(true);
               dispatch(setAiGenerateState('clearing-before-none'));
+              analyticsReporter.sendEvent(
+                EVENTS.MUSIC_LAB_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
+                {levelPath: window.location.pathname, packId}
+              );
             }}
             className={styles.buttonWide}
           />
@@ -360,6 +378,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
               dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
+              analyticsReporter.sendEvent(
+                EVENTS.MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED,
+                {levelPath: window.location.pathname, packId, adlibChoices}
+              );
             }}
             className={styles.buttonWide}
           />
@@ -397,6 +419,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 setPlaying(false);
                 clearCode(true);
                 dispatch(setAiGenerateState('clearing-before-none'));
+                analyticsReporter.sendEvent(
+                  EVENTS.MUSIC_LAB_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
+                  {levelPath: window.location.pathname, packId}
+                );
               }}
               className={styles.buttonWide}
             />
