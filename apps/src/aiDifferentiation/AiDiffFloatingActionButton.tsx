@@ -2,7 +2,9 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import {setIsAiDiffContainerOpen} from '@cdo/apps/redux/layout';
 import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {
   tryGetSessionStorage,
   trySetSessionStorage,
@@ -72,6 +74,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   >('loading');
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
 
   React.useEffect(() => {
     // If the user has manually opened or closed the FAB, we should not open it automatically.
@@ -85,13 +88,16 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       // Keeps FAB open/closed on new pages in the same tab or window
       // New tab or window is default closed if they have previously opened/closed the FAB
       // Default open if they have never opened/closed the fab before (i.e. first time on the site)
-      setIsOpen(
+      const isOpenState =
         canStartOpen &&
-          ((isFirstSession && canDefaultOpen) ||
-            JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)))
-      );
+        ((isFirstSession && canDefaultOpen) ||
+          JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)));
+
+      setIsOpen(isOpenState);
+      // TODO: Remove calls to setIsAiDiffContainerOpen when https://codedotorg.atlassian.net/browse/AITT-1281 is implemented.
+      dispatch(setIsAiDiffContainerOpen(isOpenState));
     }
-  }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen]);
+  }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen, dispatch]);
 
   const updateUnreadNotificationCount = React.useCallback(() => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
@@ -150,6 +156,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     } else {
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
+    dispatch(setIsAiDiffContainerOpen(!isOpen));
     setIsOpen(!isOpen);
     trySetSessionStorage(SESSION_STORAGE_KEY, (!isOpen).toString());
     updateUnreadNotificationCount();
