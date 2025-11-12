@@ -488,7 +488,7 @@ class UnconnectedMusicView extends React.Component {
           <ImageAttributions
             attributions={this.library.getImageAttributions()}
           />
-          <p>Additional audio by William Cremin.</p>
+          <p>Audio editing and original sounds by William Cremin.</p>
         </>
       );
     }
