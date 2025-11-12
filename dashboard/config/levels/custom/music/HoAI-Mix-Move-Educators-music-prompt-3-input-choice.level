@@ -2,12 +2,13 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 70,
-  "created_at": "2025-11-12T21:24:05.000Z",
+  "created_at": "2025-11-12T22:17:09.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
     "level_data": {
       "library": "launch2024",
+      "allowChangeStartingPlayheadPosition": true,
       "guideMode": "aiCodeGenerate",
       "aiCodeGenerateAdlib": {
         "id": "sounds",
@@ -76,7 +77,7 @@
             }
           ]
         },
-        "variantCount": 3
+        "variantCount": 10
       },
       "aiCodeGenerateExtraPrompt": "You can also use any of the following additional drum sounds: \"{drumSounds}\"."
     },
@@ -97,7 +98,7 @@
     "project_template_level_name": "HoAI-Mix-Move-Educators-music-prompt-3-input-choice-template",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-07T22:39:39.052+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-music-prompt-3-input\\\"\"],\"cloned_from\":\"mix-move-ai-music-prompt-3-input\"},{\"changed_at\":\"2025-11-12 22:33:39 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-12T22:17:09.827+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-music-prompt-3-input-choice\\\"\"],\"cloned_from\":\"mix-move-ai-music-prompt-3-input-choice\"},{\"changed_at\":\"2025-11-12 22:35:03 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
