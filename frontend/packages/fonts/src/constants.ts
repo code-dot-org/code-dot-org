@@ -4,10 +4,10 @@ export const FONT_FAMILY_NAMES = [
   'Barlow Semi Condensed Semibold', // For headings, low priority
   'Barlow Semi Condensed Medium', // For headings, low priority
   '"FontAwesome"', // Icons, low priority
-  '"Font Awesome 6 Brands"', // Icons, low priority
-  '"Font Awesome 6 Duotone"', // Icons, low priority
-  '"Font Awesome 6 Kit"', // Custom Icons, low priority
-  '"Font Awesome 6 Pro"', // Icons, low priority
+  '"Font Awesome 7 Brands"', // Icons, low priority
+  '"Font Awesome 7 Duotone"', // Icons, low priority
+  '"Font Awesome 7 Kit"', // Custom Icons, low priority
+  '"Font Awesome 7 Pro"', // Icons, low priority
 ];
 
 export const LOCALES_WITH_INTERNATIONAL_FONTS = [
