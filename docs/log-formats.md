@@ -270,6 +270,8 @@ Rails Lograge logs typically include the core keys shown in the examples above:
 - `duration` — Total request duration in milliseconds
 - `view` — View rendering time in milliseconds
 - `db` — Database query time in milliseconds
+- `user_id` - The ID of the current logged in user (optional)
+- `admin_id` - Present if this is an admin assuming this user's identity
 
 Depending on the route and Lograge hooks, optional keys may also appear—for example `ip`, `user_id`, `params`, `request_id`, `timestamp`, `location` (for redirects), or error metadata like `error` and `exception`.
 
@@ -316,6 +318,25 @@ parse @message "@cee: *" as payload
 | filter path = "/api/v1/users/current" and duration > 300
 | sort duration desc
 | limit 200
+```
+
+Find actions performed by someone while using "Assume Identity":
+```
+fields @timestamp, @message, @logStream, @log
+| parse @message /"user_id"\s*:\s*(?<user_id>\d+)/
+| parse @message /"admin_id"\s*:\s*(?<admin_id>\d+)/
+| filter ispresent(admin_id)
+| sort @timestamp desc
+| limit 30
+```
+
+Find Admin-only actions like deleting a user, granting a role, or starting an "Assume  Identity" session:
+```
+fields @timestamp, @message, @logStream, @log
+| parse @message '"namespace":"*"' as namespace
+| filter namespace = "admin"
+| sort @timestamp desc
+| limit 30
 ```
 
 Find recent cron executions on an app server:
