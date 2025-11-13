@@ -107,11 +107,11 @@ export type SketchlabExternalFiles = Record<FileId, SketchlabProjectFile>;
 // By default, Excalidraw file entries require a dataURL field that has a
 // base64 encoding of the file. As we move to store images in S3, this field
 // is now optional.
-type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
+export type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
   dataURL?: DataURL;
 };
 
-type ExcalidrawFilesWithOptionalData = Record<
+export type ExcalidrawFilesWithOptionalData = Record<
   ExcalidrawElement['id'],
   ExcalidrawFileWithOptionalData
 >;

@@ -57,6 +57,8 @@ const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
 const DEFAULT_SOURCES = {source: {}};
 
+const S3_IMAGE_EXPERIMENT = 's3-images';
+
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
@@ -167,6 +169,12 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             serializedData.files,
             filesBeingUploadedRef,
             channelId
+          );
+        }
+
+        if (experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)) {
+          Object.values(serializedData?.files || {}).forEach(
+            file => delete file.dataURL
           );
         }
 
@@ -297,7 +305,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         >
           <Excalidraw
             initialData={
-              experiments.isEnabledAllowingQueryString('s3-images')
+              experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
                 ? convertToExcalidrawSources(currentSources.source)
                 : (currentSources.source as ExcalidrawInitialDataState)
             }
