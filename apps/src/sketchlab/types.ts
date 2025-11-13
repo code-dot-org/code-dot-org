@@ -2,8 +2,8 @@ import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
 import {AppState} from '@excalidraw/excalidraw/types/types';
 
 import {
-  ExcalidrawFilesWithOptionalData,
   ExcalidrawSourceWithExternalFiles,
+  ExcalidrawFilesWithOptionalData,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 

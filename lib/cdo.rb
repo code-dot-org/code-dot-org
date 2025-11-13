@@ -320,7 +320,7 @@ module Cdo
     # to ensure that other systems (such as Continuous Integration builds) that are operating
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
     def test_system?
-      rack_env?(:test) && pegasus_hostname == 'test.code.org'
+      rack_env?(:test) && pegasus_hostname == 'test.code.org' && CDO.chef_managed
     end
 
     # Identify whether we are executing within a web application server as most of our Ruby classes and modules

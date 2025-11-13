@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_10_13_190700) do
+ActiveRecord::Schema.define(version: 2025_11_12_230749) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -195,6 +195,7 @@ ActiveRecord::Schema.define(version: 2025_10_13_190700) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "version", limit: 64
     t.index ["credential_type", "authentication_id", "deleted_at"], name: "index_auth_on_cred_type_and_auth_id", unique: true
     t.index ["email", "deleted_at"], name: "index_authentication_options_on_email_and_deleted_at"
     t.index ["hashed_email", "deleted_at"], name: "index_authentication_options_on_hashed_email_and_deleted_at"

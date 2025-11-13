@@ -10,6 +10,11 @@ import i18n from '@cdo/locale';
 jest.mock('@cdo/apps/aiDifferentiation/personalization/teachingProfileApi');
 jest.mock('@cdo/apps/aiEvaluation/aiEvaluationApi');
 
+// Mock analyticsReporter
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  sendEvent: jest.fn(),
+}));
+
 // Mock CSRF token
 const mockCSRFToken = 'mock-csrf-token';
 Object.defineProperty(document, 'querySelector', {
