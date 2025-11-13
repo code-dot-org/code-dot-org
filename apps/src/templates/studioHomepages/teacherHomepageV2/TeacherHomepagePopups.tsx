@@ -2,7 +2,6 @@ import React from 'react';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import DCDO from '@cdo/apps/dcdo';
-import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
@@ -174,19 +173,18 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   return (
     <>
       {popup}
-      {aiDifferentiationEnabled &&
-        experiments.isEnabled('ai-differentiation') && (
-          <AiDiffFloatingActionButton
-            context={{type: AiDiffContext.GENERAL}}
-            canShowPulse={
-              !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
-            }
-            canStartOpen={!isLoading && !hasSeenPopup && !popup}
-            canDefaultOpen={
-              !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
-            }
-          />
-        )}
+      {aiDifferentiationEnabled && (
+        <AiDiffFloatingActionButton
+          context={{type: AiDiffContext.GENERAL}}
+          canShowPulse={
+            !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
+          }
+          canStartOpen={!isLoading && !hasSeenPopup && !popup}
+          canDefaultOpen={
+            !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
+          }
+        />
+      )}
     </>
   );
 };

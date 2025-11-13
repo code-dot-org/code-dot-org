@@ -13,10 +13,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
     @lesson = create(:lesson, script: @unit_in_course, lesson_group: @lesson_group)
     create(:script_level, script: @unit_in_course, lesson: @lesson)
 
-    @teacher_sans_experiment = create(:teacher)
     @teacher = create(:teacher)
-
-    create(:single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation')
 
     @session_id = "1234"
     @bedrock_client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
@@ -74,16 +71,9 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       assert_redirected_to_sign_in
     end
 
-    test "index returns forbidden when teacher not in experiment" do
-      sign_in @teacher_sans_experiment
-      get :index
-      assert_response :forbidden
-    end
-
     test "index returns only user-owned threads" do
       #some other user's thread
       @teacher2 = create(:teacher)
-      create(:single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation')
       create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
 
       #this user's threads
@@ -103,26 +93,15 @@ class AidiffThreadsControllerTest < ActionController::TestCase
     test "show redirects to signin when teacher not signed in" do
       #some other user's thread
       @teacher2 = create(:teacher)
-      create(:single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation')
       thread = create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
 
       get :show, params: {id: thread.id}
       assert_redirected_to_sign_in
     end
 
-    test "show returns forbidden when teacher not in experiment" do
-      #some other user's thread
-      sign_in @teacher_sans_experiment
-      thread = create(:aidiff_thread, external_id: @session_id, user: @teacher_sans_experiment, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
-
-      get :show, params: {id: thread.id}
-      assert_response :forbidden
-    end
-
     test "show returns forbidden when teacher doesn't own thread" do
       #some other user's thread
       @teacher2 = create(:teacher)
-      create(:single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation')
       thread = create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
 
       sign_in @teacher
@@ -216,22 +195,6 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       assert_redirected_to_sign_in
     end
 
-    test "returns forbidden when creating thread if ai_diff experiment isn't enabled" do
-      sign_in @teacher_sans_experiment
-
-      post :create, params: {
-        context: {
-          type: "lesson",
-          lessonId: @lesson.id,
-        },
-        inputText: "Hello!",
-        isPreset: false,
-        presetChipText: nil,
-      }
-
-      assert_response :forbidden
-    end
-
     test "does not create thread if not a teacher" do
       student = create(:student)
       create(:follower, student_user: student, user: @teacher)
@@ -251,7 +214,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       assert_response :forbidden
     end
 
-    test "create returns success when experiment is enabled" do
+    test "create returns success" do
       sign_in @teacher
 
       assert_equal 0, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
@@ -281,7 +244,6 @@ class AidiffThreadsControllerTest < ActionController::TestCase
 
     test "chat_completion returns forbidden when teacher doesn't own the thread" do
       @teacher2 = create(:teacher)
-      create(:single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation')
       @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
 
       #sign in different teacher
@@ -297,7 +259,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       assert_response :forbidden
     end
 
-    test "chat_completion returns success when experiment is enabled and thread exists" do
+    test "chat_completion returns success when thread exists" do
       sign_in @teacher
       @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
 
@@ -459,19 +421,6 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       }
 
       assert_response :bad_request
-    end
-
-    test "returns forbidden when getting curriculum_courses if ai_diff experiment isn't enabled" do
-      sign_in @teacher_sans_experiment
-
-      post :curriculum_courses, params: {
-        context: {
-          type: "lesson",
-          lessonId: @lesson.id
-        },
-      }
-
-      assert_response :forbidden
     end
 
     test "does not get curriculum_courses if not a teacher" do

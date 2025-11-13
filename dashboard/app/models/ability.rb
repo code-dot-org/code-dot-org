@@ -217,6 +217,9 @@ class Ability
         can :get_feedbacks, TeacherFeedback do |feedback|
           user.students.exists?(id: feedback.student_id)
         end
+        can :submit_feedback, AidiffMessage
+        can :create, AidiffThread
+        can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
 
       end
 
@@ -282,12 +285,6 @@ class Ability
         can :index, :peer_review_submissions
         can :dashboard, :peer_reviews
         can :report_csv, :peer_review_submissions
-      end
-
-      if Experiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
-        can :submit_feedback, AidiffMessage
-        can :create, AidiffThread
-        can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
       end
 
       can :show, Rubric

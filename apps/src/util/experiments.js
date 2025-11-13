@@ -40,8 +40,6 @@ experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
-// Experiment for enabling the AI-TA differentiation chat
-experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)

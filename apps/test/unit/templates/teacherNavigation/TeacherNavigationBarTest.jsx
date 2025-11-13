@@ -26,7 +26,6 @@ import {
   TEACHER_NAVIGATION_BASE_URL,
   TEACHER_NAVIGATION_SECTIONS_URL,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -332,19 +331,7 @@ describe('TeacherNavigationBar', () => {
     expect(screen.queryByText('AI Tutor')).toBeNull();
   });
 
-  test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {
-    // mock experiment is disabled
-    experiments.isEnabled = jest.fn(() => false);
-    renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
-
-    expect(
-      screen.queryByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
-    ).toBeNull();
-  });
-
   test('does not render AiDiffFloatingActionButton component when user pref is not enabled', async () => {
-    // mock experiment is enabled
-    experiments.isEnabled = jest.fn(() => true);
     // mock user preference disabled
     renderDefault(
       13,
@@ -361,7 +348,6 @@ describe('TeacherNavigationBar', () => {
   test('renders AiDiffFloatingActionButton component', async () => {
     // mock experiment is enabled
     localStorage.setItem('AiDiffHasOpenedKey', 'true');
-    experiments.isEnabled = jest.fn(() => true);
     renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
 
     const chatButton = await screen.findByRole('button', {

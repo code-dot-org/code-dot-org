@@ -24,7 +24,6 @@ import {
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import LessonOverview from '@cdo/apps/templates/lessonOverview/LessonOverview';
 import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
-import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
@@ -142,7 +141,7 @@ function displayDifferentiationChat() {
   const lessonId = lessonData['id'];
   const lessonName = lessonData['displayName'];
 
-  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+  if (aiDiffFabMountPoint) {
     ReactDOM.render(
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton
