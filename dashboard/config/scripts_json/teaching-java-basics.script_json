@@ -4,14 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "content_area": "curriculum_9_12",
+      "content_area": "self_paced_pl_9_12",
       "curriculum_umbrella": "Self-paced PL - CSA",
       "is_migrated": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-31 21:04:25 UTC",
+    "serialized_at": "2025-11-12 23:51:21 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

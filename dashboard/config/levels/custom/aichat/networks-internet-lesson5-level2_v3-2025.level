@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-11-13T06:44:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Network Protocol Revision Assistant\r\n\r\nUse **AI Chat** to get feedback on your packet protocol.\r\n\r\n### Do This:\r\n1. Find your **Protocol (Draft 1)** and **Observations** from the *Packets and Protocols* activity guide.  \r\n2. **Describe** your current protocol to AI Chat — how it works and what problems you noticed.  \r\n3. **Ask** the AI for ways to make it more reliable or efficient.  \r\n4. **Read** its response carefully.  \r\n5. **Decide** which ideas you will include in your next draft.  \r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Need help writing your prompt? Click here for ideas.**]\r\nHere are some ways you could start your chat:\r\n- “Here’s how my packet protocol works: [summarize briefly]. What changes would make it more reliable when packets are lost or arrive out of order?”\r\n- “Can you design an alternative protocol that makes sure all packets arrive in the correct order and none are missing?”\r\n- “How could I make my protocol faster without losing reliability?”\r\n- “How does your suggested protocol compare to TCP or UDP?”\r\n:::\r\n\r\n---\r\n\r\nWhen finished, update your **Revised Protocol (Draft 2)** in the activity guide with any changes you decide to keep.\r\n\r\nThen, return to Level 1 to test it out!",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.9,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "AI Network Protocol Assistant",
+          "description": "The AI Network Protocol Assistant helps students refine and improve their packet transmission protocols during Lesson 5: Packets and Protocols.\nStudents share their original protocol designs and observations, then use the chatbot to request revisions or alternative approaches.\nThe assistant models how AI can analyze, improve, and explain network reliability strategies such as packet numbering, acknowledgments, and retransmission—mirroring the logic of TCP and UDP.\n\nThis chatbot promotes iteration, evaluation, and critical thinking about both human and AI approaches to solving technical problems.",
+          "intendedUse": "Used in Lesson 5 of The Fabric of the Internet and AI unit.\n\nSupports students working in the Internet Simulator to design, test, and refine packet protocols.\n\nEncourages students to compare their own human-designed solutions with AI-generated alternatives.\n\nReinforces the Managing AI and Critical Thinking competencies through structured reflection.",
+          "limitationsAndWarnings": "The chatbot does not run code or simulate networks; it provides conceptual feedback only.\n\nSome AI suggestions may be technically correct but impractical for the classroom simulator; students must decide which ideas to adopt or reject.\n\nThe AI may simplify or generalize networking concepts—teachers should guide discussion toward accurate technical reasoning.\n\nStudents should avoid sharing personal information or unrelated content.",
+          "testingAndEvaluation": "This chatbot was reviewed for:\n\nAlignment with Lesson 5 learning objectives (explaining and improving packet reliability).\n\nAccuracy in describing TCP- and UDP-like behaviors.\n\nClarity and accessibility for middle and high school learners.\n\nAbility to generate alternative, testable protocol ideas without overcomplicating the task.",
+          "exampleTopics": [
+            "Here’s how my packet protocol works: what could make it more reliable when packets are lost?",
+            "Can you design an alternative protocol that makes sure all packets arrive in the right order?",
+            "How could I make my protocol faster without losing reliability?",
+            "How does your version compare to TCP or UDP?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI assistant helping students improve their packet transmission protocols for Lesson 5: Packets and Protocols.  \nOnly respond to questions or requests related to network communication, data packets, or protocol design.  \n\nWhen students share their protocol, analyze it and suggest clear, specific ways to improve reliability, order, and efficiency in packet delivery.  \nOffer constructive feedback and, if asked, propose an alternative protocol that follows logical networking principles (similar to TCP or UDP) but appropriate for a classroom simulation.  \n\nDo not provide or ask for any personal information.  \nDo not discuss unrelated topics.  \nKeep your tone supportive, concise, and student-friendly.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_v2-2025",
+    "submittable": "false",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T06:44:48.482+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level1_v2-2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level1_v2-2025\"},{\"changed_at\":\"2025-11-13 06:51:01 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-11-13 06:52:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>
