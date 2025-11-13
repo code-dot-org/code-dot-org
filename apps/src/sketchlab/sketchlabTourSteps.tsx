@@ -2,6 +2,7 @@ import {Steps} from 'intro.js-react';
 import React, {useEffect, useState} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
@@ -20,17 +21,9 @@ const OnboardingTourSteps: React.FC = () => {
     'no'
   );
   const [isToolbarReady, setIsToolbarReady] = useState(false);
-  const [tourEnabled, setTourEnabled] = useState(false);
-  const [tourStep, setTourStep] = useState(0);
-
-  // The Next button on the Open Menu step (6th step) is disabled until the user completes an action.
-  const [openMenuNextStepEnabled, setOpenMenuNextStepEnabled] = useState(false);
-
-  useEffect(() => {
-    if (sketchlabOnboardingTourSeen !== 'yes') {
-      setTourEnabled(true);
-    }
-  }, [sketchlabOnboardingTourSeen]);
+  const isAiDiffContainerOpen = useAppSelector(
+    state => state.layout.isAiDiffContainerOpen
+  );
 
   useEffect(() => {
     // Wait for Excalidraw toolbar to be fully rendered.
@@ -62,160 +55,17 @@ const OnboardingTourSteps: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Add event listeners for tour progression - Open Menu step (6th step which is tourStep 5).
-  useEffect(() => {
-    if (!tourEnabled || tourStep !== 5) return;
-
-    let hasDetectedDropdown = false;
-    // Count initial dialogs to detect when a NEW one appears.
-    const initialDialogCount =
-      document.querySelectorAll('[role="dialog"]').length;
-
-    const handleDropdownMenuOpen = () => {
-      if (hasDetectedDropdown) return; // Prevent multiple calls.
-      hasDetectedDropdown = true;
-      // Enable 'Next' button on open menu step.
-      setOpenMenuNextStepEnabled(true);
-    };
-
-    const checkForNewDialog = (
-      initialDialogCount: number,
-      hasDetectedDropdown: boolean
-    ) => {
-      // Check if a new dialog appeared after any click.
-      setTimeout(() => {
-        const currentDialogCount =
-          document.querySelectorAll('[role="dialog"]').length;
-        if (currentDialogCount > initialDialogCount && !hasDetectedDropdown) {
-          handleDropdownMenuOpen();
-        }
-      }, 50);
-    };
-
-    const dropdownMenuButton = document.querySelector('.dropdown-menu-button');
-
-    // Add a click listener to the entire document to detect any clicks during this step.
-    const documentClickHandler = (event: Event) => {
-      const target = event.target as HTMLElement;
-      // If user clicked on IntroJS overlay, forward the click to the button.
-      if (
-        target.classList.contains('introjs-helperLayer') ||
-        target.classList.contains('introjs-tooltipReferenceLayer')
-      ) {
-        if (dropdownMenuButton) {
-          (dropdownMenuButton as HTMLElement).click();
-        }
-      }
-      // Check if a new dialog appeared after any click.
-      checkForNewDialog(initialDialogCount, hasDetectedDropdown);
-    };
-    document.addEventListener('click', documentClickHandler, {capture: true});
-
-    // Add a keyboard listener to support Enter key navigation.
-    const documentKeydownHandler = (event: KeyboardEvent) => {
-      if (event.key !== 'Enter') return;
-
-      const target = event.target as HTMLElement;
-      // If user pressed Enter on the dropdown menu button, trigger the button.
-      if (target === dropdownMenuButton) {
-        if (dropdownMenuButton) {
-          (dropdownMenuButton as HTMLElement).click();
-        }
-      }
-      // Check if a new dialog appeared after Enter key press.
-      checkForNewDialog(initialDialogCount, hasDetectedDropdown);
-    };
-    document.addEventListener('keydown', documentKeydownHandler, {
-      capture: true,
-    });
-
-    return () => {
-      document.removeEventListener('click', documentClickHandler, {
-        capture: true,
-      });
-      document.removeEventListener('keydown', documentKeydownHandler, {
-        capture: true,
-      });
-    };
-  }, [tourEnabled, tourStep]);
-
-  // 7th step is informational only. When the user clicks on the Next button, this closes the dropdown menu.
-  // Reopen the dropdown menu when the 7th step starts so user can see the information.
-  useEffect(() => {
-    if (!tourEnabled || tourStep !== 6) return;
-
-    // Ensure dropdown menu is open when step 7 starts
-    // (it might have closed when user clicked Next on step 6)
-    const ensureDropdownIsOpen = () => {
-      const dropdownMenu = document.querySelector('.dropdown-menu');
-      if (!dropdownMenu) {
-        const dropdownMenuButton = document.querySelector(
-          '.dropdown-menu-button'
-        );
-        if (dropdownMenuButton) {
-          (dropdownMenuButton as HTMLElement).click();
-        }
-      }
-    };
-
-    // Open dropdown immediately when step starts
-    setTimeout(ensureDropdownIsOpen, 100);
-  }, [tourEnabled, tourStep]);
-
-  // Update button disabled state based on step and requirements.
-  useEffect(() => {
-    if (!tourEnabled) return;
-
-    const updateButtonState = () => {
-      const nextButton = document.querySelector(
-        '.introjs-nextbutton'
-      ) as HTMLButtonElement;
-      if (nextButton) {
-        if (tourStep === 5 && !openMenuNextStepEnabled) {
-          nextButton.setAttribute('disabled', 'true');
-        } else {
-          nextButton.removeAttribute('disabled');
-        }
-      }
-    };
-
-    // Update once after DOM is ready.
-    const timeoutId = setTimeout(updateButtonState, 100);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [tourEnabled, tourStep, openMenuNextStepEnabled]);
-
   return (
     <Steps
-      enabled={isToolbarReady && sketchlabOnboardingTourSeen !== 'yes'}
+      enabled={
+        isToolbarReady &&
+        sketchlabOnboardingTourSeen !== 'yes' &&
+        !isAiDiffContainerOpen
+      }
       initialStep={INITIAL_STEP}
       steps={STEPS}
       onExit={() => {
         trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
-      }}
-      onChange={nextStepIndex => {
-        setTourStep(nextStepIndex);
-      }}
-      onBeforeChange={nextStepIndex => {
-        // Control step progression based on user interactions.
-        if (nextStepIndex === 6 && !openMenuNextStepEnabled) {
-          return false; // Prevent going to step 7 (index 6) until dropdown menu is clicked.
-        }
-
-        // Reopen dropdown menu before going to step 7 (index 6) - informational only
-        if (nextStepIndex === 6) {
-          const dropdownMenu = document.querySelector('.dropdown-menu');
-          if (!dropdownMenu) {
-            const dropdownMenuButton = document.querySelector(
-              '.dropdown-menu-button'
-            );
-            if (dropdownMenuButton) {
-              (dropdownMenuButton as HTMLElement).click();
-            }
-          }
-        }
       }}
       options={{
         scrollToElement: false,
