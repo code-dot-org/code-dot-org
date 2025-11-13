@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-12 18:33:37 UTC",
+    "serialized_at": "2025-11-12 18:47:17 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,

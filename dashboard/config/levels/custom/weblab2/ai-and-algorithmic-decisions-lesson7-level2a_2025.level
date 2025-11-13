@@ -1,0 +1,81 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T04:01:53.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Redesign for a User\r\n\r\nExamine this course portal web application and review the User Persona below.\r\n\r\nWork with AI to implement one accessibility fix that would help the user to interact with the app better.\r\n\r\n## User Persona\r\nAvery, Age 16 — color-vision deficiency + light sensitivity\r\n\r\n Struggles with pale text and color-only cues\r\n \r\n Does best with a dark theme or strong contrast and labels/icons that don’t rely on color alone.\r\n \r\n Helps: Contrast; Image Alternatives (overlays/labels).\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "display_name": "User: Avery",
+    "bubble_choice_description": "Avery is attempting to access her Course Portal for her high school classes.",
+    "thumbnail_url": "https://images.code.org/a98c923c14aa7ed05947d2a3645f9d96-aiChat.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const toggleFontBtn = document.querySelector(\"#toggle-font-btn\");\nconst toggleDetailsBtn = document.querySelector(\"#toggle-details-btn\");\nconst swapImageBtn = document.querySelector(\"#swap-image-btn\");\nconst bodyElement = document.querySelector(\"body\");\nconst courseDetails1 = document.querySelector(\"#course-details-1\");\nconst courseDetails2 = document.querySelector(\"#course-details-2\");\nconst courseDetails3 = document.querySelector(\"#course-details-3\");\nconst announcementImg = document.querySelector(\"#announcement-img\");\n\ntoggleFontBtn.addEventListener(\"click\", () => {\n  \n});\n\ntoggleDetailsBtn.addEventListener(\"click\", () => {\n\n});\n\nswapImageBtn.addEventListener(\"click\", () => {\n\n});\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* BAD ACCESSIBILITY #2: Font Size - Extremely small 10px base font */\nbody {\n  margin: 0;\n  padding: 20px;\n  background: #e8e8e8;\n  font-family: Arial, sans-serif;\n  font-size: 10px;\n}\n\n.header {\n  background: #d4d4d4;\n  padding: 15px;\n  margin-bottom: 20px;\n  border-radius: 5px;\n}\n\n/* BAD ACCESSIBILITY #1: Contrast - Light gray text on light background */\n.header h1 {\n  margin: 0;\n  color: #c0c0c0;\n  font-size: 18px;\n}\n\n.header p {\n  margin: 5px 0 0 0;\n  color: #b8b8b8;\n  font-size: 9px;\n}\n\n.dashboard {\n  background: white;\n  padding: 15px;\n  border-radius: 5px;\n  margin-bottom: 20px;\n}\n\n.course-card {\n  background: #f5f5f5;\n  padding: 10px;\n  margin-bottom: 15px;\n  border-radius: 3px;\n  border: 1px solid #ddd;\n}\n\n.course-card h2 {\n  margin: 0 0 8px 0;\n  color: #d0d0d0;\n  font-size: 12px;\n}\n\n.course-card p {\n  margin: 4px 0;\n  color: #c8c8c8;\n  font-size: 9px;\n}\n\n.controls {\n  background: white;\n  padding: 15px;\n  border-radius: 5px;\n  margin-bottom: 20px;\n}\n\n.controls h2 {\n  margin: 0 0 10px 0;\n  color: #333;\n  font-size: 14px;\n}\n\n.controls button {\n  margin: 5px;\n  padding: 8px 15px;\n  background: #4a90e2;\n  color: white;\n  border: none;\n  border-radius: 3px;\n  cursor: pointer;\n  font-size: 11px;\n}\n\n.controls button:hover {\n  background: #357abd;\n}\n\n.hidden-content {\n  background: white;\n  padding: 15px;\n  border-radius: 5px;\n  margin-bottom: 20px;\n}\n\n/* BAD ACCESSIBILITY #4: Show or Hide Information - Content hidden by default */\n.hidden {\n  display: none;\n}\n\n.announcement-img {\n  width: 100px;\n  height: 100px;\n  margin: 10px 0;\n  border-radius: 3px;\n}\n\n.large-text body {\n  font-size: 16px;\n}\n\n.large-text .header h1 {\n  font-size: 28px;\n}\n\n.large-text .header p {\n  font-size: 14px;\n}\n\n.large-text .course-card h2 {\n  font-size: 18px;\n}\n\n.large-text .course-card p {\n  font-size: 14px;\n}\n\n.large-text .controls button {\n  font-size: 14px;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "announcement.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-level2a-test-2025/uuid/c8803e28-e18a-4816-8fd6-81c206d50c4f.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Student Portal - My Courses</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <div class=\"header\">\n    <h1>Student Course Portal</h1>\n    <p>Welcome back, Student #12345</p>\n  </div>\n\n  <div class=\"controls\">\n    <h2>Accessibility Controls</h2>\n    <button id=\"toggle-font-btn\">Increase Font Size</button>\n    <button id=\"toggle-details-btn\">Hide Course Details</button>\n    <button id=\"swap-image-btn\">Change Announcement Image</button>\n  </div>\n\n  <div class=\"dashboard\">\n    <h2>My Courses</h2>\n    <div class=\"course-card\">\n      <h2>Web Development 101</h2>\n      <p>Instructor: Prof. Johnson</p>\n      <p>Progress: 65% Complete</p>\n      <div id=\"course-details-1\">\n        <p>Next Class: Monday 10:00 AM</p>\n        <p>Room: Building A, Room 204</p>\n      </div>\n    </div>\n\n    <div class=\"course-card\">\n      <h2>Introduction to Programming</h2>\n      <p>Instructor: Dr. Smith</p>\n      <p>Progress: 82% Complete</p>\n      <div id=\"course-details-2\">\n        <p>Next Class: Wednesday 2:00 PM</p>\n        <p>Room: Building C, Room 101</p>\n      </div>\n    </div>\n\n    <div class=\"course-card\">\n      <h2>Digital Design Fundamentals</h2>\n      <p>Instructor: Ms. Williams</p>\n      <p>Progress: 45% Complete</p>\n      <div id=\"course-details-3\">\n        <p>Next Class: Friday 11:00 AM</p>\n        <p>Room: Building B, Room 305</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"hidden-content\">\n    <h2>Important Announcements</h2>\n    <!-- BAD ACCESSIBILITY #3: Image Alternatives - Missing meaningful alt text -->\n    <img id=\"announcement-img\" class=\"announcement-img\" \n         src=\"announcement.png\" />\n    <p>Check your email for important updates about schedule changes.</p>\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "5",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T04:01:53.152+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson7-level2a-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson7-level2a-test-2025\"},{\"changed_at\":\"2025-11-13 04:05:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>
