@@ -145,7 +145,6 @@ experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
  */
 experiments.isEnabledAllowingQueryString = function (key) {
   const query = queryString.parse(this.getQueryString_());
-  console.log({query});
 
   // Look for ?my_experiment=1 style experiment keys
   if (query[key]) {

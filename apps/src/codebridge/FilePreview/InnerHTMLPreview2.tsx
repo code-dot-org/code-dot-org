@@ -1,8 +1,7 @@
+import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-
-import {CodebridgeEmptyState} from '../components/CodebridgeEmptyState';
 
 import {
   IframeMessageType,
@@ -27,7 +26,7 @@ const InnerHTMLPreview = () => {
   // Numerical key used to trigger iframe reloads when we have updates.
   const [previewKey, setPreviewKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
-  useProjectServiceWorker(source, currentFile);
+  useProjectServiceWorker(source);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
 
@@ -58,6 +57,7 @@ const InnerHTMLPreview = () => {
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
         setIsLevelLoading(data.isLoading);
         if (data.isLoading) {
+          // If we are loading, mark service worker as not ready to prevent trying to preview too early.
           setServiceWorkerReady(false);
         }
       }

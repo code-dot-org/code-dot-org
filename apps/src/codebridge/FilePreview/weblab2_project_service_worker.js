@@ -95,8 +95,6 @@ function main() {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
           Pragma: 'no-cache',
           Expires: '0',
-          // Intentionally omit SAMEORIGIN; ALLOWALL is non‑standard but keeps older code path.
-          'X-Frame-Options': 'ALLOWALL',
         },
       });
     } catch (error) {
@@ -105,7 +103,6 @@ function main() {
         status: 500,
         headers: {
           'Content-Type': 'text/plain',
-          'X-Frame-Options': 'ALLOWALL',
         },
       });
     }

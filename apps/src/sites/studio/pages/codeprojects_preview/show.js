@@ -10,7 +10,6 @@ window.ReactDOM = require('react-dom');
 const useWeblab2PreviewV2 = experiments.isEnabledAllowingQueryString(
   experiments.WEBLAB2_PREVIEW_V2
 );
-console.log({useWeblab2PreviewV2});
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(

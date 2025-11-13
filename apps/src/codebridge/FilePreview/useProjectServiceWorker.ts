@@ -12,10 +12,7 @@ import {
 import {addBaseTagToDocument} from './htmlParsingHelpers';
 
 // Hook that handles registering and communicating with the project service worker.
-function useProjectServiceWorker(
-  source: MultiFileSource | undefined,
-  currentFile: string | undefined
-) {
+function useProjectServiceWorker(source: MultiFileSource | undefined) {
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
     null
   );
