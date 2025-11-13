@@ -1,14 +1,14 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
-  "created_at": "2025-11-12T21:24:05.000Z",
+  "created_at": "2025-11-12T22:28:33.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
     "level_data": {
       "library": "launch2024",
       "guideMode": "aiCodeGenerate",
+      "allowChangeStartingPlayheadPosition": true,
       "aiCodeGenerateAdlib": {
         "id": "sounds",
         "template": "Code a {mood} music mix with a {length} length, using {drums} drums.",
@@ -94,10 +94,10 @@
       "validationEnabled": false
     },
     "long_instructions": "### Code the music mix for your dance\r\nModify the prompt with more details, then press Generate code.",
-    "project_template_level_name": "HoAI-Mix-Move-Educators-music-prompt-3-input-choice-template",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-07T22:39:39.052+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-music-prompt-3-input\\\"\"],\"cloned_from\":\"mix-move-ai-music-prompt-3-input\"},{\"changed_at\":\"2025-11-12 22:33:39 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-12T22:28:33.020+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-music-prompt-3-input-choice-template\\\"\"],\"cloned_from\":\"mix-move-ai-music-prompt-3-input-choice-template\"}]"
 }]]></config>
   <blocks/>
 </Music>
