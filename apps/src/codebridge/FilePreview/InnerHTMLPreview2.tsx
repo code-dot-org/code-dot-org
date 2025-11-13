@@ -99,10 +99,6 @@ const InnerHTMLPreview = () => {
       ) {
         setServiceWorkerReady(true);
         setPreviewKey(prevKey => prevKey + 1);
-      } else if (
-        event.data.type === ProjectServiceWorkerMessageType.UPDATED_CURRENT_FILE
-      ) {
-        setPreviewKey(prevKey => prevKey + 1);
       }
     };
     return () => {
