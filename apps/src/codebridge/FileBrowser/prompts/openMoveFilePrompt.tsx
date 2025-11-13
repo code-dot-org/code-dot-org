@@ -23,7 +23,10 @@ type OpenMoveFilePromptArgsType = {
   moveFile: MoveFileFunction;
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
-  sendLab2AnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, string>
+  ) => void;
 };
 
 export const openMoveFilePrompt = async ({
@@ -69,5 +72,7 @@ export const openMoveFilePrompt = async ({
   const destinationFolderId = extractUserInput(results);
   moveFile(fileId, destinationFolderId);
 
-  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE, {
+    fileType: file.language?.toLowerCase() || '',
+  });
 };
