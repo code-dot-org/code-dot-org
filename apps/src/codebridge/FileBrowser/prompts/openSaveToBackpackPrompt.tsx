@@ -1,4 +1,3 @@
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getFileNameWithNumberSuffix} from '@codebridge/utils';
 import React from 'react';
 
@@ -99,16 +98,9 @@ export const openSaveToBackpackPrompt = async ({
           fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
         });
 
-      const fileContents = {
-        name: selectedFileName,
-        contents: file.contents,
-        folderId: DEFAULT_FOLDER_ID,
-        language: 'py',
-        active: false,
-      } as ProjectFile;
-      backpackApi.savePythonlabFile(
+      backpackApi.saveCodebridgeFile(
         selectedFileName,
-        fileContents,
+        file.contents,
         handleError(
           codebridgeI18n.saveToBackpackTitle(),
           codebridgeI18n.saveToBackpackError({selectedFileName}) +
