@@ -1,6 +1,7 @@
 name 'ai-and-algorithmic-decisions-lesson6-level4-test-2025'
 display_name 'Coding Functions with Parameters'
 description 'Code a function that takes in one or more parameters to update the display.'
+uses_lab2
 
 sublevels
 level 'ai-and-algorithmic-decisions-lesson6-level4c-test-2025'

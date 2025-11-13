@@ -92,6 +92,8 @@ steps:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
@@ -204,6 +206,8 @@ steps:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
       SAUCE_USERNAME:
@@ -277,6 +281,8 @@ steps:
     pull: always
     environment:
       CI_JOB: 'ui_tests'
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     volumes:
@@ -285,8 +291,6 @@ steps:
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
-      - /entrypoint.sh docker/ci/scripts/install_ci_tests.sh
-      - /entrypoint.sh docker/ci/scripts/build_ci_tests.sh
 
   - name: cache-staging-ci-build
     image: plugins/s3-cache
@@ -316,6 +320,6 @@ trigger:
 
 ---
 kind: signature
-hmac: e6bf7a8aca5be4ce8eec1d97ab14781e7d7e25ed8a682b89a87dcf3c8f15ec44
+hmac: d0de97812011e6377e6e652fa06cf7852542927d8db4ad52d5e4f4af77aa5bf3
 
 ...

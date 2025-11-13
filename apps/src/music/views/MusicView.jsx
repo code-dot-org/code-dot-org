@@ -73,6 +73,7 @@ import {
   getBlockMode,
   addPlaybackEvents,
   setCodeToLoad,
+  setAiGenerateState,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
@@ -95,6 +96,8 @@ class UnconnectedMusicView extends React.Component {
   static propTypes = {
     levelProperties: PropTypes.object.isRequired,
     initialSources: PropTypes.object,
+    channel: PropTypes.object,
+    projectManager: PropTypes.object,
     // populated by Redux
     currentLevelId: PropTypes.string,
     userId: PropTypes.number,
@@ -128,6 +131,7 @@ class UnconnectedMusicView extends React.Component {
     isPlayView: PropTypes.bool,
     blockMode: PropTypes.string,
     playbackEvents: PropTypes.array,
+    orderedFunctions: PropTypes.array,
     validationState: PropTypes.object,
     canUndo: PropTypes.bool,
     canRedo: PropTypes.bool,
@@ -135,6 +139,7 @@ class UnconnectedMusicView extends React.Component {
     scriptName: PropTypes.string,
     clearCodeToLoad: PropTypes.func,
     sendAttemptReport: PropTypes.func,
+    setAiGenerateState: PropTypes.func,
     isFirstAttempt: PropTypes.bool,
   };
 
@@ -538,6 +543,9 @@ class UnconnectedMusicView extends React.Component {
       this.library.setCurrentPackId(null);
     }
 
+    // In case we are showing the music generation Guide, reset its state.
+    this.props.setAiGenerateState('clearing-before-none');
+
     // In Start mode, load sources from the default JSON.
     if (isStartMode) {
       const startSourcesFilename = 'startSources' + this.props.blockMode;
@@ -859,9 +867,10 @@ class UnconnectedMusicView extends React.Component {
     }
     sourcesToSave.labConfig.music.blockMode = this.props.blockMode;
 
-    Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save(sourcesToSave, forceSave);
+    (
+      this.props.projectManager ||
+      Lab2Registry.getInstance().getProjectManager()
+    )?.save(sourcesToSave, forceSave);
 
     // If we are AI generating, then save metadata for Dance Party.
     if (
@@ -869,9 +878,10 @@ class UnconnectedMusicView extends React.Component {
       this.props.levelProperties.levelData.guideMode === 'aiCodeGenerate'
     ) {
       saveGeneratedSongMetadata(
-        Lab2Registry.getInstance().getProjectManager().getChannelId(),
+        this.props.channel?.id,
         this.props.packId,
         this.props.playbackEvents,
+        this.props.orderedFunctions,
         this.props.lastMeasure
       );
     }
@@ -995,6 +1005,8 @@ class UnconnectedMusicView extends React.Component {
           hasRun={this.state.hasRun}
           hasEdited={this.state.hasEdited}
           levelProperties={this.props.levelProperties}
+          channel={this.props.channel}
+          overrideProjectManager={this.props.projectManager}
         />
         <Callouts />
       </AnalyticsContext.Provider>
@@ -1024,6 +1036,7 @@ const MusicView = connect(
     startingPlayheadPosition: state.music.startingPlayheadPosition,
     isPlayView: state.lab.isShareView,
     playbackEvents: state.music.playbackEvents,
+    orderedFunctions: state.music.orderedFunctions,
     validationState: state.lab.validationState,
     lastMeasure: state.music.lastMeasure,
     canUndo: state.music.canUndo,
@@ -1069,6 +1082,7 @@ const MusicView = connect(
     clearCodeToLoad: () => dispatch(setCodeToLoad(undefined)),
     sendAttemptReport: () =>
       dispatch(sendProgressReport('music', TestResults.LEVEL_STARTED)),
+    setAiGenerateState: state => dispatch(setAiGenerateState(state)),
   })
 )(UnconnectedMusicView);
 

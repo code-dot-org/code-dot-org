@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-10-30T17:31:19.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Selection → Event Listener→ DOM Update</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"./style.css\">\n</head>\n<body>\n  <main class=\"container\">\n    <h1>Selection → Event Listener→ DOM Update</h1>\n    <p class=\"hint\">Your goal: wire one button to update the message below.</p>\n    <button id=\"actionBtn\">Click me</button>\n    <div id=\"message\" class=\"message\">Message will appear here.</div>\n  </main>\n  <script src=\"./script.js\"></script>\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Write your code below:\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n   margin: 0;\n   padding: 24px;\n   background: #f7f7f9;\n   color: #222;\n }\n \n .container {\n   max-width: 640px;\n   margin: 0 auto;\n }\n \n h1 {\n   font-size: 24px;\n   margin: 0 0 8px 0;\n }\n \n .hint {\n   margin: 0 0 16px 0;\n   color: #555;\n }\n \n button {\n   padding: 10px 14px;\n   font-size: 16px;\n   cursor: pointer;\n   border: 1px solid #aaa;\n   background: #fff;\n   border-radius: 6px;\n }\n \n button:hover {\n   background: #f0f0f0;\n }\n \n .message {\n   margin-top: 16px;\n   padding: 12px;\n   border: 1px dashed #999;\n   background: #fff;\n   min-height: 24px;\n }\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "encrypted": "false",
+    "long_instructions": "##First Click!\r\n\r\nCode a complete interaction for one button, including selecting an element, adding an event listener, and updating the text box on screen when the user clicks. \r\n\r\nYou may use **AI** for explanations and hints but you should write the code yourself.\r\n\r\nTest your code and use your **debugging checklist** to assist with any errors. Use AI to help clarify errors, if necessary. ",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-30T17:31:19.633+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level4-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level4-test-2025\"}]"
+}]]></config>
+</Weblab2>

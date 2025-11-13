@@ -64,6 +64,8 @@ experiments.LOCALIZEJS = 'localizejs';
 experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
 // Use accept/reject code flow in Web Lab 2
 experiments.WEBLAB2_ACCEPT_REJECT = 'weblab2-accept-reject';
+// Enable ActionCable load testing
+experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

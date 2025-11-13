@@ -1,8 +1,11 @@
 import {Steps} from 'intro.js-react';
 import React, {useState, useEffect} from 'react';
 
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {
@@ -20,6 +23,7 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('noIntrojs') === 'true') {
   trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
 }
+const VALIDATION_FLOW_NAME = 'Resource Panel Validation';
 
 interface ValidationTourStepsProps {
   hasValidationConditions: boolean;
@@ -43,6 +47,9 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
   const onboardingTourSeen = tryGetLocalStorage(
     RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     'no'
+  );
+  const isAiDiffContainerOpen = useAppSelector(
+    state => state.layout.isAiDiffContainerOpen
   );
 
   const returnFocusToTourPanel = () => {
@@ -104,25 +111,6 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
       }
     };
 
-    const handleValidationTabKeydown = (event: KeyboardEvent) => {
-      // Handle both Enter and Space key activation.
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        handleValidationTabActivation();
-      }
-    };
-
-    const handleValidateButtonKeydown = (event: KeyboardEvent) => {
-      // Handle both Enter and Space key activation.
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        if (onValidate) {
-          onValidate();
-        }
-        handleValidateButtonActivation();
-      }
-    };
-
     const validationTabElement = document.getElementById(
       resourcePanelTabValidationElementId
     );
@@ -130,14 +118,72 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
       resourcePanelValidateButtonElementId
     );
 
+    // Document-level click handler to forward clicks from IntroJS overlay to actual elements.
+    const documentClickHandler = (event: Event) => {
+      const target = event.target as HTMLElement;
+
+      // If user clicked on IntroJS overlay/helper layer, forward the click to the appropriate element.
+      if (
+        target.classList.contains('introjs-helperLayer') ||
+        target.classList.contains('introjs-tooltipReferenceLayer')
+      ) {
+        if (validationTourStep === 0 && validationTabElement) {
+          validationTabElement.click();
+        } else if (validationTourStep === 1 && validateButtonElement) {
+          validateButtonElement.click();
+        }
+      }
+    };
+
+    // Document-level keyboard handler to forward keyboard activation from IntroJS overlay or actual elements.
+    const documentKeydownHandler = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement;
+
+      // Handle both Enter and Space key activation.
+      if (event.key === 'Enter' || event.key === ' ') {
+        // Check if user pressed key on validation tab element during step 0.
+        if (
+          validationTourStep === 0 &&
+          validationTabElement &&
+          validationTabElement.contains(target)
+        ) {
+          event.preventDefault();
+          // Find the button within the tab element and click it.
+          const buttonElement = validationTabElement.querySelector('button');
+          if (buttonElement) {
+            buttonElement.click();
+          }
+        }
+        // Check if user pressed key on validate button element during step 1.
+        else if (
+          validationTourStep === 1 &&
+          validateButtonElement &&
+          validateButtonElement.contains(target)
+        ) {
+          event.preventDefault();
+          validateButtonElement.click();
+        }
+      }
+    };
+
+    // Handler to trigger onValidate when button is clicked.
+    const validateButtonClickHandler = () => {
+      if (validationTourStep === 1 && onValidate) {
+        onValidate();
+      }
+    };
+
+    // Add document-level listeners to capture clicks on the overlay.
+    document.addEventListener('click', documentClickHandler, {capture: true});
+    document.addEventListener('keydown', documentKeydownHandler, {
+      capture: true,
+    });
+
+    // Element-specific listeners for direct clicks.
     if (validationTabElement) {
       validationTabElement.addEventListener(
         'click',
         handleValidationTabActivation
-      );
-      validationTabElement.addEventListener(
-        'keydown',
-        handleValidationTabKeydown
       );
     }
     if (validateButtonElement) {
@@ -146,20 +192,22 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
         handleValidateButtonActivation
       );
       validateButtonElement.addEventListener(
-        'keydown',
-        handleValidateButtonKeydown
+        'click',
+        validateButtonClickHandler
       );
     }
 
     return () => {
+      document.removeEventListener('click', documentClickHandler, {
+        capture: true,
+      });
+      document.removeEventListener('keydown', documentKeydownHandler, {
+        capture: true,
+      });
       if (validationTabElement) {
         validationTabElement.removeEventListener(
           'click',
           handleValidationTabActivation
-        );
-        validationTabElement.removeEventListener(
-          'keydown',
-          handleValidationTabKeydown
         );
       }
       if (validateButtonElement) {
@@ -168,8 +216,8 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
           handleValidateButtonActivation
         );
         validateButtonElement.removeEventListener(
-          'keydown',
-          handleValidateButtonKeydown
+          'click',
+          validateButtonClickHandler
         );
       }
     };
@@ -210,12 +258,21 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
 
   return (
     <Steps
-      enabled={validationTourEnabled}
+      enabled={validationTourEnabled && !isAiDiffContainerOpen}
       initialStep={validationTourStep}
       steps={VALIDATION_TOUR_STEPS}
       onExit={() => {
         setValidationTourEnabled(false);
         trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, {
+          flowName: VALIDATION_FLOW_NAME,
+          step: validationTourStep.toString(),
+        });
+      }}
+      onStart={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, {
+          flowName: VALIDATION_FLOW_NAME,
+        });
       }}
       onChange={nextStepIndex => {
         setValidationTourStep(nextStepIndex);
@@ -229,6 +286,11 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
           return false; // Prevent going to third step (at index 2) until validate button is clicked.
         }
         // Return void (undefined) to allow progression.
+      }}
+      onComplete={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, {
+          flowName: VALIDATION_FLOW_NAME,
+        });
       }}
       options={{
         scrollToElement: false,

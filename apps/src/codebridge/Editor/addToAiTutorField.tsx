@@ -4,7 +4,9 @@ import {showTooltip, Tooltip} from '@codemirror/view';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/editor.module.scss';
@@ -41,7 +43,13 @@ export const getAddToAiTutorField = (
             ? startingLine.number
             : `${startingLine.number}-${endingLine.number}`;
         const selectionDisplayName = `${filename} (${lineIndicator})`;
-        const saveSelection = () =>
+        const saveSelection = () => {
+          dispatch(
+            sendAnalytics(EVENTS.AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT, {
+              numLines: endingLine.number - startingLine.number + 1,
+              codingLanguage: filename?.split('.').pop()?.toLowerCase() || '',
+            })
+          );
           dispatch(
             addItemToUserAddedSelectionContext({
               sourceCode: selection,
@@ -53,6 +61,7 @@ export const getAddToAiTutorField = (
               filename: filename,
             })
           );
+        };
         return {
           pos: endingLine.from,
           above: false,

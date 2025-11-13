@@ -49,9 +49,12 @@ class AdminUsersController < ApplicationController
     user = User.from_identifier(user_id)
 
     if user
-      bypass_sign_in user
+      log_admin_action("assume_identity", user.id)
       # Set cookie to indicate assumed identity
       session[:assumed_identity] = true
+      session[:admin_id] = current_user.id
+
+      bypass_sign_in user
       redirect_to '/'
     else
       flash[:alert] = 'User not found'
@@ -63,6 +66,7 @@ class AdminUsersController < ApplicationController
     user = User.find_by_id(params.require(:user_id))
     if user
       user.destroy
+      log_admin_action("delete_user", user.id)
       flash[:alert] = "User (ID: #{params[:user_id]}) Deleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or deleted"
@@ -74,6 +78,7 @@ class AdminUsersController < ApplicationController
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
       user.undestroy
+      log_admin_action("undelete_user", user.id)
       flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
@@ -186,21 +191,8 @@ class AdminUsersController < ApplicationController
     user_id = params[:user_id]
     script_id = params[:script_id]
 
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'reset-progress',
-        event: 'admin-delete-progress',
-        user_id: user_id,
-        script_id: script_id,
-        data_json: {
-          signed_in_user: current_user.username,
-          reason: params[:reason]
-        }.to_json
-      }
-    )
-
     User.delete_progress_for_unit(user_id: user_id, script_id: script_id)
+    log_admin_action("delete_progress", user_id, {script_id: script_id, reason: params[:reason]})
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
   end
@@ -280,6 +272,7 @@ class AdminUsersController < ApplicationController
       return
     end
     @user.permission = params[:permission]
+    log_admin_action("grant_permission", user_id, {permission: params[:permission]})
     redirect_to permissions_form_path(search_term: user_id)
   end
 
@@ -287,7 +280,9 @@ class AdminUsersController < ApplicationController
     user_id = params[:user_id]
     @user = restricted_users.find_by(id: user_id)
     permission = params[:permission]
-    @user.try(:delete_permission, permission)
+    if @user.try(:delete_permission, permission)
+      log_admin_action("revoke_permission", user_id, {permission: permission})
+    end
     redirect_to permissions_form_path(search_term: user_id)
   end
 
@@ -304,6 +299,7 @@ class AdminUsersController < ApplicationController
           next
         end
         user.permission = permission
+        log_admin_action("bulk_grant_permission", user.id, {permission: permission})
         succeeded_emails.push(email)
       end
       unless succeeded_emails.empty?
@@ -378,5 +374,10 @@ class AdminUsersController < ApplicationController
       @target_user = User.from_identifier(user_identifier)
       flash[:alert] = 'User not found' unless @target_user
     end
+  end
+
+  private def log_admin_action(event, affected_user_id = nil, attributes = {})
+    log_payload =  {event: event, namespace: 'admin', request_id: request.request_id, authenticated_user_id: current_user.id, affected_user_id: affected_user_id.to_i}.merge(attributes)
+    CDO.log.warn log_payload.to_json
   end
 end

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {memo, useMemo, HTMLAttributes} from 'react';
+import React, {forwardRef, memo, useMemo, HTMLAttributes} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -191,121 +191,131 @@ const spinnerIcon: FontAwesomeV6IconProps = {
   animationType: 'spin',
 };
 
-const GenericButton: React.FunctionComponent<GenericButtonProps> = ({
-  className,
-  id,
-  disabled = false,
-  isPending = false,
-  ariaLabel,
-  size = 'm',
-  type = 'primary',
-  color = 'purple',
-  buttonTagTypeAttribute = 'button',
-  /** Text button specific props */
-  iconLeft,
-  iconRight,
-  text,
-  /** IconOnly button specific props*/
-  isIconOnly = false,
-  icon,
-  /** <a> specific props */
-  useAsLink = false,
-  href,
-  target,
-  download,
-  title,
-  analyticsCallback,
-  /** <button> specific props */
-  onClick,
-  value,
-  name,
-  forceHover = false,
-  ...rest
-}) => {
-  const ButtonTag = useAsLink ? 'a' : 'button';
+const GenericButton = forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  GenericButtonProps
+>(
+  (
+    {
+      className,
+      id,
+      disabled = false,
+      isPending = false,
+      ariaLabel,
+      size = 'm',
+      type = 'primary',
+      color = 'purple',
+      buttonTagTypeAttribute = 'button',
+      /** Text button specific props */
+      iconLeft,
+      iconRight,
+      text,
+      /** IconOnly button specific props*/
+      isIconOnly = false,
+      icon,
+      /** <a> specific props */
+      useAsLink = false,
+      href,
+      target,
+      download,
+      title,
+      analyticsCallback,
+      /** <button> specific props */
+      onClick,
+      value,
+      name,
+      forceHover = false,
+      ...rest
+    },
+    ref,
+  ) => {
+    const ButtonTag = useAsLink ? 'a' : 'button';
 
-  const tagSpecificProps =
-    ButtonTag === 'a'
-      ? {
-          href: disabled ? undefined : href,
-          target,
-          /** Copied from old button component. Only need it for the older browsers,
-           *  since modern browsers (~2020+ release year secures these vulnerabilities by default) */
-          // Opening links in new tabs with 'target=_blank' is inherently insecure. Unfortunately, we depend
-          // on this functionality in a couple of place. Fortunately, it is possible to partially mitigate some of
-          // the insecurity of this functionality by using the `rel` tag to block some of the potential exploits.
-          // Therefore, we do so here.
-          rel: target === '_blank' ? 'noopener noreferrer' : undefined,
+    const tagSpecificProps =
+      ButtonTag === 'a'
+        ? {
+            href: disabled ? undefined : href,
+            target,
+            /** Copied from old button component. Only need it for the older browsers,
+             *  since modern browsers (~2020+ release year secures these vulnerabilities by default) */
+            // Opening links in new tabs with 'target=_blank' is inherently insecure. Unfortunately, we depend
+            // on this functionality in a couple of place. Fortunately, it is possible to partially mitigate some of
+            // the insecurity of this functionality by using the `rel` tag to block some of the potential exploits.
+            // Therefore, we do so here.
+            rel: target === '_blank' ? 'noopener noreferrer' : undefined,
+            download,
+            title,
+            onClick: analyticsCallback,
+          }
+        : {type: buttonTagTypeAttribute, onClick, value, name};
+
+    // Check if correct props combination is passed
+    useMemo(
+      () =>
+        checkButtonPropsForErrors({
+          type,
+          icon,
+          useAsLink,
+          onClick,
+          href,
           download,
-          title,
-          onClick: analyticsCallback,
-        }
-      : {type: buttonTagTypeAttribute, onClick, value, name};
+          text,
+          isIconOnly,
+          color,
+        }),
+      [type, icon, useAsLink, onClick, href, download, text, isIconOnly, color],
+    );
 
-  // Check if correct props combination is passed
-  useMemo(
-    () =>
-      checkButtonPropsForErrors({
-        type,
-        icon,
-        useAsLink,
-        onClick,
-        href,
-        download,
-        text,
-        isIconOnly,
-        color,
-      }),
-    [type, icon, useAsLink, onClick, href, download, text, isIconOnly, color],
-  );
-
-  /** Handling isPending state content & spinner show logic here.
+    /** Handling isPending state content & spinner show logic here.
      - If there's only text - we show only spinner.
      - If there's only icon - we show only spinner.
      - If there's text and iconLeft or both iconLeft and iconRight -> we show spinner on the left + text + iconRight (if it's present).
      - If there's text and iconRight - we show text + spinner on the right.
      */
-  const showIcon = icon && !isPending;
-  const showIconLeft = iconLeft && !isPending;
-  const showIconRight =
-    (iconRight && !isPending) || (isPending && iconRight && iconLeft);
-  const addPendingButtonWithHiddenTextClass =
-    isPending && !icon && !iconLeft && !iconRight;
-  const spinnerPosition = iconRight && !iconLeft ? 'right' : 'left';
+    const showIcon = icon && !isPending;
+    const showIconLeft = iconLeft && !isPending;
+    const showIconRight =
+      (iconRight && !isPending) || (isPending && iconRight && iconLeft);
+    const addPendingButtonWithHiddenTextClass =
+      isPending && !icon && !iconLeft && !iconRight;
+    const spinnerPosition = iconRight && !iconLeft ? 'right' : 'left';
 
-  return (
-    <ButtonTag
-      className={classNames(
-        moduleStyles.button,
-        moduleStyles[`button-${type}`],
-        moduleStyles[`button-${color}`],
-        moduleStyles[`button-${size}`],
-        forceHover && moduleStyles['button-withForcedHover'],
-        isIconOnly && moduleStyles['button-iconOnly'],
-        addPendingButtonWithHiddenTextClass &&
-          moduleStyles.buttonPendingWithHiddenText,
-        className,
-      )}
-      id={id}
-      disabled={disabled}
-      {...rest}
-      aria-disabled={disabled || rest['aria-disabled']}
-      aria-label={ariaLabel || rest['aria-label']}
-      {...tagSpecificProps}
-    >
-      {isPending && spinnerPosition === 'left' && (
-        <FontAwesomeV6Icon {...spinnerIcon} />
-      )}
-      {showIconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-      {showIcon && <FontAwesomeV6Icon {...icon} />}
-      {text && <span>{text}</span>}
-      {showIconRight && <FontAwesomeV6Icon {...iconRight} />}
-      {isPending && spinnerPosition === 'right' && (
-        <FontAwesomeV6Icon {...spinnerIcon} />
-      )}
-    </ButtonTag>
-  );
-};
+    return (
+      <ButtonTag
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ref={ref as React.Ref<any>} // Cannot be more specific without refactoring entire file
+        className={classNames(
+          moduleStyles.button,
+          moduleStyles[`button-${type}`],
+          moduleStyles[`button-${color}`],
+          moduleStyles[`button-${size}`],
+          forceHover && moduleStyles['button-withForcedHover'],
+          isIconOnly && moduleStyles['button-iconOnly'],
+          addPendingButtonWithHiddenTextClass &&
+            moduleStyles.buttonPendingWithHiddenText,
+          className,
+        )}
+        id={id}
+        disabled={disabled}
+        {...rest}
+        aria-disabled={disabled || rest['aria-disabled']}
+        aria-label={ariaLabel || rest['aria-label']}
+        {...tagSpecificProps}
+      >
+        {isPending && spinnerPosition === 'left' && (
+          <FontAwesomeV6Icon {...spinnerIcon} />
+        )}
+        {showIconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+        {showIcon && <FontAwesomeV6Icon {...icon} />}
+        {text && <span>{text}</span>}
+        {showIconRight && <FontAwesomeV6Icon {...iconRight} />}
+        {isPending && spinnerPosition === 'right' && (
+          <FontAwesomeV6Icon {...spinnerIcon} />
+        )}
+      </ButtonTag>
+    );
+  },
+);
 
 /**
  * ### Production-ready Checklist:

@@ -18,6 +18,11 @@ export LD_LIBRARY_PATH=/usr/local/lib
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
 export PARALLEL_TEST_PROCESSORS=7
 
+# Apps build parallelization settings for CI
+# optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
+export APPS_BUILD_WORKERS=10
+export APPS_BUILD_MAX_MEMORY=16384
+
 # Install in deployment mode, both to better mirror the test server and to make
 # caching easier.
 bundle config set --local deployment 'true'
@@ -49,6 +54,7 @@ build_dashboard: true
 build_pegasus: true
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
+contentful_cs_for_all_access_token: $CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
 dashboard_workers: 5
@@ -80,3 +86,10 @@ aiproxy_api_key: 'fake_key'
 echo "Wrote settings and secrets from env vars into locals.yml."
 
 set -x
+
+bundle exec rake install
+# catch any code loader errors before starting any rails environment
+bundle exec rake lint:zeitwerk
+bundle exec rake build
+
+bundle exec rake ci:seed_ui_test

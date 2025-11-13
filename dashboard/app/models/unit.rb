@@ -1204,18 +1204,18 @@ class Unit < ApplicationRecord
 
   def hoc_finish_url
     if name == Unit::HOC_2013_NAME
-      CDO.code_org_url '/api/hour/finish'
+      CDO.studio_url('/api/hour/finish')
     else
-      CDO.code_org_url "/api/hour/finish/#{name}"
+      CDO.studio_url("/api/hour/finish/#{name}")
     end
   end
 
   def csf_finish_url
     if name == Unit::TWENTY_HOUR_NAME
       # Rename from 20-hour to public facing Accelerated
-      CDO.code_org_url "/congrats/#{Unit::ACCELERATED_NAME}"
+      ApplicationController.helpers.course_completion_certificate_url(course_name: Unit::ACCELERATED_NAME)
     else
-      CDO.code_org_url "/congrats/#{name}"
+      ApplicationController.helpers.course_completion_certificate_url(course_name: name)
     end
   end
 
@@ -1223,10 +1223,7 @@ class Unit < ApplicationRecord
     return hoc_finish_url if hoc_or_hoai?
     return csf_finish_url if csf?
     course = unit_group_unit&.unit_group || get_original_unit_group
-    if course
-      return CDO.code_org_url "/congrats/#{course.name}"
-    end
-    CDO.code_org_url "/congrats/#{name}"
+    ApplicationController.helpers.course_completion_certificate_url(course_name: course ? course.name : name)
   end
 
   # A unit that the general public can assign. Has been soft or

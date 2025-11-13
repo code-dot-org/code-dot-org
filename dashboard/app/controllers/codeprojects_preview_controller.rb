@@ -2,6 +2,16 @@ class CodeprojectsPreviewController < ApplicationController
   include AllowedHostnameHelper
   # Public preview page, static content for now.
   def show
+    set_content_security_policy
+    render 'show', layout: false
+  end
+
+  def not_found
+    set_content_security_policy
+    render 'page_not_found', layout: false, status: :not_found
+  end
+
+  def set_content_security_policy
     code_studio_url = CDO.dashboard_site_host
     # Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
     # Therefore we explicitly set the prefix to 'http', which will also allow https.
@@ -9,6 +19,7 @@ class CodeprojectsPreviewController < ApplicationController
     # We allow connections to the domain and all subdomains of each allowed hostname.
     allowed_connect_src = ALLOWED_HOSTNAME_SUFFIXES.map {|hostname| "#{prefix}#{hostname} #{prefix}*.#{hostname}"}.join(" ")
     allowed_image_src = ALLOWED_IMAGE_HOSTNAME_SUFFIXES.map {|hostname| "#{prefix}#{hostname} #{prefix}*.#{hostname}"}.join(" ")
+    allowed_font_src = ALLOWED_FONT_HOSTNAMES.map {|hostname| "#{prefix}#{hostname} #{prefix}*.#{hostname}"}.join(" ")
 
     if rack_env?(:development)
       # dashboard_site_host is set to use port 3000 in development, but we want to also allow port 9000.
@@ -47,8 +58,9 @@ class CodeprojectsPreviewController < ApplicationController
     script_src_inline = " 'unsafe-inline'"
 
     # Security Control: Restrict CSS loading sources (overrides default-src for stylesheets)
+    # Allow loading allowed font hostnames in styles.
     # Goal: Allow student styling while preventing external CSS injection
-    style_src_base = "'self' blob:"
+    style_src_base = "'self' blob: #{allowed_font_src}"
 
     # Security Control: Allow inline styles for student HTML projects
     # Goal: Enable students to write inline CSS in their HTML files
@@ -67,8 +79,8 @@ class CodeprojectsPreviewController < ApplicationController
     script_src = script_src_base + script_src_eval + script_src_inline
     style_src = style_src_base + style_src_inline
 
-    # Allow loading google fonts and any self-hosted fonts.
-    font_src = "'self' fonts.googleapis.com fonts.gstatic.com"
+    # Allow loading allowed fonts and any self-hosted fonts.
+    font_src = "'self' #{allowed_font_src}"
 
     policies = [
       "default-src #{default_src}",
@@ -87,6 +99,5 @@ class CodeprojectsPreviewController < ApplicationController
       policies << "upgrade-insecure-requests"
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')
-    render 'show', layout: false
   end
 end
