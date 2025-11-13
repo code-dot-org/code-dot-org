@@ -421,66 +421,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  test '.personal_account?' do
-    # [User traits, Expected result from personal_account?]
-    test_matrix = [
-      # Personal Accounts
-      [[:student], true], # Has email auth option and password by default
-      [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
-      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
-
-      # School-managed accounts
-      [[:student, :with_clever_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
-      [[:student, :with_lti_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
-
-      # Conditionally school-managed (when in a section or roster synced)
-      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
-      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_google_section], false],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_email_section], false],
-
-      # School-managed accounts that have email logins or passwords, tainting them as personal accounts
-      [[:student, :with_clever_authentication_option, :without_encrypted_password], true],
-      [[:student, :with_clever_authentication_option, :without_email_auth_option], true],
-      [[:student, :with_lti_authentication_option, :without_encrypted_password], true],
-      [[:student, :with_lti_authentication_option, :without_email_auth_option], true],
-
-      # Conditionally school-managed accounts that have email logins or passwords should still be considered school-managed
-      [[:student, :with_google_authentication_option, :without_email_auth_option, {roster_synced: true}], false],
-      [[:student, :with_google_authentication_option, :without_encrypted_password, {roster_synced: true}], false],
-      [[:student, :with_google_authentication_option, :without_email_auth_option, :in_google_section], false],
-      [[:student, :with_google_authentication_option, :without_encrypted_password, :in_google_section], false],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, {roster_synced: true}], false],
-      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, {roster_synced: true}], false],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :in_email_section], false],
-      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, :in_email_section], false],
-
-      # Personal accounts in sections or roster synced should still be considered school-managed
-      [[:student, :in_email_section], false],
-      [[:student, {roster_synced: true}], false],
-      [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_email_section], false],
-      [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
-
-      # Unmigrated
-      [[:student, :without_email_auth_option, :demigrated], true],
-      [[:student, :clever_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], false],
-      [[:student, :facebook_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
-      [[:student, :google_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
-      [[:student, :google_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated, :in_google_section], false],
-      [[:student, :microsoft_v2_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
-      [[:student, :microsoft_v2_sso_provider, :without_email_auth_option, :without_encrypted_password, :in_email_section, :demigrated], false],
-    ]
-    failures = []
-    test_matrix.each do |traits, expected_result|
-      user = create(*traits)
-      actual_result = Policies::ChildAccount.personal_account?(user)
-      failure_msg = "Expected personal_account?(#{traits}) to be #{expected_result} but it was #{actual_result}"
-      failures << failure_msg if actual_result != expected_result
-    end
-    assert failures.empty?, failures.join("\n")
-  end
-
   describe '.parent_permission_required?' do
     let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user, future: future)}
 
@@ -508,7 +448,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     before do
       Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
-      Policies::ChildAccount.stubs(:personal_account?).with(user).returns(user_account_is_personal?)
+      Policies::User.stubs(:personal_account?).with(user).returns(user_account_is_personal?)
     end
 
     it 'returns true' do
