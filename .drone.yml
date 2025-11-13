@@ -62,7 +62,6 @@ steps:
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # Validate cache restore
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
-      - echo "654321" > .cached-staging-build-file-count
       - |
         if [ -f .cached-staging-build-file-count ]; then
           expected=$(cat .cached-staging-build-file-count | tr -d ' ')
@@ -180,7 +179,6 @@ steps:
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # Validate cache restore
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
-      - echo "654321" > .cached-staging-build-file-count
       - |
         if [ -f .cached-staging-build-file-count ]; then
           expected=$(cat .cached-staging-build-file-count | tr -d ' ')
