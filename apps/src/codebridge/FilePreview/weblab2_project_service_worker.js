@@ -14,6 +14,11 @@ const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
 
+// TODO: Right now if you have multiple tabs open to different projects, the service worker will
+// serve the most recent files to each tab, which means one tab will show the other tab's project.
+// We are investigating solutions to this, such as registering a separate service worker per project via a subdomain.
+// Do not make the service worker the default way of serving files until this is resolved.
+
 function main() {
   let filesData = {};
   const broadcastChannel = new BroadcastChannel(
