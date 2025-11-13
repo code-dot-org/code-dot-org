@@ -20,6 +20,7 @@ import {GenerateContext} from './GenerateCodeContent';
 export const cacheKey = () => `music-ai-generate`;
 
 export interface MusicMetadata {
+  channelId: string;
   playbackEvents: PlaybackEvent[];
   orderedFunctions: FunctionEvents[];
   lastMeasure: number;
@@ -38,6 +39,7 @@ export const saveGeneratedSongMetadata = (
   trySetLocalStorage(
     cacheKey(),
     JSON.stringify({
+      channelId,
       playbackEvents: events,
       orderedFunctions,
       lastMeasure,

@@ -19,14 +19,15 @@ import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {
   applyBlockIdOverrides,
+  updateLocale,
   validateBlockCategories,
 } from '@cdo/apps/blockly/utils';
 import {
   getToolboxDefinition,
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
+import {useMusicProject} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/MusicProjectContext';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
 import {
   installSharedBlocks,
@@ -41,6 +42,7 @@ import {
   setRunIsStarting,
   setSong,
 } from '@cdo/apps/dance/danceRedux';
+import LottieDancerRenderer from '@cdo/apps/dance/lottie/LottieDancerRenderer';
 import {getFilterStatus} from '@cdo/apps/dance/songs';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import {
@@ -66,8 +68,10 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
+import localization from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {defaultMetadata} from '@cdo/apps/music/DefaultMusic';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
 import usePlaybackUpdate from '@cdo/apps/music/views/hooks/usePlaybackUpdate';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
@@ -76,6 +80,7 @@ import AgeDialog from '@cdo/apps/templates/AgeDialog';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import useReportAnalytics from '../hooks/useReportAnalytics';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
@@ -122,8 +127,13 @@ const DanceView: React.FunctionComponent<{
   const signedIn = useAppSelector(state => state.currentUser.signInState);
   const scriptName = useAppSelector(state => state.progress.scriptName);
 
-  const {currentSources, updateSources, showStartOverDialog, startOver} =
-    useSources<DanceProjectSources>();
+  const {
+    currentSources,
+    updateSources,
+    showStartOverDialog,
+    setReinitializationHandler,
+    startOver,
+  } = useSources<DanceProjectSources>();
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<GoogleBlockly.Workspace | null>(null);
 
@@ -143,8 +153,10 @@ const DanceView: React.FunctionComponent<{
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
 
   const guideMode = levelProperties.guideMode;
+  const musicChannelId = useMusicProject();
   const usingMusicProject =
-    !!guideMode && ['aiCodeGenerate', 'instructions'].includes(guideMode);
+    guideMode === 'instructions' ||
+    (guideMode === 'aiCodeGenerate' && !!musicChannelId);
 
   const {theme} = useTheme();
 
@@ -362,6 +374,14 @@ const DanceView: React.FunctionComponent<{
     showStartOverDialog('blocks');
   }, [showStartOverDialog]);
 
+  const onStartOver = useCallback(() => {
+    progressManager?.resetValidation();
+  }, [progressManager]);
+
+  useEffect(() => {
+    setReinitializationHandler(onStartOver);
+  }, [onStartOver, setReinitializationHandler]);
+
   // Setup Blockly for dance party when first mounting.
   useEffect(setupBlocklyEnvironment, []);
 
@@ -390,6 +410,12 @@ const DanceView: React.FunctionComponent<{
     const blocksByCategory = installSharedBlocks(
       levelProperties.sharedBlocks || []
     );
+
+    // Ensure that Blockly localizes when the locale changes
+    localization.on('change', info => {
+      updateLocale(localization.rtl);
+    });
+
     if (isShareView) {
       workspace.current = new GoogleBlockly.Workspace();
     } else {
@@ -494,18 +520,24 @@ const DanceView: React.FunctionComponent<{
 
       // Use the default music if the level specifies.
       // Otherwise use the specific channel if provided.
-      // Otherwise just pass a dummy string as we expect to find a music
-      // project in local storage.
-      const channelId =
-        guideMode === 'instructions'
-          ? 'default-music'
-          : (queryParams('music-channel') as string) || 'local-storage';
-
       musicProjectPlayer.current
-        .loadProject(channelId, guideMode === 'aiCodeGenerate')
-        .then(() => setLoadedMusicProject(true));
+        .loadProject(
+          guideMode === 'instructions'
+            ? defaultMetadata.channelId
+            : musicChannelId!
+        )
+        .then(() => setLoadedMusicProject(true))
+        .catch(error => {
+          dispatch(
+            setPageError({
+              errorMessage: 'Error loading music project',
+              error,
+              details: {channelId: musicChannelId},
+            })
+          );
+        });
     }
-  }, [usingMusicProject, guideMode]);
+  }, [usingMusicProject, musicChannelId, guideMode, dispatch]);
 
   // Set up the ProgramExecutor
   useEffect(() => {
@@ -536,6 +568,7 @@ const DanceView: React.FunctionComponent<{
         ? () => musicProjectPlayer.current?.stop()
         : undefined,
       onSoundEnded: resetProgram,
+      externalRendererFactory: () => new LottieDancerRenderer(),
     });
 
     if (recordReplayLog) {
@@ -714,22 +747,26 @@ const DanceView: React.FunctionComponent<{
   );
 };
 
-export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
-  <SourcesContainer
-    {...props}
-    defaultSources={defaultSources}
-    key={props.levelProperties.id}
-  >
-    {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
-      <GenerateDancer
-        adlibOption={
-          props.levelProperties.aiDancerGenerateAdlib ||
-          'adjective-animal-attire'
-        }
-        levelProperties={props.levelProperties}
-      />
-    ) : (
-      <DanceView levelProperties={props.levelProperties} />
-    )}
-  </SourcesContainer>
-);
+export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => {
+  useReportAnalytics(props.levelProperties, props.channel?.id);
+
+  return (
+    <SourcesContainer
+      {...props}
+      defaultSources={defaultSources}
+      key={props.levelProperties.id}
+    >
+      {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
+        <GenerateDancer
+          adlibOption={
+            props.levelProperties.aiDancerGenerateAdlib ||
+            'adjective-animal-attire'
+          }
+          levelProperties={props.levelProperties}
+        />
+      ) : (
+        <DanceView levelProperties={props.levelProperties} />
+      )}
+    </SourcesContainer>
+  );
+};

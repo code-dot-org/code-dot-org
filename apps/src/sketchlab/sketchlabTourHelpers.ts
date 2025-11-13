@@ -28,9 +28,10 @@ export const STEPS = [
     intro: sketchlabI18n.tour_eraserToolText(),
   },
   {
-    element: '.dropdown-menu-button',
+    element: '.dropdown-menu-button.main-menu-trigger',
     title: sketchlabI18n.tour_openMenuTitle(),
     intro: sketchlabI18n.tour_openMenuText(),
+    scrollTo: 'element',
   },
   {
     title: sketchlabI18n.tour_exportingYourSketchesTitle(),

@@ -8,6 +8,8 @@ import {
   getCurrentLesson,
   levelById,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {GENERATED_DANCER_STORAGE_KEY} from '@cdo/apps/dance/ai/constants';
+import {DanceProjectSources} from '@cdo/apps/dance/types';
 import {setIsLoading} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
@@ -25,13 +27,15 @@ import Loading from '@cdo/apps/lab2/views/Loading';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import DancerIcon from '@cdo/static/dance/mixMoveAi/design.png';
-import MusicIcon from '@cdo/static/dance/mixMoveAi/mix.png';
-import DanceIcon from '@cdo/static/dance/mixMoveAi/move.png';
+import {trySetLocalStorage} from '@cdo/apps/utils';
+import DancerIcon from '@cdo/static/dance/mixMoveAi/design.svg';
+import MusicIcon from '@cdo/static/dance/mixMoveAi/mix.svg';
+import DanceIcon from '@cdo/static/dance/mixMoveAi/move.svg';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {BubbleChoiceLevelProperties} from '../../types';
 
+import {MusicProjectContext} from './MusicProjectContext';
 import {ParentLevelPropertiesContext} from './ParentLevelPropertiesContext';
 
 import styles from './styles.module.scss';
@@ -191,8 +195,18 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
       }
 
       if (projectManager) {
-        await projectManager.load();
+        const {sources} = await projectManager.load();
         data.projectManager = projectManager;
+        // If present, load the generated dancer metadata into local storage so it's available for the Dance tab.
+        if (
+          tab === Tab.Dancer &&
+          (sources as DanceProjectSources)?.generatedDancer
+        ) {
+          trySetLocalStorage(
+            GENERATED_DANCER_STORAGE_KEY,
+            JSON.stringify((sources as DanceProjectSources).generatedDancer)
+          );
+        }
       }
       map[tab] = data;
     }
@@ -276,6 +290,8 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     return null;
   }
 
+  const musicData = tabDataMap[Tab.Music];
+
   const labProps = {
     ...tabData,
     initialSources: tabData.projectManager?.getLastSource(),
@@ -284,48 +300,52 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
 
   return (
     <ParentLevelPropertiesContext.Provider value={levelProperties}>
-      <div className={styles.container}>
-        {!getIsShareView() && (
-          <div className={styles.tabSwitcher}>
-            {Object.values(Tab).map(tab => {
-              const disabled = !tabDataMap[tab];
-              return (
-                <button
-                  type="button"
-                  className={classNames(
-                    styles.button,
-                    disabled && styles.locked,
-                    tab === currentTab && styles.selected
-                  )}
-                  key={tab}
-                  onClick={() => (disabled ? undefined : setCurrentTab(tab))}
-                  disabled={disabled}
-                >
-                  <BodyThreeText>
-                    {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
-                    <img
-                      src={icons[tab]}
-                      alt=""
-                      className={classNames(
-                        styles.tabIcon,
-                        tab === currentTab && styles.tabIconSelected
-                      )}
-                    />
-                    {labels[tab]}
-                  </BodyThreeText>
-                </button>
-              );
-            })}
-          </div>
-        )}
-        <div className={styles.labsContainer}>
-          <div className={classNames(styles.labContainer)}>
-            <Suspense fallback={<Loading isLoading={true} />}>
-              <LabView {...labProps} key={currentTab} />
-            </Suspense>
+      <MusicProjectContext.Provider
+        value={musicData?.projectManager?.getChannelId()}
+      >
+        <div className={styles.container}>
+          {!getIsShareView() && (
+            <div className={styles.tabSwitcher}>
+              {Object.values(Tab).map(tab => {
+                const disabled = !tabDataMap[tab];
+                return (
+                  <button
+                    type="button"
+                    className={classNames(
+                      styles.button,
+                      disabled && styles.locked,
+                      tab === currentTab && styles.selected
+                    )}
+                    key={tab}
+                    onClick={() => (disabled ? undefined : setCurrentTab(tab))}
+                    disabled={disabled}
+                  >
+                    <BodyThreeText>
+                      {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
+                      <img
+                        src={icons[tab]}
+                        alt=""
+                        className={classNames(
+                          styles.tabIcon,
+                          tab === currentTab && styles.tabIconSelected
+                        )}
+                      />
+                      {labels[tab]}
+                    </BodyThreeText>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+          <div className={styles.labsContainer}>
+            <div className={classNames(styles.labContainer)}>
+              <Suspense fallback={<Loading isLoading={true} />}>
+                <LabView {...labProps} key={currentTab} />
+              </Suspense>
+            </div>
           </div>
         </div>
-      </div>
+      </MusicProjectContext.Provider>
     </ParentLevelPropertiesContext.Provider>
   );
 };
