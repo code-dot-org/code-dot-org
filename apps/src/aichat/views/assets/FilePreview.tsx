@@ -80,6 +80,7 @@ const FilePreview: React.FC<{
       case 'pdf':
         return 'file-pdf';
       case 'txt':
+      case 'TEXT':
         return 'file-lines';
       default:
         return 'file';
@@ -89,16 +90,7 @@ const FilePreview: React.FC<{
   const getFileIconFamily = (
     extension: string
   ): FontAwesomeV6IconProps['iconFamily'] => {
-    switch (extension) {
-      case 'css':
-        return 'brands';
-      case 'js':
-        return 'brands';
-      case 'md':
-        return 'brands';
-      default:
-        return;
-    }
+    return ['css', 'js', 'md'].includes(extension) ? 'brands' : undefined;
   };
 
   return (
