@@ -334,7 +334,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const onClickTab = useCallback(
     (tab: Tabs) => {
       if (currentTab && currentTab !== tab) {
-        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, appName, {
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, {
           resourcePanelTabClickedTo: tab,
           resourcePanelTabClickedFrom: currentTab,
         });
@@ -344,7 +344,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [appName, currentTab, dispatch, isStandaloneCollapsed]
+    [currentTab, dispatch, isStandaloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
@@ -354,27 +354,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
         setIsSettingsOpen(true);
-        sendLab2AnalyticsEvent(
-          EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-          appName
-        );
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
       } else {
         // If settngs is currently not open, open settings panel and send analytics event.
         if (!isSettingsOpen) {
-          sendLab2AnalyticsEvent(
-            EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-            appName
-          );
+          sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
         }
         setIsSettingsOpen(!isSettingsOpen);
       }
     } else {
       // For standalone projects with no tabs, we toggle the floating settings panel.
       if (!isFloatingSettingsOpen) {
-        sendLab2AnalyticsEvent(
-          EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-          appName
-        );
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
       }
       setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
     }
@@ -382,7 +373,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     hasTabs,
     isStandaloneCollapsed,
     dispatch,
-    appName,
     isSettingsOpen,
     isFloatingSettingsOpen,
   ]);

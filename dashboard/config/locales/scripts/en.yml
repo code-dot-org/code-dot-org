@@ -25730,13 +25730,54 @@ en:
             - Describe how design tasks relate to the professional roles of UX and UI designers.
           student_description: ''
         ai-and-algorithmic-decisions-pilot-2025:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-2:
+              name: Pre-Assessment
+            lesson-1:
+              name: End of Unit Assessment
+            lesson-3:
+              name: 'Lesson 1: Interactivity in Web Apps'
+            lesson-4:
+              name: 'Lesson 2: Making a Button Respond'
+            lesson-5:
+              name: 'Lesson 3: Variables and Live Updates'
+            lesson-6:
+              name: 'Lesson 4: Writing Reusable Functions'
+            lesson-7:
+              name: 'Lesson 5: Making Decisions with If/Else'
+            lesson-8:
+              name: 'Lesson 6: Functions with Parameters'
+            lesson-9:
+              name: 'Lesson 7: Building More Dynamic Pages'
+            lesson-10:
+              name: 'Lesson 8: Nested Conditionals for Complex Logic'
+            lesson-11:
+              name: 'Lesson 9: Combining Conditions with AND/OR'
+            lesson-12:
+              name: 'Lesson 10: Adding NOT and Complex Conditions'
+            lesson-13:
+              name: 'Lesson 11: Reactive Logic Project'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
           name: ai-and-algorithmic-decisions-pilot-2025
           title: AI and Algorithmic Decisions
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |-
+            teacher-facing overview
+
+            ## Learning Outcomes
+
+            **By the end of this unit, students will be able to . . .**
+
+            - objective
           student_description: ''
         building-data-driven-systems-with-ai-pilot-2025:
           lessons: {}
