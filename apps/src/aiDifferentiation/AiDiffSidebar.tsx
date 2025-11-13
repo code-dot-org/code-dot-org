@@ -122,6 +122,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
     return thread.updatedAt < thirtyDaysAgo;
   });
 
+  const checkIfThreadIsSelected = (thread: ChatThread) =>
+    !showNotifications && !showDailyBytes && thread.id === selectedThreadId;
+
   return (
     <aside
       className={classNames(
@@ -295,11 +298,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                     <ThreadItem
                       key={chat.id}
                       chat={chat}
-                      selected={
-                        !showNotifications &&
-                        !showDailyBytes &&
-                        chat.id === selectedThreadId
-                      }
+                      selected={checkIfThreadIsSelected(chat)}
                       onClick={() => handleListItemClick(chat.id)}
                     />
                   ))}
@@ -314,11 +313,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                     <ThreadItem
                       key={chat.id}
                       chat={chat}
-                      selected={
-                        !showNotifications &&
-                        !showDailyBytes &&
-                        chat.id === selectedThreadId
-                      }
+                      selected={checkIfThreadIsSelected(chat)}
                       onClick={() => handleListItemClick(chat.id)}
                     />
                   ))}
@@ -333,11 +328,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                     <ThreadItem
                       key={chat.id}
                       chat={chat}
-                      selected={
-                        !showNotifications &&
-                        !showDailyBytes &&
-                        chat.id === selectedThreadId
-                      }
+                      selected={checkIfThreadIsSelected(chat)}
                       onClick={() => handleListItemClick(chat.id)}
                     />
                   ))}
@@ -352,11 +343,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                     <ThreadItem
                       key={chat.id}
                       chat={chat}
-                      selected={
-                        !showNotifications &&
-                        !showDailyBytes &&
-                        chat.id === selectedThreadId
-                      }
+                      selected={checkIfThreadIsSelected(chat)}
                       onClick={() => handleListItemClick(chat.id)}
                     />
                   ))}
