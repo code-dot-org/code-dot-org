@@ -276,8 +276,8 @@ const ShareDialog: React.FunctionComponent<{
             onClick={handleClose}
           >
             <FontAwesomeV6Icon
-              iconName="xmark"
-              iconStyle="regular"
+              iconName={'xmark'}
+              iconStyle="thin"
               className={moduleStyles.closeButtonIcon}
             />
           </button>
