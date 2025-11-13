@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-24 17:58:04 UTC",
+    "serialized_at": "2025-11-06 21:07:19 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -591,6 +591,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-Pour-principles-24"
+        ],
         "progression": "Web Design with AI"
       },
       "bonus": false,
@@ -763,6 +766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-lesson-info"
+        ],
         "progression": "Closing"
       },
       "bonus": false,
@@ -785,6 +791,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-reflection"
+        ],
         "progression": "Closing"
       },
       "bonus": false,

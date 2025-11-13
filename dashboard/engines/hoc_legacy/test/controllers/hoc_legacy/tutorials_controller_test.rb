@@ -7,6 +7,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
   before do
     allow(DCDO).to receive(:get).and_call_original
+    allow(CDO).to receive(:default_scheme).and_return('https:')
   end
 
   describe 'GET /api/hour/begin/:code' do
@@ -21,8 +22,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     let(:forms_table_mock) {double(:forms_table)}
 
     before do
-      allow(CDO).to receive(:default_scheme).and_return('https:')
-
       allow(HocLegacy::Tutorials).to receive(:get)
       allow(HocLegacy::Tutorials).to receive(:get).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialLauncher).to receive(:call)

@@ -36,7 +36,11 @@ const DanceControls: React.FunctionComponent<DanceControlsProps> = ({
 
   return (
     <div className={moduleStyles.controlsContainer}>
-      <Button {...props} disabled={isDisabled} />
+      <Button
+        {...props}
+        disabled={isDisabled}
+        className={moduleStyles.controlButton}
+      />
     </div>
   );
 };

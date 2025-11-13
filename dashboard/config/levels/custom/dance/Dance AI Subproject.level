@@ -9,7 +9,8 @@
     "encrypted": "false",
     "skin": "dance",
     "block_pools": [
-      "Dancelab"
+      "Dancelab",
+      "GeneratedDancers"
     ],
     "helper_libraries": [
       "DanceLab"
@@ -40,7 +41,66 @@
     "encrypted_examples": [
 
     ],
-    "guide_mode": "aiCodeGenerate"
+    "guide_mode": "aiCodeGenerate",
+    "toolbox_definition": {
+      "contents": [
+        {
+          "kind": "block",
+          "type": "GeneratedDancers_setBackgroundEffectWithPalette",
+          "fields": {
+            "PALETTE": "<field name=\"PALETTE\">\"neon\"</field>",
+            "EFFECT": "<field name=\"EFFECT\">\"splatter\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_setForegroundEffectExtended",
+          "fields": {
+            "EFFECT": "<field name=\"EFFECT\">\"music_notes\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "GeneratedDancers_makeAnonymousDanceSprite",
+          "fields": {
+            "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 200}</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "GeneratedDancers_makeNewDanceSpriteGroup",
+          "fields": {
+            "N": "<field name=\"N\">16</field>",
+            "COSTUME": "<field name=\"COSTUME\">\"CAT\"</field>",
+            "LAYOUT": "<field name=\"LAYOUT\">\"diamond\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "GeneratedDancers_changeMoveEachLR",
+          "fields": {
+            "GROUP": "<field name=\"GROUP\">sprites</field>",
+            "MOVE": "<field name=\"MOVE\">MOVES.Fresh</field>",
+            "DIR": "<field name=\"DIR\">1</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_atTimestampNotAfter",
+          "fields": {
+            "TIMESTAMP": 4,
+            "UNIT": "<field name=\"UNIT\">\"measures\"</field>"
+          },
+          "enabled": true
+        }
+      ],
+      "kind": "flyoutToolbox"
+    }
   },
   "audit_log": "[{\"changed_at\":\"2025-09-18T17:57:09.492+00:00\",\"changed\":[\"cloned from \\\"New Dance AI Project\\\"\"],\"cloned_from\":\"New Dance AI Project\"},{\"changed_at\":\"2025-09-18 17:57:41 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-23 18:45:33 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
   "level_concept_difficulty": {

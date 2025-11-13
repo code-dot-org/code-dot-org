@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-25 18:16:01 UTC",
+    "serialized_at": "2025-11-06 15:23:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -282,6 +282,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_overview_objectives_2025"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -304,6 +307,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_ cert_2025"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -326,6 +332,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS course_overview2_2025"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -348,6 +357,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-PL - DataScience Overview-module_2025"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -370,6 +382,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-PL-DS-UnitStructure-w-lessons_2025"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -392,6 +407,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_Lesson_resources_2025"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -414,6 +432,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif_pl_AI_chatbot_overview_L8-2-data-science_2025"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -436,6 +457,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_definingDS_2025"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -458,6 +482,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_is_everywher_2025"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -480,6 +507,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-chk_DSisNot_2025"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -502,6 +532,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_chk_answers_2025"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -524,6 +557,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-teacher_2025"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -546,6 +582,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-lesson2Overview_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -568,6 +607,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-lesson2LanguageRoutines_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -590,6 +632,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-planningCal_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -612,6 +657,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp_PL_DS_Understanding_Data1_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -634,6 +682,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_Undestanding_Data_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -656,6 +707,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L1andL2_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -678,6 +732,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-SpreadsheetVocab_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -700,6 +757,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_ThreeReads_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -722,6 +782,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-data-science-ch1-lesson2-level1_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -744,6 +807,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_ThreeReadsexlemplar_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -766,6 +832,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_dataTalk_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -788,6 +857,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_ThreeReadsexlemplar2_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -810,6 +882,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-teacher-lesson2_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -832,6 +907,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-PL-data_science_lesson2_ai_chat_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -854,6 +932,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif_pl_AI_chatbot_debrief_L12-2-data-science_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -876,6 +957,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L3andL4_2025"
+        ],
         "progression": "Ethical Data Collection"
       },
       "bonus": false,
@@ -898,6 +982,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-teacher-lesson3_2025"
+        ],
         "progression": "Ethical Data Collection"
       },
       "bonus": false,
@@ -920,6 +1007,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-Ethical-Data-Collection_2025"
+        ],
         "progression": "Ethical Data Collection"
       },
       "bonus": false,
@@ -942,6 +1032,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_EthicalDataColleciton_2025"
+        ],
         "progression": "Ethical Data Collection"
       },
       "bonus": false,
@@ -964,6 +1057,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L5andL6_2025"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -986,6 +1082,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_RSAIR-criteria_2025"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1008,6 +1107,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-datastory-L7_2025"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1030,6 +1132,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_Data-Story-Discussion_2025"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1052,6 +1157,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-chk-dataStory-Vocab_2025"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1074,6 +1182,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_chk_answers-match_2025"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1096,6 +1207,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-sp-pl-DS-lesson3Overview-DataVis_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1118,6 +1232,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L7_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1140,6 +1257,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-teacher-Codap_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1162,6 +1282,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-barchartPanel-L3-DS_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1184,6 +1307,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-piechartPanel-L4-DS_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1206,6 +1332,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-editchartPanel-L5-DS_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1228,6 +1357,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-donutchartPanel-L6-DS_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1250,6 +1382,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-DotPlots_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1272,6 +1407,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-PL-sortData-panel-L30-DS_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1294,6 +1432,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-PL-filtering-data-L31-DS_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1316,6 +1457,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-PL-applyingFilters-L32-DS_2025"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1338,6 +1482,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L8andL9_2025"
+        ],
         "progression": "Cleaning and Interpreting Data "
       },
       "bonus": false,
@@ -1360,6 +1507,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-cleaningData_2025"
+        ],
         "progression": "Cleaning and Interpreting Data "
       },
       "bonus": false,
@@ -1382,6 +1532,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-PizzaChoice_2025"
+        ],
         "progression": "Cleaning and Interpreting Data "
       },
       "bonus": false,
@@ -1404,6 +1557,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-teacher-discuss-ethcialFramework_2025"
+        ],
         "progression": "Cleaning and Interpreting Data "
       },
       "bonus": false,
@@ -1426,6 +1582,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-chkCodap_2025"
+        ],
         "progression": "More Data Visuals"
       },
       "bonus": false,
@@ -1448,6 +1607,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-PL-DS-Choice-DataVisuals_2025"
+        ],
         "progression": "More Data Visuals"
       },
       "bonus": false,
@@ -1470,6 +1632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L11_2025"
+        ],
         "progression": "Wrapping Up Unit 1"
       },
       "bonus": false,
@@ -1492,6 +1657,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl_DS_teaching_bias_2025"
+        ],
         "progression": "Wrapping Up Unit 1"
       },
       "bonus": false,
@@ -1514,6 +1682,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-DS-teachingstrategies_2025"
+        ],
         "progression": "Wrapping Up Unit 1"
       },
       "bonus": false,
@@ -1536,6 +1707,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-teacherEnd_2025"
+        ],
         "progression": "Wrapping Up Unit 1"
       },
       "bonus": false,
@@ -1558,6 +1732,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-DS-nextsteps_2025"
+        ],
         "progression": "Wrapping Up Unit 1"
       },
       "bonus": false,
@@ -2286,13 +2463,171 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "AI ChatLab FAQ",
+      "url": "https://drive.google.com/file/d/1rob9UTgOunLZ7jlUYCmZa_ZsQ02TmkpR/view?usp=drive_link",
+      "key": "ai_chatlab_faq",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_chatlab_faq"
+      }
+    },
+    {
+      "name": "Data Science - Language Routines",
+      "url": "https://drive.google.com/file/d/1R7au0YIlY7r4ueQZ_Osl4JG7-AD2Aieq/view?usp=drive_link",
+      "key": "data_science_-_language_routines",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_-_language_routines"
+      }
+    },
+    {
+      "name": "Guide to Anchor Charts",
+      "url": "https://drive.google.com/file/d/1IRzd96taw0f5xW6iV0ecqjVXwXn8JQTB/view?usp=drive_link",
+      "key": "guide_to_anchor_charts",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_anchor_charts"
+      }
+    },
+    {
+      "name": "How do I unlock assessments for my students",
+      "url": "https://drive.google.com/file/d/1CdtvlxM9c-jC4DAhoJpy88Af3EGemwJW/view?usp=drive_link",
+      "key": "how_do_i_unlock_assessments_for_my_students",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "how_do_i_unlock_assessments_for_my_students"
+      }
+    },
+    {
+      "name": "Insights from Data and AI Resources",
+      "url": "https://drive.google.com/file/d/1UarKPX6qiAlUqn7YkP63I3-KxsDEKwo7/view?usp=drive_link",
+      "key": "insights_from_data_and_ai_resources",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "insights_from_data_and_ai_resources"
+      }
+    },
+    {
+      "name": "Insights from Data and AI Standards",
+      "url": "https://drive.google.com/file/d/19DdzTB2X_Am_zflyTuiSH5epepuF-ceT/view?usp=drive_link",
+      "key": "insights_from_data_and_ai_standards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "insights_from_data_and_ai_standards"
+      }
+    },
+    {
+      "name": "Insights from Data and AI Unit Guide",
+      "url": "https://drive.google.com/file/d/1RPxE2708xEqqJlSx0ilplyvyN1WKTkUX/view?usp=drive_link",
+      "key": "insights_from_data_and_ai_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "insights_from_data_and_ai_unit_guide"
+      }
+    },
+    {
+      "name": "Insights from Data and AI Vocabulary",
+      "url": "https://drive.google.com/file/d/1l2ZpKYqeb5xW9kpLB3eNavjVgm7VPeKb/view?usp=drive_link",
+      "key": "insights_from_data_and_ai_vocabulary",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "insights_from_data_and_ai_vocabulary"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chatlab_faq",
+        "script.name": "self-paced-pl-teaching-insights-from-data-and-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_-_language_routines",
+        "script.name": "self-paced-pl-teaching-insights-from-data-and-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_anchor_charts",
+        "script.name": "self-paced-pl-teaching-insights-from-data-and-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "how_do_i_unlock_assessments_for_my_students",
+        "script.name": "self-paced-pl-teaching-insights-from-data-and-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "insights_from_data_and_ai_resources",
+        "script.name": "self-paced-pl-teaching-insights-from-data-and-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "insights_from_data_and_ai_standards",
+        "script.name": "self-paced-pl-teaching-insights-from-data-and-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "insights_from_data_and_ai_unit_guide",
+        "script.name": "self-paced-pl-teaching-insights-from-data-and-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "insights_from_data_and_ai_vocabulary",
+        "script.name": "self-paced-pl-teaching-insights-from-data-and-ai-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 

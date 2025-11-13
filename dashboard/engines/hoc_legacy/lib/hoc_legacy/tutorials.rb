@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'cdo/honeybadger'
+
 module HocLegacy
   module Tutorials
     CACHE_KEY = 'hoc_legacy:tutorials'
@@ -29,8 +31,18 @@ module HocLegacy
 
       private def fetch_all
         CdoContentful::CsForAll::Entry::Tutorial.
-          find_each(order: FETCH_ORDER, limit: FETCH_LIMIT).
-          with_object({}) {|tutorial, data| data[tutorial.tutorial_id] = tutorial}
+          find_each(order: FETCH_ORDER, limit: FETCH_LIMIT, 'tutorialID[exists]': true).
+          with_object({}) do |tutorial, data|
+            data[tutorial.tutorial_id] = tutorial
+          rescue StandardError => exception
+            Honeybadger.notify(
+              exception,
+              error_message: '[Contentful] Invalid Tutorial entry',
+              context: {
+                tutorial: tutorial.sys,
+              },
+            )
+          end
       end
     end
   end

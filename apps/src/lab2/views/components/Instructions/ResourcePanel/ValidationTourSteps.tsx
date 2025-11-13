@@ -1,8 +1,11 @@
 import {Steps} from 'intro.js-react';
 import React, {useState, useEffect} from 'react';
 
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {
@@ -20,6 +23,7 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('noIntrojs') === 'true') {
   trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
 }
+const VALIDATION_FLOW_NAME = 'Resource Panel Validation';
 
 interface ValidationTourStepsProps {
   hasValidationConditions: boolean;
@@ -43,6 +47,9 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
   const onboardingTourSeen = tryGetLocalStorage(
     RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     'no'
+  );
+  const isAiDiffContainerOpen = useAppSelector(
+    state => state.layout.isAiDiffContainerOpen
   );
 
   const returnFocusToTourPanel = () => {
@@ -251,12 +258,21 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
 
   return (
     <Steps
-      enabled={validationTourEnabled}
+      enabled={validationTourEnabled && !isAiDiffContainerOpen}
       initialStep={validationTourStep}
       steps={VALIDATION_TOUR_STEPS}
       onExit={() => {
         setValidationTourEnabled(false);
         trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, {
+          flowName: VALIDATION_FLOW_NAME,
+          step: validationTourStep.toString(),
+        });
+      }}
+      onStart={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, {
+          flowName: VALIDATION_FLOW_NAME,
+        });
       }}
       onChange={nextStepIndex => {
         setValidationTourStep(nextStepIndex);
@@ -270,6 +286,11 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
           return false; // Prevent going to third step (at index 2) until validate button is clicked.
         }
         // Return void (undefined) to allow progression.
+      }}
+      onComplete={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, {
+          flowName: VALIDATION_FLOW_NAME,
+        });
       }}
       options={{
         scrollToElement: false,

@@ -1144,6 +1144,7 @@ __metadata:
   resolution: "@code-dot-org/design-system-storybook@workspace:apps/design-system-storybook"
   dependencies:
     "@applitools/eyes-storybook": "npm:^3.56.0"
+    "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
@@ -1155,6 +1156,7 @@ __metadata:
     "@storybook/addon-a11y": "npm:^9.0.18"
     "@storybook/addon-docs": "npm:^9.0.18"
     "@storybook/addon-styling-webpack": "npm:^2.0.0"
+    "@storybook/addon-themes": "npm:^9.0.18"
     "@storybook/addon-webpack5-compiler-swc": "npm:^3.0.0"
     "@storybook/react-webpack5": "npm:^9.0.18"
     "@storybook/test-runner": "npm:^0.23.0"
@@ -4705,6 +4707,17 @@ __metadata:
     storybook: ^9.0.0
     webpack: ^5.0.0
   checksum: 10c0/1be590b99d74bdb422f8fb88eb510d0e961915c3e93371c146435fa072158280b0701188170592b62a858993363cc989e0cfb060aaa1c0ec8c95d119cf16b099
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-themes@npm:^9.0.18":
+  version: 9.1.16
+  resolution: "@storybook/addon-themes@npm:9.1.16"
+  dependencies:
+    ts-dedent: "npm:^2.0.0"
+  peerDependencies:
+    storybook: ^9.1.16
+  checksum: 10c0/4d7d4185cbed9ec3e0a755cc6bb15acecae8a8822121624bd8ff1208001e239b2ad40b09e1afe3a1a6004f62d2b4ad81ff4c3f77638baf1f83c10ded8430428e
   languageName: node
   linkType: hard
 
