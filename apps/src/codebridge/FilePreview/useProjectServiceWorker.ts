@@ -103,7 +103,7 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
       serviceWorker.postMessage({
         type: ProjectServiceWorkerMessageType.KEEP_ALIVE,
       });
-    }, 30000); // every 30 seconds
+    }, 15000); // every 15 seconds
 
     return () => {
       clearInterval(intervalId);
