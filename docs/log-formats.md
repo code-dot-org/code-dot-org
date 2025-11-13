@@ -320,7 +320,7 @@ parse @message "@cee: *" as payload
 | limit 200
 ```
 
-Find actions performed by someone while using "Assume Identity":
+Find actions performed by an admin user, while using "Assume Identity" as another user:
 ```
 fields @timestamp, @message, @logStream, @log
 | parse @message /"user_id"\s*:\s*(?<user_id>\d+)/
