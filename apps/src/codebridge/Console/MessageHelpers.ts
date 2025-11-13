@@ -5,6 +5,25 @@ import {RunType} from '../types';
 const IMAGE_WIDTH = 600;
 const IMAGE_HEIGHT = 600;
 
+const ESC = '\x1b';
+const BEL = '\x07';
+const ANSI_ESCAPE_SEQUENCE_REGEX = new RegExp(
+  `${ESC}\\[[0-9;?]*[ -/]*[@-~]`,
+  'g'
+);
+const OSC_ESCAPE_SEQUENCE_REGEX = new RegExp(
+  `${ESC}][0-9;?]*(?:[\\s\\S]*?)(?:${BEL}|${ESC}\\\\)`,
+  'g'
+);
+
+// Remove any control characters from the message, such as ANSI color codes or
+// image display sequences, and return just the plain text message.
+export function stripAnsiSequences(line: string) {
+  return line
+    .replace(OSC_ESCAPE_SEQUENCE_REGEX, '')
+    .replace(ANSI_ESCAPE_SEQUENCE_REGEX, '');
+}
+
 export function getSystemMessage(message: string, appName?: string) {
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
   return `${systemMessagePrefix}${message}`;
