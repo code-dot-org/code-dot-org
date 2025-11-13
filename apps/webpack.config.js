@@ -318,7 +318,7 @@ const WEBPACK_BASE_CONFIG = {
           // Only use thread-loader in CI environments. thread-loader causes JSON serialization
           // errors ("Bad control character in string literal") when combined with devtool modes
           // that generate full source maps (e.g., 'source-map'). CI uses devtool: 'eval' which
-          // avoids this problem.
+          // avoids this problem. For more details, see: https://github.com/code-dot-org/code-dot-org/pull/69386
           ...(process.env.CI
             ? [
                 {
@@ -344,7 +344,10 @@ const WEBPACK_BASE_CONFIG = {
       {
         test: /\.tsx?$/,
         use: [
-          // Only use thread-loader in CI environments.
+          // Only use thread-loader in CI environments. thread-loader causes JSON serialization
+          // errors ("Bad control character in string literal") when combined with devtool modes
+          // that generate full source maps (e.g., 'source-map'). CI uses devtool: 'eval' which
+          // avoids this problem. For more details, see: https://github.com/code-dot-org/code-dot-org/pull/69386
           ...(process.env.CI
             ? [
                 {
