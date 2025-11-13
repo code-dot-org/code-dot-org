@@ -75,7 +75,7 @@ export default class BackpackClientApi {
 
   /**
    * Save files to the backpack
-   * @param {String} filesJson json-formatted string of all file sources in the project
+   * @param {Object} filesJson json-formatted string of all file sources in the project
    * Expected format is {"filename1.java": {"text": "{...}"},...}.
    * @param {Array} filenames Array of filenames to save to the backpack. Filenames must
    * exist in filesJson.
@@ -100,14 +100,13 @@ export default class BackpackClientApi {
    * @param {Function} onSuccess Function to call if file saves.
    */
   saveCodebridgeFile(filename, fileContents, onError, onSuccess) {
-    const fileObject = {[filename]: fileContents};
+    const fileObject = {[filename]: {text: fileContents}};
     this.updateFilesHelper(
       this.fileUploadsInProgress,
       [filename],
       onError,
       onSuccess,
-      () =>
-        this.saveFilesHelper(fileObject, [filename], onError, onSuccess, true)
+      () => this.saveFilesHelper(fileObject, [filename], onError, onSuccess)
     );
   }
 
@@ -159,13 +158,11 @@ export default class BackpackClientApi {
     }
   }
 
-  saveFilesHelper(filesJson, filenames, onError, onSuccess, multiFile) {
+  saveFilesHelper(filesJson, filenames, onError, onSuccess) {
     this.fileUploadsInProgress = [...filenames];
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
-      const fileContents = multiFile
-        ? filesJson[filename].contents
-        : filesJson[filename].text;
+      const fileContents = filesJson[filename].text;
       // write file with REQUEST_RETRY_COUNT failure retries
       this.writeSingleFileToBackpack(
         filename,
