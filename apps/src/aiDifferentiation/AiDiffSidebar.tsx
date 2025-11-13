@@ -195,6 +195,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
               onClick={onNewChatButtonClick}
               iconLeft={{iconName: 'plus'}}
               text={commonI18n.aiDifferentiation_new_chat()}
+              className={styles.expandedNewChatButton}
             />
           )}
         </Box>
@@ -249,11 +250,11 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             )}
           </Box>
         ) : (
-          <>
+          <Box className={styles.sidebarCategories}>
             {experiments.isEnabled('teacher-notifications') && (
               <button
                 onClick={onNotificationsButtonClick}
-                className={classNames(styles.notificationsButton, {
+                className={classNames(styles.categoryActionButton, {
                   [styles.selected]: showNotifications,
                 })}
                 id="ui-notificationsButton"
@@ -274,7 +275,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             {experiments.isEnabled('daily-bytes') && (
               <button
                 onClick={onDailyBytesButtonClick}
-                className={classNames(styles.notificationsButton, {
+                className={classNames(styles.categoryActionButton, {
                   [styles.selected]: showDailyBytes,
                 })}
                 id="ui-dailyBytesButton"
@@ -284,7 +285,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                 <span>Daily Bytes</span>
               </button>
             )}
-          </>
+          </Box>
         )}
         {!isCollapsed && (
           <div className={styles.sidebarContent}>

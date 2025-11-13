@@ -350,6 +350,10 @@ $sidebar-tooltip-z-index: 2010;
     flex: 0 0 64px;
     transition: all 0.2s ease-in-out;
   }
+
+  .expandedNewChatButton {
+    flex-grow: 1;
+  }
 }
 
 .sidebarBox {
@@ -454,7 +458,17 @@ html body .sidebarActionTooltip {
   margin-left: 8px;
 }
 
-.notificationsButton {
+.sidebarCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+
+  &:not(:empty) {
+    margin-top: 1rem;
+  }
+}
+
+.categoryActionButton {
   background-color: inherit;
   display: flex;
   height: 32px;
@@ -465,7 +479,7 @@ html body .sidebarActionTooltip {
   color: var(--text-neutral-black-fixed);
   border: 0;
   font-size: var(--font-size-body-sm, 14px);
-  margin: 16px 0 0 0;
+  margin: 0;
   min-height: 32px;
   border-radius: 0;
 
