@@ -43,6 +43,7 @@ import {
   clearSignUpSessionStorage,
   SIGN_UP_USER_TYPE,
   MAX_DISPLAY_NAME_LENGTH,
+  TEACHER_IN_GRADE_SELECTION_EXPERIMENT_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -112,6 +113,10 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
   // Remove oauth user_type cookie if it exists
   cookies.remove(SIGN_UP_USER_TYPE);
+
+  const isInGradeSelectionExperiment =
+    sessionStorage.getItem(TEACHER_IN_GRADE_SELECTION_EXPERIMENT_KEY) ===
+    'true';
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
@@ -453,12 +458,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
             itemGroups={roleItemGroups}
             dropdownTextThickness="thin"
           />
-          <GradeLevelChips
-            inputLabel={i18n.gradesTaught()}
-            values={selectedGrades}
-            setValues={vals => setSelectedGrades(vals)}
-            className={style.gradeSelectChips}
-          />
+          {isInGradeSelectionExperiment && (
+            <GradeLevelChips
+              inputLabel={i18n.gradesTaught()}
+              values={selectedGrades}
+              setValues={vals => setSelectedGrades(vals)}
+              className={style.gradeSelectChips}
+            />
+          )}
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>
