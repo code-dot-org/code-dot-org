@@ -93,6 +93,23 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
     }
   }, [serviceWorker, source]);
 
+  // Send an intermittent keep-alive message to the service worker to ensure it stays active.
+  useEffect(() => {
+    if (!serviceWorker) {
+      return;
+    }
+
+    const intervalId = setInterval(() => {
+      serviceWorker.postMessage({
+        type: ProjectServiceWorkerMessageType.KEEP_ALIVE,
+      });
+    }, 30000); // every 30 seconds
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [serviceWorker]);
+
   function getFullyQualifiedFileName(
     fileName: string,
     folderId: string,
