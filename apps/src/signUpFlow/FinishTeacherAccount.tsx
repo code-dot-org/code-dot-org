@@ -26,7 +26,6 @@ import GradeLevelChips from '@cdo/apps/templates/sectionsRefresh/GradeLevelChips
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes, EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
-import i18n from '@cdo/locale';
 
 import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
 import {buildSchoolData} from '../schoolInfo/utils/buildSchoolData';
@@ -194,7 +193,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
       !gdprValid ||
       schoolInfoInvalid(schoolInfo) ||
       !educatorRole ||
-      signupSources.length < 1,
+      signupSources.length < 1 ||
+      (selectedGrades.length < 1 && isInGradeSelectionExperiment),
     [
       gdprValid,
       givenName,
@@ -203,6 +203,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
       schoolInfo,
       educatorRole,
       signupSources,
+      selectedGrades,
+      isInGradeSelectionExperiment,
     ]
   );
 
@@ -460,7 +462,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
           />
           {isInGradeSelectionExperiment && (
             <GradeLevelChips
-              inputLabel={i18n.gradesTaught()}
+              inputLabel={locale.grades_taught()}
               values={selectedGrades}
               setValues={vals => setSelectedGrades(vals)}
               className={style.gradeSelectChips}

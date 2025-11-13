@@ -1519,7 +1519,6 @@
   "grade": "Grade",
   "gradeLevel": "Grade {number}",
   "gradeRange": "{numGrades, plural, one {Grade: {youngestGrade}} other {Grades: {youngestGrade}-{oldestGrade}}}",
-  "gradesTaught": "What grade(s) do you teach?",
   "greaterThan": "Greater than",
   "greaterThanOrEqualTo": "Greater than or equal to",
   "groups": "Groups",
