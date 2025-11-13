@@ -33,7 +33,7 @@ import SketchlabTourSteps from './sketchlabTourSteps';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
-const MIN_INFO_PANEL_WIDTH = 150;
+const MIN_INFO_PANEL_WIDTH = 250;
 // This initial width is derived from the following:
 // The narrowest screen we see in GA with 1% usage is 1024px.
 // The version of Excalidraw we're using switches into a mobile mode at 730px.
