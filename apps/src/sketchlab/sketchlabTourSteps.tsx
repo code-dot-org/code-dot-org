@@ -4,7 +4,6 @@ import React, {useEffect, useState} from 'react';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
@@ -24,9 +23,7 @@ const OnboardingTourSteps: React.FC = () => {
     'no'
   );
   const [isToolbarReady, setIsToolbarReady] = useState(false);
-  const isAiDiffContainerOpen = useAppSelector(
-    state => state.layout.isAiDiffContainerOpen
-  );
+
   const [tourStep, setTourStep] = useState(0);
 
   useEffect(() => {
@@ -61,11 +58,7 @@ const OnboardingTourSteps: React.FC = () => {
 
   return (
     <Steps
-      enabled={
-        isToolbarReady &&
-        sketchlabOnboardingTourSeen !== 'yes' &&
-        !isAiDiffContainerOpen
-      }
+      enabled={isToolbarReady && sketchlabOnboardingTourSeen !== 'yes'}
       initialStep={INITIAL_STEP}
       steps={STEPS}
       onExit={() => {

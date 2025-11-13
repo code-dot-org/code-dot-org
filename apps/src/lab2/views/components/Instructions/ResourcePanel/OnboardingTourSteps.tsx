@@ -27,9 +27,7 @@ const OnboardingTourSteps: React.FC = () => {
     'no'
   );
   const [tourStep, setTourStep] = useState(0);
-  const isAiDiffContainerOpen = useAppSelector(
-    state => state.layout.isAiDiffContainerOpen
-  );
+
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
@@ -38,7 +36,6 @@ const OnboardingTourSteps: React.FC = () => {
     <Steps
       enabled={
         resourcePanelPinnedButtonOnboardingTourSeen !== 'yes' &&
-        !isAiDiffContainerOpen &&
         !isStandaloneCollapsed
       }
       initialStep={INITIAL_STEP}
