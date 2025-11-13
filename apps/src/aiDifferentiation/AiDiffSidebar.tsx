@@ -81,7 +81,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
     setShowNotifications(false);
     setShowDailyBytes(false);
     threadSelectCallback(0);
-  }, [setShowNotifications, threadSelectCallback]);
+  }, [setShowNotifications, threadSelectCallback, setShowDailyBytes]);
 
   const onNotificationsButtonClick = useCallback(() => {
     setShowNotifications(true);
@@ -90,13 +90,13 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
     analyticsReporter.sendEvent(EVENTS.AI_DIFF_NOTIFICATIONS_OPENED, {
       unreadNotificationCount: unreadNotificationCount,
     });
-  }, [setShowNotifications, unreadNotificationCount]);
+  }, [setShowNotifications, unreadNotificationCount, setShowDailyBytes]);
 
   const onDailyBytesButtonClick = useCallback(() => {
     setShowDailyBytes(true);
     setShowNotifications(false);
     // TODO: add daily bytes logic
-  }, [setShowNotifications]);
+  }, [setShowNotifications, setShowDailyBytes]);
 
   const handleListItemClick = (chatId: number) => {
     setShowNotifications(false);
@@ -143,7 +143,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             tooltipProps={{
               tooltipId: 'sidebar-toggle-tooltip',
               direction: 'onRight',
-              text: isCollapsed ? 'Collapse sidebar' : 'Expand sidebar',
+              text: isCollapsed ? 'Expand sidebar' : 'Collapse sidebar',
               className: styles.sidebarActionTooltip,
               hideTail: true,
               size: 's',
@@ -296,7 +296,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                       key={chat.id}
                       chat={chat}
                       selected={
-                        !showNotifications && chat.id === selectedThreadId
+                        !showNotifications &&
+                        !showDailyBytes &&
+                        chat.id === selectedThreadId
                       }
                       onClick={() => handleListItemClick(chat.id)}
                     />
@@ -313,7 +315,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                       key={chat.id}
                       chat={chat}
                       selected={
-                        !showNotifications && chat.id === selectedThreadId
+                        !showNotifications &&
+                        !showDailyBytes &&
+                        chat.id === selectedThreadId
                       }
                       onClick={() => handleListItemClick(chat.id)}
                     />
@@ -330,7 +334,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                       key={chat.id}
                       chat={chat}
                       selected={
-                        !showNotifications && chat.id === selectedThreadId
+                        !showNotifications &&
+                        !showDailyBytes &&
+                        chat.id === selectedThreadId
                       }
                       onClick={() => handleListItemClick(chat.id)}
                     />
@@ -347,7 +353,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                       key={chat.id}
                       chat={chat}
                       selected={
-                        !showNotifications && chat.id === selectedThreadId
+                        !showNotifications &&
+                        !showDailyBytes &&
+                        chat.id === selectedThreadId
                       }
                       onClick={() => handleListItemClick(chat.id)}
                     />
