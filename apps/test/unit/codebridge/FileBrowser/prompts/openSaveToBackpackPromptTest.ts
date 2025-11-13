@@ -33,7 +33,7 @@ describe('openSaveToBackpackPrompt', () => {
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.saveCodebridgeFile).toHaveBeenCalledWith(
       'project_file.py',
-      expect.objectContaining({name: 'project_file.py'}),
+      'This is project_file.py.',
       expect.any(Function),
       expect.any(Function)
     );
@@ -57,10 +57,7 @@ describe('openSaveToBackpackPrompt', () => {
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.saveCodebridgeFile).toHaveBeenCalledWith(
       'project_file_1.py',
-      expect.objectContaining({
-        name: 'project_file_1.py',
-        contents: 'This is project_file.py.',
-      }),
+      'This is project_file.py.',
       expect.any(Function),
       expect.any(Function)
     );
@@ -74,10 +71,7 @@ describe('openSaveToBackpackPrompt', () => {
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.saveCodebridgeFile).toHaveBeenCalledWith(
       'project_file.py',
-      expect.objectContaining({
-        name: 'project_file.py',
-        contents: 'This is project_file.py.',
-      }),
+      'This is project_file.py.',
       expect.any(Function),
       expect.any(Function)
     );
