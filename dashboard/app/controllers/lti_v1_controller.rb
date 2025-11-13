@@ -14,6 +14,7 @@ class LtiV1Controller < ApplicationController
   skip_before_action :verify_authenticity_token
 
   NAMESPACE = 'lti_v1_controller'.freeze
+  # TODO: Remove this line, only here to generate a diff for adhoc
 
   # [GET/POST] /lti/v1/login(/:platform_id)
   #
