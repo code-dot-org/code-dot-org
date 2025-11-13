@@ -1,10 +1,10 @@
 {
   "key": "mix-move-ai-educators",
-  "display_name": "mix-move-ai-educators",
+  "display_name": "Mix & Move with AI - Educator's Experience",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
-  "marketing_initiative": "HOAI",
+  "marketing_initiative": null,
   "grade_levels": null,
   "header": "self_paced",
   "image": null,

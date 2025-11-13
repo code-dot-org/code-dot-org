@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN} from './constants';
@@ -26,10 +27,20 @@ const OnboardingTourSteps: React.FC = () => {
     'no'
   );
   const [tourStep, setTourStep] = useState(0);
+  const isAiDiffContainerOpen = useAppSelector(
+    state => state.layout.isAiDiffContainerOpen
+  );
+  const isStandaloneCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
 
   return (
     <Steps
-      enabled={resourcePanelPinnedButtonOnboardingTourSeen !== 'yes'}
+      enabled={
+        resourcePanelPinnedButtonOnboardingTourSeen !== 'yes' &&
+        !isAiDiffContainerOpen &&
+        !isStandaloneCollapsed
+      }
       initialStep={INITIAL_STEP}
       steps={STEPS}
       onStart={() => {

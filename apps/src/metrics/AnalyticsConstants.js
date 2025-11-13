@@ -634,9 +634,33 @@ const EVENTS = {
   INTROJS_FLOW_COMPLETED: 'IntroJS Flow Completed',
 
   // AI Teaching Assistant - Differentiation
+  // Just In Time Professional Learning
+  PERSONALIZATION_ANSWER_SUBMITTED:
+    'Answered Just In Time PL Personalization Question',
+  PERSONALIZATION_PERSONA_MATCHED: 'User gets a matched persona',
 
   // Dance Party (Lab2)
   DANCE_PARTY_SESSION_END: 'Dance Party Session End',
+  GENERATE_DANCER_CLICKED: 'Generate Dancer Clicked',
+  REGENERATE_DANCER_CLICKED: 'Regenerate Dancer Clicked',
+  GENERATE_DANCER_BACK_TO_PROMPT_CLICKED:
+    'Generate Dancer Back To Prompt Clicked',
+  DANCE_PARTY_GENERATE_CODE_CLICKED: 'Dance Party Generate Code Clicked',
+  DANCE_PARTY_REGENERATE_CODE_CLICKED: 'Dance Party Regenerate Code Clicked',
+  DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED:
+    'Dance Party Generate Code Back To Prompt Clicked',
+  DANCE_PARTY_GENERATE_CODE_USE_CODE_CLICKED:
+    'Dance Party Generate Code Use Code Clicked',
+
+  // Music Lab
+  // Note that some Music Lab events are already sent through the Music Lab-specific {@link AnalyticsReporter.ts}.
+  // Reporting will be consolidated once Amplitude support has been removed.
+  MUSIC_LAB_GENERATE_CODE_CLICKED: 'Music Lab Generate Code Clicked',
+  MUSIC_LAB_REGENERATE_CODE_CLICKED: 'Music Lab Regenerate Code Clicked',
+  MUSIC_LAB_GENERATE_CODE_BACK_TO_PROMPT_CLICKED:
+    'Music Lab Generate Code Back To Prompt Clicked',
+  MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED:
+    'Music Lab Generate Code Use Code Clicked',
 };
 
 const EVENT_GROUP_NAMES = {
