@@ -313,9 +313,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [currentTab, availableTabs]);
 
   useEffect(() => {
-    // Reset current tab to instructions when switching levels or viewAsUserId
+    // Reset current tab to instructions when switching levels or viewAsUserId.
     setCurrentTab(Tabs.Instructions);
-  }, [levelId, viewAsUserId]);
+    // Reset the permanent read-only state when the level changes.
+    isPermanentlyReadOnlyRef.current =
+      isReadOnly && !isRunning && !isValidating;
+  }, [levelId, viewAsUserId, isReadOnly, isRunning, isValidating]);
 
   // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
   const {setShowExtraLinksButton} = useExtraLinksButtonContext();
