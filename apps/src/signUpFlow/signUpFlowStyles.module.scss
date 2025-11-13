@@ -38,13 +38,12 @@ label {
 
 .gradeSelectChips {
   label {
-    width: auto !important; // Override the global width: 100% for chip labels
+    width: auto !important;
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;
   }
 }
 
-// This is the part causing issues
 label {
   width: 100%;
   align-items: start !important;
