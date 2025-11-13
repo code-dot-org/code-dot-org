@@ -46,7 +46,7 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
     'no'
   );
   const isAiDiffContainerOpen = useAppSelector(
-    state => state.layout.isAiDiffContainerOpen
+    state => state.aichat.chatIsOpen
   );
 
   const returnFocusToTourPanel = () => {

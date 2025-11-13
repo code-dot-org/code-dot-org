@@ -22,7 +22,7 @@ const OnboardingTourSteps: React.FC = () => {
   );
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   const isAiDiffContainerOpen = useAppSelector(
-    state => state.layout.isAiDiffContainerOpen
+    state => state.aichat.chatIsOpen
   );
 
   useEffect(() => {
