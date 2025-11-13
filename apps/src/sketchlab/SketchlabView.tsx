@@ -166,8 +166,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             currentSources.source.externalFiles || {},
             serializedData.files,
             filesBeingUploadedRef,
-            channelId,
-            updateSources
+            channelId
           );
         }
 

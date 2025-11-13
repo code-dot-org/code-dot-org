@@ -5,8 +5,6 @@ import {
   SketchlabExternalFiles,
 } from '@cdo/apps/lab2/types';
 
-import {SketchlabSources} from '../types';
-
 import {uploadBase64ToUrl} from './uploadBase64ToUrl';
 
 // TO DO: these are the upload types officially supported by Excalidraw,
@@ -30,8 +28,7 @@ export const uploadExternalFiles = async (
   savedFiles: SketchlabExternalFiles,
   excalidrawFiles: BinaryFiles,
   filesBeingUploadedRef: React.MutableRefObject<Set<string>>,
-  channelId: string,
-  updateSources: (newSources: SketchlabSources, forceSave?: boolean) => void
+  channelId: string
 ) => {
   const savedFileIds = Object.keys(savedFiles || {});
   const excalidrawFileIds = Object.keys(excalidrawFiles || {});
