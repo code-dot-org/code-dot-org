@@ -74,13 +74,16 @@ Ways AI Can Help:
 }
 
 module AiSystemPrompts::LessonSummariesSystemPromptHelper
-  def self.get_system_prompt(lesson_id)
+  def self.get_system_prompt(lesson_id, user_id = nil)
     lesson_plan = get_lesson_materials(lesson_id)
-    personalization = ""
-    if current_user
-      personalization = get_personalization(current_user.id)
-    end
-    prompt = personalization + "Use the following lesson plan to generate your summary:
+    intro = "You are an expert teaching assistant in a computer science classroom who has been asked to summarize the upcoming lesson to help the teacher prepare for class."
+    personalization = if user_id
+                        get_personalization(user_id)
+                      else
+                        get_personalization(current_user.id)
+                      end
+
+    prompt = intro + personalization + "Use the following lesson plan to generate your summary:
 
 Lesson Name: #{lesson_plan[:name]}
 Lesson Overview: #{lesson_plan[:overview]}
@@ -106,12 +109,12 @@ tips: additional strategies or ideas to help with teaching the lesson}"
     unless profile
       return nil
     end
-    personalization_string = ""
+    personalization_string = "Use the following information about the teacher to personalize your summary:"
     if profile.individual_data["yearsTeaching"]
       personalization_string << "\nThe teacher has #{profile.individual_data["yearsTeaching"]} years of experience in the classroom."
     end
     if profile.individual_data["selectedConfidence"]
-      personalization_string << "\nThey rate their confidence with computer science concepts at #{profile.individual_data["selectedConfidence"]}, with 10 being extremely confident, and 1 being not confident at all."
+      personalization_string << "\nThey rate their confidence with computer science concepts at #{profile.individual_data["selectedConfidence"]} out of 10, with 10 being extremely confident and 0 being not confident at all."
     end
     if profile.individual_data["selectedGoals"]
       personalization_string << "\nThey listed the following as their primary teaching goals:\n  -#{profile.individual_data["selectedGoals"].join("\n  -")}"
@@ -140,7 +143,7 @@ tips: additional strategies or ideas to help with teaching the lesson}"
                 when "The Lead Learner"
                   PERSONAS[:LEARNER]
                 end
-      personalization_string << "\nThey were matched with the following teaching persona as part of a personalization quiz:\n#{persona}\n"
+      personalization_string << "\nThey were matched with the following teaching persona as part of a personalization quiz:\n#{persona}\n\n"
     end
     personalization_string
   end

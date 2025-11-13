@@ -4,9 +4,12 @@ module AiLessonSummariesHelper
   API_KEY = CDO.openai_lesson_summaries_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
-  def self.get_ai_lesson_summary(lesson_id)
-    system_prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id)
-
+  def self.get_ai_lesson_summary(lesson_id, user_id = nil)
+    system_prompt = if user_id
+                      AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id, user_id)
+                    else
+                      AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id)
+                    end
     client = Client.new(API_KEY, MODEL)
 
     begin
@@ -48,12 +51,8 @@ module AiLessonSummariesHelper
         model: model,
         messages: [{
           role: "system",
-          content: "You are an expert teaching assistant in a computer science classroom who has been asked to summarize the upcoming lesson to help the teacher prepare for class."
-        },
-                   {
-                     role: "user",
-                     content: prompt
-                   }],
+          content: prompt
+        }],
         response_format: {
           type: "json_schema",
           json_schema: {
