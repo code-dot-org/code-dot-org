@@ -71,8 +71,6 @@ We face a critical security challenge: our public repository exposes every secur
 1. **Test Security Fix**: Push security fix directly to private `production` branch
 2. **Verify Deployment**: Ensure AMI Builder picks up and deploys the change
 3. **Test Back-Sync**: Manual back-sync after verification period
-4. **Create Security Scripts**: Tools for easier security fix management
-5. **Team Training**: Train security team on new procedures
 
 ## Code Changes Required
 
