@@ -93,10 +93,11 @@ export default class BackpackClientApi {
   }
 
   /**
-   * Save a Codebridge (ie, MultiFile project) file to the backpack
+   * Takes a file name and contents and saves to the backpack.
+   * Used in Codebridge labs to save a file.
    * @param {String} filename
-   * @param {ProjectFile} fileContents ProjectFile
-   * @param {Function} onError Function to call if file fails to save
+   * @param {String} fileContents Contents of file to be saved to the backpack.
+   * @param {Function} onError Function to call if file fails to save.
    * @param {Function} onSuccess Function to call if file saves.
    */
   saveCodebridgeFile(filename, fileContents, onError, onSuccess) {
