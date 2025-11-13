@@ -27,7 +27,13 @@ namespace :build do
 
       ChatClient.log 'Building <b>apps</b>...'
       npm_target = get_npm_build_target
-      RakeUtils.system "npm run #{npm_target}"
+      npm_command = "npm run #{npm_target}"
+      if ENV['PROFILE_APPS_BUILD']
+        RakeUtils.system_stream_output npm_command
+      else
+        RakeUtils.system npm_command
+      end
+
       File.write(commit_hash, calculate_apps_commit_hash)
 
       if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
