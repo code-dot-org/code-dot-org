@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 63,
-  "created_at": "2025-11-12T21:24:05.000Z",
+  "created_at": "2025-11-12T22:16:27.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -34,15 +34,15 @@
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
     "guide_mode": "aiDancerGenerate",
-    "ai_dancer_generate_adlib": "creature-05",
-    "long_instructions": "#### Use AI to design your dancer\r\nA prompt is an instruction that tells AI what to do.\r\n1. Modify the prompt below.\r\n2. Press Generate dancer.",
+    "ai_dancer_generate_adlib": "creature-attire-mood-style-05",
+    "long_instructions": "### Finish your lead dancer\r\nModify the prompt with more details.",
+    "project_template_level_name": "HoAI-Mix-Move-Educators-dancer-prompt-template",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "project_template_level_name": "HoAI-Mix-Move-Educators-dancer-prompt-template"
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-07T22:33:35.661+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-dancer-prompt-1-input\\\"\"],\"cloned_from\":\"mix-move-ai-dancer-prompt-1-input\"},{\"changed_at\":\"2025-11-12 22:29:14 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-11-12T22:16:27.324+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-dancer-prompt-4-input-choice\\\"\"],\"cloned_from\":\"mix-move-ai-dancer-prompt-4-input-choice\"},{\"changed_at\":\"2025-11-12 22:31:27 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
