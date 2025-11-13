@@ -13,6 +13,7 @@
   "properties": {
     "family_name": "foundations-of-ai-programming-tutor-pilot",
     "numbered_units": "auto",
+    "pilot_experiment": "broad-tutor-aif",
     "version_year": "2025"
   },
   "resources": [
