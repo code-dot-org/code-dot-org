@@ -31,13 +31,13 @@ function main() {
   });
 
   // Listen for messages from the main thread
-  broadcastChannel.onmessage = event => {
+  addEventListener('message', event => {
     const {type, files} = event.data;
     if (type === UPDATE_FILES) {
       filesData = files || {};
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
     }
-  };
+  });
 
   // Intercept fetch requests
   self.addEventListener('fetch', event => {

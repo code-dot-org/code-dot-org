@@ -5,10 +5,7 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {getFolderPath} from '../utils';
 
-import {
-  PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL,
-  ProjectServiceWorkerMessageType,
-} from './constants';
+import {ProjectServiceWorkerMessageType} from './constants';
 import {addBaseTagToDocument} from './htmlParsingHelpers';
 
 // Hook that handles registering and communicating with the project service worker.
@@ -49,9 +46,6 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
   // Send source data to service worker when it changes.
   useEffect(() => {
     if (serviceWorker && source) {
-      const broadcastChannel = new BroadcastChannel(
-        PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
-      );
       // Prepare files data for service worker
       const filesData: Record<
         string,
@@ -92,11 +86,10 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
       });
 
       // Send files data to service worker
-      broadcastChannel.postMessage({
+      serviceWorker.postMessage({
         type: ProjectServiceWorkerMessageType.UPDATE_FILES,
         files: filesData,
       });
-      broadcastChannel.close();
     }
   }, [serviceWorker, source]);
 
