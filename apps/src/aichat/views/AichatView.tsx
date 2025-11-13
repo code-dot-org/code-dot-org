@@ -98,7 +98,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
-  useLevelActivityMetrics(levelProperties);
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const scriptId = useAppSelector(state => state.progress.scriptId);
 
   const isLevelbuilder = useAppSelector(state =>
@@ -392,6 +392,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                     starterAssets && Object.keys(starterAssets).length > 0
                   }
                   multimodalEnabled={levelAichatSettings?.multimodalEnabled}
+                  logLevelActivity={logLevelActivity}
                 />
               )}
             </PanelContainer>

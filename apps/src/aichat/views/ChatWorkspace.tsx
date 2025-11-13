@@ -57,6 +57,9 @@ interface ChatWorkspaceProps {
   // Optional callback to process the model's response before it is recorded in chat
   // history (useful for structured outputs).
   responseCallback?: (response: string) => string;
+
+  // Optional callback to log level activity
+  logLevelActivity?: () => void;
 }
 
 /**
@@ -73,6 +76,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   hasStarterAssets = false,
   hideModelChangeMessage = false,
   responseCallback,
+  logLevelActivity,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
@@ -316,6 +320,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             levelName={levelName}
             hasStarterAssets={hasStarterAssets}
             buildAssetUrl={buildAssetUrl}
+            logLevelActivity={logLevelActivity}
             uploadDisabled={uploadDisabled}
             currentLevelId={currentLevelId}
           />

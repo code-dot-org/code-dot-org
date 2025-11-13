@@ -50,6 +50,7 @@ import {
 } from '@cdo/apps/dance/types';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -59,7 +60,6 @@ import {
   getIsShareView,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {setHasLevelActivity} from '@cdo/apps/lab2/redux/systemRedux';
 import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -103,6 +103,7 @@ const DanceView: React.FunctionComponent<{
   levelProperties: DanceLevelProperties;
 }> = ({levelProperties}) => {
   const dispatch = useAppDispatch();
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
 
   const isRunning = useAppSelector(state => state.dance.isRunning);
   const userType = useAppSelector(state => state.currentUser.userType);
@@ -251,11 +252,11 @@ const DanceView: React.FunctionComponent<{
     dispatch(setRunIsStarting(false));
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
-    dispatch(setHasLevelActivity(true));
+    logLevelActivity();
     saveBlocks(true);
 
     progressManager?.resetValidation();
-  }, [metadataToUse, dispatch, saveBlocks, progressManager]);
+  }, [metadataToUse, dispatch, saveBlocks, progressManager, logLevelActivity]);
 
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();

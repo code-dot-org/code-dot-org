@@ -4,9 +4,6 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
-import lab2System, {
-  setHasLevelActivity,
-} from '@cdo/apps/lab2/redux/systemRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -64,7 +61,6 @@ describe('useLevelActivityMetrics', () => {
   beforeEach(() => {
     stubRedux();
     registerReducers({
-      lab2System,
       currentUser: mockCurrentUser,
       progress: mockProgress,
     });
@@ -86,8 +82,14 @@ describe('useLevelActivityMetrics', () => {
     });
   };
 
-  describe('Initial State Tests', () => {
-    it('does not trigger analytics when hasLevelActivity is false initially', () => {
+  describe('Hook Return Value Tests', () => {
+    it('returns a function', () => {
+      const {result} = renderHookWithRedux(defaultLevelProperties);
+
+      expect(typeof result.current).toBe('function');
+    });
+
+    it('does not trigger analytics when hook is initialized', () => {
       renderHookWithRedux(defaultLevelProperties);
 
       expect(mockAnalyticsReporter.sendEvent).not.toHaveBeenCalled();
@@ -101,12 +103,12 @@ describe('useLevelActivityMetrics', () => {
     });
   });
 
-  describe('First Run Analytics Tests', () => {
-    it('logs LEVEL_ACTIVITY event when isProjectLevel is false', () => {
-      renderHookWithRedux(defaultLevelProperties);
+  describe('Callback Invocation Tests', () => {
+    it('logs LEVEL_ACTIVITY event when callback is invoked for non-project level', () => {
+      const {result} = renderHookWithRedux(defaultLevelProperties);
 
       act(() => {
-        store.dispatch(setHasLevelActivity(true));
+        result.current();
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledWith(
@@ -121,11 +123,11 @@ describe('useLevelActivityMetrics', () => {
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
     });
 
-    it('logs PROJECT_ACTIVITY event when isProjectLevel is true', () => {
-      renderHookWithRedux(projectLevelProperties);
+    it('logs PROJECT_ACTIVITY event when callback is invoked for project level', () => {
+      const {result} = renderHookWithRedux(projectLevelProperties);
 
       act(() => {
-        store.dispatch(setHasLevelActivity(true));
+        result.current();
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledWith(
@@ -141,10 +143,10 @@ describe('useLevelActivityMetrics', () => {
     });
 
     it('includes complete payload with all required fields', () => {
-      renderHookWithRedux(defaultLevelProperties);
+      const {result} = renderHookWithRedux(defaultLevelProperties);
 
       act(() => {
-        store.dispatch(setHasLevelActivity(true));
+        result.current();
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledWith(
@@ -160,32 +162,27 @@ describe('useLevelActivityMetrics', () => {
   });
 
   describe('Duplicate Prevention Tests', () => {
-    it('ensures analytics fires exactly once even if hasLevelActivity toggles multiple times', () => {
-      renderHookWithRedux(defaultLevelProperties);
+    it('ensures analytics fires exactly once even if callback is invoked multiple times', () => {
+      const {result} = renderHookWithRedux(defaultLevelProperties);
 
       act(() => {
-        store.dispatch(setHasLevelActivity(true));
-      });
-
-      act(() => {
-        store.dispatch(setHasLevelActivity(false));
-      });
-
-      act(() => {
-        store.dispatch(setHasLevelActivity(true));
+        result.current();
+        result.current();
+        result.current();
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
     });
 
     it('verifies hasLoggedRef prevents duplicate events', () => {
-      renderHookWithRedux(defaultLevelProperties);
+      const {result} = renderHookWithRedux(defaultLevelProperties);
 
-      // Trigger multiple times rapidly
       act(() => {
-        store.dispatch(setHasLevelActivity(true));
-        store.dispatch(setHasLevelActivity(true));
-        store.dispatch(setHasLevelActivity(true));
+        result.current();
+      });
+
+      act(() => {
+        result.current();
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
@@ -194,22 +191,25 @@ describe('useLevelActivityMetrics', () => {
 
   describe('Level Change Reset Tests', () => {
     it('resets logging flag when levelProperties.id changes', () => {
-      renderHookWithRedux(defaultLevelProperties);
+      const {result: result1} = renderHookWithRedux(defaultLevelProperties);
 
       act(() => {
-        store.dispatch(setHasLevelActivity(true));
+        result1.current();
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
 
-      act(() => {
-        store.dispatch(setHasLevelActivity(false));
-      });
+      const wrapper = ({children}: {children: React.ReactNode}) => (
+        <Provider store={store}>{children}</Provider>
+      );
 
-      renderHookWithRedux(differentLevelProperties);
+      const {result: result2} = renderHook(
+        () => useLevelActivityMetrics(differentLevelProperties),
+        {wrapper}
+      );
 
       act(() => {
-        store.dispatch(setHasLevelActivity(true));
+        result2.current();
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(2);
@@ -225,17 +225,16 @@ describe('useLevelActivityMetrics', () => {
     });
 
     it('can log again for new level after reset', () => {
-      renderHookWithRedux(defaultLevelProperties);
+      const {result: result1} = renderHookWithRedux(defaultLevelProperties);
 
       act(() => {
-        store.dispatch(setHasLevelActivity(true));
+        result1.current();
       });
 
-      renderHookWithRedux(projectLevelProperties);
+      const {result: result2} = renderHookWithRedux(projectLevelProperties);
 
       act(() => {
-        store.dispatch(setHasLevelActivity(false));
-        store.dispatch(setHasLevelActivity(true));
+        result2.current();
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(2);

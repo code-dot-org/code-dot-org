@@ -1,4 +1,4 @@
-import {useEffect, useRef} from 'react';
+import {useCallback, useEffect, useRef} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -11,45 +11,50 @@ interface LevelProperties {
 }
 
 /**
- * Custom hook that automatically logs LEVEL_ACTIVITY or PROJECT_ACTIVITY
+ * Custom hook that provides a callback to log LEVEL_ACTIVITY or PROJECT_ACTIVITY
  * analytics events when a user performs their first activity in a Lab2 environment.
  *
- * This hook watches the lab2System.hasLevelActivity state and logs exactly once
- * when it transitions from false to true.
- *
- * Include this metric in your View and then call setHasLevelActivity(true) when
- * the LEVEL_ACTIVITY metric should be logged.
+ * This hook returns a callback function that labs should call when activity occurs.
+ * The callback will log exactly once per level, preventing duplicate events.
  *
  * @param levelProperties - Level properties containing isProjectLevel, id, and name
+ * @returns A callback function to invoke when level activity occurs
+ *
+ * @example
+ * const logLevelActivity = useLevelActivityMetrics(levelProperties);
+ * // Call when user performs their first activity
+ * logLevelActivity();
  */
-export function useLevelActivityMetrics(levelProperties: LevelProperties) {
-  const hasLevelActivity = useAppSelector(
-    state => state.lab2System.hasLevelActivity
-  );
+export function useLevelActivityMetrics(
+  levelProperties: LevelProperties
+): () => void {
   const signedIn = useAppSelector(state => state.currentUser.signInState);
   const scriptName = useAppSelector(state => state.progress.scriptName);
 
-  // Track whether we've already logged to prevent duplicate events
   const hasLoggedRef = useRef(false);
 
   useEffect(() => {
-    // Log analytics when hasLevelActivity becomes true for the first time
-    if (hasLevelActivity && !hasLoggedRef.current) {
-      hasLoggedRef.current = true;
+    hasLoggedRef.current = false;
+  }, [levelProperties.id]);
 
-      const eventName = levelProperties.isProjectLevel
-        ? EVENTS.PROJECT_ACTIVITY
-        : EVENTS.LEVEL_ACTIVITY;
-
-      analyticsReporter.sendEvent(eventName, {
-        signedIn,
-        unitName: scriptName,
-        levelId: levelProperties.id,
-        levelName: levelProperties.name,
-      });
+  const logLevelActivity = useCallback(() => {
+    if (hasLoggedRef.current) {
+      return;
     }
+
+    hasLoggedRef.current = true;
+
+    const eventName = levelProperties.isProjectLevel
+      ? EVENTS.PROJECT_ACTIVITY
+      : EVENTS.LEVEL_ACTIVITY;
+
+    analyticsReporter.sendEvent(eventName, {
+      signedIn,
+      unitName: scriptName,
+      levelId: levelProperties.id,
+      levelName: levelProperties.name,
+    });
   }, [
-    hasLevelActivity,
     levelProperties.isProjectLevel,
     levelProperties.id,
     levelProperties.name,
@@ -57,8 +62,5 @@ export function useLevelActivityMetrics(levelProperties: LevelProperties) {
     scriptName,
   ]);
 
-  // Reset flag when level changes
-  useEffect(() => {
-    hasLoggedRef.current = false;
-  }, [levelProperties.id]);
+  return logLevelActivity;
 }

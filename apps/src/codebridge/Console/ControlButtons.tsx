@@ -8,11 +8,11 @@ import React, {useCallback} from 'react';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   setHasRun,
-  setHasLevelActivity,
   setIsRunning,
   setIsValidating,
   setHasValidated,
@@ -36,6 +36,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {onRun, onStop, levelProperties} = useCodebridgeContext();
   const {id: levelId, appName, predictSettings} = levelProperties;
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const isPredictLevel = predictSettings?.isPredictLevel;
   const levelPath =
     useAppSelector(state => getCurrentLevel(state)?.path) || 'standalone';
@@ -92,7 +93,7 @@ const ControlButtons: React.FunctionComponent = () => {
         }
       });
       dispatch(setHasRun(true));
-      dispatch(setHasLevelActivity(true));
+      logLevelActivity();
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()

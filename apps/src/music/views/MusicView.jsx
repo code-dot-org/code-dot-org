@@ -23,7 +23,6 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {setHasLevelActivity} from '@cdo/apps/lab2/redux/systemRedux';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
@@ -140,7 +139,7 @@ class UnconnectedMusicView extends React.Component {
     sendAttemptReport: PropTypes.func,
     setAiGenerateState: PropTypes.func,
     isFirstAttempt: PropTypes.bool,
-    setHasLevelActivity: PropTypes.func,
+    logLevelActivity: PropTypes.func,
   };
 
   constructor(props) {
@@ -895,7 +894,7 @@ class UnconnectedMusicView extends React.Component {
     this.setState({
       hasRun: true,
     });
-    this.props.setHasLevelActivity(true);
+    this.props.logLevelActivity();
     if (this.props.isFirstAttempt) {
       this.props.sendAttemptReport();
     }
@@ -1070,15 +1069,13 @@ const MusicView = connect(
     clearCodeToLoad: () => dispatch(setCodeToLoad(undefined)),
     sendAttemptReport: () =>
       dispatch(sendProgressReport('music', TestResults.LEVEL_STARTED)),
-    setHasLevelActivity: hasActivity =>
-      dispatch(setHasLevelActivity(hasActivity)),
     setAiGenerateState: state => dispatch(setAiGenerateState(state)),
   })
 )(UnconnectedMusicView);
 
 const MusicViewWithHooks = props => {
-  useLevelActivityMetrics(props.levelProperties);
-  return <MusicView {...props} />;
+  const logLevelActivity = useLevelActivityMetrics(props.levelProperties);
+  return <MusicView {...props} logLevelActivity={logLevelActivity} />;
 };
 
 MusicViewWithHooks.propTypes = {

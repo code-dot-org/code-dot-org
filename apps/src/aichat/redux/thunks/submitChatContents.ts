@@ -10,7 +10,6 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {setHasLevelActivity} from '@cdo/apps/lab2/redux/systemRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
@@ -52,6 +51,7 @@ export const submitChatContents = createAsyncThunk(
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
       responseCallback?: (response: string) => string;
+      logLevelActivity?: () => void;
     },
     thunkAPI
   ) => {
@@ -67,6 +67,7 @@ export const submitChatContents = createAsyncThunk(
       analyticsProperties,
       userAddedSelectionContext,
       responseCallback,
+      logLevelActivity,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -107,7 +108,9 @@ export const submitChatContents = createAsyncThunk(
       timestamp: Date.now(),
     };
     dispatch(setChatMessagePending(newUserMessage));
-    dispatch(setHasLevelActivity(true));
+    if (logLevelActivity) {
+      logLevelActivity();
+    }
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
