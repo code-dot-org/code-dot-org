@@ -320,15 +320,17 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
                     disabled={disabled}
                   >
                     {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
-                    <img
-                      src={icons[tab]}
-                      alt=""
-                      className={classNames(
-                        styles.tabIcon,
-                        tab !== currentTab && styles.tabIconUnselected
-                      )}
-                    />
-                    q{labels[tab]}
+                    {!disabled && (
+                      <img
+                        src={icons[tab]}
+                        alt=""
+                        className={classNames(
+                          styles.tabIcon,
+                          tab !== currentTab && styles.tabIconUnselected
+                        )}
+                      />
+                    )}
+                    {labels[tab]}
                   </button>
                 );
               })}

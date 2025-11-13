@@ -30,32 +30,31 @@
   padding: 4px;
   flex: 1;
   border-radius: 8px;
-  animation: tab-fade-in-out 1.5s;
   transition: background-color 0.2s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  gap: 9px;
   color: var(--text-neutral-primary);
+  height: 30px;
 
-  &:hover {
+  &:not(.locked):hover {
     background-color: var(--background-neutral-quinary);
+  }
+
+  &:not(.locked) {
+    animation: tab-fade-in-out 1.5s;
   }
 
   &.selected {
     background-color: var(--background-neutral-primary-inverse) !important;
     color: var(--text-neutral-inverse);
-    font-weight: bold;
   }
 
   &.locked {
     cursor: not-allowed;
-    > p {
-      color: var(--text-neutral-disabled);
-      > i {
-        margin-right: 8px;
-      }
-    }
+    color: var(--text-neutral-disabled);
   }
 }
 
@@ -71,7 +70,6 @@
 
 .tabIcon {
   height: 20px;
-  padding-right: 8px;
   opacity: 1;
 
   &Unselected {
