@@ -62,10 +62,12 @@ steps:
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # Validate cache restore
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
+      - echo "7" > .cached-staging-build-file-count
       - |
         if [ -f .cached-staging-build-file-count ]; then
-          expected=$(cat .cached-staging-build-file-count | tr -d ' ')
-          actual=$(find . -type f -not -path './.git/*' | wc -l | tr -d ' ')
+          expected=$(cat .cached-staging-build-file-count)
+          actual=$(find . -type f -not -path './.git/*' | wc -l)
+          echo "Cache validation: expected=$expected actual=$actual"
           diff=$((actual - expected))
           [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
         fi
@@ -179,10 +181,12 @@ steps:
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # Validate cache restore
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
+      - echo "7" > .cached-staging-build-file-count
       - |
         if [ -f .cached-staging-build-file-count ]; then
-          expected=$(cat .cached-staging-build-file-count | tr -d ' ')
-          actual=$(find . -type f -not -path './.git/*' | wc -l | tr -d ' ')
+          expected=$(cat .cached-staging-build-file-count)
+          actual=$(find . -type f -not -path './.git/*' | wc -l)
+          echo "Cache validation: expected=$expected actual=$actual"
           diff=$((actual - expected))
           [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
         fi
@@ -334,6 +338,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 5e012ecf3696fc9ee78c8314adb6b9dfaa42793accafbf1f6ed2b520c700caa4
+hmac: df1e4db74b7e8417440b7e62f510356941bfac68088909845e8a3dee91d5ce50
 
 ...
