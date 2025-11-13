@@ -1,0 +1,47 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-12T19:40:23.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>Music Library — Layered Filters with Undo</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <h1>Music Library</h1>\n\n    <div class=\"controls\">\n      <div>\n        <label>Genre:</label>\n        <select id=\"genreFilter\">\n          <option value=\"All\">All</option>\n          <option value=\"Pop\">Pop</option>\n          <option value=\"Rock\">Rock</option>\n          <option value=\"Hip-Hop\">Hip-Hop</option>\n          <option value=\"Jazz\">Jazz</option>\n        </select>\n      </div>\n\n      <div>\n        <label>Length:</label>\n        <select id=\"lengthFilter\">\n          <option value=\"All\">All</option>\n          <option value=\"Short\">Short (&lt; 3 min)</option>\n          <option value=\"Medium\">Medium (3–5 min)</option>\n          <option value=\"Long\">Long (&gt; 5 min)</option>\n        </select>\n      </div>\n\n      <button id=\"undoBtn\">Undo</button>\n      <button id=\"resetBtn\">Reset</button>\n    </div>\n\n    <p id=\"status\" class=\"muted\"></p>\n    <ul id=\"list\"></ul>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// ---------- Data ----------\nconst originalSongs = [\n  { title: \"Shimmer\", artist: \"Echo Lake\", genre: \"Pop\", length: 2.8 },\n  { title: \"Road Dust\", artist: \"The Wanderers\", genre: \"Rock\", length: 4.2 },\n  { title: \"Midnight Lines\", artist: \"Blue Circuit\", genre: \"Jazz\", length: 5.8 },\n  { title: \"City Pulse\", artist: \"MC Nova\", genre: \"Hip-Hop\", length: 3.5 },\n  { title: \"Silver Sky\", artist: \"Echo Lake\", genre: \"Pop\", length: 4.7 },\n  { title: \"Slow Motion\", artist: \"Miles Tone\", genre: \"Jazz\", length: 2.9 },\n  { title: \"Static Heart\", artist: \"Crimson Tide\", genre: \"Rock\", length: 5.3 }\n];\n\n// ---------- Helpers ----------\nconst copyArray = (arr) => {\n  const copy = [];\n  for (let i = 0; i < arr.length; i++) {\n    const item = arr[i];\n    const newItem = {\n      title: item.title,\n      artist: item.artist,\n      genre: item.genre,\n      length: item.length\n    };\n    copy.push(newItem);\n  }\n  return copy;\n};\n\n// ---------- State ----------\nlet currentSongs = copyArray(originalSongs);\nlet filterHistory = []; // stack of previous states\nlet activeFilters = { genre: \"All\", length: \"All\" };\n\n// ---------- DOM ----------\nconst listEl = document.getElementById(\"list\");\nconst statusEl = document.getElementById(\"status\");\nconst resetBtn = document.getElementById(\"resetBtn\");\nconst undoBtn = document.getElementById(\"undoBtn\");\nconst genreFilter = document.getElementById(\"genreFilter\");\nconst lengthFilter = document.getElementById(\"lengthFilter\");\n\n// ---------- Filtering ----------\nconst applyFilters = () => {\n  const base = copyArray(originalSongs);\n  const filtered = [];\n\n  for (let i = 0; i < base.length; i++) {\n    const song = base[i];\n    let keep = true;\n\n    // Genre filter\n    if (activeFilters.genre !== \"All\" && song.genre !== activeFilters.genre) {\n      keep = false;\n    }\n\n    // Length filter\n    if (activeFilters.length !== \"All\") {\n      if (activeFilters.length === \"Short\" && song.length >= 3) keep = false;\n      if (activeFilters.length === \"Medium\" && (song.length < 3 || song.length > 5)) keep = false;\n      if (activeFilters.length === \"Long\" && song.length <= 5) keep = false;\n    }\n\n    if (keep) filtered.push(song);\n  }\n\n  currentSongs = filtered;\n  render();\n};\n\n// ---------- Render ----------\nconst render = () => {\n  listEl.innerHTML = \"\";\n  for (let i = 0; i < currentSongs.length; i++) {\n    const s = currentSongs[i];\n    const li = document.createElement(\"li\");\n    li.textContent = `${s.title} — ${s.artist} (${s.genre}, ${s.length} min)`;\n    listEl.appendChild(li);\n  }\n\n  const filtersText =\n    \"Genre: \" + activeFilters.genre + \", Length: \" + activeFilters.length;\n  const undoCount = filterHistory.length;\n\n  statusEl.innerHTML =\n    `Showing ${currentSongs.length} / ${originalSongs.length} songs<br>` +\n    `<span class=\"active-filters\">Active filters: ${filtersText}</span><br>` +\n    `<span class=\"badge\">Undo: ${undoCount}</span>`;\n\n  undoBtn.disabled = undoCount === 0;\n};\n\n// ---------- Event Handlers ----------\ngenreFilter.addEventListener(\"change\", () => {\n  // save snapshot before change\n  filterHistory.push({\n    songs: copyArray(currentSongs),\n    filters: { genre: activeFilters.genre, length: activeFilters.length }\n  });\n  activeFilters.genre = genreFilter.value;\n  applyFilters();\n});\n\nlengthFilter.addEventListener(\"change\", () => {\n  filterHistory.push({\n    songs: copyArray(currentSongs),\n    filters: { genre: activeFilters.genre, length: activeFilters.length }\n  });\n  activeFilters.length = lengthFilter.value;\n  applyFilters();\n});\n\nundoBtn.addEventListener(\"click\", () => {\n  if (filterHistory.length === 0) return;\n  const prevState = filterHistory.pop();\n\n  // restore songs and filters\n  currentSongs = copyArray(prevState.songs);\n  activeFilters = { genre: prevState.filters.genre, length: prevState.filters.length };\n\n  // restore dropdowns\n  genreFilter.value = activeFilters.genre;\n  lengthFilter.value = activeFilters.length;\n\n  render();\n});\n\nresetBtn.addEventListener(\"click\", () => {\n  currentSongs = copyArray(originalSongs);\n  filterHistory = [];\n  activeFilters = { genre: \"All\", length: \"All\" };\n  genreFilter.value = \"All\";\n  lengthFilter.value = \"All\";\n  render();\n});\n\n// ---------- Init ----------\nrender();",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* ---------- Global ---------- */\nbody {\n  font-family: \"Inter\", system-ui, sans-serif;\n  background-color: #f9fafb;\n  color: #222;\n  margin: 0;\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\nh1 {\n  margin-bottom: 1.5rem;\n  font-weight: 700;\n}\n\n/* ---------- Controls ---------- */\n.controls {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 0.75rem;\n  align-items: center;\n  justify-content: center;\n  background: #fff;\n  border: 1px solid #e5e7eb;\n  border-radius: 12px;\n  padding: 1rem 1.5rem;\n  box-shadow: 0 1px 3px rgba(0,0,0,0.08);\n  margin-bottom: 1.5rem;\n}\n\nlabel {\n  font-size: 0.9rem;\n  color: #444;\n  margin-right: 0.25rem;\n}\n\nselect, button {\n  font-size: 0.9rem;\n  padding: 0.45rem 0.9rem;\n  border-radius: 8px;\n  border: 1px solid #ccc;\n  background: #fff;\n  cursor: pointer;\n  transition: all 0.2s ease;\n}\n\nselect:hover, button:hover {\n  background: #f3f4f6;\n}\n\nbutton:disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n}\n\n/* ---------- Status + Badge ---------- */\n#status {\n  background: #fff;\n  border: 1px solid #e5e7eb;\n  border-radius: 8px;\n  padding: 0.75rem 1rem;\n  width: 100%;\n  max-width: 640px;\n  box-shadow: 0 1px 3px rgba(0,0,0,0.06);\n  text-align: center;\n  margin-bottom: 1rem;\n}\n\n.active-filters {\n  display: block;\n  margin-top: 0.25rem;\n  color: #555;\n  font-size: 0.9rem;\n}\n\n.badge {\n  background: #2563eb;\n  color: white;\n  border-radius: 999px;\n  padding: 0.2rem 0.6rem;\n  font-size: 0.8rem;\n  display: inline-block;\n  margin-top: 0.3rem;\n}\n\n/* ---------- Song List ---------- */\nul {\n  list-style: none;\n  padding: 0;\n  width: 100%;\n  max-width: 640px;\n}\n\nli {\n  background: #fff;\n  border: 1px solid #e5e7eb;\n  border-radius: 8px;\n  padding: 0.7rem 1rem;\n  margin-bottom: 0.5rem;\n  transition: background 0.2s ease, box-shadow 0.2s ease;\n}\n\nli:hover {\n  background: #f0f9ff;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.05);\n}\n\n/* ---------- Responsive ---------- */\n@media (max-width: 600px) {\n  .controls {\n    flex-direction: column;\n    align-items: stretch;\n  }\n  select, button {\n    width: 100%;\n  }\n}\n\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-12 21:20:18 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

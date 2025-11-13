@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-12T20:51:41.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Abstraction \n\n**Abstraction** hides complex details and shows only the essential features.\n\n",
+        "imageUrl": "https://images.code.org/1d4145d3a1bc899a62efa11fdbf01d81-abstraction.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-12T20:51:41.605+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson4-panel-abstraction-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson4-panel-abstraction-test-2025\"},{\"changed_at\":\"2025-11-12 20:54:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>
