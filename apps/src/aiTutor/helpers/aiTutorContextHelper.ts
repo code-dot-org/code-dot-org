@@ -25,6 +25,9 @@ const DOCUMENTATION_LOCATION_INTRO =
 const EXAMPLES_LOCATION_INTRO =
   'Here is where the student can find example projects:';
 
+const CONSOLE_OUTPUT_INTRO =
+  "Here is the output currently shown in the student's debug console:";
+
 /*
  * Abstract base class used to provide lab specific context to AI Tutor.  Each lab will inherit from and
  * extend this class, but conversion to a system prompt string should be kept here for coordination and
@@ -47,6 +50,7 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
       validationResults,
       longInstructions,
       documentation,
+      consoleOutput,
     } = await this.getAiTutorContext();
 
     const validationNotRun = validationContents && !validationResults;
@@ -72,6 +76,7 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
       this.examplesLocation
         ? `${EXAMPLES_LOCATION_INTRO} ${this.examplesLocation}`
         : '',
+      consoleOutput ? `${CONSOLE_OUTPUT_INTRO} ${consoleOutput}` : '',
     ]
       .filter(Boolean)
       .join('\n\n');
