@@ -38,7 +38,7 @@ function main() {
   // Listen for messages from the main thread
   addEventListener('message', event => {
     const {type, files} = event.data;
-    if (type === UPDATE_FILES) {
+    if (type === UPDATE_FILES && event.origin === location.origin) {
       filesData = files || {};
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
     }

@@ -15,6 +15,8 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
   );
 
   useEffect(() => {
+    let serviceWorkerRegistration: ServiceWorkerRegistration | undefined =
+      undefined;
     if ('serviceWorker' in navigator) {
       setServiceWorker(null);
       navigator.serviceWorker
@@ -34,13 +36,14 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
               });
             }
           });
-          return () => {
-            registration.unregister();
-          };
+          serviceWorkerRegistration = registration;
         });
     } else {
       console.error('Service workers are not supported in this browser.');
     }
+    return () => {
+      serviceWorkerRegistration?.unregister();
+    };
   }, []);
 
   // Send source data to service worker when it changes.
