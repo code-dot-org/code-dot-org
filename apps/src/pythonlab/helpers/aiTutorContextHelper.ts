@@ -1,6 +1,9 @@
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+
 import {tryFetchDocsForClass} from '@cdo/apps/aiTutor/docContextApi';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
+import {stripAnsiSequences} from '@cdo/apps/codebridge/Console/MessageHelpers';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
@@ -65,12 +68,22 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
 
     const documentation = await this.documentationPromise;
 
+    const consoleLines = CodebridgeRegistry.getInstance()
+      .getConsoleManager()
+      ?.getTerminalLines()
+      ?.map(line => stripAnsiSequences(line));
+    const consoleOutput =
+      consoleLines && consoleLines.length > 0
+        ? this.codeBlock(consoleLines.join('\n'))
+        : undefined;
+
     return {
       sourceCode,
       validationContents,
       validationResults,
       longInstructions,
       documentation,
+      consoleOutput,
     };
   }
 }
