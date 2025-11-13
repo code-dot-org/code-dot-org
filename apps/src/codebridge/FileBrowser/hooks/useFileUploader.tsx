@@ -28,7 +28,7 @@ export const useFileUploader = (
   folderId: string
 ) => {
   const {levelProperties, onImageFlagged} = useCodebridgeContext();
-  const {appName, validationFile, name} = levelProperties;
+  const {validationFile, name} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
@@ -64,23 +64,21 @@ export const useFileUploader = (
     (eventName: string, payload: Record<string, string>) => {
       switch (eventName) {
         case analyticsEvents.UPLOAD_FAILED: {
-          sendLab2AnalyticsEvent(
-            EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE,
-            appName,
-            payload
-          );
+          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE, {
+            ...payload,
+            fileType: payload.fileName.split('.').pop()?.toLowerCase() || '',
+          });
           return;
         }
         case analyticsEvents.UPLOAD_UNACCEPTED_FILE: {
-          sendLab2AnalyticsEvent(
-            EVENTS.CODEBRIDGE_UPLOAD_FAILED,
-            appName,
-            payload
-          );
+          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, {
+            ...payload,
+            fileType: payload.fileName.split('.').pop()?.toLowerCase() || '',
+          });
         }
       }
     },
-    [appName]
+    []
   );
 
   const {validFileTypes, ...lab2FileUploaderArgs} = args;

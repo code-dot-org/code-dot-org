@@ -220,12 +220,12 @@ const VersionHistoryPanel: React.FunctionComponent<
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (selectedVersion === INITIAL_VERSION_ID) {
-      sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, appName, {
+      sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, {
         isInitialVersion: 'true',
       });
       confirmStartOver();
     } else if (projectManager && selectedVersion) {
-      sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, appName, {
+      sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, {
         isInitialVersion: 'false',
       });
       setVersionLoading(true);
@@ -248,7 +248,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     }
   }, [
     selectedVersion,
-    appName,
     confirmStartOver,
     dispatch,
     successfulProjectResetCleanUp,
@@ -281,7 +280,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
       const isLatest = isLatestVersion(e.target.value);
       if (!isLatest) {
-        sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_VIEWED, appName, {
+        sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_VIEWED, {
           isInitialVersion: viewingInitialVersion.toString(),
         });
       }
@@ -293,7 +292,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         dispatch(loadVersion({versionId: e.target.value, startSources}));
       }
     },
-    [appName, dispatch, isLatestVersion, setSelectedVersion, startSources]
+    [dispatch, isLatestVersion, setSelectedVersion, startSources]
   );
 
   // Function called when clicking 'cancel'. This will reset the project to the current version
@@ -312,6 +311,13 @@ const VersionHistoryPanel: React.FunctionComponent<
     selectedVersion,
     setSelectedVersion,
   ]);
+
+  const handleSaveVersionSuccess = useCallback(() => {
+    sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_COMMITTED, {
+      versionId: selectedVersion,
+    });
+    successfulProjectResetCleanUp(true);
+  }, [selectedVersion, successfulProjectResetCleanUp]);
 
   const showList = listLoaded && !listLoading && !listLoadError;
 
@@ -412,7 +418,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       {isLatestVersion(selectedVersion) && (
         <SaveVersionPanel
           projectSources={projectSources}
-          onSuccess={() => successfulProjectResetCleanUp(true)}
+          onSuccess={handleSaveVersionSuccess}
           versionLoading={versionLoading}
           disabled={disabled}
         />

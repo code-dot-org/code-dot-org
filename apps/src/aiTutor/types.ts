@@ -19,6 +19,7 @@ export interface AiTutorContext {
   longInstructions?: string;
   documentation?: string;
   documentationLocation?: string;
+  consoleOutput?: string;
 }
 
 export interface AnalyticsData {
