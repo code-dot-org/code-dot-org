@@ -684,6 +684,21 @@ ActiveRecord::Schema.define(version: 2025_11_12_230749) do
     t.index ["user_id", "read_at"], name: "index_external_notifications_on_user_id_and_read_at"
   end
 
+  create_table "failed_delayed_jobs", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "priority", default: 0, null: false
+    t.integer "attempts", default: 0, null: false
+    t.text "handler", null: false
+    t.text "last_error", size: :medium
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string "locked_by"
+    t.string "queue"
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
+    t.index ["failed_at"], name: "index_failed_delayed_jobs_on_failed_at"
+  end
+
   create_table "featured_projects", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "storage_app_id"
     t.datetime "featured_at"
@@ -2325,6 +2340,14 @@ ActiveRecord::Schema.define(version: 2025_11_12_230749) do
     t.index ["user_id"], name: "index_teaching_profile_data_on_user_id"
   end
 
+  create_table "trophies", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "image_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["name"], name: "index_trophies_on_name", unique: true
+  end
+
   create_table "unit_groups", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.text "properties"
@@ -2556,6 +2579,15 @@ ActiveRecord::Schema.define(version: 2025_11_12_230749) do
     t.integer "unit_group_id"
     t.index ["script_id"], name: "index_user_scripts_on_script_id"
     t.index ["user_id", "script_id", "unit_group_id", "deleted_at"], name: "index_user_scripts_on_user_script_unit_group_deleted_unique", unique: true
+  end
+
+  create_table "user_trophies", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "trophy_id", null: false
+    t.integer "concept_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["user_id", "trophy_id", "concept_id"], name: "index_user_trophies_on_user_id_and_trophy_id_and_concept_id", unique: true
   end
 
   create_table "users", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
