@@ -331,6 +331,7 @@
       EnableIAMDatabaseAuthentication: true
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+      CopyTagsToSnapshot: true
       EnableCloudwatchLogsExports:
         - general
         - audit
