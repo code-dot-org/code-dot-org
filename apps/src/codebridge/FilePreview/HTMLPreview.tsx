@@ -23,7 +23,9 @@ import moduleStyles from './styles/html-preview.module.scss';
 const SOURCE_CHANGE_DELAY_MS = 500;
 
 export const HTMLPreview: React.FC = () => {
-  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const normalizedChannelId = useAppSelector(
+    state => state.lab.channel?.id?.toLowerCase() || ''
+  );
   const pageAction = getLabViewPageAction();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const iframeHeightClass = useMemo(() => {
@@ -40,8 +42,8 @@ export const HTMLPreview: React.FC = () => {
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
     const port = 'localhost' === environmentKey ? `:${location.port}` : '';
-    return `${location.protocol}//${channelId}.preview.${subdomain}codeprojects.org${port}`;
-  }, [channelId]);
+    return `${location.protocol}//${normalizedChannelId}.preview.${subdomain}codeprojects.org${port}`;
+  }, [normalizedChannelId]);
 
   // The new preview is currently behind an experiment flag. We pass this flag
   // through to the inner iframe via a query string so it knows whether or not to use the new preview.
