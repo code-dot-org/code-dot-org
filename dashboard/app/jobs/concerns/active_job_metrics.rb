@@ -148,24 +148,7 @@ module ActiveJobMetrics
   end
 
   def self.report_overall_queue_metrics
-    migrate_failed_jobs
     ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: [{name: 'Environment', value: CDO.rack_env}])
-  end
-
-  def self.migrate_failed_jobs
-    return unless ActiveRecord::Base.connection.table_exists? 'failed_delayed_jobs'
-
-    jobs_to_migrate = Delayed::Job.where.not(failed_at: nil)
-
-    jobs_to_migrate.find_in_batches do |batch|
-      ActiveRecord::Base.transaction do
-        failed_jobs_attributes = batch.map(&:attributes)
-        FailedDelayedJob.insert_all(failed_jobs_attributes)
-        Delayed::Job.where(id: batch.map(&:id)).delete_all
-      end
-    end
-  rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error migrating failed ActiveJobs')
   end
 
   protected def report_job_count

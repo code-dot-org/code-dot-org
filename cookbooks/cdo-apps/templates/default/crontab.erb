@@ -127,6 +127,7 @@
     # 'daemons' in all environments.
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
+    cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'archive_failed_jobs')
 
     # Refresh the Tutorials cache every hour (runs at the start of each hour, UTC)
     cronjob at:'0 * * * *', do:"#{deploy_dir('bin', 'cron', 'perform_job')} HocLegacy::RefreshTutorialsJob"
