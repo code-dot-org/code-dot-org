@@ -3,7 +3,7 @@
 .widgetContainer {
   background-color: $light_gray_100;
   border-radius: 8px;
-  box-shadow: 0 1px 3px 0 $shadow, 0 1px 2px 0 rgba(0 0 0 0.06);
+  box-shadow: 0 1px 3px 0 $shadow, 0 1px 2px 0 rgba(0 0 0 / 0.06);
   overflow: hidden;
   aspect-ratio: 1 / 1;
   min-width: 280px;
