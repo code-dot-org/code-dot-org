@@ -263,7 +263,7 @@ const LoginTypeSelection: React.FunctionComponent<{
             <Button
               text={locale.sign_up_microsoft()}
               onClick={() => selectOauthLoginType('microsoft')}
-              iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'regular'}}
+              iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
               className={style.microsoftButton}
               buttonTagTypeAttribute="submit"
             />
