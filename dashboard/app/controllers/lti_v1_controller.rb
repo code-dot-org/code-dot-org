@@ -215,7 +215,7 @@ class LtiV1Controller < ApplicationController
           render 'lti/v1/upgrade_account' and return
         end
 
-        if (decoded_jwt[Policies::Lti::MessageType::CLAIM] == Policies::Lti::MessageType::DEEP_LINKING_REQUEST)
+        if decoded_jwt[Policies::Lti::MessageType::CLAIM] == Policies::Lti::MessageType::DEEP_LINKING_REQUEST
           redirect_to lti_v1_deep_linking_index_path deep_linking_settings: decoded_jwt[Policies::Lti::DEEP_LINKING_SETTINGS_CLAIM] and return
         end
 
