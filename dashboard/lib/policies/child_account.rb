@@ -114,38 +114,6 @@ class Policies::ChildAccount
     user_predates_policy?(user) && !ComplianceState.permission_granted?(user)
   end
 
-  # Authentication option types which we always consider to be "owned" by the school
-  # the student attends because the school has admin control of the account.
-  SCHOOL_OWNED_TYPES = Set[AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
-
-  # Login types that are always considered personal logins.
-  PERSONAL_LOGIN_TYPES = Set[AuthenticationOption::EMAIL, AuthenticationOption::FACEBOOK].freeze
-
-  # Does the user login using credentials they personally control?
-  # For example, some accounts are created and owned by schools (Clever).
-  def self.personal_account?(user)
-    # Sponsored accounts are always managed by the teacher.
-    return false if user.sponsored?
-
-    # Any account is considered school owned for users who are in sections and/or
-    # if the user was created via a roster sync.
-    return false if conditionally_school_managed?(user)
-
-    # Email + password logins are personal logins.
-    return true if user.encrypted_password.present?
-
-    providers = user.migrated? ? Set.new(user.authentication_options.pluck(:credential_type)) : Set.new([user.provider])
-    return true if providers.empty?
-
-    # Email and Facebook are personal logins.
-    return true if providers.intersect?(PERSONAL_LOGIN_TYPES)
-
-    # Clever and LTI are never personal logins if no other login types are present.
-    return false if providers.subset?(SCHOOL_OWNED_TYPES)
-
-    return true
-  end
-
   # Checks if the user will not be old enough by the lockout date
   def self.underage?(user)
     return false unless user.student?
@@ -167,11 +135,9 @@ class Policies::ChildAccount
     student_birthday = user.birthday.in_time_zone('UTC').in_time_zone(lockout_date.utc_offset)
     return false unless student_birthday.since(min_required_age) > lockout_date
 
-    # Check to see if they are old enough at the current date
-    # We cannot trust 'user.age' because that is a different time zone and broken for leap years
-    today = DateTime.now.in_time_zone(lockout_date.utc_offset)
-    student_age = today.year - student_birthday.year
-    ((student_birthday + student_age.years > today) ? (student_age - 1) : student_age) <= policy[:max_age]
+    # Check to see if they are old enough at the current date using precise_age
+    student_age = user.precise_age(timezone: lockout_date.utc_offset)
+    student_age <= policy[:max_age]
   end
 
   # Whether or not the user can create/link new personal logins
@@ -214,10 +180,6 @@ class Policies::ChildAccount
     # whose age cannot be identified or who are older than the maximum age covered by the policy.
     return false unless underage?(user)
 
-    personal_account?(user)
-  end
-
-  def self.conditionally_school_managed?(user)
-    user.sections_as_student.exists? || user.roster_synced
+    Policies::User.personal_account?(user)
   end
 end
