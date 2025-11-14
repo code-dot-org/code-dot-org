@@ -1,6 +1,5 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {memo, Suspense, useCallback, useEffect, useState} from 'react';
 
@@ -28,6 +27,9 @@ import {getTypedKeys} from '@cdo/apps/types/utils';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
+import DancerIcon from '@cdo/static/dance/mixMoveAi/design.svg';
+import MusicIcon from '@cdo/static/dance/mixMoveAi/mix.svg';
+import DanceIcon from '@cdo/static/dance/mixMoveAi/move.svg';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {BubbleChoiceLevelProperties} from '../../types';
@@ -47,6 +49,12 @@ const labels: {[tab in Tab]: string} = {
   [Tab.Dancer]: 'Design',
   [Tab.Music]: 'Mix',
   [Tab.Dance]: 'Move',
+};
+
+const icons: {[tab in Tab]: string} = {
+  [Tab.Dancer]: DancerIcon,
+  [Tab.Music]: MusicIcon,
+  [Tab.Dance]: DanceIcon,
 };
 
 interface MusicDanceAiProps {
@@ -311,10 +319,18 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
                     onClick={() => (disabled ? undefined : setCurrentTab(tab))}
                     disabled={disabled}
                   >
-                    <BodyThreeText>
-                      {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
-                      {labels[tab]}
-                    </BodyThreeText>
+                    {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
+                    {!disabled && (
+                      <img
+                        src={icons[tab]}
+                        alt=""
+                        className={classNames(
+                          styles.tabIcon,
+                          tab !== currentTab && styles.tabIconUnselected
+                        )}
+                      />
+                    )}
+                    {labels[tab]}
                   </button>
                 );
               })}
