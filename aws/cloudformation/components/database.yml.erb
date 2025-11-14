@@ -314,10 +314,12 @@
       DBCredentialSecret: !Ref DatabaseSecretReader
       Privileges: ['SELECT']
 
-# We don't provision these in production via CloudFormation ... yet!
-<%  unless rack_env?(:production)%>
+<% # We don't provision DB Cluster and Instances in production via CloudFormation ... yet!
+  unless rack_env?(:production)
+-%>
   AuroraCluster:
     Type: AWS::RDS::DBCluster
+    DeletionPolicy: <%= rack_env?(:adhoc) ? "Delete" : "Snapshot" %> # Don't take a final Snapshot when deleting adhoc clusters.
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
       DBClusterParameterGroupName: !Ref Aurora3ClusterDBParameters
