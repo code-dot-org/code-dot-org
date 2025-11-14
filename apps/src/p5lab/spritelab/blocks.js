@@ -301,13 +301,13 @@ const customInputTypes = {
       // We dynamically generate the list of behaviors each time the menu is
       // opened, to ensure we have the most up-to-date list.
       const menuGeneratorFunction = function () {
-        // Behavior definition blocks are always moved to the hidden workspace.
+        // Behavior definition blocks are always found on the hidden workspace.
         const definitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
         const behaviorBlocks = definitionWorkspace
           ?.getTopBlocks()
           .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
         // Menu options are an array, each option containing a human-readable part,
-        // and a language-neutral string. Both are the same in this case.
+        // and a language-neutral string.
         const behaviorOptions = behaviorBlocks?.map(block => [
           block.getProcedureModel().getName(),
           block.behaviorId,
