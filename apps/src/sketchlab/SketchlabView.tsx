@@ -215,6 +215,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       dispatch(setHasRun(false));
     };
   }, [dispatch]);
+
   const convertToExcalidrawSources = async (
     sourcesWithExternalFiles: ExcalidrawSourceWithExternalFiles
   ) => {
@@ -232,6 +233,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
               file.dataURL = base64 as DataURL;
               downloadedFileDataRef.current[file.id] = base64;
             } catch (error) {
+              // Excalidraw handles files it can't load pretty well (ie, shows a placeholder image),
+              // so proceed if we fail to encode an image for now.
+              // Error handling investigation tracked here:
+              // https://codedotorg.atlassian.net/browse/AFL-345
               console.error(error);
             }
           }
