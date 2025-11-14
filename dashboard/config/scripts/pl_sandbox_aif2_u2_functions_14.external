@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introducing Functions in Java Script
+# Introducing Functions in JavaScript
 
 #### When you build web apps, you often want something to happen — like showing a message when a button is clicked. But what if you want that same behavior in more than one place, or want to trigger it from different events?
 
