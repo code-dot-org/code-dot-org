@@ -167,12 +167,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           );
         }
 
-        if (experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)) {
-          Object.values(serializedData?.files || {}).forEach(
-            file => delete file.dataURL
-          );
-        }
-
         updateSources({
           source: {
             ...serializedData,

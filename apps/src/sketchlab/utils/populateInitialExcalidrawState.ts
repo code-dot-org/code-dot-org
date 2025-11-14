@@ -15,6 +15,10 @@ export const populateInitialExcalidrawState = async (
 ) => {
   const excalidrawInitialState = cloneDeep(sourcesWithExternalFiles);
 
+  Object.values(excalidrawInitialState?.files || {}).forEach(
+    file => delete file.dataURL
+  );
+
   if (excalidrawInitialState.files) {
     const imageDownloadPromises = Object.values(
       excalidrawInitialState.files
