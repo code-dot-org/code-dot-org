@@ -6,18 +6,20 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
+import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
-  AdlibType,
   AdlibChoices,
+  AdlibType,
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
@@ -234,6 +236,15 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   const parentProperties = useParentLevelProperties();
   const isStandalone =
     levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
+  const dispatch = useAppDispatch();
+  const sublevelOnContinue = useCallback(() => {
+    dispatch(
+      sendSuccessReportForLevel(
+        levelProperties.id.toString(),
+        levelProperties.appName
+      )
+    );
+  }, [dispatch, levelProperties.appName, levelProperties.id]);
 
   return (
     <Guide id="generate-panel" modal={modal} position="bottom">
@@ -397,6 +408,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 hasEdited={true}
                 isRunning={false}
                 className={styles.buttonWide}
+                // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
+                onContinue={parentProperties ? sublevelOnContinue : undefined}
               />
             )}
           </div>

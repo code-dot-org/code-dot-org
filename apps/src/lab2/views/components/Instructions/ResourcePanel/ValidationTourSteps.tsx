@@ -5,7 +5,6 @@ import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {
@@ -47,9 +46,6 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
   const onboardingTourSeen = tryGetLocalStorage(
     RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     'no'
-  );
-  const isAiDiffContainerOpen = useAppSelector(
-    state => state.layout.isAiDiffContainerOpen
   );
 
   const returnFocusToTourPanel = () => {
@@ -258,7 +254,7 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
 
   return (
     <Steps
-      enabled={validationTourEnabled && !isAiDiffContainerOpen}
+      enabled={validationTourEnabled}
       initialStep={validationTourStep}
       steps={VALIDATION_TOUR_STEPS}
       onExit={() => {

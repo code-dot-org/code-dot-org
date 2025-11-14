@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q2_2025'
+
+question 'An online bookstore adds a "quick view" feature that shows a book\'s details when you hover over the cover. Some users love that it saves time, while others say it pops up too easily and covers other items. What should the design team do to make this feature more user-centered?'
+
+wrong 'Keep it exactly as is, since any extra feedback makes a site more interactive.'
+wrong 'Remove the feature completely so users can\'t be distracted.'
+right 'Adjust the timing or trigger so the preview only appears when users clearly choose to see it.'
+wrong 'Make the previews open automatically for every book on the page.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN
