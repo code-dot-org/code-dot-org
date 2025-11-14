@@ -62,12 +62,10 @@ steps:
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # Validate cache restore
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
-      - echo "7" > .cached-staging-build-file-count
       - |
         if [ -f .cached-staging-build-file-count ]; then
           expected=$(cat .cached-staging-build-file-count)
           actual=$(find . -type f -not -path './.git/*' | wc -l)
-          echo "Cache validation: expected=$expected actual=$actual"
           diff=$((actual - expected))
           [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
         fi
@@ -181,12 +179,10 @@ steps:
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # Validate cache restore
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
-      - echo "7" > .cached-staging-build-file-count
       - |
         if [ -f .cached-staging-build-file-count ]; then
           expected=$(cat .cached-staging-build-file-count)
           actual=$(find . -type f -not -path './.git/*' | wc -l)
-          echo "Cache validation: expected=$expected actual=$actual"
           diff=$((actual - expected))
           [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
         fi
@@ -338,6 +334,6 @@ trigger:
 
 ---
 kind: signature
-hmac: df1e4db74b7e8417440b7e62f510356941bfac68088909845e8a3dee91d5ce50
+hmac: ba6195857aee273c6a20c069f23fe04509208e772fb54ad7e30d5a8516b86feb
 
 ...
