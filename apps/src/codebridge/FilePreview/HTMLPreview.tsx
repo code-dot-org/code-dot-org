@@ -6,7 +6,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {getLabViewPageAction, LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -22,14 +22,7 @@ import moduleStyles from './styles/html-preview.module.scss';
 const SOURCE_CHANGE_DELAY_MS = 500;
 
 export const HTMLPreview: React.FC = () => {
-  const pageAction = getLabViewPageAction();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
-  const iframeHeightClass = useMemo(() => {
-    if (pageAction === 'share' || isFullScreenView) {
-      return moduleStyles.fullScreenPreviewIframeHeight;
-    }
-    return moduleStyles.levelViewPreviewIframeHeight;
-  }, [pageAction, isFullScreenView]);
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
@@ -292,7 +285,6 @@ export const HTMLPreview: React.FC = () => {
             id="preview"
             className={classNames(
               moduleStyles.previewIframe,
-              iframeHeightClass,
               previewViewMode === PreviewViewMode.DESKTOP
                 ? moduleStyles.desktopPreviewIframe
                 : moduleStyles.mobilePreviewIframe
