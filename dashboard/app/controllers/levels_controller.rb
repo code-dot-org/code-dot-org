@@ -570,6 +570,16 @@ class LevelsController < ApplicationController
         links["Sublevels"] = @level.levels.map {|sublevel| {text: sublevel.name, url: level_path(sublevel)}}
       end
 
+      if @level.is_a?(BubbleChoice)
+        links["Sublevels"] = @level.sublevels.flat_map do |bclevel|
+          sublevel_link = {text: bclevel.name, url: level_path(bclevel)}
+          edit_link = can_edit_level ?
+            {text: "Edit", url: edit_level_path(bclevel)} :
+            {text: "(Cannot edit #{bclevel.name})", url: ''}
+          [sublevel_link, edit_link]
+        end
+      end
+
       if project_template_level_name = @level.properties['project_template_level_name']
         project_template_level = Level.find_by_name(project_template_level_name)
         links["Template Level"] = [

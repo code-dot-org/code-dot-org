@@ -161,7 +161,14 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
           <StrongText key={`${listTitle}-title`}>{listTitle}</StrongText>
           <ul key={`${listTitle}-list`}>
             {links.map(link => (
-              <li key={link.url}>
+              <li
+                key={link.url}
+                className={
+                  link.text === 'Edit' || link.text?.startsWith('Edit ')
+                    ? moduleStyles.editLinkIndent
+                    : ''
+                }
+              >
                 {link.url ? (
                   // This menu is only used by internal users, who have explicitly requested access keys.
                   // eslint-disable-next-line jsx-a11y/no-access-key
