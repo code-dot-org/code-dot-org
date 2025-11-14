@@ -1,0 +1,77 @@
+@import 'color.scss';
+
+.widgetContainer {
+  background-color: $light_gray_100;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 $shadow, 0 1px 2px 0 rgba(0 0 0 0.06);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  min-width: 280px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widgetHeader {
+  background-color: $light_gray_500;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.widgetTitle {
+  color: $black;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.widgetActions {
+  display: flex;
+  gap: 8px;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.widgetButton {
+  padding: 6px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  color: $black;
+  font-size: 1.25rem;
+
+  &:hover {
+    background-color: #6b7280;
+  }
+
+  &:focus {
+    outline: 2px solid $black;
+    outline-offset: 2px;
+  }
+
+  i {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.widgetContent {
+  padding: 16px;
+  overflow-y: auto;
+  flex: 1;
+  color: $black;
+}
