@@ -8,8 +8,7 @@ else
   bind "tcp://#{CDO.dashboard_host}:#{CDO.dashboard_port}"
 end
 
-# workers CDO.dashboard_workers
-workers 2 # FIXME: remove, temporarily set to 2 (default = 0 which uses single-mode) so we can run our changes on puma in dev, see app_server_hooks.rb for FIXME comment
+workers CDO.dashboard_workers
 threads 1, 5
 
 directory deploy_dir('dashboard')
@@ -30,13 +29,9 @@ require 'cdo/app_server_hooks'
 before_fork do
   ActiveRecord::Base.connection_pool.disconnect!
   Cdo::AppServerHooks.before_fork
-  puts "BEFORE THE WORK"
 end
 
-puts "IS THERE ANYBODY OUT THERE??"
-
 on_worker_boot do |_index|
-  puts "IN THE WORKER BOOT"
   Cdo::AppServerHooks.after_fork(host: CDO.dashboard_hostname)
   ActiveRecord::Base.establish_connection
 end
