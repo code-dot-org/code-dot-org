@@ -1,8 +1,6 @@
 require 'cdo/honeybadger'
 
-module DelayedJobManagement
-  extend ActiveSupport::Concern
-
+module DelayedJobManager
   # Delayed::Job performance degrades sharply once the main `delayed_jobs` table
   # accumulates too many rows, which often happens when failures pile up (AI chat
   # jobs are our current hot spot). We archive those failures into a secondary
@@ -27,10 +25,4 @@ module DelayedJobManagement
     Honeybadger.notify(exception, error_message: 'Error archiving failed ActiveJobs')
   end
   module_function :archive_failed_jobs
-
-  class_methods do
-    def archive_failed_jobs
-      DelayedJobManagement.archive_failed_jobs
-    end
-  end
 end
