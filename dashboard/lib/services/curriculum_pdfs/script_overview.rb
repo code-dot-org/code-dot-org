@@ -17,7 +17,7 @@ module Services
         # For example: <Pathname:csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29.pdf>
         def get_script_overview_pathname(script, versioned: true)
           return nil unless script&.seeded_from
-          version_number = versioned ? Time.parse(script.seeded_from).to_s(:number) : 'fallback'
+          version_number = versioned ? Time.parse(script.seeded_from).to_fs(:number) : 'fallback'
           filename = ActiveStorage::Filename.new(script.localized_title.parameterize(preserve_case: true) + ".pdf").to_s
           return Pathname.new(File.join(script.name, version_number, filename))
         end

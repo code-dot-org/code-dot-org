@@ -19,7 +19,7 @@ module Services
         # <Pathname:csp1-2021/20210216001309/student-lesson-plans/Welcome to CSP.pdf>
         def get_lesson_plan_pathname(lesson, student_facing: false, versioned: true)
           return nil unless lesson&.script&.seeded_from
-          version_number = versioned ? Time.parse(lesson.script.seeded_from).to_s(:number) : 'fallback'
+          version_number = versioned ? Time.parse(lesson.script.seeded_from).to_fs(:number) : 'fallback'
           suffix = student_facing ? '-Student' : ''
           filename = ActiveStorage::Filename.new(lesson.localized_name.parameterize(preserve_case: true) + suffix + ".pdf").to_s
           subdir = student_facing ? "student-lesson-plans" : "teacher-lesson-plans"
