@@ -1,0 +1,27 @@
+name 'ai-and-algorithmic-decisions-postassessment_2025'
+title 'AI and Algorithmic Decisions Post-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'ai-and-algorithmic-decisions-postassessment-intro_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q1_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q2_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q3_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q4_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q5_2025'
+
+page
+level 'ai-and-algorithmic-decisions-postassessment-q6_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q7_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q8_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q9_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q10_2025'
+
+page
+level 'ai-and-algorithmic-decisions-postassessment-q11_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q12_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q13_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q14_2025'
+level 'ai-and-algorithmic-decisions-postassessment-q15_2025'

@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-12 21:31:21 UTC",
+    "serialized_at": "2025-11-13 19:58:15 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2716,7 +2716,7 @@
       "key": "b86cd471-6e0e-4f00-9203-2de63d34268c",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which approach feels more accurate or respectful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students might say revising the entry preserves the intent, while deleting it removes a valid opinion. The goal is for students to recognize that respectful data cleaning means balancing clarity with the original meaning of the response.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What assumptions did AI make that you didn’t?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. The goal is to prompt students to reflect on how AI may have interpreted the tone, intent, or meaning differently than they did.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which approach feels more accurate or respectful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students might say revising the entry preserves the intent, while deleting it removes a valid opinion. The goal is for students to recognize that respectful data cleaning means balancing clarity with the original meaning of the response.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What assumptions did AI make that you didn’t?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. The goal is to prompt students to reflect on how AI may have interpreted the tone, intent, or meaning differently than they did.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What costs might come with relying on AI for cleaning—time, money, energy?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will analyze the potential costs of using AI to clean datasets, considering how computing time, financial expense, and energy use contribute to the environmental impact of AI systems. They will discuss how choices in implementing and utilizing AI affect its long-term sustainability and resource consumption."
       },
       "seeding_key": {
         "activity_section.key": "b86cd471-6e0e-4f00-9203-2de63d34268c",
@@ -4075,6 +4075,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level3_v3-2025"
+        ],
         "progression": "Data Scientists"
       },
       "bonus": false,
