@@ -1,6 +1,10 @@
 module Cdo
   # Common app-server hook logic shared between multiple application entry-points
   # (e.g., dashboard and pegasus).
+  #
+  # NOTE: these hooks are only executed when running in puma clustered mode, which spawns worker processes.
+  # These hooks will NOT be run in local development unless you set `dashboard_workers: 1` (or greater)
+  # in locals.yml, which enables clustered mode.
   module AppServerHooks
     def self.before_fork
       # rubocop:disable CustomCops/PegasusDbUsage
