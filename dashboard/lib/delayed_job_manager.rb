@@ -1,5 +1,4 @@
 require 'cdo/aws/metrics'
-require 'cdo/honeybadger'
 
 module DelayedJobManager
   METRICS_NAMESPACE = 'code-dot-org/ActiveJob'.freeze
@@ -41,11 +40,6 @@ module DelayedJobManager
           dimensions: [{name: 'Environment', value: CDO.rack_env}],
         }
       ]
-    )
-  rescue => exception
-    Honeybadger.notify(
-      exception,
-      error_message: "Failed to record #{metric_name} metric for DelayedJobManager"
     )
   end
   module_function :archive_failed_jobs
