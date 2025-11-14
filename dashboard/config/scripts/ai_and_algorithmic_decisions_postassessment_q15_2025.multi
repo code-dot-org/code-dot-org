@@ -1,0 +1,18 @@
+name 'ai-and-algorithmic-decisions-postassessment-q15_2025'
+
+question 'A student is testing their interactive story app. When they press a button, nothing happens. They ask an AI assistant for help, and it suggests changing one line of code. What\'s the most responsible next step before accepting the AI\'s fix?'
+
+right 'Test the change and check if it actually fixes the issue without breaking other parts of the app.'
+wrong 'Replace the entire code with the AI\'s version to be safe.'
+wrong 'Copy and paste the AI\'s answer immediately so they can move on faster.'
+wrong 'Delete the button from the app since it\'s not working correctly anyway.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 2-6
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

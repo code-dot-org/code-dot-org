@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q10_2025'
+
+question 'A job search website asks users for their location and then shows local job listings only if the city field is filled out. If the city box is empty, it displays a message saying, "Please enter your city." Which best describes how the website decides what to show?'
+
+right 'It uses an if/else statement to check whether the city field has text before showing results.'
+wrong 'It always shows job listings, even when no location is entered.'
+wrong 'It uses a variable to randomly pick a city for the user.'
+wrong 'It shows both the "results" and "please enter" message at the same time.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN
