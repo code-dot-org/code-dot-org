@@ -1,0 +1,10 @@
+name 'pl-sandbox-aif2-u2-multi-flow-sketchlab-29_pilot-2025'
+display_name 'Creating a Multi-Decision Flowchart'
+description '#### Choose one of the levels and create a conditionals flowchart to represent the scenario.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson9-level2a-test_pilot-2025'
+level 'ai-and-algorithmic-decisions-lesson9-level2b-test_pilot-2025'
+level 'ai-and-algorithmic-decisions-lesson9-level2c-test_pilot-2025'
+level 'ai-and-algorithmic-decisions-lesson9-level2d-test_pilot-2025'
+level 'ai-and-algorithmic-decisions-lesson9-level2e-test_pilot-2025'

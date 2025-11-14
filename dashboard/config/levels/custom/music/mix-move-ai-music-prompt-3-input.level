@@ -8,6 +8,7 @@
   "properties": {
     "level_data": {
       "library": "launch2024",
+      "allowChangeStartingPlayheadPosition": true,
       "guideMode": "aiCodeGenerate",
       "aiCodeGenerateAdlib": {
         "id": "sounds",

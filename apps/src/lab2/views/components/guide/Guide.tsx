@@ -8,7 +8,7 @@ interface GuideProps {
   children: React.ReactNode;
   width?: 'normal' | 'narrow';
   position?: 'normal' | 'bottom';
-  modal?: boolean;
+  modal?: 'full' | 'gap';
 }
 
 // The Guide is a floating container for instructional content.  It is larger
@@ -24,7 +24,10 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   return (
     <div
       id={id ? `${id}-container` : undefined}
-      className={modal ? styles.guideContainerModal : undefined}
+      className={classNames(
+        modal && styles.guideContainerModal,
+        modal === 'gap' && styles.guideContainerModalGap
+      )}
     >
       <div
         id={id}
@@ -35,7 +38,8 @@ const Guide: React.FunctionComponent<GuideProps> = ({
             : styles.guideNormalWidth,
           position === 'bottom'
             ? styles.guideBottomPosition
-            : styles.guideNormalPosition
+            : styles.guideNormalPosition,
+          modal === 'gap' && styles.guideGap
         )}
       >
         {children}

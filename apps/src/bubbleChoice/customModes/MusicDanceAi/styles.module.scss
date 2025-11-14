@@ -1,6 +1,15 @@
 @import '../../../mixins.scss';
 @import 'color.scss';
 
+@keyframes tab-fade-in-out {
+  0%, 100% {
+    background-color: initial;
+  }
+  50% {
+    background-color: var(--background-neutral-quaternary);
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -13,22 +22,28 @@
   background-color: var(--background-neutral-secondary);
   padding: 4px;
   border-bottom: 1px solid var(--borders-neutral-primary);
+  gap: 20px;
 }
 
 .button {
   @include remove-button-styles;
   padding: 4px;
   flex: 1;
+  border-radius: 8px;
+  animation: tab-fade-in-out 1.5s;
+  transition: background-color 0.2s ease;
 
   > p {
     margin: 0;
   }
 
+  &:hover {
+    background-color: var(--background-neutral-quinary);
+  }
+
   &.selected {
-    background-color: var(--background-neutral-primary-inverse);
+    background-color: var(--background-neutral-primary-inverse) !important;
     font-weight: bold;
-    border-radius: 20px;
-    padding: 4px;
 
     > p {
       color: var(--text-neutral-primary-inverse);
@@ -44,6 +59,16 @@
       }
     }
   }
+}
+
+.tabSwitcher > .button:nth-child(1) {
+  animation-delay: 1s;
+}
+.tabSwitcher > .button:nth-child(2) {
+  animation-delay: 2s;
+}
+.tabSwitcher > .button:nth-child(3) {
+  animation-delay: 3s;
 }
 
 .labsContainer {
