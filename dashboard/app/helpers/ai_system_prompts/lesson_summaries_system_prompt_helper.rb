@@ -79,8 +79,10 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
     intro = "You are an expert teaching assistant in a computer science classroom who has been asked to summarize the upcoming lesson to help the teacher prepare for class."
     personalization = if user_id
                         get_personalization(user_id)
-                      else
+                      elsif current_user
                         get_personalization(current_user.id)
+                      else
+                        ""
                       end
 
     prompt = intro + personalization + "Use the following lesson plan to generate your summary:
