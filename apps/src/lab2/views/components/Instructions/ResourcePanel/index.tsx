@@ -10,7 +10,11 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {
+  isReadOnlyWorkspace,
+  isPermanentlyReadOnlyWorkspace,
+  isReadOnlyPredictLevel,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -141,16 +145,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const isRunning = instructionsProps.isRunning;
-  const isValidating =
-    instructionsProps.validationSettings?.isValidating || false;
-
-  // Assign the permanent read-only state once at mount time, before any temporary state changes.
-  const isPermanentlyReadOnlyRef = useRef<boolean | null>(null);
-  if (isPermanentlyReadOnlyRef.current === null) {
-    isPermanentlyReadOnlyRef.current =
-      isReadOnly && !isRunning && !isValidating;
-  }
+  const isPermanentlyReadOnly = useAppSelector(isPermanentlyReadOnlyWorkspace);
+  const isReadOnlyPredict = useAppSelector(isReadOnlyPredictLevel);
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
@@ -169,11 +165,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
 
-  // Temporary read-only occurs when running/validating in a workspace that wasn't permanently read-only at mount.
-  const isTemporarilyReadOnly =
-    !isPermanentlyReadOnlyRef.current &&
-    isReadOnly &&
-    (isRunning || isValidating);
+  // Temporary read-only occurs when running/validating in a workspace that isn't permanently read-only.
+  const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
   const aiTutorVisible = shouldShowAiTutor(
@@ -222,12 +215,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // a student's project (in which case they can view old versions, but not restore them).
     // We never show the version history tab in widget view, as widget view is always read-only
     // and therefore can never have version history.
-    // Note: We use the permanent read-only state captured at mount time to determine tab visibility.
     const versionHistoryHidden =
-      (isPermanentlyReadOnlyRef.current &&
-        !isViewingOldVersion &&
-        !viewAsUserId) ||
-      isWidgetView;
+      (isPermanentlyReadOnly && !isViewingOldVersion && !viewAsUserId) ||
+      isWidgetView ||
+      isReadOnlyPredict;
     if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
         <VersionHistoryPanel
@@ -282,6 +273,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelId,
     isTemporarilyReadOnly,
     sidebarOnly,
+    isPermanentlyReadOnly,
+    isReadOnlyPredict,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -315,10 +308,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   useEffect(() => {
     // Reset current tab to instructions when switching levels or viewAsUserId.
     setCurrentTab(Tabs.Instructions);
-    // Reset the permanent read-only state when the level changes.
-    isPermanentlyReadOnlyRef.current =
-      isReadOnly && !isRunning && !isValidating;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [levelId, viewAsUserId]);
 
   // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
