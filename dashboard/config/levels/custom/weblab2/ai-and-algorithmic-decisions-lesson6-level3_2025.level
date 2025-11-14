@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T11:31:02.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <title>Bakery Order</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <h1>Bakery Order Form</h1>\n\n  <!-- Choose type -->\n  <section id=\"typeSection\">\n    <h2>Choose Type</h2>\n    <button id=\"cakeBtn\">Cake</button>\n    <button id=\"cupcakeBtn\">Cupcakes</button>\n    <p id=\"typeOutput\"></p>\n  </section>\n\n  <!-- Choose size (Cake only) -->\n  <section id=\"sizeSection\">\n    <h2>Choose Cake Size</h2>\n    <button id=\"smallBtn\">Small</button>\n    <button id=\"mediumBtn\">Medium</button>\n    <button id=\"largeBtn\">Large</button>\n    <p id=\"sizeOutput\"></p>\n  </section>\n\n  <!-- Choose flavor + quantity -->\n  <section id=\"flavorSection\">\n    <h2>Choose Flavor & Quantity</h2>\n    <button id=\"chocBtn\">Chocolate</button>\n    <button id=\"vanBtn\">Vanilla</button>\n    <button id=\"strawBtn\">Strawberry</button>\n    <input id=\"qtyInput\" type=\"number\" placeholder=\"Enter quantity\" />\n    <p id=\"flavorOutput\"></p>\n  </section>\n\n  <!-- Custom message -->\n  <section id=\"msgSection\">\n    <h2>Custom Message (Cake only)</h2>\n    <input id=\"msgInput\" type=\"text\" placeholder=\"Type your message\" />\n    <p id=\"msgOutput\"></p>\n  </section>\n\n  <!-- Submit -->\n  <button id=\"submitBtn\">Place Order</button>\n  <div id=\"summaryBox\"></div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  max-width: 600px;\n  margin: 30px auto;\n  padding: 20px;\n  background-color: #fffaf6;\n}\n\nh1 {\n  text-align: center;\n}\n\nsection {\n  margin-bottom: 20px;\n  padding: 10px;\n  border: 1px solid #ddd;\n  border-radius: 8px;\n}\n\nbutton {\n  margin: 4px;\n  padding: 6px 12px;\n}\n\n#summaryBox {\n  margin-top: 20px;\n  padding: 10px;\n  background: #f4f4f4;\n  border-radius: 8px;\n}\n\n/* Hide all sections except type at start */\n#sizeSection,\n#flavorSection,\n#msgSection,\n#submitBtn,\n#summaryBox {\n  display: none;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- VARIABLES ---\nlet orderType = \"\";\nlet size = \"\";\nlet flavor = \"\";\nlet quantity = \"\";\nlet message = \"\";\n\n// --- DOM ELEMENTS ---\nconst typeOutput = document.getElementById(\"typeOutput\");\nconst sizeSection = document.getElementById(\"sizeSection\");\nconst msgSection = document.getElementById(\"msgSection\");\nconst flavorSection = document.getElementById(\"flavorSection\");\nconst sizeOutput = document.getElementById(\"sizeOutput\");\nconst flavorOutput = document.getElementById(\"flavorOutput\");\nconst quantityInput = document.getElementById(\"qtyInput\");\nconst msgOutput = document.getElementById(\"msgOutput\");\nconst summaryBox = document.getElementById(\"summaryBox\");\nconst submitBtn = document.getElementById(\"submitBtn\");\n\n// --- REUSABLE FUNCTION ---\nfunction setMsg(el, text) {\n  el.textContent = text;\n}\n\n// --- FUNCTION WITH PARAMETERS ---\nconst chooseFlavorAndQuantity = (cakeFlavor, cakeQuantity) => {\n  flavor = cakeFlavor;\n  quantity = cakeQuantity;\n};\n\n// --- CHOOSE TYPE ---\ndocument.getElementById(\"cakeBtn\").addEventListener(\"click\", () => {\n  orderType = \"Cake\";\n  setMsg(typeOutput, \"You chose Cake\");\n\n  // show cake sections\n  sizeSection.style.display = \"block\";\n  flavorSection.style.display = \"block\";\n  msgSection.style.display = \"block\";\n  submitBtn.style.display = \"block\";\n});\n\ndocument.getElementById(\"cupcakeBtn\").addEventListener(\"click\", () => {\n  orderType = \"Cupcakes\";\n  setMsg(typeOutput, \"You chose Cupcakes\");\n\n  // show only flavor + submit\n  sizeSection.style.display = \"none\";\n  msgSection.style.display = \"none\";\n  flavorSection.style.display = \"block\";\n  submitBtn.style.display = \"block\";\n});\n\n// --- CHOOSE SIZE (CAKE ONLY) ---\ndocument.getElementById(\"smallBtn\").addEventListener(\"click\", () => {\n  size = \"Small\";\n  setMsg(sizeOutput, \"Size: Small\");\n});\ndocument.getElementById(\"mediumBtn\").addEventListener(\"click\", () => {\n  size = \"Medium\";\n  setMsg(sizeOutput, \"Size: Medium\");\n});\ndocument.getElementById(\"largeBtn\").addEventListener(\"click\", () => {\n  size = \"Large\";\n  setMsg(sizeOutput, \"Size: Large\");\n});\n\n// --- CHOOSE FLAVOR + QUANTITY ---\ndocument.getElementById(\"chocBtn\").addEventListener(\"click\", () => {\n  const q = quantityInput.value;\n  chooseFlavorAndQuantity(\"Chocolate\", q);\n  setMsg(flavorOutput, \"Flavor: Chocolate selected\");\n});\ndocument.getElementById(\"vanBtn\").addEventListener(\"click\", () => {\n  const q = quantityInput.value;\n  chooseFlavorAndQuantity(\"Vanilla\", q);\n  setMsg(flavorOutput, \"Flavor: Vanilla selected\");\n});\ndocument.getElementById(\"strawBtn\").addEventListener(\"click\", () => {\n  const q = quantityInput.value;\n  chooseFlavorAndQuantity(\"Strawberry\", q);\n  setMsg(flavorOutput, \"Flavor: Strawberry selected\");\n});\n\n// --- CUSTOM MESSAGE (CAKE ONLY) ---\ndocument.getElementById(\"msgInput\").addEventListener(\"input\", (e) => {\n  message = e.target.value;\n  setMsg(msgOutput, 'Message: \"' + message + '\"');\n});\n\n// --- PLACE ORDER ---\nsubmitBtn.addEventListener(\"click\", () => {\n  let summary = \"\";\n  quantity = quantityInput.value;\n\n  if (orderType === \"Cake\") {\n    summary = quantity + \" \" + size + \" \" + flavor + \" Cake(s)\";\n    if (message) {\n      summary += \" — message: \" + message;\n    }\n  } else {\n    summary = quantity + \" \" + flavor + \" Cupcake(s)\";\n  }\n\n  summaryBox.style.display = \"block\";\n  setMsg(summaryBox, \"You ordered \" + summary);\n});\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Tracing the User Flow\r\n\r\n1. Look at lines 25-29 or examine the code below to see how a function with parameters is defined in JavaScript:\r\n\r\n```\r\n// --- FUNCTION WITH PARAMETERS ---\r\nconst chooseFlavorAndQuantity = (cakeFlavor, cakeQuantity) => {\r\n  flavor = cakeFlavor;\r\n  quantity = cakeQuantity;\r\n}\r\n```\r\n2. Enter the information from one of the user flows you added to Level 1. Click Submit and verify that the correct order was placed.\r\n\r\n_Note: If some of the code in the `script.js` looks unfamiliar, use AI Tutor to explain it._",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T11:31:02.373+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level2-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level2-test-2025\"},{\"changed_at\":\"2025-11-13 11:34:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

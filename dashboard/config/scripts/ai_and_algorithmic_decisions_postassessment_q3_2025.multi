@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q3_2025'
+
+question 'A restaurant\'s online order form has a "Place Order" button. When clicked, it checks that all required fields are filled out, shows a "Thank you!" message, and clears the cart for the next customer. What best describes what\'s happening in the code when the button is clicked?'
+
+wrong 'The browser automatically saves the page and re-loads it without using any JavaScript.'
+right 'An event handler detects the click and runs a set of programmed steps to finish the order.'
+wrong 'A variable stores the thank-you message so users can\'t edit it.'
+wrong 'The site\'s CSS file changes colors to show that an order is complete.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+MARKDOWN

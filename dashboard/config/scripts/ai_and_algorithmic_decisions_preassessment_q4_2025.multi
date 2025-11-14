@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q4_2025'
+
+question 'A food delivery site lets you click a "Show My Order" button, and a summary of your food items instantly appears below it. What part of the website is being changed to make that summary appear?'
+
+wrong 'The website\'s terms of service document'
+wrong 'The browser\'s search bar'
+wrong 'The internet connection settings'
+right 'The HTML structure displayed on the screen'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson X
+MARKDOWN

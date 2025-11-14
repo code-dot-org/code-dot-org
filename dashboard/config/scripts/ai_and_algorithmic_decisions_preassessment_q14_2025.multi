@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q14_2025'
+
+question 'A news website adds moving headlines that scroll across the top of the page. Some users like how lively it looks, but others say it\'s distracting and hard to read. What design idea does this situation show?'
+
+wrong 'Good design always adds motion to keep users interested.'
+wrong 'Accessibility only matters for mobile users, not desktop users.'
+right 'Trade-offs are part of design – what helps one user might frustrate another.'
+wrong 'Designers should remove all interactive elements to avoid complaints.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 1, 7
+MARKDOWN
