@@ -298,26 +298,31 @@ const customInputTypes = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const noBehaviorLabel = i18n.behaviorsNotFound();
       const noBehaviorOption = [noBehaviorLabel, NO_OPTIONS_MESSAGE];
-      // Behavior definition blocks are always moved to the hidden workspace.
-      const definitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
-      if (!definitionWorkspace) {
-        return [noBehaviorOption];
-      }
-      const behaviorBlocks = definitionWorkspace
-        .getTopBlocks()
-        .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
-      // Menu options are an array, each option containing a human-readable part,
-      // and a language-neutral string. Both are the same in this case.
-      const behaviorOptions = behaviorBlocks.map(block => [
-        block.getProcedureModel().getName(),
-        block.behaviorId,
-      ]);
-      behaviorOptions.sort();
-      // Add a "No behaviors found" option, if needed
-      if (behaviorOptions.length === 0) {
-        behaviorOptions.push(noBehaviorOption);
-      }
-      const dropdownField = new Blockly.FieldBehaviorPicker(behaviorOptions);
+      // We dynamically generate the list of behaviors each time the menu is
+      // opened, to ensure we have the most up-to-date list.
+      const menuGeneratorFunction = function () {
+        // Behavior definition blocks are always moved to the hidden workspace.
+        const definitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
+        const behaviorBlocks = definitionWorkspace
+          ?.getTopBlocks()
+          .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
+        // Menu options are an array, each option containing a human-readable part,
+        // and a language-neutral string. Both are the same in this case.
+        const behaviorOptions = behaviorBlocks?.map(block => [
+          block.getProcedureModel().getName(),
+          block.behaviorId,
+        ]) || [noBehaviorOption];
+        behaviorOptions.sort();
+        // Add a "No behaviors found" option, if needed
+        if (behaviorOptions.length === 0) {
+          behaviorOptions.push(noBehaviorOption);
+        }
+        return behaviorOptions;
+      };
+
+      const dropdownField = new Blockly.FieldBehaviorPicker(
+        menuGeneratorFunction
+      );
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(dropdownField, inputConfig.name);
