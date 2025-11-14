@@ -5,7 +5,7 @@ require_relative '../../lib/cdo/mailjet'
 
 # Queries for teacher accounts that have been Inactive for more than
 # 3.5 years and sends them a warning email about impending deletion.
-class InactiveTeacherDeletionWarningEmailer
+class InactiveTeacherDeletionWarningMailer
   class SafetyConstraintViolation < RuntimeError; end
   EVENT_NAME = 'inactive_teacher_deletion_warning_sent'
 
@@ -25,7 +25,7 @@ class InactiveTeacherDeletionWarningEmailer
 
   def call
     reset_metrics
-    log_message("Starting InactiveTeacherDeletionWarningEmailer with dry_run=#{@dry_run}, limit=#{@limit}")
+    log_message("Starting InactiveTeacherDeletionWarningMailer with dry_run=#{@dry_run}, limit=#{@limit}")
     ActiveRecord::Base.connected_to(role: :reporting) do
       loop do
         accounts_batch = inactive_teachers

@@ -2,8 +2,8 @@
 
 require 'test_helper'
 
-class User::InactiveTeacherDeletionWarningEmailerTest < ActiveJob::TestCase
-  subject(:described_class) {InactiveTeacherDeletionWarningEmailer}
+class User::InactiveTeacherDeletionWarningMailerTest < ActiveJob::TestCase
+  subject(:described_class) {InactiveTeacherDeletionWarningMailer}
   subject(:described_instance) {described_class.new(dry_run: dry_run, limit: limit)}
   let(:dry_run) {false}
   let(:limit) {nil}
