@@ -41,7 +41,7 @@ LocalhostPreviewCodeprojectsRecord:
   Type: AWS::Route53::RecordSet
   Properties:
     HostedZoneId: !Ref CodeprojectsHostedZoneId
-    Name: !Sub preview.localhost.codeprojects.org
+    Name: !Sub '*.preview.localhost.codeprojects.org'
     Type: A
     TTL: 3600
     ResourceRecords:
@@ -55,6 +55,7 @@ CodeprojectsCertificate:
     DomainName: !Ref CodeprojectsBaseDomainName
     SubjectAlternativeNames:
       - !Sub preview.${CodeprojectsBaseDomainName}
+      - !Sub '*.preview.${CodeprojectsBaseDomainName}'
       - !Sub www.${CodeprojectsBaseDomainName}
       - !Sub static.${CodeprojectsBaseDomainName}
       - !Sub bramble-download.${CodeprojectsBaseDomainName}
@@ -63,6 +64,8 @@ CodeprojectsCertificate:
       - DomainName: !Ref CodeprojectsBaseDomainName
         HostedZoneId: !Ref CodeprojectsHostedZoneId
       - DomainName: !Sub preview.${CodeprojectsBaseDomainName}
+        HostedZoneId: !Ref CodeprojectsHostedZoneId
+      - DomainName: !Sub '*.preview.${CodeprojectsBaseDomainName}'
         HostedZoneId: !Ref CodeprojectsHostedZoneId
       - DomainName: !Sub www.${CodeprojectsBaseDomainName}
         HostedZoneId: !Ref CodeprojectsHostedZoneId
@@ -93,6 +96,7 @@ CodeprojectsCloudFrontDistribution:
       Aliases:
         # - !Ref CodeprojectsBaseDomainName
         - !Sub preview.${CodeprojectsBaseDomainName}
+        - !Sub '*.preview.${CodeprojectsBaseDomainName}'
       Origins:
         - Id: DashboardOrigin
           DomainName: <%= cdn_enabled ? subdomain('origin') : '!Sub ${DashboardSubdomainName}.${BaseDomainName}' %>

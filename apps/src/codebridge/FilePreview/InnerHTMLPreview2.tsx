@@ -31,7 +31,7 @@ const InnerHTMLPreview = () => {
   const [isLevelLoading, setIsLevelLoading] = useState(false);
 
   const parentOrigin = useMemo(() => {
-    const regex = /preview\.([^.]+)\.codeprojects\.org/;
+    const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
     const match = location.hostname.match(regex);
     const environment = match && match[1] ? `${match[1]}-` : '';
     const port = 'localhost-' === environment ? `:${location.port}` : '';
@@ -67,6 +67,7 @@ const InnerHTMLPreview = () => {
 
   useEffect(() => {
     window.addEventListener('message', handleMessage);
+    console.log('iframe_ready', parentOrigin);
     // Notify parent that we're ready to receive messages
     window.parent.postMessage(
       {type: IframeMessageType.IFRAME_READY},
