@@ -3,6 +3,7 @@ import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
 import i18n from '@cdo/locale';
 
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
+import {GENERATED_DANCER_STORAGE_KEY} from '../ai/constants';
 import {GENERATED_DANCER} from '../constants';
 import {resolveDancerAssets} from '../lottie/LottieDancerUtils';
 
@@ -106,13 +107,16 @@ const customInputTypes = {
   },
   generatedDancerImage: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
+      // We avoid using the head of the default dancer as it a simple gray ellipse
+      // which doesn't "read" as a dancer.
+      let headUrl = '/blockly/media/skins/dance/default_dancer.png';
+      if (localStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
+        const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
+        headUrl = urls.headUrl;
+      }
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldImage(urls.headUrl, 40, 40),
-          inputConfig.name
-        );
+        .appendField(new Blockly.FieldImage(headUrl, 40, 40), inputConfig.name);
     },
     generateCode(block, arg) {
       return `"${GENERATED_DANCER}"`;
