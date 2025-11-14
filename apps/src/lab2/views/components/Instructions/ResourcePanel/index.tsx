@@ -318,7 +318,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // Reset the permanent read-only state when the level changes.
     isPermanentlyReadOnlyRef.current =
       isReadOnly && !isRunning && !isValidating;
-  }, [levelId, viewAsUserId, isReadOnly, isRunning, isValidating]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [levelId, viewAsUserId]);
 
   // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
   const {setShowExtraLinksButton} = useExtraLinksButtonContext();
