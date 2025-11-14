@@ -1,35 +1,11 @@
 .footerPanel {
   border-top: 1px solid var(--borders-neutral-primary);
-}
-
-.saveCurrentVersionHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  background: var(--background-neutral-secondary);
-}
-
-.saveCurrentVersionHeaderText {
-  flex: 1;
-  text-align: center;
-  margin: 0;
-  min-height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 8px;
-  
-  // Override built-in spacing from the typography component
-  .overlineTwoText {
-    margin: 0;
-    color: var(--text-neutral-quaternary);
-  }
+  z-index: 1;
 }
 
 .saveCurrentVersionDescription {
   padding: 6px 12px 12px 12px;
   background-color: var(--background-neutral-secondary);
-  border-top: 1px solid var(--borders-neutral-primary);
 }
 
 .saveCurrentVersionDescriptionInput {
@@ -38,7 +14,7 @@
 }
 
 .label {
-  color: var(--text-neutral-primary, #292F36);
+  color: var(--text-neutral-primary, #292f36);
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: var(--font-family-body, Figtree);
   font-size: 12px;
