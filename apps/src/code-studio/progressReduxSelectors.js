@@ -303,7 +303,7 @@ export const getCurrentScriptLevelId = state => {
 export const getParentLevel = state => {
   const currentLevel = getCurrentLevel(state);
 
-  if (currentLevel.parentLevelId) {
+  if (currentLevel?.parentLevelId) {
     return levelById(
       state.progress,
       state.progress.currentLessonId,
@@ -334,6 +334,10 @@ export const getNextLevel = state => {
     state.progress.currentLessonId
   );
   const currentLevel = getCurrentLevel(state);
+
+  if (!currentLevel) {
+    return undefined;
+  }
 
   let currentLevelIndex = currentLevel.levelNumber - 1;
 
