@@ -77,7 +77,6 @@ const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-
   const {startSources} = useSource(
     DEFAULT_PROJECT,
     levelProperties,

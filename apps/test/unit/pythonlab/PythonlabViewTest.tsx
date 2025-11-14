@@ -6,7 +6,6 @@ import {Store} from 'redux';
 
 import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import progress from '@cdo/apps/code-studio/progressRedux';
-import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import lab from '@cdo/apps/lab2/lab2Redux';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import lab2System from '@cdo/apps/lab2/redux/systemRedux';
@@ -33,15 +32,6 @@ jest.mock('@cdo/apps/pythonlab/pyodideWorkerManager', () => {
   };
 });
 
-jest.mock('@cdo/apps/lab2/hooks/useLevelActivityMetrics', () => ({
-  useLevelActivityMetrics: jest.fn(),
-}));
-
-const mockUseLevelActivityMetrics =
-  useLevelActivityMetrics as jest.MockedFunction<
-    typeof useLevelActivityMetrics
-  >;
-
 const defaultLevelProperties: LevelProperties = {
   id: 0,
   name: '',
@@ -61,8 +51,6 @@ describe('PythonLabView', () => {
     });
 
     store = getStore();
-
-    mockUseLevelActivityMetrics.mockClear();
   });
 
   afterEach(() => {
@@ -108,18 +96,5 @@ describe('PythonLabView', () => {
     renderDefault(defaultLevelProperties, undefined);
 
     expect(screen.queryByRole('button', {name: 'Console only'})).toBeNull();
-  });
-
-  it('calls useLevelActivityMetrics with level properties when rendered', () => {
-    const levelProperties = {
-      ...defaultLevelProperties,
-      id: 123,
-      name: 'Test Level',
-      isProjectLevel: false,
-    };
-
-    renderDefault(levelProperties, undefined);
-
-    expect(mockUseLevelActivityMetrics).toHaveBeenCalledWith(levelProperties);
   });
 });
