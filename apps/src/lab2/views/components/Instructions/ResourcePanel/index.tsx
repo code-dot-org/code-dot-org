@@ -7,13 +7,13 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
-  isReadOnlyPredictLevel,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -27,6 +27,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import '@cdo/apps/lab2/introjs.scss';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
@@ -144,10 +145,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.lab2Project.viewingOldVersion
   );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace); // includes running/validating.
   const isPermanentlyReadOnly = useAppSelector(isPermanentlyReadOnlyWorkspace);
-  const isReadOnlyPredict = useAppSelector(isReadOnlyPredictLevel);
-  const isWidgetView = instructionsProps.levelProperties.widgetView || false;
+  const hasSubmitted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+  );
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
@@ -165,7 +167,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
 
-  // Temporary read-only occurs when running/validating in a workspace that isn't permanently read-only.
+  // If we are not permanently read-only but are currently in a read-only state, we are temporarily read-only.
   const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
@@ -210,15 +212,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    // The version history tab is hidden in read only mode with two exceptions:
-    // if the user is viewing an old version of the project, or if this is a teacher viewing
-    // a student's project (in which case they can view old versions, but not restore them).
-    // We never show the version history tab in widget view, as widget view is always read-only
-    // and therefore can never have version history.
+    // The version history tab is hidden in permanently read-only mode with the following exceptions:
+    // - if the user is viewing an old version of the project,
+    // - if a teacher is viewing a student's project (in which case they can view old versions, but not restore them),
+    // - if the user submitted on a submittable level.
     const versionHistoryHidden =
-      (isPermanentlyReadOnly && !isViewingOldVersion && !viewAsUserId) ||
-      isWidgetView ||
-      isReadOnlyPredict;
+      isPermanentlyReadOnly &&
+      !viewAsUserId &&
+      !isViewingOldVersion &&
+      !hasSubmitted;
     if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
         <VersionHistoryPanel
@@ -251,17 +253,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
     return tabMap;
   }, [
-    instructionsProps,
+    sidebarOnly,
     levelProperties,
+    instructionsProps,
     hasValidationConditions,
-    isUserTeacher,
-    aiTutorVisible,
     hiddenContextCallback,
-    isViewingOldVersion,
+    aiTutorVisible,
+    isPermanentlyReadOnly,
     viewAsUserId,
-    isWidgetView,
+    isViewingOldVersion,
+    hasSubmitted,
     versionHistoryProps,
     showRubric,
+    isUserTeacher,
     hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
     levelName,
@@ -272,9 +276,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,
-    sidebarOnly,
-    isPermanentlyReadOnly,
-    isReadOnlyPredict,
   ]);
 
   const hasTabs = useMemo(() => {

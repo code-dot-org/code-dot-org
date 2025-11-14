@@ -31,7 +31,7 @@ export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
 export const isProjectTemplateLevel = (state: {lab: LabState}) =>
   !!state.lab.levelProperties?.projectTemplateLevelName;
 
-// Returns true if the workspace is permanently read-only (not owner, frozen, submitted, etc.)
+// Returns true if the workspace is permanently read-only.
 // This excludes temporary read-only states like running/validating.
 export const isPermanentlyReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
@@ -46,22 +46,12 @@ export const isPermanentlyReadOnlyWorkspace = (state: RootState) => {
     return true;
   }
   // Otherwise, we are in permanently read-only mode if we are not the owner of the channel,
-  // the level is frozen, the level is a read-only predict level, the level has been submitted,
-  // viewing an old version, or in widget view.
+  // the level is frozen, the level is a read-only predict level or in widget view.
   const isOwner = state.lab.channel?.isOwner;
   const isFrozen = !!state.lab.channel?.frozen;
   const readOnlyPredictLevel = isReadOnlyPredictLevel(state);
-  const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
-  const isViewingOldVersion = state.lab2Project.viewingOldVersion;
 
-  return (
-    !isOwner ||
-    isFrozen ||
-    readOnlyPredictLevel ||
-    hasSubmitted ||
-    isViewingOldVersion ||
-    isWidgetView
-  );
+  return !isOwner || isFrozen || readOnlyPredictLevel || isWidgetView;
 };
 
 // This may depend on more factors, such as share.
@@ -69,12 +59,20 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   // Start with the permanently read-only check.
   const isPermanentlyReadOnly = isPermanentlyReadOnlyWorkspace(state);
 
+  const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
+  const isViewingOldVersion = state.lab2Project.viewingOldVersion;
+
   // Also check for temporary read-only state (running/validating).
   const isRunningAndReadonly =
     (state.lab2System.isRunning || state.lab2System.isValidating) &&
     shouldBeReadonlyWhileRunning(state);
 
-  return isPermanentlyReadOnly || isRunningAndReadonly;
+  return (
+    isPermanentlyReadOnly ||
+    isRunningAndReadonly ||
+    hasSubmitted ||
+    isViewingOldVersion
+  );
 };
 
 // Helper functions
