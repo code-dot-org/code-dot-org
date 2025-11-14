@@ -12,7 +12,6 @@ import {
   ExcalidrawInitialDataState,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
-import cloneDeep from 'lodash/cloneDeep';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
@@ -21,11 +20,7 @@ import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {
-  LabProps,
-  LevelProperties,
-  ExcalidrawSourceWithExternalFiles,
-} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -39,7 +34,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
-import {uploadExternalFiles, imageUrlToBase64} from './utils';
+import {populateInitialExcalidrawState, uploadExternalFiles} from './utils';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -201,7 +196,12 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   }, []);
 
   useEffect(() => {
-    setReinitializationHandler(() => setExcalidrawMountKey(key => key + 1));
+    setReinitializationHandler(() => {
+      setExcalidrawMountKey(key => key + 1);
+
+      // Reset loaded images on remount so we don't end up with a large number of images stored across pages.
+      downloadedFileDataRef.current = {};
+    });
   }, [setReinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
@@ -215,44 +215,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       dispatch(setHasRun(false));
     };
   }, [dispatch]);
-
-  const convertToExcalidrawSources = async (
-    sourcesWithExternalFiles: ExcalidrawSourceWithExternalFiles
-  ) => {
-    const excalidrawInitialState = cloneDeep(sourcesWithExternalFiles);
-
-    if (excalidrawInitialState.files) {
-      const imageDownloadPromises = Object.values(
-        excalidrawInitialState.files
-      ).map(async file => {
-        if (!Object.keys(downloadedFileDataRef.current).includes(file.id)) {
-          const fileUrl = excalidrawInitialState.externalFiles?.[file.id].url;
-          if (fileUrl) {
-            try {
-              const base64 = (await imageUrlToBase64(fileUrl)) as DataURL;
-              file.dataURL = base64 as DataURL;
-              downloadedFileDataRef.current[file.id] = base64;
-            } catch (error) {
-              // Excalidraw handles files it can't load pretty well (ie, shows a placeholder image),
-              // so proceed if we fail to encode an image for now.
-              // Error handling investigation tracked here:
-              // https://codedotorg.atlassian.net/browse/AFL-345
-              console.error(error);
-            }
-          }
-        } else {
-          const base64 = downloadedFileDataRef.current[file.id];
-          file.dataURL = base64;
-        }
-      });
-      await Promise.allSettled(imageDownloadPromises);
-    }
-
-    // Excalidraw does not need to access externalFiles, so we remove it
-    // before passing this initial state to Excalidraw.
-    delete excalidrawInitialState.externalFiles;
-    return excalidrawInitialState as ExcalidrawInitialDataState;
-  };
 
   return (
     <div className={moduleStyles.sketchlabContainer}>
@@ -293,7 +255,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           <Excalidraw
             initialData={
               experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
-                ? convertToExcalidrawSources(currentSources.source)
+                ? populateInitialExcalidrawState(
+                    currentSources.source,
+                    downloadedFileDataRef.current
+                  )
                 : (currentSources.source as ExcalidrawInitialDataState)
             }
             onChange={debouncedSerializeAndSaveWorkspace}
