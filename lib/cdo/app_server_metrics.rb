@@ -75,6 +75,9 @@ module Cdo
       stats
     end
 
+    # Gathers cloudfront metrics from each puma worker process and logs it
+    # to CloudWatch segmented by Host and PID. To get overall values, you
+    # must aggregate/sum across all Host and PID dimensions in CloudWatch.
     def self.start_background_metrics_thread(host:)
       Thread.new do
         dimensions = {
@@ -88,7 +91,6 @@ module Cdo
         end
 
         loop do
-          puts "gather metrics for pid #{Process.pid}"
           Cdo::Metrics.put(
             'ActionCable',
             'ServerConnectionsCount',
@@ -96,9 +98,7 @@ module Cdo
             dimensions,
             unit: 'Count'
           )
-          # FIXME FIXME FIXME: change sleep to 60s before committing to prod, we really don't need this every second
-          # but it makes dev easier.
-          sleep 1
+          sleep 30.seconds
         end
       end
     end
