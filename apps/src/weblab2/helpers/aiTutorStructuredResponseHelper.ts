@@ -9,6 +9,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
         enum: [
           'Build HTML',
           'Build CSS',
+          'Build JavaScript',
           'Ask',
           'Hint',
           'Debug',
@@ -16,6 +17,8 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           'Example',
           'Pseudocode',
           'Documentation',
+          'Test-Case',
+          'Refusal-JavaScript-Snippet',
           'Refusal',
         ],
       },
