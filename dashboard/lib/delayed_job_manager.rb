@@ -4,13 +4,10 @@ module DelayedJobManager
   METRICS_NAMESPACE = 'code-dot-org/ActiveJob'.freeze
 
   # Delayed::Job performance degrades sharply once the main `delayed_jobs` table
-  # accumulates too many rows, which often happens when failures pile up (AI chat
-  # jobs are our current hot spot). We archive those failures into a secondary
-  # table so engineers can still inspect them while keeping the primary queue
-  # lean. Long term we plan to migrate queue processing to SolidQueue, at which
-  # point we expect to retire this archive entirely; in the meantime we’re also
-  # exploring treating some downstream errors as handled (e.g., marking AI chat
-  # jobs successful after logging and/or notifying) to reduce churn.
+  # accumulates too many rows, which often happens when failures pile up. We
+  # archive those failures into a secondary table so engineers can still inspect
+  # them while keeping the primary queue lean. Long term we plan to migrate
+  # queue processing to SolidQueue, which is blocked until we're on Rails 7.
   def archive_failed_jobs
     return unless FailedDelayedJob.table_exists?
 
