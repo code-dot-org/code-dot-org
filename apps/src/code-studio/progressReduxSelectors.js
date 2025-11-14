@@ -120,11 +120,7 @@ export const getLevelPropertiesPath = state => {
 
     // Use the sublevel position if we're on a sublevel
     if (currentLevel.parentLevelId) {
-      const parentLevel = levelById(
-        state.progress,
-        state.progress.currentLessonId,
-        currentLevel.parentLevelId
-      );
+      const parentLevel = getParentLevel(state);
       levelPosition = parentLevel.levelNumber;
       sublevelPosition = currentLevel.levelNumber;
     }
@@ -302,7 +298,28 @@ export const getCurrentScriptLevelId = state => {
 };
 
 /**
+ * Get a reference to the parent level, if it exists.
+ */
+export const getParentLevel = state => {
+  const currentLevel = getCurrentLevel(state);
+
+  if (currentLevel.parentLevelId) {
+    return levelById(
+      state.progress,
+      state.progress.currentLessonId,
+      currentLevel.parentLevelId
+    );
+  }
+
+  return;
+};
+
+/**
  * Get a reference to the next level in the progression, if it exists.
+ *
+ * Bubble choice levels return the parent level in the case where the navigation
+ * type is not 'NEXT_LEVEL', since that is where the progression would take them
+ * when they press 'continue' in that case.
  *
  * Returns undefined if not currently in a script level or currently
  * on the last level.
@@ -322,19 +339,16 @@ export const getNextLevel = state => {
 
   // Sublevel navigation
   if (currentLevel.parentLevelId) {
+    const parentLevel = getParentLevel(state);
+
     if (
       currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_LEVEL
     ) {
       // If navigationType is NEXT_LEVEL, go to the next level after the parent.
-      const parentLevel = levelById(
-        state.progress,
-        state.progress.currentLessonId,
-        currentLevel.parentLevelId
-      );
       currentLevelIndex = parentLevel.levelNumber - 1;
     } else {
-      // Otherwise, default to parent level.
-      return currentLevel.parentLevelId;
+      // Otherwise, default to the parent level.
+      return parentLevel;
     }
   }
 

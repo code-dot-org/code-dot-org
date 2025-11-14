@@ -5,6 +5,7 @@ import React, {useEffect, useMemo, useRef} from 'react';
 import {
   getCurrentLevel,
   getNextLevel,
+  getParentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -77,9 +78,16 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   const validationSatisfied = useAppSelector(
     state => state.lab.validationState?.satisfied
   );
+  // Get the level number of the next level (in the progression)
   const continueToLevel = useAppSelector(
     state => getNextLevel(state)?.levelNumber
   );
+  // Get the current main level (parent if it is a sublevel)
+  const currentLevel = useAppSelector(
+    state =>
+      getParentLevel(state)?.levelNumber || getCurrentLevel(state)?.levelNumber
+  );
+  // Determine what level is next in the progression
   const hasNextLevel = useAppSelector(
     state => getNextLevel(state)?.id !== undefined
   );
@@ -211,8 +219,14 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     return null;
   }
 
+  // Construct the button text.
+  // For when we would go to another level, say 'Continue to Level {x}'
+  // For when we would actually just go back to the same level (parent for a sublevel) just say 'Continue'
+  // For when we are already at the end of a lesson, say 'Finish Lesson'
   const text = hasNextLevel
-    ? commonI18n.continueToLevel({level: continueToLevel})
+    ? currentLevel !== continueToLevel
+      ? commonI18n.continueToLevel({level: continueToLevel})
+      : commonI18n.continue()
     : commonI18n.finishLesson();
 
   return (
