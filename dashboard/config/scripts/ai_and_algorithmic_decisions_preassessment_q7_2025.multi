@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q7_2025'
+
+question 'A weather website uses the same code to display today\'s temperature in many different cities. What\'s the main reason the developer would put that code inside a function?'
+
+wrong 'To make the website load random temperatures every time'
+wrong 'To hide the data so no one can see how the site works'
+right 'To reuse the same logic easily without rewriting it for each city'
+wrong 'To prevent users from changing the city they want to check'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN
