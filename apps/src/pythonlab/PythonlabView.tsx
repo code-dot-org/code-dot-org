@@ -104,12 +104,15 @@ const PythonlabView: React.FunctionComponent<
   const miniAppName = useAppSelector(
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   const hasSource = !!source;
-  const isAiTutor2Enabled = useMemo(() => {
+  const isAiTutorEnabled = useMemo(() => {
     return (
       levelProperties.aiTutorAvailable ||
-      queryParams('show-ai-tutor2') === 'true'
+      queryParams('show-ai-tutor2') === 'true' ||
+      queryParams('show-ai-tutor') === 'true'
     );
   }, [levelProperties.aiTutorAvailable]);
 
@@ -188,12 +191,14 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    if (isAiTutor2Enabled) {
+    if (isAiTutorEnabled) {
       aiTutorHelper.setAiTutorContext({
         source,
         miniAppName,
         validationFile,
         longInstructions: levelProperties.longInstructions,
+        hasRun,
+        hasEdited,
       });
     }
   }, [
@@ -201,7 +206,9 @@ const PythonlabView: React.FunctionComponent<
     source,
     validationFile,
     miniAppName,
-    isAiTutor2Enabled,
+    isAiTutorEnabled,
+    hasRun,
+    hasEdited,
   ]);
 
   const onRun = async (

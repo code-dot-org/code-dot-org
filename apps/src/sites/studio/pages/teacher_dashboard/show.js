@@ -13,6 +13,9 @@ import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo,
+  setShowAITALessonSummary,
+  setHasCompletedPersonalizationQuiz,
+  setAudioSummaryTranscript,
 } from '@cdo/apps/templates/currentUserRedux';
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -38,6 +41,8 @@ const {
   localeCode,
   hasSeenStandardsReportInfo,
   canEnableAITutor,
+  showAITALessonSummary,
+  hasCompletedPersonalizationQuiz,
   sectionOrder,
   providers,
 } = scriptData;
@@ -66,6 +71,13 @@ $(document).ready(function () {
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
+  if (showAITALessonSummary) {
+    store.dispatch(setShowAITALessonSummary(true));
+    store.dispatch(
+      setHasCompletedPersonalizationQuiz(hasCompletedPersonalizationQuiz)
+    );
+    store.dispatch(setAudioSummaryTranscript([]));
+  }
   store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setAuthProviders(providers));

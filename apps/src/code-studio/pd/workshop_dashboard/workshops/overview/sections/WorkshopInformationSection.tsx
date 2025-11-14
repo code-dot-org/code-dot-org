@@ -1,10 +1,12 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {
-  Heading2,
-  BodyFourText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
-import {Card, CardContent, CardHeader, Box, Divider} from '@mui/material';
+  Card,
+  CardContent,
+  CardHeader,
+  Box,
+  Divider,
+  Typography,
+} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import classNames from 'classnames';
 import moment from 'moment-timezone';
@@ -48,9 +50,9 @@ export const WorkshopInformationSection: React.FC<
         className={styles.cardHeader}
         title={
           <Box className={styles.cardHeaderContainer}>
-            <Heading2 visualAppearance="body-two" noMargin>
-              <StrongText>Workshop Information</StrongText>
-            </Heading2>
+            <Typography component="h2" variant="body2">
+              <Typography variant="strong">Workshop Information</Typography>
+            </Typography>
             {canEdit && canShowEditButton && (
               <Button
                 text={isWorkshopAdmin ? 'Edit (admin)' : 'Edit'}
@@ -69,21 +71,23 @@ export const WorkshopInformationSection: React.FC<
           <Box className={styles.column}>
             <Box>
               <Box className={styles.labelRow}>
-                <StrongText>Workshop Name</StrongText>
+                <Typography variant="strong">Workshop Name</Typography>
               </Box>
-              <BodyFourText noMargin>
+              <Typography variant="body4">
                 {workshop.name || workshop.course}
-              </BodyFourText>
+              </Typography>
             </Box>
 
             <Box>
               <Box className={styles.labelRow}>
-                <StrongText>Subject/Topics</StrongText>
+                <Typography variant="strong">Subject/Topics</Typography>
               </Box>
               <Box component="ul" className={styles.unstyledList}>
                 {workshop.subject && (
                   <Box component="li">
-                    <BodyFourText>{workshop.subject}</BodyFourText>
+                    <Typography variant="body4" gutterBottom>
+                      {workshop.subject}
+                    </Typography>
                   </Box>
                 )}
                 {workshop.courseOfferingNames &&
@@ -93,7 +97,7 @@ export const WorkshopInformationSection: React.FC<
                       key={course}
                       className={styles.subjectListItem}
                     >
-                      <BodyFourText noMargin>{course}</BodyFourText>
+                      <Typography variant="body4">{course}</Typography>
                     </Box>
                   ))}
               </Box>
@@ -110,25 +114,25 @@ export const WorkshopInformationSection: React.FC<
           <Box className={styles.column}>
             <Box>
               <Box className={classNames(styles.labelRow, styles.sessionRow)}>
-                <StrongText>Date</StrongText>
-                <StrongText>Time</StrongText>
-                <StrongText>Location Name</StrongText>
+                <Typography variant="strong">Date</Typography>
+                <Typography variant="strong">Time</Typography>
+                <Typography variant="strong">Location Name</Typography>
               </Box>
 
               {workshop.sessions.map(session => (
                 <Box key={session.id} className={styles.sessionRow}>
-                  <BodyFourText noMargin>
+                  <Typography variant="body4">
                     {moment.tz(session.start, timeZone).format('MM/DD/YYYY')}
-                  </BodyFourText>
-                  <BodyFourText noMargin>
+                  </Typography>
+                  <Typography variant="body4">
                     {moment.tz(session.start, timeZone).format(TIME_FORMAT)} -{' '}
                     {moment.tz(session.end, timeZone).format(TIME_FORMAT)}
-                  </BodyFourText>
-                  <BodyFourText noMargin>
+                  </Typography>
+                  <Typography variant="body4">
                     {session.sessionFormat === 'in_person'
                       ? session.locationName ?? 'N/A'
                       : 'Virtual'}
-                  </BodyFourText>
+                  </Typography>
                 </Box>
               ))}
             </Box>
@@ -144,26 +148,26 @@ export const WorkshopInformationSection: React.FC<
           <Box className={styles.column}>
             <Box>
               <Box className={styles.labelRow}>
-                <StrongText>Facilitators</StrongText>
+                <Typography variant="strong">Facilitators</Typography>
               </Box>
               {workshop.facilitators?.length ? (
                 workshop.facilitators.map(facilitator => (
-                  <BodyFourText noMargin key={facilitator.id}>
+                  <Typography key={facilitator.id} variant="body4">
                     {facilitator.name}, {facilitator.email}
-                  </BodyFourText>
+                  </Typography>
                 ))
               ) : (
-                <BodyFourText noMargin>N/A</BodyFourText>
+                <Typography variant="body4">N/A</Typography>
               )}
             </Box>
 
             <Box>
               <Box className={styles.labelRow}>
-                <StrongText>Regional Partner</StrongText>
+                <Typography variant="strong">Regional Partner</Typography>
               </Box>
-              <BodyFourText noMargin>
+              <Typography variant="body4">
                 {workshop.regionalPartnerName || 'N/A'}
-              </BodyFourText>
+              </Typography>
             </Box>
           </Box>
         </Box>

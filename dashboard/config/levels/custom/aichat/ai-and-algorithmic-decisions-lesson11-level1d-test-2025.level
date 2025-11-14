@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-10-28T22:51:39.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Web App Idea Chatbot\r\n\r\nUse this chatbot to brainstorm ideas for your web app — what it could do, who it’s for, and how users will interact with it.\r\nYou can use it to get inspiration, think through possible user actions and outcomes, and clarify your app’s purpose.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Possible Stems**]\r\n* I want to make an interactive app about ___. What are some ways users could interact with it?\r\n* Give me a few ideas for outcomes or achievements that could make this app feel rewarding.\r\n* How could I make this app fun or useful for users?\r\n* Here’s my rough idea — can you help me expand or refine it?\r\n:::\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a creative brainstorming partner helping students generate and refine ideas for an interactive web app project.\nYour role is to:\n\t•\tEncourage original, feasible ideas that involve user input and meaningful outcomes.\n\t•\tAsk clarifying questions about audience, purpose, and interactivity.\n\t•\tHelp students imagine possible features, feedback, and design elements.\n\t•\tSuggest ways to make the app engaging while still achievable with HTML, CSS, and JavaScript.\nDo not provide finished code — focus on creative and logical thinking.\nKeep your tone upbeat, exploratory, and supportive.\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Idea Bot",
+    "bubble_choice_description": "Brainstorm and refine your app's concept, audience, and purpose.",
+    "thumbnail_url": "https://images.code.org/443b0ad9b35e6fec04838f1eb982baa5-Light Bulb Icon.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-28T22:51:39.262+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1-test-2025\"},{\"changed_at\":\"2025-10-28 22:52:11 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-29 23:02:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"bubble_choice_description\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

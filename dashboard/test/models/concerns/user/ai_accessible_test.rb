@@ -9,7 +9,6 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
   before do
     user.extend(User::AiAccessible)
 
-    allow(user).to receive(:permission?).with(UserPermission::AI_TUTOR_ACCESS).and_return(false)
     allow(user).to receive(:teachers).and_return([])
     allow(user).to receive(:sections_as_student).and_return([section])
     allow(user).to receive(:teacher?).and_return(false)
@@ -36,12 +35,13 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       _has_ai_tutor_access?.must_equal false
     end
 
-    it 'returns true if user has AI tutor permission' do
-      allow(user).to receive(:permission?).with(UserPermission::AI_TUTOR_ACCESS).and_return(true)
+    it 'returns true if in pilot teachers enabled section' do
       _has_ai_tutor_access?.must_equal true
     end
 
-    it 'returns true if in experiment and section is enabled' do
+    it 'returns true if SingleUserExperiment is enabled' do
+      allow(Queries::User::TeacherEnabledExperiments).to receive(:call).with(user).and_return([])
+      allow(SingleUserExperiment).to receive(:enabled?).with(user: user, experiment_name: 'ai-tutor').and_return(true)
       _has_ai_tutor_access?.must_equal true
     end
   end
@@ -54,14 +54,11 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       _can_enable_ai_tutor?.must_equal false
     end
 
-    it 'returns true if permission is present' do
-      allow(user).to receive(:permission?).with(UserPermission::AI_TUTOR_ACCESS).and_return(true)
-      _can_enable_ai_tutor?.must_equal true
-    end
-
     it 'returns true if SingleUserExperiment is enabled' do
+      allow(Queries::User::TeacherEnabledExperiments).to receive(:call).with(user).and_return([])
       allow(SingleUserExperiment).to receive(:enabled?).with(user: user, experiment_name: 'ai-tutor').and_return(true)
-      _can_enable_ai_tutor?.must_equal true
+      # todo-aitutor: change this back to true once the redesigned permissions page is functional
+      _can_enable_ai_tutor?.must_equal false
     end
   end
 
@@ -69,7 +66,6 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     subject(:can_use_ai_iteration_tools?) {user.can_use_ai_iteration_tools?}
 
     it 'returns true if user has permission and is a levelbuilder' do
-      allow(user).to receive(:permission?).with(UserPermission::AI_TUTOR_ACCESS).and_return(true)
       allow(user).to receive(:levelbuilder?).and_return(true)
       _can_use_ai_iteration_tools?.must_equal true
     end

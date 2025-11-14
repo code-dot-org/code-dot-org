@@ -3905,10 +3905,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/dance-party@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@code-dot-org/dance-party@npm:2.0.1"
-  checksum: 10/21ff06d2f25193b4a73003f65de5e8a502de8be2382c673b7cc3de2c5a5e71c047c65482f4e64cb302bf99cdadc3ab9ff81abcb7e5e252d8b62dc7ce486045c7
+"@code-dot-org/dance-party@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@code-dot-org/dance-party@npm:2.0.3"
+  checksum: 10/10273726d40e1245147a9f817e9885d7a22a3c3d9b1fa7f9ad6b6d0939985ffa6646a209cde75de0a773212519c59e6558269e7ddf2e39547ac60533807f7432
   languageName: node
   linkType: hard
 
@@ -4059,10 +4059,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/remark-plugins@npm:2.0.0, @code-dot-org/remark-plugins@npm:^2.0.0":
+"@code-dot-org/remark-plugins@npm:2.0.0":
   version: 2.0.0
   resolution: "@code-dot-org/remark-plugins@npm:2.0.0"
   checksum: 10/551b440b6567cd653ae5994d31dcaf2f3cd5f7ba59044758006b4a12c215dd06c2f768ce9517cf522093eebb19accad1839d468ad89fc303dbb6cb33678e6c6c
+  languageName: node
+  linkType: hard
+
+"@code-dot-org/remark-plugins@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@code-dot-org/remark-plugins@npm:2.0.1"
+  checksum: 10/9d80760ede352c83f50e2a7f74bbbff855dc2d29cc4e4dfd822d661721095983636308314042fcf1f9c0aebae1b536ff8bf0e81c0aa2fa91ebd6fd12a66e8e09
   languageName: node
   linkType: hard
 
@@ -6336,6 +6343,13 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10/271ea0bf1cd74718895a68414a6e95537737f36e02ad08eeb61a82b229d6abda9cff3135a479e134e1f0ce2c3ff97bb85babbdce751985fb755a39b231d7ccf2
+  languageName: node
+  linkType: hard
+
+"@rails/actioncable@npm:^8.0.201":
+  version: 8.0.201
+  resolution: "@rails/actioncable@npm:8.0.201"
+  checksum: 10/d1fe0e164eb50d07076ede049cf5c3ee3c44203d72c7b247797ddd18020fa68fc965612b6416a3c43b081a80eb1f616e8ea2165c4794042e0377b02408cd497e
   languageName: node
   linkType: hard
 
@@ -11034,7 +11048,7 @@ __metadata:
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/"
     "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/"
     "@code-dot-org/craft": "npm:0.2.2"
-    "@code-dot-org/dance-party": "npm:2.0.1"
+    "@code-dot-org/dance-party": "npm:2.0.3"
     "@code-dot-org/fonts": "portal:../frontend/packages/fonts/"
     "@code-dot-org/johnny-five": "npm:2.1.0-cdo.3"
     "@code-dot-org/js-interpreter": "npm:1.3.13"
@@ -11045,7 +11059,7 @@ __metadata:
     "@code-dot-org/p5.play": "npm:1.3.21-cdo"
     "@code-dot-org/piskel": "npm:0.13.0-cdo.13"
     "@code-dot-org/redactable-markdown": "npm:^0.10.0"
-    "@code-dot-org/remark-plugins": "npm:^2.0.0"
+    "@code-dot-org/remark-plugins": "npm:^2.0.1"
     "@codemirror/autocomplete": "npm:^6.18.6"
     "@codemirror/commands": "npm:^6.8.0"
     "@codemirror/lang-css": "npm:^6.3.1"
@@ -11076,6 +11090,7 @@ __metadata:
     "@mui/material": "npm:^7.3.2"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.11"
     "@pyodide/webpack-plugin": "npm:^1.4.0"
+    "@rails/actioncable": "npm:^8.0.201"
     "@react-bootstrap/pagination": "npm:^1.0.0"
     "@react-pdf/renderer": "npm:3.4.4"
     "@reduxjs/toolkit": "npm:^1.9.3"
@@ -11143,6 +11158,7 @@ __metadata:
     classnames: "npm:^2.3.2"
     codemirror: "npm:5.5"
     codemirror-spell-checker: "npm:^1.1.2"
+    concurrently: "npm:^9.2.1"
     copy-webpack-plugin: "npm:^9.0.1"
     css-loader: "npm:^6.2.0"
     dapjs: "npm:^2.3.0"
@@ -11328,6 +11344,8 @@ __metadata:
     survey-react: "npm:^1.9.28"
     swiper: "npm:^11.0.5"
     terser-webpack-plugin: "npm:^5.3.10"
+    thread-loader: "npm:^4.0.2"
+    time-grunt: "npm:^2.0.0"
     timers-browserify: "npm:^2.0.12"
     tone: "npm:14.7.77"
     ts-jest: "npm:^29.1.2"
@@ -11942,6 +11960,16 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"chalk@npm:4.1.2, chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.2, chalk@npm:~4.1.0":
+  version: 4.1.2
+  resolution: "chalk@npm:4.1.2"
+  dependencies:
+    ansi-styles: "npm:^4.1.0"
+    supports-color: "npm:^7.1.0"
+  checksum: 10/cb3f3e594913d63b1814d7ca7c9bafbf895f75fbf93b92991980610dfd7b48500af4e3a5d4e3a8f337990a96b168d7eb84ee55efdce965e2ee8efc20f8c8f139
+  languageName: node
+  linkType: hard
+
 "chalk@npm:^1.0.0, chalk@npm:^1.1.1, chalk@npm:^1.1.3":
   version: 1.1.3
   resolution: "chalk@npm:1.1.3"
@@ -11973,16 +12001,6 @@ canvg@gabelerner/canvg:
     ansi-styles: "npm:^4.1.0"
     supports-color: "npm:^7.1.0"
   checksum: 10/37f90b31fd655fb49c2bd8e2a68aebefddd64522655d001ef417e6f955def0ed9110a867ffc878a533f2dafea5f2032433a37c8a7614969baa7f8a1cd424ddfc
-  languageName: node
-  linkType: hard
-
-"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.2, chalk@npm:~4.1.0":
-  version: 4.1.2
-  resolution: "chalk@npm:4.1.2"
-  dependencies:
-    ansi-styles: "npm:^4.1.0"
-    supports-color: "npm:^7.1.0"
-  checksum: 10/cb3f3e594913d63b1814d7ca7c9bafbf895f75fbf93b92991980610dfd7b48500af4e3a5d4e3a8f337990a96b168d7eb84ee55efdce965e2ee8efc20f8c8f139
   languageName: node
   linkType: hard
 
@@ -12639,6 +12657,23 @@ canvg@gabelerner/canvg:
     readable-stream: "npm:^2.2.2"
     typedarray: "npm:^0.0.6"
   checksum: 10/71db903c84fc073ca35a274074e8d26c4330713d299f8623e993c448c1f6bf8b967806dd1d1a7b0f8add6f15ab1af7435df21fe79b4fe7efd78420c89e054e28
+  languageName: node
+  linkType: hard
+
+"concurrently@npm:^9.2.1":
+  version: 9.2.1
+  resolution: "concurrently@npm:9.2.1"
+  dependencies:
+    chalk: "npm:4.1.2"
+    rxjs: "npm:7.8.2"
+    shell-quote: "npm:1.8.3"
+    supports-color: "npm:8.1.1"
+    tree-kill: "npm:1.2.2"
+    yargs: "npm:17.7.2"
+  bin:
+    conc: dist/bin/concurrently.js
+    concurrently: dist/bin/concurrently.js
+  checksum: 10/2a6b1acbcdbeb478926b80fd81d0b7e075fa16d78a76ceb43f0478b8aeea1c70781379be2f7d6a2528e51fac48ce4ebb686ae2328e4b35e0b1d17234f121c700
   languageName: node
   linkType: hard
 
@@ -13450,6 +13485,15 @@ canvg@gabelerner/canvg:
   version: 0.1.4
   resolution: "date-now@npm:0.1.4"
   checksum: 10/7f4762ce64c3535cb004d8f8517dae23b57fed221ffd661ef7db0142dc639a66e95700da10e98b9225d86dd2655d81a3d7bc2186adcb09a6a8e13647265a621d
+  languageName: node
+  linkType: hard
+
+"date-time@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "date-time@npm:1.1.0"
+  dependencies:
+    time-zone: "npm:^0.1.0"
+  checksum: 10/17f3ba3f46203ba73f20f6272edf25884866af200399a0469785715b292b462ab9f78bb52d5515db6e6f50f798b89bdb568613fa9736341665b5c43b795a1aab
   languageName: node
   linkType: hard
 
@@ -16199,7 +16243,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"figures@npm:^1.0.1":
+"figures@npm:^1.0.0, figures@npm:^1.0.1":
   version: 1.7.0
   resolution: "figures@npm:1.7.0"
   dependencies:
@@ -18109,7 +18153,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"hooker@npm:~0.2.3":
+"hooker@npm:^0.2.3, hooker@npm:~0.2.3":
   version: 0.2.3
   resolution: "hooker@npm:0.2.3"
   checksum: 10/ff4867b3665c5629ba480d70a0cfff9e94cf9eceb43a458b5c3978749b4959c7557ef1db9716a5120c07b028a29f83ea301e83df3745406ff95d6ae4a2c248d1
@@ -19125,6 +19169,13 @@ canvg@gabelerner/canvg:
   dependencies:
     call-bind: "npm:^1.0.2"
   checksum: 10/1b8e9e1bf2075e862315ef9d38ce6d39c43ca9d81d46f73b34473506992f4b0fbaadb47ec9b420a5e76afe3f564d9f1f0d9b552ef272cc2395e0f21d743c9c29
+  languageName: node
+  linkType: hard
+
+"is-finite@npm:^1.0.1":
+  version: 1.1.0
+  resolution: "is-finite@npm:1.1.0"
+  checksum: 10/532b97ed3d03e04c6bd203984d9e4ba3c0c390efee492bad5d1d1cd1802a68ab27adbd3ef6382f6312bed6c8bb1bd3e325ea79a8dc8fe080ed7a06f5f97b93e7
   languageName: node
   linkType: hard
 
@@ -20601,6 +20652,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"json-parse-better-errors@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "json-parse-better-errors@npm:1.0.2"
+  checksum: 10/5553232045359b767b0f2039a6777fede1a8d7dca1a0ffb1f9ef73a7519489ae7f566b2e040f2b4c38edb8e35e37ae07af7f0a52420902f869ee0dbf5dc6c784
+  languageName: node
+  linkType: hard
+
 "json-parse-even-better-errors@npm:^2.3.0, json-parse-even-better-errors@npm:^2.3.1":
   version: 2.3.1
   resolution: "json-parse-even-better-errors@npm:2.3.1"
@@ -21040,6 +21098,13 @@ canvg@gabelerner/canvg:
   peerDependencies:
     react: ^15.0.0 || ^16.0.0
   checksum: 10/53436e1c2893ebad990c75af680634def93885c3dced7ceacdfdeaef070e3935399c9ef77d7fa424797745ed02251e9620615b07507df48c757eba06c25f4b42
+  languageName: node
+  linkType: hard
+
+"loader-runner@npm:^4.1.0":
+  version: 4.3.1
+  resolution: "loader-runner@npm:4.3.1"
+  checksum: 10/d77127497c3f91fdba351e3e91156034e6e590e9f050b40df6c38ac16c54b5c903f7e2e141e09fefd046ee96b26fb50773c695ebc0aa205a4918683b124b04ba
   languageName: node
   linkType: hard
 
@@ -23548,6 +23613,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"parse-ms@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "parse-ms@npm:1.0.1"
+  checksum: 10/bbf0feaaead1fd6c2b8f0c0651566449e9f7674c7de46f8be9e07ab1dcbbc20c1a77c9e17f16ffd60bbf82fb9872d7148fdc9a35810736f5b868dbafbf98e6ed
+  languageName: node
+  linkType: hard
+
 "parse-passwd@npm:^1.0.0":
   version: 1.0.0
   resolution: "parse-passwd@npm:1.0.0"
@@ -23961,6 +24033,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"plur@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "plur@npm:1.0.0"
+  checksum: 10/bd8725178b2db5a708293c072631c84a33299dece6e5041835f874064e51c515d201905408c780e48df54d960d32bc0ac2e9e4cfe6d756ec4fff29ba5adfbf6c
+  languageName: node
+  linkType: hard
+
 "pngjs@npm:^4.0.1":
   version: 4.0.1
   resolution: "pngjs@npm:4.0.1"
@@ -24286,6 +24365,17 @@ canvg@gabelerner/canvg:
   version: 1.0.3
   resolution: "pretty-hrtime@npm:1.0.3"
   checksum: 10/0a462e88a0a3fd3320288fd8307f488974326ae8e13eea8c27f590f8ee767ccb59cf35bcae1cadff241cd8b72f3e373fc76ff1be95243649899bf8c816874af9
+  languageName: node
+  linkType: hard
+
+"pretty-ms@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "pretty-ms@npm:2.1.0"
+  dependencies:
+    is-finite: "npm:^1.0.1"
+    parse-ms: "npm:^1.0.0"
+    plur: "npm:^1.0.0"
+  checksum: 10/484d78f28a10c41cabad115dc1a4866567225d448d0945b67615a4338154f82bbe9e7dd745c75698bb765819c7ba2ff06fd2f5de7b2b91fb4b4c12013843620a
   languageName: node
   linkType: hard
 
@@ -27098,6 +27188,15 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"rxjs@npm:7.8.2":
+  version: 7.8.2
+  resolution: "rxjs@npm:7.8.2"
+  dependencies:
+    tslib: "npm:^2.1.0"
+  checksum: 10/03dff09191356b2b87d94fbc1e97c4e9eb3c09d4452399dddd451b09c2f1ba8d56925a40af114282d7bc0c6fe7514a2236ca09f903cf70e4bbf156650dddb49d
+  languageName: node
+  linkType: hard
+
 "safe-array-concat@npm:^1.0.1":
   version: 1.0.1
   resolution: "safe-array-concat@npm:1.0.1"
@@ -27658,6 +27757,13 @@ canvg@gabelerner/canvg:
   version: 3.0.0
   resolution: "shebang-regex@npm:3.0.0"
   checksum: 10/1a2bcae50de99034fcd92ad4212d8e01eedf52c7ec7830eedcf886622804fe36884278f2be8be0ea5fde3fd1c23911643a4e0f726c8685b61871c8908af01222
+  languageName: node
+  linkType: hard
+
+"shell-quote@npm:1.8.3":
+  version: 1.8.3
+  resolution: "shell-quote@npm:1.8.3"
+  checksum: 10/5473e354637c2bd698911224129c9a8961697486cff1fb221f234d71c153fc377674029b0223d1d3c953a68d451d79366abfe53d1a0b46ee1f28eb9ade928f4c
   languageName: node
   linkType: hard
 
@@ -28876,6 +28982,15 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"supports-color@npm:8.1.1, supports-color@npm:^8.0.0, supports-color@npm:^8.1.1":
+  version: 8.1.1
+  resolution: "supports-color@npm:8.1.1"
+  dependencies:
+    has-flag: "npm:^4.0.0"
+  checksum: 10/157b534df88e39c5518c5e78c35580c1eca848d7dbaf31bbe06cdfc048e22c7ff1a9d046ae17b25691128f631a51d9ec373c1b740c12ae4f0de6e292037e4282
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^2.0.0":
   version: 2.0.0
   resolution: "supports-color@npm:2.0.0"
@@ -28907,15 +29022,6 @@ canvg@gabelerner/canvg:
   dependencies:
     has-flag: "npm:^4.0.0"
   checksum: 10/c8bb7afd564e3b26b50ca6ee47572c217526a1389fe018d00345856d4a9b08ffbd61fadaf283a87368d94c3dcdb8f5ffe2650a5a65863e21ad2730ca0f05210a
-  languageName: node
-  linkType: hard
-
-"supports-color@npm:^8.0.0, supports-color@npm:^8.1.1":
-  version: 8.1.1
-  resolution: "supports-color@npm:8.1.1"
-  dependencies:
-    has-flag: "npm:^4.0.0"
-  checksum: 10/157b534df88e39c5518c5e78c35580c1eca848d7dbaf31bbe06cdfc048e22c7ff1a9d046ae17b25691128f631a51d9ec373c1b740c12ae4f0de6e292037e4282
   languageName: node
   linkType: hard
 
@@ -29184,6 +29290,20 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"thread-loader@npm:^4.0.2":
+  version: 4.0.4
+  resolution: "thread-loader@npm:4.0.4"
+  dependencies:
+    json-parse-better-errors: "npm:^1.0.2"
+    loader-runner: "npm:^4.1.0"
+    neo-async: "npm:^2.6.2"
+    schema-utils: "npm:^4.2.0"
+  peerDependencies:
+    webpack: ^5.0.0
+  checksum: 10/268fdc2aa836a414f0af2213c5dd743efe8b3fae6a60942a086505937648c4e8c26ec88c27538e42afc629b1b5f9d0a622fc1b09b8633b288841a9ce3921ccec
+  languageName: node
+  linkType: hard
+
 "through2@npm:^2.0.3":
   version: 2.0.5
   resolution: "through2@npm:2.0.5"
@@ -29208,6 +29328,28 @@ canvg@gabelerner/canvg:
   version: 1.1.0
   resolution: "thunky@npm:1.1.0"
   checksum: 10/825e3bd07ab3c9fd6f753c457a60957c628cacba5dd0656fd93b037c445e2828b43cf0805a9f2b16b0c5f5a10fd561206271acddb568df4f867f0aea0eb2772f
+  languageName: node
+  linkType: hard
+
+"time-grunt@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "time-grunt@npm:2.0.0"
+  dependencies:
+    chalk: "npm:^1.0.0"
+    date-time: "npm:^1.1.0"
+    figures: "npm:^1.0.0"
+    hooker: "npm:^0.2.3"
+    number-is-nan: "npm:^1.0.0"
+    pretty-ms: "npm:^2.1.0"
+    text-table: "npm:^0.2.0"
+  checksum: 10/30019d8309747e79aa30224744f3d25d78c0918fdca21e95e36d29ebf717241c772d4b134ed42496a3b7fe34ccd6991804a01788aa301f797154be4916f1f009
+  languageName: node
+  linkType: hard
+
+"time-zone@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "time-zone@npm:0.1.0"
+  checksum: 10/6866477c28defd0dd16d4665e4f2bc35c211b9c5a7756fcdb941184577f51a427d9bae13a2cd72dc26531aa7a5086933d6e7f332688b362aa879d2ff3913fcad
   languageName: node
   linkType: hard
 
@@ -29543,6 +29685,15 @@ canvg@gabelerner/canvg:
   version: 0.0.3
   resolution: "tr46@npm:0.0.3"
   checksum: 10/8f1f5aa6cb232f9e1bdc86f485f916b7aa38caee8a778b378ffec0b70d9307873f253f5cbadbe2955ece2ac5c83d0dc14a77513166ccd0a0c7fe197e21396695
+  languageName: node
+  linkType: hard
+
+"tree-kill@npm:1.2.2":
+  version: 1.2.2
+  resolution: "tree-kill@npm:1.2.2"
+  bin:
+    tree-kill: cli.js
+  checksum: 10/49117f5f410d19c84b0464d29afb9642c863bc5ba40fcb9a245d474c6d5cc64d1b177a6e6713129eb346b40aebb9d4631d967517f9fbe8251c35b21b13cd96c7
   languageName: node
   linkType: hard
 
@@ -31926,6 +32077,21 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"yargs@npm:17.7.2, yargs@npm:^17.3.1":
+  version: 17.7.2
+  resolution: "yargs@npm:17.7.2"
+  dependencies:
+    cliui: "npm:^8.0.1"
+    escalade: "npm:^3.1.1"
+    get-caller-file: "npm:^2.0.5"
+    require-directory: "npm:^2.1.1"
+    string-width: "npm:^4.2.3"
+    y18n: "npm:^5.0.5"
+    yargs-parser: "npm:^21.1.1"
+  checksum: 10/abb3e37678d6e38ea85485ed86ebe0d1e3464c640d7d9069805ea0da12f69d5a32df8e5625e370f9c96dd1c2dc088ab2d0a4dd32af18222ef3c4224a19471576
+  languageName: node
+  linkType: hard
+
 "yargs@npm:^16.0.3, yargs@npm:^16.1.1, yargs@npm:^16.2.0":
   version: 16.2.0
   resolution: "yargs@npm:16.2.0"
@@ -31938,21 +32104,6 @@ canvg@gabelerner/canvg:
     y18n: "npm:^5.0.5"
     yargs-parser: "npm:^20.2.2"
   checksum: 10/807fa21211d2117135d557f95fcd3c3d390530cda2eca0c840f1d95f0f40209dcfeb5ec18c785a1f3425896e623e3b2681e8bb7b6600060eda1c3f4804e7957e
-  languageName: node
-  linkType: hard
-
-"yargs@npm:^17.3.1":
-  version: 17.7.2
-  resolution: "yargs@npm:17.7.2"
-  dependencies:
-    cliui: "npm:^8.0.1"
-    escalade: "npm:^3.1.1"
-    get-caller-file: "npm:^2.0.5"
-    require-directory: "npm:^2.1.1"
-    string-width: "npm:^4.2.3"
-    y18n: "npm:^5.0.5"
-    yargs-parser: "npm:^21.1.1"
-  checksum: 10/abb3e37678d6e38ea85485ed86ebe0d1e3464c640d7d9069805ea0da12f69d5a32df8e5625e370f9c96dd1c2dc088ab2d0a4dd32af18222ef3c4224a19471576
   languageName: node
   linkType: hard
 

@@ -1,0 +1,165 @@
+  #
+  # Our primary dashboard Redis instance, accessed as CDO.redis_url throughout the Dashboard.
+  #
+  # Used by session storage, geocoder, actioncable, etc.
+  #
+  RedisSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      Description: Redis Subnet Group
+      SubnetIds: <%= subnets.to_json %>
+  RedisGroup:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupDescription: <%="Redis Replication Group (CDO.redis_url for #{stack_name})" %>
+      # 3 nodes of cache.r7g.2xlarge will cost ($637/mo * 3) = ~$1,900/month
+      CacheNodeType: <%= rack_env?(:production) ? 'cache.r7g.2xlarge' : 'cache.t4g.micro' -%>
+
+      Engine: Redis
+      EngineVersion: 7.1
+
+      ClusterMode: disabled
+<% num_cache_clusters = 3 # 1 primary and 2 replicas -%>
+      NumCacheClusters: <%= num_cache_clusters %>
+      AutomaticFailoverEnabled: true
+      MultiAZEnabled: true
+      TransitEncryptionEnabled: true
+      AtRestEncryptionEnabled: true
+
+      SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
+      CacheSubnetGroupName: !Ref RedisSubnetGroup
+  # CloudWatch Alarms for Redis
+  #
+  # Based on:
+  # https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheMetrics.WhichShouldIMonitor.html
+  # and
+  # https://aws.amazon.com/blogs/database/monitoring-best-practices-with-amazon-elasticache-for-redis-using-amazon-cloudwatch/
+  RedisCPUUsageAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: <%="Redis CPU Usage Too High (CDO.redis_url for #{stack_name})" %>
+      AlarmDescription: AWS Documentation recommends maintaining
+        EngineCPUUtilization below 90%. Note that we use EngineCPUUtilization
+        rather than CPUUtilization because the cache.r7g.xlarge nodes we're
+        using have 4vCPUs
+      ActionsEnabled: true
+      AlarmActions:
+        - !Ref InfraUrgent
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 3
+      Threshold: 90
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: missing
+      Metrics:
+        - Id: max_cpu
+          Label: Maximum EngineCPUUtilization Among Redis Nodes
+          ReturnData: true
+          Expression: MAX(METRICS())
+<% (1..num_cache_clusters).each do |cluster_id| -%>
+        - Id: <%= "cpu_#{cluster_id}" %>
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/ElastiCache
+              MetricName: EngineCPUUtilization
+              Dimensions:
+                - Name: CacheClusterId
+                  Value: !Sub "${RedisGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
+            Period: 60
+            Stat: Maximum
+<% end -%>
+  RedisEvictionsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: <%="Redis Evictions (CDO.redis_url for #{stack_name})" %>
+      AlarmDescription: We're seeing evictions from Redis. We
+        expect to remain under 100% usage in this cluster; evictions are a sign
+        that we have exceeded that. A low number of evictions should not have a
+        user-facing impact, since we intentionally store session data for
+        longer than it is needed, but any amount of evictions represents an
+        early warning sign that we should scale this cluster up.
+      ActionsEnabled: true
+      AlarmActions:
+        - !Ref InfraLowPriority
+      MetricName: Evictions
+      Namespace: AWS/ElastiCache
+      Statistic: Maximum
+      Dimensions:
+        - Name: CacheClusterId
+          Value: !Sub "${RedisGroup}-001"
+      Period: 300
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 3
+      Threshold: 0
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: missing
+  RedisNetworkBytesInAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: <%="Redis Incoming Network Traffic Too High (CDO.redis_url for #{stack_name})" %>
+      AlarmDescription:
+        The cache.r7g.xlarge nodes we use have a guaranteed performance of "Up
+        to 12.5 Gigabit"; because that includes both reads and writes and
+        because we generally read more than we write, set the write limit to
+        1/4 of the total.
+      ActionsEnabled: true
+      AlarmActions:
+        - !Ref InfraUrgent
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 3
+      Threshold: 3125000000
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: missing
+      Metrics:
+        - Id: max_networkin
+          Label: Maximum Incoming Network Traffic Among Redis Nodes
+          ReturnData: true
+          Expression: MAX(METRICS())
+<% (1..num_cache_clusters).each do |cluster_id| -%>
+        - Id: <%= "networkin_#{cluster_id}" %>
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/ElastiCache
+              MetricName: NetworkBytesIn
+              Dimensions:
+                - Name: CacheClusterId
+                  Value: !Sub "${RedisGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
+            Period: 60
+            Stat: Maximum
+<% end -%>
+  RedisNetworkBytesOutAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: <%="Redis Outgoing Network Traffic Too High (CDO.redis_url for #{stack_name})" %>
+      AlarmDescription:
+        The cache.r7g.xlarge nodes we use have a guaranteed performance of "Up
+        to 12.5 Gigabit"; because that includes both reads and writes and
+        because we generally read more than we write, set the read limit to 1/2
+        of the total.
+      ActionsEnabled: true
+      AlarmActions:
+        - !Ref InfraUrgent
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 3
+      Threshold: 6250000000
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: missing
+      Metrics:
+        - Id: max_networkout
+          Label: Maximum Outgoing Network Traffic Among Redis Nodes
+          ReturnData: true
+          Expression: MAX(METRICS())
+<% (1..num_cache_clusters).each do |cluster_id| -%>
+        - Id: <%= "networkout_#{cluster_id}" %>
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/ElastiCache
+              MetricName: NetworkBytesOut
+              Dimensions:
+                - Name: CacheClusterId
+                  Value: !Sub "${RedisGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
+            Period: 60
+            Stat: Maximum
+<% end -%>

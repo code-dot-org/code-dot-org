@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
@@ -12,6 +12,8 @@ import {
   AnalyticsProperties,
 } from '../types';
 
+import UploadButton, {UploadButtonProps} from './assets/UploadButton';
+
 import moduleStyles from './UserChatMessageEditor.module.scss';
 
 interface UserChatMessageEditorProps {
@@ -22,6 +24,13 @@ interface UserChatMessageEditorProps {
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
   responseCallback?: (response: string) => string;
+  currentLevelId?: string | null;
+
+  /** UploadButton props */
+  uploadDisabled?: UploadButtonProps['isDisabled'];
+  levelName?: UploadButtonProps['levelName'];
+  buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
+  hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
 }
 
 /**
@@ -37,7 +46,13 @@ const UserChatMessageEditor: React.FunctionComponent<
   hiddenContextCallback,
   multimodalAvailable,
   responseCallback,
+  currentLevelId,
+  levelName,
+  hasStarterAssets,
+  buildAssetUrl,
+  uploadDisabled,
 }) => {
+  const [userMessage, setUserMessage] = useState<string>('');
   const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
@@ -53,6 +68,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   const userAddedSelectionContext = useAppSelector(
     state => state.aichat.userAddedSelectionContext
   );
+
   const dispatch = useAppDispatch();
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -63,13 +79,15 @@ const UserChatMessageEditor: React.FunctionComponent<
     uploadsPending ||
     chatDisabled;
 
+  const clearUserMessage = () => setUserMessage('');
+
   const handleSubmit = useCallback(
-    async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
+    async (message: string, analyticsProperties?: AnalyticsProperties) => {
       if (!disabled) {
         const hiddenContext = await hiddenContextCallback?.();
         dispatch(
           submitChatContents({
-            text: userMessage,
+            text: message,
             modelParameters,
             clientType,
             hiddenContext,
@@ -85,6 +103,7 @@ const UserChatMessageEditor: React.FunctionComponent<
             responseCallback,
           })
         );
+        clearUserMessage();
       }
     },
     [
@@ -99,6 +118,10 @@ const UserChatMessageEditor: React.FunctionComponent<
       responseCallback,
     ]
   );
+
+  useEffect(() => {
+    clearUserMessage();
+  }, [currentLevelId]);
 
   useEffect(() => {
     if (!disabled) {
@@ -118,11 +141,24 @@ const UserChatMessageEditor: React.FunctionComponent<
         </div>
       )}
       <UserMessageEditor
+        userMessage={userMessage}
+        onChange={setUserMessage}
         onSubmit={handleSubmit}
         disabled={disabled}
         editorContainerClassName={editorContainerClassName}
         ref={inputRef}
-      />
+      >
+        {multimodalAvailable && buildAssetUrl && levelName && (
+          <div className={moduleStyles.buttonRow}>
+            <UploadButton
+              isDisabled={!!uploadDisabled || disabled}
+              levelName={levelName}
+              hasStarterAssets={hasStarterAssets}
+              buildAssetUrl={buildAssetUrl}
+            />
+          </div>
+        )}
+      </UserMessageEditor>
     </>
   );
 };

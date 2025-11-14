@@ -256,15 +256,8 @@ FactoryBot.define do
           authorized_teacher.save
         end
       end
-      factory :ai_tutor_access do
-        after(:create) do |ai_tutor_access|
-          ai_tutor_access.permission = UserPermission::AI_TUTOR_ACCESS
-          ai_tutor_access.save
-        end
-      end
       factory :ai_iteration_tools_user do
         after(:create) do |ai_iteration_tools_user|
-          ai_iteration_tools_user.permission = UserPermission::AI_TUTOR_ACCESS
           ai_iteration_tools_user.permission = UserPermission::LEVELBUILDER
           ai_iteration_tools_user.save
         end

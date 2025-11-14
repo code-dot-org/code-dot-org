@@ -2,11 +2,61 @@
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
+
+  &.share {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-neutral-black-fixed);
+
+    .visualizationColumn {
+      box-shadow: 3px 3px 6px black;
+      border: 1px solid var(--borders-neutral-primary);
+      border-radius: 4px;
+      gap: 8px;
+      padding: 16px 24px;
+      background-color: var(--background-neutral-secondary);
+      max-width: min(400px, 80%);
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        > h3 {
+          margin: 0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        > img {
+          height: 70px;
+        }
+      }
+
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+
+    .controlButton {
+      flex: 1;
+    }
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex: 1;
   flex-direction: row;
+  position: relative;
 }
 
 .visualizationColumn {
   margin: 2px 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .visualization {
@@ -14,6 +64,7 @@
   background-color: var(--background-neutral-secondary);
   position: relative;
   border: 1px solid var(--borders-neutral-primary);
+  box-sizing: border-box;
 }
 
 .workArea {
@@ -30,11 +81,11 @@
 .visualizationArea {
   flex: 0;
   background-color: var(--background-neutral-primary);
-  
+
   &.jumbo {
     flex: initial;
-    width: min(50vw, calc(100vh - 240px));
-    
+    width: min(33vw, calc(100vh - 250px));
+
     canvas {
       width: 100% !important;
       height: 100% !important;
@@ -57,6 +108,7 @@
 }
 
 .controlsContainer {
+  display: flex;
   margin: 5px 0;
 }
 
@@ -86,4 +138,26 @@
     width: 100px;
     height: 100px;
   }
+}
+
+.timelineContainer {
+  height: 150px;
+}
+
+.musicProjectOverlay {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  left: 4px;
+  border-radius: 4px;
+  background-color: color-mix(
+    in srgb,
+    var(--background-neutral-tertiary),
+    transparent 50%
+  );
+}
+
+.actionBar {
+  display: flex;
+  justify-content: space-between;
 }

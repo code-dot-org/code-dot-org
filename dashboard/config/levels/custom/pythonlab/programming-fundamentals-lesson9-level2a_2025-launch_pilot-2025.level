@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:46:56.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\n1. Read the existing code -- notice that the `Painter` doesn't turn when it should.\r\n\r\n2. Modify the `if` statement that checks whether the `Painter` `can_move(\"south\")`\r\n\r\n3. Run the program to see if the `Painter` turns right through the opening in the wall.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -393,9 +394,12 @@
       "active": false,
       "open": false,
       "type": "validation"
-    }
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:56.316+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson9-level2a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson9-level2a_2025-launch_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:56.316+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson9-level2a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson9-level2a_2025-launch_2025\"},{\"changed_at\":\"2025-10-27 15:58:19 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>

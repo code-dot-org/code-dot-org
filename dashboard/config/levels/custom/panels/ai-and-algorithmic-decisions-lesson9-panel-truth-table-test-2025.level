@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-26T20:34:52.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Truth Table\n\nA **truth table** shows all possible combinations of true and false values for one or more conditions and the result of each combination.\n\n| A | B | A && B | A &#124;&#124; B |\n|:---:|:---:|:---:|:---:|\n| T | T | T | T |\n| T | F | F | T |\n| F | T | F | T |\n| F | F | F | F |\n",
+        "imageUrl": "https://images.code.org/edb2e92136a3e5b8e71bcf7a105557d6-Screenshot 2025-10-30 at 11.19.57 AM.png",
+        "key": "ai-and-algorithmic-decisions-lesson9-panel-truth-table-test-2025-a1210269-220f-4737-adc0-8feeffbae54e",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-26T20:34:52.473+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson8-panel-nested-cond-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson8-panel-nested-cond-test-2025\"},{\"changed_at\":\"2025-10-26 20:35:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-26 20:40:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 15:28:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 16:37:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 16:38:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-30 17:21:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

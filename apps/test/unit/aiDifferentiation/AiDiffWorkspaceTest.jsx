@@ -11,6 +11,9 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiInteractionStatus as Status,
@@ -35,6 +38,7 @@ const defaultProps = {
   },
   scriptName: 'test_lesson',
   curriculumCourses: [],
+  personalizationData: {},
 };
 
 const now = new Date();
@@ -129,6 +133,7 @@ describe('AiDiffWorkspace', () => {
 
     registerReducers({
       currentUser,
+      teacherSections,
     });
     store.dispatch(
       setInitialData({
@@ -136,6 +141,7 @@ describe('AiDiffWorkspace', () => {
         name: 'test_user',
       })
     );
+    store.dispatch(setSections([]));
 
     render(
       <Provider store={store}>

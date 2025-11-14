@@ -1,7 +1,12 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  mount ActionCable.server => '/cable'
+  get 'chatter/index'
+
   draw :marketing
+
+  get "app", to: "app#index"
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -32,7 +37,10 @@ Dashboard::Application.routes.draw do
 
   constraints host: CDO.preview_codeprojects_hostname do
     get '/', to: 'codeprojects_preview#show'
+    # Custom 404 page for codeprojects preview
+    get '*path', to: 'codeprojects_preview#not_found'
   end
+
   # This matches any host that is not the codeprojects hostname
   constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
@@ -96,8 +104,6 @@ Dashboard::Application.routes.draw do
 
     get "/home", to: "home#home"
 
-    get "/congrats", to: "congrats#index"
-
     get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
     get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
@@ -113,6 +119,7 @@ Dashboard::Application.routes.draw do
 
     resources :puzzle_ratings, only: [:create]
     resources :callouts
+    resources :congrats, only: %i[index show], param: :course_name
     resources :videos do
       collection do
         get 'test'
@@ -737,6 +744,7 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+    get '/lti/v1/integrations', to: redirect('/lti/v1/integrations/new')
 
     namespace :lti do
       namespace :v1 do
@@ -1151,6 +1159,15 @@ Dashboard::Application.routes.draw do
     end
 
     resources :feedback, controller: 'teacher_feedbacks'
+
+    # AI Lesson Summaries routes
+    resources :ai_lesson_summaries, only: [:show] do
+      collection do
+        get :show # GET /ai_lesson_summaries/show?lesson_id=2
+        get :perform_ai_lesson_summaries_by_unit, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summaries_by_unit # GET ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=1
+        get :perform_ai_lesson_summary_by_lesson, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summary_by_lesson # GET ai_lesson_summaries/perform_ai_lesson_summary_by_lesson?lesson_id=1
+      end
+    end
 
     get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
     get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'

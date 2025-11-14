@@ -14,11 +14,11 @@ module User::AssignedCoursesAndScripts
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_participant
-    visible_scripts.filter_map(&:get_original_unit_group).concat(section_courses).uniq
-  end
-
-  def visible_scripts
-    scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
+    unit_groups = user_scripts.map do |us|
+      us.unit_group || us.script.original_unit_group
+    end.compact.uniq
+    unit_groups.filter!(&:launched?)
+    unit_groups.concat(section_courses).uniq
   end
 
   def assigned_script?(script)
@@ -169,46 +169,10 @@ module User::AssignedCoursesAndScripts
     user_course_data + user_script_data
   end
 
-  # Return a collection of courses and scripts for the user.
-  # First in the list will be courses enrolled in by the user's sections.
-  # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
-  # @param exclude_primary_script [boolean]
-  # Example: true when the primary_script is being used for a TopCourse on /home
-  # @return [Array{CourseData, ScriptData}] an array of hashes of script and
-  # course data
-  # TODO: TEACH-1528 Update this to use a new UserCourses table. For now, this returns a /s/ url for each unit, displayed
-  # on the student home page course tiles
-  def recent_student_courses_and_units(exclude_primary_script)
-    primary_script_id = Queries::ScriptActivity.primary_student_unit(self).try(:id)
-
-    # Filter out user_scripts that are already covered by a course
-    unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
-
-    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
-      select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
-
-    user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
-
-    user_script_data = user_student_scripts.filter_map do |user_script|
-      # Skip this script if we are excluding the primary script and this is the
-      # primary script.
-      if exclude_primary_script && user_script[:script_id] == primary_script_id
-        nil
-      else
-        script_id = user_script[:script_id]
-        script = Unit.get_from_cache(script_id)
-        {
-          name: script[:name],
-          title: data_t_suffix('script.name', script[:name], 'title'),
-          description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
-          link: script_path(script),
-        }
-      end
-    end
-
-    user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
-
-    user_course_data + user_script_data
+  # Return a collection of courses for the user.
+  # @return [Array{CourseData}] an array of hashes of course data
+  def recent_student_courses
+    courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
   end
 
   def pl_units_started

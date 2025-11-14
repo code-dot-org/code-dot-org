@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 
 import {BLOCKLY_THEME, Themes} from '@cdo/apps/blockly/constants';
 import {getBaseName, setWorkspaceTheme} from '@cdo/apps/blockly/utils';
-import {Setting} from '@cdo/apps/lab2/views/components/Settings/SettingsDropdown';
+import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/types';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {commonI18n} from '@cdo/apps/types/locale';
 

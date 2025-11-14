@@ -36,7 +36,7 @@ Parameters:
   WorkerInstanceType:
     Type: String
     Description: EC2 Instance Type that Autoscaler provisions to run Builds.
-    Default: m5.xlarge
+    Default: m7i.4xlarge
   WorkerSubnetId:
     Type: AWS::EC2::Subnet::Id
     Description: Existing VPC Subnet Id where ECS EC2 Instances hosting Drone Runner ("worker") containers will be provisioned.
@@ -45,7 +45,7 @@ Parameters:
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/ecs/optimized-ami/amazon-linux/recommended/image_id
   AutoscalerECSAMI:
-    Description: AMI ID
+    Description: AMI ID for ECS Optimized AMI
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id
 Resources:
@@ -156,22 +156,22 @@ Resources:
     Type: AWS::EC2::LaunchTemplate
     Properties:
       LaunchTemplateName: !Sub "DroneMasterLaunchTemplate-${AWS::StackName}"
-      LaunchTemplateData: 
-        IamInstanceProfile: 
+      LaunchTemplateData:
+        IamInstanceProfile:
           Name: ecsInstanceRole
         KeyName: !Sub "winter-dev-${AWS::Region}"
-        SecurityGroupIds: 
+        SecurityGroupIds:
           - !Ref DroneMasterEcsSecurityGroup
         ImageId: !Ref DroneServerECSAMI
         InstanceType: t3.medium
         Monitoring:
           Enabled: true
-        UserData: 
+        UserData:
           Fn::Base64:
-            !Sub 
+            !Sub
               - "#!/bin/bash\necho ECS_CLUSTER=${EcsClusterName} >> /etc/ecs/ecs.config;echo ECS_BACKEND_HOST= >> /etc/ecs/ecs.config;"
               - {EcsClusterName: !Ref DroneMasterECSCluster}
- 
+
   DroneMasterEcsInstanceAsg:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
@@ -203,7 +203,7 @@ Resources:
           Host:
             SourcePath: /var/lib/drone
       ContainerDefinitions:
-        - 
+        -
           Name: drone-master
           Essential: true
           Image: drone/drone:1.9.0
@@ -215,7 +215,7 @@ Resources:
               awslogs-region: !Ref AWS::Region
               awslogs-stream-prefix: ecs
           PortMappings:
-            - 
+            -
               ContainerPort: 80
             -
               ContainerPort: 443
@@ -235,10 +235,10 @@ Resources:
               ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:drone/shared/rpc-secret-etPSzp"
           Environment:
             -
-              Name: DRONE_GITHUB_SERVER 
+              Name: DRONE_GITHUB_SERVER
               Value: https://github.com
             -
-              Name: DRONE_SERVER_HOST 
+              Name: DRONE_SERVER_HOST
               Value: drone.cdn-code.org
             -
               Name: DRONE_SERVER_PROTO
@@ -304,7 +304,7 @@ Resources:
         -
           Name: drone-autoscaler
           Essential: true
-          Image: drone/autoscaler:1.8.2
+          Image: drone/autoscaler:1.13.0
           MemoryReservation: 1024
           LogConfiguration:
             LogDriver: awslogs
@@ -339,6 +339,8 @@ Resources:
             -
               Name: DRONE_SERVER_PROTO
               Value: https
+
+            # BEGIN: Autoscaler Service Configuration
             -
               Name: DRONE_POOL_MIN
               Value: !Ref WorkerPoolMinimum
@@ -352,11 +354,24 @@ Resources:
               Name: DRONE_CAPACITY_BUFFER
               Value: !Ref WorkerCapacityBuffer
             -
+              Name: DRONE_REAPER_ENABLED
+              Value: "true"
+            -
+              Name: DRONE_REAPER_INTERVAL
+              Value: "5m"
+            -
+              Name: DRONE_PINGER_ENABLED
+              Value: "true"
+            -
+              Name: DRONE_PINGER_INTERVAL
+              Value: "5m"
+            -
               Name: DRONE_DEBUG
               Value: true
             -
               Name: DRONE_TRACE
               Value: true
+            # END: Autoscaler Service Configuration
 
             # BEGIN: Settings for the EC2 Instances that Drone Autoscaler provisions.
 
@@ -386,6 +401,9 @@ Resources:
             -
               Name: DRONE_AMAZON_VOLUME_SIZE
               Value: 50
+            -
+              Name: DRONE_AMAZON_TAGS
+              Value: environment:ci
             # END: Settings for the EC2 Instances that Drone Autoscaler provisions.
 
             # BEGIN: Settings for the Drone Runner ("worker"/"agent") executing on the EC2 Instances provisioned by Autoscaler.
@@ -441,6 +459,20 @@ Resources:
       MinSize: 1
       MaxSize: 1
       DesiredCapacity: 1
+    UpdatePolicy:
+      AutoScalingRollingUpdate:
+        MinInstancesInService: 0
+        MaxBatchSize: 1
+        PauseTime: PT5M
+        WaitOnResourceSignals: false
+        SuspendProcesses:
+          - HealthCheck
+          - ReplaceUnhealthy
+          - AZRebalance
+          - AlarmNotification
+          - ScheduledActions
+      AutoScalingReplacingUpdate:
+        WillReplace: true
 
   DroneAutoscalerEcsSecurityGroup:
     Type: AWS::EC2::SecurityGroup

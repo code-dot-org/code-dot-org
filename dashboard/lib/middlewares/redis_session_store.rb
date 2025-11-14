@@ -92,7 +92,50 @@ module Middlewares
     end
   end
 
+  # SESSION_STORE_MIGRATION_DELETE_ME
+  # We are migrating from session_store to redis. Its the same definitions, but with a new
+  # name to reflect that multiple dashboard features will be using the same instance.
+  #
+  # We expect the migration to be complete after November 2025, at which point we can remove this module
+  module MigrateFromOldSessionStoreServer
+    def initialize(*args, **kwargs, &blk)
+      @old_session_store_server = Redis.new(url: CDO.old_session_store_server)
+      super
+    end
+
+    # Checks if there is an existing session in CDO.old_session_store_server, and if
+    # there is, migrates it to our new Redis server before proceeding as normal.
+    def migrate_session_to_new_redis(session_redis_key)
+      # Check for existing session data in CDO.old_session_store_server, we use dump/restore
+      # rather than get/set to 100% preserve the binary serialized format.
+      session_data = @old_session_store_server.dump(session_redis_key)
+      return unless session_data
+
+      # Copy the TTL from CDO.old_session_store_server too:
+      ttl_ms = @old_session_store_server.pttl(session_redis_key)
+      ttl_ms = CDO.dashboard_session_ttl_days.in_milliseconds if ttl_ms < 0
+
+      # Write the session data to our new Redis server:
+      with {|c| c.restore("session:#{session_redis_key}", ttl_ms, session_data, replace: true)}
+
+      Rails.logger.info("Migrated session #{session_redis_key} from Redis instance CDO.old_session_store_server to CDO.redis_url")
+    rescue => exception
+      Rails.logger.error("Error migrating session #{session_redis_key} from Redis instance CDO.old_session_store_server to CDO.redis_url: #{exception.message}")
+    ensure
+      # Delete the session data from CDO.old_session_store_server, even if there was an error,
+      # to prevent repeatedly trying (and failing) to migrate the same session. Worst case,
+      # this user will have to login again.
+      @old_session_store_server.del(session_redis_key)
+    end
+
+    def find_session(req, sid)
+      migrate_session_to_new_redis(sid.private_id) if sid&.private_id
+      super
+    end
+  end
+
   class RedisSessionStore < ActionDispatch::Session::RedisStore
+    prepend MigrateFromOldSessionStoreServer if CDO.old_session_store_server
     prepend UnnecessarySessionWritePrevention
     prepend DeletedSessionPreservation
   end

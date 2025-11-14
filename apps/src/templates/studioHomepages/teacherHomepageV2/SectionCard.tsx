@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading5} from '@code-dot-org/component-library/typography';
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -64,9 +64,13 @@ export const SectionCard: React.FC<SectionCardProps> = ({
             size={'s'}
           />
           <div className={styles.sectionCardHeaderText}>
-            <Heading5 id={`section-card-title-${section.id}`}>
+            <Typography
+              id={`section-card-title-${section.id}`}
+              variant="h5"
+              gutterBottom
+            >
               {section.name}
-            </Heading5>
+            </Typography>
             <JoinLinkCopyButton
               loginType={section.loginType}
               sectionCode={section.code}

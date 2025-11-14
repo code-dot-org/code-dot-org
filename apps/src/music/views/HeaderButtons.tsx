@@ -1,16 +1,14 @@
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Typography from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
 import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
-import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getBaseAssetUrl} from '../appConfig';
@@ -41,7 +39,7 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   }
 
   return (
-    <div className={moduleStyles.currentPack}>
+    <div data-notranslate className={moduleStyles.currentPack}>
       {packImageSrc && (
         <img
           src={packImageSrc}
@@ -125,10 +123,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [hideChaff, dialogControl, analyticsReporter, clearCode]);
 
-  const onClickDocumentation = useCallback(() => {
-    window.open('/docs/ide/music', '_blank');
-  }, []);
-
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog({
@@ -142,53 +136,36 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [dialogControl, skipUrl]);
 
-  const settings = useBlocklySettings();
-
   return (
     <div className={moduleStyles.container} ref={containerRef} tabIndex={-1}>
-      {/* Show static pack info; clickable Start Over button */}
+      {/* Show static pack information. */}
       {!allowPackSelection && packFolder && (
-        <>
-          <CurrentPack packFolder={packFolder} />
-          {/* Start Over Button */}
-          <IconButtonWithTooltip
-            id="start-over"
-            label={musicI18n.startOver()}
-            icon={{iconName: 'refresh', iconStyle: 'solid'}}
-            type="tertiary"
-            color="black"
-            buttonSize="xs"
-            tooltipSize="xs"
-            tooltipDirection="onBottom"
-            hideTooltipTail={true}
-            onClick={onClickStartOver}
-            containerRef={containerRef}
-          />
-        </>
+        <CurrentPack packFolder={packFolder} />
       )}
-      {/* Show clickable pack info with Start Over icon */}
-      {!readOnlyWorkspace && allowPackSelection && (
+      {/* Show Start Over button, possibly with pack information inside it. */}
+      {!readOnlyWorkspace && (
         <>
           <button
             onClick={onClickStartOver}
             type="button"
             id="start-over-button"
-            className={moduleStyles.buttonWithPack}
+            className={classNames(
+              moduleStyles.startOverButton,
+              allowPackSelection &&
+                packFolder &&
+                moduleStyles.startOverButtonWithPack
+            )}
           >
-            {packFolder && <CurrentPack packFolder={packFolder} />}
+            {allowPackSelection && packFolder && (
+              <CurrentPack packFolder={packFolder} />
+            )}
             <FontAwesomeV6Icon iconName="refresh" iconStyle="solid" />
           </button>
         </>
       )}
-      {/* Settings Button */}
-      {!experiments.isEnabledAllowingQueryString(
-        experiments.LAB2_RESOURCE_PANEL
-      ) ? (
-        <SettingsButton settings={settings} />
-      ) : null}
       {!readOnlyWorkspace && (
         <>
-          {/* Undo Button */}
+          {/* Undo button. */}
           <IconButtonWithTooltip
             id="undo"
             label={musicI18n.undo()}
@@ -203,7 +180,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
             onClick={() => onClickUndoRedo('undo')}
             containerRef={containerRef}
           />
-          {/* Redo Button */}
+          {/* Redo button. */}
           <IconButtonWithTooltip
             id="redo"
             label={musicI18n.redo()}
@@ -218,25 +195,9 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
             onClick={() => onClickUndoRedo('redo')}
             containerRef={containerRef}
           />
-          {/* Documentation Button */}
-          {Blockly.showBlockHelp && (
-            <IconButtonWithTooltip
-              id="documentation"
-              label={musicI18n.documentation()}
-              icon={{iconName: 'book', iconStyle: 'solid'}}
-              type="tertiary"
-              color="black"
-              buttonSize="xs"
-              tooltipSize="xs"
-              tooltipDirection="onBottom"
-              hideTooltipTail={true}
-              onClick={onClickDocumentation}
-              containerRef={containerRef}
-            />
-          )}
         </>
       )}
-      {/* Skip to Project Button */}
+      {/* Skip to Project button. */}
       {skipUrl && (
         <Button
           text={commonI18n.skipToProject()}

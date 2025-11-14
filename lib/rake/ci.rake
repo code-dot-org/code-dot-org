@@ -64,6 +64,9 @@ SKIP_PEGASUS_CONTENT = 'skip pegasus content'.freeze
 # that fail. This flag ensures all tests will use SauceLabs for all runs.
 SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 
+# Maximum parallel browsers to use for UI and eyes tests
+PARALLEL_COUNT = 24
+
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_tests do
@@ -72,8 +75,13 @@ namespace :ci do
       next
     end
 
+    target_branch = ENV.fetch('DRONE_TARGET_BRANCH', '')
     if CI::Utils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
+      RakeUtils.rake_stream_output 'test:all'
+    # Always run all unit tests on pull requests against the 'test' branch
+    elsif target_branch == 'test'
+      ChatClient.log "Target branch is #{target_branch.dump}, force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     elsif CI::Utils.tagged?(RUN_APPS_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
@@ -129,7 +137,7 @@ namespace :ci do
           "--local " \
           "--ci " \
           "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
-          "--parallel #{use_saucelabs ? 16 : 8} " \
+          "--parallel #{PARALLEL_COUNT} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
           "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
@@ -143,7 +151,7 @@ namespace :ci do
             "--config Chrome,iPhone " \
             "--local " \
             "--ci " \
-            "--parallel 10 " \
+            "--parallel #{PARALLEL_COUNT} " \
             "--retry_count 1 " \
             "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
             "--with-status-page " \

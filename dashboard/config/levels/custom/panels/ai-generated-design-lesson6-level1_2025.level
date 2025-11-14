@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-23T23:32:11.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "How To: Add Image Context",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# How To: Add Image Context\n\nImages help AI see what you mean. Adding visual context, like a layout, flowchart, or sketch, makes your prompt clearer and your results more accurate.",
+        "imageUrl": "https://images.code.org/41a84d3ffd2a38785562ac41aec9b410-ai-curriculum-societal-impacts.png",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-90f598cf-70ae-4ddf-8788-cdd69b931239"
+      },
+      {
+        "text": "## Step 1:\n\nClick **Add file** and upload a screenshot or photo that shows what you’re working on (for example, your webpage layout or wireframe).",
+        "imageUrl": "https://images.code.org/28a5845720f6b37b9d2975c1efbd74e8-p1.gif",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-fe585fd5-6be2-4d90-84a9-e04d332f1182"
+      },
+      {
+        "text": "## Step 2:\n\nIn the prompt box, describe what’s happening in the image and what you want AI to do. Mention the image directly so it knows to use it as context.\n\n**Example:** *“In the attached screenshot, you can see the brand kit. The button doesn’t match the secondary color. Can you suggest how I should update it to align with the brand kit?”*",
+        "imageUrl": "https://images.code.org/d41e07beb6a74a5c9067897bdbf27ad5-Pasted Graphic 15.png",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-dcaeae89-d30c-404b-b479-06bfe7f8cc6c"
+      },
+      {
+        "text": "## Step 3:\n\nSend your prompt and review how AI uses the image details in its response.",
+        "imageUrl": "https://images.code.org/9aa26b33509e45ae17da470dc7708858-Pasted Graphic 17.png",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-6f5fae24-4402-428b-ba31-5bb8cc8526be"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-23T23:32:11.337+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-onboarding-image-context-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-onboarding-image-context-test-2025\"},{\"changed_at\":\"2025-10-23 23:37:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

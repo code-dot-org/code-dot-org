@@ -37,6 +37,7 @@ interface AiDiffFloatingActionButtonProps {
   canDefaultOpen?: boolean;
 }
 
+export const EXT_COMPONENT_OPEN_FAB_EVENT = 'ExternalComponentOpensFabEvent';
 const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
 const LOCAL_STORAGE_OPENED_KEY = 'AiDiffHasOpenedKey';
 const LOCAL_STORAGE_CLOSED_KEY = 'AiDiffHasClosedKey';
@@ -153,6 +154,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     trySetSessionStorage(SESSION_STORAGE_KEY, (!isOpen).toString());
     updateUnreadNotificationCount();
   };
+
+  // Add listener to open the FAB if an external component sends event to open it
+  document.addEventListener(EXT_COMPONENT_OPEN_FAB_EVENT, handleClick);
 
   return (
     <div id="fab-contained">

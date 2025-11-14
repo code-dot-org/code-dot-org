@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
 exit if DCDO.get('pii-scrub-enabled', false)
 
 #
@@ -44,6 +46,5 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-require_relative '../../dashboard/config/environment'
 require_relative '../../dashboard/lib/expired_deleted_account_purger'
 ExpiredDeletedAccountPurger.new(options).purge_expired_deleted_accounts!

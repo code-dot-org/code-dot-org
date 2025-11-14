@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2025-10-22T14:19:36.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "how-ai-works-llms-full",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "\r\n\r\n## Step-by-Step Tutorial\r\n#### Not sure about the last level? Check out this quick tutorial for a step-by-step walkthrough.\r\n\r\n#### Watch this video clip to watch ."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-10-22T14:19:36.694+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2-U1-HTML-howto-12\\\"\"],\"cloned_from\":\"pl-sandbox-aif2-U1-HTML-howto-12\"},{\"changed_at\":\"2025-10-23 20:21:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

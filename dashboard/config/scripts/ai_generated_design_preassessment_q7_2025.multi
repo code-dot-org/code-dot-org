@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q7_2025'
+
+question 'A fashion store\'s website looks great on a computer, but when customers open it on their phones, the images overlap and the text is too small to read. What design issue is causing this problem?'
+
+wrong 'The colors don\'t match the store\'s brand identity.'
+wrong 'The site uses too many images, slowing it down.'
+right 'The website isn\'t responsive to different screen sizes.'
+wrong 'The website doesn\'t have enough interactive features.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 8, 12
+MARKDOWN

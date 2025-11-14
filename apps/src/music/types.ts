@@ -25,7 +25,8 @@ export interface MusicLevelData extends ProjectLevelData {
   allowChangeStartingPlayheadPosition?: boolean;
   toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
   validationTimeout?: number;
-  aiCodeGenerate?: boolean;
+  // Show the Guide instead of regular instructions.
+  guideMode?: 'instructions' | 'aiCodeGenerate';
   // The ID of a code-defined adlib to display.
   aiCodeGenerateAdlibId?: string;
   // Alternatively, an actual adlib object to display.

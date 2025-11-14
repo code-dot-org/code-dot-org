@@ -198,7 +198,7 @@ class ScriptLevel < ApplicationRecord
       else
         script_completion_redirect(user, script, unit_group_unit: unit_group_unit)
       end
-    elsif bubble_choice? && !bubble_choice_parent
+    elsif bubble_choice? && !bubble_choice_parent && level.try(:navigation_type) != SharedConstants::BUBBLE_CHOICE_NAVIGATION_TYPES[:NEXT_LEVEL]
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self, unit_group_unit: unit_group_unit)
     elsif bonus

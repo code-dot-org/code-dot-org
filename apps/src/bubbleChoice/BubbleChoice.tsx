@@ -9,28 +9,33 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useEffect, useMemo, useRef} from 'react';
 
-import {
-  navigateToLevelId,
-  setCurrentLevelId,
-} from '@cdo/apps/code-studio/progressRedux';
 import {levelById} from '@cdo/apps/code-studio/progressReduxSelectors';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
-  LabProps,
   BubbleChoiceLevelData,
   BubbleChoiceSublevel,
+  LabProps,
 } from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  BubbleChoiceCustomModes,
+  LevelStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 
-import notifyLevelChange from '../lab2/utils/notifyLevelChange';
+import {navigateToLevelId} from '../code-studio/progressRedux';
 import {commonI18n} from '../types/locale';
+
+import MusicDanceAi from './customModes/MusicDanceAi';
+import {BubbleChoiceLevelProperties} from './types';
 
 import styles from './BubbleChoice.module.scss';
 
-const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
+const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
+  levelProperties,
+  channel,
+}) => {
   // The image has a 4:3 aspect ratio.
   const imageAspectRatio = 4 / 3;
 
@@ -53,6 +58,7 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
         )?.status || LevelStatus.not_tried
     )
   );
+
   const currentLessonId = useAppSelector(
     state => state.progress.currentLessonId
   );
@@ -130,18 +136,17 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
   const navigateToSublevel = (sublevel: BubbleChoiceSublevel) => {
     if (currentLessonId) {
       dispatch(navigateToLevelId(sublevel.level_id));
-    } else if (levelProperties.isProjectLevel) {
-      // For BubbleChoice project levels, set the level ID in redux, and let the
-      // MultiProjectContainer handle switching projects. The standard progress redux
-      // system does not work for project levels since there is no progress, lesson, etc.
-      dispatch(setCurrentLevelId(sublevel.level_id));
-      // TODO: This is a dupe of code in navigateToLevelId(). Can we consolidate?
-      notifyLevelChange(String(levelProperties.id), sublevel.level_id);
-      // TODO: Handle browser navigation.
     } else {
       window.location.href = sublevel.url;
     }
   };
+
+  if (
+    channel &&
+    levelProperties.customMode === BubbleChoiceCustomModes.MUSIC_DANCE_AI
+  ) {
+    return <MusicDanceAi levelProperties={levelProperties} channel={channel} />;
+  }
 
   return (
     <div id="bubble-choice" className={styles.bubbleChoiceContainer}>
@@ -194,7 +199,7 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
                     level={sublevelToProgressBubbleLevel(index)}
                     disabled={true}
                     hideToolTips={true}
-                    smallBubble={true}
+                    smallBubble={levelBubbleChoice.hideLetters}
                   />
                 </div>
               </div>

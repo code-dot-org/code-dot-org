@@ -277,7 +277,6 @@ csta_jotform_form_id: !Secret
 ### Service configurations (urls, endpoints, etc)
 
 freegeoip_host:
-geocoder_redis_url: 'redis://localhost:6379/0/geocoder'
 solr_server: localhost
 
 # S3 bucket and (environment-specific) path-prefix configuration
@@ -296,17 +295,24 @@ libraries_s3_directory:    libraries<%=_env%>
 videos_s3_bucket:          videos.code.org
 videos_url:                //videos.code.org
 
-# Session Store (ElastiCache Redis)
-session_store_server:
+# Dashboard Redis instance (uses ElastiCache on prod)
+#
+# Please use the CDO.redis_url instance for all your dashboard Redis needs, just use
+# a redis key prefix for new namespacing. Do not introduce new Redis instances unless
+# you have a specific technical need for why this can't simply be on the main instance.
+redis_url: redis://localhost:6379/0
+
+# SESSION_STORE_MIGRATION_DELETE_ME
+# We are migrating from session_store to redis. Its the same definitions, but with a new
+# name to reflect that multiple dashboard features will be using the same instance.
+#
+# We expect the migration to be complete after November 2025, at which point we can remove
+# this component (and delete session_store.yml.erb)
+old_session_store_server:
 
 # Memcached (ElastiCache)
 memcached_endpoint:
 memcached_hosts:
-
-# Redis (ElastiCache)
-redis_primary:
-redis_read_addresses:
-redis_read_ports:
 
 # Netsim
 netsim_redis_groups:
@@ -505,8 +511,6 @@ eir_teacher_enrollments_gsheet_key: !Secret
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.
 build_blockly: false
-geocoder_read_replica_1:
-geocoder_read_replica_2:
 browserstack_username:
 browserstack_authkey:
 x-dashboard_twitter_key:
@@ -522,10 +526,22 @@ sendy_db_reader:
 sendy_db_writer:
 developers_channel_id:
 twilio_phone:
-level_sources_redis_url:
 discourse_sso_url:
 discourse_url:
 pledge_map_table_id:
+
+# SESSION_STORE_MIGRATION_DELETE_ME
+#
+# TODO: we no longer use these, but they are still being injected into globals.yml by chef.
+# To remove them, we need to figure out where chef is getting the values from.
+geocoder_read_replica_1:
+geocoder_read_replica_2:
+geocoder_redis_url:
+level_sources_redis_url:
+redis_primary:
+redis_read_addresses:
+redis_read_ports:
+session_store_server:
 
 #### Parameters related to CloudFormation-stack deployment
 stack_name: <%=env%>
@@ -639,6 +655,7 @@ jwk_private_key_data: !Secret
 openai_evaluate_rubric_api_key: !Secret
 openai_student_learning_api_key: !Secret
 openai_measures_of_learning_api_key: !Secret
+openai_lesson_summaries_api_key: !Secret
 
 # Credentials for Google Gemini API
 google_gemini_ai_chat_lab_api_key: !Secret

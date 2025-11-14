@@ -5,7 +5,7 @@ Feature: Python Lab run code
 
 Background:
   Given I create a student named "Penelope"
-  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1?noIntrojs=true"
   And I wait to see "#uitest-codebridge-run"
   And I wait until "#uitest-codebridge-run" is not disabled
 
@@ -30,10 +30,11 @@ Scenario: Continue button and progress status shows up correctly
   And I press "instructions-continue-button"
 
   # Validated level that passes by default, running validation will pass the level and
-  # cause the continue button to show up
+  # cause the continue button to be enabled.
   And I wait until current URL contains "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/2"
   # Check that progress has been updated for the previous level
   Then I verify progress in the header of the current page is "perfect" for level 1
+  And I press "resource-panel-tab-validation"
   And I wait to see "#uitest-validate-button"
   And I wait until "#uitest-validate-button" is not disabled
   And I press "uitest-validate-button"

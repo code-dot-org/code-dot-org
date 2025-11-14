@@ -3,45 +3,124 @@ title 'Review'
 description 'description here'
 
 markdown <<MARKDOWN
-<div style="background:#ffffff; border-left:8px solid #7A3FF0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; display:flex; gap:16px; font-family:Arial, sans-serif; color:#222;">
-  <div style="flex:0 0 150px; background:#ece8ff; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#7A3FF0; font-weight:bold;">
-    Image
-  </div>
-  <div>
-    <p style="font-size:16px; line-height:1.6;">
-      Artificial Intelligence (AI) is a broad term for systems that can learn patterns from data and use those patterns to make predictions, generate new content, or solve problems.
-    </p>
-  </div>
+<!-- Chat-style learning page (HTML + inline CSS only) -->
+
+<!-- Page background & wrapper -->
+<div style="min-height:100vh; padding:28px 16px; background:radial-gradient(1200px 600px at 10% 0%, #1b123a 0%, #0f0e25 60%, #0b0a1c 100%); font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
+
+<!-- Header -->
+<div style="max-width:960px; margin:0 auto 16px auto; text-align:center; color:#e9e8ff;">
+<div style="display:inline-block; padding:8px 14px; font-weight:700; letter-spacing:.06em; background:#221a47; color:#9dd9d2; border-radius:999px; border:1px solid #2a2354;">BEHIND THE SCENES</div>
+<h1 style="margin:14px 0 4px 0; font-size:30px; color:#4de0d1;">What is AI, really?</h1>
+<div style="font-size:13px; color:#a8a3d6;">Meet your guide: <span style="color:#7A3FF0; font-weight:700;">Byte</span> the bot 🤖</div>
 </div>
 
-<div style="background:#ffffff; border-left:8px solid #00a3a3; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; font-family:Arial, sans-serif; color:#222;">
-  <p style="font-size:16px; line-height:1.6;">
-    You already interact with AI every day — even if you don’t call it that. Examples include autocorrect or predictive text that finishes your sentences, music or video recommendations on platforms like Spotify, Netflix, or YouTube, and voice assistants like Siri or Alexa that recognize speech and respond.
-  </p>
+<!-- Chat stream -->
+<div style="max-width:960px; margin:0 auto;">
+
+<!-- BOT MESSAGE 1 -->
+<div style="display:flex; gap:12px; align-items:flex-end; margin:16px 0; position:relative;">
+<div style="flex:0 0 54px; height:54px; background:linear-gradient(145deg,#111029,#1e1843); border:2px solid #2e2a63; border-radius:14px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,.35), 0 0 0 4px rgba(122,63,240,.15);">
+<div style="width:28px; height:18px; background:#0f152d; border:2px solid #2b2c50; border-radius:9px; position:relative;">
+<div style="position:absolute; top:3px; left:6px; width:6px; height:6px; background:#42f6e0; border-radius:50%;"></div>
+<div style="position:absolute; top:3px; right:6px; width:6px; height:6px; background:#42f6e0; border-radius:50%;"></div>
+<div style="position:absolute; bottom:2px; left:50%; transform:translateX(-50%); width:12px; height:4px; background:#42f6e0; border-radius:6px;"></div>
+</div>
+</div>
+<div style="max-width:760px; background:#1f1a3b; color:#e9e8ff; border:1px solid #2b2556; border-radius:18px; padding:14px 16px; box-shadow:0 6px 18px rgba(0,0,0,.25); position:relative;">
+<!-- tail -->
+<div style="position:absolute; left:-8px; bottom:12px; width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-right:8px solid #1f1a3b;"></div>
+<div style="font-size:12px; color:#8fded7; font-weight:700; margin-bottom:6px;">Byte • AI Guide</div>
+<div style="font-size:16px; line-height:1.6;">
+<b>Artificial Intelligence (AI)</b> refers to systems that learn patterns from data and use them to make predictions, generate content, or solve problems.
+</div>
+</div>
 </div>
 
-<div style="background:#ffffff; border-left:8px solid #7A3FF0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; font-family:Arial, sans-serif; color:#222;">
-  <p style="font-size:16px; line-height:1.6;">
-    Most of what we call AI today isn’t thinking or reasoning — it’s recognizing patterns at scale. AI models are trained on huge datasets (millions or even billions of examples) and use math to find relationships between inputs and outputs.
-  </p>
+
+
+<!-- BOT MESSAGE 2 -->
+
+<div style="display:flex; gap:12px; align-items:flex-end; margin:16px 0; position:relative;">
+<div style="flex:0 0 54px; height:54px; background:linear-gradient(145deg,#111029,#1e1843); border:2px solid #2e2a63; border-radius:14px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,.35), 0 0 0 4px rgba(122,63,240,.15);">
+<div style="width:28px; height:18px; background:#0f152d; border:2px solid #2b2c50; border-radius:9px; position:relative;">
+<div style="position:absolute; top:3px; left:6px; width:6px; height:6px; background:#42f6e0; border-radius:50%;"></div>
+<div style="position:absolute; top:3px; right:6px; width:6px; height:6px; background:#42f6e0; border-radius:50%;"></div>
+<div style="position:absolute; bottom:2px; left:50%; transform:translateX(-50%); width:12px; height:4px; background:#42f6e0; border-radius:6px;"></div>
+</div>
+</div>
+<div style="max-width:760px; background:#1f1a3b; color:#e9e8ff; border:1px solid #2b2556; border-radius:18px; padding:14px 16px; box-shadow:0 6px 18px rgba(0,0,0,.25); position:relative;">
+<!-- tail -->
+<div style="position:absolute; left:-8px; bottom:12px; width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-right:8px solid #1f1a3b;"></div>
+<div style="font-size:12px; color:#8fded7; font-weight:700; margin-bottom:6px;">Byte • AI Guide</div>
+<div style="font-size:16px; line-height:1.6;">
+You already interact with AI every day — even if you don’t call it that. Examples include:
+<ul>
+<li style="font-size:16px; line-height:1.6;">Autocorrect or predictive text that finishes your sentences</li>
+<li style="font-size:16px; line-height:1.6;">Music or video recommendations on Spotify, Netflix, or YouTube</li>
+<li style="font-size:16px; line-height:1.6;">Voice assistants like Siri or Alexa that recognize and respond to speech</li>
+</ul>
+</div>
+</div>
 </div>
 
-<div style="background:#ffffff; border-left:8px solid #00a3a3; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; display:flex; gap:16px; font-family:Arial, sans-serif; color:#222;">
-  <div style="flex:0 0 150px; background:#dff6f6; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#007777; font-weight:bold;">
-    Image
-  </div>
-  <div>
-    <p style="font-size:16px; line-height:1.6;">
-      When you type a prompt or ask a question, AI doesn’t “understand” like a person would — it compares your input to what it’s seen before and generates something that statistically fits. Think of it as a super-fast pattern matcher, not a mind with understanding.
-    </p>
-  </div>
+<!-- BOT MESSAGE 3 -->
+<div style="display:flex; gap:12px; align-items:flex-end; margin:16px 0; position:relative;">
+<div style="flex:0 0 54px; height:54px; background:linear-gradient(145deg,#111029,#1e1843); border:2px solid #2e2a63; border-radius:14px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,.35), 0 0 0 4px rgba(122,63,240,.15);">
+<div style="width:28px; height:18px; background:#0f152d; border:2px solid #2b2c50; border-radius:9px; position:relative;">
+<div style="position:absolute; top:3px; left:6px; width:6px; height:6px; background:#42f6e0; border-radius:50%;"></div>
+<div style="position:absolute; top:3px; right:6px; width:6px; height:6px; background:#42f6e0; border-radius:50%;"></div>
+<div style="position:absolute; bottom:2px; left:50%; transform:translateX(-50%); width:12px; height:4px; background:#42f6e0; border-radius:6px;"></div>
+</div>
+</div>
+<div style="max-width:760px; background:#1f1a3b; color:#e9e8ff; border:1px solid #2b2556; border-radius:18px; padding:14px 16px; box-shadow:0 6px 18px rgba(0,0,0,.25); position:relative;">
+<!-- tail -->
+<div style="position:absolute; left:-8px; bottom:12px; width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-right:8px solid #1f1a3b;"></div>
+<div style="font-size:12px; color:#8fded7; font-weight:700; margin-bottom:6px;">Byte • AI Guide</div>
+<div style="font-size:16px; line-height:1.6;">
+Modern AI doesn’t think or reason — it recognizes patterns at massive scale. Trained on millions or billions of examples, AI models use math to find relationships between inputs and outputs.
+</div>
+</div>
 </div>
 
-<div style="background:#ffffff; border-left:8px solid #7A3FF0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:16px; margin:20px; font-family:Arial, sans-serif; color:#222;">
-  <p style="font-size:16px; line-height:1.6;">
-    AI “learns” through repetition and adjustment. During training, it makes predictions, measures how wrong it was, and updates its internal settings (called parameters) to make better predictions next time. Once trained, it can generalize — creating new answers, images, or ideas based on patterns it’s already learned.
-  </p>
+<!-- BOT MESSAGE 4 -->
+<div style="display:flex; gap:12px; align-items:flex-end; margin:16px 0; position:relative;">
+<div style="flex:0 0 54px; height:54px; background:linear-gradient(145deg,#111029,#1e1843); border:2px solid #2e2a63; border-radius:14px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,.35), 0 0 0 4px rgba(122,63,240,.15);">
+<div style="width:28px; height:18px; background:#0f152d; border:2px solid #2b2c50; border-radius:9px; position:relative;">
+<div style="position:absolute; top:3px; left:6px; width:6px; height:6px; background:#42f6e0; border-radius:50%;"></div>
+<div style="position:absolute; top:3px; right:6px; width:6px; height:6px; background:#42f6e0; border-radius:50%;"></div>
+<div style="position:absolute; bottom:2px; left:50%; transform:translateX(-50%); width:12px; height:4px; background:#42f6e0; border-radius:6px;"></div>
 </div>
+</div>
+<div style="max-width:760px; background:#1f1a3b; color:#e9e8ff; border:1px solid #2b2556; border-radius:18px; padding:14px 16px; box-shadow:0 6px 18px rgba(0,0,0,.25); position:relative;">
+<!-- tail -->
+<div style="position:absolute; left:-8px; bottom:12px; width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-right:8px solid #1f1a3b;"></div>
+<div style="font-size:12px; color:#8fded7; font-weight:700; margin-bottom:6px;">Byte • AI Guide</div>
+<div style="font-size:16px; line-height:1.6;">
+When you ask a question or type a prompt, the AI doesn’t truly understand like a human would. Instead, it compares your input to patterns it has seen before and produces a response that statistically fits. Think of it as a super-fast pattern matcher, not a mind with understanding.
+</div>
+</div>
+</div>
+
+<!-- BOT MESSAGE 5 -->
+<div style="display:flex; gap:12px; align-items:flex-end; margin:16px 0; position:relative;">
+<div style="flex:0 0 54px; height:54px; background:linear-gradient(145deg,#111029,#1e1843); border:2px solid #2e2a63; border-radius:14px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,.35), 0 0 0 4px rgba(122,63,240,.15);">
+<div style="width:28px; height:18px; background:#0f152d; border:2px solid #2b2c50; border-radius:9px; position:relative;">
+<div style="position:absolute; top:3px; left:6px; width:6px; height:6px; background:#42f6e0; border-radius:50%;"></div>
+<div style="position:absolute; top:3px; right:6px; width:6px; height:6px; background:#42f6e0; border-radius:50%;"></div>
+<div style="position:absolute; bottom:2px; left:50%; transform:translateX(-50%); width:12px; height:4px; background:#42f6e0; border-radius:6px;"></div>
+</div>
+</div>
+<div style="max-width:760px; background:#1f1a3b; color:#e9e8ff; border:1px solid #2b2556; border-radius:18px; padding:14px 16px; box-shadow:0 6px 18px rgba(0,0,0,.25); position:relative;">
+<!-- tail -->
+<div style="position:absolute; left:-8px; bottom:12px; width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-right:8px solid #1f1a3b;"></div>
+<div style="font-size:12px; color:#8fded7; font-weight:700; margin-bottom:6px;">Byte • AI Guide</div>
+<div style="font-size:16px; line-height:1.6;">
+AI “learns” through repetition and feedback: it makes predictions, checks how far off it was, and adjusts its internal settings (called parameters) to improve. Once trained, it can generalize and create new text, images, or ideas from the patterns it has learned.
+</div>
+</div>
+</div>
+
 MARKDOWN
 
 "First, team up with AI to create your own star dancer. Next, remix a track to set the vibe. Finally, code an original dance routine to bring your dancer and music to life!"

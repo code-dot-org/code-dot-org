@@ -98,12 +98,14 @@ export async function postLogChatEvent(
 export async function getUserChatHistory(
   userId: number,
   levelId: number,
-  scriptId: number | null
+  scriptId: number | null,
+  channelId?: string
 ): Promise<ServerChatEvent[]> {
   const params: Record<string, string> = {
     userId: userId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
+    channelId: channelId ?? '',
   };
   const response = await HttpClient.fetchJson<ServerChatEvent[]>(
     paths.CHAT_HISTORY_URL + '?' + new URLSearchParams(params),

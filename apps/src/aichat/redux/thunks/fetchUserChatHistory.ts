@@ -9,6 +9,7 @@ import {setOwnChatHistory, setStudentChatHistory} from '../slice';
 interface FetchUserChatHistoryParams {
   userId: number;
   isOwnHistory: boolean;
+  channelId?: string;
 }
 
 // This thunk's callback function submits a user id (either a teacher or student)
@@ -16,14 +17,18 @@ interface FetchUserChatHistoryParams {
 // waits for a response, and then returns the user's chat events for that level/script.
 export const fetchUserChatHistory = createAsyncThunk(
   'aichat/fetchUserChatHistory',
-  async ({userId, isOwnHistory}: FetchUserChatHistoryParams, thunkAPI) => {
+  async (
+    {userId, isOwnHistory, channelId}: FetchUserChatHistoryParams,
+    thunkAPI
+  ) => {
     const state = thunkAPI.getState() as RootState;
     // Post teacher's student's user id to backend and retrieve student's chat history.
     try {
       const chatHistoryApiResponse = await getUserChatHistory(
         userId,
         parseInt(state.progress.currentLevelId || ''),
-        state.progress.scriptId
+        state.progress.scriptId,
+        channelId
       );
 
       if (isOwnHistory) {

@@ -77,6 +77,7 @@ class HttpCache
     dance-ai-2023
     mc
     music-jam-2024
+    mix-move-ai-2025
   ).map do |script_name|
     # Assume all cached units are in single unit courses.
     [script_name, "/courses/#{script_name}/units/1/lessons/*"]
@@ -169,14 +170,21 @@ class HttpCache
             cookies: 'none'
           },
           {
-            path: '/api/hour/*',
+            path: %w[/congrats /congrats/*],
+            proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
-            # Allow the company cookie to be read and set to track company users for tutorials.
-            cookies: allowlisted_cookies + ['company']
+            cookies: allowlisted_cookies,
+          },
+          # For .png images, don't forward any cookies or additional headers.
+          {
+            path: '/*.png',
+            headers: [],
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /fonts/*),
+            path: STATIC_ASSET_EXTENSION_PATHS - %w(/*.png) + %w(/files/* /images/* /fonts/*),
             headers: [],
             cookies: 'none'
           },
@@ -332,7 +340,14 @@ class HttpCache
             path: '/curriculum_tracking_pixel',
             headers: [],
             cookies: allowlisted_cookies
-          }
+          },
+          {
+            # ActionCable Websocket path:
+            path: '/cable',
+            # pass all headers, which disables caching, and also passes essential websocket upgrade headers:
+            headers: ['*'],
+            cookies: allowlisted_cookies,
+          },
         ],
         # Default Dashboard paths are session-specific, allowlist all session cookies and language header.
         default: {
@@ -347,17 +362,22 @@ class HttpCache
         dashboard: {
           behaviors: [
             {
-              path: "#{HocLegacy::API_ROOT_PATH}*",
-              headers: ALLOWLISTED_HEADERS,
-              cookies: allowlisted_cookies,
-            },
-            {
-              path: '/v2/certificate',
+              path: "#{HocLegacy::API_ROOT_PATH}/*",
               headers: ALLOWLISTED_HEADERS,
               cookies: allowlisted_cookies,
             },
           ],
         },
+        pegasus: {
+          behaviors: [
+            {
+              path: "#{HocLegacy::API_ROOT_PATH}/*",
+              proxy: 'dashboard',
+              headers: ALLOWLISTED_HEADERS,
+              cookies: allowlisted_cookies,
+            },
+          ],
+        }
       )
     end
 
