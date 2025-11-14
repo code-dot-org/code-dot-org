@@ -215,47 +215,29 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       dispatch(setHasRun(false));
     };
   }, [dispatch]);
-
-  // UseMemo on result so that we do not refetch unnecessarily?
   const convertToExcalidrawSources = async (
     sourcesWithExternalFiles: ExcalidrawSourceWithExternalFiles
   ) => {
     const excalidrawInitialState = cloneDeep(sourcesWithExternalFiles);
 
-    // Should we be doing this? Shouldn't we be falling back if we don't have the file uploaded?
-    // Maybe we keep this in here temporarily for testing purposes, but remove it so we have a fallback longer term?
-    Object.values(excalidrawInitialState?.files || {}).forEach(
-      file => delete file.dataURL
-    );
-
-    if (excalidrawInitialState.externalFiles) {
+    if (excalidrawInitialState.files) {
       const imageDownloadPromises = Object.values(
-        excalidrawInitialState.externalFiles
+        excalidrawInitialState.files
       ).map(async file => {
-        if (file.url) {
-          if (!Object.keys(downloadedFileDataRef.current).includes(file.id)) {
-            await imageUrlToBase64(file.url)
-              .then(base64 => {
-                if (!excalidrawInitialState.files) {
-                  excalidrawInitialState.files = {};
-                }
-
-                excalidrawInitialState.files[file.id].dataURL =
-                  base64 as DataURL;
-                downloadedFileDataRef.current[file.id] = base64 as DataURL;
-              })
-              .catch(error => {
-                // what to do on error?
-                console.error(error);
-              });
-          } else {
-            if (!excalidrawInitialState.files) {
-              excalidrawInitialState.files = {};
+        if (!Object.keys(downloadedFileDataRef.current).includes(file.id)) {
+          const fileUrl = excalidrawInitialState.externalFiles?.[file.id].url;
+          if (fileUrl) {
+            try {
+              const base64 = (await imageUrlToBase64(fileUrl)) as DataURL;
+              file.dataURL = base64 as DataURL;
+              downloadedFileDataRef.current[file.id] = base64;
+            } catch (error) {
+              console.error(error);
             }
-
-            const base64 = downloadedFileDataRef.current[file.id];
-            excalidrawInitialState.files[file.id].dataURL = base64;
           }
+        } else {
+          const base64 = downloadedFileDataRef.current[file.id];
+          file.dataURL = base64;
         }
       });
       await Promise.allSettled(imageDownloadPromises);
