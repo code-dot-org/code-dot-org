@@ -9,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "### Make music with code!\r\n\r\n1. Drag **two or more play blocks** under when run. \r\n\r\n2. Choose **two different** sounds.\r\n\r\n3. Press Run to start the music.",
+    "long_instructions": "### Make music with code!\r\n\r\n1. Drag two or more **play** blocks under **when run**.\r\n\r\n2. Choose two different sounds.\r\n\r\n3. Press Run to start the music.",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -149,7 +149,7 @@
       },
       {
         "key": "music-ai-skill-sequence2_3_1e873460-2b14-4dd3-b75a-a97489b29c58",
-        "message": "Did you know you can change the sound? Click on the [sound's](#clickable=play-sound-block-workspace) name. ",
+        "message": "<i class=\"fa-solid fa-lightbulb\"></i> Did you know you can change the sound? Click on the sound's name. ",
         "next": false,
         "conditions": [
           {
@@ -161,7 +161,7 @@
       },
       {
         "key": "music-ai-skill-sequence2_e3a14922-603d-4ea2-8eaf-4e9ce817f651",
-        "message": "You played one sound, now add another [sound](#clickable=play-sound-block). ",
+        "message": "<i class=\"fa-solid fa-lightbulb\"></i> You played one sound, now add another [sound](#clickable=play-sound-block). ",
         "next": false,
         "conditions": [
           {
@@ -173,7 +173,7 @@
       },
       {
         "key": "music-ai-skill-sequence_100f6390-0a0c-4ff7-bc67-2979e4beed57",
-        "message": "Drag at least two [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block). ",
+        "message": "<i class=\"fa-solid fa-lightbulb\"></i> Drag at least two [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block). ",
         "next": false,
         "conditions": [
 
@@ -238,7 +238,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-02T22:51:01.462+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_code_sound\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_code_sound\"},{\"changed_at\":\"2025-11-03 17:30:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 20:11:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:09:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:28:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-02T22:51:01.462+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_code_sound\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_code_sound\"},{\"changed_at\":\"2025-11-03 17:30:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 20:11:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:09:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:28:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 08:58:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:00:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

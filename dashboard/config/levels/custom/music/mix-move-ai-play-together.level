@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "####Layer the sounds\r\n\r\n1. Add another sound into the play together block.",
+    "long_instructions": "### Layer the sounds\r\n\r\n1. Add another sound into the **play together** block\r\n2. Press Run",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -23,8 +23,20 @@
         ]
       },
       {
+        "key": "music-ai-skill-playtogether_7d85508c-951f-4734-8c97-9c67745a4207",
+        "message": "<i class=\"fa-solid fa-lightbulb\"></i> Add another [play](#clickable=play-sound-block) block into the [play together](#clickable=play-sounds-together-block-workspace) block. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ],
+        "callout": "play-sound-block---id-up-left:play_sounds_together"
+      },
+      {
         "key": "music-ai-skill-playtogether_795b9999-0f45-441c-bd81-23af6c157f81",
-        "message": "Try playing two different [sounds](#clickable=play-sound-block) in the [play together](#clickable=id-up-left:play_sounds_together) block.",
+        "message": "<i class=\"fa-solid fa-lightbulb\"></i> Try playing two different [sounds](#clickable=play-sound-block) in the [play together](#clickable=id-up-left:play_sounds_together) block.",
         "next": false,
         "conditions": [
           {
@@ -35,20 +47,8 @@
         "callout": "id-up-left:play_sounds_together"
       },
       {
-        "key": "music-ai-skill-playtogether_7d85508c-951f-4734-8c97-9c67745a4207",
-        "message": "Add another [sound](#clickable=play-sound-block) block into the [play together](#clickable=play-sounds-together-block-workspace) block. ",
-        "next": false,
-        "conditions": [
-          {
-            "name": "played_sounds_together",
-            "value": 1
-          }
-        ],
-        "callout": "play-sound-block---play-sounds-together-block-workspace-up-inside"
-      },
-      {
         "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
-        "message": "No sounds have played yet. Add two [play](#clickable=play-sound-block-workspace) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "message": "<i class=\"fa-solid fa-lightbulb\"></i> No sounds have played yet. Add two [play](#clickable=play-sound-block-workspace) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
         "next": false,
         "conditions": [
 
@@ -83,7 +83,7 @@
                     "code": {
                       "block": {
                         "type": "play_sound_at_current_location_simple2",
-                        "id": "play",
+                        "id": "plays",
                         "deletable": false,
                         "movable": false,
                         "extraState": {
@@ -174,7 +174,7 @@
     "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-02T22:51:39.830+00:00\",\"changed\":[\"cloned from \\\"hoai-pilot-6-play-together\\\"\"],\"cloned_from\":\"hoai-pilot-6-play-together\"},{\"changed_at\":\"2025-11-02 22:51:43 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 17:32:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 20:12:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:11:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-02T22:51:39.830+00:00\",\"changed\":[\"cloned from \\\"hoai-pilot-6-play-together\\\"\"],\"cloned_from\":\"hoai-pilot-6-play-together\"},{\"changed_at\":\"2025-11-02 22:51:43 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 17:32:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 20:12:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:11:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 08:55:20 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 08:59:09 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:08:43 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:09:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:11:02 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:11:54 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:12:32 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:13:13 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:14:52 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:15:37 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:18:03 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:27:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:30:29 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:32:13 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:33:06 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:34:11 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 21:35:21 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 21:37:48 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 21:39:16 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 21:39:53 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 21:40:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 21:41:01 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 21:41:57 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 21:44:32 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 21:45:11 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 21:45:40 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

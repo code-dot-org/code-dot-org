@@ -18,9 +18,9 @@ markdown <<MARKDOWN
     <!-- Left Box -->
     <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px;font-size:14pt;">
       <strong>Definition:</strong>
-      <p>A <b>variable</b> is a name you give to a piece of data in your program. The value connected to that name can change while the program runs — you can think of it like a container that holds the data.</p>
+      <p style = "font-size:14pt;">A <b>variable</b> is a name you give to a piece of data in your program. The value connected to that name can change while the program runs — you can think of it like a container that holds the data.</p>
       <strong>Example:</strong>
-      <p> In a game, <b>score = 0</b> starts at zero and increases whenever a player earns points.
+      <p style = "font-size:14pt;"> In a game, <b>score = 0</b> starts at zero and increases whenever a player earns points.
 </p>
     </div>
     <!-- Right Box -->
@@ -37,9 +37,9 @@ markdown <<MARKDOWN
   <div style="display:flex; margin-bottom:10px;">
     <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px;font-size:14pt;">
       <strong>Definition:</strong>
-      <p><b>State</b> is the current stored values of variables that describe what’s happening in a program right now.</p>
+      <p style = "font-size:14pt;"><b>State</b> is the current stored values of variables that describe what’s happening in a program right now.</p>
       <strong>Example:</strong>
-      <p>In a game, the player’s current score and level together show the program’s state.</p>
+      <p style = "font-size:14pt;">In a game, the player’s current score and level together show the program’s state.</p>
     </div>
     <div style="flex:1; background-color:#fff; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; text-align:center;">
       <img src="https://images.code.org/e3a6cd792666963257437c276c283ed5-image-1762187492236.png" alt="A graph showing score, level, lives as examples of a programs state." style="width:60%; border-radius:10px;">
@@ -52,9 +52,9 @@ markdown <<MARKDOWN
   <div style="display:flex;">
     <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px; font-size:14pt;">
       <strong>Definition:</strong>
-      <p>An operation is an action that changes the value of a variable using math or logic.</p>
+      <p style = "font-size:14pt;">An operation is an action that changes the value of a variable using math or logic.</p>
       <strong>Example:</strong>
-      <p>When you click a “like” button, the operation score = score + 1 adds one to the total likes.
+      <p style = "font-size:14pt;">When you click a “like” button, the operation score = score + 1 adds one to the total likes.
 </p>
     </div>
     <div style="flex:1; background-color:#fff; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; text-align:center;">
@@ -82,7 +82,7 @@ markdown <<MARKDOWN
 </p>
 
 
-### Here, an **event handler** increases the `strength` variable by 2 each time the **strength-up** button is clicked.
+### Here, an **event listener** increases the `strength` variable by 2 each time the **strength-up** button is clicked.
 
 
 <p style="text-align:center;">

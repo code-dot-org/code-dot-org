@@ -2,7 +2,7 @@
   "category": "Groups",
   "config": {
     "func": "changeMoveEachLR",
-    "blockText": "{GROUP} do {MOVE} {DIR} forever",
+    "blockText": "{GROUP} do {MOVE} forever",
     "style": "lab_blocks",
     "args": [
       {
@@ -87,19 +87,6 @@
           [
             "None",
             "MOVES.Rest"
-          ]
-        ]
-      },
-      {
-        "name": "DIR",
-        "options": [
-          [
-            "←",
-            "-1"
-          ],
-          [
-            "→",
-            "1"
           ]
         ]
       }
