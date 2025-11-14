@@ -25715,9 +25715,7 @@ en:
           description: |-
             Students learn that effective digital experiences begin not with code, but with empathy for a user. They take on the roles of professional UX and UI designers, first defining a specific user's problem with a user persona and problem statement. They then plan a multi-page solution using a site map and wireframes. Students collaborate with an AI partner throughout this process, using it for ideation and content generation before directing it in Guide mode to build their app piece-by-piece. This unit establishes a design-first mindset, lays the groundwork for computational thinking, and introduces responsible AI collaboration.
 
-            ## Learning Outcomes
-
-            **By the end of this unit, students will be able to . . .**
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
 
             - Define a problem from a specific user’s perspective.
             - Apply computational thinking concepts of decomposition, pattern recognition, and abstraction to plan a web app’s structure.
@@ -25728,16 +25726,85 @@ en:
             - Develop strategies for debugging AI-generated outputs, including refining prompts and reverting to previous versions, to overcome challenges and persevere in achieving a design goal.
             - Explain the difference between HTML for structure and CSS for styling.
             - Describe how design tasks relate to the professional roles of UX and UI designers.
-          student_description: ''
+          student_description: |-
+            In this unit, you think like a real UX and UI designer by starting with a user, not with code. You create a persona, write a clear problem statement, and plan a multi-page web app using tools like site maps and wireframes. Throughout the process, you work with an AI partner to brainstorm ideas, generate content, and build your app piece by piece. You stay in control of the creative decisions while the AI supports your vision, giving you practice with empathy-driven design, computational thinking, and responsible AI collaboration.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Define a problem from a specific user’s perspective.
+            - Apply computational thinking concepts of decomposition, pattern recognition, and abstraction to plan a web app’s structure.
+            - Create a visual representation (e.g., wireframe) of a multi-page web app that responds to a defined user need.
+            - Plan a cohesive, multi-page user journey by designing for consistent navigation and visual style.
+            - Write descriptive prompts to generate individual, responsive, and accessible HTML/CSS components.
+            - Evaluate an AI-generated layout for its clarity, purpose, responsiveness, and accessibility.
+            - Develop strategies for debugging AI-generated outputs, including refining prompts and reverting to previous versions, to overcome challenges and persevere in achieving a design goal.
+            - Explain the difference between HTML for structure and CSS for styling.
+            - Describe how design tasks relate to the professional roles of UX and UI designers.
         ai-and-algorithmic-decisions-pilot-2025:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-2:
+              name: Pre-Assessment
+            lesson-1:
+              name: End of Unit Assessment
+            lesson-3:
+              name: 'Lesson 1: Interactivity in Web Apps'
+            lesson-4:
+              name: 'Lesson 2: Making a Button Respond'
+            lesson-5:
+              name: 'Lesson 3: Variables and Live Updates'
+            lesson-6:
+              name: 'Lesson 4: Writing Reusable Functions'
+            lesson-7:
+              name: 'Lesson 5: Making Decisions with If/Else'
+            lesson-8:
+              name: 'Lesson 6: Functions with Parameters'
+            lesson-9:
+              name: 'Lesson 7: Building More Dynamic Pages'
+            lesson-10:
+              name: 'Lesson 8: Nested Conditionals for Complex Logic'
+            lesson-11:
+              name: 'Lesson 9: Combining Conditions with AND/OR'
+            lesson-12:
+              name: 'Lesson 10: Adding NOT and Complex Conditions'
+            lesson-13:
+              name: 'Lesson 11: Reactive Logic Project'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
           name: ai-and-algorithmic-decisions-pilot-2025
           title: AI and Algorithmic Decisions
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit introduces students to JavaScript as they learn to bring their previously designed web pages to life through interactive features, clear logic, and purposeful decision-making. Students develop skills with event handlers, variables, conditional statements, functions, and DOM manipulation while building confidence in debugging and using AI as a strategic collaborator. Human-centered design and simple systems thinking are woven throughout as students consider user needs, trade-offs, and the values reflected in the logic they create.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Design a user interaction flow that involves conditional logic and considers simple trade-offs between different outcomes.
+            - Model an algorithm using a flowchart to plan the logic of a user interaction.
+            - Write JavaScript that uses event handlers, variables, conditional statements, and functions to control program behavior.
+            - Apply debugging strategies, with and without AI assistance, to persevere through challenges and fix errors in JavaScript code.
+            - Use AI as a collaborative partner to brainstorm, debug, and refine code.
+            - Develop a personal framework for deciding when to write code themselves and when to seek AI assistance.
+            - Describe how the tasks of planning, writing, and testing interactive code relate to the professional roles of a Front-End Developer and QA Engineer.
+          student_description: |-
+            In this unit, you learn how to make your web pages actually respond to people using JavaScript. You create buttons that react when clicked, track user choices with variables, make decisions with `if` and `else` statements, and update the page so it changes right in front of you. You plan your ideas with flowcharts, use AI as a coding partner to help you debug and brainstorm, and learn how developers think when they build features for real apps.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Design a user interaction flow that involves conditional logic and considers simple trade-offs between different outcomes.
+            - Model an algorithm using a flowchart to plan the logic of a user interaction.
+            - Write JavaScript that uses event handlers, variables, conditional statements, and functions to control program behavior.
+            - Apply debugging strategies, with and without AI assistance, to persevere through challenges and fix errors in JavaScript code.
+            - Use AI as a collaborative partner to brainstorm, debug, and refine code.
+            - Develop a personal framework for deciding when to write code themselves and when to seek AI assistance.
+            - Describe how the tasks of planning, writing, and testing interactive code relate to the professional roles of a Front-End Developer and QA Engineer.
         building-data-driven-systems-with-ai-pilot-2025:
           lessons: {}
           lesson_groups: {}
