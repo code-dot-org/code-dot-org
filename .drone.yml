@@ -60,8 +60,12 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      # Validate cache restore
+      # Validate cache restore, since the restore step will pass even if it only downloaded a
+      # partial copy of the cached build. First, ensure the .git directory is present and valid.
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
+      # Then, count the number of files outside of the .git directory and compare to how many were
+      # present in the cache. This is not a perfect check, but is much cheaper than computing a
+      # checksum of all files and is likely to catch most instances of incomplete downloads.
       - |
         if [ -f .cached-staging-build-file-count ]; then
           expected=$(cat .cached-staging-build-file-count)
@@ -177,8 +181,12 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      # Validate cache restore
+      # Validate cache restore, since the restore step will pass even if it only downloaded a
+      # partial copy of the cached build. First, ensure the .git directory is present and valid.
       - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
+      # Then, count the number of files outside of the .git directory and compare to how many were
+      # present in the cache. This is not a perfect check, but is much cheaper than computing a
+      # checksum of all files and is likely to catch most instances of incomplete downloads.
       - |
         if [ -f .cached-staging-build-file-count ]; then
           expected=$(cat .cached-staging-build-file-count)
@@ -334,6 +342,6 @@ trigger:
 
 ---
 kind: signature
-hmac: ba6195857aee273c6a20c069f23fe04509208e772fb54ad7e30d5a8516b86feb
+hmac: 5630b8e369b2dd05339cc0edec53c8ffe2ad625b6983bb213d4d118685527064
 
 ...
