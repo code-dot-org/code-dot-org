@@ -39,7 +39,7 @@ module Cdo
       require 'cdo/statsig'
       Cdo::StatsigInitializer.init
 
-      if CDO.rack_env?(:production)
+      if CDO.rack_env?(:production) || CDO.test_system?
         require 'cdo/app_server_metrics'
         Cdo::AppServerMetrics.start_background_metrics_thread(host: host)
       end
