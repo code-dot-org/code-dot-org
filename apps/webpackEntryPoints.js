@@ -79,6 +79,7 @@ const CODE_STUDIO_ENTRIES = {
   'layouts/_initial_section_creation_interstitial': './src/sites/studio/pages/layouts/_initial_section_creation_interstitial.js',
   'levels/_bubble_choice': './src/sites/studio/pages/levels/_bubble_choice.js',
   'levels/_content': './src/sites/studio/pages/levels/_content.js',
+  'levels/_list_react': './src/sites/studio/pages/levels/_list_react.js',
   'levels/_contract_match': './src/sites/studio/pages/levels/_contract_match.js',
   'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
   'levels/_dialog': './src/sites/studio/pages/levels/_dialog.js',

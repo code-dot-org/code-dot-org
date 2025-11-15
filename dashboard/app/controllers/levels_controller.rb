@@ -96,6 +96,49 @@ class LevelsController < ApplicationController
 
     filter_levels(params)
     @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
+
+    respond_to do |format|
+      format.html do
+        if params[:react] == 'true'
+          render 'levels/index_react'
+        else
+          render 'levels/index'  # existing HAML view (default behavior)
+        end
+      end
+      format.json do
+        render json: {
+          levels: @levels.map do |level|
+            {
+              id: level.id,
+              name: level.key,
+              type: level.class.name,
+              owner: level.user&.name,
+              permissions: {
+                can_edit: can?(:edit, level),
+                can_destroy: can?(:destroy, level),
+                can_clone: can?(:clone, level),
+                can_show: can?(:show, level)
+              },
+              urls: {
+                show: level_path(level),
+                edit: edit_level_path(level),
+                clone: clone_level_path(level),
+                destroy: level_path(level)
+              }
+            }
+          end,
+          pagination: {
+            current_page: @levels.current_page,
+            total_pages: @levels.total_pages,
+            total_count: @levels.total_count,
+            per_page: LEVELS_PER_PAGE
+          },
+          search_fields: @search_fields,
+          can_create: can?(:create, Level),
+          new_level_url: new_level_path
+        }
+      end
+    end
   end
 
   # GET /levels/get_filtered_levels/
@@ -500,15 +543,35 @@ class LevelsController < ApplicationController
     editor_experiment = Experiment.get_editor_experiment(current_user)
     @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
 
-    if params[:do_not_redirect]
-      render json: @new_level
-    else
-      render json: {redirect: edit_level_url(@new_level)}
+    respond_to do |format|
+      format.html do
+        if params[:do_not_redirect]
+          render json: @new_level
+        else
+          render json: {redirect: edit_level_url(@new_level)}
+        end
+      end
+      format.json do
+        render json: {
+          success: true,
+          level: {
+            id: @new_level.id,
+            name: @new_level.key,
+            edit_url: edit_level_url(@new_level)
+          }
+        }
+      end
     end
-  rescue ArgumentError => exception
-    render(status: :not_acceptable, plain: exception.message)
-  rescue ActiveRecord::RecordInvalid => exception
-    render(status: :not_acceptable, plain: exception)
+  rescue ArgumentError, ActiveRecord::RecordInvalid => exception
+    respond_to do |format|
+      format.html {render(status: :not_acceptable, plain: exception.message)}
+      format.json do
+        render json: {
+          success: false,
+          error: exception.message
+        }, status: :unprocessable_entity
+      end
+    end
   end
 
   # GET /levels/:id/embed_level
