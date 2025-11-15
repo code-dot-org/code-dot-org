@@ -49,7 +49,7 @@ class LtiV1Controller < ApplicationController
     begin
       write_cache(state_and_nonce[:state], state_and_nonce, 15.minutes)
     rescue => exception
-      LtiLogger.log_event('Error writing state and nonce to cache', {lti_integration_id: lti_integration[:id], exception: exception})
+      Clients::LtiLogger.log_event('Error writing state and nonce to cache', {lti_integration_id: lti_integration[:id], exception: exception})
       return render status: :internal_server_error
     end
 
@@ -101,7 +101,7 @@ class LtiV1Controller < ApplicationController
     begin
       cached_state_and_nonce = read_cache params[:state]
     rescue => exception
-      LtiLogger.log_event('Error reading state and nonce from cache', {exception: exception})
+      Clients::LtiLogger.log_event('Error reading state and nonce from cache', {exception: exception})
       return render status: :internal_server_error
     end
     if cached_state_and_nonce.nil? || (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
@@ -158,7 +158,9 @@ class LtiV1Controller < ApplicationController
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment_name = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_PLATFORM_CLAIM]&.[](:name)
       deployment = Queries::Lti.get_deployment(integration[:id], deployment_id)
-      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
+      # ClassLink uses a non-standard role claim key
+      role_key = decoded_jwt[Policies::Lti::CLASSLINK_ROLE_KEY].present? ? Policies::Lti::CLASSLINK_ROLE_KEY : Policies::Lti::LTI_ROLES_KEY
+      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[role_key])
 
       # If deployment name is nil, update it with the name from the JWT. This
       # could likely be removed after a period of time, as we also write the name
@@ -192,6 +194,7 @@ class LtiV1Controller < ApplicationController
           user: user,
           event_name: 'lti_user_signin',
           metadata: metadata,
+          session: session,
         )
 
         # If this is the user's first login, send them into the account linking flow
@@ -247,7 +250,7 @@ class LtiV1Controller < ApplicationController
         details: message,
       }
     )
-    LtiLogger.log_event(
+    Clients::LtiLogger.log_event(
       message,
       {
         reason: reason,
@@ -320,7 +323,7 @@ class LtiV1Controller < ApplicationController
       nrps_url = params[:nrps_url]
     end
 
-    lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
+    lti_advantage_client = Clients::LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
     begin
       nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
     rescue
@@ -392,73 +395,6 @@ class LtiV1Controller < ApplicationController
     end
   end
 
-  # POST /lti/v1/integrations
-  # Creates a new LtiIntegration
-  def create_integration
-    begin
-      params.require([:name, :client_id, :lms, :email])
-    rescue
-      flash.alert = I18n.t('lti.error.missing_params')
-      return redirect_to lti_v1_integrations_path
-    end
-
-    integration_name = params[:name]
-    client_id = params[:client_id]
-    platform_name = params[:lms]
-    admin_email = params[:email]
-
-    unless Policies::Lti::LMS_PLATFORMS.key?(platform_name.to_sym)
-      flash.alert = I18n.t('lti.error.unsupported_lms_type')
-      return redirect_to lti_v1_integrations_path
-    end
-
-    platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
-    issuer = platform_urls[:issuer]
-    auth_redirect_url = platform_urls[:auth_redirect_url]
-    jwks_url = platform_urls[:jwks_url]
-    access_token_url = platform_urls[:access_token_url]
-
-    existing_integration = Queries::Lti.get_lti_integration(issuer, client_id)
-    @integration_status = nil
-
-    if existing_integration.nil?
-      Services::Lti.create_lti_integration(
-        name: integration_name,
-        client_id: client_id,
-        issuer: issuer,
-        platform_name: platform_name,
-        auth_redirect_url: auth_redirect_url,
-        jwks_url: jwks_url,
-        access_token_url: access_token_url,
-        admin_email: admin_email
-      )
-
-      @integration_status = :created
-      LtiMailer.lti_integration_confirmation(admin_email).deliver_now
-
-      metadata = {
-        lms_name: platform_name,
-      }
-      Metrics::Events.log_event(
-        session: session,
-        event_name: 'lti_portal_registration_completed',
-        metadata: metadata,
-      )
-    end
-    render 'lti/v1/integration_status'
-  end
-
-  # GET /lti/v1/integrations
-  # Displays the onboarding portal for creating a new LTI Integration
-  def new_integration
-    @form_data = {}
-    @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.map do |key, value|
-      {platform: key, name: value[:name]}
-    end
-
-    render lti_v1_integrations_path
-  end
-
   # POST /lti/v1/upgrade_account
   def confirm_upgrade_account
     return unauthorized_status unless current_user
@@ -501,7 +437,7 @@ class LtiV1Controller < ApplicationController
   end
 
   private def log_unauthorized(event, attributes = {})
-    LtiLogger.log_event(event, attributes)
+    Clients::LtiLogger.log_event(event, attributes)
     unauthorized_status
   end
 

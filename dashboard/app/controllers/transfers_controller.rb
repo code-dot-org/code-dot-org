@@ -160,7 +160,7 @@ class TransfersController < ApplicationController
         end
       end
 
-      student.assign_script(new_section.script) if new_section.script
+      student.assign_script(new_section.script, new_section.unit_group) if new_section.script
     end
 
     render json: {}, status: :no_content

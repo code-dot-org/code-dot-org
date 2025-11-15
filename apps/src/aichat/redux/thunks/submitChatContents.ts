@@ -18,6 +18,7 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
+import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
   isCompletedChatMessage,
@@ -49,6 +50,7 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
+      responseCallback?: (response: string) => string;
     },
     thunkAPI
   ) => {
@@ -63,6 +65,7 @@ export const submitChatContents = createAsyncThunk(
       clientType,
       analyticsProperties,
       userAddedSelectionContext,
+      responseCallback,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -76,11 +79,27 @@ export const submitChatContents = createAsyncThunk(
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
+
+    // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
+    let chatMessageText = text;
+    let chatMessageDisplayText;
+
+    // If we have userAddedSelectionContext, display text and text to send to the model will be different.
+    if (userAddedSelectionContext?.length) {
+      // Add the user added selections to the text to send to the model.
+      chatMessageText +=
+        '\n\n' +
+        formatUserAddedSelectionContextForPrompt(userAddedSelectionContext);
+      // And use the original message for the display.
+      chatMessageDisplayText = text;
+    }
+
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: text,
+      chatMessageText,
+      chatMessageDisplayText,
       hiddenContext,
       assets,
       userAddedSelectionContext,
@@ -92,45 +111,73 @@ export const submitChatContents = createAsyncThunk(
     const startTime = Date.now();
 
     let messages: CompletedChatMessage[] = [];
+    const projectFileCount =
+      newUserMessage.userAddedSelectionContext?.length || 0;
+    const projectFileCountHtml =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.html')
+      ).length || 0;
+    const projectFileCountJs =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.js')
+      ).length || 0;
+    const projectFileCountCss =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.css')
+      ).length || 0;
+    const fileCount = newUserMessage.assets?.length || 0;
+    const fileCountPdf =
+      newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
+        .length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
+
+    const eventData = {
+      fileCount,
+      fileCountImage,
+      fileCountPdf,
+      projectFileCount,
+      projectFileCountHtml,
+      projectFileCountJs,
+      projectFileCountCss,
+      clientType,
+      ...analyticsProperties,
+    };
+
     try {
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .incrementCounter('Aichat.ChatCompletionRequestInitiated');
+
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
+      );
+
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
         modelParameters,
         aichatContext
       );
-
-      const fileCount = newUserMessage.assets?.length || 0;
-      const fileCountPdf =
-        newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
-          .length || 0;
-      const fileCountImage = fileCount - fileCountPdf;
+      // In milliseconds
+      const responseTime = Date.now() - startTime;
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
-          levelPath: window.location.pathname,
-          fileCount,
-          fileCountImage,
-          fileCountPdf,
-          clientType,
-          ...analyticsProperties,
+          ...eventData,
+          responseTime,
         })
       );
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .reportLoadTime('AichatModelResponseTime', responseTime, [
+          {
+            name: 'ModelId',
+            value: modelParameters.selectedModelId,
+          },
+        ]);
     } catch (error) {
       await handleChatCompletionError(error as Error, newUserMessage, dispatch);
       return;
     }
-
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
-        {
-          name: 'ModelId',
-          value: modelParameters.selectedModelId,
-        },
-      ]);
 
     thunkAPI.dispatch(clearChatMessagePending());
     // Send a report that the user has started the aichat level after successfully sending
@@ -138,6 +185,9 @@ export const submitChatContents = createAsyncThunk(
     // A teacher will view that the level is now in progress.
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
+      if (responseCallback && message.role === Role.ASSISTANT) {
+        message.chatMessageText = responseCallback(message.chatMessageText);
+      }
       dispatch(addChatEvent(message));
     });
   }

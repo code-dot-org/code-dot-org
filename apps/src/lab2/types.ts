@@ -8,6 +8,12 @@
 // The library data should definitely live elsewhere.
 
 import {Theme} from '@code-dot-org/component-library/common/contexts';
+import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {
+  ExcalidrawInitialDataState,
+  BinaryFileData,
+  DataURL,
+} from '@excalidraw/excalidraw/types/types';
 import type * as GoogleBlockly from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
@@ -40,6 +46,8 @@ export interface Channel {
   hidden?: boolean;
   thumbnailUrl?: string;
   frozen?: boolean;
+  // Certain project types (like bubble choice standalone projects) can have subprojects.
+  subprojects?: {level_id: number; project_id: string}[];
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.
@@ -71,7 +79,10 @@ export interface ProjectSources {
 
 export type LabConfig = {[key: string]: {[key: string]: string}};
 
-export type Source = BlocklySource | MultiFileSource | SketchlabSource;
+export type Source =
+  | BlocklySource
+  | MultiFileSource
+  | ExcalidrawSourceWithExternalFiles;
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -84,15 +95,42 @@ export interface UpdateSourceOptions extends SaveSourceOptions {
   tabId: string | null;
 }
 
-// -- SKETCH LAB -- //
-
-// Sketch Lab currently serialized/deserializes into a generic object
-export type SketchlabSource = {[key: string]: unknown};
-
 // -- BLOCKLY -- //
 
 // Blockly JSON is currently typed as a generic object
 export type BlocklySource = {[key: string]: unknown};
+
+// -- SKETCH LAB -- //
+
+export type SketchlabExternalFiles = Record<FileId, SketchlabProjectFile>;
+
+// By default, Excalidraw file entries require a dataURL field that has a
+// base64 encoding of the file. As we move to store images in S3, this field
+// is now optional.
+type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
+  dataURL?: DataURL;
+};
+
+type ExcalidrawFilesWithOptionalData = Record<
+  ExcalidrawElement['id'],
+  ExcalidrawFileWithOptionalData
+>;
+
+// We add the externalFiles property to Excalidraw's default state
+// to map each file to an external URL (a location in S3) where we store the image.
+// We override the files property with a version of their file type where the dataURL
+// is not required (ie, since we're storing the image in S3 instead of as a base64 encoded string).
+export type ExcalidrawSourceWithExternalFiles = Omit<
+  ExcalidrawInitialDataState,
+  'files'
+> & {
+  files?: ExcalidrawFilesWithOptionalData;
+  externalFiles?: SketchlabExternalFiles;
+};
+
+export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
+  uploadFailed?: boolean;
+};
 
 // -- MULTI-FILE -- //
 
@@ -195,7 +233,7 @@ export interface LevelProperties {
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   finishUrl?: string;
-  finishDialog?: string;
+  finishDialog?: ShareDialogId;
   offerBrowserTts?: boolean;
   useSecondaryFinishButton?: boolean;
   // Python Lab/Codebridge specific properties
@@ -206,6 +244,7 @@ export interface LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
+  aiTutorMode?: string;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
@@ -241,6 +280,7 @@ export interface BubbleChoiceLevelData {
   displayName: string;
   description: string;
   sublevels: BubbleChoiceSublevel[];
+  hideLetters: boolean;
 }
 
 // Bubble Choice specific property
@@ -250,6 +290,7 @@ export interface BubbleChoiceSublevel {
   level_id: string;
   thumbnail_url: string;
   url: string;
+  position: number;
 }
 
 // Addtional fields for videos that are linked as references in the
@@ -314,7 +355,8 @@ export type ProjectType =
   | 'playlab'
   | 'playlab_k1'
   | 'sports'
-  | 'basketball';
+  | 'basketball'
+  | 'music_dance_ai';
 
 export type AppName = keyof typeof lab2EntryPoints;
 
@@ -404,4 +446,7 @@ export interface LabProps<
 > {
   levelProperties: T;
   initialSources?: U;
+  channel?: Channel;
 }
+
+export type ShareDialogId = 'hoc2024' | 'hoai2025';

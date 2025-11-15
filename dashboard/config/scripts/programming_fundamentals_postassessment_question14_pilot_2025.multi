@@ -1,0 +1,29 @@
+name 'programming-fundamentals-postassessment-question14_pilot-2025'
+title 'Programming Fundamentals Post-Assessment: Question 14'
+
+wrong '![](https://images.code.org/b8fa10a2985e9477557db646cd23b4c0-image-1740511932621.png)'
+wrong '![](https://images.code.org/a2db9ab04825b0d5bfab575084e0e023-image-1740511941527.png)'
+wrong '![](https://images.code.org/64a9592301156c3f9ac283bef351cf67-image-1740511950147.png)'
+right '![](https://images.code.org/d56d0ab62391cb7bd6dac6d9058df996-image-1740511958096.png)'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What will be the output of the following program?
+
+```
+x = 0  
+while x < 5:  
+    if x % 2 == 0:  
+        print(x, "is even")  
+    else:  
+        print(x, "is odd")  
+    x += 1
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Introduction to Loops
+
+Lesson 9: Conditional Statements
+MARKDOWN

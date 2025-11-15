@@ -1,0 +1,11 @@
+name 'programming-fundamentals-lesson12-level9_2025-launch_pilot-2025'
+title 'Check Your Understanding'
+
+question 'When is it better to use an `if/else` statement instead of just an `if`?'
+
+wrong 'When you only want the program to do something if a condition is true.'
+wrong 'When you want the program to always run both blocks of code.'
+right 'When you want the program to make a choice between two different actions.'
+wrong 'When you want the code to skip the condition entirely.'
+
+allow_multiple_attempts false

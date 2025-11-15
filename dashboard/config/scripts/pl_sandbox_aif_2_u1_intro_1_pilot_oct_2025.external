@@ -1,0 +1,57 @@
+name 'pl_sandbox_aif-2-U1-Intro_1_pilot-oct-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="position: relative; text-align: center; color: white; margin-top: 20px;">
+    <img src="https://images.code.org/996d19e3951e755b8c32824921381030-image-1760978290993.png" alt="Banner image that says, Welcome to Teaching Introduction to Web Apps" style="width: 100%; border-radius: 10px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
+    </div>
+</div>
+<br>
+
+# Welcome!
+
+#### This professional learning module prepares you to teach **AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+
+___
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/36211eedb3698751fa5523b4dde93351-image-1760467094025.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/7f813b0aec7d472e470f94eb91471aa1-image-1760466945803.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/ddb463a06ccc88f5d7390a1f841a0f31-image-1760467013014.png" style="border-radius: 5pt; width: 32%;">
+</div>
+
+___
+
+
+#### **By the end of this professional learning module, you will be able to:**
+
+* #### Prepare to teach what a web app is and explain how it serves as the foundation for AI-assisted projects.
+
+* #### Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.
+
+* #### Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.
+
+
+* #### Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.
+
+
+
+## Take Our Professional Learning Pilot Pre-Survey
+
+#### Help us improve this professional learning unit by taking our pre-survey - it will take fewer than five minutes to complete.
+
+<div style="margin: 20px 0px">
+<a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfLdBI-EBU50WJjiRSufMJKxLcU2IECSMX6GaUtVq64ItTX1Q/viewform?usp=dialog" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
+</div>
+
+### **Suggested total time for this module:** 60 minutes
+
+
+
+
+ 
+
+
+MARKDOWN

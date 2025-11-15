@@ -45,3 +45,14 @@ export function getAssetUrl(
     'Either channel ID or level name must be provided for asset URL generation.'
   );
 }
+
+// Returns a string representation of a line reference when a user selects
+// lines from a text file to add to the user-added selection context.
+export const getLineReferenceText = (lineReference: {
+  start: number;
+  end: number;
+}) => {
+  return lineReference.start === lineReference.end
+    ? `(${lineReference.start})`
+    : `(${lineReference.start}-${lineReference.end})`;
+};

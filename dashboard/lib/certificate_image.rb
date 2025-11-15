@@ -148,7 +148,7 @@ class CertificateImage
 
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
-  def self.create_course_certificate_image(name, course = nil, donor_name = nil, course_title = nil, default_random_donor: false)
+  def self.create_course_certificate_image(name, course = nil, course_title = nil)
     name = ' ' if name.blank?
 
     course ||= ScriptConstants::HOC_NAME
@@ -160,7 +160,6 @@ class CertificateImage
       # only need to fill in student name
       vertical_offset = course == '20-hour' ? -125 : -120
       image = create_certificate_image2(path, name, y: vertical_offset)
-      donor_text_y_offset = 447
     else
       unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course)
       image = Magick::Image.read(path).first
@@ -282,22 +281,8 @@ class CertificateImage
         hours_string = format('%<duration>g', duration: total_hours_to_half_hour)
         apply_text(image, hours_string, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
       end
-      donor_text_y_offset = cert_text_constants[:donor_text_y_offset]
     end
 
-    if default_random_donor && !donor_name
-      donor = DashboardCdoDonor.get_random_donor_by_weight
-      donor_name = donor[:name_s]
-    end
-
-    if donor_name
-      # Note certificate_sponsor_message is in both the Dashboard and Pegasus string files.
-      sponsor_message = I18n.t('certificate_sponsor_message', sponsor_name: donor_name)
-      # The area in pixels which will display the sponsor message.
-      sponsor_area_width = 1400
-      sponsor_area_height = 35
-      apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, donor_text_y_offset, sponsor_area_width, sponsor_area_height)
-    end
     image
   end
 
@@ -338,6 +323,8 @@ class CertificateImage
         'MC_Hour_Of_Code_Certificate_Generation_Ai.png'
       when ScriptConstants::MINECRAFT_SHOW_NAME
         'MC_Hour_Of_Code_Certificate_Show.png'
+      when ScriptConstants::MINECRAFT_NIGHT_NAME
+        'MC_Hour_Of_AI_Certificate_First_Night.png'
       else
         'MC_Hour_Of_Code_Certificate.png'
       end
@@ -349,6 +336,8 @@ class CertificateImage
       'MC_Hour_Of_Code_Certificate_mee_timecraft.png'
     elsif course == 'mee_estate'
       'MC_Hour_Of_Code_Certificate_mee_estate.png'
+    elsif course == ScriptConstants::MIX_MOVE_AI_2025
+      'mix_move_hour_of_ai_certificate.png'
     elsif course == ScriptConstants::MUSIC_JAM_2024
       'music_hoc_certificate.png'
     elsif course == ScriptConstants::OCEANS_NAME
@@ -358,7 +347,7 @@ class CertificateImage
       # congrats and certificate pages (see csf_finish_url).
       '20hours_certificate.jpg'
     elsif course_type == 'hoc'
-      'hour_of_code_certificate.jpg'
+      'hour_of_ai_certificate.png'
     elsif course_type == 'pl'
       'self_paced_pl_certificate.png'
     else

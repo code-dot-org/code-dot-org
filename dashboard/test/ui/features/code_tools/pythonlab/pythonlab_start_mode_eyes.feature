@@ -7,7 +7,7 @@ Feature: Python Lab start mode eyes
 
 Background:
   Given I create a levelbuilder named "Penelope"
-  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1?noIntrojs=true"
   And I wait until element "#uitest-extra-links-button" is visible
   And I wait until element ".project_updated_at" contains text "Saved"
   And I press "uitest-extra-links-button"

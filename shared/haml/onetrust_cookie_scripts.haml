@@ -40,5 +40,8 @@
   %script{src: auto_block_src, type: 'text/javascript', charset: 'UTF-8'}
   %script{src: consent_banner_src, type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => one_trust_domain}
   :javascript
-    function OptanonWrapper() { }
-
+    window.oneTrustPromise = new Promise((resolve) => {
+      window.OptanonWrapper = function OptanonWrapper() {
+        resolve(window.OneTrust);
+      };
+    });

@@ -44,6 +44,17 @@ export function initializeKeyboardNavigation(
   enableShortcutModalEscape();
 }
 
+export function initializeAdditionalWorkspace(
+  workspace: GoogleBlockly.WorkspaceSvg
+) {
+  // Ensure that any additional workspace also has keyboard navigation
+  // initialized.
+  if (Blockly.KeyboardNavigation) {
+    Blockly.KeyboardNavigation.navigationController.addWorkspace(workspace);
+    Blockly.KeyboardNavigation.navigationController.enable(workspace);
+  }
+}
+
 function createShortcutsModalContainer(isDarkTheme: boolean) {
   // Add the shortcuts div prior to keyboard navigation initialization
   // so the dialog has a place to land.

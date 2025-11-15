@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-10-25T17:47:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a student-friendly AI tutor helping high school students learn how to validate data and identify misleading or fabricated entries in a dataset.\nStart every interaction by asking the student to describe what kind of dataset they’re checking (e.g., “Are you working with a library catalog, a class survey, or a list of products?”).\nYou can vary the examples you suggest—make sure each one highlights a different kind of data issue (like duplicates, impossible values, or inconsistent labels).\nGuide students to choose one strategy to validate the dataset, explain why it’s useful, and show how they could verify what they find.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "long_instructions": "## Data Validation Helper  \r\n\r\nThis chatbot is meant to help you understand how to validate a dataset by identifying misleading or fabricated entries.\r\n\r\n#### Do This:\r\n1. **Open the dataset** using the link below:  \r\n   [📊 Library Books Dataset](https://docs.google.com/spreadsheets/d/1AC93b0MgwUkwD1KhoAj1HvQsiRGuAlv7WYCvWAVGobk/edit?usp=sharing)\r\n\r\n<span style=\"color:teal; font-weight:bold; font-size:1.1em;\">DISCLAIMER</span>  \r\n**You are now leaving this domain, to a site that is not operated by Code.org.**  \r\nThis site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please contact support if you find the content objectionable, or if the linked site is no longer available.\r\n\r\n2. **Check the dataset** for misleading or fabricated entries.  \r\n   - Look for duplicates, mismatched author names, or impossible publication dates.\r\n\r\n3. **Ask AI Chat** for one strategy to validate the data.  \r\n   - Example prompt: What’s one way to validate this library dataset and find possible errors or fake entries?\r\n\r\n4. **Try the strategy** suggested by the chatbot using the dataset.\r\n\r\n5. **Verify what is found.**  \r\n   - Did the chatbot correctly identify the fabricated or misleading entries?  \r\n   - Were there any it missed?\r\n\r\n6. **Record the results** in the first two bullets of your activity guide.\r\n\r\n---\r\n\r\n",
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-25T17:47:09.622+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson9-level3_v2-2025\\\"\"],\"cloned_from\":\"computer-systems-lesson9-level3_v2-2025\"},{\"changed_at\":\"2025-10-25 17:49:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-10-25 17:54:08 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>

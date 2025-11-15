@@ -180,7 +180,8 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   async getThemeSettings(errorCallback) {
     try {
       const themeResponse = await HttpClient.fetchJson(
-        '/user_preference/theme'
+        '/user_preference/theme',
+        {headers: {Accept: 'application/json'}}
       );
       return themeResponse.value?.theme;
     } catch (error) {

@@ -1204,18 +1204,18 @@ class Unit < ApplicationRecord
 
   def hoc_finish_url
     if name == Unit::HOC_2013_NAME
-      CDO.code_org_url '/api/hour/finish'
+      CDO.studio_url('/api/hour/finish')
     else
-      CDO.code_org_url "/api/hour/finish/#{name}"
+      CDO.studio_url("/api/hour/finish/#{name}")
     end
   end
 
   def csf_finish_url
     if name == Unit::TWENTY_HOUR_NAME
       # Rename from 20-hour to public facing Accelerated
-      CDO.code_org_url "/congrats/#{Unit::ACCELERATED_NAME}"
+      ApplicationController.helpers.course_completion_certificate_url(course_name: Unit::ACCELERATED_NAME)
     else
-      CDO.code_org_url "/congrats/#{name}"
+      ApplicationController.helpers.course_completion_certificate_url(course_name: name)
     end
   end
 
@@ -1223,10 +1223,7 @@ class Unit < ApplicationRecord
     return hoc_finish_url if hoc_or_hoai?
     return csf_finish_url if csf?
     course = unit_group_unit&.unit_group || get_original_unit_group
-    if course
-      return CDO.code_org_url "/congrats/#{course.name}"
-    end
-    CDO.code_org_url "/congrats/#{name}"
+    ApplicationController.helpers.course_completion_certificate_url(course_name: course ? course.name : name)
   end
 
   # A unit that the general public can assign. Has been soft or
@@ -1322,8 +1319,8 @@ class Unit < ApplicationRecord
         student_detail_progress_view: student_detail_progress_view?,
         project_widget_visible: project_widget_visible?,
         project_widget_types: project_widget_types,
-        teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-        student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        teacher_resources: sorted_user_facing_resources(resources),
+        student_resources: sorted_user_facing_resources(student_resources),
         lesson_extras_available: lesson_extras_available,
         hasUnnumberedLessons: has_unnumbered_lessons?,
         has_verified_resources: has_verified_resources?,
@@ -1396,8 +1393,8 @@ class Unit < ApplicationRecord
       unitName: title_for_display(unit_group_unit: unit_group_unit),
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
-      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      teacher_resources: sorted_user_facing_resources(resources),
+      student_resources: sorted_user_facing_resources(student_resources),
       numberedUnits: numbered_units,
       hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: course_version_year,
@@ -1939,5 +1936,9 @@ class Unit < ApplicationRecord
   private def teacher_feedback_enabled?
     initiative = get_course_version&.course_offering&.marketing_initiative
     TEACHER_FEEDBACK_INITIATIVES.include? initiative
+  end
+
+  private def sorted_user_facing_resources(resources)
+    resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown)
   end
 end

@@ -22,6 +22,11 @@ const SET_HAS_SEEN_HOMEPAGE_WELCOME =
 const SET_AI_RUBRICS_DISABLED = 'currentUser/SET_AI_RUBRICS_DISABLED';
 const SET_AI_DIFFERENTIATION_ENABLED =
   'currentUser/SET_AI_DIFFERENTIATION_ENABLED';
+const SET_SHOW_AI_TA_LESSON_SUMMARY =
+  'currentUser/SET_SHOW_AI_TA_LESSON_SUMMARY';
+const SET_HAS_COMPLETED_PERSONALIZATION_QUIZ =
+  'currentUser/SET_HAS_COMPLETED_PERSONALIZATION_QUIZ';
+const SET_AUDIO_SUMMARY_TRANSCRIPT = 'currentUser/SET_AUDIO_SUMMARY_TRANSCRIPT';
 const SET_PROGRESS_TABLE_V2_CLOSED_BETA =
   'currentUser/SET_PROGRESS_TABLE_V2_CLOSED_BETA';
 const SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED =
@@ -106,6 +111,19 @@ export const setAiDifferentiationEnabled = aiDifferentiationEnabled => ({
   type: SET_AI_DIFFERENTIATION_ENABLED,
   aiDifferentiationEnabled,
 });
+export const setShowAITALessonSummary = showAITALessonSummary => ({
+  type: SET_SHOW_AI_TA_LESSON_SUMMARY,
+  showAITALessonSummary,
+});
+export const setHasCompletedPersonalizationQuiz =
+  hasCompletedPersonalizationQuiz => ({
+    type: SET_HAS_COMPLETED_PERSONALIZATION_QUIZ,
+    hasCompletedPersonalizationQuiz,
+  });
+export const setAudioSummaryTranscript = audioSummaryTranscript => ({
+  type: SET_AUDIO_SUMMARY_TRANSCRIPT,
+  audioSummaryTranscript,
+});
 export const setUserCreatedAt = userCreatedAt => ({
   type: SET_USER_CREATED_AT,
   userCreatedAt,
@@ -124,6 +142,9 @@ const initialState = {
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
   aiDifferentiationEnabled: null,
+  showAITALessonSummary: false,
+  hasCompletedPersonalizationQuiz: false,
+  audioSummaryTranscript: [],
   isBackgroundMusicMuted: false,
   isSortedByFamilyName: false,
   isLti: undefined,
@@ -243,6 +264,24 @@ export default function currentUser(state = initialState, action) {
       aiDifferentiationEnabled: action.aiDifferentiationEnabled,
     };
   }
+  if (action.type === SET_SHOW_AI_TA_LESSON_SUMMARY) {
+    return {
+      ...state,
+      showAITALessonSummary: action.showAITALessonSummary,
+    };
+  }
+  if (action.type === SET_HAS_COMPLETED_PERSONALIZATION_QUIZ) {
+    return {
+      ...state,
+      hasCompletedPersonalizationQuiz: action.hasCompletedPersonalizationQuiz,
+    };
+  }
+  if (action.type === SET_AUDIO_SUMMARY_TRANSCRIPT) {
+    return {
+      ...state,
+      audioSummaryTranscript: action.audioSummaryTranscript,
+    };
+  }
   if (action.type === SET_USER_CREATED_AT) {
     return {
       ...state,
@@ -270,6 +309,9 @@ export default function currentUser(state = initialState, action) {
       show_progress_table_v2,
       ai_rubrics_disabled,
       ai_differentiation_enabled,
+      showAITALessonSummary,
+      hasCompletedPersonalizationQuiz,
+      audioSummaryTranscript,
       progress_table_v2_closed_beta,
       is_lti,
       date_progress_table_invitation_last_delayed,
@@ -314,6 +356,9 @@ export default function currentUser(state = initialState, action) {
       showProgressTableV2: show_progress_table_v2,
       aiRubricsDisabled: ai_rubrics_disabled,
       aiDifferentiationEnabled: ai_differentiation_enabled,
+      showAITALessonSummary: showAITALessonSummary,
+      hasCompletedPersonalizationQuiz: hasCompletedPersonalizationQuiz,
+      audioSummaryTranscript: audioSummaryTranscript,
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,

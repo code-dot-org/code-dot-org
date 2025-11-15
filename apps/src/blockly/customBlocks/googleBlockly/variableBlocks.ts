@@ -42,8 +42,8 @@ export function flyoutCategory(workspace: GoogleBlockly.WorkspaceSvg) {
 const getNewVariableButtonWithCallback = (
   workspace: GoogleBlockly.WorkspaceSvg
 ) => {
-  const callbackKey = 'newVariableCallback';
-  workspace.registerButtonCallback(callbackKey, () => {
+  const callbackkey = 'newVariableCallback';
+  workspace.registerButtonCallback(callbackkey, () => {
     Blockly.FieldVariable.variableNamePrompt({
       promptText: commonI18n.renameThisPromptTitle(),
       confirmButtonLabel: commonI18n.create(),
@@ -57,7 +57,7 @@ const getNewVariableButtonWithCallback = (
   return {
     kind: 'button',
     text: commonI18n.createBlocklyVariable(),
-    callbackKey,
+    callbackkey,
   };
 };
 

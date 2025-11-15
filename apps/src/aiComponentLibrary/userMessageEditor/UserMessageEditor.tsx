@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
-import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
+import React, {useState, useMemo, useEffect, useRef} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -13,12 +13,15 @@ const MAX_MESSAGE_LENGTH = 10000;
  */
 
 export interface UserMessageEditorProps {
+  userMessage: string;
+  onChange: (userMessage: string) => void;
   onSubmit: (userMessage: string) => void;
   disabled: boolean;
   showSubmitLabel?: boolean;
   /** Custom className for editor container */
   editorContainerClassName?: string;
   customPlaceholder?: string;
+  children?: React.ReactNode;
 }
 
 const UserMessageEditor = React.forwardRef<
@@ -27,16 +30,21 @@ const UserMessageEditor = React.forwardRef<
 >(
   (
     {
+      userMessage,
+      onChange,
       onSubmit,
       disabled,
       editorContainerClassName,
       customPlaceholder,
       showSubmitLabel = false,
+      children,
     },
     externalInputRef
   ) => {
     const internalInputRef = useRef<HTMLTextAreaElement | null>(null);
-    const [userMessage, setUserMessage] = useState<string>('');
+    // Track focus state on textarea to apply focus styles to container since
+    // :focus-visible doesn't work on divs and :has() is not supported in Firefox.
+    const [focused, setFocused] = useState(false);
 
     const userMessageIsEmpty = useMemo(() => {
       return userMessage.trim() === '';
@@ -45,17 +53,9 @@ const UserMessageEditor = React.forwardRef<
     const handleKeyPress = (e: React.KeyboardEvent, userMessage: string) => {
       if (e.key === 'Enter' && !e.shiftKey && userMessage.trim() !== '') {
         e.preventDefault(); // Prevent the text box from having just a blank line.
-        handleSubmit(userMessage);
+        onSubmit(userMessage);
       }
     };
-
-    const handleSubmit = useCallback(
-      (userMessage: string) => {
-        onSubmit(userMessage);
-        setUserMessage('');
-      },
-      [onSubmit]
-    );
 
     useEffect(() => {
       if (!internalInputRef.current) {
@@ -67,14 +67,16 @@ const UserMessageEditor = React.forwardRef<
         internalInputRef.current.scrollHeight + 2 + 'px'; // Add a couple of pixels to avoid scrollbars.
     }, [userMessage]);
 
-    const icon = {iconName: 'paper-plane'};
+    const icon = {iconName: 'arrow-up'};
 
     return (
       <div
         className={classnames(
           moduleStyles.editorContainer,
+          focused && moduleStyles.focused,
           editorContainerClassName
         )}
+        onClick={() => internalInputRef.current?.focus()}
       >
         <textarea
           ref={node => {
@@ -92,20 +94,27 @@ const UserMessageEditor = React.forwardRef<
           placeholder={
             customPlaceholder || commonI18n.aiUserMessagePlaceholder()
           }
-          onChange={e => setUserMessage(e.target.value)}
+          onChange={e => onChange(e.target.value)}
           value={userMessage}
           disabled={disabled}
           onKeyDown={e => handleKeyPress(e, userMessage)}
           maxLength={MAX_MESSAGE_LENGTH}
           rows={1}
+          aria-label={commonI18n.aiUserMessagePlaceholder()}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
         />
-
-        <div className={moduleStyles.endSingleItemContainer}>
+        <div className={moduleStyles.chatActionsContainer}>
+          {children}
           <Button
             aria-label={commonI18n.submit()}
             id="uitest-chat-submit"
             isIconOnly={!showSubmitLabel}
-            onClick={() => handleSubmit(userMessage)}
+            size="xs"
+            onClick={e => {
+              e.stopPropagation();
+              onSubmit(userMessage);
+            }}
             disabled={disabled || !userMessage || userMessageIsEmpty}
             text={showSubmitLabel ? commonI18n.submit() : undefined}
             {...{[showSubmitLabel ? 'iconLeft' : 'icon']: icon}}

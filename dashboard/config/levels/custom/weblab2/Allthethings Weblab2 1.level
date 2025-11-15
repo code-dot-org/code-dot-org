@@ -9,10 +9,7 @@
     "encrypted": "false",
     "long_instructions": "Add **html** pages and preview them in the right pane.\r\n\r\nAdd **css** pages (and link them to your html).\r\n\r\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)\r\n\r\nThis level uses AI Tutor \"Outline\" mode and is configured to end all responses with \"Have a good day!\"",
     "hide_share_and_remix": "false",
-    "ai_tutor_available": true,
-    "available_ai_tutor_modes": [
-      "outline"
-    ],
+    "ai_tutor_mode": "outline",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "widget_view": "false",

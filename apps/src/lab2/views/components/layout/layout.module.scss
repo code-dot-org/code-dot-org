@@ -1,13 +1,10 @@
 @use 'variables.scss' as variables;
 
 .layoutContainer {
+  overflow: hidden;
   grid-area: content;
   display: flex;
   flex-direction: row;
-}
-
-.containerWithFooter .layoutContainer {
-  overflow: hidden;
 }
 
 .defaultContainer .layoutContainer {
@@ -26,21 +23,6 @@
 
 .flexShrink0 {
   flex-shrink: 0;
-}
-
-.footerArea {
-  grid-area: footer;
-  background-color: var(--background-neutral-tertiary);
-}
-
-.containerWithFooter {
-  display: grid;
-  grid-template-rows: 1fr 56px;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    'content'
-    'footer';
-  height: 100%;
 }
 
 .defaultContainer {

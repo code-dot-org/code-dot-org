@@ -26,8 +26,10 @@ export interface CourseOffering {
   course_version_path?: string;
   course_version_id?: number;
   course_id?: number;
+  course_offering_id?: number;
   script_id?: number;
   self_paced_pl_course_offering_path?: string;
+  self_paced_pl_course_offering_id?: number;
   available_resources?: Record<string, string>;
   facilitated_workshops?: CourseOfferingFacilitatedWorkshop[];
 }

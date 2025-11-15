@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-05 21:12:33 UTC",
+    "serialized_at": "2025-10-03 04:12:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1706,7 +1706,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Evaluative Assessment:** Assessment levels appear near the end of a lesson and reflect the key skills students have been building. If you only check one level, this is the one. These can be reviewed after class to help guide your next steps.\n\nFor example:\n\n- If many students struggled, consider starting the next class with a quick review and revisit a skipped practice level.\n\n- If most students succeeded, continue with your planned warm-up or encourage students to try a skipped create level."
+            "markdown": "**Evaluative Assessment:** Assessment levels appear near the end of a lesson and reflect the key skills students have been building. If you only check one level, this is the one. These can be reviewed after class to help guide your next steps. For example:\n\n- If many students struggled, consider starting the next class with a quick review and revisit a skipped practice level.\n- If most students succeeded, continue with your planned warm-up or encourage students to try a skipped create level.\n\n**Rubrics & Feedback:** Assessment levels have rubrics where you can provide feedback to students. Use the TA icon to open the evaluation tool and give feedback to students. [Learn more by watching this video overview](https://www.loom.com/share/9e86438769e940afbafa9efc602a12e3)."
           }
         ]
       },
@@ -1852,7 +1852,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels.\n- Use the tips and guiding questions on the [Sequencing Cheat Sheet.](https://drive.google.com/file/d/1wO6RJOBslmoDm2Wwua50BW2v6XpShcuV/view)"
+            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels.\n- Use the tips and guiding questions on the [Sequencing Cheat Sheet.](https://drive.google.com/file/d/1wO6RJOBslmoDm2Wwua50BW2v6XpShcuV/view)\n\n**Rubrics & Feedback:** Assessment levels have rubrics where you can provide feedback to students. Use the TA icon to open the evaluation tool and give feedback to students. [Learn more by watching this video overview](https://www.loom.com/share/9e86438769e940afbafa9efc602a12e3)."
           }
         ]
       },
@@ -2148,22 +2148,16 @@
       "key": "f9f594c4-d5bb-4803-ba08-25933acc4446",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Students who finish their walk-up songs can participate in this Partner Game:\n- Tell your partners who your three characters are and describe the character's personalities.\n- Play one of your Walk-Up songs without saying which character it belongs to.\n- Allow your partner to match the song to a character.\n- Ask them to explain their choice.\n- If they guess wrong, listen to their explanation and adjust your code to make the song fit the character better.\n- Repeat with new partners until someone guesses all three correctly!",
-        "progression_name": "(Optional) Partner Game"
+        "progression_name": "Submit Your Project!",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Rubrics & Feedback:** The rubric for this project is also available within the levels via the Rubric panel. Students can view the rubric at any time. Once they submit their project, you can use the TA icon to evaluate student work and provide feedback. [Learn more by watching this video overview of Rubrics and Projects](https://www.loom.com/share/e1d8f8361cbc4ae58566dacf81425c61)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f9f594c4-d5bb-4803-ba08-25933acc4446",
-        "lesson_activity.key": "580a7631-8c4a-4b38-8de6-83deaf3d3d6d"
-      }
-    },
-    {
-      "key": "28fb0ac1-3391-4a57-92b6-7bc3b1e8f021",
-      "position": 7,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "28fb0ac1-3391-4a57-92b6-7bc3b1e8f021",
         "lesson_activity.key": "580a7631-8c4a-4b38-8de6-83deaf3d3d6d"
       }
     },
@@ -2321,7 +2315,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the create levels they may have skipped."
+            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the create levels they may have skipped.\n\n**Rubrics & Feedback:** Assessment levels have rubrics where you can provide feedback to students. Use the TA icon to open the evaluation tool and give feedback to students. [Learn more by watching this video overview](https://www.loom.com/share/9e86438769e940afbafa9efc602a12e3)."
           }
         ]
       },
@@ -2502,7 +2496,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the challenge levels they may have skipped."
+            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the challenge levels they may have skipped.\n\n**Rubrics & Feedback:** Assessment levels have rubrics where you can provide feedback to students. Use the TA icon to open the evaluation tool and give feedback to students. [Learn more by watching this video overview](https://www.loom.com/share/9e86438769e940afbafa9efc602a12e3)."
           }
         ]
       },
@@ -2744,6 +2738,23 @@
       }
     },
     {
+      "key": "7a9be3a6-b443-4794-aa7c-6c4e140c4892",
+      "position": 5,
+      "properties": {
+        "progression_name": "Submit your Project!",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Rubrics & Feedback:** The rubric for this project is also available within the levels via the Rubric panel. Students can view the rubric at any time. Once they submit their project, you can use the TA icon to evaluate student work and provide feedback. [Learn more by watching this video overview of Rubrics and Projects](https://www.loom.com/share/e1d8f8361cbc4ae58566dacf81425c61)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7a9be3a6-b443-4794-aa7c-6c4e140c4892",
+        "lesson_activity.key": "e2deaa1c-9678-4961-ad37-33aee7de3e2f"
+      }
+    },
+    {
       "key": "1895b19d-78a5-4a6e-b509-5e74c83bef58",
       "position": 1,
       "properties": {
@@ -2884,7 +2895,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the create levels they may have skipped."
+            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the create levels they may have skipped.\n\n**Rubrics & Feedback:** Assessment levels have rubrics where you can provide feedback to students. Use the TA icon to open the evaluation tool and give feedback to students. [Learn more by watching this video overview](https://www.loom.com/share/9e86438769e940afbafa9efc602a12e3)."
           }
         ]
       },
@@ -3057,7 +3068,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the create levels they may have skipped."
+            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the create levels they may have skipped.\n\n**Rubrics & Feedback:** Assessment levels have rubrics where you can provide feedback to students. Use the TA icon to open the evaluation tool and give feedback to students. [Learn more by watching this video overview](https://www.loom.com/share/9e86438769e940afbafa9efc602a12e3)."
           }
         ]
       },
@@ -3294,7 +3305,13 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Approve:** As students complete their project plan, circulate to give them a quick review and a thumbs-up. Hand them the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0) once their plan is solid. Students do not need to stop and wait for you.",
-        "progression_name": "Genre Mashup"
+        "progression_name": "Genre Mashup",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Rubrics & Feedback:** The rubric for this project is also available within the levels via the Rubric panel. Students can view the rubric at any time. Once they submit their project, you can use the TA icon to evaluate student work and provide feedback. [Learn more by watching this video overview of Rubrics and Projects](https://www.loom.com/share/e1d8f8361cbc4ae58566dacf81425c61)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e70fee4c-8895-4cc0-a6f2-de5ef184be1f",
@@ -4414,12 +4431,12 @@
       "chapter": 43,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "test-music-lab-mini-project-walk-4_v2"
         ],
-        "progression": "(Optional) Partner Game"
+        "progression": "Submit Your Project!"
       },
       "bonus": false,
       "seeding_key": {
@@ -5537,6 +5554,28 @@
     },
     {
       "chapter": 88,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Submit your Project!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-submit"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025",
+        "activity_section.key": "7a9be3a6-b443-4794-aa7c-6c4e140c4892"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-gif-submit"
+      ]
+    },
+    {
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5561,7 +5600,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5586,7 +5625,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5611,7 +5650,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5636,7 +5675,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5661,7 +5700,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5686,7 +5725,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5711,7 +5750,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5736,7 +5775,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5761,7 +5800,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5786,7 +5825,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5811,7 +5850,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5836,7 +5875,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5861,7 +5900,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5886,7 +5925,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5911,7 +5950,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -5936,7 +5975,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -5961,7 +6000,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5986,7 +6025,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -6011,7 +6050,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -6036,7 +6075,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -6061,7 +6100,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6086,7 +6125,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6111,7 +6150,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6136,7 +6175,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6161,7 +6200,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6186,7 +6225,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6211,7 +6250,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6236,7 +6275,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6261,7 +6300,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6286,7 +6325,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -6311,7 +6350,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6336,7 +6375,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6361,7 +6400,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6386,10 +6425,10 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "music-lab-genre-project_v2"
@@ -6411,7 +6450,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6436,7 +6475,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7508,6 +7547,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "test-music-lab-mini-project-gif-submit",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-submit"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025",
+        "activity_section.key": "7a9be3a6-b443-4794-aa7c-6c4e140c4892"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "music-lab-functions-explore-predict_v2",
         "script_level.level_keys": [
           "music-lab-functions-explore-predict_v2"
@@ -8019,6 +8070,18 @@
       },
       "seeding_key": {
         "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "Assessing Student Work - Feedback & Rubrics",
+      "url": "https://www.loom.com/share/9891fc58c7674817ad07b74ea02c2e6b",
+      "key": "assessing_student_work_-_feedback_rubrics",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "assessing_student_work_-_feedback_rubrics"
       }
     },
     {
@@ -8756,6 +8819,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "assessing_student_work_-_feedback_rubrics",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "musical_terms_glossary",
         "script.name": "programming-with-music-lab-2025"
       }
@@ -9231,6 +9300,30 @@
       }
     },
     {
+      "level_name": "test-music-lab-mini-project-gif-submit",
+      "seeding_key": {
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "level_name": "test-music-lab-mini-project-walk-4_v2",
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "level_name": "music-lab-genre-project_v2",
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
       "level_name": "test-music-lab-sequence-explore-evaluative_v2",
       "seeding_key": {
         "lesson.key": "Sequencing - Explore",
@@ -9262,6 +9355,32 @@
       }
     },
     {
+      "key": "274072bb-5fef-4c6a-9e58-b911c871e09a",
+      "position": 2,
+      "learning_goal": "Functions",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "274072bb-5fef-4c6a-9e58-b911c871e09a",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "2911ffbb-e26f-4e3f-bdd8-922bca608860",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "2911ffbb-e26f-4e3f-bdd8-922bca608860",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
       "key": "322f5c88-57f0-4843-a4c3-7c8468d3238f",
       "position": 1,
       "learning_goal": "Loops",
@@ -9288,6 +9407,19 @@
       }
     },
     {
+      "key": "48473dea-fbcf-40e4-9d09-21bd1ffead07",
+      "position": 3,
+      "learning_goal": "Planning & Alignment",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "48473dea-fbcf-40e4-9d09-21bd1ffead07",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
       "key": "5234bdb7-0b1a-4f86-859e-a9c03e08750d",
       "position": 1,
       "learning_goal": "Functions",
@@ -9296,6 +9428,19 @@
       "seeding_key": {
         "learning_goal.key": "5234bdb7-0b1a-4f86-859e-a9c03e08750d",
         "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "5a6d766c-7e0b-49b3-bec0-4cde08449556",
+      "position": 1,
+      "learning_goal": "Sequencing",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "5a6d766c-7e0b-49b3-bec0-4cde08449556",
+        "lesson.key": "Mini Project: Walk-Up Songs",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025"
       }
@@ -9314,6 +9459,58 @@
       }
     },
     {
+      "key": "7240bcd0-3f5b-4034-b3ab-74cfdfe4f0e0",
+      "position": 4,
+      "learning_goal": "Planning & Alignment",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "7240bcd0-3f5b-4034-b3ab-74cfdfe4f0e0",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "82a39fa0-e622-47ee-b0b6-3101f2132390",
+      "position": 3,
+      "learning_goal": "Planning & Alignment",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "82a39fa0-e622-47ee-b0b6-3101f2132390",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "8650f810-89ff-4ff8-938e-d749f65a85cd",
+      "position": 2,
+      "learning_goal": "Creativity and Originality",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "8650f810-89ff-4ff8-938e-d749f65a85cd",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "971417f3-eba5-4c43-b0e3-7d29b078e4da",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "971417f3-eba5-4c43-b0e3-7d29b078e4da",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
       "key": "cb94a8ad-ecc8-4640-b52b-36587e67d252",
       "position": 1,
       "learning_goal": "Sequencing",
@@ -9322,6 +9519,32 @@
       "seeding_key": {
         "learning_goal.key": "cb94a8ad-ecc8-4640-b52b-36587e67d252",
         "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "d43e38df-232a-45b2-bdb2-2873bf909d9c",
+      "position": 3,
+      "learning_goal": "Creativity and Originality",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "d43e38df-232a-45b2-bdb2-2873bf909d9c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "f7aa091d-512d-4916-8d78-f0f1d14f96d1",
+      "position": 2,
+      "learning_goal": "Creativity and Originality",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "f7aa091d-512d-4916-8d78-f0f1d14f96d1",
+        "lesson.key": "Mini Project: Cat GIF Loops",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025"
       }
@@ -9372,6 +9595,102 @@
         "understanding": 3,
         "learning_goal.key": "1620ba34-df1e-4135-890c-4b62d85fa569",
         "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use functions, but the implementation may be very basic or not implemented properly. For example: using functions for small chunks of code without a clear purpose, or functions have unclear and misleading names\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "274072bb-5fef-4c6a-9e58-b911c871e09a",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Functions are used to make code more efficient by replacing large chunks of code with a single function call. For example: using a function for the \"verse\" or \"chorus\" of a song\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "274072bb-5fef-4c6a-9e58-b911c871e09a",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Functions are used strategically in combination with each other, where smaller functions are called inside larger functions -- AND -- The majority of the \"when run\" code are function calls. For example: making a function for the vocals and making a function for the instruments and calling them together in a “choir” function.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "274072bb-5fef-4c6a-9e58-b911c871e09a",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Functions are used strategically in combination with each other, where smaller functions are called inside larger functions -- AND -- At least one function is called in multiple places in the song -- AND -- The majority of the \"when run\" code are function calls. For example: creating a function for \"backingBeats\" and then using this function in both the \"verse\" and \"chorus\" functions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "274072bb-5fef-4c6a-9e58-b911c871e09a",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use loops, but the implementation may be very basic or not implemented properly. For example, play sequential blocks with duplicate tracks are still used when a repeat block could be used instead",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "2911ffbb-e26f-4e3f-bdd8-922bca608860",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Loops are used to make code more efficient by repeating tracks of different lengths.  For example: using loops to play beat and bass backing tracks together, where each track has a different length\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "2911ffbb-e26f-4e3f-bdd8-922bca608860",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Loops are used strategically in combination with sequencing blocks, such as repeating tracks underneath vocals in sequence -- AND -- At least 1 nested loop is used in the song",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "2911ffbb-e26f-4e3f-bdd8-922bca608860",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Loops are used strategically with sequencing blocks and rests to create offset, layered tracks -- AND -- At least 1 nested loop is used in the song. For example: a song where multiple repeated tracks start and stop at different times.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "2911ffbb-e26f-4e3f-bdd8-922bca608860",
+        "lesson.key": "Project: Genre Mash-Up",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025"
       }
@@ -9474,6 +9793,54 @@
     },
     {
       "understanding": 0,
+      "teacher_description": "The planning guide is blank or the final product does not match the project task at all",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "48473dea-fbcf-40e4-9d09-21bd1ffead07",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The final product does not align well with the task goal OR The planning steps are incomplete.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "48473dea-fbcf-40e4-9d09-21bd1ffead07",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Most planning and reflection steps are completed, and the final product mostly aligns with the defined goal, though a few elements may lack clear alignment.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "48473dea-fbcf-40e4-9d09-21bd1ffead07",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "All planning and reflection steps are complete and documented. The final product clearly meets the defined goal",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "48473dea-fbcf-40e4-9d09-21bd1ffead07",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
       "teacher_description": "The song does not use any functions",
       "ai_prompt": "",
       "seeding_key": {
@@ -9516,6 +9883,54 @@
         "understanding": 3,
         "learning_goal.key": "5234bdb7-0b1a-4f86-859e-a9c03e08750d",
         "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use sequencing blocks, but the implementation may be very basic or not implemented properly. For example, all tracks play sequentially one after the other.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "5a6d766c-7e0b-49b3-bec0-4cde08449556",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Sequencing blocks are used multiple times to play several tracks together. Tracks with different lengths are played together. For example: playing a 2-measure beat twice so it aligns with a 4-measure vocal",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "5a6d766c-7e0b-49b3-bec0-4cde08449556",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Sequencing blocks are used multiple times to play several tracks together. Tracks with different lengths are played together -- AND -- Rests are used strategically to offset when tracks start. For example: delaying the start of a 1-measure effect until the end of a vocal lyric.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "5a6d766c-7e0b-49b3-bec0-4cde08449556",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Sequencing blocks are used multiple times to play several tracks together. Tracks with different lengths are played together -- AND -- Rests are used strategically to offset when tracks start -- AND -- Multiple effects are used to change how tracks sound. For example: lowering the volume on background beats and then resetting the volume and applying a delay to a vocal\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "5a6d766c-7e0b-49b3-bec0-4cde08449556",
+        "lesson.key": "Mini Project: Walk-Up Songs",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025"
       }
@@ -9570,6 +9985,198 @@
     },
     {
       "understanding": 0,
+      "teacher_description": "The planning guide is blank or the final product does not match the project task at all",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "7240bcd0-3f5b-4034-b3ab-74cfdfe4f0e0",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The final product does not align well with the task goal OR The planning steps are incomplete.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "7240bcd0-3f5b-4034-b3ab-74cfdfe4f0e0",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Most planning and reflection steps are completed, and the final product mostly aligns with the defined goal, though a few elements may lack clear alignment.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "7240bcd0-3f5b-4034-b3ab-74cfdfe4f0e0",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "All planning and reflection steps are complete and documented. The final product clearly meets the defined goal",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "7240bcd0-3f5b-4034-b3ab-74cfdfe4f0e0",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The planning guide is blank or the final product does not match the project task at all",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "82a39fa0-e622-47ee-b0b6-3101f2132390",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The final product does not align well with the task goal OR The planning steps are incomplete.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "82a39fa0-e622-47ee-b0b6-3101f2132390",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Most planning and reflection steps are completed, and the final product mostly aligns with the defined goal, though a few elements may lack clear alignment.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "82a39fa0-e622-47ee-b0b6-3101f2132390",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "All planning and reflection steps are complete and documented. The final product clearly meets the defined goal",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "82a39fa0-e622-47ee-b0b6-3101f2132390",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project has not started.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "8650f810-89ff-4ff8-938e-d749f65a85cd",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Shows limited creativity, relying on limited sound use and limited experimentation to find interesting combinations or tracks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "8650f810-89ff-4ff8-938e-d749f65a85cd",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Demonstrates some creative thinking by combining musical elements in a thoughtful or experimental way, though the structure of the song may still feel unoriginal or expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "8650f810-89ff-4ff8-938e-d749f65a85cd",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Demonstrates innovative and unique approaches, effectively blending musical elements and song structure in unexpected ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "8650f810-89ff-4ff8-938e-d749f65a85cd",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use loops, but the implementation may be very basic or not implemented properly. For example, play sequential blocks with duplicate tracks are still used when a repeat block could be used instead",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "971417f3-eba5-4c43-b0e3-7d29b078e4da",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Loops are used to make code more efficient by repeating tracks of different lengths.  For example: using loops to play beat and bass backing tracks together, where each track has a different length\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "971417f3-eba5-4c43-b0e3-7d29b078e4da",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Loops are used strategically in combination with sequencing blocks, such as repeating tracks underneath vocals in sequence -- AND -- At least 1 nested loop is used in the song",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "971417f3-eba5-4c43-b0e3-7d29b078e4da",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Loops are used strategically with sequencing blocks and rests to create offset, layered tracks -- AND -- At least 1 nested loop is used in the song. For example: a song where multiple repeated tracks start and stop at different times.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "971417f3-eba5-4c43-b0e3-7d29b078e4da",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
       "teacher_description": "The song does not have enough tracks or all of them start at the same time.",
       "ai_prompt": "",
       "seeding_key": {
@@ -9612,6 +10219,102 @@
         "understanding": 3,
         "learning_goal.key": "cb94a8ad-ecc8-4640-b52b-36587e67d252",
         "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project has not started.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "d43e38df-232a-45b2-bdb2-2873bf909d9c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Shows limited creativity, relying on limited sound use and limited experimentation to find interesting combinations or tracks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "d43e38df-232a-45b2-bdb2-2873bf909d9c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Demonstrates some creative thinking by combining musical elements in a thoughtful or experimental way, though the structure of the song may still feel unoriginal or expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "d43e38df-232a-45b2-bdb2-2873bf909d9c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Demonstrates innovative and unique approaches, effectively blending musical elements and song structure in unexpected ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "d43e38df-232a-45b2-bdb2-2873bf909d9c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project has not started.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "f7aa091d-512d-4916-8d78-f0f1d14f96d1",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Shows limited creativity, relying on limited sound use and limited experimentation to find interesting combinations or tracks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "f7aa091d-512d-4916-8d78-f0f1d14f96d1",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Demonstrates some creative thinking by combining musical elements in a thoughtful or experimental way, though the structure of the song may still feel unoriginal or expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "f7aa091d-512d-4916-8d78-f0f1d14f96d1",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Demonstrates innovative and unique approaches, effectively blending musical elements and song structure in unexpected ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "f7aa091d-512d-4916-8d78-f0f1d14f96d1",
+        "lesson.key": "Mini Project: Cat GIF Loops",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025"
       }

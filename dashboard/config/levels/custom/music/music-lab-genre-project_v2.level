@@ -69,10 +69,12 @@
     "long_instructions": "#### Genre Mashup\r\n\r\nCreate your Genre Mashup song in this level!",
     "name_suffix": "_v2",
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/electro/electro.png",
-    "submittable": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "true",
+    "teacher_markdown": "**Rubrics & Feedback:** The rubric for this project is also available within the levels via the Rubric panel. Students can view the rubric at any time. Once they submit their project, you can use the TA icon to evaluate student work and provide feedback. [Learn more by watching this video overview of Rubrics and Projects](https://www.loom.com/share/e1d8f8361cbc4ae58566dacf81425c61).",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:37.691+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-project\\\"\"],\"cloned_from\":\"music-lab-genre-project\"},{\"changed_at\":\"2025-06-12 20:52:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-01 18:38:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 17:17:11 +0000\",\"changed\":[\"predict_settings\",\"submittable\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:37.691+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-project\\\"\"],\"cloned_from\":\"music-lab-genre-project\"},{\"changed_at\":\"2025-06-12 20:52:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-01 18:38:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 17:17:11 +0000\",\"changed\":[\"predict_settings\",\"submittable\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-10-03 03:20:10 +0000\",\"changed\":[\"predict_settings\",\"submittable\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-10-03 04:01:23 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

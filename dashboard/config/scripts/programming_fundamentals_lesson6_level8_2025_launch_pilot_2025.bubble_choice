@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson6-level8_2025-launch_pilot-2025'
+display_name 'Replace Repetition with Functions'
+description 'Choose **ONE** scenario and clean up repeated code by writing functions and calling them multiple times.'
+
+sublevels
+level 'programming-fundamentals-lesson6-level8a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level8b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level8c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level8d_2025-launch_pilot-2025'

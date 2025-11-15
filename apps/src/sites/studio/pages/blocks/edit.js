@@ -176,10 +176,11 @@ function updateBlockPreview() {
   const parsedConfig = jsonic(configEditor.getValue());
 
   // Only Dancelab and Spritelab use customInputTypes.
-  const customInputTypes =
-    poolField.value === 'Dancelab'
-      ? dancelabCustomInputTypes
-      : spritelabCustomInputTypes;
+  const customInputTypes = ['Dancelab', 'GeneratedDancers'].includes(
+    poolField.value
+  )
+    ? dancelabCustomInputTypes
+    : spritelabCustomInputTypes;
 
   const blockName = getBlockName(
     parsedConfig.func || parsedConfig.name,

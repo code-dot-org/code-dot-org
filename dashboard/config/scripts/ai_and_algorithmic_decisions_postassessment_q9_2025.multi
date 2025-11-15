@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q9_2025'
+
+question 'A music app automatically suggests "Turn up the volume?" when it detects your phone\'s sound is muted. What kind of logic makes the app decide to show that message only when the volume is off?'
+
+wrong 'A loop that keeps showing the message no matter what'
+right 'An if/else statement that checks whether the phone\'s volume is muted'
+wrong 'A variable that stores your favorite songs but never changes'
+wrong 'A style rule that automatically displays all hidden messages'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN

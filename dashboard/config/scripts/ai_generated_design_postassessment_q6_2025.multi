@@ -1,0 +1,14 @@
+name 'ai-generated-design-postassessment-q6_2025'
+
+question 'A community news site notices that people using screen readers have trouble navigating its pages because the articles don\'t have proper heading tags. Which accessibility principle is being overlooked?'
+
+wrong 'Operable – users can\'t easily move through the content'
+wrong 'Understandable – users can\'t follow the site\'s main idea'
+wrong 'Perceivable – users can\'t see the colors or images'
+right 'Robust – the site doesn\'t work well with assistive technologies'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 6, 11
+MARKDOWN

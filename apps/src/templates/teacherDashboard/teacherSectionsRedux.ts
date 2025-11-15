@@ -9,6 +9,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -1014,6 +1015,13 @@ export const assignToSection = (
     },
     {includeUserId: true}
   );
+  if (DCDO.get('show-aita-lesson-summaries', false) && !!unitId) {
+    HttpClient.get(
+      `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+    ).catch(error => {
+      console.error(error);
+    });
+  }
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
     // Only log if the assignment is changing.

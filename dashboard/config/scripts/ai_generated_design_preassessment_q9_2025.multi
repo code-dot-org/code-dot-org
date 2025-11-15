@@ -1,0 +1,15 @@
+name 'ai-generated-design-preassessment-q9_2025'
+
+question 'Before launching a new travel website, a design team sketches simple outlines showing where the header, images, and buttons will go on each page, without adding any colors or pictures yet.
+What is the main purpose of this step?'
+
+wrong 'To test how quickly the site loads online'
+right 'To plan the layout and structure of each page before adding visual details'
+wrong 'To decide on the final fonts and color scheme'
+wrong 'To write the code that connects each page together'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 8, 9
+MARKDOWN

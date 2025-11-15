@@ -1,4 +1,3 @@
-import {BodyOneText} from '@code-dot-org/component-library/typography';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {esLint} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
@@ -14,6 +13,8 @@ import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
 import React, {useCallback, useMemo} from 'react';
 
+import {CodebridgeEmptyState} from '@cdo/apps/codebridge/components/CodebridgeEmptyState';
+import emptyFilesPlaceholderImage from '@cdo/apps/codebridge/images/empty-files-placeholder.svg';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
@@ -125,11 +126,11 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
           editorConfigExtensions={editorConfigExtensions}
         />
       ) : (
-        <div className={moduleStyles.noOpenFilesContainer}>
-          <BodyOneText className={moduleStyles.noOpenFilesMessage}>
-            {codebridgeI18n.noOpenFiles()}
-          </BodyOneText>
-        </div>
+        <CodebridgeEmptyState
+          imageProps={{src: emptyFilesPlaceholderImage}}
+          title={codebridgeI18n.noFilesOpen()}
+          description={codebridgeI18n.noFilesOpenDescription()}
+        />
       )}
     </div>
   );

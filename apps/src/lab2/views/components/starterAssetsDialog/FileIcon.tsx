@@ -97,7 +97,7 @@ const FileIcon: React.FC<FileIconProps> = ({
         )}
         {category === 'pdf' && (
           <div className={styles.pdfIcon}>
-            <FontAwesomeV6Icon iconName="file" />
+            <FontAwesomeV6Icon iconName="file-pdf" />
           </div>
         )}
         <div className={styles.fileInfo}>

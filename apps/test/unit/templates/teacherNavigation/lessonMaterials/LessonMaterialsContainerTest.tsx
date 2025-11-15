@@ -11,6 +11,11 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser, {
+  setShowAITALessonSummary,
+  setHasCompletedPersonalizationQuiz,
+  setAudioSummaryTranscript,
+} from '@cdo/apps/templates/currentUserRedux';
 import teacherSections, {
   selectSection,
   setSections,
@@ -117,6 +122,13 @@ const COURSES_WITH_PROGRESS = [
     ],
   },
 ];
+
+const LESSON_SUMMARY = {
+  learning_objective: 'Sample learning objective info.',
+  lesson_beats: ['Beat 1', 'Beat 2', 'Beat 3'],
+  misconceptions: ['Misconception 1', 'Misconception 2'],
+  tips: ['Tip 1', 'Tip 2', 'Tip 3'],
+};
 
 describe('LessonMaterialsContainer', () => {
   let store: Store;
@@ -241,9 +253,10 @@ describe('LessonMaterialsContainer', () => {
 
   const renderDefault = async (
     showNoCurriculumAssigned = false,
-    lessonData: object = mockLessonData
+    lessonData: object = mockLessonData,
+    lessonSummary: object = LESSON_SUMMARY
   ) => {
-    mockSpy(lessonData);
+    mockSpy(lessonData, lessonSummary);
     await act(async () =>
       render(
         <Provider store={store}>
@@ -261,6 +274,7 @@ describe('LessonMaterialsContainer', () => {
     registerReducers({
       unitSelection,
       teacherSections,
+      currentUser,
     });
 
     store = getStore();
@@ -269,7 +283,7 @@ describe('LessonMaterialsContainer', () => {
     store.dispatch(selectSection(1));
 
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
-    mockSpy(mockLessonData);
+    mockSpy(mockLessonData, LESSON_SUMMARY);
   });
 
   afterEach(async () => {
@@ -278,7 +292,7 @@ describe('LessonMaterialsContainer', () => {
     fetchSpy.mockReset();
   });
 
-  const mockSpy = (lessonData: object) => {
+  const mockSpy = (lessonData: object, lessonSummary: object) => {
     fetchSpy.mockReset();
     fetchSpy.mockImplementation((path: string) => {
       if (path.includes('lesson_materials')) {
@@ -290,6 +304,12 @@ describe('LessonMaterialsContainer', () => {
       if (path.includes('section_courses')) {
         return Promise.resolve({
           value: COURSES_WITH_PROGRESS,
+          response: new Response(),
+        });
+      }
+      if (path.includes('ai_lesson_summaries')) {
+        return Promise.resolve({
+          value: {lesson_summary: JSON.stringify(lessonSummary)},
           response: new Response(),
         });
       }
@@ -604,6 +624,100 @@ describe('LessonMaterialsContainer', () => {
         'https://videos.code.org/video.mp4',
         '_self'
       );
+    });
+  });
+
+  describe('lesson summary', () => {
+    beforeEach(() => {
+      store.dispatch(setShowAITALessonSummary(true));
+    });
+
+    it('does not render lesson summary when showAITALessonSummary is false', async () => {
+      store.dispatch(setShowAITALessonSummary(false));
+
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      expect(screen.queryByText(LESSON_SUMMARY.learning_objective)).toBe(null);
+      LESSON_SUMMARY.lesson_beats.forEach(beat =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        expect(screen.queryByText(misconception)).toBe(null)
+      );
+      LESSON_SUMMARY.tips.forEach(tip =>
+        expect(screen.queryByText(tip)).toBe(null)
+      );
+    });
+
+    it('does not render lesson summary when lesson summary has not been generated', async () => {
+      await renderDefault(true, mockLessonData, {});
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      expect(screen.queryByText(LESSON_SUMMARY.learning_objective)).toBe(null);
+      LESSON_SUMMARY.lesson_beats.forEach(beat =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        expect(screen.queryByText(misconception)).toBe(null)
+      );
+      LESSON_SUMMARY.tips.forEach(tip =>
+        expect(screen.queryByText(tip)).toBe(null)
+      );
+    });
+
+    it('renders lesson summary when showAITALessonSummary is true and lesson summary has been generated', async () => {
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+      screen.getByText(i18n.teachingTips());
+      screen.getByText(LESSON_SUMMARY.learning_objective);
+      LESSON_SUMMARY.lesson_beats.forEach(beat => screen.getByText(beat));
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        screen.getByText(misconception)
+      );
+      LESSON_SUMMARY.tips.forEach(tip => screen.getByText(tip));
+    });
+
+    it('renders audio summary transcript dialog when transcript data is present', async () => {
+      const audioTranscript = [
+        {timeStamp: '0:00', text: 'First line of dialogue.'},
+        {timeStamp: '0:30', text: 'Second line of dialogue.'},
+        {timeStamp: '1:00', text: 'Third line of dialogue.'},
+      ];
+      store.dispatch(setAudioSummaryTranscript(audioTranscript));
+
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+
+      // Audio summary transcript dialog is present as well
+      fireEvent.click(screen.getByText(i18n.transcript()));
+      screen.getByText(i18n.audioTranscript());
+      audioTranscript.forEach(transcriptLine => {
+        screen.getByText(transcriptLine.timeStamp);
+        screen.getByText(transcriptLine.text);
+      });
+    });
+
+    it('does not render Personalization Quiz note if user has completed the quiz', async () => {
+      store.dispatch(setHasCompletedPersonalizationQuiz(true));
+
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.wantToSeeDifferentInformation())).toBe(
+        null
+      );
+    });
+
+    it('renders Personalization Quiz note if user has not completed the quiz', async () => {
+      store.dispatch(setHasCompletedPersonalizationQuiz(false));
+
+      await renderDefault();
+
+      screen.getByText(i18n.wantToSeeDifferentInformation());
     });
   });
 });

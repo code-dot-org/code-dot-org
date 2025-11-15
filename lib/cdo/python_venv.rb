@@ -3,7 +3,7 @@ require 'pty'
 module PythonVenv
   def self.install(*args)
     flags = if ENV['CI']
-              '--dev --frozen'
+              '--dev --frozen --quiet'
             elsif rack_env? :production
               '--no-dev --frozen'
             elsif rack_env? :test

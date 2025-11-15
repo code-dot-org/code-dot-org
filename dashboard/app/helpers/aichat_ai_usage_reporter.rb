@@ -21,51 +21,41 @@ class AichatAiUsageReporter
     # Pull out token counts.
     prompt_tokens = usage['prompt_tokens']
     completion_tokens = usage['completion_tokens']
+    thought_tokens = usage['thought_tokens']
     cached_prompt_tokens = usage['cached_prompt_tokens']
 
     report_token_usage(prompt_tokens)
-
-    # Calculate costs.
-    input_rate = 0.15 / 1_000_000 # $0.15 per million tokens.
-    cached_input_rate = 0.075 / 1_000_000 # $0.075 per million tokens.
-    output_rate = 0.60 / 1_000_000 # $0.60 per million tokens.
-
-    input_cost = (prompt_tokens * input_rate) + (cached_prompt_tokens * cached_input_rate)
-    output_cost = completion_tokens * output_rate
-    total_cost = input_cost + output_cost
 
     message_and_file_counts = get_messages_and_files_counts(config, request, context)
     is_multimodal = message_and_file_counts[:withAssets] > 0
 
     log_payload = {
-      event: 'aichat_openai_usage',
+      event: 'aichat_usage',
+      modelId: @model_id,
       multimodal: is_multimodal,
       usage: usage,
       messages: message_and_file_counts,
-      cost: {
-        input: "$#{format("%.6f", input_cost)}",
-        output: "$#{format("%.6f", output_cost)}",
-        total: "$#{format("%.6f", total_cost)}"
-      },
       responseTime: response_time,
       levelId: @level_id,
       projectId: @project_id,
       userId: @user_id
     }
 
-    CDO.log.info log_payload.to_json.to_s if DCDO.get('log_aichat_openai_usage', false)
+    CDO.log.info log_payload.to_json.to_s if DCDO.get('log_aichat_usage', false)
 
     metrics = [
-      ['PromptTokens', prompt_tokens], ['CompletionTokens', completion_tokens], ['CachedTokens', cached_prompt_tokens]
+      ['PromptTokens', prompt_tokens], ['CompletionTokens', completion_tokens],
+      ['ThoughtTokens', thought_tokens], ['CachedTokens', cached_prompt_tokens]
     ].map do |key, value|
       {
-        metric_name: "AichatOpenaiRequest.#{key}",
+        metric_name: "AichatRequest.#{key}",
         value: value,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: [
           {name: 'Environment', value: CDO.rack_env},
           {name: 'Multimodal', value: is_multimodal.to_s},
+          {name: 'ModelId', value: @model_id},
         ]
       }
     end
@@ -131,7 +121,7 @@ class AichatAiUsageReporter
 
     pdfs_count = message_parts.count {|part| part[:type] == 'file' && part[:content][:mimeType] == 'application/pdf'}
 
-    # Currently we don't have a shared (between frontend and backd) list of image mime types
+    # Currently we don't have a shared (between frontend and backend) list of image mime types
     # so for now, we just assume if not a pdf, then it's an image
     images_count = total_files_count - pdfs_count
 

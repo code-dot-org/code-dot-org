@@ -300,6 +300,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, @workshop).deliver_now
     end
     Pd::WorkshopMailer.organizer_detail_change_notification(@workshop).deliver_now
+    Pd::WorkshopMailjetMailer.send_rp_workshop_detail_change_notification(@workshop, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info)
   end
 
   private def adjust_facilitators

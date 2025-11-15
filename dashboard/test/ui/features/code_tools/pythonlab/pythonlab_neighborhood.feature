@@ -5,7 +5,7 @@
 Feature: Python Lab Neighborhood eyes
 
 Background:
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/10"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/10?noIntrojs=true"
   And I wait to see "#uitest-codebridge-run"
   And I wait until "#uitest-codebridge-run" is not disabled
 

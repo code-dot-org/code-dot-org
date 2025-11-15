@@ -9,9 +9,12 @@ $(() => {
   const selfPacedPLCourseOfferings = getScriptData(
     'selfPacedPLCourseOfferings'
   );
+  const studentsCourseOfferings = getScriptData('studentsCourseOfferings');
+
   ReactDOM.render(
     <SelfPacedPLCatalog
       selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
+      studentsCourseOfferings={studentsCourseOfferings}
     />,
     document.getElementById('self-paced-pl-catalog')
   );

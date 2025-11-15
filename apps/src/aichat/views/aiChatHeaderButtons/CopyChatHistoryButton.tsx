@@ -67,7 +67,7 @@ function chatEventToFormattedString(chatEvent: ChatEvent) {
   if (isModelUpdate(chatEvent)) {
     return aichatI18n.copyChatFormatting_modelUpdate({
       timestamp: formattedTimestamp,
-      updatedFieldLabel: AI_CUSTOMIZATIONS_LABELS[chatEvent.updatedField],
+      updatedFieldLabel: AI_CUSTOMIZATIONS_LABELS[chatEvent.updatedField]!,
     });
   }
 

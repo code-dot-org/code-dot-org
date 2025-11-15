@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson6-level5_2025-launch_pilot-2025'
+display_name 'Add to a Function'
+description 'Choose **ONE** scenario to practice modifying an existing function by adding a new line of code.'
+
+sublevels
+level 'programming-fundamentals-lesson6-level5a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level5b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level5c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson6-level5d_2025-launch_pilot-2025'

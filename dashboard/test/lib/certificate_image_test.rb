@@ -32,10 +32,10 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_equal 'MC_Hour_Of_Code_Certificate.png', CertificateImage.certificate_template_for('mc')
     assert_equal '20hours_certificate.jpg', CertificateImage.certificate_template_for('20-hour')
     assert_equal '20hours_certificate.jpg', CertificateImage.certificate_template_for('accelerated')
-    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('frozen')
-    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('starwars')
-    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('flappy')
-    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('playlab')
+    assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('frozen')
+    assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('starwars')
+    assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('flappy')
+    assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('playlab')
     assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course1')
     assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course2')
     assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course3')
@@ -52,22 +52,22 @@ class CertificateImageTest < ActiveSupport::TestCase
     mc_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'mc')
     assert_image mc_certificate_image, 1754, 1235, 'PNG'
     hoc_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'flappy')
-    assert_image hoc_certificate_image, 1754, 1235, 'JPEG'
+    assert_image hoc_certificate_image, 1754, 1235, 'PNG'
     hoc_certificate_image_with_ampersand = CertificateImage.create_course_certificate_image('Jeffrey & Peter', 'flappy')
-    assert_image hoc_certificate_image_with_ampersand, 1754, 1235, 'JPEG'
+    assert_image hoc_certificate_image_with_ampersand, 1754, 1235, 'PNG'
     hoc_certificate_image_with_angle_bracket = CertificateImage.create_course_certificate_image('amii <3', 'flappy')
-    assert_image hoc_certificate_image_with_angle_bracket, 1754, 1235, 'JPEG'
+    assert_image hoc_certificate_image_with_angle_bracket, 1754, 1235, 'PNG'
     hoc_certificate_image_with_imagemagick_special_chars = CertificateImage.create_course_certificate_image('@\n%', 'flappy')
-    assert_image hoc_certificate_image_with_imagemagick_special_chars, 1754, 1235, 'JPEG'
+    assert_image hoc_certificate_image_with_imagemagick_special_chars, 1754, 1235, 'PNG'
     hoc_certificate_image_with_empty_name = CertificateImage.create_course_certificate_image('', 'flappy')
-    assert_image hoc_certificate_image_with_empty_name, 1754, 1235, 'JPEG'
+    assert_image hoc_certificate_image_with_empty_name, 1754, 1235, 'PNG'
     hoc_certificate_image_with_just_whitespace = CertificateImage.create_course_certificate_image(" \n\t", 'flappy')
-    assert_image hoc_certificate_image_with_just_whitespace, 1754, 1235, 'JPEG'
+    assert_image hoc_certificate_image_with_just_whitespace, 1754, 1235, 'PNG'
     hoc_certificate_image_with_too_long_name = CertificateImage.create_course_certificate_image("y????????????r?????????????????????wgt??????ygrcr?????????fy?????????hc?????????rc???f?????????c????????????r6trsb??????????????????yb?????????tg???????????????????????????hf?????????????????????????????????????????????????????????b???v????????????????????????b???jy?????????????????????TV?????????N??????vyTB??????dv??????????????????t????????????t??????shTVk???s????????????TVty???hfj?????????????????????th???kty???bhjbyt???yty???Jyv???????????????#ty????????????df", 'flappy')
-    assert_image hoc_certificate_image_with_too_long_name, 1754, 1235, 'JPEG'
+    assert_image hoc_certificate_image_with_too_long_name, 1754, 1235, 'PNG'
     unspecified_course_image = CertificateImage.create_course_certificate_image('Robot Tester', nil)
-    assert_image unspecified_course_image, 1754, 1235, 'JPEG'
-    blank_named_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', nil, 'Course 1')
+    assert_image unspecified_course_image, 1754, 1235, 'PNG'
+    blank_named_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'Course 1')
     assert_image blank_named_certificate_image, 1754, 1240, 'PNG'
     twenty_hour_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', '20-hour')
     assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
@@ -75,17 +75,11 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_image accelerated_certificate_image, 1754, 1240, 'JPEG'
 
     # Create course certificates with nil and empty values
-    nil_name_course_certificate_image = CertificateImage.create_course_certificate_image(nil, 'course1', 'sponsor', 'Course 1')
-    assert_image nil_name_course_certificate_image, 1754, 1240, 'PNG'
-    nil_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', nil, 'Course 1')
+    nil_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'Course 1')
     assert_image nil_sponsor_course_certificate_image, 1754, 1240, 'PNG'
-    nil_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'sponsor', nil)
-    assert_image nil_title_course_certificate_image, 1754, 1240, 'PNG'
-    empty_name_course_certificate_image = CertificateImage.create_course_certificate_image('', 'course1', 'sponsor', 'Course 1')
+    empty_name_course_certificate_image = CertificateImage.create_course_certificate_image('', 'course1', 'Course 1')
     assert_image empty_name_course_certificate_image, 1754, 1240, 'PNG'
-    empty_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', '', 'Course 1')
-    assert_image empty_sponsor_course_certificate_image, 1754, 1240, 'PNG'
-    empty_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'sponsor', '')
+    empty_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', '')
     assert_image empty_title_course_certificate_image, 1754, 1240, 'PNG'
 
     # Entered name "à Test Namé" on /congrats/course1

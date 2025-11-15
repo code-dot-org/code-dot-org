@@ -74,7 +74,7 @@ describe('SectionProgressV2', () => {
     renderDefault();
     store.dispatch(startLoadingProgress());
 
-    screen.getByText('Progress (beta)');
+    screen.getByText('Icon Key');
     screen.getByText('Students');
     // eslint-disable-next-line no-restricted-properties
     screen.getAllByTestId('skeleton-cell');
@@ -86,7 +86,7 @@ describe('SectionProgressV2', () => {
 
     store.dispatch(setStudentsForCurrentSection(1, STUDENTS));
 
-    screen.getByText('Progress (beta)');
+    screen.getByText('Icon Key');
     screen.getByText('Students');
 
     expect(screen.getAllByText(/Student [1-9]/).length).toBe(STUDENTS.length);

@@ -4,7 +4,9 @@ import {
   OPEN_ENDED_LEGACY_PROJECT_TYPES,
   OPEN_ENDED_PROJECTS_YOUNG_AGE,
 } from '@cdo/apps/constants';
+import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
@@ -28,7 +30,6 @@ import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 var showProjectAdmin = require('../showProjectAdmin');
 
 var assets = require('./clientApi').create('/v3/assets');
-var files = require('./clientApi').create('/v3/files');
 var sources = require('./clientApi').create('/v3/sources');
 var sourcesPublic = require('./clientApi').create('/v3/sources-public');
 var channels = require('./clientApi').create('/v3/channels');
@@ -363,17 +364,6 @@ var projects = (module.exports = {
       return;
     }
     HttpClient.post(`/v3/channels/${channelId}/abuse/delete`, '', true);
-    assets.patchAll(channelId, 'abuse_score=0', null, function (err, result) {
-      if (err) {
-        throw err;
-      }
-    });
-    files.patchAll(channelId, 'abuse_score=0', null, function (err, result) {
-      if (err) {
-        throw err;
-      }
-      $('.admin-abuse-score').text(0);
-    });
   },
 
   /**
@@ -1328,7 +1318,15 @@ var projects = (module.exports = {
             teacherHasConfirmedUploadWarning,
           });
         })
-        .catch(error => callback({error}))
+        .catch(error => {
+          MetricsReporter.logError({
+            event: 'Error in getUpdatedSourceAndHtml_',
+            error: repackageError(error),
+            appType: this.getStandaloneApp(),
+            channelId: this.getCurrentId(),
+          });
+          callback({error});
+        })
     );
   },
 
@@ -1404,6 +1402,14 @@ var projects = (module.exports = {
     // Share URLs only make sense for standalone app types.
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
+
+    MetricsReporter.logError({
+      event: errorType,
+      errorMessage: errorText,
+      errorCount: errorCount,
+      appType: this.getStandaloneApp(),
+      channelId: this.getCurrentId(),
+    });
 
     return firehoseClient.putRecord(
       {

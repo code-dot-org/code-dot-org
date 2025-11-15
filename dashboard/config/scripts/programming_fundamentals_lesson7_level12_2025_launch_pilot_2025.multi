@@ -1,0 +1,21 @@
+name 'programming-fundamentals-lesson7-level12_2025-launch_pilot-2025'
+title 'Check Your Understanding'
+
+right 'Use `paint_dot(kai)` after importing the function with `from custom import paint_dot`.'
+wrong 'Just type `paint_dot(kai)` — Python will automatically find the function.'
+wrong 'Call `this_painter.paint("SkyBlue")` directly in `main.py`.'
+wrong 'Redefine the `paint_dot()` function in `main.py` before calling it.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+You wrote the following function in `custom.py`:
+
+```
+def paint_dot(this_painter):
+   this_painter.take_paint()
+   this_painter.paint("SkyBlue")
+```
+
+Now you're working in `main.py`. What do you need to do to use this function with a `Painter` named `kai`?
+MARKDOWN

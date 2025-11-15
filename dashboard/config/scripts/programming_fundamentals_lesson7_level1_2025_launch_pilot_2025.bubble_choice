@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson7-level1_2025-launch_pilot-2025'
+display_name 'Say My Name'
+description 'Choose **ONE** scenario and update the function to include a parameter.'
+
+sublevels
+level 'programming-fundamentals-lesson7-level1a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson7-level1b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson7-level1c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson7-level1d_2025-launch_pilot-2025'

@@ -1,6 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {validateFileName as validateCodebridgeFileName} from '@codebridge/utils';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -11,6 +10,7 @@ import {
 } from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -28,7 +28,7 @@ export const useFileUploader = (
   folderId: string
 ) => {
   const {levelProperties, onImageFlagged} = useCodebridgeContext();
-  const {appName, validationFile, name} = levelProperties;
+  const {validationFile, name} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
@@ -42,7 +42,7 @@ export const useFileUploader = (
   const uploadExternalFile = useCallback(
     async (file: File) => {
       const uuid = createUuid();
-      const fileType = file.name.split('.')[1];
+      const fileType = file.name.split('.').pop();
 
       if (isStartMode) {
         const bodyData = new FormData();
@@ -64,23 +64,21 @@ export const useFileUploader = (
     (eventName: string, payload: Record<string, string>) => {
       switch (eventName) {
         case analyticsEvents.UPLOAD_FAILED: {
-          sendCodebridgeAnalyticsEvent(
-            EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE,
-            appName,
-            payload
-          );
+          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE, {
+            ...payload,
+            fileType: payload.fileName.split('.').pop()?.toLowerCase() || '',
+          });
           return;
         }
         case analyticsEvents.UPLOAD_UNACCEPTED_FILE: {
-          sendCodebridgeAnalyticsEvent(
-            EVENTS.CODEBRIDGE_UPLOAD_FAILED,
-            appName,
-            payload
-          );
+          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, {
+            ...payload,
+            fileType: payload.fileName.split('.').pop()?.toLowerCase() || '',
+          });
         }
       }
     },
-    [appName]
+    []
   );
 
   const {validFileTypes, ...lab2FileUploaderArgs} = args;

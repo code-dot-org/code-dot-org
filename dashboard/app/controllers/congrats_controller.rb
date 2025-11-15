@@ -1,13 +1,19 @@
 class CongratsController < ApplicationController
   include CertificatesHelper
 
+  # GET /congrats/:course_name
+  def show
+    # Redirects to the `index` action with the `course_name` parameter
+    redirect_to helpers.course_completion_certificate_url(course_name: params[:course_name])
+  end
+
   def index
     view_options(full_width: true, responsive_content: true, has_i18n: true)
 
-    # Select two different donors, because the first must have a twitter
-    # handle and the second must be equally weighted across all donors.
-    @random_donor_twitter = DashboardCdoDonor.get_random_donor_twitter
-    @random_donor_name = DashboardCdoDonor.get_random_donor_name
+    # Previously used to add random donor names to certificates
+    @random_donor_twitter = nil
+    @random_donor_name = nil
+
     begin
       @course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
     rescue ArgumentError, OpenSSL::Cipher::CipherError

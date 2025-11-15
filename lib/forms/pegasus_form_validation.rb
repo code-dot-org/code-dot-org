@@ -69,12 +69,6 @@ module PegasusFormValidation
     end
   end
 
-  private def uploaded_file(value)
-    return value if value.instance_of?(FieldError)
-    return nil if value.blank?
-    AWS::S3.upload_to_bucket('cdo-form-uploads', value[:filename], File.open(value[:tempfile]))
-  end
-
   private def email_address(value)
     return value if value.instance_of?(FieldError)
     email = downcased stripped value

@@ -1,10 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {
-  BodyThreeText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
 
@@ -383,8 +380,12 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
             }
           />
         )}
-        <Heading3>{headerText()}</Heading3>
-        <BodyThreeText>{bodyText()}</BodyThreeText>
+        <Typography variant="h3" gutterBottom>
+          {headerText()}
+        </Typography>
+        <Typography variant="body3" gutterBottom>
+          {bodyText()}
+        </Typography>
       </div>
       {interactiveContent()}
       <div className={styles.drawerFooter}>

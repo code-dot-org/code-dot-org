@@ -88,3 +88,129 @@ class UserScriptTest < ActiveSupport::TestCase
     assert_equal ({'foo' => false, @script.name => true}), UserScript.lookup_hash(@user, ['foo', @script.name])
   end
 end
+
+# Additional tests for find_and_migrate_or_create_by!
+class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
+  setup do
+    @user = create(:user)
+
+    # Unit with an original unit group
+    @unit_in_course = create(:script, :in_single_unit_course)
+    @original_unit_group = @unit_in_course.original_unit_group
+
+    # Add a non-original unit group that also contains the unit
+    @other_unit_group = create(:single_unit_course, :stable, unit: @unit_in_course)
+    @unit_in_course.reload
+
+    # Unit with no original unit group
+    @unit_without_course = create(:script)
+  end
+
+  test "find_and_migrate_or_create_by! raises when provided unit_group is not in unit" do
+    bogus_unit_group = create(:unit_group)
+
+    error = assert_raises RuntimeError do
+      UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: bogus_unit_group)
+    end
+    assert_match(/Unit .* must belong to Unit Group .*/, error.message)
+  end
+
+  test "find_and_migrate_or_create_by! finds or creates for non-original unit_group without migration" do
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @other_unit_group)
+    assert_equal @other_unit_group, result.unit_group
+
+    result2 = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @other_unit_group)
+    assert_equal result.id, result2.id
+  end
+
+  test "find_and_migrate_or_create_by! creates with nil unit_group when unit has no original unit_group" do
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_without_course, unit_group: nil)
+
+    assert_nil result.unit_group
+    assert_equal @unit_without_course, result.script
+    assert_equal @user, result.user
+  end
+
+  test "find_and_migrate_or_create_by! migrates when no unit group is given" do
+    us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: nil)
+
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course)
+
+    assert_equal us.id, result.id
+    assert_equal @original_unit_group, result.unit_group
+  end
+
+  test "find_and_migrate_or_create_by! migrates when original unit group is given" do
+    us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: nil)
+
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @original_unit_group)
+
+    assert_equal us.id, result.id
+    assert_equal @original_unit_group, result.unit_group
+  end
+
+  test "find_and_migrate_or_create_by! migrates to non-original unit group when specified" do
+    us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: nil)
+
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @other_unit_group)
+
+    assert_equal us.id, result.id
+    assert_equal @other_unit_group, result.unit_group
+  end
+
+  test "find_and_migrate_or_create_by! creates when no unit group is given" do
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course)
+
+    assert_equal @original_unit_group, result.unit_group
+    assert_equal @user, result.user
+  end
+
+  test "find_and_migrate_or_create_by! creates when original unit group is given" do
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @original_unit_group)
+
+    assert_equal @original_unit_group, result.unit_group
+    assert_equal @user, result.user
+  end
+
+  test "find_and_migrate_or_create_by! allows PLC unit group for PLC course unit" do
+    # Create a PLC course unit (old professional learning course) using the PLC factories
+    plc_course_unit = create(:plc_course_unit, :with_course_name)
+    plc_unit = plc_course_unit.script
+    assert plc_unit.old_professional_learning_course?
+
+    # Obtain the PLC unit group, which does not directly contain the PLC unit
+    plc_unit_group = plc_course_unit.plc_course.unit_group
+    refute plc_unit.unit_groups.include?(plc_unit_group)
+
+    # Should not raise even though the unit_group is not one of the unit's unit groups,
+    # because old_professional_learning_course? bypasses the membership validation.
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: plc_unit, unit_group: plc_unit_group)
+
+    assert_equal @user, result.user
+    assert_equal plc_unit, result.script
+    assert_equal plc_unit_group, result.unit_group
+  end
+
+  test "find_and_migrate_or_create_by! returns existing UserScript with original unit group when no unit group specified" do
+    existing_us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: @original_unit_group)
+
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course)
+    assert_equal existing_us.id, result.id
+    assert_equal @original_unit_group, result.unit_group
+
+    assert_equal 1, UserScript.where(user: @user, script: @unit_in_course).count
+  end
+
+  test "find_and_migrate_or_create_by! returns existing UserScript with original unit group when explicitly requested" do
+    existing_us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: @original_unit_group)
+
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @original_unit_group)
+
+    assert_equal existing_us.id, result.id
+    assert_equal @original_unit_group, result.unit_group
+
+    assert_equal 1, UserScript.where(user: @user, script: @unit_in_course).count
+  end
+end

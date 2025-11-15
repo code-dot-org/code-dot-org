@@ -3,146 +3,125 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-#How This Course is Different
+# How This Course is Different
 
-#### Unlike traditional CS courses that focus primarily on syntax and isolated programming exercises, AI Foundations Semester 2 blends coding, AI, and design into a unified learning experience. 
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Code.org AI bot character" style="border-radius:40px; float: left; padding-right: 2px; height: 150px; clear: both; margin: 0 20px 0px 10px;">
 
-#### Students don’t just learn how to code—they learn why and when to **collaborate with AI**, critically evaluate its outputs, and adapt them to real-world needs.
+<br>
+
+#### Unlike traditional CS courses that focus primarily on syntax and isolated programming exercises, AI Foundations Semester 2 blends ***coding, AI, and design*** into a unified learning experience. 
+
+#### Students don’t just learn how to code—they learn why and when to ***collaborate with AI***, critically evaluate its outputs, and adapt them to real-world needs.
+
+<div style="clear:both;"></div>
 
 ## Guiding Constructs
 
 <!-- Grid container -->
+<div
+  style="
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin:10px 0;
+  "
+>
+  <!-- Card 1 -->
   <div
     style="
-      display:flex;
-      flex-wrap:wrap;
-      gap:16px;
-      margin: 10px 0 10px 0;
+      flex:0 0 calc(50% - 8px);
+      box-sizing:border-box;
+      border:2px solid #0093A4;
+      border-radius:10px;
+      padding:12px;
+      background:#ffffff;
+      box-shadow:2px 4px 8px rgba(0,0,0,0.2);
     "
   >
-<!-- Card 1 -->
-    <div
-      style="
-        flex: 0 0 calc(50% - 8px);
-        box-sizing: border-box;
-        border: 2px solid #0093A4;
-        border-radius: 10px;
-        padding: 12px;
-        background:#ffffff;
-        box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
-      "
-    >
-      <div style="display:flex; gap:12px; align-items:flex-start;">
-        <img src="https://images.code.org/893015f7155e1de842c22d4d0fbfb37f-image-1758906886751.png"
-             alt="teacher icon"
-             style="width:84px; height:84px; border-radius:10px; object-fit:cover;">
-        <div>
-          <details>
-            <summary style="font-size:16px; font-weight:700; cursor:pointer;">
-              🎨 AI as a creative partner
-            </summary>
-            <p style="margin:8px 0 0 0; font-size:16px;">
-              <i>Students use generative AI to brainstorm, scaffold, and refine code, while maintaining ownership and understanding of their work.</i>
-            </p>
-          </details>
-        </div>
-      </div>
-    </div>
-<!-- Card 2 -->
-    <div
-      style="
-        flex: 0 0 calc(50% - 8px);
-        box-sizing: border-box;
-        border: 2px solid #0093A4;
-        border-radius: 10px;
-        padding: 12px;
-        background:#ffffff;
-        box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
-      "
-    >
-      <div style="display:flex; gap:12px; align-items:flex-start;">
-        <img src="https://images.code.org/c35fe50b0f6f0ebe39bafb7e2808a5d6-image-1758906956682.png"
-             alt="phone icon"
-             style="width:84px; height:84px; border-radius:10px; object-fit:cover;">
-        <div>
-          <details>
-            <summary style="font-size:16px; font-weight:700; cursor:pointer;">
-              🧑‍💻 Human-centered design
-            </summary>
-            <p style="margin:8px 0 0 0; font-size:16px;">
-              <i>Every project is anchored in usability, ethics, and purpose—helping students consider accessibility, trust, and impact alongside technical skills.</i>
-            </p>
-          </details>
-        </div>
-      </div>
-    </div>
-<!-- Card 3 -->
-    <div
-      style="
-        flex: 0 0 calc(50% - 8px);
-        box-sizing: border-box;
-        border: 2px solid #0093A4;
-        border-radius: 10px;
-        padding: 12px;
-        background:#ffffff;
-        box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
-      "
-    >
-      <div style="display:flex; gap:12px; align-items:flex-start;">
-        <img src="https://images.code.org/8ab4e41ca0ce9e4e59d0f34f5a971691-image-1758907041465.png"
-             alt="cookbook icon"
-             style="width:84px; height:84px; border-radius:10px; object-fit:cover;">
-        <div>
-          <details>
-            <summary style="font-size:16px; font-weight:700; cursor:pointer;">
-              🌐 Real-world projects
-            </summary>
-            <p style="margin:8px 0 0 0; font-size:16px;">
-              <i>Instead of abstract drills, students build systems like brand websites, dialogue apps, and recommendation engines that reflect authentic applications.</i>
-            </p>
-          </details>
-        </div>
-      </div>
-    </div>
-<!-- Card 4 -->
-    <div
-      style="
-        flex: 0 0 calc(50% - 8px);
-        box-sizing: border-box;
-        border: 2px solid #0093A4;
-        border-radius: 10px;
-        padding: 12px;
-        background:#ffffff;
-        box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
-      "
-    >
-      <div style="display:flex; gap:12px; align-items:flex-start;">
-        <img src="https://images.code.org/27e5d4703ebd1c4b580835dd886f49fa-image-1758907229410.png"
-             alt="computer icon"
-             style="width:84px; height:84px; border-radius:10px; object-fit:cover;">
-        <div>
-          <details>
-            <summary style="font-size:16px; font-weight:700; cursor:pointer;">
-              🔎 Values-driven technology
-            </summary>
-            <p style="margin:8px 0 0 0; font-size:16px;">
-              <i>Students examine bias, fairness, and transparency, ensuring their systems align with their personal and community values.</i>
-            </p>
-          </details>
-        </div>
-      </div>
-    </div>
-
+    <details>
+      <summary style="font-size:16px; font-weight:700; cursor:pointer;">
+        🎨 AI as a creative partner
+      </summary>
+      <p style="margin:8px 0 0 0; font-size:16px;">
+        <i>Students use generative AI to brainstorm, scaffold, and refine code, while maintaining ownership and understanding of their work.</i>
+      </p>
+    </details>
   </div>
 
+  <!-- Card 2 -->
+  <div
+    style="
+      flex:0 0 calc(50% - 8px);
+      box-sizing:border-box;
+      border:2px solid #0093A4;
+      border-radius:10px;
+      padding:12px;
+      background:#ffffff;
+      box-shadow:2px 4px 8px rgba(0,0,0,0.2);
+    "
+  >
+    <details>
+      <summary style="font-size:16px; font-weight:700; cursor:pointer;">
+        🧑‍💻 Human-centered design
+      </summary>
+      <p style="margin:8px 0 0 0; font-size:16px;">
+        <i>Every project is anchored in usability, ethics, and purpose—helping students consider accessibility, trust, and impact alongside technical skills.</i>
+      </p>
+    </details>
+  </div>
 
+  <!-- Card 3 -->
+  <div
+    style="
+      flex:0 0 calc(50% - 8px);
+      box-sizing:border-box;
+      border:2px solid #0093A4;
+      border-radius:10px;
+      padding:12px;
+      background:#ffffff;
+      box-shadow:2px 4px 8px rgba(0,0,0,0.2);
+    "
+  >
+    <details>
+      <summary style="font-size:16px; font-weight:700; cursor:pointer;">
+        🌐 Real-world projects
+      </summary>
+      <p style="margin:8px 0 0 0; font-size:16px;">
+        <i>Instead of abstract drills, students build systems like brand websites, dialogue apps, and recommendation engines that reflect authentic applications.</i>
+      </p>
+    </details>
+  </div>
 
-  <p style="margin: 12px 0 0 0; font-size: 16px;">
-    This approach shifts computing education from memorizing code toward designing technology intentionally and responsibly, preparing students for a future where AI is everywhere.
-  </p>
+  <!-- Card 4 -->
+  <div
+    style="
+      flex:0 0 calc(50% - 8px);
+      box-sizing:border-box;
+      border:2px solid #0093A4;
+      border-radius:10px;
+      padding:12px;
+      background:#ffffff;
+      box-shadow:2px 4px 8px rgba(0,0,0,0.2);
+    "
+  >
+    <details>
+      <summary style="font-size:16px; font-weight:700; cursor:pointer;">
+        🔎 Values-driven technology
+      </summary>
+      <p style="margin:8px 0 0 0; font-size:16px;">
+        <i>Students examine bias, fairness, and transparency, ensuring their systems align with their personal and community values.</i>
+      </p>
+    </details>
+  </div>
 </div>
 
 <hr>
 
-*Images produced by AI*
+  
+#### This approach shifts computing education from memorizing code toward designing technology intentionally and responsibly, preparing students for a future where AI is everywhere.
+ 
+
+## Next, let's define Generative AI
+
+
 MARKDOWN

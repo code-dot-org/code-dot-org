@@ -55,8 +55,6 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   );
 
-  const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
-
   useEffect(() => {
     fetchPermissions().then(data => {
       dispatch(setPermissions(data));
@@ -142,8 +140,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
         className={classNames(
           moduleStyles.labContainer,
           isLoading && moduleStyles.labContainerLoading,
-          isShareView && moduleStyles.labContainerShareView,
-          isFullScreenView && moduleStyles.labContainerFullScreenView
+          isShareView && moduleStyles.labContainerShareView
         )}
       >
         {children}

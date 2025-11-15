@@ -258,4 +258,41 @@ class TransfersControllerTest < ActionController::TestCase
       json_response["result"]
     )
   end
+
+  test 'creates new UserScript for transferred student' do
+    unit_group = create(:single_unit_course, :stable)
+    unit = unit_group.first_unit
+    @picture_section.update!(script: unit, unit_group: unit_group)
+
+    @word_student.user_scripts.destroy_all
+    assert_equal 0, @word_student.user_scripts.count
+
+    post :create, params: @params
+    assert_response :no_content
+
+    @word_student.reload
+    assert_equal 1, @word_student.user_scripts.count
+    user_script = @word_student.user_scripts.first
+    assert_equal unit, user_script.script
+    assert_equal unit_group, user_script.unit_group
+  end
+
+  test 'creates new UserScript with modular course for transferred student' do
+    unit_group = create(:single_unit_course, :stable)
+    unit = unit_group.first_unit
+    other_unit_group = create(:single_unit_course, :stable, unit: unit)
+    @picture_section.update!(script: unit, unit_group: other_unit_group)
+
+    @word_student.user_scripts.destroy_all
+    assert_equal 0, @word_student.user_scripts.count
+
+    post :create, params: @params
+    assert_response :no_content
+
+    @word_student.reload
+    assert_equal 1, @word_student.user_scripts.count
+    user_script = @word_student.user_scripts.first
+    assert_equal unit, user_script.script
+    assert_equal other_unit_group, user_script.unit_group
+  end
 end

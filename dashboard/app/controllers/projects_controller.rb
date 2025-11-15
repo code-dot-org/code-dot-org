@@ -189,6 +189,9 @@ class ProjectsController < ApplicationController
     },
     weblab2: {
       name: 'New Web Lab 2 Project',
+    },
+    music_dance_ai: {
+      name: "New Music Dance AI Project"
     }
     # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze
@@ -316,10 +319,29 @@ class ProjectsController < ApplicationController
 
   def create_new
     return if redirect_under_13_without_tos_teacher(@level)
+    project_data = initial_data
+
+    # Bubble Choice standalone project types allow multiple sub-projects to be associated with one parent project.
+    # Create new projects for each sublevel
+    if @level.is_a?(BubbleChoice)
+      project_data[:subprojects] =  @level.sublevels.map do |sublevel|
+        {
+          level_id: sublevel.id,
+          project_id: ChannelToken.create_channel(
+            request.ip,
+            Projects.new(get_storage_id),
+            data: {hidden: true},
+            level: sublevel.host_level,
+            standalone: false
+          )
+        }
+      end
+    end
+
     channel = ChannelToken.create_channel(
       request.ip,
       Projects.new(get_storage_id),
-      data: initial_data,
+      data: project_data,
       type: params[:key]
     )
     redirect_to(

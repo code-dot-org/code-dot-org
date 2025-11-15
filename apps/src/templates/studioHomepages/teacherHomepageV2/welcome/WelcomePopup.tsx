@@ -1,5 +1,5 @@
 import Modal from '@code-dot-org/component-library/modal';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
@@ -94,7 +94,9 @@ const WelcomePopup: React.FC<WelcomePopupProps> = ({onCloseCallback}) => {
       customContent={
         <div>
           <img src={currentSlide.image} alt="" className={styles.image} />
-          <BodyTwoText>{currentSlide.body}</BodyTwoText>
+          <Typography variant="body2" gutterBottom>
+            {currentSlide.body}
+          </Typography>
         </div>
       }
     />

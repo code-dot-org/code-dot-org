@@ -16,7 +16,6 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "pl-sandbox-aif-sem-2",
-    "numbered_units": "auto",
     "version_year": "unversioned"
   },
   "resources": [

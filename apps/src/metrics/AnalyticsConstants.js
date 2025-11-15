@@ -119,6 +119,8 @@ const EVENTS = {
 
   // Workshop enrollment
   WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT: 'Workshop Enrollment Page Visited',
+  WORKSHOP_ENROLLMENT_PAGE_VISITED_BY_ENROLLED_USER_EVENT:
+    'Workshop Enrollment Page Visited By Enrolled User',
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
   WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
     'Workshop Add Session to Calendar Clicked',
@@ -327,6 +329,11 @@ const EVENTS = {
   // AI Tutor
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
+  AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
+  AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',
+  AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT:
+    'AI Tutor Code Snippet Added to Context',
+  AI_TUTOR_FILE_ADDED_TO_CONTEXT: 'AI Tutor File Added to Context',
 
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
@@ -500,7 +507,8 @@ const EVENTS = {
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
-  SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
+  SUBMIT_AICHAT_REQUEST_INITIATED: 'User submits aichat request',
+  SUBMIT_AICHAT_REQUEST_SUCCESS: 'User aichat request succeeds',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
     'Unauthorized user attempts to submit aichat request or model customizations and fails',
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
@@ -546,17 +554,7 @@ const EVENTS = {
   CODEBRIDGE_POP_OUT_IMAGE: 'Image popped out of console on codebridge',
   CODEBRIDGE_RUN_CLICK: 'Run button clicked on codebridge',
   CODEBRIDGE_VALIDATE_CLICK: 'Validate button clicked on codebridge',
-  CODEBRIDGE_VERSION_RESTORED: 'Version restored on codebridge',
-  CODEBRIDGE_VERSION_VIEWED: 'Version viewed on codebridge',
-  CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
-    'Toggled to For Teachers Only on codebridge',
-  CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
   CODEBRIDGE_ZOOM: 'Zoomed in or out on codebridge',
-  CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE:
-    'User changed font size on codebridge editor',
-  CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE:
-    'User changed font size on codebridge console',
-  CODEBRIDGE_THEME_CHANGE: 'User changed theme on codebridge',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
@@ -619,8 +617,50 @@ const EVENTS = {
 
   // Lab2
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
+  LAB2_VERSION_RESTORED: 'Version restored on lab2',
+  LAB2_VERSION_VIEWED: 'Version viewed on lab2',
+  LAB2_VERSION_COMMITTED: 'Version committed on lab2',
+
+  // Resource Panel
+  RESOURCE_PANEL_TAB_CLICKED: 'Resource Panel Tab Clicked',
+  RESOURCE_PANEL_SETTINGS_PANEL_OPENED: 'Resource Panel Settings Panel Opened',
+  RESOURCE_PANEL_SETTINGS_CHANGED: 'Resource Panel Settings Changed',
+  RESOURCE_PANEL_LANGUAGE_CHANGE: 'Resource Panel Language Change',
+  RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
+
+  // IntroJS flows
+  INTROJS_FLOW_STARTED: 'IntroJS Flow Started',
+  INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
+  INTROJS_FLOW_COMPLETED: 'IntroJS Flow Completed',
 
   // AI Teaching Assistant - Differentiation
+  // Just In Time Professional Learning
+  PERSONALIZATION_ANSWER_SUBMITTED:
+    'Answered Just In Time PL Personalization Question',
+  PERSONALIZATION_PERSONA_MATCHED: 'User gets a matched persona',
+
+  // Dance Party (Lab2)
+  DANCE_PARTY_SESSION_END: 'Dance Party Session End',
+  GENERATE_DANCER_CLICKED: 'Generate Dancer Clicked',
+  REGENERATE_DANCER_CLICKED: 'Regenerate Dancer Clicked',
+  GENERATE_DANCER_BACK_TO_PROMPT_CLICKED:
+    'Generate Dancer Back To Prompt Clicked',
+  DANCE_PARTY_GENERATE_CODE_CLICKED: 'Dance Party Generate Code Clicked',
+  DANCE_PARTY_REGENERATE_CODE_CLICKED: 'Dance Party Regenerate Code Clicked',
+  DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED:
+    'Dance Party Generate Code Back To Prompt Clicked',
+  DANCE_PARTY_GENERATE_CODE_USE_CODE_CLICKED:
+    'Dance Party Generate Code Use Code Clicked',
+
+  // Music Lab
+  // Note that some Music Lab events are already sent through the Music Lab-specific {@link AnalyticsReporter.ts}.
+  // Reporting will be consolidated once Amplitude support has been removed.
+  MUSIC_LAB_GENERATE_CODE_CLICKED: 'Music Lab Generate Code Clicked',
+  MUSIC_LAB_REGENERATE_CODE_CLICKED: 'Music Lab Regenerate Code Clicked',
+  MUSIC_LAB_GENERATE_CODE_BACK_TO_PROMPT_CLICKED:
+    'Music Lab Generate Code Back To Prompt Clicked',
+  MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED:
+    'Music Lab Generate Code Use Code Clicked',
 };
 
 const EVENT_GROUP_NAMES = {

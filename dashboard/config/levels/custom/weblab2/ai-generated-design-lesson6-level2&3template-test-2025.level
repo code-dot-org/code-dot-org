@@ -1,0 +1,48 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-10-14T22:41:57.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Athletic Gear</title>\n</head>\n<body>\n\n  <header>\n    <h1>All About Athletic Gear</h1>\n    <p>Your guide to choosing the right equipment for every sport.</p>\n  </header>\n\n  <nav>\n    <a href=\"#apparel\">Apparel</a> |\n    <a href=\"#footwear\">Footwear</a> |\n    <a href=\"#equipment\">Equipment</a> |\n    <a href=\"#contact\">Contact</a>\n  </nav>\n\n  <main>\n    <section id=\"apparel\">\n      <h2>Apparel</h2>\n      <p>Modern athletic apparel is designed for comfort and performance. Look for breathable, moisture-wicking fabrics that help regulate body temperature during workouts.</p>\n    </section>\n\n    <section id=\"footwear\">\n      <h2>Footwear</h2>\n      <p>Choosing the right shoes is essential. Running, basketball, and soccer each require specific designs to support movement, impact absorption, and traction.</p>\n    </section>\n\n    <section id=\"equipment\">\n      <h2>Equipment</h2>\n      <p>From weights and yoga mats to bikes and rackets, having the right equipment enhances both safety and effectiveness in training.</p>\n    </section>\n\n    <section id=\"contact\">\n      <h2>Contact Us</h2>\n      <p>Have questions about choosing the best gear? Reach out to our team at <a href=\"mailto:info@athleticgear.com\">info@athleticgear.com</a>.</p>\n    </section>\n  </main>\n\n  <footer>\n    <p>&copy; 2025 Athletic Gear Co. All rights reserved.</p>\n  </footer>\n\n</body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14 22:42:31 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Weblab2>

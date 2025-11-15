@@ -68,11 +68,10 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
       <div
         className={classNames(moduleStyles.absoluteBar, resizingBarClass)}
         {...mainSeparatorProps}
-        // TODO: the separator props are applying role "separator" as well as min/max/now aria values.
-        // Is it ok to ignore this warning?
-        // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role
+        // The separator props are applying role "separator" as well as min/now aria values.
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={0}
+        aria-valuemax={20000} // Infinity fails accessibility checks, so use a large number instead.
         onFocus={() => setIsActive(true)}
         onBlur={() => setIsActive(false)}
       >

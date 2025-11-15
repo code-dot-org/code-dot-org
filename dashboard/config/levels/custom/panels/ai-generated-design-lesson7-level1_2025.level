@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-23T23:42:04.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#Step One:\n\n**Every app starts with understanding the people who will use it.**\n\nWith your partner, discuss what a user who needs this app might want or need.\n- *What frustrations might they have?*\n- *What would make this app useful for them?*",
+        "imageUrl": "https://images.code.org/9bce05259325cc856e6c7c1b9cb38b23-panel1.png",
+        "key": "undefined-b8e93e67-06ce-4df3-9e14-eac51dfd50ca",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "# Step Two:\n\n**Analyze user needs and constraints and  use these to consider design implications and decisions** \n\n   - **User Need** = Alex only has time to use his phone at lunch.\n   - **Design Implication** = App should have quick access offline in case the connection is poor.",
+        "imageUrl": "https://images.code.org/b5f04cf6e073f9c47735fe7d6c3f9d0d-panel2.png",
+        "key": "undefined-b425644a-5615-4d4f-ae70-21ea56e46dcc",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "# Step Three\n\n**Use AI to Build or Analyze Persona Details**\n\nAI can help you think through your user's goals, frustrations, and daily context - but **you** stay in charge of what feels realistic.",
+        "imageUrl": "https://images.code.org/154e852b73c4947958b8ce90440a8370-panel3.gif",
+        "key": "undefined-71ae662f-45a6-4495-95ca-e38b0f375bc6",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Step Four\n\n**Use AI to Help Create a Problem Statement**\n\n* Discuss with your partner how this statement connects to Alex’s needs.\n* What makes it focused on a need, not a solution?\n* Then, write your own problem statement in your Activity Guide.",
+        "imageUrl": "https://images.code.org/32721c622e65f70d00622e892e6d8252-Screenshot 2025-10-15 132453.png",
+        "key": "undefined-246fb82f-eda2-45ea-b109-3bcd3dea5af8",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-23T23:42:04.110+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson7-level1-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson7-level1-test-2025\"},{\"changed_at\":\"2025-10-23 23:45:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

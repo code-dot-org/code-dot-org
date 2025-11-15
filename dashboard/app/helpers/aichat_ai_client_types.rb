@@ -126,6 +126,9 @@ module AichatAiClientTypes
   #   // have a way to check w/ RubyTypes so an additional check is required.
   #   required: string[];
   #   description?: string;
+  #   additionalProperties: boolean;
+  #   // propertyOrdering is only used by Gemini.
+  #   propertyOrdering?: string[];
   # }
   JsonObjectSchema = Interface(
     :type, string('object'),
@@ -133,6 +136,7 @@ module AichatAiClientTypes
     :required, string[],
     :description, Optional(string),
     :additionalProperties, boolean(false),
+    :propertyOrdering, Optional(string[])
   )
 
   JsonArraySchema_ = ForwardRef()
@@ -235,7 +239,7 @@ module AichatAiClientTypes
   #   temperature: number;
 
   #   // Client type.
-  #   clientType: number
+  #   clientType: string
 
   #   // Configure the response. Optional, defaults to TextResponse.
   #   response?: TextResponseConfig | JsonResponseConfig
@@ -246,7 +250,7 @@ module AichatAiClientTypes
     :model, string,
     :systemInstructions, Optional(MessagePart[]),
     :temperature, number,
-    :clientType, number,
+    :clientType, string,
     :response,  Optional(TextResponseConfig | JsonResponseConfig)
   )
 

@@ -27,19 +27,29 @@ import styles from './progress-header.module.scss';
 const V2_SETTING_KEY = 'v2';
 const V1_SETTING_KEY = 'legacy';
 
+// TODO(lfm): delete this file once v1 is fully deprecated.
+// Make sure the container styles are applied to the v2 still if needed.
 function SectionProgressSelector({
   showProgressTableV2,
   setShowProgressTableV2,
   progressTableV2ClosedBeta,
   sectionId,
   hasSeenProgressTableInvite,
-  isInV1Navigaton,
 }) {
   const [hasJustToggledViews, setHasJustToggledViews] = useState(false);
 
   const params = queryParams('view');
 
+  const v1Disabled = DCDO.get('disable-progress-v1', false);
+
   const displayV2 = React.useMemo(() => {
+    if (v1Disabled) {
+      if (showProgressTableV2 !== V2_SETTING_KEY) {
+        new UserPreferences().setShowProgressTableV2(V2_SETTING_KEY);
+        setShowProgressTableV2(V2_SETTING_KEY);
+      }
+      return true;
+    }
     // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
     // If a user has selected manually, show that version.
     const isPreferenceSet =
@@ -54,7 +64,7 @@ function SectionProgressSelector({
       !isPreferenceSet ||
       showProgressTableV2 === V2_SETTING_KEY
     );
-  }, [showProgressTableV2, params]);
+  }, [showProgressTableV2, params, v1Disabled, setShowProgressTableV2]);
 
   useEffect(() => {
     const params = queryParams('view');
@@ -157,25 +167,28 @@ function SectionProgressSelector({
     <div
       className={classNames(
         styles.pageContent,
-        !isInV1Navigaton && styles.navView
+        styles.navView,
+        !displayV2 && styles.v1
       )}
     >
       {!displayV2 && (
         <Alert
-          text={i18n.progressDeprecationWarning()}
-          type="warning"
+          text={i18n.progressDeprecationWarningDated()}
+          type="danger"
           className={styles.deprecationBanner}
         />
       )}
       {displayV2 && (
         <ProgressBanners hasJustSwitchedToV2={hasJustToggledViews} />
       )}
-      <GlobalEditionWrapper
-        component={ProgressV1OrV2ToggleLink}
-        componentId="ProgressV1OrV2ToggleLink"
-      />
+      {!v1Disabled && (
+        <GlobalEditionWrapper
+          component={ProgressV1OrV2ToggleLink}
+          componentId="ProgressV1OrV2ToggleLink"
+        />
+      )}
       {displayV2 ? (
-        <SectionProgressV2 hideTopHeading={!isInV1Navigaton} />
+        <SectionProgressV2 />
       ) : (
         <>
           {includeModalIfAvailable()}

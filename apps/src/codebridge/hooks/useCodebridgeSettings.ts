@@ -1,7 +1,5 @@
-import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {LayoutKey, codebridgeLabsWithConsole} from '@codebridge/constants';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
-import {useMemo, useState} from 'react';
+import {useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {FontSize} from '@cdo/apps/lab2/constants';
@@ -9,13 +7,12 @@ import {
   setConsoleFontSize,
   setEditorFontSize,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
-import {Setting} from '@cdo/apps/lab2/views/components/Settings/SettingsDropdown';
+import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/types';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {lab2EntryPoints} from '../../../lab2EntryPoints';
+import useThemeSetting from '../../lab2/hooks/useThemeSetting';
 import {useCodebridgeContext} from '../codebridgeContext';
 
 // fontSizeOptions contains a list of value/localized text from the FontSize enum,
@@ -54,10 +51,6 @@ export function useCodebridgeSettings(): Setting[] {
   const {config, setConfig, levelProperties} = useCodebridgeContext();
   const {appName, widgetView} = levelProperties;
 
-  // We need to set the theme here because the dropdown is rendered in a portal, outside of the
-  // main lab container.
-  const {theme, setTheme} = useTheme();
-
   const dispatch = useAppDispatch();
   const [selectedEditorFontSizeValue, setSelectedEditorFontSizeValue] =
     useState(currentEditorFontSizeKey);
@@ -73,8 +66,7 @@ export function useCodebridgeSettings(): Setting[] {
     handleFontSizeChange(
       'CodeEditor',
       selectedEditorKey,
-      currentEditorFontSizeKey,
-      EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE
+      currentEditorFontSizeKey
     );
   };
 
@@ -84,16 +76,14 @@ export function useCodebridgeSettings(): Setting[] {
     handleFontSizeChange(
       'Console',
       selectedConsoleKey,
-      currentConsoleFontSizeKey,
-      EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE
+      currentConsoleFontSizeKey
     );
   };
 
   const handleFontSizeChange = (
     type: 'CodeEditor' | 'Console',
     selectedKey: keyof typeof FontSize,
-    currentKey: keyof typeof FontSize,
-    event: string
+    currentKey: keyof typeof FontSize
   ) => {
     if (selectedKey !== currentKey && FontSize[selectedKey]) {
       // We want the user preference for selected font size to persist for signed-in users
@@ -105,20 +95,7 @@ export function useCodebridgeSettings(): Setting[] {
       const reduxAction =
         type === 'Console' ? setConsoleFontSize : setEditorFontSize;
       dispatch(reduxAction(selectedKey));
-      sendCodebridgeAnalyticsEvent(event, appName, {
-        fontSize: selectedKey,
-      });
     }
-  };
-
-  const handleThemeChange = (value: string) => {
-    setTheme(value as Theme);
-    if (signInState === SignInState.SignedIn) {
-      new UserPreferences().setGlobalTheme(value);
-    }
-    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_THEME_CHANGE, appName, {
-      theme: value,
-    });
   };
 
   const handleLayoutChange = (value: string) => {
@@ -129,21 +106,6 @@ export function useCodebridgeSettings(): Setting[] {
       activeLayout: newLayout,
     });
   };
-
-  const availableThemes: string[] = useMemo(() => {
-    if (!appName || !lab2EntryPoints[appName]) {
-      return [];
-    }
-    return lab2EntryPoints[appName].themes;
-  }, [appName]);
-
-  const themeDropdownOptions = availableThemes.map(theme => ({
-    text:
-      theme === 'Dark'
-        ? codebridgeI18n.darkTheme()
-        : codebridgeI18n.lightTheme(),
-    value: theme,
-  }));
 
   const layoutDropdownOptions = [
     {
@@ -179,13 +141,7 @@ export function useCodebridgeSettings(): Setting[] {
           },
         ]
       : []),
-    {
-      id: 'theme',
-      label: codebridgeI18n.theme(),
-      options: themeDropdownOptions,
-      selectedValue: theme,
-      onChange: handleThemeChange,
-    },
+    useThemeSetting(appName),
     ...(!widgetView && hasBothLayouts
       ? [
           {

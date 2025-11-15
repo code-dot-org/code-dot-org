@@ -738,6 +738,7 @@ module SharedConstants
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   AI_EVALUATION_TYPES = {
     SINGLE_STUDENT: 'single_student',
@@ -832,9 +833,9 @@ module SharedConstants
   }
 
   AI_CHAT_CLIENT_TYPES = {
-    AI_CHAT_LAB: 0,
-    AI_TUTOR: 1,
-    FLOW_LAB: 2,
+    AI_CHAT_LAB: "ai-chat-lab",
+    AI_TUTOR: "ai-tutor",
+    FLOW_LAB: "flow-lab",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
@@ -878,6 +879,12 @@ module SharedConstants
     {value: "other", label: "Other", category: 'other'}
   ].freeze
 
+  RESOURCE_EMBEDDABILITY_OPTIONS = {
+    EMBED_AND_RESOURCE_DROPDOWN: {value: "embed_and_resource_dropdown", label: "AI TA knowledge base and resource dropdown"},
+    EMBED_ONLY: {value: "embed_only", label: "AI TA knowledge base only"},
+    RESOURCE_DROPDOWN_ONLY: {value: "resource_dropdown_only", label: "Resource dropdown only"}
+  }.freeze
+
   AI_DIFF_CONTEXT = {
     LESSON: "lesson",
     UNIT: "unit",
@@ -900,4 +907,13 @@ module SharedConstants
     "/oauth_sign_out/",
     "/certificates/"
   ].freeze
+
+  BUBBLE_CHOICE_CUSTOM_MODES = {
+    MUSIC_DANCE_AI: 'music_dance_ai',
+  }.freeze
+
+  BUBBLE_CHOICE_NAVIGATION_TYPES = {
+    PARENT: 'parent',
+    NEXT_LEVEL: 'next_level',
+  }
 end

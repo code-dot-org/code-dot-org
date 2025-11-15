@@ -51,7 +51,7 @@ class Follower < ApplicationRecord
 
   after_create :assign_script
   def assign_script
-    student_user.assign_script(section.script) if section.script
+    student_user.assign_script(section.script, section.unit_group) if section.script
   end
 
   after_destroy :remove_given_and_family_name

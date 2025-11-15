@@ -81,6 +81,13 @@ describe('fileUtils', () => {
     expect(
       getFileIconNameAndStyle({
         ...defaultFile,
+        name: 'test.md',
+        type: ProjectFileType.STARTER,
+      })
+    ).toEqual({iconName: 'markdown', iconStyle: 'regular', isBrand: true});
+    expect(
+      getFileIconNameAndStyle({
+        ...defaultFile,
         name: 'test.html',
         type: ProjectFileType.STARTER,
       })

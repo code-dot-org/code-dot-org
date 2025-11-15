@@ -1,0 +1,67 @@
+name 'pl_sandbox_aif-2-U2-overview_2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Curriculum Overview
+
+## What is AI and Algorithmic Decisions all about?
+ 
+#### In **AI and Algorithmic Decisions**, students take the next step as developers, transforming their web pages into interactive apps with **JavaScript**. 
+
+#### Acting as front-end developers, they learn how algorithms and conditional logic drive user interactions. 
+
+#### With AI as a coding coach and debugging partner, students plan app behavior with flowcharts, write and refine code, and build confidence through problem-solving and iteration.
+
+---
+
+#### ***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence and must be taught in order. AI and Algorithmic Decisions is the 2nd unit in the course.***
+
+## Student Learning Goals
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">By the end of this unit, students will be able to :</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Model user interactions as algorithms and translate them into JavaScript code using event-driven programming.
+
+</li> <br>
+      <li>Design and interpret flowcharts to plan program logic and structure app behavior.</li><br>
+      <li>Write, organize, and debug JavaScript code using variables, functions, and if/else statements.
+</li><br>
+      <li>Use AI tools as supportive partners for debugging, reflection, and learning new coding strategies.
+</li><br>
+<li>Evaluate the role of AI in coding, demonstrating accountability for the quality and ethics of their own code.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/6478f46b5bbaa8fc6468c40a545f9994-image-1760978656971.png" 
+         alt="Icon with computer and weblayout" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+
+
+
+
+
+## Unit Length and Format
+
+
+
+#### **Total Duration:** Approximately 3 weeks
+#### **Structure:** Eleven 45-minute lessons and one 3-day culminating project
+
+#### **Lesson Flow:**
+
+
+- #### Early lessons focus on understanding interactivity and event-driven programming as students explore how user actions drive app behavior and practice debugging with AI support.
+
+- #### Mid-unit lessons introduce variables, functions, and conditional logic, helping students plan and code dynamic interactions through flowcharts, reusable code, and logical operators.
+
+- #### The final project brings these skills together as students design, build, and refine interactive web apps that respond to users in real time, using AI-assisted debugging.
+
+
+MARKDOWN

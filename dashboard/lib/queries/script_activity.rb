@@ -36,9 +36,13 @@ class Queries::ScriptActivity
     user.user_scripts.where.not(user_scripts: {completed_at: nil})
   end
 
-  # return the primary unit with progress for all student units
-  def self.primary_student_unit(user)
-    working_on_student_units(user).first.try(:cached)
+  # return the primary unit and unit group with progress for all student units
+  def self.primary_student_unit_context(user)
+    user_script = working_on_user_scripts(user).first
+    return nil unless user_script
+    unit = user_script.script
+    unit_group_unit = Queries::Courses.unit_group_unit(unit, user_script.unit_group)
+    {unit: unit, unit_group_unit: unit_group_unit}
   end
 
   # return the primary unit with progress for all pl units

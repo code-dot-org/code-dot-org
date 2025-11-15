@@ -147,6 +147,17 @@ div > div:nth-child(3n + 3) {
       align-self: stretch;
 
       border-bottom: 1px solid var(--borders-neutral-primary);
+
+      > div {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.375rem;
+
+        .associatedCurriculumsSeparator {
+          color: var(--text-neutral-quaternary);
+        }
+      }
     }
 
     .actionRowContent {

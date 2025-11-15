@@ -3,6 +3,7 @@
 # This renders the accounts unrecoverable but retains as much useful non-PII data as possible.
 class User::PiiScrubberJob < ApplicationJob
   def perform(dry_run: false, deleted_since: nil, limit: nil)
+    return unless DCDO.get('pii-scrub-enabled', false)
     ExpiredDeletedAccountPiiScrubber.new(dry_run:, deleted_since:, limit:).call
   end
 end

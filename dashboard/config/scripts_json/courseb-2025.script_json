@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-04 17:57:05 UTC",
+    "serialized_at": "2025-10-02 16:06:27 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1349,7 +1349,7 @@
       "key": "7e75d890-9542-4453-b5be-6f61f2c0194c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Debugging Worksheet\" slide\n\n**Display:** Display the image below so that everyone can see it.\n\n![expandable](https://images.code.org/4ae475692eb39eb32cb158273834fe94-Screenshot 2024-04-11 at 4.51.33 PM.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working. You want to walk to your desk but your program has a bug. Can your students help you fix it?\n\nTake a moment to walk them through the rules:\n\n- Start at the compass rose\n- Follow the instructions step-by-step\n- End at the desk\n\n**Do This:** Before students give you any instructions, ask them to describe the **goal** of the program (\"Walk from the starting point to the desk\") and the **expected outcome** (\"Arrive at the desk\"). Remind students that it is good practice to articulate the goal and outcome of the programs they will create before beginning to write their algorithms.    \n\n(*Optional:*  Walk through your program using your fingers on top of the map, under the document camera.  Express frustration when your fingers end up off the map, instead of at the treasure.)\n\n**Think:** _My program says \"East, East, North\"._ *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
+        "description": "\n**Display:** Display the image below so that everyone can see it.\n\n![expandable](https://images.code.org/4ae475692eb39eb32cb158273834fe94-Screenshot 2024-04-11 at 4.51.33 PM.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working. You want to walk to your desk but your program has a bug. Can your students help you fix it?\n\nTake a moment to walk them through the rules:\n\n- Start at the compass rose\n- Follow the instructions step-by-step\n- End at the desk\n\n**Do This:** Before students give you any instructions, ask them to describe the **goal** of the program (\"Walk from the starting point to the desk\") and the **expected outcome** (\"Arrive at the desk\"). Remind students that it is good practice to articulate the goal and outcome of the programs they will create before beginning to write their algorithms.    \n\n(*Optional:*  Walk through your program using your fingers on top of the map, under the document camera.  Express frustration when your fingers end up off the map, instead of at the treasure.)\n\n**Think:** _My program says \"East, East, North\"._ *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
       },
       "seeding_key": {
         "activity_section.key": "7e75d890-9542-4453-b5be-6f61f2c0194c",
@@ -1377,7 +1377,7 @@
       "key": "a5605813-9612-410a-944e-09e3d78ec872",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** To make sure that students understand the idea of finding and fixing errors (debugging) pass out the ***Worksheet** and have students complete the task in pairs.  \n\n(*Optional:* If you want to move the activity along more quickly, feel free to complete these as a class, instead.)\n\n**Transition:** _Now it's time to play the game!_"
+        "description": "**Display**: Show \"Debugging Worksheet\" slide\n\n**Distribute:** To make sure that students understand the idea of finding and fixing errors (debugging) pass out the ***Worksheet** and have students complete the task in pairs.  \n\n(*Optional:* If you want to move the activity along more quickly, feel free to complete these as a class, instead.)\n\n**Transition:** _Now it's time to play the game!_"
       },
       "seeding_key": {
         "activity_section.key": "a5605813-9612-410a-944e-09e3d78ec872",

@@ -12,6 +12,7 @@ import LtiSectionSyncDialog, {
 } from '@cdo/apps/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import ReauthorizeGoogleClassroom from '@cdo/apps/templates/teacherDashboard/ReauthorizeGoogleClassroom';
 import {importOrUpdateRoster} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   sectionCode,
@@ -66,6 +67,7 @@ class SyncOmniAuthSectionControl extends React.Component {
     isDialogOpen: false,
     syncFailErrorLog: '',
     isLtiDialogOpen: false,
+    needsGoogleReauth: false,
   };
 
   onClick = () => {
@@ -110,8 +112,14 @@ class SyncOmniAuthSectionControl extends React.Component {
         }
       })
       .catch(sync_error => {
+        const errorText = '' + sync_error;
+        // Show reauthorize CTA when Google Classroom returns 403
+        const isGoogle =
+          this.props.sectionProvider === OAuthSectionTypes.google_classroom;
+        const needsGoogleReauth = isGoogle && /status:\s*403\b/.test(errorText);
         this.setState({
-          syncFailErrorLog: '' + sync_error,
+          syncFailErrorLog: errorText,
+          needsGoogleReauth: needsGoogleReauth,
         });
         this.openDialog();
         firehoseClient.putRecord(
@@ -123,6 +131,7 @@ class SyncOmniAuthSectionControl extends React.Component {
               sectionId: sectionId,
               loginType: sectionProvider,
               error_message: sync_error,
+              needs_google_reauth: needsGoogleReauth,
             }),
           },
           {includeUserId: true}
@@ -185,6 +194,12 @@ class SyncOmniAuthSectionControl extends React.Component {
         >
           <Heading1>{i18n.loginTypeSyncButtonDialogHeader()}</Heading1>
           <p>{i18n.loginTypeSyncButtonDialogHeaderSub()}</p>
+          {this.state.needsGoogleReauth && (
+            <div style={{margin: '12px 0'}}>
+              <p>{i18n.authorizeGoogleClassroomsText()}</p>
+              <ReauthorizeGoogleClassroom />
+            </div>
+          )}
           <div style={styles.scroll}>
             <pre>
               <code>{this.state.syncFailErrorLog}</code>

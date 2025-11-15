@@ -34,6 +34,10 @@ gem 'rails-controller-testing', '~> 1.0.5'
 # Ref: https://github.com/rails/sprockets/blob/main/UPGRADING.md#manifestjs
 gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
 
+# Rails depends on zeitwerk ~>2.3, but cpath support added in 2.6.9 plays a bit
+# nicer with some of our more convoluted model names (eg, LevelsScriptLevel).
+gem 'zeitwerk', '~> 2.6.9'
+
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
@@ -71,13 +75,16 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate', '~> 3.1.1'
+  gem 'annotaterb', '~> 4.19'
   gem 'aws-google', '~> 0.2.3'
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
   gem 'bootsnap', '>= 1.14.0', require: false
   gem 'localhost'
+
+  # This gem is installed in development only for now while the node version in deployed environments is upgraded.
+  gem "vite_rails", "~> 3.0"
 end
 
 # Rack::Cache middleware used in development/test;
@@ -190,7 +197,7 @@ gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production], require: false # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
@@ -372,7 +379,8 @@ gem 'rack-cors', '~> 2.0.1'
 
 # pin http to 5.0 or greater so that statsig does not pull in an older version.
 # older versions depend on http-parser which breaks some developer builds.
-gem 'http', '~> 5.0'
+# Speculatively target 5.3 specifically to diagnose some S3 networking errors
+gem 'http', '~> 5.3.1'
 
 gem 'statsig', '~> 2.5.5'
 
@@ -394,3 +402,9 @@ gem 'rubyzip'
 Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
   gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '**/engines/*/*.gemspec'
 end
+
+# OpenSSL 3.6 broke Ruby's OpenSSL bindings, see: https://github.com/ruby/openssl/issues/949
+# By using the openssl gem, we can pick up the fixes without needing to upgrade Ruby.
+# This gem line can be removed once we upgrade to Ruby 3.4 >= 3.4.8, or Ruby 3.3 >= 3.3.10 or Ruby 3.2 >= 3.2.10
+# which will include the openssl fix by default, see: https://github.com/ruby/openssl/issues/949#issuecomment-3388132260
+gem 'openssl', '>= 3.3.1'

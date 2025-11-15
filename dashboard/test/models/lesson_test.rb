@@ -694,6 +694,15 @@ class LessonTest < ActiveSupport::TestCase
     end
   end
 
+  test 'resources_for_lesson_plan filters out embed_only resources' do
+    lesson = create(:lesson)
+    create(:resource, name: 'embed only resource', audience: 'Teacher', lessons: [lesson], embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
+    resource_dropdown_resource = create(:resource, name: 'resource dropdown only resource', audience: 'Teacher', lessons: [lesson], embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:RESOURCE_DROPDOWN_ONLY][:value])
+    resources_for_lesson_plan = lesson.resources_for_lesson_plan(true)['Teacher']
+    assert_equal 1, resources_for_lesson_plan.count
+    assert_equal resource_dropdown_resource.id, resources_for_lesson_plan.first[:id]
+  end
+
   test 'verified teacher resources are only return if user is verified' do
     lesson = create(:lesson)
     create(:resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson])
