@@ -141,6 +141,7 @@ function TextResponses({
 }
 
 TextResponses.propTypes = {
+  // Provided by redux.
   sectionId: PropTypes.number.isRequired,
   scriptId: PropTypes.number,
   courseVersionName: PropTypes.string,

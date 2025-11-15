@@ -75,6 +75,8 @@ function idForExpansionIndex(studentId, index) {
 class ProgressTableView extends React.Component {
   static propTypes = {
     currentView: PropTypes.oneOf([ViewType.SUMMARY, ViewType.DETAIL]),
+
+    // redux
     sectionId: PropTypes.number.isRequired,
     students: PropTypes.arrayOf(studentShape),
     scriptData: unitDataPropType.isRequired,

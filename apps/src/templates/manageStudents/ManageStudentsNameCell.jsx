@@ -25,6 +25,8 @@ class ManageStudentNameCell extends Component {
     email: PropTypes.string,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
+
+    //Provided by redux
     editStudent: PropTypes.func.isRequired,
     courseVersionName: PropTypes.string,
     unitPosition: PropTypes.number,

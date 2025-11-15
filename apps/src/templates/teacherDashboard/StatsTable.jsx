@@ -20,6 +20,8 @@ class StatsTable extends Component {
     sectionId: PropTypes.number.isRequired,
     students: PropTypes.array.isRequired,
     studentsCompletedLevelCount: PropTypes.object,
+
+    // Provided by redux.
     courseVersionName: PropTypes.string,
     unitPosition: PropTypes.number,
     participantType: PropTypes.string,
