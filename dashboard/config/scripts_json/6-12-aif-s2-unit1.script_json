@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-24 16:33:42 UTC",
+    "serialized_at": "2025-11-14 12:24:16 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2302,6 +2302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-onboarding-image-context-test-2025"
+        ],
         "progression": "\"How To\" Guides"
       },
       "bonus": false,
@@ -2324,6 +2327,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-onboarding-highlight-context-test-2025"
+        ],
         "progression": "\"How To\" Guides"
       },
       "bonus": false,
@@ -2346,6 +2352,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-onboarding-prompt-backpack-test-2025"
+        ],
         "progression": "\"How To\" Guides"
       },
       "bonus": false,
@@ -2543,6 +2552,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-level1a-test-2025"
+        ],
         "progression": "User Persona Analysis: Alex"
       },
       "bonus": false,
@@ -2690,6 +2702,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level2-test-2025"
+        ],
         "progression": "Create a Site Map & User Flow"
       },
       "bonus": false,
@@ -4518,68 +4533,10 @@
     }
   ],
   "resources": [
-    {
-      "name": "The User's Experience",
-      "url": "https://docs.google.com/document/d/1YVTimIly9J7L-d-Emz5b5JumzGPdazl6FqA9g4vLEH8/",
-      "key": "the_user_s_experience",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "resource_dropdown_only",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "the_user_s_experience"
-      }
-    },
-    {
-      "name": "Welcome to Web Apps",
-      "url": "https://docs.google.com/document/d/1_0wIjJNtV3rHUFs6LXsPfhtv61bom_JivnNotWXIgBg/",
-      "key": "welcome_to_web_apps",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "resource_dropdown_only",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "welcome_to_web_apps"
-      }
-    },
-    {
-      "name": "Welcome to Web Apps",
-      "url": "https://docs.google.com/document/d/1FQbQF4-9zF2mlStG0Ngc7m4YN5mfU6PxIGBcmJkr_oA/",
-      "key": "welcome_to_web_apps_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "resource_dropdown_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "welcome_to_web_apps_1"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "welcome_to_web_apps"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "welcome_to_web_apps_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "the_user_s_experience"
-      }
-    }
+
   ],
   "scripts_resources": [
 

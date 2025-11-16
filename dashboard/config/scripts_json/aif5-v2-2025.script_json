@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-25 20:07:14 UTC",
+    "serialized_at": "2025-11-14 12:24:22 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2400,6 +2400,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L01 CFU innovations_v2-2025"
+        ],
         "progression": "Check For Understanding - Day 1"
       },
       "bonus": false,
@@ -2422,6 +2425,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L02 CFU innovations part 2_v2-2025"
+        ],
         "progression": "Check For Understanding - Day 2"
       },
       "bonus": false,
@@ -2444,6 +2450,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L3 CFU Why Collect PII2022_v2-2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2466,6 +2475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cybersecurity-global-impacts-lesson3-level1_v2-2025"
+        ],
         "progression": "Privacy Tradeoffs"
       },
       "bonus": false,
@@ -2488,6 +2500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cybersecurity-global-impacts-lesson4-level1_v2-2025"
+        ],
         "progression": "Innovation Simulation - Part 2"
       },
       "bonus": false,
@@ -2510,6 +2525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Keylogging2022_v2-2025"
+        ],
         "progression": "Keylogging"
       },
       "bonus": false,
@@ -2532,6 +2550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Phishing2022_v2-2025"
+        ],
         "progression": "Phishing"
       },
       "bonus": false,
@@ -2554,6 +2575,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Rogue Access Points2022_v2-2025"
+        ],
         "progression": "Malware"
       },
       "bonus": false,
@@ -2576,6 +2600,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L07 CFU security risks_v2-2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2598,6 +2625,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L08 CFU security risks_v2-2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2620,6 +2650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cybersecurity-global-impacts-lesson7-level1_v2-2025"
+        ],
         "progression": "Innovation Simulation - Part 3"
       },
       "bonus": false,
@@ -2642,6 +2675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher_v2-2025"
+        ],
         "progression": "Encryption Widgets"
       },
       "bonus": false,
@@ -2664,6 +2700,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution_v2-2025"
+        ],
         "progression": "Encryption Widgets"
       },
       "bonus": false,
@@ -2686,6 +2725,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L9 CFU public key_v2-2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2708,6 +2750,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L10 CFU MFA_v2-2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2730,6 +2775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cybersecurity-global-impacts-lesson10-level1_v2-2025"
+        ],
         "progression": "Innovation Simulation - Part 4"
       },
       "bonus": false,
@@ -2752,6 +2800,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_cybersecurity_v2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -2774,6 +2825,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-cyber_v2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -3010,761 +3064,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "All Resources",
-      "url": "/s/aif5-2025/resources",
-      "key": "all_resources_4",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_4"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/aif5-2025/standards",
-      "key": "all_standards_4",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_4"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/aif5-2025/vocab",
-      "key": "all_vocabulary_4",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_4"
-      }
-    },
-    {
-      "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/QvyTEx1wyOY",
-      "key": "computer_science_is_changing_everything",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "computer_science_is_changing_everything"
-      }
-    },
-    {
-      "name": "Cops Need A Warrant To Search Your Cell Phone’s Location History, Supreme Court Rules",
-      "url": "https://youtu.be/07YzpuDgvDM",
-      "key": "cops_need_a_warrant_to_search_your_cell_phone_s_location_history_supreme_court_rules",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "cops_need_a_warrant_to_search_your_cell_phone_s_location_history_supreme_court_rules"
-      }
-    },
-    {
-      "name": "Data Policies and Privacy",
-      "url": "https://docs.google.com/presentation/d/1TUH2-fchOMWGG5EF9a0YBx2hHHIOkH0t0UDIPIS8mxI/edit?usp=sharing",
-      "key": "data_policies_and_privacy",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "data_policies_and_privacy"
-      }
-    },
-    {
-      "name": "Encryption and Public Keys",
-      "url": "https://youtu.be/ZghMPWGXexs",
-      "key": "encryption_and_public_keys",
-      "properties": {
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/concept_encryption.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "encryption_and_public_keys"
-      }
-    },
-    {
-      "name": "Equifax Data Breach: What Went Wrong (Podcast)",
-      "url": "https://open.spotify.com/episode/03El29KDDRqg7zH2Q2cg70?si=japjmpLzSBGYXehgggKsWw",
-      "key": "equifax_data_breach_what_went_wrong_podcast_",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://drive.google.com/file/d/1gTMNZZM6DY8kT6v_Ve4iK6qm6YX4wqwu/view?usp=sharing",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
-      }
-    },
-    {
-      "name": "Innovation Simulation Badges",
-      "url": "https://drive.google.com/file/d/1tmfHc8XVZntg85BAiOaxjsZJnsP2x4f_/view?usp=drive_link",
-      "key": "innovation_simulation_badges",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "innovation_simulation_badges"
-      }
-    },
-    {
-      "name": "Innovation Simulation Character Bios",
-      "url": "https://docs.google.com/document/d/1wbiRiTX2k3ULNmCKIl5kQec7eFhZCWoFeVNrAA1RQXs/edit?usp=sharing",
-      "key": "innovation_simulation_character_bios",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "innovation_simulation_character_bios"
-      }
-    },
-    {
-      "name": "Innovation Simulation Nameplates",
-      "url": "https://drive.google.com/file/d/1R7IaTD4Cg8TJxAclAsdBMk_TPrVQ8GrV/view?usp=sharing",
-      "key": "innovation_simulation_nameplates",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "innovation_simulation_nameplates"
-      }
-    },
-    {
-      "name": "Innovation Simulation Project Guide",
-      "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?usp=sharing",
-      "key": "innovation_simulation_project_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "innovation_simulation_project_guide"
-      }
-    },
-    {
-      "name": "Innovation Simulation Project Overview",
-      "url": "https://docs.google.com/document/d/1v3wdKIyI7Ro1iBGDokVPApA5NsMfil8SYP22Pa4pBIA/edit?usp=sharing",
-      "key": "innovation_simulation_project_overview",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "innovation_simulation_project_overview"
-      }
-    },
-    {
-      "name": "Is Facial Recognition Invading Your Privacy?",
-      "url": "https://youtu.be/f5qgOqNQ7zY",
-      "key": "is_facial_recognition_invading_your_privacy_",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "is_facial_recognition_invading_your_privacy_"
-      }
-    },
-    {
-      "name": "Kahoot Quiz - Security Risks",
-      "url": "https://create.kahoot.it/share/unit-10-security-risks/f82a1515-b576-43a9-aedf-798238d7ba2b",
-      "key": "kahoot_quiz_-_security_risks",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "kahoot_quiz_-_security_risks"
-      }
-    },
-    {
-      "name": "Optional Podcast Transcripts",
-      "url": "https://docs.google.com/document/d/18W0jNKzq48XyUXwQ55jrvMPZOq_lFdweNAZhox0BfNc/edit?usp=drive_link",
-      "key": "optional_podcast_transcripts",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "optional_podcast_transcripts"
-      }
-    },
-    {
-      "name": "Planet Money: Bad Credit Bureau (Podcast)",
-      "url": "https://www.npr.org/sections/money/2017/10/06/556212654/episode-798-bad-credit-bureau",
-      "key": "planet_money_bad_credit_bureau_podcast_",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "planet_money_bad_credit_bureau_podcast_"
-      }
-    },
-    {
-      "name": "Privacy, Security, and Innovation",
-      "url": "https://docs.google.com/document/d/1sFdE2uaHeSEvzVm9U9mZIACiFwOtFrtWdMNhUQxxifo/edit?usp=sharing",
-      "key": "privacy_security_and_innovation",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "privacy_security_and_innovation"
-      }
-    },
-    {
-      "name": "Project: Innovation Simulation Part 1",
-      "url": "https://docs.google.com/presentation/d/1R1-JtPEV8YoZGdpfTn1UkR1gFnUn3qo5yW65fWGKu8Q/view",
-      "key": "project_innovation_simulation_part_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_innovation_simulation_part_1"
-      }
-    },
-    {
-      "name": "Project: Innovation Simulation Part 2",
-      "url": "https://docs.google.com/presentation/d/1iQ787EePXMOAiVy-3F1LMe23jsRK_i-gFOGmH25GnX0/view",
-      "key": "project_innovation_simulation_part_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_innovation_simulation_part_2"
-      }
-    },
-    {
-      "name": "Project: Innovation Simulation Part 3",
-      "url": "https://docs.google.com/presentation/d/10R9yfhuuyTA3ZBH-LUIfun_HEo7MFtu2__G71qcMVzA/view",
-      "key": "project_innovation_simulation_part_3",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_innovation_simulation_part_3"
-      }
-    },
-    {
-      "name": "Project: Innovation Simulation Part 4",
-      "url": "https://docs.google.com/presentation/d/1rzOStRgm5d1cyKMzt-f1j0OGSXvd9R3yE5tQMYNpjt8/view",
-      "key": "project_innovation_simulation_part_4",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_innovation_simulation_part_4"
-      }
-    },
-    {
-      "name": "Protecting Data Part 1",
-      "url": "https://docs.google.com/presentation/d/1VAeXyyR0r7aN-DlrNrVKabE6VRz0eBVFeOu7DNRKVUI/view",
-      "key": "protecting_data_part_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "protecting_data_part_1"
-      }
-    },
-    {
-      "name": "Protecting Data Part 2",
-      "url": "https://docs.google.com/presentation/d/1xwoH-GALbsiEY9KG11c_OhJK4WUYRv6KtjVZeO3sers/view",
-      "key": "protecting_data_part_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "protecting_data_part_2"
-      }
-    },
-    {
-      "name": "Security Risks Part 1",
-      "url": "https://docs.google.com/presentation/d/1_l0_mkVuSKgqhHrkIPxXlfNEbpPcCPqaovJlnurHxa0/view",
-      "key": "security_risks_part_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "security_risks_part_1"
-      }
-    },
-    {
-      "name": "Security Risks Part 2",
-      "url": "https://docs.google.com/presentation/d/1Fif5frkj1eTgeHk90oSXfQj2gJruXhKwtvDxSWNQkdM/view",
-      "key": "security_risks_part_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "security_risks_part_2"
-      }
-    },
-    {
-      "name": "The Internet: Cybersecurity and Crime",
-      "url": "https://youtu.be/AuYNXgO_f3Y",
-      "key": "the_internet_cybersecurity_and_crime",
-      "properties": {
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/concept_cybercrime.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_internet_cybersecurity_and_crime"
-      }
-    },
-    {
-      "name": "The Value of Privacy",
-      "url": "https://docs.google.com/presentation/d/1xnwoZJkBlQejH5EaWXfNGgybSye9m6e3Z3RLB33JC-4/view",
-      "key": "the_value_of_privacy",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "the_value_of_privacy"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
-        "resource.key": "innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
-        "resource.key": "innovation_simulation_project_overview"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
-        "resource.key": "project_innovation_simulation_part_4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
-        "resource.key": "computer_science_is_changing_everything"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
-        "resource.key": "innovation_simulation_badges"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
-        "resource.key": "innovation_simulation_character_bios"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
-        "resource.key": "innovation_simulation_nameplates"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
-        "resource.key": "innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
-        "resource.key": "innovation_simulation_project_overview"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
-        "resource.key": "project_innovation_simulation_part_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Data Policies and Privacy",
-        "resource.key": "data_policies_and_privacy"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Data Policies and Privacy",
-        "resource.key": "privacy_security_and_innovation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: The Value of Privacy",
-        "resource.key": "cops_need_a_warrant_to_search_your_cell_phone_s_location_history_supreme_court_rules"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: The Value of Privacy",
-        "resource.key": "is_facial_recognition_invading_your_privacy_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: The Value of Privacy",
-        "resource.key": "privacy_security_and_innovation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: The Value of Privacy",
-        "resource.key": "the_value_of_privacy"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
-        "resource.key": "innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
-        "resource.key": "innovation_simulation_project_overview"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
-        "resource.key": "project_innovation_simulation_part_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 5: Security Risks Part 1",
-        "resource.key": "security_risks_part_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Security Risks Part 2",
-        "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Security Risks Part 2",
-        "resource.key": "kahoot_quiz_-_security_risks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Security Risks Part 2",
-        "resource.key": "optional_podcast_transcripts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Security Risks Part 2",
-        "resource.key": "planet_money_bad_credit_bureau_podcast_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Security Risks Part 2",
-        "resource.key": "security_risks_part_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Security Risks Part 2",
-        "resource.key": "the_internet_cybersecurity_and_crime"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
-        "resource.key": "innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
-        "resource.key": "innovation_simulation_project_overview"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
-        "resource.key": "project_innovation_simulation_part_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Protecting Data Part 1",
-        "resource.key": "encryption_and_public_keys"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Protecting Data Part 1",
-        "resource.key": "protecting_data_part_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: Protecting Data Part 2",
-        "resource.key": "protecting_data_part_2"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_4",
-        "script.name": "aif5-v2-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_4",
-        "script.name": "aif5-v2-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_4",
-        "script.name": "aif5-v2-2025"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "computer_virus_scanning_software",
-      "word": "Computer Virus Scanning Software",
-      "definition": "protects a computing system against infection",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "computer_virus_scanning_software"
-      }
-    },
-    {
-      "key": "computing_innovation",
-      "word": "Computing Innovation",
-      "definition": "includes a program as an integral part of its function. Can be physical (e.g. self-driving car), non-physical computing software (e.g. picture editing software), or non-physical computing concepts (e.g., e-commerce).",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "computing_innovation"
-      }
-    },
-    {
-      "key": "decryption",
-      "word": "Decryption",
-      "definition": "a process that reverses encryption, taking a secret message and reproducing the original plain text",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "decryption"
-      }
-    },
-    {
-      "key": "encryption",
-      "word": "Encryption",
-      "definition": "a process of encoding messages to keep them secret, so only \"authorized\" parties can read it",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "encryption"
-      }
-    },
-    {
-      "key": "keylogging",
-      "word": "Keylogging",
-      "definition": "the use of a program to record every keystroke made by a computer user in order to gain fraudulent access to passwords and other confidential information",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "keylogging"
-      }
-    },
-    {
-      "key": "malware",
-      "word": "Malware",
-      "definition": "software intended to damage a computing system or to take partial control over its operation",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "malware"
-      }
-    },
-    {
-      "key": "multi_factor_authentication",
-      "word": "Multi-factor Authentication",
-      "definition": "a system that requires at least two steps to unlock protected information; each step adds a new layer of security that must be broken to gain unauthorized access",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "multi_factor_authentication"
-      }
-    },
-    {
-      "key": "personally_identifiable_information_pii_",
-      "word": "Personally Identifiable Information (PII)",
-      "definition": "information about an individual that identifies, links, relates, or describes them",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "personally_identifiable_information_pii_"
-      }
-    },
-    {
-      "key": "phishing",
-      "word": "Phishing",
-      "definition": "a technique that attempts to trick a user into providing personal information. That personal information can then be used to access sensitive online resources, such as bank accounts and emails",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "phishing"
-      }
-    },
-    {
-      "key": "public_key_encryption",
-      "word": "Public Key Encryption",
-      "definition": "pairs a public key for encryption and a private key for decryption. The sender does not need the receiver’s private key to encrypt a message, but the receiver’s private key is required to decrypt the message",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "public_key_encryption"
-      }
-    },
-    {
-      "key": "rouge_access_point",
-      "word": "Rouge Access Point",
-      "definition": "a wireless access point that gives unauthorized access to secure networks",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "rouge_access_point"
-      }
-    },
-    {
-      "key": "symmetric_key_encryption",
-      "word": "Symmetric Key Encryption",
-      "definition": "involves one key for both encryption and decryption",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "symmetric_key_encryption"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
-        "vocabulary.key": "computing_innovation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Data Policies and Privacy",
-        "vocabulary.key": "personally_identifiable_information_pii_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 5: Security Risks Part 1",
-        "vocabulary.key": "keylogging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 5: Security Risks Part 1",
-        "vocabulary.key": "malware"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 5: Security Risks Part 1",
-        "vocabulary.key": "phishing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 5: Security Risks Part 1",
-        "vocabulary.key": "rouge_access_point"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Protecting Data Part 1",
-        "vocabulary.key": "decryption"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Protecting Data Part 1",
-        "vocabulary.key": "encryption"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Protecting Data Part 1",
-        "vocabulary.key": "public_key_encryption"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Protecting Data Part 1",
-        "vocabulary.key": "symmetric_key_encryption"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: Protecting Data Part 2",
-        "vocabulary.key": "computer_virus_scanning_software"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: Protecting Data Part 2",
-        "vocabulary.key": "multi_factor_authentication"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

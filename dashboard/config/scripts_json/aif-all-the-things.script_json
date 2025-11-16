@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-12 19:43:50 UTC",
+    "serialized_at": "2025-11-14 12:24:16 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -877,6 +877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-sem2-u3-L7-prototype"
+        ],
         "progression": "Lesson 7 Warm Up Prototype (just to get display output)"
       },
       "bonus": false,
@@ -899,6 +902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-sem2-u3-L7-practice-prototype"
+        ],
         "progression": "Lesson 7 Prototypes"
       },
       "bonus": false,
@@ -921,6 +927,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-sem2-u3-L7-practice2-prototype"
+        ],
         "progression": "Lesson 7 Prototypes"
       },
       "bonus": false,
@@ -943,6 +952,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-sem2-u3-L8-prototype"
+        ],
         "progression": "Lesson 8 Prototype - ECHO"
       },
       "bonus": false,
@@ -1215,6 +1227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unit4-lesson7-weblab-prototype"
+        ],
         "progression": "Lesson 7: Web Lab"
       },
       "bonus": false,
@@ -1237,6 +1252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unit4-lesson8-sketchlab-prototype"
+        ],
         "progression": "Lesson 8: User Journey (Sketch Lab)"
       },
       "bonus": false,
@@ -1259,6 +1277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unit4-lesson8-weblab-reset-prototype"
+        ],
         "progression": "Lesson 8: Implementing Reset (Web Lab)"
       },
       "bonus": false,
@@ -1281,6 +1302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unit4-lesson8-weblab-undo-prototype"
+        ],
         "progression": "Lesson 8: Implementing Undo (Web Lab)"
       },
       "bonus": false,

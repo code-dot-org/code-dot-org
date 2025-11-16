@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-29 23:06:54 UTC",
+    "serialized_at": "2025-11-14 12:24:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -201,6 +201,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_step2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -222,6 +225,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hoai_try_music_lab"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -363,6 +369,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_step3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
