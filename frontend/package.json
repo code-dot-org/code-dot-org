@@ -34,6 +34,7 @@
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.56.1",
     "lint-staged": "^15.4.3",
     "prettier": "3.4.2",
     "rimraf": "^6.0.1",
