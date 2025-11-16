@@ -31,7 +31,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {trySetLocalStorage} from '@cdo/apps/utils';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 import backgroundImage from '@cdo/static/dance/generateDancer/generate-dancer-background.png';
 import dancerSilhouetteBrightImage from '@cdo/static/dance/generateDancer/generate-dancer-silhouette-bright.svg';
 
@@ -287,10 +287,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   useEffect(() => {
     const metadataString = JSON.stringify(currentSources.generatedDancer);
     if (metadataString) {
-      trySetLocalStorage(GENERATED_DANCER_STORAGE_KEY, metadataString);
+      trySetSessionStorage(GENERATED_DANCER_STORAGE_KEY, metadataString);
     } else {
       // If no dancer has been generated on this level, clear local storage to prevent stale artifacts from showing.
-      localStorage.removeItem(GENERATED_DANCER_STORAGE_KEY);
+      sessionStorage.removeItem(GENERATED_DANCER_STORAGE_KEY);
     }
     setCanvasKey(metadataString || 'none');
   }, [currentSources]);

@@ -170,7 +170,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       updateSources(workspaceSerialization);
       updateBlocklyFlyout(flyoutDefinition);
       const levelId = levelProperties.id;
-      localStorage.setItem(
+      sessionStorage.setItem(
         `flyout-${levelId}`,
         JSON.stringify(flyoutDefinition)
       );
