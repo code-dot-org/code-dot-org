@@ -32,6 +32,7 @@ const config: StorybookConfig = {
                     localIdentName: '[name]__[local]--[hash:base64:5]',
                     // keep old/default-import behavior:
                     namedExport: false,
+                    exportLocalsConvention: 'as-is',
                   },
                 },
               },
