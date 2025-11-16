@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import React, {forwardRef, memo, useMemo, HTMLAttributes} from 'react';
+import * as React from 'react';
+import {forwardRef, memo, useMemo, HTMLAttributes} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';

@@ -1,5 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react-webpack5';
-import React, {useState, useCallback} from 'react';
+import * as React from 'react';
+import {useState, useCallback} from 'react';
 
 import CheckboxDropdown, {CheckboxDropdownProps} from '../index';
 

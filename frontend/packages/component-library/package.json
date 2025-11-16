@@ -510,6 +510,7 @@
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@eslint/js": "^9.15.0",
     "@release-it/conventional-changelog": "^10.0.0",

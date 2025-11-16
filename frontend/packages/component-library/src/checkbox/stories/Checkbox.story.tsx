@@ -1,5 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react-webpack5';
-import React, {useState} from 'react';
+import * as React from 'react';
+import {useState} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 

@@ -241,6 +241,9 @@ importers:
       '@code-dot-org/component-library-styles':
         specifier: workspace:*
         version: link:../component-library-styles
+      '@code-dot-org/fonts':
+        specifier: workspace:*
+        version: link:../fonts
       '@code-dot-org/lint-config':
         specifier: workspace:*
         version: link:../lint-config
