@@ -11,9 +11,9 @@ ReactPlayer.canPlay = jest.fn();
 
 jest.mock('react-player', () => ({
   __esModule: true,
-  default: ({light, playIcon, onError}: ReactPlayerProps) => (
+  default: ({light, src, playIcon, onError}: ReactPlayerProps) => (
     <div>
-      YouTube Player
+      {src?.endsWith('.mp4') ? 'Fallback ' : 'YouTube '} Player
       {light}
       {playIcon}
       <button
