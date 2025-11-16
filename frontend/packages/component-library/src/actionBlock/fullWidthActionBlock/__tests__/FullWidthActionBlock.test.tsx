@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import {ReactPlayerProps} from 'react-player';
-import ReactPlayer from 'react-player/file';
+import ReactPlayer, {ReactPlayerProps} from 'react-player';
 
 import Video from '@/video';
 
@@ -9,24 +8,11 @@ import FullWidthActionBlock, {ActionBlockProps} from '../index';
 
 ReactPlayer.canPlay = jest.fn();
 
-jest.mock('react-player/youtube', () => ({
+jest.mock('react-player', () => ({
   __esModule: true,
   default: ({light, playIcon, onError}: ReactPlayerProps) => (
     <div>
       YouTube Player
-      {light}
-      {playIcon}
-      <button onClick={onError}>Trigger Error</button>
-    </div>
-  ),
-  canPlay: jest.fn(),
-}));
-
-jest.mock('react-player/file', () => ({
-  __esModule: true,
-  default: ({light, playIcon, onError}: ReactPlayerProps) => (
-    <div>
-      Fallback Player
       {light}
       {playIcon}
       <button onClick={onError}>Trigger Error</button>

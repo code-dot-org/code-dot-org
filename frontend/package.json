@@ -5,16 +5,16 @@
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
   },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
     "directory": "frontend"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "build": "turbo build",
     "clean": "turbo clean",
@@ -40,8 +40,8 @@
     "turbo": "^2.3.0",
     "typescript": "5.5.4"
   },
-  "packageManager": "yarn@4.6.0",
   "engines": {
     "node": ">=20"
-  }
+  },
+  "packageManager": "pnpm@10.22.0+sha1.3e9e4d522d30f3cf4cabb7506f5d15b89feffd04"
 }

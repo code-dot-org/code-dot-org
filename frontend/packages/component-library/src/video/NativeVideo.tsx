@@ -1,4 +1,4 @@
-import ReactPlayer from 'react-player/file';
+import ReactPlayer from 'react-player';
 
 import type {VideoProps} from '@/video/types';
 

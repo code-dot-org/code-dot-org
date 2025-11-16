@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import {useState} from 'react';
-import ReactPlayer from 'react-player/file';
+import ReactPlayer from 'react-player';
 import {JsonLd} from 'react-schemaorg';
 import type {VideoObject} from 'schema-dts';
 
