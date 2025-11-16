@@ -54,7 +54,7 @@ corepack enable
 Initialize the frontend package:
 
 ```bash
-yarn install
+pnpm install
 ```
 
 ### Build
@@ -64,7 +64,7 @@ Turborepo will automatically detect changed sub-directories and appropriately ca
 To build all apps and packages, run the following command:
 
 ```bash
-yarn build
+pnpm build
 ```
 
 ### Develop
@@ -72,16 +72,17 @@ yarn build
 To develop **all** apps and packages, run the following command:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
-To develop a specific set of apps and packages, use `yarn workspace [workspace name] [command]`.
-More information on this command [here](https://yarnpkg.com/cli/workspace).
+To develop a specific set of apps and packages, use the `--filter` argument to target a particular package.
+For instance, `pnpm --filter [workspace name] [command]`.
+More information on this argument [here](https://pnpm.io/filtering).
 
 For example, to only run the design system storybook:
 
 ```bash
-yarn workspace @code-dot-org/design-system-storybook dev
+pnpm --filter @code-dot-org/design-system-storybook dev
 ```
 
 ### Formatting, Linting. (Prettier, ESLint, Stylelint)
@@ -89,17 +90,13 @@ yarn workspace @code-dot-org/design-system-storybook dev
 To format all files in all packages and apps, run the following command:
 
 ```bash
-yarn lint:fix
+pnpm lint:fix
 ```
 
-You can also run this command for some specific package or app using yarn workspace:
+You can also run this command for some specific package or app using a particular workspace:
 
 ```bash
-yarn lint:fix --filter @code-dot-org/component-library
-
-OR
-
-yarn workspace @code-dot-org/component-library lint:fix
+pnpm lint:fix --filter @code-dot-org/component-library
 ```
 
 ### Pre-release Testing
@@ -107,7 +104,7 @@ yarn workspace @code-dot-org/component-library lint:fix
 To run all tests that the pull-request quality checks do:
 
 ```bash
-yarn release:dryrun
+pnpm release:dryrun
 ```
 
 This command executes all lint, test, and build commands.
@@ -126,7 +123,7 @@ copy it from `frontend/.env.example`)
 To run the visual tests:
 
 ```bash
-yarn workspace @code-dot-org/design-system-storybook eyes-storybook
+pnpm --filter @code-dot-org/design-system-storybook eyes-storybook
 ```
 
 If differences are detected, follow the [baseline update](https://applitools.com/docs/topics/overview/overview-reviewing-test-results.html) guide to resolve.
@@ -136,5 +133,5 @@ If differences are detected, follow the [baseline update](https://applitools.com
 To remove build artifacts, use the following commmand:
 
 ```bash
-yarn clean
+pnpm clean
 ```

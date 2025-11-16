@@ -92,6 +92,9 @@ importers:
       css-loader:
         specifier: ^7.0.0
         version: 7.1.2(webpack@5.102.1(@swc/core@1.15.2)(esbuild@0.25.12))
+      dedent:
+        specifier: ^1.7.0
+        version: 1.7.0(babel-plugin-macros@3.1.0)
       eslint:
         specifier: ^9.16.0
         version: 9.39.1

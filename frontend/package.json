@@ -24,11 +24,11 @@
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "release:dryrun": "turbo release:dryrun",
-    "start": "yarn dev",
+    "start": "pnpm dev",
     "test": "turbo test",
     "test:ui:ci": "turbo test:ui:ci",
     "test:ui:local": "turbo test:ui:local",
-    "test:unit": "yarn test",
+    "test:unit": "pnpm test",
     "typecheck": "turbo typecheck"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",

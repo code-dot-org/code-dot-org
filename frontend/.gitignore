@@ -1,8 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Yarn
-.yarn/*
-
 # Dependencies
 node_modules
 .pnp
@@ -33,8 +30,6 @@ dist
 
 # Debug
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Misc
 .DS_Store
