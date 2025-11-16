@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 12:24:50 UTC",
+    "serialized_at": "2025-10-27 16:15:30 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5627,9 +5627,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-tutor-foundations-of-ai-programming_pilot"
-        ],
         "progression": "AI Tutor"
       },
       "bonus": false,
@@ -5652,9 +5649,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-tutor-foundations-of-ai-programming-L2_pilot"
-        ],
         "progression": "AI Tutor"
       },
       "bonus": false,
@@ -5677,9 +5671,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-tutor-foundations-of-ai-programming-L3_pilot"
-        ],
         "progression": "AI Tutor"
       },
       "bonus": false,
@@ -5702,9 +5693,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-tutor-foundations-of-ai-programming-L4_pilot"
-        ],
         "progression": "AI Tutor"
       },
       "bonus": false,
@@ -5727,9 +5715,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-tutor-foundations-of-ai-programming-L5_pilot"
-        ],
         "progression": "AI Tutor"
       },
       "bonus": false,
@@ -5752,9 +5737,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-tutor-foundations-of-ai-programming-L6_pilot"
-        ],
         "progression": "AI Tutor"
       },
       "bonus": false,
@@ -11039,22 +11021,1222 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "[KEY] Algorithm Decision-Making",
+      "url": "https://docs.google.com/document/d/1O-9esj18FlJGKVemFzyB-tj4jjP72VdOVwUAbWzAqq4/edit?usp=drivesdk",
+      "key": "_key_algorithm_decision-making",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_algorithm_decision-making"
+      }
+    },
+    {
+      "name": "[KEY] Baking a Cake",
+      "url": "https://docs.google.com/presentation/d/1oxcszzgf5Mqh54re5X2A-NQdaHtV7H8DiDWGRpqUqco/edit?usp=sharing",
+      "key": "_key_baking_a_cake",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_baking_a_cake"
+      }
+    },
+    {
+      "name": "[KEY] Decomposing a Pixel Image",
+      "url": "https://docs.google.com/document/d/1ky2ckWlroZdR0t6LBlnmNPRum-3xxO6d5ba4uOzqa7w/edit?usp=drivesdk",
+      "key": "_key_decomposing_a_pixel_image",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_decomposing_a_pixel_image"
+      }
+    },
+    {
+      "name": "[KEY] Planning a School Event",
+      "url": "https://docs.google.com/document/d/1tfoRgVsxeZ1Cztu0HUiT7spzntEOwqyWl60VFlsqMEo/edit?usp=drivesdk",
+      "key": "_key_planning_a_school_event",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_planning_a_school_event"
+      }
+    },
+    {
+      "name": "[KEY] Unit Guide - Interests and Skills",
+      "url": "https://docs.google.com/document/d/1kKHncTCPJla5z4O_Id1aqS7UVuWv_0bPN7Ga0j90e84/edit?usp=drivesdk",
+      "key": "_key_unit_guide_-_interests_and_skills",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_unit_guide_-_interests_and_skills"
+      }
+    },
+    {
+      "name": "[OPTIONAL] UMPIRE Strategy Activity Guide",
+      "url": "https://docs.google.com/document/d/1hcBkH9GOtzkU0JFGn0Gnmrhi95NUA0l9SYZGgpoWScg/edit?usp=drivesdk",
+      "key": "_optional_umpire_strategy_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_umpire_strategy_activity_guide"
+      }
+    },
+    {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
+      }
+    },
+    {
+      "name": "AI Chat Lab FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_lab_faq",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
+      "name": "Algorithm Decision-Making",
+      "url": "https://docs.google.com/document/d/1gB6BxtGC6NIR-gimvJXH4xAcoVbYMXy4VojhjWlxNHI/edit?usp=drivesdk",
+      "key": "algorithm_decision-making",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "algorithm_decision-making"
+      }
+    },
+    {
+      "name": "Algorithms IRL",
+      "url": "https://docs.google.com/presentation/d/1ENXKbPTHFGMB_6RqKfaqpxpb-K1I9dI4NN7ALmrd4y8/edit?usp=drivesdk",
+      "key": "algorithms_irl",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "algorithms_irl"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/aif2-2025/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/aif2-2025/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/aif2-2025/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
+      "name": "Baking a Cake",
+      "url": "https://docs.google.com/presentation/d/1A40oCejpPTn7KuaQgMPQ6KA_v6kceHA9C7cu418ikok/edit?usp=sharing",
+      "key": "baking_a_cake",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "baking_a_cake"
+      }
+    },
+    {
+      "name": "Computational Thinking",
+      "url": "https://docs.google.com/presentation/d/1L__14H_p9BjdMC0OGyEP1ljc4-LFqo62vJtGKlxonG0/edit?usp=drivesdk",
+      "key": "computational_thinking",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "computational_thinking"
+      }
+    },
+    {
+      "name": "Computing Careers",
+      "url": "https://docs.google.com/presentation/d/1P6IE0X6zqv3Hy5LrGjSMsgNv5VxQGRuxN309TELGtb8/edit?usp=drivesdk",
+      "key": "computing_careers",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "computing_careers"
+      }
+    },
+    {
+      "name": "Conditionals",
+      "url": "https://docs.google.com/presentation/d/19FBTMm_W2gjVs3-RjEPe57oZf65B0OCIfKIe1btdkvQ/edit?usp=drivesdk",
+      "key": "conditionals",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals"
+      }
+    },
+    {
+      "name": "Decomposing a Pixel Image",
+      "url": "https://docs.google.com/document/d/1aO9ADCkCQzvmBhQH5GkZNUNuRgJkMnNLsh0iZe92hxM/edit?usp=drivesdk",
+      "key": "decomposing_a_pixel_image",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "decomposing_a_pixel_image"
+      }
+    },
+    {
+      "name": "Decomposition",
+      "url": "https://docs.google.com/presentation/d/1aFiqu32Ox2oCOK3iqIj1c_JdHHtTsrPakmP0jzreqds/edit?usp=drivesdk",
+      "key": "decomposition",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "decomposition"
+      }
+    },
+    {
+      "name": "Designing Algorithms",
+      "url": "https://docs.google.com/presentation/d/109QcqztPo3NCopeGsAHTS81ivjcBwfi_z9xa6R-zor0/edit?usp=drivesdk",
+      "key": "designing_algorithms",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "designing_algorithms"
+      }
+    },
+    {
+      "name": "Digital Manipulative Support - Decomposing a Pixel Image",
+      "url": "https://docs.google.com/presentation/d/1uJEmy8iKPWuVCVBjXphp1KVyr9NWaQ_SBiSTe5K4OzQ/edit?usp=drivesdk",
+      "key": "digital_manipulative_support_-_decomposing_a_pixel_image",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "digital_manipulative_support_-_decomposing_a_pixel_image"
+      }
+    },
+    {
+      "name": "Digital Manipulative Support - Flowchart Template",
+      "url": "https://docs.google.com/presentation/d/1AQD8IaXnoLZbRp_ecrwlhUVwYlETnT88-SEoq3NbCCc/edit?usp=drivesdk",
+      "key": "digital_manipulative_support_-_flowchart_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "digital_manipulative_support_-_flowchart_template"
+      }
+    },
+    {
+      "name": "Digital Manipulative Support - School Event Planning Template",
+      "url": "https://docs.google.com/presentation/d/1AlRvfF2J4K3b9SwS-dHOe06JuTP0Rs6Jh5rqd_ZVjdg/edit?usp=drivesdk",
+      "key": "digital_manipulative_support_-_school_event_planning_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "digital_manipulative_support_-_school_event_planning_template"
+      }
+    },
+    {
+      "name": "Foundations of AI Programming Unit Guide",
+      "url": "https://docs.google.com/document/d/1m6dHtb5PClNJWkmQb-ZWhcfDbCV1ibiJq7ehd2-QkGg/edit?usp=drivesdk",
+      "key": "foundations_of_ai_programming_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "name": "Function Template",
+      "url": "https://docs.google.com/document/d/1qBYkaVcp1OFVbEUwWoO5vvv_WMH5pyZ0rpvaB3Aat9M/edit?usp=drivesdk",
+      "key": "function_template",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "function_template"
+      }
+    },
+    {
+      "name": "Functions and Parameters",
+      "url": "https://docs.google.com/presentation/d/1h3ADli1HkezewKZY77qXhyqCCsjqilf6iUsYghvjics/edit?usp=drivesdk",
+      "key": "functions_and_parameters",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_and_parameters"
+      }
+    },
+    {
+      "name": "Functions with Parameters",
+      "url": "https://docs.google.com/presentation/d/1nHoxhIlJZxkO406VSAIdJddQNhYB7Ps_Ms6juMk04ng/edit?usp=drivesdk",
+      "key": "functions_with_parameters",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "name": "Instruction Cards",
+      "url": "https://docs.google.com/document/d/14Bx7Utp4HtV80bcAoRIH-qhHy0fbTXZ3XRslEzG-F0k/edit?usp=drivesdk",
+      "key": "instruction_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "instruction_cards"
+      }
+    },
+    {
+      "name": "Introduction to Loops",
+      "url": "https://docs.google.com/presentation/d/14_i9srmKnCaXboKMAEGDpavwFpjBzvXbiHdR5pKKZKY/edit?usp=drivesdk",
+      "key": "introduction_to_loops",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_loops"
+      }
+    },
+    {
+      "name": "Pixels of Me Project",
+      "url": "https://docs.google.com/presentation/d/1KSi0s0u80x-E_BF2jCrkwIXIHFPlcbNe2sFaEFI3syQ/edit?usp=drivesdk",
+      "key": "pixels_of_me_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "pixels_of_me_project"
+      }
+    },
+    {
+      "name": "Pixels of Me Project Planning Guide",
+      "url": "https://docs.google.com/document/d/16MATjbEN2oaI8P_g5aSXoCPvz54fgUnEBpqANLSmQvI/edit?usp=drivesdk",
+      "key": "pixels_of_me_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "pixels_of_me_project_planning_guide"
+      }
+    },
+    {
+      "name": "Planning a School Event",
+      "url": "https://docs.google.com/document/d/124oJ0WmCJjbm755SWhVCbqmzYN9ccGXJsdl7N3EiZso/edit?usp=drivesdk",
+      "key": "planning_a_school_event",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "planning_a_school_event"
+      }
+    },
+    {
+      "name": "Python Lab Documentation",
+      "url": "https://studio.code.org/docs/ide/pythonlab",
+      "key": "python_lab_documentation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "python_lab_documentation"
+      }
+    },
+    {
+      "name": "Two-Way Selection",
+      "url": "https://docs.google.com/presentation/d/1Ah9x3y7B0pEesT9TB2_BllOpYTtKVHw74By_GAnvyJQ/edit?usp=drivesdk",
+      "key": "two-way_selection",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "two-way_selection"
+      }
+    },
+    {
+      "name": "UMPIRE Strategy Activity Guide",
+      "url": "https://docs.google.com/document/d/1hcBkH9GOtzkU0JFGn0Gnmrhi95NUA0l9SYZGgpoWScg/edit?usp=drivesdk",
+      "key": "umpire_strategy_activity_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "umpire_strategy_activity_guide"
+      }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "name": "Variables and Data Flow",
+      "url": "https://docs.google.com/presentation/d/17SquLCpyBUlMO_tqSbrw9DZRK4p7NQ_hnTAkP9m9X4g/edit?usp=drivesdk",
+      "key": "variables_and_data_flow",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "variables_and_data_flow"
+      }
+    },
+    {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
+      "name": "Vision Board",
+      "url": "https://docs.google.com/presentation/d/1Fq10OlmBpyHPg9lqytpovt57AInl9NOvJzbWR6UJ1OM/edit?usp=drivesdk",
+      "key": "vision_board",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "vision_board"
+      }
+    },
+    {
+      "name": "Waymo Self-Driving Car",
+      "url": "https://drive.google.com/file/d/1yxxJ_YiA2CiEt1V82Nl3HfcK7IoK9xol/view?usp=sharing",
+      "key": "waymo_self-driving_car",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "waymo_self-driving_car"
+      }
+    },
+    {
+      "name": "Working with Objects",
+      "url": "https://docs.google.com/presentation/d/1EI7C7nI-wIduonCKs7kg-g1THuyiClYlFnreXdMLUwo/edit?usp=drivesdk",
+      "key": "working_with_objects",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_objects"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Algorithms IRL",
+        "resource.key": "_key_algorithm_decision-making"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Algorithms IRL",
+        "resource.key": "algorithm_decision-making"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Algorithms IRL",
+        "resource.key": "algorithms_irl"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Algorithms IRL",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Algorithms IRL",
+        "resource.key": "waymo_self-driving_car"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Decomposition",
+        "resource.key": "_key_decomposing_a_pixel_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Decomposition",
+        "resource.key": "decomposing_a_pixel_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Decomposition",
+        "resource.key": "decomposition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Decomposition",
+        "resource.key": "digital_manipulative_support_-_decomposing_a_pixel_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Decomposition",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Two-Way Selection",
+        "resource.key": "_optional_umpire_strategy_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Two-Way Selection",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Two-Way Selection",
+        "resource.key": "two-way_selection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Pixels of Me Project",
+        "resource.key": "pixels_of_me_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Pixels of Me Project",
+        "resource.key": "pixels_of_me_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Computing Careers",
+        "resource.key": "_key_unit_guide_-_interests_and_skills"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Computing Careers",
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Computing Careers",
+        "resource.key": "computing_careers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Computing Careers",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Computing Careers",
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Computing Careers",
+        "resource.key": "vision_board"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "resource.key": "_key_baking_a_cake"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "resource.key": "_key_planning_a_school_event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "resource.key": "baking_a_cake"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "resource.key": "computational_thinking"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "resource.key": "digital_manipulative_support_-_school_event_planning_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "resource.key": "planning_a_school_event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Designing Algorithms",
+        "resource.key": "designing_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Designing Algorithms",
+        "resource.key": "digital_manipulative_support_-_flowchart_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Designing Algorithms",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Variables and Data Flow",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Variables and Data Flow",
+        "resource.key": "variables_and_data_flow"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Working with Objects",
+        "resource.key": "_optional_umpire_strategy_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Working with Objects",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Working with Objects",
+        "resource.key": "working_with_objects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions",
+        "resource.key": "_optional_umpire_strategy_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions",
+        "resource.key": "function_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions",
+        "resource.key": "functions_and_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions",
+        "resource.key": "instruction_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Functions with Parameters",
+        "resource.key": "_optional_umpire_strategy_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Functions with Parameters",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Functions with Parameters",
+        "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Introduction to Loops",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Introduction to Loops",
+        "resource.key": "introduction_to_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Conditional Statements",
+        "resource.key": "_optional_umpire_strategy_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Conditional Statements",
+        "resource.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Conditional Statements",
+        "resource.key": "foundations_of_ai_programming_unit_guide"
+      }
+    }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chat_faq",
+        "script.name": "aif2-tutor-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "aif2-tutor-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "aif2-tutor-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "aif2-tutor-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "foundations_of_ai_programming_unit_guide",
+        "script.name": "aif2-tutor-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "python_lab_documentation",
+        "script.name": "aif2-tutor-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "umpire_strategy_activity_guide",
+        "script.name": "aif2-tutor-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unlocking_assessments",
+        "script.name": "aif2-tutor-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
+        "script.name": "aif2-tutor-pilot-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "abstraction",
+      "word": "abstraction",
+      "definition": "focusing on the important information and ignoring irrelevant details",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "key": "algorithm",
+      "word": "algorithm",
+      "definition": "a set of instructions to accomplish a task that usually involves sequence, selection, and iteration",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "argument",
+      "word": "argument",
+      "definition": "the actual value you pass into a function when you call it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "key": "bias",
+      "word": "bias",
+      "definition": "when our data or the way we analyze it favors certain outcomes over others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "key": "class",
+      "word": "class",
+      "definition": "a blueprint or set of instructions for creating something that can do specific tasks",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "key": "computational_thinking",
+      "word": "computational thinking",
+      "definition": "a problem-solving approach that involves breaking problems down into smaller parts, recognizing patterns, focusing on important details, and creating step-by-step solutions that a computer or person can follow",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computational_thinking"
+      }
+    },
+    {
+      "key": "condition",
+      "word": "condition",
+      "definition": "a rule that the computer checks to decide if it should keep going",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "key": "conditional_statement",
+      "word": "conditional statement",
+      "definition": "a command that runs only if a certain condition is True, allowing a program to make decisions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditional_statement"
+      }
+    },
+    {
+      "key": "data_type",
+      "word": "data type",
+      "definition": "the format of the data that can be stored in a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "key": "debug",
+      "word": "debug",
+      "definition": "to find out why your code isn't working and fix the problem so your program runs the way you expect",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debug"
+      }
+    },
+    {
+      "key": "decomposition",
+      "word": "decomposition",
+      "definition": "breaking a larger problem into smaller, more manageable parts",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decomposition"
+      }
+    },
+    {
+      "key": "emerging_technology",
+      "word": "emerging technology",
+      "definition": "new or evolving technologies that solve problems or create opportunities in various fields, such as AI, robotics, or augmented reality",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "emerging_technology"
+      }
+    },
+    {
+      "key": "ethics",
+      "word": "ethics",
+      "definition": "a guide for responsible choices about emerging technologies, ensuring privacy, consent, and safety for everyone",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "key": "function",
+      "word": "function",
+      "definition": "a named block of code that performs a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "loop",
+      "definition": "a way to tell a computer to repeat a set of instructions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "method",
+      "word": "method",
+      "definition": "an action that an object can do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "key": "module",
+      "word": "module",
+      "definition": "a .py file that contains Python code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "module"
+      }
+    },
+    {
+      "key": "object",
+      "word": "object",
+      "definition": "something that has attributes (what it knows) and methods (what it can do)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "key": "parameter",
+      "word": "parameter",
+      "definition": "a placeholder in your function",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "key": "pseudocode",
+      "word": "pseudocode",
+      "definition": "a way to plan out your code using plain language",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pseudocode"
+      }
+    },
+    {
+      "key": "snake_case",
+      "word": "snake_case",
+      "definition": "a naming style where all letters are lowercase and words are separated by underscores",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "snake_case"
+      }
+    },
+    {
+      "key": "two_way_selection",
+      "word": "two-way selection",
+      "definition": "also known as an if/else statement, is where the program chooses one path or the other depending on the condition",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "two_way_selection"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "variable",
+      "definition": "a container that stores a value in memory",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Algorithms IRL",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Algorithms IRL",
+        "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Two-Way Selection",
+        "vocabulary.key": "two_way_selection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Computing Careers",
+        "vocabulary.key": "emerging_technology"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "vocabulary.key": "computational_thinking"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "vocabulary.key": "decomposition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Designing Algorithms",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Variables and Data Flow",
+        "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Variables and Data Flow",
+        "vocabulary.key": "debug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Variables and Data Flow",
+        "vocabulary.key": "snake_case"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Variables and Data Flow",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Working with Objects",
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Working with Objects",
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Working with Objects",
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Working with Objects",
+        "vocabulary.key": "pseudocode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Functions with Parameters",
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Functions with Parameters",
+        "vocabulary.key": "module"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Functions with Parameters",
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Introduction to Loops",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Introduction to Loops",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Conditional Statements",
+        "vocabulary.key": "conditional_statement"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

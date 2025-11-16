@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 12:24:16 UTC",
+    "serialized_at": "2025-10-31 14:48:28 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -3221,9 +3221,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-and-algorithmic-decisions-lesson10-level6-frq-test-2025"
-        ],
         "progression": "Fairness and Inclusivity"
       },
       "bonus": false,

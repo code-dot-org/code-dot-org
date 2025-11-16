@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 12:24:53 UTC",
+    "serialized_at": "2025-10-24 03:12:19 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -104,9 +104,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_7_intro"
-        ],
         "progression": "Generate a dancer"
       },
       "bonus": false,
@@ -129,9 +126,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "hoai-pilot-7-first-dance"
-        ],
         "progression": "Generate a dancer"
       },
       "bonus": false,
@@ -154,9 +148,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_7_dancer1"
-        ],
         "progression": "Generate a dancer"
       },
       "bonus": false,
@@ -179,9 +170,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_7_dancer2"
-        ],
         "progression": "Generate a dancer"
       },
       "bonus": false,
@@ -229,9 +217,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_7_dancer3"
-        ],
         "progression": "Generate a dancer"
       },
       "bonus": false,
@@ -254,9 +239,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "hoai-pilot-7-second-dance"
-        ],
         "progression": "Generate a dancer"
       },
       "bonus": false,
@@ -279,9 +261,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_7_music_code_sound"
-        ],
         "progression": "Generate a music remix"
       },
       "bonus": false,
@@ -304,9 +283,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "hoai-pilot-7-play-together"
-        ],
         "progression": "Generate a music remix"
       },
       "bonus": false,
@@ -329,9 +305,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_7_music_gen_tog"
-        ],
         "progression": "Generate a music remix"
       },
       "bonus": false,
@@ -354,9 +327,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_7_music_panel"
-        ],
         "progression": "Generate a music remix"
       },
       "bonus": false,
@@ -379,9 +349,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_7_music_gen_song"
-        ],
         "progression": "Generate a music remix"
       },
       "bonus": false,
@@ -404,9 +371,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_7_choice"
-        ],
         "progression": "Regenerate"
       },
       "bonus": false,

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 12:25:00 UTC",
+    "serialized_at": "2025-10-27 17:47:03 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7716,9 +7716,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csf_safety_in_my_online_neighborhood2022_2025"
-        ]
       },
       "bonus": false,
       "seeding_key": {

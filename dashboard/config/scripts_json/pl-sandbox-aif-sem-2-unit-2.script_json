@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 12:25:01 UTC",
+    "serialized_at": "2025-11-06 21:08:49 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -791,9 +791,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-u2-logic-27"
-        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -816,9 +813,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-u2-multi-flow-sketchlab-29"
-        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -841,9 +835,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-u2-logic-lab-30"
-        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -866,9 +857,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl_sandbox_aif_2_U2-finalproject-31"
-        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -891,9 +879,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-U2-lesson-info"
-        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -916,9 +901,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-U2-reflection-33"
-        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -941,9 +923,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-U2_Closing-Cert-34"
-        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,

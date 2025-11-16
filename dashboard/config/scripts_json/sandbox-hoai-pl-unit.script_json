@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 12:25:04 UTC",
+    "serialized_at": "2025-11-06 12:56:13 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -190,9 +190,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "mix-move-ai-dancer-prompt-1-input-PL"
-        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -240,9 +237,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "mix-move-ai-dancer-prompt-2-input-PL"
-        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -290,9 +284,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "mix-move-ai-dancer-prompt-4-input-PL"
-        ],
         "progression": "Design"
       },
       "bonus": false,

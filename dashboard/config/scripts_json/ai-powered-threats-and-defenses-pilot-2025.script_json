@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 12:24:16 UTC",
+    "serialized_at": "2025-09-06 19:27:12 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6632,10 +6632,956 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "[EXEMPLAR] Designing Secure Systems Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1K8GMeaT_9uVeB5SqMdIcCeb7f-qbMJJ6-512PQ2Zh88/edit?usp=sharing",
+      "key": "_exemplar_designing_secure_systems_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_designing_secure_systems_project_planning_guide"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Unit Guide",
+      "url": "https://docs.google.com/document/d/1TPJAkIw-E9zMwBFX__fjqjxQp_jIv2W8XeuDkHMjDOY/view",
+      "key": "_exemplar_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_guide"
+      }
+    },
+    {
+      "name": "[KEY] AI in Encryption",
+      "url": "https://docs.google.com/document/d/1dnUeMY5d8R4iVypzkDw-nVnP7qB8ZKVLGq7r5wvRJpA/edit?usp=sharing",
+      "key": "_key_ai_in_encryption",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_in_encryption"
+      }
+    },
+    {
+      "name": "[KEY] Cybersecurity Threats",
+      "url": "https://docs.google.com/document/d/1gInrioS9blFSd3JTa1XD_Xaz4YqzYF0OYdWGi8-tH08/edit?usp=drive_link",
+      "key": "_key_cybersecurity_threats",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_cybersecurity_threats"
+      }
+    },
+    {
+      "name": "[KEY] Hackable Human",
+      "url": "https://docs.google.com/document/d/1zl9Um2iKIg7Q2FCZoGkMvdAXhpsoVk2Bz6q59MrGHms/edit?usp=sharing",
+      "key": "_key_hackable_human",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_hackable_human"
+      }
+    },
+    {
+      "name": "[KEY] Investigate a CIA Scenario: Attacker/Defender",
+      "url": "https://docs.google.com/document/d/174vQaj9skmfFjPv99lPHpeizUHwvg1JA1UcDBVJbQrk/edit?usp=sharing",
+      "key": "_key_investigate_a_cia_scenario_attacker_defender",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_investigate_a_cia_scenario_attacker_defender"
+      }
+    },
+    {
+      "name": "[KEY] Layered Defenses",
+      "url": "https://docs.google.com/document/d/14W2D2_x1rD20Mf-6oLdnjKL71DO1xl1jNkbhIylcx2Y/edit?tab=t.0",
+      "key": "_key_layered_defenses",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_layered_defenses"
+      }
+    },
+    {
+      "name": "[KEY] Phishing Prevention Strategies",
+      "url": "https://docs.google.com/document/d/1CxKq0ZJ361r67B-wYiLTYXBEectIy5ZlgMvQuYPJvgE/edit?usp=sharing",
+      "key": "_key_phishing_prevention_strategies",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_phishing_prevention_strategies"
+      }
+    },
+    {
+      "name": "[KEY] Redesign Challenge",
+      "url": "https://docs.google.com/document/d/1xyByUYWzL2ze3RrOr_0tR5oF5Bk-dEkL1zPcV4cAjwE/edit?usp=sharing",
+      "key": "_key_redesign_challenge",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_redesign_challenge"
+      }
+    },
+    {
+      "name": "[KEY] The Day Everything Broke",
+      "url": "https://docs.google.com/document/d/1_dOWTjj9yjI87rPmUYKNr977voWTQErhhA9FdWaA7b0/edit?usp=sharing",
+      "key": "_key_the_day_everything_broke",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_the_day_everything_broke"
+      }
+    },
+    {
+      "name": "[KEY] User Profiles' Audit Log Suspicious Activity",
+      "url": "https://docs.google.com/document/d/1UjbILX-9ROJQTIQZ6nUjaE7qVxCYGkGR1CVXdiIuvIw/edit?usp=sharing",
+      "key": "_key_user_profiles_audit_log_suspicious_activity",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_user_profiles_audit_log_suspicious_activity"
+      }
+    },
+    {
+      "name": "AAA and AI",
+      "url": "https://docs.google.com/presentation/d/1MXb_DuDodfBb6qXi_pKPF205rG5496TxXxFiEPRdXyg/edit?usp=sharing",
+      "key": "aaa_and_ai",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "aaa_and_ai"
+      }
+    },
+    {
+      "name": "Access Control Scenario Cards",
+      "url": "https://docs.google.com/presentation/d/15LGd19V5t8D7AqQbaumUrqOcAa4IJOZr1n6Q0Wwi0tg/edit?usp=sharing",
+      "key": "access_control_scenario_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "access_control_scenario_cards"
+      }
+    },
+    {
+      "name": "AI in Encryption",
+      "url": "https://docs.google.com/presentation/d/1FWN1YaJeN9hZCX3RjtTR7Nl3kNfy3MhsoDfj3Nq0lc4/view",
+      "key": "ai_in_encryption",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_in_encryption"
+      }
+    },
+    {
+      "name": "AI in Encryption",
+      "url": "https://docs.google.com/document/d/1K3U7GQBQl2XV8s7ozu93jCbeAtlIDNTCz9yzEuoFbng/edit?tab=t.0",
+      "key": "ai_in_encryption_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_in_encryption_1"
+      }
+    },
+    {
+      "name": "Audit Logs Profile 1: Jordan P.",
+      "url": "https://docs.google.com/document/d/1GRBeFTM2ZnkZnTbZs6TPJsKO7Yu0ZBIbYnFX1nMiwwQ/edit?usp=sharing",
+      "key": "audit_logs_profile_1_jordan_p_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "audit_logs_profile_1_jordan_p_"
+      }
+    },
+    {
+      "name": "Audit Logs Profile 2: Sana R.",
+      "url": "https://docs.google.com/document/d/1PWv-Ml0uWkXhHpiXJpRBscK_lFK4iOvAYeDboSVcG-M/edit?usp=sharing",
+      "key": "audit_logs_profile_2_sana_r_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "audit_logs_profile_2_sana_r_"
+      }
+    },
+    {
+      "name": "Audit Logs Profile 3: Amara T.",
+      "url": "https://docs.google.com/document/d/1Wsw61alnuJW1EPdb93Z1s5qo5wNE4xWS-A6mqi4m2fU/edit?usp=sharing",
+      "key": "audit_logs_profile_3_amara_t_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "audit_logs_profile_3_amara_t_"
+      }
+    },
+    {
+      "name": "Audit Logs Profile 4: Omar M.",
+      "url": "https://docs.google.com/document/d/1yGNSBj9MVcrx32Ifl1BJFc8YlnxsGOkw2E20aPWRAMY/edit?usp=sharing",
+      "key": "audit_logs_profile_4_omar_m_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "audit_logs_profile_4_omar_m_"
+      }
+    },
+    {
+      "name": "Authentication, Authorization, and Accounting",
+      "url": "https://docs.google.com/presentation/d/1ePy6FMF73Bs_c0JYlA069AyzVOkvygFRVkw_UNM4h-k/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
+      "key": "authentication_authorization_and_accounting",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "authentication_authorization_and_accounting"
+      }
+    },
+    {
+      "name": "Authentication Method Cards",
+      "url": "https://docs.google.com/presentation/d/1r7gmPcIga3Cq5wKAqkGFUuB9jZlu3strvpSSWvIX3e4/edit?usp=sharing",
+      "key": "authentication_method_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "authentication_method_cards"
+      }
+    },
+    {
+      "name": "Caesar Cipher Wheel",
+      "url": "https://docs.google.com/presentation/d/1yUziVL7c_gzWAO2W7zU8NPbUPiUahkOsfPC9uI_r2Og/edit?usp=drive_link",
+      "key": "caesar_cipher_wheel",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "caesar_cipher_wheel"
+      }
+    },
+    {
+      "name": "Case Studies",
+      "url": "https://docs.google.com/document/d/1khRrorNSL8gjF4LSUBZ-5linkG2Jb_gAZzWugMdAYW4/edit?usp=sharing",
+      "key": "case_studies",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "case_studies"
+      }
+    },
+    {
+      "name": "Confidentiality, Integrity, and Availability",
+      "url": "https://docs.google.com/presentation/d/1N_L5CEe-y1zW_BIDl8weXfNV66fU-neGtQFzXv7ZZhQ/edit?usp=sharing",
+      "key": "confidentiality_integrity_and_availability",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "confidentiality_integrity_and_availability"
+      }
+    },
+    {
+      "name": "Cybersecurity Threats",
+      "url": "https://docs.google.com/document/d/18AW6pInMb-E3-JYvM-RC4oEtlLjewgY_BfZ3MfCu0rI/edit?usp=drive_link",
+      "key": "cybersecurity_threats",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "cybersecurity_threats"
+      }
+    },
+    {
+      "name": "Defense in Action",
+      "url": "https://docs.google.com/document/d/1mIwIJA8cEIcximlVt56nb5VWN50TF-8Xyt8-jK--TfY/edit?usp=sharing",
+      "key": "defense_in_action",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "defense_in_action"
+      }
+    },
+    {
+      "name": "Defense Menu",
+      "url": "https://docs.google.com/document/d/1WiwieuaKOaCo_Jf99P0EHFK77Gyrx4ehm8GunDxmelQ/edit?usp=sharing",
+      "key": "defense_menu",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "defense_menu"
+      }
+    },
+    {
+      "name": "Design Challenge Inspiration Cards",
+      "url": "https://docs.google.com/presentation/d/1PcX7_KjwYIW_fklIX5qA35Lt84LVdWWcxMjYbUTv-tg/edit?usp=drive_link",
+      "key": "design_challenge_inspiration_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "design_challenge_inspiration_cards"
+      }
+    },
+    {
+      "name": "Designing Secure Systems",
+      "url": "https://docs.google.com/presentation/d/1G2R8-LwkTCjdWFDNNzJzs72oaMSv_O46HfNPUHE8PYs/view",
+      "key": "designing_secure_systems",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "designing_secure_systems"
+      }
+    },
+    {
+      "name": "Designing Secure Systems Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1VgnmVktQ4_Kq4yWKW9v4xvuvNRTFfL1KIuRcFrSx2GQ/edit?usp=sharing",
+      "key": "designing_secure_systems_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "designing_secure_systems_project_planning_guide"
+      }
+    },
+    {
+      "name": "Encryption",
+      "url": "https://docs.google.com/presentation/d/1N-s7kbFUB6hXXOS2tp8yfV5KvR_1tVrS5ykIiBbV_Ic/edit?usp=sharing",
+      "key": "encryption",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "encryption"
+      }
+    },
+    {
+      "name": "Encryption Design Challenge",
+      "url": "https://docs.google.com/document/d/1fw7Vi2fHVYdqEN299-9Hr9-c5FnLVC8ZQPeWryURJlo/edit?usp=drive_link",
+      "key": "encryption_design_challenge",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "encryption_design_challenge"
+      }
+    },
+    {
+      "name": "Fraud Detection Investigation",
+      "url": "https://docs.google.com/document/d/1idByIUpqHOTgApWUPuuS4z4w3LHHP9zGh-Uo_VXbKGM/edit?usp=sharing",
+      "key": "fraud_detection_investigation",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "fraud_detection_investigation"
+      }
+    },
+    {
+      "name": "Hackable Human",
+      "url": "https://docs.google.com/document/d/1owIfysW2x4L7v-2BMGz1NkkrSwuU3XhrsjyXXyLhKmg/edit?usp=sharing",
+      "key": "hackable_human",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "hackable_human"
+      }
+    },
+    {
+      "name": "Introduction to Cybersecurity",
+      "url": "https://docs.google.com/presentation/d/1-Q9ABq6Bjl2T7ePja26FwhsZa0MIydksxhDxcqgKaRw/edit?usp=sharing",
+      "key": "introduction_to_cybersecurity",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_cybersecurity"
+      }
+    },
+    {
+      "name": "Investigate a CIA Scenario - Scenario Files",
+      "url": "https://docs.google.com/document/d/1GbUuawSv3U2DthbvwDOVg5P6-oGLPzGtt2qlb9JjpEA/edit?usp=sharing",
+      "key": "investigate_a_cia_scenario_-_scenario_files",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "investigate_a_cia_scenario_-_scenario_files"
+      }
+    },
+    {
+      "name": "Investigate a CIA Scenario: Attacker/Defender",
+      "url": "https://docs.google.com/document/d/1b7-s3lc2fthmqHlfGlXn39aMuejFy5B0jS0hLrm6FAw/edit?usp=sharing",
+      "key": "investigate_a_cia_scenario_attacker_defender",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "investigate_a_cia_scenario_attacker_defender"
+      }
+    },
+    {
+      "name": "Layered Defenses",
+      "url": "https://docs.google.com/presentation/d/1LWYGpUwtU2aepl8BXz4jG-hljgVTydVbClHqP13QBa4/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
+      "key": "layered_defenses",
+      "properties": {
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "layered_defenses"
+      }
+    },
+    {
+      "name": "Layered Defenses",
+      "url": "https://docs.google.com/document/d/1yry7DR84dCW9uX6PkeoAX1oxJ0mo4WsgtPdrF6q7AYo/edit?tab=t.0",
+      "key": "layered_defenses_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "layered_defenses_1"
+      }
+    },
+    {
+      "name": "Phishing and Password Guessing",
+      "url": "https://docs.google.com/presentation/d/14rsiUtVsXv_rnpjJtFmtLDynADcDBGAymiszXX8OMaM/edit?usp=sharing",
+      "key": "phishing_and_password_guessing",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "phishing_and_password_guessing"
+      }
+    },
+    {
+      "name": "Phishing Prevention Strategies",
+      "url": "https://docs.google.com/document/d/1pfye3_eLKoTmBSKerGG5euxtCXoJgJ98ENPkIsLHf2o/edit?usp=sharing",
+      "key": "phishing_prevention_strategies",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "phishing_prevention_strategies"
+      }
+    },
+    {
+      "name": "Phishing with AI",
+      "url": "https://docs.google.com/presentation/d/1dCrlRiKRnSNj8O-7t6OIylNMWngTD2Q8888srY2TRx8/edit?usp=sharing",
+      "key": "phishing_with_ai",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "phishing_with_ai"
+      }
+    },
+    {
+      "name": "Redesign Challenge",
+      "url": "https://docs.google.com/document/d/1IYDt1se9hSmXCsxpLw0hvmn2ygzzpqj46FqIyeQi8PU/edit?usp=sharing",
+      "key": "redesign_challenge",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "redesign_challenge"
+      }
+    },
+    {
+      "name": "Security vs Usability",
+      "url": "https://docs.google.com/presentation/d/1e4J5wq5S_Qz0UYFfi9TwUhQkE0GT4NL2Ky5JRhQ0yAE/edit?usp=sharing",
+      "key": "security_vs_usability",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "security_vs_usability"
+      }
+    },
+    {
+      "name": "Security vs Usability Matrix",
+      "url": "https://docs.google.com/document/d/1nDUuhG4dGEHj1w6jz_Au4gUl3fC7L466jptnMzrn2yo/edit?usp=sharing",
+      "key": "security_vs_usability_matrix",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "security_vs_usability_matrix"
+      }
+    },
+    {
+      "name": "Social Engineering",
+      "url": "https://drive.google.com/file/d/1HGYmE9GX2vIeM4dcEvgSipr0LooZ849m/view?usp=drive_link",
+      "key": "social_engineering",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "social_engineering"
+      }
+    },
+    {
+      "name": "Station Setup and Instructions",
+      "url": "https://docs.google.com/document/d/1wcfldDo6kLWuNsg6Xc1Adci7kAkHxRTfxJwZDeolPyg/edit?usp=sharing",
+      "key": "station_setup_and_instructions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "station_setup_and_instructions"
+      }
+    },
+    {
+      "name": "Successful Cybersecurity Stories",
+      "url": "https://docs.google.com/presentation/d/12ch8m69aQlxlCYqXjd5dIEJ_ZcBWOILx2A8jRWe_Ny4/edit?usp=sharing",
+      "key": "successful_cybersecurity_stories",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "successful_cybersecurity_stories"
+      }
+    },
+    {
+      "name": "The Day Everything Broke",
+      "url": "https://docs.google.com/document/d/1obeGX3P3zDFvJI49eXxadd1fB6pYtTqTMf6SwNMNbyM/view",
+      "key": "the_day_everything_broke",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_day_everything_broke"
+      }
+    },
+    {
+      "name": "Understanding Cybersecurity Threats",
+      "url": "https://docs.google.com/presentation/d/1rBIkqOnzyIQDhMYvu1A_wxagr5QAFEfgkrNt9fXBTJo/view",
+      "key": "understanding_cybersecurity_threats",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "understanding_cybersecurity_threats"
+      }
+    },
+    {
+      "name": "Unit Guide",
+      "url": "https://docs.google.com/document/d/17wdJVaz96CeAT6Kbbs_IqnyoWWLQjYrdI0ms3F9um7o/view",
+      "key": "unit_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_guide"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "access_control_scenario_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "authentication_authorization_and_accounting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "authentication_method_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "station_setup_and_instructions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_user_profiles_audit_log_suspicious_activity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "aaa_and_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "audit_logs_profile_1_jordan_p_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "audit_logs_profile_2_sana_r_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "audit_logs_profile_3_amara_t_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "audit_logs_profile_4_omar_m_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "fraud_detection_investigation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "caesar_cipher_wheel"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "design_challenge_inspiration_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "encryption_design_challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_key_ai_in_encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "ai_in_encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "ai_in_encryption_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_redesign_challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "redesign_challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "security_vs_usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "security_vs_usability_matrix"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "_key_layered_defenses"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "defense_menu"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "layered_defenses"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "layered_defenses_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "_exemplar_designing_secure_systems_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "defense_menu"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "designing_secure_systems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "designing_secure_systems_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_exemplar_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_the_day_everything_broke"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "introduction_to_cybersecurity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "the_day_everything_broke"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_cybersecurity_threats"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "cybersecurity_threats"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "understanding_cybersecurity_threats"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_hackable_human"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "hackable_human"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "phishing_and_password_guessing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_phishing_prevention_strategies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "phishing_prevention_strategies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "phishing_with_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "social_engineering"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "case_studies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "defense_in_action"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "successful_cybersecurity_stories"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_key_investigate_a_cia_scenario_attacker_defender"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "confidentiality_integrity_and_availability"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "investigate_a_cia_scenario_-_scenario_files"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "investigate_a_cia_scenario_attacker_defender"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -6644,10 +7590,382 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "aaa_tools",
+      "word": "AAA tools",
+      "definition": "a set of tools used in cybersecurity to help systems protect information and manage what users can do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "aaa_tools"
+      }
+    },
+    {
+      "key": "accounting",
+      "word": "accounting",
+      "definition": "when a system keeps track of what users do so suspicious activity can be detected and reviewed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "accounting"
+      }
+    },
+    {
+      "key": "asymmetric_encryption",
+      "word": "asymmetric encryption",
+      "definition": "encryption that uses two different keys: a public key to lock the message and a private key to unlock it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "asymmetric_encryption"
+      }
+    },
+    {
+      "key": "attack",
+      "word": "attack",
+      "definition": "a malicious activity aimed at disrupting, damaging, destroying or gaining unauthorized access to information systems, networks or the data they contain",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attack"
+      }
+    },
+    {
+      "key": "authentication",
+      "word": "authentication",
+      "definition": "the process a system uses to check that you are who you say you are",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "authentication"
+      }
+    },
+    {
+      "key": "authorization",
+      "word": "authorization",
+      "definition": "rules a system uses to decide what you’re allowed to do once you’re logged in",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "authorization"
+      }
+    },
+    {
+      "key": "availability",
+      "word": "availability",
+      "definition": "making information accessible to the people who need it, when they need it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "availability"
+      }
+    },
+    {
+      "key": "cia_triad",
+      "word": "CIA Triad",
+      "definition": "a set of core rules for protecting information and stands for Confidentiality, Integrity, and Availability",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "cia_triad"
+      }
+    },
+    {
+      "key": "confidentiality",
+      "word": "confidentiality",
+      "definition": "keeping information private so only the right people can see it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "confidentiality"
+      }
+    },
+    {
+      "key": "cybersecurity",
+      "word": "cybersecurity",
+      "definition": "the practice of protecting computers, networks, and personal data from being stolen, changed, or damaged",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "cybersecurity"
+      }
+    },
+    {
+      "key": "decryption",
+      "word": "decryption",
+      "definition": "the process of using a key to turn encrypted data back into its original form",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decryption"
+      }
+    },
+    {
+      "key": "deepfake",
+      "word": "deepfake",
+      "definition": "a video or audio that has been manipulated using AI to look or sound like a real person",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "deepfake"
+      }
+    },
+    {
+      "key": "encryption",
+      "word": "encryption",
+      "definition": "a way to make data unreadable to anyone without the right key",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "encryption"
+      }
+    },
+    {
+      "key": "integrity",
+      "word": "integrity",
+      "definition": "ensuring that information stays correct and hasn't been changed without permission",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "integrity"
+      }
+    },
+    {
+      "key": "layered_defense",
+      "word": "layered defense",
+      "definition": "using multiple, independent security features to protect systems and data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "layered_defense"
+      }
+    },
+    {
+      "key": "malware",
+      "word": "malware",
+      "definition": "software designed to harm, disrupt, or gain unauthorized access to a system",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "malware"
+      }
+    },
+    {
+      "key": "phishing",
+      "word": "phishing",
+      "definition": "when someone pretends to be a trusted person or company in order to steal your personal information, like passwords or credit card numbers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "phishing"
+      }
+    },
+    {
+      "key": "smishing",
+      "word": "smishing",
+      "definition": "a type of phishing that happens over text message (SMS)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "smishing"
+      }
+    },
+    {
+      "key": "social_engineering",
+      "word": "social engineering",
+      "definition": "manipulating people into giving up private information or doing something risky",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "social_engineering"
+      }
+    },
+    {
+      "key": "symmetric_encryption",
+      "word": "symmetric encryption",
+      "definition": "encryption where the same key is used to lock and unlock the message",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "symmetric_encryption"
+      }
+    },
+    {
+      "key": "threat",
+      "word": "threat",
+      "definition": "any potential cause of harm to a computer system or network",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "threat"
+      }
+    },
+    {
+      "key": "vishing",
+      "word": "vishing",
+      "definition": "a type of phishing that happens over phone call or voicemail",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "vishing"
+      }
+    },
+    {
+      "key": "vulnerability",
+      "word": "vulnerability",
+      "definition": "a weakness in a system that could be exploited by an attacker",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "vulnerability"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "aaa_tools"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "accounting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "authentication"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "authorization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "accounting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "vocabulary.key": "asymmetric_encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "vocabulary.key": "decryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "vocabulary.key": "encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "vocabulary.key": "symmetric_encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "vocabulary.key": "layered_defense"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "cybersecurity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "malware"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "threat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "vulnerability"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "attack"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "phishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "deepfake"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "smishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "social_engineering"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "vishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "availability"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "cia_triad"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "confidentiality"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "integrity"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

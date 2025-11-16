@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 12:24:53 UTC",
+    "serialized_at": "2025-10-15 00:49:36 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -279,9 +279,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_6_dancer_free_text"
-        ],
         "progression": "Generate a dancer"
       },
       "bonus": false,
@@ -304,9 +301,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_6_transition"
-        ],
         "progression": "Generate a music remix"
       },
       "bonus": false,
@@ -454,9 +448,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HoAI_pilot_6_music_gen_song_free_text"
-        ],
         "progression": "Generate a music remix"
       },
       "bonus": false,
