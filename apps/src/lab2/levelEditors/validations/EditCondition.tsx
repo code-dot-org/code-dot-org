@@ -3,6 +3,7 @@ import {CSSObject} from '@emotion/serialize';
 import React, {useEffect} from 'react';
 import Select, {
   components,
+  SingleValue,
   SingleValueProps,
   OptionProps,
 } from 'react-select-5';
@@ -14,11 +15,16 @@ import {Condition, ConditionType} from '../../types';
 
 import moduleStyles from './edit-validations.module.scss';
 
-const SingleValue = (props: SingleValueProps<{value: string}>) => (
+interface OptionData {
+  value: string;
+  description: string;
+}
+
+const SingleValueOption = (props: SingleValueProps<OptionData>) => (
   <components.SingleValue {...props}>{props.data.value}</components.SingleValue>
 );
 
-const Option = (props: OptionProps<{value: string; description: string}>) => {
+const Option = (props: OptionProps<OptionData>) => {
   return (
     <components.Option {...props}>
       <b>{props.data.value}</b> &mdash; {props.data.description}
@@ -115,7 +121,7 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
 
   return (
     <div className={moduleStyles.row}>
-      <Select
+      <Select<OptionData>
         styles={{
           container: (baseStyles: CSSObject) => ({
             ...baseStyles,
@@ -130,15 +136,14 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
           }),
         }}
         options={options}
-        components={{SingleValue, Option}}
+        components={{SingleValue: SingleValueOption, Option}}
         defaultValue={options.find(option => option.value === condition.name)}
-        onChange={(option: {value: string}) => {
-          condition.name = option.value;
-          condition.value = undefined;
-          if (!hasValueType) {
+        onChange={(newValue: SingleValue<OptionData>) => {
+          if (newValue) {
+            condition.name = newValue.value;
             condition.value = undefined;
+            onConditionChange(condition, index);
           }
-          onConditionChange(condition, index);
         }}
       />
       <Tooltip text={conditionDescription} place="bottom">

@@ -3,6 +3,7 @@ import Typography from '@code-dot-org/component-library/typography';
 import {orderBy} from 'lodash';
 import React from 'react';
 import * as Table from 'reactabular-table';
+import type {ColumnTransform} from 'reactabular-table';
 // @ts-expect-error sortabular doesn't define it's types.
 import * as sort from 'sortabular';
 
@@ -91,7 +92,7 @@ export const AgeGatedSectionsTable: React.FC<Props> = ({ageGatedSections}) => {
             ...tableLayoutStyles.headerCell,
           },
         },
-        transforms: [sortable],
+        transforms: [sortable as ColumnTransform],
       },
       cell: {
         formatters: [sectionFormatter],
