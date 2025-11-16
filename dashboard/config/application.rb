@@ -197,9 +197,12 @@ module Dashboard
     config.eager_load_paths += runtime_load_paths
 
     # Ignore certain directories for autoloading and eager loading
+    # Ignore lib/clients/clever becuase this is generated code and the generated code
+    # does not expect 'Clients::Clever::' to be prepended to everything it references.
     Rails.autoloaders.main.ignore(
       Rails.root.join("lib", "tasks"),
       Rails.root.join("lib", "assets"),
+      Rails.root.join("lib", "clients", "clever"),
     )
 
     # Tools which are designed for development / test environments should not be eager-loaded

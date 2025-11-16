@@ -34,10 +34,9 @@ Add this to `dashboard/Gemfile` and run `bundle install` before using the client
 
 ## Usage
 
-```ruby
-$LOAD_PATH.unshift(Rails.root.join('lib', 'clients', 'clever'))
-require 'clever_client'
+The Clever client is automatically loaded via `/dashboard/config/initializers/clever_client.rb`. You can use it directly in your Rails code:
 
+```ruby
 config = Clever::Configuration.new
 config.access_token = 'YOUR_BEARER_TOKEN'
 
@@ -102,10 +101,11 @@ If the Clever API is updated or you need to regenerate the client:
    bundle exec rubocop lib/clients/clever/ -a
    ```
 
-5. Verify the client loads:
+5. Restart Spring and verify the client loads:
    ```bash
    cd dashboard
-   bundle exec rails runner "\$LOAD_PATH.unshift(Rails.root.join('lib', 'clients', 'clever')); require 'clever_client'; config = Clever::Configuration.default; puts \"API Base URL: #{config.scheme}://#{config.host}#{config.base_path}\""
+   spring stop
+   bundle exec rails runner "config = Clever::Configuration.default; puts \"API Base URL: #{config.scheme}://#{config.host}#{config.base_path}\""
    ```
 
    Expected output: `API Base URL: https://api.clever.com/v3.1`
