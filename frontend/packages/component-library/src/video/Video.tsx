@@ -48,15 +48,22 @@ const Video: React.FC<VideoProps> = ({
   const posterThumbnail = `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`;
 
   const handleError = (
-    error: Error | undefined,
+    event: string | Event | undefined,
     nextRenderState: RenderState,
   ) => {
     // If blocked due to an interaction autoplay issue, don't move to the next render state but allow the user to
     // manually click the play button
-    if (error?.name === 'NotAllowedError') {
-      console.warn(error);
-    } else {
-      setRenderState(nextRenderState);
+    if (typeof event !== 'string') {
+      const error = (event?.target as HTMLVideoElement | undefined)?.error as
+        | MediaError
+        | Error
+        | undefined;
+
+      if (error instanceof Error && error.name === 'NotAllowedError') {
+        console.warn(error);
+      } else {
+        setRenderState(nextRenderState);
+      }
     }
   };
 
@@ -64,7 +71,7 @@ const Video: React.FC<VideoProps> = ({
     if (isYouTubeCookieAllowed && !window.CDOVideoPlayer?.isYouTubeBlocked) {
       setRenderState('youtube');
     } else {
-      if (videoFallback && ReactPlayer.canPlay(videoFallback)) {
+      if (videoFallback && ReactPlayer.canPlay?.(videoFallback)) {
         setRenderState('native');
       } else {
         if (window.CDOVideoPlayer?.isYouTubeBlocked) {
@@ -94,7 +101,7 @@ const Video: React.FC<VideoProps> = ({
             src={youtubeVideoUrl}
             onError={error => {
               const nextRenderState =
-                videoFallback && ReactPlayer.canPlay(videoFallback)
+                videoFallback && ReactPlayer.canPlay?.(videoFallback)
                   ? 'native'
                   : 'error';
 

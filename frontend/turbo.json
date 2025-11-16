@@ -10,20 +10,17 @@
     "clean": {
       "dependsOn": ["^clean"]
     },
-    "//#format": {},
-    "//#format:fix": {},
     "release:dryrun": {
       "dependsOn": ["build", "lint", "test"]
     },
     "lint": {
-      "dependsOn": ["^lint", "prettier", "stylelint", "typecheck", "//#format"]
+      "dependsOn": ["^lint", "prettier", "stylelint", "typecheck"]
     },
     "lint:fix": {
       "dependsOn": [
         "^lint:fix",
         "prettier:fix",
-        "stylelint:fix",
-        "//#format:fix"
+        "stylelint:fix"
       ]
     },
     "prettier": {

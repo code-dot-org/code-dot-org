@@ -1,3 +1,4 @@
+import {ReactEventHandler} from 'react';
 import ReactPlayer from 'react-player';
 
 import type {VideoProps} from '@/video/types';
@@ -5,7 +6,7 @@ import type {VideoProps} from '@/video/types';
 interface NativeVideoProps extends VideoProps {
   posterThumbnail: string;
   src?: string;
-  onError: (error: Error) => void;
+  onError: (error: string | Event) => void;
 }
 
 const NativeVideo = ({
@@ -16,14 +17,16 @@ const NativeVideo = ({
 }: NativeVideoProps) => {
   return (
     <ReactPlayer
-      url={src}
-      onError={onError}
+      src={src}
+      onError={onError as unknown as ReactEventHandler<HTMLVideoElement>}
       playing={true}
       controls={true}
       height={'100%'}
       width={'100%'}
       config={{
-        attributes: {videoTitle, poster: posterThumbnail, title: videoTitle},
+        html: {
+          attributes: {videoTitle, poster: posterThumbnail, title: videoTitle},
+        },
       }}
     />
   );

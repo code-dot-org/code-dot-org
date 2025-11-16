@@ -5,6 +5,9 @@
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
   },
+  "sideEffects": [
+    "**/*.css"
+  ],
   "workspaces": [
     "apps/*",
     "packages/*"

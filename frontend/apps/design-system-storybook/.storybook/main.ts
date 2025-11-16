@@ -1,26 +1,18 @@
 import {StorybookConfig} from '@storybook/react-webpack5';
-import {join, dirname, resolve} from 'node:path';
+import {resolve} from 'node:path';
 import {IgnorePlugin} from 'webpack';
-
-/**
- * This function is used to resolve the absolute path of a package.
- * It is needed in projects that use Yarn PnP or are set up within a monorepo.
- */
-function getAbsolutePath(value: string) {
-  return dirname(require.resolve(join(value, 'package.json')));
-}
 
 const config: StorybookConfig = {
   stories: [
     '../../../packages/component-library/src/**/stories/*.story.@(ts|tsx)',
   ],
   addons: [
-    getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
-    getAbsolutePath('@storybook/addon-a11y'),
-    getAbsolutePath('@storybook/addon-themes'),
-    getAbsolutePath('storybook-addon-rtl'),
+    '@storybook/addon-webpack5-compiler-swc',
+    '@storybook/addon-a11y',
+    '@storybook/addon-themes',
+    'storybook-addon-rtl',
     {
-      name: getAbsolutePath('@storybook/addon-styling-webpack'),
+      name: '@storybook/addon-styling-webpack',
       options: {
         rules: [
           {
@@ -34,6 +26,13 @@ const config: StorybookConfig = {
                   // https://webpack.js.org/loaders/css-loader/#importloaders
                   // // 2 => style-loader, sass-loader
                   importLoaders: 2,
+                  modules: {
+                    // treat *.module.scss as CSS modules
+                    auto: true,
+                    localIdentName: '[name]__[local]--[hash:base64:5]',
+                    // keep old/default-import behavior:
+                    namedExport: false,
+                  },
                 },
               },
               {
@@ -57,6 +56,7 @@ const config: StorybookConfig = {
                 options: {
                   modules: {
                     auto: true,
+                    namedExport: false,
                     localIdentName: '[name]__[local]--[hash:base64:5]',
                   },
                 },
@@ -66,10 +66,10 @@ const config: StorybookConfig = {
         ],
       },
     },
-    getAbsolutePath('@storybook/addon-docs'),
+    '@storybook/addon-docs',
   ],
   framework: {
-    name: getAbsolutePath('@storybook/react-webpack5'),
+    name: '@storybook/react-webpack5',
     options: {},
   },
   staticDirs: ['../public'],

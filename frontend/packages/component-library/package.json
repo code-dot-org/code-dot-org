@@ -15,7 +15,9 @@
     "directory": "frontend/packages/component-library"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     "./package.json": "./package.json",
     "./accordion": {
@@ -502,7 +504,7 @@
   "dependencies": {
     "@mui/material": "^7.3.2",
     "lodash": "^4.17.21",
-    "react-player": "^3.0.0-canary.4",
+    "react-player": "^3.3.0",
     "react-schemaorg": "^2.0.0"
   },
   "devDependencies": {
@@ -511,11 +513,19 @@
     "@code-dot-org/lint-config": "workspace:*",
     "@eslint/js": "^9.15.0",
     "@release-it/conventional-changelog": "^10.0.0",
+    "@storybook/addon-a11y": "^9.0.18",
+    "@storybook/addon-docs": "^9.0.18",
+    "@storybook/addon-styling-webpack": "^2.0.0",
+    "@storybook/addon-themes": "^9.0.18",
+    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
+    "@storybook/react-webpack5": "^9.0.18",
+    "@storybook/test-runner": "^0.23.0",
     "@swc/core": "^1.9.3",
     "@swc/jest": "^0.2.37",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.6.1",
     "@types/identity-obj-proxy": "^3",
     "@types/jest": "^29.5.14",
     "@types/lodash": "^4",
@@ -543,6 +553,8 @@
     "release-it": "^18.1.2",
     "rimraf": "^6.0.1",
     "schema-dts": "^1.1.5",
+    "storybook": "^9.0.18",
+    "storybook-addon-rtl": "^2.0.0",
     "stylelint": "^16.14.1",
     "swiper": "^11.0.5",
     "tsc-alias": "^1.8.11",

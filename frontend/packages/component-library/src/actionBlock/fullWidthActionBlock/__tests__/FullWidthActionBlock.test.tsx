@@ -1,10 +1,14 @@
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ReactPlayer, {ReactPlayerProps} from 'react-player';
+import {MouseEventHandler} from 'react';
+import ReactPlayer from 'react-player';
+import {defaultProps} from 'react-player/props';
 
 import Video from '@/video';
 
 import FullWidthActionBlock, {ActionBlockProps} from '../index';
+
+type ReactPlayerProps = typeof defaultProps;
 
 ReactPlayer.canPlay = jest.fn();
 
@@ -15,7 +19,11 @@ jest.mock('react-player', () => ({
       YouTube Player
       {light}
       {playIcon}
-      <button onClick={onError}>Trigger Error</button>
+      <button
+        onClick={onError as MouseEventHandler<HTMLButtonElement> | undefined}
+      >
+        Trigger Error
+      </button>
     </div>
   ),
   canPlay: jest.fn(),
