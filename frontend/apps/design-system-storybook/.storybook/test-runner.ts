@@ -31,9 +31,9 @@ const config: TestRunnerConfig = {
         {width: 0, height: 0},
       );
 
-      page.setViewportSize(viewportSize);
+      return page.setViewportSize(viewportSize);
     } else {
-      page.setViewportSize(DEFAULT_VIEWPORT_SIZE);
+      return page.setViewportSize(DEFAULT_VIEWPORT_SIZE);
     }
   },
   async postVisit(page, context) {
