@@ -133,6 +133,16 @@ function getPreferredBlockType(
     : DANCELAB_PREFIX + blockType;
 }
 
+function getBlockFieldValue(
+  block: BlockState,
+  fieldName: string
+): string | null {
+  return (
+    Blockly.Xml.textToDom((block.fields?.[fieldName] as string) || '')
+      .textContent || null
+  );
+}
+
 const MAKE_SPRITE = 'makeAnonymousDanceSprite';
 const CHANGE_MOVE = 'changeMoveEachLR';
 const SET_BACKGROUND = 'setBackgroundEffectWithPalette';
@@ -492,15 +502,10 @@ export default function buildDanceBlockly(
   );
 
   // We capture initial values to prevent repeats in subsequent blocks of the same type.
-  const initialMoveValue =
-    Blockly.Xml.textToDom(initialChangeMove.fields?.MOVE)?.textContent || null;
-  const initialBackgroundEffect =
-    Blockly.Xml.textToDom(initialBg.fields?.EFFECT)?.textContent || null;
-  const initialForegroundEffect =
-    Blockly.Xml.textToDom(initialFg.fields?.EFFECT)?.textContent || null;
-  const leadDancerMove =
-    Blockly.Xml.textToDom(leadChangeMoveBlock.fields?.MOVE)?.textContent ||
-    null;
+  const initialMoveValue = getBlockFieldValue(initialChangeMove, 'MOVE');
+  const initialBackgroundEffect = getBlockFieldValue(initialBg, 'EFFECT');
+  const initialForegroundEffect = getBlockFieldValue(initialFg, 'EFFECT');
+  const leadDancerMove = getBlockFieldValue(leadChangeMoveBlock, 'MOVE');
 
   const backupGroupValue = `&quot;${backgroundDancers.toUpperCase()}&quot;`;
   const backupChangeMoveBlock = makeChangeMoveEachLRBlock(
@@ -583,15 +588,9 @@ export default function buildDanceBlockly(
 
     // Capture the actual chosen values from the generated field XML,
     // so they are not repeated in the next stack.
-    const chosenBg =
-      Blockly.Xml.textToDom((backgroundBlock.fields?.EFFECT as string) || '')
-        .textContent || null;
-    const chosenFg =
-      Blockly.Xml.textToDom((foregroundBlock.fields?.EFFECT as string) || '')
-        .textContent || null;
-    const chosenMove =
-      Blockly.Xml.textToDom((changeMoveBlock.fields?.MOVE as string) || '')
-        .textContent || null;
+    const chosenBg = getBlockFieldValue(backgroundBlock, 'EFFECT');
+    const chosenFg = getBlockFieldValue(foregroundBlock, 'EFFECT');
+    const chosenMove = getBlockFieldValue(changeMoveBlock, 'MOVE');
 
     lastEventBackground = chosenBg;
     lastEventForeground = chosenFg;
