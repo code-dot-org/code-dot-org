@@ -149,6 +149,16 @@ const DanceView: React.FunctionComponent<{
     []
   );
 
+  const onFlyoutGenerated = useCallback(
+    (toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo) => {
+      updateBlocklyFlyout(toolboxDefinition);
+      updateSources({
+        ...currentSources,
+        toolboxDefinition: JSON.stringify(toolboxDefinition),
+      });
+    },
+    [currentSources, updateBlocklyFlyout, updateSources]
+  );
   const musicProjectPlayer = useRef<ProjectPlayer | null>(null);
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
 
@@ -463,21 +473,23 @@ const DanceView: React.FunctionComponent<{
       if (guideMode === 'aiCodeGenerate') {
         Blockly.extraScrollHeight = 250;
       }
-      const toolboxFromStorage = sessionStorage.getItem(
-        `flyout-${levelProperties.id}`
-      );
-      // GenerateDance levels depend upon a generated toolbox.
-      if (toolboxFromStorage) {
+      if (currentSources.toolboxDefinition) {
         try {
-          const toolboxDefinition = JSON.parse(toolboxFromStorage);
+          const toolboxDefinition = JSON.parse(
+            currentSources.toolboxDefinition
+          );
+          console.log(
+            'Updating toolbox from sources.toolboxDefinition',
+            toolboxDefinition
+          );
           updateBlocklyFlyout(toolboxDefinition);
         } catch {}
       }
     }
   }, [
     currentSources.source,
+    currentSources.toolboxDefinition,
     guideMode,
-    levelProperties.id,
     updateBlocklyFlyout,
   ]);
 
@@ -739,7 +751,7 @@ const DanceView: React.FunctionComponent<{
                 });
               }}
               startOver={startOver}
-              updateBlocklyFlyout={updateBlocklyFlyout}
+              onFlyoutGenerated={onFlyoutGenerated}
             />
           )}
       </div>

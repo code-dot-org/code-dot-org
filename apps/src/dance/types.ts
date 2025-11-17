@@ -30,6 +30,7 @@ export type SongMetadata = {
 export interface DanceProjectSources extends ProjectSources {
   selectedSong?: string;
   generatedDancer?: GeneratedDancerMetadata;
+  toolboxDefinition?: string;
 }
 
 export interface DanceLevelProperties extends BlocklyLevelProperties {

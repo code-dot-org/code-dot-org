@@ -69,7 +69,7 @@ interface GenerateCodeProps {
   resetProgram: () => void;
   updateSources: (newSources: WorkspaceSerialization) => void;
   startOver: () => void;
-  updateBlocklyFlyout: (
+  onFlyoutGenerated: (
     toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo
   ) => void;
 }
@@ -87,7 +87,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   resetProgram,
   updateSources,
   startOver,
-  updateBlocklyFlyout,
+  onFlyoutGenerated,
 }) => {
   const [aiGenerateState, setAiGenerateState] = useState<
     | 'none'
@@ -170,12 +170,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       await new Promise(res => setTimeout(res, remainingDelayDuration));
 
       updateSources(workspaceSerialization);
-      updateBlocklyFlyout(flyoutDefinition);
-      const levelId = levelProperties.id;
-      sessionStorage.setItem(
-        `flyout-${levelId}`,
-        JSON.stringify(flyoutDefinition)
-      );
+      onFlyoutGenerated(flyoutDefinition);
       runProgram();
 
       setAiGenerateState('generated');
@@ -183,10 +178,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     [
       adlibChoices,
       blockDefinitions,
-      levelProperties.id,
       measures,
       runProgram,
-      updateBlocklyFlyout,
+      onFlyoutGenerated,
       updateSources,
     ]
   );
