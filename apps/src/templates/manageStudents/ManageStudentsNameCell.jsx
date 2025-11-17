@@ -2,8 +2,11 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
-import {unitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {
+  getSelectedCourseName,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {
@@ -25,7 +28,8 @@ class ManageStudentNameCell extends Component {
 
     //Provided by redux
     editStudent: PropTypes.func.isRequired,
-    scriptName: PropTypes.string,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
   };
 
   onChangeName = e => {
@@ -33,9 +37,22 @@ class ManageStudentNameCell extends Component {
   };
 
   render() {
-    const {id, sectionId, name, username, email, editedValue, scriptName} =
-      this.props;
-    const studentUrl = unitUrlForStudent(sectionId, scriptName, id);
+    const {
+      id,
+      sectionId,
+      name,
+      username,
+      email,
+      editedValue,
+      courseVersionName,
+      unitPosition,
+    } = this.props;
+    const studentUrl = nestedUnitUrlForStudent(
+      sectionId,
+      courseVersionName,
+      unitPosition,
+      id
+    );
 
     return (
       <div style={tableLayoutStyles.tableNameText}>
@@ -90,7 +107,8 @@ const styles = {
 
 export default connect(
   state => ({
-    scriptName: getSelectedUnitName(state),
+    courseVersionName: getSelectedCourseName(state),
+    unitPosition: getSelectedUnitPosition(state),
   }),
   dispatch => ({
     editStudent(id, studentInfo) {
