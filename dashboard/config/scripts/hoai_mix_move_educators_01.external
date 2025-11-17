@@ -12,11 +12,11 @@ markdown <<MARKDOWN
 
 <div style="flex:1 1 480px; position:relative; min-height:300px;">
 <div style="position:absolute; right:0; top:18px; width:72%; height:72%; background:radial-gradient(120% 90% at 70% 20%, #f4f8ff 0%, #eef4ff 60%, #ffffff 100%); border-radius:28px;"></div>
-<img src="https://images.code.org/664e0bd0bb52519bb4ac2040efe26063-Screenshot 2025-11-05 at 12.09.47 PM.png" alt="Sparky the AI guide"
+<img src="https://images.code.org/405218256f1097b8d079888218d6bb86-unnamed.jpg" alt="Sparky the AI guide"
 style="position:relative; width:58%; max-width:360px; height:auto; display:block;">
 <div style="position:absolute; right:6px; top:8px; max-width:500px; background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 10px 24px rgba(0,0,0,.08);">
 <div style="position:absolute; left:-14px; top:28px; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-right:14px solid #fff;"></div>
-<p style="margin:0; font-size:18px; line-height:1.6;">
+<p style="margin:0; font-size:16px; line-height:1.6;">
 Hi there — I’m <em>Sparky</em>, your friendly AI guide.<br><br>
 Together we’ll peek behind the scenes to see how Artificial Intelligence actually works.
 <br><br>

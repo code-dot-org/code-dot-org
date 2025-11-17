@@ -35,6 +35,8 @@ interface NavigationAreaProps {
   markdownClassName?: string;
   overrideTheme?: Theme;
   styleAsBubble?: boolean;
+  /** Optional on continue/finish callback. */
+  onContinue?: () => void;
 }
 
 /**
@@ -52,6 +54,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   markdownClassName,
   overrideTheme,
   styleAsBubble = false,
+  onContinue,
 }) => {
   const {
     id,
@@ -237,6 +240,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
+              onContinue={onContinue}
             />
           )}
         </div>

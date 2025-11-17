@@ -6,16 +6,20 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
+import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
-  AdlibType,
   AdlibChoices,
+  AdlibType,
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
@@ -134,43 +138,58 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     setPromptText('');
   });
 
-  const generateDance = useCallback(async () => {
-    setAiGenerateState('generating');
+  const generateDance = useCallback(
+    async (regenerate = false) => {
+      setAiGenerateState('generating');
 
-    const startTime = Date.now();
-    const {workspaceSerialization, flyoutDefinition} = buildDanceBlockly(
-      measures,
+      analyticsReporter.sendEvent(
+        EVENTS[
+          `DANCE_PARTY_${regenerate ? 'REGENERATE' : 'GENERATE'}_CODE_CLICKED`
+        ],
+        {
+          adlibChoices,
+          levelPath: window.location.pathname,
+        }
+      );
+      const startTime = Date.now();
+      const {workspaceSerialization, flyoutDefinition} = buildDanceBlockly(
+        measures,
+        blockDefinitions,
+        adlibChoices && adlibChoices['complexity'] === 'complex'
+          ? 'complex'
+          : 'simple',
+        adlibChoices && adlibChoices['energy'] === 'high' ? 'high' : 'chill',
+        (adlibChoices && adlibChoices['dancers']) || 'nobody'
+      );
+
+      const elapsedTime = Date.now() - startTime;
+      const remainingDelayDuration = Math.max(
+        GENERATE_DELAY_DURATION - elapsedTime,
+        0
+      );
+      await new Promise(res => setTimeout(res, remainingDelayDuration));
+
+      updateSources(workspaceSerialization);
+      updateBlocklyFlyout(flyoutDefinition);
+      const levelId = levelProperties.id;
+      sessionStorage.setItem(
+        `flyout-${levelId}`,
+        JSON.stringify(flyoutDefinition)
+      );
+      runProgram();
+
+      setAiGenerateState('generated');
+    },
+    [
+      adlibChoices,
       blockDefinitions,
-      adlibChoices && adlibChoices['complexity'] === 'complex'
-        ? 'complex'
-        : 'simple',
-      adlibChoices && adlibChoices['energy'] === 'high' ? 'high' : 'chill',
-      (adlibChoices && adlibChoices['dancers']) || 'nobody'
-    );
-
-    const elapsedTime = Date.now() - startTime;
-    const remainingDelayDuration = Math.max(
-      GENERATE_DELAY_DURATION - elapsedTime,
-      0
-    );
-    await new Promise(res => setTimeout(res, remainingDelayDuration));
-
-    updateSources(workspaceSerialization);
-    updateBlocklyFlyout(flyoutDefinition);
-    const levelId = levelProperties.id;
-    localStorage.setItem(`flyout-${levelId}`, JSON.stringify(flyoutDefinition));
-    runProgram();
-
-    setAiGenerateState('generated');
-  }, [
-    adlibChoices,
-    blockDefinitions,
-    levelProperties.id,
-    measures,
-    runProgram,
-    updateBlocklyFlyout,
-    updateSources,
-  ]);
+      levelProperties.id,
+      measures,
+      runProgram,
+      updateBlocklyFlyout,
+      updateSources,
+    ]
+  );
 
   useEffect(() => {
     // There can be a delay before we're playing, so wait for it explicitly.
@@ -210,11 +229,22 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     'generated',
     'listening',
     'listened',
-  ].includes(aiGenerateState);
+  ].includes(aiGenerateState)
+    ? 'full'
+    : undefined;
 
   const parentProperties = useParentLevelProperties();
   const isStandalone =
     levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
+  const dispatch = useAppDispatch();
+  const sublevelOnContinue = useCallback(() => {
+    dispatch(
+      sendSuccessReportForLevel(
+        levelProperties.id.toString(),
+        levelProperties.appName
+      )
+    );
+  }, [dispatch, levelProperties.appName, levelProperties.id]);
 
   return (
     <Guide id="generate-panel" modal={modal} position="bottom">
@@ -285,6 +315,10 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               startOver();
               setAiGenerateState('none');
               resetProgram();
+              analyticsReporter.sendEvent(
+                EVENTS.DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
+                {levelPath: window.location.pathname}
+              );
             }}
             className={styles.buttonWide}
           />
@@ -299,7 +333,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               startOver();
               resetProgram();
-              generateDance();
+              generateDance(true);
             }}
             className={styles.buttonWide}
           />
@@ -313,6 +347,13 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
               setAiGenerateState(isStandalone ? 'edited' : 'editing');
+              analyticsReporter.sendEvent(
+                EVENTS.DANCE_PARTY_GENERATE_CODE_USE_CODE_CLICKED,
+                {
+                  adlibChoices,
+                  levelPath: window.location.pathname,
+                }
+              );
             }}
             className={styles.buttonWide}
           />
@@ -352,6 +393,10 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 startOver();
                 setAiGenerateState('none');
                 resetProgram();
+                analyticsReporter.sendEvent(
+                  EVENTS.DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
+                  {levelPath: window.location.pathname}
+                );
               }}
               className={styles.buttonWide}
             />
@@ -363,6 +408,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 hasEdited={true}
                 isRunning={false}
                 className={styles.buttonWide}
+                // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
+                onContinue={parentProperties ? sublevelOnContinue : undefined}
               />
             )}
           </div>

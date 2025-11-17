@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q8_2025'
+
+question 'A streaming site has a "Next Episode" button that loads the next video in your playlist every time you click it. What happens in the code when that button is pressed?'
+
+right 'The app calls a function that runs the steps to load the next episode.'
+wrong 'The app automatically deletes the previous episode from its database.'
+wrong 'The app randomly picks a new show for you to watch.'
+wrong 'The app changes the website\'s layout colors to match the new episode.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN

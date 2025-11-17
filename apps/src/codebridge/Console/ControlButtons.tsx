@@ -5,7 +5,6 @@ import WithConditionalTooltip from '@codebridge/components/WithConditionalToolti
 import {MiniApps} from '@codebridge/constants';
 import React, {useCallback} from 'react';
 
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -36,8 +35,6 @@ const ControlButtons: React.FunctionComponent = () => {
   const {onRun, onStop, levelProperties} = useCodebridgeContext();
   const {id: levelId, appName, predictSettings} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
-  const levelPath =
-    useAppSelector(state => getCurrentLevel(state)?.path) || 'standalone';
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
   const source = useAppSelector(
@@ -74,9 +71,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName, {
-        levelPath,
-      });
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK);
       logUserLevelInteraction({
         levelId: levelId,
         scriptId: scriptId,

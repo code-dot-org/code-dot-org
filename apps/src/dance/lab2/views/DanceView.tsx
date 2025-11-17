@@ -80,6 +80,7 @@ import AgeDialog from '@cdo/apps/templates/AgeDialog';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import useReportAnalytics from '../hooks/useReportAnalytics';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
@@ -126,8 +127,13 @@ const DanceView: React.FunctionComponent<{
   const signedIn = useAppSelector(state => state.currentUser.signInState);
   const scriptName = useAppSelector(state => state.progress.scriptName);
 
-  const {currentSources, updateSources, showStartOverDialog, startOver} =
-    useSources<DanceProjectSources>();
+  const {
+    currentSources,
+    updateSources,
+    showStartOverDialog,
+    setReinitializationHandler,
+    startOver,
+  } = useSources<DanceProjectSources>();
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<GoogleBlockly.Workspace | null>(null);
 
@@ -368,6 +374,14 @@ const DanceView: React.FunctionComponent<{
     showStartOverDialog('blocks');
   }, [showStartOverDialog]);
 
+  const onStartOver = useCallback(() => {
+    progressManager?.resetValidation();
+  }, [progressManager]);
+
+  useEffect(() => {
+    setReinitializationHandler(onStartOver);
+  }, [onStartOver, setReinitializationHandler]);
+
   // Setup Blockly for dance party when first mounting.
   useEffect(setupBlocklyEnvironment, []);
 
@@ -449,7 +463,7 @@ const DanceView: React.FunctionComponent<{
       if (guideMode === 'aiCodeGenerate') {
         Blockly.extraScrollHeight = 250;
       }
-      const toolboxFromStorage = localStorage.getItem(
+      const toolboxFromStorage = sessionStorage.getItem(
         `flyout-${levelProperties.id}`
       );
       // GenerateDance levels depend upon a generated toolbox.
@@ -733,22 +747,26 @@ const DanceView: React.FunctionComponent<{
   );
 };
 
-export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
-  <SourcesContainer
-    {...props}
-    defaultSources={defaultSources}
-    key={props.levelProperties.id}
-  >
-    {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
-      <GenerateDancer
-        adlibOption={
-          props.levelProperties.aiDancerGenerateAdlib ||
-          'adjective-animal-attire'
-        }
-        levelProperties={props.levelProperties}
-      />
-    ) : (
-      <DanceView levelProperties={props.levelProperties} />
-    )}
-  </SourcesContainer>
-);
+export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => {
+  useReportAnalytics(props.levelProperties, props.channel?.id);
+
+  return (
+    <SourcesContainer
+      {...props}
+      defaultSources={defaultSources}
+      key={props.levelProperties.id}
+    >
+      {props.levelProperties.guideMode === 'aiDancerGenerate' ? (
+        <GenerateDancer
+          adlibOption={
+            props.levelProperties.aiDancerGenerateAdlib ||
+            'adjective-animal-attire'
+          }
+          levelProperties={props.levelProperties}
+        />
+      ) : (
+        <DanceView levelProperties={props.levelProperties} />
+      )}
+    </SourcesContainer>
+  );
+};

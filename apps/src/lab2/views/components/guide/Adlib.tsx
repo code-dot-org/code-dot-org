@@ -18,6 +18,8 @@ export type AdlibsType = {
   [key: string]: AdlibType;
 };
 
+export type BodyVariantCounts = {[key: string]: number};
+
 interface AdlibProps {
   children?: React.ReactNode;
   adlib: AdlibType;
@@ -143,7 +145,12 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
           : undefined
       )}
     >
-      <div className={styles.adlibInner}>
+      <div
+        className={classNames(
+          styles.adlibInner,
+          readOnly && styles.adlibInnerReadOnly
+        )}
+      >
         <div>{readOnly ? localizedFilledAdlibText : adlibHtml}</div>
         {children}
       </div>

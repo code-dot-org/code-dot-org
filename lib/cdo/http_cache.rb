@@ -142,7 +142,7 @@ class HttpCache
       'sign_up_user_type',
     ].concat(default_cookies)
 
-    http_config = {
+    {
       pegasus: {
         behaviors: [
           # NextJS assets path for the marketing app
@@ -175,9 +175,16 @@ class HttpCache
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies,
           },
+          # For .png images, don't forward any cookies or additional headers.
+          {
+            path: '/*.png',
+            headers: [],
+            cookies: 'none',
+            include_marketing_router_lambda: true,
+          },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /fonts/*),
+            path: STATIC_ASSET_EXTENSION_PATHS - %w(/*.png) + %w(/files/* /images/* /fonts/*),
             headers: [],
             cookies: 'none'
           },
@@ -349,32 +356,6 @@ class HttpCache
         }
       }
     }
-
-    if defined?(HocLegacy::Engine)
-      http_config.deep_merge!(
-        dashboard: {
-          behaviors: [
-            {
-              path: "#{HocLegacy::API_ROOT_PATH}/*",
-              headers: ALLOWLISTED_HEADERS,
-              cookies: allowlisted_cookies,
-            },
-          ],
-        },
-        pegasus: {
-          behaviors: [
-            {
-              path: "#{HocLegacy::API_ROOT_PATH}/*",
-              proxy: 'dashboard',
-              headers: ALLOWLISTED_HEADERS,
-              cookies: allowlisted_cookies,
-            },
-          ],
-        }
-      )
-    end
-
-    http_config
   end
 
   def self.uncached_script_level_path?(script_level_path)
