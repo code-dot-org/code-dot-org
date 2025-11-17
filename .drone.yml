@@ -79,7 +79,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/code-dot-org:docker-sudo-no-fqdn
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -193,7 +193,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/code-dot-org:docker-sudo-no-fqdn
     pull: always
     volumes:
       - name: mysql
@@ -322,6 +322,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 7023117dfca0a93deb3817f5736738b1ef37a634c1e0614c5ab32f3bc1bdfa9d
+hmac: bd78cdc9028410d1e4f9d55299438b6946836e001019d980fcd2bd51b26bbb92
 
 ...
