@@ -1,21 +1,9 @@
-import {queryParams} from '@cdo/apps/code-studio/utils';
-
 import {
   shouldShowAiTutor,
   APPS_ALWAYS_USING_AI_TUTOR,
-} from '../../../../src/lab2/ai/shouldShowAiTutor';
-
-jest.mock('@cdo/apps/code-studio/utils', () => ({
-  queryParams: jest.fn(),
-}));
+} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
 
 describe('shouldShowAiTutor', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-    // Default mock returns undefined
-    queryParams.mockReturnValue(undefined);
-  });
-
   describe('when app is always using AI tutor', () => {
     it('returns true for any app in APPS_ALWAYS_USING_AI_TUTOR', () => {
       APPS_ALWAYS_USING_AI_TUTOR.forEach(appName => {
@@ -81,40 +69,6 @@ describe('shouldShowAiTutor', () => {
         isProjectLevel: true,
       });
       expect(result).toBe(false);
-    });
-  });
-
-  describe('when show-ai-tutor2 query parameter is true', () => {
-    it('returns true regardless of other parameters', () => {
-      queryParams.mockImplementation(param => {
-        if (param === 'show-ai-tutor2') return 'true';
-        return undefined;
-      });
-
-      const result = shouldShowAiTutor({
-        appName: 'applab',
-        tutorLevel: false,
-        tutorPilot: false,
-        isProjectLevel: false,
-      });
-      expect(result).toBe(true);
-    });
-  });
-
-  describe('when show-ai-tutor query parameter is true', () => {
-    it('returns true regardless of other parameters', () => {
-      queryParams.mockImplementation(param => {
-        if (param === 'show-ai-tutor') return 'true';
-        return undefined;
-      });
-
-      const result = shouldShowAiTutor({
-        appName: 'applab',
-        tutorLevel: false,
-        tutorPilot: false,
-        isProjectLevel: false,
-      });
-      expect(result).toBe(true);
     });
   });
 });
