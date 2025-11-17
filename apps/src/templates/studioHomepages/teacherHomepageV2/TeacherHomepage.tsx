@@ -18,6 +18,7 @@ import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
+import PersonalizationQuizAlert from './PersonalizationQuizAlert';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
@@ -120,6 +121,8 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
+
+            <PersonalizationQuizAlert />
 
             {shouldDisplayAtRiskAgeGatedWarning() && (
               <AgeGatedSectionsBanner
