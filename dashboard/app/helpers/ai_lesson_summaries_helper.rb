@@ -4,13 +4,13 @@ module AiLessonSummariesHelper
   API_KEY = CDO.openai_lesson_summaries_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
-  def self.get_ai_lesson_summary(lesson_id)
-    system_prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id)
+  def self.get_ai_lesson_summary(lesson_id, response_format)
+    system_prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id, response_format)
 
     client = Client.new(API_KEY, MODEL)
 
     begin
-      response = client.request_lesson_summary(system_prompt)
+      response = client.request_lesson_summary(system_prompt, response_format)
     rescue Net::ReadTimeout
       raise OpenaiLessonSummaryTimeout.new("Timeout waiting for AI client to return lesson summary.")
     end
@@ -21,9 +21,12 @@ module AiLessonSummariesHelper
     return {status: evaluation[:status], json: evaluation[:json]}
   end
 
-  def self.retrieve_and_save_ai_lesson_summary(lesson_id, user_id)
-    ai_lesson_summary = get_ai_lesson_summary(lesson_id)
+  def self.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, response_format)
+    ai_lesson_summary = get_ai_lesson_summary(lesson_id, response_format)
     if ai_lesson_summary[:status] == 200
+
+      #What is the plan to save them if its a podcast instead of the brief summary? Save to new field in AiLessonSummary? Double check with tickets Mark made (or ask)
+
       AiLessonSummary.create!({user_id: user_id, lesson_id: lesson_id, lesson_summary: ai_lesson_summary[:json]})
     end
   end
@@ -38,11 +41,21 @@ module AiLessonSummariesHelper
       @model = model
     end
 
-    def request_lesson_summary(prompt)
+    def request_lesson_summary(prompt, response_format)
       headers = {
         "Content-Type" => "application/json",
         "Authorization" => "Bearer #{api_key}"
       }
+
+      response_props = response_format == AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY] ?
+        {
+          learning_objective: {type: "string"},
+          lesson_beats: {type: "array", items: {type: "string"}},
+          misconceptions: {type: "array", items: {type: "string"}},
+          tips: {type: "array", items: {type: "string"}}
+        } : {
+          transcript: {type: "string"}
+        }
 
       data = {
         model: model,
@@ -60,12 +73,7 @@ module AiLessonSummariesHelper
             name: "lesson_summary",
             schema: {
               type: "object",
-              properties: {
-                learning_objective: {type: "string"},
-                lesson_beats: {type: "array", items: {type: "string"}},
-                misconceptions: {type: "array", items: {type: "string"}},
-                tips: {type: "array", items: {type: "string"}}
-              },
+              properties: response_props,
             }
           }
         }
