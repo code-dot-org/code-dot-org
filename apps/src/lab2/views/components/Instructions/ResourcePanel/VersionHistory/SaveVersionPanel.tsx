@@ -79,22 +79,26 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
     <div className={moduleStyles.footerPanel}>
       <div className={moduleStyles.saveCurrentVersionDescription}>
         <div className={moduleStyles.saveCurrentVersionDescriptionInput}>
-          <label htmlFor="commit-description" className={moduleStyles.label}>
-            {lab2I18n.describeYourChanges()}
-          </label>
           <textarea
             id="commit-description"
             onChange={e => setCommitDescription(e.target.value)}
             value={commitDescription}
             className={moduleStyles.textArea}
             disabled={disabled}
+            placeholder={lab2I18n.describeYourChanges()}
           />
         </div>
         <Button
           id="save-version-button"
           size="s"
+          type="secondary"
+          color="gray"
+          iconLeft={{
+            iconName: 'save',
+            iconStyle: 'solid',
+          }}
           className={moduleStyles.versionButton}
-          text={lab2I18n.saveVersion()}
+          text={lab2I18n.saveCurrentVersion()}
           onClick={onSaveVersion}
           disabled={
             disabled || versionLoading || commitDescription.trim() === ''
