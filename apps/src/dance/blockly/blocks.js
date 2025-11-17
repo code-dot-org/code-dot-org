@@ -90,7 +90,7 @@ const customInputTypes = {
         } catch {}
         if (name === GENERATED_DANCER) {
           let headUrl = '/blockly/media/skins/dance/default_dancer.png';
-          if (localStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
+          if (sessionStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
             const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
             headUrl = urls.headUrl;
           }
@@ -114,7 +114,7 @@ const customInputTypes = {
       // We avoid using the head of the default dancer as it a simple gray ellipse
       // which doesn't "read" as a dancer.
       let headUrl = '/blockly/media/skins/dance/default_dancer.png';
-      if (localStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
+      if (sessionStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
         const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
         headUrl = urls.headUrl;
       }
