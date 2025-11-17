@@ -10,6 +10,7 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {getAiTutorEnabledForPilot} from '@cdo/apps/lab2/projects/utils';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
@@ -169,10 +170,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
-  const aiTutorVisible = shouldShowAiTutor(
+  const aiTutorVisible = shouldShowAiTutor({
     appName,
-    levelProperties.aiTutorAvailable
-  );
+    tutorPilot: getAiTutorEnabledForPilot(),
+    tutorLevel: levelProperties.aiTutorAvailable,
+    isProjectLevel: levelProperties.isProjectLevel,
+  });
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {

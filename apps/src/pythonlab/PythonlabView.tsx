@@ -8,13 +8,15 @@ import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAiTutorEnabledForPilot,
+  getAppOptionsEditBlocks,
+} from '@cdo/apps/lab2/projects/utils';
 import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -32,6 +34,7 @@ import {
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
+import {shouldShowAiTutor} from '../lab2/ai/shouldShowAiTutor';
 
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
@@ -108,13 +111,16 @@ const PythonlabView: React.FunctionComponent<
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   const hasSource = !!source;
-  const isAiTutorEnabled = useMemo(() => {
-    return (
-      levelProperties.aiTutorAvailable ||
-      queryParams('show-ai-tutor2') === 'true' ||
-      queryParams('show-ai-tutor') === 'true'
-    );
-  }, [levelProperties.aiTutorAvailable]);
+  const isAiTutorEnabled = useMemo(
+    () =>
+      shouldShowAiTutor({
+        tutorPilot: getAiTutorEnabledForPilot(),
+        appName: levelProperties.appName,
+        tutorLevel: levelProperties.aiTutorAvailable,
+        isProjectLevel: levelProperties.isProjectLevel,
+      }),
+    [levelProperties]
+  );
 
   const dispatch = useAppDispatch();
 
