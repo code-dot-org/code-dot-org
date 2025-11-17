@@ -6,13 +6,21 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 // they will see an error message when trying to chat with it.
 export const APPS_ALWAYS_USING_AI_TUTOR = ['weblab2'];
 
-export const shouldShowAiTutor = (
-  appName: string,
-  aiTutorAvailable: boolean | undefined
-) => {
+export const shouldShowAiTutor = ({
+  appName,
+  tutorLevel,
+  tutorPilot,
+  isProjectLevel,
+}: {
+  appName: string;
+  tutorLevel?: boolean;
+  tutorPilot?: boolean;
+  isProjectLevel?: boolean;
+}) => {
   return (
     APPS_ALWAYS_USING_AI_TUTOR.includes(appName) ||
-    aiTutorAvailable ||
+    // user is in ai tutor pilot, and it's either a tutor enabled level or a project level
+    (tutorPilot && (tutorLevel || isProjectLevel)) ||
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true'
   );
