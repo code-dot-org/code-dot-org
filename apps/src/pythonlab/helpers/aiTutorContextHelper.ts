@@ -15,6 +15,8 @@ interface AiTutorPythonLabParams {
   validationFile: ProjectFile | undefined;
   longInstructions: string | undefined;
   miniAppName: string | undefined;
+  hasRun: boolean | undefined;
+  hasEdited: boolean | undefined;
 }
 export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
   private documentationPromise?: Promise<string | undefined>;
@@ -37,7 +39,8 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
   protected override async getAiTutorContext(): Promise<AiTutorContext> {
     if (!this.params) return {};
 
-    const {source, validationFile, longInstructions} = this.params;
+    const {source, validationFile, longInstructions, hasRun, hasEdited} =
+      this.params;
     const sourceCode = source
       ? Object.values(source.files)
           .filter(
@@ -84,6 +87,8 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
       longInstructions,
       documentation,
       consoleOutput,
+      hasRun,
+      hasEdited,
     };
   }
 }
