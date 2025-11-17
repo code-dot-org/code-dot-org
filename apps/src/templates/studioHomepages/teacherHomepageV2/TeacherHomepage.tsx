@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {Typography} from '@mui/material';
 import React from 'react';
 
@@ -37,6 +38,10 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
 
+  const [teachingProfileData, setTeachingProfileData] =
+    React.useState<any>(null);
+  const [isLoadingProfileData, setIsLoadingProfileData] = React.useState(true);
+
   const dispatch = useAppDispatch();
 
   const [CAPmodalOpen, setCAPModalOpen] = React.useState(false);
@@ -48,6 +53,36 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   const shouldDisplayAtRiskAgeGatedWarning = () => {
     return ageGatedSections?.length > 0;
+  };
+
+  React.useEffect(() => {
+    dispatch(asyncLoadTeacherHomepageSectionData());
+    dispatch(asyncLoadCoteacherInvite());
+
+    // Fetch teaching profile data
+    const fetchTeachingProfileData = async () => {
+      try {
+        const response = await fetch('/teaching_profile_data');
+        const data = await response.json();
+        setTeachingProfileData(data);
+      } catch (error) {
+        console.error('Error fetching teaching profile data:', error);
+        setTeachingProfileData({exists: false});
+      } finally {
+        setIsLoadingProfileData(false);
+      }
+    };
+
+    fetchTeachingProfileData();
+  }, [dispatch]);
+
+  const shouldShowPersonalizationQuiz = () => {
+    if (isLoadingProfileData) return false;
+    if (!teachingProfileData?.exists) return true;
+
+    const individualData = teachingProfileData?.data;
+    console.log('Individual Data:', individualData);
+    return !individualData || Object.keys(individualData).length < 7;
   };
 
   React.useEffect(() => {
@@ -122,7 +157,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
 
-            <PersonalizationQuizAlert />
+            {shouldShowPersonalizationQuiz() && <PersonalizationQuizAlert />}
 
             {shouldDisplayAtRiskAgeGatedWarning() && (
               <AgeGatedSectionsBanner
