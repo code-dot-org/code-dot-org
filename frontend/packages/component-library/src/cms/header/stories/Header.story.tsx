@@ -9,7 +9,6 @@ import pythonLabImage from '@public/images/header-python-lab-icon.png';
 import spriteLabImage from '@public/images/header-sprite-lab-icon.png';
 import type {Meta, StoryObj} from '@storybook/react-webpack5';
 import {within, expect, userEvent} from 'storybook/test';
-import {INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS} from 'storybook/viewport';
 
 import {getDefaultHeaderProps} from '../config';
 import Header, {HeaderProps} from '../Header';
@@ -59,10 +58,6 @@ export const DefaultLoggedOut: Story = {
   },
   parameters: {
     layout: 'fullscreen',
-    viewport: {
-      viewports: MINIMAL_VIEWPORTS,
-      defaultViewport: 'desktop',
-    },
     eyes: {
       browser: {width: 1268, height: 720, name: 'chrome'},
     },
@@ -131,10 +126,6 @@ export const NewProjectMenu: Story = {
   },
   parameters: {
     layout: 'fullscreen',
-    viewport: {
-      viewports: MINIMAL_VIEWPORTS,
-      defaultViewport: 'desktop',
-    },
     eyes: {
       browser: {width: 1268, height: 720, name: 'chrome'},
       waitBeforeCapture: 'ul[aria-label="Projects menu"]',
@@ -179,10 +170,6 @@ export const HelpMenu: Story = {
   },
   parameters: {
     layout: 'fullscreen',
-    viewport: {
-      viewports: MINIMAL_VIEWPORTS,
-      defaultViewport: 'desktop',
-    },
     eyes: {
       // TODO: CMS-559 - Turning this off for now because Applitools
       // does not currently support changing the viewportSize for a test,
@@ -236,10 +223,6 @@ export const SmallDesktop: Story = {
   },
   parameters: {
     layout: 'fullscreen',
-    viewport: {
-      viewports: INITIAL_VIEWPORTS,
-      defaultViewport: 'ipad12p',
-    },
     eyes: {
       browser: {width: 1024, height: 720, name: 'chrome'},
     },
@@ -323,10 +306,6 @@ export const Tablet: Story = {
   },
   parameters: {
     layout: 'fullscreen',
-    viewport: {
-      viewports: MINIMAL_VIEWPORTS,
-      defaultViewport: 'tablet',
-    },
     eyes: {
       browser: {width: 834, height: 1112, name: 'chrome'},
     },
@@ -391,10 +370,6 @@ export const Mobile: Story = {
   },
   parameters: {
     layout: 'fullscreen',
-    viewport: {
-      viewports: MINIMAL_VIEWPORTS,
-      defaultViewport: 'mobile2',
-    },
     eyes: {
       browser: {width: 414, height: 896, name: 'chrome'},
     },
