@@ -27,6 +27,17 @@ const limitedColours = [
   '#00ff88', // LIME
 ];
 
+function getGeneratedDancerHeadUrl() {
+  // We avoid using the head of the default dancer as it a simple gray ellipse
+  // which doesn't "read" as a dancer.
+  let headUrl = '/blockly/media/skins/dance/default_dancer.png';
+  if (sessionStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
+    const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
+    headUrl = urls.headUrl;
+  }
+  return headUrl;
+}
+
 const customInputTypes = {
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -89,12 +100,7 @@ const customInputTypes = {
           name = JSON.parse(name);
         } catch {}
         if (name === GENERATED_DANCER) {
-          let headUrl = '/blockly/media/skins/dance/default_dancer.png';
-          if (sessionStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
-            const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
-            headUrl = urls.headUrl;
-          }
-          return [headUrl, option];
+          return [getGeneratedDancerHeadUrl(), option];
         }
         return [`/blockly/media/skins/dance/${name.toLowerCase()}.png`, option];
       });
@@ -111,16 +117,12 @@ const customInputTypes = {
   },
   generatedDancerImage: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      // We avoid using the head of the default dancer as it a simple gray ellipse
-      // which doesn't "read" as a dancer.
-      let headUrl = '/blockly/media/skins/dance/default_dancer.png';
-      if (sessionStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
-        const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
-        headUrl = urls.headUrl;
-      }
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(new Blockly.FieldImage(headUrl, 40, 40), inputConfig.name);
+        .appendField(
+          new Blockly.FieldImage(getGeneratedDancerHeadUrl(), 40, 40),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
       return `"${GENERATED_DANCER}"`;
