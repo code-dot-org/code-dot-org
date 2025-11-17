@@ -14,6 +14,7 @@ class LtiV1Controller < ApplicationController
   skip_before_action :verify_authenticity_token
 
   NAMESPACE = 'lti_v1_controller'.freeze
+  # TODO: Remove this line, only here to generate a diff for adhoc
 
   # [GET/POST] /lti/v1/login(/:platform_id)
   #
@@ -144,7 +145,7 @@ class LtiV1Controller < ApplicationController
 
     if jwt_verifier.verify_jwt
       message_type = decoded_jwt[Policies::Lti::MessageType::CLAIM]
-      if Policies::Lti::MessageType::SUPPORTED.exclude?(message_type)
+      unless Policies::Lti.supported_message_type?(issuer: extracted_issuer_id, message_type:)
         return render status: :not_acceptable, template: 'lti/v1/authenticate/unsupported_message_type', locals: {
           message_type: message_type,
         }
@@ -213,6 +214,10 @@ class LtiV1Controller < ApplicationController
           }
 
           render 'lti/v1/upgrade_account' and return
+        end
+
+        if (decoded_jwt[Policies::Lti::MessageType::CLAIM] == Policies::Lti::MessageType::DEEP_LINKING_REQUEST)
+          redirect_to lti_v1_deep_linking_index_path deep_linking_settings: decoded_jwt[Policies::Lti::DEEP_LINKING_SETTINGS_CLAIM] and return
         end
 
         redirect_to destination_url

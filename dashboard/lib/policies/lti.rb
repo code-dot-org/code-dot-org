@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'user'
 require 'authentication_option'
 
@@ -9,9 +10,8 @@ class Policies::Lti
 
   module MessageType
     CLAIM = :'https://purl.imsglobal.org/spec/lti/claim/message_type'
-    SUPPORTED = [
-      RESOURCE_LINK_REQUEST = 'LtiResourceLinkRequest'.freeze,
-    ].freeze
+    RESOURCE_LINK_REQUEST = 'LtiResourceLinkRequest'.freeze,
+    DEEP_LINKING_REQUEST = 'LtiDeepLinkingRequest'.freeze
   end
 
   module DeploymentConfiguration
@@ -51,6 +51,7 @@ class Policies::Lti
   LTI_DEPLOYMENT_ID_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/deployment_id".freeze
   LTI_DEPLOYMENT_PLATFORM_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/tool_platform".freeze
   LTI_NRPS_CLAIM = "https://purl.imsglobal.org/spec/lti-nrps/claim/namesroleservice".freeze
+  DEEP_LINKING_SETTINGS_CLAIM = "https://purl.imsglobal.org/spec/lti-dl/claim/deep_linking_settings".freeze
   LTI_PLATFORM_CONFIGURATION = "https://purl.imsglobal.org/spec/lti-platform-configuration".freeze
   CANVAS_ACCOUNT_NAME = "https://canvas.instructure.com/lti/account_name".freeze
   CLASSLINK_ROLE_KEY = 'classLink_role'.freeze
@@ -66,6 +67,9 @@ class Policies::Lti
       auth_redirect_url: 'https://sso.canvaslms.com/api/lti/authorize_redirect'.freeze,
       jwks_url: 'https://sso.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.canvaslms.com/login/oauth2/token'.freeze,
+      supported_message_types: [
+        MessageType::RESOURCE_LINK_REQUEST,
+      ],
     },
     canvas_beta_cloud: {
       name: 'Canvas - Beta'.freeze,
@@ -73,6 +77,9 @@ class Policies::Lti
       auth_redirect_url: 'https://sso.beta.canvaslms.com/api/lti/authorize_redirect'.freeze,
       jwks_url: 'https://sso.beta.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.beta.canvaslms.com/login/oauth2/token'.freeze,
+      supported_message_types: [
+        MessageType::RESOURCE_LINK_REQUEST,
+      ],
     },
     canvas_test_cloud: {
       name: 'Canvas - Test'.freeze,
@@ -80,6 +87,9 @@ class Policies::Lti
       auth_redirect_url: 'https://sso.test.canvaslms.com/api/lti/authorize_redirect'.freeze,
       jwks_url: 'https://sso.test.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.test.canvaslms.com/login/oauth2/token'.freeze,
+      supported_message_types: [
+        MessageType::RESOURCE_LINK_REQUEST,
+      ],
     },
     schoology: {
       name: 'Schoology'.freeze,
@@ -87,6 +97,10 @@ class Policies::Lti
       auth_redirect_url: 'https://lti-service.svc.schoology.com/lti-service/authorize-redirect'.freeze,
       jwks_url: 'https://lti-service.svc.schoology.com/lti-service/.well-known/jwks'.freeze,
       access_token_url: 'https://lti-service.svc.schoology.com/lti-service/access-token'.freeze,
+      supported_message_types: [
+        MessageType::RESOURCE_LINK_REQUEST,
+        MessageType::DEEP_LINKING_REQUEST,
+      ],
     },
     # https://launchpad.classlink.com/.well-known/openid-configuration
     classlink: {
@@ -95,6 +109,9 @@ class Policies::Lti
       auth_redirect_url: "https://launchpad.classlink.com/oauth2/v2/auth".freeze,
       jwks_url: "https://launchpad.classlink.com/oauth2/v2/jwks".freeze,
       access_token_url: "https://launchpad.classlink.com/oauth2/v2/token".freeze,
+      supported_message_types: [
+        MessageType::RESOURCE_LINK_REQUEST,
+      ],
     },
   }
 
@@ -241,5 +258,17 @@ class Policies::Lti
     user.lti_user_identities.any? do |identity|
       identity.lti_deployments.any?(&:restricted?)
     end
+  end
+
+  def self.supported_message_type?(issuer:, message_type:)
+    platform = find_platform_by_issuer(issuer)
+    return false unless platform
+
+    # TODO: Remove when Schoology deep linking is live
+    if (platform[:name] == 'Schoology') && (DCDO.get('schoology_deep_linking_enabled', false) == false)
+      return false if message_type == MessageType::DEEP_LINKING_REQUEST
+    end
+
+    platform[:supported_message_types].include?(message_type)
   end
 end
