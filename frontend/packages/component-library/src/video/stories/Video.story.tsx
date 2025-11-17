@@ -55,6 +55,11 @@ export const VideoWithCaption: Story = {
     showCaption: true,
     isYouTubeCookieAllowed: true,
   },
+  parameters: {
+    a11y: {
+      test: 'error',
+    },
+  },
   decorators: Story => {
     return <Story />;
   },
@@ -89,6 +94,9 @@ export const VideoWithFallback: Story = {
           'This is a video component with a fallback HTML video player. The fallback player will show up if YouTube is blocked, and a Download button will also show up. To test this block _www.youtube.com_ and _www.youtube-nocookie.com_ in the Network tab in DevTools.',
       },
     },
+    a11y: {
+      test: 'error',
+    },
     eyes: {
       // Skip eyes for video as this auto plays
       include: false,
@@ -119,6 +127,11 @@ export const VideoWithCaptionAndFallback: Story = {
     showCaption: true,
     isYouTubeCookieAllowed: true,
   },
+  parameters: {
+    a11y: {
+      test: 'error',
+    },
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const caption = canvas.getByText("What Most Schools Don't Teach");
@@ -138,6 +151,11 @@ export const VideoCookieBlocked: Story = {
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
     isYouTubeCookieAllowed: false,
+  },
+  parameters: {
+    a11y: {
+      test: 'error',
+    },
   },
   play: async ({canvasElement, args}) => {
     const canvas = within(canvasElement);
