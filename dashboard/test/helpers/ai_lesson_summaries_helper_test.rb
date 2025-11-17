@@ -35,7 +35,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     # Mock the system prompt helper
     AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:get_system_prompt).
-      with(@lesson.id).returns(@system_prompt)
+      with(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(@system_prompt)
   end
 
   # *****
@@ -50,10 +50,10 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     # Mock the Client class
     mock_client = mock('client')
-    mock_client.expects(:request_lesson_summary).with(@system_prompt).returns(mock_response)
+    mock_client.expects(:request_lesson_summary).with(@system_prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(mock_response)
     AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
 
-    result = AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id)
+    result = AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
 
     expected_content = {
       learning_objective: "Students will learn variables",
@@ -76,10 +76,10 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     # Mock the Client class
     mock_client = mock('client')
-    mock_client.expects(:request_lesson_summary).with(@system_prompt).returns(mock_response)
+    mock_client.expects(:request_lesson_summary).with(@system_prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(mock_response)
     AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
 
-    result = AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id)
+    result = AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
 
     assert_equal 429, result[:status]
     assert_equal error_response, result[:json].to_json
@@ -93,13 +93,13 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     # Mock the Client class
     mock_client = mock('client')
-    mock_client.expects(:request_lesson_summary).with(@system_prompt).returns(mock_response)
+    mock_client.expects(:request_lesson_summary).with(@system_prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(mock_response)
     AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
 
     AiSystemPrompts::LessonSummariesSystemPromptHelper.expects(:get_system_prompt).
-      with(@lesson.id).returns(@system_prompt)
+      with(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(@system_prompt)
 
-    AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id)
+    AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
   end
 
   # *****
@@ -108,11 +108,11 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
   test "retrieve_and_save_ai_lesson_summary creates AiLessonSummary when API call succeeds" do
     # Mock successful API response
-    AiLessonSummariesHelper.expects(:get_ai_lesson_summary).with(@lesson.id).
+    AiLessonSummariesHelper.expects(:get_ai_lesson_summary).with(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
       returns({status: 200, json: "Generated lesson summary"})
 
     assert_difference 'AiLessonSummary.count', 1 do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id)
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     end
 
     created_summary = AiLessonSummary.last
@@ -123,11 +123,11 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
   test "retrieve_and_save_ai_lesson_summary does not create AiLessonSummary when API call fails" do
     # Mock failed API response
-    AiLessonSummariesHelper.expects(:get_ai_lesson_summary).with(@lesson.id).
+    AiLessonSummariesHelper.expects(:get_ai_lesson_summary).with(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
       returns({status: 500, json: "Internal server error"})
 
     assert_no_difference 'AiLessonSummary.count' do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id)
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     end
   end
 
@@ -140,7 +140,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     HTTParty.stubs(:post).returns(mock_response)
 
     assert_difference 'AiLessonSummary.count', 1 do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id)
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     end
 
     created_summary = AiLessonSummary.last
@@ -163,7 +163,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     assert_equal @model, client.model
   end
 
-  test "Client request_lesson_summary makes HTTP request with correct parameters" do
+  test "Client request_lesson_summary makes HTTP request with correct parameters for brief summary response format" do
     prompt = "Test prompt for lesson summary"
 
     expected_headers = {
@@ -210,10 +210,57 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     ).returns(mock('response'))
 
     client = AiLessonSummariesHelper::Client.new(@api_key, @model)
-    client.request_lesson_summary(prompt)
+    client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
   end
 
-  test "Client request_lesson_summary includes correct JSON schema" do
+  test "Client request_lesson_summary makes HTTP request with correct parameters for podcast transcript response format" do
+    prompt = "Test prompt for lesson summary"
+
+    expected_headers = {
+      "Content-Type" => "application/json",
+      "Authorization" => "Bearer #{@api_key}"
+    }
+
+    expected_data = {
+      model: @model,
+      messages: [
+        {
+          role: "system",
+          content: "You are an expert teaching assistant in a computer science classroom who has been asked to summarize the upcoming lesson to help the teacher prepare for class."
+        },
+        {
+          role: "user",
+          content: prompt
+        }
+      ],
+      response_format: {
+        type: "json_schema",
+        json_schema: {
+          name: "lesson_summary",
+          schema: {
+            type: "object",
+            properties: {
+              transcript: {type: "string"}
+            }
+          }
+        }
+      }
+    }
+
+    # Mock HTTParty.post
+    HTTParty.expects(:post).with(
+      AiLessonSummariesHelper::Client::OPEN_AI_URL,
+      headers: expected_headers,
+      body: expected_data.to_json,
+      open_timeout: 5,
+      read_timeout: 30
+    ).returns(mock('response'))
+
+    client = AiLessonSummariesHelper::Client.new(@api_key, @model)
+    client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_TRANSCRIPT])
+  end
+
+  test "Client request_lesson_summary includes correct JSON schema for brief summary response format" do
     prompt = "Test prompt"
 
     expected_schema = {
@@ -235,6 +282,28 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     end
 
     client = AiLessonSummariesHelper::Client.new(@api_key, @model)
-    client.request_lesson_summary(prompt)
+    client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+  end
+
+  test "Client request_lesson_summary includes correct JSON schema for podcast transcript response format" do
+    prompt = "Test prompt"
+
+    expected_schema = {
+      type: "object",
+      properties: {
+        transcript: {type: "string"}
+      }
+    }
+
+    HTTParty.stubs(:post) do |_url, options|
+      body_data = JSON.parse(options[:body])
+      assert_equal "json_schema", body_data['response_format']['type']
+      assert_equal "lesson_summary", body_data['response_format']['json_schema']['name']
+      assert_equal expected_schema, body_data['response_format']['json_schema']['schema']
+      mock('response')
+    end
+
+    client = AiLessonSummariesHelper::Client.new(@api_key, @model)
+    client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_TRANSCRIPT])
   end
 end

@@ -25,11 +25,11 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
   test 'perform calls AiLessonSummariesHelper for each lesson_id' do
     # Expect the helper to be called for each lesson
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson1.id, @user.id)
+      with(@lesson1.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson2.id, @user.id)
+      with(@lesson2.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson3.id, @user.id)
+      with(@lesson3.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
 
     AiLessonSummariesJob.perform_now(request: @request)
   end
@@ -41,7 +41,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     }
 
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson1.id, @user.id)
+      with(@lesson1.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
 
     AiLessonSummariesJob.perform_now(request: single_request)
   end
@@ -150,9 +150,9 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
 
     # Should convert strings to integers when calling helper
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson1.id.to_s, @user.id.to_s)
+      with(@lesson1.id.to_s, @user.id.to_s, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson2.id.to_s, @user.id.to_s)
+      with(@lesson2.id.to_s, @user.id.to_s, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
 
     AiLessonSummariesJob.perform_now(request: string_request)
   end
@@ -175,7 +175,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     }
 
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson1.id, nil)
+      with(@lesson1.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
 
     AiLessonSummariesJob.perform_now(request: request_without_user)
   end
