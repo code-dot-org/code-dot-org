@@ -39,11 +39,10 @@ import dancerSilhouetteBrightImage from '@cdo/static/dance/generateDancer/genera
 import {GENERATED_DANCER_STORAGE_KEY} from '../../ai/constants';
 import {getConfigValue} from '../../lottie/LottieDancerUtils';
 
+import bodyVariantCounts from './bodyVariantCounts';
 import adlibsDefault from './dancerAdlibsDefault';
 
 import moduleStyles from './generate-dancer.module.scss';
-
-const BODY_VARIANT_COUNT = 5;
 
 // A little time for the previous dancer to fade out.
 const GENERATE_INITIAL_DELAY_DURATION = 250;
@@ -239,7 +238,11 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       );
 
       const variant = sample(newVariants) as number;
-      const bodyVariant = getRandomInt(0, BODY_VARIANT_COUNT - 1);
+      let bodyVariant = 0;
+      if (choicesExtraToSave && choicesExtraToSave.length > 0) {
+        const bodyVariantCount = bodyVariantCounts[choicesExtraToSave[0]];
+        bodyVariant = getRandomInt(0, bodyVariantCount - 1);
+      }
 
       // Keep the recently-shown array length at a maximum that ensures
       // there are still two choices to be made each time.
