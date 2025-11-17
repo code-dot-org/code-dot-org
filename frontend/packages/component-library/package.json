@@ -554,6 +554,7 @@
     "release-it": "^18.1.2",
     "rimraf": "^6.0.1",
     "schema-dts": "^1.1.5",
+    "shadow-dom-testing-library": "^1.13.1",
     "storybook": "^9.0.18",
     "storybook-addon-rtl": "^2.0.0",
     "stylelint": "^16.14.1",

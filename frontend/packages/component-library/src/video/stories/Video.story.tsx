@@ -1,4 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {screen as shadowScreen} from 'shadow-dom-testing-library';
 import {within, expect, userEvent} from 'storybook/test';
 
 import Video from '../index';
@@ -19,6 +20,9 @@ export const DefaultVideo: Story = {
     isYouTubeCookieAllowed: true,
   },
   parameters: {
+    a11y: {
+      test: 'error',
+    },
     eyes: {
       // Skip eyes for video as this auto plays
       include: false,
@@ -33,7 +37,11 @@ export const DefaultVideo: Story = {
     await expect(playButton).toBeVisible();
     await userEvent.click(playButton);
 
-    const video = await canvas.findByTitle("What Most Schools Don't Teach");
+    // react-player renders the youtube iframe inside a shadow root
+    // but it does need to have the right title for a11y
+    const video = await shadowScreen.findByShadowTitle(
+      "What Most Schools Don't Teach",
+    );
 
     // check if video is visible
     await expect(video).toBeVisible();

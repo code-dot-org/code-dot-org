@@ -9,7 +9,7 @@ interface YouTubeVideoProps extends VideoProps {
   onError: (error: string | Event) => void;
 }
 
-const YouTubeVideo = ({src, onError}: YouTubeVideoProps) => {
+const YouTubeVideo = ({src, onError, videoTitle}: YouTubeVideoProps) => {
   /**
    * Injects the YouTube IFrame API into the <head>. Does not reinject if already present.
    */
@@ -57,6 +57,7 @@ const YouTubeVideo = ({src, onError}: YouTubeVideoProps) => {
       height={'100%'}
       width={'100%'}
       src={src}
+      title={videoTitle}
       onError={onError as unknown as ReactEventHandler<HTMLVideoElement>}
       previewTabIndex={-1} // the play icon is the tabbable portion
       playing={true}
