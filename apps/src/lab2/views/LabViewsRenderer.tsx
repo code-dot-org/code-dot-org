@@ -6,6 +6,7 @@
 import React, {createContext, Suspense, useEffect, useState} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
@@ -41,13 +42,13 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const channel = useAppSelector(state => state.lab.channel);
 
   const currentAppName = levelProperties?.appName;
-
+  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
   useEffect(() => {
     // Set the level path and app name in the analytics reporter for Statsig events.
-    analyticsReporter.setProjectProperty('levelPath', window.location.pathname);
+    levelPath && analyticsReporter.setProjectProperty('levelPath', levelPath);
     currentAppName &&
       analyticsReporter.setProjectProperty('appName', currentAppName);
-  }, [currentAppName]);
+  }, [levelPath, currentAppName]);
 
   const exemplarSources = levelProperties?.exemplarSources;
 
