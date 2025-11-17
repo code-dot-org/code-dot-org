@@ -79,7 +79,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/code-dot-org:docker-sudo-no-fqdn
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -316,6 +316,6 @@ trigger:
 
 ---
 kind: signature
-hmac: d0de97812011e6377e6e652fa06cf7852542927d8db4ad52d5e4f4af77aa5bf3
+hmac: b6abf6449524322ca741d4e3b9974c09c230c561f45a338d4ca716723b0d98be
 
 ...
