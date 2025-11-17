@@ -279,7 +279,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-ci-tests
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/code-dot-org:docker-sudo-no-fqdn
     pull: always
     environment:
       CI_JOB: 'ui_tests'
@@ -323,6 +323,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 8382c5b97e7878740d2d029db2802e548ea788b8fb5fdce3a904102203b22c68
+hmac: b893383ecb7712245b981fd5880ea20cf4b813347282a18386fc55aaeb133636
 
 ...
