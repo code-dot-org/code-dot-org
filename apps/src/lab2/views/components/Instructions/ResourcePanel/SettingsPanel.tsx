@@ -47,7 +47,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   const handleLanguageChange = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
-    sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_LANGUAGE_CHANGE, appName, {
+    sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_LANGUAGE_CHANGE, {
       languageChangedTo: event.target.value,
       languageChangedFrom: locale,
     });
@@ -63,7 +63,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
     setting: Setting,
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
-    sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_CHANGE, appName, {
+    sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_CHANGE, {
       settingName: setting.label,
       settingChangedTo: event.target.value,
       settingChangedFrom: setting.selectedValue || '',

@@ -3,13 +3,10 @@ import {PayloadAction, createSelector, createSlice} from '@reduxjs/toolkit';
 
 export interface LayoutState {
   visualizationScale: number | null;
-  // TODO: Remove isAiDiffContainerOpen when https://codedotorg.atlassian.net/browse/AITT-1281 is implemented.
-  isAiDiffContainerOpen: boolean;
 }
 
 const initialState: LayoutState = {
   visualizationScale: null,
-  isAiDiffContainerOpen: false,
 };
 
 const layoutSlice = createSlice({
@@ -19,14 +16,10 @@ const layoutSlice = createSlice({
     setVisualizationScale(state, action: PayloadAction<number>) {
       state.visualizationScale = action.payload;
     },
-    setIsAiDiffContainerOpen(state, action: PayloadAction<boolean>) {
-      state.isAiDiffContainerOpen = action.payload;
-    },
   },
 });
 
-export const {setVisualizationScale, setIsAiDiffContainerOpen} =
-  layoutSlice.actions;
+export const {setVisualizationScale} = layoutSlice.actions;
 
 const selectSelf = (state: {layout: LayoutState}) => state.layout;
 

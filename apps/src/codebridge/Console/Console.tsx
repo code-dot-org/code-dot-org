@@ -45,17 +45,12 @@ const Console: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
 
-  const clearOutput = useCallback(
-    (sendAnalytics: boolean) => {
-      CodebridgeRegistry.getInstance()
-        .getConsoleManager()
-        ?.clearTerminalLines();
-      if (sendAnalytics) {
-        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
-      }
-    },
-    [appName]
-  );
+  const clearOutput = useCallback((sendAnalytics: boolean) => {
+    CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();
+    if (sendAnalytics) {
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE);
+    }
+  }, []);
 
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.
