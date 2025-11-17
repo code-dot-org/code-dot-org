@@ -1,5 +1,31 @@
 @use '../layout/variables.scss' as variables;
 
+$top-position: 62px;
+$bottom-position: 20px;
+$gap-height: 43px;
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    margin-top: 40px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    margin-bottom: 40px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
 .guideContainerModal {
   background-color: rgba(0 0 0 / .3);
   position: absolute;
@@ -8,6 +34,10 @@
   right: 0;
   bottom: 0;
   z-index: 71;
+
+  &Gap {
+    top: $gap-height;
+  }
 }
 
 .guide {
@@ -22,8 +52,10 @@
   z-index: variables.$z-index-floating-ui;
   background: var(--background-neutral-secondary);
   box-shadow: 0 6px 18px 0 rgba(0 0 0 / 0.30);
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.5;
   gap: 16px;
+  container-type: inline-size;
 
   &NormalWidth {
     width: 40%;
@@ -34,10 +66,23 @@
   }
 
   &NormalPosition {
-    top: 62px;
+    top: $top-position;
+    animation: 0.75s ease 1.5s backwards slide-up;
   }
 
   &BottomPosition {
-    bottom: 20px;
+    bottom: $bottom-position;
+    animation: 0.75s ease 1.5s backwards slide-down;
+  }
+
+  &Gap {
+    top: $top-position - $gap-height;
+  }
+}
+
+.markdown {
+  p, li, h1, h2, h3, h4 {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }

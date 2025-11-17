@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-03 07:15:15 UTC",
+    "serialized_at": "2025-11-10 22:46:45 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -46,9 +46,10 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this 45-minute activity, students will explore how creativity, coding, and artificial intelligence come together to bring dance and music to life. By designing a custom dancer, generating and modifying code for a musical remix, and choreographing moves to the beat, students will learn foundational computer science concepts like sequencing and parallelism, alongside AI concepts like prompting and iteration.\n\nStudents will gain confidence in their creative abilities and deepen their understanding of how AI can enhance, not replace, human creativity. They’ll also be introduced to careers that blend art, technology, and AI through an inspiring spotlight from a professional in the music and dance industry. The goal is for students to see themselves as creators—using AI as a tool for imagination, innovation, and self-expression.",
-        "purpose": "This lesson is designed to show students that coding and AI go hand in hand to amplify creativity and expression. In Mix & Move with AI, students will design their own dancer, remix music, and choreograph a performance using code. Along the way, they’ll explore coding concepts like sequencing and parallelism and AI concepts like prompting and iteration.\n\nStudents will see how the creative process of designing, testing, and refining with AI mirrors the way artists, musicians, and coders bring ideas to life. By the end of the lesson, they’ll understand that AI can be a powerful tool for imagination and innovation, but that they are ultimately the ones in charge of the final product.",
-        "student_overview": "In this 45-minute activity, you’ll use Code.org’s Mix & Move with AI to design your own dancer, mix music from artists like Sabrina Carpenter, Benson Boone, and Shakira, and code your own dance performance. You’ll learn how AI can help you create faster while staying in control of your ideas, explore key coding skills like sequencing and parallelism, and discover how creativity, technology, and AI come together to make something amazing."
+        "background": "dark",
+        "overview": "In this 45-minute lesson, students explore how creativity, coding, and artificial intelligence (AI) work together to make music and dance. They’ll design a dancer, remix a song, and use code to choreograph moves to the beat. Along the way, students will learn basic coding ideas like sequencing, and AI ideas like prompting and iteration.\n\nStudents will see how AI can help spark new ideas rather than replace human creativity. They’ll also meet a professional who uses art, technology, and AI in their career helping students imagine themselves as creative tech makers.",
+        "preparation": "- Test out Mix & Move with AI to ensure familiarity with the platform.\n- Review the introduction video and practice walking students through the steps to prompt AI and modify code.\n- Prepare discussion prompts that help students connect with the opportunities and risks of using AI.\n- *[Optional]* Find the resources you need to plan, implement, and celebrate the Hour of AI at your school [here](https://csforall.org/en-US/hour-of-ai/how-to/k-12educator)!",
+        "student_overview": "In this 45-minute activity, you’ll use Code.org’s Mix & Move with AI to design your own dancer, mix music from artists like Sabrina Carpenter, Benson Boone, and Shakira, and code your own dance performance. You’ll learn how AI can help you create more while staying in control of your ideas. Explore key coding skills like sequencing and discover how creativity, technology, and AI come together to make something amazing."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -59,8 +60,35 @@
   ],
   "lesson_activities": [
     {
-      "key": "5471cfa4-2135-4972-aca6-c67c5aed326b",
+      "key": "5aebe064-275e-4898-b1d7-07afbdd6b201",
       "position": 1,
+      "properties": {
+        "name": "Before the lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5aebe064-275e-4898-b1d7-07afbdd6b201",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025"
+      }
+    },
+    {
+      "key": "cc2e2f63-914d-4169-bf32-5c3c0a292f5d",
+      "position": 2,
+      "properties": {
+        "duration": 3,
+        "name": "Warm Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc2e2f63-914d-4169-bf32-5c3c0a292f5d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025"
+      }
+    },
+    {
+      "key": "5471cfa4-2135-4972-aca6-c67c5aed326b",
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Main Activity"
@@ -71,13 +99,73 @@
         "lesson_group.key": "",
         "script.name": "mix-move-ai-2025"
       }
+    },
+    {
+      "key": "0aff64dc-3032-47f9-b417-6794a9ed3833",
+      "position": 4,
+      "properties": {
+        "duration": 2,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0aff64dc-3032-47f9-b417-6794a9ed3833",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025"
+      }
     }
   ],
   "activity_sections": [
     {
+      "key": "cf72b6bf-dc37-4a88-b413-af014cf15508",
+      "position": 1,
+      "properties": {
+        "description": "Try out the student activity on your own or watch the Teacher Prep Video to preview the activity.\n\nFeel confident and prepared as you start teaching the lesson. Click here to start learning!",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "We recommend that [create a classroom section](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Class-Section) and assign the [Hour of AI: Mix and Move with AI](https://studio.code.org/courses/mix-move-ai-2025/units/1/lessons/1/levels/1) to your students. This will allow you to track student progress. However, you can also send students to Mix & Move with AI Activity directly to complete the activity without logging in."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cf72b6bf-dc37-4a88-b413-af014cf15508",
+        "lesson_activity.key": "5aebe064-275e-4898-b1d7-07afbdd6b201"
+      }
+    },
+    {
+      "key": "ed196ddd-d230-4c5d-aeff-382e33502524",
+      "position": 1,
+      "properties": {
+        "description": "  <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Begin with a discussion opportunity to help students activate prior knowledge and to set the tone for this fun, exploratory lesson.\n\n <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What would you ask AI to create if it could make anything? \n\n***Or***  If AI could help you create a song, what would you want it to sound like?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Option to choose an alternative question that is most appropriate for your students:\n- What’s something you’ve heard about AI?\n- Where have you seen AI used in your daily life?\n- How do you think AI “learns” new things?\n- What’s something you’re curious about when it comes to AI?\n- Do you feel excited, nervous, or unsure about using AI? Why?"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ed196ddd-d230-4c5d-aeff-382e33502524",
+        "lesson_activity.key": "cc2e2f63-914d-4169-bf32-5c3c0a292f5d"
+      }
+    },
+    {
+      "key": "898a3460-793e-4acf-a17f-c7b717558a9f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the lesson objectives and the Question of the Day: How can we create with AI?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "898a3460-793e-4acf-a17f-c7b717558a9f",
+        "lesson_activity.key": "cc2e2f63-914d-4169-bf32-5c3c0a292f5d"
+      }
+    },
+    {
       "key": "da6547ed-29ef-4288-b18b-86a7bad73bb8",
       "position": 1,
       "properties": {
+        "description": "\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’re taking part in a global movement to learn more about AI. The Hour of AI is an event that helps students of all ages across the whole world take their first step from watchers to creators.\n\nIn the next hour, you will explore how you can work with AI to generate images and code for music and dance moves.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Preview or review the key vocabulary:\n- **artificial intelligence (AI):** a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions\n- **prompt:** the instruction or question you give to AI that tell it what to do\n- **generate:** to make or create something\n- **code:** a set of instructions that tells a computer what to do\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on the first level as a class. \n",
         "name": "Intro to Mix & Move with AI",
         "progression_name": "Intro"
       },
@@ -87,8 +175,19 @@
       }
     },
     {
-      "key": "199f6452-6692-4338-99bb-8f98b14c0f82",
+      "key": "27e3b1ec-e707-4d18-a72f-27749025d8a8",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to work at their own pace through the activity.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> During the activity you can circulate and ask students some of the following questions:\n- What are you changing in the prompt and how does it affect what the AI generates?\n- What have you done to change or modify what the code the AI generated?\n- What choices are you making as the creator right now?\n- If you could make the output different, what would you change?\n\nWhile students are working through the activity, encourage them to share what they’re making with each other."
+      },
+      "seeding_key": {
+        "activity_section.key": "27e3b1ec-e707-4d18-a72f-27749025d8a8",
+        "lesson_activity.key": "5471cfa4-2135-4972-aca6-c67c5aed326b"
+      }
+    },
+    {
+      "key": "199f6452-6692-4338-99bb-8f98b14c0f82",
+      "position": 3,
       "properties": {
         "name": "Design Your Dancer with AI",
         "progression_name": "Design"
@@ -100,7 +199,7 @@
     },
     {
       "key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Mix Your Music with AI",
         "progression_name": "Mix"
@@ -112,7 +211,7 @@
     },
     {
       "key": "62c36a4f-8615-4d16-8f93-051d35b5739a",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Code Your Dance Moves with AI",
         "progression_name": "Move"
@@ -120,6 +219,34 @@
       "seeding_key": {
         "activity_section.key": "62c36a4f-8615-4d16-8f93-051d35b5739a",
         "lesson_activity.key": "5471cfa4-2135-4972-aca6-c67c5aed326b"
+      }
+    },
+    {
+      "key": "57ea666f-c9f4-40f6-9b35-52c19de90ea4",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong>  Encourage students to click Finish when they’re done with their dance to get a link to share their projects.\n\nClicking Finish again will take students to their certificate of completion."
+      },
+      "seeding_key": {
+        "activity_section.key": "57ea666f-c9f4-40f6-9b35-52c19de90ea4",
+        "lesson_activity.key": "5471cfa4-2135-4972-aca6-c67c5aed326b"
+      }
+    },
+    {
+      "key": "0975eb14-bf16-4bec-8b26-3c6c85e9218e",
+      "position": 1,
+      "properties": {
+        "description": " <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> You did it! You explored how AI can help you make code, art, and music. Today, you weren’t just using technology... you were creating with it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Choose a wrap up activity that works for your class. \n-  <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Think about what you made today. What surprised you? What would you like to explore more next time?\n\n- <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Do you think AI can be creative, or only humans? Why?\n\n-  <i class=\"fa-solid fa-pen\"></i> <strong>Write:</strong> On a sticky note, write one sentence naming your favorite part of someone else’s project.\nInclude their name.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Here are some alternative Wrap-Up questions. Choose the one most appropriate for your students:\n- What was your favorite thing you created with AI today?\n- What surprised you most about what AI could do?\n- What did you add that made your project different from what the AI generated?\n- Was there a moment when AI didn’t do what you expected? How did you respond?\n- If you could change one thing about how AI worked today, what would it be?\n- How would you explain what you learned today to a younger student or a parent?\n- How do you imagine AI will be used in the future — in schools, jobs, or everyday life?\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0975eb14-bf16-4bec-8b26-3c6c85e9218e",
+        "lesson_activity.key": "0aff64dc-3032-47f9-b417-6794a9ed3833"
       }
     }
   ],
@@ -130,6 +257,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-video-intro"
+        ],
         "progression": "Intro"
       },
       "bonus": false,
@@ -152,6 +282,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dance-background"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -174,6 +307,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dancer-prompt-1-input"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -196,6 +332,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dancer-prompt-2-input"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -218,6 +357,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-panels-image-generation"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -240,6 +382,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dancer-prompt-4-input"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -262,6 +407,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dance-move"
+        ],
         "progression": "Design"
       },
       "bonus": false,
@@ -284,12 +432,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-panels-music-intro"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-panels-mix-intro"
+          "mix-move-ai-panels-music-intro"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -297,7 +448,7 @@
         "activity_section.key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b"
       },
       "level_keys": [
-        "mix-move-ai-panels-mix-intro"
+        "mix-move-ai-panels-music-intro"
       ]
     },
     {
@@ -306,6 +457,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-sequence"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -328,6 +482,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-play-together"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -350,6 +507,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-music-prompt-2-input"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -372,6 +532,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-panels-code-generation"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -394,6 +557,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-music-prompt-3-input"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
@@ -416,6 +582,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mix-move-ai-dance-freeplay"
+        ],
         "progression": "Move"
       },
       "bonus": false,
@@ -520,9 +689,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-panels-mix-intro",
+        "level.key": "mix-move-ai-panels-music-intro",
         "script_level.level_keys": [
-          "mix-move-ai-panels-mix-intro"
+          "mix-move-ai-panels-music-intro"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -604,10 +773,66 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Educator’s Guide",
+      "url": "https://drive.google.com/file/d/1aS4cwFjks_Pd12a_aZDusj49QfdaHlTx/view?usp=sharing",
+      "key": "educator_s_guide",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "educator_s_guide"
+      }
+    },
+    {
+      "name": "Mix & Move Slides",
+      "url": "https://docs.google.com/presentation/d/1q8aIlobDfMj6gcrqLqv2sQma_rKYw4jVMLIPJ8CJI0w/template/preview",
+      "key": "mix_move_slides",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mix_move_slides"
+      }
+    },
+    {
+      "name": "Teacher Prep Video ",
+      "url": "https://www.youtube.com/watch?v=yZRBxIZrVSk",
+      "key": "teacher_prep_video",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_prep_video"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "educator_s_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "mix_move_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "teacher_prep_video"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -616,19 +841,144 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "artificial_intelligence_ai_",
+      "word": "Artificial Intelligence (AI)",
+      "definition": "A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "key": "code",
+      "word": "Code",
+      "definition": "A set of instructions that tells a computer what to do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "generate",
+      "word": "Generate",
+      "definition": "To make or create something",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "generate"
+      }
+    },
+    {
+      "key": "prompt",
+      "word": "Prompt",
+      "definition": "The instruction or question you give to AI that tell it what to do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "generate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "prompt"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "1edb377e-b819-4d0a-a7e1-285e0b2270bf",
+      "properties": {
+        "description": "Create dance characters and code for a music mix with the help of AI."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "1edb377e-b819-4d0a-a7e1-285e0b2270bf"
+      }
+    },
+    {
+      "key": "b01a2320-825e-4698-9b99-2e2acfd0b52c",
+      "properties": {
+        "description": "Explain how AI can generate new ideas, images, or code based on what it has learned."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b01a2320-825e-4698-9b99-2e2acfd0b52c"
+      }
+    },
+    {
+      "key": "b6fb8baf-faea-4a52-b2ed-31ea533076c4",
+      "properties": {
+        "description": "Use your judgement to decide what AI generated code and images to keep."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b6fb8baf-faea-4a52-b2ed-31ea533076c4"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "3-A-vi.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-D-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

@@ -35,6 +35,16 @@ CDO.stubs(:rack_env).returns(:test) if defined? CDO
 Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
+
+if CDO.test_system? && !ENV.fetch('TEST_ENV_NUMBER', nil)
+  # Raise rather than silently correcting the error, because it's possible that the data in
+  # dashboard_test has already been corrupted by the time we get here. If we find that we're
+  # hitting this error without any data corruption, we can consider silently setting
+  # TEST_ENV_NUMBER=1 here instead.
+  raise 'Do not run unit tests against dashboard_test DB on the chef-managed test system. ' \
+      'Instead, specify TEST_ENV_NUMBER=1 to run against the dashboard_test1 database.'
+end
+
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]

@@ -6015,7 +6015,7 @@ en:
             #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Insights from Data and AI unit. However, you can engage with the content in the order that best meets your needs.
           version_title: ''
         teaching-problem-solving-with-ai-2025:
-          title: Teaching Problem-Solving with AI
+          title: Teaching Problem Solving with AI
           description_short: This professional learning module is designed to help you prepare to teach Code.org's Problem Solving with AI unit. This is a part of the AI Foundations curriculum.
           description_student: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.
@@ -6450,7 +6450,100 @@ en:
           description_teacher: ''
           version_title: "'25-'26"
         mix-move-ai-2025:
-          title: mix-move-ai-2025
+          title: Mix & Move with AI
+          description_short: Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat.
+          description_student: Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat.
+          description_teacher: Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat.
+          version_title: ''
+        mix-move-ai-educators-2025:
+          title: Mix & Move with AI - Educator's Experience
+          description_short: |-
+            In this self-guided professional learning activity, educators explore Mix & Move with AI just like students do — using Artificial Intelligence to generate a dancer, remix music, and choreograph moves through code.
+
+            Along the way, you’ll learn how AI “learns” from data, experiment with how AI models create images, text, and code, and explore how these tools can support creativity and problem-solving in the classroom. You’ll also build confidence introducing AI-related learning with your students.
+
+            Perfect for sparking curiosity, creativity, and confidence in both teaching with AI and learning about AI.
+          description_student: "<section style=\"max-width:800px; margin:50px auto; padding:0 20px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif; color:#333; line-height:1.6;\">\n\n  <h2 style=\"text-align:center; color:#1a8a9a; font-size:32px; margin-bottom:10px;\">\n    Bring Dance, Music, and Coding Together\n  </h2>\n\n  <p style=\"font-size:18px; margin-top:20px;\">\n    In this self-guided professional learning activity, educators explore \n    <strong>Mix & Move with AI</strong> just like students do — using Artificial Intelligence \n    to generate a dancer, remix music, and choreograph moves through code.\n  </p>\n\n  <p style=\"font-size:18px;\">\n    Along the way, you’ll learn how AI “learns” from data, experiment with how AI models create \n    images, text, and code, and explore how these tools can support creativity and problem-solving \n    in the classroom. You’ll also build confidence introducing AI-related learning with your students.\n  </p>\n\n  <p style=\"font-size:18px; font-weight:500; color:#555; margin-top:24px;\">\n    Perfect for sparking curiosity, creativity, and confidence in both teaching with AI \n    and learning about AI.\n  </p>\n\n</section>"
+          description_teacher: "<section style=\"max-width:800px; margin:50px auto; padding:0 20px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif; color:#333; line-height:1.6;\">\n\n  <h2 style=\"text-align:center; color:#1a8a9a; font-size:32px; margin-bottom:10px;\">\n    Bring Dance, Music, and Coding Together\n  </h2>\n\n  <p style=\"font-size:18px; margin-top:20px;\">\n    In this self-guided professional learning activity, educators explore \n    <strong>Mix & Move with AI</strong> just like students do — using Artificial Intelligence \n    to generate a dancer, remix music, and choreograph moves through code.\n  </p>\n\n  <p style=\"font-size:18px;\">\n    Along the way, you’ll learn how AI “learns” from data, experiment with how AI models create \n    images, text, and code, and explore how these tools can support creativity and problem-solving \n    in the classroom. You’ll also build confidence introducing AI-related learning with your students.\n  </p>\n\n  <p style=\"font-size:18px; font-weight:500; color:#555; margin-top:24px;\">\n    Perfect for sparking curiosity, creativity, and confidence in both teaching with AI \n    and learning about AI.\n  </p>\n\n</section>"
+          version_title: ''
+        programming-with-ai-pilot-2025:
+          title: "[PILOT] Programming with AI"
+          description_short: Programming with AI teaches students to build interactive web apps with JavaScript while using AI as a creative coding partner to design technology that reflects their ideas and values.
+          description_student: |-
+            Programming with AI helps you become a creator who works with AI to build interactive web apps that matter. You learn JavaScript and use AI tools to generate, edit, and improve code across HTML, CSS, and JavaScript while developing skills in problem-solving, design, and systems thinking. Through a series of projects, you design and build apps that are creative, functional, and responsible. By the end of the course, you'll have the confidence to code, collaborate thoughtfully with AI, and create technology that reflects your own ideas and values.
+
+            ## Learning Outcomes
+
+            **By the end of AIF Semester 2, you will be able to . . .**
+
+            - Apply core JavaScript concepts (variables, functions, conditionals, loops, arrays, objects, and state management) to design and implement interactive applications.
+            - Demonstrate judgment in selecting coding strategies by deciding when to write code independently, adapt existing code, or direct AI, and explain how these choices support their understanding and goals.
+            - Decompose problems and abstract patterns to structure solutions, and debug code through iterative refinement.
+            - Design user-centered applications that demonstrate usability, accessibility, and alignment with identified user needs.
+            - Critique AI outputs for bias, accuracy, and alignment with user goals, and justify design decisions that promote safety, transparency, and user agency.
+            - Reflect on their design process to explain how their choices connect to personal values, community needs, and responsible technology creation.
+          description_teacher: |-
+            Programming with AI equips students to become intentional designers who work alongside AI to build meaningful, interactive web apps. Students learn JavaScript while using AI to generate, adapt, and refine code across HTML, CSS, and JavaScript, developing computational thinking, human-centered design, and systems thinking skills. Across a progression of projects, they design and build interactive applications that are both technically functional and ethically informed, leaving the course with the confidence to program, collaborate thoughtfully with AI, and create systems that reflect their values and vision.
+
+            ## Learning Outcomes
+
+            **By the end of AIF Semester 2, students will be able to . . .**
+
+            - Apply core JavaScript concepts (variables, functions, conditionals, loops, arrays, objects, and state management) to design and implement interactive applications.
+            - Demonstrate judgment in selecting coding strategies by deciding when to write code independently, adapt existing code, or direct AI, and explain how these choices support their understanding and goals.
+            - Decompose problems and abstract patterns to structure solutions, and debug code through iterative refinement.
+            - Design user-centered applications that demonstrate usability, accessibility, and alignment with identified user needs.
+            - Critique AI outputs for bias, accuracy, and alignment with user goals, and justify design decisions that promote safety, transparency, and user agency.
+            - Reflect on their design process to explain how their choices connect to personal values, community needs, and responsible technology creation.
+
+            ## Prerequisites
+
+            AIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+          version_title: ''
+        artificial-intelligence-foundations-semester2-incubator:
+          title: "[INCUBATOR] AI Foundations Semester 2"
+          description_short: AI Foundations Semester 2 teaches students to build interactive web apps with JavaScript while using AI as a creative coding partner to design technology that reflects their ideas and values.
+          description_student: |-
+            AI Foundations Semester 2 helps you become a creator who works with AI to build interactive web apps that matter. You learn JavaScript and use AI tools to generate, edit, and improve code across HTML, CSS, and JavaScript while developing skills in problem-solving, design, and systems thinking. Through a series of projects, you design and build apps that are creative, functional, and responsible. By the end of the course, you'll have the confidence to code, collaborate thoughtfully with AI, and create technology that reflects your own ideas and values.
+
+            ## Learning Outcomes
+
+            **By the end of AIF Semester 2, you will be able to . . .**
+
+            - Apply core JavaScript concepts (variables, functions, conditionals, loops, arrays, objects, and state management) to design and implement interactive applications.
+            - Demonstrate judgment in selecting coding strategies by deciding when to write code independently, adapt existing code, or direct AI, and explain how these choices support their understanding and goals.
+            - Decompose problems and abstract patterns to structure solutions, and debug code through iterative refinement.
+            - Design user-centered applications that demonstrate usability, accessibility, and alignment with identified user needs.
+            - Critique AI outputs for bias, accuracy, and alignment with user goals, and justify design decisions that promote safety, transparency, and user agency.
+            - Reflect on their design process to explain how their choices connect to personal values, community needs, and responsible technology creation.
+          description_teacher: |-
+            AI Foundations Semester 2 equips students to become intentional designers who work alongside AI to build meaningful, interactive web apps. Students learn JavaScript while using AI to generate, adapt, and refine code across HTML, CSS, and JavaScript, developing computational thinking, human-centered design, and systems thinking skills. Across a progression of projects, they design and build interactive applications that are both technically functional and ethically informed, leaving the course with the confidence to program, collaborate thoughtfully with AI, and create systems that reflect their values and vision.
+
+            ## Learning Outcomes
+
+            **By the end of AIF Semester 2, students will be able to . . .**
+
+            - Apply core JavaScript concepts (variables, functions, conditionals, loops, arrays, objects, and state management) to design and implement interactive applications.
+            - Demonstrate judgment in selecting coding strategies by deciding when to write code independently, adapt existing code, or direct AI, and explain how these choices support their understanding and goals.
+            - Decompose problems and abstract patterns to structure solutions, and debug code through iterative refinement.
+            - Design user-centered applications that demonstrate usability, accessibility, and alignment with identified user needs.
+            - Critique AI outputs for bias, accuracy, and alignment with user goals, and justify design decisions that promote safety, transparency, and user agency.
+            - Reflect on their design process to explain how their choices connect to personal values, community needs, and responsible technology creation.
+
+            ## Prerequisites
+
+            AIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+          version_title: ''
+        indiasandox-2025:
+          title: indiasandbox-2025
           description_short: ''
           description_student: ''
           description_teacher: ''

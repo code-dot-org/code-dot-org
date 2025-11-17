@@ -10,6 +10,11 @@ import i18n from '@cdo/locale';
 jest.mock('@cdo/apps/aiDifferentiation/personalization/teachingProfileApi');
 jest.mock('@cdo/apps/aiEvaluation/aiEvaluationApi');
 
+// Mock analyticsReporter
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  sendEvent: jest.fn(),
+}));
+
 // Mock CSRF token
 const mockCSRFToken = 'mock-csrf-token';
 Object.defineProperty(document, 'querySelector', {
@@ -123,8 +128,21 @@ describe('PersonalizationCollectorContainer', () => {
     const yearsInput = screen.getByRole('spinbutton');
     fireEvent.change(yearsInput, {target: {value: '3'}});
 
-    const nextButton = screen.getByRole('button', {name: i18n.next()});
-    fireEvent.click(nextButton);
+    await waitFor(() => {
+      // Step 1: show interstitial
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      screen.getByText(
+        'You’ve found your rhythm! The perfect blend of experience and continued growth makes you an incredible educator.'
+      );
+    });
+
+    await waitFor(() => {
+      // Step 2: advance from interstitial to next question
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     await waitFor(() => {
       screen.getByText('Question 2 of 6');
@@ -140,18 +158,33 @@ describe('PersonalizationCollectorContainer', () => {
 
     // Navigate to second question first
     const yearsInput = screen.getByRole('spinbutton');
+
     fireEvent.change(yearsInput, {target: {value: '3'}});
 
-    const nextButton = screen.getByRole('button', {name: i18n.next()});
-    fireEvent.click(nextButton);
+    await waitFor(() => {
+      // Step 1: show interstitial
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      screen.getByText(
+        'You’ve found your rhythm! The perfect blend of experience and continued growth makes you an incredible educator.'
+      );
+    });
+
+    await waitFor(() => {
+      // Step 2: advance from interstitial to next question
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     await waitFor(() => {
       screen.getByText('Question 2 of 6');
     });
 
-    // Go back to first question
-    const backButton = screen.getByRole('button', {name: i18n.back()});
-    fireEvent.click(backButton);
+    await waitFor(() => {
+      // Go back to first question
+      fireEvent.click(screen.getByRole('button', {name: i18n.back()}));
+    });
 
     await waitFor(() => {
       screen.getByText('Question 1 of 6');
@@ -187,8 +220,12 @@ describe('PersonalizationCollectorContainer', () => {
     const yearsInput = screen.getByRole('spinbutton');
     fireEvent.change(yearsInput, {target: {value: '3'}});
 
-    const nextButton = screen.getByRole('button', {name: i18n.next()});
-    fireEvent.click(nextButton);
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     await waitFor(() => {
       screen.getByText('Question 2 of 6');
@@ -201,7 +238,13 @@ describe('PersonalizationCollectorContainer', () => {
 
     // Click on confidence level 8 and advance
     fireEvent.click(screen.getByText('8'));
-    fireEvent.click(nextButton);
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     await waitFor(() => {
       expect(saveTeachingProfileDataSpy).toHaveBeenCalledWith(
@@ -217,15 +260,29 @@ describe('PersonalizationCollectorContainer', () => {
 
     // Navigate through to goals question (question 3)
     const yearsInput = screen.getByRole('spinbutton');
+
     fireEvent.change(yearsInput, {target: {value: '3'}});
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     await waitFor(() => {
       screen.getByText('Question 2 of 6');
     });
 
     fireEvent.click(screen.getByText('7'));
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     await waitFor(() => {
       screen.getByText('Question 3 of 6');
@@ -237,7 +294,13 @@ describe('PersonalizationCollectorContainer', () => {
 
     // Select a goal and advance
     fireEvent.click(checkboxes[0]);
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     await waitFor(() => {
       expect(saveTeachingProfileDataSpy).toHaveBeenCalledWith(
@@ -254,14 +317,26 @@ describe('PersonalizationCollectorContainer', () => {
     // Navigate to goals question
     const yearsInput = screen.getByRole('spinbutton');
     fireEvent.change(yearsInput, {target: {value: '3'}});
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
     await waitFor(() => {
       screen.getByText('Question 2 of 6');
     });
 
     fireEvent.click(screen.getByText('7'));
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     await waitFor(() => {
       screen.getByText('Question 3 of 6');
@@ -282,7 +357,14 @@ describe('PersonalizationCollectorContainer', () => {
     // Question 1: Years teaching
     const yearsInput = screen.getByRole('spinbutton');
     fireEvent.change(yearsInput, {target: {value: '5'}});
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     // Question 2: Confidence
     await waitFor(() => {
@@ -290,7 +372,13 @@ describe('PersonalizationCollectorContainer', () => {
     });
     const confidenceButton = screen.getByText('7');
     fireEvent.click(confidenceButton);
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     // Question 3: Goals
     await waitFor(() => {
@@ -298,7 +386,14 @@ describe('PersonalizationCollectorContainer', () => {
     });
     const firstCheckbox = screen.getAllByRole('checkbox')[0];
     fireEvent.click(firstCheckbox);
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     // Question 4: Classroom vision
     await waitFor(() => {
@@ -308,7 +403,14 @@ describe('PersonalizationCollectorContainer', () => {
     fireEvent.change(visionTextarea, {
       target: {value: 'A collaborative environment'},
     });
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     // Question 5: Support preferences
     await waitFor(() => {
@@ -316,7 +418,13 @@ describe('PersonalizationCollectorContainer', () => {
     });
     const supportCheckbox = screen.getAllByRole('checkbox')[0];
     fireEvent.click(supportCheckbox);
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     // Question 6: Challenge
     await waitFor(() => {
@@ -328,7 +436,13 @@ describe('PersonalizationCollectorContainer', () => {
     });
 
     // Final submission
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     await waitFor(() => {
       expect(matchTeachingProfileSpy).toHaveBeenCalled();
@@ -375,12 +489,15 @@ describe('PersonalizationCollectorContainer', () => {
     const yearsInput = screen.getByRole('spinbutton');
     fireEvent.change(yearsInput, {target: {value: '3'}});
 
-    const nextButton = screen.getByRole('button', {name: i18n.next()});
-    fireEvent.click(nextButton);
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
-    // Show saving state
-    screen.getByRole('button', {name: i18n.saving()});
-    expect(screen.getByRole('button', {name: i18n.saving()})).toBeDisabled();
+    await waitFor(() => {
+      // Show saving state
+      screen.getByRole('button', {name: i18n.saving()});
+      expect(screen.getByRole('button', {name: i18n.saving()})).toBeDisabled();
+    });
   });
 
   it('does not allow going back from first question', async () => {
@@ -409,8 +526,13 @@ describe('PersonalizationCollectorContainer', () => {
     const yearsInput = screen.getByRole('spinbutton');
     fireEvent.change(yearsInput, {target: {value: '3'}});
 
-    const nextButton = screen.getByRole('button', {name: i18n.next()});
-    fireEvent.click(nextButton);
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
 
     await waitFor(() => {
       expect(consoleSpy).toHaveBeenCalledWith(
@@ -437,8 +559,15 @@ describe('PersonalizationCollectorContainer', () => {
     fireEvent.change(yearsInput, {target: {value: '5'}});
 
     for (let i = 0; i < 6; i++) {
-      const nextBtn = screen.getByRole('button', {name: /next|saving/i});
-      fireEvent.click(nextBtn);
+      // const nextBtn = screen.getByRole('button', {name: /next|saving/i});
+
+      await waitFor(() => {
+        fireEvent.click(screen.getByRole('button', {name: /next|saving/i}));
+      });
+
+      await waitFor(() => {
+        fireEvent.click(screen.getByRole('button', {name: /next|saving/i}));
+      });
 
       if (i === 0) {
         // Confidence question

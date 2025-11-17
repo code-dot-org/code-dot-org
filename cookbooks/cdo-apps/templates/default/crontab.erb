@@ -95,7 +95,6 @@
       cronjob at:'0 16 * * *', do:dashboard_dir('bin','scheduled_pd_application_emails')
       cronjob at:'*/4 * * * *', do:dashboard_dir('bin', 'process_pd_workshop_ends')
       cronjob at:'*/5 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
-      cronjob at:'*/30 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
       cronjob at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'process_foorm_data')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
@@ -127,6 +126,9 @@
     # 'daemons' in all environments.
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
+
+    # Refresh the Tutorials cache every hour (runs at the start of each hour, UTC)
+    cronjob at:'0 * * * *', do:"#{deploy_dir('bin', 'cron', 'perform_job')} HocLegacy::RefreshTutorialsJob"
 
     # background tasks that adhoc instances don't need to run.
     unless node.chef_environment == 'adhoc'

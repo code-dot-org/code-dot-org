@@ -14,15 +14,6 @@
   border-inline-end: variables.$default-border;
 }
 
-.fileBrowser div.folder {
-  list-style: none;
-  margin: 0;
-}
-
-.fileBrowser div.folder div.folder {
-  padding-left: 8px;
-}
-
 .row {
   display: flex;
   justify-content: space-between;
@@ -30,18 +21,46 @@
   cursor: pointer;
   font-size: 14px;
   min-height: 24px;
-  padding: 0.125rem 0.375rem;
+  margin-inline: 0.375rem;
+  padding-block: 0.125rem;
+  transition: all 0.2s ease-in-out;
 
-  &:hover {
-    background-color: var(--background-neutral-quaternary);
+  &:hover:not(.dragging) {
+    background-color: var(--background-neutral-tertiary);
+    border-radius: variables.$default-border-radius;
+  }
+
+  .rowIcon {
+    margin: 0.125rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 125%;
+    width: 0.75rem;
+    text-align: center;
+
+    &::before {
+      vertical-align: middle;
+    }
   }
 }
 
-.title {
-  display: flex;
-  justify-content: flex-start;
-  cursor: pointer;
-  overflow: hidden;
+// Adds indent and border when a folder or file is in a folder
+.fileBrowser div.folder div.folder {
+  padding-inline-start: 8px;
+
+  .row:not(.dragging) {
+    border-inline-start: variables.$default-border;
+
+    &:hover {
+      border-radius: 0 variables.$default-border-radius
+        variables.$default-border-radius 0;
+
+      // RTL support
+      html[dir='rtl'] & {
+        border-radius: variables.$default-border-radius 0 0
+          variables.$default-border-radius;
+      }
+    }
+  }
 }
 
 .fileBrowser div.folder div span.button-bar {
@@ -61,11 +80,6 @@
   grid-template-columns: 15px auto;
 }
 
-.fileBrowser div.folder div span.label i,
-.fileBrowser div.folder div span.button-bar i {
-  margin-right: 4px;
-}
-
 // Using button to increase specificity of this class
 // (this allows it to take precedence over the component library button styles)
 button.button-kebab {
@@ -73,7 +87,8 @@ button.button-kebab {
   height: 20px;
   width: 20px;
   min-width: 20px !important; // !important to override the default button min-width
-  margin: 2px;
+  margin-block: 0.125rem;
+  margin-inline: 0.125rem 0.25rem;
   transition: none;
 
   // We use important here because the hover, and active styles used by Button
@@ -103,6 +118,10 @@ button.button-kebab:focus {
   p {
     overflow: hidden;
     text-overflow: ellipsis;
+
+    .activeFile & {
+      font-weight: 600;
+    }
   }
 }
 
@@ -110,30 +129,18 @@ button.button-kebab:focus {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  padding-right: 4px;
-  width: 100%;
 
   i {
     color: var(--text-neutral-tertiary);
   }
 }
 
-.rowIcon {
-  margin: 2px 8px 2px 8px;
-  font-size: 13px;
-  line-height: 125%;
-
-  // prevents caret-down icon from pushing
-  // text to the right when toggling folders
-  min-width: 9px;
-}
-
 .acceptingDrop {
-  background-color: var(--background-neutral-senary);
+  background-color: var(--background-neutral-tertiary);
 }
 
 .expandedDroppableArea {
-  padding-bottom: 1rem;
+  padding-block: 0.25rem 0.5rem;
 }
 
 .dropdownItem {
@@ -157,17 +164,17 @@ button.button-kebab:focus {
   font-size: 1rem;
 }
 
+// Style applied when a file or folder is being dragged
 .dragging {
-  background-color: var(--background-neutral-quaternary);
+  background-color: var(--background-neutral-primary);
+  border-radius: variables.$default-border-radius;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  cursor: grabbing;
 }
 
 .notDraggable:focus-visible,
 .draggable:focus-visible {
   outline: var(--borders-brand-teal-primary) solid 2px;
-  outline-offset: 2px;
+  outline-offset: -2px;
   border-radius: 0.375rem;
-}
-
-.activeFile p {
-  font-weight: 600;
 }

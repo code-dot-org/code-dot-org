@@ -7,6 +7,9 @@ require 'active_support/core_ext/enumerable'
 require 'active_support/core_ext/object/deep_dup'
 
 class Tutorials
+  # Returns an array of the tutorials.
+  attr_reader :contents
+
   # This class uses data from one GSheet:
   #   GoogleDrive://Pegasus/v3/cdo-tutorials
   # This sheet is in the "v3" Google Sheet format and use datatype suffixes on the column names,
@@ -34,21 +37,6 @@ class Tutorials
     @contents = JSON.parse(json_contents, object_class: DB[@table]).each do |tutorial|
       tutorial.values.symbolize_keys!
     end
-  end
-
-  # Returns an array of the tutorials.  Includes launch_url for each.
-  def contents(host_with_port)
-    @contents.each do |tutorial|
-      tutorial[:launch_url] = launch_url_for(tutorial[:code], host_with_port)
-    end
-  end
-
-  def launch_url_for(code, domain)
-    return @contents.find {|row| row[:code] == code}[:url] if @table == :cdo_beyond_tutorials
-
-    api_domain = domain.gsub('csedweek.org', 'code.org')
-    api_domain = api_domain.gsub('hourofcode.com', 'code.org')
-    "http://#{api_domain}/api/hour/begin_learn/#{code}"
   end
 
   def find_with_grade_level(gradelevel)
