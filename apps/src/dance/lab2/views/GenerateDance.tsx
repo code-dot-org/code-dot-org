@@ -67,7 +67,10 @@ interface GenerateCodeProps {
   blockCount: number;
   runProgram: () => void;
   resetProgram: () => void;
-  updateSources: (newSources: WorkspaceSerialization) => void;
+  updateSources: (newSources: {
+    workspaceSerialization: WorkspaceSerialization;
+    flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  }) => void;
   startOver: () => void;
   onFlyoutGenerated: (
     toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo
@@ -169,7 +172,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       );
       await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-      updateSources(workspaceSerialization);
+      updateSources({workspaceSerialization, flyoutDefinition});
       onFlyoutGenerated(flyoutDefinition);
       runProgram();
 

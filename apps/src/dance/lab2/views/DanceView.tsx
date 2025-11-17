@@ -137,7 +137,7 @@ const DanceView: React.FunctionComponent<{
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<GoogleBlockly.Workspace | null>(null);
 
-  const updateBlocklyFlyout = useCallback(
+  const onFlyoutGenerated = useCallback(
     (toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo) => {
       const currentWorkspace = workspace.current;
       if (currentWorkspace && currentWorkspace.rendered) {
@@ -149,16 +149,6 @@ const DanceView: React.FunctionComponent<{
     []
   );
 
-  const onFlyoutGenerated = useCallback(
-    (toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo) => {
-      updateBlocklyFlyout(toolboxDefinition);
-      updateSources({
-        ...currentSources,
-        toolboxDefinition: JSON.stringify(toolboxDefinition),
-      });
-    },
-    [currentSources, updateBlocklyFlyout, updateSources]
-  );
   const musicProjectPlayer = useRef<ProjectPlayer | null>(null);
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
 
@@ -442,6 +432,7 @@ const DanceView: React.FunctionComponent<{
         ? getToolboxDefinition(toolboxModeBlocks, 'categoryToolbox')
         : levelProperties.toolboxDefinition;
 
+      console.log('Initial toolbox definition:', toolbox);
       // Don't show the toolbox if it's empty
       if (toolbox?.contents?.length === 0) {
         toolbox = undefined;
@@ -482,15 +473,18 @@ const DanceView: React.FunctionComponent<{
             'Updating toolbox from sources.toolboxDefinition',
             toolboxDefinition
           );
-          updateBlocklyFlyout(toolboxDefinition);
+          onFlyoutGenerated(toolboxDefinition);
         } catch {}
+      } else {
+        console.log('No toolbox definition in sources', currentSources);
       }
     }
   }, [
     currentSources.source,
     currentSources.toolboxDefinition,
     guideMode,
-    updateBlocklyFlyout,
+    onFlyoutGenerated,
+    currentSources,
   ]);
 
   useEffect(() => {
@@ -747,7 +741,10 @@ const DanceView: React.FunctionComponent<{
               updateSources={resultBlockly => {
                 updateSources({
                   ...currentSources,
-                  source: resultBlockly,
+                  source: resultBlockly.workspaceSerialization,
+                  toolboxDefinition: JSON.stringify(
+                    resultBlockly.flyoutDefinition
+                  ),
                 });
               }}
               startOver={startOver}
