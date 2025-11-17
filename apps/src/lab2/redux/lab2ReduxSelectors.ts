@@ -46,7 +46,7 @@ export const isPermanentlyReadOnlyWorkspace = (state: RootState) => {
     return true;
   }
   // Otherwise, we are in permanently read-only mode if we are not the owner of the channel,
-  // the level is frozen, the level is a read-only predict level or in widget view.
+  // the level is frozen, or in widget view.
   const isOwner = state.lab.channel?.isOwner;
   const isFrozen = !!state.lab.channel?.frozen;
 
