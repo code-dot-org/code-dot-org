@@ -1,6 +1,7 @@
 name 'ai-and-algorithmic-decisions-lesson11-level1-test-2025'
 display_name 'Your Reactive Logic Project Support Hub'
 description 'Your goal: Use these levels in whatever way helps you move your project forward — whether that is generating ideas, designing visuals, mapping pages, or planning your next steps. You are in control of how and when to use them to meet the project goals.'
+uses_lab2
 
 sublevels
 level 'ai-and-algorithmic-decisions-lesson11-level1a-test-2025'
@@ -8,4 +9,4 @@ level 'ai-and-algorithmic-decisions-lesson11-level1b-test-2025'
 level 'ai-and-algorithmic-decisions-lesson11-level1c-test-2025'
 level 'ai-and-algorithmic-decisions-lesson11-level1d-test-2025'
 
-uses_lab2
+

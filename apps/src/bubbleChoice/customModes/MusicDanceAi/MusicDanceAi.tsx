@@ -1,6 +1,5 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {memo, Suspense, useCallback, useEffect, useState} from 'react';
 
@@ -8,7 +7,9 @@ import {
   getCurrentLesson,
   levelById,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
-import {setIsLoading, setPageError} from '@cdo/apps/lab2/lab2Redux';
+import {GENERATED_DANCER_STORAGE_KEY} from '@cdo/apps/dance/ai/constants';
+import {DanceProjectSources} from '@cdo/apps/dance/types';
+import {setIsLoading} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
@@ -25,10 +26,15 @@ import Loading from '@cdo/apps/lab2/views/Loading';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {trySetLocalStorage} from '@cdo/apps/utils';
+import DancerIcon from '@cdo/static/dance/mixMoveAi/design.svg';
+import MusicIcon from '@cdo/static/dance/mixMoveAi/mix.svg';
+import DanceIcon from '@cdo/static/dance/mixMoveAi/move.svg';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {BubbleChoiceLevelProperties} from '../../types';
 
+import {MusicProjectContext} from './MusicProjectContext';
 import {ParentLevelPropertiesContext} from './ParentLevelPropertiesContext';
 
 import styles from './styles.module.scss';
@@ -43,6 +49,12 @@ const labels: {[tab in Tab]: string} = {
   [Tab.Dancer]: 'Design',
   [Tab.Music]: 'Mix',
   [Tab.Dance]: 'Move',
+};
+
+const icons: {[tab in Tab]: string} = {
+  [Tab.Dancer]: DancerIcon,
+  [Tab.Music]: MusicIcon,
+  [Tab.Dance]: DanceIcon,
 };
 
 interface MusicDanceAiProps {
@@ -182,14 +194,24 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
       }
 
       if (projectManager) {
-        await projectManager.load();
+        const {sources} = await projectManager.load();
         data.projectManager = projectManager;
+        // If present, load the generated dancer metadata into local storage so it's available for the Dance tab.
+        if (
+          tab === Tab.Dancer &&
+          (sources as DanceProjectSources)?.generatedDancer
+        ) {
+          trySetLocalStorage(
+            GENERATED_DANCER_STORAGE_KEY,
+            JSON.stringify((sources as DanceProjectSources).generatedDancer)
+          );
+        }
       }
       map[tab] = data;
     }
 
     setTabDataMap(map);
-    setCurrentTab(getTypedKeys(map)[0]);
+    setCurrentTab(getIsShareView() ? Tab.Dance : getTypedKeys(map)[0]);
     dispatch(setIsLoading(false));
   }, [
     levelProperties,
@@ -267,70 +289,62 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     return null;
   }
 
+  const musicData = tabDataMap[Tab.Music];
+
   const labProps = {
     ...tabData,
     initialSources: tabData.projectManager?.getLastSource(),
     channel: tabData.projectManager?.getLastChannel(),
   };
 
-  if (getIsShareView()) {
-    // Present the Dance share UI in share view.
-    const danceProps = tabDataMap[Tab.Dance];
-    if (!danceProps) {
-      dispatch(
-        setPageError({
-          errorMessage:
-            'Missing required dance level in Music Dance AI project',
-        })
-      );
-      return null;
-    }
-    const DanceView = lab2EntryPoints.dance.view;
-    return (
-      <ParentLevelPropertiesContext.Provider value={levelProperties}>
-        <div className={styles.container}>
-          <Suspense fallback={<Loading isLoading={true} />}>
-            <DanceView {...danceProps} />
-          </Suspense>
-        </div>
-      </ParentLevelPropertiesContext.Provider>
-    );
-  }
-
   return (
     <ParentLevelPropertiesContext.Provider value={levelProperties}>
-      <div className={styles.container}>
-        <div className={styles.tabSwitcher}>
-          {Object.values(Tab).map(tab => {
-            const disabled = !tabDataMap[tab];
-            return (
-              <button
-                type="button"
-                className={classNames(
-                  styles.button,
-                  disabled && styles.locked,
-                  tab === currentTab && styles.selected
-                )}
-                key={tab}
-                onClick={() => (disabled ? undefined : setCurrentTab(tab))}
-                disabled={disabled}
-              >
-                <BodyThreeText>
-                  {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
-                  {labels[tab]}
-                </BodyThreeText>
-              </button>
-            );
-          })}
-        </div>
-        <div className={styles.labsContainer}>
-          <div className={classNames(styles.labContainer)}>
-            <Suspense fallback={<Loading isLoading={true} />}>
-              <LabView {...labProps} key={currentTab} />
-            </Suspense>
+      <MusicProjectContext.Provider
+        value={musicData?.projectManager?.getChannelId()}
+      >
+        <div className={styles.container}>
+          {!getIsShareView() && (
+            <div className={styles.tabSwitcher}>
+              {Object.values(Tab).map(tab => {
+                const disabled = !tabDataMap[tab];
+                return (
+                  <button
+                    type="button"
+                    className={classNames(
+                      styles.button,
+                      disabled && styles.locked,
+                      tab === currentTab && styles.selected
+                    )}
+                    key={tab}
+                    onClick={() => (disabled ? undefined : setCurrentTab(tab))}
+                    disabled={disabled}
+                  >
+                    {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
+                    {!disabled && (
+                      <img
+                        src={icons[tab]}
+                        alt=""
+                        className={classNames(
+                          styles.tabIcon,
+                          tab !== currentTab && styles.tabIconUnselected
+                        )}
+                      />
+                    )}
+                    {labels[tab]}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+          <div className={styles.labsContainer}>
+            <div className={classNames(styles.labContainer)}>
+              <Suspense fallback={<Loading isLoading={true} />}>
+                <LabView {...labProps} key={currentTab} />
+              </Suspense>
+            </div>
           </div>
         </div>
-      </div>
+      </MusicProjectContext.Provider>
     </ParentLevelPropertiesContext.Provider>
   );
 };

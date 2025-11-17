@@ -31,13 +31,13 @@ module HocLegacy
     # GET /api/hour/finish
     def finish_current
       session_row = TutorialCompleter.call(controller: self)
-      redirect_to_congrats_page(session_row:)
+      redirect_to_course_completion_certificate_url(session_row:)
     end
 
     # GET /api/hour/finish/:code
     def finish
       session_row = TutorialCompleter.call(controller: self, tutorial: @tutorial)
-      redirect_to_congrats_page(session_row:)
+      redirect_to_course_completion_certificate_url(session_row:)
     end
 
     # GET /api/hour/finish_:code.png
@@ -85,13 +85,11 @@ module HocLegacy
       send_file Rails.root.join('app/assets/images/1x1.png'), disposition: 'inline'
     end
 
-    private def redirect_to_congrats_page(session_row:)
-      congrats_url_params = {}
-
-      congrats_url_params[:i] = session_row[:session] if session_row.try(:[], :session).present?
-      congrats_url_params[:s] = Base64.urlsafe_encode64(@tutorial.tutorial_id) if @tutorial
-
-      redirect_to main_app.congrats_url(congrats_url_params), status: :found
+    private def redirect_to_course_completion_certificate_url(session_row:)
+      redirect_to helpers.course_completion_certificate_url(
+        session_id: session_row.try(:[], :session),
+        course_name: @tutorial&.tutorial_id,
+      )
     end
   end
 end

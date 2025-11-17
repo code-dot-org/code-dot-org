@@ -422,6 +422,7 @@ module LevelsHelper
 
     # Sets video and additional reference options for this level
     if @app_options[:level]
+      @app_options[:level][:name] = @level.try(:name)
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
@@ -458,6 +459,7 @@ module LevelsHelper
       @app_options[:muteMusic] = current_user.mute_music?
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
+      @app_options[:isSignedIn] = current_user.present?
     end
 
     @app_options
