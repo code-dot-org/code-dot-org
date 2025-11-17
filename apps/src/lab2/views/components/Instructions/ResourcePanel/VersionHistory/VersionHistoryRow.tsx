@@ -19,6 +19,7 @@ interface VersionHistoryRowProps {
   comment?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
+  children?: React.ReactNode;
 }
 
 const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
@@ -29,6 +30,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   comment,
   onChange,
   disabled = false,
+  children,
 }) => {
   if (isLatest) {
     label = commonI18n.currentVersion();
@@ -85,6 +87,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             </WithTooltip>
           )}
         </div>
+        {children && children}
         {comment && (
           <BodyFourText className={moduleStyles.commitDescription} noMargin>
             {comment}

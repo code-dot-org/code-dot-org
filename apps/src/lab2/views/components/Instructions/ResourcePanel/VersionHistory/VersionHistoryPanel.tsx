@@ -355,7 +355,16 @@ const VersionHistoryPanel: React.FunctionComponent<
                 isSelected={selectedVersion === version.versionId}
                 onChange={onVersionChange}
                 disabled={disabled}
-              />
+              >
+                {version.isLatest && !version.comment && (
+                  <SaveVersionPanel
+                    projectSources={projectSources}
+                    onSuccess={handleSaveVersionSuccess}
+                    versionLoading={versionLoading}
+                    disabled={disabled}
+                  />
+                )}
+              </VersionHistoryRow>
             ))}
             <VersionHistoryRow
               versionId={INITIAL_VERSION_ID}
@@ -414,14 +423,6 @@ const VersionHistoryPanel: React.FunctionComponent<
             )}
           </div>
         </div>
-      )}
-      {isLatestVersion(selectedVersion) && (
-        <SaveVersionPanel
-          projectSources={projectSources}
-          onSuccess={handleSaveVersionSuccess}
-          versionLoading={versionLoading}
-          disabled={disabled}
-        />
       )}
     </div>
   );
