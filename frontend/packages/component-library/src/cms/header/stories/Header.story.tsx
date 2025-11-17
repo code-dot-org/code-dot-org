@@ -225,8 +225,14 @@ export const HelpMenu: Story = {
 };
 
 export const SmallDesktop: Story = {
+  tags: ['foo'],
   args: {
     ...defaultArgs,
+  },
+  globals: {
+    viewport: {
+      value: 'ipad12p',
+    },
   },
   parameters: {
     layout: 'fullscreen',
@@ -310,6 +316,11 @@ export const Tablet: Story = {
   args: {
     ...defaultArgs,
   },
+  globals: {
+    viewport: {
+      value: 'tablet',
+    },
+  },
   parameters: {
     layout: 'fullscreen',
     viewport: {
@@ -372,6 +383,11 @@ export const Tablet: Story = {
 export const Mobile: Story = {
   args: {
     ...defaultArgs,
+  },
+  globals: {
+    viewport: {
+      value: 'mobile2',
+    },
   },
   parameters: {
     layout: 'fullscreen',
