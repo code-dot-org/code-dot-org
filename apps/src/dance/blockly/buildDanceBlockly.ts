@@ -548,6 +548,7 @@ export default function buildDanceBlockly(
   let lastEventMove: string | null = initialMoveValue;
 
   for (const measure of measures.filter(m => m !== 1)) {
+    // Exclude the previously used background effect
     const backgroundBlock = makeSetBackgroundBlock(
       setBackgroundBlockType,
       validBackgrounds,
