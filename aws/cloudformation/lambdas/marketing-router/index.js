@@ -786,11 +786,14 @@ const marketingPaths = {
   "/district-set-up": true,
   "/impact-report": true,
   "/about/impact-report": true,
+  "/news/fetc": true,
+  "/mix-move-ai": true,
 }
 
 const pathPatterns = [
   /^\/_next\/static\//, // Next.js static assets
   /^\/_next\/image/,  // Next.js dynamic images, /_next/image*
+  /^\/api\/hour\//,     // /api/hour/*
   /^\/forms\//,         // /forms/*
   /^\/schools\//,       // /schools/*
   /^\/applab\/docs\//,  // /applab/docs/*

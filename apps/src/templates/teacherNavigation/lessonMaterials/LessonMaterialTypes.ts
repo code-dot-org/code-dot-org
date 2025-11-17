@@ -56,3 +56,8 @@ export const computeMaterialType = (
     return 'LINK';
   }
 };
+
+export type AudioSummaryTranscriptLine = {
+  timeStamp: string;
+  text: string;
+};

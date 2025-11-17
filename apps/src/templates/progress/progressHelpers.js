@@ -305,6 +305,7 @@ export const processedLevel = (level, parentLevelId) => {
       level.sublevels.map(sublevel => processedLevel(sublevel, id)),
     path: level.path,
     parentLevelId,
+    navigationType: parentLevelId ? level.navigation_type : undefined, // Only applicable for sublevels.
   };
 };
 

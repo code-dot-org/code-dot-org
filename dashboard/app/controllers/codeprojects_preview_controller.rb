@@ -2,12 +2,30 @@ class CodeprojectsPreviewController < ApplicationController
   include AllowedHostnameHelper
   # Public preview page, static content for now.
   def show
+    set_content_security_policy
+    render 'show', layout: false
+  end
+
+  skip_forgery_protection only: :weblab2_project_service_worker
+  def weblab2_project_service_worker
+    send_file "#{apps_dir}/src/codebridge/FilePreview/weblab2_project_service_worker.js", type: 'application/javascript'
+  end
+
+  def not_found
+    set_content_security_policy
+    render 'page_not_found', layout: false, status: :not_found
+  end
+
+  def set_content_security_policy
     code_studio_url = CDO.dashboard_site_host
+    preview_url = CDO.preview_codeprojects_hostname
     # Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
     # Therefore we explicitly set the prefix to 'http', which will also allow https.
     prefix = 'http://'
     # We allow connections to the domain and all subdomains of each allowed hostname.
     allowed_connect_src = ALLOWED_HOSTNAME_SUFFIXES.map {|hostname| "#{prefix}#{hostname} #{prefix}*.#{hostname}"}.join(" ")
+    allowed_image_src = ALLOWED_IMAGE_HOSTNAME_SUFFIXES.map {|hostname| "#{prefix}#{hostname} #{prefix}*.#{hostname}"}.join(" ")
+    allowed_font_src = ALLOWED_FONT_HOSTNAMES.map {|hostname| "#{prefix}#{hostname} #{prefix}*.#{hostname}"}.join(" ")
 
     if rack_env?(:development)
       # dashboard_site_host is set to use port 3000 in development, but we want to also allow port 9000.
@@ -17,6 +35,8 @@ class CodeprojectsPreviewController < ApplicationController
       # Explicitly allow WebSocket connections to preview.localhost.codeprojects.org:9000, which is used by the webpack dev server
       # both on ports 9000 and 3000.
       allowed_connect_src += " ws://preview.localhost.codeprojects.org:9000/ws"
+      # preview_url does not have a port by default.
+      preview_url = "#{preview_url}:3000 #{preview_url}:9000"
     end
 
     # Security Control: Set base resource loading policy ("default" is a fallback for unspecified resource types)
@@ -46,8 +66,9 @@ class CodeprojectsPreviewController < ApplicationController
     script_src_inline = " 'unsafe-inline'"
 
     # Security Control: Restrict CSS loading sources (overrides default-src for stylesheets)
+    # Allow loading allowed font hostnames in styles.
     # Goal: Allow student styling while preventing external CSS injection
-    style_src_base = "'self' https: blob:"
+    style_src_base = "'self' blob: #{allowed_font_src}"
 
     # Security Control: Allow inline styles for student HTML projects
     # Goal: Enable students to write inline CSS in their HTML files
@@ -57,14 +78,17 @@ class CodeprojectsPreviewController < ApplicationController
     # Security Control: Restrict image loading sources (overrides default-src for images)
     # Goal: Allow student images while preventing external image injection
     # Remaining Risk: Data URLs could contain malicious content (mitigated by iframe sandbox)
-    img_src = "'self' https: data: blob: #{code_studio_url}"
+    img_src = "'self' data: blob: #{code_studio_url} #{allowed_image_src}"
 
     # Security Control: Restrict which sites can embed this page in iframes
     # Goal: Prevent clickjacking attacks by controlling frame embedding
-    frame_ancestors = "#{code_studio_url} 'self'"
+    frame_ancestors = "#{code_studio_url} 'self' #{preview_url}"
 
     script_src = script_src_base + script_src_eval + script_src_inline
     style_src = style_src_base + style_src_inline
+
+    # Allow loading allowed fonts and any self-hosted fonts.
+    font_src = "'self' #{allowed_font_src}"
 
     policies = [
       "default-src #{default_src}",
@@ -73,6 +97,7 @@ class CodeprojectsPreviewController < ApplicationController
       "script-src #{script_src}",
       "style-src #{style_src}",
       "img-src #{img_src}",
+      "font-src #{font_src}"
     ]
 
     unless rack_env?(:development) || rack_env?(:test)
@@ -82,6 +107,5 @@ class CodeprojectsPreviewController < ApplicationController
       policies << "upgrade-insecure-requests"
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')
-    render 'show', layout: false
   end
 end

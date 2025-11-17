@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
@@ -6,6 +7,7 @@ import moduleStyles from './instructions.module.scss';
 
 interface MainInstructionsContentProps {
   instructionsText: string;
+  markdownClassName?: string;
   handleInstructionsTextClick?: (id: string) => void;
 }
 
@@ -16,12 +18,12 @@ interface MainInstructionsContentProps {
  */
 const MainInstructionsContent: React.FunctionComponent<
   MainInstructionsContentProps
-> = ({instructionsText, handleInstructionsTextClick}) => {
+> = ({instructionsText, markdownClassName, handleInstructionsTextClick}) => {
   return (
     <div className={moduleStyles.mainInstructions}>
       <EnhancedSafeMarkdown
         markdown={instructionsText}
-        className={moduleStyles.markdownText}
+        className={classNames(moduleStyles.markdownText, markdownClassName)}
         handleInstructionsTextClick={handleInstructionsTextClick}
       />
     </div>

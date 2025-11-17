@@ -85,6 +85,11 @@ const Carousel: React.FC<CarouselProps> = ({
             el: `#${carouselId}-pagination`,
           }}
           breakpoints={{
+            // when window width is mobile, show 10% of the following slide
+            [0]: {
+              slidesPerView: 1.1,
+              slidesPerGroup: 1,
+            },
             // when window width is tablet
             [breakpointTablet]: {
               slidesPerView: 2,

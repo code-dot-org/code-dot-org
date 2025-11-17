@@ -45,6 +45,15 @@ active_job_backend_n_workers_to_start: 2
 active_job_backend_rolling_restart_in_n_batches: 1
 <% end -%>
 
+# CI Unit Test Optimizations
+<% if ci_test && ENV['CI_JOB'] == 'unit_tests' -%>
+# Skip asset compilation for unit tests; we take more time doing the
+# compilation than we gain from serving optimized assets. We preserve the
+# default behavior for UI tests so we still have some consistency with prod.
+optimize_rails_assets: false
+optimize_webpack_assets: false
+<% end -%>
+
 netsim_enable_metrics: true
 stub_school_data: true
 daemon: true

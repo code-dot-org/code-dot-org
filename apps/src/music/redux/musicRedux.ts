@@ -35,7 +35,8 @@ type AiGenerateState =
   | 'listened'
   | 'editing'
   | 'edited'
-  | 'listeningAfterEdit';
+  | 'clearing-before-none'
+  | 'clearing-before-generating';
 
 export interface MusicState {
   /** Current pack ID, if a specific restricted pack from the current music library is selected */
@@ -315,10 +316,15 @@ export const getCurrentlyPlayingBlockIds = (state: {
   return playingBlockIds;
 };
 
+/**
+ * @deprecated TODO: derive block mode from props.
+ */
 export const getBlockMode = (state: RootState): ValueOf<typeof BlockMode> => {
   const {initialSources, levelProperties} = state.lab;
   return (
-    (initialSources?.labConfig?.music.blockMode as ValueOf<typeof BlockMode>) ||
+    (initialSources?.labConfig?.music?.blockMode as ValueOf<
+      typeof BlockMode
+    >) ||
     (levelProperties?.levelData as MusicLevelData | undefined)?.blockMode ||
     BlockMode.SIMPLE2
   );

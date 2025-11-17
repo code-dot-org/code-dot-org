@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q4_2025'
+
+question 'A clothing website has a "Show My Cart" button that, when clicked, displays the list of items a customer selected. Which action best describes what\'s happening behind the scenes in the code?'
+
+right 'JavaScript is updating the DOM to reveal a hidden section of the page showing the cart items.'
+wrong 'The browser is downloading a new version of the website every time the button is clicked.'
+wrong 'A CSS animation is moving the cart icon to a new location on the screen.'
+wrong 'The HTML code is permanently rewritten on the server whenever a new item is added.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+MARKDOWN

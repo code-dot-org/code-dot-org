@@ -14,7 +14,7 @@ clone:
   disable: true
 
 services:
-  - name: unit-tests-redis
+  - name: ci-tests-redis
     image: redis
     ports:
       - 6379
@@ -39,17 +39,15 @@ steps:
         bin/drone/vscode $hostname
         EOF
 
-  # We cache a clone of staging in the `cache-staging-clone` pipeline
-  - name: get-cached-staging
+  # Restore the staging build we created in the `cache-staging-build` pipeline
+  - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-clone.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
       pull: true
-      mount:
-        - .
 
   - name: checkout
     image: bitnamilegacy/git
@@ -63,7 +61,7 @@ steps:
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
+      - "[ -d .git ] || (echo 'WARNING: get-cached-staging-build failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (=the PR)
@@ -79,36 +77,22 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  - name: restore-cache
-    image: plugins/s3-cache
-    settings:
-      endpoint: s3://cdo-drone
-      debug: true
-      pull: true
-      restore: true
-      filename: unit-tests-cache-ubuntu-20.tar.gz
-
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/cdo-ci:1.17
     pull: always
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
     environment:
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/unit_tests.sh
+      CI_JOB: 'unit_tests'
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
     commands:
+      # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
-      # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
-      - rm -rf "$(pwd)/home/ci/.rbenv"
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -117,26 +101,6 @@ steps:
       - /entrypoint.sh docker/ci/scripts/unit_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
-
-  - name: update-cache
-    image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-    settings:
-      endpoint: s3://cdo-drone
-      debug: true
-      pull: true
-      rebuild: true
-      filename: unit-tests-cache-ubuntu-20.tar.gz
-      mount:
-        - /home/ci/.rbenv
-
-volumes:
-  - name: rbenv
-    temp: {}
-  - name: mysql
-    temp: {}
 
 trigger:
   branch:
@@ -155,7 +119,7 @@ clone:
   disable: true
 
 services:
-  - name: ui-tests-redis
+  - name: ci-tests-redis
     image: redis
     ports:
       - 6379
@@ -180,17 +144,20 @@ steps:
         bin/drone/vscode $hostname
         EOF
 
-  # We cache a clone of staging in the `cache-staging-build-artifacts` pipeline
-  - name: get-cached-staging-clone
+  # Restore the staging build we created in the `cache-staging-build` pipeline
+  - name: get-cached-staging-build
     image: plugins/s3-cache
+    volumes:
+      # Even files cached with absolute paths will be restored into the
+      # workdir; so for this step, we mount the relevant volumes there, too.
+      - name: mysql
+        path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-clone.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
       pull: true
-      mount:
-        - .
 
   - name: checkout
     image: bitnamilegacy/git
@@ -204,7 +171,7 @@ steps:
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
+      - "[ -d .git ] || (echo 'get-cached-staging-build failed: checkout will be SLOW and LFS $$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (the PR's branch).
@@ -221,40 +188,22 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  # We cache staging's rbenv and database in the
-  # `cache-staging-build-artifacts` pipeline.
-  - name: get-cached-staging-misc-build-artifacts
-    image: plugins/s3-cache
-    volumes:
-      # Even files cached with absolute paths will be restored into the
-      # workdir; so for this step, we mount the relevant volumes there, too.
-      - name: rbenv
-        path: /drone/src/home/ci/.rbenv
-      - name: mysql
-        path: /drone/src/var/lib/mysql
-    settings:
-      filename: cache-staging-misc-build-artifacts.tar.gz
-      endpoint: s3://cdo-drone
-      restore: true
-      debug: true
-      pull: true
-
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/cdo-ci:1.17
     pull: always
     volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/ui_tests.sh
+      CI_JOB: 'ui_tests'
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
       SAUCE_USERNAME:
@@ -277,8 +226,6 @@ steps:
       - exit $EXIT_CODE
 
 volumes:
-  - name: rbenv
-    temp: {}
   - name: mysql
     temp: {}
 
@@ -291,13 +238,19 @@ trigger:
     - pull_request
 
 ---
-# On a push to staging, cache several build artifacts to drone's S3 bucket:
-# - A fresh git clone of staging, to reduce git bandwidth
-# - A copy of the MySQL databases, to reduce seed time
-# - A copy of the ~/.rbenv directory, to reduce bundle install time
+# On every push to staging, run a build which will prepare the environment to
+# run CI tests and cache all of the relevant results. We then use that cache on
+# subsequent feature branch CI tests as the initial state for the environment.
+#
+# Specifically, we cache:
+# - The entire project directory, including the repository and all relevant
+#   build artifacts, to reduce the time needed for the initial git clone and
+#   the first build. This should include all installed third-party libraries
+#   (ie, gems and node modules), a built apps package, and compiled assets.
+# - A copy of the MySQL databases, to reduce seed time.
 kind: pipeline
 type: docker
-name: cache-staging-build-artifacts
+name: cache-staging-build
 
 clone:
   disable: true
@@ -316,55 +269,41 @@ steps:
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
-  - name: cache-staging-clone
+  # Do all the work necessary to run UI tests so we can capture a complete
+  # snapshot of the fully-built project and resulting database, but don't
+  # actually run the tests.
+  - name: prepare-ci-tests
+    image: codedotorg/cdo-ci:1.17
+    pull: always
+    environment:
+      CI_JOB: 'ui_tests'
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
+      PROPERTIES_ENCRYPTION_KEY:
+        from_secret: PROPERTIES_ENCRYPTION_KEY
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
+    commands:
+      - sudo chown -R ci:ci .
+      - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
+
+  - name: cache-staging-ci-build
     image: plugins/s3-cache
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
     settings:
-      filename: cache-staging-clone.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
       pull: true
       mount:
         - .
-
-  # Do all the work necessary to run UI tests so we can capture a complete
-  # snapshot of rbenv and the database, but don't actually run the tests.
-  - name: prepare-ui-tests
-    image: codedotorg/code-dot-org:1.16
-    pull: always
-    environment:
-      PROPERTIES_ENCRYPTION_KEY:
-        from_secret: PROPERTIES_ENCRYPTION_KEY
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
-    commands:
-      - sudo chown -R ci:ci .
-      - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
-
-  - name: cache-staging-misc-build-artifacts
-    image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
-    settings:
-      filename: cache-staging-misc-build-artifacts.tar.gz
-      endpoint: s3://cdo-drone
-      rebuild: true
-      debug: true
-      pull: true
-      mount:
-        - /home/ci/.rbenv
         - /var/lib/mysql
-        - ./apps/build
 
 volumes:
-  - name: rbenv
-    temp: {}
   - name: mysql
     temp: {}
 
@@ -374,8 +313,9 @@ trigger:
     - "staging-next"
   event:
     - push
+
 ---
 kind: signature
-hmac: 738b8a924f22e0e86e4de6465941c2923ce58e37ca8be1eeff294c5657f33285
+hmac: d0de97812011e6377e6e652fa06cf7852542927d8db4ad52d5e4f4af77aa5bf3
 
 ...

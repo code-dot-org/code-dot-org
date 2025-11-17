@@ -32,16 +32,70 @@
     "debugger_disabled": "false",
     "hide_pause_button": "false",
     "default_song": "introtoshamstep_47SOUL",
+    "long_instructions": "##Welcome to the party!\r\n- Connect a dancer block to When Run\r\n- Click Run to start dancing.",
     "uses_lab2": "true",
-    "ai_code_preview": "true",
-    "generate_dancer_mode": "false",
+    "guide_mode": "instructions",
+    "toolbox_definition": {
+      "contents": [
+        {
+          "kind": "block",
+          "type": "GeneratedDancers_makeAnonymousDanceSprite",
+          "id": "vzvF:!o_2n#y..Ztz|Vu",
+          "fields": {
+            "COSTUME": "\"GENERATED_DANCER\"",
+            "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 100}</field>"
+          },
+          "enabled": true
+        }
+      ],
+      "kind": "flyoutToolbox"
+    },
+    "start_sources": {
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "id": "when-run-block",
+              "type": "Dancelab_whenRun",
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "selectedSong": "asitwas_harrystyles"
+    },
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "ai_code_generate": "false"
+    "validation_code": "if (nativeAPI.getTime(\"measures\") > 5) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"dance-fail\");\r\n  } else {\r\n    nativeAPI.pass();\r\n  }\r\n}",
+        "validations": [
+      {
+        "key": "dance-pass",
+        "message": "That looks great!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "pass",
+            "value": "true"
+          }
+        ]
+      },
+      {
+        "key": "dance-fail",
+        "message": "Make sure you add a dancer.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "dance-fail",
+            "value": "true"
+          }
+        ]
+      }
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-13T23:53:33.651+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dance-create\\\"\"],\"cloned_from\":\"hoai2025-dance-create\"},{\"changed_at\":\"2025-10-13 23:56:40 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-10-13T23:53:33.651+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dance-create\\\"\"],\"cloned_from\":\"hoai2025-dance-create\"},{\"changed_at\":\"2025-10-13 23:56:40 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-19 04:21:43 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

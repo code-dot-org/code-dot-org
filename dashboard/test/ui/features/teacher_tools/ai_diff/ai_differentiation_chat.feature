@@ -48,6 +48,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I click selector "#uitest_aiDiffWelcomeContinue"
     # wait for confetti animation to finish
     And I wait for 3 seconds
+    Then I scroll the "button:contains(Finish)" element into view
     Then I see no difference for "ai diff welcome finish"
 
     And I click selector "button:contains(Finish)" once I see it
@@ -95,6 +96,7 @@ Feature: Send and receive messages in the AI differentiation chat
 
     # Clicking "suggest prompts" gives another set of prompts
     And I click selector "button:contains(Suggest prompts)"
+    And I click selector "button:contains(Create)"
     And I click selector "input[value='Write a lesson hook']" once I see it
     And I wait until I see 2 of jquery selector p:contains(Lorem ipsum)
 

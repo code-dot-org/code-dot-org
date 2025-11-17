@@ -87,10 +87,11 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
       </div>
       <div className={moduleStyles.saveCurrentVersionDescription}>
         <div className={moduleStyles.saveCurrentVersionDescriptionInput}>
-          <div className={moduleStyles.label}>
+          <label htmlFor="commit-description" className={moduleStyles.label}>
             {lab2I18n.describeYourChanges()}
-          </div>
+          </label>
           <textarea
+            id="commit-description"
             onChange={e => setCommitDescription(e.target.value)}
             value={commitDescription}
             className={moduleStyles.textArea}

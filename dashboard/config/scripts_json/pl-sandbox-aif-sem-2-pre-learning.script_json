@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-01 15:55:36 UTC",
+    "serialized_at": "2025-11-06 21:11:12 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,6 +40,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "\n **By the end of this professional learning module, you will be able to:**\n\n*  Introduce the foundaitonal concepts in the AI Foundations (Semester 2) course.\n*  Understand the basics of web applications and how they support interactive, AI-powered projects.\n*  Understand how to integrate AI tools and concepts into coding lessons to model responsible and creative AI use.\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "\n **By the end of this professional learning module, you will be able to:**\n\n*  Introduce the foundaitonal concepts in the AI Foundations (Semester 2) course.\n*  Understand the basics of web applications and how they support interactive, AI-powered projects.\n*  Understand how to integrate AI tools and concepts into coding lessons to model responsible and creative AI use.\n\n**Suggested Time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -53,6 +55,7 @@
       "key": "20eab32d-7e26-49b0-bb81-83063147e39d",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "20eab32d-7e26-49b0-bb81-83063147e39d",
@@ -100,9 +103,21 @@
       "key": "33ac2ba4-2d8d-4328-8642-b8994473e980",
       "position": 4,
       "properties": {
+        "progression_name": "Web Lab"
       },
       "seeding_key": {
         "activity_section.key": "33ac2ba4-2d8d-4328-8642-b8994473e980",
+        "lesson_activity.key": "20eab32d-7e26-49b0-bb81-83063147e39d"
+      }
+    },
+    {
+      "key": "ccdc262a-3161-4211-a1db-790d4522e281",
+      "position": 5,
+      "properties": {
+        "progression_name": "Closing"
+      },
+      "seeding_key": {
+        "activity_section.key": "ccdc262a-3161-4211-a1db-790d4522e281",
         "lesson_activity.key": "20eab32d-7e26-49b0-bb81-83063147e39d"
       }
     }
@@ -214,6 +229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_what is GenAI_5"
+        ],
         "progression": "Coding with AI"
       },
       "bonus": false,
@@ -236,12 +254,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-reflection"
+        ],
         "progression": "Coding with AI"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl_sandbox_aif_2_AIinCoding_6"
+          "pl-sandbox-aif2-pre-reflection"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -249,7 +270,7 @@
         "activity_section.key": "81a1c22f-523e-4600-b6b4-1251149c2946"
       },
       "level_keys": [
-        "pl_sandbox_aif_2_AIinCoding_6"
+        "pl-sandbox-aif2-pre-reflection"
       ]
     },
     {
@@ -258,6 +279,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_final_project_7"
+        ],
         "progression": "Coding with AI"
       },
       "bonus": false,
@@ -280,6 +304,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_HowWeGetThere_8"
+        ],
         "progression": "Coding with AI"
       },
       "bonus": false,
@@ -302,6 +329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_HTML-10"
+        ],
         "progression": "The Building Blocks"
       },
       "bonus": false,
@@ -324,6 +354,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_CSS_11"
+        ],
         "progression": "The Building Blocks"
       },
       "bonus": false,
@@ -346,6 +379,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_JavaScript_12"
+        ],
         "progression": "The Building Blocks"
       },
       "bonus": false,
@@ -368,6 +404,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_AIFitIn_12"
+        ],
         "progression": "The Building Blocks"
       },
       "bonus": false,
@@ -390,6 +429,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_weblabAI_13"
+        ],
+        "progression": "Web Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -411,11 +454,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre1-weblab-panels_10"
+        ],
+        "progression": "Web Lab"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl_sandbox_aif_2_weblab_panels_14"
+          "pl-sandbox-aif2-pre1-weblab-panels_10"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -423,7 +470,57 @@
         "activity_section.key": "33ac2ba4-2d8d-4328-8642-b8994473e980"
       },
       "level_keys": [
-        "pl_sandbox_aif_2_weblab_panels_14"
+        "pl-sandbox-aif2-pre1-weblab-panels_10"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-reflection2"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre-reflection2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "ccdc262a-3161-4211-a1db-790d4522e281"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-pre-reflection2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-pre-Closing"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre-Closing"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "ccdc262a-3161-4211-a1db-790d4522e281"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-pre-Closing"
       ]
     }
   ],
@@ -490,9 +587,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl_sandbox_aif_2_AIinCoding_6",
+        "level.key": "pl-sandbox-aif2-pre-reflection",
         "script_level.level_keys": [
-          "pl_sandbox_aif_2_AIinCoding_6"
+          "pl-sandbox-aif2-pre-reflection"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -586,14 +683,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl_sandbox_aif_2_weblab_panels_14",
+        "level.key": "pl-sandbox-aif2-pre1-weblab-panels_10",
         "script_level.level_keys": [
-          "pl_sandbox_aif_2_weblab_panels_14"
+          "pl-sandbox-aif2-pre1-weblab-panels_10"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-pre-learning",
         "activity_section.key": "33ac2ba4-2d8d-4328-8642-b8994473e980"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-pre-reflection2",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre-reflection2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "ccdc262a-3161-4211-a1db-790d4522e281"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif2-pre-Closing",
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-pre-Closing"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "ccdc262a-3161-4211-a1db-790d4522e281"
       }
     }
   ],

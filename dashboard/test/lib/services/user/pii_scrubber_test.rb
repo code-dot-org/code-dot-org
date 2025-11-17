@@ -1,8 +1,10 @@
 require 'test_helper'
+require 'testing/projects_test_utils'
 require 'cdo/delete_accounts_helper'
 
 class Services::User::PiiScrubberTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
+  include ProjectsTestUtils
 
   let(:email) {Faker::Internet.unique.email}
   let(:user) do
@@ -77,6 +79,18 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
         _(user.pd_enrollments.with_deleted.first.email).must_be_empty
         _(user.pd_enrollments.with_deleted.first.first_name).must_be_nil
         _(user.pd_enrollments.with_deleted.first.last_name).must_be_nil
+      end
+    end
+
+    context 'when user has project' do
+      it 'removes updated_ip' do
+        # The project factory causes db issues, so we use ProjectsTestUtils instead.
+        with_channel_for(user) do |project_id, _storage_id|
+          project = projects_table.where(id: project_id).first
+          _(project[:updated_ip]).must_be :present?
+          scrub_pii
+          _(projects_table.where(id: project_id).first[:updated_ip]).must_be :empty?
+        end
       end
     end
 

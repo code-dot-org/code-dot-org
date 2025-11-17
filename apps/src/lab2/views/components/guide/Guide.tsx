@@ -7,7 +7,8 @@ interface GuideProps {
   id?: string;
   children: React.ReactNode;
   width?: 'normal' | 'narrow';
-  glowSpeed?: 'normal' | 'fast';
+  position?: 'normal' | 'bottom';
+  modal?: 'full' | 'gap';
 }
 
 // The Guide is a floating container for instructional content.  It is larger
@@ -17,22 +18,32 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   id,
   children,
   width,
-  glowSpeed,
+  position,
+  modal,
 }) => {
   return (
     <div
-      id={id}
+      id={id ? `${id}-container` : undefined}
       className={classNames(
-        styles.guide,
-        width === 'narrow' ? styles.guideNarrowWidth : styles.guideNormalWidth,
-        glowSpeed === 'fast'
-          ? styles.guideFastGlowSpeed
-          : glowSpeed === 'normal'
-          ? styles.guideNormalGlowSpeed
-          : undefined
+        modal && styles.guideContainerModal,
+        modal === 'gap' && styles.guideContainerModalGap
       )}
     >
-      <div className={styles.guideInner}>{children}</div>
+      <div
+        id={id}
+        className={classNames(
+          styles.guide,
+          width === 'narrow'
+            ? styles.guideNarrowWidth
+            : styles.guideNormalWidth,
+          position === 'bottom'
+            ? styles.guideBottomPosition
+            : styles.guideNormalPosition,
+          modal === 'gap' && styles.guideGap
+        )}
+      >
+        {children}
+      </div>
     </div>
   );
 };

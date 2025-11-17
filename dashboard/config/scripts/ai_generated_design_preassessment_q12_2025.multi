@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q12_2025'
+
+question 'A small business owner uses an AI tool to design a product page, but some images don\'t line up and the buttons overlap on mobile devices. What should the owner do to fix these issues?'
+
+right 'Adjust the AI prompt to describe the problems and test the updated design.'
+wrong 'Stop using AI tools and hire someone else to rebuild the page.'
+wrong 'Keep running the same prompt until it looks better by chance.'
+wrong 'Add more pictures to hide the layout problems.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 3, 6, 10
+MARKDOWN

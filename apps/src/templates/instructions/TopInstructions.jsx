@@ -653,11 +653,11 @@ class TopInstructions extends Component {
 
     const topInstructionsStyle = [
       isRtl ? styles.mainRtl : styles.main,
+      noVisualization && styles.noViz,
       mainStyle,
       {
         height: explicitHeight ? explicitHeight : height - RESIZER_HEIGHT,
       },
-      noVisualization && styles.noViz,
       isEmbedView && styles.embedView,
       dynamicInstructions &&
         overlayVisible &&

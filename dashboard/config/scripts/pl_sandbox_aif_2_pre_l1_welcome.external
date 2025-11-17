@@ -12,8 +12,11 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach **AI Foundations** (Semester 2) course— a curriculum where students code alongside AI to build real-world interactive projects.
+#### This short professional learning module introduces you to the concepts in **AI Foundations** (Semester 2) course— a curriculum where students code alongside AI to build real-world interactive projects.
 
+#### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about. 
+
+#### For a deeper dive into the skills and content of each unit, be sure to try the self-paced professional learning modules that accompany each unit. 
 ___
 
 <div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
@@ -27,15 +30,10 @@ ___
 
 #### **By the end of this professional learning module, you will be able to:**
 
-* #### Prepare to teach the AI Foundations (Semester 2) course with confidence and clarity.
+* #### Introduce the foundaitonal concepts in the AI Foundations (Semester 2) course.
 * #### Understand the basics of web applications and how they support interactive, AI-powered projects.
-* #### Explain and apply core web technologies:
-	* #### HTML for structure,
-	* #### CSS for styling, and
-	* #### JavaScript for interactivity.
-* #### Integrate AI tools and concepts into coding lessons to model responsible and creative AI use.
-* #### Emphasize ethical considerations and human-centered design in classroom discussions.
-* #### Apply teaching strategies and best practices for engaging students in hands-on, project-based learning.
+* #### Understand how to integrate AI tools and concepts into coding lessons to model responsible and creative AI use.
+
 
 ## Take Our Pre-Survey
 
@@ -45,7 +43,7 @@ ___
 <a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_teaching_programming_in_musiclab_pre_survey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
 </div>
 
-### **Suggested total time for this module:** 120 minutes
+### **Suggested total time for this module:** 20 minutes
 
 
 

@@ -23,7 +23,7 @@
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
 #  index_levels_on_type       (type)
-
+#
 class Sketchlab < Level
   serialized_attrs %w(
     start_sources

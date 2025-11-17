@@ -7,10 +7,8 @@ import {
   setConsoleFontSize,
   setEditorFontSize,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
-import {Setting} from '@cdo/apps/lab2/views/components/Settings/SettingsDropdown';
+import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/types';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -68,8 +66,7 @@ export function useCodebridgeSettings(): Setting[] {
     handleFontSizeChange(
       'CodeEditor',
       selectedEditorKey,
-      currentEditorFontSizeKey,
-      EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE
+      currentEditorFontSizeKey
     );
   };
 
@@ -79,16 +76,14 @@ export function useCodebridgeSettings(): Setting[] {
     handleFontSizeChange(
       'Console',
       selectedConsoleKey,
-      currentConsoleFontSizeKey,
-      EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE
+      currentConsoleFontSizeKey
     );
   };
 
   const handleFontSizeChange = (
     type: 'CodeEditor' | 'Console',
     selectedKey: keyof typeof FontSize,
-    currentKey: keyof typeof FontSize,
-    event: string
+    currentKey: keyof typeof FontSize
   ) => {
     if (selectedKey !== currentKey && FontSize[selectedKey]) {
       // We want the user preference for selected font size to persist for signed-in users
@@ -100,9 +95,6 @@ export function useCodebridgeSettings(): Setting[] {
       const reduxAction =
         type === 'Console' ? setConsoleFontSize : setEditorFontSize;
       dispatch(reduxAction(selectedKey));
-      sendLab2AnalyticsEvent(event, appName, {
-        fontSize: selectedKey,
-      });
     }
   };
 

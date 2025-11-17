@@ -8,6 +8,7 @@ import {
   removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import localization from '@cdo/apps/localization';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 
 import * as blockUtils from '../../block_utils';
@@ -727,9 +728,7 @@ export function appendSharedFunctions(
 ) {
   let startBlocks;
   if (stringIsXml(startBlocksSource)) {
-    // TODO: define a type for blockUtils
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    startBlocks = (blockUtils as any).appendNewFunctions(
+    startBlocks = blockUtils.appendNewFunctions(
       startBlocksSource,
       functionsXml
     );
@@ -834,7 +833,7 @@ export function getCodeFromBlockXmlSource(blockXmlString: string) {
 // This is used in order to merge XML toolbox blocks with the dynamically created
 // blocks in auto-populated categories, such as Behaviors, Functions, and Variables.
 export function getCategoryBlocksJson(category: string) {
-  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks(category);
+  const levelToolboxBlocks = getLevelToolboxBlocks(category);
   if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
     return [];
   }
@@ -844,6 +843,31 @@ export function getCategoryBlocksJson(category: string) {
   const blocksConvertedJson = convertXmlToJson(
     levelToolboxBlocks.documentElement
   );
+
+  // Localize the flyout variables
+  // These are sourced from the XML and are always in the source language
+  (blocksConvertedJson.variables || []).forEach(variable => {
+    Blockly.SourceVariables[variable.id] ||= variable.name;
+    const oldName = Blockly.SourceVariables[variable.id];
+    let newName: string = localization.translate(`[variable] ${oldName}`, [
+      'blockly-variable',
+      'blockly-block',
+    ]);
+    if (newName.startsWith('[variable] ')) {
+      newName = newName.substring(11);
+    } else {
+      console.error(
+        'Global variable translation does not have the [variable] tag (category block variable)',
+        oldName,
+        newName
+      );
+
+      // Reject the translation
+      newName = oldName;
+    }
+    variable.name = newName;
+  });
+
   const flyoutJson = getSimplifiedStateForFlyout(blocksConvertedJson);
 
   return flyoutJson;

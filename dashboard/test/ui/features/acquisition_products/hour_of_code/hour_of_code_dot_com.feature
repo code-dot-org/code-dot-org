@@ -1,4 +1,5 @@
 @eyes
+@skip
 Feature: Looking at hourofcode.com with Applitools Eyes
 
 Scenario Outline: Simple page view

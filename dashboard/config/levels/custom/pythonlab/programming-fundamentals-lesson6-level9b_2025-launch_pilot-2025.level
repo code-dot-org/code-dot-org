@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-10-14T18:46:35.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're creating a program to help a digital crossing guard remind people to look both ways before crossing the street. Every time a pedestrian approaches, the program should deliver the same safety reminder. You'll define the reminder once and reuse it for each crossing.\r\n\r\n1. Define a function called `look_both_ways()` that prints a safety message.\r\n\r\n2. Call the function **four times** to represent four people crossing the street.\r\n\r\n3. Make sure the same message prints each time.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nWhen you need to do the same task over and over, a function helps you keep your code short and easy to read. You can call the function as many times as you need.\r\n\r\nUse the **UMPIRE** strategy to understand what's happening, make a plan, test your output, and explain your thinking.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -47,9 +48,12 @@
       "active": false,
       "open": false,
       "type": "validation"
-    }
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:35.676+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9b_2025-launch_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:46:35.676+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9b_2025-launch_2025\"},{\"changed_at\":\"2025-11-04 05:41:02 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
 </Pythonlab>

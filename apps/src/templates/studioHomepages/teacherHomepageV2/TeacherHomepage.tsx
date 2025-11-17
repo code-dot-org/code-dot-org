@@ -1,9 +1,10 @@
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -75,6 +76,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
       {},
       PLATFORMS.BOTH
     );
+
+    // Temporarily check network availability on teacher login
+    detectNetworkAvailability(teacherId);
   }, [teacherId]);
 
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
@@ -105,11 +109,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
-        <Heading2>
+        <Typography variant="h2" gutterBottom>
           {teacherName
             ? i18n.welcome({teacherName: teacherName})
             : i18n.welcomeWithoutName()}
-        </Heading2>
+        </Typography>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
             <Header

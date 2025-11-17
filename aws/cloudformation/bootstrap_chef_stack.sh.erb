@@ -120,11 +120,9 @@ cat <<JSON > $FIRST_BOOT
   },
   "cdo-secrets": {
 <% if frontends -%>
-    "session_store_server": "rediss://${SessionStoreGroup.PrimaryEndPoint.Address}:${SessionStoreGroup.PrimaryEndPoint.Port}",
+    "redis_url": "rediss://${RedisGroup.PrimaryEndPoint.Address}:${RedisGroup.PrimaryEndPoint.Port}",
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
-    "redis_primary": "${GeocoderGroup.PrimaryEndPoint.Address}:${GeocoderGroup.PrimaryEndPoint.Port}",
-    "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
-    "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
+    "old_session_store_server": "rediss://${SessionStoreGroup.PrimaryEndPoint.Address}:${SessionStoreGroup.PrimaryEndPoint.Port}",
 <% end -%>
 <% if database && !rack_env?(:production) -%>
     "db_writer": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.Endpoint.Address}:${AuroraCluster.Endpoint.Port}/",

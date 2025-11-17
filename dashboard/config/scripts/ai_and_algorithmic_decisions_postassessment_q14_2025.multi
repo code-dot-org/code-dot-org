@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q14_2025'
+
+question 'A fitness tracking website adds bright, flashing progress bars to motivate users. Some users find it exciting, while others with light sensitivity complain it\'s hard to look at. What should the design team consider first when deciding whether to keep this feature?'
+
+right 'Whether the design balances motivation with accessibility for all users'
+wrong 'Whether the animation makes the site feel more "modern"'
+wrong 'Whether users with light sensitivity can simply turn off their screens'
+wrong 'Whether the progress bars make the code easier for developers to write'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 1, 7
+MARKDOWN

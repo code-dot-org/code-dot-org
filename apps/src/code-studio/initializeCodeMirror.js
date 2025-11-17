@@ -127,6 +127,7 @@ function initializeCodeMirror(target, mode, options = {}) {
 
   var editor = CodeMirror.fromTextArea(node, {
     mode: mode,
+    autofocus: false,
     backdrop: backdrop,
     htmlMode: htmlMode,
     viewportMargin: Infinity,

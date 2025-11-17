@@ -10,7 +10,7 @@
  *
  *   • GenerateDancer mode – when `measurePosition` is not provided.
  *       The component runs its own requestAnimationFrame loop, advancing
- *       by `rafSpeed` frames per tick for a continuous preview.
+ *       by real elapsed time for a continuous preview.
  *
  * The component automatically initializes the renderer, handles resize
  * events, and notifies the parent via `onLoadingChange` while assets load.
@@ -28,8 +28,6 @@ type Props = {
   measurePosition?: number;
   /** Explicit dance move to load. */
   move?: string;
-  /** Frames advanced per RAF tick when measurePosition is not provided. */
-  rafSpeed?: number;
   onLoadingChange?: (loading: boolean) => void;
 };
 
@@ -37,7 +35,6 @@ const DancerCanvas: React.FC<Props> = ({
   size,
   measurePosition,
   move,
-  rafSpeed = 0.5,
   onLoadingChange,
 }) => {
   const isTimelineMode = typeof measurePosition === 'number';
@@ -49,8 +46,7 @@ const DancerCanvas: React.FC<Props> = ({
   // Measure position is provided by the Timeline only.
   const measureRef = useRef<number | undefined>(measurePosition);
 
-  // Animation using RAF when measurePosition is not provided.
-  const animationFrameId = useRef<number | null>(null);
+  // Current frame is used only in GenerateDancer mode.
   const frameRef = useRef(0);
 
   const [ready, setReady] = useState(false);
@@ -65,9 +61,14 @@ const DancerCanvas: React.FC<Props> = ({
     if (!totalFrames) {
       return;
     }
+
+    // A single loop plays out over half a measure. Every other half-measure
+    // is mirrored.
+    const mirror = Math.floor(measure * 2) % 2 === 1;
+
     const animationStep = measure % 1;
     const frameIndex = Math.floor(animationStep * totalFrames * 2);
-    renderer.renderFrame(frameIndex);
+    renderer.renderFrame(frameIndex, mirror);
   }, []);
 
   // Render the current frame (GenerateDancer mode).
@@ -94,6 +95,7 @@ const DancerCanvas: React.FC<Props> = ({
 
       if (!rendererRef.current) {
         rendererRef.current = new LottieDancerRenderer();
+        rendererRef.current.precacheMoves([move as DanceMoves]);
       }
       const context = node.getContext('2d');
       if (!context) {
@@ -141,8 +143,8 @@ const DancerCanvas: React.FC<Props> = ({
     }
     node.style.width = `${size}px`;
     node.style.height = `${size}px`;
-    node.width = Math.max(1, Math.floor(size));
-    node.height = Math.max(1, Math.floor(size));
+    node.width = Math.max(1, Math.floor(size * window.devicePixelRatio));
+    node.height = Math.max(1, Math.floor(size * window.devicePixelRatio));
     if (rendererRef.current && ready) {
       rendererRef.current.resize();
       if (isTimelineMode) {
@@ -162,26 +164,41 @@ const DancerCanvas: React.FC<Props> = ({
   }, [isTimelineMode, measurePosition, ready, renderAtMeasure]);
 
   // Render using RAF when no measure position is provided (e.g. GenerateDancer mode).
-  // Advances frameRef by rafSpeed on each tick.
+  // Drives animation by real elapsed time.
   useEffect(() => {
     if (!ready || isTimelineMode) {
       return;
     }
 
-    const tick = () => {
-      renderCurrentFrame();
-      frameRef.current += rafSpeed;
-      animationFrameId.current = requestAnimationFrame(tick);
+    let rafId: number | null = null;
+    const startMs = performance.now();
+
+    const renderer = rendererRef.current;
+    const totalFrames = renderer?.getDurationFrames?.() ?? 1;
+
+    // We aim to cycle through the entire animation each second.
+    // The animation speed should be similar to with a 120 bpm song.
+    const targetFps = 48;
+
+    const tick = (currentMs: number) => {
+      const elapsedMs = currentMs - startMs;
+      const elapsedFrames = Math.floor((elapsedMs * targetFps) / 1000);
+      const frameIndex = elapsedFrames % totalFrames;
+      // Every other loop is mirrored.
+      const mirror = Math.floor((elapsedFrames / totalFrames) % 2) === 1;
+      frameRef.current = frameIndex;
+      renderer?.renderFrame(frameIndex, mirror);
+      rafId = requestAnimationFrame(tick);
     };
-    animationFrameId.current = requestAnimationFrame(tick);
+
+    rafId = requestAnimationFrame(tick);
 
     return () => {
-      if (animationFrameId.current) {
-        cancelAnimationFrame(animationFrameId.current);
+      if (rafId) {
+        cancelAnimationFrame(rafId);
       }
-      animationFrameId.current = null;
     };
-  }, [isTimelineMode, ready, rafSpeed, renderCurrentFrame]);
+  }, [isTimelineMode, ready]);
 
   if (!move) {
     return null;

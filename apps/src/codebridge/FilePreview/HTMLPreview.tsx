@@ -6,8 +6,9 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {getLabViewPageAction, LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
@@ -19,18 +20,10 @@ import {HTMLPreviewHeader} from './HTMLPreviewHeader';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
-const URL_CHANGE_DELAY_MS = 300;
 const SOURCE_CHANGE_DELAY_MS = 500;
 
 export const HTMLPreview: React.FC = () => {
-  const pageAction = getLabViewPageAction();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
-  const iframeHeightClass = useMemo(() => {
-    if (pageAction === 'share' || isFullScreenView) {
-      return moduleStyles.fullScreenPreviewIframeHeight;
-    }
-    return moduleStyles.levelViewPreviewIframeHeight;
-  }, [pageAction, isFullScreenView]);
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
@@ -41,6 +34,16 @@ export const HTMLPreview: React.FC = () => {
     const port = 'localhost' === environmentKey ? `:${location.port}` : '';
     return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
   }, []);
+
+  // The new preview is currently behind an experiment flag. We pass this flag
+  // through to the inner iframe via a query string so it knows whether or not to use the new preview.
+  const previewQueryString = useMemo(() => {
+    const useV2Preview = experiments.isEnabledAllowingQueryString(
+      experiments.WEBLAB2_PREVIEW_V2
+    );
+    return useV2Preview ? `?${experiments.WEBLAB2_PREVIEW_V2}=true` : '';
+  }, []);
+
   const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
   const [navigationHistoryIndex, setNavigationHistoryIndex] = useState(-1);
 
@@ -192,14 +195,10 @@ export const HTMLPreview: React.FC = () => {
   }, [previewUrl, currentFile, navigationHistory, navigationHistoryIndex]);
 
   useEffect(() => {
-    const debouncedUpdate = setTimeout(() => {
-      iframeRef.current?.contentWindow?.postMessage(
-        {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
-        previewUrl
-      );
-    }, URL_CHANGE_DELAY_MS);
-
-    return () => clearTimeout(debouncedUpdate);
+    iframeRef.current?.contentWindow?.postMessage(
+      {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
+      previewUrl
+    );
   }, [currentFile, previewUrl]);
 
   useEffect(() => {
@@ -240,6 +239,17 @@ export const HTMLPreview: React.FC = () => {
     }
   }, [previewUrl, debouncedSource, isIframeLoaded]);
 
+  // Inform the inner preview when we start/finish loading the level,
+  // so it can avoid showing outdated content while we are loading.
+  useEffect(() => {
+    if (isIframeLoaded && iframeRef.current) {
+      iframeRef.current.contentWindow?.postMessage(
+        {type: IframeMessageType.LEVEL_LOADING, isLoading: isLevelLoading},
+        previewUrl
+      );
+    }
+  }, [isIframeLoaded, isLevelLoading, previewUrl]);
+
   // Keep inner preview's script permission in sync with predict level state.
   useEffect(() => {
     if (isIframeLoaded && iframeRef.current && previewUrl) {
@@ -255,6 +265,9 @@ export const HTMLPreview: React.FC = () => {
       id={'html-preview'}
       headerContent={codebridgeI18n.preview()}
       hideHeaders
+      className={classNames(
+        isFullScreenView && moduleStyles.fullScreenPanelContainer
+      )}
     >
       <div
         className={classNames(
@@ -294,12 +307,11 @@ export const HTMLPreview: React.FC = () => {
             id="preview"
             className={classNames(
               moduleStyles.previewIframe,
-              iframeHeightClass,
               previewViewMode === PreviewViewMode.DESKTOP
                 ? moduleStyles.desktopPreviewIframe
                 : moduleStyles.mobilePreviewIframe
             )}
-            src={previewUrl}
+            src={`${previewUrl}${previewQueryString}`}
           />
         </div>
       </div>

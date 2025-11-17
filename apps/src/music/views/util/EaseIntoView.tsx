@@ -120,20 +120,18 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
     }, 1000 / animationFramesPerSecond);
   }, [delayFrames, scrollStart, scrollEnd, doEase, frames]);
 
-  // This works only if the (appropriate) children have the 'showing' class.
-  // This is necessary because sometimes hidden elements are passed in as
-  // children, and we don't want to accidentally make those focusable. View
-  // instrumentGrid/index.tsx for the (only) example of this component in use.
+  // View instrumentGrid/index.tsx for an example of this component in use.
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     const container = containerRef.current;
     if (!container) return;
+    const firstFocusable = focusableChildren.find(child => child);
 
     switch (event.key) {
       case 'Enter':
         event.preventDefault();
         // Make children that should be showing focusable and focus the first child.
         focusableChildren.forEach(ref => ref?.setAttribute('tabindex', '0'));
-        focusableChildren[0]?.focus();
+        firstFocusable?.focus();
         break;
 
       case 'Tab':

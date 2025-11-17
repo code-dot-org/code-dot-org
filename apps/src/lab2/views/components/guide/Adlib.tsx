@@ -1,12 +1,16 @@
-import {sample} from 'lodash';
-import React, {useEffect, useMemo, useState} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useCallback, useMemo} from 'react';
 import reactStringReplace from 'react-string-replace';
+
+import localization, {useLocalization} from '@cdo/apps/localization';
 
 import styles from './Adlib.module.scss';
 
+export type AdlibChoices = {[key: string]: string};
+
 export type AdlibType = {
   template: string;
-  options: {[key: string]: string[]};
+  options: {[key: string]: {id: string; text: string}[]};
   variantCount: number;
 };
 
@@ -15,9 +19,13 @@ export type AdlibsType = {
 };
 
 interface AdlibProps {
+  children?: React.ReactNode;
   adlib: AdlibType;
-  onChange: (value: string, choices: string[]) => void;
-  className?: string;
+  adlibChoices: AdlibChoices;
+  readOnly?: boolean;
+  glowSpeed?: 'normal' | 'fast';
+  onChoicesChange: (choices: {[key: string]: string}) => void;
+  onTextChange: (promptText: string, localizedText: string) => void;
 }
 
 // This component takes a template string with placeholders in {curly braces}
@@ -25,42 +33,76 @@ interface AdlibProps {
 // dropdowns to select the options.  When the selected options change, it calls
 // onChange with the filled-in text.
 const Adlib: React.FunctionComponent<AdlibProps> = ({
+  children,
   adlib,
-  onChange,
-  className,
+  adlibChoices,
+  readOnly,
+  glowSpeed,
+  onChoicesChange,
+  onTextChange,
 }) => {
-  const [adlibOptions, setAdlibOptions] = useState<{[key: string]: string}>({});
   const {template, options} = adlib;
 
-  // Initialize defaults.
-  useEffect(() => {
-    const initialOptions: {[key: string]: string} = {};
-    Object.keys(options).forEach(key => {
-      initialOptions[key] = sample(options[key]) || '';
-    });
-    setAdlibOptions(initialOptions);
-  }, [options]);
+  const locale = useLocalization();
+
+  const localizedTemplate = useMemo(
+    () =>
+      locale !== 'en' ? localization.translate(template, ['adlib']) : template,
+    [template, locale]
+  );
+
+  const fillTemplate = useCallback(
+    (template: string, chosen: {[key: string]: string}) => {
+      let output = template;
+      Object.keys(options).forEach(key => {
+        if (chosen[key]) {
+          output = output.replace(`{${key}}`, chosen[key]);
+        }
+      });
+      return output;
+    },
+    [options]
+  );
 
   // Compute filled text.
-  const filledAdlibText = useMemo(() => {
-    let output = template;
-    Object.keys(options).forEach(key => {
-      output = output.replace(`{${key}}`, adlibOptions[key]);
-    });
-    return output;
-  }, [adlibOptions, options, template]);
+  const filledAdlibText = useMemo(
+    () =>
+      fillTemplate(
+        template,
+        Object.fromEntries(
+          Object.entries(options).map(([key, value]) => [
+            key,
+            options[key].find(option => option.id === adlibChoices[key])
+              ?.text || '',
+          ])
+        )
+      ),
+    [fillTemplate, adlibChoices, options, template]
+  );
+  const localizedFilledAdlibText = useMemo(
+    () =>
+      fillTemplate(
+        localizedTemplate,
+        Object.fromEntries(
+          Object.entries(options).map(([key, value]) => [
+            key,
+            localization.translate(
+              options[key].find(option => option.id === adlibChoices[key])
+                ?.text || ''
+            ),
+          ])
+        )
+      ),
+    [fillTemplate, adlibChoices, options, localizedTemplate]
+  );
 
-  // Compute joined choices text.
-  const choices = useMemo(() => {
-    const output = Object.keys(options).map(key => {
-      return adlibOptions[key];
-    });
-    return output;
-  }, [adlibOptions, options]);
+  useEffect(() => {
+    onTextChange(filledAdlibText, localizedFilledAdlibText);
+  }, [filledAdlibText, localizedFilledAdlibText, onTextChange]);
 
   // Compute HTML.
   const adlibHtml = useMemo(() => {
-    let output: React.ReactNode[] = [template];
+    let output: React.ReactNode[] = [localizedTemplate];
     Object.keys(options).forEach(key => {
       output = reactStringReplace(output, `{${key}}`, match => {
         return (
@@ -68,17 +110,17 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
             key={key}
             id={key}
             className={styles.select}
-            value={adlibOptions[key]}
+            value={adlibChoices[key]}
             onChange={event => {
-              setAdlibOptions({
-                ...adlibOptions,
+              onChoicesChange({
+                ...adlibChoices,
                 [key]: event.target.value,
               });
             }}
           >
             {options[key].map(option => (
-              <option key={option} value={option}>
-                {option}
+              <option key={option.id} value={option.id}>
+                {localization.translate(option.text)}
               </option>
             ))}
           </select>
@@ -87,14 +129,31 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     });
 
     return output;
-  }, [adlibOptions, options, template]);
+  }, [adlibChoices, onChoicesChange, options, localizedTemplate]);
 
-  // Notify parent when choices change.
-  useEffect(() => {
-    onChange(filledAdlibText, choices);
-  }, [adlibOptions, choices, filledAdlibText, onChange]);
-
-  return <div className={className}>{adlibHtml}</div>;
+  return (
+    <div
+      data-notranslate
+      className={classNames(
+        styles.adlib,
+        glowSpeed === 'fast'
+          ? styles.adlibFastGlowSpeed
+          : glowSpeed === 'normal'
+          ? styles.adlibNormalGlowSpeed
+          : undefined
+      )}
+    >
+      <div
+        className={classNames(
+          styles.adlibInner,
+          readOnly && styles.adlibInnerReadOnly
+        )}
+      >
+        <div>{readOnly ? localizedFilledAdlibText : adlibHtml}</div>
+        {children}
+      </div>
+    </div>
+  );
 };
 
 export default Adlib;

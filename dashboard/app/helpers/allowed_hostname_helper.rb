@@ -21,7 +21,6 @@ module AllowedHostnameHelper
     'quandl.com',                 # Financial datasets - API key required 🔑
     # === FUN AND GAMES ===
     'api.blizzard.com',           # Blizzard gaming data - API key required 🔑
-    'api.football-data.org',      # Football statistics - Public API, rate limited
     'api.nookipedia.com',         # Animal Crossing data -  API key required 🔑
     'api.mojang.com',             # Minecraft game data - Public API
     'api.scryfall.com',           # Magic: The Gathering cards - Public API
@@ -136,4 +135,14 @@ module AllowedHostnameHelper
     'swapi.dev',                # Star Wars data. We may want to remove this in favor of swapi.info
     # REMOVED: 'theunitedstates.io' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
   ].freeze
+
+  ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
+    'picsum.photos' # Placeholder images - Public API
+  ].freeze
+
+  ALLOWED_FONT_HOSTNAMES = [
+    # These hostnames are used to load google fonts. Public API.
+    'fonts.googleapis.com',
+    'fonts.gstatic.com'
+  ]
 end

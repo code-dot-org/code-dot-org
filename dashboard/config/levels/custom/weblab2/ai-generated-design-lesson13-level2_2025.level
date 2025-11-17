@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-24T20:05:28.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Designer Mindset\r\n###Generate\r\n- Upload your wireframe. Prompt AI with structured recipe:\r\n\t- “_Generate HTML for a page with [header], [nav bar items], [main content area], [footer]._”\r\n- Compare AI output to wireframe.\r\n- Use Revision Checklist to record matches/mismatches (_in Activity Guide_).\r\n- Save as **Version 1**",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "project_template_level_name": "ai-generated-design-lesson13-weblab-template-test-2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-24T20:05:28.255+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level4-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level4-test-2025\"},{\"changed_at\":\"2025-10-24 20:07:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

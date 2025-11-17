@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q13_2025'
+
+question 'A local library\'s website is well-organized, but many visitors complain that the text is small and light gray, making it hard to read. What is the main reason this website is still difficult to use?'
+
+wrong 'It includes too many book categories.'
+wrong 'It loads too slowly on public computers.'
+wrong 'It doesn\'t use enough animation or images.'
+right 'It\'s not accessible for all users.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 2, 11
+MARKDOWN

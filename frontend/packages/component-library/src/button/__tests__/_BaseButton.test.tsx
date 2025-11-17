@@ -2,11 +2,11 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
-import _BaseButton from './../_BaseButton';
+import GenericButton from './../GenericButton';
 
 describe('Design System - Button', () => {
   it('renders with correct text', () => {
-    render(<_BaseButton text="Button test" onClick={() => null} />);
+    render(<GenericButton text="Button test" onClick={() => null} />);
 
     const button = screen.getByText('Button test');
     expect(button).toBeInTheDocument();
@@ -17,7 +17,7 @@ describe('Design System - Button', () => {
     const spyOnClick = jest.fn();
 
     render(
-      <_BaseButton
+      <GenericButton
         text="Button"
         ariaLabel="ButtonLabel"
         onClick={spyOnClick}
@@ -42,7 +42,7 @@ describe('Design System - Button', () => {
     const spyOnClick = jest.fn();
 
     render(
-      <_BaseButton
+      <GenericButton
         text="Button test"
         ariaLabel="Button aria label"
         onClick={spyOnClick}

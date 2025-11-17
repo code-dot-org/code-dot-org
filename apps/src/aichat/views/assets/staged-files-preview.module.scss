@@ -85,7 +85,9 @@ $preview-image-size: 48px;
   .filenameContainer {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     max-width: 80px;
+    height: 39px;
     color: var(--text-neutral-primary);
     background: var(--background-neutral-primary);
     padding: 0.22rem 0.5rem;
@@ -101,10 +103,17 @@ $preview-image-size: 48px;
         variables.$default-border-radius;
     }
 
-    strong {
+    strong,
+    span {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    .fileDetail {
+      font-size: 11px;
+      line-height: 1.5;
+      color: var(--text-neutral-tertiary);
     }
   }
 }

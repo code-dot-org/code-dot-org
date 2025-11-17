@@ -11,12 +11,14 @@ import {get, set} from 'js-cookie';
  * The current course listing and a mapping between them and Localize project
  * keys. This is a temporary measure for now.
  */
-const csd_prefixes = ['/courses/csd-2024'];
+const csd_prefixes = ['/courses/csd-2024', '/courses/self-paced-pl-csd-2024'];
 
 const csf_prefixes = [
   '/courses/k5-unplugged',
   '/courses/express-2024',
   '/courses/pre-express-2024',
+  '/courses/k5-onlinepd-2024',
+  '/courses/teaching-csf-2025',
 ];
 
 const donor_prefixes = [
@@ -29,9 +31,15 @@ const donor_prefixes = [
   '/courses/elementaryai-2024',
   '/courses/3-5gamedesign-2024',
   '/courses/elem-game-design-2024',
+  '/courses/mix-move-ai-2025',
 ];
 
-const aif_prefixes = ['/courses/artificial-intelligence-foundations-2025'];
+const aif_prefixes = [
+  '/courses/artificial-intelligence-foundations-2025',
+  '/courses/teaching-ai-foundations-2025',
+  '/courses/oceans',
+  '/courses/how-ai-works-2023',
+];
 
 const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
 
@@ -49,8 +57,8 @@ const live = [
   '/courses/foundations-gen-ai-2025',
   '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
-  '/courses/artificial-intelligence-foundations-2025/units/2',
-  '/courses/artificial-intelligence-foundations-2025/units/5',
+  '/courses/artificial-intelligence-foundations-2025/',
+  '/courses/mix-move-ai-2025',
 ];
 
 const experiments =
@@ -203,7 +211,7 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
     // Localization class.
     window.LocalizeLoader = new Promise((resolve, reject) => {
       script.onload = () => {
-        // Optional: Handle script load event
+        // Load the localize widget
         loadLocalize();
         resolve(window.Localize);
       };
@@ -212,6 +220,7 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
         reject();
       };
     });
+
     document.head.appendChild(script);
   }
 }

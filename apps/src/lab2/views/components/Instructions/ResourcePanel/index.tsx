@@ -8,16 +8,22 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
+import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
+import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import '@cdo/apps/lab2/introjs.scss';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
@@ -30,14 +36,15 @@ import {
   resourcePanelLinksElementId,
 } from './constants';
 import CopyrightButton from './CopyrightButton';
+import DisclaimerButton from './DisclaimerButton';
 import OnboardingTourSteps from './OnboardingTourSteps';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
+import setFooterVisibility from './setFooterVisibility';
 import SettingsPanel from './SettingsPanel';
 import {Tabs} from './types';
 import ValidationPanel from './ValidationPanel';
 import ValidationTourSteps from './ValidationTourSteps';
 import {VersionHistoryPanel} from './VersionHistory';
-import './resource-panel-introjs.scss';
 
 import styles from './styles.module.scss';
 
@@ -56,10 +63,6 @@ interface VersionHistoryProps {
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
-  [Tabs.TeachersOnly]: {
-    title: commonI18n.teachingTips(),
-    icon: 'chalkboard-teacher',
-  },
   [Tabs.StudentRubric]: {
     title: commonI18n.rubric(),
     icon: 'clipboard-list',
@@ -71,6 +74,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Validation]: {
     title: commonI18n.validation(),
     icon: 'clipboard-check',
+  },
+  [Tabs.TeachersOnly]: {
+    title: commonI18n.teachingTips(),
+    icon: 'chalkboard-teacher',
   },
 };
 
@@ -90,6 +97,9 @@ type ResourcePanelProps = InstructionsProps & {
   isOnboardingTourEnabled?: boolean;
   aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  documentationUrl?: string;
+  /** Only display the sidebar and hide all tabs. */
+  sidebarOnly?: boolean;
 };
 
 /**
@@ -112,13 +122,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   isOnboardingTourEnabled,
   aiTutorSystemPromptName,
   aiTutorResponseSchemaSettings,
+  documentationUrl,
+  sidebarOnly = false,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs | undefined>(undefined);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isFloatingSettingsOpen, setIsFloatingSettingsOpen] = useState(false);
   const hasAutoCollapsedNoTabs = useRef(false);
+  const settingsButtonRef = useRef<HTMLDivElement | null>(null);
+  const floatingPanelRef = useRef<HTMLDivElement | null>(null);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -160,10 +175,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isReadOnly &&
     (isRunning || isValidating);
 
+  const levelProperties = instructionsProps.levelProperties;
+  const aiTutorVisible = shouldShowAiTutor(
+    appName,
+    levelProperties.aiTutorAvailable
+  );
+
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
+    if (sidebarOnly) {
+      return {};
+    }
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
-    const levelProperties = instructionsProps.levelProperties;
 
     if (levelProperties.longInstructions) {
       tabMap[Tabs.Instructions] = (
@@ -180,23 +203,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (
-      isUserTeacher &&
-      (levelProperties.teacherMarkdown ||
-        levelProperties.predictSettings?.solution)
-    ) {
-      tabMap[Tabs.TeachersOnly] = (
-        <ForTeachersOnly
-          levelProperties={levelProperties}
-          className={styles.panelContent}
-        />
-      );
-    }
-
-    if (
-      hiddenContextCallback &&
-      shouldShowAiTutor(appName, levelProperties.aiTutorAvailable)
-    ) {
+    if (hiddenContextCallback && aiTutorVisible) {
       tabMap[Tabs.AiTutor] = (
         <AiTutorChat
           hiddenContextCallback={hiddenContextCallback}
@@ -238,13 +245,27 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
     }
 
+    if (
+      isUserTeacher &&
+      (levelProperties.teacherMarkdown ||
+        levelProperties.predictSettings?.solution)
+    ) {
+      tabMap[Tabs.TeachersOnly] = (
+        <ForTeachersOnly
+          levelProperties={levelProperties}
+          className={classNames(styles.panelContent, styles.teachersOnlyTab)}
+        />
+      );
+    }
+
     return tabMap;
   }, [
     instructionsProps,
+    levelProperties,
     hasValidationConditions,
     isUserTeacher,
+    aiTutorVisible,
     hiddenContextCallback,
-    appName,
     isViewingOldVersion,
     viewAsUserId,
     isWidgetView,
@@ -260,20 +281,28 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,
+    sidebarOnly,
   ]);
+
+  const hasTabs = useMemo(() => {
+    return Object.keys(availableTabs).length > 0;
+  }, [availableTabs]);
+
+  const floatingSettingsPanelStyles = usePanelPosition(
+    isFloatingSettingsOpen,
+    hasTabs,
+    settingsButtonRef,
+    floatingPanelRef
+  );
 
   useEffect(() => {
     // Auto-collapse on initial mount if on a standalone project and there are no available tabs.
     // Only run this once to allow user to toggle the panel.
-    if (
-      !hasAutoCollapsedNoTabs.current &&
-      isProjectLevel &&
-      Object.keys(availableTabs).length === 0
-    ) {
+    if (!hasAutoCollapsedNoTabs.current && isProjectLevel && !hasTabs) {
       dispatch(setIsStandaloneCollapsed(true));
       hasAutoCollapsedNoTabs.current = true;
     }
-  }, [isProjectLevel, availableTabs, dispatch]);
+  }, [isProjectLevel, hasTabs, dispatch]);
 
   useEffect(() => {
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
@@ -288,226 +317,274 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
+  // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
+  const {setShowExtraLinksButton} = useExtraLinksButtonContext();
+  useEffect(() => {
+    setFooterVisibility(false);
+    setShowExtraLinksButton(false);
+    return () => {
+      setFooterVisibility(true);
+      setShowExtraLinksButton(true);
+    };
+  }, [setShowExtraLinksButton]);
+
   const onClickTab = useCallback(
     (tab: Tabs) => {
+      if (currentTab && currentTab !== tab) {
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, {
+          resourcePanelTabClickedTo: tab,
+          resourcePanelTabClickedFrom: currentTab,
+        });
+      }
       setCurrentTab(tab);
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [dispatch, isStandaloneCollapsed]
+    [currentTab, dispatch, isStandaloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
     // For standalone projects, we need to handle the resource panel collapsing and expanding in conjunction
-    // with toggling the settings panel.
-    // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
-    if (isStandaloneCollapsed) {
-      // If the resource panel is collapsed, we'll expand it and then open the settings panel.
-      setIsSettingsOpen(true);
-      dispatch(setIsStandaloneCollapsed(false));
-    } else {
-      // If the resource panel is expanded and there are no tabs, then clicking the settings button
-      // collapses the resource panel and hides, i.e., closes, the settings panel.
-      if (Object.keys(availableTabs).length === 0) {
-        dispatch(setIsStandaloneCollapsed(true));
+    // with toggling the settings panel when there is at least one tab.
+    if (hasTabs) {
+      if (isStandaloneCollapsed) {
+        dispatch(setIsStandaloneCollapsed(false));
+        setIsSettingsOpen(true);
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
       } else {
-        // If the resource panel is expanded and there are tabs, then clicking the settings button
-        // toggles the settings panel.
+        // If settngs is currently not open, open settings panel and send analytics event.
+        if (!isSettingsOpen) {
+          sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
+        }
         setIsSettingsOpen(!isSettingsOpen);
       }
+    } else {
+      // For standalone projects with no tabs, we toggle the floating settings panel.
+      if (!isFloatingSettingsOpen) {
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
+      }
+      setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
     }
-  }, [dispatch, availableTabs, isSettingsOpen, isStandaloneCollapsed]);
+  }, [
+    hasTabs,
+    isStandaloneCollapsed,
+    dispatch,
+    isSettingsOpen,
+    isFloatingSettingsOpen,
+  ]);
 
   return (
-    <div
-      id={resourcePanelInstructionsElementId}
-      className={classNames(styles.resourcePanel, className)}
-    >
-      {isOnboardingTourEnabled && <OnboardingTourSteps />}
-      {isValidationTourEnabled && (
-        <ValidationTourSteps
-          hasValidationConditions={hasValidationConditions}
-          validationSettings={instructionsProps.validationSettings}
-          setCurrentTab={setCurrentTab}
-          onValidate={instructionsProps.validationSettings?.onValidate}
-        />
-      )}
+    <>
       <div
-        className={classNames(
-          styles.sidebar,
-          isStandaloneCollapsed && styles.collapsed
-        )}
+        id={resourcePanelInstructionsElementId}
+        className={classNames(styles.resourcePanel, className)}
       >
-        <div className={styles.topSection}>
-          <div className={styles.collapseButtonContainer}>
-            {/*
+        {isOnboardingTourEnabled && <OnboardingTourSteps />}
+        {isValidationTourEnabled && (
+          <ValidationTourSteps
+            hasValidationConditions={hasValidationConditions}
+            validationSettings={instructionsProps.validationSettings}
+            setCurrentTab={setCurrentTab}
+            onValidate={instructionsProps.validationSettings?.onValidate}
+          />
+        )}
+        <div
+          className={classNames(
+            styles.sidebar,
+            isStandaloneCollapsed && styles.collapsed
+          )}
+        >
+          <div className={styles.topSection}>
+            <div className={styles.collapseButtonContainer}>
+              {/*
               For standalone projects with at least one tab, we display the collapse/expand.
               We hide this button for standalone projects with no tabs, but the bottom buttons
               will still be available for users to access the settings panel, etc.
             */}
-            {isProjectLevel && Object.keys(availableTabs).length > 0 && (
-              <WithTooltip
-                tooltipProps={{
-                  text: isStandaloneCollapsed
-                    ? lab2I18n.expand()
-                    : lab2I18n.collapse(),
-                  tooltipId: 'tooltip-collapse',
-                  direction: 'onRight',
-                  size: 'xs',
-                  'data-theme': theme,
-                }}
-                hideDelayMs={hideTooltipDelayMs}
-                hideOnFirstLeave={true}
-              >
-                <Button
-                  className={styles.resourcePanelButton}
-                  onClick={() =>
-                    dispatch(setIsStandaloneCollapsed(!isStandaloneCollapsed))
-                  }
-                  isIconOnly={true}
-                  icon={{
-                    iconName: isStandaloneCollapsed
-                      ? 'arrow-right-from-line'
-                      : 'arrow-left-from-line',
-                  }}
-                  color={'gray'}
-                  type={'tertiary'}
-                  aria-label={
-                    isStandaloneCollapsed
+              {isProjectLevel && hasTabs && (
+                <WithTooltip
+                  tooltipProps={{
+                    text: isStandaloneCollapsed
                       ? lab2I18n.expand()
-                      : lab2I18n.collapse()
-                  }
-                />
-              </WithTooltip>
-            )}
-          </div>
-          <nav id={resourcePanelTabsElementId} className={styles.tabs}>
-            {getTypedKeys(availableTabs).map(tab => (
-              <WithTooltip
-                tooltipProps={{
-                  text: tabInfo[tab].title,
-                  tooltipId: `tooltip-${tab}`,
-                  direction: 'onRight',
-                  size: 'xs',
-                  'data-theme': theme,
-                }}
-                hideDelayMs={hideTooltipDelayMs}
-                hideOnFirstLeave={true}
-                key={`tooltip-${tab}`}
-              >
-                <div id={`resource-panel-tab-${tab}`}>
+                      : lab2I18n.collapse(),
+                    tooltipId: 'tooltip-collapse',
+                    direction: 'onRight',
+                    size: 'xs',
+                    'data-theme': theme,
+                  }}
+                  hideDelayMs={hideTooltipDelayMs}
+                  hideOnFirstLeave={true}
+                >
                   <Button
-                    className={classNames(
-                      styles.tabButton,
-                      tab === currentTab && styles.selected
-                    )}
-                    onClick={() => onClickTab(tab)}
-                    key={tab}
-                    color={'gray'}
-                    type={'tertiary'}
+                    className={styles.resourcePanelButton}
+                    onClick={() =>
+                      dispatch(setIsStandaloneCollapsed(!isStandaloneCollapsed))
+                    }
                     isIconOnly={true}
                     icon={{
-                      iconName: tabInfo[tab].icon,
-                      iconFamily: kitIcons.has(tabInfo[tab].icon)
-                        ? 'kit'
-                        : undefined,
+                      iconName: isStandaloneCollapsed
+                        ? 'arrow-right-from-line'
+                        : 'arrow-left-from-line',
                     }}
-                    aria-label={tabInfo[tab].title}
+                    color={'gray'}
+                    type={'tertiary'}
+                    aria-label={
+                      isStandaloneCollapsed
+                        ? lab2I18n.expand()
+                        : lab2I18n.collapse()
+                    }
                   />
-                </div>
-              </WithTooltip>
-            ))}
-          </nav>
-        </div>
-        <div
-          id={resourcePanelLinksElementId}
-          className={classNames(styles.bottomTabs)}
-        >
-          <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
-          <CopyrightButton theme={theme} />
-          <WithTooltip
-            tooltipProps={{
-              text: commonI18n.settings(),
-              tooltipId: 'tooltip-settings',
-              direction: 'onRight',
-              size: 'xs',
-              'data-theme': theme,
-            }}
-            hideDelayMs={hideTooltipDelayMs}
-            hideOnFirstLeave={true}
-          >
-            <div>
-              <Button
-                className={styles.resourcePanelButton}
-                onClick={() => onClickSettingsButton()}
-                isIconOnly={true}
-                icon={{iconName: 'gear'}}
-                color={'gray'}
-                type={'tertiary'}
-                aria-label={commonI18n.settings()}
-              />
-            </div>
-          </WithTooltip>
-        </div>
-      </div>
-      {!isStandaloneCollapsed && (
-        <div className={styles.panels}>
-          <PanelContainer
-            id={currentTab || 'resource-panel'}
-            headerContent={(currentTab && tabInfo[currentTab].title) || ''}
-            headerClassName={headerClassName}
-            rightHeaderContent={
-              currentTab === Tabs.AiTutor ? (
-                <AiChatHeaderButtons />
-              ) : (
-                rightHeaderContent
-              )
-            }
-          >
-            <div className={styles.tabContentContainer}>
-              {getTypedKeys(availableTabs).map(tab => (
-                <div
-                  key={tab}
-                  className={classNames(
-                    styles.tabContent,
-                    tab !== currentTab && styles.tabContentHidden
-                  )}
-                >
-                  {availableTabs[tab]}
-                </div>
-              ))}
-            </div>
-            {(hideInstructionsNavigation || currentTab !== Tabs.Instructions) &&
-              !isProjectLevel && (
-                <NavigationArea
-                  {...instructionsProps}
-                  styleAsBubble={styleNavigationAsBubble}
-                  className={styles.navigationFooter}
-                />
+                </WithTooltip>
               )}
-            {isSettingsOpen && (
-              <SettingsPanel
-                settings={settings || []}
-                closePanel={() => {
-                  setIsSettingsOpen(false);
-                  // If the resource panel is expanded and there are no tabs, then clicking the settings button
-                  // collapses the resource panel and essentially closes or hides the settings panel.
-                  // TODO: This logic will be updated when we add the floating settings panel for standalone projects.
-                  if (
-                    isProjectLevel &&
-                    Object.keys(availableTabs).length === 0 &&
-                    !isStandaloneCollapsed
-                  ) {
-                    dispatch(setIsStandaloneCollapsed(true));
-                  }
-                }}
+            </div>
+            <nav id={resourcePanelTabsElementId} className={styles.tabs}>
+              {getTypedKeys(availableTabs).map(tab => (
+                <WithTooltip
+                  tooltipProps={{
+                    text: tabInfo[tab].title,
+                    tooltipId: `tooltip-${tab}`,
+                    direction: 'onRight',
+                    size: 'xs',
+                    'data-theme': theme,
+                  }}
+                  hideDelayMs={hideTooltipDelayMs}
+                  hideOnFirstLeave={true}
+                  key={`tooltip-${tab}`}
+                >
+                  <div id={`resource-panel-tab-${tab}`}>
+                    <Button
+                      className={classNames(
+                        styles.tabButton,
+                        tab === currentTab && styles.selected,
+                        tab === Tabs.TeachersOnly && styles.teachersOnlyTab
+                      )}
+                      onClick={() => onClickTab(tab)}
+                      key={tab}
+                      color={'gray'}
+                      type={'tertiary'}
+                      isIconOnly={true}
+                      icon={{
+                        iconName: tabInfo[tab].icon,
+                        iconFamily: kitIcons.has(tabInfo[tab].icon)
+                          ? 'kit'
+                          : undefined,
+                      }}
+                      aria-label={tabInfo[tab].title}
+                    />
+                  </div>
+                </WithTooltip>
+              ))}
+            </nav>
+          </div>
+          <div
+            id={resourcePanelLinksElementId}
+            className={classNames(styles.bottomTabs)}
+          >
+            <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
+            {documentationUrl && (
+              <IconButtonWithTooltip
+                id="documentation"
+                label={commonI18n.documentation()}
+                icon={{iconName: 'book', iconStyle: 'solid'}}
+                type="tertiary"
+                color="gray"
+                tooltipSize="xs"
+                tooltipDirection="onRight"
+                href={documentationUrl}
+                theme={theme}
+                buttonSize="s"
               />
             )}
-          </PanelContainer>
+            {aiTutorVisible && <DisclaimerButton theme={theme} />}
+            <CopyrightButton theme={theme} />
+            <div ref={settingsButtonRef}>
+              <IconButtonWithTooltip
+                id="settings"
+                label={commonI18n.settings()}
+                icon={{iconName: 'gear'}}
+                type="tertiary"
+                color="gray"
+                tooltipSize="xs"
+                tooltipDirection="onRight"
+                onClick={onClickSettingsButton}
+                theme={theme}
+                buttonSize="s"
+              />
+            </div>
+          </div>
+        </div>
+        {!isStandaloneCollapsed && hasTabs && (
+          <div className={styles.panels}>
+            <PanelContainer
+              id={currentTab || 'resource-panel'}
+              headerContent={currentTab && tabInfo[currentTab].title}
+              headerClassName={headerClassName}
+              rightHeaderContent={
+                currentTab === Tabs.AiTutor ? (
+                  <AiChatHeaderButtons />
+                ) : (
+                  rightHeaderContent
+                )
+              }
+            >
+              <div className={styles.tabContentContainer}>
+                {getTypedKeys(availableTabs).map(tab => (
+                  <div
+                    key={tab}
+                    className={classNames(
+                      styles.tabContent,
+                      tab !== currentTab && styles.tabContentHidden
+                    )}
+                    ref={el => {
+                      if (el) {
+                        el.inert = tab !== currentTab;
+                      }
+                    }}
+                  >
+                    {availableTabs[tab]}
+                  </div>
+                ))}
+              </div>
+              {(hideInstructionsNavigation ||
+                currentTab !== Tabs.Instructions) &&
+                !isProjectLevel && (
+                  <NavigationArea
+                    {...instructionsProps}
+                    styleAsBubble={styleNavigationAsBubble}
+                    className={styles.navigationFooter}
+                  />
+                )}
+              {isSettingsOpen && hasTabs && (
+                <SettingsPanel
+                  settings={settings || []}
+                  closePanel={() => {
+                    setIsSettingsOpen(false);
+                  }}
+                  appName={appName}
+                />
+              )}
+            </PanelContainer>
+          </div>
+        )}
+      </div>
+      {isFloatingSettingsOpen && !hasTabs && (
+        <div
+          className={styles.floatingSettingsPanelContainer}
+          id="floating-settings-panel"
+          style={floatingSettingsPanelStyles}
+          ref={floatingPanelRef}
+        >
+          <SettingsPanel
+            settings={settings || []}
+            closePanel={() => {
+              setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
+            }}
+            appName={appName}
+          />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

@@ -44,7 +44,6 @@ import {
 import {authorizeLockable} from './lessonLockRedux';
 import {
   getCurrentLevel,
-  getCurrentScriptLevelId,
   levelById,
   nextLevelId,
 } from './progressReduxSelectors';
@@ -437,6 +436,21 @@ export const sendSubmitReport = createAsyncThunk<
   );
 });
 
+export function sendSuccessReportForLevel(
+  levelId: string,
+  appType: string
+): AsyncProgressThunkAction {
+  return (dispatch, getState) => {
+    return sendReportForLevel(
+      levelId,
+      appType,
+      TestResults.ALL_PASS,
+      dispatch,
+      getState
+    );
+  };
+}
+
 // Helpers
 
 function sendReportHelper(
@@ -451,7 +465,30 @@ function sendReportHelper(
   if (!state.currentLessonId || !levelId) {
     return Promise.resolve();
   }
-  const scriptLevelId = getCurrentScriptLevelId(getState());
+  return sendReportForLevel(
+    levelId,
+    appType,
+    result,
+    dispatch,
+    getState,
+    extraData
+  );
+}
+
+function sendReportForLevel(
+  levelId: string,
+  appType: string,
+  result: number,
+  dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+  getState: () => RootState,
+  extraData?: OptionalMilestoneData
+) {
+  const state = getState().progress;
+  const currentLevel = levelById(state, state.currentLessonId, levelId);
+  const scriptLevelId = currentLevel.parentLevelId
+    ? levelById(state, state.currentLessonId, currentLevel.parentLevelId)
+        ?.scriptLevelId
+    : currentLevel.scriptLevelId;
   if (!scriptLevelId) {
     return Promise.resolve();
   }
@@ -488,7 +525,6 @@ function sendReportHelper(
       dispatch(mergeResults({[levelId]: result}));
       // If the level is the sublevel of a bubble level,
       // also update the status of the parent level.
-      const currentLevel = getCurrentLevel(getState());
       if (currentLevel.parentLevelId) {
         dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
       }
