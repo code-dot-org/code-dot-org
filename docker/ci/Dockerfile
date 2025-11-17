@@ -48,9 +48,6 @@ RUN groupadd --gid 3434 ${USER} && \
     useradd --uid 3434 --gid ${GROUP} --shell /bin/bash --create-home ${USER} && \
     printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
 
-# disable hostname resolution in sudo to avoid DNS timeout delays
-RUN printf "Defaults !fqdn\n" > /etc/sudoers.d/nofqdn
-
 #########################################################
 FROM base AS rbenv
 #########################################################
