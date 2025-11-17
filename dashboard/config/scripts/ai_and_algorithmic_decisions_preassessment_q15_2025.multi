@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q15_2025'
+
+question 'A student uses an AI assistant to help fix an error in their game code. The AI suggests a solution, but when they test it, the game still doesn\'t work as expected. What\'s the best next step for the student?'
+
+wrong 'Copy and paste the AI\'s suggestion again until it works.'
+right 'Read the AI\'s code carefully, test it step by step, and look for where the logic breaks.'
+wrong 'Delete the project and start completely over from scratch.'
+wrong 'Ask a classmate to fix it without checking what the AI suggested.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 2-6
+MARKDOWN

@@ -106,7 +106,7 @@ export const getBackpackAPIMock = (
       onSuccess(fileList);
     }),
     saveFiles: jest.fn(),
-    savePythonlabFile: jest.fn(),
+    saveCodebridgeFile: jest.fn(),
     deleteFiles: jest.fn(),
     updateFilesHelper: jest.fn(),
     saveFilesHelper: jest.fn(),

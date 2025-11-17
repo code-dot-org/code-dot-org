@@ -1,8 +1,9 @@
 import {Steps} from 'intro.js-react';
 import React, {useEffect, useState} from 'react';
 
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
@@ -14,6 +15,7 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('noIntrojs') === 'true') {
   trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
 }
+const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding';
 
 const OnboardingTourSteps: React.FC = () => {
   const sketchlabOnboardingTourSeen = tryGetLocalStorage(
@@ -21,9 +23,8 @@ const OnboardingTourSteps: React.FC = () => {
     'no'
   );
   const [isToolbarReady, setIsToolbarReady] = useState(false);
-  const isAiDiffContainerOpen = useAppSelector(
-    state => state.aichat.chatIsOpen
-  );
+
+  const [tourStep, setTourStep] = useState(0);
 
   useEffect(() => {
     // Wait for Excalidraw toolbar to be fully rendered.
@@ -57,15 +58,28 @@ const OnboardingTourSteps: React.FC = () => {
 
   return (
     <Steps
-      enabled={
-        isToolbarReady &&
-        sketchlabOnboardingTourSeen !== 'yes' &&
-        !isAiDiffContainerOpen
-      }
+      enabled={isToolbarReady && sketchlabOnboardingTourSeen !== 'yes'}
       initialStep={INITIAL_STEP}
       steps={STEPS}
       onExit={() => {
         trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, {
+          flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
+          step: tourStep.toString(),
+        });
+      }}
+      onStart={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, {
+          flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
+        });
+      }}
+      onChange={nextStepIndex => {
+        setTourStep(nextStepIndex);
+      }}
+      onComplete={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, {
+          flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
+        });
       }}
       options={{
         scrollToElement: false,

@@ -10,6 +10,7 @@ import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructi
 interface ContinueButtonProps extends ButtonProps {
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
+  onContinue?: () => void;
 }
 
 /**
@@ -20,6 +21,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   tooltipMessage,
   hideIfDisabled,
   disabled,
+  onContinue,
   ...buttonProps
 }) => {
   const dispatch = useAppDispatch();
@@ -44,7 +46,10 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
       >
         <Button
           id="instructions-continue-button"
-          onClick={() => dispatch(continueOrFinishLesson())}
+          onClick={() => {
+            onContinue?.();
+            dispatch(continueOrFinishLesson());
+          }}
           disabled={disabled}
           size={'s'}
           {...buttonProps}
