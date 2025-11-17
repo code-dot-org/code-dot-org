@@ -23,7 +23,7 @@
   &::before {
     content: '';
     position: absolute;
-    left: 30px; // Align with radio button
+    inset-inline-start: 30px; // Align with radio button
     top: 10px;
     bottom: 0;
     width: 1px;
