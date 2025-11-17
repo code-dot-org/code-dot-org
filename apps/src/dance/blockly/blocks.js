@@ -89,8 +89,12 @@ const customInputTypes = {
           name = JSON.parse(name);
         } catch {}
         if (name === GENERATED_DANCER) {
-          const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
-          return [urls.headUrl, option];
+          let headUrl = '/blockly/media/skins/dance/default_dancer.png';
+          if (localStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
+            const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
+            headUrl = urls.headUrl;
+          }
+          return [headUrl, option];
         }
         return [`/blockly/media/skins/dance/${name.toLowerCase()}.png`, option];
       });
