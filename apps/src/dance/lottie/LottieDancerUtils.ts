@@ -168,6 +168,7 @@ export function normalizePalette(metadata: DancerMetadata = {}): Palette {
     primary: toRGBA(bodyColor),
     secondary: toRGBA(secondaryColor),
     tertiary: toRGBA(tertiaryColor),
+    lock: metadata['lock_palette'] === true,
   };
 }
 

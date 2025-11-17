@@ -286,14 +286,14 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     [adlibChoices, adlibOption, adlibs, updateSources, currentSources]
   );
 
-  // Update local storage whenever the generated dancer metadata changes and update the canvas key so the canvas refreshes.
+  // Update session storage whenever the generated dancer metadata changes and update the canvas key so the canvas refreshes.
   const [canvasKey, setCanvasKey] = useState<string>();
   useEffect(() => {
     const metadataString = JSON.stringify(currentSources.generatedDancer);
     if (metadataString) {
       trySetSessionStorage(GENERATED_DANCER_STORAGE_KEY, metadataString);
     } else {
-      // If no dancer has been generated on this level, clear local storage to prevent stale artifacts from showing.
+      // If no dancer has been generated on this level, clear session storage to prevent stale artifacts from showing.
       sessionStorage.removeItem(GENERATED_DANCER_STORAGE_KEY);
     }
     setCanvasKey(metadataString || 'none');
