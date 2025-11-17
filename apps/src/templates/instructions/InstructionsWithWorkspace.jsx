@@ -113,9 +113,23 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       children,
     } = this.props;
 
+    // user is in ai tutor pilot
+    const aiTutorAvailableForPilot =
+      window?.appOptions?.aiTutorEnabledForPilot ?? false;
+
+    // level property says ai tutor is available
+    const aiTutorAvailableForLevel =
+      window?.appOptions?.level?.aiTutorAvailable ?? false;
+
+    // standalone project without level aiTutorAvailable property
+    const isStandaloneProject =
+      window?.appOptions?.level?.isProjectLevel ?? false;
+
     const showAiTutor =
       AI_TUTOR_LEGACY_LABS.includes(labType) &&
-      experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
+      (experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR) ||
+        (aiTutorAvailableForPilot &&
+          (aiTutorAvailableForLevel || isStandaloneProject)));
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
     const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
