@@ -5,13 +5,6 @@ eval $( fixuid )
 
 cd $HOME/code-dot-org
 
-set -x
-
-# test if sudo is taking a long time to run
-echo "running sudo true to warm up sudo..."
-sudo true
-echo "sudo true complete."
-
 # Need to change ownership of volume mounts which are not bind-mounted to the uid/gid after fixuid is applied
 sudo chown -R $USER:$GROUP \
         $HOME/.rbenv \
