@@ -63,7 +63,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "84824de0d6782d9eec9a83916cde11fe",
     "/curriculum_content/2021/csf/courseb-2021.json": "84824de0d6782d9eec9a83916cde11fe",
     "/curriculum_content/2021/csf/coursec-2021.json": "84824de0d6782d9eec9a83916cde11fe",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "84824de0d6782d9eec9a83916cde11fe",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "84824de0d6782d9eec9a83916cde11fe",
@@ -194,7 +194,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "79e73b96237bfbd2f9ff25de60145df1",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "79e73b96237bfbd2f9ff25de60145df1",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "79e73b96237bfbd2f9ff25de60145df1",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "bg-BG": {
     "/curriculum_content/2017/csd/csd1-2017.json": "20677568ad72185282dc0765e95882f0",
@@ -260,7 +260,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "4711bdab58ad7aa99ffcb35d4b3f0aac",
     "/curriculum_content/2021/csf/courseb-2021.json": "4711bdab58ad7aa99ffcb35d4b3f0aac",
     "/curriculum_content/2021/csf/coursec-2021.json": "4711bdab58ad7aa99ffcb35d4b3f0aac",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "4711bdab58ad7aa99ffcb35d4b3f0aac",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "4711bdab58ad7aa99ffcb35d4b3f0aac",
@@ -391,7 +391,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "adb579e342277412d3e3d9ac69c47d6d",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "adb579e342277412d3e3d9ac69c47d6d",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "adb579e342277412d3e3d9ac69c47d6d",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "bn-BD": {
     "/curriculum_content/2017/csd/csd1-2017.json": "1ba6a358dba5f295aa45b79c3c54ac5e",
@@ -623,7 +623,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "6f4a71444d1c3744e24e88770a38fc78",
     "/curriculum_content/2021/csf/courseb-2021.json": "424752d8cd8865c5b2b0ddd1e0864574",
     "/curriculum_content/2021/csf/coursec-2021.json": "6f4a71444d1c3744e24e88770a38fc78",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "6f4a71444d1c3744e24e88770a38fc78",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "6f4a71444d1c3744e24e88770a38fc78",
@@ -754,7 +754,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "cf76662acb7153a049b0749f4eace8aa",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "cf76662acb7153a049b0749f4eace8aa",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "cf76662acb7153a049b0749f4eace8aa",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "ca-ES": {
     "/curriculum_content/2017/csd/csd1-2017.json": "3ca630e18565bc247186ee3db200f3b3",
@@ -820,7 +820,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "3ca630e18565bc247186ee3db200f3b3",
     "/curriculum_content/2021/csf/courseb-2021.json": "3ca630e18565bc247186ee3db200f3b3",
     "/curriculum_content/2021/csf/coursec-2021.json": "3ca630e18565bc247186ee3db200f3b3",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "3ca630e18565bc247186ee3db200f3b3",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "3ca630e18565bc247186ee3db200f3b3",
@@ -951,7 +951,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "a3cb2b0985217848ea22b04d68e49bd9",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "a3cb2b0985217848ea22b04d68e49bd9",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "a3cb2b0985217848ea22b04d68e49bd9",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "co-CO": {
     "/curriculum_content/2017/csd/csd1-2017.json": "d580e33a841a5b15629879b15d460285",
@@ -1183,7 +1183,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "2963be6612f1064899d706da73be580c",
     "/curriculum_content/2021/csf/courseb-2021.json": "2963be6612f1064899d706da73be580c",
     "/curriculum_content/2021/csf/coursec-2021.json": "2963be6612f1064899d706da73be580c",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "2963be6612f1064899d706da73be580c",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "2963be6612f1064899d706da73be580c",
@@ -1314,7 +1314,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "c137d24e5beea5262b67daf0954f8218",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "c137d24e5beea5262b67daf0954f8218",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "c137d24e5beea5262b67daf0954f8218",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "da-DK": {
     "/curriculum_content/2017/csd/csd1-2017.json": "977a2177bd7d0b1e2567463500208e18",
@@ -1380,7 +1380,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "31b6e8c1e1c5da7e875a83f8b5bacc2a",
     "/curriculum_content/2021/csf/courseb-2021.json": "31b6e8c1e1c5da7e875a83f8b5bacc2a",
     "/curriculum_content/2021/csf/coursec-2021.json": "31b6e8c1e1c5da7e875a83f8b5bacc2a",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "977a2177bd7d0b1e2567463500208e18",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "31b6e8c1e1c5da7e875a83f8b5bacc2a",
@@ -1511,7 +1511,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "0b0e8ae2adf49c09124d1cf151ec505b",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "0b0e8ae2adf49c09124d1cf151ec505b",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "0b0e8ae2adf49c09124d1cf151ec505b",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "de-DE": {
     "/curriculum_content/2017/csd/csd1-2017.json": "699af590539a35fcd06023d68d46edae",
@@ -1577,7 +1577,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "699af590539a35fcd06023d68d46edae",
     "/curriculum_content/2021/csf/courseb-2021.json": "699af590539a35fcd06023d68d46edae",
     "/curriculum_content/2021/csf/coursec-2021.json": "699af590539a35fcd06023d68d46edae",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "699af590539a35fcd06023d68d46edae",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "699af590539a35fcd06023d68d46edae",
@@ -1708,7 +1708,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "6398bcd2695b522c11629c488f331826",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "6398bcd2695b522c11629c488f331826",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "6398bcd2695b522c11629c488f331826",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "dv-MV": {
     "/curriculum_content/2017/csd/csd1-2017.json": "7c50ae248171ae2d40bb0d3de7a57aaa",
@@ -1774,7 +1774,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "e34fb7dddda571d750ce1c0f7987b05c",
     "/curriculum_content/2021/csf/courseb-2021.json": "e34fb7dddda571d750ce1c0f7987b05c",
     "/curriculum_content/2021/csf/coursec-2021.json": "e34fb7dddda571d750ce1c0f7987b05c",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "e34fb7dddda571d750ce1c0f7987b05c",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "e34fb7dddda571d750ce1c0f7987b05c",
@@ -1905,7 +1905,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "3897cb3d71a9b2e7808a73844e70fda5",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "3897cb3d71a9b2e7808a73844e70fda5",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "3897cb3d71a9b2e7808a73844e70fda5",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "el-GR": {
     "/curriculum_content/2017/csd/csd1-2017.json": "9ffaa3743bc5bad9d02c9d0a94271301",
@@ -1971,7 +1971,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "655f46428621989a9281fbfc7376daa0",
     "/curriculum_content/2021/csf/courseb-2021.json": "655f46428621989a9281fbfc7376daa0",
     "/curriculum_content/2021/csf/coursec-2021.json": "655f46428621989a9281fbfc7376daa0",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "655f46428621989a9281fbfc7376daa0",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "655f46428621989a9281fbfc7376daa0",
@@ -2102,7 +2102,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "3d8f28cb29a82ef38f46baa54c4b4fed",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "3d8f28cb29a82ef38f46baa54c4b4fed",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "3d8f28cb29a82ef38f46baa54c4b4fed",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "en-GB": {
     "/curriculum_content/2017/csd/csd1-2017.json": "fa57d751fe9685030e0d3c1740a165c1",
@@ -2168,7 +2168,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "5ccf6fc4370884ee1ef01cf6b3a27ec4",
     "/curriculum_content/2021/csf/courseb-2021.json": "5ccf6fc4370884ee1ef01cf6b3a27ec4",
     "/curriculum_content/2021/csf/coursec-2021.json": "5ccf6fc4370884ee1ef01cf6b3a27ec4",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "fa57d751fe9685030e0d3c1740a165c1",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "fa57d751fe9685030e0d3c1740a165c1",
@@ -2299,7 +2299,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "8a7042410d8b6602ec5e1b39c1840d82",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "8a7042410d8b6602ec5e1b39c1840d82",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "41b4fa33dbd0f2d4b8a77cb9d65b4d4d",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "es-ES": {
     "/curriculum_content/2017/csd/csd1-2017.json": "ff223de07e792ab8a70366a355b8334f",
@@ -2365,7 +2365,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "ff223de07e792ab8a70366a355b8334f",
     "/curriculum_content/2021/csf/courseb-2021.json": "ff223de07e792ab8a70366a355b8334f",
     "/curriculum_content/2021/csf/coursec-2021.json": "ff223de07e792ab8a70366a355b8334f",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "ff223de07e792ab8a70366a355b8334f",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "ff223de07e792ab8a70366a355b8334f",
@@ -2496,7 +2496,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "d755f9acfe7c3e7b9ce719cbaa489a92",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "d755f9acfe7c3e7b9ce719cbaa489a92",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "d755f9acfe7c3e7b9ce719cbaa489a92",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "es-MX": {
     "/curriculum_content/2017/csd/csd1-2017.json": "584d20e684df1c0c824274be9fee5337",
@@ -2562,7 +2562,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "175a5aa1bf15c25c190585bdf47bd4c9",
     "/curriculum_content/2021/csf/courseb-2021.json": "175a5aa1bf15c25c190585bdf47bd4c9",
     "/curriculum_content/2021/csf/coursec-2021.json": "175a5aa1bf15c25c190585bdf47bd4c9",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "175a5aa1bf15c25c190585bdf47bd4c9",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "175a5aa1bf15c25c190585bdf47bd4c9",
@@ -2693,7 +2693,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "9b812b34bf1ce16d7b3e3315a052fe57",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "9b812b34bf1ce16d7b3e3315a052fe57",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "9b812b34bf1ce16d7b3e3315a052fe57",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "et-EE": {
     "/curriculum_content/2017/csd/csd1-2017.json": "2a1cfbc156a9317fa1455981e3c84aec",
@@ -2759,7 +2759,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "16a4abed64b9785d71b833e06add3059",
     "/curriculum_content/2021/csf/courseb-2021.json": "16a4abed64b9785d71b833e06add3059",
     "/curriculum_content/2021/csf/coursec-2021.json": "16a4abed64b9785d71b833e06add3059",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "2a1cfbc156a9317fa1455981e3c84aec",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "16a4abed64b9785d71b833e06add3059",
@@ -2890,7 +2890,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "a7e7f8001e2a3f37790cc22d9a24e08d",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "a7e7f8001e2a3f37790cc22d9a24e08d",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "a7e7f8001e2a3f37790cc22d9a24e08d",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "eu-ES": {
     "/curriculum_content/2017/csd/csd1-2017.json": "86023586acea70724f95fa42f2e9e5f7",
@@ -2956,7 +2956,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "4abb97ac35efa141dc6ef6c35121f22c",
     "/curriculum_content/2021/csf/courseb-2021.json": "4abb97ac35efa141dc6ef6c35121f22c",
     "/curriculum_content/2021/csf/coursec-2021.json": "4abb97ac35efa141dc6ef6c35121f22c",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "4abb97ac35efa141dc6ef6c35121f22c",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "4abb97ac35efa141dc6ef6c35121f22c",
@@ -3087,7 +3087,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "aaa189d0a86925488cabd384bbe31db0",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "aaa189d0a86925488cabd384bbe31db0",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "aaa189d0a86925488cabd384bbe31db0",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "fa-AF": {
     "/curriculum_content/2017/csd/csd1-2017.json": "67ca6d4e44132c9da7dd39c9f8340ba9",
@@ -3319,7 +3319,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "822dac666793ff9bdc4dd529e689b482",
     "/curriculum_content/2021/csf/courseb-2021.json": "822dac666793ff9bdc4dd529e689b482",
     "/curriculum_content/2021/csf/coursec-2021.json": "822dac666793ff9bdc4dd529e689b482",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "822dac666793ff9bdc4dd529e689b482",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "822dac666793ff9bdc4dd529e689b482",
@@ -3450,7 +3450,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "b5b256f50437f1cbfc42fbbe29f724c2",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "b5b256f50437f1cbfc42fbbe29f724c2",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "b5b256f50437f1cbfc42fbbe29f724c2",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ar-SA": {
     "/curriculum_content/2017/csd/csd1-2017.json": "ca4d5a96c8a333c715160c5a75140f53",
@@ -3516,7 +3516,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "ca4d5a96c8a333c715160c5a75140f53",
     "/curriculum_content/2021/csf/courseb-2021.json": "ca4d5a96c8a333c715160c5a75140f53",
     "/curriculum_content/2021/csf/coursec-2021.json": "ca4d5a96c8a333c715160c5a75140f53",
-    "/curriculum_content/2021/csf/coursed-2021.json": "2d847b3f307cb2e6f6a131c5dbf754ed",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "ca4d5a96c8a333c715160c5a75140f53",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "ca4d5a96c8a333c715160c5a75140f53",
@@ -3647,7 +3647,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "1af68e901040b4fdcf6df548fcda27f7",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "1af68e901040b4fdcf6df548fcda27f7",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "1af68e901040b4fdcf6df548fcda27f7",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "fi-FI": {
     "/curriculum_content/2017/csd/csd1-2017.json": "a2805d44915b3e51613f7a79be281207",
@@ -3713,7 +3713,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "fb4740c54d9b471d3008f54a0bc14856",
     "/curriculum_content/2021/csf/courseb-2021.json": "fb4740c54d9b471d3008f54a0bc14856",
     "/curriculum_content/2021/csf/coursec-2021.json": "fb4740c54d9b471d3008f54a0bc14856",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "fb4740c54d9b471d3008f54a0bc14856",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "fb4740c54d9b471d3008f54a0bc14856",
@@ -3844,7 +3844,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "5fb6ed2db987cb8670c641e81e05c3d6",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "5fb6ed2db987cb8670c641e81e05c3d6",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "5fb6ed2db987cb8670c641e81e05c3d6",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "fil-PH": {
     "/curriculum_content/2017/csd/csd1-2017.json": "7c0b45897fbbfd57ad29d64686d8e9ad",
@@ -3910,7 +3910,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "7c0b45897fbbfd57ad29d64686d8e9ad",
     "/curriculum_content/2021/csf/courseb-2021.json": "7c0b45897fbbfd57ad29d64686d8e9ad",
     "/curriculum_content/2021/csf/coursec-2021.json": "7c0b45897fbbfd57ad29d64686d8e9ad",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "7c0b45897fbbfd57ad29d64686d8e9ad",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "7c0b45897fbbfd57ad29d64686d8e9ad",
@@ -4041,7 +4041,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "a3503c6b23f1a597b3d3d87789d22dd6",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "a3503c6b23f1a597b3d3d87789d22dd6",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "a3503c6b23f1a597b3d3d87789d22dd6",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "fr-FR": {
     "/curriculum_content/2017/csd/csd1-2017.json": "f636d81452ed4f011a1530bc020a7094",
@@ -4107,7 +4107,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "afb3deedb99a2397514426416bbf09f3",
     "/curriculum_content/2021/csf/courseb-2021.json": "afb3deedb99a2397514426416bbf09f3",
     "/curriculum_content/2021/csf/coursec-2021.json": "afb3deedb99a2397514426416bbf09f3",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "afb3deedb99a2397514426416bbf09f3",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "afb3deedb99a2397514426416bbf09f3",
@@ -4238,7 +4238,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "20b60116621e8ac3aa16290d91d0bf61",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "20b60116621e8ac3aa16290d91d0bf61",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "20b60116621e8ac3aa16290d91d0bf61",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ga-IE": {
     "/curriculum_content/2017/csd/csd1-2017.json": "ac4eed5a0c5ce2fec945be38f2ba1639",
@@ -4304,7 +4304,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "b43a810b6f1b433a9ba9a40269fa7caf",
     "/curriculum_content/2021/csf/courseb-2021.json": "b43a810b6f1b433a9ba9a40269fa7caf",
     "/curriculum_content/2021/csf/coursec-2021.json": "b43a810b6f1b433a9ba9a40269fa7caf",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "b43a810b6f1b433a9ba9a40269fa7caf",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "b43a810b6f1b433a9ba9a40269fa7caf",
@@ -4435,7 +4435,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "fa26b0acbc0c56d5bc6be8b71b0458f6",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "fa26b0acbc0c56d5bc6be8b71b0458f6",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "fa26b0acbc0c56d5bc6be8b71b0458f6",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "gl-ES": {
     "/curriculum_content/2017/csd/csd1-2017.json": "26b3876d41ccace9cda1c885dee115a3",
@@ -4501,7 +4501,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "26b3876d41ccace9cda1c885dee115a3",
     "/curriculum_content/2021/csf/courseb-2021.json": "26b3876d41ccace9cda1c885dee115a3",
     "/curriculum_content/2021/csf/coursec-2021.json": "26b3876d41ccace9cda1c885dee115a3",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "26b3876d41ccace9cda1c885dee115a3",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "26b3876d41ccace9cda1c885dee115a3",
@@ -4632,7 +4632,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "838a000018b7621ed8f2a366060669d9",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "838a000018b7621ed8f2a366060669d9",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "838a000018b7621ed8f2a366060669d9",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "haw-HI": {
     "/curriculum_content/2017/csd/csd1-2017.json": "89b036a4d6a9cbf0d624c3066f98e142",
@@ -4698,7 +4698,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "5f6939bf41cc2884a3d618aecffaff9f",
     "/curriculum_content/2021/csf/courseb-2021.json": "5f6939bf41cc2884a3d618aecffaff9f",
     "/curriculum_content/2021/csf/coursec-2021.json": "5f6939bf41cc2884a3d618aecffaff9f",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "5f6939bf41cc2884a3d618aecffaff9f",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "5f6939bf41cc2884a3d618aecffaff9f",
@@ -4829,7 +4829,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "006707335fdab9814eded182b55fce44",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "006707335fdab9814eded182b55fce44",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "006707335fdab9814eded182b55fce44",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "he-IL": {
     "/curriculum_content/2017/csd/csd1-2017.json": "f0cc7cabeb8d67be233f7b3e69f27125",
@@ -4895,7 +4895,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "f0cc7cabeb8d67be233f7b3e69f27125",
     "/curriculum_content/2021/csf/courseb-2021.json": "f0cc7cabeb8d67be233f7b3e69f27125",
     "/curriculum_content/2021/csf/coursec-2021.json": "f0cc7cabeb8d67be233f7b3e69f27125",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "f0cc7cabeb8d67be233f7b3e69f27125",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "f0cc7cabeb8d67be233f7b3e69f27125",
@@ -5026,7 +5026,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "ceec8f2f6a50826d9dc3af8f226b0aa0",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "ceec8f2f6a50826d9dc3af8f226b0aa0",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "ceec8f2f6a50826d9dc3af8f226b0aa0",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "hi-IN": {
     "/curriculum_content/2017/csd/csd1-2017.json": "2f387211b6094bc5b42d22eb39e759a4",
@@ -5092,7 +5092,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "dd64ecbe9e5f0f12dc93f207ccad392d",
     "/curriculum_content/2021/csf/courseb-2021.json": "dd64ecbe9e5f0f12dc93f207ccad392d",
     "/curriculum_content/2021/csf/coursec-2021.json": "dd64ecbe9e5f0f12dc93f207ccad392d",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "dd64ecbe9e5f0f12dc93f207ccad392d",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "dd64ecbe9e5f0f12dc93f207ccad392d",
@@ -5223,7 +5223,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "d3846d1511c6c9f54f78cab6ffbb0c77",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "d3846d1511c6c9f54f78cab6ffbb0c77",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "d3846d1511c6c9f54f78cab6ffbb0c77",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "hr-HR": {
     "/curriculum_content/2017/csd/csd1-2017.json": "2ebbe430d1fb3e153e9273b48ff46b6e",
@@ -5289,7 +5289,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "2ebbe430d1fb3e153e9273b48ff46b6e",
     "/curriculum_content/2021/csf/courseb-2021.json": "2ebbe430d1fb3e153e9273b48ff46b6e",
     "/curriculum_content/2021/csf/coursec-2021.json": "2ebbe430d1fb3e153e9273b48ff46b6e",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "2ebbe430d1fb3e153e9273b48ff46b6e",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "2ebbe430d1fb3e153e9273b48ff46b6e",
@@ -5420,7 +5420,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "a0025e3962135f8846a5e37d6a40ae85",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "a0025e3962135f8846a5e37d6a40ae85",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "a0025e3962135f8846a5e37d6a40ae85",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "hu-HU": {
     "/curriculum_content/2017/csd/csd1-2017.json": "2ff45fa3a569b6edc69983f03e23a6d0",
@@ -5486,7 +5486,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "2ff45fa3a569b6edc69983f03e23a6d0",
     "/curriculum_content/2021/csf/courseb-2021.json": "2ff45fa3a569b6edc69983f03e23a6d0",
     "/curriculum_content/2021/csf/coursec-2021.json": "2ff45fa3a569b6edc69983f03e23a6d0",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "2ff45fa3a569b6edc69983f03e23a6d0",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "2ff45fa3a569b6edc69983f03e23a6d0",
@@ -5617,7 +5617,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "780c3dd9ff28382cf43e9235fe27e359",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "780c3dd9ff28382cf43e9235fe27e359",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "780c3dd9ff28382cf43e9235fe27e359",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "hy-AM": {
     "/curriculum_content/2017/csd/csd1-2017.json": "66cd2f59eaf0761770b5c047b17be624",
@@ -5683,7 +5683,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "be85dd402490266272beb18e1472d37c",
     "/curriculum_content/2021/csf/courseb-2021.json": "be85dd402490266272beb18e1472d37c",
     "/curriculum_content/2021/csf/coursec-2021.json": "be85dd402490266272beb18e1472d37c",
-    "/curriculum_content/2021/csf/coursed-2021.json": "2d847b3f307cb2e6f6a131c5dbf754ed",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "be85dd402490266272beb18e1472d37c",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "be85dd402490266272beb18e1472d37c",
@@ -5814,7 +5814,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "b143df8a36b37018c15cf660be0d1366",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "b143df8a36b37018c15cf660be0d1366",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "b143df8a36b37018c15cf660be0d1366",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "id-ID": {
     "/curriculum_content/2017/csd/csd1-2017.json": "3e21d329d5028b04231f602ece0d7eef",
@@ -5880,7 +5880,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "3e21d329d5028b04231f602ece0d7eef",
     "/curriculum_content/2021/csf/courseb-2021.json": "3e21d329d5028b04231f602ece0d7eef",
     "/curriculum_content/2021/csf/coursec-2021.json": "3e21d329d5028b04231f602ece0d7eef",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "3e21d329d5028b04231f602ece0d7eef",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "3e21d329d5028b04231f602ece0d7eef",
@@ -6011,7 +6011,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "a9581a7dcc716318b8e54c327afabb77",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "a9581a7dcc716318b8e54c327afabb77",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "a9581a7dcc716318b8e54c327afabb77",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "is-IS": {
     "/curriculum_content/2017/csd/csd1-2017.json": "8c3eaa2c42a388ace62c8d2f8f79c116",
@@ -6077,7 +6077,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "4e905979a8abcca793b6ed707ff022f6",
     "/curriculum_content/2021/csf/courseb-2021.json": "4e905979a8abcca793b6ed707ff022f6",
     "/curriculum_content/2021/csf/coursec-2021.json": "4e905979a8abcca793b6ed707ff022f6",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "4e905979a8abcca793b6ed707ff022f6",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "4e905979a8abcca793b6ed707ff022f6",
@@ -6208,7 +6208,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "156b183906e146310871c599702aa478",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "156b183906e146310871c599702aa478",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "156b183906e146310871c599702aa478",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "it-IT": {
     "/curriculum_content/2017/csd/csd1-2017.json": "94d17b7d83151db65a076d35d52a5b88",
@@ -6274,7 +6274,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "94d17b7d83151db65a076d35d52a5b88",
     "/curriculum_content/2021/csf/courseb-2021.json": "94d17b7d83151db65a076d35d52a5b88",
     "/curriculum_content/2021/csf/coursec-2021.json": "94d17b7d83151db65a076d35d52a5b88",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "94d17b7d83151db65a076d35d52a5b88",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "94d17b7d83151db65a076d35d52a5b88",
@@ -6405,7 +6405,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "79846b21aa3fcf7ed34ac6b8a078154f",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "79846b21aa3fcf7ed34ac6b8a078154f",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "79846b21aa3fcf7ed34ac6b8a078154f",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ja-JP": {
     "/curriculum_content/2017/csd/csd1-2017.json": "fce8d7381ad93d17baba534a39a4c5fa",
@@ -6471,7 +6471,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "082af0984e0827c2ccaae3ece014ef9e",
     "/curriculum_content/2021/csf/courseb-2021.json": "082af0984e0827c2ccaae3ece014ef9e",
     "/curriculum_content/2021/csf/coursec-2021.json": "082af0984e0827c2ccaae3ece014ef9e",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "082af0984e0827c2ccaae3ece014ef9e",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "082af0984e0827c2ccaae3ece014ef9e",
@@ -6602,7 +6602,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "962ea1dde2116e7f72c1634f9b1e7c29",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "962ea1dde2116e7f72c1634f9b1e7c29",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "962ea1dde2116e7f72c1634f9b1e7c29",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ka-GE": {
     "/curriculum_content/2017/csd/csd1-2017.json": "eaf8127a4f4ad85ce44388263dbb0f48",
@@ -6668,7 +6668,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "5fbb8bfcd9a09655928437b09f6353b7",
     "/curriculum_content/2021/csf/courseb-2021.json": "5fbb8bfcd9a09655928437b09f6353b7",
     "/curriculum_content/2021/csf/coursec-2021.json": "5fbb8bfcd9a09655928437b09f6353b7",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "5fbb8bfcd9a09655928437b09f6353b7",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "5fbb8bfcd9a09655928437b09f6353b7",
@@ -6799,7 +6799,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "4da08c120ace2e8dfbe4340471c8cc15",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "4da08c120ace2e8dfbe4340471c8cc15",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "4da08c120ace2e8dfbe4340471c8cc15",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "kk-KZ": {
     "/curriculum_content/2017/csd/csd1-2017.json": "dbc9ffc636d757f2af739853d45e4e04",
@@ -6865,7 +6865,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "dbc9ffc636d757f2af739853d45e4e04",
     "/curriculum_content/2021/csf/courseb-2021.json": "dbc9ffc636d757f2af739853d45e4e04",
     "/curriculum_content/2021/csf/coursec-2021.json": "dbc9ffc636d757f2af739853d45e4e04",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "dbc9ffc636d757f2af739853d45e4e04",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "dbc9ffc636d757f2af739853d45e4e04",
@@ -6996,7 +6996,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "6d22bc8aae70edc63596ec921acef618",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "6d22bc8aae70edc63596ec921acef618",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "6d22bc8aae70edc63596ec921acef618",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "kn-IN": {
     "/curriculum_content/2017/csd/csd1-2017.json": "bac39369a77b182802086dcc59409f15",
@@ -7062,7 +7062,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "bac39369a77b182802086dcc59409f15",
     "/curriculum_content/2021/csf/courseb-2021.json": "bac39369a77b182802086dcc59409f15",
     "/curriculum_content/2021/csf/coursec-2021.json": "bac39369a77b182802086dcc59409f15",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "bac39369a77b182802086dcc59409f15",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "bac39369a77b182802086dcc59409f15",
@@ -7193,7 +7193,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "7ef11bfabb9517ab3161b2c62f39a2b4",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "7ef11bfabb9517ab3161b2c62f39a2b4",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "7ef11bfabb9517ab3161b2c62f39a2b4",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "km-KH": {
     "/curriculum_content/2017/csd/csd1-2017.json": "00e9cb816b59c483188e4bb7ae435d39",
@@ -7259,7 +7259,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "f829eea5d18f7a60898ddc62388103ce",
     "/curriculum_content/2021/csf/courseb-2021.json": "f829eea5d18f7a60898ddc62388103ce",
     "/curriculum_content/2021/csf/coursec-2021.json": "f829eea5d18f7a60898ddc62388103ce",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "f829eea5d18f7a60898ddc62388103ce",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "f829eea5d18f7a60898ddc62388103ce",
@@ -7390,7 +7390,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "751a87853fc9fc4d1546a149cbd8fb3e",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "751a87853fc9fc4d1546a149cbd8fb3e",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "751a87853fc9fc4d1546a149cbd8fb3e",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ko-KR": {
     "/curriculum_content/2017/csd/csd1-2017.json": "a7c02b4e0fd6a6f57af63f3ebb3c260b",
@@ -7456,7 +7456,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "a7c02b4e0fd6a6f57af63f3ebb3c260b",
     "/curriculum_content/2021/csf/courseb-2021.json": "a7c02b4e0fd6a6f57af63f3ebb3c260b",
     "/curriculum_content/2021/csf/coursec-2021.json": "a7c02b4e0fd6a6f57af63f3ebb3c260b",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "a7c02b4e0fd6a6f57af63f3ebb3c260b",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "a7c02b4e0fd6a6f57af63f3ebb3c260b",
@@ -7587,7 +7587,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "30fec623d5ac57d7b6864dfda8847afe",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "30fec623d5ac57d7b6864dfda8847afe",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "30fec623d5ac57d7b6864dfda8847afe",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ku-IQ": {
     "/curriculum_content/2017/csd/csd1-2017.json": "639f7ce448d791b50bfb5a61115bf5eb",
@@ -7653,7 +7653,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "639f7ce448d791b50bfb5a61115bf5eb",
     "/curriculum_content/2021/csf/courseb-2021.json": "639f7ce448d791b50bfb5a61115bf5eb",
     "/curriculum_content/2021/csf/coursec-2021.json": "639f7ce448d791b50bfb5a61115bf5eb",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "639f7ce448d791b50bfb5a61115bf5eb",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "639f7ce448d791b50bfb5a61115bf5eb",
@@ -7784,7 +7784,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "269e665745f2b0e09bd187b36b08d222",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "269e665745f2b0e09bd187b36b08d222",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "269e665745f2b0e09bd187b36b08d222",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ky-KG": {
     "/curriculum_content/2017/csd/csd1-2017.json": "1ebe30a1392cb02e4ad266b329e59dff",
@@ -8016,7 +8016,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "1ffe0d40dbc63810aecf216bc4b093e3",
     "/curriculum_content/2021/csf/courseb-2021.json": "1ffe0d40dbc63810aecf216bc4b093e3",
     "/curriculum_content/2021/csf/coursec-2021.json": "1ffe0d40dbc63810aecf216bc4b093e3",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "1ffe0d40dbc63810aecf216bc4b093e3",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "1ffe0d40dbc63810aecf216bc4b093e3",
@@ -8147,7 +8147,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "1ff138782ed59bcb0ae1c86750af4b6d",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "1ff138782ed59bcb0ae1c86750af4b6d",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "1ff138782ed59bcb0ae1c86750af4b6d",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "lv-LV": {
     "/curriculum_content/2017/csd/csd1-2017.json": "7ca3431a7dcd7a771aa039ec3d4f9409",
@@ -8213,7 +8213,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "7ca3431a7dcd7a771aa039ec3d4f9409",
     "/curriculum_content/2021/csf/courseb-2021.json": "7ca3431a7dcd7a771aa039ec3d4f9409",
     "/curriculum_content/2021/csf/coursec-2021.json": "7ca3431a7dcd7a771aa039ec3d4f9409",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "7ca3431a7dcd7a771aa039ec3d4f9409",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "7ca3431a7dcd7a771aa039ec3d4f9409",
@@ -8344,7 +8344,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "81f4561c8d7d9890f43b5e2ef84efb4d",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "81f4561c8d7d9890f43b5e2ef84efb4d",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "81f4561c8d7d9890f43b5e2ef84efb4d",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "mi-NZ": {
     "/curriculum_content/2017/csd/csd1-2017.json": "abcf4e29d1377a6938d0a40e36e5a5ae",
@@ -8410,7 +8410,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "2e16127ed3fbafbc6edd08dfeb3f63cb",
     "/curriculum_content/2021/csf/courseb-2021.json": "2e16127ed3fbafbc6edd08dfeb3f63cb",
     "/curriculum_content/2021/csf/coursec-2021.json": "2e16127ed3fbafbc6edd08dfeb3f63cb",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "2e16127ed3fbafbc6edd08dfeb3f63cb",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "2e16127ed3fbafbc6edd08dfeb3f63cb",
@@ -8541,7 +8541,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "f39f07d40d5705bb624b7209e50e9b7b",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "f39f07d40d5705bb624b7209e50e9b7b",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "f39f07d40d5705bb624b7209e50e9b7b",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "mk-MK": {
     "/curriculum_content/2017/csd/csd1-2017.json": "30731d16c61a5836e3aabfecd467c113",
@@ -8607,7 +8607,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "fff1056b220c68bf6ccfe190c58829d9",
     "/curriculum_content/2021/csf/courseb-2021.json": "fff1056b220c68bf6ccfe190c58829d9",
     "/curriculum_content/2021/csf/coursec-2021.json": "fff1056b220c68bf6ccfe190c58829d9",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "fff1056b220c68bf6ccfe190c58829d9",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "fff1056b220c68bf6ccfe190c58829d9",
@@ -8738,7 +8738,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "29920c6d2d6d595979e31684910d7228",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "29920c6d2d6d595979e31684910d7228",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "29920c6d2d6d595979e31684910d7228",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "mn-MN": {
     "/curriculum_content/2017/csd/csd1-2017.json": "6708db2b1f412f1f82e8c08abc985b1c",
@@ -8804,7 +8804,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "6708db2b1f412f1f82e8c08abc985b1c",
     "/curriculum_content/2021/csf/courseb-2021.json": "6708db2b1f412f1f82e8c08abc985b1c",
     "/curriculum_content/2021/csf/coursec-2021.json": "6708db2b1f412f1f82e8c08abc985b1c",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "6708db2b1f412f1f82e8c08abc985b1c",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "6708db2b1f412f1f82e8c08abc985b1c",
@@ -8935,7 +8935,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "2b3809d03128168b2e8ec8200cda4ea9",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "2b3809d03128168b2e8ec8200cda4ea9",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "2b3809d03128168b2e8ec8200cda4ea9",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "mr-IN": {
     "/curriculum_content/2017/csd/csd1-2017.json": "917fb0798b046ca98c6feaa7c712cdc2",
@@ -9001,7 +9001,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "14bced424b61f1025c34cd2d6f1c24a0",
     "/curriculum_content/2021/csf/courseb-2021.json": "14bced424b61f1025c34cd2d6f1c24a0",
     "/curriculum_content/2021/csf/coursec-2021.json": "14bced424b61f1025c34cd2d6f1c24a0",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "917fb0798b046ca98c6feaa7c712cdc2",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "14bced424b61f1025c34cd2d6f1c24a0",
@@ -9132,7 +9132,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "608e015fb8787d4830388e02d5b52969",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "608e015fb8787d4830388e02d5b52969",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "608e015fb8787d4830388e02d5b52969",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ms-MY": {
     "/curriculum_content/2017/csd/csd1-2017.json": "2c99eaa8e03093a7b1de2b64866d2ff7",
@@ -9198,7 +9198,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "2c99eaa8e03093a7b1de2b64866d2ff7",
     "/curriculum_content/2021/csf/courseb-2021.json": "2c99eaa8e03093a7b1de2b64866d2ff7",
     "/curriculum_content/2021/csf/coursec-2021.json": "2c99eaa8e03093a7b1de2b64866d2ff7",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "2c99eaa8e03093a7b1de2b64866d2ff7",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "2c99eaa8e03093a7b1de2b64866d2ff7",
@@ -9329,7 +9329,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "6e1628d9fe231991263d7828e08b9dc7",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "6e1628d9fe231991263d7828e08b9dc7",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "6e1628d9fe231991263d7828e08b9dc7",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "mt-MT": {
     "/curriculum_content/2017/csd/csd1-2017.json": "1d07a570ef8615caf36396a197ffc5bf",
@@ -9395,7 +9395,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "89ace7af5fce33859675e4e88c7ec4ce",
     "/curriculum_content/2021/csf/courseb-2021.json": "89ace7af5fce33859675e4e88c7ec4ce",
     "/curriculum_content/2021/csf/coursec-2021.json": "89ace7af5fce33859675e4e88c7ec4ce",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "89ace7af5fce33859675e4e88c7ec4ce",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "89ace7af5fce33859675e4e88c7ec4ce",
@@ -9526,7 +9526,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "029a017743955f0cd6ad2e0a41616f57",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "029a017743955f0cd6ad2e0a41616f57",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "029a017743955f0cd6ad2e0a41616f57",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "my-MM": {
     "/curriculum_content/2017/csd/csd1-2017.json": "1ebba60852fbf39a572a045f0e9889c8",
@@ -9592,7 +9592,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "4b9b2f242a068e47714f450ff009e539",
     "/curriculum_content/2021/csf/courseb-2021.json": "4b9b2f242a068e47714f450ff009e539",
     "/curriculum_content/2021/csf/coursec-2021.json": "4b9b2f242a068e47714f450ff009e539",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "4b9b2f242a068e47714f450ff009e539",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "4b9b2f242a068e47714f450ff009e539",
@@ -9723,7 +9723,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "4a13f5bd139d5754bba606ae0a640414",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "4a13f5bd139d5754bba606ae0a640414",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "4a13f5bd139d5754bba606ae0a640414",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "ne-NP": {
     "/curriculum_content/2017/csd/csd1-2017.json": "0b60e2ffeed997d94c8e65c0459f04e2",
@@ -9789,7 +9789,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "0b60e2ffeed997d94c8e65c0459f04e2",
     "/curriculum_content/2021/csf/courseb-2021.json": "0b60e2ffeed997d94c8e65c0459f04e2",
     "/curriculum_content/2021/csf/coursec-2021.json": "0b60e2ffeed997d94c8e65c0459f04e2",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "0b60e2ffeed997d94c8e65c0459f04e2",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "0b60e2ffeed997d94c8e65c0459f04e2",
@@ -9920,7 +9920,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "c837ceb1f1185d7d970a99673fd0f49c",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "c837ceb1f1185d7d970a99673fd0f49c",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "c837ceb1f1185d7d970a99673fd0f49c",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "nl-NL": {
     "/curriculum_content/2017/csd/csd1-2017.json": "3bb59164c68dc2cffca42fa8123f70a5",
@@ -9986,7 +9986,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "3bb59164c68dc2cffca42fa8123f70a5",
     "/curriculum_content/2021/csf/courseb-2021.json": "3bb59164c68dc2cffca42fa8123f70a5",
     "/curriculum_content/2021/csf/coursec-2021.json": "3bb59164c68dc2cffca42fa8123f70a5",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "3bb59164c68dc2cffca42fa8123f70a5",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "3bb59164c68dc2cffca42fa8123f70a5",
@@ -10117,7 +10117,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "f4c6c0877345cc4da31e21b8b439fd26",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "f4c6c0877345cc4da31e21b8b439fd26",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "f4c6c0877345cc4da31e21b8b439fd26",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "nn-NO": {
     "/curriculum_content/2017/csd/csd1-2017.json": "6fd662092af7a9f498e6a30615b72aba",
@@ -10183,7 +10183,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "b6401dc31bcfdfbf90369902a8062ed5",
     "/curriculum_content/2021/csf/courseb-2021.json": "b6401dc31bcfdfbf90369902a8062ed5",
     "/curriculum_content/2021/csf/coursec-2021.json": "b6401dc31bcfdfbf90369902a8062ed5",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "b6401dc31bcfdfbf90369902a8062ed5",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "b6401dc31bcfdfbf90369902a8062ed5",
@@ -10314,7 +10314,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "0b15a0dca8ee9d73fdf73d7a474968ec",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "0b15a0dca8ee9d73fdf73d7a474968ec",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "0b15a0dca8ee9d73fdf73d7a474968ec",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "no-NO": {
     "/curriculum_content/2017/csd/csd1-2017.json": "e68e79619c741ee73b9d9719d97582b5",
@@ -10380,7 +10380,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "f81f3a783a57f2abedb5b7c6c4c5ca8f",
     "/curriculum_content/2021/csf/courseb-2021.json": "f81f3a783a57f2abedb5b7c6c4c5ca8f",
     "/curriculum_content/2021/csf/coursec-2021.json": "f81f3a783a57f2abedb5b7c6c4c5ca8f",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "f81f3a783a57f2abedb5b7c6c4c5ca8f",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "f81f3a783a57f2abedb5b7c6c4c5ca8f",
@@ -10511,7 +10511,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "2563380768ca3e9a2d1e7aafc68d41f8",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "2563380768ca3e9a2d1e7aafc68d41f8",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "2563380768ca3e9a2d1e7aafc68d41f8",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "pl-PL": {
     "/curriculum_content/2017/csd/csd1-2017.json": "9a87654cea49c99d5be1e79dd7170174",
@@ -10577,7 +10577,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "e64415a5bb6219cb0675e57f7883aa8f",
     "/curriculum_content/2021/csf/courseb-2021.json": "e64415a5bb6219cb0675e57f7883aa8f",
     "/curriculum_content/2021/csf/coursec-2021.json": "e64415a5bb6219cb0675e57f7883aa8f",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "e64415a5bb6219cb0675e57f7883aa8f",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "e64415a5bb6219cb0675e57f7883aa8f",
@@ -10708,7 +10708,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "15387b294b601f218ef481d655e7c678",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "15387b294b601f218ef481d655e7c678",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "15387b294b601f218ef481d655e7c678",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ps-AF": {
     "/curriculum_content/2017/csd/csd1-2017.json": "0f6a4eec9c1ee77fd7ecd8b82b0ba9f5",
@@ -10940,7 +10940,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "8a210dbf8dc8df615b2fac5d685b02f5",
     "/curriculum_content/2021/csf/courseb-2021.json": "8a210dbf8dc8df615b2fac5d685b02f5",
     "/curriculum_content/2021/csf/coursec-2021.json": "a6d2e5d4705851e1b45622c40a9c390d",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "a6d2e5d4705851e1b45622c40a9c390d",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "a6d2e5d4705851e1b45622c40a9c390d",
@@ -11071,7 +11071,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "d47e580e78977715b5da4cc69cde4bb8",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "d47e580e78977715b5da4cc69cde4bb8",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "d47e580e78977715b5da4cc69cde4bb8",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "pt-PT": {
     "/curriculum_content/2017/csd/csd1-2017.json": "fd13e9714569e626676b2e40b6c489c7",
@@ -11137,7 +11137,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "fd13e9714569e626676b2e40b6c489c7",
     "/curriculum_content/2021/csf/courseb-2021.json": "fd13e9714569e626676b2e40b6c489c7",
     "/curriculum_content/2021/csf/coursec-2021.json": "fd13e9714569e626676b2e40b6c489c7",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "fd13e9714569e626676b2e40b6c489c7",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "fd13e9714569e626676b2e40b6c489c7",
@@ -11268,7 +11268,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "64eb79ab2e2b0b30a6f61d89a0b64e4a",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "64eb79ab2e2b0b30a6f61d89a0b64e4a",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "64eb79ab2e2b0b30a6f61d89a0b64e4a",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ro-RO": {
     "/curriculum_content/2017/csd/csd1-2017.json": "5fff9878433df7b985c1d873943960ed",
@@ -11334,7 +11334,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "eb540773bd09d1f14aaaafa9098ed3de",
     "/curriculum_content/2021/csf/courseb-2021.json": "eb540773bd09d1f14aaaafa9098ed3de",
     "/curriculum_content/2021/csf/coursec-2021.json": "eb540773bd09d1f14aaaafa9098ed3de",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "eb540773bd09d1f14aaaafa9098ed3de",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "eb540773bd09d1f14aaaafa9098ed3de",
@@ -11465,7 +11465,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "75d5ffc4922e73ade6d77c72a7135c5e",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "75d5ffc4922e73ade6d77c72a7135c5e",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "75d5ffc4922e73ade6d77c72a7135c5e",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ru-RU": {
     "/curriculum_content/2017/csd/csd1-2017.json": "cc67d718bd91d9ff452a07def585e190",
@@ -11531,7 +11531,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "75c0dec739732be71349b53bc4ce3a5c",
     "/curriculum_content/2021/csf/courseb-2021.json": "75c0dec739732be71349b53bc4ce3a5c",
     "/curriculum_content/2021/csf/coursec-2021.json": "75c0dec739732be71349b53bc4ce3a5c",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "75c0dec739732be71349b53bc4ce3a5c",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "75c0dec739732be71349b53bc4ce3a5c",
@@ -11662,7 +11662,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "1a2e92fdbe348590145f57c93cf1d6bd",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "1a2e92fdbe348590145f57c93cf1d6bd",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "1a2e92fdbe348590145f57c93cf1d6bd",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "se-FI": {
     "/curriculum_content/2017/csd/csd1-2017.json": "c66ebc1852fa02298ad1ef83789d61a7",
@@ -11728,7 +11728,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "c66ebc1852fa02298ad1ef83789d61a7",
     "/curriculum_content/2021/csf/courseb-2021.json": "c66ebc1852fa02298ad1ef83789d61a7",
     "/curriculum_content/2021/csf/coursec-2021.json": "c66ebc1852fa02298ad1ef83789d61a7",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "c66ebc1852fa02298ad1ef83789d61a7",
     "/curriculum_content/2021/csf/coursef-2021.json": "690ac58e59e4941e2e38a3186ed760b5",
     "/curriculum_content/2021/csf/express-2021.json": "c66ebc1852fa02298ad1ef83789d61a7",
@@ -11859,7 +11859,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "c99a55364178cc90556c1a93a13c4e19",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "c99a55364178cc90556c1a93a13c4e19",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "c99a55364178cc90556c1a93a13c4e19",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "sm-WS": {
     "/curriculum_content/2017/csd/csd1-2017.json": "c35720e889e4408e3f85009635a43dc7",
@@ -11925,7 +11925,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "c35720e889e4408e3f85009635a43dc7",
     "/curriculum_content/2021/csf/courseb-2021.json": "c35720e889e4408e3f85009635a43dc7",
     "/curriculum_content/2021/csf/coursec-2021.json": "c35720e889e4408e3f85009635a43dc7",
-    "/curriculum_content/2021/csf/coursed-2021.json": "5fadfaa69086896b389d381c9b88f7e6",
+    "/curriculum_content/2021/csf/coursed-2021.json": "f096611131fa5ace7757238e88cf5f55",
     "/curriculum_content/2021/csf/coursee-2021.json": "c35720e889e4408e3f85009635a43dc7",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "c35720e889e4408e3f85009635a43dc7",
@@ -12056,7 +12056,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "07858491c53ffcde858d809c502eda7a",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "07858491c53ffcde858d809c502eda7a",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "07858491c53ffcde858d809c502eda7a",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "si-LK": {
     "/curriculum_content/2017/csd/csd1-2017.json": "0fc931792a59e6a40d4f6e1b052dcf15",
@@ -12122,7 +12122,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "13595b7681887e07ad5fd55968506336",
     "/curriculum_content/2021/csf/courseb-2021.json": "13595b7681887e07ad5fd55968506336",
     "/curriculum_content/2021/csf/coursec-2021.json": "13595b7681887e07ad5fd55968506336",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "13595b7681887e07ad5fd55968506336",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "13595b7681887e07ad5fd55968506336",
@@ -12253,7 +12253,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "e798f772cde75609d6b44671482c28f7",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "e798f772cde75609d6b44671482c28f7",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "e798f772cde75609d6b44671482c28f7",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "sk-SK": {
     "/curriculum_content/2017/csd/csd1-2017.json": "61ad7d57bda8944693252da4c764eb7e",
@@ -12319,7 +12319,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "61ad7d57bda8944693252da4c764eb7e",
     "/curriculum_content/2021/csf/courseb-2021.json": "61ad7d57bda8944693252da4c764eb7e",
     "/curriculum_content/2021/csf/coursec-2021.json": "61ad7d57bda8944693252da4c764eb7e",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "61ad7d57bda8944693252da4c764eb7e",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "61ad7d57bda8944693252da4c764eb7e",
@@ -12450,7 +12450,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "874db8f168575ffbeb8e8c2dc843e66b",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "874db8f168575ffbeb8e8c2dc843e66b",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "874db8f168575ffbeb8e8c2dc843e66b",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "sl-SI": {
     "/curriculum_content/2017/csd/csd1-2017.json": "e3383c670ef0886edc4c8fb6d64cd042",
@@ -12516,7 +12516,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "58266bed1d0c066a8834b7990a573dd6",
     "/curriculum_content/2021/csf/courseb-2021.json": "58266bed1d0c066a8834b7990a573dd6",
     "/curriculum_content/2021/csf/coursec-2021.json": "58266bed1d0c066a8834b7990a573dd6",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "58266bed1d0c066a8834b7990a573dd6",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "58266bed1d0c066a8834b7990a573dd6",
@@ -12647,7 +12647,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "e6cb45aa8c169d962c0efa05c2696a87",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "e6cb45aa8c169d962c0efa05c2696a87",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "e6cb45aa8c169d962c0efa05c2696a87",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "sq-AL": {
     "/curriculum_content/2017/csd/csd1-2017.json": "db58b0c2939dced715a15d6aee333238",
@@ -12713,7 +12713,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "712d1396cddd414c83ccfc08bbdeb20c",
     "/curriculum_content/2021/csf/courseb-2021.json": "712d1396cddd414c83ccfc08bbdeb20c",
     "/curriculum_content/2021/csf/coursec-2021.json": "712d1396cddd414c83ccfc08bbdeb20c",
-    "/curriculum_content/2021/csf/coursed-2021.json": "2d847b3f307cb2e6f6a131c5dbf754ed",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "712d1396cddd414c83ccfc08bbdeb20c",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "712d1396cddd414c83ccfc08bbdeb20c",
@@ -12844,7 +12844,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "cf4dc9a8343596ee621f8289b3c03f72",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "cf4dc9a8343596ee621f8289b3c03f72",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "cf4dc9a8343596ee621f8289b3c03f72",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "sr-SP": {
     "/curriculum_content/2017/csd/csd1-2017.json": "c2f1f6a3f291e24ae34e895b60c7b2a7",
@@ -12910,7 +12910,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "073fb99b461a2158b195c0a58ad8e2bd",
     "/curriculum_content/2021/csf/courseb-2021.json": "073fb99b461a2158b195c0a58ad8e2bd",
     "/curriculum_content/2021/csf/coursec-2021.json": "073fb99b461a2158b195c0a58ad8e2bd",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "073fb99b461a2158b195c0a58ad8e2bd",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "073fb99b461a2158b195c0a58ad8e2bd",
@@ -13041,7 +13041,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "db2f121a17118cd2ea4588a2ad05cc57",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "db2f121a17118cd2ea4588a2ad05cc57",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "db2f121a17118cd2ea4588a2ad05cc57",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "sv-SE": {
     "/curriculum_content/2017/csd/csd1-2017.json": "eaae303600f659432824187f2ff5de83",
@@ -13107,7 +13107,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "54b928926b300ad641754c7683b3a8e4",
     "/curriculum_content/2021/csf/courseb-2021.json": "55458b08203137ac2963f7e6b9ed4ea3",
     "/curriculum_content/2021/csf/coursec-2021.json": "a4dcf52827251ca4e7f459a82f6f57a2",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "5739ef1b08bd41174550bdcd66d81f17",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "f885f7126914f6ef8aa784a8fa2ef492",
@@ -13238,7 +13238,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "310003471fabae3749bf3745524082ec",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "310003471fabae3749bf3745524082ec",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "310003471fabae3749bf3745524082ec",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ta-IN": {
     "/curriculum_content/2017/csd/csd1-2017.json": "eb07e21b8646e6e95be21b0bc754336d",
@@ -13304,7 +13304,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "eb07e21b8646e6e95be21b0bc754336d",
     "/curriculum_content/2021/csf/courseb-2021.json": "eb07e21b8646e6e95be21b0bc754336d",
     "/curriculum_content/2021/csf/coursec-2021.json": "eb07e21b8646e6e95be21b0bc754336d",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "eb07e21b8646e6e95be21b0bc754336d",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "eb07e21b8646e6e95be21b0bc754336d",
@@ -13435,7 +13435,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "dcbc7a75b1eab2d77337b9555e60a881",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "dcbc7a75b1eab2d77337b9555e60a881",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "dcbc7a75b1eab2d77337b9555e60a881",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "te-IN": {
     "/curriculum_content/2017/csd/csd1-2017.json": "97a23e16be7d9bc5e5170be9d7a58cd8",
@@ -13501,7 +13501,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "b4eb24362b9c8202ae03b5f10cefa447",
     "/curriculum_content/2021/csf/courseb-2021.json": "b4eb24362b9c8202ae03b5f10cefa447",
     "/curriculum_content/2021/csf/coursec-2021.json": "b4eb24362b9c8202ae03b5f10cefa447",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "b4eb24362b9c8202ae03b5f10cefa447",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "b4eb24362b9c8202ae03b5f10cefa447",
@@ -13632,7 +13632,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "c47fc4136f24fa3c0916b2af209a9bdc",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "c47fc4136f24fa3c0916b2af209a9bdc",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "c47fc4136f24fa3c0916b2af209a9bdc",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "tg-TJ": {
     "/curriculum_content/2017/csd/csd1-2017.json": "c22684a21ecd29b0f676489016246b20",
@@ -13864,7 +13864,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "7e5876ef24f5bcb61a7ed744b5a41539",
     "/curriculum_content/2021/csf/courseb-2021.json": "7e5876ef24f5bcb61a7ed744b5a41539",
     "/curriculum_content/2021/csf/coursec-2021.json": "7e5876ef24f5bcb61a7ed744b5a41539",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "42ac4bc8a2249bc1a2320c548037c083",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "7e5876ef24f5bcb61a7ed744b5a41539",
@@ -13995,7 +13995,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "8dd1510b89f55a02243bdd5477b906c6",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "8dd1510b89f55a02243bdd5477b906c6",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "8dd1510b89f55a02243bdd5477b906c6",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "tr-TR": {
     "/curriculum_content/2017/csd/csd1-2017.json": "d91ba8664315d3d25e12311b0be8109b",
@@ -14061,7 +14061,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "1a0c27edcbb89307141b8cb8d6d9a51a",
     "/curriculum_content/2021/csf/courseb-2021.json": "1a0c27edcbb89307141b8cb8d6d9a51a",
     "/curriculum_content/2021/csf/coursec-2021.json": "1a0c27edcbb89307141b8cb8d6d9a51a",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "1a0c27edcbb89307141b8cb8d6d9a51a",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "1a0c27edcbb89307141b8cb8d6d9a51a",
@@ -14192,7 +14192,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "39b47fcabfc023f0f6377dc85a639290",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "39b47fcabfc023f0f6377dc85a639290",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "39b47fcabfc023f0f6377dc85a639290",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "uk-UA": {
     "/curriculum_content/2017/csd/csd1-2017.json": "a91e3f1848c4085d155a6bf3223579cf",
@@ -14258,7 +14258,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "a91e3f1848c4085d155a6bf3223579cf",
     "/curriculum_content/2021/csf/courseb-2021.json": "a91e3f1848c4085d155a6bf3223579cf",
     "/curriculum_content/2021/csf/coursec-2021.json": "a91e3f1848c4085d155a6bf3223579cf",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "a91e3f1848c4085d155a6bf3223579cf",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "a91e3f1848c4085d155a6bf3223579cf",
@@ -14389,7 +14389,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "df7ebdfb8fdf6acba6e77be333688522",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "df7ebdfb8fdf6acba6e77be333688522",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "df7ebdfb8fdf6acba6e77be333688522",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "ur-PK": {
     "/curriculum_content/2017/csd/csd1-2017.json": "d04444a2ce537d869347d057708aef29",
@@ -14455,7 +14455,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "f6d14cfee1dd78b56e2ff1f251b8a13f",
     "/curriculum_content/2021/csf/courseb-2021.json": "f6d14cfee1dd78b56e2ff1f251b8a13f",
     "/curriculum_content/2021/csf/coursec-2021.json": "f6d14cfee1dd78b56e2ff1f251b8a13f",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "f6d14cfee1dd78b56e2ff1f251b8a13f",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "f6d14cfee1dd78b56e2ff1f251b8a13f",
@@ -14586,7 +14586,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "7d59e095b8417be634b21d78fa22f155",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "7d59e095b8417be634b21d78fa22f155",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "7d59e095b8417be634b21d78fa22f155",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "uz-UZ": {
     "/curriculum_content/2017/csd/csd1-2017.json": "0fb3086347437c8348ed4cad8ac97c00",
@@ -14652,7 +14652,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "0fb3086347437c8348ed4cad8ac97c00",
     "/curriculum_content/2021/csf/courseb-2021.json": "0fb3086347437c8348ed4cad8ac97c00",
     "/curriculum_content/2021/csf/coursec-2021.json": "0fb3086347437c8348ed4cad8ac97c00",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "0fb3086347437c8348ed4cad8ac97c00",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "0fb3086347437c8348ed4cad8ac97c00",
@@ -14783,7 +14783,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "439cabb3bc9a70aa8a2def1c7b4b831a",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "439cabb3bc9a70aa8a2def1c7b4b831a",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "439cabb3bc9a70aa8a2def1c7b4b831a",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "vi-VN": {
     "/curriculum_content/2017/csd/csd1-2017.json": "15032ee1687b9d94b072e813512adaca",
@@ -14849,7 +14849,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "15032ee1687b9d94b072e813512adaca",
     "/curriculum_content/2021/csf/courseb-2021.json": "8e65738543b6a04b2baac2cc03f37c84",
     "/curriculum_content/2021/csf/coursec-2021.json": "15032ee1687b9d94b072e813512adaca",
-    "/curriculum_content/2021/csf/coursed-2021.json": "8a0073f0b8a50ae4ce22c9b7ff9c224b",
+    "/curriculum_content/2021/csf/coursed-2021.json": "33f0aba79fd6b0ac57dfbedabaa123e8",
     "/curriculum_content/2021/csf/coursee-2021.json": "15032ee1687b9d94b072e813512adaca",
     "/curriculum_content/2021/csf/coursef-2021.json": "1261c1f888ebec3c3f2b50292c717c3f",
     "/curriculum_content/2021/csf/express-2021.json": "15032ee1687b9d94b072e813512adaca",
@@ -14980,7 +14980,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "a8a67f879a2b5ea0566af1517441c4eb",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "a8a67f879a2b5ea0566af1517441c4eb",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "a8a67f879a2b5ea0566af1517441c4eb",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "b6ce7ab2c72ff6fc891d28c517d5a2a2"
   },
   "zh-CN": {
     "/curriculum_content/2017/csd/csd1-2017.json": "602b5dfbc718b18c50d087d90739c451",
@@ -15046,7 +15046,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "602b5dfbc718b18c50d087d90739c451",
     "/curriculum_content/2021/csf/courseb-2021.json": "602b5dfbc718b18c50d087d90739c451",
     "/curriculum_content/2021/csf/coursec-2021.json": "602b5dfbc718b18c50d087d90739c451",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "602b5dfbc718b18c50d087d90739c451",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "602b5dfbc718b18c50d087d90739c451",
@@ -15177,7 +15177,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "ccda5dc529317d34a12d93975badd2ad",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "ccda5dc529317d34a12d93975badd2ad",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "ccda5dc529317d34a12d93975badd2ad",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "zh-TW": {
     "/curriculum_content/2017/csd/csd1-2017.json": "24d065e9a0256132b5b81cbbf093f4da",
@@ -15243,7 +15243,7 @@
     "/curriculum_content/2021/csf/coursea-2021.json": "22e79ad28f4edcb7eca68e43a407d683",
     "/curriculum_content/2021/csf/courseb-2021.json": "22e79ad28f4edcb7eca68e43a407d683",
     "/curriculum_content/2021/csf/coursec-2021.json": "22e79ad28f4edcb7eca68e43a407d683",
-    "/curriculum_content/2021/csf/coursed-2021.json": "02188a4f4b7c296677f32cbf53503b6a",
+    "/curriculum_content/2021/csf/coursed-2021.json": "7f7449d8db2e399bee564e7e5af6f19c",
     "/curriculum_content/2021/csf/coursee-2021.json": "22e79ad28f4edcb7eca68e43a407d683",
     "/curriculum_content/2021/csf/coursef-2021.json": "308232e32a0a27fec847f17260014698",
     "/curriculum_content/2021/csf/express-2021.json": "22e79ad28f4edcb7eca68e43a407d683",
@@ -15374,7 +15374,7 @@
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml1.json": "d3eb376b0c346b503226dc62e8382ebc",
     "/curriculum_content/2023/self-paced-pl-aiml/self-paced-pl-aiml2.json": "d3eb376b0c346b503226dc62e8382ebc",
     "/curriculum_content/2024/self-paced-exploring-gen-ai/self-paced-pl-k5-getting-started.json": "d3eb376b0c346b503226dc62e8382ebc",
-    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "32991f94af05059273fff89d5185f324"
+    "/curriculum_content/2025/mix-move-ai/mix-move-ai-2025.json": "91998a53711ce769815f9520a2e08b99"
   },
   "zu-ZA": {
     "/curriculum_content/2017/csd/csd1-2017.json": "745cfb643f00c28109524aeacf9c03b5",
