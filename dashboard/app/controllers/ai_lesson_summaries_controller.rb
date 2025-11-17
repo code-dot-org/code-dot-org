@@ -15,6 +15,17 @@ class AiLessonSummariesController < ApplicationController
     end
   end
 
+  # GET /ai_lesson_summaries/ai_lesson_summaries_transcript?lesson_id=2
+  def ai_lesson_summaries_transcript
+    @ai_lesson_summary_transcript = AiLessonSummariesHelper.get_ai_lesson_summary(params[:lesson_id], AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_TRANSCRIPT])
+
+    if @ai_lesson_summary_transcript
+      render json: @ai_lesson_summary_transcript[:json].as_json
+    else
+      render json: {error: 'Failure to generate transcript'}, status: :internal_server_error
+    end
+  end
+
   def perform_ai_lesson_summaries_by_unit
     unit = Unit.find(params[:unit_id])
     lesson_ids = []

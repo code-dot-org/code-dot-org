@@ -80,7 +80,7 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
     lesson_beats: an ordered list of the main parts of the lesson, including activities and new vocabulary terms,
     misconceptions: an unordered list including 2 - 3 misconceptions students might have about the material being covered,
     tips: additional strategies or ideas to help with teaching the lesson}",
-    PODCAST_TRANSCRIPT: "Your summary should be the transcript of a podcast returned as a string. It should be composed as follows:
+    PODCAST_TRANSCRIPT: "Your summary should be the transcript of a podcast returned as a string. It should be written in the second person and composed as follows:
     - First, start with the opening sentence: You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class
     - Second, give a one sentence overview that lists the lesson name and describes what its about
     - Third, in one to two paragraphs summarize the lesson's Learning Objectives, an overview of what the lesson entails, and describe the activities and new vocabulary terms
@@ -88,7 +88,7 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
     - Fifth, end with a closing remark that repeats the name of the lesson and thanks the teacher for listening.",
   }
 
-  def self.get_system_prompt(lesson_id, response_format = RESPONSE_FORMATS[:BRIEF_SUMMARY])
+  def self.get_system_prompt(lesson_id, response_format)
     lesson_plan = get_lesson_materials(lesson_id)
     personalization = ""
     if current_user
