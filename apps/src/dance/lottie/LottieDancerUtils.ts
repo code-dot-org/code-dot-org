@@ -20,7 +20,7 @@ import {
   LottieShapeAny,
   LottieShapeFillOrStroke,
   LottieShapeGroup,
-  LocalStoragePayload,
+  SessionStoragePayload,
   Palette,
   ResolveDancerAssetsOpts,
   ResolvedDancerAssets,
@@ -546,7 +546,7 @@ export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
  * Resolves the generated dancer assets (head PNG + metadata JSON) and optional body PNG and metadata JSON.
  * Source of truth order:
  *   1) URL params (?path=...&dancer=...) use exactly that dancer and/or (?body=...) for body
- *   2) localStorage('dancer-ai-generate') with {adlibOption, choices[], variant}
+ *   2) sessionStorage('dancer-ai-generate') with {adlibOption, choices[], variant}
  *   3) hardcoded fallbacks (DEFAULT_HEAD_URL / DEFAULT_METADATA_URL)
  * The renderer will not replace the body unless a bodyUrl is returned here.
  * TODO: Use channel ID instead of local storage.
@@ -567,29 +567,32 @@ export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
     bodyMetadataUrl: DEFAULT_BODY_METADATA_URL,
   };
 
-  // 2) Generated dancer from localStorage
-  let localStorageOptions: LocalStoragePayload = null;
+  // 2) Generated dancer from sessionStorage
+  let sessionStorageOptions: SessionStoragePayload = null;
   let extraVariant: number | null = null;
   try {
-    const raw = localStorage.getItem(GENERATED_DANCER_STORAGE_KEY);
-    localStorageOptions = raw ? (JSON.parse(raw) as LocalStoragePayload) : null;
-  } catch {
-    localStorageOptions = null;
-  }
-  if (localStorageOptions) {
-    const path = localStorageOptions?.path ?? localStorageOptions?.adlibOption;
-    const choices = Array.isArray(localStorageOptions?.choices)
-      ? (localStorageOptions!.choices as string[])
+    const raw = sessionStorage.getItem(GENERATED_DANCER_STORAGE_KEY);
+    sessionStorageOptions = raw
+      ? (JSON.parse(raw) as SessionStoragePayload)
       : null;
-    const choicesExtra = Array.isArray(localStorageOptions?.choicesExtra)
-      ? (localStorageOptions!.choicesExtra as string[])
+  } catch {
+    sessionStorageOptions = null;
+  }
+  if (sessionStorageOptions) {
+    const path =
+      sessionStorageOptions?.path ?? sessionStorageOptions?.adlibOption;
+    const choices = Array.isArray(sessionStorageOptions?.choices)
+      ? (sessionStorageOptions!.choices as string[])
+      : null;
+    const choicesExtra = Array.isArray(sessionStorageOptions?.choicesExtra)
+      ? (sessionStorageOptions!.choicesExtra as string[])
       : null;
     extraVariant =
-      localStorageOptions?.extraVariant ??
+      sessionStorageOptions?.extraVariant ??
       // Keep bodyVariant for backward compatibility.
-      localStorageOptions?.bodyVariant ??
+      sessionStorageOptions?.bodyVariant ??
       null;
-    const variant = localStorageOptions?.variant;
+    const variant = sessionStorageOptions?.variant;
 
     if (path && choices && choices.length > 0 && typeof variant === 'number') {
       const assets = getGeneratedDancerAssets(

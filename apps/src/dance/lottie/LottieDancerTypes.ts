@@ -184,7 +184,7 @@ export type ResolvedDancerAssets = {
 export type ResolveDancerAssetsOpts = {
   /** Tag appended to headUrl as `?src=...` to avoid CORS errors */
   sourceTag?: string; // e.g., 'blockly' | 'canvas'
-  getLocalStorage?: (key: string) => string | null;
+  getSessionStorage?: (key: string) => string | null;
 };
 
-export type LocalStoragePayload = GeneratedDancerMetadata | null;
+export type SessionStoragePayload = GeneratedDancerMetadata | null;
