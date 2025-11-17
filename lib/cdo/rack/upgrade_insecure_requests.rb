@@ -39,22 +39,19 @@ module Rack
         # http://www.w3.org/TR/upgrade-insecure-requests/#recommendations
         # http://www.w3.org/TR/upgrade-insecure-requests/#reporting-upgrades
 
-        policies = []
-        if ssl?(env)
-          # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
-          policies += [
-            "default-src 'self' https:",
-            "frame-src 'self' https: blob:",
-            "worker-src 'self' blob: ",
-            "child-src 'self' blob: ",
-            "script-src 'self' https: 'unsafe-inline' https://vaas.acapela-group.com 'unsafe-eval'",
-            "style-src 'self' https: 'unsafe-inline'",
-            "img-src 'self' https: data: blob: https://*.code.org",
-            "font-src 'self' https: data:",
-            "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com http://localhost:8080 https://curriculum.code.org/ wss://*.code.org",
-            "media-src 'self' https: data: https://*.code.org http://vaas.acapela-group.com"
-          ]
-        end
+        # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
+        policies = [
+          "default-src 'self' https:",
+          "frame-src 'self' https: blob:",
+          "worker-src 'self' blob: ",
+          "child-src 'self' blob: ",
+          "script-src 'self' https: 'unsafe-inline' https://vaas.acapela-group.com 'unsafe-eval'",
+          "style-src 'self' https: 'unsafe-inline'",
+          "img-src 'self' https: data: blob: https://*.code.org",
+          "font-src 'self' https: data:",
+          "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com http://localhost:8080 https://curriculum.code.org/ wss://*.code.org",
+          "media-src 'self' https: data: https://*.code.org http://vaas.acapela-group.com"
+        ]
 
         # If the DCDO or CDO allowed_iframe_ancestors configuration variable is
         # defined, override the default SAMEORIGIN policy to allow the
