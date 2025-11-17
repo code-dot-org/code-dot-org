@@ -6,13 +6,14 @@
   "original_script_names": [
     "aif2-tutor-pilot-2025"
   ],
-  "published_state": "beta",
+  "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "foundations-of-ai-programming-tutor-pilot",
     "numbered_units": "auto",
+    "pilot_experiment": "broad-tutor-aif",
     "version_year": "2025"
   },
   "resources": [

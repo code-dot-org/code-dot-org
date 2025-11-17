@@ -66,7 +66,7 @@ export default class LottieDancerRenderer {
   private anim: AnimationItem | null = null;
   private totalFrames: number | null = null;
 
-  // Values pulled from appConfig/localStorage
+  // Values pulled from appConfig/sessionStorage
   private readonly headScale: number;
   private cachedAnimationData: {[key: string]: LottieJSON} = {};
   private skeletonNamePromise?: Promise<string>;
