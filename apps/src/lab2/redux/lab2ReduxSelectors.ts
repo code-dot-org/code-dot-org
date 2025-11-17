@@ -32,7 +32,7 @@ export const isProjectTemplateLevel = (state: {lab: LabState}) =>
   !!state.lab.levelProperties?.projectTemplateLevelName;
 
 // Returns true if the workspace is permanently read-only.
-// This excludes temporary read-only states like running/validating.
+// This excludes temporary read-only states such as running/validating.
 export const isPermanentlyReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
   const isEditingExemplar = getAppOptionsEditingExemplar();
@@ -49,9 +49,8 @@ export const isPermanentlyReadOnlyWorkspace = (state: RootState) => {
   // the level is frozen, the level is a read-only predict level or in widget view.
   const isOwner = state.lab.channel?.isOwner;
   const isFrozen = !!state.lab.channel?.frozen;
-  const readOnlyPredictLevel = isReadOnlyPredictLevel(state);
 
-  return !isOwner || isFrozen || readOnlyPredictLevel || isWidgetView;
+  return !isOwner || isFrozen || isWidgetView;
 };
 
 // This may depend on more factors, such as share.
@@ -61,6 +60,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
 
   const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
   const isViewingOldVersion = state.lab2Project.viewingOldVersion;
+  const readOnlyPredictLevel = isReadOnlyPredictLevel(state);
 
   // Also check for temporary read-only state (running/validating).
   const isRunningAndReadonly =
@@ -71,7 +71,8 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     isPermanentlyReadOnly ||
     isRunningAndReadonly ||
     hasSubmitted ||
-    isViewingOldVersion
+    isViewingOldVersion ||
+    readOnlyPredictLevel
   );
 };
 
@@ -80,7 +81,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
 // Returns if the current state represents a predict level that should be read only.
 // If the predict level code is not editable after submit or the user has not submitted a response,
 // the predict level is read only.
-export const isReadOnlyPredictLevel = (state: RootState) => {
+function isReadOnlyPredictLevel(state: RootState) {
   const isPredictLevel =
     state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
   let isReadOnlyPredictLevel = isPredictLevel;
@@ -95,7 +96,7 @@ export const isReadOnlyPredictLevel = (state: RootState) => {
       !isEditableAfterSubmit || !hasSubmittedPredictResponse;
   }
   return isReadOnlyPredictLevel;
-};
+}
 
 // Currently only Python Lab disables editing while code is running.
 function shouldBeReadonlyWhileRunning(state: RootState) {
