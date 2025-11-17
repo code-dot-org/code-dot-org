@@ -463,7 +463,7 @@ const DanceView: React.FunctionComponent<{
       if (guideMode === 'aiCodeGenerate') {
         Blockly.extraScrollHeight = 250;
       }
-      const toolboxFromStorage = localStorage.getItem(
+      const toolboxFromStorage = sessionStorage.getItem(
         `flyout-${levelProperties.id}`
       );
       // GenerateDance levels depend upon a generated toolbox.

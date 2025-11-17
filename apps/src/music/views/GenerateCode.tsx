@@ -4,6 +4,7 @@ import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
+import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -238,6 +239,14 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const parentProperties = useParentLevelProperties();
   const isStandalone =
     levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
+  const sublevelOnContinue = useCallback(() => {
+    dispatch(
+      sendSuccessReportForLevel(
+        levelProperties.id.toString(),
+        levelProperties.appName
+      )
+    );
+  }, [dispatch, levelProperties.appName, levelProperties.id]);
 
   const levelSpecificId = `generate-panel-${levelProperties.id}`;
   if (!packId) {
@@ -437,6 +446,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 hasEdited={true}
                 isRunning={false}
                 className={styles.buttonWide}
+                // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
+                onContinue={parentProperties ? sublevelOnContinue : undefined}
               />
             )}
           </div>
