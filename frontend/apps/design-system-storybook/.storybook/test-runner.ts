@@ -22,8 +22,9 @@ const config: TestRunnerConfig = {
           : undefined;
 
     // Get that viewport configuration
-    const viewportParameter =
-      INITIAL_VIEWPORTS[viewportName] || MINIMAL_VIEWPORTS[viewportName];
+    const viewportParameter = viewportName
+      ? INITIAL_VIEWPORTS[viewportName] || MINIMAL_VIEWPORTS[viewportName]
+      : undefined;
 
     // If we found one, apply the viewport dimensions
     if (viewportParameter) {
