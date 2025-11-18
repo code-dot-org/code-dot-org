@@ -13,6 +13,7 @@ import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
+  isReadOnlyPredictLevel,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -145,6 +146,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace); // includes running/validating.
   const isPermanentlyReadOnly = useAppSelector(isPermanentlyReadOnlyWorkspace);
+  const isReadOnlyPredict = useAppSelector(isReadOnlyPredictLevel);
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
@@ -157,8 +159,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
-  const isPredictLevel =
-    instructionsProps.levelProperties.predictSettings?.isPredictLevel || false;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const dispatch = useAppDispatch();
 
@@ -215,8 +215,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // Version history is also hidden on predict levels and widget view.
     const versionHistoryHidden =
       (isPermanentlyReadOnly && !viewAsUserId) ||
-      isPredictLevel ||
-      isWidgetView;
+      isWidgetView ||
+      isReadOnlyPredict;
     if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
         <VersionHistoryPanel
@@ -257,7 +257,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorVisible,
     isPermanentlyReadOnly,
     viewAsUserId,
-    isPredictLevel,
     isWidgetView,
     versionHistoryProps,
     showRubric,
@@ -273,6 +272,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelId,
     isTemporarilyReadOnly,
     isViewingOldVersion,
+    isReadOnlyPredict,
   ]);
 
   const hasTabs = useMemo(() => {

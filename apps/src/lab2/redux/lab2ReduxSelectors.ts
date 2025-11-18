@@ -81,7 +81,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
 // Returns if the current state represents a predict level that should be read only.
 // If the predict level code is not editable after submit or the user has not submitted a response,
 // the predict level is read only.
-function isReadOnlyPredictLevel(state: RootState) {
+export function isReadOnlyPredictLevel(state: RootState) {
   const isPredictLevel =
     state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
   let isReadOnlyPredictLevel = isPredictLevel;
