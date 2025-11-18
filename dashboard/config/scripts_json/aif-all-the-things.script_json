@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-13 19:51:31 UTC",
+    "serialized_at": "2025-11-14 15:39:00 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -625,6 +625,7 @@
       "key": "a7cab60d-8a9a-4c26-b0fb-419f9b1f68d8",
       "position": 1,
       "properties": {
+        "progression_name": "Lesson 10: Web Lab"
       },
       "seeding_key": {
         "activity_section.key": "a7cab60d-8a9a-4c26-b0fb-419f9b1f68d8",
@@ -964,6 +965,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-sem2-u3-L8-filter-practice-prototype"
+        ],
         "progression": "Lesson 8 Prototype"
       },
       "bonus": false,
@@ -1361,6 +1365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unit4-lesson9-weblab-prototype"
+        ],
         "progression": "Lesson 9: Selecting Entries (Web Lab)"
       },
       "bonus": false,
@@ -1375,6 +1382,28 @@
       },
       "level_keys": [
         "unit4-lesson9-weblab-prototype"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson 10: Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unit4-lesson10-weblab-prototype"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "a7cab60d-8a9a-4c26-b0fb-419f9b1f68d8"
+      },
+      "level_keys": [
+        "unit4-lesson10-weblab-prototype"
       ]
     }
   ],
@@ -1737,6 +1766,18 @@
         "lesson_group.key": "",
         "script.name": "aif-all-the-things",
         "activity_section.key": "a59cc2a9-fcde-4521-8446-06d9c26f64b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unit4-lesson10-weblab-prototype",
+        "script_level.level_keys": [
+          "unit4-lesson10-weblab-prototype"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "a7cab60d-8a9a-4c26-b0fb-419f9b1f68d8"
       }
     }
   ],

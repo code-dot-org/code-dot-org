@@ -1,4 +1,4 @@
-import {render, screen, fireEvent, waitFor} from '@testing-library/react';
+import {render, screen, fireEvent, waitFor, act} from '@testing-library/react';
 import React from 'react';
 
 import PersonalizationCollectorContainer from '@cdo/apps/aiDifferentiation/personalization/PersonalizationCollectorContainer';
@@ -75,18 +75,24 @@ describe('PersonalizationCollectorContainer', () => {
   });
 
   function renderDefault() {
-    render(<PersonalizationCollectorContainer />);
+    act(() => {
+      render(<PersonalizationCollectorContainer />);
+    });
   }
 
   async function renderAndWaitForLoad() {
-    renderDefault();
+    await act(async () => {
+      renderDefault();
+    });
     await waitFor(() => {
       expect(screen.queryByText('Loading...')).toBeNull();
     });
   }
 
   it('renders loading state initially', () => {
-    renderDefault();
+    act(() => {
+      renderDefault();
+    });
     screen.getByText('Loading...');
   });
 
@@ -465,7 +471,9 @@ describe('PersonalizationCollectorContainer', () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation();
     fetchStub.mockRejectedValue(new Error('API Error'));
 
-    renderDefault();
+    await act(async () => {
+      renderDefault();
+    });
 
     await waitFor(() => {
       expect(screen.queryByText('Loading...')).toBeNull();
@@ -517,7 +525,9 @@ describe('PersonalizationCollectorContainer', () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation();
     saveTeachingProfileDataSpy.mockRejectedValue(new Error('Save failed'));
 
-    renderDefault();
+    await act(async () => {
+      renderDefault();
+    });
 
     await waitFor(() => {
       expect(screen.queryByText('Loading...')).toBeNull();
@@ -617,5 +627,147 @@ describe('PersonalizationCollectorContainer', () => {
     });
 
     consoleSpy.mockRestore();
+  });
+
+  it('saves matchedPersona when on final question and clicking next', async () => {
+    await renderAndWaitForLoad();
+
+    // Navigate to the final question (Question 6)
+    // Question 1: Years teaching
+    const yearsInput = screen.getByRole('spinbutton');
+    fireEvent.change(yearsInput, {target: {value: '5'}});
+    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    // Question 2: Confidence
+    await waitFor(() => {
+      const confidenceButton = screen.getByText('7');
+      fireEvent.click(confidenceButton);
+    });
+    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    // Question 3: Goals
+    await waitFor(() => {
+      const goalCheckbox = screen.getByLabelText(
+        'Improve student engagement and learning outcomes'
+      );
+      fireEvent.click(goalCheckbox);
+    });
+    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    // Question 4: Classroom Vision
+    await waitFor(() => {
+      const visionTextarea = screen.getByRole('textbox');
+      fireEvent.change(visionTextarea, {
+        target: {value: 'A collaborative environment'},
+      });
+    });
+    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    // Question 5: Support
+    await waitFor(() => {
+      const supportCheckbox = screen.getByLabelText(
+        'Articles or tutorials (More detailed, text-based)'
+      );
+      fireEvent.click(supportCheckbox);
+    });
+    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    // Question 6 (Final): Challenge - This is questionsNumber === PERSONALIZATION_PROMPTS.length - 1
+    await waitFor(() => {
+      screen.getByText('Question 6 of 6');
+    });
+
+    const challengeTextarea = screen.getByRole('textbox');
+    fireEvent.change(challengeTextarea, {
+      target: {value: 'Managing different skill levels'},
+    });
+
+    // Clear previous spy calls to focus on the final submission
+    saveTeachingProfileDataSpy.mockClear();
+    matchTeachingProfileSpy.mockClear();
+
+    // Click next on the final question - this should trigger the condition:
+    // direction === NEXT && questionsNumber === PERSONALIZATION_PROMPTS.length - 1
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    // Verify that matchTeachingProfile is called
+    await waitFor(() => {
+      expect(matchTeachingProfileSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          yearsTeaching: 5,
+          selectedConfidence: 7,
+          selectedGoals: ['Improve student engagement and learning outcomes'],
+          classroomVision: 'A collaborative environment',
+          selectedSupports: [
+            'Articles or tutorials (More detailed, text-based)',
+          ],
+          challenge: 'Managing different skill levels',
+        })
+      );
+    });
+
+    // Verify that saveTeachingProfileData is called with the matched persona
+    await waitFor(() => {
+      expect(saveTeachingProfileDataSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          matchedPersona: 'The Innovator',
+        })
+      );
+    });
+
+    // Verify that the save with matchedPersona is called after the profile matching
+    expect(saveTeachingProfileDataSpy).toHaveBeenCalledTimes(2);
+
+    // First call should be the regular data save
+    expect(saveTeachingProfileDataSpy).toHaveBeenNthCalledWith(
+      1,
+      expect.objectContaining({
+        yearsTeaching: 5,
+        selectedConfidence: 7,
+        selectedGoals: ['Improve student engagement and learning outcomes'],
+        classroomVision: 'A collaborative environment',
+        selectedSupports: ['Articles or tutorials (More detailed, text-based)'],
+        challenge: 'Managing different skill levels',
+      })
+    );
+
+    // Second call should include the matchedPersona
+    expect(saveTeachingProfileDataSpy).toHaveBeenNthCalledWith(
+      2,
+      expect.objectContaining({
+        matchedPersona: 'The Innovator',
+      })
+    );
+
+    saveTeachingProfileDataSpy.mockClear();
+
+    // Go to results page no additional save should be triggered
+    await waitFor(() => {
+      fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
+    });
+
+    expect(saveTeachingProfileDataSpy).not.toHaveBeenCalled();
   });
 });

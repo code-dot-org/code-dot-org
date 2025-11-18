@@ -46,14 +46,6 @@ end
 # Used by lesson plan generator.
 apt_package 'enscript'
 
-# Install dependencies required to sync content between our Code.org shared
-# Dropbox folder and our git repository only on the staging server. In the long
-# run, we'd like to have this happen in a separate environment independent of
-# any of our build pipeline servers; but for now, we default to staging.
-if node.chef_environment == 'staging'
-  include_recipe 'cdo-apps::dropbox_sync'
-end
-
 include_recipe 'cdo-python'
 
 # Debian-family packages for building Ruby C extensions

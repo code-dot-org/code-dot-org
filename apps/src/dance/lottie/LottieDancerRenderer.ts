@@ -66,7 +66,7 @@ export default class LottieDancerRenderer {
   private anim: AnimationItem | null = null;
   private totalFrames: number | null = null;
 
-  // Values pulled from appConfig/localStorage
+  // Values pulled from appConfig/sessionStorage
   private readonly headScale: number;
   private cachedAnimationData: {[key: string]: LottieJSON} = {};
   private skeletonNamePromise?: Promise<string>;
@@ -315,7 +315,9 @@ export default class LottieDancerRenderer {
         }
       }
 
-      if (palette) {
+      // If the palette is locked, we skip any adjustments. This is used for the default
+      // gray dancer. The value is specified in the dancer metadata JSON.
+      if (palette && !palette.lock) {
         // Improve palette to avoid secondary and tertiary colors being too close to
         // primary color.
         palette = improvePalette(palette);
