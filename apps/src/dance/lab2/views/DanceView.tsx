@@ -134,6 +134,15 @@ const DanceView: React.FunctionComponent<{
     setReinitializationHandler,
     startOver,
   } = useSources<DanceProjectSources>();
+
+  const mergeSources = useCallback(
+    (patch: Partial<DanceProjectSources>, forceSave = false) => {
+      const next = {...sourcesRef.current, ...patch};
+      updateSources(next, forceSave);
+    },
+    [updateSources]
+  );
+
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<GoogleBlockly.Workspace | null>(null);
 
@@ -234,12 +243,11 @@ const DanceView: React.FunctionComponent<{
   };
 
   const turnOffFilter = useCallback(() => setFilterOn(false), []);
-
   const onSetSong = useCallback(
     (songId: string) => {
-      updateSources({...currentSources, selectedSong: songId});
+      mergeSources({selectedSong: songId});
     },
-    [updateSources, currentSources]
+    [mergeSources]
   );
 
   const saveBlocks = useCallback(
@@ -250,9 +258,9 @@ const DanceView: React.FunctionComponent<{
       const blocks = Blockly.serialization.workspaces.save(
         workspace.current
       ) as BlocklySource;
-      updateSources({...currentSources, source: blocks}, forceSave);
+      mergeSources({source: blocks}, forceSave);
     },
-    [currentSources, updateSources]
+    [mergeSources]
   );
 
   const runProgram = useCallback(async () => {
@@ -432,7 +440,6 @@ const DanceView: React.FunctionComponent<{
         ? getToolboxDefinition(toolboxModeBlocks, 'categoryToolbox')
         : levelProperties.toolboxDefinition;
 
-      console.log('Initial toolbox definition:', toolbox);
       // Don't show the toolbox if it's empty
       if (toolbox?.contents?.length === 0) {
         toolbox = undefined;
@@ -469,14 +476,8 @@ const DanceView: React.FunctionComponent<{
           const toolboxDefinition = JSON.parse(
             currentSources.toolboxDefinition
           );
-          console.log(
-            'Updating toolbox from sources.toolboxDefinition',
-            toolboxDefinition
-          );
           onFlyoutGenerated(toolboxDefinition);
         } catch {}
-      } else {
-        console.log('No toolbox definition in sources', currentSources);
       }
     }
   }, [
@@ -498,9 +499,9 @@ const DanceView: React.FunctionComponent<{
       const defaultSong = levelProperties.defaultSong;
       const songToUse =
         defaultSong && songData[defaultSong] ? defaultSong : songKeys[0];
-      updateSources({...currentSources, selectedSong: songToUse});
+      mergeSources({selectedSong: songToUse});
     }
-  }, [songData, currentSources, updateSources, levelProperties.defaultSong]);
+  }, [songData, currentSources, mergeSources, levelProperties.defaultSong]);
 
   // Load the selected song whenever it changes in project sources.
   useEffect(() => {
@@ -604,6 +605,11 @@ const DanceView: React.FunctionComponent<{
   }, [progressManager, levelProperties.appName, guideMode]);
 
   const settings = useBlocklySettings();
+
+  const sourcesRef = useRef(currentSources);
+  useEffect(() => {
+    sourcesRef.current = currentSources;
+  }, [currentSources]);
 
   if (isShareView) {
     const musicMetadata = loadedMusicProject
@@ -739,8 +745,7 @@ const DanceView: React.FunctionComponent<{
               runProgram={runProgram}
               resetProgram={resetProgram}
               updateSources={resultBlockly => {
-                updateSources({
-                  ...currentSources,
+                mergeSources({
                   source: resultBlockly.workspaceSerialization,
                   toolboxDefinition: JSON.stringify(
                     resultBlockly.flyoutDefinition
