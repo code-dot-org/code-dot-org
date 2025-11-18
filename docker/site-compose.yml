@@ -16,7 +16,7 @@
 version: "3"
 services:
   site:
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/code-dot-org:docker-sudo-no-fqdn
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/ci/code-dot-org:delegated
@@ -29,6 +29,7 @@ services:
       - $HOME/.aws:/home/ci/.aws
     environment:
       - AWS_PROFILE
+      - FIXUID
     ports:
       - "3000:3000"
     stdin_open: true

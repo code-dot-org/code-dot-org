@@ -21,7 +21,7 @@
 
 services:
   site:
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/code-dot-org:docker-sudo-no-fqdn
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/ci/code-dot-org:delegated
@@ -31,6 +31,7 @@ services:
       - gcloud_config:/home/ci/.config/gcloud
     environment:
       CI_JOB: 'ui_tests'
+      FIXUID: ${FIXUID:-}
     env_file:
       - env.list
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
