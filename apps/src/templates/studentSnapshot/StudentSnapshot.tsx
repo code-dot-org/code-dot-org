@@ -3,6 +3,8 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
+import WidgetTemplate from './widgetTemplate';
+
 import styles from './studentSnapshot.module.scss';
 
 const StudentSnapshot: React.FC = () => {
@@ -90,21 +92,49 @@ const StudentSnapshot: React.FC = () => {
         </div>
       </div>
 
-      <Typography variant="h2" className={styles.studentNameHeader}>
+      <Typography
+        variant="h4"
+        className={styles.studentNameHeader}
+        gutterBottom
+      >
         <Typography variant="strong">{'<Student name>'}</Typography>
       </Typography>
 
-      <div className={styles.widgetRow}>
-        <div className={styles.longWidget} />
-      </div>
-      <div className={styles.widgetRow}>
-        <div className={styles.bigWidget} />
-        <div className={styles.smallWidget} />
-      </div>
-      <div className={styles.widgetRow}>
-        <div className={styles.smallWidget} />
-        <div className={styles.smallWidget} />
-        <div className={styles.smallWidget} />
+      <div className={styles.widgetGrid}>
+        <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
+          <div>content</div>
+        </WidgetTemplate>
+        <WidgetTemplate widgetName="Big Widget" gridWidth={2} gridHeight={2}>
+          <div>big content</div>
+        </WidgetTemplate>
+        <WidgetTemplate
+          widgetName="Small Widget 1"
+          gridWidth={1}
+          gridHeight={1}
+        >
+          <div>small content 1</div>
+        </WidgetTemplate>
+        <WidgetTemplate
+          widgetName="Small Widget 2"
+          gridWidth={1}
+          gridHeight={1}
+        >
+          <div>small content 2</div>
+        </WidgetTemplate>
+        <WidgetTemplate
+          widgetName="Small Widget 3"
+          gridWidth={1}
+          gridHeight={1}
+        >
+          <div>small content 3</div>
+        </WidgetTemplate>
+        <WidgetTemplate
+          widgetName="Small Widget 4"
+          gridWidth={1}
+          gridHeight={1}
+        >
+          <div>small content 4</div>
+        </WidgetTemplate>
       </div>
     </div>
   );
