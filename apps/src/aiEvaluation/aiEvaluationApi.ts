@@ -194,6 +194,7 @@ export interface TeachingProfileMatch {
 export async function matchTeachingProfile(
   teachingProfileData: TeachingProfileData
 ): Promise<TeachingProfileMatch | null> {
+  console.log('Matching teaching profile with data:', teachingProfileData);
   const payload = {
     teaching_profile_data: teachingProfileData,
   };
