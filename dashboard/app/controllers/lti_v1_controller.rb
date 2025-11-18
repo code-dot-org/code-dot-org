@@ -216,7 +216,8 @@ class LtiV1Controller < ApplicationController
         end
 
         if decoded_jwt[Policies::Lti::MessageType::CLAIM] == Policies::Lti::MessageType::DEEP_LINKING_REQUEST
-          redirect_to lti_v1_deep_linking_index_path deep_linking_settings: decoded_jwt[Policies::Lti::DEEP_LINKING_SETTINGS_CLAIM] and return
+          deep_linking_settings = decoded_jwt[Policies::Lti::DEEP_LINKING_SETTINGS_CLAIM]
+          redirect_to lti_v1_deep_linking_index_path(deep_linking_settings:) and return
         end
 
         redirect_to destination_url

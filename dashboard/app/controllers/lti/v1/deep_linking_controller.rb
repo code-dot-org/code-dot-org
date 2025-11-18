@@ -10,9 +10,7 @@ module Lti
       end
 
       private def validate_deep_linking_enabled
-        unless DCDO.get('schoology_deep_linking_enabled', false)
-          head :not_implemented and return
-        end
+        head :not_implemented unless DCDO.get('schoology_deep_linking_enabled', false)
       end
     end
   end

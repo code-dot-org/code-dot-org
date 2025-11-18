@@ -11,8 +11,8 @@ class Policies::Lti
 
   module MessageType
     CLAIM = :'https://purl.imsglobal.org/spec/lti/claim/message_type'
-    RESOURCE_LINK_REQUEST = 'LtiResourceLinkRequest',
-                            DEEP_LINKING_REQUEST = 'LtiDeepLinkingRequest'
+    RESOURCE_LINK_REQUEST = 'LtiResourceLinkRequest'
+    DEEP_LINKING_REQUEST = 'LtiDeepLinkingRequest'
   end
 
   module DeploymentConfiguration
