@@ -48,7 +48,6 @@ interface Window {
     aiTutorEnabledForPilot?: boolean;
     level?: {
       aiTutorAvailable?: boolean;
-      isProjectLevel?: boolean;
     };
   };
 }

@@ -122,10 +122,6 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     const aiTutorAvailableForLevel =
       window?.appOptions?.level?.aiTutorAvailable ?? false;
 
-    // standalone project without level aiTutorAvailable property
-    const isStandaloneProject =
-      window?.appOptions?.level?.isProjectLevel ?? false;
-
     const showAiTutor =
       AI_TUTOR_LEGACY_LABS.includes(labType) &&
       (experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR) ||
@@ -133,7 +129,6 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
           appName: labType,
           tutorPilot: aiTutorAvailableForPilot,
           tutorLevel: aiTutorAvailableForLevel,
-          isProjectLevel: isStandaloneProject,
         }));
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px

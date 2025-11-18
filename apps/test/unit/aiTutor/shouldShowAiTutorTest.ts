@@ -11,7 +11,6 @@ describe('shouldShowAiTutor', () => {
           appName,
           tutorLevel: false,
           tutorPilot: false,
-          isProjectLevel: false,
         });
         expect(result).toBe(true);
       });
@@ -24,49 +23,35 @@ describe('shouldShowAiTutor', () => {
         appName: 'applab',
         tutorLevel: true,
         tutorPilot: true,
-        isProjectLevel: false,
       });
       expect(result).toBe(true);
     });
 
-    it('returns true when isProjectLevel is true', () => {
+    it('returns false when tutorLevel is false', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: false,
         tutorPilot: true,
-        isProjectLevel: true,
-      });
-      expect(result).toBe(true);
-    });
-
-    it('returns false when both tutorLevel and isProjectLevel are false', () => {
-      const result = shouldShowAiTutor({
-        appName: 'applab',
-        tutorLevel: false,
-        tutorPilot: true,
-        isProjectLevel: false,
       });
       expect(result).toBe(false);
     });
   });
 
   describe('when tutorPilot is disabled', () => {
-    it('returns false even when tutorLevel is true', () => {
+    it('returns false when tutorLevel is true', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: true,
         tutorPilot: false,
-        isProjectLevel: false,
       });
       expect(result).toBe(false);
     });
 
-    it('returns false even when isProjectLevel is true', () => {
+    it('returns false when tutorLevel is false', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: false,
         tutorPilot: false,
-        isProjectLevel: true,
       });
       expect(result).toBe(false);
     });

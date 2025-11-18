@@ -176,7 +176,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       appName,
       tutorPilot: getAiTutorEnabledForPilot(),
       tutorLevel: levelProperties.aiTutorAvailable,
-      isProjectLevel: levelProperties.isProjectLevel,
     }) ||
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true';

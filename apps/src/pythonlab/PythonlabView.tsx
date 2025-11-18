@@ -118,7 +118,6 @@ const PythonlabView: React.FunctionComponent<
         tutorPilot: getAiTutorEnabledForPilot(),
         appName: levelProperties.appName,
         tutorLevel: levelProperties.aiTutorAvailable,
-        isProjectLevel: levelProperties.isProjectLevel,
       }) ||
       queryParams('show-ai-tutor2') === 'true' ||
       queryParams('show-ai-tutor') === 'true',

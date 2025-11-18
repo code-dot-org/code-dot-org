@@ -8,16 +8,14 @@ export const shouldShowAiTutor = ({
   appName,
   tutorLevel,
   tutorPilot,
-  isProjectLevel,
 }: {
   appName: string;
   tutorLevel?: boolean;
   tutorPilot?: boolean;
-  isProjectLevel?: boolean;
 }) => {
   return (
     APPS_ALWAYS_USING_AI_TUTOR.includes(appName) ||
-    // user is in ai tutor pilot, and it's either a tutor enabled level or a project level
-    (tutorPilot && (tutorLevel || isProjectLevel))
+    // user is in ai tutor pilot and it's a tutor enabled level
+    (tutorPilot && tutorLevel)
   );
 };
