@@ -144,7 +144,7 @@ var CONFIGS = {
     movePegmanAnimation: 'avatar.png',
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
-    movePegmanAnimationFrameNumber: 9,
+    movePegmanAnimationFrameNumber: 21,
     hittingWallAnimation: 'avatar.png',
     approachingGoalAnimation: 'close_goal.png',
     background: 'background.png',
