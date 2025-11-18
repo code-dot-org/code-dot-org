@@ -303,17 +303,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       className={moduleStyles.chatWorkspace}
       aria-live="polite"
     >
-      <div
-        style={{
-          position: 'absolute',
-          left: '-9999px',
-          height: 1,
-          width: 1,
-          overflow: 'hidden',
-        }}
-      >
-        {liveAnnouncement}
-      </div>
+      <div className={moduleStyles.accessibilityHidden}>{liveAnnouncement}</div>
       {showTabs ? (
         <Tabs {...tabArgs} />
       ) : (
