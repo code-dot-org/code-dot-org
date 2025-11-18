@@ -415,7 +415,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           </div>
         </div>
       )}
-      {isLatestVersion(selectedVersion) && (
+      {isLatestVersion(selectedVersion) && !viewAsUserId && (
         <SaveVersionPanel
           projectSources={projectSources}
           onSuccess={handleSaveVersionSuccess}

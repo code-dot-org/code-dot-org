@@ -30,34 +30,31 @@
   padding: 4px;
   flex: 1;
   border-radius: 8px;
-  animation: tab-fade-in-out 1.5s;
   transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  gap: 9px;
+  color: var(--text-neutral-primary);
+  height: 30px;
 
-  > p {
-    margin: 0;
+  &:not(.locked):hover {
+    background-color: var(--background-neutral-quinary);
   }
 
-  &:hover {
-    background-color: var(--background-neutral-quinary);
+  &:not(.locked) {
+    animation: tab-fade-in-out 1.5s;
   }
 
   &.selected {
     background-color: var(--background-neutral-primary-inverse) !important;
-    font-weight: bold;
-
-    > p {
-      color: var(--text-neutral-primary-inverse);
-    }
+    color: var(--text-neutral-inverse);
   }
 
   &.locked {
     cursor: not-allowed;
-    > p {
-      color: var(--text-neutral-disabled);
-      > i {
-        margin-right: 8px;
-      }
-    }
+    color: var(--text-neutral-disabled);
   }
 }
 
@@ -69,6 +66,15 @@
 }
 .tabSwitcher > .button:nth-child(3) {
   animation-delay: 3s;
+}
+
+.tabIcon {
+  height: 20px;
+  opacity: 1;
+
+  &Unselected {
+    filter: invert(1);
+  }
 }
 
 .labsContainer {

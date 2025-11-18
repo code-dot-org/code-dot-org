@@ -5,6 +5,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import {
+  getSelectedCourseName,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
@@ -87,6 +91,8 @@ class ProgressTableView extends React.Component {
     studentTimestamps: PropTypes.object.isRequired,
     localeCode: PropTypes.string,
     isSortedByFamilyName: PropTypes.bool,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
   };
 
   constructor(props) {
@@ -373,6 +379,8 @@ class ProgressTableView extends React.Component {
               studentTimestamps={this.props.studentTimestamps}
               localeCode={this.props.localeCode}
               onToggleRow={this.onToggleRow}
+              courseVersionName={this.props.courseVersionName}
+              unitPosition={this.props.unitPosition}
             />
           </div>
           <div style={styles.contentView} className="content-view">
@@ -440,6 +448,8 @@ export default connect(
         state.unitSelection.scriptId
       ],
     localeCode: state.locales.localeCode,
+    courseVersionName: getSelectedCourseName(state),
+    unitPosition: getSelectedUnitPosition(state),
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {
