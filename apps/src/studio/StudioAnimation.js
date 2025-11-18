@@ -151,12 +151,15 @@ export default class StudioAnimation {
 
   /** @returns {number} the count of frames for the current animation */
   getAnimationFrameCount() {
-    var specialFrames = this.specialAnimations_[this.interfaceMode_];
-    if (specialFrames) {
-      return specialFrames[this.currentAnimationIndex_].length;
-    } else {
-      return this.spriteSheet_.getAnimationFrameCount(this.interfaceMode_);
-    }
+    // GLOBAL ANIMATION DISABLE: Always return 1 frame
+    return 1;
+    // Original code (disabled):
+    // var specialFrames = this.specialAnimations_[this.interfaceMode_];
+    // if (specialFrames) {
+    //   return specialFrames[this.currentAnimationIndex_].length;
+    // } else {
+    //   return this.spriteSheet_.getAnimationFrameCount(this.interfaceMode_);
+    // }
   }
 
   /** @returns {object} the frame rectangle from the sprite sheet for a frame */
@@ -177,22 +180,22 @@ export default class StudioAnimation {
    * Display the current frame at the given location
    */
   redrawCenteredAt(center, tickCount) {
-    var animTick = tickCount;
-
-    // Each animation will start at a different frame when this is enabled:
-    if (this.skewAnimations_) {
-      // NOTE: not intended to be used with non-looping animations
-      animTick = tickCount + this.animId * (this.animationFrameDuration_ + 1);
-    }
-
-    var currentFrame = Math.floor(animTick / this.animationFrameDuration_);
-    var framesInThisAnimation = this.getAnimationFrameCount();
-
-    if (this.loop_) {
-      currentFrame = currentFrame % framesInThisAnimation;
-    } else {
-      currentFrame = Math.min(currentFrame, framesInThisAnimation - 1);
-    }
+    // GLOBAL ANIMATION DISABLE: Always use frame 0
+    var currentFrame = 0;
+    // Original animation logic (commented out to disable animations):
+    // var animTick = tickCount;
+    // // Each animation will start at a different frame when this is enabled:
+    // if (this.skewAnimations_) {
+    //   // NOTE: not intended to be used with non-looping animations
+    //   animTick = tickCount + this.animId * (this.animationFrameDuration_ + 1);
+    // }
+    // var currentFrame = Math.floor(animTick / this.animationFrameDuration_);
+    // var framesInThisAnimation = this.getAnimationFrameCount();
+    // if (this.loop_) {
+    //   currentFrame = currentFrame % framesInThisAnimation;
+    // } else {
+    //   currentFrame = Math.min(currentFrame, framesInThisAnimation - 1);
+    // }
 
     var frame = this.getFrame(currentFrame);
 

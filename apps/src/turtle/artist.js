@@ -344,8 +344,13 @@ Artist.prototype.init = function (config) {
 
   this.linePatterns = config.skin.linePatterns;
 
+  // GLOBAL ANIMATION DISABLE: Force numFrames to 1 for avatar animations
+  var avatarSettings = config.skin.avatarSettings;
+  if (avatarSettings && avatarSettings.numFrames) {
+    avatarSettings = {...avatarSettings, numFrames: 1};
+  }
   this.visualization = new Visualization({
-    avatar: config.skin.avatarSettings,
+    avatar: avatarSettings,
     isK1: config.level.isK1,
     isFrozenSkin: this.isFrozenSkin(),
     decorationAnimationImage: this.decorationAnimationImage,
@@ -1336,7 +1341,12 @@ Artist.prototype.step = function (command, values, options) {
     case 'setArtist':
       if (this.skin.id !== values[0]) {
         this.skin = ArtistSkins.load(this.studioApp_.assetUrl, values[0]);
-        this.visualization.avatar = this.skin.avatarSettings;
+        // GLOBAL ANIMATION DISABLE: Force numFrames to 1 for avatar animations
+        var avatarSettings = this.skin.avatarSettings;
+        if (avatarSettings && avatarSettings.numFrames) {
+          avatarSettings = {...avatarSettings, numFrames: 1};
+        }
+        this.visualization.avatar = avatarSettings;
         this.linePatterns = this.skin.linePatterns;
         this.loadTurtle(false /* initializing */);
         this.preloadAllPatternImages().then(() => this.selectPattern());
