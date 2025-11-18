@@ -81,7 +81,7 @@ module Cdo
     def self.start_background_metrics_thread(host:)
       Thread.new do
         dimensions = {
-          PID: Process.pid,
+          PID: Process.pid.to_s,
           Host: host,
         }
 

@@ -18,6 +18,8 @@ export type AdlibsType = {
   [key: string]: AdlibType;
 };
 
+export type BodyVariantCounts = {[key: string]: number};
+
 interface AdlibProps {
   children?: React.ReactNode;
   adlib: AdlibType;

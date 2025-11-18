@@ -132,6 +132,7 @@ export type Palette = {
   primary: RGBA | null;
   secondary: RGBA | null;
   tertiary: RGBA | null;
+  lock?: boolean;
 };
 
 export type Canvas2D =
@@ -169,6 +170,7 @@ export interface DancerMetadata {
   body_color?: string;
   secondary_color?: string;
   tertiary_color?: string;
+  lock_palette?: boolean;
   [k: string]: unknown;
 }
 
