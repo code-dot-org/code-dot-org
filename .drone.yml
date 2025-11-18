@@ -92,9 +92,6 @@ steps:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
     commands:
       # Cached data gets restored by the root user, so we need to reassign
-      - echo "running sudo true to warm up sudo..."
-      - sudo true
-      - echo "sudo true complete."
       - sudo chown -R ci:ci .
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
@@ -216,9 +213,6 @@ steps:
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       # Cached data gets restored by the root user, so we need to reassign
-      - echo "running sudo true to warm up sudo..."
-      - sudo true
-      - echo "sudo true complete."
       - sudo chown -R ci:ci .
       - sudo chown -R mysql:mysql /var/lib/mysql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
