@@ -18,15 +18,11 @@ export const saveTeachingProfileData = async personalizationData => {
         dataToSave.dateYearsTeachingSet.toISOString();
     }
 
-    console.log('Saving teaching profile data:', dataToSave);
-
     const requestBody = JSON.stringify({
       teaching_profile_data: {
         individual_data: dataToSave,
       },
     });
-
-    console.log('Request body:', requestBody);
 
     const csrfToken = document
       .querySelector('meta[name="csrf-token"]')
