@@ -11,22 +11,16 @@ markdown <<MARKDOWN
 
 #### **HTML (HyperText Markup Language)** is the code that gives a web page its structure. It tells the browser what to show — like headings, paragraphs, images, and links — so users can see and interact with the content.
 
-#### In this activity, you’ll guide students to use AI to help generate a basic HTML framework for a simple web page. The AI acts like a coding assistant, helping students get started while they learn how each part of the code works.
+<img src="https://images.code.org/1a60c7acc114352abd9a7e83320ddaa9-image-1763396009343.png" alt="html code with head, body , header, main and footer labeled" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px;">
 
+#### *Notice how each section has an opening tag and a closing tag with a back slash.This tells the computer where each section begins and ends, so it knows how to organize and display the content correctly.*
 
-## Prompt Engineering
-#### A key ingredient of using AI is refining prompts through prompt engineering. When the AI’s output is flawed or incomplete, revise your prompt to be more specific and provide clear context or constraints.
+## The Structure of an HTML Page
 
+- #### **The `<head>` Section** -The head holds information about the page, not what’s shown on the page itself.
 
-
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt Engineering</strong> is the process of designing, refining, and optimizing prompts given to AI models to achieve desired outputs. It's like giving clear instructions to a very smart assistant.
-</p>
-</div>
-
-## What's Next?
-
-#### Let’s practice prompting AI to create a basic webpage in HTML but first, review the features in Web Lab
-
-
+- #### **The `<body>` Section** is what users see on the webpage.
+	- #### The `<header>` contains the main title (`<h1>`) and a short description (`<p>`).
+    - #### The `<main>` section holds the core content of the site. In this example you can see there’s a `<section>` with a subheading (`<h2>`), a paragraph (`<p>`), and a list (`<ul>`with `<li>` items).
+    - #### The `<footer>` section closes out the web page. This example has a copyright line. 
 MARKDOWN
