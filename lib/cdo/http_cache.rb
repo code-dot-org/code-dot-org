@@ -169,12 +169,6 @@ class HttpCache
             headers: S3_FORWARD_HEADERS,
             cookies: 'none'
           },
-          {
-            path: %w[/congrats /congrats/*],
-            proxy: 'dashboard',
-            headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies,
-          },
           # For .png images, don't forward any cookies or additional headers.
           {
             path: '/*.png',
@@ -182,7 +176,7 @@ class HttpCache
             cookies: 'none',
             include_marketing_router_lambda: true,
           },
-          # For static-asset paths, don't forward any cookies or additional headers.
+          # For static-asset paths, don't forward any cookies or addinal headers.
           {
             path: STATIC_ASSET_EXTENSION_PATHS - %w(/*.png) + %w(/files/* /images/* /fonts/*),
             headers: [],
