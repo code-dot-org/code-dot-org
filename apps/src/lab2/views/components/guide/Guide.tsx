@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -6,9 +7,11 @@ import styles from './Guide.module.scss';
 interface GuideProps {
   id?: string;
   children: React.ReactNode;
-  width?: 'normal' | 'narrow';
+  width?: 'normal' | 'narrow' | 'very-narrow';
   position?: 'normal' | 'bottom';
   modal?: 'full' | 'gap';
+  cornerIcon?: 'minimize' | 'maximize';
+  onCornerIconClick?: () => void;
 }
 
 // The Guide is a floating container for instructional content.  It is larger
@@ -20,6 +23,8 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   width,
   position,
   modal,
+  cornerIcon,
+  onCornerIconClick,
 }) => {
   return (
     <div
@@ -33,7 +38,9 @@ const Guide: React.FunctionComponent<GuideProps> = ({
         id={id}
         className={classNames(
           styles.guide,
-          width === 'narrow'
+          width === 'very-narrow'
+            ? styles.guideVeryNarrowWidth
+            : width === 'narrow'
             ? styles.guideNarrowWidth
             : styles.guideNormalWidth,
           position === 'bottom'
@@ -43,6 +50,21 @@ const Guide: React.FunctionComponent<GuideProps> = ({
         )}
       >
         {children}
+        {cornerIcon && onCornerIconClick && (
+          <button
+            type="button"
+            className={styles.cornerIconButton}
+            onClick={onCornerIconClick}
+            aria-label={
+              cornerIcon === 'minimize' ? 'Minimize guide' : 'Restore guide'
+            }
+          >
+            <FontAwesomeV6Icon
+              iconName={cornerIcon === 'minimize' ? 'caret-down' : 'caret-up'}
+              iconStyle="solid"
+            />
+          </button>
+        )}
       </div>
     </div>
   );
