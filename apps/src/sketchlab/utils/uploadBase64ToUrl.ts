@@ -1,12 +1,5 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-async function loadImage(dataUrl: string): Promise<HTMLImageElement> {
-  const img = new Image();
-  img.src = dataUrl;
-  await img.decode();
-  return img;
-}
-
 async function canvasToBlob(
   canvas: HTMLCanvasElement,
   mimeType: string
@@ -27,14 +20,16 @@ export async function uploadBase64ToUrl(
   uploadUrl: string,
   mimeType: string
 ): Promise<Response> {
-  const img = await loadImage(dataUrl);
+  const img = new Image();
+  img.src = dataUrl;
+  await img.decode();
 
   // Create a canvas and draw the image onto it
   const canvas = document.createElement('canvas');
   canvas.width = img.width;
   canvas.height = img.height;
-  const ctx = canvas.getContext('2d');
-  ctx?.drawImage(img, 0, 0);
+  const context = canvas.getContext('2d');
+  context?.drawImage(img, 0, 0);
 
   const blob = await canvasToBlob(canvas, mimeType);
 
