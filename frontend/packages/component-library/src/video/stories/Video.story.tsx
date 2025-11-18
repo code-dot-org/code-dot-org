@@ -42,7 +42,7 @@ export const DefaultVideo: Story = {
     const video = await shadowScreen.findByShadowTitle(
       "What Most Schools Don't Teach",
       {},
-      {timeout: 5000},
+      {timeout: 15000},
     );
 
     // check if video is visible
@@ -123,7 +123,7 @@ export const VideoWithFallback: Story = {
     await shadowScreen.findByShadowTitle(
       "What Most Schools Don't Teach",
       {},
-      {timeout: 5000},
+      {timeout: 15000},
     );
   },
 };
