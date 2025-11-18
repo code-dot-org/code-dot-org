@@ -38,6 +38,7 @@ describe('Certificate', () => {
 
   describe('personalized certificate', () => {
     const authToken = 'fake-token';
+    const certificateId = 'sessionId';
     let server;
 
     beforeEach(() => {
@@ -55,11 +56,11 @@ describe('Certificate', () => {
         certificate_sent: true,
         name: 'Student',
       };
-      server.respondWith('POST', studio('/api/hour/certificate'), [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify(data),
-      ]);
+      server.respondWith(
+        'PATCH',
+        studio(`/api/hour/certificates/${certificateId}`),
+        [200, {'Content-Type': 'application/json'}, JSON.stringify(data)]
+      );
 
       const wrapper = wrapperWithParams({
         certificateData: [
@@ -67,7 +68,7 @@ describe('Certificate', () => {
             courseName: 'dance',
           },
         ],
-        certificateId: 'sessionId',
+        certificateId: certificateId,
         isHocTutorial: true,
       });
       let image = wrapper.find('#uitest-certificate img');
