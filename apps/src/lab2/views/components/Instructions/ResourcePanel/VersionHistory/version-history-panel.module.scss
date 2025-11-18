@@ -1,8 +1,4 @@
-$space-xs: 2px;
-$space-s: 4px;
-$space-m: 6px;
-$space-l: 8px;
-$space-xl: 10px;
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
 .versionHistoryPanel {
   display: flex;
@@ -22,6 +18,18 @@ $space-xl: 10px;
   display: flex;
   flex-direction: column;
   min-height: 0;
+
+  /* Simple background line that runs underneath the radio buttons */
+  &::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 30px; // Align with radio button
+    top: 10px;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--borders-neutral-primary);
+    z-index: 0;
+  }
 }
 
 .list {
@@ -29,36 +37,21 @@ $space-xl: 10px;
   flex: 1;
   min-height: 0;
   position: relative;
-
-  /* Simple background line that runs underneath the radio buttons */
-  background: linear-gradient(to right, transparent 32px, var(--borders-neutral-primary) 32px, var(--borders-neutral-primary) 33px, transparent 33px);
-}
-
-/* Mask the vertical line above the first row */
-.rowContainer:first-child::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 8px; /* Cover the margin area */
-  background: var(--background-neutral-primary);
-  z-index: -1;
-  top: -9px;
+  padding-bottom: 0.625rem;
 }
 
 .listFooter {
   flex-shrink: 0;
   display: flex;
   justify-content: center;
-  gap: $space-s;
-  padding: $space-m;
-  margin-right: $space-xl;
+  gap: 0.25rem;
+  margin-right: 0.625rem;
 }
 
 .loadingVersionSpinner {
   font-size: 32px;
   text-align: center;
-  margin-right: 12px;
+  margin-right: 0.75rem;
 }
 
 .versionLoadError {
@@ -66,11 +59,13 @@ $space-xl: 10px;
 }
 
 .buttonContainer {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 12px;
-  gap: 8px;
-  background-color: var(--background-neutral-primary);
+  padding: 0.625rem;
+  gap: 0.5rem;
+  background-color: var(--background-neutral-secondary);
+  border-top: variables.$default-border;
 }
 
 .versionButton {
