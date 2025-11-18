@@ -11,7 +11,7 @@ interface GuideProps {
   position?: 'normal' | 'bottom';
   modal?: 'full' | 'gap';
   cornerIcon?: 'minimize' | 'maximize';
-  onCornerIcon?: () => void;
+  onCornerIconClick?: () => void;
 }
 
 // The Guide is a floating container for instructional content.  It is larger
@@ -24,7 +24,7 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   position,
   modal,
   cornerIcon,
-  onCornerIcon,
+  onCornerIconClick,
 }) => {
   return (
     <div
@@ -50,11 +50,14 @@ const Guide: React.FunctionComponent<GuideProps> = ({
         )}
       >
         {children}
-        {cornerIcon && onCornerIcon && (
+        {cornerIcon && onCornerIconClick && (
           <button
             type="button"
             className={styles.cornerIconButton}
-            onClick={onCornerIcon}
+            onClick={onCornerIconClick}
+            aria-label={
+              cornerIcon === 'minimize' ? 'Minimize guide' : 'Restore guide'
+            }
           >
             <FontAwesomeV6Icon
               iconName={cornerIcon === 'minimize' ? 'caret-down' : 'caret-up'}

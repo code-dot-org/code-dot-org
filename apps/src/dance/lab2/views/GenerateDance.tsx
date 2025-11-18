@@ -243,7 +243,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       ? 'maximize'
       : undefined;
 
-  const onCornerIcon = useCallback(() => {
+  const onCornerIconClick = useCallback(() => {
     if (aiGenerateState === 'edited') {
       setAiGenerateState('playing');
     } else if (aiGenerateState === 'playing') {
@@ -271,7 +271,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       width={guideWidth}
       position="bottom"
       cornerIcon={cornerIcon}
-      onCornerIcon={onCornerIcon}
+      onCornerIconClick={onCornerIconClick}
     >
       {aiGenerateState === 'none' && levelProperties.longInstructions && (
         <MainInstructionsContent
