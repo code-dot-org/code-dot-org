@@ -67,6 +67,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             ariaLabel={ariaLabel}
             textThickness={isBoldtype ? 'thick' : 'thin'}
             disabled={disabled}
+            size="s"
           />
           {ariaLabel === lab2I18n.autosavedVersion() && (
             <WithTooltip
@@ -85,7 +86,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
           )}
         </div>
         {comment && (
-          <BodyFourText className={moduleStyles.commitDescription}>
+          <BodyFourText className={moduleStyles.commitDescription} noMargin>
             {comment}
           </BodyFourText>
         )}
