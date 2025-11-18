@@ -112,17 +112,15 @@ const PythonlabView: React.FunctionComponent<
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   const hasSource = !!source;
-  const isAiTutorEnabled = useMemo(
-    () =>
-      shouldShowAiTutor({
-        tutorPilot: getAiTutorEnabledForPilot(),
-        appName: levelProperties.appName,
-        tutorLevel: levelProperties.aiTutorAvailable,
-      }) ||
-      queryParams('show-ai-tutor2') === 'true' ||
-      queryParams('show-ai-tutor') === 'true',
-    [levelProperties]
-  );
+
+  const isAiTutorEnabled =
+    shouldShowAiTutor({
+      tutorPilot: getAiTutorEnabledForPilot(),
+      appName: levelProperties.appName,
+      tutorLevel: levelProperties.aiTutorAvailable,
+    }) ||
+    queryParams('show-ai-tutor2') === 'true' ||
+    queryParams('show-ai-tutor') === 'true';
 
   const dispatch = useAppDispatch();
 
