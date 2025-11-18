@@ -5,7 +5,7 @@ module Lti
       before_action :validate_deep_linking_enabled
 
       # GET /lti/v1/deep_linking
-      def index
+      def show
         @deep_linking_settings = params[:deep_linking_settings]
       end
 
