@@ -276,7 +276,7 @@ steps:
     image: codedotorg/cdo-ci:1.17
     pull: always
     environment:
-      CI_JOB: 'ui_tests'
+      CI_JOB: 'prepare_ci_tests'
       CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
@@ -317,6 +317,6 @@ trigger:
 
 ---
 kind: signature
-hmac: ce711c33c07b6c26b24ee7ea53ed58e10f7a8b1cda709c9ef2a98ef3754116c9
+hmac: 1910b87f175368a95a22c4f1247270a3f4ed23729dbd0515d6fc98ac1dec47cd
 
 ...
