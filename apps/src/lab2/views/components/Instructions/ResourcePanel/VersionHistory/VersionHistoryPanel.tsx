@@ -356,7 +356,7 @@ const VersionHistoryPanel: React.FunctionComponent<
                 onChange={onVersionChange}
                 disabled={disabled}
               >
-                {version.isLatest && !version.comment && (
+                {version.isLatest && !version.comment && !viewAsUserId && (
                   <SaveVersionPanel
                     projectSources={projectSources}
                     onSuccess={handleSaveVersionSuccess}
