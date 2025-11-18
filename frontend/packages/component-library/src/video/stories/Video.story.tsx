@@ -41,6 +41,8 @@ export const DefaultVideo: Story = {
     // but it does need to have the right title for a11y
     const video = await shadowScreen.findByShadowTitle(
       "What Most Schools Don't Teach",
+      {},
+      {timeout: 5000},
     );
 
     // check if video is visible
@@ -115,6 +117,14 @@ export const VideoWithFallback: Story = {
 
     // check if download button is visible
     await expect(download).toBeVisible();
+
+    // react-player renders the youtube iframe inside a shadow root
+    // but it does need to have the right title for a11y
+    await shadowScreen.findByShadowTitle(
+      "What Most Schools Don't Teach",
+      {},
+      {timeout: 5000},
+    );
   },
 };
 
