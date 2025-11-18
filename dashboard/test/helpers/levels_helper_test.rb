@@ -285,6 +285,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'ai_tutor_enabled_for_pilot? returns true for pilot teacher' do
+    @level.properties['ai_tutor_available'] = 'true'
     teacher = create(:teacher)
     sign_in teacher
 
@@ -292,7 +293,17 @@ class LevelsHelperTest < ActionView::TestCase
     assert ai_tutor_enabled_for_pilot?(teacher), 'Pilot teacher should be enabled'
   end
 
+  test 'ai_tutor_enabled_for_pilot? returns false for pilot teacher when not available on the level' do
+    @level.properties['ai_tutor_available'] = 'false'
+    teacher = create(:teacher)
+    sign_in teacher
+
+    enable_pilot_for(teacher)
+    refute ai_tutor_enabled_for_pilot?(teacher), 'Pilot teacher should not be enabled for non-tutor level'
+  end
+
   test 'ai_tutor_enabled_for_pilot? returns false for non-pilot teacher' do
+    @level.properties['ai_tutor_available'] = 'true'
     teacher = create(:teacher)
     sign_in teacher
 
@@ -300,6 +311,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'ai_tutor_enabled_for_pilot? returns true for student with pilot teacher' do
+    @level.properties['ai_tutor_available'] = 'true'
     student = create(:student)
     sign_in student
 
@@ -309,7 +321,19 @@ class LevelsHelperTest < ActionView::TestCase
     assert ai_tutor_enabled_for_pilot?(student), 'Student with pilot teacher should be enabled'
   end
 
+  test 'ai_tutor_enabled_for_pilot? returns false for student with pilot teacher when not available on the level' do
+    @level.properties['ai_tutor_available'] = 'false'
+    student = create(:student)
+    sign_in student
+
+    # stub teacher-enabled experiments to include the pilot for this student
+    Queries::User::TeacherEnabledExperiments.stubs(:call).with(student).returns([LevelsHelper::AI_TUTOR_PILOT_NAME])
+
+    refute ai_tutor_enabled_for_pilot?(student), 'Student with pilot teacher should not be enabled for non-tutor level'
+  end
+
   test 'ai_tutor_enabled_for_pilot? returns false for student without pilot teacher' do
+    @level.properties['ai_tutor_available'] = 'true'
     student = create(:student)
     sign_in student
     Queries::User::TeacherEnabledExperiments.stubs(:call).with(student).returns([])
