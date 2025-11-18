@@ -68,6 +68,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
   test "get_ai_lesson_summary returns error status when API call fails" do
     # Mock failed HTTP response
+    error_response = {error: "API limit exceeded"}.to_json
     mock_response = mock('response')
     mock_response.stubs(:code).returns(429)
     mock_response.stubs(:body).returns(error_response)
