@@ -1,5 +1,4 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {OverlineTwoText} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -78,13 +77,6 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
 
   return (
     <div className={moduleStyles.footerPanel}>
-      <div className={moduleStyles.saveCurrentVersionHeader}>
-        <div className={moduleStyles.saveCurrentVersionHeaderText}>
-          <OverlineTwoText className={moduleStyles.overlineTwoText}>
-            {lab2I18n.saveCurrentVersion()}
-          </OverlineTwoText>
-        </div>
-      </div>
       <div className={moduleStyles.saveCurrentVersionDescription}>
         <div className={moduleStyles.saveCurrentVersionDescriptionInput}>
           <label htmlFor="commit-description" className={moduleStyles.label}>

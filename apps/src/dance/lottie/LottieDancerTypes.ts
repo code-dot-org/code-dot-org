@@ -132,6 +132,7 @@ export type Palette = {
   primary: RGBA | null;
   secondary: RGBA | null;
   tertiary: RGBA | null;
+  lock?: boolean;
 };
 
 export type Canvas2D =
@@ -169,6 +170,7 @@ export interface DancerMetadata {
   body_color?: string;
   secondary_color?: string;
   tertiary_color?: string;
+  lock_palette?: boolean;
   [k: string]: unknown;
 }
 
@@ -182,7 +184,7 @@ export type ResolvedDancerAssets = {
 export type ResolveDancerAssetsOpts = {
   /** Tag appended to headUrl as `?src=...` to avoid CORS errors */
   sourceTag?: string; // e.g., 'blockly' | 'canvas'
-  getLocalStorage?: (key: string) => string | null;
+  getSessionStorage?: (key: string) => string | null;
 };
 
-export type LocalStoragePayload = GeneratedDancerMetadata | null;
+export type SessionStoragePayload = GeneratedDancerMetadata | null;
