@@ -43,7 +43,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build-PR-69206.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -153,7 +153,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-PR-69206.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -316,6 +316,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 5dbd1f5bbe02b9ea85934ceb2a2401fd767652d0d568367501c0c97095487fe0
+hmac: d0de97812011e6377e6e652fa06cf7852542927d8db4ad52d5e4f4af77aa5bf3
 
 ...
