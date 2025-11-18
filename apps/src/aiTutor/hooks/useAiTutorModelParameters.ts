@@ -5,22 +5,23 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import experiments from '@cdo/apps/util/experiments';
+//import {AI_TUTOR_PROMPTS} from '../helpers/systemPromptsHelper';
 
 // Dynamically import LangfuseClient when needed to avoid CommonJS/ESM interop issues.
-const fetchLangfusePrompt = async (): Promise<string | undefined> => {
-  const {LangfuseClient} = await import('@langfuse/client');
-  const LANGFUSE_SECRET_KEY = 'sk-lf-11a57395-36e1-4552-90b0-a901c9c6aa1c';
-  const LANGFUSE_PUBLIC_KEY = 'pk-lf-50c2babe-69ec-42a7-9a02-eadf703dc9eb';
-  const LANGFUSE_BASE_URL = 'https://us.cloud.langfuse.com';
-  // Initialize with proper authentication
-  const langfuse = new LangfuseClient({
-    secretKey: LANGFUSE_SECRET_KEY,
-    publicKey: LANGFUSE_PUBLIC_KEY,
-    baseUrl: LANGFUSE_BASE_URL, // Optional: defaults to https://cloud.langfuse.com
-  });
-
-  const langfusePrompt = await langfuse.prompt.get('modes/debug');
-  return langfusePrompt?.prompt;
+const fetchLangfusePrompt = async (
+  promptName: string | undefined
+): Promise<string | undefined> => {
+  // error handle when promptName is undefined
+  // error handle when promptName is not one of the defined modes
+  // update to fetch the prompt by name from Langfuse
+  const LANGFUSE_URL = '/langfuse/get_prompts';
+  const response = await HttpClient.get(LANGFUSE_URL);
+  const prompts = await response.json();
+  console.log('🤖: prompts from langfuse:', prompts);
+  // const langfusePrompt = await langfuse.prompt.get(`modes/${promptName}`);
+  // return langfusePrompt?.prompt;
+  return undefined;
 };
 
 export const fetchCustomPrompt = async (promptName: string) => {
@@ -61,32 +62,30 @@ export const useAiTutorModelParameters = (
   useEffect(() => {
     let mounted = true;
 
-    // const promptName = customPromptName ?? options?.aiTutorSystemPromptName;
+    const promptName = customPromptName ?? options?.aiTutorSystemPromptName;
 
-    // const fetchPrompt = async () => {
-    //   if (!promptName) {
-    //     setSystemPrompt(defaultSystemPrompt);
-    //     return;
-    //   }
+    const fetchPrompt = async () => {
+      if (!promptName) {
+        setSystemPrompt(defaultSystemPrompt);
+        return;
+      }
 
-    //   try {
-    //     const prompt = await fetchCustomPrompt(promptName);
-    //     if (mounted) {
-    //       setSystemPrompt(prompt || defaultSystemPrompt);
-    //     }
-    //   } catch (error) {
-    //     console.error('Error fetching custom prompt', error);
-    //     if (mounted) {
-    //       setSystemPrompt(defaultSystemPrompt);
-    //     }
-    //   }
-    // };
-
-    // fetchPrompt();
+      try {
+        const prompt = await fetchCustomPrompt(promptName);
+        if (mounted) {
+          setSystemPrompt(prompt || defaultSystemPrompt);
+        }
+      } catch (error) {
+        console.error('Error fetching custom prompt', error);
+        if (mounted) {
+          setSystemPrompt(defaultSystemPrompt);
+        }
+      }
+    };
 
     const fetchLangfusePromptAndSet = async () => {
       try {
-        const langfusePrompt = await fetchLangfusePrompt();
+        const langfusePrompt = await fetchLangfusePrompt(promptName);
         if (mounted && langfusePrompt) {
           setSystemPrompt(langfusePrompt);
         }
@@ -96,7 +95,11 @@ export const useAiTutorModelParameters = (
       }
     };
 
-    fetchLangfusePromptAndSet();
+    if (experiments.isEnabled(experiments.USE_LANGFUSE_PROMPT)) {
+      fetchLangfusePromptAndSet();
+    } else {
+      fetchPrompt();
+    }
 
     return () => {
       mounted = false;
