@@ -9,6 +9,7 @@ interface WidgetTemplateProps {
   gridWidth: number;
   gridHeight: number;
   children: React.ReactNode;
+  scrollable?: boolean;
 }
 
 const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
@@ -16,6 +17,7 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
   gridWidth,
   gridHeight,
   children,
+  scrollable = false,
 }) => {
   return (
     <div
@@ -35,7 +37,13 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
           />
         </div>
       </div>
-      <div className={styles.content}>{children}</div>
+      <div
+        className={`${styles.content} ${
+          scrollable ? styles.scrollable : styles.hidden
+        }`}
+      >
+        {children}
+      </div>
     </div>
   );
 };
