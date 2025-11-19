@@ -1,8 +1,6 @@
 require 'cdo/aws/metrics'
 
 module DelayedJobManager
-  METRICS_NAMESPACE = 'code-dot-org/ActiveJob'.freeze
-
   # Delayed::Job performance degrades sharply once the main `delayed_jobs` table
   # accumulates too many rows, which often happens when failures pile up. We
   # archive those failures into a secondary table so engineers can still inspect
@@ -28,9 +26,11 @@ module DelayedJobManager
     raise
   end
 
+  # Record a CloudWatch metric for monitoring purposes
+  # This reports to the same namespace as ActiveJobMetrics
   def record_metric(metric_name, value)
     Cdo::Metrics.push(
-      METRICS_NAMESPACE,
+      'code-dot-org/ActiveJob',
       [
         {
           metric_name: metric_name,
