@@ -14,6 +14,53 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     assert_equal 'This is a comment', project_commit.comment
   end
 
+  test "duplicate project commit submission preserves original comment" do
+    student = create(:student)
+    sign_in student
+
+    # Create the first commit.
+    @controller.expects(:storage_decrypt_channel_id).with("abcdef").returns([123, 654]).twice
+    post :create, params: {storage_id: 'abcdef', version_id: 'version123', comment: 'Original comment'}
+
+    # Verify it was created.
+    project_commit = ProjectCommit.find_by(project_id: 654, object_version_id: 'version123')
+    assert_equal 'Original comment', project_commit.comment
+
+    # Attempt to create a duplicate with a different comment.
+    assert_does_not_create(ProjectCommit) do
+      post :create, params: {storage_id: 'abcdef', version_id: 'version123', comment: 'Duplicate comment'}
+    end
+
+    # Verify the original comment is preserved
+    project_commit.reload
+    assert_equal 'Original comment', project_commit.comment
+    assert_response :ok
+  end
+
+  test "duplicate project commit submission notifies Honeybadger" do
+    student = create(:student)
+    sign_in student
+
+    # Create the first commit.
+    @controller.expects(:storage_decrypt_channel_id).with("abcdef").returns([123, 654]).twice
+    post :create, params: {storage_id: 'abcdef', version_id: 'version456', comment: 'First comment'}
+
+    # Attempt to create a duplicate - expect Honeybadger notification
+    Honeybadger.expects(:notify).with(
+      'Duplicate project commit submission detected.',
+      context: {
+        project_id: 654,
+        object_version_id: 'version456',
+        existing_comment: 'First comment',
+        attempted_comment: 'Second comment',
+        user_id: student.id
+      }
+    )
+
+    post :create, params: {storage_id: 'abcdef', version_id: 'version456', comment: 'Second comment'}
+    assert_response :ok
+  end
+
   test "can fetch project commits of own project" do
     student = create(:student)
     sign_in student
