@@ -4,6 +4,43 @@
   min-width: 700px;
 }
 
+.header {
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 32px;
+
+  .dropdown {
+    width: 100%;
+
+    div {
+      width: 100%;
+      select {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.headerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  .button {
+    flex-grow: 1;
+  }
+}
+
 .widgetGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
