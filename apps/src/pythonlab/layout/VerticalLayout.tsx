@@ -11,7 +11,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
-const MIN_INFO_PANEL_WIDTH = 150;
+const MIN_INFO_PANEL_WIDTH = 250;
 const MIN_OUTPUT_WIDTH = 200;
 const MIN_EDITOR_WIDTH = 300;
 const INITIAL_INFO_PANEL_WIDTH = 300;

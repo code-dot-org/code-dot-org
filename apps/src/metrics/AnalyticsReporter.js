@@ -31,6 +31,7 @@ class AnalyticsReporter {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       init(api_key);
     }
+    this.projectContext = {};
   }
 
   setUserProperties(userId, userType, enabledExperiments) {
@@ -51,6 +52,15 @@ class AnalyticsReporter {
     identify(identifyObj);
   }
 
+  setProjectProperty(property, value) {
+    // Store project properties for Statsig only. These properties are included in events sent to Statsig if opted in.
+    if (value) {
+      this.projectContext[property] = value;
+    } else {
+      delete this.projectContext[property];
+    }
+  }
+
   /*
    *  Allows us to temporarily send events to Amplitude, Statsig, or both
    *  platforms without requiring a refactor of all events. If/when we move
@@ -58,9 +68,18 @@ class AnalyticsReporter {
    *  StatsigReporter, or the files sending events can import that file instead
    *  and we can delete this one.
    */
-  sendEvent(eventName, payload, analyticsTool = PLATFORMS.BOTH) {
+  sendEvent(
+    eventName,
+    payload,
+    analyticsTool = PLATFORMS.BOTH,
+    includeProjectProperties = false
+  ) {
     if ([PLATFORMS.STATSIG, PLATFORMS.BOTH].includes(analyticsTool)) {
-      statsigReporter.sendEvent(eventName, payload);
+      // Include project properties in Statsig events.
+      const statsigPayload = includeProjectProperties
+        ? {...payload, ...this.projectContext}
+        : payload;
+      statsigReporter.sendEvent(eventName, statsigPayload);
     }
     if ([PLATFORMS.AMPLITUDE, PLATFORMS.BOTH].includes(analyticsTool)) {
       this.sendAnalyticsEvent(eventName, payload);

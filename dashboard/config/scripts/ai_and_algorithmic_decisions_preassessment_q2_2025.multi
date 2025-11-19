@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q2_2025'
+
+question 'A clothing store\'s website has a "Try It On" button that lets you see how a shirt looks in different colors when you click each option. What principle of good interactive design does this feature show?'
+
+right 'It gives users feedback that helps them see the result of their choice right away.'
+wrong 'It hides all the color options to make the site load faster.'
+wrong 'It limits users to only one color so they don\'t get overwhelmed.'
+wrong 'It automatically changes every product on the page to match the new color.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN

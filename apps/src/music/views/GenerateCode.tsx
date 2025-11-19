@@ -4,6 +4,7 @@ import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
+import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -15,6 +16,7 @@ import Adlib, {
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -101,47 +103,64 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     adlibOption ? '' : DefaultPrompt
   );
 
-  const generateSong = useCallback(async () => {
-    const startTime = Date.now();
+  const [localizedPromptText, setLocalizedPromptText] = useState(
+    adlibOption ? '' : DefaultPrompt
+  );
 
-    dispatch(setAiGenerateState('generating'));
+  const generateSong = useCallback(
+    async (regenerate = false) => {
+      const startTime = Date.now();
 
-    const pseudocode = await (useCache && useAdlib
-      ? generateSongCache(adlibOption || '', useAdlib, packId, adlibChoices)
-      : generateSongAi(
-          contextText,
+      dispatch(setAiGenerateState('generating'));
+
+      analyticsReporter.sendEvent(
+        EVENTS[
+          `MUSIC_LAB_${regenerate ? 'REGENERATE' : 'GENERATE'}_CODE_CLICKED`
+        ],
+        {
+          adlibChoices,
           packId,
-          promptText || '',
-          (levelProperties.levelData as MusicLevelData)
-            .aiCodeGenerateExtraPrompt
-        ));
+          levelPath: window.location.pathname,
+        }
+      );
+      const pseudocode = await (useCache && useAdlib
+        ? generateSongCache(adlibOption || '', useAdlib, packId, adlibChoices)
+        : generateSongAi(
+            contextText,
+            packId,
+            promptText || '',
+            (levelProperties.levelData as MusicLevelData)
+              .aiCodeGenerateExtraPrompt
+          ));
 
-    const elapsedTime = Date.now() - startTime;
-    const remainingDelayDuration = Math.max(
-      GENERATE_DELAY_DURATION - elapsedTime,
-      0
-    );
-    await new Promise(res => setTimeout(res, remainingDelayDuration));
+      const elapsedTime = Date.now() - startTime;
+      const remainingDelayDuration = Math.max(
+        GENERATE_DELAY_DURATION - elapsedTime,
+        0
+      );
+      await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-    if (pseudocode) {
-      const resultBlockly = generateBlocklyJson(pseudocode);
-      dispatch(setCodeToLoad(resultBlockly));
-    }
+      if (pseudocode) {
+        const resultBlockly = generateBlocklyJson(pseudocode);
+        dispatch(setCodeToLoad(resultBlockly));
+      }
 
-    setPlaying(true);
-    dispatch(setAiGenerateState('generated'));
-  }, [
-    adlibChoices,
-    adlibOption,
-    contextText,
-    dispatch,
-    levelProperties.levelData,
-    packId,
-    promptText,
-    setPlaying,
-    useAdlib,
-    useCache,
-  ]);
+      setPlaying(true);
+      dispatch(setAiGenerateState('generated'));
+    },
+    [
+      adlibChoices,
+      adlibOption,
+      contextText,
+      dispatch,
+      levelProperties.levelData,
+      packId,
+      promptText,
+      setPlaying,
+      useAdlib,
+      useCache,
+    ]
+  );
 
   useEffect(() => {
     // If we are clearing, make sure we are called with the new
@@ -152,7 +171,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       aiGenerateState === 'clearing-before-generating' &&
       blockCount <= 1
     ) {
-      generateSong();
+      generateSong(true);
     }
   }, [aiGenerateState, blockCount, dispatch, generateSong]);
 
@@ -198,32 +217,44 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     setAdlibChoices({...adlibChoices});
   }, []);
 
-  const onAdlibTextChange = useCallback((text: string) => {
+  const onAdlibTextChange = useCallback((text: string, localized: string) => {
     setPromptText(text);
+    setLocalizedPromptText(localized);
   }, []);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
-  const modal = [
-    'none',
-    'generating',
-    'generated',
-    'listening',
-    'listened',
-    'clearing-before-none',
-    'clearing-before-generating',
-  ].includes(aiGenerateState);
+  const modal = ['none', 'listened'].includes(aiGenerateState)
+    ? 'gap'
+    : [
+        'generating',
+        'generated',
+        'listening',
+        'clearing-before-none',
+        'clearing-before-generating',
+      ].includes(aiGenerateState)
+    ? 'full'
+    : undefined;
 
   const parentProperties = useParentLevelProperties();
   const isStandalone =
     levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
+  const sublevelOnContinue = useCallback(() => {
+    dispatch(
+      sendSuccessReportForLevel(
+        levelProperties.id.toString(),
+        levelProperties.appName
+      )
+    );
+  }, [dispatch, levelProperties.appName, levelProperties.id]);
 
+  const levelSpecificId = `generate-panel-${levelProperties.id}`;
   if (!packId) {
     return null;
   }
 
   return (
-    <Guide id="generate-panel" modal={modal}>
+    <Guide key={levelSpecificId} id={levelSpecificId} modal={modal}>
       {aiGenerateState === 'none' &&
         useAdlib &&
         levelProperties.longInstructions && (
@@ -306,7 +337,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             {aiGenerateState === 'listening' && 'Take a listen...'}
             {aiGenerateState === 'listened' && 'Decide what to do next'}
           </Heading3>
-          <div>AI generated code based on your prompt, "{promptText}"</div>
+          <div>
+            AI generated code based on your prompt, "{localizedPromptText}"
+          </div>
         </div>
       )}
 
@@ -322,6 +355,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               setPlaying(false);
               clearCode(true);
               dispatch(setAiGenerateState('clearing-before-none'));
+              analyticsReporter.sendEvent(
+                EVENTS.MUSIC_LAB_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
+                {levelPath: window.location.pathname, packId}
+              );
             }}
             className={styles.buttonWide}
           />
@@ -353,10 +390,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
               dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
-
-              if (appConfig.getValue('ai-music-skip-stop') !== 'true') {
-                setPlaying(false);
-              }
+              analyticsReporter.sendEvent(
+                EVENTS.MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED,
+                {levelPath: window.location.pathname, packId, adlibChoices}
+              );
             }}
             className={styles.buttonWide}
           />
@@ -394,6 +431,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 setPlaying(false);
                 clearCode(true);
                 dispatch(setAiGenerateState('clearing-before-none'));
+                analyticsReporter.sendEvent(
+                  EVENTS.MUSIC_LAB_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
+                  {levelPath: window.location.pathname, packId}
+                );
               }}
               className={styles.buttonWide}
             />
@@ -405,11 +446,17 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 hasEdited={true}
                 isRunning={false}
                 className={styles.buttonWide}
+                // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
+                onContinue={parentProperties ? sublevelOnContinue : undefined}
               />
             )}
           </div>
         </>
       )}
+      {/* Retain focus with a hidden button. */}
+      {['generating', 'generated', 'listening', 'editing'].includes(
+        aiGenerateState
+      ) && <div tabIndex={0} role="button" className={styles.hiddenButton} />}
     </Guide>
   );
 };

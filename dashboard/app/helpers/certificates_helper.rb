@@ -22,7 +22,7 @@ module CertificatesHelper
   end
 
   def certificate_image_url(name, course, donor)
-    return certificate_image_url_for('hour_of_code_certificate.jpg') if course.blank?
+    return certificate_image_url_for('hour_of_ai_certificate.png') if course.blank?
     is_prefilled = CertificateImage.prefilled_title_course?(course)
     return certificate_image_url_for(CertificateImage.certificate_template_for(course)) if is_prefilled && !name
     encoded = encode_params(name, course, donor)
@@ -30,7 +30,7 @@ module CertificatesHelper
   end
 
   def twitter_certificate_image_url(name, course, donor)
-    return certificate_image_url_for('hour_of_code_certificate.jpg') if course.blank?
+    return certificate_image_url_for('hour_of_ai_certificate.png') if course.blank?
     is_prefilled = CertificateImage.prefilled_title_course?(course)
     return certificate_image_url_for(CertificateImage.certificate_template_for(course)) if is_prefilled && !name
     encoded = encode_params(name, course, donor)

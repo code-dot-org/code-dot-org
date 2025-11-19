@@ -17,7 +17,7 @@ import moduleStyles from './workspace.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {levelProperties, projectPickerSettings} = useCodebridgeContext();
-  const {appName, enableMicroBit, skipUrl} = levelProperties;
+  const {enableMicroBit, skipUrl} = levelProperties;
 
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -31,13 +31,13 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         type: DialogType.Skip,
         handleConfirm: () => {
           if (skipUrl) {
-            sendLab2AnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName);
+            sendLab2AnalyticsEvent(EVENTS.SKIP_TO_PROJECT);
             window.location.href = skipUrl;
           }
         },
       });
     }
-  }, [appName, dialogControl, skipUrl]);
+  }, [dialogControl, skipUrl]);
 
   const onClickFlash = async () => {
     let pythonCode = '';

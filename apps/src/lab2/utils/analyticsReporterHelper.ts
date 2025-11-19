@@ -10,9 +10,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
  */
 export function sendLab2AnalyticsEvent(
   eventName: string,
-  labType?: string,
   payload?: Record<string, string>
 ) {
-  const fullPayload = payload ? {labType, ...payload} : {labType};
-  analyticsReporter.sendEvent(eventName, fullPayload, PLATFORMS.STATSIG);
+  analyticsReporter.sendEvent(eventName, payload, PLATFORMS.STATSIG, true);
 }
