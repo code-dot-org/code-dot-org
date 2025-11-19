@@ -35,9 +35,7 @@ ChatClient.log "A user has invoked bin/terminate_build on this environment's dae
 # ps -C sh -o pid,pgid,args
 #
 # PID  PGID COMMAND
-# 1308  1308 /bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/staging/Gemfile bundle exec /home/ubuntu/staging/bin/cronjob /home/ubuntu/.dropbox-dist/dropboxd
 # 22641 22641 /bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/staging/Gemfile bundle exec /home/ubuntu/staging/bin/cronjob /home/ubuntu/staging/aws/ci_build dev+build@code.org
-# 22646 22646 /bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/staging/Gemfile bundle exec /home/ubuntu/staging/bin/cronjob /home/ubuntu/staging/bin/cron/sync_dropbox
 
 # Command issued by cron to execute the continuous deployment system.
 BUILD_COMMAND = "/bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/#{CDO.env}/Gemfile bundle exec /home/ubuntu/#{CDO.env}/bin/cronjob /home/ubuntu/#{CDO.env}/aws/ci_build dev+build@code.org".freeze

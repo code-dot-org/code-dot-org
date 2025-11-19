@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
+class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
   let(:tutorial_code) {'mc'}
@@ -28,7 +28,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
   end
 
   it 'has expected basic flow from begin to finish' do
-    VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow') do
+    VCR.use_cassette('hoc_legacy/api_flow/basic_flow') do
       get "/api/hour/begin/#{tutorial_code}"
       must_redirect_to 'http://test.code.org/minecraft'
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).wont_be_nil
@@ -47,7 +47,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
       get "/api/hour/finish/#{tutorial_code}"
       must_redirect_to "http://test-studio.code.org/congrats?i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}&s=#{encoded_tutorial_code}"
 
-      post '/api/hour/certificate', params: {session_s: cookies[HocLegacy::HOC_COOKIE_KEY], name_s: student_name}
+      patch "/api/hour/certificates/#{cookies[HocLegacy::HOC_COOKIE_KEY]}", params: {name: student_name}
       must_respond_with :success
       _(json_response).must_equal(
         {
@@ -62,11 +62,17 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
           'certificate_sent' => true,
         }
       )
+
+      get "/api/hour/certificates/#{cookies[HocLegacy::HOC_COOKIE_KEY]}"
+      must_redirect_to '/certificates/eyJuYW1lIjoiU3R1ZGVudCBOYW1lIiwiY291cnNlIjoibWMifQ=='
+
+      follow_redirect!
+      must_respond_with :success
     end
   end
 
   it 'has expected basic flow from begin to finish_current' do
-    VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow_with_finish_current') do
+    VCR.use_cassette('hoc_legacy/api_flow/basic_flow_with_finish_current') do
       get "/api/hour/begin/#{tutorial_code}"
       must_redirect_to 'http://test.code.org/minecraft'
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).wont_be_nil
@@ -80,7 +86,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
       get '/api/hour/finish'
       must_redirect_to "http://test-studio.code.org/congrats?i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}"
 
-      post '/api/hour/certificate', params: {session_s: cookies[HocLegacy::HOC_COOKIE_KEY], name_s: student_name}
+      patch "/api/hour/certificates/#{cookies[HocLegacy::HOC_COOKIE_KEY]}", params: {name: student_name}
       must_respond_with :success
       _(json_response).must_equal(
         {
@@ -95,6 +101,12 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
           'certificate_sent' => true,
         }
       )
+
+      get "/api/hour/certificates/#{cookies[HocLegacy::HOC_COOKIE_KEY]}"
+      must_redirect_to '/certificates/eyJuYW1lIjoiU3R1ZGVudCBOYW1lIiwiY291cnNlIjoibWMifQ=='
+
+      follow_redirect!
+      must_respond_with :success
     end
   end
 end
