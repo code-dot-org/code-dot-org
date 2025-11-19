@@ -141,12 +141,6 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
     setIsCollapsed(!isCollapsed);
   };
 
-  const onNewChatButtonClick = useCallback(() => {
-    setShowNotifications(false);
-    setShowDailyBytes(false);
-    dispatch(fetchThreadMessages({thread: 0}));
-  }, [setShowNotifications, setShowDailyBytes, dispatch]);
-
   const checkIfThreadIsSelected = (thread: ChatThread) =>
     !showNotifications && !showDailyBytes && thread.id === selectedThreadId;
 
@@ -220,6 +214,14 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
     teacherHasSections,
   ]);
 
+  const onNewChatButtonClick = useCallback(() => {
+    setShowNotifications(false);
+    setShowDailyBytes(false);
+    dispatch(
+      fetchThreadMessages({thread: 0, suggestedPrompts: suggestedPrompts})
+    );
+  }, [setShowNotifications, setShowDailyBytes, suggestedPrompts, dispatch]);
+
   return (
     <aside
       className={classNames(
@@ -236,23 +238,6 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           isCollapsed && styles.sidebarBoxCollapsed
         )}
       >
-        <Button
-          color={buttonColors.white}
-          size="s"
-          type="primary"
-          iconLeft={{iconName: 'plus'}}
-          onClick={() => {
-            setShowNotifications(false);
-            dispatch(
-              fetchThreadMessages({
-                thread: 0,
-                suggestedPrompts: suggestedPrompts,
-              })
-            );
-          }}
-          text={commonI18n.aiDifferentiation_new_chat()}
-          className={styles.sidebarButton}
-        />
         <Box className={styles.sidebarActions}>
           <WithTooltip
             tooltipProps={{
