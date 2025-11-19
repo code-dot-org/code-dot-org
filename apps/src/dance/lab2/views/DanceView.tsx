@@ -132,10 +132,19 @@ const DanceView: React.FunctionComponent<{
     setReinitializationHandler,
     startOver,
   } = useSources<DanceProjectSources>();
+
+  const mergeSources = useCallback(
+    (patch: Partial<DanceProjectSources>, forceSave = false) => {
+      const next = {...sourcesRef.current, ...patch};
+      updateSources(next, forceSave);
+    },
+    [updateSources]
+  );
+
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<GoogleBlockly.Workspace | null>(null);
 
-  const updateBlocklyFlyout = useCallback(
+  const onFlyoutGenerated = useCallback(
     (toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo) => {
       const currentWorkspace = workspace.current;
       if (currentWorkspace && currentWorkspace.rendered) {
@@ -232,12 +241,11 @@ const DanceView: React.FunctionComponent<{
   };
 
   const turnOffFilter = useCallback(() => setFilterOn(false), []);
-
   const onSetSong = useCallback(
     (songId: string) => {
-      updateSources({...currentSources, selectedSong: songId});
+      mergeSources({selectedSong: songId});
     },
-    [updateSources, currentSources]
+    [mergeSources]
   );
 
   const saveBlocks = useCallback(
@@ -248,9 +256,9 @@ const DanceView: React.FunctionComponent<{
       const blocks = Blockly.serialization.workspaces.save(
         workspace.current
       ) as BlocklySource;
-      updateSources({...currentSources, source: blocks}, forceSave);
+      mergeSources({source: blocks}, forceSave);
     },
-    [currentSources, updateSources]
+    [mergeSources]
   );
 
   const runProgram = useCallback(async () => {
@@ -438,22 +446,19 @@ const DanceView: React.FunctionComponent<{
       if (guideMode === 'aiCodeGenerate') {
         Blockly.extraScrollHeight = 250;
       }
-      const toolboxFromStorage = sessionStorage.getItem(
-        `flyout-${levelProperties.id}`
-      );
-      // GenerateDance levels depend upon a generated toolbox.
-      if (toolboxFromStorage) {
+      const toolboxDefinition = currentSources.toolboxDefinition;
+      if (toolboxDefinition) {
         try {
-          const toolboxDefinition = JSON.parse(toolboxFromStorage);
-          updateBlocklyFlyout(toolboxDefinition);
+          onFlyoutGenerated(toolboxDefinition);
         } catch {}
       }
     }
   }, [
     currentSources.source,
+    currentSources.toolboxDefinition,
     guideMode,
-    levelProperties.id,
-    updateBlocklyFlyout,
+    onFlyoutGenerated,
+    currentSources,
   ]);
 
   useEffect(() => {
@@ -467,9 +472,9 @@ const DanceView: React.FunctionComponent<{
       const defaultSong = levelProperties.defaultSong;
       const songToUse =
         defaultSong && songData[defaultSong] ? defaultSong : songKeys[0];
-      updateSources({...currentSources, selectedSong: songToUse});
+      mergeSources({selectedSong: songToUse});
     }
-  }, [songData, currentSources, updateSources, levelProperties.defaultSong]);
+  }, [songData, currentSources, mergeSources, levelProperties.defaultSong]);
 
   // Load the selected song whenever it changes in project sources.
   useEffect(() => {
@@ -573,6 +578,11 @@ const DanceView: React.FunctionComponent<{
   }, [progressManager, levelProperties.appName, guideMode]);
 
   const settings = useBlocklySettings();
+
+  const sourcesRef = useRef(currentSources);
+  useEffect(() => {
+    sourcesRef.current = currentSources;
+  }, [currentSources]);
 
   if (isShareView) {
     const musicMetadata = loadedMusicProject
@@ -708,13 +718,13 @@ const DanceView: React.FunctionComponent<{
               runProgram={runProgram}
               resetProgram={resetProgram}
               updateSources={resultBlockly => {
-                updateSources({
-                  ...currentSources,
-                  source: resultBlockly,
+                mergeSources({
+                  source: resultBlockly.workspaceSerialization,
+                  toolboxDefinition: resultBlockly.flyoutDefinition,
                 });
               }}
               startOver={startOver}
-              updateBlocklyFlyout={updateBlocklyFlyout}
+              onFlyoutGenerated={onFlyoutGenerated}
             />
           )}
       </div>
