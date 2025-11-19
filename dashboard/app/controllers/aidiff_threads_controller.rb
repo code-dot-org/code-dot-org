@@ -24,7 +24,7 @@ class AidiffThreadsController < ApplicationController
 
     context = params[:context]
 
-    get_curriculum_contexts(context[:levelId], context[:lessonId], context[:unitId], context[:courseId], context[:type])
+    get_curriculum_contexts(context[:levelId], context[:lessonId], context[:unitId], context[:courseId], context[:sectionId], context[:type])
 
     response_body = get_response_body(nil, context[:type], params[:inputText])
 
@@ -80,7 +80,7 @@ class AidiffThreadsController < ApplicationController
         courses.push(*c[:course_names])
       end
     else
-      get_curriculum_contexts(context[:levelId], context[:lessonId], context[:unitId], context[:courseId], context[:type])
+      get_curriculum_contexts(context[:levelId], context[:lessonId], context[:unitId], context[:courseId], context[:sectionId], context[:type])
 
       courses.push(*(@unit_group.present? ? [@unit_group.name, @unit_group.family_name] : ([@unit&.name, @unit&.family_name] if @unit.present?)))
     end
@@ -98,15 +98,17 @@ class AidiffThreadsController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
+    context = params[:context]
+
     if @aidiff_thread.session_created.nil? || @aidiff_thread.session_created < 1.day.ago
       session_id = nil
-      input = AiDiffBedrockHelper.populate_new_session_messages(@aidiff_thread.aidiff_messages, params[:inputText])
+      input = populate_new_session_messages(@aidiff_thread.aidiff_messages, params[:inputText])
     else
       session_id = @aidiff_thread.external_id
       input = params[:inputText]
     end
 
-    get_curriculum_contexts(@aidiff_thread.level_id, @aidiff_thread.lesson_id, @aidiff_thread.unit_id, @aidiff_thread.course_id, @aidiff_thread.context_type)
+    get_curriculum_contexts(@aidiff_thread.level_id, @aidiff_thread.lesson_id, @aidiff_thread.unit_id, @aidiff_thread.course_id, context[:sectionId], @aidiff_thread.context_type)
     response_body = get_response_body(session_id, @aidiff_thread.context_type, input)
 
     # Log messages if the response was successful and not flagged for PII.
@@ -186,7 +188,7 @@ class AidiffThreadsController < ApplicationController
     unit_display_name = @unit&.title_for_display(unit_group_unit: @unit&.unit_group_units&.first)
     student_code = get_student_code(params[:viewAsUserId] || current_user.id, @level, @unit.id) if context_type == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
 
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(
+    prompt = get_prompt_for_context(
       context_type,
       course_display_name,
       unit_display_name,
@@ -197,7 +199,7 @@ class AidiffThreadsController < ApplicationController
       student_code
     )
 
-    response = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type))
+    response = request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type))
     #TODO: check for profanity/PII in model response
 
     {
@@ -210,9 +212,9 @@ class AidiffThreadsController < ApplicationController
     }
   end
 
-  private def get_active_sections
+  private def get_section_contexts(sections)
     # all sections updated in the last year that have curriculum assigned
-    contexts = @current_user&.sections&.where(hidden: false, updated_at: 1.year.ago..Time.now)&.select {|s| s.script_id || s.course_id}&.map do |section|
+    contexts = sections&.map do |section|
       context_scope = SharedConstants::AI_DIFF_CONTEXT[:COURSE]
       course_display_name = CourseOffering.find_by(id: section.course_offering_id)&.display_name
       course_names = [section.unit_group&.name]
@@ -227,7 +229,7 @@ class AidiffThreadsController < ApplicationController
     contexts
   end
 
-  private def get_curriculum_contexts(level_id, lesson_id, unit_id, course_id, context_type)
+  private def get_curriculum_contexts(level_id, lesson_id, unit_id, course_id, section_id, context_type)
     if level_id
       @level = Level.find(level_id)
     end
@@ -240,9 +242,9 @@ class AidiffThreadsController < ApplicationController
     end
 
     if unit_id
-      @unit = Unit.find(unit_id)
+      @unit = Unit.get_from_cache(unit_id)
     elsif @lesson
-      @unit = Unit.find(@lesson.script_id)
+      @unit = Unit.get_from_cache(@lesson.script_id)
     end
 
     if course_id
@@ -252,7 +254,11 @@ class AidiffThreadsController < ApplicationController
     end
 
     if context_type == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
-      @section_contexts = get_active_sections
+      sections = current_user.sections_instructed.where(hidden: false, updated_at: 1.year.ago..Time.now)&.select {|s| s.script_id || s.course_id}
+      @section_contexts = get_section_contexts(sections)
+    elsif section_id
+      sections = current_user.sections_instructed.filter {|section| section.id == section_id}
+      @section_contexts = get_section_contexts(sections)
     end
   end
 
