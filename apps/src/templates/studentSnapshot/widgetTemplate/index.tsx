@@ -2,6 +2,8 @@ import {Button} from '@code-dot-org/component-library/button';
 import {Typography} from '@mui/material';
 import React from 'react';
 
+import i18n from '@cdo/locale';
+
 import styles from './widgetTemplate.module.scss';
 
 interface WidgetTemplateProps {
@@ -34,6 +36,7 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
             onClick={() => alert('Settings - does nothing yet')}
             isIconOnly
             icon={{iconName: 'gear'}}
+            aria-label={i18n.settings()}
           />
         </div>
       </div>

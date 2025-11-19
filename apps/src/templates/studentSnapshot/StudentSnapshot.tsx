@@ -8,7 +8,7 @@ import styles from './studentSnapshot.module.scss';
 
 const StudentSnapshot: React.FC = () => {
   return (
-    <div>
+    <div className={styles.snapshotContainer}>
       <Header />
 
       <Typography
