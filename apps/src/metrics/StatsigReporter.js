@@ -103,11 +103,6 @@ class StatsigReporter {
     }
   }
 
-  // Wait until the reporter is ready
-  waitUntilReady = async () => {
-    await this.readyPromise;
-  };
-
   // Utilizes Statsig's function for updating a user once we've recognized a sign in
   async setUserProperties({
     userId,
@@ -185,6 +180,13 @@ class StatsigReporter {
     return (
       this.statsigClient.getExperiment(name).value[parameter] ?? defaultValue
     );
+  }
+
+  // Returns a promise that resolves with the experiment result
+  // This eliminates the need for components to call waitUntilReady
+  async getIsInExperimentAsync(name, parameter, defaultValue) {
+    await this.readyPromise;
+    return this.getIsInExperiment(name, parameter, defaultValue);
   }
 
   /**

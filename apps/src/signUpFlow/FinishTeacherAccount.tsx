@@ -174,9 +174,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
   useEffect(() => {
     (async () => {
-      await statsigReporter.waitUntilReady();
-
-      const result = statsigReporter.getIsInExperiment(
+      const result = await statsigReporter.getIsInExperimentAsync(
         'select_grades_taught_on_account_creation',
         'enable_selecting_grades',
         false
