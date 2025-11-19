@@ -31,7 +31,6 @@ interface FetchThreadMessagesParams {
   threadType?: ThreadTypeFields;
   initialThreadPrompt?: ChatPrompt;
   suggestedPrompts?: ChatPrompt[];
-  curriculumCourses?: string[];
 }
 
 async function asyncFetchThreadMessages(thread: number): Promise<ChatThread> {
