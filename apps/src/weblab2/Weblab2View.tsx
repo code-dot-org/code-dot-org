@@ -86,7 +86,6 @@ const Weblab2View: React.FC<
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
-  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   const {startSources} = useSource(
     defaultProject,
