@@ -5,17 +5,14 @@ class AiLessonSummariesJob < ApplicationJob
 
   # Catch any exceptions that occur during the job and update the request status accordingly.
   rescue_from StandardError do |exception|
-    if rack_env?(:development)
-      puts "AiLessonSummariesJob Error: #{exception.full_message}"
-    else
-      request = arguments.first[:request]
-      Honeybadger.notify(
-        "AiLessonSummariesJob failed with unexpected error: #{exception.message}",
-        context: {
-          request: request.to_json
-        }
-      )
-    end
+    request = arguments.first[:request]
+    Honeybadger.notify(
+      "AiLessonSummariesJob failed with unexpected error: #{exception.message}",
+      context: {
+        request: request.to_json
+      }
+    )
+
     # Re-raise error to notify our system of the failed job.
     raise exception
   end
