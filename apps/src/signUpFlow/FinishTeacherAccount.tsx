@@ -173,10 +173,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
   }, [countryCode, usIp, redirectUrl]);
 
   useEffect(() => {
-    let mounted = true;
     (async () => {
       await statsigReporter.waitUntilReady();
-      if (!mounted) return;
 
       const result = statsigReporter.getIsInExperiment(
         'select_grades_taught_on_account_creation',
@@ -185,9 +183,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
       );
       setIsInExp(result);
     })();
-    return () => {
-      mounted = false;
-    };
   }, []);
 
   // GDPR is valid if
