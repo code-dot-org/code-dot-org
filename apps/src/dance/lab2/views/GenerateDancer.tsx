@@ -17,6 +17,7 @@ import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetr
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibsType,
@@ -32,7 +33,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 import backgroundImage from '@cdo/static/dance/generateDancer/generate-dancer-background.png';
 import dancerSilhouetteBrightImage from '@cdo/static/dance/generateDancer/generate-dancer-silhouette-bright.svg';
@@ -356,6 +357,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     );
   }, [dispatch, levelProperties.appName, levelProperties.id]);
 
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
       <div className={moduleStyles.mainContent}>
@@ -418,36 +421,39 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   <Adlib
                     adlib={adlibs[adlibOption]}
                     adlibChoices={adlibChoices}
-                    readOnly={['generating', 'reviewing'].includes(
-                      aiGenerateState
-                    )}
+                    readOnly={
+                      isReadOnly ||
+                      ['generating', 'reviewing'].includes(aiGenerateState)
+                    }
                     glowSpeed={glowSpeed}
                     onChoicesChange={onAdlibChoicesChange}
                     onTextChange={onAdlibTextChange}
                   />
                 )}
-                <div className={moduleStyles.buttonRow}>
-                  <Button
-                    ariaLabel={
-                      aiGenerateState === 'none'
-                        ? 'Generate dancer'
-                        : 'Generating dancer'
-                    }
-                    text={
-                      aiGenerateState === 'none'
-                        ? 'Generate dancer'
-                        : 'Generating dancer'
-                    }
-                    type="primary"
-                    color="black"
-                    size="s"
-                    iconLeft={{iconName: 'sparkles'}}
-                    isPending={aiGenerateState === 'generating'}
-                    disabled={aiGenerateState === 'generating'}
-                    onClick={() => generateDancer()}
-                    className={moduleStyles.buttonWide}
-                  />
-                </div>
+                {!isReadOnly && (
+                  <div className={moduleStyles.buttonRow}>
+                    <Button
+                      ariaLabel={
+                        aiGenerateState === 'none'
+                          ? 'Generate dancer'
+                          : 'Generating dancer'
+                      }
+                      text={
+                        aiGenerateState === 'none'
+                          ? 'Generate dancer'
+                          : 'Generating dancer'
+                      }
+                      type="primary"
+                      color="black"
+                      size="s"
+                      iconLeft={{iconName: 'sparkles'}}
+                      isPending={aiGenerateState === 'generating'}
+                      disabled={aiGenerateState === 'generating'}
+                      onClick={() => generateDancer()}
+                      className={moduleStyles.buttonWide}
+                    />
+                  </div>
+                )}
               </>
             )}
           {aiGenerateState === 'reviewing' && (
@@ -516,6 +522,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             />
           )}
         </Guide>
+        )
         <div className={moduleStyles.dancerContainer} ref={containerRef}>
           <div className={moduleStyles.background}>
             <img
