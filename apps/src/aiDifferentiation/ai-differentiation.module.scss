@@ -23,6 +23,7 @@ $body-height: 612;
 $fab-left: 11;
 $fab-bottom: 35;
 $fab-height: 48;
+$sidebar-tooltip-z-index: 2010;
 
 :export {
   containerHeight: $header-height + $body-height;
@@ -342,6 +343,17 @@ $fab-height: 48;
   height: auto;
   display: flex;
   border-right: 1px solid $neutral_dark;
+  transition: all 0.2s ease-in-out;
+
+  &.sidebarContainerCollapsed {
+    width: 64px;
+    flex: 0 0 64px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .expandedNewChatButton {
+    flex-grow: 1;
+  }
 }
 
 .sidebarBox {
@@ -349,6 +361,41 @@ $fab-height: 48;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
+}
+
+.sidebarActions {
+  display: flex;
+  padding: 8px 16px 0;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.buttonWithUnreadDot {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    left: 16px;
+    top: 3px;
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--background-error-primary);
+    border-radius: 50%;
+    margin-left: 4px;
+  }
+}
+
+.sidebarBoxCollapsed {
+  .sidebarActions {
+    flex-direction: column;
+  }
+}
+
+html body .sidebarActionTooltip {
+  z-index: $sidebar-tooltip-z-index;
 }
 
 .sidebarContent {
@@ -407,19 +454,21 @@ $fab-height: 48;
   overflow: hidden;
 }
 
-.sidebarButton {
-  margin-top: 15px !important;
-  margin-left: 8px !important;
-  margin-right: 8px !important;
-  border: 1px solid black !important;
-  border-radius: 4px;
-}
-
 .sidebarManageLink {
   margin-left: 8px;
 }
 
-.notificationsButton {
+.sidebarCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+
+  &:not(:empty) {
+    margin-top: 1rem;
+  }
+}
+
+.categoryActionButton {
   background-color: inherit;
   display: flex;
   height: 32px;
@@ -430,7 +479,7 @@ $fab-height: 48;
   color: var(--text-neutral-black-fixed);
   border: 0;
   font-size: var(--font-size-body-sm, 14px);
-  margin: 16px 0 0 0;
+  margin: 0;
   min-height: 32px;
   border-radius: 0;
 

@@ -69,13 +69,13 @@ const DanceShare: React.FC<DanceShareProps> = props => {
           moduleStyles.share
         )}
       >
-        <div className={moduleStyles.header}>
-          <Heading3 className={moduleStyles.projectTitle}>
-            {projectTitle}
-          </Heading3>
-          <img src={mixMoveAiBanner} alt="Mix & Move with AI" />
-        </div>
         <div id={props.visualizationId} className={moduleStyles.visualization}>
+          <div className={moduleStyles.header}>
+            <Heading3 className={moduleStyles.projectTitle}>
+              {projectTitle}
+            </Heading3>
+            <img src={mixMoveAiBanner} alt="Mix & Move with AI" />
+          </div>
           {usingMusicProject && (
             <MusicProjectBar
               isLoading={!loadedMusicProject}

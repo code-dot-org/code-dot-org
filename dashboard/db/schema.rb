@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_11_12_230749) do
+ActiveRecord::Schema.define(version: 2025_11_19_161129) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2025_11_12_230749) do
     t.text "lesson_summary"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "script"
   end
 
   create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -1793,11 +1794,13 @@ ActiveRecord::Schema.define(version: 2025_11_12_230749) do
     t.boolean "standalone", default: true
     t.integer "remix_parent_id"
     t.boolean "skip_content_moderation"
+    t.string "uuid"
     t.index ["project_type"], name: "storage_apps_project_type_index", length: 191
     t.index ["published_at"], name: "storage_apps_published_at_index"
     t.index ["standalone"], name: "storage_apps_standalone_index"
     t.index ["storage_id", "state"], name: "storage_apps_storage_id_state_index"
     t.index ["storage_id"], name: "storage_apps_storage_id_index"
+    t.index ["uuid"], name: "index_projects_on_uuid", unique: true
   end
 
   create_table "puzzle_ratings", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

@@ -4,11 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - AIF",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-28 13:48:59 UTC",
+    "serialized_at": "2025-11-17 15:35:34 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -918,6 +923,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_17_aug2025"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -940,6 +948,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_18_aug2025"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
