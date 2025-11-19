@@ -1,4 +1,6 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {StrongText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
@@ -61,6 +63,35 @@ const FilePreview: React.FC<{
     const extension = filename.split('.').pop();
     return filename.includes('.') && extension ? extension : 'TEXT';
   };
+  const fileExtension = getFileExtension(filename);
+
+  const getFileIconName = (extension: string): string => {
+    switch (extension) {
+      case 'css':
+        return 'css';
+      case 'csv':
+        return 'file-csv';
+      case 'html':
+        return 'file-code';
+      case 'js':
+        return 'js';
+      case 'md':
+        return 'markdown';
+      case 'pdf':
+        return 'file-pdf';
+      case 'txt':
+      case 'TEXT':
+        return 'file-lines';
+      default:
+        return 'file';
+    }
+  };
+
+  const getFileIconFamily = (
+    extension: string
+  ): FontAwesomeV6IconProps['iconFamily'] => {
+    return ['css', 'js', 'md'].includes(extension) ? 'brands' : undefined;
+  };
 
   return (
     <div className={styles[`preview-${previewType}`]} title={filename}>
@@ -112,12 +143,8 @@ const FilePreview: React.FC<{
         <>
           <div className={styles.fileIcon}>
             <FontAwesomeV6Icon
-              iconName={
-                {
-                  pdf: 'file-pdf',
-                  text: 'file-code',
-                }[type] || 'file'
-              }
+              iconName={getFileIconName(fileExtension)}
+              iconFamily={getFileIconFamily(fileExtension)}
             />
           </div>
           <div className={styles.filenameContainer}>
@@ -125,9 +152,7 @@ const FilePreview: React.FC<{
             <span className={styles.fileDetail}>
               {[
                 type === 'pdf' ? 'PDF' : null,
-                type === 'text'
-                  ? getFileExtension(filename).toUpperCase()
-                  : null,
+                type === 'text' ? fileExtension.toUpperCase() : null,
                 fileDetail ? fileDetail : null,
               ]
                 .filter(Boolean)

@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-25 20:06:11 UTC",
+    "serialized_at": "2025-11-16 21:21:25 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -895,7 +895,7 @@
       "key": "9aa1878a-1a62-4124-ab23-fbfd2223e9cc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the *AI Networks Chat* activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to get basic information using the AI chatbot.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate using more specific prompts in order to get more helpful information. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate prompts that make connections between topics in order to show relationships.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display troubleshooting strategies for AI chatbot interactions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1.\n- **Level 1:** Students interact with an AI Chatbot to complete their activity guide. \n- **Level 2:** Students complete a check for understanding.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the *AI Networks Chat* activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to get basic information using the AI chatbot.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate using more specific prompts in order to get more helpful information. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate prompts that make connections between topics in order to show relationships.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display troubleshooting strategies for AI chatbot interactions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1.\n- **Level 1:** Students interact with an AI Chatbot to complete their activity guide. \n- **Level 2:** Students check the accuracy of AI chat. \n- **Level 3:** Students complete a check for understanding.",
         "duration": "20",
         "name": "AI Networks Chat",
         "progression_name": "AI Networks Chat"
@@ -912,12 +912,8 @@
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are interacting with the chatbot and completing their activity guides, ask them questions about the responses they are getting and checking for understanding. ",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Encourage curiosity in students! If students get vague answers, or answers they don’t understand, have them rephrase their questions to get better results. "
-          },
-          {
             "type": "assessmentOpportunity",
-            "markdown": "Students’ answers in Level 2 can be used as a formative assessment of their understanding of the function of each network component.\n\nActivity guides can also be collected and used to formatively assess student understanding of network components. "
+            "markdown": "Students’ answers in Level 3 can be used as a formative assessment of their understanding of the function of each network component.\n\nActivity guides can also be collected and used to formatively assess student understanding of network components. "
           }
         ]
       },
@@ -981,7 +977,7 @@
       "key": "d79fd6ed-97a5-4dfd-8641-eb5d5f6613f5",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the \"My Device\" tab and demonstrate how you can turn on or off the different representations of data (binary, decimal, ASCII).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the different sections of the Internet Simulator widget for sending messages and reviewing message logs. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to join their partners on Level 3 in order to explore the Internet Simulator tool.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the \"My Device\" tab and demonstrate how you can turn on or off the different representations of data (binary, decimal, ASCII).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the different sections of the Internet Simulator widget for sending messages and reviewing message logs. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to join their partners on Level 4 in order to explore the Internet Simulator tool.",
         "progression_name": "Internet Simulator"
       },
       "seeding_key": {
@@ -2216,10 +2212,48 @@
       }
     },
     {
-      "key": "752ab1f2-8e97-4a0d-a72a-6ddf38268e1a",
+      "key": "bf9a7037-5aa8-447f-9c66-eb9cf9c3c9ad",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to write a second draft to address problems they encountered.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to test their revised protocol on Level 1 and complete the Check for Understanding on Level 2. ",
+      },
+      "seeding_key": {
+        "activity_section.key": "bf9a7037-5aa8-447f-9c66-eb9cf9c3c9ad",
+        "lesson_activity.key": "a0357b53-3972-4bee-84e8-56b0ef1c0c36"
+      }
+    },
+    {
+      "key": "fd55d651-b1e0-4ca2-bc77-a453906e539b",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to work with AI chat to revise their protocols on Level 2.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe student chats and listen for how they interpret the AI’s suggestions. Ask guiding questions like: \n- “What part of the AI’s idea do you think would work best in your simulation?”\n- “Is there anything the AI suggested that wouldn’t fit here?”\n",
+        "progression_name": "Revising with AI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "- Encourage students to treat the AI as a collaborator, not the final answer.\n- Remind them to explain why they kept, changed, or rejected AI ideas.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fd55d651-b1e0-4ca2-bc77-a453906e539b",
+        "lesson_activity.key": "a0357b53-3972-4bee-84e8-56b0ef1c0c36"
+      }
+    },
+    {
+      "key": "9bc87533-b28a-4e3d-ade9-44e30c72b56d",
+      "position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9bc87533-b28a-4e3d-ade9-44e30c72b56d",
+        "lesson_activity.key": "a0357b53-3972-4bee-84e8-56b0ef1c0c36"
+      }
+    },
+    {
+      "key": "752ab1f2-8e97-4a0d-a72a-6ddf38268e1a",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to test their revised protocol on Level 1 and complete the Check for Understanding on Level 3. ",
         "progression_name": "Check for Understanding",
         "tips": [
           {
@@ -2239,7 +2273,7 @@
     },
     {
       "key": "bc460e7f-a31d-4052-8c1c-1728a37399c7",
-      "position": 15,
+      "position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -2249,7 +2283,7 @@
     },
     {
       "key": "8ba5f001-b83f-4a45-a31a-7b471bed5e13",
-      "position": 16,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the TCP protocol they learned about in a previous lesson. Guide students to make the connection that they they just created a TCP protocol with their partner. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the UDP protocol to students.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"The Internet: Packets, Routing, and Reliability\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What would simulating UDP in the Internet Simulator look like?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students mention that UPD is focused on speed, so simulating it on the Internet simulator would involve sending packets without checking for errors or missing data. ",
         "tips": [
@@ -2266,7 +2300,7 @@
     },
     {
       "key": "47aca411-87ad-4d24-bdfc-d5c402ec33f2",
-      "position": 17,
+      "position": 20,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -2476,10 +2510,50 @@
       }
     },
     {
-      "key": "1ba7229f-5cff-4985-8214-d19453610585",
+      "key": "019c892e-f497-484a-a263-8a898b7e9d71",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how DNS and HTTP work together to bring a website to a user’s browser.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to reinforce the analogy between sending a letter and retrieving a web page.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.",
+      },
+      "seeding_key": {
+        "activity_section.key": "019c892e-f497-484a-a263-8a898b7e9d71",
+        "lesson_activity.key": "aef1899c-d72e-48b5-a32e-f47144a390ba"
+      }
+    },
+    {
+      "key": "bcd88962-ddbd-4467-8d3d-f1cd91b7c2e2",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 6, Level 4 to chat with the AI about the energy costs of Internet and AI infrastructure. ",
+        "name": "AI Chat Inquiry",
+        "progression_name": "AI Chat: Energy Costs of the Internet"
+      },
+      "seeding_key": {
+        "activity_section.key": "bcd88962-ddbd-4467-8d3d-f1cd91b7c2e2",
+        "lesson_activity.key": "aef1899c-d72e-48b5-a32e-f47144a390ba"
+      }
+    },
+    {
+      "key": "e1ac6a6d-752a-47a5-a23e-31508b287681",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are using the suggested prompts to guide their conversation with the AI and recording their responses on their activity guides. Encourage them to ask follow-up questions to clarify or verify the AI’s explanations.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students shouldn’t need more than 7–10 minutes to complete this AI Chat activity. Emphasize that the goal is to connect what they’ve learned about HTTP and DNS to the real-world energy impact of online communication and AI systems."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e1ac6a6d-752a-47a5-a23e-31508b287681",
+        "lesson_activity.key": "aef1899c-d72e-48b5-a32e-f47144a390ba"
+      }
+    },
+    {
+      "key": "1ba7229f-5cff-4985-8214-d19453610585",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how DNS and HTTP work together to bring a website to a user’s browser.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to reinforce the analogy between sending a letter and retrieving a web page.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 4 through 6.\n- **Level 4:** Students access the HTTP Cats exploration external site.\n- **Level 5:** Students complete a check for understanding.\n- **Level 6:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.",
         "duration": "10",
         "name": "HTTP Preview and Inspect Tool Exploration",
         "progression_name": "HTTP Requests Exploration",
@@ -2497,7 +2571,7 @@
     },
     {
       "key": "7ef788fc-afd5-4bc3-bab6-db64e482d64c",
-      "position": 12,
+      "position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -2507,7 +2581,7 @@
     },
     {
       "key": "e600e59a-c0d0-4223-89a5-2fe3a3fc6624",
-      "position": 13,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the HTTP Scavenger Hunt. They should use either the HTTP Explorer simulator or their own browser to complete each task and fill in the Method, Status Code, File Type, and Load Time fields in their activity guide.\n"
       },
@@ -2518,13 +2592,13 @@
     },
     {
       "key": "f0e876f0-8ac2-4b1b-a7e8-bccab27b1f15",
-      "position": 14,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4 to answer the questions.",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The responses on Levels 4 and 5 can be used to formatively assess the lesson objectives:\n- Describe the function of HTTP in requesting web pages and resources\n"
+            "markdown": "The responses on Levels 5 and 6 can be used to formatively assess the lesson objectives:\n- Describe the function of HTTP in requesting web pages and resources\n"
           }
         ]
       },
@@ -2535,7 +2609,7 @@
     },
     {
       "key": "09de7116-a992-49a7-a6d9-49eb09c8dfb6",
-      "position": 15,
+      "position": 18,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -2934,11 +3008,11 @@
       "key": "e175d428-c18f-4c71-ab37-2ea69055eb41",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to remind students of the steps students will take today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete**Narrowing Your Focus** in their activity guide (page 4). Remind them to clarify their focus, audience, evidence, and solutions before drafting their campaign message. Display the guiding questions to keep them on track.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n in their activity guide (page 4). Remind them to clarify their focus, audience, evidence, and solutions before drafting their campaign message. Display the guiding questions to keep them on track.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check for clear, concise messaging and ask guiding questions like, “What is your key message?” and “Is your solution realistic and actionable?” Encourage students to refine their ideas for a strong, persuasive pitch.**Teaching Tip**\n\n**Teaching Tip**\n\nConsider having students choose new roles for today’s tasks. Let the Timekeeper know that they should give their group about seven minutes for this step.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 1 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n**Teaching Tip:**If you suspect you will be short on time, you might choose to provide printed copies of these example pitch slides to groups as a reference while drafting their own pitch.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 2 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 3 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to use their responses from Narrowing Your Focus to draft a 1-minute pitch summarizing their focus, audience, evidence, and solutions using bullet points, visuals, or full paragraphs.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Instruct students to use their responses from Narrowing Your Focus to draft a 1-minute pitch summarizing their focus, audience, evidence, and solutions using bullet points, visuals, or full paragraphs.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are structuring their pitch clearly and including key elements. Ask guiding questions like, “Does your pitch clearly communicate your message?” and “Would your audience understand what action to take?” Provide quick feedback to help students refine their ideas.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Teaching Tip:**Consider using a timer (about 7 minutes) to keep students on track. Encourage students to focus on clarity and persuasion rather than perfection—this is a draft for feedback.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to gather peer feedback using the “One Stay, Two Stray” protocol. Use the slide to explain the procedure to students.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Instruct students to gather peer feedback using the “One Stay, Two Stray” protocol. Use the slide to explain the procedure to students.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to give specific feedback by asking: ‘What was strong about this campaign? What could be improved?’ If a campaign lacks a clear call to action, prompt reviewers to ask: ‘What specific action does this campaign want people to take?",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to remind students of the steps students will take today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Guide students through **Narrowing Your Focus** in the project guide (page 5). Remind them to clarify their focus, audience, evidence, and solutions before drafting their campaign message. Display the guiding questions to keep them on track.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check for clear, concise messaging and ask guiding questions like, “What is your key message?” and “Is your solution realistic and actionable?” Encourage refinement before they move to AI Chat.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "- Depending on group size, you may want to have two students stay—one to present and one to take notes—while the others rotate.\n- Depending on classroom structure, you may want to assign group numbers before the activity to ensure students rotate in sequence (e.g., Group 1 moves to Group 2, Group 2 moves to Group 3, etc.) for a smoother transition."
+            "markdown": "Students will upload their responses to AI Chat later for targeted feedback.Recommend completing this section digitally if possible; if not, have them take a clear photo to upload.\n\nOptionally, rotate group roles so the Timekeeper helps manage pacing (≈7 minutes)."
           }
         ]
       },
@@ -2948,9 +3022,62 @@
       }
     },
     {
-      "key": "d01712fe-cdc6-4567-a6c1-fe5efee08034",
+      "key": "f8fb692c-7967-4ea7-8403-59cf31623d6e",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 8, Level 1. They’ll upload their focus answers and use AI Chat to test their campaign message. Remind them to record AI feedback and revisions on page 5.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask: “What parts of the AI’s draft work well?” and “How could it sound more like your group’s voice?”",
+        "progression_name": "AI Message Testing",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If working on paper, have groups take a clear photo to upload.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f8fb692c-7967-4ea7-8403-59cf31623d6e",
+        "lesson_activity.key": "95b57443-3696-49c6-bfc3-001aa3ab9497"
+      }
+    },
+    {
+      "key": "9847eed9-4c3f-4c1b-8d91-cc65f288167e",
+      "position": 5,
+      "properties": {
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 1 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n**Teaching Tip:**If you suspect you will be short on time, you might choose to provide printed copies of these example pitch slides to groups as a reference while drafting their own pitch.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 2 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 3 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "9847eed9-4c3f-4c1b-8d91-cc65f288167e",
+        "lesson_activity.key": "95b57443-3696-49c6-bfc3-001aa3ab9497"
+      }
+    },
+    {
+      "key": "8689416b-6b69-4b60-b5c0-ff3fdc485211",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to use their reflections from AI Message Testing to draft a 1-minute campaign pitch. They can use bullet points, visuals, or paragraphs to organize their ideas clearly.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that pitches are clear, persuasive, and audience-focused.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Set a 7-minute timer to keep groups on pace. Remind students this is a working draft, and to focus on clarity and impact, not perfection."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8689416b-6b69-4b60-b5c0-ff3fdc485211",
+        "lesson_activity.key": "95b57443-3696-49c6-bfc3-001aa3ab9497"
+      }
+    },
+    {
+      "key": "d01712fe-cdc6-4567-a6c1-fe5efee08034",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to gather peer feedback using the “One Stay, Two Stray” protocol. Use the slide to explain the procedure to students.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to give specific feedback by asking: ‘What was strong about this campaign? What could be improved?’ If a campaign lacks a clear call to action, prompt reviewers to ask: ‘What specific action does this campaign want people to take?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "- Depending on group size, you may want to have two students stay—one to present and one to take notes—while the others rotate.\n- Depending on classroom structure, you may want to assign group numbers before the activity to ensure students rotate in sequence (e.g., Group 1 moves to Group 2, Group 2 moves to Group 3, etc.) for a smoother transition."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d01712fe-cdc6-4567-a6c1-fe5efee08034",
@@ -2959,9 +3086,9 @@
     },
     {
       "key": "46887bea-c679-4386-8847-e87911cdcd95",
-      "position": 5,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the sample peer feedback responses to model effective peer feedback and clarify any confusion students might have.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the sample peer feedback responses to model effective peer feedback and clarify any confusion students might have.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the sample peer feedback responses to model effective peer feedback and clarify any confusion students might have.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to review their Peer Review Feedback Checklist and discuss which feedback was most helpful. Have them decide what revisions will improve clarity, persuasiveness, and feasibility, then make adjustments to their campaign. Remind them they will have 20 minutes next class for final touches before presenting.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Direct students to review their Peer Review Feedback Checklist and discuss which feedback was most helpful. Have them decide what revisions will improve clarity, persuasiveness, and feasibility, then make adjustments to their campaign. Remind them they will have 20 minutes next class for final touches before presenting.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to prioritize impactful revisions and refine their messaging. If a group is struggling, ask guiding questions like, “What change would make your argument stronger?” or “How can you make your message clearer for your audience?”"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the sample peer feedback responses to model effective peer feedback and clarify any confusion students might have.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the sample peer feedback responses to model effective peer feedback and clarify any confusion students might have.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the sample peer feedback responses to model effective peer feedback and clarify any confusion students might have.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to review their Peer Review Feedback Checklist and discuss which feedback was most helpful. Have them decide what revisions will improve clarity, persuasiveness, and feasibility, then make adjustments to their campaign. Remind them they will have 20 minutes next class for final touches before presenting.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to prioritize impactful revisions and refine their messaging. If a group is struggling, ask guiding questions like, “What change would make your argument stronger?” or “How can you make your message clearer for your audience?”"
       },
       "seeding_key": {
         "activity_section.key": "46887bea-c679-4386-8847-e87911cdcd95",
@@ -2970,7 +3097,7 @@
     },
     {
       "key": "160657a0-02a4-45ee-abff-d88fdb310957",
-      "position": 6,
+      "position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -2980,7 +3107,7 @@
     },
     {
       "key": "78e0e406-bc6c-4b6f-9426-afaf0cc2d8b3",
-      "position": 7,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *What made your campaign compelling and actionable? What could be improved to make it even more effective?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students recognize strengths and areas for improvement in their campaigns while connecting their work to real-world advocacy strategies.",
         "duration": "5",
@@ -3519,10 +3646,10 @@
       "key": "51f27ef0-5549-4f4f-adff-b8b582832f8d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the steps students will take as they engage with the AI chatbots to explore how AI is transforming cybersecurity, engaging with specialized AI chatbots to see how these tools detect threats, respond to attacks, and protect networks. Remind students to think about how these AI-driven solutions could strengthen the security recommendations in your risk assessment project as they interact with the chatbots.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 11, Level 2 to learn about four possible AI-driven solutions to network vulnerabilities. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 2 to design an AI-powered security tool using AI Chat. Explain that the goal is to create a realistic, responsible AI tool that addresses the vulnerabilities identified on Day 1.\n",
         "duration": "30",
         "name": "Activity",
-        "progression_name": "AI-Driven Solution Chatbots"
+        "progression_name": "AI-Driven Solutions"
       },
       "seeding_key": {
         "activity_section.key": "51f27ef0-5549-4f4f-adff-b8b582832f8d",
@@ -3533,11 +3660,11 @@
       "key": "ef312cf5-7e75-44c3-96e9-767c30c5344f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**: Listen for misconceptions that AI eliminates the need for human oversight. Ask: ‘Would this AI tool catch every security threat? Why or why not?’ If students struggle to connect AI to specific vulnerabilities, prompt them to revisit their case study and ask: ‘How would this AI solution specifically help prevent or detect this threat?’",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work in AI Chat, listen for surface-level or overly optimistic AI designs (e.g., “This AI stops all hackers”).\nPrompt deeper thinking with questions like:\n- “What would this AI need to know to detect that threat?”\n- “Who might be affected if this tool makes a mistake?”\n- “Does this tool require human oversight?”\n\nIf students struggle to connect their tool to their case study, ask: “How does this AI tool directly reduce the vulnerability you identified yesterday?”",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students struggle with chatbot responses, model how to rephrase questions for clarity and specificity."
+            "markdown": "If students receive vague or generic AI responses, model how to rephrase prompts for clarity (e.g., “Instead of ‘How can AI help?’, try ‘Design an AI tool that protects hospitals from phishing attacks’”).\n\nRemind students that the goal isn’t to accept the AI’s ideas but to analyze, refine, and improve them for accuracy and ethics.\n"
           }
         ]
       },
@@ -3557,25 +3684,14 @@
       }
     },
     {
-      "key": "672ae23c-fbf1-456c-a895-ebb5f9329967",
+      "key": "dcfe490f-7a59-48fc-b453-75092aaf59a0",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Describe each of the AI-Driven solutions and ask students to connect a tool to their company’s biggest risk."
-      },
-      "seeding_key": {
-        "activity_section.key": "672ae23c-fbf1-456c-a895-ebb5f9329967",
-        "lesson_activity.key": "64bd139e-9ba7-4485-bbd6-7e5f52533644"
-      }
-    },
-    {
-      "key": "dcfe490f-7a59-48fc-b453-75092aaf59a0",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to begin drafting their Network Security Risk Assessment using their Project Planning Guide. Encourage students to focus on clear, specific details about their chosen scenario, vulnerabilities, mitigation strategies, and societal impacts.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are working, check for depth and specificity—are they identifying vulnerabilities with enough detail? Ask questions like: “How does this vulnerability affect the company and its customers?” Guide students struggling with AI solutions by prompting: \"Which AI-driven strategy fits best with this risk? Why?\" Redirect students who list solutions without explanation by asking: “How does this mitigation strategy actually reduce the risk?”",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to begin drafting their Network Security Risk Assessment using their Project Planning Guide. Remind them to include their AI security tool design in their draft and encourage students to focus on clear, specific details about their chosen scenario, vulnerabilities, mitigation strategies, and societal impacts.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are working, check for depth and specificity and that they are clearly connecting their AI tool to the vulnerability it’s meant to solve?\n\nAsk probing questions like:\n- How does your AI tool actually reduce this risk?\n- Who benefits from this design—and who might be left out?\n- What would happen if your AI tool failed or made a wrong prediction?\n\nSupport students who are unsure how to integrate AI feedback by prompting: \n- Which part of your design could the AI help you clarify or improve?\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students are stuck, have them partner up briefly to explain their vulnerabilities out loud—verbal processing often helps refine ideas."
+            "markdown": "Encourage students to complete this section digitally, even if the rest of their project guide is on paper.\nThis will make it much easier for them to upload their AI tool design to AI Chat later for feedback.\n"
           },
           {
             "type": "assessmentOpportunity",
@@ -3590,7 +3706,7 @@
     },
     {
       "key": "5065a5ad-33c4-43fd-a7e9-d9bdd5e7f4b1",
-      "position": 8,
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -3600,7 +3716,7 @@
     },
     {
       "key": "fad7a8fb-028b-458b-a2b6-f3a8f45ac896",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *How can AI enhance network security?*\n- Use the Modified Whip Around protocol to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should evaluate how AI-driven security tools improve threat detection and mitigation. Encourage them to compare AI’s capabilities to traditional security methods and consider how AI can support (but not replace) human decision-making in cybersecurity. Guide students to connect these insights to real-world applications in their risk assessments.",
         "duration": "10",
@@ -3639,10 +3755,16 @@
       "key": "e702285d-5224-4efa-8fed-d7e112de8465",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of two to conduct peer reviews. Either assign peer-review partners or direct students to find a partner and exchange drafts. Remind them to use their Project Planning Guide to structure their feedback, making sure it is specific and constructive.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work, check that both partners are giving and receiving feedback. To ensure students are engaged and on-task, ask probing questions :*“What’s one suggestion you’ve given your partner to improve their assessment?”*Listen for specific feedback, not just “this looks good” or “I agree.” Redirect with:*“Can you explain why this solution is effective or suggest an alternative?”*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to navigate to Lesson 11, Level 3 in order to complete their final Network Security Risk Assessment. Once students have finished, make sure that they prepare a 30-second oral summary to share with a classmate.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 11, Level 3 to use AI Chat to evaluate their AI security tool designs.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work, check that they are interpreting AI feedback critically, not just copying it.\nAsk guiding questions like:\n- “Do you agree with the AI’s feedback? Why or why not?”\n- “How can you apply this feedback to make your design more realistic or ethical?”\n- “Did the AI notice something you hadn’t considered?”\nIf students receive overly general or incorrect feedback, prompt them to rephrase with specificity (e.g., “Explain exactly how my AI tool addresses the vulnerability I described”).\n",
         "duration": "30",
         "name": "Activity",
-        "progression_name": "Final Risk Assessment"
+        "progression_name": "AI Chat Evaluation",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that the focus is on managing AI—using its feedback responsibly, questioning its accuracy, and deciding what to revise based on their own judgment. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e702285d-5224-4efa-8fed-d7e112de8465",
@@ -3650,8 +3772,29 @@
       }
     },
     {
-      "key": "a784b21e-2c1a-4e92-a0ac-95ea118bb7b1",
+      "key": "9791dc6f-d459-40f8-8f07-5b6fe841fc18",
       "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9791dc6f-d459-40f8-8f07-5b6fe841fc18",
+        "lesson_activity.key": "5b475bc0-3257-49d8-9ab2-7fca121b9937"
+      }
+    },
+    {
+      "key": "8656951f-4b00-46f8-8406-3fbbeced8e2c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to navigate to Lesson 11, Level 4 in order to complete their final Network Security Risk Assessment. Once students have finished, make sure that they prepare a 30-second oral summary to share with a classmate."
+      },
+      "seeding_key": {
+        "activity_section.key": "8656951f-4b00-46f8-8406-3fbbeced8e2c",
+        "lesson_activity.key": "5b475bc0-3257-49d8-9ab2-7fca121b9937"
+      }
+    },
+    {
+      "key": "a784b21e-2c1a-4e92-a0ac-95ea118bb7b1",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Divide students into two equal groups and arrange them into two lines, facing each other. Explain the students that they will take turns delivering a 30-second summary of their project and receiving feedback from the peer they are facing. Direct students to use the prompts on the screen to guide their responses if needed, and listen carefully to your partner’s insights. After 5 minutes, they will switch roles. After both pairs have shared, one line will rotate down and they will share again with a new partner.",
         "tips": [
@@ -3672,7 +3815,7 @@
     },
     {
       "key": "728291d2-1aaf-43e9-a9b7-799730ddd7ae",
-      "position": 5,
+      "position": 7,
       "properties": {
         "progression_name": "Survey"
       },
@@ -3723,6 +3866,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-preassessment_v2-2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -3745,6 +3891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level1_v2-2025"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -3765,14 +3914,14 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "progression": "AI Networks Chat"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "networks-internet-lesson1-level2_v2-2025"
+          "networks-internet-lesson1-level2_v3-2025"
         ],
         "lesson.key": "Lesson 1: Introduction to the Internet",
         "lesson_group.key": "lessonGroup-3",
@@ -3780,12 +3929,34 @@
         "activity_section.key": "9aa1878a-1a62-4124-ab23-fbfd2223e9cc"
       },
       "level_keys": [
-        "networks-internet-lesson1-level2_v2-2025"
+        "networks-internet-lesson1-level2_v3-2025"
       ]
     },
     {
       "chapter": 4,
       "position": 3,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "AI Networks Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson1-level3_v3-2025"
+        ],
+        "lesson.key": "Lesson 1: Introduction to the Internet",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif4-v2-2025",
+        "activity_section.key": "9aa1878a-1a62-4124-ab23-fbfd2223e9cc"
+      },
+      "level_keys": [
+        "networks-internet-lesson1-level3_v3-2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3794,7 +3965,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "networks-internet-lesson1-level3_v2-2025"
+          "networks-internet-lesson1-level4_v2-2025"
         ],
         "lesson.key": "Lesson 1: Introduction to the Internet",
         "lesson_group.key": "lessonGroup-3",
@@ -3802,15 +3973,18 @@
         "activity_section.key": "d79fd6ed-97a5-4dfd-8641-eb5d5f6613f5"
       },
       "level_keys": [
-        "networks-internet-lesson1-level3_v2-2025"
+        "networks-internet-lesson1-level4_v2-2025"
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level1_v2-2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3828,11 +4002,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level2_v2-2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3850,11 +4027,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level3_v2-2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3872,11 +4052,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level3.5_v2-2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3894,11 +4077,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level4_v2-2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3916,11 +4102,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson4-level1_v2-2025"
+        ],
         "progression": "Internet Simulator and Networks Diagram Analysis"
       },
       "bonus": false,
@@ -3938,11 +4127,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson4-level2_v2-2025"
+        ],
         "progression": "Internet Simulator and Networks Diagram Analysis"
       },
       "bonus": false,
@@ -3960,11 +4152,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level1_v2-2025"
+        ],
         "progression": "Internet Simulator: Packets"
       },
       "bonus": false,
@@ -3982,8 +4177,30 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Revising with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson5-level2_v3-2025"
+        ],
+        "lesson.key": "Lesson 5: Packets",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif4-v2-2025",
+        "activity_section.key": "fd55d651-b1e0-4ca2-bc77-a453906e539b"
+      },
+      "level_keys": [
+        "networks-internet-lesson5-level2_v3-2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -3992,7 +4209,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "networks-internet-lesson5-level2_v2-2025"
+          "networks-internet-lesson5-level3_v2-2025"
         ],
         "lesson.key": "Lesson 5: Packets",
         "lesson_group.key": "lessonGroup-3",
@@ -4000,15 +4217,18 @@
         "activity_section.key": "752ab1f2-8e97-4a0d-a72a-6ddf38268e1a"
       },
       "level_keys": [
-        "networks-internet-lesson5-level2_v2-2025"
+        "networks-internet-lesson5-level3_v2-2025"
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level1_v2-2025"
+        ],
         "progression": "Internet Simulator: DNS Queries"
       },
       "bonus": false,
@@ -4026,11 +4246,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level2_v2-2025"
+        ],
         "progression": "DNS Hierarchy Chatbot"
       },
       "bonus": false,
@@ -4048,8 +4271,30 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat: Energy Costs of the Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level3_v3-2025"
+        ],
+        "lesson.key": "Lesson 6: HTTP and DNS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif4-v2-2025",
+        "activity_section.key": "bcd88962-ddbd-4467-8d3d-f1cd91b7c2e2"
+      },
+      "level_keys": [
+        "networks-internet-lesson6-level3_v3-2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4058,7 +4303,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "networks-internet-lesson6-level3_v2-2025"
+          "networks-internet-lesson6-level4_v3-2025"
         ],
         "lesson.key": "Lesson 6: HTTP and DNS",
         "lesson_group.key": "lessonGroup-3",
@@ -4066,12 +4311,12 @@
         "activity_section.key": "1ba7229f-5cff-4985-8214-d19453610585"
       },
       "level_keys": [
-        "networks-internet-lesson6-level3_v2-2025"
+        "networks-internet-lesson6-level4_v3-2025"
       ]
     },
     {
-      "chapter": 17,
-      "position": 4,
+      "chapter": 20,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4080,7 +4325,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "networks-internet-lesson6-level4_v2-2025"
+          "networks-internet-lesson6-level5_v3-2025"
         ],
         "lesson.key": "Lesson 6: HTTP and DNS",
         "lesson_group.key": "lessonGroup-3",
@@ -4088,12 +4333,12 @@
         "activity_section.key": "1ba7229f-5cff-4985-8214-d19453610585"
       },
       "level_keys": [
-        "networks-internet-lesson6-level4_v2-2025"
+        "networks-internet-lesson6-level5_v3-2025"
       ]
     },
     {
-      "chapter": 18,
-      "position": 5,
+      "chapter": 21,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
@@ -4102,7 +4347,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "networks-internet-lesson6-level5_v2-2025"
+          "networks-internet-lesson6-level6_v3-2025"
         ],
         "lesson.key": "Lesson 6: HTTP and DNS",
         "lesson_group.key": "lessonGroup-3",
@@ -4110,15 +4355,18 @@
         "activity_section.key": "1ba7229f-5cff-4985-8214-d19453610585"
       },
       "level_keys": [
-        "networks-internet-lesson6-level5_v2-2025"
+        "networks-internet-lesson6-level6_v3-2025"
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level1_v2-2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -4136,11 +4384,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level2_v2-2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -4158,11 +4409,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level3_v2-2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -4180,11 +4434,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level4_v2-2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -4202,11 +4459,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level5_v2-2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -4224,11 +4484,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level6_v2-2025"
+        ],
         "progression": "Choose a Persona"
       },
       "bonus": false,
@@ -4246,8 +4509,30 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Message Testing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson8-level1_v3-2025"
+        ],
+        "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif4-v2-2025",
+        "activity_section.key": "f8fb692c-7967-4ea7-8403-59cf31623d6e"
+      },
+      "level_keys": [
+        "networks-internet-lesson8-level1_v3-2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4256,7 +4541,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "networks-internet-lesson8-level1_v2-2025"
+          "networks-internet-lesson8-level2_v3-2025"
         ],
         "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
         "lesson_group.key": "lessonGroup-4",
@@ -4264,12 +4549,12 @@
         "activity_section.key": "97350086-b379-475b-b6ef-2e13c0e9988f"
       },
       "level_keys": [
-        "networks-internet-lesson8-level1_v2-2025"
+        "networks-internet-lesson8-level2_v3-2025"
       ]
     },
     {
-      "chapter": 26,
-      "position": 2,
+      "chapter": 30,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4278,7 +4563,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "fabric-of-the-internet-and-ai-lesson8-level2_v2-2025"
+          "fabric-of-the-internet-and-ai-lesson8-level3_v3-2025"
         ],
         "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
         "lesson_group.key": "lessonGroup-4",
@@ -4286,15 +4571,18 @@
         "activity_section.key": "97350086-b379-475b-b6ef-2e13c0e9988f"
       },
       "level_keys": [
-        "fabric-of-the-internet-and-ai-lesson8-level2_v2-2025"
+        "fabric-of-the-internet-and-ai-lesson8-level3_v3-2025"
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson9-level1_v2-2025"
+        ],
         "progression": "Identify, Defend, Reflect!"
       },
       "bonus": false,
@@ -4312,11 +4600,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson9-level2_v2-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4334,11 +4625,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "fabric-of-the-internet-and-ai-lesson9-level3_v2-2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4356,11 +4650,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson10-level1_v2-2025"
+        ],
         "progression": "Threat Detection Chatbot"
       },
       "bonus": false,
@@ -4378,11 +4675,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson10-level2_v2-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4400,11 +4700,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "fabric-of-the-internet-and-ai-lesson10-level3_v2-2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4422,11 +4725,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level1_v2-2025"
+        ],
         "progression": "Company Case Study Choices"
       },
       "bonus": false,
@@ -4444,17 +4750,17 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "AI-Driven Solution Chatbots"
+        "progression": "AI-Driven Solutions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "networks-internet-lesson11-level2_v2-2025"
+          "networks-internet-lesson11-level2_v3-2025"
         ],
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "lesson_group.key": "lessonGroup-6",
@@ -4462,21 +4768,21 @@
         "activity_section.key": "51f27ef0-5549-4f4f-adff-b8b582832f8d"
       },
       "level_keys": [
-        "networks-internet-lesson11-level2_v2-2025"
+        "networks-internet-lesson11-level2_v3-2025"
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "progression": "Final Risk Assessment"
+        "progression": "AI Chat Evaluation"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "networks-internet-lesson11-level3_v2-2025"
+          "networks-internet-lesson11-level3_v3-2025"
         ],
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "lesson_group.key": "lessonGroup-6",
@@ -4484,16 +4790,36 @@
         "activity_section.key": "e702285d-5224-4efa-8fed-d7e112de8465"
       },
       "level_keys": [
-        "networks-internet-lesson11-level3_v2-2025"
+        "networks-internet-lesson11-level3_v3-2025"
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 40,
       "position": 4,
-      "activity_section_position": 2,
-      "assessment": true,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "progression": "Final Risk Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson11-level4_v3-2025"
+        ],
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-v2-2025",
+        "activity_section.key": "8656951f-4b00-46f8-8406-3fbbeced8e2c"
+      },
+      "level_keys": [
+        "networks-internet-lesson11-level4_v3-2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
       },
       "bonus": false,
       "seeding_key": {
@@ -4503,18 +4829,21 @@
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "aif4-v2-2025",
-        "activity_section.key": "e702285d-5224-4efa-8fed-d7e112de8465"
+        "activity_section.key": "8656951f-4b00-46f8-8406-3fbbeced8e2c"
       },
       "level_keys": [
         "fabric-of-the-internet-and-ai-lesson11-level5_v2-2025"
       ]
     },
     {
-      "chapter": 37,
-      "position": 5,
+      "chapter": 42,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_networks_v2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -4532,11 +4861,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-postassessment_v2-2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -4554,11 +4886,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-networks_v2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -4603,9 +4938,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "networks-internet-lesson1-level2_v2-2025",
+        "level.key": "networks-internet-lesson1-level2_v3-2025",
         "script_level.level_keys": [
-          "networks-internet-lesson1-level2_v2-2025"
+          "networks-internet-lesson1-level2_v3-2025"
         ],
         "lesson.key": "Lesson 1: Introduction to the Internet",
         "lesson_group.key": "lessonGroup-3",
@@ -4615,9 +4950,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "networks-internet-lesson1-level3_v2-2025",
+        "level.key": "networks-internet-lesson1-level3_v3-2025",
         "script_level.level_keys": [
-          "networks-internet-lesson1-level3_v2-2025"
+          "networks-internet-lesson1-level3_v3-2025"
+        ],
+        "lesson.key": "Lesson 1: Introduction to the Internet",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif4-v2-2025",
+        "activity_section.key": "9aa1878a-1a62-4124-ab23-fbfd2223e9cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson1-level4_v2-2025",
+        "script_level.level_keys": [
+          "networks-internet-lesson1-level4_v2-2025"
         ],
         "lesson.key": "Lesson 1: Introduction to the Internet",
         "lesson_group.key": "lessonGroup-3",
@@ -4723,9 +5070,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "networks-internet-lesson5-level2_v2-2025",
+        "level.key": "networks-internet-lesson5-level2_v3-2025",
         "script_level.level_keys": [
-          "networks-internet-lesson5-level2_v2-2025"
+          "networks-internet-lesson5-level2_v3-2025"
+        ],
+        "lesson.key": "Lesson 5: Packets",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif4-v2-2025",
+        "activity_section.key": "fd55d651-b1e0-4ca2-bc77-a453906e539b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson5-level3_v2-2025",
+        "script_level.level_keys": [
+          "networks-internet-lesson5-level3_v2-2025"
         ],
         "lesson.key": "Lesson 5: Packets",
         "lesson_group.key": "lessonGroup-3",
@@ -4759,9 +5118,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "networks-internet-lesson6-level3_v2-2025",
+        "level.key": "networks-internet-lesson6-level3_v3-2025",
         "script_level.level_keys": [
-          "networks-internet-lesson6-level3_v2-2025"
+          "networks-internet-lesson6-level3_v3-2025"
+        ],
+        "lesson.key": "Lesson 6: HTTP and DNS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif4-v2-2025",
+        "activity_section.key": "bcd88962-ddbd-4467-8d3d-f1cd91b7c2e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson6-level4_v3-2025",
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level4_v3-2025"
         ],
         "lesson.key": "Lesson 6: HTTP and DNS",
         "lesson_group.key": "lessonGroup-3",
@@ -4771,9 +5142,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "networks-internet-lesson6-level4_v2-2025",
+        "level.key": "networks-internet-lesson6-level5_v3-2025",
         "script_level.level_keys": [
-          "networks-internet-lesson6-level4_v2-2025"
+          "networks-internet-lesson6-level5_v3-2025"
         ],
         "lesson.key": "Lesson 6: HTTP and DNS",
         "lesson_group.key": "lessonGroup-3",
@@ -4783,9 +5154,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "networks-internet-lesson6-level5_v2-2025",
+        "level.key": "networks-internet-lesson6-level6_v3-2025",
         "script_level.level_keys": [
-          "networks-internet-lesson6-level5_v2-2025"
+          "networks-internet-lesson6-level6_v3-2025"
         ],
         "lesson.key": "Lesson 6: HTTP and DNS",
         "lesson_group.key": "lessonGroup-3",
@@ -4867,9 +5238,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "networks-internet-lesson8-level1_v2-2025",
+        "level.key": "networks-internet-lesson8-level1_v3-2025",
         "script_level.level_keys": [
-          "networks-internet-lesson8-level1_v2-2025"
+          "networks-internet-lesson8-level1_v3-2025"
+        ],
+        "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif4-v2-2025",
+        "activity_section.key": "f8fb692c-7967-4ea7-8403-59cf31623d6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson8-level2_v3-2025",
+        "script_level.level_keys": [
+          "networks-internet-lesson8-level2_v3-2025"
         ],
         "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
         "lesson_group.key": "lessonGroup-4",
@@ -4879,9 +5262,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "fabric-of-the-internet-and-ai-lesson8-level2_v2-2025",
+        "level.key": "fabric-of-the-internet-and-ai-lesson8-level3_v3-2025",
         "script_level.level_keys": [
-          "fabric-of-the-internet-and-ai-lesson8-level2_v2-2025"
+          "fabric-of-the-internet-and-ai-lesson8-level3_v3-2025"
         ],
         "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
         "lesson_group.key": "lessonGroup-4",
@@ -4975,9 +5358,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "networks-internet-lesson11-level2_v2-2025",
+        "level.key": "networks-internet-lesson11-level2_v3-2025",
         "script_level.level_keys": [
-          "networks-internet-lesson11-level2_v2-2025"
+          "networks-internet-lesson11-level2_v3-2025"
         ],
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "lesson_group.key": "lessonGroup-6",
@@ -4987,14 +5370,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "networks-internet-lesson11-level3_v2-2025",
+        "level.key": "networks-internet-lesson11-level3_v3-2025",
         "script_level.level_keys": [
-          "networks-internet-lesson11-level3_v2-2025"
+          "networks-internet-lesson11-level3_v3-2025"
         ],
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "aif4-v2-2025",
         "activity_section.key": "e702285d-5224-4efa-8fed-d7e112de8465"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson11-level4_v3-2025",
+        "script_level.level_keys": [
+          "networks-internet-lesson11-level4_v3-2025"
+        ],
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-v2-2025",
+        "activity_section.key": "8656951f-4b00-46f8-8406-3fbbeced8e2c"
       }
     },
     {
@@ -5006,7 +5401,7 @@
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "aif4-v2-2025",
-        "activity_section.key": "e702285d-5224-4efa-8fed-d7e112de8465"
+        "activity_section.key": "8656951f-4b00-46f8-8406-3fbbeced8e2c"
       }
     },
     {
@@ -5061,26 +5456,30 @@
     },
     {
       "name": "[EXEMPLAR] Internet Access Advocacy Campaign Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1dvM1DQvfQwVBQu-deyGCKwdW96Ji4lFu-LWEwtn-zFk/edit?usp=drivesdk",
-      "key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide",
+      "url": "https://docs.google.com/document/d/1A6MfgiFK4T66KDu4w9Qg-L9DwtqzZEub-8q0uE1SSB8/edit?usp=sharing",
+      "key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
-        "resource.key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide"
+        "resource.key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide_1"
       }
     },
     {
       "name": "[KEY] AI Networks Chat",
-      "url": "https://docs.google.com/document/d/1CwK8VoxQvSpvv85X6kcugTNfwSzVEtKTEI9ye9xpmlU/edit?usp=drivesdk",
-      "key": "_key_ai_networks_chat",
+      "url": "https://docs.google.com/document/d/1iZMlAlkxL4jdvP5eZRV8WNCjQv7KLx3TQSN-Mqipt2s/edit?usp=sharing",
+      "key": "_key_ai_networks_chat_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_ai_networks_chat"
+        "resource.key": "_key_ai_networks_chat_1"
       }
     },
     {
@@ -5109,26 +5508,30 @@
     },
     {
       "name": "[KEY] Packets and Protocols",
-      "url": "https://docs.google.com/document/d/18pZfVLfRjAJyM_wB5OXP_UqMBG8iZCmqjd2AF4pzHC8/edit?usp=drivesdk",
-      "key": "_key_packets_and_protocols",
+      "url": "https://docs.google.com/document/d/15CQ78wL5CxfJSZZDvVSWDmU4c1DI1urc4q30lbrxu6k/edit?usp=sharing",
+      "key": "_key_packets_and_protocols_1",
       "properties": {
         "audience": "Verified Teacher",
-        "type": "Activity Guide"
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_packets_and_protocols"
+        "resource.key": "_key_packets_and_protocols_1"
       }
     },
     {
       "name": "[KEY] Scavenger Hunt Activity",
-      "url": "https://docs.google.com/presentation/d/1aX0K_oFJcztNpxmH6uDlHwHqMsG_S9mW7rSP-5GjLDg/edit?usp=sharing",
-      "key": "_key_scavenger_hunt_activity",
+      "url": "https://docs.google.com/presentation/d/1PvPns5a7b7SP3DILfl4h7LJu-Y3ysgBrz6f-WgKIcic/edit?usp=sharing",
+      "key": "_key_scavenger_hunt_activity_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
-        "resource.key": "_key_scavenger_hunt_activity"
+        "resource.key": "_key_scavenger_hunt_activity_1"
       }
     },
     {
@@ -5179,15 +5582,16 @@
     },
     {
       "name": "AI Networks Chat",
-      "url": "https://docs.google.com/document/d/10B6RzIRIZeEK42Ju1SKAO0_7WasnvfdeAaDJgjNDX40/edit?usp=drivesdk",
-      "key": "ai_networks_chat",
+      "url": "https://docs.google.com/document/d/1Lpw6E7-sh3it0ErJ9vcBdz7LiNpt4VQvOl73VPa55hI/edit?usp=sharing",
+      "key": "ai_networks_chat_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "ai_networks_chat"
+        "resource.key": "ai_networks_chat_1"
       }
     },
     {
@@ -5248,16 +5652,17 @@
       }
     },
     {
-      "name": "DNS Hierarchy",
-      "url": "https://docs.google.com/document/d/17WYUDO5yP2idvYLVIvyFVeSpmJ3HMo7XUvRnfLMDTzA/edit?usp=drivesdk",
-      "key": "dns_hierarchy",
+      "name": "DNS Hierarchy & Exploring Energy Costs",
+      "url": "https://docs.google.com/document/d/1E5L06Gvl-aWufn3FexmjraDZLFtmlzGVO-eJhh-okFM/edit?usp=sharing",
+      "key": "dns_hierarchy_exploring_energy_costs",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Handout"
       },
       "seeding_key": {
-        "resource.key": "dns_hierarchy"
+        "resource.key": "dns_hierarchy_exploring_energy_costs"
       }
     },
     {
@@ -5312,14 +5717,16 @@
     },
     {
       "name": "HTTP and DNS",
-      "url": "https://docs.google.com/presentation/d/1xRfomtoHozKQ3TtWuIJu1PJ0d_1ZJfL_E2HDbEEK6q4/edit?usp=drivesdk",
-      "key": "http_and_dns",
+      "url": "https://docs.google.com/presentation/d/1BKPmDrSwC5oPVaIk5RwyVevA8ZTQ8niT9aHD6I4IiKY/edit?usp=sharing",
+      "key": "http_and_dns_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "http_and_dns"
+        "resource.key": "http_and_dns_1"
       }
     },
     {
@@ -5348,27 +5755,30 @@
     },
     {
       "name": "Internet Access Advocacy Campaign Project",
-      "url": "https://docs.google.com/presentation/d/1a4kLkTP_6rBTGSEv4cEXK3_RI9e5VZzuKT_3uU3rs1I/edit?usp=drivesdk",
-      "key": "internet_access_advocacy_campaign_project",
+      "url": "https://docs.google.com/presentation/d/1umzGKUHlROCAU8mOsb5l6anFs7aDJv2ZPcnqEOBmlFE/edit?usp=sharing",
+      "key": "internet_access_advocacy_campaign_project_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "internet_access_advocacy_campaign_project"
+        "resource.key": "internet_access_advocacy_campaign_project_1"
       }
     },
     {
       "name": "Internet Access Advocacy Campaign Project Planning Guide",
-      "url": "https://docs.google.com/document/d/16XGiC76N1UT3KqrnP3SA4Koi33cwdL3SjewG64rm1co/edit?usp=drivesdk",
-      "key": "internet_access_advocacy_campaign_project_planning_guide",
+      "url": "https://docs.google.com/document/d/17pcFrle29XELWNMTI1o2C0FApEW9dU9HdkQZJr9Bghc/edit?usp=sharing",
+      "key": "internet_access_advocacy_campaign_project_planning_guide_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "internet_access_advocacy_campaign_project_planning_guide"
+        "resource.key": "internet_access_advocacy_campaign_project_planning_guide_1"
       }
     },
     {
@@ -5386,14 +5796,16 @@
     },
     {
       "name": "Introduction to the Internet",
-      "url": "https://docs.google.com/presentation/d/1zDv2AAMuEsM5OKIT7lPaDo_qTIJIP6AWB4Zg7PJChxo/edit?usp=drivesdk",
-      "key": "introduction_to_the_internet",
+      "url": "https://docs.google.com/presentation/d/1_4AFagCloY98IP8n9B3lhnuh2x4zZL47GXmJL9pJ5pA/edit?usp=sharing",
+      "key": "introduction_to_the_internet_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "introduction_to_the_internet"
+        "resource.key": "introduction_to_the_internet_1"
       }
     },
     {
@@ -5473,52 +5885,58 @@
     },
     {
       "name": "Network Security Risk Assessment Project",
-      "url": "https://docs.google.com/presentation/d/1yg-q1dPEzfgiIeG4PCi2VkskI175MmPVZeGhO4WyTKo/edit?usp=drivesdk",
-      "key": "network_security_risk_assessment_project",
+      "url": "https://docs.google.com/presentation/d/1caMRBaghkIdShwp8jSsAz4zCENBYBRR3fEBdXekgWUQ/edit?usp=sharing",
+      "key": "network_security_risk_assessment_project_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "network_security_risk_assessment_project"
+        "resource.key": "network_security_risk_assessment_project_1"
       }
     },
     {
       "name": "Network Security Risk Assessment Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1M9Co6kaHqh-amr5WVITU-_tn539y4txN5YdiAJvfd5k/edit?usp=drivesdk",
-      "key": "network_security_risk_assessment_project_planning_guide",
+      "url": "https://docs.google.com/document/d/1wtM1LStlMbi-dbLe-sjKwH-H8bcsiS6o1Qjz_1x938A/edit?usp=sharing",
+      "key": "network_security_risk_assessment_project_planning_guide_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "network_security_risk_assessment_project_planning_guide"
-      }
-    },
-    {
-      "name": "Packets",
-      "url": "https://docs.google.com/presentation/d/1R1rs8kRd-As-F4n0Y4-g9kcoA0jPa-kKwmu2UvuxQiU/edit?usp=drivesdk",
-      "key": "packets",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "packets"
+        "resource.key": "network_security_risk_assessment_project_planning_guide_1"
       }
     },
     {
       "name": "Packets and Protocols",
-      "url": "https://docs.google.com/document/d/1-SQNlidzptSel2h7OV1WeqnbOv6VYxHan34S3MzLnq0/edit?usp=drivesdk",
-      "key": "packets_and_protocols",
+      "url": "https://docs.google.com/document/d/1Lq-M9ilp7NdkVhYEjJQ6JsCbE8xOBBq6vSuH-aG0UFE/edit?usp=sharing",
+      "key": "packets_and_protocols_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "packets_and_protocols"
+        "resource.key": "packets_and_protocols_1"
+      }
+    },
+    {
+      "name": "Packets and Protocols",
+      "url": "https://docs.google.com/presentation/d/1jBQRbrYMEvDcApHH_6gNRK--YJwAi0yND8WJCnHAItY/edit?usp=sharing",
+      "key": "packets_and_protocols_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "packets_and_protocols_2"
       }
     },
     {
@@ -5584,14 +6002,16 @@
     },
     {
       "name": "Scavenger Hunt Activity",
-      "url": "https://docs.google.com/presentation/d/1ki13_JAxL2vcyozYA6v8QMSGaRyMOYbyI1-I9PwWVU4/edit?usp=drivesdk",
-      "key": "scavenger_hunt_activity",
+      "url": "https://docs.google.com/presentation/d/107m3gk38hVJcXKtHxQemYg1Se3uNFRVU5gnUWaj2-7U/edit?usp=sharing",
+      "key": "scavenger_hunt_activity_1",
       "properties": {
         "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Handout"
       },
       "seeding_key": {
-        "resource.key": "scavenger_hunt_activity"
+        "resource.key": "scavenger_hunt_activity_1"
       }
     },
     {
@@ -5769,19 +6189,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
-        "resource.key": "network_security_risk_assessment_project"
+        "resource.key": "network_security_risk_assessment_project_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
-        "resource.key": "network_security_risk_assessment_project_planning_guide"
+        "resource.key": "network_security_risk_assessment_project_planning_guide_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to the Internet",
-        "resource.key": "_key_ai_networks_chat"
+        "resource.key": "_key_ai_networks_chat_1"
       }
     },
     {
@@ -5799,7 +6219,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to the Internet",
-        "resource.key": "ai_networks_chat"
+        "resource.key": "ai_networks_chat_1"
       }
     },
     {
@@ -5811,7 +6231,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to the Internet",
-        "resource.key": "introduction_to_the_internet"
+        "resource.key": "introduction_to_the_internet_1"
       }
     },
     {
@@ -5901,19 +6321,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 5: Packets",
-        "resource.key": "_key_packets_and_protocols"
+        "resource.key": "_key_packets_and_protocols_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 5: Packets",
-        "resource.key": "packets"
+        "resource.key": "packets_and_protocols_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 5: Packets",
-        "resource.key": "packets_and_protocols"
+        "resource.key": "packets_and_protocols_2"
       }
     },
     {
@@ -5931,19 +6351,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: HTTP and DNS",
-        "resource.key": "_key_scavenger_hunt_activity"
+        "resource.key": "_key_scavenger_hunt_activity_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: HTTP and DNS",
-        "resource.key": "dns_hierarchy"
+        "resource.key": "dns_hierarchy_exploring_energy_costs"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: HTTP and DNS",
-        "resource.key": "http_and_dns"
+        "resource.key": "http_and_dns_1"
       }
     },
     {
@@ -5967,7 +6387,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: HTTP and DNS",
-        "resource.key": "scavenger_hunt_activity"
+        "resource.key": "scavenger_hunt_activity_1"
       }
     },
     {
@@ -5991,7 +6411,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
-        "resource.key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide"
+        "resource.key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide_1"
       }
     },
     {
@@ -6003,13 +6423,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
-        "resource.key": "internet_access_advocacy_campaign_project"
+        "resource.key": "internet_access_advocacy_campaign_project_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
-        "resource.key": "internet_access_advocacy_campaign_project_planning_guide"
+        "resource.key": "internet_access_advocacy_campaign_project_planning_guide_1"
       }
     },
     {

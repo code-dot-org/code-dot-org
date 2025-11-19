@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q1_2025'
+
+question 'When you tap "Add to Favorites" in a music app and the heart icon fills in, what best describes what just happened?'
+
+wrong 'The app changed color randomly to make the page more fun.'
+right 'The app responded to your action by updating what you see on the screen.'
+wrong 'The app automatically downloaded all your songs to your device.'
+wrong 'The app reset to its default settings to load faster.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN

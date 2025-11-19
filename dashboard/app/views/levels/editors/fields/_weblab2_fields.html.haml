@@ -21,9 +21,9 @@
   .field
     = f.label :ai_tutor_mode, 'AI Tutor Mode'
 
-    - current_mode = @level.ai_tutor_mode ? @level.ai_tutor_mode : 'suggest'
+    - current_mode = @level.ai_tutor_mode ? @level.ai_tutor_mode : 'engineer'
     = f.select :ai_tutor_mode, options_for_select(@level.class.ai_tutor_modes, current_mode)
-    %p Set the AI Tutor mode for the level. The default mode is "Suggest".
+    %p Set the AI Tutor mode for the level. The default mode is "Engineer".
 
   .field
     = f.label :level_system_prompt, 'Level System Prompt'

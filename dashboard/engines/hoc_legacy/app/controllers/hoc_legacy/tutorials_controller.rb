@@ -46,29 +46,6 @@ module HocLegacy
       send_pixel_png
     end
 
-    # POST /api/hour/certificate
-    def certificate
-      session_params = params.permit(:session_s, :name_s)
-      session_row = PEGASUS_DB[:hoc_activity].where(session: session_params[:session_s]).first || {}
-
-      if session_row[:id] && session_row[:name].blank?
-        session_row[:name] = session_params[:name_s]&.strip&.presence
-        PEGASUS_DB[:hoc_activity].where(id: session_row[:id]).update(name: session_row[:name]) if session_row[:name]
-      end
-
-      render json: {
-        session:          session_row[:session],
-        tutorial:         session_row[:tutorial],
-        company:          session_row[:company],
-        started:          session_row[:started_at].present?,
-        pixel_started:    session_row[:pixel_started_at].present?,
-        pixel_finished:   session_row[:pixel_finished_at].present?,
-        finished:         session_row[:finished_at].present?,
-        name:             session_row[:name],
-        certificate_sent: session_row[:name].present?,
-      }
-    end
-
     private def assign_tutorial
       @tutorial = Tutorials.get(params[:code])
     end

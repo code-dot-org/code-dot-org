@@ -6,6 +6,7 @@ export enum IframeMessageType {
   FILE_UPDATED = 'FILE_UPDATED',
   SET_ALLOW_SCRIPTS = 'SET_ALLOW_SCRIPTS',
   REFRESH = 'REFRESH',
+  LEVEL_LOADING = 'LEVEL_LOADING',
 }
 
 export enum PreviewViewMode {
@@ -14,3 +15,12 @@ export enum PreviewViewMode {
 }
 
 export const DEFAULT_START_HTML_FILE = 'index.html';
+export const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
+
+// Service worker broadcast channel message types.
+export enum ProjectServiceWorkerMessageType {
+  SERVING_HTML_FILE = 'SERVING_HTML_FILE',
+  RECEIVED_SOURCE = 'RECEIVED_SOURCE',
+  UPDATE_FILES = 'UPDATE_FILES',
+  KEEP_ALIVE = 'KEEP_ALIVE',
+}

@@ -98,6 +98,10 @@ const Weblab2View: React.FC<
     state => !!state.lab2Project.projectSources?.source
   );
 
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+
   // Note: this causes Web Lab 2 to re-render when sources change.
   // Unfortunately, the way AI tutor is set up right now requires passing in a context
   // rather than a callback for the context. In the future, we should consider refactoring AI
@@ -106,8 +110,10 @@ const Weblab2View: React.FC<
     aiTutorHelper.setAiTutorContext({
       source,
       longInstructions: levelProperties.longInstructions,
+      hasEdited,
+      hasRun,
     });
-  }, [source, levelProperties.longInstructions]);
+  }, [source, levelProperties.longInstructions, hasEdited, hasRun]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.

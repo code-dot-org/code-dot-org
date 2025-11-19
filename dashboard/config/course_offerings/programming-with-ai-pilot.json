@@ -1,21 +1,23 @@
 {
   "key": "programming-with-ai-pilot",
-  "display_name": "programming-with-ai-pilot",
+  "display_name": "AIF Programming with AI 2025 Pilot",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
-  "grade_levels": null,
-  "header": null,
+  "curriculum_type": "Course",
+  "marketing_initiative": "AIF",
+  "grade_levels": "9,10,11,12",
+  "header": "teacher_led",
   "image": null,
-  "cs_topic": null,
+  "cs_topic": "artificial_intelligence,programming",
   "school_subject": null,
-  "device_compatibility": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": null,
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2025-11-13 06:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }
