@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-16T21:06:20.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "How do DNS and HTTP work together to bring websites to your browser?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-16T21:06:20.371+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson6-level4_v2-2025\\\"\"],\"cloned_from\":\"networks-internet-lesson6-level4_v2-2025\"},{\"changed_at\":\"2025-11-16 21:06:22 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

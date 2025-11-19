@@ -6,8 +6,7 @@ exceptions:
 breadcrumbs:
   enabled: true
 request:
-  filter_keys:
-    - "warden.user.user.key"
+  filter_keys: []
 
 # report data to honeybadger on the test server. this will not happen in unit tests
 # or ci because we unset the api key in those situations (see test.yml.erb).

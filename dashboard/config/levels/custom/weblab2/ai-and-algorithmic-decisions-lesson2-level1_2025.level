@@ -1,0 +1,98 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T11:51:08.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": true,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 300,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "## Do This:\r\n\r\n\r\n1. Click each button on the web app and watch what changes on the screen. Record your observations in your Activity Guide.\r\n\r\n2. Open the JavaScript file `script.js`.\r\n\r\n3. In your Activity Guide, map three of the buttons you tested to its:\r\n\r\n   * **selector** (what's being listened to),\r\n   * **handler** (what runs on click),\r\n   * **DOM update** (what changes on screen).\r\n\r\n4. Ask AI about anything unfamiliar. Use these frames (edit to fit):\r\n\r\n   * \"What does `addEventListener('click')` do?\"\r\n\r\n   * \"What does `textContent` change in this app?\"\r\n\r\n   * \"What does `style.display = 'block'` do?\"\r\n\r\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Plant Care Helper</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <h1>Plant Care Helper</h1>\n\n  <div class=\"buttonMenu\">\n    <button id=\"buttonWater\">Water Plant</button>\n    <button id=\"buttonSun\">Add Sunlight</button>\n    <button id=\"buttonFertilizer\">Add Fertilizer</button>\n    <button id=\"buttonSoil\">Check Soil</button>\n    <button id=\"buttonFact\">Plant Fact</button>\n  </div>\n\n  <div id=\"stage\">\n    <img\n      id=\"plantNormal\"\n      src=\"plant-normal.png\"\n      alt=\"A small plant in a terracotta pot.\"\n    >\n    <img\n      id=\"plantSunny\"\n      src=\"plant-sunny.png\"\n      alt=\"A small plant basking in sunlight.\"\n      hidden\n    >\n    <img\n      id=\"sprout\"\n      src=\"sprout.png\"\n      alt=\"A new sprout with two bright green leaves.\"\n      hidden\n    >\n  </div>\n\n  <div id=\"output\">\n    Click a button to see what changes here.\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, Helvetica, sans-serif;\n  background-color: #f5f9f6;\n  color: #1f2937;\n  text-align: center;\n  padding: 20px;\n}\n\nh1 {\n  color: #14532d;\n  margin-bottom: 16px;\n}\n\n.buttonMenu {\n  margin-bottom: 20px;\n}\n\nbutton {\n  display: inline-block;\n  margin: 4px;\n  padding: 10px 14px;\n  border: 1px solid #a7f3d0;\n  border-radius: 8px;\n  background-color: #d1fae5;\n  color: #064e3b;\n  cursor: pointer;\n  font-weight: 600;\n}\n\n#stage {\n  margin: 20px auto;\n}\n\n\n/* Show only the normal plant on page load */\n#plantNormal {\n  display: block;\n}\n\n/* Hide the sunny plant and sprout initially */\n#plantSunny {\n  display: none;\n}\n\n#sprout {\n  display: none;\n}\n\n/* Shared image styles */\n#stage img {\n  width: 180px;\n  height: auto;\n  margin: 0 auto;\n}\n\n/* Output box */\n#output {\n  display: block;\n  margin: 20px auto;\n  max-width: 500px;\n  min-height: 80px;\n  padding: 12px;\n  border: 2px solid #bbf7d0;\n  border-radius: 10px;\n  background-color: #ffffff;\n  color: #14532d;\n  font-size: 1rem;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Water Button\ndocument.getElementById(\"buttonWater\").addEventListener(\"click\", () => {\n  \n  document.getElementById(\"plantNormal\").style.display = \"block\";\n  document.getElementById(\"plantSunny\").style.display = \"none\";\n  document.getElementById(\"sprout\").style.display = \"none\";\n  \n  document.getElementById(\"output\").textContent = \"You watered the plant. It looks refreshed!\";\n  document.getElementById(\"output\").style.backgroundColor = \"#e0f2fe\";\n  document.getElementById(\"output\").style.borderColor = \"#93c5fd\";\n});\n\n\n// Sun Button\ndocument.getElementById(\"buttonSun\").addEventListener(\"click\", () => {\n  document.getElementById(\"plantNormal\").style.display = \"none\";\n  document.getElementById(\"plantSunny\").style.display = \"block\";\n  document.getElementById(\"sprout\").style.display = \"none\";\n  \n  document.getElementById(\"output\").textContent = \"Sunshine added. The plant is soaking it up!\";\n  document.getElementById(\"output\").style.backgroundColor = \"#ffffff\";\n  document.getElementById(\"output\").style.borderColor = \"#bbf7d0\";\n});\n\n\n// Fertilizer Button\ndocument.getElementById(\"buttonFertilizer\").addEventListener(\"click\", () => {\n  document.getElementById(\"plantNormal\").style.display = \"none\";\n  document.getElementById(\"plantSunny\").style.display = \"none\";\n  document.getElementById(\"sprout\").style.display = \"block\";\n  \n  document.getElementById(\"output\").textContent = \"Nutrients added. A new sprout appears!\";\n  document.getElementById(\"output\").style.backgroundColor = \"#ffffff\";\n  document.getElementById(\"output\").style.borderColor = \"#bbf7d0\";\n});\n\n\n// Soil Button\ndocument.getElementById(\"buttonSoil\").addEventListener(\"click\", () => {\n  document.getElementById(\"output\").textContent = \"Soil check: Moist and healthy.\";\n  document.getElementById(\"output\").style.backgroundColor = \"#ede9d5\";\n  document.getElementById(\"output\").style.borderColor = \"#92400e\";\n});\n\n\n// Fact Button\ndocument.getElementById(\"buttonFact\").addEventListener(\"click\", () => {\n  document.getElementById(\"output\").textContent = \"Plant fact: Most houseplants prefer bright, indirect light and consistent watering.\";\n  document.getElementById(\"output\").style.backgroundColor = \"#f0fdf4\";\n  document.getElementById(\"output\").style.borderColor = \"#86efac\";\n});\n\n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "plant-sunny.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level1-test-2025/uuid/9b284a61-a02e-44e3-a7f2-f4cfbe59b63c.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "plant-normal.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level1-test-2025/uuid/9531cfb9-becc-4432-9f8c-4afab5980f3c.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "sprout.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level1-test-2025/uuid/7b09e969-8301-464c-83f1-13e4e074d008.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMopPp7/Px+psZ6lp6Mh\nlHrwgwzgsaxMZWw8fhSIn2EeuOfu4JHEb+MvgubakTTrmMZowSADglVo38ty\nfXtxY/45C/CFqhhPKs0uljU4FpuCNhyYAgo70dp6l4yPsHrcuWt3zIRAoAy8\nDyqXgaSD17grDuCcYpucrWswCCJPmQPu+mtg1TrO2VqYfNYxQUDFKZTI48Uf\nZoCDJ806ItfcsxxaElXSPZQmt1tGU2XjeMhHL6DhbJ32TA2sFpE6iJDBoxi4\nhGNlRwFJ+G26XuXSX9lALYdKQTD3jYa4oa7Rd6c4dznYV9Co9x0d1uuKjoz2\nErZ9TcFWw2vk++/dCVnuuP7KuC8pgc38sab5302TuHC1ZZIfo1ocJmvmmexl\n904J6X30hsb3Dk8Yvme6gYspaB1zeo7Sv8tquBLnkXzq+h1gjz2mXyTd0OS/\nl7B4L+beVJybVBbZts+OJowCQs4jSKtIo0dmF/JKYpYotxA8j837ScefoHY6\nw0VKSlFVAGUW5AWlF3+kRJFMS36My+6CK7o8Xi3+V9Hv7Sh5K9g9+R50nYBw\np+D/RJ0c1UXWqooMgE1Cfgg10z6EW/7muFaP0LNfE2cAw+fIfcVyxfpMiec2\nTkb9fvCPAGxsRCG3QhnOpdm44gkmyRTPY+b4xvi2DZAiqh87Y1dxD97Vyf9Y\n01qvhIBrN78hQ68eoPRNtP1oUn3LQImvSIC9GMM1wNdUKmaeHoLN2HuYp2qN\nF1gLQLnGbFGm8IhdMFA9W8ODVzYFs+VacYeUqDnz1H4nDhXVkHGWCKt7Euve\nTOTXAtaXfLaNHKAb0/Az2cvH0zkiNZKb+GXFWQQ+/ed4nhAyRfXKlnR42ODL\nY15W+qDoamRCk2lrD31gCf/1ZKUge4gfyY8wTe6eyY8cyhxtAp0fu5Il6uT4\nVMi74c7xAijhAFjijaOFxSepp+ioxCmCf1etcH8FjR4ufJ2QP92Ilwy9j8nX\ny/QgRcKX5xwMMtehF4irYi7zcGsAJVv8BKPnCPaHe2BmEYmlPEDpOPiIfp0y\n05ooSqIYmtdl90i9D87T0FxRDeTeCcwcFW7av8P4wBFfHFbQ3O8RKYXCg3tS\nFJX0QGxIuVeoNLqXE9UymTrylJ15fRYyHuWmSEjbtmhZ2Nm4aqOCBPgOjbE4\n5v45opM00cAp/mjUIlgLAELhKAX6IfZ92x5iQdJjwFtV+xIESsQf/s2adGAm\nCD9x1JcPUa24YFTOv7xcvh6qsi8PDje9sVLv6AEdOXzjuhr1e0r9tnthQH2U\nIi++q8D4ygCi+/+AfhGHRTDLy4VwVpAR82Ii4QPgXmCVGVx9arzjQteF7v9B\ncO3TBCqWlSxCLyAUSnkoB5Hnvp2V4VEWJ655aueL0N75E9KA33aZZmob4cmQ\ndvOysIBBWXnPDo4WM6O1EeNNrqAYqYEWWx3/Q6Zx7OBlaYI5tgonzmW2SB2+\nluJ73dInWnHbUtso45HrgJ0B21cRPk2/7r/ygecBMb1SOO71RZNqZc2FP2oB\n39o9Ef30fsWAOWWc7ce1Ea6upUZDr3WqTKhb/bOQKPCumN4gej7sN0kFoTap\nNIZpeTf3aSdG+i43UIP0JGcQrM9w3GzyphXzRVqYS9Hk4NufvygVB52VJ4Ne\nAYGv3d2XOTMS3guABmTD12jB28PmnM5z+/ubqeUCxRYPQI/oRC+VWHUU7cPT\nB7p0Q+XEr2J3gIwz8LsX0FHg+IdLd0/9fTUbpD+NZgyPsh5he7dkmPTthvNT\nw9E8TIhJ9AOxwwTS8tTaaz5jbS38PukKwHLxZnZsBjLD91vB5BagAktlNFRb\nl5+rqe/KBGTh/HsxxG5TWPOVQNPbXOnHh+yfmQz6+tXpdMisBIN7btr8EB/o\nXGicbAvFeQVAC23q6TkMPCpjp/sXy88rr50vHCSaH3ovQ5OftCwS3pTlWA1z\nBfL7JONU73PnNJKrM6F1aa9x+BllRh3otngOx4NT1ZDXGdxt3C3iAsA/nN7I\nviHibLeeUNJsjTMGRI1hjLb9IwKf9WNBbO/Auo4DjKVRBmA1njknBdmfIzYk\nZN7I4AIgVlpexFAWaCXlSpR2+FhbcI+Q8FN7e7cbUmU5D+ykUuYFCroas92A\nAgR8vEq+H1ObNNSP6GfyXoMy7Gmh3I9XuAnTHlN4asXxmt7Nx0cBxSDgrUAJ\nUkuJgu2gkXrhUbb5peq7qUcqL1XT0s4ntKP8g/IJLfrSHsGZ15/VF09C0fo6\nIo8mrSU0jvvW0FmgMHeCEJHZfWeaYQaIbY5/CSMjKacQUktSYSh3ou23mUCU\naPrfECCsb5Iy9tb1gbl2pPUnjV5xFycBSTee9vq2TAHUdMJZAPne9+FbsiRg\n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\nyrLsO/FTs7KJZ0h2W6Cc\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T11:51:08.410+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level1-test-2025\"},{\"changed_at\":\"2025-11-13 12:00:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -37,6 +37,8 @@ Dashboard::Application.routes.draw do
 
   constraints host: CDO.preview_codeprojects_hostname do
     get '/', to: 'codeprojects_preview#show'
+    # Must be served from / on preview.codeprojects.org to control the root scope:
+    get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
     # Custom 404 page for codeprojects preview
     get '*path', to: 'codeprojects_preview#not_found'
   end
@@ -759,6 +761,7 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
+        resource :deep_linking, controller: :deep_linking, only: :show
         namespace :account_linking do
           get :landing
           get :existing_account
