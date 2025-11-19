@@ -38,6 +38,12 @@
   min-height: 0;
   position: relative;
   padding-bottom: 0.625rem;
+
+  /* Add extra space after the second to last row
+  to add more space above the initial version row */
+  & > div:nth-last-child(2) {
+    margin-bottom: 1rem;
+  }
 }
 
 .listFooter {
