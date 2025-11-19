@@ -2359,6 +2359,13 @@ ActiveRecord::Schema.define(version: 2025_11_19_161129) do
     t.index ["published_state"], name: "index_unit_groups_on_published_state"
   end
 
+  create_table "unit_groups_resources", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "unit_group_id"
+    t.integer "resource_id"
+    t.index ["resource_id", "unit_group_id"], name: "index_unit_groups_resources_on_resource_id_and_unit_group_id"
+    t.index ["unit_group_id", "resource_id"], name: "index_unit_groups_resources_on_unit_group_id_and_resource_id", unique: true
+  end
+
   create_table "unit_groups_student_resources", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "unit_group_id"
     t.integer "resource_id"
@@ -2567,15 +2574,6 @@ ActiveRecord::Schema.define(version: 2025_11_19_161129) do
     t.integer "unit_group_id"
     t.index ["script_id"], name: "index_user_scripts_on_script_id"
     t.index ["user_id", "script_id", "unit_group_id", "deleted_at"], name: "index_user_scripts_on_user_script_unit_group_deleted_unique", unique: true
-  end
-
-  create_table "user_trophies", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "trophy_id", null: false
-    t.integer "concept_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["user_id", "trophy_id", "concept_id"], name: "index_user_trophies_on_user_id_and_trophy_id_and_concept_id", unique: true
   end
 
   create_table "users", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
