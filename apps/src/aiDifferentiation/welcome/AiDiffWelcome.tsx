@@ -14,8 +14,17 @@ import classNames from 'classnames';
 import React from 'react';
 import Confetti from 'react-dom-confetti';
 
+import {
+  setInitialChatMessage,
+  setThreadMessages,
+} from '@cdo/apps/aichat/redux/slice';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {
+  AiInteractionStatus as Status,
+  AiDiffContext,
+} from '@cdo/generated-scripts/sharedConstants';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
@@ -269,6 +278,8 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     );
   }, [continueAndSkipButtons, selectedOption, context, curriculumCourses]);
 
+  const dispatch = useAppDispatch();
+
   React.useEffect(() => {
     if (currentWelcomeState === WelcomeStates.end_page) {
       setConfettiActive(true);
@@ -278,6 +289,24 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       setChatContinueButtonDisabled(true);
     }
   }, [currentWelcomeState]);
+
+  React.useEffect(() => {
+    if (selectedOption) {
+      const {initialMessage, suggestedPrompts} =
+        SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
+      dispatch(setInitialChatMessage(initialMessage));
+      dispatch(
+        setThreadMessages([
+          {
+            role: Role.USER,
+            chatMessageText: initialMessage,
+            status: Status.OK,
+          },
+          suggestedPrompts,
+        ])
+      );
+    }
+  }, [selectedOption, dispatch]);
 
   const endPage = React.useCallback(() => {
     return (
@@ -349,8 +378,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       setSelectedOption('plan');
       return null;
     }
-    const {initialMessage, suggestedPrompts} =
-      SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
 
     return (
       <div className={style.practicePage}>
@@ -360,8 +387,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             context={context}
             scriptName={scriptName}
             chatResponseCallback={() => setChatContinueButtonDisabled(false)}
-            initialChatMessage={initialMessage}
-            suggestedPrompts={suggestedPrompts}
             hideChatHeader
           />
         </div>
