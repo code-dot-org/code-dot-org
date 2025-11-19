@@ -471,11 +471,9 @@ const DanceView: React.FunctionComponent<{
       if (guideMode === 'aiCodeGenerate') {
         Blockly.extraScrollHeight = 250;
       }
-      if (currentSources.toolboxDefinition) {
+      const toolboxDefinition = currentSources.toolboxDefinition;
+      if (toolboxDefinition) {
         try {
-          const toolboxDefinition = JSON.parse(
-            currentSources.toolboxDefinition
-          );
           onFlyoutGenerated(toolboxDefinition);
         } catch {}
       }
@@ -747,9 +745,7 @@ const DanceView: React.FunctionComponent<{
               updateSources={resultBlockly => {
                 mergeSources({
                   source: resultBlockly.workspaceSerialization,
-                  toolboxDefinition: JSON.stringify(
-                    resultBlockly.flyoutDefinition
-                  ),
+                  toolboxDefinition: resultBlockly.flyoutDefinition,
                 });
               }}
               startOver={startOver}
