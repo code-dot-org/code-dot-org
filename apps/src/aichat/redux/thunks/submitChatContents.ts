@@ -51,6 +51,7 @@ export const submitChatContents = createAsyncThunk(
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
       responseCallback?: (response: string) => string;
+      logLevelActivity?: () => void;
     },
     thunkAPI
   ) => {
@@ -66,6 +67,7 @@ export const submitChatContents = createAsyncThunk(
       analyticsProperties,
       userAddedSelectionContext,
       responseCallback,
+      logLevelActivity,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -106,6 +108,9 @@ export const submitChatContents = createAsyncThunk(
       timestamp: Date.now(),
     };
     dispatch(setChatMessagePending(newUserMessage));
+    if (logLevelActivity) {
+      logLevelActivity();
+    }
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
