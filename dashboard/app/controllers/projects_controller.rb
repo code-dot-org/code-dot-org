@@ -541,7 +541,9 @@ class ProjectsController < ApplicationController
       new_subprojects = src_project["subprojects"].map do |entry|
         subproject_src_channel_id = entry['channel_id']
         subproject = project.get(subproject_src_channel_id)
-        new_subproject_channel_id = remix_project(subproject_src_channel_id, subproject["projectType"], is_subproject: true)
+        subproject_type = subproject["projectType"]
+        return head :forbidden if Projects.in_restricted_share_mode(subproject_src_channel_id, subproject_type)
+        new_subproject_channel_id = remix_project(subproject_src_channel_id, subproject_type, is_subproject: true)
         {level_id: entry['level_id'], channel_id: new_subproject_channel_id}
       end
       value = project.get(new_channel_id)
