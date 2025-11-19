@@ -38,7 +38,7 @@ class StatsigReporter {
         ? window.oneTrustPromise
         : Promise.resolve(); // Default for environments without OneTrust (tests)
     this.readyPromise = oneTrustPromise.then(() => {
-      this.initializeAfterConsent();
+      return this.initializeAfterConsent();
     });
   }
 
@@ -86,7 +86,12 @@ class StatsigReporter {
     };
 
     this.ready = true;
-    this.initialize(this.api_key, this.user, this.options);
+    this.initializedPromise = this.initialize(
+      this.api_key,
+      this.user,
+      this.options
+    );
+    return this.initializedPromise;
   }
 
   // This user object will potentially update via a setUserProperties call
@@ -97,6 +102,11 @@ class StatsigReporter {
       await this.statsigClient.initializeAsync();
     }
   }
+
+  // Wait until the reporter is ready
+  waitUntilReady = async () => {
+    await this.readyPromise;
+  };
 
   // Utilizes Statsig's function for updating a user once we've recognized a sign in
   async setUserProperties({
