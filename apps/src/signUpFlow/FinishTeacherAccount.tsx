@@ -113,7 +113,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
   // Remove oauth user_type cookie if it exists
   cookies.remove(SIGN_UP_USER_TYPE);
 
-  const [isInExp, setIsInExp] = useState(false);
+  const [isInGradeSelectionExperiment, setIsInGradeSelectionExperiment] =
+    useState(false);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
@@ -179,7 +180,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'enable_selecting_grades',
         false
       );
-      setIsInExp(result);
+      setIsInGradeSelectionExperiment(result);
     })();
   }, []);
 
@@ -203,7 +204,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       schoolInfoInvalid(schoolInfo) ||
       !educatorRole ||
       signupSources.length < 1 ||
-      (selectedGrades.length < 1 && isInExp),
+      (selectedGrades.length < 1 && isInGradeSelectionExperiment),
     [
       gdprValid,
       givenName,
@@ -213,7 +214,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       educatorRole,
       signupSources,
       selectedGrades,
-      isInExp,
+      isInGradeSelectionExperiment,
     ]
   );
 
@@ -469,7 +470,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             itemGroups={roleItemGroups}
             dropdownTextThickness="thin"
           />
-          {isInExp && (
+          {isInGradeSelectionExperiment && (
             <GradeLevelChips
               inputLabel={locale.grades_taught()}
               values={selectedGrades}
