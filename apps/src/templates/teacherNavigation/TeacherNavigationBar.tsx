@@ -111,8 +111,12 @@ const TeacherNavigationBar: React.FC<{
 
   const performanceSectionTitle = getSectionHeader(i18n.performance());
 
-  const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+  const defaultPerformanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
     ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+  const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    experiments.isEnabled('student_snapshot')
+      ? [...defaultPerformanceContentKeys, 'studentSnapshot']
+      : defaultPerformanceContentKeys;
 
   if (showAITutorTab) {
     performanceContentKeys.splice(1, 0, 'aiTutor');

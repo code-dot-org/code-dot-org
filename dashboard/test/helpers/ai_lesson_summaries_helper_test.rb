@@ -67,9 +67,8 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
   end
 
   test "get_ai_lesson_summary returns error status when API call fails" do
-    error_response = {error: "API limit exceeded"}.to_json
-
     # Mock failed HTTP response
+    error_response = {error: "API limit exceeded"}.to_json
     mock_response = mock('response')
     mock_response.stubs(:code).returns(429)
     mock_response.stubs(:body).returns(error_response)
@@ -78,11 +77,9 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     mock_client = mock('client')
     mock_client.expects(:request_lesson_summary).with(@system_prompt).returns(mock_response)
     AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
-
-    result = AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id)
-
-    assert_equal 429, result[:status]
-    assert_equal error_response, result[:json].to_json
+    assert_raises(StandardError) do
+      AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id)
+    end
   end
 
   test "get_ai_lesson_summary gets system prompt from helper" do
@@ -176,10 +173,6 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
       messages: [
         {
           role: "system",
-          content: "You are an expert teaching assistant in a computer science classroom who has been asked to summarize the upcoming lesson to help the teacher prepare for class."
-        },
-        {
-          role: "user",
           content: prompt
         }
       ],
