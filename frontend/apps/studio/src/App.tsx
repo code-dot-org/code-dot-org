@@ -1,10 +1,13 @@
+// Ensure critical fonts are loaded very early.
+import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/component-library-styles/colors.scss';
-import {CssBaseline, ThemeProvider, Typography} from '@mui/material';
+import {ThemeProvider, Typography} from '@mui/material';
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
 
 import {LinkButton} from '@code-dot-org/component-library/button';
 import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
+import Bootstrap from './modules/bootstrap';
 
 const SIGNED_OUT_MENU_ITEMS = [
   {label: 'Learn', href: '/students'},
@@ -19,8 +22,7 @@ const SIGNED_OUT_MENU_ITEMS = [
 function App() {
   return (
     <ThemeProvider theme={CdoTheme}>
-      {/* Resets browser CSS defaults (e.g. body margin) using MUI defaults */}
-      <CssBaseline />
+      <Bootstrap locale="en-US" />
       <Header
         logoImageUrl={CdoLogo}
         brandName="Code.org"
