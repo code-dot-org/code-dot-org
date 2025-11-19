@@ -15,10 +15,6 @@ export const populateInitialExcalidrawState = async (
 ) => {
   const excalidrawInitialState = cloneDeep(sourcesWithExternalFiles);
 
-  Object.values(excalidrawInitialState?.files || {}).forEach(
-    file => delete file.dataURL
-  );
-
   if (excalidrawInitialState.files) {
     const imageDownloadPromises = Object.values(
       excalidrawInitialState.files
@@ -26,6 +22,10 @@ export const populateInitialExcalidrawState = async (
       if (!Object.keys(downloadedFileData).includes(file.id)) {
         const fileUrl = excalidrawInitialState.externalFiles?.[file.id].url;
         if (fileUrl) {
+          // While we're still storing base64 encodings of strings in parallel with S3 uploads,
+          // delete these so that we can confirm that the load from S3 is working.
+          delete file.dataURL;
+
           try {
             const base64 = (await imageUrlToBase64(fileUrl)) as DataURL;
             file.dataURL = base64 as DataURL;
