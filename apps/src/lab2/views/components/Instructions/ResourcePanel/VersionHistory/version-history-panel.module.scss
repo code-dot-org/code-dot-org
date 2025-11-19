@@ -25,7 +25,7 @@
     position: absolute;
     inset-inline-start: 30px; // Align with radio button
     top: 10px;
-    bottom: 20px; // Account for list padding-bottom + gap
+    bottom: 10px;
     width: 1px;
     background-color: var(--borders-neutral-primary);
     z-index: 0;
