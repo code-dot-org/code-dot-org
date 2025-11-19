@@ -6,21 +6,12 @@ import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import experiments from '@cdo/apps/util/experiments';
-//import {AI_TUTOR_PROMPTS} from '../helpers/systemPromptsHelper';
 
-// Dynamically import LangfuseClient when needed to avoid CommonJS/ESM interop issues.
-const fetchLangfusePrompt = async (
-  promptName: string | undefined
-): Promise<string | undefined> => {
-  // error handle when promptName is undefined
-  // error handle when promptName is not one of the defined modes
-  // update to fetch the prompt by name from Langfuse
+const fetchLangfusePrompt = async (): Promise<string | undefined> => {
   const LANGFUSE_URL = '/langfuse/get_prompts';
   const response = await HttpClient.get(LANGFUSE_URL);
   const prompts = await response.json();
   console.log('🤖: prompts from langfuse:', prompts);
-  // const langfusePrompt = await langfuse.prompt.get(`modes/${promptName}`);
-  // return langfusePrompt?.prompt;
   return undefined;
 };
 

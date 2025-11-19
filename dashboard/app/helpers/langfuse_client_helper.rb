@@ -7,10 +7,6 @@ module LangfuseClientHelper
     def initialize(secret_key, public_key)
       @secret_key = secret_key
       @public_key = public_key
-      puts "----------"
-      puts "Langfuse Client initialized with Public Key: #{@public_key}"
-      puts "----------"
-      puts "Langfuse Client initialized with Secret Key: #{@secret_key}"
     end
 
     def fetch_prompts(prompt_name)
@@ -25,7 +21,6 @@ module LangfuseClientHelper
         },
         headers: headers,
       )
-      # TODO: Error handling if the response is not 200
       response
     end
   end
