@@ -12,7 +12,6 @@ import {
   setProjectSource,
   setViewingOldVersion,
   setRestoredOldVersion,
-  setHasEdited,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   loadVersion,
@@ -81,7 +80,6 @@ const VersionHistoryPanel: React.FunctionComponent<
   const projectSources = useAppSelector(
     state => state.lab2Project.projectSources
   );
-  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -318,9 +316,8 @@ const VersionHistoryPanel: React.FunctionComponent<
     sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_COMMITTED, {
       versionId: selectedVersion,
     });
-    dispatch(setHasEdited(false));
     successfulProjectResetCleanUp(true);
-  }, [dispatch, selectedVersion, successfulProjectResetCleanUp]);
+  }, [selectedVersion, successfulProjectResetCleanUp]);
 
   const showList = listLoaded && !listLoading && !listLoadError;
 
@@ -359,7 +356,7 @@ const VersionHistoryPanel: React.FunctionComponent<
                 onChange={onVersionChange}
                 disabled={disabled}
               >
-                {version.isLatest && hasEdited && !viewAsUserId && (
+                {version.isLatest && !viewAsUserId && (
                   <SaveVersionPanel
                     projectSources={projectSources}
                     onSuccess={handleSaveVersionSuccess}
