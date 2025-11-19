@@ -5,7 +5,11 @@ import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {setUnit, getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import {
+  setUnit,
+  getSelectedCourseName,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
@@ -25,7 +29,13 @@ const CSV_HEADERS = [
 ];
 const PADDING = 8;
 
-function TextResponses({sectionId, scriptId, scriptName, setUnit}) {
+function TextResponses({
+  sectionId,
+  scriptId,
+  courseVersionName,
+  unitPosition,
+  setUnit,
+}) {
   const [textResponsesByScript, setTextResponsesByScript] = useState({});
   const [isLoadingResponses, setIsLoadingResponses] = useState(false);
   const [filterByLessonName, setFilterByLessonName] = useState(null);
@@ -122,7 +132,8 @@ function TextResponses({sectionId, scriptId, scriptName, setUnit}) {
           responses={filteredResponses}
           sectionId={sectionId}
           isLoading={isLoadingResponses}
-          scriptName={scriptName}
+          courseVersionName={courseVersionName}
+          unitPosition={unitPosition}
         />
       </div>
     </div>
@@ -133,7 +144,8 @@ TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
   scriptId: PropTypes.number,
-  scriptName: PropTypes.string,
+  courseVersionName: PropTypes.string,
+  unitPosition: PropTypes.number,
   setUnit: PropTypes.func.isRequired,
 };
 
@@ -169,7 +181,8 @@ export default connect(
     sectionId: state.teacherSections.selectedSectionId,
     scriptId: state.unitSelection.scriptId,
     courseVersionId: state.unitSelection.courseVersionId,
-    scriptName: getSelectedUnitName(state),
+    courseVersionName: getSelectedCourseName(state),
+    unitPosition: getSelectedUnitPosition(state),
   }),
   dispatch => ({
     setUnit(scriptId, courseVersionId) {

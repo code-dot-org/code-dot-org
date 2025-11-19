@@ -82,10 +82,10 @@ Resources:
       ReplicationInstanceIdentifier: export-mysql-to-redshift
       AllowMajorVersionUpgrade: true
       AllocatedStorage: 250
-      EngineVersion: 3.5.1
+      EngineVersion: 3.6.1
       MultiAZ: true
       PubliclyAccessible: false
-      ReplicationInstanceClass: dms.r4.4xlarge
+      ReplicationInstanceClass: dms.r5.4xlarge
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
       # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it

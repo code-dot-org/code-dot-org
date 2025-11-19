@@ -19,6 +19,7 @@ import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/Teach
 import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {sectionDoesNotHaveNewData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
@@ -27,6 +28,7 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import StudentSnapshot from '../studentSnapshot/StudentSnapshot';
 import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import SkillsDashboard from '../teacherDashboard/skillsDashboard/SkillsDashboard';
@@ -296,6 +298,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               path={TEACHER_NAVIGATION_PATHS.unitOverview}
               element={<TeacherUnitOverview />}
             />
+            {experiments.isEnabled('student_snapshot') && (
+              <Route
+                path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
+                element={<StudentSnapshot />}
+              />
+            )}
             <Route
               path={TEACHER_NAVIGATION_PATHS.settings}
               element={

@@ -100,6 +100,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     | 'listened'
     | 'editing'
     | 'edited'
+    | 'playing'
   >('none');
 
   const getInitialChoices = () => {
@@ -230,6 +231,23 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     ? 'full'
     : undefined;
 
+  const guideWidth = aiGenerateState === 'playing' ? 'very-narrow' : 'normal';
+
+  const cornerIcon =
+    aiGenerateState === 'edited'
+      ? 'minimize'
+      : aiGenerateState === 'playing'
+      ? 'maximize'
+      : undefined;
+
+  const onCornerIconClick = useCallback(() => {
+    if (aiGenerateState === 'edited') {
+      setAiGenerateState('playing');
+    } else if (aiGenerateState === 'playing') {
+      setAiGenerateState('edited');
+    }
+  }, [aiGenerateState]);
+
   const parentProperties = useParentLevelProperties();
   const isStandalone =
     levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
@@ -244,7 +262,14 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   }, [dispatch, levelProperties.appName, levelProperties.id]);
 
   return (
-    <Guide id="generate-panel" modal={modal} position="bottom">
+    <Guide
+      id="generate-panel"
+      modal={modal}
+      width={guideWidth}
+      position="bottom"
+      cornerIcon={cornerIcon}
+      onCornerIconClick={onCornerIconClick}
+    >
       {aiGenerateState === 'none' && levelProperties.longInstructions && (
         <MainInstructionsContent
           instructionsText={levelProperties.longInstructions}
@@ -412,6 +437,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           </div>
         </>
       )}
+
+      {aiGenerateState === 'playing' && <div>Keep playing!</div>}
+
       {/* Retain focus with a hidden button. */}
       {['generating', 'generated', 'listening', 'editing'].includes(
         aiGenerateState
