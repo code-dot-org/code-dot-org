@@ -1,0 +1,66 @@
+@import 'color.scss';
+
+.header {
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 32px;
+
+  .dropdown {
+    width: 100%;
+
+    div {
+      width: 100%;
+      select {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.headerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  .button {
+    flex-grow: 1;
+  }
+}
+
+.widgetRow {
+  display: flex;
+  min-width: 970px;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.longWidget {
+  width: 100%;
+  height: 200px;
+  background-color: var(--background-neutral-quaternary);
+  border-radius: 8px;
+}
+
+.bigWidget {
+  width: calc((100% - 16px) * 2 / 3);
+  height: 400px;
+  background-color: var(--background-neutral-quaternary);
+  border-radius: 8px;
+}
+
+.smallWidget {
+  width: calc((100% - 32px) / 3);
+  height: 200px;
+  background-color: var(--background-neutral-quaternary);
+  border-radius: 8px;
+}
