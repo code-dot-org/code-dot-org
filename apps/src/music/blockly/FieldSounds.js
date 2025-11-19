@@ -267,7 +267,7 @@ class FieldSounds extends GoogleBlockly.Field {
         height: 20,
       });
 
-      iconElement.setAttribute('style', 'font-family: "Font Awesome 7 Pro"');
+      iconElement.setAttribute('style', 'font-family: "Font Awesome 6 Pro"');
       iconElement.classList.add(SoundStyle[soundType].classNameFill);
 
       // Attach the actual text.

@@ -190,11 +190,19 @@ class AdvancedShareOptions extends React.Component {
       <div className="alert fade in">{this.state.exportError}</div>
     ) : null;
 
+    const exportSupportLink =
+      'https://support.code.org/hc/en-us/articles/13211665878157-Exporting-Projects-from-App-Lab';
+
     return (
       <div>
         <p style={style.p}>
           Export your project as a zipped file, which will contain the
-          HTML/CSS/JS files, as well as any assets, for your project.
+          HTML/CSS/JS files, as well as any assets, for your project. For
+          instructions to run your exported project locally, see{' '}
+          <a href={exportSupportLink} target="_blank" rel="noreferrer">
+            our documentation
+          </a>
+          .
         </p>
         <Button
           color={Button.ButtonColor.neutralDark}

@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q13_2025'
+
+question 'A smart home app turns on the lights automatically when someone enters the room, but not if it\'s already bright outside. Which part of the logic allows the app to skip turning on the lights when it\'s sunny?'
+
+wrong 'An AND operator that makes the lights always turn on no matter what'
+wrong 'An OR operator that turns the lights on or off at random'
+wrong 'A variable that stores how much power the lightbulb uses each day'
+right 'A NOT operator that checks if it\'s not bright before turning on the lights'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 10
+MARKDOWN

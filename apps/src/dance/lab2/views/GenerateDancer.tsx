@@ -6,6 +6,7 @@ import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
+import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {
   DanceLevelProperties,
@@ -31,18 +32,17 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {trySetLocalStorage} from '@cdo/apps/utils';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 import backgroundImage from '@cdo/static/dance/generateDancer/generate-dancer-background.png';
 import dancerSilhouetteBrightImage from '@cdo/static/dance/generateDancer/generate-dancer-silhouette-bright.svg';
 
 import {GENERATED_DANCER_STORAGE_KEY} from '../../ai/constants';
 import {getConfigValue} from '../../lottie/LottieDancerUtils';
 
+import bodyVariantCounts from './bodyVariantCounts';
 import adlibsDefault from './dancerAdlibsDefault';
 
 import moduleStyles from './generate-dancer.module.scss';
-
-const BODY_VARIANT_COUNT = 5;
 
 // A little time for the previous dancer to fade out.
 const GENERATE_INITIAL_DELAY_DURATION = 250;
@@ -238,7 +238,11 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       );
 
       const variant = sample(newVariants) as number;
-      const bodyVariant = getRandomInt(0, BODY_VARIANT_COUNT - 1);
+      let bodyVariant = 0;
+      if (choicesExtraToSave && choicesExtraToSave.length > 0) {
+        const bodyVariantCount = bodyVariantCounts[choicesExtraToSave[0]];
+        bodyVariant = getRandomInt(0, bodyVariantCount - 1);
+      }
 
       // Keep the recently-shown array length at a maximum that ensures
       // there are still two choices to be made each time.
@@ -282,15 +286,15 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     [adlibChoices, adlibOption, adlibs, updateSources, currentSources]
   );
 
-  // Update local storage whenever the generated dancer metadata changes and update the canvas key so the canvas refreshes.
+  // Update session storage whenever the generated dancer metadata changes and update the canvas key so the canvas refreshes.
   const [canvasKey, setCanvasKey] = useState<string>();
   useEffect(() => {
     const metadataString = JSON.stringify(currentSources.generatedDancer);
     if (metadataString) {
-      trySetLocalStorage(GENERATED_DANCER_STORAGE_KEY, metadataString);
+      trySetSessionStorage(GENERATED_DANCER_STORAGE_KEY, metadataString);
     } else {
-      // If no dancer has been generated on this level, clear local storage to prevent stale artifacts from showing.
-      localStorage.removeItem(GENERATED_DANCER_STORAGE_KEY);
+      // If no dancer has been generated on this level, clear session storage to prevent stale artifacts from showing.
+      sessionStorage.removeItem(GENERATED_DANCER_STORAGE_KEY);
     }
     setCanvasKey(metadataString || 'none');
   }, [currentSources]);
@@ -355,6 +359,14 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const parentProperties = useParentLevelProperties();
   const showNavigation =
     !levelProperties.isProjectLevel && !parentProperties?.isProjectLevel;
+  const sublevelOnContinue = useCallback(() => {
+    dispatch(
+      sendSuccessReportForLevel(
+        levelProperties.id.toString(),
+        levelProperties.appName
+      )
+    );
+  }, [dispatch, levelProperties.appName, levelProperties.id]);
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
@@ -498,6 +510,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                     hasEdited={true}
                     isRunning={false}
                     className={moduleStyles.buttonWide}
+                    // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
+                    onContinue={
+                      parentProperties ? sublevelOnContinue : undefined
+                    }
                   />
                 )}
               </div>

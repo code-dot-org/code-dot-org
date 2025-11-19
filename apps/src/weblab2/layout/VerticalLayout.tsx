@@ -22,7 +22,7 @@ import {ViewMode} from '../types';
 import lab2Styles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 import weblab2Styles from '@cdo/apps/weblab2/layout/vertical-layout.module.scss';
 
-const MIN_INFO_PANEL_WIDTH = 150;
+const MIN_INFO_PANEL_WIDTH = 250;
 const INITIAL_INFO_PANEL_WIDTH = 400;
 const INITIAL_INFO_PANEL_WIDTH_WIDGET = 500;
 const MIN_EDITOR_WIDTH = 300;
