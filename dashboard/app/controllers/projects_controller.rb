@@ -324,10 +324,10 @@ class ProjectsController < ApplicationController
     # Bubble Choice standalone project types allow multiple sub-projects to be associated with one parent project.
     # Create new projects for each sublevel
     if @level.is_a?(BubbleChoice)
-      project_data[:subprojects] =  @level.sublevels.map do |sublevel|
+      project_data[:subprojects] = @level.sublevels.map do |sublevel|
         {
           level_id: sublevel.id,
-          project_id: ChannelToken.create_channel(
+          channel_id: ChannelToken.create_channel(
             request.ip,
             Projects.new(get_storage_id),
             data: {hidden: true},
@@ -529,27 +529,31 @@ class ProjectsController < ApplicationController
   def remix
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
-    begin
-      _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      return head :bad_request
-    end
     project_type = params[:key]
     return head :forbidden if Projects.in_restricted_share_mode(src_channel_id, project_type)
 
-    new_channel_id = ChannelToken.create_channel(
-      request.ip,
-      Projects.new(get_storage_id),
-      src: src_channel_id,
-      type: project_type,
-      remix_parent_id: remix_parent_id,
-    )
-    AssetBucket.new.copy_files src_channel_id, new_channel_id if uses_asset_bucket?(project_type)
-    AssetBucket.new.copy_level_starter_assets src_channel_id, new_channel_id if uses_starter_assets?(project_type)
-    animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(src_channel_id, new_channel_id) : []
-    SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
-    FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
+    new_channel_id = remix_project(src_channel_id, project_type)
+
+    project = Projects.new(get_storage_id)
+    src_project = project.get(src_channel_id)
+    # If this project has subprojects, remix each subproject and update the parent channel.
+    if src_project["subprojects"]
+      new_subprojects = src_project["subprojects"].map do |entry|
+        subproject_src_channel_id = entry['channel_id']
+        subproject = project.get(subproject_src_channel_id)
+        new_subproject_channel_id = remix_project(subproject_src_channel_id, subproject["projectType"], is_subproject: true)
+        {level_id: entry['level_id'], channel_id: new_subproject_channel_id}
+      end
+      value = project.get(new_channel_id)
+      project.update(
+        new_channel_id,
+        value.merge("subprojects" => new_subprojects),
+        request.ip
+      )
+    end
     redirect_to action: 'edit', channel_id: new_channel_id
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    return head :bad_request
   end
 
   # GET /projects/:project_type/:channel_id/submission_status
@@ -813,6 +817,29 @@ class ProjectsController < ApplicationController
       )
       raise ZendeskError.new(response.code, response.body) unless response.success?
     end
+  end
+
+  # Creates a remix of the given project. Creates a new channel and copies over all project data.
+  private def remix_project(src_channel_id, project_type, is_subproject: false)
+    _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
+    project = Projects.new(get_storage_id)
+    new_channel_id = ChannelToken.create_channel(
+      request.ip,
+      project,
+      src: src_channel_id,
+      type: project_type,
+      remix_parent_id: remix_parent_id,
+      standalone: !is_subproject,
+      hidden: is_subproject
+    )
+
+    AssetBucket.new.copy_files src_channel_id, new_channel_id if uses_asset_bucket?(project_type)
+    AssetBucket.new.copy_level_starter_assets src_channel_id, new_channel_id if uses_starter_assets?(project_type)
+    animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(src_channel_id, new_channel_id) : []
+    SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
+    FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
+
+    new_channel_id
   end
 end
 
