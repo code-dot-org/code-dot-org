@@ -253,17 +253,6 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           text={commonI18n.aiDifferentiation_new_chat()}
           className={styles.sidebarButton}
         />
-        {experiments.isEnabled('teacher-notifications') && (
-          <button
-            type="button"
-            onClick={() => {
-              setShowNotifications(true);
-              analyticsReporter.sendEvent(EVENTS.AI_DIFF_NOTIFICATIONS_OPENED, {
-                unreadNotificationCount: unreadNotificationCount,
-              });
-            }}
-          />
-        )}
         <Box className={styles.sidebarActions}>
           <WithTooltip
             tooltipProps={{
