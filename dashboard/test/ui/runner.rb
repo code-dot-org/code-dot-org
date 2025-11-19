@@ -102,7 +102,6 @@ def parse_options
     options.features = nil
     options.pegasus_domain = 'test.code.org'
     options.dashboard_domain = 'test-studio.code.org'
-    options.hourofcode_domain = 'test.hourofcode.com'
     options.csedweek_domain = 'test.csedweek.org'
     options.local = nil
     options.local_headless = true
@@ -143,7 +142,6 @@ def parse_options
         options.local = 'true'
         options.pegasus_domain = 'localhost.code.org:3000'
         options.dashboard_domain = 'localhost-studio.code.org:3000'
-        options.hourofcode_domain = 'localhost.hourofcode.com:3000'
         options.csedweek_domain = 'localhost.csedweek.org:3000'
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
@@ -165,9 +163,6 @@ def parse_options
                 "Try '-d localhost-studio.code.org:3000' instead (this is the default when using '-l').\n"
         end
         options.dashboard_domain = d
-      end
-      opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
-        options.hourofcode = d
       end
       opts.on("--csedweek Domain", String, "Specify an override domain for csedweek.org, e.g. localhost.csedweek.org:3000") do |d|
         options.csedweek = d

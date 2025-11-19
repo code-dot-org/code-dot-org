@@ -1,3 +1,5 @@
+import * as GoogleBlockly from 'blockly/core';
+
 import {BlocklyLevelProperties, ProjectSources} from '../lab2/types';
 
 export type SongData = {
@@ -30,6 +32,7 @@ export type SongMetadata = {
 export interface DanceProjectSources extends ProjectSources {
   selectedSong?: string;
   generatedDancer?: GeneratedDancerMetadata;
+  toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
 }
 
 export interface DanceLevelProperties extends BlocklyLevelProperties {

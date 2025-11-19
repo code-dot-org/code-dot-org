@@ -310,6 +310,14 @@ columns:
     comment: 
   - *12
   - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: script
+    sql_type_metadata: *11
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
   ai_tutor_interaction_feedbacks:
   - *9
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -5422,6 +5430,14 @@ columns:
     default: 
     default_function: 
     collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: uuid
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_general_ci
     comment: 
   puzzle_ratings:
   - *5
@@ -12645,6 +12661,19 @@ indexes:
   projects:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
+    name: index_projects_on_uuid
+    unique: true
+    columns:
+    - uuid
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: projects
     name: storage_apps_storage_id_index
     unique: false
     columns:
@@ -14596,7 +14625,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20251112230749
+version: 20251119161129
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
