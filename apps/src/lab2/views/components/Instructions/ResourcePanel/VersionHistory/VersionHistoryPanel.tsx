@@ -359,12 +359,17 @@ const VersionHistoryPanel: React.FunctionComponent<
                 onChange={onVersionChange}
                 disabled={disabled}
               >
-                {version.isLatest && !viewAsUserId && (
+                {version.isLatest && hasEdited && !viewAsUserId && (
                   <SaveVersionPanel
                     projectSources={projectSources}
                     onSuccess={handleSaveVersionSuccess}
                     versionLoading={versionLoading}
-                    disabled={!hasEdited}
+                    disabled={disabled}
+                    buttonLabel={
+                      version.comment
+                        ? lab2I18n.saveNewVersion()
+                        : lab2I18n.saveCurrentVersion()
+                    }
                   />
                 )}
               </VersionHistoryRow>

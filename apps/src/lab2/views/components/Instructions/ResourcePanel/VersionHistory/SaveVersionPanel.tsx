@@ -15,6 +15,7 @@ interface SaveVersionPanelProps {
   onSuccess: () => void;
   versionLoading: boolean;
   disabled?: boolean;
+  buttonLabel?: string;
 }
 
 const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
@@ -22,6 +23,7 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
   onSuccess,
   versionLoading,
   disabled = false,
+  buttonLabel,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
   const channelId = useAppSelector(state => state.lab.channel?.id);
@@ -36,7 +38,6 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
     }
 
     try {
-      // Step 1: Create the version that will have the comment
       await dispatch(
         setAndSaveProjectSources(
           projectSources,
@@ -45,13 +46,12 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
         )
       );
 
-      const commentedVersionId = projectManager.getCurrentVersionId();
+      const newVersionId = projectManager.getCurrentVersionId();
 
-      // Step 2: Save the comment to this version
-      if (commentedVersionId && commitDescription.trim()) {
+      if (newVersionId && commitDescription.trim()) {
         const payload = {
           storage_id: channelId,
-          version_id: commentedVersionId,
+          version_id: newVersionId,
           comment: commitDescription,
         };
 
@@ -70,29 +70,6 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
           console.error('Failed to save commit comment:', error);
         }
       }
-
-      // Step 3: Create a new version to become the new "Current Version"
-      // Add a minimal version marker to ensure S3 creates a new version
-      // (S3 may not create a new version if content is identical)
-      const timestamp = Date.now();
-      const newVersionSources = {
-        ...projectSources,
-        __versionMarker: timestamp,
-      };
-
-      await dispatch(
-        setAndSaveProjectSources(
-          newVersionSources,
-          /* forceSave */ true,
-          /* forceNewVersion */ true
-        )
-      );
-
-      // Step 4: Update lastSource to include the marker so it doesn't trigger autosave
-      projectManager.setLastSource(newVersionSources);
-
-      // Step 5: Reset the comment flag since the new current version has no comment
-      projectManager.setCurrentVersionHasComment(false);
 
       onSuccess();
     } catch (error) {
@@ -123,7 +100,7 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
             iconStyle: 'solid',
           }}
           className={moduleStyles.versionButton}
-          text={lab2I18n.saveCurrentVersion()}
+          text={buttonLabel}
           onClick={onSaveVersion}
           disabled={
             disabled || versionLoading || commitDescription.trim() === ''
