@@ -1,19 +1,6 @@
 @single_session
 Feature: OneTrust integration
   @eyes
-  @pegasus_content
-  @skip
-  Scenario: User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on hourofcode
-    Given I am in Europe
-    Given I am on "http://hourofcode.com/es?otreset=true&otgeo=es"
-    And I wait until current URL contains "otreset=false"
-    And I wait for jquery to load
-    And I open my eyes to test "Hour of code Onetrust pop up"
-    And I wait until element "#onetrust-banner-sdk" is visible
-    And I see no difference for "Onetrust pop up: Hour of Code" using stitch mode "none"
-    And I close my eyes
-
-  @eyes
   Scenario: User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org
     Given I create a student named "Alice"
     Given I am in Europe
@@ -24,15 +11,6 @@ Feature: OneTrust integration
     And I wait until element "#onetrust-banner-sdk" is visible
     And I see no difference for "Onetrust pop up: code.org" using stitch mode "none"
     And I close my eyes
-
-  @pegasus_content
-  @skip
-  Scenario: OneTrust cookie pop-up shows when self-hosting OneTrust libraries on hourofocode
-    Given I am in Europe
-    Given I am on "http://hourofcode.com/es?otreset=true&otgeo=es"
-    And I wait until current URL contains "otreset=false"
-    And I wait for jquery to load
-    And I wait until element "#onetrust-banner-sdk" is visible
 
   Scenario: OneTrust cookie pop-up shows when self-hosting OneTrust libraries on code.org
     Given I create a student named "Alice"

@@ -15,6 +15,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {RootState} from '@cdo/apps/types/redux';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   PlGradeValue,
@@ -1015,7 +1016,11 @@ export const assignToSection = (
     },
     {includeUserId: true}
   );
-  if (DCDO.get('show-aita-lesson-summaries', false) && !!unitId) {
+  if (
+    (DCDO.get('show-aita-lesson-summaries', false) ||
+      experiments.isEnabled('ai_lesson_summaries')) &&
+    !!unitId
+  ) {
     HttpClient.get(
       `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
     ).catch(error => {
