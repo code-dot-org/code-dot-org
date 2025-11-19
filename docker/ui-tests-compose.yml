@@ -21,7 +21,7 @@
 
 services:
   site:
-    image: codedotorg/code-dot-org:docker-sudo-no-fqdn
+    image: codedotorg/cdo-ci:1.18
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/ci/code-dot-org:delegated

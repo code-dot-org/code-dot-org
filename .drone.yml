@@ -90,7 +90,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/code-dot-org:docker-sudo-no-fqdn
+    image: codedotorg/cdo-ci:1.18
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -212,7 +212,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/code-dot-org:docker-sudo-no-fqdn
+    image: codedotorg/cdo-ci:1.18
     pull: always
     volumes:
       - name: mysql
@@ -295,7 +295,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-ci-tests
-    image: codedotorg/code-dot-org:docker-sudo-no-fqdn
+    image: codedotorg/cdo-ci:1.18
     pull: always
     environment:
       CI_JOB: 'ui_tests'
@@ -342,6 +342,6 @@ trigger:
 
 ---
 kind: signature
-hmac: c215571bb85265a9d638a5d5cbc4563d90e9684645ab9dc21f419f10899fddde
+hmac: 6b94fe258503d70f372cca325a0e65aa4b7155a6bcb699347e2a805ea7a8ab58
 
 ...
