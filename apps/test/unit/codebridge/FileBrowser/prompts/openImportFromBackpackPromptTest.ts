@@ -50,6 +50,7 @@ describe('openImportFromBackpackPrompt', () => {
       newFile: newFileFunction,
       saveFile: saveFileFunction,
       projectFiles,
+      sendLab2AnalyticsEvent: jest.fn(),
       ...extraArgs,
     });
   };

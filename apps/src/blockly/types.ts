@@ -45,6 +45,7 @@ export interface BlockConfig {
   color: [number, number, number];
   func: string;
   style: string;
+  returnType?: string;
 }
 
 export interface arg {
@@ -57,6 +58,29 @@ export interface SerializedFields {
   [key: string]: {
     id?: string;
     name?: string;
+  };
+}
+
+export interface InputConfig {
+  label: string;
+  mode: string;
+  name: string;
+  strict: boolean;
+}
+
+export interface CustomInputTypes {
+  [key: string]: {
+    addInput?: (
+      blockly: GoogleBlocklyType,
+      block: GoogleBlockly.Block,
+      inputConfig: InputConfig,
+      currentInputRow: GoogleBlockly.Input
+    ) => void;
+    generateCode?: (
+      block: GoogleBlockly.Block,
+      inputConfig: InputConfig
+    ) => string;
+    openEditor?: (event: UIEvent) => void;
   };
 }
 
@@ -189,6 +213,26 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   shortcutBackups: {
     [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
   };
+  extraScrollHeight?: number;
+  /** Maintains the original English forms of Msg.* strings */
+  SourceMsg: {[key: string]: string};
+  /** Maintains the original English names of provided variables in flyouts, toolboxes, etc */
+  SourceVariables: {[key: string]: string};
+  /** Keeps track of the original inputTypes passed in when predefined in level metadata */
+  SourceCustomInputTypes: CustomInputTypes;
+  /**
+   * Keeps track of custom blocks provided into installCustomBlocks such that we have the
+   * original forms so that we can localize them when re-serializing the workspace on a
+   * locale change.
+   */
+  SourceCustomBlocks: {
+    blockDefinitionsByName: {
+      [key: string]: BlockDefinition;
+    };
+    blockTexts: {
+      [key: string]: string;
+    };
+  };
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;
@@ -262,6 +306,7 @@ export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   previousViewWidth: number;
   flyoutParentBlock: GoogleBlockly.Block | null;
   globalVariables: string[];
+  sourceGlobalVariables: string[];
   noFunctionBlockFrame: boolean;
   events: {
     dispatchEvent: () => void;
@@ -500,7 +545,7 @@ export interface ExtendedJavascriptGenerator
 
 export interface BlockJson<BlockType extends string = string> {
   type: BlockType;
-  [key: `message${number}`]: string;
+  [key: `message${number}`]: string | undefined;
   [key: `args${number}`]: ArgumentJson[];
   style?: BlockStyles;
   inputsInline?: boolean;

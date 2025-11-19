@@ -133,6 +133,16 @@ function getPreferredBlockType(
     : DANCELAB_PREFIX + blockType;
 }
 
+function getBlockFieldValue(
+  block: BlockState,
+  fieldName: string
+): string | null {
+  return (
+    Blockly.Xml.textToDom((block.fields?.[fieldName] as string) || '')
+      .textContent || null
+  );
+}
+
 const MAKE_SPRITE = 'makeAnonymousDanceSprite';
 const CHANGE_MOVE = 'changeMoveEachLR';
 const SET_BACKGROUND = 'setBackgroundEffectWithPalette';
@@ -210,10 +220,6 @@ function costumeSpritesField(
   return `<field name="COSTUME" ${configAttribute}>${escapedValue}</field>`;
 }
 
-function dirLeftRightField(value: -1 | 1): string {
-  return `<field name="DIR">${value}</field>`;
-}
-
 function unitMeasuresField(): string {
   return '<field name="UNIT">"measures"</field>';
 }
@@ -222,13 +228,14 @@ function makeSetBackgroundBlock(
   type: string,
   effects: string[],
   palettes: string[],
-  simpleCode: boolean
+  simpleCode: boolean,
+  excludedEffect?: string | null
 ): BlockState {
   return {
     type,
     fields: {
       PALETTE: randomField('PALETTE', palettes),
-      EFFECT: randomField('EFFECT', effects, simpleCode),
+      EFFECT: randomField('EFFECT', effects, simpleCode, excludedEffect),
     },
     kind: 'block',
   };
@@ -237,12 +244,13 @@ function makeSetBackgroundBlock(
 function makeSetForegroundBlock(
   type: string,
   effects: string[],
-  simpleCode: boolean
+  simpleCode: boolean,
+  excludedEffect?: string | null
 ): BlockState {
   return {
     type,
     fields: {
-      EFFECT: randomField('EFFECT', effects, simpleCode),
+      EFFECT: randomField('EFFECT', effects, simpleCode, excludedEffect),
     },
     kind: 'block',
   };
@@ -284,7 +292,6 @@ function makeChangeMoveEachLRBlock(
         defaultGroupFieldValue
       ),
       MOVE: randomField('MOVE', moves, simpleCode, excludedMove),
-      DIR: dirLeftRightField(randomElement([-1, 1])),
     },
     kind: 'block',
   };
@@ -306,13 +313,11 @@ const backgroundsChill = [
   '"color_cycle"',
   '"frosted_grid"',
   '"splatter"',
-  '"rainbow"',
   '"snowflakes"',
   '"sparkles"',
   '"spiral"',
   '"squiggles"',
   '"stars"',
-  '"music_wave"',
 ];
 
 const foregroundsChill = [
@@ -496,10 +501,11 @@ export default function buildDanceBlockly(
     leadGroupValue
   );
 
-  // We force the backup dancers to not repeat the lead dancer's move.
-  const leadDancerMove = Blockly.Xml.textToDom(
-    leadChangeMoveBlock.fields?.MOVE || ''
-  ).textContent;
+  // We capture initial values to prevent repeats in subsequent blocks of the same type.
+  const initialMoveValue = getBlockFieldValue(initialChangeMove, 'MOVE');
+  const initialBackgroundEffect = getBlockFieldValue(initialBg, 'EFFECT');
+  const initialForegroundEffect = getBlockFieldValue(initialFg, 'EFFECT');
+  const leadDancerMove = getBlockFieldValue(leadChangeMoveBlock, 'MOVE');
 
   const backupGroupValue = `&quot;${backgroundDancers.toUpperCase()}&quot;`;
   const backupChangeMoveBlock = makeChangeMoveEachLRBlock(
@@ -541,43 +547,65 @@ export default function buildDanceBlockly(
   };
 
   // Event blocks for each measure
-  const eventBlocks: BlockState[] = measures
-    // First measure is redundant with "when run"
-    .filter(measure => measure !== 1)
-    .map((measure): BlockState => {
-      const backgroundBlock = makeSetBackgroundBlock(
-        setBackgroundBlockType,
-        validBackgrounds,
-        validPalettes,
-        simpleCode
-      );
-      const foregroundBlock = makeSetForegroundBlock(
-        setForegroundBlockType,
-        validForegrounds,
-        simpleCode
-      );
-      const changeMoveBlock = makeChangeMoveEachLRBlock(
-        changeMoveBlockType,
-        validMoves,
-        backgroundDancers,
-        simpleCode
-      );
-      const chain = chainBlocks(
-        backgroundBlock,
-        foregroundBlock,
-        changeMoveBlock
-      );
+  const eventBlocks: BlockState[] = [];
+  let lastEventBackground: string | null = initialBackgroundEffect;
+  let lastEventForeground: string | null = initialForegroundEffect;
+  let lastEventMove: string | null = initialMoveValue;
 
-      return {
-        ...eventBlock,
-        fields: {
-          TIMESTAMP: measure,
-          UNIT: unitMeasuresField(),
-        },
-        next: {block: chain},
-        kind: 'block',
-      };
+  for (const measure of measures.filter(m => m !== 1)) {
+    // Exclude the previously used background effect
+    const backgroundBlock = makeSetBackgroundBlock(
+      setBackgroundBlockType,
+      validBackgrounds,
+      validPalettes,
+      simpleCode,
+      lastEventBackground
+    );
+
+    // Exclude the previously used foreground effect
+    const foregroundBlock = makeSetForegroundBlock(
+      setForegroundBlockType,
+      validForegrounds,
+      simpleCode,
+      lastEventForeground
+    );
+
+    // Exclude the previously used move
+    const changeMoveBlock = makeChangeMoveEachLRBlock(
+      changeMoveBlockType,
+      validMoves,
+      backgroundDancers,
+      simpleCode,
+      undefined, // defaultGroupFieldValue, only used for simple code
+      lastEventMove
+    );
+
+    const chain = chainBlocks(
+      backgroundBlock,
+      foregroundBlock,
+      changeMoveBlock
+    );
+
+    // Capture the actual chosen values from the generated field XML,
+    // so they are not repeated in the next stack.
+    const chosenBg = getBlockFieldValue(backgroundBlock, 'EFFECT');
+    const chosenFg = getBlockFieldValue(foregroundBlock, 'EFFECT');
+    const chosenMove = getBlockFieldValue(changeMoveBlock, 'MOVE');
+
+    lastEventBackground = chosenBg;
+    lastEventForeground = chosenFg;
+    lastEventMove = chosenMove;
+
+    eventBlocks.push({
+      type: atTimestampNotAfterBlockType,
+      fields: {
+        TIMESTAMP: measure,
+        UNIT: unitMeasuresField(),
+      },
+      next: {block: chain},
+      kind: 'block',
     });
+  }
 
   flyoutDefinition.contents.push({...eventBlock});
 

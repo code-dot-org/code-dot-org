@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q7_2025'
+
+question 'An online quiz app checks each answer you submit, adds points if it\'s correct, and shows your updated score. The developer wants to use this same process for every question without rewriting the same steps over and over. What\'s the best way to do that?'
+
+wrong 'Write a new block of code for each question to keep them completely separate.'
+wrong 'Add all the steps directly into the HTML so they run automatically.'
+right 'Put the steps inside a function and call it each time a question is answered.'
+wrong 'Use random numbers to decide when to check for correct answers.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN

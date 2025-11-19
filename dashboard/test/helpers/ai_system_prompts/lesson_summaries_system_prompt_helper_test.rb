@@ -121,61 +121,31 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
     - Fifth, end with a closing remark that repeats the name of the lesson and thanks them for listening."
   end
 
-  # *****
-  # get_lesson_materials tests
-  # *****
+  test "get_system_prompt includes personalization when current_user is set" do
+    profile_data = {"yearsTeaching" => 10, "selectedConfidence" => 8}
+    TeachingProfileData.create(user_id: @test_user.id, individual_data: profile_data)
 
-  test "get_lesson_materials extracts basic lesson information" do
-    materials = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_lesson_materials(@lesson.id)
+    # Mock current_user for the helper
+    AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:current_user).returns(@test_user)
 
-    assert_equal @lesson.name, materials[:name]
-    assert_equal @lesson.overview, materials[:overview]
-    assert_equal @lesson.purpose, materials[:purpose]
-    assert_equal @lesson.assessment_opportunities, materials[:assessment_opportunities]
-    assert_equal @lesson.preparation, materials[:preparation]
+    prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(@lesson.id)
+
+    assert_includes prompt, "The teacher has 10 years of experience"
+    assert_includes prompt, "confidence with computer science concepts at 8"
+    assert_includes prompt, "Use the following lesson plan to generate your summary:"
   end
 
-  test "get_lesson_materials extracts objectives correctly" do
-    materials = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_lesson_materials(@lesson.id)
+  test "get_system_prompt works without personalization when current_user is nil" do
+    # Mock current_user as nil
+    AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:current_user).returns(nil)
 
-    assert_equal 2, materials[:objectives].length
-    assert_includes materials[:objectives], @objective1.description
-    assert_includes materials[:objectives], @objective2.description
-  end
+    prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(@lesson.id)
 
-  test "get_lesson_materials extracts standards correctly" do
-    materials = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_lesson_materials(@lesson.id)
-
-    assert_equal 2, materials[:standards].length
-    assert_includes materials[:standards], @standard1.description
-    assert_includes materials[:standards], @standard2.description
-  end
-
-  test "get_lesson_materials extracts opportunity standards correctly" do
-    materials = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_lesson_materials(@lesson.id)
-
-    assert_equal 1, materials[:opportunity_standards].length
-    assert_includes materials[:opportunity_standards], @opp_standard.description
-  end
-
-  test "get_lesson_materials extracts activities" do
-    materials = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_lesson_materials(@lesson.id)
-    assert_equal 1, materials[:activities].length
-
-    activity = materials[:activities].first
-    assert_equal 'Variable Practice', activity[:name]
-  end
-
-  test "get_lesson_materials extracts vocabularies correctly" do
-    materials = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_lesson_materials(@lesson.id)
-
-    assert_equal 2, materials[:vocabularies].length
-
-    variable_vocab = materials[:vocabularies].find {|v| v[:word] == 'Variable'}
-    assert_equal 'A container that stores data', variable_vocab[:definition]
-
-    assignment_vocab = materials[:vocabularies].find {|v| v[:word] == 'Assignment'}
-    assert_equal 'Setting a value to a variable', assignment_vocab[:definition]
+    # Should not include personalization content
+    refute_includes prompt, "years of experience"
+    refute_includes prompt, "confidence with computer science"
+    # But should still include the main prompt content
+    assert_includes prompt, "Use the following lesson plan to generate your summary:"
   end
 
   # *****

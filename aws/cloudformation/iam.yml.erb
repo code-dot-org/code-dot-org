@@ -310,6 +310,7 @@ roles = {
       'arn:aws:iam::aws:policy/PowerUserAccess',
       'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
       '!Ref EngineerSecretsPolicy',
+      '!Ref EngineerDataPolicy',
       '!Ref CloudformationPassRolePolicy',
     ]
   },
@@ -661,6 +662,93 @@ roles.each do |name, config| %>
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/*
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
+
+  EngineerDataPolicy:
+      Type: AWS::IAM::ManagedPolicy
+      Properties:
+        ManagedPolicyName: EngineersDataPolicy
+        Path: /engineering/
+        Description: Prevent accidental or malicious deletion of production data in S3, Aurora databases, etc.
+        PolicyDocument:
+          Version: 2012-10-17
+          Statement:
+            - Sid: DenyS3BucketDestructiveOperations
+              Effect: Deny
+              Action:
+                - s3:DeleteBucket
+                - s3:DeleteBucketPolicy
+                - s3:DeleteBucketWebsite
+                - s3:PutBucketAcl
+                - s3:PutBucketPolicy
+                - s3:PutBucketPublicAccessBlock
+                - s3:PutLifecycleConfiguration
+
+                # S3 Batch Operations - prevent mass operations
+                - s3:CreateJob
+                - s3:UpdateJobPriority
+                - s3:UpdateJobStatus
+
+                - s3:PutBucketVersioning
+                - s3:PutReplicationConfiguration
+                - s3:PutBucketCORS
+                - s3:PutBucketLogging
+                - s3:PutEncryptionConfiguration
+                - s3:BypassGovernanceRetention
+                - s3:DeleteObjectVersionTagging
+                - s3:PutObjectLegalHold
+                - s3:PutObjectRetention
+              Resource: '*'
+            - Sid: DenyDestructiveRDSOperationsOnProduction
+              Effect: Deny
+              Action:
+                - rds:DeleteDBInstance
+                - rds:DeleteDBCluster
+                - rds:DeleteDBSnapshot
+                - rds:DeleteDBClusterSnapshot
+                - rds:DeleteDBInstanceAutomatedBackup
+
+                - rds:StopDBInstance
+                - rds:StopDBCluster
+                - rds:RebootDBInstance
+                - rds:RebootDBCluster
+
+                - rds:ModifyDBInstance
+                - rds:ModifyDBCluster
+                - rds:ModifyDBParameterGroup
+                - rds:ModifyDBClusterParameterGroup
+                - rds:ResetDBParameterGroup
+                - rds:ResetDBClusterParameterGroup
+
+                - rds:RestoreDBInstanceFromDBSnapshot
+                - rds:RestoreDBClusterFromSnapshot
+                - rds:RestoreDBInstanceToPointInTime
+                - rds:RestoreDBClusterToPointInTime
+
+                - rds:FailoverDBCluster
+                - rds:BacktrackDBCluster
+                - rds:ModifyCurrentDBClusterCapacity
+
+              Resource:
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
+              Condition:
+                StringEquals:
+                  'aws:ResourceTag/environment': 'production'
+            - Sid: DenyTagModificationOnProductionRDS
+              Effect: Deny
+              Action:
+                - rds:RemoveTagsFromResource
+                - rds:AddTagsToResource
+              Resource:
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
+              Condition:
+                StringEquals:
+                  'aws:ResourceTag/environment': 'production'
 
   ContributorSecretsPolicy:
     Type: AWS::IAM::ManagedPolicy

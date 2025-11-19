@@ -24,6 +24,17 @@ $icon-overlay-padding-right: 8px;
     word-break: break-word;
     white-space: unset;
   }
+
+  p a {
+    color: var(--text-brand-purple-primary);
+    font-weight: 500;
+    text-decoration: underline;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 %markdown-styles {
@@ -133,7 +144,6 @@ $icon-overlay-padding-right: 8px;
 .footer {
   margin-inline-start: $bot-container-size + $icon-message-gap;
 }
-
 
 .footerWithOverlay {
   margin-inline-start: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;

@@ -21,53 +21,52 @@ import {queryParams} from '../code-studio/utils';
 import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
 import {LabProps} from '../lab2/types';
 import {LifecycleEvent} from '../lab2/utils';
+import analyticsReporter from '../metrics/AnalyticsReporter';
 import MusicAnalyticsReporter from '../music/analytics/AnalyticsReporter';
 import useWindowSize from '../util/hooks/useWindowSize';
 
 import PanelsView from './PanelsView';
 import {PanelsLevelProperties} from './types';
 
-// Temporary solution for sending analytics for Hour of Code 2024.
-// We are also temporarily sending panel analytics for the Elementary Music Lab Pilot
-// TODO: Remove/consolidate reporters
-const VALID_SCRIPT_NAMES = ['music-jam-2024', 'pilot-elem-music-lab'];
-function isValidScriptName() {
-  return VALID_SCRIPT_NAMES.some(name =>
+// Only use the soon-to-be-deprecated Amplitude analytics reporter for specific scripts.
+// TODO: remove this special case after migration.
+const AMPLITUDE_SCRIPT_NAMES = ['music-jam-2024', 'pilot-elem-music-lab'];
+function shouldUseAmplitude() {
+  return AMPLITUDE_SCRIPT_NAMES.some(name =>
     window.location.pathname.includes(name)
   );
 }
 const resetAnalyticsSession = () => {
-  if (!isValidScriptName()) {
-    return;
+  if (shouldUseAmplitude()) {
+    setSessionId(Date.now());
   }
-
-  setSessionId(Date.now());
 };
-const sendAnalyticsEvent = async (event: string, data?: object) => {
-  // Checking the script name to keep this scoped to included scripts only.
-  if (!isValidScriptName()) {
-    return;
-  }
 
-  // We use the Music Analytics reporter so that analytics for the
-  // HOC progression are reported to the same project, and to avoid
-  // API key issues.
-  try {
-    await MusicAnalyticsReporter.initialize();
-    track(event, data);
-  } catch (error) {
-    // Expected on local environments.
-    console.warn(error);
+const sendAnalyticsEvent = async (event: string, data?: object) => {
+  analyticsReporter.sendEvent(event, {
+    ...data,
+    levelPath: window.location.pathname,
+  });
+
+  if (shouldUseAmplitude()) {
+    // We use the Music Analytics reporter so that analytics for the
+    // HOC progression are reported to the same project, and to avoid
+    // API key issues.
+    try {
+      await MusicAnalyticsReporter.initialize();
+      track(event, data);
+    } catch (error) {
+      // Expected on local environments.
+      console.warn(error);
+    }
   }
 };
 const updateAnalyticsProperty = (key: string, value: string) => {
-  if (!isValidScriptName()) {
-    return;
+  if (shouldUseAmplitude()) {
+    const identifyEvent = new Identify();
+    identifyEvent.set(key, value);
+    identify(identifyEvent);
   }
-
-  const identifyEvent = new Identify();
-  identifyEvent.set(key, value);
-  identify(identifyEvent);
 };
 
 const PanelsLabView: React.FunctionComponent<

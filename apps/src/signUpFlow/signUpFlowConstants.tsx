@@ -11,6 +11,8 @@ export const GIVEN_NAME_SESSION_KEY = 'givenName';
 export const FAMILY_NAME_SESSION_KEY = 'familyName';
 export const OAUTH_LOGIN_TYPE_SESSION_KEY = 'oauthType';
 export const USER_RETURN_TO_SESSION_KEY = 'userReturnTo';
+export const TEACHER_IN_GRADE_SELECTION_EXPERIMENT_KEY =
+  'isInSelectGradesExperiment';
 
 export const setUserReturnToUrl = () => {
   const userReturnTo = queryParams('user_return_to');

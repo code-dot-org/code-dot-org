@@ -99,23 +99,6 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     end
   end
 
-  test 'error handling includes request context in development environment' do
-    # Mock development environment
-    CDO.stubs(:rack_env).returns('development')
-
-    error_message = 'Development test error'
-    error = StandardError.new(error_message)
-
-    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).
-      raises(error)
-
-    # In development, should print error message
-    # We can't easily test puts output, but we can verify the error is still raised
-    assert_raises(StandardError) do
-      AiLessonSummariesJob.perform_now(request: @request)
-    end
-  end
-
   test 'job can be enqueued and executed with proper parameters' do
     # Test that the job can be properly enqueued
     assert_enqueued_jobs 1 do

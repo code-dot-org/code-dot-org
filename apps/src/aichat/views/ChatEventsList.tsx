@@ -1,11 +1,12 @@
 import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState, useCallback} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ChatAsset, ChatEvent} from '../types';
+import {ChatAsset, ChatEvent, isChatMessage} from '../types';
 
 import {ChatDisabled} from './ChatDisabled';
 import ChatEventView from './ChatEventView';
@@ -28,6 +29,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   buildAssetUrl,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
+  const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
@@ -35,20 +37,29 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   );
 
   const conversationContainerRef = useRef<HTMLDivElement>(null);
+  const previousLastMessageRole = useRef<Role | null>(null);
+  const previousEventsLength = useRef<number | null>(null);
+  const parentRef = useRef<HTMLDivElement>(null);
+  const finalEventRef = useRef<HTMLDivElement>(null);
 
-  const scrollToBottom = () => {
+  const scrollToLastMessage = useCallback((keepTopOfMessageVisible = false) => {
     if (conversationContainerRef.current) {
       setShowScrollToBottom(false);
       setInProgrammaticScroll(true);
 
-      if (!isAtBottom()) {
+      if (keepTopOfMessageVisible) {
+        finalEventRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      } else if (!isAtBottom()) {
         conversationContainerRef.current.scrollTo({
           top: conversationContainerRef.current.scrollHeight,
           behavior: 'smooth',
         });
       }
     }
-  };
+  }, []);
 
   const isAtBottom = () => {
     const container = conversationContainerRef.current;
@@ -61,6 +72,13 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     return (
       container.scrollTop + container.clientHeight + 1 >= container.scrollHeight
     );
+  };
+
+  const handleParentKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget && e.key === 'Enter') {
+      setIsInChatNavigationMode(true);
+      finalEventRef.current?.focus();
+    }
   };
 
   useEffect(() => {
@@ -110,11 +128,49 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     };
   }, [inProgrammaticScroll]);
 
-  useEffect(scrollToBottom, [events.length, isWaitingForChatResponse]);
+  useEffect(() => {
+    if (previousEventsLength.current !== events.length) {
+      previousEventsLength.current = events.length;
+
+      const lastMessage = events[events.length - 1];
+      let lastMessageRole: Role | null = null;
+      if (lastMessage && isChatMessage(lastMessage)) {
+        lastMessageRole = lastMessage.role;
+      }
+
+      // Heuristic to determine if we have an incoming assistant message and need to scroll only
+      // to the top of the incoming message, For all other messages we scroll to the bottom.
+      // Checking previousLastMessageRole.current is truthy avoids triggering this behavior when
+      // the history is first loaded.
+      const isIncomingAssistantMessage =
+        lastMessageRole === 'assistant' &&
+        previousLastMessageRole.current &&
+        previousLastMessageRole.current !== 'assistant';
+
+      if (isIncomingAssistantMessage) {
+        // Scroll to top of last message.
+        scrollToLastMessage(true);
+      } else {
+        // Scroll to bottom of last message.
+        scrollToLastMessage();
+      }
+
+      previousLastMessageRole.current = lastMessageRole;
+    }
+  }, [events, events.length, scrollToLastMessage]);
 
   return (
     <div
       id="chat-workspace-conversation"
+      ref={parentRef}
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+      tabIndex={0}
+      aria-label={
+        isInChatNavigationMode
+          ? ''
+          : 'Chat history: press Enter to navigate, Escape to exit'
+      }
+      onKeyDown={handleParentKeyDown}
       className={classNames(
         moduleStyles.conversationArea,
         moduleStyles.scrollToBottomContainer
@@ -125,12 +181,20 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
-            {events.map(event => (
+            {events.map((event, index) => (
               <ChatEventView
                 event={event}
                 key={event.timestamp}
                 isTeacherView={isTeacherView}
                 buildAssetUrl={buildAssetUrl}
+                ref={index === events.length - 1 ? finalEventRef : undefined}
+                tabIndex={isInChatNavigationMode ? 0 : -1}
+                onKeyDown={e => {
+                  if (e.key === 'Escape' && e.target === e.currentTarget) {
+                    setIsInChatNavigationMode(false);
+                    parentRef.current?.focus();
+                  }
+                }}
               />
             ))}
             <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
@@ -145,7 +209,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
             size="xs"
             color="black"
             type="secondary"
-            onClick={scrollToBottom}
+            onClick={() => scrollToLastMessage()}
             className={moduleStyles.scrollToBottomButton}
           />
         </div>

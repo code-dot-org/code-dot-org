@@ -13,6 +13,7 @@ import lab2I18n from '@cdo/apps/lab2/locale';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
 import {getLabViewPageAction, getIsLabViewBlocked} from '@cdo/apps/lab2/utils';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -40,6 +41,13 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const channel = useAppSelector(state => state.lab.channel);
 
   const currentAppName = levelProperties?.appName;
+  useEffect(() => {
+    // Set the level path and app name in the analytics reporter for Statsig events.
+    analyticsReporter.setProjectProperty('levelPath', window.location.pathname);
+    currentAppName &&
+      analyticsReporter.setProjectProperty('appName', currentAppName);
+  }, [currentAppName]);
+
   const exemplarSources = levelProperties?.exemplarSources;
 
   const isBlockedAbuse = useAppSelector(state => !!state.lab.isBlockedAbuse);

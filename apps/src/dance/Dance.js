@@ -6,9 +6,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import LottieDancerRenderer from '@cdo/apps/dance/lottie/LottieDancerRenderer';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
+import localization from '@cdo/apps/localization';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -420,6 +420,12 @@ Dance.prototype.afterInject_ = function () {
     Blockly.JavaScript.addReservedWords(DancelabReservedWords.join(','));
   }
 
+  // Localize
+  const msg = Object.entries(danceMsg).reduce((acc, [key, msgFunction]) => {
+    acc[key] = (...args) => localization.translate(msgFunction(...args));
+    return acc;
+  }, {});
+
   // record a replay log (and generate a video) for both project levels and any
   // course levels that have sharing enabled
   const recordReplayLog = this.shouldShowSharing() || this.level.isProjectLevel;
@@ -455,10 +461,10 @@ Dance.prototype.afterInject_ = function () {
     },
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
-    i18n: danceMsg,
+    i18n: msg,
     resourceLoader: new ResourceLoader(ASSET_BASE),
     logger: danceMetricsReporter,
-    externalRendererFactory: () => new LottieDancerRenderer(),
+    externalRendererFactory: undefined,
   });
 
   // Add command names from the Dance Party API to the Blockly generator's

@@ -1,0 +1,50 @@
+<Dancelab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 63,
+  "created_at": "2025-11-12T21:24:05.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "dance",
+    "block_pools": [
+      "Dancelab",
+      "GeneratedDancers"
+    ],
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "hide_animation_mode": true,
+    "show_type_hints": true,
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "hide_pause_button": "false",
+    "default_song": "introtoshamstep_47SOUL",
+    "uses_lab2": "true",
+    "guide_mode": "aiDancerGenerate",
+    "ai_dancer_generate_adlib": "creature-05",
+    "long_instructions": "#### Use AI to design your dancer\r\nA prompt is an instruction that tells AI what to do.\r\n1. Modify the prompt below.\r\n2. Press Generate dancer.",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "HoAI-Mix-Move-Educators-dancer-prompt-template"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-07T22:33:35.661+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-dancer-prompt-1-input\\\"\"],\"cloned_from\":\"mix-move-ai-dancer-prompt-1-input\"},{\"changed_at\":\"2025-11-12 22:29:14 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Dancelab>

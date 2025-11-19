@@ -15,9 +15,11 @@
 #  standalone              :boolean          default(TRUE)
 #  remix_parent_id         :integer
 #  skip_content_moderation :boolean
+#  uuid                    :string(255)
 #
 # Indexes
 #
+#  index_projects_on_uuid               (uuid) UNIQUE
 #  storage_apps_project_type_index      (project_type)
 #  storage_apps_published_at_index      (published_at)
 #  storage_apps_standalone_index        (standalone)

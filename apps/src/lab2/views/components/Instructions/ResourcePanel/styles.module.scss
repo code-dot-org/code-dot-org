@@ -49,6 +49,14 @@
     border-radius: 0;
     background-color: var(--background-neutral-secondary);
 
+    &.teachersOnlyTab {
+      background-color: var(--background-info-extra-light);
+
+      i {
+        color: var(--text-info-primary-fixed);
+      }
+    }
+
     &.selected {
       background-color: var(--background-neutral-primary);
       position: relative;
@@ -79,11 +87,22 @@
         width: 3px;
         background-color: var(--borders-brand-teal-primary);
       }
+
+      &.teachersOnlyTab {
+        i {
+          color: var(--text-info-primary-fixed);
+        }
+
+        &::before {
+          background-color: var(--text-info-primary-fixed);
+        }
+      }
     }
 
     i {
       color: var(--text-neutral-quaternary);
       font-size: 1.25rem;
+      width: auto;
     }
 
     &:hover:not(.selected) {
@@ -91,6 +110,10 @@
 
       i {
         color: var(--text-neutral-tertiary);
+      }
+
+      &.teachersOnlyTab i {
+        color: var(--text-info-primary-fixed);
       }
     }
 
@@ -127,6 +150,7 @@
       }
     }
   }
+
   .bottomTabs {
     display: flex;
     flex-direction: column;
