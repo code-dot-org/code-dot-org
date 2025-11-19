@@ -80,7 +80,7 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
     lesson_beats: an ordered list of the main parts of the lesson, including activities and new vocabulary terms,
     misconceptions: an unordered list including 2 - 3 misconceptions students might have about the material being covered,
     tips: additional strategies or ideas to help with teaching the lesson}",
-    PODCAST_TRANSCRIPT: "Your summary should be the transcript of a podcast returned as a string. It should be written in the 2nd person directed at the listener and organized as follows:
+    PODCAST_SCRIPT: "Your summary should be the script of a podcast returned as a string. It should be written in the 2nd person directed at the listener and organized as follows:
     - First, start with the opening sentence: You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class
     - Second, give a one sentence overview that lists the lesson name and describes what its about
     - Third, describe if the lesson requires any materials and if it requires a laptop

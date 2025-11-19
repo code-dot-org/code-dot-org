@@ -15,12 +15,16 @@ class AiLessonSummariesController < ApplicationController
     end
   end
 
-  # GET /ai_lesson_summaries/ai_lesson_summaries_transcript?lesson_id=2
-  def ai_lesson_summaries_transcript
-    @ai_lesson_summary_transcript = AiLessonSummariesHelper.get_ai_lesson_summary(params[:lesson_id], AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_TRANSCRIPT])
+  # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
+  def ai_lesson_summary_podcast_script
+    podcast_script_json = AiLessonSummariesHelper.get_ai_lesson_summary(params[:lesson_id], current_user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
 
-    if @ai_lesson_summary_transcript
-      render json: @ai_lesson_summary_transcript[:json].as_json
+    if podcast_script_json
+      # podcast_script_json[:json].as_json <---- turn this into the right format so its JUST the string
+
+      # processed_podcast_script = clean_up_podcast_script_response()
+
+      render json: podcast_script_json[:json].as_json # {podcast_script: processed_podcast_script}
     else
       render json: {error: 'Failure to generate transcript'}, status: :internal_server_error
     end
@@ -54,5 +58,9 @@ class AiLessonSummariesController < ApplicationController
 
   private def ai_lesson_summary_params
     params.transform_keys(&:underscore).permit(:lesson_id, :unit_id, :lesson_summary)
+  end
+
+  private def clean_up_podcast_script_response(podcast_script_response)
+    
   end
 end

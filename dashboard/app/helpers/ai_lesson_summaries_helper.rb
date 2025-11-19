@@ -55,7 +55,7 @@ module AiLessonSummariesHelper
           misconceptions: {type: "array", items: {type: "string"}},
           tips: {type: "array", items: {type: "string"}}
         } : {
-          transcript: {type: "string"}
+          podcast_script: {type: "string"}
         }
 
       data = {

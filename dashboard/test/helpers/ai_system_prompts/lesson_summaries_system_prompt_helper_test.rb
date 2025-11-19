@@ -81,8 +81,8 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
     tips: additional strategies or ideas to help with teaching the lesson}"
   end
 
-  test "get_system_prompt returns prompt with lesson data in the podcast transcript format" do
-    prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_TRANSCRIPT])
+  test "get_system_prompt returns prompt with lesson data in the podcast script format" do
+    prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
 
     # Test that the prompt includes lesson basic information
     assert_includes prompt, "Lesson Name: #{@lesson.name}"
@@ -113,7 +113,7 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
     assert_includes prompt, "Vocabulary:"
     assert_includes prompt, @vocab1.word
     assert_includes prompt, @vocab1.definition
-    assert_includes prompt, "Your summary should be the transcript of a podcast returned as a string. It should be written in the 2nd person directed at the listener and organized as follows:
+    assert_includes prompt, "Your summary should be the script of a podcast returned as a string. It should be written in the 2nd person directed at the listener and organized as follows:
     - First, start with the opening sentence: You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class
     - Second, give a one sentence overview that lists the lesson name and describes what its about
     - Third, in one to two paragraphs summarize the lesson's Learning Objectives, an overview of what the lesson entails, and describe the activities and new vocabulary terms

@@ -207,7 +207,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
   end
 
-  test "Client request_lesson_summary makes HTTP request with correct parameters for podcast transcript response format" do
+  test "Client request_lesson_summary makes HTTP request with correct parameters for podcast script response format" do
     prompt = "Test prompt for lesson summary"
 
     expected_headers = {
@@ -234,7 +234,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
           schema: {
             type: "object",
             properties: {
-              transcript: {type: "string"}
+              podcast_script: {type: "string"}
             }
           }
         }
@@ -251,7 +251,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     ).returns(mock('response'))
 
     client = AiLessonSummariesHelper::Client.new(@api_key, @model)
-    client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_TRANSCRIPT])
+    client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
   end
 
   test "Client request_lesson_summary includes correct JSON schema for brief summary response format" do
@@ -279,13 +279,13 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
   end
 
-  test "Client request_lesson_summary includes correct JSON schema for podcast transcript response format" do
+  test "Client request_lesson_summary includes correct JSON schema for podcast script response format" do
     prompt = "Test prompt"
 
     expected_schema = {
       type: "object",
       properties: {
-        transcript: {type: "string"}
+        podcast_script: {type: "string"}
       }
     }
 
@@ -298,6 +298,6 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     end
 
     client = AiLessonSummariesHelper::Client.new(@api_key, @model)
-    client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_TRANSCRIPT])
+    client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
   end
 end
