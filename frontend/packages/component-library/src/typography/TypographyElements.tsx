@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import {SemanticTag, VisualAppearance, TypographyElementProps} from './types';
 import Typography from './Typography';

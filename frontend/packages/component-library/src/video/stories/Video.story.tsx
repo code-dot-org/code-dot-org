@@ -1,4 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {screen as shadowScreen} from 'shadow-dom-testing-library';
 import {within, expect, userEvent} from 'storybook/test';
 
 import Video from '../index';
@@ -19,6 +20,9 @@ export const DefaultVideo: Story = {
     isYouTubeCookieAllowed: true,
   },
   parameters: {
+    a11y: {
+      test: 'error',
+    },
     eyes: {
       // Skip eyes for video as this auto plays
       include: false,
@@ -33,7 +37,13 @@ export const DefaultVideo: Story = {
     await expect(playButton).toBeVisible();
     await userEvent.click(playButton);
 
-    const video = await canvas.findByTitle("What Most Schools Don't Teach");
+    // react-player renders the youtube iframe inside a shadow root
+    // but it does need to have the right title for a11y
+    const video = await shadowScreen.findByShadowTitle(
+      "What Most Schools Don't Teach",
+      {},
+      {timeout: 15000},
+    );
 
     // check if video is visible
     await expect(video).toBeVisible();
@@ -46,6 +56,11 @@ export const VideoWithCaption: Story = {
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
     isYouTubeCookieAllowed: true,
+  },
+  parameters: {
+    a11y: {
+      test: 'error',
+    },
   },
   decorators: Story => {
     return <Story />;
@@ -81,6 +96,9 @@ export const VideoWithFallback: Story = {
           'This is a video component with a fallback HTML video player. The fallback player will show up if YouTube is blocked, and a Download button will also show up. To test this block _www.youtube.com_ and _www.youtube-nocookie.com_ in the Network tab in DevTools.',
       },
     },
+    a11y: {
+      test: 'error',
+    },
     eyes: {
       // Skip eyes for video as this auto plays
       include: false,
@@ -99,6 +117,14 @@ export const VideoWithFallback: Story = {
 
     // check if download button is visible
     await expect(download).toBeVisible();
+
+    // react-player renders the youtube iframe inside a shadow root
+    // but it does need to have the right title for a11y
+    await shadowScreen.findByShadowTitle(
+      "What Most Schools Don't Teach",
+      {},
+      {timeout: 15000},
+    );
   },
 };
 
@@ -110,6 +136,11 @@ export const VideoWithCaptionAndFallback: Story = {
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
     isYouTubeCookieAllowed: true,
+  },
+  parameters: {
+    a11y: {
+      test: 'error',
+    },
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -130,6 +161,11 @@ export const VideoCookieBlocked: Story = {
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
     isYouTubeCookieAllowed: false,
+  },
+  parameters: {
+    a11y: {
+      test: 'error',
+    },
   },
   play: async ({canvasElement, args}) => {
     const canvas = within(canvasElement);

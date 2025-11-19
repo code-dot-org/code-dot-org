@@ -37,7 +37,7 @@
   },
   "resolutions": {
     "firmata": "^2.2.0",
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.3.12",
     "@types/react-dom": "^18.0.11",
     "ua-parser-js": "^0.7.40",
     "@amplitude/ua-parser-js": "^0.7.33"
@@ -74,6 +74,7 @@
     "@types/jquery": "^3.5.16",
     "@types/js-cookie": "^3.0.6",
     "@types/mocha": "^10.0.1",
+    "@types/react": "^18.3.12",
     "@types/react-bootstrap": "^0.32.36",
     "@types/react-csv": "^1.1.10",
     "@types/react-is": "^17.0.2",

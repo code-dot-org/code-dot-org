@@ -1,4 +1,5 @@
-import React, {HTMLAttributes, memo, useCallback} from 'react';
+import * as React from 'react';
+import {HTMLAttributes, memo, useCallback} from 'react';
 
 import CloseButton from '@/closeButton/CloseButton';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';

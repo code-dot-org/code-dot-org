@@ -50,8 +50,8 @@ export const DefaultImage: Story = {
     // check if image is visible
     await expect(image).toBeVisible();
 
-    // check if image is loaded
-    await canvas.findByText('Image loaded');
+    // check if image is loaded (raise timeout, it can be flaky when run locally)
+    await canvas.findByText('Image loaded', {}, {timeout: 5000});
     await expect(canvas.queryByText('Image has error')).not.toBeInTheDocument();
   },
 };

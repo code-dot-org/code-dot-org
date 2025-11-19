@@ -1,7 +1,8 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import React, {ChangeEvent, useState} from 'react';
+import * as React from 'react';
+import {ChangeEvent, useState} from 'react';
 
 import Checkbox from '@/checkbox';
 

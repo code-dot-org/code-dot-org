@@ -5,7 +5,7 @@ import process from 'node:process';
 /**
  * Runs the Applitools eyes storybook SDK and generates a markdown report
  */
-exec('yarn dotenv-run -- eyes-storybook', (error, stdout) => {
+exec('pnpm dotenv-run -- eyes-storybook', (error, stdout) => {
   const eyesFailureLink = stdout
     .split('\n')
     .find(line => line.includes('See details at'))

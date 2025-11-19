@@ -1,4 +1,5 @@
-import React, {AriaAttributes} from 'react';
+import * as React from 'react';
+import {AriaAttributes} from 'react';
 
 import {ComponentPlacementDirection} from '@/common/types';
 
