@@ -4,13 +4,17 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
+import {
+  getSelectedScriptFriendlyName,
+  getSelectedCourseName,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../legacySharedComponents/Headings';
 import firehoseClient from '../../metrics/firehose';
 import color from '../../util/color';
-import {getUnitUrl} from '../teacherDashboard/urlHelpers';
+import {getNestedUnitUrl} from '../teacherDashboard/urlHelpers';
 
 import {ViewType, unitDataPropType} from './sectionProgressConstants';
 import {getCurrentUnitData} from './sectionProgressRedux';
@@ -19,16 +23,17 @@ import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 class ProgressViewHeader extends Component {
   static propTypes = {
     scriptId: PropTypes.number,
-    //redux
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string,
     scriptData: unitDataPropType,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
   };
 
   getLinkToOverview() {
-    const {scriptData, sectionId} = this.props;
-    return scriptData ? getUnitUrl(sectionId, scriptData.name, null) : null;
+    const {sectionId, courseVersionName, unitPosition} = this.props;
+    return getNestedUnitUrl(sectionId, courseVersionName, unitPosition, null);
   }
 
   navigateToScript = () => {
@@ -106,4 +111,6 @@ export default connect(state => ({
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentUnitData(state),
   scriptFriendlyName: getSelectedScriptFriendlyName(state),
+  courseVersionName: getSelectedCourseName(state),
+  unitPosition: getSelectedUnitPosition(state),
 }))(ProgressViewHeader);

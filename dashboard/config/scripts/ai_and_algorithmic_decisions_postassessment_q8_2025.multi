@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q8_2025'
+
+question 'A food delivery app has a "Recalculate Total" button that adds up your order cost again each time you change an item. What most likely happens when you press that button?'
+
+wrong 'The app randomly changes your total to test whether you\'re paying attention.'
+wrong 'The app loads an entirely new webpage for every single update.'
+right 'The app calls a function that adds the prices of all items and updates the total on screen.'
+wrong 'The app changes the color of the total text without changing the number.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN

@@ -75,6 +75,8 @@ function initPage() {
             context={differentiationContext}
             scriptId={reportingData.unitName}
             scriptName={reportingData.unitName}
+            canStartOpen={false}
+            canDefaultOpen={false}
           />
         </Provider>,
         aiDiffFabMountPoint

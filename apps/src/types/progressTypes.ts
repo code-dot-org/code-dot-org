@@ -67,6 +67,7 @@ export interface Level {
   status?: string;
   sublevels?: Level[];
   usesLab2: boolean;
+  parentLevelId?: string;
 }
 
 export interface LevelWithProgress extends Level {

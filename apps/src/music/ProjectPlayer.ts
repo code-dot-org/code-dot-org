@@ -1,4 +1,5 @@
 import {SourcesStore} from '../lab2/projects/SourcesStore';
+import {NetworkError} from '../util/HttpClient';
 
 import {
   cacheKey,
@@ -104,14 +105,14 @@ class ProjectPlayer {
     }
 
     // Try to load from local storage if it exists.
-    const metadataString = localStorage.getItem(cacheKey());
+    const metadataString = sessionStorage.getItem(cacheKey());
     if (metadataString) {
       try {
-        const localStorageMetadata = JSON.parse(
+        const sessionStorageMetadata = JSON.parse(
           metadataString
         ) as MusicMetadata;
-        if (localStorageMetadata.channelId === channelId) {
-          return this.prepareLibraryFromMetadata(localStorageMetadata);
+        if (sessionStorageMetadata.channelId === channelId) {
+          return this.prepareLibraryFromMetadata(sessionStorageMetadata);
         }
       } catch (e) {
         // Ignore JSON parse errors and fall through to loading from server.
@@ -119,24 +120,39 @@ class ProjectPlayer {
     }
 
     // Otherwise, load from server.
-    const sources = await this.sourcesStore.load(channelId);
-    const labConfig = sources.labConfig as MusicLabConfig;
-    // Prepare library so sounds are available during code execution.
-    await this.prepareLibrary(labConfig.music.library, labConfig.music.packId);
+    try {
+      const sources = await this.sourcesStore.load(channelId);
+      const labConfig = sources.labConfig as MusicLabConfig;
+      // Prepare library so sounds are available during code execution.
+      await this.prepareLibrary(
+        labConfig.music.library,
+        labConfig.music.packId
+      );
 
-    this.workspace.loadCode(JSON.parse(sources.source as string));
-    this.workspace.compileSong(labConfig.music.blockMode);
-    const {playbackEvents, orderedFunctions, lastMeasure} =
-      this.workspace.executeCompiledSong();
+      this.workspace.loadCode(JSON.parse(sources.source as string));
+      this.workspace.compileSong(labConfig.music.blockMode);
+      const {playbackEvents, orderedFunctions, lastMeasure} =
+        this.workspace.executeCompiledSong();
 
-    return {
-      channelId,
-      playbackEvents,
-      orderedFunctions,
-      lastMeasure,
-      packId: labConfig.music.packId,
-      libraryName: labConfig.music.library,
-    };
+      return {
+        channelId,
+        playbackEvents,
+        orderedFunctions,
+        lastMeasure,
+        packId: labConfig.music.packId,
+        libraryName: labConfig.music.library,
+      };
+    } catch (e) {
+      if (
+        e instanceof NetworkError &&
+        (e as NetworkError).response.status === 404
+      ) {
+        // Use default metadata if a music project has not yet been created.
+        return this.prepareLibraryFromMetadata(defaultMetadata);
+      } else {
+        throw e;
+      }
+    }
   }
 
   private async prepareLibrary(libraryName?: string, packId?: string) {
