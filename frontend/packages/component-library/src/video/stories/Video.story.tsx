@@ -1,4 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {screen as shadowScreen} from 'shadow-dom-testing-library';
 import {within, expect, userEvent} from 'storybook/test';
 
 import Video from '../index';
