@@ -36,15 +36,6 @@
   }
 
   @include mixins.focus-styles;
-
-  &[disabled] {
-    background-color: var(--background-neutral-secondary);
-    border-color: var(--borders-neutral-disabled);
-
-    &::placeholder {
-      color: var(--text-neutral-disabled);
-    }
-  }
 }
 
 .versionButton {
