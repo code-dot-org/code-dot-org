@@ -508,6 +508,7 @@
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@eslint/js": "^9.15.0",
     "@release-it/conventional-changelog": "^10.0.0",
@@ -542,6 +543,7 @@
     "release-it": "^18.1.2",
     "rimraf": "^6.0.1",
     "schema-dts": "^1.1.5",
+    "shadow-dom-testing-library": "^1.13.1",
     "stylelint": "^16.14.1",
     "swiper": "^11.0.5",
     "tsc-alias": "^1.8.11",
