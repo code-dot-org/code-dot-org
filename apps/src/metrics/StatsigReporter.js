@@ -183,7 +183,6 @@ class StatsigReporter {
   }
 
   // Returns a promise that resolves with the experiment result
-  // This eliminates the need for components to call waitUntilReady
   async getIsInExperimentAsync(name, parameter, defaultValue) {
     await this.readyPromise;
     return this.getIsInExperiment(name, parameter, defaultValue);
