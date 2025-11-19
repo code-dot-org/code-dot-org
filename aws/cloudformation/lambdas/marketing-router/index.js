@@ -795,6 +795,7 @@ const pathPatterns = [
   /^\/_next\/static\//, // Next.js static assets
   /^\/_next\/image/,  // Next.js dynamic images, /_next/image*
   /^\/api\/hour\//,     // /api/hour/*
+  /^\/certificates\//,  // /certificates/*
   /^\/congrats\//,      // /congrats/*
   /^\/forms\//,         // /forms/*
   /^\/schools\//,       // /schools/*
