@@ -21,11 +21,3 @@ export const personaPrompts = {
   communityArchitect,
   leadLearner,
 };
-
-// Also re-export everything individually for backwards compatibility
-export * from './innovatorPrompts';
-export * from './codeWhispererPrompts';
-export * from './bridgeBuilderPrompts';
-export * from './storytellerPrompts';
-export * from './communityArchitectPrompts';
-export * from './leadLearnerPrompts';

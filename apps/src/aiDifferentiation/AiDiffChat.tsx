@@ -25,15 +25,9 @@ import AiDiffChatHeader from './AiDiffChatHeader';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {defaultThreadTitle} from './constants';
 import {
-  EXAMPLE_PROMPT,
-  EXPLAIN_CONCEPT_PROMPT,
-  DEBUG_MISTAKES_PROMPT,
-  EXIT_TICKET_PROMPT,
-  MINI_LESSON_PROMPT,
+  contextPrompts,
   APCSP_DUMMY_CREATE,
   APCSP_DUMMY_EXAM,
-  DEBUG_THIS_CODE,
-  IMPROVE_THIS_CODE,
   SUGGESTED_PROMPTS_FOR_SELECTION,
   SUGGEST_CURRICULUM_PROMPT,
   GET_STARTED_PROMPT,
@@ -43,17 +37,7 @@ import {ChatItem, ChatPrompt, Context, SuggestPromptsType} from './types';
 
 import style from './ai-differentiation.module.scss';
 
-const INITIAL_CHAT_MESSAGE = `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`;
-
 const APCSP_PROMPTS = [APCSP_DUMMY_CREATE, APCSP_DUMMY_EXAM];
-
-const SUGGESTED_PROMPTS = [
-  EXAMPLE_PROMPT,
-  EXPLAIN_CONCEPT_PROMPT,
-  DEBUG_MISTAKES_PROMPT,
-  MINI_LESSON_PROMPT,
-  EXIT_TICKET_PROMPT,
-];
 
 const AIDIFF_THREADS_ENDPOINT = '/aidiff_threads';
 const AIDIFF_CHAT_COMPLETION = 'chat_completion';
@@ -88,7 +72,7 @@ const getDefaultSuggestedPrompts = (
           return true;
         }
       )
-    : SUGGESTED_PROMPTS;
+    : SUGGESTED_PROMPTS_FOR_SELECTION['default'].suggestedPrompts;
 
 interface AiDiffChatProps {
   context: Context;
@@ -116,7 +100,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   setThreadTitle,
   scriptName,
   chatResponseCallback = () => {},
-  initialChatMessage = INITIAL_CHAT_MESSAGE,
+  initialChatMessage = SUGGESTED_PROMPTS_FOR_SELECTION['default']
+    .initialMessage,
   suggestedPrompts,
   hideChatHeader = false,
   curriculumCourses = [],
@@ -160,7 +145,10 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     additionalPrompts.push(...APCSP_PROMPTS);
   }
   if (context.type === AiDiffContext.LEVEL) {
-    additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
+    additionalPrompts.push(
+      contextPrompts.code.DEBUG_THIS_CODE,
+      contextPrompts.code.IMPROVE_THIS_CODE
+    );
   }
 
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>(

@@ -14,7 +14,7 @@
  * 3. Update the UI to surface this new context/persona
  */
 
-import {PromptMenuConfiguration} from '../types';
+import {PromptMenuConfiguration} from '@cdo/apps/aiDifferentiation/types';
 
 import {contextPrompts} from './context';
 import {personaPrompts} from './personas';
@@ -23,6 +23,16 @@ import {personaPrompts} from './personas';
 export const SUGGESTED_PROMPTS_FOR_SELECTION: {
   [selection: string]: PromptMenuConfiguration;
 } = {
+  default: {
+    initialMessage: `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`,
+    suggestedPrompts: [
+      contextPrompts.curriculum.EXAMPLE_PROMPT,
+      contextPrompts.curriculum.EXPLAIN_CONCEPT_PROMPT,
+      contextPrompts.curriculum.DEBUG_MISTAKES_PROMPT,
+      contextPrompts.activities.MINI_LESSON_PROMPT,
+      contextPrompts.activities.EXIT_TICKET_PROMPT,
+    ],
+  },
   plan: {
     initialMessage: `Let's iterate together! What would you like to change? Below are some of the tasks I can help you with.`,
     suggestedPrompts: [

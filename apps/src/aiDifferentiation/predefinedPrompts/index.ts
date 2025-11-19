@@ -48,13 +48,5 @@ export * from './context/apCSPPrompts';
 export * from './context/aifPrompts';
 export * from './context/codePrompts';
 
-// Re-export all persona prompts individually
-export * from './personas/innovatorPrompts';
-export * from './personas/codeWhispererPrompts';
-export * from './personas/bridgeBuilderPrompts';
-export * from './personas/storytellerPrompts';
-export * from './personas/communityArchitectPrompts';
-export * from './personas/leadLearnerPrompts';
-
 // Export menu configurations
 export * from './menuConfigurations';
