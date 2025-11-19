@@ -522,7 +522,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             />
           )}
         </Guide>
-        )
         <div className={moduleStyles.dancerContainer} ref={containerRef}>
           <div className={moduleStyles.background}>
             <img
