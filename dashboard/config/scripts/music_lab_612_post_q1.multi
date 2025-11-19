@@ -1,6 +1,6 @@
 name 'music-lab-612-post-q1'
 
-question '**Which of the code options here should Jessie add so the one measure drum sounds layer correctly and finish together?**'
+question '**Which of the code options here should Jessie add so the one measure bass sounds layer correctly and finish together?**'
 height '200'
 
 wrong '![](https://images.code.org/84b443c70863b2682df600ff507d74b2-image-1750875611599.png)'
@@ -19,7 +19,7 @@ Appears in the lesson: Sequencing - Practice
 MARKDOWN
 
 markdown <<MARKDOWN
-Jessie wants to add drum sounds to his song. The drum he choose is one measure long. Here is Jessie\'s code so far:
+Jessie wants to add bass sounds to his song. The bass sound he chose is one measure long. Here is Jessie\'s code so far:
 
 <img src="https://images.code.org/8057e4f298a63cd50196745ea4cdb1c7-image-1750875521754.png" height="200">
 MARKDOWN

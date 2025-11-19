@@ -4,10 +4,11 @@ import {
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {trySetLocalStorage} from '@cdo/apps/utils';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {baseAssetUrl} from '../../constants';
+import {FunctionEvents} from '../../player/interfaces/FunctionEvents';
 import {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
 import MusicLibrary from '../../player/MusicLibrary';
 
@@ -19,7 +20,9 @@ import {GenerateContext} from './GenerateCodeContent';
 export const cacheKey = () => `music-ai-generate`;
 
 export interface MusicMetadata {
+  channelId: string;
   playbackEvents: PlaybackEvent[];
+  orderedFunctions: FunctionEvents[];
   lastMeasure: number;
   packId?: string;
   libraryName?: string;
@@ -30,12 +33,15 @@ export const saveGeneratedSongMetadata = (
   channelId: string,
   packId: string,
   events: PlaybackEvent[],
+  orderedFunctions: FunctionEvents[],
   lastMeasure: number
 ) => {
-  trySetLocalStorage(
+  trySetSessionStorage(
     cacheKey(),
     JSON.stringify({
+      channelId,
       playbackEvents: events,
+      orderedFunctions,
       lastMeasure,
       packId,
       libraryName: MusicLibrary.getInstance()?.name,

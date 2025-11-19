@@ -10,6 +10,7 @@ export interface PersonalizationData {
   dateYearsTeachingSet: Date | null;
   classroomVision: string;
   challenge: string;
+  matchedPersona?: string;
 }
 
 interface UseTeachingProfileDataReturn {
@@ -47,7 +48,7 @@ export function useTeachingProfileData(): UseTeachingProfileDataReturn {
       }
 
       const result = await response.json();
-      console.log(result, result.data);
+
       if (result.exists && result.data) {
         const existingData = {...result.data};
         if (existingData.dateYearsTeachingSet) {

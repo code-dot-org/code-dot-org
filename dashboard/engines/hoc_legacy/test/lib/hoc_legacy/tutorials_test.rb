@@ -44,6 +44,27 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
         _get_tutorial.must_be_nil
       end
     end
+
+    context 'when Tutorial entry is invalid' do
+      let(:error) {StandardError.new('Invalid Tutorial entry')}
+
+      before do
+        allow_any_instance_of(Contentful::Entry).to receive(:tutorial_id).and_raise(error)
+      end
+
+      it 'returns nil' do
+        _get_tutorial.must_be_nil
+      end
+
+      it 'notifies Honeybadger' do
+        expect(Honeybadger).to receive(:notify).with(
+          error,
+          error_message: '[Contentful] Invalid Tutorial entry',
+          context: kind_of(Hash)
+        ).once
+        get_tutorial
+      end
+    end
   end
 
   describe '.refresh' do
@@ -59,7 +80,7 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
 
       expect(CdoContentful::CsForAll::Entry::Tutorial).
         to receive(:find_each).
-        with(limit: 200, order: 'fields.tutorialID').
+        with(limit: 200, order: 'fields.tutorialID', 'tutorialID[exists]': true).
         exactly(2).times.
         and_return(
           [OpenStruct.new(tutorial_id: original_tutorial_id)].to_enum,

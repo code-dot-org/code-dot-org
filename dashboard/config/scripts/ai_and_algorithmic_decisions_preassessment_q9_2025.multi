@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q9_2025'
+
+question 'An online quiz shows the message "Great job!" when you get all answers right and "Try again" if you miss any. What type of programming logic makes the app decide which message to show?'
+
+wrong 'A variable that counts how many people took the quiz'
+wrong 'A function that changes the website\'s background color'
+wrong 'A style rule that adjusts the size of the text'
+right 'An if/else statement that checks whether all answers are correct'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN

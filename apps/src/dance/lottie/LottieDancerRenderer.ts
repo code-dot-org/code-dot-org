@@ -53,6 +53,8 @@ import {
   safeFetchSvgText,
   mirrorPngDataUrl,
   getHeadScale,
+  cropDataUrl,
+  improvePalette,
 } from './LottieDancerUtils';
 
 const DEFAULT_SKELETON = 'unicorn';
@@ -64,7 +66,7 @@ export default class LottieDancerRenderer {
   private anim: AnimationItem | null = null;
   private totalFrames: number | null = null;
 
-  // Values pulled from appConfig/localStorage
+  // Values pulled from appConfig/sessionStorage
   private readonly headScale: number;
   private cachedAnimationData: {[key: string]: LottieJSON} = {};
   private skeletonNamePromise?: Promise<string>;
@@ -313,6 +315,14 @@ export default class LottieDancerRenderer {
         }
       }
 
+      // If the palette is locked, we skip any adjustments. This is used for the default
+      // gray dancer. The value is specified in the dancer metadata JSON.
+      if (palette && !palette.lock) {
+        // Improve palette to avoid secondary and tertiary colors being too close to
+        // primary color.
+        palette = improvePalette(palette);
+      }
+
       // Recolor assets based on hard-coded accessory-name rules.
       applyColorMapping(animData, palette, skeletonName);
 
@@ -326,12 +336,14 @@ export default class LottieDancerRenderer {
           if (headComp && Array.isArray(headComp.layers)) {
             const {insertIndex, ks: headKs} =
               hideLayersByTypeAndCaptureKs(headComp);
+            // Crop edge artifacts from generated head PNGs.
+            const croppedHeadUrl = await cropDataUrl(headDataUrl);
             const assetId = ensureImageAsset(
               animData,
-              headDataUrl,
+              croppedHeadUrl,
               'img_head_custom'
             );
-            const headMirrorDataUrl = await mirrorPngDataUrl(headDataUrl);
+            const headMirrorDataUrl = await mirrorPngDataUrl(croppedHeadUrl);
             const headMirrorAssetId = ensureImageAsset(
               animData,
               headMirrorDataUrl,

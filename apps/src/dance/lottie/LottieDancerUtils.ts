@@ -1,7 +1,10 @@
 import lottie, {type AnimationItem} from 'lottie-web';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import DCDO from '@cdo/apps/dcdo';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {GENERATED_DANCER_STORAGE_KEY} from '../ai/constants';
 
 import {
   CanvasAnimConfig,
@@ -17,7 +20,7 @@ import {
   LottieShapeAny,
   LottieShapeFillOrStroke,
   LottieShapeGroup,
-  LocalStoragePayload,
+  SessionStoragePayload,
   Palette,
   ResolveDancerAssetsOpts,
   ResolvedDancerAssets,
@@ -40,6 +43,10 @@ const SKELETONS_PATH = `${BASE_HOST}/skeletons`;
 const PALETTES_PATH = `${SKELETONS_PATH}/palettes`;
 
 const DEFAULT_HEAD_SCALE = 0.5;
+
+// When we improve the palette, we want both secondary and tertiary to be at least
+// this far from the primary, when measured using simple Euclidean color distance.
+const COLOR_DISTANCE_REQUIRED = 0.32;
 
 // Expected colors to replace in body SVGs.
 const BODY_SVG_PRIMARY = '#33FF21';
@@ -161,6 +168,7 @@ export function normalizePalette(metadata: DancerMetadata = {}): Palette {
     primary: toRGBA(bodyColor),
     secondary: toRGBA(secondaryColor),
     tertiary: toRGBA(tertiaryColor),
+    lock: metadata['lock_palette'] === true,
   };
 }
 
@@ -538,7 +546,7 @@ export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
  * Resolves the generated dancer assets (head PNG + metadata JSON) and optional body PNG and metadata JSON.
  * Source of truth order:
  *   1) URL params (?path=...&dancer=...) use exactly that dancer and/or (?body=...) for body
- *   2) localStorage('dancer-ai-generate') with {adlibOption, choices[], variant}
+ *   2) sessionStorage('dancer-ai-generate') with {adlibOption, choices[], variant}
  *   3) hardcoded fallbacks (DEFAULT_HEAD_URL / DEFAULT_METADATA_URL)
  * The renderer will not replace the body unless a bodyUrl is returned here.
  * TODO: Use channel ID instead of local storage.
@@ -559,29 +567,32 @@ export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
     bodyMetadataUrl: DEFAULT_BODY_METADATA_URL,
   };
 
-  // 2) Generated dancer from localStorage
-  let localStorageOptions: LocalStoragePayload = null;
+  // 2) Generated dancer from sessionStorage
+  let sessionStorageOptions: SessionStoragePayload = null;
   let extraVariant: number | null = null;
   try {
-    const raw = localStorage.getItem('dancer-ai-generate');
-    localStorageOptions = raw ? (JSON.parse(raw) as LocalStoragePayload) : null;
-  } catch {
-    localStorageOptions = null;
-  }
-  if (localStorageOptions) {
-    const path = localStorageOptions?.path ?? localStorageOptions?.adlibOption;
-    const choices = Array.isArray(localStorageOptions?.choices)
-      ? (localStorageOptions!.choices as string[])
+    const raw = sessionStorage.getItem(GENERATED_DANCER_STORAGE_KEY);
+    sessionStorageOptions = raw
+      ? (JSON.parse(raw) as SessionStoragePayload)
       : null;
-    const choicesExtra = Array.isArray(localStorageOptions?.choicesExtra)
-      ? (localStorageOptions!.choicesExtra as string[])
+  } catch {
+    sessionStorageOptions = null;
+  }
+  if (sessionStorageOptions) {
+    const path =
+      sessionStorageOptions?.path ?? sessionStorageOptions?.adlibOption;
+    const choices = Array.isArray(sessionStorageOptions?.choices)
+      ? (sessionStorageOptions!.choices as string[])
+      : null;
+    const choicesExtra = Array.isArray(sessionStorageOptions?.choicesExtra)
+      ? (sessionStorageOptions!.choicesExtra as string[])
       : null;
     extraVariant =
-      localStorageOptions?.extraVariant ??
+      sessionStorageOptions?.extraVariant ??
       // Keep bodyVariant for backward compatibility.
-      localStorageOptions?.bodyVariant ??
+      sessionStorageOptions?.bodyVariant ??
       null;
-    const variant = localStorageOptions?.variant;
+    const variant = sessionStorageOptions?.variant;
 
     if (path && choices && choices.length > 0 && typeof variant === 'number') {
       const assets = getGeneratedDancerAssets(
@@ -673,6 +684,43 @@ function getInlineFillFromStyle(style: string | null): string | null {
   if (!style) return null;
   const m = style.match(/fill\s*:\s*(#[0-9a-fA-F]{6})\b/);
   return m ? m[1] : null;
+}
+
+/** Simple Euclidean color distance between two colors. */
+function colorDistance(color1: RGBA, color2: RGBA) {
+  return Math.sqrt(
+    (color1[0] - color2[0]) * (color1[0] - color2[0]) +
+      (color1[1] - color2[1]) * (color1[1] - color2[1]) +
+      (color1[2] - color2[2]) * (color1[2] - color2[2])
+  );
+}
+
+/** Simple inversion of a color. */
+function colorInverse(color: RGBA): RGBA {
+  return [1 - color[0], 1 - color[1], 1 - color[2], color[3]];
+}
+
+/** Returns a new, improved palette, in which secondary and tertiary are
+ * at least COLOR_DISTANCE_REQUIRED away from primary.  If either is initially
+ * closer, then it is inverted in the returned palette.
+ */
+export function improvePalette(palette: Palette): Palette {
+  if (palette.primary && palette.secondary && palette.tertiary) {
+    const primary = palette.primary;
+    const secondary =
+      colorDistance(palette.primary, palette.secondary) <
+      COLOR_DISTANCE_REQUIRED
+        ? colorInverse(palette.secondary)
+        : palette.secondary;
+    const tertiary =
+      colorDistance(palette.primary, palette.tertiary) < COLOR_DISTANCE_REQUIRED
+        ? colorInverse(palette.tertiary)
+        : palette.tertiary;
+
+    return {primary, secondary, tertiary};
+  }
+
+  return palette;
 }
 
 /**
@@ -794,11 +842,66 @@ export async function mirrorPngDataUrl(dataUrl: string): Promise<string> {
   return canvas.toDataURL('image/png');
 }
 
+// Head crop can be overridden via DCDO or URL param.
+function getHeadCrop(): number {
+  const dcdoHeadCrop = DCDO.get('ai-dancer-head-crop');
+
+  if (dcdoHeadCrop === false) {
+    return Number(getConfigValue('headCrop')) || 10;
+  }
+
+  return Number(dcdoHeadCrop);
+}
+
 // Head scale can be overridden via URL param, e.g. ?headScale=0.8, ?bigHead=true
+// If getHeadCrop() returns a value, then it calculates the right scale based on that.
 export function getHeadScale(): number {
+  const headCrop = getHeadCrop();
+
   const scaleParam =
     getConfigValue('headScale') ||
-    (getConfigValue('bigHead') === 'true' ? '1.0' : undefined);
+    (getConfigValue('bigHead') === 'true'
+      ? '1.0'
+      : headCrop
+      ? String((0.5 * (DEFAULT_IMAGE_SIZE - 2 * headCrop)) / DEFAULT_IMAGE_SIZE)
+      : undefined);
   const scale = scaleParam ? parseFloat(scaleParam) : NaN;
   return isNaN(scale) || scale <= 0 ? DEFAULT_HEAD_SCALE : scale;
+}
+
+/** Crops "transparent" inset from all sides of a PNG data URL. */
+export async function cropDataUrl(dataUrl: string): Promise<string> {
+  const inset = getHeadCrop();
+
+  if (!inset) {
+    return dataUrl;
+  }
+
+  const loadedImage = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const imageElement = new Image();
+    imageElement.onload = () => resolve(imageElement);
+    imageElement.onerror = reject;
+    imageElement.src = dataUrl;
+  });
+
+  const scaledWidth = Math.max(1, loadedImage.naturalWidth - inset * 2);
+  const scaledHeight = Math.max(1, loadedImage.naturalHeight - inset * 2);
+
+  const offscreenCanvas = document.createElement('canvas');
+  offscreenCanvas.width = scaledWidth;
+  offscreenCanvas.height = scaledHeight;
+  const offscreenCanvasContext = offscreenCanvas.getContext('2d')!;
+  offscreenCanvasContext.drawImage(
+    loadedImage,
+    inset,
+    inset,
+    scaledWidth,
+    scaledHeight,
+    0,
+    0,
+    scaledWidth,
+    scaledHeight
+  );
+
+  return offscreenCanvas.toDataURL('image/png');
 }

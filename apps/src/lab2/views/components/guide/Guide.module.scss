@@ -1,5 +1,31 @@
 @use '../layout/variables.scss' as variables;
 
+$top-position: 62px;
+$bottom-position: 20px;
+$gap-height: 43px;
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    margin-top: 40px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    margin-bottom: 40px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
 .guideContainerModal {
   background-color: rgba(0 0 0 / .3);
   position: absolute;
@@ -8,6 +34,10 @@
   right: 0;
   bottom: 0;
   z-index: 71;
+
+  &Gap {
+    top: $gap-height;
+  }
 }
 
 .guide {
@@ -36,11 +66,17 @@
   }
 
   &NormalPosition {
-    top: 62px;
+    top: $top-position;
+    animation: 0.75s ease 1.5s backwards slide-up;
   }
 
   &BottomPosition {
-    bottom: 20px;
+    bottom: $bottom-position;
+    animation: 0.75s ease 1.5s backwards slide-down;
+  }
+
+  &Gap {
+    top: $top-position - $gap-height;
   }
 }
 

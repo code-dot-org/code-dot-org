@@ -1,5 +1,6 @@
 require_relative 'test_helper'
 require 'cdo/aws/s3'
+require 'cdo/aws/metrics'
 require 'timecop'
 
 class AwsS3IntegrationTest < Minitest::Test
@@ -185,17 +186,26 @@ class AwsS3IntegrationTest < Minitest::Test
     handler(Handler)
   end
 
-  # Ensures a slow s3 request triggers a Honeybadger notification.
+  # Ensures a slow S3 response publishes CloudWatch Metrics.
   def test_s3_timeout_notify
     Aws::S3::Client.add_plugin(SlowResponder)
     Aws::S3::Client.unstub(:new)
     AWS::S3.s3 = nil
-    Honeybadger.expects(:notify).once
+    original_dashboard_hostname = CDO.dashboard_hostname
+    # Simulate conditions where tracking of slow S3 responses are enabled.
+    CDO.stubs(:running_web_application?).returns(true)
+    CDO.stubs(:test_system?).returns(true)
+    Cdo::Metrics.expects(:put).at_least(2)
     client = AWS::S3.connect_v2!
+    # Ensure Metric is published with a Host dimension that can we can ignore in CloudWatch.
+    CDO.stubs(:dashboard_hostname).returns('integration-test.example.net')
     client.head_bucket(bucket: TEST_BUCKET)
   ensure
     Aws::S3::Client.remove_plugin(SlowResponder)
     AWS::S3.s3 = nil
     Timecop.return
+    CDO.stubs(:running_web_application?).returns(false)
+    CDO.stubs(:test_system?).returns(false)
+    CDO.stubs(:dashboard_hostname).returns(original_dashboard_hostname)
   end
 end

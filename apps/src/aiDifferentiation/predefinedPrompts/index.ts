@@ -1,45 +1,60 @@
 /**
  * Predefined Prompts Library - Main Export File
  *
- * This file re-exports all prompts and configurations from the library,
- * maintaining backwards compatibility with existing imports.
+ * This file provides two import styles for maximum flexibility:
+ *
+ * GROUPED IMPORTS (Recommended for new code):
+ * -----------------------------------------------
+ * import { contextPrompts, personaPrompts } from './predefinedPrompts';
+ *
+ * // Access prompts through organized groups
+ * const prompt1 = contextPrompts.curriculum.EXPLAIN_CONCEPT_PROMPT;
+ * const prompt2 = personaPrompts.innovator.NEW_WAYS_PROMPT;
+ *
+ * // Can destructure if you need multiple from same category
+ * const { EXPLAIN_CONCEPT_PROMPT, EXAMPLE_PROMPT } = contextPrompts.curriculum;
+ * const { NEW_WAYS_PROMPT, CREATIVE_EXTENSION_PROMPT } = personaPrompts.innovator;
+ *
+ * INDIVIDUAL IMPORTS (Backwards compatible):
+ * -----------------------------------------------
+ * import {
+ *   EXPLAIN_CONCEPT_PROMPT,
+ *   NEW_WAYS_PROMPT
+ * } from './predefinedPrompts';
+ *
+ * // Works exactly as before
+ * const prompt = EXPLAIN_CONCEPT_PROMPT;
  *
  * File Organization:
- * - types.ts: TypeScript interfaces for prompts
- * - curriculumPrompts.ts: Curriculum planning and iteration
- * - activityPrompts.ts: Activity creation
- * - platformPrompts.ts: Code.org platform support
- * - apCSPPrompts.ts: AP Computer Science Principles course-specific
- * - aifPrompts.ts: AI Fundamentals course-specific
- * - codePrompts.ts: Code-level context prompts
- * - menuConfigurations.ts: Menu configuration mappings
- *
- * Usage:
- * Import any prompt or configuration directly from this index:
- *
- *   import {
- *     EXPLAIN_CONCEPT_PROMPT,
- *     SUGGESTED_PROMPTS_FOR_SELECTION
- *   } from './predefinedPrompts';
+ * ------------------
+ * context/           - Context-specific prompts (curriculum, platform, courses)
+ * personas/          - Teaching persona prompts (innovator, storyteller, etc.)
+ * menuConfigurations.ts - Menu configuration mappings
  */
 
-// Export all curriculum prompts
-export * from './curriculumPrompts';
+// ==================== GROUPED EXPORTS (RECOMMENDED) ====================
 
-// Export all activity prompts
-export * from './activityPrompts';
+// Import grouped objects from categories
+export {contextPrompts} from './context';
+export {personaPrompts} from './personas';
 
-// Export all platform prompts
-export * from './platformPrompts';
+// ==================== INDIVIDUAL EXPORTS (BACKWARDS COMPATIBLE) ====================
 
-// Export all AP CSP prompts
-export * from './apCSPPrompts';
+// Re-export all context prompts individually
+export * from './context/curriculumPrompts';
+export * from './context/activityPrompts';
+export * from './context/platformPrompts';
+export * from './context/apCSPPrompts';
+export * from './context/aifPrompts';
+export * from './context/codePrompts';
 
-// Export all AIF prompts
-export * from './aifPrompts';
-
-// Export all code-level prompts
-export * from './codePrompts';
+// Re-export all persona prompts individually
+export * from './personas/innovatorPrompts';
+export * from './personas/codeWhispererPrompts';
+export * from './personas/bridgeBuilderPrompts';
+export * from './personas/storytellerPrompts';
+export * from './personas/communityArchitectPrompts';
+export * from './personas/leadLearnerPrompts';
 
 // Export menu configurations
 export * from './menuConfigurations';

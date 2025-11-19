@@ -1480,7 +1480,11 @@
     "description": "YOU make the rules in this activity, where you can learn basic computer science skills to create your own Minecraft game to share with others! "
   },
   "mix-move-ai": {
-    "display_name": "mix-move-ai"
+    "display_name": "Mix & Move with AI",
+    "description": "Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat."
+  },
+  "mix-move-ai-educators": {
+    "display_name": "mix-move-ai-educators"
   },
   "ml-playground": {
     "display_name": "ml-playground"
@@ -1968,7 +1972,7 @@
     "description": "This self-paced professional learning module provides educators with a comprehensive understanding of the curriculum, enabling them to effectively guide students through essential CS concepts & understand the transformative role of AI."
   },
   "teaching-ai-foundations-semester2": {
-    "display_name": "Teaching AI Foundations Semester 2"
+    "display_name": "[PILOT] Teaching AI Foundations Semester 2"
   },
   "teaching-ai-powered-theats-and-defenses": {
     "display_name": "Teaching AI-Powered Threats and Defenses [PL Pilot]"

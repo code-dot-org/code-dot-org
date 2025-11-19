@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### ***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence. Students build skills from one unit to the next, so the units must be taught in order.***
+#### ***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence and must be taught in order. AI and Algorithmic Decisions is the 2nd unit in the course.***
 
 ## Student Learning Goals
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
@@ -52,7 +52,7 @@ markdown <<MARKDOWN
 
 
 #### **Total Duration:** Approximately 3 weeks
-#### **Structure:** Twelve 45-minute lessons and one 3-day culminating project
+#### **Structure:** Eleven 45-minute lessons and one 3-day culminating project
 
 #### **Lesson Flow:**
 
@@ -61,7 +61,7 @@ markdown <<MARKDOWN
 
 - #### Mid-unit lessons introduce variables, functions, and conditional logic, helping students plan and code dynamic interactions through flowcharts, reusable code, and logical operators.
 
-- #### The final project brings these skills together as students design, build, and refine interactive web apps that respond to users in real time, using AI-assisted debugging to ensure accessibility and inclusive design.
+- #### The final project brings these skills together as students design, build, and refine interactive web apps that respond to users in real time, using AI-assisted debugging.
 
 
 MARKDOWN
