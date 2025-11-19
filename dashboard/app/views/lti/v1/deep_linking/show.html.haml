@@ -1,0 +1,5 @@
+%h1 Deep Linking
+- if @deep_linking_settings.present?
+  = @deep_linking_settings.to_s
+- else
+  %p No `deep_linking_settings` parameter provided.
