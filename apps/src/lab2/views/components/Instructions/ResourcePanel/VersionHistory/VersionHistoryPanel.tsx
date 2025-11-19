@@ -367,7 +367,7 @@ const VersionHistoryPanel: React.FunctionComponent<
                     disabled={disabled}
                     buttonLabel={
                       version.comment
-                        ? lab2I18n.saveNewVersion()
+                        ? 'Save new version'
                         : lab2I18n.saveCurrentVersion()
                     }
                   />
