@@ -3,8 +3,9 @@ require 'json'
 class LangfuseController < ApplicationController
   include LangfuseHelper
 
-  def get_prompts
-    response = LangfuseHelper.fetch_prompts(prompt_params[:name])
+  def get_prompt
+    prompt_name = prompt_params[:name]
+    response = LangfuseHelper.fetch_prompt(prompt_name)
     return render(status: response[:status], json: response[:json])
   end
 

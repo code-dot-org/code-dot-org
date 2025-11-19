@@ -4,8 +4,8 @@ module LangfuseHelper
   LANGFUSE_SECRET_KEY = CDO.langfuse_secret_key
   LANGFUSE_PUBLIC_KEY = CDO.langfuse_public_key
 
-  def self.fetch_prompts(prompt_name)
-    response = client.fetch_prompts(prompt_name)
+  def self.fetch_prompt(prompt_name)
+    response = client.fetch_prompt(prompt_name)
 
     if response.code == 200
       {status: :ok, json: JSON.parse(response.body)}

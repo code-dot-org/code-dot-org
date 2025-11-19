@@ -1,3 +1,6 @@
+require 'erb'
+include ERB::Util
+
 module LangfuseClientHelper
   class Client
     attr_accessor :api_key
@@ -9,12 +12,12 @@ module LangfuseClientHelper
       @public_key = public_key
     end
 
-    def fetch_prompts(prompt_name)
+    def fetch_prompt(prompt_name)
       headers = {
         "Content-Type" => "application/json",
       }
       response = HTTParty.get(
-        "#{LANGFUSE_URL}/v2/prompts",
+        "#{LANGFUSE_URL}/v2/prompts/#{url_encode(prompt_name)}",
         basic_auth: {
           username: @public_key,
           password: @secret_key

@@ -7,12 +7,15 @@ import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import experiments from '@cdo/apps/util/experiments';
 
-const fetchLangfusePrompt = async (): Promise<string | undefined> => {
-  const LANGFUSE_URL = '/langfuse/get_prompts';
-  const response = await HttpClient.get(LANGFUSE_URL);
-  const prompts = await response.json();
-  console.log('🤖: prompts from langfuse:', prompts);
-  return undefined;
+const fetchLangfusePrompt = async (
+  promptName: string
+): Promise<string | undefined> => {
+  const url = `/langfuse/get_prompt?name=${encodeURIComponent(promptName)}`;
+  const response = await HttpClient.get(url);
+  const prompt = await response.json();
+  const promptText = prompt.prompt;
+  console.log('🤖: prompts from langfuse:', promptText);
+  return promptText;
 };
 
 export const fetchCustomPrompt = async (promptName: string) => {
@@ -76,6 +79,7 @@ export const useAiTutorModelParameters = (
 
     const fetchLangfusePromptAndSet = async () => {
       try {
+        const promptName = 'modes/debug';
         const langfusePrompt = await fetchLangfusePrompt(promptName);
         if (mounted && langfusePrompt) {
           setSystemPrompt(langfusePrompt);
