@@ -2343,14 +2343,6 @@ ActiveRecord::Schema.define(version: 2025_11_19_161129) do
     t.index ["user_id"], name: "index_teaching_profile_data_on_user_id"
   end
 
-  create_table "trophies", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.string "name"
-    t.string "image_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["name"], name: "index_trophies_on_name", unique: true
-  end
-
   create_table "unit_groups", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.text "properties"
@@ -2365,13 +2357,6 @@ ActiveRecord::Schema.define(version: 2025_11_19_161129) do
     t.index ["name"], name: "index_unit_groups_on_name"
     t.index ["participant_audience"], name: "index_unit_groups_on_participant_audience"
     t.index ["published_state"], name: "index_unit_groups_on_published_state"
-  end
-
-  create_table "unit_groups_resources", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "unit_group_id"
-    t.integer "resource_id"
-    t.index ["resource_id", "unit_group_id"], name: "index_unit_groups_resources_on_resource_id_and_unit_group_id"
-    t.index ["unit_group_id", "resource_id"], name: "index_unit_groups_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
   create_table "unit_groups_student_resources", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
