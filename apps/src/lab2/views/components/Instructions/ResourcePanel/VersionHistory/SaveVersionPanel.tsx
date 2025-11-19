@@ -36,6 +36,7 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
     }
 
     try {
+      // Step 1: Create the version that will have the comment
       await dispatch(
         setAndSaveProjectSources(
           projectSources,
@@ -44,12 +45,13 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
         )
       );
 
-      const newVersionId = projectManager.getCurrentVersionId();
+      const commentedVersionId = projectManager.getCurrentVersionId();
 
-      if (newVersionId && commitDescription.trim()) {
+      // Step 2: Save the comment to this version
+      if (commentedVersionId && commitDescription.trim()) {
         const payload = {
           storage_id: channelId,
-          version_id: newVersionId,
+          version_id: commentedVersionId,
           comment: commitDescription,
         };
 
@@ -68,6 +70,29 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
           console.error('Failed to save commit comment:', error);
         }
       }
+
+      // Step 3: Create a new version to become the new "Current Version"
+      // Add a minimal version marker to ensure S3 creates a new version
+      // (S3 may not create a new version if content is identical)
+      const timestamp = Date.now();
+      const newVersionSources = {
+        ...projectSources,
+        __versionMarker: timestamp,
+      };
+
+      await dispatch(
+        setAndSaveProjectSources(
+          newVersionSources,
+          /* forceSave */ true,
+          /* forceNewVersion */ true
+        )
+      );
+
+      // Step 4: Update lastSource to include the marker so it doesn't trigger autosave
+      projectManager.setLastSource(newVersionSources);
+
+      // Step 5: Reset the comment flag since the new current version has no comment
+      projectManager.setCurrentVersionHasComment(false);
 
       onSuccess();
     } catch (error) {
