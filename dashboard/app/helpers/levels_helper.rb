@@ -550,9 +550,7 @@ module LevelsHelper
 
   # Teachers: enabled if they are in the pilot single user experiment
   # Students: enabled if any of their teachers are in the pilot
-  def ai_tutor_enabled_for_pilot?(user = current_user, level = @level)
-    return false unless user && level&.ai_tutor_available?
-
+  def ai_tutor_enabled_for_pilot?(user = current_user)
     if user.teacher?
       Experiment.enabled?(user: user, experiment_name: AI_TUTOR_PILOT_NAME)
     else
