@@ -76,6 +76,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     Record<ExcalidrawElement['id'], DataURL>
   >({});
 
+  // Store the initial data for Excalidraw so we only populate it once per mount
+  const [initialExcalidrawData, setInitialExcalidrawData] =
+    useState<ExcalidrawInitialDataState | null>(null);
+
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
 
   const onClickStartOver = useCallback(() => {
@@ -198,6 +202,30 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     });
   }, [setReinitializationHandler]);
 
+  // Populate initial Excalidraw data only when component mounts or remounts (excalidrawMountKey changes)
+  useEffect(() => {
+    const loadInitialData = async () => {
+      if (experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)) {
+        const data = await populateInitialExcalidrawState(
+          currentSources.source,
+          downloadedFileDataRef.current
+        );
+        setInitialExcalidrawData(data);
+      } else {
+        setInitialExcalidrawData(
+          currentSources.source as ExcalidrawInitialDataState
+        );
+      }
+    };
+
+    loadInitialData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [excalidrawMountKey]);
+  // Note: We intentionally omit currentSources.source from deps because:
+  // - initialData is only used when Excalidraw first mounts (controlled by excalidrawMountKey)
+  // - currentSources.source changes frequently (every 0.5s), but Excalidraw ignores initialData after mount
+  // - We want to fetch images only once per mount, not on every source change
+
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
   // Set back to false on unmount in case we switch to a different level type.
@@ -247,14 +275,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           }
         >
           <Excalidraw
-            initialData={
-              experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
-                ? populateInitialExcalidrawState(
-                    currentSources.source,
-                    downloadedFileDataRef.current
-                  )
-                : (currentSources.source as ExcalidrawInitialDataState)
-            }
+            initialData={initialExcalidrawData || undefined}
             onChange={debouncedSerializeAndSaveWorkspace}
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
