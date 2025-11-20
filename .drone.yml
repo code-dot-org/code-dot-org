@@ -90,7 +90,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/cdo-ci:1.18
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -212,7 +212,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/cdo-ci:1.18
     pull: always
     volumes:
       - name: mysql
@@ -295,7 +295,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-ci-tests
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/cdo-ci:1.18
     pull: always
     environment:
       CI_JOB: 'prepare_ci_tests'

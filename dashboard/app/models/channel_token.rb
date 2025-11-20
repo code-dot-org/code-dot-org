@@ -84,10 +84,10 @@ class ChannelToken < ApplicationRecord
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def self.create_channel(ip, project, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true, level: nil)
+  def self.create_channel(ip, project, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true, level: nil, hidden: false)
     if src
       data = project.get(src)
-      data.merge!(name: "Remix: #{data['name']}", hidden: false, frozen: false)
+      data.merge!(name: "Remix: #{data['name']}", hidden: hidden, frozen: false)
     end
 
     timestamp = Time.now
