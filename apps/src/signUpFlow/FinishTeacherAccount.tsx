@@ -17,7 +17,11 @@ import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {
+  EVENTS,
+  PLATFORMS,
+  EXPERIMENTS,
+} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
@@ -176,8 +180,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
   useEffect(() => {
     (async () => {
       const result = await statsigReporter.getIsInExperimentAsync(
-        'select_grades_taught_on_account_creation',
-        'enable_selecting_grades',
+        EXPERIMENTS.SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION,
+        EXPERIMENTS.ENABLE_SELECTING_GRADES,
         false
       );
       setIsInGradeSelectionExperiment(result);
