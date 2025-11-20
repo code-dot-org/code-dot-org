@@ -6,7 +6,6 @@ import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
-import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 
 import NavigationArea from './NavigationArea';
 import PredictQuestion from './PredictQuestion';
@@ -121,14 +120,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             <MainInstructionsContent
               instructionsText={longInstructions}
               handleInstructionsTextClick={handleInstructionsTextClick}
+              showTts={showTts}
             />
             <PredictQuestion className={moduleStyles.predictQuestion} />
           </div>
-          {showTts && (
-            <div className={moduleStyles.ttsContainer}>
-              <TextToSpeech text={longInstructions} />
-            </div>
-          )}
           {bottomComponent && (
             <div className={moduleStyles.bottomComponent}>
               {bottomComponent}

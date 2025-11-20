@@ -5,6 +5,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LevelProperties} from '@cdo/apps/lab2/types';
@@ -259,6 +260,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     return null;
   }
 
+  const showTts =
+    levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
+
   return (
     <Guide key={levelSpecificId} id={levelSpecificId} modal={modal}>
       {aiGenerateState === 'none' &&
@@ -267,6 +271,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           <MainInstructionsContent
             instructionsText={levelProperties.longInstructions}
             markdownClassName={styles.markdown}
+            showTts={showTts}
           />
         )}
 

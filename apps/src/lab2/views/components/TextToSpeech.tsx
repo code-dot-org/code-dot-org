@@ -78,6 +78,8 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
     }
   };
 
+  console.log('hello??', text, ttsButtonEnabled, isTtsAvailable);
+
   if (!ttsButtonEnabled || !isTtsAvailable) {
     return null;
   }

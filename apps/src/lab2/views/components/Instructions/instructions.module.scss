@@ -49,6 +49,7 @@
 }
 
 .mainInstructions {
+  position: relative;
   white-space: normal;
 }
 
@@ -234,6 +235,27 @@
       }
     }
   }
+}
+
+.markdownTts {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-child {
+      margin-inline-end: 1.5rem;
+    }
+  }
+}
+
+.markdownTtsContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
 }
 
 .validationIcon {
