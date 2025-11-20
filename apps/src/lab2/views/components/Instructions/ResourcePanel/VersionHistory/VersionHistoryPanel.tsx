@@ -12,6 +12,7 @@ import {
   setProjectSource,
   setViewingOldVersion,
   setRestoredOldVersion,
+  setHasEdited,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   loadVersion,
@@ -80,6 +81,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const projectSources = useAppSelector(
     state => state.lab2Project.projectSources
   );
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -316,8 +318,9 @@ const VersionHistoryPanel: React.FunctionComponent<
     sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_COMMITTED, {
       versionId: selectedVersion,
     });
+    dispatch(setHasEdited(false));
     successfulProjectResetCleanUp(true);
-  }, [selectedVersion, successfulProjectResetCleanUp]);
+  }, [dispatch, selectedVersion, successfulProjectResetCleanUp]);
 
   const showList = listLoaded && !listLoading && !listLoadError;
 
@@ -355,7 +358,20 @@ const VersionHistoryPanel: React.FunctionComponent<
                 isSelected={selectedVersion === version.versionId}
                 onChange={onVersionChange}
                 disabled={disabled}
-              />
+              >
+                {version.isLatest && hasEdited && !viewAsUserId && (
+                  <SaveVersionPanel
+                    projectSources={projectSources}
+                    onSuccess={handleSaveVersionSuccess}
+                    disabled={disabled || versionLoading}
+                    buttonLabel={
+                      version.comment
+                        ? 'Save new version' // Hardcoding this so it can be translated by Localize
+                        : lab2I18n.saveCurrentVersion()
+                    }
+                  />
+                )}
+              </VersionHistoryRow>
             ))}
             <VersionHistoryRow
               versionId={INITIAL_VERSION_ID}
@@ -414,13 +430,6 @@ const VersionHistoryPanel: React.FunctionComponent<
             )}
           </div>
         </div>
-      )}
-      {isLatestVersion(selectedVersion) && !viewAsUserId && (
-        <SaveVersionPanel
-          projectSources={projectSources}
-          onSuccess={handleSaveVersionSuccess}
-          disabled={disabled || versionLoading}
-        />
       )}
     </div>
   );

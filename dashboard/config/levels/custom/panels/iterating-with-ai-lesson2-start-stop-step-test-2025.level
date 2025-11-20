@@ -1,0 +1,34 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-19T17:43:31.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Start Value\n\nThe **start value** is the value where the loop begins. It sets the initial value of the loop variable.\n\n**Example**: In `for (let i = 0; i <= 10; i += 2)`, the start value is 0.",
+        "imageUrl": "https://images.code.org/557b822f2be8a94f7d699b71a6fe78c8-Pasted Graphic 1.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Stop Value\n\nThe **stop value** is the value or condition that tells the loop when to stop running. The loop ends when this condition is no longer true.\n\n**Example**: In `for (let i = 0; i <= 10; i += 2)`, the stop value is 10.",
+        "imageUrl": "https://images.code.org/d9a316ab9493fc036037cb77a21f22e3-Pasted Graphic 4.png",
+        "key": "iterating-with-ai-lesson2-start-stop-step-test-2025-5b925480-97f4-4c2b-96dd-30f55418a66f",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Step Value\n\nThe **step value** is the amount the loop variable changes after each repetition. It controls how quickly the loop moves from start to stop.\n\n**Example**: In `for (let i = 0; i <= 10; i += 2)`, the step value is 2.",
+        "imageUrl": "https://images.code.org/c6e00f2a36c3777cdb44712a59d5029a-Pasted Graphic 5.png",
+        "key": "iterating-with-ai-lesson2-start-stop-step-test-2025-e78aeb4b-9beb-440e-9842-022bea35ad7f",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-19T17:43:31.833+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-off-by-one-error-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-off-by-one-error-test-2025\"},{\"changed_at\":\"2025-11-19 17:44:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-19 18:11:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-19 21:44:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-19 21:45:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-19 21:46:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-19 21:48:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

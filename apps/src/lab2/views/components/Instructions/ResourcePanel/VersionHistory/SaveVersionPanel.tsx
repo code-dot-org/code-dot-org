@@ -14,12 +14,14 @@ interface SaveVersionPanelProps {
   projectSources: ProjectSources | undefined;
   onSuccess: () => void;
   disabled: boolean;
+  buttonLabel: string;
 }
 
 const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
   projectSources,
   onSuccess,
   disabled,
+  buttonLabel,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
   const [isSaving, setIsSaving] = useState(false);
@@ -89,22 +91,26 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
     <div className={moduleStyles.footerPanel}>
       <div className={moduleStyles.saveCurrentVersionDescription}>
         <div className={moduleStyles.saveCurrentVersionDescriptionInput}>
-          <label htmlFor="commit-description" className={moduleStyles.label}>
-            {lab2I18n.describeYourChanges()}
-          </label>
           <textarea
             id="commit-description"
             onChange={e => setCommitDescription(e.target.value)}
             value={commitDescription}
             className={moduleStyles.textArea}
             disabled={disabled}
+            placeholder={lab2I18n.describeYourChanges()}
           />
         </div>
         <Button
           id="save-version-button"
           size="s"
+          type="secondary"
+          color="gray"
+          iconLeft={{
+            iconName: 'save',
+            iconStyle: 'solid',
+          }}
           className={moduleStyles.versionButton}
-          text={lab2I18n.saveVersion()}
+          text={buttonLabel}
           onClick={onSaveVersion}
           disabled={disabled || isSaving || commitDescription.trim() === ''}
         />
