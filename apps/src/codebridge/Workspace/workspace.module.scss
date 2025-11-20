@@ -104,3 +104,8 @@
     text-overflow: ellipsis;
   }
 }
+
+.previousVersionBanner {
+  border-bottom: variables.$default-border;
+  border-radius: 0;
+}

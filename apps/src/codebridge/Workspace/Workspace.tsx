@@ -12,14 +12,13 @@ import React, {useRef} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {setRestoredOldVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   isReadOnlyWorkspace,
   isProjectTemplateLevel,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import HeaderButtons from './HeaderButtons';
 
@@ -43,12 +42,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const containerRef = useRef<HTMLDivElement>(null);
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
-  const viewingOldVersion = useAppSelector(
-    state => state.lab2Project.viewingOldVersion
-  );
-  const hasRestoredOldVersion = useAppSelector(
-    state => state.lab2Project.restoredOldVersion
-  );
+
   const showLockedFilesBanner = useAppSelector(
     state => state.codebridgeWorkspace.showLockedFilesBanner
   );
@@ -58,11 +52,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const showFileBrowser = useAppSelector(
     state => state.codebridgeWorkspace.showFileBrowser
   );
-  const dispatch = useAppDispatch();
-
-  const closeRestoredVersionBanner = () => {
-    dispatch(setRestoredOldVersion(false));
-  };
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
 
   return (
     <div style={style} className={className}>
@@ -74,6 +66,14 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
+        {viewingOldVersion && (
+          <Alert
+            className={moduleStyles.previousVersionBanner}
+            text={`You're viewing a previous version of this project from DATE.`}
+            type="warning"
+            size="xs"
+          />
+        )}
         <div
           className={classnames(moduleStyles.workspaceWorkarea, {
             [moduleStyles.withFileBrowser]: showFileBrowser,
@@ -137,19 +137,6 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               <Alert
                 text={codebridgeI18n.viewingWidgetView()}
                 type={'warning'}
-              />
-            )}
-            {viewingOldVersion && (
-              <Alert
-                text={codebridgeI18n.viewingOldVersion()}
-                type={'warning'}
-              />
-            )}
-            {hasRestoredOldVersion && (
-              <Alert
-                text={codebridgeI18n.restoredOldVersion()}
-                type={'success'}
-                onClose={closeRestoredVersionBanner}
               />
             )}
           </div>

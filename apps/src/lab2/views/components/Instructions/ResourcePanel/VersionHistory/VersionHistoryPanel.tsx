@@ -3,6 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -75,6 +76,12 @@ const VersionHistoryPanel: React.FunctionComponent<
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+  const hasRestoredOldVersion = useAppSelector(
+    state => state.lab2Project.restoredOldVersion
+  );
+  const closeRestoredVersionBanner = () => {
+    dispatch(setRestoredOldVersion(false));
+  };
 
   const projectSources = useAppSelector(
     state => state.lab2Project.projectSources
@@ -318,13 +325,29 @@ const VersionHistoryPanel: React.FunctionComponent<
         </div>
       )}
       {listLoadError && (
-        <div className={moduleStyles.message}>
-          <Alert
-            type="danger"
-            text={lab2I18n.versionHistoryLoadFailure()}
-            size="s"
-          />
-        </div>
+        <Alert
+          className={moduleStyles.message}
+          type="danger"
+          text={lab2I18n.versionHistoryLoadFailure()}
+          size="xs"
+        />
+      )}
+      {hasRestoredOldVersion && (
+        <Alert
+          className={moduleStyles.message}
+          text={codebridgeI18n.restoredOldVersion()}
+          type="success"
+          size="xs"
+          onClose={closeRestoredVersionBanner}
+        />
+      )}
+      {versionLoadError && (
+        <Alert
+          className={moduleStyles.message}
+          text={lab2I18n.versionLoadFailure()}
+          type="danger"
+          size="xs"
+        />
       )}
       {showList && (
         <div className={moduleStyles.listContainer}>
@@ -385,17 +408,6 @@ const VersionHistoryPanel: React.FunctionComponent<
                 (latestVersion === selectedVersion) === true
               }
             />
-          </div>
-          <div className={moduleStyles.listFooter}>
-            {versionLoadError && (
-              <div className={classNames(moduleStyles.versionLoadError)}>
-                <Alert
-                  type="danger"
-                  text={lab2I18n.versionLoadFailure()}
-                  size="s"
-                />
-              </div>
-            )}
           </div>
         </div>
       )}
