@@ -40,9 +40,7 @@ layout: wide_index
 %script{src: webpack_asset_path("js/tutorialExplorer.js")}
 
 - use_preview = !!request.params["preview"]
-- tutorial_sheet_id = use_preview ? :tutorials_preview : :tutorials
-- no_cache = use_preview
-- tutorials_contents = Tutorials.new(tutorial_sheet_id, no_cache).contents
+- tutorials_contents = []
 
 -# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
 - tutorials_contents.each do |tutorial|
@@ -87,7 +85,7 @@ layout: wide_index
       roboticsButtonUrl: "#{resolve_url('/learn/robotics')}",
       showSortDropdown: false,
       disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])},
-      defaultSortByPopularity: #{Tutorials.sort_by_popularity?(request.site, DCDO.get("hoc_mode", CDO.default_hoc_mode))}
+      defaultSortByPopularity: false,
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
