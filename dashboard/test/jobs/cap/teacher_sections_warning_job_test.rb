@@ -126,5 +126,15 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
         perform_enqueued_jobs {perform_later}
       end
     end
+
+    context 'when student is locked but in a Google Classroom section' do
+      let(:section) {create(:section, user: teacher, name: section_name, hidden: section_hidden, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)}
+
+      it 'does not warn teacher because student is compliant via section membership' do
+        expect_teacher_warning_to_be_sent.never
+        expect_event_logging.never
+        perform_enqueued_jobs {perform_later}
+      end
+    end
   end
 end

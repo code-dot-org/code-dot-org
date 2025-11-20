@@ -15,12 +15,22 @@ module CAP
         email_cap_sections = []
 
         cap_affected_sections.where(user: teacher).find_each do |section|
+          section_students = Queries::ChildAccount.cap_affected(scope: section.students)
+          # Although the student might normally be affected by CAP, we have exceptions
+          # such as being in a school managed sections. So we must double-check each student's
+          # compliance.
+          non_compliant_students = section_students.reject {|s| Policies::ChildAccount.compliant?(s)}
+
+          next if non_compliant_students.empty?
+
           cap_section_ids << section.id
           email_cap_sections << {
             Name: section.name,
             Link: section.manage_students_url,
           }
         end
+
+        next if email_cap_sections.empty?
 
         send_warning_email(teacher.email, teacher.name, email_cap_sections)
 
