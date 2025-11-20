@@ -40,6 +40,7 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
             isIconOnly
             icon={{iconName: 'gear'}}
             aria-label={i18n.settings()}
+            disabled={loading}
           />
         </div>
       </div>
