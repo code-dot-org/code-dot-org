@@ -15,7 +15,7 @@ interface SaveVersionPanelProps {
   onSuccess: () => void;
   versionLoading: boolean;
   disabled?: boolean;
-  buttonLabel?: string;
+  buttonLabel: string;
 }
 
 const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({

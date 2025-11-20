@@ -367,7 +367,7 @@ const VersionHistoryPanel: React.FunctionComponent<
                     disabled={disabled}
                     buttonLabel={
                       version.comment
-                        ? 'Save new version'
+                        ? 'Save new version' // Hardcoding this so it can be translated by Localize
                         : lab2I18n.saveCurrentVersion()
                     }
                   />

@@ -87,7 +87,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             </WithTooltip>
           )}
         </div>
-        {children && children}
+        {children}
         {comment && (
           <BodyFourText className={moduleStyles.commitDescription} noMargin>
             {comment}
