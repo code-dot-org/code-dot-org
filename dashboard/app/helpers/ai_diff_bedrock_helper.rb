@@ -312,7 +312,7 @@ module AiDiffBedrockHelper
   ALPHABET = ('a'..'z').to_a
 
   def progress_csv_for_all_sections(section_contexts)
-    return [] unless section_contexts.respond_to?('map')
+    return [] unless section_contexts.respond_to?(:map)
 
     section_contexts.map do |section_context|
       section = section_context[:section]
