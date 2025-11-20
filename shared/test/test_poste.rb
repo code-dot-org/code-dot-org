@@ -8,6 +8,8 @@ require 'digest/md5'
 
 # rubocop:disable CustomCops/PegasusDbUsage
 class PosteTest < SequelTestCase
+  include SetupTest
+
   STUDENT_EMAIL = 'student@example.net'.freeze
   STUDENT_EMAIL_HASH = Digest::MD5.hexdigest(STUDENT_EMAIL).freeze
   TEACHER_EMAIL = 'teacher@example.net'.freeze
