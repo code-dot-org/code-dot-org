@@ -8,6 +8,7 @@ on:
       - staging
       - staging-next
     paths:
+      - "apps/**"
       - "frontend/**"
       - ".github/**"
 
@@ -20,6 +21,7 @@ jobs:
     runs-on: ubuntu-24.04
     outputs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
+      apps-changed: ${{ steps.changes.outputs.apps }}
     steps:
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
@@ -29,6 +31,10 @@ jobs:
         id: changes
         with:
           filters: |
+            apps:
+              - 'apps/**'
+              - 'frontend/**'
+              - '.github/**'
             component-library:
               - 'frontend/apps/design-system-storybook/**'
               - 'frontend/packages/component-library/**'
@@ -36,6 +42,13 @@ jobs:
               - 'frontend/packages/fonts/**'
               - 'frontend/*'
               - '.github/**'
+
+  # Start the apps CI workflow
+  apps:
+    if: ${{ needs.setup.outputs.apps-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/apps-ci.yml
+    secrets: inherit
 
   # Start the component library CI workflow
   component-library:
