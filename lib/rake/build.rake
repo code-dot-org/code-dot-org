@@ -224,12 +224,12 @@ def get_js_build_command
   if CDO.optimize_webpack_assets
     # Skip clean step in CI to take advantage of cached build artifacts
     if ENV['CI']
-      'npm run build:dist'
+      'yarn build:dist'
     else
       # Run npm commands separately to ensure NODE_OPTIONS are set correctly for the build step.
-      'npm run clean; npm run build:dist'
+      'yarn clean; yarn build:dist'
     end
   else
-    'npm run build'
+    'yarn build'
   end
 end
