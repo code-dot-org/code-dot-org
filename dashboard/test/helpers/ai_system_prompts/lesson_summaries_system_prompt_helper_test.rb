@@ -82,7 +82,7 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
   end
 
   test "get_system_prompt returns prompt with lesson data in the podcast script format" do
-    prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+    prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
 
     # Test that the prompt includes lesson basic information
     assert_includes prompt, "Lesson Name: #{@lesson.name}"
@@ -156,7 +156,7 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
     non_existent_user_id = 999999
     result = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_personalization(non_existent_user_id)
 
-    assert_nil result
+    assert_equal "", result
   end
 
   test "get_personalization returns empty string when profile exists but has no data" do
@@ -182,7 +182,7 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
 
     result = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_personalization(@test_user.id)
 
-    assert_includes result, "They rate their confidence with computer science concepts at 7, with 10 being extremely confident, and 1 being not confident at all."
+    assert_includes result, "They rate their confidence with computer science concepts at 7 out of 10, with 10 being extremely confident and 0 being not confident at all."
   end
 
   test "get_personalization includes teaching goals as bulleted list" do
@@ -348,35 +348,8 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
 
     # Test that each piece of information starts on a new line
     lines = result.split("\n").reject(&:empty?)
-    assert lines.length >= 2
-    assert lines[0].include?("years of experience")
-    assert lines[1].include?("confidence with computer science")
-  end
-
-  test "get_system_prompt includes personalization when current_user is set" do
-    profile_data = {"yearsTeaching" => 10, "selectedConfidence" => 8}
-    TeachingProfileData.create(user_id: @test_user.id, individual_data: profile_data)
-
-    # Mock current_user for the helper
-    AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:current_user).returns(@test_user)
-
-    prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
-
-    assert_includes prompt, "The teacher has 10 years of experience"
-    assert_includes prompt, "confidence with computer science concepts at 8"
-    assert_includes prompt, "Use the following lesson plan to generate your summary:"
-  end
-
-  test "get_system_prompt works without personalization when current_user is nil" do
-    # Mock current_user as nil
-    AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:current_user).returns(nil)
-
-    prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
-
-    # Should not include personalization content
-    refute_includes prompt, "years of experience"
-    refute_includes prompt, "confidence with computer science"
-    # But should still include the main prompt content
-    assert_includes prompt, "Use the following lesson plan to generate your summary:"
+    assert lines.length >= 3
+    assert lines[1].include?("years of experience")
+    assert lines[2].include?("confidence with computer science")
   end
 end

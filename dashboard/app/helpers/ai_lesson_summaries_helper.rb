@@ -26,7 +26,7 @@ module AiLessonSummariesHelper
   end
 
   def self.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, response_format)
-    ai_lesson_summary = get_ai_lesson_summary(lesson_id, response_format)
+    ai_lesson_summary = get_ai_lesson_summary(lesson_id, user_id, response_format)
     if ai_lesson_summary[:status] == 200
       AiLessonSummary.create!({user_id: user_id, lesson_id: lesson_id, lesson_summary: ai_lesson_summary[:json]})
     end

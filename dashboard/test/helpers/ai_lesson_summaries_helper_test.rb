@@ -35,7 +35,9 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     # Mock the system prompt helper
     AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:get_system_prompt).
-      with(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(@system_prompt)
+      with(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(@system_prompt)
+    AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:get_system_prompt).
+      with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(@system_prompt)
   end
 
   # *****
@@ -53,7 +55,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     mock_client.expects(:request_lesson_summary).with(@system_prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(mock_response)
     AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
 
-    result = AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    result = AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
 
     expected_content = {
       learning_objective: "Students will learn variables",
@@ -79,7 +81,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
 
     assert_raises(StandardError) do
-      AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+      AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     end
   end
 
@@ -95,9 +97,9 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
 
     AiSystemPrompts::LessonSummariesSystemPromptHelper.expects(:get_system_prompt).
-      with(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(@system_prompt)
+      with(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(@system_prompt)
 
-    AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
   end
 
   # *****
@@ -106,7 +108,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
   test "retrieve_and_save_ai_lesson_summary creates AiLessonSummary when API call succeeds" do
     # Mock successful API response
-    AiLessonSummariesHelper.expects(:get_ai_lesson_summary).with(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
+    AiLessonSummariesHelper.expects(:get_ai_lesson_summary).with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
       returns({status: 200, json: "Generated lesson summary"})
 
     assert_difference 'AiLessonSummary.count', 1 do
@@ -121,7 +123,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
   test "retrieve_and_save_ai_lesson_summary does not create AiLessonSummary when API call fails" do
     # Mock failed API response
-    AiLessonSummariesHelper.expects(:get_ai_lesson_summary).with(@lesson.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
+    AiLessonSummariesHelper.expects(:get_ai_lesson_summary).with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
       returns({status: 500, json: "Internal server error"})
 
     assert_no_difference 'AiLessonSummary.count' do
@@ -220,10 +222,6 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
       messages: [
         {
           role: "system",
-          content: "You are an expert teaching assistant in a computer science classroom who has been asked to summarize the upcoming lesson to help the teacher prepare for class."
-        },
-        {
-          role: "user",
           content: prompt
         }
       ],

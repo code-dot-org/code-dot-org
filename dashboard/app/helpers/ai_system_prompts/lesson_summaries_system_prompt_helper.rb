@@ -122,7 +122,7 @@ Vocabulary: #{lesson_plan[:vocabularies].to_json}
     unless profile
       return ''
     end
-    personalization_string = "Use the following information about the teacher to personalize your summary:"
+    personalization_string = ""
     if profile.individual_data["yearsTeaching"]
       personalization_string << "\nThe teacher has #{profile.individual_data["yearsTeaching"]} years of experience in the classroom."
     end
@@ -158,7 +158,8 @@ Vocabulary: #{lesson_plan[:vocabularies].to_json}
                 end
       personalization_string << "\nThey were matched with the following teaching persona as part of a personalization quiz:\n#{persona}\n\n"
     end
-    personalization_string
+
+    personalization_string.empty? ? "" : "Use the following information about the teacher to personalize your summary:" + personalization_string
   end
 
   def self.get_lesson_materials(lesson_id)
