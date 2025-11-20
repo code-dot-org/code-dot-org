@@ -138,6 +138,8 @@ class PosteTest < SequelTestCase
 end
 
 class Poste2Test < SequelTestCase
+  include SetupTest
+
   FROM_NAME = 'Code dot org'.freeze
   FROM_EMAIL = 'noreply@code.org'.freeze
   REPLY_TO_NAME = 'Reply-to Person'.freeze
