@@ -1,6 +1,7 @@
 require_relative './rake_utils'
 require_relative '../../deployment'
 require 'cdo/chat_client'
+require 'shellwords'
 
 module TestRunUtils
   def self.run_apps_tests
@@ -76,7 +77,10 @@ module TestRunUtils
     database = writer.path[1..]
     writer.path = ''
     opts = MysqlConsoleHelper.options(writer)
-    mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
+    # Use MYSQL_PWD environment variable instead of --password= to prevent
+    # password from appearing in logs. Set it inline for shell commands.
+    mysql_pwd_env = writer.password ? "MYSQL_PWD=#{Shellwords.escape(writer.password)} " : ''
+    mysqldump_opts = "#{mysql_pwd_env}mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
 
     if seed_data
       File.write(seed_file, seed_data)
@@ -117,9 +121,9 @@ module TestRunUtils
       databases = (2..procs).map {|i| "#{database}#{i}"}
       databases.each do |db|
         recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
-        RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql #{opts}"
+        RakeUtils.system_stream_output "echo '#{recreate_db}' | #{mysql_pwd_env}mysql #{opts}"
       end
-      pipes = databases.map {|db| ">(mysql #{opts} #{db})"}.join(' ')
+      pipes = databases.map {|db| ">(#{mysql_pwd_env}mysql #{opts} #{db})"}.join(' ')
       RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
     end
   end

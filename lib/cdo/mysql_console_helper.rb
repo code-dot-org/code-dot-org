@@ -7,7 +7,8 @@ module MysqlConsoleHelper
     database = db.path[1..]
     opts << "--database=#{database}" if database
     opts << "--port=#{db.port}" if db.port
-    opts << "--password=#{db.password}" if db.password
+    # Password is NOT included here to avoid exposure in logs.
+    # Use MYSQL_PWD environment variable instead (see run method).
     opts.join(' ')
   end
 
@@ -32,6 +33,13 @@ module MysqlConsoleHelper
 
     mysql_command = "mysql #{options(db)}"
     mysql_command += " --execute=\"#{args}\"" unless args.empty?
-    system(mysql_command)
+
+    # Use MYSQL_PWD environment variable instead of --password= to prevent
+    # password from appearing in process lists and logs.
+    # This is the recommended approach for automated scripts per MySQL documentation.
+    env = {}
+    env['MYSQL_PWD'] = db.password if db.password
+
+    system(env, mysql_command)
   end
 end
