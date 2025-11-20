@@ -2,6 +2,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import {Typography} from '@mui/material';
 import React from 'react';
 
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import i18n from '@cdo/locale';
 
 import styles from './widgetTemplate.module.scss';
@@ -12,6 +13,7 @@ interface WidgetTemplateProps {
   gridHeight: number;
   children: React.ReactNode;
   scrollable?: boolean;
+  loading?: boolean;
 }
 
 const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
@@ -20,6 +22,7 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
   gridHeight,
   children,
   scrollable = false,
+  loading = false,
 }) => {
   return (
     <div
@@ -45,7 +48,13 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
           scrollable ? styles.scrollable : styles.hidden
         }`}
       >
-        {children}
+        {loading ? (
+          <div className={styles.loadingContainer}>
+            <Spinner size="large" />
+          </div>
+        ) : (
+          children
+        )}
       </div>
     </div>
   );
