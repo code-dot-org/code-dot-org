@@ -2399,7 +2399,7 @@
     }
   },
   "GeneratedDancers_changeMoveEachLR": {
-    "text": "{GROUP} do {MOVE} {DIR} forever",
+    "text": "{GROUP} do {MOVE} forever",
     "options": {
       "GROUP": {
         "s": "s",
@@ -2421,10 +2421,6 @@
         "MOVES.ThisOrThat": "This or That",
         "MOVES.Thriller": "Zombie",
         "MOVES.Rest": "None"
-      },
-      "DIR": {
-        "-1": "←",
-        "1": "→"
       }
     }
   },
@@ -2535,30 +2531,21 @@
       "EFFECT": {
         "\"none\"": "None",
         "\"rand\"": "(Random)",
-        "\"circles\"": "Circles",
         "\"quads\"": "Angles",
-        "\"color_cycle\"": "Colors",
-        "\"diamonds\"": "Diamonds",
         "\"disco_ball\"": "Disco Ball",
         "\"fireworks\"": "Fireworks",
-        "\"flowers\"": "Flowers",
         "\"growing_stars\"": "Growing Stars",
         "\"higher_power\"": "Higher Power",
         "\"swirl\"": "Hypno",
         "\"kaleidoscope\"": "Kaleidoscope",
         "\"lasers\"": "Laser Dance Floor",
         "\"splatter\"": "Paint Splatter",
-        "\"rainbow\"": "Rainbow",
-        "\"ripples_random\"": "Random Ripples",
-        "\"ripples\"": "Ripples",
         "\"snowflakes\"": "Snow",
         "\"squiggles\"": "Squiggles",
         "\"galaxy\"": "Space",
         "\"sparkles\"": "Sparkles",
         "\"spiral\"": "Spiral",
-        "\"disco\"": "Squares",
-        "\"stars\"": "Stars",
-        "\"music_wave\"": "Waves"
+        "\"stars\"": "Stars"
       },
       "PALETTE": {
         "\"rave\"": "Black and White",

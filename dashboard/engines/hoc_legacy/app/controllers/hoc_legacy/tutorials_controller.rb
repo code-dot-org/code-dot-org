@@ -31,42 +31,19 @@ module HocLegacy
     # GET /api/hour/finish
     def finish_current
       session_row = TutorialCompleter.call(controller: self)
-      redirect_to_congrats_page(session_row:)
+      redirect_to_course_completion_certificate_url(session_row:)
     end
 
     # GET /api/hour/finish/:code
     def finish
       session_row = TutorialCompleter.call(controller: self, tutorial: @tutorial)
-      redirect_to_congrats_page(session_row:)
+      redirect_to_course_completion_certificate_url(session_row:)
     end
 
     # GET /api/hour/finish_:code.png
     def finish_pixel
       TutorialPixelCompleter.call(controller: self, tutorial: @tutorial)
       send_pixel_png
-    end
-
-    # POST /api/hour/certificate
-    def certificate
-      session_params = params.permit(:session_s, :name_s)
-      session_row = PEGASUS_DB[:hoc_activity].where(session: session_params[:session_s]).first || {}
-
-      if session_row[:id] && session_row[:name].blank?
-        session_row[:name] = session_params[:name_s]&.strip&.presence
-        PEGASUS_DB[:hoc_activity].where(id: session_row[:id]).update(name: session_row[:name]) if session_row[:name]
-      end
-
-      render json: {
-        session:          session_row[:session],
-        tutorial:         session_row[:tutorial],
-        company:          session_row[:company],
-        started:          session_row[:started_at].present?,
-        pixel_started:    session_row[:pixel_started_at].present?,
-        pixel_finished:   session_row[:pixel_finished_at].present?,
-        finished:         session_row[:finished_at].present?,
-        name:             session_row[:name],
-        certificate_sent: session_row[:name].present?,
-      }
     end
 
     private def assign_tutorial
@@ -85,13 +62,11 @@ module HocLegacy
       send_file Rails.root.join('app/assets/images/1x1.png'), disposition: 'inline'
     end
 
-    private def redirect_to_congrats_page(session_row:)
-      congrats_url_params = {}
-
-      congrats_url_params[:i] = session_row[:session] if session_row.try(:[], :session).present?
-      congrats_url_params[:s] = Base64.urlsafe_encode64(@tutorial.tutorial_id) if @tutorial
-
-      redirect_to main_app.congrats_url(congrats_url_params), status: :found
+    private def redirect_to_course_completion_certificate_url(session_row:)
+      redirect_to helpers.course_completion_certificate_url(
+        session_id: session_row.try(:[], :session),
+        course_name: @tutorial&.tutorial_id,
+      )
     end
   end
 end

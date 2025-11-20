@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introducing Functions in Java Script
+# Introducing Functions in JavaScript
 
 #### When you build web apps, you often want something to happen — like showing a message when a button is clicked. But what if you want that same behavior in more than one place, or want to trigger it from different events?
 
@@ -31,16 +31,13 @@ markdown <<MARKDOWN
 
 #### When you start adding actions to buttons, it’s tempting to copy and paste the same lines again and again.
 
-#### Here’s what the code might look like before using a function:
+#### Here’s what the code might look like before using a function: 
 
-// levelbuilder is not loading pictures. I'm assuming it will be back up so I am continuing with text. 
-Hold for image.
-
-<img src="https://images.code.org/4bcfc9203dd932bd5393016a5e8a27fb-image-1745421696182.png" alt="Happy birthday Python code condensed with a function" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+<img src="https://images.code.org/2b5ecd2e31f5f7a8e97324b524050f2d-image-1762379600072.png" alt="javascript code without function" width="650px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
 
 #### This works fine—but notice the repetition?
 
-#### Each event handler repeats the same steps: add to `total` and update the display. If you ever want to change how the display looks, you’d have to fix it in multiple places.
+#### Each **event listener** repeats the same steps: add to `total` and update the display. If you ever want to change how the display looks, you’d have to fix it in multiple places.
 
 
 
@@ -48,30 +45,22 @@ Hold for image.
 
 #### By moving that repeated logic into a function, we can call it whenever we need it — no copy-pasting required.
 
-// levelbuilder is not loading pictures. I'm assuming it will be back up so I am continuing with text. 
-Hold for image.
-
-<img src="https://images.code.org/4bcfc9203dd932bd5393016a5e8a27fb-image-1745421696182.png" alt="Happy birthday Python code condensed with a function" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+<img src="https://images.code.org/d880c69ab976c30456ce071ca1dfcc08-image-1762379438457.png" alt="javascript code with function" width="650px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
 
 
 
 
-
-
-
-#### Now the code is shorter, easier to update, and easier for students to understand.
+#### Now the code for the event listeners are shorter, easier to update, and easier for students to understand.
 #### If you ever want to change how the total appears, you only need to edit one place — inside the `updateTotal()` function.
 
 
-
-
-
-## Let's look at how to create functions!
-
-
-
-
 ---
+
+## Next up
+#### Let's look at how to create functions!
+
+
+
 
 
 MARKDOWN

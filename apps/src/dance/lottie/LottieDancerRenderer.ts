@@ -28,6 +28,7 @@ import {
   CanvasAnimConfig,
   DanceMoves,
   DancerMetadata,
+  LottieImageLayer,
   LottieJSON,
   Palette,
 } from './LottieDancerTypes';
@@ -50,6 +51,10 @@ import {
   getSkeletonMetadataUrl,
   hideMagentaDress,
   safeFetchSvgText,
+  mirrorPngDataUrl,
+  getHeadScale,
+  cropDataUrl,
+  improvePalette,
 } from './LottieDancerUtils';
 
 const DEFAULT_SKELETON = 'unicorn';
@@ -61,7 +66,7 @@ export default class LottieDancerRenderer {
   private anim: AnimationItem | null = null;
   private totalFrames: number | null = null;
 
-  // Values pulled from appConfig/localStorage
+  // Values pulled from appConfig/sessionStorage
   private readonly headScale: number;
   private cachedAnimationData: {[key: string]: LottieJSON} = {};
   private skeletonNamePromise?: Promise<string>;
@@ -81,9 +86,13 @@ export default class LottieDancerRenderer {
   private bodyMetadataUrl?: string;
   private currentMove: DanceMoves | null;
   private fallbackSkeletonName: string;
+  private headLayers?: {
+    normal: LottieImageLayer;
+    mirrored: LottieImageLayer;
+  };
 
   constructor() {
-    this.headScale = 0.5;
+    this.headScale = getHeadScale();
     this.cachedAnimationData = {};
 
     const {urls} = resolveDancerAssets({
@@ -156,8 +165,11 @@ export default class LottieDancerRenderer {
       (this.ctx.canvas as HTMLElement).style.transform = `scaleX(${
         mirror ? -1 : 1
       })`;
-    } else {
-      (this.ctx.canvas as HTMLElement).style.transform = '';
+      // Re-flip the head image layer to remain net unmirrored.
+      if (this.headLayers) {
+        this.headLayers.normal.hd = mirror;
+        this.headLayers.mirrored.hd = !mirror;
+      }
     }
 
     const totalFrames = Math.max(1, this.totalFrames || 1);
@@ -303,6 +315,14 @@ export default class LottieDancerRenderer {
         }
       }
 
+      // If the palette is locked, we skip any adjustments. This is used for the default
+      // gray dancer. The value is specified in the dancer metadata JSON.
+      if (palette && !palette.lock) {
+        // Improve palette to avoid secondary and tertiary colors being too close to
+        // primary color.
+        palette = improvePalette(palette);
+      }
+
       // Recolor assets based on hard-coded accessory-name rules.
       applyColorMapping(animData, palette, skeletonName);
 
@@ -316,12 +336,22 @@ export default class LottieDancerRenderer {
           if (headComp && Array.isArray(headComp.layers)) {
             const {insertIndex, ks: headKs} =
               hideLayersByTypeAndCaptureKs(headComp);
+            // Crop edge artifacts from generated head PNGs.
+            const croppedHeadUrl = await cropDataUrl(headDataUrl);
             const assetId = ensureImageAsset(
               animData,
-              headDataUrl,
+              croppedHeadUrl,
               'img_head_custom'
             );
-            insertImageLayer(
+            const headMirrorDataUrl = await mirrorPngDataUrl(croppedHeadUrl);
+            const headMirrorAssetId = ensureImageAsset(
+              animData,
+              headMirrorDataUrl,
+              'img_head_custom_mirror'
+            );
+
+            // Insert both head layers at same position, mirroring disabled by default
+            const headNormal = insertImageLayer(
               headComp,
               insertIndex,
               assetId,
@@ -332,6 +362,19 @@ export default class LottieDancerRenderer {
               this.headScale,
               {bm: 0, hd: false}
             );
+            const headMirrored = insertImageLayer(
+              headComp,
+              insertIndex + 1,
+              headMirrorAssetId,
+              headKs,
+              'Head Image (mirrored)',
+              500,
+              500,
+              this.headScale,
+              {bm: 0, hd: true}
+            );
+
+            this.headLayers = {normal: headNormal, mirrored: headMirrored};
           }
         }
       }

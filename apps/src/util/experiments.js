@@ -66,6 +66,10 @@ experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
 experiments.WEBLAB2_ACCEPT_REJECT = 'weblab2-accept-reject';
 // Enable ActionCable load testing
 experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
+// Use v2 of Web Lab 2 preview
+experiments.WEBLAB2_PREVIEW_V2 = 'weblab2-preview-v2';
+// Enable AI lesson summaries
+experiments.AI_LESSON_SUMMARIES = 'ai_lesson_summaries';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
