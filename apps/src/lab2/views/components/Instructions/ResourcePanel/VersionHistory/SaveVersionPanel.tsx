@@ -13,15 +13,13 @@ import moduleStyles from './save-version-panel.module.scss';
 interface SaveVersionPanelProps {
   projectSources: ProjectSources | undefined;
   onSuccess: () => void;
-  versionLoading: boolean;
-  disabled?: boolean;
+  disabled: boolean;
 }
 
 const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
   projectSources,
   onSuccess,
-  versionLoading,
-  disabled = false,
+  disabled,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
   const [isSaving, setIsSaving] = useState(false);
@@ -108,12 +106,7 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
           className={moduleStyles.versionButton}
           text={lab2I18n.saveVersion()}
           onClick={onSaveVersion}
-          disabled={
-            disabled ||
-            versionLoading ||
-            isSaving ||
-            commitDescription.trim() === ''
-          }
+          disabled={disabled || isSaving || commitDescription.trim() === ''}
         />
       </div>
     </div>

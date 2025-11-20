@@ -23,6 +23,8 @@ class ProjectCommitsController < ApplicationController
           user_id: current_user&.id
         }
       )
+      render json: {error: 'A comment already exists for this project version.'}, status: :conflict
+      return
     else
       # New record - set the comment and save.
       project_commit.comment = params[:comment]

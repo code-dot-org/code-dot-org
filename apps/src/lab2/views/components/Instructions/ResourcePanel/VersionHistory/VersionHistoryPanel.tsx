@@ -419,8 +419,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         <SaveVersionPanel
           projectSources={projectSources}
           onSuccess={handleSaveVersionSuccess}
-          versionLoading={versionLoading}
-          disabled={disabled}
+          disabled={disabled || versionLoading}
         />
       )}
     </div>
