@@ -26,11 +26,11 @@ namespace :build do
       RakeUtils.yarn_install
 
       ChatClient.log 'Building <b>apps</b>...'
-      npm_command = get_js_build_command
+      js_build_command = get_js_build_command
       if ENV['PROFILE_APPS_BUILD']
-        RakeUtils.system_stream_output npm_command
+        RakeUtils.system_stream_output js_build_command
       else
-        RakeUtils.system npm_command
+        RakeUtils.system js_build_command
       end
 
       File.write(commit_hash, calculate_apps_commit_hash)
