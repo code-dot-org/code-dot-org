@@ -36,7 +36,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     assert_equal 'Original comment', project_commit.comment
     assert_response :conflict
     response_json = JSON.parse(@response.body)
-    assert_equal 'A comment already exists for this version', response_json['error']
+    assert_equal 'A comment already exists for this project version.', response_json['error']
   end
 
   test "duplicate project commit submission notifies Honeybadger" do
@@ -62,7 +62,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     post :create, params: {storage_id: 'abcdef', version_id: 'version456', comment: 'Second comment'}
     assert_response :conflict
     response_json = JSON.parse(@response.body)
-    assert_equal 'A comment already exists for this version', response_json['error']
+    assert_equal 'A comment already exists for this project version.', response_json['error']
   end
 
   test "can fetch project commits of own project" do
