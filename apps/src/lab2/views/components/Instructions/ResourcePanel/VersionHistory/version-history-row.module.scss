@@ -43,8 +43,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-block: 0.5rem;
-  padding-inline: 0.5rem 0.625rem;
+  height: 38px;
+  padding-inline: 0.5rem 0.375rem;
 }
 
 .commitDescription {
@@ -53,6 +53,13 @@
   padding: 0.5rem 0.75rem;
 }
 
+.restoreButton i {
+  html[dir='rtl'] & {
+    transform: scaleX(-1);
+  }
+}
+
 .autoSavedIcon {
   color: var(--text-neutral-placeholder);
+  margin-inline-end: 0.125rem;
 }
