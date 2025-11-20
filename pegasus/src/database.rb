@@ -1,6 +1,10 @@
 require 'cdo/db'
 require 'cdo/geocoder'
 require_relative '../helpers/properties'
+require 'cdo/form'
+require 'securerandom'
+require 'active_support/core_ext/enumerable'
+require 'active_support/core_ext/object/deep_dup'
 
 def zip_code_from_code(code)
   DB[:geography_us_zip_codes].where(code_s: code.to_s.strip).first
