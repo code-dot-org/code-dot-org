@@ -15,6 +15,7 @@ require 'cdo/data/logging/infrastructure_logger'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
+require 'cdo/chromedriver_timing'
 require 'cdo/ci_utils'
 
 require 'haml'
@@ -88,7 +89,20 @@ def main(options)
   end
 
   report_tests_finished start_time, run_results, run_status_page_url
-  run_results.count {|feature_succeeded, _, _| !feature_succeeded}
+
+  # Collect first-run timing data from results (returned from child processes)
+  first_run_results = run_results.filter_map {|_, _, _, timing| timing}
+
+  # Save chromedriver timing data if we collected any first-run results
+  if first_run_results.any? && ChromedriverTiming.should_write_data?
+    first_run_results.each do |timing|
+      ChromedriverTiming.update_timing(timing[:key], timing[:run_time], timing[:failed])
+    end
+    ChromedriverTiming.save_to_file
+    puts "Saved chromedriver timing data for #{first_run_results.count} tests to #{ChromedriverTiming::TIMING_FILE}"
+  end
+
+  run_results.count {|feature_succeeded, _, _, _| !feature_succeeded}
 ensure
   close_log_files
 end
@@ -421,7 +435,7 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   total_flaky_successful_reruns = 0
   suite_success_count = 0
   failures = []
-  run_results.each do |feature_succeeded, message, reruns|
+  run_results.each do |feature_succeeded, message, reruns, _|
     total_flaky_reruns += reruns
     if feature_succeeded
       total_flaky_successful_reruns += reruns
@@ -533,6 +547,14 @@ end
 # Returns the estimated duration in seconds or nil if unknown
 def estimate_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
+
+  # When running locally, prefer chromedriver timing data
+  if $options && ($options.local || $options.first_run_local)
+    estimate = ChromedriverTiming.estimate_for_test(test_run_identifier)
+    return estimate if estimate
+  end
+
+  # Fall back to SauceLabs-based timing
   TestFlakiness.summary_for(:test_estimate, test_run_identifier)
 rescue Exception => exception
   puts "Error calculating estimate: #{exception.full_message}. Will stop calculating test flakiness for this run."
@@ -806,6 +828,16 @@ def run_feature(browser, feature, options)
     }
   )
 
+  # Track first-run results for chromedriver timing (only when running locally)
+  first_run_timing = nil
+  if options.local || options.first_run_local
+    first_run_timing = {
+      key: test_run_string,
+      run_time: test_duration,
+      failed: !cucumber_succeeded
+    }
+  end
+
   # After the first run, we no longer want to consider the `first_run_local`
   # option when deciding whether a test should be run locally.
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
@@ -911,7 +943,7 @@ def run_feature(browser, feature, options)
     print skip_warning
   end
 
-  [feature_succeeded, message, reruns]
+  [feature_succeeded, message, reruns, first_run_timing]
 end
 
 #

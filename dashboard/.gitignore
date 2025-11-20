@@ -12,6 +12,7 @@
 # unit test and ui test artifacts
 /coverage
 /public/assets
+#/test/ui/chromedriver-feature-timing.csv
 /test/ui/log
 /test/ui/test_status_*.html
 
