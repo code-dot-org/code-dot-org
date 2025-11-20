@@ -16,6 +16,7 @@ This document details the specific log formats used across the Code.org platform
 - [Lambda Execution Logs (CloudWatch Logs)](#lambda-execution-logs-cloudwatch-logs)
 - [CloudTrail Logs](#cloudtrail-logs)
 - [Admin/Audit Logs (CloudWatch Logs)](#adminaudit-logs-cloudwatch-logs)
+- [ProxySQL Logs (CloudWatch Logs)](#proxysql-logs-cloudwatch-logs)
 - [Kinesis Firehose Events](#kinesis-firehose-events)
 
 ---
@@ -625,6 +626,81 @@ fields @timestamp, @logStream
 
 ---
 
+## ProxySQL Logs (CloudWatch Logs)
+
+**Format:** Plain text  
+**Official Documentation:** [ProxySQL Error Log](https://github.com/sysown/proxysql/wiki/Global-variables#errorlog)
+
+ProxySQL writes error and connection logs to `/var/lib/proxysql/proxysql.log` on EC2 instances. The CloudWatch Agent tails this file and streams entries to the `<env>-proxysql` CloudWatch Logs group (e.g., `production-proxysql`). The log is configured via the ProxySQL [configuration template](../cookbooks/cdo-mysql/templates/default/proxysql.cnf.erb#L20) and CloudWatch agent setup in the [proxy recipe](../cookbooks/cdo-mysql/recipes/proxy.rb#L124).
+
+ProxySQL is a connection pooler that sits between Rails and Aurora MySQL, handling read/write splitting and connection management. The error log captures connection failures, query errors, health check issues, and administrative operations.
+
+### Example Log Entries
+
+**Connection Error:**
+```
+2025-10-29 23:15:42 [WARNING] Connection failure to (127.0.0.1:3306): error 2003 (Can't connect to MySQL server)
+```
+
+**Query Error:**
+```
+2025-10-29 23:16:15 [ERROR] Query failed: SELECT * FROM invalid_table (Error: Table 'dashboard.invalid_table' doesn't exist)
+```
+
+**Health Check Failure:**
+```
+2025-10-29 23:17:33 [WARNING] Monitor failed to connect to server: (mysql-host:3306) (Error: Connection timeout)
+```
+
+**Server Status Change:**
+```
+2025-10-29 23:18:01 [INFO] Server status changed: mysql-read-replica:3306 (status: ONLINE -> SHUNNED, reason: Replication lag)
+```
+
+### Fields
+
+ProxySQL logs are plain text with timestamp prefixes. Common patterns include:
+
+- **Timestamp**: `YYYY-MM-DD HH:MM:SS` at the start of each line
+- **Severity**: `[INFO]`, `[WARNING]`, `[ERROR]` tags
+- **Message type**: Connection errors, query failures, health check results, server status changes
+- **Server identifiers**: Hostname:port tuples for backend MySQL servers
+- **Error details**: MySQL error codes and descriptive messages
+
+### Useful Queries/Patterns
+
+**Find connection failures:**
+```
+fields @timestamp, @message
+| filter @message like /Connection failure/
+| sort @timestamp desc
+```
+
+**Find query errors:**
+```
+fields @timestamp, @message
+| filter @message like /Query failed/ or @message like /ERROR.*SELECT/
+| sort @timestamp desc
+```
+
+**Monitor server status changes:**
+```
+fields @timestamp, @message
+| filter @message like /Server status changed/
+| parse @message /Server status changed: (?<server>[^:]+:[0-9]+)/
+| stats count() by bin(@timestamp, 5m) as time, server
+```
+
+**Check for health check failures:**
+```
+fields @timestamp, @message
+| filter @message like /Monitor failed/
+| parse @message /Monitor failed to connect to server: (?<server>[^)]+)/
+| stats count() by bin(@timestamp, 1h) as hour, server
+```
+
+---
+
 ## Kinesis Firehose Events
 
 **Format:** JSON (client-defined)  
@@ -677,6 +753,7 @@ Firehose events are client-defined and typically include:
 | RDS Enhanced Monitoring | JSON | CloudWatch Logs `RDSOSMetrics` | Indefinite | [RDS Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html) |
 | Lambda Execution | Plain text | CloudWatch Logs `/aws/lambda/<function>` | Indefinite | [AWS Lambda Logs](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html) |
 | Admin/Audit | Plain text | CloudWatch Logs `/admin/auditlogs` | Indefinite | [AWS Systems Manager Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-logging.html) |
+| ProxySQL | Plain text | CloudWatch Logs `<env>-proxysql` | Indefinite | [ProxySQL Error Log](https://github.com/sysown/proxysql/wiki/Global-variables#errorlog) |
 | Firehose (deprecated) | JSON | S3 → Redshift | Varies | [Kinesis Firehose](https://docs.aws.amazon.com/firehose/latest/dev/) |
 
 ---

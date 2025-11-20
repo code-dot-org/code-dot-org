@@ -38,12 +38,13 @@ This document inventories logging across the Code.org platform. It explains, in 
 
 ### Application servers (EC2)
 
-- **Rails HTTP logging (Lograge → syslog/CloudWatch)**: Each Puma process emits condensed CEE JSON lines via Lograge in [production](../dashboard/config/environments/production.rb#L71-L72), [staging](../dashboard/config/environments/staging.rb#L69-L70), and [adhoc](../dashboard/config/environments/adhoc.rb#L33-L37). These lines are written to `/var/log/syslog`, tailed by the CloudWatch agent, and land in `<env>-syslog` (e.g., `production-syslog`). See [format details](./log-formats.md#rails-application-logs-cloudwatch-logslograge-cee-json).
-- **Rails stdout/stderr files (Puma)**: Rails also writes unstructured `puma_stdout.log` / `puma_stderr.log` (under each app’s `log/` directory). These files retain framework chatter, stack traces, startup banners, and any output from libraries that bypass the Rails logger. They remain local until the hourly [S3 uploader](./app-log-upload.md) syncs `dashboard/log/` and `pegasus/log/`.
-- **NGINX reverse proxy**: On each frontend EC2 instance, NGINX terminates connections from the ALB and proxies to Puma. It writes request and error lines to `/var/log/nginx/access.log` and `/var/log/nginx/error.log` as configured in the [nginx config](../cookbooks/cdo-nginx/templates/default/nginx.conf.erb#L19-L20). Once Pegasus is retired, we can run a single Puma service directly behind the ALB and eliminate NGINX entirely.
+- **EC2: Rails HTTP logging and instance syslog stream (Lograge → syslog/CloudWatch)**: Each Puma process emits condensed CEE JSON lines via Lograge in [production](../dashboard/config/environments/production.rb#L71-L72), [staging](../dashboard/config/environments/staging.rb#L69-L70), and [adhoc](../dashboard/config/environments/adhoc.rb#L33-L37). These lines are written to `/var/log/syslog`, which also receives system‑level events (ssh, sudo, cron, package updates) from rsyslog. rsyslog bounds disk usage ([config](../cookbooks/cdo-syslog/recipes/default.rb#L16-L35)), and the CloudWatch Agent tails this file and streams everything to the `<env>-syslog` log group (e.g., `production-syslog`), giving operators a single place to browse OS and Rails entries together. See [format details](./log-formats.md#rails-application-logs-cloudwatch-logslograge-cee-json).
+- **EC2: Rails stdout/stderr files (Puma)**: Rails also writes unstructured `puma_stdout.log` / `puma_stderr.log` (under each app's `log/` directory). These files retain framework chatter, stack traces, startup banners, and any output from libraries that bypass the Rails logger. They remain local until the hourly [S3 uploader](./app-log-upload.md) syncs `dashboard/log/` and `pegasus/log/`.
+- **EC2: Rails milestone.log**: The dashboard app writes milestone events (e.g., line-of-code completion) to `dashboard/log/milestone.log`. These files are synced hourly to S3 by the [uploader](../bin/upload-logs-to-s3#L4-L12) along with other app logs. **Note: We plan to phase out milestone.log in favor of more structured analytics events.**
+- **EC2: NGINX reverse proxy**: On each frontend EC2 instance, NGINX terminates connections from the ALB and proxies to Puma. It writes request and error lines to `/var/log/nginx/access.log` and `/var/log/nginx/error.log` as configured in the [nginx config](../cookbooks/cdo-nginx/templates/default/nginx.conf.erb#L19-L20). Once Pegasus is retired, we can run a single Puma service directly behind the ALB and eliminate NGINX entirely.
+- **EC2: ProxySQL logs**: ProxySQL (database connection pooler) writes to `/var/lib/proxysql/proxysql.log` and is streamed to CloudWatch Logs as `<env>-proxysql` (e.g., `production-proxysql`) via the CloudWatch agent ([config](../cookbooks/cdo-mysql/recipes/proxy.rb#L124)).
+- **EC2: Cron jobs and background tasks**: Many scheduled tasks load the main Rails stack and therefore log exactly like the web app (same formatter and destinations), but on the production daemon instance (or staging or test instances). As with the web traffic, the [hourly uploader](../bin/upload-logs-to-s3#L4-L12) syncs their app log directories to S3; see the [log upload doc](./app-log-upload.md).
 - **Browser events**: Client‑side code can POST structured events that the server batches and writes to a per‑environment CloudWatch Logs [log group](../aws/cloudformation/components/logging.yml.erb#L1-L13). The server endpoint that receives and publishes these is the [controller entrypoint](../dashboard/app/controllers/browser_events_controller.rb#L4-L13) and [publisher](../dashboard/app/controllers/browser_events_controller.rb#L21-L27).
-- **Cron jobs and background tasks**: Many scheduled tasks load the main Rails stack and therefore log exactly like the web app (same formatter and destinations), but on the production daemon instance (or staging or test instances). As with the web traffic, the [hourly uploader](../bin/upload-logs-to-s3#L4-L12) syncs their app log directories to S3; see the [log upload doc](./app-log-upload.md).
-- **Instance syslog stream**: System‑level events (ssh, sudo, cron, package updates) share `/var/log/syslog` with the Lograge output. rsyslog bounds disk usage ([config](../cookbooks/cdo-syslog/recipes/default.rb#L16-L35)), and the CloudWatch Agent streams everything to the same `<env>-syslog` log group, giving operators a single place to browse OS and Rails entries together.
 
 ### Database
 
@@ -75,7 +76,7 @@ This document inventories logging across the Code.org platform. It explains, in 
 
 ### S3 `cdo-logs` bucket
 
-- **`hosts/` Rails stdout/stderr files (Puma)** (plain‑text stdout/stderr plus rotated JSON): Hourly sync drops the contents of `dashboard/log/` and `pegasus/log/` under `s3://cdo-logs/hosts/<hostname>/<app>` via the [upload process](./app-log-upload.md#L25-L31). That directory includes `puma_stdout.log*`, `puma_stderr.log*`, job logs, and any rotated copies. Until the next sync runs, these files exist only on the instance; if a host terminates early, the last hour of stdout/stderr is lost.
+- **`hosts/` Rails stdout/stderr files (Puma)** (plain‑text stdout/stderr plus rotated JSON): Hourly sync drops the contents of `dashboard/log/` and `pegasus/log/` under `s3://cdo-logs/hosts/<hostname>/<app>` via the [upload process](./app-log-upload.md#L25-L31). That directory includes `puma_stdout.log*`, `puma_stderr.log*`, `milestone.log*`, job logs, and any rotated copies. Until the next sync runs, these files exist only on the instance; if a host terminates early, the last hour of stdout/stderr is lost.
   - Hostname prefixes: in staging and test, and on `production-daemon` and `production-console`, `<hostname>` is simply the box hostname and uploads appear at `hosts/<hostname>/<app>`.
   - Production web frontends: instances cloned from the latest AMI builder upload under a shared prefix `hosts/ami-<builder-instance-id>/<app>` (the builder is a stopped EC2 instance; clear the "running" filter to find it). 
   - **DATA LOSS NOTE**: Because all frontends get the same `hostname` and the file names are simple date-based (e.g., `puma_stderr.log-YYYYMMDD.gz`), the hourly sync causes last-writer-wins overwrites. _As even instances not in the pool (with no traffic) still also overwrite, most logs in here all-but empty (80 bytes - 30kb), this means we essentially lose 99.9% of these logs for long-term retention._
@@ -90,7 +91,8 @@ This document inventories logging across the Code.org platform. It explains, in 
 
 ### CloudWatch Logs
 
-- **Rails/syslog stream** (CEE JSON [format](./log-formats.md#rails-application-logs-cloudwatch-logslograge-cee-json)): The CloudWatch agent tails `/var/log/syslog` and publishes to `<env>-syslog`. This stream combines Lograge request lines with system notices (cron, ssh, sudo), so Insights queries can pivot across both.
+- **EC2: Rails/syslog stream** (CEE JSON [format](./log-formats.md#rails-application-logs-cloudwatch-logslograge-cee-json)): The CloudWatch agent tails `/var/log/syslog` and publishes to `<env>-syslog`. This stream combines Lograge request lines with system notices (cron, ssh, sudo), so Insights queries can pivot across both.
+- **EC2: ProxySQL logs** (plain-text [format](./log-formats.md#proxysql-logs-cloudwatch-logs)): Streamed to `<env>-proxysql` (e.g., `production-proxysql`) via the CloudWatch agent.
 - **Browser events** (JSON [format](./log-formats.md#browser-events-cloudwatch)): grouped by environment in `<env>-browser-events` using the provisioned [log group and stream](../aws/cloudformation/components/logging.yml.erb#L1-L13). CloudWatch Logs ingestion is durable, but under sustained high volume AWS may throttle puts, which can lead to delayed delivery and rare dropped events at peak.
 - **Aurora MySQL exports** (plain-text [format](./log-formats.md#aurora-mysql-logs-cloudwatch-logs)): general/audit/error/slowquery appear in dedicated log groups via the [log exports](../aws/cloudformation/components/database.yml.erb#L334-L339). These are managed by RDS and are normally reliable once published.
 - **Enhanced monitoring metrics** (JSON [format](./log-formats.md#rds-enhanced-monitoring-cloudwatch-logs)): originate from the `RDSOSMetrics` stream with metric filters; if the stream lags, derived metrics may be delayed.
@@ -115,7 +117,7 @@ First, the browser requests the document page for a level:
 
 - CloudFront [logs](#webcdn) the request/response; if the WebACL blocks it, the WAF log records the decision.
 - ALB [logs](#load-balancers) the request and target response.
-- On the instance, NGINX [writes](#application-servers-ec2) an access line and proxies to Puma; Rails (via Lograge in prod/staging) [emits](#application-servers-ec2) a condensed JSON line to syslog/CloudWatch for the controller action rendering the level page.
+- On the instance, NGINX [writes](#application-servers-ec2) an access line and proxies to Puma; Rails (via Lograge in prod/staging) [emits](#application-servers-ec2) a condensed JSON line to `/var/log/syslog` (the same syslog stream that receives system events), which is tailed by the CloudWatch agent and streamed to `<env>-syslog` for the controller action rendering the level page.
 - Database queries executed are included in the Rails Lograge timings; some types of DB activity may also [emit](#cloudwatch-logs) to Aurora’s CloudWatch export groups (slow/error/general/audit).
 - Any server‑side exceptions during page render [notify](#observability-services-thirdparty) Honeybadger.
 
@@ -123,7 +125,7 @@ Secondly, while the user is on the page (in addition to the above):
 
 - Browser‑side interaction events are batched and [written](#cloudwatch-logs) to the `<env>-browser-events` CloudWatch log group; the page may also [report](#observability-services-thirdparty) New Relic page actions/errors.
 - Client analytics may [log](#observability-services-thirdparty) to Statsig (back‑end via server SDK; front‑end via app code) and [log](#event-pipelines-firehose) to Firehose (deprecated).
-- Background jobs (e.g., ActiveJob) kicked off from user actions [log](#application-servers-ec2) via the same Rails logger and appear in syslog/CloudWatch.
+- Background jobs (e.g., ActiveJob) kicked off from user actions [log](#application-servers-ec2) via the same Rails logger and appear in the same `<env>-syslog` CloudWatch log group.
 - Hourly, instance app logs are [synced](#s3-cdo-logs-bucket) to S3 for long‑term retention.
 
 ## Observations and recommendations
@@ -155,9 +157,12 @@ Secondly, while the user is on the page (in addition to the above):
 | CloudFront real-time access logs | S3 `cdo-access-logs/access-logs/` | Indefinite | Firehose retries but best-effort; Kinesis backpressure can drop rows |
 | ALB access logs | S3 `cdo-logs/<stack>-alb-access-logs/...` | Indefinite | - |
 | CodeProjects ALB access logs | S3 `cdo-logs/codeprojects-elb/...` | Indefinite | Manually configured ALB; discovered by Glue crawler |
-| Rails Lograge request logs | CloudWatch `<env>-syslog` | Indefinite | - |
-| Rails stdout/stderr (Puma) | S3 `cdo-logs/hosts/<hostname>/...` | Indefinite | ~99% loss, due to overwrites shared host prefix |
-| NGINX access/error logs | Instance filesystem | none, lost on termination | not retained |
+| EC2: Rails Lograge request logs + instance syslog | CloudWatch `<env>-syslog` | Indefinite | - |
+| EC2: Cron jobs and background tasks | CloudWatch `<env>-syslog` | Indefinite | - |
+| EC2: Rails stdout/stderr (Puma) | S3 `cdo-logs/hosts/<hostname>/...` | Indefinite | ~99% loss, due to overwrites shared host prefix |
+| EC2: Rails milestone.log | S3 `cdo-logs/hosts/<hostname>/...` | Indefinite | ~99% loss, due to overwrites shared host prefixPlan |
+| EC2: NGINX access/error logs | Instance filesystem | none, lost on termination | not retained |
+| EC2: ProxySQL logs | CloudWatch `<env>-proxysql` | Indefinite | - |
 | Browser events | CloudWatch `<env>-browser-events` | Indefinite | Subject to CloudWatch throttle; high burst can drop batches |
 | Aurora MySQL exports | CloudWatch `/aws/rds/cluster/...` | Indefinite | - |
 | RDS enhanced monitoring | CloudWatch `RDSOSMetrics` | Indefinite | - |
