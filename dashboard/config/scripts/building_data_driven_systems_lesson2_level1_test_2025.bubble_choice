@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson2-level1-test-2025'
+display_name 'Schema Design'
+description 'Choose one of the schema you want to design'
+
+sublevels
+level 'building-data-driven-systems-lesson2-level1a-test-2025'
+level 'building-data-driven-systems-lesson2-level1b-test-2025'
+level 'building-data-driven-systems-lesson2-level1c-test-2025'
+
+uses_lab2
