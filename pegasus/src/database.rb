@@ -1,5 +1,6 @@
 require 'cdo/db'
 require 'cdo/geocoder'
+require_relative '../helpers/properties'
 
 def zip_code_from_code(code)
   DB[:geography_us_zip_codes].where(code_s: code.to_s.strip).first
