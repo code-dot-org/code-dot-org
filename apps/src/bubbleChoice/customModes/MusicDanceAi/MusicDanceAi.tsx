@@ -227,6 +227,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     tabDataMap,
   ]);
 
+  // Set the initial tab once data is loaded if we haven't already.
   useEffect(() => {
     if (!currentTab && tabDataMap) {
       setCurrentTab(getIsShareView() ? Tab.Dance : getTypedKeys(tabDataMap)[0]);
