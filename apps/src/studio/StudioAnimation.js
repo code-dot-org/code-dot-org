@@ -156,12 +156,15 @@ export default class StudioAnimation {
 
   /** @returns {number} the count of frames for the current animation */
   getAnimationFrameCount() {
-    var specialFrames = this.specialAnimations_[this.interfaceMode_];
-    if (specialFrames) {
-      return specialFrames[this.currentAnimationIndex_].length;
-    } else {
-      return this.spriteSheet_.getAnimationFrameCount(this.interfaceMode_);
-    }
+    // GLOBAL ANIMATION DISABLE: Always return 1 frame
+    return 1;
+    // Original code (disabled):
+    // var specialFrames = this.specialAnimations_[this.interfaceMode_];
+    // if (specialFrames) {
+    //   return specialFrames[this.currentAnimationIndex_].length;
+    // } else {
+    //   return this.spriteSheet_.getAnimationFrameCount(this.interfaceMode_);
+    // }
   }
 
   /** @returns {object} the frame rectangle from the sprite sheet for a frame */

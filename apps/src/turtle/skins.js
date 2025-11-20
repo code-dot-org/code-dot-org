@@ -14,7 +14,8 @@ exports.load = function (assetUrl, id) {
         width: 73,
         height: 100,
         numHeadings: 36,
-        numFrames: 10,
+        // GLOBAL ANIMATION DISABLE: Force numFrames to 1
+        numFrames: 1,
         visible: true,
       },
       smoothAnimate: true,
@@ -41,7 +42,8 @@ exports.load = function (assetUrl, id) {
         width: 73,
         height: 100,
         numHeadings: 18,
-        numFrames: 20,
+        // GLOBAL ANIMATION DISABLE: Force numFrames to 1
+        numFrames: 1,
         visible: true,
       },
       smoothAnimate: true,
@@ -279,6 +281,11 @@ exports.load = function (assetUrl, id) {
   }
 
   skin.lineStylePatternOptions = lineStylePatternOptions;
+
+  // GLOBAL ANIMATION DISABLE: Force numFrames to 1 for all avatar animations
+  if (skin.avatarSettings && skin.avatarSettings.numFrames) {
+    skin.avatarSettings.numFrames = 1;
+  }
 
   return skin;
 };
