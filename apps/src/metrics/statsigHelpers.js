@@ -3,6 +3,7 @@ import cookies from 'js-cookie';
 import {getEnvironment, isProductionEnvironment, createUuid} from '../utils';
 
 const STABLE_ID_KEY = 'statsig_stable_id';
+const LOCAL_STORAGE_KEY = STABLE_ID_KEY.toUpperCase();
 const COOKIE_OPTIONS = {
   path: '/',
   domain: '.code.org',
@@ -26,7 +27,8 @@ export function getUserType() {
 }
 
 export function findOrCreateStableId() {
-  let stableId = cookies.get(STABLE_ID_KEY);
+  let stableId =
+    cookies.get(STABLE_ID_KEY) || localStorage.getItem(LOCAL_STORAGE_KEY);
 
   if (!stableId) {
     stableId = createUuid();
@@ -34,10 +36,12 @@ export function findOrCreateStableId() {
 
   if (consentAllowsStatsigCookie()) {
     cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
+    localStorage.setItem(LOCAL_STORAGE_KEY, stableId);
   } else {
     // Ensure any existing cookie is removed to satisfy OneTrust
     // (must pass same attributes used when setting the cookie)
     cookies.remove(STABLE_ID_KEY, {path: '/', domain: '.code.org'});
+    localStorage.removeItem(LOCAL_STORAGE_KEY);
   }
 
   return stableId;
