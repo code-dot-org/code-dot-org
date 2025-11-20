@@ -1,3 +1,4 @@
+require 'cdo/db'
 require 'cdo/geocoder'
 
 def zip_code_from_code(code)
