@@ -9,6 +9,7 @@ import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/Music
 import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibChoices,
@@ -19,7 +20,7 @@ import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instruction
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
@@ -67,9 +68,12 @@ interface GenerateCodeProps {
   blockCount: number;
   runProgram: () => void;
   resetProgram: () => void;
-  updateSources: (newSources: WorkspaceSerialization) => void;
+  updateSources: (newSources: {
+    workspaceSerialization: WorkspaceSerialization;
+    flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  }) => void;
   startOver: () => void;
-  updateBlocklyFlyout: (
+  onFlyoutGenerated: (
     toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo
   ) => void;
 }
@@ -87,7 +91,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   resetProgram,
   updateSources,
   startOver,
-  updateBlocklyFlyout,
+  onFlyoutGenerated,
 }) => {
   const [aiGenerateState, setAiGenerateState] = useState<
     | 'none'
@@ -170,13 +174,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       );
       await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-      updateSources(workspaceSerialization);
-      updateBlocklyFlyout(flyoutDefinition);
-      const levelId = levelProperties.id;
-      sessionStorage.setItem(
-        `flyout-${levelId}`,
-        JSON.stringify(flyoutDefinition)
-      );
+      updateSources({workspaceSerialization, flyoutDefinition});
+      onFlyoutGenerated(flyoutDefinition);
       runProgram();
 
       setAiGenerateState('generated');
@@ -184,10 +183,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     [
       adlibChoices,
       blockDefinitions,
-      levelProperties.id,
       measures,
       runProgram,
-      updateBlocklyFlyout,
+      onFlyoutGenerated,
       updateSources,
     ]
   );
@@ -263,6 +261,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       )
     );
   }, [dispatch, levelProperties.appName, levelProperties.id]);
+
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  if (isReadOnly) {
+    return null;
+  }
 
   return (
     <Guide
