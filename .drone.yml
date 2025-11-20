@@ -308,7 +308,7 @@ steps:
         path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
-      - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
+      - /entrypoint.sh docker/ci/scripts/prepare_cached_build.sh
       # Generate baseline file count for validation
       - touch .cached-staging-build-file-count
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
@@ -342,6 +342,6 @@ trigger:
 
 ---
 kind: signature
-hmac: c83261c9d31533a387fc663fc6d51aeb171564ccdc56521b24b60e830bc808ce
+hmac: 1f94cf6e9d299e961f6e39e9405fc2539634c11f95730379c99e0dbc6e24083a
 
 ...

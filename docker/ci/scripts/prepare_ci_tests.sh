@@ -86,24 +86,3 @@ aiproxy_api_key: 'fake_key'
 echo "Wrote settings and secrets from env vars into locals.yml."
 
 set -x
-
-# Skip rake install in ui pipeline. This is safe because we've already run rake install
-# the the cache-staging-build pipeline, and the ui pipeline re-uses that cache. We can't
-# skip rake install in the unit pipeline because cache-staging-build does not yet generate
-# correct DB contents for the unit pipeline.
-if [ "$CI_JOB" != "ui_tests" ]; then
-  bundle exec rake install
-fi
-
-# Catch any zeitwerk code loader errors before starting any rails environment,
-# in order to ensure that we give a clear error message for any zeitwerk issues
-# that would block application load. Only do this in unit pipeline, since it
-# runs faster than the ui pipeline, and running in just one pipeline is sufficient
-# to make sure the developer sees a useful error message.
-if [ "$CI_JOB" = "unit_tests" ]; then
-  bundle exec rake lint:zeitwerk
-fi
-
-bundle exec rake build
-
-bundle exec rake ci:seed_ui_test
