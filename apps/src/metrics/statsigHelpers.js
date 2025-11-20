@@ -31,14 +31,8 @@ export function findOrCreateStableId() {
   const localStorageId = localStorage.getItem(LOCAL_STORAGE_KEY);
   let stableId;
 
-  if (cookieId && localStorageId) {
-    if (cookieId === localStorageId) {
-      stableId = cookieId;
-    } else {
-      // If both exist but differ, prefer localStorage (less likely to be cleared)
-      stableId = localStorageId;
-    }
-  } else if (cookieId) {
+  if (cookieId) {
+    // Prefer the cookie value if it exists
     stableId = cookieId;
   } else if (localStorageId) {
     stableId = localStorageId;
@@ -49,14 +43,15 @@ export function findOrCreateStableId() {
   if (consentAllowsStatsigCookie()) {
     cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
     localStorage.setItem(LOCAL_STORAGE_KEY, stableId);
+    return stableId;
   } else {
     // Ensure any existing cookie is removed to satisfy OneTrust
     // (must pass same attributes used when setting the cookie)
     cookies.remove(STABLE_ID_KEY, {path: '/', domain: '.code.org'});
     localStorage.removeItem(LOCAL_STORAGE_KEY);
+    // Return undefined to let Statsig set it's own stableID
+    return undefined;
   }
-
-  return stableId;
 }
 
 function consentAllowsStatsigCookie() {
