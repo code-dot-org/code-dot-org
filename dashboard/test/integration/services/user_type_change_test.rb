@@ -73,8 +73,8 @@ class Services::UserTypeChangeTest < ActionDispatch::IntegrationTest
   describe 'student to teacher conversion' do
     let(:new_user_type) {::User::TYPE_TEACHER}
     let(:new_email) {teacher_email}
-    let(:student_email) {'student@example.com'}
-    let(:teacher_email) {'teacher@example.com'}
+    let(:student_email) {Faker::Internet.unique.email}
+    let(:teacher_email) {Faker::Internet.unique.email}
     let(:terms_of_service_version) {1}
 
     let!(:user) {create(:user, email: student_email, terms_of_service_version: 1)}
