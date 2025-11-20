@@ -1,5 +1,4 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading3} from '@code-dot-org/component-library/typography';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -286,10 +285,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {aiGenerateState === 'generating' && (
-        <div>
-          <Heading3>Generating...</Heading3>
-          AI is generating code based on your prompt.
-        </div>
+        <MainInstructionsContent
+          instructionsText={
+            '### Generating...\n\nAI is generating code based on your prompt.'
+          }
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {['none', 'generating', 'generated'].includes(aiGenerateState) &&
@@ -343,15 +345,17 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {['listening', 'listened'].includes(aiGenerateState) && (
-        <div>
-          <Heading3>
-            {aiGenerateState === 'listening' && 'Take a listen...'}
-            {aiGenerateState === 'listened' && 'Decide what to do next'}
-          </Heading3>
-          <div>
-            AI generated code based on your prompt, "{localizedPromptText}"
-          </div>
-        </div>
+        <MainInstructionsContent
+          instructionsText={`### ${
+            aiGenerateState === 'listening'
+              ? 'Take a listen...'
+              : aiGenerateState === 'listened'
+              ? 'Decide what to do next'
+              : ''
+          }\n\nAI generated code based on your prompt, "${localizedPromptText}"`}
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {aiGenerateState === 'listened' && (
@@ -412,25 +416,30 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {aiGenerateState === 'editing' && !isPlaying && (
-        <div>
-          <Heading3>Modify the code</Heading3>
-          AI helped you get started. Make your own changes, then press Run.
-        </div>
+        <MainInstructionsContent
+          instructionsText={
+            '### Modify the code\n\nAI helped you get started. Make your own changes, then press Run.'
+          }
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {aiGenerateState === 'editing' && isPlaying && (
-        <div>
-          <Heading3>Modify the code</Heading3>
-          <div>Try changing the code. </div>
-        </div>
+        <MainInstructionsContent
+          instructionsText={'### Modify the code\n\nTry changing the code.'}
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {aiGenerateState === 'edited' && (
         <>
-          <div>
-            <Heading3>Modify the code</Heading3>
-            <div>That's a great mix!</div>
-          </div>
+          <MainInstructionsContent
+            instructionsText={"### Modify the code\n\nThat's a great mix!"}
+            markdownClassName={styles.markdown}
+            showTts={showTts}
+          />
           <div className={styles.buttonRow}>
             <Button
               ariaLabel={'Back to prompt'}
