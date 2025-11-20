@@ -301,7 +301,7 @@ describe('AiDiffWorkspace', () => {
           context: {
             type: AiDiffContext.LESSON,
             lessonId: 2,
-          }
+          },
         }),
         true,
         {
