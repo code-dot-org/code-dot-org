@@ -27,10 +27,22 @@ export function getUserType() {
 }
 
 export function findOrCreateStableId() {
-  let stableId =
-    cookies.get(STABLE_ID_KEY) || localStorage.getItem(LOCAL_STORAGE_KEY);
+  const cookieId = cookies.get(STABLE_ID_KEY);
+  const localStorageId = localStorage.getItem(LOCAL_STORAGE_KEY);
+  let stableId;
 
-  if (!stableId) {
+  if (cookieId && localStorageId) {
+    if (cookieId === localStorageId) {
+      stableId = cookieId;
+    } else {
+      // If both exist but differ, prefer localStorage (less likely to be cleared)
+      stableId = localStorageId;
+    }
+  } else if (cookieId) {
+    stableId = cookieId;
+  } else if (localStorageId) {
+    stableId = localStorageId;
+  } else {
     stableId = createUuid();
   }
 
