@@ -1,7 +1,6 @@
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
-import markdownToTxt from 'markdown-to-txt';
-import React, {useCallback, useEffect, useState, useMemo} from 'react';
+import React, {useCallback, useEffect, useMemo} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
@@ -225,17 +224,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     });
   }, [dispatch, previousParameters, modelParameters]);
 
-  const [liveAnnouncement, setLiveAnnouncement] = useState('');
-  const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
-  useEffect(() => {
-    if (chatEvents.length > 0) {
-      const last = chatEvents[chatEvents.length - 1];
-      if ('chatMessageText' in last && last.chatMessageText) {
-        setLiveAnnouncement(markdownToTxt(last.chatMessageText));
-      }
-    }
-  }, [chatEvents]);
-
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
     iconStyle: 'solid',
@@ -296,18 +284,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const uploadDisabled = !canChatWithModel || !!selectedStudent || chatDisabled;
 
+  const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+
   const isTeacherView = !!selectedStudent;
 
   const showTabs =
     selectedStudent && clientType === AiChatClientTypes.AI_CHAT_LAB;
 
   return (
-    <div
-      id="chat-workspace-area"
-      className={moduleStyles.chatWorkspace}
-      aria-live="polite"
-    >
-      <div className={moduleStyles.accessibilityHidden}>{liveAnnouncement}</div>
+    <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showTabs ? (
         <Tabs {...tabArgs} />
       ) : (
@@ -317,6 +302,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           buildAssetUrl={buildAssetUrlValue}
         />
       )}
+
       <div className={moduleStyles.footer}>
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
