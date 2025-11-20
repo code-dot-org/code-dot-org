@@ -120,7 +120,7 @@ Vocabulary: #{lesson_plan[:vocabularies].to_json}
   def self.get_personalization(user_id)
     profile = TeachingProfileData.find_by(user_id: user_id)
     unless profile
-      return nil
+      return ''
     end
     personalization_string = "Use the following information about the teacher to personalize your summary:"
     if profile.individual_data["yearsTeaching"]

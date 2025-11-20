@@ -243,15 +243,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           setAITALessonSummaryInfo(null);
           console.log(`Error: ${error}`);
         });
-      HttpClient.fetchJson<{podcast_script: string}>(
-        `/ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=${selectedLesson?.id}`
-      )
-        .then(response => {
-          console.log(response);
-        })
-        .catch(error => {
-          console.log(`Error: ${error}`);
-        });
     }
   }, [userId, selectedLesson]);
 

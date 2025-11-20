@@ -20,11 +20,13 @@ class AiLessonSummariesController < ApplicationController
     podcast_script_json = AiLessonSummariesHelper.get_ai_lesson_summary(params[:lesson_id], current_user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
 
     if podcast_script_json
-      # podcast_script_json[:json].as_json <---- turn this into the right format so its JUST the string
-
-      # processed_podcast_script = clean_up_podcast_script_response()
-
-      render json: podcast_script_json[:json].as_json # {podcast_script: processed_podcast_script}
+      begin
+        pre_processed_script = JSON.parse(podcast_script_json[:json])['podcast_script']
+        processed_podcast_script = clean_up_podcast_script_response(pre_processed_script)
+        render json: {podcast_script: processed_podcast_script}
+      rescue => exception
+        render json: {error: "Error parsing podcast script response: #{exception}"}, status: :internal_server_error
+      end
     else
       render json: {error: 'Failure to generate transcript'}, status: :internal_server_error
     end
@@ -61,6 +63,7 @@ class AiLessonSummariesController < ApplicationController
   end
 
   private def clean_up_podcast_script_response(podcast_script_response)
-    
+    replaced_newlines = podcast_script_response.gsub("\n\n", " ")
+    replaced_newlines.gsub(/\"|\’/, "'").squish
   end
 end
