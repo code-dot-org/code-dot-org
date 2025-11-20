@@ -298,6 +298,10 @@ describe('AiDiffWorkspace', () => {
           inputText: 'new message on old thread',
           isPreset: false,
           presetChipText: null,
+          context: {
+            type: AiDiffContext.LESSON,
+            lessonId: 2,
+          }
         }),
         true,
         {
