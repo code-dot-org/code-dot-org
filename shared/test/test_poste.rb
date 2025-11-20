@@ -21,7 +21,8 @@ class PosteTest < SequelTestCase
         hashed_email: STUDENT_EMAIL_HASH,
         username: 'code studio student',
         user_type: 'student',
-        birthday: '2000-01-02'
+        birthday: '2000-01-02',
+        updated_at: Time.now,
       }
     )
     DASHBOARD_DB[:users].insert(
@@ -30,7 +31,8 @@ class PosteTest < SequelTestCase
         hashed_email: TEACHER_EMAIL_HASH,
         username: 'code studio teacher',
         user_type: 'teacher',
-        birthday: '2000-01-02'
+        birthday: '2000-01-02',
+        updated_at: Time.now,
       }
     )
   end
@@ -291,7 +293,8 @@ class Poste2Test < SequelTestCase
       hashed_email: hashed_email,
       username: 'code studio student',
       user_type: 'student',
-      birthday: '2000-01-02'
+      birthday: '2000-01-02',
+      updated_at: Time.now,
     )
     # rubocop:enable CustomCops/DashboardDbUsage
 
@@ -309,7 +312,8 @@ class Poste2Test < SequelTestCase
       hashed_email: hashed_email,
       username: 'code studio teacher',
       user_type: 'teacher',
-      birthday: '2000-01-02'
+      birthday: '2000-01-02',
+      updated_at: Time.now,
     )
     # rubocop:enable CustomCops/DashboardDbUsage
 
