@@ -1220,7 +1220,10 @@ export default class P5Lab {
   onP5Preload() {
     this.preloadLabAssets()
       .then(() => this.runPreloadEventHandler_())
-      .then(() => this.p5Wrapper.notifyPreloadPhaseComplete());
+      .catch(e => {
+        console.warn('Preload failed; continuing to avoid hang', e);
+      })
+      .finally(() => this.p5Wrapper.notifyPreloadPhaseComplete());
     return false;
   }
 
