@@ -9,6 +9,8 @@
 .saveCurrentVersionDescription {
   padding: 0.5rem;
   background-color: var(--background-neutral-secondary);
+  border-radius: 0 0 variables.$default-border-radius
+    variables.$default-border-radius;
 }
 
 .saveCurrentVersionDescriptionInput {
