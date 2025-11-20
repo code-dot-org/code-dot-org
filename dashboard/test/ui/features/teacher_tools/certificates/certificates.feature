@@ -20,7 +20,7 @@ Feature: Certificate page features
 
   # Verify that the old certificate share url will redirect to the new one,
   # preserving the custom certificate image
-    When I navigate to the pegasus certificate share page
+    When I navigate to the certificate share page
     And I wait until current URL contains "http://studio.code.org/certificates"
     And I wait to see an image "/certificate_images/"
     And I see custom certificate image with name "Robo Coder" and course "mc"

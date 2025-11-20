@@ -67,9 +67,12 @@ interface GenerateCodeProps {
   blockCount: number;
   runProgram: () => void;
   resetProgram: () => void;
-  updateSources: (newSources: WorkspaceSerialization) => void;
+  updateSources: (newSources: {
+    workspaceSerialization: WorkspaceSerialization;
+    flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  }) => void;
   startOver: () => void;
-  updateBlocklyFlyout: (
+  onFlyoutGenerated: (
     toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo
   ) => void;
 }
@@ -87,7 +90,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   resetProgram,
   updateSources,
   startOver,
-  updateBlocklyFlyout,
+  onFlyoutGenerated,
 }) => {
   const [aiGenerateState, setAiGenerateState] = useState<
     | 'none'
@@ -97,6 +100,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     | 'listened'
     | 'editing'
     | 'edited'
+    | 'playing'
   >('none');
 
   const getInitialChoices = () => {
@@ -169,13 +173,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       );
       await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-      updateSources(workspaceSerialization);
-      updateBlocklyFlyout(flyoutDefinition);
-      const levelId = levelProperties.id;
-      sessionStorage.setItem(
-        `flyout-${levelId}`,
-        JSON.stringify(flyoutDefinition)
-      );
+      updateSources({workspaceSerialization, flyoutDefinition});
+      onFlyoutGenerated(flyoutDefinition);
       runProgram();
 
       setAiGenerateState('generated');
@@ -183,10 +182,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     [
       adlibChoices,
       blockDefinitions,
-      levelProperties.id,
       measures,
       runProgram,
-      updateBlocklyFlyout,
+      onFlyoutGenerated,
       updateSources,
     ]
   );
@@ -233,6 +231,23 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     ? 'full'
     : undefined;
 
+  const guideWidth = aiGenerateState === 'playing' ? 'very-narrow' : 'normal';
+
+  const cornerIcon =
+    aiGenerateState === 'edited'
+      ? 'minimize'
+      : aiGenerateState === 'playing'
+      ? 'maximize'
+      : undefined;
+
+  const onCornerIconClick = useCallback(() => {
+    if (aiGenerateState === 'edited') {
+      setAiGenerateState('playing');
+    } else if (aiGenerateState === 'playing') {
+      setAiGenerateState('edited');
+    }
+  }, [aiGenerateState]);
+
   const parentProperties = useParentLevelProperties();
   const isStandalone =
     levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
@@ -247,7 +262,14 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   }, [dispatch, levelProperties.appName, levelProperties.id]);
 
   return (
-    <Guide id="generate-panel" modal={modal} position="bottom">
+    <Guide
+      id="generate-panel"
+      modal={modal}
+      width={guideWidth}
+      position="bottom"
+      cornerIcon={cornerIcon}
+      onCornerIconClick={onCornerIconClick}
+    >
       {aiGenerateState === 'none' && levelProperties.longInstructions && (
         <MainInstructionsContent
           instructionsText={levelProperties.longInstructions}
@@ -415,6 +437,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           </div>
         </>
       )}
+
+      {aiGenerateState === 'playing' && <div>Keep playing!</div>}
+
       {/* Retain focus with a hidden button. */}
       {['generating', 'generated', 'listening', 'editing'].includes(
         aiGenerateState
