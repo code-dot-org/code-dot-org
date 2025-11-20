@@ -26,7 +26,7 @@ namespace :build do
       RakeUtils.yarn_install
 
       ChatClient.log 'Building <b>apps</b>...'
-      npm_command = get_npm_build_command
+      npm_command = get_js_build_command
       if ENV['PROFILE_APPS_BUILD']
         RakeUtils.system_stream_output npm_command
       else
@@ -220,7 +220,7 @@ def calculate_apps_commit_hash
   RakeUtils.git_folder_hash(*apps_build_trigger_paths)
 end
 
-def get_npm_build_command
+def get_js_build_command
   if CDO.optimize_webpack_assets
     # Skip clean step in CI to take advantage of cached build artifacts
     if ENV['CI']
