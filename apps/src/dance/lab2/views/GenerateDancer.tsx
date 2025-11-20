@@ -13,6 +13,7 @@ import {
   DanceProjectSources,
   GeneratedDancerMetadata,
 } from '@cdo/apps/dance/types';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -31,7 +32,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 import backgroundImage from '@cdo/static/dance/generateDancer/generate-dancer-background.png';
 import dancerSilhouetteBrightImage from '@cdo/static/dance/generateDancer/generate-dancer-silhouette-bright.svg';
@@ -300,20 +301,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   }, [currentSources]);
 
   const [hasGenerated, setHasGenerated] = useState(false);
-  const signedIn = useAppSelector(state => state.currentUser.signInState);
-  const scriptName = useAppSelector(state => state.progress.scriptName);
-  const logLevelActivity = useCallback(() => {
-    const eventName = levelProperties.isProjectLevel
-      ? EVENTS.PROJECT_ACTIVITY
-      : EVENTS.LEVEL_ACTIVITY;
-
-    analyticsReporter.sendEvent(eventName, {
-      signedIn: signedIn,
-      unitName: scriptName,
-      levelId: levelProperties.id,
-      levelName: levelProperties.name,
-    });
-  }, [levelProperties, signedIn, scriptName]);
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
 
   const generateDancer = useCallback(
     async (regenerate = false) => {
