@@ -22,6 +22,15 @@ require 'cdo/shared_constants'
 # can be automatically loaded just below.
 require 'cdo/pycall'
 
+# Compatibility patch for old gems that use File.exists? (deprecated in Ruby 2.2+)
+# The state_machine gem (1.2.0) used by eyes_selenium still uses File.exists?
+# This must be loaded before Bundler.require to fix the compatibility issue.
+unless File.respond_to?(:exists?)
+  class << File
+    alias_method :exists?, :exist?
+  end
+end
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
