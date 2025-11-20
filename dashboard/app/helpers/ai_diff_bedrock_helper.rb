@@ -387,6 +387,4 @@ module AiDiffBedrockHelper
       data_row[level_text] = parsed_status
     end
   end
-
-
 end
