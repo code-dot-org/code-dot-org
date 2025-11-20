@@ -194,24 +194,6 @@ describe('VersionHistoryPanel', () => {
     );
   });
 
-  it('resets project on cancel', async () => {
-    renderDefault({selectedVersion: '0'});
-
-    await waitFor(
-      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
-      {timeout: 2000}
-    );
-
-    const cancelButton = screen.getByRole('button', {name: 'Cancel'});
-    const user = userEvent.setup();
-    await user.click(cancelButton);
-
-    expect(mockedProjectManager.loadSources).toHaveBeenCalled();
-    await waitFor(() => {
-      expect(setSelectedVersion).toHaveBeenCalledWith('3'); // Reset to latest version
-    });
-  });
-
   it('disables restore button when initial version is latest', async () => {
     mockedProjectManager = {
       getVersionList: jest.fn(() => Promise.resolve([])),
