@@ -28,7 +28,6 @@ jobs:
           cache-dependency-path: "apps/yarn.lock"
 
       - name: Install apps dependencies
-        shell: bash
         run: yarn install
 
       - name: Lint
@@ -49,6 +48,9 @@ jobs:
           # todo: I don't believe LFS is needed for unit tests or linting
           # lfs: true
 
+      - name: Debug
+        run: echo "root" && ls -la && echo "apps" && ls -la apps && echo "frontend" && ls -la frontend && echo "dashboard" && ls -la dashboard
+
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
 
@@ -59,14 +61,10 @@ jobs:
           cache-dependency-path: "apps/yarn.lock"
 
       - name: Install apps dependencies
-        shell: bash
         run: yarn install
-        working-directory: ./apps
 
       - name: Build
         run: yarn build
-        working-directory: ./apps
 
       - name: Unit Tests
         run: yarn test
-        working-directory: ./apps
