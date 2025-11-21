@@ -35,6 +35,9 @@ module AiDiffBedrockHelper
                       uri: "s3://dummy_file"
                     },
                     type: "S3"
+                  },
+                  metadata: {
+                    'url' => 'https://zombo.com'
                   }
                 }
               ]

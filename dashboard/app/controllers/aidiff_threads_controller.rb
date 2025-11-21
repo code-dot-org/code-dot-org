@@ -98,7 +98,7 @@ class AidiffThreadsController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
-    context = params[:context]
+    context = params[:context] || {}
 
     if @aidiff_thread.session_created.nil? || @aidiff_thread.session_created < 1.day.ago
       session_id = nil
