@@ -49,6 +49,8 @@ jobs:
           # lfs: true
 
       - name: Debug
+        shell: bash
+        working-directory: ./
         run: echo "root" && ls -la && echo "apps" && ls -la apps && echo "frontend" && ls -la frontend && echo "dashboard" && ls -la dashboard
 
       - name: Setup Frontend
