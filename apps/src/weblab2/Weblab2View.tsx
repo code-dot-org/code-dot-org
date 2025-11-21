@@ -24,10 +24,11 @@ import {
   acceptRejectJsonSchema,
   formatExplanationResponse,
   copyCodeJsonSchema,
+  formatAcceptRejectResponse,
 } from './helpers/aiTutorStructuredResponseHelper';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
-import {setViewMode} from './redux';
+import {setIsAcceptRejectMode, setViewMode} from './redux';
 import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
@@ -141,7 +142,8 @@ const Weblab2View: React.FC<
       if (
         experiments.isEnabledAllowingQueryString(
           experiments.WEBLAB2_ACCEPT_REJECT
-        )
+        ) &&
+        levelProperties.aiTutorMode === 'produce'
       ) {
         return {
           jsonSchema: acceptRejectJsonSchema,
@@ -150,8 +152,11 @@ const Weblab2View: React.FC<
             console.log('🤖: Tutor response (in jsonSchema callback):', {
               jsonResponse,
             });
-            // TODO: send code to the appropriate place
-            return jsonResponse.explanation;
+            const formattedResponse = formatAcceptRejectResponse(jsonResponse);
+            console.log('formattedResponse', formattedResponse);
+            dispatch(setIsAcceptRejectMode(true));
+
+            return formattedResponse.explanation;
           },
         };
       } else {
@@ -166,7 +171,7 @@ const Weblab2View: React.FC<
           },
         };
       }
-    }, []);
+    }, [levelProperties.aiTutorMode, dispatch]);
 
   return (
     <div className={moduleStyles.weblab2Container}>

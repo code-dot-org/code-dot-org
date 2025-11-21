@@ -137,3 +137,17 @@ export const formatExplanationResponse = (response: any): string => {
   }
   return formattedResponse;
 };
+
+// Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const formatAcceptRejectResponse = (response: any) => {
+  return {
+    explanation: response.explanation || '',
+    // Parsed json comes in as 'any'
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    code: response.code.map((codeItem: any) => ({
+      fileName: codeItem.filename,
+      code: codeItem.sourceCode,
+    })),
+  };
+};
