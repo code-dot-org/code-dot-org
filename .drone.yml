@@ -337,12 +337,13 @@ trigger:
   branch:
     - "staging"
     - "staging-next"
+    - "misc-drone-optimizations-part-4"
   event:
     - push
     - pull_request
 
 ---
 kind: signature
-hmac: 44a39ecc842286149b7604be63465ff446122d97d9df8b9d2abcbb3117e97b40
+hmac: 416a4211a06f62744199bf1985d9c0948b998141601ed82daf854277e8acc81e
 
 ...
