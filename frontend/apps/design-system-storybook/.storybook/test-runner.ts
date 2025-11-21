@@ -10,14 +10,27 @@ const DEFAULT_VIEWPORT_SIZE = {width: 1280, height: 720};
  * to learn more about the test-runner hooks API.
  */
 const config: TestRunnerConfig = {
-  async preVisit(page, story) {
+  async preVisit(page, context) {
     await injectAxe(page);
 
-    const context = await getStoryContext(page, story);
-    const viewportName = context.parameters?.viewport?.defaultViewport;
-    const viewportParameter =
-      INITIAL_VIEWPORTS[viewportName] || MINIMAL_VIEWPORTS[viewportName];
+    // Match the last bit of the Story class to the viewport type
+    // Get the viewport name that matches the built-in viewports, if
+    // that last bit is well-known
+    const storyName = context.id;
+    const viewportName = storyName.endsWith('-mobile')
+      ? 'mobile2'
+      : storyName.endsWith('-small-desktop')
+        ? 'ipad12p'
+        : storyName.endsWith('-tablet')
+          ? 'tablet'
+          : undefined;
 
+    // Get that viewport configuration
+    const viewportParameter = viewportName
+      ? INITIAL_VIEWPORTS[viewportName] || MINIMAL_VIEWPORTS[viewportName]
+      : undefined;
+
+    // If we found one, apply the viewport dimensions
     if (viewportParameter) {
       const viewportSize = Object.entries(
         viewportParameter.styles || {},
@@ -31,9 +44,10 @@ const config: TestRunnerConfig = {
         {width: 0, height: 0},
       );
 
-      page.setViewportSize(viewportSize);
+      return page.setViewportSize(viewportSize);
     } else {
-      page.setViewportSize(DEFAULT_VIEWPORT_SIZE);
+      // Otherwise, just set the viewport to the provided default
+      return page.setViewportSize(DEFAULT_VIEWPORT_SIZE);
     }
   },
   async postVisit(page, context) {
