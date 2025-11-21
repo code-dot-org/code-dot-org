@@ -21,8 +21,13 @@
 #
 # ./bin/oneoff/hoai_2025/generate_music
 #
-# Then, remove any in the ./bin/oneoff/hoai_2025/music_output path in
-# order to regenerate them in the following invocation.
+# Then, remove any output in the ./bin/oneoff/hoai_2025/music_output
+# path in order to regenerate them in the following invocation.
+#
+# You can validate the output with ./bin/oneoff/hoai_2025/validate_music
+# script. If you supply --delete to that script, it will automatically
+# remove any offending output so you can run this script again to
+# regenerate only those particular runs.
 #
 # Nothing gets uploaded until --no-dry-run is specified.
 #
@@ -44,11 +49,14 @@
 # two physical files with the same content after the script runs.
 #
 # You can stop the script from generating this form of adlib with the
-# --just-
+# --no-produce-layers option.
 #
 # The other form of adlib is the 'mood' form where you can specify the
 # mood (creative, simple, weird, etc). These are simply combinatorial.
 # The order of the options in the output path are hard-coded.
+#
+# You can generate these with the --produce-moods (and turn it off via
+# --no-produce-moods) option.
 
 require 'benchmark'
 require 'fileutils'
@@ -96,7 +104,7 @@ OptionParser.new do |opts|
   BANNER
 
   opts.on('--list-packs',
-          'Just lists the known packs and exists.'
+          'Just lists the known packs and exits.'
          ) do |list_packs|
            options[:list_packs] = list_packs
          end
