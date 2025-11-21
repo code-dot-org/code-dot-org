@@ -23,9 +23,11 @@ module TestRunUtils
     end
   end
 
-  # Executes a mysqldump command securely using a temporary option file if a password is provided.
-  # Automatically handles temp file creation and cleanup, even on errors.
-  # Yields the complete mysqldump command string to the block.
+  # Executes mysqldump via CLI. Uses shell instead of Ruby MySQL client because:
+  # - No Ruby equivalent - mysqldump is CLI-only tool
+  # Execution environment: CI containers (Drone), test servers
+  # Temp file risk: High - same user runs multiple CI processes, can enumerate `/tmp` and read each other's temp files
+  # Not susceptible to temp directory sniffing from other users (mode 600 protects), but same-user processes can access
   def self.mysqldump_secure(db, database, additional_opts = '')
     db = URI.parse(db) unless db.is_a?(URI)
     opts = MysqlConsoleHelper.options(db)
@@ -40,9 +42,12 @@ module TestRunUtils
     end
   end
 
-  # Executes a mysql command securely using a temporary option file if a password is provided.
-  # Automatically handles temp file creation and cleanup, even on errors.
-  # Yields the complete mysql command string to the block.
+  # Executes mysql via CLI. Uses shell instead of Ruby MySQL client because:
+  # - Used in shell pipes (e.g., `tee <file >(cmd1) >(cmd2)`) which require shell syntax
+  # - Simpler to reuse same pattern as mysqldump_secure
+  # Execution environment: CI containers (Drone), test servers
+  # Temp file risk: High - same user runs multiple CI processes, can enumerate `/tmp` and read each other's temp files
+  # Not susceptible to temp directory sniffing from other users (mode 600 protects), but same-user processes can access
   def self.mysql_secure(db, command_template)
     db = URI.parse(db) unless db.is_a?(URI)
     mysql_opt_arg, option_file = create_mysql_option_file(db)
@@ -184,10 +189,17 @@ module TestRunUtils
       CDO.log.info "Test data modified, cloning across #{procs} databases..."
       databases = (2..procs).map {|i| "#{database}#{i}"}
       # For the pipes command, we need to keep the option file alive for the entire command.
+      # Uses shell instead of Ruby MySQL client because shell pipe syntax `>(cmd1) >(cmd2)` requires CLI.
+      # Execution environment: CI containers (Drone), test servers
+      # Temp file risk: High - same user runs multiple CI processes, can enumerate `/tmp` and read each other's temp files
       # SECURITY: Create option file once and reuse for all mysql commands in the pipes
       mysql_opt_arg, option_file = mysql_opt_file_arg(writer)
       opts = MysqlConsoleHelper.options(writer)
       begin
+        # Uses shell instead of Ruby MySQL client (Sequel) because:
+        # - Same execution context as pipes command below (which requires shell syntax)
+        # - Simpler to reuse same temp file pattern
+        # - Could use Sequel, but would require separate connection handling
         databases.each do |db|
           recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
           RakeUtils.system_stream_output "echo '#{recreate_db}' | #{mysql_opt_arg}mysql #{opts}"

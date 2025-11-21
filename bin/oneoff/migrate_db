@@ -30,11 +30,12 @@ def run(cmd)
   IO.popen(cmd) {|output| output.each {|line| puts line.chomp}}
 end
 
-# Executes a MySQL command securely using a temporary option file if a password is provided.
-# This avoids exposing passwords in process lists or logs.
-# NOTE: This script runs in a Chef/knife context where the full Code.org deployment
-# environment may not be loaded, so we shell out to mysql directly rather than using
-# MysqlConsoleHelper.
+# Executes MySQL command via CLI. Uses shell instead of Ruby MySQL client because:
+# - Runs in Chef/knife context where full Code.org deployment environment may not be loaded
+# - Can't use MysqlConsoleHelper (requires CDO constants that aren't available)
+# - RDS-specific command (`CALL mysql.rds_reset_external_master()`) could use Sequel, but would require loading deployment environment
+# Execution environment: Admin workstations, jump servers (single user, manual execution)
+# Temp file risk: Low - single user environment, not susceptible to temp directory sniffing
 def run_mysql_secure(db_uri, mysql_command_template)
   db = URI.parse(db_uri)
   require 'tempfile'

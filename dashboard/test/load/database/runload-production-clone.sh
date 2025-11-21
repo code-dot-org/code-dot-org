@@ -36,6 +36,9 @@ rate=5
 let num_sysbench_clients=max_db_connections/threads
 
 # Drop / create the sysbench schema
+# Uses mysql CLI instead of Ruby MySQL client because this is a bash script.
+# Execution environment: Load testing EC2 instances (multiple concurrent processes as same user)
+# Temp file risk: High - multiple concurrent load tests as same user can enumerate `/tmp` and read each other's temp files
 # SECURITY: Using -p$PASSWORD on command line exposes password in process lists (ps aux) and shell history.
 # MySQL warns: "Using a password on the command line interface can be insecure."
 # Use a temporary option file with restricted permissions (600) instead.

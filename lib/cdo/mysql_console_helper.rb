@@ -17,6 +17,11 @@ module MysqlConsoleHelper
     opts.join(' ')
   end
 
+  # Executes MySQL command via CLI. Uses shell instead of Ruby MySQL client because:
+  # - Interactive CLI features (pager, formatting, history) are required for developer/admin use
+  # - Used by bin/mysql-client-* scripts which are interactive tools
+  # Execution environment: Developer workstations, admin servers (single user, manual execution)
+  # Temp file risk: Low - single user environment, not susceptible to temp directory sniffing
   def self.run(db, args, warn: true)
     db = URI.parse(db) unless db.is_a?(URI)
 
