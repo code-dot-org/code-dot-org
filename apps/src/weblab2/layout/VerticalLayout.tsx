@@ -113,6 +113,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     size: 'xs',
     selectedButtonValue: viewMode,
     onChange: viewMode => dispatch(setViewMode(viewMode as ViewMode)),
+    className: weblab2Styles.truncateButtonText,
   };
 
   useEffect(() => {

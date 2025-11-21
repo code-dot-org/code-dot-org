@@ -11,3 +11,8 @@
   flex-grow: 1;
   overflow: hidden;
 }
+
+.truncateButtonText {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
