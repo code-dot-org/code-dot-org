@@ -31,11 +31,8 @@ jobs:
         shell: bash
         run: yarn install
 
-      - name: Build
-        run: yarn build
-
-      - name: Unit Tests
-        run: yarn test
+      - name: Lint
+        run: yarn lint
 
   build:
     runs-on: ubuntu-24.04
@@ -48,6 +45,7 @@ jobs:
             frontend
             shared/fonts
             .github
+            dashboard/app/views
           # todo: I don't believe LFS is needed for unit tests or linting
           # lfs: true
 
