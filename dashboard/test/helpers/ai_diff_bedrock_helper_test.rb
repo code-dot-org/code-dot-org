@@ -128,15 +128,12 @@ User: oh no"
     create(:script_level, script: script, levels: [level], lesson: lesson)
 
     # for user_1
-    sublevel1_user_level = create(:user_level, user: user_1, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180)
-    sublevel2_user_level = create(:user_level, user: user_1, level: sublevel2, script: script, best_result: 20, time_spent: 300)
-
-    sublevel1_last_progress = UserLevel.find(sublevel1_user_level.id).updated_at.to_i
-    sublevel2_last_progress = UserLevel.find(sublevel2_user_level.id).updated_at.to_i
+    create(:user_level, user: user_1, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180)
+    create(:user_level, user: user_1, level: sublevel2, script: script, best_result: 20, time_spent: 300)
 
     # for user_2
-    sublevel1_user_level_2 = create(:user_level, user: user_2, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180)
-    sublevel2_user_level_2 = create(:user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300)
+    create(:user_level, user: user_2, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180)
+    create(:user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300)
 
     context = SharedConstants::AI_DIFF_CONTEXT[:PROGRESS]
     course_display_name = "Computer Science Discoveries"
