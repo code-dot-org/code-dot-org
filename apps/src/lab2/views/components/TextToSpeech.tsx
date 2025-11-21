@@ -1,17 +1,20 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useEffect, useState, MutableRefObject} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import DCDO from '@cdo/apps/dcdo';
+import {useLocalization} from '@cdo/apps/localization';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
-import currentLocale from '@cdo/apps/util/currentLocale';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './TextToSpeech.module.scss';
 
 interface TextToSpeechProps {
-  text: string;
+  /** The exact text to read aloud. */
+  text?: string;
+  /** A Ref capturing the live content to read aloud. */
+  contentRef?: MutableRefObject<HTMLElement | null>;
 }
 
 const usePause = queryParams('tts-play-pause') === 'true';
@@ -21,18 +24,38 @@ const stopIcon = (queryParams('tts-stop-icon') as string) || 'circle-stop';
 const enabledLocales = DCDO.get('browser-tts-button-enabled-locales', []) as
   | string[]
   | boolean;
-const ttsButtonEnabled =
-  enabledLocales === true ||
-  (Array.isArray(enabledLocales) && enabledLocales.includes(currentLocale()));
 
 /**
  * TextToSpeech play button.
+ *
+ * This takes either some specific `text` content or a reference to a given
+ * element to derive that text from using the `textContent` property.
+ *
+ * The button is not rendered if the text-to-speech engine is not available
+ * or the current locale is not enabled via the array provided by the
+ * `browser-tts-button-enabled-locales` DCDO flag.
  */
-const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
+const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({
+  text,
+  contentRef,
+}) => {
   const {isTtsAvailable, speak, cancel, pause, resume} =
     useBrowserTextToSpeech();
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+
+  const [ttsButtonEnabled, setTtsButtonEnabled] = useState(false);
+
+  const locale = useLocalization();
+
+  // Determine, whenever the locale is set on the first time or updated, if the
+  // text-to-speech engine is available for that locale.
+  useEffect(() => {
+    setTtsButtonEnabled(
+      enabledLocales === true ||
+        (Array.isArray(enabledLocales) && enabledLocales.includes(locale))
+    );
+  }, [locale]);
 
   const playText = () => {
     if (!isTtsAvailable) {
@@ -56,7 +79,11 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
       return;
     }
 
-    const utterance = speak(text);
+    // Determine the text to speak by either using the 'text' override or the
+    // text content for the provided content element.
+    const spokenText: string = text || contentRef?.current?.textContent || '';
+
+    const utterance = speak(spokenText);
     if (utterance) {
       utterance.addEventListener('start', () => setIsPlaying(true));
       utterance.addEventListener('end', () => {
@@ -77,8 +104,6 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
       playText();
     }
   };
-
-  console.log('hello??', text, ttsButtonEnabled, isTtsAvailable);
 
   if (!ttsButtonEnabled || !isTtsAvailable) {
     return null;

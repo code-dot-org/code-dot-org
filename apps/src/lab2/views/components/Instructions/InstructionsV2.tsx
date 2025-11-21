@@ -1,11 +1,12 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useRef, MutableRefObject} from 'react';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 
 import NavigationArea from './NavigationArea';
 import PredictQuestion from './PredictQuestion';
@@ -81,6 +82,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const isPredictLevel = predictSettings?.isPredictLevel;
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
   const {theme: defaultTheme} = useTheme();
+  const ref: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
   // Don't render anything if we don't have any instructions.
   if (longInstructions === undefined) {
@@ -120,10 +122,15 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             <MainInstructionsContent
               instructionsText={longInstructions}
               handleInstructionsTextClick={handleInstructionsTextClick}
-              showTts={showTts}
+              ref={ref}
             />
             <PredictQuestion className={moduleStyles.predictQuestion} />
           </div>
+          {showTts && (
+            <div className={moduleStyles.ttsContainer}>
+              <TextToSpeech contentRef={ref} />
+            </div>
+          )}
           {bottomComponent && (
             <div className={moduleStyles.bottomComponent}>
               {bottomComponent}
