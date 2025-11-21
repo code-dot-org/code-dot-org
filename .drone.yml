@@ -44,7 +44,7 @@ steps:
     image: plugins/s3-cache
     volumes:
       - name: drone-src
-        path: /drone/src
+        path: /drone/
     settings:
       filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
@@ -56,7 +56,7 @@ steps:
     image: bitnamilegacy/git
     volumes:
       - name: drone-src
-        path: /drone/src
+        path: /drone/
     environment:
       GITHUB_TOKEN:
         from_secret: GITHUB_TOKEN
@@ -100,7 +100,7 @@ steps:
     pull: always
     volumes:
       - name: drone-src
-        path: /drone/src
+        path: /drone/
     environment:
       CI_JOB: 'unit_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
@@ -175,9 +175,9 @@ steps:
       # Even files cached with absolute paths will be restored into the
       # workdir; so for this step, we mount the relevant volumes there, too.
       - name: mysql
-        path: /drone/src/var/lib/mysql
+        path: /drone//var/lib/mysql
       - name: drone-src
-        path: /drone/src
+        path: /drone/
     settings:
       filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
@@ -189,7 +189,7 @@ steps:
     image: bitnamilegacy/git
     volumes:
       - name: drone-src
-        path: /drone/src
+        path: /drone/
     environment:
       GITHUB_TOKEN:
         from_secret: GITHUB_TOKEN
@@ -236,7 +236,7 @@ steps:
       - name: mysql
         path: /var/lib/mysql
       - name: drone-src
-        path: /drone/src
+        path: /drone/
     environment:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
@@ -364,6 +364,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 7b3268312f1ba2205a71b8c4b6da465f8f960b924cb86bb6747e4302958c4276
+hmac: 8e985f8b43be23e00c8edd3d7e0b92256175beb063ac3926ea91808b600602ee
 
 ...
