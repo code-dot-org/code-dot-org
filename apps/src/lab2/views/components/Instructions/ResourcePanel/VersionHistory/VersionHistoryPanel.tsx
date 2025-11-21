@@ -397,7 +397,9 @@ const VersionHistoryPanel: React.FunctionComponent<
               onChange={onVersionChange}
               disabled={disabled}
               showRestoreButton={
-                selectedVersion === INITIAL_VERSION_ID && !viewAsUserId
+                selectedVersion === INITIAL_VERSION_ID &&
+                latestVersion !== INITIAL_VERSION_ID &&
+                !viewAsUserId
               }
               restoreOnClick={restoreSelectedVersion}
               restoreLoading={versionLoading}

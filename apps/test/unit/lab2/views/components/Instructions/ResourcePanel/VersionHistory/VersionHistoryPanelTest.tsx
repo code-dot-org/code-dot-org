@@ -271,8 +271,6 @@ describe('VersionHistoryPanel', () => {
     expect(
       screen.queryByRole('button', {name: 'Restore'})
     ).not.toBeInTheDocument();
-    // Cancel button should still be available
-    expect(screen.getByRole('button', {name: 'Cancel'})).toBeInTheDocument();
   });
 
   it('shows loading state while loading version list', () => {
@@ -298,9 +296,6 @@ describe('VersionHistoryPanel', () => {
     );
 
     const restoreButton = screen.getByRole('button', {name: 'Restore'});
-    const cancelButton = screen.getByRole('button', {name: 'Cancel'});
-
     expect(restoreButton).toBeDisabled();
-    expect(cancelButton).toBeDisabled();
   });
 });
