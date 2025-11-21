@@ -18,8 +18,8 @@ jobs:
             apps
             frontend
             .github
-          # todo: I don't believe LFS is needed for unit tests or linting
-          # lfs: true
+          # todo: LFS required on static/_config.scss
+          lfs: true
 
       - uses: actions/setup-node@v4
         with:
@@ -45,6 +45,8 @@ jobs:
             shared/fonts
             .github
             dashboard/app/views
+            pegasus/sites.v3/code.org
+            pegasus/sites.v3/hourofcode.com
           # todo: I don't believe LFS is needed for unit tests or linting
           # lfs: true
 
