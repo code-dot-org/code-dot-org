@@ -29,6 +29,7 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
  * @returns Nothing (void)
  */
 const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
+  // file.contents is an empty string for images
   fileDownload(file.contents, file.name);
   sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, {
     fileType: file.language?.toLowerCase() || '',
@@ -51,7 +52,7 @@ export const useFileRowOptions = (
   hasValidationFile: boolean
 ) => {
   const {
-    config: {editableFileTypes},
+    config: {downloadableFileTypes},
     levelProperties,
   } = useCodebridgeContext();
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
@@ -124,7 +125,7 @@ export const useFileRowOptions = (
         },
       },
       {
-        condition: editableFileTypes.includes(file.language),
+        condition: downloadableFileTypes.includes(file.language),
         iconName: 'download',
         labelText: codebridgeI18n.downloadFile(),
         clickHandler: () => handleFileDownload(file, appName),
@@ -146,7 +147,7 @@ export const useFileRowOptions = (
       appName,
       backpackApi,
       dispatch,
-      editableFileTypes,
+      downloadableFileTypes,
       file,
       isLocked,
       isStartMode,

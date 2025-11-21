@@ -64,6 +64,7 @@ const standaloneStartSources: {[key: string]: ProjectSources} = {
 const defaultConfig: ConfigType = {
   languageMapping: pythonlabLangMapping,
   editableFileTypes: PYTHONLAB_EDITABLE_FILE_TYPES,
+  downloadableFileTypes: PYTHONLAB_EDITABLE_FILE_TYPES,
   activeLayout: 'horizontal',
   layoutComponents: {
     horizontal: HorizontalLayout,

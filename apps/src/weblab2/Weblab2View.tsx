@@ -17,7 +17,10 @@ import {ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
-import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
+import {
+  WEBLAB2_EDITABLE_FILE_TYPES,
+  WEBLAB2_IMAGE_FILE_TYPES,
+} from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {getPromptNameFromMode} from './helpers/aiTutorHelper';
 import {
@@ -44,6 +47,10 @@ const weblab2LangMapping: {[key: string]: LanguageSupport} = {
 const defaultConfig: ConfigType = {
   languageMapping: weblab2LangMapping,
   editableFileTypes: WEBLAB2_EDITABLE_FILE_TYPES,
+  downloadableFileTypes: [
+    ...WEBLAB2_EDITABLE_FILE_TYPES,
+    ...WEBLAB2_IMAGE_FILE_TYPES,
+  ],
   activeLayout: 'vertical',
   layoutComponents: {
     vertical: VerticalLayout,
