@@ -78,7 +78,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const [typingDone, setTypingDone] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
 
-  const contentRef: MutableRefObject<HTMLElement | null> = useRef(null);
+  const contentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
   const lastPanelStartTime = useRef<number>(Date.now());
   const nextButtonRef = useRef<HTMLButtonElement>(null);
