@@ -274,14 +274,16 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             )
           }
         >
-          <Excalidraw
-            initialData={initialExcalidrawData || undefined}
-            onChange={debouncedSerializeAndSaveWorkspace}
-            excalidrawAPI={api => (excalidrawApiRef.current = api)}
-            key={excalidrawMountKey}
-            theme={theme.toLowerCase() as ExcalidrawTheme}
-            viewModeEnabled={readonlyWorkspace}
-          />
+          {initialExcalidrawData && (
+            <Excalidraw
+              initialData={initialExcalidrawData}
+              onChange={debouncedSerializeAndSaveWorkspace}
+              excalidrawAPI={api => (excalidrawApiRef.current = api)}
+              key={excalidrawMountKey}
+              theme={theme.toLowerCase() as ExcalidrawTheme}
+              viewModeEnabled={readonlyWorkspace}
+            />
+          )}
           {WorkspaceAlert}
         </PanelContainer>
       </div>
