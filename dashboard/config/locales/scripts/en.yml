@@ -26083,10 +26083,40 @@ en:
               name: Intro to Loops
             lesson-2:
               name: Counted Repetition
+            lesson-3:
+              name: Open-Ended Repetition
+            lesson-4:
+              name: Displaying Arrays as List Views
+            lesson-5:
+              name: Displaying Objects as Cards
+            lesson-6:
+              name: Filtering and Transparency
+            lesson-7:
+              name: Pure Functions vs Side Effects
+            lesson-8:
+              name: Copy, Don't Mutate
+            lesson-9:
+              name: Inclusive Filters and Clear Labels
+            lesson-10:
+              name: Schema Design for Simples Features
           lesson_groups: {}
           name: 6-12-aif-s2-unit4
           title: "[DEV] AIF S2 Unit 4"
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
+        global-modular-aif:
+          lessons: {}
+          lesson_groups: {}
+        modular-express-express:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sequencing
+          name: modular-express-express
+          title: TEST Express Express for modular curriculum
+          description_audience: ''
+          description_short: Tess + Doyeon thinking about Modularity and India
+          description: This is a express-express unit.  Basically just the essentials before getting into AIF content
           student_description: ''
