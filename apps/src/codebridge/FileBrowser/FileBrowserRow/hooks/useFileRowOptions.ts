@@ -25,12 +25,17 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
 /**
  * Handles downloading a file and sending an analytics event.
  * @param file - The ProjectFile object representing the file to download.
- * @param appName - (optional) The name of the application triggering the download, used for analytics.
  * @returns Nothing (void)
  */
-const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
-  // file.contents is an empty string for images
-  fileDownload(file.contents, file.name);
+const handleFileDownload = async (file: ProjectFile) => {
+  if (file.contents === '' && file.url) {
+    // File is an image, so download from browser
+    const image = await fetch(file.url);
+    const blob = await image.blob();
+    fileDownload(blob, file.name);
+  } else {
+    fileDownload(file.contents, file.name);
+  }
   sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, {
     fileType: file.language?.toLowerCase() || '',
   });
@@ -128,7 +133,7 @@ export const useFileRowOptions = (
         condition: downloadableFileTypes.includes(file.language),
         iconName: 'download',
         labelText: codebridgeI18n.downloadFile(),
-        clickHandler: () => handleFileDownload(file, appName),
+        clickHandler: () => handleFileDownload(file),
       },
       {
         condition: !isLocked,
