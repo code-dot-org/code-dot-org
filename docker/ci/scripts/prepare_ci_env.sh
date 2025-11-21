@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Script for doing common preparation needed for all operations within a docker
-# container in order to run CI tests, whether unit or UI
+# container in order to run CI tests.
 
 set -e
 

@@ -8,7 +8,7 @@
 source docker/ci/scripts/prepare_ci_env.sh
 
 # Skip rake install in ui pipeline. This is safe because we've already run rake install
-# the the cache-staging-build pipeline, and the ui pipeline re-uses that cache.
+# in the cache-staging-build pipeline, and the ui pipeline re-uses that cache.
 
 bundle exec rake build
 bundle exec rake ci:seed_ui_test
