@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-21T04:55:33.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "building-data-driven-systems-lesson4-level5_6_template-test-2025",
+    "long_instructions": "# Update Objects using Dot and Bracket Notation\r\n\r\n1. **Prompt**\r\n   Ask AI how to update object properties using dot notation and bracket notation.\r\n\r\n2. **Analyze**\r\n   Examine the AI’s examples, noting the similarities and differences between the two methods.\r\n\r\n3. **Integrate**\r\n   Try both methods to change property values in your object by writing the following functions:\r\n   * `renameDessert`: Change `dessert.name` to `\"Cookie Sundae\"` (use dot notation).\r\n   * `toggleFrozen`: Write an if/else statement to flip the `isFrozen` boolean.\r\n   * `recategorizeFlavor`: Create a variable `key = \"flavor\"` and use bracket notation to change the value to `\"Peanut Butter\"`.\r\n   * **Important**: Remember to call `render()` inside each function and wire them to your buttons!\r\n\r\n4. **Reflect**\r\n   Which syntax feels easier or clearer? When might you need bracket notation instead?",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-21 05:01:42 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,70 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-20T18:27:38.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Movie Showtimes",
+    "thumbnail_url": "https://images.code.org/1209dbfcf1c0e878cb40ca663dec644f-showtime.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "bubble_choice_description": "Add a count message, a filter summary label, and a friendly empty state to a showtimes list.",
+    "long_instructions": "## Movie Showtime\r\n\r\n**Goal:**\r\nEnhance the movie showtimes view with clear **transparency cues** so users always know what they're seeing, what filters are active, and what happens when nothing matches.\r\n\r\n---\r\n\r\n#### Steps to Complete\r\n\r\n1. **Open `script.js`.**\r\n   Find the `render()` function. This is where the movie list is built.\r\n\r\n2. **Add three messages to improve clarity:**\r\n\r\n   * **Count message:**\r\n     Update `#countMessage` to show how many results are displayed out of the total.\r\n     Example: `Showing 3 of 6 results`\r\n   * **Filter label:**\r\n     Update `#filterLabel` to summarize the rule being used.\r\n     Example: `Filter: showtimes after 6 PM`\r\n   * **Empty-state message:**\r\n     If no results match, show a friendly message in `#emptyMessage`, such as:\r\n\r\n     > “No showtimes found for this selection.”\r\n     > Otherwise, hide it.\r\n\r\n3. **Test your work:**\r\n\r\n   * Try both datasets:\r\n\r\n     * **Full list** → results visible, count > 0, empty message hidden.\r\n     * **Empty list** → results = 0, empty message visible.\r\n   * Make sure the count and filter label always update when you run `render()`.\r\n\r\n4. **Use AI to check your reasoning:**\r\n\r\n   * “Explain what my loop is doing each time it runs.”\r\n   * “Check if my count message still works when there are no results.”\r\n   * “Suggest a friendlier way to say ‘No results found.’”\r\n\r\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Movie Showtimes — Adding Transparency</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n\n  <h2>Movie Showtimes</h2>\n\n  <p id=\"countMessage\"></p>\n  <p id=\"filterLabel\"></p>\n\n  <ul id=\"movieList\"></ul>\n  <p id=\"emptyMessage\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  background-color: #f9f9f9;\n  color: #222;\n  margin: 40px;\n}\n\nh2 {\n  color: #333;\n}\n\n#movieList {\n  list-style: none;\n  padding: 0;\n}\n\n#movieList li {\n  background: #fff;\n  margin: 8px 0;\n  padding: 8px 12px;\n  border-radius: 6px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\np {\n  margin: 6px 0;\n}\n\n#emptyMessage {\n  color: #666;\n  font-style: italic;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- Sample data (toggle to test) ---\nconst movies = [\n  { title: \"Moon Harbor\", time: \"6:15 PM\" },\n  { title: \"Granite Peak\", time: \"7:00 PM\" },\n  { title: \"Neon River\", time: \"9:10 PM\" }\n];\n\nfunction render() {\n  const list = document.getElementById(\"movieList\");\n  list.innerHTML = \"\";\n\n  // show only movies after 6 PM\n  const results = [];\n  for (let i = 0; i < movies.length; i++) {\n    \n    const movie = movies[i];\n    if (movie.time >= \"6:00 PM\") {\n      results.push(movie);\n      const li = document.createElement(\"li\");\n      li.textContent = movie.title + \" — \" + movie.time;\n      list.appendChild(li);\n    }\n  }\n\n\n  \n}\n\nrender();\n\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-20 19:02:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 19:03:35 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 19:06:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 19:20:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 20:00:12 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>
