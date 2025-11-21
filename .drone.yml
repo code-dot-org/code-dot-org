@@ -294,7 +294,7 @@ steps:
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
-  - name: prepare-ci-tests
+  - name: prepare-cached-staging-build
     image: codedotorg/cdo-ci:1.18
     pull: always
     environment:
