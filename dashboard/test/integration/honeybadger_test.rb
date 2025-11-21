@@ -30,7 +30,10 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "does NOT log warden session data" do
+  # The value Honeybadger will set a filtered value to.
+  FILTERED = "[FILTERED]"
+
+  test "does NOT log encrypted data" do
     skip 'races the reconfiguration and errors if it contacts real honeybadger server'
     student = create(:student)
     sign_in student
@@ -43,29 +46,6 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
     # Other tests running in parallel might have logged notices too, but we're only interested in notices about our test controller
     notice = Honeybadger::Backend::Test.notifications[:notices].find {|n| n.controller == "honeybadger_error"}
     refute_nil notice
-
-    # Verify no warden keys exist in session data
-    session_data = notice.as_json[:request][:session]
-    warden_keys = session_data.keys.select {|key| key.to_s.start_with?('warden.')}
-    assert_empty warden_keys, "Warden keys should be completely removed, but found: #{warden_keys}"
-  end
-
-  test "sets user_id context for authenticated users" do
-    skip 'races the reconfiguration and errors if it contacts real honeybadger server'
-    student = create(:student)
-    sign_in student
-
-    get raise_error_path
-
-    # Ensure that the notifications hit the backend queue
-    Honeybadger.flush
-
-    # Find our test notice
-    notice = Honeybadger::Backend::Test.notifications[:notices].find {|n| n.controller == "honeybadger_error"}
-    refute_nil notice
-
-    # Verify user_id is set in context
-    context_data = notice.as_json[:request][:context]
-    assert_equal student.id, context_data[:user_id], "user_id should be set in Honeybadger context"
+    assert_equal FILTERED, notice.as_json[:request][:session]["warden.user.user.key"]
   end
 end

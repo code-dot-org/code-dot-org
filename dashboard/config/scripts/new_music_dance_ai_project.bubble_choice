@@ -1,12 +1,12 @@
 name 'New Music Dance AI Project'
-display_name 'Music Dance AI Test'
-description 'Generate a song, dance, or dancer using AI!'
+display_name 'Mix & Move with AI Project'
+description 'Generate a song, dance, and dancer using AI!'
 
 sublevels
-level 'Music AI Subproject'
 level 'Dancer AI Subproject'
+level 'Music AI Subproject'
 level 'Dance AI Subproject'
+
 uses_lab2
 standalone
-
 custom_mode 'music_dance_ai'
