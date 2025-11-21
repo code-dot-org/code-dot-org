@@ -408,6 +408,9 @@ Resources:
 
             # BEGIN: Settings for the Drone Runner ("worker"/"agent") executing on the EC2 Instances provisioned by Autoscaler.
             -
+              Name: DRONE_AGENT_IMAGE
+              Value: drone/drone-runner-docker:1.8
+            -
               Name: DRONE_AGENT_CONCURRENCY
               Value: 1
             # END: Settings for the Drone Runner.
