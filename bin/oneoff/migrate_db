@@ -30,6 +30,37 @@ def run(cmd)
   IO.popen(cmd) {|output| output.each {|line| puts line.chomp}}
 end
 
+# Executes a MySQL command securely using a temporary option file if a password is provided.
+# This avoids exposing passwords in process lists or logs.
+# NOTE: This script runs in a Chef/knife context where the full Code.org deployment
+# environment may not be loaded, so we shell out to mysql directly rather than using
+# MysqlConsoleHelper.
+def run_mysql_secure(db_uri, mysql_command_template)
+  db = URI.parse(db_uri)
+  require 'tempfile'
+  require 'fileutils'
+
+  if db.password
+    # SECURITY: Using --password= on command line exposes passwords in process lists (ps aux)
+    # and logs. MySQL warns: "Using a password on the command line interface can be insecure."
+    # Using --defaults-extra-file with a temporary file (mode 600) is the secure approach.
+    option_file = Tempfile.new(['mysql', '.cnf'])
+    option_file.write("[client]\n")
+    option_file.write("password=#{db.password}\n")
+    option_file.close
+    FileUtils.chmod(0o600, option_file.path)
+    # Insert --defaults-extra-file right after 'mysql' in the command
+    cmd = mysql_command_template.sub(/mysql /, "mysql --defaults-extra-file=#{option_file.path} ")
+    begin
+      run(cmd)
+    ensure
+      option_file.unlink
+    end
+  else
+    run(mysql_command_template)
+  end
+end
+
 # Use the `pdsh` utility and `ls_frontend_servers` script to 'fan out' a command via ssh to all front-ends.
 def fanout(cmd)
   puts "Running #{cmd}..."
@@ -58,7 +89,7 @@ def main
 
   # 3. Promote the new DB instance to master.
   puts "Promoting new DB instance to master..."
-  run "echo 'CALL mysql.rds_reset_external_master();' | mysql -u'#{writer.user}' -p'#{writer.password}' -h '#{writer.host}'"
+  run_mysql_secure(writer.to_s, "echo 'CALL mysql.rds_reset_external_master();' | mysql -u'#{writer.user}' -h '#{writer.host}'")
 
   # 4. Start applications on all frontends. [live-site downtime ends]
   fanout 'sudo chef-client'

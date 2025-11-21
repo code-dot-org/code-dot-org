@@ -36,7 +36,17 @@ rate=5
 let num_sysbench_clients=max_db_connections/threads
 
 # Drop / create the sysbench schema
-mysql -h$1 -udb -p$PASSWORD -e "drop schema if exists sysbench;create schema sysbench;"
+# SECURITY: Using -p$PASSWORD on command line exposes password in process lists (ps aux) and shell history.
+# MySQL warns: "Using a password on the command line interface can be insecure."
+# Use a temporary option file with restricted permissions (600) instead.
+TMP_CNF=$(mktemp /tmp/mysql.XXXXXX.cnf)
+chmod 600 "$TMP_CNF"
+cat > "$TMP_CNF" <<EOF
+[client]
+password=$PASSWORD
+EOF
+mysql --defaults-extra-file="$TMP_CNF" -h$1 -udb -e "drop schema if exists sysbench;create schema sysbench;"
+rm -f "$TMP_CNF"
 
 # Execute tests
 # Launch multiple sysbench clients
