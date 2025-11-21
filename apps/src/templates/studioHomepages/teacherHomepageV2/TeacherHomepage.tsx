@@ -38,10 +38,13 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
 
-  const [hasMatchedPersona, setHasMatchedPersona] = React.useState<
-    boolean | null
-  >(null);
-  const [isLoadingProfileData, setIsLoadingProfileData] = React.useState(true);
+  const [personaData, setPersonaData] = React.useState<{
+    hasMatchedPersona: boolean | null;
+    isLoading: boolean;
+  }>({
+    hasMatchedPersona: null,
+    isLoading: true,
+  });
 
   const dispatch = useAppDispatch();
 
@@ -65,22 +68,30 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
       try {
         const response = await fetch('/teaching_profile_data');
         const data = await response.json();
-        setHasMatchedPersona(!!data.data.matchedPersona);
+        setPersonaData({
+          hasMatchedPersona: !!data.data.matchedPersona,
+          isLoading: false,
+        });
       } catch (error) {
         console.error('Error fetching teaching profile data:', error);
-        setHasMatchedPersona(false);
-      } finally {
-        setIsLoadingProfileData(false);
+        setPersonaData({
+          hasMatchedPersona: false,
+          isLoading: false,
+        });
       }
     };
 
     fetchTeachingProfileData();
   }, [dispatch]);
 
-  const showPersonalizationQuiz = () => {
-    if (isLoadingProfileData) return false;
-    return !hasMatchedPersona;
-  };
+  const shouldShowPersonalizationAlert = React.useMemo(() => {
+    // Don't show while loading
+    if (personaData.isLoading) {
+      return false;
+    }
+    // Show alert only when hasMatchedPersona is explicitly false
+    return personaData.hasMatchedPersona === false;
+  }, [personaData]);
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
@@ -149,7 +160,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
         </Typography>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
-            {showPersonalizationQuiz() && (
+            {shouldShowPersonalizationAlert && (
               <Alert
                 aria-labelledby="feedback-banner-title"
                 showIcon={true}
