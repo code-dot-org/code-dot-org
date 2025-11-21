@@ -17,8 +17,13 @@ import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {
+  EVENTS,
+  PLATFORMS,
+  EXPERIMENTS,
+} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
@@ -42,7 +47,6 @@ import {
   clearSignUpSessionStorage,
   SIGN_UP_USER_TYPE,
   MAX_DISPLAY_NAME_LENGTH,
-  TEACHER_IN_GRADE_SELECTION_EXPERIMENT_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -113,9 +117,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
   // Remove oauth user_type cookie if it exists
   cookies.remove(SIGN_UP_USER_TYPE);
 
-  const isInGradeSelectionExperiment =
-    sessionStorage.getItem(TEACHER_IN_GRADE_SELECTION_EXPERIMENT_KEY) ===
-    'true';
+  const [isInGradeSelectionExperiment, setIsInGradeSelectionExperiment] =
+    useState(false);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
@@ -173,6 +176,17 @@ const FinishTeacherAccount: React.FunctionComponent<{
       setUserReturnTo(userReturnToHref);
     }
   }, [countryCode, usIp, redirectUrl]);
+
+  useEffect(() => {
+    (async () => {
+      const result = await statsigReporter.getIsInExperimentAsync(
+        EXPERIMENTS.SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION,
+        EXPERIMENTS.ENABLE_SELECTING_GRADES,
+        false
+      );
+      setIsInGradeSelectionExperiment(result);
+    })();
+  }, []);
 
   // GDPR is valid if
   // 1. The fetch call has completed AND

@@ -379,8 +379,7 @@ const VersionHistoryPanel: React.FunctionComponent<
                   <SaveVersionPanel
                     projectSources={projectSources}
                     onSuccess={handleSaveVersionSuccess}
-                    versionLoading={versionLoading}
-                    disabled={disabled}
+                    disabled={disabled || versionLoading}
                     buttonLabel={
                       version.comment
                         ? 'Save new version' // Hardcoding this so it can be translated by Localize

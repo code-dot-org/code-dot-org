@@ -1,10 +1,10 @@
 name 'building-data-driven-systems-lesson2-level3-test-2025'
-display_name 'Schema Design'
-description 'Choose one of the schema you want to design'
+display_name 'Schema Display'
+description 'Choose the same level you did for Level 1'
 
 sublevels
-level 'building-data-driven-systems-lesson2-level1a-test-2025'
-level 'building-data-driven-systems-lesson2-level1b-test-2025'
-level 'building-data-driven-systems-lesson2-level1c-test-2025'
+level 'building-data-driven-systems-lesson2-level3a-test-2025'
+level 'building-data-driven-systems-lesson2-level3b-test-2025'
+level 'building-data-driven-systems-lesson2-level3c-test-2025'
 
 uses_lab2

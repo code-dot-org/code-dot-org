@@ -1,0 +1,59 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-21T01:36:18.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Create Your First Object\r\n\r\n1.  **PROMPT** the AI: Ask AI to \"create a JavaScript object using these properties and values\" from your warm-up list.\r\n2.  **ANALYZE** the Code: Paste the AI's object code into your `script.js` file. Add comments to describe what the AI chose (e.g., property names, default values, data types).\r\n3.  **INTEGRATE** and Modify: Edit the object by adjusting at least one value or adding one new property. (e.g., `myObject.newProp = \"value\";`) Or create an additional object using the one AI created as an example.\r\n4.  **REFLECT** and Inspect: In the `reflection.md` file write comments that compare the AI's logic to your intent and note one thing you learned about object syntax.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "reflection.md",
+          "language": "md",
+          "contents": "What did you notice about the AI constructed object compared with your intent for the object?\n\n\nWhat's one thing you learned about object syntax?\n\n\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMoPtGGHr+guM+1cOYjk\n1qxIYExgp9cD7yQCkwISqnZks62sE0oyAIrAgTrOq1FiVlNt3B75ibbHwaE4\nY6QbmO6t5lpS+/cA9g9d3tOE/KFojE+ssJ/05qWfz3O5m0gujCvoWvt7FV0o\nDxjs3vHXrJQjDhJdjhgyYSpDFtcFK2sLvnaByocDVrQL4q84MCvSKXX4Sdc5\n49xvbMXq/2icxE0S9Wb0a4z6c9cI4VONiSn2/fU7C+3pgkCq3thlKYqSzRHG\nhCcIwx9BZA82ORJtXq8cRsc7+k0XW28S2qjGO66qWqgswdMrz7S6Ju5ATMa5\nzKGKzFSVhSXuPRmbYcEjLcniWitXEgIbfjnDckjxxl3EQIZO5BczAFEAhrSW\nzZqL5YpSMpJo1bE4kjDwXBKRsCjn57l92AFzU7JXiuEQe/y/lU94SqZxr+X4\nThXQec7+teIKUTLYL8TIKLiIOBh2Yb2njiHfRm/IkQ8mRCdLXuiTFaeW+FOC\nxWQlzs0myGRrY9BDzarEiYrcNtKAb/s5XGu5Z3PIJKRQPsmBE7N+6M/3nZ6y\naWz2TtTNyuEskrMRBYxBvVKdBEOP88kGeXKKQeuxb8ORzgyo2WqXDqOESzto\nHbslM3y3USN2KwkxDxh38gW/1fgKnvmgqBblrKYmTrkhbqIjCnsuBZM2cyoM\nEFiGDKpQvYZIB0vN81mGCTvjUfm47RSdavVY2CI07FgQTHti0tF45nnP+f8F\nXJkS0DfNtHPyTn9aZR6TkSQQnZw5gYxk4TJVqs+EL0r44zh1Hh3taHOZ5ycC\n/0dAMZ2AESY9HWouShSSV5VI4ni1GGarjTofGafXqdrCtvmuslfLJCpFBB0+\nf9ruu/XUrwpuJtCJh0wV0Yk0NCGkLlreLEB9n5wpDLeuHZePti85I6t3g7Xq\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-21 02:03:50 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-21 02:05:56 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-21 02:06:52 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -246,7 +246,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 };
 
 export default (props: LabProps<LevelProperties>) => (
-  <SourcesContainer {...props} defaultSources={DEFAULT_SOURCES}>
+  <SourcesContainer
+    {...props}
+    defaultSources={DEFAULT_SOURCES}
+    key={props.levelProperties.id}
+  >
     <SketchlabView levelProperties={props.levelProperties} />
   </SourcesContainer>
 );

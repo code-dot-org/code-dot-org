@@ -82,7 +82,6 @@ const SILENCED = [
   'code-studio',
 
   // referenced by multiple sites
-  'tutorialExplorer',
   'cookieBanner',
   'userHeaderEventLogger',
   'regionalPartnerMiniContact',
