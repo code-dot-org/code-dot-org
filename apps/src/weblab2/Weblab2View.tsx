@@ -25,6 +25,7 @@ import {
   formatExplanationResponse,
   copyCodeJsonSchema,
   formatAcceptRejectResponse,
+  getMergedAiTutorCodeWithSource,
 } from './helpers/aiTutorStructuredResponseHelper';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -143,19 +144,25 @@ const Weblab2View: React.FC<
         experiments.isEnabledAllowingQueryString(
           experiments.WEBLAB2_ACCEPT_REJECT
         ) &&
-        levelProperties.aiTutorMode === 'produce'
+        ['produce', 'designer'].includes(levelProperties.aiTutorMode || '')
       ) {
         return {
           jsonSchema: acceptRejectJsonSchema,
           responseCallback: (response: string) => {
             const jsonResponse = JSON.parse(response);
-            console.log('🤖: Tutor response (in jsonSchema callback):', {
+            console.log('AI Tutor response (in jsonSchema callback):', {
               jsonResponse,
             });
             const formattedResponse = formatAcceptRejectResponse(jsonResponse);
             console.log('formattedResponse', formattedResponse);
             dispatch(setIsAcceptRejectMode(true));
-
+            // In accept-reject mode, temporarily replace sources with merged code from AI Tutor.
+            const mergedCode = getMergedAiTutorCodeWithSource(
+              formattedResponse.code,
+              source as MultiFileSource
+            ) as MultiFileSource;
+            console.log('mergedCode', mergedCode);
+            console.log('source', source);
             return formattedResponse.explanation;
           },
         };
@@ -171,7 +178,7 @@ const Weblab2View: React.FC<
           },
         };
       }
-    }, [levelProperties.aiTutorMode, dispatch]);
+    }, [levelProperties.aiTutorMode, dispatch, source]);
 
   return (
     <div className={moduleStyles.weblab2Container}>

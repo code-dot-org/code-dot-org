@@ -1,4 +1,5 @@
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
@@ -138,16 +139,75 @@ export const formatExplanationResponse = (response: any): string => {
   return formattedResponse;
 };
 
+type AiTutorCodeFile = {
+  name: string;
+  contents: string;
+};
+
+type AcceptRejectFormattedResponse = {
+  explanation: string;
+  code: AiTutorCodeFile[];
+};
+
 // Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const formatAcceptRejectResponse = (response: any) => {
+export const formatAcceptRejectResponse = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  response: any
+): AcceptRejectFormattedResponse => {
   return {
     explanation: response.explanation || '',
-    // Parsed json comes in as 'any'
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    code: response.code.map((codeItem: any) => ({
-      fileName: codeItem.filename,
-      code: codeItem.sourceCode,
+    code: response.code.map((codeFile: any) => ({
+      name: codeFile.filename,
+      contents: codeFile.sourceCode,
     })),
   };
+};
+
+export const getMergedAiTutorCodeWithSource = (
+  code: AiTutorCodeFile[],
+  source: MultiFileSource
+): MultiFileSource => {
+  // Helper function to get folder depth (distance from root)
+  const getFolderDepth = (folderId: string): number => {
+    if (folderId === '0') return 0; // Root folder
+    const folder = source.folders[folderId];
+    if (!folder) return 0;
+    return 1 + getFolderDepth(folder.parentId);
+  };
+
+  // Create a deep copy of the source to modify
+  const updatedSource: MultiFileSource = {
+    ...source,
+    files: {...source.files},
+    folders: {...source.folders},
+    openFiles: source.openFiles ? [...source.openFiles] : undefined,
+  };
+
+  // For each AI code file, find and replace the matching file
+  code.forEach((aiFile: AiTutorCodeFile) => {
+    // Find all files with matching name
+    const matchingFiles = Object.values(updatedSource.files).filter(
+      file => file.name === aiFile.name
+    );
+
+    if (matchingFiles.length === 0) {
+      // No matching file found - skip it
+      return;
+    }
+
+    // Find the file closest to root (smallest folder depth)
+    const closestFile = matchingFiles.reduce((closest, current) => {
+      const closestDepth = getFolderDepth(closest.folderId);
+      const currentDepth = getFolderDepth(current.folderId);
+      return currentDepth < closestDepth ? current : closest;
+    });
+
+    updatedSource.files[closestFile.id] = {
+      ...closestFile,
+      contents: aiFile.contents,
+    };
+  });
+
+  return updatedSource;
 };
