@@ -15,6 +15,7 @@ export interface PartialAppOptions {
   isViewingExemplar: boolean;
   publicCaching: boolean;
   theme?: string;
+  aiTutorEnabledForPilot?: boolean;
 }
 
 /**
@@ -97,6 +98,17 @@ export function getIsShareView(): boolean | undefined {
     const appOptions = getScriptData('appoptions') as PartialAppOptions;
     return appOptions.share;
   }
+}
+
+/**
+ * Returns if the user is in the ai tutor pilot
+ */
+export function getAiTutorEnabledForPilot(): boolean {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return !!appOptions.aiTutorEnabledForPilot;
+  }
+  return false;
 }
 
 /**
