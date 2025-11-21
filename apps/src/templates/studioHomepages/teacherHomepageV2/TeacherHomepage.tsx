@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import React from 'react';
 
@@ -19,7 +20,6 @@ import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
-import PersonalizationQuizAlert from './PersonalizationQuizAlert';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
@@ -38,8 +38,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
 
-  const [teachingProfileData, setTeachingProfileData] =
-    React.useState<any>(null);
+  const [hasMatchedPersona, setHasMatchedPersona] = React.useState<
+    boolean | null
+  >(null);
   const [isLoadingProfileData, setIsLoadingProfileData] = React.useState(true);
 
   const dispatch = useAppDispatch();
@@ -64,10 +65,10 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
       try {
         const response = await fetch('/teaching_profile_data');
         const data = await response.json();
-        setTeachingProfileData(data);
+        setHasMatchedPersona(!!data.data.matchedPersona);
       } catch (error) {
         console.error('Error fetching teaching profile data:', error);
-        setTeachingProfileData({exists: false});
+        setHasMatchedPersona(false);
       } finally {
         setIsLoadingProfileData(false);
       }
@@ -76,13 +77,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     fetchTeachingProfileData();
   }, [dispatch]);
 
-  const shouldShowPersonalizationQuiz = () => {
+  const showPersonalizationQuiz = () => {
     if (isLoadingProfileData) return false;
-    if (!teachingProfileData?.exists) return true;
-
-    const individualData = teachingProfileData?.data;
-    console.log('Individual Data:', individualData);
-    return !individualData || Object.keys(individualData).length < 7;
+    return !hasMatchedPersona;
   };
 
   React.useEffect(() => {
@@ -152,12 +149,26 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
         </Typography>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
+            {showPersonalizationQuiz() && (
+              <Alert
+                aria-labelledby="feedback-banner-title"
+                showIcon={true}
+                className={styles.notificationBanner}
+                icon={{
+                  iconName: 'user-circle',
+                }}
+                type={'primary'}
+                text={i18n.personalizationInvitation()}
+                link={{
+                  text: i18n.personalizationLinkText(),
+                  href: '/users/personalization_information',
+                }}
+              />
+            )}
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
-
-            {shouldShowPersonalizationQuiz() && <PersonalizationQuizAlert />}
 
             {shouldDisplayAtRiskAgeGatedWarning() && (
               <AgeGatedSectionsBanner
