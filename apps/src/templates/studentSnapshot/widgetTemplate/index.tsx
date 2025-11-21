@@ -27,7 +27,7 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
       style={{gridColumn: `span ${gridWidth}`, gridRow: `span ${gridHeight}`}}
     >
       <div className={styles.header}>
-        <Typography variant="body2">{widgetName}</Typography>
+        <Typography variant="h5">{widgetName}</Typography>
         <div>
           <Button
             color="gray"
