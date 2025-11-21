@@ -40,6 +40,10 @@ Parameters:
   WorkerSubnetId:
     Type: AWS::EC2::Subnet::Id
     Description: Existing VPC Subnet Id where ECS EC2 Instances hosting Drone Runner ("worker") containers will be provisioned.
+  WorkerImage:
+    Type: String
+    Description: Docker Image that Drone Autoscaler tells Drone Runner ("worker") EC2 Instances to Pull and launch.
+    Default: 'drone/drone-runner-docker:1.8'
   DroneServerECSAMI:
     Description: AMI ID for EC2 Instance running Drone Server ECS Service.
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
@@ -408,8 +412,8 @@ Resources:
 
             # BEGIN: Settings for the Drone Runner ("worker"/"agent") executing on the EC2 Instances provisioned by Autoscaler.
             -
-              Name: DRONE_AGENT_IMAGE
-              Value: drone/drone-runner-docker:1.8
+              Name: DRONE_AGENT_IMAGE # https://autoscale.drone.io/reference/drone-agent-image/
+              Value: !Ref WorkerImage
             -
               Name: DRONE_AGENT_CONCURRENCY
               Value: 1
