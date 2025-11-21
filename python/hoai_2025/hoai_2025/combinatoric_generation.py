@@ -16,6 +16,7 @@ from tqdm import tqdm
 from openai import AsyncOpenAI
 from datetime import datetime, timezone
 import re
+import shutil
 
 parser = argparse.ArgumentParser(
         prog='HoAI 2025 Image Generation Script',
@@ -55,6 +56,7 @@ FAIL_IF_MISSING_SEED = False  # set True if you want the run to hard-fail when a
 
 # Back up files before overwriting on redo
 BACKUP_ON_REDO = True
+REDO_OUTPUT_COPIES = True
 
 # -------- Robust color picker (v2) TUNABLES --------
 ALPHA_WEIGHT_FOR_PALETTE   = True
@@ -94,6 +96,23 @@ def ensure_dirs():
     ANIMAL_DIR.mkdir(parents=True, exist_ok=True)
     ANIMAL_ATTIRE_DIR.mkdir(parents=True, exist_ok=True)
     ADJ_ANIMAL_ATTIRE_DIR.mkdir(parents=True, exist_ok=True)
+
+def _redo_out_root(stamp: str) -> Path:
+    return OUTDIR / "_redo_outputs" / stamp
+
+def _copy_to_redo_output(img_path: Path, meta_path: Path, stamp: str):
+    """
+    Mirror a copy of the regenerated PNG + metadata into:
+    OUTDIR/_redo_outputs/<stamp>/<original_parent_dir>/
+    """
+    root = _redo_out_root(stamp)
+    # Keep the same immediate subfolder name (e.g. creature-attire-mood-05)
+    subdir = img_path.parent.name
+    dst_dir = root / subdir
+    dst_dir.mkdir(parents=True, exist_ok=True)
+
+    shutil.copy2(img_path, dst_dir / img_path.name)
+    shutil.copy2(meta_path, dst_dir / meta_path.name)
 
 # ---------- sRGB -> Lab utilities (ΔE76) ----------
 def srgb_to_linear(c):
@@ -625,13 +644,19 @@ async def redo_specific_variants(target_tokens: list[str], sem: asyncio.Semaphor
     Re-generate specific assets by base name using the original metadata.
     - Base animals: regenerate via images.generate (no seed).
     - Derivatives (attire or adjective+attire): regenerate via images.edit using the base animal seed for the same variant.
+    - After in-place overwrite, also copy PNG+JSON into a stamped redo output folder for QA.
     """
     if not target_tokens:
         return 0
 
     bases = [t for t in target_tokens]
 
-    stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+    # Single stamp per run; nice for grouping one invocation's outputs
+    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
+    # Prepare the folder up front (ok if it already exists)
+    if REDO_OUTPUT_COPIES:
+        _redo_out_root(stamp).mkdir(parents=True, exist_ok=True)
+
     regenerated = 0
 
     for base in bases:
@@ -653,7 +678,6 @@ async def redo_specific_variants(target_tokens: list[str], sem: asyncio.Semaphor
         try:
             v = int(meta.get("variant"))
         except Exception:
-            # fallback: try to parse from base suffix -\d{2}
             m = re.search(r"-(\d{2})$", base)
             if not m:
                 print(f"[REDO] SKIP: cannot determine variant index for {base}", flush=True)
@@ -675,17 +699,16 @@ async def redo_specific_variants(target_tokens: list[str], sem: asyncio.Semaphor
 
         print(f"[REDO] {'DERIV' if is_derivative else 'BASE'} -> {base}", flush=True)
 
-        # Run request
+        # Run request (seeded for derivatives when available)
         async with sem:
             delay = BASE_BACKOFF
             resp = None
             for attempt in range(1, RETRIES + 1):
                 try:
                     if is_derivative:
-                        # Enforce seed for derivatives
                         seed_path = seed_image_for_variant(animal_slug or meta.get("animal"), v)
                         if not seed_path:
-                            print("[REDO] WARNING: falling back to generate", flush=True)
+                            print("[REDO] WARNING: no seed found; falling back to generate", flush=True)
                             resp = await aclient.images.generate(
                                 model=MODEL,
                                 prompt=prompt,
@@ -694,8 +717,6 @@ async def redo_specific_variants(target_tokens: list[str], sem: asyncio.Semaphor
                                 background=BACKGROUND,
                             )
                             break
-
-                        # Seed available → use images.edit to preserve shape
                         with open(seed_path, "rb") as f:
                             resp = await aclient.images.edit(
                                 model=MODEL,
@@ -706,7 +727,6 @@ async def redo_specific_variants(target_tokens: list[str], sem: asyncio.Semaphor
                                 n=1,
                             )
                     else:
-                        # Base animal → plain generate
                         resp = await aclient.images.generate(
                             model=MODEL,
                             prompt=prompt,
@@ -724,13 +744,13 @@ async def redo_specific_variants(target_tokens: list[str], sem: asyncio.Semaphor
         if not resp:
             continue
 
-        # Back up current files and overwrite with new results
+        # Back up current files, overwrite in place, then mirror to redo output
         try:
             if BACKUP_ON_REDO:
                 _backup_paths(img_path, meta_path, stamp)
 
             b64 = resp.data[0].b64_json
-            save_png(b64, img_path)
+            save_png(b64, img_path)  # in-place write (resized & RGBA enforced)
             body_hex, secondary_hex, tertiary_hex = extract_palette(img_path)
 
             # Refresh metadata fields that are dynamic
@@ -742,10 +762,16 @@ async def redo_specific_variants(target_tokens: list[str], sem: asyncio.Semaphor
             meta["regenerated_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
             meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False))
+
+            # Also copy the final PNG + JSON to the dated QA folder
+            if REDO_OUTPUT_COPIES:
+                _copy_to_redo_output(img_path, meta_path, stamp)
+
             print(f"[REDO] DONE: {base}", flush=True)
             regenerated += 1
         except Exception as e:
             print(f"[REDO] ERROR writing {base}: {e}", flush=True)
+            # Optional: attempt restore from backup if desired
 
     return regenerated
 

@@ -10,7 +10,7 @@ require File.expand_path('../../../../dashboard/config/environment', __FILE__)
 require_relative '../../../lib/cdo/aws/s3'
 require_relative '../../../deployment'
 
-DOCTOR_TOOLS = ['regen_transparent_eyes', 'trim_edges', 'clean_edge_artifacts']
+DOCTOR_TOOLS = ['regen_transparent_eyes', 'trim_edges', 'clean_edge_artifacts', 'identify_transparent_eyes']
 
 # S3 settings (same path scheme as generator harness)
 BUCKET_NAME_BASE = 'cdo-curriculum'.freeze
@@ -32,7 +32,8 @@ options = {
   band: 6,
   tolerance: 18.0,
   feather: 1.5,
-  keep_format: false
+  keep_format: false,
+  workers: 0,
 }
 
 parser = OptionParser.new do |opts|
@@ -44,6 +45,7 @@ parser = OptionParser.new do |opts|
       regen_transparent_eyes OpenAI edit -> evaluate -> HTML report
       trim_edges            Crop N pixels off all edges (Pillow) [supports --inplace]
       clean_edge_artifacts  Detect edge halos and make them transparent [supports --inplace]
+      identify_transparent_eyes  Scan for internal transparent holes and copy matches to eyes_sweep_[datetime]
 
     Options:
   BANNER
@@ -68,6 +70,7 @@ parser = OptionParser.new do |opts|
   opts.on('--tolerance F', Float, 'RGB distance threshold for clean_edge_artifacts (default: 18.0)') {|v| options[:tolerance] = v}
   opts.on('--feather F', Float, 'Gaussian blur radius for soft alpha (default: 1.5)') {|v| options[:feather] = v}
   opts.on('--keep-format', 'Keep original extension even if it drops alpha (JPEG will flatten)') {options[:keep_format] = true}
+  opts.on('--workers N', Integer, 'Parallel workers for clean_edge_artifacts (0 = auto)') {|v| options[:workers] = v}
 
   opts.on('-h', '--help', 'Show help and exit') {puts opts; exit 0}
 end
@@ -153,7 +156,34 @@ def build_command(tool, python_root, options, openai_key)
     args << "--inplace" if options[:inplace]
     args << "--keep-format" if options[:keep_format]
     args << "--verbose" if options[:verbose]
+    args << "--workers #{Integer(options[:workers] || 0)}"
     {chdir: python_root, cmd: "#{runner} -m #{mod} #{args.join(' ')}", env: {}, output_dir: (options[:inplace] ? in_dir : out_dir)}
+
+  when 'identify_transparent_eyes'
+    mod = 'hoai_2025.identify_transparent_eyes'
+    in_dir = File.expand_path(options[:input])
+
+    # If caller supplies --output, treat it as the "output root" for sweep folders.
+    # Otherwise default to ./output relative to the python project.
+    # (You could also default to in_dir if you prefer.)
+    out_root = if options[:output]
+                 File.expand_path(options[:output])
+               else
+                 # mirror the default we used in the Python script: ./output under python_root
+                 File.expand_path(File.join(python_root, 'output'))
+               end
+
+    args = []
+    args << "--input '#{in_dir}'"
+    args << "--output-root '#{out_root}'"
+    args << "--verbose" if options[:verbose]
+
+    {
+      chdir: python_root,
+      cmd:   "#{runner} -m #{mod} #{args.join(' ')}",
+      env:   {},
+      output_dir: out_root
+    }
 
   else
     raise "Unknown tool: #{tool}"
