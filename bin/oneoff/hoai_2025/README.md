@@ -1,6 +1,30 @@
 # Hour of AI 2025 Generation Scripts
 
-## Music
+These scripts facilitate the generated music content for the Hour of AI
+"Mix and Move" activity.
+
+## Quick overview
+
+The script generates content that will ultimately be stored in the curriculum
+S3 bucket. This content is opportunistically fetched during the activity based
+on the user-provided terms given in two of the levels via a "Madlib"-style
+prompt with dropdowns with a very constrained set of options. (See descriptions
+of each type below.)
+
+Based on the options provided, it consistently forms a name of a file that will
+contain a type of pseudo-code representation of a music lab project. It is this
+file it fetches.
+
+The object of this script is to generate all of the possible combinations of
+options and store them with the same consistent names as files in that bucket.
+
+The general flow is to:
+
+1. Generate all of the content with the `--produce-layers` and `--produce-moods` options representing the two different types of adlibs.
+2. Check the output in the `music_output` path relative to the script.
+3. Then ultimately upload it via `--no-dry-run` flag and then carefully, with appropriate AWS credentials, the `--production` flag.
+
+## Usage
 
 The `generate_music` script will contact AI (gemini) to produce musiclab
 psuedo-code for the various possible packs and choice combinations a student
@@ -38,7 +62,13 @@ cost a relative ton), use this command:
 Likely you'll want to generate just the prompts and save them where the
 final items would ultimately go: (This is a great place to start because
 it generates _something_ which prevents any _real_ runs from sending any
-AI prompts)
+AI prompts since it will have an output saved to the final location.)
+
+Then, one can check a few of the prompts to see if the data is being
+appropriately supplied from the pack manifest. Check the manifest file
+(cached as `manifest.json`) if something has gone wrong to make sure
+it has the content you expect. Remove that file if it is stale or
+corrupted in any way.
 
 Again, this does **not** send any prompts to actual AI agents.
 
@@ -50,7 +80,7 @@ Once you generate prompts, it will not generate anything where there is
 some output in the final `music_output` directory. Remove things from
 that path to regenerate anything. To prevent generating output, use the
 `--just-upload` directive, which goes to upload all valid generated
-files only.
+files only and skips using the AI.
 
 ### Filtering
 
@@ -97,3 +127,7 @@ If you only want to upload certain files:
 You can run the `validate_music` file to validate all items in the uploaded
 directory (`music_output`). This process is also used before uploading to
 ensure invalid output does not make it to production.
+
+To automatically delete the offending files, specify the `--delete` flag
+when using this script. After doing this, the `generate_music` script can
+be invoked another time to generate any missing content.
