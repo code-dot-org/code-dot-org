@@ -298,7 +298,7 @@ steps:
     image: codedotorg/cdo-ci:1.18
     pull: always
     environment:
-      CI_JOB: 'prepare_ci_tests'
+      CI_JOB: 'cache_staging_build'
       CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
@@ -343,6 +343,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 321528c2fbc47e1ed6cb286a3bfa784d61663b9c2c66f5855fcac9e282bd9533
+hmac: 44a39ecc842286149b7604be63465ff446122d97d9df8b9d2abcbb3117e97b40
 
 ...
