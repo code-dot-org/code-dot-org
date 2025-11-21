@@ -18,7 +18,7 @@
 
 services:
   site:
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/cdo-ci:1.18
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/ci/code-dot-org:delegated
@@ -28,6 +28,7 @@ services:
       - gcloud_config:/home/ci/.config/gcloud
     environment:
       CI_JOB: 'unit_tests'
+      FIXUID: ${FIXUID:-}
     env_file:
       - env.list
     command: /bin/sh -c "docker/ci/scripts/unit_tests.sh"

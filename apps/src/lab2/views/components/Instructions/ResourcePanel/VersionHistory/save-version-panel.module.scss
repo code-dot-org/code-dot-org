@@ -1,25 +1,21 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+@use '@cdo/apps/mixins.scss' as mixins;
+
 .footerPanel {
   border-top: 1px solid var(--borders-neutral-primary);
   z-index: 1;
 }
 
 .saveCurrentVersionDescription {
-  padding: 0.375rem 0.625rem 0.625rem 0.625rem;
+  padding: 0.5rem;
   background-color: var(--background-neutral-secondary);
+  border-radius: 0 0 variables.$default-border-radius
+    variables.$default-border-radius;
 }
 
 .saveCurrentVersionDescriptionInput {
   width: 100%;
   box-sizing: border-box;
-}
-
-.label {
-  color: var(--text-neutral-primary, #292f36);
-  font-feature-settings: 'liga' off, 'clig' off;
-  font-family: var(--font-family-body, Figtree);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: var(--font-line-height-body-xs, 19.68px);
 }
 
 .textArea {
@@ -28,7 +24,20 @@
   resize: none;
   box-sizing: border-box;
   background-color: var(--background-neutral-primary);
+  border: variables.$strong-border;
+  border-radius: variables.$default-border-radius;
+  box-shadow: none;
   color: var(--text-neutral-secondary);
+  margin-bottom: 0.375rem;
+  padding: 0.625rem;
+
+  &:focus {
+    outline: none;
+    border: variables.$strong-border;
+    box-shadow: none;
+  }
+
+  @include mixins.focus-styles;
 }
 
 .versionButton {
