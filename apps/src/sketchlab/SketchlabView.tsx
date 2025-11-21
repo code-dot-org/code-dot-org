@@ -72,7 +72,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   const filesBeingUploadedRef = useRef<Set<string>>(new Set());
 
   // Keeps a cache of files that we already have downloaded, so that we don't request them repeatedly.
-  const downloadedFileDataRef = useRef<
+  const downloadedFilesDataRef = useRef<
     Record<ExcalidrawElement['id'], DataURL>
   >({});
 
@@ -194,7 +194,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       setExcalidrawMountKey(key => key + 1);
 
       // Reset loaded images on remount so we don't end up with a large number of images stored across pages.
-      downloadedFileDataRef.current = {};
+      downloadedFilesDataRef.current = {};
     });
   }, [setReinitializationHandler]);
 
@@ -251,7 +251,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
               experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
                 ? populateInitialExcalidrawState(
                     currentSources.source,
-                    downloadedFileDataRef.current
+                    downloadedFilesDataRef.current
                   )
                 : (currentSources.source as ExcalidrawInitialDataState)
             }
