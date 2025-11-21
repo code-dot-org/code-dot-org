@@ -5,7 +5,7 @@
 # you can use docker-compose to run locally using
 # `docker/unit-tests-compose.yml`. See instructions in that file.
 
-source docker/ci/scripts/prepare_ci_tests.sh
+source docker/ci/scripts/prepare_ci_env.sh
 
 bundle exec rake install
 

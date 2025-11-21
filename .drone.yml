@@ -94,7 +94,7 @@ steps:
     pull: always
     environment:
       CI_JOB: 'unit_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
@@ -219,7 +219,7 @@ steps:
         path: /var/lib/mysql
     environment:
       CI_JOB: 'ui_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
