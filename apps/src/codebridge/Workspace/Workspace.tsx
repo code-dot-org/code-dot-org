@@ -69,7 +69,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         {viewingOldVersion && (
           <Alert
             className={moduleStyles.previousVersionBanner}
-            text={`You're viewing a previous version of this project from DATE.`}
+            text={codebridgeI18n.viewingOldVersion()}
             type="warning"
             size="xs"
           />
