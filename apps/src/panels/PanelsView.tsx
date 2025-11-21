@@ -161,7 +161,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   const panel = panels[currentPanelIndex];
   const showTyping =
-    panel.typing || queryParams('panels-show-typing') === 'true';
+    panel?.typing || queryParams('panels-show-typing') === 'true';
 
   // When typing, only show the button when the typing is done.
   const showButton = !showTyping || typingDone;

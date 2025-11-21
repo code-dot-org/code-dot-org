@@ -14,10 +14,10 @@
 }
 
 .listContainer {
-  flex: 1;
   display: flex;
   flex-direction: column;
   min-height: 0;
+  position: relative;
 
   /* Simple background line that runs underneath the radio buttons */
   &::before {
@@ -25,16 +25,16 @@
     position: absolute;
     inset-inline-start: 30px; // Align with radio button
     top: 10px;
-    bottom: 0;
+    bottom: 10px;
     width: 1px;
     background-color: var(--borders-neutral-primary);
     z-index: 0;
+    pointer-events: none;
   }
 }
 
 .list {
   overflow-y: auto;
-  flex: 1;
   min-height: 0;
   position: relative;
   padding-bottom: 0.625rem;
