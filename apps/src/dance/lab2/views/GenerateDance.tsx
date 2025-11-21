@@ -9,6 +9,7 @@ import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/Music
 import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibChoices,
@@ -19,7 +20,7 @@ import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instruction
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
@@ -260,6 +261,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       )
     );
   }, [dispatch, levelProperties.appName, levelProperties.id]);
+
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  if (isReadOnly) {
+    return null;
+  }
 
   return (
     <Guide
