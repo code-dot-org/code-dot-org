@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-20T03:22:39.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Define the term in your own words. Use examples from the lesson to explain your thinking and take notes on anything that helps you remember how it works.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Unshift",
+    "bubble_choice_description": "Students accurately describe `unshift` as adding an item to the front of an array and offer a realistic context where a new item should become the first in a list (e.g., an urgent alert, priority task).",
+    "height": "200",
+    "placeholder": "enter response here..."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T03:22:39.546+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level15-shift-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level15-shift-test-2025\"},{\"changed_at\":\"2025-11-20 03:23:37 +0000\",\"changed\":[\"title\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

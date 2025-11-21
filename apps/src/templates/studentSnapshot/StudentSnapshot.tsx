@@ -91,7 +91,7 @@ const StudentSnapshot: React.FC = () => {
       </div>
 
       <Typography
-        variant="h4"
+        variant="h3"
         className={styles.studentNameHeader}
         gutterBottom
       >
