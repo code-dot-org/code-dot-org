@@ -16,6 +16,7 @@ jobs:
         with:
           sparse-checkout: |
             apps
+            frontend
             .github
           # todo: I don't believe LFS is needed for unit tests or linting
           # lfs: true
