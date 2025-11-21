@@ -19,6 +19,7 @@ import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
 
@@ -28,11 +29,22 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
  * @returns Nothing (void)
  */
 const handleFileDownload = async (file: ProjectFile) => {
-  if (file.contents === '' && file.url) {
-    // File is an image, so download from browser
-    const image = await fetch(file.url);
-    const blob = await image.blob();
-    fileDownload(blob, file.name);
+  if (WEBLAB2_IMAGE_FILE_TYPES.includes(file.language) && file.url) {
+    // File is an image and has a url, so download from browser
+    try {
+      const image = await fetch(file.url);
+      if (!image.ok) {
+        console.error(
+          `Failed to fetch image: ${image.status} ${image.statusText}`
+        );
+        return;
+      }
+      const blob = await image.blob();
+      fileDownload(blob, file.name);
+    } catch (error) {
+      console.error('Image download failed:', error);
+      return;
+    }
   } else {
     fileDownload(file.contents, file.name);
   }
