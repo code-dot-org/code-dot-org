@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 source docker/ci/scripts/prepare_ci_env.sh
 
