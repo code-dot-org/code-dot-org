@@ -87,7 +87,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     buttons: [
       {
         label: weblab2I18n.code(),
-        ariaLabel: weblab2I18n.code(),
+        ariaLabel: 'View code editor only',
         value: ViewMode.CODE,
         iconLeft: {
           iconName: 'code',
@@ -96,7 +96,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       },
       {
         label: weblab2I18n.preview(),
-        ariaLabel: weblab2I18n.preview(),
+        ariaLabel: 'View web preview only',
         value: ViewMode.PREVIEW,
         iconLeft: {
           iconName: 'eye',
@@ -105,7 +105,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       },
       {
         label: weblab2I18n.splitView(),
-        ariaLabel: weblab2I18n.splitView(),
+        ariaLabel: 'View code and web preview side by side',
         value: ViewMode.SPLIT,
         iconLeft: {
           iconName: 'table-columns',
