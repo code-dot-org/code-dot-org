@@ -365,15 +365,11 @@ const VersionHistoryPanel: React.FunctionComponent<
                 showRestoreButton={
                   !version.isLatest &&
                   selectedVersion === version.versionId &&
-                  !viewAsUserId === true
+                  !viewAsUserId
                 }
                 restoreOnClick={restoreSelectedVersion}
                 restoreLoading={versionLoading}
-                restoreDisabled={
-                  disabled ||
-                  versionLoading ||
-                  (latestVersion === selectedVersion) === true
-                }
+                restoreDisabled={disabled || versionLoading}
               >
                 {version.isLatest && hasEdited && !viewAsUserId && (
                   <SaveVersionPanel
@@ -403,11 +399,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               }
               restoreOnClick={restoreSelectedVersion}
               restoreLoading={versionLoading}
-              restoreDisabled={
-                disabled ||
-                versionLoading ||
-                (latestVersion === selectedVersion) === true
-              }
+              restoreDisabled={disabled || versionLoading}
             />
           </div>
         </div>
