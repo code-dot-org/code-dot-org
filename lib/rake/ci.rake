@@ -181,11 +181,6 @@ namespace :ci do
   end
 
   timed_task_with_logging :seed_ui_test do
-    unless CI::Utils.ci_job_ui_tests? || CI::Utils.ci_job_prepare_ci_tests?
-      ChatClient.log "Wrong CI job, skipping"
-      next
-    end
-
     if CI::Utils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next

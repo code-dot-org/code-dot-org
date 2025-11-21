@@ -25,10 +25,6 @@ module CI
       ENV['CI_JOB'] == 'ui_tests'
     end
 
-    def self.ci_job_prepare_ci_tests?
-      ENV['CI_JOB'] == 'prepare_ci_tests'
-    end
-
     def self.running_on_ci?
       ENV.fetch('CI', nil)
     end
