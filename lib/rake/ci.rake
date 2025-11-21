@@ -69,7 +69,7 @@ PARALLEL_COUNT = 24
 
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
-  timed_task_with_logging :run_tests do
+  timed_task_with_logging :run_unit_tests do
     target_branch = ENV.fetch('DRONE_TARGET_BRANCH', '')
     if CI::Utils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."

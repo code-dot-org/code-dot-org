@@ -9,14 +9,11 @@ source docker/ci/scripts/prepare_ci_env.sh
 
 bundle exec rake install
 
-# Catch any zeitwerk code loader errors before starting any rails environment,
-# in order to ensure that we give a clear error message for any zeitwerk issues
-# that would block application load. Only do this in unit pipeline, since it
-# runs faster than the ui pipeline, and running in just one pipeline is sufficient
-# to make sure the developer sees a useful error message.
+# Run lint only in unit pipeline. Run before rake build in order to ensure
+# that we give a clear error message for any zeitwerk issues that would block
+# application load.
 bundle exec rake lint:zeitwerk
+bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
 
 bundle exec rake build
-
-bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
-bundle exec rake ci:run_tests
+bundle exec rake ci:run_unit_tests
