@@ -21,6 +21,7 @@ import {
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;
   viewingOldVersion: boolean;
+  viewingAiTutorVersion?: boolean;
   restoredOldVersion: boolean;
   hasEdited: boolean;
   projectTooLarge: boolean;
@@ -30,6 +31,7 @@ export interface Lab2ProjectState {
 const initialState: Lab2ProjectState = {
   projectSources: undefined,
   viewingOldVersion: false,
+  viewingAiTutorVersion: false,
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
@@ -60,6 +62,9 @@ const projectSlice = createSlice({
     },
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
       state.viewingOldVersion = action.payload;
+    },
+    setViewingAiTutorVersion(state, action: PayloadAction<boolean>) {
+      state.viewingAiTutorVersion = action.payload;
     },
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
@@ -419,6 +424,7 @@ const projectSlice = createSlice({
       state.hasEdited = false;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
+      state.viewingAiTutorVersion = false;
     },
     setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
       state.lastSavedLabConfig = action.payload;
@@ -430,6 +436,7 @@ export const {
   setProjectSource,
   setPreviousVersionSource,
   setViewingOldVersion,
+  setViewingAiTutorVersion,
   setRestoredOldVersion,
   resetProjectMetadata,
   setHasEdited,
