@@ -42,6 +42,9 @@ steps:
   # Restore the staging build we created in the `cache-staging-build` pipeline
   - name: get-cached-staging-build
     image: plugins/s3-cache
+    volumes:
+      - name: drone-src
+        path: /drone/src
     settings:
       filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
@@ -51,6 +54,9 @@ steps:
 
   - name: checkout
     image: bitnamilegacy/git
+    volumes:
+      - name: drone-src
+        path: /drone/src
     environment:
       GITHUB_TOKEN:
         from_secret: GITHUB_TOKEN
@@ -92,6 +98,9 @@ steps:
     # see: docker/ci/Dockerfile
     image: codedotorg/cdo-ci:1.18
     pull: always
+    volumes:
+      - name: drone-src
+        path: /drone/src
     environment:
       CI_JOB: 'unit_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
@@ -112,6 +121,10 @@ steps:
       - /entrypoint.sh docker/ci/scripts/unit_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
+
+volumes:
+  - name: drone-src
+    temp: {}
 
 trigger:
   branch:
@@ -163,6 +176,8 @@ steps:
       # workdir; so for this step, we mount the relevant volumes there, too.
       - name: mysql
         path: /drone/src/var/lib/mysql
+      - name: drone-src
+        path: /drone/src
     settings:
       filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
@@ -172,6 +187,9 @@ steps:
 
   - name: checkout
     image: bitnamilegacy/git
+    volumes:
+      - name: drone-src
+        path: /drone/src
     environment:
       GITHUB_TOKEN:
         from_secret: GITHUB_TOKEN
@@ -217,6 +235,8 @@ steps:
     volumes:
       - name: mysql
         path: /var/lib/mysql
+      - name: drone-src
+        path: /drone/src
     environment:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
@@ -249,6 +269,8 @@ steps:
 
 volumes:
   - name: mysql
+    temp: {}
+  - name: drone-src
     temp: {}
 
 trigger:
@@ -342,6 +364,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 6b94fe258503d70f372cca325a0e65aa4b7155a6bcb699347e2a805ea7a8ab58
+hmac: 7b3268312f1ba2205a71b8c4b6da465f8f960b924cb86bb6747e4302958c4276
 
 ...
