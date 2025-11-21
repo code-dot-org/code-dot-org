@@ -7,9 +7,11 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
+import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {getAiTutorEnabledForPilot} from '@cdo/apps/lab2/projects/utils';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
@@ -169,10 +171,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
-  const aiTutorVisible = shouldShowAiTutor(
-    appName,
-    levelProperties.aiTutorAvailable
-  );
+  const aiTutorVisible =
+    shouldShowAiTutor({
+      appName,
+      tutorPilot: getAiTutorEnabledForPilot(),
+      tutorLevel: levelProperties.aiTutorAvailable,
+    }) ||
+    queryParams('show-ai-tutor2') === 'true' ||
+    queryParams('show-ai-tutor') === 'true';
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {

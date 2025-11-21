@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
 import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
 
 import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
@@ -113,9 +114,22 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       children,
     } = this.props;
 
+    // user is in ai tutor pilot
+    const aiTutorAvailableForPilot =
+      window?.appOptions?.aiTutorEnabledForPilot ?? false;
+
+    // level property says ai tutor is available
+    const aiTutorAvailableForLevel =
+      window?.appOptions?.level?.aiTutorAvailable ?? false;
+
     const showAiTutor =
       AI_TUTOR_LEGACY_LABS.includes(labType) &&
-      experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
+      (experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR) ||
+        shouldShowAiTutor({
+          appName: labType,
+          tutorPilot: aiTutorAvailableForPilot,
+          tutorLevel: aiTutorAvailableForLevel,
+        }));
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
     const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
