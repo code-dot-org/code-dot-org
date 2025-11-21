@@ -1,11 +1,71 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2025-11-19T18:34:59.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Color Fill Bar Loop</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <h1>Progress Bar</h1>\n\n  <div id=\"bar-container\">\n    <div id=\"bar\"></div>\n  </div>\n  <br/>\n    <button id=\"runLoop\">Run Loop</button>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: system-ui, sans-serif;\n  background: #f6f9fc;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100vh;\n}\n\nh1 {\n  margin-bottom: 10px;\n}\n\n#bar-container {\n  width: 300px;\n  height: 30px;\n  background: repeating-linear-gradient(\n    to right,\n    #e0e0e0,\n    #e0e0e0 29px,\n    #ff0000 30px\n  );\n  border-radius: 8px;\n  overflow: hidden;\n  margin-top: 20px;\n  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);\n}\n\n#bar {\n  width: 0%;\n  height: 100%;\n  background: #6dd5fa;\n  transition: width 0.2s ease;\n}\n\nbutton {\n  background: #2980b9;\n  color: white;\n  border: none;\n  padding: 10px 18px;\n  border-radius: 6px;\n  cursor: pointer;\n  font-size: 1rem;\n}\n\nbutton:hover {\n  background: #2573a8;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const bar = document.getElementById(\"bar\");\nconst runButton = document.getElementById(\"runLoop\");\n\nconst fillBar = () => {\n\n\n\n  \n};\n\nrunButton.addEventListener(\"click\", fillBar);",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Progress Bar\r\n\r\n**Goal**: Use a **for loop** to make the bar fill from 0% to 100% in 10% increments. Each step appears one after another with a short pause.\r\n\r\n---\r\n\r\n### Do This\r\n\r\n1. **Find where to write your loop** inside the `fillBar()` function.\r\n\r\n2. Use a **for loop** that starts at 10 and ends at 100, counting by 10.\r\n   \r\n3. Inside your loop, use the loop variable to change the bar's width. \r\n\t\r\n    **Syntax:**\r\n\r\n   ```js\r\n   bar.style.width = \"50%\";\r\n   ```\r\n\r\n4. Use `setTimeout()` to delay each step so the fill happens over time.\r\n\r\n   * Hint: multiply your delay by the **loop variable** to stagger the timing.\r\n\r\n5. Make sure to **reset the bar** to `\"0%\"` before running your loop again.\r\n\r\n---\r\n\r\n<details>\r\n  <summary>Need help? Ask the AI Tutor.</summary>\r\n  \t<ol>\r\n      \t<li>\"How can I use a for loop to fill the bar in 10% steps?\"</li>\r\n  \t\t<li>\"How does setTimeout make the bar move gradually?\"</li>\r\n  \t\t<li>\"What does the loop variable control here?\"</li>\r\n    </ol>\r\n\r\n</details>",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "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\nuQnjSaOy5DCYZ9ANtAPFyytCg9c=\n",
+    "display_name": "Progress Bar",
+    "thumbnail_url": "https://images.code.org/e97c051dfefbcb5b7e3c5a6fbdabf5b9-progress-bar.png",
+    "bubble_choice_description": "Use a for loop to make a progress bar fill from 0% to 100%."
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2025-11-20 15:14:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 15:22:31 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 15:22:32 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 15:23:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 15:23:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 16:35:32 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 16:36:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 16:37:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 16:42:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 16:45:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 16:46:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 16:47:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 16:47:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 16:49:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 16:51:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-20 20:45:13 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-21 00:16:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 00:16:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

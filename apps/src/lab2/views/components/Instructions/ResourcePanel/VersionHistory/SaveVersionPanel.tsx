@@ -13,27 +13,28 @@ import moduleStyles from './save-version-panel.module.scss';
 interface SaveVersionPanelProps {
   projectSources: ProjectSources | undefined;
   onSuccess: () => void;
-  versionLoading: boolean;
-  disabled?: boolean;
+  disabled: boolean;
   buttonLabel: string;
 }
 
 const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
   projectSources,
   onSuccess,
-  versionLoading,
-  disabled = false,
+  disabled,
   buttonLabel,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
+  const [isSaving, setIsSaving] = useState(false);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
 
   const onSaveVersion = useCallback(async () => {
-    if (!projectSources) return;
+    if (!projectSources || isSaving) return;
+    setIsSaving(true);
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (!projectManager) {
       console.error('Project manager not available');
+      setIsSaving(false);
       return;
     }
 
@@ -74,8 +75,17 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
       onSuccess();
     } catch (error) {
       console.error('Failed to save project:', error);
+    } finally {
+      setIsSaving(false);
     }
-  }, [commitDescription, projectSources, dispatch, channelId, onSuccess]);
+  }, [
+    commitDescription,
+    projectSources,
+    dispatch,
+    channelId,
+    onSuccess,
+    isSaving,
+  ]);
 
   return (
     <div className={moduleStyles.footerPanel}>
@@ -102,9 +112,7 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
           className={moduleStyles.versionButton}
           text={buttonLabel}
           onClick={onSaveVersion}
-          disabled={
-            disabled || versionLoading || commitDescription.trim() === ''
-          }
+          disabled={disabled || isSaving || commitDescription.trim() === ''}
         />
       </div>
     </div>

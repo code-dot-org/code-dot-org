@@ -214,7 +214,6 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
     localeDoNotImport('@cdo/sketchlab/locale'),
     localeDoNotImport('@cdo/standaloneVideo/locale'),
-    localeDoNotImport('@cdo/tutorialExplorer/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
     localeDoNotImport('@cdo/weblab2/locale'),
     localeDoNotImport('@cdo/signup/locale'),

@@ -1,13 +1,12 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2025-11-19T20:05:54.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Searching\r\n",
+    "long_instructions": "#Debugging Challenge: Fix the Glitchy Store\r\nThe Tech Gear store is having a data crisis! The \"Headphones\" are showing the wrong picture, and the \"Camera\" doesn't have a price at all.\r\n\r\n**Do This:**\r\n\r\n1. Investigate: Run the code and note data mismatches\r\n\r\n2. Fix the Data: Examine the arrays used and look for array length issues, hard-coded indices, or mismatched fields\r\n\r\n3. Consult with AI and ask targeted debugging questions\r\n\r\n**Verify**: Run the code again. Do all three products match their pictures and prices?\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
@@ -28,40 +27,77 @@
     },
     "start_sources": {
       "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0"
+        }
       },
       "files": {
         "1": {
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "",
-          "active": true,
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Debug: Tech Store</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <header>\n    <h1>Tech Head's Gear Store</h1>\n  </header>\n\n  <main id=\"storefront\">\n    \n    <div class=\"product-card\" id=\"card-1\">\n      <img id=\"img-1\" src=\"/images/laptop.png\" alt=\"\">\n      <h2 id=\"name-1\">Loading...</h2>\n      <p id=\"desc-1\"></p>\n      <p class=\"price\" id=\"price-1\"></p>\n    </div>\n\n    <div class=\"product-card\" id=\"card-2\">\n      <img id=\"img-2\" src=\"/images/headphones.png\" alt=\"\">\n      <h2 id=\"name-2\">Loading...</h2>\n      <p id=\"desc-2\"></p>\n      <p class=\"price\" id=\"price-2\"></p>\n    </div>\n\n    <div class=\"product-card\" id=\"card-3\">\n      <img id=\"img-3\" src=\"/images/camera.png\" alt=\"\">\n      <h2 id=\"name-3\">Loading...</h2>\n      <p id=\"desc-3\"></p>\n      <p class=\"price\" id=\"price-3\"></p>\n    </div>\n\n  </main>\n\n  <script src=\"script.js\" defer></script>\n</body>\n</html>",
+          "active": false,
           "folderId": "0"
         },
         "2": {
           "id": "2",
           "name": "script.js",
           "language": "js",
-          "contents": "",
+          "contents": "// DATA: Parallel Arrays\nconst names = [\"Laptop\", \"Headphones\", \"Camera\"];\nconst prices = [899.99, 49.99]; \nconst images = [\n  \"https://code.org/images/laptop.png\",\n  \"https://code.org/images/headphones.png\",\n  \"https://code.org/images/camera.png\"\n];\nconst descriptions = [\n  \"Powerful computer for gamers.\",\n  \"Noise-cancelling audio. 3D sound.\",\n  \"Perfect for vlogging.\"\n];\n\n// DISPLAY\n// --- Product 1 (Index 0) ---\ndocument.querySelector(\"#name-1\").textContent = names[0];\ndocument.querySelector(\"#img-1\").src = images[0];\ndocument.querySelector(\"#desc-1\").textContent = descriptions[0];\ndocument.querySelector(\"#price-1\").textContent = \"$\" + prices[0];\n\n// --- Product 2 (Index 1) ---\ndocument.querySelector(\"#name-2\").textContent = names[1];\ndocument.querySelector(\"#img-2\").src = images[2]; //\ndocument.querySelector(\"#desc-2\").textContent = descriptions[1];\ndocument.querySelector(\"#price-2\").textContent = \"$\" + prices[1];\n\n// --- Product 3 (Index 2) ---\ndocument.querySelector(\"#name-3\").textContent = names[2];\ndocument.querySelector(\"#img-3\").src = images[2];\ndocument.querySelector(\"#desc-3\").textContent = descriptions[2];\ndocument.querySelector(\"#price-3\").textContent = \"$\" + prices[2];",
           "folderId": "0",
-          "active": false
+          "active": true
         },
         "3": {
           "id": "3",
           "name": "style.css",
           "language": "css",
-          "contents": "",
+          "contents": ":root {\n  --primary: #333;\n  --accent: #e74c3c;\n  --bg: #f0f2f5;\n}\n\nbody {\n  font-family: 'Segoe UI', sans-serif;\n  background-color: var(--bg);\n  color: var(--primary);\n  text-align: center;\n  margin: 0;\n  padding: 20px;\n}\n\nheader { \n  margin-bottom: 30px; \n}\n\n#storefront {\n  display: flex;\n  justify-content: center;\n  gap: 20px;\n  flex-wrap: wrap;\n}\n\n.product-card {\n  background: white;\n  border-radius: 8px;\n  border: 1px solid #ccc;\n  padding: 15px;\n  width: 220px;\n  text-align: left;\n  box-shadow: 0 4px 6px rgba(0,0,0,0.1);\n}\n\n.product-card img {\n  width: 100%;\n  height: 150px;\n  object-fit: contain; /* Keeps images from looking squashed */\n  background: #fff;\n  margin-bottom: 10px;\n}\n\n.product-card h2 {\n  font-size: 1.25rem;\n  margin: 5px 0;\n}\n\n.product-card p {\n  font-size: 0.9rem;\n  color: #666;\n  margin: 5px 0 10px 0;\n}\n\n.price {\n  font-size: 1.1rem;\n  color: var(--accent);\n  font-weight: bold;\n}",
           "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "laptop.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level5-test-2025/uuid/ed087918-19ea-4019-b4dd-69744711c792.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "headphones.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level5-test-2025/uuid/5c6c1f17-9a76-41cb-993e-58a5d72d06bd.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "camera.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level5-test-2025/uuid/b9559956-bc9d-447a-adf7-64cc840469b7.png",
+          "type": "starter",
           "active": false
         }
       },
       "openFiles": [
         "1",
-        "2",
-        "3"
+        "3",
+        "2"
       ]
-    }
+    },
+    "encrypted_exemplar_sources": "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\n"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-19T20:05:54.594+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-template\\\"\"],\"cloned_from\":\"building-data-driven-systems-template\"},{\"changed_at\":\"2025-11-19 20:05:58 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-19T20:05:54.594+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-template\\\"\"],\"cloned_from\":\"building-data-driven-systems-template\"},{\"changed_at\":\"2025-11-19 20:05:58 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:24:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:26:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:28:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:28:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:29:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:29:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:29:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:30:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:31:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:31:24 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:32:06 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:32:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:32:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:33:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 15:37:47 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

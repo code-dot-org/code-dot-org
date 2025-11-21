@@ -6,7 +6,6 @@ import React, {useState, useEffect} from 'react';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
@@ -18,7 +17,6 @@ import {
   ACCOUNT_TYPE_SESSION_KEY,
   OAUTH_LOGIN_TYPE_SESSION_KEY,
   setUserReturnToUrl,
-  TEACHER_IN_GRADE_SELECTION_EXPERIMENT_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -74,16 +72,7 @@ const AccountType: React.FunctionComponent<{
       },
       PLATFORMS.BOTH
     );
-    const isInGradeSelectionExperiment = statsigReporter.getIsInExperiment(
-      'select_grades_taught_on_account_creation',
-      'enable_selecting_grades',
-      false
-    );
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, accountType);
-    sessionStorage.setItem(
-      TEACHER_IN_GRADE_SELECTION_EXPERIMENT_KEY,
-      isInGradeSelectionExperiment
-    );
 
     // By default, navigate the user to the login type page after selecting their user
     // type. However, if a user is sent to this page after trying to login through OAuth
