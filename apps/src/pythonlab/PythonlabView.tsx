@@ -6,6 +6,7 @@ import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
+import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -14,7 +15,10 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAiTutorEnabledForPilot,
+  getAppOptionsEditBlocks,
+} from '@cdo/apps/lab2/projects/utils';
 import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -113,13 +117,15 @@ const PythonlabView: React.FunctionComponent<
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   const hasSource = !!source;
-  const isAiTutorEnabled = useMemo(() => {
-    return (
-      levelProperties.aiTutorAvailable ||
-      queryParams('show-ai-tutor2') === 'true' ||
-      queryParams('show-ai-tutor') === 'true'
-    );
-  }, [levelProperties.aiTutorAvailable]);
+
+  const isAiTutorEnabled =
+    shouldShowAiTutor({
+      tutorPilot: getAiTutorEnabledForPilot(),
+      appName: levelProperties.appName,
+      tutorLevel: levelProperties.aiTutorAvailable,
+    }) ||
+    queryParams('show-ai-tutor2') === 'true' ||
+    queryParams('show-ai-tutor') === 'true';
 
   const dispatch = useAppDispatch();
 
