@@ -1,2 +1,2 @@
-$LOAD_PATH.unshift(Rails.root.join('lib', 'clients', 'clever').to_s)
+$LOAD_PATH.unshift(Rails.root.join('lib', 'clever').to_s)
 require 'clever_client'

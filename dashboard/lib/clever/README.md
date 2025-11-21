@@ -85,20 +85,20 @@ If the Clever API is updated or you need to regenerate the client:
    cd /home/daynewagner/projects/code-dot-org
 
    # Backup existing client if needed
-   mv dashboard/lib/clients/clever dashboard/lib/clients/clever.backup
+   mv dashboard/lib/clever dashboard/lib/clever.backup
 
    # Copy new client
-   mkdir -p dashboard/lib/clients/clever
-   cp -r /tmp/clever-client/lib/clever_client dashboard/lib/clients/clever/
-   cp /tmp/clever-client/lib/clever_client.rb dashboard/lib/clients/clever/
-   cp -r /tmp/clever-client/docs dashboard/lib/clients/clever/
-   cp /tmp/clever-v3.1-client.yml dashboard/lib/clients/clever/
+   mkdir -p dashboard/lib/clever
+   cp -r /tmp/clever-client/lib/clever_client dashboard/lib/clever/
+   cp /tmp/clever-client/lib/clever_client.rb dashboard/lib/clever/
+   cp -r /tmp/clever-client/docs dashboard/lib/clever/
+   cp /tmp/clever-v3.1-client.yml dashboard/lib/clever/
    ```
 
 4. Run linting and fix any issues:
    ```bash
    cd dashboard
-   bundle exec rubocop lib/clients/clever/ -a
+   bundle exec rubocop lib/clever/ -a
    ```
 
 5. Restart Spring and verify the client loads:

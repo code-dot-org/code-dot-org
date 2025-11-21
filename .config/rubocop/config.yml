@@ -27,8 +27,8 @@ AllCops:
     - 'pegasus/test/test_string.rb' # Parser does not support non-utf8 escape sequences
     - 'vendor/**/*' # don't lint third-party code
     - '*/vendor/**/*'
-    - 'dashboard/lib/clients/clever/clever_client.rb' # Generated Clever API client
-    - 'dashboard/lib/clients/clever/clever_client/**/*' # Generated Clever API client
+    - 'dashboard/lib/clever/clever_client.rb' # Generated Clever API client
+    - 'dashboard/lib/clever/clever_client/**/*' # Generated Clever API client
   DisplayCopNames: true
   TargetRubyVersion: 3.3
 
