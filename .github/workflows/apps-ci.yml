@@ -49,7 +49,7 @@ jobs:
             pegasus/sites.v3/hourofcode.com
             i18n
           # todo: I don't believe LFS is needed for unit tests or linting
-          # lfs: true
+          lfs: true
 
       - name: Debug
         shell: bash
