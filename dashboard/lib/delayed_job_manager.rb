@@ -6,7 +6,7 @@ module DelayedJobManager
   # archive those failures into a secondary table so engineers can still inspect
   # them while keeping the primary queue lean. Long term we plan to migrate
   # queue processing to SolidQueue, which is blocked until we're on Rails 7.
-  def archive_failed_jobs
+  def self.archive_failed_jobs
     return unless FailedDelayedJob.table_exists?
 
     archived_count = 0
@@ -28,7 +28,7 @@ module DelayedJobManager
 
   # Record a CloudWatch metric for monitoring purposes
   # This reports to the same namespace as ActiveJobMetrics
-  def record_metric(metric_name, value)
+  def self.record_metric(metric_name, value)
     Cdo::Metrics.push(
       'code-dot-org/ActiveJob',
       [
@@ -42,5 +42,4 @@ module DelayedJobManager
       ]
     )
   end
-  module_function :archive_failed_jobs
 end
