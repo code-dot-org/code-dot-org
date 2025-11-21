@@ -51,7 +51,12 @@ jobs:
       - name: Debug
         shell: bash
         working-directory: ./
-        run: echo "root" && ls -la && echo "apps" && ls -la apps && echo "frontend" && ls -la frontend && echo "dashboard" && ls -la dashboard
+        run: echo "root" && ls -la && echo "apps" && ls -la apps && echo "frontend" && ls -la frontend && echo "dashboard" && ls -la dashboard/app/views
+
+      - name: Debug scss
+        shell: bash
+        working-directory: ./apps
+        run: cat static/_config.scss
 
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
