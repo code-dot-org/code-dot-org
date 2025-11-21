@@ -237,12 +237,16 @@
   }
 }
 
+// For markdown content that contains the tts button inside its contents
 .markdownTts {
   > *:first-child {
+    // Make room within the first element to fit the tts button
     margin-inline-end: 1.5rem;
   }
 }
 
+// The text-to-speech button is contained and 'floated' to the top of the
+// current markdown container when tts is contained in the markdown content
 .markdownTtsContainer {
   display: flex;
   justify-content: flex-end;
