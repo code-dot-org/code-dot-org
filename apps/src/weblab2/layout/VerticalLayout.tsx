@@ -87,6 +87,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     buttons: [
       {
         label: weblab2I18n.code(),
+        ariaLabel: weblab2I18n.code(),
         value: ViewMode.CODE,
         iconLeft: {
           iconName: 'code',
@@ -95,6 +96,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       },
       {
         label: weblab2I18n.preview(),
+        ariaLabel: weblab2I18n.preview(),
         value: ViewMode.PREVIEW,
         iconLeft: {
           iconName: 'eye',
@@ -103,6 +105,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       },
       {
         label: weblab2I18n.splitView(),
+        ariaLabel: weblab2I18n.splitView(),
         value: ViewMode.SPLIT,
         iconLeft: {
           iconName: 'table-columns',
