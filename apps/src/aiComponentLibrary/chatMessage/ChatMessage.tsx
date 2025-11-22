@@ -18,6 +18,7 @@ interface ChatMessageProps {
   footer?: React.ReactNode;
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
+  isAiTutorVersion?: boolean;
 }
 
 /*
@@ -37,6 +38,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   footer,
   isTA,
   messageStyle = 'default',
+  isAiTutorVersion = false,
 }) => {
   return (
     <div
@@ -83,11 +85,18 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             }
           >
             {role === Role.ASSISTANT ? (
-              <SafeMarkdown
-                markdown={text}
-                rehypeMap={rehypeMap}
-                openExternalLinksInNewTab
-              />
+              <>
+                <SafeMarkdown
+                  markdown={text}
+                  rehypeMap={rehypeMap}
+                  openExternalLinksInNewTab
+                />
+                {isAiTutorVersion && (
+                  <div>
+                    <p>Accept or Reject</p>
+                  </div>
+                )}
+              </>
             ) : (
               <p>{text}</p>
             )}

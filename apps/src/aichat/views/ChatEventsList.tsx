@@ -18,6 +18,7 @@ interface ChatEventsListProps {
   events: ChatEvent[];
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
+  isAiTutorVersion?: boolean;
 }
 
 /**
@@ -27,6 +28,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
   buildAssetUrl,
+  isAiTutorVersion,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
@@ -187,6 +189,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                 key={event.timestamp}
                 isTeacherView={isTeacherView}
                 buildAssetUrl={buildAssetUrl}
+                isAiTutorVersion={isAiTutorVersion}
                 ref={index === events.length - 1 ? finalEventRef : undefined}
                 tabIndex={isInChatNavigationMode ? 0 : -1}
                 onKeyDown={e => {

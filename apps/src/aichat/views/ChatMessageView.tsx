@@ -25,12 +25,14 @@ interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
   isChatHistoryView: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
+  isAiTutorVersion?: boolean;
 }
 
 const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   chatMessage,
   isChatHistoryView,
   buildAssetUrl,
+  isAiTutorVersion,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
   const {
@@ -143,6 +145,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
 
   return (
     <ChatMessage
+      isAiTutorVersion={isAiTutorVersion}
       text={displayText}
       role={role}
       messageStyle={getMessageStyle(status, role)}

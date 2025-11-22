@@ -38,6 +38,7 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
   event: ChatEvent;
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
+  isAiTutorVersion?: boolean;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -72,7 +73,17 @@ function formatModelUpdateText(update: ModelUpdate): string {
  * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
 const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
-  ({event, isTeacherView, buildAssetUrl, tabIndex, onKeyDown}, ref) => {
+  (
+    {
+      event,
+      isTeacherView,
+      buildAssetUrl,
+      tabIndex,
+      onKeyDown,
+      isAiTutorVersion,
+    },
+    ref
+  ) => {
     const dispatch = useAppDispatch();
 
     const chatEventDescriptions = isTeacherView
@@ -98,6 +109,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             chatMessage={event}
             isChatHistoryView={isTeacherView || false}
             buildAssetUrl={buildAssetUrl}
+            isAiTutorVersion={isAiTutorVersion}
           />
         </div>
       );
