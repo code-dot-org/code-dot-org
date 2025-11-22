@@ -45,7 +45,7 @@ design language and reducing the need for redundant code.
 ## Installation
 
 Right now this package is only available in code-dot-org/code-dot-org repository via linking the package,
-meaning you can't install it via npm or yarn. To use the component library in your project, you need to link the
+meaning you can't install it via npm, pnpm, or yarn. To use the component library in your project, you need to link the
 package.
 
 ## Development

@@ -49,7 +49,7 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "stylelint": "stylelint src/**/*.{css,scss,sass}",
-    "stylelint:fix": "yarn run stylelint --fix"
+    "stylelint:fix": "pnpm run stylelint --fix"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
