@@ -15,7 +15,9 @@
     "directory": "frontend/packages/component-library"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     "./package.json": "./package.json",
     "./accordion": {
@@ -489,9 +491,9 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "release": "release-it --preRelease=alpha",
-    "start": "yarn dev",
+    "start": "pnpm dev",
     "stylelint": "stylelint src/**/*.{css,scss,sass}",
-    "stylelint:fix": "yarn run stylelint --fix",
+    "stylelint:fix": "pnpm run stylelint --fix",
     "test": "jest",
     "typecheck": "tsc --noEmit"
   },

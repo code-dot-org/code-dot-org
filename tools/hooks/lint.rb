@@ -84,7 +84,7 @@ def run_lint_frontend(files)
   # use cases (for example, storybook will want to exclude its dist folder whereas next excludes .next). As such, filter
   # filtering logic is delegated to `lint-staged` and configured in `frontend/.lintstagedrc.mjs`.
   # More details: https://github.com/lint-staged/lint-staged
-  run("yarn lint-staged #{files.join(' ')}", FRONTEND_DIR)
+  run("pnpm exec lint-staged #{files.join(' ')}", FRONTEND_DIR)
 end
 
 def run_eslint_shared(files)

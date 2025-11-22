@@ -53,7 +53,7 @@ package.
 To run the code in development mode (build + watch):
 
 ```bash
-yarn run dev
+pnpm run dev
 ```
 
 This mode also generates the TypeScript declaration files, which generally take upwards of 20 seconds but is necessary
@@ -61,7 +61,7 @@ for cross-project development. To skip TypeScript declaration generation (for ex
 components without the need to cross-reference):
 
 ```bash
-yarn run dev:fast
+pnpm run dev:fast
 ```
 
 ## Usage
@@ -353,17 +353,17 @@ You can run the tests using the following commands:
 1. Run jest unit tests:
 
    ```bash
-   yarn test
+   pnpm test
    ```
 
 2. Run linting:
 
    ```bash
-   yarn lint
+   pnpm lint
 
-   yarn lint:fix
+   pnpm lint:fix
 
-   yarn prettier:fix
+   pnpm prettier:fix
    ```
 
 ## 🧩 Accessibility

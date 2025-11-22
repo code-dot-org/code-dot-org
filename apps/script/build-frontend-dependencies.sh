@@ -8,5 +8,5 @@
 set -x
 
 cd ../frontend && \
-  yarn && \
-  yarn run build --filter @code-dot-org/component-library --filter @code-dot-org/fonts --output-logs errors-only
+  pnpm install && \
+  pnpm turbo run build --filter @code-dot-org/component-library --filter @code-dot-org/fonts --output-logs errors-only
