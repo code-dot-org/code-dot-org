@@ -21,11 +21,11 @@ runs:
       if: inputs.INSTALL_DEPENDENCIES == 'true'
       with:
         node-version-file: ".nvmrc"
-        cache: "yarn"
-        cache-dependency-path: 'frontend/yarn.lock'
+        cache: "pnpm"
+        cache-dependency-path: 'frontend/pnpm-lock.yaml'
 
     - name: Install dependencies
       if: inputs.INSTALL_DEPENDENCIES == 'true'
       shell: bash
-      run: yarn install
+      run: pnpm install
       working-directory: ./frontend
