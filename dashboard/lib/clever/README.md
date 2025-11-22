@@ -95,11 +95,15 @@ If the Clever API is updated or you need to regenerate the client:
    cp /tmp/clever-v3.1-client.yml dashboard/lib/clever/
    ```
 
-4. Run linting and fix any issues:
-   ```bash
-   cd dashboard
-   bundle exec rubocop lib/clever/ -a
-   ```
+4. Note on code quality:
+
+   The generated code is excluded from Rubocop (see `.config/rubocop/config.yml`) because:
+   - OpenAPI Generator produces code with style violations (missing frozen string literals, duplicate methods)
+   - Only frozen string literals are auto-fixable; real issues (Lint/DuplicateMethods, Security/CompoundHash) require upstream fixes
+   - Auto-fixing creates unnecessary merge conflicts on regeneration
+   - Generated code should remain clearly identifiable as auto-generated
+
+   This is acceptable because the code is treated as a vendored library, not application code. Any modifications would be lost on regeneration.
 
 5. Restart Spring and verify the client loads:
    ```bash
