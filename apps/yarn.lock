@@ -3888,7 +3888,7 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^7.3.2"
     lodash: "npm:^4.17.21"
-    react-player: "npm:^3.3.0"
+    react-player: "npm:^3.4.0"
     react-schemaorg: "npm:^2.0.0"
   peerDependencies:
     classnames: ^2.5.1
@@ -25725,7 +25725,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"react-player@npm:^3.3.0":
+"react-player@npm:^3.4.0":
   version: 3.4.0
   resolution: "react-player@npm:3.4.0"
   dependencies:
