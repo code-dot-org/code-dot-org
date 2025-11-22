@@ -166,7 +166,15 @@ const Weblab2View: React.FC<
             const formattedResponse = formatAcceptRejectResponse(jsonResponse);
             console.log('formattedResponse', formattedResponse);
             dispatch(setViewingAiTutorVersion(true));
-            // In accept-reject mode, temporarily add mergedCodeVersion to version history as most current.
+            // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
+            // Workspace will be read-only until user clicks "accept" or "reject".
+
+            // TODO:
+            // If user clicks "reject", go back to projectSourceBeforeAiTutorVersion.
+            // If user clicks "accept":
+            // - force save a version for projectSourceBeforeAiTutorVersion.
+            // - force save an AI version for AI tutor version with description 'AI Save'.
+            // - Workspace is now editable.
             const aiTutorVersionFiles: ProjectFile[] = [];
             const mergedCodeVersion = getMergedAiTutorCodeWithSource(
               formattedResponse.code,
