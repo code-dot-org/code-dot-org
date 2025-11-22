@@ -1121,7 +1121,7 @@ __metadata:
     prettier: "npm:3.4.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
-    react-player: "npm:^3.3.0"
+    react-player: "npm:^3.4.0"
     react-schemaorg: "npm:^2.0.0"
     release-it: "npm:^18.1.2"
     rimraf: "npm:^6.0.1"
@@ -16380,7 +16380,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-player@npm:^3.3.0":
+"react-player@npm:^3.4.0":
   version: 3.4.0
   resolution: "react-player@npm:3.4.0"
   dependencies:
