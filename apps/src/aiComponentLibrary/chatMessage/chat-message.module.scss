@@ -197,3 +197,16 @@ $icon-overlay-padding-right: 8px;
 .warning {
   background-color: var(--background-warning-light);
 }
+
+.messageContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  width: 100%;
+}

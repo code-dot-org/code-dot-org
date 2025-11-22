@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -40,6 +41,15 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   messageStyle = 'default',
   isAiTutorVersion = false,
 }) => {
+  // Dummy click handlers for Accept and Reject buttons
+  const handleAccept = () => {
+    console.log('Accept button clicked');
+  };
+
+  const handleReject = () => {
+    console.log('Reject button clicked');
+  };
+
   return (
     <div
       className={classNames(
@@ -85,18 +95,29 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             }
           >
             {role === Role.ASSISTANT ? (
-              <>
+              <div className={moduleStyles.messageContent}>
                 <SafeMarkdown
                   markdown={text}
                   rehypeMap={rehypeMap}
                   openExternalLinksInNewTab
                 />
                 {isAiTutorVersion && (
-                  <div>
-                    <p>Accept or Reject</p>
+                  <div className={moduleStyles.buttonContainer}>
+                    <Button
+                      text="Reject"
+                      size="m"
+                      type="secondary"
+                      onClick={handleReject}
+                    />
+                    <Button
+                      text="Accept"
+                      size="m"
+                      type="primary"
+                      onClick={handleAccept}
+                    />
                   </div>
                 )}
-              </>
+              </div>
             ) : (
               <p>{text}</p>
             )}
