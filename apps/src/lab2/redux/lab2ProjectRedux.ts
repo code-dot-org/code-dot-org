@@ -20,6 +20,7 @@ import {
 
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;
+  projectSourceBeforeAiTutorVersion?: MultiFileSource;
   viewingOldVersion: boolean;
   viewingAiTutorVersion?: boolean;
   restoredOldVersion: boolean;
@@ -30,6 +31,7 @@ export interface Lab2ProjectState {
 
 const initialState: Lab2ProjectState = {
   projectSources: undefined,
+  projectSourceBeforeAiTutorVersion: undefined,
   viewingOldVersion: false,
   viewingAiTutorVersion: false,
   restoredOldVersion: false,
@@ -52,6 +54,12 @@ const projectSlice = createSlice({
         ...state.projectSources,
         source: action.payload,
       };
+    },
+    setProjectSourceBeforeAiTutorVersion(
+      state,
+      action: PayloadAction<MultiFileSource | undefined>
+    ) {
+      state.projectSourceBeforeAiTutorVersion = action.payload;
     },
     setPreviousVersionSource(
       state,
@@ -434,6 +442,7 @@ const projectSlice = createSlice({
 
 export const {
   setProjectSource,
+  setProjectSourceBeforeAiTutorVersion,
   setPreviousVersionSource,
   setViewingOldVersion,
   setViewingAiTutorVersion,

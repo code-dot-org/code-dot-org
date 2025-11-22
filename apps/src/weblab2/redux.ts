@@ -6,12 +6,10 @@ import {ViewMode} from './types';
 
 export type Weblab2State = {
   viewMode: ViewMode;
-  isAcceptRejectMode: boolean;
 };
 
 const initialState: Weblab2State = {
   viewMode: ViewMode.SPLIT,
-  isAcceptRejectMode: false,
 };
 
 const weblab2Slice = createSlice({
@@ -21,12 +19,9 @@ const weblab2Slice = createSlice({
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
     },
-    setIsAcceptRejectMode: (state, action: PayloadAction<boolean>) => {
-      state.isAcceptRejectMode = action.payload;
-    },
   },
 });
 
 registerReducers({weblab2: weblab2Slice.reducer});
 
-export const {setViewMode, setIsAcceptRejectMode} = weblab2Slice.actions;
+export const {setViewMode} = weblab2Slice.actions;

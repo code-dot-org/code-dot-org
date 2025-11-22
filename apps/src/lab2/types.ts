@@ -158,6 +158,7 @@ export interface ProjectFile {
   type?: ProjectFileType;
   url?: string;
   flagged?: boolean;
+  isAiTutorVersion?: boolean;
 }
 
 /**

@@ -9,8 +9,18 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import {
+  setProjectSourceBeforeAiTutorVersion,
+  setViewingAiTutorVersion,
+} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  MultiFileSource,
+  ProjectSources,
+  ProjectFile,
+} from '@cdo/apps/lab2/types';
 import experiments from '@cdo/apps/util/experiments';
 
 import {ResponseSchemaSettings} from '../aichat/types';
@@ -29,7 +39,7 @@ import {
 } from './helpers/aiTutorStructuredResponseHelper';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
-import {setIsAcceptRejectMode, setViewMode} from './redux';
+import {setViewMode} from './redux';
 import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
@@ -155,14 +165,26 @@ const Weblab2View: React.FC<
             });
             const formattedResponse = formatAcceptRejectResponse(jsonResponse);
             console.log('formattedResponse', formattedResponse);
-            dispatch(setIsAcceptRejectMode(true));
-            // In accept-reject mode, temporarily replace sources with merged code from AI Tutor.
-            const mergedCode = getMergedAiTutorCodeWithSource(
+            dispatch(setViewingAiTutorVersion(true));
+            // In accept-reject mode, temporarily add mergedCodeVersion to version history as most current.
+            const aiTutorVersionFiles: ProjectFile[] = [];
+            const mergedCodeVersion = getMergedAiTutorCodeWithSource(
               formattedResponse.code,
-              source as MultiFileSource
+              source as MultiFileSource,
+              aiTutorVersionFiles
             ) as MultiFileSource;
-            console.log('mergedCode', mergedCode);
+            console.log('mergedCodeVersion', mergedCodeVersion);
             console.log('source', source);
+            console.log('aiTutorVersionFiles', aiTutorVersionFiles);
+            dispatch(setProjectSourceBeforeAiTutorVersion(source));
+            // Go through aiTutor modified files and if isAiTutorVersion is true, save the file.
+            aiTutorVersionFiles.forEach(file => {
+              if (file.isAiTutorVersion) {
+                dispatch(
+                  saveFileThunk({fileId: file.id, contents: file.contents})
+                );
+              }
+            });
             return formattedResponse.explanation;
           },
         };

@@ -1,5 +1,5 @@
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
 const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
@@ -166,7 +166,8 @@ export const formatAcceptRejectResponse = (
 
 export const getMergedAiTutorCodeWithSource = (
   code: AiTutorCodeFile[],
-  source: MultiFileSource
+  source: MultiFileSource,
+  aiTutorVersionFiles: ProjectFile[]
 ): MultiFileSource => {
   // Helper function to get folder depth (distance from root)
   const getFolderDepth = (folderId: string): number => {
@@ -202,12 +203,13 @@ export const getMergedAiTutorCodeWithSource = (
       const currentDepth = getFolderDepth(current.folderId);
       return currentDepth < closestDepth ? current : closest;
     });
-
-    updatedSource.files[closestFile.id] = {
+    const aiTutorVersionFile: ProjectFile = {
       ...closestFile,
       contents: aiFile.contents,
+      isAiTutorVersion: true,
     };
+    updatedSource.files[closestFile.id] = aiTutorVersionFile;
+    aiTutorVersionFiles.push(aiTutorVersionFile);
   });
-
   return updatedSource;
 };
