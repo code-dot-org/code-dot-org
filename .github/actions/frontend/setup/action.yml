@@ -37,5 +37,5 @@ runs:
     - name: Install chrome for eyes and UI testing
       if: inputs.INSTALL_BROWSERS == 'true'
       shell: bash
-      run: pnpm exec puppeteer browsers install chrome
+      run: pnpm install && pnpm exec puppeteer browsers install chrome
       working-directory: ./frontend/apps/design-system-storybook
