@@ -90,7 +90,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/cdo-ci:1.18
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -212,7 +212,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/cdo-ci:1.18
     pull: always
     volumes:
       - name: mysql
@@ -295,10 +295,10 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-ci-tests
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/cdo-ci:1.18
     pull: always
     environment:
-      CI_JOB: 'ui_tests'
+      CI_JOB: 'prepare_ci_tests'
       CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
@@ -342,6 +342,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 5630b8e369b2dd05339cc0edec53c8ffe2ad625b6983bb213d4d118685527064
+hmac: c83261c9d31533a387fc663fc6d51aeb171564ccdc56521b24b60e830bc808ce
 
 ...

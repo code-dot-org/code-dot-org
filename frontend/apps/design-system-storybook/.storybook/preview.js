@@ -26,7 +26,9 @@ const preview = {
         date: /Date$/i,
       },
     },
-
+    a11y: {
+      test: 'error',
+    },
     docs: {
       codePanel: true,
     },

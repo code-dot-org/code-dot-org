@@ -788,6 +788,8 @@ const marketingPaths = {
   "/impact-report": true,
   "/about/impact-report": true,
   "/news/fetc": true,
+  "/districts/set-up": true,
+  "/districts/program": true,
   "/mix-move-ai": true,
   "/promote/stats": true,
 }

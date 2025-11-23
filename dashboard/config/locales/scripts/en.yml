@@ -26048,3 +26048,75 @@ en:
           description_short: ''
           description: "<section style=\"max-width:800px; margin:50px auto; padding:0 20px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif; color:#333; line-height:1.6;\">\n\n  <h2 style=\"text-align:center; color:#1a8a9a; font-size:32px; margin-bottom:10px;\">\n    Bring Dance, Music, and Coding Together\n  </h2>\n\n  <p style=\"font-size:18px; margin-top:20px;\">\n    In this self-guided professional learning activity, educators explore \n    <strong>Mix & Move with AI</strong> just like students do — using Artificial Intelligence \n    to generate a dancer, remix music, and choreograph moves through code.\n  </p>\n\n  <p style=\"font-size:18px;\">\n    Along the way, you’ll learn how AI “learns” from data, experiment with how AI models create \n    images, text, and code, and explore how these tools can support creativity and problem-solving \n    in the classroom. You’ll also build confidence introducing AI-related learning with your students.\n  </p>\n\n  <p style=\"font-size:18px; font-weight:500; color:#555; margin-top:24px;\">\n    Perfect for sparking curiosity, creativity, and confidence in both teaching with AI \n    and learning about AI.\n  </p>\n\n</section>"
           student_description: ''
+        6-12-aif-s2-unit3:
+          lessons:
+            lesson-1:
+              name: Intro to Data Structures
+            lesson-2:
+              name: Turning Data Into Displays
+            lesson-3:
+              name: Basic Array Methods
+            lesson-4:
+              name: Objects for Real-World Data
+            lesson-5:
+              name: Lists of Objects
+            lesson-6:
+              name: Rendering Lists of Objects
+            lesson-7:
+              name: Evaluating Fairness and Accessibility
+            lesson-8:
+              name: Filtering
+            lesson-9:
+              name: Searching
+            lesson-10:
+              name: Sorting and Chaining
+          lesson_groups: {}
+          name: 6-12-aif-s2-unit3
+          title: "[DEV] AIF S2 Unit 3"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        6-12-aif-s2-unit4:
+          lessons:
+            lesson-1:
+              name: Intro to Loops
+            lesson-2:
+              name: Counted Repetition
+            lesson-3:
+              name: Open-Ended Repetition
+            lesson-4:
+              name: Displaying Arrays as List Views
+            lesson-5:
+              name: Displaying Objects as Cards
+            lesson-6:
+              name: Filtering and Transparency
+            lesson-7:
+              name: Pure Functions vs Side Effects
+            lesson-8:
+              name: Copy, Don't Mutate
+            lesson-9:
+              name: Inclusive Filters and Clear Labels
+            lesson-10:
+              name: Schema Design for Simples Features
+          lesson_groups: {}
+          name: 6-12-aif-s2-unit4
+          title: "[DEV] AIF S2 Unit 4"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        global-modular-aif:
+          lessons: {}
+          lesson_groups: {}
+        modular-express-express:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sequencing
+          name: modular-express-express
+          title: TEST Express Express for modular curriculum
+          description_audience: ''
+          description_short: Tess + Doyeon thinking about Modularity and India
+          description: This is a express-express unit.  Basically just the essentials before getting into AIF content
+          student_description: ''

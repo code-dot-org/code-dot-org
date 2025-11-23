@@ -181,7 +181,7 @@ namespace :ci do
   end
 
   timed_task_with_logging :seed_ui_test do
-    unless CI::Utils.ci_job_ui_tests?
+    unless CI::Utils.ci_job_ui_tests? || CI::Utils.ci_job_prepare_ci_tests?
       ChatClient.log "Wrong CI job, skipping"
       next
     end

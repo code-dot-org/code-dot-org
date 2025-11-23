@@ -1,0 +1,28 @@
+{
+  "name": "global-modularity-test-2025",
+  "script_names": [
+    "modular-express-express",
+    "express-2025",
+    "aif1-2025",
+    "aif2-2025",
+    "aif5-2025"
+  ],
+  "original_script_names": [
+    "modular-express-express"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "global-modularity-test",
+    "numbered_units": "auto",
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
