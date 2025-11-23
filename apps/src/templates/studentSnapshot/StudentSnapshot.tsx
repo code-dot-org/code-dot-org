@@ -24,7 +24,6 @@ const StudentSnapshot: React.FC = () => {
             items={dropdownOptions}
             selectedValue={selectedOption}
             onChange={event => setSelectedOption(event.target.value)}
-            placeholder="Select an option"
             className={styles.dropdown}
           />
           <SimpleDropdown
@@ -33,7 +32,6 @@ const StudentSnapshot: React.FC = () => {
             items={dropdownOptions}
             selectedValue={selectedOption}
             onChange={event => setSelectedOption(event.target.value)}
-            placeholder="Select an option"
             className={styles.dropdown}
           />
           <div className={styles.buttonGroup}>
@@ -61,7 +59,6 @@ const StudentSnapshot: React.FC = () => {
             items={dropdownOptions}
             selectedValue={selectedOption}
             onChange={event => setSelectedOption(event.target.value)}
-            placeholder="Select an option"
             className={styles.dropdown}
           />
           <SimpleDropdown
@@ -70,7 +67,6 @@ const StudentSnapshot: React.FC = () => {
             items={dropdownOptions}
             selectedValue={selectedOption}
             onChange={event => setSelectedOption(event.target.value)}
-            placeholder="Select an option"
             className={styles.dropdown}
           />
           <div className={styles.buttonGroup}>
