@@ -1,5 +1,8 @@
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
+import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
+import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
@@ -185,15 +188,37 @@ export const getMergedAiTutorCodeWithSource = (
     openFiles: source.openFiles ? [...source.openFiles] : undefined,
   };
 
-  // For each AI code file, find and replace the matching file
+  // For each AI code file, find and replace the matching file if there is a matching file.
   code.forEach((aiFile: AiTutorCodeFile) => {
+    // First check active file is the same as the AI code file.
+    const activeFile = getActiveFileForSource(source);
+    console.log('activeFile', activeFile);
+    console.log('aiFile', aiFile);
+    if (activeFile?.name === aiFile.name) {
+      // Active file is the same as the AI code file - replace it.
+      updatedSource.files[activeFile.id] = {
+        ...activeFile,
+        contents: aiFile.contents,
+      };
+      return;
+    }
     // Find all files with matching name
     const matchingFiles = Object.values(updatedSource.files).filter(
       file => file.name === aiFile.name
     );
 
     if (matchingFiles.length === 0) {
-      // No matching file found - skip it
+      // No matching file found, add a new file to updatedSource.
+      const newFileId = getNextFileId(Object.values(updatedSource.files));
+      updatedSource.files[newFileId] = {
+        id: newFileId,
+        name: aiFile.name,
+        contents: aiFile.contents,
+        folderId: DEFAULT_FOLDER_ID,
+        language: aiFile.name.split('.').pop() || '',
+        isAiTutorVersion: true,
+      };
+      aiTutorVersionFiles.push(updatedSource.files[newFileId]);
       return;
     }
 

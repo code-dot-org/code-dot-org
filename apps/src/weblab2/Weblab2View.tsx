@@ -11,9 +11,9 @@ import React, {useEffect, useMemo, useState} from 'react';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {
   setProjectSourceBeforeAiTutorVersion,
+  setSource,
   setViewingAiTutorVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
   LabProps,
@@ -185,14 +185,7 @@ const Weblab2View: React.FC<
             console.log('source', source);
             console.log('aiTutorVersionFiles', aiTutorVersionFiles);
             dispatch(setProjectSourceBeforeAiTutorVersion(source));
-            // Go through aiTutor modified files and if isAiTutorVersion is true, save the file.
-            aiTutorVersionFiles.forEach(file => {
-              if (file.isAiTutorVersion) {
-                dispatch(
-                  saveFileThunk({fileId: file.id, contents: file.contents})
-                );
-              }
-            });
+            dispatch(setSource(mergedCodeVersion));
             return formattedResponse.explanation;
           },
         };
