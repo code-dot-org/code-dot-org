@@ -95,24 +95,36 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             }
           >
             {role === Role.ASSISTANT ? (
-              <div className={moduleStyles.messageContent}>
+              <div className={moduleStyles.assistantMessageContent}>
                 <SafeMarkdown
                   markdown={text}
                   rehypeMap={rehypeMap}
                   openExternalLinksInNewTab
                 />
                 {isAiTutorVersion && (
-                  <div className={moduleStyles.buttonContainer}>
+                  <div className={moduleStyles.assistantButtonContainer}>
                     <Button
                       text="Reject"
-                      size="m"
+                      size="s"
+                      color="gray"
                       type="secondary"
+                      iconLeft={{
+                        iconStyle: 'solid',
+                        iconName: 'close',
+                        title: 'Reject',
+                      }}
                       onClick={handleReject}
                     />
                     <Button
                       text="Accept"
-                      size="m"
+                      size="s"
                       type="primary"
+                      color="purple"
+                      iconLeft={{
+                        iconStyle: 'solid',
+                        iconName: 'check',
+                        title: 'Accept',
+                      }}
                       onClick={handleAccept}
                     />
                   </div>
