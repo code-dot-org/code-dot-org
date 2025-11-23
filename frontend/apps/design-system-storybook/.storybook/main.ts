@@ -26,6 +26,14 @@ const config: StorybookConfig = {
                   // https://webpack.js.org/loaders/css-loader/#importloaders
                   // // 2 => style-loader, sass-loader
                   importLoaders: 2,
+                  modules: {
+                    // treat *.module.scss as CSS modules
+                    auto: true,
+                    localIdentName: '[name]__[local]--[hash:base64:5]',
+                    // keep old/default-import behavior:
+                    namedExport: false,
+                    exportLocalsConvention: 'as-is',
+                  },
                 },
               },
               {
@@ -49,6 +57,7 @@ const config: StorybookConfig = {
                 options: {
                   modules: {
                     auto: true,
+                    namedExport: false,
                     localIdentName: '[name]__[local]--[hash:base64:5]',
                   },
                 },
