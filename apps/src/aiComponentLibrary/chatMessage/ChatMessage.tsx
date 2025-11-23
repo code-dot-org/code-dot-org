@@ -2,6 +2,9 @@ import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React from 'react';
 
+import {addChatEvent} from '@cdo/apps/aichat/redux/thunks/addChatEvent';
+import {getNewRemoveId} from '@cdo/apps/aichat/redux/utils';
+import {Notification} from '@cdo/apps/aichat/types/chatEvents';
 import {
   setSource,
   setViewingAiTutorVersion,
@@ -56,10 +59,28 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   );
 
   const handleAccept = () => {
+    const notification: Notification = {
+      timestamp: Date.now(),
+      removeId: getNewRemoveId(),
+      text: "You accepted AI Tutor's changes.",
+      notificationType: 'success',
+      includeInChatHistory: true,
+      hideTimestamp: true,
+    };
+    dispatch(addChatEvent(notification));
     dispatch(setViewingAiTutorVersion(false));
   };
 
   const handleReject = () => {
+    const notification: Notification = {
+      timestamp: Date.now(),
+      removeId: getNewRemoveId(),
+      text: "You rejected AI Tutor's changes.",
+      notificationType: 'error',
+      includeInChatHistory: true,
+      hideTimestamp: true,
+    };
+    dispatch(addChatEvent(notification));
     dispatch(setSource(prevSource || (source as MultiFileSource)));
     dispatch(setViewingAiTutorVersion(false));
   };

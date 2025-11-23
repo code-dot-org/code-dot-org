@@ -116,10 +116,13 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
     }
 
     if (isNotification(event)) {
-      const {removeId, text, notificationType, timestamp} = event;
+      const {removeId, text, notificationType, timestamp, hideTimestamp} =
+        event;
       return (
         <Alert
-          text={`${text} ${timestampToLocalTime(timestamp)}`}
+          text={`${text} ${
+            hideTimestamp ? '' : timestampToLocalTime(timestamp)
+          }`}
           type={
             ['error', 'permissionsError'].includes(notificationType)
               ? 'danger'
