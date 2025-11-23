@@ -37,7 +37,7 @@
   },
   "resolutions": {
     "firmata": "^2.2.0",
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.3.12",
     "@types/react-dom": "^18.0.11",
     "ua-parser-js": "^0.7.40",
     "@amplitude/ua-parser-js": "^0.7.33"
@@ -255,7 +255,7 @@
     "@types/htmlhint": "^1.1.5",
     "@types/papaparse": "^5.3.14",
     "@types/qrcode.react": "^1.0.5",
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.3.12",
     "@types/react-dom": "^18.0.11",
     "@types/react-typist": "^2.0.6",
     "@types/video.js": "^7.3.58",
