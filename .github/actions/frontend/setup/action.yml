@@ -6,6 +6,10 @@ inputs:
     description: "Whether to install dependencies. Defaults to true"
     default: "true"
     required: false
+  INSTALL_BROWSERS:
+    description: "Whether to install puppeteer browsers for eyes tests. Defaults to true"
+    default: "true"
+    required: false
 
 runs:
   using: composite
@@ -28,4 +32,10 @@ runs:
       if: inputs.INSTALL_DEPENDENCIES == 'true'
       shell: bash
       run: pnpm install
+      working-directory: ./frontend
+
+    - name: Install chrome for eyes and UI testing
+      if: inputs.INSTALL_BROWSERS == 'true'
+      shell: bash
+      run: pnpx puppeteer browsers install chrome
       working-directory: ./frontend
