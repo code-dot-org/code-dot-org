@@ -2,8 +2,14 @@ import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React from 'react';
 
+import {
+  setSource,
+  setViewingAiTutorVersion,
+} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
@@ -41,13 +47,21 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   messageStyle = 'default',
   isAiTutorVersion = false,
 }) => {
-  // Dummy click handlers for Accept and Reject buttons
+  const dispatch = useAppDispatch();
+  const prevSource = useAppSelector(
+    state => state.lab2Project.projectSourceBeforeAiTutorVersion
+  );
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source
+  );
+
   const handleAccept = () => {
-    console.log('Accept button clicked');
+    dispatch(setViewingAiTutorVersion(false));
   };
 
   const handleReject = () => {
-    console.log('Reject button clicked');
+    dispatch(setSource(prevSource || (source as MultiFileSource)));
+    dispatch(setViewingAiTutorVersion(false));
   };
 
   return (
