@@ -14680,5 +14680,5 @@ database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter
   version:
   - 8
   - 0
-  - 39
-  full_version_string: 8.0.39
+  - 43
+  full_version_string: 8.0.43

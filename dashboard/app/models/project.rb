@@ -33,6 +33,12 @@ class Project < ApplicationRecord
   has_one :owner, class_name: 'User', through: :project_storage, source: :user
   has_one :channel_token
 
+  before_save :ensure_uuid
+
+  def ensure_uuid
+    self.uuid ||= SecureRandom.uuid
+  end
+
   # Finds a project by channel id. Like `find`, this method raises an
   # ActiveRecord::RecordNotFound error if the corresponding project cannot
   # be found.
