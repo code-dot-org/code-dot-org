@@ -29,28 +29,26 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
  * @returns Nothing (void)
  */
 const handleFileDownload = async (file: ProjectFile) => {
-  if (WEBLAB2_IMAGE_FILE_TYPES.includes(file.language) && file.url) {
-    // File is an image and has a url, so download from browser
-    try {
+  try {
+    if (WEBLAB2_IMAGE_FILE_TYPES.includes(file.language) && file.url) {
+      // File is an image and has a url, so download from browser
       const image = await fetch(file.url);
       if (!image.ok) {
-        console.error(
+        throw new Error(
           `Failed to fetch image: ${image.status} ${image.statusText}`
         );
-        return;
       }
       const blob = await image.blob();
       fileDownload(blob, file.name);
-    } catch (error) {
-      console.error('Image download failed:', error);
-      return;
+    } else {
+      fileDownload(file.contents, file.name);
     }
-  } else {
-    fileDownload(file.contents, file.name);
+    sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, {
+      fileType: file.language?.toLowerCase() || '',
+    });
+  } catch (error) {
+    console.error('File download failed:', error);
   }
-  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, {
-    fileType: file.language?.toLowerCase() || '',
-  });
 };
 
 /**
