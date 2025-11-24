@@ -127,11 +127,12 @@ const StudentSnapshot: React.FC = () => {
           <div>small content 3</div>
         </WidgetTemplate>
         <WidgetTemplate
-          widgetName="Small Widget 4"
+          widgetName="Loading widget"
           gridWidth={1}
           gridHeight={1}
+          loading={true}
         >
-          <div>small content 4</div>
+          <div>Should not be displayed</div>
         </WidgetTemplate>
       </div>
     </div>
