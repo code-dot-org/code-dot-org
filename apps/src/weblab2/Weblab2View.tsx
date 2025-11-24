@@ -40,7 +40,11 @@ import {
 } from './helpers/aiTutorStructuredResponseHelper';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
-import {setAiFilePathToPreview, setViewMode} from './redux';
+import {
+  setAiTutorVersionFiles,
+  setAiFilePathToPreview,
+  setViewMode,
+} from './redux';
 import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
@@ -185,6 +189,11 @@ const Weblab2View: React.FC<
             console.log('mergedSourceVersion', mergedSourceVersion);
             console.log('source', source);
             console.log('aiTutorVersionFiles', aiTutorVersionFiles);
+            // If no AI-updated files, return explanation.
+            if (aiTutorVersionFiles.length === 0) {
+              return formattedResponse.explanation;
+            }
+            dispatch(setAiTutorVersionFiles(aiTutorVersionFiles));
             dispatch(setProjectSourceBeforeAiTutorVersion(source));
             // Set the preview to first AI-updated html file, if it exists.
             const firstAiUpdatedHtmlFile = aiTutorVersionFiles.find(
@@ -206,22 +215,14 @@ const Weblab2View: React.FC<
                   : folderPath + '/' + firstAiUpdatedHtmlFile.name;
               dispatch(setAiFilePathToPreview(filePath));
             } else {
-              if (aiTutorVersionFiles.length > 0) {
-                const fileToActivate = aiTutorVersionFiles[0];
-                mergedSourceVersion.files[fileToActivate.id] = {
-                  ...fileToActivate,
-                  active: true,
-                };
-                mergedSourceVersion.openFiles = [fileToActivate.id];
-              } else {
-                const firstFileId = Object.keys(mergedSourceVersion.files)[0];
-                mergedSourceVersion.files[firstFileId] = {
-                  ...mergedSourceVersion.files[firstFileId],
-                  active: true,
-                };
-                mergedSourceVersion.openFiles = [firstFileId];
-              }
+              const fileToActivate = aiTutorVersionFiles[0];
+              mergedSourceVersion.files[fileToActivate.id] = {
+                ...fileToActivate,
+                active: true,
+              };
+              mergedSourceVersion.openFiles = [fileToActivate.id];
             }
+
             dispatch(setSource(mergedSourceVersion));
             return formattedResponse.explanation;
           },

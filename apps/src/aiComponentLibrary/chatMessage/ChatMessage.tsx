@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {addChatEvent} from '@cdo/apps/aichat/redux/thunks/addChatEvent';
 import {getNewRemoveId} from '@cdo/apps/aichat/redux/utils';
@@ -14,7 +14,10 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {setAiFilePathToPreview} from '@cdo/apps/weblab2/redux';
+import {
+  setAiFilePathToPreview,
+  setAiTutorVersionFiles,
+} from '@cdo/apps/weblab2/redux';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
@@ -59,8 +62,18 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
   );
+  const aiTutorVersionFiles = useAppSelector(
+    state => state.weblab2.aiTutorVersionFiles
+  );
 
-  const handleAccept = () => {
+  const resetAiTutorVersion = useCallback(() => {
+    dispatch(setViewingAiTutorVersion(false));
+    dispatch(setAiFilePathToPreview(undefined));
+    dispatch(setProjectSourceBeforeAiTutorVersion(undefined));
+    dispatch(setAiTutorVersionFiles(undefined));
+  }, [dispatch]);
+
+  const handleAccept = useCallback(() => {
     const notification: Notification = {
       timestamp: Date.now(),
       removeId: getNewRemoveId(),
@@ -70,9 +83,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       hideTimestamp: true,
     };
     dispatch(addChatEvent(notification));
-    dispatch(setViewingAiTutorVersion(false));
-    dispatch(setAiFilePathToPreview(undefined));
-    dispatch(setProjectSourceBeforeAiTutorVersion(undefined));
+    resetAiTutorVersion();
     // Update current source so that isAiTutorVersionUpdated and isAiTutorVersionCreated are set to false.
     if (source) {
       const sourceToUpdate = source as MultiFileSource;
@@ -91,9 +102,9 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       };
       dispatch(setSource(updatedSource));
     }
-  };
+  }, [dispatch, source, resetAiTutorVersion]);
 
-  const handleReject = () => {
+  const handleReject = useCallback(() => {
     const notification: Notification = {
       timestamp: Date.now(),
       removeId: getNewRemoveId(),
@@ -104,10 +115,8 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     };
     dispatch(addChatEvent(notification));
     dispatch(setSource(prevSource || (source as MultiFileSource)));
-    dispatch(setViewingAiTutorVersion(false));
-    dispatch(setAiFilePathToPreview(undefined));
-    dispatch(setProjectSourceBeforeAiTutorVersion(undefined));
-  };
+    resetAiTutorVersion();
+  }, [dispatch, prevSource, source, resetAiTutorVersion]);
 
   return (
     <div
@@ -161,32 +170,42 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                   openExternalLinksInNewTab
                 />
                 {isAiTutorVersion && (
-                  <div className={moduleStyles.assistantButtonContainer}>
-                    <Button
-                      text="Reject"
-                      size="s"
-                      color="gray"
-                      type="secondary"
-                      iconLeft={{
-                        iconStyle: 'solid',
-                        iconName: 'close',
-                        title: 'Reject',
-                      }}
-                      onClick={handleReject}
-                    />
-                    <Button
-                      text="Accept"
-                      size="s"
-                      type="primary"
-                      color="purple"
-                      iconLeft={{
-                        iconStyle: 'solid',
-                        iconName: 'check',
-                        title: 'Accept',
-                      }}
-                      onClick={handleAccept}
-                    />
-                  </div>
+                  <>
+                    <div>
+                      {aiTutorVersionFiles?.map(file => (
+                        <div key={file.id}>
+                          {file.name}{' '}
+                          {file.isAiTutorVersionUpdated ? 'updated' : 'created'}
+                        </div>
+                      ))}
+                    </div>
+                    <div className={moduleStyles.assistantButtonContainer}>
+                      <Button
+                        text="Reject"
+                        size="s"
+                        color="gray"
+                        type="secondary"
+                        iconLeft={{
+                          iconStyle: 'solid',
+                          iconName: 'close',
+                          title: 'Reject',
+                        }}
+                        onClick={handleReject}
+                      />
+                      <Button
+                        text="Accept"
+                        size="s"
+                        type="primary"
+                        color="purple"
+                        iconLeft={{
+                          iconStyle: 'solid',
+                          iconName: 'check',
+                          title: 'Accept',
+                        }}
+                        onClick={handleAccept}
+                      />
+                    </div>
+                  </>
                 )}
               </div>
             ) : (
