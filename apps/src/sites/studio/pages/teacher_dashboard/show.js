@@ -8,6 +8,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progressRedux from '@cdo/apps/code-studio/progressRedux';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
+import {FlashHandler} from '@cdo/apps/flashes/FlashHandler';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
@@ -34,6 +35,9 @@ import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/Teach
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
+// 6 seconds
+const FLASH_DURATION = 6 * 1000;
+
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const {
@@ -46,6 +50,7 @@ const {
   hasCompletedPersonalizationQuiz,
   sectionOrder,
   providers,
+  flash,
 } = scriptData;
 
 $(document).ready(function () {
@@ -108,6 +113,7 @@ $(document).ready(function () {
           canEnableAITutor={canEnableAITutor}
         />
       )}
+      <FlashHandler flash={flash} autoHideDuration={FLASH_DURATION} />
     </Provider>,
     document.getElementById('teacher-dashboard')
   );
