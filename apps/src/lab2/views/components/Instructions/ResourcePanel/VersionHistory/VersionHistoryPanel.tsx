@@ -342,6 +342,23 @@ const VersionHistoryPanel: React.FunctionComponent<
           size="xs"
         />
       )}
+      {hasRestoredOldVersion && (
+        <Alert
+          className={moduleStyles.message}
+          text={codebridgeI18n.restoredOldVersion()}
+          type="success"
+          size="xs"
+          onClose={closeRestoredVersionBanner}
+        />
+      )}
+      {versionLoadError && (
+        <Alert
+          className={moduleStyles.message}
+          text={lab2I18n.versionLoadFailure()}
+          type="danger"
+          size="xs"
+        />
+      )}
       {listLoading && (
         <div
           className={classNames(
