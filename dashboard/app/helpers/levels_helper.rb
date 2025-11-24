@@ -60,7 +60,7 @@ module LevelsHelper
         puzzle_page_course_unit_lockable_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
       end
     elsif params[:sublevel_position]
-      sublevel_course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:sublevel_position])
+      sublevel_course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:sublevel_position], params)
       # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
       # not include the '/lockable/' piece added in this elsif case
     elsif !script_level.lesson.numbered_lesson?
