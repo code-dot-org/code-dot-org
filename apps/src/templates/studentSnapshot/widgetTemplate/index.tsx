@@ -30,7 +30,7 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
       style={{gridColumn: `span ${gridWidth}`, gridRow: `span ${gridHeight}`}}
     >
       <div className={styles.header}>
-        <Typography semanticTag="h4" variant="h5">
+        <Typography component="h4" variant="h5">
           {widgetName}
         </Typography>
         <div>
