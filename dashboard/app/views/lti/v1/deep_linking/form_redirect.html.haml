@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Returning to your LMS…
+
+  %body{ onload: "document.getElementById('ltiDeepLinkReturn').submit();" }
+    %p Returning to your LMS…
+
+    %form#ltiDeepLinkReturn{ action: deep_link_return_url, method: "POST" }
+      %input{ type: "hidden", name: "JWT", value: jwt }
+
+      %noscript
+        %p JavaScript is disabled. Click continue to return to your LMS.
+        %button{ type: "submit" } Continue

@@ -567,7 +567,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       email: @default_params[:email],
     )
 
-    session[:lti_deployment_id] = deployment.id
+    session[:internal_lti_deployment_id] = deployment.id
 
     @user = User.new
     lti_student_params = @default_params.update(provider: User::PROVIDER_MIGRATED, authentication_options: [auth_option])

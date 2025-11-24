@@ -1,5 +1,8 @@
 %h1 Deep Linking
 - if @deep_linking_settings.present?
   = @deep_linking_settings.to_s
+  = form_with do |f|
+    f.hidden_field :deep_linking_settings, value: @deep_linking_settings.to_json
+    = f.submit "Submit Selected Items"
 - else
   %p No `deep_linking_settings` parameter provided.

@@ -162,6 +162,10 @@ class LtiV1Controller < ApplicationController
       role_key = decoded_jwt[Policies::Lti::CLASSLINK_ROLE_KEY].present? ? Policies::Lti::CLASSLINK_ROLE_KEY : Policies::Lti::LTI_ROLES_KEY
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[role_key])
 
+      # Store deployment ID and issuer in session for later use
+      session[:lti_deployment_id] = deployment_id
+      session[:lti_issuer] = extracted_issuer_id
+
       # If deployment name is nil, update it with the name from the JWT. This
       # could likely be removed after a period of time, as we also write the name
       # for all new deployments in the next block. This line is necessary to
@@ -228,7 +232,7 @@ class LtiV1Controller < ApplicationController
         Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
         # Store the deployment ID in the session, so we can check if it's a restricted deployment later
-        session[:lti_deployment_id] = deployment.id
+        session[:internal_lti_deployment_id] = deployment.id
         publish_linking_page_visit(user, integration[:platform_name])
         render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end
