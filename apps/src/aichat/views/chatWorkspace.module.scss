@@ -16,7 +16,7 @@ $tabs-default-spacing: 4px;
 }
 
 .chatMessageOutline {
-  scroll-margin-top: .6rem;
+  scroll-margin-top: 0.6rem;
 }
 
 .chatMessageOutline:focus-visible {
@@ -28,11 +28,11 @@ $tabs-default-spacing: 4px;
 // We should avoid using this unless necessary for accessibility,
 // as it renders its component out of frame at a size of 1 pixel.
 .accessibilityHidden {
-  position: 'absolute';
-  left: '-9999px';
-  height: 1;
-  width: 1;
-  overflow: 'hidden';
+  position: absolute;
+  left: -9999px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
 %conversation-area,

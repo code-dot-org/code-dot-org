@@ -7,7 +7,7 @@ import {
   ListItem,
   Box,
 } from '@mui/material';
-import React from 'react';
+import {FunctionComponent} from 'react';
 
 interface MenuItem {
   label: string;
@@ -62,7 +62,7 @@ const styles = {
   },
 };
 
-const Header: React.FC<HeaderProps> = ({
+const Header: FunctionComponent<HeaderProps> = ({
   logoImageUrl,
   brandName,
   menuItems,

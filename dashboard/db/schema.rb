@@ -685,6 +685,21 @@ ActiveRecord::Schema.define(version: 2025_11_19_161129) do
     t.index ["user_id", "read_at"], name: "index_external_notifications_on_user_id_and_read_at"
   end
 
+  create_table "failed_delayed_jobs", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "priority", default: 0, null: false
+    t.integer "attempts", default: 0, null: false
+    t.text "handler", null: false
+    t.text "last_error", size: :medium
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string "locked_by"
+    t.string "queue"
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
+    t.index ["failed_at"], name: "index_failed_delayed_jobs_on_failed_at"
+  end
+
   create_table "featured_projects", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "storage_app_id"
     t.datetime "featured_at"
