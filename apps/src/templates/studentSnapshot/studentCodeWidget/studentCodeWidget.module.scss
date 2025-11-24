@@ -8,12 +8,12 @@
 
   // Light theme colors
   [data-theme='Light'] & {
-    --background-color: #fff;
+    --background-color: $white;
   }
 
   // Dark theme colors
   [data-theme='Dark'] & {
-    --background-color: #282c34;
+    --background-color: $black;
   }
 }
 
@@ -26,6 +26,7 @@
   padding-block: 0.5rem;
   overflow-x: auto;
   max-width: 100%;
+  background-color: var(--background-neutral-primary);
   scroll-padding-inline-start: 1rem;
   scrollbar-width: thin;
   box-sizing: border-box;
@@ -48,6 +49,7 @@
   padding-inline: 0.5rem;
   cursor: pointer;
   white-space: nowrap;
+  background-color: var(--background-neutral-secondary);
   border-radius: variables.$default-border-radius;
   transition: all 0.2s ease-in-out;
 
