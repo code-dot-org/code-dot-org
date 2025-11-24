@@ -206,7 +206,7 @@ export const getMergedAiTutorCodeWithSource = (
       const aiTutorVersionFile: ProjectFile = {
         ...updatedSource.files[activeFile.id],
         contents: aiFile.contents,
-        isAiTutorVersion: true,
+        isAiTutorVersionUpdated: true,
       };
       updatedSource.files[activeFile.id] = aiTutorVersionFile;
       aiTutorVersionFiles.push(aiTutorVersionFile);
@@ -226,7 +226,7 @@ export const getMergedAiTutorCodeWithSource = (
         contents: aiFile.contents,
         folderId: DEFAULT_FOLDER_ID,
         language: aiFile.name.split('.').pop() || '',
-        isAiTutorVersion: true,
+        isAiTutorVersionCreated: true,
       };
       aiTutorVersionFiles.push(updatedSource.files[newFileId]);
       return;
@@ -241,7 +241,7 @@ export const getMergedAiTutorCodeWithSource = (
     const aiTutorVersionFile: ProjectFile = {
       ...closestFile,
       contents: aiFile.contents,
-      isAiTutorVersion: true,
+      isAiTutorVersionUpdated: true,
     };
     updatedSource.files[closestFile.id] = aiTutorVersionFile;
     aiTutorVersionFiles.push(aiTutorVersionFile);

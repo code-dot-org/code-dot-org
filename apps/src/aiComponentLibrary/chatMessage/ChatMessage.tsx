@@ -8,6 +8,7 @@ import {Notification} from '@cdo/apps/aichat/types/chatEvents';
 import {
   setSource,
   setViewingAiTutorVersion,
+  setProjectSourceBeforeAiTutorVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -71,6 +72,25 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     dispatch(addChatEvent(notification));
     dispatch(setViewingAiTutorVersion(false));
     dispatch(setAiFilePathToPreview(undefined));
+    dispatch(setProjectSourceBeforeAiTutorVersion(undefined));
+    // Update current source so that isAiTutorVersionUpdated and isAiTutorVersionCreated are set to false.
+    if (source) {
+      const sourceToUpdate = source as MultiFileSource;
+      const updatedSource = {
+        ...sourceToUpdate,
+        files: Object.fromEntries(
+          Object.entries(sourceToUpdate.files).map(([fileId, file]) => [
+            fileId,
+            {
+              ...file,
+              isAiTutorVersionUpdated: false,
+              isAiTutorVersionCreated: false,
+            },
+          ])
+        ),
+      };
+      dispatch(setSource(updatedSource));
+    }
   };
 
   const handleReject = () => {
@@ -86,6 +106,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     dispatch(setSource(prevSource || (source as MultiFileSource)));
     dispatch(setViewingAiTutorVersion(false));
     dispatch(setAiFilePathToPreview(undefined));
+    dispatch(setProjectSourceBeforeAiTutorVersion(undefined));
   };
 
   return (
