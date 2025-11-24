@@ -1,6 +1,7 @@
 import {Codebridge} from '@codebridge/Codebridge';
 import {DEFAULT_START_HTML_FILE} from '@codebridge/FilePreview/constants';
 import {ConfigType} from '@codebridge/types';
+import {getFolderPath} from '@codebridge/utils';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
@@ -176,24 +177,37 @@ const Weblab2View: React.FC<
             // - force save an AI version for AI tutor version with description 'AI Save'.
             // - Workspace is now editable.
             const aiTutorVersionFiles: ProjectFile[] = [];
-            const mergedCodeVersion = getMergedAiTutorCodeWithSource(
+            const mergedSourceVersion = getMergedAiTutorCodeWithSource(
               formattedResponse.code,
               source as MultiFileSource,
               aiTutorVersionFiles
             ) as MultiFileSource;
-            console.log('mergedCodeVersion', mergedCodeVersion);
+            console.log('mergedSourceVersion', mergedSourceVersion);
             console.log('source', source);
             console.log('aiTutorVersionFiles', aiTutorVersionFiles);
             dispatch(setProjectSourceBeforeAiTutorVersion(source));
-            dispatch(setSource(mergedCodeVersion));
-            // Sort AI-updatedfiles by name alphabetically.
-            aiTutorVersionFiles.sort((a, b) => a.name.localeCompare(b.name));
+            dispatch(setSource(mergedSourceVersion));
             // Set the preview to first AI-updated html file, if it exists.
             const firstAiUpdatedHtmlFile = aiTutorVersionFiles.find(
               file => file.language === 'html'
             );
             if (firstAiUpdatedHtmlFile) {
-              dispatch(setAiFilePathToPreview(firstAiUpdatedHtmlFile.name));
+              firstAiUpdatedHtmlFile.active = true;
+              const folderPath = getFolderPath(
+                firstAiUpdatedHtmlFile.folderId,
+                mergedSourceVersion.folders
+              ).substring(1);
+              const filePath =
+                folderPath === ''
+                  ? firstAiUpdatedHtmlFile.name
+                  : folderPath + '/' + firstAiUpdatedHtmlFile.name;
+              dispatch(setAiFilePathToPreview(filePath));
+            } else {
+              if (aiTutorVersionFiles.length > 0) {
+                aiTutorVersionFiles[0].active = true;
+              } else {
+                mergedSourceVersion.files[0].active = true;
+              }
             }
             return formattedResponse.explanation;
           },

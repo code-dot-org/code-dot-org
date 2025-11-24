@@ -180,13 +180,17 @@ export const getMergedAiTutorCodeWithSource = (
     return 1 + getFolderDepth(folder.parentId);
   };
 
-  // Create a deep copy of the source to modify
+  // Create a deep copy of the source. Set openFiles to empty array to close all files for now.
   const updatedSource: MultiFileSource = {
     ...source,
     files: {...source.files},
     folders: {...source.folders},
-    openFiles: source.openFiles ? [...source.openFiles] : undefined,
+    openFiles: [],
   };
+  // Set all files as inactive.
+  Object.values(updatedSource.files).forEach(file => {
+    file.active = false;
+  });
 
   // For each AI code file, find and replace the matching file if there is a matching file.
   code.forEach((aiFile: AiTutorCodeFile) => {
@@ -222,7 +226,7 @@ export const getMergedAiTutorCodeWithSource = (
       return;
     }
 
-    // Find the file closest to root (smallest folder depth)
+    // Find the file closest to root (smallest folder depth).
     const closestFile = matchingFiles.reduce((closest, current) => {
       const closestDepth = getFolderDepth(closest.folderId);
       const currentDepth = getFolderDepth(current.folderId);
@@ -236,5 +240,7 @@ export const getMergedAiTutorCodeWithSource = (
     updatedSource.files[closestFile.id] = aiTutorVersionFile;
     aiTutorVersionFiles.push(aiTutorVersionFile);
   });
+  // Sort AI-updated files by name alphabetically.
+  aiTutorVersionFiles.sort((a, b) => a.name.localeCompare(b.name));
   return updatedSource;
 };
