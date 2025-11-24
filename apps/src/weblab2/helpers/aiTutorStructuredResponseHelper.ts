@@ -185,7 +185,7 @@ export const getMergedAiTutorCodeWithSource = (
     ...source,
     files: {...source.files},
     folders: {...source.folders},
-    openFiles: [],
+    openFiles: undefined,
   };
   // Set all files as inactive.
   Object.values(updatedSource.files).forEach(file => {

@@ -186,13 +186,13 @@ const Weblab2View: React.FC<
             console.log('source', source);
             console.log('aiTutorVersionFiles', aiTutorVersionFiles);
             dispatch(setProjectSourceBeforeAiTutorVersion(source));
-            dispatch(setSource(mergedSourceVersion));
             // Set the preview to first AI-updated html file, if it exists.
             const firstAiUpdatedHtmlFile = aiTutorVersionFiles.find(
               file => file.language === 'html'
             );
             if (firstAiUpdatedHtmlFile) {
               firstAiUpdatedHtmlFile.active = true;
+              mergedSourceVersion.openFiles = [firstAiUpdatedHtmlFile.id];
               const folderPath = getFolderPath(
                 firstAiUpdatedHtmlFile.folderId,
                 mergedSourceVersion.folders
@@ -205,10 +205,14 @@ const Weblab2View: React.FC<
             } else {
               if (aiTutorVersionFiles.length > 0) {
                 aiTutorVersionFiles[0].active = true;
+                mergedSourceVersion.openFiles = [aiTutorVersionFiles[0].id];
               } else {
-                mergedSourceVersion.files[0].active = true;
+                const firstFileId = Object.keys(mergedSourceVersion.files)[0];
+                mergedSourceVersion.files[firstFileId].active = true;
+                mergedSourceVersion.openFiles = [firstFileId];
               }
             }
+            dispatch(setSource(mergedSourceVersion));
             return formattedResponse.explanation;
           },
         };
