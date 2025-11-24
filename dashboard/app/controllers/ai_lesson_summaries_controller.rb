@@ -16,7 +16,6 @@ class AiLessonSummariesController < ApplicationController
   end
 
   def perform_ai_lesson_summaries_by_unit
-    puts "Starting AI Lesson Summaries"
     unit = Unit.find(params[:unit_id])
     lesson_ids = []
     unit.lessons.each do |lesson|
