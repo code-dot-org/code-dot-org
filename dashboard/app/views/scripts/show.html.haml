@@ -1,4 +1,5 @@
 %link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
+%script{src: webpack_asset_path("js/#{js_locale}/aichat_locale.js")}
 
 -# This variable will get any data we need to pass along to scripts/show.js
 - scriptOverviewData = {scriptData: @script_data, plcBreadcrumb: @plc_breadcrumb}
