@@ -13,7 +13,7 @@ module MysqlConsoleHelper
     # - Process lists (ps aux shows command-line arguments)
     # - Shell history (if commands are logged)
     # MySQL itself warns: "Using a password on the command line interface can be insecure."
-    # Use a temporary option file with restricted permissions instead (see run method).
+    # Now, below, we use a temporary option file with restricted permissions instead (see run method).
     opts.join(' ')
   end
 
