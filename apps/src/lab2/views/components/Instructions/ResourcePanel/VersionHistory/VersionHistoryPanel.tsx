@@ -56,6 +56,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const [listLoaded, setListLoaded] = useState(false);
   const [listLoading, setListLoading] = useState(false);
   const [listLoadError, setListLoadError] = useState(false);
+  const [versionSaved, setVersionSaved] = useState(false);
   const [versionLoadError, setVersionLoadError] = useState(false);
   const [versionLoading, setVersionLoading] = useState(false);
   const locale = currentLocale();
@@ -308,12 +309,22 @@ const VersionHistoryPanel: React.FunctionComponent<
     });
     dispatch(setHasEdited(false));
     successfulProjectResetCleanUp(true);
+    setVersionSaved(true);
   }, [dispatch, selectedVersion, successfulProjectResetCleanUp]);
 
   const showList = listLoaded && !listLoading && !listLoadError;
 
   return (
     <div className={moduleStyles.versionHistoryPanel}>
+      {versionSaved && (
+        <Alert
+          className={moduleStyles.message}
+          type="success"
+          text="Version successfully saved!"
+          size="xs"
+          onClose={() => setVersionSaved(false)}
+        />
+      )}
       {hasRestoredOldVersion && (
         <Alert
           className={moduleStyles.message}
