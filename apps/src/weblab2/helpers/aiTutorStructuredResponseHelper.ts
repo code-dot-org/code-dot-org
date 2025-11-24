@@ -180,16 +180,19 @@ export const getMergedAiTutorCodeWithSource = (
     return 1 + getFolderDepth(folder.parentId);
   };
 
-  // Create a deep copy of the source. Set openFiles to empty array to close all files for now.
+  // Create copy of the source. Set openFiles to empty array to close all files for now.
   const updatedSource: MultiFileSource = {
     ...source,
-    files: {...source.files},
+    files: {},
     folders: {...source.folders},
-    openFiles: undefined,
+    openFiles: [],
   };
-  // Set all files as inactive.
-  Object.values(updatedSource.files).forEach(file => {
-    file.active = false;
+  // Set all files as inactive by creating new file objects.
+  Object.keys(source.files).forEach(fileId => {
+    updatedSource.files[fileId] = {
+      ...source.files[fileId],
+      active: false,
+    };
   });
 
   // For each AI code file, find and replace the matching file if there is a matching file.
@@ -200,10 +203,13 @@ export const getMergedAiTutorCodeWithSource = (
     console.log('aiFile', aiFile);
     if (activeFile?.name === aiFile.name) {
       // Active file is the same as the AI code file - replace it.
-      updatedSource.files[activeFile.id] = {
-        ...activeFile,
+      const aiTutorVersionFile: ProjectFile = {
+        ...updatedSource.files[activeFile.id],
         contents: aiFile.contents,
+        isAiTutorVersion: true,
       };
+      updatedSource.files[activeFile.id] = aiTutorVersionFile;
+      aiTutorVersionFiles.push(aiTutorVersionFile);
       return;
     }
     // Find all files with matching name

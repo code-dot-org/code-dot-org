@@ -191,7 +191,10 @@ const Weblab2View: React.FC<
               file => file.language === 'html'
             );
             if (firstAiUpdatedHtmlFile) {
-              firstAiUpdatedHtmlFile.active = true;
+              mergedSourceVersion.files[firstAiUpdatedHtmlFile.id] = {
+                ...firstAiUpdatedHtmlFile,
+                active: true,
+              };
               mergedSourceVersion.openFiles = [firstAiUpdatedHtmlFile.id];
               const folderPath = getFolderPath(
                 firstAiUpdatedHtmlFile.folderId,
@@ -204,11 +207,18 @@ const Weblab2View: React.FC<
               dispatch(setAiFilePathToPreview(filePath));
             } else {
               if (aiTutorVersionFiles.length > 0) {
-                aiTutorVersionFiles[0].active = true;
-                mergedSourceVersion.openFiles = [aiTutorVersionFiles[0].id];
+                const fileToActivate = aiTutorVersionFiles[0];
+                mergedSourceVersion.files[fileToActivate.id] = {
+                  ...fileToActivate,
+                  active: true,
+                };
+                mergedSourceVersion.openFiles = [fileToActivate.id];
               } else {
                 const firstFileId = Object.keys(mergedSourceVersion.files)[0];
-                mergedSourceVersion.files[firstFileId].active = true;
+                mergedSourceVersion.files[firstFileId] = {
+                  ...mergedSourceVersion.files[firstFileId],
+                  active: true,
+                };
                 mergedSourceVersion.openFiles = [firstFileId];
               }
             }
