@@ -53,7 +53,7 @@ When terminating an application instance it's import to make sure all of the log
 
 ### Usage
 
-Run it. If you've never run it, and you're not on an AWS instance, it'll take hours to run. It spits out the total lines of code written. It's interface is simple because it is used by the `pegasus/bin/analyze_hoc_activity` cronjob.
+Run it. If you've never run it, and you're not on an AWS instance, it'll take hours to run. It spits out the total lines of code written.
 
 ### Design
 
