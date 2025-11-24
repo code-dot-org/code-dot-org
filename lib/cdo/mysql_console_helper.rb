@@ -8,11 +8,7 @@ module MysqlConsoleHelper
     opts << "--database=#{database}" if database
     opts << "--port=#{db.port}" if db.port
     # SECURITY: Password is NOT included here to avoid exposure in logs and process lists.
-    # Previously, we added --password=#{db.password} which exposed credentials in:
-    # - Build logs (when system() logs the full command)
-    # - Process lists (ps aux shows command-line arguments)
-    # - Shell history (if commands are logged)
-    # MySQL itself warns: "Using a password on the command line interface can be insecure."
+    # Previously, we added --password=#{db.password} which exposed credentials.
     # Now, below, we use a temporary option file with restricted permissions instead (see run method).
     opts.join(' ')
   end
