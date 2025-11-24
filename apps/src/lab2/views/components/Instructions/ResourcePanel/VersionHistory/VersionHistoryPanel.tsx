@@ -314,6 +314,23 @@ const VersionHistoryPanel: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.versionHistoryPanel}>
+      {hasRestoredOldVersion && (
+        <Alert
+          className={moduleStyles.message}
+          text={codebridgeI18n.restoredOldVersion()}
+          type="success"
+          size="xs"
+          onClose={closeRestoredVersionBanner}
+        />
+      )}
+      {versionLoadError && (
+        <Alert
+          className={moduleStyles.message}
+          text={lab2I18n.versionLoadFailure()}
+          type="danger"
+          size="xs"
+        />
+      )}
       {listLoading && (
         <div
           className={classNames(
@@ -329,23 +346,6 @@ const VersionHistoryPanel: React.FunctionComponent<
           className={moduleStyles.message}
           type="danger"
           text={lab2I18n.versionHistoryLoadFailure()}
-          size="xs"
-        />
-      )}
-      {hasRestoredOldVersion && (
-        <Alert
-          className={moduleStyles.message}
-          text={codebridgeI18n.restoredOldVersion()}
-          type="success"
-          size="xs"
-          onClose={closeRestoredVersionBanner}
-        />
-      )}
-      {versionLoadError && (
-        <Alert
-          className={moduleStyles.message}
-          text={lab2I18n.versionLoadFailure()}
-          type="danger"
           size="xs"
         />
       )}
