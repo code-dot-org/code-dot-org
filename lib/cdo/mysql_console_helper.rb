@@ -49,7 +49,7 @@ module MysqlConsoleHelper
     # - Made passwords visible via `ps aux` (any user can see process arguments)
     # - Triggered MySQL's warning: "Using a password on the command line interface can be insecure."
     # Using --defaults-extra-file with a temporary file (mode 600) is the secure approach
-    # per MySQL documentation.
+    # per MySQL documentation.  See INF-1962
     if db.password
       require 'tempfile'
       require 'fileutils'
