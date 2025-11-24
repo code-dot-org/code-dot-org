@@ -6,10 +6,10 @@ import React, {useState, useRef, useEffect} from 'react';
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './copyable-code-block.module.scss';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 interface CopyableCodeBlockProps extends React.HTMLAttributes<HTMLPreElement> {
   isTA?: boolean;

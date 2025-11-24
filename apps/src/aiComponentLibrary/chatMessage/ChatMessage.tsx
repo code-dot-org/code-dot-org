@@ -1,6 +1,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
@@ -20,6 +23,21 @@ interface ChatMessageProps {
   messageStyle?: 'default' | 'warning' | 'danger';
 }
 
+const codeCopiedAnalytics = (isTA: boolean) => () =>
+  getStore().dispatch(sendAnalytics(EVENTS.CODE_COPIED, {isTA: !!isTA}));
+
+const taRehypeMap = {
+  pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
+    <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(true)} />
+  ),
+};
+
+const nonTaRehypeMap = {
+  pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
+    <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(false)} />
+  ),
+};
+
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
   role,
@@ -29,28 +47,8 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   isTA,
   messageStyle = 'default',
 }) => {
-  /*
-   * Rehype component maps used to map between `pre` tags and `CopyableCodeBlock` components.
-   *
-   * For performance reasons, it is the `SafeMarkdown` consumer's responsibility to create the
-   * rehypeMap outside  of the component function or to define the mapping in an ES module and
-   * import it, if used in multiple components. See `SafeMarkdown` for more info.
-   *
-   * In this case, we create two maps outside the component function to pass different prop values
-   * for `isTA` and then dynamically decide which map to use from within the component function.
-   **/
-  const taRehypeMap = {
-    pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
-      <CopyableCodeBlock {...props} isTA={true} />
-    ),
-  };
-
-  const nonTaRehypeMap = {
-    pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
-      <CopyableCodeBlock {...props} isTA={false} />
-    ),
-  };
   const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
+
   return (
     <div
       className={classNames(
