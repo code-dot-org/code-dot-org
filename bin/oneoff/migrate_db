@@ -34,16 +34,17 @@ end
 # - Runs in Chef/knife context where full Code.org deployment environment may not be loaded
 # - Can't use MysqlConsoleHelper (requires CDO constants that aren't available)
 # - RDS-specific command (`CALL mysql.rds_reset_external_master()`) could use Sequel, but would require loading deployment environment
-# Execution environment: Admin workstations, jump servers (single user, manual execution)
-# Temp file risk: Low - single user environment, not susceptible to temp directory sniffing
+# Execution environment: Console servers, engineer workstations (single user, manual execution during planned maintenance windows)
+# Temp file risk: Low - single user environment, not susceptible to temp directory sniffing. This script is run manually from console servers (not web-serving servers), so same-user enumeration risk does not apply.
 def run_mysql_secure(db_uri, mysql_command_template)
   db = URI.parse(db_uri)
   require 'tempfile'
   require 'fileutils'
 
   if db.password
-    # SECURITY: Using --password= on command line exposes passwords in process lists (ps aux)
-    # and logs. MySQL warns: "Using a password on the command line interface can be insecure."
+    # SECURITY: Using --password= on command line exposes passwords in process lists (ps aux).
+    # MySQL warns: "Using a password on the command line interface can be insecure."
+    # This script runs manually (not in CI), so passwords would only appear in process lists, not build logs.
     # Using --defaults-extra-file with a temporary file (mode 600) is the secure approach.
     option_file = Tempfile.new(['mysql', '.cnf'])
     # Set restrictive permissions BEFORE writing password (owner read/write only)
