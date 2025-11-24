@@ -76,7 +76,7 @@ class MusiclabController < ApplicationController
 
   private def get_project_details(project_channel_ids)
     project_ids = project_channel_ids.map do |channel_id|
-      _, project_id = storage_decrypt_channel_id(channel_id)
+      _, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
       project_id
     end
     Project.

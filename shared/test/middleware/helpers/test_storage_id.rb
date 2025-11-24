@@ -134,11 +134,8 @@ class StorageIdTest < Minitest::Test
   end
 
   def test_storage_encrypt_channel_id
-    # Test with project without UUID - should encrypt
     storage_id = 123
     project_id = 456
-    mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: nil)
-    Project.stubs(:find_by).with(id: project_id).returns(mock_project)
 
     encrypted = storage_encrypt_channel_id(storage_id, project_id)
     assert encrypted.is_a?(String)
@@ -148,28 +145,11 @@ class StorageIdTest < Minitest::Test
     decrypted_storage_id, decrypted_project_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
     assert_equal storage_id, decrypted_storage_id
     assert_equal project_id, decrypted_project_id
-
-    # Test with project with UUID - should return UUID directly
-    uuid = SecureRandom.uuid
-    mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
-    Project.stubs(:find_by).with(id: project_id).returns(mock_project)
-
-    result = storage_encrypt_channel_id(storage_id, project_id)
-    assert_equal uuid, result
   end
 
   def test_storage_decrypt_channel_id
     project_id = 789
     storage_id = 456
-    uuid = SecureRandom.uuid
-
-    # uuid-based decryption
-    mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
-    Project.stubs(:find_by).with(uuid: uuid).returns(mock_project)
-
-    storage_id_out, project_id_out = storage_decrypt_channel_id(uuid)
-    assert_equal storage_id, storage_id_out
-    assert_equal project_id, project_id_out
 
     # legacy token decryption
     channel_token = Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{project_id}")).tr('=', '')

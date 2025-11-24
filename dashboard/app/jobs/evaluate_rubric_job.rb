@@ -270,7 +270,7 @@ class EvaluateRubricJob < ApplicationJob
 
     user = User.find(options[:user_id])
     channel_id = get_channel_id(user, script_level)
-    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+    _owner_id, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
 
     # Create a queued record of this work request (if none were given)
     rubric_ai_evaluation_id = options[:rubric_ai_evaluation_id]

@@ -30,7 +30,7 @@ class ChannelToken < ApplicationRecord
   alias_attribute :project_id, :storage_app_id
 
   def channel
-    storage_encrypt_channel_id(storage_id, project_id)
+    Services::ChannelId.channel_id_for(storage_id: storage_id, project_id: project_id)
   end
 
   # @param [Level] level The level associated with the channel token request.
@@ -57,7 +57,7 @@ class ChannelToken < ApplicationRecord
         create!(level: level.host_level, storage_id: user_storage_id, script_id: script_id) do |ct|
           # Get a new channel_id.
           channel = create_channel ip, project, data: data, standalone: false, level: level
-          _, ct.project_id = storage_decrypt_channel_id(channel)
+          _, ct.project_id = Services::ChannelId.storage_and_project_id_from_token(channel)
         end
       end
     end

@@ -28,13 +28,13 @@ class Backpack < ApplicationRecord
       # Create a project for this user's backpack in the app determined by game_id
       project = Projects.new(storage_id_for_user_id(user_id))
       encrypted_id = project.create({hidden: true}, ip: ip, type: 'backpack')
-      _, project_id = storage_decrypt_channel_id(encrypted_id)
+      _, project_id = Services::ChannelId.storage_and_project_id_from_token(encrypted_id)
       backpack = create!(user_id: user_id, game_id: game_id, project_id: project_id)
     end
     backpack
   end
 
   def channel
-    storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id)
+    Services::ChannelId.channel_id_for(storage_id: storage_id_for_user_id(user_id), project_id: project_id)
   end
 end

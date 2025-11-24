@@ -20,7 +20,7 @@ class BackpacksControllerTest < ActionController::TestCase
     refute_nil Backpack.find_by(user_id: @user.id, game_id: @game_id)
     body = JSON.parse(response.body)
     channel = body['channel']
-    storage_id, project_id = storage_decrypt_channel_id(channel)
+    storage_id, project_id = Services::ChannelId.storage_and_project_id_from_token(channel)
     assert storage_id > 0 && project_id > 0
   end
 

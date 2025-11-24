@@ -47,7 +47,7 @@ class Projects
   end
 
   def delete(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
     delete_count = @table.where(id: project_id).update(state: 'deleted', updated_at: DateTime.now)
@@ -59,7 +59,7 @@ class Projects
   end
 
   def restore(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
     update_count = @table.where(id: project_id).update(state: 'active', updated_at: DateTime.now)
@@ -69,7 +69,7 @@ class Projects
   end
 
   def get(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
@@ -91,7 +91,7 @@ class Projects
   end
 
   def update(channel_id, value, ip_address, project_type: nil, locale: 'en')
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
     new_name = value['name']
@@ -123,7 +123,7 @@ class Projects
   end
 
   def publish(channel_id, type, user)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
       project_type: type,
@@ -179,7 +179,7 @@ class Projects
   end
 
   def unpublish(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
       published_at: nil,
@@ -190,7 +190,7 @@ class Projects
 
   # Determine if the current user can view the project
   def get_sharing_disabled(channel_id, current_user_id)
-    owner_storage_id, project_id = storage_decrypt_channel_id(channel_id)
+    owner_storage_id, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     # Sharing of a project is not disabled for the project owner
@@ -212,7 +212,7 @@ class Projects
 
   # Determine if the current user is teacher of project owner.
   def get_is_teacher_of_project_owner(channel_id, current_user_id)
-    owner_storage_id, __ = storage_decrypt_channel_id(channel_id)
+    owner_storage_id, __ = Services::ChannelId.storage_and_project_id_from_token(channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
     teaches_student?(owner_user_id, current_user_id)
   end
@@ -235,7 +235,7 @@ class Projects
   end
 
   def increment_abuse(channel_id, amount, override_frozen = false)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+    _owner, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
@@ -259,7 +259,7 @@ class Projects
   end
 
   def reset_abuse(channel_id)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+    _owner, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
@@ -272,7 +272,7 @@ class Projects
 
   def to_a
     @table.where(storage_id: @storage_id).exclude(state: 'deleted').filter_map do |row|
-      channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])
+      channel_id = Services::ChannelId.channel_id_for(storage_id: row[:storage_id], project_id: row[:id])
       begin
         Projects.merged_row_value(
           row,
@@ -294,7 +294,7 @@ class Projects
       # Malformed channel, or missing level.
     end
 
-    storage_encrypt_channel_id(row[:storage_id], row[:id]) if row
+    Services::ChannelId.channel_id_for(storage_id: row[:storage_id], project_id: row[:id]) if row
   end
 
   # Find the encrypted channel token for most recent project of the given project_type.
@@ -356,11 +356,11 @@ class Projects
   #
   def self.remix_ancestry(channel_id, depth: 1)
     [].tap do |ancestors|
-      _, project_id = storage_decrypt_channel_id(channel_id)
+      _, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
       next_row = Projects.table.where(id: project_id).first
       while next_row&.[](:remix_parent_id)
         next_row = Projects.table.where(id: next_row[:remix_parent_id]).first
-        ancestors.push storage_encrypt_channel_id(next_row[:storage_id], next_row[:id]) if next_row
+        ancestors.push Services::ChannelId.channel_id_for(storage_id: next_row[:storage_id], project_id: next_row[:id]) if next_row
         break if ancestors.size >= depth
       end
     end
@@ -369,7 +369,7 @@ class Projects
   end
 
   def self.get_abuse(channel_id)
-    _, project_id = storage_decrypt_channel_id(channel_id)
+    _, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_id)
     project_info = Projects.table.where(id: project_id).first
     project_info[:abuse_score]
   end

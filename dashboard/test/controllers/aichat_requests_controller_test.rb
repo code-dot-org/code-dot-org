@@ -35,7 +35,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
   end
 
   setup do
-    @controller.stubs(:storage_decrypt_channel_id).returns([123, @project_id])
+    Services::ChannelId.stubs(:storage_and_project_id_from_token).returns([123, @project_id])
     DCDO.stubs(:get).with('block_ai_tutor_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('aichat_request_limit_per_min', anything).returns(AichatRequestsController::DEFAULT_REQUEST_LIMIT_PER_MIN)

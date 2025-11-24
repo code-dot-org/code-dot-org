@@ -157,7 +157,7 @@ class AichatRequestsController < ApplicationController
 
   private def get_project_id(context)
     if context[:channelId]
-      _, project_id = storage_decrypt_channel_id(context[:channelId])
+      _, project_id = Services::ChannelId.storage_and_project_id_from_token(context[:channelId])
       project_id
     end
   end

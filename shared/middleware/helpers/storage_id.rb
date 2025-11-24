@@ -1,4 +1,5 @@
 require 'base64'
+require 'services/channel_id'
 
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
@@ -52,21 +53,16 @@ end
 # encrypted or was encrypted using a different key (e.g. on localhost vs prod).
 def storage_decrypt_channel_id(encrypted)
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
-  if uuid?(encrypted)
-    project = Projects.table.where(uuid: encrypted).first || Project.find_by(uuid: encrypted)
-    raise ArgumentError, "No project found with uuid #{encrypted}" unless project
-    [project[:storage_id], project[:id]]
-  else
-    # pad to a multiple of 4 characters to make a valid base64 string.
-    encrypted += '=' * ((4 - (encrypted.length % 4)) % 4)
-    storage_id, project_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
-    raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-    raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
-    [storage_id, project_id]
-  end
+  # pad to a multiple of 4 characters to make a valid base64 string.
+  encrypted += '=' * ((4 - (encrypted.length % 4)) % 4)
+  storage_id, project_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
+  raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
+  raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
+  [storage_id, project_id]
 end
 
 def valid_encrypted_channel_id(encrypted)
+  return true if uuid?(encrypted)
   begin
     storage_decrypt_channel_id(encrypted)
   rescue ArgumentError, OpenSSL::Cipher::CipherError
@@ -98,12 +94,6 @@ def storage_encrypt_channel_id(storage_id, project_id)
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   project_id = project_id.to_i
   raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
-  project = Projects.table.where(id: project_id).first || Project.find_by(id: project_id)
-
-  # return uuid if it exists
-  return project[:uuid] if project && project[:uuid]
-
-  # otherwise, continue to use the old encryption method
   Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{project_id}")).tr('=', '')
 end
 
@@ -171,9 +161,9 @@ def storage_id_from_cookie
 end
 
 def owns_channel?(encrypted_channel_id)
-  owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+  owner_storage_id, _ = Services::ChannelId.storage_and_project_id_from_token(encrypted_channel_id)
   owner_storage_id == get_storage_id
-rescue ArgumentError, OpenSSL::Cipher::CipherError
+rescue ArgumentError, OpenSSL::Cipher::CipherError, Services::ChannelId::NotFound, ActiveRecord::RecordNotFound
   false
 end
 
@@ -220,6 +210,5 @@ def delete_storage_id_for_user(user_id)
 end
 
 private def uuid?(string)
-  uuid_format = /\A[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\z/i
-  uuid_format.match?(string)
+  Services::ChannelId.uuid?(string)
 end

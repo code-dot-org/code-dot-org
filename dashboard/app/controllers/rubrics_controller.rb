@@ -67,7 +67,7 @@ class RubricsController < ApplicationController
     project_id = nil
     version_id = nil
     if channel_token
-      _owner_id, project_id = storage_decrypt_channel_id(channel_token.channel)
+      _owner_id, project_id = Services::ChannelId.storage_and_project_id_from_token(channel_token.channel)
       source_data = SourceBucket.new.get(channel_token.channel, "main.json")
       if source_data[:status] == 'FOUND'
         version_id = source_data[:version_id]

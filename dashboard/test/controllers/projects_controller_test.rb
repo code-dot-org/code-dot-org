@@ -553,7 +553,7 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in_with_request @project_owner
     Project.stubs(:find_by).returns(@test_project)
     channel_id = '123456'
-    @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
+    Services::ChannelId.stubs(:storage_and_project_id_from_token).returns([123, 456])
     SharedConstants::PROJECT_SUBMISSION_STATUS.each_value do |status|
       @test_project.stubs(:submission_status).returns(status)
       get :submission_status, params: {project_type: 'music', channel_id: channel_id}

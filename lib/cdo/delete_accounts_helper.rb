@@ -70,7 +70,7 @@ class DeleteAccountsHelper
     project_ids = get_project_ids(user)
     channel_count = project_ids.count
     encrypted_channel_ids = project_ids.map do |project_id|
-      storage_encrypt_channel_id user.user_storage_id, project_id
+      Services::ChannelId.channel_id_for(storage_id: user.user_storage_id, project_id: project_id)
     end
     @log.puts "Deleting S3 contents for #{channel_count} channels"
     buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)

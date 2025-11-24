@@ -43,17 +43,11 @@ class Project < ApplicationRecord
   # ActiveRecord::RecordNotFound error if the corresponding project cannot
   # be found.
   def self.find_by_channel_id(channel_id)
-    begin
-      _, project_id = storage_decrypt_channel_id(channel_id)
-    rescue
-      raise ActiveRecord::RecordNotFound.new("Invalid channel_id: #{channel_id}")
-    end
-
-    Project.find(project_id)
+    Services::ChannelId.project_from_channel_id!(channel_id)
   end
 
   def channel_id
-    storage_encrypt_channel_id(storage_id, id)
+    Services::ChannelId.channel_id_for(storage_id: storage_id, project_id: id)
   end
 
   # Returns the user_id of the owner of this project. Returns nil if the project

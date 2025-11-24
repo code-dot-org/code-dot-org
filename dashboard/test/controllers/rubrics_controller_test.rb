@@ -47,7 +47,7 @@ class RubricsControllerTest < ActionController::TestCase
     # Don't actually talk to S3 when running SourceBucket.new
     AWS::S3.stubs :create_client
     stub_project_source_data(@channel_id)
-    _, @project_id = storage_decrypt_channel_id(@channel_id)
+    _, @project_id = Services::ChannelId.storage_and_project_id_from_token(@channel_id)
     @version_id = "fake-version-id"
   end
 

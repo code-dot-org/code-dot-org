@@ -39,7 +39,7 @@ class FeaturedProject < ApplicationRecord
   # @return [Boolean] whether the project associated with the given
   # encrypted_channel_id is currently featured
   def self.featured_channel_id?(encrypted_channel_id)
-    _, project_id = storage_decrypt_channel_id encrypted_channel_id
+    _, project_id = Services::ChannelId.storage_and_project_id_from_token encrypted_channel_id
     find_by(project_id: project_id)&.active?
   rescue ArgumentError
     false
