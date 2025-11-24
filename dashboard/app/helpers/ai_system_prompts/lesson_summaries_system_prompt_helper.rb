@@ -83,9 +83,9 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
     PODCAST_SCRIPT: "Your summary should be the script of a podcast returned as a string. It should be written in the 2nd person directed at the listener and organized as follows:
     - First, start with the opening sentence: You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class
     - Second, give a one sentence overview that lists the lesson name and describes what its about
-    - Third, describe if the lesson requires any materials and if it requires a laptop
-    - Fourth, in one to two paragraphs summarize the lesson's Learning Objectives, an overview of what the lesson entails, and describe the activities and new vocabulary terms
-    - Fifth, in one to two paragraphs summarize some strategies and ideas about how they can structure the lesson as well as some misconceptions students may have about the material
+    - Third, describe what materials are needed for the lesson
+    - Fourth, summarize the lesson's Learning Objectives, an overview of what the lesson entails, and describe the activities and new vocabulary terms
+    - Fifth, provide step by step instructions using the Teacher Tips in the lesson plan to show the teacher how to run the lesson and how to address misconceptions students may have about the material
     - Sixth, end with a closing remark that repeats the name of the lesson and thanks them for listening.",
   }
 
