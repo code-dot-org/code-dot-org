@@ -13,7 +13,7 @@
       "aiCodeGenerateExtraPrompt": "Always nest play blocks inside play together. Use only two to three play togethers and do not use repeat.",
       "aiCodeGenerateAdlib": {
         "id": "layers",
-        "template": "Please code a music remix that layers {layer1} and {layer2} together.",
+        "template": "Code a music mix that layers {layer1} and {layer2} together.",
         "options": {
           "layer1": [
             {
@@ -52,7 +52,7 @@
             }
           ]
         },
-        "variantCount": 3
+        "variantCount": 10
       },
       "toolbox": {
         "blocks": {
@@ -82,11 +82,11 @@
       "validationEnabled": false
     },
     "name_suffix": "_4",
-    "long_instructions": "###AI can help layer sounds together.\r\nComplete the prompt below, then generate code",
+    "long_instructions": "### Use AI to code a music mix\r\nModify the prompt, then press Generate code.",
     "project_template_level_name": "HoAI_pilot_5_template1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-02T22:53:46.776+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_gen_tog\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_gen_tog\"},{\"changed_at\":\"2025-11-02 22:53:49 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-02T22:53:46.776+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_gen_tog\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_gen_tog\"},{\"changed_at\":\"2025-11-02 22:53:49 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 17:28:28 +0000\",\"changed\":[\"level_data\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 17:31:05 +0000\",\"changed\":[\"level_data\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 17:36:45 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 17:36:58 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 17:37:45 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 19:44:40 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 20:13:55 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 20:41:37 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-03 20:44:11 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

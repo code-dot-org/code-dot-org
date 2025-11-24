@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-25 19:54:05 UTC",
+    "serialized_at": "2025-11-06 18:13:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1828,7 +1828,7 @@
       "key": "924f9051-a26b-4102-8272-c9fc7b90754c",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 on Code Studio to complete Levels 1 through 3 of the Prompting Challenges activity. For each level, students will choose one of three options based on a real-world career path:\n- **Level 1:** Students provide a basic, unstructured prompt for their chosen career path.\n- **Level 2:** Students add one example to guide the AI's response.\n- **Level 3:** Students refine the prompt with multiple details and structure to improve accuracy.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair students up.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 on Code Studio to complete Levels 1 through 3 of the Prompting Challenges activity. For each level, students will choose one of three options based on a real-world career path:\n- **Level 1:** Students provide a basic, unstructured prompt for their chosen career path.\n- **Level 2:** Students add one example to guide the AI's response.\n- **Level 3:** Students refine the prompt with multiple details and structure to improve accuracy.",
         "progression_name": "Prompting Challenges"
       },
       "seeding_key": {
@@ -1840,7 +1840,7 @@
       "key": "53c5611d-d4d0-4588-8b20-ec5d72f1c225",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are completing the Prompting Challenges section of their Unit Guide after each level, noting how the AI's responses changed and what role context played in improving them. Listen for how they describe the differences between each AI response as they add more context. Encourage students to be specific in their reflections. If students are unsure what to write, ask:\n- What changed in the AI’s response when you gave an example?\n- Did the response get more accurate, creative, or specific? How do you know?\n- What kind of details made the biggest difference?",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are working collaboratively with their partners and completing the Prompting Challenges section of their Unit Guide after each level, noting how the AI's responses changed and what role context played in improving them.  Listen for how they describe the differences between each AI response as they add more context. Encourage students to be specific in their reflections. If students are unsure what to write, ask:\n- What changed in the AI’s response when you gave an example?\n- Did the response get more accurate, creative, or specific? How do you know?\n- What kind of details made the biggest difference?",
         "tips": [
           {
             "type": "teachingTip",
@@ -1854,6 +1854,23 @@
       },
       "seeding_key": {
         "activity_section.key": "53c5611d-d4d0-4588-8b20-ec5d72f1c225",
+        "lesson_activity.key": "e625e23d-48a4-4be4-bd57-7724af033898"
+      }
+    },
+    {
+      "key": "cbfd2868-e4a6-438e-88e3-1533fbc16d6f",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What’s a creative use of this prompting technique? \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share creative ways one-shot and multi-shot prompting could be used, giving a quick snapshot of how students envision AI supporting creativity or problem-solving.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep it brief with popcorn-style sharing (3–4 ideas max) and note emerging themes to revisit later when discussing real-world or ethical uses of AI."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cbfd2868-e4a6-438e-88e3-1533fbc16d6f",
         "lesson_activity.key": "e625e23d-48a4-4be4-bd57-7724af033898"
       }
     },
@@ -2861,6 +2878,17 @@
       }
     },
     {
+      "key": "00a27ee1-53e6-4011-a0f2-7160441a35ad",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Besides the scenarios we just looked at, where else could biased AI cause harm?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to identify real-world areas where biased AI could cause harm. Use this discussion to gauge students’ awareness of AI’s social impact beyond the examples discussed. If students are struggling to come up with examples, you can point to a few example applications like: housing, medicine, or policing."
+      },
+      "seeding_key": {
+        "activity_section.key": "00a27ee1-53e6-4011-a0f2-7160441a35ad",
+        "lesson_activity.key": "cb032d60-28ed-432e-8291-3f6942cfb21a"
+      }
+    },
+    {
       "key": "3955e54d-3ff3-43f1-aaa3-43905404bf79",
       "position": 1,
       "properties": {
@@ -3013,8 +3041,19 @@
       }
     },
     {
-      "key": "7ff8ec9f-52af-4928-9156-72e9b81df368",
+      "key": "aa9920ac-a265-47b8-a520-072c5a486cab",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly explain that data centers, which are huge facilities full of computers, power AI tools. These computers use significant electricity, similar to the energy consumption of entire countries. As AI use expands, so does that demand.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Should this be part of how we judge AI?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that generative AI’s environmental impact through energy use and emissions—is an important factor to consider when evaluating AI systems and their real-world effects. Listen for students who:\n- Acknowledge trade-offs between AI’s benefits and its environmental costs\n- Recognize that small individual use scales up to large global impact\n- Connect environmental impact to fairness or equity issues\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa9920ac-a265-47b8-a520-072c5a486cab",
+        "lesson_activity.key": "bc82e43d-9681-4081-9503-4c7a9c0fe77d"
+      }
+    },
+    {
+      "key": "7ff8ec9f-52af-4928-9156-72e9b81df368",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Students get practice with evaluating AI responses that contain hallucinations.",
         "duration": "15",
@@ -3027,7 +3066,7 @@
     },
     {
       "key": "0d815b71-2c3c-447a-8457-e0a96840f9b6",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "Now that we've seen the real-world impact of AI hallucinations, let's look at three strategies we can use to minimize misinformation when working with AI.",
         "remarks": true
@@ -3039,7 +3078,7 @@
     },
     {
       "key": "244c976d-978e-4943-9ea5-0160eb9c4dcb",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how it helps prevent AI misinformation. Use real-world examples where possible, such as AI misquoting sources or giving outdated information. Remind students that AI doesn't fact-check—it predicts likely responses based on past data.",
         "tips": [
@@ -3056,7 +3095,7 @@
     },
     {
       "key": "96278958-82f1-4c44-87b0-8aba9b252340",
-      "position": 7,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -3066,7 +3105,7 @@
     },
     {
       "key": "7fb6cf35-61f3-4c8f-9d02-19bb7ad75809",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 2.\n- **Level #1:** Students review how to reduce AI hallucinations.\n- **Level #2:** Students complete a formative assessment.\n",
         "progression_name": "Reduce AI Hallucinations"
@@ -3078,7 +3117,7 @@
     },
     {
       "key": "9e7e9310-054b-42fa-99ea-61889485c972",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Check Your Understanding"
       },
@@ -3089,7 +3128,7 @@
     },
     {
       "key": "706076a1-4ccb-4a46-a7c5-618afc68eb83",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe students as they complete the assessment. Look for signs that they understand AI hallucinations and how to counter them. Note if students struggle to connect fact-checking techniques to real-world examples.",
         "tips": [
@@ -3400,8 +3439,19 @@
       }
     },
     {
-      "key": "d9c8fbdf-343b-4c52-9e31-2ce1bb5e0c50",
+      "key": "b4189bb6-bbf9-453d-8936-dc711aacd7e3",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to list out the specific tasks their role involves. Then, have them sort each task into Best for AI, Best for Humans, or Best for Collaboration, discussing their reasoning with a partner or small group."
+      },
+      "seeding_key": {
+        "activity_section.key": "b4189bb6-bbf9-453d-8936-dc711aacd7e3",
+        "lesson_activity.key": "3739351c-0e95-409f-965b-074983987905"
+      }
+    },
+    {
+      "key": "d9c8fbdf-343b-4c52-9e31-2ce1bb5e0c50",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Give students hands-on experience using AI to co-create part of a product launch. Students will work through a sequence of AI-powered levels in order to build and refine their content.",
         "duration": "20",
@@ -3414,7 +3464,7 @@
     },
     {
       "key": "0e3b3662-2d95-44ca-8ae3-379d26bfb16d",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "You've seen how creators break tasks into smaller steps. Now you'll use AI to help complete your part of the product launch, just like a real creative team might. Move through the four stages—research, brainstorming, content creation, and refinement.",
         "remarks": true
@@ -3426,7 +3476,7 @@
     },
     {
       "key": "7ad8a0c2-48e8-4eff-b97e-c8d73fede2bf",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 9, Level 1. Students should complete each choice level based on the part of the product they are launching.",
         "progression_name": "Collaborate on a Product Launch"
@@ -3438,7 +3488,7 @@
     },
     {
       "key": "89ce702a-0284-4f6c-8150-3836d98e542a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are progressing through each stage. Listen for how they talk about AI responses and how they’re improving or combining ideas. Encourage specificity in their reflection and remind them that they are the creative lead and that the AI is here to support, not replace, their ideas."
       },
@@ -3449,7 +3499,7 @@
     },
     {
       "key": "dbef6084-03bf-48cf-b80b-e8c5f9bac4d1",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Now that you've completed your part of the campaign with AI, let's reflect on the collaboration. Think about what you gained from using AI and what could have been lost if you relied only on it. These questions help us understand AI's strengths and limitations in creative work.",
         "remarks": true
@@ -3461,7 +3511,7 @@
     },
     {
       "key": "4ae51b6a-c742-4013-b014-77daf72a868d",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 9, Level 6 to complete the formative assessment.",
         "progression_name": "Check Your Understanding",
@@ -4900,6 +4950,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-preassessment_2025-pilot_v2-2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -4922,6 +4975,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level1_v2-2025"
+        ],
         "progression": "AI Predictions"
       },
       "bonus": false,
@@ -4944,6 +5000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level2_v2-2025"
+        ],
         "progression": "Prompting AI"
       },
       "bonus": false,
@@ -4966,6 +5025,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level3_v2-2025"
+        ],
         "progression": "Prompting AI"
       },
       "bonus": false,
@@ -4988,6 +5050,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson1-level4_v2-2025"
+        ],
         "progression": "Prompting AI"
       },
       "bonus": false,
@@ -5010,6 +5075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson1-level6_v2-2025"
+        ],
         "progression": "Prompting Practice"
       },
       "bonus": false,
@@ -5032,6 +5100,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level6_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5054,6 +5125,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level1_v2-2025"
+        ],
         "progression": "AI's Image Observation Skills"
       },
       "bonus": false,
@@ -5076,6 +5150,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson2-level2_v2-2025"
+        ],
         "progression": "AI's Image Observation Skills"
       },
       "bonus": false,
@@ -5098,6 +5175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson2-level3_v2-2025"
+        ],
         "progression": "Scenario-Based Prompting"
       },
       "bonus": false,
@@ -5120,6 +5200,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level4_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5142,6 +5225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson2-level4_v2-2025"
+        ],
         "progression": "Practice with a Multimodal Model"
       },
       "bonus": false,
@@ -5164,6 +5250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level1_v2-2025"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -5186,6 +5275,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level2_v2-2025"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -5208,6 +5300,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level3_v2-2025"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -5230,6 +5325,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level4_2024-pilot_v2-2025"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -5252,6 +5350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level1_v2-2025"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -5274,6 +5375,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level2_v2-2025"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -5296,6 +5400,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level3_v2-2025"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -5318,6 +5425,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level4_2024-pilot_v2-2025"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -5340,6 +5450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level4_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5362,6 +5475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level1_v2-2025"
+        ],
         "progression": "Two Truths and a Lie"
       },
       "bonus": false,
@@ -5384,6 +5500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level2_v2-2025"
+        ],
         "progression": "Examining AI Contradictions Activity Guide"
       },
       "bonus": false,
@@ -5406,6 +5525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level3_v2-2025"
+        ],
         "progression": "AI Contradictions in Practice"
       },
       "bonus": false,
@@ -5428,6 +5550,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level4_v2-2025"
+        ],
         "progression": "AI Contradictions in Practice"
       },
       "bonus": false,
@@ -5450,6 +5575,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level7_v2-2025"
+        ],
         "progression": "Try Your Own"
       },
       "bonus": false,
@@ -5472,6 +5600,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level8_2024-pilot_v2-2025"
+        ],
         "progression": "Try Your Own"
       },
       "bonus": false,
@@ -5494,6 +5625,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level8_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5516,6 +5650,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level9_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5538,6 +5675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level1_v2-2025"
+        ],
         "progression": "Career Clothing"
       },
       "bonus": false,
@@ -5560,6 +5700,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level2_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5582,6 +5725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level3_v2-2025"
+        ],
         "progression": "Decision-Making Roles"
       },
       "bonus": false,
@@ -5604,6 +5750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level4_v2-2025"
+        ],
         "progression": "AI Audit Challenge"
       },
       "bonus": false,
@@ -5626,6 +5775,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2024-pilot_v2-2025"
+        ],
         "progression": "AI Audit Challenge"
       },
       "bonus": false,
@@ -5648,6 +5800,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson7-level1_v2-2025"
+        ],
         "progression": "Reduce AI Hallucinations"
       },
       "bonus": false,
@@ -5670,6 +5825,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson7-level2_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5692,6 +5850,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level1_v2-2025"
+        ],
         "progression": "Adding a Task"
       },
       "bonus": false,
@@ -5714,6 +5875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level2_v2-2025"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5736,6 +5900,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level3_v2-2025"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5758,6 +5925,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level4_v2-2025"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5780,6 +5950,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level5_v2-2025"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5802,6 +5975,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level6_2024-pilot_v2-2025"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5824,6 +6000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level6_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5846,6 +6025,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level7_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5868,6 +6050,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level8_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5890,6 +6075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1a_v2-2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -5912,6 +6100,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1b_v2-2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -5934,6 +6125,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1c_v2-2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -5956,6 +6150,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1d_v2-2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -5978,6 +6175,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level2_2024-pilot_v2-2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -6000,6 +6200,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level2_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6022,6 +6225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level1_v2-2025"
+        ],
         "progression": "AI in Music Lab"
       },
       "bonus": false,
@@ -6044,6 +6250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level2_v2-2025"
+        ],
         "progression": "Students as the Pilot"
       },
       "bonus": false,
@@ -6066,6 +6275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level3_v2-2025"
+        ],
         "progression": "Students as the Co-Pilot"
       },
       "bonus": false,
@@ -6088,6 +6300,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level4_2024-pilot_v2-2025"
+        ],
         "progression": "Students as the Co-Pilot"
       },
       "bonus": false,
@@ -6110,6 +6325,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level4_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6132,6 +6350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson11-level0-launch_v2-2025"
+        ],
         "progression": "Ownership, Ethics, and Creativity"
       },
       "bonus": false,
@@ -6154,6 +6375,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson11-level1_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6176,6 +6400,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level1_v2-2025"
+        ],
         "progression": "Articles"
       },
       "bonus": false,
@@ -6198,6 +6425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level2_v2-2025"
+        ],
         "progression": "AI in the Community"
       },
       "bonus": false,
@@ -6220,6 +6450,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level3_v2-2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6242,6 +6475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level4_v2-2025"
+        ],
         "progression": "Optional: Collaborate with AI"
       },
       "bonus": false,
@@ -6264,6 +6500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson13-level1_v2-2025"
+        ],
         "progression": "AI Prediction"
       },
       "bonus": false,
@@ -6286,6 +6525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson13-level2_v2-2025"
+        ],
         "progression": "Final Product"
       },
       "bonus": false,
@@ -6308,6 +6550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_problem_solving_v2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -6330,6 +6575,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-postassessment-pilot_v2-2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -6352,6 +6600,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-problemsolving_v2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,

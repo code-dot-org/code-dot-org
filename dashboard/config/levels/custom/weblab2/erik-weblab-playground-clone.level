@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-05T19:03:49.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##10.3\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "explanation.md",
+          "language": "md",
+          "contents": "For loop\n\nSTART workout\n  SET pushups TO 0\n  SET goal TO 10\n\n  WHILE pushups IS LESS THAN goal\n    DO a push up\n    INCREASE pushups BY 1\n  END WHILE\n\nFINISH workout\n\n\nWhile loop\n\nSTART game\n  SET makeBasket TO false\n\n  WHILE makeBasket IS FALSE\n    RUN shootBasket function\n  END WHILE\n\nFINISH game",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// For Loop\n// TODO Initialize the 'pushups' counter to its start value (0)\n// TODO Set the condition for when the loop should stop (e.g., when 'pushups' is less than the goal of 10)\n// TODO Define the step for how 'pushups' should change each time the loop runs (increase by 1) for (/* TODO initialization */; /* TODO condition */; /* TODO increment */) {\n// TODO Write the code to 'Do a push up'}\n\n\n// While Loop\n// TODO First, declare and initialize the 'makeBasket' variable, setting it to its start value (false).\n// This happens *before* the while loop starts.\n\n// TODO Next, define the condition for the 'while' loop.\n// The loop should continue *while* a basket has NOT been made.while (/* TODO condition for the loop to continue */) {\n  // TODO Inside the loop, write the code to 'run shootBasket function'.\n  // This is the action that repeats as long as the condition is true.\n\n  // TODO (Important!) Think about how the 'makeBasket' variable might change *inside* this loop.\n  // If 'makeBasket' never changes, the loop might run forever!\n  // The flowchart implies that eventually 'makeBasket' will become true to stop the game.}\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-05T19:03:49.835+00:00\",\"changed\":[\"cloned from \\\"erik-weblab-playground\\\"\"],\"cloned_from\":\"erik-weblab-playground\"},{\"changed_at\":\"2025-11-05 19:03:57 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 19:07:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 19:08:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 19:10:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-05 19:11:27 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 23:48:23 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

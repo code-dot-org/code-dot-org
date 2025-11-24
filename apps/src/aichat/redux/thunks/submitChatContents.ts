@@ -51,6 +51,7 @@ export const submitChatContents = createAsyncThunk(
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
       responseCallback?: (response: string) => string;
+      logLevelActivity?: () => void;
     },
     thunkAPI
   ) => {
@@ -66,6 +67,7 @@ export const submitChatContents = createAsyncThunk(
       analyticsProperties,
       userAddedSelectionContext,
       responseCallback,
+      logLevelActivity,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -106,66 +108,81 @@ export const submitChatContents = createAsyncThunk(
       timestamp: Date.now(),
     };
     dispatch(setChatMessagePending(newUserMessage));
+    if (logLevelActivity) {
+      logLevelActivity();
+    }
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
 
     let messages: CompletedChatMessage[] = [];
+    const projectFileCount =
+      newUserMessage.userAddedSelectionContext?.length || 0;
+    const projectFileCountHtml =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.html')
+      ).length || 0;
+    const projectFileCountJs =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.js')
+      ).length || 0;
+    const projectFileCountCss =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.css')
+      ).length || 0;
+    const fileCount = newUserMessage.assets?.length || 0;
+    const fileCountPdf =
+      newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
+        .length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
+
+    const eventData = {
+      fileCount,
+      fileCountImage,
+      fileCountPdf,
+      projectFileCount,
+      projectFileCountHtml,
+      projectFileCountJs,
+      projectFileCountCss,
+      clientType,
+      ...analyticsProperties,
+    };
+
     try {
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .incrementCounter('Aichat.ChatCompletionRequestInitiated');
+
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
+      );
+
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
         modelParameters,
         aichatContext
       );
-      const projectFileCount =
-        newUserMessage.userAddedSelectionContext?.length || 0;
-      const projectFileCountHtml =
-        newUserMessage.userAddedSelectionContext?.filter(file =>
-          file.filename.endsWith('.html')
-        ).length || 0;
-      const projectFileCountJs =
-        newUserMessage.userAddedSelectionContext?.filter(file =>
-          file.filename.endsWith('.js')
-        ).length || 0;
-      const projectFileCountCss =
-        newUserMessage.userAddedSelectionContext?.filter(file =>
-          file.filename.endsWith('.css')
-        ).length || 0;
-      const fileCount = newUserMessage.assets?.length || 0;
-      const fileCountPdf =
-        newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
-          .length || 0;
-      const fileCountImage = fileCount - fileCountPdf;
+      // In milliseconds
+      const responseTime = Date.now() - startTime;
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
-          fileCount,
-          fileCountImage,
-          fileCountPdf,
-          projectFileCount,
-          projectFileCountHtml,
-          projectFileCountJs,
-          projectFileCountCss,
-          clientType,
-          ...analyticsProperties,
+          ...eventData,
+          responseTime,
         })
       );
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .reportLoadTime('AichatModelResponseTime', responseTime, [
+          {
+            name: 'ModelId',
+            value: modelParameters.selectedModelId,
+          },
+        ]);
     } catch (error) {
       await handleChatCompletionError(error as Error, newUserMessage, dispatch);
       return;
     }
-
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
-        {
-          name: 'ModelId',
-          value: modelParameters.selectedModelId,
-        },
-      ]);
 
     thunkAPI.dispatch(clearChatMessagePending());
     // Send a report that the user has started the aichat level after successfully sending

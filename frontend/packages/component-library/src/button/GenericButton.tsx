@@ -1,5 +1,12 @@
 import classNames from 'classnames';
-import React, {forwardRef, memo, useMemo, HTMLAttributes} from 'react';
+import {
+  forwardRef,
+  memo,
+  useMemo,
+  HTMLAttributes,
+  Ref,
+  MouseEvent,
+} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -44,9 +51,7 @@ export interface CoreButtonProps
   ariaLabel?: string;
   /** OnClick handler for the button */
   onClick?: (
-    event:
-      | React.MouseEvent<HTMLButtonElement>
-      | React.MouseEvent<HTMLAnchorElement>,
+    event: MouseEvent<HTMLButtonElement> | MouseEvent<HTMLAnchorElement>,
   ) => void;
   /** Size of button */
   size?: ComponentSizeXSToL;
@@ -83,10 +88,10 @@ export interface ButtonSpecificProps {
    *  Button onClick */
   onClick?: (
     event:
-      | React.MouseEvent<HTMLButtonElement>
+      | MouseEvent<HTMLButtonElement>
       // This is a workaround to fix TS error not allowing us to use Tag and tagSpecificProps logic.
       //   onClick Should only be applied to <button> elements, but not to <a> elements.
-      | React.MouseEvent<HTMLAnchorElement>,
+      | MouseEvent<HTMLAnchorElement>,
   ) => void;
   /** (\<button> specific prop)
    *  Button value */
@@ -283,7 +288,7 @@ const GenericButton = forwardRef<
     return (
       <ButtonTag
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        ref={ref as React.Ref<any>} // Cannot be more specific without refactoring entire file
+        ref={ref as Ref<any>} // Cannot be more specific without refactoring entire file
         className={classNames(
           moduleStyles.button,
           moduleStyles[`button-${type}`],

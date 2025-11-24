@@ -1,3 +1,5 @@
+import * as GoogleBlockly from 'blockly/core';
+
 import {BlocklyLevelProperties, ProjectSources} from '../lab2/types';
 
 export type SongData = {
@@ -29,6 +31,8 @@ export type SongMetadata = {
 
 export interface DanceProjectSources extends ProjectSources {
   selectedSong?: string;
+  generatedDancer?: GeneratedDancerMetadata;
+  toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
 }
 
 export interface DanceLevelProperties extends BlocklyLevelProperties {
@@ -40,4 +44,14 @@ export interface DanceLevelProperties extends BlocklyLevelProperties {
   aiDancerGenerateAdlib?: string;
   aiDancerGenerateText?: boolean;
   aiCodePreview?: boolean;
+}
+
+export interface GeneratedDancerMetadata {
+  adlibOption: string;
+  path?: string;
+  choices: string[];
+  choicesExtra?: string[];
+  variant: number | string;
+  bodyVariant?: number; // Deprecated in favor of extraVariant
+  extraVariant?: number;
 }

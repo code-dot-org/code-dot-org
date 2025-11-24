@@ -28,7 +28,9 @@ module User::AiAccessible
   end
 
   def can_enable_ai_tutor?
-    !ai_tutor_feature_globally_disabled? && in_ai_tutor_pilot?
+    return false
+    # todo-aitutor: re-enable when the redesigned permissions page is functional
+    # !ai_tutor_feature_globally_disabled? && in_ai_tutor_pilot?
   end
 
   def can_use_ai_iteration_tools?

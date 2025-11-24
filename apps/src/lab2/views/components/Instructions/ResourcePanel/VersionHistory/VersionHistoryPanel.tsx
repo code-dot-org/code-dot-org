@@ -12,6 +12,7 @@ import {
   setProjectSource,
   setViewingOldVersion,
   setRestoredOldVersion,
+  setHasEdited,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   loadVersion,
@@ -80,6 +81,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const projectSources = useAppSelector(
     state => state.lab2Project.projectSources
   );
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -220,12 +222,12 @@ const VersionHistoryPanel: React.FunctionComponent<
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (selectedVersion === INITIAL_VERSION_ID) {
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_RESTORED, appName, {
+      sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, {
         isInitialVersion: 'true',
       });
       confirmStartOver();
     } else if (projectManager && selectedVersion) {
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_RESTORED, appName, {
+      sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, {
         isInitialVersion: 'false',
       });
       setVersionLoading(true);
@@ -248,7 +250,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     }
   }, [
     selectedVersion,
-    appName,
     confirmStartOver,
     dispatch,
     successfulProjectResetCleanUp,
@@ -281,7 +282,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
       const isLatest = isLatestVersion(e.target.value);
       if (!isLatest) {
-        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VERSION_VIEWED, appName, {
+        sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_VIEWED, {
           isInitialVersion: viewingInitialVersion.toString(),
         });
       }
@@ -293,7 +294,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         dispatch(loadVersion({versionId: e.target.value, startSources}));
       }
     },
-    [appName, dispatch, isLatestVersion, setSelectedVersion, startSources]
+    [dispatch, isLatestVersion, setSelectedVersion, startSources]
   );
 
   // Function called when clicking 'cancel'. This will reset the project to the current version
@@ -312,6 +313,14 @@ const VersionHistoryPanel: React.FunctionComponent<
     selectedVersion,
     setSelectedVersion,
   ]);
+
+  const handleSaveVersionSuccess = useCallback(() => {
+    sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_COMMITTED, {
+      versionId: selectedVersion,
+    });
+    dispatch(setHasEdited(false));
+    successfulProjectResetCleanUp(true);
+  }, [dispatch, selectedVersion, successfulProjectResetCleanUp]);
 
   const showList = listLoaded && !listLoading && !listLoadError;
 
@@ -349,7 +358,20 @@ const VersionHistoryPanel: React.FunctionComponent<
                 isSelected={selectedVersion === version.versionId}
                 onChange={onVersionChange}
                 disabled={disabled}
-              />
+              >
+                {version.isLatest && hasEdited && !viewAsUserId && (
+                  <SaveVersionPanel
+                    projectSources={projectSources}
+                    onSuccess={handleSaveVersionSuccess}
+                    disabled={disabled || versionLoading}
+                    buttonLabel={
+                      version.comment
+                        ? 'Save new version' // Hardcoding this so it can be translated by Localize
+                        : lab2I18n.saveCurrentVersion()
+                    }
+                  />
+                )}
+              </VersionHistoryRow>
             ))}
             <VersionHistoryRow
               versionId={INITIAL_VERSION_ID}
@@ -408,14 +430,6 @@ const VersionHistoryPanel: React.FunctionComponent<
             )}
           </div>
         </div>
-      )}
-      {isLatestVersion(selectedVersion) && (
-        <SaveVersionPanel
-          projectSources={projectSources}
-          onSuccess={() => successfulProjectResetCleanUp(true)}
-          versionLoading={versionLoading}
-          disabled={disabled}
-        />
       )}
     </div>
   );

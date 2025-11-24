@@ -1,57 +1,56 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
 .rowContainer {
   display: flex;
-  padding: var(--padding-p-xxs, 8px) 12px;
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
   border-radius: var(--border-radius-br-s, 4px);
   border: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-secondary);
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-block: 0 0.5rem;
+  margin-inline: 0.625rem;
   position: relative;
   z-index: 1;
+
+  &:has(.commitDescription) {
+    margin-block: 0.625rem;
+  }
 }
 
 .row {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.commentRow {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-block: 0.5rem;
 }
 
 .initialVersionRow {
-  margin-top: 16px;
-  margin-bottom: 0;
+  margin-block: 0.625rem 0;
 }
 
 .currentVersionRow {
-  margin-top: 8px;
-  margin-bottom: 16px;
+  margin-block: 0.625rem 1rem;
 }
 
 .versionContent {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0;
   flex: 1;
 }
 
 .versionHeader {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem 0.625rem;
 }
 
 .commitDescription {
-  margin-left: 34px; // Align with radio button label
-  margin-bottom: 0; // Remove extra space below comment
   color: var(--text-neutral-secondary);
-  font-size: 14px;
+  border-top: variables.$default-border;
+  padding: 0.5rem 0.75rem;
 }
 
 .autoSavedIcon {

@@ -84,7 +84,9 @@ const CopyableCodeBlock: React.FunctionComponent<CopyableCodeBlockProps> = ({
         />
       </header>
       <div className={moduleStyles.codeContentBody}>
-        <pre ref={preRef} className={moduleStyles.codeContent} {...props} />
+        <div className={moduleStyles.codeContent}>
+          <pre ref={preRef} {...props} />
+        </div>
         <div
           className={`${moduleStyles.codeContentOverlay}${
             visible ? ' ' + moduleStyles.showOverlay : ''

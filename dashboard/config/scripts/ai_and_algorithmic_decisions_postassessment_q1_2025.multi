@@ -1,0 +1,21 @@
+name 'ai-and-algorithmic-decisions-postassessment-q1_2025'
+
+right 'Option A, because it responds immediately to the user\'s input and reduces extra steps.'
+wrong 'Option B, because it gives the app more time to load data before showing results.'
+wrong 'Option A, because it makes the website\'s design more colorful and animated.'
+wrong 'Option B, because fewer buttons usually mean better design.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN
+
+markdown <<MARKDOWN
+A travel website wants users to easily compare flight prices. The designer is deciding between these two options:
+
+- **Option A:** Prices update automatically when the user changes travel dates.
+- **Option B:** Users must press "Check Prices" every time they change a date.
+
+Which option better supports user-centered interactivity, and why?
+MARKDOWN

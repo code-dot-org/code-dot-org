@@ -191,7 +191,7 @@ gem 'haml', '~> 5.2.0'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
-gem 'nokogiri', '>= 1.10.0'
+gem 'nokogiri', '~> 1.18.9'
 
 gem 'highline', '~> 3.1.0'
 
@@ -379,7 +379,8 @@ gem 'rack-cors', '~> 2.0.1'
 
 # pin http to 5.0 or greater so that statsig does not pull in an older version.
 # older versions depend on http-parser which breaks some developer builds.
-gem 'http', '~> 5.0'
+# Speculatively target 5.3 specifically to diagnose some S3 networking errors
+gem 'http', '~> 5.3.1'
 
 gem 'statsig', '~> 2.5.5'
 
