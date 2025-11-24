@@ -142,6 +142,9 @@
   "artificial-intelligence-foundations-semester2": {
     "display_name": "AIF Semester 2 2025 Pilot"
   },
+  "artificial-intelligence-foundations-semester2-incubator": {
+    "display_name": "AIF Semester 2 2025 Pilot (Incubator)"
+  },
   "artificial-intelligence-foundations-v2": {
     "display_name": "artificial-intelligence-foundations-v2"
   },
@@ -1356,6 +1359,9 @@
     "display_name": "Idaho Digital Literacy",
     "description": "Learn how to code, think critically about AI, and use technology to solve real-world problems."
   },
+  "indiasandox": {
+    "display_name": "indiasandox"
+  },
   "infinity": {
     "display_name": "Disney Infinity Play Lab",
     "description": "Join Disney Infinity characters like Elsa and Baymax for a fun introduction to computer science as you use basic block code to create a game."
@@ -1484,7 +1490,7 @@
     "description": "Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat."
   },
   "mix-move-ai-educators": {
-    "display_name": "mix-move-ai-educators"
+    "display_name": "Mix & Move with AI - Educator's Experience"
   },
   "ml-playground": {
     "display_name": "ml-playground"
@@ -1754,6 +1760,9 @@
   },
   "programming-fundamentals-aitutor": {
     "display_name": "[PILOT] Programming Fundamentals (AI Tutor)"
+  },
+  "programming-with-ai-pilot": {
+    "display_name": "AIF Programming with AI 2025 Pilot"
   },
   "programming-with-music-lab": {
     "display_name": "Programming with Music Lab",
