@@ -15,8 +15,8 @@
         "elements": [
           {
             "type": "text",
-            "version": 307,
-            "versionNonce": 190497108,
+            "version": 308,
+            "versionNonce": 476831581,
             "isDeleted": false,
             "id": "St6AHxa0QzsXCXZPuRv4Y",
             "fillStyle": "solid",
@@ -40,7 +40,7 @@
             "boundElements": [
 
             ],
-            "updated": 1763667236618,
+            "updated": 1763740731309,
             "link": null,
             "locked": false,
             "fontSize": 63.42146091864561,
@@ -129,7 +129,7 @@
             "containerId": "D40pQOF9ZlpZSnieZKJ3-",
             "originalText": "Start telling riddle",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 19
           },
           {
             "type": "rectangle",
@@ -215,7 +215,7 @@
             "containerId": "QFHPqaswsi5ue2jvC_6UG",
             "originalText": "check if answer == egg\nset gameRunning = true",
             "lineHeight": 1.2,
-            "baseline": 44
+            "baseline": 43
           },
           {
             "type": "arrow",
@@ -312,7 +312,7 @@
             "containerId": "6wcS3Ah_nkFoL5E0hzkG_",
             "originalText": "No",
             "lineHeight": 1.25,
-            "baseline": 25
+            "baseline": 27
           },
           {
             "type": "arrow",
@@ -460,8 +460,8 @@
           },
           {
             "type": "text",
-            "version": 1064,
-            "versionNonce": 776957268,
+            "version": 1065,
+            "versionNonce": 407507187,
             "isDeleted": false,
             "id": "Pev0KWPFrjLsoBNU3jsNx",
             "fillStyle": "solid",
@@ -485,7 +485,7 @@
             "boundElements": [
 
             ],
-            "updated": 1763667594271,
+            "updated": 1763740731310,
             "link": null,
             "locked": false,
             "fontSize": 23.72486554546847,
@@ -582,7 +582,7 @@
             "containerId": "krOmS-PWoa7x267DLYjL3",
             "originalText": "Set gameRunning = true",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 19
           },
           {
             "type": "arrow",
@@ -714,7 +714,7 @@
             "containerId": "gvSW2mAEAGJPsEdUm3wZS",
             "originalText": "Finish riddle",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 19
           },
           {
             "type": "arrow",
@@ -811,7 +811,7 @@
             "containerId": "0UCArH3Do7Q9fkgmjdY9Z",
             "originalText": "Yes",
             "lineHeight": 1.25,
-            "baseline": 25
+            "baseline": 27
           },
           {
             "type": "arrow",
@@ -875,8 +875,8 @@
           },
           {
             "type": "text",
-            "version": 824,
-            "versionNonce": 1570538708,
+            "version": 827,
+            "versionNonce": 249510397,
             "isDeleted": false,
             "id": "nLlDTT8oZCwLZdcLbZort",
             "fillStyle": "solid",
@@ -886,10 +886,10 @@
             "opacity": 100,
             "angle": 0,
             "x": -500.4747655375359,
-            "y": 118.20625442753044,
+            "y": 118.10283047862151,
             "strokeColor": "#1e1e1e",
             "backgroundColor": "transparent",
-            "width": 570.8438110351562,
+            "width": 570.5367431640625,
             "height": 192.75569905752104,
             "seed": 836736748,
             "groupIds": [
@@ -900,16 +900,16 @@
             "boundElements": [
 
             ],
-            "updated": 1763667453309,
+            "updated": 1763740737725,
             "link": null,
             "locked": false,
             "fontSize": 18.623739039374016,
             "fontFamily": 2,
-            "text": "let gameRunning = true;\n\nwhile (gameRunning) {\n  let answer = prompt(\"What must be broken before you can use it?\");\n  \n  if (answer.toLowerCase() === \"egg\") {\n    let gameRunning = true; \n  }\n}",
+            "text": "let gameRunning = true;\n\nwhile (gameRunning) {\n  let answer = prompt(\"What must be broken before you can use it?\");\n  \n  if (answer.toLowerCase() === \"egg\") {\n    gameRunning = true; \n  }\n}",
             "textAlign": "left",
             "verticalAlign": "top",
             "containerId": null,
-            "originalText": "let gameRunning = true;\n\nwhile (gameRunning) {\n  let answer = prompt(\"What must be broken before you can use it?\");\n  \n  if (answer.toLowerCase() === \"egg\") {\n    let gameRunning = true; \n  }\n}",
+            "originalText": "let gameRunning = true;\n\nwhile (gameRunning) {\n  let answer = prompt(\"What must be broken before you can use it?\");\n  \n  if (answer.toLowerCase() === \"egg\") {\n    gameRunning = true; \n  }\n}",
             "lineHeight": 1.15,
             "baseline": 188
           },
@@ -1045,12 +1045,12 @@
             "containerId": "_eZNj1J0AYx0TeKdfwAO2",
             "originalText": "gameRunning",
             "lineHeight": 1.2,
-            "baseline": 20
+            "baseline": 19
           },
           {
             "type": "text",
-            "version": 176,
-            "versionNonce": 1436036564,
+            "version": 177,
+            "versionNonce": 2036431507,
             "isDeleted": false,
             "id": "fNgs_s1NH6GGKOT4U_YjM",
             "fillStyle": "solid",
@@ -1074,7 +1074,7 @@
             "boundElements": [
 
             ],
-            "updated": 1763667802529,
+            "updated": 1763740731311,
             "link": null,
             "locked": false,
             "fontSize": 28,
@@ -1089,8 +1089,8 @@
           },
           {
             "type": "text",
-            "version": 242,
-            "versionNonce": 1356494292,
+            "version": 243,
+            "versionNonce": 1668770845,
             "isDeleted": false,
             "id": "0RFHO9so67DqQxVVmdfRQ",
             "fillStyle": "solid",
@@ -1114,7 +1114,7 @@
             "boundElements": [
 
             ],
-            "updated": 1763666741237,
+            "updated": 1763740731312,
             "link": null,
             "locked": false,
             "fontSize": 28,
@@ -1162,8 +1162,8 @@
           },
           {
             "type": "text",
-            "version": 303,
-            "versionNonce": 1664549996,
+            "version": 304,
+            "versionNonce": 1125822515,
             "isDeleted": false,
             "id": "-AVxOwaklr7SNaxYE7EEz",
             "fillStyle": "solid",
@@ -1187,7 +1187,7 @@
             "boundElements": [
 
             ],
-            "updated": 1763667888741,
+            "updated": 1763740731312,
             "link": null,
             "locked": false,
             "fontSize": 28,
@@ -1204,10 +1204,10 @@
         "appState": {
           "gridSize": null,
           "viewBackgroundColor": "#ffffff",
-          "scrollX": 872.8624511793457,
-          "scrollY": 765.4035112725171,
+          "scrollX": 719.0148575008443,
+          "scrollY": -3.632013426332554,
           "zoom": {
-            "value": 0.2978711768984792
+            "value": 1.1708482539824656
           }
         },
         "files": {
@@ -2506,6 +2506,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-20 19:15:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:21:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:34:51 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:38:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:41:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:43:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:44:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:47:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:53:24 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:00:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:01:09 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:05:08 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:05:31 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-20 19:15:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:21:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:34:51 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:38:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:41:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:43:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:44:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:47:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:53:24 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:00:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:01:09 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:05:08 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:05:31 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 15:59:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

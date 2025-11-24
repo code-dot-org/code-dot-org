@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-21 03:31:06 UTC",
+    "serialized_at": "2025-11-21 18:50:00 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -540,13 +540,13 @@
       }
     },
     {
-      "key": "d41c1e49-6688-4824-8998-5afeb6cb947f",
+      "key": "6b53aa01-d22b-4d4e-994f-ca0939fd8f78",
       "position": 5,
       "properties": {
         "progression_name": "Keep Going with While Loops"
       },
       "seeding_key": {
-        "activity_section.key": "d41c1e49-6688-4824-8998-5afeb6cb947f",
+        "activity_section.key": "6b53aa01-d22b-4d4e-994f-ca0939fd8f78",
         "lesson_activity.key": "53a91257-dfcc-4c84-ac89-d82e87143f66"
       }
     },
@@ -609,6 +609,7 @@
       "key": "b7e4aaa7-a142-486a-b06b-656c0068ed86",
       "position": 1,
       "properties": {
+        "progression_name": "From Schema to Layout"
       },
       "seeding_key": {
         "activity_section.key": "b7e4aaa7-a142-486a-b06b-656c0068ed86",
@@ -627,8 +628,19 @@
       }
     },
     {
-      "key": "c501844b-280c-45af-a940-e9363f315938",
+      "key": "cab37595-bd72-4757-a88e-edb4aaafb978",
       "position": 3,
+      "properties": {
+        "progression_name": "Displaying a Schema with Cards"
+      },
+      "seeding_key": {
+        "activity_section.key": "cab37595-bd72-4757-a88e-edb4aaafb978",
+        "lesson_activity.key": "9b0a14cd-536a-4a83-95b3-134650884df1"
+      }
+    },
+    {
+      "key": "c501844b-280c-45af-a940-e9363f315938",
+      "position": 4,
       "properties": {
         "progression_name": "Free Response: Bias & Transparency Labels"
       },
@@ -1102,6 +1114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-level1-test-2025"
+        ],
         "progression": "Debugging a While Loop Flowchart"
       },
       "bonus": false,
@@ -1124,6 +1139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-vocab-panel-state-variable-test-2025"
+        ],
         "progression": "Vocab: State Variable"
       },
       "bonus": false,
@@ -1146,6 +1164,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-vocab-frq-state-variable-test-2025"
+        ],
         "progression": "Vocab: State Variable"
       },
       "bonus": false,
@@ -1168,6 +1189,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-vocab-panel-infinite-loop-test-2025"
+        ],
         "progression": "Vocab: Infinite Loop"
       },
       "bonus": false,
@@ -1190,6 +1214,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-vocab-frq-infinite-loop-test-2025"
+        ],
         "progression": "Vocab: Infinite Loop"
       },
       "bonus": false,
@@ -1212,6 +1239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-level6-test-2025"
+        ],
         "progression": "Debugging While Loops"
       },
       "bonus": false,
@@ -1239,15 +1269,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "iterating-with-ai-lesson3-level7-test-2025"
+          "iterating-with-ai-lesson3-level7-web-lab-test-2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit4",
-        "activity_section.key": "d41c1e49-6688-4824-8998-5afeb6cb947f"
+        "activity_section.key": "6b53aa01-d22b-4d4e-994f-ca0939fd8f78"
       },
       "level_keys": [
-        "iterating-with-ai-lesson3-level7-test-2025"
+        "iterating-with-ai-lesson3-level7-web-lab-test-2025"
       ]
     },
     {
@@ -1256,6 +1286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-vocab-transparency-cue-test-2025"
+        ],
         "progression": "Vocab: Transparency Cue"
       },
       "bonus": false,
@@ -1278,6 +1311,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-vocab-frq-transparency-cue-test-2025"
+        ],
         "progression": "Vocab: Transparency Cue"
       },
       "bonus": false,
@@ -1300,6 +1336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-test-2025"
+        ],
         "progression": "Adding Transparency"
       },
       "bonus": false,
@@ -1322,6 +1361,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-test-2025"
+        ],
         "progression": "Build a Display Pipeline"
       },
       "bonus": false,
@@ -1344,6 +1386,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-vocab-pipeline-test-2025"
+        ],
         "progression": "Vocab: Pipeline"
       },
       "bonus": false,
@@ -1366,6 +1411,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-vocab-frq-pipeline-test-2025"
+        ],
         "progression": "Vocab: Pipeline"
       },
       "bonus": false,
@@ -1388,6 +1436,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-level7-test-2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -1410,6 +1461,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "From Schema to Layout"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level1-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "b7e4aaa7-a142-486a-b06b-656c0068ed86"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson5-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson5-vocab-fallback-value-test-2025"
+        ],
         "progression": "Vocab: Fallback Value"
       },
       "bonus": false,
@@ -1427,11 +1503,14 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 2,
+      "chapter": 34,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson5-vocab-frq-fallback-value-test-2025"
+        ],
         "progression": "Vocab: Fallback Value"
       },
       "bonus": false,
@@ -1449,11 +1528,36 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 3,
+      "chapter": 35,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Displaying a Schema with Cards"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level5-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "cab37595-bd72-4757-a88e-edb4aaafb978"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson5-level5-test-2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson5-level8-test-2025"
+        ],
         "progression": "Free Response: Bias & Transparency Labels"
       },
       "bonus": false,
@@ -1471,11 +1575,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-vocab-active-filter-test-2025"
+        ],
         "progression": "Vocab: Active Filter"
       },
       "bonus": false,
@@ -1493,11 +1600,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-vocab-frq-active-filter-test-2025"
+        ],
         "progression": "Vocab: Active Filter"
       },
       "bonus": false,
@@ -1515,11 +1625,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-vocab-filter-bubble-test-2025"
+        ],
         "progression": "Vocab: Filter Bubble"
       },
       "bonus": false,
@@ -1537,11 +1650,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-vocab-frq-filter-bubble-test-2025"
+        ],
         "progression": "Vocab: Filter Bubble"
       },
       "bonus": false,
@@ -1838,14 +1954,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "iterating-with-ai-lesson3-level7-test-2025",
+        "level.key": "iterating-with-ai-lesson3-level7-web-lab-test-2025",
         "script_level.level_keys": [
-          "iterating-with-ai-lesson3-level7-test-2025"
+          "iterating-with-ai-lesson3-level7-web-lab-test-2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit4",
-        "activity_section.key": "d41c1e49-6688-4824-8998-5afeb6cb947f"
+        "activity_section.key": "6b53aa01-d22b-4d4e-994f-ca0939fd8f78"
       }
     },
     {
@@ -1934,6 +2050,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "iterating-with-ai-lesson5-level1-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level1-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "b7e4aaa7-a142-486a-b06b-656c0068ed86"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "iterating-with-ai-lesson5-vocab-fallback-value-test-2025",
         "script_level.level_keys": [
           "iterating-with-ai-lesson5-vocab-fallback-value-test-2025"
@@ -1954,6 +2082,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit4",
         "activity_section.key": "f2f56267-f5e0-452b-bd1e-a6c737b0f9da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson5-level5-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level5-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "cab37595-bd72-4757-a88e-edb4aaafb978"
       }
     },
     {
