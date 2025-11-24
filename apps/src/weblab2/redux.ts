@@ -6,10 +6,12 @@ import {ViewMode} from './types';
 
 export type Weblab2State = {
   viewMode: ViewMode;
+  aiFilePathToPreview: string | undefined;
 };
 
 const initialState: Weblab2State = {
   viewMode: ViewMode.SPLIT,
+  aiFilePathToPreview: undefined,
 };
 
 const weblab2Slice = createSlice({
@@ -19,9 +21,15 @@ const weblab2Slice = createSlice({
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
     },
+    setAiFilePathToPreview: (
+      state,
+      action: PayloadAction<string | undefined>
+    ) => {
+      state.aiFilePathToPreview = action.payload;
+    },
   },
 });
 
 registerReducers({weblab2: weblab2Slice.reducer});
 
-export const {setViewMode} = weblab2Slice.actions;
+export const {setViewMode, setAiFilePathToPreview} = weblab2Slice.actions;

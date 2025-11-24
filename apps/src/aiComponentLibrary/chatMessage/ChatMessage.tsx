@@ -13,6 +13,7 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {setAiFilePathToPreview} from '@cdo/apps/weblab2/redux';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
@@ -69,6 +70,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     };
     dispatch(addChatEvent(notification));
     dispatch(setViewingAiTutorVersion(false));
+    dispatch(setAiFilePathToPreview(undefined));
   };
 
   const handleReject = () => {
@@ -83,6 +85,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     dispatch(addChatEvent(notification));
     dispatch(setSource(prevSource || (source as MultiFileSource)));
     dispatch(setViewingAiTutorVersion(false));
+    dispatch(setAiFilePathToPreview(undefined));
   };
 
   return (

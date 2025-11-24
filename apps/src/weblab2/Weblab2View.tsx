@@ -39,7 +39,7 @@ import {
 } from './helpers/aiTutorStructuredResponseHelper';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
-import {setViewMode} from './redux';
+import {setAiFilePathToPreview, setViewMode} from './redux';
 import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
@@ -186,6 +186,15 @@ const Weblab2View: React.FC<
             console.log('aiTutorVersionFiles', aiTutorVersionFiles);
             dispatch(setProjectSourceBeforeAiTutorVersion(source));
             dispatch(setSource(mergedCodeVersion));
+            // Sort AI-updatedfiles by name alphabetically.
+            aiTutorVersionFiles.sort((a, b) => a.name.localeCompare(b.name));
+            // Set the preview to first AI-updated html file, if it exists.
+            const firstAiUpdatedHtmlFile = aiTutorVersionFiles.find(
+              file => file.language === 'html'
+            );
+            if (firstAiUpdatedHtmlFile) {
+              dispatch(setAiFilePathToPreview(firstAiUpdatedHtmlFile.name));
+            }
             return formattedResponse.explanation;
           },
         };

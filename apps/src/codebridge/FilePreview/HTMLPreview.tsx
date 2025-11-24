@@ -50,6 +50,10 @@ export const HTMLPreview: React.FC = () => {
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
   );
+  const aiFilePathToPreview = useAppSelector(
+    state => state.weblab2.aiFilePathToPreview
+  );
+  console.log('aiFilePathToPreview', aiFilePathToPreview);
   const [isIframeLoaded, setIsIframeLoaded] = useState(false);
   const [debouncedSource, setDebouncedSource] = useState(source);
   const sourceLevelId = useRef<number | undefined>(undefined);
@@ -69,6 +73,18 @@ export const HTMLPreview: React.FC = () => {
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
+
+  useEffect(() => {
+    if (aiFilePathToPreview) {
+      setCurrentFile(aiFilePathToPreview);
+      setInputValue(aiFilePathToPreview);
+    } else {
+      setCurrentFile(DEFAULT_START_HTML_FILE);
+      setInputValue(DEFAULT_START_HTML_FILE);
+      setNavigationHistory([DEFAULT_START_HTML_FILE]);
+      setNavigationHistoryIndex(0);
+    }
+  }, [aiFilePathToPreview]);
 
   const dispatch = useAppDispatch();
 
