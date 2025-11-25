@@ -34,9 +34,10 @@ const handleFileDownload = async (file: ProjectFile) => {
       // File is an image and has a url, so download from browser
       const image = await fetch(file.url);
       if (!image.ok) {
-        throw new Error(
+        console.error(
           `Failed to fetch image: ${image.status} ${image.statusText}`
         );
+        alert('Image retrieval failed. Please try again.');
       }
       const blob = await image.blob();
       fileDownload(blob, file.name);
@@ -48,6 +49,7 @@ const handleFileDownload = async (file: ProjectFile) => {
     });
   } catch (error) {
     console.error('File download failed:', error);
+    alert('File download failed. Please try again.');
   }
 };
 
@@ -67,7 +69,7 @@ export const useFileRowOptions = (
   hasValidationFile: boolean
 ) => {
   const {
-    config: {downloadableFileTypes},
+    config: {supportedFileTypes},
     levelProperties,
   } = useCodebridgeContext();
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
@@ -140,7 +142,7 @@ export const useFileRowOptions = (
         },
       },
       {
-        condition: downloadableFileTypes.includes(file.language),
+        condition: supportedFileTypes.includes(file.language),
         iconName: 'download',
         labelText: codebridgeI18n.downloadFile(),
         clickHandler: () => handleFileDownload(file),
@@ -162,7 +164,7 @@ export const useFileRowOptions = (
       appName,
       backpackApi,
       dispatch,
-      downloadableFileTypes,
+      supportedFileTypes,
       file,
       isLocked,
       isStartMode,

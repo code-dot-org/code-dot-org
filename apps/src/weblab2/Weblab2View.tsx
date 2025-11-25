@@ -19,7 +19,7 @@ import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {
   WEBLAB2_EDITABLE_FILE_TYPES,
-  WEBLAB2_IMAGE_FILE_TYPES,
+  WEBLAB2_SUPPORTED_FILE_TYPES,
 } from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {getPromptNameFromMode} from './helpers/aiTutorHelper';
@@ -47,10 +47,7 @@ const weblab2LangMapping: {[key: string]: LanguageSupport} = {
 const defaultConfig: ConfigType = {
   languageMapping: weblab2LangMapping,
   editableFileTypes: WEBLAB2_EDITABLE_FILE_TYPES,
-  downloadableFileTypes: [
-    ...WEBLAB2_EDITABLE_FILE_TYPES,
-    ...WEBLAB2_IMAGE_FILE_TYPES,
-  ],
+  supportedFileTypes: WEBLAB2_SUPPORTED_FILE_TYPES,
   activeLayout: 'vertical',
   layoutComponents: {
     vertical: VerticalLayout,
