@@ -1,10 +1,10 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading3} from '@code-dot-org/component-library/typography';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LevelProperties} from '@cdo/apps/lab2/types';
@@ -284,6 +284,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     return null;
   }
 
+  const showTts =
+    levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
+
   return (
     <Guide
       key={levelSpecificId}
@@ -299,6 +302,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           <MainInstructionsContent
             instructionsText={levelProperties.longInstructions}
             markdownClassName={styles.markdown}
+            showTts={showTts}
           />
         )}
 
@@ -313,10 +317,12 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {aiGenerateState === 'generating' && (
-        <div>
-          <Heading3>Generating...</Heading3>
-          AI is generating code based on your prompt.
-        </div>
+        <MainInstructionsContent
+          heading="Generating..."
+          content="AI is generating code based on your prompt."
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {['none', 'generating', 'generated'].includes(aiGenerateState) &&
@@ -370,15 +376,18 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {['listening', 'listened'].includes(aiGenerateState) && (
-        <div>
-          <Heading3>
-            {aiGenerateState === 'listening' && 'Take a listen...'}
-            {aiGenerateState === 'listened' && 'Decide what to do next'}
-          </Heading3>
-          <div>
-            AI generated code based on your prompt, "{localizedPromptText}"
-          </div>
-        </div>
+        <MainInstructionsContent
+          heading={
+            aiGenerateState === 'listening'
+              ? 'Take a listen...'
+              : aiGenerateState === 'listened'
+              ? 'Decide what to do next'
+              : ''
+          }
+          content={`AI generated code based on your prompt, "${localizedPromptText}"`}
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {aiGenerateState === 'listened' && (
@@ -439,26 +448,36 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {aiGenerateState === 'editing' && !isPlaying && (
-        <div>
-          <Heading3>Modify the code</Heading3>
-          AI helped you get started. Make your own changes, then press Run.
-        </div>
+        <MainInstructionsContent
+          heading="Modify the code"
+          content="AI helped you get started. Make your own changes, then press Run."
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {aiGenerateState === 'editing' && isPlaying && (
-        <div>
-          <Heading3>Modify the code</Heading3>
-          <div>Try changing the code. </div>
-        </div>
+        <MainInstructionsContent
+          heading="Modify the code"
+          content="Try changing the code."
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {aiGenerateState === 'edited' && (
         <>
-          <div>
-            <Heading3>Modify the code</Heading3>
-            {!hasParent && <div>That's a great mix!</div>}
-            {hasParent && <div>Keep editing, or use the tabs at the top.</div>}
-          </div>
+          <MainInstructionsContent
+            heading="Modify the code"
+            content={
+              hasParent
+                ? 'Keep editing, or use the tabs at the top.'
+                : "That's a great mix!"
+            }
+            markdownClassName={styles.markdown}
+            showTts={showTts}
+          />
+
           <div className={styles.buttonRow}>
             <Button
               ariaLabel={'Back to prompt'}

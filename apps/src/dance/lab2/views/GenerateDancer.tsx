@@ -1,6 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {Heading3} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -91,6 +90,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   );
 
   const [promptText, setPromptText] = useState<string>('');
+
+  const [localizedPromptText, setLocalizedPromptText] = useState<string>('');
 
   const variantHistory = useRef<number[]>([]);
 
@@ -362,8 +363,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     variantHistory.current = [];
   }, []);
 
-  const onAdlibTextChange = useCallback((text: string) => {
+  const onAdlibTextChange = useCallback((text: string, localized: string) => {
     setPromptText(text);
+    setLocalizedPromptText(localized);
   }, []);
 
   const hasParent = !!useParentLevelProperties();
@@ -377,6 +379,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   }, [dispatch, levelProperties.appName, levelProperties.id]);
 
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+
+  const showTts =
+    levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
@@ -394,14 +399,17 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             <MainInstructionsContent
               instructionsText={levelProperties.longInstructions}
               markdownClassName={moduleStyles.markdown}
+              showTts={showTts}
             />
           )}
 
           {aiGenerateState === 'generating' && (
-            <div>
-              <Heading3>Generating...</Heading3>
-              AI is generating a dancer based on your prompt.
-            </div>
+            <MainInstructionsContent
+              heading="Generating"
+              content="AI is generating a dancer based on your prompt."
+              markdownClassName={moduleStyles.markdown}
+              showTts={showTts}
+            />
           )}
 
           {aiGenerateState === 'none' &&
@@ -476,14 +484,20 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               </>
             )}
           {aiGenerateState === 'reviewing' && (
+            <MainInstructionsContent
+              heading="Decide what to do next"
+              content={
+                `AI generated a dancer based on your prompt, "${localizedPromptText}".` +
+                hasParent
+                  ? 'Keep editing, or use the tabs at the top.'
+                  : ''
+              }
+              markdownClassName={moduleStyles.markdown}
+              showTts={showTts}
+            />
+          )}
+          {aiGenerateState === 'reviewing' && (
             <>
-              <Heading3>Decide what to do next</Heading3>
-              <div>
-                AI generated a dancer based on your prompt, "{promptText}"
-              </div>
-              {hasParent && (
-                <div>Keep editing, or use the tabs at the top.</div>
-              )}
               <div className={moduleStyles.buttonRow}>
                 <Button
                   ariaLabel={'Back to prompt'}

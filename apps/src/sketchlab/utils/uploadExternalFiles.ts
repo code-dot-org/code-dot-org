@@ -1,11 +1,8 @@
-import {BinaryFiles} from '@excalidraw/excalidraw/types/types';
-
 import {
   SketchlabProjectFile,
   SketchlabExternalFiles,
+  ExcalidrawFilesWithOptionalData,
 } from '@cdo/apps/lab2/types';
-
-import {SketchlabSources} from '../types';
 
 import {uploadBase64ToUrl} from './uploadBase64ToUrl';
 
@@ -28,10 +25,9 @@ const MIME_TO_EXT = {
 
 export const uploadExternalFiles = async (
   savedFiles: SketchlabExternalFiles,
-  excalidrawFiles: BinaryFiles,
+  excalidrawFiles: ExcalidrawFilesWithOptionalData,
   filesBeingUploadedRef: React.MutableRefObject<Set<string>>,
-  channelId: string,
-  updateSources: (newSources: SketchlabSources, forceSave?: boolean) => void
+  channelId: string
 ) => {
   const savedFileIds = Object.keys(savedFiles || {});
   const excalidrawFileIds = Object.keys(excalidrawFiles || {});
@@ -54,7 +50,11 @@ export const uploadExternalFiles = async (
       };
 
       try {
-        await uploadBase64ToUrl(newFile.dataURL, externalUrl, newFile.mimeType);
+        await uploadBase64ToUrl(
+          newFile.dataURL as string,
+          externalUrl,
+          newFile.mimeType
+        );
         newExternalFile.url = externalUrl;
       } catch {
         // If an upload fails, still add an entry to externalFiles
