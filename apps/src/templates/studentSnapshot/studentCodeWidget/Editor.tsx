@@ -17,7 +17,6 @@ interface CodeDisplayProps {
 
 const Editor: React.FC<CodeDisplayProps> = ({code, theme}) => {
   const editorRef = useRef<HTMLDivElement>(null);
-  const [didInit, setDidInit] = useState(false);
   const [editorView, setEditorView] = useState<EditorView | null>(null);
 
   // Compartment to control the theme
@@ -26,7 +25,7 @@ const Editor: React.FC<CodeDisplayProps> = ({code, theme}) => {
   }, []);
 
   useEffect(() => {
-    if (editorRef.current === null || didInit) {
+    if (editorRef.current === null || editorView !== null) {
       return;
     }
 
@@ -48,8 +47,7 @@ const Editor: React.FC<CodeDisplayProps> = ({code, theme}) => {
         parent: editorRef.current,
       })
     );
-    setDidInit(true);
-  }, [editorRef, code, didInit, theme, themeCompartment]);
+  }, [editorRef, code, editorView, theme, themeCompartment]);
 
   // When theme changes, reconfigure the editor
   useEffect(() => {
