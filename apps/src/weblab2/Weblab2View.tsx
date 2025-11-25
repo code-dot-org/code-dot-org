@@ -1,50 +1,27 @@
 import {Codebridge} from '@codebridge/Codebridge';
 import {DEFAULT_START_HTML_FILE} from '@codebridge/FilePreview/constants';
 import {ConfigType} from '@codebridge/types';
-import {getFolderPath} from '@codebridge/utils';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
-import {
-  setProjectSourceBeforeAiTutorVersion,
-  setSource,
-  setViewingAiTutorVersion,
-} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {
-  LabProps,
-  MultiFileSource,
-  ProjectSources,
-  ProjectFile,
-} from '@cdo/apps/lab2/types';
-import experiments from '@cdo/apps/util/experiments';
+import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
-import {ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {getPromptNameFromMode} from './helpers/aiTutorHelper';
-import {
-  acceptRejectJsonSchema,
-  formatExplanationResponse,
-  copyCodeJsonSchema,
-  formatAcceptRejectResponse,
-  getMergedAiTutorCodeWithSource,
-} from './helpers/aiTutorStructuredResponseHelper';
+import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
-import {
-  setAiTutorVersionFiles,
-  setAiFilePathToPreview,
-  setViewMode,
-} from './redux';
+import {setViewMode} from './redux';
 import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
@@ -153,93 +130,10 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
-  const aiTutorResponseSchemaSettings: ResponseSchemaSettings | undefined =
-    useMemo(() => {
-      if (
-        experiments.isEnabledAllowingQueryString(
-          experiments.WEBLAB2_ACCEPT_REJECT
-        ) &&
-        ['produce', 'designer'].includes(levelProperties.aiTutorMode || '')
-      ) {
-        return {
-          jsonSchema: acceptRejectJsonSchema,
-          responseCallback: (response: string) => {
-            const jsonResponse = JSON.parse(response);
-            console.log('AI Tutor response (in jsonSchema callback):', {
-              jsonResponse,
-            });
-            const formattedResponse = formatAcceptRejectResponse(jsonResponse);
-            console.log('formattedResponse', formattedResponse);
-            dispatch(setViewingAiTutorVersion(true));
-            // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
-            // Workspace will be read-only until user clicks "accept" or "reject".
-
-            // TODO:
-            // If user clicks "reject", go back to projectSourceBeforeAiTutorVersion.
-            // If user clicks "accept":
-            // - force save a version for projectSourceBeforeAiTutorVersion.
-            // - force save an AI version for AI tutor version with description 'AI Save'.
-            // - Workspace is now editable.
-            const aiTutorVersionFiles: ProjectFile[] = [];
-            const mergedSourceVersion = getMergedAiTutorCodeWithSource(
-              formattedResponse.code,
-              source as MultiFileSource,
-              aiTutorVersionFiles
-            ) as MultiFileSource;
-            console.log('mergedSourceVersion', mergedSourceVersion);
-            console.log('source', source);
-            console.log('aiTutorVersionFiles', aiTutorVersionFiles);
-            // If no AI-updated files, return explanation.
-            if (aiTutorVersionFiles.length === 0) {
-              return formattedResponse.explanation;
-            }
-            dispatch(setAiTutorVersionFiles(aiTutorVersionFiles));
-            dispatch(setProjectSourceBeforeAiTutorVersion(source));
-            // Set the preview to first AI-updated html file, if it exists.
-            const firstAiUpdatedHtmlFile = aiTutorVersionFiles.find(
-              file => file.language === 'html'
-            );
-            if (firstAiUpdatedHtmlFile) {
-              mergedSourceVersion.files[firstAiUpdatedHtmlFile.id] = {
-                ...firstAiUpdatedHtmlFile,
-                active: true,
-              };
-              mergedSourceVersion.openFiles = [firstAiUpdatedHtmlFile.id];
-              const folderPath = getFolderPath(
-                firstAiUpdatedHtmlFile.folderId,
-                mergedSourceVersion.folders
-              ).substring(1);
-              const filePath =
-                folderPath === ''
-                  ? firstAiUpdatedHtmlFile.name
-                  : folderPath + '/' + firstAiUpdatedHtmlFile.name;
-              dispatch(setAiFilePathToPreview(filePath));
-            } else {
-              const fileToActivate = aiTutorVersionFiles[0];
-              mergedSourceVersion.files[fileToActivate.id] = {
-                ...fileToActivate,
-                active: true,
-              };
-              mergedSourceVersion.openFiles = [fileToActivate.id];
-            }
-
-            dispatch(setSource(mergedSourceVersion));
-            return formattedResponse.explanation;
-          },
-        };
-      } else {
-        return {
-          jsonSchema: copyCodeJsonSchema,
-          responseCallback: (response: string) => {
-            const jsonResponse = JSON.parse(response);
-            console.log('🤖: Tutor response (in jsonSchema callback):', {
-              jsonResponse,
-            });
-            return formatExplanationResponse(jsonResponse.answer);
-          },
-        };
-      }
-    }, [levelProperties.aiTutorMode, dispatch, source]);
+  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
+    levelProperties.aiTutorMode,
+    source
+  );
 
   return (
     <div className={moduleStyles.weblab2Container}>

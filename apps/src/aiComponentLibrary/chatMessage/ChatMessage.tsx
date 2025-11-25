@@ -73,7 +73,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     dispatch(setAiTutorVersionFiles(undefined));
   }, [dispatch]);
 
-  const handleAccept = useCallback(() => {
+  const handleAcceptAiTutorVersion = useCallback(() => {
     const notification: Notification = {
       timestamp: Date.now(),
       removeId: getNewRemoveId(),
@@ -104,7 +104,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     }
   }, [dispatch, source, resetAiTutorVersion]);
 
-  const handleReject = useCallback(() => {
+  const handleRejectAiTutorVersion = useCallback(() => {
     const notification: Notification = {
       timestamp: Date.now(),
       removeId: getNewRemoveId(),
@@ -174,8 +174,9 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                     <div>
                       {aiTutorVersionFiles?.map(file => (
                         <div key={file.id}>
-                          {file.name}{' '}
-                          {file.isAiTutorVersionUpdated ? 'updated' : 'created'}
+                          {file.name}
+                          {': '}
+                          {file.isAiTutorVersionUpdated ? 'Updated' : 'Created'}
                         </div>
                       ))}
                     </div>
@@ -190,7 +191,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                           iconName: 'close',
                           title: 'Reject',
                         }}
-                        onClick={handleReject}
+                        onClick={handleRejectAiTutorVersion}
                       />
                       <Button
                         text="Accept"
@@ -202,7 +203,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                           iconName: 'check',
                           title: 'Accept',
                         }}
-                        onClick={handleAccept}
+                        onClick={handleAcceptAiTutorVersion}
                       />
                     </div>
                   </>
