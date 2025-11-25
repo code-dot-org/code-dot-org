@@ -19,6 +19,14 @@ const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
 const circularDependencies = require('./circular_dependencies.json');
 const envConstants = require('./envConstants');
+
+if (envConstants.PROFILE_APPS_BUILD) {
+  console.log(
+    'Webpack configured with NODE_OPTIONS:',
+    envConstants.NODE_OPTIONS
+  );
+}
+
 const {
   ALL_APPS,
   appsEntriesFor,
@@ -214,7 +222,6 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
     localeDoNotImport('@cdo/sketchlab/locale'),
     localeDoNotImport('@cdo/standaloneVideo/locale'),
-    localeDoNotImport('@cdo/tutorialExplorer/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
     localeDoNotImport('@cdo/weblab2/locale'),
     localeDoNotImport('@cdo/signup/locale'),

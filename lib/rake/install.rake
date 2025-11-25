@@ -48,14 +48,12 @@ namespace :install do
           if ENV['CI_JOB'] == 'unit_tests'
             # Prepare for dashboard unit tests to run.
             RakeUtils.rake 'db:create db:test:prepare'
-          elsif ENV['CI_JOB'] == 'ui_tests'
+          else
             # If we don't already have a database that's been restored from a
             # cache, prepare one from scratch by creating the database and loading
             # the schema. If we do, make sure it's up to date with the branch
             # being tested. Either way, seeding will be performed in a later step.
             RakeUtils.rake_stream_output 'db:setup_or_migrate'
-          else
-            raise "Unknown CI job: #{ENV['CI_JOB']}"
           end
         else
           RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
