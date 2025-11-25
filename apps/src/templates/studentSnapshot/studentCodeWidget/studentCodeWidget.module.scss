@@ -1,0 +1,43 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
+.workspaceContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--background-color);
+
+  // Light theme colors
+  [data-theme='Light'] & {
+    --background-color: $white;
+  }
+
+  // Dark theme colors
+  [data-theme='Dark'] & {
+    --background-color: $black;
+  }
+}
+
+.themeToggle {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  background-color: var(--background-neutral-primary);
+}
+
+.codeDisplay {
+  flex: 1;
+  overflow: auto;
+
+  pre {
+    margin: 0;
+  }
+}
+
+.codeEditorContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.noCode {
+  padding: 16px;
+}
