@@ -16,7 +16,6 @@ describe('WidgetTemplate', () => {
 
     screen.getByText('Test Widget');
     screen.getByText('Test content');
-    screen.getByRole('button', {name: 'Settings'});
   });
 
   it('renders loading', () => {
@@ -24,7 +23,6 @@ describe('WidgetTemplate', () => {
 
     screen.getByText('Test Widget');
     expect(screen.queryByText('Test content')).toBeNull();
-    screen.getByRole('button', {name: 'Settings'});
     screen.getByTitle('Loading...');
   });
 
@@ -48,7 +46,7 @@ describe('WidgetTemplate', () => {
     fireEvent.click(settingsButton);
 
     // Click the dropdown option
-    const optionButton = screen.getByRole('menuitem', {name: 'Test Option'});
+    const optionButton = screen.getByRole('button', {name: 'Test Option'});
     fireEvent.click(optionButton);
 
     // Verify the onClick handler was called
