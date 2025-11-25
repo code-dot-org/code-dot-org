@@ -24,12 +24,12 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   const dispatch = useAppDispatch();
 
   const handleAccept = useCallback(() => {
-    dispatch(acceptAiTutorVersion());
-  }, [dispatch]);
+    dispatch(acceptAiTutorVersion(files));
+  }, [dispatch, files]);
 
   const handleReject = useCallback(() => {
-    dispatch(rejectAiTutorVersion());
-  }, [dispatch]);
+    dispatch(rejectAiTutorVersion(files));
+  }, [dispatch, files]);
 
   return (
     <>

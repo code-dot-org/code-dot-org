@@ -8,7 +8,7 @@ import {
   setSource,
   setViewingAiTutorVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -30,17 +30,23 @@ function resetAiTutorVersionState(dispatch: AppDispatch) {
  */
 export const acceptAiTutorVersion = createAsyncThunk<
   void,
-  void,
+  ProjectFile[],
   {dispatch: AppDispatch; state: RootState}
->('weblab2/acceptAiTutorVersion', async (_, thunkAPI) => {
+>('weblab2/acceptAiTutorVersion', async (files, thunkAPI) => {
   const state = thunkAPI.getState();
   const source = state.lab2Project.projectSources?.source as MultiFileSource;
 
   // Add accept notification.
+  const filesList = files
+    .map(
+      file =>
+        `${file.name} (${file.isAiTutorVersionUpdated ? 'Updated' : 'Created'}`
+    )
+    .join('\n');
   const notification: Notification = {
     timestamp: Date.now(),
     removeId: getNewRemoveId(),
-    text: "You accepted AI Tutor's changes.",
+    text: `You accepted AI Tutor's changes.\nFiles: ${filesList}`,
     notificationType: 'success',
     includeInChatHistory: true,
     hideTimestamp: true,
@@ -75,18 +81,24 @@ export const acceptAiTutorVersion = createAsyncThunk<
  */
 export const rejectAiTutorVersion = createAsyncThunk<
   void,
-  void,
+  ProjectFile[],
   {dispatch: AppDispatch; state: RootState}
->('weblab2/rejectAiTutorVersion', async (_, thunkAPI) => {
+>('weblab2/rejectAiTutorVersion', async (files, thunkAPI) => {
   const state = thunkAPI.getState();
   const prevSource = state.lab2Project.projectSourceBeforeAiTutorVersion;
   const source = state.lab2Project.projectSources?.source as MultiFileSource;
 
   // Add reject notification.
+  const filesList = files
+    .map(
+      file =>
+        `${file.name} (${file.isAiTutorVersionUpdated ? 'Update' : 'New'})`
+    )
+    .join('\n');
   const notification: Notification = {
     timestamp: Date.now(),
     removeId: getNewRemoveId(),
-    text: "You rejected AI Tutor's changes.",
+    text: `You rejected AI Tutor's changes.\nFiles: ${filesList}`,
     notificationType: 'error',
     includeInChatHistory: true,
     hideTimestamp: true,
