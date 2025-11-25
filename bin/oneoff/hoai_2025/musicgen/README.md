@@ -56,7 +56,7 @@ To generate ALL prompts (yikes... it's like 20k AI responses and that will
 cost a relative ton), use this command:
 
 ```
-./bin/oneoff/hoai_2025/generate_music --produce-layers --produce-moods
+./bin/oneoff/hoai_2025/musicgen/generate_music --produce-layers --produce-moods
 ```
 
 Likely you'll want to generate just the prompts and save them where the
@@ -73,7 +73,7 @@ corrupted in any way.
 Again, this does **not** send any prompts to actual AI agents.
 
 ```
-./bin/oneoff/hoai_2025/generate_music --produce-layers --produce-moods --just-save-prompts
+./bin/oneoff/hoai_2025/musicgen/generate_music --produce-layers --produce-moods --just-save-prompts
 ```
 
 Once you generate prompts, it will not generate anything where there is
@@ -89,20 +89,20 @@ match the given simple filter. To see the names of packs that are known,
 use the `--list-packs` option.
 
 ```
-./bin/oneoff/hoai_2025/generate_music --list-packs
+./bin/oneoff/hoai_2025/musicgen/generate_music --list-packs
 ```
 
 To see what your filter would cover without generating or uploading:
 
 ```
-./bin/oneoff/hoai_2025/generate_music --list-packs --filter="katy_perry"
+./bin/oneoff/hoai_2025/musicgen/generate_music --list-packs --filter="katy_perry"
 ```
 
 To use the filter to generate just the prompts for a particular artist and
 just the mood adlibs:
 
 ```
-./bin/oneoff/hoai_2025/generate_music --filter="katy_perry" --no-produce-layers --produce-moods --just-save-prompt
+./bin/oneoff/hoai_2025/musicgen/generate_music --filter="katy_perry" --no-produce-layers --produce-moods --just-save-prompt
 ```
 
 ### Uploading to S3

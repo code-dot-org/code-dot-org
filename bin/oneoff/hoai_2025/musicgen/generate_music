@@ -406,8 +406,8 @@ puts "Loading application..."
 # Load the application layer
 ENV['SKIP_SCRIPT_PRELOAD'] = '1'
 ENV['SKIP_I18N_INIT'] = '1'
-require_relative '../../../dashboard/config/environment'
-require_relative '../../../dashboard/app/helpers/aichat_ai_helper'
+require_relative '../../../../dashboard/config/environment'
+require_relative '../../../../dashboard/app/helpers/aichat_ai_helper'
 
 output_path = File.join(File.dirname(__FILE__), "music_output")
 FileUtils.mkdir_p output_path
