@@ -1338,6 +1338,9 @@ Dashboard::Application.routes.draw do
       member do
         post :chat_completion
       end
+      collection do
+        post :lesson_insight
+      end
     end
 
     resources :aidiff_messages, only: [] do

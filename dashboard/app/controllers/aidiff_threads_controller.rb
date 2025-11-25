@@ -88,6 +88,13 @@ class AidiffThreadsController < ApplicationController
     render(json: {courses: courses})
   end
 
+  # POST /aidiff_threads/lesson_insight
+  def lesson_insight
+    puts 'lfm was here'
+
+    render json: {insight: 'This is a placeholder insight about the lesson.'}
+  end
+
   # params are
   # input_text
   # is_preset

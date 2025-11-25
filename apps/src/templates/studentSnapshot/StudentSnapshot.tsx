@@ -2,6 +2,7 @@ import {Typography} from '@mui/material';
 import React from 'react';
 
 import Header from './header';
+import LessonInsightWidget from './lessonInsightWidget';
 import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
@@ -20,6 +21,7 @@ const StudentSnapshot: React.FC = () => {
       </Typography>
 
       <div className={styles.widgetGrid}>
+        <LessonInsightWidget />
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
           <div>content</div>
         </WidgetTemplate>
