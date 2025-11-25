@@ -1,9 +1,9 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -25,7 +25,6 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -77,6 +76,12 @@ const VersionHistoryPanel: React.FunctionComponent<
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+  const hasRestoredOldVersion = useAppSelector(
+    state => state.lab2Project.restoredOldVersion
+  );
+  const closeRestoredVersionBanner = () => {
+    dispatch(setRestoredOldVersion(false));
+  };
 
   const projectSources = useAppSelector(
     state => state.lab2Project.projectSources
@@ -297,23 +302,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     [dispatch, isLatestVersion, setSelectedVersion, startSources]
   );
 
-  // Function called when clicking 'cancel'. This will reset the project to the current version
-  // if the user is viewing an old version, then set the selected version to the latest version.
-  const handleCancel = useCallback(() => {
-    // Go back to current version if we are viewing an old version
-    if (selectedVersion && !isLatestVersion(selectedVersion)) {
-      dispatch(resetToCurrentVersion());
-      setSelectedVersion(latestVersion);
-      setFocusSelectedVersion(true);
-    }
-  }, [
-    dispatch,
-    isLatestVersion,
-    latestVersion,
-    selectedVersion,
-    setSelectedVersion,
-  ]);
-
   const handleSaveVersionSuccess = useCallback(() => {
     sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_COMMITTED, {
       versionId: selectedVersion,
@@ -326,6 +314,23 @@ const VersionHistoryPanel: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.versionHistoryPanel}>
+      {hasRestoredOldVersion && (
+        <Alert
+          className={moduleStyles.message}
+          text={codebridgeI18n.restoredOldVersion()}
+          type="success"
+          size="xs"
+          onClose={closeRestoredVersionBanner}
+        />
+      )}
+      {versionLoadError && (
+        <Alert
+          className={moduleStyles.message}
+          text={lab2I18n.versionLoadFailure()}
+          type="danger"
+          size="xs"
+        />
+      )}
       {listLoading && (
         <div
           className={classNames(
@@ -337,13 +342,12 @@ const VersionHistoryPanel: React.FunctionComponent<
         </div>
       )}
       {listLoadError && (
-        <div className={moduleStyles.message}>
-          <Alert
-            type="danger"
-            text={lab2I18n.versionHistoryLoadFailure()}
-            size="s"
-          />
-        </div>
+        <Alert
+          className={moduleStyles.message}
+          type="danger"
+          text={lab2I18n.versionHistoryLoadFailure()}
+          size="xs"
+        />
       )}
       {showList && (
         <div className={moduleStyles.listContainer}>
@@ -358,6 +362,14 @@ const VersionHistoryPanel: React.FunctionComponent<
                 isSelected={selectedVersion === version.versionId}
                 onChange={onVersionChange}
                 disabled={disabled}
+                showRestoreButton={
+                  !version.isLatest &&
+                  selectedVersion === version.versionId &&
+                  !viewAsUserId
+                }
+                restoreOnClick={restoreSelectedVersion}
+                restoreLoading={versionLoading}
+                restoreDisabled={disabled || versionLoading}
               >
                 {version.isLatest && hasEdited && !viewAsUserId && (
                   <SaveVersionPanel
@@ -380,54 +392,15 @@ const VersionHistoryPanel: React.FunctionComponent<
               isSelected={selectedVersion === INITIAL_VERSION_ID}
               onChange={onVersionChange}
               disabled={disabled}
-            />
-          </div>
-          <div className={moduleStyles.listFooter}>
-            {versionLoadError && (
-              <div className={classNames(moduleStyles.versionLoadError)}>
-                <Alert
-                  type="danger"
-                  text={lab2I18n.versionLoadFailure()}
-                  size="s"
-                />
-              </div>
-            )}
-            {versionLoading && (
-              <div className={classNames(moduleStyles.loadingVersionSpinner)}>
-                <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-      {!isLatestVersion(selectedVersion) && (
-        <div className={moduleStyles.footerPanel}>
-          <div className={moduleStyles.buttonContainer}>
-            <Button
-              text={commonI18n.cancel()}
-              size={'s'}
-              onClick={handleCancel}
-              disabled={
-                disabled || versionLoading || latestVersion === selectedVersion
+              showRestoreButton={
+                selectedVersion === INITIAL_VERSION_ID &&
+                latestVersion !== INITIAL_VERSION_ID &&
+                !viewAsUserId
               }
-              className={moduleStyles.versionButton}
-              type={'secondary'}
-              color="gray"
+              restoreOnClick={restoreSelectedVersion}
+              restoreLoading={versionLoading}
+              restoreDisabled={disabled || versionLoading}
             />
-            {!viewAsUserId && (
-              <Button
-                text={commonI18n.restore()}
-                size={'s'}
-                onClick={restoreSelectedVersion}
-                disabled={
-                  disabled ||
-                  versionLoading ||
-                  latestVersion === selectedVersion
-                }
-                className={moduleStyles.versionButton}
-                type={'primary'}
-              />
-            )}
           </div>
         </div>
       )}
