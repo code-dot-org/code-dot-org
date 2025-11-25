@@ -1080,8 +1080,13 @@ class User < ApplicationRecord
   def can_change_own_user_type?
     if student? # upgrading to teacher
       # Requires ability to edit email because upgrade requires adding a cleartext email address.
-      # Students in sections cannot edit user type because teacher/school owns the student's data.
-      can_edit_email? && sections_as_student.none? {|section| section.participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student}
+      return false unless can_edit_email?
+
+      if Policies::User.personal_account?(self)
+        true
+      else
+        over_21?
+      end
     else # downgrading to student
       # Teachers with sections cannot downgrade because our validations require sections
       # to be taught by teachers.

@@ -1,15 +1,16 @@
 import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
-import {AppState, BinaryFiles} from '@excalidraw/excalidraw/types/types';
+import {AppState} from '@excalidraw/excalidraw/types/types';
 
 import {
   ExcalidrawSourceWithExternalFiles,
+  ExcalidrawFilesWithOptionalData,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 
 export interface SerializedExcalidrawState {
   elements: ExcalidrawElement[];
   appState: AppState;
-  files: BinaryFiles;
+  files: ExcalidrawFilesWithOptionalData;
 }
 
 export interface SketchlabSources extends ProjectSources {
