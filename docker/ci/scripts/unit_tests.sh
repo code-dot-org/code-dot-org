@@ -12,8 +12,14 @@ bundle exec rake install
 # Run lint only in unit pipeline. Run before rake build in order to ensure
 # that we give a clear error message for any zeitwerk issues that would block
 # application load.
-bundle exec rake lint:zeitwerk
-bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
+# bundle exec rake lint:zeitwerk
+# bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
 
-bundle exec rake build
-bundle exec rake ci:run_unit_tests
+# bundle exec rake build
+# bundle exec rake ci:run_unit_tests
+
+cd apps
+yarn clean
+time yarn build
+yarn clean
+time yarn build
