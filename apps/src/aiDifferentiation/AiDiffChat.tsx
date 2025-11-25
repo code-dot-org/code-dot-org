@@ -220,7 +220,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         inputText: prompt,
         isPreset,
         presetChipText,
-        ...(localThreadId === 0 ? {context} : {}),
+        context,
         ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
       });
 

@@ -111,7 +111,7 @@ type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
   dataURL?: DataURL;
 };
 
-type ExcalidrawFilesWithOptionalData = Record<
+export type ExcalidrawFilesWithOptionalData = Record<
   ExcalidrawElement['id'],
   ExcalidrawFileWithOptionalData
 >;

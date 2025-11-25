@@ -9,8 +9,7 @@
 }
 
 .message {
-  margin: 20px;
-  font-size: 16px;
+  margin: 0.625rem 0.625rem 0;
 }
 
 .listContainer {
@@ -46,44 +45,8 @@
   }
 }
 
-.listFooter {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  gap: 0.25rem;
-  margin-right: 0.625rem;
-}
-
 .loadingVersionSpinner {
   font-size: 32px;
   text-align: center;
   margin-right: 0.75rem;
-}
-
-.versionLoadError {
-  font-size: 14px;
-}
-
-.buttonContainer {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.625rem;
-  gap: 0.5rem;
-  background-color: var(--background-neutral-secondary);
-  border-top: variables.$default-border;
-}
-
-.versionButton {
-  width: 100%;
-  height: 32px;
-  box-sizing: border-box;
-}
-
-.leftButton {
-  margin-right: auto;
-}
-
-.rightButton {
-  margin-left: auto;
 }
