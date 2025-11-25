@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import React from 'react';
 
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -45,6 +45,14 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     hasMatchedPersona: null,
     isLoading: true,
   });
+  const [
+    hasDismissedPersonalizationAlert,
+    setHasDismissedPersonalizationAlert,
+  ] = React.useState<boolean>(false);
+  const [
+    isLoadingPersonalizationAlertStatus,
+    setIsLoadingPersonalizationAlertStatus,
+  ] = React.useState<boolean>(true);
 
   const dispatch = useAppDispatch();
 
@@ -62,6 +70,23 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
     dispatch(asyncLoadCoteacherInvite());
+
+    // Fetch personalization alert dismissal status
+    const fetchPersonalizationStatus = async () => {
+      try {
+        const userPreferences = new UserPreferences();
+        const hasDismissed =
+          await userPreferences.getHasDismissedPersonalizationAlert();
+        setHasDismissedPersonalizationAlert(hasDismissed);
+      } catch (error) {
+        console.error('Error fetching personalization alert status:', error);
+        setHasDismissedPersonalizationAlert(false);
+      } finally {
+        setIsLoadingPersonalizationAlertStatus(false);
+      }
+    };
+
+    fetchPersonalizationStatus();
 
     // Fetch teaching profile data
     const fetchTeachingProfileData = async () => {
@@ -84,7 +109,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     fetchTeachingProfileData();
   }, [dispatch]);
 
-  const shouldShowPersonalizationAlert = React.useMemo(() => {
+  const hasNotYetAnsweredPersonalizationQuestions = React.useMemo(() => {
     // Don't show while loading
     if (personaData.isLoading) {
       return false;
@@ -93,10 +118,29 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     return personaData.hasMatchedPersona === false;
   }, [personaData]);
 
-  React.useEffect(() => {
-    dispatch(asyncLoadTeacherHomepageSectionData());
-    dispatch(asyncLoadCoteacherInvite());
-  }, [dispatch]);
+  const shouldShowPersonalizationAlert = React.useMemo(() => {
+    // Don't show if still loading data
+    if (personaData.isLoading || isLoadingPersonalizationAlertStatus) {
+      return false;
+    }
+
+    // Don't show if user has already dismissed the alert
+    if (hasDismissedPersonalizationAlert) {
+      return false;
+    }
+
+    // Don't show if user hasn't answered personalization questions yet
+    if (!hasNotYetAnsweredPersonalizationQuestions) {
+      return false;
+    }
+
+    return true;
+  }, [
+    personaData.isLoading,
+    isLoadingPersonalizationAlertStatus,
+    hasDismissedPersonalizationAlert,
+    hasNotYetAnsweredPersonalizationQuestions,
+  ]);
 
   React.useEffect(() => {
     // Send one analytics event when a teacher logs in. Use session storage to determine
@@ -150,6 +194,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     setSelectedArchiveToggle(value);
   };
 
+  const handleAlertClose = () => {
+    setHasDismissedPersonalizationAlert(true);
+    new UserPreferences().setHasDismissedPersonalizationAlert(true);
+  };
+
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
@@ -174,6 +223,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                   text: i18n.personalizationLinkText(),
                   href: '/users/personalization_information',
                 }}
+                onClose={handleAlertClose}
               />
             )}
             <Header
