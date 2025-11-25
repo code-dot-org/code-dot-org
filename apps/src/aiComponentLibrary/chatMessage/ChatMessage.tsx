@@ -21,6 +21,7 @@ interface ChatMessageProps {
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
   isAiTutorVersion?: boolean;
+  isLastMessage?: boolean;
 }
 
 /*
@@ -41,6 +42,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   isTA,
   messageStyle = 'default',
   isAiTutorVersion = false,
+  isLastMessage = false,
 }) => {
   const aiTutorVersionFiles = useAppSelector(
     state => state.weblab2.aiTutorVersionFiles
@@ -97,7 +99,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                   rehypeMap={rehypeMap}
                   openExternalLinksInNewTab
                 />
-                {isAiTutorVersion && aiTutorVersionFiles && (
+                {isAiTutorVersion && isLastMessage && aiTutorVersionFiles && (
                   <AiTutorVersionActions files={aiTutorVersionFiles} />
                 )}
               </div>
