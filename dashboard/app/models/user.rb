@@ -220,6 +220,7 @@ class User < ApplicationRecord
     roster_synced
     educator_role
     signup_sources_tracking
+    has_dismissed_personalization_alert
   )
 
   attr_accessor(

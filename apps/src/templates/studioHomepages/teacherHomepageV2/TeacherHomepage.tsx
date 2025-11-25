@@ -1,6 +1,8 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import React from 'react';
 
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -36,6 +38,22 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
 
+  const [personaData, setPersonaData] = React.useState<{
+    hasMatchedPersona: boolean | null;
+    isLoading: boolean;
+  }>({
+    hasMatchedPersona: null,
+    isLoading: true,
+  });
+  const [
+    hasDismissedPersonalizationAlert,
+    setHasDismissedPersonalizationAlert,
+  ] = React.useState<boolean>(false);
+  const [
+    isLoadingPersonalizationAlertStatus,
+    setIsLoadingPersonalizationAlertStatus,
+  ] = React.useState<boolean>(true);
+
   const dispatch = useAppDispatch();
 
   const [CAPmodalOpen, setCAPModalOpen] = React.useState(false);
@@ -52,7 +70,77 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
     dispatch(asyncLoadCoteacherInvite());
+
+    // Fetch personalization alert dismissal status
+    const fetchPersonalizationStatus = async () => {
+      try {
+        const userPreferences = new UserPreferences();
+        const hasDismissed =
+          await userPreferences.getHasDismissedPersonalizationAlert();
+        setHasDismissedPersonalizationAlert(hasDismissed);
+      } catch (error) {
+        console.error('Error fetching personalization alert status:', error);
+        setHasDismissedPersonalizationAlert(false);
+      } finally {
+        setIsLoadingPersonalizationAlertStatus(false);
+      }
+    };
+
+    fetchPersonalizationStatus();
+
+    // Fetch teaching profile data
+    const fetchTeachingProfileData = async () => {
+      try {
+        const response = await fetch('/teaching_profile_data');
+        const data = await response.json();
+        setPersonaData({
+          hasMatchedPersona: !!data.data.matchedPersona,
+          isLoading: false,
+        });
+      } catch (error) {
+        console.error('Error fetching teaching profile data:', error);
+        setPersonaData({
+          hasMatchedPersona: false,
+          isLoading: false,
+        });
+      }
+    };
+
+    fetchTeachingProfileData();
   }, [dispatch]);
+
+  const needsToAnswerPersonalizationQuestions = React.useMemo(() => {
+    // Don't show while loading
+    if (personaData.isLoading) {
+      return false;
+    }
+    // Show alert only when hasMatchedPersona is explicitly false
+    return personaData.hasMatchedPersona === false;
+  }, [personaData]);
+
+  const shouldShowPersonalizationAlert = React.useMemo(() => {
+    // Don't show if still loading data
+    if (personaData.isLoading || isLoadingPersonalizationAlertStatus) {
+      return false;
+    }
+
+    // Don't show if user has already dismissed the alert
+    if (hasDismissedPersonalizationAlert) {
+      return false;
+    }
+
+    // Don't show if user has answered personalization questions
+    if (!needsToAnswerPersonalizationQuestions) {
+      return false;
+    }
+
+    return true;
+  }, [
+    personaData.isLoading,
+    isLoadingPersonalizationAlertStatus,
+    hasDismissedPersonalizationAlert,
+    needsToAnswerPersonalizationQuestions,
+  ]);
 
   React.useEffect(() => {
     // Send one analytics event when a teacher logs in. Use session storage to determine
@@ -106,6 +194,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     setSelectedArchiveToggle(value);
   };
 
+  const handleAlertClose = () => {
+    setHasDismissedPersonalizationAlert(true);
+    new UserPreferences().setHasDismissedPersonalizationAlert(true);
+  };
+
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
@@ -116,6 +209,23 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
         </Typography>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
+            {shouldShowPersonalizationAlert && (
+              <Alert
+                aria-labelledby="feedback-banner-title"
+                showIcon={true}
+                className={styles.notificationBanner}
+                icon={{
+                  iconName: 'user-circle',
+                }}
+                type={'primary'}
+                text={i18n.personalizationInvitation()}
+                link={{
+                  text: i18n.personalizationLinkText(),
+                  href: '/users/personalization_information',
+                }}
+                onClose={handleAlertClose}
+              />
+            )}
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
