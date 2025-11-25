@@ -49,7 +49,9 @@
   }
 }
 
-.collapseButton {
+/* Repeating the class name to increase
+specificity to override DSCO styles */
+.collapseButton.collapseButton {
   margin-inline-start: 0.75rem;
   background: var(--background-neutral-primary);
   position: relative;
