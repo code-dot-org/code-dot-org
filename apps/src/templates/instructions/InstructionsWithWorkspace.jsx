@@ -30,6 +30,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
     labType: PropTypes.string,
+    aiTutorEnabledForPilot: PropTypes.bool.isRequired,
   };
 
   // only used so that we can rerender when resized
@@ -111,14 +112,10 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       workspaceStyle,
       instructionsHeight,
       labType,
+      aiTutorEnabledForPilot,
       children,
     } = this.props;
 
-    // user is in ai tutor pilot
-    const aiTutorAvailableForPilot =
-      window?.appOptions?.aiTutorEnabledForPilot ?? false;
-
-    // level property says ai tutor is available
     const aiTutorAvailableForLevel =
       window?.appOptions?.level?.aiTutorAvailable ?? false;
 
@@ -127,7 +124,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       (experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR) ||
         shouldShowAiTutor({
           appName: labType,
-          tutorPilot: aiTutorAvailableForPilot,
+          tutorPilot: aiTutorEnabledForPilot,
           tutorLevel: aiTutorAvailableForLevel,
         }));
 
@@ -169,6 +166,7 @@ export default connect(
   state => ({
     instructionsHeight: state.instructions.renderedHeight,
     labType: state.pageConstants.appType,
+    aiTutorEnabledForPilot: state.currentUser.aiTutorEnabledForPilot,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {

@@ -327,6 +327,7 @@ export default function currentUser(state = initialState, action) {
       educator_role,
       sharing_disabled,
       has_seen_homepage_welcome,
+      ai_tutor_enabled_for_pilot,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -376,6 +377,7 @@ export default function currentUser(state = initialState, action) {
       userCreatedAt: created_at,
       userSharingDisabled: sharing_disabled,
       hasSeenHomepageWelcome: has_seen_homepage_welcome,
+      aiTutorEnabledForPilot: ai_tutor_enabled_for_pilot,
     };
   }
 

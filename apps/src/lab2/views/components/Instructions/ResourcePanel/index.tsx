@@ -11,7 +11,6 @@ import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
-import {getAiTutorEnabledForPilot} from '@cdo/apps/lab2/projects/utils';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
@@ -145,6 +144,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const floatingPanelRef = useRef<HTMLDivElement | null>(null);
   const tabContentRefs = useRef<{[key in Tabs]?: HTMLDivElement | null}>({});
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
+  const aiTutorEnabledForPilot = useAppSelector(
+    state => state.currentUser.aiTutorEnabledForPilot
+  );
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
@@ -178,7 +180,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const aiTutorVisible =
     shouldShowAiTutor({
       appName,
-      tutorPilot: getAiTutorEnabledForPilot(),
+      tutorPilot: aiTutorEnabledForPilot,
       tutorLevel: levelProperties.aiTutorAvailable,
     }) ||
     queryParams('show-ai-tutor2') === 'true' ||

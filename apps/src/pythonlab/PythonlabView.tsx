@@ -15,10 +15,7 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import {
-  getAiTutorEnabledForPilot,
-  getAppOptionsEditBlocks,
-} from '@cdo/apps/lab2/projects/utils';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -115,12 +112,15 @@ const PythonlabView: React.FunctionComponent<
   );
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+  const aiTutorEnabledForPilot = useAppSelector(
+    state => state.currentUser.aiTutorEnabledForPilot
+  );
 
   const hasSource = !!source;
 
   const isAiTutorEnabled =
     shouldShowAiTutor({
-      tutorPilot: getAiTutorEnabledForPilot(),
+      tutorPilot: aiTutorEnabledForPilot,
       appName: levelProperties.appName,
       tutorLevel: levelProperties.aiTutorAvailable,
     }) ||
