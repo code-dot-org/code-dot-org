@@ -53,7 +53,7 @@ class DCDOBase < DynamicConfigBase
       'teacher-homepage-v2-announcement': DCDO.get('teacher-homepage-v2-announcement', false),
       'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
       # Enabled locales for browser text to speech. Set to an empty array to disable all languages, or true to enable all.
-      'browser-tts-button-enabled-locales': DCDO.get('browser-tts-button-enabled-locales', ['en-US']),
+      'browser-tts-button-enabled-locales': DCDO.get('browser-tts-button-enabled-locales', ['en-US', 'en']),
       'lab2-submit-project-enabled': DCDO.get('lab2-submit-project-enabled', true),
       'cdo-blockly-usage': DCDO.get('cdo-blockly-usage', false),
       'ai-dancer-head-crop': DCDO.get('ai-dancer-head-crop', false),
