@@ -1,6 +1,4 @@
 require 'cdo/honeybadger'
-require_relative 'concerns/active_job_metrics'
-require_relative 'concerns/active_job_reporting'
 
 # This class is used to enqueue the delivery of emails through ActiveJob.
 #

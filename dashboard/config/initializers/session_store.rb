@@ -1,6 +1,5 @@
 require 'connection_pool'
 require 'cdo/cookie_helpers'
-require_relative '../../lib/middlewares/redis_session_store'
 
 session_cookie_key = environment_specific_cookie_name('_learn_session')
 Dashboard::Application.config.session_store Middlewares::RedisSessionStore,
