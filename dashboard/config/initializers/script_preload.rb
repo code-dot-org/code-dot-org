@@ -1,8 +1,6 @@
 # Preload script cache before application fork.
 # This speeds up load time of new Unicorn child worker processes
 # and Spring application preloader (Rails console, unit tests).
-require_relative '../../app/models/unit'
-require_relative '../../app/models/unit_group'
 
 # Skip if this is running a Rake task (e.g. rake db:setup) or when caching is disabled
 if File.basename($0) != 'rake' &&
