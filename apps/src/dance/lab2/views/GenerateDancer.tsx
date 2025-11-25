@@ -181,7 +181,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     };
 
     fetchAdlib();
-  }, [adlibs, aiGenerateState, getInitialChoices]);
+  }, [aiGenerateState]);
 
   useEffect(() => {
     if (adlibs && currentSources) {
