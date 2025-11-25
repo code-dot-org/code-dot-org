@@ -37,20 +37,13 @@ export const acceptAiTutorVersion = createAsyncThunk<
   const source = state.lab2Project.projectSources?.source as MultiFileSource;
 
   // Add accept notification.
-  const filesList = files
-    .map(
-      file =>
-        `${file.name} (${file.isAiTutorVersionUpdated ? 'Updated' : 'Created'}`
-    )
-    .join('\n');
   const notification: Notification = {
     timestamp: Date.now(),
     removeId: getNewRemoveId(),
-    text: `You accepted AI Tutor's changes.\nFiles: ${filesList}`,
-    notificationType: 'success',
+    text: "You accepted AI Tutor's changes.",
+    notificationType: 'aiTutorVersionActionAccept',
     includeInChatHistory: true,
-    hideTimestamp: true,
-    hideCloseButton: true,
+    files: files,
   };
   thunkAPI.dispatch(addChatEvent(notification));
 
@@ -89,20 +82,13 @@ export const rejectAiTutorVersion = createAsyncThunk<
   const source = state.lab2Project.projectSources?.source as MultiFileSource;
 
   // Add reject notification.
-  const filesList = files
-    .map(
-      file =>
-        `${file.name} (${file.isAiTutorVersionUpdated ? 'Update' : 'New'})`
-    )
-    .join('\n');
   const notification: Notification = {
     timestamp: Date.now(),
     removeId: getNewRemoveId(),
-    text: `You rejected AI Tutor's changes.\nFiles: ${filesList}`,
-    notificationType: 'error',
+    text: "You rejected AI Tutor's changes.",
+    notificationType: 'aiTutorVersionActionReject',
     includeInChatHistory: true,
-    hideTimestamp: true,
-    hideCloseButton: true,
+    files: files,
   };
   thunkAPI.dispatch(addChatEvent(notification));
 

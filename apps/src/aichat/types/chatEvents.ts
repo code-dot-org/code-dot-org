@@ -1,4 +1,5 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {ProjectFile} from '@cdo/apps/lab2/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
@@ -85,10 +86,14 @@ export interface Notification extends BaseChatEvent {
   /** ID used for removing from this event from the student's chat workspace. */
   removeId: number;
   text: string;
-  notificationType: 'permissionsError' | 'error' | 'success';
+  notificationType:
+    | 'permissionsError'
+    | 'error'
+    | 'success'
+    | 'aiTutorVersionActionAccept'
+    | 'aiTutorVersionActionReject';
   includeInChatHistory?: boolean;
-  hideTimestamp?: boolean;
-  hideCloseButton?: boolean;
+  files?: ProjectFile[];
 }
 
 /** All chat events displayed in the chat workspace must be one of these types. */

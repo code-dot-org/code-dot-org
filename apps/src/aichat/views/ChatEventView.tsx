@@ -2,6 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React, {forwardRef, memo} from 'react';
 
+import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -116,26 +117,41 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
     }
 
     if (isNotification(event)) {
-      const {
-        removeId,
-        text,
-        notificationType,
-        timestamp,
-        hideTimestamp,
-        hideCloseButton,
-      } = event;
+      const {removeId, text, notificationType, files, timestamp} = event;
+
+      // Use special notification component for AI tutor version actions
+      if (
+        notificationType === 'aiTutorVersionActionAccept' ||
+        notificationType === 'aiTutorVersionActionReject'
+      ) {
+        return (
+          <AiTutorVersionActionNotification
+            text={text}
+            type={
+              notificationType === 'aiTutorVersionActionAccept'
+                ? 'accept'
+                : 'reject'
+            }
+            ref={ref}
+            tabIndex={tabIndex}
+            onKeyDown={onKeyDown}
+            aria-label={`Notification: ${text}`}
+            className={styles.chatMessageOutline}
+            files={files}
+          />
+        );
+      }
+
       return (
         <Alert
-          text={`${text} ${
-            hideTimestamp ? '' : timestampToLocalTime(timestamp)
-          }`}
+          text={`${text} ${timestampToLocalTime(timestamp)}`}
           type={
             ['error', 'permissionsError'].includes(notificationType)
               ? 'danger'
               : 'success'
           }
           onClose={
-            isTeacherView || hideCloseButton
+            isTeacherView
               ? undefined
               : () => dispatch(removeUpdateMessage(removeId))
           }
