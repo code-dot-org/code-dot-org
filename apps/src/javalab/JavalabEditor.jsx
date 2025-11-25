@@ -437,7 +437,7 @@ class JavalabEditor extends React.Component {
       filename.substring(0, filename.indexOf('.java')).includes('.')
     ) {
       // Java class names cannot contain periods
-      errorMessage = javalabMsg.invalidJavaFilename();
+      errorMessage = 'Java file names cannot contain periods.';
     }
 
     if (errorMessage) {
