@@ -330,16 +330,17 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 20.04
-     * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
+     * **Step 1: Choose AMI**: Select Ubuntu Server 22.04
+     * **Step 2: Choose instance type**: Choose at least 32 GiB memory (e.g. `t3.2xlarge`)
      * **Step 3: Configure Instance**: 
        * Set IAM Instance Profile to `DeveloperEC2`
        * Set VPC to `vpc-a48462c3`
-     * **Step 4: Storage**: Increase storage to 100GiB
+     * **Step 4: Storage**: Increase storage to 100GiB of type `gp3`
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
   1. Optionally, update your ssh config so that you can connect using a shorter command:
      * move your private key to `~/.ssh/<keyname>.pem`
+     * fix key permissions with `chmod 600 ~/.ssh/<keyname>.pem`
      * add the following lines to ~/.ssh/config:     
        ```
        Host yourname-ec2

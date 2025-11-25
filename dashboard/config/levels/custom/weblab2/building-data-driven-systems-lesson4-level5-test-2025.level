@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-21T04:54:35.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "building-data-driven-systems-lesson4-level5_6_template-test-2025",
+    "long_instructions": "## From Arrays to Object\r\n\r\n1. **Create the Object**\r\n   Look at the arrays at the top. Create a new `const` variable named `dessert` that stores the data for the \"Brownie\" (index 0) using the properties `name`, `flavor`, and `isFrozen`.\r\n\r\n2. **Update the Render Function**\r\n   Inside the `render` function, modify the code to update the `.textContent` of the HTML elements `#dessertName` and `#dessertFlavor` using your new object properties.\r\n\r\n3. **Handle the Boolean**\r\n   Inside `render`, update the `if/else` statement to check `dessert.isFrozen`.\r\n   * If it is `true`, set `#dessertFrozen` text to \"Yes\".\r\n   * Otherwise, set it to \"No\".\r\n\r\n4. **Test Your Code**\r\n   Call the `render()` function at the bottom of your file. The card should display \"Brownie\", \"Chocolate\", and \"No\".",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-21 04:58:28 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Weblab2>

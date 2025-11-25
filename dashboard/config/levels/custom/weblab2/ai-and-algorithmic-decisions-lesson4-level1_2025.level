@@ -1,0 +1,66 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-12T20:51:10.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <title>Budget Tracker (L4–L1)</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <script defer src=\"script.js\"></script>\n  </head>\n<body>\n  <header class=\"site-header\">\n    <h1>Budget Tracker</h1>\n    <p class=\"lede\">Simple app to add up expenses.</p>\n  </header>\n\n  <main class=\"container\">\n    <section class=\"card\">\n      <div class=\"row\">\n        <button id=\"add5\" class=\"btn\">Add $5</button>\n        <button id=\"add10\" class=\"btn\">Add $10</button>\n        <button id=\"clearBtn\" class=\"btn btn-secondary\">Clear</button>\n        <button id=\"msgBtn\" class=\"btn btn-ghost\">Show Message</button>\n      </div>\n\n      <div class=\"display\">\n        <div class=\"label\">Total</div>\n        <div id=\"totalDisplay\" class=\"value\">$0.00</div>\n      </div>\n\n      <p id=\"hint\" class=\"hint\" aria-live=\"polite\"></p>\n    </section>\n  </main>\n\n  <footer class=\"site-footer\">\n    <small>Writing Reusable Functions</small>\n  </footer>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": ":root{\n  --bg:#f7f8ff; \n  --panel:#ffffff; \n  --ink:#0e1328; \n  --muted:#6b7280;\n  --accent:#4f46e5; \n  --accent-ink:#eef2ff; \n  --ring:rgba(79,70,229,.25);\n}\n\n*{\n  box-sizing:border-box\n}\n\nbody{\n  margin:0; \n  font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Arial;\n  color:var(--ink); \n  background:linear-gradient(180deg,#f7f8ff,#eff3ff);\n}\n\n.site-header,.site-footer{ \n  text-align:center; \n  padding:20px 12px }\n.site-header h1{ margin:.25rem 0 \n}\n\n.lede{ \n  margin:0; \n  color:var(--muted) \n}\n\n.container{ \n  max-width:760px; \n  margin:0 auto; \n  padding:16px \n}\n\n.card{\n  background:var(--panel); \n  border:1px solid #e5e7eb; \n  border-radius:14px;\n  padding:18px; \n  box-shadow:0 8px 28px rgba(16,20,40,.06)\n}\n\n.row{ \n  display:flex; \n  gap:10px; \n  flex-wrap:wrap; \n  margin-bottom:14px \n}\n\n.btn{\n  border:1px solid #d1d5db; \n  background:#fff; \n  color:var(--ink);\n  padding:10px 14px; \n  border-radius:10px; \n  cursor:pointer; \n  font-weight:600\n}\n\n.btn:hover{ \n  box-shadow:0 0 0 4px var(--ring) \n}\n\n.btn-secondary{ \n  background:#111827; \n  color:#fff; \n  border-color:#111827 \n}\n\n.btn-ghost{ \n  background:#eef2ff; \n  border-color:#c7d2fe; \n  color:#3730a3 \n}\n\n.display{\n  display:flex; \n  align-items:baseline; \n  gap:10px; \n  margin-top:4px\n}\n\n.display .label{ \n  color:var(--muted) \n}\n\n.display .value{ \n  font-size:clamp(24px,4vw,36px); font-weight:800 \n}\n\n.hint{ \n  color:var(--muted); \n  min-height:1.25rem; \n  margin:.5rem 0 0 \n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// variable for total amount\nlet total = 0;\n\n// references to display elements and buttons\nconst totalDisplay = document.getElementById(\"totalDisplay\");\nconst hint = document.getElementById(\"hint\");\n\nconst add5 = document.getElementById(\"add5\");\nconst add10 = document.getElementById(\"add10\");\nconst clearBtn = document.getElementById(\"clearBtn\");\nconst msgBtn = document.getElementById(\"msgBtn\");\n\n// arrow function to update display\nconst updateTotal = () => {\n  totalDisplay.textContent = \"$\" + total.toFixed(2);\n  hint.textContent = \"\";\n};\n\n// arrow functions for button actions\nconst doIt = () => {\n  total += 5;\n  updateTotal();\n};\n\nconst f1 = () => {\n  total += 10;\n  updateTotal();\n};\n\nconst clr = () => {\n  total = 0;\n  updateTotal();\n};\n\nconst x = () => {\n  hint.textContent = 'Tip: \"Never spend your money before you have it.\" — Thomas Jefferson';\n};\n\n// connects each button to its function\nadd5.addEventListener(\"click\", doIt);\nadd10.addEventListener(\"click\", f1);\nclearBtn.addEventListener(\"click\", clr);\nmsgBtn.addEventListener(\"click\", x);\n\n// initial display\nupdateTotal();\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "long_instructions": "## What's in a name?\r\n\r\n1. **Test** each button. With a partner, observe and discuss what each button does.\r\n2. **Replace** each vague function name in `script.js` with a **verb-first** specific name, like **calculateTip**.\r\n3. **Add a comment** above each function explaining what it does in one short sentence. \r\n4. (Optional) **Chat with AI** to rate the clarity of your function names and suggest alternates if needed. ",
+    "encrypted_exemplar_sources": "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\nko9YbYxU/w==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-12T20:51:10.047+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson4-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson4-level1-test-2025\"},{\"changed_at\":\"2025-11-12 20:54:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

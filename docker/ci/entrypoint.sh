@@ -3,13 +3,16 @@
 # Run https://github.com/boxboat/fixuid allow writes to bind-mounted code-dot-org directory
 eval $( fixuid )
 
-cd $HOME/code-dot-org
-
-# Need to change ownership of volume mounts which are not bind-mounted to the uid/gid after fixuid is applied
-sudo chown -R $USER:$GROUP \
-        $HOME/.rbenv \
-        $HOME/.config \
-        $HOME/.cache
+# Only run local development setup when FIXUID is set (see ui-tests-compose.yml).
+# In CI, Drone handles the working directory and file ownership, and skipping
+# these steps saves valuable time.
+if [ -n "$FIXUID" ]; then
+    cd $HOME/code-dot-org
+    sudo chown -R $USER:$GROUP \
+            $HOME/.rbenv \
+            $HOME/.config \
+            $HOME/.cache
+fi
 
 eval "$(rbenv init -)"
 

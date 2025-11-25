@@ -53,14 +53,6 @@
   box-sizing: border-box;
 }
 
-.levelViewPreviewIframeHeight {
-  height: calc(100vh - 120px); // Account for header and some padding
-}
-
-.fullScreenPreviewIframeHeight {
-  height: 100%;
-}
-
 .desktopPreviewIframe {
   display: flex;
   align-items: flex-start;

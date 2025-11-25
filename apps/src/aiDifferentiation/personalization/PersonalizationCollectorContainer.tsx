@@ -3,6 +3,8 @@ import React from 'react';
 
 import PersonalizationInterstitial from '@cdo/apps/aiDifferentiation/personalization/components/personalizationInterstitial/PersonalizationInterstitial';
 import {matchTeachingProfile} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {useTeachingProfileData} from './../hooks/useTeachingProfileData';
@@ -40,7 +42,16 @@ const PersonalizationCollectorContainer: React.FC = () => {
     useTeachingProfileData();
 
   const onCarouselPress = async (direction: number) => {
-    if (direction === NEXT) {
+    if (
+      direction === NEXT &&
+      questionsNumber < PERSONALIZATION_PROMPTS.length - 1
+    ) {
+      if (!showInterstitialState) {
+        analyticsReporter.sendEvent(EVENTS.PERSONALIZATION_ANSWER_SUBMITTED, {
+          question: PERSONALIZATION_PROMPTS[questionsNumber].question,
+          questionNumber: questionsNumber + 1,
+        });
+      }
       setIsSaving(true);
       try {
         await saveTeachingProfileData(personalizationData);
@@ -92,6 +103,12 @@ const PersonalizationCollectorContainer: React.FC = () => {
             };
             await saveTeachingProfileData(updatedData);
           }
+
+          analyticsReporter.sendEvent(EVENTS.PERSONALIZATION_PERSONA_MATCHED, {
+            persona: profileMatch?.matchingProfile ?? TEACHING_STYLES[0].name,
+          });
+
+          setShowResults(true);
         } catch (error) {
           console.error('Error in final step:', error);
           setShowResults(true);

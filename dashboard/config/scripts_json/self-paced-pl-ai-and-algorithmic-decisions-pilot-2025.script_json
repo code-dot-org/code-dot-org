@@ -4,12 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - AIF",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-07 15:35:49 UTC",
-    "hide_within_course": true,
+    "serialized_at": "2025-11-17 15:31:45 UTC",
+    "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +39,7 @@
   "lessons": [
     {
       "key": "Teaching AI and Algorithmic Thinking",
-      "name": "[PILOT] Teaching AI and Algorithmic Thinking",
+      "name": "Teaching AI and Algorithmic Thinking",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -140,6 +145,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U2-Intro_1_pilot-2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -162,6 +170,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U2-overview_2_pilot-2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -184,6 +195,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U2-Instructional-commitments_3_pilot-2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -206,6 +220,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U2-projectOverview_5_pilot-2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -228,6 +245,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2- U2-web-interactivity-5_pilot-2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -250,6 +270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U2-event-response-6_pilot-2025"
+        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -272,6 +295,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U2-DOM-7_pilot-2025"
+        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -294,6 +320,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U2-javascript-8_pilot-2025"
+        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -316,6 +345,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-onebutton-9_pilot-2025"
+        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -338,6 +370,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U2-buttonChoice-10_pilot-2025"
+        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -360,6 +395,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U2-CFU-vocab-11_pilot-2025"
+        ],
         "progression": "Event-based Programming"
       },
       "bonus": false,
@@ -382,6 +420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-variables-12_pilot-2025"
+        ],
         "progression": "Variables in JavaScript"
       },
       "bonus": false,
@@ -404,6 +445,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-debug-variable-lab-13_pilot-2025"
+        ],
         "progression": "Variables in JavaScript"
       },
       "bonus": false,
@@ -426,6 +470,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-functions-14_pilot-2025"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -448,6 +495,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-identify-functions-15_pilot-2025"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -470,6 +520,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U2-functions-Lab-16_pilot-2025"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -492,6 +545,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-arrowfunction-17_pilot-2025"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -514,6 +570,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-functions-practice-lab-18_pilot-2025"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -536,6 +595,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-function-paramenter-lab-20_pilot-2025"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -558,6 +620,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2- U2-teacher-tips-21_pilot-2025"
+        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -580,6 +645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-if-else-22_pilot-2025"
+        ],
         "progression": "Conditionals"
       },
       "bonus": false,
@@ -602,6 +670,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U2-if-else-flowchart-23_pilot-2025"
+        ],
         "progression": "Conditionals"
       },
       "bonus": false,
@@ -624,6 +695,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-sketchlab_panels-23_pilot-2025"
+        ],
         "progression": "Conditionals"
       },
       "bonus": false,
@@ -646,6 +720,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-sketchtutorial-conditionals-23-2_pilot-2025"
+        ],
         "progression": "Conditionals"
       },
       "bonus": false,
@@ -668,6 +745,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-conditionals-lab-27_pilot-2025"
+        ],
         "progression": "Conditionals"
       },
       "bonus": false,
@@ -690,6 +770,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-conditionals-CFU-28_pilot-2025"
+        ],
         "progression": "Conditionals"
       },
       "bonus": false,
@@ -712,6 +795,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-logic-27_pilot-2025"
+        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -734,6 +820,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-multi-flow-sketchlab-29_pilot-2025"
+        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -756,6 +845,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-u2-logic-lab-30_pilot-2025"
+        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -778,6 +870,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U2-finalproject-31_pilot-2025"
+        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -800,6 +895,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U2-lesson-info_pilot-2025"
+        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -822,6 +920,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U2-reflection-33_pilot-2025"
+        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,
@@ -844,6 +945,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U2_Closing-Cert-34_pilot-2025"
+        ],
         "progression": "Logic in Conditionals"
       },
       "bonus": false,

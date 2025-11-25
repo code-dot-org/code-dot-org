@@ -583,7 +583,7 @@ GEM
     mime-types-data (3.2023.0218.1)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.2)
+    mini_portile2 (2.8.9)
     mini_racer (0.8.0)
       libv8-node (~> 18.16.0.0)
     minitest (5.18.0)
@@ -629,8 +629,8 @@ GEM
     netrc (0.11.0)
     newrelic_rpm (8.16.0)
     nio4r (2.7.0)
-    nokogiri (1.14.3)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.18.10)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     oauth2 (2.0.9)
       faraday (>= 0.17.3, < 3.0)
@@ -1105,7 +1105,7 @@ DEPENDENCIES
   naturally
   net-http-persistent
   newrelic_rpm (~> 8.3)
-  nokogiri (>= 1.10.0)
+  nokogiri (~> 1.18.9)
   observer
   octokit
   oj (~> 3.10)

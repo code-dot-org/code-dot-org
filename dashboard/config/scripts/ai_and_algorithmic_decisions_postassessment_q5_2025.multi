@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q5_2025'
+
+question 'A movie-ticket app shows the number of seats left for each showtime. When someone buys a ticket, the number instantly drops by 1 on everyone\'s screen. What part of the program keeps track of and updates that number?'
+
+wrong 'A font setting that shrinks the text as seats fill up'
+wrong 'A comment in the code that reminds developers how many seats were available'
+wrong 'A server photo file that displays pictures of the seats'
+right 'A variable that stores the number of seats and changes whenever a ticket is sold'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+MARKDOWN

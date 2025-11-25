@@ -724,7 +724,7 @@ class LessonTest < ActiveSupport::TestCase
 
     script.seeded_from = Time.now.to_s
     assert_equal(
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_fs(:number)}/teacher-lesson-plans/Some-Verbose-Lesson-Name.pdf",
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_formatted_s(:number)}/teacher-lesson-plans/Some-Verbose-Lesson-Name.pdf",
       new_lesson.lesson_plan_pdf_url
     )
   end
@@ -736,7 +736,7 @@ class LessonTest < ActiveSupport::TestCase
 
     script.seeded_from = Time.now.to_s
     assert_equal(
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_fs(:number)}/student-lesson-plans/Some-Verbose-Lesson-Name-Student.pdf",
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_formatted_s(:number)}/student-lesson-plans/Some-Verbose-Lesson-Name-Student.pdf",
       new_lesson.student_lesson_plan_pdf_url
     )
   end

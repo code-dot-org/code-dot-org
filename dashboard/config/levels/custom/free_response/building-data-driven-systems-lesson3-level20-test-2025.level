@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-20T21:58:35.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Define the term in your own words. Use examples from the lesson to explain your thinking and take notes on anything that helps you remember how it works.\r\n",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Array Method",
+    "height": "200",
+    "placeholder": "enter response here...",
+    "teacher_markdown": "A successful response may include:\r\n- Describes an array method as a built-in command or tool used to work with arrays.\r\n- Explains that array methods can add, remove, or manipulate items in an array without rewriting it manually.\r\n- Gives examples of common array methods and what they do, such as:\r\n\t- pop() — removes the last item from a list\r\n\t- push() — adds an item to the end\r\n\t- shift() — removes the first item\r\n\t- unshift() — adds an item to the beginning\r\n- Demonstrates understanding with an example\r\n- Notes that these methods change how the array looks or behaves, and can help organize or update lists efficiently.\r\n- May include a visual or mental model (like boxes for list items being rearranged or changed)."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T21:58:35.384+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level6-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level6-test-2025\"},{\"changed_at\":\"2025-11-20 22:14:56 +0000\",\"changed\":[\"title\",\"teacher_markdown\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

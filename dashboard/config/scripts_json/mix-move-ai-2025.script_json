@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-07 00:05:16 UTC",
+    "serialized_at": "2025-11-20 21:08:34 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -47,7 +47,7 @@
       "relative_position": 1,
       "properties": {
         "background": "dark",
-        "overview": "In this 45-minute lesson, students explore how creativity, coding, and artificial intelligence (AI) work together to make music and dance. They’ll design a dancer, remix a song, and use code to choreograph moves to the beat. Along the way, students will learn basic coding ideas like sequencing, and AI ideas like prompting and iteration.\n\nStudents will see how AI can help spark new ideas rather than replace human creativity. They’ll also meet a professional who uses art, technology, and AI in their career helping students imagine themselves as creative tech makers.",
+        "overview": "In this 45-minute lesson, students explore how creativity, coding, and artificial intelligence (AI) work together to make music and dance. Learners of all ages get an introductory experience with AI and computer science in a safe, supportive environment. They’ll design a dancer, remix a song, and use code to choreograph moves to the beat. Along the way, students will learn basic coding ideas like sequencing, and AI ideas like prompting and iteration.\n\nStudents will see how AI can help spark new ideas rather than replace human creativity. They’ll also meet a professional who uses art, technology, and AI in their career helping students imagine themselves as creative tech makers.",
         "preparation": "- Test out Mix & Move with AI to ensure familiarity with the platform.\n- Review the introduction video and practice walking students through the steps to prompt AI and modify code.\n- Prepare discussion prompts that help students connect with the opportunities and risks of using AI.\n- *[Optional]* Find the resources you need to plan, implement, and celebrate the Hour of AI at your school [here](https://csforall.org/en-US/hour-of-ai/how-to/k-12educator)!",
         "student_overview": "In this 45-minute activity, you’ll use Code.org’s Mix & Move with AI to design your own dancer, mix music from artists like Sabrina Carpenter, Benson Boone, and Shakira, and code your own dance performance. You’ll learn how AI can help you create more while staying in control of your ideas. Explore key coding skills like sequencing and discover how creativity, technology, and AI come together to make something amazing."
       },
@@ -113,6 +113,19 @@
         "lesson_group.key": "",
         "script.name": "mix-move-ai-2025"
       }
+    },
+    {
+      "key": "1ff3400c-1d7d-4ff1-a72b-5467e7a3f0a0",
+      "position": 5,
+      "properties": {
+        "name": "Continue Learning "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ff3400c-1d7d-4ff1-a72b-5467e7a3f0a0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025"
+      }
     }
   ],
   "activity_sections": [
@@ -120,7 +133,7 @@
       "key": "cf72b6bf-dc37-4a88-b413-af014cf15508",
       "position": 1,
       "properties": {
-        "description": "Get started with our Self-Paced Professional Learning to explore the activity.\n\nFeel confident and prepared as you start teaching the lesson. Click here to start learning!",
+        "description": "Try out the student activity on your own or watch the [Teacher Prep Video](\thttps://www.youtube.com/watch?v=yZRBxIZrVSk) to preview the activity.\n\nCheck out the [Educator’s Guide](https://drive.google.com/file/d/1aS4cwFjks_Pd12a_aZDusj49QfdaHlTx/view?usp=sharing) for step-by-step instructions, differentiation suggestions, insights into AI under the hood, and links to the real-world tools used to develop this tutorial.",
         "tips": [
           {
             "type": "teachingTip",
@@ -198,8 +211,19 @@
       }
     },
     {
-      "key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b",
+      "key": "0e414a55-426e-43d3-a6bf-aa350ce8b9cf",
       "position": 4,
+      "properties": {
+        "description": " <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> This is a great time to engage students in a discussion about how AI creates images and what influences its results. \n- What did you notice about the AI-generated animals? \n- Did they always look the way you expected based on your prompt?\n- Since AI mostly learns from certain kinds of pictures or ideas, how might that affect the images it creates? \n- What could people do to help AI be fairer or show a wider variety of things?\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Help students recognize that AI doesn’t “think” like people do and that its surprising or “weird” results can reveal how it interprets prompts differently. Guide students to consider how gaps or patterns in AI’s training data might lead to results that seem unusual, incomplete, or even unfair."
+      },
+      "seeding_key": {
+        "activity_section.key": "0e414a55-426e-43d3-a6bf-aa350ce8b9cf",
+        "lesson_activity.key": "5471cfa4-2135-4972-aca6-c67c5aed326b"
+      }
+    },
+    {
+      "key": "0ebb25d3-4491-4eb0-95d3-c869958ce25b",
+      "position": 5,
       "properties": {
         "name": "Mix Your Music with AI",
         "progression_name": "Mix"
@@ -210,8 +234,19 @@
       }
     },
     {
+      "key": "c2dd109b-ef8a-416a-8f00-3d55ec0e6bc8",
+      "position": 6,
+      "properties": {
+        "description": " <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong>  This is an opportunity to pause and lead a class discussion about how AI can support creativity and efficiency, but also the importance of thinking critically about its limitations.\n- AI can help people write code or create things more quickly. \n- What are some good things about that? \n- What might the downsides of AI be? \n- What should people be careful of when using AI to do part of the work?\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students understand that while AI can make coding and creative work faster and easier, it can also make mistakes or miss the creator’s intent. Encourage them to think critically about when it’s helpful to use AI and when human creativity, problem-solving, and judgment are still essential."
+      },
+      "seeding_key": {
+        "activity_section.key": "c2dd109b-ef8a-416a-8f00-3d55ec0e6bc8",
+        "lesson_activity.key": "5471cfa4-2135-4972-aca6-c67c5aed326b"
+      }
+    },
+    {
       "key": "62c36a4f-8615-4d16-8f93-051d35b5739a",
-      "position": 5,
+      "position": 7,
       "properties": {
         "name": "Code Your Dance Moves with AI",
         "progression_name": "Move"
@@ -223,9 +258,15 @@
     },
     {
       "key": "57ea666f-c9f4-40f6-9b35-52c19de90ea4",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong>  Encourage students to click Finish when they’re done with their dance to get a link to share their projects.\n\nClicking Finish again will take students to their certificate of completion."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong>  Encourage students to click Finish when they’re done with their dance to get a link to share their projects.\n\nClicking Finish again will take students to their certificate of completion.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "The images and code in Mix & Move with AI were pre-generated using OpenAI’s GPT Image 1 and Google’s Gemini Flash 2.5 models respectively, then reviewed by the Code.org team to ensure they’re safe and appropriate for students. The tutorial uses pre-saved (pre-cached) images and code snippets rather than generating new ones live to simulate AI generation safely. Learn more about the process [here](link tbd)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "57ea666f-c9f4-40f6-9b35-52c19de90ea4",
@@ -247,6 +288,17 @@
       "seeding_key": {
         "activity_section.key": "0975eb14-bf16-4bec-8b26-3c6c85e9218e",
         "lesson_activity.key": "0aff64dc-3032-47f9-b417-6794a9ed3833"
+      }
+    },
+    {
+      "key": "667f117e-eb82-4c3a-a94f-ef9be252f83a",
+      "position": 1,
+      "properties": {
+        "description": "This activity is a great introduction to AI through the lens of music and dance.\n\nHere are a few options to continue learning more about the AI concepts introduced in this module. \n\n**Elementary:** \n- [How AI Makes Decisions](https://studio.code.org/courses/k5-ai-data-2024/units/1) Practice with data categorization\n- [AI for Oceans](https://studio.code.org/courses/oceans/units/1) Train and test a machine learning model\n\n**Middle School:**\n- [How AI Works](https://studio.code.org/courses/how-ai-works-2023/units/1) Explore AI technology and impact\n- [AI and Machine Learning](https://studio.code.org/courses/aiml-2025/units/1) Create machine learning with data\n\n**High School:**\n- [Computer Vision](https://studio.code.org/courses/computer-vision/units/1) Explore, design, and evaluate technology\n- [AI Foundations](https://studio.code.org/courses/artificial-intelligence-foundations-2025) Semester-long course discovering Python, data, and AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "667f117e-eb82-4c3a-a94f-ef9be252f83a",
+        "lesson_activity.key": "1ff3400c-1d7d-4ff1-a72b-5467e7a3f0a0"
       }
     }
   ],
@@ -774,6 +826,19 @@
   ],
   "resources": [
     {
+      "name": "Educator’s Guide",
+      "url": "https://drive.google.com/file/d/1aS4cwFjks_Pd12a_aZDusj49QfdaHlTx/view?usp=sharing",
+      "key": "educator_s_guide",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "educator_s_guide"
+      }
+    },
+    {
       "name": "Mix & Move Slides",
       "url": "https://docs.google.com/presentation/d/1q8aIlobDfMj6gcrqLqv2sQma_rKYw4jVMLIPJ8CJI0w/template/preview",
       "key": "mix_move_slides",
@@ -786,13 +851,38 @@
       "seeding_key": {
         "resource.key": "mix_move_slides"
       }
+    },
+    {
+      "name": "Teacher Prep Video ",
+      "url": "https://www.youtube.com/watch?v=yZRBxIZrVSk",
+      "key": "teacher_prep_video",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_prep_video"
+      }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "educator_s_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "mix_move_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "teacher_prep_video"
       }
     }
   ],

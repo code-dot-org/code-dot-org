@@ -192,7 +192,7 @@ gem 'haml', '~> 5.2.0'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
-gem 'nokogiri', '>= 1.10.0'
+gem 'nokogiri', '~> 1.18.9'
 
 gem 'highline', '~> 3.1.0'
 

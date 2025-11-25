@@ -19,6 +19,12 @@ const csf_prefixes = [
   '/courses/pre-express-2024',
   '/courses/k5-onlinepd-2024',
   '/courses/teaching-csf-2025',
+  '/courses/coursea-2024',
+  '/courses/courseb-2024',
+  '/courses/coursec-2024',
+  '/courses/coursed-2024',
+  '/courses/coursee-2024',
+  '/courses/coursef-2024',
 ];
 
 const donor_prefixes = [
@@ -31,6 +37,7 @@ const donor_prefixes = [
   '/courses/elementaryai-2024',
   '/courses/3-5gamedesign-2024',
   '/courses/elem-game-design-2024',
+  '/courses/mix-move-ai-2025',
 ];
 
 const aif_prefixes = [
@@ -57,6 +64,7 @@ const live = [
   '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
   '/courses/artificial-intelligence-foundations-2025/',
+  '/courses/mix-move-ai-2025',
 ];
 
 const experiments =
@@ -209,7 +217,7 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
     // Localization class.
     window.LocalizeLoader = new Promise((resolve, reject) => {
       script.onload = () => {
-        // Optional: Handle script load event
+        // Load the localize widget
         loadLocalize();
         resolve(window.Localize);
       };
@@ -218,6 +226,7 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
         reject();
       };
     });
+
     document.head.appendChild(script);
   }
 }
