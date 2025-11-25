@@ -5,16 +5,6 @@
   flex-direction: column;
   height: 100%;
   background-color: var(--background-color);
-
-  // Light theme colors
-  [data-theme='Light'] & {
-    --background-color: $white;
-  }
-
-  // Dark theme colors
-  [data-theme='Dark'] & {
-    --background-color: $black;
-  }
 }
 
 .themeToggle {

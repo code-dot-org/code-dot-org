@@ -1,4 +1,4 @@
-import {EditorState} from '@codemirror/state';
+import {Compartment, EditorState} from '@codemirror/state';
 import {EditorView} from '@codemirror/view';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
@@ -22,7 +22,6 @@ const Editor: React.FC<CodeDisplayProps> = ({code, theme}) => {
 
   // Compartment to control the theme
   const themeCompartment = useMemo(() => {
-    const {Compartment} = require('@codemirror/state');
     return new Compartment();
   }, []);
 
