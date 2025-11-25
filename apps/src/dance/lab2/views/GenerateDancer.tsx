@@ -101,6 +101,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const getInitialChoices = useCallback(
     (adlibsValue: AdlibsType) => {
       const initial: AdlibChoices = {};
+      let lastKeyCount = 0,
+        totalKeyCount = 0;
+
       if (adlibsValue) {
         const lastChoices = [
           ...(currentSources.generatedDancer?.choices || []),
@@ -111,6 +114,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           (key, index) => {
             const options = adlibsValue[adlibOption].options[key];
 
+            totalKeyCount++;
+
             if (
               options
                 .map(option => option.id)
@@ -118,6 +123,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             ) {
               // Use a value from the last saved dancer.
               initial[key] = lastChoices?.[index] || '';
+              lastKeyCount++;
             } else {
               // Select a random value.
               initial[key] = sample(options)?.id || '';
@@ -125,9 +131,19 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           }
         );
       }
-      return initial;
+
+      const existing = lastKeyCount !== 0 && lastKeyCount === totalKeyCount;
+
+      return {
+        initial,
+        existing,
+      };
     },
-    [adlibOption, currentSources.generatedDancer]
+    [
+      adlibOption,
+      currentSources.generatedDancer?.choices,
+      currentSources.generatedDancer?.choicesExtra,
+    ]
   );
 
   useEffect(() => {
@@ -159,7 +175,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
         });
       }
 
-      setAiGenerateState('none');
       setAdlibs(adlibsValue);
       setPromptText('');
       variantHistory.current = [];
@@ -170,7 +185,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   useEffect(() => {
     if (adlibs && currentSources) {
-      setAdlibChoices(getInitialChoices(adlibs));
+      const {initial, existing} = getInitialChoices(adlibs);
+      setAdlibChoices(initial);
+      if (existing) {
+        setAiGenerateState('reviewing');
+      } else {
+        setAiGenerateState('none');
+      }
     }
   }, [adlibs, currentSources, getInitialChoices]);
 

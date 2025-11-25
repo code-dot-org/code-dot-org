@@ -110,11 +110,18 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     adlibOption ? '' : DefaultPrompt
   );
 
+  const guideWidth =
+    aiGenerateState === 'edited'
+      ? 'narrow'
+      : aiGenerateState === 'playing'
+      ? 'very-narrow'
+      : 'normal';
+
   const cornerIcon =
     aiGenerateState === 'edited'
-      ? 'minimize'
-      : aiGenerateState === 'playing'
       ? 'maximize'
+      : aiGenerateState === 'playing'
+      ? 'minimize'
       : undefined;
 
   const onCornerIconClick = useCallback(() => {
@@ -282,6 +289,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       key={levelSpecificId}
       id={levelSpecificId}
       modal={modal}
+      width={guideWidth}
       cornerIcon={cornerIcon}
       onCornerIconClick={onCornerIconClick}
     >
@@ -484,6 +492,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           </div>
         </>
       )}
+
+      {aiGenerateState === 'playing' && <div>Keep playing!</div>}
+
       {/* Retain focus with a hidden button. */}
       {['generating', 'generated', 'listening', 'editing'].includes(
         aiGenerateState
