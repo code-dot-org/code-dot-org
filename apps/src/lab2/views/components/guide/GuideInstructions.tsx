@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
@@ -22,7 +23,8 @@ const GuideInstructions: React.FunctionComponent<GuideInstructionsProps> = ({
   hasRun,
   hasEdited,
 }) => {
-  const {longInstructions} = levelProperties;
+  const {longInstructions, offerBrowserTts} = levelProperties;
+  const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
 
   const levelSpecificId = `guide-instructions-${levelProperties.id}`;
 
@@ -37,6 +39,7 @@ const GuideInstructions: React.FunctionComponent<GuideInstructionsProps> = ({
         <MainInstructionsContent
           instructionsText={longInstructions}
           markdownClassName={styles.markdown}
+          showTts={showTts}
         />
       )}
 
