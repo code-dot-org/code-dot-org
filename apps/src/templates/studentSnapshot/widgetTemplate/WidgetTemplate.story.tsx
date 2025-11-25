@@ -105,6 +105,13 @@ Example grid setup (used in storybook):
         defaultValue: {summary: 'false'},
       },
     },
+    loading: {
+      control: 'boolean',
+      description: 'Whether to show loading spinner instead of content',
+      table: {
+        defaultValue: {summary: 'false'},
+      },
+    },
   },
 };
 
@@ -352,6 +359,17 @@ export const HorizontalScrollWidget: Story = {
         </div>
       </div>
     ),
+  },
+};
+
+export const LoadingWidget: Story = {
+  args: {
+    ...Default.args,
+    widgetName: 'Loading Widget',
+    gridWidth: 1,
+    gridHeight: 1,
+    loading: true,
+    children: <div>This content will not be shown when loading is true</div>,
   },
 };
 

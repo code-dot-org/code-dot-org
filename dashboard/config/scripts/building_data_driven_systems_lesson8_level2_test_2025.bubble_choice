@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson8-level2-test-2025'
+display_name 'Build a Filter'
+description 'Develop a filter algorithm for specific purposes based on a variety of application needs.'
+
+sublevels
+level 'building-data-driven-systems-lesson8-level2a-test-2025'
+level 'building-data-driven-systems-lesson8-level2b-test-2025'
+level 'building-data-driven-systems-lesson8-level2c-test-2025'
+
+uses_lab2

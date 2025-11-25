@@ -18,4 +18,13 @@ describe('WidgetTemplate', () => {
     screen.getByText('Test content');
     screen.getByRole('button', {name: 'Settings'});
   });
+
+  it('renders loading', () => {
+    render(<WidgetTemplate {...defaultProps} loading={true} />);
+
+    screen.getByText('Test Widget');
+    expect(screen.queryByText('Test content')).toBeNull();
+    screen.getByRole('button', {name: 'Settings'});
+    screen.getByTitle('Loading...');
+  });
 });
