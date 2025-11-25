@@ -26,7 +26,6 @@ import {setAiFilePathToPreview, setAiTutorVersionFiles} from '../weblab2Redux';
  * AI tutor responses including accept/reject functionality.
  */
 export const useAiTutorResponseSchemaSettings = (
-  aiTutorMode: string | undefined,
   source: MultiFileSource | undefined
 ): ResponseSchemaSettings | undefined => {
   const dispatch = useAppDispatch();
@@ -35,8 +34,7 @@ export const useAiTutorResponseSchemaSettings = (
     if (
       experiments.isEnabledAllowingQueryString(
         experiments.WEBLAB2_ACCEPT_REJECT
-      ) &&
-      ['produce', 'designer'].includes(aiTutorMode || '')
+      )
     ) {
       return {
         jsonSchema: acceptRejectJsonSchema,
@@ -45,7 +43,13 @@ export const useAiTutorResponseSchemaSettings = (
           console.log('🤖: AI Tutor response (in jsonSchema callback):', {
             jsonResponse,
           });
-          const formattedResponse = formatAcceptRejectResponse(jsonResponse);
+          const formattedResponse = formatAcceptRejectResponse(
+            jsonResponse.answer
+          );
+          const answerType = formattedResponse.answerType;
+          if (answerType !== 'Build HTML' && answerType !== 'Build CSS') {
+            return formatExplanationResponse(jsonResponse.answer);
+          }
           dispatch(setViewingAiTutorVersion(true));
           // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
           // Workspace will be read-only until user clicks "accept" or "reject".
@@ -112,5 +116,5 @@ export const useAiTutorResponseSchemaSettings = (
         },
       };
     }
-  }, [aiTutorMode, dispatch, source]);
+  }, [dispatch, source]);
 };

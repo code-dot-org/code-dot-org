@@ -130,10 +130,8 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
-  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
-    levelProperties.aiTutorMode,
-    source
-  );
+  const aiTutorResponseSchemaSettings =
+    useAiTutorResponseSchemaSettings(source);
 
   return (
     <div className={moduleStyles.weblab2Container}>

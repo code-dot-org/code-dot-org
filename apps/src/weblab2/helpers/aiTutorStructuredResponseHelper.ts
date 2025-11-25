@@ -84,6 +84,86 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
   };
 };
 
+const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
+  return {
+    type: 'object',
+    properties: {
+      tutorMode: {
+        type: 'string',
+        enum: [
+          'Build HTML',
+          'Build CSS',
+          'Build JavaScript',
+          'Ask',
+          'Hint',
+          'Debug',
+          'Explain Code',
+          'Example',
+          'Pseudocode',
+          'Documentation',
+          'Test Case',
+          'Refusal JavaScript Snippet',
+          'Refusal',
+        ],
+      },
+      goal: {
+        type: 'string',
+        description: 'What we are achieving this turn, limit to 1 line of text',
+      },
+      assumptions: {
+        type: 'string',
+        description:
+          'Explicit design choices you made from the wireframe. Format as bullets.',
+      },
+      code: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            language: {type: 'string'},
+            sourceCode: {
+              type: 'string',
+            },
+            filename: {type: 'string'},
+          },
+          required: ['language', 'sourceCode', 'filename'],
+          additionalProperties: false,
+        },
+        description:
+          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. The list can be empty. Code should be formatted with appropriate newlines and indentation.  When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation. If the language is javascript or js, then the student will need to copy and paste this code into their project.',
+      },
+      explanation: {
+        type: 'string',
+        description:
+          "1 paragraph or less explanation of the code or plain-text answer to the student's question. Use markdown.",
+      },
+      nextSteps: {
+        type: 'string',
+        description:
+          '1-2 concrete action(s) for student to achieve goal. Format as markdown bullets',
+      },
+      questions: {
+        type: 'string',
+        description:
+          'short list to confirm ambiguous details. Format as markdown bullets.',
+      },
+    },
+    // We return tutorMode and goal but do not show them to the student.
+    // These are used to help guide the AI's response.
+    required: ['tutorMode', 'nextSteps', 'code', 'explanation', 'goal'],
+    propertyOrdering: [
+      'tutorMode',
+      'goal',
+      'assumptions',
+      'code',
+      'explanation',
+      'nextSteps',
+      'questions',
+    ],
+    additionalProperties: false,
+  };
+};
+
 export const copyCodeJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {
@@ -96,22 +176,9 @@ export const copyCodeJsonSchema: JsonObjectSchema = {
 export const acceptRejectJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {
-    code: {
-      type: 'array',
-      items: {
-        type: 'object',
-        properties: {
-          language: {type: 'string'},
-          sourceCode: {type: 'string'},
-          filename: {type: 'string'},
-        },
-        required: ['language', 'sourceCode', 'filename'],
-        additionalProperties: false,
-      },
-    },
-    explanation: {type: 'string'},
+    answer: getAnswerJsonSchemaAcceptReject(),
   },
-  required: ['code', 'explanation'],
+  required: ['answer'],
   additionalProperties: false,
 };
 
@@ -150,6 +217,7 @@ type AiTutorCodeFile = {
 type AcceptRejectFormattedResponse = {
   explanation: string;
   code: AiTutorCodeFile[];
+  answerType: string;
 };
 
 // Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
@@ -164,6 +232,7 @@ export const formatAcceptRejectResponse = (
       name: codeFile.filename,
       contents: codeFile.sourceCode,
     })),
+    answerType: response.tutorMode,
   };
 };
 
