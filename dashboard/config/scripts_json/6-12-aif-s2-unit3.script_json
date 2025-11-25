@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-20 03:44:12 UTC",
+    "serialized_at": "2025-11-22 03:11:07 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -231,6 +231,66 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3"
       }
+    },
+    {
+      "key": "536c7c67-b767-4843-8d21-ff572fae2e08",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "536c7c67-b767-4843-8d21-ff572fae2e08",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3"
+      }
+    },
+    {
+      "key": "207db69b-c51f-45b6-b0c1-6e9702ce63da",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "207db69b-c51f-45b6-b0c1-6e9702ce63da",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3"
+      }
+    },
+    {
+      "key": "ad954128-977d-4e7c-9e13-e3aabd375b73",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad954128-977d-4e7c-9e13-e3aabd375b73",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3"
+      }
+    },
+    {
+      "key": "d7e3fcab-cee2-4b4d-b9e6-d06fc891d8b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d7e3fcab-cee2-4b4d-b9e6-d06fc891d8b9",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3"
+      }
+    },
+    {
+      "key": "99012468-0f8c-49cb-be79-129494079a0a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99012468-0f8c-49cb-be79-129494079a0a",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3"
+      }
     }
   ],
   "activity_sections": [
@@ -312,8 +372,19 @@
       }
     },
     {
-      "key": "88fc5fae-592d-45a8-97a2-165385d35394",
+      "key": "7ee3b209-4a3a-4df2-8e1b-891c130a84ad",
       "position": 3,
+      "properties": {
+        "progression_name": "Display Your Schema"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ee3b209-4a3a-4df2-8e1b-891c130a84ad",
+        "lesson_activity.key": "8c0fd04a-d689-448d-a778-830beb66569e"
+      }
+    },
+    {
+      "key": "88fc5fae-592d-45a8-97a2-165385d35394",
+      "position": 4,
       "properties": {
         "progression_name": "Safe and Clear Displays"
       },
@@ -324,7 +395,7 @@
     },
     {
       "key": "9415251b-52fc-45b7-8073-5853d4ac6d21",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Fix the Storefront Display"
       },
@@ -335,7 +406,7 @@
     },
     {
       "key": "e6a1369d-062f-484b-93d2-f6b23575b346",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Vocab: Schema"
       },
@@ -348,6 +419,7 @@
       "key": "98c682fa-5b18-488f-9639-b7219bddaa0e",
       "position": 1,
       "properties": {
+        "progression_name": "Explore and Explain"
       },
       "seeding_key": {
         "activity_section.key": "98c682fa-5b18-488f-9639-b7219bddaa0e",
@@ -369,6 +441,7 @@
       "key": "e28ebc1c-60bd-4212-8de8-b8eaa9ce3ceb",
       "position": 3,
       "properties": {
+        "progression_name": "Social Media Story Scheduler"
       },
       "seeding_key": {
         "activity_section.key": "e28ebc1c-60bd-4212-8de8-b8eaa9ce3ceb",
@@ -387,46 +460,24 @@
       }
     },
     {
-      "key": "cbe58bc0-f5e2-48b2-865d-55ad22faf3f3",
+      "key": "9bcc4c5d-3d58-4f80-b484-2b158aa37138",
       "position": 5,
       "properties": {
-        "progression_name": "Vocab: Push"
+        "progression_name": "Debugging: Street Art Route Planner"
       },
       "seeding_key": {
-        "activity_section.key": "cbe58bc0-f5e2-48b2-865d-55ad22faf3f3",
+        "activity_section.key": "9bcc4c5d-3d58-4f80-b484-2b158aa37138",
         "lesson_activity.key": "9b731cd7-371c-4436-ae8b-69802e8d713e"
       }
     },
     {
-      "key": "c17941d1-8c7a-4bf3-9ad9-4baecefdee83",
+      "key": "c63f4ed3-92e1-426c-b041-88a9e714bea4",
       "position": 6,
       "properties": {
-        "progression_name": "Vocab: Pop"
+        "progression_name": "Vocab: Array Method"
       },
       "seeding_key": {
-        "activity_section.key": "c17941d1-8c7a-4bf3-9ad9-4baecefdee83",
-        "lesson_activity.key": "9b731cd7-371c-4436-ae8b-69802e8d713e"
-      }
-    },
-    {
-      "key": "3f127952-2dc3-492c-b9da-9b728ee16462",
-      "position": 7,
-      "properties": {
-        "progression_name": "Vocab: Shift"
-      },
-      "seeding_key": {
-        "activity_section.key": "3f127952-2dc3-492c-b9da-9b728ee16462",
-        "lesson_activity.key": "9b731cd7-371c-4436-ae8b-69802e8d713e"
-      }
-    },
-    {
-      "key": "8b15fa79-d3c7-41ba-a82e-83434c37f527",
-      "position": 8,
-      "properties": {
-        "progression_name": "Vocab: Unshift"
-      },
-      "seeding_key": {
-        "activity_section.key": "8b15fa79-d3c7-41ba-a82e-83434c37f527",
+        "activity_section.key": "c63f4ed3-92e1-426c-b041-88a9e714bea4",
         "lesson_activity.key": "9b731cd7-371c-4436-ae8b-69802e8d713e"
       }
     },
@@ -434,6 +485,7 @@
       "key": "ef97a372-ce5d-458c-bd56-24347aacac60",
       "position": 1,
       "properties": {
+        "progression_name": "Create Your First Object"
       },
       "seeding_key": {
         "activity_section.key": "ef97a372-ce5d-458c-bd56-24347aacac60",
@@ -461,6 +513,177 @@
         "activity_section.key": "6c07c54e-acdf-4ff4-b595-56aac8ef3894",
         "lesson_activity.key": "64297f51-e6ba-4b02-9e6c-0496b759a5fb"
       }
+    },
+    {
+      "key": "f3a10ca0-9714-4271-a2dc-11c4181f245e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Object from Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3a10ca0-9714-4271-a2dc-11c4181f245e",
+        "lesson_activity.key": "64297f51-e6ba-4b02-9e6c-0496b759a5fb"
+      }
+    },
+    {
+      "key": "3206de24-031a-4179-afe0-d72b9d444317",
+      "position": 5,
+      "properties": {
+        "progression_name": "Update and Evolve Objects"
+      },
+      "seeding_key": {
+        "activity_section.key": "3206de24-031a-4179-afe0-d72b9d444317",
+        "lesson_activity.key": "64297f51-e6ba-4b02-9e6c-0496b759a5fb"
+      }
+    },
+    {
+      "key": "d2af9a65-fe8b-4f89-88b2-830edd3a8310",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lists of Objects"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2af9a65-fe8b-4f89-88b2-830edd3a8310",
+        "lesson_activity.key": "536c7c67-b767-4843-8d21-ff572fae2e08"
+      }
+    },
+    {
+      "key": "2468cace-21db-490a-a198-33456ef9eb79",
+      "position": 2,
+      "properties": {
+        "progression_name": "Free Response: What AI Sees Shaped By Data Choices"
+      },
+      "seeding_key": {
+        "activity_section.key": "2468cace-21db-490a-a198-33456ef9eb79",
+        "lesson_activity.key": "536c7c67-b767-4843-8d21-ff572fae2e08"
+      }
+    },
+    {
+      "key": "183137de-c07c-4ce4-95f8-f37aece3e2e2",
+      "position": 3,
+      "properties": {
+        "progression_name": "Vocab: Bias"
+      },
+      "seeding_key": {
+        "activity_section.key": "183137de-c07c-4ce4-95f8-f37aece3e2e2",
+        "lesson_activity.key": "536c7c67-b767-4843-8d21-ff572fae2e08"
+      }
+    },
+    {
+      "key": "aee684d1-f7a8-42a7-816f-530aecf21a7b",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "aee684d1-f7a8-42a7-816f-530aecf21a7b",
+        "lesson_activity.key": "536c7c67-b767-4843-8d21-ff572fae2e08"
+      }
+    },
+    {
+      "key": "402afea1-8221-41d1-9b60-43fce0faf438",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "402afea1-8221-41d1-9b60-43fce0faf438",
+        "lesson_activity.key": "207db69b-c51f-45b6-b0c1-6e9702ce63da"
+      }
+    },
+    {
+      "key": "489e1592-0dd0-494a-9f55-17636c707c16",
+      "position": 2,
+      "properties": {
+        "progression_name": "Free Response: Explain .map()"
+      },
+      "seeding_key": {
+        "activity_section.key": "489e1592-0dd0-494a-9f55-17636c707c16",
+        "lesson_activity.key": "207db69b-c51f-45b6-b0c1-6e9702ce63da"
+      }
+    },
+    {
+      "key": "f5858095-9f48-4fe9-a88b-95988d2c763d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using CHAT to Generate System Prompts"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5858095-9f48-4fe9-a88b-95988d2c763d",
+        "lesson_activity.key": "207db69b-c51f-45b6-b0c1-6e9702ce63da"
+      }
+    },
+    {
+      "key": "5c5ee6dc-47d5-46a2-8603-da47e6a44f4c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5c5ee6dc-47d5-46a2-8603-da47e6a44f4c",
+        "lesson_activity.key": "ad954128-977d-4e7c-9e13-e3aabd375b73"
+      }
+    },
+    {
+      "key": "6995ea52-a969-4a83-892f-46805afecc16",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Filter"
+      },
+      "seeding_key": {
+        "activity_section.key": "6995ea52-a969-4a83-892f-46805afecc16",
+        "lesson_activity.key": "ad954128-977d-4e7c-9e13-e3aabd375b73"
+      }
+    },
+    {
+      "key": "3ccc497c-0f2e-4ee2-807f-bb398318ba4b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3ccc497c-0f2e-4ee2-807f-bb398318ba4b",
+        "lesson_activity.key": "d7e3fcab-cee2-4b4d-b9e6-d06fc891d8b9"
+      }
+    },
+    {
+      "key": "27a66436-69da-45ed-8aa9-3dde09373c3c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Query"
+      },
+      "seeding_key": {
+        "activity_section.key": "27a66436-69da-45ed-8aa9-3dde09373c3c",
+        "lesson_activity.key": "d7e3fcab-cee2-4b4d-b9e6-d06fc891d8b9"
+      }
+    },
+    {
+      "key": "b71eef53-24ef-4450-a1a0-5334bddfcc96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b71eef53-24ef-4450-a1a0-5334bddfcc96",
+        "lesson_activity.key": "99012468-0f8c-49cb-be79-129494079a0a"
+      }
+    },
+    {
+      "key": "00a8cee7-f00f-49b1-992c-0e3edaba3cd0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Free Response: Pipeline Fairness"
+      },
+      "seeding_key": {
+        "activity_section.key": "00a8cee7-f00f-49b1-992c-0e3edaba3cd0",
+        "lesson_activity.key": "99012468-0f8c-49cb-be79-129494079a0a"
+      }
+    },
+    {
+      "key": "1ab6e397-3c1a-4a5f-aa46-463d8daf26bc",
+      "position": 3,
+      "properties": {
+        "progression_name": "Vocab: Pipeline"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ab6e397-3c1a-4a5f-aa46-463d8daf26bc",
+        "lesson_activity.key": "99012468-0f8c-49cb-be79-129494079a0a"
+      }
     }
   ],
   "script_levels": [
@@ -470,6 +693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson1-level1-test-2025"
+        ],
         "progression": "Build Your Favorites"
       },
       "bonus": false,
@@ -492,6 +718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson1-level2-test-2025"
+        ],
         "progression": "Building Magazine Covers with Arrays"
       },
       "bonus": false,
@@ -514,6 +743,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level3-test-2025"
+        ],
         "progression": "Debugging Mini-Challenge"
       },
       "bonus": false,
@@ -536,6 +768,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson1-level4-test-2025"
+        ],
         "progression": "Reflection: AI Understanding"
       },
       "bonus": false,
@@ -558,6 +793,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson1-level5-test-2025"
+        ],
         "progression": "Vocab: Array"
       },
       "bonus": false,
@@ -580,6 +818,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson1-level6-test-2025"
+        ],
         "progression": "Vocab: Array"
       },
       "bonus": false,
@@ -602,6 +843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson2-level1-test-2025"
+        ],
         "progression": "Brainstorming a Schema "
       },
       "bonus": false,
@@ -624,6 +868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson2-level2-test-2025"
+        ],
         "progression": "Iterate on Your Schema"
       },
       "bonus": false,
@@ -646,6 +893,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson2-level3-test-2025"
+        ],
+        "progression": "Display Your Schema"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson2-level3-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "7ee3b209-4a3a-4df2-8e1b-891c130a84ad"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson2-level3-test-2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson2-level4-test-2025"
+        ],
         "progression": "Safe and Clear Displays"
       },
       "bonus": false,
@@ -663,11 +938,14 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 4,
+      "chapter": 11,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson2-level5-test-2025"
+        ],
         "progression": "Fix the Storefront Display"
       },
       "bonus": false,
@@ -685,11 +963,14 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 5,
+      "chapter": 12,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson2-level6-test-2025"
+        ],
         "progression": "Vocab: Schema"
       },
       "bonus": false,
@@ -707,11 +988,14 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 6,
+      "chapter": 13,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson2-level7-test-2025"
+        ],
         "progression": "Vocab: Schema"
       },
       "bonus": false,
@@ -729,11 +1013,39 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level1-test-2025"
+        ],
+        "progression": "Explore and Explain"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level1-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "98c682fa-5b18-488f-9639-b7219bddaa0e"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson3-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level2-test-2025"
+        ],
         "progression": "Free Response: Array Operations"
       },
       "bonus": false,
@@ -751,11 +1063,114 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 2,
+      "chapter": 16,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level4-test-2025"
+        ],
+        "progression": "Social Media Story Scheduler"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level4-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "e28ebc1c-60bd-4212-8de8-b8eaa9ce3ceb"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson3-level4-test-2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level5-test-2025"
+        ],
+        "progression": "Social Media Story Scheduler"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level5-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "e28ebc1c-60bd-4212-8de8-b8eaa9ce3ceb"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson3-level5-test-2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level6-test-2025"
+        ],
+        "progression": "Social Media Story Scheduler"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level6-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "e28ebc1c-60bd-4212-8de8-b8eaa9ce3ceb"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson3-level6-test-2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level7-test-2025"
+        ],
+        "progression": "Social Media Story Scheduler"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level7-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "e28ebc1c-60bd-4212-8de8-b8eaa9ce3ceb"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson3-level7-test-2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level8-test-2025"
+        ],
         "progression": "Free Response: Helper Functions"
       },
       "bonus": false,
@@ -773,187 +1188,114 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Push"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level10-push-test-2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "cbe58bc0-f5e2-48b2-865d-55ad22faf3f3"
-      },
-      "level_keys": [
-        "building-data-driven-systems-lesson3-level10-push-test-2025"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Push"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level11-push-test-2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "cbe58bc0-f5e2-48b2-865d-55ad22faf3f3"
-      },
-      "level_keys": [
-        "building-data-driven-systems-lesson3-level11-push-test-2025"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Pop"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level12-pop-test-2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "c17941d1-8c7a-4bf3-9ad9-4baecefdee83"
-      },
-      "level_keys": [
-        "building-data-driven-systems-lesson3-level12-pop-test-2025"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Pop"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level13-pop-test-2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "c17941d1-8c7a-4bf3-9ad9-4baecefdee83"
-      },
-      "level_keys": [
-        "building-data-driven-systems-lesson3-level13-pop-test-2025"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Shift"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level14-shift-test-2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "3f127952-2dc3-492c-b9da-9b728ee16462"
-      },
-      "level_keys": [
-        "building-data-driven-systems-lesson3-level14-shift-test-2025"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Shift"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level15-shift-test-2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "3f127952-2dc3-492c-b9da-9b728ee16462"
-      },
-      "level_keys": [
-        "building-data-driven-systems-lesson3-level15-shift-test-2025"
-      ]
-    },
-    {
       "chapter": 21,
-      "position": 9,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Unshift"
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level18-test-2025"
+        ],
+        "progression": "Debugging: Street Art Route Planner"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level16-unshift-test-2025"
+          "building-data-driven-systems-lesson3-level18-test-2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "8b15fa79-d3c7-41ba-a82e-83434c37f527"
+        "activity_section.key": "9bcc4c5d-3d58-4f80-b484-2b158aa37138"
       },
       "level_keys": [
-        "building-data-driven-systems-lesson3-level16-unshift-test-2025"
+        "building-data-driven-systems-lesson3-level18-test-2025"
       ]
     },
     {
       "chapter": 22,
-      "position": 10,
-      "activity_section_position": 2,
+      "position": 9,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Unshift"
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level19-test-2025"
+        ],
+        "progression": "Vocab: Array Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level17-unshift-test-2025"
+          "building-data-driven-systems-lesson3-level19-test-2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "8b15fa79-d3c7-41ba-a82e-83434c37f527"
+        "activity_section.key": "c63f4ed3-92e1-426c-b041-88a9e714bea4"
       },
       "level_keys": [
-        "building-data-driven-systems-lesson3-level17-unshift-test-2025"
+        "building-data-driven-systems-lesson3-level19-test-2025"
       ]
     },
     {
       "chapter": 23,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson3-level20-test-2025"
+        ],
+        "progression": "Vocab: Array Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level20-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "c63f4ed3-92e1-426c-b041-88a9e714bea4"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson3-level20-test-2025"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson4-level1-test-2025"
+        ],
+        "progression": "Create Your First Object"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level1-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "ef97a372-ce5d-458c-bd56-24347aacac60"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson4-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson4-level2-test-2025"
+        ],
         "progression": "Reflection: Human vs AI Object Design"
       },
       "bonus": false,
@@ -971,11 +1313,14 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 2,
+      "chapter": 26,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson4-level3-object-test-2025"
+        ],
         "progression": "Vocab: Object"
       },
       "bonus": false,
@@ -993,11 +1338,14 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 3,
+      "chapter": 27,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson4-level4-object-test-2025"
+        ],
         "progression": "Vocab: Object"
       },
       "bonus": false,
@@ -1012,6 +1360,464 @@
       },
       "level_keys": [
         "building-data-driven-systems-lesson4-level4-object-test-2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson4-level5-test-2025"
+        ],
+        "progression": "Object from Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level5-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f3a10ca0-9714-4271-a2dc-11c4181f245e"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson4-level5-test-2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson4-level6-test-2025"
+        ],
+        "progression": "Object from Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level6-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f3a10ca0-9714-4271-a2dc-11c4181f245e"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson4-level6-test-2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Update and Evolve Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level7-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "3206de24-031a-4179-afe0-d72b9d444317"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson4-level7-test-2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lists of Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level1-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "d2af9a65-fe8b-4f89-88b2-830edd3a8310"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson5-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lists of Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level2-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "d2af9a65-fe8b-4f89-88b2-830edd3a8310"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson5-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson5-level4-test-2025"
+        ],
+        "progression": "Free Response: What AI Sees Shaped By Data Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level4-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "2468cace-21db-490a-a198-33456ef9eb79"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson5-level4-test-2025"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson5-level5-bias-test-2025"
+        ],
+        "progression": "Vocab: Bias"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level5-bias-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "183137de-c07c-4ce4-95f8-f37aece3e2e2"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson5-level5-bias-test-2025"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson5-level16-bias-test-2025"
+        ],
+        "progression": "Vocab: Bias"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level16-bias-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "183137de-c07c-4ce4-95f8-f37aece3e2e2"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson5-level16-bias-test-2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson6-level4-test-2025"
+        ],
+        "progression": "Free Response: Explain .map()"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson6-level4-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "489e1592-0dd0-494a-9f55-17636c707c16"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson6-level4-test-2025"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using CHAT to Generate System Prompts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson6-level3-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f5858095-9f48-4fe9-a88b-95988d2c763d"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson6-level3-test-2025"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using CHAT to Generate System Prompts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson6-level5-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f5858095-9f48-4fe9-a88b-95988d2c763d"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson6-level5-test-2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Using CHAT to Generate System Prompts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson6-level6-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f5858095-9f48-4fe9-a88b-95988d2c763d"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson6-level6-test-2025"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Using CHAT to Generate System Prompts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson6-level7-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f5858095-9f48-4fe9-a88b-95988d2c763d"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson6-level7-test-2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Filter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson8-vocab-filter-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "6995ea52-a969-4a83-892f-46805afecc16"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson8-vocab-filter-test-2025"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Filter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson8-frq-filter-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "6995ea52-a969-4a83-892f-46805afecc16"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson8-frq-filter-test-2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Query"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson9-vocab-query-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "27a66436-69da-45ed-8aa9-3dde09373c3c"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson9-vocab-query-test-2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Query"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson9-frq-query-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "27a66436-69da-45ed-8aa9-3dde09373c3c"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson9-frq-query-test-2025"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Response: Pipeline Fairness"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-level3-frq-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "00a8cee7-f00f-49b1-992c-0e3edaba3cd0"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson10-level3-frq-test-2025"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Pipeline"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-vocab-pipeline-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "1ab6e397-3c1a-4a5f-aa46-463d8daf26bc"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson10-vocab-pipeline-test-2025"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Pipeline"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-frq-pipeline-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "1ab6e397-3c1a-4a5f-aa46-463d8daf26bc"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson10-frq-pipeline-test-2025"
       ]
     }
   ],
@@ -1114,6 +1920,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson2-level3-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson2-level3-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "7ee3b209-4a3a-4df2-8e1b-891c130a84ad"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "building-data-driven-systems-lesson2-level4-test-2025",
         "script_level.level_keys": [
           "building-data-driven-systems-lesson2-level4-test-2025"
@@ -1162,6 +1980,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson3-level1-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level1-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "98c682fa-5b18-488f-9639-b7219bddaa0e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "building-data-driven-systems-lesson3-level2-test-2025",
         "script_level.level_keys": [
           "building-data-driven-systems-lesson3-level2-test-2025"
@@ -1170,6 +2000,54 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3",
         "activity_section.key": "960e44a9-45f5-4718-a59d-16785b176efb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson3-level4-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level4-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "e28ebc1c-60bd-4212-8de8-b8eaa9ce3ceb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson3-level5-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level5-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "e28ebc1c-60bd-4212-8de8-b8eaa9ce3ceb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson3-level6-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level6-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "e28ebc1c-60bd-4212-8de8-b8eaa9ce3ceb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson3-level7-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson3-level7-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "e28ebc1c-60bd-4212-8de8-b8eaa9ce3ceb"
       }
     },
     {
@@ -1186,98 +2064,50 @@
     },
     {
       "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson3-level10-push-test-2025",
+        "level.key": "building-data-driven-systems-lesson3-level18-test-2025",
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level10-push-test-2025"
+          "building-data-driven-systems-lesson3-level18-test-2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "cbe58bc0-f5e2-48b2-865d-55ad22faf3f3"
+        "activity_section.key": "9bcc4c5d-3d58-4f80-b484-2b158aa37138"
       }
     },
     {
       "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson3-level11-push-test-2025",
+        "level.key": "building-data-driven-systems-lesson3-level19-test-2025",
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level11-push-test-2025"
+          "building-data-driven-systems-lesson3-level19-test-2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "cbe58bc0-f5e2-48b2-865d-55ad22faf3f3"
+        "activity_section.key": "c63f4ed3-92e1-426c-b041-88a9e714bea4"
       }
     },
     {
       "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson3-level12-pop-test-2025",
+        "level.key": "building-data-driven-systems-lesson3-level20-test-2025",
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level12-pop-test-2025"
+          "building-data-driven-systems-lesson3-level20-test-2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "c17941d1-8c7a-4bf3-9ad9-4baecefdee83"
+        "activity_section.key": "c63f4ed3-92e1-426c-b041-88a9e714bea4"
       }
     },
     {
       "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson3-level13-pop-test-2025",
+        "level.key": "building-data-driven-systems-lesson4-level1-test-2025",
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level13-pop-test-2025"
+          "building-data-driven-systems-lesson4-level1-test-2025"
         ],
-        "lesson.key": "lesson-3",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "c17941d1-8c7a-4bf3-9ad9-4baecefdee83"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson3-level14-shift-test-2025",
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level14-shift-test-2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "3f127952-2dc3-492c-b9da-9b728ee16462"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson3-level15-shift-test-2025",
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level15-shift-test-2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "3f127952-2dc3-492c-b9da-9b728ee16462"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson3-level16-unshift-test-2025",
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level16-unshift-test-2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "8b15fa79-d3c7-41ba-a82e-83434c37f527"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson3-level17-unshift-test-2025",
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson3-level17-unshift-test-2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit3",
-        "activity_section.key": "8b15fa79-d3c7-41ba-a82e-83434c37f527"
+        "activity_section.key": "ef97a372-ce5d-458c-bd56-24347aacac60"
       }
     },
     {
@@ -1314,6 +2144,246 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3",
         "activity_section.key": "6c07c54e-acdf-4ff4-b595-56aac8ef3894"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson4-level5-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level5-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f3a10ca0-9714-4271-a2dc-11c4181f245e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson4-level6-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level6-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f3a10ca0-9714-4271-a2dc-11c4181f245e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson4-level7-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level7-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "3206de24-031a-4179-afe0-d72b9d444317"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson5-level1-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level1-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "d2af9a65-fe8b-4f89-88b2-830edd3a8310"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson5-level2-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level2-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "d2af9a65-fe8b-4f89-88b2-830edd3a8310"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson5-level4-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level4-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "2468cace-21db-490a-a198-33456ef9eb79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson5-level5-bias-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level5-bias-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "183137de-c07c-4ce4-95f8-f37aece3e2e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson5-level16-bias-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level16-bias-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "183137de-c07c-4ce4-95f8-f37aece3e2e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson6-level4-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson6-level4-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "489e1592-0dd0-494a-9f55-17636c707c16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson6-level3-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson6-level3-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f5858095-9f48-4fe9-a88b-95988d2c763d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson6-level5-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson6-level5-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f5858095-9f48-4fe9-a88b-95988d2c763d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson6-level6-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson6-level6-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f5858095-9f48-4fe9-a88b-95988d2c763d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson6-level7-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson6-level7-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "f5858095-9f48-4fe9-a88b-95988d2c763d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson8-vocab-filter-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson8-vocab-filter-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "6995ea52-a969-4a83-892f-46805afecc16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson8-frq-filter-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson8-frq-filter-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "6995ea52-a969-4a83-892f-46805afecc16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson9-vocab-query-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson9-vocab-query-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "27a66436-69da-45ed-8aa9-3dde09373c3c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson9-frq-query-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson9-frq-query-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "27a66436-69da-45ed-8aa9-3dde09373c3c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson10-level3-frq-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-level3-frq-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "00a8cee7-f00f-49b1-992c-0e3edaba3cd0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson10-vocab-pipeline-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-vocab-pipeline-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "1ab6e397-3c1a-4a5f-aa46-463d8daf26bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson10-frq-pipeline-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-frq-pipeline-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "1ab6e397-3c1a-4a5f-aa46-463d8daf26bc"
       }
     }
   ],
