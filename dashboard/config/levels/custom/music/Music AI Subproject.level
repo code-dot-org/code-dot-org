@@ -14,8 +14,78 @@
     "disable_edit_run_for_submission": "false",
     "level_data": {
       "library": "launch2024",
-      "aiCodeGenerateAdlib": "length",
-      "guideMode": "aiCodeGenerate"
+      "allowChangeStartingPlayheadPosition": true,
+      "guideMode": "aiCodeGenerate",
+      "aiCodeGenerateAdlib": {
+        "id": "sounds",
+        "template": "Code a {mood} music mix with a {length} length, using {drums} drums.",
+        "options": {
+          "mood": [
+            {
+              "id": "simple",
+              "text": "simple"
+            },
+            {
+              "id": "creative",
+              "text": "creative"
+            },
+            {
+              "id": "wild",
+              "text": "wild"
+            }
+          ],
+          "length": [
+            {
+              "id": "short",
+              "text": "short"
+            },
+            {
+              "id": "medium",
+              "text": "medium"
+            },
+            {
+              "id": "long",
+              "text": "long"
+            }
+          ],
+          "drums": [
+            {
+              "id": "original",
+              "text": "original"
+            },
+            {
+              "id": "electro",
+              "text": "electro"
+            },
+            {
+              "id": "groove",
+              "text": "groove"
+            },
+            {
+              "id": "indie",
+              "text": "indie"
+            },
+            {
+              "id": "pop",
+              "text": "pop"
+            },
+            {
+              "id": "hiphop",
+              "text": "hip hop"
+            },
+            {
+              "id": "rock",
+              "text": "heavy rock"
+            },
+            {
+              "id": "acoustic",
+              "text": "acoustic"
+            }
+          ]
+        },
+        "variantCount": 10
+      },
+      "aiCodeGenerateExtraPrompt": "You can also use any of the following additional drum sounds: \"{drumSounds}\"."
     },
     "predict_settings": {
       "isPredictLevel": false
@@ -29,7 +99,7 @@
     "display_name": "Create a song!",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-09-18T17:51:22.247+00:00\",\"changed\":[\"cloned from \\\"New Music AI Project\\\"\"],\"cloned_from\":\"New Music AI Project\"},{\"changed_at\":\"2025-09-18 17:52:09 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-23 18:42:31 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-09-18T17:51:22.247+00:00\",\"changed\":[\"cloned from \\\"New Music AI Project\\\"\"],\"cloned_from\":\"New Music AI Project\"},{\"changed_at\":\"2025-09-18 17:52:09 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-10-23 18:42:31 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-11-19 21:42:55 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-11-19 21:47:28 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

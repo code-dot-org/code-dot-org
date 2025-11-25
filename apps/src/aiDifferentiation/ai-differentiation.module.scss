@@ -70,8 +70,8 @@ $sidebar-tooltip-z-index: 2010;
     align-items: center;
     gap: 0.75rem;
     align-self: stretch;
-    border-bottom: 1px solid var(--borders-neutral-primary, #D4DAE1);
-    background: var(--background-neutral-primary, #FFF);
+    border-bottom: 1px solid var(--borders-neutral-primary, #d4dae1);
+    background: var(--background-neutral-primary, #fff);
 
     .chatHeaderTitle {
       flex: 1 0 0;
@@ -292,15 +292,14 @@ $sidebar-tooltip-z-index: 2010;
   position: fixed;
   left: $fab-left * 1px;
   bottom: $fab-bottom * 1px;
-
   height: $fab-height * 1px;
   width: 48px;
   background-size: 60px;
   padding: 0;
   background-color: transparent;
-
   border-width: 0;
   border-radius: 50%;
+  z-index: 1000;
 
   img {
     opacity: 1;

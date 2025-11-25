@@ -1,5 +1,5 @@
 import {Meta, StoryFn} from '@storybook/react-webpack5';
-import React, {useState, useCallback} from 'react';
+import {ChangeEvent, MouseEvent, useState, useCallback} from 'react';
 
 import CheckboxDropdown, {CheckboxDropdownProps} from '../index';
 
@@ -16,7 +16,7 @@ export default {
 const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
   const [selectedValues, setValues] = useState(args.checkedOptions as string[]);
   const onChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
+    (e: ChangeEvent<HTMLInputElement>) => {
       if (e.target.checked) {
         setValues([...selectedValues, e.target.value]);
       } else {
@@ -27,11 +27,7 @@ const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
     [args, selectedValues, setValues],
   );
   const onSelectAll = useCallback(
-    (
-      e:
-        | React.MouseEvent<HTMLButtonElement>
-        | React.MouseEvent<HTMLAnchorElement>,
-    ) => {
+    (e: MouseEvent<HTMLButtonElement> | MouseEvent<HTMLAnchorElement>) => {
       setValues(args.allOptions.map(option => option.value));
       if (!args.hideControls) {
         args.onSelectAll(e);
@@ -40,11 +36,7 @@ const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
     [args],
   );
   const onClearAll = useCallback(
-    (
-      e:
-        | React.MouseEvent<HTMLButtonElement>
-        | React.MouseEvent<HTMLAnchorElement>,
-    ) => {
+    (e: MouseEvent<HTMLButtonElement> | MouseEvent<HTMLAnchorElement>) => {
       setValues([]);
       if (!args.hideControls) {
         args.onClearAll(e);
@@ -97,7 +89,7 @@ const MultipleTemplate: StoryFn<{
             });
           }
 
-          const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+          const onChange = (e: ChangeEvent<HTMLInputElement>) => {
             if (e.target.checked) {
               setValues({
                 ...values,
@@ -117,9 +109,7 @@ const MultipleTemplate: StoryFn<{
             componentArg.onChange(e);
           };
           const onSelectAll = (
-            e:
-              | React.MouseEvent<HTMLButtonElement>
-              | React.MouseEvent<HTMLAnchorElement>,
+            e: MouseEvent<HTMLButtonElement> | MouseEvent<HTMLAnchorElement>,
           ) => {
             setValues({
               ...values,
@@ -132,9 +122,7 @@ const MultipleTemplate: StoryFn<{
             }
           };
           const onClearAll = (
-            e:
-              | React.MouseEvent<HTMLButtonElement>
-              | React.MouseEvent<HTMLAnchorElement>,
+            e: MouseEvent<HTMLButtonElement> | MouseEvent<HTMLAnchorElement>,
           ) => {
             setValues({...values, [componentArg.name]: []});
             if (!componentArg.hideControls) {

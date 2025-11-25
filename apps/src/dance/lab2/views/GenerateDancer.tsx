@@ -13,9 +13,11 @@ import {
   DanceProjectSources,
   GeneratedDancerMetadata,
 } from '@cdo/apps/dance/types';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibsType,
@@ -300,20 +302,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   }, [currentSources]);
 
   const [hasGenerated, setHasGenerated] = useState(false);
-  const signedIn = useAppSelector(state => state.currentUser.signInState);
-  const scriptName = useAppSelector(state => state.progress.scriptName);
-  const logLevelActivity = useCallback(() => {
-    const eventName = levelProperties.isProjectLevel
-      ? EVENTS.PROJECT_ACTIVITY
-      : EVENTS.LEVEL_ACTIVITY;
-
-    analyticsReporter.sendEvent(eventName, {
-      signedIn: signedIn,
-      unitName: scriptName,
-      levelId: levelProperties.id,
-      levelName: levelProperties.name,
-    });
-  }, [levelProperties, signedIn, scriptName]);
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
 
   const generateDancer = useCallback(
     async (regenerate = false) => {
@@ -367,6 +356,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       )
     );
   }, [dispatch, levelProperties.appName, levelProperties.id]);
+
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
@@ -430,36 +421,39 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   <Adlib
                     adlib={adlibs[adlibOption]}
                     adlibChoices={adlibChoices}
-                    readOnly={['generating', 'reviewing'].includes(
-                      aiGenerateState
-                    )}
+                    readOnly={
+                      isReadOnly ||
+                      ['generating', 'reviewing'].includes(aiGenerateState)
+                    }
                     glowSpeed={glowSpeed}
                     onChoicesChange={onAdlibChoicesChange}
                     onTextChange={onAdlibTextChange}
                   />
                 )}
-                <div className={moduleStyles.buttonRow}>
-                  <Button
-                    ariaLabel={
-                      aiGenerateState === 'none'
-                        ? 'Generate dancer'
-                        : 'Generating dancer'
-                    }
-                    text={
-                      aiGenerateState === 'none'
-                        ? 'Generate dancer'
-                        : 'Generating dancer'
-                    }
-                    type="primary"
-                    color="black"
-                    size="s"
-                    iconLeft={{iconName: 'sparkles'}}
-                    isPending={aiGenerateState === 'generating'}
-                    disabled={aiGenerateState === 'generating'}
-                    onClick={() => generateDancer()}
-                    className={moduleStyles.buttonWide}
-                  />
-                </div>
+                {!isReadOnly && (
+                  <div className={moduleStyles.buttonRow}>
+                    <Button
+                      ariaLabel={
+                        aiGenerateState === 'none'
+                          ? 'Generate dancer'
+                          : 'Generating dancer'
+                      }
+                      text={
+                        aiGenerateState === 'none'
+                          ? 'Generate dancer'
+                          : 'Generating dancer'
+                      }
+                      type="primary"
+                      color="black"
+                      size="s"
+                      iconLeft={{iconName: 'sparkles'}}
+                      isPending={aiGenerateState === 'generating'}
+                      disabled={aiGenerateState === 'generating'}
+                      onClick={() => generateDancer()}
+                      className={moduleStyles.buttonWide}
+                    />
+                  </div>
+                )}
               </>
             )}
           {aiGenerateState === 'reviewing' && (

@@ -47,7 +47,7 @@ export interface Channel {
   thumbnailUrl?: string;
   frozen?: boolean;
   // Certain project types (like bubble choice standalone projects) can have subprojects.
-  subprojects?: {level_id: number; project_id: string}[];
+  subprojects?: {level_id: number; channel_id: string}[];
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.
@@ -111,7 +111,7 @@ type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
   dataURL?: DataURL;
 };
 
-type ExcalidrawFilesWithOptionalData = Record<
+export type ExcalidrawFilesWithOptionalData = Record<
   ExcalidrawElement['id'],
   ExcalidrawFileWithOptionalData
 >;
