@@ -199,8 +199,6 @@ export const getMergedAiTutorCodeWithSource = (
   code.forEach((aiFile: AiTutorCodeFile) => {
     // First check active file is the same as the AI code file.
     const activeFile = getActiveFileForSource(source);
-    console.log('activeFile', activeFile);
-    console.log('aiFile', aiFile);
     if (activeFile?.name === aiFile.name) {
       // Active file is the same as the AI code file - replace it.
       const aiTutorVersionFile: ProjectFile = {

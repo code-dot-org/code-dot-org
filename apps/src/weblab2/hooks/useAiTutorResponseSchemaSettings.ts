@@ -42,11 +42,10 @@ export const useAiTutorResponseSchemaSettings = (
         jsonSchema: acceptRejectJsonSchema,
         responseCallback: (response: string) => {
           const jsonResponse = JSON.parse(response);
-          console.log('AI Tutor response (in jsonSchema callback):', {
+          console.log('🤖: AI Tutor response (in jsonSchema callback):', {
             jsonResponse,
           });
           const formattedResponse = formatAcceptRejectResponse(jsonResponse);
-          console.log('formattedResponse', formattedResponse);
           dispatch(setViewingAiTutorVersion(true));
           // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
           // Workspace will be read-only until user clicks "accept" or "reject".
@@ -63,9 +62,6 @@ export const useAiTutorResponseSchemaSettings = (
             source as MultiFileSource,
             aiTutorVersionFiles
           ) as MultiFileSource;
-          console.log('mergedSourceVersion', mergedSourceVersion);
-          console.log('source', source);
-          console.log('aiTutorVersionFiles', aiTutorVersionFiles);
           // If no AI-updated files, return explanation.
           if (aiTutorVersionFiles.length === 0) {
             return formattedResponse.explanation;

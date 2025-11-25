@@ -53,7 +53,6 @@ export const HTMLPreview: React.FC = () => {
   const aiFilePathToPreview = useAppSelector(
     state => state.weblab2.aiFilePathToPreview
   );
-  console.log('aiFilePathToPreview', aiFilePathToPreview);
   const [isIframeLoaded, setIsIframeLoaded] = useState(false);
   const [debouncedSource, setDebouncedSource] = useState(source);
   const sourceLevelId = useRef<number | undefined>(undefined);
