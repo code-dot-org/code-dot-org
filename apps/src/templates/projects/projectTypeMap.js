@@ -45,7 +45,7 @@ export const PROJECT_TYPE_MAP = {
   story: i18n.projectTypeStory(),
   time_capsule: i18n.projectTypeTimeCapsule(),
   transformers: i18n.projectTypeTransformers(),
-  music_dance_ai: 'Music Dance AI Mashup',
+  music_dance_ai: 'Mix & Move with AI',
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {

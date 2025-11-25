@@ -6548,3 +6548,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        global-modularity-test-2025:
+          title: Global Modularity Test
+          description_short: Demonstrating various ways of sharing curriculum to build a global course
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-revisions-csaif-pl:
+          title: sandbox-revisions-csaif-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

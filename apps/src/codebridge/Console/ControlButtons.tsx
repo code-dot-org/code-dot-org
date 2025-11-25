@@ -7,6 +7,7 @@ import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
@@ -34,6 +35,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {onRun, onStop, levelProperties} = useCodebridgeContext();
   const {id: levelId, appName, predictSettings} = levelProperties;
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const isPredictLevel = predictSettings?.isPredictLevel;
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
@@ -86,6 +88,7 @@ const ControlButtons: React.FunctionComponent = () => {
         }
       });
       dispatch(setHasRun(true));
+      logLevelActivity();
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()

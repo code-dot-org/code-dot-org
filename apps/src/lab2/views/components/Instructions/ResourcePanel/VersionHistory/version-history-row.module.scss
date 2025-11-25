@@ -8,9 +8,14 @@
   border-radius: var(--border-radius-br-s, 4px);
   border: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-secondary);
+  margin-block: 0 0.5rem;
   margin-inline: 0.625rem;
   position: relative;
   z-index: 1;
+
+  &:has(.commitDescription) {
+    margin-block: 0.625rem;
+  }
 }
 
 .row {
@@ -18,7 +23,7 @@
 }
 
 .initialVersionRow {
-  margin-block: 1rem 0;
+  margin-block: 0.625rem 0;
 }
 
 .currentVersionRow {
@@ -29,7 +34,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  flex: 1;
+  width: 100%;
 }
 
 .versionHeader {
@@ -37,9 +42,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.25rem;
   width: 100%;
-  padding-block: 0.5rem;
-  padding-inline: 0.5rem 0.625rem;
+  height: 38px;
+  padding-inline: 0.5rem 0.375rem;
+}
+
+.versionLabel {
+  min-width: 0;
+
+  span {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .commitDescription {
@@ -48,6 +64,13 @@
   padding: 0.5rem 0.75rem;
 }
 
+.restoreButton i {
+  html[dir='rtl'] & {
+    transform: scaleX(-1);
+  }
+}
+
 .autoSavedIcon {
   color: var(--text-neutral-placeholder);
+  margin-inline-end: 0.125rem;
 }

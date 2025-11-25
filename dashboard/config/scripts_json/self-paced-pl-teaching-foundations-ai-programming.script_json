@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "self_paced_pl_9_12",
       "curriculum_umbrella": "Self-paced PL - AIF",
+      "has_verified_resources": true,
       "is_migrated": true,
       "topic_tags": [
         "ai"
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-06 15:00:54 UTC",
+    "serialized_at": "2025-11-24 15:58:19 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3436,104 +3437,6 @@
       }
     },
     {
-      "name": "Exemplar Unit Guide",
-      "url": "https://drive.google.com/file/d/125nyYGG6_sEQWKxLZKq0uY5u3oEhZuvp/view?usp=drive_link",
-      "key": "exemplar_unit_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_unit_guide"
-      }
-    },
-    {
-      "name": "Problem-Solving-with-AI-Resources",
-      "url": "https://drive.google.com/file/d/1qMY324bY6cajVFugf1VLvTjbqY1GsRQa/view?usp=drive_link",
-      "key": "problem-solving-with-ai-resources",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "problem-solving-with-ai-resources"
-      }
-    },
-    {
-      "name": "PS with AI Standards",
-      "url": "https://drive.google.com/file/d/1oH0-aDQrPrWenDtFJAanoGIAIHs1fj8j/view?usp=drive_link",
-      "key": "ps_with_ai_standards",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "ps_with_ai_standards"
-      }
-    },
-    {
-      "name": "PS with AI U1L1 Unit Outline",
-      "url": "https://drive.google.com/file/d/1UmhEuzEzn-XOKI4ancep2LFLuMpHnh0J/view?usp=drive_link",
-      "key": "ps_with_ai_u1l1_unit_outline",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "ps_with_ai_u1l1_unit_outline"
-      }
-    },
-    {
-      "name": "PS with AI U1L2-18 Activity Guide",
-      "url": "https://drive.google.com/file/d/1Y4V36KxRpUfHl34NFAYfYEir7Fdeh948/view?usp=drive_link",
-      "key": "ps_with_ai_u1l2-18_activity_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "ps_with_ai_u1l2-18_activity_guide"
-      }
-    },
-    {
-      "name": "PS with AI U1L2-26 Activity Guide",
-      "url": "https://drive.google.com/file/d/11YXeo5xXFA1keNZt5QnDyeeFjznlYlh3/view?usp=drive_link",
-      "key": "ps_with_ai_u1l2-26_activity_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "ps_with_ai_u1l2-26_activity_guide"
-      }
-    },
-    {
-      "name": "PS with AI U1L2-Lesson 10-lesson plan",
-      "url": "https://drive.google.com/file/d/1oSfcNWe4Q-wONWb4IXulxcv5R4DgAV53/view?usp=drive_link",
-      "key": "ps_with_ai_u1l2-lesson_10-lesson_plan",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "ps_with_ai_u1l2-lesson_10-lesson_plan"
-      }
-    },
-    {
       "name": "PS with AI Unit Guide",
       "url": "https://drive.google.com/file/d/1OEC2dhTbrEA3jmH6avXBvc92C6VxOIxj/view?usp=drive_link",
       "key": "ps_with_ai_unit_guide",
@@ -3580,7 +3483,7 @@
       "url": "https://drive.google.com/file/d/1Pk-ZRMiplv9HleIGecyNu_QFQFA5w5TS/view?usp=drive_link",
       "key": "solution_aif_5_2",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "curriculum_category": "professional_learning",
         "embeddability_type": "embed_only",
         "type": "Answer Key"
@@ -3632,241 +3535,17 @@
       }
     },
     {
-      "name": "Solution AIF 6.11",
-      "url": "https://drive.google.com/file/d/1ysqZcNktFYx3cjnBY36I8b4kGazTjziY/view?usp=drive_link",
-      "key": "solution_aif_6_11",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_6_11"
-      }
-    },
-    {
       "name": "Solution AIF 6.3",
       "url": "https://drive.google.com/file/d/1ki_Nd2oB-1riaDoLhyQ7d3BLTsnM7AKb/view?usp=drive_link",
       "key": "solution_aif_6_3",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "curriculum_category": "professional_learning",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "solution_aif_6_3"
-      }
-    },
-    {
-      "name": "Solution AIF 6.4",
-      "url": "https://drive.google.com/file/d/123ilOw4XPMbfU1PQF2fZgMHcfDicBD5d/view?usp=drive_link",
-      "key": "solution_aif_6_4",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_6_4"
-      }
-    },
-    {
-      "name": "Solution AIF 7.2",
-      "url": "https://drive.google.com/file/d/1g9SyIDnIgentEjjHtOOXtsIODS1GUnfZ/view?usp=drive_link",
-      "key": "solution_aif_7_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_7_2"
-      }
-    },
-    {
-      "name": "Solution AIF 7.3",
-      "url": "https://drive.google.com/file/d/1e6xRVr6Qb3iSDBN5ggDW_aCcSF2jKuMD/view?usp=drive_link",
-      "key": "solution_aif_7_3",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_7_3"
-      }
-    },
-    {
-      "name": "Solution AIF 7.8",
-      "url": "https://drive.google.com/file/d/1OKfaCrOd7pzPtprUfXBq4KqBupY53ejW/view?usp=drive_link",
-      "key": "solution_aif_7_8",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_7_8"
-      }
-    },
-    {
-      "name": "Solution AIF 8.1",
-      "url": "https://drive.google.com/file/d/1RAD-lddZ-yv9XFbyZPBBCYOWo0wkoCjt/view?usp=drive_link",
-      "key": "solution_aif_8_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_8_1"
-      }
-    },
-    {
-      "name": "Solution AIF 8.2",
-      "url": "https://drive.google.com/file/d/1Ua1UIgaRhAtZ87BE2WuB0fx3Cs7suOWq/view?usp=drive_link",
-      "key": "solution_aif_8_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_8_2"
-      }
-    },
-    {
-      "name": "Solution AIF 8.3",
-      "url": "https://drive.google.com/file/d/1K7Ym5DGlFsXZE8SspLypFyM7FX9CLPSx/view?usp=drive_link",
-      "key": "solution_aif_8_3",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_8_3"
-      }
-    },
-    {
-      "name": "Solution AIF 8.4",
-      "url": "https://drive.google.com/file/d/1XZ7GfqDsO4IEPGqIsROIXpYIP21BZ-cS/view?usp=drive_link",
-      "key": "solution_aif_8_4",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_8_4"
-      }
-    },
-    {
-      "name": "Solution AIF 8.5",
-      "url": "https://drive.google.com/file/d/11ixAB12dXeLG7OCUvlRLRJRnNXck-Z8I/view?usp=drive_link",
-      "key": "solution_aif_8_5",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_8_5"
-      }
-    },
-    {
-      "name": "Solution AIF 8.8",
-      "url": "https://drive.google.com/file/d/1Tm-bfrB0msDa7FRO9dVhEDgFkAXnDAE2/view?usp=drive_link",
-      "key": "solution_aif_8_8",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_8_8"
-      }
-    },
-    {
-      "name": "Solution AIF 9.1",
-      "url": "https://drive.google.com/file/d/1Gh8d9ujnOS0xuOydaarehcjqpmNeae9E/view?usp=drive_link",
-      "key": "solution_aif_9_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_9_1"
-      }
-    },
-    {
-      "name": "Solution AIF 9.2",
-      "url": "https://drive.google.com/file/d/1_Q9gch_L8APl5gDw3u46gqcaA5769Mmc/view?usp=drive_link",
-      "key": "solution_aif_9_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_9_2"
-      }
-    },
-    {
-      "name": "Solution AIF 9.3",
-      "url": "https://drive.google.com/file/d/1glGLza44mHr6P8NOV_r99rMEkzk8HEPx/view?usp=drive_link",
-      "key": "solution_aif_9_3",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_9_3"
-      }
-    },
-    {
-      "name": "Solution AIF 9.4",
-      "url": "https://drive.google.com/file/d/1dJdicRxoLxaE4xAgkoyk9wuRVUh9wPej/view?usp=drive_link",
-      "key": "solution_aif_9_4",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solution_aif_9_4"
-      }
-    },
-    {
-      "name": "Viewing Student AI Chat History as a Teacher",
-      "url": "https://drive.google.com/file/d/1lCPabdTUMR6y9dD-qP3V6X7-rDm-Rk3S/view?usp=drive_link",
-      "key": "viewing_student_ai_chat_history_as_a_teacher",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "professional_learning",
-        "embeddability_type": "embed_only",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
       }
     }
   ],
@@ -3877,48 +3556,6 @@
     {
       "seeding_key": {
         "resource.key": "ai_chat_lab_faq",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "exemplar_unit_guide",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "problem-solving-with-ai-resources",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "ps_with_ai_standards",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "ps_with_ai_u1l1_unit_outline",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "ps_with_ai_u1l2-18_activity_guide",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "ps_with_ai_u1l2-26_activity_guide",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "ps_with_ai_u1l2-lesson_10-lesson_plan",
         "script.name": "self-paced-pl-teaching-foundations-ai-programming"
       }
     },
@@ -3966,103 +3603,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "solution_aif_6_11",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "solution_aif_6_3",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_6_4",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_7_2",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_7_3",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_7_8",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_8_1",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_8_2",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_8_3",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_8_4",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_8_5",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_8_8",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_9_1",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_9_2",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_9_3",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "solution_aif_9_4",
-        "script.name": "self-paced-pl-teaching-foundations-ai-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
         "script.name": "self-paced-pl-teaching-foundations-ai-programming"
       }
     }

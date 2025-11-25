@@ -9,15 +9,14 @@
 }
 
 .message {
-  margin: 20px;
-  font-size: 16px;
+  margin: 0.625rem 0.625rem 0;
 }
 
 .listContainer {
-  flex: 1;
   display: flex;
   flex-direction: column;
   min-height: 0;
+  position: relative;
 
   /* Simple background line that runs underneath the radio buttons */
   &::before {
@@ -25,59 +24,29 @@
     position: absolute;
     inset-inline-start: 30px; // Align with radio button
     top: 10px;
-    bottom: 0;
+    bottom: 10px;
     width: 1px;
     background-color: var(--borders-neutral-primary);
     z-index: 0;
+    pointer-events: none;
   }
 }
 
 .list {
   overflow-y: auto;
-  flex: 1;
   min-height: 0;
   position: relative;
   padding-bottom: 0.625rem;
-}
 
-.listFooter {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  gap: 0.25rem;
-  margin-right: 0.625rem;
+  /* Add extra space after the second to last row
+  to add more space above the initial version row */
+  & > div:nth-last-child(2) {
+    margin-bottom: 1rem;
+  }
 }
 
 .loadingVersionSpinner {
   font-size: 32px;
   text-align: center;
   margin-right: 0.75rem;
-}
-
-.versionLoadError {
-  font-size: 14px;
-}
-
-.buttonContainer {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.625rem;
-  gap: 0.5rem;
-  background-color: var(--background-neutral-secondary);
-  border-top: variables.$default-border;
-}
-
-.versionButton {
-  width: 100%;
-  height: 32px;
-  box-sizing: border-box;
-}
-
-.leftButton {
-  margin-right: auto;
-}
-
-.rightButton {
-  margin-left: auto;
 }
