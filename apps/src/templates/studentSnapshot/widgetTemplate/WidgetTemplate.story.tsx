@@ -112,6 +112,10 @@ Example grid setup (used in storybook):
         defaultValue: {summary: 'false'},
       },
     },
+    settingsOptions: {
+      control: false,
+      description: 'Options for the settings dropdown in the widget header',
+    },
   },
 };
 
@@ -124,6 +128,20 @@ export const Default: Story = {
     gridWidth: 1,
     gridHeight: 1,
     children: <div>This is the widget content</div>,
+    settingsOptions: [
+      {
+        value: 'setting1',
+        onClick: () => alert('Setting 1 clicked!'),
+        label: 'Setting 1',
+        icon: {iconName: 'cog'},
+      },
+      {
+        value: 'setting2',
+        onClick: () => alert('Setting 2 clicked!'),
+        label: 'Setting 2',
+        icon: {iconName: 'smile'},
+      },
+    ],
   },
 };
 
