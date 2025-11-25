@@ -14,7 +14,6 @@ import applabMsg from '@cdo/applab/locale';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
-import {experimentActionCableLoad} from '@cdo/apps/experimentActionCableLoad/experiment-actioncable-load';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
@@ -1654,9 +1653,3 @@ Applab.readProperty = function (element, property) {
 Applab.getAppReducers = function () {
   return reducers;
 };
-
-try {
-  experimentActionCableLoad();
-} catch (e) {
-  console.error('Error loading experimentActionCable:', e);
-}
