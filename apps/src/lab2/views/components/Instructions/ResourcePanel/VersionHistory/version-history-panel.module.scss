@@ -22,7 +22,7 @@
   &::before {
     content: '';
     position: absolute;
-    inset-inline-start: 30px; // Align with radio button
+    inset-inline-start: 28px; // Align with radio button
     top: 10px;
     bottom: 10px;
     width: 1px;
@@ -38,10 +38,26 @@
   position: relative;
   padding-bottom: 0.625rem;
 
+  & > .collapseButton + .autoSaveRow {
+    margin-top: 0.625rem;
+  }
+
   /* Add extra space after the second to last row
   to add more space above the initial version row */
   & > div:nth-last-child(2) {
     margin-bottom: 1rem;
+  }
+}
+
+.collapseButton {
+  margin-inline-start: 0.75rem;
+  background: var(--background-neutral-primary);
+  position: relative;
+  z-index: 1;
+
+  span,
+  i {
+    color: var(--text-neutral-quaternary);
   }
 }
 
