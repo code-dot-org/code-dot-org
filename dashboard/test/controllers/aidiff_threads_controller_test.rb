@@ -18,7 +18,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
 
     create(:single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation')
 
-    @session_id = "1234"
+    @session_id = 'fake_session_id'
     @bedrock_client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
     @bedrock_client.stub_responses(
       :retrieve_and_generate, {

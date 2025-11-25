@@ -19,6 +19,12 @@ const csf_prefixes = [
   '/courses/pre-express-2024',
   '/courses/k5-onlinepd-2024',
   '/courses/teaching-csf-2025',
+  '/courses/coursea-2024',
+  '/courses/courseb-2024',
+  '/courses/coursec-2024',
+  '/courses/coursed-2024',
+  '/courses/coursee-2024',
+  '/courses/coursef-2024',
 ];
 
 const donor_prefixes = [

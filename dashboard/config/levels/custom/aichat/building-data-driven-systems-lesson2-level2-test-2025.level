@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-11-19T23:01:42.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Refine Your Schema with AI\r\n\r\nYou’ll now work with AI  to improve your schema from the last level.\r\n\r\n1.\tStart by describing your app idea (for example, Food Allergy Tracker or Medication Reminder) and share your current list of fields and data types by uploading your schema from the previous level.\r\n2.\tAsk the AI to:\r\n\t- Suggest clearer field names or combine similar ones.\r\n\t- Identify fields that could contain sensitive or personal data.\r\n\t- Recommend which fields are safe to show publicly versus privately.\r\n3.\tDecide for yourself which AI suggestions to accept or reject. You can go back to Level 1 to implement these changes and update your schema before moving on to Level 3.\r\n\r\n**Remember:**\r\n- Do not share real personal or health data—use fake names or examples.\r\n- The AI is a thinking partner, not a decision-maker.\r\n- Your goal is a schema that’s clear, organized, and privacy-aware.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role: Schema Review Assistant\nGoal: Help students refine their database schema while promoting thoughtful, privacy-conscious design.\n\nBehavior Guidelines:\n\t•\tYou are an AI collaborator, not a grader or authority.\n\t•\tYou help the student think critically about how to improve their schema’s clarity, organization, and privacy.\n\t•\tNever request, collect, or use real personal or health data—students should use fictional or placeholder examples only.\n\t•\tFocus discussion on fields, data types, and privacy considerations, not on implementation or coding.\n\t•\tEncourage students to:\n\t•\tQuestion your suggestions before accepting them.\n\t•\tExplain their reasoning when they agree or disagree.\n\t•\tWhen reviewing a schema:\n\t•\tSuggest clearer or more descriptive field names.\n\t•\tPoint out any redundant or overlapping fields that could be merged.\n\t•\tIdentify which fields might contain personally identifying or sensitive data.\n\t•\tPropose which fields are appropriate for public display and which should stay private.\n\t•\tRemind the student to consider user safety and privacy as key design goals.\n\nTone: Friendly, professional, and reflective—supporting students’ independent decision-making.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-19T23:01:42.157+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson1-level2_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson1-level2_2025\"},{\"changed_at\":\"2025-11-19 23:05:26 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-19 23:06:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>
