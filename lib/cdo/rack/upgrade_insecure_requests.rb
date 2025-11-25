@@ -40,9 +40,17 @@ module Rack
         # http://www.w3.org/TR/upgrade-insecure-requests/#reporting-upgrades
 
         # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
+
+        frame_src = "'self' https: blob:"
+
+        # Supports Web Lab 2 Preview
+        if rack_env?(:development) || ci_webserver?
+          frame_src += " http://preview.localhost.codeprojects.org:3000 http://preview.localhost.codeprojects.org:9000"
+        end
+
         policies = [
           "default-src 'self' https:",
-          "frame-src 'self' https: blob:",
+          "frame-src #{frame_src}",
           "worker-src 'self' blob: ",
           "child-src 'self' blob: ",
           "script-src 'self' https: 'unsafe-inline' https://vaas.acapela-group.com 'unsafe-eval'",
