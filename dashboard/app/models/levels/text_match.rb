@@ -25,8 +25,6 @@
 #  index_levels_on_type       (type)
 #
 
-require_relative 'dsl_defined'
-
 # Text Match type.
 class TextMatch < DSLDefined
   def dsl_default

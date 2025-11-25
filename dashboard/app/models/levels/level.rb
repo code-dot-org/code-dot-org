@@ -27,11 +27,6 @@
 
 require 'cdo/shared_constants'
 
-require_relative '../concerns/levels/levels_within_levels'
-require_relative '../concerns/sti_factory'
-require_relative '../concerns/serialized_properties'
-require_relative '../concerns/text_to_speech'
-
 class Level < ApplicationRecord
   include SharedConstants
   include Levels::LevelsWithinLevels

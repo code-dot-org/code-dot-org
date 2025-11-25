@@ -216,8 +216,8 @@ module Dashboard
     config.eager_load_paths.map!(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
-    config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
     require_relative '../app/jobs/mail_delivery_job'
+    config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
     config.action_mailer.delivery_job = 'MailDeliveryJob'
     config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 

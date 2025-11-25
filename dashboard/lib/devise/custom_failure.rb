@@ -1,5 +1,3 @@
-require_relative '../../app/helpers/locale_helper'
-
 # Overrides the locale for Devise failures to use the same logic as our app.
 module Devise
   class CustomFailure < Devise::FailureApp

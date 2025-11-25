@@ -36,15 +36,6 @@ require 'cdo/shared_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 require 'ruby-progressbar'
 
-# These explicit requires are necessary because this model is required by the
-# script_preload initializer, before autoloaded constants are available.
-require_relative 'application_record'
-require_relative 'levels/text_match'
-require_relative 'levels/free_response'
-require_relative '../../lib/script_constants'
-require_relative 'concerns/unit_concerns/text_to_speech'
-require_relative 'concerns/serialized_to_file_validation'
-
 # A sequence of Levels
 class Unit < ApplicationRecord
   self.table_name = 'scripts'
@@ -55,7 +46,7 @@ class Unit < ApplicationRecord
   include Curriculum::SharedCourseConstants
   include SharedConstants
   include Rails.application.routes.url_helpers
-  include UnitConcerns::TextToSpeech
+  include Unit::TextToSpeech
 
   include Seeded
   has_many :lesson_groups, -> {order(:position)}, foreign_key: 'script_id', dependent: :destroy

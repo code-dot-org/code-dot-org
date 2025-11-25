@@ -23,12 +23,6 @@
 
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 
-# These explicit requires are necessary because this model is required by the
-# script_preload initializer, before autoloaded constants are available.
-require_relative 'application_record'
-require_relative 'concerns/curriculum/course_types'
-require_relative 'concerns/curriculum/assignable_course'
-
 class UnitGroup < ApplicationRecord
   include Curriculum::SharedCourseConstants
   include Curriculum::CourseTypes

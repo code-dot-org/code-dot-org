@@ -25,9 +25,6 @@
 #  index_levels_on_type       (type)
 #
 
-require_relative 'level'
-require_relative '../concerns/seeded'
-
 # Levels defined using a text-based ruby DSL syntax.
 # See #BaseDSL for the DSL format implementation.
 class DSLDefined < Level
