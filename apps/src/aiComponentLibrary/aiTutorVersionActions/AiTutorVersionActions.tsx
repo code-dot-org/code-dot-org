@@ -33,15 +33,14 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
 
   return (
     <>
-      <div className={moduleStyles.fileList}>
+      <ul className={moduleStyles.fileList}>
         {files.map(file => (
-          <div key={file.id} className={moduleStyles.fileItem}>
-            {file.name}
-            {': '}
-            {file.isAiTutorVersionUpdated ? 'Updated' : 'Created'}
-          </div>
+          <li key={file.id} className={moduleStyles.fileItem}>
+            {file.name}{' '}
+            {file.isAiTutorVersionUpdated ? '(File update)' : '(New file)'}
+          </li>
         ))}
-      </div>
+      </ul>
       <div className={moduleStyles.buttonContainer}>
         <Button
           text="Reject"
