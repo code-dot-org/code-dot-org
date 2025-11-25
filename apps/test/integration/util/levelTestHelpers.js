@@ -23,10 +23,33 @@ export function testAsyncProgramGameLab(
     editCode: true,
     xml: program,
     runBeforeClick: function (assert) {
-      // add a completion on timeout since this is a freeplay level
-      tickWrapper
+      // Ensure we call onPuzzleComplete only once
+      let puzzleCompleted = false;
+      const finishLevel = () => {
+        if (!puzzleCompleted) {
+          puzzleCompleted = true;
+          Gamelab.onPuzzleComplete();
+        }
+      };
+
+      const awaitProgramCompletion = tickWrapper
         .tickAppUntil(Gamelab, doneCondition.bind(null, assert))
-        .then(() => Gamelab.onPuzzleComplete());
+        .then(finishLevel);
+
+      // Fail fast if draw never starts
+      const timeoutDurationMs = 3000;
+      const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => {
+          reject(
+            new Error('Timed out waiting for program to reach doneCondition')
+          );
+        }, timeoutDurationMs);
+      });
+
+      // Race success vs timeout; always complete() so harness can finish
+      return Promise.race([awaitProgramCompletion, timeoutPromise])
+        .catch(error => assert.fail(error.message))
+        .finally(finishLevel);
     },
     customValidator: function (assert) {
       validator(assert);

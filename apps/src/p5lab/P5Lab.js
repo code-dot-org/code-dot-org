@@ -1218,11 +1218,9 @@ export default class P5Lab {
    *         loading the game.
    */
   onP5Preload() {
-    this.preloadLabAssets()
+    Promise.resolve()
+      .then(() => this.preloadLabAssets())
       .then(() => this.runPreloadEventHandler_())
-      .catch(e => {
-        console.warn('Preload failed; continuing to avoid hang', e);
-      })
       .finally(() => this.p5Wrapper.notifyPreloadPhaseComplete());
     return false;
   }
