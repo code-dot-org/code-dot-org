@@ -389,6 +389,58 @@ const VersionHistoryPanel: React.FunctionComponent<
 
   const showList = listLoaded && !listLoading && !listLoadError;
 
+  // Helper function to render a single version row to reduce code duplication.
+  const renderVersionRow = useCallback(
+    (
+      versionId: string,
+      label: string,
+      isLatest: boolean,
+      comment?: string,
+      className?: string,
+      saveButtonLabel?: string
+    ) => {
+      return (
+        <VersionHistoryRow
+          className={className}
+          key={versionId}
+          versionId={versionId}
+          label={label}
+          comment={comment}
+          isLatest={isLatest}
+          isSelected={selectedVersion === versionId}
+          onChange={onVersionChange}
+          disabled={disabled}
+          showRestoreButton={
+            !isLatest && selectedVersion === versionId && !viewAsUserId
+          }
+          restoreOnClick={restoreSelectedVersion}
+          restoreLoading={versionLoading}
+          restoreDisabled={disabled || versionLoading}
+        >
+          {isLatest && hasEdited && !viewAsUserId && (
+            <SaveVersionPanel
+              projectSources={projectSources}
+              onSuccess={handleSaveVersionSuccess}
+              disabled={disabled || versionLoading}
+              buttonLabel={saveButtonLabel || lab2I18n.saveCurrentVersion()}
+            />
+          )}
+        </VersionHistoryRow>
+      );
+    },
+    [
+      selectedVersion,
+      onVersionChange,
+      disabled,
+      viewAsUserId,
+      restoreSelectedVersion,
+      versionLoading,
+      hasEdited,
+      projectSources,
+      handleSaveVersionSuccess,
+    ]
+  );
+
   return (
     <div className={moduleStyles.versionHistoryPanel}>
       {versionSaved && (
@@ -441,38 +493,15 @@ const VersionHistoryPanel: React.FunctionComponent<
             {versionSegments.map((segment: VersionSegment) => {
               if (segment.type === 'committed') {
                 const version = segment.version;
-                return (
-                  <VersionHistoryRow
-                    key={version.versionId}
-                    versionId={version.versionId}
-                    label={parseDate(version.lastModified)}
-                    comment={version.comment}
-                    isLatest={version.isLatest}
-                    isSelected={selectedVersion === version.versionId}
-                    onChange={onVersionChange}
-                    disabled={disabled}
-                    showRestoreButton={
-                      !version.isLatest &&
-                      selectedVersion === version.versionId &&
-                      !viewAsUserId
-                    }
-                    restoreOnClick={restoreSelectedVersion}
-                    restoreLoading={versionLoading}
-                    restoreDisabled={disabled || versionLoading}
-                  >
-                    {version.isLatest && hasEdited && !viewAsUserId && (
-                      <SaveVersionPanel
-                        projectSources={projectSources}
-                        onSuccess={handleSaveVersionSuccess}
-                        disabled={disabled || versionLoading}
-                        buttonLabel={
-                          version.comment
-                            ? 'Save new version'
-                            : lab2I18n.saveCurrentVersion()
-                        }
-                      />
-                    )}
-                  </VersionHistoryRow>
+                return renderVersionRow(
+                  version.versionId,
+                  parseDate(version.lastModified),
+                  version.isLatest,
+                  version.comment,
+                  undefined,
+                  version.comment
+                    ? 'Save new version'
+                    : lab2I18n.saveCurrentVersion()
                 );
               } else {
                 // Auto-save group
@@ -502,56 +531,24 @@ const VersionHistoryPanel: React.FunctionComponent<
                       />
                     )}
                     {!isCollapsed &&
-                      versions.map(version => (
-                        <VersionHistoryRow
-                          className={moduleStyles.autoSaveRow}
-                          key={version.versionId}
-                          versionId={version.versionId}
-                          label={parseDate(version.lastModified)}
-                          comment={version.comment}
-                          isLatest={version.isLatest}
-                          isSelected={selectedVersion === version.versionId}
-                          onChange={onVersionChange}
-                          disabled={disabled}
-                          showRestoreButton={
-                            !version.isLatest &&
-                            selectedVersion === version.versionId &&
-                            !viewAsUserId
-                          }
-                          restoreOnClick={restoreSelectedVersion}
-                          restoreLoading={versionLoading}
-                          restoreDisabled={disabled || versionLoading}
-                        >
-                          {version.isLatest && hasEdited && !viewAsUserId && (
-                            <SaveVersionPanel
-                              projectSources={projectSources}
-                              onSuccess={handleSaveVersionSuccess}
-                              disabled={disabled || versionLoading}
-                              buttonLabel={lab2I18n.saveCurrentVersion()}
-                            />
-                          )}
-                        </VersionHistoryRow>
-                      ))}
+                      versions.map(version =>
+                        renderVersionRow(
+                          version.versionId,
+                          parseDate(version.lastModified),
+                          version.isLatest,
+                          version.comment,
+                          moduleStyles.autoSaveRow
+                        )
+                      )}
                   </React.Fragment>
                 );
               }
             })}
-            <VersionHistoryRow
-              versionId={INITIAL_VERSION_ID}
-              label={lab2I18n.initialVersion()}
-              isLatest={latestVersion === INITIAL_VERSION_ID}
-              isSelected={selectedVersion === INITIAL_VERSION_ID}
-              onChange={onVersionChange}
-              disabled={disabled}
-              showRestoreButton={
-                selectedVersion === INITIAL_VERSION_ID &&
-                latestVersion !== INITIAL_VERSION_ID &&
-                !viewAsUserId
-              }
-              restoreOnClick={restoreSelectedVersion}
-              restoreLoading={versionLoading}
-              restoreDisabled={disabled || versionLoading}
-            />
+            {renderVersionRow(
+              INITIAL_VERSION_ID,
+              lab2I18n.initialVersion(),
+              latestVersion === INITIAL_VERSION_ID
+            )}
           </div>
         </div>
       )}
