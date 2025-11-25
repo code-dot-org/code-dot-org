@@ -5,7 +5,7 @@ class User
     queue_as :default
 
     def perform(dry_run: false, limit: nil)
-      InactiveTeacherDeletionWarningEmailer.new(dry_run:, limit:).call
+      InactiveTeacherDeletionWarningMailer.new(dry_run:, limit:).call
     end
   end
 end
