@@ -109,7 +109,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     fetchTeachingProfileData();
   }, [dispatch]);
 
-  const hasNotYetAnsweredPersonalizationQuestions = React.useMemo(() => {
+  const needsToAnswerPersonalizationQuestions = React.useMemo(() => {
     // Don't show while loading
     if (personaData.isLoading) {
       return false;
@@ -129,8 +129,8 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
       return false;
     }
 
-    // Don't show if user hasn't answered personalization questions yet
-    if (!hasNotYetAnsweredPersonalizationQuestions) {
+    // Don't show if user has answered personalization questions
+    if (!needsToAnswerPersonalizationQuestions) {
       return false;
     }
 
@@ -139,7 +139,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     personaData.isLoading,
     isLoadingPersonalizationAlertStatus,
     hasDismissedPersonalizationAlert,
-    hasNotYetAnsweredPersonalizationQuestions,
+    needsToAnswerPersonalizationQuestions,
   ]);
 
   React.useEffect(() => {
