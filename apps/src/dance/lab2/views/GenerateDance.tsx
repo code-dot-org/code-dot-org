@@ -129,7 +129,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     if (aiGenerateState === 'none' && blockCount > 1) {
       setAiGenerateState('edited');
     } else if (
-      ['editing', 'edited'].includes(aiGenerateState) &&
+      ['listened', 'editing', 'edited'].includes(aiGenerateState) &&
       blockCount <= 1
     ) {
       resetProgram();
@@ -341,8 +341,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             size="s"
             onClick={() => {
               startOver();
-              setAiGenerateState('none');
-              resetProgram();
               analyticsReporter.sendEvent(
                 EVENTS.DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
                 {levelPath: window.location.pathname}
@@ -419,8 +417,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               size="s"
               onClick={() => {
                 startOver();
-                setAiGenerateState('none');
-                resetProgram();
                 analyticsReporter.sendEvent(
                   EVENTS.DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
                   {levelPath: window.location.pathname}
