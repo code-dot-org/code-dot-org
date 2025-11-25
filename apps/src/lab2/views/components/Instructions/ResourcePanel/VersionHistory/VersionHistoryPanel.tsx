@@ -500,7 +500,7 @@ const VersionHistoryPanel: React.FunctionComponent<
                   version.comment,
                   undefined,
                   version.comment
-                    ? 'Save new version'
+                    ? 'Save new version' // Hardcoding this so it can be translated by Localize
                     : lab2I18n.saveCurrentVersion()
                 );
               } else {
@@ -537,7 +537,8 @@ const VersionHistoryPanel: React.FunctionComponent<
                           parseDate(version.lastModified),
                           version.isLatest,
                           version.comment,
-                          moduleStyles.autoSaveRow
+                          moduleStyles.autoSaveRow,
+                          undefined
                         )
                       )}
                   </React.Fragment>
@@ -547,7 +548,10 @@ const VersionHistoryPanel: React.FunctionComponent<
             {renderVersionRow(
               INITIAL_VERSION_ID,
               lab2I18n.initialVersion(),
-              latestVersion === INITIAL_VERSION_ID
+              latestVersion === INITIAL_VERSION_ID,
+              undefined,
+              undefined,
+              undefined
             )}
           </div>
         </div>
