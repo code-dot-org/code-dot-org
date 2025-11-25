@@ -116,9 +116,10 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
     assert_includes prompt, "Your summary should be the script of a podcast returned as a string. It should be written in the 2nd person directed at the listener and organized as follows:
     - First, start with the opening sentence: You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class
     - Second, give a one sentence overview that lists the lesson name and describes what its about
-    - Third, in one to two paragraphs summarize the lesson's Learning Objectives, an overview of what the lesson entails, and describe the activities and new vocabulary terms
-    - Fourth, in one to two paragraphs summarize some strategies and ideas about how they can structure the lesson as well as some misconceptions students may have about the material
-    - Fifth, end with a closing remark that repeats the name of the lesson and thanks them for listening."
+    - Third, describe what materials are needed for the lesson
+    - Fourth, summarize the lesson's Learning Objectives, an overview of what the lesson entails, and describe the activities and new vocabulary terms
+    - Fifth, provide step by step instructions using the Teacher Tips in the lesson plan to show the teacher how to run the lesson and how to address misconceptions students may have about the material
+    - Sixth, end with a closing remark that repeats the name of the lesson and thanks them for listening."
   end
 
   test "get_system_prompt includes personalization when current_user is set" do
