@@ -345,9 +345,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setPromptText(text);
   }, []);
 
-  const parentProperties = useParentLevelProperties();
-  const showNavigation =
-    !levelProperties.isProjectLevel && !parentProperties?.isProjectLevel;
+  const hasParent = !!useParentLevelProperties();
   const sublevelOnContinue = useCallback(() => {
     dispatch(
       sendSuccessReportForLevel(
@@ -457,15 +455,14 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               </>
             )}
           {aiGenerateState === 'reviewing' && (
-            <div>
+            <>
               <Heading3>Decide what to do next</Heading3>
               <div>
                 AI generated a dancer based on your prompt, "{promptText}"
               </div>
-            </div>
-          )}
-          {aiGenerateState === 'reviewing' && (
-            <>
+              {hasParent && (
+                <div>Keep editing, or use the tabs at the top.</div>
+              )}
               <div className={moduleStyles.buttonRow}>
                 <Button
                   ariaLabel={'Back to prompt'}
@@ -496,7 +493,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   className={moduleStyles.buttonWide}
                 />
 
-                {showNavigation && (
+                {!hasParent && (
                   <NavigationArea
                     levelProperties={levelProperties}
                     // The following props don't really matter as we don't have a Submit button or validation here.
@@ -505,9 +502,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                     isRunning={false}
                     className={moduleStyles.buttonWide}
                     // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
-                    onContinue={
-                      parentProperties ? sublevelOnContinue : undefined
-                    }
+                    onContinue={sublevelOnContinue}
                   />
                 )}
               </div>

@@ -73,6 +73,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const useText = !!(levelProperties.levelData as MusicLevelData)
     .aiCodeGenerateText;
 
+  const hasParent = !!useParentLevelProperties();
+
   // Use legacy adlib ID, adlib object, or new adlib ID.
   const useAdlib =
     !useText &&
@@ -107,6 +109,21 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const [localizedPromptText, setLocalizedPromptText] = useState(
     adlibOption ? '' : DefaultPrompt
   );
+
+  const cornerIcon =
+    aiGenerateState === 'edited'
+      ? 'minimize'
+      : aiGenerateState === 'playing'
+      ? 'maximize'
+      : undefined;
+
+  const onCornerIconClick = useCallback(() => {
+    if (aiGenerateState === 'edited') {
+      dispatch(setAiGenerateState('playing'));
+    } else if (aiGenerateState === 'playing') {
+      dispatch(setAiGenerateState('edited'));
+    }
+  }, [aiGenerateState, dispatch]);
 
   const generateSong = useCallback(
     async (regenerate = false) => {
@@ -195,9 +212,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     // There can be a delay before we're playing (often due to sample loading),
     // so wait for it explicitly.
     if (aiGenerateState === 'generated' && isPlaying) {
-      dispatch(setAiGenerateState('listening'));
+      if (hasParent) {
+        dispatch(setAiGenerateState('edited'));
+      } else {
+        dispatch(setAiGenerateState('listening'));
+      }
     }
-  }, [aiGenerateState, dispatch, isPlaying]);
+  }, [aiGenerateState, dispatch, hasParent, isPlaying]);
 
   useEffect(() => {
     if (
@@ -237,9 +258,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     ? 'full'
     : undefined;
 
-  const parentProperties = useParentLevelProperties();
-  const isStandalone =
-    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
   const sublevelOnContinue = useCallback(() => {
     dispatch(
       sendSuccessReportForLevel(
@@ -260,7 +278,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   }
 
   return (
-    <Guide key={levelSpecificId} id={levelSpecificId} modal={modal}>
+    <Guide
+      key={levelSpecificId}
+      id={levelSpecificId}
+      modal={modal}
+      cornerIcon={cornerIcon}
+      onCornerIconClick={onCornerIconClick}
+    >
       {aiGenerateState === 'none' &&
         useAdlib &&
         levelProperties.longInstructions && (
@@ -395,7 +419,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             size="s"
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
-              dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
+              dispatch(setAiGenerateState(hasParent ? 'edited' : 'editing'));
               analyticsReporter.sendEvent(
                 EVENTS.MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED,
                 {levelPath: window.location.pathname, packId, adlibChoices}
@@ -424,7 +448,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         <>
           <div>
             <Heading3>Modify the code</Heading3>
-            <div>That's a great mix!</div>
+            {!hasParent && <div>That's a great mix!</div>}
+            {hasParent && <div>Keep editing, or use the tabs at the top.</div>}
           </div>
           <div className={styles.buttonRow}>
             <Button
@@ -444,7 +469,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {!isStandalone && (
+            {!hasParent && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.
@@ -453,7 +478,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 isRunning={false}
                 className={styles.buttonWide}
                 // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
-                onContinue={parentProperties ? sublevelOnContinue : undefined}
+                onContinue={sublevelOnContinue}
               />
             )}
           </div>
