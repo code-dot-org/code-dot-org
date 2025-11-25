@@ -6,19 +6,44 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 
 import moduleStyles from './instructions.module.scss';
 
-interface MainInstructionsContentProps {
-  instructionsText: string;
+interface BaseMainInstructionsContentProps {
+  /** Custom classname for the markdown container */
   markdownClassName?: string;
+  /** The callback for interactions with 'clickable text' */
   handleInstructionsTextClick?: (id: string) => void;
+  /** When true, renders a TextToSpeech play button to read the text */
   showTts?: boolean;
 }
+
+interface MainInstructionsContentWithMarkdown
+  extends BaseMainInstructionsContentProps {
+  /** Markdown to form the basis of the rendered instructions */
+  instructionsText: string;
+  heading?: never;
+  content?: never;
+}
+
+interface MainInstructionsContentSimple
+  extends BaseMainInstructionsContentProps {
+  instructionsText?: never;
+  /** The heading for the content, when not using instructionsText */
+  heading: string;
+  /** The simple paragraph content, when not using instructionsText */
+  content: string;
+}
+
+export type MainInstructionsContentProps =
+  | MainInstructionsContentWithMarkdown
+  | MainInstructionsContentSimple;
 
 /**
  * Component to display the main instructions content for a level.
  * This is extracted out to a component so it can be used both in Instructions
  * and in MainInstructionsBubblePreview.
  *
- * It assumes the `instructionsText` field is markdown.
+ * It assumes the `instructionsText` field is markdown. Otherwise, you can
+ * specify a `heading` and `content` which will render the equivalent markdown
+ * with a 3rd level heading and paragraph content.
  *
  * You can also get a reference to the rendered div, which can be useful when
  * passed to a TextToSpeech component to render the contents as audio. Just
@@ -39,10 +64,19 @@ const MainInstructionsContent = forwardRef<
   MainInstructionsContentProps
 >(
   (
-    {instructionsText, markdownClassName, handleInstructionsTextClick, showTts},
+    {
+      instructionsText,
+      heading,
+      content,
+      markdownClassName,
+      handleInstructionsTextClick,
+      showTts,
+    },
     ref
   ) => {
     const contentRef: MutableRefObject<HTMLElement | null> = useRef(null);
+
+    const markdown = instructionsText || `### ${heading}\n\n${content}`;
 
     return (
       <div
@@ -50,7 +84,7 @@ const MainInstructionsContent = forwardRef<
         className={moduleStyles.mainInstructions}
       >
         <EnhancedSafeMarkdown
-          markdown={instructionsText}
+          markdown={markdown}
           className={classNames(
             moduleStyles.markdownText,
             showTts ? moduleStyles.markdownTts : undefined,

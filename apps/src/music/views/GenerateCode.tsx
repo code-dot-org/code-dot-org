@@ -286,9 +286,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'generating' && (
         <MainInstructionsContent
-          instructionsText={
-            '### Generating...\n\nAI is generating code based on your prompt.'
-          }
+          heading="Generating..."
+          content="AI is generating code based on your prompt."
           markdownClassName={styles.markdown}
           showTts={showTts}
         />
@@ -346,13 +345,14 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {['listening', 'listened'].includes(aiGenerateState) && (
         <MainInstructionsContent
-          instructionsText={`### ${
+          heading={
             aiGenerateState === 'listening'
               ? 'Take a listen...'
               : aiGenerateState === 'listened'
               ? 'Decide what to do next'
               : ''
-          }\n\nAI generated code based on your prompt, "${localizedPromptText}"`}
+          }
+          content={`AI generated code based on your prompt, "${localizedPromptText}"`}
           markdownClassName={styles.markdown}
           showTts={showTts}
         />
@@ -417,9 +417,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'editing' && !isPlaying && (
         <MainInstructionsContent
-          instructionsText={
-            '### Modify the code\n\nAI helped you get started. Make your own changes, then press Run.'
-          }
+          heading="Modify the code"
+          content="AI helped you get started. Make your own changes, then press Run."
           markdownClassName={styles.markdown}
           showTts={showTts}
         />
@@ -427,7 +426,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'editing' && isPlaying && (
         <MainInstructionsContent
-          instructionsText={'### Modify the code\n\nTry changing the code.'}
+          heading="Modify the code"
+          content="Try changing the code."
           markdownClassName={styles.markdown}
           showTts={showTts}
         />
@@ -436,7 +436,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       {aiGenerateState === 'edited' && (
         <>
           <MainInstructionsContent
-            instructionsText={"### Modify the code\n\nThat's a great mix!"}
+            heading="Modify the code"
+            content="That's a great mix!"
             markdownClassName={styles.markdown}
             showTts={showTts}
           />
