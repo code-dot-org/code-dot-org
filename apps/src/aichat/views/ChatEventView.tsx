@@ -116,8 +116,14 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
     }
 
     if (isNotification(event)) {
-      const {removeId, text, notificationType, timestamp, hideTimestamp} =
-        event;
+      const {
+        removeId,
+        text,
+        notificationType,
+        timestamp,
+        hideTimestamp,
+        hideCloseButton,
+      } = event;
       return (
         <Alert
           text={`${text} ${
@@ -129,7 +135,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
               : 'success'
           }
           onClose={
-            isTeacherView
+            isTeacherView || hideCloseButton
               ? undefined
               : () => dispatch(removeUpdateMessage(removeId))
           }

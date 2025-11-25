@@ -18,7 +18,7 @@ import {
   formatExplanationResponse,
   getMergedAiTutorCodeWithSource,
 } from '../helpers/aiTutorStructuredResponseHelper';
-import {setAiFilePathToPreview, setAiTutorVersionFiles} from '../redux';
+import {setAiFilePathToPreview, setAiTutorVersionFiles} from '../weblab2Redux';
 
 /**
  * Custom hook that provides AI tutor response schema settings based on the current

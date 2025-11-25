@@ -88,6 +88,7 @@ export interface Notification extends BaseChatEvent {
   notificationType: 'permissionsError' | 'error' | 'success';
   includeInChatHistory?: boolean;
   hideTimestamp?: boolean;
+  hideCloseButton?: boolean;
 }
 
 /** All chat events displayed in the chat workspace must be one of these types. */
