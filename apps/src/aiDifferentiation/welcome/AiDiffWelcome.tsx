@@ -298,7 +298,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       dispatch(
         setThreadMessages([
           {
-            role: Role.USER,
+            role: Role.ASSISTANT,
             chatMessageText: initialMessage,
             status: Status.OK,
           },

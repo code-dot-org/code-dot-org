@@ -615,10 +615,6 @@ describe('AiDiffChat', () => {
           inputText: responseEventData.text,
           isPreset: false,
           presetChipText: null,
-          context: {
-            type: AiDiffContext.LESSON,
-            lessonId: 2,
-          },
         }),
         true,
         {
