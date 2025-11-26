@@ -103,7 +103,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
         onChange={onChange}
         {...HTMLAttributes}
         className={className}
-        aria-label={ariaLabel ?? HTMLAttributes['aria-label']}
+        aria-label={ariaLabel || HTMLAttributes['aria-label']}
         aria-checked={indeterminate ? 'mixed' : undefined}
       />
       <i className="fa-solid" />
