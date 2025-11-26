@@ -5,7 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
@@ -121,7 +121,7 @@ const PROJECT_INFO = {
   music: {
     label: i18n.projectTypeMusic(),
     thumbnail: studio('/shared/images/courses/logo_music.png'),
-    urlOverride: 'https://code.org/music',
+    urlOverride: pegasus('/music'),
   },
   pythonlab: {
     label: i18n.projectTypePythonlab(),
