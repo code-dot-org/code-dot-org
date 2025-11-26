@@ -91,7 +91,6 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
         moduleStyles.label,
         moduleStyles[`label-${size}`],
         className,
-        HTMLAttributes.className,
       )}
     >
       <input
@@ -103,7 +102,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
         disabled={disabled}
         onChange={onChange}
         {...HTMLAttributes}
-        className={classnames(HTMLAttributes.className, className)}
+        className={className}
         aria-label={ariaLabel ?? HTMLAttributes['aria-label']}
         aria-checked={indeterminate ? 'mixed' : undefined}
       />
