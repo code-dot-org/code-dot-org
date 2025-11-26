@@ -155,7 +155,6 @@ export const HTMLPreview: React.FC = () => {
   const onStopPreview = () => {
     setIsStopped(true);
     setIsIframeLoaded(false);
-    console.log('Preview stopped by user.');
   };
 
   const onReloadPreview = () => {

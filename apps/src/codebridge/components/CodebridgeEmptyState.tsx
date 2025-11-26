@@ -42,8 +42,8 @@ export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
           <BodyTwoText visualAppearance="heading-md">{title}</BodyTwoText>
         )}
         {description && <BodyThreeText>{description}</BodyThreeText>}
-        {buttonProps && <Button {...buttonProps} />}
       </div>
+      {buttonProps && <Button {...buttonProps} />}
     </Box>
   );
 };
