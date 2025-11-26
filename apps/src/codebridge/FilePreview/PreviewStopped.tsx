@@ -15,7 +15,7 @@ const PreviewStopped: React.FC<PreviewStoppedProps> = ({onReload}) => {
       <CodebridgeEmptyState
         imageProps={{src: pageStoppedImage}}
         title="Preview Stopped"
-        description="You stopped running the code due to an error. Review your code or use AI Tutor to help debug before reloading."
+        description="You stopped the preview. If there was an error, review your code or use AI Tutor to help debug before reloading."
         buttonProps={{
           text: 'Reload Preview',
           onClick: onReload,
