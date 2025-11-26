@@ -441,6 +441,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 />
               </>
             )}
+
+          {/* Ensure that the Adlib is rendered, but hidden, when 'reviewing', so that
+              onAdlibTextChange is called to set the prompt text, specifically for
+              when the user has returned to see an existing dancer. */}
           {['none', 'generating', 'reviewing'].includes(aiGenerateState) &&
             !levelProperties.aiDancerGenerateText &&
             adlibs &&
