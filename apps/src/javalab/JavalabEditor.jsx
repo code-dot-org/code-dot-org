@@ -432,6 +432,12 @@ class JavalabEditor extends React.Component {
     } else if (filename.endsWith('.java') && /\s/g.test(filename)) {
       // Java file names cannot contains spaces
       errorMessage = javalabMsg.invalidJavaFilename();
+    } else if (
+      filename.endsWith('.java') &&
+      filename.substring(0, filename.indexOf('.java')).includes('.')
+    ) {
+      // Java class names cannot contain periods
+      errorMessage = 'Java file names cannot contain periods.';
     }
 
     if (errorMessage) {
