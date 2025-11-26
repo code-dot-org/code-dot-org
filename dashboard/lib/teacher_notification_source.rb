@@ -15,7 +15,7 @@ class TeacherNotificationSource < Notifications::Source
         href_links: notification.href_links,
         ai_prompts: notification.ai_prompts,
         priority: notification.priority,
-        published_at: notification.published_at&.iso8601,
+        published_at: notification.created_at.iso8601,
         expires_at: notification.expires_at&.iso8601,
         read_at: notification.read_at&.iso8601
       }

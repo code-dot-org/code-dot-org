@@ -4,7 +4,6 @@
 #
 #  id           :bigint           not null, primary key
 #  user_id      :integer          not null
-#  external_id  :string(255)
 #  title        :string(255)      not null
 #  description  :text(65535)      not null
 #  icon_name    :string(255)
@@ -12,7 +11,6 @@
 #  href_links   :json
 #  ai_prompts   :json
 #  priority     :integer          default(0)
-#  published_at :datetime
 #  expires_at   :datetime
 #  read_at      :datetime
 #  is_dismissed :boolean          default(FALSE), not null
@@ -30,8 +28,7 @@ class TeacherNotification < ApplicationRecord
 
   scope :not_dismissed, -> {where(is_dismissed: false)}
   scope :not_expired, -> {where('expires_at IS NULL OR expires_at > ?', Time.current)}
-  scope :published, -> {where('published_at IS NULL OR published_at <= ?', Time.current)}
-  scope :active, -> {not_dismissed.not_expired.published}
+  scope :active, -> {not_dismissed.not_expired}
 
   validates :title, presence: true
   validates :description, presence: true
@@ -44,12 +41,8 @@ class TeacherNotification < ApplicationRecord
     expires_at.present? && expires_at < Time.current
   end
 
-  def published?
-    published_at.nil? || published_at <= Time.current
-  end
-
   def active?
-    !is_dismissed && !expired? && published?
+    !is_dismissed && !expired?
   end
 
   def mark_as_read!

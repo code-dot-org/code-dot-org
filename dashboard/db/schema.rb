@@ -2314,7 +2314,6 @@ ActiveRecord::Schema.define(version: 2025_11_25_234653) do
 
   create_table "teacher_notifications", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "external_id"
     t.string "title", null: false
     t.text "description", null: false
     t.string "icon_name"
@@ -2322,7 +2321,6 @@ ActiveRecord::Schema.define(version: 2025_11_25_234653) do
     t.json "href_links"
     t.json "ai_prompts"
     t.integer "priority", default: 0
-    t.datetime "published_at"
     t.datetime "expires_at"
     t.datetime "read_at"
     t.boolean "is_dismissed", default: false, null: false
@@ -2394,7 +2392,7 @@ ActiveRecord::Schema.define(version: 2025_11_25_234653) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at"
     t.datetime "anonymized_at"
