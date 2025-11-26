@@ -1,0 +1,576 @@
+#!/usr/bin/env ruby
+
+# This script generates music pseudo-code for HoAI 2025 music lab levels.
+#
+# It uses the system prompt in music_prompt.txt and the user prompt from
+# music_message.txt. These have interpolated sections that are filled
+# with options that are determined by user choice via 'Mad-lib'-style UI
+# elements within the lab activity.
+#
+# The purpose of the generated content is to 'cache' the AI responses for
+# scaling the activity to heavy use.
+#
+# API KEY:
+#
+# It uses the 'google_gemini_ai_tutor_api_key' config key for the API key
+# for gemini.
+#
+# USAGE:
+#
+# Generate ALL ungenerated content:
+#
+# ./bin/oneoff/hoai_2025/generate_music
+#
+# Then, remove any output in the ./bin/oneoff/hoai_2025/music_output
+# path in order to regenerate them in the following invocation.
+#
+# You can validate the output with ./bin/oneoff/hoai_2025/validate_music
+# script. If you supply --delete to that script, it will automatically
+# remove any offending output so you can run this script again to
+# regenerate only those particular runs.
+#
+# Nothing gets uploaded until --no-dry-run is specified.
+#
+# Nothing gets uploaded to the production bucket until --production is
+# specified. Otherwise it goes to the 'cdo-curriculum-devel' bucket.
+#
+# There are AI options to tweak if desired. See '-h' option for details.
+#
+# To only upload the files that have been generated, use the
+# --just-upload option.
+#
+# NOTES:
+#
+# There are two types of adlibs. One specifies the sound types you want
+# to use (beats, vocals, etc) and there are two or more of these you can
+# supply. These are permuted options. This code duplicates any set that
+# is made redundant by an alternate order. So 'beats' and 'vocals' will
+# use the same output as 'vocals' and 'beats'. That is, there will be
+# two physical files with the same content after the script runs.
+#
+# You can stop the script from generating this form of adlib with the
+# --no-produce-layers option.
+#
+# The other form of adlib is the 'mood' form where you can specify the
+# mood (creative, simple, weird, etc). These are simply combinatorial.
+# The order of the options in the output path are hard-coded.
+#
+# You can generate these with the --produce-moods (and turn it off via
+# --no-produce-moods) option.
+
+require 'benchmark'
+require 'fileutils'
+require 'httparty'
+require 'json'
+require 'optparse'
+require 'parallel'
+require 'ruby-progressbar'
+
+require_relative 'constants'
+require_relative 'music_validation'
+
+# Parse options
+options = {
+  allow_drums_in_layers: false,
+  just_save_prompt: false,
+  dry_run: true,
+  production: false,
+  just_upload: false,
+  lengths: [],
+  list_packs: false,
+  layers: [],
+  drums: [],
+  moods: [],
+  produce_layers: false,
+  produce_moods: true,
+  # Special flag to generate for three layers
+  use_full_layers: false,
+  temperature: TEMPERATURE,
+  variants: VARIANTS,
+  adlib_option: ADLIB_OPTION,
+  filter: '',
+}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script calls out to Gemini to produce music pseudo-code for use in the
+    Hour of AI music generation levels.
+
+    It can selectively upload the generated music to our curriculum bucket for
+    production use.
+
+    Options:
+  BANNER
+
+  opts.on('--list-packs',
+          'Just lists the known packs and exits.'
+         ) do |list_packs|
+           options[:list_packs] = list_packs
+         end
+
+  opts.on('--no-dry-run',
+          'Disables the read-only mode where no changes are written to S3'
+         ) do |no_dry_run|
+           options[:dry_run] = no_dry_run
+         end
+
+  opts.on('--production',
+          'Publishes the content into the production bucket.'
+         ) do |production|
+           options[:production] = production
+         end
+
+  opts.on('--just-save-prompt',
+          'Saves the prompt to the generated file for ungenerated content',
+         ) do |just_save_prompt|
+           options[:just_save_prompt] = just_save_prompt
+         end
+
+  opts.on('--just-upload',
+          'Skips the image generation script and just uploads'
+         ) do |just_upload|
+           options[:just_upload] = just_upload
+         end
+
+  opts.on('--produce-layers',
+          'Produce the "layered" form with chosen sound types (beats, vocals, etc). Defaults to off.'
+         ) do |produce_layers|
+           options[:produce_layers] = produce_layers
+         end
+
+  opts.on('--no-produce-layers',
+          'Skips producing the "layered" form with chosen sound types (beats, vocals, etc).'
+         ) do |produce_layers|
+           options[:produce_layers] = produce_layers
+         end
+
+  opts.on('--produce-moods',
+          'Produce the "mood" form with chosen style and drum types. Defaults to on.'
+         ) do |produce_moods|
+           options[:produce_moods] = produce_moods
+         end
+
+  opts.on('--no-produce-moods',
+          'Skips producing the "layered" form with chosen sound types (beats, vocals, etc).'
+         ) do |produce_moods|
+           options[:produce_moods] = produce_moods
+         end
+
+  opts.on('-l', '--layer LAYER',
+          "Adds the given string to the layers list. Specified as '<adlib choice>:<sound type>'. If none are specified, uses [#{LAYERS.join(', ')}]",
+         ) do |layer|
+           raise "Error: layer needs to be specified as '<adlib choice>:<sound type'>" unless layer.include?(':')
+           options[:layers] << layer
+         end
+
+  opts.on('-n', '--length LENGTH',
+          "Adds the given string to the lengths list. If none are specified, uses [#{LENGTHS.join(', ')}]",
+         ) do |length|
+           options[:lengths] << length
+         end
+
+  opts.on('-t', '--temperature TEMPERATURE',
+          "Sets the AI temperature. Defaults to #{TEMPERATURE}.",
+         ) do |temperature|
+           options[:temperature] = temperature
+         end
+
+  opts.on('-d', '--drum DRUM',
+          "Adds the given drum pack to the drums list. If not are specified, uses [#{DRUMS.join(', ')}]",
+         ) do |drum|
+           options[:drums] << drum
+         end
+
+  opts.on('-m', '--mood MOOD',
+          "Adds the given mood to the moods list. If not are specified, uses [#{MOODS.join(', ')}]",
+         ) do |mood|
+           options[:moods] << mood
+         end
+
+  opts.on('-v', '--variants VARIANTS',
+          "Determines the number of variants to produce. Defaults to #{VARIANTS}",
+         ) do |variants|
+           options[:variants] = variants.to_i
+         end
+
+  opts.on('-f', '--filter FILTER',
+          'Filters out only packs with the given string within their id.',
+         ) do |filter|
+           options[:filter] = filter
+         end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+options[:layers] = LAYERS if options[:layers].empty?
+options[:length_for_words] = options[:lengths]
+options[:length_for_words] = LENGTH_WORD_AMOUNTS if options[:lengths].empty?
+options[:lengths] = LENGTHS if options[:lengths].empty?
+options[:moods] = MOODS if options[:moods].empty?
+options[:drums] = DRUMS if options[:drums].empty?
+
+if options[:layers].length < 2
+  raise 'Error: need at least 2 layers'
+end
+
+# Determine the music library songs by downloading the current manifest
+puts
+puts "Downloading music manifest from #{LIBRARY_URL}..."
+data = HTTParty.get(LIBRARY_URL)
+
+manifest_path = File.join(File.dirname(__FILE__), "manifest.json")
+puts
+puts "Caching music manifest for validation in #{manifest_path}"
+File.write(manifest_path, data)
+
+# The ids of packs that are available. We will generate unique things for each pack.
+# We drop any packs that don't have any sounds ('default')
+packs = data['packs'].filter {|pack| (pack['sounds']&.length || 0) >= 2}
+puts
+puts "Found #{packs.length} packs."
+
+unless options[:filter].empty?
+  packs = packs.filter {|pack| pack['id'].include?(options[:filter])}
+  puts "Filtered out to just #{packs.length} packs."
+end
+
+packs = packs.map {|pack| pack['id']}
+
+if options[:list_packs]
+  puts
+  puts 'List listing packs:'
+  packs.each do |pack|
+    puts " - #{pack}"
+  end
+  exit
+end
+
+# For every pack, the list of sounds
+sounds = data['packs'].map {|pack| [pack['id'], pack['sounds'].filter {|sound| sound['type'] != 'preview'}]}.to_h
+
+# Also keep track of 'universal' sounds from 'Code.org' packs
+universals = data['packs'].filter {|pack| pack['artist'] == 'Code.org' || pack['artist'].nil?}.map {|pack| pack['sounds'].filter {|sound| sound['type'] != 'preview'}.map {|sound| sound['pack'] = pack['id']; sound}}.flatten
+
+# Specifically the drum sounds (those which are not associated with packs)
+drum_sounds = universals.filter {|sound| sound['type'] == 'beat'}
+
+adlib_option = options[:adlib_option]
+layers = options[:layers]
+lengths = options[:lengths]
+length_for_words = options[:length_for_words]
+variants = options[:variants]
+drums = options[:drums]
+moods = options[:moods]
+
+# Determine all combinations
+objects = []
+
+packs.each do |pack|
+  base = {
+    temperature: options[:temperature],
+    adlib_option: adlib_option,
+    pack: pack,
+    drum_sounds: drum_sounds,
+    sounds: sounds[pack],
+  }
+
+  if options[:produce_layers]
+    # Every possible unique pair
+    layers.combination(2).each do |combination|
+      adlibs = combination.map do |adlib|
+        adlib.split(':').first
+      end
+      types = combination.map do |adlib|
+        adlib.split(':').last
+      end
+      (options[:use_full_layers] ? lengths : [18]).each do |length|
+        variants.times do |variant|
+          objects << {
+            **base,
+            adlibs: adlibs,
+            types: types,
+            length: length,
+            variant: variant,
+          }
+        end
+      end
+    end
+
+    # Every possible unique triplet
+    if options[:use_full_layers]
+      layers.combination(3).each do |combination|
+        adlibs = combination.map do |adlib|
+          adlib.split(':').first
+        end
+        types = combination.map do |adlib|
+          adlib.split(':').last
+        end
+        lengths.each do |length|
+          variants.times do |variant|
+            objects << {
+              **base,
+              adlibs: adlibs,
+              types: types,
+              length: length,
+              variant: variant,
+            }
+          end
+        end
+      end
+    end
+
+    # Special case for doubling the pair (and adding a third)
+    layers.each do |layer|
+      combination = [layer, layer]
+      adlibs = combination.map do |adlib|
+        adlib.split(':').first
+      end
+      types = combination.map do |adlib|
+        adlib.split(':').last
+      end
+      (options[:use_full_layers] ? lengths : [18]).each do |length|
+        variants.times do |variant|
+          objects << {
+            **base,
+            adlibs: adlibs,
+            types: types,
+            length: length,
+            variant: variant,
+          }
+        end
+      end
+
+      # Also includes the special case for tripling
+      if options[:use_full_layers]
+        layers.each do |extra_layer|
+          combination = [layer, layer, extra_layer]
+          adlibs = combination.map do |adlib|
+            adlib.split(':').first
+          end
+          types = combination.map do |adlib|
+            adlib.split(':').last
+          end
+          lengths.each do |length|
+            variants.times do |variant|
+              objects << {
+                **base,
+                adlibs: adlibs,
+                types: types,
+                length: length,
+                variant: variant,
+              }
+            end
+          end
+        end
+      end
+    end
+  end
+
+  # Generate mood adlibs
+  if options[:produce_moods]
+    moods.each do |mood|
+      drums.each do |drum|
+        length_for_words.each_with_index do |length, i|
+          variants.times do |variant|
+            objects << {
+              **base,
+              adlibs: ["#{mood}-#{LENGTH_WORDS[i]}-#{drum}"],
+              mood: mood,
+              drum: drum,
+              length: length,
+              length_word: LENGTH_WORDS[i],
+              variant: variant,
+            }
+          end
+        end
+      end
+    end
+  end
+end
+
+# Parallelize generating them
+puts
+puts "Generating #{objects.length} files..."
+
+average = {
+  sum: 0,
+  count: 0,
+}
+
+puts
+puts "Loading application..."
+# Load the application layer
+ENV['SKIP_SCRIPT_PRELOAD'] = '1'
+ENV['SKIP_I18N_INIT'] = '1'
+require_relative '../../../../dashboard/config/environment'
+require_relative '../../../../dashboard/app/helpers/aichat_ai_helper'
+
+output_path = File.join(File.dirname(__FILE__), "music_output")
+FileUtils.mkdir_p output_path
+
+if options[:just_upload]
+  puts "Note: Not generating. Just using the content in the 'music_output' directory."
+  puts "    : Remove --just-upload to generate any non-existing content."
+else
+  generate_progress_bar = ProgressBar.create(total: objects.size)
+  Parallel.map(objects, finish: lambda do |_, _, result|
+    if result != true
+      average[:sum] += result
+      average[:count] += 1
+    end
+
+    generate_progress_bar&.increment
+  end
+  ) do |object|
+    response = nil
+    time = true
+
+    adlibs = object[:adlibs]
+    path = File.join(output_path, "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ''}-#{object[:variant].to_s.rjust(2, '0')}.txt")
+
+    unless File.exist?(path)
+      if response.nil?
+        drum_sounds = object[:drum_sounds]
+        sounds = object[:sounds]
+        # Truncate sounds, if needed
+        if object[:types]
+          sounds = object[:sounds].filter do |sound|
+            object[:types].include?(sound['type'])
+          end
+          unless options[:allow_drums_in_layers]
+            drum_sounds = sounds.filter {|sound| sound['type'] == 'beat'}
+          end
+          drum_sounds = [] unless object[:types].include?('beat')
+        else
+          if object[:drum] == 'original'
+            drum_sounds = sounds.filter {|sound| sound['type'] == 'beat'}
+          elsif object[:drum] == 'acoustic'
+            drum_sounds = drum_sounds.filter do |sound|
+              sound['pack'] == 'acoustic_arcade'
+            end
+          elsif object[:drum]
+            drum_sounds = drum_sounds.filter do |sound|
+              sound['pack'] == object[:drum]
+            end
+          end
+
+          sounds = sounds.filter {|sound| sound['type'] != 'beat'}
+        end
+
+        extra_prompt_word = sounds.any? ? 'also ' : ''
+        extra_additional_word = sounds.any? ? 'additional ' : ''
+
+        prompt = (object[:types] ? PROMPT : PROMPT_MOOD).
+          gsub('{sounds}', sounds.any? ? "The valid sounds to use are: #{sounds.map do |sound|
+            "\"#{sound['pack'] || object[:pack]}/#{sound['src']}\" (#{sound['length']} measures)"
+          end.join(', ')}. " : ''
+          ).
+          gsub('{drumSounds}', drum_sounds.any? ? "You can #{extra_prompt_word}use any of the following #{extra_additional_word}drum sounds: #{drum_sounds.map do |sound|
+            "\"#{sound['pack'] || object[:pack]}/#{sound['src']}\" (#{sound['length']} measures)"
+          end.join(', ')}." : ''
+          )
+        message = MESSAGE.gsub('{range}', "#{object[:length]}-#{object[:length] + 2}").gsub('{mood}', object[:mood] || 'fun')
+
+        # Create a AI client via the Aichat system
+        client = AichatAiHelper.create_ai_client_instance(SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR], MODEL)
+
+        # Craft a response to send
+        config, request, context = AichatAiHelper.get_config_request_context(
+          [],
+          {'chatMessageText' => message},
+          options[:temperature],
+          prompt,
+          [],
+          MODEL,
+          nil,
+          nil,
+          nil,
+          nil,
+          SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR],
+          nil
+        )
+
+        # Carry out the request and get the AI response back
+        time = Benchmark.measure do
+          response = if options[:just_save_prompt]
+                       prompt + "\n\n" + message + "\n\n" + object.inspect
+                     else
+                       client.get_response(config, request, context)
+                     end
+        rescue Net::ReadTimeout, Net::OpenTimeout
+          sleep(3)
+          retry
+        end.real
+      end
+
+      # Write all forms of it locally
+      File.write(path, response)
+    end
+
+    time
+  end
+  generate_progress_bar&.finish
+end
+
+puts
+puts "Done generating. Average time: #{average[:sum] / (average[:count] > 0 ? average[:count] : 1)} seconds"
+
+# We put the things in 'cdo-curriculum-devel' unless we use --production
+bucket_name = "#{BUCKET_NAME}#{options[:production] ? '' : '-devel'}"
+
+puts
+puts "Uploading to s3://#{bucket_name}..."
+
+unless !options[:dry_run] && options[:production]
+  puts "Note: Development bucket upload. Specify --production to commit to the production bucket for live use"
+end
+
+if options[:dry_run]
+  puts "Note: Dry run. Not uploading content. Specify --no-dry-run to upload"
+end
+
+unless options[:just_save_prompt]
+  upload_progress_bar = ProgressBar.create(total: objects.size)
+  Parallel.map(objects, finish: lambda do |_, _, _|
+    upload_progress_bar&.increment
+  end
+  ) do |object|
+    # The generated path
+    original_path = "#{object[:pack]}-#{object[:adlib_option]}-#{object[:adlibs].join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
+    file_path = File.join(output_path, original_path)
+    unless File.exist?(file_path)
+      puts "Warning: #{file_path} does not exist"
+      next
+    end
+
+    error = validate_music file_path
+
+    object[:adlibs].permutation(object[:adlibs].length).each do |adlibs|
+      # All 'same' permutations get uploaded from the original generated path
+      path = "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
+
+      if error
+        puts "Not uploading: #{path}\n        Error: #{error}"
+      else
+        # Upload code
+        unless options[:dry_run]
+          AWS::S3.upload_to_bucket(
+            bucket_name,
+            File.join(BUCKET_PATH, path),
+            File.read(file_path),
+            acl: 'public-read',
+            no_random: true,
+            content_type: 'json'
+          )
+        end
+      end
+    end
+
+    true
+  end
+  upload_progress_bar&.finish
+end
