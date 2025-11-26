@@ -27,44 +27,42 @@ module AichatAssetHelper
     call_details = ({filename: filename,  source: source, channel_id: channel_id, level_name: level_name}).to_s
 
     if source == 'project'
+
       bucket_result = asset_bucket.get(channel_id, filename)
       bucket_status = bucket_result[:status]
+
       if bucket_status == 'FOUND'
         asset_body = bucket_result[:body]
       else
         raise AichatProjectAssetFetchError.new(
           "Failed to fetch asset from project bucket with status = '#{bucket_status}' - #{call_details}"
         )
+
       end
+
     elsif source == 'level'
-      # If uuid_filename flag is true, use filename directly
-      if uuid_filename
-        s3_object = LevelStarterAssetsHelper.get_object(filename)
+
+      level = Level.find_by(name: level_name)
+      uuid_name = (level&.starter_assets || level&.project_template_level&.starter_assets || {})&.dig(filename)
+
+      if uuid_name
+        s3_object = LevelStarterAssetsHelper.get_object(uuid_name)
         if s3_object
+
+          # The following call can result in various errors that currently are not derived
+          # from AichatAssetFetchError (e.g. from Aws::S3::Errors or Aws::Errors).
           asset_body = s3_object.get.body
         else
           raise AichatLevelAssetFetchError.new(
-            "Failed to fetch asset for level due to LevelStarterAssetsHelper.get_object('#{filename}' not returning a bucket object. - #{call_details}"
+            "Failed to fetch asset for level due to LevelStarterAssetsHelper.get_object('#{uuid_name}' not returning a bucket object. - #{call_details}"
           )
         end
       else
-        level = Level.find_by(name: level_name)
-        uuid_name = (level&.starter_assets || level&.project_template_level&.starter_assets || {})&.dig(filename)
-        if uuid_name
-          s3_object = LevelStarterAssetsHelper.get_object(uuid_name)
-          if s3_object
-            asset_body = s3_object.get.body
-          else
-            raise AichatLevelAssetFetchError.new(
-              "Failed to fetch asset for level due to LevelStarterAssetsHelper.get_object('#{uuid_name}' not returning a bucket object. - #{call_details}"
-            )
-          end
-        else
-          raise AichatLevelAssetFetchError.new(
-            "Failed to fetch asset for level due to failure to retrieve 'uuid_name' - #{call_details}"
-          )
-        end
+        raise AichatLevelAssetFetchError.new(
+          "Failed to fetch asset for level due to failure to retrieve 'uuid_name' - #{call_details}"
+        )
       end
+
     else
       raise AichatAssetFetchError.new(
         "Failed to fetch asset due to unsupported source - #{call_details}"
@@ -74,7 +72,7 @@ module AichatAssetHelper
     unless asset_body
       raise AichatAssetFetchError.new(
         "Failed to fetch asset for unknown reason. The variable 'asset_body' was not set - #{call_details}"
-      )
+   )
     end
 
     # Read the body.  This can result in various errors that

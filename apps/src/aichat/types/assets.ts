@@ -2,7 +2,6 @@
 export interface ChatAsset {
   filename: string;
   source: AssetSource;
-  uuid_filename?: boolean;
 }
 
 export enum AssetSource {
