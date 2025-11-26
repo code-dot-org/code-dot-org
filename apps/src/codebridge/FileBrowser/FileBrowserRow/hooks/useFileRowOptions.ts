@@ -128,7 +128,7 @@ export const useFileRowOptions = (
             const stagedFilename = file.url.split('/').slice(-1)[0];
             dispatch(
               addStagedFile({
-                key: `${Date.now()}-${stagedFilename}`,
+                key: `${stagedFilename}-${Date.now()}`,
                 asset: {
                   filename: stagedFilename,
                   source: assetSource,
