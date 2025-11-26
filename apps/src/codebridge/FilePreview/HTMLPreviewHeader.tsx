@@ -25,6 +25,8 @@ interface HTMLPreviewHeaderProps {
   onToggleFullScreen: () => void;
   previewViewMode: PreviewViewMode;
   setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
+  onStopPreview: () => void;
+  isStopEnabled: boolean;
 }
 
 export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
@@ -39,6 +41,8 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   onToggleFullScreen,
   previewViewMode,
   setPreviewViewMode,
+  onStopPreview,
+  isStopEnabled,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -127,6 +131,17 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           className={moduleStyles.iconButton}
         />
       </div>
+      <Button
+        onClick={onStopPreview}
+        aria-label={'Stop Preview'}
+        size="xs"
+        type="secondary"
+        disabled={!isStopEnabled}
+        isIconOnly={true}
+        icon={{iconName: 'circle-stop'}}
+        className={moduleStyles.iconButton}
+        color={'destructive'}
+      />
       <SegmentedButtons
         className={moduleStyles.previewViewModeButtons}
         {...previewViewModeButtonsProps}

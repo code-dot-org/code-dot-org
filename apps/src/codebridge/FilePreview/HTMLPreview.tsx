@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
@@ -61,6 +62,7 @@ export const HTMLPreview: React.FC = () => {
   const [previewViewMode, setPreviewViewMode] = useState<PreviewViewMode>(
     PreviewViewMode.DESKTOP
   );
+  const [isStopped, setIsStopped] = useState<boolean>(false);
   const isPredictLevel = levelProperties?.predictSettings?.isPredictLevel;
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
@@ -148,6 +150,16 @@ export const HTMLPreview: React.FC = () => {
       {type: IframeMessageType.REFRESH},
       previewUrl
     );
+  };
+
+  const onStopPreview = () => {
+    setIsStopped(true);
+    setIsIframeLoaded(false);
+    console.log('Preview stopped by user.');
+  };
+
+  const onReloadPreview = () => {
+    setIsStopped(false);
   };
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
@@ -287,33 +299,42 @@ export const HTMLPreview: React.FC = () => {
           onToggleFullScreen={toggleFullScreen}
           previewViewMode={previewViewMode}
           setPreviewViewMode={setPreviewViewMode}
+          onStopPreview={onStopPreview}
+          isStopEnabled={!isStopped}
         />
-        {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
-            route to InnerHTMLPreview. */}
-        <div
-          ref={previewContainerRef}
-          // This provides a small visual indicator when the iframe is focused after submitting the URL.
-          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-          tabIndex={0}
-          className={moduleStyles.previewWrapper}
-          role="application"
-          aria-label="Web Preview Frame"
-        >
-          <iframe
-            sandbox="allow-scripts allow-same-origin"
-            allow="self"
-            title="Web Preview"
-            ref={iframeRef}
-            id="preview"
-            className={classNames(
-              moduleStyles.previewIframe,
-              previewViewMode === PreviewViewMode.DESKTOP
-                ? moduleStyles.desktopPreviewIframe
-                : moduleStyles.mobilePreviewIframe
-            )}
-            src={`${previewUrl}${previewQueryString}`}
-          />
-        </div>
+        {isStopped ? (
+          <div>
+            Preview is stopped!
+            <Button onClick={onReloadPreview} text="Reload Preview" />
+          </div>
+        ) : (
+          /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
+            route to InnerHTMLPreview. */
+          <div
+            ref={previewContainerRef}
+            // This provides a small visual indicator when the iframe is focused after submitting the URL.
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+            tabIndex={0}
+            className={moduleStyles.previewWrapper}
+            role="application"
+            aria-label="Web Preview Frame"
+          >
+            <iframe
+              sandbox="allow-scripts allow-same-origin"
+              allow="self"
+              title="Web Preview"
+              ref={iframeRef}
+              id="preview"
+              className={classNames(
+                moduleStyles.previewIframe,
+                previewViewMode === PreviewViewMode.DESKTOP
+                  ? moduleStyles.desktopPreviewIframe
+                  : moduleStyles.mobilePreviewIframe
+              )}
+              src={`${previewUrl}${previewQueryString}`}
+            />
+          </div>
+        )}
       </div>
     </PanelContainer>
   );
