@@ -84,8 +84,8 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
     - First, start with the opening sentence: You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class
     - Second, give a one sentence overview that lists the lesson name and describes what its about
     - Third, describe what materials are needed for the lesson
-    - Fourth, summarize the lesson's Learning Objectives, an overview of what the lesson entails, and describe the activities and new vocabulary terms
-    - Fifth, provide step by step instructions using the Teacher Tips in the lesson plan to show the teacher how to run the lesson and how to address misconceptions students may have about the material
+    - Fourth, summarize the lesson's Learning Objectives, give an overview of what the lesson entails, describe the activities and new vocabulary terms, and describe how this lesson connects to the Goals and Big Questions in the Unit Overview
+    - Fifth, provide step by step instructions using the Teacher Tips and Misconceptions in the lesson plan to show the teacher how to run the lesson
     - Sixth, end with a closing remark that repeats the name of the lesson and thanks them for listening.",
   }
 
@@ -112,6 +112,7 @@ Standards: #{lesson_plan[:standards].to_json}
 Activities: #{lesson_plan[:activities].to_json}
 Preparation: #{lesson_plan[:preparation]}
 Vocabulary: #{lesson_plan[:vocabularies].to_json}
+Unit overview: #{lesson_plan[:unit_overview].to_json}
 
 #{response_format}"
     prompt
@@ -206,6 +207,8 @@ Vocabulary: #{lesson_plan[:vocabularies].to_json}
     lesson_materials[:vocabularies].each do |v|
       @lesson_plan[:vocabularies] << {word: v[:word], definition: v[:definition]}
     end
+    localized_desc = Unit.find(lesson.script_id)&.localized_description
+    @lesson_plan[:unit_overview] = localized_desc ? Services::MarkdownPreprocessor.process(localized_desc) : nil
     @lesson_plan
   end
 end

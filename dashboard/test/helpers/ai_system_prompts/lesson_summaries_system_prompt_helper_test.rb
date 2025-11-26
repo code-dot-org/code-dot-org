@@ -16,6 +16,10 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
       overview: 'This lesson introduces students to programming variables.'
     )
 
+    # Stub I18n to return fake localized_description for the Unit
+    @fake_unit_description = 'Fake description for Unit'
+    I18n.stubs(:t).returns(@fake_unit_description)
+
     # Create objectives
     @objective1 = create(:objective, description: 'Define what a variable is')
     @objective2 = create(:objective, description: 'Create variables in code')
@@ -113,12 +117,17 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
     assert_includes prompt, "Vocabulary:"
     assert_includes prompt, @vocab1.word
     assert_includes prompt, @vocab1.definition
+
+    # Test that unit overview is included
+    assert_includes prompt, "Unit overview:"
+    assert_includes prompt, @fake_unit_description
+
     assert_includes prompt, "Your summary should be the script of a podcast returned as a string. It should be written in the 2nd person directed at the listener and organized as follows:
     - First, start with the opening sentence: You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class
     - Second, give a one sentence overview that lists the lesson name and describes what its about
     - Third, describe what materials are needed for the lesson
-    - Fourth, summarize the lesson's Learning Objectives, an overview of what the lesson entails, and describe the activities and new vocabulary terms
-    - Fifth, provide step by step instructions using the Teacher Tips in the lesson plan to show the teacher how to run the lesson and how to address misconceptions students may have about the material
+    - Fourth, summarize the lesson's Learning Objectives, give an overview of what the lesson entails, describe the activities and new vocabulary terms, and describe how this lesson connects to the Goals and Big Questions in the Unit Overview
+    - Fifth, provide step by step instructions using the Teacher Tips and Misconceptions in the lesson plan to show the teacher how to run the lesson
     - Sixth, end with a closing remark that repeats the name of the lesson and thanks them for listening."
   end
 
