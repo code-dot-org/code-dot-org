@@ -85,9 +85,9 @@ class User::InactiveTeacherDeletionWarningMailerTest < ActiveJob::TestCase
         expect_teacher_warning_to_be_sent.raises(exception)
       end
 
-      it 'rescues from exception with #report_exception' do
-        described_class.any_instance.expects(:report_exception).with(exception).once
+      it 'rescues the exception and increments num_errors' do
         send_warning_emails
+        _(described_instance.send(:num_errors)).must_equal 1
       end
     end
 

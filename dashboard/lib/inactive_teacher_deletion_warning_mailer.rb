@@ -36,15 +36,10 @@ class InactiveTeacherDeletionWarningMailer
           # Set email sent at field
           mark_warning_email_sent(teacher.id) unless @dry_run
           self.num_teachers_warned += 1
-
-          unless @dry_run
-            Metrics::Events.log_event(
-              event_name: EVENT_NAME,
-              metadata: {
-                teacher_id: teacher.id,
-              }
-            )
-          end
+          upload_metrics(teacher.id) unless @dry_run
+        rescue StandardError => exception
+          self.num_errors += 1
+          log_message("Error deleting user_id #{teacher.id}: #{exception.message}")
         ensure
           processed_teacher_ids << teacher.id
         end
@@ -64,7 +59,7 @@ class InactiveTeacherDeletionWarningMailer
     @processed_teacher_ids ||= []
   end
 
-  private attr_accessor :num_teachers_warned, :start_time
+  private attr_accessor :num_teachers_warned, :num_errors, :start_time
 
   private def inactive_teachers
     inactive_since = 41.months.ago
@@ -84,6 +79,15 @@ class InactiveTeacherDeletionWarningMailer
     or(result.where(user_data_retention_status: {deletion_warning_email_sent_at: ..inactive_since})).
     where.not(id: processed_teacher_ids).
     limit(BATCH_SIZE)
+  end
+
+  private def upload_metrics(id)
+    Metrics::Events.log_event(
+      event_name: EVENT_NAME,
+      metadata: {
+        teacher_id: id,
+      }
+    )
   end
 
   private def send_warning_email(user)
@@ -115,6 +119,7 @@ class InactiveTeacherDeletionWarningMailer
 
   private def reset_metrics
     self.num_teachers_warned = 0
+    self.num_errors = 0
     self.start_time = Time.now
   end
 end
