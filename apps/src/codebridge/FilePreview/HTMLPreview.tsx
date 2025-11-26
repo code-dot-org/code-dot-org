@@ -165,6 +165,8 @@ export const HTMLPreview: React.FC = () => {
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
+    // When we switch levels, reset stopped state.
+    setIsStopped(false);
     setIsLevelLoading(true);
   });
 
