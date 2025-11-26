@@ -6,6 +6,7 @@ import {
   clearUserAddedSelectionContext,
   setChatMessagePending,
 } from '@cdo/apps/aichat/redux/slice';
+import {AssetSource} from '@cdo/apps/aichat/types/assets';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -86,13 +87,40 @@ export const submitChatContents = createAsyncThunk(
     let chatMessageText = text;
     let chatMessageDisplayText;
 
+    // Build assets list, including images from userAddedSelectionContext
+    const assetsWithImages = assets ? [...assets] : [];
+
     // If we have userAddedSelectionContext, display text and text to send to the model will be different.
     if (userAddedSelectionContext?.length) {
       // Add the user added selections to the text to send to the model.
-      chatMessageText +=
-        '\n\n' +
-        formatUserAddedSelectionContextForPrompt(userAddedSelectionContext);
-      // And use the original message for the display.
+      const filteredContext: UserAddedSelectionContextItem[] = [];
+      userAddedSelectionContext.forEach(item => {
+        const imageExtensions = [
+          '.png',
+          '.jpg',
+          '.jpeg',
+          '.gif',
+          '.bmp',
+          '.webp',
+        ];
+        const isImage = imageExtensions.some(ext =>
+          item.filename.toLowerCase().endsWith(ext)
+        );
+        if (isImage) {
+          const isLevelAsset = item.filename.includes('/');
+          assetsWithImages.push({
+            filename: item.filename,
+            source: isLevelAsset ? AssetSource.LEVEL : AssetSource.PROJECT,
+            uuid_filename: isLevelAsset ? true : undefined,
+          });
+        } else {
+          filteredContext.push(item);
+        }
+      });
+      if (filteredContext.length) {
+        chatMessageText +=
+          '\n\n' + formatUserAddedSelectionContextForPrompt(filteredContext);
+      }
       chatMessageDisplayText = text;
     }
 
@@ -103,7 +131,7 @@ export const submitChatContents = createAsyncThunk(
       chatMessageText,
       chatMessageDisplayText,
       hiddenContext,
-      assets,
+      assets: assetsWithImages,
       userAddedSelectionContext,
       timestamp: Date.now(),
     };

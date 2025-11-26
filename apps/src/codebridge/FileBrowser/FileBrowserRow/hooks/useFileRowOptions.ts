@@ -10,10 +10,7 @@ import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
-import {
-  addItemToUserAddedSelectionContext,
-  addStagedFile,
-} from '@cdo/apps/aichat/redux/slice';
+import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import {AssetSource} from '@cdo/apps/aichat/types/assets';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -136,26 +133,21 @@ export const useFileRowOptions = (
             const assetSource = file.type
               ? AssetSource.LEVEL
               : AssetSource.PROJECT;
-            let stagedFilename;
-            // This seems to work, but it's encoding the slash after uuid
-            // Pretty confusing.
+            let contextFilename;
             if (assetSource === AssetSource.LEVEL) {
               // Use the full URL path (uuid/filename123.jpg)
               const urlPath = file.url.split('/').slice(-2).join('/');
-              stagedFilename = urlPath;
+              contextFilename = urlPath;
             } else {
               // Use just the filename
               const urlParts = file.url.split('/');
-              stagedFilename = urlParts[urlParts.length - 1] || fullFilename;
+              contextFilename = urlParts[urlParts.length - 1] || fullFilename;
             }
             dispatch(
-              addStagedFile({
-                key: `${Date.now()}-${stagedFilename}`,
-                asset: {
-                  filename: stagedFilename,
-                  source: assetSource,
-                },
-                loaded: true,
+              addItemToUserAddedSelectionContext({
+                displayName: fullFilename,
+                filename: contextFilename,
+                sourceCode: '',
               })
             );
           } else {
