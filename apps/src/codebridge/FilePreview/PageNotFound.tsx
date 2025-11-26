@@ -3,7 +3,7 @@ import React from 'react';
 
 import emptyPreviewPlaceholderImage from '@cdo/apps/codebridge/images/empty-preview-placeholder.svg';
 
-import moduleStyles from './styles/preview-message.module.scss';
+import moduleStyles from './styles/page-not-found.module.scss';
 
 const PageNotFound = () => {
   return (
