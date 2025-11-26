@@ -63,8 +63,6 @@ CodeprojectsCertificate:
     DomainValidationOptions:
       - DomainName: !Ref CodeprojectsBaseDomainName
         HostedZoneId: !Ref CodeprojectsHostedZoneId
-      - DomainName: !Sub preview.${CodeprojectsBaseDomainName}
-        HostedZoneId: !Ref CodeprojectsHostedZoneId
       - DomainName: !Sub '*.preview.${CodeprojectsBaseDomainName}'
         HostedZoneId: !Ref CodeprojectsHostedZoneId
       - DomainName: !Sub www.${CodeprojectsBaseDomainName}
@@ -79,7 +77,7 @@ CodeprojectsRecords:
   Properties:
     HostedZoneId: !Ref CodeprojectsHostedZoneId
     RecordSets:
-      - Name: !Sub preview.${CodeprojectsBaseDomainName}
+      - Name: !Sub '*.preview.${CodeprojectsBaseDomainName}'
         Type: A
         AliasTarget:
           DNSName: !GetAtt CodeprojectsCloudFrontDistribution.DomainName
