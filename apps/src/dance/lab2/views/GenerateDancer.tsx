@@ -293,10 +293,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           levelPath: window.location.pathname,
         }
       );
-      updateSources(
-        {...currentSources, generatedDancer: newDancerMetadata},
-        true
-      );
 
       const elapsedTime = Date.now() - startTime;
       const remainingDelayDuration = Math.max(
@@ -306,6 +302,11 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
         0
       );
       await new Promise(res => setTimeout(res, remainingDelayDuration));
+
+      updateSources(
+        {...currentSources, generatedDancer: newDancerMetadata},
+        true
+      );
     },
     [adlibChoices, adlibOption, adlibs, currentSources, updateSources]
   );
