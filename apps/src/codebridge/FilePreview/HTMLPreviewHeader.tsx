@@ -3,6 +3,7 @@ import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -131,17 +132,26 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           className={moduleStyles.iconButton}
         />
       </div>
-      <Button
-        onClick={onStopPreview}
-        aria-label={'Stop Preview'}
-        size="xs"
-        type="secondary"
-        disabled={!isStopEnabled}
-        isIconOnly={true}
-        icon={{iconName: 'circle-stop'}}
-        className={moduleStyles.iconButton}
-        color={'destructive'}
-      />
+      <WithTooltip
+        tooltipProps={{
+          tooltipId: 'stop-preview',
+          direction: 'onBottom',
+          size: 'xs',
+          text: 'Stop preview',
+        }}
+      >
+        <Button
+          onClick={onStopPreview}
+          aria-label={'Stop Preview'}
+          size="xs"
+          type="secondary"
+          disabled={!isStopEnabled}
+          isIconOnly={true}
+          icon={{iconName: 'circle-stop'}}
+          className={moduleStyles.iconButton}
+          color={'destructive'}
+        />
+      </WithTooltip>
       <SegmentedButtons
         className={moduleStyles.previewViewModeButtons}
         {...previewViewModeButtonsProps}

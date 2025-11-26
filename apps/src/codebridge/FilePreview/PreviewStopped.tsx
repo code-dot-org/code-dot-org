@@ -11,19 +11,21 @@ interface PreviewStoppedProps {
 
 const PreviewStopped: React.FC<PreviewStoppedProps> = ({onReload}) => {
   return (
-    <CodebridgeEmptyState
-      imageProps={{src: pageStoppedImage}}
-      title="Preview Stopped"
-      description="You stopped running the code due to an error. Review your code or use AI Tutor to help debug before reloading."
-      buttonProps={{
-        text: 'Reload Preview',
-        onClick: onReload,
-        iconLeft: {iconName: 'sync', iconStyle: 'solid'},
-        type: 'secondary',
-        color: 'gray',
-        size: 's',
-      }}
-    />
+    <div data-theme="Light">
+      <CodebridgeEmptyState
+        imageProps={{src: pageStoppedImage}}
+        title="Preview Stopped"
+        description="You stopped running the code due to an error. Review your code or use AI Tutor to help debug before reloading."
+        buttonProps={{
+          text: 'Reload Preview',
+          onClick: onReload,
+          iconLeft: {iconName: 'sync', iconStyle: 'solid'},
+          type: 'secondary',
+          color: 'gray',
+          size: 's',
+        }}
+      />
+    </div>
   );
 };
 
