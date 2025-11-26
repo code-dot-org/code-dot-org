@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2025_11_19_161129) do
-
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -57,8 +56,8 @@ ActiveRecord::Schema[7.0].define(version: 2025_11_19_161129) do
     t.integer "user_id"
     t.integer "lesson_id"
     t.text "lesson_summary"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text "script"
   end
 
@@ -690,13 +689,13 @@ ActiveRecord::Schema[7.0].define(version: 2025_11_19_161129) do
     t.integer "attempts", default: 0, null: false
     t.text "handler", null: false
     t.text "last_error", size: :medium
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
+    t.datetime "run_at", precision: nil
+    t.datetime "locked_at", precision: nil
+    t.datetime "failed_at", precision: nil
     t.string "locked_by"
     t.string "queue"
-    t.datetime "created_at", precision: 6
-    t.datetime "updated_at", precision: 6
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["failed_at"], name: "index_failed_delayed_jobs_on_failed_at"
   end
 
