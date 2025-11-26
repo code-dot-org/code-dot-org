@@ -15,7 +15,7 @@
 # - bramble-download.codeprojects.org
 # - adhoc-bethany-nginx-update.codeprojects.org
 # - localhost.codeprojects.org
-# - localhost.preview.codeprojects.org
+# - *.preview.localhost.codeprojects.org
 # - localhost.staging.codeprojects.org
 # 
 # Therefore we're using <env>.codeprojects.org, except in prod, where we use the base domain.
@@ -54,7 +54,6 @@ CodeprojectsCertificate:
   Properties:
     DomainName: !Ref CodeprojectsBaseDomainName
     SubjectAlternativeNames:
-      - !Sub preview.${CodeprojectsBaseDomainName}
       - !Sub '*.preview.${CodeprojectsBaseDomainName}'
       - !Sub www.${CodeprojectsBaseDomainName}
       - !Sub static.${CodeprojectsBaseDomainName}
@@ -93,7 +92,6 @@ CodeprojectsCloudFrontDistribution:
       PriceClass: PriceClass_All
       Aliases:
         # - !Ref CodeprojectsBaseDomainName
-        - !Sub preview.${CodeprojectsBaseDomainName}
         - !Sub '*.preview.${CodeprojectsBaseDomainName}'
       Origins:
         - Id: DashboardOrigin
