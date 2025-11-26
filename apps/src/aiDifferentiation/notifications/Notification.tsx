@@ -39,13 +39,11 @@ const getRelativeTimeString = (date: Date): string => {
 interface NotificationProps {
   notification: AiDiffNotification | null;
   aiPromptClick?: (label: string, prompt: string) => void;
-  key: string;
 }
 
 const Notification: React.FC<NotificationProps> = ({
   notification,
   aiPromptClick,
-  key,
 }) => {
   const isLoading = notification === null;
   const notificationOrPlaceholder: AiDiffNotification = notification || {
@@ -62,7 +60,7 @@ const Notification: React.FC<NotificationProps> = ({
   };
 
   return (
-    <li className={styles.notification} key={key}>
+    <li className={styles.notification}>
       <FontAwesomeV6Icon
         iconName={notificationOrPlaceholder.iconName}
         iconStyle="solid"

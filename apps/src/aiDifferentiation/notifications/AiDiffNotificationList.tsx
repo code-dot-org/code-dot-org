@@ -24,11 +24,16 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications', {}, undefined)
       .then(response => {
         setLoading(false);
-        const loadedNotifications = response?.value?.map(n => ({
-          ...n,
-          publishedAt: new Date(n.publishedAt),
-          readAt: n.readAt ? new Date(n.readAt) : null,
-        }));
+        const loadedNotifications =
+          response?.value
+            ?.map(n => ({
+              ...n,
+              publishedAt: new Date(n.publishedAt),
+              readAt: n.readAt ? new Date(n.readAt) : null,
+            }))
+            .sort(
+              (a, b) => b.publishedAt.getTime() - a.publishedAt.getTime()
+            ) || [];
         setNotifications(loadedNotifications);
       })
       .catch(error => {
