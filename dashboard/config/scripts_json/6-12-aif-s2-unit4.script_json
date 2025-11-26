@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-24 18:22:06 UTC",
+    "serialized_at": "2025-11-26 00:27:41 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -423,6 +423,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit4"
       }
+    },
+    {
+      "key": "c57d2230-ab14-4207-bb1f-83a716b5d529",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c57d2230-ab14-4207-bb1f-83a716b5d529",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
     }
   ],
   "activity_sections": [
@@ -725,7 +737,7 @@
       "key": "875e8f2c-6475-4dfb-8b23-ed108ef52db6",
       "position": 1,
       "properties": {
-        "progression_name": "When Filters \"Work\""
+        "progression_name": "Inclusive and Transparent Filters"
       },
       "seeding_key": {
         "activity_section.key": "875e8f2c-6475-4dfb-8b23-ed108ef52db6",
@@ -868,6 +880,7 @@
       "key": "bc36035b-ca1e-43d9-84f9-52e983c538a7",
       "position": 1,
       "properties": {
+        "progression_name": "Explore the Filters"
       },
       "seeding_key": {
         "activity_section.key": "bc36035b-ca1e-43d9-84f9-52e983c538a7",
@@ -894,6 +907,61 @@
       "seeding_key": {
         "activity_section.key": "ed1b3b62-0983-466c-9c6a-ffa6a25025ba",
         "lesson_activity.key": "7f343a91-66e5-4526-9e2a-eb9284f0c81c"
+      }
+    },
+    {
+      "key": "57773caf-b71c-444d-b790-cd5c9b4f3a79",
+      "position": 4,
+      "properties": {
+        "progression_name": "Redesign the Filters"
+      },
+      "seeding_key": {
+        "activity_section.key": "57773caf-b71c-444d-b790-cd5c9b4f3a79",
+        "lesson_activity.key": "7f343a91-66e5-4526-9e2a-eb9284f0c81c"
+      }
+    },
+    {
+      "key": "4ad70a7d-4b9b-48b2-adb8-fda8676d97f8",
+      "position": 5,
+      "properties": {
+        "progression_name": "Judging the Entries"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ad70a7d-4b9b-48b2-adb8-fda8676d97f8",
+        "lesson_activity.key": "7f343a91-66e5-4526-9e2a-eb9284f0c81c"
+      }
+    },
+    {
+      "key": "a48c2228-b7f3-4fad-8b64-118bcc25ad08",
+      "position": 1,
+      "properties": {
+        "progression_name": "Investigate Misleading Fields"
+      },
+      "seeding_key": {
+        "activity_section.key": "a48c2228-b7f3-4fad-8b64-118bcc25ad08",
+        "lesson_activity.key": "c57d2230-ab14-4207-bb1f-83a716b5d529"
+      }
+    },
+    {
+      "key": "2ab991dc-65f4-4497-b2ba-7980d870e5ba",
+      "position": 2,
+      "properties": {
+        "progression_name": "Data Architect Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ab991dc-65f4-4497-b2ba-7980d870e5ba",
+        "lesson_activity.key": "c57d2230-ab14-4207-bb1f-83a716b5d529"
+      }
+    },
+    {
+      "key": "1718d6f5-8705-40c9-8ddf-832c32b37ed0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Reflection: Justify Your Design Choice"
+      },
+      "seeding_key": {
+        "activity_section.key": "1718d6f5-8705-40c9-8ddf-832c32b37ed0",
+        "lesson_activity.key": "c57d2230-ab14-4207-bb1f-83a716b5d529"
       }
     }
   ],
@@ -1804,7 +1872,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "When Filters \"Work\""
+        "level_keys": [
+          "iterating-with-ai-lesson6-level1-test-2025"
+        ],
+        "progression": "Inclusive and Transparent Filters"
       },
       "bonus": false,
       "seeding_key": {
@@ -1876,6 +1947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-level2-test-2025"
+        ],
         "progression": "Build Filtered Volunteer Work Search "
       },
       "bonus": false,
@@ -1948,6 +2022,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-level1-test-2025"
+        ],
         "progression": "Comparing Methods"
       },
       "bonus": false,
@@ -1970,6 +2047,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-vocab-pure-function-test-2025"
+        ],
         "progression": "Vocab: Pure Function"
       },
       "bonus": false,
@@ -1992,6 +2072,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-vocab-frq-pure-function-test-2025"
+        ],
         "progression": "Vocab: Pure Function"
       },
       "bonus": false,
@@ -2014,6 +2097,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-vocab-side-effect-test-2025"
+        ],
         "progression": "Vocab: Side Effect"
       },
       "bonus": false,
@@ -2036,6 +2122,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-vocab-frq-side-effect-test-2025"
+        ],
         "progression": "Vocab: Side Effect"
       },
       "bonus": false,
@@ -2058,6 +2147,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-level6-CFU-test-2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2080,6 +2172,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-level7-test-2025"
+        ],
         "progression": "Debugging Challenge"
       },
       "bonus": false,
@@ -2102,6 +2197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson8-level1-test-2025"
+        ],
         "progression": "Reset and Undo User Journey"
       },
       "bonus": false,
@@ -2124,6 +2222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson8-level2-test-2025"
+        ],
         "progression": "Fix the Reset Button"
       },
       "bonus": false,
@@ -2146,6 +2247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson8-level3-test-2025"
+        ],
         "progression": "Build an Undo History Stack"
       },
       "bonus": false,
@@ -2168,6 +2272,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-level4-test-2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -2190,6 +2297,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Explore the Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level1-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "bc36035b-ca1e-43d9-84f9-52e983c538a7"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson9-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-vocab-threshold-test-2025"
+        ],
         "progression": "Vocab: Threshold"
       },
       "bonus": false,
@@ -2207,11 +2339,14 @@
       ]
     },
     {
-      "chapter": 55,
-      "position": 2,
+      "chapter": 56,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-vocab-frq-threshold-test-2025"
+        ],
         "progression": "Vocab: Threshold"
       },
       "bonus": false,
@@ -2229,11 +2364,14 @@
       ]
     },
     {
-      "chapter": 56,
-      "position": 3,
+      "chapter": 57,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-vocab-fallback-label-test-2025"
+        ],
         "progression": "Vocab: Fallback Label"
       },
       "bonus": false,
@@ -2251,11 +2389,14 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 4,
+      "chapter": 58,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-vocab-frq-fallback-label-test-2025"
+        ],
         "progression": "Vocab: Fallback Label"
       },
       "bonus": false,
@@ -2270,6 +2411,116 @@
       },
       "level_keys": [
         "iterating-with-ai-lesson9-vocab-frq-fallback-label-test-2025"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Redesign the Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level6-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "57773caf-b71c-444d-b790-cd5c9b4f3a79"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson9-level6-test-2025"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Judging the Entries"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level7-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "4ad70a7d-4b9b-48b2-adb8-fda8676d97f8"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson9-level7-test-2025"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate Misleading Fields"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l1-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "a48c2228-b7f3-4fad-8b64-118bcc25ad08"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson10-l1-test-2025"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Architect Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l2-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "2ab991dc-65f4-4497-b2ba-7980d870e5ba"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson10-l2-test-2025"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection: Justify Your Design Choice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l5-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "1718d6f5-8705-40c9-8ddf-832c32b37ed0"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson10-l5-test-2025"
       ]
     }
   ],
@@ -2912,6 +3163,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "iterating-with-ai-lesson9-level1-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level1-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "bc36035b-ca1e-43d9-84f9-52e983c538a7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "iterating-with-ai-lesson9-vocab-threshold-test-2025",
         "script_level.level_keys": [
           "iterating-with-ai-lesson9-vocab-threshold-test-2025"
@@ -2956,6 +3219,66 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit4",
         "activity_section.key": "ed1b3b62-0983-466c-9c6a-ffa6a25025ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson9-level6-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level6-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "57773caf-b71c-444d-b790-cd5c9b4f3a79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson9-level7-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level7-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "4ad70a7d-4b9b-48b2-adb8-fda8676d97f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson10-l1-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l1-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "a48c2228-b7f3-4fad-8b64-118bcc25ad08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson10-l2-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l2-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "2ab991dc-65f4-4497-b2ba-7980d870e5ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson10-l5-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l5-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "1718d6f5-8705-40c9-8ddf-832c32b37ed0"
       }
     }
   ],

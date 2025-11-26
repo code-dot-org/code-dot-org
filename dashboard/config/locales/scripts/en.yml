@@ -26070,6 +26070,8 @@ en:
               name: Searching
             lesson-10:
               name: Sorting and Chaining
+            lesson-11:
+              name: Value Explorer Project
           lesson_groups: {}
           name: 6-12-aif-s2-unit3
           title: "[DEV] AIF S2 Unit 3"
@@ -26123,21 +26125,63 @@ en:
         self-paced-pl-revision-aif1:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-revision-aif1
+          title: Teaching Problem Solving with AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-revision-aif0:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-revision-aif0
+          title: Teaching AI Foundations (Introductory Module)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-revision-aif2:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-revision-aif2
+          title: Teaching Foundations of AI Programming
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-revision-aif3:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-revision-aif3
+          title: Teaching AI and the Systems that Power It
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-revision-aif4:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-revision-aif4
+          title: Teaching the Fabric of the Internet and AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-revision-aif5:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-revision-aif5
+          title: Teaching Cybersecurity and Global Impacts
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-revision-aif6:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-revision-aif6
+          title: Teaching Insights from Data and AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
