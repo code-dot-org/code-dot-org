@@ -82,8 +82,6 @@ If the Clever API is updated or you need to regenerate the client:
 
 3. Copy the generated files to this directory:
    ```bash
-   cd /home/daynewagner/projects/code-dot-org
-
    # Backup existing client if needed
    mv dashboard/lib/clever dashboard/lib/clever.backup
 
