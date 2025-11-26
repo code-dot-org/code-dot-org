@@ -2,6 +2,7 @@ import {Meta, StoryFn} from '@storybook/react-webpack5';
 import {useState, Dispatch, SetStateAction} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
+import Tags from '@/tags';
 
 import Checkbox, {CheckboxProps} from '../index';
 
@@ -112,6 +113,46 @@ GroupOfDefaultCheckboxes.args = {
   ],
 };
 
+const CustomContentTemplate: StoryFn<{components: CheckboxProps[]}> = args => (
+  <div style={{padding: 20}}>
+    {args.components.map(c => (
+      <Checkbox key={c.name} {...c} />
+    ))}
+  </div>
+);
+
+export const CheckboxesWithCustomContent = CustomContentTemplate.bind({});
+CheckboxesWithCustomContent.args = {
+  components: [
+    {
+      name: 'test-custom-content-0',
+      label: '',
+      size: 'm' as ComponentSizeXSToL,
+      children: (
+        <>
+          <span>With Custom Content</span>
+          <button type="button">Custom content</button>
+        </>
+      ),
+    },
+    {
+      name: 'test-custom-content-1',
+      label: 'With Custom Content and Label',
+      size: 'm' as ComponentSizeXSToL,
+      children: (
+        <Tags
+          tagsList={[{label: 'Tag1', tooltipContent: 'Tag tooltip', tooltipId: ''}]}
+        />
+      ),
+    },
+    {
+      name: 'test-custom-content-2',
+      label: 'Without Custom Content',
+      size: 'm' as ComponentSizeXSToL,
+    },
+  ],
+};
+
 export const GroupOfDisabledCheckboxes = MultipleTemplate.bind({});
 GroupOfDisabledCheckboxes.args = {
   components: [
@@ -174,109 +215,104 @@ GroupOfSizesOfCheckboxes.args = {
   ],
 };
 
-//
-// ———————————————————————————————————————————————————
-// Supernova documentation (Light theme only)
-// ———————————————————————————————————————————————————
-// These examples are purely for Supernova docs and will not include a Dark theme.
+export const LabelWeights = MultipleTemplate.bind({});
+LabelWeights.args = {
+  components: [
+    {
+      name: 'lw-thin',
+      label: 'Thin label',
+      textThickness: 'thin',
+      size: 'm' as ComponentSizeXSToL,
+      checked: false,
+      onChange: () => null,
+    },
+    {
+      name: 'lw-thick',
+      label: 'Thick label',
+      textThickness: 'thick',
+      size: 'm' as ComponentSizeXSToL,
+      checked: false,
+      onChange: () => null,
+    },
+  ],
+};
 
-const SupernovaDefaultTemplate: StoryFn<CheckboxProps> = () => (
-  <>
-    <div style={{display: 'flex', justifyContent: 'space-around', padding: 20}}>
-      {[
-        {
-          name: 'sn-test',
-          label: 'Checkbox',
-          checked: false,
-          onChange: () => null,
-        },
-        {
-          name: 'sn-test-checked',
-          label: 'Checkbox',
-          checked: true,
-          onChange: () => null,
-        },
-        {
-          name: 'sn-test-indet',
-          label: 'Checkbox Indeterminate',
-          indeterminate: true,
-          checked: false,
-          onChange: () => null,
-        },
-      ].map(props => (
-        <Checkbox key={props.name} {...props} />
+const MultiLineTemplate: StoryFn<{components: CheckboxProps[]}> = args => {
+  const initial = Object.fromEntries(
+    args.components.map(c => [c.name, !!c.checked]),
+  );
+  const [lightState, setLightState] =
+    useState<Record<string, boolean>>(initial);
+  const [darkState, setDarkState] = useState<Record<string, boolean>>(initial);
+
+  const renderGroup = (
+    state: Record<string, boolean>,
+    setState: Dispatch<SetStateAction<Record<string, boolean>>>,
+  ) => (
+    <div style={{maxWidth: 220}}>
+      {args.components.map(c => (
+        <Checkbox
+          key={c.name}
+          {...c}
+          checked={state[c.name]}
+          onChange={e => {
+            const next = {...state, [c.name]: e.target.checked};
+            setState(next);
+            c.onChange?.(e);
+          }}
+        />
       ))}
     </div>
-    <div style={{display: 'flex', justifyContent: 'space-around', padding: 20}}>
-      {[
-        {
-          name: 'sn-test',
-          label: 'Checkbox',
-          disabled: true,
-          checked: false,
-          onChange: () => null,
-        },
-        {
-          name: 'sn-test-checked',
-          label: 'Checkbox',
-          disabled: true,
-          checked: true,
-          onChange: () => null,
-        },
-        {
-          name: 'sn-test-indet',
-          label: 'Checkbox Indeterminate',
-          disabled: true,
-          indeterminate: true,
-          checked: false,
-          onChange: () => null,
-        },
-      ].map(props => (
-        <Checkbox key={props.name + '-disabled'} {...props} />
-      ))}
-    </div>
-  </>
-);
+  );
 
-export const SupernovaGroupOfDefaultCheckboxes = SupernovaDefaultTemplate.bind(
-  {},
-);
+  return (
+    <>
+      <div data-theme="Light" style={{padding: 20}}>
+        <h3>Light Theme</h3>
+        {renderGroup(lightState, setLightState)}
+      </div>
+      <div data-theme="Dark" style={{background: '#292F36', padding: 20}}>
+        <h3 style={{color: '#FFF'}}>Dark Theme</h3>
+        {renderGroup(darkState, setDarkState)}
+      </div>
+    </>
+  );
+};
 
-const SupernovaSizesTemplate: StoryFn<CheckboxProps> = () => (
-  <div style={{display: 'flex', justifyContent: 'space-around', padding: 20}}>
-    {[
-      {
-        name: 'sn-xs',
-        label: 'Checkbox XS',
-        checked: false,
-        size: 'xs' as ComponentSizeXSToL,
-        onChange: () => null,
-      },
-      {
-        name: 'sn-s',
-        label: 'Checkbox S',
-        checked: false,
-        size: 's' as ComponentSizeXSToL,
-        onChange: () => null,
-      },
-      {
-        name: 'sn-m',
-        label: 'Checkbox M',
-        checked: false,
-        size: 'm' as ComponentSizeXSToL,
-        onChange: () => null,
-      },
-      {
-        name: 'sn-l',
-        label: 'Checkbox L',
-        checked: false,
-        size: 'l' as ComponentSizeXSToL,
-        onChange: () => null,
-      },
-    ].map(props => (
-      <Checkbox key={props.name} {...props} />
-    ))}
-  </div>
-);
-
-export const SupernovaGroupOfCheckboxesSizes = SupernovaSizesTemplate.bind({});
+export const MultiLineLabels = MultiLineTemplate.bind({});
+MultiLineLabels.args = {
+  components: [
+    {
+      name: 'wrap-xs',
+      size: 'xs' as ComponentSizeXSToL,
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+      checked: false,
+      onChange: () => null,
+    },
+    {
+      name: 'wrap-s',
+      size: 's' as ComponentSizeXSToL,
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+      checked: false,
+      onChange: () => null,
+    },
+    {
+      name: 'wrap-m',
+      size: 'm' as ComponentSizeXSToL,
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+      checked: false,
+      onChange: () => null,
+    },
+    {
+      name: 'wrap-l',
+      size: 'l' as ComponentSizeXSToL,
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+      checked: false,
+      onChange: () => null,
+    },
+  ],
+};
