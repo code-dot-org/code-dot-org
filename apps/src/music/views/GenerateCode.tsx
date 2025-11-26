@@ -110,28 +110,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     adlibOption ? '' : DefaultPrompt
   );
 
-  const guideWidth =
-    aiGenerateState === 'edited'
-      ? 'narrow'
-      : aiGenerateState === 'playing'
-      ? 'very-narrow'
-      : 'normal';
-
-  const cornerIcon =
-    aiGenerateState === 'edited'
-      ? 'maximize'
-      : aiGenerateState === 'playing'
-      ? 'minimize'
-      : undefined;
-
-  const onCornerIconClick = useCallback(() => {
-    if (aiGenerateState === 'edited') {
-      dispatch(setAiGenerateState('playing'));
-    } else if (aiGenerateState === 'playing') {
-      dispatch(setAiGenerateState('edited'));
-    }
-  }, [aiGenerateState, dispatch]);
-
   const generateSong = useCallback(
     async (regenerate = false) => {
       const startTime = Date.now();
@@ -288,14 +266,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
 
   return (
-    <Guide
-      key={levelSpecificId}
-      id={levelSpecificId}
-      modal={modal}
-      width={guideWidth}
-      cornerIcon={cornerIcon}
-      onCornerIconClick={onCornerIconClick}
-    >
+    <Guide key={levelSpecificId} id={levelSpecificId} modal={modal}>
       {aiGenerateState === 'none' &&
         useAdlib &&
         levelProperties.longInstructions && (
@@ -316,7 +287,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {aiGenerateState === 'generating' && (
+      {['generating', 'generated'].includes(aiGenerateState) && (
         <MainInstructionsContent
           heading="Generating..."
           content="AI is generating code based on your prompt."
@@ -511,8 +482,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           </div>
         </>
       )}
-
-      {aiGenerateState === 'playing' && <div>Keep playing!</div>}
 
       {/* Retain focus with a hidden button. */}
       {['generating', 'generated', 'listening', 'editing'].includes(

@@ -35,7 +35,6 @@ type AiGenerateState =
   | 'listened'
   | 'editing'
   | 'edited'
-  | 'playing'
   | 'clearing-before-none'
   | 'clearing-before-generating';
 
