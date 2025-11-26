@@ -32,7 +32,7 @@ Parameters:
   WorkerInstanceAMI:
     Type: String
     Description: Amazon Machine Image that Autoscaler uses to launch Worker EC2 Instances.
-    Default: ami-09b347c7ebb552ae2
+    Default: ami-041891f7c52014278
   WorkerInstanceType:
     Type: String
     Description: EC2 Instance Type that Autoscaler provisions to run Builds.
@@ -304,7 +304,7 @@ Resources:
         -
           Name: drone-autoscaler
           Essential: true
-          Image: drone/autoscaler:1.13.0
+          Image: drone/autoscaler:1.14.0
           MemoryReservation: 1024
           LogConfiguration:
             LogDriver: awslogs
@@ -407,6 +407,10 @@ Resources:
             # END: Settings for the EC2 Instances that Drone Autoscaler provisions.
 
             # BEGIN: Settings for the Drone Runner ("worker"/"agent") executing on the EC2 Instances provisioned by Autoscaler.
+            -
+              Name: DRONE_AGENT_IMAGE
+              # TODO move back to mainline after drone-runners/drone-runner-docker#79 or similar is merged to update Docker Go client
+              Value: codedotorg/drone-runner-docker
             -
               Name: DRONE_AGENT_CONCURRENCY
               Value: 1
