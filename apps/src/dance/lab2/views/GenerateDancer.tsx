@@ -441,56 +441,57 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 />
               </>
             )}
-          {['none', 'generating'].includes(aiGenerateState) &&
-            !levelProperties.aiDancerGenerateText && (
-              <>
-                {adlibs && adlibChoices && (
-                  <Adlib
-                    adlib={adlibs[adlibOption]}
-                    adlibChoices={adlibChoices}
-                    readOnly={
-                      isReadOnly ||
-                      ['generating', 'reviewing'].includes(aiGenerateState)
-                    }
-                    glowSpeed={glowSpeed}
-                    onChoicesChange={onAdlibChoicesChange}
-                    onTextChange={onAdlibTextChange}
-                  />
-                )}
-                {!isReadOnly && (
-                  <div className={moduleStyles.buttonRow}>
-                    <Button
-                      ariaLabel={
-                        aiGenerateState === 'none'
-                          ? 'Generate dancer'
-                          : 'Generating dancer'
-                      }
-                      text={
-                        aiGenerateState === 'none'
-                          ? 'Generate dancer'
-                          : 'Generating dancer'
-                      }
-                      type="primary"
-                      color="black"
-                      size="s"
-                      iconLeft={{iconName: 'sparkles'}}
-                      isPending={aiGenerateState === 'generating'}
-                      disabled={aiGenerateState === 'generating'}
-                      onClick={() => generateDancer()}
-                      className={moduleStyles.buttonWide}
-                    />
-                  </div>
-                )}
-              </>
+          {['none', 'generating', 'reviewing'].includes(aiGenerateState) &&
+            !levelProperties.aiDancerGenerateText &&
+            adlibs &&
+            adlibChoices && (
+              <Adlib
+                adlib={adlibs[adlibOption]}
+                adlibChoices={adlibChoices}
+                readOnly={
+                  isReadOnly ||
+                  ['generating', 'reviewing'].includes(aiGenerateState)
+                }
+                glowSpeed={glowSpeed}
+                onChoicesChange={onAdlibChoicesChange}
+                onTextChange={onAdlibTextChange}
+                hidden={aiGenerateState === 'reviewing'}
+              />
             )}
+
+          {['none', 'generating'].includes(aiGenerateState) &&
+            !levelProperties.aiDancerGenerateText &&
+            !isReadOnly && (
+              <div className={moduleStyles.buttonRow}>
+                <Button
+                  ariaLabel={
+                    aiGenerateState === 'none'
+                      ? 'Generate dancer'
+                      : 'Generating dancer'
+                  }
+                  text={
+                    aiGenerateState === 'none'
+                      ? 'Generate dancer'
+                      : 'Generating dancer'
+                  }
+                  type="primary"
+                  color="black"
+                  size="s"
+                  iconLeft={{iconName: 'sparkles'}}
+                  isPending={aiGenerateState === 'generating'}
+                  disabled={aiGenerateState === 'generating'}
+                  onClick={() => generateDancer()}
+                  className={moduleStyles.buttonWide}
+                />
+              </div>
+            )}
+
           {aiGenerateState === 'reviewing' && (
             <MainInstructionsContent
               heading="Decide what to do next"
               content={
-                `AI generated a dancer based on your prompt, "${localizedPromptText}".` +
-                hasParent
-                  ? 'Keep editing, or use the tabs at the top.'
-                  : ''
+                `AI generated a dancer based on your prompt, "${localizedPromptText}"` +
+                (hasParent ? ' Keep editing, or use the tabs at the top.' : '')
               }
               markdownClassName={moduleStyles.markdown}
               showTts={showTts}
