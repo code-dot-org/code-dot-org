@@ -74,7 +74,7 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
 
   return (
     <div className={styles.listContainer}>
-      <div className={styles.list}>
+      <ol className={styles.list}>
         {loading ? (
           <>
             <Notification notification={null} key={'1'} />
@@ -85,12 +85,16 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
           notifications.map(notification => (
             <Notification
               notification={notification}
-              key={notification.externalId}
+              key={
+                notification.externalId
+                  ? notification.externalId
+                  : notification.id
+              }
               aiPromptClick={aiPromptClick}
             />
           ))
         )}
-      </div>
+      </ol>
     </div>
   );
 };

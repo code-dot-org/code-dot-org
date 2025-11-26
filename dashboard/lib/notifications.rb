@@ -1,7 +1,6 @@
 module Notifications
   class << self
     def get_all(user_id, locale)
-      puts 'lfm 1', sources.length
       sources.flat_map {|s| s.get(user_id: user_id, locale: locale)}.map {|n| Notification.new(n)}
     end
 

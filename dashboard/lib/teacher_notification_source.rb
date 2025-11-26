@@ -2,7 +2,6 @@ class TeacherNotificationSource < Notifications::Source
   SOURCE_NAME = 'teacher_notification'
 
   def get(user_id:, locale:)
-    puts 'lfm'
     TeacherNotification.active.where(user_id: user_id).map do |notification|
       {
         id: notification.id,
