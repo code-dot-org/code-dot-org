@@ -408,3 +408,6 @@ end
 # This gem line can be removed once we upgrade to Ruby 3.4 >= 3.4.8, or Ruby 3.3 >= 3.3.10 or Ruby 3.2 >= 3.2.10
 # which will include the openssl fix by default, see: https://github.com/ruby/openssl/issues/949#issuecomment-3388132260
 gem 'openssl', '>= 3.3.1'
+
+# Used for Clever Client
+gem 'typhoeus', '~> 1.0', '>= 1.0.1'
