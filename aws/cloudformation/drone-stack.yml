@@ -409,6 +409,7 @@ Resources:
             # BEGIN: Settings for the Drone Runner ("worker"/"agent") executing on the EC2 Instances provisioned by Autoscaler.
             -
               Name: DRONE_AGENT_IMAGE
+              # TODO move back to mainline after drone-runners/drone-runner-docker#79 or similar is merged to update Docker Go client
               Value: codedotorg/drone-runner-docker
             -
               Name: DRONE_AGENT_CONCURRENCY
