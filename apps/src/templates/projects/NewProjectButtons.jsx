@@ -121,7 +121,7 @@ const PROJECT_INFO = {
   music: {
     label: i18n.projectTypeMusic(),
     thumbnail: studio('/shared/images/courses/logo_music.png'),
-    urlOverride: '/s/music-intro-2024/reset',
+    urlOverride: 'https://code.org/music',
   },
   pythonlab: {
     label: i18n.projectTypePythonlab(),
