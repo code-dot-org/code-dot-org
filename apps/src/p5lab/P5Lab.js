@@ -1037,11 +1037,7 @@ export default class P5Lab {
     this.p5Wrapper.startExecution();
     this.p5Wrapper.setLoop(true);
 
-    if (
-      !this.JSInterpreter ||
-      !this.JSInterpreter.initialized() ||
-      this.executionError
-    ) {
+    if (this.executionError) {
       return;
     }
 
