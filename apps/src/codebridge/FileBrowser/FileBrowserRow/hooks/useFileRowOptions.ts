@@ -102,7 +102,7 @@ export const useFileRowOptions = (
         clickHandler: () => openRenameFilePrompt({fileId: file.id}),
       },
       {
-        condition: enableUserAddedSelectionContext(appName, file.url),
+        condition: enableUserAddedSelectionContext(appName),
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {
@@ -118,21 +118,10 @@ export const useFileRowOptions = (
                 fullFilename?.split('.').pop()?.toLowerCase() || '',
             })
           );
-          const imageExtensions = [
-            '.png',
-            '.jpg',
-            '.jpeg',
-            '.gif',
-            '.bmp',
-            '.webp',
-          ];
-          const isImage =
-            !!file.url &&
-            imageExtensions.some(ext =>
-              (file.url ?? '').toLowerCase().endsWith(ext)
-            );
-          if (isImage && file.url) {
-            // Extract filename from URL
+
+          // Files with URLs are non-text files.
+          if (file.url) {
+            // Files with a type are provided by a levelbuilder.
             const assetSource = file.type
               ? AssetSource.LEVEL_UUID
               : AssetSource.PROJECT;
@@ -148,7 +137,6 @@ export const useFileRowOptions = (
               })
             );
           } else {
-            // Add text/code file to AI Tutor context
             dispatch(
               addItemToUserAddedSelectionContext({
                 displayName: fullFilename,
