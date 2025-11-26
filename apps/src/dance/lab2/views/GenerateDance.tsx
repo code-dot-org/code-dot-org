@@ -232,12 +232,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     ? 'full'
     : undefined;
 
-  const guideWidth =
-    aiGenerateState === 'edited'
-      ? 'narrow'
-      : aiGenerateState === 'playing'
-      ? 'very-narrow'
-      : 'normal';
+  const guideWidth = aiGenerateState === 'playing' ? 'very-narrow' : 'normal';
 
   const cornerIcon =
     aiGenerateState === 'edited'
