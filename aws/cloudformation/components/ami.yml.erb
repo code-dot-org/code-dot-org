@@ -48,22 +48,25 @@ frontend_device_name ||= '/dev/sda1'
                 Resource: !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
       ManagedPolicyArns: <%=frontend_policies.to_json%>
       PermissionsBoundary: !ImportValue IAM-DevPermissions
-
   FrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties: {Roles: [!Ref FrontendRole]}
-  
-    # Signal when the instance is fully provisioned and ready for AMI creation.
+  # Signal when the instance is fully provisioned and ready for AMI creation.
   AMICreate<%=commit_hash%>:
+    DependsOn: [WebServerAMI]
     Type: AWS::CloudFormation::WaitCondition
     CreationPolicy:
       ResourceSignal:
         Timeout: <%=ami_timeout%>
         Count: 1
-
   WebServerAMI:
+    # Don't start provisioning Front End web application server Resources until the Stack's Daemon has completed.
+    DependsOn: [<%=daemon%>]
     Type: AWS::EC2::Instance
     Properties:
+      Tags:
+        # TODO: Include logic to handle naming convention for production (Stack Name is `autoscale-prod`).
+        - { Key: Name, Value: !Sub "${AWS::StackName}-AMI-Builder" }
       ImageId: <%=image_id%>
       InstanceType: <%=instance_type%>
       IamInstanceProfile: !Ref FrontendInstanceProfile
@@ -85,7 +88,7 @@ frontend_device_name ||= '/dev/sda1'
           sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
 
           <%=indent(build_ami, 10)%>
-          # Signal CloudFormation resource.
+          # Signal CloudFormation WaitCondition resource.
           aws cloudformation signal-resource \
             --unique-id $INSTANCE_ID \
             --stack-name $STACK \
@@ -96,7 +99,7 @@ frontend_device_name ||= '/dev/sda1'
 
           shutdown -h now
   AMI<%=commit_hash%>: <%= lambda_fn 'AMIManager',
-    DependsOn: "AMICreate#{commit_hash}",
+    DependsOn: "AMICreate#{commit_hash}",  # Don't invoke the AMIManage Lambda until the WaitCondition has received a signal from WebServerAMI.
     InstanceId: {Ref: "WebServerAMI" } %>
   FastSnapshotRestore: <%= lambda_fn 'FastSnapshotRestore',
     ImageIds: [{Ref: "AMI#{commit_hash}" }],
@@ -115,6 +118,7 @@ frontend_device_name ||= '/dev/sda1'
     LatestStackUpdateDateTime: Time.now # Trigger update of this custom Resource (invocation of the Lambda) for each Stack update.
   %>
   Frontends:
+    DependsOn: [ASGCount]
     Type: AWS::AutoScaling::AutoScalingGroup
     CreationPolicy:
       ResourceSignal:

@@ -56,6 +56,7 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
       ENV['FRONTENDS'] = '1'
       ENV['DATABASE'] = '1'
       ENV['CDN_ENABLED'] = '1'
+      ENV['ALARMS'] = '1'
     end
 
     desc 'Launch a full-stack adhoc environment with auto-scaling frontends,
