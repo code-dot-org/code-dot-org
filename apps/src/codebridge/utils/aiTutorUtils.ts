@@ -2,7 +2,10 @@ export const enableUserAddedSelectionContext = (
   appName: string,
   fileUrl: string | undefined
 ) => {
-  // If the file has a url, that means it is not a text file, and therefore we cannot
-  // currently add it as user added context.
-  return appName === 'weblab2' && !fileUrl;
+  // Allow text files (no fileUrl) and image files (fileUrl with image extension)
+  if (appName !== 'weblab2') return false;
+  if (!fileUrl) return true;
+  // Check for image file extensions
+  const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp'];
+  return imageExtensions.some(ext => fileUrl.toLowerCase().endsWith(ext));
 };

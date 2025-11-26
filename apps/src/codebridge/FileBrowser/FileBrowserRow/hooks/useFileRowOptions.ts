@@ -10,7 +10,11 @@ import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
-import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
+import {
+  addItemToUserAddedSelectionContext,
+  addStagedFile,
+} from '@cdo/apps/aichat/redux/slice';
+import {AssetSource} from '@cdo/apps/aichat/types/assets';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -114,13 +118,43 @@ export const useFileRowOptions = (
                 fullFilename?.split('.').pop()?.toLowerCase() || '',
             })
           );
-          dispatch(
-            addItemToUserAddedSelectionContext({
-              displayName: fullFilename,
-              sourceCode: file.contents,
-              filename: fullFilename,
-            })
-          );
+          const imageExtensions = [
+            '.png',
+            '.jpg',
+            '.jpeg',
+            '.gif',
+            '.bmp',
+            '.webp',
+          ];
+          const isImage =
+            !!file.url &&
+            imageExtensions.some(ext =>
+              (file.url ?? '').toLowerCase().endsWith(ext)
+            );
+          if (isImage && file.url) {
+            // Extract filename from URL
+            const urlParts = file.url.split('/');
+            const imageFilename = urlParts[urlParts.length - 1] || fullFilename;
+            dispatch(
+              addStagedFile({
+                key: `${Date.now()}-${imageFilename}`,
+                asset: {
+                  filename: imageFilename,
+                  source: AssetSource.PROJECT,
+                },
+                loaded: true,
+              })
+            );
+          } else {
+            // Add text/code file to AI Tutor context
+            dispatch(
+              addItemToUserAddedSelectionContext({
+                displayName: fullFilename,
+                filename: fullFilename,
+                sourceCode: file.contents,
+              })
+            );
+          }
         },
       },
       {
