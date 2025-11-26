@@ -141,7 +141,9 @@ CheckboxesWithCustomContent.args = {
       size: 'm' as ComponentSizeXSToL,
       children: (
         <Tags
-          tagsList={[{label: 'Tag1', tooltipContent: 'Tag tooltip', tooltipId: ''}]}
+          tagsList={[
+            {label: 'Tag1', tooltipContent: 'Tag tooltip', tooltipId: ''},
+          ]}
         />
       ),
     },
