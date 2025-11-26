@@ -307,7 +307,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       );
       await new Promise(res => setTimeout(res, remainingDelayDuration));
     },
-    [adlibChoices, adlibOption, adlibs, updateSources, currentSources]
+    [adlibChoices, adlibOption, adlibs, currentSources, updateSources]
   );
 
   // Update session storage whenever the generated dancer metadata changes and update the canvas key so the canvas refreshes.
@@ -321,7 +321,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       sessionStorage.removeItem(GENERATED_DANCER_STORAGE_KEY);
     }
     setCanvasKey(metadataString || 'none');
-  }, [currentSources]);
+  }, [currentSources.generatedDancer]);
 
   const [hasGenerated, setHasGenerated] = useState(false);
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
