@@ -32,7 +32,7 @@ Parameters:
   WorkerInstanceAMI:
     Type: String
     Description: Amazon Machine Image that Autoscaler uses to launch Worker EC2 Instances.
-    Default: ami-09b347c7ebb552ae2
+    Default: ami-041891f7c52014278
   WorkerInstanceType:
     Type: String
     Description: EC2 Instance Type that Autoscaler provisions to run Builds.
