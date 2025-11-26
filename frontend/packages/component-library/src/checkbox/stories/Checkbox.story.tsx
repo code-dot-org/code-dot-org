@@ -128,6 +128,8 @@ CheckboxesWithCustomContent.args = {
       name: 'test-custom-content-0',
       label: '',
       size: 'm' as ComponentSizeXSToL,
+      checked: false,
+      onChange: () => null,
       children: (
         <>
           <span>With Custom Content</span>
@@ -139,6 +141,8 @@ CheckboxesWithCustomContent.args = {
       name: 'test-custom-content-1',
       label: 'With Custom Content and Label',
       size: 'm' as ComponentSizeXSToL,
+      checked: false,
+      onChange: () => null,
       children: (
         <Tags
           tagsList={[
@@ -151,6 +155,8 @@ CheckboxesWithCustomContent.args = {
       name: 'test-custom-content-2',
       label: 'Without Custom Content',
       size: 'm' as ComponentSizeXSToL,
+      checked: false,
+      onChange: () => null,
     },
   ],
 };
