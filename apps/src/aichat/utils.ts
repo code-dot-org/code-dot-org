@@ -41,6 +41,12 @@ export function getAssetUrl(
     )}`;
   }
 
+  if (asset.source === 'level_uuid' && levelName) {
+    return `/level_starter_assets/${levelName}/uuid/${encodeURIComponent(
+      asset.filename
+    )}`;
+  }
+
   throw new Error(
     'Either channel ID or level name must be provided for asset URL generation.'
   );

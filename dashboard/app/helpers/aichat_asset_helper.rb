@@ -26,8 +26,8 @@ module AichatAssetHelper
     # Call details to use when raising errors.
     call_details = ({filename: filename,  source: source, channel_id: channel_id, level_name: level_name}).to_s
 
-    if source == 'project'
-
+    case source
+    when 'project'
       bucket_result = asset_bucket.get(channel_id, filename)
       bucket_status = bucket_result[:status]
 
@@ -37,11 +37,8 @@ module AichatAssetHelper
         raise AichatProjectAssetFetchError.new(
           "Failed to fetch asset from project bucket with status = '#{bucket_status}' - #{call_details}"
         )
-
       end
-
-    elsif source == 'level'
-
+    when 'level'
       level = Level.find_by(name: level_name)
       uuid_name = (level&.starter_assets || level&.project_template_level&.starter_assets || {})&.dig(filename)
 
@@ -62,7 +59,17 @@ module AichatAssetHelper
           "Failed to fetch asset for level due to failure to retrieve 'uuid_name' - #{call_details}"
         )
       end
-
+    when 'level_uuid'
+      s3_object = LevelStarterAssetsHelper.get_object(filename)
+      if s3_object
+        # The following call can result in various errors that currently are not derived
+        # from AichatAssetFetchError (e.g. from Aws::S3::Errors or Aws::Errors).
+        asset_body = s3_object.get.body
+      else
+        raise AichatLevelAssetFetchError.new(
+          "Failed to fetch asset for level due to LevelStarterAssetsHelper.get_object('#{uuid_name}' not returning a bucket object. - #{call_details}"
+        )
+      end
     else
       raise AichatAssetFetchError.new(
         "Failed to fetch asset due to unsupported source - #{call_details}"
@@ -72,7 +79,7 @@ module AichatAssetHelper
     unless asset_body
       raise AichatAssetFetchError.new(
         "Failed to fetch asset for unknown reason. The variable 'asset_body' was not set - #{call_details}"
-   )
+      )
     end
 
     # Read the body.  This can result in various errors that

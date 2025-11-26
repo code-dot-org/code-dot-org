@@ -134,20 +134,9 @@ export const useFileRowOptions = (
           if (isImage && file.url) {
             // Extract filename from URL
             const assetSource = file.type
-              ? AssetSource.LEVEL
+              ? AssetSource.LEVEL_UUID
               : AssetSource.PROJECT;
-            let stagedFilename;
-            // This seems to work, but it's encoding the slash after uuid
-            // Pretty confusing.
-            if (assetSource === AssetSource.LEVEL) {
-              // Use the full URL path (uuid/filename123.jpg)
-              const urlPath = file.url.split('/').slice(-2).join('/');
-              stagedFilename = urlPath;
-            } else {
-              // Use just the filename
-              const urlParts = file.url.split('/');
-              stagedFilename = urlParts[urlParts.length - 1] || fullFilename;
-            }
+            const stagedFilename = file.url.split('/').slice(-1)[0];
             dispatch(
               addStagedFile({
                 key: `${Date.now()}-${stagedFilename}`,
