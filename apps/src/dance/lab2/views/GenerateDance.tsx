@@ -285,7 +285,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {aiGenerateState === 'generating' && (
+      {['generating', 'generated'].includes(aiGenerateState) && (
         <MainInstructionsContent
           heading="Generating..."
           content="AI is generating code based on your prompt."
