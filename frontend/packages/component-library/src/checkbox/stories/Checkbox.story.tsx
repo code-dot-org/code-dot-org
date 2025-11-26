@@ -1,7 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react-webpack5';
 import {useState, Dispatch, SetStateAction} from 'react';
 
-import {ComponentSizeXSToL} from '@/common/types';
 import Tags from '@/tags';
 
 import Checkbox, {CheckboxProps} from '../index';
@@ -127,7 +126,7 @@ CheckboxesWithCustomContent.args = {
     {
       name: 'test-custom-content-0',
       label: '',
-      size: 'm' as ComponentSizeXSToL,
+      size: 'm',
       checked: false,
       onChange: () => null,
       children: (
@@ -140,7 +139,7 @@ CheckboxesWithCustomContent.args = {
     {
       name: 'test-custom-content-1',
       label: 'With Custom Content and Label',
-      size: 'm' as ComponentSizeXSToL,
+      size: 'm',
       checked: false,
       onChange: () => null,
       children: (
@@ -154,7 +153,7 @@ CheckboxesWithCustomContent.args = {
     {
       name: 'test-custom-content-2',
       label: 'Without Custom Content',
-      size: 'm' as ComponentSizeXSToL,
+      size: 'm',
       checked: false,
       onChange: () => null,
     },
@@ -195,28 +194,28 @@ GroupOfSizesOfCheckboxes.args = {
     {
       name: 'test-xs',
       label: 'Label XS',
-      size: 'xs' as ComponentSizeXSToL,
+      size: 'xs',
       checked: false,
       onChange: () => null,
     },
     {
       name: 'test-s',
       label: 'Label S',
-      size: 's' as ComponentSizeXSToL,
+      size: 's',
       checked: false,
       onChange: () => null,
     },
     {
       name: 'test-m',
       label: 'Label M',
-      size: 'm' as ComponentSizeXSToL,
+      size: 'm',
       checked: false,
       onChange: () => null,
     },
     {
       name: 'test-l',
       label: 'Label L',
-      size: 'l' as ComponentSizeXSToL,
+      size: 'l',
       checked: false,
       onChange: () => null,
     },
@@ -230,7 +229,7 @@ LabelWeights.args = {
       name: 'lw-thin',
       label: 'Thin label',
       textThickness: 'thin',
-      size: 'm' as ComponentSizeXSToL,
+      size: 'm',
       checked: false,
       onChange: () => null,
     },
@@ -238,7 +237,7 @@ LabelWeights.args = {
       name: 'lw-thick',
       label: 'Thick label',
       textThickness: 'thick',
-      size: 'm' as ComponentSizeXSToL,
+      size: 'm',
       checked: false,
       onChange: () => null,
     },
@@ -292,7 +291,7 @@ MultiLineLabels.args = {
   components: [
     {
       name: 'wrap-xs',
-      size: 'xs' as ComponentSizeXSToL,
+      size: 'xs',
       label:
         'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
       checked: false,
@@ -300,7 +299,7 @@ MultiLineLabels.args = {
     },
     {
       name: 'wrap-s',
-      size: 's' as ComponentSizeXSToL,
+      size: 's',
       label:
         'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
       checked: false,
@@ -308,7 +307,7 @@ MultiLineLabels.args = {
     },
     {
       name: 'wrap-m',
-      size: 'm' as ComponentSizeXSToL,
+      size: 'm',
       label:
         'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
       checked: false,
@@ -316,7 +315,7 @@ MultiLineLabels.args = {
     },
     {
       name: 'wrap-l',
-      size: 'l' as ComponentSizeXSToL,
+      size: 'l',
       label:
         'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
       checked: false,
