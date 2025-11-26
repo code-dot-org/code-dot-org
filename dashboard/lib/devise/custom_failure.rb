@@ -8,6 +8,9 @@ module Devise
   end
 end
 
-Rails.application.config.to_prepare do
+# Because LocaleHelper is an autoloaded constant, we need to execute the
+# include from an initialization event handler. We choose after_initialize
+# rather than to_prepare to avoid repeatedly modifying the class.
+Rails.application.config.after_initialize do
   Devise::CustomFailure.include LocaleHelper
 end
