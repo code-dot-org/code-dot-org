@@ -1,4 +1,3 @@
-import Button from '@code-dot-org/component-library/button';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
@@ -18,6 +17,7 @@ import {
   DEFAULT_START_HTML_FILE,
 } from './constants';
 import {HTMLPreviewHeader} from './HTMLPreviewHeader';
+import PreviewStopped from './PreviewStopped';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
@@ -303,10 +303,7 @@ export const HTMLPreview: React.FC = () => {
           isStopEnabled={!isStopped}
         />
         {isStopped ? (
-          <div>
-            Preview is stopped!
-            <Button onClick={onReloadPreview} text="Reload Preview" />
-          </div>
+          <PreviewStopped onReload={onReloadPreview} />
         ) : (
           /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */
