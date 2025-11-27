@@ -1,7 +1,7 @@
 {
   "ar-SA": {
     "/pegasus/mobile.yml": "c6239f2ce5bd8c2732afe8a18f6e5d72",
-    "/pegasus/mobile.json": "1af68e901040b4fdcf6df548fcda27f7"
+    "/pegasus/mobile.json": "b56372dbb0b9992e7771294e94055e2c"
   },
   "az-AZ": {
     "/pegasus/mobile.yml": "b7427976c1e2063f18bafca7f6819f07",
@@ -9,7 +9,7 @@
   },
   "bg-BG": {
     "/pegasus/mobile.yml": "556801ea5e0b01ed974aa50b2c09a71d",
-    "/pegasus/mobile.json": "adb579e342277412d3e3d9ac69c47d6d"
+    "/pegasus/mobile.json": "f6b3c94dfddea38549c092277dab9cf7"
   },
   "bn-BD": {
     "/pegasus/mobile.yml": "13e993d854f862deaada29850af09d7b"
@@ -35,7 +35,7 @@
   },
   "de-DE": {
     "/pegasus/mobile.yml": "91e7a8608f6b409484fa58474bc85884",
-    "/pegasus/mobile.json": "6398bcd2695b522c11629c488f331826"
+    "/pegasus/mobile.json": "ec3bfd8d5ea9c82d73941b39a822a0d1"
   },
   "dv-MV": {
     "/pegasus/mobile.yml": "c121cf8b3b4ff673e2a861cad8065656",
@@ -51,11 +51,11 @@
   },
   "es-ES": {
     "/pegasus/mobile.yml": "1c04332cd9bd88c19abdb3ce83f76fa0",
-    "/pegasus/mobile.json": "d755f9acfe7c3e7b9ce719cbaa489a92"
+    "/pegasus/mobile.json": "ca6aa9bcf9215719c7a3cf2bc7e790af"
   },
   "es-MX": {
     "/pegasus/mobile.yml": "4b3d3f5d7606bd9c7a0c27b36e82d8d1",
-    "/pegasus/mobile.json": "9b812b34bf1ce16d7b3e3315a052fe57"
+    "/pegasus/mobile.json": "b122986b2ceb89f966a25a2faf4198b5"
   },
   "et-EE": {
     "/pegasus/mobile.yml": "3474fcabf75534036dc5ec32bba80a34",
@@ -70,7 +70,7 @@
   },
   "fa-IR": {
     "/pegasus/mobile.yml": "02538910b368873f5fd1b923d95ebf97",
-    "/pegasus/mobile.json": "4e3e140f02a6ad1f2e1e114fbd971bc8"
+    "/pegasus/mobile.json": "0a8206594e1fb8cb23990df4b226c46f"
   },
   "fi-FI": {
     "/pegasus/mobile.yml": "f7b33a774160fbdf536816f22ea40b6f",
@@ -82,7 +82,7 @@
   },
   "fr-FR": {
     "/pegasus/mobile.yml": "8a1eabdeaab90a381e2977d3971ac232",
-    "/pegasus/mobile.json": "20b60116621e8ac3aa16290d91d0bf61"
+    "/pegasus/mobile.json": "984c96ac1a0fe5a791c2c91e7ff03ada"
   },
   "ga-IE": {
     "/pegasus/mobile.yml": "74f8ef5f2b16191e9405bb807d4a672e",
@@ -98,11 +98,11 @@
   },
   "he-IL": {
     "/pegasus/mobile.yml": "7df457da67c7a381ff5e933abf898831",
-    "/pegasus/mobile.json": "e2d87eea8c4bf6f8767f143b436fca56"
+    "/pegasus/mobile.json": "1024bc6c4610ebc9b89e6442bbedcb71"
   },
   "hi-IN": {
     "/pegasus/mobile.yml": "b0c9c7c566bca3ffa268c2ba39f6a529",
-    "/pegasus/mobile.json": "d3846d1511c6c9f54f78cab6ffbb0c77"
+    "/pegasus/mobile.json": "4e7e5dfbd94889895cae3f44c480bae1"
   },
   "hr-HR": {
     "/pegasus/mobile.yml": "1951c2f89b4ebaa7fb1a1c7bc87537c9",
@@ -118,7 +118,7 @@
   },
   "id-ID": {
     "/pegasus/mobile.yml": "8cb6a11a17fd00189ab56ecafd3704bf",
-    "/pegasus/mobile.json": "86e75f6a0e1aaa9354bb137c118f2de5"
+    "/pegasus/mobile.json": "60927bc3c2510d2dbebbe07b1d7e0356"
   },
   "is-IS": {
     "/pegasus/mobile.yml": "b159877d1c7b433b855c6fb175149051",
@@ -126,11 +126,11 @@
   },
   "it-IT": {
     "/pegasus/mobile.yml": "56c33f9c88f5ad85781c691c36a79e12",
-    "/pegasus/mobile.json": "79846b21aa3fcf7ed34ac6b8a078154f"
+    "/pegasus/mobile.json": "dafc1dea6bf5890d3c1aab3c95f5f417"
   },
   "ja-JP": {
     "/pegasus/mobile.yml": "b12078639164c6156d76a2f526eefc7a",
-    "/pegasus/mobile.json": "962ea1dde2116e7f72c1634f9b1e7c29"
+    "/pegasus/mobile.json": "f597840f34bf25af0ca0a461a85ea89f"
   },
   "ka-GE": {
     "/pegasus/mobile.yml": "513f68d0678e879b1356e28d16201809",
@@ -150,7 +150,7 @@
   },
   "ko-KR": {
     "/pegasus/mobile.yml": "fd445997dea9d3d2821da9901f816ea3",
-    "/pegasus/mobile.json": "1301ddf710dad3d2d03ce7ad33239995"
+    "/pegasus/mobile.json": "0cae872dad9526c1a5044bbafc2e8407"
   },
   "ku-IQ": {
     "/pegasus/mobile.yml": "71750bf0b13a6ee4a350b3e216f08ace",
@@ -213,22 +213,22 @@
   },
   "pl-PL": {
     "/pegasus/mobile.yml": "2850e7963ad20137cec95688de2531cc",
-    "/pegasus/mobile.json": "15387b294b601f218ef481d655e7c678"
+    "/pegasus/mobile.json": "187d1ae329b1fbf01a1ec15e8a10d4fb"
   },
   "ps-AF": {
     "/pegasus/mobile.yml": "957096a55b708721c941d5ae8faaff74"
   },
   "pt-BR": {
     "/pegasus/mobile.yml": "be35afd5b4d640dbe80cefe361d69d5e",
-    "/pegasus/mobile.json": "d47e580e78977715b5da4cc69cde4bb8"
+    "/pegasus/mobile.json": "7f07b60d981aabb2dac8e93c7d813d72"
   },
   "pt-PT": {
     "/pegasus/mobile.yml": "9ecc2928d03be6d0b982d5f4b5b88784",
-    "/pegasus/mobile.json": "4c15d4b74f801c5cdc4b24ae380f7e25"
+    "/pegasus/mobile.json": "489ecdd88fcfdf5537b85694f472363f"
   },
   "ro-RO": {
     "/pegasus/mobile.yml": "4bb05e0af6046cd209ab2d1b60fa8f2e",
-    "/pegasus/mobile.json": "75d5ffc4922e73ade6d77c72a7135c5e"
+    "/pegasus/mobile.json": "e9cddf18b36d8b2e2f2974f2006f8812"
   },
   "ru-RU": {
     "/pegasus/mobile.yml": "94e7029b962b51456863d315fbb3bd58",
@@ -248,7 +248,7 @@
   },
   "sk-SK": {
     "/pegasus/mobile.yml": "161af338f8de56dcdcb5c58e02a3f6a6",
-    "/pegasus/mobile.json": "874db8f168575ffbeb8e8c2dc843e66b"
+    "/pegasus/mobile.json": "a76efd86507e5c5254116cc8d2f1c080"
   },
   "sl-SI": {
     "/pegasus/mobile.yml": "2a50061adde85b7007309d5a1d7c13ca",
@@ -279,15 +279,15 @@
   },
   "th-TH": {
     "/pegasus/mobile.yml": "a8b20a0f1296d9d32df5c2ad09f7582b",
-    "/pegasus/mobile.json": "bfc68aef6d7a29e0a8d06bd1cf08decd"
+    "/pegasus/mobile.json": "5d67fc32fd37c1e60b2d73e2c40c5d72"
   },
   "tr-TR": {
     "/pegasus/mobile.yml": "aba56cd25261f9a52d884f2e0ccab35f",
-    "/pegasus/mobile.json": "39b47fcabfc023f0f6377dc85a639290"
+    "/pegasus/mobile.json": "a10deae7d783058acf9fd4762145afa4"
   },
   "uk-UA": {
     "/pegasus/mobile.yml": "0c19899323de7624325cd6e2dda7306b",
-    "/pegasus/mobile.json": "df7ebdfb8fdf6acba6e77be333688522"
+    "/pegasus/mobile.json": "cb5c9ec2c19b6b400a9188e2398dff59"
   },
   "ur-PK": {
     "/pegasus/mobile.yml": "3abd056df6500c0a3bb1a4448afe228b",
@@ -307,7 +307,7 @@
   },
   "zh-TW": {
     "/pegasus/mobile.yml": "6b381841f60e865634a1d6f4559687d2",
-    "/pegasus/mobile.json": "bb87125ad488316523af3e6c0c33f621"
+    "/pegasus/mobile.json": "6189c7da14eb82ab7050fa3a9f034103"
   },
   "zu-ZA": {
     "/pegasus/mobile.yml": "ba00c13c277dfa89af053eb4eb1fcfdf"
