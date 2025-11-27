@@ -34,6 +34,8 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const [matchedTeachingProfile, setMatchedTeachingProfile] = React.useState(
     TEACHING_STYLES[0].name
   );
+  const [hasLoadedInterstitial, setHasLoadedInterstitial] =
+    React.useState(false);
 
   const NEXT = 1;
   const BACK = -1;
@@ -132,6 +134,35 @@ const PersonalizationCollectorContainer: React.FC = () => {
       setQuestionsNumber(questionsNumber + direction);
     }
   };
+
+  // Automatically advance past interstitial screens after a short delay so
+  // educators don't need to press "Next".
+  React.useEffect(() => {
+    if (!showInterstitialState || isSaving || !hasLoadedInterstitial) {
+      return;
+    }
+
+    const isFinalStep = questionsNumber === PERSONALIZATION_PROMPTS.length - 1;
+
+    const delayMs = isFinalStep ? 11500 : 5000;
+
+    const timeoutId = window.setTimeout(() => {
+      onCarouselPress(NEXT);
+    }, delayMs);
+
+    return () => window.clearTimeout(timeoutId);
+    // We intentionally omit `onCarouselPress` from deps to avoid recreating
+    // the effect on every render; the latest version is captured on each run.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showInterstitialState, isSaving, questionsNumber, hasLoadedInterstitial]);
+
+  // Reset interstitial load state when we leave interstitial view or move
+  // between questions so the onLoad callback can arm the next timer.
+  React.useEffect(() => {
+    if (!showInterstitialState) {
+      setHasLoadedInterstitial(false);
+    }
+  }, [showInterstitialState, questionsNumber]);
 
   const determineAnswerType = React.useCallback(() => {
     const currentQuestion = PERSONALIZATION_PROMPTS[questionsNumber];
@@ -255,6 +286,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
               <PersonalizationInterstitial
                 currentQuestion={PERSONALIZATION_PROMPTS[questionsNumber]}
                 personalizationData={personalizationData}
+                onImageLoad={() => setHasLoadedInterstitial(true)}
               />
             ) : (
               <>
