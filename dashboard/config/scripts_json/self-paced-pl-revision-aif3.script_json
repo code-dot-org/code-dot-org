@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-24 19:38:55 UTC",
+    "serialized_at": "2025-11-25 22:23:37 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -19,22 +19,1798 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "Teaching AI and the Systems That Power It",
+      "name": "Teaching AI and the Systems That Power It",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Get an overview of the AI and the Systems That Power It  curriculum and resources.\n\n**Suggested Time:** 10 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Get an overview of the AI and the Systems That Power It  curriculum and resources.\n\n**Suggested Time:** 10 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    },
+    {
+      "key": "Hardware and Software",
+      "name": "Hardware and Software",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n- Identify key hardware components, such as RAM and CPU\n- Describe the functionality of a computer system using the IPSO model\n- Describe various types of software, including operating systems, and their applications in real-world contexts\n- Work together with AI to program a device\n- Troubleshoot issues in hardware and software using appropriate strategies\n\n**Suggested time:** 20 minutes\n",
+        "student_overview": "**You will:**\n- Identify key hardware components, such as RAM and CPU\n- Describe the functionality of a computer system using the IPSO model\n- Describe various types of software, including operating systems, and their applications in real-world contexts\n- Work together with AI to program a device\n- Troubleshoot issues in hardware and software using appropriate strategies\n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    },
+    {
+      "key": "Data in Computer Systems",
+      "name": "Data in Computer Systems",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**In this lesson, you will:**\n- Describe various types of data\n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**In this lesson, you will:**\n- Describe various types of data\n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n\n**Suggested Time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    },
+    {
+      "key": "Ethical Use and the Final Project",
+      "name": "Ethical Use and the Final Project",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**By the end of this lesson, you will:**\n\n- Introduce the Final Project Framework\n- Develop a Teaching Plan\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**By the end of this lesson, you will:**\n\n- Introduce the Final Project Framework\n- Develop a Teaching Plan\n\n**Suggested Time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "aefbcb3d-d376-4f51-828b-4c4086ba9f46",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aefbcb3d-d376-4f51-828b-4c4086ba9f46",
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    },
+    {
+      "key": "a5a3a014-382c-4b61-9a63-4f219809b499",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499",
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    },
+    {
+      "key": "f5317327-5793-4c54-920d-b9a4ae790c57",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f5317327-5793-4c54-920d-b9a4ae790c57",
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    },
+    {
+      "key": "a52f542f-26c2-4c9c-861a-fd9b2c1eab2e",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a52f542f-26c2-4c9c-861a-fd9b2c1eab2e",
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1",
+        "lesson_activity.key": "aefbcb3d-d376-4f51-828b-4c4086ba9f46"
+      }
+    },
+    {
+      "key": "4b9aeec0-e46f-43c5-82e5-f3f5e73595e1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Course Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b9aeec0-e46f-43c5-82e5-f3f5e73595e1",
+        "lesson_activity.key": "aefbcb3d-d376-4f51-828b-4c4086ba9f46"
+      }
+    },
+    {
+      "key": "1aa1bff4-655d-46ec-9945-ada4ee876d1e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Computer systems"
+      },
+      "seeding_key": {
+        "activity_section.key": "1aa1bff4-655d-46ec-9945-ada4ee876d1e",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "8804c14a-ce19-47e1-8d43-93202f5a49f4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Hardware"
+      },
+      "seeding_key": {
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52",
+      "position": 3,
+      "properties": {
+        "progression_name": "Software and Operating Systems"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "8474b979-bd37-447c-9feb-e0f988394232",
+      "position": 4,
+      "properties": {
+        "progression_name": "Troubleshooting Software "
+      },
+      "seeding_key": {
+        "activity_section.key": "8474b979-bd37-447c-9feb-e0f988394232",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "0685a82d-d6e7-42dd-ba03-669169e71f1b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Optimizing Software"
+      },
+      "seeding_key": {
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Data in Computer Systems"
+      },
+      "seeding_key": {
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e",
+        "lesson_activity.key": "f5317327-5793-4c54-920d-b9a4ae790c57"
+      }
+    },
+    {
+      "key": "a420b1bb-0049-4045-9d81-671ff0d674ca",
+      "position": 2,
+      "properties": {
+        "progression_name": "Ethics and Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "a420b1bb-0049-4045-9d81-671ff0d674ca",
+        "lesson_activity.key": "f5317327-5793-4c54-920d-b9a4ae790c57"
+      }
+    },
+    {
+      "key": "0a4dff7b-a982-4b6c-9231-1abae738814e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Preparing for the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a4dff7b-a982-4b6c-9231-1abae738814e",
+        "lesson_activity.key": "a52f542f-26c2-4c9c-861a-fd9b2c1eab2e"
+      }
+    },
+    {
+      "key": "79719a68-d02e-446d-affc-6e757909f1cc",
+      "position": 2,
+      "properties": {
+        "progression_name": "Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "79719a68-d02e-446d-affc-6e757909f1cc",
+        "lesson_activity.key": "a52f542f-26c2-4c9c-861a-fd9b2c1eab2e"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1"
+      },
+      "level_keys": [
+        "csaif_pl_overview_objectives_cs-devices_-rev"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_cert_L2-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1"
+      },
+      "level_keys": [
+        "csaif_pl_cert_L2-cs-devices_-rev"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_module_overview_l3-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1"
+      },
+      "level_keys": [
+        "csaif_pl_module_overview_l3-cs-devices_-rev"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_course_overview_l4-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1"
+      },
+      "level_keys": [
+        "csaif_pl_course_overview_l4-cs-devices_-rev"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_course_structure_L5-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1"
+      },
+      "level_keys": [
+        "csaif_pl_course_structure_L5-cs-devices_-rev"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_resources_L6-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "4b9aeec0-e46f-43c5-82e5-f3f5e73595e1"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_resources_L6-cs-devices_-rev"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_career_overview_L7-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "4b9aeec0-e46f-43c5-82e5-f3f5e73595e1"
+      },
+      "level_keys": [
+        "csaif_pl_career_overview_L7-cs-devices_-rev"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_L8-cs-devicesn_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "4b9aeec0-e46f-43c5-82e5-f3f5e73595e1"
+      },
+      "level_keys": [
+        "csaif_pl_AI_chatbot_overview_L8-cs-devicesn_-rev"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson1_L9-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "4b9aeec0-e46f-43c5-82e5-f3f5e73595e1"
+      },
+      "level_keys": [
+        "csaif_pl_teacher_Lesson1_L9-cs-devices_-rev"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Computer systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_hardware-L1-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "1aa1bff4-655d-46ec-9945-ada4ee876d1e"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_overview_hardware-L1-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Computer systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-computersystems-video-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "1aa1bff4-655d-46ec-9945-ada4ee876d1e"
+      },
+      "level_keys": [
+        "csaif-pl-computersystems-video-L2-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Computer systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ispo-L3-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "1aa1bff4-655d-46ec-9945-ada4ee876d1e"
+      },
+      "level_keys": [
+        "csaif_pl_ispo-L3-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-hardware-panels-L4-1-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif-pl-hardware-panels-L4-1-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-procssing-L4-2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif-pl-procssing-L4-2-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-SNOT-overview-L5-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif_pl-SNOT-overview-L5-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 10,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-hardware-assess-L8-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif-pl-hardware-assess-L8-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Software and Operating Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_software-L11-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      },
+      "level_keys": [
+        "csaif_pl_software-L11-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Software and Operating Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      },
+      "level_keys": [
+        "csaif-pl-matchingsoftware-L12-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Software and Operating Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      },
+      "level_keys": [
+        "csaif_pl-reflectsoftware-L13-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Troubleshooting Software "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8474b979-bd37-447c-9feb-e0f988394232"
+      },
+      "level_keys": [
+        "csaif_pl_troubleshoot-about-L14-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Troubleshooting Software "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8474b979-bd37-447c-9feb-e0f988394232"
+      },
+      "level_keys": [
+        "csaif-pl-software-troubleshooting-L15-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Troubleshooting Software "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8474b979-bd37-447c-9feb-e0f988394232"
+      },
+      "level_keys": [
+        "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 17,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Troubleshooting Software "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-student-response-L17-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8474b979-bd37-447c-9feb-e0f988394232"
+      },
+      "level_keys": [
+        "csaif-pl-student-response-L17-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      },
+      "level_keys": [
+        "csaif_pl_optimizing-lesson-L18-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      },
+      "level_keys": [
+        "csaif-pl-optimize-bot-L19-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 20,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      },
+      "level_keys": [
+        "csaif-pl-optimization-reflect-L20-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 21,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_hardware-software_forum_L21_CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      },
+      "level_keys": [
+        "csaif-pl-_hardware-software_forum_L21_CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_data-L1-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_overview_data-L1-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_datareflect_L3_CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      },
+      "level_keys": [
+        "csaif-pl-_datareflect_L3_CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      },
+      "level_keys": [
+        "csaif_pl-everyday-data-L2-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      },
+      "level_keys": [
+        "csaif_pl-analyzedatea-L4-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      },
+      "level_keys": [
+        "csaif-pl-data-library-panels-L5-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-librarydata-L6-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      },
+      "level_keys": [
+        "csaif-pl-librarydata-L6-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      },
+      "level_keys": [
+        "csaif_pl-AI-realworld-L7-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethics and Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "a420b1bb-0049-4045-9d81-671ff0d674ca"
+      },
+      "level_keys": [
+        "csaif-pl-aiethics-video-L11-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethics and Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ethic-teaching-tips-L10-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "a420b1bb-0049-4045-9d81-671ff0d674ca"
+      },
+      "level_keys": [
+        "csaif_pl_ethic-teaching-tips-L10-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethics and Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_data_forum_L10_CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "a420b1bb-0049-4045-9d81-671ff0d674ca"
+      },
+      "level_keys": [
+        "csaif-pl-_data_forum_L10_CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_CSandDev_-rev"
+        ],
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0a4dff7b-a982-4b6c-9231-1abae738814e"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_overview_endofUnit_L1_CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0a4dff7b-a982-4b6c-9231-1abae738814e"
+      },
+      "level_keys": [
+        "csaif_pl_project-description-L2-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev_-rev"
+        ],
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0a4dff7b-a982-4b6c-9231-1abae738814e"
+      },
+      "level_keys": [
+        "csaif_pl_3-day-project-L3-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev"
+        ],
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0a4dff7b-a982-4b6c-9231-1abae738814e"
+      },
+      "level_keys": [
+        "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-L6-csandDev_-rev"
+        ],
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "79719a68-d02e-446d-affc-6e757909f1cc"
+      },
+      "level_keys": [
+        "csaif-pl-nextsteps-L6-csandDev_-rev"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_overview_objectives_cs-devices_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_cert_L2-cs-devices_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_cert_L2-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_module_overview_l3-cs-devices_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_module_overview_l3-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_course_overview_l4-cs-devices_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_course_overview_l4-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_course_structure_L5-cs-devices_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_course_structure_L5-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ed3b2f34-943f-41dc-a761-0c7e9b5b76b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_resources_L6-cs-devices_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_resources_L6-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "4b9aeec0-e46f-43c5-82e5-f3f5e73595e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_career_overview_L7-cs-devices_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_career_overview_L7-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "4b9aeec0-e46f-43c5-82e5-f3f5e73595e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_AI_chatbot_overview_L8-cs-devicesn_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_L8-cs-devicesn_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "4b9aeec0-e46f-43c5-82e5-f3f5e73595e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_teacher_Lesson1_L9-cs-devices_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson1_L9-cs-devices_-rev"
+        ],
+        "lesson.key": "Teaching AI and the Systems That Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "4b9aeec0-e46f-43c5-82e5-f3f5e73595e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_overview_hardware-L1-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_hardware-L1-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "1aa1bff4-655d-46ec-9945-ada4ee876d1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-computersystems-video-L2-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-computersystems-video-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "1aa1bff4-655d-46ec-9945-ada4ee876d1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ispo-L3-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_ispo-L3-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "1aa1bff4-655d-46ec-9945-ada4ee876d1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-hardware-panels-L4-1-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-hardware-panels-L4-1-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-procssing-L4-2-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-procssing-L4-2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-SNOT-overview-L5-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-SNOT-overview-L5-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-hardware-assess-L8-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-hardware-assess-L8-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_software-L11-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_software-L11-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-matchingsoftware-L12-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-reflectsoftware-L13-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_troubleshoot-about-L14-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8474b979-bd37-447c-9feb-e0f988394232"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-software-troubleshooting-L15-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8474b979-bd37-447c-9feb-e0f988394232"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8474b979-bd37-447c-9feb-e0f988394232"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-student-response-L17-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-student-response-L17-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8474b979-bd37-447c-9feb-e0f988394232"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_optimizing-lesson-L18-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-optimize-bot-L19-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-optimization-reflect-L20-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_hardware-software_forum_L21_CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-_hardware-software_forum_L21_CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_overview_data-L1-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_data-L1-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_datareflect_L3_CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-_datareflect_L3_CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-everyday-data-L2-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-analyzedatea-L4-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-data-library-panels-L5-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-librarydata-L6-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-librarydata-L6-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-AI-realworld-L7-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "2528741b-2d4c-4f3e-ace3-9ba1005edf0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-aiethics-video-L11-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "a420b1bb-0049-4045-9d81-671ff0d674ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ethic-teaching-tips-L10-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_ethic-teaching-tips-L10-CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "a420b1bb-0049-4045-9d81-671ff0d674ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_data_forum_L10_CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-_data_forum_L10_CSandDev_-rev"
+        ],
+        "lesson.key": "Data in Computer Systems",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "a420b1bb-0049-4045-9d81-671ff0d674ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_overview_endofUnit_L1_CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_CSandDev_-rev"
+        ],
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0a4dff7b-a982-4b6c-9231-1abae738814e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_project-description-L2-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0a4dff7b-a982-4b6c-9231-1abae738814e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_3-day-project-L3-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev_-rev"
+        ],
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0a4dff7b-a982-4b6c-9231-1abae738814e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev"
+        ],
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0a4dff7b-a982-4b6c-9231-1abae738814e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nextsteps-L6-csandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-L6-csandDev_-rev"
+        ],
+        "lesson.key": "Ethical Use and the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "79719a68-d02e-446d-affc-6e757909f1cc"
+      }
+    }
   ],
   "resources": [
 
