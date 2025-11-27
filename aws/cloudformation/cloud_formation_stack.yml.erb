@@ -769,6 +769,7 @@ Resources:
         - DeviceName: /dev/sda1
           Ebs:
             VolumeSize: <%= volume_size_overrides.fetch(rack_env, default_volume_size) %>
+            # TODO: change to gp3 next time we have to recreate the instance
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
@@ -829,6 +830,7 @@ Resources:
         - {Key: Name, Value: <%=environment%>-console}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
+          # TODO: change to gp3 next time we have to recreate the instance
           Ebs: {VolumeSize: 256, VolumeType: gp2}
       UserData:
         Fn::Base64: !Sub |
