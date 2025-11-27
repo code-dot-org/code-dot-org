@@ -26101,6 +26101,8 @@ en:
               name: Inclusive Filters and Clear Labels
             lesson-10:
               name: Schema Design for Simples Features
+            lesson-11:
+              name: Interactive Data Dashboard
           lesson_groups: {}
           name: 6-12-aif-s2-unit4
           title: "[DEV] AIF S2 Unit 4"
