@@ -89,8 +89,8 @@ $gap-height: 43px;
 .cornerIconButton {
   @include remove-button-styles;
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 2px;
+  right: 12px;
   font-size: 24px;
   color: var(--neutral-base-white);
 }

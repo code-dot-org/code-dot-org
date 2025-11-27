@@ -22,6 +22,7 @@ interface VersionHistoryRowProps {
   disabled?: boolean;
   children?: React.ReactNode;
   showRestoreButton: boolean;
+  className?: string;
 }
 
 interface RestoreVersionButtonProps {
@@ -45,6 +46,7 @@ const VersionHistoryRow: React.FunctionComponent<
   restoreOnClick,
   restoreDisabled = false,
   restoreLoading = false,
+  className,
 }) => {
   if (isLatest) {
     label = commonI18n.currentVersion();
@@ -72,7 +74,11 @@ const VersionHistoryRow: React.FunctionComponent<
   return (
     <div
       id={versionId}
-      className={classNames(moduleStyles.rowContainer, rowMarginStyle)}
+      className={classNames(
+        moduleStyles.rowContainer,
+        rowMarginStyle,
+        className
+      )}
     >
       <div className={moduleStyles.versionContent}>
         <div className={moduleStyles.versionHeader}>
