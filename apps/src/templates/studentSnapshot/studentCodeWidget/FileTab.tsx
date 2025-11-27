@@ -1,0 +1,36 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {ProjectFile} from '@codebridge/types';
+import {getFileIconNameAndStyle} from '@codebridge/utils';
+import React from 'react';
+
+import styles from './studentCodeWidget.module.scss';
+
+interface FileTabProps {
+  file: ProjectFile;
+  isActive: boolean;
+  onClick: () => void;
+}
+
+const FileTab: React.FC<FileTabProps> = ({file, isActive, onClick}) => {
+  const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
+  const iconClassName = isBrand ? 'fa-brands' : undefined;
+
+  return (
+    <div
+      onClick={onClick}
+      className={`${styles.fileTab} ${isActive ? styles.active : ''}`}
+    >
+      <div className={styles.label}>
+        <FontAwesomeV6Icon
+          iconName={iconName}
+          iconStyle={iconStyle}
+          className={iconClassName}
+        />
+        <BodyFourText noMargin>{file.name}</BodyFourText>
+      </div>
+    </div>
+  );
+};
+
+export default FileTab;

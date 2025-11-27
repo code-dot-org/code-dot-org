@@ -7,6 +7,13 @@ const SAMPLE_STUDENT_CODE: Record<string, string> = {
     '# Create three variables below — one of each data type\nmeal_name = "Lunch"\nmeal_taken = True\nlunch_cal = 650\nbreakfast_cal = 500\ndinner_cal = 575\nexercise_cal = 300\n\n\n# Use at least one operation\ntotal_cal = lunch_cal + breakfast_cal + dinner_cal - exercise_cal\n\n# Print out your variables in fun or useful ways\nprint("Total calories:", total_cal)\n',
 };
 
+const SAMPLE_STUDENT_CODE_2: Record<string, string> = {
+  'main.py':
+    '# Create three variables below — one of each data type\nmeal_name = "Lunch"\nmeal_taken = True\nlunch_cal = 650\nbreakfast_cal = 500\ndinner_cal = 575\nexercise_cal = 300\n\n\n# Use at least one operation\ntotal_cal = lunch_cal + breakfast_cal + dinner_cal - exercise_cal\n\n# Print out your variables in fun or useful ways\nprint("Total calories:", total_cal)\n',
+  'new.py':
+    '# Create three variables below — one of each data type\nlunch_cal = 650\nbreakfast_cal = 500\ndinner_cal = 575\nexercise_cal = 300\ncal_goal = 2300\n\n# Use at least one operation\ncal_left = cal_goal - lunch_cal - breakfast_cal - dinner_cal + exercise_cal\n\n# Print out your variables in fun or useful ways\nprint("You still have:", total_cal, "remaining")',
+};
+
 const meta: Meta<typeof StudentCodeWidget> = {
   component: StudentCodeWidget,
   parameters: {
@@ -32,16 +39,24 @@ const meta: Meta<typeof StudentCodeWidget> = {
 export default meta;
 type Story = StoryObj<typeof StudentCodeWidget>;
 
-export const NoCode: Story = {
+export const NoFiles: Story = {
   args: {
     studentCode: {},
     gridWidth: 2,
     gridHeight: 2,
   },
 };
-export const CodeProvided: Story = {
+export const SingleFile: Story = {
   args: {
     studentCode: SAMPLE_STUDENT_CODE,
+    gridWidth: 2,
+    gridHeight: 2,
+  },
+};
+
+export const MultipleFiles: Story = {
+  args: {
+    studentCode: SAMPLE_STUDENT_CODE_2,
     gridWidth: 2,
     gridHeight: 2,
   },

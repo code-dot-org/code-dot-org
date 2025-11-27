@@ -1,10 +1,9 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {ProjectFile} from '@codebridge/types';
 import React, {useMemo, useState} from 'react';
 
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 
-import Editor from './Editor';
+import Workspace from './Workspace';
 
 import styles from './studentCodeWidget.module.scss';
 
@@ -35,11 +34,31 @@ const StudentCodeWidget: React.FC<StudentCodeWidgetProps> = ({
     }));
   }, [studentCode]);
 
-  const code = projectFiles[0]?.contents || '';
+  const [selectedFileId, setSelectedFileId] = useState<string>('');
 
-  const toggleTheme = () => {
-    setTheme(prevTheme => (prevTheme === 'Light' ? 'Dark' : 'Light'));
-  };
+  // Set initial file when files become available
+  React.useEffect(() => {
+    if (projectFiles.length > 0 && !selectedFileId) {
+      setSelectedFileId(projectFiles[0].id);
+    }
+  }, [projectFiles, selectedFileId]);
+
+  const themeOptions = [
+    {
+      value: 'light',
+      onClick: () => setTheme('Light'),
+      label: 'Light Mode',
+      icon: {iconName: 'sun'},
+      isOptionDisabled: theme === 'Light',
+    },
+    {
+      value: 'dark',
+      onClick: () => setTheme('Dark'),
+      label: 'Dark Mode',
+      icon: {iconName: 'moon'},
+      isOptionDisabled: theme === 'Dark',
+    },
+  ];
 
   return (
     <WidgetTemplate
@@ -47,18 +66,15 @@ const StudentCodeWidget: React.FC<StudentCodeWidgetProps> = ({
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       scrollable={true}
+      settingsOptions={themeOptions}
     >
       <div data-theme={theme} className={styles.workspaceContainer}>
-        <div className={styles.themeToggle}>
-          <Button
-            onClick={toggleTheme}
-            size="xs"
-            type="secondary"
-            text={theme === 'Light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
-          />
-        </div>
-        {/* FileTabs will go here in the next PR and share the same theme via data-theme attribute */}
-        <Editor code={code} theme={theme} />
+        <Workspace
+          files={projectFiles}
+          selectedFileId={selectedFileId}
+          onFileSelect={setSelectedFileId}
+          theme={theme}
+        />
       </div>
     </WidgetTemplate>
   );
