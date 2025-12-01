@@ -345,7 +345,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         teacher_notification_1.reload
         teacher_notification_2.reload
         _(teacher_notification_1.read_at).wont_be_nil
-        _(teacher_notification_2.read_at).to_i.must_equal notification_2_read_at.to_i
+        _(teacher_notification_2.read_at.to_i).must_equal notification_2_read_at.to_i
       end
 
       it 'successfully marks both external and teacher notifications as read' do
