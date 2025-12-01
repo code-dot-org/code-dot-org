@@ -514,12 +514,7 @@ module.exports = function (grunt) {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
     appsToBuild
-      .concat(
-        'common',
-        'tutorialExplorer',
-        'regionalPartnerSearch',
-        'regionalPartnerMiniContact'
-      )
+      .concat('common', 'regionalPartnerSearch', 'regionalPartnerMiniContact')
       .map(function (item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
         var localeString =

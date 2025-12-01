@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-20T21:53:16.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Array Method\n\nAn **array method** is a built-in command that lets you change or use the data in an array (a list of items). You can use array methods to add, remove, or work with elements in the list without writing a lot of code yourself.",
+        "imageUrl": "https://images.code.org/b916d0c32659e1edd18041916e59ec45-Panel Levels Slide Deck (1).png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T21:53:16.584+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level6-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level6-test-2025\"},{\"changed_at\":\"2025-11-20 22:11:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Panels>

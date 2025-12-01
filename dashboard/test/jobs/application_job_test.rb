@@ -83,6 +83,20 @@ class ApplicationJobTest < ActiveJob::TestCase
     assert_equal @expected_my_waiting_to_start_count, ApplicationJob.new.waiting_to_start_jobs.count
   end
 
+  test 'overall queue metrics include worker count' do
+    ActiveJobMetrics.stubs(:worker_count).returns(3)
+
+    Cdo::Metrics.expects(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(WorkerCount: 3),
+        includes_dimensions(:WorkerCount, Environment: CDO.rack_env)
+      )
+    )
+
+    ActiveJobMetrics.report_overall_queue_metrics
+  end
+
   test 'enqueued jobs log several metrics' do
     # Splitting this into two assertions because 'includes_metrics' can't match multiple metrics with the same name.
     Cdo::Metrics.expects(:push).with(

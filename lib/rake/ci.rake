@@ -69,12 +69,7 @@ PARALLEL_COUNT = 24
 
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
-  timed_task_with_logging :run_tests do
-    unless CI::Utils.ci_job_unit_tests?
-      ChatClient.log "Wrong CI job, skipping"
-      next
-    end
-
+  timed_task_with_logging :run_unit_tests do
     target_branch = ENV.fetch('DRONE_TARGET_BRANCH', '')
     if CI::Utils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
@@ -181,11 +176,6 @@ namespace :ci do
   end
 
   timed_task_with_logging :seed_ui_test do
-    unless CI::Utils.ci_job_ui_tests?
-      ChatClient.log "Wrong CI job, skipping"
-      next
-    end
-
     if CI::Utils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next

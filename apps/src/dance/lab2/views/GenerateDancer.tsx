@@ -1,6 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {Heading3} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -13,9 +12,11 @@ import {
   DanceProjectSources,
   GeneratedDancerMetadata,
 } from '@cdo/apps/dance/types';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibsType,
@@ -39,11 +40,10 @@ import dancerSilhouetteBrightImage from '@cdo/static/dance/generateDancer/genera
 import {GENERATED_DANCER_STORAGE_KEY} from '../../ai/constants';
 import {getConfigValue} from '../../lottie/LottieDancerUtils';
 
+import bodyVariantCounts from './bodyVariantCounts';
 import adlibsDefault from './dancerAdlibsDefault';
 
 import moduleStyles from './generate-dancer.module.scss';
-
-const BODY_VARIANT_COUNT = 5;
 
 // A little time for the previous dancer to fade out.
 const GENERATE_INITIAL_DELAY_DURATION = 250;
@@ -91,6 +91,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const [promptText, setPromptText] = useState<string>('');
 
+  const [localizedPromptText, setLocalizedPromptText] = useState<string>('');
+
   const variantHistory = useRef<number[]>([]);
 
   const {currentSources, updateSources} = useSources<DanceProjectSources>();
@@ -100,6 +102,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const getInitialChoices = useCallback(
     (adlibsValue: AdlibsType) => {
       const initial: AdlibChoices = {};
+      let lastKeyCount = 0,
+        totalKeyCount = 0;
+
       if (adlibsValue) {
         const lastChoices = [
           ...(currentSources.generatedDancer?.choices || []),
@@ -110,6 +115,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           (key, index) => {
             const options = adlibsValue[adlibOption].options[key];
 
+            totalKeyCount++;
+
             if (
               options
                 .map(option => option.id)
@@ -117,6 +124,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             ) {
               // Use a value from the last saved dancer.
               initial[key] = lastChoices?.[index] || '';
+              lastKeyCount++;
             } else {
               // Select a random value.
               initial[key] = sample(options)?.id || '';
@@ -124,9 +132,19 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           }
         );
       }
-      return initial;
+
+      const existing = lastKeyCount !== 0 && lastKeyCount === totalKeyCount;
+
+      return {
+        initial,
+        existing,
+      };
     },
-    [adlibOption, currentSources.generatedDancer]
+    [
+      adlibOption,
+      currentSources.generatedDancer?.choices,
+      currentSources.generatedDancer?.choicesExtra,
+    ]
   );
 
   useEffect(() => {
@@ -158,18 +176,23 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
         });
       }
 
-      setAiGenerateState('none');
       setAdlibs(adlibsValue);
       setPromptText('');
       variantHistory.current = [];
     };
 
     fetchAdlib();
-  }, [adlibs, aiGenerateState, getInitialChoices]);
+  }, [aiGenerateState]);
 
   useEffect(() => {
     if (adlibs && currentSources) {
-      setAdlibChoices(getInitialChoices(adlibs));
+      const {initial, existing} = getInitialChoices(adlibs);
+      setAdlibChoices(initial);
+      if (existing) {
+        setAiGenerateState('reviewing');
+      } else {
+        setAiGenerateState('none');
+      }
     }
   }, [adlibs, currentSources, getInitialChoices]);
 
@@ -239,7 +262,11 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       );
 
       const variant = sample(newVariants) as number;
-      const bodyVariant = getRandomInt(0, BODY_VARIANT_COUNT - 1);
+      let bodyVariant = 0;
+      if (choicesExtraToSave && choicesExtraToSave.length > 0) {
+        const bodyVariantCount = bodyVariantCounts[choicesExtraToSave[0]];
+        bodyVariant = getRandomInt(0, bodyVariantCount - 1);
+      }
 
       // Keep the recently-shown array length at a maximum that ensures
       // there are still two choices to be made each time.
@@ -266,10 +293,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           levelPath: window.location.pathname,
         }
       );
-      updateSources(
-        {...currentSources, generatedDancer: newDancerMetadata},
-        true
-      );
 
       const elapsedTime = Date.now() - startTime;
       const remainingDelayDuration = Math.max(
@@ -279,38 +302,30 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
         0
       );
       await new Promise(res => setTimeout(res, remainingDelayDuration));
+
+      updateSources(
+        {...currentSources, generatedDancer: newDancerMetadata},
+        true
+      );
     },
-    [adlibChoices, adlibOption, adlibs, updateSources, currentSources]
+    [adlibChoices, adlibOption, adlibs, currentSources, updateSources]
   );
 
-  // Update local storage whenever the generated dancer metadata changes and update the canvas key so the canvas refreshes.
+  // Update session storage whenever the generated dancer metadata changes and update the canvas key so the canvas refreshes.
   const [canvasKey, setCanvasKey] = useState<string>();
   useEffect(() => {
     const metadataString = JSON.stringify(currentSources.generatedDancer);
     if (metadataString) {
       trySetSessionStorage(GENERATED_DANCER_STORAGE_KEY, metadataString);
     } else {
-      // If no dancer has been generated on this level, clear local storage to prevent stale artifacts from showing.
+      // If no dancer has been generated on this level, clear session storage to prevent stale artifacts from showing.
       sessionStorage.removeItem(GENERATED_DANCER_STORAGE_KEY);
     }
     setCanvasKey(metadataString || 'none');
-  }, [currentSources]);
+  }, [currentSources.generatedDancer]);
 
   const [hasGenerated, setHasGenerated] = useState(false);
-  const signedIn = useAppSelector(state => state.currentUser.signInState);
-  const scriptName = useAppSelector(state => state.progress.scriptName);
-  const logLevelActivity = useCallback(() => {
-    const eventName = levelProperties.isProjectLevel
-      ? EVENTS.PROJECT_ACTIVITY
-      : EVENTS.LEVEL_ACTIVITY;
-
-    analyticsReporter.sendEvent(eventName, {
-      signedIn: signedIn,
-      unitName: scriptName,
-      levelId: levelProperties.id,
-      levelName: levelProperties.name,
-    });
-  }, [levelProperties, signedIn, scriptName]);
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
 
   const generateDancer = useCallback(
     async (regenerate = false) => {
@@ -349,13 +364,12 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     variantHistory.current = [];
   }, []);
 
-  const onAdlibTextChange = useCallback((text: string) => {
+  const onAdlibTextChange = useCallback((text: string, localized: string) => {
     setPromptText(text);
+    setLocalizedPromptText(localized);
   }, []);
 
-  const parentProperties = useParentLevelProperties();
-  const showNavigation =
-    !levelProperties.isProjectLevel && !parentProperties?.isProjectLevel;
+  const hasParent = !!useParentLevelProperties();
   const sublevelOnContinue = useCallback(() => {
     dispatch(
       sendSuccessReportForLevel(
@@ -364,6 +378,11 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       )
     );
   }, [dispatch, levelProperties.appName, levelProperties.id]);
+
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+
+  const showTts =
+    levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
@@ -381,14 +400,17 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             <MainInstructionsContent
               instructionsText={levelProperties.longInstructions}
               markdownClassName={moduleStyles.markdown}
+              showTts={showTts}
             />
           )}
 
           {aiGenerateState === 'generating' && (
-            <div>
-              <Heading3>Generating...</Heading3>
-              AI is generating a dancer based on your prompt.
-            </div>
+            <MainInstructionsContent
+              heading="Generating"
+              content="AI is generating a dancer based on your prompt."
+              markdownClassName={moduleStyles.markdown}
+              showTts={showTts}
+            />
           )}
 
           {aiGenerateState === 'none' &&
@@ -420,52 +442,65 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 />
               </>
             )}
-          {['none', 'generating'].includes(aiGenerateState) &&
-            !levelProperties.aiDancerGenerateText && (
-              <>
-                {adlibs && adlibChoices && (
-                  <Adlib
-                    adlib={adlibs[adlibOption]}
-                    adlibChoices={adlibChoices}
-                    readOnly={['generating', 'reviewing'].includes(
-                      aiGenerateState
-                    )}
-                    glowSpeed={glowSpeed}
-                    onChoicesChange={onAdlibChoicesChange}
-                    onTextChange={onAdlibTextChange}
-                  />
-                )}
-                <div className={moduleStyles.buttonRow}>
-                  <Button
-                    ariaLabel={
-                      aiGenerateState === 'none'
-                        ? 'Generate dancer'
-                        : 'Generating dancer'
-                    }
-                    text={
-                      aiGenerateState === 'none'
-                        ? 'Generate dancer'
-                        : 'Generating dancer'
-                    }
-                    type="primary"
-                    color="black"
-                    size="s"
-                    iconLeft={{iconName: 'sparkles'}}
-                    isPending={aiGenerateState === 'generating'}
-                    disabled={aiGenerateState === 'generating'}
-                    onClick={() => generateDancer()}
-                    className={moduleStyles.buttonWide}
-                  />
-                </div>
-              </>
+
+          {/* Ensure that the Adlib is rendered, but hidden, when 'reviewing', so that
+              onAdlibTextChange is called to set the prompt text, specifically for
+              when the user has returned to see an existing dancer. */}
+          {['none', 'generating', 'reviewing'].includes(aiGenerateState) &&
+            !levelProperties.aiDancerGenerateText &&
+            adlibs &&
+            adlibChoices && (
+              <Adlib
+                adlib={adlibs[adlibOption]}
+                adlibChoices={adlibChoices}
+                readOnly={
+                  isReadOnly ||
+                  ['generating', 'reviewing'].includes(aiGenerateState)
+                }
+                glowSpeed={glowSpeed}
+                onChoicesChange={onAdlibChoicesChange}
+                onTextChange={onAdlibTextChange}
+                hidden={aiGenerateState === 'reviewing'}
+              />
             )}
-          {aiGenerateState === 'reviewing' && (
-            <div>
-              <Heading3>Decide what to do next</Heading3>
-              <div>
-                AI generated a dancer based on your prompt, "{promptText}"
+
+          {['none', 'generating'].includes(aiGenerateState) &&
+            !levelProperties.aiDancerGenerateText &&
+            !isReadOnly && (
+              <div className={moduleStyles.buttonRow}>
+                <Button
+                  ariaLabel={
+                    aiGenerateState === 'none'
+                      ? 'Generate dancer'
+                      : 'Generating dancer'
+                  }
+                  text={
+                    aiGenerateState === 'none'
+                      ? 'Generate dancer'
+                      : 'Generating dancer'
+                  }
+                  type="primary"
+                  color="black"
+                  size="s"
+                  iconLeft={{iconName: 'sparkles'}}
+                  isPending={aiGenerateState === 'generating'}
+                  disabled={aiGenerateState === 'generating'}
+                  onClick={() => generateDancer()}
+                  className={moduleStyles.buttonWide}
+                />
               </div>
-            </div>
+            )}
+
+          {aiGenerateState === 'reviewing' && (
+            <MainInstructionsContent
+              heading="Decide what to do next"
+              content={
+                `AI generated a dancer based on your prompt, "${localizedPromptText}"` +
+                (hasParent ? ' Keep editing, or use the tabs at the top.' : '')
+              }
+              markdownClassName={moduleStyles.markdown}
+              showTts={showTts}
+            />
           )}
           {aiGenerateState === 'reviewing' && (
             <>
@@ -499,7 +534,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   className={moduleStyles.buttonWide}
                 />
 
-                {showNavigation && (
+                {!hasParent && (
                   <NavigationArea
                     levelProperties={levelProperties}
                     // The following props don't really matter as we don't have a Submit button or validation here.
@@ -508,9 +543,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                     isRunning={false}
                     className={moduleStyles.buttonWide}
                     // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
-                    onContinue={
-                      parentProperties ? sublevelOnContinue : undefined
-                    }
+                    onContinue={sublevelOnContinue}
                   />
                 )}
               </div>
