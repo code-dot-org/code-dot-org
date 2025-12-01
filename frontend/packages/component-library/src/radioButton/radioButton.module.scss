@@ -4,8 +4,7 @@
 
 .radioButton {
   display: flex;
-  gap: 10px;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   margin: 0;
 
@@ -18,9 +17,9 @@
     position: relative;
     box-sizing: border-box;
     flex-shrink: 0;
-    margin: 2px;
     font-size: unset;
     line-height: unset;
+    margin-top: 2px;
     border: 2px solid var(--borders-neutral-solid);
     border-radius: 50%;
     background: var(--background-neutral-primary);
@@ -118,13 +117,14 @@
 
 // Sizes
 .radioButton-l {
+  gap: 8px;
   .radioIcon {
     height: 24px;
     width: 24px;
 
     &::after {
-      width: 9.33px;
-      height: 9.33px;
+      width: 10px;
+      height: 10px;
     }
   }
 
@@ -139,6 +139,7 @@
 }
 
 .radioButton-m {
+  gap: 8px;
   .radioIcon {
     height: 20px;
     width: 20px;
@@ -160,13 +161,14 @@
 }
 
 .radioButton-s {
+  gap: 6px;
   .radioIcon {
     height: 18px;
     width: 18px;
 
     &::after {
-      width: 7.33px;
-      height: 7.33px;
+      width: 8px;
+      height: 8px;
     }
   }
 
@@ -181,13 +183,14 @@
 }
 
 .radioButton-xs {
+  gap: 6px;
   .radioIcon {
     height: 16px;
     width: 16px;
 
     &::after {
-      width: 6.67px;
-      height: 6.67px;
+      width: 7px;
+      height: 7px;
     }
   }
 

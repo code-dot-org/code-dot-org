@@ -1,5 +1,6 @@
 require 'cdo/aws/metrics'
 require 'cdo/honeybadger'
+require 'cdo/active_job_backend'
 
 module ActiveJobMetrics
   extend ActiveSupport::Concern
@@ -142,6 +143,13 @@ module ActiveJobMetrics
         timestamp: Time.now,
         dimensions: dimensions,
       },
+      {
+        metric_name: 'WorkerCount',
+        value: worker_count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: dimensions,
+      }
     ]
 
     Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
@@ -149,6 +157,10 @@ module ActiveJobMetrics
 
   def self.report_overall_queue_metrics
     ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: [{name: 'Environment', value: CDO.rack_env}])
+  end
+
+  def self.worker_count
+    Cdo::ActiveJobBackend::ExistingWorkers.get_workers_from_ps.size
   end
 
   protected def report_job_count

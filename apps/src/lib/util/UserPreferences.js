@@ -72,6 +72,31 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
+   * Save whether the user has already seen and dismissed the Personalization Alert.
+   * @param {boolean} hasDismissedPersonalizationAlert: True if the user has dismissed the alert, false otherwise.
+   */
+  setHasDismissedPersonalizationAlert(hasDismissedPersonalizationAlert) {
+    return $.post(`/api/v1/users/has_dismissed_personalization_alert`, {
+      has_dismissed_personalization_alert: hasDismissedPersonalizationAlert,
+    });
+  }
+
+  async getHasDismissedPersonalizationAlert() {
+    try {
+      const response = await HttpClient.fetchJson(
+        '/api/v1/users/has_dismissed_personalization_alert'
+      );
+      return response.value.has_dismissed_personalization_alert;
+    } catch (error) {
+      console.error(
+        'Error fetching personalization alert dismissal status:',
+        error
+      );
+      return false;
+    }
+  }
+
+  /**
    * Save the preference to opt-out of AI Rubrics (AI TA).
    * @param {boolean} aiRubricsDisabled: True if disabling AI rubric features, false otherwise.
    */
