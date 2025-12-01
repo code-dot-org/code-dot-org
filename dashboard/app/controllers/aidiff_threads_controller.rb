@@ -186,7 +186,7 @@ class AidiffThreadsController < ApplicationController
     unit_display_name = @unit&.title_for_display(unit_group_unit: @unit&.unit_group_units&.first)
     student_code = get_student_code(params[:viewAsUserId] || current_user.id, @level, @unit.id) if context_type == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
 
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(
+    prompt = AidiffPromptHelper.get_prompt_for_context(
       context_type,
       course_display_name,
       unit_display_name,
@@ -194,8 +194,11 @@ class AidiffThreadsController < ApplicationController
       params[:isPreset],
       @section_contexts,
       @level&.long_instructions,
-      student_code
+      student_code,
+      true,
     )
+
+    puts prompt
 
     response = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type))
     #TODO: check for profanity/PII in model response
