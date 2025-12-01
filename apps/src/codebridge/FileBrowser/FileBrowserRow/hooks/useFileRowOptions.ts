@@ -19,20 +19,38 @@ import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
 
 /**
  * Handles downloading a file and sending an analytics event.
  * @param file - The ProjectFile object representing the file to download.
- * @param appName - (optional) The name of the application triggering the download, used for analytics.
  * @returns Nothing (void)
  */
-const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
-  fileDownload(file.contents, file.name);
-  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, {
-    fileType: file.language?.toLowerCase() || '',
-  });
+const handleFileDownload = async (file: ProjectFile) => {
+  try {
+    if (WEBLAB2_IMAGE_FILE_TYPES.includes(file.language) && file.url) {
+      // File is an image and has a url, so download from browser
+      const image = await fetch(file.url);
+      if (!image.ok) {
+        console.error(
+          `Failed to fetch image: ${image.status} ${image.statusText}`
+        );
+        alert('Image retrieval failed. Please try again.');
+      }
+      const blob = await image.blob();
+      fileDownload(blob, file.name);
+    } else {
+      fileDownload(file.contents, file.name);
+    }
+    sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, {
+      fileType: file.language?.toLowerCase() || '',
+    });
+  } catch (error) {
+    console.error('File download failed:', error);
+    alert('File download failed. Please try again.');
+  }
 };
 
 /**
@@ -51,7 +69,7 @@ export const useFileRowOptions = (
   hasValidationFile: boolean
 ) => {
   const {
-    config: {editableFileTypes},
+    config: {supportedFileTypes},
     levelProperties,
   } = useCodebridgeContext();
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
@@ -124,10 +142,10 @@ export const useFileRowOptions = (
         },
       },
       {
-        condition: editableFileTypes.includes(file.language),
+        condition: supportedFileTypes.includes(file.language),
         iconName: 'download',
         labelText: codebridgeI18n.downloadFile(),
-        clickHandler: () => handleFileDownload(file, appName),
+        clickHandler: () => handleFileDownload(file),
       },
       {
         condition: !isLocked,
@@ -146,7 +164,7 @@ export const useFileRowOptions = (
       appName,
       backpackApi,
       dispatch,
-      editableFileTypes,
+      supportedFileTypes,
       file,
       isLocked,
       isStartMode,
