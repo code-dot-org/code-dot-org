@@ -59,7 +59,7 @@ Parameters:
     Description: Route 53 Hosted Zone ID for Codeprojects base domain name.
   InstanceType:
     Type: String
-    Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : (stack_name == 'adhoc-bugcrowd' ? 'm7i.4xlarge' : 't3.2xlarge')%>
+    Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : 't3.2xlarge'%>
   Branch:
     Type: String
     Default: <%=branch%>
