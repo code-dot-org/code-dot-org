@@ -28,7 +28,7 @@ const NOTIFICATION_1 = {
   id: 'notification-1',
   externalId: null,
   title: 'First Notification',
-  description: 'This is the second external notification',
+  description: 'This is the first notification',
   readAt: null,
   iconName: 'info',
   publishedAt: '2023-01-02T10:00:00Z',
