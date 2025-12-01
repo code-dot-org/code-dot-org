@@ -134,14 +134,10 @@ module AllowedHostnameHelper
     'open.mapquestapi.com',     # MapQuest mapping services
     'swapi.dev',                # Star Wars data. We may want to remove this in favor of swapi.info
     # REMOVED: 'theunitedstates.io' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
-    'collectionapi.metmuseum.org',
-    'images.metmuseum.org',
   ].freeze
 
   ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
-    'picsum.photos', # Placeholder images - Public API
-    'collectionapi.metmuseum.org',
-    'images.metmuseum.org',
+    'picsum.photos' # Placeholder images - Public API
   ].freeze
 
   ALLOWED_FONT_HOSTNAMES = [
