@@ -73,8 +73,6 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const useText = !!(levelProperties.levelData as MusicLevelData)
     .aiCodeGenerateText;
 
-  const hasParent = !!useParentLevelProperties();
-
   // Use legacy adlib ID, adlib object, or new adlib ID.
   const useAdlib =
     !useText &&
@@ -197,13 +195,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     // There can be a delay before we're playing (often due to sample loading),
     // so wait for it explicitly.
     if (aiGenerateState === 'generated' && isPlaying) {
-      if (hasParent) {
-        dispatch(setAiGenerateState('edited'));
-      } else {
-        dispatch(setAiGenerateState('listening'));
-      }
+      dispatch(setAiGenerateState('listening'));
     }
-  }, [aiGenerateState, dispatch, hasParent, isPlaying]);
+  }, [aiGenerateState, dispatch, isPlaying]);
 
   useEffect(() => {
     if (
@@ -243,6 +237,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     ? 'full'
     : undefined;
 
+  const parentProperties = useParentLevelProperties();
+  const isStandalone =
+    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
   const sublevelOnContinue = useCallback(() => {
     dispatch(
       sendSuccessReportForLevel(
@@ -287,7 +284,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {['generating', 'generated'].includes(aiGenerateState) && (
+      {aiGenerateState === 'generating' && (
         <MainInstructionsContent
           heading="Generating..."
           content="AI is generating code based on your prompt."
@@ -406,8 +403,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              // Skip the 'editing' state when showing the three tabs.
-              dispatch(setAiGenerateState(hasParent ? 'edited' : 'editing'));
+              // Skip the 'editing' validation state for standalone projects.
+              dispatch(setAiGenerateState(isStandalone ? 'edited' : 'editing'));
               analyticsReporter.sendEvent(
                 EVENTS.MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED,
                 {levelPath: window.location.pathname, packId, adlibChoices}
@@ -440,15 +437,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         <>
           <MainInstructionsContent
             heading="Modify the code"
-            content={
-              hasParent
-                ? 'Keep editing, or use the tabs at the top.'
-                : "That's a great mix!"
-            }
+            content="That's a great mix!"
             markdownClassName={styles.markdown}
             showTts={showTts}
           />
-
           <div className={styles.buttonRow}>
             <Button
               ariaLabel={'Back to prompt'}
@@ -467,7 +459,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {!hasParent && (
+            {!isStandalone && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.
@@ -476,13 +468,12 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 isRunning={false}
                 className={styles.buttonWide}
                 // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
-                onContinue={sublevelOnContinue}
+                onContinue={parentProperties ? sublevelOnContinue : undefined}
               />
             )}
           </div>
         </>
       )}
-
       {/* Retain focus with a hidden button. */}
       {['generating', 'generated', 'listening', 'editing'].includes(
         aiGenerateState

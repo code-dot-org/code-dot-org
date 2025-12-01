@@ -1037,7 +1037,11 @@ export default class P5Lab {
     this.p5Wrapper.startExecution();
     this.p5Wrapper.setLoop(true);
 
-    if (this.executionError) {
+    if (
+      !this.JSInterpreter ||
+      !this.JSInterpreter.initialized() ||
+      this.executionError
+    ) {
       return;
     }
 
@@ -1215,7 +1219,7 @@ export default class P5Lab {
    */
   onP5Preload() {
     this.preloadLabAssets()
-      .then(() => this.runPreloadEventHandler_())
+      .then(this.runPreloadEventHandler_())
       .then(() => this.p5Wrapper.notifyPreloadPhaseComplete());
     return false;
   }

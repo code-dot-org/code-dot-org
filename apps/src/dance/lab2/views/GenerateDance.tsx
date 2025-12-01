@@ -249,7 +249,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     }
   }, [aiGenerateState]);
 
-  const hasParent = !!useParentLevelProperties();
+  const parentProperties = useParentLevelProperties();
+  const isStandalone =
+    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
   const dispatch = useAppDispatch();
   const sublevelOnContinue = useCallback(() => {
     dispatch(
@@ -285,7 +287,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {['generating', 'generated'].includes(aiGenerateState) && (
+      {aiGenerateState === 'generating' && (
         <MainInstructionsContent
           heading="Generating..."
           content="AI is generating code based on your prompt."
@@ -380,8 +382,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              // Skip the 'editing' state when showing the three tabs.
-              setAiGenerateState(hasParent ? 'edited' : 'editing');
+              // Skip the 'editing' validation state for standalone projects.
+              setAiGenerateState(isStandalone ? 'edited' : 'editing');
               analyticsReporter.sendEvent(
                 EVENTS.DANCE_PARTY_GENERATE_CODE_USE_CODE_CLICKED,
                 {
@@ -418,7 +420,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           <MainInstructionsContent
             heading="Modify the code"
             content={
-              hasParent
+              isStandalone
                 ? 'Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix.'
                 : "Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix. Click Finish when you're done."
             }
@@ -441,7 +443,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {hasParent && (
+            {!isStandalone && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.
@@ -450,7 +452,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 isRunning={false}
                 className={styles.buttonWide}
                 // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
-                onContinue={sublevelOnContinue}
+                onContinue={parentProperties ? sublevelOnContinue : undefined}
               />
             )}
           </div>
