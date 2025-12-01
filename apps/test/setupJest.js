@@ -12,7 +12,6 @@ import '../build/locales/en_us/signup_locale.js';
 import '../build/locales/en_us/music_locale.js';
 import '../build/locales/en_us/netsim_locale.js';
 import '../build/locales/en_us/standaloneVideo_locale.js';
-import '../build/locales/en_us/tutorialExplorer_locale.js';
 import '../build/locales/en_us/weblab_locale.js';
 import '../build/locales/en_us/gamelab_locale.js';
 import '../build/locales/en_us/poetry_locale.js';

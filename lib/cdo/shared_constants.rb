@@ -890,7 +890,8 @@ module SharedConstants
     UNIT: "unit",
     COURSE: "course",
     GENERAL: "general",
-    LEVEL: "level"
+    LEVEL: "level",
+    PROGRESS: "progress"
   }.freeze
 
   AI_DIFF_ASSOCIATION = {

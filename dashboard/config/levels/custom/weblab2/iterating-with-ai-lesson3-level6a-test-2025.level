@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-20T18:17:09.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "display_name": "The Never Ending Riddle",
+    "bubble_choice_description": "Debug the never ending while loop so it eventually stops running.",
+    "thumbnail_url": "https://images.code.org/b4149ed458ff8e40463c9fec9dd5e994-Screenshot 2025-11-20 at 12.56.22 PM.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Riddle Solver (State Var)</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <link href=\"https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap\" rel=\"stylesheet\">\n</head>\n<body>\n  <div class=\"card\">\n    <h2>🥚 Riddle Me This!</h2>\n    <p class=\"riddle\">\"What must be broken before you can use it?\"</p>\n    \n    <input id=\"riddleInput\" type=\"text\" placeholder=\"Type your answer here...\">\n    \n    <p id=\"output\"></p>\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const output = document.querySelector(\"#output\");\nconst riddleInput = document.querySelector(\"#riddleInput\");\nconst checkBtn = document.querySelector(\"#checkBtn\");\n\nconst checkRiddle = () => {\n  let answer = riddleInput.value.toLowerCase();\n  let gameRunning = true;\n\n  // We use the loop to run our logic check once\n  while (gameRunning) {\n    \n    if (answer === \"egg\") {\n      gameRunning = true;\n      output.textContent = \"✅ You cracked it! It's an egg!\";\n      output.style.color = \"#27AE60\";\n    } else {\n      output.textContent = \"Not quite... keep trying!\";\n      output.style.color = \"#E74C3C\";\n    }\n\n    // 🛑 CRITICAL 🛑\n    // We MUST break here. Unlike prompt(), input.value doesn't pause the code.\n    // Without 'break', this loop runs forever and freezes the browser.\n    break;\n  }\n};\n\ncheckBtn.addEventListener(\"click\", checkRiddle);",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: 'Nunito', sans-serif;\n  background-color: #FFF5C4; /* Light egg yellow */\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.card {\n  background: white;\n  padding: 2rem;\n  border-radius: 20px;\n  box-shadow: 0 10px 25px rgba(0,0,0,0.1);\n  text-align: center;\n  max-width: 400px;\n  width: 100%;\n  border: 4px solid #FFD700;\n}\n\nh2 {\n  font-family: 'Fredoka One', cursive;\n  color: #F5A623;\n  font-size: 2rem;\n  margin-top: 0;\n}\n\n.riddle {\n  font-size: 1.2rem;\n  color: #333;\n  margin-bottom: 1.5rem;\n  font-style: italic;\n}\n\ninput {\n  width: 80%;\n  padding: 10px;\n  font-size: 1rem;\n  border: 2px solid #ddd;\n  border-radius: 8px;\n  outline: none;\n  text-align: center;\n}\n\ninput:focus {\n  border-color: #F5A623;\n}\n\n#output {\n  margin-top: 1.5rem;\n  font-weight: bold;\n  font-size: 1.1rem;\n  min-height: 1.5em;\n  color: #666;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-20 20:42:37 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:43:29 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:45:51 +0000\",\"changed\":[\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:50:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:52:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:52:53 +0000\",\"changed\":[\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:53:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:53:35 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 22:45:56 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 23:17:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 23:21:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 23:22:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 23:24:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 23:24:22 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

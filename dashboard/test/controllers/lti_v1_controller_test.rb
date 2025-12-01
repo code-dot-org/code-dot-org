@@ -278,6 +278,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
     LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(@integration)
     Honeybadger.stubs(:notify)
+    Policies::Lti.stubs(:supported_message_type?).returns(true)
   end
 
   def create_jwt(payload)
@@ -455,6 +456,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'auth - LTI Resource Type wrong' do
+    Policies::Lti.unstub(:supported_message_type?)
     payload = get_valid_payload
     payload[:'https://purl.imsglobal.org/spec/lti/claim/message_type'] = 'file'
     LtiV1Controller.any_instance.stubs(:get_decoded_jwt).returns payload

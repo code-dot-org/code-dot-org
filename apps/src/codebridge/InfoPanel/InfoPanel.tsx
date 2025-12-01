@@ -60,7 +60,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const handleValidate = () => {
     if (onRun) {
       dispatch(setIsValidating(true));
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK, appName);
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK);
       logUserLevelInteraction({
         levelId: levelId,
         scriptId: scriptId,

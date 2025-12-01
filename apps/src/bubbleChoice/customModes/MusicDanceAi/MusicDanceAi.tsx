@@ -1,11 +1,11 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {memo, Suspense, useCallback, useEffect, useState} from 'react';
 
 import {
   getCurrentLesson,
+  getCurrentScriptLevelId,
   levelById,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {GENERATED_DANCER_STORAGE_KEY} from '@cdo/apps/dance/ai/constants';
@@ -27,7 +27,10 @@ import Loading from '@cdo/apps/lab2/views/Loading';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {trySetLocalStorage} from '@cdo/apps/utils';
+import {trySetSessionStorage} from '@cdo/apps/utils';
+import DancerIcon from '@cdo/static/dance/mixMoveAi/design.svg';
+import MusicIcon from '@cdo/static/dance/mixMoveAi/mix.svg';
+import DanceIcon from '@cdo/static/dance/mixMoveAi/move.svg';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {BubbleChoiceLevelProperties} from '../../types';
@@ -47,6 +50,12 @@ const labels: {[tab in Tab]: string} = {
   [Tab.Dancer]: 'Design',
   [Tab.Music]: 'Mix',
   [Tab.Dance]: 'Move',
+};
+
+const icons: {[tab in Tab]: string} = {
+  [Tab.Dancer]: DancerIcon,
+  [Tab.Music]: MusicIcon,
+  [Tab.Dance]: DanceIcon,
 };
 
 interface MusicDanceAiProps {
@@ -90,6 +99,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
   const [tabDataMap, setTabDataMap] = useState<{[tab in Tab]?: LabData}>();
   const userId = useAppSelector(state => state.progress.viewAsUserId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
+  const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
   const dispatch = useAppDispatch();
 
   const levelPropertiesPathPrefix = useAppSelector(state => {
@@ -161,7 +171,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
         if (channel.subprojects) {
           channelId = channel.subprojects.find(
             ({level_id}) => level_id.toString() === sublevel.level_id
-          )?.project_id;
+          )?.channel_id;
         } else if (channel.labConfig) {
           // Otherwise, check labConfig for cases where we've transitioned from a script level.
           channelId = channel.labConfig[tab]?.channelId;
@@ -181,7 +191,8 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
         projectManager = await ProjectManagerFactory.getProjectManagerForLevel(
           parseInt(sublevel.level_id),
           userId || undefined,
-          scriptId || undefined
+          scriptId || undefined,
+          scriptLevelId || undefined
         );
       }
 
@@ -193,7 +204,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
           tab === Tab.Dancer &&
           (sources as DanceProjectSources)?.generatedDancer
         ) {
-          trySetLocalStorage(
+          trySetSessionStorage(
             GENERATED_DANCER_STORAGE_KEY,
             JSON.stringify((sources as DanceProjectSources).generatedDancer)
           );
@@ -203,7 +214,6 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     }
 
     setTabDataMap(map);
-    setCurrentTab(getIsShareView() ? Tab.Dance : getTypedKeys(map)[0]);
     dispatch(setIsLoading(false));
   }, [
     levelProperties,
@@ -211,15 +221,23 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     channel.subprojects,
     userId,
     scriptId,
+    scriptLevelId,
     getLevelPropertiesPath,
     dispatch,
     tabDataMap,
   ]);
 
-  // Clear out tab data when switching levels.
+  // Set the initial tab once data is loaded if we haven't already.
+  useEffect(() => {
+    if (!currentTab && tabDataMap) {
+      setCurrentTab(getIsShareView() ? Tab.Dance : getTypedKeys(tabDataMap)[0]);
+    }
+  }, [currentTab, tabDataMap]);
+
+  // Clear out tab data when switching levels or view as user.
   useEffect(() => {
     setTabDataMap(undefined);
-  }, [levelProperties.id]);
+  }, [levelProperties.id, userId]);
 
   useEffect(() => {
     if (!tabDataMap) {
@@ -227,7 +245,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     }
     // Update the parent channel with sublevel channel IDs once we've loaded everything.
     const updatedLabConfig: {[key: string]: {channelId: string}} = {};
-    const updatedSubprojects: {level_id: number; project_id: string}[] = [];
+    const updatedSubprojects: {level_id: number; channel_id: string}[] = [];
 
     for (const tab of getTypedKeys(tabDataMap)) {
       const data = tabDataMap[tab];
@@ -237,7 +255,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
       updatedLabConfig[tab] = {channelId: data.projectManager.getChannelId()};
       updatedSubprojects.push({
         level_id: data.levelProperties.id,
-        project_id: data.projectManager.getChannelId(),
+        channel_id: data.projectManager.getChannelId(),
       });
       data.projectManager?.addSaveSuccessListener(() => {
         Lab2Registry.getInstance()
@@ -311,10 +329,18 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
                     onClick={() => (disabled ? undefined : setCurrentTab(tab))}
                     disabled={disabled}
                   >
-                    <BodyThreeText>
-                      {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
-                      {labels[tab]}
-                    </BodyThreeText>
+                    {disabled && <FontAwesomeV6Icon iconName={'lock'} />}
+                    {!disabled && (
+                      <img
+                        src={icons[tab]}
+                        alt=""
+                        className={classNames(
+                          styles.tabIcon,
+                          tab !== currentTab && styles.tabIconUnselected
+                        )}
+                      />
+                    )}
+                    {labels[tab]}
                   </button>
                 );
               })}

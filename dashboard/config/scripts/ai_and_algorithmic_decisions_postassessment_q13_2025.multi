@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q13_2025'
+
+question 'A phone\'s "Do Not Disturb" mode blocks all notifications unless the message is marked as urgent. What kind of logic helps the phone decide when not to block a message?'
+
+wrong 'An AND operator that blocks everything at all times'
+right 'A NOT operator that allows messages through when they are not in the blocked category'
+wrong 'An OR operator that chooses messages randomly to let through'
+wrong 'A variable that stores how many texts you\'ve received today'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 10
+MARKDOWN
