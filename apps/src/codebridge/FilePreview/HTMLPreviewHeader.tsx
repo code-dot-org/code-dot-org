@@ -3,6 +3,7 @@ import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -25,6 +26,8 @@ interface HTMLPreviewHeaderProps {
   onToggleFullScreen: () => void;
   previewViewMode: PreviewViewMode;
   setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
+  onStopPreview: () => void;
+  isStopEnabled: boolean;
 }
 
 export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
@@ -39,6 +42,8 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   onToggleFullScreen,
   previewViewMode,
   setPreviewViewMode,
+  onStopPreview,
+  isStopEnabled,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -127,6 +132,26 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           className={moduleStyles.iconButton}
         />
       </div>
+      <WithTooltip
+        tooltipProps={{
+          tooltipId: 'stop-preview',
+          direction: 'onBottom',
+          size: 'xs',
+          text: 'Stop preview',
+        }}
+      >
+        <Button
+          onClick={onStopPreview}
+          aria-label={'Stop Preview'}
+          size="xs"
+          type="secondary"
+          disabled={!isStopEnabled}
+          isIconOnly={true}
+          icon={{iconName: 'circle-stop'}}
+          className={moduleStyles.iconButton}
+          color={'destructive'}
+        />
+      </WithTooltip>
       <SegmentedButtons
         className={moduleStyles.previewViewModeButtons}
         {...previewViewModeButtonsProps}

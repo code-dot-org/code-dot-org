@@ -44,4 +44,5 @@ module.exports = {
   STATSIG_LOCAL_MODE_OFF: process.env.STATSIG_LOCAL_MODE_OFF,
   // If set, enable build profiling for Grunt and Webpack
   PROFILE_APPS_BUILD: getBoolEnv('PROFILE_APPS_BUILD'),
+  NODE_OPTIONS: process.env.NODE_OPTIONS,
 };
