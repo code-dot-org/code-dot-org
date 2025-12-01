@@ -20,6 +20,11 @@ export type ChatPrompt = {
   followUpPrompts?: ChatPrompt[];
 };
 
+export interface PromptMenuConfiguration {
+  initialMessage: string;
+  suggestedPrompts: ChatPrompt[];
+}
+
 type ServerChatThread = {
   id: number;
   title: string;

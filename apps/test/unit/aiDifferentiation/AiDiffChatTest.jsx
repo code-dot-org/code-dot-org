@@ -21,10 +21,8 @@ import {
   APCSP_DUMMY_CREATE,
   APCSP_DUMMY_EXAM,
 } from '@cdo/apps/aiDifferentiation/AiDiffPredefinedPrompts';
-import {
-  DEFAULT_INITIAL_CHAT_MESSAGE,
-  THREAD_TYPES,
-} from '@cdo/apps/aiDifferentiation/constants';
+import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -143,7 +141,11 @@ describe('AiDiffChat', () => {
     store.dispatch(setThreadId(overrideThreadId));
     store.dispatch(setThreadTitle('Sample title'));
     store.dispatch(setThreadType(THREAD_TYPES.default));
-    store.dispatch(setInitialChatMessage(DEFAULT_INITIAL_CHAT_MESSAGE));
+    store.dispatch(
+      setInitialChatMessage(
+        SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage
+      )
+    );
     store.dispatch(
       setThreadMessages(
         overrideThreadMessages.length > 0
@@ -151,7 +153,8 @@ describe('AiDiffChat', () => {
           : [
               {
                 role: Role.ASSISTANT,
-                chatMessageText: DEFAULT_INITIAL_CHAT_MESSAGE,
+                chatMessageText:
+                  SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
                 status: Status.OK,
               },
               DEFAULT_SUGGESTED_PROMPTS,
@@ -169,7 +172,9 @@ describe('AiDiffChat', () => {
   it('initial message and suggested prompts are rendered', () => {
     renderDefault();
     const message = screen.getByLabelText(i18n.aiChatMessageBot());
-    expect(message).toHaveTextContent(DEFAULT_INITIAL_CHAT_MESSAGE);
+    expect(message).toHaveTextContent(
+      SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage
+    );
     //suggested prompts
     expect(screen.getAllByRole('checkbox')).toHaveLength(5);
     screen.getByRole('checkbox', {name: 'Give me an example'});
@@ -250,7 +255,8 @@ describe('AiDiffChat', () => {
     const overrideThreadMessages = [
       {
         role: Role.ASSISTANT,
-        chatMessageText: DEFAULT_INITIAL_CHAT_MESSAGE,
+        chatMessageText:
+          SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
         status: Status.OK,
       },
       [...DEFAULT_SUGGESTED_PROMPTS, APCSP_DUMMY_CREATE, APCSP_DUMMY_EXAM],

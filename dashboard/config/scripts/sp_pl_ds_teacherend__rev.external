@@ -1,0 +1,57 @@
+name 'sp-pl-DS-teacherEnd_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Voices from the Classroom
+
+<hr style="clear:both">
+
+
+
+<!-- Box 1: Left-aligned -->
+<div style="display: flex; justify-content: flex-start; margin-bottom: 20px;">
+  <div style="background-color: #dccbea; border-radius: 40px 40px 5px 40px; color: #000000; width: 60%; padding: 0.5px 10px 1px 10px;">
+    <p style="font-size: 60pt; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+    <p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; font-size: 12pt">
+      These lessons really pushed my students to think critically about the data they were working with...
+    </p>
+    <p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+    <p style="text-align: right; font-size: 125%; font-style: italic; margin-right: 30px; margin-top: -20px"></p>
+  </div>
+</div>
+
+<!-- Box 2: Right-aligned -->
+<div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+  <div style="background-color: #ffd199; border-radius: 40px 40px 5px 40px; color: #000000; width: 60%; padding: 0.5px 10px 1px 10px;">
+    <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+    <p style="line-height: 1.5; margin-left: 30px; margin-right: 10px; font-size: 12pt">
+      The interactive nature of these lessons kept my students actively involved and curious...
+    </p>
+    <p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+    <p style="text-align: right; font-size: 125%; font-style: italic; margin-right: 30px; margin-top: -20px"></p>
+  </div>
+</div>
+
+<!-- Box 3: Left-aligned -->
+<div style="display: flex; justify-content: flex-start;">
+  <div style="background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; color: #000000; width: 60%; padding: 0.5px 10px 1px 10px;">
+    <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+    <p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; font-size: 12pt">
+      The lesson plans, slides, and resources were so well-prepared that teaching these data science lessons was a breeze...
+    </p>
+    <p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+    <p style="text-align: right; font-size: 125%; font-style: italic; margin-right: 30px; margin-top: -20px"></p>
+  </div>
+</div>
+
+
+---
+## Conclusion
+
+#### By the end of this unit, your students should have a solid understanding of what data science is and have experience analyzing and interpreting data. 
+
+
+
+
+MARKDOWN

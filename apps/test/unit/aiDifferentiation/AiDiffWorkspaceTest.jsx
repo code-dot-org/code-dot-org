@@ -19,10 +19,8 @@ import {
   MINI_LESSON_PROMPT,
 } from '@cdo/apps/aiDifferentiation/AiDiffPredefinedPrompts';
 import AiDiffWorkspace from '@cdo/apps/aiDifferentiation/AiDiffWorkspace';
-import {
-  DEFAULT_INITIAL_CHAT_MESSAGE,
-  THREAD_TYPES,
-} from '@cdo/apps/aiDifferentiation/constants';
+import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {
   chatThreadMessagesValidator,
   chatThreadValidator,
@@ -181,12 +179,17 @@ describe('AiDiffWorkspace', () => {
     store.dispatch(setThreadId(overrideThreadId));
     store.dispatch(setThreadTitle('Sample title'));
     store.dispatch(setThreadType(THREAD_TYPES.default));
-    store.dispatch(setInitialChatMessage(DEFAULT_INITIAL_CHAT_MESSAGE));
+    store.dispatch(
+      setInitialChatMessage(
+        SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage
+      )
+    );
     store.dispatch(
       setThreadMessages([
         {
           role: Role.ASSISTANT,
-          chatMessageText: DEFAULT_INITIAL_CHAT_MESSAGE,
+          chatMessageText:
+            SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
           status: Status.OK,
         },
         DEFAULT_SUGGESTED_PROMPTS,

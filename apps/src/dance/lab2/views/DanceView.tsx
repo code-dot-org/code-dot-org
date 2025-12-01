@@ -133,6 +133,11 @@ const DanceView: React.FunctionComponent<{
     startOver,
   } = useSources<DanceProjectSources>();
 
+  const sourcesRef = useRef(currentSources);
+  useEffect(() => {
+    sourcesRef.current = currentSources;
+  }, [currentSources]);
+
   const mergeSources = useCallback(
     (patch: Partial<DanceProjectSources>, forceSave = false) => {
       const next = {...sourcesRef.current, ...patch};
@@ -468,13 +473,19 @@ const DanceView: React.FunctionComponent<{
       return;
     }
     // In case there is no song set in the current sources, set it to the default.
-    if (!currentSources.selectedSong) {
+    if (!currentSources.selectedSong && !usingMusicProject) {
       const defaultSong = levelProperties.defaultSong;
       const songToUse =
         defaultSong && songData[defaultSong] ? defaultSong : songKeys[0];
       mergeSources({selectedSong: songToUse});
     }
-  }, [songData, currentSources, mergeSources, levelProperties.defaultSong]);
+  }, [
+    songData,
+    currentSources,
+    mergeSources,
+    levelProperties.defaultSong,
+    usingMusicProject,
+  ]);
 
   // Load the selected song whenever it changes in project sources.
   useEffect(() => {
@@ -578,11 +589,6 @@ const DanceView: React.FunctionComponent<{
   }, [progressManager, levelProperties.appName, guideMode]);
 
   const settings = useBlocklySettings();
-
-  const sourcesRef = useRef(currentSources);
-  useEffect(() => {
-    sourcesRef.current = currentSources;
-  }, [currentSources]);
 
   if (isShareView) {
     const musicMetadata = loadedMusicProject

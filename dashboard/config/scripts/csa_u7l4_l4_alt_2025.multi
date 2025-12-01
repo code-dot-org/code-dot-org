@@ -48,5 +48,5 @@ Which of the following best describes the reason why this code segment does not 
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-The `sellTicket()` method is marked as `private`, which means it cannot be accessed outside of the `PromTickets` class. Therefore, attempting to call `tickets.sellTicket()` will result in a compile-time error. The correct solution is to mark the `sellTicket()` method as `public` so that it can be called from outside the class.
+The `sellTicket()` method is marked as `private`, which means it cannot be accessed outside of the `PromTickets` class. Therefore, attempting to call `tickets.sellTicket()` or reference `tickets.soldTickets` will result in a compile-time error. The correct solution is to mark the `sellTicket()` method as `public` so that it can be called from outside the class.
 MARKDOWN

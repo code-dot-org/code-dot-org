@@ -32,7 +32,7 @@ import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 import {EVENTS, PLATFORMS} from '../../metrics/AnalyticsConstants';
 import analyticsReporter from '../../metrics/AnalyticsReporter';
 import AiDiffChat from '../AiDiffChat';
-import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../AiDiffPredefinedPrompts';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../predefinedPrompts';
 import {Context, SuggestPromptsType} from '../types';
 
 import style from './ai-diff-welcome.module.scss';

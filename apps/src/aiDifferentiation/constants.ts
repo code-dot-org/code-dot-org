@@ -1,5 +1,6 @@
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
+
 export const DEFAULT_THREAD_TITLE = 'Unnamed chat';
-export const DEFAULT_INITIAL_CHAT_MESSAGE = `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`;
 
 // Optional way to delineate the type/usage of a thread to tailor what we want, such as:
 // - Do or don't show suggested prompts
@@ -10,7 +11,7 @@ export type ThreadTypeFields = {
 };
 export const THREAD_TYPES: {[threadType: string]: ThreadTypeFields} = {
   default: {
-    initialMessage: DEFAULT_INITIAL_CHAT_MESSAGE,
+    initialMessage: SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
     showSuggestedPrompts: true,
   },
   lessonSummaryHelp: {
