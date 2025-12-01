@@ -1,5 +1,5 @@
-import {getPromptNameFromMode} from '@cdo/apps/weblab2/helpers/aiTutorHelper';
 import experiments from '@cdo/apps/util/experiments';
+import {getPromptNameFromMode} from '@cdo/apps/weblab2/helpers/aiTutorHelper';
 
 describe('getPromptNameFromMode with Langfuse experiment', () => {
   beforeEach(() => {

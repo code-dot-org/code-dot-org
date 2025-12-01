@@ -4,8 +4,8 @@ import {ModelParameters} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const fetchLangfusePrompt = async (promptName: string) => {
   const url = `/langfuse/get_prompt?name=${encodeURIComponent(promptName)}`;
