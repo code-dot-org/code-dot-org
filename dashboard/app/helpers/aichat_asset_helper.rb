@@ -43,33 +43,14 @@ module AichatAssetHelper
       uuid_name = (level&.starter_assets || level&.project_template_level&.starter_assets || {})&.dig(filename)
 
       if uuid_name
-        s3_object = LevelStarterAssetsHelper.get_object(uuid_name)
-        if s3_object
-
-          # The following call can result in various errors that currently are not derived
-          # from AichatAssetFetchError (e.g. from Aws::S3::Errors or Aws::Errors).
-          asset_body = s3_object.get.body
-        else
-          raise AichatLevelAssetFetchError.new(
-            "Failed to fetch asset for level due to LevelStarterAssetsHelper.get_object('#{uuid_name}' not returning a bucket object. - #{call_details}"
-          )
-        end
+        asset_body = fetch_s3_asset(uuid_name, call_details)
       else
         raise AichatLevelAssetFetchError.new(
           "Failed to fetch asset for level due to failure to retrieve 'uuid_name' - #{call_details}"
         )
       end
     when 'level_uuid'
-      s3_object = LevelStarterAssetsHelper.get_object(filename)
-      if s3_object
-        # The following call can result in various errors that currently are not derived
-        # from AichatAssetFetchError (e.g. from Aws::S3::Errors or Aws::Errors).
-        asset_body = s3_object.get.body
-      else
-        raise AichatLevelAssetFetchError.new(
-          "Failed to fetch asset for level due to LevelStarterAssetsHelper.get_object('#{uuid_name}' not returning a bucket object. - #{call_details}"
-        )
-      end
+      asset_body = fetch_s3_asset(filename, call_details)
     else
       raise AichatAssetFetchError.new(
         "Failed to fetch asset due to unsupported source - #{call_details}"
@@ -85,5 +66,18 @@ module AichatAssetHelper
     # Read the body.  This can result in various errors that
     # currently are not derived from AichatAssetFetchError.
     asset_body.read
+  end
+
+  def self.fetch_s3_asset(uuid_name, call_details)
+    s3_object = LevelStarterAssetsHelper.get_object(uuid_name)
+    if s3_object
+      # The following call can result in various errors that currently are not derived
+      # from AichatAssetFetchError (e.g. from Aws::S3::Errors or Aws::Errors).
+      s3_object.get.body
+    else
+      raise AichatLevelAssetFetchError.new(
+        "Failed to fetch asset for level due to LevelStarterAssetsHelper.get_object('#{uuid_name}') not returning a bucket object. - #{call_details}"
+      )
+    end
   end
 end
