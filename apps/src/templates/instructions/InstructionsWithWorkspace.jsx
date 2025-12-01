@@ -30,7 +30,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
     labType: PropTypes.string,
-    aiTutorEnabledForPilot: PropTypes.bool.isRequired,
+    aiTutorEnabledForPilot: PropTypes.bool,
   };
 
   // only used so that we can rerender when resized
