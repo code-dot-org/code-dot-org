@@ -18,12 +18,15 @@ export type AdlibsType = {
   [key: string]: AdlibType;
 };
 
+export type BodyVariantCounts = {[key: string]: number};
+
 interface AdlibProps {
   children?: React.ReactNode;
   adlib: AdlibType;
   adlibChoices: AdlibChoices;
   readOnly?: boolean;
   glowSpeed?: 'normal' | 'fast';
+  hidden?: boolean;
   onChoicesChange: (choices: {[key: string]: string}) => void;
   onTextChange: (promptText: string, localizedText: string) => void;
 }
@@ -38,6 +41,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
   adlibChoices,
   readOnly,
   glowSpeed,
+  hidden,
   onChoicesChange,
   onTextChange,
 }) => {
@@ -140,10 +144,16 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
           ? styles.adlibFastGlowSpeed
           : glowSpeed === 'normal'
           ? styles.adlibNormalGlowSpeed
-          : undefined
+          : undefined,
+        hidden && styles.adlibHidden
       )}
     >
-      <div className={styles.adlibInner}>
+      <div
+        className={classNames(
+          styles.adlibInner,
+          readOnly && styles.adlibInnerReadOnly
+        )}
+      >
         <div>{readOnly ? localizedFilledAdlibText : adlibHtml}</div>
         {children}
       </div>

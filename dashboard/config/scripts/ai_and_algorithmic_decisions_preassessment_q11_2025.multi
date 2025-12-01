@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q11_2025'
+
+question 'A language-learning app uses the same "checkAnswer" code for many quizzes. When you submit an answer, the app sends both your response and the correct answer to that code so it can compare them. What does this example show?'
+
+wrong 'The app saves your answers in a secret database for later.'
+wrong 'The app repeats the same code over and over for each question.'
+right 'The app uses parameters to pass information into a function.'
+wrong 'The app changes the entire website design every time you click "Submit."'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+MARKDOWN

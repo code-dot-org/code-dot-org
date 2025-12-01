@@ -37,6 +37,8 @@ Dashboard::Application.routes.draw do
 
   constraints host: CDO.preview_codeprojects_hostname do
     get '/', to: 'codeprojects_preview#show'
+    # Must be served from / on preview.codeprojects.org to control the root scope:
+    get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
     # Custom 404 page for codeprojects preview
     get '*path', to: 'codeprojects_preview#not_found'
   end
@@ -759,6 +761,7 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
+        resource :deep_linking, controller: :deep_linking, only: :show
         namespace :account_linking do
           get :landing
           get :existing_account
@@ -1114,6 +1117,10 @@ Dashboard::Application.routes.draw do
 
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}
+
+        # Routes used by personalization alert
+        post 'users/has_dismissed_personalization_alert', to: 'users#post_has_dismissed_personalization_alert'
+        get 'users/has_dismissed_personalization_alert', to: 'users#get_has_dismissed_personalization_alert'
 
         # Routes used by UI test status pages
         get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}

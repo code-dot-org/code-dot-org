@@ -25,6 +25,7 @@ interface UserChatMessageEditorProps {
   multimodalAvailable?: boolean;
   responseCallback?: (response: string) => string;
   currentLevelId?: string | null;
+  logLevelActivity?: () => void;
 
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
@@ -47,6 +48,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   multimodalAvailable,
   responseCallback,
   currentLevelId,
+  logLevelActivity,
   levelName,
   hasStarterAssets,
   buildAssetUrl,
@@ -101,6 +103,7 @@ const UserChatMessageEditor: React.FunctionComponent<
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
             responseCallback,
+            logLevelActivity,
           })
         );
         clearUserMessage();
@@ -116,6 +119,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       chatAssets,
       userAddedSelectionContext,
       responseCallback,
+      logLevelActivity,
     ]
   );
 

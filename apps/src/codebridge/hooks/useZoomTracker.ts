@@ -36,7 +36,7 @@ export const useZoomTracker = (appName: string) => {
   useEffect(() => {
     const logZoomChange = (percent: number, direction: 'in' | 'out'): void => {
       const zoomPercent = percent.toString();
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_ZOOM, appName, {
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_ZOOM, {
         zoomPercent: zoomPercent,
         direction,
       });

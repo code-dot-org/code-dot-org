@@ -21,7 +21,6 @@ module AllowedHostnameHelper
     'quandl.com',                 # Financial datasets - API key required 🔑
     # === FUN AND GAMES ===
     'api.blizzard.com',           # Blizzard gaming data - API key required 🔑
-    'api.football-data.org',      # Football statistics - Public API, rate limited
     'api.nookipedia.com',         # Animal Crossing data -  API key required 🔑
     'api.mojang.com',             # Minecraft game data - Public API
     'api.scryfall.com',           # Magic: The Gathering cards - Public API

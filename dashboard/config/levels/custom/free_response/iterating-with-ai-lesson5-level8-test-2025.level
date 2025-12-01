@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-21T02:46:21.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "> Look back at the three sample cards (Neutral, Biased, Hidden Info).\r\n> 1. Pick one card and describe how its labels, tone, or layout might change what a user thinks about the item.\r\n> 2. Explain whether you think this design is fair to the user and why or why not.\r\n> 3. Write a one-line transparency label you could add to the card or page to make things clearer. Examples:\r\n>    * `Sorted by rating`\r\n>    * `Includes sponsored listings`\r\n>    * `Some reviews are promoted`",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Reflection: Bias and Transparency Labels",
+    "teacher_markdown": "A successful reflection shows that the student:\r\n- can articulate how UI design choices in cards can introduce bias or hide information and propose a concrete transparency label that could help users interpret the information more fairly.",
+    "height": "100",
+    "placeholder": "enter response here..."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-21T02:46:21.081+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level4-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level4-test-2025\"},{\"changed_at\":\"2025-11-21 02:49:18 +0000\",\"changed\":[\"long_instructions\",\"title\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
