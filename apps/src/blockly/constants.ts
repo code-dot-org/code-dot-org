@@ -240,7 +240,6 @@ export const READ_ONLY_PROPERTIES = [
   'thrasos',
   'Toolbox',
   'Touch',
-  'tutorialExplorer_locale',
   'useContractEditor',
   'utils',
   'VARIABLE_CATEGORY_NAME',

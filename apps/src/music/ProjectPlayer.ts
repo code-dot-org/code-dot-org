@@ -105,14 +105,14 @@ class ProjectPlayer {
     }
 
     // Try to load from local storage if it exists.
-    const metadataString = localStorage.getItem(cacheKey());
+    const metadataString = sessionStorage.getItem(cacheKey());
     if (metadataString) {
       try {
-        const localStorageMetadata = JSON.parse(
+        const sessionStorageMetadata = JSON.parse(
           metadataString
         ) as MusicMetadata;
-        if (localStorageMetadata.channelId === channelId) {
-          return this.prepareLibraryFromMetadata(localStorageMetadata);
+        if (sessionStorageMetadata.channelId === channelId) {
+          return this.prepareLibraryFromMetadata(sessionStorageMetadata);
         }
       } catch (e) {
         // Ignore JSON parse errors and fall through to loading from server.

@@ -1,0 +1,90 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T04:03:38.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Accessibility Feature: Show or Hide Information\r\n\r\n_Hiding extra details until needed keeps pages calm and easier to follow._\r\n\r\nChat with the AI to learn how show/hide was implemented in this web app (Spoiler-Free Reviews).\r\n\r\nPossible Stems:\r\n\r\n* What tag or class hides the text? Give the exact name and where it’s used.\r\n\r\n* Give one JS line to open/close the spoiler when I click #spoilerBtn.\r\n\r\n* What button labels should we use?\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "display_name": "Show or Hide Information",
+    "bubble_choice_description": "Reveal details only when needed so the page stays clear and easy to follow.",
+    "thumbnail_url": "https://images.code.org/8d2efb0e3801190137579891089ca702-aiChat.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Spoiler-Free Reviews</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <header>\n    <h1>Spoiler-Free Reviews</h1>\n    <p>Read reviews without fear of spoilers. Tap to reveal when ready!</p>\n  </header>\n\n  <main>\n    <section class=\"review-card\">\n      <img src=\"movie.png\" alt=\"The Midnight Cipher movie poster\" />\n      <h2>The Midnight Cipher</h2>\n      <p class=\"genre\">Mystery Thriller | 2024</p>\n      <p class=\"rating\">Rating: 4.5/5 stars</p>\n      \n      <div class=\"review-text\">\n        <p>\n          A gripping mystery that keeps you guessing until the very end. \n          The cinematography is stunning and the lead actress delivers a \n          powerful performance. Perfect for fans of psychological thrillers.\n        </p>\n        \n        <div class=\"spoiler-section\">\n          <button id=\"movie-spoiler-btn\" class=\"spoiler-btn\">\n            Show Spoilers\n          </button>\n          <p id=\"movie-spoiler\" class=\"spoiler hidden\">\n            The detective discovers her partner was the killer all along. \n            The final scene reveals she knew from the beginning but needed \n            proof to bring him to justice.\n          </p>\n        </div>\n      </div>\n    </section>\n\n    <section class=\"review-card\">\n      <img src=\"video-game.png\" alt=\"Shadow Realm game cover\" />\n      <h2>Shadow Realm</h2>\n      <p class=\"genre\">Action RPG | 2024</p>\n      <p class=\"rating\">Rating: 4/5 stars</p>\n      \n      <div class=\"review-text\">\n        <p>\n          An immersive RPG with beautiful world-building and challenging \n          combat mechanics. The story is engaging and the side quests are \n          surprisingly well-written. A must-play for RPG fans.\n        </p>\n        \n        <div class=\"spoiler-section\">\n          <button id=\"game-spoiler-btn\" class=\"spoiler-btn\">\n            Show Spoilers\n          </button>\n          <p id=\"game-spoiler\" class=\"spoiler hidden\">\n            The final boss is actually your mentor from the tutorial. \n            You can choose to save or defeat them, leading to two different \n            endings that completely change the story's meaning.\n          </p>\n        </div>\n      </div>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const movieBtn = document.querySelector(\"#movie-spoiler-btn\");\nconst movieSpoiler = document.querySelector(\"#movie-spoiler\");\n\nconst gameBtn = document.querySelector(\"#game-spoiler-btn\");\nconst gameSpoiler = document.querySelector(\"#game-spoiler\");\n\nmovieBtn.addEventListener(\"click\", () => {\n  movieSpoiler.classList.toggle(\"hidden\");\n  \n  if (movieSpoiler.classList.contains(\"hidden\")) {\n    movieBtn.textContent = \"Show Spoilers\";\n  } else {\n    movieBtn.textContent = \"Hide Spoilers\";\n  }\n});\n\ngameBtn.addEventListener(\"click\", () => {\n  gameSpoiler.classList.toggle(\"hidden\");\n  \n  if (gameSpoiler.classList.contains(\"hidden\")) {\n    gameBtn.textContent = \"Show Spoilers\";\n  } else {\n    gameBtn.textContent = \"Hide Spoilers\";\n  }\n});\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  padding: 20px;\n  font-family: Arial, sans-serif;\n  background-color: #f5f5f5;\n  color: #333;\n}\n\nheader {\n  text-align: center;\n  margin-bottom: 30px;\n}\n\nh1 {\n  color: #2c3e50;\n  margin-bottom: 10px;\n}\n\nheader p {\n  color: #7f8c8d;\n}\n\nmain {\n  max-width: 800px;\n  margin: 0 auto;\n}\n\n.review-card {\n  background-color: white;\n  border-radius: 8px;\n  padding: 20px;\n  margin-bottom: 20px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n\n.review-card img {\n  width: 100%;\n  max-width: 300px;\n  height: auto;\n  border-radius: 4px;\n  margin-bottom: 15px;\n}\n\nh2 {\n  color: #2c3e50;\n  margin: 10px 0;\n}\n\n.genre {\n  color: #7f8c8d;\n  font-size: 14px;\n  margin: 5px 0;\n}\n\n.rating {\n  color: #e67e22;\n  font-weight: bold;\n  margin: 5px 0;\n}\n\n.review-text {\n  line-height: 1.6;\n}\n\n.spoiler-section {\n  margin-top: 20px;\n  padding-top: 20px;\n  border-top: 2px solid #ecf0f1;\n}\n\n.spoiler-btn {\n  background-color: #3498db;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 4px;\n  cursor: pointer;\n  font-size: 14px;\n  margin-bottom: 10px;\n}\n\n.spoiler-btn:hover {\n  background-color: #2980b9;\n}\n\n.spoiler {\n  background-color: #fff3cd;\n  border-left: 4px solid #ffc107;\n  padding: 15px;\n  margin-top: 10px;\n  border-radius: 4px;\n}\n\n.hidden {\n  display: none;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "video-game.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-level3d-test-2025/uuid/e1976cd3-4256-4df5-93c8-65c524906f9c.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "movie.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-level3d-test-2025/uuid/50d42b7e-808b-4e78-beaa-520212b2e2e0.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T04:03:38.859+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson7-level3d-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson7-level3d-test-2025\"},{\"changed_at\":\"2025-11-13 04:04:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

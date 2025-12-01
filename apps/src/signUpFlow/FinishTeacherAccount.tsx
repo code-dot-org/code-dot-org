@@ -17,11 +17,17 @@ import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {
+  EVENTS,
+  PLATFORMS,
+  EXPERIMENTS,
+} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+import GradeLevelChips from '@cdo/apps/templates/sectionsRefresh/GradeLevelChips';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes, EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
@@ -106,9 +112,13 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorCreatingAccountMessage, setErrorCreatingAccountMessage] =
     useState('');
+  const [selectedGrades, setSelectedGrades] = useState<string[]>([]);
 
   // Remove oauth user_type cookie if it exists
   cookies.remove(SIGN_UP_USER_TYPE);
+
+  const [isInGradeSelectionExperiment, setIsInGradeSelectionExperiment] =
+    useState(false);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
@@ -167,6 +177,17 @@ const FinishTeacherAccount: React.FunctionComponent<{
     }
   }, [countryCode, usIp, redirectUrl]);
 
+  useEffect(() => {
+    (async () => {
+      const result = await statsigReporter.getIsInExperimentAsync(
+        EXPERIMENTS.SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION,
+        EXPERIMENTS.ENABLE_SELECTING_GRADES,
+        false
+      );
+      setIsInGradeSelectionExperiment(result);
+    })();
+  }, []);
+
   // GDPR is valid if
   // 1. The fetch call has completed AND
   //   2. GDPR is showing AND checked OR
@@ -186,7 +207,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
       !gdprValid ||
       schoolInfoInvalid(schoolInfo) ||
       !educatorRole ||
-      signupSources.length < 1,
+      signupSources.length < 1 ||
+      (selectedGrades.length < 1 && isInGradeSelectionExperiment),
     [
       gdprValid,
       givenName,
@@ -195,6 +217,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
       schoolInfo,
       educatorRole,
       signupSources,
+      selectedGrades,
+      isInGradeSelectionExperiment,
     ]
   );
 
@@ -450,6 +474,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
             itemGroups={roleItemGroups}
             dropdownTextThickness="thin"
           />
+          {isInGradeSelectionExperiment && (
+            <GradeLevelChips
+              inputLabel={locale.grades_taught()}
+              values={selectedGrades}
+              setValues={vals => setSelectedGrades(vals)}
+              className={style.gradeSelectChips}
+            />
+          )}
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>

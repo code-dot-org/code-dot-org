@@ -32,6 +32,7 @@ import teacherSections, {
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -71,7 +72,7 @@ $(document).ready(function () {
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
-  if (showAITALessonSummary) {
+  if (showAITALessonSummary || experiments.isEnabled('ai_lesson_summaries')) {
     store.dispatch(setShowAITALessonSummary(true));
     store.dispatch(
       setHasCompletedPersonalizationQuiz(hasCompletedPersonalizationQuiz)

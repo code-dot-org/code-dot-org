@@ -4,7 +4,7 @@ import {
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {trySetLocalStorage} from '@cdo/apps/utils';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {baseAssetUrl} from '../../constants';
@@ -36,7 +36,7 @@ export const saveGeneratedSongMetadata = (
   orderedFunctions: FunctionEvents[],
   lastMeasure: number
 ) => {
-  trySetLocalStorage(
+  trySetSessionStorage(
     cacheKey(),
     JSON.stringify({
       channelId,

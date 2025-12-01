@@ -1,4 +1,31 @@
 @use '../layout/variables.scss' as variables;
+@import '../../../../mixins.scss';
+
+$top-position: 62px;
+$bottom-position: 20px;
+$gap-height: 43px;
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    margin-top: 40px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    margin-bottom: 40px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
 
 .guideContainerModal {
   background-color: rgba(0 0 0 / .3);
@@ -8,6 +35,10 @@
   right: 0;
   bottom: 0;
   z-index: 71;
+
+  &Gap {
+    top: $gap-height;
+  }
 }
 
 .guide {
@@ -31,22 +62,42 @@
     width: 40%;
   }
 
+  &VeryNarrowWidth {
+    width: 10%;
+    min-width: 160px;
+  }
+
   &NarrowWidth {
     width: 20%;
   }
 
   &NormalPosition {
-    top: 62px;
+    top: $top-position;
+    animation: 0.75s ease 1.5s backwards slide-up;
   }
 
   &BottomPosition {
-    bottom: 20px;
+    bottom: $bottom-position;
+    animation: 0.75s ease 1.5s backwards slide-down;
   }
+
+  &Gap {
+    top: $top-position - $gap-height;
+  }
+}
+
+.cornerIconButton {
+  @include remove-button-styles;
+  position: absolute;
+  top: 2px;
+  right: 12px;
+  font-size: 24px;
+  color: var(--neutral-base-white);
 }
 
 .markdown {
   p, li, h1, h2, h3, h4 {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.4;
   }
 }

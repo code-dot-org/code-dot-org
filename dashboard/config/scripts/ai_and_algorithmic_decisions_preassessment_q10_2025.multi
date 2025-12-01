@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q10_2025'
+
+question 'A rideshare app decides whether to show a "Car on the way!" message or "No drivers available" based on who\'s nearby. Which of these best describes how the app makes that choice?'
+
+right 'It uses an if/else statement to check if any drivers are within range.'
+wrong 'It randomly decides which message to show every few seconds.'
+wrong 'It asks the user to refresh until a driver appears.'
+wrong 'It shows both messages at once so the user can choose which one to believe.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN

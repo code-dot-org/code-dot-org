@@ -55,7 +55,7 @@ class Weblab2 < Level
   end
 
   def self.ai_tutor_modes
-    [['Suggest', 'suggest'], ['Outline', 'outline'], ['Guide', 'guide'], ['Produce', 'produce']]
+    [['Suggest', 'suggest'], ['Outline', 'outline'], ['Guide', 'guide'], ['Produce', 'produce'], ['Designer', 'designer'], ['Tutor', 'tutor'], ['Engineer', 'engineer'], ['QA', 'qa']]
   end
 
   def uses_lab2?

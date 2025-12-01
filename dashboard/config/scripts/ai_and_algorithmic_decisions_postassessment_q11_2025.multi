@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q11_2025'
+
+question 'A weather app uses one piece of code to display the forecast for any city a user searches for. Each time a user types a new city name, that name is sent into the same forecast function. What makes this possible?'
+
+right 'The function uses a parameter to take in the city name and use it in its calculations.'
+wrong 'The app creates a new copy of the same code for every city in the world.'
+wrong 'The app saves each city name inside the HTML so the page never changes.'
+wrong 'The function runs without needing any information from the user.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+MARKDOWN
