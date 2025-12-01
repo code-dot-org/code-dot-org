@@ -1,5 +1,9 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {
+  BodyThreeText,
+  EmText,
+} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -19,8 +23,8 @@ import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLess
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
-  AdlibsType,
   AdlibChoices,
+  AdlibsType,
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
@@ -442,6 +446,11 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 />
               </>
             )}
+          {isReadOnly && (
+            <BodyThreeText className={moduleStyles.readOnlyText}>
+              <EmText>{`AI generated a dancer based on this prompt:`}</EmText>
+            </BodyThreeText>
+          )}
 
           {/* Ensure that the Adlib is rendered, but hidden, when 'reviewing', so that
               onAdlibTextChange is called to set the prompt text, specifically for
