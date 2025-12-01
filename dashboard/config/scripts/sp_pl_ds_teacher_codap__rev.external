@@ -1,0 +1,60 @@
+name 'sp-pl-DS-teacher-Codap_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data Visualization 
+
+
+
+#### There are many ways to visualize data. Ask your students what differences they notice between bar charts and pie charts and when they might use each. 
+
+---
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+
+  <td style="text-align: center; padding-bottom: 10px;">
+    <img src="https://images.code.org/ff8f49f7afb0dd8c2a9a2434482b2480-image-1744828799805.png" alt="Bar Chart Image" width="200">
+  </td>
+  <td style="text-align: center; padding-bottom: 10px">
+    <img src="https://images.code.org/1217392da33b67c91f2dce8833004521-image-1744828564372.png" alt="Pie chart Image" width="200">
+  </td>
+</tr>
+  <tr>
+    
+    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Bar Chart</b></th>
+    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Pie Chart</b></th>
+  </tr>
+  <tr>
+    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
+      <ul>
+        <li style="font-size: 14pt">Ideal for comparing quantities across categories.</li>
+        <li style="font-size: 14pt">Clearly shows differences between groups.</li>
+        <li style="font-size: 14pt">Easy to read and interpret.</li>
+      </ul>
+    </td>
+    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
+      <ul>
+        <li style="font-size: 14pt">Ideal for showing parts of a whole.</li>
+        <li style="font-size: 14pt">Highlights portions clearly.</li>
+        <li style="font-size: 14pt">Quick visual impact for dominant categories.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 7. You can find more details in the full <a href='https://studio.code.org/s/aif6-2025/lessons/7' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+##
+
+<hr style="clear:both">
+
+
+
+
+
+MARKDOWN

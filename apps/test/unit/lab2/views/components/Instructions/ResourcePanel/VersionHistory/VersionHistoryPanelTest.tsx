@@ -31,6 +31,44 @@ const SAMPLE_VERSION_LIST: ProjectVersion[] = [
   {versionId: '3', lastModified: '2025-02-25T18:11:10.000Z', isLatest: true},
 ];
 
+// Create a version list with multiple auto-saves between committed versions
+const SAMPLE_VERSION_LIST_WITH_AUTOSAVES: ProjectVersion[] = [
+  {
+    versionId: '0',
+    lastModified: '2024-11-25T18:11:10.000Z',
+    isLatest: false,
+  },
+  {
+    versionId: '1',
+    lastModified: '2024-12-25T18:11:10.000Z',
+    isLatest: false,
+    comment: 'First committed version',
+  },
+  // Three auto-saves in a group
+  {
+    versionId: '2',
+    lastModified: '2025-01-25T18:11:10.000Z',
+    isLatest: false,
+  },
+  {
+    versionId: '3',
+    lastModified: '2025-01-26T18:11:10.000Z',
+    isLatest: false,
+  },
+  {
+    versionId: '4',
+    lastModified: '2025-01-27T18:11:10.000Z',
+    isLatest: false,
+  },
+  // Latest committed version
+  {
+    versionId: '5',
+    lastModified: '2025-02-25T18:11:10.000Z',
+    isLatest: true,
+    comment: 'Latest committed version',
+  },
+];
+
 const ownedChannel: Channel = {
   id: '1',
   name: '1',
@@ -162,10 +200,16 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
+    // Click to expand auto-saved version group if necessary
+    const collapseButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    const user = userEvent.setup();
+    await user.click(collapseButton);
+
     const versionInput = screen.getByDisplayValue('2') as HTMLInputElement;
     expect(versionInput.checked).toBe(false);
 
-    const user = userEvent.setup();
     await user.click(versionInput);
 
     await waitFor(() => {
@@ -183,8 +227,14 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
-    const restoreButton = screen.getByRole('button', {name: 'Restore'});
+    // Click to expand auto-saved version group if necessary
+    const collapseButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
     const user = userEvent.setup();
+    await user.click(collapseButton);
+
+    const restoreButton = screen.getByRole('button', {name: 'Restore'});
     await user.click(restoreButton);
 
     await waitFor(
@@ -237,6 +287,13 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
+    // Click to expand auto-saved version group if necessary
+    const collapseButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    const user = userEvent.setup();
+    await user.click(collapseButton);
+
     const restoreButton = screen.getByRole('button', {name: 'Restore'});
     expect(restoreButton).not.toBeDisabled();
   });
@@ -250,6 +307,13 @@ describe('VersionHistoryPanel', () => {
       () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
       {timeout: 2000}
     );
+
+    // Click to expand auto-saved version group if necessary
+    const collapseButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    const user = userEvent.setup();
+    await user.click(collapseButton);
 
     const versionInput = screen.getByDisplayValue('2') as HTMLInputElement;
     expect(versionInput.checked).toBe(true);
@@ -295,7 +359,75 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
-    const restoreButton = screen.getByRole('button', {name: 'Restore'});
-    expect(restoreButton).toBeDisabled();
+    // Click to expand auto-saved version group if necessary
+    const collapseButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    const user = userEvent.setup();
+    await user.click(collapseButton);
+
+    const restoreButton = screen.queryByRole('button', {name: 'Restore'});
+    if (restoreButton) {
+      expect(restoreButton).toBeDisabled();
+    }
+  });
+
+  it('collapses and expands auto-save groups when collapse button is clicked', async () => {
+    mockedProjectManager = {
+      getVersionList: jest.fn(() =>
+        Promise.resolve(SAMPLE_VERSION_LIST_WITH_AUTOSAVES)
+      ),
+      loadSources: jest.fn(() => Promise.resolve({source: 'loaded'})),
+      flushSave: jest.fn(),
+    } as unknown as jest.Mocked<ProjectManager>;
+    Lab2Registry.getInstance().setProjectManager(mockedProjectManager);
+
+    renderDefault({selectedVersion: '5'});
+
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
+    );
+
+    // The collapse button should be present for the auto-save group
+    const collapseButton = screen.getByRole('button', {
+      name: 'Show 3 auto-saves',
+    });
+    expect(collapseButton).toBeInTheDocument();
+    expect(collapseButton).toHaveAttribute('aria-expanded', 'false');
+
+    // Auto-save versions should be hidden initially
+    expect(screen.queryByDisplayValue('2')).not.toBeInTheDocument();
+    expect(screen.queryByDisplayValue('3')).not.toBeInTheDocument();
+    expect(screen.queryByDisplayValue('4')).not.toBeInTheDocument();
+
+    // Click to expand the group
+    const user = userEvent.setup();
+    await user.click(collapseButton);
+
+    // After expanding, the button text should change
+    const expandedButton = screen.getByRole('button', {
+      name: 'Hide 3 auto-saves',
+    });
+    expect(expandedButton).toHaveAttribute('aria-expanded', 'true');
+
+    // Auto-save versions should now be visible
+    expect(screen.getByDisplayValue('2')).toBeInTheDocument();
+    expect(screen.getByDisplayValue('3')).toBeInTheDocument();
+    expect(screen.getByDisplayValue('4')).toBeInTheDocument();
+
+    // Click again to collapse
+    await user.click(expandedButton);
+
+    // Button should show "Show" again
+    const collapsedButton = screen.getByRole('button', {
+      name: 'Show 3 auto-saves',
+    });
+    expect(collapsedButton).toHaveAttribute('aria-expanded', 'false');
+
+    // Auto-save versions should be hidden again
+    expect(screen.queryByDisplayValue('2')).not.toBeInTheDocument();
+    expect(screen.queryByDisplayValue('3')).not.toBeInTheDocument();
+    expect(screen.queryByDisplayValue('4')).not.toBeInTheDocument();
   });
 });
