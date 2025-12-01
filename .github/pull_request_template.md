@@ -1,8 +1,16 @@
+## Warning!!
+
+We have entered Pixel Lock for Hour of AI! All merges to the `staging` branch from Dec 2 through Dec 12 must go through live change review and be deemed critical for supporting the Hour of AI. External contributions will not be accepted at this time.
+
+For non-critical changes, please change your base to `staging-next` and delete this warning. We will merge `staging-next` into `staging` on Dec 15, 2025.
+
+<!-- end warning -->
+
+
 <!--
   A summary of the change, including any relevant background, motivation, and context.
   If relevant, include a description, screenshots, and/or video of the existing and new behavior.
 -->
-
 
 
 ## Links

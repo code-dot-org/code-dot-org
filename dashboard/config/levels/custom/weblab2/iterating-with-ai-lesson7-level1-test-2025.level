@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-24T18:16:06.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Array Method Exploration</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <div class=\"container\">\n    <header>\n      <h1>Array Method Exploration</h1>\n    </header>\n\n    <div class=\"controls-section\">\n      <div class=\"group safe\">\n        <h3>Pure Methods</h3>\n        <button id=\"mapBtn\" class=\"btn btn-safe\">.map()</button>\n        <button id=\"filterBtn\" class=\"btn btn-safe\">.filter()</button>\n        <button id=\"loopCopyBtn\" class=\"btn btn-safe\">Loop (with a copy)</button>\n      </div>\n\n      <div class=\"group unsafe\">\n        <h3>Mutating Methods</h3>\n        <button id=\"forEachBtn\" class=\"btn btn-unsafe\">.forEach()</button>\n        <button id=\"loopBtn\" class=\"btn btn-unsafe\">Loop</button>\n      </div>\n    </div>\n\n    <div class=\"reset-container\">\n      <button id=\"resetBtn\" class=\"btn btn-reset\">Reset Everything</button>\n    </div>\n\n    <div class=\"display-grid\">\n      \n      <div class=\"card\" id=\"originalCard\">\n        <h2><code>originalData</code> array</h2>\n        <ul id=\"originalList\" class=\"price-list\"></ul>\n        <div id=\"originalStatus\" class=\"status-box\">Waiting...</div>\n      </div>\n\n      <div class=\"card\" id=\"resultCard\">\n        <h2><code>newData</code> array</h2>\n        <ul id=\"resultList\" class=\"price-list\"></ul>\n        <div id=\"resultStatus\" class=\"status-box\">Waiting...</div>\n      </div>\n\n    </div>\n  </div>\n  <script src=\"script.js\" defer></script>\n</body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* Global Reset & Fonts */\nbody {\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n  background-color: #f0f2f5;\n  color: #333;\n  margin: 0;\n  padding: 20px;\n}\n\n.container {\n  max-width: 800px;\n  margin: 0 auto;\n  background: white;\n  padding: 30px;\n  border-radius: 12px;\n  box-shadow: 0 4px 12px rgba(0,0,0,0.1);\n}\n\nheader { text-align: center; margin-bottom: 25px; }\nh1 { color: #2c3e50; margin: 0; }\n\n/* Controls Section */\n.controls-section {\n  display: flex;\n  gap: 20px;\n  margin-bottom: 20px;\n}\n\n.group {\n  flex: 1;\n  padding: 20px;\n  border-radius: 8px;\n  text-align: center;\n}\n\n.group h3 { margin-top: 0; margin-bottom: 15px; font-size: 1.1rem; }\n\n/* Safe Zone (Green) */\n.group.safe {\n  background-color: #e6fffa;\n  border: 2px solid #38b2ac;\n}\n\n/* Unsafe Zone (Amber/Orange) */\n.group.unsafe {\n  background-color: #fffaf0;\n  border: 2px solid #ed8936;\n}\n\n/* Buttons */\n.btn {\n  display: block;\n  width: 100%;\n  margin: 8px 0;\n  padding: 12px;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 0.95rem;\n  transition: opacity 0.2s;\n}\n\n.btn:hover { opacity: 0.9; }\n.btn-safe { background-color: #38b2ac; color: white; }\n.btn-unsafe { background-color: #ed8936; color: white; }\n\n.reset-container { text-align: center; margin-bottom: 30px; }\n.btn-reset { \n  background-color: #718096; \n  color: white; \n  width: auto; \n  padding: 10px 30px;\n}\n\n/* Display Grid */\n.display-grid {\n  display: flex;\n  gap: 20px;\n}\n\n.card {\n  flex: 1;\n  background: #f8f9fa;\n  padding: 15px;\n  border-radius: 8px;\n  border: 2px solid #e2e8f0;\n  transition: background-color 0.3s, border-color 0.3s;\n}\n\n.card h2 {\n  text-align: center;\n  margin-top: 0;\n  font-size: 1.2rem;\n  color: #4a5568;\n}\n\n.card h2 code {\n  background-color: #edf2f7;\n  padding: 2px 6px;\n  border-radius: 4px;\n  font-family: 'Courier New', monospace;\n  color: #2d3748;\n}\n\n.price-list { list-style: none; padding: 0; min-height: 120px; }\n.price-list li {\n  background: white;\n  border-bottom: 1px solid #eee;\n  padding: 8px;\n  text-align: right;\n  font-family: monospace;\n  font-size: 1.1rem;\n}\n\n/* Status Boxes */\n.status-box {\n  margin-top: 15px;\n  padding: 10px;\n  text-align: center;\n  font-weight: bold;\n  font-size: 0.9rem;\n  border-radius: 4px;\n  background: #cbd5e0;\n}\n\n/* Dynamic States */\n\n/* Mutated State (Amber/Orange) */\n.card.mutated {\n  border-color: #ed8936;\n  background-color: #fffaf0;\n}\n.card.mutated .status-box {\n  background-color: #ed8936;\n  color: white;\n}\n\n/* Safe State (Green) */\n.card.safe {\n  border-color: #38b2ac;\n  background-color: #e6fffa;\n}\n.card.safe .status-box {\n  background-color: #38b2ac;\n  color: white;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// script.js\n// Purpose: Exploration lab for Array methods\n\n// --- State ---\nconst startPrices = [10.00, 25.50, 5.00, 99.99];\nlet originalData = []; \n\n// --- DOM Elements ---\nconst originalListEl = document.getElementById('originalList');\nconst resultListEl = document.getElementById('resultList');\nconst originalCard = document.getElementById('originalCard');\nconst originalStatus = document.getElementById('originalStatus');\nconst resultStatus = document.getElementById('resultStatus');\n\n// Buttons\nconst mapBtn = document.getElementById('mapBtn');\nconst filterBtn = document.getElementById('filterBtn');\nconst loopCopyBtn = document.getElementById('loopCopyBtn');\nconst forEachBtn = document.getElementById('forEachBtn');\nconst loopBtn = document.getElementById('loopBtn');\nconst resetBtn = document.getElementById('resetBtn');\n\n// --- Helper: Rendering ---\nconst render = (list, data) => {\n  list.innerHTML = '';\n  data.forEach(price => {\n    const li = document.createElement('li');\n    li.textContent = '$' + price.toFixed(2);\n    list.appendChild(li);\n  });\n};\n\n// --- Helper: Reset ---\nconst reset = () => {\n  originalData = [...startPrices]; \n  \n  render(originalListEl, originalData);\n  resultListEl.innerHTML = '';\n  \n  originalCard.className = 'card';\n  originalStatus.textContent = 'Ready';\n  \n  resultStatus.textContent = 'Waiting...';\n  resultStatus.style.backgroundColor = '#cbd5e0';\n  resultStatus.style.color = 'black';\n};\n\n// --- LOGIC: Pure Methods ---\n\nconst runMap = (list) => {\n  return list.map(price => price - 1);\n};\n\nconst runFilter = (list) => {\n  return list.filter(price => price > 25);\n};\n\nconst runLoopCopy = (list) => {\n  const newList = [];\n  for (let i = 0; i < list.length; i++) {\n    newList.push(list[i] - 1);\n  }\n  return newList;\n};\n\n// --- LOGIC: Mutating Methods ---\n\nconst runForEach = (list) => {\n  list.forEach((price, index) => {\n    list[index] = price - 1; \n  });\n};\n\nconst runLoopMutate = (list) => {\n  for (let i = 0; i < list.length; i++) {\n    list[i] = list[i] - 1;\n  }\n};\n\n// --- Main Handler ---\n\nconst handleAction = (actionFn, isPure) => {\n  // Snapshot for comparison\n  const beforeSnapshot = JSON.stringify(originalData);\n\n  // Run function\n  const returnedValue = actionFn(originalData);\n\n  // Check for changes\n  const afterSnapshot = JSON.stringify(originalData);\n  const wasMutated = beforeSnapshot !== afterSnapshot;\n\n  // Update Input Display\n  render(originalListEl, originalData);\n  if (wasMutated) {\n    originalCard.className = 'card mutated'; \n    originalStatus.textContent = 'Original Modified';\n  } else {\n    originalCard.className = 'card safe';\n    originalStatus.textContent = 'Unchanged';\n  }\n\n  // Update Output Display\n  if (isPure && returnedValue) {\n    render(resultListEl, returnedValue);\n    resultStatus.textContent = 'New Array Returned';\n    resultStatus.style.backgroundColor = '#38b2ac';\n    resultStatus.style.color = 'white';\n  } else {\n    resultListEl.innerHTML = '<li>(undefined)</li>';\n    resultStatus.textContent = 'No Return Value';\n    resultStatus.style.backgroundColor = '#cbd5e0';\n    resultStatus.style.color = 'black';\n  }\n};\n\n// --- Event Listeners ---\n\nmapBtn.addEventListener('click', () => handleAction(runMap, true));\nfilterBtn.addEventListener('click', () => handleAction(runFilter, true));\nloopCopyBtn.addEventListener('click', () => handleAction(runLoopCopy, true));\n\nforEachBtn.addEventListener('click', () => handleAction(runForEach, false));\nloopBtn.addEventListener('click', () => handleAction(runLoopMutate, false));\n\nresetBtn.addEventListener('click', reset);\n\n// Initialize\nreset();",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "# Do This:\r\n1.  Try out the three **Pure Methods**. Look at the values in the `originalData` array and the `newData` array. What do you notice?\r\n2.  Click **Reset**, then try out the different **Mutating Methods** and note the values in the arrays.\r\n3.  **Observe:** How does the `originalData` array behave differently for the Pure methods compared to the Mutating methods?",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-24 18:32:02 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 18:38:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 18:43:29 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 18:56:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 18:57:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 18:58:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 19:01:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 19:02:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

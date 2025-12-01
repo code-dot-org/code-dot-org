@@ -28,7 +28,7 @@
   "prettier": "./prettier/index.mjs",
   "devDependencies": {
     "@eslint/js": "^9.15.0",
-    "@tsconfig/node22": "^22.0.0",
+    "@tsconfig/node22": "^22.0.4",
     "eslint": "^9.15.0",
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import-x": "^4.4.3",

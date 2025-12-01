@@ -32,7 +32,7 @@ Parameters:
   WorkerInstanceAMI:
     Type: String
     Description: Amazon Machine Image that Autoscaler uses to launch Worker EC2 Instances.
-    Default: ami-09b347c7ebb552ae2
+    Default: ami-041891f7c52014278
   WorkerInstanceType:
     Type: String
     Description: EC2 Instance Type that Autoscaler provisions to run Builds.
@@ -45,7 +45,7 @@ Parameters:
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/ecs/optimized-ami/amazon-linux/recommended/image_id
   AutoscalerECSAMI:
-    Description: AMI ID
+    Description: AMI ID for ECS Optimized AMI
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id
 Resources:
@@ -304,7 +304,7 @@ Resources:
         -
           Name: drone-autoscaler
           Essential: true
-          Image: drone/autoscaler:1.8.2
+          Image: drone/autoscaler:1.14.0
           MemoryReservation: 1024
           LogConfiguration:
             LogDriver: awslogs
@@ -339,6 +339,8 @@ Resources:
             -
               Name: DRONE_SERVER_PROTO
               Value: https
+
+            # BEGIN: Autoscaler Service Configuration
             -
               Name: DRONE_POOL_MIN
               Value: !Ref WorkerPoolMinimum
@@ -352,11 +354,24 @@ Resources:
               Name: DRONE_CAPACITY_BUFFER
               Value: !Ref WorkerCapacityBuffer
             -
+              Name: DRONE_REAPER_ENABLED
+              Value: "true"
+            -
+              Name: DRONE_REAPER_INTERVAL
+              Value: "5m"
+            -
+              Name: DRONE_PINGER_ENABLED
+              Value: "true"
+            -
+              Name: DRONE_PINGER_INTERVAL
+              Value: "5m"
+            -
               Name: DRONE_DEBUG
               Value: true
             -
               Name: DRONE_TRACE
               Value: true
+            # END: Autoscaler Service Configuration
 
             # BEGIN: Settings for the EC2 Instances that Drone Autoscaler provisions.
 
@@ -392,6 +407,10 @@ Resources:
             # END: Settings for the EC2 Instances that Drone Autoscaler provisions.
 
             # BEGIN: Settings for the Drone Runner ("worker"/"agent") executing on the EC2 Instances provisioned by Autoscaler.
+            -
+              Name: DRONE_AGENT_IMAGE
+              # TODO move back to mainline after drone-runners/drone-runner-docker#79 or similar is merged to update Docker Go client
+              Value: codedotorg/drone-runner-docker
             -
               Name: DRONE_AGENT_CONCURRENCY
               Value: 1
@@ -444,6 +463,20 @@ Resources:
       MinSize: 1
       MaxSize: 1
       DesiredCapacity: 1
+    UpdatePolicy:
+      AutoScalingRollingUpdate:
+        MinInstancesInService: 0
+        MaxBatchSize: 1
+        PauseTime: PT5M
+        WaitOnResourceSignals: false
+        SuspendProcesses:
+          - HealthCheck
+          - ReplaceUnhealthy
+          - AZRebalance
+          - AlarmNotification
+          - ScheduledActions
+      AutoScalingReplacingUpdate:
+        WillReplace: true
 
   DroneAutoscalerEcsSecurityGroup:
     Type: AWS::EC2::SecurityGroup

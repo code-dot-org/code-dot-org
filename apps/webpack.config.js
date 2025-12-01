@@ -19,6 +19,14 @@ const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
 const circularDependencies = require('./circular_dependencies.json');
 const envConstants = require('./envConstants');
+
+if (envConstants.PROFILE_APPS_BUILD) {
+  console.log(
+    'Webpack configured with NODE_OPTIONS:',
+    envConstants.NODE_OPTIONS
+  );
+}
+
 const {
   ALL_APPS,
   appsEntriesFor,
@@ -34,6 +42,9 @@ const {
 const WEBPACK_DEV_SERVER_PORT = 9000;
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
+
+// Read worker count from environment variable, defaulting to 4 for local development
+const APPS_BUILD_WORKERS = parseInt(process.env.APPS_BUILD_WORKERS || '4', 10);
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
 const nodeModulesToTranspile = [
@@ -211,7 +222,6 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
     localeDoNotImport('@cdo/sketchlab/locale'),
     localeDoNotImport('@cdo/standaloneVideo/locale'),
-    localeDoNotImport('@cdo/tutorialExplorer/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
     localeDoNotImport('@cdo/weblab2/locale'),
     localeDoNotImport('@cdo/signup/locale'),
@@ -311,18 +321,50 @@ const WEBPACK_BASE_CONFIG = {
         enforce: 'pre',
         include: [...nodeModulesToTranspile, p('src'), p('test')],
         exclude: [p('src/lodash.js')],
-        loader: 'babel-loader',
-        options: {
-          cacheDirectory: p('build/babel-cache'),
-          compact: false,
-          ...(envConstants.HOT
-            ? {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
-            : {}),
-        },
+        use: [
+          // Only use thread-loader in CI environments. thread-loader causes JSON serialization
+          // errors ("Bad control character in string literal") when combined with devtool modes
+          // that generate full source maps (e.g., 'source-map'). CI uses devtool: 'eval' which
+          // avoids this problem. For more details, see: https://github.com/code-dot-org/code-dot-org/pull/69386
+          ...(process.env.CI
+            ? [
+                {
+                  loader: 'thread-loader',
+                  options: {
+                    workers: APPS_BUILD_WORKERS,
+                  },
+                },
+              ]
+            : []),
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: p('build/babel-cache'),
+              compact: false,
+              ...(envConstants.HOT
+                ? {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
+                : {}),
+            },
+          },
+        ],
       },
       {
         test: /\.tsx?$/,
         use: [
+          // Only use thread-loader in CI environments. thread-loader causes JSON serialization
+          // errors ("Bad control character in string literal") when combined with devtool modes
+          // that generate full source maps (e.g., 'source-map'). CI uses devtool: 'eval' which
+          // avoids this problem. For more details, see: https://github.com/code-dot-org/code-dot-org/pull/69386
+          ...(process.env.CI
+            ? [
+                {
+                  loader: 'thread-loader',
+                  options: {
+                    workers: APPS_BUILD_WORKERS,
+                  },
+                },
+              ]
+            : []),
           {
             loader: 'ts-loader',
             options: {
@@ -330,6 +372,7 @@ const WEBPACK_BASE_CONFIG = {
               // Instead we typecheck in parallel using ForkTsCheckerWebpackPlugin
               transpileOnly: true,
               configFile: 'tsconfig.build.json',
+              happyPackMode: true, // Required when using thread-loader
               getCustomTransformers: () => ({
                 before: envConstants.HOT ? [new ReactRefreshTypeScript()] : [],
               }),
@@ -445,7 +488,7 @@ function createWebpackConfig({
       minimize: minify,
       minimizer: [
         new TerserPlugin({
-          parallel: 4,
+          parallel: APPS_BUILD_WORKERS,
           // Excludes these from minification to avoid breaking functionality,
           // but still adds .min to the output filename suffix.
           exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
@@ -602,8 +645,9 @@ function createWebpackConfig({
     },
     plugins: [
       ...WEBPACK_BASE_CONFIG.plugins,
-      // Add explicit ProgressPlugin for profiling to ensure progress logs appear in CI
-      ...(envConstants.PROFILE_APPS_BUILD
+      // Add explicit ProgressPlugin for profiling to ensure progress logs appear in CI.
+      // Do not enable outside of CI, since that will generate duplicate progress logs.
+      ...(envConstants.PROFILE_APPS_BUILD && envConstants.CI
         ? [
             new webpack.ProgressPlugin({
               profile: true,

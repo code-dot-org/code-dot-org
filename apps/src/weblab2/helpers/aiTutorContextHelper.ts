@@ -5,6 +5,8 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 interface AiTutorWebLab2Params {
   source: MultiFileSource | undefined;
   longInstructions: string | undefined;
+  hasEdited: boolean | undefined;
+  hasRun: boolean | undefined;
 }
 
 const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['txt', 'csv', 'md'];
@@ -19,7 +21,7 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
   protected override getAiTutorContext(): AiTutorContext {
     if (!this.params) return {};
 
-    const {source, longInstructions} = this.params;
+    const {source, longInstructions, hasEdited, hasRun} = this.params;
     const sourceCode = source
       ? Object.values(source.files)
           .filter(
@@ -37,6 +39,8 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
     return {
       sourceCode,
       longInstructions,
+      hasEdited,
+      hasRun,
     };
   }
 }

@@ -1,7 +1,8 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
-  "created_at": "2025-11-07T22:34:07.000Z",
+  "created_at": "2025-11-12T21:24:05.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -35,10 +36,15 @@
     "guide_mode": "aiDancerGenerate",
     "ai_dancer_generate_adlib": "creature-attire-05",
     "long_instructions": "#### Use a prompt with more details\r\n\r\nExtra details help AI make your image better.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "HoAI-Mix-Move-Educators-dancer-prompt-template"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-07T22:34:07.852+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-dancer-prompt-2-input\\\"\"],\"cloned_from\":\"mix-move-ai-dancer-prompt-2-input\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-07T22:34:07.852+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-dancer-prompt-2-input\\\"\"],\"cloned_from\":\"mix-move-ai-dancer-prompt-2-input\"},{\"changed_at\":\"2025-11-12 22:30:05 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Dancelab>

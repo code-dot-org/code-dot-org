@@ -1,0 +1,45 @@
+{
+  "name": "sandbox-revisions-csaif-pl",
+  "script_names": [
+    "self-paced-pl-revision-aif0",
+    "self-paced-pl-revision-aif1",
+    "self-paced-pl-revision-aif2",
+    "self-paced-pl-revision-aif3",
+    "self-paced-pl-revision-aif4",
+    "self-paced-pl-revision-aif5",
+    "self-paced-pl-revision-aif6"
+  ],
+  "unit_prefixes": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "original_script_names": [
+    "self-paced-pl-revision-aif1",
+    "self-paced-pl-revision-aif0",
+    "self-paced-pl-revision-aif2",
+    "self-paced-pl-revision-aif3",
+    "self-paced-pl-revision-aif4",
+    "self-paced-pl-revision-aif5",
+    "self-paced-pl-revision-aif6"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "sandbox-revisions-csaif-pl",
+    "numbered_units": "custom",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

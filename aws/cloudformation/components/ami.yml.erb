@@ -74,6 +74,7 @@ frontend_device_name ||= '/dev/sda1'
         - DeviceName: <%=frontend_device_name%>
           Ebs:
             VolumeSize: <%=frontend_volume_size%>
+            # TODO: change to gp3 next time we have to recreate the instance
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
@@ -174,11 +175,13 @@ frontend_device_name ||= '/dev/sda1'
         SecurityGroupIds:
           - !ImportValue VPC-FrontendSecurityGroup
         KeyName: <%=ssh_key_name%>
+        Monitoring:
+          Enabled: <%=rack_env?(:production)%>
         BlockDeviceMappings:
           - DeviceName: <%=frontend_device_name%>
             Ebs:
               VolumeSize: <%=frontend_volume_size * 2%> # Double volume size to leave room for logs written to disk
-              VolumeType: gp2
+              VolumeType: gp3
         TagSpecifications:
           - ResourceType: instance
             Tags:

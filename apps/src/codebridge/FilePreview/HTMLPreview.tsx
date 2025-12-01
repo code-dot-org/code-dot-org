@@ -6,7 +6,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {getLabViewPageAction, LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -17,6 +17,7 @@ import {
   DEFAULT_START_HTML_FILE,
 } from './constants';
 import {HTMLPreviewHeader} from './HTMLPreviewHeader';
+import PreviewStopped from './PreviewStopped';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
@@ -26,14 +27,7 @@ export const HTMLPreview: React.FC = () => {
   const normalizedChannelId = useAppSelector(
     state => state.lab.channel?.id?.toLowerCase() || ''
   );
-  const pageAction = getLabViewPageAction();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
-  const iframeHeightClass = useMemo(() => {
-    if (pageAction === 'share' || isFullScreenView) {
-      return moduleStyles.fullScreenPreviewIframeHeight;
-    }
-    return moduleStyles.levelViewPreviewIframeHeight;
-  }, [pageAction, isFullScreenView]);
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
@@ -71,6 +65,7 @@ export const HTMLPreview: React.FC = () => {
   const [previewViewMode, setPreviewViewMode] = useState<PreviewViewMode>(
     PreviewViewMode.DESKTOP
   );
+  const [isStopped, setIsStopped] = useState<boolean>(false);
   const isPredictLevel = levelProperties?.predictSettings?.isPredictLevel;
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
@@ -160,9 +155,20 @@ export const HTMLPreview: React.FC = () => {
     );
   };
 
+  const onStopPreview = () => {
+    setIsStopped(true);
+    setIsIframeLoaded(false);
+  };
+
+  const onReloadPreview = () => {
+    setIsStopped(false);
+  };
+
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
+    // When we switch levels, reset stopped state.
+    setIsStopped(false);
     setIsLevelLoading(true);
   });
 
@@ -297,34 +303,39 @@ export const HTMLPreview: React.FC = () => {
           onToggleFullScreen={toggleFullScreen}
           previewViewMode={previewViewMode}
           setPreviewViewMode={setPreviewViewMode}
+          onStopPreview={onStopPreview}
+          isStopEnabled={!isStopped}
         />
-        {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
-            route to InnerHTMLPreview. */}
-        <div
-          ref={previewContainerRef}
-          // This provides a small visual indicator when the iframe is focused after submitting the URL.
-          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-          tabIndex={0}
-          className={moduleStyles.previewWrapper}
-          role="application"
-          aria-label="Web Preview Frame"
-        >
-          <iframe
-            sandbox="allow-scripts allow-same-origin"
-            allow="self"
-            title="Web Preview"
-            ref={iframeRef}
-            id="preview"
-            className={classNames(
-              moduleStyles.previewIframe,
-              iframeHeightClass,
-              previewViewMode === PreviewViewMode.DESKTOP
-                ? moduleStyles.desktopPreviewIframe
-                : moduleStyles.mobilePreviewIframe
-            )}
-            src={`${previewUrl}${previewQueryString}`}
-          />
-        </div>
+        {isStopped ? (
+          <PreviewStopped onReload={onReloadPreview} />
+        ) : (
+          /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
+            route to InnerHTMLPreview. */
+          <div
+            ref={previewContainerRef}
+            // This provides a small visual indicator when the iframe is focused after submitting the URL.
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+            tabIndex={0}
+            className={moduleStyles.previewWrapper}
+            role="application"
+            aria-label="Web Preview Frame"
+          >
+            <iframe
+              sandbox="allow-scripts allow-same-origin"
+              allow="self"
+              title="Web Preview"
+              ref={iframeRef}
+              id="preview"
+              className={classNames(
+                moduleStyles.previewIframe,
+                previewViewMode === PreviewViewMode.DESKTOP
+                  ? moduleStyles.desktopPreviewIframe
+                  : moduleStyles.mobilePreviewIframe
+              )}
+              src={`${previewUrl}${previewQueryString}`}
+            />
+          </div>
+        )}
       </div>
     </PanelContainer>
   );

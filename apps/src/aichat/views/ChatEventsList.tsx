@@ -132,7 +132,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     if (previousEventsLength.current !== events.length) {
       previousEventsLength.current = events.length;
 
-      const lastMessage = events.at(-1);
+      const lastMessage = events[events.length - 1];
       let lastMessageRole: Role | null = null;
       if (lastMessage && isChatMessage(lastMessage)) {
         lastMessageRole = lastMessage.role;
