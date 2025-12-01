@@ -9,7 +9,7 @@
     "skip_dialog": true,
     "skip_sound": true,
     "encrypted": "false",
-    "long_instructions": "How does using a copy-don't-strategy help make these recovery features (Reset/Undo) more reliable?",
+    "long_instructions": "How does using a copy-don't-mutate strategy help make these recovery features (Reset/Undo) more reliable?",
     "stay_on_level_after_submit": "false",
     "height": "450",
     "allow_user_uploads": "false",
@@ -18,7 +18,7 @@
     "optional": "false",
     "allow_multiple_attempts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-24 17:54:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-11-24 17:54:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-25 15:11:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
