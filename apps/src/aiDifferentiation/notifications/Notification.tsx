@@ -60,7 +60,7 @@ const Notification: React.FC<NotificationProps> = ({
   };
 
   return (
-    <div className={styles.notification}>
+    <li className={styles.notification}>
       <FontAwesomeV6Icon
         iconName={notificationOrPlaceholder.iconName}
         iconStyle="solid"
@@ -156,7 +156,7 @@ const Notification: React.FC<NotificationProps> = ({
       ) : (
         <div className={styles.readAt} />
       )}
-    </div>
+    </li>
   );
 };
 

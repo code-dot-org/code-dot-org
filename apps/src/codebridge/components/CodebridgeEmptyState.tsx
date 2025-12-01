@@ -1,3 +1,4 @@
+import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import Image, {ImageProps} from '@code-dot-org/component-library/image';
 import {
   BodyThreeText,
@@ -14,6 +15,7 @@ export interface CodebridgeEmptyStateProps {
   title?: string;
   description?: string;
   className?: string;
+  buttonProps?: ButtonProps;
 }
 
 export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
@@ -21,6 +23,7 @@ export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
   title,
   description,
   className,
+  buttonProps,
 }) => {
   return (
     <Box
@@ -40,6 +43,7 @@ export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
         )}
         {description && <BodyThreeText>{description}</BodyThreeText>}
       </div>
+      {buttonProps && <Button {...buttonProps} />}
     </Box>
   );
 };

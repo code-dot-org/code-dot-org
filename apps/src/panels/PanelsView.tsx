@@ -1,7 +1,14 @@
 import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import markdownToTxt from 'markdown-to-txt';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  MutableRefObject,
+} from 'react';
 import Typist from 'react-typist';
 
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
@@ -70,6 +77,8 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   >(undefined);
   const [typingDone, setTypingDone] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
+
+  const contentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
   const lastPanelStartTime = useRef<number>(Date.now());
   const nextButtonRef = useRef<HTMLButtonElement>(null);
@@ -235,6 +244,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
         )}
         {panel.text && (
           <div
+            ref={contentRef}
             className={classNames(
               styles.text,
               panel.dark && styles.textDark,
@@ -244,7 +254,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             {offerBrowserTts && (
               // Override the theme since the text container is always white.
               <div className={styles.ttsContainer} data-theme="Light">
-                <TextToSpeech text={panel.text} />
+                <TextToSpeech contentRef={contentRef} />
               </div>
             )}
             {showTyping ? (
