@@ -8,6 +8,7 @@ import {
   MultiFileSource,
   ProjectSources,
   ProjectFileType,
+  ProjectVersion,
 } from '@cdo/apps/lab2/types';
 import {
   activateFileHelper,
@@ -20,6 +21,7 @@ import {
 
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;
+  selectedVersion: ProjectVersion | undefined;
   viewingOldVersion: boolean;
   restoredOldVersion: boolean;
   hasEdited: boolean;
@@ -30,6 +32,7 @@ export interface Lab2ProjectState {
 const initialState: Lab2ProjectState = {
   projectSources: undefined,
   viewingOldVersion: false,
+  selectedVersion: undefined,
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
@@ -53,13 +56,26 @@ const projectSlice = createSlice({
     },
     setPreviousVersionSource(
       state,
-      action: PayloadAction<ProjectSources | undefined>
+      action: PayloadAction<{
+        sources: ProjectSources | undefined;
+        version?: ProjectVersion;
+      }>
     ) {
-      state.projectSources = action.payload;
+      state.projectSources = action.payload.sources;
+      state.selectedVersion = action.payload.version;
       state.viewingOldVersion = true;
+    },
+    setSelectedVersion(
+      state,
+      action: PayloadAction<ProjectVersion | undefined>
+    ) {
+      state.selectedVersion = action.payload;
     },
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
       state.viewingOldVersion = action.payload;
+      if (!action.payload) {
+        state.selectedVersion = undefined;
+      }
     },
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
@@ -417,6 +433,7 @@ const projectSlice = createSlice({
       // Reset the state that needs to be reset manually on level change.
       // Project source is handled elsewhere.
       state.hasEdited = false;
+      state.selectedVersion = undefined;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
     },
@@ -429,6 +446,7 @@ const projectSlice = createSlice({
 export const {
   setProjectSource,
   setPreviousVersionSource,
+  setSelectedVersion,
   setViewingOldVersion,
   setRestoredOldVersion,
   resetProjectMetadata,

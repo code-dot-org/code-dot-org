@@ -311,10 +311,15 @@ const VersionHistoryPanel: React.FunctionComponent<
       } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {
-        dispatch(loadVersion({versionId: e.target.value, startSources}));
+        const version = versionList.find(
+          version => version.versionId === e.target.value
+        );
+        dispatch(
+          loadVersion({versionId: e.target.value, startSources, version})
+        );
       }
     },
-    [dispatch, isLatestVersion, setSelectedVersion, startSources]
+    [dispatch, isLatestVersion, setSelectedVersion, startSources, versionList]
   );
 
   const handleSaveVersionSuccess = useCallback(() => {

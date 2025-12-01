@@ -16,6 +16,7 @@ import {
   MultiFileSource,
   FileId,
   FolderId,
+  ProjectVersion,
 } from '@cdo/apps/lab2/types';
 import {
   deleteFileHelper,
@@ -91,7 +92,11 @@ export const setAndSaveSource = (
 export const loadVersion = createAsyncThunk(
   'lab2Project/loadVersion',
   async (
-    payload: {versionId: string; startSources: ProjectSources},
+    payload: {
+      versionId: string;
+      startSources: ProjectSources;
+      version?: ProjectVersion;
+    },
     thunkAPI
   ) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -102,7 +107,12 @@ export const loadVersion = createAsyncThunk(
       const sources =
         (await projectManager.loadSources(payload.versionId)) ||
         payload.startSources;
-      thunkAPI.dispatch(setPreviousVersionSource(sources));
+      thunkAPI.dispatch(
+        setPreviousVersionSource({
+          sources,
+          version: payload.version,
+        })
+      );
     }
   }
 );
@@ -115,7 +125,9 @@ export const previewStartSources = createAsyncThunk(
     if (projectManager) {
       // We need to ensure we save the existing project before loading the start source.
       await projectManager.flushSave();
-      thunkAPI.dispatch(setPreviousVersionSource(payload.startSources));
+      thunkAPI.dispatch(
+        setPreviousVersionSource({sources: payload.startSources})
+      );
     }
   }
 );
