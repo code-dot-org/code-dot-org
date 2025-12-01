@@ -2,10 +2,10 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {
   DEFAULT_THREAD_TITLE,
-  DEFAULT_INITIAL_CHAT_MESSAGE,
   ThreadTypeFields,
   THREAD_TYPES,
 } from '@cdo/apps/aiDifferentiation/constants';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
 
@@ -52,7 +52,7 @@ const initialState: AichatState = {
   selectedPrompt: null,
   threadMessages: [],
   threadKeyId: 0,
-  initialChatMessage: DEFAULT_INITIAL_CHAT_MESSAGE,
+  initialChatMessage: SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
   chatEventsPast: [],
   chatEventsCurrent: [],
   chatMessagePending: undefined,

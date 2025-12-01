@@ -11,16 +11,16 @@ import {
   setInitialChatMessage,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import AiDiffWorkspace from '@cdo/apps/aiDifferentiation/AiDiffWorkspace';
+import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
 import {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
   DEBUG_MISTAKES_PROMPT,
   EXIT_TICKET_PROMPT,
   MINI_LESSON_PROMPT,
-} from '@cdo/apps/aiDifferentiation/AiDiffPredefinedPrompts';
-import AiDiffWorkspace from '@cdo/apps/aiDifferentiation/AiDiffWorkspace';
-import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
-import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
+  SUGGESTED_PROMPTS_FOR_SELECTION,
+} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {
   chatThreadMessagesValidator,
   chatThreadValidator,

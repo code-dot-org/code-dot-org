@@ -12,6 +12,7 @@ import {
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import AiDiffChat from '@cdo/apps/aiDifferentiation/AiDiffChat';
+import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
 import {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
@@ -20,9 +21,8 @@ import {
   MINI_LESSON_PROMPT,
   APCSP_DUMMY_CREATE,
   APCSP_DUMMY_EXAM,
-} from '@cdo/apps/aiDifferentiation/AiDiffPredefinedPrompts';
-import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
-import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
+  SUGGESTED_PROMPTS_FOR_SELECTION,
+} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {

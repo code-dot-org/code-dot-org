@@ -21,7 +21,7 @@ import {
   SUGGEST_CURRICULUM_PROMPT,
   GET_STARTED_PROMPT,
   CREATE_SECTION_PROMPT,
-} from '@cdo/apps/aiDifferentiation/AiDiffPredefinedPrompts';
+} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
