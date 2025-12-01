@@ -129,7 +129,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     if (aiGenerateState === 'none' && blockCount > 1) {
       setAiGenerateState('edited');
     } else if (
-      ['editing', 'edited'].includes(aiGenerateState) &&
+      ['listened', 'editing', 'edited'].includes(aiGenerateState) &&
       blockCount <= 1
     ) {
       resetProgram();
@@ -249,9 +249,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     }
   }, [aiGenerateState]);
 
-  const parentProperties = useParentLevelProperties();
-  const isStandalone =
-    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
+  const hasParent = !!useParentLevelProperties();
   const dispatch = useAppDispatch();
   const sublevelOnContinue = useCallback(() => {
     dispatch(
@@ -287,7 +285,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {aiGenerateState === 'generating' && (
+      {['generating', 'generated'].includes(aiGenerateState) && (
         <MainInstructionsContent
           heading="Generating..."
           content="AI is generating code based on your prompt."
@@ -352,8 +350,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             size="s"
             onClick={() => {
               startOver();
-              setAiGenerateState('none');
-              resetProgram();
               analyticsReporter.sendEvent(
                 EVENTS.DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
                 {levelPath: window.location.pathname}
@@ -385,7 +381,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             size="s"
             onClick={() => {
               // Skip the 'editing' validation state for standalone projects.
-              setAiGenerateState(isStandalone ? 'edited' : 'editing');
+              setAiGenerateState(hasParent ? 'edited' : 'editing');
               analyticsReporter.sendEvent(
                 EVENTS.DANCE_PARTY_GENERATE_CODE_USE_CODE_CLICKED,
                 {
@@ -422,7 +418,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           <MainInstructionsContent
             heading="Modify the code"
             content={
-              isStandalone
+              hasParent
                 ? 'Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix.'
                 : "Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix. Click Finish when you're done."
             }
@@ -438,8 +434,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               size="s"
               onClick={() => {
                 startOver();
-                setAiGenerateState('none');
-                resetProgram();
                 analyticsReporter.sendEvent(
                   EVENTS.DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
                   {levelPath: window.location.pathname}
@@ -447,7 +441,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {!isStandalone && (
+            {hasParent && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.
@@ -456,7 +450,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 isRunning={false}
                 className={styles.buttonWide}
                 // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
-                onContinue={parentProperties ? sublevelOnContinue : undefined}
+                onContinue={sublevelOnContinue}
               />
             )}
           </div>
