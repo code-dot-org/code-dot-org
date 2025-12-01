@@ -99,6 +99,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const blockList = useRef<AdlibsBlockList | undefined>(undefined);
 
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+
   const getInitialChoices = useCallback(
     (adlibsValue: AdlibsType) => {
       const initial: AdlibChoices = {};
@@ -188,13 +190,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     if (adlibs && currentSources) {
       const {initial, existing} = getInitialChoices(adlibs);
       setAdlibChoices(initial);
-      if (existing) {
+      if (!isReadOnly && existing) {
         setAiGenerateState('reviewing');
       } else {
         setAiGenerateState('none');
       }
     }
-  }, [adlibs, currentSources, getInitialChoices]);
+  }, [adlibs, currentSources, getInitialChoices, isReadOnly]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('loading');
@@ -378,8 +380,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       )
     );
   }, [dispatch, levelProperties.appName, levelProperties.id]);
-
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
   const showTts =
     levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
