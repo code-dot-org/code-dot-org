@@ -1,5 +1,11 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {Typography} from '@mui/material';
 import React from 'react';
+import {useSelector} from 'react-redux';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {getSelectedUnitId} from '../../redux/unitSelectionRedux';
 
 import Header from './header';
 import WidgetTemplate from './widgetTemplate';
@@ -7,6 +13,8 @@ import WidgetTemplate from './widgetTemplate';
 import styles from './studentSnapshot.module.scss';
 
 const StudentSnapshot: React.FC = () => {
+  const unitId = useSelector(getSelectedUnitId);
+
   return (
     <div className={styles.snapshotContainer}>
       <Header />
@@ -31,6 +39,16 @@ const StudentSnapshot: React.FC = () => {
           gridWidth={1}
           gridHeight={1}
         >
+          <Button
+            onClick={() => {
+              HttpClient.get(
+                `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+              ).catch(error => {
+                console.error(error);
+              });
+            }}
+            text="Generate Lesson Summaries"
+          />
           <div>small content 1</div>
         </WidgetTemplate>
         <WidgetTemplate
