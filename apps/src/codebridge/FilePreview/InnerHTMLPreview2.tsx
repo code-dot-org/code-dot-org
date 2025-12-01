@@ -67,7 +67,6 @@ const InnerHTMLPreview = () => {
 
   useEffect(() => {
     window.addEventListener('message', handleMessage);
-    console.log('iframe_ready', parentOrigin);
     // Notify parent that we're ready to receive messages
     window.parent.postMessage(
       {type: IframeMessageType.IFRAME_READY},
