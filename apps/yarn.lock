@@ -5475,37 +5475,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@langfuse/client@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "@langfuse/client@npm:4.2.0"
-  dependencies:
-    "@langfuse/core": "npm:^4.2.0"
-    "@langfuse/tracing": "npm:^4.2.0"
-    mustache: "npm:^4.2.0"
-  peerDependencies:
-    "@opentelemetry/api": ^1.9.0
-  checksum: 10/fb18d42eea6478a6dc4fd37b63218f451275a02bab8e947c319715e05817e462f144af5db30980df28bd9009481ae925cd9d20b7dc2ca577cc5111d3961cba1a
-  languageName: node
-  linkType: hard
-
-"@langfuse/core@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "@langfuse/core@npm:4.2.0"
-  checksum: 10/780ca8d2c348d118ad4810d43de20b2732ee06e9ae0775bbcde1f9db4b866c68c065a84b51357b53783016fbdde2f7472a16fa4fc5aa9ab4033dd1b5ad76d5dc
-  languageName: node
-  linkType: hard
-
-"@langfuse/tracing@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "@langfuse/tracing@npm:4.2.0"
-  dependencies:
-    "@langfuse/core": "npm:^4.2.0"
-  peerDependencies:
-    "@opentelemetry/api": ^1.9.0
-  checksum: 10/7b2372bf2e470c9baae7a1265fbdba3a3296e2760881c408f811481c298ea7cf859876fbf81b54366e5d402b3d85ca967adcf0d696ed5d5ca578f6f5230365cf
-  languageName: node
-  linkType: hard
-
 "@leichtgewicht/ip-codec@npm:^2.0.1":
   version: 2.0.4
   resolution: "@leichtgewicht/ip-codec@npm:2.0.4"
@@ -5998,13 +5967,6 @@ __metadata:
   dependencies:
     semver: "npm:^7.3.5"
   checksum: 10/f3a7ab3a31de65e42aeb6ed03ed035ef123d2de7af4deb9d4a003d27acc8618b57d9fb9d259fe6c28ca538032a028f37337264388ba27d26d37fff7dde22476e
-  languageName: node
-  linkType: hard
-
-"@opentelemetry/api@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "@opentelemetry/api@npm:1.9.0"
-  checksum: 10/a607f0eef971893c4f2ee2a4c2069aade6ec3e84e2a1f5c2aac19f65c5d9eeea41aa72db917c1029faafdd71789a1a040bdc18f40d63690e22ccae5d7070f194
   languageName: node
   linkType: hard
 
@@ -11229,14 +11191,12 @@ __metadata:
     "@emotion/styled": "npm:^11.14.0"
     "@eslint/js": "npm:^9.31.0"
     "@excalidraw/excalidraw": "npm:^0.17.6"
-    "@langfuse/client": "npm:^4.2.0"
     "@lezer/highlight": "npm:^1.2.0"
     "@magenta/music": "npm:^1.23.1"
     "@mapbox/search-js-react": "npm:^1.0.0"
     "@microbit/microbit-fs": "npm:^0.9.2"
     "@microsoft/immersive-reader-sdk": "npm:^1.1.0"
     "@mui/material": "npm:^7.3.2"
-    "@opentelemetry/api": "npm:^1.9.0"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.11"
     "@pyodide/webpack-plugin": "npm:^1.4.0"
     "@rails/actioncable": "npm:^8.0.201"
@@ -22640,15 +22600,6 @@ canvg@gabelerner/canvg:
     arrify: "npm:^1.0.0"
     minimatch: "npm:^3.0.0"
   checksum: 10/e384794bbb18d3c5571d052c9f3712b176e89ad01e2b9a39f55a37e3b8de5e5d065bf50aa30b58db5de7b1f3e2c1c90e04c2cd9b8fdc6e17cdf57f08923e5429
-  languageName: node
-  linkType: hard
-
-"mustache@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "mustache@npm:4.2.0"
-  bin:
-    mustache: bin/mustache
-  checksum: 10/6e668bd5803255ab0779c3983b9412b5c4f4f90e822230e0e8f414f5449ed7a137eed29430e835aa689886f663385cfe05f808eb34b16e1f3a95525889b05cd3
   languageName: node
   linkType: hard
 

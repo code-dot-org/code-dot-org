@@ -12,7 +12,6 @@ const fetchLangfusePrompt = async (promptName: string) => {
   const response = await HttpClient.get(url);
   const prompt = await response.json();
   const promptText = prompt.prompt;
-  console.log('prompt from langfuse:', promptText);
   return promptText;
 };
 
