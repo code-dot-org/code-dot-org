@@ -90,11 +90,7 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
           notifications.map(notification => (
             <Notification
               notification={notification}
-              key={
-                notification.externalId
-                  ? notification.externalId
-                  : notification.id
-              }
+              key={notification.externalId || notification.id}
               aiPromptClick={aiPromptClick}
             />
           ))
