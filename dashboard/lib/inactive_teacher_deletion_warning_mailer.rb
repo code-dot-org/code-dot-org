@@ -51,8 +51,6 @@ class InactiveTeacherDeletionWarningMailer
     else
       log_message(format("Emailed %d teacher accounts in %.2f seconds.", num_teachers_warned, (Time.now - start_time)))
     end
-  rescue StandardError => exception
-    report_exception(exception)
   end
 
   def processed_teacher_ids
