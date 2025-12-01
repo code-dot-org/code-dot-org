@@ -24,7 +24,7 @@ interface ChatMessageProps {
 }
 
 const codeCopiedAnalytics = (isTA: boolean) => () =>
-  getStore().dispatch(sendAnalytics(EVENTS.CODE_COPIED, {isTA: !!isTA}));
+  getStore().dispatch(sendAnalytics(EVENTS.CODE_COPIED, {isTA: isTA}));
 
 const taRehypeMap = {
   pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (

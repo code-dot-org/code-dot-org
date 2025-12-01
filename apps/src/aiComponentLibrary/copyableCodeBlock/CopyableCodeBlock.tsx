@@ -3,20 +3,17 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useState, useRef, useEffect} from 'react';
 
-import {sendAnalytics} from '@cdo/apps/aichat/redux';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './copyable-code-block.module.scss';
 
 interface CopyableCodeBlockProps extends React.HTMLAttributes<HTMLPreElement> {
-  isTA?: boolean;
+  onCopy?: () => void;
 }
 
 const CopyableCodeBlock: React.FunctionComponent<CopyableCodeBlockProps> = ({
-  isTA,
+  onCopy,
   ...props
 }) => {
   const [visible, setVisible] = useState(false);
@@ -25,8 +22,6 @@ const CopyableCodeBlock: React.FunctionComponent<CopyableCodeBlockProps> = ({
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const preRef = useRef<HTMLPreElement>(null);
-
-  const dispatch = useAppDispatch();
 
   /*
    * Change the aria-live message every other time the overlay becomes visible.
@@ -52,7 +47,7 @@ const CopyableCodeBlock: React.FunctionComponent<CopyableCodeBlockProps> = ({
   const handleCopy = () => {
     if (preRef.current?.textContent) {
       copyToClipboard(preRef.current.textContent);
-      dispatch(sendAnalytics(EVENTS.CODE_COPIED, {isTA: !!isTA}));
+      onCopy?.();
 
       setVisible(true);
 
