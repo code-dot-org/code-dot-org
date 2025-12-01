@@ -1,4 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
@@ -35,7 +36,10 @@ export const HTMLPreview: React.FC = () => {
     const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-    const port = 'localhost' === environmentKey ? `:${location.port}` : '';
+    const port =
+      'localhost' === environmentKey && location.port
+        ? `:${location.port}`
+        : '';
     return `${location.protocol}//${normalizedChannelId}.preview.${subdomain}codeprojects.org${port}`;
   }, [normalizedChannelId]);
 
@@ -167,9 +171,10 @@ export const HTMLPreview: React.FC = () => {
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
-    // When we switch levels, reset stopped state.
+    // When we switch levels, reset stopped state and iframe state.
     setIsStopped(false);
     setIsLevelLoading(true);
+    setIsIframeLoaded(false);
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -308,6 +313,8 @@ export const HTMLPreview: React.FC = () => {
         />
         {isStopped ? (
           <PreviewStopped onReload={onReloadPreview} />
+        ) : isLevelLoading ? (
+          <CodebridgeEmptyState title="Loading..." />
         ) : (
           /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */
