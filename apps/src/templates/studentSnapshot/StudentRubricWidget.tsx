@@ -1,7 +1,7 @@
 import type {InferProps} from 'prop-types';
 import React, {useState} from 'react';
 
-import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
+import LearningGoals from '@cdo/apps/templates/rubrics/LearningGoals';
 import {aiEvaluationShape} from '@cdo/apps/templates/rubrics/rubricShapes';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import type {
@@ -15,28 +15,24 @@ type AiEvaluation = InferProps<typeof aiEvaluationShape>['isRequired'];
 interface StudentRubricWidgetProps {
   gridWidth?: number;
   gridHeight?: number;
-  // These map directly to RubricContent props so we can reuse it as-is.
+  // These map directly to LearningGoals props so we can reuse it as-is.
   rubric: Rubric;
   studentLevelInfo?: StudentLevelInfo;
   teacherHasEnabledAi?: boolean;
   canProvideFeedback?: boolean;
-  onLevelForEvaluation?: boolean;
   reportingData?: ReportingData;
   aiEvaluations?: AiEvaluation[];
-  sectionId?: number;
-  reloadOnStudentChange?: boolean;
 }
 
 /**
  * Teacher-style rubric widget for the Student Snapshot dashboard.
  *
- * This widget reuses the existing teacher rubric content component:
- * - RubricContent: lesson header, student metadata, learning goals, evidence levels,
- *   and teacher feedback.
+ * This widget reuses the existing LearningGoals component from the rubric system:
+ * - LearningGoals: learning goals navigation, evidence levels, and teacher feedback.
  *
- * The widget itself is intentionally thin: it wraps RubricContent in the
+ * The widget itself is intentionally thin: it wraps LearningGoals in the
  * Student Snapshot WidgetTemplate and owns only local UI state that
- * RubricContent expects (e.g. feedbackAdded).
+ * LearningGoals expects (e.g. feedbackAdded).
  */
 const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   gridWidth = 2,
@@ -45,13 +41,23 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   studentLevelInfo,
   teacherHasEnabledAi = false,
   canProvideFeedback = true,
-  onLevelForEvaluation = true,
   reportingData,
   aiEvaluations,
-  sectionId,
-  reloadOnStudentChange = false,
 }) => {
   const [feedbackAdded, setFeedbackAdded] = useState(false);
+
+  if (!rubric.learningGoals) {
+    return (
+      <WidgetTemplate
+        widgetName="Rubric"
+        gridWidth={gridWidth}
+        gridHeight={gridHeight}
+        scrollable={true}
+      >
+        <div>No rubric data available.</div>
+      </WidgetTemplate>
+    );
+  }
 
   return (
     <WidgetTemplate
@@ -60,21 +66,19 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
       gridHeight={gridHeight}
       scrollable={true}
     >
-      <RubricContent
+      <LearningGoals
         productTour={false}
-        rubric={rubric}
         open={true}
+        learningGoals={rubric.learningGoals}
         teacherHasEnabledAi={teacherHasEnabledAi}
         canProvideFeedback={canProvideFeedback}
-        onLevelForEvaluation={onLevelForEvaluation}
         reportingData={reportingData}
-        visible={true}
-        aiEvaluations={aiEvaluations}
+        studentLevelInfo={studentLevelInfo}
+        submittedEvaluation={undefined}
+        isStudent={false}
         feedbackAdded={feedbackAdded}
         setFeedbackAdded={setFeedbackAdded}
-        studentLevelInfo={studentLevelInfo}
-        sectionId={sectionId}
-        reloadOnStudentChange={reloadOnStudentChange}
+        aiEvaluations={aiEvaluations}
       />
     </WidgetTemplate>
   );

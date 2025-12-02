@@ -182,10 +182,7 @@ export const Default: Story = {
     studentLevelInfo: mockStudentLevelInfo,
     teacherHasEnabledAi: true,
     canProvideFeedback: true,
-    onLevelForEvaluation: true,
     reportingData: mockReportingData,
     aiEvaluations: mockAiEvaluations,
-    sectionId: 1,
-    reloadOnStudentChange: false,
   },
 };
