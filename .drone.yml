@@ -90,11 +90,11 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/cdo-ci:1.18
     pull: always
     environment:
       CI_JOB: 'unit_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
@@ -212,14 +212,14 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.17
+    image: codedotorg/cdo-ci:1.18
     pull: always
     volumes:
       - name: mysql
         path: /var/lib/mysql
     environment:
       CI_JOB: 'ui_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
@@ -294,11 +294,11 @@ steps:
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
-  - name: prepare-ci-tests
-    image: codedotorg/cdo-ci:1.17
+  - name: prepare-cacheable-build
+    image: codedotorg/cdo-ci:1.18
     pull: always
     environment:
-      CI_JOB: 'ui_tests'
+      CI_JOB: 'prepare_cacheable_build'
       CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
@@ -308,7 +308,7 @@ steps:
         path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
-      - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
+      - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
       # Generate baseline file count for validation
       - touch .cached-staging-build-file-count
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
@@ -342,6 +342,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 5630b8e369b2dd05339cc0edec53c8ffe2ad625b6983bb213d4d118685527064
+hmac: 8380ec279dc40128beca1b341a9fff3212255c2a343d9fed59c9c839ab095669
 
 ...

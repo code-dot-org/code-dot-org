@@ -20,7 +20,11 @@ markdown <<MARKDOWN
 - #### **The `<head>` Section** -The head holds information about the page, not what’s shown on the page itself.
 
 - #### **The `<body>` Section** is what users see on the webpage.
-	- #### The `<header>` contains the main title (`<h1>`) and a short description (`<p>`).
-    - #### The `<main>` section holds the core content of the site. In this example you can see there’s a `<section>` with a subheading (`<h2>`), a paragraph (`<p>`), and a list (`<ul>`with `<li>` items).
+	- #### The `<header>` is the top portion of a website.
+    - #### The `<main>` section holds the core content of the site. In this example, there is a `<section>` with a subheading (`<h2>`), a paragraph (`<p>`), and a list (`<ul>`with `<li>` items).
     - #### The `<footer>` section closes out the web page. This example has a copyright line. 
+    
+## Next Up
+
+#### Let's take a look at some common HTML tags. 
 MARKDOWN

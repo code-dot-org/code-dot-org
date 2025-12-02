@@ -1,5 +1,5 @@
 import {Meta, StoryFn} from '@storybook/react-webpack5';
-import React, {useState} from 'react';
+import {useState, Dispatch, SetStateAction} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 
@@ -60,7 +60,7 @@ const MultipleTemplate: StoryFn<{components: CheckboxProps[]}> = args => {
 
   const renderGroup = (
     state: Record<string, boolean>,
-    setState: React.Dispatch<React.SetStateAction<Record<string, boolean>>>,
+    setState: Dispatch<SetStateAction<Record<string, boolean>>>,
   ) => (
     <div>
       {args.components.map(c => (

@@ -1,9 +1,10 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
+import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -12,6 +13,7 @@ import {
   setProjectSource,
   setViewingOldVersion,
   setRestoredOldVersion,
+  setHasEdited,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   loadVersion,
@@ -24,7 +26,6 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -42,6 +43,15 @@ interface VersionHistoryPanelProps {
   disabled?: boolean;
 }
 
+// Define version segments to support collapsing auto-save groups
+type VersionSegment =
+  | {type: 'committed'; version: ProjectVersion}
+  | {
+      type: 'autoSaveGroup';
+      versions: ProjectVersion[];
+      groupIndex: number;
+    };
+
 const VersionHistoryPanel: React.FunctionComponent<
   VersionHistoryPanelProps
 > = ({
@@ -53,9 +63,14 @@ const VersionHistoryPanel: React.FunctionComponent<
   disabled = false,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
+  // Track collapsed state for each group of auto-saves by group index
+  const [collapsedGroups, setCollapsedGroups] = useState<Set<number>>(
+    new Set()
+  );
   const [listLoaded, setListLoaded] = useState(false);
   const [listLoading, setListLoading] = useState(false);
   const [listLoadError, setListLoadError] = useState(false);
+  const [versionSaved, setVersionSaved] = useState(false);
   const [versionLoadError, setVersionLoadError] = useState(false);
   const [versionLoading, setVersionLoading] = useState(false);
   const locale = currentLocale();
@@ -76,10 +91,17 @@ const VersionHistoryPanel: React.FunctionComponent<
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+  const hasRestoredOldVersion = useAppSelector(
+    state => state.lab2Project.restoredOldVersion
+  );
+  const closeRestoredVersionBanner = () => {
+    dispatch(setRestoredOldVersion(false));
+  };
 
   const projectSources = useAppSelector(
     state => state.lab2Project.projectSources
   );
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -295,34 +317,158 @@ const VersionHistoryPanel: React.FunctionComponent<
     [dispatch, isLatestVersion, setSelectedVersion, startSources]
   );
 
-  // Function called when clicking 'cancel'. This will reset the project to the current version
-  // if the user is viewing an old version, then set the selected version to the latest version.
-  const handleCancel = useCallback(() => {
-    // Go back to current version if we are viewing an old version
-    if (selectedVersion && !isLatestVersion(selectedVersion)) {
-      dispatch(resetToCurrentVersion());
-      setSelectedVersion(latestVersion);
-      setFocusSelectedVersion(true);
-    }
-  }, [
-    dispatch,
-    isLatestVersion,
-    latestVersion,
-    selectedVersion,
-    setSelectedVersion,
-  ]);
-
   const handleSaveVersionSuccess = useCallback(() => {
     sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_COMMITTED, {
       versionId: selectedVersion,
     });
+    dispatch(setHasEdited(false));
     successfulProjectResetCleanUp(true);
-  }, [selectedVersion, successfulProjectResetCleanUp]);
+    setVersionSaved(true);
+  }, [dispatch, selectedVersion, successfulProjectResetCleanUp]);
+
+  // Group versions into segments where each segment is either:
+  // 1. The latest version (always displayed at the top)
+  // 2. A committed version (with comment)
+  // 3. A group of consecutive auto-saved versions (without comments, excluding latest)
+  const versionSegments = useMemo(() => {
+    const segments: VersionSegment[] = [];
+    let currentAutoSaveGroup: ProjectVersion[] = [];
+    let groupIndex = 0;
+
+    versionList.forEach((version, index) => {
+      if (version.comment || version.isLatest) {
+        // If there are accumulated auto-saves, add them as a group
+        if (currentAutoSaveGroup.length > 0) {
+          segments.push({
+            type: 'autoSaveGroup',
+            versions: currentAutoSaveGroup,
+            groupIndex: groupIndex++,
+          });
+          currentAutoSaveGroup = [];
+        }
+        // Add the committed version or latest version
+        segments.push({type: 'committed', version});
+      } else {
+        // Accumulate all auto-saved versions (excluding latest)
+        currentAutoSaveGroup.push(version);
+      }
+
+      // Handle any remaining auto-saves at the end
+      if (index === versionList.length - 1 && currentAutoSaveGroup.length > 0) {
+        segments.push({
+          type: 'autoSaveGroup',
+          versions: currentAutoSaveGroup,
+          groupIndex: groupIndex++,
+        });
+      }
+    });
+
+    return segments;
+  }, [versionList]);
+
+  // Initialize collapsed state for all groups (all collapsed by default)
+  useEffect(() => {
+    const allGroupIndices = versionSegments
+      .filter(segment => segment.type === 'autoSaveGroup')
+      .map(segment => (segment as {groupIndex: number}).groupIndex);
+
+    setCollapsedGroups(new Set(allGroupIndices));
+  }, [versionSegments]);
+
+  const toggleGroupCollapsed = useCallback((groupIndex: number) => {
+    setCollapsedGroups(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(groupIndex)) {
+        newSet.delete(groupIndex);
+      } else {
+        newSet.add(groupIndex);
+      }
+      return newSet;
+    });
+  }, []);
 
   const showList = listLoaded && !listLoading && !listLoadError;
 
+  // Helper function to render a single version row to reduce code duplication.
+  const renderVersionRow = useCallback(
+    (
+      versionId: string,
+      label: string,
+      isLatest: boolean,
+      comment?: string,
+      className?: string,
+      saveButtonLabel?: string
+    ) => {
+      return (
+        <VersionHistoryRow
+          className={className}
+          key={versionId}
+          versionId={versionId}
+          label={label}
+          comment={comment}
+          isLatest={isLatest}
+          isSelected={selectedVersion === versionId}
+          onChange={onVersionChange}
+          disabled={disabled}
+          showRestoreButton={
+            !isLatest && selectedVersion === versionId && !viewAsUserId
+          }
+          restoreOnClick={restoreSelectedVersion}
+          restoreLoading={versionLoading}
+          restoreDisabled={disabled || versionLoading}
+        >
+          {isLatest && hasEdited && !viewAsUserId && (
+            <SaveVersionPanel
+              projectSources={projectSources}
+              onSuccess={handleSaveVersionSuccess}
+              disabled={disabled || versionLoading}
+              buttonLabel={saveButtonLabel || lab2I18n.saveCurrentVersion()}
+            />
+          )}
+        </VersionHistoryRow>
+      );
+    },
+    [
+      selectedVersion,
+      onVersionChange,
+      disabled,
+      viewAsUserId,
+      restoreSelectedVersion,
+      versionLoading,
+      hasEdited,
+      projectSources,
+      handleSaveVersionSuccess,
+    ]
+  );
+
   return (
     <div className={moduleStyles.versionHistoryPanel}>
+      {versionSaved && (
+        <Alert
+          className={moduleStyles.message}
+          type="success"
+          text="Version successfully saved!"
+          size="xs"
+          onClose={() => setVersionSaved(false)}
+        />
+      )}
+      {hasRestoredOldVersion && (
+        <Alert
+          className={moduleStyles.message}
+          text={codebridgeI18n.restoredOldVersion()}
+          type="success"
+          size="xs"
+          onClose={closeRestoredVersionBanner}
+        />
+      )}
+      {versionLoadError && (
+        <Alert
+          className={moduleStyles.message}
+          text={lab2I18n.versionLoadFailure()}
+          type="danger"
+          size="xs"
+        />
+      )}
       {listLoading && (
         <div
           className={classNames(
@@ -334,94 +480,81 @@ const VersionHistoryPanel: React.FunctionComponent<
         </div>
       )}
       {listLoadError && (
-        <div className={moduleStyles.message}>
-          <Alert
-            type="danger"
-            text={lab2I18n.versionHistoryLoadFailure()}
-            size="s"
-          />
-        </div>
+        <Alert
+          className={moduleStyles.message}
+          type="danger"
+          text={lab2I18n.versionHistoryLoadFailure()}
+          size="xs"
+        />
       )}
       {showList && (
         <div className={moduleStyles.listContainer}>
           <div className={moduleStyles.list}>
-            {versionList.map(version => (
-              <VersionHistoryRow
-                key={version.versionId}
-                versionId={version.versionId}
-                label={parseDate(version.lastModified)}
-                comment={version.comment}
-                isLatest={version.isLatest}
-                isSelected={selectedVersion === version.versionId}
-                onChange={onVersionChange}
-                disabled={disabled}
-              />
-            ))}
-            <VersionHistoryRow
-              versionId={INITIAL_VERSION_ID}
-              label={lab2I18n.initialVersion()}
-              isLatest={latestVersion === INITIAL_VERSION_ID}
-              isSelected={selectedVersion === INITIAL_VERSION_ID}
-              onChange={onVersionChange}
-              disabled={disabled}
-            />
-          </div>
-          <div className={moduleStyles.listFooter}>
-            {versionLoadError && (
-              <div className={classNames(moduleStyles.versionLoadError)}>
-                <Alert
-                  type="danger"
-                  text={lab2I18n.versionLoadFailure()}
-                  size="s"
-                />
-              </div>
-            )}
-            {versionLoading && (
-              <div className={classNames(moduleStyles.loadingVersionSpinner)}>
-                <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-      {!isLatestVersion(selectedVersion) && (
-        <div className={moduleStyles.footerPanel}>
-          <div className={moduleStyles.buttonContainer}>
-            <Button
-              text={commonI18n.cancel()}
-              size={'s'}
-              onClick={handleCancel}
-              disabled={
-                disabled || versionLoading || latestVersion === selectedVersion
+            {versionSegments.map((segment: VersionSegment) => {
+              if (segment.type === 'committed') {
+                const version = segment.version;
+                return renderVersionRow(
+                  version.versionId,
+                  parseDate(version.lastModified),
+                  version.isLatest,
+                  version.comment,
+                  undefined,
+                  version.comment
+                    ? 'Save new version' // Hardcoding this so it can be translated by Localize
+                    : lab2I18n.saveCurrentVersion()
+                );
+              } else {
+                // Auto-save group
+                const {versions, groupIndex} = segment;
+                const isCollapsed = collapsedGroups.has(groupIndex);
+                const hasMultipleVersions = versions.length > 1;
+
+                return (
+                  <React.Fragment key={`group-${groupIndex}`}>
+                    {hasMultipleVersions && (
+                      <Button
+                        className={moduleStyles.collapseButton}
+                        text={
+                          isCollapsed
+                            ? `Show ${versions.length} auto-saves`
+                            : `Hide ${versions.length} auto-saves`
+                        }
+                        iconLeft={{
+                          iconName: isCollapsed ? 'angles-down' : 'angles-up',
+                        }}
+                        color="black"
+                        size="xs"
+                        type="tertiary"
+                        aria-expanded={!isCollapsed}
+                        onClick={() => toggleGroupCollapsed(groupIndex)}
+                        disabled={disabled}
+                      />
+                    )}
+                    {!isCollapsed &&
+                      versions.map(version =>
+                        renderVersionRow(
+                          version.versionId,
+                          parseDate(version.lastModified),
+                          version.isLatest,
+                          version.comment,
+                          moduleStyles.autoSaveRow,
+                          undefined
+                        )
+                      )}
+                  </React.Fragment>
+                );
               }
-              className={moduleStyles.versionButton}
-              type={'secondary'}
-              color="gray"
-            />
-            {!viewAsUserId && (
-              <Button
-                text={commonI18n.restore()}
-                size={'s'}
-                onClick={restoreSelectedVersion}
-                disabled={
-                  disabled ||
-                  versionLoading ||
-                  latestVersion === selectedVersion
-                }
-                className={moduleStyles.versionButton}
-                type={'primary'}
-              />
+            })}
+            {renderVersionRow(
+              INITIAL_VERSION_ID,
+              lab2I18n.initialVersion(),
+              latestVersion === INITIAL_VERSION_ID,
+              undefined,
+              undefined,
+              undefined
             )}
           </div>
         </div>
-      )}
-      {isLatestVersion(selectedVersion) && !viewAsUserId && (
-        <SaveVersionPanel
-          projectSources={projectSources}
-          onSuccess={handleSaveVersionSuccess}
-          versionLoading={versionLoading}
-          disabled={disabled}
-        />
       )}
     </div>
   );

@@ -38,7 +38,7 @@ class StatsigReporter {
         ? window.oneTrustPromise
         : Promise.resolve(); // Default for environments without OneTrust (tests)
     this.readyPromise = oneTrustPromise.then(() => {
-      this.initializeAfterConsent();
+      return this.initializeAfterConsent();
     });
   }
 
@@ -86,7 +86,12 @@ class StatsigReporter {
     };
 
     this.ready = true;
-    this.initialize(this.api_key, this.user, this.options);
+    this.initializedPromise = this.initialize(
+      this.api_key,
+      this.user,
+      this.options
+    );
+    return this.initializedPromise;
   }
 
   // This user object will potentially update via a setUserProperties call
@@ -175,6 +180,12 @@ class StatsigReporter {
     return (
       this.statsigClient.getExperiment(name).value[parameter] ?? defaultValue
     );
+  }
+
+  // Returns a promise that resolves with the experiment result
+  async getIsInExperimentAsync(name, parameter, defaultValue) {
+    await this.readyPromise;
+    return this.getIsInExperiment(name, parameter, defaultValue);
   }
 
   /**

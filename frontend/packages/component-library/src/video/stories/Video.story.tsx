@@ -1,4 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {screen as shadowScreen} from 'shadow-dom-testing-library';
 import {within, expect, userEvent} from 'storybook/test';
 
 import Video from '../index';
@@ -33,7 +34,13 @@ export const DefaultVideo: Story = {
     await expect(playButton).toBeVisible();
     await userEvent.click(playButton);
 
-    const video = await canvas.findByTitle("What Most Schools Don't Teach");
+    // react-player renders the youtube iframe inside a shadow root
+    //     // but it does need to have the right title for a11y
+    const video = await shadowScreen.findByShadowTitle(
+      "What Most Schools Don't Teach",
+      {},
+      {timeout: 15000},
+    );
 
     // check if video is visible
     await expect(video).toBeVisible();
@@ -99,6 +106,14 @@ export const VideoWithFallback: Story = {
 
     // check if download button is visible
     await expect(download).toBeVisible();
+
+    // react-player renders the youtube iframe inside a shadow root
+    //     // but it does need to have the right title for a11y
+    await shadowScreen.findByShadowTitle(
+      "What Most Schools Don't Teach",
+      {},
+      {timeout: 15000},
+    );
   },
 };
 

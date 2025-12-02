@@ -1,3 +1,4 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import React from 'react';
 
 import {TeachingStyle} from './../../personalization_types';
@@ -17,6 +18,13 @@ const PersonalizationResults: React.FC<PersonalizationResultsProps> = ({
 }) => {
   return (
     <div className={style.revealContainer}>
+      <CloseButton
+        className={style.closeButton}
+        aria-label="Close Personalization Results"
+        onClick={() => {
+          window.location.href = '/home';
+        }}
+      />
       <PersonalizationResultsHeader teachingStyle={teachingStyle} />
       <div className={style.revealDetailsContainer}>
         <PersonalizationResultsColumnSuperpowers

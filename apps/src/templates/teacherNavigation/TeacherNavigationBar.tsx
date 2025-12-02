@@ -241,21 +241,27 @@ const TeacherNavigationBar: React.FC<{
   );
 
   const aiContext = () => {
+    const onProgressPage =
+      currentPathObject?.absoluteUrl &&
+      currentPathObject.url === TEACHER_NAVIGATION_PATHS.progress;
     if (selectedSection?.courseId && selectedSection?.unitId)
       return {
-        type: AiDiffContext.COURSE,
+        type: onProgressPage ? AiDiffContext.PROGRESS : AiDiffContext.UNIT,
         courseId: selectedSection.courseId,
         unitId: selectedSection.unitId,
+        sectionId: selectedSection.id,
       };
     if (selectedSection?.courseId)
       return {
-        type: AiDiffContext.COURSE,
+        type: onProgressPage ? AiDiffContext.PROGRESS : AiDiffContext.COURSE,
         courseId: selectedSection.courseId,
+        sectionId: selectedSection.id,
       };
     if (selectedSection?.unitId)
       return {
-        type: AiDiffContext.UNIT,
+        type: onProgressPage ? AiDiffContext.PROGRESS : AiDiffContext.UNIT,
         unitId: selectedSection.unitId,
+        sectionId: selectedSection.id,
       };
     return {
       type: AiDiffContext.GENERAL,

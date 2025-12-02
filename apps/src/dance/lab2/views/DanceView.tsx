@@ -52,6 +52,7 @@ import {
 } from '@cdo/apps/dance/types';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -69,8 +70,6 @@ import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
 import localization from '@cdo/apps/localization';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {defaultMetadata} from '@cdo/apps/music/DefaultMusic';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
 import usePlaybackUpdate from '@cdo/apps/music/views/hooks/usePlaybackUpdate';
@@ -111,6 +110,7 @@ const DanceView: React.FunctionComponent<{
   levelProperties: DanceLevelProperties;
 }> = ({levelProperties}) => {
   const dispatch = useAppDispatch();
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
 
   const isRunning = useAppSelector(state => state.dance.isRunning);
   const userType = useAppSelector(state => state.currentUser.userType);
@@ -124,8 +124,6 @@ const DanceView: React.FunctionComponent<{
   const hasRun = useAppSelector(state => state.dance.hasRun);
   const hasEdited = useAppSelector(state => state.dance.hasEdited);
   const isLoading = useAppSelector(state => state.dance.isLoading);
-  const signedIn = useAppSelector(state => state.currentUser.signInState);
-  const scriptName = useAppSelector(state => state.progress.scriptName);
 
   const {
     currentSources,
@@ -134,10 +132,24 @@ const DanceView: React.FunctionComponent<{
     setReinitializationHandler,
     startOver,
   } = useSources<DanceProjectSources>();
+
+  const sourcesRef = useRef(currentSources);
+  useEffect(() => {
+    sourcesRef.current = currentSources;
+  }, [currentSources]);
+
+  const mergeSources = useCallback(
+    (patch: Partial<DanceProjectSources>, forceSave = false) => {
+      const next = {...sourcesRef.current, ...patch};
+      updateSources(next, forceSave);
+    },
+    [updateSources]
+  );
+
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<GoogleBlockly.Workspace | null>(null);
 
-  const updateBlocklyFlyout = useCallback(
+  const onFlyoutGenerated = useCallback(
     (toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo) => {
       const currentWorkspace = workspace.current;
       if (currentWorkspace && currentWorkspace.rendered) {
@@ -234,12 +246,11 @@ const DanceView: React.FunctionComponent<{
   };
 
   const turnOffFilter = useCallback(() => setFilterOn(false), []);
-
   const onSetSong = useCallback(
     (songId: string) => {
-      updateSources({...currentSources, selectedSong: songId});
+      mergeSources({selectedSong: songId});
     },
-    [updateSources, currentSources]
+    [mergeSources]
   );
 
   const saveBlocks = useCallback(
@@ -250,25 +261,12 @@ const DanceView: React.FunctionComponent<{
       const blocks = Blockly.serialization.workspaces.save(
         workspace.current
       ) as BlocklySource;
-      updateSources({...currentSources, source: blocks}, forceSave);
+      mergeSources({source: blocks}, forceSave);
     },
-    [currentSources, updateSources]
+    [mergeSources]
   );
 
   const runProgram = useCallback(async () => {
-    if (!hasRun) {
-      const eventName = levelProperties.isProjectLevel
-        ? EVENTS.PROJECT_ACTIVITY
-        : EVENTS.LEVEL_ACTIVITY;
-
-      analyticsReporter.sendEvent(eventName, {
-        signedIn: signedIn,
-        unitName: scriptName,
-        levelId: levelProperties.id,
-        levelName: levelProperties.name,
-      });
-    }
-
     if (!programExecutor.current || !metadataToUse || !workspace.current) {
       return;
     }
@@ -284,21 +282,11 @@ const DanceView: React.FunctionComponent<{
     dispatch(setRunIsStarting(false));
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
+    logLevelActivity();
     saveBlocks(true);
 
     progressManager?.resetValidation();
-  }, [
-    hasRun,
-    metadataToUse,
-    dispatch,
-    saveBlocks,
-    progressManager,
-    levelProperties.isProjectLevel,
-    levelProperties.id,
-    levelProperties.name,
-    signedIn,
-    scriptName,
-  ]);
+  }, [metadataToUse, dispatch, saveBlocks, progressManager, logLevelActivity]);
 
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
@@ -463,22 +451,19 @@ const DanceView: React.FunctionComponent<{
       if (guideMode === 'aiCodeGenerate') {
         Blockly.extraScrollHeight = 250;
       }
-      const toolboxFromStorage = sessionStorage.getItem(
-        `flyout-${levelProperties.id}`
-      );
-      // GenerateDance levels depend upon a generated toolbox.
-      if (toolboxFromStorage) {
+      const toolboxDefinition = currentSources.toolboxDefinition;
+      if (toolboxDefinition) {
         try {
-          const toolboxDefinition = JSON.parse(toolboxFromStorage);
-          updateBlocklyFlyout(toolboxDefinition);
+          onFlyoutGenerated(toolboxDefinition);
         } catch {}
       }
     }
   }, [
     currentSources.source,
+    currentSources.toolboxDefinition,
     guideMode,
-    levelProperties.id,
-    updateBlocklyFlyout,
+    onFlyoutGenerated,
+    currentSources,
   ]);
 
   useEffect(() => {
@@ -488,13 +473,19 @@ const DanceView: React.FunctionComponent<{
       return;
     }
     // In case there is no song set in the current sources, set it to the default.
-    if (!currentSources.selectedSong) {
+    if (!currentSources.selectedSong && !usingMusicProject) {
       const defaultSong = levelProperties.defaultSong;
       const songToUse =
         defaultSong && songData[defaultSong] ? defaultSong : songKeys[0];
-      updateSources({...currentSources, selectedSong: songToUse});
+      mergeSources({selectedSong: songToUse});
     }
-  }, [songData, currentSources, updateSources, levelProperties.defaultSong]);
+  }, [
+    songData,
+    currentSources,
+    mergeSources,
+    levelProperties.defaultSong,
+    usingMusicProject,
+  ]);
 
   // Load the selected song whenever it changes in project sources.
   useEffect(() => {
@@ -733,13 +724,13 @@ const DanceView: React.FunctionComponent<{
               runProgram={runProgram}
               resetProgram={resetProgram}
               updateSources={resultBlockly => {
-                updateSources({
-                  ...currentSources,
-                  source: resultBlockly,
+                mergeSources({
+                  source: resultBlockly.workspaceSerialization,
+                  toolboxDefinition: resultBlockly.flyoutDefinition,
                 });
               }}
               startOver={startOver}
-              updateBlocklyFlyout={updateBlocklyFlyout}
+              onFlyoutGenerated={onFlyoutGenerated}
             />
           )}
       </div>

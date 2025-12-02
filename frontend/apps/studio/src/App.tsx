@@ -1,13 +1,16 @@
 // Ensure critical fonts are loaded very early.
 import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/component-library-styles/colors.scss';
+
 import {ThemeProvider, Typography} from '@mui/material';
-import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
 
 import {LinkButton} from '@code-dot-org/component-library/button';
 import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
+
 import Bootstrap from './modules/bootstrap';
+
+import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
 
 const SIGNED_OUT_MENU_ITEMS = [
   {label: 'Learn', href: '/students'},

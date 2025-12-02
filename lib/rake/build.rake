@@ -26,8 +26,13 @@ namespace :build do
       RakeUtils.yarn_install
 
       ChatClient.log 'Building <b>apps</b>...'
-      npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
-      RakeUtils.system "npm run #{npm_target}"
+      js_build_command = get_js_build_command
+      if ENV['PROFILE_APPS_BUILD']
+        RakeUtils.system_stream_output js_build_command
+      else
+        RakeUtils.system js_build_command
+      end
+
       File.write(commit_hash, calculate_apps_commit_hash)
 
       if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
@@ -127,7 +132,7 @@ namespace :build do
         #
         # The sequencing described here is the best for mitigating any issues
         # that may arise when that best practice is not followed.
-        unless rack_env?(:development)
+        if CDO.active_job_queue_adapter == :delayed_job
           ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
           RakeUtils.system_stream_output 'bundle', 'exec', bin_dir('restart-active-job-workers')
         end
@@ -140,8 +145,30 @@ namespace :build do
         # will be unable to find them.
         raise "do not optimize rails assets without optimized webpack assets" unless CDO.optimize_webpack_assets
 
-        ChatClient.log 'Cleaning <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:clean'
+        # Quick check to see if there are old assets to clean.
+        # This saves about 60 seconds during UI test setup in CI.
+        #
+        # We use webpack manifest files as a proxy because a new one is added
+        # any time any js file changes, thus it is very likely to change on
+        # every build. If there are fewer than 2 manifest files, we can safely
+        # guess that there are no old asset versions to clean, so we can skip
+        # the expensive assets:clean task.
+        #
+        # This assumption is "safe" because if we are wrong and there are old
+        # assets to clean, the problem will be corrected by the next run of
+        # assets:clean after the next js file is modified.
+        manifest_count = Dir.glob(dashboard_dir('public/assets/js/manifest-*.json')).size
+
+        # rake assets:clean keeps 2 copies of rails assets by default. To future
+        # proof against this default changing, set the number explicitly here.
+        ASSETS_TO_KEEP = 2
+
+        if manifest_count < ASSETS_TO_KEEP
+          ChatClient.log "Skipping assets:clean - only #{manifest_count} webpack manifest(s) found"
+        else
+          ChatClient.log 'Cleaning <b>dashboard</b> assets...'
+          RakeUtils.rake "assets:clean[#{ASSETS_TO_KEEP}]"
+        end
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:precompile', '--quiet'
       end
@@ -210,4 +237,18 @@ end
 
 def calculate_apps_commit_hash
   RakeUtils.git_folder_hash(*apps_build_trigger_paths)
+end
+
+def get_js_build_command
+  if CDO.optimize_webpack_assets
+    # Skip clean step in CI to take advantage of cached build artifacts
+    if ENV['CI']
+      'yarn build:dist'
+    else
+      # Run npm commands separately to ensure NODE_OPTIONS are set correctly for the build step.
+      'yarn clean && yarn build:dist'
+    end
+  else
+    'yarn build'
+  end
 end
