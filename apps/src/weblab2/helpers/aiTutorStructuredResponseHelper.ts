@@ -249,12 +249,12 @@ export const getMergedAiTutorCodeWithSource = (
     return 1 + getFolderDepth(folder.parentId);
   };
 
-  // Create copy of the source. Set openFiles to empty array to close all files for now.
+  // Create copy of the source.
   const updatedSource: MultiFileSource = {
     ...source,
     files: {},
     folders: {...source.folders},
-    openFiles: [],
+    openFiles: [...(source.openFiles || [])],
   };
   // Set all files as inactive by creating new file objects.
   Object.keys(source.files).forEach(fileId => {

@@ -81,7 +81,28 @@ export const useAiTutorResponseSchemaSettings = (
               ...firstAiUpdatedHtmlFile,
               active: true,
             };
-            mergedSourceVersion.openFiles = [firstAiUpdatedHtmlFile.id];
+            // Get other AI file ids (excluding firstAiUpdatedHtmlFile).
+            const otherAiFileIds = aiTutorVersionFiles
+              .filter(file => file.id !== firstAiUpdatedHtmlFile.id)
+              .map(file => file.id);
+
+            // Get all AI file ids for deduplication.
+            const allAiFileIds = new Set([
+              firstAiUpdatedHtmlFile.id,
+              ...otherAiFileIds,
+            ]);
+
+            // Filter existing openFiles to remove any that will be added from AI files.
+            const existingOpenFilesFiltered = (
+              mergedSourceVersion.openFiles || []
+            ).filter(id => !allAiFileIds.has(id));
+
+            // Update openFiles: AI HTML file first, then other AI files, then existing open files.
+            mergedSourceVersion.openFiles = [
+              firstAiUpdatedHtmlFile.id,
+              ...otherAiFileIds,
+              ...existingOpenFilesFiltered,
+            ];
             const folderPath = getFolderPath(
               firstAiUpdatedHtmlFile.folderId,
               mergedSourceVersion.folders
