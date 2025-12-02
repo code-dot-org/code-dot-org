@@ -93,6 +93,9 @@ class Section < ApplicationRecord
   has_many :section_hidden_scripts
   has_many :code_review_groups
 
+  has_many :aidiff_artifact_associations, dependent: :destroy
+  has_many :aidiff_artifacts, through: :aidiff_artifact_associations
+
   # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
   # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
   alias_attribute :lesson_extras, :stage_extras
