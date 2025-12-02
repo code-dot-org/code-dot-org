@@ -10,18 +10,19 @@ module AichatSafetyHelper
 
     # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}
     # We currently use OpenAI for content moderation.
-    def find_toxicity(text, level_id)
-      details = openai_safety_check(text, level_id)
+    def find_toxicity(text, level_id, role)
+      details = openai_safety_check(text, level_id, role)
       {text: text, blocked_by: 'openai', details: details} if details
     end
 
     # Used to check safety content given text with the given moderation system prompt.
-    private def openai_safety_check(text, level_id)
+    private def openai_safety_check(text, level_id, role)
       details = nil
       start_time = Time.now
       report_openai_safety_check("Start")
       attempts = 0
       input = safety_check_input(text, level_id)
+      output_type = 'Unstructured'
 
       # Retry only on network-related exceptions
       response = Retryable.retryable(
@@ -29,20 +30,41 @@ module AichatSafetyHelper
         on: [Net::OpenTimeout, Net::ReadTimeout, SocketError, Errno::ECONNRESET]
       ) do
         attempts += 1
-        client.request_chat_completion(input, 1)
+        start_time_unstructured = Time.now
+        begin
+          client.request_chat_completion(input, 1)
+        ensure
+          duration = Time.now - start_time_unstructured
+          report_detailed_latency(duration, output_type, role)
+        end
       end
       raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
 
-      evaluation = JSON.parse(response.body)['output'][0]['content'][0]['text']
+      body = JSON.parse(response.body)
+      token_count = body.dig('usage', 'completion_tokens') || 0
+      report_token_usage(token_count, output_type, role)
+
+      evaluation = body['output'][0]['content'][0]['text']
       unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
         report_openai_safety_check("InvalidResponse")
+        output_type = 'Structured'
         attempts +=1
 
-        # Fallback to structured call (non-retryable)
-        response = client.request_chat_completion(input, 0, options: {text: structured_response_format})
+        start_time_structured = Time.now
+        begin
+          # Fallback to structured call (non-retryable)
+          response = client.request_chat_completion(input, 0, options: {text: structured_response_format})
+        ensure
+          duration = Time.now - start_time_structured
+          report_detailed_latency(duration, output_type, role)
+        end
+
         raise "OpenAI structured request failed with status #{response.code}: #{response.body}" unless response.success?
 
         body = JSON.parse(response.body)
+        token_count = body.dig('usage', 'completion_tokens') || 0
+        report_token_usage(token_count, output_type, role)
+
         raw_content = body.dig("output", 0, "content", 0, "text")
 
         begin
@@ -61,6 +83,7 @@ module AichatSafetyHelper
       end
 
       if evaluation == 'INAPPROPRIATE'
+        report_toxicity_detected(output_type, role)
         details = {evaluation: evaluation}
       end
 
@@ -169,10 +192,64 @@ module AichatSafetyHelper
         ]
       )
     end
+
+    private def report_detailed_latency(latency, output_type, role)
+      Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
+        [
+          {
+            metric_name: "AichatSafety.Openai.Latency.Detailed",
+            value: latency,
+            unit: 'Seconds',
+            timestamp: Time.now,
+            dimensions: [
+              {name: 'Environment', value: CDO.rack_env},
+              {name: 'OutputType', value: output_type},
+              {name: 'Role', value: role},
+            ]
+          }
+        ]
+      )
+    end
+
+    private def report_token_usage(count, output_type, role)
+      Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
+        [
+          {
+            metric_name: "AichatSafety.Openai.CompletionTokens",
+            value: count,
+            unit: 'Count',
+            timestamp: Time.now,
+            dimensions: [
+              {name: 'Environment', value: CDO.rack_env},
+              {name: 'OutputType', value: output_type},
+              {name: 'Role', value: role},
+            ]
+          }
+        ]
+      )
+    end
+
+    private def report_toxicity_detected(output_type, role)
+      Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
+        [
+          {
+            metric_name: "AichatSafety.Openai.ToxicityDetected",
+            value: 1,
+            unit: 'Count',
+            timestamp: Time.now,
+            dimensions: [
+              {name: 'Environment', value: CDO.rack_env},
+              {name: 'OutputType', value: output_type},
+              {name: 'Role', value: role},
+            ]
+          }
+        ]
+      )
+    end
   end
 
   class StubbedToxicityDetector
-    def find_toxicity(text, _)
+    def find_toxicity(text, _, _)
       # Note that it's important that we use the word "Damn" here, as our UI tests specifically use this word
       # so that we can use a stubbed version of our toxicity detection service in CI environments (ie, Drone).
       text == 'Damn' ?
@@ -181,10 +258,10 @@ module AichatSafetyHelper
     end
   end
 
-  def self.find_toxicity(text, level_id)
+  def self.find_toxicity(text, level_id, role)
     # Stubbed toxicity detection allows UI tests (without the roundtrip to third-party moderation services) to run in CI environments
     Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services ?
-      StubbedToxicityDetector.new.find_toxicity(text, nil) :
-      ToxicityDetector.new.find_toxicity(text, level_id)
+      StubbedToxicityDetector.new.find_toxicity(text, nil, nil) :
+      ToxicityDetector.new.find_toxicity(text, level_id, role)
   end
 end
