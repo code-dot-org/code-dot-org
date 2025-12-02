@@ -5,6 +5,8 @@ require 'test_helper'
 class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
+  self.vcr_cassette_library_dir = HocLegacy::Engine.root.join('test/fixtures/vcr_cassettes')
+
   let(:tutorial_code) {'mc'}
   let(:encoded_tutorial_code) {CGI.escape(Base64.urlsafe_encode64(tutorial_code))}
   let(:student_name) {'Student Name'}

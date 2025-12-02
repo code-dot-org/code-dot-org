@@ -5,16 +5,12 @@ require 'test_helper'
 class HocLegacy::TutorialsTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
+  self.vcr_cassette_library_dir = HocLegacy::Engine.root.join('test/fixtures/vcr_cassettes')
+
   let(:tutorial_code) {'mc'}
 
   def tutorials_cache
     described_class.send(:cache).read(described_class::CACHE_KEY)
-  end
-
-  setup do
-    VCR.configure do |config|
-      config.cassette_library_dir = dashboard_engines_dir('hoc_legacy', 'test', 'fixtures', 'vcr_cassettes')
-    end
   end
 
   around do |test|
