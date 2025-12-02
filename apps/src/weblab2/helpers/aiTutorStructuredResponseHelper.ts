@@ -4,7 +4,7 @@ import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
-const getAnswerJsonSchema = (): JsonObjectSchema => {
+const getAnswerJsonSchemaCopyPaste = (): JsonObjectSchema => {
   return {
     type: 'object',
     properties: {
@@ -124,13 +124,15 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
             sourceCode: {
               type: 'string',
             },
-            filename: {type: 'string'},
+            name: {type: 'string'},
+            id: {type: 'string'},
+            folderId: {type: 'string'},
           },
-          required: ['language', 'sourceCode', 'filename'],
+          required: ['language', 'sourceCode', 'name', 'id', 'folderId'],
           additionalProperties: false,
         },
         description:
-          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. The list can be empty. Code should be formatted with appropriate newlines and indentation.  When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation. If the language is javascript or js, then the student will need to copy and paste this code into their project.',
+          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. The list can be empty. Code should be formatted with appropriate newlines and indentation.  When providing modifications to student code, provide the entire contents of the file, the id and folderId of the file being updated. If the file is a new file and not currently in the the student code, then the id is "new", and the folderId is "0".The list can be empty. Code should be formatted with appropriate newlines and indentation. If the language is javascript or js, then the student will need to copy and paste this code into their project.',
       },
       explanation: {
         type: 'string',
@@ -167,7 +169,7 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
 export const copyCodeJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {
-    answer: getAnswerJsonSchema(),
+    answer: getAnswerJsonSchemaCopyPaste(),
   },
   required: ['answer'],
   additionalProperties: false,
@@ -184,7 +186,7 @@ export const acceptRejectJsonSchema: JsonObjectSchema = {
 
 // Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchema().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const formatExplanationResponse = (response: any): string => {
+export const formatCopyPasteResponse = (response: any): string => {
   let formattedResponse = '';
   if (response.assumptions) {
     formattedResponse += `**Assumptions**\n\n${response.assumptions}\n\n`;
@@ -229,8 +231,10 @@ export const formatAcceptRejectResponse = (
     explanation: response.explanation || '',
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code: response.code.map((codeFile: any) => ({
-      name: codeFile.filename,
+      name: codeFile.name,
       contents: codeFile.sourceCode,
+      id: codeFile.id,
+      folderId: codeFile.folderId,
     })),
     answerType: response.tutorMode,
   };

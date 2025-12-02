@@ -15,7 +15,7 @@ import {
   acceptRejectJsonSchema,
   copyCodeJsonSchema,
   formatAcceptRejectResponse,
-  formatExplanationResponse,
+  formatCopyPasteResponse,
   getMergedAiTutorCodeWithSource,
 } from '../helpers/aiTutorStructuredResponseHelper';
 import {setAiFilePathToPreview, setAiTutorVersionFiles} from '../weblab2Redux';
@@ -48,7 +48,7 @@ export const useAiTutorResponseSchemaSettings = (
           );
           const answerType = formattedResponse.answerType;
           if (answerType !== 'Build HTML' && answerType !== 'Build CSS') {
-            return formatExplanationResponse(jsonResponse.answer);
+            return formatCopyPasteResponse(jsonResponse.answer);
           }
           dispatch(setViewingAiTutorVersion(true));
           // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
@@ -133,7 +133,7 @@ export const useAiTutorResponseSchemaSettings = (
           console.log('🤖: Tutor response (in jsonSchema callback):', {
             jsonResponse,
           });
-          return formatExplanationResponse(jsonResponse.answer);
+          return formatCopyPasteResponse(jsonResponse.answer);
         },
       };
     }
