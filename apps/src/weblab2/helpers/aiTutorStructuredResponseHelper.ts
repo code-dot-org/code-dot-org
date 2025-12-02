@@ -1,6 +1,7 @@
+import {validateFileName} from '@codebridge/utils';
+
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
-import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
@@ -212,6 +213,8 @@ export const formatCopyPasteResponse = (response: any): string => {
 };
 
 type AiTutorCodeFile = {
+  id: string;
+  folderId: string;
   name: string;
   contents: string;
 };
@@ -227,8 +230,15 @@ export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response: any
 ): AcceptRejectFormattedResponse => {
+  let formattedExplanation = '';
+  if (response.explanation) {
+    formattedExplanation += `**Explanation**\n\n${response.explanation}\n\n`;
+  }
+  if (response.questions) {
+    formattedExplanation += `**Questions**\n\n${response.questions}\n\n`;
+  }
   return {
-    explanation: response.explanation || '',
+    explanation: formattedExplanation,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code: response.code.map((codeFile: any) => ({
       name: codeFile.name,
@@ -245,14 +255,6 @@ export const getMergedAiTutorCodeWithSource = (
   source: MultiFileSource,
   aiTutorVersionFiles: ProjectFile[]
 ): MultiFileSource => {
-  // Helper function to get folder depth (distance from root)
-  const getFolderDepth = (folderId: string): number => {
-    if (folderId === '0') return 0; // Root folder
-    const folder = source.folders[folderId];
-    if (!folder) return 0;
-    return 1 + getFolderDepth(folder.parentId);
-  };
-
   // Create copy of the source.
   const updatedSource: MultiFileSource = {
     ...source,
@@ -268,55 +270,70 @@ export const getMergedAiTutorCodeWithSource = (
     };
   });
 
-  // For each AI code file, find and replace the matching file if there is a matching file.
+  // For each AI code file, find and replace the updated file if the file already exists in student code.
+  // If the AI code file is a new file, add it to updatedSource.
   code.forEach((aiFile: AiTutorCodeFile) => {
-    // First check active file is the same as the AI code file.
-    const activeFile = getActiveFileForSource(source);
-    if (activeFile?.name === aiFile.name) {
-      // Active file is the same as the AI code file - replace it.
-      const aiTutorVersionFile: ProjectFile = {
-        ...updatedSource.files[activeFile.id],
-        contents: aiFile.contents,
-        isAiTutorVersionUpdated: true,
-      };
-      updatedSource.files[activeFile.id] = aiTutorVersionFile;
-      aiTutorVersionFiles.push(aiTutorVersionFile);
-      return;
+    let fileId;
+    // File id is 'new' so we are creating a new file.
+    if (aiFile.id === 'new') {
+      fileId = getNextFileId(Object.values(updatedSource.files));
+    } else {
+      // File id is not 'new' so we are updating an existing file.
+      fileId = aiFile.id;
+      // We need to validate the file name of the AI code file with the given file id.
+      // If the file name of the AI code file is the same as the file name in the student code,
+      // then we use the same file id.
+      if (updatedSource.files[aiFile.id]?.name === aiFile.name) {
+        fileId = aiFile.id;
+      } else {
+        // If the file name is different, then we need to create a new file with a different id.
+        fileId = getNextFileId(Object.values(updatedSource.files));
+        // Validate the file name of the AI code file.
+        const validateFileNameError = validateFileName({
+          fileName: aiFile.name,
+          folderId: aiFile.folderId,
+          projectFiles: updatedSource.files,
+          isStartMode: false,
+          validationFile: undefined,
+        });
+        if (validateFileNameError) {
+          // If the file name is invalid (e.g. duplicate), try placing in root folder if foldierId is not already the root folder.
+          if (aiFile.folderId !== DEFAULT_FOLDER_ID) {
+            aiFile.folderId = DEFAULT_FOLDER_ID;
+            const secondValidateFileNameError = validateFileName({
+              fileName: aiFile.name,
+              folderId: aiFile.folderId,
+              projectFiles: updatedSource.files,
+              isStartMode: false,
+              validationFile: undefined,
+            });
+            if (secondValidateFileNameError) {
+              // If the 2nd attempt for the file name is invalid (e.g. duplicate), skip the AI code file update.
+              // TODO: Log error via analyticss.
+              return;
+            }
+          } else {
+            // If the 1st attempt for the file name is invalid (e.g. duplicate), skip the AI code file update.
+            // TODO: Log error via analyticss.
+            return;
+          }
+        }
+      }
     }
-    // Find all files with matching name
-    const matchingFiles = Object.values(updatedSource.files).filter(
-      file => file.name === aiFile.name
-    );
 
-    if (matchingFiles.length === 0) {
-      // No matching file found, add a new file to updatedSource.
-      const newFileId = getNextFileId(Object.values(updatedSource.files));
-      updatedSource.files[newFileId] = {
-        id: newFileId,
-        name: aiFile.name,
-        contents: aiFile.contents,
-        folderId: DEFAULT_FOLDER_ID,
-        language: aiFile.name.split('.').pop() || '',
-        isAiTutorVersionCreated: true,
-      };
-      aiTutorVersionFiles.push(updatedSource.files[newFileId]);
-      return;
-    }
-
-    // Find the file closest to root (smallest folder depth).
-    const closestFile = matchingFiles.reduce((closest, current) => {
-      const closestDepth = getFolderDepth(closest.folderId);
-      const currentDepth = getFolderDepth(current.folderId);
-      return currentDepth < closestDepth ? current : closest;
-    });
     const aiTutorVersionFile: ProjectFile = {
-      ...closestFile,
+      id: fileId,
+      name: aiFile.name,
+      folderId: aiFile.folderId,
+      language: aiFile.name.split('.').pop() || '',
       contents: aiFile.contents,
-      isAiTutorVersionUpdated: true,
+      isAiTutorVersionUpdated: aiFile.id === 'new' ? false : true,
+      isAiTutorVersionCreated: aiFile.id === 'new' ? true : false,
     };
-    updatedSource.files[closestFile.id] = aiTutorVersionFile;
+    updatedSource.files[aiTutorVersionFile.id] = aiTutorVersionFile;
     aiTutorVersionFiles.push(aiTutorVersionFile);
   });
+
   // Sort AI-updated files by name alphabetically.
   aiTutorVersionFiles.sort((a, b) => a.name.localeCompare(b.name));
   return updatedSource;
