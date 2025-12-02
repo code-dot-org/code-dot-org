@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_11_25_234653) do
+ActiveRecord::Schema.define(version: 2025_11_19_161129) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2312,25 +2312,6 @@ ActiveRecord::Schema.define(version: 2025_11_25_234653) do
     t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end
 
-  create_table "teacher_notifications", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "title", null: false
-    t.text "description", null: false
-    t.string "icon_name"
-    t.string "icon_color"
-    t.json "href_links"
-    t.json "ai_prompts"
-    t.integer "priority", default: 0
-    t.datetime "expires_at"
-    t.datetime "read_at"
-    t.boolean "is_dismissed", default: false, null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id", "created_at"], name: "index_teacher_notifications_on_user_id_and_created_at"
-    t.index ["user_id", "is_dismissed"], name: "index_teacher_notifications_on_user_id_and_is_dismissed"
-    t.index ["user_id", "read_at"], name: "index_teacher_notifications_on_user_id_and_read_at"
-  end
-
   create_table "teacher_profiles", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "studio_person_id"
     t.datetime "created_at", null: false
@@ -2739,7 +2720,6 @@ ActiveRecord::Schema.define(version: 2025_11_25_234653) do
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations"
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
-  add_foreign_key "teacher_notifications", "users"
   add_foreign_key "teaching_profile_data", "users"
   add_foreign_key "user_data_retention_statuses", "users"
   add_foreign_key "user_facilitator_infos", "users"
