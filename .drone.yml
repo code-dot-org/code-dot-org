@@ -66,6 +66,7 @@ steps:
       # Then, count the number of files outside of the .git directory and compare to how many were
       # present in the cache. This is not a perfect check, but is much cheaper than computing a
       # checksum of all files and is likely to catch most instances of incomplete downloads.
+      - "rm apps/Gruntfile.js"
       - |
         if [ -f .cached-staging-build-file-count ]; then
           expected=$(cat .cached-staging-build-file-count)
@@ -187,6 +188,7 @@ steps:
       # Then, count the number of files outside of the .git directory and compare to how many were
       # present in the cache. This is not a perfect check, but is much cheaper than computing a
       # checksum of all files and is likely to catch most instances of incomplete downloads.
+      - "rm apps/Gruntfile.js"
       - |
         if [ -f .cached-staging-build-file-count ]; then
           expected=$(cat .cached-staging-build-file-count)
