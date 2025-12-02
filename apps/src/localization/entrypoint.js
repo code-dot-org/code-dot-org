@@ -161,7 +161,7 @@ function loadLocalize() {
     };
 
     // When the site loads, ensure the language selector has the correct value
-    document.addEventListener('DOMContentLoaded', () => {
+    const onDOMLoad = () => {
       const localeSelect =
         document.querySelector('#locale') ||
         document.querySelector("select[name='locale']");
@@ -180,7 +180,14 @@ function loadLocalize() {
         localeSelect.addEventListener('change', handleChange);
       }
       ensureSelector(cdoLanguage);
-    });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', onDOMLoad);
+    } else {
+      // 'interactive' or 'complete' — DOMContentLoaded has already fired
+      onDOMLoad();
+    }
 
     // Translate everything in the Blockly message pool
     ensureSelector(cdoLanguage);
