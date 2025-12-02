@@ -301,6 +301,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       setSelectedVersion(e.target.value);
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
       const isLatest = isLatestVersion(e.target.value);
+      // Find the version object to pass prop details to the loadVersion thunk.
       const version = versionList.find(v => v.versionId === e.target.value);
       if (!isLatest) {
         sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_VIEWED, {
