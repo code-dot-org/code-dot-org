@@ -6,8 +6,10 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
+import AiTutorVersionActions from '../aiTutorVersionActions/AiTutorVersionActions';
 import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
 
 import {Role} from './types';
@@ -21,6 +23,8 @@ interface ChatMessageProps {
   footer?: React.ReactNode;
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
+  isAiTutorVersion?: boolean;
+  isLastMessage?: boolean;
 }
 
 const codeCopiedAnalytics = (isTA: boolean) => () =>
@@ -46,8 +50,14 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   footer,
   isTA,
   messageStyle = 'default',
+  isAiTutorVersion = false,
+  isLastMessage = false,
 }) => {
   const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
+
+  const aiTutorVersionFiles = useAppSelector(
+    state => state.weblab2?.aiTutorVersionFiles || []
+  );
 
   return (
     <div
@@ -94,11 +104,18 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             }
           >
             {role === Role.ASSISTANT ? (
-              <SafeMarkdown
-                markdown={text}
-                rehypeMap={rehypeMap}
-                openExternalLinksInNewTab
-              />
+              <div className={moduleStyles.assistantMessageContent}>
+                <SafeMarkdown
+                  markdown={text}
+                  rehypeMap={rehypeMap}
+                  openExternalLinksInNewTab
+                />
+                {isAiTutorVersion &&
+                  isLastMessage &&
+                  aiTutorVersionFiles.length > 0 && (
+                    <AiTutorVersionActions files={aiTutorVersionFiles} />
+                  )}
+              </div>
             ) : (
               <p>{text}</p>
             )}
