@@ -8,6 +8,7 @@ import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import experiments from '@cdo/apps/util/experiments';
@@ -79,6 +80,8 @@ const Weblab2View: React.FC<
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
 
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
+
   const source = useAppSelector(
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
@@ -122,6 +125,12 @@ const Weblab2View: React.FC<
       dispatch(setHasRun(false));
     };
   }, [dispatch]);
+
+  useEffect(() => {
+    if (hasEdited) {
+      logLevelActivity();
+    }
+  }, [hasEdited, logLevelActivity]);
 
   useEffect(() => {
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));

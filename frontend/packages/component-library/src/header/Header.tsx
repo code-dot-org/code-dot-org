@@ -7,7 +7,7 @@ import {
   ListItem,
   Box,
 } from '@mui/material';
-import React from 'react';
+import {FunctionComponent} from 'react';
 
 interface MenuItem {
   label: string;
@@ -58,11 +58,11 @@ const styles = {
     '&:hover': {
       backgroundColor: 'var(--background-brand-teal-strong)',
     },
-    fontSize: 'var(--font-size-body-sm)',
+    fontWeight: 'normal',
   },
 };
 
-const Header: React.FC<HeaderProps> = ({
+const Header: FunctionComponent<HeaderProps> = ({
   logoImageUrl,
   brandName,
   menuItems,
@@ -97,6 +97,7 @@ const Header: React.FC<HeaderProps> = ({
                   <Link
                     href={item.href}
                     color="inherit"
+                    variant="body3"
                     sx={styles.menuListItemLink}
                   >
                     {item.label}

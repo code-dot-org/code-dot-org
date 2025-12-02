@@ -61,15 +61,14 @@ function Certificate(props) {
 
   const personalizeHocCertificate = async session => {
     $.ajax({
-      url: studio('/api/hour/certificate'),
-      type: 'post',
+      url: studio(`/api/hour/certificates/${session}`),
+      type: 'patch',
       dataType: 'json',
       headers: {
         'X-CSRF-Token': await getAuthenticityToken(),
       },
       data: {
-        session_s: session,
-        name_s: nameInputRef.current.value,
+        name: nameInputRef.current.value,
       },
     }).done(response => {
       if (response.certificate_sent) {

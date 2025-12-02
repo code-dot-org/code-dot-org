@@ -1,5 +1,4 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading3} from '@code-dot-org/component-library/typography';
 import * as GoogleBlockly from 'blockly/core';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
@@ -7,8 +6,10 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
 import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibChoices,
@@ -19,7 +20,7 @@ import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instruction
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
@@ -67,9 +68,12 @@ interface GenerateCodeProps {
   blockCount: number;
   runProgram: () => void;
   resetProgram: () => void;
-  updateSources: (newSources: WorkspaceSerialization) => void;
+  updateSources: (newSources: {
+    workspaceSerialization: WorkspaceSerialization;
+    flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  }) => void;
   startOver: () => void;
-  updateBlocklyFlyout: (
+  onFlyoutGenerated: (
     toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo
   ) => void;
 }
@@ -87,7 +91,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   resetProgram,
   updateSources,
   startOver,
-  updateBlocklyFlyout,
+  onFlyoutGenerated,
 }) => {
   const [aiGenerateState, setAiGenerateState] = useState<
     | 'none'
@@ -97,6 +101,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     | 'listened'
     | 'editing'
     | 'edited'
+    | 'playing'
   >('none');
 
   const getInitialChoices = () => {
@@ -112,7 +117,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     getInitialChoices()
   );
 
-  const [promptText, setPromptText] = useState('');
+  const [localizedPromptText, setLocalizedPromptText] = useState('');
 
   useEffect(() => {
     // If there is already a generated dance when we begin, presumably
@@ -124,7 +129,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     if (aiGenerateState === 'none' && blockCount > 1) {
       setAiGenerateState('edited');
     } else if (
-      ['editing', 'edited'].includes(aiGenerateState) &&
+      ['listened', 'editing', 'edited'].includes(aiGenerateState) &&
       blockCount <= 1
     ) {
       resetProgram();
@@ -135,7 +140,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('none');
     setAdlibChoices(getInitialChoices());
-    setPromptText('');
+    setLocalizedPromptText('');
   });
 
   const generateDance = useCallback(
@@ -169,13 +174,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       );
       await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-      updateSources(workspaceSerialization);
-      updateBlocklyFlyout(flyoutDefinition);
-      const levelId = levelProperties.id;
-      localStorage.setItem(
-        `flyout-${levelId}`,
-        JSON.stringify(flyoutDefinition)
-      );
+      updateSources({workspaceSerialization, flyoutDefinition});
+      onFlyoutGenerated(flyoutDefinition);
       runProgram();
 
       setAiGenerateState('generated');
@@ -183,10 +183,9 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     [
       adlibChoices,
       blockDefinitions,
-      levelProperties.id,
       measures,
       runProgram,
-      updateBlocklyFlyout,
+      onFlyoutGenerated,
       updateSources,
     ]
   );
@@ -217,8 +216,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     setAdlibChoices({...choices});
   }, []);
 
-  const onAdlibTextChange = useCallback((text: string) => {
-    setPromptText(text);
+  const onAdlibTextChange = useCallback((_text: string, localized: string) => {
+    setLocalizedPromptText(localized);
   }, []);
 
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
@@ -233,9 +232,24 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     ? 'full'
     : undefined;
 
-  const parentProperties = useParentLevelProperties();
-  const isStandalone =
-    levelProperties.isProjectLevel || parentProperties?.isProjectLevel;
+  const guideWidth = aiGenerateState === 'playing' ? 'very-narrow' : 'normal';
+
+  const cornerIcon =
+    aiGenerateState === 'edited'
+      ? 'minimize'
+      : aiGenerateState === 'playing'
+      ? 'maximize'
+      : undefined;
+
+  const onCornerIconClick = useCallback(() => {
+    if (aiGenerateState === 'edited') {
+      setAiGenerateState('playing');
+    } else if (aiGenerateState === 'playing') {
+      setAiGenerateState('edited');
+    }
+  }, [aiGenerateState]);
+
+  const hasParent = !!useParentLevelProperties();
   const dispatch = useAppDispatch();
   const sublevelOnContinue = useCallback(() => {
     dispatch(
@@ -246,20 +260,38 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     );
   }, [dispatch, levelProperties.appName, levelProperties.id]);
 
+  const showTts =
+    levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
+
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  if (isReadOnly) {
+    return null;
+  }
+
   return (
-    <Guide id="generate-panel" modal={modal} position="bottom">
+    <Guide
+      id="generate-panel"
+      modal={modal}
+      width={guideWidth}
+      position="bottom"
+      cornerIcon={cornerIcon}
+      onCornerIconClick={onCornerIconClick}
+    >
       {aiGenerateState === 'none' && levelProperties.longInstructions && (
         <MainInstructionsContent
           instructionsText={levelProperties.longInstructions}
           markdownClassName={styles.markdown}
+          showTts={showTts}
         />
       )}
 
-      {aiGenerateState === 'generating' && (
-        <div>
-          <Heading3>Generating...</Heading3>
-          AI is generating code based on your prompt.
-        </div>
+      {['generating', 'generated'].includes(aiGenerateState) && (
+        <MainInstructionsContent
+          heading="Generating..."
+          content="AI is generating code based on your prompt."
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {['none', 'generating', 'generated'].includes(aiGenerateState) && (
@@ -294,13 +326,18 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {['listening', 'listened'].includes(aiGenerateState) && (
-        <div>
-          <Heading3>
-            {aiGenerateState === 'listening' && 'Take a look...'}
-            {aiGenerateState === 'listened' && 'Decide what to do next'}
-          </Heading3>
-          <div>AI generated code based on your prompt, "{promptText}"</div>
-        </div>
+        <MainInstructionsContent
+          heading={
+            aiGenerateState === 'listening'
+              ? 'Take a look...'
+              : aiGenerateState === 'listened'
+              ? 'Decide what to do next'
+              : ''
+          }
+          content={`AI generated code based on your prompt, "${localizedPromptText}"`}
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {aiGenerateState === 'listened' && (
@@ -313,8 +350,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             size="s"
             onClick={() => {
               startOver();
-              setAiGenerateState('none');
-              resetProgram();
               analyticsReporter.sendEvent(
                 EVENTS.DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
                 {levelPath: window.location.pathname}
@@ -345,8 +380,8 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              // Skip the 'editing' validation state for standalone projects.
-              setAiGenerateState(isStandalone ? 'edited' : 'editing');
+              // Skip the 'editing' state when showing the three tabs.
+              setAiGenerateState(hasParent ? 'edited' : 'editing');
               analyticsReporter.sendEvent(
                 EVENTS.DANCE_PARTY_GENERATE_CODE_USE_CODE_CLICKED,
                 {
@@ -361,27 +396,35 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {aiGenerateState === 'editing' && !isRunning && (
-        <div>
-          <Heading3>Modify the code</Heading3>
-          AI helped you get started. Now, edit the code to make it your own.
-        </div>
+        <MainInstructionsContent
+          heading="Modify the code"
+          content="AI helped you get started. Now, edit the code to make it your own."
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {aiGenerateState === 'editing' && isRunning && (
-        <div>
-          <Heading3>Modify the code</Heading3>
-          Try changing the code.
-        </div>
+        <MainInstructionsContent
+          heading="Modify the code"
+          content="Try changing the code."
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {aiGenerateState === 'edited' && (
         <>
-          <div>
-            <Heading3>Modify the code</Heading3>
-            {isStandalone
-              ? 'Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix.'
-              : "Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix. Click Finish when you're done."}
-          </div>
+          <MainInstructionsContent
+            heading="Modify the code"
+            content={
+              hasParent
+                ? 'Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix.'
+                : "Amazing moves! Keep editing, or use the tabs at the top to update your dancer design or music mix. Click Finish when you're done."
+            }
+            markdownClassName={styles.markdown}
+            showTts={showTts}
+          />
           <div className={styles.buttonRow}>
             <Button
               ariaLabel={'Back to prompt'}
@@ -391,8 +434,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               size="s"
               onClick={() => {
                 startOver();
-                setAiGenerateState('none');
-                resetProgram();
                 analyticsReporter.sendEvent(
                   EVENTS.DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
                   {levelPath: window.location.pathname}
@@ -400,7 +441,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
               }}
               className={styles.buttonWide}
             />
-            {!isStandalone && (
+            {hasParent && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.
@@ -409,12 +450,15 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 isRunning={false}
                 className={styles.buttonWide}
                 // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
-                onContinue={parentProperties ? sublevelOnContinue : undefined}
+                onContinue={sublevelOnContinue}
               />
             )}
           </div>
         </>
       )}
+
+      {aiGenerateState === 'playing' && <div>Keep playing!</div>}
+
       {/* Retain focus with a hidden button. */}
       {['generating', 'generated', 'listening', 'editing'].includes(
         aiGenerateState

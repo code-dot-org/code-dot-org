@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-25T15:24:20.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Reflection: Usability, Inclusion, and Trust",
+    "long_instructions": "Imagine a new user trying your app for the first time. What would be easy for them? What might still be confusing or hard? Name one future improvement you would make for usability or accessibility.",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-25 15:24:23 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

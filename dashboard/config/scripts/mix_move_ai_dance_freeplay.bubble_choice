@@ -12,3 +12,4 @@ custom_mode 'music_dance_ai'
 uses_lab2
 navigation_type 'next_level'
 finish_dialog 'hoai2025'
+hide_share_and_remix 'false'

@@ -46,14 +46,6 @@ end
 # Used by lesson plan generator.
 apt_package 'enscript'
 
-# Install dependencies required to sync content between our Code.org shared
-# Dropbox folder and our git repository only on the staging server. In the long
-# run, we'd like to have this happen in a separate environment independent of
-# any of our build pipeline servers; but for now, we default to staging.
-if node.chef_environment == 'staging'
-  include_recipe 'cdo-apps::dropbox_sync'
-end
-
 include_recipe 'cdo-python'
 
 # Debian-family packages for building Ruby C extensions
@@ -111,7 +103,8 @@ if node['cdo-secrets']["build_apps"] ||
     (node['cdo-apps']['daemon'] && %w[staging test adhoc].include?(node.chef_environment))
   include_recipe 'cdo-nodejs'
   include_recipe 'cdo-apps::google_chrome'
-  include_recipe 'cdo-apps::generate_pdf'
+  # TODO: Reenable this. Temporarily disabled because `yarn install` is somehow timing out after 3600s on full stack daemons.
+  # include_recipe 'cdo-apps::generate_pdf'
   apt_package 'parallel' # Used by apps/run-tests-in-parallel.sh
 end
 

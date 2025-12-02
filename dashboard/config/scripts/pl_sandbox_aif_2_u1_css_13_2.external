@@ -1,0 +1,86 @@
+name 'pl_sandbox_aif_2_U1-CSS-13-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Common CSS Properties
+
+####  CSS properties tell the computer how each HTML element should look and behave, including color, spacing, and layout that bring the page’s structure to life.
+
+<!-- 2x2 Flex Boxes (inline CSS only) -->
+<div style="font-size: 14pt; max-width: 1100px; margin: 20px auto;">
+
+  <!-- Top row (same width, larger) -->
+  <div style="display: flex; flex-wrap: nowrap; gap: 16px; margin-bottom: 16px;">
+    <!-- 🎨 Text & Color -->
+    <div style="flex: 1 1 0; background: #F2F2F2; border-radius: 12px; padding: 18px; box-shadow: 2px 4px 10px rgba(0,0,0,0.08);">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+        <span style="font-size: 20pt;">🎨</span>
+        <strong>Text &amp; Color</strong>
+      </div>
+      <ul style="margin: 0; padding-left: 18px; line-height: 1.5;font-size: 14pt;">
+        <li><code style="font-size: 14pt;">color</code> – text color (e.g., <code style="font-size: 14pt;">color: blue;</code>)</li><br>
+        <li><code style="font-size: 14pt;">background-color</code> – fill behind content (e.g., <code style="font-size: 14pt;">background-color: lightblue;</code>)</li>
+        <li><code style="font-size: 14pt;">font-size</code> – text size (e.g., <code style="font-size: 14pt;">font-size: 18px;</code>)</li><br>
+        <li><code style="font-size: 14pt;">font-family</code> – font choice (e.g., <code style="font-size: 14pt;">font-family: Arial, sans-serif;</code>)</li><br>
+        <li><code style="font-size: 14pt;">text-align</code> – text alignment (e.g., <code style="font-size: 14pt;">text-align: center;</code>)</li>
+      </ul>
+    </div>
+
+<!-- 📏 Spacing & Size -->
+<div style="flex: 1 1 0; background: #F2F2F2; border-radius: 12px; padding: 18px; box-shadow: 2px 4px 10px rgba(0,0,0,0.08);">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+        <span style="font-size: 20pt;">📏</span>
+        <strong>Spacing &amp; Size</strong>
+      </div>
+      <ul style="margin: 0; padding-left: 18px; line-height: 1.5;font-size: 14pt;">
+        <li><code style="font-size: 14pt;">margin</code> – space outside border (e.g., <code>margin: 20px;</code>)</li><br>
+        <li><code style="font-size: 14pt;">padding</code> – space inside border (e.g., <code style="font-size: 14pt;">padding: 16px;</code>)</li><br>
+        <li><code style="font-size: 14pt;">border</code> – outline (e.g., <code style="font-size: 14pt;">border: 2px solid #000;</code>)</li><br>
+        <li><code style="font-size: 14pt;">width</code> – element width (e.g., <code style="font-size: 14pt;">width: 300px;</code>)</li><br>
+        <li><code style="font-size: 14pt;">height</code> – element height (e.g., <code style="font-size: 14pt;">height: 200px;</code>)</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Bottom row (same width, smaller) -->
+<div style="display: flex; flex-wrap: nowrap; gap: 16px;">
+    <!-- 🧭 Layout & Alignment -->
+    <div style="flex: 1 1 0; background: #F2F2F2; border-radius: 12px; padding: 16px; box-shadow: 2px 4px 10px rgba(0,0,0,0.08);">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+        <span style="font-size: 20pt;">🧭</span>
+        <strong>Layout &amp; Alignment</strong>
+      </div>
+      <ul style="margin: 0; padding-left: 18px; line-height: 1.5;font-size: 14pt;">
+        <li><code style="font-size: 14pt;">display</code> – layout mode (e.g., <code style="font-size: 14pt;">display: flex;</code>)</li><br>
+        <li><code style="font-size: 14pt;">justify-content</code> – horizontal alignment (e.g., <code style="font-size: 14pt;">justify-content: center;</code>)</li><br>
+        <li><code style="font-size: 14pt;">align-items</code> – vertical alignment (e.g., <code style="font-size: 14pt;">align-items: center;</code>)</li><br>
+        <li><code style="font-size: 14pt;">gap</code> – space between items (e.g., <code style="font-size: 14pt;">gap: 12px;</code>)</li>
+      </ul>
+    </div>
+
+<!-- 📦 Box & Style -->
+<div style="flex: 1 1 0; background: #F2F2F2; border-radius: 12px; padding: 16px; box-shadow: 2px 4px 10px rgba(0,0,0,0.08);">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+        <span style="font-size: 20pt;">📦</span>
+        <strong>Box &amp; Style</strong>
+      </div>
+      <ul style="margin: 0; padding-left: 18px; line-height: 1.5;font-size: 14pt;">
+        <li><code style="font-size: 14pt;">border-radius</code> – rounded corners (e.g., <code style ="font-size: 14pt;">border-radius: 10px;</code>)</li><br>
+        <li><code style="font-size: 14pt;">box-shadow</code> – drop shadow (e.g., <code style="font-size: 14pt;">box-shadow: 2px 2px 6px gray;</code>)</li><br>
+        <li><code style="font-size: 14pt;">opacity</code> – transparency (e.g., <code style="font-size: 14pt;">opacity: 0.9;</code>)</li><br>
+        <li><code style="font-size: 14pt;">overflow</code> – scroll/clip content (e.g., <code style="font-size: 14pt;">overflow: auto;</code>)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+## Remember you are just getting started
+
+#### These are just a few properties to get you started. As you move into the next level, focus on recognizing and understanding what you can. 
+
+#### It’s not important yet to know how every line of code works, but to see the big picture and communicate clearly with the AI about what you want your page to do.
+
+
+MARKDOWN

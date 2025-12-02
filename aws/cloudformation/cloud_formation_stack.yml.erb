@@ -30,7 +30,7 @@ Parameters:
   # This domain name needs to be referenced both in Cloudformation and in the code for MarketingRouterLambda.
   # As a result, it is declared here in Ruby so that it can be passed to the Lambda function.
   # WARNING: Changing this value is NOT sufficient to change the value in the stack. It ONLY changes the default value.
-  # The value must be changed manually in the AWS Console or CLI, followed by an update to the stack. 
+  # The value must be changed manually in the AWS Console or CLI, followed by an update to the stack.
   <% INTERNAL_MARKETING_DOMAIN_NAME = "code.marketing-sites.#{rack_env?(:production) ? 'code.org' : 'test-code.org'}" %>
   InternalMarketingDomainName:
     Type: String
@@ -80,6 +80,7 @@ Parameters:
 <% if frontends -%>
   DaemonInstanceType:
     Type: String
+    Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : 't3.2xlarge'%>
   AutoscaleRollingBatchSize:
     Type: Number
     Default: 20
@@ -504,7 +505,7 @@ Resources:
               - Effect: Allow
                 Action:
                   - logs:CreateLogGroup
-                Resource: 
+                Resource:
                   - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${AWS::StackName}-marketing-router:*"
                   - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${AWS::StackName}-marketing-router:*"
               - Effect: Allow
@@ -550,14 +551,6 @@ Resources:
   # --------------------------------------------------------
 <%=  component 'redis'%>
 
-  # SESSION_STORE_MIGRATION_DELETE_ME
-  # We are migrating from session_store to redis. Its the same definitions, but with a new
-  # name to reflect that multiple dashboard features will be using the same instance.
-  #
-  # We expect the migration to be complete after November 2025, at which point we can remove
-  # this component (and delete session_store.yml.erb)
-<%=  component 'session_store'%>
-
 <% end -%>
 
   # ---------------------------------------------
@@ -589,7 +582,7 @@ Resources:
               - Effect: Allow
                 Action:
                   - 'autoscaling:StartInstanceRefresh'
-                Resource: !GetAtt Frontends.AutoScalingGroupARN
+                Resource: !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
 <% end -%>
               # Lookup Route53 Hosted Zones to get Hosted Zone ID when rendering updated CloudFormation templates during ci_build process.
               - Effect: Allow
@@ -756,7 +749,11 @@ Resources:
       IamInstanceProfile: !Ref DaemonInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
       Tags:
-        - {Key: Name, Value: <%=frontends ? "#{environment}-daemon" : "!Ref 'AWS::StackName'"%>}
+<%   if frontends -%>
+        - {Key: Name, Value: !Sub "${AWS::StackName}-daemon"}
+<%   else -%>
+        - {Key: Name, Value: !Ref AWS::StackName}
+<%   end -%>
       BlockDeviceMappings:
         # BlockDeviceMappings cannot be modified after instance creation, doing so will DELETE the instance and recreate it.
         # EBS Volume is manually modified via CLI or Console to prevent instance recreation.
@@ -782,13 +779,14 @@ Resources:
         - DeviceName: /dev/sda1
           Ebs:
             VolumeSize: <%= volume_size_overrides.fetch(rack_env, default_volume_size) %>
+            # TODO: change to gp3 next time we have to recreate the instance
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -x
           <%=indent(erb_file(BOOTSTRAP_CHEF,
             resource_id: daemon,
-            node_name: frontends ? '$ENVIRONMENT-daemon' : '$STACK',
+            node_name: frontends ? '$STACK-daemon' : '$STACK',
             run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
             commit: nil, # track branch
             daemon: true
@@ -815,9 +813,13 @@ Resources:
 <%  end -%>
       # Protect bugcrowd adhoc other non-adhoc instances from accidental termination
       DisableApiTermination: <%= rack_env?(:adhoc) ? stack_name.include?('bugcrowd') : true %>
+    DependsOn:
 # We don't yet provision the production database cluster/instances via CloudFormation.
 <% if database && !rack_env?(:production) %>
-    DependsOn: DBProxy
+      - DBProxy
+<% end -%>
+<% if frontends-%>
+      - Memcached
 <% end -%>
 <%end-%>
 
@@ -839,9 +841,11 @@ Resources:
       KeyName: <%=SSH_KEY_NAME%>
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
       Tags:
-        - {Key: Name, Value: <%=environment%>-console}
+        # TODO: Handle production stack name isn't "production".
+        - {Key: Name, Value: !Sub "${AWS::StackName}-console"}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
+          # TODO: change to gp3 next time we have to recreate the instance
           Ebs: {VolumeSize: 256, VolumeType: gp2}
       UserData:
         Fn::Base64: !Sub |
@@ -865,10 +869,7 @@ Resources:
         - DeviceIndex: 0
           SubnetId: <%=subnets[1].to_json%>
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
-# We don't yet provision the production database cluster/instances via CloudFormation.
-<%   if database && !rack_env?(:production)%>
-    DependsOn: DBProxy
-<%   end -%>
+    DependsOn: [Daemon]
 <% end-%>
 
 

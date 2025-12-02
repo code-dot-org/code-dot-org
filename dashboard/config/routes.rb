@@ -761,6 +761,7 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
+        resource :deep_linking, controller: :deep_linking, only: :show
         namespace :account_linking do
           get :landing
           get :existing_account
@@ -1116,6 +1117,10 @@ Dashboard::Application.routes.draw do
 
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}
+
+        # Routes used by personalization alert
+        post 'users/has_dismissed_personalization_alert', to: 'users#post_has_dismissed_personalization_alert'
+        get 'users/has_dismissed_personalization_alert', to: 'users#get_has_dismissed_personalization_alert'
 
         # Routes used by UI test status pages
         get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}

@@ -59,14 +59,16 @@
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'0 14,15 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
-      cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      # Pausing during Hour of AI code freeze
+      # cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
       cronjob at:'0 17 * * *', do:deploy_dir('bin', 'cron', 'commit_trusted_proxies')
 
       # This should be run after the commit_content job that happens on both the levelbuilder
       # and staging environments
       # merge_lb_to_staging is also known as DTS or "deploy to staging"
-      cronjob at:'35 7 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
+      # Pausing during Hour of AI code freeze
+      # cronjob at:'35 7 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
 
 
       # This should be run after the commit_content job that happens on the levelbuilder
@@ -115,17 +117,19 @@
       cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'delete_old_ai_chat_data')
       cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'openai_pdf_processing_availability_check')
 
-      # Send warning emails to teachers about their sections with CAP affected students
-      # every Wednesday at 12:00 AM EST (04:00 AM UTC)
-      cronjob at:'0 4 * * 3', do:"#{deploy_dir('bin', 'cron', 'perform_job')} CAP::TeacherSectionsWarningJob"
-
       # RDS backup window is 05:17-05:47 UTC, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
+
+      # Scrub PII from expired deleted accounts nightly at 8:00 AM UTC.
+      cronjob at:"0 8 * * *", do:"#{deploy_dir('bin', 'cron', 'perform_job')} User::PiiScrubberJob"
     end
 
     # 'daemons' in all environments.
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
+    
+    # ActiveJob management tasks
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
+    cronjob at:'30 * * * *', do:deploy_dir('bin', 'cron', 'archive_failed_jobs')
 
     # Refresh the Tutorials cache every hour (runs at the start of each hour, UTC)
     cronjob at:'0 * * * *', do:"#{deploy_dir('bin', 'cron', 'perform_job')} HocLegacy::RefreshTutorialsJob"
@@ -133,18 +137,12 @@
     # background tasks that adhoc instances don't need to run.
     unless node.chef_environment == 'adhoc'
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'process_forms')
-      cronjob at:'0 7 * * *', do:deploy_dir('bin', 'cron', 'analyze_hoc_activity')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'deliver_poste_messages')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'geocode_hoc_activity')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'form_geos')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'user_geos')
       cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
-      cronjob at:"0 8 * * *", do:deploy_dir('bin', 'cron', 'purge_expired_deleted_accounts')
       cronjob at:'0 4 * * 0', do:deploy_dir('bin', 'cron', 'update_project_count')
-
-      # Scrub PII from expired deleted accounts nightly at 8:00 AM UTC. Currently relies on the
-      # DCDO flag pii-scrub-enabled in order to run.
-      cronjob at:"0 8 * * *", do:"#{deploy_dir('bin', 'cron', 'perform_job')} User::PiiScrubberJob"
     end
   end
 
