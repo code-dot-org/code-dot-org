@@ -15,10 +15,9 @@ module Cdo
 
     class << self
       # Starts the Sauce Connect Proxy, which allows tunneling connections from our local server to Sauce Labs
-      # This method blocks until sc prints the "you may start your tests" message to log/sc.log
-      #
-      # @param [Boolean] daemonize - if true, sc will continue running in the bg even when ruby exits
-      def start_sauce_connect(daemonize: false)
+      # This method blocks until sc prints the "you may start your tests" message to log/sc.log.
+      # sc will continue running in the bg even when ruby exits.
+      def start_sauce_connect
         log_file = open_log_file
 
         # Verify that required parameters are set in locals.yml
@@ -58,9 +57,8 @@ module Cdo
         tests_started, log_lines = tests_started?(log_file)
 
         if tests_started == :success
-          log "SUCCESS, sc is running#{" in the background, you can stop it with `killall sc`" if daemonize}"
+          log "SUCCESS, sc is running in the background, you can stop it with `killall sc`"
 
-          at_exit {stop_sauce_connect} unless daemonize
           at_exit {dump_log_file} if ENV['CI']
 
           return @pid
