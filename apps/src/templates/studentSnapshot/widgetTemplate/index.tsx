@@ -1,4 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/actionDropdown';
 import {Typography} from '@mui/material';
 import React from 'react';
 
@@ -7,6 +8,8 @@ import i18n from '@cdo/locale';
 
 import styles from './widgetTemplate.module.scss';
 
+interface DropdownOption extends ActionDropdownOption {}
+
 interface WidgetTemplateProps {
   widgetName: string;
   gridWidth: number;
@@ -14,6 +17,7 @@ interface WidgetTemplateProps {
   children: React.ReactNode;
   scrollable?: boolean;
   loading?: boolean;
+  settingsOptions?: DropdownOption[];
 }
 
 const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
@@ -23,6 +27,7 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
   children,
   scrollable = false,
   loading = false,
+  settingsOptions = [],
 }) => {
   return (
     <div
@@ -33,18 +38,24 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
         <Typography component="h4" variant="h5">
           {widgetName}
         </Typography>
-        <div>
-          <Button
-            color="gray"
-            size="xs"
-            type="secondary"
-            onClick={() => alert('Settings - does nothing yet')}
-            isIconOnly
-            icon={{iconName: 'gear'}}
-            aria-label={i18n.settings()}
-            disabled={loading}
-          />
-        </div>
+        {settingsOptions.length > 0 && (
+          <div>
+            <ActionDropdown
+              triggerButtonProps={{
+                color: 'gray',
+                type: 'secondary',
+                icon: {iconName: 'gear'},
+                isIconOnly: true,
+              }}
+              name={`${widgetName}-settings-dropdown`}
+              labelText={i18n.settings()}
+              size="xs"
+              disabled={loading}
+              options={settingsOptions}
+              menuPlacement="right"
+            />
+          </div>
+        )}
       </div>
       <div
         className={`${styles.content} ${
