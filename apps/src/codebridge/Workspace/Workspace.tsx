@@ -71,7 +71,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       hour: 'numeric',
       minute: 'numeric',
     });
-    return dateFormatter.format(new Date(versionDetails.lastModified));
+    return dateFormatter
+      .format(new Date(versionDetails.lastModified))
+      .replace(/\s(AM|PM)/gi, '$1');
   }, [versionDetails, locale]);
 
   return (

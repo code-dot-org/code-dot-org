@@ -291,7 +291,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const parseDate = useCallback(
     (date: string) => {
       const dateObject = new Date(date);
-      return dateFormatter.format(dateObject);
+      return dateFormatter.format(dateObject).replace(/\s(AM|PM)/gi, '$1');
     },
     [dateFormatter]
   );
