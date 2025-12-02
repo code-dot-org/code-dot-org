@@ -10,15 +10,6 @@ source docker/ci/scripts/prepare_ci_env.sh
 # Skip rake install in ui pipeline. This is safe because we've already run rake install
 # in the cache-staging-build pipeline, and the ui pipeline re-uses that cache.
 
-# Set up trap to dump Sauce Connect log on exit (success or failure)
-function dump_sc_log() {
-  if [ -f log/sc.log ]; then
-    echo "Sauce Connect log:"
-    cat log/sc.log
-  fi
-}
-trap dump_sc_log EXIT
-
 bundle exec rake build
 bundle exec rake ci:seed_ui_test
 bundle exec rake ci:run_ui_tests

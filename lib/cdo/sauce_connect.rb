@@ -61,6 +61,7 @@ module Cdo
           log "SUCCESS, sc is running#{" in the background, you can stop it with `killall sc`" if daemonize}"
 
           at_exit {stop_sauce_connect} unless daemonize
+          at_exit {dump_log_file} if ENV['CI']
 
           return @pid
         else
@@ -87,6 +88,11 @@ module Cdo
       private def open_log_file
         FileUtils.mkdir_p File.dirname(LOG_FILE_PATH) # create log dir if it doesn't exist
         File.open(LOG_FILE_PATH, 'a+') # open log file, create if it doesn't exist, seek to the end
+      end
+
+      # make log file contents visible in drone output
+      private def dump_log_file
+        puts File.read(LOG_FILE_PATH)
       end
 
       private def process_exited?
