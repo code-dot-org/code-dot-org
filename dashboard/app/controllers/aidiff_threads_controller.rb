@@ -76,7 +76,7 @@ class AidiffThreadsController < ApplicationController
     courses = []
 
     if context[:type] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
-      get_active_sections.each do |c|
+      get_section_contexts(get_active_sections).each do |c|
         courses.push(*c[:course_names])
       end
     else
@@ -212,6 +212,10 @@ class AidiffThreadsController < ApplicationController
     }
   end
 
+  private def get_active_sections
+    current_user.sections_instructed.where(hidden: false, updated_at: 1.year.ago..Time.now)&.select {|s| s.script_id || s.course_id}
+  end
+
   private def get_section_contexts(sections)
     # all sections updated in the last year that have curriculum assigned
     contexts = sections&.map do |section|
@@ -254,8 +258,7 @@ class AidiffThreadsController < ApplicationController
     end
 
     if context_type == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
-      sections = current_user.sections_instructed.where(hidden: false, updated_at: 1.year.ago..Time.now)&.select {|s| s.script_id || s.course_id}
-      @section_contexts = get_section_contexts(sections)
+      @section_contexts = get_section_contexts(get_active_sections)
     elsif section_id
       sections = current_user.sections_instructed.filter {|section| section.id == section_id}
       @section_contexts = get_section_contexts(sections)

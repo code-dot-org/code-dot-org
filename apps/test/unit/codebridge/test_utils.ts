@@ -61,6 +61,7 @@ export const getDefaultCodebridgeContext = () => {
     config: {
       defaultTheme: undefined,
       editableFileTypes: [],
+      supportedFileTypes: [],
       PreviewComponents: undefined,
       languageMapping: {},
       activeLayout: undefined,
