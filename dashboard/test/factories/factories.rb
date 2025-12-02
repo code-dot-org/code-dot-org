@@ -2398,18 +2398,4 @@ FactoryBot.define do
     association :user
     form_id {1}
   end
-
-  factory :teacher_notification do
-    association :user
-    title {"Test Teacher Notification"}
-    description {"Test teacher notification description"}
-    icon_name {"notification_icon"}
-    icon_color {"blue"}
-    href_links {[{'url' => 'https://example.com', 'text' => 'Test Link'}]}
-    ai_prompts {[{'text' => 'Test Prompt', 'prompt' => 'Test prompt text'}]}
-    priority {0}
-    expires_at {1.day.from_now}
-    read_at {nil}
-    is_dismissed {false}
-  end
 end

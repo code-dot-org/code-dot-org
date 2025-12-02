@@ -260,9 +260,6 @@ module Dashboard
                             CdoContentful::Marketing::Entry::DashboardNotification
                           end
       ::Notifications.register(Marketing::DashboardNotifications::ContentfulNotificationSource.new(contentful_client))
-
-      # Register the TeacherNotificationSource for database-backed notifications
-      ::Notifications.register(TeacherNotificationSource.new)
     end
   end
 end
