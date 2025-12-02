@@ -5,24 +5,7 @@ module Cdo
   module ActiveJobBackend
     # Restarts delayed_job workers in a rolling fashion, to prevent downtime.
     def self.restart_workers(n_workers_to_start: nil, rolling_restart_in_n_batches: nil)
-      if CDO.active_job_queue_adapter != :delayed_job
-        puts "WARNING: ActiveJob backend is configured as #{CDO.active_job_queue_adapter}, not delayed_job. This will start delayed_job workers, but you'll still need to configure locals.yaml to use them. FYI, active_job_queue_adapter = :async doesn't require workers to operate."
-      end
-
-      n_workers_to_start ||= CDO.active_job_backend_n_workers_to_start || 2
-      rolling_restart_in_n_batches ||= CDO.active_job_backend_rolling_restart_in_n_batches || 1
-
-      pid = fork do
-        # pre-cache Rails environment so each `delayed_job` worker command invocation
-        # doesn't take N minutes on production.
-        before_worker_fork
-        restart_workers_internal(n_workers_to_start, n_batches: rolling_restart_in_n_batches)
-      end
-
-      _, status = Process.wait2(pid)
-      unless status.success?
-        raise "Error starting workers, exited with non-zero status: #{status.exitstatus}"
-      end
+      true
     end
 
     def self.restart_workers_internal(n_workers_to_start, n_batches:, start_time: Time.now, sigkill_timeout_s: 60.seconds)
