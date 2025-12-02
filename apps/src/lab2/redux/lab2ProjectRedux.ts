@@ -21,7 +21,7 @@ import {
 
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;
-  selectedVersion: ProjectVersion | undefined;
+  versionDetails: ProjectVersion | undefined;
   viewingOldVersion: boolean;
   restoredOldVersion: boolean;
   hasEdited: boolean;
@@ -31,8 +31,8 @@ export interface Lab2ProjectState {
 
 const initialState: Lab2ProjectState = {
   projectSources: undefined,
+  versionDetails: undefined,
   viewingOldVersion: false,
-  selectedVersion: undefined,
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
@@ -62,19 +62,19 @@ const projectSlice = createSlice({
       }>
     ) {
       state.projectSources = action.payload.sources;
-      state.selectedVersion = action.payload.version;
+      state.versionDetails = action.payload.version;
       state.viewingOldVersion = true;
     },
-    setSelectedVersion(
+    setVersionDetails(
       state,
       action: PayloadAction<ProjectVersion | undefined>
     ) {
-      state.selectedVersion = action.payload;
+      state.versionDetails = action.payload;
     },
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
       state.viewingOldVersion = action.payload;
       if (!action.payload) {
-        state.selectedVersion = undefined;
+        state.versionDetails = undefined;
       }
     },
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
@@ -433,7 +433,7 @@ const projectSlice = createSlice({
       // Reset the state that needs to be reset manually on level change.
       // Project source is handled elsewhere.
       state.hasEdited = false;
-      state.selectedVersion = undefined;
+      state.versionDetails = undefined;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
     },
@@ -446,7 +446,7 @@ const projectSlice = createSlice({
 export const {
   setProjectSource,
   setPreviousVersionSource,
-  setSelectedVersion,
+  setVersionDetails,
   setViewingOldVersion,
   setRestoredOldVersion,
   resetProjectMetadata,

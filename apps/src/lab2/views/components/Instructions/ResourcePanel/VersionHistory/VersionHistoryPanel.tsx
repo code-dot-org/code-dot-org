@@ -301,6 +301,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       setSelectedVersion(e.target.value);
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
       const isLatest = isLatestVersion(e.target.value);
+      const version = versionList.find(v => v.versionId === e.target.value);
       if (!isLatest) {
         sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_VIEWED, {
           isInitialVersion: viewingInitialVersion.toString(),
@@ -311,9 +312,6 @@ const VersionHistoryPanel: React.FunctionComponent<
       } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {
-        const version = versionList.find(
-          version => version.versionId === e.target.value
-        );
         dispatch(
           loadVersion({versionId: e.target.value, startSources, version})
         );

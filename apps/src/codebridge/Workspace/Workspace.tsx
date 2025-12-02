@@ -56,13 +56,13 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
-  const selectedVersion = useAppSelector(
-    state => state.lab2Project.selectedVersion
+  const versionDetails = useAppSelector(
+    state => state.lab2Project.versionDetails
   );
 
   const locale = currentLocale();
-  const selectedVersionDate = useMemo(() => {
-    if (!selectedVersion?.lastModified) {
+  const versionDate = useMemo(() => {
+    if (!versionDetails?.lastModified) {
       return '';
     }
     const dateFormatter = new Intl.DateTimeFormat(locale, {
@@ -71,8 +71,8 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       hour: 'numeric',
       minute: 'numeric',
     });
-    return dateFormatter.format(new Date(selectedVersion.lastModified));
-  }, [selectedVersion, locale]);
+    return dateFormatter.format(new Date(versionDetails.lastModified));
+  }, [versionDetails, locale]);
 
   return (
     <div style={style} className={className}>
@@ -90,7 +90,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
             text={
               <>
                 {"You're viewing a previous version of this project from "}
-                <strong>{selectedVersionDate}</strong>.
+                <strong>{versionDate}</strong>.
               </>
             }
             type="warning"
