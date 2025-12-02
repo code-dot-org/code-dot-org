@@ -17,7 +17,10 @@ import React, {useEffect, useCallback, useRef, useState} from 'react';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
-import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
+import {
+  getIsStartMode,
+  getAppOptionsEditingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
@@ -156,9 +159,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
         // TO DO: figure out how to update to support starter assets.
         // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
-        // In start mode, we manage saving explicitly via the button in the header.
+        // In starter code and exemplar editing modes, we manage saving explicitly via the button in the header.
         let uploadedFiles;
-        if (!getIsStartMode()) {
+        if (!(getIsStartMode() || getAppOptionsEditingExemplar())) {
           uploadedFiles = await uploadExternalFiles(
             currentSources.source.externalFiles || {},
             serializedData.files,

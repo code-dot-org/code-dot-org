@@ -107,6 +107,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   });
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
     if (progress.viewAsUserId && progress.currentLevelId) {
@@ -261,6 +265,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={studentChatHistory}
           isTeacherView={true}
           buildAssetUrl={buildAssetUrlValue}
+          isAiTutorVersion={isAiTutorVersion}
         />
       ),
       iconLeft: iconValue,
@@ -272,6 +277,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={visibleItems}
           buildAssetUrl={buildAssetUrlValue}
+          isAiTutorVersion={isAiTutorVersion}
         />
       ),
     },
@@ -315,6 +321,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={chatEvents}
           isTeacherView={isTeacherView}
           buildAssetUrl={buildAssetUrlValue}
+          isAiTutorVersion={isAiTutorVersion}
         />
       )}
       <div className={moduleStyles.footer}>
