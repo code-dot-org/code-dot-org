@@ -21,6 +21,7 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -31,6 +32,7 @@ import UnitSelectorV2 from '../../UnitSelectorV2';
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
+import {AIF_UNITS} from './LessonSummaryConstants';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
@@ -127,6 +129,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const showAITALessonSummary = useAppSelector(
     state => state.currentUser.showAITALessonSummary
   );
+
+  const unitName = useAppSelector(
+    state => state.teacherSections.selectedSectionUnitName
+  );
+
+  // This checks to see if the AI lesson summaries experiment or DCDO key are set
+  // or if the section has AIF assigned in order to enable AI Lesson Summaries
+  const canShowLessonSummaries =
+    (showAITALessonSummary || AIF_UNITS.includes(unitName)) &&
+    aiTALessonSummaryInfo;
 
   const hasCompletedPersonalizationQuiz = useAppSelector(
     state => state.currentUser.hasCompletedPersonalizationQuiz
@@ -381,37 +393,42 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           />
         )}
         <div className={styles.lessonSummaryContainer}>
-          <div className={styles.lessonSummarySection}>
-            <div className={styles.lessonSummarySectionHeader}>
-              <div className={styles.lessonSummarySectionTitle}>
-                <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
-                <BodyTwoText>{i18n.audioSummary()}</BodyTwoText>
+          {experiments.isEnabled('ai-lesson-podcasts') && (
+            <div className={styles.lessonSummarySection}>
+              <div className={styles.lessonSummarySectionHeader}>
+                <div className={styles.lessonSummarySectionTitle}>
+                  <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
+                  <BodyTwoText>{i18n.audioSummary()}</BodyTwoText>
+                </div>
+                <Button
+                  type="secondary"
+                  size="xs"
+                  color="black"
+                  className={styles.openTranscriptButton}
+                  text={i18n.transcript()}
+                  onClick={() => setShowTranscriptDialog(true)}
+                />
               </div>
-              <Button
-                type="secondary"
-                size="xs"
-                color="black"
-                className={styles.openTranscriptButton}
-                text={i18n.transcript()}
-                onClick={() => setShowTranscriptDialog(true)}
-              />
+              <div className={styles.audioPlayerContainer}>
+                {/* We're including our own custom time-stamped transcript dialog, so no need for media caption. */}
+                {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+                <audio
+                  id="lesson-summary-audio"
+                  src="https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3"
+                  preload="auto"
+                  controls
+                  onEnded={() => setFinishedListeningToSummary(true)}
+                  className={styles.audioPlayer}
+                />
+                {finishedListeningToSummary && (
+                  <FontAwesomeV6Icon
+                    iconName="circle-check"
+                    iconStyle="solid"
+                  />
+                )}
+              </div>
             </div>
-            <div className={styles.audioPlayerContainer}>
-              {/* We're including our own custom time-stamped transcript dialog, so no need for media caption. */}
-              {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-              <audio
-                id="lesson-summary-audio"
-                src="https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3"
-                preload="auto"
-                controls
-                onEnded={() => setFinishedListeningToSummary(true)}
-                className={styles.audioPlayer}
-              />
-              {finishedListeningToSummary && (
-                <FontAwesomeV6Icon iconName="circle-check" iconStyle="solid" />
-              )}
-            </div>
-          </div>
+          )}
           <div className={styles.lessonSummarySection}>
             <div className={styles.lessonSummarySectionTitle}>
               <FontAwesomeV6Icon iconName="lightbulb" iconStyle="solid" />
@@ -520,9 +537,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           </>
         )}
       </div>
-      {showAITALessonSummary &&
-        aiTALessonSummaryInfo &&
-        renderLessonSummaryContainer()}
+      {canShowLessonSummaries && renderLessonSummaryContainer()}
     </div>
   );
 };

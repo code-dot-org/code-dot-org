@@ -1,4 +1,6 @@
 module AiDiffBedrockHelper
+  include UsersHelper
+
   MAX_TOKENS = 1500
   TEMP = 0.5
   MODEL_ID = 'anthropic.claude-3-sonnet-20240229-v1:0'
@@ -39,6 +41,9 @@ module AiDiffBedrockHelper
                       uri: "s3://dummy_file"
                     },
                     type: "S3"
+                  },
+                  metadata: {
+                    'url' => 'https://zombo.com'
                   }
                 }
               ]
@@ -150,7 +155,7 @@ module AiDiffBedrockHelper
   #   prompt
   # end
 
-  def self.format_inputs_for_bedrock_request(input, prompt)
+  def format_inputs_for_bedrock_request(input, prompt)
     # Add system prompt and retrieval contexts if available to inputs as part of instructions that will be sent to model.
     {
       input: {
@@ -183,7 +188,7 @@ module AiDiffBedrockHelper
     }
   end
 
-  def self.filter_for_context(lesson_number, unit_num, course_names, section_contexts, labs = [])
+  def filter_for_context(lesson_number, unit_num, course_names, section_contexts, labs = [])
     filter_config = {}
     and_all_filters = []
     or_all_filters = []
@@ -253,7 +258,17 @@ module AiDiffBedrockHelper
     filter_config
   end
 
-  def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id, section_contexts, labs = [], artifact_type = "AidiffExitTicket")
+  def request_bedrock_rag_chat(
+    input,
+    prompt,
+    lesson_number,
+    unit_num,
+    course_name,
+    session_id,
+    section_contexts,
+    labs = [],
+    artifact_type = "AidiffExitTicket"
+  )
     config = format_inputs_for_bedrock_request(input, prompt)
     config[:session_id] = session_id unless session_id.nil?
     filter_config = filter_for_context(lesson_number, unit_num, course_name, section_contexts, labs)
@@ -327,5 +342,84 @@ module AiDiffBedrockHelper
       links: reference_urls.any? ? reference_urls : nil,
       session_id: response.session_id,
     }
+  end
+
+  ALPHABET = ('a'..'z').to_a
+
+  def progress_csv_for_all_sections(section_contexts)
+    return [] unless section_contexts.respond_to?(:map)
+
+    section_contexts.map do |section_context|
+      section = section_context[:section]
+      progress_csv_for_students(section.students.distinct, section.default_script)
+    end
+  end
+
+  def progress_csv_for_students(students, unit)
+    student_progress = script_progress_for_users(students, unit)[0]
+    level_names, progress_table = get_csv_level_data(unit, students, student_progress)
+    headers = ['Student Name'].concat(level_names)
+
+    CSV.generate do |csv|
+      csv << headers
+      progress_table.each do |data_row|
+        csv << [data_row[:student_name]].concat(level_names.map {|column_name| data_row[column_name]})
+      end
+    end
+  end
+
+  def get_csv_level_data(unit, students, student_progress)
+    progress_table = students.map do |student|
+      {student_name: student.name, student_id: student.id}
+    end
+
+    level_names = []
+
+    unit.lessons.each do |lesson|
+      lesson.script_levels.each do |script_level|
+        next if script_level.assessment?
+
+        level_id = script_level.oldest_active_level.id || script_level.id
+        level_text = "#{lesson.relative_position}.#{script_level.level_display_text}"
+
+        if script_level.bubble_choice?
+          sublevels = script_level.level.sublevels
+          sublevels.each_with_index do |sublevel, index|
+            sublevel_name = "#{level_text}#{ALPHABET[index]}"
+            level_names << sublevel_name
+
+            add_level_data_for_all_students(progress_table, student_progress, sublevel.id, sublevel_name, sublevel.validated?)
+          end
+        else
+          add_level_data_for_all_students(progress_table, student_progress, level_id, level_text, script_level.level.validated?)
+          level_names << level_text
+        end
+      end
+    end
+
+    [level_names, progress_table]
+  end
+
+  def add_level_data_for_all_students(progress_table, student_progress, level_id, level_text, is_validated_level)
+    progress_table.each do |data_row|
+      level_progress_for_student = student_progress[data_row[:student_id]][level_id]
+
+      status = level_progress_for_student ? level_progress_for_student[:status] : 'not_tried'
+
+      parsed_status = case status
+                      when 'not_tried'
+                        'N'
+                      when 'passed', 'perfect', 'submitted', 'completed_assessment', 'free_play_complete'
+                        if is_validated_level
+                          'V'
+                        else
+                          'S'
+                        end
+                      when 'attempted'
+                        'A'
+                      end
+
+      data_row[level_text] = parsed_status
+    end
   end
 end

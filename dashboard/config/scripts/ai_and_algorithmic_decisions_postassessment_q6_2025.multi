@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q6_2025'
+
+question 'A fitness app shows your total workout minutes for the week. Each time you complete a session, the number on the screen instantly increases. What process connects your new workout time to what you see on the screen?'
+
+wrong 'The app reloads the entire web page from the internet each time you log a workout.'
+wrong 'The app saves a screenshot of your old total and replaces it with a new picture.'
+wrong 'The app uses a CSS filter to change the color of the text after every session.'
+right 'The app updates a variable that stores your total minutes, then changes the DOM to display the new value.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+MARKDOWN

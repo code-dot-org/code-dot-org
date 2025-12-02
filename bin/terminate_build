@@ -35,14 +35,12 @@ ChatClient.log "A user has invoked bin/terminate_build on this environment's dae
 # ps -C sh -o pid,pgid,args
 #
 # PID  PGID COMMAND
-# 1308  1308 /bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/staging/Gemfile bundle exec /home/ubuntu/staging/bin/cronjob /home/ubuntu/.dropbox-dist/dropboxd
 # 22641 22641 /bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/staging/Gemfile bundle exec /home/ubuntu/staging/bin/cronjob /home/ubuntu/staging/aws/ci_build dev+build@code.org
-# 22646 22646 /bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/staging/Gemfile bundle exec /home/ubuntu/staging/bin/cronjob /home/ubuntu/staging/bin/cron/sync_dropbox
 
 # Command issued by cron to execute the continuous deployment system.
 BUILD_COMMAND = "/bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/#{CDO.env}/Gemfile bundle exec /home/ubuntu/#{CDO.env}/bin/cronjob /home/ubuntu/#{CDO.env}/aws/ci_build dev+build@code.org".freeze
 # Flag file at the root of the project indicating that a build is currently executing.
-STARTED = 'build-started'.freeze
+STARTED = "/home/ubuntu/#{CDO.env}/build-started".freeze
 
 begin
   process_list = execute_system_command("ps -C sh -o pid,pgid,args")
@@ -56,10 +54,18 @@ begin
   CDO.log.info 'Killing the following aws/ci_build process and all of its child processes:'
   execute_system_command("pgrep -g #{process_group_id} -a")
 
-  # The hyphen ('-') in front of the Process Group ID specifies we want to kill all processes with that Process Group ID.
-  execute_system_command("kill -9 -#{process_group_id}")
-  CDO.log.info 'Done killing the current build and its child processes!'
-  ChatClient.log "Done killing the current build and its child processes!", color: 'red'
+  begin
+    CDO.log.info "Killing process group #{process_group_id}..."
+    # The negative ID specifies we want to kill all processes in the Process Group with that ID.
+    Process.kill('KILL', -process_group_id.to_i)  # SIGKILL to process group
+    CDO.log.info 'Done killing the current build and its child processes!'
+    ChatClient.log "Done killing the current build and its child processes!", color: 'red'
+  rescue Errno::ESRCH
+    CDO.log.info 'Process group was already terminated.'
+  rescue Exception => exception
+    CDO.log.error "Error killing process group: #{exception.message}"
+    raise
+  end
 
   begin
     CDO.log.info 'Deleting the file build-started to prevent a new build from starting on the current commit.'
@@ -70,7 +76,8 @@ begin
     # Don't re-raise since this shouldn't be considered a build termination failure
   end
 rescue => exception
-  CDO.log.error "Failed to terminate build processes: #{exception.message}"
-  ChatClient.log "Failed to terminate build processes: #{exception.message}", color: 'red'
+  CDO.log.error "Failed to terminate build processes: #{exception.class}: #{exception.message}"
+  CDO.log.error "Backtrace: #{exception.backtrace.first(5).join(', ')}" if exception.backtrace
+  ChatClient.log "Failed to terminate build processes: #{exception.class}: #{exception.message}", color: 'red'
   raise
 end

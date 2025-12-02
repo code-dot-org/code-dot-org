@@ -42,7 +42,10 @@ const PersonalizationCollectorContainer: React.FC = () => {
     useTeachingProfileData();
 
   const onCarouselPress = async (direction: number) => {
-    if (direction === NEXT) {
+    if (
+      direction === NEXT &&
+      questionsNumber < PERSONALIZATION_PROMPTS.length - 1
+    ) {
       if (!showInterstitialState) {
         analyticsReporter.sendEvent(EVENTS.PERSONALIZATION_ANSWER_SUBMITTED, {
           question: PERSONALIZATION_PROMPTS[questionsNumber].question,

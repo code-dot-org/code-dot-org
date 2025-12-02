@@ -22,6 +22,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
 import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -267,8 +268,10 @@ describe('LessonMaterialsContainer', () => {
       )
     );
   };
+  const realIsEnabled = experiments.isEnabled;
 
   beforeEach(() => {
+    experiments.isEnabled = jest.fn(() => true);
     stubRedux();
 
     registerReducers({
@@ -290,6 +293,7 @@ describe('LessonMaterialsContainer', () => {
     jest.resetAllMocks();
     restoreRedux();
     fetchSpy.mockReset();
+    experiments.isEnabled = realIsEnabled;
   });
 
   const mockSpy = (lessonData: object, lessonSummary: object) => {

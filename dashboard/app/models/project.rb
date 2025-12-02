@@ -15,9 +15,11 @@
 #  standalone              :boolean          default(TRUE)
 #  remix_parent_id         :integer
 #  skip_content_moderation :boolean
+#  uuid                    :string(255)
 #
 # Indexes
 #
+#  index_projects_on_uuid               (uuid) UNIQUE
 #  storage_apps_project_type_index      (project_type)
 #  storage_apps_published_at_index      (published_at)
 #  storage_apps_standalone_index        (standalone)
@@ -30,6 +32,12 @@ class Project < ApplicationRecord
   # Note: owner is nil for projects that are owned by users without an account
   has_one :owner, class_name: 'User', through: :project_storage, source: :user
   has_one :channel_token
+
+  before_save :ensure_uuid
+
+  def ensure_uuid
+    self.uuid ||= SecureRandom.uuid
+  end
 
   # Finds a project by channel id. Like `find`, this method raises an
   # ActiveRecord::RecordNotFound error if the corresponding project cannot

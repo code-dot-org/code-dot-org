@@ -10,7 +10,11 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {
+  isReadOnlyWorkspace,
+  isPermanentlyReadOnlyWorkspace,
+  isReadOnlyPredictLevel,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -140,18 +144,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.lab2Project.viewingOldVersion
   );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const isRunning = instructionsProps.isRunning;
-  const isValidating =
-    instructionsProps.validationSettings?.isValidating || false;
-
-  // Assign the permanent read-only state once at mount time, before any temporary state changes.
-  const isPermanentlyReadOnlyRef = useRef<boolean | null>(null);
-  if (isPermanentlyReadOnlyRef.current === null) {
-    isPermanentlyReadOnlyRef.current =
-      isReadOnly && !isRunning && !isValidating;
-  }
-  const isWidgetView = instructionsProps.levelProperties.widgetView || false;
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace); // includes running/validating.
+  const isPermanentlyReadOnly = useAppSelector(isPermanentlyReadOnlyWorkspace);
+  const isReadOnlyPredict = useAppSelector(isReadOnlyPredictLevel);
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
@@ -164,16 +159,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
+  const isWidgetView = instructionsProps.levelProperties.widgetView;
   const dispatch = useAppDispatch();
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
 
-  // Temporary read-only occurs when running/validating in a workspace that wasn't permanently read-only at mount.
-  const isTemporarilyReadOnly =
-    !isPermanentlyReadOnlyRef.current &&
-    isReadOnly &&
-    (isRunning || isValidating);
+  // If we are not permanently read-only but are currently in a read-only state, we are temporarily read-only.
+  const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
   const aiTutorVisible = shouldShowAiTutor(
@@ -217,17 +210,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    // The version history tab is hidden in read only mode with two exceptions:
-    // if the user is viewing an old version of the project, or if this is a teacher viewing
-    // a student's project (in which case they can view old versions, but not restore them).
-    // We never show the version history tab in widget view, as widget view is always read-only
-    // and therefore can never have version history.
-    // Note: We use the permanent read-only state captured at mount time to determine tab visibility.
+    // The version history tab is hidden in permanently read-only mode with the following exception:
+    // - if a teacher is viewing a student's project (in which case they can view old versions, but not restore them).
+    // Version history is also hidden on predict levels and widget view.
     const versionHistoryHidden =
-      (isPermanentlyReadOnlyRef.current &&
-        !isViewingOldVersion &&
-        !viewAsUserId) ||
-      isWidgetView;
+      (isPermanentlyReadOnly && !viewAsUserId) ||
+      isWidgetView ||
+      isReadOnlyPredict;
     if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
         <VersionHistoryPanel
@@ -236,7 +225,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           startSources={versionHistoryProps.startSources}
           appName={levelProperties.appName}
           levelId={levelId}
-          disabled={isTemporarilyReadOnly}
+          disabled={isTemporarilyReadOnly && !isViewingOldVersion}
         />
       );
     }
@@ -260,17 +249,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
     return tabMap;
   }, [
-    instructionsProps,
+    sidebarOnly,
     levelProperties,
+    instructionsProps,
     hasValidationConditions,
-    isUserTeacher,
-    aiTutorVisible,
     hiddenContextCallback,
-    isViewingOldVersion,
+    aiTutorVisible,
+    isPermanentlyReadOnly,
     viewAsUserId,
     isWidgetView,
     versionHistoryProps,
     showRubric,
+    isUserTeacher,
     hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
     levelName,
@@ -281,7 +271,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,
-    sidebarOnly,
+    isViewingOldVersion,
+    isReadOnlyPredict,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -313,7 +304,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [currentTab, availableTabs]);
 
   useEffect(() => {
-    // Reset current tab to instructions when switching levels or viewAsUserId
+    // Reset current tab to instructions when switching levels or viewAsUserId.
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
@@ -331,7 +322,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const onClickTab = useCallback(
     (tab: Tabs) => {
       if (currentTab && currentTab !== tab) {
-        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, appName, {
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, {
           resourcePanelTabClickedTo: tab,
           resourcePanelTabClickedFrom: currentTab,
         });
@@ -341,7 +332,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [appName, currentTab, dispatch, isStandaloneCollapsed]
+    [currentTab, dispatch, isStandaloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
@@ -351,27 +342,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
         setIsSettingsOpen(true);
-        sendLab2AnalyticsEvent(
-          EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-          appName
-        );
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
       } else {
         // If settngs is currently not open, open settings panel and send analytics event.
         if (!isSettingsOpen) {
-          sendLab2AnalyticsEvent(
-            EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-            appName
-          );
+          sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
         }
         setIsSettingsOpen(!isSettingsOpen);
       }
     } else {
       // For standalone projects with no tabs, we toggle the floating settings panel.
       if (!isFloatingSettingsOpen) {
-        sendLab2AnalyticsEvent(
-          EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED,
-          appName
-        );
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
       }
       setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
     }
@@ -379,7 +361,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     hasTabs,
     isStandaloneCollapsed,
     dispatch,
-    appName,
     isSettingsOpen,
     isFloatingSettingsOpen,
   ]);
