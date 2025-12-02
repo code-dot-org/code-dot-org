@@ -75,12 +75,6 @@ const projectSlice = createSlice({
       state.versionDetails = action.payload.version;
       state.viewingOldVersion = true;
     },
-    setVersionDetails(
-      state,
-      action: PayloadAction<ProjectVersion | undefined>
-    ) {
-      state.versionDetails = action.payload;
-    },
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
       state.viewingOldVersion = action.payload;
       if (!action.payload) {
@@ -461,7 +455,6 @@ export const {
   setProjectSource,
   setProjectSourceBeforeAiTutorVersion,
   setPreviousVersionSource,
-  setVersionDetails,
   setViewingOldVersion,
   setViewingAiTutorVersion,
   setRestoredOldVersion,
