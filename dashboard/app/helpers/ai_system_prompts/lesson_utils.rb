@@ -1,8 +1,6 @@
 module AiSystemPrompts::LessonUtils
   def self.generate_lesson_materials_text(lesson_id)
-    pp 'lfm2', lesson_id
     lesson_plan = get_lesson_materials(lesson_id)
-    pp 'lfm3', lesson_plan
     "Lesson Name: #{lesson_plan[:name]}
 Lesson Overview: #{lesson_plan[:overview]}
 Learning Objectives: #{lesson_plan[:objectives].to_json}
