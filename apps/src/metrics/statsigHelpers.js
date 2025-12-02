@@ -47,8 +47,10 @@ export function findOrCreateStableId() {
   } else {
     // Ensure any existing cookie is removed to satisfy OneTrust
     // (must pass same attributes used when setting the cookie)
-    cookies.remove(STABLE_ID_KEY, {path: '/', domain: '.code.org'});
-    localStorage.removeItem(LOCAL_STORAGE_KEY);
+    if (!isInIframe()) {
+      cookies.remove(STABLE_ID_KEY, {path: '/', domain: '.code.org'});
+      localStorage.removeItem(LOCAL_STORAGE_KEY);
+    }
     // Return undefined to let Statsig set it's own stableID
     return undefined;
   }
@@ -66,6 +68,14 @@ function getOnetrustGroups() {
     return new Set(rawString.split(',').filter(Boolean));
   } catch (error) {
     return new Set();
+  }
+}
+
+function isInIframe() {
+  try {
+    return window.self !== window.top;
+  } catch (error) {
+    return true;
   }
 }
 
