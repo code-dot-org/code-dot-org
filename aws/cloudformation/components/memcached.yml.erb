@@ -24,4 +24,5 @@
       NumCacheNodes: 2
       AZMode: cross-az
       PreferredAvailabilityZones: <%= AVAILABILITY_ZONES.first(2).to_json %>
+      PreferredMaintenanceWindow: sat:03:00-sat:04:00
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]

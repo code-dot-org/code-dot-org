@@ -71,9 +71,12 @@
   "logs": {
     "logs_collected": {
       "files": {
-        "collect_list": <%= node.default['cdo-cloudwatch-agent']['log_files'].map do |name, path|
-          {log_group_name: "#{node.chef_environment}-#{name}", file_path: path}
-        end.to_json %>
+        "collect_list": <%= node['cdo-cloudwatch-agent']['log_files']
+          .flat_map { |name, paths|
+            Array(paths).map { |path|
+              { log_group_name: "#{node.chef_environment}-#{name}", file_path: path }
+            }
+          }.to_json %>
       }
     },
     "force_flush_interval" : 15
