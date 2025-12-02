@@ -1,21 +1,17 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {Typography} from '@mui/material';
 import React, {useState} from 'react';
+
+import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 
 import styles from './header.module.scss';
 
 const Header: React.FC = () => {
-  const [selectedUnit, setSelectedUnit] = useState<string>('');
   const [selectedLesson, setSelectedLesson] = useState<string>('');
   const [selectedStudent, setSelectedStudent] = useState<string>('');
   const [selectedShowStudentsBy, setSelectedShowStudentsBy] =
     useState<string>('');
-
-  const unitOptions = [
-    {value: 'unit1', text: 'Unit 1'},
-    {value: 'unit2', text: 'Unit 2'},
-    {value: 'unit3', text: 'Unit 3'},
-  ];
 
   const lessonOptions = [
     {value: 'lesson1', text: 'Lesson 1'},
@@ -53,15 +49,15 @@ const Header: React.FC = () => {
   return (
     <div className={styles.header}>
       <div className={styles.headerColumn}>
-        <SimpleDropdown
-          labelText="Unit"
-          name="unit"
-          items={unitOptions}
-          selectedValue={selectedUnit}
-          onChange={event => setSelectedUnit(event.target.value)}
-          placeholder="Select a unit"
-          className={styles.dropdown}
-        />
+        <div>
+          <Typography variant="body3" fontWeight="bold">
+            Unit
+          </Typography>
+          <UnitSelectorV2
+            filterToSelectedCourse={true}
+            className={styles.unitSelector}
+          />
+        </div>
         <SimpleDropdown
           labelText="Lesson"
           name="lesson"
