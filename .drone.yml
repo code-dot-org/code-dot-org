@@ -71,7 +71,7 @@ steps:
           expected=$(cat .cached-staging-build-file-count)
           actual=$(find . -type f -not -path './.git/*' | wc -l)
           diff=$((actual - expected))
-          [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
+          [ "$expected" = "$actual" ] || { printf 'ERROR: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"; exit 1; }
         fi
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
