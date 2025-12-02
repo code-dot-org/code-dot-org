@@ -99,7 +99,7 @@ class RedisSessionStore < ActionDispatch::Session::RedisStore
   prepend DeletedSessionPreservation
 end
 
-Rails.application.config.session_store RedisSessionStore,
+Dashboard::Application.config.session_store RedisSessionStore,
   key: environment_specific_cookie_name('_learn_session'),
   servers: ["#{CDO.redis_url}/session"],
   secure: !CDO.no_https_store && (!Rails.env.development? || CDO.https_development),
