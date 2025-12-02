@@ -9,6 +9,7 @@ module Cdo
     SC_START_TIMEOUT_S = 120
     SC_START_MESSAGE = "you may start your tests"
     SC_STDOUT_PREFIX = "Sauce Connect Proxy"
+    LOG_FILE_PATH = deploy_dir('log/sc.log')
 
     @pid = nil
 
@@ -84,9 +85,8 @@ module Cdo
       end
 
       private def open_log_file
-        log_file_path = deploy_dir('log/sc.log')
-        FileUtils.mkdir_p File.dirname(log_file_path) # create log dir if it doesn't exist
-        File.open(log_file_path, 'a+') # open log file, create if it doesn't exist, seek to the end
+        FileUtils.mkdir_p File.dirname(LOG_FILE_PATH) # create log dir if it doesn't exist
+        File.open(LOG_FILE_PATH, 'a+') # open log file, create if it doesn't exist, seek to the end
       end
 
       private def process_exited?
