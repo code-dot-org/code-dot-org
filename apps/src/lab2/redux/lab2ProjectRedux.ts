@@ -20,7 +20,9 @@ import {
 
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;
+  projectSourceBeforeAiTutorVersion?: MultiFileSource;
   viewingOldVersion: boolean;
+  viewingAiTutorVersion?: boolean;
   restoredOldVersion: boolean;
   hasEdited: boolean;
   projectTooLarge: boolean;
@@ -29,7 +31,9 @@ export interface Lab2ProjectState {
 
 const initialState: Lab2ProjectState = {
   projectSources: undefined,
+  projectSourceBeforeAiTutorVersion: undefined,
   viewingOldVersion: false,
+  viewingAiTutorVersion: false,
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
@@ -51,6 +55,12 @@ const projectSlice = createSlice({
         source: action.payload,
       };
     },
+    setProjectSourceBeforeAiTutorVersion(
+      state,
+      action: PayloadAction<MultiFileSource | undefined>
+    ) {
+      state.projectSourceBeforeAiTutorVersion = action.payload;
+    },
     setPreviousVersionSource(
       state,
       action: PayloadAction<ProjectSources | undefined>
@@ -60,6 +70,9 @@ const projectSlice = createSlice({
     },
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
       state.viewingOldVersion = action.payload;
+    },
+    setViewingAiTutorVersion(state, action: PayloadAction<boolean>) {
+      state.viewingAiTutorVersion = action.payload;
     },
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
@@ -419,6 +432,7 @@ const projectSlice = createSlice({
       state.hasEdited = false;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
+      state.viewingAiTutorVersion = false;
     },
     setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
       state.lastSavedLabConfig = action.payload;
@@ -428,8 +442,10 @@ const projectSlice = createSlice({
 
 export const {
   setProjectSource,
+  setProjectSourceBeforeAiTutorVersion,
   setPreviousVersionSource,
   setViewingOldVersion,
+  setViewingAiTutorVersion,
   setRestoredOldVersion,
   resetProjectMetadata,
   setHasEdited,

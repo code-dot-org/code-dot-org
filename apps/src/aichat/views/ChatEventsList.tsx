@@ -18,6 +18,7 @@ interface ChatEventsListProps {
   events: ChatEvent[];
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
+  isAiTutorVersion?: boolean;
 }
 
 /**
@@ -27,6 +28,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
   buildAssetUrl,
+  isAiTutorVersion,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
@@ -181,22 +183,27 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
-            {events.map((event, index) => (
-              <ChatEventView
-                event={event}
-                key={event.timestamp}
-                isTeacherView={isTeacherView}
-                buildAssetUrl={buildAssetUrl}
-                ref={index === events.length - 1 ? finalEventRef : undefined}
-                tabIndex={isInChatNavigationMode ? 0 : -1}
-                onKeyDown={e => {
-                  if (e.key === 'Escape' && e.target === e.currentTarget) {
-                    setIsInChatNavigationMode(false);
-                    parentRef.current?.focus();
-                  }
-                }}
-              />
-            ))}
+            {events.map((event, index) => {
+              const isLastMessage = index === events.length - 1;
+              return (
+                <ChatEventView
+                  event={event}
+                  key={event.timestamp}
+                  isTeacherView={isTeacherView}
+                  buildAssetUrl={buildAssetUrl}
+                  isAiTutorVersion={isAiTutorVersion}
+                  isLastMessage={isLastMessage}
+                  ref={isLastMessage ? finalEventRef : undefined}
+                  tabIndex={isInChatNavigationMode ? 0 : -1}
+                  onKeyDown={e => {
+                    if (e.key === 'Escape' && e.target === e.currentTarget) {
+                      setIsInChatNavigationMode(false);
+                      parentRef.current?.focus();
+                    }
+                  }}
+                />
+              );
+            })}
             <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
           </>
         )}

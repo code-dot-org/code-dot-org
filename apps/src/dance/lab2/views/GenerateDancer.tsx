@@ -19,8 +19,8 @@ import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLess
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
-  AdlibsType,
   AdlibChoices,
+  AdlibsType,
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
@@ -99,6 +99,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const blockList = useRef<AdlibsBlockList | undefined>(undefined);
 
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+
   const getInitialChoices = useCallback(
     (adlibsValue: AdlibsType) => {
       const initial: AdlibChoices = {};
@@ -171,9 +173,15 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   useEffect(() => {
     if (adlibs && currentSources) {
-      setAdlibChoices(getInitialChoices(adlibs));
+      const {initial, existing} = getInitialChoices(adlibs);
+      setAdlibChoices(initial);
+      if (!isReadOnly && existing) {
+        setAiGenerateState('reviewing');
+      } else {
+        setAiGenerateState('none');
+      }
     }
-  }, [adlibs, currentSources, getInitialChoices]);
+  }, [adlibs, currentSources, getInitialChoices, isReadOnly]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setAiGenerateState('loading');
@@ -359,8 +367,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     );
   }, [dispatch, levelProperties.appName, levelProperties.id]);
 
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-
   const showTts =
     levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
 
@@ -422,6 +428,34 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 />
               </>
             )}
+          {isReadOnly && (
+            <MainInstructionsContent
+              instructionsText="AI generated a dancer based on this prompt:"
+              markdownClassName={moduleStyles.markdown}
+            />
+          )}
+
+          {/* Ensure that the Adlib is rendered, but hidden, when 'reviewing', so that
+              onAdlibTextChange is called to set the prompt text, specifically for
+              when the user has returned to see an existing dancer. */}
+          {['none', 'generating', 'reviewing'].includes(aiGenerateState) &&
+            !levelProperties.aiDancerGenerateText &&
+            adlibs &&
+            adlibChoices && (
+              <Adlib
+                adlib={adlibs[adlibOption]}
+                adlibChoices={adlibChoices}
+                readOnly={
+                  isReadOnly ||
+                  ['generating', 'reviewing'].includes(aiGenerateState)
+                }
+                glowSpeed={glowSpeed}
+                onChoicesChange={onAdlibChoicesChange}
+                onTextChange={onAdlibTextChange}
+                hidden={aiGenerateState === 'reviewing'}
+              />
+            )}
+
           {['none', 'generating'].includes(aiGenerateState) &&
             !levelProperties.aiDancerGenerateText && (
               <>

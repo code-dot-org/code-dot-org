@@ -1092,9 +1092,9 @@ FactoryBot.define do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
     sublevels do
       [
-        create(:dance, name: 'Generate Dancer'),
-        create(:music, name: 'Generate Music'),
-        create(:dance, name: 'Generate Dance')
+        create(:dance),
+        create(:music),
+        create(:dance)
       ]
     end
   end
@@ -2317,6 +2317,30 @@ FactoryBot.define do
     role {:assistant}
     content {"Lorem ipsum"}
     is_preset {false}
+  end
+
+  factory :aidiff_exit_ticket do
+    association :aidiff_thread, factory: :aidiff_thread
+    association :user
+    title {"An Aritfact Title"}
+    content {"Lorem ipsum"}
+    type {"AidiffExitTicket"}
+  end
+
+  factory :aidiff_lesson_hook do
+    association :aidiff_thread, factory: :aidiff_thread
+    association :user
+    title {"An Aritfact Title"}
+    content {"Lorem ipsum"}
+    type {"AidiffLessonHook"}
+  end
+
+  factory :aidiff_artifact_association do
+    association :aidiff_artifact
+    association :unit
+    association :unit_group
+    association :lesson
+    association :section
   end
 
   factory :modular_course_context, class: Hash do

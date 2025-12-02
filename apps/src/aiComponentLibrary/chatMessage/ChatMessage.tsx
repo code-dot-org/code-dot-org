@@ -3,8 +3,10 @@ import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
+import AiTutorVersionActions from '../aiTutorVersionActions/AiTutorVersionActions';
 import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
 
 import {Role} from './types';
@@ -18,6 +20,8 @@ interface ChatMessageProps {
   footer?: React.ReactNode;
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
+  isAiTutorVersion?: boolean;
+  isLastMessage?: boolean;
 }
 
 /*
@@ -37,7 +41,13 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   footer,
   isTA,
   messageStyle = 'default',
+  isAiTutorVersion = false,
+  isLastMessage = false,
 }) => {
+  const aiTutorVersionFiles = useAppSelector(
+    state => state.weblab2?.aiTutorVersionFiles || []
+  );
+
   return (
     <div
       className={classNames(
@@ -83,11 +93,18 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             }
           >
             {role === Role.ASSISTANT ? (
-              <SafeMarkdown
-                markdown={text}
-                rehypeMap={rehypeMap}
-                openExternalLinksInNewTab
-              />
+              <div className={moduleStyles.assistantMessageContent}>
+                <SafeMarkdown
+                  markdown={text}
+                  rehypeMap={rehypeMap}
+                  openExternalLinksInNewTab
+                />
+                {isAiTutorVersion &&
+                  isLastMessage &&
+                  aiTutorVersionFiles.length > 0 && (
+                    <AiTutorVersionActions files={aiTutorVersionFiles} />
+                  )}
+              </div>
             ) : (
               <p>{text}</p>
             )}
