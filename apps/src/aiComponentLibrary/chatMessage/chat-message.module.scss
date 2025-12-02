@@ -90,6 +90,14 @@ $icon-overlay-padding-right: 8px;
   overflow-x: auto;
 }
 
+.aiTutorVersion {
+  @extend %message;
+  background-color: var(--background-brand-aqua-extra-light);
+  border-end-start-radius: 0;
+  border-end-end-radius: $message-border-radius;
+  overflow-x: auto;
+}
+
 %message-container {
   display: flex;
   flex-direction: row;
@@ -188,4 +196,10 @@ $icon-overlay-padding-right: 8px;
 
 .warning {
   background-color: var(--background-warning-light);
+}
+
+.assistantMessageContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
