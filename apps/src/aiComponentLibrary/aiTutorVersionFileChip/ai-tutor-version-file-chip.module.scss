@@ -1,0 +1,60 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+
+  .statusIndicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.125rem;
+    flex-shrink: 0;
+
+    i {
+      font-size: 0.625rem;
+      color: white;
+    }
+  }
+
+  .fileName {
+    @include typography.body-three;
+    color: var(--text-neutral-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .previewButton {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+}
+
+.newFile {
+  .statusIndicator {
+    background-color: var(--background-success-strong);
+  }
+}
+
+.updatedFile {
+  .statusIndicator {
+    background-color: transparent;
+
+    i {
+      color: #6b7280;
+    }
+  }
+}
+

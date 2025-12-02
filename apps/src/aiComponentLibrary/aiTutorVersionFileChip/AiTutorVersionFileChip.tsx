@@ -1,0 +1,64 @@
+import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
+import React from 'react';
+
+import {ProjectFile} from '@cdo/apps/lab2/types';
+
+import moduleStyles from './ai-tutor-version-file-chip.module.scss';
+
+interface AiTutorVersionFileChipProps {
+  /** The project file to display */
+  file: ProjectFile;
+}
+
+/**
+ * A chip component for displaying AI Tutor version files.
+ * Shows the file name with a status indicator:
+ * - Green with plus icon for new files
+ * - Gray with checkmark for updated files
+ * For HTML files, includes an eye icon button for preview.
+ */
+const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
+  file,
+}) => {
+  const isNewFile = file.isAiTutorVersionCreated;
+  const isUpdatedFile = file.isAiTutorVersionUpdated;
+  const isHtmlFile =
+    file.language === 'html' || file.name.toLowerCase().endsWith('.html');
+
+  const handlePreviewClick = () => {
+    console.log('Preview clicked for file:', file.name);
+  };
+
+  return (
+    <div
+      className={classNames(moduleStyles.chip, {
+        [moduleStyles.newFile]: isNewFile,
+        [moduleStyles.updatedFile]: isUpdatedFile,
+      })}
+    >
+      <div className={moduleStyles.statusIndicator}>
+        <FontAwesomeV6Icon
+          iconName={isNewFile ? 'plus-circle' : 'pen-circle'}
+          iconStyle="solid"
+        />
+      </div>
+      <span className={moduleStyles.fileName}>{file.name}</span>
+      {isHtmlFile && (
+        <Button
+          onClick={handlePreviewClick}
+          aria-label={`Preview ${file.name}`}
+          size="xs"
+          type="tertiary"
+          color="gray"
+          isIconOnly={true}
+          icon={{iconName: 'eye', iconStyle: 'solid'}}
+          className={moduleStyles.previewButton}
+        />
+      )}
+    </div>
+  );
+};
+
+export default AiTutorVersionFileChip;
