@@ -45,7 +45,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   isLastMessage = false,
 }) => {
   const aiTutorVersionFiles = useAppSelector(
-    state => state.weblab2.aiTutorVersionFiles
+    state => state.weblab2?.aiTutorVersionFiles || []
   );
 
   return (
@@ -99,9 +99,11 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                   rehypeMap={rehypeMap}
                   openExternalLinksInNewTab
                 />
-                {isAiTutorVersion && isLastMessage && aiTutorVersionFiles && (
-                  <AiTutorVersionActions files={aiTutorVersionFiles} />
-                )}
+                {isAiTutorVersion &&
+                  isLastMessage &&
+                  aiTutorVersionFiles.length > 0 && (
+                    <AiTutorVersionActions files={aiTutorVersionFiles} />
+                  )}
               </div>
             ) : (
               <p>{text}</p>
