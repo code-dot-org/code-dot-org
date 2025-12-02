@@ -90,10 +90,14 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
           <Alert
             className={moduleStyles.previousVersionBanner}
             text={
-              <>
-                {"You're viewing a previous version of this project from "}
-                <strong>{versionDate}</strong>.
-              </>
+              versionDate !== '' ? (
+                <>
+                  {"You're viewing a previous version of this project from "}
+                  <strong>{versionDate}</strong>.
+                </>
+              ) : (
+                "You're viewing the initial version of this project."
+              )
             }
             type="warning"
             size="xs"
