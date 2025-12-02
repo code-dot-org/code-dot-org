@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q6_2025'
+
+question 'A workout app shows your total steps for the day. Each time you walk more, the number on the screen goes up automatically. What is happening in the app when that number increases?'
+
+wrong 'The app is redrawing the background design every few seconds.'
+wrong 'The app is downloading a new version of itself from the internet.'
+right 'The app is changing a variable\'s value and updating the screen to match it.'
+wrong 'The app is turning off old features to save battery.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+MARKDOWN

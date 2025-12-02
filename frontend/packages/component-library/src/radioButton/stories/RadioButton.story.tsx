@@ -136,3 +136,41 @@ LabelWeights.args = {
     },
   ],
 };
+
+export const MultiLineLabels: StoryFn<RadioButtonsGroupProps> = args => (
+  <div style={{maxWidth: 220}}>
+    <RadioButtonsGroup {...args} />
+  </div>
+);
+MultiLineLabels.args = {
+  radioButtons: [
+    {
+      name: 'wrap-xs',
+      value: 'wrap-xs',
+      size: 'xs',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+    {
+      name: 'wrap-s',
+      value: 'wrap-s',
+      size: 's',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+    {
+      name: 'wrap-m',
+      value: 'wrap-m',
+      size: 'm',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+    {
+      name: 'wrap-l',
+      value: 'wrap-l',
+      size: 'l',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+  ],
+};

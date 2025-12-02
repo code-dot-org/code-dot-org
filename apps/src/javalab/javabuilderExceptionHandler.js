@@ -58,7 +58,10 @@ export function getExceptionMessage(exceptionDetails, type, miniAppType) {
       error = msg.fileNotFoundException({causeMessage});
       break;
     case JavabuilderExceptionType.INVALID_JAVA_FILE_NAME:
-      error = msg.javabuilderJavaFilenameError({causeMessage});
+      error =
+        causeMessage && causeMessage.length > 0
+          ? msg.javabuilderJavaFilenameError({causeMessage})
+          : msg.javabuilderJavaFilenameUndefinedError();
       break;
     case JavabuilderExceptionType.MISSING_PROJECT_FILE_NAME:
       error = msg.javabuilderMissingFilenameError();

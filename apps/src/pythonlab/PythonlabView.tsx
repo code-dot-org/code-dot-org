@@ -39,6 +39,7 @@ import {
   STANDALONE_CONSOLE_PROJECT,
   STANDALONE_NEIGHBORHOOD_PROJECT,
   PYTHONLAB_EDITABLE_FILE_TYPES,
+  PYTHONLAB_SUPPORTED_FILE_TYPES,
 } from './constants';
 import {AiTutorPythonLabContextHelper} from './helpers/aiTutorContextHelper';
 import HorizontalLayout from './layout/HorizontalLayout';
@@ -64,6 +65,7 @@ const standaloneStartSources: {[key: string]: ProjectSources} = {
 const defaultConfig: ConfigType = {
   languageMapping: pythonlabLangMapping,
   editableFileTypes: PYTHONLAB_EDITABLE_FILE_TYPES,
+  supportedFileTypes: PYTHONLAB_SUPPORTED_FILE_TYPES,
   activeLayout: 'horizontal',
   layoutComponents: {
     horizontal: HorizontalLayout,
@@ -104,6 +106,8 @@ const PythonlabView: React.FunctionComponent<
   const miniAppName = useAppSelector(
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   const hasSource = !!source;
   const isAiTutorEnabled = useMemo(() => {
@@ -195,6 +199,8 @@ const PythonlabView: React.FunctionComponent<
         miniAppName,
         validationFile,
         longInstructions: levelProperties.longInstructions,
+        hasRun,
+        hasEdited,
       });
     }
   }, [
@@ -203,6 +209,8 @@ const PythonlabView: React.FunctionComponent<
     validationFile,
     miniAppName,
     isAiTutorEnabled,
+    hasRun,
+    hasEdited,
   ]);
 
   const onRun = async (

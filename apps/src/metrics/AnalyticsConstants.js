@@ -619,6 +619,7 @@ const EVENTS = {
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
   LAB2_VERSION_RESTORED: 'Version restored on lab2',
   LAB2_VERSION_VIEWED: 'Version viewed on lab2',
+  LAB2_VERSION_COMMITTED: 'Version committed on lab2',
 
   // Resource Panel
   RESOURCE_PANEL_TAB_CLICKED: 'Resource Panel Tab Clicked',
@@ -627,6 +628,12 @@ const EVENTS = {
   RESOURCE_PANEL_LANGUAGE_CHANGE: 'Resource Panel Language Change',
   RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
 
+  // IntroJS flows
+  INTROJS_FLOW_STARTED: 'IntroJS Flow Started',
+  INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
+  INTROJS_FLOW_COMPLETED: 'IntroJS Flow Completed',
+
+  // AI Teaching Assistant - Differentiation
   // Just In Time Professional Learning
   PERSONALIZATION_ANSWER_SUBMITTED:
     'Answered Just In Time PL Personalization Question',
@@ -701,4 +708,10 @@ const EVENT_GROUPS = {
   [EVENTS.FINISH_BUTTON_CERTIFICATE]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS};
+const EXPERIMENTS = {
+  SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION:
+    'select_grades_taught_on_account_creation',
+  ENABLE_SELECTING_GRADES: 'enable_selecting_grades',
+};
+
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS, EXPERIMENTS};

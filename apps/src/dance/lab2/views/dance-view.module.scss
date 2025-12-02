@@ -1,3 +1,9 @@
+$tinted-background-color: color-mix(
+  in srgb,
+  var(--background-neutral-tertiary),
+  transparent 30%
+);
+
 .danceLab {
   height: 100%;
   width: 100%;
@@ -22,14 +28,22 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: absolute;
+        width: calc(100% - 8px);
+        padding: 0 10px;
+        box-sizing: border-box;
+        background-color: $tinted-background-color;
+        border-radius: 4px;
+        margin: 4px;
 
-        > h3 {
+        >h3 {
           margin: 0;
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
         }
-        > img {
+
+        >img {
           height: 70px;
         }
       }
@@ -142,19 +156,29 @@
 
 .timelineContainer {
   height: 150px;
+  display: none;
+}
+
+/* With the logo pinned in the upper-left, and the language selector in the
+ * lower-left, there is room for the timeline on taller screens when those items
+ * are above and below the share UI, and on slightly shorter screens with extra
+ * width so they can sit beside the share UI.
+ */
+@media screen and (min-height: 800px),
+screen and (min-height: 720px) and (min-width: 970px) {
+  .timelineContainer {
+    display: initial;
+  }
 }
 
 .musicProjectOverlay {
   position: absolute;
-  bottom: 4px;
+  bottom: 0;
   right: 4px;
   left: 4px;
   border-radius: 4px;
-  background-color: color-mix(
-    in srgb,
-    var(--background-neutral-tertiary),
-    transparent 50%
-  );
+  background-color: $tinted-background-color;
+  border: none;
 }
 
 .actionBar {

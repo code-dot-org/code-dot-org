@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q12_2025'
+
+question 'A shopping app offers free shipping only if your order total is over $50 and you\'re logged into your account. Which kind of logic makes that rule work correctly?'
+
+right 'An AND operator that checks both the total amount and login status before applying free shipping'
+wrong 'An OR operator that gives free shipping if either condition is true'
+wrong 'A loop that adds more items until the order reaches $50 automatically'
+wrong 'A variable that always sets shipping cost to $0, no matter the conditions'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 9
+MARKDOWN

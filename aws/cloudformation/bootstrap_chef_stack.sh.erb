@@ -122,7 +122,6 @@ cat <<JSON > $FIRST_BOOT
 <% if frontends -%>
     "redis_url": "rediss://${RedisGroup.PrimaryEndPoint.Address}:${RedisGroup.PrimaryEndPoint.Port}",
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
-    "old_session_store_server": "rediss://${SessionStoreGroup.PrimaryEndPoint.Address}:${SessionStoreGroup.PrimaryEndPoint.Port}",
 <% end -%>
 <% if database && !rack_env?(:production) -%>
     "db_writer": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.Endpoint.Address}:${AuroraCluster.Endpoint.Port}/",
