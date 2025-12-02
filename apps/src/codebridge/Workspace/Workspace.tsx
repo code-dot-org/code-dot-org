@@ -71,10 +71,20 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       hour: 'numeric',
       minute: 'numeric',
     });
+    // The Regex here removes the space before AM/PM to match mocks and make more compact.
     return dateFormatter
       .format(new Date(versionDetails.lastModified))
       .replace(/\s(AM|PM)/gi, '$1');
   }, [versionDetails, locale]);
+
+  const versionBannerText = versionDate ? (
+    <>
+      You're viewing a previous version of this project from{' '}
+      <strong>{versionDate}</strong>.
+    </>
+  ) : (
+    "You're viewing the initial version of this project."
+  );
 
   return (
     <div style={style} className={className}>
@@ -89,16 +99,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         {viewingOldVersion && (
           <Alert
             className={moduleStyles.previousVersionBanner}
-            text={
-              versionDate !== '' ? (
-                <>
-                  {"You're viewing a previous version of this project from "}
-                  <strong>{versionDate}</strong>.
-                </>
-              ) : (
-                "You're viewing the initial version of this project."
-              )
-            }
+            text={versionBannerText}
             type="warning"
             size="xs"
           />

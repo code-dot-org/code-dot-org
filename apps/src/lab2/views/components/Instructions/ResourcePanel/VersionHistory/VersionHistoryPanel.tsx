@@ -291,6 +291,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const parseDate = useCallback(
     (date: string) => {
       const dateObject = new Date(date);
+      // The Regex here removes the space before AM/PM to match mocks and make more compact.
       return dateFormatter.format(dateObject).replace(/\s(AM|PM)/gi, '$1');
     },
     [dateFormatter]
