@@ -20,7 +20,7 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {Channel, LevelProperties} from '@cdo/apps/lab2/types';
+import {Channel, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -85,6 +85,7 @@ interface MusicLabViewProps {
   levelProperties: LevelProperties;
   channel?: Channel;
   overrideProjectManager?: ProjectManager;
+  startSources: ProjectSources;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -109,6 +110,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   levelProperties,
   channel,
   overrideProjectManager,
+  startSources,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
@@ -392,6 +394,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               styleNavigationAsBubble={true}
               documentationUrl={'/docs/ide/music'}
               sidebarOnly={!!guideMode}
+              versionHistoryProps={{startSources}}
             />
           </div>
 
