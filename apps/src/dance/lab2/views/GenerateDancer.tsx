@@ -1,9 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {
-  BodyThreeText,
-  EmText,
-} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -447,9 +443,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               </>
             )}
           {isReadOnly && (
-            <BodyThreeText className={moduleStyles.readOnlyText}>
-              <EmText>{`AI generated a dancer based on this prompt:`}</EmText>
-            </BodyThreeText>
+            <MainInstructionsContent
+              instructionsText="AI generated a dancer based on this prompt:"
+              markdownClassName={moduleStyles.markdown}
+            />
           )}
 
           {/* Ensure that the Adlib is rendered, but hidden, when 'reviewing', so that
