@@ -1171,6 +1171,7 @@ Dashboard::Application.routes.draw do
     resources :ai_lesson_summaries, only: [:show] do
       collection do
         get :show # GET /ai_lesson_summaries/show?lesson_id=2
+        get :ai_lesson_summary_podcast_script, controller: :ai_lesson_summaries, action: :ai_lesson_summary_podcast_script # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
         get :perform_ai_lesson_summaries_by_unit, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summaries_by_unit # GET ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=1
         get :perform_ai_lesson_summary_by_lesson, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summary_by_lesson # GET ai_lesson_summaries/perform_ai_lesson_summary_by_lesson?lesson_id=1
       end
@@ -1339,6 +1340,11 @@ Dashboard::Application.routes.draw do
         post :chat_completion
       end
     end
+
+    resources :aidiff_artifacts, only: [:index]
+
+    resources :aidiff_exit_tickets, only: [:index, :update, :create]
+    resources :aidiff_lesson_hooks, only: [:index, :update, :create]
 
     resources :aidiff_messages, only: [] do
       member do
