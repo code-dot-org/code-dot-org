@@ -87,10 +87,10 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
     lesson_plan_text = AiSystemPrompts::LessonUtils.generate_lesson_materials_text(lesson_id)
 
     prompt = intro +
-             personalization +
-             "Use the following lesson plan to generate your summary:\n\n" +
-             lesson_plan_text +
-             "\n\nYour summary should be returned in JSON format and should be composed as follows:
+      personalization +
+      "Use the following lesson plan to generate your summary:\n\n" +
+      lesson_plan_text +
+      "\n\nYour summary should be returned in JSON format and should be composed as follows:
 {learning_objective: this should be a brief, one paragraph summary of the lesson, focusing on each of the Learning Objectives and how they will be achieved,
 lesson_beats: an ordered list of the main parts of the lesson, including activities and new vocabulary terms,
 misconceptions: an unordered list including 2 - 3 misconceptions students might have about the material being covered,
