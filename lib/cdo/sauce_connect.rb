@@ -17,7 +17,7 @@ module Cdo
       # Starts the Sauce Connect Proxy, which allows tunneling connections from our local server to Sauce Labs
       # This method blocks until sc prints the "you may start your tests" message to log/sc.log.
       # sc will continue running in the bg even when ruby exits.
-      def start_sauce_connect(dump_logs: false)
+      def start_sauce_connect(dump_logs: false, verbose: false)
         log_file = open_log_file
 
         # Verify that required parameters are set in locals.yml
@@ -40,10 +40,7 @@ module Cdo
           "--tunnel-name", CDO.saucelabs_tunnel_name,
         ]
 
-        # In CI, enable verbose logging to help diagnose connection issues
-        if ENV['CI']
-          cmd += ["--log-level", "info"]
-        end
+        cmd += ["--log-level", "info"] if verbose
 
         env = {
           "SAUCE_USERNAME" => CDO.saucelabs_username,
