@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-25 22:15:07 UTC",
+    "serialized_at": "2025-12-01 16:07:38 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -32,19 +32,315 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "0fb157c3-313b-425b-9a28-06ef954eafa7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0fb157c3-313b-425b-9a28-06ef954eafa7",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "ca865172-84e6-47ff-9ff3-e31fe986095d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d",
+        "lesson_activity.key": "0fb157c3-313b-425b-9a28-06ef954eafa7"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_welcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ai_foundations"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_ai_foundations"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_course"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_course"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_lesson"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_lesson"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_careers"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_careers"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_chat"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_chat"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ethical"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_ethical"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_closing"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_closing"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_welcome",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_ai_foundations",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ai_foundations"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_course",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_course"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_lesson",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_lesson"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_careers",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_careers"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_chat",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_chat"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_ethical",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ethical"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_closing",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_closing"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif0",
+        "activity_section.key": "ca865172-84e6-47ff-9ff3-e31fe986095d"
+      }
+    }
   ],
   "resources": [
 

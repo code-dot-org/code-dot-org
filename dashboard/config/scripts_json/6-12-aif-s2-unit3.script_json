@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-25 21:04:14 UTC",
+    "serialized_at": "2025-12-01 18:37:14 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -587,8 +587,19 @@
       }
     },
     {
-      "key": "2468cace-21db-490a-a198-33456ef9eb79",
+      "key": "b3ff0ac8-63f1-465e-8989-ddf835fb0417",
       "position": 2,
+      "properties": {
+        "progression_name": "Plan and Build"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3ff0ac8-63f1-465e-8989-ddf835fb0417",
+        "lesson_activity.key": "536c7c67-b767-4843-8d21-ff572fae2e08"
+      }
+    },
+    {
+      "key": "2468cace-21db-490a-a198-33456ef9eb79",
+      "position": 3,
       "properties": {
         "progression_name": "Free Response: What AI Sees Shaped By Data Choices"
       },
@@ -599,7 +610,7 @@
     },
     {
       "key": "183137de-c07c-4ce4-95f8-f37aece3e2e2",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Vocab: Bias"
       },
@@ -610,7 +621,7 @@
     },
     {
       "key": "aee684d1-f7a8-42a7-816f-530aecf21a7b",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -1646,6 +1657,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Plan and Build"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level3-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "b3ff0ac8-63f1-465e-8989-ddf835fb0417"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson5-level3-test-2025"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "building-data-driven-systems-lesson5-level4-test-2025"
         ],
@@ -1666,8 +1699,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 4,
+      "chapter": 35,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1691,8 +1724,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 5,
+      "chapter": 36,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1716,7 +1749,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1741,7 +1774,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1766,7 +1799,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1791,7 +1824,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1816,7 +1849,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1841,7 +1874,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1866,7 +1899,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1891,7 +1924,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1916,7 +1949,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1941,7 +1974,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1966,7 +1999,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1991,7 +2024,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2016,7 +2049,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2041,7 +2074,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2066,11 +2099,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson9-level1-test-2025"
+        ],
         "progression": "Explore and Explain"
       },
       "bonus": false,
@@ -2088,11 +2124,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson9-level2-test-2025"
+        ],
         "progression": "Co-Build a Search"
       },
       "bonus": false,
@@ -2110,7 +2149,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2135,7 +2174,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2160,11 +2199,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson10-level1-test-2025"
+        ],
         "progression": "Introduction to a Filter & Sort Pipeline"
       },
       "bonus": false,
@@ -2182,11 +2224,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson10-level2-test-2025"
+        ],
         "progression": "Design a Filter → Sort → Render Pipeline"
       },
       "bonus": false,
@@ -2204,7 +2249,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2229,7 +2274,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2254,7 +2299,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2279,11 +2324,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level1-test-2025"
+        ],
         "progression": "Milestone One"
       },
       "bonus": false,
@@ -2301,11 +2349,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level2-test-2025"
+        ],
         "progression": "Milestone One"
       },
       "bonus": false,
@@ -2323,11 +2374,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level3-test-2025"
+        ],
         "progression": "Milestone Two"
       },
       "bonus": false,
@@ -2345,11 +2399,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level4-test-2025"
+        ],
         "progression": "Milestone Two"
       },
       "bonus": false,
@@ -2367,11 +2424,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level5-test-2025"
+        ],
         "progression": "Milestone Three"
       },
       "bonus": false,
@@ -2389,11 +2449,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level6-test-2025"
+        ],
         "progression": "Milestone Four"
       },
       "bonus": false,
@@ -2411,11 +2474,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level7-test-2025"
+        ],
         "progression": "Milestone Four"
       },
       "bonus": false,
@@ -2816,6 +2882,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3",
         "activity_section.key": "d2af9a65-fe8b-4f89-88b2-830edd3a8310"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson5-level3-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson5-level3-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "b3ff0ac8-63f1-465e-8989-ddf835fb0417"
       }
     },
     {

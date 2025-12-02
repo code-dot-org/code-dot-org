@@ -1,0 +1,120 @@
+name 'csaif_pl_ai_wrap-up'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrap-Up
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Figtree, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">In this lesson you...</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Learned core AI concepts, including the iterative cycle of testing, analyzing, and improving AI-generated outputs.
+</li><br>
+    <li> Previewed activities in the lessons.</li><br>
+        <li> Explored best practices for teaching AI.
+</li><br>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/d6a6ef0ecac37004a3c2438c9a9e674f-image-1741018469136.png" 
+         alt="Icon with gears symbolizing thinking" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+## Tips from Teachers
+
+#### Here are some insights into teaching the **Problem Solving with AI** unit. 
+
+<!-- Flexbox Section 1 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      Once students realized how AI skills connect to real-world careers—from design to data analysis—they became much more invested
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 2 -->
+<div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The unit’s structure made it easy to guide students through complex ideas like prompting and AI bias. The hands-on activities and built-in tools saved me a ton of prep time.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 3 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+This curriculum doesn’t just introduce students to AI—it helps them think critically about it. From hallucinations to ethical debates, students learned to question, refine, and really understand what’s happening under the hood.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+## Additional Practice
+
+#### Need some additional practice? Try out the following optional activities.
+
+<div style="width: 100%; margin: 20px auto 40px auto; font-family: Figtree, sans-serif;">
+
+  <!-- Dropdown 1 -->
+  <details style="margin-bottom: 15px; background: #f7f8fa; border-radius: 8px; padding: 10px 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
+    <summary style="font-size: 16px; font-weight: bold; cursor: pointer; list-style: none;">
+      🔽 Topic Title 
+    </summary>
+    <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+      <p style="margin: 5px 0 10px 0; font-size: 14px; line-height: 1.5;">
+        Work through Lesson 5 to learn more about...
+      </p>
+      <a href="https://example.com/additional-practice-1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">
+        Open Additional Practice
+      </a>
+    </div>
+  </details>
+
+  <!-- Dropdown 2 -->
+  <details style="margin-bottom: 15px; background: #f7f8fa; border-radius: 8px; padding: 10px 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
+    <summary style="font-size: 16px; font-weight: bold; cursor: pointer; list-style: none;">
+      🔽 Topic Title 
+    </summary>
+    <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+      <p style="margin: 5px 0 10px 0; font-size: 14px; line-height: 1.5;">
+        Watch this video on...to learn more about...
+      </p>
+      <a href="https://example.com/additional-practice-1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">
+        Open Additional Practice
+      </a>
+    </div>
+  </details>
+MARKDOWN

@@ -26134,7 +26134,9 @@ en:
           description: ''
           student_description: ''
         self-paced-pl-revision-aif0:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Overview
           lesson_groups: {}
           name: self-paced-pl-revision-aif0
           title: Teaching AI Foundations (Introductory Module)
@@ -26187,3 +26189,9 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        pl-sandbox-aif-sem-2-unit-3:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-sem-2-unit-4:
+          lessons: {}
+          lesson_groups: {}
