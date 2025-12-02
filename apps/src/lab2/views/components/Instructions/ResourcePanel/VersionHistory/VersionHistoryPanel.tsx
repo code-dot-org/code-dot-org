@@ -313,7 +313,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         dispatch(previewStartSources({startSources}));
       } else if (isLatest) {
         dispatch(resetToCurrentVersion());
-      } else if (version) {
+      } else {
         dispatch(loadVersion({startSources, version}));
       }
     },

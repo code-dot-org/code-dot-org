@@ -94,7 +94,7 @@ export const loadVersion = createAsyncThunk(
   async (
     payload: {
       startSources: ProjectSources;
-      version: ProjectVersion;
+      version?: ProjectVersion;
     },
     thunkAPI
   ) => {
@@ -104,7 +104,7 @@ export const loadVersion = createAsyncThunk(
       await projectManager.flushSave();
       // Fall back to start source if we can't load the version.
       const sources =
-        (await projectManager.loadSources(payload.version.versionId)) ||
+        (await projectManager.loadSources(payload.version?.versionId)) ||
         payload.startSources;
       thunkAPI.dispatch(
         setPreviousVersionSource({
