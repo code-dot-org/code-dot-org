@@ -12,8 +12,8 @@ module Services
       end
 
       def call
-        clever_auth_option = ::AuthenticationOption.find_by(
-          credential_type: ::AuthenticationOption::CLEVER,
+        clever_auth_option = AuthenticationOption.find_by(
+          credential_type: AuthenticationOption::CLEVER,
           authentication_id: clever_v2_id
         )
 
@@ -21,7 +21,7 @@ module Services
 
         new_auth_option = clever_auth_option.dup
         new_auth_option.authentication_id = clever_v3_id
-        new_auth_option.version = ::AuthenticationOption::Clever::VERSION[:v3_1]
+        new_auth_option.version = AuthenticationOption::Clever::VERSION[:v3_1]
 
         new_auth_option
       end
