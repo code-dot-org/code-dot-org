@@ -34,7 +34,8 @@ const InnerHTMLPreview = () => {
     const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
     const match = location.hostname.match(regex);
     const environment = match && match[1] ? `${match[1]}-` : '';
-    const port = 'localhost-' === environment ? `:${location.port}` : '';
+    const port =
+      'localhost-' === environment && location.port ? `:${location.port}` : '';
     const cdn = environment.includes('adhoc') ? 'cdn-' : '';
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }, []);
