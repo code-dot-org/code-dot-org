@@ -59,7 +59,7 @@ export const useAiTutorResponseSchemaSettings = (
           // - force save a version for projectSourceBeforeAiTutorVersion. Check with product/design about this. TODO.
           // - force save an AI version for AI tutor version with description 'AI Save'. TODO.
           // - workspace is now editable.
-          // - sources are updated with the newor updated AI files, but AI flags removed.
+          // - sources are updated with the newer updated AI files, but AI flags removed.
           const aiTutorVersionFiles: ProjectFile[] = [];
           const mergedSourceVersion = getMergedAiTutorCodeWithSource(
             formattedResponse.code,
