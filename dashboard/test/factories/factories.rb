@@ -1090,11 +1090,14 @@ FactoryBot.define do
 
   factory :music_dance_ai, parent: :bubble_choice_level do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
+    sequence(:generate_dancer_name) {|n| "Generate Dancer #{n}"}
+    sequence(:generate_music_name)  {|n| "Generate Music #{n}"}
+    sequence(:generate_dance_name)  {|n| "Generate Dance #{n}"}
     sublevels do
       [
-        create(:dance, name: 'Generate Dancer'),
-        create(:music, name: 'Generate Music'),
-        create(:dance, name: 'Generate Dance')
+        create(:dance, name: generate(:generate_dancer_name)),
+        create(:music, name: generate(:generate_music_name)),
+        create(:dance, name: generate(:generate_dance_name))
       ]
     end
   end
