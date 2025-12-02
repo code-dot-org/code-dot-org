@@ -22,6 +22,7 @@
 #
 class AidiffThread < ApplicationRecord
   belongs_to :user
+  has_one :aidiff_artifact
   has_many :aidiff_messages
 
   validates :context_type, inclusion: {in: SharedConstants::AI_DIFF_CONTEXT.values}
