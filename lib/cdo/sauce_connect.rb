@@ -17,7 +17,7 @@ module Cdo
       # Starts the Sauce Connect Proxy, which allows tunneling connections from our local server to Sauce Labs
       # This method blocks until sc prints the "you may start your tests" message to log/sc.log.
       # sc will continue running in the bg even when ruby exits.
-      def start_sauce_connect
+      def start_sauce_connect(dump_logs: false)
         log_file = open_log_file
 
         # Verify that required parameters are set in locals.yml
@@ -59,7 +59,7 @@ module Cdo
         if tests_started == :success
           log "SUCCESS, sc is running in the background, you can stop it with `killall sc`"
 
-          at_exit {dump_log_file} if ENV['CI']
+          at_exit {dump_log_file} if dump_logs
 
           return @pid
         else
