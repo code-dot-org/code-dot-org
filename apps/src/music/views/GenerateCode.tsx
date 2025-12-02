@@ -406,7 +406,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              // Skip the 'editing' validation state for standalone projects.
+              // Skip the 'editing' state when showing the three tabs.
               dispatch(setAiGenerateState(hasParent ? 'edited' : 'editing'));
               analyticsReporter.sendEvent(
                 EVENTS.MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED,

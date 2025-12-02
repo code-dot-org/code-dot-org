@@ -380,7 +380,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             color="black"
             size="s"
             onClick={() => {
-              // Skip the 'editing' validation state for standalone projects.
+              // Skip the 'editing' state when showing the three tabs.
               setAiGenerateState(hasParent ? 'edited' : 'editing');
               analyticsReporter.sendEvent(
                 EVENTS.DANCE_PARTY_GENERATE_CODE_USE_CODE_CLICKED,
