@@ -1,13 +1,19 @@
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
+import type {
+  Rubric,
+  RubricData,
+  StudentLevelInfo,
+} from '@cdo/apps/types/rubricTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import Header from './header';
+import StudentRubricWidget from './StudentRubricWidget';
 import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
@@ -46,6 +52,54 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [selectedUnitId]);
 
+  // Hardcoded values for testing - replace with actual values from URL/Redux later
+  const HARDCODED_RUBRIC_ID = 1; // Replace with actual rubric ID
+  const HARDCODED_STUDENT_ID = 1; // Replace with actual student ID
+
+  const [rubric, setRubric] = useState<Rubric | null>(null);
+  const [studentLevelInfo, setStudentLevelInfo] =
+    useState<StudentLevelInfo | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      setError(null);
+
+      try {
+        // Fetch rubric
+        const rubricResponse = await HttpClient.fetchJson<RubricData>(
+          `/rubrics/${HARDCODED_RUBRIC_ID}`
+        );
+
+        if (rubricResponse.value?.rubric) {
+          setRubric(rubricResponse.value.rubric);
+        } else {
+          setError('No rubric data found');
+          return;
+        }
+
+        // For now, use placeholder student level info
+        // TODO: Fetch actual student level info from backend
+        setStudentLevelInfo({
+          name: 'Student Name',
+          user_id: HARDCODED_STUDENT_ID,
+          timeSpent: 0,
+          attempts: 0,
+          lastAttempt: new Date().toISOString(),
+        });
+      } catch (err) {
+        console.error('Failed to fetch rubric data:', err);
+        setError('Failed to load rubric data');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className={styles.snapshotContainer}>
       <Header
@@ -65,6 +119,31 @@ const StudentSnapshot: React.FC = () => {
       </Typography>
 
       <div className={styles.widgetGrid}>
+        {isLoading && (
+          <WidgetTemplate
+            widgetName="Rubric"
+            gridWidth={3}
+            gridHeight={2}
+            loading={true}
+          >
+            <div>Loading rubric...</div>
+          </WidgetTemplate>
+        )}
+        {error && (
+          <WidgetTemplate widgetName="Rubric" gridWidth={2} gridHeight={2}>
+            <div style={{padding: '16px', color: '#d32f2f'}}>{error}</div>
+          </WidgetTemplate>
+        )}
+        {rubric && studentLevelInfo && !isLoading && (
+          <StudentRubricWidget
+            gridWidth={3}
+            gridHeight={2}
+            rubric={rubric}
+            studentLevelInfo={studentLevelInfo}
+            teacherHasEnabledAi={false}
+            canProvideFeedback={true}
+          />
+        )}
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
           <div>content</div>
         </WidgetTemplate>
