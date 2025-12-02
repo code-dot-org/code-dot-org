@@ -87,10 +87,15 @@ export const useAiTutorModelParameters = (
         }
       } catch (error) {
         console.error('Error fetching Langfuse prompt:', error);
+        if (mounted) {
+          setSystemPrompt(defaultSystemPrompt);
+        }
       }
     };
 
-    if (experiments.isEnabled(experiments.USE_LANGFUSE_PROMPT)) {
+    if (
+      experiments.isEnabledAllowingQueryString(experiments.USE_LANGFUSE_PROMPT)
+    ) {
       fetchLangfusePromptAndSet();
     } else {
       fetchPrompt();
