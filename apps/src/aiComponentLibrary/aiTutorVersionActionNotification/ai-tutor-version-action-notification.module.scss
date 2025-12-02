@@ -1,0 +1,63 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+.notification {
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  padding: 0.625rem 0.875rem;
+
+  .notificationContent {
+    display: flex;
+    flex: 1 0 0;
+    align-items: baseline;
+    gap: 0.5rem;
+
+    i {
+      font-size: 0.875rem;
+      line-height: 125%;
+      width: 1.125rem;
+      text-align: center;
+      color: var(--text-neutral-primary);
+    }
+
+    .notificationText {
+      @include typography.body-three;
+      flex: 1;
+      margin-top: 2px;
+      margin-bottom: 0;
+      color: var(--text-neutral-primary);
+
+      ul {
+        margin: 0.375rem 0 0 0;
+        padding-left: 1.25rem;
+        list-style-type: disc;
+      }
+
+      li {
+        margin-top: 0.125rem;
+      }
+
+      li:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.notification-accept {
+  background-color: var(--background-success-extra-light);
+
+  .notificationContent i {
+    color: var(--text-success-primary-fixed);
+  }
+}
+
+.notification-reject {
+  background-color: var(--background-error-extra-light);
+
+  .notificationContent i {
+    color: var(--text-error-primary-fixed);
+  }
+}
+
