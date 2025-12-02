@@ -52,7 +52,6 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
         widgetName="Rubric"
         gridWidth={gridWidth}
         gridHeight={gridHeight}
-        scrollable={true}
       >
         <div>No rubric data available.</div>
       </WidgetTemplate>
@@ -64,7 +63,6 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
       widgetName="Rubric"
       gridWidth={gridWidth}
       gridHeight={gridHeight}
-      scrollable={true}
     >
       <LearningGoals
         productTour={false}
