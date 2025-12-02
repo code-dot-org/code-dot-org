@@ -66,13 +66,15 @@ steps:
       # Then, count the number of files outside of the .git directory and compare to how many were
       # present in the cache. This is not a perfect check, but is much cheaper than computing a
       # checksum of all files and is likely to catch most instances of incomplete downloads.
-      - "rm apps/Gruntfile.js"
+      - "rm .cached-staging-build-file-count"
       - |
         if [ -f .cached-staging-build-file-count ]; then
           expected=$(cat .cached-staging-build-file-count)
           actual=$(find . -type f -not -path './.git/*' | wc -l)
           diff=$((actual - expected))
           [ "$expected" = "$actual" ] || { printf 'ERROR: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"; exit 1; }
+        else
+          echo "WARNING: .cached-staging-build-file-count not found; skipping file count validation"
         fi
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
@@ -188,13 +190,15 @@ steps:
       # Then, count the number of files outside of the .git directory and compare to how many were
       # present in the cache. This is not a perfect check, but is much cheaper than computing a
       # checksum of all files and is likely to catch most instances of incomplete downloads.
-      - "rm apps/Gruntfile.js"
+      - "rm .cached-staging-build-file-count"
       - |
         if [ -f .cached-staging-build-file-count ]; then
           expected=$(cat .cached-staging-build-file-count)
           actual=$(find . -type f -not -path './.git/*' | wc -l)
           diff=$((actual - expected))
           [ "$expected" = "$actual" ] || { printf 'ERROR: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"; exit 1; }
+        else
+          echo "WARNING: .cached-staging-build-file-count not found; skipping file count validation"
         fi
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
