@@ -36,11 +36,16 @@ export const HTMLPreview: React.FC = () => {
     const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-    const port =
-      'localhost' === environmentKey && location.port
-        ? `:${location.port}`
-        : '';
-    return `${location.protocol}//${normalizedChannelId}.preview.${subdomain}codeprojects.org${port}`;
+    const useLocalPrefixOverride = experiments.isEnabledAllowingQueryString(
+      experiments.LOCAL_WEBLAB2_PREVIEW
+    );
+    const isLocalhost = 'localhost' === environmentKey;
+    const prefix =
+      useLocalPrefixOverride && isLocalhost
+        ? 'localtesting'
+        : normalizedChannelId;
+    const port = isLocalhost && location.port ? `:${location.port}` : '';
+    return `${location.protocol}//${prefix}.preview.${subdomain}codeprojects.org${port}`;
   }, [normalizedChannelId]);
 
   // The new preview is currently behind an experiment flag. We pass this flag
