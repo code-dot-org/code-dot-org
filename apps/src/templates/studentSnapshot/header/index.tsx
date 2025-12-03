@@ -2,14 +2,35 @@ import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useState} from 'react';
 
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {Student} from '../../progress/progressTypes';
+
 import styles from './header.module.scss';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  selectedStudent: Student | undefined;
+  setSelectedStudentId: (id: number) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({
+  selectedStudent,
+  setSelectedStudentId,
+}) => {
   const [selectedUnit, setSelectedUnit] = useState<string>('');
   const [selectedLesson, setSelectedLesson] = useState<string>('');
-  const [selectedStudent, setSelectedStudent] = useState<string>('');
   const [selectedShowStudentsBy, setSelectedShowStudentsBy] =
     useState<string>('');
+
+  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+
+  const studentOptions = React.useMemo(() => {
+    return selectedStudents.map(student => ({
+      value: student.id.toString(),
+      text: getFullName(student),
+    }));
+  }, [selectedStudents]);
 
   const unitOptions = [
     {value: 'unit1', text: 'Unit 1'},
@@ -21,13 +42,6 @@ const Header: React.FC = () => {
     {value: 'lesson1', text: 'Lesson 1'},
     {value: 'lesson2', text: 'Lesson 2'},
     {value: 'lesson3', text: 'Lesson 3'},
-  ];
-
-  const studentOptions = [
-    {value: 'student1', text: 'Student 1'},
-    {value: 'student2', text: 'Student 2'},
-    {value: 'student3', text: 'Student 3'},
-    {value: 'student4', text: 'Student 4'},
   ];
 
   const showStudentsByOptions = [
@@ -103,8 +117,8 @@ const Header: React.FC = () => {
           labelText="Student"
           name="student"
           items={studentOptions}
-          selectedValue={selectedStudent}
-          onChange={event => setSelectedStudent(event.target.value)}
+          selectedValue={selectedStudent?.id.toString() || ''}
+          onChange={event => setSelectedStudentId(Number(event.target.value))}
           placeholder="Select a student"
           className={styles.dropdown}
         />

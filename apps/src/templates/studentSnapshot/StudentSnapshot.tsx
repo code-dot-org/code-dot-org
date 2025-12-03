@@ -1,23 +1,45 @@
 import {Typography} from '@mui/material';
 import React from 'react';
 
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {getFullName} from '../manageStudents/utils';
+
 import Header from './header';
 import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
 
 const StudentSnapshot: React.FC = () => {
+  const [selectedStudentId, setSelectedStudentId] = React.useState<
+    number | null
+  >(null);
+
+  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+
+  const selectedStudent = React.useMemo(
+    () => selectedStudents.find(student => student.id === selectedStudentId),
+    [selectedStudentId, selectedStudents]
+  );
+
   return (
     <div className={styles.snapshotContainer}>
-      <Header />
+      <Header
+        selectedStudent={selectedStudent}
+        setSelectedStudentId={setSelectedStudentId}
+      />
 
-      <Typography
-        variant="h4"
-        className={styles.studentNameHeader}
-        gutterBottom
-      >
-        <Typography variant="strong">{'<Student name>'}</Typography>
-      </Typography>
+      {selectedStudent && (
+        <Typography
+          variant="h4"
+          className={styles.studentNameHeader}
+          gutterBottom
+        >
+          <Typography variant="inherit" component="strong">
+            {selectedStudent ? getFullName(selectedStudent) : 'Unknown student'}
+          </Typography>
+        </Typography>
+      )}
 
       <div className={styles.widgetGrid}>
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
