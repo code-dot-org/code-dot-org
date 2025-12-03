@@ -8,7 +8,9 @@ saucelabs_username: !Secret
 # Configurations for making calls to the Immersive Reader API on Azure
 imm_reader_client_id:     '92ef2120-f523-41fe-a995-f9720bf70b81'
 
-lazy_load_i18n: <%= !running_web_application? %>
+# speed up rake tasks that are not running unit tests or web application.
+# This saves 30 seconds each time the rails environment is loaded.
+lazy_load_i18n: <%= !(running_web_application? || unit_test) %>
 
 # Disable Secrets for CI, unit-test runs,
 # and other non-chef_managed environments (e.g., preloading Spring for Rails tests).
