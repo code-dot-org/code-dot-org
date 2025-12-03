@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
@@ -19,9 +20,20 @@ interface VersionHistoryRowProps {
   comment?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
+  children?: React.ReactNode;
+  showRestoreButton: boolean;
+  className?: string;
 }
 
-const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
+interface RestoreVersionButtonProps {
+  restoreOnClick: () => void;
+  restoreLoading: boolean;
+  restoreDisabled: boolean;
+}
+
+const VersionHistoryRow: React.FunctionComponent<
+  VersionHistoryRowProps & RestoreVersionButtonProps
+> = ({
   versionId,
   label,
   isLatest,
@@ -29,6 +41,12 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   comment,
   onChange,
   disabled = false,
+  children,
+  showRestoreButton = false,
+  restoreOnClick,
+  restoreDisabled = false,
+  restoreLoading = false,
+  className,
 }) => {
   if (isLatest) {
     label = commonI18n.currentVersion();
@@ -51,14 +69,21 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
     isBoldtype = false;
   }
 
+  const showAutoSavedIcon = ariaLabel === lab2I18n.autosavedVersion();
+
   return (
     <div
       id={versionId}
-      className={classNames(moduleStyles.rowContainer, rowMarginStyle)}
+      className={classNames(
+        moduleStyles.rowContainer,
+        rowMarginStyle,
+        className
+      )}
     >
       <div className={moduleStyles.versionContent}>
         <div className={moduleStyles.versionHeader}>
           <RadioButton
+            className={moduleStyles.versionLabel}
             name={versionId}
             value={versionId}
             label={label}
@@ -67,8 +92,25 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             ariaLabel={ariaLabel}
             textThickness={isBoldtype ? 'thick' : 'thin'}
             disabled={disabled}
+            size="s"
           />
-          {ariaLabel === lab2I18n.autosavedVersion() && (
+          {showRestoreButton && (
+            <Button
+              className={moduleStyles.restoreButton}
+              text={commonI18n.restore()}
+              size="xs"
+              type="secondary"
+              color="gray"
+              iconLeft={{
+                iconName: 'arrow-rotate-left',
+                iconStyle: 'solid',
+              }}
+              onClick={restoreOnClick}
+              isPending={restoreLoading}
+              disabled={restoreDisabled}
+            />
+          )}
+          {showAutoSavedIcon && !showRestoreButton && (
             <WithTooltip
               tooltipProps={{
                 text: lab2I18n.autosavedVersion(),
@@ -84,8 +126,9 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             </WithTooltip>
           )}
         </div>
+        {children}
         {comment && (
-          <BodyFourText className={moduleStyles.commitDescription}>
+          <BodyFourText className={moduleStyles.commitDescription} noMargin>
             {comment}
           </BodyFourText>
         )}

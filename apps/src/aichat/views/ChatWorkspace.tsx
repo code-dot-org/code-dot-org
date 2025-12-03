@@ -1,6 +1,7 @@
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
-import React, {useCallback, useEffect, useMemo} from 'react';
+import markdownToTxt from 'markdown-to-txt';
+import React, {useCallback, useEffect, useState, useMemo} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
@@ -57,6 +58,9 @@ interface ChatWorkspaceProps {
   // Optional callback to process the model's response before it is recorded in chat
   // history (useful for structured outputs).
   responseCallback?: (response: string) => string;
+
+  // Optional callback to log level activity
+  logLevelActivity?: () => void;
 }
 
 /**
@@ -73,6 +77,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   hasStarterAssets = false,
   hideModelChangeMessage = false,
   responseCallback,
+  logLevelActivity,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
@@ -101,6 +106,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   });
   const currentUserId = useAppSelector(state => state.currentUser.userId);
+
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
@@ -220,6 +229,17 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     });
   }, [dispatch, previousParameters, modelParameters]);
 
+  const [liveAnnouncement, setLiveAnnouncement] = useState('');
+  const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+  useEffect(() => {
+    if (chatEvents.length > 0) {
+      const last = chatEvents[chatEvents.length - 1];
+      if ('chatMessageText' in last && last.chatMessageText) {
+        setLiveAnnouncement(markdownToTxt(last.chatMessageText));
+      }
+    }
+  }, [chatEvents]);
+
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
     iconStyle: 'solid',
@@ -245,6 +265,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={studentChatHistory}
           isTeacherView={true}
           buildAssetUrl={buildAssetUrlValue}
+          isAiTutorVersion={isAiTutorVersion}
         />
       ),
       iconLeft: iconValue,
@@ -256,6 +277,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={visibleItems}
           buildAssetUrl={buildAssetUrlValue}
+          isAiTutorVersion={isAiTutorVersion}
         />
       ),
     },
@@ -280,15 +302,18 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const uploadDisabled = !canChatWithModel || !!selectedStudent || chatDisabled;
 
-  const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
-
   const isTeacherView = !!selectedStudent;
 
   const showTabs =
     selectedStudent && clientType === AiChatClientTypes.AI_CHAT_LAB;
 
   return (
-    <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
+    <div
+      id="chat-workspace-area"
+      className={moduleStyles.chatWorkspace}
+      aria-live="polite"
+    >
+      <div className={moduleStyles.accessibilityHidden}>{liveAnnouncement}</div>
       {showTabs ? (
         <Tabs {...tabArgs} />
       ) : (
@@ -296,9 +321,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={chatEvents}
           isTeacherView={isTeacherView}
           buildAssetUrl={buildAssetUrlValue}
+          isAiTutorVersion={isAiTutorVersion}
         />
       )}
-
       <div className={moduleStyles.footer}>
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
@@ -316,6 +341,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             levelName={levelName}
             hasStarterAssets={hasStarterAssets}
             buildAssetUrl={buildAssetUrl}
+            logLevelActivity={logLevelActivity}
             uploadDisabled={uploadDisabled}
             currentLevelId={currentLevelId}
           />

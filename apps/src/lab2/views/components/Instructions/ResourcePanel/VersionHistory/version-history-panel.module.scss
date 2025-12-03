@@ -1,8 +1,4 @@
-$space-xs: 2px;
-$space-s: 4px;
-$space-m: 6px;
-$space-l: 8px;
-$space-xl: 10px;
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
 .versionHistoryPanel {
   display: flex;
@@ -13,76 +9,62 @@ $space-xl: 10px;
 }
 
 .message {
-  margin: 20px;
-  font-size: 16px;
+  margin: 0.625rem 0.625rem 0;
 }
 
 .listContainer {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: 0;
-}
-
-.list {
-  overflow-y: auto;
-  flex: 1;
   min-height: 0;
   position: relative;
 
   /* Simple background line that runs underneath the radio buttons */
-  background: linear-gradient(to right, transparent 32px, var(--borders-neutral-primary) 32px, var(--borders-neutral-primary) 33px, transparent 33px);
+  &::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 28px; // Align with radio button
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background-color: var(--borders-neutral-primary);
+    z-index: 0;
+    pointer-events: none;
+  }
 }
 
-/* Mask the vertical line above the first row */
-.rowContainer:first-child::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 8px; /* Cover the margin area */
+.list {
+  overflow-y: auto;
+  min-height: 0;
+  position: relative;
+  padding-bottom: 0.625rem;
+
+  & > .collapseButton + .autoSaveRow {
+    margin-top: 0.625rem;
+  }
+
+  /* Add extra space after the second to last row
+  to add more space above the initial version row */
+  & > div:nth-last-child(2) {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Repeating the class name to increase
+specificity to override DSCO styles */
+.collapseButton.collapseButton {
+  margin-inline-start: 0.75rem;
   background: var(--background-neutral-primary);
-  z-index: -1;
-  top: -9px;
-}
+  position: relative;
+  z-index: 1;
 
-.listFooter {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  gap: $space-s;
-  padding: $space-m;
-  margin-right: $space-xl;
+  span,
+  i {
+    color: var(--text-neutral-quaternary);
+  }
 }
 
 .loadingVersionSpinner {
   font-size: 32px;
   text-align: center;
-  margin-right: 12px;
-}
-
-.versionLoadError {
-  font-size: 14px;
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  gap: 8px;
-  background-color: var(--background-neutral-primary);
-}
-
-.versionButton {
-  width: 100%;
-  height: 32px;
-  box-sizing: border-box;
-}
-
-.leftButton {
-  margin-right: auto;
-}
-
-.rightButton {
-  margin-left: auto;
+  margin-right: 0.75rem;
 }

@@ -116,6 +116,7 @@ module ScriptConstants
       # with code_s matching the script name (in quotes) in this list.
 
       nil,
+      MIX_MOVE_AI_2025 = 'mix-move-ai-2025'.freeze, # 2025 hour of ai
       MUSIC_JAM_2024 = 'music-jam-2024'.freeze, # 2024 hour of code
       DANCE_AI_2023 = 'dance-ai-2023'.freeze, # 2023 hour of code
       POEM_ART_2021_NAME = 'poem-art-2021'.freeze, # 2021 hour of code
@@ -135,7 +136,7 @@ module ScriptConstants
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
       MINECRAFT_AI_NAME = 'generation-ai'.freeze,
       MINECRAFT_SHOW_NAME = 'show-must-go-on'.freeze,
-      MINECRAFT_NIGHT_NAME = 'first-night'.freeze,
+      MINECRAFT_NIGHT_NAME = 'firstnight-mc'.freeze,
       APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
       FROZEN_NAME = 'frozen'.freeze,

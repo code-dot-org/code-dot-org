@@ -12,7 +12,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const MIN_RIGHT_PANEL_WIDTH = 300;
-const MIN_LEFT_PANEL_WIDTH = 150;
+const MIN_LEFT_PANEL_WIDTH = 250;
 const MIN_LEFT_PANEL_WIDTH_COLLAPSED = 55;
 const MIN_OUTPUT_HEIGHT = 120;
 const MIN_EDITOR_HEIGHT = 200;

@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q3_2025'
+
+question 'When you click "Play" on a video site and the video starts, what is the main role of the event handler in that moment?'
+
+right 'It tells the website what to do when you click the button.'
+wrong 'It stores information about which videos you like the most.'
+wrong 'It changes the website\'s color theme based on your device settings.'
+wrong 'It automatically updates the browser to the newest version.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+MARKDOWN

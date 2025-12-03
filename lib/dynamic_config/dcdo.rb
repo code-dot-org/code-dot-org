@@ -53,9 +53,10 @@ class DCDOBase < DynamicConfigBase
       'teacher-homepage-v2-announcement': DCDO.get('teacher-homepage-v2-announcement', false),
       'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
       # Enabled locales for browser text to speech. Set to an empty array to disable all languages, or true to enable all.
-      'browser-tts-button-enabled-locales': DCDO.get('browser-tts-button-enabled-locales', ['en-US']),
+      'browser-tts-button-enabled-locales': DCDO.get('browser-tts-button-enabled-locales', ['en-US', 'en']),
       'lab2-submit-project-enabled': DCDO.get('lab2-submit-project-enabled', true),
       'cdo-blockly-usage': DCDO.get('cdo-blockly-usage', false),
+      'ai-dancer-head-crop': DCDO.get('ai-dancer-head-crop', false),
       # TODO ACQ-3074 - Remove this after the Exploring Gen AI launch
       'exploring-gen-ai-launch': DCDO.get('exploring-gen-ai-launch', false),
       'music-lab-banner': DCDO.get('music-lab-banner', false),
@@ -65,9 +66,10 @@ class DCDOBase < DynamicConfigBase
       'skills-dashboard': DCDO.get('skills-dashboard', false),
       'teacher-homepage-welcome': DCDO.get('teacher-homepage-welcome', false),
       'blockly-keyboard-navigation': DCDO.get('blockly-keyboard-navigation', false),
-      'actioncable-repeat-interval': DCDO.get('actioncable-repeat-interval', 1000),
-      'actioncable-repeat': DCDO.get('actioncable-repeat', true),
-      'actioncable-disconnect-timeout': DCDO.get('actioncable-disconnect-timeout', 30 * 1000),
+      'disable-progress-v1': DCDO.get('disable-progress-v1', false),
+      'detect-remote-network-config': DCDO.get('detect-remote-network-config', {}),
+      'show-aita-lesson-summaries': DCDO.get('show-aita-lesson-summaries', false),
+      'hoai2025-share-enabled': DCDO.get('hoai2025-share-enabled', false)
     }
   end
 end

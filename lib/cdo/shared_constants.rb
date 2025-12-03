@@ -833,9 +833,9 @@ module SharedConstants
   }
 
   AI_CHAT_CLIENT_TYPES = {
-    AI_CHAT_LAB: 0,
-    AI_TUTOR: 1,
-    FLOW_LAB: 2,
+    AI_CHAT_LAB: "ai-chat-lab",
+    AI_TUTOR: "ai-tutor",
+    FLOW_LAB: "flow-lab",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
@@ -890,7 +890,15 @@ module SharedConstants
     UNIT: "unit",
     COURSE: "course",
     GENERAL: "general",
-    LEVEL: "level"
+    LEVEL: "level",
+    PROGRESS: "progress"
+  }.freeze
+
+  AI_DIFF_ASSOCIATION = {
+    LESSON: "lesson",
+    UNIT: "unit",
+    COURSE: "course",
+    SECTION: "section"
   }.freeze
 
   DISALLOWED_ROUTES = [

@@ -191,7 +191,7 @@ gem 'haml', '~> 5.2.0'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
-gem 'nokogiri', '>= 1.10.0'
+gem 'nokogiri', '~> 1.18.9'
 
 gem 'highline', '~> 3.1.0'
 
@@ -255,7 +255,7 @@ gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
 gem 'aws-sdk-cloudwatchlogs'
 gem 'aws-sdk-comprehend'
-gem 'aws-sdk-core'
+gem 'aws-sdk-core', '>= 3.239.2'
 gem 'aws-sdk-databasemigrationservice'
 gem 'aws-sdk-dynamodb'
 gem 'aws-sdk-ec2'
@@ -263,7 +263,7 @@ gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
-gem 'aws-sdk-s3'
+gem 'aws-sdk-s3', '~> 1.113'
 gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
 
@@ -379,7 +379,8 @@ gem 'rack-cors', '~> 2.0.1'
 
 # pin http to 5.0 or greater so that statsig does not pull in an older version.
 # older versions depend on http-parser which breaks some developer builds.
-gem 'http', '~> 5.0'
+# Speculatively target 5.3 specifically to diagnose some S3 networking errors
+gem 'http', '~> 5.3.1'
 
 gem 'statsig', '~> 2.5.5'
 
@@ -407,3 +408,6 @@ end
 # This gem line can be removed once we upgrade to Ruby 3.4 >= 3.4.8, or Ruby 3.3 >= 3.3.10 or Ruby 3.2 >= 3.2.10
 # which will include the openssl fix by default, see: https://github.com/ruby/openssl/issues/949#issuecomment-3388132260
 gem 'openssl', '>= 3.3.1'
+
+# Used for Clever Client
+gem 'typhoeus', '~> 1.0', '>= 1.0.1'

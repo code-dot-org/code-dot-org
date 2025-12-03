@@ -23,6 +23,7 @@ export const TEACHER_NAVIGATION_PATHS = {
   settings: 'settings',
   home: 'home',
   skills: 'skills_in_dev',
+  studentSnapshot: 'student_snapshot',
 };
 
 const getAbsolutePath = (name: string) =>
@@ -149,5 +150,11 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.skills),
     label: 'Skills (In Development)',
     icon: 'brain',
+  },
+  studentSnapshot: {
+    url: TEACHER_NAVIGATION_PATHS.studentSnapshot,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.studentSnapshot),
+    label: 'Student Snapshot',
+    icon: 'screen-users',
   },
 };

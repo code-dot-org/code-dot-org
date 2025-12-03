@@ -38,6 +38,8 @@ class BubbleChoice < DSLDefined
     hide_letters_lab2
     custom_mode
     navigation_type
+    finish_dialog
+    hide_share_and_remix
   )
 
   ALPHABET = ('a'..'z').to_a
@@ -271,6 +273,10 @@ class BubbleChoice < DSLDefined
 
   def channel_backed?
     return false if try(:is_project_level)
+    custom_mode == SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+  end
+
+  def supports_sharing?
     custom_mode == SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
   end
 

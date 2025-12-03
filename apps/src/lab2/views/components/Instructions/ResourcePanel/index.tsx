@@ -10,13 +10,20 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {
+  isReadOnlyWorkspace,
+  isPermanentlyReadOnlyWorkspace,
+  isReadOnlyPredictLevel,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
+import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -36,6 +43,7 @@ import CopyrightButton from './CopyrightButton';
 import DisclaimerButton from './DisclaimerButton';
 import OnboardingTourSteps from './OnboardingTourSteps';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
+import setFooterVisibility from './setFooterVisibility';
 import SettingsPanel from './SettingsPanel';
 import {Tabs} from './types';
 import ValidationPanel from './ValidationPanel';
@@ -59,10 +67,6 @@ interface VersionHistoryProps {
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
-  [Tabs.TeachersOnly]: {
-    title: commonI18n.teachingTips(),
-    icon: 'chalkboard-teacher',
-  },
   [Tabs.StudentRubric]: {
     title: commonI18n.rubric(),
     icon: 'clipboard-list',
@@ -74,6 +78,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Validation]: {
     title: commonI18n.validation(),
     icon: 'clipboard-check',
+  },
+  [Tabs.TeachersOnly]: {
+    title: commonI18n.teachingTips(),
+    icon: 'chalkboard-teacher',
   },
 };
 
@@ -94,6 +102,8 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
+  /** Only display the sidebar and hide all tabs. */
+  sidebarOnly?: boolean;
 };
 
 /**
@@ -117,6 +127,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorSystemPromptName,
   aiTutorResponseSchemaSettings,
   documentationUrl,
+  sidebarOnly = false,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -133,18 +144,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.lab2Project.viewingOldVersion
   );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const isRunning = instructionsProps.isRunning;
-  const isValidating =
-    instructionsProps.validationSettings?.isValidating || false;
-
-  // Assign the permanent read-only state once at mount time, before any temporary state changes.
-  const isPermanentlyReadOnlyRef = useRef<boolean | null>(null);
-  if (isPermanentlyReadOnlyRef.current === null) {
-    isPermanentlyReadOnlyRef.current =
-      isReadOnly && !isRunning && !isValidating;
-  }
-  const isWidgetView = instructionsProps.levelProperties.widgetView || false;
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace); // includes running/validating.
+  const isPermanentlyReadOnly = useAppSelector(isPermanentlyReadOnlyWorkspace);
+  const isReadOnlyPredict = useAppSelector(isReadOnlyPredictLevel);
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
@@ -157,16 +159,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
+  const isWidgetView = instructionsProps.levelProperties.widgetView;
   const dispatch = useAppDispatch();
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
 
-  // Temporary read-only occurs when running/validating in a workspace that wasn't permanently read-only at mount.
-  const isTemporarilyReadOnly =
-    !isPermanentlyReadOnlyRef.current &&
-    isReadOnly &&
-    (isRunning || isValidating);
+  // If we are not permanently read-only but are currently in a read-only state, we are temporarily read-only.
+  const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
   const aiTutorVisible = shouldShowAiTutor(
@@ -176,6 +176,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
+    if (sidebarOnly) {
+      return {};
+    }
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
 
     if (levelProperties.longInstructions) {
@@ -193,19 +196,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (
-      isUserTeacher &&
-      (levelProperties.teacherMarkdown ||
-        levelProperties.predictSettings?.solution)
-    ) {
-      tabMap[Tabs.TeachersOnly] = (
-        <ForTeachersOnly
-          levelProperties={levelProperties}
-          className={styles.panelContent}
-        />
-      );
-    }
-
     if (hiddenContextCallback && aiTutorVisible) {
       tabMap[Tabs.AiTutor] = (
         <AiTutorChat
@@ -220,17 +210,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    // The version history tab is hidden in read only mode with two exceptions:
-    // if the user is viewing an old version of the project, or if this is a teacher viewing
-    // a student's project (in which case they can view old versions, but not restore them).
-    // We never show the version history tab in widget view, as widget view is always read-only
-    // and therefore can never have version history.
-    // Note: We use the permanent read-only state captured at mount time to determine tab visibility.
+    // The version history tab is hidden in permanently read-only mode with the following exception:
+    // - if a teacher is viewing a student's project (in which case they can view old versions, but not restore them).
+    // Version history is also hidden on predict levels and widget view.
     const versionHistoryHidden =
-      (isPermanentlyReadOnlyRef.current &&
-        !isViewingOldVersion &&
-        !viewAsUserId) ||
-      isWidgetView;
+      (isPermanentlyReadOnly && !viewAsUserId) ||
+      isWidgetView ||
+      isReadOnlyPredict;
     if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
         <VersionHistoryPanel
@@ -239,7 +225,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           startSources={versionHistoryProps.startSources}
           appName={levelProperties.appName}
           levelId={levelId}
-          disabled={isTemporarilyReadOnly}
+          disabled={isTemporarilyReadOnly && !isViewingOldVersion}
         />
       );
     }
@@ -248,19 +234,33 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
     }
 
+    if (
+      isUserTeacher &&
+      (levelProperties.teacherMarkdown ||
+        levelProperties.predictSettings?.solution)
+    ) {
+      tabMap[Tabs.TeachersOnly] = (
+        <ForTeachersOnly
+          levelProperties={levelProperties}
+          className={classNames(styles.panelContent, styles.teachersOnlyTab)}
+        />
+      );
+    }
+
     return tabMap;
   }, [
-    instructionsProps,
+    sidebarOnly,
     levelProperties,
+    instructionsProps,
     hasValidationConditions,
-    isUserTeacher,
-    aiTutorVisible,
     hiddenContextCallback,
-    isViewingOldVersion,
+    aiTutorVisible,
+    isPermanentlyReadOnly,
     viewAsUserId,
     isWidgetView,
     versionHistoryProps,
     showRubric,
+    isUserTeacher,
     hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
     levelName,
@@ -271,6 +271,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,
+    isViewingOldVersion,
+    isReadOnlyPredict,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -302,18 +304,35 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [currentTab, availableTabs]);
 
   useEffect(() => {
-    // Reset current tab to instructions when switching levels or viewAsUserId
+    // Reset current tab to instructions when switching levels or viewAsUserId.
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
+  // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
+  const {setShowExtraLinksButton} = useExtraLinksButtonContext();
+  useEffect(() => {
+    setFooterVisibility(false);
+    setShowExtraLinksButton(false);
+    return () => {
+      setFooterVisibility(true);
+      setShowExtraLinksButton(true);
+    };
+  }, [setShowExtraLinksButton]);
+
   const onClickTab = useCallback(
     (tab: Tabs) => {
+      if (currentTab && currentTab !== tab) {
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, {
+          resourcePanelTabClickedTo: tab,
+          resourcePanelTabClickedFrom: currentTab,
+        });
+      }
       setCurrentTab(tab);
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [dispatch, isStandaloneCollapsed]
+    [currentTab, dispatch, isStandaloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
@@ -323,20 +342,27 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
         setIsSettingsOpen(true);
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
       } else {
+        // If settngs is currently not open, open settings panel and send analytics event.
+        if (!isSettingsOpen) {
+          sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
+        }
         setIsSettingsOpen(!isSettingsOpen);
       }
     } else {
       // For standalone projects with no tabs, we toggle the floating settings panel.
+      if (!isFloatingSettingsOpen) {
+        sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_PANEL_OPENED);
+      }
       setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
     }
   }, [
-    dispatch,
     hasTabs,
-    isSettingsOpen,
     isStandaloneCollapsed,
+    dispatch,
+    isSettingsOpen,
     isFloatingSettingsOpen,
-    setIsFloatingSettingsOpen,
   ]);
 
   return (
@@ -421,7 +447,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     <Button
                       className={classNames(
                         styles.tabButton,
-                        tab === currentTab && styles.selected
+                        tab === currentTab && styles.selected,
+                        tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
                       onClick={() => onClickTab(tab)}
                       key={tab}
@@ -478,7 +505,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             </div>
           </div>
         </div>
-        {!isStandaloneCollapsed && (
+        {!isStandaloneCollapsed && hasTabs && (
           <div className={styles.panels}>
             <PanelContainer
               id={currentTab || 'resource-panel'}
@@ -525,6 +552,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   closePanel={() => {
                     setIsSettingsOpen(false);
                   }}
+                  appName={appName}
                 />
               )}
             </PanelContainer>
@@ -543,6 +571,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             closePanel={() => {
               setIsFloatingSettingsOpen(!isFloatingSettingsOpen);
             }}
+            appName={appName}
           />
         </div>
       )}

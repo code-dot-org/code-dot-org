@@ -1,8 +1,10 @@
 import React from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 
 import styles from './GuideInstructions.module.scss';
 
@@ -21,14 +23,33 @@ const GuideInstructions: React.FunctionComponent<GuideInstructionsProps> = ({
   hasRun,
   hasEdited,
 }) => {
+  const {longInstructions, offerBrowserTts} = levelProperties;
+  const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
+
+  const levelSpecificId = `guide-instructions-${levelProperties.id}`;
+
   return (
-    <Guide id="guide-instructions" modal={false} width={width}>
-      <Instructions
+    <Guide
+      key={levelSpecificId}
+      id={levelSpecificId}
+      modal={undefined}
+      width={width}
+    >
+      {longInstructions && (
+        <MainInstructionsContent
+          instructionsText={longInstructions}
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
+      )}
+
+      <NavigationArea
         levelProperties={levelProperties}
+        markdownClassName={styles.markdown}
         isRunning={isRunning}
         hasRun={hasRun}
         hasEdited={hasEdited}
-        className={styles.GuideInstructions}
+        hideContinueIfDisabled={true}
       />
     </Guide>
   );

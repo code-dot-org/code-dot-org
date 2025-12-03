@@ -6,29 +6,26 @@ import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
-import experiments from '@cdo/apps/util/experiments';
 
-import {ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
-import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
+import {
+  WEBLAB2_EDITABLE_FILE_TYPES,
+  WEBLAB2_SUPPORTED_FILE_TYPES,
+} from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {getPromptNameFromMode} from './helpers/aiTutorHelper';
-import {
-  acceptRejectJsonSchema,
-  formatExplanationResponse,
-  copyCodeJsonSchema,
-} from './helpers/aiTutorStructuredResponseHelper';
-import FullScreenView from './layout/FullScreenView';
+import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
-import {setViewMode} from './redux';
 import {Weblab2LevelProperties, ViewMode} from './types';
+import {setViewMode} from './weblab2Redux';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
 
@@ -44,12 +41,12 @@ const weblab2LangMapping: {[key: string]: LanguageSupport} = {
 const defaultConfig: ConfigType = {
   languageMapping: weblab2LangMapping,
   editableFileTypes: WEBLAB2_EDITABLE_FILE_TYPES,
+  supportedFileTypes: WEBLAB2_SUPPORTED_FILE_TYPES,
   activeLayout: 'vertical',
   layoutComponents: {
     vertical: VerticalLayout,
     widget: VerticalLayout,
     share: ShareView,
-    fullScreen: FullScreenView,
   },
 };
 
@@ -81,6 +78,8 @@ const Weblab2View: React.FC<
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
 
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
+
   const source = useAppSelector(
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
@@ -96,6 +95,10 @@ const Weblab2View: React.FC<
     state => !!state.lab2Project.projectSources?.source
   );
 
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+
   // Note: this causes Web Lab 2 to re-render when sources change.
   // Unfortunately, the way AI tutor is set up right now requires passing in a context
   // rather than a callback for the context. In the future, we should consider refactoring AI
@@ -104,8 +107,10 @@ const Weblab2View: React.FC<
     aiTutorHelper.setAiTutorContext({
       source,
       longInstructions: levelProperties.longInstructions,
+      hasEdited,
+      hasRun,
     });
-  }, [source, levelProperties.longInstructions]);
+  }, [source, levelProperties.longInstructions, hasEdited, hasRun]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -120,40 +125,17 @@ const Weblab2View: React.FC<
   }, [dispatch]);
 
   useEffect(() => {
+    if (hasEdited) {
+      logLevelActivity();
+    }
+  }, [hasEdited, logLevelActivity]);
+
+  useEffect(() => {
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
-  const aiTutorResponseSchemaSettings: ResponseSchemaSettings | undefined =
-    useMemo(() => {
-      if (
-        experiments.isEnabledAllowingQueryString(
-          experiments.WEBLAB2_ACCEPT_REJECT
-        )
-      ) {
-        return {
-          jsonSchema: acceptRejectJsonSchema,
-          responseCallback: (response: string) => {
-            const jsonResponse = JSON.parse(response);
-            console.log('🤖: Tutor response (in jsonSchema callback):', {
-              jsonResponse,
-            });
-            // TODO: send code to the appropriate place
-            return jsonResponse.explanation;
-          },
-        };
-      } else {
-        return {
-          jsonSchema: copyCodeJsonSchema,
-          responseCallback: (response: string) => {
-            const jsonResponse = JSON.parse(response);
-            console.log('🤖: Tutor response (in jsonSchema callback):', {
-              jsonResponse,
-            });
-            return formatExplanationResponse(jsonResponse.answer);
-          },
-        };
-      }
-    }, []);
+  const aiTutorResponseSchemaSettings =
+    useAiTutorResponseSchemaSettings(source);
 
   return (
     <div className={moduleStyles.weblab2Container}>

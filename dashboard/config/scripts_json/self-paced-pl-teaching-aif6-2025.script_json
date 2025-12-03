@@ -8,11 +8,12 @@
       "curriculum_umbrella": "Self-paced PL - AIF",
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-29 19:33:53 UTC",
+    "serialized_at": "2025-11-03 19:14:11 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

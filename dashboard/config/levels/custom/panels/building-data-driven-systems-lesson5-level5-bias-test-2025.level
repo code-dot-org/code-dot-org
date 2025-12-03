@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-21T02:10:02.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Bias\n\n**Bias** happens when some people, ideas, or situations are represented more than others in a way that is unfair. \n\nIn data and AI, **bias** often comes from who is missing or who is overrepresented in the dataset an AI learns from.\n\nIf one group shows up much more than others, the AI’s view becomes uneven — some groups get extra attention while others are almost invisible.\n\n",
+        "imageUrl": "https://images.code.org/480b0329998389316eba9746c90c4bb0-bias.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-21T02:10:02.129+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson4-level3-object-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson4-level3-object-test-2025\"},{\"changed_at\":\"2025-11-21 02:24:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

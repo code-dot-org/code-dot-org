@@ -25,6 +25,10 @@
     animation: gradient-animation 2s ease infinite;
   }
 
+  &Hidden {
+    display: none;
+  }
+
   .adlibInner {
     width: 100%;
     height: 100%;
@@ -36,9 +40,13 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 2.4;
     padding: 16px;
+
+    &ReadOnly {
+      line-height: 1.5;
+    }
   }
 }
 
@@ -46,8 +54,9 @@
   background-color: initial;
   color: white;
   width: initial;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: initial;
+  vertical-align: baseline;
 
   option {
     color: initial;

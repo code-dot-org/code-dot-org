@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-25 18:23:38 UTC",
+    "serialized_at": "2025-11-06 15:15:03 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -175,6 +175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_00_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -197,6 +200,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_01_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -219,6 +225,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_03_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -241,6 +250,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_04_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -263,6 +275,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_05_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -285,6 +300,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_06_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -307,6 +325,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_career_AI_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -329,6 +350,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_AI_chatbot_overview_ai_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -351,6 +375,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_03b_2025"
+        ],
         "progression": "Intro to AI"
       },
       "bonus": false,
@@ -373,6 +400,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_09_2025"
+        ],
         "progression": "Intro to AI"
       },
       "bonus": false,
@@ -395,6 +425,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_08b_2025"
+        ],
         "progression": "Intro to AI"
       },
       "bonus": false,
@@ -417,6 +450,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_12_2025"
+        ],
         "progression": "Intro to AI"
       },
       "bonus": false,
@@ -439,6 +475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_00b_2025"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -461,6 +500,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_2025"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -483,6 +525,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_02_2025"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -505,6 +550,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_04_2025"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -527,6 +575,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_05_2025"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -549,6 +600,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_07b_2025"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -571,6 +625,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_08b_2025"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -593,6 +650,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_09_2025"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -615,6 +675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_2025"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -637,6 +700,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02b_2025"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -659,6 +725,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_05b_2025"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -681,6 +750,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_06b_2025"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -703,6 +775,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_07_2025"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -725,6 +800,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_08_2025"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -747,6 +825,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03c_2025"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -769,6 +850,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_02b_2025"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -791,6 +875,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_03d_2025"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -813,6 +900,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_04b_2025"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -835,6 +925,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_05_2025"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -857,6 +950,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_06_2025"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -879,6 +975,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_08b_2025"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -901,6 +1000,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_09b_2025"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -923,6 +1025,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_10b_2025"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -945,6 +1050,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_11_2025"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -967,6 +1075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_01_2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -989,6 +1100,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_02_2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -1011,6 +1125,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_03_2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -1033,6 +1150,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_04_2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -1055,6 +1175,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_05_2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -1567,13 +1690,251 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "PS wit AI U1L1-4",
+      "url": "https://drive.google.com/file/d/1p7iOt7HJorvteheOgOvadR8KEs_yYTl2/view?usp=drive_link",
+      "key": "ps_wit_ai_u1l1-4",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_wit_ai_u1l1-4"
+      }
+    },
+    {
+      "name": "PS with AI U1L1",
+      "url": "https://drive.google.com/file/d/1b00KYp7ZA6VnNKqqAR_iplXJtkBLqMyi/view?usp=drive_link",
+      "key": "ps_with_ai_u1l1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1"
+      }
+    },
+    {
+      "name": "PS with AI U1L1-1",
+      "url": "https://drive.google.com/file/d/1QlnlSvdc5DU8GKuJ0nijHv9nA1_iB3pz/view?usp=drive_link",
+      "key": "ps_with_ai_u1l1-1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-1"
+      }
+    },
+    {
+      "name": "PS with AI U1L1-10",
+      "url": "https://drive.google.com/file/d/1ncL4n85XjZplIHa9BEasbwvz_5IktB4e/view?usp=drive_link",
+      "key": "ps_with_ai_u1l1-10",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-10"
+      }
+    },
+    {
+      "name": "PS with AI U1L1-11",
+      "url": "https://drive.google.com/file/d/12tNRrnpbWWIzTo3HW_pfeXfGCzhY6N2V/view?usp=drive_link",
+      "key": "ps_with_ai_u1l1-11",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-11"
+      }
+    },
+    {
+      "name": "PS with AI U1L1-12",
+      "url": "https://drive.google.com/file/d/17lGQT775_oPQlUKXDWAIdCSlyHNE00Oz/view?usp=drive_link",
+      "key": "ps_with_ai_u1l1-12",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-12"
+      }
+    },
+    {
+      "name": "PS with AI U1L1-2",
+      "url": "https://drive.google.com/file/d/1L5H5mEyLKc_K54Xu7vf6oAbf7VgY5YXn/view?usp=drive_link",
+      "key": "ps_with_ai_u1l1-2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-2"
+      }
+    },
+    {
+      "name": "PS with AI U1L1-3",
+      "url": "https://drive.google.com/file/d/1tDneHMhP43d5I1LFeuq-hfyx88KSywen/view?usp=drive_link",
+      "key": "ps_with_ai_u1l1-3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-3"
+      }
+    },
+    {
+      "name": "PS with AI U1L1-9",
+      "url": "https://drive.google.com/file/d/1VSharwARF8jeUSd-g0eCW4ab6JJrsKNG/view?usp=drive_link",
+      "key": "ps_with_ai_u1l1-9",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "resource_dropdown_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-9"
+      }
+    },
+    {
+      "name": "PS with AI U1L5",
+      "url": "https://drive.google.com/file/d/1jgLzrgViQktzZsAW-Y6fy2vvL1iz8uz1/view?usp=drive_link",
+      "key": "ps_with_ai_u1l5",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "resource_dropdown_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l5"
+      }
+    },
+    {
+      "name": "PS with AI U1L6",
+      "url": "https://drive.google.com/file/d/1hFLivpfOliwiDhtKnGPfcJVp6BOdBPZL/view?usp=drive_link",
+      "key": "ps_with_ai_u1l6",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l6"
+      }
+    },
+    {
+      "name": "PS with AI U1L7",
+      "url": "https://drive.google.com/file/d/1odfKOr9Vr1oQ50vzftS1gdk7KKAPSq7A/view?usp=drive_link",
+      "key": "ps_with_ai_u1l7",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l7"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ps_wit_ai_u1l1-4",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-1",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-10",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-11",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-12",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-2",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-3",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l1-9",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l5",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l6",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ps_with_ai_u1l7",
+        "script.name": "self-paced-pl-teaching-problem-solving-with-ai-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 

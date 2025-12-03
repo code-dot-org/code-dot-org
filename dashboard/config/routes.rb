@@ -37,7 +37,12 @@ Dashboard::Application.routes.draw do
 
   constraints host: CDO.preview_codeprojects_hostname do
     get '/', to: 'codeprojects_preview#show'
+    # Must be served from / on preview.codeprojects.org to control the root scope:
+    get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
+    # Custom 404 page for codeprojects preview
+    get '*path', to: 'codeprojects_preview#not_found'
   end
+
   # This matches any host that is not the codeprojects hostname
   constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
@@ -101,8 +106,6 @@ Dashboard::Application.routes.draw do
 
     get "/home", to: "home#home"
 
-    get "/congrats", to: "congrats#index"
-
     get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
     get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
@@ -118,6 +121,7 @@ Dashboard::Application.routes.draw do
 
     resources :puzzle_ratings, only: [:create]
     resources :callouts
+    resources :congrats, only: %i[index show], param: :course_name
     resources :videos do
       collection do
         get 'test'
@@ -757,6 +761,7 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
+        resource :deep_linking, controller: :deep_linking, only: :show
         namespace :account_linking do
           get :landing
           get :existing_account
@@ -1113,6 +1118,10 @@ Dashboard::Application.routes.draw do
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}
 
+        # Routes used by personalization alert
+        post 'users/has_dismissed_personalization_alert', to: 'users#post_has_dismissed_personalization_alert'
+        get 'users/has_dismissed_personalization_alert', to: 'users#get_has_dismissed_personalization_alert'
+
         # Routes used by UI test status pages
         get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
         get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
@@ -1161,7 +1170,10 @@ Dashboard::Application.routes.draw do
     # AI Lesson Summaries routes
     resources :ai_lesson_summaries, only: [:show] do
       collection do
-        get :show # GET /ai_lesson_summaries/show?user_id=1&lesson_id=2
+        get :show # GET /ai_lesson_summaries/show?lesson_id=2
+        get :ai_lesson_summary_podcast_script, controller: :ai_lesson_summaries, action: :ai_lesson_summary_podcast_script # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
+        get :perform_ai_lesson_summaries_by_unit, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summaries_by_unit # GET ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=1
+        get :perform_ai_lesson_summary_by_lesson, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summary_by_lesson # GET ai_lesson_summaries/perform_ai_lesson_summary_by_lesson?lesson_id=1
       end
     end
 
@@ -1307,6 +1319,8 @@ Dashboard::Application.routes.draw do
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
+    get '/langfuse/get_prompt', to: 'langfuse#get_prompt'
+
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 
@@ -1328,6 +1342,11 @@ Dashboard::Application.routes.draw do
         post :chat_completion
       end
     end
+
+    resources :aidiff_artifacts, only: [:index]
+
+    resources :aidiff_exit_tickets, only: [:index, :update, :create]
+    resources :aidiff_lesson_hooks, only: [:index, :update, :create]
 
     resources :aidiff_messages, only: [] do
       member do

@@ -3,10 +3,13 @@ display_name 'Time to party!'
 description 'Your dancer is ready. Your music remix is ready. Now you\'re ready to generate code for the dance party!'
 
 sublevels
-level 'pilot_generate_dancer_choice_2_3_4'
-level 'length_prompt_choice_2_3_4'
-level 'dance_moves_choice_2_3_4'
+level 'mix-move-ai-dance-prompt-3-input-choice'
+level 'mix-move-ai-dancer-prompt-4-input-choice'
+level 'mix-move-ai-music-prompt-3-input-choice'
+
 
 custom_mode 'music_dance_ai'
 uses_lab2
 navigation_type 'next_level'
+finish_dialog 'hoai2025'
+hide_share_and_remix 'false'

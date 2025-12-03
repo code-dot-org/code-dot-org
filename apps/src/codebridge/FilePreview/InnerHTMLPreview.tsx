@@ -2,7 +2,6 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getUrlForFile, getFolderPath} from '@codebridge/utils';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import emptyPreviewPlaceholderImage from '@cdo/apps/codebridge/images/empty-preview-placeholder.svg';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
@@ -13,6 +12,7 @@ import {
   updateLinksToHtmlFiles,
   updateLinksToNonHtmlFiles,
 } from './htmlParsingHelpers';
+import PageNotFound from './PageNotFound';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
 const NOT_FOUND_FILE = 'NOT_FOUND';
@@ -174,15 +174,7 @@ const InnerHTMLPreview = () => {
 
   const getPreview = useCallback(() => {
     if (blobUrl === NOT_FOUND_FILE) {
-      return (
-        <div className={moduleStyles.placeholderContainer}>
-          <CodebridgeEmptyState
-            imageProps={{src: emptyPreviewPlaceholderImage}}
-            title="Nothing to preview"
-            description="Your project preview will appear here once you've created or opened a page with content."
-          />
-        </div>
-      );
+      return <PageNotFound />;
     } else if (blobUrl) {
       return (
         <iframe

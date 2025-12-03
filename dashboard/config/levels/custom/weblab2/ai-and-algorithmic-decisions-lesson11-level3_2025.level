@@ -1,0 +1,34 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T03:16:26.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Complete and Test Your Interactivity\r\n### What to do:\r\nBuild out your app’s full logic and make sure all your planned rules and outcomes work. Test how it behaves with different inputs and fix any bugs. You’ll also gather peer feedback using the TAG method.\r\n\r\n**Focus on:**\r\n- Implementing all planned logic and combined conditions.\r\n- Making sure the app updates correctly every time the user interacts.\r\n- Organizing your code into clear functions and event listeners.\r\n- Save versions as needed.\r\n\r\n**Ask AI for help as you refine.** Possible Stems:\r\n- Here’s what my code should do — can you help me spot what’s missing?\r\n- How can I simplify this if/else statement?\r\n- What tests should I run to make sure everything works?\r\n\r\n### Your goal:\r\nA complete, working version of your app that reacts reliably and is ready for feedback and polish.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson11-template-test-2025",
+    "level_system_prompt": "The student is now completing their app’s interactivity and testing its logic.\r\nYour role is to act as a debugging and design partner who helps them think critically about how their app responds to user input.\r\n\t•\tEncourage them to test multiple inputs, identify logical errors, and refine code organization.\r\n\t•\tSupport their understanding of conditional logic, state management, and function design.\r\n\t•\tAsk diagnostic questions (“What happens when you…?” or “What should happen instead?”) to prompt reflection.\r\n\t•\tCelebrate progress and frame debugging as part of the creative process.\r\n\t•\tAvoid writing entire features; focus on helping them reason through fixes and improvements."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:16:26.123+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level3-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level3-test-2025\"},{\"changed_at\":\"2025-11-13 03:17:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

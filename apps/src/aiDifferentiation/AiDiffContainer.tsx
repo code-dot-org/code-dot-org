@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 import FocusLock from 'react-focus-lock';
 
+import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+
 import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
@@ -17,7 +19,6 @@ const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   context: Context;
-  open: boolean;
   scriptName?: string;
   curriculumCourses?: string[];
   unreadNotificationCount: number;
@@ -47,12 +48,12 @@ const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   context,
-  open,
   scriptName,
   curriculumCourses,
   unreadNotificationCount,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+  const {personalizationData} = useTeachingProfileData();
 
   const [positionX, setPositionX] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
@@ -64,6 +65,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const hasCompletedAiDifferentiationWelcome = useAppSelector(
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
+
+  const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
@@ -118,7 +121,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             ? style.aiDiffContainer
             : style.aiDiffContainerWide
         }
-        style={open ? undefined : {display: 'none'}}
+        style={chatIsOpen ? undefined : {display: 'none'}}
       >
         <FocusLock disabled={!open}>
           <AiDiffHeader
@@ -138,6 +141,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
               : curriculumCourses && (
                   <AiDiffWorkSpace
                     context={context}
+                    personalizationData={personalizationData}
                     scriptName={scriptName}
                     curriculumCourses={curriculumCourses}
                     unreadNotificationCount={unreadNotificationCount}

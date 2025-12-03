@@ -1,4 +1,5 @@
 @use '@cdo/apps/mixins.scss' as mixins;
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
 .previewContainer {
   position: relative;
@@ -10,12 +11,25 @@
 }
 
 // Styles applied when in full screen view mode
-.fullScreenPreviewContainer {
-  padding: 1rem;
+.fullScreenPanelContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: variables.$z-index-fullscreen;
+  width: 100vw;
+  height: 100vh;
+  color: var(--text-neutral-primary);
 
-  & > .previewWrapper {
-    border-radius: 0 0 0.25rem 0.25rem;
-    overflow: hidden;
+  .fullScreenPreviewContainer {
+    position: absolute;
+    top: -50px; // Account for header height
+    background: var(--neutral-black-alpha-80);
+    padding: 1rem;
+
+    & > .previewWrapper {
+      border-radius: 0 0 0.25rem 0.25rem;
+      overflow: hidden;
+    }
   }
 }
 
@@ -37,14 +51,6 @@
 .previewIframe {
   border: none;
   box-sizing: border-box;
-}
-
-.levelViewPreviewIframeHeight {
-  height: calc(100vh - 120px); // Account for header and some padding
-}
-
-.fullScreenPreviewIframeHeight {
-  height: 100%;
 }
 
 .desktopPreviewIframe {

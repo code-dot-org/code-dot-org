@@ -11,6 +11,7 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -96,6 +97,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const scriptId = useAppSelector(state => state.progress.scriptId);
 
   const isLevelbuilder = useAppSelector(state =>
@@ -389,6 +392,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                     starterAssets && Object.keys(starterAssets).length > 0
                   }
                   multimodalEnabled={levelAichatSettings?.multimodalEnabled}
+                  logLevelActivity={logLevelActivity}
                 />
               )}
             </PanelContainer>

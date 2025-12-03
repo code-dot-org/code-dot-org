@@ -61,6 +61,7 @@ export const getDefaultCodebridgeContext = () => {
     config: {
       defaultTheme: undefined,
       editableFileTypes: [],
+      supportedFileTypes: [],
       PreviewComponents: undefined,
       languageMapping: {},
       activeLayout: undefined,
@@ -106,7 +107,7 @@ export const getBackpackAPIMock = (
       onSuccess(fileList);
     }),
     saveFiles: jest.fn(),
-    savePythonlabFile: jest.fn(),
+    saveCodebridgeFile: jest.fn(),
     deleteFiles: jest.fn(),
     updateFilesHelper: jest.fn(),
     saveFilesHelper: jest.fn(),
