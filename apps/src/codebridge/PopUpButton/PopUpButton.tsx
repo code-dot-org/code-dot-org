@@ -36,10 +36,12 @@ export const PopUpButton = ({
   const [isOpen, setIsOpen] = useState(false);
   const [buttonRef, setButtonRef] = useState<HTMLElement | null>(null);
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
-  const dropdownRef = useRef<HTMLDivElement | null>(null);
-  const buttonElementRef = useRef<HTMLButtonElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
   const [computedButtonStyles, setComputedButtonStyles] = useState(className);
+  // Get the button element ref to remove focus when closing the dropdown
+  const buttonElementRef = useRef<HTMLButtonElement | null>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+
   // We need to set the theme here because the dropdown is
   // rendered in a portal, outside of the main lab container.
   const {theme} = useTheme();
@@ -47,12 +49,15 @@ export const PopUpButton = ({
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
     document.removeEventListener('click', setIsOpenFalse);
+
     // Clear the currentOpenDropdown variable when closing
     if (currentOpenDropdown === setIsOpenFalse) {
       currentOpenDropdown = null;
     }
+
     // Remove focus from the button when closing the dropdown
     buttonElementRef.current?.blur();
+
     // Because this operates on a delay, update the styles on a delay too
     setTimeout(() => {
       setComputedButtonStyles(className);
@@ -74,14 +79,15 @@ export const PopUpButton = ({
           // Close any other open dropdowns before opening this one
           // Use setTimeout to avoid updating another component during render
           if (currentOpenDropdown && currentOpenDropdown !== setIsOpenFalse) {
-            const closeOpenDropdown = currentOpenDropdown;
-            setTimeout(() => closeOpenDropdown(), 0);
+            const closeOtherDropdown = currentOpenDropdown;
+            setTimeout(() => closeOtherDropdown(), 0);
           }
+
           // Track this dropdown as the currently open one
           currentOpenDropdown = setIsOpenFalse;
-          // React 17 changed the location where click handlers are added, so we want
-          // to defer adding the close handler until the next tick of the event loop,
-          // otherwise it'll fire immediately and re-close the pop up.'
+
+          // Defer adding the close handler until the next tick of the event
+          // loop, otherwise it'll fire immediately and re-close the pop up.
           setTimeout(
             () => document.addEventListener('click', setIsOpenFalse),
             0
