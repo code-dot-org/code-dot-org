@@ -37,6 +37,7 @@ export const PopUpButton = ({
   const [buttonRef, setButtonRef] = useState<HTMLElement | null>(null);
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
   const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const buttonElementRef = useRef<HTMLButtonElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
   const [computedButtonStyles, setComputedButtonStyles] = useState(className);
   // We need to set the theme here because the dropdown is
@@ -50,10 +51,12 @@ export const PopUpButton = ({
     if (currentOpenDropdown === setIsOpenFalse) {
       currentOpenDropdown = null;
     }
-    // Because this operates on a delay, we also have to update the styles on a delay
+    // Remove focus from the button when closing the dropdown
+    buttonElementRef.current?.blur();
+    // Because this operates on a delay, update the styles on a delay too
     setTimeout(() => {
       setComputedButtonStyles(className);
-    }, 300);
+    }, 0);
   }, [setIsOpen, className]);
 
   const clickHandler = useCallback(
@@ -138,6 +141,7 @@ export const PopUpButton = ({
   return (
     <>
       <Button
+        ref={buttonElementRef}
         className={computedButtonStyles}
         size="xs"
         icon={{iconStyle: 'solid', iconName}}
