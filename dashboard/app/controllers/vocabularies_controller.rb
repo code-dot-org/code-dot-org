@@ -50,8 +50,10 @@ class VocabulariesController < ApplicationController
 
   def destroy
     vocabulary = Vocabulary.find_by_id(vocabulary_params[:id])
-    # Guard against nil vocabulary
-    # Remove any references to this vocabulary in lessons
+    unless vocabulary
+      render status: :bad_request, json: {error: "vocabulary not found"}
+      return
+    end
     if vocabulary.destroy
       render json: {status: 'success', message: 'Vocabulary word deleted successfully'}, status: :ok
     else

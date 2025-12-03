@@ -117,7 +117,7 @@ class AllVocabulariesEditor extends Component {
     });
   };
 
-  handleDeleteVocabularyConfirm = async () => {
+  handleDeleteVocabularyConfirm = () => {
     this.props.removeVocabulary(this.state.vocabularyForDeletion.key);
     this.handleDeleteVocabularyDialogClose();
   };
