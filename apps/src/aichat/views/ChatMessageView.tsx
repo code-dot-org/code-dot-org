@@ -101,7 +101,10 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   } else {
     footer =
       messageVisible && isAssistant ? (
-        <CopyButton copyText={chatMessage.chatMessageText} />
+        <CopyButton
+          copyText={chatMessage.chatMessageText}
+          usage={'ai-chat-msg-footer'}
+        />
       ) : null;
   }
 

@@ -1,6 +1,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -24,14 +27,20 @@ interface ChatMessageProps {
   isLastMessage?: boolean;
 }
 
-/*
- * A rehype component map used to map between `pre` tags and `CopyableCodeBlock` components.
- *
- * For performance reasons, it is the `SafeMarkdown` consumer's responsibility to create the
- * rehypeMap outside  of the component function or to define the mapping in an ES module and
- * import it, if used in multiple components. See `SafeMarkdown` for more info.
- **/
-const rehypeMap = {pre: CopyableCodeBlock};
+const codeCopiedAnalytics = (isTA: boolean) => () =>
+  getStore().dispatch(sendAnalytics(EVENTS.CODE_COPIED, {isTA: isTA}));
+
+const taRehypeMap = {
+  pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
+    <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(true)} />
+  ),
+};
+
+const nonTaRehypeMap = {
+  pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
+    <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(false)} />
+  ),
+};
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
@@ -44,6 +53,8 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   isAiTutorVersion = false,
   isLastMessage = false,
 }) => {
+  const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
+
   const aiTutorVersionFiles = useAppSelector(
     state => state.weblab2?.aiTutorVersionFiles || []
   );

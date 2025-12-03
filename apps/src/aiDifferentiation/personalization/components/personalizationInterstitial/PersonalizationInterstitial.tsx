@@ -15,11 +15,12 @@ import style from '../../personalization-information.module.scss';
 type PersonalizationInterstitialProps = {
   currentQuestion: PersonalizationQuestionType;
   personalizationData: PersonalizationData;
+  onImageLoad?: () => void;
 };
 
 const PersonalizationInterstitial: React.FC<
   PersonalizationInterstitialProps
-> = ({currentQuestion, personalizationData}) => {
+> = ({currentQuestion, personalizationData, onImageLoad}) => {
   // Map question order → interstitial id
   const interstitial = PERSONALIZATION_INTERSTITIALS.find(
     i => i.id === currentQuestion.id
@@ -44,11 +45,12 @@ const PersonalizationInterstitial: React.FC<
           className={style.robotProcessingAnimation}
           src={robotProcessing}
           alt=""
+          onLoad={onImageLoad}
         />
       ) : (
         <div className={style.iconCard}>
           <div className={style.iconContainer}>
-            <img src={interstitial.icon} alt="" />
+            <img src={interstitial.icon} alt="" onLoad={onImageLoad} />
           </div>
         </div>
       )}
