@@ -41,7 +41,6 @@ const {
   sections,
   localeCode,
   hasSeenStandardsReportInfo,
-  canEnableAITutor,
   showAITALessonSummary,
   hasCompletedPersonalizationQuiz,
   sectionOrder,
@@ -103,10 +102,7 @@ $(document).ready(function () {
         // all of the section loading logic in the TeacherNavigationRouter.
         <TeacherHomepage studioUrlPrefix={scriptData.studioUrlPrefix} />
       ) : (
-        <TeacherNavigationRouter
-          studioUrlPrefix={scriptData.studioUrlPrefix}
-          canEnableAITutor={canEnableAITutor}
-        />
+        <TeacherNavigationRouter studioUrlPrefix={scriptData.studioUrlPrefix} />
       )}
     </Provider>,
     document.getElementById('teacher-dashboard')

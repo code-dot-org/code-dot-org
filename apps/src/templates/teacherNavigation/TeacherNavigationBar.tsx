@@ -32,8 +32,8 @@ import {
 import styles from './teacher-navigation.module.scss';
 
 const TeacherNavigationBar: React.FC<{
-  showAITutorTab: boolean;
-}> = ({showAITutorTab}) => {
+  showAiChatSettings: boolean;
+}> = ({showAiChatSettings}) => {
   const {sections, sectionOrder} = useAppSelector(
     state => state.teacherSections
   );
@@ -118,13 +118,13 @@ const TeacherNavigationBar: React.FC<{
       ? [...defaultPerformanceContentKeys, 'studentSnapshot']
       : defaultPerformanceContentKeys;
 
-  if (showAITutorTab) {
-    performanceContentKeys.splice(1, 0, 'aiTutor');
-  }
-
   const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
-  const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+  const defaultClassroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
     ['roster', 'settings'];
+  const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    showAiChatSettings
+      ? [...defaultClassroomContentKeys, 'aiChatSettings']
+      : [...defaultClassroomContentKeys];
 
   const teacherNavigationBarContent = [
     {
