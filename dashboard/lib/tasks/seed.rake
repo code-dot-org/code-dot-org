@@ -28,10 +28,6 @@ namespace :seed do
   include TimedTask
   verbose false
 
-  timed_task_with_logging timed: :environment do
-    puts "timed seed task i18n backend: #{Rails.application.config.i18n.backend.class.name}"
-  end
-
   timed_task_with_logging check_migrations: :environment do
     ActiveRecord::Migration.check_pending!
   end
