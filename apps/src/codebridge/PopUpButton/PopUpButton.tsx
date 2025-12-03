@@ -39,7 +39,7 @@ export const PopUpButton = ({
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
   const [computedButtonStyles, setComputedButtonStyles] = useState(className);
-  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
+  // We need to set the theme here because the dropdown is rendered in a portal, outside of the
   // main lab container.
   const {theme} = useTheme();
 
@@ -76,8 +76,9 @@ export const PopUpButton = ({
           }
           // Track this dropdown as the currently open one
           currentOpenDropdown = setIsOpenFalse;
-          // React 17 changed the location where clickhandlers are added, so we want to defer adding the close
-          // handler until the next tick of the event loop, otherwise it'll fire immediately and re-close the pop up.'
+          // React 17 changed the location where click handlers are added, so we want
+          // to defer adding the close handler until the next tick of the event loop,
+          // otherwise it'll fire immediately and re-close the pop up.'
           setTimeout(
             () => document.addEventListener('click', setIsOpenFalse),
             0
