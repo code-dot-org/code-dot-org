@@ -23,15 +23,15 @@ class DeleteVocabularyDialog extends Component {
           },
         }
       );
-      if (!response.ok) {
+      if (response.ok) {
+        this.props.handleDeleteVocabularyConfirm();
+      } else {
         const data = await response.json();
         alert(data.message || 'Failed to delete vocabulary.');
       }
     } catch (err) {
       alert('Failed to delete vocabulary.');
     }
-    this.props.handleDeleteVocabularyConfirm();
-  };
 
   render() {
     const {handleDeleteVocabularyDialogClose, vocabularyForDeletion} =
