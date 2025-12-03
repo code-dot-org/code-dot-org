@@ -28,7 +28,7 @@ const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
       role="group"
       aria-label="Suggested Prompts"
     >
-      {visiblePrompts.map((prompt, index) => {
+      {visiblePrompts.map(prompt => {
         const isDisabled = hasSelection && !prompt.selected;
 
         return (
@@ -39,7 +39,7 @@ const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
               prompt.selected ? moduleStyles.selected : ''
             } ${isDisabled ? moduleStyles.disabled : ''}`}
             onClick={() => !isDisabled && prompt.onClick(prompt)}
-            disabled={isDisabled}
+            aria-disabled={isDisabled}
             aria-pressed={prompt.selected}
             aria-label={prompt.label}
           >
