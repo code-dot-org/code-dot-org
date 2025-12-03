@@ -26,7 +26,7 @@ const InnerHTMLPreview = () => {
   // Numerical key used to trigger iframe reloads when we have updates.
   const [previewKey, setPreviewKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
-  useProjectServiceWorker(source);
+  const {serviceWorkerRegistration} = useProjectServiceWorker(source);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
 
@@ -78,6 +78,13 @@ const InnerHTMLPreview = () => {
       window.removeEventListener('message', handleMessage);
     };
   }, [handleMessage, parentOrigin]);
+
+  useEffect(() => {
+    window.addEventListener('unload', () => {
+      // Ensure the service worker is unregistered when we unload
+      serviceWorkerRegistration?.unregister();
+    });
+  }, [serviceWorkerRegistration]);
 
   useEffect(() => {
     // Set up a broadcast channel to receive messages from the service worker.
