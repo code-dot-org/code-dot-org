@@ -457,6 +457,9 @@ const EVENTS = {
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 
+  // Import project
+  APPLAB_IMPORT_PROJECT: 'User Imports Another App Lab Project',
+
   // Curriculumm Recommender
   RECOMMENDED_CATALOG_CURRICULUM_SHOWN: 'Recommended Catalog Curriculum Shown',
   RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
