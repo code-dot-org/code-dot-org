@@ -46,6 +46,7 @@ export const PopUpButton = ({
   // rendered in a portal, outside of the main lab container.
   const {theme} = useTheme();
 
+  // Handler to close the dropdown.
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
     document.removeEventListener('click', setIsOpenFalse);
@@ -64,6 +65,7 @@ export const PopUpButton = ({
     }, 0);
   }, [setIsOpen, className]);
 
+  // Handler to show the dropdown.
   const clickHandler = useCallback(
     (
       e:
@@ -76,8 +78,8 @@ export const PopUpButton = ({
       setIsOpen(oldIsOpen => {
         const newIsOpen = !oldIsOpen;
         if (newIsOpen) {
-          // Close any other open dropdowns before opening this one
-          // Use setTimeout to avoid updating another component during render
+          // Close any other open dropdowns before opening this one.
+          // Use setTimeout to avoid updating another component during render.
           if (currentOpenDropdown && currentOpenDropdown !== setIsOpenFalse) {
             const closeOtherDropdown = currentOpenDropdown;
             setTimeout(() => closeOtherDropdown(), 0);
@@ -94,6 +96,7 @@ export const PopUpButton = ({
           );
         } else {
           document.removeEventListener('click', setIsOpenFalse);
+
           // Clear the currentOpenDropdown variable when closing
           if (currentOpenDropdown === setIsOpenFalse) {
             currentOpenDropdown = null;
