@@ -25,6 +25,12 @@ const Header: React.FC<HeaderProps> = ({
 
   const {selectedStudents} = useAppSelector(state => state.teacherSections);
 
+  React.useEffect(() => {
+    if (selectedStudents.length > 0 && selectedStudent === null) {
+      setSelectedStudentId(selectedStudents[0].id);
+    }
+  }, [selectedStudents, selectedStudent, setSelectedStudentId]);
+
   const studentOptions = React.useMemo(() => {
     return selectedStudents.map(student => ({
       value: student.id.toString(),
