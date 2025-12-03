@@ -39,14 +39,14 @@ export const PopUpButton = ({
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
   const [computedButtonStyles, setComputedButtonStyles] = useState(className);
-  // We need to set the theme here because the dropdown is rendered in a portal, outside of the
-  // main lab container.
+  // We need to set the theme here because the dropdown is
+  // rendered in a portal, outside of the main lab container.
   const {theme} = useTheme();
 
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
     document.removeEventListener('click', setIsOpenFalse);
-    // Clear the global dropdown reference when closing
+    // Clear the currentOpenDropdown variable when closing
     if (currentOpenDropdown === setIsOpenFalse) {
       currentOpenDropdown = null;
     }
@@ -71,8 +71,8 @@ export const PopUpButton = ({
           // Close any other open dropdowns before opening this one
           // Use setTimeout to avoid updating another component during render
           if (currentOpenDropdown && currentOpenDropdown !== setIsOpenFalse) {
-            const closeOther = currentOpenDropdown;
-            setTimeout(() => closeOther(), 0);
+            const closeOpenDropdown = currentOpenDropdown;
+            setTimeout(() => closeOpenDropdown(), 0);
           }
           // Track this dropdown as the currently open one
           currentOpenDropdown = setIsOpenFalse;
@@ -85,7 +85,7 @@ export const PopUpButton = ({
           );
         } else {
           document.removeEventListener('click', setIsOpenFalse);
-          // Clear the global dropdown reference when closing
+          // Clear the currentOpenDropdown variable when closing
           if (currentOpenDropdown === setIsOpenFalse) {
             currentOpenDropdown = null;
           }
