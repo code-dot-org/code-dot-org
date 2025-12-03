@@ -20,7 +20,7 @@ type PopUpButtonProps = {
 
 const TOP_PADDING = 5;
 
-// Track which dropdown is currently open
+// Global state to track which dropdown is currently open
 let currentOpenDropdown: (() => void) | null = null;
 
 export const PopUpButton = ({
@@ -51,7 +51,7 @@ export const PopUpButton = ({
     setIsOpen(false);
     document.removeEventListener('click', setIsOpenFalse);
 
-    // Clear the currentOpenDropdown variable when closing
+    // Clear the global currentOpenDropdown reference when closing
     if (currentOpenDropdown === setIsOpenFalse) {
       currentOpenDropdown = null;
     }
@@ -97,7 +97,7 @@ export const PopUpButton = ({
         } else {
           document.removeEventListener('click', setIsOpenFalse);
 
-          // Clear the currentOpenDropdown variable when closing
+          // Clear the global currentOpenDropdown reference when closing
           if (currentOpenDropdown === setIsOpenFalse) {
             currentOpenDropdown = null;
           }
