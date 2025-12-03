@@ -75,45 +75,39 @@ export default class BackpackClientApi {
 
   /**
    * Save files to the backpack
-   * @param {String} filesJson json-formatted string of all file sources in the project
+   * @param {Object} files all file sources in the project
    * Expected format is {"filename1.java": {"text": "{...}"},...}.
    * @param {Array} filenames Array of filenames to save to the backpack. Filenames must
-   * exist in filesJson.
+   * exist in files.
    * @param {Function} onError Function to call if any file fails to save
    * @param {Function} onSuccess Function to call if all files save.
    */
-  saveFiles(filesJson, filenames, onError, onSuccess) {
+  saveFiles(files, filenames, onError, onSuccess) {
     this.updateFilesHelper(
       this.fileUploadsInProgress,
       filenames,
       onError,
       onSuccess,
-      () => this.saveFilesHelper(filesJson, filenames, onError, onSuccess)
+      () => this.saveFilesHelper(files, filenames, onError, onSuccess)
     );
   }
 
   /**
-   * Save a pythonlab file to the backpack
+   * Takes a file name and contents and saves to the backpack.
+   * Used in Codebridge labs to save a file.
    * @param {String} filename
-   * @param {ProjectFile} fileContents ProjectFile
-   * @param {Function} onError Function to call if file fails to save
+   * @param {String} fileContents Contents of file to be saved to the backpack.
+   * @param {Function} onError Function to call if file fails to save.
    * @param {Function} onSuccess Function to call if file saves.
    */
-  savePythonlabFile(filename, fileContents, onError, onSuccess) {
-    const fileObject = {[filename]: fileContents};
+  saveCodebridgeFile(filename, fileContents, onError, onSuccess) {
+    const fileObject = {[filename]: {text: fileContents}};
     this.updateFilesHelper(
       this.fileUploadsInProgress,
       [filename],
       onError,
       onSuccess,
-      () =>
-        this.saveFilesHelper(
-          fileObject,
-          [filename],
-          onError,
-          onSuccess,
-          'pythonlab'
-        )
+      () => this.saveFilesHelper(fileObject, [filename], onError, onSuccess)
     );
   }
 
@@ -165,14 +159,11 @@ export default class BackpackClientApi {
     }
   }
 
-  saveFilesHelper(filesJson, filenames, onError, onSuccess, appType) {
+  saveFilesHelper(files, filenames, onError, onSuccess) {
     this.fileUploadsInProgress = [...filenames];
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
-      const fileContents =
-        appType === 'pythonlab'
-          ? filesJson[filename].contents
-          : filesJson[filename].text;
+      const fileContents = files[filename].text;
       // write file with REQUEST_RETRY_COUNT failure retries
       this.writeSingleFileToBackpack(
         filename,

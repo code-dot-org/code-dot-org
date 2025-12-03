@@ -8,6 +8,7 @@ import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import experiments from '@cdo/apps/util/experiments';
@@ -79,6 +80,8 @@ const Weblab2View: React.FC<
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
 
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
+
   const source = useAppSelector(
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
@@ -94,6 +97,10 @@ const Weblab2View: React.FC<
     state => !!state.lab2Project.projectSources?.source
   );
 
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+
   // Note: this causes Web Lab 2 to re-render when sources change.
   // Unfortunately, the way AI tutor is set up right now requires passing in a context
   // rather than a callback for the context. In the future, we should consider refactoring AI
@@ -102,8 +109,10 @@ const Weblab2View: React.FC<
     aiTutorHelper.setAiTutorContext({
       source,
       longInstructions: levelProperties.longInstructions,
+      hasEdited,
+      hasRun,
     });
-  }, [source, levelProperties.longInstructions]);
+  }, [source, levelProperties.longInstructions, hasEdited, hasRun]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -116,6 +125,12 @@ const Weblab2View: React.FC<
       dispatch(setHasRun(false));
     };
   }, [dispatch]);
+
+  useEffect(() => {
+    if (hasEdited) {
+      logLevelActivity();
+    }
+  }, [hasEdited, logLevelActivity]);
 
   useEffect(() => {
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));

@@ -8,6 +8,7 @@
 #  lesson_summary :text(65535)
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  script         :text(65535)
 #
 class AiLessonSummary < ApplicationRecord
   belongs_to :user

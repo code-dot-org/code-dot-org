@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-20T17:40:03.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "If you had more time, what is one change you would make to better balance \"just enough\" information vs. too much detail?",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T17:40:03.210+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson4-level7-q2-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson4-level7-q2-test-2025\"},{\"changed_at\":\"2025-11-20 17:40:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
