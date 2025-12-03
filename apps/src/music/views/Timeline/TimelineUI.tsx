@@ -243,7 +243,8 @@ const Timeline: React.FunctionComponent<TimelineProps> = props => {
       return;
     }
     const resizeObserver = new ResizeObserver(() => {
-      setAvailableHeight(firstBarLineRef.current?.offsetHeight || 0);
+      const firstBarLineHeight = firstBarLineRef.current?.offsetHeight;
+      setAvailableHeight(firstBarLineHeight ? firstBarLineHeight - 2 : 0);
     });
     resizeObserver.observe(firstBarLineRef?.current);
     return () => {
