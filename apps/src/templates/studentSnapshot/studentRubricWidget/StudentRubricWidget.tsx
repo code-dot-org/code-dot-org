@@ -49,7 +49,7 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   const [rubric, setRubric] = useState<Rubric | null>(null);
   const [internalStudentLevelInfo, setInternalStudentLevelInfo] =
     useState<StudentLevelInfo | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [feedbackAdded, setFeedbackAdded] = useState(false);
 
