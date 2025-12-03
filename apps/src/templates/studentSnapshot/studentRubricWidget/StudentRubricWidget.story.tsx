@@ -10,6 +10,7 @@ import type {
   StudentLevelInfo,
   ReportingData,
 } from '@cdo/apps/types/rubricTypes';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import StudentRubricWidget from './StudentRubricWidget';
 
@@ -147,17 +148,31 @@ const meta: Meta<typeof StudentRubricWidget> = {
     docs: {
       description: {
         component:
-          'Teacher-style rubric widget that reuses the existing `RubricContent` component from the TA rubric modal. Storybook passes mock rubric + student data via props.',
+          'Teacher-style rubric widget that fetches and displays rubric data. The widget handles its own loading, error, and empty states.',
       },
     },
   },
   tags: ['autodocs'],
   decorators: [
-    Story => (
-      <Provider store={mockStore}>
-        <Story />
-      </Provider>
-    ),
+    Story => {
+      // Mock HttpClient.fetchJson to return mock rubric data
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (HttpClient as any).fetchJson = async () => ({
+        value: {
+          rubric: mockRubric,
+        },
+        response: new Response(JSON.stringify({rubric: mockRubric}), {
+          status: 200,
+          statusText: 'OK',
+        }),
+      });
+
+      return (
+        <Provider store={mockStore}>
+          <Story />
+        </Provider>
+      );
+    },
   ],
   argTypes: {
     gridWidth: {
@@ -178,7 +193,8 @@ export const Default: Story = {
   args: {
     gridWidth: 2,
     gridHeight: 2,
-    rubric: mockRubric as Rubric,
+    rubricId: 1, // Mock rubric ID
+    studentId: 1, // Mock student ID
     studentLevelInfo: mockStudentLevelInfo,
     teacherHasEnabledAi: true,
     canProvideFeedback: true,
