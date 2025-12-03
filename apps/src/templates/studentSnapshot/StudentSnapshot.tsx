@@ -13,7 +13,7 @@ import type {
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import Header from './header';
-import StudentRubricWidget from './StudentRubricWidget';
+import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
 import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
