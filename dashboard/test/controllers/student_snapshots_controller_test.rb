@@ -3,20 +3,23 @@ require 'test_helper'
 class StudentSnapshotsControllerTest < ActionController::TestCase
   setup do
     @unit = create(:unit, name: 'test-unit')
+    @lesson_group = create(:lesson_group, script: @unit)
     @lesson1 = create(:lesson,
       script: @unit,
+      lesson_group: @lesson_group,
       name: 'Test Lesson 1',
       has_lesson_plan: true,
       lockable: false,
       relative_position: 1
-)
+    )
     @lesson2 = create(:lesson,
       script: @unit,
+      lesson_group: @lesson_group,
       name: 'Test Lesson 2',
       has_lesson_plan: false,
       lockable: true,
       relative_position: 2
-)
+    )
   end
 
   test "lessons endpoint returns correct format with unit_id" do
@@ -25,10 +28,11 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_response :ok
 
     response_data = JSON.parse(response.body)
-    assert_equal 2, response_data.length
+    lessons_data = response_data['lessons']
+    assert_equal 2, lessons_data.length
 
-    lesson_data = response_data.first
-    assert_equal @lesson1.id, lesson_data['id']
+    lesson_data = lessons_data.first
+    assert_equal @lesson1.id, lesson_data['id'].to_i
     assert_equal 'Test Lesson 1', lesson_data['name']
     assert_equal true, lesson_data['hasLessonPlan']
     assert_equal false, lesson_data['isLockable']
@@ -51,6 +55,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_response :ok
 
     response_data = JSON.parse(response.body)
-    assert_equal [], response_data
+    assert_equal [], response_data['lessons']
+    assert_equal false, response_data['hasUnnumberedLessons']
   end
 end
