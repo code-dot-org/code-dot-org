@@ -40,10 +40,10 @@ export const HTMLPreview: React.FC = () => {
       experiments.LOCAL_WEBLAB2_PREVIEW
     );
     const isLocalhost = 'localhost' === environmentKey;
-    // When testing on localhost, it can be convienient to have a fixed subdomain
+    // When testing on localhost, it can be convenient to have a fixed subdomain
     // to avoid having to give permissions to every channel id version of the preview url.
     // Use the flag ?local-weblab2-preview=true or ?enableExperiments=local-weblab2-preview
-    // to enable the fixed prefix.
+    // to enable the fixed prefix locally.
     const prefix =
       useLocalPrefixOverride && isLocalhost
         ? 'localtesting'
