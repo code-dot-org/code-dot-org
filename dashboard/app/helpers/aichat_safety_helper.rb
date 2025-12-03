@@ -44,9 +44,9 @@ module AichatSafetyHelper
       token_count = body.dig('usage', 'completion_tokens') || 0
       report_token_usage(token_count, output_type, role)
 
-      evaluation = body['output'][0]['content'][0]['text']
+      evaluation = body.dig("output", 0, "content", 0, "text")
       unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
-        report_openai_safety_check("InvalidResponse")
+        report_openai_safety_check("InvalidResponse", attempts, output_type, role)
         output_type = 'Structured'
         attempts +=1
 
@@ -70,14 +70,14 @@ module AichatSafetyHelper
         begin
           parsed = JSON.parse(raw_content)
         rescue JSON::ParserError
-          report_openai_safety_check("InvalidResponse")
+          report_openai_safety_check("InvalidResponse", attempts, output_type, role)
           raise "Structured response was not valid JSON: #{raw_content}"
         end
 
         evaluation = parsed["classification"]
 
         unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
-          report_openai_safety_check("InvalidResponse")
+          report_openai_safety_check("InvalidResponse", attempts, output_type, role)
           raise "Unexpected structured classification from OpenAI: #{evaluation}"
         end
       end
@@ -154,11 +154,13 @@ module AichatSafetyHelper
       }
     end
 
-    private def report_openai_safety_check(metric_name, num_attempts = 1)
+    private def report_openai_safety_check(metric_name, num_attempts = 1, output_type = nil, role = nil)
       safety_dimensions = [
         {name: 'Environment', value: CDO.rack_env},
         {name: 'PromptVersion', value: get_safety_system_prompt_version},
       ]
+      safety_dimensions << {name: 'OutputType', value: output_type} if output_type
+      safety_dimensions << {name: 'Role', value: role} if role
       if metric_name == 'Finish'
         safety_dimensions << {name: 'Attempts', value: num_attempts.to_s}
       end
