@@ -32,6 +32,7 @@ class DeleteVocabularyDialog extends Component {
     } catch (err) {
       alert('Failed to delete vocabulary.');
     }
+  };
 
   render() {
     const {handleDeleteVocabularyDialogClose, vocabularyForDeletion} =
