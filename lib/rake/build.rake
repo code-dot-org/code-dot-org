@@ -58,7 +58,7 @@ namespace :build do
 
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'
-        RakeUtils.rake 'db:setup_or_migrate'
+        RakeUtils.rake_stream_output 'db:setup_or_migrate'
 
         # Update the schema cache file only on the staging branch, because the
         # staging system's Rails database is the source of truth for dashboard's
@@ -170,7 +170,7 @@ namespace :build do
           RakeUtils.rake "assets:clean[#{ASSETS_TO_KEEP}]"
         end
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:precompile', '--quiet'
+        RakeUtils.rake_stream_output 'assets:precompile', '--quiet'
       end
 
       ChatClient.log 'Restarting <b>dashboard</b> web server.'
