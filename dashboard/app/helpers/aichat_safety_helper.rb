@@ -260,7 +260,7 @@ module AichatSafetyHelper
     end
   end
 
-  def self.find_toxicity(text, level_id, role)
+  def self.find_toxicity(text, level_id, role = 'User')
     # Stubbed toxicity detection allows UI tests (without the roundtrip to third-party moderation services) to run in CI environments
     Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services ?
       StubbedToxicityDetector.new.find_toxicity(text, nil, nil) :

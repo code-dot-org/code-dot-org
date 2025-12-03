@@ -74,7 +74,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
   end
 
   test "returns toxicity for input if detected" do
-    response = AichatSafetyHelper.find_toxicity(@profane_message, nil, nil)
+    response = AichatSafetyHelper.find_toxicity(@profane_message, nil)
 
     refute_nil response
     assert_equal @profane_message, response[:text]
@@ -88,7 +88,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
     mock_response = create_stubbed_response(@openai_response_safe_json)
     AichatOpenaiResponsesHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
 
-    response = AichatSafetyHelper.find_toxicity('clean message', nil, nil)
+    response = AichatSafetyHelper.find_toxicity('clean message', nil)
     assert_nil response
   end
 
@@ -96,7 +96,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
     mock_response = create_stubbed_response(@openai_response_safe_json)
     AichatOpenaiResponsesHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response).once
 
-    AichatSafetyHelper.find_toxicity('clean message', nil, nil)
+    AichatSafetyHelper.find_toxicity('clean message', nil)
   end
 
   test "retries with structured response if request_safety_check fails first check" do
@@ -106,7 +106,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
       returns(mock_response_invalid).
       returns(mock_structured_response)
 
-    AichatSafetyHelper.find_toxicity('clean message', nil, nil)
+    AichatSafetyHelper.find_toxicity('clean message', nil)
   end
 
   test "raises an error if request_safety_check returns a response.body other than INAPPROPRIATE or OK twice" do
@@ -114,7 +114,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
     AichatOpenaiResponsesHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
 
     assert_raises do
-      AichatSafetyHelper.find_toxicity('clean message', nil, nil)
+      AichatSafetyHelper.find_toxicity('clean message', nil)
     end
   end
 
@@ -124,7 +124,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
       return true
     end
 
-    AichatSafetyHelper.find_toxicity('clean message', @english_script.levels.first, nil)
+    AichatSafetyHelper.find_toxicity('clean message', @english_script.levels.first)
   end
 
   test "Open AI safety check uses Spanish safety prompt if in Spanish script" do
@@ -133,7 +133,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
       return true
     end
 
-    AichatSafetyHelper.find_toxicity('clean message', @spanish_script.levels.first, nil)
+    AichatSafetyHelper.find_toxicity('clean message', @spanish_script.levels.first)
   end
 
   def create_stubbed_response(body)
