@@ -262,6 +262,14 @@ const WEBPACK_BASE_CONFIG = {
   },
   module: {
     rules: [
+      // Fix ESM resolution for node_modules (must come first)
+      {
+        test: /\.m?js$/,
+        include: /node_modules/,
+        resolve: {
+          fullySpecified: false,
+        },
+      },
       {
         test: /\.ejs$/,
         include: [p('src'), p('test')],
