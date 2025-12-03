@@ -5,6 +5,7 @@
 - parental_permission_banner_data = current_user && parental_permission_banner_data(current_user, request)
 
 - content_for(:head) do
+  %script{src: webpack_asset_path("js/#{js_locale}/aichat_locale.js")}
   %script{
   src: webpack_asset_path('js/scripts/show.js'),
           data: {scriptoverview: scriptOverviewData.to_json, parental_permission_banner: parental_permission_banner_data.to_json}}

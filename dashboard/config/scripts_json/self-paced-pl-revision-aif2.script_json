@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-24 19:38:55 UTC",
+    "serialized_at": "2025-11-25 22:22:30 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -19,22 +19,3152 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "Teaching Foundations of AI Programming",
+      "name": "Teaching Foundations of AI Programming",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Get an overview of the programming fundamentals curriculum and resources.\n\n**Suggested Time:** 10 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Get an overview of the programming fundamentals curriculum and resources.\n\n**Suggested Time:** 10 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    },
+    {
+      "key": "Computational Thinking",
+      "name": "Computational Thinking",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**In this lesson, you will:**\n\n- Understand core computational thinking concepts, including abstraction, decomposition, pattern recognition, and algorithms.\n- Explore how students apply computational thinking while learning to code.\n- Learn unplugged pedagogy strategies to make computational thinking more accessible and engaging.\n\n**Suggested Time:** 20 minutes \n",
+        "student_overview": "**In this lesson, you will:**\n\n- Understand core computational thinking concepts, including abstraction, decomposition, pattern recognition, and algorithms.\n- Explore how students apply computational thinking while learning to code.\n- Learn unplugged pedagogy strategies to make computational thinking more accessible and engaging.\n\n**Suggested Time:** 20 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    },
+    {
+      "key": "Python Basics",
+      "name": "Python Basics",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n- Navigate the IDE and understand its essential features for coding instruction.\n- Identify and apply key coding concepts, including variables, print statements, objects, and functions.\n- Use a predict, investigate/modify, practice approach to engage students in coding exploration and skill development.\n\n**Suggested Time:** 25 minutes \n",
+        "student_overview": "**You will:**\n\n- Navigate the IDE and understand its essential features for coding instruction.\n- Identify and apply key coding concepts, including variables, print statements, objects, and functions.\n- Use a predict, investigate/modify, practice approach to engage students in coding exploration and skill development.\n\n**Suggested Time:** 25 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    },
+    {
+      "key": "Algorithms with Python",
+      "name": "Algorithms with Python",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": " **In this lesson, you will:**\n\n- Understand the role of flowcharts in algorithm design.\n- Apply conditional logic using if statements and nested/ two-way selection.\n- Use while loops to execute repeated actions efficiently.\n- Practice coding and debugging through a predict, investigate/modify, practice approach.\n\n\n**Suggested Time:** 25 minutes",
+        "student_overview": " **In this lesson, you will:**\n\n- Understand the role of flowcharts in algorithm design.\n- Apply conditional logic using if statements and nested/ two-way selection.\n- Use while loops to execute repeated actions efficiently.\n- Practice coding and debugging through a predict, investigate/modify, practice approach.\n\n\n**Suggested Time:** 25 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    },
+    {
+      "key": "Preparing for the Final Project",
+      "name": "Preparing for the Final Project",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**By the end of this lesson, you will:**\n- Implement Pair & Group Coding Strategies \n- Facilitate Structured Peer Feedback \n- Introduce the Final Project Framework\n- Develop a Teaching Plan \n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**By the end of this lesson, you will:**\n- Implement Pair & Group Coding Strategies \n- Facilitate Structured Peer Feedback \n- Introduce the Final Project Framework\n- Develop a Teaching Plan \n\n**Suggested Time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e788dc89-855d-40f4-b36f-0e2239c3276d",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e788dc89-855d-40f4-b36f-0e2239c3276d",
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    },
+    {
+      "key": "5a270856-f9a8-4be6-af2a-f55844e5ba16",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5a270856-f9a8-4be6-af2a-f55844e5ba16",
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    },
+    {
+      "key": "5a3beefa-acb8-4492-9eda-33072dd1e453",
+      "position": 1,
+      "properties": {
+        "duration": 25
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5a3beefa-acb8-4492-9eda-33072dd1e453",
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    },
+    {
+      "key": "9474cf16-c0ef-4397-a86a-54332f66bfad",
+      "position": 1,
+      "properties": {
+        "duration": 25
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9474cf16-c0ef-4397-a86a-54332f66bfad",
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    },
+    {
+      "key": "1c4c5528-2aef-4813-8868-16542ef1f2d1",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1c4c5528-2aef-4813-8868-16542ef1f2d1",
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62",
+        "lesson_activity.key": "e788dc89-855d-40f4-b36f-0e2239c3276d"
+      }
+    },
+    {
+      "key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744",
+      "position": 2,
+      "properties": {
+        "progression_name": "Course Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744",
+        "lesson_activity.key": "e788dc89-855d-40f4-b36f-0e2239c3276d"
+      }
+    },
+    {
+      "key": "80996659-0485-4cd7-9000-a75593e3d6ce",
+      "position": 1,
+      "properties": {
+        "name": "What is Computational Thinking?",
+        "progression_name": "What is Computational Thinking?"
+      },
+      "seeding_key": {
+        "activity_section.key": "80996659-0485-4cd7-9000-a75593e3d6ce",
+        "lesson_activity.key": "5a270856-f9a8-4be6-af2a-f55844e5ba16"
+      }
+    },
+    {
+      "key": "08ec2921-156a-4333-adf4-a7396f569cf1",
+      "position": 2,
+      "properties": {
+        "name": "Exploring Computational Thinking",
+        "progression_name": "Exploring Computational Thinking"
+      },
+      "seeding_key": {
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1",
+        "lesson_activity.key": "5a270856-f9a8-4be6-af2a-f55844e5ba16"
+      }
+    },
+    {
+      "key": "fb021865-33b3-48d4-a888-0de4a7420366",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fb021865-33b3-48d4-a888-0de4a7420366",
+        "lesson_activity.key": "5a3beefa-acb8-4492-9eda-33072dd1e453"
+      }
+    },
+    {
+      "key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Variables and Print Statements "
+      },
+      "seeding_key": {
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2",
+        "lesson_activity.key": "5a3beefa-acb8-4492-9eda-33072dd1e453"
+      }
+    },
+    {
+      "key": "00bf2537-dd97-42e3-b76b-33b17176a767",
+      "position": 3,
+      "properties": {
+        "progression_name": "Objects and The Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767",
+        "lesson_activity.key": "5a3beefa-acb8-4492-9eda-33072dd1e453"
+      }
+    },
+    {
+      "key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Functions and Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f",
+        "lesson_activity.key": "5a3beefa-acb8-4492-9eda-33072dd1e453"
+      }
+    },
+    {
+      "key": "f067caf7-f539-4a24-bc3e-15bf799f2e47",
+      "position": 5,
+      "properties": {
+        "progression_name": "Debugging "
+      },
+      "seeding_key": {
+        "activity_section.key": "f067caf7-f539-4a24-bc3e-15bf799f2e47",
+        "lesson_activity.key": "5a3beefa-acb8-4492-9eda-33072dd1e453"
+      }
+    },
+    {
+      "key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5",
+      "position": 1,
+      "properties": {
+        "progression_name": "While Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5",
+        "lesson_activity.key": "9474cf16-c0ef-4397-a86a-54332f66bfad"
+      }
+    },
+    {
+      "key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Conditionals "
+      },
+      "seeding_key": {
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8",
+        "lesson_activity.key": "9474cf16-c0ef-4397-a86a-54332f66bfad"
+      }
+    },
+    {
+      "key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206",
+      "position": 3,
+      "properties": {
+        "progression_name": "Two-way and Nested Selection"
+      },
+      "seeding_key": {
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206",
+        "lesson_activity.key": "9474cf16-c0ef-4397-a86a-54332f66bfad"
+      }
+    },
+    {
+      "key": "aba320bb-5ae8-4460-89ad-fe027b9aadaa",
+      "position": 4,
+      "properties": {
+        "progression_name": "Ethical Algorithmic Decision Making"
+      },
+      "seeding_key": {
+        "activity_section.key": "aba320bb-5ae8-4460-89ad-fe027b9aadaa",
+        "lesson_activity.key": "9474cf16-c0ef-4397-a86a-54332f66bfad"
+      }
+    },
+    {
+      "key": "95548297-71c1-4820-88c5-7adad2968068",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068",
+        "lesson_activity.key": "1c4c5528-2aef-4813-8868-16542ef1f2d1"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62"
+      },
+      "level_keys": [
+        "csaif_pl_overview_objectives_python_-rev"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_cert_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62"
+      },
+      "level_keys": [
+        "csaif_pl_cert_python_-rev"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_module_overview_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62"
+      },
+      "level_keys": [
+        "csaif_pl_module_overview_python_-rev"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_course_overview_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62"
+      },
+      "level_keys": [
+        "csaif_pl_course_overview_python_-rev"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_course_structure_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62"
+      },
+      "level_keys": [
+        "csaif_pl_course_structure_python_-rev"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_resources_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_resources_python_-rev"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_career_overview_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744"
+      },
+      "level_keys": [
+        "csaif_pl_career_overview_python_-rev"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744"
+      },
+      "level_keys": [
+        "csaif_pl_AI_chatbot_overview_python_-rev"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_AI_tutor_overview_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744"
+      },
+      "level_keys": [
+        "csaif_pl_AI_tutor_overview_python_-rev"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson1_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744"
+      },
+      "level_keys": [
+        "csaif_pl_teacher_Lesson1_python_-rev"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_comp_think_L1_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "80996659-0485-4cd7-9000-a75593e3d6ce"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_overview_comp_think_L1_python_-rev"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_overview_L2_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "80996659-0485-4cd7-9000-a75593e3d6ce"
+      },
+      "level_keys": [
+        "csaif_pl_comp_think_overview_L2_python_-rev"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-DS-comp_think_panel_L3_Python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "80996659-0485-4cd7-9000-a75593e3d6ce"
+      },
+      "level_keys": [
+        "csaif-pl-DS-comp_think_panel_L3_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_module_comp_think_L4_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "80996659-0485-4cd7-9000-a75593e3d6ce"
+      },
+      "level_keys": [
+        "csaif_pl_module_comp_think_L4_python_-rev"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L5_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1"
+      },
+      "level_keys": [
+        "csaif_pl_comp_think_L5_python_-rev"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L6_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1"
+      },
+      "level_keys": [
+        "csaif_pl_comp_think_L6_python_-rev"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L7_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1"
+      },
+      "level_keys": [
+        "csaif_pl_comp_think_L7_python_-rev"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-comp_thinking_L8_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1"
+      },
+      "level_keys": [
+        "csaif-pl-comp_thinking_L8_python_-rev"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_comp_think_forum_L8_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1"
+      },
+      "level_keys": [
+        "csaif-pl-_comp_think_forum_L8_python_-rev"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_code_basicsL1_python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "fb021865-33b3-48d4-a888-0de4a7420366"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_overview_code_basicsL1_python_-rev"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-PL-pythonLab_tour-L1-5_python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "fb021865-33b3-48d4-a888-0de4a7420366"
+      },
+      "level_keys": [
+        "csaif-PL-pythonLab_tour-L1-5_python_-rev"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-print-L3-2-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      },
+      "level_keys": [
+        "aif-pl-print-L3-2-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-Pl-print-comment-L4-2-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      },
+      "level_keys": [
+        "aif-Pl-print-comment-L4-2-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl_Python-data-Variables-L4-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      },
+      "level_keys": [
+        "csaif-pl_Python-data-Variables-L4-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl_Python-Variables-L3-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      },
+      "level_keys": [
+        "csaif-pl_Python-Variables-L3-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-variable-L7-2-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      },
+      "level_keys": [
+        "aif-pl-variable-L7-2-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_concat_LX_python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      },
+      "level_keys": [
+        "aif_pl_concat_LX_python_-rev"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 9,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-PL-varible-choice-L8-2-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      },
+      "level_keys": [
+        "aif-PL-varible-choice-L8-2-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 10,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-math_expressions-L10-2-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      },
+      "level_keys": [
+        "aif-pl-math_expressions-L10-2-python_-rev"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 11,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-choice-math-L11-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      },
+      "level_keys": [
+        "aif-pl-choice-math-L11-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl_neighborhood_L9_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      },
+      "level_keys": [
+        "csaif-pl_neighborhood_L9_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-PL-neighborhood-tour_L10_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      },
+      "level_keys": [
+        "csaif-PL-neighborhood-tour_L10_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_objects_L11_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      },
+      "level_keys": [
+        "csaif_pl_objects_L11_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_the-painter_L12_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      },
+      "level_keys": [
+        "csaif_pl_the-painter_L12_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-object-predict-L16-2-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      },
+      "level_keys": [
+        "aif-pl-object-predict-L16-2-python_-rev"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 17,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-objects-create-L17-2-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      },
+      "level_keys": [
+        "aif-pl-objects-create-L17-2-python_-rev"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 18,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_umpire-L18-2-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      },
+      "level_keys": [
+        "aif_pl_umpire-L18-2-python_-rev"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 19,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl_choice-objects-L15_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      },
+      "level_keys": [
+        "csaif-pl_choice-objects-L15_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_function-intro-L20_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "aif_pl_function-intro-L20_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 21,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_function-intro2-L21_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "aif_pl_function-intro2-L21_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 22,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-1-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-1-python_-rev"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 23,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-2-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-2-python_-rev"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 24,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-3-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-3-python_-rev"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 25,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-4-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-4-python_-rev"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 26,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-functions-L15-1-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "csaif-pl-functions-L15-1-python_-rev"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 27,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-PL-functions-L16_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "csaif-PL-functions-L16_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 28,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-custommodule-L27-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "aif-pl-custommodule-L27-python_-rev"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 29,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-function-trn-rght-L17-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "csaif-pl-function-trn-rght-L17-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 30,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_custompy-L17-2_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "csaif_pl_custompy-L17-2_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 31,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_backpack-L18_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "csaif_pl_backpack-L18_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 32,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-bkpk-function-L19-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "csaif-pl-bkpk-function-L19-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 33,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-functions-mult-choice-L21-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "csaif-pl-functions-mult-choice-L21-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 34,
+      "activity_section_position": 15,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_checkreview-functions-22-2_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      },
+      "level_keys": [
+        "csaif_pl_checkreview-functions-22-2_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 35,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_debugging_L22_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "f067caf7-f539-4a24-bc3e-15bf799f2e47"
+      },
+      "level_keys": [
+        "csaif_pl_debugging_L22_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 36,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-PL-debug-L23-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "f067caf7-f539-4a24-bc3e-15bf799f2e47"
+      },
+      "level_keys": [
+        "csaif-PL-debug-L23-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 37,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_python-basics-forem_L26_python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "f067caf7-f539-4a24-bc3e-15bf799f2e47"
+      },
+      "level_keys": [
+        "csaif-pl-_python-basics-forem_L26_python_-rev"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_advanced_alg_L1_python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_overview_advanced_alg_L1_python_-rev"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl_loops_L2-Python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5"
+      },
+      "level_keys": [
+        "csaif-pl_loops_L2-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-while1-L3-Python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5"
+      },
+      "level_keys": [
+        "aif-pl-while1-L3-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-while2-L4-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5"
+      },
+      "level_keys": [
+        "aif-pl-while2-L4-python_-rev"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-whileloops3-L5-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5"
+      },
+      "level_keys": [
+        "aif-pl-whileloops3-L5-python_-rev"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-predict-conditional-L5-2-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      },
+      "level_keys": [
+        "csaif-pl-predict-conditional-L5-2-python_-rev"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_conditionals-L6_python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      },
+      "level_keys": [
+        "csaif_pl_conditionals-L6_python_-rev"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl_methos-conditional-L7-Python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      },
+      "level_keys": [
+        "csaif-pl_methos-conditional-L7-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_if-while-L9_python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      },
+      "level_keys": [
+        "csaif_pl_if-while-L9_python_-rev"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-conditional1-L10-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      },
+      "level_keys": [
+        "aif-pl-conditional1-L10-python_-rev"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 11,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-conditionals2-L11-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      },
+      "level_keys": [
+        "aif-pl-conditionals2-L11-python_-rev"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_algorithm_review-L11-Python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      },
+      "level_keys": [
+        "csaif_pl_algorithm_review-L11-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_flowChart_L12_Python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      },
+      "level_keys": [
+        "csaif_pl_flowChart_L12_Python_-rev"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-PL-predict-nested-L13-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      },
+      "level_keys": [
+        "csaif-PL-predict-nested-L13-python_-rev"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_else-compare-L14-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      },
+      "level_keys": [
+        "csaif_pl_else-compare-L14-python_-rev"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-two-waySelection-L16-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      },
+      "level_keys": [
+        "aif-pl-two-waySelection-L16-python_-rev"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 17,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-assessment-L16-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      },
+      "level_keys": [
+        "csaif-pl-assessment-L16-python_-rev"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_real-life-alg_forum_L17_python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "aba320bb-5ae8-4460-89ad-fe027b9aadaa"
+      },
+      "level_keys": [
+        "csaif-pl-_real-life-alg_forum_L17_python_-rev"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ethical-algorithmic-decision-L18-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "aba320bb-5ae8-4460-89ad-fe027b9aadaa"
+      },
+      "level_keys": [
+        "csaif_pl_ethical-algorithmic-decision-L18-python_-rev"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 20,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ethic-teaching-tips-L19-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "aba320bb-5ae8-4460-89ad-fe027b9aadaa"
+      },
+      "level_keys": [
+        "csaif_pl_ethic-teaching-tips-L19-python_-rev"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 21,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson4-L20_python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "aba320bb-5ae8-4460-89ad-fe027b9aadaa"
+      },
+      "level_keys": [
+        "csaif_pl_teacher_Lesson4-L20_python_-rev"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_overview_endofUnit_L1_python_-rev"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      },
+      "level_keys": [
+        "csaif_pl_project-description-L2-python_-rev"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-Python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      },
+      "level_keys": [
+        "csaif_pl_3-day-project-L3-Python_-rev"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_collaboration-L4_python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      },
+      "level_keys": [
+        "csaif_pl_collaboration-L4_python_-rev"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      },
+      "level_keys": [
+        "csaif-pl-_projectmanage_forum_L5_python_-rev"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-L6-python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      },
+      "level_keys": [
+        "csaif-pl-nextsteps-L6-python_-rev"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_overview_objectives_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_cert_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_cert_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_module_overview_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_module_overview_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_course_overview_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_course_overview_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_course_structure_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_course_structure_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "4b3322a4-8d7e-4544-8f49-2284e4f91a62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_resources_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_resources_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_career_overview_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_career_overview_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_AI_chatbot_overview_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_AI_tutor_overview_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_AI_tutor_overview_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_teacher_Lesson1_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson1_python_-rev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "b5ae5d6b-16b4-409e-b10c-65a73fff2744"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_overview_comp_think_L1_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_comp_think_L1_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "80996659-0485-4cd7-9000-a75593e3d6ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_comp_think_overview_L2_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_overview_L2_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "80996659-0485-4cd7-9000-a75593e3d6ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-DS-comp_think_panel_L3_Python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-DS-comp_think_panel_L3_Python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "80996659-0485-4cd7-9000-a75593e3d6ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_module_comp_think_L4_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_module_comp_think_L4_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "80996659-0485-4cd7-9000-a75593e3d6ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_comp_think_L5_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L5_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_comp_think_L6_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L6_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_comp_think_L7_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L7_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-comp_thinking_L8_python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-comp_thinking_L8_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_comp_think_forum_L8_python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-_comp_think_forum_L8_python_-rev"
+        ],
+        "lesson.key": "Computational Thinking",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "08ec2921-156a-4333-adf4-a7396f569cf1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_overview_code_basicsL1_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_code_basicsL1_python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "fb021865-33b3-48d4-a888-0de4a7420366"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-PL-pythonLab_tour-L1-5_python_-rev",
+        "script_level.level_keys": [
+          "csaif-PL-pythonLab_tour-L1-5_python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "fb021865-33b3-48d4-a888-0de4a7420366"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-print-L3-2-Python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-print-L3-2-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-Pl-print-comment-L4-2-Python_-rev",
+        "script_level.level_keys": [
+          "aif-Pl-print-comment-L4-2-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl_Python-data-Variables-L4-Python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl_Python-data-Variables-L4-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl_Python-Variables-L3-Python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl_Python-Variables-L3-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-variable-L7-2-Python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-variable-L7-2-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif_pl_concat_LX_python_-rev",
+        "script_level.level_keys": [
+          "aif_pl_concat_LX_python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-PL-varible-choice-L8-2-Python_-rev",
+        "script_level.level_keys": [
+          "aif-PL-varible-choice-L8-2-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-math_expressions-L10-2-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-math_expressions-L10-2-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-choice-math-L11-Python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-choice-math-L11-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "6e11a2e7-2c19-46a5-b81a-d59ab980ced2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl_neighborhood_L9_Python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl_neighborhood_L9_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-PL-neighborhood-tour_L10_Python_-rev",
+        "script_level.level_keys": [
+          "csaif-PL-neighborhood-tour_L10_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_objects_L11_Python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_objects_L11_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_the-painter_L12_Python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_the-painter_L12_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-object-predict-L16-2-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-object-predict-L16-2-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-objects-create-L17-2-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-objects-create-L17-2-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif_pl_umpire-L18-2-python_-rev",
+        "script_level.level_keys": [
+          "aif_pl_umpire-L18-2-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl_choice-objects-L15_Python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl_choice-objects-L15_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "00bf2537-dd97-42e3-b76b-33b17176a767"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif_pl_function-intro-L20_Python_-rev",
+        "script_level.level_keys": [
+          "aif_pl_function-intro-L20_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif_pl_function-intro2-L21_Python_-rev",
+        "script_level.level_keys": [
+          "aif_pl_function-intro2-L21_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-1-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-1-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-2-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-2-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-3-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-3-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-4-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-4-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-functions-L15-1-python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-functions-L15-1-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-PL-functions-L16_Python_-rev",
+        "script_level.level_keys": [
+          "csaif-PL-functions-L16_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-custommodule-L27-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-custommodule-L27-python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-function-trn-rght-L17-Python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-function-trn-rght-L17-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_custompy-L17-2_Python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_custompy-L17-2_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_backpack-L18_Python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_backpack-L18_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-bkpk-function-L19-Python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-bkpk-function-L19-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-functions-mult-choice-L21-Python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-functions-mult-choice-L21-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_checkreview-functions-22-2_Python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_checkreview-functions-22-2_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "260b49ab-a8fa-4271-b21f-8b4a3db5847f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_debugging_L22_Python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_debugging_L22_Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "f067caf7-f539-4a24-bc3e-15bf799f2e47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-PL-debug-L23-Python_-rev",
+        "script_level.level_keys": [
+          "csaif-PL-debug-L23-Python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "f067caf7-f539-4a24-bc3e-15bf799f2e47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_python-basics-forem_L26_python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-_python-basics-forem_L26_python_-rev"
+        ],
+        "lesson.key": "Python Basics",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "f067caf7-f539-4a24-bc3e-15bf799f2e47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_overview_advanced_alg_L1_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_advanced_alg_L1_python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl_loops_L2-Python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl_loops_L2-Python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-while1-L3-Python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-while1-L3-Python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-while2-L4-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-while2-L4-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-whileloops3-L5-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-whileloops3-L5-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d7044d0d-1647-4c24-9726-dc2cd2a6aad5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-predict-conditional-L5-2-python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-predict-conditional-L5-2-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_conditionals-L6_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_conditionals-L6_python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl_methos-conditional-L7-Python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl_methos-conditional-L7-Python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_if-while-L9_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_if-while-L9_python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-conditional1-L10-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-conditional1-L10-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-conditionals2-L11-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-conditionals2-L11-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "d6549a0b-6e5a-4322-b1f6-060692ffd0a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_algorithm_review-L11-Python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_algorithm_review-L11-Python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_flowChart_L12_Python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_flowChart_L12_Python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-PL-predict-nested-L13-python_-rev",
+        "script_level.level_keys": [
+          "csaif-PL-predict-nested-L13-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_else-compare-L14-python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_else-compare-L14-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-two-waySelection-L16-python_-rev",
+        "script_level.level_keys": [
+          "aif-pl-two-waySelection-L16-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-assessment-L16-python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-assessment-L16-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "bfe30ac9-ecc0-4a3a-9f83-ee0ca04c3206"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_real-life-alg_forum_L17_python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-_real-life-alg_forum_L17_python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "aba320bb-5ae8-4460-89ad-fe027b9aadaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ethical-algorithmic-decision-L18-python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_ethical-algorithmic-decision-L18-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "aba320bb-5ae8-4460-89ad-fe027b9aadaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ethic-teaching-tips-L19-python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_ethic-teaching-tips-L19-python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "aba320bb-5ae8-4460-89ad-fe027b9aadaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_teacher_Lesson4-L20_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson4-L20_python_-rev"
+        ],
+        "lesson.key": "Algorithms with Python",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "aba320bb-5ae8-4460-89ad-fe027b9aadaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_overview_endofUnit_L1_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_project-description-L2-python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_3-day-project-L3-Python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-Python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_collaboration-L4_python_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_collaboration-L4_python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_projectmanage_forum_L5_python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nextsteps-L6-python_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-L6-python_-rev"
+        ],
+        "lesson.key": "Preparing for the Final Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif2",
+        "activity_section.key": "95548297-71c1-4820-88c5-7adad2968068"
+      }
+    }
   ],
   "resources": [
 

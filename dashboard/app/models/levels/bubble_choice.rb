@@ -39,6 +39,7 @@ class BubbleChoice < DSLDefined
     custom_mode
     navigation_type
     finish_dialog
+    hide_share_and_remix
   )
 
   ALPHABET = ('a'..'z').to_a

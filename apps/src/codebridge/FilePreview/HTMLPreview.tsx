@@ -17,6 +17,7 @@ import {
   DEFAULT_START_HTML_FILE,
 } from './constants';
 import {HTMLPreviewHeader} from './HTMLPreviewHeader';
+import PreviewStopped from './PreviewStopped';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
@@ -50,6 +51,9 @@ export const HTMLPreview: React.FC = () => {
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
   );
+  const aiFilePathToPreview = useAppSelector(
+    state => state.weblab2.aiFilePathToPreview
+  );
   const [isIframeLoaded, setIsIframeLoaded] = useState(false);
   const [debouncedSource, setDebouncedSource] = useState(source);
   const sourceLevelId = useRef<number | undefined>(undefined);
@@ -61,6 +65,7 @@ export const HTMLPreview: React.FC = () => {
   const [previewViewMode, setPreviewViewMode] = useState<PreviewViewMode>(
     PreviewViewMode.DESKTOP
   );
+  const [isStopped, setIsStopped] = useState<boolean>(false);
   const isPredictLevel = levelProperties?.predictSettings?.isPredictLevel;
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
@@ -69,6 +74,18 @@ export const HTMLPreview: React.FC = () => {
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
+
+  useEffect(() => {
+    if (aiFilePathToPreview) {
+      setCurrentFile(aiFilePathToPreview);
+      setInputValue(aiFilePathToPreview);
+    } else {
+      setCurrentFile(DEFAULT_START_HTML_FILE);
+      setInputValue(DEFAULT_START_HTML_FILE);
+      setNavigationHistory([DEFAULT_START_HTML_FILE]);
+      setNavigationHistoryIndex(0);
+    }
+  }, [aiFilePathToPreview]);
 
   const dispatch = useAppDispatch();
 
@@ -150,9 +167,20 @@ export const HTMLPreview: React.FC = () => {
     );
   };
 
+  const onStopPreview = () => {
+    setIsStopped(true);
+    setIsIframeLoaded(false);
+  };
+
+  const onReloadPreview = () => {
+    setIsStopped(false);
+  };
+
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
+    // When we switch levels, reset stopped state.
+    setIsStopped(false);
     setIsLevelLoading(true);
   });
 
@@ -287,33 +315,39 @@ export const HTMLPreview: React.FC = () => {
           onToggleFullScreen={toggleFullScreen}
           previewViewMode={previewViewMode}
           setPreviewViewMode={setPreviewViewMode}
+          onStopPreview={onStopPreview}
+          isStopEnabled={!isStopped}
         />
-        {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
-            route to InnerHTMLPreview. */}
-        <div
-          ref={previewContainerRef}
-          // This provides a small visual indicator when the iframe is focused after submitting the URL.
-          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-          tabIndex={0}
-          className={moduleStyles.previewWrapper}
-          role="application"
-          aria-label="Web Preview Frame"
-        >
-          <iframe
-            sandbox="allow-scripts allow-same-origin"
-            allow="self"
-            title="Web Preview"
-            ref={iframeRef}
-            id="preview"
-            className={classNames(
-              moduleStyles.previewIframe,
-              previewViewMode === PreviewViewMode.DESKTOP
-                ? moduleStyles.desktopPreviewIframe
-                : moduleStyles.mobilePreviewIframe
-            )}
-            src={`${previewUrl}${previewQueryString}`}
-          />
-        </div>
+        {isStopped ? (
+          <PreviewStopped onReload={onReloadPreview} />
+        ) : (
+          /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
+            route to InnerHTMLPreview. */
+          <div
+            ref={previewContainerRef}
+            // This provides a small visual indicator when the iframe is focused after submitting the URL.
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+            tabIndex={0}
+            className={moduleStyles.previewWrapper}
+            role="application"
+            aria-label="Web Preview Frame"
+          >
+            <iframe
+              sandbox="allow-scripts allow-same-origin"
+              allow="self"
+              title="Web Preview"
+              ref={iframeRef}
+              id="preview"
+              className={classNames(
+                moduleStyles.previewIframe,
+                previewViewMode === PreviewViewMode.DESKTOP
+                  ? moduleStyles.desktopPreviewIframe
+                  : moduleStyles.mobilePreviewIframe
+              )}
+              src={`${previewUrl}${previewQueryString}`}
+            />
+          </div>
+        )}
       </div>
     </PanelContainer>
   );
