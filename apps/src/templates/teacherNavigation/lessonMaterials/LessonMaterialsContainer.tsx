@@ -29,7 +29,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 
-import UnitSelectorV2 from '../../UnitSelectorV2';
+import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';

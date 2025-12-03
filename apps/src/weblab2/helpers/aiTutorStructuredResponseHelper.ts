@@ -1,10 +1,11 @@
+import {validateFileName, getFileNameWithNumberSuffix} from '@codebridge/utils';
+
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
-import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
-const getAnswerJsonSchema = (): JsonObjectSchema => {
+const getAnswerJsonSchemaCopyPaste = (): JsonObjectSchema => {
   return {
     type: 'object',
     properties: {
@@ -124,13 +125,15 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
             sourceCode: {
               type: 'string',
             },
-            filename: {type: 'string'},
+            name: {type: 'string'},
+            id: {type: 'string'},
+            folderId: {type: 'string'},
           },
-          required: ['language', 'sourceCode', 'filename'],
+          required: ['language', 'sourceCode', 'name', 'id', 'folderId'],
           additionalProperties: false,
         },
         description:
-          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. The list can be empty. Code should be formatted with appropriate newlines and indentation.  When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation. If the language is javascript or js, then the student will need to copy and paste this code into their project.',
+          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. The list can be empty. Code should be formatted with appropriate newlines and indentation.  When providing modifications to student code, provide the entire contents of the file, the id and folderId of the file being updated. If the file is a new file and not currently in the the student code, then the id is "new", and the folderId is "0".The list can be empty. Code should be formatted with appropriate newlines and indentation. If the language is javascript or js, then the student will need to copy and paste this code into their project.',
       },
       explanation: {
         type: 'string',
@@ -167,7 +170,7 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
 export const copyCodeJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {
-    answer: getAnswerJsonSchema(),
+    answer: getAnswerJsonSchemaCopyPaste(),
   },
   required: ['answer'],
   additionalProperties: false,
@@ -184,7 +187,7 @@ export const acceptRejectJsonSchema: JsonObjectSchema = {
 
 // Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchema().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const formatExplanationResponse = (response: any): string => {
+export const formatCopyPasteResponse = (response: any): string => {
   let formattedResponse = '';
   if (response.assumptions) {
     formattedResponse += `**Assumptions**\n\n${response.assumptions}\n\n`;
@@ -210,6 +213,8 @@ export const formatExplanationResponse = (response: any): string => {
 };
 
 type AiTutorCodeFile = {
+  id: string;
+  folderId: string;
   name: string;
   contents: string;
 };
@@ -225,12 +230,24 @@ export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response: any
 ): AcceptRejectFormattedResponse => {
+  let formattedExplanation = '';
+  if (response.explanation) {
+    formattedExplanation += `**Explanation**\n\n${response.explanation}\n\n`;
+  }
+  if (response.nextSteps) {
+    formattedExplanation += `**Next Steps**\n\n${response.nextSteps}\n\n`;
+  }
+  if (response.questions) {
+    formattedExplanation += `**Questions**\n\n${response.questions}\n\n`;
+  }
   return {
-    explanation: response.explanation || '',
+    explanation: formattedExplanation,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code: response.code.map((codeFile: any) => ({
-      name: codeFile.filename,
+      name: codeFile.name,
       contents: codeFile.sourceCode,
+      id: codeFile.id,
+      folderId: codeFile.folderId,
     })),
     answerType: response.tutorMode,
   };
@@ -241,14 +258,6 @@ export const getMergedAiTutorCodeWithSource = (
   source: MultiFileSource,
   aiTutorVersionFiles: ProjectFile[]
 ): MultiFileSource => {
-  // Helper function to get folder depth (distance from root)
-  const getFolderDepth = (folderId: string): number => {
-    if (folderId === '0') return 0; // Root folder
-    const folder = source.folders[folderId];
-    if (!folder) return 0;
-    return 1 + getFolderDepth(folder.parentId);
-  };
-
   // Create copy of the source.
   const updatedSource: MultiFileSource = {
     ...source,
@@ -264,56 +273,97 @@ export const getMergedAiTutorCodeWithSource = (
     };
   });
 
-  // For each AI code file, find and replace the matching file if there is a matching file.
+  // For each AI code file, find and replace the updated file if the file already exists in student code.
+  // If the AI code file is a new file, add it to updatedSource.
   code.forEach((aiFile: AiTutorCodeFile) => {
-    // First check active file is the same as the AI code file.
-    const activeFile = getActiveFileForSource(source);
-    if (activeFile?.name === aiFile.name) {
-      // Active file is the same as the AI code file - replace it.
-      const aiTutorVersionFile: ProjectFile = {
-        ...updatedSource.files[activeFile.id],
-        contents: aiFile.contents,
-        isAiTutorVersionUpdated: true,
-      };
-      updatedSource.files[activeFile.id] = aiTutorVersionFile;
-      aiTutorVersionFiles.push(aiTutorVersionFile);
-      return;
+    let fileId;
+    // File id is 'new' so we are creating a new file.
+    if (aiFile.id === 'new') {
+      fileId = getNextFileId(Object.values(updatedSource.files));
+    } else {
+      // File id is not 'new' so we are updating an existing file.
+      fileId = aiFile.id;
+      // We need to validate the file name of the AI code file with the given file id.
+      // If the file name of the AI code file is the same as the file name in the student code,
+      // then we use the same file id.
+      if (updatedSource.files[aiFile.id]?.name === aiFile.name) {
+        fileId = aiFile.id;
+      } else {
+        // If the file name is different, then we need to create a new file with a different id.
+        fileId = getNextFileId(Object.values(updatedSource.files));
+        // Validate the file name of the AI code file.
+        const validateFileNameError = validateFileName({
+          fileName: aiFile.name,
+          folderId: aiFile.folderId,
+          projectFiles: updatedSource.files,
+          isStartMode: false,
+          validationFile: undefined,
+        });
+        if (validateFileNameError) {
+          // TODO: Log error via analytics.
+          // If the file name is invalid (e.g. duplicate), place in root folder, if not already in root folder.
+          // Then validate name and if still invalid, add numeric suffix to the file name until valid.
+          if (aiFile.folderId !== DEFAULT_FOLDER_ID) {
+            aiFile.folderId = DEFAULT_FOLDER_ID;
+          } else {
+            aiFile.name = getFileNameWithNumberSuffix(aiFile.name);
+          }
+          let validateFileNameError;
+          do {
+            validateFileNameError = validateFileName({
+              fileName: aiFile.name,
+              folderId: aiFile.folderId,
+              projectFiles: updatedSource.files,
+              isStartMode: false,
+              validationFile: undefined,
+            });
+            if (validateFileNameError) {
+              aiFile.name = getFileNameWithNumberSuffix(aiFile.name);
+            }
+          } while (validateFileNameError);
+        }
+      }
     }
-    // Find all files with matching name
-    const matchingFiles = Object.values(updatedSource.files).filter(
-      file => file.name === aiFile.name
-    );
 
-    if (matchingFiles.length === 0) {
-      // No matching file found, add a new file to updatedSource.
-      const newFileId = getNextFileId(Object.values(updatedSource.files));
-      updatedSource.files[newFileId] = {
-        id: newFileId,
-        name: aiFile.name,
-        contents: aiFile.contents,
-        folderId: DEFAULT_FOLDER_ID,
-        language: aiFile.name.split('.').pop() || '',
-        isAiTutorVersionCreated: true,
-      };
-      aiTutorVersionFiles.push(updatedSource.files[newFileId]);
-      return;
-    }
-
-    // Find the file closest to root (smallest folder depth).
-    const closestFile = matchingFiles.reduce((closest, current) => {
-      const closestDepth = getFolderDepth(closest.folderId);
-      const currentDepth = getFolderDepth(current.folderId);
-      return currentDepth < closestDepth ? current : closest;
-    });
     const aiTutorVersionFile: ProjectFile = {
-      ...closestFile,
+      id: fileId,
+      name: aiFile.name,
+      folderId: aiFile.folderId,
+      language: aiFile.name.split('.').pop() || '',
       contents: aiFile.contents,
-      isAiTutorVersionUpdated: true,
+      isAiTutorVersionUpdated: aiFile.id === 'new' ? false : true,
+      isAiTutorVersionCreated: aiFile.id === 'new' ? true : false,
     };
-    updatedSource.files[closestFile.id] = aiTutorVersionFile;
+    updatedSource.files[aiTutorVersionFile.id] = aiTutorVersionFile;
     aiTutorVersionFiles.push(aiTutorVersionFile);
   });
+
   // Sort AI-updated files by name alphabetically.
   aiTutorVersionFiles.sort((a, b) => a.name.localeCompare(b.name));
+
+  // Update openFiles to prioritize AI files: active file first, then other AI files, then existing.
+  if (aiTutorVersionFiles.length > 0) {
+    const firstHtmlFile = aiTutorVersionFiles.find(f => f.language === 'html');
+    const fileToActivate = firstHtmlFile || aiTutorVersionFiles[0];
+
+    updatedSource.files[fileToActivate.id] = {
+      ...updatedSource.files[fileToActivate.id],
+      active: true,
+    };
+
+    const aiFileIds = aiTutorVersionFiles.map(f => f.id);
+    const aiFileIdSet = new Set(aiFileIds);
+    const existingOpenFilesFiltered = (updatedSource.openFiles || []).filter(
+      id => !aiFileIdSet.has(id)
+    );
+
+    const otherAiFileIds = aiFileIds.filter(id => id !== fileToActivate.id);
+    updatedSource.openFiles = [
+      fileToActivate.id,
+      ...otherAiFileIds,
+      ...existingOpenFilesFiltered,
+    ];
+  }
+
   return updatedSource;
 };
