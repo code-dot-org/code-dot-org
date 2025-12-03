@@ -20,6 +20,9 @@ type PopUpButtonProps = {
 
 const TOP_PADDING = 5;
 
+// Custom event used to coordinate closing other dropdowns when one opens
+const CLOSE_OTHER_DROPDOWNS_EVENT = 'popupbutton:close';
+
 export const PopUpButton = ({
   children,
   iconName,
@@ -36,9 +39,27 @@ export const PopUpButton = ({
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
   const [computedButtonStyles, setComputedButtonStyles] = useState(className);
+  // Unique identifier for this dropdown instance
+  const instanceId = useRef(crypto.randomUUID());
   // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
   // main lab container.
   const {theme} = useTheme();
+
+  // Listen for close events from other dropdowns
+  useEffect(() => {
+    const handleCloseOthers = (e: Event) => {
+      const customEvent = e as CustomEvent<{sourceId: string}>;
+      if (customEvent.detail.sourceId !== instanceId.current) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener(CLOSE_OTHER_DROPDOWNS_EVENT, handleCloseOthers);
+    return () =>
+      document.removeEventListener(
+        CLOSE_OTHER_DROPDOWNS_EVENT,
+        handleCloseOthers
+      );
+  }, []);
 
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
@@ -61,6 +82,12 @@ export const PopUpButton = ({
       setIsOpen(oldIsOpen => {
         const newIsOpen = !oldIsOpen;
         if (newIsOpen) {
+          // Tell other dropdowns to close
+          document.dispatchEvent(
+            new CustomEvent(CLOSE_OTHER_DROPDOWNS_EVENT, {
+              detail: {sourceId: instanceId.current},
+            })
+          );
           // React 17 changed the location where clickhandlers are added, so we want to defer adding the close
           // handler until the next tick of the event loop, otherwise it'll fire immediately and re-close the pop up.'
           setTimeout(
