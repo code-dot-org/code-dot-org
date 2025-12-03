@@ -1,38 +1,61 @@
-@import "color.scss";
-@import "font.scss";
-@import "@code-dot-org/component-library-styles/typography.module";
+@use '@code-dot-org/component-library-styles/mixins';
+@import 'color.scss';
 
 .prompts {
   display: flex;
-  column-gap: 0.5em;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 
   .prompt {
-    display: flex;
-    align-items: baseline;
-    gap: 2px;
-    color: $neutral-dark;
-    padding: 2px 12px;
-    background-color: $brand_primary_light;
-    border-radius: 6.25rem;;
-    max-width: 18em;
+    // Base chip styles (from component library chip.module.scss)
+    display: inline-block;
+    background-color: var(--neutral-base-white);
+    border: 1px solid var(--neutral-base-black);
+    color: var(--neutral-base-black);
+    min-width: 30px;
+    text-align: center;
+    border-radius: 100px;
+    white-space: nowrap;
+    margin: 0 0 0.5rem 0;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 
-    span {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    // Size: small, thickness: thick (chips-s + chip-thick)
+    padding: calc(0.31rem + 1px) 0.75rem 0.31rem;
+
+    @include mixins.button-three-text;
+
+    // Hover state
+    &:hover:not(:disabled) {
+      background-color: var(--neutral-gray-10);
     }
 
-    i {
-      display: flex;
-      justify-content: center;
+    // Focus state
+    &:focus-visible {
+      outline: 2px solid $brand_primary_default;
+      outline-offset: 2px;
     }
 
-    &:has(i:first-child) {
-      padding-inline-start: 8px;
+    // Selected state
+    &.selected {
+      background-color: $brand_primary_default;
+      color: white;
+      border-color: $brand_primary_default;
+
+      &:hover {
+        background-color: darken($brand_primary_default, 5%);
+      }
     }
 
-    &:has(i:not(:first-child)) {
-      padding-inline-end: 8px;
+    // Disabled state
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: var(--neutral-base-white);
+      }
     }
   }
 }

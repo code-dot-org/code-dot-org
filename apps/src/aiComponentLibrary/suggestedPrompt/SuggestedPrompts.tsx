@@ -1,4 +1,3 @@
-import Chips from '@code-dot-org/component-library/chips';
 import React from 'react';
 
 import moduleStyles from './suggested-prompt.module.scss';
@@ -20,28 +19,35 @@ interface SuggestedPromptsProps {
 const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
   suggestedPrompts,
 }) => {
-  const setValues = (selected: string[]) => {
-    suggestedPrompts.map(prompt => {
-      if (prompt.selected !== selected.includes(prompt.label)) {
-        prompt.onClick(prompt);
-      }
-    });
-  };
+  const hasSelection = suggestedPrompts.some(prompt => prompt.selected);
+  const visiblePrompts = suggestedPrompts.filter(prompt => prompt.show);
 
   return (
-    <Chips
-      options={suggestedPrompts.flatMap(prompt =>
-        prompt.show ? {label: prompt.label, value: prompt.label} : []
-      )}
-      values={suggestedPrompts.flatMap(prompt =>
-        prompt.selected ? [prompt.label] : []
-      )}
-      setValues={setValues}
-      name={'Suggested Prompts'}
-      size={'s'}
-      textThickness={'thick'}
+    <div
       className={moduleStyles.prompts}
-    />
+      role="group"
+      aria-label="Suggested Prompts"
+    >
+      {visiblePrompts.map((prompt, index) => {
+        const isDisabled = hasSelection && !prompt.selected;
+
+        return (
+          <button
+            key={prompt.label}
+            type="button"
+            className={`${moduleStyles.prompt} ${
+              prompt.selected ? moduleStyles.selected : ''
+            } ${isDisabled ? moduleStyles.disabled : ''}`}
+            onClick={() => !isDisabled && prompt.onClick(prompt)}
+            disabled={isDisabled}
+            aria-pressed={prompt.selected}
+            aria-label={prompt.label}
+          >
+            <span>{prompt.label}</span>
+          </button>
+        );
+      })}
+    </div>
   );
 };
 export default SuggestedPrompts;
