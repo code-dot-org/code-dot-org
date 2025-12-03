@@ -1,0 +1,10 @@
+name 'csaif_pl_ai_01-rev-01'
+title 'Check for Understanding: Revising Prompts'
+description ''
+question 'A student prompts an AI: Explain how volcanoes work. The response is too brief, and the student wants a more detailed explanation. Which updated prompt would you suggest they try next?'
+
+wrong 'Explain volcanoes using more words'
+right  'Explain in detail how volcanoes form and erupt, including magma, pressure, and types of eruptions'
+wrong 'Write a paper about volcanoes'
+wrong 'Give me lots of details about how volcanoes work'
+allow_multiple_attempts true
