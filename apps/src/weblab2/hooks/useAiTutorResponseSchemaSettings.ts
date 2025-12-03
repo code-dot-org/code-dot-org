@@ -15,7 +15,7 @@ import {
   acceptRejectJsonSchema,
   copyCodeJsonSchema,
   formatAcceptRejectResponse,
-  formatExplanationResponse,
+  formatCopyPasteResponse,
   getMergedAiTutorCodeWithSource,
 } from '../helpers/aiTutorStructuredResponseHelper';
 import {setAiFilePathToPreview, setAiTutorVersionFiles} from '../weblab2Redux';
@@ -48,7 +48,7 @@ export const useAiTutorResponseSchemaSettings = (
           );
           const answerType = formattedResponse.answerType;
           if (answerType !== 'Build HTML' && answerType !== 'Build CSS') {
-            return formatExplanationResponse(jsonResponse.answer);
+            return formatCopyPasteResponse(jsonResponse.answer);
           }
           dispatch(setViewingAiTutorVersion(true));
           // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
@@ -72,56 +72,23 @@ export const useAiTutorResponseSchemaSettings = (
           }
           dispatch(setAiTutorVersionFiles(aiTutorVersionFiles));
           dispatch(setProjectSourceBeforeAiTutorVersion(source));
-          // Set the preview to first AI-updated html file, if it exists.
-          const firstAiUpdatedHtmlFile = aiTutorVersionFiles.find(
+          dispatch(setSource(mergedSourceVersion));
+
+          // Set the preview path to the first AI-updated HTML file, if it exists.
+          const firstHtmlFile = aiTutorVersionFiles.find(
             file => file.language === 'html'
           );
-          if (firstAiUpdatedHtmlFile) {
-            mergedSourceVersion.files[firstAiUpdatedHtmlFile.id] = {
-              ...firstAiUpdatedHtmlFile,
-              active: true,
-            };
-            // Get other AI file ids (excluding firstAiUpdatedHtmlFile).
-            const otherAiFileIds = aiTutorVersionFiles
-              .filter(file => file.id !== firstAiUpdatedHtmlFile.id)
-              .map(file => file.id);
-
-            // Get all AI file ids for deduplication.
-            const allAiFileIds = new Set([
-              firstAiUpdatedHtmlFile.id,
-              ...otherAiFileIds,
-            ]);
-
-            // Filter existing openFiles to remove any that will be added from AI files.
-            const existingOpenFilesFiltered = (
-              mergedSourceVersion.openFiles || []
-            ).filter(id => !allAiFileIds.has(id));
-
-            // Update openFiles: AI HTML file first, then other AI files, then existing open files.
-            mergedSourceVersion.openFiles = [
-              firstAiUpdatedHtmlFile.id,
-              ...otherAiFileIds,
-              ...existingOpenFilesFiltered,
-            ];
+          if (firstHtmlFile) {
             const folderPath = getFolderPath(
-              firstAiUpdatedHtmlFile.folderId,
+              firstHtmlFile.folderId,
               mergedSourceVersion.folders
             ).substring(1);
             const filePath =
               folderPath === ''
-                ? firstAiUpdatedHtmlFile.name
-                : folderPath + '/' + firstAiUpdatedHtmlFile.name;
+                ? firstHtmlFile.name
+                : folderPath + '/' + firstHtmlFile.name;
             dispatch(setAiFilePathToPreview(filePath));
-          } else {
-            const fileToActivate = aiTutorVersionFiles[0];
-            mergedSourceVersion.files[fileToActivate.id] = {
-              ...fileToActivate,
-              active: true,
-            };
-            mergedSourceVersion.openFiles = [fileToActivate.id];
           }
-
-          dispatch(setSource(mergedSourceVersion));
           return formattedResponse.explanation;
         },
       };
@@ -133,7 +100,7 @@ export const useAiTutorResponseSchemaSettings = (
           console.log('🤖: Tutor response (in jsonSchema callback):', {
             jsonResponse,
           });
-          return formatExplanationResponse(jsonResponse.answer);
+          return formatCopyPasteResponse(jsonResponse.answer);
         },
       };
     }
