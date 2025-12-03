@@ -47,6 +47,7 @@ import {
   Triggers,
 } from '../constants';
 import {AnalyticsContext} from '../context';
+import musicI18n from '../locale';
 import MusicRegistry from '../MusicRegistry';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
@@ -488,7 +489,11 @@ class UnconnectedMusicView extends React.Component {
           <ImageAttributions
             attributions={this.library.getImageAttributions()}
           />
-          <p>Audio editing and original sounds by William Cremin.</p>
+          {this.library.getExtraCredit() && (
+            <p>
+              {musicI18n.extraCredit({credit: this.library.getExtraCredit()})}
+            </p>
+          )}
         </>
       );
     }
