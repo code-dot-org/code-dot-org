@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 
-import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import {
   addVocabulary,
   updateVocabulary,
@@ -13,6 +12,7 @@ import {vocabularyShape} from '@cdo/apps/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 
 import AddVocabularyDialog from './AddVocabularyDialog';
+import DeleteVocabularyDialog from './DeleteVocabularyDialog';
 import SearchBox from './SearchBox';
 import {lessonEditorTableStyles} from './TableConstants';
 
@@ -177,15 +177,12 @@ class VocabulariesEditor extends Component {
           />
         )}
         {this.state.confirmRemovalDialogOpen && (
-          <Dialog
-            body={`Are you sure you want to remove the vocabulary "${this.state.vocabularyForRemoval.word}" from this lesson?`}
-            cancelText="Cancel"
-            confirmText="Delete"
-            confirmType="danger"
-            isOpen={this.state.confirmRemovalDialogOpen}
-            handleClose={this.handleRemoveVocabularyDialogClose}
-            onCancel={this.handleRemoveVocabularyDialogClose}
-            onConfirm={this.handleRemoveVocabularyConfirm}
+          <DeleteVocabularyDialog
+            vocabularyForDeletion={this.state.vocabularyForDeletion}
+            handleDeleteVocabularyConfirm={this.handleDeleteVocabularyConfirm}
+            handleDeleteVocabularyDialogClose={
+              this.handleDeleteVocabularyDialogClose
+            }
           />
         )}
         <div style={styles.search}>

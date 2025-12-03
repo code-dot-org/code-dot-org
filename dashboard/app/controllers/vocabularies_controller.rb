@@ -48,6 +48,17 @@ class VocabulariesController < ApplicationController
     end
   end
 
+  def destroy
+    vocabulary = Vocabulary.find_by_id(vocabulary_params[:id])
+    # Guard against nil vocabulary
+    # Remove any references to this vocabulary in lessons
+    if vocabulary.destroy
+      render json: {status: 'success', message: 'Vocabulary word deleted successfully'}, status: :ok
+    else
+      render json: {status: 'error', message: vocabulary.errors.full_messages.to_sentence}, status: :bad_request
+    end
+  end
+
   # GET /courses/:course_name/vocab/edit
   def edit
     @course_version = CurriculumHelper.find_matching_course_version(params[:course_name])
