@@ -291,7 +291,8 @@ const VersionHistoryPanel: React.FunctionComponent<
   const parseDate = useCallback(
     (date: string) => {
       const dateObject = new Date(date);
-      return dateFormatter.format(dateObject);
+      // The Regex here removes the space before AM/PM to match mocks and make more compact.
+      return dateFormatter.format(dateObject).replace(/\s(AM|PM)/gi, '$1');
     },
     [dateFormatter]
   );
@@ -301,6 +302,8 @@ const VersionHistoryPanel: React.FunctionComponent<
       setSelectedVersion(e.target.value);
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
       const isLatest = isLatestVersion(e.target.value);
+      // Find the version object to pass prop details to the loadVersion thunk.
+      const version = versionList.find(v => v.versionId === e.target.value);
       if (!isLatest) {
         sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_VIEWED, {
           isInitialVersion: viewingInitialVersion.toString(),
@@ -311,10 +314,10 @@ const VersionHistoryPanel: React.FunctionComponent<
       } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {
-        dispatch(loadVersion({versionId: e.target.value, startSources}));
+        dispatch(loadVersion({startSources, version}));
       }
     },
-    [dispatch, isLatestVersion, setSelectedVersion, startSources]
+    [dispatch, isLatestVersion, setSelectedVersion, startSources, versionList]
   );
 
   const handleSaveVersionSuccess = useCallback(() => {
