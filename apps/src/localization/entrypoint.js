@@ -58,13 +58,33 @@ const prefixes = {
 };
 
 const live = [
-  '/courses/3-5gamedesign-2024',
+  '/courses/csd-2024',
+  '/courses/self-paced-pl-csd-2024',
+  '/courses/k5-unplugged',
+  '/courses/express-2024',
+  '/courses/pre-express-2024',
+  '/courses/k5-onlinepd-2024',
+  '/courses/teaching-csf-2025',
+  '/courses/coursea-2024',
+  '/courses/courseb-2024',
+  '/courses/coursec-2024',
+  '/courses/coursed-2024',
+  '/courses/coursee-2024',
+  '/courses/coursef-2024',
+  '/courses/customizing-llms-2024',
+  '/courses/self-paced-pl-ai-101-2024',
   '/courses/foundations-gen-ai-2024',
   '/courses/foundations-gen-ai-2025',
   '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
+  '/courses/elementaryai-2024',
+  '/courses/3-5gamedesign-2024',
+  '/courses/elem-game-design-2024',
   '/courses/artificial-intelligence-foundations-2025/',
   '/courses/mix-move-ai-2025',
+  '/courses/teaching-ai-foundations-2025',
+  '/courses/oceans',
+  '/courses/how-ai-works-2023',
 ];
 
 const experiments =
