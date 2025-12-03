@@ -142,6 +142,7 @@ class UnconnectedMusicView extends React.Component {
     isFirstAttempt: PropTypes.bool,
     logLevelActivity: PropTypes.func,
     projectSources: PropTypes.object,
+    viewingOldVersion: PropTypes.bool,
   };
 
   constructor(props) {
@@ -292,8 +293,8 @@ class UnconnectedMusicView extends React.Component {
     if (currProjectSource && currProjectSource !== prevProjectSource) {
       try {
         this.stopSong();
-        const restoredPackId = this.props.projectSources.labConfig.music.packId;
-        console.log({restoredPackId});
+        const restoredPackId =
+          this.props.projectSources.labConfig?.music?.packId || null;
         this.library.setCurrentPackId(restoredPackId);
         this.props.setPackId(restoredPackId);
         const workspaceCode = JSON.parse(currProjectSource);
@@ -1016,6 +1017,7 @@ class UnconnectedMusicView extends React.Component {
           channel={this.props.channel}
           overrideProjectManager={this.props.projectManager}
           startSources={{source: JSON.stringify(this.getStartSources())}}
+          viewingOldVersion={this.props.viewingOldVersion}
         />
         <Callouts />
       </AnalyticsContext.Provider>
@@ -1054,6 +1056,7 @@ const MusicView = connect(
     scriptName: state.progress.scriptName,
     isFirstAttempt: getCurrentLevel(state)?.status === LevelStatus.not_tried,
     projectSources: state.lab2Project.projectSources,
+    viewingOldVersion: state.lab2Project.viewingOldVersion,
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),

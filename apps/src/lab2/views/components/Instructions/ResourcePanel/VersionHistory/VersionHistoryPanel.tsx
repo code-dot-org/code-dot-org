@@ -41,6 +41,7 @@ interface VersionHistoryPanelProps {
   appName: string;
   levelId: number;
   disabled?: boolean;
+  alwaysShowAutoSaves?: boolean;
 }
 
 // Define version segments to support collapsing auto-save groups
@@ -61,6 +62,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   appName,
   levelId,
   disabled = false,
+  alwaysShowAutoSaves = false,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   // Track collapsed state for each group of auto-saves by group index
@@ -104,10 +106,22 @@ const VersionHistoryPanel: React.FunctionComponent<
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const dialogControl = useDialogControl();
 
+  // Ex: "Jun 5, 3:30 PM"
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
       month: 'short',
       day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+    });
+  }, [locale]);
+
+  // Ex: "Jun 5, 2022, 3:30 PM"
+  const dateFormatterWithYear = useMemo(() => {
+    return new Intl.DateTimeFormat(locale, {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
     });
@@ -290,10 +304,17 @@ const VersionHistoryPanel: React.FunctionComponent<
 
   const parseDate = useCallback(
     (date: string) => {
-      const dateObject = new Date(date);
-      return dateFormatter.format(dateObject);
+      const versionDate = new Date(date);
+      const now = new Date();
+
+      // Within the current year, show month and day only.
+      if (now.getFullYear() === versionDate.getFullYear()) {
+        return dateFormatter.format(versionDate);
+      }
+      // Older than a year, show month, day, and year.
+      return dateFormatterWithYear.format(versionDate);
     },
-    [dateFormatter]
+    [dateFormatter, dateFormatterWithYear]
   );
 
   const onVersionChange = useCallback(
@@ -366,14 +387,19 @@ const VersionHistoryPanel: React.FunctionComponent<
     return segments;
   }, [versionList]);
 
-  // Initialize collapsed state for all groups (all collapsed by default)
+  // Initialize collapsed state for all groups
+  // All groups collapsed by default, unless alwaysShowAutoSaves is true
   useEffect(() => {
+    if (alwaysShowAutoSaves) {
+      setCollapsedGroups(new Set());
+      return;
+    }
     const allGroupIndices = versionSegments
       .filter(segment => segment.type === 'autoSaveGroup')
       .map(segment => (segment as {groupIndex: number}).groupIndex);
 
     setCollapsedGroups(new Set(allGroupIndices));
-  }, [versionSegments]);
+  }, [versionSegments, alwaysShowAutoSaves]);
 
   const toggleGroupCollapsed = useCallback((groupIndex: number) => {
     setCollapsedGroups(prev => {
@@ -416,6 +442,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           restoreOnClick={restoreSelectedVersion}
           restoreLoading={versionLoading}
           restoreDisabled={disabled || versionLoading}
+          alwaysShowAutoSaves={alwaysShowAutoSaves}
         >
           {isLatest && hasEdited && !viewAsUserId && (
             <SaveVersionPanel
@@ -438,6 +465,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       hasEdited,
       projectSources,
       handleSaveVersionSuccess,
+      alwaysShowAutoSaves,
     ]
   );
 
@@ -511,7 +539,7 @@ const VersionHistoryPanel: React.FunctionComponent<
 
                 return (
                   <React.Fragment key={`group-${groupIndex}`}>
-                    {hasMultipleVersions && (
+                    {hasMultipleVersions && !alwaysShowAutoSaves && (
                       <Button
                         className={moduleStyles.collapseButton}
                         text={

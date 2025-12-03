@@ -86,6 +86,7 @@ interface MusicLabViewProps {
   channel?: Channel;
   overrideProjectManager?: ProjectManager;
   startSources: ProjectSources;
+  viewingOldVersion: boolean;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -111,6 +112,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   channel,
   overrideProjectManager,
   startSources,
+  viewingOldVersion,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
@@ -292,6 +294,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     }
   }, [dispatch, validationStateCallout]);
 
+  useEffect(() => {
+    // When the instructions sidebar collapses/expands, resize the workspace.
+    blocklyWorkspace.resizeBlockly();
+  }, [isStandaloneCollapsed, blocklyWorkspace]);
+
   const hideChaff = useCallback(
     () => blocklyWorkspace.hideChaff(),
     [blocklyWorkspace]
@@ -394,7 +401,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               styleNavigationAsBubble={true}
               documentationUrl={'/docs/ide/music'}
               sidebarOnly={!!guideMode}
-              versionHistoryProps={{startSources}}
+              versionHistoryProps={{startSources, alwaysShowAutoSaves: true}}
             />
           </div>
 
@@ -415,6 +422,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               }
               headerClassName={moduleStyles.headerWithBorder}
             >
+              {viewingOldVersion && (
+                <div
+                  id="viewingOldVersionBanner"
+                  className={moduleStyles.warningBanner}
+                >
+                  {musicI18n.viewingOldVersion()}
+                </div>
+              )}
               {isStartMode && (
                 <div
                   id="startSourcesWarningBanner"
