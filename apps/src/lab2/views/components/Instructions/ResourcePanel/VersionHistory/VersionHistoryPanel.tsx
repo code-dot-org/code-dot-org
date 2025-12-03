@@ -126,7 +126,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           setCustomLoadError('This student has not started yet.');
         } else {
           setCustomLoadError(
-            'No version history found. Have you starting your project?'
+            'No version history found. Have you started your project?'
           );
         }
         return;
