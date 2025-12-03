@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({
   const {selectedStudents} = useAppSelector(state => state.teacherSections);
 
   React.useEffect(() => {
-    if (selectedStudents.length > 0 && selectedStudent === null) {
+    if (selectedStudents.length > 0 && selectedStudent === undefined) {
       setSelectedStudentId(selectedStudents[0].id);
     }
   }, [selectedStudents, selectedStudent, setSelectedStudentId]);
