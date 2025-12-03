@@ -1,6 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import LessonSelector, {
@@ -62,30 +61,24 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <div className={styles.header}>
       <div className={styles.headerColumn}>
-        <div>
-          <Typography variant="body3" fontWeight="bold">
-            Unit
-          </Typography>
-          <UnitSelectorV2
-            filterToSelectedCourse={true}
-            className={styles.unitSelector}
-          />
-        </div>
-        <div>
-          <Typography variant="body3" fontWeight="bold">
-            Lesson
-          </Typography>
-          <LessonSelector
-            lessons={lessons || []}
-            selectedLesson={selectedLesson}
-            onLessonChange={(lessonId: number) => {
-              setSelectedLessonId(lessonId);
-            }}
-            hasUnnumberedLessons={hasUnnumberedLessons}
-            isLoading={isLessonsLoading}
-            className={styles.dropdown}
-          />
-        </div>
+        <UnitSelectorV2
+          filterToSelectedCourse={true}
+          className={styles.unitSelector}
+          isLabelVisible={true}
+          labelText="Unit"
+        />
+        <LessonSelector
+          lessons={lessons || []}
+          selectedLesson={selectedLesson}
+          onLessonChange={(lessonId: number) => {
+            setSelectedLessonId(lessonId);
+          }}
+          hasUnnumberedLessons={hasUnnumberedLessons}
+          isLoading={isLessonsLoading}
+          className={styles.dropdown}
+          isLabelVisible={true}
+          labelText="Lesson"
+        />
         <div className={styles.buttonGroup}>
           <Button
             className={styles.button}

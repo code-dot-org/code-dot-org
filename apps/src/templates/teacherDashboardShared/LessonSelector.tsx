@@ -53,6 +53,8 @@ interface LessonSelectorProps {
   isLoading?: boolean;
   unitName?: string;
   className?: string;
+  isLabelVisible?: boolean;
+  labelText?: string;
 }
 
 const LessonSelector: React.FC<LessonSelectorProps> = ({
@@ -63,6 +65,8 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
   isLoading = false,
   unitName,
   className,
+  isLabelVisible = false,
+  labelText = i18n.chooseLesson(),
 }) => {
   const onDropdownChange = (value: string) => {
     onLessonChange(Number(value));
@@ -104,8 +108,8 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
 
   return (
     <SimpleDropdown
-      labelText={i18n.chooseLesson()}
-      isLabelVisible={false}
+      labelText={labelText}
+      isLabelVisible={isLabelVisible}
       onChange={event => onDropdownChange(event.target.value)}
       items={lessonOptions}
       color="gray"

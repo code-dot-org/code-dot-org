@@ -43,6 +43,8 @@ describe('LessonSelector', () => {
     selectedLesson: mockLessons[0],
     onLessonChange: jest.fn(),
     hasUnnumberedLessons: false,
+    isLabelVisible: true,
+    labelText: 'Choose a lesson',
   };
 
   beforeEach(() => {
@@ -122,5 +124,42 @@ describe('LessonSelector', () => {
 
     screen.getByRole('option', {name: 'First lesson'});
     screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
+  });
+
+  it('displays label when isLabelVisible is true', () => {
+    render(
+      <LessonSelector
+        {...defaultProps}
+        isLabelVisible={true}
+        labelText="Select lesson"
+      />
+    );
+
+    screen.getByText('Select lesson');
+  });
+
+  it('hides label when isLabelVisible is false', () => {
+    render(
+      <LessonSelector
+        {...defaultProps}
+        isLabelVisible={false}
+        labelText="Select lesson"
+      />
+    );
+
+    expect(screen.queryByText('Select lesson')).toBeNull();
+  });
+
+  it('displays custom label text', () => {
+    const customLabelText = 'Pick your lesson';
+    render(
+      <LessonSelector
+        {...defaultProps}
+        isLabelVisible={true}
+        labelText={customLabelText}
+      />
+    );
+
+    screen.getByText(customLabelText);
   });
 });
