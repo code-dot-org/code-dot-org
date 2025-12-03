@@ -20,6 +20,9 @@ type PopUpButtonProps = {
 
 const TOP_PADDING = 5;
 
+// Track which dropdown is currently open
+let currentOpenDropdown: (() => void) | null = null;
+
 export const PopUpButton = ({
   children,
   iconName,
@@ -43,6 +46,10 @@ export const PopUpButton = ({
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
     document.removeEventListener('click', setIsOpenFalse);
+    // Clear the global dropdown reference when closing
+    if (currentOpenDropdown === setIsOpenFalse) {
+      currentOpenDropdown = null;
+    }
     // Because this operates on a delay, we also have to update the styles on a delay
     setTimeout(() => {
       setComputedButtonStyles(className);
@@ -61,6 +68,14 @@ export const PopUpButton = ({
       setIsOpen(oldIsOpen => {
         const newIsOpen = !oldIsOpen;
         if (newIsOpen) {
+          // Close any other open dropdowns before opening this one
+          // Use setTimeout to avoid updating another component during render
+          if (currentOpenDropdown && currentOpenDropdown !== setIsOpenFalse) {
+            const closeOther = currentOpenDropdown;
+            setTimeout(() => closeOther(), 0);
+          }
+          // Track this dropdown as the currently open one
+          currentOpenDropdown = setIsOpenFalse;
           // React 17 changed the location where clickhandlers are added, so we want to defer adding the close
           // handler until the next tick of the event loop, otherwise it'll fire immediately and re-close the pop up.'
           setTimeout(
@@ -69,6 +84,10 @@ export const PopUpButton = ({
           );
         } else {
           document.removeEventListener('click', setIsOpenFalse);
+          // Clear the global dropdown reference when closing
+          if (currentOpenDropdown === setIsOpenFalse) {
+            currentOpenDropdown = null;
+          }
         }
         return newIsOpen;
       });
