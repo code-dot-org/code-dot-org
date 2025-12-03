@@ -240,9 +240,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <LessonSelector
             lessons={lessons}
             selectedLesson={selectedLesson}
-            onLessonChange={(lesson: Lesson | null) =>
-              setSelectedLesson(lesson)
-            }
+            onLessonChange={(lessonId: number) => {
+              const lesson = _.find(lessons, {id: lessonId}) || null;
+              setSelectedLesson(lesson);
+            }}
             hasUnnumberedLessons={hasUnnumberedLessons}
             isLoading={isLoading || isLoadingCoursesWithProgress || needsReload}
             unitName={lessonMaterials?.unitName}

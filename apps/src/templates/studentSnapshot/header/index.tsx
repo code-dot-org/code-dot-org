@@ -3,21 +3,34 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
-import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
+import LessonSelector, {
+  LessonOption,
+} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
+import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 
 import styles from './header.module.scss';
 
-const Header: React.FC = () => {
-  const [selectedLesson, setSelectedLesson] = useState<string>('');
+interface HeaderProps {
+  lessons: LessonOption[];
+  selectedLessonId: number | null;
+  setSelectedLessonId: (lessonId: number | null) => void;
+  isLessonsLoading: boolean;
+  hasUnnumberedLessons?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({
+  lessons,
+  selectedLessonId,
+  setSelectedLessonId,
+  isLessonsLoading,
+  hasUnnumberedLessons = false,
+}) => {
   const [selectedStudent, setSelectedStudent] = useState<string>('');
   const [selectedShowStudentsBy, setSelectedShowStudentsBy] =
     useState<string>('');
 
-  const lessonOptions = [
-    {value: 'lesson1', text: 'Lesson 1'},
-    {value: 'lesson2', text: 'Lesson 2'},
-    {value: 'lesson3', text: 'Lesson 3'},
-  ];
+  const selectedLesson =
+    lessons?.find(lesson => lesson.id === selectedLessonId) || null;
 
   const studentOptions = [
     {value: 'student1', text: 'Student 1'},
@@ -58,15 +71,21 @@ const Header: React.FC = () => {
             className={styles.unitSelector}
           />
         </div>
-        <SimpleDropdown
-          labelText="Lesson"
-          name="lesson"
-          items={lessonOptions}
-          selectedValue={selectedLesson}
-          onChange={event => setSelectedLesson(event.target.value)}
-          placeholder="Select a lesson"
-          className={styles.dropdown}
-        />
+        <div>
+          <Typography variant="body3" fontWeight="bold">
+            Lesson
+          </Typography>
+          <LessonSelector
+            lessons={lessons || []}
+            selectedLesson={selectedLesson}
+            onLessonChange={(lessonId: number) => {
+              setSelectedLessonId(lessonId);
+            }}
+            hasUnnumberedLessons={hasUnnumberedLessons}
+            isLoading={isLessonsLoading}
+            className={styles.dropdown}
+          />
+        </div>
         <div className={styles.buttonGroup}>
           <Button
             className={styles.button}

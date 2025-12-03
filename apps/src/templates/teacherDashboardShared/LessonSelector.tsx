@@ -4,7 +4,6 @@ import React, {useMemo, useCallback, useEffect} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {Lesson} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialTypes';
 import i18n from '@cdo/locale';
 
 import styles from './lessonSelector.module.scss';
@@ -38,10 +37,18 @@ const skeletonDropdown = () => (
   />
 );
 
+export interface LessonOption {
+  id: number;
+  name: string;
+  hasLessonPlan: boolean;
+  isLockable: boolean;
+  position: number;
+}
+
 interface LessonSelectorProps {
-  lessons: Lesson[];
-  selectedLesson: Lesson | null;
-  onLessonChange: (lesson: Lesson | null) => void;
+  lessons: LessonOption[];
+  selectedLesson: LessonOption | null;
+  onLessonChange: (lessonId: number) => void;
   hasUnnumberedLessons: boolean;
   isLoading?: boolean;
   unitName?: string;
@@ -57,13 +64,8 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
   unitName,
   className,
 }) => {
-  const getLessonFromId = (lessonId: number): Lesson | null => {
-    return lessons.find(lesson => lesson.id === lessonId) || null;
-  };
-
   const onDropdownChange = (value: string) => {
-    const lesson = getLessonFromId(Number(value));
-    onLessonChange(lesson);
+    onLessonChange(Number(value));
 
     analyticsReporter.sendEvent(EVENTS.LESSON_MATERIALS_LESSON_CHANGE, {
       unitName,
@@ -72,7 +74,7 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
   };
 
   const generateLessonDropdownOptions = useCallback(() => {
-    return lessons.map((lesson: Lesson) => {
+    return lessons.map((lesson: LessonOption) => {
       const displayName = createDisplayName(
         lesson.name,
         lesson.position,
@@ -92,7 +94,7 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
   // Auto-select first lesson when lessons change
   useEffect(() => {
     if (lessons.length > 0 && !selectedLesson) {
-      onLessonChange(lessons[0]);
+      onLessonChange(lessons[0].id);
     }
   }, [lessons, selectedLesson, onLessonChange]);
 
