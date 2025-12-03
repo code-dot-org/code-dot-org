@@ -2,6 +2,7 @@ require 'test_helper'
 
 class StudentSnapshotsControllerTest < ActionController::TestCase
   setup do
+    sign_in(create(:teacher))
     @unit = create(:unit, name: 'test-unit')
     @lesson_group = create(:lesson_group, script: @unit)
     @lesson1 = create(:lesson,
