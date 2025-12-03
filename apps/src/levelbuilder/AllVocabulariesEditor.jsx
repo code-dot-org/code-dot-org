@@ -3,7 +3,11 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 
-import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
+// import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
+
+import Dialog from '@code-dot-org/component-library/dialog';
+import {buttonColors} from '@code-dot-org/component-library/button';
+
 import {
   addVocabulary,
   updateVocabulary,
@@ -118,6 +122,10 @@ class AllVocabulariesEditor extends Component {
   };
 
   handleDeleteVocabularyConfirm = () => {
+    console.log(
+      'handleDeleteVocabularyConfirm called',
+      this.state.vocabularyForDeletion
+    );
     this.props.removeVocabulary(this.state.vocabularyForDeletion.key);
     this.handleDeleteVocabularyDialogClose();
   };
@@ -158,14 +166,26 @@ class AllVocabulariesEditor extends Component {
         )}
         {this.state.vocabularyForDeletion && (
           <Dialog
-            body={`Are you sure you want to permanently delete vocabulary "${this.state.vocabularyForDeletion.word}"?`}
-            cancelText="Cancel"
-            confirmText="Delete"
-            confirmType="danger"
-            isOpen={true}
-            handleClose={this.handleDeleteVocabularyDialogClose}
-            onCancel={this.handleDeleteVocabularyDialogClose}
-            onConfirm={this.handleDeleteVocabularyConfirm}
+            title="Delete Vocabulary"
+            description={`Are you sure you want to permanently delete vocabulary "${this.state.vocabularyForDeletion.word}"?`}
+            onClose={() => this.handleDeleteVocabularyDialogClose()}
+            primaryButtonProps={{
+              text: `Delete`,
+              size: 's',
+              onClick: () => {
+                this.handleDeleteVocabularyConfirm();
+              },
+              color: buttonColors.destructive,
+            }}
+            secondaryButtonProps={{
+              size: 's',
+              text: 'Cancel',
+              type: 'secondary',
+              color: buttonColors.gray,
+              onClick: () => {
+                this.handleDeleteVocabularyDialogClose();
+              },
+            }}
           />
         )}
 
