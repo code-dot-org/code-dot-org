@@ -24,6 +24,8 @@ frontend_policies ||= []
 
 # Array of properties to append to the frontend AutoScalingGroup resource.
 frontend_properties ||= {}
+frontend_subnets ||= raise('frontend_subnets is required')
+frontend_availability_zones ||= raise('frontend_availability_zones is required')
 
 image_id ||= {Ref: 'ImageId'}.to_json
 ssh_key_name ||= {Ref: 'SSHKeyName'}.to_json
@@ -68,7 +70,7 @@ frontend_device_name ||= '/dev/sda1'
       InstanceType: <%=instance_type%>
       IamInstanceProfile: !Ref FrontendInstanceProfile
       SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
-      SubnetId: <%=subnets.first.to_json%>
+      SubnetId: <%=frontend_subnets.first.to_json%>
       KeyName: <%=ssh_key_name%>
       BlockDeviceMappings:
         - DeviceName: <%=frontend_device_name%>
@@ -101,7 +103,7 @@ frontend_device_name ||= '/dev/sda1'
     InstanceId: {Ref: "WebServerAMI" } %>
   FastSnapshotRestore: <%= lambda_fn 'FastSnapshotRestore',
     ImageIds: [{Ref: "AMI#{commit_hash}" }],
-    AvailabilityZones: AVAILABILITY_ZONES
+    AvailabilityZones: frontend_availability_zones
   %>
   ASGCount: <%= lambda_fn 'CountASG',
     Default: {
@@ -133,7 +135,7 @@ frontend_device_name ||= '/dev/sda1'
         WaitOnResourceSignals: true
     Properties:
       AutoScalingGroupName: !Sub "Frontends-${AWS::StackName}"
-      VPCZoneIdentifier: <%= subnets.to_json %>
+      VPCZoneIdentifier: <%= frontend_subnets.to_json %>
       LaunchTemplate:
         LaunchTemplateId: !Ref FrontendLaunchTemplate
         Version: !GetAtt FrontendLaunchTemplate.LatestVersionNumber
