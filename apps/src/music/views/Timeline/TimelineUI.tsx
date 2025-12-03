@@ -243,8 +243,15 @@ const Timeline: React.FunctionComponent<TimelineProps> = props => {
       return;
     }
     const resizeObserver = new ResizeObserver(() => {
+      // Don't use the entire height of the bar line in event height calculations.
+      // Currently, assuming it's 4 pixels shorter is sufficient in subsequent
+      // calculations to avoid events from being cut off.
+      const barlineHeightCompensation = 4;
+
       const firstBarLineHeight = firstBarLineRef.current?.offsetHeight;
-      setAvailableHeight(firstBarLineHeight ? firstBarLineHeight - 2 : 0);
+      setAvailableHeight(
+        firstBarLineHeight ? firstBarLineHeight - barlineHeightCompensation : 0
+      );
     });
     resizeObserver.observe(firstBarLineRef?.current);
     return () => {
