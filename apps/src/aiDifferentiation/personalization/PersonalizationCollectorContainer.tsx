@@ -144,7 +144,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
 
     const isFinalStep = questionsNumber === PERSONALIZATION_PROMPTS.length - 1;
 
-    const delayMs = isFinalStep ? 11500 : 5000;
+    const delayMs = isFinalStep ? 11500 : 6000;
 
     const timeoutId = window.setTimeout(() => {
       onCarouselPress(NEXT);
