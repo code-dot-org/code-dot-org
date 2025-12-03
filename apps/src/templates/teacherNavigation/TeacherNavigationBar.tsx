@@ -124,7 +124,7 @@ const TeacherNavigationBar: React.FC<{
   const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
     showAiChatSettings
       ? [...defaultClassroomContentKeys, 'aiChatSettings']
-      : [...defaultClassroomContentKeys];
+      : defaultClassroomContentKeys;
 
   const teacherNavigationBarContent = [
     {
