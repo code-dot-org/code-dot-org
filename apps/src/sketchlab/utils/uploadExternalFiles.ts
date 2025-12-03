@@ -45,8 +45,6 @@ export const uploadExternalFiles = async (
     const fileUploadPromises = newFileIds.map(async fileId => {
       filesBeingUploadedRef.current.add(fileId);
 
-      // TO DO: update to support starter assets.
-      // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
       const newFile = excalidrawFiles[fileId];
       const extension = MIME_TO_EXT[newFile.mimeType];
       const filenameWithExtension = `${fileId}.${extension}`;
