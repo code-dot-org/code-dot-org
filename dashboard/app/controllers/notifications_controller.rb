@@ -16,41 +16,26 @@ class NotificationsController < ApplicationController
 
   def mark_as_read
     external_notification_ids = (params[:external_notification_ids] || []).compact_blank
-    teacher_notification_ids = (params[:teacher_notification_ids] || []).compact_blank
 
-    if external_notification_ids.empty? && teacher_notification_ids.empty?
+    if external_notification_ids.empty?
       render json: {status: 'error', message: 'No notification IDs provided'}, status: :bad_request
       return
     end
 
-    total_marked = 0
+    valid_external_ids = filter_to_existing_ids(external_notification_ids, LOCALE)
+    found_external_notifications = current_user.external_notifications.where(external_id: valid_external_ids)
 
-    # Handle external notifications (existing logic)
-    if external_notification_ids.any?
-      valid_external_ids = filter_to_existing_ids(external_notification_ids, LOCALE)
-      found_external_notifications = current_user.external_notifications.where(external_id: valid_external_ids)
-
-      found_external_notifications.where(read_at: nil).update_all(read_at: Time.current)
-      found_ids = found_external_notifications.pluck(:external_id)
-      notifications_to_create = valid_external_ids - found_ids
-      notifications_to_create.each do |external_id|
-        ExternalNotification.create!(user_id: current_user.id, external_id: external_id, read_at: Time.current)
-      end
-
-      total_marked += found_ids.count + notifications_to_create.count
-    end
-
-    # Handle teacher notifications (new logic)
-    if teacher_notification_ids.any?
-      teacher_notifications = current_user.teacher_notifications.where(id: teacher_notification_ids, read_at: nil)
-      marked_teacher_count = teacher_notifications.update_all(read_at: Time.current)
-      total_marked += marked_teacher_count
+    found_external_notifications.where(read_at: nil).update_all(read_at: Time.current)
+    found_ids = found_external_notifications.pluck(:external_id)
+    notifications_to_create = valid_external_ids - found_ids
+    notifications_to_create.each do |external_id|
+      ExternalNotification.create!(user_id: current_user.id, external_id: external_id, read_at: Time.current)
     end
 
     response_data = {
       status: 'success',
-      message: "#{total_marked} notification(s) marked as read",
-      marked_count: total_marked,
+      message: "#{found_ids.count + notifications_to_create.count} notification(s) marked as read",
+      marked_count: found_ids.count + notifications_to_create.count,
     }
 
     render json: response_data, status: :ok
