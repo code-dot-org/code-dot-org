@@ -68,6 +68,7 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   useEffect(() => {
     if (!rubricId) {
       setError('No rubric ID provided');
+      setIsLoading(false);
       return;
     }
 
@@ -136,7 +137,7 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   }
 
   // No rubric data
-  if (!rubric || !rubric.learningGoals) {
+  if (!rubric || !rubric.learningGoals || rubric.learningGoals.length === 0) {
     return (
       <WidgetTemplate
         widgetName="Rubric"
