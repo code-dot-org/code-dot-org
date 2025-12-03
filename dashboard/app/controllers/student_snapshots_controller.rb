@@ -1,4 +1,6 @@
 class StudentSnapshotsController < ApplicationController
+  before_action :authenticate_user!
+
   layout false
 
   # GET /student_snapshots/lessons
