@@ -1,4 +1,4 @@
-import {validateFileName} from '@codebridge/utils';
+import {validateFileName, getFileNameWithNumberSuffix} from '@codebridge/utils';
 
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
@@ -234,6 +234,9 @@ export const formatAcceptRejectResponse = (
   if (response.explanation) {
     formattedExplanation += `**Explanation**\n\n${response.explanation}\n\n`;
   }
+  if (response.nextSteps) {
+    formattedExplanation += `**Next Steps**\n\n${response.nextSteps}\n\n`;
+  }
   if (response.questions) {
     formattedExplanation += `**Questions**\n\n${response.questions}\n\n`;
   }
@@ -297,26 +300,27 @@ export const getMergedAiTutorCodeWithSource = (
           validationFile: undefined,
         });
         if (validateFileNameError) {
-          // If the file name is invalid (e.g. duplicate), try placing in root folder if foldierId is not already the root folder.
+          // TODO: Log error via analytics.
+          // If the file name is invalid (e.g. duplicate), place in root folder, if not already in root folder.
+          // Then validate name and if still invalid, add numeric suffix to the file name until valid.
           if (aiFile.folderId !== DEFAULT_FOLDER_ID) {
             aiFile.folderId = DEFAULT_FOLDER_ID;
-            const secondValidateFileNameError = validateFileName({
+          } else {
+            aiFile.name = getFileNameWithNumberSuffix(aiFile.name);
+          }
+          let validateFileNameError;
+          do {
+            validateFileNameError = validateFileName({
               fileName: aiFile.name,
               folderId: aiFile.folderId,
               projectFiles: updatedSource.files,
               isStartMode: false,
               validationFile: undefined,
             });
-            if (secondValidateFileNameError) {
-              // If the 2nd attempt for the file name is invalid (e.g. duplicate), skip the AI code file update.
-              // TODO: Log error via analyticss.
-              return;
+            if (validateFileNameError) {
+              aiFile.name = getFileNameWithNumberSuffix(aiFile.name);
             }
-          } else {
-            // If the 1st attempt for the file name is invalid (e.g. duplicate), skip the AI code file update.
-            // TODO: Log error via analyticss.
-            return;
-          }
+          } while (validateFileNameError);
         }
       }
     }
@@ -336,5 +340,30 @@ export const getMergedAiTutorCodeWithSource = (
 
   // Sort AI-updated files by name alphabetically.
   aiTutorVersionFiles.sort((a, b) => a.name.localeCompare(b.name));
+
+  // Update openFiles to prioritize AI files: active file first, then other AI files, then existing.
+  if (aiTutorVersionFiles.length > 0) {
+    const firstHtmlFile = aiTutorVersionFiles.find(f => f.language === 'html');
+    const fileToActivate = firstHtmlFile || aiTutorVersionFiles[0];
+
+    updatedSource.files[fileToActivate.id] = {
+      ...updatedSource.files[fileToActivate.id],
+      active: true,
+    };
+
+    const aiFileIds = aiTutorVersionFiles.map(f => f.id);
+    const aiFileIdSet = new Set(aiFileIds);
+    const existingOpenFilesFiltered = (updatedSource.openFiles || []).filter(
+      id => !aiFileIdSet.has(id)
+    );
+
+    const otherAiFileIds = aiFileIds.filter(id => id !== fileToActivate.id);
+    updatedSource.openFiles = [
+      fileToActivate.id,
+      ...otherAiFileIds,
+      ...existingOpenFilesFiltered,
+    ];
+  }
+
   return updatedSource;
 };
