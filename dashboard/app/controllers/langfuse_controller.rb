@@ -9,9 +9,7 @@ class LangfuseController < ApplicationController
     return render(status: response[:status], json: response[:json])
   end
 
-  private
-
-  def prompt_params
+  private def prompt_params
     params.permit(:name)
   end
 end
