@@ -55,7 +55,7 @@ export const uploadExternalFiles = async (
         ? `/level_starter_assets/${encodeURIComponent(
             levelName
           )}/uuid/${filenameWithExtension}`
-        : `/v3/assets/${channelId}/${fileId}.${extension}`;
+        : `/v3/assets/${channelId}/${filenameWithExtension}`;
       const newExternalFile: SketchlabProjectFile = {
         id: fileId,
       };
