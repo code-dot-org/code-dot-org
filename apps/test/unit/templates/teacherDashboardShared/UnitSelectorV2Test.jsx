@@ -2,7 +2,7 @@ import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
-import {UnconnectedUnitSelectorV2} from '@cdo/apps/templates/UnitSelectorV2';
+import {UnconnectedUnitSelectorV2} from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 
 jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
 jest.mock('@cdo/apps/redux/unitSelectionRedux', () => ({
