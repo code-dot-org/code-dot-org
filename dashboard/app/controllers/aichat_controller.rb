@@ -13,13 +13,13 @@ class AichatController < ApplicationController
     flagged_fields = []
 
     if params[:systemPrompt].present?
-      toxicity = AichatSafetyHelper.find_toxicity(params[:systemPrompt], level_id)
+      toxicity = AichatSafetyHelper.find_toxicity(params[:systemPrompt], level_id, 'User')
       flagged_fields << {field: 'systemPrompt', toxicity: toxicity} if toxicity.present?
     end
 
     if params[:retrievalContexts].present?
       retrieval_joined = params[:retrievalContexts].join(' ')
-      toxicity = AichatSafetyHelper.find_toxicity(retrieval_joined, level_id)
+      toxicity = AichatSafetyHelper.find_toxicity(retrieval_joined, level_id, 'User')
       flagged_fields << {field: 'retrievalContexts', toxicity: toxicity} if toxicity.present?
     end
 
