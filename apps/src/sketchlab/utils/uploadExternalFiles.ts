@@ -1,4 +1,8 @@
 import {
+  getIsStartMode,
+  getAppOptionsEditingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
+import {
   SketchlabProjectFile,
   SketchlabExternalFiles,
   ExcalidrawFilesWithOptionalData,
@@ -27,7 +31,8 @@ export const uploadExternalFiles = async (
   savedFiles: SketchlabExternalFiles,
   excalidrawFiles: ExcalidrawFilesWithOptionalData,
   filesBeingUploadedRef: React.MutableRefObject<Set<string>>,
-  channelId: string
+  channelId: string,
+  levelName: string
 ) => {
   const savedFileIds = Object.keys(savedFiles || {});
   const excalidrawFileIds = Object.keys(excalidrawFiles || {});
@@ -44,7 +49,15 @@ export const uploadExternalFiles = async (
       // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
       const newFile = excalidrawFiles[fileId];
       const extension = MIME_TO_EXT[newFile.mimeType];
-      const externalUrl = `/v3/assets/${channelId}/${fileId}.${extension}`;
+      const filenameWithExtension = `${fileId}.${extension}`;
+      const isStarterAssetOrExemplar = !!(
+        getIsStartMode() || getAppOptionsEditingExemplar()
+      );
+      const externalUrl = isStarterAssetOrExemplar
+        ? `/level_starter_assets/${encodeURIComponent(
+            levelName
+          )}/uuid/${filenameWithExtension}`
+        : `/v3/assets/${channelId}/${fileId}.${extension}`;
       const newExternalFile: SketchlabProjectFile = {
         id: fileId,
       };
@@ -53,7 +66,9 @@ export const uploadExternalFiles = async (
         await uploadBase64ToUrl(
           newFile.dataURL as string,
           externalUrl,
-          newFile.mimeType
+          newFile.mimeType,
+          isStarterAssetOrExemplar,
+          filenameWithExtension
         );
         newExternalFile.url = externalUrl;
       } catch {

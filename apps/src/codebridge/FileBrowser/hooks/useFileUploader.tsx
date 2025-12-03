@@ -51,7 +51,8 @@ export const useFileUploader = (
         const bodyData = new FormData();
         bodyData.append('files[]', file);
 
-        const url = `/level_starter_assets/${name}/uuid/${uuid}.${fileType}`;
+        const encodedLevelName = encodeURIComponent(name);
+        const url = `/level_starter_assets/${encodedLevelName}/uuid/${uuid}.${fileType}`;
         await HttpClient.post(url, bodyData, true);
         return url;
       } else {

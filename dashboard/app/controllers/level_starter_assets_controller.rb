@@ -54,6 +54,7 @@ class LevelStarterAssetsController < ApplicationController
 
   # POST /level_starter_assets/:level_name/uuid/:uuid
   def upload_by_uuid
+    puts 'in controller'
     # upload_data sets an appropriate header and returns nil in error cases.
     upload_data = validate_upload
     return unless upload_data
