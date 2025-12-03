@@ -460,7 +460,7 @@ const EVENTS = {
   // Import project
   APPLAB_IMPORT_PROJECT: 'User Imports Another App Lab Project',
 
-  // Curriculumm Recommender
+  // Curriculum Recommender
   RECOMMENDED_CATALOG_CURRICULUM_SHOWN: 'Recommended Catalog Curriculum Shown',
   RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
     'Recommended Similar Curriculum Clicked',
