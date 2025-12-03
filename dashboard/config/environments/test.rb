@@ -33,14 +33,6 @@ Dashboard::Application.configure do
     config.assets.version = '1.0'
   end
 
-  # Lazy load i18n backend in test env, except when running puma as web server
-  # for UI tests.
-  unless CDO.running_web_application?
-    # Avoid loading all i18n files up front, which can significantly slow down initialization.
-    # Instead, it only loads i18n files that belong to the current locale.
-    config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
-  end
-
   # In CI environments (ie, Drone), stub relevant third-party services
   # (currently SageMaker, our safety check via OpenAI, and currently unused AWS Comprehend safety check)
   # so we can run UI tests for our AI Chat (ie, Generative AI) lab.
