@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2025_11_13_202435) do
-=======
-ActiveRecord::Schema.define(version: 2025_12_01_160346) do
->>>>>>> ceara/AITT-1183-crud-operations-for-artifacts
+ActiveRecord::Schema.define(version: 2025_12_03_202435) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
