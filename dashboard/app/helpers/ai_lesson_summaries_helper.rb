@@ -21,7 +21,7 @@ module AiLessonSummariesHelper
       evaluation =  {status: response.code, json: response_body}
       return {status: evaluation[:status], json: evaluation[:json]}
     else
-      raise StandardError.new("Recieved status code #{response.code} when processing AI lesson summary")
+      raise StandardError.new("Recieved status code #{response.code} when processing AI lesson summary: #{response.body}")
     end
   end
 
@@ -60,7 +60,6 @@ module AiLessonSummariesHelper
 
       data = {
         model: model,
-        max_output_tokens: 2500,
         messages: [{
           role: "system",
           content: prompt
