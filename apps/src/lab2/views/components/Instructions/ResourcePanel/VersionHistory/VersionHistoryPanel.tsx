@@ -53,7 +53,7 @@ type VersionSegment =
       groupIndex: number;
     };
 
-// Regex to match space before AM/PM at end of string
+// The Regex here removes the space before AM/PM to match mocks and make more compact.
 const AM_PM_SPACE_REGEX = /\s(AM|PM)$/i;
 function stripSpaceBeforeAmPm(value: string): string {
   return value.replace(AM_PM_SPACE_REGEX, '$1');
