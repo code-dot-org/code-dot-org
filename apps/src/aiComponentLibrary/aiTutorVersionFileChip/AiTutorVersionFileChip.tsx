@@ -1,9 +1,12 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {getFolderPath} from '@codebridge/utils';
 import classNames from 'classnames';
 import React from 'react';
 
-import {ProjectFile} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {setAiFilePathToPreview} from '@cdo/apps/weblab2/weblab2Redux';
 
 import moduleStyles from './ai-tutor-version-file-chip.module.scss';
 
@@ -28,11 +31,20 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
 }) => {
   const isNewFile = file.isAiTutorVersionCreated;
   const isUpdatedFile = file.isAiTutorVersionUpdated;
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source as MultiFileSource
+  );
   const isHtmlFile =
     file.language === 'html' || file.name.toLowerCase().endsWith('.html');
-
+  const dispatch = useAppDispatch();
   const handlePreviewClick = () => {
     console.log('Preview clicked for file:', file.name);
+    const folderPath = getFolderPath(file.folderId, source.folders).substring(
+      1
+    );
+    const filePath =
+      folderPath === '' ? file.name : folderPath + '/' + file.name;
+    dispatch(setAiFilePathToPreview(filePath));
   };
 
   return (
