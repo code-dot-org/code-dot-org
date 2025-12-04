@@ -87,7 +87,9 @@ export const useAiTutorResponseSchemaSettings = (
               folderPath === ''
                 ? firstHtmlFile.name
                 : folderPath + '/' + firstHtmlFile.name;
-            dispatch(setAiFilePathToPreview(filePath));
+            dispatch(
+              setAiFilePathToPreview({path: filePath, timestamp: Date.now()})
+            );
           }
           return formattedResponse.explanation;
         },

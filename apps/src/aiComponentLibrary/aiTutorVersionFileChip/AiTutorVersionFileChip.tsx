@@ -44,7 +44,7 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
     );
     const filePath =
       folderPath === '' ? file.name : folderPath + '/' + file.name;
-    dispatch(setAiFilePathToPreview(filePath));
+    dispatch(setAiFilePathToPreview({path: filePath, timestamp: Date.now()}));
   };
 
   return (
