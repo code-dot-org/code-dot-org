@@ -70,6 +70,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const [listLoaded, setListLoaded] = useState(false);
   const [listLoading, setListLoading] = useState(false);
   const [listLoadError, setListLoadError] = useState(false);
+  const [customLoadError, setCustomLoadError] = useState<string | null>(null);
   const [versionSaved, setVersionSaved] = useState(false);
   const [versionLoadError, setVersionLoadError] = useState(false);
   const [versionLoading, setVersionLoading] = useState(false);
@@ -120,6 +121,14 @@ const VersionHistoryPanel: React.FunctionComponent<
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       if (!projectManager) {
         setListLoadError(true);
+        if (viewAsUserId) {
+          // If a teacher is viewing a student who has not started, we will have no project manager.
+          setCustomLoadError('This student has not started yet.');
+        } else {
+          setCustomLoadError(
+            'No version history found. Have you started your project?'
+          );
+        }
         return;
       }
       setListLoading(true);
@@ -133,13 +142,16 @@ const VersionHistoryPanel: React.FunctionComponent<
             setSelectedVersion('');
             setFocusSelectedVersion(true);
           }
+          setListLoadError(false);
+          setCustomLoadError(null);
         })
         .catch(() => {
           setListLoadError(true);
+          setCustomLoadError(null);
           setListLoading(false);
         });
     },
-    [setSelectedVersion]
+    [setSelectedVersion, viewAsUserId]
   );
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -486,7 +498,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         <Alert
           className={moduleStyles.message}
           type="danger"
-          text={lab2I18n.versionHistoryLoadFailure()}
+          text={customLoadError || lab2I18n.versionHistoryLoadFailure()}
           size="xs"
         />
       )}
