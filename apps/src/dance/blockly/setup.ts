@@ -1,6 +1,9 @@
 import * as blockUtils from '@cdo/apps/block_utils';
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import danceBlocks from '@cdo/apps/dance/blockly/blocks';
+import localization from '@cdo/apps/localization';
+
+import {localizeBlockDefinition, updateLocale} from '../../blockly/utils';
 
 import blockDefinitions from './blockDefinitions';
 
@@ -15,15 +18,25 @@ export function setupBlocklyEnvironment() {
   delete Blockly.Blocks.procedures_ifreturn;
   Blockly.setInfiniteLoopTrap();
 
-  for (const {definition, generator, extendedOptions} of blockDefinitions) {
-    Blockly.Blocks[definition.type] = {
-      init: function () {
-        this.jsonInit(definition);
-      },
-      ...extendedOptions,
-    };
-    Blockly.getGenerator().forBlock[definition.type] = generator;
-  }
+  const initializeBlocks = () => {
+    for (const {definition, generator, extendedOptions} of blockDefinitions) {
+      const localized = localizeBlockDefinition(definition);
+      Blockly.Blocks[definition.type] = {
+        init: function () {
+          this.jsonInit(localized);
+        },
+        ...extendedOptions,
+      };
+      Blockly.getGenerator().forBlock[definition.type] = generator;
+    }
+  };
+
+  // Ensure that Blockly localizes when the locale changes
+  localization.on('change', info => {
+    initializeBlocks();
+    updateLocale(localization.rtl);
+  });
+  initializeBlocks();
 
   isBlocklyEnvironmentSetup = true;
 }
