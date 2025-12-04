@@ -1,15 +1,19 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import classNames from 'classnames';
+import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import {filterSourceForPreview} from '../utils/filterSourceForPreview';
 
 import {
   IframeMessageType,
@@ -49,13 +53,17 @@ export const HTMLPreview: React.FC = () => {
   const [navigationHistoryIndex, setNavigationHistoryIndex] = useState(-1);
 
   const source = useAppSelector(
-    state => state.lab2Project.projectSources?.source
+    state =>
+      state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
+
   const aiFilePathToPreview = useAppSelector(
     state => state.weblab2.aiFilePathToPreview
   );
   const [isIframeLoaded, setIsIframeLoaded] = useState(false);
-  const [debouncedSource, setDebouncedSource] = useState(source);
+  const [debouncedSource, setDebouncedSource] = useState(
+    filterSourceForPreview(source)
+  );
   const sourceLevelId = useRef<number | undefined>(undefined);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
   const [inputValue, setInputValue] = useState<string>(DEFAULT_START_HTML_FILE);
@@ -236,7 +244,7 @@ export const HTMLPreview: React.FC = () => {
     }
     if (sourceLevelId.current !== levelProperties.id) {
       // If we have a new level id, update the source immediately.
-      setDebouncedSource(source);
+      setDebouncedSource(filterSourceForPreview(source));
       sourceLevelId.current = levelProperties.id;
       setCurrentFile(DEFAULT_START_HTML_FILE);
       setInputValue(DEFAULT_START_HTML_FILE);
@@ -245,7 +253,14 @@ export const HTMLPreview: React.FC = () => {
     } else {
       // Set a timeout to send the debounced value after 500ms
       const debouncedSourceSetter = setTimeout(() => {
-        setDebouncedSource(source);
+        // Only update the source if the filtered source has changed.
+        setDebouncedSource(previousSource => {
+          const newFilteredSource = filterSourceForPreview(source);
+          if (!isEqual(previousSource, newFilteredSource)) {
+            return newFilteredSource;
+          }
+          return previousSource;
+        });
       }, SOURCE_CHANGE_DELAY_MS);
 
       // Cleanup the timeout if source or level changes before 500ms has elapsed.

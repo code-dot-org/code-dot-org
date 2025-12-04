@@ -1319,6 +1319,8 @@ Dashboard::Application.routes.draw do
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
+    get '/langfuse/get_prompt', to: 'langfuse#get_prompt'
+
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 
@@ -1340,6 +1342,11 @@ Dashboard::Application.routes.draw do
         post :chat_completion
       end
     end
+
+    resources :aidiff_artifacts, only: [:index]
+
+    resources :aidiff_exit_tickets, only: [:index, :update, :create]
+    resources :aidiff_lesson_hooks, only: [:index, :update, :create]
 
     resources :aidiff_messages, only: [] do
       member do

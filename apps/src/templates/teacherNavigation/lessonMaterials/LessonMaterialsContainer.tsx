@@ -29,12 +29,12 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 
-import UnitSelectorV2 from '../../UnitSelectorV2';
+import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
-import {AIF_UNITS} from './LessonSummaryConstants';
+import {AIF_UNIT_IDS} from './LessonSummaryConstants';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
@@ -121,20 +121,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.teacherSections.needsReload
   );
 
-  const showAITALessonSummary = useAppSelector(
-    state => state.currentUser.showAITALessonSummary
-  );
-
-  const unitName = useAppSelector(
-    state => state.teacherSections.selectedSectionUnitName
-  );
-
-  // This checks to see if the AI lesson summaries experiment or DCDO key are set
-  // or if the section has AIF assigned in order to enable AI Lesson Summaries
-  const canShowLessonSummaries =
-    (showAITALessonSummary || AIF_UNITS.includes(unitName)) &&
-    aiTALessonSummaryInfo;
-
   const hasCompletedPersonalizationQuiz = useAppSelector(
     state => state.currentUser.hasCompletedPersonalizationQuiz
   );
@@ -168,6 +154,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         : null,
     [selectedSection.unitId, selectedUnitId]
   );
+
+  const showAITALessonSummary = useAppSelector(
+    state => state.currentUser.showAITALessonSummary
+  );
+
+  // This checks to see if the AI lesson summaries experiment or DCDO key are set
+  // or if the section has AIF assigned in order to enable AI Lesson Summaries
+  const canShowLessonSummaries =
+    (showAITALessonSummary || AIF_UNIT_IDS.includes(unitToLoad)) &&
+    aiTALessonSummaryInfo;
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;

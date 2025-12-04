@@ -178,6 +178,21 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         moduleStyles.scrollToBottomContainer
       )}
     >
+      {showScrollToBottom && (
+        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
+          <Button
+            isIconOnly
+            icon={{iconName: 'arrow-down'}}
+            size="xs"
+            color="black"
+            type="secondary"
+            onClick={() => scrollToLastMessage()}
+            className={moduleStyles.scrollToBottomButton}
+            ariaLabel="Scroll to bottom of messages"
+            aria-controls="chat-workspace-conversation"
+          />
+        </div>
+      )}
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
         {chatDisabled ? (
           <ChatDisabled message={chatDisabledMessage} />
@@ -208,19 +223,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           </>
         )}
       </div>
-      {showScrollToBottom && (
-        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
-          <Button
-            isIconOnly
-            icon={{iconName: 'arrow-down'}}
-            size="xs"
-            color="black"
-            type="secondary"
-            onClick={() => scrollToLastMessage()}
-            className={moduleStyles.scrollToBottomButton}
-          />
-        </div>
-      )}
     </div>
   );
 };
