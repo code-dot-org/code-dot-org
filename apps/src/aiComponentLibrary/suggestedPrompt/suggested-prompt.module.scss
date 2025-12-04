@@ -39,12 +39,12 @@
 
     // Selected state
     &.selected {
-      background-color: $brand_primary_default;
+      background-color: var(--brand-teal-50);
       color: white;
-      border-color: $brand_primary_default;
+      border-color: var(--brand-teal-50);
 
       &:hover {
-        background-color: darken($brand_primary_default, 5%);
+        background-color: var(--brand-teal-70);
       }
     }
 
