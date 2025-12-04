@@ -47,7 +47,11 @@ export const useAiTutorResponseSchemaSettings = (
             jsonResponse.answer
           );
           const answerType = formattedResponse.answerType;
-          if (answerType !== 'Build HTML' && answerType !== 'Build CSS') {
+          if (
+            !['Build HTML', 'Build CSS', 'Build JavaScript'].includes(
+              answerType
+            )
+          ) {
             return formatCopyPasteResponse(jsonResponse.answer);
           }
           dispatch(setViewingAiTutorVersion(true));
