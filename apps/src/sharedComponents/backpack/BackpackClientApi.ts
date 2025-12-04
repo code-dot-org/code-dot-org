@@ -1,9 +1,27 @@
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
+import {ClientApi} from '@cdo/apps/code-studio/initApp/clientApiType';
 
 const REQUEST_RETRY_COUNT = 1;
 
+interface FilesObject {
+  [filename: string]: {
+    text: string;
+  };
+}
+
+type ErrorCallback = (error?: string, failedFiles?: string[]) => void;
+
 export default class BackpackClientApi {
-  constructor(appType, channelId) {
+  backpackApi: ClientApi;
+  appType: string;
+  channelId: string;
+  uploadingFiles: boolean;
+  fileUploadsInProgress: string[];
+  fileUploadsFailed: string[];
+  fileDeletesInProgress: string[];
+  fileDeletesFailed: string[];
+
+  constructor(appType: string, channelId: string) {
     this.backpackApi = clientApi.create('/v3/libraries');
     this.appType = appType;
     this.channelId = channelId;
@@ -18,7 +36,7 @@ export default class BackpackClientApi {
     return !!this.channelId;
   }
 
-  fetchChannelId(callback) {
+  fetchChannelId(callback: () => void) {
     $.ajax({
       url: `/backpacks/channel/${this.appType}`,
       type: 'get',
@@ -28,7 +46,11 @@ export default class BackpackClientApi {
     });
   }
 
-  fetchFile(filename, onError, onSuccess) {
+  fetchFile(
+    filename: string,
+    onError: ErrorCallback,
+    onSuccess: (data: object) => void
+  ) {
     if (!this.hasBackpack()) {
       onError();
     }
@@ -36,7 +58,7 @@ export default class BackpackClientApi {
     const cacheBustSuffix = `?t=${Date.now()}`;
     this.backpackApi.fetch(
       this.channelId + '/' + filename + cacheBustSuffix,
-      (error, data) => {
+      (error: string, data) => {
         if (error) {
           onError(error);
         } else {
@@ -47,7 +69,10 @@ export default class BackpackClientApi {
     );
   }
 
-  getFileList(onError, onSuccess) {
+  getFileList(
+    onError: ErrorCallback,
+    onSuccess: (filenames: string[]) => void
+  ) {
     if (!this.hasBackpack() && this.appType === 'javalab') {
       onError();
     }
@@ -57,7 +82,9 @@ export default class BackpackClientApi {
           onError(error);
           return;
         }
-        const filenames = data.map(fileData => fileData.filename);
+        const filenames = (data as {filename: string}[]).map(
+          fileData => fileData.filename
+        );
         onSuccess(filenames);
       });
     };
@@ -82,7 +109,12 @@ export default class BackpackClientApi {
    * @param {Function} onError Function to call if any file fails to save
    * @param {Function} onSuccess Function to call if all files save.
    */
-  saveFiles(files, filenames, onError, onSuccess) {
+  saveFiles(
+    files: FilesObject,
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
     this.updateFilesHelper(
       this.fileUploadsInProgress,
       filenames,
@@ -100,7 +132,12 @@ export default class BackpackClientApi {
    * @param {Function} onError Function to call if file fails to save.
    * @param {Function} onSuccess Function to call if file saves.
    */
-  saveCodebridgeFile(filename, fileContents, onError, onSuccess) {
+  saveCodebridgeFile(
+    filename: string,
+    fileContents: string,
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
     const fileObject = {[filename]: {text: fileContents}};
     this.updateFilesHelper(
       this.fileUploadsInProgress,
@@ -118,7 +155,11 @@ export default class BackpackClientApi {
    * @param {Function} onSuccess Function to call if all files are deleted.
    */
 
-  deleteFiles(filenames, onError, onSuccess) {
+  deleteFiles(
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
     this.updateFilesHelper(
       this.fileDeletesInProgress,
       filenames,
@@ -138,7 +179,13 @@ export default class BackpackClientApi {
    * @param {Function} onSuccess success callback, only called if there is nothing to update
    * @param {Function} callback callback function to continue updating files
    */
-  updateFilesHelper(filesInProgress, filenames, onError, onSuccess, callback) {
+  updateFilesHelper(
+    filesInProgress: string[],
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void,
+    callback: () => void
+  ) {
     if (filesInProgress.length > 0) {
       // If an update is currently in progress (a previous update has not gone through its
       // entire list of files to resolve), return an error. Frontend should prevent multiple
@@ -159,7 +206,12 @@ export default class BackpackClientApi {
     }
   }
 
-  saveFilesHelper(files, filenames, onError, onSuccess) {
+  saveFilesHelper(
+    files: FilesObject,
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
     this.fileUploadsInProgress = [...filenames];
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
@@ -176,11 +228,11 @@ export default class BackpackClientApi {
   }
 
   writeSingleFileToBackpack(
-    filename,
-    fileContents,
-    onError,
-    onSuccess,
-    retryCount
+    filename: string,
+    fileContents: string,
+    onError: ErrorCallback,
+    onSuccess: () => void,
+    retryCount: number
   ) {
     this.backpackApi.put(this.channelId, fileContents, filename, (error, _) => {
       if (error) {
@@ -216,7 +268,11 @@ export default class BackpackClientApi {
     });
   }
 
-  deleteFilesHelper(filenames, onError, onSuccess) {
+  deleteFilesHelper(
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
     this.fileDeletesInProgress = [...filenames];
     this.fileDeletesFailed = [];
     filenames.forEach(filename => {
@@ -230,7 +286,12 @@ export default class BackpackClientApi {
     });
   }
 
-  deleteSingleFileFromBackpack(filename, onError, onSuccess, retryCount) {
+  deleteSingleFileFromBackpack(
+    filename: string,
+    onError: ErrorCallback,
+    onSuccess: () => void,
+    retryCount: number
+  ) {
     this.backpackApi.deleteObject(
       this.channelId + '/' + filename,
       (error, _) => {
@@ -271,12 +332,12 @@ export default class BackpackClientApi {
   // Check if all files are done updating. If they are, call either onSuccess
   // or onError depending on if we saw any errors.
   onRequestComplete(
-    filename,
-    filesInRequest,
-    failedFileList,
-    onError,
-    onSuccess,
-    error
+    filename: string,
+    filesInRequest: string[],
+    failedFileList: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void,
+    error?: string
   ) {
     const filenameIndex = filesInRequest.indexOf(filename);
     if (filenameIndex >= 0) {
