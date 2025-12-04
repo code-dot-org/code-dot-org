@@ -5,6 +5,8 @@ import FocusTrap from 'focus-trap-react';
 import React, {useState, useCallback, useRef, useEffect} from 'react';
 import {createPortal} from 'react-dom';
 
+import {createUuid} from '@cdo/apps/utils';
+
 import moduleStyles from './pop-up-button.module.scss';
 
 type PopUpButtonProps = {
@@ -20,8 +22,8 @@ type PopUpButtonProps = {
 
 const TOP_PADDING = 5;
 
-// Global state to track which dropdown is currently open
-let currentOpenDropdown: (() => void) | null = null;
+// Custom event used to coordinate closing other dropdowns when one opens
+const CLOSE_OTHER_DROPDOWNS_EVENT = 'popupbutton:close';
 
 export const PopUpButton = ({
   children,
@@ -41,22 +43,38 @@ export const PopUpButton = ({
   // Get the button element ref to remove focus when closing the dropdown
   const buttonElementRef = useRef<HTMLButtonElement | null>(null);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
+  // Unique identifier for current dropdown instance
+  const instanceId = useRef(createUuid());
 
   // We need to set the theme here because the dropdown is
   // rendered in a portal, outside of the main lab container.
   const {theme} = useTheme();
+
+  // Listen for close events from other dropdowns
+  useEffect(() => {
+    const handleCloseOthers = (e: Event) => {
+      const customEvent = e as CustomEvent<{sourceId: string}>;
+      if (customEvent.detail.sourceId !== instanceId.current) {
+        // Defer state update to avoid updating during render
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 0);
+      }
+    };
+    document.addEventListener(CLOSE_OTHER_DROPDOWNS_EVENT, handleCloseOthers);
+    return () =>
+      document.removeEventListener(
+        CLOSE_OTHER_DROPDOWNS_EVENT,
+        handleCloseOthers
+      );
+  }, []);
 
   // Handler to close the dropdown.
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
     document.removeEventListener('click', setIsOpenFalse);
 
-    // Clear the global currentOpenDropdown reference when closing
-    if (currentOpenDropdown === setIsOpenFalse) {
-      currentOpenDropdown = null;
-    }
-
-    // Remove focus from the button when closing the dropdown
+    // Remove focus from the menu button when closing the dropdown
     buttonElementRef.current?.blur();
 
     // Because this operates on a delay, update the styles on a delay too
@@ -78,15 +96,12 @@ export const PopUpButton = ({
       setIsOpen(oldIsOpen => {
         const newIsOpen = !oldIsOpen;
         if (newIsOpen) {
-          // Close any other open dropdowns before opening this one.
-          // Use setTimeout to avoid updating another component during render.
-          if (currentOpenDropdown && currentOpenDropdown !== setIsOpenFalse) {
-            const closeOtherDropdown = currentOpenDropdown;
-            setTimeout(() => closeOtherDropdown(), 0);
-          }
-
-          // Track this dropdown as the currently open one
-          currentOpenDropdown = setIsOpenFalse;
+          // Tell other dropdowns to close
+          document.dispatchEvent(
+            new CustomEvent(CLOSE_OTHER_DROPDOWNS_EVENT, {
+              detail: {sourceId: instanceId.current},
+            })
+          );
 
           // Defer adding the close handler until the next tick of the event
           // loop, otherwise it'll fire immediately and re-close the pop up.
@@ -96,11 +111,6 @@ export const PopUpButton = ({
           );
         } else {
           document.removeEventListener('click', setIsOpenFalse);
-
-          // Clear the global currentOpenDropdown reference when closing
-          if (currentOpenDropdown === setIsOpenFalse) {
-            currentOpenDropdown = null;
-          }
         }
         return newIsOpen;
       });
@@ -121,12 +131,15 @@ export const PopUpButton = ({
             alignment === 'right'
               ? buttonRect.right - dropdownRect.width + window.scrollX
               : buttonRect.left + window.scrollX;
-          setDropdownStyles({
-            top,
-            left,
-          });
-          setUpdatedStyles(true);
-          setComputedButtonStyles(classNames(className, moduleStyles.active));
+          // Defer all state updates to avoid updating during render
+          setTimeout(() => {
+            setDropdownStyles({
+              top,
+              left,
+            });
+            setUpdatedStyles(true);
+            setComputedButtonStyles(classNames(className, moduleStyles.active));
+          }, 0);
         }
       }
     };
