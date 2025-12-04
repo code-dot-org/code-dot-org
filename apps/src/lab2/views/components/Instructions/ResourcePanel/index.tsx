@@ -217,7 +217,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     const versionHistoryHidden =
       (isPermanentlyReadOnly && !viewAsUserId) ||
       isWidgetView ||
-      isReadOnlyPredict;
+      isReadOnlyPredict ||
+      levelProperties.hideVersionHistory;
     if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
         <VersionHistoryPanel
