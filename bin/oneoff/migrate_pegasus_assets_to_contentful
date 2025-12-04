@@ -1,0 +1,264 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# @summary Migrate Pegasus assets to Contentful and create HTTPS redirects.
+#
+# @description
+# Reads a CSV of Pegasus asset paths and occurrence counts, uploads each asset to Contentful,
+# publishes it after file processing, and creates a corresponding Redirect entry that points
+# to the uploaded asset's HTTPS URL. Supports dry-run mode (no writes) and parallel processing.
+# Handles Contentful rate limit errors with retries and logs progress to the console.
+# Writes a result CSV with asset and redirect locations and entry IDs.
+#
+# @environment
+# - CONTENTFUL_TOKEN: Contentful Management API token (required)
+# - CONTENTFUL_SPACE: Contentful Space ID (default: 90t6bu6vlf76)
+# - CONTENTFUL_ENV: Contentful Environment ID (e.g., development, test, production) (required)
+#
+# @usage
+# CONTENTFUL_TOKEN=secret CONTENTFUL_SPACE=secret CONTENTFUL_ENV=secret ./bin/oneoff/migrate_pegasus_assets_to_contentful -f assets_csv_file -t 174
+#
+# @options
+# -f, --file-path=PATH            CSV file path with headers: `cs-uri-stem`, `occurrences`
+# -t, --threshold=VALUE           Minimum occurrence count to process an asset
+# -d, --dry-run                   Simulate uploads and redirects without writing to Contentful
+# -p, --parallel-threads=VALUE    Number of parallel worker threads (default: 5)
+# -h, --help                      Show help
+#
+# @csv_input
+# Headers:
+# - cs-uri-stem: Asset path (may include query string; normalized to path only)
+# - occurrences: Occurrence count used to filter by `--threshold`
+#
+# @csv_output
+# File: `migrate_pegasus_assets_to_contentful_result_YYYY-MM-DD_HH-MM-SS.csv`
+# Headers:
+# - `cs-uri-stem` — original asset URI path
+# - `contentful_asset_location` — URL or ID of the newly uploaded asset in Contentful
+# - `redirected_location` — final redirected URL (e.g., the destination path configured in Contentful).
+# - `redirect_entry_id`  — Contentful ID of the created redirect entry.
+#
+# @notes
+# - Rate limit errors are retried with backoff; other Contentful errors are raised.
+# - Skips assets with occurrences <= threshold; logs progress and failures with context.
+
+# Standard gems
+require 'csv'
+require 'io/console'
+require 'optparse'
+require 'uri'
+
+# Third-party gems
+require 'contentful/management'
+require 'colorize'
+require 'mime/types'
+require 'ruby-progressbar'
+require 'parallel'
+
+options = {
+  file_path: nil,
+  threshold: nil,
+  dry_run: false,
+  threads: 5,
+}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: CONTENTFUL_TOKEN=secret CONTENTFUL_SPACE=secret CONTENTFUL_ENV=secret #{File.basename(__FILE__)} [options]"
+  opts.on('-fPATH', '--file-path=PATH', String, 'CSV file path.') do |file_path|
+    options[:file_path] = file_path
+  end
+  opts.on('-tVALUE', '--threshold=VALUE', Integer, 'Occurrence threshold.') do |threshold|
+    options[:threshold] = threshold
+  end
+  opts.on('-d', '--dry-run', 'Simulate uploads and redirects without performing any writes to Contentful.') do
+    options[:dry_run] = true
+  end
+  opts.on('-pVALUE', '--parallel-threads=VALUE', Integer, "Number of parallel worker threads to use during processing. Default: #{options[:threads]}") do |threads|
+    options[:threads] = threads
+  end
+  opts.on('-h', '--help', 'Display this help message.') do
+    puts opts
+    exit
+  end
+end.parse!
+
+missing_options = options.filter_map {|key, value| key if value.nil?}
+raise OptionParser::MissingArgument, "Missing required option: #{missing_options.join(', ')}" unless missing_options.empty?
+
+# Contentful Management Token
+# @see: https://app.contentful.com/spaces/90t6bu6vlf76/environments/development/api/cma_tokens
+contentful_management_token = ENV.fetch('CONTENTFUL_TOKEN')
+# Contentful Space ID
+# Viewable in the Contentful web app under Settings > API keys
+# @see https://contentful.github.io/contentful.js/contentful/latest/interfaces/CreateClientParams.html#space
+contentful_space_id = ENV.fetch('CONTENTFUL_SPACE', '90t6bu6vlf76')
+# Contentful Environment ID
+# The Contentful environment id to use. This is the environment that will be used to fetch content.
+# Valid options are: development, test, and production.
+# Normally, you would use the development environment for development and testing, and the production environment for production.
+# @note Production must only use the production environment
+# @see https://contentful.github.io/contentful.js/contentful/latest/interfaces/CreateClientParams.html#environment
+contentful_env_id = ENV.fetch('CONTENTFUL_ENV')
+
+asset_rows = CSV.read(options[:file_path], headers: true).map(&:to_h)
+progress_bar = ProgressBar.create(total: asset_rows.size, format: 'Migrated[%c/%C]: |%W| %a')
+
+# Initializes the CSV output file.
+result_csv_path = "migrate_pegasus_assets_to_contentful_result_#{Time.now.strftime("%Y%m%d_%H%M%S")}.csv"
+result_csv_headers = %w[cs-uri-stem contentful_asset_location redirected_location redirect_entry_id]
+unless options[:dry_run]
+  CSV.open(result_csv_path, 'w', write_headers: true, headers: result_csv_headers)
+  progress_bar.log "[CSV output file]: #{File.expand_path(result_csv_path)}"
+end
+
+mutex = Mutex.new
+
+# Processes a request to a Contentful resource, retrying up to 3 times in case of rate limit errors.
+#
+# @param resource [Object] The Contentful resource on which the method will be called
+# @param method [Symbol] The method to be invoked on the resource
+# @param args [Array] Additional arguments to be passed to the method
+#
+# @return [Object] The response from the invoked method
+# @raise [Contentful::Management::Error] If the response is an error other than a rate limit exceeded error
+process_contentful_request = lambda do |resource, method, *args|
+  response = nil
+
+  3.times do
+    response = resource.public_send(method, *args)
+    break unless response.is_a?(Contentful::Management::RateLimitExceeded)
+    mutex.synchronize {sleep(1)}
+  end
+  raise response if response.is_a?(Contentful::Management::Error)
+
+  response
+end
+
+# Publishes a given Contentful resource, retrying up to 3 times if necessary.
+#
+# @param resource [Object] The Contentful resource to be published
+#
+# @return [Boolean] Returns true if the resource is successfully published or already published and not updated
+# @raise [RuntimeError] If the resource fails to publish after 3 attempts
+publish_contentful_resource = lambda do |resource|
+  return true if resource.published? && !resource.updated?
+
+  1.upto(3) do |attempt|
+    process_contentful_request.call(resource, :publish)
+    break if resource.published?
+    sleep(attempt * 0.3)
+  end
+  raise %Q[Failed to publish "#{resource.sys[:urn]}"] unless resource.published?
+
+  true
+end
+
+Parallel.each(asset_rows, in_threads: options[:threads]) do |asset_row|
+  asset_path = asset_row['cs-uri-stem']
+
+  if asset_row['occurrences'].to_i <= options[:threshold]
+    mutex.synchronize {progress_bar.log "SKIPPED[#{asset_path}]: #{asset_row['occurrences']}".yellow}
+    next
+  end
+
+  if options[:dry_run]
+    mutex.synchronize {progress_bar.log "PROCESSED[#{asset_path}]: #{asset_row['occurrences']}".green}
+    next
+  end
+
+  # Returns the path without the search query,
+  # e.g. `/asset/path?param=1 => `/asset/path`
+  normalized_asset_path = URI(asset_path).path
+
+  mutex.synchronize do
+    @contentful_client        = Contentful::Management::Client.new(contentful_management_token)
+    @contentful_space         ||= @contentful_client.spaces.find(contentful_space_id)
+    @contentful_env           ||= @contentful_space.environments.find(contentful_env_id)
+    @contentful_redirect_type ||= @contentful_env.content_types.find('redirect')
+  end
+
+  ### BEGIN Contentful Asset Creation ###
+  contentful_asset_title = "[Pegasus asset]: #{normalized_asset_path}"
+
+  contentful_asset = process_contentful_request.call(
+    @contentful_env.assets, :all,
+    'fields.title' => contentful_asset_title,
+    limit: 1
+  ).first || @contentful_env.assets.new
+
+  unless contentful_asset.published?
+    asset_url = File.join('https://code.org', asset_path)
+
+    contentful_asset.title       = contentful_asset_title
+    contentful_asset.description = %Q[Pegasus asset uploaded from the URL "#{asset_url}"]
+    contentful_asset.file        = Contentful::Management::File.new.tap do |file|
+      file.properties[:contentType] = MIME::Types.of(normalized_asset_path).first&.to_s || 'application/octet-stream'
+      file.properties[:fileName]    = File.basename(normalized_asset_path)
+      file.properties[:upload]      = asset_url
+    end
+
+    process_contentful_request.call(contentful_asset, :save)
+
+    # Assets cannot be published until their files are processed (uploaded).
+    # The only reliable check is whether the file URL has been generated.
+    process_contentful_request.call(contentful_asset, :process_file)
+    1.upto(3) do |attempt|
+      break if contentful_asset.file.url
+      sleep(attempt * 0.5)
+      process_contentful_request.call(contentful_asset, :reload)
+    end
+    raise %Q[Failed to process file for the Asset "#{contentful_asset.sys[:urn]}"] unless contentful_asset.file.url
+
+    publish_contentful_resource.call(contentful_asset)
+  end
+  ### END Contentful Asset Creation ###
+
+  ### BEGIN Contentful Redirect Creation ###
+  contentful_redirect_brand = 'Code.org'
+  contentful_redirect_src   = normalized_asset_path
+  contentful_redirect_dest  = URI.parse(contentful_asset.file.url).tap {_1.scheme = 'https'}.to_s
+
+  contentful_redirect = process_contentful_request.call(
+    @contentful_redirect_type.entries, :all,
+    'fields.brand' => contentful_redirect_brand,
+    'fields.source' => contentful_redirect_src,
+    limit: 1,
+  ).first || @contentful_redirect_type.entries.new
+
+  unless contentful_redirect.content_type
+    # Reuse the already loaded content type instance to avoid an additional fetch.
+    contentful_redirect.content_type = @contentful_redirect_type
+    Contentful::Management::Resource::FieldAware.create_fields_for_content_type(contentful_redirect)
+  end
+
+  if !contentful_redirect.published? || contentful_redirect.destination != contentful_redirect_dest
+    contentful_redirect.brand       = contentful_redirect_brand
+    contentful_redirect.source      = contentful_redirect_src
+    contentful_redirect.destination = contentful_redirect_dest
+    contentful_redirect.permanent   = true
+
+    process_contentful_request.call(contentful_redirect, :save)
+    publish_contentful_resource.call(contentful_redirect)
+  end
+  ### END Contentful Redirect Creation ###
+
+  mutex.synchronize do
+    CSV.open(result_csv_path, 'a') do |csv|
+      csv << CSV::Row.new(result_csv_headers, []).tap do |row|
+        row['cs-uri-stem']               = asset_path
+        row['contentful_asset_location'] = contentful_asset.sys[:urn].sub('crn:contentful:::content:', 'https://app.contentful.com/')
+        row['redirected_location']       = contentful_redirect.sys[:urn].sub('crn:contentful:::content:', 'https://app.contentful.com/')
+        row['redirect_entry_id']         = contentful_redirect.id
+      end
+    end
+  end
+rescue StandardError => exception
+  mutex.synchronize do
+    window_size = IO.console.winsize[1]
+    progress_bar.log '=' * window_size
+    progress_bar.log "FAILED[#{asset_path}]: #{exception.full_message}".red
+    progress_bar.log '=' * window_size
+  end
+ensure
+  mutex.synchronize {progress_bar.increment}
+end

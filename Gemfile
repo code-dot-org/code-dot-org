@@ -411,3 +411,6 @@ gem 'openssl', '>= 3.3.1'
 
 # Used for Clever Client
 gem 'typhoeus', '~> 1.0', '>= 1.0.1'
+
+# Client for the Contentful Content Management API
+gem 'contentful-management', '~> 3.11', require: false
