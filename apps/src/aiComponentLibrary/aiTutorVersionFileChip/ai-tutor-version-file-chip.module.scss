@@ -63,3 +63,12 @@
   }
 }
 
+.acceptedIcon {
+  margin-left: auto;
+  color: var(--text-success-primary);
+}
+
+.rejectedIcon {
+  margin-left: auto;
+  color: var(--text-error-primary);
+}

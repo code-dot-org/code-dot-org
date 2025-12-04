@@ -10,6 +10,8 @@ import moduleStyles from './ai-tutor-version-file-chip.module.scss';
 interface AiTutorVersionFileChipProps {
   /** The project file to display */
   file: ProjectFile;
+  isInReview?: boolean;
+  isAccepted?: boolean;
 }
 
 /**
@@ -21,6 +23,8 @@ interface AiTutorVersionFileChipProps {
  */
 const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
   file,
+  isInReview = true,
+  isAccepted = true,
 }) => {
   const isNewFile = file.isAiTutorVersionCreated;
   const isUpdatedFile = file.isAiTutorVersionUpdated;
@@ -45,7 +49,7 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
         />
       </div>
       <span className={moduleStyles.fileName}>{file.name}</span>
-      {isHtmlFile && (
+      {isHtmlFile && isInReview && (
         <Button
           onClick={handlePreviewClick}
           aria-label={`Preview ${file.name}`}
@@ -55,6 +59,20 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
           isIconOnly={true}
           icon={{iconName: 'eye', iconStyle: 'solid'}}
           className={moduleStyles.previewButton}
+        />
+      )}
+      {!isInReview && isAccepted && (
+        <FontAwesomeV6Icon
+          iconName="check"
+          iconStyle="solid"
+          className={moduleStyles.acceptedIcon}
+        />
+      )}
+      {!isInReview && !isAccepted && (
+        <FontAwesomeV6Icon
+          iconName="xmark"
+          iconStyle="solid"
+          className={moduleStyles.rejectedIcon}
         />
       )}
     </div>

@@ -43,7 +43,12 @@ const AiTutorVersionActionNotification = forwardRef<
         {files && (
           <div className={moduleStyles.fileList}>
             {files.map(file => (
-              <AiTutorVersionFileChip key={file.id} file={file} />
+              <AiTutorVersionFileChip
+                key={file.id}
+                file={file}
+                isInReview={false}
+                isAccepted={type === 'accept' ? true : false}
+              />
             ))}
           </div>
         )}
