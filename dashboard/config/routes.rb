@@ -1177,6 +1177,13 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Routes used for the Student Snapshot page on the teacher dashboard
+    resources :student_snapshots, only: [] do
+      collection do
+        get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
+      end
+    end
+
     get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
     get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
     post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
