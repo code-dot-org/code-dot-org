@@ -30,8 +30,8 @@ Dashboard::Application.configure do
   config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
-  # Disable Rails.cache when running unit tests.
-  config.cache_store = :memory_store, {size: 64.megabytes} if ci_test
+  # Use smaller cache size when running unit tests.
+  config.cache_store = :memory_store, {size: 64.megabytes} if unit_test
 
   # config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.delivery_method = :smtp
