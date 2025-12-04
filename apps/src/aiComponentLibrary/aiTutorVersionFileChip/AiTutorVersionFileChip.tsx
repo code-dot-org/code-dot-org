@@ -22,7 +22,9 @@ interface AiTutorVersionFileChipProps {
  * Shows the file name with a status indicator:
  * - Green with plus icon for new files
  * - Gray with checkmark for updated files
- * For HTML files, includes an eye icon button for preview.
+ * If the file is in review, includes an eye icon button for preview for HTML files.
+ * If the file is not in review and accepted, then includes a checkmark icon.
+ * If the file is not in review and rejected, then includes an X mark icon.
  */
 const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
   file,
@@ -38,7 +40,6 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
     file.language === 'html' || file.name.toLowerCase().endsWith('.html');
   const dispatch = useAppDispatch();
   const handlePreviewClick = () => {
-    console.log('Preview clicked for file:', file.name);
     const folderPath = getFolderPath(file.folderId, source.folders).substring(
       1
     );

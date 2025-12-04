@@ -26,7 +26,6 @@ const AiTutorVersionActionNotification = forwardRef<
   HTMLDivElement,
   AiTutorVersionActionNotificationProps
 >(({text, type, files, className, ...htmlAttributes}, ref) => {
-  console.log('type', type);
   return (
     <div
       ref={ref}
