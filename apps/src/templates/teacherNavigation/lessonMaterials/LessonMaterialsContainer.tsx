@@ -232,7 +232,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   React.useEffect(() => {
     if (selectedLesson) {
       HttpClient.fetchJson<LessonSummaryInfoResponse>(
-        `/ai_lesson_summaries/show?user_id=${userId}&lesson_id=${selectedLesson?.id}`
+        `/ai_lesson_summaries/show?lesson_id=${selectedLesson?.id}`
       )
         .then(response => {
           const preParsedResponse = response.value?.lesson_summary;
