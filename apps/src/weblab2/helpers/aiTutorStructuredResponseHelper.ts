@@ -133,7 +133,13 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
           additionalProperties: false,
         },
         description:
-          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. The list can be empty. Code should be formatted with appropriate newlines and indentation.  When providing modifications to student code, provide the entire contents of the file, the id and folderId of the file being updated. If the file is a new file and not currently in the the student code, then the id is "new", and the folderId is "0".The list can be empty. Code should be formatted with appropriate newlines and indentation. If the language is javascript or js, then the student will need to copy and paste this code into their project.',
+          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. ' +
+          'The list can be empty. Code should be formatted with appropriate newlines and indentation. ' +
+          'When providing modifications to a file in the student code, provide the entire contents of the file and include the file id and folderId of the file being updated. ' +
+          'For example, if a current student\'s file name is "demo.html", the file id is "2", and the folderId is "1", and the contents of the file has been updated, ' +
+          'then return the file name as "demo.html", file id as "2", and folderId "1", but the entire updated contents of the modified file. ' +
+          'If the file is a new file and not currently in the student code, then the id is "new", and the folderId is "0".The list can be empty. ' +
+          'Code should be formatted with appropriate newlines and indentation.',
       },
       explanation: {
         type: 'string',
