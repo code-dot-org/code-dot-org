@@ -43,6 +43,7 @@ class DeleteVocabularyDialog extends Component {
         description={`Are you sure you want to permanently delete vocabulary "${vocabularyForDeletion.word}"?`}
         onClose={() => handleDeleteVocabularyDialogClose()}
         primaryButtonProps={{
+          id: 'delete-vocabulary',
           text: `Delete`,
           size: 's',
           onClick: () => {
@@ -51,6 +52,7 @@ class DeleteVocabularyDialog extends Component {
           color: buttonColors.destructive,
         }}
         secondaryButtonProps={{
+          id: 'cancel-delete-vocabulary',
           size: 's',
           text: 'Cancel',
           type: 'secondary',

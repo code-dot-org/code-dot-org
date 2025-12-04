@@ -137,6 +137,7 @@ class AllVocabulariesEditor extends Component {
             onClick={this.handleAddVocabularyClick}
             style={styles.addButton}
             type="button"
+            className="unit-test-add-vocabulary"
           >
             <i className="fa fa-plus" style={{marginRight: 7}} />
             Create New Vocabulary

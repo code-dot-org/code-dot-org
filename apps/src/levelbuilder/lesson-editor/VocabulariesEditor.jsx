@@ -178,7 +178,7 @@ class VocabulariesEditor extends Component {
         )}
         {this.state.confirmRemovalDialogOpen && (
           <DeleteVocabularyDialog
-            vocabularyForDeletion={this.state.vocabularyForDeletion}
+            vocabularyForDeletion={this.state.vocabularyForRemoval}
             handleDeleteVocabularyConfirm={this.handleDeleteVocabularyConfirm}
             handleDeleteVocabularyDialogClose={
               this.handleDeleteVocabularyDialogClose
@@ -206,6 +206,7 @@ class VocabulariesEditor extends Component {
           onClick={this.handleAddVocabularyClick}
           style={styles.addButton}
           type="button"
+          className="unit-test-add-vocabulary"
         >
           <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
           Vocabulary
