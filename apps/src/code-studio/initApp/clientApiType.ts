@@ -1,3 +1,5 @@
+// We are allowing any in this interface to make this usable in TypeScript, as the clientApi
+// could return many different object types.
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export interface ClientApi {
   all: (callback: any) => void;
