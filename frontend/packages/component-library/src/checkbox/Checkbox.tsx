@@ -14,7 +14,10 @@ import Typography from '@/typography';
 import moduleStyles from './checkbox.module.scss';
 
 export interface CheckboxProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+  extends Omit<
+    InputHTMLAttributes<HTMLInputElement>,
+    'size' | 'type' | 'onChange' | 'checked' | 'name' | 'value'
+  > {
   /** Checkbox checked state */
   checked: boolean;
   /** Checkbox onChange handler*/
@@ -34,6 +37,14 @@ export interface CheckboxProps
   indeterminate?: boolean;
   /** Size of checkbox */
   size?: ComponentSizeXSToL;
+  /** Text thickness styling */
+  textThickness?: 'thick' | 'thin';
+  /** Optional aria-label for the checkbox input (consistency with Button/Radio) */
+  ariaLabel?: string;
+  /** Custom className for the outer label */
+  className?: string;
+  /** Children (Checkbox custom content) */
+  children?: React.ReactNode;
 }
 
 /**
@@ -58,6 +69,10 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   disabled = false,
   indeterminate = false,
   size = 'm',
+  textThickness = 'thin',
+  ariaLabel,
+  className,
+  children,
   ...HTMLAttributes
 }) => {
   const checkboxRef = useRef<HTMLInputElement>(null);
@@ -71,7 +86,11 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
 
   return (
     <label
-      className={classnames(moduleStyles.label, moduleStyles[`label-${size}`])}
+      className={classnames(
+        moduleStyles.label,
+        moduleStyles[`label-${size}`],
+        className,
+      )}
     >
       <input
         type="checkbox"
@@ -82,13 +101,25 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
         disabled={disabled}
         onChange={onChange}
         {...HTMLAttributes}
+        className={className}
+        aria-label={ariaLabel || HTMLAttributes['aria-label']}
+        aria-checked={indeterminate ? 'mixed' : undefined}
       />
       <i className="fa-solid" />
       {label && (
-        <Typography semanticTag="span" visualAppearance={bodyTextSize}>
+        <Typography
+          semanticTag="span"
+          className={classnames(
+            moduleStyles.checkboxLabel,
+            moduleStyles[`checkboxLabel-${textThickness}`],
+          )}
+          visualAppearance={bodyTextSize}
+          noMargin
+        >
           {label}
         </Typography>
       )}
+      {children}
     </label>
   );
 };
