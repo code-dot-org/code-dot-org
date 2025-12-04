@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-25 21:04:14 UTC",
+    "serialized_at": "2025-12-04 16:08:22 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2071,6 +2071,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson9-level1-test-2025"
+        ],
         "progression": "Explore and Explain"
       },
       "bonus": false,
@@ -2093,6 +2096,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson9-level2-test-2025"
+        ],
         "progression": "Co-Build a Search"
       },
       "bonus": false,
@@ -2165,6 +2171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson10-level1-test-2025"
+        ],
         "progression": "Introduction to a Filter & Sort Pipeline"
       },
       "bonus": false,
@@ -2187,6 +2196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson10-level2-test-2025"
+        ],
         "progression": "Design a Filter → Sort → Render Pipeline"
       },
       "bonus": false,
@@ -2284,6 +2296,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level1-test-2025"
+        ],
         "progression": "Milestone One"
       },
       "bonus": false,
@@ -2306,6 +2321,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level2-test-2025"
+        ],
         "progression": "Milestone One"
       },
       "bonus": false,
@@ -2328,6 +2346,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level3-test-2025"
+        ],
         "progression": "Milestone Two"
       },
       "bonus": false,
@@ -2350,6 +2371,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level4-test-2025"
+        ],
         "progression": "Milestone Two"
       },
       "bonus": false,
@@ -2372,6 +2396,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level5-test-2025"
+        ],
         "progression": "Milestone Three"
       },
       "bonus": false,
@@ -2394,6 +2421,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level6-test-2025"
+        ],
         "progression": "Milestone Four"
       },
       "bonus": false,
@@ -2416,6 +2446,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level7-test-2025"
+        ],
         "progression": "Milestone Four"
       },
       "bonus": false,

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-20 19:47:30 UTC",
+    "serialized_at": "2025-12-04 16:08:37 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1060,6 +1060,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_maze_2025"
+        ],
         "progression": "Video: Maze Intro - Programming with Blocks "
       },
       "bonus": false,
@@ -1082,6 +1085,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1104,6 +1110,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming2_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1126,6 +1135,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming3_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1148,6 +1160,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming4_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1170,6 +1185,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming5_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1192,6 +1210,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming6_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1215,6 +1236,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseC_maze_programming7_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1237,6 +1261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming8_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1259,6 +1286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming8_predict1_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1281,6 +1311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming9_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1303,6 +1336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming_challenge1_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -1325,6 +1361,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming_challenge2_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -1347,6 +1386,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_debugging_2025"
+        ],
         "progression": "Video:  Debugging with the Step Button"
       },
       "bonus": false,
@@ -1369,6 +1411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1391,6 +1436,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging2_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1413,6 +1461,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging3_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1435,6 +1486,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging4_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1457,6 +1511,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging5_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1479,6 +1536,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging6_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1502,6 +1562,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging7_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1524,6 +1587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging8_predict1_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1546,6 +1612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging9_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1568,6 +1637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging_challenge1_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -1590,6 +1662,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging_challenge2_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -1612,6 +1687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-video_express"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -1634,6 +1712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-sound_launch_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1656,6 +1737,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-two_launch_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1678,6 +1762,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-together1_launch_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1700,6 +1787,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-ingro-loop1_launch_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1722,6 +1812,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-5sounds_launch_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1744,6 +1837,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-timing-video_express"
+        ],
         "progression": "Music Integration Video"
       },
       "bonus": false,
@@ -1766,6 +1862,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-loop-beat_launch_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1788,6 +1887,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-layer_launch_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1810,6 +1912,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-match_launch_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1832,6 +1937,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-songwriter-videos_express"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -1854,6 +1962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-inspiration_express"
+        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
@@ -1876,6 +1987,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-make_launch_express"
+        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
@@ -1898,6 +2012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_artist_2025"
+        ],
         "progression": "Video: Artist Intro with JR Hildebrand"
       },
       "bonus": false,
@@ -1920,6 +2037,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1942,6 +2062,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog2_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1964,6 +2087,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog3_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1986,6 +2112,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog4_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2008,6 +2137,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog5_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2030,6 +2162,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog6_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2053,6 +2188,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseC_artist_prog7_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2075,6 +2213,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog8_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2097,6 +2238,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog6_predict1_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2119,6 +2263,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge1_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2141,6 +2288,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge2a_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2761,207 +2911,10 @@
     }
   ],
   "resources": [
-    {
-      "name": "Artist Introduction",
-      "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
-      "key": "artist_introduction",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "artist_introduction"
-      }
-    },
-    {
-      "name": "CS Fundamentals Main Activity Tips",
-      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-      "key": "cs_fundamentals_main_activity_tips",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Lesson Recommendations"
-      },
-      "seeding_key": {
-        "resource.key": "cs_fundamentals_main_activity_tips"
-      }
-    },
-    {
-      "name": "CSF - Express - Slides 2025-26",
-      "url": "https://docs.google.com/presentation/d/1aQMgvLRgD5hUvOj5K_UHcDEfXRb3cVT30J2jO30J3rg/template/preview",
-      "key": "csf_-_express_-_slides_2025-26",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1aQMgvLRgD5hUvOj5K_UHcDEfXRb3cVT30J2jO30J3rg/export/pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csf_-_express_-_slides_2025-26"
-      }
-    },
-    {
-      "name": "Debugging Guide",
-      "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
-      "key": "debugging_guide",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "debugging_guide"
-      }
-    },
-    {
-      "name": "Maze Bridging Page",
-      "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view",
-      "key": "maze_bridging_page",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "maze_bridging_page"
-      }
-    },
-    {
-      "name": "Music Lab Inspiration",
-      "url": "https://www.youtube.com/watch?v=GqlP5s7KTl4",
-      "key": "music_lab_inspiration",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "music_lab_inspiration"
-      }
-    },
-    {
-      "name": "Pair Programming",
-      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-      "key": "pair_programming",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "pair_programming"
-      }
-    },
-    {
-      "name": "Turns & Angles",
-      "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
-      "key": "turns_angles",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "turns_angles"
-      }
-    },
-    {
-      "name": "Turns & Angles",
-      "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
-      "key": "turns_angles_1",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "turns_angles_1"
-      }
-    },
-    {
-      "name": "Unplugged Maze Blocks",
-      "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
-      "key": "unplugged_maze_blocks",
-      "properties": {
-        "audience": "Student",
-        "type": "Manipulatives"
-      },
-      "seeding_key": {
-        "resource.key": "unplugged_maze_blocks"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "resource.key": "artist_introduction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "resource.key": "csf_-_express_-_slides_2025-26"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "resource.key": "turns_angles"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "resource.key": "turns_angles_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "resource.key": "cs_fundamentals_main_activity_tips"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "resource.key": "csf_-_express_-_slides_2025-26"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "resource.key": "debugging_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "resource.key": "pair_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "resource.key": "csf_-_express_-_slides_2025-26"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "resource.key": "maze_bridging_page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "resource.key": "unplugged_maze_blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Music Lab",
-        "resource.key": "csf_-_express_-_slides_2025-26"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Music Lab",
-        "resource.key": "music_lab_inspiration"
-      }
-    }
+
   ],
   "scripts_resources": [
 
@@ -2970,208 +2923,10 @@
 
   ],
   "vocabularies": [
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "angle",
-      "word": "Angle",
-      "definition": "Where two sides of a shape come together, measured in degrees.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "angle"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "measure",
-      "word": "Measure",
-      "definition": "Used to divide and organize music.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "measure"
-      }
-    },
-    {
-      "key": "persistence",
-      "word": "Persistence",
-      "definition": "Not giving up.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "persistence"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "rest",
-      "word": "Rest",
-      "definition": "A silent space in music where no sound is played.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "rest"
-      }
-    },
-    {
-      "key": "sequence",
-      "word": "Sequence",
-      "definition": "The order of steps in a program or task.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sequence"
-      }
-    },
-    {
-      "key": "sequencing",
-      "word": "Sequencing",
-      "definition": "Putting commands in correct order so computers can read the commands.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sequencing"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "vocabulary.key": "angle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "vocabulary.key": "persistence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "sequencing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Music Lab",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Music Lab",
-        "vocabulary.key": "measure"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Music Lab",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Music Lab",
-        "vocabulary.key": "rest"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Music Lab",
-        "vocabulary.key": "sequence"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

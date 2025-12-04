@@ -33,7 +33,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 02:25:04 UTC",
+    "serialized_at": "2025-12-04 16:08:44 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -3437,6 +3437,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-preassessment_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -3659,6 +3662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level1_2025"
+        ],
         "progression": "Button Response"
       },
       "bonus": false,
@@ -3681,6 +3687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level2_2025"
+        ],
         "progression": "Fixing Broken Features"
       },
       "bonus": false,
@@ -3703,6 +3712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level3_2025"
+        ],
         "progression": "First Click!"
       },
       "bonus": false,
@@ -3725,6 +3737,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level4_2025"
+        ],
         "progression": "Mini App Build"
       },
       "bonus": false,
@@ -3747,6 +3762,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level5_2025"
+        ],
         "progression": "Vocab: Document Object Model (DOM)"
       },
       "bonus": false,
@@ -3769,6 +3787,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level6_2025"
+        ],
         "progression": "Vocab: Document Object Model (DOM)"
       },
       "bonus": false,
@@ -3791,6 +3812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level7_2025"
+        ],
         "progression": "Vocab: Event Handler"
       },
       "bonus": false,
@@ -3813,6 +3837,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level8_2025"
+        ],
         "progression": "Vocab: Event Handler"
       },
       "bonus": false,
@@ -3835,6 +3862,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level9_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4582,6 +4612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level1_2025"
+        ],
         "progression": "Exploring Functions with Parameters"
       },
       "bonus": false,
@@ -4604,6 +4637,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level2_2025"
+        ],
         "progression": "Exploring Functions with Parameters"
       },
       "bonus": false,
@@ -4626,6 +4662,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level3_2025"
+        ],
         "progression": "Exploring Functions with Parameters"
       },
       "bonus": false,
@@ -4648,6 +4687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4_2025"
+        ],
         "progression": "Writing Functions with Parameters"
       },
       "bonus": false,
@@ -4670,6 +4712,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4692,6 +4737,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level6_2025"
+        ],
         "progression": "Vocab: Parameter"
       },
       "bonus": false,
@@ -4714,6 +4762,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level7_2025"
+        ],
         "progression": "Vocab: Parameter"
       },
       "bonus": false,
@@ -4736,6 +4787,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level8_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5483,6 +5537,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson11-level2_2025"
+        ],
         "progression": "Milestone 2"
       },
       "bonus": false,
@@ -5505,6 +5562,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson11-level3_2025"
+        ],
         "progression": "Milestone 3"
       },
       "bonus": false,
@@ -5527,6 +5587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson11-level4_2025"
+        ],
         "progression": "Milestone 4"
       },
       "bonus": false,
@@ -5574,6 +5637,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-postassessment_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,

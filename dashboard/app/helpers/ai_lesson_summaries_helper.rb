@@ -60,6 +60,7 @@ module AiLessonSummariesHelper
 
       data = {
         model: model,
+        max_output_tokens: 2500,
         messages: [{
           role: "system",
           content: prompt

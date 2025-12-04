@@ -2,10 +2,10 @@ class AiLessonSummaryPodcastsController < ApplicationController
   before_action :authenticate_user!
 
   def generate_podcast
-    if SingleUserExperiment.enabled?(user: self, experiment_name: 'ai_lesson_summaries') || DCDO.get('show-aita-lesson-summaries', false)
+    if current_user && (SingleUserExperiment.enabled?(user: current_user, experiment_name: 'ai_lesson_summaries') || DCDO.get('show-aita-lesson-summaries', false))
       # Placeholder to be replaced with generated script
-      script = "[energetic] You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class."
-
+      script = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(params[:lesson_id], current_user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+      puts script
       podcast = AiLessonSummariesPodcastHelper.get_podcast_from_script(script)
 
       send_data podcast, :type => 'audio/mpeg', :dispensation => 'attachment', :filename => 'podcast.mp3'
