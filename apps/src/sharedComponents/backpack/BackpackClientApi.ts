@@ -9,19 +9,19 @@ interface FilesObject {
   };
 }
 
-type ErrorCallback = (error?: string, failedFiles?: string[]) => void;
+type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
 
 export default class BackpackClientApi {
   backpackApi: ClientApi;
   appType: string;
-  channelId: string;
+  channelId: string | null;
   uploadingFiles: boolean;
   fileUploadsInProgress: string[];
   fileUploadsFailed: string[];
   fileDeletesInProgress: string[];
   fileDeletesFailed: string[];
 
-  constructor(appType: string, channelId: string) {
+  constructor(appType: string, channelId: string | null) {
     this.backpackApi = clientApi.create('/v3/libraries');
     this.appType = appType;
     this.channelId = channelId;
@@ -49,7 +49,7 @@ export default class BackpackClientApi {
   fetchFile(
     filename: string,
     onError: ErrorCallback,
-    onSuccess: (data: object) => void
+    onSuccess: (data: string) => void
   ) {
     if (!this.hasBackpack()) {
       onError();
@@ -58,7 +58,7 @@ export default class BackpackClientApi {
     const cacheBustSuffix = `?t=${Date.now()}`;
     this.backpackApi.fetch(
       this.channelId + '/' + filename + cacheBustSuffix,
-      (error: string, data) => {
+      (error, data) => {
         if (error) {
           onError(error);
         } else {
@@ -337,7 +337,7 @@ export default class BackpackClientApi {
     failedFileList: string[],
     onError: ErrorCallback,
     onSuccess: () => void,
-    error?: string
+    error?: Error
   ) {
     const filenameIndex = filesInRequest.indexOf(filename);
     if (filenameIndex >= 0) {
