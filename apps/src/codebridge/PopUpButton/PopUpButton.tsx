@@ -45,6 +45,8 @@ export const PopUpButton = ({
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   // Unique identifier for current dropdown instance
   const instanceId = useRef(createUuid());
+  // Track pending timeouts for cleanup
+  const timeoutsRef = useRef<Set<NodeJS.Timeout>>(new Set());
 
   // We need to set the theme here because the dropdown is
   // rendered in a portal, outside of the main lab container.
@@ -56,9 +58,11 @@ export const PopUpButton = ({
       const customEvent = e as CustomEvent<{sourceId: string}>;
       if (customEvent.detail.sourceId !== instanceId.current) {
         // Defer state update to avoid updating during render
-        setTimeout(() => {
+        const timeoutId = setTimeout(() => {
           setIsOpen(false);
+          timeoutsRef.current.delete(timeoutId);
         }, 0);
+        timeoutsRef.current.add(timeoutId);
       }
     };
     document.addEventListener(CLOSE_OTHER_DROPDOWNS_EVENT, handleCloseOthers);
@@ -78,9 +82,11 @@ export const PopUpButton = ({
     buttonElementRef.current?.blur();
 
     // Because this operates on a delay, update the styles on a delay too
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setComputedButtonStyles(className);
+      timeoutsRef.current.delete(timeoutId);
     }, 0);
+    timeoutsRef.current.add(timeoutId);
   }, [setIsOpen, className]);
 
   // Handler to show the dropdown.
@@ -105,10 +111,11 @@ export const PopUpButton = ({
 
           // Defer adding the close handler until the next tick of the event
           // loop, otherwise it'll fire immediately and re-close the pop up.
-          setTimeout(
-            () => document.addEventListener('click', setIsOpenFalse),
-            0
-          );
+          const timeoutId = setTimeout(() => {
+            document.addEventListener('click', setIsOpenFalse);
+            timeoutsRef.current.delete(timeoutId);
+          }, 0);
+          timeoutsRef.current.add(timeoutId);
         } else {
           document.removeEventListener('click', setIsOpenFalse);
         }
@@ -132,14 +139,16 @@ export const PopUpButton = ({
               ? buttonRect.right - dropdownRect.width + window.scrollX
               : buttonRect.left + window.scrollX;
           // Defer all state updates to avoid updating during render
-          setTimeout(() => {
+          const timeoutId = setTimeout(() => {
             setDropdownStyles({
               top,
               left,
             });
             setUpdatedStyles(true);
             setComputedButtonStyles(classNames(className, moduleStyles.active));
+            timeoutsRef.current.delete(timeoutId);
           }, 0);
+          timeoutsRef.current.add(timeoutId);
         }
       }
     };
@@ -151,6 +160,20 @@ export const PopUpButton = ({
       window.removeEventListener('resize', updateDropdownPositionIfShown);
     };
   }, [alignment, buttonRef, isOpen, className]);
+
+  // Clear all pending timeouts and event listeners on unmount
+  // to prevent memory leaks and state updates after unmount.
+  useEffect(() => {
+    const timeouts = timeoutsRef.current;
+    return () => {
+      // Clear all pending timeouts to prevent state updates after unmount
+      timeouts.forEach(timeoutId => clearTimeout(timeoutId));
+      timeouts.clear();
+
+      // Remove click event listener if it exists
+      document.removeEventListener('click', setIsOpenFalse);
+    };
+  }, [setIsOpenFalse]);
 
   // We wait to make the dropdown visible until we've calculated the position
   // it should be in based on its own width and the size of the button.
