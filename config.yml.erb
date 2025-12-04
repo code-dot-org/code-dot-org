@@ -5,7 +5,6 @@ _env:       <%=env == 'production' ? '' : "_#{env}"%>
 _test_env_num: <%=env == 'test' ? ENV['TEST_ENV_NUMBER'] : '' %>
 unit_test:  <%=!!ENV['UNIT_TEST']%>
 ci:         <%=!!ENV['CI']%>
-ci_test:    <%=unit_test || ci%>
 root_dir:   <%=__dir__%>
 name:       <%=`hostname`.strip%>
 rack_env:   :<%=env%>
