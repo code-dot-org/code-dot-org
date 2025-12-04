@@ -1,6 +1,5 @@
 import classnames from 'classnames';
 import {
-  memo,
   useRef,
   useEffect,
   ReactNode,
@@ -125,4 +124,4 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   );
 };
 
-export default memo(Checkbox);
+export default Checkbox;
